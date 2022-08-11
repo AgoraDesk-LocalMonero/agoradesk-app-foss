@@ -815,7 +815,9 @@ class I18nZh extends I18n {
   String get agoradesk250Sbunderlying8722Sbasset250Sblabel => '相关资产';
 
   @override
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice => '此地址在使用后会自动更改。尽管如此，如果您将 {assetName} 发送到使用过的存款地址，它将记入您的帐户。出于隐私原因，我们不会显示使用过的存款地址。您只能从您个人控制的钱包向该地址发送硬币。';
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
+    return '此地址在使用后会自动更改。尽管如此，如果您将 $assetName 发送到使用过的存款地址，它将记入您的帐户。出于隐私原因，我们不会显示使用过的存款地址。您只能从您个人控制的钱包向该地址发送硬币。';
+  }
 
   @override
   String get and => '和';
@@ -8747,7 +8749,9 @@ class I18nZhTw extends I18nZh {
   String get agoradesk250Sbunderlying8722Sbasset250Sblabel => '相關資產';
 
   @override
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice => '此地址在使用後會自動更改。儘管如此，如果您將 {assetName} 發送到使用過的存款地址，它將記入您的帳戶。出於隱私原因，我們不會顯示使用過的存款地址。您只能從您個人控制的錢包向該地址發送硬幣。';
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
+    return '此地址在使用後會自動更改。儘管如此，如果您將 $assetName 發送到使用過的存款地址，它將記入您的帳戶。出於隱私原因，我們不會顯示使用過的存款地址。您只能從您個人控制的錢包向該地址發送硬幣。';
+  }
 
   @override
   String get and => '和';

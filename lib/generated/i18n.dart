@@ -1687,7 +1687,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'This address will automatically change after it\'s used. Despite this, If you send your {assetName} to a used deposit address, it will get credited to your account. We don\'t show used deposit addresses for privacy reasons. You may only send coins to this address from a wallet that is personally controlled by you.'**
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice;
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName);
 
   /// No description provided for @and.
   ///

@@ -815,7 +815,9 @@ class I18nKo extends I18n {
   String get agoradesk250Sbunderlying8722Sbasset250Sblabel => '기초자산';
 
   @override
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice => '이 주소는 사용 후 자동으로 변경됩니다. 그럼에도 불구하고 사용된 입금 주소로 {assetName} 을(를) 보내면 귀하의 계정에 입금됩니다. 개인 정보 보호를 위해 사용한 입금 주소는 표시하지 않습니다. 귀하가 개인적으로 관리하는 지갑에서만 이 주소로 코인을 보낼 수 있습니다.';
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
+    return '이 주소는 사용 후 자동으로 변경됩니다. 그럼에도 불구하고 사용된 입금 주소로 $assetName 을(를) 보내면 귀하의 계정에 입금됩니다. 개인 정보 보호를 위해 사용한 입금 주소는 표시하지 않습니다. 귀하가 개인적으로 관리하는 지갑에서만 이 주소로 코인을 보낼 수 있습니다.';
+  }
 
   @override
   String get and => '그리고';

@@ -59,7 +59,8 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                               child: Padding(
                                 padding: const EdgeInsets.all(12),
                                 child: Text(
-                                  I18n.of(context)!.agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice,
+                                  I18n.of(context)!
+                                      .agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(model.asset.name),
                                   style: context.txtBodyXSmallN80,
                                 ),
                               ),

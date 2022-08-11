@@ -815,7 +815,9 @@ class I18nEn extends I18n {
   String get agoradesk250Sbunderlying8722Sbasset250Sblabel => 'Underlying asset';
 
   @override
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice => 'This address will automatically change after it\'s used. Despite this, If you send your {assetName} to a used deposit address, it will get credited to your account. We don\'t show used deposit addresses for privacy reasons. You may only send coins to this address from a wallet that is personally controlled by you.';
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
+    return 'This address will automatically change after it\'s used. Despite this, If you send your $assetName to a used deposit address, it will get credited to your account. We don\'t show used deposit addresses for privacy reasons. You may only send coins to this address from a wallet that is personally controlled by you.';
+  }
 
   @override
   String get and => 'and';
