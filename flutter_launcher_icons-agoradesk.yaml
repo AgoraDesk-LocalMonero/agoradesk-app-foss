@@ -1,0 +1,4 @@
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/branding/ad_icon_512.png"

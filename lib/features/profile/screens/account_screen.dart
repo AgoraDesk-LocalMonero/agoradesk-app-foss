@@ -1,0 +1,230 @@
+import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/clipboard_mixin.dart';
+import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_tonal.dart';
+import 'package:agoradesk/features/auth/data/services/auth_service.dart';
+import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/profile/models/account_view_model.dart';
+import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart';
+import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
+import 'package:agoradesk/router.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/src/provider.dart';
+
+class AccountScreen extends StatelessWidget with ClipboardMixin {
+  const AccountScreen({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ViewModelBuilder<AccountViewModel>(
+        model: AccountViewModel(
+          authService: context.read<AuthService>(),
+          appState: context.read<AppState>(),
+        ),
+        builder: (context, model, _) {
+          return Scaffold(
+            appBar: AgoraAppBar(
+              title: model.userName ?? context.intl.account,
+            ),
+            body: model.isGuestMode
+                ? const LoginScreen(
+                    displaySkip: false,
+                  )
+                : Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            context.intl.user_profile,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.my_profile,
+                            onPressed: () => AutoRouter.of(context).push(
+                              MyProfileRoute(
+                                username: model.userName!,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.user250Sbnumber8722Sbof8722Sbpartners,
+                            onPressed: () => AutoRouter.of(context).push(const TradingPartnersRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.affiliate250Sbtitle,
+                            onPressed: () => AutoRouter.of(context).push(const AffiliateProgramRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.coupons250Sbtitle,
+                            onPressed: () => AutoRouter.of(context).push(const CouponsRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.security,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.settings250Sbtab250Sbchange8722Sbemail8722Sbshort,
+                            onPressed: () => AutoRouter.of(context).push(EmailRoute(verified: false)),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.password8722Sbreset250Sbbtn,
+                            onPressed: () => AutoRouter.of(context).push(const ChangePasswordRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.start250Sb2fa,
+                            onPressed: () => AutoRouter.of(context).push(const TwoFactorAuthRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.change_pin,
+                            onPressed: () async {
+                              await AutoRouter.of(context).push(const PinCodeSetRoute());
+                              model.updateWith();
+                            },
+                          ),
+                          const SizedBox(height: 8),
+                          context.read<AppState>().hasPinCode
+                              ? LineWithArrow(
+                                  title: context.intl.remove_pin,
+                                  onPressed: () => model.removePin(),
+                                )
+                              : const SizedBox(),
+                          context.read<AppState>().hasPinCode ? const SizedBox(height: 8) : const SizedBox(),
+                          Text(
+                            context.intl.document8722Sbtitle250Sbsettings,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.language,
+                            onPressed: () => AutoRouter.of(context).push(const LanguageRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithSwitcher(
+                            value: model.isDarkTheme(),
+                            title: context.intl.dark_theme,
+                            onPressed: () => model.switchTheme(),
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.country,
+                            onPressed: () => AutoRouter.of(context).push(CountryRoute()),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Devs',
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: 'Copy device Firebase token to clipboard',
+                            onPressed: () async {
+                              final token = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                              copyToClipboard(token ?? '', context);
+                              eventBus.fire(FlashEvent.success('Copied!'));
+                            },
+                          ),
+                          // const SizedBox(height: 8),
+                          // LineWithArrow(
+                          //   title: 'Test error message dialog',
+                          //   onPressed: () => eventBus.fire(FlashEvent.error('errorMessage')),
+                          // ),
+                          // const SizedBox(height: 8),
+                          // LineWithArrow(
+                          //   title: 'Test success message',
+                          //   onPressed: () => eventBus.fire(FlashEvent.success('Copied to success!')),
+                          // ),
+                          // const SizedBox(height: 8),
+                          // LineWithArrow(
+                          //   title: 'Test info message',
+                          //   onPressed: () => eventBus.fire(FlashEvent.info('Test info message')),
+                          // ),
+                          // const SizedBox(height: 16),
+                          // LineWithArrow(
+                          //   title: 'Test custom overlay',
+                          //   onPressed: () {
+                          //     showOverlay((context, t) {
+                          //       return Opacity(
+                          //         opacity: t,
+                          //         child: IosStyleToast(),
+                          //       );
+                          //     }, duration: Duration.zero);
+                          //   },
+                          // ),
+                          const SizedBox(height: 16),
+                          Center(
+                            child: ButtonFilledWithIconTonal(
+                              iconData: AgoraFont.log_out,
+                              title: context.intl.logout250Sbtitle,
+                              onPressed: () => context.read<AuthService>().logOut(sendRequest: true),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+          );
+        });
+  }
+}
+
+// class IosStyleToast extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Stack(
+//       children: [
+//         Container(
+//           color: Colors.white30,
+//         ),
+//         SafeArea(
+//           child: DefaultTextStyle(
+//             style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white),
+//             child: Padding(
+//               padding: const EdgeInsets.all(16),
+//               child: Center(
+//                 child: ClipRRect(
+//                   borderRadius: BorderRadius.circular(10),
+//                   child: Container(
+//                     color: Colors.black87,
+//                     padding: const EdgeInsets.symmetric(
+//                       vertical: 8,
+//                       horizontal: 16,
+//                     ),
+//                     child: Column(
+//                       mainAxisSize: MainAxisSize.min,
+//                       children: <Widget>[
+//                         Icon(
+//                           Icons.check,
+//                           color: Colors.white,
+//                         ),
+//                         Text('Succeed')
+//                       ],
+//                     ),
+//                   ),
+//                 ),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }

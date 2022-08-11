@@ -1,0 +1,189 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5395903081316558261",
+      "lastPropertyId": "2:7467240446810036079",
+      "name": "CountryCodeModel",
+      "properties": [
+        {
+          "id": "1:5125500188638038355",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7467240446810036079",
+          "name": "codes",
+          "type": 30
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7846192549019391484",
+      "lastPropertyId": "4:2153158592528492626",
+      "name": "CurrencyModel",
+      "properties": [
+        {
+          "id": "1:2903083617220170656",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2381924483495142734",
+          "name": "code",
+          "type": 9
+        },
+        {
+          "id": "3:3618533580658367531",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:2153158592528492626",
+          "name": "altcoin",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:5782449331183648541",
+      "lastPropertyId": "7:2200225041036009445",
+      "name": "UserLocalSettings",
+      "properties": [
+        {
+          "id": "1:5206477144598711401",
+          "name": "autoId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3183680571458835517",
+          "name": "pinIsActive",
+          "type": 1
+        },
+        {
+          "id": "3:5440489619168820004",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "4:5774264365403061578",
+          "name": "dbThemeMode",
+          "type": 6
+        },
+        {
+          "id": "5:2657915508267259814",
+          "name": "locale",
+          "type": 9
+        },
+        {
+          "id": "6:2281791557889511102",
+          "name": "countryCode",
+          "type": 9
+        },
+        {
+          "id": "7:2200225041036009445",
+          "name": "pushFcmTokenSavedToApi",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:4248416330353627262",
+      "lastPropertyId": "13:4028909758467674766",
+      "name": "MessageBoxModel",
+      "properties": [
+        {
+          "id": "1:7301636371006439812",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "3:2762531399580248451",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "4:6064681318992915777",
+          "name": "isAdmin",
+          "type": 1
+        },
+        {
+          "id": "5:733721144192568964",
+          "name": "senderUsername",
+          "type": 9
+        },
+        {
+          "id": "6:8288280743741757058",
+          "name": "msg",
+          "type": 9
+        },
+        {
+          "id": "7:244254876140816740",
+          "name": "attachmentName",
+          "type": 9
+        },
+        {
+          "id": "9:5355995342257906227",
+          "name": "tradeId",
+          "type": 9
+        },
+        {
+          "id": "10:321933120204006371",
+          "name": "isSending",
+          "type": 1
+        },
+        {
+          "id": "12:4404191229373885425",
+          "name": "attachmentUrl",
+          "type": 9
+        },
+        {
+          "id": "13:4028909758467674766",
+          "name": "isUpdated",
+          "type": 1
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "7:4248416330353627262",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    1787362192846975708,
+    7220610751543519366,
+    2447864522021408447
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    5382707861830122101,
+    4954014910965140505,
+    7504838548138473745,
+    5712719997006824167,
+    2611945644836331737,
+    6413581196491964756,
+    5559045484036577013,
+    3956457066770204129,
+    758063968875963941,
+    2017032171599213764,
+    6015275248164961437,
+    2251064529912857073,
+    8578354113210576549,
+    4787065640047253460,
+    7726143144253712131
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
