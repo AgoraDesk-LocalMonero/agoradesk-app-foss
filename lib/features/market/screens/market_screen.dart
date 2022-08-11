@@ -7,6 +7,7 @@ import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
+import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -36,7 +37,7 @@ import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-class MarketScreen extends StatelessWidget with CountryInfoMixin {
+class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethodsMixin {
   MarketScreen({Key? key}) : super(key: key);
 
   @override
@@ -95,7 +96,10 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin {
               child: DropdownSearch<TradeType>(
                 dropdownButtonProps: context.dropdownButtonProps,
                 dropdownDecoratorProps: context.dropdownDecoration,
-                popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                popupProps: PopupProps.menu(
+                  menuProps: context.dropdownMenuProps,
+                  fit: FlexFit.loose,
+                ),
                 items: TradeType.values,
                 itemAsString: (TradeType? t) => t?.translatedTitle(context).capitalize() ?? '',
                 onChanged: (TradeType? data) => model.tradeType = data,
@@ -109,7 +113,10 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin {
                     child: DropdownSearch<Asset>(
                       dropdownButtonProps: context.dropdownButtonProps,
                       dropdownDecoratorProps: context.dropdownDecoration,
-                      popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                      popupProps: PopupProps.menu(
+                        menuProps: context.dropdownMenuProps,
+                        fit: FlexFit.loose,
+                      ),
                       items: Asset.values,
                       itemAsString: (Asset? a) => a?.title() ?? '',
                       onChanged: (Asset? data) => model.asset = data,
@@ -180,7 +187,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin {
                   dialogProps: context.dropdownDialogProps,
                   showSearchBox: true,
                 ),
-                itemAsString: (OnlineProvider? method) => method?.name ?? '',
+                itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                 asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
                 // showSearchBox: true,
                 selectedItem: model.selectedOnlineProvider,

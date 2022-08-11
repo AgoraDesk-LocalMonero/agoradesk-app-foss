@@ -39,7 +39,10 @@ class TransactionsScreen extends StatelessWidget {
                       onChanged: model.setAsset,
                       selectedItem: model.assetMenu[0],
                       dropdownDecoratorProps: context.dropdownDecoration,
-                      popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                      popupProps: PopupProps.menu(
+                        menuProps: context.dropdownMenuProps,
+                        fit: FlexFit.loose,
+                      ),
                     ),
                     const SizedBox(height: 20),
                     Text(

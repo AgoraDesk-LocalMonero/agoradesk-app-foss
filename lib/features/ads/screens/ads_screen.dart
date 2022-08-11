@@ -3,6 +3,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
+import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/agora_back_button.dart';
 import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
@@ -11,6 +12,7 @@ import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_n80n30.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
+import 'package:agoradesk/core/widgets/branded/dropdown_button_sized.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
@@ -46,7 +48,7 @@ class AdsScreen extends StatefulWidget {
   State<AdsScreen> createState() => _AdsScreenState();
 }
 
-class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, CountryInfoMixin {
+class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, CountryInfoMixin, PaymentMethodsMixin {
   late final AdsViewModel _model;
   late FormulaControlsViewModel _formulaControlsViewModel;
 
@@ -179,43 +181,30 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
         const SizedBox(height: 8),
         SizedBox(
           width: double.infinity,
-          child: Container(
-            decoration: BoxDecoration(
-              color: context.colSurface3,
-              borderRadius: const BorderRadius.all(
-                Radius.circular(4),
-              ),
-            ),
-            child: DropdownButtonHideUnderline(
-              child: ButtonTheme(
-                alignedDropdown: true,
-                padding: EdgeInsets.zero,
-                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                child: DropdownButton<AgoraMenuItem>(
-                  dropdownColor: context.colSurface3,
-                  value: model.dropdownValue,
-                  items: model.bulkMenu.map((value) {
-                    return DropdownMenuItem<AgoraMenuItem>(
-                      enabled: model.bulkActionEnabled(value),
-                      value: value,
-                      child: value.code != 'separator'
-                          ? Text(
-                              value.name,
-                              style: model.bulkActionEnabled(value)
-                                  ? context.txtBodyMediumN90N10
-                                  : context.txtBodyMediumN30N80,
-                            )
-                          : _DropdownMenuItemSeparator(
-                              name: value.name,
-                              context: context,
-                            ),
-                    );
-                  }).toList(),
-                  onChanged: (val) {
-                    model.changeDropDownValue(val);
-                  },
-                ),
-              ),
+          child: DropdownButtonSized(
+            child: DropdownButton<AgoraMenuItem>(
+              dropdownColor: context.colSurface3,
+              value: model.dropdownValue,
+              items: model.bulkMenu.map((value) {
+                return DropdownMenuItem<AgoraMenuItem>(
+                  enabled: model.bulkActionEnabled(value),
+                  value: value,
+                  child: value.code != 'separator'
+                      ? Text(
+                          value.name,
+                          style: model.bulkActionEnabled(value)
+                              ? context.txtBodyMediumN90N10
+                              : context.txtBodyMediumN30N80,
+                        )
+                      : _DropdownMenuItemSeparator(
+                          name: value.name,
+                          context: context,
+                        ),
+                );
+              }).toList(),
+              onChanged: (val) {
+                model.changeDropDownValue(val);
+              },
             ),
           ),
         ),
@@ -383,7 +372,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 child: DropdownSearch<String>(
                   dropdownButtonProps: context.dropdownButtonProps,
                   dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                  popupProps: PopupProps.menu(
+                    menuProps: context.dropdownMenuProps,
+                    fit: FlexFit.loose,
+                  ),
                   items: model.tradeTypeMenu,
                   onChanged: model.setTradeType,
                   selectedItem: model.tradeTypeMenu[0],
@@ -396,7 +388,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                       child: DropdownSearch<String>(
                         dropdownButtonProps: context.dropdownButtonProps,
                         dropdownDecoratorProps: context.dropdownDecoration,
-                        popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                        popupProps: PopupProps.menu(
+                          menuProps: context.dropdownMenuProps,
+                          fit: FlexFit.loose,
+                        ),
                         items: model.assetMenu,
                         onChanged: model.setAsset,
                         selectedItem: model.assetMenu[0],
@@ -495,7 +490,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
             dialogProps: context.dropdownDialogProps,
             showSearchBox: true,
           ),
-          itemAsString: (OnlineProvider? method) => method?.name ?? '',
+          itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
           asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
           selectedItem: model.selectedOnlineProvider,
           onChanged: (val) => model.selectedOnlineProvider = val,
