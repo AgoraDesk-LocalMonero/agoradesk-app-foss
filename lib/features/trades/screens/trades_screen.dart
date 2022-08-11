@@ -3,6 +3,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
+import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
@@ -38,7 +39,8 @@ class TradesScreen extends StatefulWidget {
   State<TradesScreen> createState() => _TradesScreenState();
 }
 
-class _TradesScreenState extends State<TradesScreen> with TickerProviderStateMixin, TradeMixin, CountryInfoMixin {
+class _TradesScreenState extends State<TradesScreen>
+    with TickerProviderStateMixin, TradeMixin, CountryInfoMixin, PaymentMethodsMixin {
   late final TradesViewModel _model;
 
   @override
@@ -106,7 +108,10 @@ class _TradesScreenState extends State<TradesScreen> with TickerProviderStateMix
                 child: DropdownSearch<String>(
                   dropdownButtonProps: context.dropdownButtonProps,
                   dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                  popupProps: PopupProps.menu(
+                    menuProps: context.dropdownMenuProps,
+                    fit: FlexFit.loose,
+                  ),
                   items: model.tradeTypeMenu,
                   onChanged: model.setTradeType,
                   selectedItem: model.tradeTypeMenu[0],
@@ -119,7 +124,10 @@ class _TradesScreenState extends State<TradesScreen> with TickerProviderStateMix
                       child: DropdownSearch<String>(
                         dropdownButtonProps: context.dropdownButtonProps,
                         dropdownDecoratorProps: context.dropdownDecoration,
-                        popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                        popupProps: PopupProps.menu(
+                          menuProps: context.dropdownMenuProps,
+                          fit: FlexFit.loose,
+                        ),
                         items: model.assetMenu,
                         onChanged: model.setAsset,
                         selectedItem: model.assetMenu[0],
@@ -201,7 +209,7 @@ class _TradesScreenState extends State<TradesScreen> with TickerProviderStateMix
             dialogProps: context.dropdownDialogProps,
             showSearchBox: true,
           ),
-          itemAsString: (OnlineProvider? method) => method?.name ?? '',
+          itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
           asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
           // showSearchBox: true,
           selectedItem: model.selectedOnlineProvider,
