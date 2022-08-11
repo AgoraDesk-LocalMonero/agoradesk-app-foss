@@ -1,0 +1,118 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion flutter.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+   }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        agoradeskConfig {
+            keyAlias keystoreProperties['adKeyAlias']
+            keyPassword keystoreProperties['adKeyPassword']
+            storeFile keystoreProperties['adStoreFile'] ? file(keystoreProperties['adStoreFile']) : null
+            storePassword keystoreProperties['adStorePassword']
+        }
+
+        localmoneroConfig {
+            keyAlias keystoreProperties['lmKeyAlias']
+            keyPassword keystoreProperties['lmKeyPassword']
+            storeFile keystoreProperties['lmStoreFile'] ? file(keystoreProperties['lmStoreFile']) : null
+            storePassword keystoreProperties['lmStorePassword']
+        }
+    }
+//    buildTypes {
+//        release {
+//            signingConfig signingConfigs.agoradeskConfig
+//        }
+//    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+        agoradesk {
+            dimension "app"
+            resValue "string", "app_name", "AgoraDesk"
+            resValue "string", "app_host", "agoradesk.com"
+            resValue "string", "app_host_2", "localmonero.co"
+            resValue "string", "links_priority", "1000"
+            applicationId "com.agoradesk.app"
+            signingConfig signingConfigs.agoradeskConfig
+        }
+        localmonero {
+            dimension "app"
+            resValue "string", "app_name", "LocalMonero"
+            resValue "string", "app_host", "localmonero.co"
+            resValue "string", "app_host_2", "agoradesk.com"
+            resValue "string", "links_priority", "-1000"
+            applicationId "co.localmonero.app"
+            signingConfig signingConfigs.localmoneroConfig
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:18.0.0'
+}

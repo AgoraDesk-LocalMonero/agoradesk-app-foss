@@ -1,0 +1,7 @@
+arb-dir: assets/translations
+#template-arb-file: intl_en.arb
+output-dir: ./lib/generated
+output-class: I18n
+output-localization-file: i18n.dart
+synthetic-package: false
+untranslated-messages-file: untranslated-messages.txt

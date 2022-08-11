@@ -1,0 +1,63 @@
+import 'package:agoradesk/core/theme/theme.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class WalletBlueButton extends StatelessWidget {
+  const WalletBlueButton({
+    Key? key,
+    required this.title,
+    required this.onPressed,
+    required this.iconData,
+    this.loading = false,
+  }) : super(key: key);
+
+  final IconData iconData;
+  final String title;
+  final VoidCallback onPressed;
+  final bool loading;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        maximumSize: const Size(100, 30),
+        minimumSize: const Size(100, 30),
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        primary: Theme.of(context).colorScheme.tonal,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+          // side: const BorderSide(width: 2, color: Colors.blueAccent),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 7, 10, 7),
+        child: loading
+            ? const Center(
+                child: CupertinoActivityIndicator(),
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    iconData,
+                    size: 16,
+                    color: Theme.of(context).colorScheme.primary90,
+                  ),
+                  const SizedBox(width: 7.5),
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.agoraLabelMedium.copyWith(
+                          color: Theme.of(context).colorScheme.primary10,
+                          height: 1,
+                        ),
+                  ),
+                ],
+              ),
+      ),
+    );
+  }
+}
