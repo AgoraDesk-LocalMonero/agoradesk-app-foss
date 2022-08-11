@@ -815,7 +815,9 @@ class I18nPt extends I18n {
   String get agoradesk250Sbunderlying8722Sbasset250Sblabel => 'Activo subjacente';
 
   @override
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice => 'Este endereço mudará automaticamente após sua utilização. Apesar disso, se você enviar seu {assetName} para um endereço de depósito usado, ele será creditado na sua conta. Nós não mostramos endereços de depósito usados por razões de privacidade. Você só pode enviar moedas para este endereço a partir de uma carteira que seja controlada pessoalmente por você.';
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
+    return 'Este endereço mudará automaticamente após sua utilização. Apesar disso, se você enviar seu $assetName para um endereço de depósito usado, ele será creditado na sua conta. Nós não mostramos endereços de depósito usados por razões de privacidade. Você só pode enviar moedas para este endereço a partir de uma carteira que seja controlada pessoalmente por você.';
+  }
 
   @override
   String get and => 'e';

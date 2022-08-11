@@ -309,6 +309,11 @@
     "agoradesk250Sbtrade250Sbstatus250Sbnetted250Sbcontent": "The option was exercised at {time}.",
     "agoradesk250Sbunderlying8722Sbasset250Sblabel": "Underlying asset",
     "agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice": "This address will automatically change after it's used. Despite this, If you send your {assetName} to a used deposit address, it will get credited to your account. We don't show used deposit addresses for privacy reasons. You may only send coins to this address from a wallet that is personally controlled by you.",
+    "@agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice": {
+      "placeholders": {
+        "assetName": {}
+      }
+    },
     "and": "and",
     "api8722Sbdocs250Sblabel": "API docs",
     "api250Sbvalidation8722Sberror250Sbaddress": "Invalid address!",

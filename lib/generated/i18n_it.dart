@@ -815,7 +815,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sbunderlying8722Sbasset250Sblabel => 'Attività sottostante';
 
   @override
-  String get agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice => 'Questo indirizzo cambierà automaticamente dopo essere stato usato. Nonostante questo, se invii il tuo {assetName} a un indirizzo di deposito usato, verrà accreditato sul tuo conto. Non mostriamo gli indirizzi di deposito usati per ragioni di privacy. Puoi inviare monete a questo indirizzo solo da un portafoglio controllato personalmente da te.';
+  String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
+    return 'Questo indirizzo cambierà automaticamente dopo essere stato usato. Nonostante questo, se invii il tuo $assetName a un indirizzo di deposito usato, verrà accreditato sul tuo conto. Non mostriamo gli indirizzi di deposito usati per ragioni di privacy. Puoi inviare monete a questo indirizzo solo da un portafoglio controllato personalmente da te.';
+  }
 
   @override
   String get and => 'e';
