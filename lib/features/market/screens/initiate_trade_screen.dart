@@ -115,14 +115,16 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                   ),
                 ),
                 const SizedBox(width: 10),
-                Expanded(
-                  flex: 1,
-                  child: ButtonIconTextP70(
-                    text: context.intl.wallet250Sbselect8722Sball8722Sbbalance,
-                    iconData: AgoraFont.plus,
-                    onPressed: model.pasteAllAvailableBalance,
-                  ),
-                ),
+                model.isSell
+                    ? Expanded(
+                        flex: 1,
+                        child: ButtonIconTextP70(
+                          text: context.intl.wallet250Sbselect8722Sball8722Sbbalance,
+                          iconData: AgoraFont.plus,
+                          onPressed: model.pasteAllAvailableBalance,
+                        ),
+                      )
+                    : const SizedBox(),
               ],
             ),
             // const SizedBox(height: 4),Text(
