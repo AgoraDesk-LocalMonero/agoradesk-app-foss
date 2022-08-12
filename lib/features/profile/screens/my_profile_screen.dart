@@ -182,7 +182,7 @@ class MyProfileScreen extends StatelessWidget with UrlMixin {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      context.intl.settings250Sbhomepage8722Sbtip(GetIt.I<AppParameters>().urlBase),
+                      context.intl.settings250Sbhomepage8722Sbtip(GetIt.I<AppParameters>().domain),
                       style: context.txtBodySmallN80,
                     ),
                     const SizedBox(height: 18),
