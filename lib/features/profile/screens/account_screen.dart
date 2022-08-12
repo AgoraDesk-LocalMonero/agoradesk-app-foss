@@ -59,7 +59,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           ),
                           const SizedBox(height: 8),
                           LineWithArrow(
-                            title: context.intl.user250Sbnumber8722Sbof8722Sbpartners,
+                            title: context.intl.app_trading_partners,
                             onPressed: () => AutoRouter.of(context).push(const TradingPartnersRoute()),
                           ),
                           const SizedBox(height: 8),

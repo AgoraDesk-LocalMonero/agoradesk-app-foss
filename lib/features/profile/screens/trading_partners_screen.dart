@@ -1,12 +1,12 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/features/profile/models/trading_partners_view_model.dart';
 import 'package:agoradesk/features/profile/screens/widgets/trading_partner_tile.dart';
 import 'package:agoradesk/features/trades/screens/widgets/agora_two_tabs_bar.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
@@ -39,7 +39,7 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
         builder: (context, model, _) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: I18n.of(context)!.user250Sbnumber8722Sbof8722Sbpartners,
+              title: context.intl.app_trading_partners,
             ),
             body: SafeArea(
               child: Padding(
@@ -48,9 +48,9 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
                   children: [
                     AgoraTwoTabsBar(
                       controller: model.tabController,
-                      textLeft: I18n.of(context)!.dashboard250Sbtrusted,
+                      textLeft: context.intl.dashboard250Sbtrusted,
                       iconLeft: AgoraFont.star,
-                      textRight: I18n.of(context)!.dashboard250Sbblocked,
+                      textRight: context.intl.dashboard250Sbblocked,
                       iconRight: AgoraFont.slash,
                     ),
                     const SizedBox(height: 20),
@@ -88,7 +88,7 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                I18n.of(context)!.no_trusted_users_yet,
+                context.intl.no_trusted_users_yet,
               ),
             ],
           )
@@ -125,7 +125,7 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                I18n.of(context)!.no_blocked_users_yet,
+                context.intl.no_blocked_users_yet,
               ),
             ],
           )
