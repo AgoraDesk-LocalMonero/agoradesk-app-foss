@@ -7931,6 +7931,9 @@ class I18nKo extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
+  String get app_trading_partners => 'Trading partners';
+
+  @override
   String get app_trade_status_settlement_processing_description => 'The settlement is being processed. Please wait, there\'s nothing that you need to do.';
 
   @override

@@ -15531,6 +15531,12 @@ abstract class I18n {
   /// **'Manage ads'**
   String get app_manage_ads;
 
+  /// No description provided for @app_trading_partners.
+  ///
+  /// In en, this message translates to:
+  /// **'Trading partners'**
+  String get app_trading_partners;
+
   /// No description provided for @app_trade_status_settlement_processing_description.
   ///
   /// In en, this message translates to:
