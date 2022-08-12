@@ -750,7 +750,7 @@ class TradeViewModel extends BaseViewModel
     messagesAfterSticky.clear();
     if (tradeStatus == TradeStatus.paymentCompleted) {
       _sortMessages(parseLst, tradeForScreen.paymentCompletedAt!);
-    } else if (tradeStatus == TradeStatus.released) {
+    } else if (tradeStatus == TradeStatus.released || (tradeStatus.index > 5 && tradeStatus != TradeStatus.disputed)) {
       _sortMessages(parseLst, tradeForScreen.releasedAt!);
     } else if (tradeStatus == TradeStatus.disputed) {
       _sortMessages(parseLst, tradeForScreen.disputedAt!);
