@@ -155,7 +155,9 @@ class MarketViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMix
 
   void changeSelectedCurrency(CurrencyModel? val) {
     selectedCurrency = val ?? CurrencyModel(code: 'USD', name: 'USD', altcoin: true);
-    if (selectedCurrency.code == 'EUR' && selectedCountryCode != kAnyCountry) {
+    if (selectedCurrency.code == 'EUR' &&
+        selectedCountryCode != kAnyCountry &&
+        !(tradeType != null && tradeType!.isLocal())) {
       changeSelectedCountryCode(kAnyCountry);
     }
   }
