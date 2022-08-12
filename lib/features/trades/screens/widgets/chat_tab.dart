@@ -26,8 +26,8 @@ class ChatTab extends StatelessWidget {
   Widget build(BuildContext context) {
     //todo - fixme
     final chatHeight = model.repliedText.isNotEmpty
-        ? MediaQuery.of(context).size.height - 240
-        : MediaQuery.of(context).size.height - 220;
+        ? MediaQuery.of(context).size.height - 260
+        : MediaQuery.of(context).size.height - 240;
 
     return ViewModelBuilder<TradeViewModel>(
         model: model,
@@ -158,7 +158,7 @@ class ChatTab extends StatelessWidget {
                   Container(
                     color: context.colSurface5,
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 12, 0, 50),
+                      padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
                       child: Column(
                         children: [
                           _buildReplyLine(context, model),
