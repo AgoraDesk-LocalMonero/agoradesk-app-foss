@@ -21,8 +21,8 @@ class UserAdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMi
   late final TabController tabController;
   final pageController = PageController();
 
-  final indicatorKeyBuy = GlobalKey<RefreshIndicatorState>();
-  final indicatorKeySell = GlobalKey<RefreshIndicatorState>();
+  final indicatorKeySellTo = GlobalKey<RefreshIndicatorState>();
+  final indicatorKeyBuyFrom = GlobalKey<RefreshIndicatorState>();
 
   final List<AdModel> adsSell = [];
   final List<AdModel> adsBuy = [];
@@ -37,9 +37,11 @@ class UserAdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMi
   bool hasMorePagesBuy = false;
   bool _isSellTypeRequest = true;
   bool _isBuyInitialLoaded = false;
+  bool _isSellInitialLoaded = false;
 
   bool _loadingAds = false;
-  bool initialLoading = true;
+  bool buyInitialLoading = true;
+  bool sellInitialLoading = true;
 
   bool get loadingAds => _loadingAds;
 
@@ -57,15 +59,21 @@ class UserAdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMi
         curve: Curves.linear,
         duration: const Duration(milliseconds: 200),
       );
+      if (tabController.index == 1) {
+        _loadSellTo();
+      }
       _isSellTypeRequest = tabController.index == 0;
       if (!_isSellTypeRequest && !_isBuyInitialLoaded) {
         _isBuyInitialLoaded = true;
-        indicatorKeyBuy.currentState?.show();
+        indicatorKeySellTo.currentState?.show();
       }
       notifyListeners();
     });
     pageController.addListener(() {
       if (!tabController.indexIsChanging && pageController.page!.round() != tabController.index) {
+        if (pageController.page!.round() == 1) {
+          _loadSellTo();
+        }
         tabController.animateTo(
           pageController.page!.round(),
           duration: const Duration(milliseconds: 0),
@@ -76,19 +84,28 @@ class UserAdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMi
     super.init();
   }
 
+  Future _loadSellTo() async {
+    if (!_isSellInitialLoaded) {
+      await Future.delayed(const Duration(milliseconds: 100));
+      await indicatorKeySellTo.currentState?.show();
+      _isSellInitialLoaded = true;
+    }
+  }
+
   @override
   void onAfterBuild() async {
-    await indicatorKeySell.currentState?.show();
+    await indicatorKeyBuyFrom.currentState?.show();
   }
 
   Future getAds({bool loadMore = false}) async {
     if (!loadingAds) {
       loadingAds = true;
-      initialLoading = false;
 
       if (_isSellTypeRequest) {
+        sellInitialLoading = false;
         paginationMeta = paginationMetaSell;
       } else {
+        buyInitialLoading = false;
         paginationMeta = paginationMetaBuy;
       }
 

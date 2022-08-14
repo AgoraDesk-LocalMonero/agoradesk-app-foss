@@ -106,6 +106,7 @@ class MarketViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMix
   @override
   void init() async {
     //todo - refactor me (maybe with AutoRoute)
+
     isGuestMode = _authService.authState == AuthState.guest;
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest;
@@ -123,6 +124,9 @@ class MarketViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMix
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
     await getCountryPaymentMethods(selectedCountryCode);
     await _loadCaches();
+    if (_appState.hasPinCode) {
+      await getAds();
+    }
     super.init();
   }
 
