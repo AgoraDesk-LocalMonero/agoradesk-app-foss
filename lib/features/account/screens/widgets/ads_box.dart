@@ -45,12 +45,12 @@ class AdsBox extends StatelessWidget {
                   _buildAds(
                     context,
                     adsBuy,
-                    context.intl.app_buy_crypto_from(username),
+                    context.intl.app_sell_crypto_to(username),
                   ),
                   _buildAds(
                     context,
                     adsSell,
-                    context.intl.app_sell_crypto_to(username),
+                    context.intl.app_buy_crypto_from(username),
                   ),
                   _buildMoreLink(context, adsBuy, adsSell),
                 ],

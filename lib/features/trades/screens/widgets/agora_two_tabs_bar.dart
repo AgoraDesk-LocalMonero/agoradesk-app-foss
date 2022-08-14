@@ -10,6 +10,7 @@ class AgoraTwoTabsBar extends StatelessWidget {
     this.iconLeft,
     required this.textRight,
     this.iconRight,
+    this.disable = false,
   }) : super(key: key);
 
   final TabController controller;
@@ -17,61 +18,65 @@ class AgoraTwoTabsBar extends StatelessWidget {
   final IconData? iconLeft;
   final String textRight;
   final IconData? iconRight;
+  final bool disable;
 
   @override
   Widget build(BuildContext context) {
     const tabRadius = Radius.circular(30);
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surface2,
-        borderRadius: const BorderRadius.all(tabRadius),
-      ),
-      child: Theme(
-        data: ThemeData(
-          highlightColor: Colors.transparent,
-          splashColor: Colors.transparent,
-          brightness: Theme.of(context).brightness,
+    return IgnorePointer(
+      ignoring: disable,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.surface2,
+          borderRadius: const BorderRadius.all(tabRadius),
         ),
-        child: TabBar(
-          controller: controller,
-          overlayColor: MaterialStateProperty.all(Colors.transparent),
-          indicator: BoxDecoration(
-            color: Theme.of(context).colorScheme.highlight,
-            borderRadius: BorderRadius.only(
-              topLeft: controller.index == 0 ? tabRadius : Radius.zero,
-              topRight: controller.index == 1 ? tabRadius : Radius.zero,
-              bottomLeft: controller.index == 0 ? tabRadius : Radius.zero,
-              bottomRight: controller.index == 1 ? tabRadius : Radius.zero,
-            ),
+        child: Theme(
+          data: ThemeData(
+            highlightColor: Colors.transparent,
+            splashColor: Colors.transparent,
+            brightness: Theme.of(context).brightness,
           ),
-          tabs: <Widget>[
-            Tab(
-              icon: LineIconTextPrimary90(
-                text: textLeft,
-                icon: iconLeft != null
-                    ? Icon(
-                        iconLeft,
-                        color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 0 ? 1 : 0.5),
-                      )
-                    : null,
-                active: controller.index == 0,
-                toCenter: true,
+          child: TabBar(
+            controller: controller,
+            overlayColor: MaterialStateProperty.all(Colors.transparent),
+            indicator: BoxDecoration(
+              color: Theme.of(context).colorScheme.highlight,
+              borderRadius: BorderRadius.only(
+                topLeft: controller.index == 0 ? tabRadius : Radius.zero,
+                topRight: controller.index == 1 ? tabRadius : Radius.zero,
+                bottomLeft: controller.index == 0 ? tabRadius : Radius.zero,
+                bottomRight: controller.index == 1 ? tabRadius : Radius.zero,
               ),
             ),
-            Tab(
-              icon: LineIconTextPrimary90(
-                text: textRight,
-                icon: iconRight != null
-                    ? Icon(
-                        iconRight,
-                        color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 1 ? 1 : 0.5),
-                      )
-                    : null,
-                active: controller.index == 1,
-                toCenter: true,
+            tabs: <Widget>[
+              Tab(
+                icon: LineIconTextPrimary90(
+                  text: textLeft,
+                  icon: iconLeft != null
+                      ? Icon(
+                          iconLeft,
+                          color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 0 ? 1 : 0.5),
+                        )
+                      : null,
+                  active: controller.index == 0,
+                  toCenter: true,
+                ),
               ),
-            ),
-          ],
+              Tab(
+                icon: LineIconTextPrimary90(
+                  text: textRight,
+                  icon: iconRight != null
+                      ? Icon(
+                          iconRight,
+                          color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 1 ? 1 : 0.5),
+                        )
+                      : null,
+                  active: controller.index == 1,
+                  toCenter: true,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

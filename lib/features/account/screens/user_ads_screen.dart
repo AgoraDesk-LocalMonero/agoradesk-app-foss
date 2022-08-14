@@ -63,6 +63,7 @@ class _UserAdsScreenState extends State<UserAdsScreen> with TickerProviderStateM
                         controller: model.tabController,
                         textLeft: context.intl.app_buy_crypto,
                         textRight: context.intl.app_sell_crypto,
+                        disable: model.loadingAds,
                       ),
                       const SizedBox(height: 20),
                       // Expanded(
@@ -73,8 +74,8 @@ class _UserAdsScreenState extends State<UserAdsScreen> with TickerProviderStateM
                           controller: model.pageController,
                           physics: const ClampingScrollPhysics(),
                           children: [
-                            _buildSellAdsList(context, model), // buy from this user
-                            _buildBuyAdsList(context, model), // sell to this user
+                            _buildBuyFrom(context, model), // buy from this user
+                            _buildSellTo(context, model), // sell to this user
                           ],
                         ),
                       ),
@@ -87,19 +88,19 @@ class _UserAdsScreenState extends State<UserAdsScreen> with TickerProviderStateM
     );
   }
 
-  Widget _buildBuyAdsList(BuildContext context, UserAdsViewModel model) {
+  Widget _buildBuyFrom(BuildContext context, UserAdsViewModel model) {
     return RefreshIndicator(
-      key: model.indicatorKeyBuy,
+      key: model.indicatorKeyBuyFrom,
       onRefresh: model.getAds,
       child: LayoutBuilder(builder: (context, constraints) {
         return ListView.builder(
           shrinkWrap: true,
-          itemCount: model.adsBuy.length + 1,
+          itemCount: model.adsSell.length + 1,
           itemBuilder: (context, index) {
-            if (model.adsBuy.isEmpty) {
+            if (model.adsSell.isEmpty) {
               return ConstrainedBox(
                 constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                child: model.loadingAds || model.initialLoading
+                child: model.loadingAds || model.sellInitialLoading
                     ? const SizedBox()
                     : NoSearchResults(
                         text: context.intl.dashboard250Sbads250Sbfilter250Sbno8722Sbads,
@@ -107,18 +108,18 @@ class _UserAdsScreenState extends State<UserAdsScreen> with TickerProviderStateM
               );
             }
 
-            if (index < model.adsBuy.length) {
+            if (index < model.adsSell.length) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                 child: AdMarketTile(
-                  ad: model.adsBuy[index],
+                  ad: model.adsSell[index],
                   onPressed: () async {
-                    await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.adsBuy[index]));
+                    await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.adsSell[index]));
                   },
                 ),
               );
             } else {
-              return model.hasMorePagesBuy
+              return model.hasMorePagesSell
                   ? VisibilityDetector(
                       key: UniqueKey(),
                       onVisibilityChanged: (VisibilityInfo info) {
@@ -141,19 +142,19 @@ class _UserAdsScreenState extends State<UserAdsScreen> with TickerProviderStateM
     );
   }
 
-  Widget _buildSellAdsList(BuildContext context, UserAdsViewModel model) {
+  Widget _buildSellTo(BuildContext context, UserAdsViewModel model) {
     return RefreshIndicator(
-      key: model.indicatorKeySell,
+      key: model.indicatorKeySellTo,
       onRefresh: model.getAds,
       child: LayoutBuilder(builder: (context, constraints) {
         return ListView.builder(
           shrinkWrap: true,
-          itemCount: model.adsSell.length + 1,
+          itemCount: model.adsBuy.length + 1,
           itemBuilder: (context, index) {
-            if (model.adsSell.isEmpty) {
+            if (model.adsBuy.isEmpty) {
               return ConstrainedBox(
                 constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                child: model.loadingAds || model.initialLoading
+                child: model.loadingAds || model.buyInitialLoading
                     ? const SizedBox()
                     : NoSearchResults(
                         text: context.intl.dashboard250Sbads250Sbfilter250Sbno8722Sbads,
@@ -161,18 +162,18 @@ class _UserAdsScreenState extends State<UserAdsScreen> with TickerProviderStateM
               );
             }
 
-            if (index < model.adsSell.length) {
+            if (index < model.adsBuy.length) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                 child: AdMarketTile(
-                  ad: model.adsSell[index],
+                  ad: model.adsBuy[index],
                   onPressed: () async {
-                    await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.adsSell[index]));
+                    await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.adsBuy[index]));
                   },
                 ),
               );
             } else {
-              return model.hasMorePagesSell
+              return model.hasMorePagesBuy
                   ? VisibilityDetector(
                       key: UniqueKey(),
                       onVisibilityChanged: (VisibilityInfo info) {
