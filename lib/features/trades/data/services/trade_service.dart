@@ -356,7 +356,7 @@ class TradeService {
       if (resp.statusCode == 200) {
         return const Either.right(true);
       } else {
-        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data as Map<String, dynamic>);
         return Either.left(apiError);
       }
     } catch (e) {

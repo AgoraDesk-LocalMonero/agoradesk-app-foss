@@ -337,7 +337,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           if (_authService.isAuthenticated) {
             eventBus.fire(
               FlashEvent.info(
-                'Session expired',
+                context?.intl.app_session_expired ?? 'Session expired',
               ),
             );
             await _authService.logOut();

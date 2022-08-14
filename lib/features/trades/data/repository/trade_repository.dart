@@ -159,6 +159,7 @@ class TradeRepository with ErrorParseMixin {
       adId: adId,
       amount: amount,
       address: address,
+      feeLevel: feeLevel,
     );
   }
 }

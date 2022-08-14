@@ -1,3 +1,0 @@
-class UserLogoutEvent {
-  const UserLogoutEvent();
-}

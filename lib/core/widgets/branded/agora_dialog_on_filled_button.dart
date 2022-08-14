@@ -12,6 +12,7 @@ class AgoraDialogOnFilledButton extends StatelessWidget {
     required this.content,
     required this.filledButtonTitle,
     this.loadingFilled = false,
+    this.filledActive = true,
   }) : super(key: key);
 
   final String title;
@@ -19,6 +20,7 @@ class AgoraDialogOnFilledButton extends StatelessWidget {
   final String filledButtonTitle;
   final VoidCallback onPressedFilled;
   final bool loadingFilled;
+  final bool filledActive;
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +69,7 @@ class AgoraDialogOnFilledButton extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: ButtonFilledP80(
+                      active: filledActive,
                       title: filledButtonTitle,
                       loading: loadingFilled,
                       onPressed: onPressedFilled,
