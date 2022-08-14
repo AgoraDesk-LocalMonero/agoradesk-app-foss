@@ -31,20 +31,6 @@ class _PostAdStep1State extends State<PostAdStep1> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        /// LocalMonero
-        // Padding(
-        //   padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-        //   child: Column(
-        //     crossAxisAlignment: CrossAxisAlignment.start,
-        //     children: [
-        //       Text(context.intl.post_ad250Sbtrade_type250Sbsubtitle),
-        //       const SizedBox(height: 16),
-        //       _buildSelectAction(),
-        //     ],
-        //   ),
-        // ),
-
-        /// AgoraDesk
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -52,7 +38,6 @@ class _PostAdStep1State extends State<PostAdStep1> {
             const SizedBox(height: 16),
           ],
         ),
-
         widget.model.screen1IsReady
             ? const SizedBox()
             : Text(
