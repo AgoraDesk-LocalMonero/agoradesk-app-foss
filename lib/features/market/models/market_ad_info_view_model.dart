@@ -70,7 +70,7 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
   bool _loadingFees = false;
   bool initialLoadingAd = true;
   bool _loadingBalance = false;
-  BtcFeesEnum? _btcFeesEnum = BtcFeesEnum.medium;
+  BtcFeesEnum _btcFeesEnum = BtcFeesEnum.medium;
   bool readyToDeal = false;
   bool isWalletValid = false;
   BtcFeesModel? btcFees;
@@ -88,9 +88,9 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
 
   set loadingBalance(bool v) => updateWith(loadingBalance: v);
 
-  BtcFeesEnum? get btcFeesEnum => _btcFeesEnum;
+  BtcFeesEnum get btcFeesEnum => _btcFeesEnum;
 
-  set btcFeesEnum(BtcFeesEnum? v) => updateWith(btcFeesEnum: v);
+  set btcFeesEnum(BtcFeesEnum v) => updateWith(btcFeesEnum: v);
 
   bool get startingTrade => _startingTrade;
 
@@ -331,7 +331,7 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
         adId: ad!.id!,
         amount: _receive.toString(),
         address: address,
-        feeLevel: _btcFeesEnum?.name,
+        feeLevel: _btcFeesEnum.name,
         asset: asset!,
         isSell: isSell,
       );

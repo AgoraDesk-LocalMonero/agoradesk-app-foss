@@ -18,6 +18,7 @@ import 'package:agoradesk/features/market/screens/widgets/btc_fees_radio_buttons
 import 'package:agoradesk/features/market/screens/widgets/suffix_icon.dart';
 import 'package:agoradesk/features/market/screens/widgets/text_with_dot.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 
@@ -296,6 +297,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                 filledButtonTitle: model.asset == Asset.BTC
                     ? context.intl.start_trading
                     : context.intl.wallet250Sbsend250Sbcontinue8722Sbbtn,
+                filledActive: model.isWalletValid,
                 onPressedFilled: () {
                   if (model.asset == Asset.BTC) {
                     _displayBtcFeesDialog(context, model);
@@ -326,7 +328,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        context.intl.buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbdescription,
+                        context.intl.app_buyer_settlement_fee_level_description,
                         style: context.txtBodySmallN80,
                       ),
                       const SizedBox(height: 12),
@@ -342,10 +344,12 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                                     ':',
                                 style: context.txtLabelMediumN80,
                               ),
-                              Text(
-                                model.btcFees!.selectedFeeStr(model.btcFeesEnum!)[0]! + ' BTC',
-                                style: context.txtBodySmallN80,
-                              ),
+                              model.btcFees == null
+                                  ? const CupertinoActivityIndicator()
+                                  : Text(
+                                      model.btcFees!.selectedFeeStr(model.btcFeesEnum)[0]! + ' BTC',
+                                      style: context.txtBodySmallN80,
+                                    ),
                             ],
                           ),
                         ),

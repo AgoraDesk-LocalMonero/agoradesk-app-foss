@@ -120,18 +120,18 @@ class ApiClient {
               );
 
               if (kDebugMode) {
-                // eventBus.fire(FlashEvent.error(message));
+                eventBus.fire(FlashEvent.error(message));
               }
             }
           } else if (statusCode == 500) {
             if (kDebugMode) {
-              // eventBus.fire(FlashEvent.error('Internal Server Error'));
+              eventBus.fire(FlashEvent.error('Internal Server Error'));
             }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
             debugPrint('[api_client ERROR message] statusCode == null, $message');
             if (kDebugMode) {
-              // eventBus.fire(FlashEvent.error(message));
+              eventBus.fire(FlashEvent.error(message));
             }
           }
 

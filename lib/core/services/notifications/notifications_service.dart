@@ -6,7 +6,6 @@ import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/device_model.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
@@ -15,7 +14,6 @@ import 'package:agoradesk/features/account/data/models/notification_message_type
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/features/profile/events.dart';
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
@@ -119,21 +117,6 @@ class NotificationsService with ForegroundMessagesMixin {
       if (e) {
         appState.hasUnread = false;
       }
-    });
-
-    ///
-    /// remove push token when user logged out
-    ///
-    eventBus.on<UserLogoutEvent>().listen((e) {
-      try {
-        if (authService.isAuthenticated) {
-          FirebaseMessaging.instance.deleteToken();
-          debugPrint('[$runtimeType] FirebaseMessaging token deleted...');
-        }
-      } catch (e) {
-        debugPrint('[$runtimeType] Error: $e');
-      }
-      // _deleteDevice(null);
     });
   }
 

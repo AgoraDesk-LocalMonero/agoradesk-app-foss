@@ -7931,10 +7931,16 @@ class I18nZh extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
+  String get app_session_expired => 'Session expired';
+
+  @override
   String get app_trading_partners => 'Trading partners';
 
   @override
   String get app_trade_status_settlement_processing_description => 'The settlement is being processed. Please wait, there\'s nothing that you need to do.';
+
+  @override
+  String get app_buyer_settlement_fee_level_description => 'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.';
 
   @override
   String get app_gallery => 'Gallery';

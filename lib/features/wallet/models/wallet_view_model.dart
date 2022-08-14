@@ -1,7 +1,6 @@
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
@@ -248,7 +247,7 @@ class WalletViewModel extends BaseViewModel {
         errorMessage = res.left.message.toString();
         debugPrint('[calcPrice error] ${res.left.message}');
       }
-      eventBus.fire(FlashEvent.error(errorMessage));
+      // eventBus.fire(FlashEvent.error(errorMessage));
       return null;
     }
   }
