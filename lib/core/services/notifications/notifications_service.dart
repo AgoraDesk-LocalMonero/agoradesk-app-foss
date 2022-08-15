@@ -54,8 +54,7 @@ class NotificationsService with ForegroundMessagesMixin {
     /// start listener for FCM messages that appears when the app is open
     /// in case Firebase service is not available the app uses polling
     ///
-    FirebaseMessaging.onBackgroundMessage((message) async {});
-    FirebaseMessaging.onMessageOpenedApp.listen((message) async {});
+    // FirebaseMessaging.onMessageOpenedApp.listen((message) async {});
     FirebaseMessaging.onMessage.listen((message) async {
       debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
       debugPrint('++++[$runtimeType][onMessage] data: ${message.data}');

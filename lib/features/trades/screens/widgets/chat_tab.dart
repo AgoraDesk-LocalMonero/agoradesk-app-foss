@@ -24,6 +24,8 @@ class ChatTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textfieldMaxLines = MediaQuery.of(context).size.height < 800 ? 8 : 12;
+
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
@@ -168,7 +170,7 @@ class ChatTab extends StatelessWidget {
                                     focusNode: model.focusMessage,
                                     decoration: context.decorationTxtFieldMain,
                                     minLines: 1,
-                                    maxLines: model.focusMessage.hasFocus ? 12 : 2,
+                                    maxLines: model.focusMessage.hasFocus ? textfieldMaxLines : 2,
                                     style: model.messageFieldEnabled
                                         ? context.txtBodyMediumNeutral70
                                         : context.txtBodyMediumNeutral80,
