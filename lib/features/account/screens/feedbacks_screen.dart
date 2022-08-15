@@ -41,16 +41,19 @@ class FeedbacksScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
               child: Column(
                 children: [
-                  DropdownSearch<FeedbackViewType>(
-                    dropdownButtonProps: context.dropdownButtonProps,
-                    dropdownDecoratorProps: context.dropdownDecoration,
-                    popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
-                    items: FeedbackViewType.values,
-                    itemAsString: (FeedbackViewType? t) => t?.translatedSign(context).capitalize() ?? '',
-                    onChanged: (FeedbackViewType? data) => model.feedbackViewType = data,
-                    selectedItem: model.feedbackViewType,
-                  ),
-                  const SizedBox(height: 24),
+                  // DropdownSearch<FeedbackViewType>(
+                  //   dropdownButtonProps: context.dropdownButtonProps,
+                  //   dropdownDecoratorProps: context.dropdownDecoration,
+                  //   popupProps: PopupProps.menu(
+                  //     menuProps: context.dropdownMenuProps,
+                  //     fit: FlexFit.loose,
+                  //   ),
+                  //   items: FeedbackViewType.values,
+                  //   itemAsString: (FeedbackViewType? t) => t?.translatedSign(context).capitalize() ?? '',
+                  //   onChanged: (FeedbackViewType? data) => model.feedbackViewType = data,
+                  //   selectedItem: model.feedbackViewType,
+                  // ),
+                  // const SizedBox(height: 24),
                   Expanded(
                     child: _feedbacksList(context, model),
                   ),

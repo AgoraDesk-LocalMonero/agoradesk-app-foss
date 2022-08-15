@@ -13,12 +13,14 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
   const AgoraAppBar({
     Key? key,
     this.title = '',
+    this.subTitle,
     this.leftAction,
     this.rightAction,
     this.handlePop,
   }) : super(key: key);
 
   final String title;
+  final String? subTitle;
   final Widget? rightAction;
   final Widget? leftAction;
   final FutureOrVoidCallback? handlePop;
@@ -45,9 +47,16 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Container(
               height: kBrandBackAppBarHeight,
               alignment: Alignment.center,
-              child: Text(
-                title,
-                style: Theme.of(context).textTheme.headline2!.copyWith(color: Theme.of(context).colorScheme.neutral90),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    title,
+                    style:
+                        Theme.of(context).textTheme.headline2!.copyWith(color: Theme.of(context).colorScheme.neutral90),
+                  ),
+                  subTitle == null ? const SizedBox() : Text(subTitle!),
+                ],
               ),
             ),
           ),
