@@ -80,14 +80,11 @@ class FeedbacksViewModel extends BaseViewModel with ErrorParseMixin {
   }) {
     bool reload = false;
     _loadingFeedbacks = loadingFeedbacks ?? _loadingFeedbacks;
-    print('++++++++++++++++++++++++++++++112 $_loadingFeedbacks - $feedbackViewType - $_feedbackViewType');
     if ((_feedbackViewType != feedbackViewType && feedbackViewType != null) && !_loadingFeedbacks) {
-      print('++++++++++++++++++++++++++++++113');
       reload = true;
     }
     _feedbackViewType = feedbackViewType ?? _feedbackViewType;
     if (reload) {
-      print('++++++++++++++++++++++++++++++114');
       reload = false;
       _fullFeedbacksReload = true;
       indicatorKey.currentState?.show();
