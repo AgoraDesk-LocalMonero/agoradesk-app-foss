@@ -26,6 +26,7 @@ class FeedbacksViewModel extends BaseViewModel with ErrorParseMixin {
   List<FeedbackModel> feedbacks = [];
   bool _loadingFeedbacks = false;
   bool hasMorePages = false;
+  bool _fullFeedbacksReload = false;
 
   bool get loadingFeedbacks => _loadingFeedbacks;
 
@@ -50,7 +51,7 @@ class FeedbacksViewModel extends BaseViewModel with ErrorParseMixin {
       final res = await _accountService.getFeedback(
         username: username,
         feedbackViewType: _feedbackViewType,
-        page: initial ? 0 : (paginationMeta?.currentPage ?? 0) + 1,
+        page: initial || _fullFeedbacksReload ? 0 : (paginationMeta?.currentPage ?? 0) + 1,
       );
       loadingFeedbacks = false;
       if (res.isRight) {
@@ -62,7 +63,8 @@ class FeedbacksViewModel extends BaseViewModel with ErrorParseMixin {
             hasMorePages = false;
           }
         }
-        if (initial) {
+        if (initial || _fullFeedbacksReload) {
+          _fullFeedbacksReload = false;
           feedbacks.clear();
         }
         feedbacks.addAll(res.right.data);
@@ -78,12 +80,16 @@ class FeedbacksViewModel extends BaseViewModel with ErrorParseMixin {
   }) {
     bool reload = false;
     _loadingFeedbacks = loadingFeedbacks ?? _loadingFeedbacks;
+    print('++++++++++++++++++++++++++++++112 $_loadingFeedbacks - $feedbackViewType - $_feedbackViewType');
     if ((_feedbackViewType != feedbackViewType && feedbackViewType != null) && !_loadingFeedbacks) {
+      print('++++++++++++++++++++++++++++++113');
       reload = true;
     }
     _feedbackViewType = feedbackViewType ?? _feedbackViewType;
     if (reload) {
+      print('++++++++++++++++++++++++++++++114');
       reload = false;
+      _fullFeedbacksReload = true;
       indicatorKey.currentState?.show();
     }
     notifyListeners();
