@@ -29,10 +29,12 @@ class ChatTab extends StatelessWidget {
         disposable: false,
         builder: (context, model, child) {
           return LayoutBuilder(builder: (context, constraints) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,
+            print('++++++++++++++++++++++++++++++117666 -- ${constraints.maxHeight - 80}');
+            return Stack(
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // mainAxisSize: MainAxisSize.max,
               children: [
+                SizedBox(height: constraints.maxHeight),
                 SizedBox(
                   height: constraints.maxHeight - 80,
                   child: model.loadingMessages
@@ -149,37 +151,43 @@ class ChatTab extends StatelessWidget {
                           ),
                         ),
                 ),
-                Stack(
-                  children: [
-                    Container(
-                      color: context.colSurface5,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
-                        child: Column(
-                          children: [
-                            _buildReplyLine(context, model),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
-                              child: TextField(
-                                style: model.messageFieldEnabled
-                                    ? context.txtBodyMediumNeutral70
-                                    : context.txtBodyMediumNeutral80,
-                                enabled: model.messageFieldEnabled,
-                                // focusNode: model.focusMessage,
-                                controller: model.ctrlMessage,
-                                decoration: context.decorationTxtFieldMain,
-                                minLines: 1,
-                                maxLines: model.focusMessage.hasFocus ? 7 : 2,
-                                keyboardType: TextInputType.multiline,
-                              ),
+                Positioned.fill(
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          color: context.colSurface5,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                _buildReplyLine(context, model),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
+                                  child: TextField(
+                                    controller: model.ctrlMessage,
+                                    focusNode: model.focusMessage,
+                                    decoration: context.decorationTxtFieldMain,
+                                    minLines: 1,
+                                    maxLines: model.focusMessage.hasFocus ? 12 : 2,
+                                    style: model.messageFieldEnabled
+                                        ? context.txtBodyMediumNeutral70
+                                        : context.txtBodyMediumNeutral80,
+                                    enabled: model.messageFieldEnabled,
+                                    keyboardType: TextInputType.multiline,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
-                    ),
-                    _buildChatSendButton(context, model),
-                    _buildClearAttachement(context, model),
-                  ],
+                      _buildChatSendButton(context, model),
+                      _buildClearAttachement(context, model),
+                    ],
+                  ),
                 ),
               ],
             );
