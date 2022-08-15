@@ -195,12 +195,13 @@ class ChatTab extends StatelessWidget {
   Widget _buildChatSendButton(BuildContext context, TradeViewModel model) {
     final double topPadding = model.repliedText.isNotEmpty ? 36 : 12;
     const buttonLeftPadding = 8.0;
+    const buttonBottomPadding = 20.0;
 
     return Align(
-      alignment: Alignment.centerRight,
+      alignment: Alignment.bottomRight,
       child: model.displaySend
           ? Padding(
-              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, 0),
+              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, buttonBottomPadding),
               child: IconButton(
                 padding: EdgeInsets.zero,
                 iconSize: 22,
@@ -213,7 +214,7 @@ class ChatTab extends StatelessWidget {
               ),
             )
           : Padding(
-              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, 0),
+              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, buttonBottomPadding),
               child: IconButton(
                 padding: EdgeInsets.zero,
                 iconSize: 22,
@@ -232,7 +233,7 @@ class ChatTab extends StatelessWidget {
     return model.messageFieldEnabled
         ? const SizedBox()
         : Align(
-            alignment: Alignment.centerRight,
+            alignment: Alignment.bottomRight,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 26, 46, 0),
               child: CloseIconBox(onPressed: () => model.clearAttachement()),
