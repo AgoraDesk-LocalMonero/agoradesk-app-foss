@@ -45,6 +45,7 @@ build-bundle-lm:
 .PHONY: build-ios-all
 build-ios-all:
 	$(FLUTTER) build ipa --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+
 	$(FLUTTER) build ipa --verbose --flavor localmonero --dart-define=app.flavor=localmonero
 
 .PHONY: build-ios-ad
