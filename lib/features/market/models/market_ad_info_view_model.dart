@@ -70,7 +70,7 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
   bool _loadingFees = false;
   bool initialLoadingAd = true;
   bool _loadingBalance = false;
-  BtcFeesEnum _btcFeesEnum = BtcFeesEnum.medium;
+  BtcFeesEnum _btcFeesEnum = BtcFeesEnum.MEDIUM;
   bool readyToDeal = false;
   bool isWalletValid = false;
   BtcFeesModel? btcFees;

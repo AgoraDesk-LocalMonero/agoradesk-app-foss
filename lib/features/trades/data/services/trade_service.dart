@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
@@ -36,6 +37,7 @@ class TradeService {
     required TradeRequestParameterModel requestParameter,
   }) async {
     try {
+      print('+++++++++++++++++++++++++++++++++++++++++111 /dashboard${type.apiUrl()}${tradeType?.apiUrl() ?? ''}');
       final resp = await _api.client.get(
         '/dashboard${type.apiUrl()}${tradeType?.apiUrl() ?? ''}',
         queryParameters: requestParameter.toJson(),
@@ -43,11 +45,15 @@ class TradeService {
 
       if (resp.statusCode == 200) {
         final List<dynamic> respList = jsonDecode(jsonEncode(resp.data['data']['contact_list']));
+        print('++++++++++++++++++++++++++++++112');
         PaginationMeta pagination = PaginationMeta.zero();
+        print('++++++++++++++++++++++++++++++113');
         if (resp.data['pagination'] != null) {
           pagination = PaginationMeta.fromJson(resp.data['pagination']);
         }
+        log('++++++++++++++++++++++++++++++114 - $respList');
         List<TradeModel> result = respList.map((i) => TradeModel.fromJson(i['data'])).toList();
+        print('++++++++++++++++++++++++++++++118 -- ${result.length}');
         return Either.right(Pagination(result, pagination: pagination));
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);

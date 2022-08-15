@@ -109,7 +109,7 @@ Map<String, dynamic> _$$_TradeModelToJson(_$_TradeModel instance) {
 }
 
 const _$BtcFeesEnumEnumMap = {
-  BtcFeesEnum.high: 'high',
-  BtcFeesEnum.medium: 'medium',
-  BtcFeesEnum.low: 'low',
+  BtcFeesEnum.HIGH: 'HIGH',
+  BtcFeesEnum.MEDIUM: 'MEDIUM',
+  BtcFeesEnum.LOW: 'LOW',
 };
