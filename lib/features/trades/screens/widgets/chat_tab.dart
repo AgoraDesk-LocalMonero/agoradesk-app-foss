@@ -29,10 +29,7 @@ class ChatTab extends StatelessWidget {
         disposable: false,
         builder: (context, model, child) {
           return LayoutBuilder(builder: (context, constraints) {
-            print('++++++++++++++++++++++++++++++117666 -- ${constraints.maxHeight - 80}');
             return Stack(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // mainAxisSize: MainAxisSize.max,
               children: [
                 SizedBox(height: constraints.maxHeight),
                 SizedBox(
