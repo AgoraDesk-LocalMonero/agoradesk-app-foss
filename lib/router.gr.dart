@@ -11,16 +11,17 @@
 // ignore_for_file: type=lint
 
 import 'package:auto_route/auto_route.dart' as _i49;
+import 'package:flutter/cupertino.dart' as _i52;
 import 'package:flutter/material.dart' as _i50;
 
-import 'features/account/data/models/account_info_model.dart' as _i55;
-import 'features/account/data/models/feedback_model.dart' as _i56;
+import 'features/account/data/models/account_info_model.dart' as _i56;
+import 'features/account/data/models/feedback_model.dart' as _i57;
 import 'features/account/screens/feedbacks_screen.dart' as _i18;
 import 'features/account/screens/trader_profile_screen.dart' as _i17;
 import 'features/account/screens/user_ads_screen.dart' as _i19;
-import 'features/ads/data/models/ad_model.dart' as _i53;
-import 'features/ads/data/models/asset.dart' as _i60;
-import 'features/ads/models/ads_view_model.dart' as _i52;
+import 'features/ads/data/models/ad_model.dart' as _i54;
+import 'features/ads/data/models/asset.dart' as _i61;
+import 'features/ads/models/ads_view_model.dart' as _i53;
 import 'features/ads/screens/ad_edit_screen.dart' as _i13;
 import 'features/ads/screens/ad_info_screen.dart' as _i12;
 import 'features/ads/screens/ads_screen.dart' as _i47;
@@ -36,14 +37,14 @@ import 'features/auth/screens/sign_up_screen.dart' as _i4;
 import 'features/auth/screens/welcome_screen.dart' as _i2;
 import 'features/auth/screens/welcome_slides_screen.dart' as _i3;
 import 'features/main/main_screen.dart' as _i1;
-import 'features/market/models/market_ad_info_view_model.dart' as _i54;
+import 'features/market/models/market_ad_info_view_model.dart' as _i55;
 import 'features/market/screens/initiate_trade_screen.dart' as _i16;
 import 'features/market/screens/market_ad_info_screen.dart' as _i15;
 import 'features/market/screens/market_help_screen.dart' as _i14;
 import 'features/market/screens/market_screen.dart' as _i46;
-import 'features/profile/data/models/reputation_platform.dart' as _i63;
-import 'features/profile/models/reputation_import_view_model.dart' as _i62;
-import 'features/profile/models/two_factor_auth_view_model.dart' as _i64;
+import 'features/profile/data/models/reputation_platform.dart' as _i64;
+import 'features/profile/models/reputation_import_view_model.dart' as _i63;
+import 'features/profile/models/two_factor_auth_view_model.dart' as _i65;
 import 'features/profile/screens/account_screen.dart' as _i48;
 import 'features/profile/screens/affiliate_program_screen.dart' as _i34;
 import 'features/profile/screens/change_password_screen.dart' as _i37;
@@ -58,13 +59,13 @@ import 'features/profile/screens/manage_two_factor_auth_screen.dart' as _i39;
 import 'features/profile/screens/my_profile_screen.dart' as _i31;
 import 'features/profile/screens/trading_partners_screen.dart' as _i33;
 import 'features/profile/screens/two_factor_auth_screen.dart' as _i38;
-import 'features/trades/data/models/trade_model.dart' as _i57;
+import 'features/trades/data/models/trade_model.dart' as _i58;
 import 'features/trades/screens/trade_screen.dart' as _i20;
 import 'features/trades/screens/trades_screen.dart' as _i45;
 import 'features/trades/screens/webview_screen.dart' as _i21;
-import 'features/wallet/data/models/incoming_deposit_model.dart' as _i59;
-import 'features/wallet/data/models/transaction_model.dart' as _i58;
-import 'features/wallet/models/send_asset_view_model.dart' as _i61;
+import 'features/wallet/data/models/incoming_deposit_model.dart' as _i60;
+import 'features/wallet/data/models/transaction_model.dart' as _i59;
+import 'features/wallet/models/send_asset_view_model.dart' as _i62;
 import 'features/wallet/screens/incoming_deposit_screen.dart' as _i24;
 import 'features/wallet/screens/notifications_screen.dart' as _i30;
 import 'features/wallet/screens/qr_scan_screen.dart' as _i29;
@@ -679,7 +680,7 @@ class WelcomeRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i3.WelcomeSlidesScreen]
 class WelcomeSlidesRoute extends _i49.PageRouteInfo<WelcomeSlidesRouteArgs> {
-  WelcomeSlidesRoute({_i50.Key? key, required bool isBuy})
+  WelcomeSlidesRoute({_i52.Key? key, required bool isBuy})
       : super(WelcomeSlidesRoute.name,
             path: 'auth/welcomeSlides',
             args: WelcomeSlidesRouteArgs(key: key, isBuy: isBuy));
@@ -690,7 +691,7 @@ class WelcomeSlidesRoute extends _i49.PageRouteInfo<WelcomeSlidesRouteArgs> {
 class WelcomeSlidesRouteArgs {
   const WelcomeSlidesRouteArgs({this.key, required this.isBuy});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final bool isBuy;
 
@@ -703,7 +704,7 @@ class WelcomeSlidesRouteArgs {
 /// generated route for
 /// [_i4.SignUpScreen]
 class SignUpRoute extends _i49.PageRouteInfo<SignUpRouteArgs> {
-  SignUpRoute({_i50.Key? key, bool displaySkip = false})
+  SignUpRoute({_i52.Key? key, bool displaySkip = false})
       : super(SignUpRoute.name,
             path: 'auth/signUp',
             args: SignUpRouteArgs(key: key, displaySkip: displaySkip));
@@ -714,7 +715,7 @@ class SignUpRoute extends _i49.PageRouteInfo<SignUpRouteArgs> {
 class SignUpRouteArgs {
   const SignUpRouteArgs({this.key, this.displaySkip = false});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final bool displaySkip;
 
@@ -727,7 +728,7 @@ class SignUpRouteArgs {
 /// generated route for
 /// [_i5.LoginScreen]
 class LoginRoute extends _i49.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({_i50.Key? key, bool displaySkip = true})
+  LoginRoute({_i52.Key? key, bool displaySkip = true})
       : super(LoginRoute.name,
             path: 'auth/login',
             args: LoginRouteArgs(key: key, displaySkip: displaySkip));
@@ -738,7 +739,7 @@ class LoginRoute extends _i49.PageRouteInfo<LoginRouteArgs> {
 class LoginRouteArgs {
   const LoginRouteArgs({this.key, this.displaySkip = true});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final bool displaySkip;
 
@@ -760,7 +761,7 @@ class ForgotPasswordRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i7.ResetPasswordScreen]
 class ResetPasswordRoute extends _i49.PageRouteInfo<ResetPasswordRouteArgs> {
-  ResetPasswordRoute({_i50.Key? key, required String token})
+  ResetPasswordRoute({_i52.Key? key, required String token})
       : super(ResetPasswordRoute.name,
             path: 'auth/resetPassword',
             args: ResetPasswordRouteArgs(key: key, token: token));
@@ -771,7 +772,7 @@ class ResetPasswordRoute extends _i49.PageRouteInfo<ResetPasswordRouteArgs> {
 class ResetPasswordRouteArgs {
   const ResetPasswordRouteArgs({this.key, required this.token});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String token;
 
@@ -810,7 +811,7 @@ class PostAdRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i11.AdsSettingsScreen]
 class AdsSettingsRoute extends _i49.PageRouteInfo<AdsSettingsRouteArgs> {
-  AdsSettingsRoute({_i50.Key? key, required _i52.AdsViewModel model})
+  AdsSettingsRoute({_i52.Key? key, required _i53.AdsViewModel model})
       : super(AdsSettingsRoute.name,
             path: 'ads/adsSettings',
             args: AdsSettingsRouteArgs(key: key, model: model));
@@ -821,9 +822,9 @@ class AdsSettingsRoute extends _i49.PageRouteInfo<AdsSettingsRouteArgs> {
 class AdsSettingsRouteArgs {
   const AdsSettingsRouteArgs({this.key, required this.model});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i52.AdsViewModel model;
+  final _i53.AdsViewModel model;
 
   @override
   String toString() {
@@ -834,7 +835,7 @@ class AdsSettingsRouteArgs {
 /// generated route for
 /// [_i12.AdInfoScreen]
 class AdInfoRoute extends _i49.PageRouteInfo<AdInfoRouteArgs> {
-  AdInfoRoute({_i50.Key? key, required _i53.AdModel ad})
+  AdInfoRoute({_i52.Key? key, required _i54.AdModel ad})
       : super(AdInfoRoute.name,
             path: 'ads/adInfo', args: AdInfoRouteArgs(key: key, ad: ad));
 
@@ -844,9 +845,9 @@ class AdInfoRoute extends _i49.PageRouteInfo<AdInfoRouteArgs> {
 class AdInfoRouteArgs {
   const AdInfoRouteArgs({this.key, required this.ad});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i53.AdModel ad;
+  final _i54.AdModel ad;
 
   @override
   String toString() {
@@ -857,7 +858,7 @@ class AdInfoRouteArgs {
 /// generated route for
 /// [_i13.AdEditScreen]
 class AdEditRoute extends _i49.PageRouteInfo<AdEditRouteArgs> {
-  AdEditRoute({_i50.Key? key, required _i53.AdModel ad})
+  AdEditRoute({_i52.Key? key, required _i54.AdModel ad})
       : super(AdEditRoute.name,
             path: 'ads/adEdit', args: AdEditRouteArgs(key: key, ad: ad));
 
@@ -867,9 +868,9 @@ class AdEditRoute extends _i49.PageRouteInfo<AdEditRouteArgs> {
 class AdEditRouteArgs {
   const AdEditRouteArgs({this.key, required this.ad});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i53.AdModel ad;
+  final _i54.AdModel ad;
 
   @override
   String toString() {
@@ -888,7 +889,7 @@ class MarketHelpRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i15.MarketAdInfoScreen]
 class MarketAdInfoRoute extends _i49.PageRouteInfo<MarketAdInfoRouteArgs> {
-  MarketAdInfoRoute({_i50.Key? key, _i53.AdModel? ad, String? adId})
+  MarketAdInfoRoute({_i52.Key? key, _i54.AdModel? ad, String? adId})
       : super(MarketAdInfoRoute.name,
             path: 'market/adInfo',
             args: MarketAdInfoRouteArgs(key: key, ad: ad, adId: adId));
@@ -899,9 +900,9 @@ class MarketAdInfoRoute extends _i49.PageRouteInfo<MarketAdInfoRouteArgs> {
 class MarketAdInfoRouteArgs {
   const MarketAdInfoRouteArgs({this.key, this.ad, this.adId});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i53.AdModel? ad;
+  final _i54.AdModel? ad;
 
   final String? adId;
 
@@ -914,7 +915,7 @@ class MarketAdInfoRouteArgs {
 /// generated route for
 /// [_i16.InitiateTradeScreen]
 class InitiateTradeRoute extends _i49.PageRouteInfo<InitiateTradeRouteArgs> {
-  InitiateTradeRoute({_i50.Key? key, required _i54.MarketAdInfoViewModel model})
+  InitiateTradeRoute({_i52.Key? key, required _i55.MarketAdInfoViewModel model})
       : super(InitiateTradeRoute.name,
             path: 'market/initiateTrade',
             args: InitiateTradeRouteArgs(key: key, model: model));
@@ -925,9 +926,9 @@ class InitiateTradeRoute extends _i49.PageRouteInfo<InitiateTradeRouteArgs> {
 class InitiateTradeRouteArgs {
   const InitiateTradeRouteArgs({this.key, required this.model});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i54.MarketAdInfoViewModel model;
+  final _i55.MarketAdInfoViewModel model;
 
   @override
   String toString() {
@@ -939,7 +940,7 @@ class InitiateTradeRouteArgs {
 /// [_i17.TraderProfileScreen]
 class TraderProfileRoute extends _i49.PageRouteInfo<TraderProfileRouteArgs> {
   TraderProfileRoute(
-      {_i50.Key? key, _i55.AccountInfoModel? profileModel, String? username})
+      {_i52.Key? key, _i56.AccountInfoModel? profileModel, String? username})
       : super(TraderProfileRoute.name,
             path: 'account/profile',
             args: TraderProfileRouteArgs(
@@ -951,9 +952,9 @@ class TraderProfileRoute extends _i49.PageRouteInfo<TraderProfileRouteArgs> {
 class TraderProfileRouteArgs {
   const TraderProfileRouteArgs({this.key, this.profileModel, this.username});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i55.AccountInfoModel? profileModel;
+  final _i56.AccountInfoModel? profileModel;
 
   final String? username;
 
@@ -967,9 +968,9 @@ class TraderProfileRouteArgs {
 /// [_i18.FeedbacksScreen]
 class FeedbacksRoute extends _i49.PageRouteInfo<FeedbacksRouteArgs> {
   FeedbacksRoute(
-      {_i50.Key? key,
+      {_i52.Key? key,
       required String username,
-      required List<_i56.FeedbackModel> feedbacks})
+      required List<_i57.FeedbackModel> feedbacks})
       : super(FeedbacksRoute.name,
             path: 'account/feedbacksToUser',
             args: FeedbacksRouteArgs(
@@ -982,11 +983,11 @@ class FeedbacksRouteArgs {
   const FeedbacksRouteArgs(
       {this.key, required this.username, required this.feedbacks});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String username;
 
-  final List<_i56.FeedbackModel> feedbacks;
+  final List<_i57.FeedbackModel> feedbacks;
 
   @override
   String toString() {
@@ -998,9 +999,9 @@ class FeedbacksRouteArgs {
 /// [_i19.UserAdsScreen]
 class UserAdsRoute extends _i49.PageRouteInfo<UserAdsRouteArgs> {
   UserAdsRoute(
-      {_i50.Key? key,
+      {_i52.Key? key,
       required String username,
-      required List<_i53.AdModel> ads})
+      required List<_i54.AdModel> ads})
       : super(UserAdsRoute.name,
             path: 'account/userAds',
             args: UserAdsRouteArgs(key: key, username: username, ads: ads));
@@ -1011,11 +1012,11 @@ class UserAdsRoute extends _i49.PageRouteInfo<UserAdsRouteArgs> {
 class UserAdsRouteArgs {
   const UserAdsRouteArgs({this.key, required this.username, required this.ads});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String username;
 
-  final List<_i53.AdModel> ads;
+  final List<_i54.AdModel> ads;
 
   @override
   String toString() {
@@ -1026,7 +1027,7 @@ class UserAdsRouteArgs {
 /// generated route for
 /// [_i20.TradeScreen]
 class TradeRoute extends _i49.PageRouteInfo<TradeRouteArgs> {
-  TradeRoute({_i50.Key? key, _i57.TradeModel? tradeModel, String? tradeId})
+  TradeRoute({_i52.Key? key, _i58.TradeModel? tradeModel, String? tradeId})
       : super(TradeRoute.name,
             path: 'trades/trade',
             args: TradeRouteArgs(
@@ -1038,9 +1039,9 @@ class TradeRoute extends _i49.PageRouteInfo<TradeRouteArgs> {
 class TradeRouteArgs {
   const TradeRouteArgs({this.key, this.tradeModel, this.tradeId});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i57.TradeModel? tradeModel;
+  final _i58.TradeModel? tradeModel;
 
   final String? tradeId;
 
@@ -1053,7 +1054,7 @@ class TradeRouteArgs {
 /// generated route for
 /// [_i21.WebviewScreen]
 class WebviewRoute extends _i49.PageRouteInfo<WebviewRouteArgs> {
-  WebviewRoute({_i50.Key? key, String? token, required String url})
+  WebviewRoute({_i52.Key? key, String? token, required String url})
       : super(WebviewRoute.name,
             path: 'webviewScreen',
             args: WebviewRouteArgs(key: key, token: token, url: url));
@@ -1064,7 +1065,7 @@ class WebviewRoute extends _i49.PageRouteInfo<WebviewRouteArgs> {
 class WebviewRouteArgs {
   const WebviewRouteArgs({this.key, this.token, required this.url});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String? token;
 
@@ -1080,7 +1081,7 @@ class WebviewRouteArgs {
 /// [_i22.TransactionsScreen]
 class TransactionsRoute extends _i49.PageRouteInfo<TransactionsRouteArgs> {
   TransactionsRoute(
-      {_i50.Key? key, required List<_i58.TransactionModel> transactions})
+      {_i52.Key? key, required List<_i59.TransactionModel> transactions})
       : super(TransactionsRoute.name,
             path: 'wallet/transactions',
             args: TransactionsRouteArgs(key: key, transactions: transactions));
@@ -1091,9 +1092,9 @@ class TransactionsRoute extends _i49.PageRouteInfo<TransactionsRouteArgs> {
 class TransactionsRouteArgs {
   const TransactionsRouteArgs({this.key, required this.transactions});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final List<_i58.TransactionModel> transactions;
+  final List<_i59.TransactionModel> transactions;
 
   @override
   String toString() {
@@ -1104,7 +1105,7 @@ class TransactionsRouteArgs {
 /// generated route for
 /// [_i23.TransactionScreen]
 class TransactionRoute extends _i49.PageRouteInfo<TransactionRouteArgs> {
-  TransactionRoute({_i50.Key? key, required _i58.TransactionModel transaction})
+  TransactionRoute({_i52.Key? key, required _i59.TransactionModel transaction})
       : super(TransactionRoute.name,
             path: 'wallet/transaction',
             args: TransactionRouteArgs(key: key, transaction: transaction));
@@ -1115,9 +1116,9 @@ class TransactionRoute extends _i49.PageRouteInfo<TransactionRouteArgs> {
 class TransactionRouteArgs {
   const TransactionRouteArgs({this.key, required this.transaction});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i58.TransactionModel transaction;
+  final _i59.TransactionModel transaction;
 
   @override
   String toString() {
@@ -1130,7 +1131,7 @@ class TransactionRouteArgs {
 class IncomingDepositRoute
     extends _i49.PageRouteInfo<IncomingDepositRouteArgs> {
   IncomingDepositRoute(
-      {_i50.Key? key, required _i59.IncomingDepositModel deposit})
+      {_i52.Key? key, required _i60.IncomingDepositModel deposit})
       : super(IncomingDepositRoute.name,
             path: 'wallet/incomingDeposit',
             args: IncomingDepositRouteArgs(key: key, deposit: deposit));
@@ -1141,9 +1142,9 @@ class IncomingDepositRoute
 class IncomingDepositRouteArgs {
   const IncomingDepositRouteArgs({this.key, required this.deposit});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i59.IncomingDepositModel deposit;
+  final _i60.IncomingDepositModel deposit;
 
   @override
   String toString() {
@@ -1155,10 +1156,10 @@ class IncomingDepositRouteArgs {
 /// [_i25.SendAssetFirstScreen]
 class SendAssetFirstRoute extends _i49.PageRouteInfo<SendAssetFirstRouteArgs> {
   SendAssetFirstRoute(
-      {_i50.Key? key,
+      {_i52.Key? key,
       required double? price,
       required double? balance,
-      required _i60.Asset asset})
+      required _i61.Asset asset})
       : super(SendAssetFirstRoute.name,
             path: 'wallet/sendAssetOne',
             args: SendAssetFirstRouteArgs(
@@ -1174,13 +1175,13 @@ class SendAssetFirstRouteArgs {
       required this.balance,
       required this.asset});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final double? price;
 
   final double? balance;
 
-  final _i60.Asset asset;
+  final _i61.Asset asset;
 
   @override
   String toString() {
@@ -1192,7 +1193,7 @@ class SendAssetFirstRouteArgs {
 /// [_i26.SendAssetSecondScreen]
 class SendAssetSecondRoute
     extends _i49.PageRouteInfo<SendAssetSecondRouteArgs> {
-  SendAssetSecondRoute({_i50.Key? key, required _i61.SendAssetViewModel model})
+  SendAssetSecondRoute({_i52.Key? key, required _i62.SendAssetViewModel model})
       : super(SendAssetSecondRoute.name,
             path: 'wallet/sendAssetTwo',
             args: SendAssetSecondRouteArgs(key: key, model: model));
@@ -1203,9 +1204,9 @@ class SendAssetSecondRoute
 class SendAssetSecondRouteArgs {
   const SendAssetSecondRouteArgs({this.key, required this.model});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i61.SendAssetViewModel model;
+  final _i62.SendAssetViewModel model;
 
   @override
   String toString() {
@@ -1216,7 +1217,7 @@ class SendAssetSecondRouteArgs {
 /// generated route for
 /// [_i27.SendAssetThirdScreen]
 class SendAssetThirdRoute extends _i49.PageRouteInfo<SendAssetThirdRouteArgs> {
-  SendAssetThirdRoute({_i50.Key? key, required _i61.SendAssetViewModel model})
+  SendAssetThirdRoute({_i52.Key? key, required _i62.SendAssetViewModel model})
       : super(SendAssetThirdRoute.name,
             path: 'wallet/sendAssetThree',
             args: SendAssetThirdRouteArgs(key: key, model: model));
@@ -1227,9 +1228,9 @@ class SendAssetThirdRoute extends _i49.PageRouteInfo<SendAssetThirdRouteArgs> {
 class SendAssetThirdRouteArgs {
   const SendAssetThirdRouteArgs({this.key, required this.model});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i61.SendAssetViewModel model;
+  final _i62.SendAssetViewModel model;
 
   @override
   String toString() {
@@ -1241,7 +1242,7 @@ class SendAssetThirdRouteArgs {
 /// [_i28.ReceiveAssetScreen]
 class ReceiveAssetRoute extends _i49.PageRouteInfo<ReceiveAssetRouteArgs> {
   ReceiveAssetRoute(
-      {_i50.Key? key, required String? address, required _i60.Asset asset})
+      {_i52.Key? key, required String? address, required _i61.Asset asset})
       : super(ReceiveAssetRoute.name,
             path: 'wallet/receiveAssetThree',
             args: ReceiveAssetRouteArgs(
@@ -1254,11 +1255,11 @@ class ReceiveAssetRouteArgs {
   const ReceiveAssetRouteArgs(
       {this.key, required this.address, required this.asset});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String? address;
 
-  final _i60.Asset asset;
+  final _i61.Asset asset;
 
   @override
   String toString() {
@@ -1286,7 +1287,7 @@ class NotificationsRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i31.MyProfileScreen]
 class MyProfileRoute extends _i49.PageRouteInfo<MyProfileRouteArgs> {
-  MyProfileRoute({_i50.Key? key, required String username})
+  MyProfileRoute({_i52.Key? key, required String username})
       : super(MyProfileRoute.name,
             path: 'profile/myProfile',
             args: MyProfileRouteArgs(key: key, username: username));
@@ -1297,7 +1298,7 @@ class MyProfileRoute extends _i49.PageRouteInfo<MyProfileRouteArgs> {
 class MyProfileRouteArgs {
   const MyProfileRouteArgs({this.key, required this.username});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String username;
 
@@ -1311,9 +1312,9 @@ class MyProfileRouteArgs {
 /// [_i32.LinkAccountScreen]
 class LinkAccountRoute extends _i49.PageRouteInfo<LinkAccountRouteArgs> {
   LinkAccountRoute(
-      {_i50.Key? key,
-      required _i62.ReputationImportViewModel reputationImportViewModel,
-      required _i63.ReputationPlatform reputationPlatform})
+      {_i52.Key? key,
+      required _i63.ReputationImportViewModel reputationImportViewModel,
+      required _i64.ReputationPlatform reputationPlatform})
       : super(LinkAccountRoute.name,
             path: 'profile/linkAccount',
             args: LinkAccountRouteArgs(
@@ -1330,11 +1331,11 @@ class LinkAccountRouteArgs {
       required this.reputationImportViewModel,
       required this.reputationPlatform});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
-  final _i62.ReputationImportViewModel reputationImportViewModel;
+  final _i63.ReputationImportViewModel reputationImportViewModel;
 
-  final _i63.ReputationPlatform reputationPlatform;
+  final _i64.ReputationPlatform reputationPlatform;
 
   @override
   String toString() {
@@ -1371,7 +1372,7 @@ class CouponsRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i36.EmailScreen]
 class EmailRoute extends _i49.PageRouteInfo<EmailRouteArgs> {
-  EmailRoute({_i50.Key? key, required bool verified})
+  EmailRoute({_i52.Key? key, required bool verified})
       : super(EmailRoute.name,
             path: 'profile/email',
             args: EmailRouteArgs(key: key, verified: verified));
@@ -1382,7 +1383,7 @@ class EmailRoute extends _i49.PageRouteInfo<EmailRouteArgs> {
 class EmailRouteArgs {
   const EmailRouteArgs({this.key, required this.verified});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final bool verified;
 
@@ -1415,9 +1416,9 @@ class TwoFactorAuthRoute extends _i49.PageRouteInfo<void> {
 class ManageTwoFactorAuthRoute
     extends _i49.PageRouteInfo<ManageTwoFactorAuthRouteArgs> {
   ManageTwoFactorAuthRoute(
-      {_i50.Key? key,
+      {_i52.Key? key,
       required bool enabled,
-      required _i64.TwoFactorAuthViewModel model})
+      required _i65.TwoFactorAuthViewModel model})
       : super(ManageTwoFactorAuthRoute.name,
             path: 'profile/manageTwoFactorAuth',
             args: ManageTwoFactorAuthRouteArgs(
@@ -1430,11 +1431,11 @@ class ManageTwoFactorAuthRouteArgs {
   const ManageTwoFactorAuthRouteArgs(
       {this.key, required this.enabled, required this.model});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final bool enabled;
 
-  final _i64.TwoFactorAuthViewModel model;
+  final _i65.TwoFactorAuthViewModel model;
 
   @override
   String toString() {
@@ -1445,7 +1446,7 @@ class ManageTwoFactorAuthRouteArgs {
 /// generated route for
 /// [_i40.Enable2faScreen]
 class Enable2faRoute extends _i49.PageRouteInfo<Enable2faRouteArgs> {
-  Enable2faRoute({_i50.Key? key, required String secretUri})
+  Enable2faRoute({_i52.Key? key, required String secretUri})
       : super(Enable2faRoute.name,
             path: 'profile/enableTwoFactorAuth',
             args: Enable2faRouteArgs(key: key, secretUri: secretUri));
@@ -1456,7 +1457,7 @@ class Enable2faRoute extends _i49.PageRouteInfo<Enable2faRouteArgs> {
 class Enable2faRouteArgs {
   const Enable2faRouteArgs({this.key, required this.secretUri});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String secretUri;
 
@@ -1469,7 +1470,7 @@ class Enable2faRouteArgs {
 /// generated route for
 /// [_i41.Disable2faScreen]
 class Disable2faRoute extends _i49.PageRouteInfo<Disable2faRouteArgs> {
-  Disable2faRoute({_i50.Key? key, required String password})
+  Disable2faRoute({_i52.Key? key, required String password})
       : super(Disable2faRoute.name,
             path: 'profile/disableTwoFactorAuth',
             args: Disable2faRouteArgs(key: key, password: password));
@@ -1480,7 +1481,7 @@ class Disable2faRoute extends _i49.PageRouteInfo<Disable2faRouteArgs> {
 class Disable2faRouteArgs {
   const Disable2faRouteArgs({this.key, required this.password});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   final String password;
 
@@ -1501,7 +1502,7 @@ class LanguageRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i43.CountryScreen]
 class CountryRoute extends _i49.PageRouteInfo<CountryRouteArgs> {
-  CountryRoute({_i50.Key? key})
+  CountryRoute({_i52.Key? key})
       : super(CountryRoute.name,
             path: 'profile/country', args: CountryRouteArgs(key: key));
 
@@ -1511,7 +1512,7 @@ class CountryRoute extends _i49.PageRouteInfo<CountryRouteArgs> {
 class CountryRouteArgs {
   const CountryRouteArgs({this.key});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   @override
   String toString() {
@@ -1538,7 +1539,7 @@ class TradesRoute extends _i49.PageRouteInfo<void> {
 /// generated route for
 /// [_i46.MarketScreen]
 class MarketRoute extends _i49.PageRouteInfo<MarketRouteArgs> {
-  MarketRoute({_i50.Key? key})
+  MarketRoute({_i52.Key? key})
       : super(MarketRoute.name,
             path: 'market', args: MarketRouteArgs(key: key));
 
@@ -1548,7 +1549,7 @@ class MarketRoute extends _i49.PageRouteInfo<MarketRouteArgs> {
 class MarketRouteArgs {
   const MarketRouteArgs({this.key});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   @override
   String toString() {
@@ -1559,7 +1560,7 @@ class MarketRouteArgs {
 /// generated route for
 /// [_i47.AdsScreen]
 class AdsRoute extends _i49.PageRouteInfo<AdsRouteArgs> {
-  AdsRoute({_i50.Key? key})
+  AdsRoute({_i52.Key? key})
       : super(AdsRoute.name, path: 'ads', args: AdsRouteArgs(key: key));
 
   static const String name = 'AdsRoute';
@@ -1568,7 +1569,7 @@ class AdsRoute extends _i49.PageRouteInfo<AdsRouteArgs> {
 class AdsRouteArgs {
   const AdsRouteArgs({this.key});
 
-  final _i50.Key? key;
+  final _i52.Key? key;
 
   @override
   String toString() {

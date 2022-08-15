@@ -24,169 +24,166 @@ class ChatTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //todo - fixme
-    final chatHeight = model.repliedText.isNotEmpty
-        ? MediaQuery.of(context).size.height - 260
-        : MediaQuery.of(context).size.height - 240;
-
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
         builder: (context, model, child) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SizedBox(
-                height: chatHeight,
-                child: model.loadingMessages
-                    ? const AgoraLoadingIndicator()
-                    : RepaintBoundary(
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                          child: ListView(
-                            controller: model.chatController,
-                            reverse: true,
-                            children: [
-                              // SliverAnimatedList(
-                              //   key: model.messagesListKey,
-                              //   initialItemCount: model.messages.length,
-                              //   itemBuilder: (context, index, animation) {
-                              //     final MessageBoxModel message = model.messages[index];
-                              //     return SlideTransition(
-                              //       key: UniqueKey(),
-                              //       position: Tween<Offset>(
-                              //         begin: const Offset(-1, -0),
-                              //         end: const Offset(0, 0),
-                              //       ).animate(animation),
-                              //       child: ChatBubble(
-                              //         isMyMessage: model.isMyMessage(message),
-                              //         messageMargin: model.messageMarginCalc(message, context),
-                              //         message: message,
-                              //         image: model.imageForBubble,
-                              //         onPressedReply: () => model.addReply(message),
-                              //       ),
-                              //     );
-                              //   },
-                              // ),
-                              _buildListWithStickyHeader(context),
-                              ..._buildMessagesBeforeSticky(context),
-                              _buildTradeStepOne(context),
-                              _buildWarning(context),
-                              _buildFirstChatTile(context),
-                              // if (model.tradeStatus.index < 5 && model.tradeStatus != TradeStatus.disputed)
-                              //   SliverPersistentHeader(
-                              //     delegate: _SectionHeaderDelegate(model),
-                              //     pinned: true,
-                              //     floating: true,
-                              //   ),
-                              // SliverAnimatedList(
-                              //   key: model.messagesListKey,
-                              //   initialItemCount: model.messages.length,
-                              //   itemBuilder: (context, index, animation) {
-                              //     final MessageBoxModel message = reversedMessages[index];
-                              //     return SlideTransition(
-                              //       key: UniqueKey(),
-                              //       position: Tween<Offset>(
-                              //         begin: const Offset(-1, -0),
-                              //         end: const Offset(0, 0),
-                              //       ).animate(animation),
-                              //       child: ChatBubble(
-                              //         isMyMessage: model.isMyMessage(message),
-                              //         messageMargin: model.messageMarginCalc(message, context),
-                              //         message: message,
-                              //         image: model.imageForBubble,
-                              //         onPressedReply: () => model.addReply(message),
-                              //       ),
-                              //     );
-                              //   },
-                              // ),
-                              // SliverAppBar(
-                              //   title: Text("Title"),
-                              //   pinned: true,
-                              // ),
-                            ],
+          return LayoutBuilder(builder: (context, constraints) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                SizedBox(
+                  height: constraints.maxHeight - 80,
+                  child: model.loadingMessages
+                      ? const AgoraLoadingIndicator()
+                      : RepaintBoundary(
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                            child: ListView(
+                              controller: model.chatController,
+                              reverse: true,
+                              children: [
+                                // SliverAnimatedList(
+                                //   key: model.messagesListKey,
+                                //   initialItemCount: model.messages.length,
+                                //   itemBuilder: (context, index, animation) {
+                                //     final MessageBoxModel message = model.messages[index];
+                                //     return SlideTransition(
+                                //       key: UniqueKey(),
+                                //       position: Tween<Offset>(
+                                //         begin: const Offset(-1, -0),
+                                //         end: const Offset(0, 0),
+                                //       ).animate(animation),
+                                //       child: ChatBubble(
+                                //         isMyMessage: model.isMyMessage(message),
+                                //         messageMargin: model.messageMarginCalc(message, context),
+                                //         message: message,
+                                //         image: model.imageForBubble,
+                                //         onPressedReply: () => model.addReply(message),
+                                //       ),
+                                //     );
+                                //   },
+                                // ),
+                                _buildListWithStickyHeader(context),
+                                ..._buildMessagesBeforeSticky(context),
+                                _buildTradeStepOne(context),
+                                _buildWarning(context),
+                                _buildFirstChatTile(context),
+                                // if (model.tradeStatus.index < 5 && model.tradeStatus != TradeStatus.disputed)
+                                //   SliverPersistentHeader(
+                                //     delegate: _SectionHeaderDelegate(model),
+                                //     pinned: true,
+                                //     floating: true,
+                                //   ),
+                                // SliverAnimatedList(
+                                //   key: model.messagesListKey,
+                                //   initialItemCount: model.messages.length,
+                                //   itemBuilder: (context, index, animation) {
+                                //     final MessageBoxModel message = reversedMessages[index];
+                                //     return SlideTransition(
+                                //       key: UniqueKey(),
+                                //       position: Tween<Offset>(
+                                //         begin: const Offset(-1, -0),
+                                //         end: const Offset(0, 0),
+                                //       ).animate(animation),
+                                //       child: ChatBubble(
+                                //         isMyMessage: model.isMyMessage(message),
+                                //         messageMargin: model.messageMarginCalc(message, context),
+                                //         message: message,
+                                //         image: model.imageForBubble,
+                                //         onPressedReply: () => model.addReply(message),
+                                //       ),
+                                //     );
+                                //   },
+                                // ),
+                                // SliverAppBar(
+                                //   title: Text("Title"),
+                                //   pinned: true,
+                                // ),
+                              ],
+                            ),
+                            // child: AnimatedList(
+                            //     key: model.messagesListKey,
+                            //     controller: model.chatController,
+                            //     reverse: true,
+                            //     padding: EdgeInsets.zero,
+                            //     shrinkWrap: true,
+                            //     initialItemCount: model.messages.length + 3,
+                            //     itemBuilder: (context, index, animation) {
+                            //       // info text
+                            //       if (index == model.messages.length + 2) {
+                            //         return Padding(
+                            //           padding: const EdgeInsets.fromLTRB(10, 20, 10, 8),
+                            //           child: Text(
+                            //             context.intl.chat250Sbinput8722Sbtip8722Sbshort(GetIt.I<AppParameters>().appName),
+                            //             style: context.txtBodyXXSmallNeutral50,
+                            //           ),
+                            //         );
+                            //       }
+                            //       //info message
+                            //       if (index == model.messages.length + 1) {
+                            //         return _buildWarning(context);
+                            //       }
+                            //       //info message
+                            //       if (index == model.messages.length) {
+                            //         return TradeStepOne(model: model);
+                            //       }
+                            //       final message = model.messages[index];
+                            //       return RepaintBoundary(
+                            //         child: SlideTransition(
+                            //           key: UniqueKey(),
+                            //           position: Tween<Offset>(
+                            //             begin: const Offset(-1, -0),
+                            //             end: const Offset(0, 0),
+                            //           ).animate(animation),
+                            //           child: ChatBubble(
+                            //             isMyMessage: model.isMyMessage(message),
+                            //             messageMargin: model.messageMarginCalc(message),
+                            //             message: message,
+                            //             onPressedReply: () => model.addReply(message),
+                            //           ),
+                            //         ),
+                            //       );
+                            //     }),
                           ),
-                          // child: AnimatedList(
-                          //     key: model.messagesListKey,
-                          //     controller: model.chatController,
-                          //     reverse: true,
-                          //     padding: EdgeInsets.zero,
-                          //     shrinkWrap: true,
-                          //     initialItemCount: model.messages.length + 3,
-                          //     itemBuilder: (context, index, animation) {
-                          //       // info text
-                          //       if (index == model.messages.length + 2) {
-                          //         return Padding(
-                          //           padding: const EdgeInsets.fromLTRB(10, 20, 10, 8),
-                          //           child: Text(
-                          //             context.intl.chat250Sbinput8722Sbtip8722Sbshort(GetIt.I<AppParameters>().appName),
-                          //             style: context.txtBodyXXSmallNeutral50,
-                          //           ),
-                          //         );
-                          //       }
-                          //       //info message
-                          //       if (index == model.messages.length + 1) {
-                          //         return _buildWarning(context);
-                          //       }
-                          //       //info message
-                          //       if (index == model.messages.length) {
-                          //         return TradeStepOne(model: model);
-                          //       }
-                          //       final message = model.messages[index];
-                          //       return RepaintBoundary(
-                          //         child: SlideTransition(
-                          //           key: UniqueKey(),
-                          //           position: Tween<Offset>(
-                          //             begin: const Offset(-1, -0),
-                          //             end: const Offset(0, 0),
-                          //           ).animate(animation),
-                          //           child: ChatBubble(
-                          //             isMyMessage: model.isMyMessage(message),
-                          //             messageMargin: model.messageMarginCalc(message),
-                          //             message: message,
-                          //             onPressedReply: () => model.addReply(message),
-                          //           ),
-                          //         ),
-                          //       );
-                          //     }),
+                        ),
+                ),
+                Stack(
+                  children: [
+                    Container(
+                      color: context.colSurface5,
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
+                        child: Column(
+                          children: [
+                            _buildReplyLine(context, model),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
+                              child: TextField(
+                                style: model.messageFieldEnabled
+                                    ? context.txtBodyMediumNeutral70
+                                    : context.txtBodyMediumNeutral80,
+                                enabled: model.messageFieldEnabled,
+                                // focusNode: model.focusMessage,
+                                controller: model.ctrlMessage,
+                                decoration: context.decorationTxtFieldMain,
+                                minLines: 1,
+                                maxLines: model.focusMessage.hasFocus ? 7 : 2,
+                                keyboardType: TextInputType.multiline,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-              ),
-              Stack(
-                children: [
-                  Container(
-                    color: context.colSurface5,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
-                      child: Column(
-                        children: [
-                          _buildReplyLine(context, model),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
-                            child: TextField(
-                              style: model.messageFieldEnabled
-                                  ? context.txtBodyMediumNeutral70
-                                  : context.txtBodyMediumNeutral80,
-                              enabled: model.messageFieldEnabled,
-                              // focusNode: model.focusMessage,
-                              controller: model.ctrlMessage,
-                              decoration: context.decorationTxtFieldMain,
-                              minLines: 1,
-                              maxLines: model.focusMessage.hasFocus ? 7 : 2,
-                              keyboardType: TextInputType.multiline,
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
-                  ),
-                  _buildChatSendButton(context, model),
-                  _buildClearAttachement(context, model),
-                ],
-              ),
-            ],
-          );
+                    _buildChatSendButton(context, model),
+                    _buildClearAttachement(context, model),
+                  ],
+                ),
+              ],
+            );
+          });
         });
   }
 

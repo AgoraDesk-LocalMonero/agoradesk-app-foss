@@ -55,7 +55,7 @@ class SendAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin,
   double _xmrFees = 0;
   BtcFeesModel? oldBtcFees;
   double? oldXmrFees;
-  BtcFeesEnum? _btcFeesEnum = BtcFeesEnum.medium;
+  BtcFeesEnum? _btcFeesEnum = BtcFeesEnum.MEDIUM;
 
   BtcFeesEnum? get btcFeesEnum => _btcFeesEnum;
 

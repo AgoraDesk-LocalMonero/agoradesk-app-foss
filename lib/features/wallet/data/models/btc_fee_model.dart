@@ -23,22 +23,22 @@ class BtcFeesModel with _$BtcFeesModel {
 
   List<String?> selectedFeeStr(BtcFeesEnum feesType) {
     switch (feesType) {
-      case BtcFeesEnum.high:
+      case BtcFeesEnum.HIGH:
         return [outgoingFeeHigh, outgoingFeeRateHigh];
-      case BtcFeesEnum.medium:
+      case BtcFeesEnum.MEDIUM:
         return [outgoingFeeMedium, outgoingFeeRateMedium];
-      case BtcFeesEnum.low:
+      case BtcFeesEnum.LOW:
         return [outgoingFeeLow, outgoingFeeRateLow];
     }
   }
 
   double? selectedFeeNum(BtcFeesEnum feesType) {
     switch (feesType) {
-      case BtcFeesEnum.high:
+      case BtcFeesEnum.HIGH:
         return double.tryParse(outgoingFeeHigh ?? '');
-      case BtcFeesEnum.medium:
+      case BtcFeesEnum.MEDIUM:
         return double.tryParse(outgoingFeeMedium ?? '');
-      case BtcFeesEnum.low:
+      case BtcFeesEnum.LOW:
         return double.tryParse(outgoingFeeLow ?? '');
     }
   }

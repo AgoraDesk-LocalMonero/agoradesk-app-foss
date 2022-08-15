@@ -138,7 +138,7 @@ class NotificationsService with ForegroundMessagesMixin {
     if (userPermission) {
       fcm.getToken();
       final token = await fcm.getToken();
-      debugPrint('[$runtimeType] FirebaseMessaging token created: $token');
+      debugPrint('[$runtimeType] FirebaseMessaging pushtoken created: $token');
       _tokenUpdate(token);
     }
   }

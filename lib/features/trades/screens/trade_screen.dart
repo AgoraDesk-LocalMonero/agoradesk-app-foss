@@ -93,9 +93,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
                     child: RefreshIndicator(
                       key: model.indicatorKey,
                       onRefresh: () async => model.getTrade(polling: true),
-                      child: SingleChildScrollView(
-                        child: _buildBody(context, model),
-                      ),
+                      child: _buildBody(context, model),
                     ),
                   ),
                 ],
@@ -131,40 +129,42 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
   }
 
   Widget _buildTradeTab(BuildContext context, TradeViewModel model) {
-    return Column(
-      children: [
-        TradeInfoTile(model: model),
-        TradeStepOne(model: model),
-        TradeStepTwo(model: model),
-        TradeStepThree(model: model),
-        model.tradeStatus.index < 5 || model.tradeStatus == TradeStatus.disputed
-            ? Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: BoxInfoWithLabel(
-                  label: context.intl.trade250Sbstatus250Sbescrowed,
-                  child: Text(
-                    context.intl
-                        .trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb1(GetIt.I<AppParameters>().appName),
-                    style: context.txtBodyXSmallN80,
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          TradeInfoTile(model: model),
+          TradeStepOne(model: model),
+          TradeStepTwo(model: model),
+          TradeStepThree(model: model),
+          model.tradeStatus.index < 5 || model.tradeStatus == TradeStatus.disputed
+              ? Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                  child: BoxInfoWithLabel(
+                    label: context.intl.trade250Sbstatus250Sbescrowed,
+                    child: Text(
+                      context.intl
+                          .trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb1(GetIt.I<AppParameters>().appName),
+                      style: context.txtBodyXSmallN80,
+                    ),
                   ),
-                ),
-              )
-            : const SizedBox(),
-        (model.tradeStatus.index < 5 && !model.isLocalTrade)
-            ? ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 200),
-                child: ButtonOutlinedWithIconP80(
-                  icon: Icon(
-                    AgoraFont.alert_circle,
-                    color: context.colPrimary80,
+                )
+              : const SizedBox(),
+          (model.tradeStatus.index < 5 && !model.isLocalTrade)
+              ? ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 200),
+                  child: ButtonOutlinedWithIconP80(
+                    icon: Icon(
+                      AgoraFont.alert_circle,
+                      color: context.colPrimary80,
+                    ),
+                    title: context.intl.trade250Sbdispute8722Sbbtn,
+                    onPressed: () => model.showDisputeDialog(),
                   ),
-                  title: context.intl.trade250Sbdispute8722Sbbtn,
-                  onPressed: () => model.showDisputeDialog(),
-                ),
-              )
-            : const SizedBox(),
-        const SizedBox(height: 30),
-      ],
+                )
+              : const SizedBox(),
+          const SizedBox(height: 30),
+        ],
+      ),
     );
   }
 }

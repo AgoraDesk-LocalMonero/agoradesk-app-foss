@@ -85,7 +85,7 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
   bool isRulesShown = false;
   TradeType _tradeType = TradeType.ONLINE_SELL;
   PriceInputType? _priceInputType = PriceInputType.market;
-  BtcFeesEnum? _networkFeesBtc = BtcFeesEnum.medium;
+  BtcFeesEnum? _networkFeesBtc = BtcFeesEnum.MEDIUM;
   Asset? _asset = Asset.XMR;
   late CountryCodeModel countryCodeModel;
   late CurrencyModel? selectedCurrency;
