@@ -75,13 +75,7 @@ class SendAssetThirdScreen extends StatelessWidget {
                                       text: I18n.of(context)!.you_will_receive + ':',
                                     ),
                                     const SizedBox(height: 8),
-                                    _RoundedTile(
-                                        text: model.assetAmount.toString() +
-                                            ' ' +
-                                            model.asset.key() +
-                                            ' / ' +
-                                            model.fiatAmount.toString() +
-                                            ' USD'),
+                                    _RoundedTile(text: model.receiveAmountStr()),
                                     const SizedBox(height: 16),
                                     LineFontIconTextNeutral60(
                                       icon: AgoraFont.file_text,

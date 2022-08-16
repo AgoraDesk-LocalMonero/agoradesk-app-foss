@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -35,6 +36,7 @@ class SendAssetFirstScreen extends StatelessWidget {
             asset: asset,
             price: price,
             walletService: context.read<WalletService>(),
+            appState: context.read<AppState>(),
           ),
           builder: (context, model, child) {
             return Scaffold(

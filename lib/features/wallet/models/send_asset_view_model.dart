@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -20,9 +21,12 @@ class SendAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin,
     required this.balance,
     required this.asset,
     required WalletService walletService,
-  }) : _walletService = walletService;
+    required AppState appState,
+  })  : _appState = appState,
+        _walletService = walletService;
 
   final WalletService _walletService;
+  final AppState _appState;
   final double? price;
   final double? balance;
 
@@ -178,6 +182,14 @@ class SendAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin,
         return false;
       }
     }
+  }
+
+  String receiveAmountStr() {
+    return '${assetAmount.toString()} ${asset.key()} $fiatAmount ${_appState.currencyCode}';
+  }
+
+  String xmrNetworkFeesStr() {
+    return '${xmrFees.toString()} XMR ~ ${(xmrFees * price!).toStringAsFixed(4)} ${_appState.currencyCode}';
   }
 
   void _manageAssetField() {

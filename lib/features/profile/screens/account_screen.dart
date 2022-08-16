@@ -128,20 +128,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.country,
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
-                          const SizedBox(height: 8),
-                          Text(
-                            'Devs',
-                            style: context.txtBodySmallN60,
-                          ),
-                          const SizedBox(height: 8),
-                          LineWithArrow(
-                            title: 'Copy device Firebase token to clipboard',
-                            onPressed: () async {
-                              final token = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
-                              copyToClipboard(token ?? '', context);
-                              eventBus.fire(FlashEvent.success('Copied!'));
-                            },
-                          ),
+
                           // const SizedBox(height: 8),
                           // LineWithArrow(
                           //   title: 'Test error message dialog',
@@ -177,6 +164,25 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                               onPressed: () => context.read<AuthService>().logOut(sendRequest: true),
                             ),
                           ),
+                          GestureDetector(
+                            behavior: HitTestBehavior.opaque,
+                            onTap: () => copyToClipboard(model.appVersionStr, context),
+                            onDoubleTap: () async {
+                              final token = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                              copyToClipboard(token ?? '', context);
+                              eventBus.fire(FlashEvent.success('Push messages token copied to clipboard.'));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                              child: Center(
+                                child: Text(
+                                  model.appVersionStr,
+                                  style: context.txtBodyXSmallN50N60,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -185,46 +191,3 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
         });
   }
 }
-
-// class IosStyleToast extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Stack(
-//       children: [
-//         Container(
-//           color: Colors.white30,
-//         ),
-//         SafeArea(
-//           child: DefaultTextStyle(
-//             style: Theme.of(context).textTheme.labelSmall!.copyWith(color: Colors.white),
-//             child: Padding(
-//               padding: const EdgeInsets.all(16),
-//               child: Center(
-//                 child: ClipRRect(
-//                   borderRadius: BorderRadius.circular(10),
-//                   child: Container(
-//                     color: Colors.black87,
-//                     padding: const EdgeInsets.symmetric(
-//                       vertical: 8,
-//                       horizontal: 16,
-//                     ),
-//                     child: Column(
-//                       mainAxisSize: MainAxisSize.min,
-//                       children: <Widget>[
-//                         Icon(
-//                           Icons.check,
-//                           color: Colors.white,
-//                         ),
-//                         Text('Succeed')
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//             ),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }

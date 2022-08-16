@@ -7,6 +7,7 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class AccountViewModel extends BaseViewModel with ValidatorMixin {
   AccountViewModel({
@@ -19,6 +20,7 @@ class AccountViewModel extends BaseViewModel with ValidatorMixin {
   final AuthService _authService;
 
   String? userName;
+  String appVersionStr = '';
 
   late bool isGuestMode;
 
@@ -37,6 +39,13 @@ class AccountViewModel extends BaseViewModel with ValidatorMixin {
     if (_authService.isAuthenticated) {
       initModel();
     }
+
+    PackageInfo.fromPlatform().then(
+      (info) {
+        appVersionStr = '${info.appName}/${info.version}+${info.buildNumber}';
+        notifyListeners();
+      },
+    );
     super.init();
   }
 
