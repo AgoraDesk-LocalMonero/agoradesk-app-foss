@@ -24,8 +24,6 @@ class ChatTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textfieldMaxLines = MediaQuery.of(context).size.height < 800 ? 8 : 12;
-
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
@@ -40,158 +38,83 @@ class ChatTab extends StatelessWidget {
                       ? const AgoraLoadingIndicator()
                       : RepaintBoundary(
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                            padding: const EdgeInsets.fromLTRB(16, 22, 16, 0),
                             child: ListView(
                               controller: model.chatController,
                               reverse: true,
                               children: [
-                                // SliverAnimatedList(
-                                //   key: model.messagesListKey,
-                                //   initialItemCount: model.messages.length,
-                                //   itemBuilder: (context, index, animation) {
-                                //     final MessageBoxModel message = model.messages[index];
-                                //     return SlideTransition(
-                                //       key: UniqueKey(),
-                                //       position: Tween<Offset>(
-                                //         begin: const Offset(-1, -0),
-                                //         end: const Offset(0, 0),
-                                //       ).animate(animation),
-                                //       child: ChatBubble(
-                                //         isMyMessage: model.isMyMessage(message),
-                                //         messageMargin: model.messageMarginCalc(message, context),
-                                //         message: message,
-                                //         image: model.imageForBubble,
-                                //         onPressedReply: () => model.addReply(message),
-                                //       ),
-                                //     );
-                                //   },
-                                // ),
                                 _buildListWithStickyHeader(context),
                                 ..._buildMessagesBeforeSticky(context),
                                 _buildTradeStepOne(context),
                                 _buildWarning(context),
                                 _buildFirstChatTile(context),
-                                // if (model.tradeStatus.index < 5 && model.tradeStatus != TradeStatus.disputed)
-                                //   SliverPersistentHeader(
-                                //     delegate: _SectionHeaderDelegate(model),
-                                //     pinned: true,
-                                //     floating: true,
-                                //   ),
-                                // SliverAnimatedList(
-                                //   key: model.messagesListKey,
-                                //   initialItemCount: model.messages.length,
-                                //   itemBuilder: (context, index, animation) {
-                                //     final MessageBoxModel message = reversedMessages[index];
-                                //     return SlideTransition(
-                                //       key: UniqueKey(),
-                                //       position: Tween<Offset>(
-                                //         begin: const Offset(-1, -0),
-                                //         end: const Offset(0, 0),
-                                //       ).animate(animation),
-                                //       child: ChatBubble(
-                                //         isMyMessage: model.isMyMessage(message),
-                                //         messageMargin: model.messageMarginCalc(message, context),
-                                //         message: message,
-                                //         image: model.imageForBubble,
-                                //         onPressedReply: () => model.addReply(message),
-                                //       ),
-                                //     );
-                                //   },
-                                // ),
-                                // SliverAppBar(
-                                //   title: Text("Title"),
-                                //   pinned: true,
-                                // ),
-                              ],
-                            ),
-                            // child: AnimatedList(
-                            //     key: model.messagesListKey,
-                            //     controller: model.chatController,
-                            //     reverse: true,
-                            //     padding: EdgeInsets.zero,
-                            //     shrinkWrap: true,
-                            //     initialItemCount: model.messages.length + 3,
-                            //     itemBuilder: (context, index, animation) {
-                            //       // info text
-                            //       if (index == model.messages.length + 2) {
-                            //         return Padding(
-                            //           padding: const EdgeInsets.fromLTRB(10, 20, 10, 8),
-                            //           child: Text(
-                            //             context.intl.chat250Sbinput8722Sbtip8722Sbshort(GetIt.I<AppParameters>().appName),
-                            //             style: context.txtBodyXXSmallNeutral50,
-                            //           ),
-                            //         );
-                            //       }
-                            //       //info message
-                            //       if (index == model.messages.length + 1) {
-                            //         return _buildWarning(context);
-                            //       }
-                            //       //info message
-                            //       if (index == model.messages.length) {
-                            //         return TradeStepOne(model: model);
-                            //       }
-                            //       final message = model.messages[index];
-                            //       return RepaintBoundary(
-                            //         child: SlideTransition(
-                            //           key: UniqueKey(),
-                            //           position: Tween<Offset>(
-                            //             begin: const Offset(-1, -0),
-                            //             end: const Offset(0, 0),
-                            //           ).animate(animation),
-                            //           child: ChatBubble(
-                            //             isMyMessage: model.isMyMessage(message),
-                            //             messageMargin: model.messageMarginCalc(message),
-                            //             message: message,
-                            //             onPressedReply: () => model.addReply(message),
-                            //           ),
-                            //         ),
-                            //       );
-                            //     }),
-                          ),
-                        ),
-                ),
-                Positioned.fill(
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          color: context.colSurface5,
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                _buildReplyLine(context, model),
-                                Padding(
-                                  padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
-                                  child: TextField(
-                                    controller: model.ctrlMessage,
-                                    focusNode: model.focusMessage,
-                                    decoration: context.decorationTxtFieldMain,
-                                    minLines: 1,
-                                    maxLines: model.focusMessage.hasFocus ? textfieldMaxLines : 2,
-                                    style: model.messageFieldEnabled
-                                        ? context.txtBodyMediumNeutral70
-                                        : context.txtBodyMediumNeutral80,
-                                    enabled: model.messageFieldEnabled,
-                                    keyboardType: TextInputType.multiline,
-                                  ),
-                                ),
                               ],
                             ),
                           ),
                         ),
-                      ),
-                      _buildChatSendButton(context, model),
-                      _buildClearAttachement(context, model),
-                    ],
-                  ),
                 ),
+                _tradeInfoLine(context, model),
+                _sendMessageField(context, model),
               ],
             );
           });
         });
+  }
+
+  Widget _tradeInfoLine(BuildContext context, TradeViewModel model) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+        child: Text(
+          'Trade with ${model.usernameForTradeTypeScreen()} (trades total ${model.userForTradeTypeScreen().allCounts}, feedback ${model.userForTradeTypeScreen().feedbackScore}%)',
+          textAlign: TextAlign.center,
+          style: context.txtBodySmallN60N50,
+          maxLines: 1,
+        ),
+      ),
+    );
+  }
+
+  Widget _sendMessageField(BuildContext context, TradeViewModel model) {
+    final textfieldMaxLines = MediaQuery.of(context).size.height < 800 ? 8 : 12;
+    return Positioned.fill(
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              color: context.colSurface5,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _buildReplyLine(context, model),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
+                      child: TextField(
+                        controller: model.ctrlMessage,
+                        focusNode: model.focusMessage,
+                        decoration: context.decorationTxtFieldMain,
+                        minLines: 1,
+                        maxLines: model.focusMessage.hasFocus ? textfieldMaxLines : 2,
+                        style:
+                            model.messageFieldEnabled ? context.txtBodyMediumNeutral70 : context.txtBodyMediumNeutral80,
+                        enabled: model.messageFieldEnabled,
+                        keyboardType: TextInputType.multiline,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          _buildChatSendButton(context, model),
+          _buildClearAttachement(context, model),
+        ],
+      ),
+    );
   }
 
   Widget _buildChatSendButton(BuildContext context, TradeViewModel model) {
