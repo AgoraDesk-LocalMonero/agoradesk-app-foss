@@ -52,7 +52,7 @@ import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:new_version/new_version.dart';
 import 'package:overlay_support/overlay_support.dart';
-import 'package:package_info/package_info.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:plausible_analytics/plausible_analytics.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';

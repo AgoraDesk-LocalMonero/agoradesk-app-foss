@@ -192,7 +192,7 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
               style: context.txtLabelMediumN80,
             ),
             Text(
-              '${model.xmrFees.toString()} XMR ~ ${(model.xmrFees * model.price!).toStringAsFixed(4)} USD',
+              model.xmrNetworkFeesStr(),
               style: context.txtLabelMediumN80,
             ),
           ],
