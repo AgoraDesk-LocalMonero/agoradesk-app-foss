@@ -3109,6 +3109,22 @@
         "val": {}
       }
     },
+  "app_buying_from": "Buying {asset} {amount} from {username}",
+  "@app_buying_from": {
+      "placeholders": {
+        "asset": {},
+        "amount": {},
+        "username": {}
+      }
+    },
+  "app_selling_to": "Selling {asset} {amount} to {username}",
+  "@app_selling_to": {
+      "placeholders": {
+        "asset": {},
+        "amount": {},
+        "username": {}
+      }
+    },
   "app_buy_crypto": "Buy crypto from",
   "app_sell_crypto": "Sell crypto to",
   "app_intall_trade_title": "Please install AgoraDesk to view this trade",
