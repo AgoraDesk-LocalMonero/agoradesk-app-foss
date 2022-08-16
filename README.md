@@ -72,6 +72,10 @@ https://github.com/firebase/flutterfire/issues/4026
 
 1. Commits naming https://www.conventionalcommits.org/en/v1.0.0/
 
+Types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
+
+Mark commit number with #, for example `fix: #89`.
+
 
 
 
