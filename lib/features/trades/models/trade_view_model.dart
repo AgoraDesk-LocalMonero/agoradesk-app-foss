@@ -562,14 +562,29 @@ class TradeViewModel extends BaseViewModel
         ));
   }
 
-  String usernameForTradeTypeScreen() {
+  String buySellStr() {
+    if (tradeForScreen.isSelling!) {
+      return context.intl.app_selling_to(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
+    }
+    return context.intl.app_buying_from(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
+    ;
+  }
+
+  String fromToStr() {
+    if (tradeForScreen.isSelling!) {
+      return context.intl.dashboard250Sbfilter250Sbrole250Sbselling;
+    }
+    return context.intl.dashboard250Sbfilter250Sbrole250Sbbuying;
+  }
+
+  String usernameStr() {
     if (tradeForScreen.isSelling!) {
       return tradeForScreen.buyer.username ?? '';
     }
     return tradeForScreen.seller.username ?? '';
   }
 
-  AccountInfoModel userForTradeTypeScreen() {
+  AccountInfoModel userForTrade() {
     if (tradeForScreen.isSelling!) {
       return tradeForScreen.buyer;
     }

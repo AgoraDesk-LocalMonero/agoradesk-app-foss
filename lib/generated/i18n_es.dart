@@ -7877,6 +7877,16 @@ class I18nEs extends I18n {
   }
 
   @override
+  String app_buying_from(Object asset, Object amount, Object username) {
+    return 'Buying $asset $amount from $username';
+  }
+
+  @override
+  String app_selling_to(Object asset, Object amount, Object username) {
+    return 'Selling $asset $amount to $username';
+  }
+
+  @override
   String get app_buy_crypto => 'Buy crypto from';
 
   @override

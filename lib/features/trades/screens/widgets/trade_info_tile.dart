@@ -137,17 +137,17 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                                     TradeLineWithCopy(
                                       iconData: AgoraFont.user_alt,
                                       title: context.intl.dashboard250Sbtrade250Sbtable8722Sbpartner58Sb,
-                                      textToCopyToClipboard: model.usernameForTradeTypeScreen(),
+                                      textToCopyToClipboard: model.usernameStr(),
                                       textWidget: Expanded(
                                         flex: 2,
                                         child: Row(
                                           children: [
                                             ButtonLink(
-                                              title: model.usernameForTradeTypeScreen(),
+                                              title: model.usernameStr(),
                                               alignment: Alignment.centerLeft,
                                               onPressed: () => context.pushRoute(
                                                 TraderProfileRoute(
-                                                  profileModel: model.userForTradeTypeScreen(),
+                                                  profileModel: model.userForTrade(),
                                                 ),
                                               ),
                                             ),

@@ -15423,6 +15423,18 @@ abstract class I18n {
   /// **'Sell crypto to {val}'**
   String app_sell_crypto_to(Object val);
 
+  /// No description provided for @app_buying_from.
+  ///
+  /// In en, this message translates to:
+  /// **'Buying {asset} {amount} from {username}'**
+  String app_buying_from(Object asset, Object amount, Object username);
+
+  /// No description provided for @app_selling_to.
+  ///
+  /// In en, this message translates to:
+  /// **'Selling {asset} {amount} to {username}'**
+  String app_selling_to(Object asset, Object amount, Object username);
+
   /// No description provided for @app_buy_crypto.
   ///
   /// In en, this message translates to:

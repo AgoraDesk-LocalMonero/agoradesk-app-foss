@@ -67,7 +67,7 @@ class ChatTab extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
         child: Text(
-          'Trade with ${model.usernameForTradeTypeScreen()} (trades total ${model.userForTradeTypeScreen().allCounts}, feedback ${model.userForTradeTypeScreen().feedbackScore}%)',
+          '${model.buySellStr()} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
           textAlign: TextAlign.center,
           style: context.txtBodySmallN60N50,
           maxLines: 1,
