@@ -269,6 +269,10 @@ class NotificationsService with ForegroundMessagesMixin {
   void startListenAwesomeNotificationsPressed() {
     AwesomeNotifications().actionStream.listen((notification) {
       try {
+        AwesomeNotifications().getGlobalBadgeCounter().then(
+              (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
+            );
+
         final PushModel push = PushModel.fromJson(notification.payload ?? {});
         if (push.objectId != null && push.objectId!.isNotEmpty) {
           GetIt.I<AppRouter>().push(TradeRoute(tradeId: push.objectId));

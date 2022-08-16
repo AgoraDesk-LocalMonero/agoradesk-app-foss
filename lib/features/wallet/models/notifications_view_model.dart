@@ -12,6 +12,7 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsViewModel extends BaseViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
@@ -91,6 +92,9 @@ class NotificationsViewModel extends BaseViewModel with StringMixin, ValidatorMi
   }
 
   Future markAllRead() async {
+    AwesomeNotifications().getGlobalBadgeCounter().then(
+          (value) => AwesomeNotifications().setGlobalBadgeCounter(0),
+        );
     final res = await _accountService.markAllRead();
     if (res.isRight) {
       _appState.notificationsMarkedRead = true;
