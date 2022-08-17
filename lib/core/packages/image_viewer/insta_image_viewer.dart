@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class InstaImageViewer extends StatelessWidget {
@@ -154,40 +155,73 @@ class _FullScreenViewerState extends State<FullScreenViewer> {
       tag: widget.tag,
       child: Scaffold(
         backgroundColor: widget.backgroundIsTransparent ? Colors.transparent : widget.backgroundColor,
-        body: GestureDetector(
-          onVerticalDragStart: (details) => _dragStart(details),
-          onVerticalDragUpdate: (details) => _dragUpdate(details),
-          onVerticalDragEnd: (details) => _dragEnd(details),
-          child: Container(
-            color: widget.backgroundColor.withOpacity(_opacity),
-            constraints: BoxConstraints.expand(
-              height: MediaQuery.of(context).size.height,
-            ),
-            child: Stack(
-              children: <Widget>[
-                AnimatedPositioned(
-                  duration: _animationDuration,
-                  curve: Curves.fastOutSlowIn,
-                  top: 0 + _positionYDelta,
-                  bottom: 0 - _positionYDelta,
-                  left: horizontalPosition,
-                  right: horizontalPosition,
-                  child: InteractiveViewer(
-                    panEnabled: false,
-                    boundaryMargin: const EdgeInsets.all(double.infinity),
+        body: Container(
+          color: widget.backgroundColor.withOpacity(_opacity),
+          constraints: BoxConstraints.expand(
+            height: MediaQuery.of(context).size.height,
+          ),
+          child: Stack(
+            children: <Widget>[
+              AnimatedPositioned(
+                duration: _animationDuration,
+                curve: Curves.fastOutSlowIn,
+                top: 0 + _positionYDelta,
+                bottom: 0 - _positionYDelta,
+                left: horizontalPosition,
+                right: horizontalPosition,
+                child: InteractiveViewer(
+                  boundaryMargin: const EdgeInsets.all(double.infinity),
+                  child: KeymotionGestureDetector(
+                    onStart: (details) => _dragStart(details),
+                    onUpdate: (details) => _dragUpdate(details),
+                    onEnd: (details) => _dragEnd(details),
                     child: ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(40),
-                        ),
-                        clipBehavior: Clip.hardEdge,
-                        child: widget.child),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(40),
+                      ),
+                      clipBehavior: Clip.hardEdge,
+                      child: widget.child,
+                    ),
                   ),
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
         ),
       ),
     );
+  }
+}
+
+class KeymotionGestureDetector extends StatelessWidget {
+  /// @macro
+  const KeymotionGestureDetector({
+    Key? key,
+    required this.child,
+    this.onUpdate,
+    this.onEnd,
+    this.onStart,
+  }) : super(key: key);
+
+  final Widget child;
+  final GestureDragUpdateCallback? onUpdate;
+  final GestureDragEndCallback? onEnd;
+  final GestureDragStartCallback? onStart;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawGestureDetector(child: child, gestures: <Type, GestureRecognizerFactory>{
+      VerticalDragGestureRecognizer: GestureRecognizerFactoryWithHandlers<VerticalDragGestureRecognizer>(
+        () => VerticalDragGestureRecognizer()
+          ..onStart = onStart
+          ..onUpdate = onUpdate
+          ..onEnd = onEnd,
+        (instance) {},
+      ),
+      // DoubleTapGestureRecognizer: GestureRecognizerFactoryWithHandlers<DoubleTapGestureRecognizer>(
+      //   () => DoubleTapGestureRecognizer()..onDoubleTap = onDoubleTap,
+      //   (instance) {},
+      // )
+    });
   }
 }
