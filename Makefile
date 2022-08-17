@@ -45,7 +45,7 @@ build-bundle-lm:
 .PHONY: build-ios-all
 build-ios-all:
 	$(FLUTTER) build ipa --verbose --flavor localmonero --dart-define=app.flavor=localmonero
-    rm /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Localmoner.ipa
+	mv /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Localmonero.ipa
 	$(FLUTTER) build ipa --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-ios-ad
@@ -59,7 +59,6 @@ build-ios-lm:
 .PHONY: build-android-all
 build-android-all:
 	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
-	mv /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Localmonero.ipa
 	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-android-ad
