@@ -96,18 +96,36 @@ class _FullScreenViewerState extends State<FullScreenViewer> {
     }
   }
 
-  void _startVerticalDrag(details) {
-    setState(() {
-      _initialPositionY = details.globalPosition.dy;
-    });
-  }
-
-  void _whileVerticalDrag(details) {
+  void _dragUpdate(DragUpdateDetails details) {
     setState(() {
       _currentPositionY = details.globalPosition.dy;
       _positionYDelta = _currentPositionY! - _initialPositionY!;
       setOpacity();
     });
+  }
+
+  void _dragStart(DragStartDetails details) {
+    setState(() {
+      _initialPositionY = details.globalPosition.dy;
+    });
+  }
+
+  _dragEnd(DragEndDetails details) {
+    if (_positionYDelta > _disposeLimit || _positionYDelta < -_disposeLimit) {
+      Navigator.of(context).pop();
+    } else {
+      setState(() {
+        _animationDuration = const Duration(milliseconds: 300);
+        _opacity = 1;
+        _positionYDelta = 0;
+      });
+
+      Future.delayed(_animationDuration).then((_) {
+        setState(() {
+          _animationDuration = Duration.zero;
+        });
+      });
+    }
   }
 
   setOpacity() {
@@ -129,24 +147,6 @@ class _FullScreenViewerState extends State<FullScreenViewer> {
     }
   }
 
-  _endVerticalDrag(DragEndDetails details) {
-    if (_positionYDelta > _disposeLimit || _positionYDelta < -_disposeLimit) {
-      Navigator.of(context).pop();
-    } else {
-      setState(() {
-        _animationDuration = const Duration(milliseconds: 300);
-        _opacity = 1;
-        _positionYDelta = 0;
-      });
-
-      Future.delayed(_animationDuration).then((_) {
-        setState(() {
-          _animationDuration = Duration.zero;
-        });
-      });
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final horizontalPosition = 0 + max(_positionYDelta, -_positionYDelta) / 15;
@@ -155,9 +155,9 @@ class _FullScreenViewerState extends State<FullScreenViewer> {
       child: Scaffold(
         backgroundColor: widget.backgroundIsTransparent ? Colors.transparent : widget.backgroundColor,
         body: GestureDetector(
-          onVerticalDragStart: (details) => _startVerticalDrag(details),
-          onVerticalDragUpdate: (details) => _whileVerticalDrag(details),
-          onVerticalDragEnd: (details) => _endVerticalDrag(details),
+          onVerticalDragStart: (details) => _dragStart(details),
+          onVerticalDragUpdate: (details) => _dragUpdate(details),
+          onVerticalDragEnd: (details) => _dragEnd(details),
           child: Container(
             color: widget.backgroundColor.withOpacity(_opacity),
             constraints: BoxConstraints.expand(
