@@ -53,174 +53,168 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                 return SingleChildScrollView(
                   child: Padding(
                     padding: const EdgeInsets.all(20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        ContainerSurface5Radius12(
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                widget.displaySkip
-                                    ? Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          TextButton(
-                                            child: Text(
-                                              context.intl.skip,
-                                              style: context.txtLabelLargePrimary80,
-                                            ),
-                                            onPressed: model.guestModeOn,
-                                          ),
-                                        ],
-                                      )
-                                    : const SizedBox(),
-                                const SizedBox(height: 25),
-                                TextField(
-                                  decoration: decoration.copyWith(
-                                    hintText: context.intl.login250Sbusername,
-                                    errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
-                                  ),
-                                  onChanged: (input) {
-                                    model.username = input;
-                                  },
-                                ),
-                                const SizedBox(height: 16),
-                                TextField(
-                                  decoration: decoration.copyWith(
-                                    hintText: context.intl.signup250Sbemail,
-                                    errorText: validateEmailWithNull(model.email) ? null : '',
-                                  ),
-                                  onChanged: (input) {
-                                    model.email = input;
-                                  },
-                                ),
-                                const SizedBox(height: 6),
-                                Padding(
-                                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                  child: AgoraDialogInfoWithMarkdown(
-                                    text: context.intl.email_is_used_to,
-                                    linkTitle: context.intl.why_do_you_need_my_email,
-                                  ),
-                                ),
-                                const SizedBox(height: 16),
-                                AgoraPasswordField(
-                                  controller: model.ctrlPassword,
-                                ),
-                                const SizedBox(height: 16),
-                                AgoraPasswordField(
-                                  controller: model.ctrlPassword2,
-                                  decoration: decoration.copyWith(
-                                    hintText: context.intl.signup250Sbconfirm8722Sbpass,
-                                    errorText: validatePasswordWithNull(model.password2) &&
-                                            (model.password2 == model.password || model.password2.isEmpty)
-                                        ? null
-                                        : '',
-                                  ),
-                                ),
-                                // TextField(
-                                //   controller: model.ctrlPassword2,
-                                //   obscureText: true,
-                                //   decoration: decoration.copyWith(
-                                //     hintText: context.intl.signup250Sbconfirm8722Sbpass,
-                                //     errorText: validatePasswordWithNull(model.password2) &&
-                                //             (model.password2 == model.password || model.password2.isEmpty)
-                                //         ? null
-                                //         : '',
-                                //   ),
-                                // ),
-                                const SizedBox(height: 16),
-                                AgoraBoxOpenCloseLineSurface2(
-                                  title: context.intl.coupons250Sbcode8722Sbapply,
-                                  iconData: AgoraFont.coupon,
-                                  content: TextField(
-                                    controller: model.ctrlCoupon,
-                                    decoration: decoration.copyWith(
-                                        hintText: context.intl.coupons250Sbcode8722Sbinput250Sbplaceholder),
-                                  ),
-                                ),
-                                const SizedBox(height: 16),
-                                Row(
-                                  children: [
-                                    Checkbox(
-                                      value: model.isTermsAgree,
-                                      onChanged: (bool? val) {
-                                        if (val != null) {
-                                          model.isTermsAgree = val;
-                                        }
-                                      },
-                                    ),
-                                    Expanded(
-                                      child: RichText(
-                                        text: TextSpan(
+                    child: AutofillGroup(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          ContainerSurface5Radius12(
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  widget.displaySkip
+                                      ? Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
-                                            TextSpan(
-                                              text: context.intl.signup250Sbagree8722Sbto8722Sbtos(' '),
-                                              style: promptStyle,
-                                            ),
-                                            TextSpan(
-                                              text: context.intl.signup250Sbagree8722Sbto8722Sbtos8722Sbterms(
-                                                  GetIt.I<AppParameters>().appName),
-                                              style: linkStyle,
-                                              recognizer: TapGestureRecognizer()
-                                                ..onTap = () {
-                                                  openLink(GetIt.I<AppParameters>().urlPrivacy);
-                                                },
+                                            TextButton(
+                                              child: Text(
+                                                context.intl.skip,
+                                                style: context.txtLabelLargePrimary80,
+                                              ),
+                                              onPressed: model.guestModeOn,
                                             ),
                                           ],
+                                        )
+                                      : const SizedBox(),
+                                  const SizedBox(height: 25),
+                                  TextField(
+                                    decoration: decoration.copyWith(
+                                      hintText: context.intl.login250Sbusername,
+                                      errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
+                                    ),
+                                    autofillHints: const [AutofillHints.username],
+                                    onChanged: (input) {
+                                      model.username = input;
+                                    },
+                                  ),
+                                  const SizedBox(height: 16),
+                                  TextField(
+                                    decoration: decoration.copyWith(
+                                      hintText: context.intl.signup250Sbemail,
+                                      errorText: validateEmailWithNull(model.email) ? null : '',
+                                    ),
+                                    autofillHints: const [AutofillHints.email],
+                                    onChanged: (input) {
+                                      model.email = input;
+                                    },
+                                  ),
+                                  const SizedBox(height: 6),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    child: AgoraDialogInfoWithMarkdown(
+                                      text: context.intl.email_is_used_to,
+                                      linkTitle: context.intl.why_do_you_need_my_email,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  AgoraPasswordField(
+                                    controller: model.ctrlPassword,
+                                  ),
+                                  const SizedBox(height: 16),
+                                  AgoraPasswordField(
+                                    controller: model.ctrlPassword2,
+                                    decoration: decoration.copyWith(
+                                      hintText: context.intl.signup250Sbconfirm8722Sbpass,
+                                      errorText: validatePasswordWithNull(model.password2) &&
+                                              (model.password2 == model.password || model.password2.isEmpty)
+                                          ? null
+                                          : '',
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  AgoraBoxOpenCloseLineSurface2(
+                                    title: context.intl.coupons250Sbcode8722Sbapply,
+                                    iconData: AgoraFont.coupon,
+                                    content: TextField(
+                                      controller: model.ctrlCoupon,
+                                      decoration: decoration.copyWith(
+                                          hintText: context.intl.coupons250Sbcode8722Sbinput250Sbplaceholder),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  Row(
+                                    children: [
+                                      Checkbox(
+                                        value: model.isTermsAgree,
+                                        onChanged: (bool? val) {
+                                          if (val != null) {
+                                            model.isTermsAgree = val;
+                                          }
+                                        },
+                                      ),
+                                      Expanded(
+                                        child: RichText(
+                                          text: TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: context.intl.signup250Sbagree8722Sbto8722Sbtos(' '),
+                                                style: promptStyle,
+                                              ),
+                                              TextSpan(
+                                                text: context.intl.signup250Sbagree8722Sbto8722Sbtos8722Sbterms(
+                                                    GetIt.I<AppParameters>().appName),
+                                                style: linkStyle,
+                                                recognizer: TapGestureRecognizer()
+                                                  ..onTap = () {
+                                                    openLink(GetIt.I<AppParameters>().urlPrivacy);
+                                                  },
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                // if (model.displayCaptcha) _buildCaptcha(model, decoration),
-                                if (model.displayError) const SizedBox(height: 26),
-                                if (model.displayError)
-                                  Text(
-                                    model.errorMessage,
-                                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                                          color: Theme.of(context).colorScheme.onError,
-                                        ),
+                                    ],
                                   ),
-                                const SizedBox(height: 18),
-                                ButtonFilledP80(
-                                  title: context.intl.signup250Sbbtn,
-                                  active: model.isFormReady,
-                                  loading: model.loading,
-                                  onPressed: () async {
-                                    if (model.isFormReady) {
-                                      await model.signUp();
-                                    }
-                                  },
-                                ),
-                                const SizedBox(height: 18),
-                                Center(
-                                  child: RichText(
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: context.intl.signup250Sblogin(' '),
-                                          style: promptStyle,
-                                        ),
-                                        TextSpan(
-                                          text: context.intl.appbar8722Sbbtn250Sblogin,
-                                          style: linkStyle,
-                                          recognizer: TapGestureRecognizer()
-                                            ..onTap = () {
-                                              AutoRouter.of(context).push(LoginRoute(displaySkip: widget.displaySkip));
-                                            },
-                                        ),
-                                      ],
+                                  // if (model.displayCaptcha) _buildCaptcha(model, decoration),
+                                  if (model.displayError) const SizedBox(height: 26),
+                                  if (model.displayError)
+                                    Text(
+                                      model.errorMessage,
+                                      style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                                            color: Theme.of(context).colorScheme.onError,
+                                          ),
+                                    ),
+                                  const SizedBox(height: 18),
+                                  ButtonFilledP80(
+                                    title: context.intl.signup250Sbbtn,
+                                    active: model.isFormReady,
+                                    loading: model.loading,
+                                    onPressed: () async {
+                                      if (model.isFormReady) {
+                                        await model.signUp();
+                                      }
+                                    },
+                                  ),
+                                  const SizedBox(height: 18),
+                                  Center(
+                                    child: RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: context.intl.signup250Sblogin(' '),
+                                            style: promptStyle,
+                                          ),
+                                          TextSpan(
+                                            text: context.intl.appbar8722Sbbtn250Sblogin,
+                                            style: linkStyle,
+                                            recognizer: TapGestureRecognizer()
+                                              ..onTap = () {
+                                                AutoRouter.of(context)
+                                                    .push(LoginRoute(displaySkip: widget.displaySkip));
+                                              },
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                                const SizedBox(height: 10),
-                              ],
+                                  const SizedBox(height: 10),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 );
@@ -229,22 +223,4 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
       ),
     );
   }
-
-  // Widget _buildCaptcha(SignUpViewModel model, InputDecoration decoration) {
-  //   return Column(
-  //     children: [
-  //       const SizedBox(height: 16),
-  //       Text('You have input captcha - ${model.captchaInput}'),
-  //       TextButton(
-  //           onPressed: () async {
-  //             model.captchaInput =
-  //                 await AutoRouter.of(context).push(CaptchaRoute(path: model.captchaLocalPath ?? '')) as String;
-  //           },
-  //           child: const Text(
-  //             'Re-enter',
-  //             style: TextStyle(color: Colors.blue),
-  //           )),
-  //     ],
-  //   );
-  // }
 }

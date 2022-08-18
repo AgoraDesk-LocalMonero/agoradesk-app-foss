@@ -8,6 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
 
+///
+/// Reset password by link with token (user gets it in email)
+///
+
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({
     Key? key,
