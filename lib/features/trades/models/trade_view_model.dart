@@ -112,7 +112,7 @@ class TradeViewModel extends BaseViewModel
   bool _loadingMessagesInit = false;
   bool _gettingMessages = false;
 
-  bool _messageFocus = false;
+  bool _messageHasFocus = false;
   bool _displaySend = false;
   bool _sendingMessage = false;
   bool _sendingImage = false;
@@ -209,9 +209,9 @@ class TradeViewModel extends BaseViewModel
 
   set displaySend(bool v) => updateWith(displaySend: v);
 
-  bool get messageFocus => _messageFocus;
+  bool get messageHasFocus => _messageHasFocus;
 
-  set messageFocus(bool v) => updateWith(messageFocus: v);
+  set messageHasFocus(bool v) => updateWith(messageHasFocus: v);
 
   bool get loadingMessages => _loadingMessagesInit;
 
@@ -257,8 +257,8 @@ class TradeViewModel extends BaseViewModel
     _setTradeStatus();
     _calcMinutesBeforeCancel();
     focusMessage.addListener(() {
-      if (focusMessage.hasFocus != messageFocus) {
-        messageFocus = focusMessage.hasFocus;
+      if (focusMessage.hasFocus != messageHasFocus) {
+        messageHasFocus = focusMessage.hasFocus;
       }
     });
     tabController.addListener(() {
@@ -916,7 +916,7 @@ class TradeViewModel extends BaseViewModel
     bool? isTradeLoading,
     bool? releasingEscrow,
     bool? displaySend,
-    bool? messageFocus,
+    bool? messageHasFocus,
     String? repliedText,
     Asset? asset,
     int? bodyTabIndex,
@@ -938,7 +938,7 @@ class TradeViewModel extends BaseViewModel
     _sendingMessage = sendingMessage ?? _sendingMessage;
     _releasingEscrow = releasingEscrow ?? _releasingEscrow;
     _displaySend = displaySend ?? _displaySend;
-    _messageFocus = messageFocus ?? _messageFocus;
+    _messageHasFocus = messageHasFocus ?? _messageHasFocus;
     _asset = asset ?? _asset;
     _bodyTabIndex = bodyTabIndex ?? _bodyTabIndex;
     _feedbackType = feedbackType ?? _feedbackType;
