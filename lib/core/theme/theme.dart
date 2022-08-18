@@ -520,7 +520,6 @@ extension ThemeShorcuts on BuildContext {
       );
 
   MenuProps get dropdownMenuProps => MenuProps(
-    textStyle: TextStyle(color: Colors.red),
         backgroundColor: colSurface3,
         shape: OutlineInputBorder(
           borderSide: BorderSide(color: colSurface3, width: 0),
@@ -529,7 +528,6 @@ extension ThemeShorcuts on BuildContext {
       );
 
   DropDownDecoratorProps get dropdownDecoration => DropDownDecoratorProps(
-    baseStyle: TextStyle(color: Colors.red),
         dropdownSearchDecoration: InputDecoration(
           filled: true,
           fillColor: Theme.of(this).colorScheme.surface3,

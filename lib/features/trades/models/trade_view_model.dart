@@ -562,12 +562,11 @@ class TradeViewModel extends BaseViewModel
         ));
   }
 
-  String buySellStr() {
+  String buySellStr(BuildContext context) {
     if (tradeForScreen.isSelling!) {
       return context.intl.app_selling_to(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
     }
     return context.intl.app_buying_from(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
-    ;
   }
 
   String fromToStr() {
