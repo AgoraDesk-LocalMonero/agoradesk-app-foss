@@ -64,7 +64,7 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
   List<String> assetMenu = [];
 
   bool _loadingAds = true;
-  bool _initialized = false;
+  // bool _initialized = false;
   bool _calculating = false;
   bool _startingTrade = false;
   bool _loadingFees = false;
@@ -110,19 +110,19 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
 
   @override
   void init() {
-    if (!_initialized) {
-      _initialized = true;
-      //todo - refactor me (maybe with AutoRoute)
-      isGuestMode = _authService.authState == AuthState.guest;
-      _authService.onAuthStateChange.listen((e) {
-        isGuestMode = e == AuthState.guest;
+    // if (!_initialized) {
+    //   _initialized = true;
+    //todo - refactor me (maybe with AutoRoute)
+    isGuestMode = _authService.authState == AuthState.guest;
+    _authService.onAuthStateChange.listen((e) {
+      isGuestMode = e == AuthState.guest;
 
-        notifyListeners();
-      });
-      _initMenus();
-      _textFieldsListeners();
-      _initialLoading();
-    }
+      notifyListeners();
+    });
+    _initMenus();
+    _textFieldsListeners();
+    _initialLoading();
+    // }
     super.init();
   }
 

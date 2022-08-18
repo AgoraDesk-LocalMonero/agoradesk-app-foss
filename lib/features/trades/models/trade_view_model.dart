@@ -116,7 +116,7 @@ class TradeViewModel extends BaseViewModel
   bool _displaySend = false;
   bool _sendingMessage = false;
   bool _sendingImage = false;
-  bool _initialized = false;
+  // bool _initialized = false;
   bool _infoTileOpened = true;
   bool _passwordInputValid = true;
   bool _releasingEscrow = false;
@@ -219,10 +219,10 @@ class TradeViewModel extends BaseViewModel
 
   @override
   void init() {
-    if (!_initialized) {
-      _initialized = true;
-      _initialLoading();
-    }
+    // if (!_initialized) {
+    //   _initialized = true;
+    _initialLoading();
+    // }
 
     super.init();
   }

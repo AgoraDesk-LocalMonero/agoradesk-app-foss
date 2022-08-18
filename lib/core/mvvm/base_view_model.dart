@@ -7,6 +7,8 @@ abstract class BaseViewModel extends ChangeNotifier {
   bool _disposed = false;
   bool get disposed => _disposed;
 
+  bool initialised = false;
+
   /// - A callback after [BaseViewModel] is constructed.
   /// - The event is called by default every time the
   ///   [BaseViewModel] view dependencies are updated.

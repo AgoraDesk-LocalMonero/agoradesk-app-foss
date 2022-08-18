@@ -19,7 +19,7 @@ class ReceiveAssetViewModel extends BaseViewModel with StringMixin, ValidatorMix
   final Asset asset;
 
   final List<IncomingDepositModel> deposits = [];
-  bool _initialized = false;
+  // bool _initialized = false;
   bool _loadingDeposits = false;
 
   bool get loadingDeposits => _loadingDeposits;
@@ -28,10 +28,10 @@ class ReceiveAssetViewModel extends BaseViewModel with StringMixin, ValidatorMix
 
   @override
   void init() {
-    if (!_initialized) {
-      _initialized = true;
-      getIncomingDeposits();
-    }
+    // if (!_initialized) {
+    //   _initialized = true;
+    getIncomingDeposits();
+    // }
     super.init();
   }
 

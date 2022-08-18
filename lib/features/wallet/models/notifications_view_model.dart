@@ -35,7 +35,7 @@ class NotificationsViewModel extends BaseViewModel with StringMixin, ValidatorMi
 
   bool _hasUnreaded = false;
 
-  bool _initialized = false;
+  // bool _initialized = false;
   bool _loading = false;
   final List<ActivityNotificationModel> notifications = [];
 
@@ -51,10 +51,10 @@ class NotificationsViewModel extends BaseViewModel with StringMixin, ValidatorMi
 
   @override
   void init() {
-    if (!_initialized) {
-      _notificationStream = _appState.notifications$.listen(_updateNotifications);
-      _initialized = true;
-    }
+    // if (!_initialized) {
+    _notificationStream = _appState.notifications$.listen(_updateNotifications);
+    // _initialized = true;
+    // }
     super.init();
   }
 

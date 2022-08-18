@@ -42,7 +42,6 @@ class ViewModelBuilder<T extends BaseViewModel> extends StatefulWidget {
 
 class _ViewModelBuilderState<T extends BaseViewModel> extends State<ViewModelBuilder<T>> {
   late T _vm;
-  bool _initialised = false;
 
   @override
   void initState() {
@@ -58,9 +57,9 @@ class _ViewModelBuilderState<T extends BaseViewModel> extends State<ViewModelBui
   void didChangeDependencies() {
     super.didChangeDependencies();
     _vm.context = context;
-    if (widget.initOnce && !_initialised) {
+    if (widget.initOnce && !_vm.initialised) {
       _vm.init();
-      _initialised = true;
+      _vm.initialised = true;
     } else if (!widget.initOnce) {
       _vm.init();
     }
