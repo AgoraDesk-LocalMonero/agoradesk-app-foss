@@ -90,7 +90,7 @@ class ReputationImportViewModel extends BaseViewModel with ValidatorMixin, Error
     return false;
   }
 
-  String? getStateMessage(ReputationPlatform platform) {
+  String? getStateMessage(ReputationPlatform platform, BuildContext context) {
     if (reputations[platform.index].currentState == ReputationImportState.requestedConfirmedAwaiting) {
       return '${context.intl.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbstatus8722Sbpending} ${reputations[platform.index].verificationCode}';
     }

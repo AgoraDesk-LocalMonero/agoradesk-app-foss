@@ -65,7 +65,7 @@ class AccountViewModel extends BaseViewModel with ValidatorMixin {
     }
   }
 
-  Future removePin() async {
+  Future removePin(BuildContext contex) async {
     await _appState.removePinCode();
     _appState.hasPinCode = false;
     eventBus.fire(FlashEvent.success(context.intl.remove_pin_message_success));
