@@ -43,7 +43,7 @@ class ChatTab extends StatelessWidget {
                               controller: model.chatController,
                               reverse: true,
                               children: [
-                                _buildListWithStickyHeader(context),
+                                _buildListWithStickyHeader(context, model),
                                 ..._buildMessagesBeforeSticky(context),
                                 _buildTradeStepOne(context),
                                 _buildWarning(context),
@@ -67,7 +67,7 @@ class ChatTab extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
         child: Text(
-          '${model.buySellStr()} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
+          '${model.buySellStr(context)} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
           textAlign: TextAlign.center,
           style: context.txtBodySmallN60N50,
           maxLines: 1,
@@ -258,7 +258,7 @@ class ChatTab extends StatelessWidget {
         .toList();
   }
 
-  Widget _buildListWithStickyHeader(BuildContext context) {
+  Widget _buildListWithStickyHeader(BuildContext context, TradeViewModel model) {
     return StickyHeader(
       header: ChatBubbleSticky(model: model),
       content: AnimatedList(
