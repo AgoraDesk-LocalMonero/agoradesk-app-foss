@@ -40,7 +40,7 @@ class SendAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin,
   TabController? tabController;
   final Asset asset;
   bool _isAddressCorrect = false;
-  bool _initialized = false;
+  // bool _initialized = false;
   bool _loadingFees = false;
   bool _sendingAsset = false;
   bool _readyToStep3 = false;
@@ -117,14 +117,14 @@ class SendAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin,
 
   @override
   void init() {
-    if (!_initialized) {
-      _initialized = true;
-      ctrlAddress.addListener(_handleAddressField);
-      ctrlAsset.addListener(_manageAssetField);
-      ctrlFiat.addListener(_manageFiatField);
-      _getFees();
-      ctrlPassword.addListener(_checkPasswordAndOtp);
-    }
+    // if (!_initialized) {
+    //   _initialized = true;
+    ctrlAddress.addListener(_handleAddressField);
+    ctrlAsset.addListener(_manageAssetField);
+    ctrlFiat.addListener(_manageFiatField);
+    _getFees();
+    ctrlPassword.addListener(_checkPasswordAndOtp);
+    // }
     super.init();
   }
 
