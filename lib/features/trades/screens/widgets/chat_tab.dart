@@ -98,7 +98,7 @@ class ChatTab extends StatelessWidget {
                         focusNode: model.focusMessage,
                         decoration: context.decorationTxtFieldMain,
                         minLines: 1,
-                        maxLines: model.focusMessage.hasFocus ? textfieldMaxLines : 2,
+                        maxLines: model.focusMessage.hasFocus ? textfieldMaxLines : 1,
                         style:
                             model.messageFieldEnabled ? context.txtBodyMediumNeutral70 : context.txtBodyMediumNeutral80,
                         enabled: model.messageFieldEnabled,
