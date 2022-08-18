@@ -27,6 +27,10 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
 
   @override
   Widget build(BuildContext context) {
+    if (model.messageHasFocus) {
+      return const SizedBox();
+    }
+
     return Container(
       color: context.colSurface1,
       child: Padding(
