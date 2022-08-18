@@ -47,88 +47,92 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                         ContainerSurface5Radius12(
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-                            child: Column(
-                              children: [
-                                widget.displaySkip
-                                    ? Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          TextButton(
-                                            child: Text(
-                                              context.intl.skip,
-                                              style: context.txtLabelLargePrimary80,
+                            child: AutofillGroup(
+                              child: Column(
+                                children: [
+                                  widget.displaySkip
+                                      ? Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: [
+                                            TextButton(
+                                              child: Text(
+                                                context.intl.skip,
+                                                style: context.txtLabelLargePrimary80,
+                                              ),
+                                              onPressed: model.guestModeOn,
                                             ),
-                                            onPressed: model.guestModeOn,
+                                          ],
+                                        )
+                                      : const SizedBox(),
+                                  const SizedBox(height: 25),
+                                  Center(
+                                    child: Text(
+                                      context.intl.login,
+                                      style: context.txtHead4N90,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  TextField(
+                                    decoration: context.decorationTxtFieldMain.copyWith(
+                                      hintText: context.intl.login250Sbusername,
+                                      errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
+                                    ),
+                                    autofillHints: const [AutofillHints.username],
+                                    onChanged: (input) {
+                                      model.username = input;
+                                    },
+                                  ),
+                                  const SizedBox(height: 16),
+                                  AgoraPasswordField(
+                                    controller: model.passwordController,
+                                  ),
+                                  const SizedBox(height: 16),
+                                  TextField(
+                                    controller: model.otpController,
+                                    keyboardType: TextInputType.number,
+                                    decoration: context.decorationTxtFieldMain.copyWith(
+                                      hintText: context.intl.otp8722Sbtitle8722Sb0,
+                                      errorText: validateOtpWithNull(model.otp) ? null : '',
+                                    ),
+                                    autofillHints: const [AutofillHints.oneTimeCode],
+                                  ),
+                                  const SizedBox(height: 6),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    child: Text(
+                                      context.intl.otp8722Sbtip8722Sb08722Sb0,
+                                      style: context.txtBodySmallN70,
+                                    ),
+                                  ),
+                                  if (model.displayCaptcha) _buildCaptcha(model),
+                                  if (model.displayError) const SizedBox(height: 26),
+                                  if (model.displayError)
+                                    Text(
+                                      model.errorMessage,
+                                      style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                                            color: Theme.of(context).colorScheme.onError,
                                           ),
-                                        ],
-                                      )
-                                    : const SizedBox(),
-                                const SizedBox(height: 25),
-                                Center(
-                                  child: Text(
-                                    context.intl.login,
-                                    style: context.txtHead4N90,
+                                    ),
+                                  const SizedBox(height: 18),
+                                  ButtonFilledP80(
+                                    title: context.intl.login250Sbtitle,
+                                    active: model.isFormReady,
+                                    loading: model.loading,
+                                    onPressed: () async {
+                                      if (model.isFormReady) {
+                                        await model.login();
+                                      }
+                                    },
                                   ),
-                                ),
-                                const SizedBox(height: 16),
-                                TextField(
-                                  decoration: context.decorationTxtFieldMain.copyWith(
-                                    hintText: context.intl.login250Sbusername,
-                                    errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
-                                  ),
-                                  onChanged: (input) {
-                                    model.username = input;
-                                  },
-                                ),
-                                const SizedBox(height: 16),
-                                AgoraPasswordField(
-                                  controller: model.passwordController,
-                                ),
-                                const SizedBox(height: 16),
-                                TextField(
-                                  controller: model.otpController,
-                                  keyboardType: TextInputType.number,
-                                  decoration: context.decorationTxtFieldMain.copyWith(
-                                    hintText: context.intl.otp8722Sbtitle8722Sb0,
-                                    errorText: validateOtpWithNull(model.otp) ? null : '',
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                Padding(
-                                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                  child: Text(
-                                    context.intl.otp8722Sbtip8722Sb08722Sb0,
-                                    style: context.txtBodySmallN70,
-                                  ),
-                                ),
-                                if (model.displayCaptcha) _buildCaptcha(model),
-                                if (model.displayError) const SizedBox(height: 26),
-                                if (model.displayError)
-                                  Text(
-                                    model.errorMessage,
-                                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                                          color: Theme.of(context).colorScheme.onError,
-                                        ),
-                                  ),
-                                const SizedBox(height: 18),
-                                ButtonFilledP80(
-                                  title: context.intl.login250Sbtitle,
-                                  active: model.isFormReady,
-                                  loading: model.loading,
-                                  onPressed: () async {
-                                    if (model.isFormReady) {
-                                      await model.login();
-                                    }
-                                  },
-                                ),
-                                TextButton(
-                                  onPressed: () => AutoRouter.of(context).push(const ForgotPasswordRoute()),
-                                  child: Text(
-                                    context.intl.forgot_password,
-                                    style: context.txtLabelLargePrimary70,
-                                  ),
-                                )
-                              ],
+                                  TextButton(
+                                    onPressed: () => AutoRouter.of(context).push(const ForgotPasswordRoute()),
+                                    child: Text(
+                                      context.intl.forgot_password,
+                                      style: context.txtLabelLargePrimary70,
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),

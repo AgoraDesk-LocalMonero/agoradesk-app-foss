@@ -44,11 +44,14 @@ class ForgotPasswordScreen extends StatelessWidget {
                             style: context.txtBodyMediumNeutral80,
                           ),
                           const SizedBox(height: 16),
-                          TextField(
-                            controller: model.ctrlEmail,
-                            decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                                  labelText: context.intl.enter_email,
-                                ),
+                          AutofillGroup(
+                            child: TextField(
+                              controller: model.ctrlEmail,
+                              decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
+                                    labelText: context.intl.enter_email,
+                                  ),
+                              autofillHints: const [AutofillHints.email],
+                            ),
                           ),
                           const SizedBox(height: 16),
                           AnimatedOpacity(

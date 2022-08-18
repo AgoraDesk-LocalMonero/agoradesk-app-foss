@@ -56,6 +56,7 @@ class _AgoraPasswordFieldState extends State<AgoraPasswordField> with ValidatorM
       enabled: widget.enabled,
       obscureText: _obscure,
       decoration: decoration,
+      autofillHints: const [AutofillHints.password],
     );
   }
 }
