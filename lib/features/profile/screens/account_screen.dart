@@ -104,7 +104,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           context.read<AppState>().hasPinCode
                               ? LineWithArrow(
                                   title: context.intl.remove_pin,
-                                  onPressed: () => model.removePin(),
+                                  onPressed: () => model.removePin(context),
                                 )
                               : const SizedBox(),
                           context.read<AppState>().hasPinCode ? const SizedBox(height: 8) : const SizedBox(),

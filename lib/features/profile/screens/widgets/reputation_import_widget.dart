@@ -64,7 +64,7 @@ class ReputationImportWidget extends StatelessWidget {
       pngPath: platform.pngPath(),
       title: platform.title(),
       loading: model.loading,
-      stateMessage: model.getStateMessage(platform),
+      stateMessage: model.getStateMessage(platform, context),
       onPressed: () {
         model.reputationPlatform = platform;
         model.username = '';
