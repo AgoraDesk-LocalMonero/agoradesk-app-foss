@@ -78,6 +78,7 @@ class ChatTab extends StatelessWidget {
 
   Widget _sendMessageField(BuildContext context, TradeViewModel model) {
     final textfieldMaxLines = MediaQuery.of(context).size.height < 800 ? 8 : 12;
+
     return Positioned.fill(
       child: Stack(
         children: [
