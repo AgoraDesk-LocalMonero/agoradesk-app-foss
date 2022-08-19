@@ -160,7 +160,7 @@ class ChatTab extends StatelessWidget {
         : Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 26, 46, 0),
+              padding: const EdgeInsets.fromLTRB(0, 26, 44, 32),
               child: CloseIconBox(onPressed: () => model.clearAttachement()),
             ),
           );
