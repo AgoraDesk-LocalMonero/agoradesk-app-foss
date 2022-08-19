@@ -3109,6 +3109,12 @@
         "val": {}
       }
     },
+  "app_trades_with": "See trades with {val}",
+  "@app_trades_with": {
+      "placeholders": {
+        "val": {}
+      }
+    },
   "app_buying_from": "Buying {asset} {amount} from {username}",
   "@app_buying_from": {
       "placeholders": {
@@ -3140,6 +3146,7 @@
   "app_verifiacetion_code_to_seller": "This is your verification code. You can tell it to the buyer so that the buyer can verify you’ve finalized the trade without them needing to use the device.",
   "app_verification_code": "Verification code",
   "app_ad": "Ad",
+  "app_with": "with",
   "app_permanent": "Permanent",
   "app_error_saving": "Error during saving. Changes wasn't save.",
   "app_manage_ads": "Manage ads",

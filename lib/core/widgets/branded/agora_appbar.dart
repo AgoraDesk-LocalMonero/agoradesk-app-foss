@@ -55,7 +55,12 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
                     style:
                         Theme.of(context).textTheme.headline2!.copyWith(color: Theme.of(context).colorScheme.neutral90),
                   ),
-                  subTitle == null ? const SizedBox() : Text(subTitle!),
+                  subTitle == null
+                      ? const SizedBox()
+                      : Text(
+                          subTitle!,
+                          style: context.txtBodySmallN60N50,
+                        ),
                 ],
               ),
             ),

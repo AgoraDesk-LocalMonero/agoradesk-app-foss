@@ -7877,6 +7877,11 @@ class I18nEn extends I18n {
   }
 
   @override
+  String app_trades_with(Object val) {
+    return 'See trades with $val';
+  }
+
+  @override
   String app_buying_from(Object asset, Object amount, Object username) {
     return 'Buying $asset $amount from $username';
   }
@@ -7930,6 +7935,9 @@ class I18nEn extends I18n {
 
   @override
   String get app_ad => 'Ad';
+
+  @override
+  String get app_with => 'with';
 
   @override
   String get app_permanent => 'Permanent';

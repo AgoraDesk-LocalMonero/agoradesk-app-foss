@@ -67,7 +67,6 @@ class TradesViewModel extends BaseViewModel with ErrorParseMixin {
   bool _displayFilter = false;
   bool hasMorePages = false;
   bool _loading = false;
-  bool _init = false;
   bool _disableTabBar = false;
 
   int get bodyTabIndex => _bodyTabIndex;
@@ -111,17 +110,14 @@ class TradesViewModel extends BaseViewModel with ErrorParseMixin {
   }
 
   void initModel() {
-    if (_init != true) {
-      _init = true;
-      if (GetIt.I<AppParameters>().isAgoraDesk == false) {
-        _asset = Asset.XMR;
-      }
-      tabController.addListener(() {
-        bodyTabIndex = tabController.index;
-      });
-      _initMenus();
-      _loadCaches();
+    if (GetIt.I<AppParameters>().isAgoraDesk == false) {
+      _asset = Asset.XMR;
     }
+    tabController.addListener(() {
+      bodyTabIndex = tabController.index;
+    });
+    _initMenus();
+    _loadCaches();
   }
 
   @override
