@@ -48,6 +48,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:new_version/new_version.dart';
@@ -117,7 +118,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       _initForeground();
     }
 
-    // _adsRepository = adsRepository(api: _api);
     _adsRepository = AdsRepository(
       AdsService(api: _api),
       ObjectBox.s.box<CountryCodeModel>(),
@@ -235,6 +235,10 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   Future<void> _initApp() async {
     eventBus.fire(const BeforeAppInitEvent());
 
+    if (Platform.isAndroid) {
+      FlutterDisplayMode.setHighRefreshRate();
+    }
+
     /// Configure [ApiClient] with cache
     final String? token = await _secureStorage.read(SecureStorageKey.token);
     debugPrint('[init app, API token from secured storage] $token');
@@ -244,11 +248,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     final String? pin = await _secureStorage.read(SecureStorageKey.pin);
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
-    appState.progress += 20;
     await _afterConfigInit();
-    appState.progress += 20;
     await _authService.init();
-    appState.progress = 100;
+    appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
     _notificationsService.startListenAwesomeNotificationsPressed();

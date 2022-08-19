@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
@@ -43,17 +41,6 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     s.pushFcmTokenSavedToApi = val;
     _userSettingsBox.put(s);
   }
-
-  ///
-  /// initial app loading controller
-  ///
-  final BehaviorSubject<int> _progressController = BehaviorSubject<int>.seeded(0);
-
-  ValueStream<int> get progress$ => _progressController.stream;
-
-  set progress(int v) => _progressController.add(v);
-
-  int get progress => progress$.value;
 
   String get langCode => locale.languageCode.substring(0, 2);
 
@@ -140,7 +127,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     updateWith(countryCode: code);
   }
 
-  bool get initialized => progress$.value >= 100;
+  bool initialized = false;
 
   Locale get locale => _locale ?? const Locale('en');
 
@@ -209,7 +196,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     _themeMode = mode;
   }
 
-  //todo create service
+  // todo move to service
   Future removePinCode() async {
     await _secureStorage.delete(SecureStorageKey.pin);
   }
@@ -234,21 +221,9 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   }
 
   @override
-  String toString() {
-    final json = const JsonEncoder.withIndent('\t').convert({
-      'locale': locale.toString(),
-      'themeMode': _themeMode.toString(),
-      'progress': progress,
-    });
-    return '$runtimeType $json';
-  }
-
-  @override
   void dispose() {
     super.dispose();
-    _progressController.close();
     _connectionController.close();
-    _progressController.close();
     _uploadingController.close();
     _hasUnreadController.close();
     EasyDebounce.cancel(_kLocaleDebounceTag);
