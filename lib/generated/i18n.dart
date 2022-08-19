@@ -15423,6 +15423,12 @@ abstract class I18n {
   /// **'Sell crypto to {val}'**
   String app_sell_crypto_to(Object val);
 
+  /// No description provided for @app_trades_with.
+  ///
+  /// In en, this message translates to:
+  /// **'See trades with {val}'**
+  String app_trades_with(Object val);
+
   /// No description provided for @app_buying_from.
   ///
   /// In en, this message translates to:
@@ -15524,6 +15530,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Ad'**
   String get app_ad;
+
+  /// No description provided for @app_with.
+  ///
+  /// In en, this message translates to:
+  /// **'with'**
+  String get app_with;
 
   /// No description provided for @app_permanent.
   ///

@@ -10,6 +10,8 @@ import 'package:agoradesk/features/account/data/models/feedback_type.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/models/feedback_view_type.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
+import 'package:agoradesk/features/trades/data/models/trade_model.dart';
+import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
 
 class AccountService {
   AccountService({
@@ -27,6 +29,31 @@ class AccountService {
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
         return Either.right(AccountInfoModel.fromJson(respMap));
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Get trades with user
+  ///
+  Future<Either<ApiError, Pagination<TradeModel>>> getTradesWithUser(
+      {required String username, required TradeRequestType type}) async {
+    try {
+      final resp = await _api.client.get('/account_info/$username/trades/${type.name}');
+      if (resp.statusCode == 200) {
+        final List<dynamic> respList = jsonDecode(jsonEncode(resp.data['data']['contact_list']));
+        PaginationMeta pagination = PaginationMeta.zero();
+        if (resp.data['pagination'] != null) {
+          pagination = PaginationMeta.fromJson(resp.data['pagination']);
+        }
+        List<TradeModel> result = respList.map((i) => TradeModel.fromJson(i['data'])).toList();
+        return Either.right(Pagination(result, pagination: pagination));
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
         return Either.left(apiError);

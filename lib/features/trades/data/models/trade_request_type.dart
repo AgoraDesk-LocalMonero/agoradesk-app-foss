@@ -3,7 +3,7 @@
 /// that return same data type. This enum  enumerate possible path parameters.
 ///
 
-enum TradeRequestType { main, released, canceled }
+enum TradeRequestType { active, released, canceled }
 
 extension TradeRequestTypeExt on TradeRequestType {
   String key() {
@@ -12,7 +12,7 @@ extension TradeRequestTypeExt on TradeRequestType {
 
   String apiUrl() {
     switch (this) {
-      case TradeRequestType.main:
+      case TradeRequestType.active:
         return '';
       case TradeRequestType.released:
         return '/released';

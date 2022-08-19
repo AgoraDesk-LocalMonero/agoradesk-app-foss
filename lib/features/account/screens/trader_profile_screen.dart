@@ -1,5 +1,8 @@
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/core/widgets/branded/button_link.dart';
+import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/account/models/trader_profile_view_model.dart';
@@ -13,6 +16,8 @@ import 'package:agoradesk/features/account/screens/widgets/trader_website_box.da
 import 'package:agoradesk/features/account/screens/widgets/user_seen_tile.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:agoradesk/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -94,6 +99,30 @@ class TraderProfileScreen extends StatelessWidget {
                               loading: model.loadingAds,
                               username: model.profileForScreen.username!,
                               ads: model.ads,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                              child: ContainerSurface5Radius12(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12),
+                                  child: model.loadingAds
+                                      ? const Center(child: CupertinoActivityIndicator())
+                                      : Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Center(
+                                              child: ButtonLink(
+                                                onPressed: () => context.pushRoute(TradesWithUserRoute(
+                                                  username: model.profileForScreen.username!,
+                                                )),
+                                                title: context.intl.app_trades_with(model.profileForScreen.username!),
+                                                style: context.txtLabelLargePrimary80,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
