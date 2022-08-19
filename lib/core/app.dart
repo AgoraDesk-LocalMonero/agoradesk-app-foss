@@ -163,7 +163,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      if (appState.hasPinCode && _activatePin) {
+      if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;
       }
@@ -179,7 +179,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void _afterLayout(_) async {
     _initApp();
     _connectivitySubscription = Connectivity().onConnectivityChanged.listen(_handleConnectivity);
-    Future.delayed(const Duration(seconds: 1), () {});
   }
 
   @override
@@ -389,9 +388,11 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Pincode route logic
   ///
   Future<void> _addPinCodeRoute() async {
-    final routes = <PageRouteInfo>[];
-    routes.add(const PinCodeCheckRoute());
-    await router.pushAll(routes);
+    if (router.current.name != PinCodeCheckRoute.name) {
+      final routes = <PageRouteInfo>[];
+      routes.add(const PinCodeCheckRoute());
+      await router.pushAll(routes);
+    }
   }
 
   ///
@@ -404,10 +405,15 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       router.removeLast();
     }
 
-    void _add() {
-      final uniLink = AppLinksHandler().parseUniLink(uri);
-      if (uniLink != null) {
-        routes.add(uniLink);
+    void _addUniLinksRouts() {
+      final PageRouteInfo<dynamic>? pageRoute = AppLinksHandler().parseUniLink(uri);
+      if (pageRoute != null) {
+        if (pageRoute.path == 'trades/trade') {
+          router.removeWhere((route) {
+            return route.name == TradeRoute.name;
+          });
+        }
+        routes.add(pageRoute);
       }
     }
 
@@ -415,19 +421,19 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
     if (_authService.isAuthenticated != true && _authService.authState == AuthState.guest) {
       routes.add(const MainScreenRoute());
-      _add();
+      _addUniLinksRouts();
     } else if (_authService.isAuthenticated != true) {
       routes.add(
         const WelcomeRoute(),
       );
-      _add();
+      _addUniLinksRouts();
     } else if (_authService.showPinSetUp) {
       routes.add(const MainScreenRoute());
       routes.add(const PinCodeSetRoute());
       _authService.showPinSetUp = false;
     } else {
       routes.add(const MainScreenRoute());
-      _add();
+      _addUniLinksRouts();
       if (appState.hasPinCode) {
         routes.add(const PinCodeCheckRoute());
       }

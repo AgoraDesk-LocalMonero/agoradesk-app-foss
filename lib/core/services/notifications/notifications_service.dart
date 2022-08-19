@@ -16,6 +16,7 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -272,14 +273,40 @@ class NotificationsService with ForegroundMessagesMixin {
         AwesomeNotifications().getGlobalBadgeCounter().then(
               (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
             );
-
         final PushModel push = PushModel.fromJson(notification.payload ?? {});
         if (push.objectId != null && push.objectId!.isNotEmpty) {
-          GetIt.I<AppRouter>().push(TradeRoute(tradeId: push.objectId));
+          _handleRoutes(push.objectId!);
         }
       } catch (e) {
         debugPrint('++++error parsing push in actionStream - $e');
       }
     });
+  }
+
+  ///
+  /// Pincode route logic
+  ///
+  Future<void> _handleRoutes(String tradeId) async {
+    final AppRouter router = GetIt.I<AppRouter>();
+    final routes = <PageRouteInfo>[];
+    if (router.current.name == PinCodeCheckRoute.name) {
+      authService.authState = AuthState.displayPinCode;
+    }
+    if (authService.authState == AuthState.displayPinCode) {
+      router.removeWhere((route) {
+        return route.name == PinCodeCheckRoute.name;
+      });
+      if (router.current.name == TradeRoute.name) {
+        await router.pop();
+      }
+
+      routes.add(TradeRoute(tradeId: tradeId));
+    } else {
+      if (router.current.name == TradeRoute.name) {
+        await router.pop();
+      }
+      routes.add(TradeRoute(tradeId: tradeId));
+    }
+    await router.pushAll(routes);
   }
 }
