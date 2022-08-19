@@ -632,7 +632,6 @@ class TradeViewModel extends BaseViewModel
       if (!loadMore && !polling) {
         messages.clear();
         loadingMessages = true;
-        // filteredAds.clear();
       }
       final List<MessageBoxModel> res = await _tradeRepository.getMessages(
         tradeId: tradeForScreen.tradeId,
@@ -663,7 +662,6 @@ class TradeViewModel extends BaseViewModel
           }
         }
       }
-
       _gettingMessages = false;
     }
   }
