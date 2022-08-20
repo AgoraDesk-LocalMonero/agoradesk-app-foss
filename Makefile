@@ -111,10 +111,6 @@ coco:
 	sudo gem install cocoapods
 	pod update
 
-.PHONY: build-runner
-build-runner:
-	$(FLUTTER) packages pub run build_runner build --delete-conflicting-outputs
-
 .PHONY: watch
 watch:
 	$(FLUTTER) packages pub run build_runner watch --delete-conflicting-outputs
@@ -126,10 +122,3 @@ l10n:
 .PHONY: l10n-sync
 l10n-sync:
 	./scripts/update-l10n.sh $(LOCALISE_KEY)
-
-
-ios-upload-dsym:
-	- sentry-cli --auth-token $(SENTRY_AUTH_TOKEN) upload-dif \
- 	--org vera-unity-inc \
- 	--project prayroom \
- 	./build/ios
