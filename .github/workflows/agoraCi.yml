@@ -23,9 +23,6 @@ jobs:
       - name: Download dependencies
         run: flutter pub get
 
-      - name: Run Flutter Format
-        run: flutter format --set-exit-if-changed lib
-
       - name: Run Flutter Analyzer
         run: flutter analyze
 
