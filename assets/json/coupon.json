@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "code": "CNAME11",
+      "ad_types": [
+        "ONLINE_SELL",
+        "ONLINE_BUY",
+        "LOCAL_BUY",
+        "LOCAL_SELL"
+      ],
+      "assets": [
+        "XMR"
+      ],
+      "rebate_multiplier": 1,
+      "expires_at": "2022-11-29T17:25:24.145Z"
+    },
+    {
+      "code": "CNAME11",
+      "ad_types": [
+        "ONLINE_SELL",
+        "ONLINE_BUY",
+        "LOCAL_BUY",
+        "LOCAL_SELL"
+      ],
+      "assets": [
+        "XMR"
+      ],
+      "rebate_multiplier": 1,
+      "expires_at": "2022-01-29T17:25:24.145Z"
+    },
+    {
+      "code": "CNAME11",
+      "ad_types": [
+        "ONLINE_SELL",
+        "ONLINE_BUY",
+        "LOCAL_BUY",
+        "LOCAL_SELL"
+      ],
+      "assets": [
+        "XMR",
+        "BTC"
+      ],
+      "rebate_multiplier": 1,
+      "expires_at": "2022-10-29T17:25:24.145Z"
+    },
+    {
+      "code": "CNAME11",
+      "ad_types": [
+        "ONLINE_SELL",
+        "ONLINE_BUY",
+        "LOCAL_BUY",
+        "LOCAL_SELL"
+      ],
+      "assets": [
+        "XMR",
+        "BTC"
+      ],
+      "rebate_multiplier": 1,
+      "expires_at": "2022-01-29T17:25:24.145Z"
+    }
+  ]
+}
