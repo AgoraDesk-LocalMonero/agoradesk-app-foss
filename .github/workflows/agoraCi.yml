@@ -16,15 +16,14 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'beta' # 'dev', 'alpha', default to: 'stable'
-          # flutter-version: '1.12.x' # you can also specify exact version of flutter
 
       - uses: actions/checkout@v3
 
       - name: Download dependencies
         run: flutter pub get
 
-      - name: Run Flutter Analyzer
-        run: flutter analyze
+#      - name: Run Flutter Analyzer
+#        run: flutter analyze
 
       - name: Run unit tests
         run: flutter test
