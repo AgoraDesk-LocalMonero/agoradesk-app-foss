@@ -91,7 +91,6 @@ Types other than fix: and feat: are allowed, for example @commitlint/config-conv
 
 Mark commit number with #, for example `fix: #89`.
 
-
 Also we can use following:
 
 - feat: A new feature
