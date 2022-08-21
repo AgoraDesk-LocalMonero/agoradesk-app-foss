@@ -1,7 +1,7 @@
 #private
 key.properties
 lib/keys/
-assets/json
+#assets/json
 google-services.json
 GoogleService-Info.plist
 firebase_options_agoradesk.dart
