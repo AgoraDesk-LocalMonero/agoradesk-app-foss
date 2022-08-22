@@ -17,20 +17,24 @@ Second app - LocalMonero:
 
 ## App Features 🔥
 
-1. Push notifications work on iOS & Android. In case user's device
-(for example in China or with GrapheneOS) can't receive pushes, app detects it and start
-polling in the background mode. [More info](Notifications.md)
-
-2. Within one code base there are 2 apps: AgoraDesk, LocalMonero.
+1. Within one code base there are 2 apps: AgoraDesk, LocalMonero.
 Each app can be built as Android and iOS native app.
 Design and logic separation made with flavors (more info further in this doc).
 
-3. Universal Links work for Android and iOS. In case app is installed on the device,
+2. Universal Links work for Android and iOS. In case app is installed on the device,
 the regular links will run apps instead of browser.
 In case of two apps installed on one device the AgoraDesk app prioritized (it means in case of link
 localmonero/something AgoraDesk app will be opened).
 
-4. Made with Dart & Flutter ❤️
+3. Push notifications work on iOS & Android. In case user's device
+(for example in China or with GrapheneOS) can't receive pushes, app detects it and start
+polling in the background mode. [More info](Notifications.md)
+
+4. For anonymisation reasons all notifications sent without translations and translated on client.
+So, we use data messages to display them with app code (not with the FCM).
+
+
+5. Made with Dart & Flutter ❤️
 
 
 ## Build
