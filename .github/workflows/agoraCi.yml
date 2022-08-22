@@ -1,8 +1,8 @@
 name: AgoraCI
 
 on:
-  push:
-    branches: [ "main" ]
+#  push:
+#    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -21,9 +21,6 @@ jobs:
 
       - name: Download dependencies
         run: flutter pub get
-
-#      - name: Run Flutter Analyzer
-#        run: flutter analyze
 
       - name: Run unit tests
         run: flutter test
