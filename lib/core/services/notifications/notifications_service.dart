@@ -211,7 +211,6 @@ class NotificationsService with ForegroundMessagesMixin {
   /// Get notifications from the server
   ///
   Future getNotifications() async {
-    print('++++++++++++++++++++++++++++++11888888');
     if (authService.isAuthenticated) {
       late bool hasUnreaded;
       if (!_loading) {
