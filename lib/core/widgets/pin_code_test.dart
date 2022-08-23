@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/agora_font.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -125,7 +126,7 @@ class PinCodeState<T extends PinCodeTest> extends State<T> {
 
   Widget body(BuildContext context) {
     final deleteIconImage = Icon(
-      CupertinoIcons.delete_left,
+      AgoraFont.delete,
       color: widget.deleteIconColor,
     );
 

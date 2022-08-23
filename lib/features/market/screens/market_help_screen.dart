@@ -30,7 +30,7 @@ class MarketHelpScreen extends StatelessWidget {
               const SizedBox(height: 8),
               LineIconLink(
                 title: context.intl.document8722Sbtitle250Sbfaq,
-                iconData: AgoraFont.faq,
+                iconData: AgoraFont.faq_24px,
                 link: GetIt.I<AppParameters>().urlFaq,
               ),
               const SizedBox(height: 8),
