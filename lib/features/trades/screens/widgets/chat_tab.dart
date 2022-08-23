@@ -133,7 +133,7 @@ class ChatTab extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 icon: Icon(
                   AgoraFont.arrow_up_circle,
-                  color: context.neutral80Neutral30,
+                  color: context.n80N30,
                 ),
                 onPressed: () => model.sendMessage(),
               ),
@@ -146,7 +146,7 @@ class ChatTab extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 icon: Icon(
                   AgoraFont.paperclip,
-                  color: context.neutral80Neutral30,
+                  color: context.n80N30,
                 ),
                 onPressed: () => model.selectImage(),
               ),
@@ -177,7 +177,7 @@ class ChatTab extends StatelessWidget {
                 border: Border(
                   left: BorderSide(
                     width: 1.5,
-                    color: context.colNeutral50,
+                    color: context.colN50,
                   ),
                 ),
               ),
@@ -200,7 +200,7 @@ class ChatTab extends StatelessWidget {
                       icon: Icon(
                         AgoraFont.x,
                         size: 14,
-                        color: context.colNeutral90,
+                        color: context.colN90,
                       ),
                       onPressed: () => model.clearReply(),
                     )

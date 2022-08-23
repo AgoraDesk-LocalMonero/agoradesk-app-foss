@@ -22,7 +22,7 @@ class AgoraBackButton extends StatelessWidget {
       ),
       child: Icon(
         AgoraFont.arrow_left,
-        color: context.neutral80Neutral30,
+        color: context.n80N30,
         size: 20,
       ),
       onPressed: onPressed,

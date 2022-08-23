@@ -76,7 +76,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
                             padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                             child: DotsIndicator(
                               decorator: DotsDecorator(
-                                color: context.colNeutral30,
+                                color: context.colN30,
                                 activeColor: context.colPrimary80,
                               ),
                               dotsCount: slides.length,

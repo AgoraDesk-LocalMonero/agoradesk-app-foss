@@ -8,11 +8,16 @@ extension ColorExtension on ColorScheme {
   Color get c08c07 => brightness == Brightness.dark ? ThemeColors.custom08 : ThemeColors.custom07;
   Color get c85c09 => brightness == Brightness.dark ? ThemeColors.custom85 : ThemeColors.custom09;
   Color get c07c08 => brightness == Brightness.dark ? ThemeColors.custom07 : ThemeColors.custom08;
+  Color get ds2Ls1 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface1Light;
+  Color get ds2Ls3 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface3Light;
+  Color get ds4Ls1 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface1Light;
   Color get error20Error50 => brightness == Brightness.dark ? ThemeColors.error20 : ThemeColors.error50;
   Color get infoOutlineSec90 => brightness == Brightness.dark ? ThemeColors.infoOutline : ThemeColors.secondary90;
   Color get infoSec95 => brightness == Brightness.dark ? ThemeColors.info : ThemeColors.secondary95;
   Color get n30N80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.neutral80;
   Color get n30N50 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.neutral50;
+  Color get n30Ls1 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.surface1Light;
+  Color get n30Ls3 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.surface3Light;
   Color get n80N30 => brightness == Brightness.dark ? ThemeColors.neutral80 : ThemeColors.neutral30;
   Color get n50N60 => brightness == Brightness.dark ? ThemeColors.neutral50 : ThemeColors.neutral60;
   Color get n60N50 => brightness == Brightness.dark ? ThemeColors.neutral60 : ThemeColors.neutral50;
@@ -56,7 +61,7 @@ extension ColorExtension on ColorScheme {
 
   Color get primary40 => brightness == Brightness.dark ? ThemeColors.primary40 : ThemeColors.primary40;
 
-  Color get primary70 => brightness == Brightness.dark ? ThemeColors.primary70 : ThemeColors.primary40;
+  Color get primary70 => ThemeColors.primary70;
 
   Color get primary80 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70Light;
 

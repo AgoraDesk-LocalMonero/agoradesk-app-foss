@@ -99,7 +99,7 @@ class _PopupMenu extends StatelessWidget {
     return IconButton(
       icon: Icon(
         AgoraFont.check_circle,
-        color: context.neutral80Neutral30,
+        color: context.n80N30,
       ),
       onPressed: model.markAllRead,
     );

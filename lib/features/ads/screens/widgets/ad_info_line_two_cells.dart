@@ -14,7 +14,7 @@ class AdsInfoLineTwoCells extends StatelessWidget {
         border: Border(
           bottom: BorderSide(
             width: 1,
-            color: context.colNeutral30,
+            color: context.colN30,
           ),
         ),
       ),

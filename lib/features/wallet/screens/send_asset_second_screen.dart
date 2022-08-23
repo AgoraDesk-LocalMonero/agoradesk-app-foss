@@ -297,7 +297,7 @@ class _EnterAmount extends StatelessWidget {
             ),
             Icon(
               AgoraFont.exchange_alt,
-              color: context.colNeutral50,
+              color: context.colN50,
               size: 18,
             )
           ],

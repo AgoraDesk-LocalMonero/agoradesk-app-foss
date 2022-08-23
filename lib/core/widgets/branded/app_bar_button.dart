@@ -36,7 +36,7 @@ class AppBarButton extends StatelessWidget {
                 children: [
                   Icon(
                     iconData,
-                    color: context.neutral80Neutral30,
+                    color: context.n80N30,
                     size: size,
                   ),
                   Align(
@@ -59,7 +59,7 @@ class AppBarButton extends StatelessWidget {
             )
           : Icon(
               iconData,
-              color: context.neutral80Neutral30,
+              color: context.n80N30,
               size: size,
             ),
     );

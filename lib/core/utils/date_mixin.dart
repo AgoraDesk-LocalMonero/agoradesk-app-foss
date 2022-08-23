@@ -113,7 +113,7 @@ mixin DateMixin {
     if (hoursDiff <= 7 * 24) {
       return context.colYellow80;
     }
-    return context.colNeutral50;
+    return context.colN50;
   }
 
   ///

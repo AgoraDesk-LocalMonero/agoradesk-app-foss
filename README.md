@@ -6,13 +6,13 @@ First app - AgoraDesk:
 - [Appstore](https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678)
 - [Google Play](https://play.google.com/store/apps/details?id=com.agoradesk.app)
 - F-Droid - soon
-- Download .apk - soon
+- [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
 
 Second app - LocalMonero:
 - [Appstore](https://apps.apple.com/app/localmonero-p2p-xmr-trading/id1627693140)
 - [Google Play](https://play.google.com/store/apps/details?id=co.localmonero.app)
 - F-Droid - soon
-- Download .apk - soon
+- [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
 
 
 ## App Features 🔥

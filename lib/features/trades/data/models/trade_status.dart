@@ -90,9 +90,9 @@ extension TradeStatusExt on TradeStatus {
       case TradeStatus.paymentCompleted:
         return Theme.of(context).colorScheme.custom29;
       case TradeStatus.closed:
-        return context.colNeutral40;
+        return context.colN40;
       case TradeStatus.canceled:
-        return context.colNeutral40;
+        return context.colN40;
       case TradeStatus.confirmingToSellerWallet:
       case TradeStatus.awaitingToSellerWallet:
       case TradeStatus.awaitingToBuyerWallet:
@@ -105,7 +105,7 @@ extension TradeStatusExt on TradeStatus {
 
   Color textColorForTradeStatus(BuildContext context) {
     if (this == TradeStatus.canceled) {
-      return context.colNeutral90;
+      return context.colN90;
     } else if (this == TradeStatus.released) {
       return Theme.of(context).colorScheme.green30;
     } else if (index < 3) {
