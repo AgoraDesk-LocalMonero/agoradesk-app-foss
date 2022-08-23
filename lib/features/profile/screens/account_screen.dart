@@ -2,7 +2,6 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
-import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -15,6 +14,7 @@ import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.da
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:google_api_availability/google_api_availability.dart';
 import 'package:provider/src/provider.dart';
 
 class AccountScreen extends StatelessWidget with ClipboardMixin {
@@ -168,9 +168,11 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             behavior: HitTestBehavior.opaque,
                             onTap: () => copyToClipboard(model.appVersionStr, context),
                             onDoubleTap: () async {
-                              final token = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
-                              copyToClipboard(token ?? '', context);
-                              eventBus.fire(FlashEvent.success('Push messages token copied to clipboard.'));
+                              // final token = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                              final GooglePlayServicesAvailability gPlayState =
+                                  await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
+                              copyToClipboard(gPlayState.toString(), context);
+                              eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
                             },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),

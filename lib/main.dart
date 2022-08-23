@@ -108,7 +108,8 @@ Future<bool> checkGoogleAvailable() async {
     GooglePlayServicesAvailability.serviceInvalid,
     GooglePlayServicesAvailability.notAvailableOnPlatform,
     GooglePlayServicesAvailability.serviceDisabled,
-    GooglePlayServicesAvailability.serviceMissing
+    GooglePlayServicesAvailability.serviceMissing,
+    GooglePlayServicesAvailability.unknown,
   ];
   if (googleUnavalableStates.contains(gPlayState)) {
     return false;

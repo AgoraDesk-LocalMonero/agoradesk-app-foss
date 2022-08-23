@@ -82,6 +82,10 @@ class AppParameters {
       'name': 'Portuguese Brasil',
       'origName': 'Portugues do Brasil',
     },
+    'pl': {
+      'name': 'Polish',
+      'origName': 'Polski',
+    },
     'ko': {
       'name': 'Korean',
       'origName': '한국어',
