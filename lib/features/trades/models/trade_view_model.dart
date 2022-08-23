@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
@@ -45,11 +46,13 @@ class TradeViewModel extends BaseViewModel
     this.tradeModel,
     this.tradeId,
     required UserLocalSettings userSettings,
+    required AppState appState,
     required AccountService accountService,
     required SecureStorage secureStorage,
     required AdsRepository adsRepository,
     required ApiClient apiClient,
   })  : _tradeRepository = tradeRepository,
+        _appState = appState,
         _userSettings = userSettings,
         _secureStorage = secureStorage,
         _apiClient = apiClient,
@@ -58,6 +61,7 @@ class TradeViewModel extends BaseViewModel
 
   final TradeRepository _tradeRepository;
   final AccountService _accountService;
+  final AppState _appState;
   final SecureStorage _secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
@@ -669,13 +673,14 @@ class TradeViewModel extends BaseViewModel
   bool _checkMessageUnique(MessageBoxModel m) {
     final combinedList = [...messagesBeforeSticky, ...messagesAfterSticky];
     if (m.msg!.isNotEmpty) {
-      return combinedList
-          .where(
-            (val) => (val.msg == m.msg &&
-                val.senderUsername == m.senderUsername &&
-                (val.createdAt == m.createdAt || m.msg == messagesAfterSticky.first.msg)),
-          )
-          .isEmpty;
+      return combinedList.where(
+        (val) {
+          return (val.msg == m.msg &&
+              val.senderUsername == m.senderUsername &&
+              (val.createdAt == m.createdAt ||
+                  (m.msg == messagesAfterSticky.first.msg && m.senderUsername == _appState.username)));
+        },
+      ).isEmpty;
     } else {
       return combinedList.where((val) => val.attachmentName == m.attachmentName).isEmpty;
     }
@@ -761,13 +766,13 @@ class TradeViewModel extends BaseViewModel
     messagesBeforeSticky.clear();
     messagesAfterSticky.clear();
     if (tradeStatus == TradeStatus.paymentCompleted) {
-      _sortMessages(parseLst, tradeForScreen.paymentCompletedAt!);
+      _sortMessages(parseLst, tradeForScreen.paymentCompletedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.released || (tradeStatus.index > 5 && tradeStatus != TradeStatus.disputed)) {
-      _sortMessages(parseLst, tradeForScreen.releasedAt!);
+      _sortMessages(parseLst, tradeForScreen.releasedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.disputed) {
-      _sortMessages(parseLst, tradeForScreen.disputedAt!);
+      _sortMessages(parseLst, tradeForScreen.disputedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.canceled) {
-      _sortMessages(parseLst, tradeForScreen.canceledAt!);
+      _sortMessages(parseLst, tradeForScreen.canceledAt ?? DateTime.now());
     } else {
       messagesAfterSticky.addAll(parseLst);
     }
