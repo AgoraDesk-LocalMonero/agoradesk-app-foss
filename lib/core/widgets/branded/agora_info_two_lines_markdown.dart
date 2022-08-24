@@ -1,9 +1,10 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
-class AgoraTwoLinesMarkdown extends StatelessWidget {
+class AgoraTwoLinesMarkdown extends StatelessWidget with UrlMixin {
   const AgoraTwoLinesMarkdown({Key? key, required this.title, required this.markdownText}) : super(key: key);
 
   final String title;
@@ -36,8 +37,10 @@ class AgoraTwoLinesMarkdown extends StatelessWidget {
                           commonStyle: context.txtBodySmallN80,
                         ),
                         pConfig: PConfig(
-                          textStyle: context.txtBodySmallN80,
-                        ),
+                            textStyle: context.txtBodySmallN80,
+                            onLinkTap: (url) {
+                              openLinkExt(url);
+                            }),
                         ulConfig: UlConfig(
                           textStyle: context.txtBodySmallN80,
                         ),

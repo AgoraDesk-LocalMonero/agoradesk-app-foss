@@ -72,7 +72,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(5, 5782449331183648541),
       name: 'UserLocalSettings',
-      lastPropertyId: const IdUid(7, 2200225041036009445),
+      lastPropertyId: const IdUid(8, 8691606086131470979),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -108,6 +108,11 @@ final _entities = <ModelEntity>[
         ModelProperty(
             id: const IdUid(7, 2200225041036009445),
             name: 'pushFcmTokenSavedToApi',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(8, 8691606086131470979),
+            name: 'firstRun',
             type: 1,
             flags: 0)
       ],
@@ -308,7 +313,7 @@ ModelDefinition getObjectBoxModel() {
           final countryCodeOffset = object.countryCode == null
               ? null
               : fbb.writeString(object.countryCode!);
-          fbb.startTable(8);
+          fbb.startTable(9);
           fbb.addInt64(0, object.autoId);
           fbb.addBool(1, object.pinIsActive);
           fbb.addOffset(2, usernameOffset);
@@ -316,6 +321,7 @@ ModelDefinition getObjectBoxModel() {
           fbb.addOffset(4, localeOffset);
           fbb.addOffset(5, countryCodeOffset);
           fbb.addBool(6, object.pushFcmTokenSavedToApi);
+          fbb.addBool(7, object.firstRun);
           fbb.finish(fbb.endTable());
           return object.autoId;
         },
@@ -328,6 +334,8 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGetNullable(buffer, rootOffset, 12),
               pinIsActive: const fb.BoolReader()
                   .vTableGetNullable(buffer, rootOffset, 6),
+              firstRun: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 18),
               pushFcmTokenSavedToApi: const fb.BoolReader()
                   .vTableGetNullable(buffer, rootOffset, 16),
               username: const fb.StringReader(asciiOptimization: true)
@@ -466,6 +474,10 @@ class UserLocalSettings_ {
   /// see [UserLocalSettings.pushFcmTokenSavedToApi]
   static final pushFcmTokenSavedToApi =
       QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[6]);
+
+  /// see [UserLocalSettings.firstRun]
+  static final firstRun =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[7]);
 }
 
 /// [MessageBoxModel] entity fields to define ObjectBox queries.

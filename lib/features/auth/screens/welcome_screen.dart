@@ -1,22 +1,39 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/features/auth/theme/welcome_images.dart';
+import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserver, UrlMixin {
+  late final AppState _appState;
+  late final bool _isDark;
+
+  @override
+  void initState() {
+    _appState = context.read<AppState>();
+    _isDark = _appState.themeMode == ThemeMode.dark;
+    WidgetsBinding.instance.addPostFrameCallback((_) => _afterLayout());
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final appState = context.read<AppState>();
-    final isDark = appState.themeMode == ThemeMode.dark;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -37,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               Expanded(
                 flex: 3,
-                child: WelcomeImages.welcomeImage(isDark),
+                child: WelcomeImages.welcomeImage(_isDark),
               ),
               Expanded(
                 flex: 2,
@@ -76,6 +93,90 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void _afterLayout() async {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      builder: (_) => Dialog(
+        insetPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(20.0),
+          ),
+        ),
+        backgroundColor: context.colSurface4,
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              AutoSizeText(
+                'Disclaimer',
+                maxLines: 1,
+                style: context.txtHead4N90,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room:',
+                style: context.txtBodySmallN80,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
+                    child: Image.asset(
+                      'assets/images/element-logo.png',
+                      height: 80,
+                    ),
+                  ),
+                  const SizedBox(width: 40),
+                  GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
+                    child: Image.asset(
+                      'assets/images/telegram-logo.png',
+                      height: 80,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 22),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () => AutoRouter.of(context).pop(),
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 10),
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      // minimumSize: const Size(50, 40),
+                      alignment: Alignment.centerRight,
+                    ),
+                    child: Text(
+                      I18n.of(context)!.close,
+                      style: context.txtLabelLargePrimary70,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      // builder: (_) => const AgoraDialogCloseMarkDown(
+      //   title: 'Disclaimer',
+      //   text:
+      //       'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room: \n- Matrix icon links to https://matrix.to/#/#app-beta-testers:agoradesk.com \n\n- Telegram Icon links to https://t.me/+Hvf6nSq9ImBkMDhl',
+      // ),
     );
   }
 }
