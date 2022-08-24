@@ -10,6 +10,7 @@ import 'i18n_en.dart';
 import 'i18n_es.dart';
 import 'i18n_it.dart';
 import 'i18n_ko.dart';
+import 'i18n_pl.dart';
 import 'i18n_pt.dart';
 import 'i18n_ru.dart';
 import 'i18n_zh.dart';
@@ -99,6 +100,7 @@ abstract class I18n {
     Locale('es'),
     Locale('it'),
     Locale('ko'),
+    Locale('pl'),
     Locale('pt'),
     Locale('ru'),
     Locale('zh', 'TW'),
@@ -15595,7 +15597,7 @@ class _I18nDelegate extends LocalizationsDelegate<I18n> {
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en', 'es', 'it', 'ko', 'pt', 'ru', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'es', 'it', 'ko', 'pl', 'pt', 'ru', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_I18nDelegate old) => false;
@@ -15619,6 +15621,7 @@ I18n lookupI18n(Locale locale) {
     case 'es': return I18nEs();
     case 'it': return I18nIt();
     case 'ko': return I18nKo();
+    case 'pl': return I18nPl();
     case 'pt': return I18nPt();
     case 'ru': return I18nRu();
     case 'zh': return I18nZh();

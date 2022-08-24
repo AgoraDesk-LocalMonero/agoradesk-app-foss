@@ -16,12 +16,12 @@ class ContainerSurface2Radius12Border1 extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           width: 1,
-          color: Theme.of(context).colorScheme.neutral30,
+          color: context.colN30Ls3,
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
-        color: Theme.of(context).colorScheme.surface2,
+        color: context.colDs2Ls3,
       ),
       child: child,
     );

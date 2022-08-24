@@ -2,7 +2,6 @@ import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
-import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/features/profile/models/language_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +14,6 @@ class LanguageScreen extends StatelessWidget {
     return ViewModelBuilder<LanguageViewModel>(
         disposable: false,
         model: LanguageViewModel(
-          userService: context.read<UserService>(),
           appState: context.read<AppState>(),
         ),
         builder: (context, model, _) {

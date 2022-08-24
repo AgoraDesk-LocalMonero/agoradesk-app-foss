@@ -23,7 +23,7 @@ class LineDotText extends StatelessWidget {
             child: Icon(
               Icons.circle,
               size: 6,
-              color: context.neutral80Neutral30,
+              color: context.n80N30,
             ),
           ),
         ),

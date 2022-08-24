@@ -74,7 +74,7 @@ class _PostAdScreenState extends State<PostAdScreen> with TickerProviderStateMix
                                   dotsCount: model.tradeType == TradeType.ONLINE_BUY ? 7 : 6,
                                   position: model.page,
                                   decorator: DotsDecorator(
-                                    color: context.colNeutral30,
+                                    color: context.colN30,
                                     activeColor: context.colPrimary80,
                                   ),
                                 ),

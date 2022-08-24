@@ -33,7 +33,7 @@ class FilterButton extends StatelessWidget {
         child: Icon(
           AgoraFont.configure,
           size: 26,
-          color: selected ? context.colPrimary90 : context.neutral80Neutral30,
+          color: selected ? context.colPrimary90 : context.n80N30,
         ),
       ),
     );

@@ -8,6 +8,13 @@
 
 // ignore_for_file: constant_identifier_names
 
+// Place fonts/agoraFont.ttf in your fonts/ directory and
+// add the following to your pubspec.yaml
+// flutter:
+//   fonts:
+//    - family: agoraFont
+//      fonts:
+//       - asset: fonts/agoraFont.ttf
 import 'package:flutter/widgets.dart';
 
 class AgoraFont {
@@ -15,6 +22,10 @@ class AgoraFont {
 
   static const String _fontFamily = 'agoraFont';
 
+  static const IconData faq_24px = IconData(0xe91e, fontFamily: _fontFamily);
+  static const IconData comment_question_24px = IconData(0xe927, fontFamily: _fontFamily);
+  static const IconData share_24px = IconData(0xe956, fontFamily: _fontFamily);
+  static const IconData trash_24px = IconData(0xe957, fontFamily: _fontFamily);
   static const IconData alert_triangle = IconData(0xe900, fontFamily: _fontFamily);
   static const IconData monero = IconData(0xe901, fontFamily: _fontFamily);
   static const IconData map_pin = IconData(0xe902, fontFamily: _fontFamily);
@@ -45,7 +56,6 @@ class AgoraFont {
   static const IconData clipboard = IconData(0xe91b, fontFamily: _fontFamily);
   static const IconData clock = IconData(0xe91c, fontFamily: _fontFamily);
   static const IconData coins = IconData(0xe91d, fontFamily: _fontFamily);
-  static const IconData comment_question = IconData(0xe91e, fontFamily: _fontFamily);
   static const IconData configure = IconData(0xe91f, fontFamily: _fontFamily);
   static const IconData copy_alt = IconData(0xe920, fontFamily: _fontFamily);
   static const IconData coupon = IconData(0xe921, fontFamily: _fontFamily);
@@ -54,7 +64,6 @@ class AgoraFont {
   static const IconData dispute = IconData(0xe924, fontFamily: _fontFamily);
   static const IconData exchange_alt = IconData(0xe925, fontFamily: _fontFamily);
   static const IconData external_link = IconData(0xe926, fontFamily: _fontFamily);
-  static const IconData faq = IconData(0xe927, fontFamily: _fontFamily);
   static const IconData file_text = IconData(0xe928, fontFamily: _fontFamily);
   static const IconData file = IconData(0xe929, fontFamily: _fontFamily);
   static const IconData forum = IconData(0xe92a, fontFamily: _fontFamily);

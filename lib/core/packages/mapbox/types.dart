@@ -30,5 +30,5 @@ enum PlaceType {
 }
 
 extension PlaceTypeX on PlaceType {
-  String get value => this.toString().split('.').last;
+  String get value => toString().split('.').last;
 }

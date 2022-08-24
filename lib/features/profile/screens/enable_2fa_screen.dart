@@ -53,7 +53,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
                   ),
                   child: Icon(
                     AgoraFont.arrow_left,
-                    color: context.neutral80Neutral30,
+                    color: context.n80N30,
                     size: 20,
                   ),
                   onPressed: () {

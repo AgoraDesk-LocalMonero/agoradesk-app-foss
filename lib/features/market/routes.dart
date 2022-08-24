@@ -8,18 +8,18 @@ const marketRoutes = <AutoRoute>[
     path: 'market/help',
     page: MarketHelpScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'market/adInfo',
     page: MarketAdInfoScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'market/initiateTrade',
     page: InitiateTradeScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
 ];

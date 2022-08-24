@@ -373,12 +373,19 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtBodyXSmallN80N30 => Theme.of(this).textTheme.bodyTextXSmall.copyWith(
         color: Theme.of(this).colorScheme.n80N30,
       );
+
   TextStyle get txtBodyXSmallN90N10 => Theme.of(this).textTheme.bodyTextXSmall.copyWith(
         color: Theme.of(this).colorScheme.n90N10,
       );
+
   TextStyle get txtBodyXSmallP70P40 => Theme.of(this).textTheme.bodyTextXSmall.copyWith(
         color: Theme.of(this).colorScheme.p70P40,
       );
+
+  TextStyle get txtHead4N90N10 => Theme.of(this).textTheme.headline4!.copyWith(
+        color: Theme.of(this).colorScheme.n90N10,
+      );
+
   TextStyle get txtLabelSmallP90P10 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
         color: Theme.of(this).colorScheme.p90P10,
       );
@@ -386,6 +393,11 @@ extension ThemeShorcuts on BuildContext {
   ///
   /// colors
   ///
+
+  Color get colDs2Ls1 => Theme.of(this).colorScheme.ds2Ls1;
+
+  Color get colDs2Ls3 => Theme.of(this).colorScheme.ds2Ls3;
+  Color get colDs4Ls1 => Theme.of(this).colorScheme.ds4Ls1;
 
   Color get colError30 => Theme.of(this).colorScheme.error30;
 
@@ -409,23 +421,27 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colInfoOutline => ThemeColors.infoOutline;
 
-  Color get colNeutral20 => Theme.of(this).colorScheme.neutral20;
+  Color get colN20 => Theme.of(this).colorScheme.neutral20;
 
-  Color get colNeutral30 => Theme.of(this).colorScheme.neutral30;
+  Color get colN30 => Theme.of(this).colorScheme.neutral30;
 
-  Color get colNeutral40 => Theme.of(this).colorScheme.neutral40;
+  Color get colN30Ls1 => Theme.of(this).colorScheme.n30Ls1;
 
-  Color get colNeutral50 => Theme.of(this).colorScheme.neutral50;
+  Color get colN30Ls3 => Theme.of(this).colorScheme.n30Ls3;
 
-  Color get colNeutral60 => Theme.of(this).colorScheme.neutral60;
+  Color get colN40 => Theme.of(this).colorScheme.neutral40;
 
-  Color get colNeutral70 => Theme.of(this).colorScheme.neutral70;
+  Color get colN50 => Theme.of(this).colorScheme.neutral50;
 
-  Color get neutral80Neutral30 => Theme.of(this).colorScheme.n80N30;
+  Color get colN60 => Theme.of(this).colorScheme.neutral60;
 
-  Color get neutral80 => ThemeColors.neutral80;
+  Color get colN70 => Theme.of(this).colorScheme.neutral70;
 
-  Color get colNeutral90 => Theme.of(this).colorScheme.neutral90;
+  Color get n80N30 => Theme.of(this).colorScheme.n80N30;
+
+  Color get colN80 => ThemeColors.neutral80;
+
+  Color get colN90 => Theme.of(this).colorScheme.neutral90;
 
   Color get colPrimary20 => Theme.of(this).colorScheme.primary20;
 
@@ -555,7 +571,7 @@ extension ThemeShorcuts on BuildContext {
         icon: Icon(
           AgoraFont.chevron_down,
           size: 18,
-          color: neutral80Neutral30,
+          color: n80N30,
         ),
       );
 }

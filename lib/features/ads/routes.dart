@@ -9,24 +9,24 @@ const adsRoutes = <AutoRoute>[
     path: 'ads/postAd',
     page: PostAdScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'ads/adsSettings',
     page: AdsSettingsScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'ads/adInfo',
     page: AdInfoScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'ads/adEdit',
     page: AdEditScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
 ];

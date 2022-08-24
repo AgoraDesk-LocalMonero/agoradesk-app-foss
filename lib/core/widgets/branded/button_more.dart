@@ -22,7 +22,7 @@ class ButtonMore extends StatelessWidget {
       child: Icon(
         AgoraFont.more_vertical,
         size: 20,
-        color: context.neutral80Neutral30,
+        color: context.n80N30,
       ),
       onPressed: onPressed,
     );

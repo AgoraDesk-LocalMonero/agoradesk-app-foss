@@ -2,7 +2,7 @@ import 'package:agoradesk/core/extensions/on_bool.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
-import 'package:agoradesk/core/widgets/branded/agora_info_two_lines_marksown.dart';
+import 'package:agoradesk/core/widgets/branded/agora_info_two_lines_markdown.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/ad_info_line_two_cells.dart';

@@ -4,7 +4,7 @@ import 'percentage_size.dart';
 
 /// Used to build the background of the popup menu. [child] is the content of
 /// the popup menu.
-typedef Widget PopupMenuBackgroundBuilder(
+typedef PopupMenuBackgroundBuilder = Widget Function(
   BuildContext context,
   Widget child,
 );
@@ -27,15 +27,15 @@ class AnimatedPopupMenu extends StatefulWidget {
 }
 
 class AnimatedPopupMenuState extends State<AnimatedPopupMenu> with TickerProviderStateMixin {
-  static const ENTER_DURATION = Duration(milliseconds: 220);
+  static const enerDuration = Duration(milliseconds: 220);
   static final CurveTween enterOpacityTween = CurveTween(
-    curve: Interval(0.0, 90 / 220, curve: Curves.linear),
+    curve: const Interval(0.0, 90 / 220, curve: Curves.linear),
   );
   static final CurveTween enterSizeTween = CurveTween(
     curve: Curves.easeOutCubic,
   );
 
-  static const EXIT_DURATION = Duration(milliseconds: 260);
+  static const exitDuration = Duration(milliseconds: 260);
   static final CurveTween exitOpacityTween = CurveTween(
     curve: Curves.linear,
   );
@@ -49,7 +49,7 @@ class AnimatedPopupMenuState extends State<AnimatedPopupMenu> with TickerProvide
   void initState() {
     _enterAnimationController = AnimationController(
       vsync: this,
-      duration: ENTER_DURATION,
+      duration: enerDuration,
     );
     _enterAnimation = Tween(begin: 0.0, end: 1.0).animate(_enterAnimationController);
     _enterAnimationController.forward().then((value) {
@@ -58,7 +58,7 @@ class AnimatedPopupMenuState extends State<AnimatedPopupMenu> with TickerProvide
 
     _exitAnimationController = AnimationController(
       vsync: this,
-      duration: EXIT_DURATION,
+      duration: exitDuration,
     );
     _exitAnimation = Tween(begin: 1.0, end: 0.0).animate(_exitAnimationController);
     super.initState();

@@ -89,7 +89,13 @@ class NotificationsService with ForegroundMessagesMixin {
     });
 
     // AwesomeNotifications().createdStream.listen((notification) {
-    // this code runs when AwesomeNotification created - before it pressed
+    // });
+
+    AwesomeNotifications().dismissedStream.listen((notification) {
+      getNotifications();
+    });
+
+    // AwesomeNotifications().displayedStream.listen((notification) {
     // });
 
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});

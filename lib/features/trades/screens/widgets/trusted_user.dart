@@ -22,7 +22,7 @@ class TrustedUser extends StatelessWidget {
           children: [
             Icon(
               AgoraFont.star,
-              color: context.colNeutral60,
+              color: context.colN60,
               size: 14,
             ),
             const SizedBox(width: 4),

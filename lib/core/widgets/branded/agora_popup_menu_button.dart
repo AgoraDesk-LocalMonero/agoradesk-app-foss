@@ -22,7 +22,7 @@ class AgoraPopupMenuButton<T> extends StatelessWidget {
       ),
       child: Icon(
         icon,
-        color: context.neutral80Neutral30,
+        color: context.n80N30,
       ),
       itemBuilder: itemBuilder,
     );

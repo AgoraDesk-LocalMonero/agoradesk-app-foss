@@ -9,24 +9,24 @@ const accountRoutes = <AutoRoute>[
     path: 'account/profile',
     page: TraderProfileScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'account/feedbacksToUser',
     page: FeedbacksScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'account/userAds',
     page: UserAdsScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'account/tradesWithUser',
     page: TradesWithUserScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
 ];

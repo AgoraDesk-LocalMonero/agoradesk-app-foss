@@ -32,7 +32,7 @@ class UploadingProgressIndicator extends StatelessWidget {
                   text,
                   style: context.txtBodyXXSmallNeutral50,
                 ),
-                progressColor: context.colNeutral50,
+                progressColor: context.colN50,
               );
             }),
       ),

@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
@@ -36,7 +38,7 @@ import 'package:image_picker/image_picker.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
-const _kNewMessageDuration = Duration(milliseconds: 800);
+const _kNewMessageDuration = Duration(milliseconds: 300);
 
 class TradeViewModel extends BaseViewModel
     with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin {
@@ -45,11 +47,13 @@ class TradeViewModel extends BaseViewModel
     this.tradeModel,
     this.tradeId,
     required UserLocalSettings userSettings,
+    required AppState appState,
     required AccountService accountService,
     required SecureStorage secureStorage,
     required AdsRepository adsRepository,
     required ApiClient apiClient,
   })  : _tradeRepository = tradeRepository,
+        _appState = appState,
         _userSettings = userSettings,
         _secureStorage = secureStorage,
         _apiClient = apiClient,
@@ -58,6 +62,7 @@ class TradeViewModel extends BaseViewModel
 
   final TradeRepository _tradeRepository;
   final AccountService _accountService;
+  final AppState _appState;
   final SecureStorage _secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
@@ -449,7 +454,7 @@ class TradeViewModel extends BaseViewModel
     _divideMessagesTwoParts(null);
   }
 
-  Future releaseEscrow() async {
+  Future releaseEscrow(BuildContext context) async {
     checkPassword();
     if (passwordInputValid) {
       releasingEscrow = true;
@@ -649,7 +654,7 @@ class TradeViewModel extends BaseViewModel
           final reversedLst = res.reversed.toList();
           for (var i = 0; i < res.length; i++) {
             final message = reversedLst[i];
-            if (_checkMessageUnique(message)) {
+            if (_checkMessageUnique(message, i)) {
               messagesAfterSticky.insert(0, message);
               messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
               await Future.delayed(const Duration(milliseconds: 500));
@@ -666,18 +671,24 @@ class TradeViewModel extends BaseViewModel
     }
   }
 
-  bool _checkMessageUnique(MessageBoxModel m) {
+  bool _checkMessageUnique(MessageBoxModel m, int? i) {
+    final int num = i ?? 0;
     final combinedList = [...messagesBeforeSticky, ...messagesAfterSticky];
-    if (m.msg!.isNotEmpty) {
-      return combinedList
-          .where(
-            (val) => (val.msg == m.msg &&
+    try {
+      if (m.msg!.isNotEmpty) {
+        return combinedList.where(
+          (val) {
+            return (val.msg == m.msg &&
                 val.senderUsername == m.senderUsername &&
-                (val.createdAt == m.createdAt || m.msg == messagesAfterSticky.first.msg)),
-          )
-          .isEmpty;
-    } else {
-      return combinedList.where((val) => val.attachmentName == m.attachmentName).isEmpty;
+                (val.createdAt == m.createdAt ||
+                    (m.msg == messagesAfterSticky[num].msg && m.senderUsername == _appState.username)));
+          },
+        ).isEmpty;
+      } else {
+        return combinedList.where((val) => val.attachmentName == m.attachmentName).isEmpty;
+      }
+    } catch (e) {
+      return false;
     }
   }
 
@@ -761,13 +772,13 @@ class TradeViewModel extends BaseViewModel
     messagesBeforeSticky.clear();
     messagesAfterSticky.clear();
     if (tradeStatus == TradeStatus.paymentCompleted) {
-      _sortMessages(parseLst, tradeForScreen.paymentCompletedAt!);
+      _sortMessages(parseLst, tradeForScreen.paymentCompletedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.released || (tradeStatus.index > 5 && tradeStatus != TradeStatus.disputed)) {
-      _sortMessages(parseLst, tradeForScreen.releasedAt!);
+      _sortMessages(parseLst, tradeForScreen.releasedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.disputed) {
-      _sortMessages(parseLst, tradeForScreen.disputedAt!);
+      _sortMessages(parseLst, tradeForScreen.disputedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.canceled) {
-      _sortMessages(parseLst, tradeForScreen.canceledAt!);
+      _sortMessages(parseLst, tradeForScreen.canceledAt ?? DateTime.now());
     } else {
       messagesAfterSticky.addAll(parseLst);
     }
@@ -947,10 +958,10 @@ class TradeViewModel extends BaseViewModel
   }
 
   @override
-  void dispose() {
+  void dispose() async {
     focusMessage.dispose();
     GetIt.I<AppParameters>().openedTradeId = null;
-    _secureStorage.write(SecureStorageKey.openedTradeId, '');
+    await _secureStorage.write(SecureStorageKey.openedTradeId, '');
     tabController.dispose();
     ctrlMessage.dispose();
     ctrlPassword.dispose();

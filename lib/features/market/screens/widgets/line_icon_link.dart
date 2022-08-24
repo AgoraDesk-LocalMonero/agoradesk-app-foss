@@ -30,7 +30,7 @@ class LineIconLink extends StatelessWidget with UrlMixin {
               Icon(
                 iconData,
                 size: 20,
-                color: context.neutral80Neutral30,
+                color: context.n80N30,
               ),
               const SizedBox(width: 17),
               Expanded(
@@ -43,7 +43,7 @@ class LineIconLink extends StatelessWidget with UrlMixin {
               Icon(
                 AgoraFont.external_link,
                 size: 20,
-                color: context.neutral80Neutral30,
+                color: context.n80N30,
               ),
             ],
           ),

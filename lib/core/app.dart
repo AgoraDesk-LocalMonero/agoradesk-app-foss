@@ -47,7 +47,6 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
@@ -561,7 +560,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   //todo - check how it works when app initially was closed
   Future<void> _initUniLinks() async {
     linkStream.listen((String? link) {
-      debugPrint('++++uni_links -  ${link}');
+      debugPrint('++++uni_links - link');
       if (link != null && link.isNotEmpty) {
         _initialUri = Uri.parse(link);
         // check if the link for email confirm or not
@@ -589,8 +588,8 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       _userSettings = ObjectBox.userLocalSettings;
     }
 
-    final brightness = SchedulerBinding.instance.window.platformBrightness;
-    final bool isDarkMode = brightness == Brightness.dark;
+    // final brightness = SchedulerBinding.instance.window.platformBrightness;
+    // final bool isDarkMode = brightness == Brightness.dark;
     // ThemeMode mode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
     ThemeMode mode = ThemeMode.dark;
     final int cacheThemeModeIndex = ObjectBox.userLocalSettings.themeMode?.index ?? 0;

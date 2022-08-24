@@ -21,7 +21,7 @@ class TradedWithUser extends StatelessWidget {
           children: [
             Icon(
               AgoraFont.check_circle,
-              color: context.colNeutral60,
+              color: context.colN60,
               size: 14,
             ),
             const SizedBox(width: 4),
@@ -40,7 +40,7 @@ class TradedWithUser extends StatelessWidget {
           children: [
             Icon(
               AgoraFont.info,
-              color: context.colNeutral60,
+              color: context.colN60,
               size: 14,
             ),
             const SizedBox(width: 4),

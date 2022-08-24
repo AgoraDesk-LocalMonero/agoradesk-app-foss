@@ -27,6 +27,29 @@ mixin UrlMixin {
     }
   }
 
+  ///
+  /// open link
+  ///
+  Future<void> openLinkExt(String? url, {String? token}) async {
+    if (url != null) {
+      final uri = Uri.tryParse(url) ?? Uri();
+      if (await canLaunchUrl(uri)) {
+        // Map<String, String> headers = {
+        //   'cookie': 'SameSite=Lax;Secure=true;HttpOnly=true;token=$token',
+        // };
+        await launchUrl(
+          uri,
+          mode: LaunchMode.externalApplication,
+          // webViewConfiguration: WebViewConfiguration(
+          //   headers: headers,
+          // ),
+        );
+      } else {
+        throw Exception('Could not launch $url');
+      }
+    }
+  }
+
   String linkForChain(String? transactionId, Asset asset) {
     if (transactionId != null && transactionId.isNotEmpty) {
       if (asset == Asset.BTC) {

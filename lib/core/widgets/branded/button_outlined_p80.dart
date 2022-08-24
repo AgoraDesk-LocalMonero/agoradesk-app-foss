@@ -31,7 +31,7 @@ class ButtonOutlinedP80 extends StatelessWidget with UiHelpersMixin {
           borderRadius: BorderRadius.circular(40),
           side: BorderSide(
             width: 2,
-            color: isActive ? context.colPrimary80 : context.colNeutral50,
+            color: isActive ? context.colPrimary80 : context.colN50,
           ),
         ),
       ),

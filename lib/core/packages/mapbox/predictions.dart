@@ -170,9 +170,9 @@ class Geometry {
       };
 }
 
-enum GeometryType { POINT }
+enum GeometryType { point }
 
-final geometryTypeValues = EnumValues({"Point": GeometryType.POINT});
+final geometryTypeValues = EnumValues({"Point": GeometryType.point});
 
 final placeTypeValues = EnumValues({
   "country": PlaceType.country,
@@ -202,21 +202,21 @@ class Properties {
   String toRawJson() => json.encode(toJson());
 
   factory Properties.fromJson(Map<String, dynamic> json) => Properties(
-        shortCode: json["short_code"] == null ? null : json["short_code"],
+        shortCode: json["short_code"],
         wikidata: json["wikidata"],
         address: json["address"],
       );
 
   Map<String, dynamic> toJson() => {
-        "short_code": shortCode == null ? null : shortCode,
+        "short_code": shortCode,
         "wikidata": wikidata,
         "address": address,
       };
 }
 
-enum FeatureType { FEATURE }
+enum FeatureType { feature }
 
-final featureTypeValues = EnumValues({"Feature": FeatureType.FEATURE});
+final featureTypeValues = EnumValues({"Feature": FeatureType.feature});
 
 class EnumValues<T> {
   Map<String, T> map;
@@ -225,9 +225,7 @@ class EnumValues<T> {
   EnumValues(this.map);
 
   Map<T, String>? get reverse {
-    if (reverseMap == null) {
-      reverseMap = map.map((k, v) => MapEntry(v, k));
-    }
+    reverseMap ??= map.map((k, v) => MapEntry(v, k));
     return reverseMap;
   }
 }

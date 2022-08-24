@@ -84,7 +84,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                     ? const SizedBox()
                     : model.isBulkActionsMode
                         ? ButtonIconTextN80N30(
-                            iconData: CupertinoIcons.bin_xmark,
+                            iconData: AgoraFont.trash_24px,
                             onPressed: () {
                               showDialog(
                                 context: context,

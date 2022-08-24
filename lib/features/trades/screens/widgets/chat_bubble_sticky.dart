@@ -28,7 +28,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   @override
   Widget build(BuildContext context) {
     if (model.messageHasFocus) {
-      return const SizedBox();
+      return const SizedBox(height: 8);
     }
 
     return Container(
@@ -38,6 +38,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
         child: ViewModelBuilder<TradeViewModel>(
             model: model,
             disposable: false,
+            initOnce: true,
             builder: (context, model, child) {
               if (model.isLocalTrade) {
                 return Padding(
@@ -133,11 +134,11 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                           model.minutesBeforeCancel <= 0
                               ? ButtonOutlinedWithIconP80(
                                   title: context.intl.cancel,
-                                  borderColor: context.colNeutral30,
+                                  borderColor: context.colN30,
                                   style: context.txtLabelLargeNeutral30,
                                   icon: Icon(
                                     AgoraFont.x_circle,
-                                    color: context.colNeutral30,
+                                    color: context.colN30,
                                   ),
                                   onPressed: () => _cancelTradeSellerDialog(context, model),
                                 )
@@ -216,11 +217,11 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                             title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                             insidePadding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
                             loading: model.cancelingTrade,
-                            borderColor: context.colNeutral30,
+                            borderColor: context.colN30,
                             style: context.txtLabelLargeNeutral30,
                             icon: Icon(
                               AgoraFont.x_circle,
-                              color: context.colNeutral30,
+                              color: context.colN30,
                             ),
                             onPressed: () => _cancelTradeBuyerDialog(context, model),
                           )

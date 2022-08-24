@@ -28,7 +28,7 @@ class CouponTile extends StatelessWidget with DateMixin {
         decoration: BoxDecoration(
           border: Border.all(
             width: 1,
-            color: isActive ? context.colHighlight : context.colNeutral30,
+            color: isActive ? context.colHighlight : context.colN30,
           ),
           borderRadius: const BorderRadius.all(
             Radius.circular(12),
@@ -84,7 +84,7 @@ class CouponTile extends StatelessWidget with DateMixin {
                   ),
                   border: Border.all(
                     width: 1,
-                    color: isActive ? context.colHighlight : context.colNeutral30,
+                    color: isActive ? context.colHighlight : context.colN30,
                   ),
                   color: isActive ? context.colHighlight : Colors.transparent,
                 ),
@@ -94,7 +94,7 @@ class CouponTile extends StatelessWidget with DateMixin {
                     child: Icon(
                       AgoraFont.coupon,
                       size: 60,
-                      color: isActive ? context.colPrimary90 : context.colNeutral70,
+                      color: isActive ? context.colPrimary90 : context.colN70,
                     ),
                   ),
                 ),

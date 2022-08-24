@@ -31,7 +31,7 @@ class LineWithArrow extends StatelessWidget {
               Icon(
                 AgoraFont.chevron_right,
                 size: 20,
-                color: context.neutral80Neutral30,
+                color: context.n80N30,
               )
             ],
           ),

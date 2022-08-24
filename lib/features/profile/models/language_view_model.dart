@@ -6,18 +6,14 @@ import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
-import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
 
 class LanguageViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, StringMixin {
   LanguageViewModel({
-    required UserService userService,
     required AppState appState,
-  })  : _appState = appState,
-        _userService = userService;
+  }) : _appState = appState;
 
-  final UserService _userService;
   final AppState _appState;
   late final List<Map<String, dynamic>> supportedLocales;
 

@@ -25,7 +25,7 @@ class FinalizeTradeDialog extends StatelessWidget {
     return KeyboardDismissOnTap(
       child: Dialog(
         insetPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-        backgroundColor: Theme.of(context).colorScheme.surface4,
+        backgroundColor: context.colDs4Ls1,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(20.0),
@@ -34,6 +34,7 @@ class FinalizeTradeDialog extends StatelessWidget {
         child: ViewModelBuilder<TradeViewModel>(
             model: tradeModel,
             disposable: false,
+            initOnce: true,
             builder: (context, model, child) {
               return SingleChildScrollView(
                 child: Padding(
@@ -53,10 +54,7 @@ class FinalizeTradeDialog extends StatelessWidget {
                               child: Text(
                                 context.intl.trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbtitle(
                                     moneyStr, model.tradeForScreen.buyer.username!),
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleMedium!
-                                    .copyWith(color: Theme.of(context).colorScheme.neutral90),
+                                style: context.txtHead4N90N10,
                               ),
                             ),
                           ),
@@ -71,24 +69,18 @@ class FinalizeTradeDialog extends StatelessWidget {
                             children: [
                               Text(
                                 context.intl.trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext + '.',
-                                style: Theme.of(context).textTheme.bodyTextXSmall.copyWith(
-                                      color: Theme.of(context).colorScheme.n80N30,
-                                    ),
+                                style: context.txtBodyXSmallN80N30,
                               ),
                               const SizedBox(height: 6),
                               Text(
                                 context
                                     .intl.trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext8722Sbwarning,
-                                style: Theme.of(context).textTheme.agoraLabelSmall.copyWith(
-                                      color: Theme.of(context).colorScheme.n80N30,
-                                    ),
+                                style: context.txtBodyXSmallN80N30,
                               ),
                               const SizedBox(height: 6),
                               Text(
                                 context.intl.trade__dialog__confirm_release_monero_text_password,
-                                style: Theme.of(context).textTheme.bodyTextXSmall.copyWith(
-                                      color: Theme.of(context).colorScheme.n80N30,
-                                    ),
+                                style: context.txtBodyXSmallN80N30,
                               ),
                             ],
                           ),
@@ -97,11 +89,11 @@ class FinalizeTradeDialog extends StatelessWidget {
                       const SizedBox(height: 12),
                       AgoraPasswordField(
                         controller: model.ctrlPassword,
-                        decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                              hintText: context.intl.enter_your_password,
-                              errorText: model.passwordInputValid ? null : ' ',
-                              contentPadding: const EdgeInsets.fromLTRB(10, 20, 0, 20),
-                            ),
+                        decoration: context.decorationTxtFieldMain.copyWith(
+                          hintText: context.intl.enter_your_password,
+                          errorText: model.passwordInputValid ? null : ' ',
+                          contentPadding: const EdgeInsets.fromLTRB(10, 20, 0, 20),
+                        ),
                       ),
                       const SizedBox(height: 12),
                       Row(
@@ -123,7 +115,7 @@ class FinalizeTradeDialog extends StatelessWidget {
                               loading: model.releasingEscrow,
                               active: model.passwordInputValid,
                               onPressed: () async {
-                                model.releaseEscrow();
+                                model.releaseEscrow(context);
                               },
                             ),
                           )

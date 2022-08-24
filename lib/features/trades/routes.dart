@@ -7,12 +7,12 @@ const tradesRoutes = <AutoRoute>[
     path: 'trades/trade',
     page: TradeScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
   CustomRoute(
     path: 'webviewScreen',
     page: WebviewScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
-    durationInMilliseconds: 300,
+    durationInMilliseconds: 200,
   ),
 ];

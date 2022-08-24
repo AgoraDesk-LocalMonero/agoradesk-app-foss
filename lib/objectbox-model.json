@@ -53,7 +53,7 @@
     },
     {
       "id": "5:5782449331183648541",
-      "lastPropertyId": "7:2200225041036009445",
+      "lastPropertyId": "8:8691606086131470979",
       "name": "UserLocalSettings",
       "properties": [
         {
@@ -90,6 +90,11 @@
         {
           "id": "7:2200225041036009445",
           "name": "pushFcmTokenSavedToApi",
+          "type": 1
+        },
+        {
+          "id": "8:8691606086131470979",
+          "name": "firstRun",
           "type": 1
         }
       ],
