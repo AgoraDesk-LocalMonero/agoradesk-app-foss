@@ -7183,6 +7183,9 @@ class I18nEn extends I18n {
   String get receiving => 'Receiving';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => 'Rate';
 
   @override

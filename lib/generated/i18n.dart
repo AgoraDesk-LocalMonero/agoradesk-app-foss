@@ -14117,6 +14117,12 @@ abstract class I18n {
   /// **'Receiving'**
   String get receiving;
 
+  /// No description provided for @paying.
+  ///
+  /// In en, this message translates to:
+  /// **'Paying'**
+  String get paying;
+
   /// No description provided for @rate.
   ///
   /// In en, this message translates to:

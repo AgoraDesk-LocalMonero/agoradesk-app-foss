@@ -7183,6 +7183,9 @@ class I18nRu extends I18n {
   String get receiving => 'получение';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => 'Тариф';
 
   @override

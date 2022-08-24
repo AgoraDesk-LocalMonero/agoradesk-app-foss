@@ -7183,6 +7183,9 @@ class I18nKo extends I18n {
   String get receiving => '전수';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => '율';
 
   @override

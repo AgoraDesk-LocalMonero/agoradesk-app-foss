@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -875,6 +875,16 @@ class TradeViewModel extends BaseViewModel
     _image = null;
     ctrlMessage.text = '';
     messageFieldEnabled = true;
+  }
+
+  String buyingSellingTitle(BuildContext context) {
+    return tradeForScreen.isSelling!
+        ? context.intl.faq250Sbanswer8722Sb18722Sbselling.capitalize()
+        : context.intl.faq250Sbanswer8722Sb18722Sbbuying.capitalize();
+  }
+
+  String receivingPayingTitle(BuildContext context) {
+    return tradeForScreen.isSelling! ? context.intl.receiving : context.intl.paying;
   }
 
   bool isMyMessage(MessageBoxModel message) {

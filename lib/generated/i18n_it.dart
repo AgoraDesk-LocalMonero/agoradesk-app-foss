@@ -7183,6 +7183,9 @@ class I18nIt extends I18n {
   String get receiving => 'Ricezione';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => 'Vota';
 
   @override

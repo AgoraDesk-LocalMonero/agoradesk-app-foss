@@ -2,6 +2,7 @@
   "es": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",
@@ -63,6 +64,7 @@
   "it": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",
@@ -124,6 +126,7 @@
   "ko": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",
@@ -268,6 +271,7 @@
     "trade_id",
     "view_trade",
     "receiving",
+    "paying",
     "rate",
     "enter_your_password",
     "good_seller",
@@ -518,6 +522,7 @@
   "pt": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",
@@ -579,6 +584,7 @@
   "ru": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",
@@ -640,6 +646,7 @@
   "zh": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",
@@ -701,6 +708,7 @@
   "zh_TW": [
     "no_feedbacks",
     "must_be_less",
+    "paying",
     "api_error_49",
     "api_error_103",
     "api_error_105",

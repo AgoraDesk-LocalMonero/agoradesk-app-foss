@@ -7183,6 +7183,9 @@ class I18nPt extends I18n {
   String get receiving => 'Recebendo';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => 'Tarifa';
 
   @override

@@ -7183,6 +7183,9 @@ class I18nZh extends I18n {
   String get receiving => '接收';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => '率';
 
   @override

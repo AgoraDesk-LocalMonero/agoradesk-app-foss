@@ -2781,6 +2781,7 @@
       "trade_id": "Trade ID",
       "view_trade": "View trade",
       "receiving": "Receiving",
+      "paying": "Paying",
       "rate": "Rate",
       "enter_your_password": "Enter your password",
       "good_seller": "Good seller",

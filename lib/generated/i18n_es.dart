@@ -7183,6 +7183,9 @@ class I18nEs extends I18n {
   String get receiving => 'Recepción de';
 
   @override
+  String get paying => 'Paying';
+
+  @override
   String get rate => 'Califica';
 
   @override

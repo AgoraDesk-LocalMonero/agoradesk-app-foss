@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
@@ -104,14 +103,12 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                                     ),
                                     TradeLineWithCopy(
                                       iconData: AgoraFont.arrow_up_circle,
-                                      title: model.isSeller
-                                          ? context.intl.faq250Sbanswer8722Sb18722Sbselling.capitalize()
-                                          : context.intl.faq250Sbanswer8722Sb18722Sbbuying.capitalize(),
+                                      title: model.buyingSellingTitle(context),
                                       text: '${model.tradeForScreen.assetAmount} ${model.tradeForScreen.asset.title()}',
                                     ),
                                     TradeLineWithCopy(
                                       iconData: AgoraFont.arrow_down_circle,
-                                      title: context.intl.receiving,
+                                      title: model.receivingPayingTitle(context),
                                       text: '${model.tradeForScreen.amount} ${model.tradeForScreen.currency}',
                                     ),
                                     TradeLineWithCopy(
