@@ -1,8 +1,8 @@
-import 'dart:io';
+import 'dart:collection';
 
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class WebviewScreen extends StatefulWidget {
   const WebviewScreen({
@@ -19,30 +19,57 @@ class WebviewScreen extends StatefulWidget {
 }
 
 class WebViewExampleState extends State<WebviewScreen> {
-  late WebViewController _webViewController;
+  late final InAppWebViewController? _webViewController;
+  final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
+    crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, mediaPlaybackRequiresUserGesture: false),
+    android: AndroidInAppWebViewOptions(
+      useHybridComposition: true,
+    ),
+    ios: IOSInAppWebViewOptions(
+      allowsInlineMediaPlayback: true,
+    ),
+  );
+
+  late final Uri _uri;
 
   @override
   void initState() {
+    _uri = Uri.tryParse(widget.url) ?? Uri();
     super.initState();
-    // Enable virtual display.
-    if (Platform.isAndroid) WebView.platform = AndroidWebView();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AgoraAppBar(),
-      body: WebView(
-        onWebViewCreated: (WebViewController webViewController) {
-          _webViewController = webViewController;
-          _webViewController.runJavascript('document.cookie = "token=${widget.token}"');
-          setState(() {});
+      body: InAppWebView(
+        initialUrlRequest: URLRequest(url: _uri),
+        initialUserScripts: UnmodifiableListView<UserScript>([]),
+        initialOptions: _options,
+        onWebViewCreated: (controller) async {
+          _webViewController = controller;
+          try {
+            // get the CookieManager instance
+            CookieManager cookieManager = CookieManager.instance();
+            cookieManager.setCookie(
+              url: _uri,
+              name: "token",
+              value: widget.token ?? '',
+              domain: "agoradesk.com",
+              isSecure: true,
+            );
+            // then load initial URL here
+            await _webViewController!.loadUrl(urlRequest: URLRequest(url: _uri));
+          } catch (e) {
+            debugPrint('++++ [Webview cooikes error] $e');
+          }
         },
-        initialCookies: [
-          if (widget.token != null) WebViewCookie(name: 'token', value: widget.token!, domain: 'agoradesk.com'),
-        ],
-        javascriptMode: JavascriptMode.unrestricted,
-        initialUrl: widget.url,
+        androidOnPermissionRequest: (controller, origin, resources) async {
+          return PermissionRequestResponse(resources: resources, action: PermissionRequestResponseAction.GRANT);
+        },
+        shouldOverrideUrlLoading: (controller, navigationAction) async {
+          return NavigationActionPolicy.ALLOW;
+        },
       ),
     );
   }
