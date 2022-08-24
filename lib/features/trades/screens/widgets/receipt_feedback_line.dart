@@ -26,7 +26,7 @@ class ReceiptFeedbackLine extends StatelessWidget {
             ),
             title: context.intl.trade250Sbreceipt250Sbbtn,
             insidePadding: const EdgeInsets.fromLTRB(4, 13, 4, 13),
-            onPressed: () => model.openReceipt(),
+            onPressed: () => model.openReceipt(context),
           ),
         ),
         const SizedBox(width: 12),

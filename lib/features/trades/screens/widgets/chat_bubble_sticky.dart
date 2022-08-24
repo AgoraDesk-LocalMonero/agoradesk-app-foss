@@ -40,7 +40,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             disposable: false,
             initOnce: true,
             builder: (context, model, child) {
-              if (model.isLocalTrade) {
+              if (model.isLocalTrade && model.tradeStatus == TradeStatus.created) {
                 return Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                   child: ContainerC85c09Radius12(

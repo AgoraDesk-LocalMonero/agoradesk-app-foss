@@ -52,8 +52,8 @@ extension TradeTypeExt on TradeType {
             : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy;
       case TradeType.ONLINE_BUY:
         return isSeller
-            ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy
-            : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_sell;
+            ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_sell
+            : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy;
       case TradeType.LOCAL_SELL:
         return isSeller
             ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_sell
@@ -70,7 +70,7 @@ extension TradeTypeExt on TradeType {
       case TradeType.ONLINE_SELL:
         return isSeller ? Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
       case TradeType.ONLINE_BUY:
-        return isSeller ? Theme.of(context).colorScheme.custom29 : Theme.of(context).colorScheme.error80;
+        return isSeller ?  Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
       case TradeType.LOCAL_SELL:
         return isSeller ? Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
       case TradeType.LOCAL_BUY:

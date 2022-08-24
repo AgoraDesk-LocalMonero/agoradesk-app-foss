@@ -294,7 +294,7 @@ class TradeViewModel extends BaseViewModel
     }
   }
 
-  void openReceipt() {
+  void openReceipt(BuildContext context) {
     context.pushRoute(
       WebviewRoute(
           token: _apiClient.accessToken ?? '', url: '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}'),

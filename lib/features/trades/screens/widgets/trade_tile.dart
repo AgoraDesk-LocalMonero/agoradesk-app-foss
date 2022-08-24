@@ -38,9 +38,12 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
     final isSell = trade.isSelling!;
     final username = isSell ? trade.buyer.username : trade.seller.username;
     final trader = isSell ? trade.buyer : trade.seller;
+    final youReceiveStr = isSell ? trade.amount + ' ' + trade.currency : trade.assetAmount + ' ' + trade.asset.title();
+    final youSellStr = isSell ?   trade.assetAmount + ' ' + trade.asset.title() : trade.amount + ' ' + trade.currency;
+
 
     final adId = trade.advertisement.id != null ? trade.advertisement.id!.substring(0, 8) : context.intl.app_ad_deleted;
-
+    print('++++++++++++++++++++++++++++++11 -- ${trade.isSelling} - ${trade.advertisement.tradeType}');
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
       child: GestureDetector(
@@ -58,8 +61,8 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                       title: trade.advertisement.tradeType
                           .translatedForTrade(context, trade.isSelling ?? false)
                           .toUpperCase(),
-                      color: trade.advertisement.tradeType.colorForTrade(context, trade.isSelling ?? false),
-                      textColor: trade.advertisement.tradeType.textColorForTrade(context, trade.isSelling ?? false),
+                      color: trade.advertisement.tradeType.colorForTrade(context, isSell),
+                      textColor: trade.advertisement.tradeType.textColorForTrade(context, isSell),
                       iconData: trade.asset.iconData(),
                     ),
                     Row(
@@ -183,7 +186,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                             ),
                             const SizedBox(height: 10),
                             Text(
-                              trade.assetAmount + ' ' + trade.asset.title(),
+                              youSellStr,
                               style: context.txtLabelMediumN90N10,
                             ),
                           ],
@@ -197,7 +200,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                             ),
                             const SizedBox(height: 6),
                             Text(
-                              trade.amount + ' ' + trade.currency,
+                              youReceiveStr,
                               style: context.txtLabelMediumN90N10,
                             ),
                           ],

@@ -38,6 +38,10 @@
 	<dict>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+        <true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>For sending photos in the chat</string>
