@@ -33,6 +33,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
+        initOnce: true,
         builder: (context, model, child) {
           if (model.isProcessing()) {
             return _buildProcessingBlock(model, context);

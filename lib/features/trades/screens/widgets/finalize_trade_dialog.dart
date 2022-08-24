@@ -34,6 +34,7 @@ class FinalizeTradeDialog extends StatelessWidget {
         child: ViewModelBuilder<TradeViewModel>(
             model: tradeModel,
             disposable: false,
+            initOnce: true,
             builder: (context, model, child) {
               return SingleChildScrollView(
                 child: Padding(
@@ -114,7 +115,7 @@ class FinalizeTradeDialog extends StatelessWidget {
                               loading: model.releasingEscrow,
                               active: model.passwordInputValid,
                               onPressed: () async {
-                                model.releaseEscrow();
+                                model.releaseEscrow(context);
                               },
                             ),
                           )

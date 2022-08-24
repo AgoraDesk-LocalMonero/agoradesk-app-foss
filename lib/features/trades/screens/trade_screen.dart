@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
@@ -63,6 +65,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
       appState: context.read<AppState>(),
     );
     _model.tabController = TabController(length: 2, vsync: this);
+
     super.initState();
   }
 
@@ -78,27 +81,30 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
             ),
             body: GestureDetector(
               onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                    child: AgoraTwoTabsBar(
-                      controller: model.tabController,
-                      textLeft: context.intl.chat,
-                      iconLeft: AgoraFont.message_circle,
-                      textRight: context.intl.activity,
-                      iconRight: AgoraFont.bolt_alt,
+              child: SafeArea(
+                bottom: Platform.isAndroid,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                      child: AgoraTwoTabsBar(
+                        controller: model.tabController,
+                        textLeft: context.intl.chat,
+                        iconLeft: AgoraFont.message_circle,
+                        textRight: context.intl.activity,
+                        iconRight: AgoraFont.bolt_alt,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-                  Expanded(
-                    child: RefreshIndicator(
-                      key: model.indicatorKey,
-                      onRefresh: () async => model.getTrade(polling: true),
-                      child: _buildBody(context, model),
+                    const SizedBox(height: 12),
+                    Expanded(
+                      child: RefreshIndicator(
+                        key: model.indicatorKey,
+                        onRefresh: () async => model.getTrade(polling: true),
+                        child: _buildBody(context, model),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           );
@@ -127,7 +133,9 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
         ),
       );
     }
-    return ChatTab(model: model);
+    return ChatTab(
+      model: model,
+    );
   }
 
   Widget _buildTradeTab(BuildContext context, TradeViewModel model) {

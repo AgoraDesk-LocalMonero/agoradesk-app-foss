@@ -10,6 +10,7 @@ import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
@@ -133,9 +134,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                   GestureDetector(
                     behavior: HitTestBehavior.opaque,
                     onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
-                    child: Image.asset(
-                      'assets/images/element-logo.png',
-                      height: 80,
+                    child: SvgPicture.asset(
+                      'assets/images/matrix-logo.svg',
+                      color: Colors.white,
+                      width: 100,
                     ),
                   ),
                   const SizedBox(width: 40),
@@ -144,7 +146,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                     onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
                     child: Image.asset(
                       'assets/images/telegram-logo.png',
-                      height: 80,
+                      height: 70,
                     ),
                   ),
                 ],

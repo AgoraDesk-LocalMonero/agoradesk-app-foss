@@ -33,6 +33,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
+        initOnce: true,
         builder: (context, model, child) {
           if (model.isLocalTrade) {
             return Padding(

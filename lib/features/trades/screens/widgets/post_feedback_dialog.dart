@@ -30,6 +30,7 @@ class PostFeedbackDialog extends StatelessWidget {
         child: ViewModelBuilder<TradeViewModel>(
             model: model,
             disposable: false,
+            initOnce: true,
             builder: (context, model, child) {
               return SingleChildScrollView(
                 child: Padding(

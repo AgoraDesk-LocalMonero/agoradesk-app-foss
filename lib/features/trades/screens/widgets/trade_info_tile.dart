@@ -40,6 +40,7 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
+        initOnce: true,
         builder: (context, model, child) {
           return Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),

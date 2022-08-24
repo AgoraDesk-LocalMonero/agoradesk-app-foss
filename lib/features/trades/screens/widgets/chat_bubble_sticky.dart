@@ -28,7 +28,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   @override
   Widget build(BuildContext context) {
     if (model.messageHasFocus) {
-      return const SizedBox();
+      return const SizedBox(height: 8);
     }
 
     return Container(
@@ -38,6 +38,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
         child: ViewModelBuilder<TradeViewModel>(
             model: model,
             disposable: false,
+            initOnce: true,
             builder: (context, model, child) {
               if (model.isLocalTrade) {
                 return Padding(

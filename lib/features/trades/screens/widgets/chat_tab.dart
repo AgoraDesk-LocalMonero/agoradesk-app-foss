@@ -27,6 +27,7 @@ class ChatTab extends StatelessWidget {
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
+        initOnce: true,
         builder: (context, model, child) {
           return LayoutBuilder(builder: (context, constraints) {
             return Stack(
