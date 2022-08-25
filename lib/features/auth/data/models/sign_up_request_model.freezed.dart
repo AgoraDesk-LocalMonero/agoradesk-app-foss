@@ -26,6 +26,8 @@ class _$SignUpRequestModelTearOff {
       {String? username,
       @JsonKey(includeIfNull: false)
           String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false)
+          String? frontType,
       String? password,
       @JsonKey(includeIfNull: false)
           String? otp,
@@ -40,6 +42,7 @@ class _$SignUpRequestModelTearOff {
     return _SignUpRequestModel(
       username: username,
       email: email,
+      frontType: frontType,
       password: password,
       otp: otp,
       captcha: captcha,
@@ -62,6 +65,8 @@ mixin _$SignUpRequestModel {
   String? get username => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get email => throw _privateConstructorUsedError;
+  @JsonKey(name: 'front_type', includeIfNull: false)
+  String? get frontType => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get otp => throw _privateConstructorUsedError;
@@ -89,6 +94,8 @@ abstract class $SignUpRequestModelCopyWith<$Res> {
       {String? username,
       @JsonKey(includeIfNull: false)
           String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false)
+          String? frontType,
       String? password,
       @JsonKey(includeIfNull: false)
           String? otp,
@@ -115,6 +122,7 @@ class _$SignUpRequestModelCopyWithImpl<$Res>
   $Res call({
     Object? username = freezed,
     Object? email = freezed,
+    Object? frontType = freezed,
     Object? password = freezed,
     Object? otp = freezed,
     Object? captcha = freezed,
@@ -130,6 +138,10 @@ class _$SignUpRequestModelCopyWithImpl<$Res>
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      frontType: frontType == freezed
+          ? _value.frontType
+          : frontType // ignore: cast_nullable_to_non_nullable
               as String?,
       password: password == freezed
           ? _value.password
@@ -170,6 +182,8 @@ abstract class _$SignUpRequestModelCopyWith<$Res>
       {String? username,
       @JsonKey(includeIfNull: false)
           String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false)
+          String? frontType,
       String? password,
       @JsonKey(includeIfNull: false)
           String? otp,
@@ -198,6 +212,7 @@ class __$SignUpRequestModelCopyWithImpl<$Res>
   $Res call({
     Object? username = freezed,
     Object? email = freezed,
+    Object? frontType = freezed,
     Object? password = freezed,
     Object? otp = freezed,
     Object? captcha = freezed,
@@ -213,6 +228,10 @@ class __$SignUpRequestModelCopyWithImpl<$Res>
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      frontType: frontType == freezed
+          ? _value.frontType
+          : frontType // ignore: cast_nullable_to_non_nullable
               as String?,
       password: password == freezed
           ? _value.password
@@ -249,6 +268,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
   const _$_SignUpRequestModel(
       {this.username,
       @JsonKey(includeIfNull: false) this.email,
+      @JsonKey(name: 'front_type', includeIfNull: false) this.frontType,
       this.password,
       @JsonKey(includeIfNull: false) this.otp,
       @JsonKey(includeIfNull: false) this.captcha,
@@ -264,6 +284,9 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
   @override
   @JsonKey(includeIfNull: false)
   final String? email;
+  @override
+  @JsonKey(name: 'front_type', includeIfNull: false)
+  final String? frontType;
   @override
   final String? password;
   @override
@@ -284,7 +307,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
 
   @override
   String toString() {
-    return 'SignUpRequestModel(username: $username, email: $email, password: $password, otp: $otp, captcha: $captcha, captchaCookie: $captchaCookie, referralCode: $referralCode, couponCode: $couponCode)';
+    return 'SignUpRequestModel(username: $username, email: $email, frontType: $frontType, password: $password, otp: $otp, captcha: $captcha, captchaCookie: $captchaCookie, referralCode: $referralCode, couponCode: $couponCode)';
   }
 
   @override
@@ -294,6 +317,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
             other is _SignUpRequestModel &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.frontType, frontType) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.otp, otp) &&
             const DeepCollectionEquality().equals(other.captcha, captcha) &&
@@ -310,6 +334,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
       runtimeType,
       const DeepCollectionEquality().hash(username),
       const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(frontType),
       const DeepCollectionEquality().hash(password),
       const DeepCollectionEquality().hash(otp),
       const DeepCollectionEquality().hash(captcha),
@@ -333,6 +358,8 @@ abstract class _SignUpRequestModel implements SignUpRequestModel {
       {String? username,
       @JsonKey(includeIfNull: false)
           String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false)
+          String? frontType,
       String? password,
       @JsonKey(includeIfNull: false)
           String? otp,
@@ -353,6 +380,9 @@ abstract class _SignUpRequestModel implements SignUpRequestModel {
   @override
   @JsonKey(includeIfNull: false)
   String? get email;
+  @override
+  @JsonKey(name: 'front_type', includeIfNull: false)
+  String? get frontType;
   @override
   String? get password;
   @override

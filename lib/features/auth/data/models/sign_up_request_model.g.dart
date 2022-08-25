@@ -11,6 +11,7 @@ _$_SignUpRequestModel _$$_SignUpRequestModelFromJson(
     _$_SignUpRequestModel(
       username: json['username'] as String?,
       email: json['email'] as String?,
+      frontType: json['front_type'] as String?,
       password: json['password'] as String?,
       otp: json['otp'] as String?,
       captcha: json['captcha'] as String?,
@@ -31,6 +32,7 @@ Map<String, dynamic> _$$_SignUpRequestModelToJson(
   }
 
   writeNotNull('email', instance.email);
+  writeNotNull('front_type', instance.frontType);
   val['password'] = instance.password;
   writeNotNull('otp', instance.otp);
   writeNotNull('captcha', instance.captcha);
