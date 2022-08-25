@@ -43,51 +43,43 @@ extension TradeTypeExt on TradeType {
     }
   }
 
-  String translatedForTrade(BuildContext context, bool isSeller) {
+  String translatedForTrade(BuildContext context) {
     final i18n = I18n.of(context)!;
     switch (this) {
       case TradeType.ONLINE_SELL:
-        return isSeller
-            ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_sell
-            : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy;
+        return i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_sell;
       case TradeType.ONLINE_BUY:
-        return isSeller
-            ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_sell
-            : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy;
+        return i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy;
       case TradeType.LOCAL_SELL:
-        return isSeller
-            ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_sell
-            : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_buy;
+        return i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_sell;
       case TradeType.LOCAL_BUY:
-        return isSeller
-            ? i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_sell
-            : i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_buy;
+        return i18n.coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_buy;
     }
   }
 
-  Color colorForTrade(BuildContext context, bool isSeller) {
+  Color colorForTrade(BuildContext context) {
     switch (this) {
       case TradeType.ONLINE_SELL:
-        return isSeller ? Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
+        return Theme.of(context).colorScheme.error80;
       case TradeType.ONLINE_BUY:
-        return isSeller ? Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
+        return Theme.of(context).colorScheme.custom29;
       case TradeType.LOCAL_SELL:
-        return isSeller ? Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
+        return Theme.of(context).colorScheme.error80;
       case TradeType.LOCAL_BUY:
-        return isSeller ? Theme.of(context).colorScheme.error80 : Theme.of(context).colorScheme.custom29;
+        return Theme.of(context).colorScheme.custom29;
     }
   }
 
-  Color textColorForTrade(BuildContext context, bool isSeller) {
+  Color textColorForTrade(BuildContext context) {
     switch (this) {
       case TradeType.ONLINE_SELL:
-        return isSeller ? Theme.of(context).colorScheme.error30 : Theme.of(context).colorScheme.green30;
+        return Theme.of(context).colorScheme.error30;
       case TradeType.ONLINE_BUY:
-        return isSeller ? Theme.of(context).colorScheme.error30 : Theme.of(context).colorScheme.green30;
+        return Theme.of(context).colorScheme.green30;
       case TradeType.LOCAL_SELL:
-        return isSeller ? Theme.of(context).colorScheme.error30 : Theme.of(context).colorScheme.green30;
+        return Theme.of(context).colorScheme.error30;
       case TradeType.LOCAL_BUY:
-        return isSeller ? Theme.of(context).colorScheme.error30 : Theme.of(context).colorScheme.green30;
+        return Theme.of(context).colorScheme.green30;
     }
   }
 

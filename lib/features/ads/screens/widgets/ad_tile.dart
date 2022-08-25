@@ -72,8 +72,8 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
       children: [
         HighlightBox(
           title: ad.tradeType.translatedTitle(context).capitalize(),
-          color: ad.tradeType.colorForTrade(context, true),
-          textColor: ad.tradeType.textColorForTrade(context, true),
+          color: ad.tradeType.colorForTrade(context),
+          textColor: ad.tradeType.textColorForTrade(context),
         ),
         Row(
           children: [

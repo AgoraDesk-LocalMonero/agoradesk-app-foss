@@ -36,7 +36,10 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
     const iconSize = 14.0;
 
     final isSell = trade.isSelling!;
-    final username = isSell ? trade.buyer.username : trade.seller.username;
+    final buyerStr = (trade.buyer.username ?? '') + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbbuyer})';
+    final sellerStr = (trade.seller.username ?? '') + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbseller})';
+
+    final username = isSell ? buyerStr : sellerStr;
     final trader = isSell ? trade.buyer : trade.seller;
 
     final fiatAmountStr = trade.amount + ' ' + trade.currency;
@@ -61,11 +64,9 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     HighlightBox(
-                      title: trade.advertisement.tradeType
-                          .translatedForTrade(context, trade.isSelling ?? false)
-                          .toUpperCase(),
-                      color: trade.advertisement.tradeType.colorForTrade(context, isSell),
-                      textColor: trade.advertisement.tradeType.textColorForTrade(context, isSell),
+                      title: trade.advertisement.tradeType.translatedForTrade(context).toUpperCase(),
+                      color: trade.advertisement.tradeType.colorForTrade(context),
+                      textColor: trade.advertisement.tradeType.textColorForTrade(context),
                       iconData: trade.asset.iconData(),
                     ),
                     Row(
@@ -103,7 +104,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                           ),
                           const SizedBox(width: 4),
                           Text(
-                            username ?? '',
+                            username,
                             style: context.txtBodyXSmallN90N10,
                           ),
                         ],
