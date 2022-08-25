@@ -8,7 +8,6 @@ import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
-import 'package:agoradesk/features/auth/models/user_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
@@ -43,9 +42,9 @@ class AuthService with FileUtilsMixin {
   final SecureStorage _secureStorage;
   final AppState _appState;
 
-  final BehaviorSubject<UserModel> _userController = BehaviorSubject<UserModel>();
-
-  ValueStream<UserModel> get user => _userController.stream;
+  // final BehaviorSubject<UserModel> _userController = BehaviorSubject<UserModel>();
+  //
+  // ValueStream<UserModel> get user => _userController.stream;
 
   final BehaviorSubject<AuthState> _authStateController = BehaviorSubject<AuthState>.seeded(AuthState.initial);
 
@@ -55,7 +54,7 @@ class AuthService with FileUtilsMixin {
 
   set authState(AuthState v) => _authStateController.add(v);
 
-  bool get isAuthenticated => _api.accessToken != null && user.hasValue;
+  bool get isAuthenticated => _api.accessToken != null;
 
   UserLocalSettings get userSettings => _userSettings;
 
@@ -77,35 +76,35 @@ class AuthService with FileUtilsMixin {
     //   userSettings = UserSettings();
     // }
 
-    int startTime = 0;
-    if (kDebugMode) {
-      startTime = DateTime.now().millisecondsSinceEpoch;
-    }
+    // int startTime = 0;
+    // if (kDebugMode) {
+    //   startTime = DateTime.now().millisecondsSinceEpoch;
+    // }
 
     debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
 
-    if (_api.accessToken != null) {
-      await _getUser();
-      if (_userController.hasValue) {
-        _authStateController.add(AuthState.loggedIn);
-      }
-    } else {
-      _userController.add(UserModel(id: '', email: ''));
-    }
-
-    if (kDebugMode) {
-      final ms = DateTime.now().millisecondsSinceEpoch - startTime;
-      debugPrint('[$runtimeType] initialized ($ms ms)...');
-    }
+    // if (_api.accessToken != null) {
+    //   // await _getUser();
+    //   if (_userController.hasValue) {
+    //     _authStateController.add(AuthState.loggedIn);
+    //   }
+    // } else {
+    //   _userController.add(UserModel(id: '', email: ''));
+    // }
+    //
+    // if (kDebugMode) {
+    //   final ms = DateTime.now().millisecondsSinceEpoch - startTime;
+    //   debugPrint('[$runtimeType] initialized ($ms ms)...');
+    // }
   }
 
-  void setUser(UserModel user) {
-    _userController.add(user);
-  }
+  // void setUser(UserModel user) {
+  //   _userController.add(user);
+  // }
 
   @mustCallSuper
   void dispose() {
-    _userController.close();
+    // _userController.close();
     _authStateController.close();
   }
 
@@ -357,28 +356,28 @@ class AuthService with FileUtilsMixin {
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
     _authStateController.add(AuthState.loggedOut);
-    _userController.add(UserModel(id: '', email: ''));
+    // _userController.add(UserModel(id: '', email: ''));
     _api.accessToken = null;
     return true;
   }
 
-  ///
-  /// Get current authenticated user
-  ///
-  Future<void> _getUser() async {
-    debugPrint('[$runtimeType] load user...');
-    try {
-      // final resp = await _api.client.get<Map>('/user');
-      // if (!resp.data!.containsKey('id')) {
-      //   throw Exception('Bad Response');
-      // }
-      _userController.add(UserModel(id: 'id', email: 'email'));
-      debugPrint('[$runtimeType] $user');
-    } catch (e, stacktrace) {
-      debugPrint('[$runtimeType] Error 12: $e');
-      debugPrintStack(stackTrace: stacktrace);
-    }
-  }
+  // ///
+  // /// Get current authenticated user
+  // ///
+  // Future<void> _getUser() async {
+  //   debugPrint('[$runtimeType] load user...');
+  //   try {
+  //     // final resp = await _api.client.get<Map>('/user');
+  //     // if (!resp.data!.containsKey('id')) {
+  //     //   throw Exception('Bad Response');
+  //     // }
+  //     _userController.add(UserModel(id: 'id', email: 'email'));
+  //     debugPrint('[$runtimeType] $user');
+  //   } catch (e, stacktrace) {
+  //     debugPrint('[$runtimeType] Error 12: $e');
+  //     debugPrintStack(stackTrace: stacktrace);
+  //   }
+  // }
 
   void _saveUserName(String username) {
     _userSettings.username = username;
@@ -389,9 +388,9 @@ class AuthService with FileUtilsMixin {
     try {
       if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
         _setToken(resp.data!['data']['token']);
-        await _getUser();
+        // await _getUser();
 
-        if (_userController.hasValue && _api.accessToken != null) {
+        if (_api.accessToken != null) {
           showPinSetUp = true;
           _authStateController.add(AuthState.loggedIn);
         }

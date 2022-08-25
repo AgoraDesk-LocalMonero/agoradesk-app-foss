@@ -330,11 +330,11 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void _initAuthHandler() {
     _authService.onAuthStateChange.listen((authState) {
       debugPrint('++++[$runtimeType] AuthState: $authState');
-      final user = _authService.user.valueOrNull;
-      if (user?.id != null) {
-        // _mixpanel.identify(user!.id!);
-        // user.precache(context);
-      }
+      // final user = _authService.user.valueOrNull;
+      // if (user?.id != null) {
+      //   // _mixpanel.identify(user!.id!);
+      //   // user.precache(context);
+      // }
       // handle login & logout
       switch (authState) {
         case AuthState.loggedOut:
@@ -600,7 +600,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         Provider.value(value: _placesSearch),
         Provider.value(value: _notificationsService),
         ChangeNotifierProvider.value(value: appState),
-        StreamProvider.value(value: _authService.user, initialData: null),
+        // StreamProvider.value(value: _authService.user, initialData: null),
       ];
 
   @override
