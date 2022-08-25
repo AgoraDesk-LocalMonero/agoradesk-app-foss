@@ -1,6 +1,9 @@
 {
   "es": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",
@@ -63,6 +66,9 @@
 
   "it": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",
@@ -125,6 +131,9 @@
 
   "ko": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",
@@ -258,10 +267,13 @@
     "feedback_title",
     "active_ads",
     "you_sell",
+    "you_buy",
     "you_receive",
+    "you_pay",
     "export_csv",
     "copy",
     "sell_via",
+    "buy_via",
     "sell_to",
     "buy_from",
     "must_be_at_least",
@@ -521,6 +533,9 @@
 
   "pt": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",
@@ -583,6 +598,9 @@
 
   "ru": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",
@@ -645,6 +663,9 @@
 
   "zh": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",
@@ -707,6 +728,9 @@
 
   "zh_TW": [
     "no_feedbacks",
+    "you_buy",
+    "you_pay",
+    "buy_via",
     "must_be_less",
     "paying",
     "api_error_49",

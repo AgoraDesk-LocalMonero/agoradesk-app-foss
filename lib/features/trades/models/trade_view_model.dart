@@ -558,7 +558,15 @@ class TradeViewModel extends BaseViewModel
   }
 
   String tradeInfoTitle(BuildContext context) {
+    if (tradeForScreen.isSelling!) {
     return context.intl.sell_via(
+        tradeForScreen.asset.title(),
+        getPaymentMethodName(
+          context,
+          tradeForScreen.advertisement.paymentMethod ?? '',
+          tradeForScreen.advertisement.tradeType,
+        ));}
+    return context.intl.buy_via(
         tradeForScreen.asset.title(),
         getPaymentMethodName(
           context,

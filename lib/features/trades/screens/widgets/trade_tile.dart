@@ -38,12 +38,15 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
     final isSell = trade.isSelling!;
     final username = isSell ? trade.buyer.username : trade.seller.username;
     final trader = isSell ? trade.buyer : trade.seller;
-    final youReceiveStr = isSell ? trade.amount + ' ' + trade.currency : trade.assetAmount + ' ' + trade.asset.title();
-    final youSellStr = isSell ?   trade.assetAmount + ' ' + trade.asset.title() : trade.amount + ' ' + trade.currency;
 
+    final fiatAmountStr = trade.amount + ' ' + trade.currency;
+    final fiatTitleStr = isSell ? context.intl.you_receive + ':' : context.intl.you_pay + ':';
+
+    final assetTitleStr = isSell ? context.intl.you_sell + ':' : context.intl.you_buy + ':';
+    final assetAmountStr = trade.assetAmount + ' ' + trade.asset.title();
 
     final adId = trade.advertisement.id != null ? trade.advertisement.id!.substring(0, 8) : context.intl.app_ad_deleted;
-    print('++++++++++++++++++++++++++++++11 -- ${trade.isSelling} - ${trade.advertisement.tradeType}');
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
       child: GestureDetector(
@@ -181,12 +184,12 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              context.intl.you_sell + ':',
+                              assetTitleStr,
                               style: context.txtBodyXSmallN90N10,
                             ),
                             const SizedBox(height: 10),
                             Text(
-                              youSellStr,
+                              assetAmountStr,
                               style: context.txtLabelMediumN90N10,
                             ),
                           ],
@@ -195,12 +198,12 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
-                              context.intl.you_receive + ':',
+                              fiatTitleStr,
                               style: context.txtBodyXSmallN90N10,
                             ),
                             const SizedBox(height: 6),
                             Text(
-                              youReceiveStr,
+                              fiatAmountStr,
                               style: context.txtLabelMediumN90N10,
                             ),
                           ],

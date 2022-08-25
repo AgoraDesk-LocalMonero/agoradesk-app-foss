@@ -7130,7 +7130,13 @@ class I18nKo extends I18n {
   String get you_sell => '당신은 판매';
 
   @override
+  String get you_buy => 'You buy';
+
+  @override
   String get you_receive => '당신은 받는다';
+
+  @override
+  String get you_pay => 'You pay';
 
   @override
   String get export_csv => 'CSV 내보내기';
@@ -7141,6 +7147,11 @@ class I18nKo extends I18n {
   @override
   String sell_via(Object asset, Object provider) {
     return ' $provider을(를) 통해 $asset 판매';
+  }
+
+  @override
+  String buy_via(Object asset, Object provider) {
+    return 'Buy $asset via $provider';
   }
 
   @override

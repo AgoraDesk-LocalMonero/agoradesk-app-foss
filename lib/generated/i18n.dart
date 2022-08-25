@@ -14039,11 +14039,23 @@ abstract class I18n {
   /// **'You sell'**
   String get you_sell;
 
+  /// No description provided for @you_buy.
+  ///
+  /// In en, this message translates to:
+  /// **'You buy'**
+  String get you_buy;
+
   /// No description provided for @you_receive.
   ///
   /// In en, this message translates to:
   /// **'You receive'**
   String get you_receive;
+
+  /// No description provided for @you_pay.
+  ///
+  /// In en, this message translates to:
+  /// **'You pay'**
+  String get you_pay;
 
   /// No description provided for @export_csv.
   ///
@@ -14062,6 +14074,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Sell {asset} via {provider}'**
   String sell_via(Object asset, Object provider);
+
+  /// No description provided for @buy_via.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy {asset} via {provider}'**
+  String buy_via(Object asset, Object provider);
 
   /// No description provided for @sell_to.
   ///

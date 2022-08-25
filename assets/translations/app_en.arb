@@ -2730,11 +2730,20 @@
         },
       "active_ads": "Active ads",
       "you_sell": "You sell",
+      "you_buy": "You buy",
       "you_receive": "You receive",
+      "you_pay": "You pay",
       "export_csv": "Export CSV",
       "copy": "Copy",
       "sell_via": "Sell {asset} via {provider}",
       "@sell_via": {
+        "placeholders": {
+          "asset": {},
+          "provider": {}
+        }
+      },
+      "buy_via": "Buy {asset} via {provider}",
+      "@buy_via": {
         "placeholders": {
           "asset": {},
           "provider": {}

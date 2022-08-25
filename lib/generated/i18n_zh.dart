@@ -7130,7 +7130,13 @@ class I18nZh extends I18n {
   String get you_sell => '你卖';
 
   @override
+  String get you_buy => 'You buy';
+
+  @override
   String get you_receive => '你收到';
+
+  @override
+  String get you_pay => 'You pay';
 
   @override
   String get export_csv => '导出CSV';
@@ -7141,6 +7147,11 @@ class I18nZh extends I18n {
   @override
   String sell_via(Object asset, Object provider) {
     return '通过 $provider销售 $asset ';
+  }
+
+  @override
+  String buy_via(Object asset, Object provider) {
+    return 'Buy $asset via $provider';
   }
 
   @override

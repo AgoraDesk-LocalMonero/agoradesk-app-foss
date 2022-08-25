@@ -7130,7 +7130,13 @@ class I18nEs extends I18n {
   String get you_sell => 'Usted vende';
 
   @override
+  String get you_buy => 'You buy';
+
+  @override
   String get you_receive => 'Usted recibe';
+
+  @override
+  String get you_pay => 'You pay';
 
   @override
   String get export_csv => 'Exportar CSV';
@@ -7141,6 +7147,11 @@ class I18nEs extends I18n {
   @override
   String sell_via(Object asset, Object provider) {
     return 'Vende $asset a través de $provider';
+  }
+
+  @override
+  String buy_via(Object asset, Object provider) {
+    return 'Buy $asset via $provider';
   }
 
   @override
