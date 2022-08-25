@@ -136,7 +136,7 @@ class SignUpViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin
         }
         return false;
       }
-      return true;
+      return res.right;
     }
     return false;
   }
