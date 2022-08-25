@@ -116,7 +116,7 @@ class TraderProfileScreen extends StatelessWidget {
                                                   username: model.profileForScreen.username!,
                                                 )),
                                                 title: context.intl.app_trades_with(model.profileForScreen.username!),
-                                                style: context.txtLabelLargePrimary80,
+                                                style: context.txtLabelLargeP80P70,
                                               ),
                                             )
                                           ],

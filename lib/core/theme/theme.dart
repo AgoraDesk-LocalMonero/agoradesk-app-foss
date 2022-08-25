@@ -127,7 +127,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtLabelSmallP80 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
-        color: Theme.of(this).colorScheme.primary80,
+        color: Theme.of(this).colorScheme.p80P70,
       );
 
   TextStyle get txtLabelSmallPrimary95 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
@@ -194,16 +194,19 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.primary70,
       );
 
-  TextStyle get txtLabelLargePrimary10 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
-        color: Theme.of(this).colorScheme.primary10,
+  TextStyle get txtLabelLargeP90P10 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
+        color: Theme.of(this).colorScheme.p90P10,
       );
 
   TextStyle get txtLabelLargePrimary20 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.primary20,
       );
 
-  TextStyle get txtLabelLargePrimary80 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
-        color: Theme.of(this).colorScheme.primary80,
+  TextStyle get txtLabelLargeP80P70 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
+        color: Theme.of(this).colorScheme.p80P70,
+      );
+  TextStyle get txtLabelLargeP80P40 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
+        color: Theme.of(this).colorScheme.p80P40,
       );
 
   TextStyle get txtLabelLargePrimary90 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
@@ -449,7 +452,7 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colPrimary70 => Theme.of(this).colorScheme.primary70;
 
-  Color get colPrimary80 => Theme.of(this).colorScheme.primary80;
+  Color get colPrimary80 => Theme.of(this).colorScheme.p80P70;
 
   Color get colPrimary90 => Theme.of(this).colorScheme.primary90;
 
@@ -467,9 +470,9 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colSurface4 => Theme.of(this).colorScheme.surface4;
 
-  Color get colSurface5 => Theme.of(this).colorScheme.surf5darkSurfLight;
+  Color get colSurf5darkSurfLight => Theme.of(this).colorScheme.surf5darkSurfLight;
 
-  Color get colTonal => Theme.of(this).colorScheme.tonal;
+  Color get colTonal => Theme.of(this).colorScheme.tonalP90;
 
   Color get colChatQuote => Theme.of(this).colorScheme.chatQuote;
 

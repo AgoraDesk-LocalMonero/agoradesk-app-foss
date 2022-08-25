@@ -50,7 +50,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
                         TextButton(
                           child: Text(
                             context.intl.skip,
-                            style: context.txtLabelLargePrimary80,
+                            style: context.txtLabelLargeP80P70,
                           ),
                           onPressed: () => AutoRouter.of(context).push(LoginRoute()),
                         ),

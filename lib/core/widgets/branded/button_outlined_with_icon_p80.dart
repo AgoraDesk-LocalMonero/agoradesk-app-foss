@@ -39,7 +39,7 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
           side: BorderSide(
             width: 1,
-            color: borderColor ?? Theme.of(context).colorScheme.primary80,
+            color: borderColor ?? Theme.of(context).colorScheme.p80P70,
           ),
         ),
       ),
@@ -56,7 +56,7 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
           AutoSizeText(
             title,
             maxLines: 1,
-            style: style ?? context.txtLabelLargePrimary80.copyWith(height: 1),
+            style: style ?? context.txtLabelLargeP80P70.copyWith(height: 1),
           ),
         ],
       ),

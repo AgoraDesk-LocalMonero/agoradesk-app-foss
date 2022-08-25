@@ -33,7 +33,7 @@ class CouponTile extends StatelessWidget with DateMixin {
           borderRadius: const BorderRadius.all(
             Radius.circular(12),
           ),
-          color: isActive ? context.colSurface5 : context.colSurface3,
+          color: isActive ? context.colSurf5darkSurfLight : context.colSurface3,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -50,13 +50,13 @@ class CouponTile extends StatelessWidget with DateMixin {
                         borderRadius: const BorderRadius.all(
                           Radius.circular(4),
                         ),
-                        color: isActive ? context.colHighlight : context.colSurface5,
+                        color: isActive ? context.colHighlight : context.colSurf5darkSurfLight,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
                         child: Text(
                           coupon.code,
-                          style: isActive ? context.txtLabelLargePrimary10 : context.txtLabelLargeNeutral60,
+                          style: isActive ? context.txtLabelLargeP90P10 : context.txtLabelLargeNeutral60,
                         ),
                       ),
                     ),

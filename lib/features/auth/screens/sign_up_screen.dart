@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                             TextButton(
                                               child: Text(
                                                 context.intl.skip,
-                                                style: context.txtLabelLargePrimary80,
+                                                style: context.txtLabelLargeP80P70,
                                               ),
                                               onPressed: model.guestModeOn,
                                             ),

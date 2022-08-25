@@ -19,7 +19,6 @@ import 'package:agoradesk/features/wallet/screens/widgets/incoming_deposit_tile.
 import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_button.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/transaction_tile.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/wallet_blue_button.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
@@ -72,7 +71,7 @@ class WalletScreen extends StatelessWidget {
                                       : const SizedBox(),
                                   _buildIncomingDeposits(context, model),
                                   Text(
-                                    I18n.of(context)!.recent_transactions,
+                                    context.intl.recent_transactions,
                                     style: context.txtBodySmallN50,
                                   ),
                                   const SizedBox(height: 8),
@@ -83,8 +82,8 @@ class WalletScreen extends StatelessWidget {
                                             style: TextButton.styleFrom(
                                                 padding: const EdgeInsets.fromLTRB(10, 12, 10, 12)),
                                             child: Text(
-                                              I18n.of(context)!.view_all_transactions,
-                                              style: context.txtLabelLargePrimary80,
+                                              context.intl.view_all_transactions,
+                                              style: context.txtLabelLargeP80P40,
                                             ),
                                             onPressed: () => context.pushRoute(TransactionsRoute(
                                               transactions: model.transactions,
@@ -130,13 +129,13 @@ class WalletScreen extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
                               child: Text(
-                                '${asset.title()} ${I18n.of(context)!.faq250Sbanswer8722Sb138722Sbwallet}',
-                                style: context.txtLabelLargePrimary10,
+                                '${asset.title()} ${context.intl.faq250Sbanswer8722Sb138722Sbwallet}',
+                                style: context.txtLabelLargeP90P10,
                               ),
                             ),
                             Text(
                               model.walletBalance(asset),
-                              style: context.txtLabelLargePrimary10,
+                              style: context.txtLabelLargeP90P10,
                             ),
                           ],
                         ),
@@ -171,7 +170,7 @@ class WalletScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   WalletBlueButton(
-                    title: I18n.of(context)!.wallet250Sbtab250Sbsend8722Sbshort,
+                    title: context.intl.wallet250Sbtab250Sbsend8722Sbshort,
                     iconData: AgoraFont.arrow_up_circle,
                     onPressed: () => context.pushRoute(
                       SendAssetFirstRoute(
@@ -183,7 +182,7 @@ class WalletScreen extends StatelessWidget {
                   ),
                   const SizedBox(width: 12),
                   WalletBlueButton(
-                    title: I18n.of(context)!.wallet250Sbtab250Sbreceive8722Sbshort,
+                    title: context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
                     iconData: AgoraFont.arrow_down_circle,
                     onPressed: () => context.pushRoute(
                       ReceiveAssetRoute(
@@ -193,7 +192,7 @@ class WalletScreen extends StatelessWidget {
                     ),
                   ),
                   // WalletBlueButton(
-                  //   title: I18n.of(context)!.convert,
+                  //   title: context.intl.convert,
                   //   iconData: AgoraFont.synchronize,
                   //   onPressed: () {},
                   // ),
@@ -231,7 +230,7 @@ class WalletScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                I18n.of(context)!.wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle,
+                context.intl.wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle,
                 style: context.txtBodySmallN50,
               ),
               const SizedBox(height: 8),
@@ -267,7 +266,7 @@ class _PopupMenu extends StatelessWidget with UrlMixin {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(I18n.of(context)!.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
+          child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
           onTap: () => openLink(GetIt.I<AppParameters>().urlGuides),
           value: 1,
         ),

@@ -49,7 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                   TextButton(
                     child: Text(
                       context.intl.skip,
-                      style: context.txtLabelLargePrimary80,
+                      style: context.txtLabelLargeP80P70,
                     ),
                     onPressed: () => AutoRouter.of(context).push(LoginRoute()),
                   ),
@@ -83,7 +83,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                     const SizedBox(height: 8),
                     ButtonFilledInactiveSurface2(
                       title: context.intl.i_want_to_sell,
-                      buttonColor: Theme.of(context).colorScheme.tonal,
+                      buttonColor: Theme.of(context).colorScheme.tonalP90,
                       textColor: Theme.of(context).colorScheme.primary90,
                       onPressed: () => AutoRouter.of(context).push(
                         WelcomeSlidesRoute(isBuy: false),

@@ -86,7 +86,7 @@ class ChatTab extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              color: context.colSurface5,
+              color: context.colSurf5darkSurfLight,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 12, 0, 20),
                 child: Column(

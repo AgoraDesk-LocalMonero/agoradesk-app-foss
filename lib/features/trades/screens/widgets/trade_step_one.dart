@@ -102,7 +102,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                                       // insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                                       icon: Icon(
                                         AgoraFont.x_circle,
-                                        color: Theme.of(context).colorScheme.primary80,
+                                        color: Theme.of(context).colorScheme.p80P70,
                                       ),
                                       onPressed: () => _cancelTradeSellerDialog(context, model),
                                     )
@@ -191,7 +191,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                             title: context.intl.trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle,
                             icon: Icon(
                               AgoraFont.check_circle_alt,
-                              color: Theme.of(context).colorScheme.primary80,
+                              color: Theme.of(context).colorScheme.p80P70,
                             ),
                             opened: false,
                             content: SelectableText(
@@ -206,7 +206,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                             title: context.intl.trade250Sbpayment8722Sbdetails,
                             icon: Icon(
                               AgoraFont.check_circle_alt,
-                              color: Theme.of(context).colorScheme.primary80,
+                              color: Theme.of(context).colorScheme.p80P70,
                             ),
                             opened: false,
                             content: SelectableText(

@@ -144,7 +144,7 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
                             title: context.intl.trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle,
                             icon: Icon(
                               AgoraFont.check_circle_alt,
-                              color: Theme.of(context).colorScheme.primary80,
+                              color: Theme.of(context).colorScheme.p80P70,
                             ),
                             opened: false,
                             content: SelectableText(
@@ -159,7 +159,7 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
                             title: context.intl.trade250Sbpayment8722Sbdetails,
                             icon: Icon(
                               AgoraFont.check_circle_alt,
-                              color: Theme.of(context).colorScheme.primary80,
+                              color: Theme.of(context).colorScheme.p80P70,
                             ),
                             opened: false,
                             content: SelectableText(

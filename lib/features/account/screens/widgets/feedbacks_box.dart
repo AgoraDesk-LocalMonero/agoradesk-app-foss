@@ -97,7 +97,7 @@ class FeedbacksBox extends StatelessWidget {
                 ),
               ),
               title: I18n.of(context)!.see_more_feedback,
-              style: context.txtLabelLargePrimary80,
+              style: context.txtLabelLargeP80P70,
             ),
           )
         : const SizedBox();

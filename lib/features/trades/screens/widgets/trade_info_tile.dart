@@ -60,7 +60,7 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                           children: [
                             Row(
                               children: [
-                                model.tradeForScreen.asset.icon(Theme.of(context).colorScheme.primary80),
+                                model.tradeForScreen.asset.icon(Theme.of(context).colorScheme.p80P70),
                                 const SizedBox(width: 10),
                                 AutoSizeText(
                                   model.tradeInfoTitle(context),

@@ -57,21 +57,19 @@ extension ColorExtension on ColorScheme {
 
   Color get surf5darkSurfLight => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surfaceLight;
 
-  Color get primary10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
-
   Color get primary20 => brightness == Brightness.dark ? ThemeColors.primary20Dark : ThemeColors.primary20Light;
 
   Color get primary40 => brightness == Brightness.dark ? ThemeColors.primary40 : ThemeColors.primary40;
 
   Color get primary70 => ThemeColors.primary70;
 
-  Color get primary80 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70Light;
+  Color get p80P70 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70Light;
 
   Color get primary90 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
 
   Color get primary95 => brightness == Brightness.dark ? ThemeColors.primary95Dark : ThemeColors.primary95Light;
 
-  Color get tonal => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90Light;
+  Color get tonalP90 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90Light;
 
   Color get yellow85 => brightness == Brightness.dark ? const Color(0xffFFC970) : const Color(0xffFFC970);
 

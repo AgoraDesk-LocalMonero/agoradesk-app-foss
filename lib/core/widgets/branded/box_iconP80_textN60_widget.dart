@@ -31,7 +31,7 @@ class BoxIconP80TextN60Widget extends StatelessWidget {
                   Center(
                     child: Icon(
                       iconData,
-                      color: Theme.of(context).colorScheme.primary80,
+                      color: Theme.of(context).colorScheme.p80P70,
                       size: 10,
                     ),
                   ),

@@ -53,7 +53,7 @@ class _AgoraBoxOpenCloseLineSurface2State extends State<AgoraBoxOpenCloseLineSur
                         Icon(
                           widget.iconData,
                           size: 22,
-                          color: Theme.of(context).colorScheme.primary80,
+                          color: Theme.of(context).colorScheme.p80P70,
                         ),
                         const SizedBox(width: 10),
                         AutoSizeText(
