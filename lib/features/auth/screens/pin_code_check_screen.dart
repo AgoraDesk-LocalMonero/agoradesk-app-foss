@@ -57,8 +57,8 @@ class PinCodeCheckScreen extends StatelessWidget {
                           ),
                           emptyIndicatorColor: Theme.of(context).colorScheme.neutral30,
                           filledIndicatorColor: Theme.of(context).colorScheme.primary90,
-                          buttonColor: Theme.of(context).colorScheme.surface5,
-                          deleteIconColor: Theme.of(context).colorScheme.surface5,
+                          buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
+                          deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteButtonColor: Theme.of(context).colorScheme.primary90,
                           onFullPin: (pin, _) {
                             if (model.checkPinCorrectness(pin)) {

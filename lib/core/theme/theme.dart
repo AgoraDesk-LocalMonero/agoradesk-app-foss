@@ -467,7 +467,7 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colSurface4 => Theme.of(this).colorScheme.surface4;
 
-  Color get colSurface5 => Theme.of(this).colorScheme.surface5;
+  Color get colSurface5 => Theme.of(this).colorScheme.surf5darkSurfLight;
 
   Color get colTonal => Theme.of(this).colorScheme.tonal;
 
@@ -491,6 +491,7 @@ extension ThemeShorcuts on BuildContext {
   Color get colN90N10 => Theme.of(this).colorScheme.n90N10;
 
   Color get colN30Pri80 => Theme.of(this).colorScheme.n30P80;
+  Color get colN30Pri90 => Theme.of(this).colorScheme.n30P90;
 
   Color get colSecContainerWhite => Theme.of(this).colorScheme.secContainerWhite;
 
@@ -506,6 +507,7 @@ extension ThemeShorcuts on BuildContext {
   Color get colSurf4Surf1 => Theme.of(this).colorScheme.surf4Surf1;
   Color get colSurf5Surf4 => Theme.of(this).colorScheme.surf5Surf4;
   Color get colSurf2Surf5 => Theme.of(this).colorScheme.surf5Surf4;
+  Color get colSurf3Surf1Light => Theme.of(this).colorScheme.surf3Surf1Light;
 
   Color get colChatRedError80 => Theme.of(this).colorScheme.chatRedError80;
 

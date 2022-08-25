@@ -1,29 +1,30 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 
-class ContainerSurface3Radius12Border1 extends StatelessWidget {
-  const ContainerSurface3Radius12Border1({
+class ContainerSurface5Radius12Shadow extends StatelessWidget {
+  const ContainerSurface5Radius12Shadow({
     Key? key,
     required this.child,
-    this.stretchWidth = true,
   }) : super(key: key);
 
   final Widget child;
-  final bool stretchWidth;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: stretchWidth ? double.infinity : null,
+      width: double.infinity,
       decoration: BoxDecoration(
-        border: Border.all(
-          width: 1,
-          color: context.colN30Pri80.withOpacity(0.5),
-        ),
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
-        color: context.colSurf3Surf1Light,
+        color: Theme.of(context).colorScheme.surf5darkSurfLight,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 4,
+            offset: const Offset(0, 3),
+          ),
+        ],
       ),
       child: child,
     );
