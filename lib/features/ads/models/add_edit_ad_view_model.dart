@@ -324,6 +324,7 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
     if (resBtc.isRight && resXmr.isRight) {
       _balanceBtc = resBtc.right.balance;
       _balanceXmr = resXmr.right.balance;
+      _checkTradeTypesForPossibility();
     } else {
       handleApiError(resBtc.left, context);
     }

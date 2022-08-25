@@ -13,8 +13,8 @@ import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart'
 import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:google_api_availability/google_api_availability.dart';
 import 'package:provider/src/provider.dart';
 
 class AccountScreen extends StatelessWidget with ClipboardMixin {
@@ -169,9 +169,18 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onTap: () => copyToClipboard(model.appVersionStr, context),
                             onDoubleTap: () async {
                               // final token = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
-                              final GooglePlayServicesAvailability gPlayState =
-                                  await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
-                              copyToClipboard(gPlayState.toString(), context);
+
+                              // final GooglePlayServicesAvailability gPlayState =
+                              //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
+                              // copyToClipboard(gPlayState.toString(), context);
+
+                              late final String res;
+                              try {
+                                res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
+                              } catch (e) {
+                                res = e.toString();
+                              }
+                              copyToClipboard(res, context);
                               eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
                             },
                             child: Padding(
