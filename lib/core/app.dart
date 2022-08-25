@@ -50,7 +50,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
-import 'package:new_version/new_version.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:plausible_analytics/plausible_analytics.dart';
@@ -252,8 +251,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
     _notificationsService.startListenAwesomeNotificationsPressed();
-    _checkNewVersion();
-    // eventBus.fire(const AfterAppInitEvent());
   }
 
   Future<void> _afterConfigInit() async {}
@@ -300,30 +297,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     PackageInfo.fromPlatform().then(
       (info) => _api.userAgent = '${info.appName}/${info.version}+${info.buildNumber}',
     );
-  }
-
-  Future<void> _checkNewVersion({
-    Duration delay = const Duration(milliseconds: 2000),
-  }) async {
-    if (kDebugMode) {
-      return;
-    }
-    await Future.delayed(delay);
-    final newVersion = NewVersion(
-      iOSId: GetIt.I<AppParameters>().packageName,
-      androidId: GetIt.I<AppParameters>().packageName,
-    );
-    final context = router.navigatorKey.currentContext;
-    if (context != null) {
-      final versionStatus = await newVersion.getVersionStatus();
-      if (versionStatus != null && versionStatus.canUpdate) {
-        newVersion.showUpdateDialog(
-          context: context,
-          versionStatus: versionStatus,
-          // allowDismissal: false,
-        );
-      }
-    }
   }
 
   ///

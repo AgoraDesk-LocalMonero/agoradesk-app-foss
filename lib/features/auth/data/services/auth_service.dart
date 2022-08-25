@@ -252,9 +252,13 @@ class AuthService with FileUtilsMixin {
           headers: cookie,
         ),
       );
-      await _handleTokenResponse(resp);
-      _saveUserName(request.username!);
-      return const Either.right(true);
+      final resToken = await _handleTokenResponse(resp);
+      if (resToken) {
+        _saveUserName(request.username!);
+        return const Either.right(true);
+      } else {
+        return const Either.right(false);
+      }
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
@@ -279,9 +283,13 @@ class AuthService with FileUtilsMixin {
           headers: cookie,
         ),
       );
-      await _handleTokenResponse(resp);
-      _saveUserName(request.username!);
-      return const Either.right(true);
+      final resToken = await _handleTokenResponse(resp);
+      if (resToken) {
+        _saveUserName(request.username!);
+        return const Either.right(true);
+      } else {
+        return const Either.right(false);
+      }
     } catch (e) {
       final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
@@ -379,7 +387,7 @@ class AuthService with FileUtilsMixin {
 
   Future<bool> _handleTokenResponse(Response<Map> resp) async {
     try {
-      if ((resp.statusCode ?? 0) ~/ 100 == 2 && resp.data!['data'].containsKey('token')) {
+      if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
         _setToken(resp.data!['data']['token']);
         await _getUser();
 
@@ -387,7 +395,6 @@ class AuthService with FileUtilsMixin {
           showPinSetUp = true;
           _authStateController.add(AuthState.loggedIn);
         }
-
         return true;
       }
     } catch (e) {

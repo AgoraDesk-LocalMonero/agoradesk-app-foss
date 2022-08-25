@@ -7356,6 +7356,534 @@ class I18nPt extends I18n {
   String get api_error_4001 => 'Tempo limite de conexão, favor verificar a conexão com a Internet.';
 
   @override
+  String get api_error_45 => 'You can\'t have both \'first_time_limit_asset\' and \'first_time_limit_{btc | xmr}\' in your request. Remove one of them (they are interchangeable).';
+
+  @override
+  String get api_error_46 => 'Request must contain EITHER an application/json request body with a “msg” parameter OR a multipart/form-data request body with the image file listed under the parameter “document”';
+
+  @override
+  String get api_error_47 => 'User with that username already exists';
+
+  @override
+  String get api_error_48 => 'User with that email already exists';
+
+  @override
+  String get api_error_50 => 'Attempting to send an email to a user without an email set';
+
+  @override
+  String get api_error_51 => 'Token provided for email verification is given to a user who does not exist';
+
+  @override
+  String get api_error_52 => 'Token provided for email verification is invalid';
+
+  @override
+  String get api_error_53 => 'The email in the token doesn’t match the current email in the database';
+
+  @override
+  String get api_error_54 => 'Token provided for password reset is given to a email that does not exist in the database';
+
+  @override
+  String get api_error_55 => 'Token provided for password reset is invalid';
+
+  @override
+  String get api_error_56 => 'Attempting to send a password reset email to an email that isn’t in the database';
+
+  @override
+  String get api_error_57 => 'Token provided for password reset is not a reset token';
+
+  @override
+  String get api_error_58 => 'Trying to send a password-reset email to a user with an unverified email';
+
+  @override
+  String get api_error_59 => 'Trying reset a password for a user with an unverified email';
+
+  @override
+  String get api_error_62 => 'No account exists with the username provided for the account public data request';
+
+  @override
+  String get api_error_63 => 'Attempting to upload file of a forbidden type';
+
+  @override
+  String get api_error_64 => 'Attempting to mark a non-existent notification as read';
+
+  @override
+  String get api_error_65 => 'Attempting to mark an already read notification as read';
+
+  @override
+  String get api_error_66 => 'Attempting to upload chat attachment to trade that doesn’t exist';
+
+  @override
+  String get api_error_67 => 'Attempting to send chat message to trade that doesn’t exist';
+
+  @override
+  String get api_error_68 => 'Attempting to get chat message list of trade that doesn’t exist';
+
+  @override
+  String get api_error_69 => 'Attempting to get chat message that doesn’t exist';
+
+  @override
+  String get api_error_70 => 'Attempting to get wallet address of account that doesn’t exist';
+
+  @override
+  String get api_error_71 => 'Attempting to get transactions of an account that doesn’t exist';
+
+  @override
+  String get api_error_72 => 'Attempting to withdraw funds of an account that doesn’t exist';
+
+  @override
+  String get api_error_78 => 'Attempting to make get ads with an illegal combination of parameters';
+
+  @override
+  String get api_error_79 => 'The requested ad ID doesn’t exist';
+
+  @override
+  String get api_error_80 => 'Didn’t set both lat and lon in the ad update/create request';
+
+  @override
+  String get api_error_81 => 'Didn’t set price formula when posting ad';
+
+  @override
+  String get api_error_82 => 'Trying to set lat and lon for an online ad';
+
+  @override
+  String get api_error_83 => 'Trying to set ONLINE_SELL/CALL_SELL/PUT_BUY-specific properties to a different type of ad';
+
+  @override
+  String get api_error_84 => 'Trying to set ONLINE_BUY/CALL_BUY/PUT_SELL-specific properties to a different type of ad';
+
+  @override
+  String get api_error_85 => 'Trying to set LOCAL_SELL-specific properties to a different type of ad';
+
+  @override
+  String get api_error_86 => 'Attempting to set country or payment method or currency that isn’t valid when creating/updating ad';
+
+  @override
+  String get api_error_87 => 'Trying to set a payment method that is invalid to that country when creating/updating ad';
+
+  @override
+  String get api_error_88 => 'Trying to set a currency that is invalid to that payment method when creating/updating ad';
+
+  @override
+  String get api_error_89 => 'Trying to create a LOCAL_* ad without setting lon/lat';
+
+  @override
+  String get api_error_90 => 'Trying to access trades of a user that doesn’t exist.';
+
+  @override
+  String get api_error_91 => 'Trying to access account public data using a token of a user that doesn’t exist';
+
+  @override
+  String get api_error_92 => 'Trying to get notifications for user that doesn’t exist';
+
+  @override
+  String get api_error_93 => 'Trying to get pending deposits for a user that doesn’t exist';
+
+  @override
+  String get api_error_94 => 'Trying to get feedback score for user that doesn’t exist';
+
+  @override
+  String get api_error_95 => 'Trying to get ads for user that doesn’t exist';
+
+  @override
+  String get api_error_96 => 'Non-existent user trying to create a trade';
+
+  @override
+  String get api_error_97 => 'Trying to create a trade for ad that doesn’t exist';
+
+  @override
+  String get api_error_98 => 'Trying to create a trade for an ad who’s poster doesn’t exist';
+
+  @override
+  String get api_error_99 => 'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade';
+
+  @override
+  String get api_error_100 => 'Cannot request less than 0.0000000001 XMR for trade creation';
+
+  @override
+  String get api_error_101 => 'Requested amount is less than ad’s min_amount when creating trade';
+
+  @override
+  String get api_error_102 => 'Requested amount is more than ad’s max_amount_available when creating trade';
+
+  @override
+  String get api_error_104 => 'Requesting trade for ad who’s poster is on buying vacation';
+
+  @override
+  String get api_error_106 => 'Requester of the trade doesn’t have enough balance to fund the trade request';
+
+  @override
+  String get api_error_108 => 'minAmount cannot be equal to or larger than maxAmount';
+
+  @override
+  String get api_error_109 => 'Requested amount is more than ad’s maxAmount when creating trade';
+
+  @override
+  String get api_error_110 => 'Trade requester has lower feedback score than what is required by the poster';
+
+  @override
+  String get api_error_111 => 'Requested amount is not one of the accepted amounts, see limit_to_fiat_amounts';
+
+  @override
+  String get api_error_112 => 'Can’t request a trade for an ad you posted yourself';
+
+  @override
+  String get api_error_113 => 'Can’t set paymentWindowMinutes to <15 or >90 when updating ad';
+
+  @override
+  String get api_error_114 => 'Can’t set paymentWindowMinutes to <15 or >90 when creating ad';
+
+  @override
+  String get api_error_115 => 'Trade by requested ID doesn’t exist';
+
+  @override
+  String get api_error_116 => 'User requesting trade doesn’t exist';
+
+  @override
+  String get api_error_117 => 'The currency for which the exchange rate has been requested does not exist';
+
+  @override
+  String get api_error_118 => 'User requesting funding of trade doesn’t exist';
+
+  @override
+  String get api_error_119 => 'Attempting to fund a trade that doesn’t exist';
+
+  @override
+  String get api_error_120 => 'User requesting escrow of trade doesn’t exist';
+
+  @override
+  String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
+
+  @override
+  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
+
+  @override
+  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
+
+  @override
+  String get api_error_124 => 'Error when funding a LOCAL_SELL';
+
+  @override
+  String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
+
+  @override
+  String get api_error_126 => 'Attempting to cancel a trade that doesn’t exist';
+
+  @override
+  String get api_error_127 => 'User requesting payment of trade doesn’t exist';
+
+  @override
+  String get api_error_128 => 'Attempting to mark a trade that doesn’t exist paid';
+
+  @override
+  String get api_error_129 => 'User requesting release of trade doesn’t exist';
+
+  @override
+  String get api_error_130 => 'Attempting to release a trade that doesn’t exist';
+
+  @override
+  String get api_error_131 => 'User requesting dispute of trade doesn’t exist';
+
+  @override
+  String get api_error_132 => 'Attempting to dispute a trade that doesn’t exist';
+
+  @override
+  String get api_error_133 => 'Attempting to get feedback of a user that doesn’t exist';
+
+  @override
+  String get api_error_134 => 'Attempting to create an ad when user already has the maximum allowed number of ads';
+
+  @override
+  String get api_error_135 => 'Somehow the maxAmount is set to null while trackingMaxAmount is set to true';
+
+  @override
+  String get api_error_136 => 'Attempting to post a ad with balance less than minimum required balance.';
+
+  @override
+  String get api_error_141 => 'Attempting to create a trade for an amount that’s less than the minimum allowed amount';
+
+  @override
+  String get api_error_142 => 'Attempting to set a fiat limit that is less than minAmount when creating ad';
+
+  @override
+  String get api_error_143 => 'Attempting to set a fiat limit that is more than maxAmount when creating ad';
+
+  @override
+  String get api_error_144 => 'Attempting to set a fiat limit that is less than minAmount when updating ad';
+
+  @override
+  String get api_error_145 => 'Attempting to set a fiat limit that is more than maxAmount when updating ad';
+
+  @override
+  String get api_error_147 => 'Attempting to get affiliate data for user that doesn’t have the affiliate program enabled';
+
+  @override
+  String get api_error_148 => 'Attempting to set a telegram ID that’s already set';
+
+  @override
+  String get api_error_149 => 'Priority not specified for external withdrawal';
+
+  @override
+  String get api_error_150 => 'Attempting to start a trade on an ad where the requesting user is blocked by the ad poster';
+
+  @override
+  String get api_error_151 => 'Attempting to start a trade on an ad where the requesting user is not trusted by the ad poster';
+
+  @override
+  String get api_error_152 => 'Attempting to cancel a trade that’s already closed';
+
+  @override
+  String get api_error_153 => 'Attempting to release a trade that’s already closed';
+
+  @override
+  String get api_error_154 => 'Attempting to request trades for an account that doesn’t exist';
+
+  @override
+  String get api_error_155 => 'Attempting to get list of trusted users for a user that doesn’t exist';
+
+  @override
+  String get api_error_156 => 'Attempting to get list of blocked users for a user that doesn’t exist';
+
+  @override
+  String get api_error_157 => 'Attempting to set option-specific properties for a non-option ad';
+
+  @override
+  String get api_error_158 => 'Attempting to create an option ad without setting option-specific properties';
+
+  @override
+  String get api_error_159 => 'User requesting to mark premium payment of trade doesn’t exist';
+
+  @override
+  String get api_error_160 => 'Attempting to mark premium paid for a trade that doesn’t exist';
+
+  @override
+  String get api_error_161 => 'User requesting to exercise option doesn’t exist';
+
+  @override
+  String get api_error_162 => 'Attempting to exercise option for a trade that doesn’t exist';
+
+  @override
+  String get api_error_163 => 'User requesting to confirm premium payment of trade doesn’t exist';
+
+  @override
+  String get api_error_164 => 'Attempting to confirm premium paid for a trade that doesn’t exist';
+
+  @override
+  String get api_error_165 => 'User requesting to exercise trade with net settlement doesn’t exist';
+
+  @override
+  String get api_error_166 => 'Attempting to exercise with net settlement a trade that doesn’t exist';
+
+  @override
+  String get api_error_167 => 'The current market price is less than or equal to the exercise price when netting a CALL trade. The trade is out-of-the-money by market standards, therefore cannot be netted. Use normal settlement if needed.';
+
+  @override
+  String get api_error_168 => 'User requesting to confirm cover payment of trade doesn’t exist';
+
+  @override
+  String get api_error_169 => 'Attempting to confirm cover paid for a trade that doesn’t exist';
+
+  @override
+  String get api_error_172 => 'Attempting to post an ad where the asset is the same as the ad currency';
+
+  @override
+  String get api_error_174 => 'Attempting to exercise out-of-the-money PUT trade';
+
+  @override
+  String get api_error_175 => 'Attempting to redeem coupon that doesn’t exist during registration';
+
+  @override
+  String get api_error_176 => 'Attempting to redeem an expired coupon during registration';
+
+  @override
+  String get api_error_177 => 'Attempting to redeem a coupon that’s out of stock during registration';
+
+  @override
+  String get api_error_185 => 'Attempting to get coupons for user that doesn’t exist';
+
+  @override
+  String get api_error_186 => 'Attempting to get more than 50 ads when getting ads by ID';
+
+  @override
+  String get api_error_187 => 'Attempting to give an empty list of IDs when getting ads by ID';
+
+  @override
+  String get api_error_188 => 'Not a single of the requested ad IDs is a valid ID when getting ads by ID';
+
+  @override
+  String get api_error_189 => 'Not a single of the requested ads exist when getting ads by ID';
+
+  @override
+  String get api_error_190 => 'Attempting to give an empty list of IDs when getting trades by ID';
+
+  @override
+  String get api_error_191 => 'Attempting to get more than 50 ads when getting trades by ID';
+
+  @override
+  String get api_error_192 => 'Not a single of the requested trade IDs is a valid ID when getting trades by ID';
+
+  @override
+  String get api_error_193 => 'Not a single of the requested trades exist when getting trades by ID';
+
+  @override
+  String get api_error_194 => 'Attempting to generate public API token for user that doesn’t exist';
+
+  @override
+  String get api_error_195 => 'Incorrect password when attempting to get public API token';
+
+  @override
+  String get api_error_196 => 'Attempting to get recent messages for user that doesn’t exist';
+
+  @override
+  String get api_error_197 => 'Attempting to get trade chat messages with “after” timestamp that’s outside of the allowed range';
+
+  @override
+  String get api_error_198 => 'Attempting to get account recent chat messages with “after” timestamp that’s outside of the allowed range';
+
+  @override
+  String get api_error_199 => 'Attempting to get public API token for user that doesn’t exist';
+
+  @override
+  String get api_error_200 => 'Attempting to expire and delete public API token for user without a public API token';
+
+  @override
+  String get api_error_201 => 'Attempting to update price formula for ad that doesn’t exist';
+
+  @override
+  String get api_error_202 => 'Attempting to get account transactions with “after” timestamp that’s outside of the allowed range';
+
+  @override
+  String get api_error_203 => 'Attempting to get reputation import data for account that doesn’t exist';
+
+  @override
+  String get api_error_211 => 'Attempting to approve reputation import for user that doesn’t exist';
+
+  @override
+  String get api_error_212 => 'Attempting to approve reputation import for user that isn’t in step 2 of the reputation import flow';
+
+  @override
+  String get api_error_213 => 'Attempting to deny reputation import for user that doesn’t exist';
+
+  @override
+  String get api_error_214 => 'Attempting to deny reputation import for user that isn’t in step 2 of the reputation import flow';
+
+  @override
+  String get api_error_215 => 'Attempting to specify both country_code and currency_code when requesting most popular payment methods';
+
+  @override
+  String get api_error_216 => 'Attempting to request most popular payment methods for a country_code that doesn’t exist';
+
+  @override
+  String get api_error_217 => 'Attempting to request most popular payment methods for a currency_code that doesn’t exist';
+
+  @override
+  String get api_error_218 => 'Attempting to open a trade on an ad that requires a verified email when the requesting user doesn’t have a verified email';
+
+  @override
+  String get api_error_219 => 'Attempting to register with an email that’s from a disposable email provider';
+
+  @override
+  String get api_error_220 => 'Attempting to change account email to an email from a disposable email provider';
+
+  @override
+  String get api_error_221 => 'Attempting to mark all notifications read for a user that doesn’t exist';
+
+  @override
+  String get api_error_222 => 'Attempting to request reputation code for a outside platform account that has already been imported';
+
+  @override
+  String get api_error_223 => 'Attempting to update ad with specifying verificationRequired as true while verificationMsg is null';
+
+  @override
+  String get api_error_224 => 'Attempting to update ad with specifying verificationMsg but the ad not requiring verification and the ad update request also not setting verificationRequired as true';
+
+  @override
+  String get api_error_227 => 'Attempting to sanction a user that doesn’t exist';
+
+  @override
+  String get api_error_228 => 'Attempting to sanction user with an admin account that doesn’t exist';
+
+  @override
+  String get api_error_229 => 'Attempting to remove a sanction from a user that doesn’t exist';
+
+  @override
+  String get api_error_230 => 'Attempting to remove a sanction from a user with an admin account that doesn’t exist';
+
+  @override
+  String get api_error_231 => 'Attempting to remove a sanction from a user that doesn’t have any sanctions on them';
+
+  @override
+  String get api_error_232 => 'Attempting to open a trade with a user that’s currently prohibited from trading due to a sanction';
+
+  @override
+  String get api_error_233 => 'Attempting to remove feedback with ID that doesn’t exist';
+
+  @override
+  String get api_error_234 => 'Attempting to remove feedback that’s already removed';
+
+  @override
+  String get api_error_235 => 'Attempting to remove dispute status from a trade that doesn’t exist';
+
+  @override
+  String get api_error_236 => 'Attempting to remove dispute status from a trade that isn’t disputed';
+
+  @override
+  String get api_error_237 => 'Attempting to open a trade as a user that doesn’t exist when calling the trade opening endpoint as an admin and specifying the openAsUsername parameter';
+
+  @override
+  String get api_error_240 => 'Invalid address provided by the buyer when responding to a SELL-type ad';
+
+  @override
+  String get api_error_241 => 'Buyer attempting to provide an internal address when responding to a SELL-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+
+  @override
+  String get api_error_242 => 'Invalid address provided by the buyer when creating a BUY-type ad';
+
+  @override
+  String get api_error_244 => 'Invalid address provided by the buyer when updating a BUY-type ad';
+
+  @override
+  String get api_error_245 => 'Buyer attempting to provide an internal address when updating a BUY-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+
+  @override
+  String get api_error_246 => 'Attempting to start a trade from a BUY-type ad that doesn’t specify the buyer settlement address';
+
+  @override
+  String get api_error_247 => 'Attempting to release a trade from an account that’s prohibited from withdrawing due to sanctions';
+
+  @override
+  String get api_error_248 => 'Attempting to release a trade when the amount of the trade isn’t enough to cover the settlement-related fees';
+
+  @override
+  String get api_error_249 => 'Attempting to update a BUY-type ad that doesn’t have buyerSettlementAddress set without setting the buyerSettlementAddress parameter in the update request';
+
+  @override
+  String get api_error_250 => 'Invalid address provided when requesting withdrawal fee for BTC';
+
+  @override
+  String get api_error_251 => 'Fee level not provided when opening a trade by responding to a BTC SELL-type ad';
+
+  @override
+  String get api_error_252 => 'Fee level not provided when creating a BTC BUY-type ad';
+
+  @override
+  String get api_error_253 => 'Fee level not provided when updating a BTC BUY-type ad that doesn’t have a fee level set';
+
+  @override
+  String get api_error_255 => 'Attempting to get notifications with “after” timestamp that’s outside of the allowed range';
+
+  @override
+  String get api_error_256 => 'Attempting to register a push notification token that already exists';
+
+  @override
+  String get api_error_257 => 'Attempting to register a push notification token that isn’t valid';
+
+  @override
+  String get api_error_258 => 'Attempting to register a push notification token for an account that already has 500 device tokens, delete one of the existing tokens before trying this again';
+
+  @override
+  String get api_error_259 => 'Attempting to delete a token that doesn’t exist or doesn’t belong to this user';
+
+  @override
   String get account => 'Conta';
 
   @override
