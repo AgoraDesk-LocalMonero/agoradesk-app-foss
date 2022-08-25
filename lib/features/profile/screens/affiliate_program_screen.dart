@@ -62,6 +62,7 @@ class AffiliateProgramScreen extends StatelessWidget {
 
   Widget _buildAffiliateData(BuildContext context, AffiliateProgramViewModel model) {
     final code = model.affiliateModel.code;
+    final codeStr = '?rc=$code';
     return Column(
       children: [
         BoxInfoWithLabel(
@@ -78,22 +79,22 @@ class AffiliateProgramScreen extends StatelessWidget {
         const SizedBox(height: 12),
         BoxSurface5Surface2(
           title: I18n.of(context)!.affiliate__ref_code_title,
-          child: LineTextNeutral80Copy(text: 'rc?$code'),
+          child: LineTextNeutral80Copy(text: codeStr),
         ),
         const SizedBox(height: 12),
         BoxSurface5Surface2(
           title: I18n.of(context)!.web_links,
-          child: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().urlBase}/rc?$code'),
+          child: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().urlBase}$codeStr'),
         ),
         const SizedBox(height: 12),
         BoxSurface5Surface2(
           title: I18n.of(context)!.tor_links,
-          child: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().torBaseUrl}/rc?$code'),
+          child: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().torBaseUrl}$codeStr'),
         ),
         BoxSurface5Surface2(
           title: I18n.of(context)!.i2p_links,
-          child: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().i2pBaseUrlOne}/rc?$code'),
-          child2: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().i2pBaseUrlTwo}/rc?$code'),
+          child: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().i2pBaseUrlOne}$codeStr'),
+          child2: LineTextNeutral80Copy(text: '${GetIt.I<AppParameters>().i2pBaseUrlTwo}$codeStr'),
         ),
         const SizedBox(height: 12),
         BoxSurface5Surface2(

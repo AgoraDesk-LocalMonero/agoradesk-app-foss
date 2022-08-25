@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -98,87 +100,89 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
   }
 
   void _afterLayout() async {
-    showDialog(
-      barrierDismissible: true,
-      context: context,
-      builder: (_) => Dialog(
-        insetPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(20.0),
+    if (Platform.isAndroid) {
+      showDialog(
+        barrierDismissible: true,
+        context: context,
+        builder: (_) => Dialog(
+          insetPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(20.0),
+            ),
+          ),
+          backgroundColor: context.colSurface4,
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                AutoSizeText(
+                  'Disclaimer',
+                  maxLines: 1,
+                  style: context.txtHead4N90,
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room:',
+                  style: context.txtBodySmallN80,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
+                      child: SvgPicture.asset(
+                        'assets/images/matrix-logo.svg',
+                        color: Colors.white,
+                        width: 100,
+                      ),
+                    ),
+                    const SizedBox(width: 40),
+                    GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
+                      child: Image.asset(
+                        'assets/images/telegram-logo.png',
+                        height: 70,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 22),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () => AutoRouter.of(context).pop(),
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 20, 10),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        // minimumSize: const Size(50, 40),
+                        alignment: Alignment.centerRight,
+                      ),
+                      child: Text(
+                        I18n.of(context)!.close,
+                        style: context.txtLabelLargePrimary70,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
-        backgroundColor: context.colSurface4,
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              AutoSizeText(
-                'Disclaimer',
-                maxLines: 1,
-                style: context.txtHead4N90,
-              ),
-              const SizedBox(height: 16),
-              Text(
-                'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room:',
-                style: context.txtBodySmallN80,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 40),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
-                    child: SvgPicture.asset(
-                      'assets/images/matrix-logo.svg',
-                      color: Colors.white,
-                      width: 100,
-                    ),
-                  ),
-                  const SizedBox(width: 40),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
-                    child: Image.asset(
-                      'assets/images/telegram-logo.png',
-                      height: 70,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 22),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () => AutoRouter.of(context).pop(),
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 20, 10),
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      // minimumSize: const Size(50, 40),
-                      alignment: Alignment.centerRight,
-                    ),
-                    child: Text(
-                      I18n.of(context)!.close,
-                      style: context.txtLabelLargePrimary70,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-      // builder: (_) => const AgoraDialogCloseMarkDown(
-      //   title: 'Disclaimer',
-      //   text:
-      //       'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room: \n- Matrix icon links to https://matrix.to/#/#app-beta-testers:agoradesk.com \n\n- Telegram Icon links to https://t.me/+Hvf6nSq9ImBkMDhl',
-      // ),
-    );
+        // builder: (_) => const AgoraDialogCloseMarkDown(
+        //   title: 'Disclaimer',
+        //   text:
+        //       'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room: \n- Matrix icon links to https://matrix.to/#/#app-beta-testers:agoradesk.com \n\n- Telegram Icon links to https://t.me/+Hvf6nSq9ImBkMDhl',
+        // ),
+      );
+    }
   }
 }
