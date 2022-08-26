@@ -47,7 +47,7 @@ class Disable2faScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 22),
                       VerificationCode(
-                        textStyle: context.txtLabelLargePrimary10,
+                        textStyle: context.txtLabelLargeP90P10,
                         keyboardType: TextInputType.number,
                         underlineColor: context.colPrimary90,
                         length: 6,

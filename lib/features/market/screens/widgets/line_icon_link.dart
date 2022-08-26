@@ -36,7 +36,7 @@ class LineIconLink extends StatelessWidget with UrlMixin {
               Expanded(
                 child: AutoSizeText(
                   title,
-                  style: context.txtLabelLargePrimary10,
+                  style: context.txtLabelLargeP90P10,
                 ),
               ),
               const SizedBox(width: 17),

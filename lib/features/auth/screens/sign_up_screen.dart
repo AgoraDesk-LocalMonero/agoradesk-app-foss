@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                             TextButton(
                                               child: Text(
                                                 context.intl.skip,
-                                                style: context.txtLabelLargePrimary80,
+                                                style: context.txtLabelLargeP80P70,
                                               ),
                                               onPressed: model.guestModeOn,
                                             ),
@@ -166,7 +166,6 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                       ),
                                     ],
                                   ),
-                                  // if (model.displayCaptcha) _buildCaptcha(model, decoration),
                                   if (model.displayError) const SizedBox(height: 26),
                                   if (model.displayError)
                                     Text(

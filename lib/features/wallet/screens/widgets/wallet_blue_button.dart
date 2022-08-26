@@ -24,7 +24,7 @@ class WalletBlueButton extends StatelessWidget {
         maximumSize: const Size(100, 30),
         minimumSize: const Size(100, 30),
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-        primary: Theme.of(context).colorScheme.tonal,
+        primary: Theme.of(context).colorScheme.tonalP90,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),
@@ -45,13 +45,13 @@ class WalletBlueButton extends StatelessWidget {
                   Icon(
                     iconData,
                     size: 16,
-                    color: Theme.of(context).colorScheme.primary90,
+                    color: Theme.of(context).colorScheme.p90P10,
                   ),
                   const SizedBox(width: 7.5),
                   Text(
                     title,
                     style: Theme.of(context).textTheme.agoraLabelMedium.copyWith(
-                          color: Theme.of(context).colorScheme.primary10,
+                          color: Theme.of(context).colorScheme.p90P10,
                           height: 1,
                         ),
                   ),

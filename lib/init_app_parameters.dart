@@ -24,6 +24,7 @@ AppParameters initAppParameters(FlavorType flavor, bool isGoogleAvailable) {
       urlFaq: 'https://localmonero.co/faq',
       urlReceipt: 'http://agoradesk.com/receipt',
       isGoogleAvailable: isGoogleAvailable,
+      isAgora: false,
     );
   }
   return AppParameters(
@@ -47,5 +48,6 @@ AppParameters initAppParameters(FlavorType flavor, bool isGoogleAvailable) {
     urlFaq: 'https://agoradesk.com/faq',
     urlReceipt: 'http://agoradesk.com/receipt',
     isGoogleAvailable: isGoogleAvailable,
+    isAgora: true,
   );
 }

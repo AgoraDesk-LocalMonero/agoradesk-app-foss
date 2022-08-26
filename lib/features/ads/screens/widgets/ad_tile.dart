@@ -42,7 +42,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
             borderRadius: const BorderRadius.all(
               Radius.circular(12),
             ),
-            color: Theme.of(context).colorScheme.surface5,
+            color: Theme.of(context).colorScheme.surf5darkSurfLight,
             border: Border.all(
               width: isSelected ? 2 : 0,
               color: isSelected ? context.colP70P40 : Colors.transparent,

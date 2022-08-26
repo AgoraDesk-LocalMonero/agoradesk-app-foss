@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
@@ -24,6 +25,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 export 'package:agoradesk/features/ads/data/models/asset.dart';
 export 'package:agoradesk/features/ads/data/models/price_input_type.dart';
@@ -257,8 +259,10 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
       tradeType = ad!.tradeType;
       isLocalAd = ad!.tradeType.isLocal();
       selectedCountryCode = ad!.countryCode;
-      selectedOnlineProvider =
-          OnlineProvider(url: '', code: ad!.onlineProvider!, name: ad!.onlineProvider!, currencies: []);
+      if (!isLocalAd) {
+        selectedOnlineProvider =
+            OnlineProvider(url: '', code: ad!.onlineProvider!, name: ad!.onlineProvider!, currencies: []);
+      }
       selectedCurrency = CurrencyModel(code: ad!.currency, name: '', altcoin: true);
       if (ad?.minAmount != null) {
         ctrl4MinAmount.text = '${ad!.minAmount}';
@@ -317,15 +321,28 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
   }
 
   Future<void> getWalletsBalance() async {
-    loadingBalance = true;
-    final resBtc = await _walletService.getBalance(Asset.BTC);
-    final resXmr = await _walletService.getBalance(Asset.XMR);
-    loadingBalance = false;
-    if (resBtc.isRight && resXmr.isRight) {
-      _balanceBtc = resBtc.right.balance;
-      _balanceXmr = resXmr.right.balance;
+    if (GetIt.I<AppParameters>().isAgora) {
+      loadingBalance = true;
+      final resBtc = await _walletService.getBalance(Asset.BTC);
+      final resXmr = await _walletService.getBalance(Asset.XMR);
+      loadingBalance = false;
+      if (resBtc.isRight && resXmr.isRight) {
+        _balanceBtc = resBtc.right.balance;
+        _balanceXmr = resXmr.right.balance;
+        _checkTradeTypesForPossibility();
+      } else {
+        handleApiError(resBtc.left, context);
+      }
     } else {
-      handleApiError(resBtc.left, context);
+      loadingBalance = true;
+      final resXmr = await _walletService.getBalance(Asset.XMR);
+      loadingBalance = false;
+      if (resXmr.isRight) {
+        _balanceXmr = resXmr.right.balance;
+        _checkTradeTypesForPossibility();
+      } else {
+        handleApiError(resXmr.left, context);
+      }
     }
   }
 

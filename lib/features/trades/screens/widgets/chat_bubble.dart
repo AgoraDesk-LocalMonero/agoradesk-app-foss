@@ -39,7 +39,7 @@ class ChatBubble extends StatelessWidget with DateMixin, TradeMixin, ClipboardMi
       alignment = Alignment.center;
       isTextMessage = true;
     } else {
-      color = isMyMessage ? context.colSec40SurfLight : context.colSurface5;
+      color = isMyMessage ? context.colSec40SurfLight : context.colSurf5darkSurfLight;
       alignment = isMyMessage ? Alignment.centerRight : Alignment.centerLeft;
       isTextMessage = message.msg!.isNotEmpty;
     }

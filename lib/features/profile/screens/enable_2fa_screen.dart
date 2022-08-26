@@ -208,7 +208,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
                     padding: const EdgeInsets.fromLTRB(32, 12, 32, 12),
                     child: Text(
                       model.secretCode,
-                      style: context.txtLabelLargePrimary10,
+                      style: context.txtLabelLargeP90P10,
                     ),
                   ),
                 ),
@@ -241,7 +241,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
         ),
         const SizedBox(height: 22),
         VerificationCode(
-          textStyle: context.txtLabelLargePrimary10,
+          textStyle: context.txtLabelLargeP90P10,
           keyboardType: TextInputType.number,
           underlineColor: context.colPrimary90,
           length: 6,

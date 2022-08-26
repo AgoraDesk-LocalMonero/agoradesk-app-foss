@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                             TextButton(
                                               child: Text(
                                                 context.intl.skip,
-                                                style: context.txtLabelLargePrimary80,
+                                                style: context.txtLabelLargeP80P70,
                                               ),
                                               onPressed: model.guestModeOn,
                                             ),
@@ -148,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                               title: context.intl.signup250Sbbtn,
                               onPressed: () =>
                                   AutoRouter.of(context).push(SignUpRoute(displaySkip: widget.displaySkip)),
-                              buttonColor: Theme.of(context).colorScheme.tonal,
+                              buttonColor: Theme.of(context).colorScheme.tonalP90,
                               textColor: Theme.of(context).colorScheme.primary90,
                             ),
                           ],

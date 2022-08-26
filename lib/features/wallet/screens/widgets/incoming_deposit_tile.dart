@@ -45,7 +45,7 @@ class IncomingDepositTile extends StatelessWidget with DateMixin, StringMixin {
                         children: [
                           Text(
                             deposit.amount + ' ' + deposit.asset!.name,
-                            style: context.txtLabelLargePrimary10,
+                            style: context.txtLabelLargeP90P10,
                           ),
                           const SizedBox(height: 2),
                           Text(

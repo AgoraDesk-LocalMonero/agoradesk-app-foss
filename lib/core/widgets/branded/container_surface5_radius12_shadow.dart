@@ -1,8 +1,8 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 
-class ContainerSurface5Radius12Border1 extends StatelessWidget {
-  const ContainerSurface5Radius12Border1({
+class ContainerSurface5Radius12Shadow extends StatelessWidget {
+  const ContainerSurface5Radius12Shadow({
     Key? key,
     required this.child,
   }) : super(key: key);
@@ -14,14 +14,17 @@ class ContainerSurface5Radius12Border1 extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        border: Border.all(
-          width: 1,
-          color: context.colN30Pri80.withOpacity(0.5),
-        ),
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
         color: context.colSurf5darkSurfLight,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 4,
+            offset: const Offset(0, 3),
+          ),
+        ],
       ),
       child: child,
     );

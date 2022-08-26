@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
@@ -14,6 +15,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class WalletViewModel extends BaseViewModel {
   WalletViewModel({
@@ -82,9 +84,7 @@ class WalletViewModel extends BaseViewModel {
       }
       notifyListeners();
     });
-    if (_authService.isAuthenticated) {
-      indicatorKey.currentState?.show();
-    }
+
     super.init();
   }
 
@@ -92,6 +92,9 @@ class WalletViewModel extends BaseViewModel {
   void onAfterBuild() {
     _tabsRouter = context.tabsRouter;
     _tabsRouter.addListener(_routerListener);
+    if (_authService.isAuthenticated) {
+      indicatorKey.currentState?.show();
+    }
     super.onAfterBuild();
   }
 
@@ -110,21 +113,36 @@ class WalletViewModel extends BaseViewModel {
   Future<void> getBalances() async {
     if (!loadingBalance) {
       loadingBalance = true;
-      final Either<ApiError, WalletBalanceModel> resBtc = await _walletService.getWalletTransactions(Asset.BTC);
-      final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
-      loadingBalance = false;
-      if (resBtc.isRight && resXmr.isRight) {
-        _balanceBtc = resBtc.right.balance.toString();
-        _addressBtc = resBtc.right.receivingAddress;
-        _balanceXmr = resXmr.right.balance.toString();
-        _addressXmr = resXmr.right.receivingAddress;
-        joinAllTransactions(resBtc.right, resXmr.right);
-      } else {
-        if (resBtc.left.message.containsKey('error_code')) {
-          final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
-          debugPrint('[getBalance error message] $errorMessage');
+      if (GetIt.I<AppParameters>().isAgora) {
+        final Either<ApiError, WalletBalanceModel> resBtc = await _walletService.getWalletTransactions(Asset.BTC);
+        final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
+        loadingBalance = false;
+        if (resBtc.isRight && resXmr.isRight) {
+          _balanceBtc = resBtc.right.balance.toString();
+          _addressBtc = resBtc.right.receivingAddress;
+          _balanceXmr = resXmr.right.balance.toString();
+          _addressXmr = resXmr.right.receivingAddress;
+          joinAllTransactions(resBtc.right, resXmr.right);
+        } else {
+          if (resBtc.left.message.containsKey('error_code')) {
+            final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
+            debugPrint('[getBalance error message] $errorMessage');
+          }
+          debugPrint('[getBalance error] ${resBtc.left.message}');
         }
-        debugPrint('[getBalance error] ${resBtc.left.message}');
+      } else {
+        final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
+        loadingBalance = false;
+        if (resXmr.isRight) {
+          _balanceXmr = resXmr.right.balance.toString();
+          _addressXmr = resXmr.right.receivingAddress;
+        } else {
+          if (resXmr.left.message.containsKey('error_code')) {
+            final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
+            debugPrint('[getBalance error message] $errorMessage');
+          }
+          debugPrint('[getBalance error] ${resXmr.left.message}');
+        }
       }
     }
   }

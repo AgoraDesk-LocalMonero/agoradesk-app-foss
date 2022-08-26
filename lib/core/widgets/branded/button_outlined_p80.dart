@@ -42,14 +42,14 @@ class ButtonOutlinedP80 extends StatelessWidget with UiHelpersMixin {
             Text(
               title,
               style: loading
-                  ? context.txtLabelLargePrimary80.copyWith(color: Colors.transparent)
+                  ? context.txtLabelLargeP80P70.copyWith(color: Colors.transparent)
                   : isActive
-                      ? context.txtLabelLargePrimary80
+                      ? context.txtLabelLargeP80P70
                       : context.txtLabelLargeNeutral50,
             ),
             loading
                 ? SizedBox(
-                    width: calcSizeOfText(title, context.txtLabelLargePrimary80).width,
+                    width: calcSizeOfText(title, context.txtLabelLargeP80P70).width,
                     child: const Center(
                       child: CupertinoActivityIndicator(),
                     ),

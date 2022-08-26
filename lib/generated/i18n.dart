@@ -14459,6 +14459,1062 @@ abstract class I18n {
   /// **'Connection timeout, please check internet connection.'**
   String get api_error_4001;
 
+  /// No description provided for @api_error_45.
+  ///
+  /// In en, this message translates to:
+  /// **'You can\'t have both \'first_time_limit_asset\' and \'first_time_limit_{btc | xmr}\' in your request. Remove one of them (they are interchangeable).'**
+  String get api_error_45;
+
+  /// No description provided for @api_error_46.
+  ///
+  /// In en, this message translates to:
+  /// **'Request must contain EITHER an application/json request body with a “msg” parameter OR a multipart/form-data request body with the image file listed under the parameter “document”'**
+  String get api_error_46;
+
+  /// No description provided for @api_error_47.
+  ///
+  /// In en, this message translates to:
+  /// **'User with that username already exists'**
+  String get api_error_47;
+
+  /// No description provided for @api_error_48.
+  ///
+  /// In en, this message translates to:
+  /// **'User with that email already exists'**
+  String get api_error_48;
+
+  /// No description provided for @api_error_50.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to send an email to a user without an email set'**
+  String get api_error_50;
+
+  /// No description provided for @api_error_51.
+  ///
+  /// In en, this message translates to:
+  /// **'Token provided for email verification is given to a user who does not exist'**
+  String get api_error_51;
+
+  /// No description provided for @api_error_52.
+  ///
+  /// In en, this message translates to:
+  /// **'Token provided for email verification is invalid'**
+  String get api_error_52;
+
+  /// No description provided for @api_error_53.
+  ///
+  /// In en, this message translates to:
+  /// **'The email in the token doesn’t match the current email in the database'**
+  String get api_error_53;
+
+  /// No description provided for @api_error_54.
+  ///
+  /// In en, this message translates to:
+  /// **'Token provided for password reset is given to a email that does not exist in the database'**
+  String get api_error_54;
+
+  /// No description provided for @api_error_55.
+  ///
+  /// In en, this message translates to:
+  /// **'Token provided for password reset is invalid'**
+  String get api_error_55;
+
+  /// No description provided for @api_error_56.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to send a password reset email to an email that isn’t in the database'**
+  String get api_error_56;
+
+  /// No description provided for @api_error_57.
+  ///
+  /// In en, this message translates to:
+  /// **'Token provided for password reset is not a reset token'**
+  String get api_error_57;
+
+  /// No description provided for @api_error_58.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to send a password-reset email to a user with an unverified email'**
+  String get api_error_58;
+
+  /// No description provided for @api_error_59.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying reset a password for a user with an unverified email'**
+  String get api_error_59;
+
+  /// No description provided for @api_error_62.
+  ///
+  /// In en, this message translates to:
+  /// **'No account exists with the username provided for the account public data request'**
+  String get api_error_62;
+
+  /// No description provided for @api_error_63.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to upload file of a forbidden type'**
+  String get api_error_63;
+
+  /// No description provided for @api_error_64.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to mark a non-existent notification as read'**
+  String get api_error_64;
+
+  /// No description provided for @api_error_65.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to mark an already read notification as read'**
+  String get api_error_65;
+
+  /// No description provided for @api_error_66.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to upload chat attachment to trade that doesn’t exist'**
+  String get api_error_66;
+
+  /// No description provided for @api_error_67.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to send chat message to trade that doesn’t exist'**
+  String get api_error_67;
+
+  /// No description provided for @api_error_68.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get chat message list of trade that doesn’t exist'**
+  String get api_error_68;
+
+  /// No description provided for @api_error_69.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get chat message that doesn’t exist'**
+  String get api_error_69;
+
+  /// No description provided for @api_error_70.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get wallet address of account that doesn’t exist'**
+  String get api_error_70;
+
+  /// No description provided for @api_error_71.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get transactions of an account that doesn’t exist'**
+  String get api_error_71;
+
+  /// No description provided for @api_error_72.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to withdraw funds of an account that doesn’t exist'**
+  String get api_error_72;
+
+  /// No description provided for @api_error_78.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to make get ads with an illegal combination of parameters'**
+  String get api_error_78;
+
+  /// No description provided for @api_error_79.
+  ///
+  /// In en, this message translates to:
+  /// **'The requested ad ID doesn’t exist'**
+  String get api_error_79;
+
+  /// No description provided for @api_error_80.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn’t set both lat and lon in the ad update/create request'**
+  String get api_error_80;
+
+  /// No description provided for @api_error_81.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn’t set price formula when posting ad'**
+  String get api_error_81;
+
+  /// No description provided for @api_error_82.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to set lat and lon for an online ad'**
+  String get api_error_82;
+
+  /// No description provided for @api_error_83.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to set ONLINE_SELL/CALL_SELL/PUT_BUY-specific properties to a different type of ad'**
+  String get api_error_83;
+
+  /// No description provided for @api_error_84.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to set ONLINE_BUY/CALL_BUY/PUT_SELL-specific properties to a different type of ad'**
+  String get api_error_84;
+
+  /// No description provided for @api_error_85.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to set LOCAL_SELL-specific properties to a different type of ad'**
+  String get api_error_85;
+
+  /// No description provided for @api_error_86.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set country or payment method or currency that isn’t valid when creating/updating ad'**
+  String get api_error_86;
+
+  /// No description provided for @api_error_87.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to set a payment method that is invalid to that country when creating/updating ad'**
+  String get api_error_87;
+
+  /// No description provided for @api_error_88.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to set a currency that is invalid to that payment method when creating/updating ad'**
+  String get api_error_88;
+
+  /// No description provided for @api_error_89.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to create a LOCAL_* ad without setting lon/lat'**
+  String get api_error_89;
+
+  /// No description provided for @api_error_90.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to access trades of a user that doesn’t exist.'**
+  String get api_error_90;
+
+  /// No description provided for @api_error_91.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to access account public data using a token of a user that doesn’t exist'**
+  String get api_error_91;
+
+  /// No description provided for @api_error_92.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to get notifications for user that doesn’t exist'**
+  String get api_error_92;
+
+  /// No description provided for @api_error_93.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to get pending deposits for a user that doesn’t exist'**
+  String get api_error_93;
+
+  /// No description provided for @api_error_94.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to get feedback score for user that doesn’t exist'**
+  String get api_error_94;
+
+  /// No description provided for @api_error_95.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to get ads for user that doesn’t exist'**
+  String get api_error_95;
+
+  /// No description provided for @api_error_96.
+  ///
+  /// In en, this message translates to:
+  /// **'Non-existent user trying to create a trade'**
+  String get api_error_96;
+
+  /// No description provided for @api_error_97.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to create a trade for ad that doesn’t exist'**
+  String get api_error_97;
+
+  /// No description provided for @api_error_98.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to create a trade for an ad who’s poster doesn’t exist'**
+  String get api_error_98;
+
+  /// No description provided for @api_error_99.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade'**
+  String get api_error_99;
+
+  /// No description provided for @api_error_100.
+  ///
+  /// In en, this message translates to:
+  /// **'Cannot request less than 0.0000000001 XMR for trade creation'**
+  String get api_error_100;
+
+  /// No description provided for @api_error_101.
+  ///
+  /// In en, this message translates to:
+  /// **'Requested amount is less than ad’s min_amount when creating trade'**
+  String get api_error_101;
+
+  /// No description provided for @api_error_102.
+  ///
+  /// In en, this message translates to:
+  /// **'Requested amount is more than ad’s max_amount_available when creating trade'**
+  String get api_error_102;
+
+  /// No description provided for @api_error_104.
+  ///
+  /// In en, this message translates to:
+  /// **'Requesting trade for ad who’s poster is on buying vacation'**
+  String get api_error_104;
+
+  /// No description provided for @api_error_106.
+  ///
+  /// In en, this message translates to:
+  /// **'Requester of the trade doesn’t have enough balance to fund the trade request'**
+  String get api_error_106;
+
+  /// No description provided for @api_error_108.
+  ///
+  /// In en, this message translates to:
+  /// **'minAmount cannot be equal to or larger than maxAmount'**
+  String get api_error_108;
+
+  /// No description provided for @api_error_109.
+  ///
+  /// In en, this message translates to:
+  /// **'Requested amount is more than ad’s maxAmount when creating trade'**
+  String get api_error_109;
+
+  /// No description provided for @api_error_110.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade requester has lower feedback score than what is required by the poster'**
+  String get api_error_110;
+
+  /// No description provided for @api_error_111.
+  ///
+  /// In en, this message translates to:
+  /// **'Requested amount is not one of the accepted amounts, see limit_to_fiat_amounts'**
+  String get api_error_111;
+
+  /// No description provided for @api_error_112.
+  ///
+  /// In en, this message translates to:
+  /// **'Can’t request a trade for an ad you posted yourself'**
+  String get api_error_112;
+
+  /// No description provided for @api_error_113.
+  ///
+  /// In en, this message translates to:
+  /// **'Can’t set paymentWindowMinutes to <15 or >90 when updating ad'**
+  String get api_error_113;
+
+  /// No description provided for @api_error_114.
+  ///
+  /// In en, this message translates to:
+  /// **'Can’t set paymentWindowMinutes to <15 or >90 when creating ad'**
+  String get api_error_114;
+
+  /// No description provided for @api_error_115.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade by requested ID doesn’t exist'**
+  String get api_error_115;
+
+  /// No description provided for @api_error_116.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting trade doesn’t exist'**
+  String get api_error_116;
+
+  /// No description provided for @api_error_117.
+  ///
+  /// In en, this message translates to:
+  /// **'The currency for which the exchange rate has been requested does not exist'**
+  String get api_error_117;
+
+  /// No description provided for @api_error_118.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting funding of trade doesn’t exist'**
+  String get api_error_118;
+
+  /// No description provided for @api_error_119.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to fund a trade that doesn’t exist'**
+  String get api_error_119;
+
+  /// No description provided for @api_error_120.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting escrow of trade doesn’t exist'**
+  String get api_error_120;
+
+  /// No description provided for @api_error_121.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to escrow a trade that doesn’t exist'**
+  String get api_error_121;
+
+  /// No description provided for @api_error_122.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient funds to fund a floating LOCAL_SELL trade'**
+  String get api_error_122;
+
+  /// No description provided for @api_error_123.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient funds to fund a non-floating LOCAL_SELL trade'**
+  String get api_error_123;
+
+  /// No description provided for @api_error_124.
+  ///
+  /// In en, this message translates to:
+  /// **'Error when funding a LOCAL_SELL'**
+  String get api_error_124;
+
+  /// No description provided for @api_error_125.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting cancellation of trade doesn’t exist'**
+  String get api_error_125;
+
+  /// No description provided for @api_error_126.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to cancel a trade that doesn’t exist'**
+  String get api_error_126;
+
+  /// No description provided for @api_error_127.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting payment of trade doesn’t exist'**
+  String get api_error_127;
+
+  /// No description provided for @api_error_128.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to mark a trade that doesn’t exist paid'**
+  String get api_error_128;
+
+  /// No description provided for @api_error_129.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting release of trade doesn’t exist'**
+  String get api_error_129;
+
+  /// No description provided for @api_error_130.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to release a trade that doesn’t exist'**
+  String get api_error_130;
+
+  /// No description provided for @api_error_131.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting dispute of trade doesn’t exist'**
+  String get api_error_131;
+
+  /// No description provided for @api_error_132.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to dispute a trade that doesn’t exist'**
+  String get api_error_132;
+
+  /// No description provided for @api_error_133.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get feedback of a user that doesn’t exist'**
+  String get api_error_133;
+
+  /// No description provided for @api_error_134.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to create an ad when user already has the maximum allowed number of ads'**
+  String get api_error_134;
+
+  /// No description provided for @api_error_135.
+  ///
+  /// In en, this message translates to:
+  /// **'Somehow the maxAmount is set to null while trackingMaxAmount is set to true'**
+  String get api_error_135;
+
+  /// No description provided for @api_error_136.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to post a ad with balance less than minimum required balance.'**
+  String get api_error_136;
+
+  /// No description provided for @api_error_141.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to create a trade for an amount that’s less than the minimum allowed amount'**
+  String get api_error_141;
+
+  /// No description provided for @api_error_142.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set a fiat limit that is less than minAmount when creating ad'**
+  String get api_error_142;
+
+  /// No description provided for @api_error_143.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set a fiat limit that is more than maxAmount when creating ad'**
+  String get api_error_143;
+
+  /// No description provided for @api_error_144.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set a fiat limit that is less than minAmount when updating ad'**
+  String get api_error_144;
+
+  /// No description provided for @api_error_145.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set a fiat limit that is more than maxAmount when updating ad'**
+  String get api_error_145;
+
+  /// No description provided for @api_error_147.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get affiliate data for user that doesn’t have the affiliate program enabled'**
+  String get api_error_147;
+
+  /// No description provided for @api_error_148.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set a telegram ID that’s already set'**
+  String get api_error_148;
+
+  /// No description provided for @api_error_149.
+  ///
+  /// In en, this message translates to:
+  /// **'Priority not specified for external withdrawal'**
+  String get api_error_149;
+
+  /// No description provided for @api_error_150.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to start a trade on an ad where the requesting user is blocked by the ad poster'**
+  String get api_error_150;
+
+  /// No description provided for @api_error_151.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to start a trade on an ad where the requesting user is not trusted by the ad poster'**
+  String get api_error_151;
+
+  /// No description provided for @api_error_152.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to cancel a trade that’s already closed'**
+  String get api_error_152;
+
+  /// No description provided for @api_error_153.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to release a trade that’s already closed'**
+  String get api_error_153;
+
+  /// No description provided for @api_error_154.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to request trades for an account that doesn’t exist'**
+  String get api_error_154;
+
+  /// No description provided for @api_error_155.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get list of trusted users for a user that doesn’t exist'**
+  String get api_error_155;
+
+  /// No description provided for @api_error_156.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get list of blocked users for a user that doesn’t exist'**
+  String get api_error_156;
+
+  /// No description provided for @api_error_157.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to set option-specific properties for a non-option ad'**
+  String get api_error_157;
+
+  /// No description provided for @api_error_158.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to create an option ad without setting option-specific properties'**
+  String get api_error_158;
+
+  /// No description provided for @api_error_159.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting to mark premium payment of trade doesn’t exist'**
+  String get api_error_159;
+
+  /// No description provided for @api_error_160.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to mark premium paid for a trade that doesn’t exist'**
+  String get api_error_160;
+
+  /// No description provided for @api_error_161.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting to exercise option doesn’t exist'**
+  String get api_error_161;
+
+  /// No description provided for @api_error_162.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to exercise option for a trade that doesn’t exist'**
+  String get api_error_162;
+
+  /// No description provided for @api_error_163.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting to confirm premium payment of trade doesn’t exist'**
+  String get api_error_163;
+
+  /// No description provided for @api_error_164.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to confirm premium paid for a trade that doesn’t exist'**
+  String get api_error_164;
+
+  /// No description provided for @api_error_165.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting to exercise trade with net settlement doesn’t exist'**
+  String get api_error_165;
+
+  /// No description provided for @api_error_166.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to exercise with net settlement a trade that doesn’t exist'**
+  String get api_error_166;
+
+  /// No description provided for @api_error_167.
+  ///
+  /// In en, this message translates to:
+  /// **'The current market price is less than or equal to the exercise price when netting a CALL trade. The trade is out-of-the-money by market standards, therefore cannot be netted. Use normal settlement if needed.'**
+  String get api_error_167;
+
+  /// No description provided for @api_error_168.
+  ///
+  /// In en, this message translates to:
+  /// **'User requesting to confirm cover payment of trade doesn’t exist'**
+  String get api_error_168;
+
+  /// No description provided for @api_error_169.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to confirm cover paid for a trade that doesn’t exist'**
+  String get api_error_169;
+
+  /// No description provided for @api_error_172.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to post an ad where the asset is the same as the ad currency'**
+  String get api_error_172;
+
+  /// No description provided for @api_error_174.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to exercise out-of-the-money PUT trade'**
+  String get api_error_174;
+
+  /// No description provided for @api_error_175.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to redeem coupon that doesn’t exist during registration'**
+  String get api_error_175;
+
+  /// No description provided for @api_error_176.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to redeem an expired coupon during registration'**
+  String get api_error_176;
+
+  /// No description provided for @api_error_177.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to redeem a coupon that’s out of stock during registration'**
+  String get api_error_177;
+
+  /// No description provided for @api_error_185.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get coupons for user that doesn’t exist'**
+  String get api_error_185;
+
+  /// No description provided for @api_error_186.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get more than 50 ads when getting ads by ID'**
+  String get api_error_186;
+
+  /// No description provided for @api_error_187.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to give an empty list of IDs when getting ads by ID'**
+  String get api_error_187;
+
+  /// No description provided for @api_error_188.
+  ///
+  /// In en, this message translates to:
+  /// **'Not a single of the requested ad IDs is a valid ID when getting ads by ID'**
+  String get api_error_188;
+
+  /// No description provided for @api_error_189.
+  ///
+  /// In en, this message translates to:
+  /// **'Not a single of the requested ads exist when getting ads by ID'**
+  String get api_error_189;
+
+  /// No description provided for @api_error_190.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to give an empty list of IDs when getting trades by ID'**
+  String get api_error_190;
+
+  /// No description provided for @api_error_191.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get more than 50 ads when getting trades by ID'**
+  String get api_error_191;
+
+  /// No description provided for @api_error_192.
+  ///
+  /// In en, this message translates to:
+  /// **'Not a single of the requested trade IDs is a valid ID when getting trades by ID'**
+  String get api_error_192;
+
+  /// No description provided for @api_error_193.
+  ///
+  /// In en, this message translates to:
+  /// **'Not a single of the requested trades exist when getting trades by ID'**
+  String get api_error_193;
+
+  /// No description provided for @api_error_194.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to generate public API token for user that doesn’t exist'**
+  String get api_error_194;
+
+  /// No description provided for @api_error_195.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect password when attempting to get public API token'**
+  String get api_error_195;
+
+  /// No description provided for @api_error_196.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get recent messages for user that doesn’t exist'**
+  String get api_error_196;
+
+  /// No description provided for @api_error_197.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get trade chat messages with “after” timestamp that’s outside of the allowed range'**
+  String get api_error_197;
+
+  /// No description provided for @api_error_198.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get account recent chat messages with “after” timestamp that’s outside of the allowed range'**
+  String get api_error_198;
+
+  /// No description provided for @api_error_199.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get public API token for user that doesn’t exist'**
+  String get api_error_199;
+
+  /// No description provided for @api_error_200.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to expire and delete public API token for user without a public API token'**
+  String get api_error_200;
+
+  /// No description provided for @api_error_201.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to update price formula for ad that doesn’t exist'**
+  String get api_error_201;
+
+  /// No description provided for @api_error_202.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get account transactions with “after” timestamp that’s outside of the allowed range'**
+  String get api_error_202;
+
+  /// No description provided for @api_error_203.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get reputation import data for account that doesn’t exist'**
+  String get api_error_203;
+
+  /// No description provided for @api_error_211.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to approve reputation import for user that doesn’t exist'**
+  String get api_error_211;
+
+  /// No description provided for @api_error_212.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to approve reputation import for user that isn’t in step 2 of the reputation import flow'**
+  String get api_error_212;
+
+  /// No description provided for @api_error_213.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to deny reputation import for user that doesn’t exist'**
+  String get api_error_213;
+
+  /// No description provided for @api_error_214.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to deny reputation import for user that isn’t in step 2 of the reputation import flow'**
+  String get api_error_214;
+
+  /// No description provided for @api_error_215.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to specify both country_code and currency_code when requesting most popular payment methods'**
+  String get api_error_215;
+
+  /// No description provided for @api_error_216.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to request most popular payment methods for a country_code that doesn’t exist'**
+  String get api_error_216;
+
+  /// No description provided for @api_error_217.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to request most popular payment methods for a currency_code that doesn’t exist'**
+  String get api_error_217;
+
+  /// No description provided for @api_error_218.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to open a trade on an ad that requires a verified email when the requesting user doesn’t have a verified email'**
+  String get api_error_218;
+
+  /// No description provided for @api_error_219.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to register with an email that’s from a disposable email provider'**
+  String get api_error_219;
+
+  /// No description provided for @api_error_220.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to change account email to an email from a disposable email provider'**
+  String get api_error_220;
+
+  /// No description provided for @api_error_221.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to mark all notifications read for a user that doesn’t exist'**
+  String get api_error_221;
+
+  /// No description provided for @api_error_222.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to request reputation code for a outside platform account that has already been imported'**
+  String get api_error_222;
+
+  /// No description provided for @api_error_223.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to update ad with specifying verificationRequired as true while verificationMsg is null'**
+  String get api_error_223;
+
+  /// No description provided for @api_error_224.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to update ad with specifying verificationMsg but the ad not requiring verification and the ad update request also not setting verificationRequired as true'**
+  String get api_error_224;
+
+  /// No description provided for @api_error_227.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to sanction a user that doesn’t exist'**
+  String get api_error_227;
+
+  /// No description provided for @api_error_228.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to sanction user with an admin account that doesn’t exist'**
+  String get api_error_228;
+
+  /// No description provided for @api_error_229.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove a sanction from a user that doesn’t exist'**
+  String get api_error_229;
+
+  /// No description provided for @api_error_230.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove a sanction from a user with an admin account that doesn’t exist'**
+  String get api_error_230;
+
+  /// No description provided for @api_error_231.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove a sanction from a user that doesn’t have any sanctions on them'**
+  String get api_error_231;
+
+  /// No description provided for @api_error_232.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to open a trade with a user that’s currently prohibited from trading due to a sanction'**
+  String get api_error_232;
+
+  /// No description provided for @api_error_233.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove feedback with ID that doesn’t exist'**
+  String get api_error_233;
+
+  /// No description provided for @api_error_234.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove feedback that’s already removed'**
+  String get api_error_234;
+
+  /// No description provided for @api_error_235.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove dispute status from a trade that doesn’t exist'**
+  String get api_error_235;
+
+  /// No description provided for @api_error_236.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to remove dispute status from a trade that isn’t disputed'**
+  String get api_error_236;
+
+  /// No description provided for @api_error_237.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to open a trade as a user that doesn’t exist when calling the trade opening endpoint as an admin and specifying the openAsUsername parameter'**
+  String get api_error_237;
+
+  /// No description provided for @api_error_240.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid address provided by the buyer when responding to a SELL-type ad'**
+  String get api_error_240;
+
+  /// No description provided for @api_error_241.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer attempting to provide an internal address when responding to a SELL-type ad (internal addresses are not allowed for the purpose of trade settlement)'**
+  String get api_error_241;
+
+  /// No description provided for @api_error_242.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid address provided by the buyer when creating a BUY-type ad'**
+  String get api_error_242;
+
+  /// No description provided for @api_error_244.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid address provided by the buyer when updating a BUY-type ad'**
+  String get api_error_244;
+
+  /// No description provided for @api_error_245.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer attempting to provide an internal address when updating a BUY-type ad (internal addresses are not allowed for the purpose of trade settlement)'**
+  String get api_error_245;
+
+  /// No description provided for @api_error_246.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to start a trade from a BUY-type ad that doesn’t specify the buyer settlement address'**
+  String get api_error_246;
+
+  /// No description provided for @api_error_247.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to release a trade from an account that’s prohibited from withdrawing due to sanctions'**
+  String get api_error_247;
+
+  /// No description provided for @api_error_248.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to release a trade when the amount of the trade isn’t enough to cover the settlement-related fees'**
+  String get api_error_248;
+
+  /// No description provided for @api_error_249.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to update a BUY-type ad that doesn’t have buyerSettlementAddress set without setting the buyerSettlementAddress parameter in the update request'**
+  String get api_error_249;
+
+  /// No description provided for @api_error_250.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid address provided when requesting withdrawal fee for BTC'**
+  String get api_error_250;
+
+  /// No description provided for @api_error_251.
+  ///
+  /// In en, this message translates to:
+  /// **'Fee level not provided when opening a trade by responding to a BTC SELL-type ad'**
+  String get api_error_251;
+
+  /// No description provided for @api_error_252.
+  ///
+  /// In en, this message translates to:
+  /// **'Fee level not provided when creating a BTC BUY-type ad'**
+  String get api_error_252;
+
+  /// No description provided for @api_error_253.
+  ///
+  /// In en, this message translates to:
+  /// **'Fee level not provided when updating a BTC BUY-type ad that doesn’t have a fee level set'**
+  String get api_error_253;
+
+  /// No description provided for @api_error_255.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get notifications with “after” timestamp that’s outside of the allowed range'**
+  String get api_error_255;
+
+  /// No description provided for @api_error_256.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to register a push notification token that already exists'**
+  String get api_error_256;
+
+  /// No description provided for @api_error_257.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to register a push notification token that isn’t valid'**
+  String get api_error_257;
+
+  /// No description provided for @api_error_258.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to register a push notification token for an account that already has 500 device tokens, delete one of the existing tokens before trying this again'**
+  String get api_error_258;
+
+  /// No description provided for @api_error_259.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a token that doesn’t exist or doesn’t belong to this user'**
+  String get api_error_259;
+
   /// No description provided for @account.
   ///
   /// In en, this message translates to:

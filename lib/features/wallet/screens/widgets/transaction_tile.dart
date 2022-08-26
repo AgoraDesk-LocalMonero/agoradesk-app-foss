@@ -30,7 +30,7 @@ class TransactionTile extends StatelessWidget with DateMixin, StringMixin {
           borderRadius: const BorderRadius.all(
             Radius.circular(12),
           ),
-          color: backgroundColor ?? context.colSurface5,
+          color: backgroundColor ?? context.colSurf5darkSurfLight,
         ),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
@@ -53,7 +53,7 @@ class TransactionTile extends StatelessWidget with DateMixin, StringMixin {
                         children: [
                           Text(
                             transaction.amount + ' ' + assetString,
-                            style: context.txtLabelLargePrimary10,
+                            style: context.txtLabelLargeP90P10,
                           ),
                           const SizedBox(height: 4),
                           Text(

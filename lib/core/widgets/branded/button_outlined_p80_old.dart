@@ -23,7 +23,7 @@ class ButtonOutlinedP80Old extends StatelessWidget {
         shadowColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),
-          side: BorderSide(width: 1, color: Theme.of(context).colorScheme.primary80),
+          side: BorderSide(width: 1, color: Theme.of(context).colorScheme.p80P70),
         ),
       ),
       child: Padding(
@@ -35,7 +35,7 @@ class ButtonOutlinedP80Old extends StatelessWidget {
             Text(
               title,
               style: Theme.of(context).textTheme.agoraLabelLarge.copyWith(
-                    color: Theme.of(context).colorScheme.primary80,
+                    color: Theme.of(context).colorScheme.p80P70,
                   ),
             ),
           ],

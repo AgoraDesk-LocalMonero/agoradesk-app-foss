@@ -27,6 +27,7 @@ extension ColorExtension on ColorScheme {
   Color get n95N10 => brightness == Brightness.dark ? ThemeColors.neutral95 : ThemeColors.neutral10;
   Color get n20SurfLight => brightness == Brightness.dark ? ThemeColors.neutral20 : ThemeColors.surface4Light;
   Color get n30P80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary80;
+  Color get n30P90 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary90;
   Color get p70P40 => brightness == Brightness.dark ? ThemeColors.primary70 : ThemeColors.primary40;
   Color get p80P40 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary40;
   Color get p90P10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
@@ -40,6 +41,7 @@ extension ColorExtension on ColorScheme {
   Color get surf4Surf1 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface1Light;
   Color get surf5Surf4 => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surface4Light;
   Color get surf2Surf5 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface5Light;
+  Color get surf3Surf1Light => brightness == Brightness.dark ? ThemeColors.surface3Dark : ThemeColors.surface1Light;
   Color get tertiaryP60 => brightness == Brightness.dark ? ThemeColors.tertiary : ThemeColors.primary40;
   Color get tonalP40 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary40;
   Color get whiteBlack => brightness == Brightness.dark ? Colors.white : Colors.black;
@@ -53,9 +55,7 @@ extension ColorExtension on ColorScheme {
 
   Color get surface4 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface4Light;
 
-  Color get surface5 => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surfaceLight;
-
-  Color get primary10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
+  Color get surf5darkSurfLight => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surfaceLight;
 
   Color get primary20 => brightness == Brightness.dark ? ThemeColors.primary20Dark : ThemeColors.primary20Light;
 
@@ -63,13 +63,13 @@ extension ColorExtension on ColorScheme {
 
   Color get primary70 => ThemeColors.primary70;
 
-  Color get primary80 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70Light;
+  Color get p80P70 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70Light;
 
   Color get primary90 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
 
   Color get primary95 => brightness == Brightness.dark ? ThemeColors.primary95Dark : ThemeColors.primary95Light;
 
-  Color get tonal => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90Light;
+  Color get tonalP90 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90Light;
 
   Color get yellow85 => brightness == Brightness.dark ? const Color(0xffFFC970) : const Color(0xffFFC970);
 

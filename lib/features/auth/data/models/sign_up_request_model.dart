@@ -11,6 +11,7 @@ class SignUpRequestModel with _$SignUpRequestModel {
   const factory SignUpRequestModel({
     String? username,
     @JsonKey(includeIfNull: false) String? email,
+    @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
     String? password,
     @JsonKey(includeIfNull: false) String? otp,
     @JsonKey(includeIfNull: false) String? captcha,

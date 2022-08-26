@@ -23,6 +23,7 @@ class AppParameters {
     required this.urlFaq,
     required this.urlReceipt,
     required this.isGoogleAvailable,
+    required this.isAgora,
   });
 
   final FlavorType flavor;
@@ -45,6 +46,7 @@ class AppParameters {
   final String urlFaq;
   final String urlReceipt;
   final bool isGoogleAvailable;
+  final bool isAgora;
 
   final mapboxToken = keysMapToken;
 
@@ -98,11 +100,11 @@ class AppParameters {
       'name': 'Italian',
       'origName': 'Italiano',
     },
-    'zh': {
+    'zh_TW': {
       'name': 'Chinese',
       'origName': '繁體中文',
     },
-    'zh_TW': {
+    'zh': {
       'name': 'Simple Chinese',
       'origName': '简体中文',
     },
@@ -111,7 +113,7 @@ class AppParameters {
   bool get isAgoraDesk => flavor == FlavorType.agoradesk;
 
   ///
-  /// state parameters that could be changed during app lifetime
+  /// state parameters that could be changed during app lifecycle
   ///
   String? openedTradeId;
 }

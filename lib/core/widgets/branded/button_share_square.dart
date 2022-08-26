@@ -24,7 +24,7 @@ class ButtonShareSquare extends StatelessWidget {
         minimumSize: size,
         maximumSize: size,
         fixedSize: size,
-        primary: context.colSurface5,
+        primary: context.colSurf5darkSurfLight,
         padding: const EdgeInsets.all(0),
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,

@@ -22,7 +22,7 @@ class ReceiptFeedbackLine extends StatelessWidget {
           child: ButtonOutlinedWithIconP80(
             icon: Icon(
               AgoraFont.invoice,
-              color: Theme.of(context).colorScheme.primary80,
+              color: Theme.of(context).colorScheme.p80P70,
             ),
             title: context.intl.trade250Sbreceipt250Sbbtn,
             insidePadding: const EdgeInsets.fromLTRB(4, 13, 4, 13),
@@ -35,7 +35,7 @@ class ReceiptFeedbackLine extends StatelessWidget {
           child: ButtonOutlinedWithIconP80(
             icon: Icon(
               AgoraFont.thumbs_up,
-              color: Theme.of(context).colorScheme.primary80,
+              color: Theme.of(context).colorScheme.p80P70,
             ),
             title: context.intl.trade250Sbleave8722Sbfeedback8722Sbbtn,
             insidePadding: const EdgeInsets.fromLTRB(4, 13, 4, 13),

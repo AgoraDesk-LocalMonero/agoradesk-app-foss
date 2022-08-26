@@ -11,7 +11,7 @@ class ValidatorMixin {
 
   final RegExp _alpha = RegExp(r'^[a-zA-Z]+$');
   final RegExp _alphanumeric = RegExp(r'^[a-zA-Z0-9]+$');
-  final RegExp _alphanumericUnderscore = RegExp(r'^[a-zA-Z0-9_]+$');
+  final RegExp _alphanumericUnderscoreHyphen = RegExp(r'^[a-zA-Z0-9-_]+$');
   final RegExp _numericUppercaseAlpha = RegExp(r'^[A-Z0-9]+$');
   final RegExp _numeric = RegExp(r'^-?[0-9]+$');
   final RegExp _multibyte = RegExp(r'[^\x00-\x7F]');
@@ -50,7 +50,7 @@ class ValidatorMixin {
     if (str == null || str.isEmpty) {
       return true;
     }
-    return _alphanumericUnderscore.hasMatch(str) && str.length <= 16 && str.length >= 3;
+    return _alphanumericUnderscoreHyphen.hasMatch(str) && str.length <= 16 && str.length >= 3;
   }
 
   /// check username with null
@@ -58,7 +58,7 @@ class ValidatorMixin {
     if (str == null) {
       return false;
     }
-    return _alphanumericUnderscore.hasMatch(str) && str.length <= 16 && str.length >= 3;
+    return _alphanumericUnderscoreHyphen.hasMatch(str) && str.length <= 16 && str.length >= 3;
   }
 
   /// check if the string is an email or empty

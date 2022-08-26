@@ -163,7 +163,7 @@ class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
                   padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
                   child: Text(
                     code,
-                    style: context.txtLabelLargePrimary10,
+                    style: context.txtLabelLargeP90P10,
                   ),
                 ),
               ),

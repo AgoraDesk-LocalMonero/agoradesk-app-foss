@@ -29,7 +29,7 @@ class LineOnlineDot extends StatelessWidget with DateMixin {
         Expanded(
           child: Text(
             text,
-            style: context.txtBodyXSmallN90,
+            style: context.txtBodyXSmallN90N10,
           ),
         ),
       ],

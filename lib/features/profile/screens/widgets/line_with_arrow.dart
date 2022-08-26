@@ -26,7 +26,7 @@ class LineWithArrow extends StatelessWidget {
               Expanded(
                   child: Text(
                 title,
-                style: context.txtLabelLargePrimary10,
+                style: context.txtLabelLargeP90P10,
               )),
               Icon(
                 AgoraFont.chevron_right,

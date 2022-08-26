@@ -50,7 +50,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
-import 'package:new_version/new_version.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:plausible_analytics/plausible_analytics.dart';
@@ -252,8 +251,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
     _notificationsService.startListenAwesomeNotificationsPressed();
-    _checkNewVersion();
-    // eventBus.fire(const AfterAppInitEvent());
   }
 
   Future<void> _afterConfigInit() async {}
@@ -302,30 +299,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     );
   }
 
-  Future<void> _checkNewVersion({
-    Duration delay = const Duration(milliseconds: 2000),
-  }) async {
-    if (kDebugMode) {
-      return;
-    }
-    await Future.delayed(delay);
-    final newVersion = NewVersion(
-      iOSId: GetIt.I<AppParameters>().packageName,
-      androidId: GetIt.I<AppParameters>().packageName,
-    );
-    final context = router.navigatorKey.currentContext;
-    if (context != null) {
-      final versionStatus = await newVersion.getVersionStatus();
-      if (versionStatus != null && versionStatus.canUpdate) {
-        newVersion.showUpdateDialog(
-          context: context,
-          versionStatus: versionStatus,
-          // allowDismissal: false,
-        );
-      }
-    }
-  }
-
   ///
   /// Handle 401 error and try to sign out
   ///
@@ -343,9 +316,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
             await _authService.logOut();
           }
         }
-        // if (e.type == DioErrorType.other) {
-        //   _handleConnectivity(ConnectivityResult.none);
-        // }
         return handler.next(e);
       }),
     );
@@ -357,11 +327,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void _initAuthHandler() {
     _authService.onAuthStateChange.listen((authState) {
       debugPrint('++++[$runtimeType] AuthState: $authState');
-      final user = _authService.user.valueOrNull;
-      if (user?.id != null) {
-        // _mixpanel.identify(user!.id!);
-        // user.precache(context);
-      }
       // handle login & logout
       switch (authState) {
         case AuthState.loggedOut:
@@ -627,7 +592,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         Provider.value(value: _placesSearch),
         Provider.value(value: _notificationsService),
         ChangeNotifierProvider.value(value: appState),
-        StreamProvider.value(value: _authService.user, initialData: null),
+        // StreamProvider.value(value: _authService.user, initialData: null),
       ];
 
   @override

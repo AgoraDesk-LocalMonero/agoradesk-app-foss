@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -110,6 +111,7 @@ class SignUpViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin
       final request = SignUpRequestModel(
         username: _username!,
         password: _password,
+        frontType: GetIt.I<AppParameters>().flavor.title(),
         email: _email,
         captcha: _captchaInput,
         captchaCookie: _captchaCookie,

@@ -28,7 +28,7 @@ class LineWithSwitcher extends StatelessWidget {
               Expanded(
                   child: Text(
                 title,
-                style: context.txtLabelLargePrimary10,
+                style: context.txtLabelLargeP90P10,
               )),
               SizedBox(
                 height: 20,

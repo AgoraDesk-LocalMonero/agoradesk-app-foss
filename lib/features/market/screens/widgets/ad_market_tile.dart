@@ -5,8 +5,8 @@ import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_share_square.dart';
-import 'package:agoradesk/core/widgets/branded/container_surface2_radius12_border1.dart';
-import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_shadow.dart';
+import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
+import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_shadow.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/market/screens/widgets/line_online_dot.dart';
@@ -29,7 +29,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   @override
   Widget build(BuildContext context) {
     final halfWidth = (MediaQuery.of(context).size.width - (16 * 2 + 12 * 2 + 12 * 2 + 26)) / 2;
-    return ContainerSurface3Radius12Shadow(
+    return ContainerSurface5Radius12Shadow(
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: onPressed,
@@ -69,14 +69,20 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                       size: 12,
                     ),
                     const SizedBox(width: 4),
-                    Text(ad.profile?.allCounts.toString() ?? ''),
+                    Text(
+                      ad.profile?.allCounts.toString() ?? '',
+                      style: context.txtBodyXSmallN90N10.copyWith(height: 1),
+                    ),
                     const SizedBox(width: 16),
                     const Icon(
                       CupertinoIcons.hand_thumbsup,
                       size: 12,
                     ),
                     const SizedBox(width: 4),
-                    Text(ad.profile?.feedbackScore.toString() ?? ''),
+                    Text(
+                      ad.profile?.feedbackScore.toString() ?? '',
+                      style: context.txtBodyXSmallN90N10.copyWith(height: 1),
+                    ),
                     const SizedBox(width: 10),
                     ButtonShareSquare(link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}'),
                   ],
@@ -89,7 +95,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
 
   Widget _buildContent(BuildContext context, double halfWidth) {
     const verticalPadding = 4.0;
-    return ContainerSurface2Radius12Border1(
+    return ContainerSurface3Radius12Border1(
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Row(

@@ -51,7 +51,7 @@ class ButtonFilledWithIconTonal extends StatelessWidget {
                   const SizedBox(width: 10),
                   Text(
                     title,
-                    style: context.txtLabelLargePrimary10.copyWith(height: 1),
+                    style: context.txtLabelLargeP90P10.copyWith(height: 1),
                   ),
                 ],
               ),

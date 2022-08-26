@@ -17,7 +17,7 @@ class ContainerSurface5Radius12 extends StatelessWidget {
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
-        color: Theme.of(context).colorScheme.surface5,
+        color: Theme.of(context).colorScheme.surf5darkSurfLight,
       ),
       child: child,
     );

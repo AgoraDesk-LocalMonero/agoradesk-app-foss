@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as dev;
 import 'dart:math';
 
 import 'package:agoradesk/core/api/api_client.dart';
@@ -8,7 +9,6 @@ import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
-import 'package:agoradesk/features/auth/models/user_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
@@ -43,10 +43,6 @@ class AuthService with FileUtilsMixin {
   final SecureStorage _secureStorage;
   final AppState _appState;
 
-  final BehaviorSubject<UserModel> _userController = BehaviorSubject<UserModel>();
-
-  ValueStream<UserModel> get user => _userController.stream;
-
   final BehaviorSubject<AuthState> _authStateController = BehaviorSubject<AuthState>.seeded(AuthState.initial);
 
   ValueStream<AuthState> get onAuthStateChange => _authStateController.stream;
@@ -55,7 +51,7 @@ class AuthService with FileUtilsMixin {
 
   set authState(AuthState v) => _authStateController.add(v);
 
-  bool get isAuthenticated => _api.accessToken != null && user.hasValue;
+  bool get isAuthenticated => _api.accessToken != null;
 
   UserLocalSettings get userSettings => _userSettings;
 
@@ -63,49 +59,16 @@ class AuthService with FileUtilsMixin {
 
   UserService get userService => UserService(api: _api);
 
-  // final Box<UserSettings> box = ObjectBox.s.box<UserSettings>();
-  // late UserSettings userSettings;
-
   ///
   /// Try to load user by stored access token
   /// TODO: check expires_in
   ///
   Future<void> init() async {
-    // if (box.getAll().isNotEmpty) {
-    //   userSettings = box.getAll()[0];
-    // } else {
-    //   userSettings = UserSettings();
-    // }
-
-    int startTime = 0;
-    if (kDebugMode) {
-      startTime = DateTime.now().millisecondsSinceEpoch;
-    }
-
     debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
-
-    if (_api.accessToken != null) {
-      await _getUser();
-      if (_userController.hasValue) {
-        _authStateController.add(AuthState.loggedIn);
-      }
-    } else {
-      _userController.add(UserModel(id: '', email: ''));
-    }
-
-    if (kDebugMode) {
-      final ms = DateTime.now().millisecondsSinceEpoch - startTime;
-      debugPrint('[$runtimeType] initialized ($ms ms)...');
-    }
-  }
-
-  void setUser(UserModel user) {
-    _userController.add(user);
   }
 
   @mustCallSuper
   void dispose() {
-    _userController.close();
     _authStateController.close();
   }
 
@@ -252,9 +215,13 @@ class AuthService with FileUtilsMixin {
           headers: cookie,
         ),
       );
-      await _handleTokenResponse(resp);
-      _saveUserName(request.username!);
-      return const Either.right(true);
+      final resToken = await _handleTokenResponse(resp);
+      if (resToken) {
+        _saveUserName(request.username!);
+        return const Either.right(true);
+      } else {
+        return const Either.right(false);
+      }
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
@@ -271,7 +238,7 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('[cookie in authService, login] ${request.captchaCookie}');
+      debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
       final resp = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
@@ -279,9 +246,14 @@ class AuthService with FileUtilsMixin {
           headers: cookie,
         ),
       );
-      await _handleTokenResponse(resp);
-      _saveUserName(request.username!);
-      return const Either.right(true);
+      dev.log('++++[login respone] ${resp.statusCode} - ${resp.data} - ${resp.headers}');
+      final resToken = await _handleTokenResponse(resp);
+      if (resToken) {
+        _saveUserName(request.username!);
+        return const Either.right(true);
+      } else {
+        return const Either.right(false);
+      }
     } catch (e) {
       final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
@@ -349,27 +321,8 @@ class AuthService with FileUtilsMixin {
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
     _authStateController.add(AuthState.loggedOut);
-    _userController.add(UserModel(id: '', email: ''));
     _api.accessToken = null;
     return true;
-  }
-
-  ///
-  /// Get current authenticated user
-  ///
-  Future<void> _getUser() async {
-    debugPrint('[$runtimeType] load user...');
-    try {
-      // final resp = await _api.client.get<Map>('/user');
-      // if (!resp.data!.containsKey('id')) {
-      //   throw Exception('Bad Response');
-      // }
-      _userController.add(UserModel(id: 'id', email: 'email'));
-      debugPrint('[$runtimeType] $user');
-    } catch (e, stacktrace) {
-      debugPrint('[$runtimeType] Error 12: $e');
-      debugPrintStack(stackTrace: stacktrace);
-    }
   }
 
   void _saveUserName(String username) {
@@ -379,15 +332,14 @@ class AuthService with FileUtilsMixin {
 
   Future<bool> _handleTokenResponse(Response<Map> resp) async {
     try {
-      if ((resp.statusCode ?? 0) ~/ 100 == 2 && resp.data!['data'].containsKey('token')) {
+      if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
         _setToken(resp.data!['data']['token']);
-        await _getUser();
+        // await _getUser();
 
-        if (_userController.hasValue && _api.accessToken != null) {
+        if (_api.accessToken != null) {
           showPinSetUp = true;
           _authStateController.add(AuthState.loggedIn);
         }
-
         return true;
       }
     } catch (e) {

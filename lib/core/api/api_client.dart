@@ -105,13 +105,15 @@ class ApiClient {
 
           DioError? finalError;
           if (statusCode == 401) {
+            print('++++[401 headers] ${error.response?.headers}');
+            print('++++[401 data] ${error.response?.data}');
             eventBus.fire(const LogOutEvent());
           }
 
           if ([400, 422, 401].contains(statusCode)) {
             final message = ApiHelper.parseErrorToString(error);
             if (message != null) {
-              debugPrint('[api_client ERROR message] statusCode [400, 422, 401] - $message');
+              debugPrint('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
 
               finalError = DioError(
                 error: jsonEncode(message),
@@ -119,9 +121,9 @@ class ApiClient {
                 response: error.response,
               );
 
-              if (kDebugMode) {
-                eventBus.fire(FlashEvent.error(message));
-              }
+              // if (kDebugMode) {
+              //   eventBus.fire(FlashEvent.error(message));
+              // }
             }
           } else if (statusCode == 500) {
             if (kDebugMode) {
@@ -129,7 +131,7 @@ class ApiClient {
             }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
-            debugPrint('[api_client ERROR message] statusCode == null, $message');
+            debugPrint('++++[api_client ERROR message] statusCode == null, $message');
             if (kDebugMode) {
               eventBus.fire(FlashEvent.error(message));
             }

@@ -94,7 +94,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
                                   title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                                   icon: Icon(
                                     AgoraFont.check_circle_alt,
-                                    color: Theme.of(context).colorScheme.primary80,
+                                    color: Theme.of(context).colorScheme.p80P70,
                                   ),
                                   onPressed: () => _cancelTradeDialog(model, context),
                                 ),
@@ -185,7 +185,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
                       title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                       icon: Icon(
                         AgoraFont.check_circle_alt,
-                        color: Theme.of(context).colorScheme.primary80,
+                        color: Theme.of(context).colorScheme.p80P70,
                       ),
                       loading: model.cancelingTrade,
                       onPressed: () => _cancelTradeDialog(model, context),
@@ -351,7 +351,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
                               title: context.intl.trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle,
                               icon: Icon(
                                 AgoraFont.check_circle_alt,
-                                color: Theme.of(context).colorScheme.primary80,
+                                color: Theme.of(context).colorScheme.p80P70,
                               ),
                               opened: false,
                               content: Text(
@@ -367,7 +367,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
                               title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                               icon: Icon(
                                 AgoraFont.check_circle_alt,
-                                color: Theme.of(context).colorScheme.primary80,
+                                color: Theme.of(context).colorScheme.p80P70,
                               ),
                               onPressed: () => _cancelTradeDialog(model, context),
                             ),
