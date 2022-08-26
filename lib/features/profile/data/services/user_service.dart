@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
@@ -215,6 +216,7 @@ class UserService {
     try {
       final resp = await _api.client.get('/trusted');
       if (resp.statusCode == 200) {
+        log('++++++++++++++++++++++++++++++11 -- ${resp}');
         List<dynamic> respDecoded = jsonDecode(jsonEncode(resp.data['data']));
         final List<AccountInfoModel> resList = respDecoded.map((e) => AccountInfoModel.fromJson(e)).toList();
         return Either.right(resList);
