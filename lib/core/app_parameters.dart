@@ -98,11 +98,11 @@ class AppParameters {
       'name': 'Italian',
       'origName': 'Italiano',
     },
-    'zh': {
+    'zh_TW': {
       'name': 'Chinese',
       'origName': '繁體中文',
     },
-    'zh_TW': {
+    'zh': {
       'name': 'Simple Chinese',
       'origName': '简体中文',
     },

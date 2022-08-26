@@ -18,7 +18,7 @@ class DialogCaptcha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dialogHeight = MediaQuery.of(context).size.height * 0.36;
+    final dialogHeight = MediaQuery.of(context).size.height * 0.44;
     return Dialog(
         insetPadding: const EdgeInsets.all(24),
         backgroundColor: Theme.of(context).colorScheme.surface4,
