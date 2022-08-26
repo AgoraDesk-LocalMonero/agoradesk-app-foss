@@ -76,7 +76,6 @@ void main() async {
   );
 
   if (kDebugMode) {
-    // debugRepaintRainbowEnabled = true;
     runApp(const App());
     return;
   }
@@ -86,6 +85,7 @@ void main() async {
       options
         ..dsn = GetIt.I<AppParameters>().sentryDsn
         ..reportSilentFlutterErrors = true
+        ..attachStacktrace = false
         ..tracesSampleRate = 1.0;
     },
     appRunner: () => runApp(const App()),

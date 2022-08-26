@@ -111,7 +111,7 @@ class AppParameters {
   bool get isAgoraDesk => flavor == FlavorType.agoradesk;
 
   ///
-  /// state parameters that could be changed during app lifetime
+  /// state parameters that could be changed during app lifecycle
   ///
   String? openedTradeId;
 }

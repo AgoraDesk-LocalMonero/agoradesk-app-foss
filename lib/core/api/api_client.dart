@@ -105,6 +105,8 @@ class ApiClient {
 
           DioError? finalError;
           if (statusCode == 401) {
+            print('++++[401 headers] ${error.response?.headers}');
+            print('++++[401 data] ${error.response?.data}');
             eventBus.fire(const LogOutEvent());
           }
 

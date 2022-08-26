@@ -28,7 +28,7 @@ dependencies:
   rxdart: ^0.27.3
   timeago: ^3.2.2
   provider: ^6.0.1
-  sentry_flutter: ^6.2.2
+  sentry_flutter: ^6.9.1
   collection: ^1.15.0
   rating_dialog: ^2.0.3
   visibility_detector: ^0.3.3
