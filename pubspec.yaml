@@ -32,11 +32,9 @@ dependencies:
   collection: ^1.15.0
   rating_dialog: ^2.0.3
   visibility_detector: ^0.3.3
-  permission_handler: ^8.3.0
   cached_network_image: ^3.2.0
   json_annotation: ^4.4.0
   share_plus: ^4.0.4
-  new_version: ^0.2.3
   objectbox: ^1.5.0
   objectbox_flutter_libs: ^1.4.1
   overlay_support: ^2.0.1

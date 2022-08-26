@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as dev;
 import 'dart:math';
 
 import 'package:agoradesk/core/api/api_client.dart';
@@ -42,10 +43,6 @@ class AuthService with FileUtilsMixin {
   final SecureStorage _secureStorage;
   final AppState _appState;
 
-  // final BehaviorSubject<UserModel> _userController = BehaviorSubject<UserModel>();
-  //
-  // ValueStream<UserModel> get user => _userController.stream;
-
   final BehaviorSubject<AuthState> _authStateController = BehaviorSubject<AuthState>.seeded(AuthState.initial);
 
   ValueStream<AuthState> get onAuthStateChange => _authStateController.stream;
@@ -62,49 +59,16 @@ class AuthService with FileUtilsMixin {
 
   UserService get userService => UserService(api: _api);
 
-  // final Box<UserSettings> box = ObjectBox.s.box<UserSettings>();
-  // late UserSettings userSettings;
-
   ///
   /// Try to load user by stored access token
   /// TODO: check expires_in
   ///
   Future<void> init() async {
-    // if (box.getAll().isNotEmpty) {
-    //   userSettings = box.getAll()[0];
-    // } else {
-    //   userSettings = UserSettings();
-    // }
-
-    // int startTime = 0;
-    // if (kDebugMode) {
-    //   startTime = DateTime.now().millisecondsSinceEpoch;
-    // }
-
     debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
-
-    // if (_api.accessToken != null) {
-    //   // await _getUser();
-    //   if (_userController.hasValue) {
-    //     _authStateController.add(AuthState.loggedIn);
-    //   }
-    // } else {
-    //   _userController.add(UserModel(id: '', email: ''));
-    // }
-    //
-    // if (kDebugMode) {
-    //   final ms = DateTime.now().millisecondsSinceEpoch - startTime;
-    //   debugPrint('[$runtimeType] initialized ($ms ms)...');
-    // }
   }
-
-  // void setUser(UserModel user) {
-  //   _userController.add(user);
-  // }
 
   @mustCallSuper
   void dispose() {
-    // _userController.close();
     _authStateController.close();
   }
 
@@ -274,7 +238,7 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('[cookie in authService, login] ${request.captchaCookie}');
+      debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
       final resp = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
@@ -282,6 +246,7 @@ class AuthService with FileUtilsMixin {
           headers: cookie,
         ),
       );
+      dev.log('++++[login respone] ${resp.statusCode} - ${resp.data} - ${resp.headers}');
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);
@@ -356,28 +321,9 @@ class AuthService with FileUtilsMixin {
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
     _authStateController.add(AuthState.loggedOut);
-    // _userController.add(UserModel(id: '', email: ''));
     _api.accessToken = null;
     return true;
   }
-
-  // ///
-  // /// Get current authenticated user
-  // ///
-  // Future<void> _getUser() async {
-  //   debugPrint('[$runtimeType] load user...');
-  //   try {
-  //     // final resp = await _api.client.get<Map>('/user');
-  //     // if (!resp.data!.containsKey('id')) {
-  //     //   throw Exception('Bad Response');
-  //     // }
-  //     _userController.add(UserModel(id: 'id', email: 'email'));
-  //     debugPrint('[$runtimeType] $user');
-  //   } catch (e, stacktrace) {
-  //     debugPrint('[$runtimeType] Error 12: $e');
-  //     debugPrintStack(stackTrace: stacktrace);
-  //   }
-  // }
 
   void _saveUserName(String username) {
     _userSettings.username = username;

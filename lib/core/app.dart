@@ -316,9 +316,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
             await _authService.logOut();
           }
         }
-        // if (e.type == DioErrorType.other) {
-        //   _handleConnectivity(ConnectivityResult.none);
-        // }
         return handler.next(e);
       }),
     );
@@ -330,11 +327,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void _initAuthHandler() {
     _authService.onAuthStateChange.listen((authState) {
       debugPrint('++++[$runtimeType] AuthState: $authState');
-      // final user = _authService.user.valueOrNull;
-      // if (user?.id != null) {
-      //   // _mixpanel.identify(user!.id!);
-      //   // user.precache(context);
-      // }
       // handle login & logout
       switch (authState) {
         case AuthState.loggedOut:
