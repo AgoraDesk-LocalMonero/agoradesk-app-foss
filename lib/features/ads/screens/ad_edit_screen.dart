@@ -14,6 +14,7 @@ import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
 import 'package:agoradesk/core/widgets/branded/agora_switcher.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
+import 'package:agoradesk/core/widgets/branded/cash_textfield.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
@@ -58,14 +59,6 @@ class _AdEditScreenState extends State<AdEditScreen>
     with CountryInfoMixin, ClipboardMixin, DateMixin, TickerProviderStateMixin, UrlMixin, PaymentMethodsMixin {
   late final AddEditAdViewModel _model;
   late FormulaControlsViewModel _formulaControlsViewModel;
-
-  OutlineInputBorder get errorBorder => const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
-          width: 2.0,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
-      );
 
   @override
   void initState() {
@@ -206,24 +199,39 @@ class _AdEditScreenState extends State<AdEditScreen>
                     onChanged: (val) => model.setSelectedCurrency(val),
                   ),
             const SizedBox(height: 12),
-            Text(
-              context.intl.post8722Sbad250Sbpayment8722Sbmethod250Sbtitle,
-              style: context.txtBodySmallN60,
-            ),
-            const SizedBox(height: 8),
-            DropdownSearch<OnlineProvider?>(
-              dropdownButtonProps: context.dropdownButtonProps,
-              dropdownDecoratorProps: context.dropdownDecoration,
-              popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
-              itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-              asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
-              // showSearchBox: true,
-              selectedItem: model.selectedOnlineProvider,
-              onChanged: (val) => model.setSelectedOnlineProvider(val),
-            ),
+            _buildDropdownOnlineProvider(context, model),
           ],
         ),
       ),
+    );
+  }
+
+  _buildDropdownOnlineProvider(BuildContext context, AddEditAdViewModel model) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 12),
+        Text(
+          context.intl.post8722Sbad250Sbpayment8722Sbmethod250Sbtitle,
+          style: context.txtBodySmallN60,
+        ),
+        const SizedBox(height: 8),
+        model.isLocalAd
+            ? const CashTextField()
+            : DropdownSearch<OnlineProvider?>(
+                dropdownButtonProps: context.dropdownButtonProps,
+                dropdownDecoratorProps: context.dropdownDecoration,
+                popupProps: PopupProps.dialog(
+                  dialogProps: context.dropdownDialogProps,
+                  showSearchBox: true,
+                ),
+                itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
+                asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
+                // showSearchBox: true,
+                selectedItem: model.selectedOnlineProvider,
+                onChanged: (val) => model.updateOnlineProvider(val),
+              ),
+      ],
     );
   }
 

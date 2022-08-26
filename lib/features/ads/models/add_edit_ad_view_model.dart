@@ -257,8 +257,10 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
       tradeType = ad!.tradeType;
       isLocalAd = ad!.tradeType.isLocal();
       selectedCountryCode = ad!.countryCode;
-      selectedOnlineProvider =
-          OnlineProvider(url: '', code: ad!.onlineProvider!, name: ad!.onlineProvider!, currencies: []);
+      if (!isLocalAd) {
+        selectedOnlineProvider =
+            OnlineProvider(url: '', code: ad!.onlineProvider!, name: ad!.onlineProvider!, currencies: []);
+      }
       selectedCurrency = CurrencyModel(code: ad!.currency, name: '', altcoin: true);
       if (ad?.minAmount != null) {
         ctrl4MinAmount.text = '${ad!.minAmount}';
