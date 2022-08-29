@@ -1,7 +1,8 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:io';
 import 'dart:isolate';
-import 'dart:math';
+import 'dart:math' as math;
 
 import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
@@ -305,6 +306,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void _initHttpHandler() {
     _api.client.interceptors.add(
       InterceptorsWrapper(onError: (e, handler) async {
+        log('[InterceptorsWrapper] -  ${e.response?.statusCode} - ${e.response?.headers} - $e');
         if (e.response?.statusCode == 401) {
           final context = router.navigatorKey.currentContext;
           if (_authService.isAuthenticated) {
@@ -704,7 +706,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
       await AwesomeNotifications().createNotification(
         content: NotificationContent(
-          id: Random().nextInt(1000000),
+          id: math.Random().nextInt(1000000),
           channelKey: kNotificationsChannel,
           title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
           body: push.msg,

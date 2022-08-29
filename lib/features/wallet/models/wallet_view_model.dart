@@ -214,12 +214,12 @@ class WalletViewModel extends BaseViewModel {
       if (_btcPrice == null) {
         return null;
       }
-      return double.tryParse(_balanceBtc)!;
+      return double.tryParse(_balanceBtc);
     }
     if (_xmrPrice == null) {
       return null;
     }
-    return double.tryParse(_balanceXmr)!;
+    return double.tryParse(_balanceXmr);
   }
 
   String balanceCost(Asset asset) {

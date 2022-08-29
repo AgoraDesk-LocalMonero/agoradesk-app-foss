@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -16,6 +17,12 @@ class TradingPartnersViewModel extends BaseViewModel with ValidatorMixin, ErrorP
 
   late final TabController tabController;
   final pageController = PageController();
+
+  PaginationMeta? paginationMetaBlocked;
+  bool hasMorePagesBlocked = false;
+
+  PaginationMeta? paginationMetaTrusted;
+  bool hasMorePagesTrusted = false;
 
   bool _loadingTrusted = true;
   bool _loadingBlocked = true;
@@ -52,31 +59,57 @@ class TradingPartnersViewModel extends BaseViewModel with ValidatorMixin, ErrorP
         );
       }
     });
-    await _getTrusted();
-    await _getBlocked();
+    await getTrusted();
+    await getBlocked();
     super.init();
   }
 
-  Future _getTrusted() async {
-    loadingTrusted = true;
-    final res = await _userService.getTrusted();
+  Future getTrusted({bool loadMore = false}) async {
+    if (!loadMore) {
+      loadingTrusted = true;
+    }
+    final res = await _userService.getTrusted(page: loadMore ? (paginationMetaBlocked?.currentPage ?? 0) + 1 : 0);
     loadingTrusted = false;
     if (res.isRight) {
-      trustedUsers.clear();
-      trustedUsers.addAll(res.right);
+      paginationMetaBlocked = res.right.pagination;
+      if (paginationMetaBlocked != null) {
+        if (paginationMetaBlocked!.currentPage < paginationMetaBlocked!.totalPages) {
+          hasMorePagesBlocked = true;
+        } else {
+          hasMorePagesBlocked = false;
+        }
+      }
+
+      if (!loadMore) {
+        trustedUsers.clear();
+      }
+      trustedUsers.addAll(res.right.data);
       notifyListeners();
     } else {
       handleApiError(res.left, context);
     }
   }
 
-  Future _getBlocked() async {
-    loadingBlocked = true;
-    final res = await _userService.getBlocked();
+  Future getBlocked({bool loadMore = false}) async {
+    if (!loadMore) {
+      loadingBlocked = true;
+    }
+    final res = await _userService.getBlocked(page: loadMore ? (paginationMetaBlocked?.currentPage ?? 0) + 1 : 0);
     loadingBlocked = false;
     if (res.isRight) {
-      blockedUsers.clear();
-      blockedUsers.addAll(res.right);
+      paginationMetaBlocked = res.right.pagination;
+      if (paginationMetaBlocked != null) {
+        if (paginationMetaBlocked!.currentPage < paginationMetaBlocked!.totalPages) {
+          hasMorePagesBlocked = true;
+        } else {
+          hasMorePagesBlocked = false;
+        }
+      }
+
+      if (!loadMore) {
+        blockedUsers.clear();
+      }
+      blockedUsers.addAll(res.right.data);
       notifyListeners();
     } else {
       handleApiError(res.left, context);
