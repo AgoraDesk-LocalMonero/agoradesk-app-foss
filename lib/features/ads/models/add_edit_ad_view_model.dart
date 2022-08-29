@@ -697,6 +697,7 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
   }
 
   void _checkTradeTypesForPossibility() {
+    isLocalAd = _tradeType.isLocal();
     if (_tradeType.isSell()) {
       screen1IsReady = false;
       if (asset == Asset.BTC && _balanceBtc >= kBtcAmountToSell) {

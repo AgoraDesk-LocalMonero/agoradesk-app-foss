@@ -36,7 +36,7 @@ mixin PaymentMethodsMixin {
       }
       return paymentMethodNames(context)[onlineProvider ?? ''];
     } catch (e) {
-      debugPrint('[getPaymentMethodName error] $e');
+      debugPrint('[getPaymentMethodName error - $onlineProvider] $e');
       return onlineProvider ?? '';
     }
   }

@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
 /// Wallet data polling
-const _kWalletPollingSeconds = 120;
+const _kWalletPollingSeconds = 10;
 
 class PollingService with ErrorParseMixin {
   PollingService({
