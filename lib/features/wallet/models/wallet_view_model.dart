@@ -13,7 +13,6 @@ import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart'
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -122,7 +121,7 @@ class WalletViewModel extends BaseViewModel {
           _addressBtc = resBtc.right.receivingAddress;
           _balanceXmr = resXmr.right.balance.toString();
           _addressXmr = resXmr.right.receivingAddress;
-          joinAllTransactions(resBtc.right, resXmr.right);
+          joinAllTransactions(resXmr.right, resBtc.right);
         } else {
           if (resBtc.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
@@ -136,6 +135,7 @@ class WalletViewModel extends BaseViewModel {
         if (resXmr.isRight) {
           _balanceXmr = resXmr.right.balance.toString();
           _addressXmr = resXmr.right.receivingAddress;
+          joinAllTransactions(resXmr.right, null);
         } else {
           if (resXmr.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
@@ -147,16 +147,18 @@ class WalletViewModel extends BaseViewModel {
     }
   }
 
-  void joinAllTransactions(WalletBalanceModel btc, WalletBalanceModel xmr) {
+  void joinAllTransactions(WalletBalanceModel xmr, WalletBalanceModel? btc) {
     transactions.clear();
-    if (btc.receivedTransactions != null) {
-      for (final val in btc.receivedTransactions!) {
-        transactions.add(val.copyWith(isSent: false, asset: Asset.BTC));
+    if (GetIt.I<AppParameters>().isAgora) {
+      if (btc?.receivedTransactions != null) {
+        for (final val in btc!.receivedTransactions!) {
+          transactions.add(val.copyWith(isSent: false, asset: Asset.BTC));
+        }
       }
-    }
-    if (btc.sentTransactions != null) {
-      for (final val in btc.sentTransactions!) {
-        val.copyWith(asset: Asset.BTC);
+      if (btc?.sentTransactions != null) {
+        for (final val in btc!.sentTransactions!) {
+          val.copyWith(asset: Asset.BTC);
+        }
       }
     }
     if (xmr.receivedTransactions != null) {
@@ -184,15 +186,23 @@ class WalletViewModel extends BaseViewModel {
     if (!_loadingDeposits) {
       _loadingDeposits = true;
       deposits.clear();
-      final resBtc = await _walletService.getIncomingDeposits(Asset.BTC);
-      final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
+      if (GetIt.I<AppParameters>().isAgora) {
+        final resBtc = await _walletService.getIncomingDeposits(Asset.BTC);
+        final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
+        _loadingDeposits = false;
+        if (resBtc.isRight || resXMR.isRight) {
+          deposits.addAll(resBtc.right);
+          deposits.addAll(resXMR.right);
+        }
+      } else {
+        final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
+        if (resXMR.isRight) {
+          deposits.addAll(resXMR.right);
+        }
+      }
       _loadingDeposits = false;
-      if (resBtc.isRight || resXMR.isRight) {
-        deposits.addAll(resBtc.right);
-        deposits.addAll(resXMR.right);
-      } else {}
-      notifyListeners();
     }
+    notifyListeners();
   }
 
   double? assetPrice(Asset asset) {
