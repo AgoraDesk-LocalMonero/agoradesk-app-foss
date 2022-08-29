@@ -437,7 +437,10 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   void managePressToAd(AdModel adIn, BuildContext context) async {
     if (adUpdatingId != adIn.id) {
       adUpdatingId = adIn.id;
-      await AutoRouter.of(context).push(AdInfoRoute(ad: adIn));
+      await AutoRouter.of(context).push(AdInfoRoute(
+        ad: adIn,
+        onGlobalVacation: adIn.tradeType.isSell() ? settingsModel.sellingVacation : settingsModel.buyingVacation,
+      ));
       await indicatorKey.currentState?.show();
       adUpdatingId = null;
     }

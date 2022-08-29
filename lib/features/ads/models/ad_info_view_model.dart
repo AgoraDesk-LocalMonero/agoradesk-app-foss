@@ -9,7 +9,6 @@ import 'package:agoradesk/features/profile/data/models/user_device_settings.dart
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/objectbox.g.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:overlay_support/overlay_support.dart';
 
@@ -79,6 +78,10 @@ class AdInfoViewModel extends BaseViewModel with ErrorParseMixin {
     } else {
       handleApiError(res.left, context);
     }
+  }
+
+  bool hasBalanceToTrade() {
+    return (ad.minAmount ?? 0) <= (ad.maxAmountAvailable ?? 0);
   }
 
   Future saveEditedAd(AdModel adModel) async {

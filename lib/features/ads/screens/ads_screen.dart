@@ -33,7 +33,6 @@ import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';

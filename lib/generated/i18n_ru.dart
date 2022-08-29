@@ -8494,6 +8494,9 @@ class I18nRu extends I18n {
   String get app_session_expired => 'Session expired';
 
   @override
+  String get app_ad_self_vacation_notice => 'This ad is not visible to the public because you\'re currently on vacation. You can change that on the Ads screen (thee dots on the top right).';
+
+  @override
   String get app_trading_partners => 'Trading partners';
 
   @override

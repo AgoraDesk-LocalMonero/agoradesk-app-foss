@@ -132,6 +132,16 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   List<WalletBalanceModel> get balance => balanceController.value;
 
   ///
+  /// Wallet balances stream
+  ///
+
+  final BehaviorSubject<List<double>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
+
+  set assetPrice(List<double> v) => assetPriceController.add(v);
+
+  List<double> get assetPrice => assetPriceController.value;
+
+  ///
 
   String get currencyCode => _currencyCode ?? 'USD';
 

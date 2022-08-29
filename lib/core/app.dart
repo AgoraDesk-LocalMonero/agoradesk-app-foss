@@ -150,10 +150,12 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     )..init();
 
     _pollingService = PollingService(
+      isAgora: GetIt.I<AppParameters>().isAgora,
       api: _api,
       walletService: _walletService,
       appState: appState,
       authService: _authService,
+      adsRepository: _adsRepository,
     )..init();
 
     _initAuthHandler();

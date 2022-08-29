@@ -16643,6 +16643,12 @@ abstract class I18n {
   /// **'Session expired'**
   String get app_session_expired;
 
+  /// No description provided for @app_ad_self_vacation_notice.
+  ///
+  /// In en, this message translates to:
+  /// **'This ad is not visible to the public because you\'re currently on vacation. You can change that on the Ads screen (thee dots on the top right).'**
+  String get app_ad_self_vacation_notice;
+
   /// No description provided for @app_trading_partners.
   ///
   /// In en, this message translates to:

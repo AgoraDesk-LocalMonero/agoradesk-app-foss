@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
@@ -34,6 +36,8 @@ class WalletViewModel extends BaseViewModel {
 
   late final TabsRouter _tabsRouter;
   final indicatorKey = GlobalKey<RefreshIndicatorState>();
+
+  late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
 
   String _balanceBtc = '';
   String _addressBtc = '';
@@ -87,7 +91,9 @@ class WalletViewModel extends BaseViewModel {
       }
       notifyListeners();
     });
-
+    _balanceSubcription = _appState.balanceController.listen((event) {
+      _updateBalance();
+    });
     super.init();
   }
 
@@ -105,6 +111,17 @@ class WalletViewModel extends BaseViewModel {
     await getBalances();
     calcAssetsPrices();
     getIncomingDeposits();
+  }
+
+  void _updateBalance() {
+    if (_appState.balance.isNotEmpty) {
+      _balanceXmr = _appState.balance[0].balance.toString();
+      _addressXmr = _appState.balance[0].receivingAddress;
+    }
+    if (_appState.balance.length > 1) {
+      _balanceBtc = _appState.balance[1].balance.toString();
+      _addressBtc = _appState.balance[1].receivingAddress;
+    }
   }
 
   void _routerListener() {
@@ -305,6 +322,7 @@ class WalletViewModel extends BaseViewModel {
 
   @override
   void dispose() {
+    _balanceSubcription.cancel();
     _tabsRouter.removeListener(_routerListener);
     super.dispose();
   }
