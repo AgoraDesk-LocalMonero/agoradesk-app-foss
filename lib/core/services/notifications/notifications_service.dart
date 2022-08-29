@@ -24,7 +24,10 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
-const _kPollingSeconds = 30;
+const _kNotificationsPollingSeconds = 30;
+
+/// Balances polling
+const _kWalletPollingSeconds = 30;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
@@ -104,7 +107,7 @@ class NotificationsService with ForegroundMessagesMixin {
     /// Polling notifications from the server
     ///
     _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) => getNotifications());
+    _timer = Timer.periodic(const Duration(seconds: _kNotificationsPollingSeconds), (_) => getNotifications());
 
     ///
     /// start listener for push token updates

@@ -15,6 +15,7 @@ import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
+import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
@@ -85,6 +86,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   late final PlacesSearch _placesSearch;
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
+  late final PollingService _pollingService;
   late final Plausible _plausible;
   late final AppState appState;
 
@@ -143,6 +145,13 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       api: _api,
       secureStorage: _secureStorage,
       accountService: _accountService,
+      appState: appState,
+      authService: _authService,
+    )..init();
+
+    _pollingService = PollingService(
+      api: _api,
+      walletService: _walletService,
       appState: appState,
       authService: _authService,
     )..init();
@@ -336,6 +345,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           break;
         case AuthState.loggedIn:
           _notificationsService.getToken();
+          _pollingService.getBalances();
           _initStartRoute();
           break;
         case AuthState.guest:
@@ -594,7 +604,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         Provider.value(value: _placesSearch),
         Provider.value(value: _notificationsService),
         ChangeNotifierProvider.value(value: appState),
-        // StreamProvider.value(value: _authService.user, initialData: null),
       ];
 
   @override
