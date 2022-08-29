@@ -48,6 +48,10 @@ class WalletViewModel extends BaseViewModel {
   final List<IncomingDepositModel> deposits = [];
   bool _loadingDeposits = false;
 
+  bool get loadingDeposits => _loadingDeposits;
+
+  set loadingDeposits(bool v) => updateWith(loadingDeposits: v);
+
   Asset get asset => _asset;
 
   set asset(Asset v) => updateWith(asset: v);
@@ -183,13 +187,13 @@ class WalletViewModel extends BaseViewModel {
   }
 
   Future getIncomingDeposits() async {
-    if (!_loadingDeposits) {
-      _loadingDeposits = true;
+    if (!loadingDeposits) {
+      loadingDeposits = true;
       deposits.clear();
       if (GetIt.I<AppParameters>().isAgora) {
         final resBtc = await _walletService.getIncomingDeposits(Asset.BTC);
         final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
-        _loadingDeposits = false;
+        loadingDeposits = false;
         if (resBtc.isRight || resXMR.isRight) {
           deposits.addAll(resBtc.right);
           deposits.addAll(resXMR.right);
@@ -200,7 +204,7 @@ class WalletViewModel extends BaseViewModel {
           deposits.addAll(resXMR.right);
         }
       }
-      _loadingDeposits = false;
+      loadingDeposits = false;
     }
     notifyListeners();
   }
@@ -282,6 +286,7 @@ class WalletViewModel extends BaseViewModel {
 
   void updateWith({
     bool? loadingBalance,
+    bool? loadingDeposits,
     String? balanceBtc,
     String? balanceXmr,
     Asset? asset,
@@ -289,6 +294,7 @@ class WalletViewModel extends BaseViewModel {
     double? xmrPrice,
   }) {
     _loadingBalance = loadingBalance ?? _loadingBalance;
+    _loadingDeposits = loadingDeposits ?? _loadingDeposits;
     _btcPrice = btcPrice ?? _btcPrice;
     _xmrPrice = xmrPrice ?? _xmrPrice;
     _balanceBtc = balanceBtc ?? _balanceBtc;

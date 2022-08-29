@@ -16,6 +16,8 @@ import 'package:agoradesk/features/auth/screens/login_screen.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/wallet_view_model.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/incoming_deposit_tile.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/loading_deposits.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/no_deposits.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_button.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/transaction_tile.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/wallet_blue_button.dart';
@@ -225,33 +227,35 @@ class WalletScreen extends StatelessWidget {
   }
 
   Widget _buildIncomingDeposits(BuildContext context, WalletViewModel model) {
-    return model.deposits.isNotEmpty
-        ? Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                context.intl.wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle,
-                style: context.txtBodySmallN50,
-              ),
-              const SizedBox(height: 8),
-              ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: model.deposits.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
-                      child: IncomingDepositTile(
-                        deposit: model.deposits[index],
-                        onPressed: () => context.pushRoute(
-                          IncomingDepositRoute(deposit: model.deposits[index]),
-                        ),
-                      ),
-                    );
-                  }),
-            ],
-          )
-        : const SizedBox();
+    return model.loadingDeposits
+        ? const LoadingDeposits()
+        : model.deposits.isNotEmpty
+            ? Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    context.intl.wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle,
+                    style: context.txtBodySmallN50,
+                  ),
+                  const SizedBox(height: 8),
+                  ListView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: model.deposits.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
+                          child: IncomingDepositTile(
+                            deposit: model.deposits[index],
+                            onPressed: () => context.pushRoute(
+                              IncomingDepositRoute(deposit: model.deposits[index]),
+                            ),
+                          ),
+                        );
+                      }),
+                ],
+              )
+            : const NoDeposits();
   }
 }
 

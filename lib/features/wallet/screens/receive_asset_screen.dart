@@ -11,6 +11,8 @@ import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/receive_asset_view_model.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/incoming_deposit_tile.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/loading_deposits.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/no_deposits.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/qr_code_dialog.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
@@ -156,7 +158,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
 
   Widget _buildIncomingDeposits(BuildContext context, ReceiveAssetViewModel model) {
     return model.loadingDeposits
-        ? const _LoadingDeposits()
+        ? const LoadingDeposits()
         : model.deposits.isNotEmpty
             ? ListView.builder(
                 shrinkWrap: true,
@@ -171,45 +173,6 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                     ),
                   );
                 })
-            : const _NoDeposits();
-  }
-}
-
-class _LoadingDeposits extends StatelessWidget {
-  const _LoadingDeposits({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const ContainerSurface5Radius12(
-      child: Padding(
-        padding: EdgeInsets.all(12),
-        child: Center(
-          child: CupertinoActivityIndicator(),
-        ),
-      ),
-    );
-  }
-}
-
-class _NoDeposits extends StatelessWidget {
-  const _NoDeposits({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ContainerSurface5Radius12(
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Center(
-          child: Text(
-            I18n.of(context)!.no_pending_deposits,
-            style: context.txtBodySmallN80,
-          ),
-        ),
-      ),
-    );
+            : const NoDeposits();
   }
 }
