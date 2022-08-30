@@ -234,10 +234,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -476,10 +476,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -718,10 +718,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1232,10 +1232,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1474,10 +1474,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1716,10 +1716,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1958,10 +1958,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -2200,10 +2200,10 @@
     "app_error_saving",
     "app_manage_ads",
     "app_session_expired",
-    "app_ad_self_vacation_notice",
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ]
 }

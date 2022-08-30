@@ -4,10 +4,13 @@ import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
+import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
+import 'package:agoradesk/features/ads/models/ads_view_model.dart';
 import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/objectbox.g.dart';
+import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:overlay_support/overlay_support.dart';
@@ -17,12 +20,14 @@ class AdInfoViewModel extends BaseViewModel with ErrorParseMixin {
     required AdsRepository adsRepository,
     required AccountService accountService,
     required this.ad,
+    this.onGlobalVacation,
   })  : _accountService = accountService,
         _adsRepository = adsRepository;
 
   final AdsRepository _adsRepository;
   final AccountService _accountService;
   final AdModel ad;
+  final bool? onGlobalVacation;
 
   final Box<UserLocalSettings> userSettingsBox = ObjectBox.s.box<UserLocalSettings>();
   late UserLocalSettings userSettings;
@@ -31,7 +36,7 @@ class AdInfoViewModel extends BaseViewModel with ErrorParseMixin {
   bool _loadingAd = false;
   bool _loadingAccountInfo = true;
   bool _savingSwitchers = false;
-  bool _firstInit = true;
+  bool? onVacation;
 
   bool get loadingAd => _loadingAd;
   late AdModel adEdits;
@@ -48,16 +53,13 @@ class AdInfoViewModel extends BaseViewModel with ErrorParseMixin {
 
   @override
   void init() {
-    if (_firstInit) {
-      _firstInit = false;
-      //todo - refactor me
-      if (userSettingsBox.getAll().isNotEmpty) {
-        userSettings = userSettingsBox.getAll()[0];
-      }
-      _getAccountInfo(userSettings.username!);
-      adEdits = ad;
-      super.init();
+    if (userSettingsBox.getAll().isNotEmpty) {
+      userSettings = userSettingsBox.getAll()[0];
     }
+    _getAccountInfo(userSettings.username!);
+    adEdits = ad;
+    onVacation = onGlobalVacation;
+    super.init();
   }
 
   Future deleteAd() async {
@@ -67,6 +69,12 @@ class AdInfoViewModel extends BaseViewModel with ErrorParseMixin {
     } else {
       handleApiError(res.left, context);
     }
+  }
+
+  Future managePressToSettings(AdsViewModel model) async {
+    await AutoRouter.of(context).push(AdsSettingsRoute(model: model));
+    onVacation = ad.tradeType.isSell() ? model.settingsModel.sellingVacation : model.settingsModel.buyingVacation;
+    notifyListeners();
   }
 
   Future _getAccountInfo(String username) async {

@@ -16643,12 +16643,6 @@ abstract class I18n {
   /// **'Session expired'**
   String get app_session_expired;
 
-  /// No description provided for @app_ad_self_vacation_notice.
-  ///
-  /// In en, this message translates to:
-  /// **'This ad is not visible to the public because you\'re currently on vacation. You can change that on the Ads screen (thee dots on the top right).'**
-  String get app_ad_self_vacation_notice;
-
   /// No description provided for @app_trading_partners.
   ///
   /// In en, this message translates to:
@@ -16666,6 +16660,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.'**
   String get app_buyer_settlement_fee_level_description;
+
+  /// No description provided for @app_change_vacation_settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Change vacation settings.'**
+  String get app_change_vacation_settings;
 
   /// No description provided for @app_gallery.
   ///

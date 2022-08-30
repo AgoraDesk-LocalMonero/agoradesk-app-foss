@@ -8,6 +8,7 @@ import 'package:agoradesk/core/widgets/branded/agora_dialog_two_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
 import 'package:agoradesk/core/widgets/branded/agora_switcher.dart';
 import 'package:agoradesk/core/widgets/branded/box_surface5_copy_on_title_readmore.dart';
+import 'package:agoradesk/core/widgets/branded/button_text_primary70.dart';
 import 'package:agoradesk/core/widgets/branded/container_info_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -16,6 +17,7 @@ import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/ad_info_view_model.dart';
+import 'package:agoradesk/features/ads/models/ads_view_model.dart';
 import 'package:agoradesk/features/market/screens/widgets/ad_info_box.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
@@ -27,10 +29,12 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
     Key? key,
     required this.ad,
     this.onGlobalVacation,
+    this.adsViewModel,
   }) : super(key: key);
 
   final AdModel ad;
   final bool? onGlobalVacation;
+  final AdsViewModel? adsViewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +43,9 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
           adsRepository: context.read<AdsRepository>(),
           accountService: context.read<AccountService>(),
           ad: ad,
+          onGlobalVacation: onGlobalVacation,
         ),
         disposable: false,
-        // implicitView: true,
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
@@ -84,7 +88,7 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
   }
 
   Widget _buildvacationWarning(BuildContext context, AdInfoViewModel model) {
-    if (onGlobalVacation == true) {
+    if (model.onVacation == true) {
       return Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
         child: ContainerInfoRadius12Border1(
@@ -94,9 +98,15 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  context.intl.app_ad_self_vacation_notice,
+                  context.intl.ad250Sbself8722Sbvacation8722Sbnotice.split('.')[0] + '.',
                   style: context.txtBodyXSmallN80N30,
                 ),
+                adsViewModel != null
+                    ? ButtonTextPrimary70(
+                        title: context.intl.app_change_vacation_settings,
+                        onPressed: () => model.managePressToSettings(adsViewModel!),
+                      )
+                    : const SizedBox(),
               ],
             ),
           ),

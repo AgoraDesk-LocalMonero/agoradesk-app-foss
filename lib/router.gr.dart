@@ -198,7 +198,8 @@ class AppRouter extends _i50.RootStackRouter {
           child: _i12.AdInfoScreen(
               key: args.key,
               ad: args.ad,
-              onGlobalVacation: args.onGlobalVacation),
+              onGlobalVacation: args.onGlobalVacation,
+              adsViewModel: args.adsViewModel),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -851,17 +852,25 @@ class AdsSettingsRouteArgs {
 /// generated route for
 /// [_i12.AdInfoScreen]
 class AdInfoRoute extends _i50.PageRouteInfo<AdInfoRouteArgs> {
-  AdInfoRoute({_i51.Key? key, required _i54.AdModel ad, bool? onGlobalVacation})
+  AdInfoRoute(
+      {_i51.Key? key,
+      required _i54.AdModel ad,
+      bool? onGlobalVacation,
+      _i53.AdsViewModel? adsViewModel})
       : super(AdInfoRoute.name,
             path: 'ads/adInfo',
             args: AdInfoRouteArgs(
-                key: key, ad: ad, onGlobalVacation: onGlobalVacation));
+                key: key,
+                ad: ad,
+                onGlobalVacation: onGlobalVacation,
+                adsViewModel: adsViewModel));
 
   static const String name = 'AdInfoRoute';
 }
 
 class AdInfoRouteArgs {
-  const AdInfoRouteArgs({this.key, required this.ad, this.onGlobalVacation});
+  const AdInfoRouteArgs(
+      {this.key, required this.ad, this.onGlobalVacation, this.adsViewModel});
 
   final _i51.Key? key;
 
@@ -869,9 +878,11 @@ class AdInfoRouteArgs {
 
   final bool? onGlobalVacation;
 
+  final _i53.AdsViewModel? adsViewModel;
+
   @override
   String toString() {
-    return 'AdInfoRouteArgs{key: $key, ad: $ad, onGlobalVacation: $onGlobalVacation}';
+    return 'AdInfoRouteArgs{key: $key, ad: $ad, onGlobalVacation: $onGlobalVacation, adsViewModel: $adsViewModel}';
   }
 }
 

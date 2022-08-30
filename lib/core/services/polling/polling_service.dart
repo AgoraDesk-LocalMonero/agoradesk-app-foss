@@ -10,7 +10,7 @@ import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:flutter/material.dart';
 
 /// Wallet data polling
-const _kWalletPollingSeconds = 10;
+const _kWalletPollingSeconds = 120;
 
 class PollingService with ErrorParseMixin {
   PollingService({

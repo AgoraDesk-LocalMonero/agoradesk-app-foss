@@ -440,6 +440,7 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
       await AutoRouter.of(context).push(AdInfoRoute(
         ad: adIn,
         onGlobalVacation: adIn.tradeType.isSell() ? settingsModel.sellingVacation : settingsModel.buyingVacation,
+        adsViewModel: this,
       ));
       await indicatorKey.currentState?.show();
       adUpdatingId = null;
