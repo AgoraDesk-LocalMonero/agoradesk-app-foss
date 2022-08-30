@@ -103,7 +103,7 @@ class TradeRepository with ErrorParseMixin {
   ///
   /// Post a new message
   ///
-  Future<Either<ApiError, bool>> sendMessage(String tradeId, String? message) async {
+  Future<Either<ApiError, String>> sendMessage(String tradeId, String? message) async {
     return _tradeService.sendMessage(tradeId, message);
   }
 

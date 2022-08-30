@@ -23,7 +23,9 @@ class _$MessageModelTearOff {
   const _$MessageModelTearOff();
 
   _MessageModel call(
-      {@JsonKey(name: 'contact_id', includeIfNull: false)
+      {@JsonKey(name: 'message_id', includeIfNull: false)
+          String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false)
           String? tradeId,
       @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           required DateTime createdAt,
@@ -36,6 +38,7 @@ class _$MessageModelTearOff {
       @JsonKey(name: 'attachment_url', includeIfNull: false)
           String? attachmentUrl}) {
     return _MessageModel(
+      messageId: messageId,
       tradeId: tradeId,
       createdAt: createdAt,
       isAdmin: isAdmin,
@@ -56,7 +59,8 @@ const $MessageModel = _$MessageModelTearOff();
 
 /// @nodoc
 mixin _$MessageModel {
-  /// message id
+  @JsonKey(name: 'message_id', includeIfNull: false)
+  String? get messageId => throw _privateConstructorUsedError;
   @JsonKey(name: 'contact_id', includeIfNull: false)
   String? get tradeId => throw _privateConstructorUsedError;
   @JsonKey(
@@ -86,7 +90,9 @@ abstract class $MessageModelCopyWith<$Res> {
           MessageModel value, $Res Function(MessageModel) then) =
       _$MessageModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'contact_id', includeIfNull: false)
+      {@JsonKey(name: 'message_id', includeIfNull: false)
+          String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false)
           String? tradeId,
       @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           DateTime createdAt,
@@ -112,6 +118,7 @@ class _$MessageModelCopyWithImpl<$Res> implements $MessageModelCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? messageId = freezed,
     Object? tradeId = freezed,
     Object? createdAt = freezed,
     Object? isAdmin = freezed,
@@ -121,6 +128,10 @@ class _$MessageModelCopyWithImpl<$Res> implements $MessageModelCopyWith<$Res> {
     Object? attachmentUrl = freezed,
   }) {
     return _then(_value.copyWith(
+      messageId: messageId == freezed
+          ? _value.messageId
+          : messageId // ignore: cast_nullable_to_non_nullable
+              as String?,
       tradeId: tradeId == freezed
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
@@ -168,7 +179,9 @@ abstract class _$MessageModelCopyWith<$Res>
       __$MessageModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'contact_id', includeIfNull: false)
+      {@JsonKey(name: 'message_id', includeIfNull: false)
+          String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false)
           String? tradeId,
       @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           DateTime createdAt,
@@ -197,6 +210,7 @@ class __$MessageModelCopyWithImpl<$Res> extends _$MessageModelCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? messageId = freezed,
     Object? tradeId = freezed,
     Object? createdAt = freezed,
     Object? isAdmin = freezed,
@@ -206,6 +220,10 @@ class __$MessageModelCopyWithImpl<$Res> extends _$MessageModelCopyWithImpl<$Res>
     Object? attachmentUrl = freezed,
   }) {
     return _then(_MessageModel(
+      messageId: messageId == freezed
+          ? _value.messageId
+          : messageId // ignore: cast_nullable_to_non_nullable
+              as String?,
       tradeId: tradeId == freezed
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
@@ -243,7 +261,9 @@ class __$MessageModelCopyWithImpl<$Res> extends _$MessageModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_MessageModel implements _MessageModel {
   const _$_MessageModel(
-      {@JsonKey(name: 'contact_id', includeIfNull: false)
+      {@JsonKey(name: 'message_id', includeIfNull: false)
+          this.messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false)
           this.tradeId,
       @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           required this.createdAt,
@@ -260,8 +280,9 @@ class _$_MessageModel implements _MessageModel {
       _$$_MessageModelFromJson(json);
 
   @override
-
-  /// message id
+  @JsonKey(name: 'message_id', includeIfNull: false)
+  final String? messageId;
+  @override
   @JsonKey(name: 'contact_id', includeIfNull: false)
   final String? tradeId;
   @override
@@ -287,7 +308,7 @@ class _$_MessageModel implements _MessageModel {
 
   @override
   String toString() {
-    return 'MessageModel(tradeId: $tradeId, createdAt: $createdAt, isAdmin: $isAdmin, sender: $sender, msg: $msg, attachmentName: $attachmentName, attachmentUrl: $attachmentUrl)';
+    return 'MessageModel(messageId: $messageId, tradeId: $tradeId, createdAt: $createdAt, isAdmin: $isAdmin, sender: $sender, msg: $msg, attachmentName: $attachmentName, attachmentUrl: $attachmentUrl)';
   }
 
   @override
@@ -295,6 +316,7 @@ class _$_MessageModel implements _MessageModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MessageModel &&
+            const DeepCollectionEquality().equals(other.messageId, messageId) &&
             const DeepCollectionEquality().equals(other.tradeId, tradeId) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.isAdmin, isAdmin) &&
@@ -309,6 +331,7 @@ class _$_MessageModel implements _MessageModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(messageId),
       const DeepCollectionEquality().hash(tradeId),
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(isAdmin),
@@ -330,7 +353,9 @@ class _$_MessageModel implements _MessageModel {
 
 abstract class _MessageModel implements MessageModel {
   const factory _MessageModel(
-      {@JsonKey(name: 'contact_id', includeIfNull: false)
+      {@JsonKey(name: 'message_id', includeIfNull: false)
+          String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false)
           String? tradeId,
       @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           required DateTime createdAt,
@@ -347,8 +372,9 @@ abstract class _MessageModel implements MessageModel {
       _$_MessageModel.fromJson;
 
   @override
-
-  /// message id
+  @JsonKey(name: 'message_id', includeIfNull: false)
+  String? get messageId;
+  @override
   @JsonKey(name: 'contact_id', includeIfNull: false)
   String? get tradeId;
   @override

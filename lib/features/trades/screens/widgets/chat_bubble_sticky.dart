@@ -300,17 +300,23 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
       barrierDismissible: true,
       context: context,
       barrierColor: Theme.of(context).colorScheme.dialogOverlay,
-      builder: (_) => AgoraDialogTwoButtons(
-        title: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbtitle,
-        body: Text(
-          context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbtext,
-          style: context.txtBodySmallN80,
-        ),
-        mainAction: () => model.cancelTrade(),
-        mainActionText: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-        secondAction: () => Navigator.of(context).pop(),
-        secondActionText: context.intl.cancel,
-      ),
+      builder: (_) => ViewModelBuilder<TradeViewModel>(
+          model: model,
+          disposable: false,
+          initOnce: true,
+          builder: (context, model, child) {
+            return AgoraDialogTwoButtons(
+              title: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbtitle,
+              body: Text(
+                context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbtext,
+                style: context.txtBodySmallN80,
+              ),
+              mainAction: () => model.cancelTrade(),
+              mainActionText: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+              secondAction: () => Navigator.of(context).pop(),
+              secondActionText: context.intl.cancel,
+            );
+          }),
     );
   }
 
@@ -319,15 +325,21 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
       barrierDismissible: true,
       context: context,
       barrierColor: Theme.of(context).colorScheme.dialogOverlay,
-      builder: (_) => DialogOutlineAndFilledButtons(
-        title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-        content: Text(context.intl.app_cancel_trade_message),
-        filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
-        onPressedOutline: () => Navigator.of(context).pop(),
-        onPressedFilled: () => model.cancelTrade(),
-        loadingFilled: model.cancelingTrade,
-      ),
+      builder: (_) => ViewModelBuilder<TradeViewModel>(
+          model: model,
+          disposable: false,
+          initOnce: true,
+          builder: (context, model, child) {
+            return DialogOutlineAndFilledButtons(
+              title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+              content: Text(context.intl.app_cancel_trade_message),
+              filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+              outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+              onPressedOutline: () => Navigator.of(context).pop(),
+              onPressedFilled: () => model.cancelTrade(),
+              loadingFilled: model.cancelingTrade,
+            );
+          }),
     );
   }
 
@@ -336,16 +348,22 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
       barrierDismissible: true,
       context: context,
       barrierColor: Theme.of(context).colorScheme.dialogOverlay,
-      builder: (_) => DialogOutlineAndFilledButtons(
-        title: context.intl.trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtitle,
-        content: Text(
-            context.intl.trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtext(model.tradeForScreen.buyer.username!)),
-        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
-        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
-        onPressedFilled: () => model.markAsPaid(),
-        onPressedOutline: () => Navigator.of(context).pop(),
-        loadingFilled: model.markingAsPaid,
-      ),
+      builder: (_) => ViewModelBuilder<TradeViewModel>(
+          model: model,
+          disposable: false,
+          initOnce: true,
+          builder: (context, model, child) {
+            return DialogOutlineAndFilledButtons(
+              title: context.intl.trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtitle,
+              content: Text(context.intl
+                  .trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtext(model.tradeForScreen.buyer.username!)),
+              filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+              outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+              onPressedFilled: () => model.markAsPaid(),
+              onPressedOutline: () => Navigator.of(context).pop(),
+              loadingFilled: model.markingAsPaid,
+            );
+          }),
     );
   }
 }

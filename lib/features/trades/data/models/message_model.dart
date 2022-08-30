@@ -11,7 +11,7 @@ part 'message_model.g.dart';
 class MessageModel with _$MessageModel {
   @JsonSerializable(explicitToJson: true)
   const factory MessageModel({
-    /// message id
+    @JsonKey(name: 'message_id', includeIfNull: false) String? messageId,
     @JsonKey(name: 'contact_id', includeIfNull: false) String? tradeId,
     @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
         required DateTime createdAt,

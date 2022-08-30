@@ -5,6 +5,7 @@ import 'package:objectbox/objectbox.dart';
 class MessageBoxModel {
   MessageBoxModel({
     this.tradeId,
+    this.messageId,
     required this.createdAt,
     required this.isAdmin,
     required this.senderUsername,
@@ -18,6 +19,7 @@ class MessageBoxModel {
   int id = 0;
 
   /// message id
+  String? messageId;
   String? tradeId;
   DateTime createdAt;
   bool isAdmin;
@@ -30,6 +32,7 @@ class MessageBoxModel {
 
   factory MessageBoxModel.fromMessageModel(MessageModel model) {
     return MessageBoxModel(
+      messageId: model.messageId,
       tradeId: model.tradeId,
       createdAt: model.createdAt,
       isAdmin: model.isAdmin,

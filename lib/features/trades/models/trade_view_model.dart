@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
@@ -33,12 +32,14 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
+const _kRemoveMessageDuration = Duration(milliseconds: 0);
 
 class TradeViewModel extends BaseViewModel
     with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin {
@@ -47,13 +48,11 @@ class TradeViewModel extends BaseViewModel
     this.tradeModel,
     this.tradeId,
     required UserLocalSettings userSettings,
-    required AppState appState,
     required AccountService accountService,
     required SecureStorage secureStorage,
     required AdsRepository adsRepository,
     required ApiClient apiClient,
   })  : _tradeRepository = tradeRepository,
-        _appState = appState,
         _userSettings = userSettings,
         _secureStorage = secureStorage,
         _apiClient = apiClient,
@@ -62,7 +61,6 @@ class TradeViewModel extends BaseViewModel
 
   final TradeRepository _tradeRepository;
   final AccountService _accountService;
-  final AppState _appState;
   final SecureStorage _secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
@@ -82,7 +80,6 @@ class TradeViewModel extends BaseViewModel
   final List<TradeModel> filteredTrades = [];
   AdModel? fullAd;
 
-  // final messagesListKey = GlobalKey<AnimatedListState>();
   final messagesListKey = GlobalKey<AnimatedListState>();
   Timer? _timer;
 
@@ -281,9 +278,9 @@ class TradeViewModel extends BaseViewModel
     _getMessages();
 
     _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) {
-      indicatorKey.currentState?.show();
-      _getMessages(polling: true);
+    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async {
+      await indicatorKey.currentState?.show();
+      await _getMessages(polling: true);
     });
   }
 
@@ -559,13 +556,14 @@ class TradeViewModel extends BaseViewModel
 
   String tradeInfoTitle(BuildContext context) {
     if (tradeForScreen.isSelling!) {
-    return context.intl.sell_via(
-        tradeForScreen.asset.title(),
-        getPaymentMethodName(
-          context,
-          tradeForScreen.advertisement.paymentMethod ?? '',
-          tradeForScreen.advertisement.tradeType,
-        ));}
+      return context.intl.sell_via(
+          tradeForScreen.asset.title(),
+          getPaymentMethodName(
+            context,
+            tradeForScreen.advertisement.paymentMethod ?? '',
+            tradeForScreen.advertisement.tradeType,
+          ));
+    }
     return context.intl.buy_via(
         tradeForScreen.asset.title(),
         getPaymentMethodName(
@@ -680,16 +678,12 @@ class TradeViewModel extends BaseViewModel
   }
 
   bool _checkMessageUnique(MessageBoxModel m, int? i) {
-    final int num = i ?? 0;
     final combinedList = [...messagesBeforeSticky, ...messagesAfterSticky];
     try {
       if (m.msg!.isNotEmpty) {
         return combinedList.where(
           (val) {
-            return (val.msg == m.msg &&
-                val.senderUsername == m.senderUsername &&
-                (val.createdAt == m.createdAt ||
-                    (m.msg == messagesAfterSticky[num].msg && m.senderUsername == _appState.username)));
+            return val.messageId == m.messageId;
           },
         ).isEmpty;
       } else {
@@ -765,6 +759,7 @@ class TradeViewModel extends BaseViewModel
       messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
       final res = await _tradeRepository.sendMessage(tradeForScreen.tradeId, textToSend);
       if (res.isRight) {
+        messagesAfterSticky[0].messageId = res.right;
         messagesAfterSticky[0].isSending = false;
         notifyListeners();
         _getMessages(polling: true);
@@ -777,8 +772,8 @@ class TradeViewModel extends BaseViewModel
 
   void _divideMessagesTwoParts(List<MessageBoxModel>? messagesIn) {
     final parseLst = messagesIn ?? [...messagesBeforeSticky, ...messagesAfterSticky];
-    messagesBeforeSticky.clear();
-    messagesAfterSticky.clear();
+    // messagesBeforeSticky.clear();
+    // messagesAfterSticky.clear();
     if (tradeStatus == TradeStatus.paymentCompleted) {
       _sortMessages(parseLst, tradeForScreen.paymentCompletedAt ?? DateTime.now());
     } else if (tradeStatus == TradeStatus.released || (tradeStatus.index > 5 && tradeStatus != TradeStatus.disputed)) {
@@ -788,20 +783,46 @@ class TradeViewModel extends BaseViewModel
     } else if (tradeStatus == TradeStatus.canceled) {
       _sortMessages(parseLst, tradeForScreen.canceledAt ?? DateTime.now());
     } else {
-      messagesAfterSticky.addAll(parseLst);
+      _sortMessages(parseLst, DateTime.now());
     }
     notifyListeners();
   }
 
   void _sortMessages(List<MessageBoxModel>? messagesIn, DateTime date) {
     if (messagesIn != null) {
-      for (final m in messagesIn) {
+      for (final m in messagesIn.reversed) {
         if (m.createdAt.isBefore(date)) {
-          messagesBeforeSticky.add(m);
+          if (m.msg != null && m.msg!.isNotEmpty) {
+            if ((messagesBeforeSticky.firstWhereOrNull((val) => val.messageId == m.messageId) == null)) {
+              messagesBeforeSticky.insert(0, m);
+            }
+            if (messagesAfterSticky.firstWhereOrNull((val) => val.messageId == m.messageId) != null) {
+              final msg = messagesAfterSticky.firstWhereOrNull((val) => val.messageId == m.messageId);
+              _removeFromAnimatedList(msg);
+            }
+          } else {
+            if ((messagesBeforeSticky.firstWhereOrNull((val) => val.attachmentName == m.attachmentName) == null)) {
+              messagesBeforeSticky.insert(0, m);
+            }
+            if (messagesAfterSticky.firstWhereOrNull((val) => val.attachmentName == m.attachmentName) != null) {
+              final msg = messagesAfterSticky.firstWhereOrNull((val) => val.attachmentName == m.attachmentName);
+              _removeFromAnimatedList(msg);
+            }
+          }
         } else {
           messagesAfterSticky.add(m);
         }
       }
+    }
+    notifyListeners();
+  }
+
+  void _removeFromAnimatedList(MessageBoxModel? msg) {
+    if (msg != null) {
+      final position = messagesAfterSticky.indexOf(msg);
+      messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
+        return const SizedBox();
+      });
     }
   }
 
