@@ -2,6 +2,7 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/core/widgets/branded/load_more_widget.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/features/profile/models/trading_partners_view_model.dart';
@@ -95,13 +96,20 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
         : ListView.separated(
             padding: EdgeInsets.zero,
             shrinkWrap: true,
-            itemCount: model.trustedUsers.length,
+            itemCount: model.trustedUsers.length + 1,
             itemBuilder: (context, index) {
-              final AccountInfoModel user = model.trustedUsers[index];
-              return TradingPartnerTile(
-                accountInfoModel: user,
-                onPressed: () => context.pushRoute(TraderProfileRoute(profileModel: user)),
-              );
+              if (index < model.trustedUsers.length) {
+                final AccountInfoModel user = model.trustedUsers[index];
+                return TradingPartnerTile(
+                  accountInfoModel: user,
+                  onPressed: () => context.pushRoute(TraderProfileRoute(profileModel: user)),
+                );
+              } else {
+                return LoadMoreWidget(
+                  hasMore: model.hasMorePagesBlocked,
+                  loadCallback: () => model.getTrusted(loadMore: true),
+                );
+              }
             },
             separatorBuilder: (context, index) {
               return const SizedBox(height: 8);
@@ -132,13 +140,20 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
         : ListView.separated(
             padding: EdgeInsets.zero,
             shrinkWrap: true,
-            itemCount: model.blockedUsers.length,
+            itemCount: model.blockedUsers.length + 1,
             itemBuilder: (context, index) {
-              final AccountInfoModel user = model.blockedUsers[index];
-              return TradingPartnerTile(
-                accountInfoModel: user,
-                onPressed: () => context.pushRoute(TraderProfileRoute(profileModel: user)),
-              );
+              if (index < model.blockedUsers.length) {
+                final AccountInfoModel user = model.blockedUsers[index];
+                return TradingPartnerTile(
+                  accountInfoModel: user,
+                  onPressed: () => context.pushRoute(TraderProfileRoute(profileModel: user)),
+                );
+              } else {
+                return LoadMoreWidget(
+                  hasMore: model.hasMorePagesBlocked,
+                  loadCallback: () => model.getBlocked(loadMore: true),
+                );
+              }
             },
             separatorBuilder: (context, index) {
               return const SizedBox(height: 8);

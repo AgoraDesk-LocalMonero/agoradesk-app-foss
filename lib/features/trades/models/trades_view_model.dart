@@ -221,9 +221,7 @@ class TradesViewModel extends BaseViewModel with ErrorParseMixin {
     indicatorKey.currentState?.show();
   }
 
-  Future getTrades({
-    bool loadMore = false,
-  }) async {
+  Future getTrades({bool loadMore = false}) async {
     if (!loading) {
       loading = true;
       disableTabBar = true;

@@ -1,7 +1,8 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:io';
 import 'dart:isolate';
-import 'dart:math';
+import 'dart:math' as math;
 
 import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
@@ -14,6 +15,7 @@ import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
+import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
@@ -84,6 +86,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   late final PlacesSearch _placesSearch;
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
+  late final PollingService _pollingService;
   late final Plausible _plausible;
   late final AppState appState;
 
@@ -144,6 +147,15 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       accountService: _accountService,
       appState: appState,
       authService: _authService,
+    )..init();
+
+    _pollingService = PollingService(
+      isAgora: GetIt.I<AppParameters>().isAgora,
+      api: _api,
+      walletService: _walletService,
+      appState: appState,
+      authService: _authService,
+      adsRepository: _adsRepository,
     )..init();
 
     _initAuthHandler();
@@ -305,6 +317,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void _initHttpHandler() {
     _api.client.interceptors.add(
       InterceptorsWrapper(onError: (e, handler) async {
+        log('[InterceptorsWrapper] -  ${e.response?.statusCode} - ${e.response?.headers} - $e');
         if (e.response?.statusCode == 401) {
           final context = router.navigatorKey.currentContext;
           if (_authService.isAuthenticated) {
@@ -334,6 +347,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           break;
         case AuthState.loggedIn:
           _notificationsService.getToken();
+          _pollingService.getBalances();
           _initStartRoute();
           break;
         case AuthState.guest:
@@ -592,7 +606,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         Provider.value(value: _placesSearch),
         Provider.value(value: _notificationsService),
         ChangeNotifierProvider.value(value: appState),
-        // StreamProvider.value(value: _authService.user, initialData: null),
       ];
 
   @override
@@ -704,7 +717,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
       await AwesomeNotifications().createNotification(
         content: NotificationContent(
-          id: Random().nextInt(1000000),
+          id: math.Random().nextInt(1000000),
           channelKey: kNotificationsChannel,
           title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
           body: push.msg,

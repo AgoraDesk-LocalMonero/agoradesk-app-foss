@@ -196,14 +196,14 @@ class TradeService {
   ///
   /// Post a new message
   ///
-  Future<Either<ApiError, bool>> sendMessage(String tradeId, String? message) async {
+  Future<Either<ApiError, String>> sendMessage(String tradeId, String? message) async {
     try {
       final resp = await _api.client.post<Map>(
         '/contact_message_post/$tradeId',
         data: {'msg': message ?? ''},
       );
       if (resp.statusCode == 200) {
-        return const Either.right(true);
+        return Either.right(resp.data?['data']['message_id'] ?? '');
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
         return Either.left(apiError);

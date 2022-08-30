@@ -3340,5 +3340,6 @@
   "app_trading_partners": "Trading partners",
   "app_trade_status_settlement_processing_description": "The settlement is being processed. Please wait, there's nothing that you need to do.",
   "app_buyer_settlement_fee_level_description": "Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.",
+  "app_change_vacation_settings": "Change vacation settings.",
   "app_gallery": "Gallery"
 }

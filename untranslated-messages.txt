@@ -237,6 +237,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -478,6 +479,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -719,6 +721,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1232,6 +1235,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1473,6 +1477,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1714,6 +1719,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -1955,6 +1961,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ],
 
@@ -2196,6 +2203,7 @@
     "app_trading_partners",
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
+    "app_change_vacation_settings",
     "app_gallery"
   ]
 }

@@ -4,7 +4,6 @@ import 'dart:developer';
 import 'dart:ui';
 
 import 'package:agoradesk/core/events.dart';
-import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
@@ -66,13 +65,13 @@ class ApiClient {
 
     // _dio.interceptors.add(PrettyDioLogger(
     //   requestHeader: true,
-    //   // request: true,
+    //   request: true,
     //   requestBody: true,
-    //   // responseBody: true,
+    //   responseBody: true,
     //   responseHeader: true,
     //   error: true,
     //   compact: true,
-    //   maxWidth: 120,
+    //   maxWidth: 12000,
     // ));
 
     _dio.interceptors.add(
@@ -81,18 +80,17 @@ class ApiClient {
           if (accessToken != null) {
             options.headers['Authorization'] = '$accessToken';
           }
-          if (locale != null) {
-            options.headers['Accept-Language'] = locale.toString();
-          }
+          // if (locale != null) {
+          //   options.headers['Accept-Language'] = locale.toString();
+          // }
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
           return handler.next(options);
         },
         onResponse: (Response response, handler) async {
-          //todo handle javascript router protection
           final String res = response.data.toString();
-          debugPrint('++++[response.statusCode] ${response.statusCode} \n[response.headers] ${response.headers}');
+          log('++++[response.statusCode] ${response.statusCode} \n[response.headers] ${response.headers}');
           if (res.contains('html')) {
             // log('++++res.contains(html) -- $res');
           }
@@ -105,15 +103,15 @@ class ApiClient {
 
           DioError? finalError;
           if (statusCode == 401) {
-            print('++++[401 headers] ${error.response?.headers}');
-            print('++++[401 data] ${error.response?.data}');
+            log('++++[401 headers] ${error.response?.headers}');
+            log('++++[401 data] ${error.response?.data}');
             eventBus.fire(const LogOutEvent());
           }
 
           if ([400, 422, 401].contains(statusCode)) {
             final message = ApiHelper.parseErrorToString(error);
             if (message != null) {
-              debugPrint('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
+              log('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
 
               finalError = DioError(
                 error: jsonEncode(message),
@@ -142,18 +140,18 @@ class ApiClient {
       ),
     );
 
-    if (!kIsWeb) {
-      (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (client) {
-        if (proxy != null) {
-          client.findProxy = (url) {
-            return 'PROXY $proxy';
-          };
-        }
-        client.badCertificateCallback = (cert, host, port) => true;
-//        client.badCertificateCallback =
-//            (X509Certificate cert, String host, int port) => Platform.isAndroid;
-      };
-    }
+//     if (!kIsWeb) {
+//       (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (client) {
+//         if (proxy != null) {
+//           client.findProxy = (url) {
+//             return 'PROXY $proxy';
+//           };
+//         }
+//         client.badCertificateCallback = (cert, host, port) => true;
+// //        client.badCertificateCallback =
+// //            (X509Certificate cert, String host, int port) => Platform.isAndroid;
+//       };
+//     }
   }
 
   void setBaseUrl(String url) {

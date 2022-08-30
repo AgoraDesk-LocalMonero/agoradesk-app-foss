@@ -8,6 +8,7 @@ part of 'message_model.dart';
 
 _$_MessageModel _$$_MessageModelFromJson(Map<String, dynamic> json) =>
     _$_MessageModel(
+      messageId: json['message_id'] as String?,
       tradeId: json['contact_id'] as String?,
       createdAt: fromJsonDate(json['created_at'] as String),
       isAdmin: json['is_admin'] as bool,
@@ -26,6 +27,7 @@ Map<String, dynamic> _$$_MessageModelToJson(_$_MessageModel instance) {
     }
   }
 
+  writeNotNull('message_id', instance.messageId);
   writeNotNull('contact_id', instance.tradeId);
   writeNotNull('created_at', toJsonDate(instance.createdAt));
   val['is_admin'] = instance.isAdmin;

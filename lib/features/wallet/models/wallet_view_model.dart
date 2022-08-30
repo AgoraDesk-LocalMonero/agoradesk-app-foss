@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
@@ -13,7 +15,6 @@ import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart'
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -36,6 +37,8 @@ class WalletViewModel extends BaseViewModel {
   late final TabsRouter _tabsRouter;
   final indicatorKey = GlobalKey<RefreshIndicatorState>();
 
+  late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
+
   String _balanceBtc = '';
   String _addressBtc = '';
   double? _btcPrice;
@@ -48,6 +51,10 @@ class WalletViewModel extends BaseViewModel {
   final List<TransactionModel> transactions = [];
   final List<IncomingDepositModel> deposits = [];
   bool _loadingDeposits = false;
+
+  bool get loadingDeposits => _loadingDeposits;
+
+  set loadingDeposits(bool v) => updateWith(loadingDeposits: v);
 
   Asset get asset => _asset;
 
@@ -84,7 +91,9 @@ class WalletViewModel extends BaseViewModel {
       }
       notifyListeners();
     });
-
+    _balanceSubcription = _appState.balanceController.listen((event) {
+      _updateBalance();
+    });
     super.init();
   }
 
@@ -102,6 +111,17 @@ class WalletViewModel extends BaseViewModel {
     await getBalances();
     calcAssetsPrices();
     getIncomingDeposits();
+  }
+
+  void _updateBalance() {
+    if (_appState.balance.isNotEmpty) {
+      _balanceXmr = _appState.balance[0].balance.toString();
+      _addressXmr = _appState.balance[0].receivingAddress;
+    }
+    if (_appState.balance.length > 1) {
+      _balanceBtc = _appState.balance[1].balance.toString();
+      _addressBtc = _appState.balance[1].receivingAddress;
+    }
   }
 
   void _routerListener() {
@@ -122,7 +142,7 @@ class WalletViewModel extends BaseViewModel {
           _addressBtc = resBtc.right.receivingAddress;
           _balanceXmr = resXmr.right.balance.toString();
           _addressXmr = resXmr.right.receivingAddress;
-          joinAllTransactions(resBtc.right, resXmr.right);
+          joinAllTransactions(resXmr.right, resBtc.right);
         } else {
           if (resBtc.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
@@ -136,6 +156,7 @@ class WalletViewModel extends BaseViewModel {
         if (resXmr.isRight) {
           _balanceXmr = resXmr.right.balance.toString();
           _addressXmr = resXmr.right.receivingAddress;
+          joinAllTransactions(resXmr.right, null);
         } else {
           if (resXmr.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
@@ -147,16 +168,18 @@ class WalletViewModel extends BaseViewModel {
     }
   }
 
-  void joinAllTransactions(WalletBalanceModel btc, WalletBalanceModel xmr) {
+  void joinAllTransactions(WalletBalanceModel xmr, WalletBalanceModel? btc) {
     transactions.clear();
-    if (btc.receivedTransactions != null) {
-      for (final val in btc.receivedTransactions!) {
-        transactions.add(val.copyWith(isSent: false, asset: Asset.BTC));
+    if (GetIt.I<AppParameters>().isAgora) {
+      if (btc?.receivedTransactions != null) {
+        for (final val in btc!.receivedTransactions!) {
+          transactions.add(val.copyWith(isSent: false, asset: Asset.BTC));
+        }
       }
-    }
-    if (btc.sentTransactions != null) {
-      for (final val in btc.sentTransactions!) {
-        val.copyWith(asset: Asset.BTC);
+      if (btc?.sentTransactions != null) {
+        for (final val in btc!.sentTransactions!) {
+          val.copyWith(asset: Asset.BTC);
+        }
       }
     }
     if (xmr.receivedTransactions != null) {
@@ -181,18 +204,26 @@ class WalletViewModel extends BaseViewModel {
   }
 
   Future getIncomingDeposits() async {
-    if (!_loadingDeposits) {
-      _loadingDeposits = true;
+    if (!loadingDeposits) {
+      loadingDeposits = true;
       deposits.clear();
-      final resBtc = await _walletService.getIncomingDeposits(Asset.BTC);
-      final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
-      _loadingDeposits = false;
-      if (resBtc.isRight || resXMR.isRight) {
-        deposits.addAll(resBtc.right);
-        deposits.addAll(resXMR.right);
-      } else {}
-      notifyListeners();
+      if (GetIt.I<AppParameters>().isAgora) {
+        final resBtc = await _walletService.getIncomingDeposits(Asset.BTC);
+        final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
+        loadingDeposits = false;
+        if (resBtc.isRight || resXMR.isRight) {
+          deposits.addAll(resBtc.right);
+          deposits.addAll(resXMR.right);
+        }
+      } else {
+        final resXMR = await _walletService.getIncomingDeposits(Asset.XMR);
+        if (resXMR.isRight) {
+          deposits.addAll(resXMR.right);
+        }
+      }
+      loadingDeposits = false;
     }
+    notifyListeners();
   }
 
   double? assetPrice(Asset asset) {
@@ -214,12 +245,12 @@ class WalletViewModel extends BaseViewModel {
       if (_btcPrice == null) {
         return null;
       }
-      return double.tryParse(_balanceBtc)!;
+      return double.tryParse(_balanceBtc);
     }
     if (_xmrPrice == null) {
       return null;
     }
-    return double.tryParse(_balanceXmr)!;
+    return double.tryParse(_balanceXmr);
   }
 
   String balanceCost(Asset asset) {
@@ -272,6 +303,7 @@ class WalletViewModel extends BaseViewModel {
 
   void updateWith({
     bool? loadingBalance,
+    bool? loadingDeposits,
     String? balanceBtc,
     String? balanceXmr,
     Asset? asset,
@@ -279,6 +311,7 @@ class WalletViewModel extends BaseViewModel {
     double? xmrPrice,
   }) {
     _loadingBalance = loadingBalance ?? _loadingBalance;
+    _loadingDeposits = loadingDeposits ?? _loadingDeposits;
     _btcPrice = btcPrice ?? _btcPrice;
     _xmrPrice = xmrPrice ?? _xmrPrice;
     _balanceBtc = balanceBtc ?? _balanceBtc;
@@ -289,6 +322,7 @@ class WalletViewModel extends BaseViewModel {
 
   @override
   void dispose() {
+    _balanceSubcription.cancel();
     _tabsRouter.removeListener(_routerListener);
     super.dispose();
   }

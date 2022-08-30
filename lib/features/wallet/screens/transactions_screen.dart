@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -9,6 +10,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class TransactionsScreen extends StatelessWidget {
   const TransactionsScreen({
@@ -34,17 +36,7 @@ class TransactionsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 6),
-                    DropdownSearch<String>(
-                      items: model.assetMenu,
-                      onChanged: model.setAsset,
-                      selectedItem: model.assetMenu[0],
-                      dropdownDecoratorProps: context.dropdownDecoration,
-                      popupProps: PopupProps.menu(
-                        menuProps: context.dropdownMenuProps,
-                        fit: FlexFit.loose,
-                      ),
-                    ),
-                    const SizedBox(height: 20),
+                    _buildDropDownList(context, model),
                     Text(
                       I18n.of(context)!.transactions_30_days,
                       style: context.txtBodySmallN50,
@@ -59,6 +51,28 @@ class TransactionsScreen extends StatelessWidget {
             ),
           );
         });
+  }
+
+  Widget _buildDropDownList(BuildContext context, TransactionsViewModel model) {
+    if (!GetIt.I<AppParameters>().isAgora) {
+      return const SizedBox();
+    }
+
+    return Column(
+      children: [
+        DropdownSearch<String>(
+          items: model.assetMenu,
+          onChanged: model.setAsset,
+          selectedItem: model.assetMenu[0],
+          dropdownDecoratorProps: context.dropdownDecoration,
+          popupProps: PopupProps.menu(
+            menuProps: context.dropdownMenuProps,
+            fit: FlexFit.loose,
+          ),
+        ),
+        const SizedBox(height: 20),
+      ],
+    );
   }
 
   Widget _buildTransactions(BuildContext context, List<TransactionModel> transactions) {

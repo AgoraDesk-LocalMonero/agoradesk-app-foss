@@ -8503,5 +8503,8 @@ class I18nEs extends I18n {
   String get app_buyer_settlement_fee_level_description => 'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.';
 
   @override
+  String get app_change_vacation_settings => 'Change vacation settings.';
+
+  @override
   String get app_gallery => 'Gallery';
 }

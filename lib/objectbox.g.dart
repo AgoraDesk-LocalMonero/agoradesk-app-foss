@@ -121,7 +121,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(7, 4248416330353627262),
       name: 'MessageBoxModel',
-      lastPropertyId: const IdUid(13, 4028909758467674766),
+      lastPropertyId: const IdUid(14, 1518129399572326220),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -173,6 +173,11 @@ final _entities = <ModelEntity>[
             id: const IdUid(13, 4028909758467674766),
             name: 'isUpdated',
             type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(14, 1518129399572326220),
+            name: 'messageId',
+            type: 9,
             flags: 0)
       ],
       relations: <ModelRelation>[],
@@ -369,7 +374,10 @@ ModelDefinition getObjectBoxModel() {
           final attachmentUrlOffset = object.attachmentUrl == null
               ? null
               : fbb.writeString(object.attachmentUrl!);
-          fbb.startTable(14);
+          final messageIdOffset = object.messageId == null
+              ? null
+              : fbb.writeString(object.messageId!);
+          fbb.startTable(15);
           fbb.addInt64(0, object.id);
           fbb.addInt64(2, object.createdAt.millisecondsSinceEpoch);
           fbb.addBool(3, object.isAdmin);
@@ -380,6 +388,7 @@ ModelDefinition getObjectBoxModel() {
           fbb.addBool(9, object.isSending);
           fbb.addOffset(11, attachmentUrlOffset);
           fbb.addBool(12, object.isUpdated);
+          fbb.addOffset(13, messageIdOffset);
           fbb.finish(fbb.endTable());
           return object.id;
         },
@@ -390,6 +399,8 @@ ModelDefinition getObjectBoxModel() {
           final object = MessageBoxModel(
               tradeId: const fb.StringReader(asciiOptimization: true)
                   .vTableGetNullable(buffer, rootOffset, 20),
+              messageId: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 30),
               createdAt: DateTime.fromMillisecondsSinceEpoch(
                   const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0)),
               isAdmin: const fb.BoolReader()
@@ -402,10 +413,8 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGet(buffer, rootOffset, 28, false),
               msg: const fb.StringReader(asciiOptimization: true)
                   .vTableGetNullable(buffer, rootOffset, 14),
-              attachmentName: const fb.StringReader(asciiOptimization: true)
-                  .vTableGetNullable(buffer, rootOffset, 16),
-              attachmentUrl:
-                  const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 26))
+              attachmentName: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 16),
+              attachmentUrl: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 26))
             ..id = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
 
           return object;
@@ -521,4 +530,8 @@ class MessageBoxModel_ {
   /// see [MessageBoxModel.isUpdated]
   static final isUpdated =
       QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[9]);
+
+  /// see [MessageBoxModel.messageId]
+  static final messageId =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[10]);
 }

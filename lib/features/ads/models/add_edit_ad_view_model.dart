@@ -1,4 +1,5 @@
-import 'package:agoradesk/core/app_parameters.dart';
+import 'dart:async';
+
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
@@ -19,13 +20,13 @@ import 'package:agoradesk/features/ads/data/models/price_input_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
+import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 export 'package:agoradesk/features/ads/data/models/asset.dart';
 export 'package:agoradesk/features/ads/data/models/price_input_type.dart';
@@ -81,6 +82,8 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
   final ctrl6MinimumScore = TextEditingController();
   final ctrl6TradeMaxLimit = TextEditingController();
   final ctrl6PaymentWindow = TextEditingController();
+
+  late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
 
   double page = 0;
   int screensCount = 6;
@@ -238,7 +241,10 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
     _addScreen6Listeners();
     getCountryCodes();
     getCurrencies();
-    getWalletsBalance();
+    _updateBalance();
+    _balanceSubcription = _appState.balanceController.listen((event) {
+      _updateBalance();
+    });
     if (isEditMode) {
       if (ad != null) {
         selectedCountryCode = ad!.countryCode;
@@ -247,6 +253,16 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
       getCountryPaymentMethods(selectedCountryCode);
     } else {}
     super.init();
+  }
+
+  void _updateBalance() {
+    if (_appState.balance.length > 1) {
+      _balanceBtc = _appState.balance[1].balance;
+    }
+    if (_appState.balance.isNotEmpty) {
+      _balanceXmr = _appState.balance[0].balance;
+    }
+    _checkTradeTypesForPossibility();
   }
 
   void _setInitValuesEditMode() async {
@@ -317,32 +333,6 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
       _currentEditPrice = null;
       notifyListeners();
       formulaInputValid = false;
-    }
-  }
-
-  Future<void> getWalletsBalance() async {
-    if (GetIt.I<AppParameters>().isAgora) {
-      loadingBalance = true;
-      final resBtc = await _walletService.getBalance(Asset.BTC);
-      final resXmr = await _walletService.getBalance(Asset.XMR);
-      loadingBalance = false;
-      if (resBtc.isRight && resXmr.isRight) {
-        _balanceBtc = resBtc.right.balance;
-        _balanceXmr = resXmr.right.balance;
-        _checkTradeTypesForPossibility();
-      } else {
-        handleApiError(resBtc.left, context);
-      }
-    } else {
-      loadingBalance = true;
-      final resXmr = await _walletService.getBalance(Asset.XMR);
-      loadingBalance = false;
-      if (resXmr.isRight) {
-        _balanceXmr = resXmr.right.balance;
-        _checkTradeTypesForPossibility();
-      } else {
-        handleApiError(resXmr.left, context);
-      }
     }
   }
 
@@ -536,7 +526,6 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
     if (reloadPaymentMethods) {
       final res = await _adsRepository.getCountryPaymentMethods(country);
       if (res.isRight) {
-        // await Future.delayed(Duration(seconds: 5));
         _countryPaymentMethods.clear();
         _countryPaymentMethods = res.right;
         if (!isEditMode) {
@@ -596,19 +585,6 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
       curve: Curves.easeInOut,
     );
   }
-
-  // void findLocations() async {
-  //   if (ctrl2InputLocation.text.length > 1) {
-  //     loadingLocation = true;
-  //     places.clear();
-  //     final res = await _placesSearch.getPlaces(ctrl2InputLocation.text);
-  //     if (res != null) {
-  //       places.addAll(res);
-  //     }
-  //     loadingLocation = false;
-  //     notifyListeners();
-  //   }
-  // }
 
   Future<List<SearchItem>> findLocations() async {
     List<SearchItem> resStr = [];
@@ -721,6 +697,7 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
   }
 
   void _checkTradeTypesForPossibility() {
+    isLocalAd = _tradeType.isLocal();
     if (_tradeType.isSell()) {
       screen1IsReady = false;
       if (asset == Asset.BTC && _balanceBtc >= kBtcAmountToSell) {
@@ -732,6 +709,7 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
     } else {
       screen1IsReady = true;
     }
+    notifyListeners();
   }
 
   void locationFieldClear() {
@@ -832,7 +810,6 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
     ctrl3MarginInput.dispose();
     ctrl3FixedPrice.dispose();
     ctrl3FormulaInput.dispose();
-    // ctrl3FormulaRes.dispose();
     ctrl2InputLocation.dispose();
     ctrl2DisplayLocation.dispose();
     ctrl32WalletAddress.dispose();
@@ -847,6 +824,7 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
     ctrl6PaymentWindow.dispose();
     EasyDebounce.cancel(_kDebounceFormulaTag);
     EasyDebounce.cancel(_kDebounceTag);
+    _balanceSubcription.cancel();
     super.dispose();
   }
 }

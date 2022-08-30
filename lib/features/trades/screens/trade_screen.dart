@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -62,7 +61,6 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
       secureStorage: context.read<SecureStorage>(),
       apiClient: context.read<ApiClient>(),
       adsRepository: context.read<AdsRepository>(),
-      appState: context.read<AppState>(),
     );
     _model.tabController = TabController(length: 2, vsync: this);
 

@@ -114,13 +114,12 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
     implementation "androidx.multidex:multidex:2.0.1"
-    implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0'
 }
 
 android.applicationVariants.all { variant ->
     variant.outputs.all { output ->
-        def builtType = variant.buildType.name
-        def versionName = variant.versionName
+//        def builtType = variant.buildType.name
+//        def versionName = variant.versionName
         def versionCode = variant.versionCode
 //        def flavor = variant.flavorName
         def flavor = variant.applicationId

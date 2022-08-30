@@ -16,7 +16,7 @@ class ContainerInfoRadius12Border1 extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           width: 1,
-          color: context.colInfoOutline,
+          color: context.colInfoOutlineSec90,
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(12),

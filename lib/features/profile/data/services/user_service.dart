@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
+import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/profile/data/models/affiliate_model.dart';
 import 'package:agoradesk/features/profile/data/models/coupon_model.dart';
@@ -211,13 +212,52 @@ class UserService {
   ///
   /// Get trusted users
   ///
-  Future<Either<ApiError, List<AccountInfoModel>>> getTrusted() async {
+  Future<Either<ApiError, Pagination<AccountInfoModel>>> getTrusted({int page = 0}) async {
     try {
-      final resp = await _api.client.get('/trusted');
+      final resp = await _api.client.get(
+        '/trusted',
+        queryParameters: {
+          'page': page,
+          'size': 10,
+        },
+      );
       if (resp.statusCode == 200) {
         List<dynamic> respDecoded = jsonDecode(jsonEncode(resp.data['data']));
         final List<AccountInfoModel> resList = respDecoded.map((e) => AccountInfoModel.fromJson(e)).toList();
-        return Either.right(resList);
+        PaginationMeta pagination = PaginationMeta.zero();
+        if (resp.data['pagination'] != null) {
+          pagination = PaginationMeta.fromJson(resp.data['pagination']);
+        }
+        return Either.right(Pagination(resList, pagination: pagination));
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Get blocked users
+  ///
+  Future<Either<ApiError, Pagination<AccountInfoModel>>> getBlocked({int page = 0}) async {
+    try {
+      final resp = await _api.client.get(
+        '/blocked',
+        queryParameters: {
+          'page': page,
+        },
+      );
+      if (resp.statusCode == 200) {
+        List<dynamic> respDecoded = jsonDecode(jsonEncode(resp.data['data']));
+        final List<AccountInfoModel> resList = respDecoded.map((e) => AccountInfoModel.fromJson(e)).toList();
+        PaginationMeta pagination = PaginationMeta.zero();
+        if (resp.data['pagination'] != null) {
+          pagination = PaginationMeta.fromJson(resp.data['pagination']);
+        }
+        return Either.right(Pagination(resList, pagination: pagination));
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
         return Either.left(apiError);
@@ -257,26 +297,6 @@ class UserService {
       final resp = await _api.client.get('/affiliate');
       if (resp.statusCode == 200) {
         return Either.right(AffiliateModel.fromJson(resp.data['data']).copyWith(enabled: true));
-      } else {
-        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
-        return Either.left(apiError);
-      }
-    } catch (e) {
-      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
-      return Either.left(apiError);
-    }
-  }
-
-  ///
-  /// Get blocked users
-  ///
-  Future<Either<ApiError, List<AccountInfoModel>>> getBlocked() async {
-    try {
-      final resp = await _api.client.get('/blocked');
-      if (resp.statusCode == 200) {
-        List<dynamic> respDecoded = jsonDecode(jsonEncode(resp.data['data']));
-        final List<AccountInfoModel> resList = respDecoded.map((e) => AccountInfoModel.fromJson(e)).toList();
-        return Either.right(resList);
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
         return Either.left(apiError);

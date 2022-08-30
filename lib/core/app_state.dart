@@ -3,6 +3,7 @@ import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
+import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
 import 'package:agoradesk/objectbox.g.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -75,7 +76,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool get connection => connection$.value;
 
   ///
-  /// Notifications from the server
+  /// Unread / read state across the app
   ///
   final BehaviorSubject<bool> _hasUnreadController = BehaviorSubject<bool>.seeded(false);
 
@@ -86,7 +87,8 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool get hasUnread => hasUnread$.value;
 
   ///
-
+  ///
+  ///
   final BehaviorSubject<bool> _notificationsLoadingController = BehaviorSubject<bool>.seeded(false);
 
   ValueStream<bool> get notificationsLoading$ => _notificationsLoadingController.stream;
@@ -96,7 +98,8 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool get notificationsLoading => notificationsLoading$.value;
 
   ///
-
+  ///
+  ///
   final BehaviorSubject<bool> _notificationsMarkedReadController = BehaviorSubject<bool>.seeded(false);
 
   ValueStream<bool> get notificationsMarkedRead$ => _notificationsMarkedReadController.stream;
@@ -106,7 +109,8 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool get notificationsMarkedRead => notificationsMarkedRead$.value;
 
   ///
-
+  /// Notifications stream
+  ///
   final BehaviorSubject<List<ActivityNotificationModel>> _notificationsController =
       BehaviorSubject<List<ActivityNotificationModel>>.seeded([]);
 
@@ -115,6 +119,29 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   set notifications(List<ActivityNotificationModel> v) => _notificationsController.add(v);
 
   List<ActivityNotificationModel> get notifications => notifications$.value;
+
+  ///
+  /// Wallet balances stream
+  ///
+
+  final BehaviorSubject<List<WalletBalanceModel>> balanceController =
+      BehaviorSubject<List<WalletBalanceModel>>.seeded([]);
+
+  set balance(List<WalletBalanceModel> v) => balanceController.add(v);
+
+  List<WalletBalanceModel> get balance => balanceController.value;
+
+  ///
+  /// Wallet balances stream
+  ///
+
+  final BehaviorSubject<List<double>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
+
+  set assetPrice(List<double> v) => assetPriceController.add(v);
+
+  List<double> get assetPrice => assetPriceController.value;
+
+  ///
 
   String get currencyCode => _currencyCode ?? 'USD';
 
