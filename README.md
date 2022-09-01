@@ -53,7 +53,7 @@ and after that create a file `lib/keys/keys.dart` and add there your key
 `const keysMapToken = 'YOUR_MAPBOX_KEY';`
 
 You will get the app that works without [FCM](https://firebase.google.com/docs/cloud-messaging) services.
-Push noyifications will be received with polling with foreground service (if the app is closed it still works).
+Push notifications will be received with polling with foreground service (if the app is closed it still works).
 
 ## Translation
 
