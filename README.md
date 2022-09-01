@@ -42,6 +42,7 @@ So, we use data messages to display them with app code (not with the FCM).
 For build the app locally after getting code from repository use FOSS commands in `Makefile`.
 
 For example, to build FOSS apk LocalMonero app
+
 `flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
 
 Apps use mapbox key. You need to create a key
