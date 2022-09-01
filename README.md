@@ -38,8 +38,16 @@ So, we use data messages to display them with app code (not with the FCM).
 
 
 ## Build
-For the build commands and other shortcuts look to the Makefile file.
-For example, to build LocalMonero && AgoraDesk .apk release files, use `make build-android-all`
+
+For build the app locally after getting code from repository use FOSS commands in `Makefile`.
+
+For example, to build FOSS apk LocalMonero app
+`flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
+
+The apps use mapbox keys. You need to create a key
+https://docs.mapbox.com/help/tutorials/get-started-tokens-api/
+and after that create a file `lib/keys/keys.dart` and add there a key
+`const keysMapToken = 'YOUR_MAPBOX_KEY';`
 
 ## Translation
 

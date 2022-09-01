@@ -29,6 +29,7 @@ format:
 test:
 	$(FLUTTER) test
 
+# Bundle
 .PHONY: build-bundle-all
 build-bundle-all:
 	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
@@ -42,6 +43,21 @@ build-bundle-ad:
 build-bundle-lm:
 	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero
 
+# FOSS bundle
+.PHONY: build-foss-bundle-all
+build-foss-bundle-all:
+	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+
+.PHONY: build-foss-bundle-ad
+build-foss-bundle-ad:
+	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+
+.PHONY: build-foss-bundle-lm
+build-foss-bundle-lm:
+	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+
+# iOS
 .PHONY: build-ios-all
 build-ios-all:
 	$(FLUTTER) build ipa --verbose --flavor localmonero --dart-define=app.flavor=localmonero
@@ -56,19 +72,37 @@ build-ios-ad:
 build-ios-lm:
 	$(FLUTTER) build ipa --verbose --flavor localmonero --dart-define=app.flavor=localmonero
 
-.PHONY: build-android-all
-build-android-all:
+# APK
+.PHONY: build-apk-all
+build-apk-all:
 	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
 	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
-.PHONY: build-android-ad
-build-android-ad:
+.PHONY: build-apk-ad
+build-apk-ad:
 	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
-.PHONY: build-android-lm
-build-android-lm:
+.PHONY: build-apk-lm
+build-apk-lm:
 	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.includeFcm=localmonero
 
+# APK FOSS
+.PHONY: build-foss-apk-all
+build-foss-apk-all:
+	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+
+.PHONY: build-foss-apk-ad
+build-foss-apk-ad:
+	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+
+.PHONY: build-foss-apk-lm
+build-foss-apk-lm:
+	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.includeFcm=localmonero --dart-define=app.includeFcm=false
+
+#
+#
+#
 .PHONY: internal-android
 internal-android:
 	cd android && fastlane internal
