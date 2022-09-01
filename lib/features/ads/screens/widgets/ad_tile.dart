@@ -70,10 +70,19 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        HighlightBox(
-          title: ad.tradeType.translatedTitle(context).capitalize(),
-          color: ad.tradeType.colorForTrade(context),
-          textColor: ad.tradeType.textColorForTrade(context),
+        Row(
+          children: [
+            HighlightBox(
+              title: ad.tradeType.translatedTitle(context).capitalize(),
+              color: ad.tradeType.colorForTrade(context),
+              textColor: ad.tradeType.textColorForTrade(context),
+            ),
+            // ButtonShareSquare(
+            //   size: const Size(40, 16),
+            //   iconSize: 14,
+            //   link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}',
+            // ),
+          ],
         ),
         Row(
           children: [
@@ -85,10 +94,14 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
             const SizedBox(width: 4),
             Text(
               niceDateFromString(ad.createdAt),
-              style: context.txtBodyXSmallN90,
+              style: context.txtBodyXSmallN90.copyWith(height: 1),
             ),
             const SizedBox(width: 10),
-            ButtonShareSquare(link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}'),
+            ButtonShareSquare(
+              size: const Size(30, 16),
+              iconSize: 14,
+              link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}',
+            ),
           ],
         ),
       ],
@@ -199,7 +212,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
         const SizedBox(width: 10),
         Expanded(
             flex: 1,
-            child: ad.maxAmount != null
+            child: ad.maxAmount != null || ad.minAmount != null
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -210,7 +223,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.minAmount ?? 0} - ${ad.maxAmount}',
+                        '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.minAmount ?? 0} - ${ad.maxAmount ?? ad.maxAmountAvailable}',
                         style: context.txtBodyXSmallN90,
                       ),
                     ],

@@ -25,16 +25,23 @@ const kNotificationsChannel = 'trades_channel';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
-  if (flavor == FlavorType.localmonero) {
-    await Firebase.initializeApp(
-      options: localmonero_options.DefaultFirebaseOptions.currentPlatform,
-    );
-  } else {
-    await Firebase.initializeApp(
-      options: agoradesk_options.DefaultFirebaseOptions.currentPlatform,
-    );
+
+  const String includeFcmString = String.fromEnvironment('app.includeFcm');
+  final includeFcm = includeFcmString != 'false' || Platform.isIOS;
+
+  if (includeFcm) {
+    if (flavor == FlavorType.localmonero) {
+      await Firebase.initializeApp(
+        options: localmonero_options.DefaultFirebaseOptions.currentPlatform,
+      );
+    } else {
+      await Firebase.initializeApp(
+        options: agoradesk_options.DefaultFirebaseOptions.currentPlatform,
+      );
+    }
   }
 
   ///
@@ -56,8 +63,14 @@ void main() async {
   /// Initializations that are depend on flavor
   ///
 
-  final bool isGoogleAvailable = await checkGoogleAvailable();
-  GetIt.I.registerSingleton<AppParameters>(initAppParameters(flavor, isGoogleAvailable));
+  final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
+  GetIt.I.registerSingleton<AppParameters>(
+    initAppParameters(
+      flavor,
+      isGoogleAvailable,
+      includeFcm,
+    ),
+  );
 
   ///
   /// Init awesome notofications

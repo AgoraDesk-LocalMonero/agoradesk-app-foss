@@ -27,7 +27,6 @@ class TraderProfileViewModel extends BaseViewModel with ErrorParseMixin {
   List<AdModel> ads = [];
   List<FeedbackModel> feedbacks = [];
   bool _loadingAds = true;
-  bool _init = false;
   bool _initialLoading = false;
   bool _loadingFeedbacks = true;
   bool _loadingAccountInfo = true;
@@ -62,18 +61,15 @@ class TraderProfileViewModel extends BaseViewModel with ErrorParseMixin {
 
   @override
   void init() async {
-    if (!_init) {
-      _init = true;
-      if (profileModel == null) {
-        initialLoading = true;
-      } else {
-        profileForScreen = profileModel!;
-      }
-      await _getAccountInfo();
-      initialLoading = false;
-      _getUserAds();
-      _getFeedbacks();
+    if (profileModel == null) {
+      initialLoading = true;
+    } else {
+      profileForScreen = profileModel!;
     }
+    await _getAccountInfo();
+    initialLoading = false;
+    _getUserAds();
+    _getFeedbacks();
     super.init();
   }
 

@@ -39,7 +39,7 @@ import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 class AdsScreen extends StatefulWidget {
-  AdsScreen({
+  const AdsScreen({
     Key? key,
   }) : super(key: key);
 
@@ -155,7 +155,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               }
 
               final ad = model.ads[index];
-
               return AdTile(
                 ad: ad,
                 isSelected: model.isAdSelected(ad),

@@ -38,8 +38,20 @@ So, we use data messages to display them with app code (not with the FCM).
 
 
 ## Build
-For the build commands and other shortcuts look to the Makefile file.
-For example, to build LocalMonero && AgoraDesk .apk release files, use `make build-android-all`
+
+For build the app locally after getting code from repository use FOSS commands in `Makefile`.
+
+For example, to build FOSS apk LocalMonero app
+
+`flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
+
+The apps use MapBox for reverse geocoding. In order to build it yourself, you need to create/provide your own MapBox API key. [The instructions can be found here.](https://docs.mapbox.com/help/tutorials/get-started-tokens-api/)
+
+After that, create the file `lib/keys/keys.dart` and add your key there: `key const keysMapToken = 'YOUR_MAPBOX_KEY';`
+
+
+You will get the app that works without [FCM](https://firebase.google.com/docs/cloud-messaging) services.
+Push notifications will be received with polling with foreground service (if the app is closed it still works).
 
 ## Translation
 

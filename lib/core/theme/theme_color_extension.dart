@@ -11,7 +11,8 @@ extension ColorExtension on ColorScheme {
   Color get ds2Ls1 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface1Light;
   Color get ds2Ls3 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface3Light;
   Color get ds4Ls1 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface1Light;
-  Color get error20Error50 => brightness == Brightness.dark ? ThemeColors.error20 : ThemeColors.error50;
+  Color get e20E50 => brightness == Brightness.dark ? ThemeColors.error20 : ThemeColors.error50;
+  Color get e60E40 => brightness == Brightness.dark ? ThemeColors.error60 : ThemeColors.error40;
   Color get infoOutlineSec90 => brightness == Brightness.dark ? ThemeColors.infoOutline : ThemeColors.secondary90;
   Color get infoSec95 => brightness == Brightness.dark ? ThemeColors.info : ThemeColors.secondary95;
   Color get n30N80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.neutral80;
@@ -32,6 +33,7 @@ extension ColorExtension on ColorScheme {
   Color get p80P40 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary40;
   Color get p90P10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
   Color get p90White => brightness == Brightness.dark ? ThemeColors.primary90 : Colors.white;
+
   Color get sec40SurfLight => brightness == Brightness.dark ? ThemeColors.secondary40 : ThemeColors.surfaceLight;
   Color get secContainerWhite => brightness == Brightness.dark ? ThemeColors.secondaryContainer : Colors.white;
   Color get sec40Highlight => brightness == Brightness.dark ? ThemeColors.secondary40 : ThemeColors.highlight;

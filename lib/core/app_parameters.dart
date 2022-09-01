@@ -24,6 +24,7 @@ class AppParameters {
     required this.urlReceipt,
     required this.isGoogleAvailable,
     required this.isAgora,
+    required this.includeFcm,
   });
 
   final FlavorType flavor;
@@ -47,6 +48,7 @@ class AppParameters {
   final String urlReceipt;
   final bool isGoogleAvailable;
   final bool isAgora;
+  final bool includeFcm;
 
   final mapboxToken = keysMapToken;
 

@@ -141,7 +141,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     GetIt.I.registerSingleton<AppRouter>(_appRouter);
     router = GetIt.I<AppRouter>();
     _notificationsService = NotificationsService(
-      fcm: FirebaseMessaging.instance,
+      fcm: GetIt.I<AppParameters>().includeFcm ? FirebaseMessaging.instance : null,
       api: _api,
       secureStorage: _secureStorage,
       accountService: _accountService,
@@ -166,7 +166,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initUploadingStatusListener();
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    if (GetIt.I<AppParameters>().includeFcm) {
+      FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    }
     super.initState();
   }
 

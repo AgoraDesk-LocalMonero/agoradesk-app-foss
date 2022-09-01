@@ -16637,6 +16637,12 @@ abstract class I18n {
   /// **'Manage ads'**
   String get app_manage_ads;
 
+  /// No description provided for @app_trade_created.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade created'**
+  String get app_trade_created;
+
   /// No description provided for @app_session_expired.
   ///
   /// In en, this message translates to:

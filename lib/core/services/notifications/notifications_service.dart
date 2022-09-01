@@ -26,9 +26,6 @@ import 'package:get_it/get_it.dart';
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
 
-/// Balances polling
-const _kWalletPollingSeconds = 30;
-
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
 
@@ -40,10 +37,10 @@ class NotificationsService with ForegroundMessagesMixin {
     required this.accountService,
     required this.appState,
     required this.authService,
-  });
+  }) : includeFcm = GetIt.I<AppParameters>().includeFcm;
 
   final ApiClient api;
-  final FirebaseMessaging fcm;
+  final FirebaseMessaging? fcm;
   final SecureStorage secureStorage;
   final AccountService accountService;
   final AuthService authService;
@@ -52,44 +49,49 @@ class NotificationsService with ForegroundMessagesMixin {
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
+  final bool includeFcm;
 
   Future init() async {
     ///
     /// start listener for FCM messages that appears when the app is open
     /// in case Firebase service is not available the app uses polling
     ///
-    // FirebaseMessaging.onMessageOpenedApp.listen((message) async {});
-    FirebaseMessaging.onMessage.listen((message) async {
-      debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
-      debugPrint('++++[$runtimeType][onMessage] data: ${message.data}');
-      try {
-        if (message.data.isNotEmpty) {
-          final l = await secureStorage.read(SecureStorageKey.locale);
-          final String langCode = l ?? Platform.localeName.substring(0, 2);
-          final PushModel push = PushModel.fromJson(message.data);
-          final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
 
-          ///
-          /// get trade it in case it's screen is opened in the app
-          ///
-          final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
-          if (openedTradeId != push.objectId) {
-            await AwesomeNotifications().createNotification(
-              content: NotificationContent(
-                id: Random().nextInt(1000000),
-                channelKey: kNotificationsChannel,
-                title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-                body: translatedNotificationText(push, langCode),
-                notificationLayout: NotificationLayout.Default,
-                payload: payload,
-              ),
-            );
+    if (includeFcm) {
+      // FirebaseMessaging.onMessageOpenedApp.listen((message) async {});
+      FirebaseMessaging.onMessage.listen((message) async {
+        debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
+        debugPrint('++++[$runtimeType][onMessage] data: ${message.data}');
+        try {
+          if (message.data.isNotEmpty) {
+            final l = await secureStorage.read(SecureStorageKey.locale);
+            final String langCode = l ?? Platform.localeName.substring(0, 2);
+            final PushModel push = PushModel.fromJson(message.data);
+            final Map<String, String> payload =
+                push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+
+            ///
+            /// get trade it in case it's screen is opened in the app
+            ///
+
+            if (GetIt.I<AppParameters>().openedTradeId != push.objectId) {
+              await AwesomeNotifications().createNotification(
+                content: NotificationContent(
+                  id: Random().nextInt(1000000),
+                  channelKey: kNotificationsChannel,
+                  title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+                  body: translatedNotificationText(push, langCode),
+                  notificationLayout: NotificationLayout.Default,
+                  payload: payload,
+                ),
+              );
+            }
           }
+        } catch (e) {
+          debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
         }
-      } catch (e) {
-        debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
-      }
-    });
+      });
+    }
 
     // AwesomeNotifications().createdStream.listen((notification) {
     // });
@@ -112,12 +114,14 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
     /// start listener for push token updates
     ///
-    FirebaseMessaging.instance.onTokenRefresh.listen((token) {
-      debugPrint('[$runtimeType] FirebaseMessaging token updated: $token');
-      if (api.accessToken != null) {
-        _tokenUpdate(token);
-      }
-    });
+    if (includeFcm) {
+      FirebaseMessaging.instance.onTokenRefresh.listen((token) {
+        debugPrint('[$runtimeType] FirebaseMessaging token updated: $token');
+        if (api.accessToken != null) {
+          _tokenUpdate(token);
+        }
+      });
+    }
 
     ///
     /// Listen that notifications inside the app marked as read
@@ -130,25 +134,27 @@ class NotificationsService with ForegroundMessagesMixin {
   }
 
   Future getToken() async {
-    bool userPermission = true;
-    if (Platform.isIOS) {
-      debugPrint('[$runtimeType] askIosPermission');
-      final settings = await fcm.requestPermission(
-        alert: true,
-        announcement: false,
-        badge: true,
-        carPlay: false,
-        criticalAlert: false,
-        provisional: false,
-        sound: true,
-      );
-      userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
-    }
-    if (userPermission) {
-      fcm.getToken();
-      final token = await fcm.getToken();
-      debugPrint('[$runtimeType] FirebaseMessaging pushtoken created: $token');
-      _tokenUpdate(token);
+    if (fcm != null) {
+      bool userPermission = true;
+      if (Platform.isIOS) {
+        debugPrint('[$runtimeType] askIosPermission');
+        final settings = await fcm!.requestPermission(
+          alert: true,
+          announcement: false,
+          badge: true,
+          carPlay: false,
+          criticalAlert: false,
+          provisional: false,
+          sound: true,
+        );
+        userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
+      }
+      if (userPermission) {
+        fcm!.getToken();
+        final token = await fcm!.getToken();
+        debugPrint('[$runtimeType] FirebaseMessaging pushtoken created: $token');
+        _tokenUpdate(token);
+      }
     }
   }
 

@@ -350,7 +350,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtLabelSmallError20Error50 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
-        color: Theme.of(this).colorScheme.error20Error50,
+        color: Theme.of(this).colorScheme.e20E50,
       );
 
   TextStyle get txtLabelSmallN95N10 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
@@ -375,6 +375,10 @@ extension ThemeShorcuts on BuildContext {
 
   TextStyle get txtBodyXSmallN80N30 => Theme.of(this).textTheme.bodyTextXSmall.copyWith(
         color: Theme.of(this).colorScheme.n80N30,
+      );
+
+  TextStyle get txtBodySmallE60E40 => Theme.of(this).textTheme.bodyTextSmall.copyWith(
+        color: Theme.of(this).colorScheme.e60E40,
       );
 
   TextStyle get txtBodyXSmallN90N10 => Theme.of(this).textTheme.bodyTextXSmall.copyWith(
@@ -476,7 +480,7 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colChatQuote => Theme.of(this).colorScheme.chatQuote;
 
-  Color get colError20Error50 => Theme.of(this).colorScheme.error20Error50;
+  Color get colError20Error50 => Theme.of(this).colorScheme.e20E50;
 
   Color get colInfoSec95 => Theme.of(this).colorScheme.infoSec95;
 

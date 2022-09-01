@@ -3336,6 +3336,7 @@
   "app_permanent": "Permanent",
   "app_error_saving": "Error during saving. Changes wasn't save.",
   "app_manage_ads": "Manage ads",
+  "app_trade_created": "Trade created",
   "app_session_expired": "Session expired",
   "app_trading_partners": "Trading partners",
   "app_trade_status_settlement_processing_description": "The settlement is being processed. Please wait, there's nothing that you need to do.",

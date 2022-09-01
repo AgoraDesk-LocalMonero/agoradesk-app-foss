@@ -11,6 +11,7 @@ class ThemeColors {
   static const custom85 = Color(0xFFFFC970);
 
   static const error20 = Color(0xff680003);
+  static const error40 = Color(0xffba1b1b);
   static const error50 = Color(0xffDD3730);
   static const error60 = Color(0xffFF5449);
   static const error80 = Color(0xffFFB4A9);

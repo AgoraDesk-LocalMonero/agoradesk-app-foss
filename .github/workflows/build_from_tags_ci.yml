@@ -1,0 +1,40 @@
+name: BuildFromTagsCI
+
+on:
+  push:
+    tags:
+      - "v*.*.*" # on every version tag will build a new android artifact.
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: "12.x"
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "3.0.5"
+
+      - name: Decoding android/key.properties
+        run: |
+        echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
+        gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > app/release.keystore
+
+      - name: Pub Get Packages
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --split-per-abi --release
+
+      - name: Build APPBUNDLE
+        run: flutter build appbundle --release
+
+      - name: Create Github Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/*.aab"
+          token: ${{ secrets.RELEASES_TOKEN }}
