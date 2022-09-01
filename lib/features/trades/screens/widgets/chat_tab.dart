@@ -5,6 +5,7 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_loading_indicator.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/close_icon_box.dart';
+import 'package:agoradesk/features/trades/data/models/message_box_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_bubble.dart';
@@ -260,6 +261,8 @@ class ChatTab extends StatelessWidget {
   }
 
   Widget _buildListWithStickyHeader(BuildContext context, TradeViewModel model) {
+    final List<MessageBoxModel> messages = model.messagesAfterSticky.reversed.toList();
+
     return StickyHeader(
       header: ChatBubbleSticky(model: model),
       content: AnimatedList(
@@ -268,12 +271,12 @@ class ChatTab extends StatelessWidget {
           reverse: true,
           padding: EdgeInsets.zero,
           shrinkWrap: true,
-          initialItemCount: model.messagesAfterSticky.length,
+          initialItemCount: messages.length,
           itemBuilder: (context, index, animation) {
-            if (model.messagesAfterSticky.isEmpty) {
+            if (messages.isEmpty) {
               return const SizedBox();
             }
-            final message = model.messagesAfterSticky[index];
+            final message = messages[index];
             return SlideTransition(
               key: UniqueKey(),
               position: Tween<Offset>(
