@@ -15,7 +15,6 @@ import 'package:agoradesk/features/account/screens/widgets/trader_sanction_box.d
 import 'package:agoradesk/features/account/screens/widgets/trader_website_box.dart';
 import 'package:agoradesk/features/account/screens/widgets/user_seen_tile.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,12 +40,10 @@ class TraderProfileScreen extends StatelessWidget {
           profileModel: profileModel,
           username: username,
         ),
-        // disposable: false,
-        // implicitView: true,
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: I18n.of(context)!.trader_profile,
+              title: context.intl.trader_profile,
               // rightAction: const _PopupMenu(),
               // leftAction: TextButton(
               //   onPressed: () => AutoRouter.of(context).pop(),

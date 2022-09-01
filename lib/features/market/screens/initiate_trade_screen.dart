@@ -205,50 +205,55 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
     showDialog(
       barrierDismissible: true,
       context: context,
-      builder: (dialogContext) => AgoraDialogOnFilledButton(
-        title: context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbtitle,
-        content: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                context.intl.ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile!.username!) + ':',
-                style: context.txtBodySmallP90,
-              ),
-              const SizedBox(height: 12),
-              ContainerSurface2Radius12Border1(
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Text(
-                    model.ad!.msg?.trim() ?? '',
-                    style: context.txtBodyXSmallN80,
-                  ),
+      builder: (dialogContext) => ViewModelBuilder<MarketAdInfoViewModel>(
+          model: model,
+          disposable: false,
+          builder: (context, model, child) {
+            return AgoraDialogOnFilledButton(
+              title: context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbtitle,
+              content: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      context.intl.ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile!.username!) + ':',
+                      style: context.txtBodySmallP90,
+                    ),
+                    const SizedBox(height: 12),
+                    ContainerSurface2Radius12Border1(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Text(
+                          model.ad!.msg?.trim() ?? '',
+                          style: context.txtBodyXSmallN80,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Center(
+                      child: Text(
+                        context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbsubtitle,
+                        style: context.txtBodySmallP90,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                  ],
                 ),
               ),
-              const SizedBox(height: 16),
-              Center(
-                child: Text(
-                  context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbsubtitle,
-                  style: context.txtBodySmallP90,
-                ),
-              ),
-              const SizedBox(height: 6),
-            ],
-          ),
-        ),
-        filledButtonTitle: model.isSell
-            ? context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbbtn
-            : context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue,
-        onPressedFilled: () {
-          if (model.isSell) {
-            model.startTrade();
-          } else {
-            Navigator.of(context).pop();
-            _displayAddressDialog(context, model);
-          }
-        },
-        loadingFilled: model.startingTrade,
-      ),
+              filledButtonTitle: model.isSell
+                  ? context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbbtn
+                  : context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue,
+              onPressedFilled: () {
+                if (model.isSell) {
+                  model.startTrade(context);
+                } else {
+                  Navigator.of(context).pop();
+                  _displayAddressDialog(context, model);
+                }
+              },
+              loadingFilled: model.startingTrade,
+            );
+          }),
     );
   }
 
@@ -302,7 +307,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                   if (model.asset == Asset.BTC) {
                     _displayBtcFeesDialog(context, model);
                   } else {
-                    model.startTrade();
+                    model.startTrade(context);
                   }
                 },
                 loadingFilled: model.startingTrade,
@@ -361,7 +366,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                 filledButtonTitle: model.asset == Asset.BTC
                     ? context.intl.start_trading
                     : context.intl.wallet250Sbsend250Sbcontinue8722Sbbtn,
-                onPressedFilled: () => model.startTrade(),
+                onPressedFilled: () => model.startTrade(context),
                 loadingFilled: model.startingTrade,
               );
             }),

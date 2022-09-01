@@ -6,6 +6,7 @@ google-services.json
 GoogleService-Info.plist
 firebase_options_agoradesk.dart
 firebase_options_localmonero.dart
+*.jks
 
 # Miscellaneous
 *.class

@@ -75,7 +75,7 @@ class FinalizeTradeDialog extends StatelessWidget {
                               Text(
                                 context
                                     .intl.trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext8722Sbwarning,
-                                style: context.txtBodyXSmallN80N30,
+                                style: context.txtBodySmallE60E40,
                               ),
                               const SizedBox(height: 6),
                               Text(

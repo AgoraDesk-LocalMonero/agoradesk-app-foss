@@ -8491,6 +8491,9 @@ class I18nIt extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
+  String get app_trade_created => 'Trade created';
+
+  @override
   String get app_session_expired => 'Session expired';
 
   @override

@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/api/api_errors.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/mvvm/base_view_model.dart';
@@ -15,7 +16,6 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
-import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
@@ -323,7 +323,7 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
     }
   }
 
-  Future startTrade() async {
+  Future startTrade(BuildContext context) async {
     if (!startingTrade) {
       // if (!isSell || (isSell && checkWalletAddressCorrect))
       startingTrade = true;
@@ -337,7 +337,8 @@ class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorPars
       );
       startingTrade = false;
       if (res.isRight) {
-        context.router.popUntilRouteWithName(MarketAdInfoRoute.name);
+        eventBus.fire(FlashEvent.success(context.intl.app_trade_created));
+        context.router.popUntilRoot();
       } else {
         handleApiError(res.left, context);
       }
