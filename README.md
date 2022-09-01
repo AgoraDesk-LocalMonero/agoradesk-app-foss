@@ -45,12 +45,10 @@ For example, to build FOSS apk LocalMonero app
 
 `flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
 
-Apps use mapbox key. You need to create a key
+The apps use MapBox for reverse geocoding. In order to build it yourself, you need to create/provide your own MapBox API key. [The instructions can be found here.](https://docs.mapbox.com/help/tutorials/get-started-tokens-api/)
 
-https://docs.mapbox.com/help/tutorials/get-started-tokens-api/
+After that, create the file `lib/keys/keys.dart` and add your key there: `key const keysMapToken = 'YOUR_MAPBOX_KEY';`
 
-and after that create a file `lib/keys/keys.dart` and add there your key
-`const keysMapToken = 'YOUR_MAPBOX_KEY';`
 
 You will get the app that works without [FCM](https://firebase.google.com/docs/cloud-messaging) services.
 Push notifications will be received with polling with foreground service (if the app is closed it still works).
