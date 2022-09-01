@@ -37,8 +37,7 @@ class NotificationsService with ForegroundMessagesMixin {
     required this.accountService,
     required this.appState,
     required this.authService,
-  })  : includeFcm = GetIt.I<AppParameters>().includeFcm,
-        openedTradeId = GetIt.I<AppParameters>().openedTradeId;
+  }) : includeFcm = GetIt.I<AppParameters>().includeFcm;
 
   final ApiClient api;
   final FirebaseMessaging? fcm;
@@ -51,7 +50,6 @@ class NotificationsService with ForegroundMessagesMixin {
   final List<ActivityNotificationModel> _notifications = [];
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
   final bool includeFcm;
-  final String? openedTradeId;
 
   Future init() async {
     ///
@@ -76,7 +74,7 @@ class NotificationsService with ForegroundMessagesMixin {
             /// get trade it in case it's screen is opened in the app
             ///
 
-            if (openedTradeId != push.objectId) {
+            if (GetIt.I<AppParameters>().openedTradeId != push.objectId) {
               await AwesomeNotifications().createNotification(
                 content: NotificationContent(
                   id: Random().nextInt(1000000),
