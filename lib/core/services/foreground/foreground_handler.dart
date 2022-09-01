@@ -16,7 +16,6 @@ import 'package:http/http.dart' as http;
 class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin {
   SendPort? _sendPort;
   int _eventCount = 0;
-  // late final SecureStorage _secureStorage;
 
   @override
   Future<void> onStart(DateTime timestamp, SendPort? sendPort) async {
@@ -74,7 +73,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin {
             if (openedTradeId != push.objectId) {
               await AwesomeNotifications().createNotification(
                 content: NotificationContent(
-                  icon: 'resource://mipmap/ic_icon_black',
+                  icon: 'resource://mipmap/ic_launcher',
                   id: Random().nextInt(1000000),
                   channelKey: kNotificationsChannel,
                   title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),

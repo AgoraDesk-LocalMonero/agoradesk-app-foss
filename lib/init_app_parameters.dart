@@ -1,7 +1,11 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 
-AppParameters initAppParameters(FlavorType flavor, bool isGoogleAvailable) {
+AppParameters initAppParameters(
+  FlavorType flavor,
+  bool isGoogleAvailable,
+  bool includeFcm,
+) {
   if (flavor == FlavorType.localmonero) {
     return AppParameters(
       flavor: flavor,
@@ -25,6 +29,7 @@ AppParameters initAppParameters(FlavorType flavor, bool isGoogleAvailable) {
       urlReceipt: 'http://agoradesk.com/receipt',
       isGoogleAvailable: isGoogleAvailable,
       isAgora: false,
+      includeFcm: includeFcm,
     );
   }
   return AppParameters(
@@ -49,5 +54,6 @@ AppParameters initAppParameters(FlavorType flavor, bool isGoogleAvailable) {
     urlReceipt: 'http://agoradesk.com/receipt',
     isGoogleAvailable: isGoogleAvailable,
     isAgora: true,
+    includeFcm: includeFcm,
   );
 }

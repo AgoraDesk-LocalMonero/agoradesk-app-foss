@@ -67,7 +67,7 @@ build-android-ad:
 
 .PHONY: build-android-lm
 build-android-lm:
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.includeFcm=localmonero
 
 .PHONY: internal-android
 internal-android:
