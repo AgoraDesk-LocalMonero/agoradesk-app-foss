@@ -653,7 +653,7 @@ class TradeViewModel extends BaseViewModel
         loadingMessages = false;
         messages.clear();
         messages.addAll(res);
-        _divideMessagesTwoParts(messages);
+        _divideMessagesTwoParts(messages, initial: true);
         notifyListeners();
       } else {
         if (res.isNotEmpty) {
@@ -770,25 +770,25 @@ class TradeViewModel extends BaseViewModel
     }
   }
 
-  void _divideMessagesTwoParts(List<MessageBoxModel>? messagesIn) {
+  void _divideMessagesTwoParts(List<MessageBoxModel>? messagesIn, {bool initial = false}) {
     final parseLst = messagesIn ?? [...messagesBeforeSticky, ...messagesAfterSticky];
     // messagesBeforeSticky.clear();
     // messagesAfterSticky.clear();
     if (tradeStatus == TradeStatus.paymentCompleted) {
-      _sortMessages(parseLst, tradeForScreen.paymentCompletedAt ?? DateTime.now());
+      _sortMessages(parseLst, tradeForScreen.paymentCompletedAt ?? DateTime.now(), initial: initial);
     } else if (tradeStatus == TradeStatus.released || (tradeStatus.index > 5 && tradeStatus != TradeStatus.disputed)) {
-      _sortMessages(parseLst, tradeForScreen.releasedAt ?? DateTime.now());
+      _sortMessages(parseLst, tradeForScreen.releasedAt ?? DateTime.now(), initial: initial);
     } else if (tradeStatus == TradeStatus.disputed) {
-      _sortMessages(parseLst, tradeForScreen.disputedAt ?? DateTime.now());
+      _sortMessages(parseLst, tradeForScreen.disputedAt ?? DateTime.now(), initial: initial);
     } else if (tradeStatus == TradeStatus.canceled) {
-      _sortMessages(parseLst, tradeForScreen.canceledAt ?? DateTime.now());
+      _sortMessages(parseLst, tradeForScreen.canceledAt ?? DateTime.now(), initial: initial);
     } else {
-      _sortMessages(parseLst, DateTime.now());
+      _sortMessages(parseLst, DateTime.now(), initial: initial);
     }
     notifyListeners();
   }
 
-  void _sortMessages(List<MessageBoxModel>? messagesIn, DateTime date) {
+  void _sortMessages(List<MessageBoxModel>? messagesIn, DateTime date, {bool initial = false}) {
     if (messagesIn != null) {
       for (final m in messagesIn.reversed) {
         if (m.createdAt.isBefore(date)) {
@@ -810,7 +810,11 @@ class TradeViewModel extends BaseViewModel
             }
           }
         } else {
-          messagesAfterSticky.add(m);
+          if (initial) {
+            messagesAfterSticky.insert(0, m);
+          } else {
+            messagesAfterSticky.add(m);
+          }
         }
       }
     }

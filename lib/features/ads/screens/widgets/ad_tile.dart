@@ -77,11 +77,11 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
               color: ad.tradeType.colorForTrade(context),
               textColor: ad.tradeType.textColorForTrade(context),
             ),
-            ButtonShareSquare(
-              size: const Size(40, 16),
-              iconSize: 14,
-              link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}',
-            ),
+            // ButtonShareSquare(
+            //   size: const Size(40, 16),
+            //   iconSize: 14,
+            //   link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}',
+            // ),
           ],
         ),
         Row(

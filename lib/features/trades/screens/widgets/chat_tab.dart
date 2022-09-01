@@ -261,7 +261,7 @@ class ChatTab extends StatelessWidget {
   }
 
   Widget _buildListWithStickyHeader(BuildContext context, TradeViewModel model) {
-    final List<MessageBoxModel> messages = model.messagesAfterSticky.reversed.toList();
+    final List<MessageBoxModel> messages = model.messagesAfterSticky;
 
     return StickyHeader(
       header: ChatBubbleSticky(model: model),

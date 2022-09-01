@@ -77,9 +77,10 @@ build-ios-lm:
 build-apk-four:
 	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 	mv /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/agoradesk/release/*.apk /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/
-#     $(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
-#     $(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
-#     $(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+	mv /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/localmonero/release/*.apk /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/
+	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 # APK
 .PHONY: build-apk-all
