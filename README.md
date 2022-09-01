@@ -44,9 +44,11 @@ For build the app locally after getting code from repository use FOSS commands i
 For example, to build FOSS apk LocalMonero app
 `flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
 
-The apps use mapbox keys. You need to create a key
+Apps use mapbox key. You need to create a key
+
 https://docs.mapbox.com/help/tutorials/get-started-tokens-api/
-and after that create a file `lib/keys/keys.dart` and add there a key
+
+and after that create a file `lib/keys/keys.dart` and add there your key
 `const keysMapToken = 'YOUR_MAPBOX_KEY';`
 
 ## Translation
