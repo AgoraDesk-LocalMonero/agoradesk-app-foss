@@ -89,7 +89,7 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   List<String> tradeTypeMenu = [];
   List<String> assetMenu = [];
   TradeType? tradeType;
-  UserSettingsModel settingsModel = UserSettingsModel();
+  UserSettingsModel userSettingsModel = UserSettingsModel();
   late bool isGuestMode;
   bool _displayFilter = false;
   bool? _selVisibility;
@@ -245,7 +245,7 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
     final res = await _userService.getSettings();
     loadingSettings = false;
     if (res.isRight) {
-      settingsModel = res.right;
+      userSettingsModel = res.right;
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
@@ -367,14 +367,14 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   void updateBuyingVacation(bool val) {
     final s = UserSettingsModel(buyingVacation: val);
     setSettings(s, context);
-    settingsModel = settingsModel.copyWith(buyingVacation: val);
+    userSettingsModel = userSettingsModel.copyWith(buyingVacation: val);
     notifyListeners();
   }
 
   void updateSellingVacation(bool val) {
     final s = UserSettingsModel(sellingVacation: val);
     setSettings(s, context);
-    settingsModel = settingsModel.copyWith(sellingVacation: val);
+    userSettingsModel = userSettingsModel.copyWith(sellingVacation: val);
     notifyListeners();
   }
 
@@ -446,7 +446,8 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
       adUpdatingId = adIn.id;
       await AutoRouter.of(context).push(AdInfoRoute(
         ad: adIn,
-        onGlobalVacation: adIn.tradeType.isSell() ? settingsModel.sellingVacation : settingsModel.buyingVacation,
+        onGlobalVacation:
+            adIn.tradeType.isSell() ? userSettingsModel.sellingVacation : userSettingsModel.buyingVacation,
         adsViewModel: this,
       ));
       await indicatorKey.currentState?.show();
@@ -693,6 +694,28 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
     dropdownValue = value;
     notifyListeners();
   }
+
+  String vacationStr(BuildContext context) {
+    String resStr = '';
+    if (userSettingsModel.buyingVacation == true) {
+      resStr += context.intl.dashboard250Sbfilter250Sbrole250Sbbuying;
+    }
+    if (userSettingsModel.buyingVacation == true && userSettingsModel.sellingVacation == true) {
+      resStr += '/';
+    }
+    if (userSettingsModel.sellingVacation == true) {
+      resStr += context.intl.dashboard250Sbfilter250Sbrole250Sbselling;
+    }
+    resStr += ' ${context.intl.app_vacation_enabled}';
+    return resStr;
+  }
+
+  // bool checkAdVacation(AdModel ad) {
+  //   if (ad.tradeType.isSell()) {
+  //     return settingsModel.sellingVacation ?? false;
+  //   }
+  //   return settingsModel.buyingVacation ?? false;
+  // }
 
   Future changeAdVisibility(AdModel ad, int index) async {
     if (!changingVisibility) {

@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 class AgoraDialogInfoNoTitle extends StatelessWidget {
   const AgoraDialogInfoNoTitle({
     Key? key,
-    required this.text,
+    required this.child,
   }) : super(key: key);
 
-  final String text;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +26,7 @@ class AgoraDialogInfoNoTitle extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 24, 16, 24),
-            child: Text(
-              text,
-              style: context.txtBodySmallN80N30,
-            ),
+            child: child,
           ),
           Positioned.fill(
             child: Align(

@@ -11,6 +11,8 @@ import 'package:agoradesk/core/widgets/branded/agora_switcher.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_n80n30.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
+import 'package:agoradesk/core/widgets/branded/button_text_primary70.dart';
+import 'package:agoradesk/core/widgets/branded/container_info_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/dropdown_button_sized.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
@@ -102,6 +104,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                         child: Column(
                           children: [
+                            _buildvacationWarning(context, model),
                             model.isBulkActionsMode
                                 ? _buildFilterBulkActions(context, model)
                                 : _buildTopFilter(context, model),
@@ -129,6 +132,35 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
             );
           }),
     );
+  }
+
+  Widget _buildvacationWarning(BuildContext context, AdsViewModel model) {
+    if (model.userSettingsModel.buyingVacation == true || model.userSettingsModel.sellingVacation == true) {
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+        child: ContainerInfoRadius12Border1(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  model.vacationStr(context),
+                  style: context.txtBodyXSmallN80N30,
+                ),
+                ButtonTextPrimary70(
+                  title: context.intl.app_change_vacation_settings,
+                  onPressed: () {
+                    AutoRouter.of(context).push(AdsSettingsRoute(model: model));
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+    return const SizedBox();
   }
 
   Widget _buildBody(BuildContext context, AdsViewModel model) {
@@ -164,6 +196,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 onPressed: () => model.managePressToAd(ad, context),
                 onLongPress: () => model.handleLongPressToAd(ad),
                 onVisiblePressed: () => model.changeAdVisibility(ad, index),
+                // isOnGlobalVacation: model.checkAdVacation(ad),
+                // globalVacationPressed: () {},
               );
             },
           );

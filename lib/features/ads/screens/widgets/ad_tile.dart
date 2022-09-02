@@ -24,7 +24,9 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
     this.onPressed,
     required this.index,
     this.onLongPress,
-    this.onVisiblePressed,
+    required this.onVisiblePressed,
+    // required this.globalVacationPressed,
+    // required this.isOnGlobalVacation,
     this.isSelected = false,
     this.changingVisibility = false,
     this.changingIndex = 0,
@@ -33,8 +35,10 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
   final AdModel ad;
   final VoidCallback? onPressed;
   final VoidCallback? onLongPress;
-  final VoidCallback? onVisiblePressed;
+  final VoidCallback onVisiblePressed;
+  // final VoidCallback globalVacationPressed;
   final bool isSelected;
+  // final bool isOnGlobalVacation;
   final bool changingVisibility;
   final int changingIndex;
   final int index;
@@ -107,6 +111,32 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
         ),
         Row(
           children: [
+            // isOnGlobalVacation
+            //     ? GestureDetector(
+            //         behavior: HitTestBehavior.opaque,
+            //         onTap: () {
+            //           showDialog(
+            //             context: context,
+            //             builder: (_) => AgoraDialogInfoNoTitle(
+            //               child: Text(
+            //                 context.intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
+            //                 style: context.txtBodySmallN80N30,
+            //               ),
+            //             ),
+            //           );
+            //         },
+            //         child: Padding(
+            //           padding: const EdgeInsets.fromLTRB(6, 0, 12, 0),
+            //           child: Text(
+            //             '⛱',
+            //             style: context.txtLabelRed60Red40.copyWith(
+            //               fontSize: 16,
+            //               color: context.colRed60Red40,
+            //             ),
+            //           ),
+            //         ),
+            //       )
+            //     : const SizedBox(),
             Icon(
               AgoraFont.calendar,
               size: 12,
@@ -246,9 +276,10 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                                 showDialog(
                                   context: context,
                                   builder: (_) => AgoraDialogInfoNoTitle(
-                                    text: context
-                                        .intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
-                                  ),
+                                      child: Text(
+                                    context.intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
+                                    style: context.txtBodySmallN80N30,
+                                  )),
                                 );
                               },
                               child: GestureDetector(
@@ -257,19 +288,14 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                                   showDialog(
                                     context: context,
                                     builder: (_) => AgoraDialogInfoNoTitle(
-                                      text: context
-                                          .intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
+                                      child: Text(
+                                        context
+                                            .intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
+                                        style: context.txtBodySmallN80N30,
+                                      ),
                                     ),
                                   );
                                 },
-                                // child: Padding(
-                                //   padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
-                                //   child: Icon(
-                                //     AgoraFont.alert_triangle,
-                                //     color: context.colRed60Red40,
-                                //     size: 16,
-                                //   ),
-                                // ),
                                 child: Padding(
                                   padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
                                   child: Text(

@@ -33,7 +33,7 @@ class AdsSettingsScreen extends StatelessWidget {
                     AgoraSwitcher(
                       text: context.intl.settings250Sbbuying8722Sbvacation8722Sbtitle,
                       description: context.intl.settings250Sbbuying8722Sbvacation8722Sbtip,
-                      value: model.settingsModel.buyingVacation,
+                      value: model.userSettingsModel.buyingVacation,
                       onChanged: model.updateBuyingVacation,
                       loading: model.loadingSettings,
                     ),
@@ -41,7 +41,7 @@ class AdsSettingsScreen extends StatelessWidget {
                     AgoraSwitcher(
                       text: context.intl.settings250Sbselling8722Sbvacation8722Sbtitle,
                       description: context.intl.settings250Sbselling8722Sbvacation8722Sbtip,
-                      value: model.settingsModel.sellingVacation,
+                      value: model.userSettingsModel.sellingVacation,
                       onChanged: model.updateSellingVacation,
                       loading: model.loadingSettings,
                     ),
