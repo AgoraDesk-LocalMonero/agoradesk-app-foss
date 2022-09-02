@@ -10,11 +10,11 @@ class ThemeColors {
   static const custom09 = Color(0xFFFFDDAB);
   static const custom85 = Color(0xFFFFC970);
 
-  static const error20 = Color(0xff680003);
-  static const error40 = Color(0xffba1b1b);
-  static const error50 = Color(0xffDD3730);
-  static const error60 = Color(0xffFF5449);
-  static const error80 = Color(0xffFFB4A9);
+  static const red20 = Color(0xff680003);
+  static const red40 = Color(0xffba1b1b);
+  static const red50 = Color(0xffDD3730);
+  static const red60 = Color(0xffFF5449);
+  static const red80 = Color(0xffFFB4A9);
 
   static const surfaceLight = Color(0xFFFBFCFF);
   static const surface1Light = Color(0xFFeef3fd);

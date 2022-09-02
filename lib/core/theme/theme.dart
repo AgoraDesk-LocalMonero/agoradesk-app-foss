@@ -22,7 +22,7 @@ const textTheme = TextTheme(
 
 final _darkColorScheme = const ColorScheme.dark().copyWith(
   brightness: Brightness.dark,
-  error: ThemeColors.error60,
+  error: ThemeColors.red60,
   primary: ThemeColors.primary90,
   onError: Colors.white,
   background: ThemeColors.surface1Dark,
@@ -30,7 +30,7 @@ final _darkColorScheme = const ColorScheme.dark().copyWith(
 
 final _lightColorScheme = const ColorScheme.light().copyWith(
   brightness: Brightness.light,
-  error: ThemeColors.error60,
+  error: ThemeColors.red60,
   primary: ThemeColors.primary10,
   onError: Colors.white,
   background: ThemeColors.surface1Light,
@@ -136,6 +136,10 @@ extension ThemeShorcuts on BuildContext {
 
   TextStyle get txtLabelMediumErr30 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
         color: Theme.of(this).colorScheme.error30,
+      );
+
+  TextStyle get txtLabelRed60Red40 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
+        color: Theme.of(this).colorScheme.red60Red40,
       );
 
   TextStyle get txtLabelMediumN50 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
@@ -350,7 +354,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtLabelSmallError20Error50 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
-        color: Theme.of(this).colorScheme.e20E50,
+        color: Theme.of(this).colorScheme.red20Red50,
       );
 
   TextStyle get txtLabelSmallN95N10 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
@@ -377,8 +381,8 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.n80N30,
       );
 
-  TextStyle get txtBodySmallE60E40 => Theme.of(this).textTheme.bodyTextSmall.copyWith(
-        color: Theme.of(this).colorScheme.e60E40,
+  TextStyle get txtBodySmallRed60Red40 => Theme.of(this).textTheme.bodyTextSmall.copyWith(
+        color: Theme.of(this).colorScheme.red60Red40,
       );
 
   TextStyle get txtBodyXSmallN90N10 => Theme.of(this).textTheme.bodyTextXSmall.copyWith(
@@ -480,7 +484,9 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colChatQuote => Theme.of(this).colorScheme.chatQuote;
 
-  Color get colError20Error50 => Theme.of(this).colorScheme.e20E50;
+  Color get colRed20Red50 => Theme.of(this).colorScheme.red20Red50;
+
+  Color get colRed60Red40 => Theme.of(this).colorScheme.red60Red40;
 
   Color get colInfoSec95 => Theme.of(this).colorScheme.infoSec95;
 
@@ -489,7 +495,9 @@ extension ThemeShorcuts on BuildContext {
   Color get colYellow80 => Theme.of(this).colorScheme.yellow80;
 
   Color get colC07c08 => Theme.of(this).colorScheme.c07c08;
+
   Color get colC08c07 => Theme.of(this).colorScheme.c08c07;
+
   Color get colC85c09 => Theme.of(this).colorScheme.c85c09;
   Color get colN30N80 => Theme.of(this).colorScheme.n30N80;
   Color get colN70N50 => Theme.of(this).colorScheme.n70N50;

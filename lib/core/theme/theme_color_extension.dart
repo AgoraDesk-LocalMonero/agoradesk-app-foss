@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 extension ColorExtension on ColorScheme {
   /// new scheme
-  Color get chatRedError80 => brightness == Brightness.dark ? ThemeColors.chatRed : ThemeColors.error80;
+  Color get chatRedError80 => brightness == Brightness.dark ? ThemeColors.chatRed : ThemeColors.red80;
   Color get chatQuote => brightness == Brightness.dark ? ThemeColors.chatQuote : ThemeColors.surface1Light;
   Color get c08c07 => brightness == Brightness.dark ? ThemeColors.custom08 : ThemeColors.custom07;
   Color get c85c09 => brightness == Brightness.dark ? ThemeColors.custom85 : ThemeColors.custom09;
@@ -11,8 +11,8 @@ extension ColorExtension on ColorScheme {
   Color get ds2Ls1 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface1Light;
   Color get ds2Ls3 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface3Light;
   Color get ds4Ls1 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface1Light;
-  Color get e20E50 => brightness == Brightness.dark ? ThemeColors.error20 : ThemeColors.error50;
-  Color get e60E40 => brightness == Brightness.dark ? ThemeColors.error60 : ThemeColors.error40;
+  Color get red20Red50 => brightness == Brightness.dark ? ThemeColors.red20 : ThemeColors.red50;
+  Color get red60Red40 => brightness == Brightness.dark ? ThemeColors.red60 : ThemeColors.red40;
   Color get infoOutlineSec90 => brightness == Brightness.dark ? ThemeColors.infoOutline : ThemeColors.secondary90;
   Color get infoSec95 => brightness == Brightness.dark ? ThemeColors.info : ThemeColors.secondary95;
   Color get n30N80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.neutral80;

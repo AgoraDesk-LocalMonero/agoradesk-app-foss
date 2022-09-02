@@ -5,12 +5,14 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
+import 'package:agoradesk/core/widgets/branded/agora_dialog_info_no_title.dart';
 import 'package:agoradesk/core/widgets/branded/button_share_square.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface2_radius12_border1.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/trades/screens/widgets/highlight_box.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -20,14 +22,22 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
     Key? key,
     required this.ad,
     this.onPressed,
+    required this.index,
     this.onLongPress,
+    this.onVisiblePressed,
     this.isSelected = false,
+    this.changingVisibility = false,
+    this.changingIndex = 0,
   }) : super(key: key);
 
   final AdModel ad;
   final VoidCallback? onPressed;
   final VoidCallback? onLongPress;
+  final VoidCallback? onVisiblePressed;
   final bool isSelected;
+  final bool changingVisibility;
+  final int changingIndex;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -77,11 +87,22 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
               color: ad.tradeType.colorForTrade(context),
               textColor: ad.tradeType.textColorForTrade(context),
             ),
-            // ButtonShareSquare(
-            //   size: const Size(40, 16),
-            //   iconSize: 14,
-            //   link: '${GetIt.I<AppParameters>().urlBase}/ad/${ad.id}',
-            // ),
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: onVisiblePressed,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
+                child: changingVisibility && changingIndex == index
+                    ? const CupertinoActivityIndicator(
+                        radius: 8,
+                      )
+                    : Icon(
+                        ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
+                        color: context.colN80N30,
+                        size: 16,
+                      ),
+              ),
+            ),
           ],
         ),
         Row(
@@ -187,6 +208,8 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
   }
 
   Widget _buildBottom(BuildContext context) {
+    final bool lowBalanceForAd = (ad.minAmount ?? 0) > (ad.maxAmountAvailable ?? 0);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -216,6 +239,40 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
+                      lowBalanceForAd
+                          ? GestureDetector(
+                              behavior: HitTestBehavior.opaque,
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => AgoraDialogInfoNoTitle(
+                                    text: context
+                                        .intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
+                                  ),
+                                );
+                              },
+                              child: GestureDetector(
+                                behavior: HitTestBehavior.opaque,
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) => AgoraDialogInfoNoTitle(
+                                      text: context
+                                          .intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
+                                    ),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
+                                  child: Icon(
+                                    AgoraFont.alert_triangle,
+                                    color: context.colRed60Red40,
+                                    size: 16,
+                                  ),
+                                ),
+                              ),
+                            )
+                          : const SizedBox(),
                       Icon(
                         AgoraFont.limits_3,
                         size: 12,
@@ -223,7 +280,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                       ),
                       const SizedBox(width: 4),
                       Text(
-                        '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.minAmount ?? 0} - ${ad.maxAmount ?? ad.maxAmountAvailable}',
+                        '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.minAmount ?? 0} - ${ad.maxAmount ?? ad.maxAmountAvailable ?? ""}',
                         style: context.txtBodyXSmallN90,
                       ),
                     ],

@@ -74,6 +74,8 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   bool _deletingAds = false;
   bool _applyingChanges = false;
 
+  bool _changingVisibility = false;
+
   Asset? _asset;
   final List<AdModel> ads = [];
   final List<String> selectedAdIds = [];
@@ -107,6 +109,7 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   double? minAmount;
   double? maxAmount;
   int _bodyTabIndex = 0;
+  int changingAdIndex = 0;
   double? _currentEditPrice;
   bool _formulaInputValid = true;
   String _priceEquation = '';
@@ -168,6 +171,10 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   bool get applyingChanges => _applyingChanges;
 
   set applyingChanges(bool v) => updateWith(applyingChanges: v);
+
+  bool get changingVisibility => _changingVisibility;
+
+  set changingVisibility(bool v) => updateWith(changingVisibility: v);
 
   bool get loadingAds => _loadingAds;
 
@@ -687,6 +694,23 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
     notifyListeners();
   }
 
+  Future changeAdVisibility(AdModel ad, int index) async {
+    if (!changingVisibility) {
+      changingAdIndex = index;
+      changingVisibility = true;
+      final bool newVisibility = (ad.visible == false);
+      final AdModel changedAd = ad.copyWith(visible: newVisibility);
+      final res = await _adsRepository.saveAd(changedAd);
+      if (res.isRight) {
+        ads[index] = changedAd;
+        notifyListeners();
+      } else {
+        // handleApiError(res.left, context);
+      }
+    }
+    changingVisibility = false;
+  }
+
   Future applyBulkChanges() async {
     applyingChanges = true;
     bool hasError = false;
@@ -757,6 +781,7 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
   void updateWith({
     Asset? asset,
     bool? loadingAds,
+    bool? changingVisibility,
     bool? formulaInputValid,
     int? bodyTabIndex,
     double? currentEditPrice,
@@ -774,6 +799,7 @@ class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin,
     bool? loadingSettings,
   }) {
     _asset = asset ?? _asset;
+    _changingVisibility = changingVisibility ?? _changingVisibility;
     _price = price ?? _price;
     _formulaInputValid = formulaInputValid ?? _formulaInputValid;
     _currentEditPrice = currentEditPrice ?? _currentEditPrice;

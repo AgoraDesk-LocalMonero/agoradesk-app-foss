@@ -157,9 +157,13 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               final ad = model.ads[index];
               return AdTile(
                 ad: ad,
+                index: index,
+                changingIndex: model.changingAdIndex,
+                changingVisibility: model.changingVisibility,
                 isSelected: model.isAdSelected(ad),
                 onPressed: () => model.managePressToAd(ad, context),
                 onLongPress: () => model.handleLongPressToAd(ad),
+                onVisiblePressed: () => model.changeAdVisibility(ad, index),
               );
             },
           );
