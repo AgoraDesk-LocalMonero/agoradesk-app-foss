@@ -39,7 +39,6 @@ import 'package:image_picker/image_picker.dart';
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
-const _kRemoveMessageDuration = Duration(milliseconds: 0);
 
 class TradeViewModel extends BaseViewModel
     with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin {

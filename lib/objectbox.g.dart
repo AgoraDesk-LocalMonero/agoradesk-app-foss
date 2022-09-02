@@ -72,7 +72,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(5, 5782449331183648541),
       name: 'UserLocalSettings',
-      lastPropertyId: const IdUid(8, 8691606086131470979),
+      lastPropertyId: const IdUid(11, 5156181534954807267),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -114,6 +114,16 @@ final _entities = <ModelEntity>[
             id: const IdUid(8, 8691606086131470979),
             name: 'firstRun',
             type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(10, 8212590627535673531),
+            name: 'cachedCountrySavedDate',
+            type: 10,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(11, 5156181534954807267),
+            name: 'cachedCurrencySavedDate',
+            type: 10,
             flags: 0)
       ],
       relations: <ModelRelation>[],
@@ -229,7 +239,8 @@ ModelDefinition getObjectBoxModel() {
         2251064529912857073,
         8578354113210576549,
         4787065640047253460,
-        7726143144253712131
+        7726143144253712131,
+        3848427887716006093
       ],
       retiredRelationUids: const [],
       modelVersion: 5,
@@ -318,7 +329,7 @@ ModelDefinition getObjectBoxModel() {
           final countryCodeOffset = object.countryCode == null
               ? null
               : fbb.writeString(object.countryCode!);
-          fbb.startTable(9);
+          fbb.startTable(12);
           fbb.addInt64(0, object.autoId);
           fbb.addBool(1, object.pinIsActive);
           fbb.addOffset(2, usernameOffset);
@@ -327,13 +338,20 @@ ModelDefinition getObjectBoxModel() {
           fbb.addOffset(5, countryCodeOffset);
           fbb.addBool(6, object.pushFcmTokenSavedToApi);
           fbb.addBool(7, object.firstRun);
+          fbb.addInt64(
+              9, object.cachedCountrySavedDate?.millisecondsSinceEpoch);
+          fbb.addInt64(
+              10, object.cachedCurrencySavedDate?.millisecondsSinceEpoch);
           fbb.finish(fbb.endTable());
           return object.autoId;
         },
         objectFromFB: (Store store, ByteData fbData) {
           final buffer = fb.BufferContext(fbData);
           final rootOffset = buffer.derefObject(0);
-
+          final cachedCountrySavedDateValue =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 22);
+          final cachedCurrencySavedDateValue =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 24);
           final object = UserLocalSettings(
               locale: const fb.StringReader(asciiOptimization: true)
                   .vTableGetNullable(buffer, rootOffset, 12),
@@ -346,11 +364,16 @@ ModelDefinition getObjectBoxModel() {
               username: const fb.StringReader(asciiOptimization: true)
                   .vTableGetNullable(buffer, rootOffset, 8),
               countryCode: const fb.StringReader(asciiOptimization: true)
-                  .vTableGetNullable(buffer, rootOffset, 14))
+                  .vTableGetNullable(buffer, rootOffset, 14),
+              cachedCountrySavedDate: cachedCountrySavedDateValue == null
+                  ? null
+                  : DateTime.fromMillisecondsSinceEpoch(
+                      cachedCountrySavedDateValue),
+              cachedCurrencySavedDate:
+                  cachedCurrencySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue))
             ..autoId =
                 const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0)
-            ..dbThemeMode = const fb.Int64Reader()
-                .vTableGetNullable(buffer, rootOffset, 10);
+            ..dbThemeMode = const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 10);
 
           return object;
         }),
@@ -487,6 +510,14 @@ class UserLocalSettings_ {
   /// see [UserLocalSettings.firstRun]
   static final firstRun =
       QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[7]);
+
+  /// see [UserLocalSettings.cachedCountrySavedDate]
+  static final cachedCountrySavedDate =
+      QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[8]);
+
+  /// see [UserLocalSettings.cachedCurrencySavedDate]
+  static final cachedCurrencySavedDate =
+      QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[9]);
 }
 
 /// [MessageBoxModel] entity fields to define ObjectBox queries.

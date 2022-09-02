@@ -123,6 +123,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       AdsService(api: _api),
       ObjectBox.s.box<CountryCodeModel>(),
       ObjectBox.s.box<CurrencyModel>(),
+      ObjectBox.s.box<UserLocalSettings>(),
     );
     _walletService = WalletService(api: _api);
     _userService = UserService(api: _api);

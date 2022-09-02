@@ -11,6 +11,8 @@ class UserLocalSettings {
     this.pushFcmTokenSavedToApi,
     this.username,
     this.countryCode,
+    this.cachedCountrySavedDate,
+    this.cachedCurrencySavedDate,
   });
 
   @Id()
@@ -22,6 +24,8 @@ class UserLocalSettings {
   String? username;
   String? locale;
   String? countryCode;
+  DateTime? cachedCountrySavedDate;
+  DateTime? cachedCurrencySavedDate;
 
   /// converter - required by object box
   int? get dbThemeMode {
