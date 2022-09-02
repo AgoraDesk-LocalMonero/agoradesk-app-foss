@@ -262,12 +262,22 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                                     ),
                                   );
                                 },
+                                // child: Padding(
+                                //   padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
+                                //   child: Icon(
+                                //     AgoraFont.alert_triangle,
+                                //     color: context.colRed60Red40,
+                                //     size: 16,
+                                //   ),
+                                // ),
                                 child: Padding(
                                   padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
-                                  child: Icon(
-                                    AgoraFont.alert_triangle,
-                                    color: context.colRed60Red40,
-                                    size: 16,
+                                  child: Text(
+                                    '⚠',
+                                    style: context.txtLabelRed60Red40.copyWith(
+                                      fontSize: 16,
+                                      color: context.colRed60Red40,
+                                    ),
                                   ),
                                 ),
                               ),
