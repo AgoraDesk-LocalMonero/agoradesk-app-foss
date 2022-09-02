@@ -57,7 +57,7 @@ class TraderPersonalIntroBox extends StatelessWidget with DateMixin, UrlMixin {
                             markdownTheme: MarkdownTheme.darkTheme,
                             pConfig: PConfig(
                                 textStyle: context.txtBodySmallN60,
-                                linkStyle: context.txtBodySmallP70,
+                                linkStyle: context.txtBodySmallP70P40,
                                 onLinkTap: (url) {
                                   openLink(url);
                                 })),

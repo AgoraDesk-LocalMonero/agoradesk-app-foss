@@ -123,6 +123,7 @@ mixin PaymentMethodsMixin {
       'OTHER_ONLINE_WALLET_GLOBAL': context.intl.method250Sbother8722Sbonline8722Sbwallet8722Sbglobal,
       'PYC': 'PYC',
       'MOBILEPAY_DANSKE_BANK_DK': 'MobilePay',
+      'MB_WAY': 'MB WAY',
       'GIFT_CARD_CODE_STARBUCKS': context.intl.method250Sbgift8722Sbcard8722Sbstarbucks,
       'MPESA_TANZANIA': 'M_PESA Tanzania (Vodacom)',
       'SWISH': 'Swish',

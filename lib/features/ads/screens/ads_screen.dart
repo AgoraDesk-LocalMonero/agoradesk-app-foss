@@ -137,10 +137,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
   Widget _buildvacationWarning(BuildContext context, AdsViewModel model) {
     if (model.userSettingsModel.buyingVacation == true || model.userSettingsModel.sellingVacation == true) {
       return Padding(
-        padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
         child: ContainerInfoRadius12Border1(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
+            padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

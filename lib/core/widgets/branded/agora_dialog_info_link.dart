@@ -30,7 +30,7 @@ class AgoraDialogInfoWithMarkdown extends StatelessWidget {
       },
       child: Text(
         linkTitle,
-        style: context.txtBodySmallP70,
+        style: context.txtBodySmallP70P40,
       ),
     );
   }

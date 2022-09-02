@@ -102,7 +102,7 @@ class EmailScreen extends StatelessWidget with UrlMixin {
                     ),
                     TextSpan(
                       text: I18n.of(context)!.email_not_received_link,
-                      style: context.txtBodySmallP70,
+                      style: context.txtBodySmallP70P40,
                       recognizer: TapGestureRecognizer()..onTap = () => model.sendConfirmationEmail(),
                     ),
                   ],

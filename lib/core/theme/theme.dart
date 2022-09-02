@@ -270,8 +270,8 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.neutral90,
       );
 
-  TextStyle get txtBodySmallP70 => Theme.of(this).textTheme.bodyTextSmall.copyWith(
-        color: Theme.of(this).colorScheme.primary70,
+  TextStyle get txtBodySmallP70P40 => Theme.of(this).textTheme.bodyTextSmall.copyWith(
+        color: Theme.of(this).colorScheme.p70P40,
       );
 
   TextStyle get txtBodySmallP90 => Theme.of(this).textTheme.bodyTextSmall.copyWith(

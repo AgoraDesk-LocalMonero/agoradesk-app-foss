@@ -80,7 +80,7 @@ class Enable2faViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
       final res = await _userService.validation2fa(otp: code);
       verifyingCode = false;
       if (res.isRight) {
-        verificationRes = Text(context.intl.code_valid, style: context.txtBodySmallP70);
+        verificationRes = Text(context.intl.code_valid, style: context.txtBodySmallP70P40);
         // await Future.delayed(const Duration(seconds: 1));
         AutoRouter.of(context).popUntilRouteWithName(TwoFactorAuthRoute.name);
       } else {
