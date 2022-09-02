@@ -391,6 +391,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
         currentEditPrice: model.currentEditPrice,
         formulaInputValid: model.formulaInputValid,
         bulkEdit: true,
+        isXmr: true,
       );
     }
     return const SizedBox();

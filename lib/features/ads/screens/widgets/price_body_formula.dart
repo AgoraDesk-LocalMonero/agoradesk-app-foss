@@ -16,6 +16,7 @@ class PriceBodyFormula extends StatelessWidget {
     required this.currentEditPrice,
     required this.formulaInputValid,
     this.bulkEdit = false,
+    required this.isXmr,
   }) : super(key: key);
 
   // final AddEditAdViewModel model;
@@ -26,6 +27,7 @@ class PriceBodyFormula extends StatelessWidget {
   final double? currentEditPrice;
   final bool formulaInputValid;
   final bool bulkEdit;
+  final bool isXmr;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,7 @@ class PriceBodyFormula extends StatelessWidget {
             ),
             AgoraDialogInfoWithMarkdown(
               title: context.intl.price_formula_examples,
-              text: context.intl.formula250Sbexamples250Sbxmr,
+              text: isXmr ? context.intl.formula250Sbexamples250Sbxmr : context.intl.formula250Sbexamples250Sbbtc,
               linkTitle: context.intl.see_examples,
             ),
           ],

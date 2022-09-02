@@ -306,6 +306,7 @@ class _AdEditScreenState extends State<AdEditScreen>
                 bodyTabIndex: model.bodyTabIndex,
                 currentEditPrice: model.currentEditPrice,
                 formulaInputValid: model.formulaInputValid,
+                isXmr: model.asset == Asset.XMR,
               ),
           ],
         ),

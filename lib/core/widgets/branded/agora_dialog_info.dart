@@ -47,9 +47,21 @@ class AgoraDialogInfo extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             MarkdownWidget(
-              data: text,
+              data: text
+                  .replaceAll('*', '\\*')
+                  .replaceAll('\n', '\n\n')
+                  .replaceAll('<strong> ', '**')
+                  .replaceAll(' </strong>', '**')
+                  .replaceAll('<strong>', '**')
+                  .replaceAll('</strong>', '**'),
               shrinkWrap: true,
-              styleConfig: StyleConfig(markdownTheme: MarkdownTheme.darkTheme),
+              styleConfig: StyleConfig(
+                markdownTheme: MarkdownTheme.darkTheme,
+                pConfig: PConfig(
+                  textStyle: context.txtBodySmallN80N30,
+                  strongStyle: context.txtLabelLargeP80P40,
+                ),
+              ),
             ),
           ],
         ),
