@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:agoradesk/core/api/api_client.dart';
-import 'package:agoradesk/core/packages/image_viewer/insta_image_viewer.dart';
 import 'package:agoradesk/features/trades/data/models/message_box_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:insta_image_viewer/insta_image_viewer.dart';
 import 'package:provider/provider.dart';
 
 class ChatImage extends StatelessWidget {
@@ -28,6 +28,7 @@ class ChatImage extends StatelessWidget {
     return SizedBox(
       width: 160,
       child: InstaImageViewer(
+        disableSwipeToDismiss: true,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(4),
           child: message.isSending || message.isUpdated

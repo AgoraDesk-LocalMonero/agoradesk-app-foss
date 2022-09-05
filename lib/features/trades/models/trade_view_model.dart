@@ -31,8 +31,8 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 

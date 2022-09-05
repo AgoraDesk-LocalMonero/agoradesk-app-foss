@@ -279,7 +279,7 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: 50a8e39cae8abf72d5145d07ea34c3244f70862b
   FirebaseInstallations: 41f811b530c41dd90973d0174381cdb3fcb5e839
   FirebaseMessaging: 2f6e38b6133059eb796ec224104f09379298a8c3
-  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_foreground_task: 21ef182ab0a29a3005cc72cd70e5f45cb7f7f817
   flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   flutter_keyboard_visibility: 0339d06371254c3eb25eeb90ba8d17dca8f9c069
