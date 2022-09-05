@@ -195,7 +195,10 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                         ),
                       ],
                     )
-                  : Text(ad.locationString ?? ''),
+                  : Text(
+                      ad.locationString ?? '',
+                      style: context.txtBodyXSmallN80N30,
+                    ),
             ),
             Expanded(
               flex: 1,

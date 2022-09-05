@@ -24,10 +24,10 @@ dependencies:
   flutter_screenutil: ^5.0.2
   in_app_review: ^2.0.4
   url_launcher: ^6.0.17
-  intl: ^0.17.0-nullsafety.2
+  intl: ^0.17.0
   rxdart: ^0.27.3
   timeago: ^3.2.2
-  provider: ^6.0.1
+  provider: ^6.0.3
   sentry_flutter: ^6.9.1
   collection: ^1.15.0
   rating_dialog: ^2.0.3

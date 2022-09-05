@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
@@ -15,36 +16,41 @@ class SearchLocation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-      child: TextFieldSearch(
-        controller: model.ctrl2InputLocation,
-        future: model.findLocations,
-        getSelectedValue: model.addLocation,
-        initialList: const [],
-        label: '',
-        decoration: context.decorationTxtFieldMain.copyWith(
-          hintText: context.intl.search250Sblocation8722Sbplaceholder,
-          suffixIcon: SizedBox(
-            width: 32,
-            child: Row(
-              children: [
-                AnimatedOpacity(
-                  opacity: model.displayClear ? 1.0 : 0.0,
-                  duration: const Duration(milliseconds: 800),
-                  child: model.displayClear
-                      ? ButtonSquareIcon(
-                          iconData: AgoraFont.x,
-                          onPressed: () => model.locationFieldClear(),
-                        )
-                      : const SizedBox(),
+    return ViewModelBuilder<AddEditAdViewModel>(
+        model: model,
+        disposable: false,
+        builder: (context, model, child) {
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+            child: TextFieldSearch(
+              controller: model.ctrl2InputLocation,
+              future: model.findLocations,
+              getSelectedValue: model.addLocation,
+              initialList: const [],
+              label: '',
+              decoration: context.decorationTxtFieldMain.copyWith(
+                hintText: context.intl.search250Sblocation8722Sbplaceholder,
+                suffixIcon: SizedBox(
+                  width: 32,
+                  child: Row(
+                    children: [
+                      AnimatedOpacity(
+                        opacity: model.displayClear ? 1.0 : 0.0,
+                        duration: const Duration(milliseconds: 800),
+                        child: model.displayClear
+                            ? ButtonSquareIcon(
+                                iconData: AgoraFont.x,
+                                onPressed: () => model.locationFieldClear(),
+                              )
+                            : const SizedBox(),
+                      ),
+                      const SizedBox(width: 10),
+                    ],
+                  ),
                 ),
-                const SizedBox(width: 10),
-              ],
+              ),
             ),
-          ),
-        ),
-      ),
-    );
+          );
+        });
   }
 }

@@ -61,6 +61,8 @@ import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
 
+const _kPinDelay = Duration(seconds: 300);
+
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
@@ -184,7 +186,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     if (state == AppLifecycleState.detached) {}
     if (state == AppLifecycleState.inactive) {}
     if (state == AppLifecycleState.paused) {
-      Future.delayed(const Duration(seconds: 300)).then((value) => _activatePin = true);
+      Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
     super.didChangeAppLifecycleState(state);
   }
@@ -235,7 +237,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     final mq = MediaQuery.of(context);
     return MediaQuery(
       data: mq.copyWith(
-        textScaleFactor: mq.textScaleFactor > 1.2 ? 1.2 : mq.textScaleFactor,
+        textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,
       ),
       child: child!,
     );
@@ -380,7 +382,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Initial route logic
   ///
   Future<void> _initStartRoute({Uri? uri, bool removeLast = false}) async {
-    final List<PageRouteInfo<dynamic>> routes = <PageRouteInfo>[];
+    final List<PageRouteInfo<dynamic>> newRoutes = <PageRouteInfo>[];
 
     if (removeLast) {
       router.removeLast();
@@ -390,39 +392,49 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       final PageRouteInfo<dynamic>? pageRoute = AppLinksHandler().parseUniLink(uri);
       if (pageRoute != null) {
         if (pageRoute.path == 'trades/trade') {
-          router.removeWhere((route) {
-            return route.name == TradeRoute.name;
-          });
+          if (router.current.name == TradeRoute.name) {
+            router.pop();
+          }
         }
-        routes.add(pageRoute);
+        if (pageRoute.path == 'market/adInfo') {
+          if (router.current.name == AdInfoRoute.name || router.current.name == MarketAdInfoRoute.name) {
+            router.pop();
+          }
+        }
+        if (pageRoute.path == 'account/profile') {
+          if (router.current.name == TraderProfileRoute.name) {
+            router.pop();
+          }
+        }
+        newRoutes.add(pageRoute);
       }
     }
 
     debugPrint('[$runtimeType] Init Start Route $uri');
 
     if (_authService.isAuthenticated != true && _authService.authState == AuthState.guest) {
-      routes.add(const MainScreenRoute());
+      newRoutes.add(const MainScreenRoute());
       _addUniLinksRouts();
     } else if (_authService.isAuthenticated != true) {
-      routes.add(
+      newRoutes.add(
         const WelcomeRoute(),
       );
       _addUniLinksRouts();
     } else if (_authService.showPinSetUp) {
-      routes.add(const MainScreenRoute());
-      routes.add(const PinCodeSetRoute());
+      newRoutes.add(const MainScreenRoute());
+      newRoutes.add(const PinCodeSetRoute());
       _authService.showPinSetUp = false;
     } else {
-      routes.add(const MainScreenRoute());
+      newRoutes.add(const MainScreenRoute());
       _addUniLinksRouts();
       if (appState.hasPinCode) {
-        routes.add(const PinCodeCheckRoute());
+        newRoutes.add(const PinCodeCheckRoute());
       }
     }
 
-    if (routes.isNotEmpty) {
+    if (newRoutes.isNotEmpty) {
       router.removeUntil((route) => route.name == '/');
-      await router.pushAll(routes);
+      await router.pushAll(newRoutes);
       return;
     }
   }
@@ -710,7 +722,10 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
-    final bool googleAvailable = await checkGoogleAvailable();
+    bool googleAvailable = false;
+    if (!Platform.isIOS) {
+      googleAvailable = await checkGoogleAvailable();
+    }
     if (googleAvailable || Platform.isIOS) {
       await SecureStorage.ensureInitialized();
       final SecureStorage _secureStorage = SecureStorage();
@@ -720,7 +735,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
       await AwesomeNotifications().createNotification(
         content: NotificationContent(
-          id: math.Random().nextInt(1000000),
+          id: math.Random().nextInt(10000000),
           channelKey: kNotificationsChannel,
           title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
           body: push.msg,
@@ -730,6 +745,6 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       );
     }
   } catch (e) {
-    debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
+    print('++++_firebaseMessagingBackgroundHandler error $e');
   }
 }
