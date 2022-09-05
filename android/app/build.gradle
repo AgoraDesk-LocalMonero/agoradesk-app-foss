@@ -99,7 +99,7 @@ android {
             resValue "string", "app_name", "LocalMonero"
             resValue "string", "app_host", "localmonero.co"
             resValue "string", "app_host_2", "agoradesk.com"
-            resValue "string", "links_priority", "-1000"
+            resValue "string", "links_priority", "999"
             applicationId "co.localmonero.app"
             signingConfig signingConfigs.localmoneroConfig
         }
