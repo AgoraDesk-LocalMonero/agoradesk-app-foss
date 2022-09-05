@@ -12,34 +12,11 @@ part of 'device_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DeviceModel _$DeviceModelFromJson(Map<String, dynamic> json) {
   return _DeviceModel.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceModelTearOff {
-  const _$DeviceModelTearOff();
-
-  _DeviceModel call(
-      {@JsonKey(includeIfNull: false) String? type,
-      @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName,
-      required String token}) {
-    return _DeviceModel(
-      type: type,
-      deviceName: deviceName,
-      token: token,
-    );
-  }
-
-  DeviceModel fromJson(Map<String, Object?> json) {
-    return DeviceModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceModel = _$DeviceModelTearOff();
 
 /// @nodoc
 mixin _$DeviceModel {
@@ -98,11 +75,11 @@ class _$DeviceModelCopyWithImpl<$Res> implements $DeviceModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$DeviceModelCopyWith<$Res>
+abstract class _$$_DeviceModelCopyWith<$Res>
     implements $DeviceModelCopyWith<$Res> {
-  factory _$DeviceModelCopyWith(
-          _DeviceModel value, $Res Function(_DeviceModel) then) =
-      __$DeviceModelCopyWithImpl<$Res>;
+  factory _$$_DeviceModelCopyWith(
+          _$_DeviceModel value, $Res Function(_$_DeviceModel) then) =
+      __$$_DeviceModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(includeIfNull: false) String? type,
@@ -111,14 +88,14 @@ abstract class _$DeviceModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceModelCopyWithImpl<$Res> extends _$DeviceModelCopyWithImpl<$Res>
-    implements _$DeviceModelCopyWith<$Res> {
-  __$DeviceModelCopyWithImpl(
-      _DeviceModel _value, $Res Function(_DeviceModel) _then)
-      : super(_value, (v) => _then(v as _DeviceModel));
+class __$$_DeviceModelCopyWithImpl<$Res> extends _$DeviceModelCopyWithImpl<$Res>
+    implements _$$_DeviceModelCopyWith<$Res> {
+  __$$_DeviceModelCopyWithImpl(
+      _$_DeviceModel _value, $Res Function(_$_DeviceModel) _then)
+      : super(_value, (v) => _then(v as _$_DeviceModel));
 
   @override
-  _DeviceModel get _value => super._value as _DeviceModel;
+  _$_DeviceModel get _value => super._value as _$_DeviceModel;
 
   @override
   $Res call({
@@ -126,7 +103,7 @@ class __$DeviceModelCopyWithImpl<$Res> extends _$DeviceModelCopyWithImpl<$Res>
     Object? deviceName = freezed,
     Object? token = freezed,
   }) {
-    return _then(_DeviceModel(
+    return _then(_$_DeviceModel(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -174,13 +151,14 @@ class _$_DeviceModel extends _DeviceModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeviceModel &&
+            other is _$_DeviceModel &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.deviceName, deviceName) &&
             const DeepCollectionEquality().equals(other.token, token));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -190,20 +168,24 @@ class _$_DeviceModel extends _DeviceModel {
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceModelCopyWith<_DeviceModel> get copyWith =>
-      __$DeviceModelCopyWithImpl<_DeviceModel>(this, _$identity);
+  _$$_DeviceModelCopyWith<_$_DeviceModel> get copyWith =>
+      __$$_DeviceModelCopyWithImpl<_$_DeviceModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceModelToJson(this);
+    return _$$_DeviceModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceModel extends DeviceModel {
   const factory _DeviceModel(
-      {@JsonKey(includeIfNull: false) String? type,
-      @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName,
-      required String token}) = _$_DeviceModel;
+      {@JsonKey(includeIfNull: false)
+          final String? type,
+      @JsonKey(name: 'device_name', includeIfNull: false)
+          final String? deviceName,
+      required final String token}) = _$_DeviceModel;
   const _DeviceModel._() : super._();
 
   factory _DeviceModel.fromJson(Map<String, dynamic> json) =
@@ -219,6 +201,6 @@ abstract class _DeviceModel extends DeviceModel {
   String get token;
   @override
   @JsonKey(ignore: true)
-  _$DeviceModelCopyWith<_DeviceModel> get copyWith =>
+  _$$_DeviceModelCopyWith<_$_DeviceModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

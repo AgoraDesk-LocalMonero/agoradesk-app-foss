@@ -12,41 +12,11 @@ part of 'attached_ad_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AttachedAdModel _$AttachedAdModelFromJson(Map<String, dynamic> json) {
   return _AttachedAdModel.fromJson(json);
 }
-
-/// @nodoc
-class _$AttachedAdModelTearOff {
-  const _$AttachedAdModelTearOff();
-
-  _AttachedAdModel call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
-      Asset? asset,
-      @JsonKey(name: 'trade_type')
-          required TradeType tradeType,
-      AccountInfoModel? advertiser,
-      @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod}) {
-    return _AttachedAdModel(
-      id: id,
-      asset: asset,
-      tradeType: tradeType,
-      advertiser: advertiser,
-      paymentMethod: paymentMethod,
-    );
-  }
-
-  AttachedAdModel fromJson(Map<String, Object?> json) {
-    return AttachedAdModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AttachedAdModel = _$AttachedAdModelTearOff();
 
 /// @nodoc
 mixin _$AttachedAdModel {
@@ -139,11 +109,11 @@ class _$AttachedAdModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AttachedAdModelCopyWith<$Res>
+abstract class _$$_AttachedAdModelCopyWith<$Res>
     implements $AttachedAdModelCopyWith<$Res> {
-  factory _$AttachedAdModelCopyWith(
-          _AttachedAdModel value, $Res Function(_AttachedAdModel) then) =
-      __$AttachedAdModelCopyWithImpl<$Res>;
+  factory _$$_AttachedAdModelCopyWith(
+          _$_AttachedAdModel value, $Res Function(_$_AttachedAdModel) then) =
+      __$$_AttachedAdModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'id', includeIfNull: false)
@@ -160,15 +130,15 @@ abstract class _$AttachedAdModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AttachedAdModelCopyWithImpl<$Res>
+class __$$_AttachedAdModelCopyWithImpl<$Res>
     extends _$AttachedAdModelCopyWithImpl<$Res>
-    implements _$AttachedAdModelCopyWith<$Res> {
-  __$AttachedAdModelCopyWithImpl(
-      _AttachedAdModel _value, $Res Function(_AttachedAdModel) _then)
-      : super(_value, (v) => _then(v as _AttachedAdModel));
+    implements _$$_AttachedAdModelCopyWith<$Res> {
+  __$$_AttachedAdModelCopyWithImpl(
+      _$_AttachedAdModel _value, $Res Function(_$_AttachedAdModel) _then)
+      : super(_value, (v) => _then(v as _$_AttachedAdModel));
 
   @override
-  _AttachedAdModel get _value => super._value as _AttachedAdModel;
+  _$_AttachedAdModel get _value => super._value as _$_AttachedAdModel;
 
   @override
   $Res call({
@@ -178,7 +148,7 @@ class __$AttachedAdModelCopyWithImpl<$Res>
     Object? advertiser = freezed,
     Object? paymentMethod = freezed,
   }) {
-    return _then(_AttachedAdModel(
+    return _then(_$_AttachedAdModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -230,9 +200,9 @@ class _$_AttachedAdModel implements _AttachedAdModel {
   final TradeType tradeType;
   @override
   final AccountInfoModel? advertiser;
-  @override
 
   /// aka online_provider
+  @override
   @JsonKey(name: 'payment_method', includeIfNull: false)
   final String? paymentMethod;
 
@@ -245,7 +215,7 @@ class _$_AttachedAdModel implements _AttachedAdModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AttachedAdModel &&
+            other is _$_AttachedAdModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
             const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
@@ -255,6 +225,7 @@ class _$_AttachedAdModel implements _AttachedAdModel {
                 .equals(other.paymentMethod, paymentMethod));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -266,25 +237,27 @@ class _$_AttachedAdModel implements _AttachedAdModel {
 
   @JsonKey(ignore: true)
   @override
-  _$AttachedAdModelCopyWith<_AttachedAdModel> get copyWith =>
-      __$AttachedAdModelCopyWithImpl<_AttachedAdModel>(this, _$identity);
+  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
+      __$$_AttachedAdModelCopyWithImpl<_$_AttachedAdModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AttachedAdModelToJson(this);
+    return _$$_AttachedAdModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _AttachedAdModel implements AttachedAdModel {
   const factory _AttachedAdModel(
       {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
-      Asset? asset,
+          final String? id,
+      final Asset? asset,
       @JsonKey(name: 'trade_type')
-          required TradeType tradeType,
-      AccountInfoModel? advertiser,
+          required final TradeType tradeType,
+      final AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod}) = _$_AttachedAdModel;
+          final String? paymentMethod}) = _$_AttachedAdModel;
 
   factory _AttachedAdModel.fromJson(Map<String, dynamic> json) =
       _$_AttachedAdModel.fromJson;
@@ -306,6 +279,6 @@ abstract class _AttachedAdModel implements AttachedAdModel {
   String? get paymentMethod;
   @override
   @JsonKey(ignore: true)
-  _$AttachedAdModelCopyWith<_AttachedAdModel> get copyWith =>
+  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

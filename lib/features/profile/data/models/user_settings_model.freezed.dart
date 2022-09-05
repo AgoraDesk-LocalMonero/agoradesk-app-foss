@@ -12,87 +12,11 @@ part of 'user_settings_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UserSettingsModel _$UserSettingsModelFromJson(Map<String, dynamic> json) {
   return _UserSettingsModel.fromJson(json);
 }
-
-/// @nodoc
-class _$UserSettingsModelTearOff {
-  const _$UserSettingsModelTearOff();
-
-  _UserSettingsModel call(
-      {@JsonKey(ignore: true)
-          int? id,
-      @JsonKey(includeIfNull: false)
-          String? email,
-      @JsonKey(name: 'email_verified', includeIfNull: false)
-          bool? emailVerified,
-      @JsonKey(name: 'selling_vacation', includeIfNull: false)
-          bool? sellingVacation,
-      @JsonKey(name: 'buying_vacation', includeIfNull: false)
-          bool? buyingVacation,
-      @JsonKey(name: 'web_notifications', includeIfNull: false)
-          bool? webNotifications,
-      @JsonKey(name: 'sensitive_emails', includeIfNull: false)
-          bool? sensitiveEmails,
-      @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-          bool? newTradeRequestEmailNotifications,
-      @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-          bool? newOnlinePaymentEmailNotifications,
-      @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-          bool? escrowReleaseEmailNotifications,
-      @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-          bool? newMessageTelegramNotifications,
-      @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
-          bool? newMessageEmailNotifications,
-      @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-          bool? newTradeRequestTelegramNotifications,
-      @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-          bool? newOnlinePaymentTelegramNotifications,
-      @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-          bool? escrowReleaseTelegramNotifications,
-      @JsonKey(includeIfNull: false)
-          String? introduction,
-      @JsonKey(includeIfNull: false)
-          String? homepage,
-      @JsonKey(name: 'telegram_id', includeIfNull: false)
-          int? telegramId,
-      @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
-          bool? twoFaEnabled}) {
-    return _UserSettingsModel(
-      id: id,
-      email: email,
-      emailVerified: emailVerified,
-      sellingVacation: sellingVacation,
-      buyingVacation: buyingVacation,
-      webNotifications: webNotifications,
-      sensitiveEmails: sensitiveEmails,
-      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications,
-      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications,
-      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications,
-      newMessageTelegramNotifications: newMessageTelegramNotifications,
-      newMessageEmailNotifications: newMessageEmailNotifications,
-      newTradeRequestTelegramNotifications:
-          newTradeRequestTelegramNotifications,
-      newOnlinePaymentTelegramNotifications:
-          newOnlinePaymentTelegramNotifications,
-      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications,
-      introduction: introduction,
-      homepage: homepage,
-      telegramId: telegramId,
-      twoFaEnabled: twoFaEnabled,
-    );
-  }
-
-  UserSettingsModel fromJson(Map<String, Object?> json) {
-    return UserSettingsModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UserSettingsModel = _$UserSettingsModelTearOff();
 
 /// @nodoc
 mixin _$UserSettingsModel {
@@ -320,11 +244,11 @@ class _$UserSettingsModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UserSettingsModelCopyWith<$Res>
+abstract class _$$_UserSettingsModelCopyWith<$Res>
     implements $UserSettingsModelCopyWith<$Res> {
-  factory _$UserSettingsModelCopyWith(
-          _UserSettingsModel value, $Res Function(_UserSettingsModel) then) =
-      __$UserSettingsModelCopyWithImpl<$Res>;
+  factory _$$_UserSettingsModelCopyWith(_$_UserSettingsModel value,
+          $Res Function(_$_UserSettingsModel) then) =
+      __$$_UserSettingsModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(ignore: true)
@@ -368,15 +292,15 @@ abstract class _$UserSettingsModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$UserSettingsModelCopyWithImpl<$Res>
+class __$$_UserSettingsModelCopyWithImpl<$Res>
     extends _$UserSettingsModelCopyWithImpl<$Res>
-    implements _$UserSettingsModelCopyWith<$Res> {
-  __$UserSettingsModelCopyWithImpl(
-      _UserSettingsModel _value, $Res Function(_UserSettingsModel) _then)
-      : super(_value, (v) => _then(v as _UserSettingsModel));
+    implements _$$_UserSettingsModelCopyWith<$Res> {
+  __$$_UserSettingsModelCopyWithImpl(
+      _$_UserSettingsModel _value, $Res Function(_$_UserSettingsModel) _then)
+      : super(_value, (v) => _then(v as _$_UserSettingsModel));
 
   @override
-  _UserSettingsModel get _value => super._value as _UserSettingsModel;
+  _$_UserSettingsModel get _value => super._value as _$_UserSettingsModel;
 
   @override
   $Res call({
@@ -400,7 +324,7 @@ class __$UserSettingsModelCopyWithImpl<$Res>
     Object? telegramId = freezed,
     Object? twoFaEnabled = freezed,
   }) {
-    return _then(_UserSettingsModel(
+    return _then(_$_UserSettingsModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -608,7 +532,7 @@ class _$_UserSettingsModel implements _UserSettingsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserSettingsModel &&
+            other is _$_UserSettingsModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality()
@@ -654,6 +578,7 @@ class _$_UserSettingsModel implements _UserSettingsModel {
                 .equals(other.twoFaEnabled, twoFaEnabled));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -682,55 +607,58 @@ class _$_UserSettingsModel implements _UserSettingsModel {
 
   @JsonKey(ignore: true)
   @override
-  _$UserSettingsModelCopyWith<_UserSettingsModel> get copyWith =>
-      __$UserSettingsModelCopyWithImpl<_UserSettingsModel>(this, _$identity);
+  _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
+      __$$_UserSettingsModelCopyWithImpl<_$_UserSettingsModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserSettingsModelToJson(this);
+    return _$$_UserSettingsModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _UserSettingsModel implements UserSettingsModel {
   factory _UserSettingsModel(
       {@JsonKey(ignore: true)
-          int? id,
+          final int? id,
       @JsonKey(includeIfNull: false)
-          String? email,
+          final String? email,
       @JsonKey(name: 'email_verified', includeIfNull: false)
-          bool? emailVerified,
+          final bool? emailVerified,
       @JsonKey(name: 'selling_vacation', includeIfNull: false)
-          bool? sellingVacation,
+          final bool? sellingVacation,
       @JsonKey(name: 'buying_vacation', includeIfNull: false)
-          bool? buyingVacation,
+          final bool? buyingVacation,
       @JsonKey(name: 'web_notifications', includeIfNull: false)
-          bool? webNotifications,
+          final bool? webNotifications,
       @JsonKey(name: 'sensitive_emails', includeIfNull: false)
-          bool? sensitiveEmails,
+          final bool? sensitiveEmails,
       @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-          bool? newTradeRequestEmailNotifications,
+          final bool? newTradeRequestEmailNotifications,
       @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-          bool? newOnlinePaymentEmailNotifications,
+          final bool? newOnlinePaymentEmailNotifications,
       @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-          bool? escrowReleaseEmailNotifications,
+          final bool? escrowReleaseEmailNotifications,
       @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-          bool? newMessageTelegramNotifications,
+          final bool? newMessageTelegramNotifications,
       @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
-          bool? newMessageEmailNotifications,
+          final bool? newMessageEmailNotifications,
       @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-          bool? newTradeRequestTelegramNotifications,
+          final bool? newTradeRequestTelegramNotifications,
       @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-          bool? newOnlinePaymentTelegramNotifications,
+          final bool? newOnlinePaymentTelegramNotifications,
       @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-          bool? escrowReleaseTelegramNotifications,
+          final bool? escrowReleaseTelegramNotifications,
       @JsonKey(includeIfNull: false)
-          String? introduction,
+          final String? introduction,
       @JsonKey(includeIfNull: false)
-          String? homepage,
+          final String? homepage,
       @JsonKey(name: 'telegram_id', includeIfNull: false)
-          int? telegramId,
+          final int? telegramId,
       @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
-          bool? twoFaEnabled}) = _$_UserSettingsModel;
+          final bool? twoFaEnabled}) = _$_UserSettingsModel;
 
   factory _UserSettingsModel.fromJson(Map<String, dynamic> json) =
       _$_UserSettingsModel.fromJson;
@@ -800,6 +728,6 @@ abstract class _UserSettingsModel implements UserSettingsModel {
   bool? get twoFaEnabled;
   @override
   @JsonKey(ignore: true)
-  _$UserSettingsModelCopyWith<_UserSettingsModel> get copyWith =>
+  _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

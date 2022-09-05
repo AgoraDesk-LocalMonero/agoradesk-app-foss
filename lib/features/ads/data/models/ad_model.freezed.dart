@@ -12,115 +12,11 @@ part of 'ad_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AdModel _$AdModelFromJson(Map<String, dynamic> json) {
   return _AdModel.fromJson(json);
 }
-
-/// @nodoc
-class _$AdModelTearOff {
-  const _$AdModelTearOff();
-
-  _AdModel call(
-      {Asset? asset,
-      @JsonKey(name: 'ad_id', includeIfNull: false)
-          String? id,
-      @JsonKey(name: 'created_at', includeIfNull: false)
-          String? createdAt,
-      @JsonKey(name: 'temp_price', includeIfNull: false)
-          String? tempPrice,
-      @JsonKey(includeIfNull: false)
-          bool? visible,
-      @JsonKey(includeIfNull: false)
-          double? lat,
-      @JsonKey(includeIfNull: false)
-          double? lon,
-      @JsonKey(name: 'countrycode', includeIfNull: false)
-          required String countryCode,
-      required String currency,
-      @JsonKey(name: 'trade_type')
-          required TradeType tradeType,
-      @JsonKey(name: 'online_provider', includeIfNull: false)
-          String? onlineProvider,
-      @JsonKey(name: 'buyer_settlement_address', includeIfNull: false)
-          String? buyerSettlementAddress,
-      @JsonKey(name: 'price_equation', includeIfNull: false)
-          String? priceEquation,
-      @JsonKey(name: 'track_max_amount', includeIfNull: false)
-          bool? trackMaxAmount,
-      @JsonKey(name: 'require_trusted_by_advertiser', includeIfNull: false)
-          bool? requireTrustedByAdvertiser,
-      @JsonKey(includeIfNull: false)
-          bool? floating,
-      @JsonKey(name: 'verified_email_required', includeIfNull: false)
-          bool? verifiedEmailRequired,
-      @JsonKey(includeIfNull: false)
-          String? msg,
-      @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'min_amount', includeIfNull: false)
-          double? minAmount,
-      @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount', includeIfNull: false)
-          double? maxAmount,
-      @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount_available', includeIfNull: false)
-          double? maxAmountAvailable,
-      @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
-          int? paymentWindowMinutes,
-      @JsonKey(name: 'limit_to_fiat_amounts', includeIfNull: false)
-          String? limitToFiatAmounts,
-      @JsonKey(name: 'payment_method_detail', includeIfNull: false)
-          String? paymentMethodDetail,
-      @JsonKey(name: 'account_info', includeIfNull: false)
-          String? paymentMethodInfo,
-      @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
-          double? firstTimeLimitAsset,
-      @JsonKey(name: 'require_feedback_score', includeIfNull: false)
-          int? requireFeedbackScore,
-      @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
-          String? buyerSettlementFeeLevel,
-      @JsonKey(name: 'location_string', includeIfNull: false)
-          String? locationString,
-      AccountInfoModel? profile}) {
-    return _AdModel(
-      asset: asset,
-      id: id,
-      createdAt: createdAt,
-      tempPrice: tempPrice,
-      visible: visible,
-      lat: lat,
-      lon: lon,
-      countryCode: countryCode,
-      currency: currency,
-      tradeType: tradeType,
-      onlineProvider: onlineProvider,
-      buyerSettlementAddress: buyerSettlementAddress,
-      priceEquation: priceEquation,
-      trackMaxAmount: trackMaxAmount,
-      requireTrustedByAdvertiser: requireTrustedByAdvertiser,
-      floating: floating,
-      verifiedEmailRequired: verifiedEmailRequired,
-      msg: msg,
-      minAmount: minAmount,
-      maxAmount: maxAmount,
-      maxAmountAvailable: maxAmountAvailable,
-      paymentWindowMinutes: paymentWindowMinutes,
-      limitToFiatAmounts: limitToFiatAmounts,
-      paymentMethodDetail: paymentMethodDetail,
-      paymentMethodInfo: paymentMethodInfo,
-      firstTimeLimitAsset: firstTimeLimitAsset,
-      requireFeedbackScore: requireFeedbackScore,
-      buyerSettlementFeeLevel: buyerSettlementFeeLevel,
-      locationString: locationString,
-      profile: profile,
-    );
-  }
-
-  AdModel fromJson(Map<String, Object?> json) {
-    return AdModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdModel = _$AdModelTearOff();
 
 /// @nodoc
 mixin _$AdModel {
@@ -192,6 +88,10 @@ mixin _$AdModel {
   String? get paymentMethodInfo => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
   double? get firstTimeLimitAsset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+  double? get firstTimeLimitXmr => throw _privateConstructorUsedError;
+  @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+  double? get firstTimeLimitBtc => throw _privateConstructorUsedError;
   @JsonKey(name: 'require_feedback_score', includeIfNull: false)
   int? get requireFeedbackScore => throw _privateConstructorUsedError;
   @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
@@ -260,6 +160,10 @@ abstract class $AdModelCopyWith<$Res> {
           String? paymentMethodInfo,
       @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
           double? firstTimeLimitAsset,
+      @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+          double? firstTimeLimitXmr,
+      @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+          double? firstTimeLimitBtc,
       @JsonKey(name: 'require_feedback_score', includeIfNull: false)
           int? requireFeedbackScore,
       @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
@@ -307,6 +211,8 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
     Object? paymentMethodDetail = freezed,
     Object? paymentMethodInfo = freezed,
     Object? firstTimeLimitAsset = freezed,
+    Object? firstTimeLimitXmr = freezed,
+    Object? firstTimeLimitBtc = freezed,
     Object? requireFeedbackScore = freezed,
     Object? buyerSettlementFeeLevel = freezed,
     Object? locationString = freezed,
@@ -417,6 +323,14 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
           ? _value.firstTimeLimitAsset
           : firstTimeLimitAsset // ignore: cast_nullable_to_non_nullable
               as double?,
+      firstTimeLimitXmr: firstTimeLimitXmr == freezed
+          ? _value.firstTimeLimitXmr
+          : firstTimeLimitXmr // ignore: cast_nullable_to_non_nullable
+              as double?,
+      firstTimeLimitBtc: firstTimeLimitBtc == freezed
+          ? _value.firstTimeLimitBtc
+          : firstTimeLimitBtc // ignore: cast_nullable_to_non_nullable
+              as double?,
       requireFeedbackScore: requireFeedbackScore == freezed
           ? _value.requireFeedbackScore
           : requireFeedbackScore // ignore: cast_nullable_to_non_nullable
@@ -449,9 +363,10 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
-  factory _$AdModelCopyWith(_AdModel value, $Res Function(_AdModel) then) =
-      __$AdModelCopyWithImpl<$Res>;
+abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
+  factory _$$_AdModelCopyWith(
+          _$_AdModel value, $Res Function(_$_AdModel) then) =
+      __$$_AdModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {Asset? asset,
@@ -504,6 +419,10 @@ abstract class _$AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
           String? paymentMethodInfo,
       @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
           double? firstTimeLimitAsset,
+      @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+          double? firstTimeLimitXmr,
+      @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+          double? firstTimeLimitBtc,
       @JsonKey(name: 'require_feedback_score', includeIfNull: false)
           int? requireFeedbackScore,
       @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
@@ -517,13 +436,13 @@ abstract class _$AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
-    implements _$AdModelCopyWith<$Res> {
-  __$AdModelCopyWithImpl(_AdModel _value, $Res Function(_AdModel) _then)
-      : super(_value, (v) => _then(v as _AdModel));
+class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
+    implements _$$_AdModelCopyWith<$Res> {
+  __$$_AdModelCopyWithImpl(_$_AdModel _value, $Res Function(_$_AdModel) _then)
+      : super(_value, (v) => _then(v as _$_AdModel));
 
   @override
-  _AdModel get _value => super._value as _AdModel;
+  _$_AdModel get _value => super._value as _$_AdModel;
 
   @override
   $Res call({
@@ -553,12 +472,14 @@ class __$AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
     Object? paymentMethodDetail = freezed,
     Object? paymentMethodInfo = freezed,
     Object? firstTimeLimitAsset = freezed,
+    Object? firstTimeLimitXmr = freezed,
+    Object? firstTimeLimitBtc = freezed,
     Object? requireFeedbackScore = freezed,
     Object? buyerSettlementFeeLevel = freezed,
     Object? locationString = freezed,
     Object? profile = freezed,
   }) {
-    return _then(_AdModel(
+    return _then(_$_AdModel(
       asset: asset == freezed
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -663,6 +584,14 @@ class __$AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
           ? _value.firstTimeLimitAsset
           : firstTimeLimitAsset // ignore: cast_nullable_to_non_nullable
               as double?,
+      firstTimeLimitXmr: firstTimeLimitXmr == freezed
+          ? _value.firstTimeLimitXmr
+          : firstTimeLimitXmr // ignore: cast_nullable_to_non_nullable
+              as double?,
+      firstTimeLimitBtc: firstTimeLimitBtc == freezed
+          ? _value.firstTimeLimitBtc
+          : firstTimeLimitBtc // ignore: cast_nullable_to_non_nullable
+              as double?,
       requireFeedbackScore: requireFeedbackScore == freezed
           ? _value.requireFeedbackScore
           : requireFeedbackScore // ignore: cast_nullable_to_non_nullable
@@ -738,6 +667,10 @@ class _$_AdModel implements _AdModel {
           this.paymentMethodInfo,
       @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
           this.firstTimeLimitAsset,
+      @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+          this.firstTimeLimitXmr,
+      @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+          this.firstTimeLimitBtc,
       @JsonKey(name: 'require_feedback_score', includeIfNull: false)
           this.requireFeedbackScore,
       @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
@@ -763,14 +696,14 @@ class _$_AdModel implements _AdModel {
   @override
   @JsonKey(includeIfNull: false)
   final bool? visible;
-  @override
 
   /// local sell & buy
+  @override
   @JsonKey(includeIfNull: false)
   final double? lat;
-  @override
 
   /// local sell & buy
+  @override
   @JsonKey(includeIfNull: false)
   final double? lon;
   @override
@@ -796,9 +729,9 @@ class _$_AdModel implements _AdModel {
   @override
   @JsonKey(name: 'require_trusted_by_advertiser', includeIfNull: false)
   final bool? requireTrustedByAdvertiser;
-  @override
 
   /// local sell only
+  @override
   @JsonKey(includeIfNull: false)
   final bool? floating;
   @override
@@ -844,6 +777,12 @@ class _$_AdModel implements _AdModel {
   @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
   final double? firstTimeLimitAsset;
   @override
+  @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+  final double? firstTimeLimitXmr;
+  @override
+  @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+  final double? firstTimeLimitBtc;
+  @override
   @JsonKey(name: 'require_feedback_score', includeIfNull: false)
   final int? requireFeedbackScore;
   @override
@@ -857,14 +796,14 @@ class _$_AdModel implements _AdModel {
 
   @override
   String toString() {
-    return 'AdModel(asset: $asset, id: $id, createdAt: $createdAt, tempPrice: $tempPrice, visible: $visible, lat: $lat, lon: $lon, countryCode: $countryCode, currency: $currency, tradeType: $tradeType, onlineProvider: $onlineProvider, buyerSettlementAddress: $buyerSettlementAddress, priceEquation: $priceEquation, trackMaxAmount: $trackMaxAmount, requireTrustedByAdvertiser: $requireTrustedByAdvertiser, floating: $floating, verifiedEmailRequired: $verifiedEmailRequired, msg: $msg, minAmount: $minAmount, maxAmount: $maxAmount, maxAmountAvailable: $maxAmountAvailable, paymentWindowMinutes: $paymentWindowMinutes, limitToFiatAmounts: $limitToFiatAmounts, paymentMethodDetail: $paymentMethodDetail, paymentMethodInfo: $paymentMethodInfo, firstTimeLimitAsset: $firstTimeLimitAsset, requireFeedbackScore: $requireFeedbackScore, buyerSettlementFeeLevel: $buyerSettlementFeeLevel, locationString: $locationString, profile: $profile)';
+    return 'AdModel(asset: $asset, id: $id, createdAt: $createdAt, tempPrice: $tempPrice, visible: $visible, lat: $lat, lon: $lon, countryCode: $countryCode, currency: $currency, tradeType: $tradeType, onlineProvider: $onlineProvider, buyerSettlementAddress: $buyerSettlementAddress, priceEquation: $priceEquation, trackMaxAmount: $trackMaxAmount, requireTrustedByAdvertiser: $requireTrustedByAdvertiser, floating: $floating, verifiedEmailRequired: $verifiedEmailRequired, msg: $msg, minAmount: $minAmount, maxAmount: $maxAmount, maxAmountAvailable: $maxAmountAvailable, paymentWindowMinutes: $paymentWindowMinutes, limitToFiatAmounts: $limitToFiatAmounts, paymentMethodDetail: $paymentMethodDetail, paymentMethodInfo: $paymentMethodInfo, firstTimeLimitAsset: $firstTimeLimitAsset, firstTimeLimitXmr: $firstTimeLimitXmr, firstTimeLimitBtc: $firstTimeLimitBtc, requireFeedbackScore: $requireFeedbackScore, buyerSettlementFeeLevel: $buyerSettlementFeeLevel, locationString: $locationString, profile: $profile)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdModel &&
+            other is _$_AdModel &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
@@ -905,6 +844,10 @@ class _$_AdModel implements _AdModel {
             const DeepCollectionEquality()
                 .equals(other.firstTimeLimitAsset, firstTimeLimitAsset) &&
             const DeepCollectionEquality()
+                .equals(other.firstTimeLimitXmr, firstTimeLimitXmr) &&
+            const DeepCollectionEquality()
+                .equals(other.firstTimeLimitBtc, firstTimeLimitBtc) &&
+            const DeepCollectionEquality()
                 .equals(other.requireFeedbackScore, requireFeedbackScore) &&
             const DeepCollectionEquality().equals(
                 other.buyerSettlementFeeLevel, buyerSettlementFeeLevel) &&
@@ -913,6 +856,7 @@ class _$_AdModel implements _AdModel {
             const DeepCollectionEquality().equals(other.profile, profile));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -942,6 +886,8 @@ class _$_AdModel implements _AdModel {
         const DeepCollectionEquality().hash(paymentMethodDetail),
         const DeepCollectionEquality().hash(paymentMethodInfo),
         const DeepCollectionEquality().hash(firstTimeLimitAsset),
+        const DeepCollectionEquality().hash(firstTimeLimitXmr),
+        const DeepCollectionEquality().hash(firstTimeLimitBtc),
         const DeepCollectionEquality().hash(requireFeedbackScore),
         const DeepCollectionEquality().hash(buyerSettlementFeeLevel),
         const DeepCollectionEquality().hash(locationString),
@@ -950,74 +896,80 @@ class _$_AdModel implements _AdModel {
 
   @JsonKey(ignore: true)
   @override
-  _$AdModelCopyWith<_AdModel> get copyWith =>
-      __$AdModelCopyWithImpl<_AdModel>(this, _$identity);
+  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
+      __$$_AdModelCopyWithImpl<_$_AdModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdModelToJson(this);
+    return _$$_AdModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _AdModel implements AdModel {
   const factory _AdModel(
-      {Asset? asset,
+      {final Asset? asset,
       @JsonKey(name: 'ad_id', includeIfNull: false)
-          String? id,
+          final String? id,
       @JsonKey(name: 'created_at', includeIfNull: false)
-          String? createdAt,
+          final String? createdAt,
       @JsonKey(name: 'temp_price', includeIfNull: false)
-          String? tempPrice,
+          final String? tempPrice,
       @JsonKey(includeIfNull: false)
-          bool? visible,
+          final bool? visible,
       @JsonKey(includeIfNull: false)
-          double? lat,
+          final double? lat,
       @JsonKey(includeIfNull: false)
-          double? lon,
+          final double? lon,
       @JsonKey(name: 'countrycode', includeIfNull: false)
-          required String countryCode,
-      required String currency,
+          required final String countryCode,
+      required final String currency,
       @JsonKey(name: 'trade_type')
-          required TradeType tradeType,
+          required final TradeType tradeType,
       @JsonKey(name: 'online_provider', includeIfNull: false)
-          String? onlineProvider,
+          final String? onlineProvider,
       @JsonKey(name: 'buyer_settlement_address', includeIfNull: false)
-          String? buyerSettlementAddress,
+          final String? buyerSettlementAddress,
       @JsonKey(name: 'price_equation', includeIfNull: false)
-          String? priceEquation,
+          final String? priceEquation,
       @JsonKey(name: 'track_max_amount', includeIfNull: false)
-          bool? trackMaxAmount,
+          final bool? trackMaxAmount,
       @JsonKey(name: 'require_trusted_by_advertiser', includeIfNull: false)
-          bool? requireTrustedByAdvertiser,
+          final bool? requireTrustedByAdvertiser,
       @JsonKey(includeIfNull: false)
-          bool? floating,
+          final bool? floating,
       @JsonKey(name: 'verified_email_required', includeIfNull: false)
-          bool? verifiedEmailRequired,
+          final bool? verifiedEmailRequired,
       @JsonKey(includeIfNull: false)
-          String? msg,
+          final String? msg,
       @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'min_amount', includeIfNull: false)
-          double? minAmount,
+          final double? minAmount,
       @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount', includeIfNull: false)
-          double? maxAmount,
+          final double? maxAmount,
       @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount_available', includeIfNull: false)
-          double? maxAmountAvailable,
+          final double? maxAmountAvailable,
       @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
-          int? paymentWindowMinutes,
+          final int? paymentWindowMinutes,
       @JsonKey(name: 'limit_to_fiat_amounts', includeIfNull: false)
-          String? limitToFiatAmounts,
+          final String? limitToFiatAmounts,
       @JsonKey(name: 'payment_method_detail', includeIfNull: false)
-          String? paymentMethodDetail,
+          final String? paymentMethodDetail,
       @JsonKey(name: 'account_info', includeIfNull: false)
-          String? paymentMethodInfo,
+          final String? paymentMethodInfo,
       @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
-          double? firstTimeLimitAsset,
+          final double? firstTimeLimitAsset,
+      @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+          final double? firstTimeLimitXmr,
+      @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+          final double? firstTimeLimitBtc,
       @JsonKey(name: 'require_feedback_score', includeIfNull: false)
-          int? requireFeedbackScore,
+          final int? requireFeedbackScore,
       @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
-          String? buyerSettlementFeeLevel,
+          final String? buyerSettlementFeeLevel,
       @JsonKey(name: 'location_string', includeIfNull: false)
-          String? locationString,
-      AccountInfoModel? profile}) = _$_AdModel;
+          final String? locationString,
+      final AccountInfoModel? profile}) = _$_AdModel;
 
   factory _AdModel.fromJson(Map<String, dynamic> json) = _$_AdModel.fromJson;
 
@@ -1116,6 +1068,12 @@ abstract class _AdModel implements AdModel {
   @JsonKey(name: 'first_time_limit_asset', includeIfNull: false)
   double? get firstTimeLimitAsset;
   @override
+  @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false)
+  double? get firstTimeLimitXmr;
+  @override
+  @JsonKey(name: 'first_time_limit_btc', includeIfNull: false)
+  double? get firstTimeLimitBtc;
+  @override
   @JsonKey(name: 'require_feedback_score', includeIfNull: false)
   int? get requireFeedbackScore;
   @override
@@ -1128,6 +1086,6 @@ abstract class _AdModel implements AdModel {
   AccountInfoModel? get profile;
   @override
   @JsonKey(ignore: true)
-  _$AdModelCopyWith<_AdModel> get copyWith =>
+  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

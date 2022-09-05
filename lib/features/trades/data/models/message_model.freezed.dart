@@ -12,50 +12,11 @@ part of 'message_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MessageModel _$MessageModelFromJson(Map<String, dynamic> json) {
   return _MessageModel.fromJson(json);
 }
-
-/// @nodoc
-class _$MessageModelTearOff {
-  const _$MessageModelTearOff();
-
-  _MessageModel call(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          required bool isAdmin,
-      required AccountInfoModel sender,
-      String? msg,
-      @JsonKey(name: 'attachment_name', includeIfNull: false)
-          String? attachmentName,
-      @JsonKey(name: 'attachment_url', includeIfNull: false)
-          String? attachmentUrl}) {
-    return _MessageModel(
-      messageId: messageId,
-      tradeId: tradeId,
-      createdAt: createdAt,
-      isAdmin: isAdmin,
-      sender: sender,
-      msg: msg,
-      attachmentName: attachmentName,
-      attachmentUrl: attachmentUrl,
-    );
-  }
-
-  MessageModel fromJson(Map<String, Object?> json) {
-    return MessageModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MessageModel = _$MessageModelTearOff();
 
 /// @nodoc
 mixin _$MessageModel {
@@ -172,11 +133,11 @@ class _$MessageModelCopyWithImpl<$Res> implements $MessageModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MessageModelCopyWith<$Res>
+abstract class _$$_MessageModelCopyWith<$Res>
     implements $MessageModelCopyWith<$Res> {
-  factory _$MessageModelCopyWith(
-          _MessageModel value, $Res Function(_MessageModel) then) =
-      __$MessageModelCopyWithImpl<$Res>;
+  factory _$$_MessageModelCopyWith(
+          _$_MessageModel value, $Res Function(_$_MessageModel) then) =
+      __$$_MessageModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'message_id', includeIfNull: false)
@@ -199,14 +160,15 @@ abstract class _$MessageModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$MessageModelCopyWithImpl<$Res> extends _$MessageModelCopyWithImpl<$Res>
-    implements _$MessageModelCopyWith<$Res> {
-  __$MessageModelCopyWithImpl(
-      _MessageModel _value, $Res Function(_MessageModel) _then)
-      : super(_value, (v) => _then(v as _MessageModel));
+class __$$_MessageModelCopyWithImpl<$Res>
+    extends _$MessageModelCopyWithImpl<$Res>
+    implements _$$_MessageModelCopyWith<$Res> {
+  __$$_MessageModelCopyWithImpl(
+      _$_MessageModel _value, $Res Function(_$_MessageModel) _then)
+      : super(_value, (v) => _then(v as _$_MessageModel));
 
   @override
-  _MessageModel get _value => super._value as _MessageModel;
+  _$_MessageModel get _value => super._value as _$_MessageModel;
 
   @override
   $Res call({
@@ -219,7 +181,7 @@ class __$MessageModelCopyWithImpl<$Res> extends _$MessageModelCopyWithImpl<$Res>
     Object? attachmentName = freezed,
     Object? attachmentUrl = freezed,
   }) {
-    return _then(_MessageModel(
+    return _then(_$_MessageModel(
       messageId: messageId == freezed
           ? _value.messageId
           : messageId // ignore: cast_nullable_to_non_nullable
@@ -315,7 +277,7 @@ class _$_MessageModel implements _MessageModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MessageModel &&
+            other is _$_MessageModel &&
             const DeepCollectionEquality().equals(other.messageId, messageId) &&
             const DeepCollectionEquality().equals(other.tradeId, tradeId) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
@@ -328,6 +290,7 @@ class _$_MessageModel implements _MessageModel {
                 .equals(other.attachmentUrl, attachmentUrl));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -342,31 +305,33 @@ class _$_MessageModel implements _MessageModel {
 
   @JsonKey(ignore: true)
   @override
-  _$MessageModelCopyWith<_MessageModel> get copyWith =>
-      __$MessageModelCopyWithImpl<_MessageModel>(this, _$identity);
+  _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
+      __$$_MessageModelCopyWithImpl<_$_MessageModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageModelToJson(this);
+    return _$$_MessageModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _MessageModel implements MessageModel {
   const factory _MessageModel(
       {@JsonKey(name: 'message_id', includeIfNull: false)
-          String? messageId,
+          final String? messageId,
       @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? tradeId,
+          final String? tradeId,
       @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime createdAt,
+          required final DateTime createdAt,
       @JsonKey(name: 'is_admin', includeIfNull: false)
-          required bool isAdmin,
-      required AccountInfoModel sender,
-      String? msg,
+          required final bool isAdmin,
+      required final AccountInfoModel sender,
+      final String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          String? attachmentName,
+          final String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          String? attachmentUrl}) = _$_MessageModel;
+          final String? attachmentUrl}) = _$_MessageModel;
 
   factory _MessageModel.fromJson(Map<String, dynamic> json) =
       _$_MessageModel.fromJson;
@@ -399,6 +364,6 @@ abstract class _MessageModel implements MessageModel {
   String? get attachmentUrl;
   @override
   @JsonKey(ignore: true)
-  _$MessageModelCopyWith<_MessageModel> get copyWith =>
+  _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

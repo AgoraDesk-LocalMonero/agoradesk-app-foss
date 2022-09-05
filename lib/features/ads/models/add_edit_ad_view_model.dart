@@ -315,6 +315,16 @@ class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMi
           ctrl3FormulaInput.text = ad!.priceEquation!;
           _checkAndCalcFormula();
         }
+        //fifth tile
+        trustedUsersOnly = ad!.requireTrustedByAdvertiser ?? false;
+        verifiedEmailOnly = ad!.verifiedEmailRequired ?? false;
+        ctrl6MinimumScore.text = ad!.requireFeedbackScore != null ? ad!.requireFeedbackScore.toString() : '';
+        if (ad!.asset == Asset.BTC) {
+          ctrl6TradeMaxLimit.text = ad!.firstTimeLimitBtc != null ? ad!.firstTimeLimitBtc.toString() : '';
+        } else {
+          ctrl6TradeMaxLimit.text = ad!.firstTimeLimitXmr != null ? ad!.firstTimeLimitXmr.toString() : '';
+        }
+
         // currentEditPrice = await _calcPrice(priceEquation: ad!.priceEquation!, currency: ad!.currency);
       }
     }

@@ -12,36 +12,11 @@ part of 'change_email_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ChangeEmailRequest _$ChangeEmailRequestFromJson(Map<String, dynamic> json) {
   return _ChangeEmailRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$ChangeEmailRequestTearOff {
-  const _$ChangeEmailRequestTearOff();
-
-  _ChangeEmailRequest call(
-      {String? email,
-      String? password,
-      @JsonKey(includeIfNull: false) String? captcha,
-      @JsonKey(ignore: true) String? captchaCookie}) {
-    return _ChangeEmailRequest(
-      email: email,
-      password: password,
-      captcha: captcha,
-      captchaCookie: captchaCookie,
-    );
-  }
-
-  ChangeEmailRequest fromJson(Map<String, Object?> json) {
-    return ChangeEmailRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ChangeEmailRequest = _$ChangeEmailRequestTearOff();
 
 /// @nodoc
 mixin _$ChangeEmailRequest {
@@ -108,11 +83,11 @@ class _$ChangeEmailRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ChangeEmailRequestCopyWith<$Res>
+abstract class _$$_ChangeEmailRequestCopyWith<$Res>
     implements $ChangeEmailRequestCopyWith<$Res> {
-  factory _$ChangeEmailRequestCopyWith(
-          _ChangeEmailRequest value, $Res Function(_ChangeEmailRequest) then) =
-      __$ChangeEmailRequestCopyWithImpl<$Res>;
+  factory _$$_ChangeEmailRequestCopyWith(_$_ChangeEmailRequest value,
+          $Res Function(_$_ChangeEmailRequest) then) =
+      __$$_ChangeEmailRequestCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? email,
@@ -122,15 +97,15 @@ abstract class _$ChangeEmailRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ChangeEmailRequestCopyWithImpl<$Res>
+class __$$_ChangeEmailRequestCopyWithImpl<$Res>
     extends _$ChangeEmailRequestCopyWithImpl<$Res>
-    implements _$ChangeEmailRequestCopyWith<$Res> {
-  __$ChangeEmailRequestCopyWithImpl(
-      _ChangeEmailRequest _value, $Res Function(_ChangeEmailRequest) _then)
-      : super(_value, (v) => _then(v as _ChangeEmailRequest));
+    implements _$$_ChangeEmailRequestCopyWith<$Res> {
+  __$$_ChangeEmailRequestCopyWithImpl(
+      _$_ChangeEmailRequest _value, $Res Function(_$_ChangeEmailRequest) _then)
+      : super(_value, (v) => _then(v as _$_ChangeEmailRequest));
 
   @override
-  _ChangeEmailRequest get _value => super._value as _ChangeEmailRequest;
+  _$_ChangeEmailRequest get _value => super._value as _$_ChangeEmailRequest;
 
   @override
   $Res call({
@@ -139,7 +114,7 @@ class __$ChangeEmailRequestCopyWithImpl<$Res>
     Object? captcha = freezed,
     Object? captchaCookie = freezed,
   }) {
-    return _then(_ChangeEmailRequest(
+    return _then(_$_ChangeEmailRequest(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -193,7 +168,7 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ChangeEmailRequest &&
+            other is _$_ChangeEmailRequest &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.captcha, captcha) &&
@@ -201,6 +176,7 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
                 .equals(other.captchaCookie, captchaCookie));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -211,21 +187,25 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
 
   @JsonKey(ignore: true)
   @override
-  _$ChangeEmailRequestCopyWith<_ChangeEmailRequest> get copyWith =>
-      __$ChangeEmailRequestCopyWithImpl<_ChangeEmailRequest>(this, _$identity);
+  _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
+      __$$_ChangeEmailRequestCopyWithImpl<_$_ChangeEmailRequest>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChangeEmailRequestToJson(this);
+    return _$$_ChangeEmailRequestToJson(
+      this,
+    );
   }
 }
 
 abstract class _ChangeEmailRequest implements ChangeEmailRequest {
   const factory _ChangeEmailRequest(
-      {String? email,
-      String? password,
-      @JsonKey(includeIfNull: false) String? captcha,
-      @JsonKey(ignore: true) String? captchaCookie}) = _$_ChangeEmailRequest;
+          {final String? email,
+          final String? password,
+          @JsonKey(includeIfNull: false) final String? captcha,
+          @JsonKey(ignore: true) final String? captchaCookie}) =
+      _$_ChangeEmailRequest;
 
   factory _ChangeEmailRequest.fromJson(Map<String, dynamic> json) =
       _$_ChangeEmailRequest.fromJson;
@@ -242,6 +222,6 @@ abstract class _ChangeEmailRequest implements ChangeEmailRequest {
   String? get captchaCookie;
   @override
   @JsonKey(ignore: true)
-  _$ChangeEmailRequestCopyWith<_ChangeEmailRequest> get copyWith =>
+  _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }

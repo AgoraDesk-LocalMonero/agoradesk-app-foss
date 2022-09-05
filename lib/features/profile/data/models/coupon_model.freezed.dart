@@ -12,43 +12,11 @@ part of 'coupon_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CouponModel _$CouponModelFromJson(Map<String, dynamic> json) {
   return _CouponModel.fromJson(json);
 }
-
-/// @nodoc
-class _$CouponModelTearOff {
-  const _$CouponModelTearOff();
-
-  _CouponModel call(
-      {required String code,
-      @JsonKey(name: 'ad_types')
-          required List<TradeType> tradeTypes,
-      required List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier')
-          required int rebateMultiplier,
-      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime expiresAt,
-      bool? enabled}) {
-    return _CouponModel(
-      code: code,
-      tradeTypes: tradeTypes,
-      assets: assets,
-      rebateMultiplier: rebateMultiplier,
-      expiresAt: expiresAt,
-      enabled: enabled,
-    );
-  }
-
-  CouponModel fromJson(Map<String, Object?> json) {
-    return CouponModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CouponModel = _$CouponModelTearOff();
 
 /// @nodoc
 mixin _$CouponModel {
@@ -132,11 +100,11 @@ class _$CouponModelCopyWithImpl<$Res> implements $CouponModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CouponModelCopyWith<$Res>
+abstract class _$$_CouponModelCopyWith<$Res>
     implements $CouponModelCopyWith<$Res> {
-  factory _$CouponModelCopyWith(
-          _CouponModel value, $Res Function(_CouponModel) then) =
-      __$CouponModelCopyWithImpl<$Res>;
+  factory _$$_CouponModelCopyWith(
+          _$_CouponModel value, $Res Function(_$_CouponModel) then) =
+      __$$_CouponModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String code,
@@ -151,14 +119,14 @@ abstract class _$CouponModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CouponModelCopyWithImpl<$Res> extends _$CouponModelCopyWithImpl<$Res>
-    implements _$CouponModelCopyWith<$Res> {
-  __$CouponModelCopyWithImpl(
-      _CouponModel _value, $Res Function(_CouponModel) _then)
-      : super(_value, (v) => _then(v as _CouponModel));
+class __$$_CouponModelCopyWithImpl<$Res> extends _$CouponModelCopyWithImpl<$Res>
+    implements _$$_CouponModelCopyWith<$Res> {
+  __$$_CouponModelCopyWithImpl(
+      _$_CouponModel _value, $Res Function(_$_CouponModel) _then)
+      : super(_value, (v) => _then(v as _$_CouponModel));
 
   @override
-  _CouponModel get _value => super._value as _CouponModel;
+  _$_CouponModel get _value => super._value as _$_CouponModel;
 
   @override
   $Res call({
@@ -169,17 +137,17 @@ class __$CouponModelCopyWithImpl<$Res> extends _$CouponModelCopyWithImpl<$Res>
     Object? expiresAt = freezed,
     Object? enabled = freezed,
   }) {
-    return _then(_CouponModel(
+    return _then(_$_CouponModel(
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
       tradeTypes: tradeTypes == freezed
-          ? _value.tradeTypes
+          ? _value._tradeTypes
           : tradeTypes // ignore: cast_nullable_to_non_nullable
               as List<TradeType>,
       assets: assets == freezed
-          ? _value.assets
+          ? _value._assets
           : assets // ignore: cast_nullable_to_non_nullable
               as List<Asset>,
       rebateMultiplier: rebateMultiplier == freezed
@@ -205,24 +173,36 @@ class _$_CouponModel implements _CouponModel {
   const _$_CouponModel(
       {required this.code,
       @JsonKey(name: 'ad_types')
-          required this.tradeTypes,
-      required this.assets,
+          required final List<TradeType> tradeTypes,
+      required final List<Asset> assets,
       @JsonKey(name: 'rebate_multiplier')
           required this.rebateMultiplier,
       @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
           required this.expiresAt,
-      this.enabled});
+      this.enabled})
+      : _tradeTypes = tradeTypes,
+        _assets = assets;
 
   factory _$_CouponModel.fromJson(Map<String, dynamic> json) =>
       _$$_CouponModelFromJson(json);
 
   @override
   final String code;
+  final List<TradeType> _tradeTypes;
   @override
   @JsonKey(name: 'ad_types')
-  final List<TradeType> tradeTypes;
+  List<TradeType> get tradeTypes {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tradeTypes);
+  }
+
+  final List<Asset> _assets;
   @override
-  final List<Asset> assets;
+  List<Asset> get assets {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_assets);
+  }
+
   @override
   @JsonKey(name: 'rebate_multiplier')
   final int rebateMultiplier;
@@ -241,49 +221,52 @@ class _$_CouponModel implements _CouponModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CouponModel &&
+            other is _$_CouponModel &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
-                .equals(other.tradeTypes, tradeTypes) &&
-            const DeepCollectionEquality().equals(other.assets, assets) &&
+                .equals(other._tradeTypes, _tradeTypes) &&
+            const DeepCollectionEquality().equals(other._assets, _assets) &&
             const DeepCollectionEquality()
                 .equals(other.rebateMultiplier, rebateMultiplier) &&
             const DeepCollectionEquality().equals(other.expiresAt, expiresAt) &&
             const DeepCollectionEquality().equals(other.enabled, enabled));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(tradeTypes),
-      const DeepCollectionEquality().hash(assets),
+      const DeepCollectionEquality().hash(_tradeTypes),
+      const DeepCollectionEquality().hash(_assets),
       const DeepCollectionEquality().hash(rebateMultiplier),
       const DeepCollectionEquality().hash(expiresAt),
       const DeepCollectionEquality().hash(enabled));
 
   @JsonKey(ignore: true)
   @override
-  _$CouponModelCopyWith<_CouponModel> get copyWith =>
-      __$CouponModelCopyWithImpl<_CouponModel>(this, _$identity);
+  _$$_CouponModelCopyWith<_$_CouponModel> get copyWith =>
+      __$$_CouponModelCopyWithImpl<_$_CouponModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CouponModelToJson(this);
+    return _$$_CouponModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _CouponModel implements CouponModel {
   const factory _CouponModel(
-      {required String code,
+      {required final String code,
       @JsonKey(name: 'ad_types')
-          required List<TradeType> tradeTypes,
-      required List<Asset> assets,
+          required final List<TradeType> tradeTypes,
+      required final List<Asset> assets,
       @JsonKey(name: 'rebate_multiplier')
-          required int rebateMultiplier,
+          required final int rebateMultiplier,
       @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime expiresAt,
-      bool? enabled}) = _$_CouponModel;
+          required final DateTime expiresAt,
+      final bool? enabled}) = _$_CouponModel;
 
   factory _CouponModel.fromJson(Map<String, dynamic> json) =
       _$_CouponModel.fromJson;
@@ -305,6 +288,6 @@ abstract class _CouponModel implements CouponModel {
   bool? get enabled;
   @override
   @JsonKey(ignore: true)
-  _$CouponModelCopyWith<_CouponModel> get copyWith =>
+  _$$_CouponModelCopyWith<_$_CouponModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

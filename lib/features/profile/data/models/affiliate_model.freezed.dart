@@ -12,34 +12,11 @@ part of 'affiliate_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AffiliateModel _$AffiliateModelFromJson(Map<String, dynamic> json) {
   return _AffiliateModel.fromJson(json);
 }
-
-/// @nodoc
-class _$AffiliateModelTearOff {
-  const _$AffiliateModelTearOff();
-
-  _AffiliateModel call(
-      {required String code,
-      @JsonKey(name: 'referred_user_count') required int usersCount,
-      bool? enabled}) {
-    return _AffiliateModel(
-      code: code,
-      usersCount: usersCount,
-      enabled: enabled,
-    );
-  }
-
-  AffiliateModel fromJson(Map<String, Object?> json) {
-    return AffiliateModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AffiliateModel = _$AffiliateModelTearOff();
 
 /// @nodoc
 mixin _$AffiliateModel {
@@ -98,11 +75,11 @@ class _$AffiliateModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AffiliateModelCopyWith<$Res>
+abstract class _$$_AffiliateModelCopyWith<$Res>
     implements $AffiliateModelCopyWith<$Res> {
-  factory _$AffiliateModelCopyWith(
-          _AffiliateModel value, $Res Function(_AffiliateModel) then) =
-      __$AffiliateModelCopyWithImpl<$Res>;
+  factory _$$_AffiliateModelCopyWith(
+          _$_AffiliateModel value, $Res Function(_$_AffiliateModel) then) =
+      __$$_AffiliateModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String code,
@@ -111,15 +88,15 @@ abstract class _$AffiliateModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AffiliateModelCopyWithImpl<$Res>
+class __$$_AffiliateModelCopyWithImpl<$Res>
     extends _$AffiliateModelCopyWithImpl<$Res>
-    implements _$AffiliateModelCopyWith<$Res> {
-  __$AffiliateModelCopyWithImpl(
-      _AffiliateModel _value, $Res Function(_AffiliateModel) _then)
-      : super(_value, (v) => _then(v as _AffiliateModel));
+    implements _$$_AffiliateModelCopyWith<$Res> {
+  __$$_AffiliateModelCopyWithImpl(
+      _$_AffiliateModel _value, $Res Function(_$_AffiliateModel) _then)
+      : super(_value, (v) => _then(v as _$_AffiliateModel));
 
   @override
-  _AffiliateModel get _value => super._value as _AffiliateModel;
+  _$_AffiliateModel get _value => super._value as _$_AffiliateModel;
 
   @override
   $Res call({
@@ -127,7 +104,7 @@ class __$AffiliateModelCopyWithImpl<$Res>
     Object? usersCount = freezed,
     Object? enabled = freezed,
   }) {
-    return _then(_AffiliateModel(
+    return _then(_$_AffiliateModel(
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -173,13 +150,14 @@ class _$_AffiliateModel implements _AffiliateModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AffiliateModel &&
+            other is _$_AffiliateModel &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.usersCount, usersCount) &&
             const DeepCollectionEquality().equals(other.enabled, enabled));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -189,20 +167,22 @@ class _$_AffiliateModel implements _AffiliateModel {
 
   @JsonKey(ignore: true)
   @override
-  _$AffiliateModelCopyWith<_AffiliateModel> get copyWith =>
-      __$AffiliateModelCopyWithImpl<_AffiliateModel>(this, _$identity);
+  _$$_AffiliateModelCopyWith<_$_AffiliateModel> get copyWith =>
+      __$$_AffiliateModelCopyWithImpl<_$_AffiliateModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AffiliateModelToJson(this);
+    return _$$_AffiliateModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _AffiliateModel implements AffiliateModel {
   const factory _AffiliateModel(
-      {required String code,
-      @JsonKey(name: 'referred_user_count') required int usersCount,
-      bool? enabled}) = _$_AffiliateModel;
+      {required final String code,
+      @JsonKey(name: 'referred_user_count') required final int usersCount,
+      final bool? enabled}) = _$_AffiliateModel;
 
   factory _AffiliateModel.fromJson(Map<String, dynamic> json) =
       _$_AffiliateModel.fromJson;
@@ -216,6 +196,6 @@ abstract class _AffiliateModel implements AffiliateModel {
   bool? get enabled;
   @override
   @JsonKey(ignore: true)
-  _$AffiliateModelCopyWith<_AffiliateModel> get copyWith =>
+  _$$_AffiliateModelCopyWith<_$_AffiliateModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
