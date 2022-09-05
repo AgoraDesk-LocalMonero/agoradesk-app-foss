@@ -63,7 +63,7 @@ class ReputationImportViewModel extends BaseViewModel with ValidatorMixin, Error
       _getReputationImport();
       ctrlUsername.addListener(() {
         username = ctrlUsername.text;
-        usernameCorrect = validateUsername(ctrlUsername.text);
+        usernameCorrect = validateUsernameReputationImport(ctrlUsername.text);
       });
     }
     super.init();

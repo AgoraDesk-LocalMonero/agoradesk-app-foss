@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
@@ -171,7 +170,6 @@ class AdsService {
         }
         List<AdModel> result = [];
         for (var e in respMap) {
-          log('++++++++++++++++++++++++++++++2222222222 -- ${e['data']}');
           result.add(AdModel.fromJson(e['data']));
         }
         return Either.right(Pagination(result, pagination: pagination));

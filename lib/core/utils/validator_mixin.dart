@@ -146,9 +146,9 @@ class ValidatorMixin {
     return str.length == 6 && _numeric.hasMatch(str);
   }
 
-  /// check if String contains only letters and numbers and length in (3,50)
-  bool validateUsername(String? str) {
-    return str != null && str.length >= 8 && str.length <= 72 && validateAlphanumeric(str);
+  /// Validate username in reputation import is min 1 max 30
+  bool validateUsernameReputationImport(String? str) {
+    return str != null && str.length >= 1 && str.length <= 30 && validateAlphanumeric(str);
   }
 
   /// check if String contains letters& numbers and length is 7
