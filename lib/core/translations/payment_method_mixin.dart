@@ -71,6 +71,7 @@ mixin PaymentMethodsMixin {
       'RELOADIT': 'Reloadit',
       'MONEYGRAM': 'Moneygram',
       'ASTROPAY': 'AstroPay',
+      'BIZUM': 'Bizum',
       'PAYM': 'Paym (UK Mobile Payments)',
       'PAYSAFECARD': 'PaySafeCard',
       'HAL_CASH': 'Hal_cash',
