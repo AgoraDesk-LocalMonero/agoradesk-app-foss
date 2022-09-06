@@ -12,37 +12,11 @@ part of 'feedback_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FeedbackModel _$FeedbackModelFromJson(Map<String, dynamic> json) {
   return _FeedbackModel.fromJson(json);
 }
-
-/// @nodoc
-class _$FeedbackModelTearOff {
-  const _$FeedbackModelTearOff();
-
-  _FeedbackModel call(
-      {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          required FeedbackType feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          String? text}) {
-    return _FeedbackModel(
-      feedbackType: feedbackType,
-      date: date,
-      text: text,
-    );
-  }
-
-  FeedbackModel fromJson(Map<String, Object?> json) {
-    return FeedbackModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FeedbackModel = _$FeedbackModelTearOff();
 
 /// @nodoc
 mixin _$FeedbackModel {
@@ -110,11 +84,11 @@ class _$FeedbackModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$FeedbackModelCopyWith<$Res>
+abstract class _$$_FeedbackModelCopyWith<$Res>
     implements $FeedbackModelCopyWith<$Res> {
-  factory _$FeedbackModelCopyWith(
-          _FeedbackModel value, $Res Function(_FeedbackModel) then) =
-      __$FeedbackModelCopyWithImpl<$Res>;
+  factory _$$_FeedbackModelCopyWith(
+          _$_FeedbackModel value, $Res Function(_$_FeedbackModel) then) =
+      __$$_FeedbackModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
@@ -126,15 +100,15 @@ abstract class _$FeedbackModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FeedbackModelCopyWithImpl<$Res>
+class __$$_FeedbackModelCopyWithImpl<$Res>
     extends _$FeedbackModelCopyWithImpl<$Res>
-    implements _$FeedbackModelCopyWith<$Res> {
-  __$FeedbackModelCopyWithImpl(
-      _FeedbackModel _value, $Res Function(_FeedbackModel) _then)
-      : super(_value, (v) => _then(v as _FeedbackModel));
+    implements _$$_FeedbackModelCopyWith<$Res> {
+  __$$_FeedbackModelCopyWithImpl(
+      _$_FeedbackModel _value, $Res Function(_$_FeedbackModel) _then)
+      : super(_value, (v) => _then(v as _$_FeedbackModel));
 
   @override
-  _FeedbackModel get _value => super._value as _FeedbackModel;
+  _$_FeedbackModel get _value => super._value as _$_FeedbackModel;
 
   @override
   $Res call({
@@ -142,7 +116,7 @@ class __$FeedbackModelCopyWithImpl<$Res>
     Object? date = freezed,
     Object? text = freezed,
   }) {
-    return _then(_FeedbackModel(
+    return _then(_$_FeedbackModel(
       feedbackType: feedbackType == freezed
           ? _value.feedbackType
           : feedbackType // ignore: cast_nullable_to_non_nullable
@@ -197,13 +171,14 @@ class _$_FeedbackModel implements _FeedbackModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FeedbackModel &&
+            other is _$_FeedbackModel &&
             const DeepCollectionEquality()
                 .equals(other.feedbackType, feedbackType) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality().equals(other.text, text));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -213,23 +188,25 @@ class _$_FeedbackModel implements _FeedbackModel {
 
   @JsonKey(ignore: true)
   @override
-  _$FeedbackModelCopyWith<_FeedbackModel> get copyWith =>
-      __$FeedbackModelCopyWithImpl<_FeedbackModel>(this, _$identity);
+  _$$_FeedbackModelCopyWith<_$_FeedbackModel> get copyWith =>
+      __$$_FeedbackModelCopyWithImpl<_$_FeedbackModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FeedbackModelToJson(this);
+    return _$$_FeedbackModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _FeedbackModel implements FeedbackModel {
   const factory _FeedbackModel(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          required FeedbackType feedbackType,
+          required final FeedbackType feedbackType,
       @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime date,
+          required final DateTime date,
       @JsonKey(name: 'msg', includeIfNull: false)
-          String? text}) = _$_FeedbackModel;
+          final String? text}) = _$_FeedbackModel;
 
   factory _FeedbackModel.fromJson(Map<String, dynamic> json) =
       _$_FeedbackModel.fromJson;
@@ -249,6 +226,6 @@ abstract class _FeedbackModel implements FeedbackModel {
   String? get text;
   @override
   @JsonKey(ignore: true)
-  _$FeedbackModelCopyWith<_FeedbackModel> get copyWith =>
+  _$$_FeedbackModelCopyWith<_$_FeedbackModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

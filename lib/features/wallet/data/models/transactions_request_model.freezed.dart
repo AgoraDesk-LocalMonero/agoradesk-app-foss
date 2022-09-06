@@ -12,38 +12,12 @@ part of 'transactions_request_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 TransactionsRequestModel _$TransactionsRequestModelFromJson(
     Map<String, dynamic> json) {
   return _TransactionsRequestModel.fromJson(json);
 }
-
-/// @nodoc
-class _$TransactionsRequestModelTearOff {
-  const _$TransactionsRequestModelTearOff();
-
-  _TransactionsRequestModel call(
-      {@JsonKey(includeIfNull: false)
-          Asset? asset,
-      @JsonKey(includeIfNull: false)
-          TransactionTypes? type,
-      @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-          DateTime? after}) {
-    return _TransactionsRequestModel(
-      asset: asset,
-      type: type,
-      after: after,
-    );
-  }
-
-  TransactionsRequestModel fromJson(Map<String, Object?> json) {
-    return TransactionsRequestModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TransactionsRequestModel = _$TransactionsRequestModelTearOff();
 
 /// @nodoc
 mixin _$TransactionsRequestModel {
@@ -107,11 +81,12 @@ class _$TransactionsRequestModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TransactionsRequestModelCopyWith<$Res>
+abstract class _$$_TransactionsRequestModelCopyWith<$Res>
     implements $TransactionsRequestModelCopyWith<$Res> {
-  factory _$TransactionsRequestModelCopyWith(_TransactionsRequestModel value,
-          $Res Function(_TransactionsRequestModel) then) =
-      __$TransactionsRequestModelCopyWithImpl<$Res>;
+  factory _$$_TransactionsRequestModelCopyWith(
+          _$_TransactionsRequestModel value,
+          $Res Function(_$_TransactionsRequestModel) then) =
+      __$$_TransactionsRequestModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(includeIfNull: false)
@@ -123,16 +98,16 @@ abstract class _$TransactionsRequestModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TransactionsRequestModelCopyWithImpl<$Res>
+class __$$_TransactionsRequestModelCopyWithImpl<$Res>
     extends _$TransactionsRequestModelCopyWithImpl<$Res>
-    implements _$TransactionsRequestModelCopyWith<$Res> {
-  __$TransactionsRequestModelCopyWithImpl(_TransactionsRequestModel _value,
-      $Res Function(_TransactionsRequestModel) _then)
-      : super(_value, (v) => _then(v as _TransactionsRequestModel));
+    implements _$$_TransactionsRequestModelCopyWith<$Res> {
+  __$$_TransactionsRequestModelCopyWithImpl(_$_TransactionsRequestModel _value,
+      $Res Function(_$_TransactionsRequestModel) _then)
+      : super(_value, (v) => _then(v as _$_TransactionsRequestModel));
 
   @override
-  _TransactionsRequestModel get _value =>
-      super._value as _TransactionsRequestModel;
+  _$_TransactionsRequestModel get _value =>
+      super._value as _$_TransactionsRequestModel;
 
   @override
   $Res call({
@@ -140,7 +115,7 @@ class __$TransactionsRequestModelCopyWithImpl<$Res>
     Object? type = freezed,
     Object? after = freezed,
   }) {
-    return _then(_TransactionsRequestModel(
+    return _then(_$_TransactionsRequestModel(
       asset: asset == freezed
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -191,12 +166,13 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TransactionsRequestModel &&
+            other is _$_TransactionsRequestModel &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.after, after));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -206,24 +182,26 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
 
   @JsonKey(ignore: true)
   @override
-  _$TransactionsRequestModelCopyWith<_TransactionsRequestModel> get copyWith =>
-      __$TransactionsRequestModelCopyWithImpl<_TransactionsRequestModel>(
-          this, _$identity);
+  _$$_TransactionsRequestModelCopyWith<_$_TransactionsRequestModel>
+      get copyWith => __$$_TransactionsRequestModelCopyWithImpl<
+          _$_TransactionsRequestModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransactionsRequestModelToJson(this);
+    return _$$_TransactionsRequestModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _TransactionsRequestModel implements TransactionsRequestModel {
   const factory _TransactionsRequestModel(
       {@JsonKey(includeIfNull: false)
-          Asset? asset,
+          final Asset? asset,
       @JsonKey(includeIfNull: false)
-          TransactionTypes? type,
+          final TransactionTypes? type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-          DateTime? after}) = _$_TransactionsRequestModel;
+          final DateTime? after}) = _$_TransactionsRequestModel;
 
   factory _TransactionsRequestModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionsRequestModel.fromJson;
@@ -239,6 +217,6 @@ abstract class _TransactionsRequestModel implements TransactionsRequestModel {
   DateTime? get after;
   @override
   @JsonKey(ignore: true)
-  _$TransactionsRequestModelCopyWith<_TransactionsRequestModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_TransactionsRequestModelCopyWith<_$_TransactionsRequestModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

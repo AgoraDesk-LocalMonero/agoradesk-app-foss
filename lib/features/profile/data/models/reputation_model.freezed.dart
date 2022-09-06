@@ -12,46 +12,11 @@ part of 'reputation_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ReputationModel _$ReputationModelFromJson(Map<String, dynamic> json) {
   return _ReputationModel.fromJson(json);
 }
-
-/// @nodoc
-class _$ReputationModelTearOff {
-  const _$ReputationModelTearOff();
-
-  _ReputationModel call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
-      @JsonKey(name: 'verification_code', includeIfNull: false)
-          String? verificationCode,
-      @JsonKey(name: 'registered_at', includeIfNull: false)
-          DateTime? registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          int? trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          int? tradeVolume}) {
-    return _ReputationModel(
-      username: username,
-      verificationCode: verificationCode,
-      registeredAt: registeredAt,
-      feedbackScore: feedbackScore,
-      trades: trades,
-      tradeVolume: tradeVolume,
-    );
-  }
-
-  ReputationModel fromJson(Map<String, Object?> json) {
-    return ReputationModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ReputationModel = _$ReputationModelTearOff();
 
 /// @nodoc
 mixin _$ReputationModel {
@@ -142,11 +107,11 @@ class _$ReputationModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ReputationModelCopyWith<$Res>
+abstract class _$$_ReputationModelCopyWith<$Res>
     implements $ReputationModelCopyWith<$Res> {
-  factory _$ReputationModelCopyWith(
-          _ReputationModel value, $Res Function(_ReputationModel) then) =
-      __$ReputationModelCopyWithImpl<$Res>;
+  factory _$$_ReputationModelCopyWith(
+          _$_ReputationModel value, $Res Function(_$_ReputationModel) then) =
+      __$$_ReputationModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(includeIfNull: false)
@@ -164,15 +129,15 @@ abstract class _$ReputationModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ReputationModelCopyWithImpl<$Res>
+class __$$_ReputationModelCopyWithImpl<$Res>
     extends _$ReputationModelCopyWithImpl<$Res>
-    implements _$ReputationModelCopyWith<$Res> {
-  __$ReputationModelCopyWithImpl(
-      _ReputationModel _value, $Res Function(_ReputationModel) _then)
-      : super(_value, (v) => _then(v as _ReputationModel));
+    implements _$$_ReputationModelCopyWith<$Res> {
+  __$$_ReputationModelCopyWithImpl(
+      _$_ReputationModel _value, $Res Function(_$_ReputationModel) _then)
+      : super(_value, (v) => _then(v as _$_ReputationModel));
 
   @override
-  _ReputationModel get _value => super._value as _ReputationModel;
+  _$_ReputationModel get _value => super._value as _$_ReputationModel;
 
   @override
   $Res call({
@@ -183,7 +148,7 @@ class __$ReputationModelCopyWithImpl<$Res>
     Object? trades = freezed,
     Object? tradeVolume = freezed,
   }) {
-    return _then(_ReputationModel(
+    return _then(_$_ReputationModel(
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -262,7 +227,7 @@ class _$_ReputationModel extends _ReputationModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ReputationModel &&
+            other is _$_ReputationModel &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality()
                 .equals(other.verificationCode, verificationCode) &&
@@ -275,6 +240,7 @@ class _$_ReputationModel extends _ReputationModel {
                 .equals(other.tradeVolume, tradeVolume));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -287,29 +253,31 @@ class _$_ReputationModel extends _ReputationModel {
 
   @JsonKey(ignore: true)
   @override
-  _$ReputationModelCopyWith<_ReputationModel> get copyWith =>
-      __$ReputationModelCopyWithImpl<_ReputationModel>(this, _$identity);
+  _$$_ReputationModelCopyWith<_$_ReputationModel> get copyWith =>
+      __$$_ReputationModelCopyWithImpl<_$_ReputationModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReputationModelToJson(this);
+    return _$$_ReputationModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _ReputationModel extends ReputationModel {
   const factory _ReputationModel(
       {@JsonKey(includeIfNull: false)
-          String? username,
+          final String? username,
       @JsonKey(name: 'verification_code', includeIfNull: false)
-          String? verificationCode,
+          final String? verificationCode,
       @JsonKey(name: 'registered_at', includeIfNull: false)
-          DateTime? registeredAt,
+          final DateTime? registeredAt,
       @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
+          final int? feedbackScore,
       @JsonKey(includeIfNull: false)
-          int? trades,
+          final int? trades,
       @JsonKey(name: 'trade_volume', includeIfNull: false)
-          int? tradeVolume}) = _$_ReputationModel;
+          final int? tradeVolume}) = _$_ReputationModel;
   const _ReputationModel._() : super._();
 
   factory _ReputationModel.fromJson(Map<String, dynamic> json) =
@@ -335,6 +303,6 @@ abstract class _ReputationModel extends ReputationModel {
   int? get tradeVolume;
   @override
   @JsonKey(ignore: true)
-  _$ReputationModelCopyWith<_ReputationModel> get copyWith =>
+  _$$_ReputationModelCopyWith<_$_ReputationModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

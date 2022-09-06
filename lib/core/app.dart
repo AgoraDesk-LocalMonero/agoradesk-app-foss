@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
 import 'dart:isolate';
-import 'dart:math' as math;
 
 import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
@@ -13,7 +12,6 @@ import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -42,7 +40,6 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -60,6 +57,8 @@ import 'package:provider/single_child_widget.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
+
+const _kPinDelay = Duration(seconds: 300);
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -123,6 +122,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       AdsService(api: _api),
       ObjectBox.s.box<CountryCodeModel>(),
       ObjectBox.s.box<CurrencyModel>(),
+      ObjectBox.s.box<UserLocalSettings>(),
     );
     _walletService = WalletService(api: _api);
     _userService = UserService(api: _api);
@@ -167,7 +167,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     if (GetIt.I<AppParameters>().includeFcm) {
-      FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+      FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
     }
     super.initState();
   }
@@ -183,7 +183,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     if (state == AppLifecycleState.detached) {}
     if (state == AppLifecycleState.inactive) {}
     if (state == AppLifecycleState.paused) {
-      Future.delayed(const Duration(seconds: 300)).then((value) => _activatePin = true);
+      Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
     super.didChangeAppLifecycleState(state);
   }
@@ -234,7 +234,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     final mq = MediaQuery.of(context);
     return MediaQuery(
       data: mq.copyWith(
-        textScaleFactor: mq.textScaleFactor > 1.2 ? 1.2 : mq.textScaleFactor,
+        textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,
       ),
       child: child!,
     );
@@ -379,7 +379,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Initial route logic
   ///
   Future<void> _initStartRoute({Uri? uri, bool removeLast = false}) async {
-    final List<PageRouteInfo<dynamic>> routes = <PageRouteInfo>[];
+    final List<PageRouteInfo<dynamic>> newRoutes = <PageRouteInfo>[];
 
     if (removeLast) {
       router.removeLast();
@@ -389,39 +389,49 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       final PageRouteInfo<dynamic>? pageRoute = AppLinksHandler().parseUniLink(uri);
       if (pageRoute != null) {
         if (pageRoute.path == 'trades/trade') {
-          router.removeWhere((route) {
-            return route.name == TradeRoute.name;
-          });
+          if (router.current.name == TradeRoute.name) {
+            router.pop();
+          }
         }
-        routes.add(pageRoute);
+        if (pageRoute.path == 'market/adInfo') {
+          if (router.current.name == AdInfoRoute.name || router.current.name == MarketAdInfoRoute.name) {
+            router.pop();
+          }
+        }
+        if (pageRoute.path == 'account/profile') {
+          if (router.current.name == TraderProfileRoute.name) {
+            router.pop();
+          }
+        }
+        newRoutes.add(pageRoute);
       }
     }
 
     debugPrint('[$runtimeType] Init Start Route $uri');
 
     if (_authService.isAuthenticated != true && _authService.authState == AuthState.guest) {
-      routes.add(const MainScreenRoute());
+      newRoutes.add(const MainScreenRoute());
       _addUniLinksRouts();
     } else if (_authService.isAuthenticated != true) {
-      routes.add(
+      newRoutes.add(
         const WelcomeRoute(),
       );
       _addUniLinksRouts();
     } else if (_authService.showPinSetUp) {
-      routes.add(const MainScreenRoute());
-      routes.add(const PinCodeSetRoute());
+      newRoutes.add(const MainScreenRoute());
+      newRoutes.add(const PinCodeSetRoute());
       _authService.showPinSetUp = false;
     } else {
-      routes.add(const MainScreenRoute());
+      newRoutes.add(const MainScreenRoute());
       _addUniLinksRouts();
       if (appState.hasPinCode) {
-        routes.add(const PinCodeCheckRoute());
+        newRoutes.add(const PinCodeCheckRoute());
       }
     }
 
-    if (routes.isNotEmpty) {
+    if (newRoutes.isNotEmpty) {
       router.removeUntil((route) => route.name == '/');
-      await router.pushAll(routes);
+      await router.pushAll(newRoutes);
       return;
     }
   }
@@ -705,30 +715,4 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   }
 
   T? _ambiguate<T>(T? value) => value;
-}
-
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  try {
-    final bool googleAvailable = await checkGoogleAvailable();
-    if (googleAvailable || Platform.isIOS) {
-      await SecureStorage.ensureInitialized();
-      final SecureStorage _secureStorage = SecureStorage();
-      final l = await _secureStorage.read(SecureStorageKey.locale);
-      final String langCode = l ?? Platform.localeName.substring(0, 2);
-      final PushModel push = PushModel.fromJson(message.data);
-      final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-      await AwesomeNotifications().createNotification(
-        content: NotificationContent(
-          id: math.Random().nextInt(1000000),
-          channelKey: kNotificationsChannel,
-          title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-          body: push.msg,
-          notificationLayout: NotificationLayout.Default,
-          payload: payload,
-        ),
-      );
-    }
-  } catch (e) {
-    debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
-  }
 }

@@ -33,82 +33,79 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
 
     return Container(
       color: context.colSurface1,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-        child: ViewModelBuilder<TradeViewModel>(
-            model: model,
-            disposable: false,
-            initOnce: true,
-            builder: (context, model, child) {
-              if (model.isLocalTrade && model.tradeStatus == TradeStatus.created) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: ContainerC85c09Radius12(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
-                      child: Text(
-                        context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
-                        style: context.txtLabelMediumPrimary10,
-                      ),
+      child: ViewModelBuilder<TradeViewModel>(
+          model: model,
+          disposable: false,
+          initOnce: true,
+          builder: (context, model, child) {
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.created) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Text(
+                      context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                      style: context.txtLabelMediumPrimary10,
                     ),
                   ),
-                );
-              }
+                ),
+              );
+            }
 
-              if (model.tradeStatus == TradeStatus.created) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: model.isSeller
-                      ? _buildFirstStepSellerView(model, context)
-                      : _buildFirstStepBuyerView(model, context),
-                );
-              }
+            if (model.tradeStatus == TradeStatus.created) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: model.isSeller
+                    ? _buildFirstStepSellerView(model, context)
+                    : _buildFirstStepBuyerView(model, context),
+              );
+            }
 
-              if (model.tradeStatus == TradeStatus.paymentCompleted) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: model.isSeller
-                      ? _buildSecondStepSeller(model, context)
-                      : ChatBubbleYellow(
-                          text: context.intl.trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb3,
-                          date: model.tradeForScreen.paymentCompletedAt,
-                        ),
-                );
-              }
+            if (model.tradeStatus == TradeStatus.paymentCompleted) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: model.isSeller
+                    ? _buildSecondStepSeller(model, context)
+                    : ChatBubbleYellow(
+                        text: context.intl.trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb3,
+                        date: model.tradeForScreen.paymentCompletedAt,
+                      ),
+              );
+            }
 
-              if (model.tradeStatus == TradeStatus.canceled) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: ChatBubbleYellow(
-                    text: context.intl.web8722Sbnotification250Sbtrade8722Sbcancelled,
-                    date: model.tradeForScreen.canceledAt,
-                  ),
-                );
-              }
+            if (model.tradeStatus == TradeStatus.canceled) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ChatBubbleYellow(
+                  text: context.intl.web8722Sbnotification250Sbtrade8722Sbcancelled,
+                  date: model.tradeForScreen.canceledAt,
+                ),
+              );
+            }
 
-              if (model.tradeStatus == TradeStatus.disputed) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: ChatBubbleYellow(
-                    text: context.intl.dispute_started,
-                    date: model.tradeForScreen.disputedAt,
-                  ),
-                );
-              }
+            if (model.tradeStatus == TradeStatus.disputed) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ChatBubbleYellow(
+                  text: context.intl.dispute_started,
+                  date: model.tradeForScreen.disputedAt,
+                ),
+              );
+            }
 
-              if (model.tradeStatus.index > 5) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: ChatBubbleYellow(
-                    text: context.intl.settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort,
-                    date: model.tradeForScreen.releasedAt,
-                  ),
-                );
-              }
+            if (model.tradeStatus.index > 5) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ChatBubbleYellow(
+                  text: context.intl.settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort,
+                  date: model.tradeForScreen.releasedAt,
+                ),
+              );
+            }
 
-              return const SizedBox();
-            }),
-      ),
+            return const SizedBox();
+          }),
     );
   }
 

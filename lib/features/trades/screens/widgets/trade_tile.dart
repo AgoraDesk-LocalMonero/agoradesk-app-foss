@@ -153,7 +153,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                         ),
                         const SizedBox(width: 4),
                         Text(
-                          adId,
+                          trade.tradeId.substring(0, 8),
                           style: context.txtBodyXSmallN90N10,
                         ),
                       ],
@@ -162,7 +162,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                 ),
                 const SizedBox(height: 6),
                 ButtonTextPrimary70(
-                  title: context.intl.trade_ad,
+                  title: '${context.intl.trade_ad} $adId',
                   onPressed: () {
                     if (trade.advertisement.id != null) {
                       context.pushRoute(MarketAdInfoRoute(adId: trade.advertisement.id));

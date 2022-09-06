@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/theme/theme.dart';
-import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
+import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +21,7 @@ class AgoraSwitcher extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ContainerSurface3Radius12Border1(
+    return ContainerSurface5Radius12(
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Row(

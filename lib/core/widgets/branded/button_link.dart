@@ -34,7 +34,7 @@ class ButtonLink extends StatelessWidget {
           ? const CupertinoActivityIndicator()
           : Text(
               title,
-              style: style ?? (isActive ? context.txtBodySmallP70 : context.txtBodySmallN60),
+              style: style ?? (isActive ? context.txtBodySmallP70P40 : context.txtBodySmallN60),
             ),
     );
   }

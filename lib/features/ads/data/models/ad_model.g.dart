@@ -35,6 +35,8 @@ _$_AdModel _$$_AdModelFromJson(Map<String, dynamic> json) => _$_AdModel(
       paymentMethodDetail: json['payment_method_detail'] as String?,
       paymentMethodInfo: json['account_info'] as String?,
       firstTimeLimitAsset: (json['first_time_limit_asset'] as num?)?.toDouble(),
+      firstTimeLimitXmr: (json['first_time_limit_xmr'] as num?)?.toDouble(),
+      firstTimeLimitBtc: (json['first_time_limit_btc'] as num?)?.toDouble(),
       requireFeedbackScore: json['require_feedback_score'] as int?,
       buyerSettlementFeeLevel: json['buyer_settlement_fee_level'] as String?,
       locationString: json['location_string'] as String?,
@@ -81,6 +83,8 @@ Map<String, dynamic> _$$_AdModelToJson(_$_AdModel instance) {
   writeNotNull('payment_method_detail', instance.paymentMethodDetail);
   writeNotNull('account_info', instance.paymentMethodInfo);
   writeNotNull('first_time_limit_asset', instance.firstTimeLimitAsset);
+  writeNotNull('first_time_limit_xmr', instance.firstTimeLimitXmr);
+  writeNotNull('first_time_limit_btc', instance.firstTimeLimitBtc);
   writeNotNull('require_feedback_score', instance.requireFeedbackScore);
   writeNotNull('buyer_settlement_fee_level', instance.buyerSettlementFeeLevel);
   writeNotNull('location_string', instance.locationString);

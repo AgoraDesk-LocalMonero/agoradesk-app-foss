@@ -25,7 +25,7 @@ class ButtonTextPrimary70 extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: textStyle ?? context.txtBodySmallP70.copyWith(height: 1),
+        style: textStyle ?? context.txtBodySmallP70P40.copyWith(height: 1),
       ),
     );
   }

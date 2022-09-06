@@ -12,45 +12,12 @@ part of 'trade_request_parameter_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 TradeRequestParameterModel _$TradeRequestParameterModelFromJson(
     Map<String, dynamic> json) {
   return _TradeRequestParameterModel.fromJson(json);
 }
-
-/// @nodoc
-class _$TradeRequestParameterModelTearOff {
-  const _$TradeRequestParameterModelTearOff();
-
-  _TradeRequestParameterModel call(
-      {int? page,
-      int? size,
-      @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode,
-      @JsonKey(name: 'country_code', includeIfNull: false)
-          String? countryCode,
-      @JsonKey(name: 'currency_code', includeIfNull: false)
-          String? currencyCode,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          String? assetCode}) {
-    return _TradeRequestParameterModel(
-      page: page,
-      size: size,
-      paymentMethodCode: paymentMethodCode,
-      countryCode: countryCode,
-      currencyCode: currencyCode,
-      assetCode: assetCode,
-    );
-  }
-
-  TradeRequestParameterModel fromJson(Map<String, Object?> json) {
-    return TradeRequestParameterModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TradeRequestParameterModel = _$TradeRequestParameterModelTearOff();
 
 /// @nodoc
 mixin _$TradeRequestParameterModel {
@@ -139,12 +106,12 @@ class _$TradeRequestParameterModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TradeRequestParameterModelCopyWith<$Res>
+abstract class _$$_TradeRequestParameterModelCopyWith<$Res>
     implements $TradeRequestParameterModelCopyWith<$Res> {
-  factory _$TradeRequestParameterModelCopyWith(
-          _TradeRequestParameterModel value,
-          $Res Function(_TradeRequestParameterModel) then) =
-      __$TradeRequestParameterModelCopyWithImpl<$Res>;
+  factory _$$_TradeRequestParameterModelCopyWith(
+          _$_TradeRequestParameterModel value,
+          $Res Function(_$_TradeRequestParameterModel) then) =
+      __$$_TradeRequestParameterModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? page,
@@ -160,16 +127,17 @@ abstract class _$TradeRequestParameterModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TradeRequestParameterModelCopyWithImpl<$Res>
+class __$$_TradeRequestParameterModelCopyWithImpl<$Res>
     extends _$TradeRequestParameterModelCopyWithImpl<$Res>
-    implements _$TradeRequestParameterModelCopyWith<$Res> {
-  __$TradeRequestParameterModelCopyWithImpl(_TradeRequestParameterModel _value,
-      $Res Function(_TradeRequestParameterModel) _then)
-      : super(_value, (v) => _then(v as _TradeRequestParameterModel));
+    implements _$$_TradeRequestParameterModelCopyWith<$Res> {
+  __$$_TradeRequestParameterModelCopyWithImpl(
+      _$_TradeRequestParameterModel _value,
+      $Res Function(_$_TradeRequestParameterModel) _then)
+      : super(_value, (v) => _then(v as _$_TradeRequestParameterModel));
 
   @override
-  _TradeRequestParameterModel get _value =>
-      super._value as _TradeRequestParameterModel;
+  _$_TradeRequestParameterModel get _value =>
+      super._value as _$_TradeRequestParameterModel;
 
   @override
   $Res call({
@@ -180,7 +148,7 @@ class __$TradeRequestParameterModelCopyWithImpl<$Res>
     Object? currencyCode = freezed,
     Object? assetCode = freezed,
   }) {
-    return _then(_TradeRequestParameterModel(
+    return _then(_$_TradeRequestParameterModel(
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -230,9 +198,9 @@ class _$_TradeRequestParameterModel implements _TradeRequestParameterModel {
 
   @override
   final int? page;
-  @override
 
   /// how many records is on the page, useful for getting big amount of data on one request
+  @override
   final int? size;
   @override
   @JsonKey(name: 'payment_method_code', includeIfNull: false)
@@ -256,7 +224,7 @@ class _$_TradeRequestParameterModel implements _TradeRequestParameterModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TradeRequestParameterModel &&
+            other is _$_TradeRequestParameterModel &&
             const DeepCollectionEquality().equals(other.page, page) &&
             const DeepCollectionEquality().equals(other.size, size) &&
             const DeepCollectionEquality()
@@ -268,6 +236,7 @@ class _$_TradeRequestParameterModel implements _TradeRequestParameterModel {
             const DeepCollectionEquality().equals(other.assetCode, assetCode));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -280,29 +249,31 @@ class _$_TradeRequestParameterModel implements _TradeRequestParameterModel {
 
   @JsonKey(ignore: true)
   @override
-  _$TradeRequestParameterModelCopyWith<_TradeRequestParameterModel>
-      get copyWith => __$TradeRequestParameterModelCopyWithImpl<
-          _TradeRequestParameterModel>(this, _$identity);
+  _$$_TradeRequestParameterModelCopyWith<_$_TradeRequestParameterModel>
+      get copyWith => __$$_TradeRequestParameterModelCopyWithImpl<
+          _$_TradeRequestParameterModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TradeRequestParameterModelToJson(this);
+    return _$$_TradeRequestParameterModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _TradeRequestParameterModel
     implements TradeRequestParameterModel {
   const factory _TradeRequestParameterModel(
-      {int? page,
-      int? size,
+      {final int? page,
+      final int? size,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode,
+          final String? paymentMethodCode,
       @JsonKey(name: 'country_code', includeIfNull: false)
-          String? countryCode,
+          final String? countryCode,
       @JsonKey(name: 'currency_code', includeIfNull: false)
-          String? currencyCode,
+          final String? currencyCode,
       @JsonKey(name: 'asset', includeIfNull: false)
-          String? assetCode}) = _$_TradeRequestParameterModel;
+          final String? assetCode}) = _$_TradeRequestParameterModel;
 
   factory _TradeRequestParameterModel.fromJson(Map<String, dynamic> json) =
       _$_TradeRequestParameterModel.fromJson;
@@ -327,6 +298,6 @@ abstract class _TradeRequestParameterModel
   String? get assetCode;
   @override
   @JsonKey(ignore: true)
-  _$TradeRequestParameterModelCopyWith<_TradeRequestParameterModel>
+  _$$_TradeRequestParameterModelCopyWith<_$_TradeRequestParameterModel>
       get copyWith => throw _privateConstructorUsedError;
 }

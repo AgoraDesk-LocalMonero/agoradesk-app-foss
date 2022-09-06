@@ -48,6 +48,8 @@ class AdModel with _$AdModel {
     @JsonKey(name: 'payment_method_detail', includeIfNull: false) String? paymentMethodDetail,
     @JsonKey(name: 'account_info', includeIfNull: false) String? paymentMethodInfo,
     @JsonKey(name: 'first_time_limit_asset', includeIfNull: false) double? firstTimeLimitAsset,
+    @JsonKey(name: 'first_time_limit_xmr', includeIfNull: false) double? firstTimeLimitXmr,
+    @JsonKey(name: 'first_time_limit_btc', includeIfNull: false) double? firstTimeLimitBtc,
     @JsonKey(name: 'require_feedback_score', includeIfNull: false) int? requireFeedbackScore,
     @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false) String? buyerSettlementFeeLevel,
     @JsonKey(name: 'location_string', includeIfNull: false) String? locationString,

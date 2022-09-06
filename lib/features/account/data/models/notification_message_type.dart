@@ -68,21 +68,4 @@ extension NotificationMessageTypeExt on NotificationMessageType {
         return context.intl.notification250Sbtrade8722Sbdisputed(tradeIdShort, username);
     }
   }
-
-  String translatedPushTitle(BuildContext context) {
-    switch (this) {
-      case NotificationMessageType.MESSAGE:
-        return 'New message in a trade';
-      case NotificationMessageType.TRADE_REQUEST:
-        return 'New trade request';
-      case NotificationMessageType.TRADE_COMPLETE:
-        return 'Trade marked as completed';
-      case NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
-        return 'Trade marked complete';
-      case NotificationMessageType.TRADE_CANCELLED:
-        return 'Trade cancelled';
-      case NotificationMessageType.TRADE_DISPUTED:
-        return 'Trade disputed';
-    }
-  }
 }

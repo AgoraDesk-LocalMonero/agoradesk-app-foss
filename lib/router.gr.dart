@@ -575,11 +575,9 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     AdsRoute.name: (routeData) {
-      final args =
-          routeData.argsAs<AdsRouteArgs>(orElse: () => const AdsRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i48.AdsScreen(key: args.key),
+          child: const _i48.AdsScreen(),
           transitionsBuilder: _i50.TransitionsBuilders.fadeIn,
           durationInMilliseconds: 300,
           opaque: true,
@@ -1614,22 +1612,10 @@ class MarketRouteArgs {
 
 /// generated route for
 /// [_i48.AdsScreen]
-class AdsRoute extends _i50.PageRouteInfo<AdsRouteArgs> {
-  AdsRoute({_i51.Key? key})
-      : super(AdsRoute.name, path: 'ads', args: AdsRouteArgs(key: key));
+class AdsRoute extends _i50.PageRouteInfo<void> {
+  const AdsRoute() : super(AdsRoute.name, path: 'ads');
 
   static const String name = 'AdsRoute';
-}
-
-class AdsRouteArgs {
-  const AdsRouteArgs({this.key});
-
-  final _i51.Key? key;
-
-  @override
-  String toString() {
-    return 'AdsRouteArgs{key: $key}';
-  }
 }
 
 /// generated route for

@@ -12,46 +12,11 @@ part of 'transaction_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 TransactionModel _$TransactionModelFromJson(Map<String, dynamic> json) {
   return _TransactionModel.fromJson(json);
 }
-
-/// @nodoc
-class _$TransactionModelTearOff {
-  const _$TransactionModelTearOff();
-
-  _TransactionModel call(
-      {required String amount,
-      @JsonKey(name: 'created_at') required DateTime createdAt,
-      @JsonKey(name: 'tx_type') int? txNum,
-      @JsonKey(name: 'tx_type_name') required TransactionTypes txType,
-      @JsonKey(name: 'txid') String? txId,
-      @JsonKey(defaultValue: true) bool? isSent,
-      @JsonKey(defaultValue: true) bool? isBitcoin,
-      Asset? asset,
-      required String description}) {
-    return _TransactionModel(
-      amount: amount,
-      createdAt: createdAt,
-      txNum: txNum,
-      txType: txType,
-      txId: txId,
-      isSent: isSent,
-      isBitcoin: isBitcoin,
-      asset: asset,
-      description: description,
-    );
-  }
-
-  TransactionModel fromJson(Map<String, Object?> json) {
-    return TransactionModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TransactionModel = _$TransactionModelTearOff();
 
 /// @nodoc
 mixin _$TransactionModel {
@@ -157,11 +122,11 @@ class _$TransactionModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TransactionModelCopyWith<$Res>
+abstract class _$$_TransactionModelCopyWith<$Res>
     implements $TransactionModelCopyWith<$Res> {
-  factory _$TransactionModelCopyWith(
-          _TransactionModel value, $Res Function(_TransactionModel) then) =
-      __$TransactionModelCopyWithImpl<$Res>;
+  factory _$$_TransactionModelCopyWith(
+          _$_TransactionModel value, $Res Function(_$_TransactionModel) then) =
+      __$$_TransactionModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String amount,
@@ -176,15 +141,15 @@ abstract class _$TransactionModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TransactionModelCopyWithImpl<$Res>
+class __$$_TransactionModelCopyWithImpl<$Res>
     extends _$TransactionModelCopyWithImpl<$Res>
-    implements _$TransactionModelCopyWith<$Res> {
-  __$TransactionModelCopyWithImpl(
-      _TransactionModel _value, $Res Function(_TransactionModel) _then)
-      : super(_value, (v) => _then(v as _TransactionModel));
+    implements _$$_TransactionModelCopyWith<$Res> {
+  __$$_TransactionModelCopyWithImpl(
+      _$_TransactionModel _value, $Res Function(_$_TransactionModel) _then)
+      : super(_value, (v) => _then(v as _$_TransactionModel));
 
   @override
-  _TransactionModel get _value => super._value as _TransactionModel;
+  _$_TransactionModel get _value => super._value as _$_TransactionModel;
 
   @override
   $Res call({
@@ -198,7 +163,7 @@ class __$TransactionModelCopyWithImpl<$Res>
     Object? asset = freezed,
     Object? description = freezed,
   }) {
-    return _then(_TransactionModel(
+    return _then(_$_TransactionModel(
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -291,7 +256,7 @@ class _$_TransactionModel extends _TransactionModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TransactionModel &&
+            other is _$_TransactionModel &&
             const DeepCollectionEquality().equals(other.amount, amount) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.txNum, txNum) &&
@@ -304,6 +269,7 @@ class _$_TransactionModel extends _TransactionModel {
                 .equals(other.description, description));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -319,26 +285,28 @@ class _$_TransactionModel extends _TransactionModel {
 
   @JsonKey(ignore: true)
   @override
-  _$TransactionModelCopyWith<_TransactionModel> get copyWith =>
-      __$TransactionModelCopyWithImpl<_TransactionModel>(this, _$identity);
+  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
+      __$$_TransactionModelCopyWithImpl<_$_TransactionModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransactionModelToJson(this);
+    return _$$_TransactionModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _TransactionModel extends TransactionModel {
   const factory _TransactionModel(
-      {required String amount,
-      @JsonKey(name: 'created_at') required DateTime createdAt,
-      @JsonKey(name: 'tx_type') int? txNum,
-      @JsonKey(name: 'tx_type_name') required TransactionTypes txType,
-      @JsonKey(name: 'txid') String? txId,
-      @JsonKey(defaultValue: true) bool? isSent,
-      @JsonKey(defaultValue: true) bool? isBitcoin,
-      Asset? asset,
-      required String description}) = _$_TransactionModel;
+      {required final String amount,
+      @JsonKey(name: 'created_at') required final DateTime createdAt,
+      @JsonKey(name: 'tx_type') final int? txNum,
+      @JsonKey(name: 'tx_type_name') required final TransactionTypes txType,
+      @JsonKey(name: 'txid') final String? txId,
+      @JsonKey(defaultValue: true) final bool? isSent,
+      @JsonKey(defaultValue: true) final bool? isBitcoin,
+      final Asset? asset,
+      required final String description}) = _$_TransactionModel;
   const _TransactionModel._() : super._();
 
   factory _TransactionModel.fromJson(Map<String, dynamic> json) =
@@ -370,6 +338,6 @@ abstract class _TransactionModel extends TransactionModel {
   String get description;
   @override
   @JsonKey(ignore: true)
-  _$TransactionModelCopyWith<_TransactionModel> get copyWith =>
+  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

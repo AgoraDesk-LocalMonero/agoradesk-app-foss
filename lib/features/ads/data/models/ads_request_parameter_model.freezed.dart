@@ -12,50 +12,12 @@ part of 'ads_request_parameter_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AdsRequestParameterModel _$AdsRequestParameterModelFromJson(
     Map<String, dynamic> json) {
   return _AdsRequestParameterModel.fromJson(json);
 }
-
-/// @nodoc
-class _$AdsRequestParameterModelTearOff {
-  const _$AdsRequestParameterModelTearOff();
-
-  _AdsRequestParameterModel call(
-      {@JsonKey(includeIfNull: false)
-          int? page,
-      @JsonKey(name: 'countrycode', includeIfNull: false)
-          String? countryCode,
-      @JsonKey(name: 'currency', includeIfNull: false)
-          String? currencyCode,
-      @JsonKey(name: 'trade_type', includeIfNull: false)
-          TradeType? tradeType,
-      @JsonKey(includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
-          bool? visible,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          Asset? asset,
-      @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode}) {
-    return _AdsRequestParameterModel(
-      page: page,
-      countryCode: countryCode,
-      currencyCode: currencyCode,
-      tradeType: tradeType,
-      visible: visible,
-      asset: asset,
-      paymentMethodCode: paymentMethodCode,
-    );
-  }
-
-  AdsRequestParameterModel fromJson(Map<String, Object?> json) {
-    return AdsRequestParameterModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdsRequestParameterModel = _$AdsRequestParameterModelTearOff();
 
 /// @nodoc
 mixin _$AdsRequestParameterModel {
@@ -155,11 +117,12 @@ class _$AdsRequestParameterModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AdsRequestParameterModelCopyWith<$Res>
+abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
     implements $AdsRequestParameterModelCopyWith<$Res> {
-  factory _$AdsRequestParameterModelCopyWith(_AdsRequestParameterModel value,
-          $Res Function(_AdsRequestParameterModel) then) =
-      __$AdsRequestParameterModelCopyWithImpl<$Res>;
+  factory _$$_AdsRequestParameterModelCopyWith(
+          _$_AdsRequestParameterModel value,
+          $Res Function(_$_AdsRequestParameterModel) then) =
+      __$$_AdsRequestParameterModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(includeIfNull: false)
@@ -179,16 +142,16 @@ abstract class _$AdsRequestParameterModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AdsRequestParameterModelCopyWithImpl<$Res>
+class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
     extends _$AdsRequestParameterModelCopyWithImpl<$Res>
-    implements _$AdsRequestParameterModelCopyWith<$Res> {
-  __$AdsRequestParameterModelCopyWithImpl(_AdsRequestParameterModel _value,
-      $Res Function(_AdsRequestParameterModel) _then)
-      : super(_value, (v) => _then(v as _AdsRequestParameterModel));
+    implements _$$_AdsRequestParameterModelCopyWith<$Res> {
+  __$$_AdsRequestParameterModelCopyWithImpl(_$_AdsRequestParameterModel _value,
+      $Res Function(_$_AdsRequestParameterModel) _then)
+      : super(_value, (v) => _then(v as _$_AdsRequestParameterModel));
 
   @override
-  _AdsRequestParameterModel get _value =>
-      super._value as _AdsRequestParameterModel;
+  _$_AdsRequestParameterModel get _value =>
+      super._value as _$_AdsRequestParameterModel;
 
   @override
   $Res call({
@@ -200,7 +163,7 @@ class __$AdsRequestParameterModelCopyWithImpl<$Res>
     Object? asset = freezed,
     Object? paymentMethodCode = freezed,
   }) {
-    return _then(_AdsRequestParameterModel(
+    return _then(_$_AdsRequestParameterModel(
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -287,7 +250,7 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdsRequestParameterModel &&
+            other is _$_AdsRequestParameterModel &&
             const DeepCollectionEquality().equals(other.page, page) &&
             const DeepCollectionEquality()
                 .equals(other.countryCode, countryCode) &&
@@ -300,6 +263,7 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
                 .equals(other.paymentMethodCode, paymentMethodCode));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -313,32 +277,34 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
 
   @JsonKey(ignore: true)
   @override
-  _$AdsRequestParameterModelCopyWith<_AdsRequestParameterModel> get copyWith =>
-      __$AdsRequestParameterModelCopyWithImpl<_AdsRequestParameterModel>(
-          this, _$identity);
+  _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
+      get copyWith => __$$_AdsRequestParameterModelCopyWithImpl<
+          _$_AdsRequestParameterModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdsRequestParameterModelToJson(this);
+    return _$$_AdsRequestParameterModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
   const factory _AdsRequestParameterModel(
       {@JsonKey(includeIfNull: false)
-          int? page,
+          final int? page,
       @JsonKey(name: 'countrycode', includeIfNull: false)
-          String? countryCode,
+          final String? countryCode,
       @JsonKey(name: 'currency', includeIfNull: false)
-          String? currencyCode,
+          final String? currencyCode,
       @JsonKey(name: 'trade_type', includeIfNull: false)
-          TradeType? tradeType,
+          final TradeType? tradeType,
       @JsonKey(includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
-          bool? visible,
+          final bool? visible,
       @JsonKey(name: 'asset', includeIfNull: false)
-          Asset? asset,
+          final Asset? asset,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode}) = _$_AdsRequestParameterModel;
+          final String? paymentMethodCode}) = _$_AdsRequestParameterModel;
 
   factory _AdsRequestParameterModel.fromJson(Map<String, dynamic> json) =
       _$_AdsRequestParameterModel.fromJson;
@@ -366,6 +332,6 @@ abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
   String? get paymentMethodCode;
   @override
   @JsonKey(ignore: true)
-  _$AdsRequestParameterModelCopyWith<_AdsRequestParameterModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

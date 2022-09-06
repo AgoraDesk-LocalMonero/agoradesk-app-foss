@@ -1,6 +1,3 @@
-
-
-
 import 'i18n.dart';
 
 /// The translations for Italian (`it`).
@@ -8489,6 +8486,9 @@ class I18nIt extends I18n {
 
   @override
   String get app_manage_ads => 'Manage ads';
+
+  @override
+  String get app_vacation_enabled => 'vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';

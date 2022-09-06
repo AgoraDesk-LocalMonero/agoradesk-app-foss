@@ -73,7 +73,8 @@ class AdInfoViewModel extends BaseViewModel with ErrorParseMixin {
 
   Future managePressToSettings(AdsViewModel model) async {
     await AutoRouter.of(context).push(AdsSettingsRoute(model: model));
-    onVacation = ad.tradeType.isSell() ? model.settingsModel.sellingVacation : model.settingsModel.buyingVacation;
+    onVacation =
+        ad.tradeType.isSell() ? model.userSettingsModel.sellingVacation : model.userSettingsModel.buyingVacation;
     notifyListeners();
   }
 

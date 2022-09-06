@@ -12,53 +12,11 @@ part of 'sign_up_request_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SignUpRequestModel _$SignUpRequestModelFromJson(Map<String, dynamic> json) {
   return _SignUpRequestModel.fromJson(json);
 }
-
-/// @nodoc
-class _$SignUpRequestModelTearOff {
-  const _$SignUpRequestModelTearOff();
-
-  _SignUpRequestModel call(
-      {String? username,
-      @JsonKey(includeIfNull: false)
-          String? email,
-      @JsonKey(name: 'front_type', includeIfNull: false)
-          String? frontType,
-      String? password,
-      @JsonKey(includeIfNull: false)
-          String? otp,
-      @JsonKey(includeIfNull: false)
-          String? captcha,
-      @JsonKey(ignore: true)
-          String? captchaCookie,
-      @JsonKey(name: 'referral_code', includeIfNull: false)
-          String? referralCode,
-      @JsonKey(name: 'coupon_code', includeIfNull: false)
-          String? couponCode}) {
-    return _SignUpRequestModel(
-      username: username,
-      email: email,
-      frontType: frontType,
-      password: password,
-      otp: otp,
-      captcha: captcha,
-      captchaCookie: captchaCookie,
-      referralCode: referralCode,
-      couponCode: couponCode,
-    );
-  }
-
-  SignUpRequestModel fromJson(Map<String, Object?> json) {
-    return SignUpRequestModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SignUpRequestModel = _$SignUpRequestModelTearOff();
 
 /// @nodoc
 mixin _$SignUpRequestModel {
@@ -172,11 +130,11 @@ class _$SignUpRequestModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SignUpRequestModelCopyWith<$Res>
+abstract class _$$_SignUpRequestModelCopyWith<$Res>
     implements $SignUpRequestModelCopyWith<$Res> {
-  factory _$SignUpRequestModelCopyWith(
-          _SignUpRequestModel value, $Res Function(_SignUpRequestModel) then) =
-      __$SignUpRequestModelCopyWithImpl<$Res>;
+  factory _$$_SignUpRequestModelCopyWith(_$_SignUpRequestModel value,
+          $Res Function(_$_SignUpRequestModel) then) =
+      __$$_SignUpRequestModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? username,
@@ -198,15 +156,15 @@ abstract class _$SignUpRequestModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SignUpRequestModelCopyWithImpl<$Res>
+class __$$_SignUpRequestModelCopyWithImpl<$Res>
     extends _$SignUpRequestModelCopyWithImpl<$Res>
-    implements _$SignUpRequestModelCopyWith<$Res> {
-  __$SignUpRequestModelCopyWithImpl(
-      _SignUpRequestModel _value, $Res Function(_SignUpRequestModel) _then)
-      : super(_value, (v) => _then(v as _SignUpRequestModel));
+    implements _$$_SignUpRequestModelCopyWith<$Res> {
+  __$$_SignUpRequestModelCopyWithImpl(
+      _$_SignUpRequestModel _value, $Res Function(_$_SignUpRequestModel) _then)
+      : super(_value, (v) => _then(v as _$_SignUpRequestModel));
 
   @override
-  _SignUpRequestModel get _value => super._value as _SignUpRequestModel;
+  _$_SignUpRequestModel get _value => super._value as _$_SignUpRequestModel;
 
   @override
   $Res call({
@@ -220,7 +178,7 @@ class __$SignUpRequestModelCopyWithImpl<$Res>
     Object? referralCode = freezed,
     Object? couponCode = freezed,
   }) {
-    return _then(_SignUpRequestModel(
+    return _then(_$_SignUpRequestModel(
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -314,7 +272,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SignUpRequestModel &&
+            other is _$_SignUpRequestModel &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.frontType, frontType) &&
@@ -329,6 +287,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
                 .equals(other.couponCode, couponCode));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -344,33 +303,36 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
 
   @JsonKey(ignore: true)
   @override
-  _$SignUpRequestModelCopyWith<_SignUpRequestModel> get copyWith =>
-      __$SignUpRequestModelCopyWithImpl<_SignUpRequestModel>(this, _$identity);
+  _$$_SignUpRequestModelCopyWith<_$_SignUpRequestModel> get copyWith =>
+      __$$_SignUpRequestModelCopyWithImpl<_$_SignUpRequestModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SignUpRequestModelToJson(this);
+    return _$$_SignUpRequestModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _SignUpRequestModel implements SignUpRequestModel {
   const factory _SignUpRequestModel(
-      {String? username,
+      {final String? username,
       @JsonKey(includeIfNull: false)
-          String? email,
+          final String? email,
       @JsonKey(name: 'front_type', includeIfNull: false)
-          String? frontType,
-      String? password,
+          final String? frontType,
+      final String? password,
       @JsonKey(includeIfNull: false)
-          String? otp,
+          final String? otp,
       @JsonKey(includeIfNull: false)
-          String? captcha,
+          final String? captcha,
       @JsonKey(ignore: true)
-          String? captchaCookie,
+          final String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
-          String? referralCode,
+          final String? referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false)
-          String? couponCode}) = _$_SignUpRequestModel;
+          final String? couponCode}) = _$_SignUpRequestModel;
 
   factory _SignUpRequestModel.fromJson(Map<String, dynamic> json) =
       _$_SignUpRequestModel.fromJson;
@@ -402,6 +364,6 @@ abstract class _SignUpRequestModel implements SignUpRequestModel {
   String? get couponCode;
   @override
   @JsonKey(ignore: true)
-  _$SignUpRequestModelCopyWith<_SignUpRequestModel> get copyWith =>
+  _$$_SignUpRequestModelCopyWith<_$_SignUpRequestModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

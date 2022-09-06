@@ -53,7 +53,7 @@
     },
     {
       "id": "5:5782449331183648541",
-      "lastPropertyId": "8:8691606086131470979",
+      "lastPropertyId": "11:5156181534954807267",
       "name": "UserLocalSettings",
       "properties": [
         {
@@ -96,6 +96,16 @@
           "id": "8:8691606086131470979",
           "name": "firstRun",
           "type": 1
+        },
+        {
+          "id": "10:8212590627535673531",
+          "name": "cachedCountrySavedDate",
+          "type": 10
+        },
+        {
+          "id": "11:5156181534954807267",
+          "name": "cachedCurrencySavedDate",
+          "type": 10
         }
       ],
       "relations": []
@@ -192,7 +202,8 @@
     2251064529912857073,
     8578354113210576549,
     4787065640047253460,
-    7726143144253712131
+    7726143144253712131,
+    3848427887716006093
   ],
   "retiredRelationUids": [],
   "version": 1

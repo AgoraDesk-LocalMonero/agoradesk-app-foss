@@ -12,45 +12,12 @@ part of 'notification_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ActivityNotificationModel _$ActivityNotificationModelFromJson(
     Map<String, dynamic> json) {
   return _ActivityNotificationModel.fromJson(json);
 }
-
-/// @nodoc
-class _$ActivityNotificationModelTearOff {
-  const _$ActivityNotificationModelTearOff();
-
-  _ActivityNotificationModel call(
-      {required String id,
-      required bool read,
-      @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime createdAt,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? contactId,
-      required String url,
-      required String msg,
-      required NotificationMessageType type}) {
-    return _ActivityNotificationModel(
-      id: id,
-      read: read,
-      createdAt: createdAt,
-      contactId: contactId,
-      url: url,
-      msg: msg,
-      type: type,
-    );
-  }
-
-  ActivityNotificationModel fromJson(Map<String, Object?> json) {
-    return ActivityNotificationModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ActivityNotificationModel = _$ActivityNotificationModelTearOff();
 
 /// @nodoc
 mixin _$ActivityNotificationModel {
@@ -140,11 +107,12 @@ class _$ActivityNotificationModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ActivityNotificationModelCopyWith<$Res>
+abstract class _$$_ActivityNotificationModelCopyWith<$Res>
     implements $ActivityNotificationModelCopyWith<$Res> {
-  factory _$ActivityNotificationModelCopyWith(_ActivityNotificationModel value,
-          $Res Function(_ActivityNotificationModel) then) =
-      __$ActivityNotificationModelCopyWithImpl<$Res>;
+  factory _$$_ActivityNotificationModelCopyWith(
+          _$_ActivityNotificationModel value,
+          $Res Function(_$_ActivityNotificationModel) then) =
+      __$$_ActivityNotificationModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -159,16 +127,17 @@ abstract class _$ActivityNotificationModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ActivityNotificationModelCopyWithImpl<$Res>
+class __$$_ActivityNotificationModelCopyWithImpl<$Res>
     extends _$ActivityNotificationModelCopyWithImpl<$Res>
-    implements _$ActivityNotificationModelCopyWith<$Res> {
-  __$ActivityNotificationModelCopyWithImpl(_ActivityNotificationModel _value,
-      $Res Function(_ActivityNotificationModel) _then)
-      : super(_value, (v) => _then(v as _ActivityNotificationModel));
+    implements _$$_ActivityNotificationModelCopyWith<$Res> {
+  __$$_ActivityNotificationModelCopyWithImpl(
+      _$_ActivityNotificationModel _value,
+      $Res Function(_$_ActivityNotificationModel) _then)
+      : super(_value, (v) => _then(v as _$_ActivityNotificationModel));
 
   @override
-  _ActivityNotificationModel get _value =>
-      super._value as _ActivityNotificationModel;
+  _$_ActivityNotificationModel get _value =>
+      super._value as _$_ActivityNotificationModel;
 
   @override
   $Res call({
@@ -180,7 +149,7 @@ class __$ActivityNotificationModelCopyWithImpl<$Res>
     Object? msg = freezed,
     Object? type = freezed,
   }) {
-    return _then(_ActivityNotificationModel(
+    return _then(_$_ActivityNotificationModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -258,7 +227,7 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ActivityNotificationModel &&
+            other is _$_ActivityNotificationModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.read, read) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
@@ -268,6 +237,7 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
             const DeepCollectionEquality().equals(other.type, type));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -281,28 +251,30 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
 
   @JsonKey(ignore: true)
   @override
-  _$ActivityNotificationModelCopyWith<_ActivityNotificationModel>
-      get copyWith =>
-          __$ActivityNotificationModelCopyWithImpl<_ActivityNotificationModel>(
-              this, _$identity);
+  _$$_ActivityNotificationModelCopyWith<_$_ActivityNotificationModel>
+      get copyWith => __$$_ActivityNotificationModelCopyWithImpl<
+          _$_ActivityNotificationModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityNotificationModelToJson(this);
+    return _$$_ActivityNotificationModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _ActivityNotificationModel extends ActivityNotificationModel {
   const factory _ActivityNotificationModel(
-      {required String id,
-      required bool read,
+      {required final String id,
+      required final bool read,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required DateTime createdAt,
+          required final DateTime createdAt,
       @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? contactId,
-      required String url,
-      required String msg,
-      required NotificationMessageType type}) = _$_ActivityNotificationModel;
+          final String? contactId,
+      required final String url,
+      required final String msg,
+      required final NotificationMessageType
+          type}) = _$_ActivityNotificationModel;
   const _ActivityNotificationModel._() : super._();
 
   factory _ActivityNotificationModel.fromJson(Map<String, dynamic> json) =
@@ -326,6 +298,6 @@ abstract class _ActivityNotificationModel extends ActivityNotificationModel {
   NotificationMessageType get type;
   @override
   @JsonKey(ignore: true)
-  _$ActivityNotificationModelCopyWith<_ActivityNotificationModel>
+  _$$_ActivityNotificationModelCopyWith<_$_ActivityNotificationModel>
       get copyWith => throw _privateConstructorUsedError;
 }

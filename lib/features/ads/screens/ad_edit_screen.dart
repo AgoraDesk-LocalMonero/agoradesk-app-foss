@@ -306,6 +306,7 @@ class _AdEditScreenState extends State<AdEditScreen>
                 bodyTabIndex: model.bodyTabIndex,
                 currentEditPrice: model.currentEditPrice,
                 formulaInputValid: model.formulaInputValid,
+                isXmr: model.asset == Asset.XMR,
               ),
           ],
         ),
@@ -430,12 +431,7 @@ class _AdEditScreenState extends State<AdEditScreen>
             Text(context.intl.ads_specify_restrictions),
             const SizedBox(height: 12),
             _buildTrustedSwitcher(context, model),
-            model.tradeType == TradeType.ONLINE_SELL
-                ? _buildVerifiedEmail(
-                    context,
-                    model,
-                  )
-                : const SizedBox(),
+            model.tradeType == TradeType.ONLINE_SELL ? _buildVerifiedEmail(context, model) : const SizedBox(),
             model.tradeType == TradeType.ONLINE_SELL
                 ? AdMinScore(
                     controller: model.ctrl6MinimumScore,

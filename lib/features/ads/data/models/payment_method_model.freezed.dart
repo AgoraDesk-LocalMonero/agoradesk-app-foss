@@ -12,28 +12,7 @@ part of 'payment_method_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$OnlineProviderTearOff {
-  const _$OnlineProviderTearOff();
-
-  _OnlineProvider call(
-      {required String url,
-      required String code,
-      required String name,
-      required List<String> currencies}) {
-    return _OnlineProvider(
-      url: url,
-      code: code,
-      name: name,
-      currencies: currencies,
-    );
-  }
-}
-
-/// @nodoc
-const $OnlineProvider = _$OnlineProviderTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$OnlineProvider {
@@ -93,25 +72,25 @@ class _$OnlineProviderCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$OnlineProviderCopyWith<$Res>
+abstract class _$$_OnlineProviderCopyWith<$Res>
     implements $OnlineProviderCopyWith<$Res> {
-  factory _$OnlineProviderCopyWith(
-          _OnlineProvider value, $Res Function(_OnlineProvider) then) =
-      __$OnlineProviderCopyWithImpl<$Res>;
+  factory _$$_OnlineProviderCopyWith(
+          _$_OnlineProvider value, $Res Function(_$_OnlineProvider) then) =
+      __$$_OnlineProviderCopyWithImpl<$Res>;
   @override
   $Res call({String url, String code, String name, List<String> currencies});
 }
 
 /// @nodoc
-class __$OnlineProviderCopyWithImpl<$Res>
+class __$$_OnlineProviderCopyWithImpl<$Res>
     extends _$OnlineProviderCopyWithImpl<$Res>
-    implements _$OnlineProviderCopyWith<$Res> {
-  __$OnlineProviderCopyWithImpl(
-      _OnlineProvider _value, $Res Function(_OnlineProvider) _then)
-      : super(_value, (v) => _then(v as _OnlineProvider));
+    implements _$$_OnlineProviderCopyWith<$Res> {
+  __$$_OnlineProviderCopyWithImpl(
+      _$_OnlineProvider _value, $Res Function(_$_OnlineProvider) _then)
+      : super(_value, (v) => _then(v as _$_OnlineProvider));
 
   @override
-  _OnlineProvider get _value => super._value as _OnlineProvider;
+  _$_OnlineProvider get _value => super._value as _$_OnlineProvider;
 
   @override
   $Res call({
@@ -120,7 +99,7 @@ class __$OnlineProviderCopyWithImpl<$Res>
     Object? name = freezed,
     Object? currencies = freezed,
   }) {
-    return _then(_OnlineProvider(
+    return _then(_$_OnlineProvider(
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -134,7 +113,7 @@ class __$OnlineProviderCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       currencies: currencies == freezed
-          ? _value.currencies
+          ? _value._currencies
           : currencies // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -148,7 +127,8 @@ class _$_OnlineProvider implements _OnlineProvider {
       {required this.url,
       required this.code,
       required this.name,
-      required this.currencies});
+      required final List<String> currencies})
+      : _currencies = currencies;
 
   @override
   final String url;
@@ -156,8 +136,12 @@ class _$_OnlineProvider implements _OnlineProvider {
   final String code;
   @override
   final String name;
+  final List<String> _currencies;
   @override
-  final List<String> currencies;
+  List<String> get currencies {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_currencies);
+  }
 
   @override
   String toString() {
@@ -168,12 +152,12 @@ class _$_OnlineProvider implements _OnlineProvider {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OnlineProvider &&
+            other is _$_OnlineProvider &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
-                .equals(other.currencies, currencies));
+                .equals(other._currencies, _currencies));
   }
 
   @override
@@ -182,20 +166,20 @@ class _$_OnlineProvider implements _OnlineProvider {
       const DeepCollectionEquality().hash(url),
       const DeepCollectionEquality().hash(code),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(currencies));
+      const DeepCollectionEquality().hash(_currencies));
 
   @JsonKey(ignore: true)
   @override
-  _$OnlineProviderCopyWith<_OnlineProvider> get copyWith =>
-      __$OnlineProviderCopyWithImpl<_OnlineProvider>(this, _$identity);
+  _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith =>
+      __$$_OnlineProviderCopyWithImpl<_$_OnlineProvider>(this, _$identity);
 }
 
 abstract class _OnlineProvider implements OnlineProvider {
   const factory _OnlineProvider(
-      {required String url,
-      required String code,
-      required String name,
-      required List<String> currencies}) = _$_OnlineProvider;
+      {required final String url,
+      required final String code,
+      required final String name,
+      required final List<String> currencies}) = _$_OnlineProvider;
 
   @override
   String get url;
@@ -207,6 +191,6 @@ abstract class _OnlineProvider implements OnlineProvider {
   List<String> get currencies;
   @override
   @JsonKey(ignore: true)
-  _$OnlineProviderCopyWith<_OnlineProvider> get copyWith =>
+  _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,42 +12,11 @@ part of 'incoming_deposit_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 IncomingDepositModel _$IncomingDepositModelFromJson(Map<String, dynamic> json) {
   return _IncomingDepositModel.fromJson(json);
 }
-
-/// @nodoc
-class _$IncomingDepositModelTearOff {
-  const _$IncomingDepositModelTearOff();
-
-  _IncomingDepositModel call(
-      {required String amount,
-      required int confirmations,
-      @JsonKey(name: 'transaction_id') required String transactionId,
-      required DateTime timestamp,
-      @JsonKey(name: 'note', includeIfNull: false) String? note,
-      @JsonKey(name: 'unlock_time') int? unlockTime,
-      Asset? asset}) {
-    return _IncomingDepositModel(
-      amount: amount,
-      confirmations: confirmations,
-      transactionId: transactionId,
-      timestamp: timestamp,
-      note: note,
-      unlockTime: unlockTime,
-      asset: asset,
-    );
-  }
-
-  IncomingDepositModel fromJson(Map<String, Object?> json) {
-    return IncomingDepositModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $IncomingDepositModel = _$IncomingDepositModelTearOff();
 
 /// @nodoc
 mixin _$IncomingDepositModel {
@@ -136,11 +105,11 @@ class _$IncomingDepositModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IncomingDepositModelCopyWith<$Res>
+abstract class _$$_IncomingDepositModelCopyWith<$Res>
     implements $IncomingDepositModelCopyWith<$Res> {
-  factory _$IncomingDepositModelCopyWith(_IncomingDepositModel value,
-          $Res Function(_IncomingDepositModel) then) =
-      __$IncomingDepositModelCopyWithImpl<$Res>;
+  factory _$$_IncomingDepositModelCopyWith(_$_IncomingDepositModel value,
+          $Res Function(_$_IncomingDepositModel) then) =
+      __$$_IncomingDepositModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String amount,
@@ -153,15 +122,15 @@ abstract class _$IncomingDepositModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$IncomingDepositModelCopyWithImpl<$Res>
+class __$$_IncomingDepositModelCopyWithImpl<$Res>
     extends _$IncomingDepositModelCopyWithImpl<$Res>
-    implements _$IncomingDepositModelCopyWith<$Res> {
-  __$IncomingDepositModelCopyWithImpl(
-      _IncomingDepositModel _value, $Res Function(_IncomingDepositModel) _then)
-      : super(_value, (v) => _then(v as _IncomingDepositModel));
+    implements _$$_IncomingDepositModelCopyWith<$Res> {
+  __$$_IncomingDepositModelCopyWithImpl(_$_IncomingDepositModel _value,
+      $Res Function(_$_IncomingDepositModel) _then)
+      : super(_value, (v) => _then(v as _$_IncomingDepositModel));
 
   @override
-  _IncomingDepositModel get _value => super._value as _IncomingDepositModel;
+  _$_IncomingDepositModel get _value => super._value as _$_IncomingDepositModel;
 
   @override
   $Res call({
@@ -173,7 +142,7 @@ class __$IncomingDepositModelCopyWithImpl<$Res>
     Object? unlockTime = freezed,
     Object? asset = freezed,
   }) {
-    return _then(_IncomingDepositModel(
+    return _then(_$_IncomingDepositModel(
       amount: amount == freezed
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -249,7 +218,7 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IncomingDepositModel &&
+            other is _$_IncomingDepositModel &&
             const DeepCollectionEquality().equals(other.amount, amount) &&
             const DeepCollectionEquality()
                 .equals(other.confirmations, confirmations) &&
@@ -262,6 +231,7 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
             const DeepCollectionEquality().equals(other.asset, asset));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -275,25 +245,27 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
 
   @JsonKey(ignore: true)
   @override
-  _$IncomingDepositModelCopyWith<_IncomingDepositModel> get copyWith =>
-      __$IncomingDepositModelCopyWithImpl<_IncomingDepositModel>(
+  _$$_IncomingDepositModelCopyWith<_$_IncomingDepositModel> get copyWith =>
+      __$$_IncomingDepositModelCopyWithImpl<_$_IncomingDepositModel>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IncomingDepositModelToJson(this);
+    return _$$_IncomingDepositModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _IncomingDepositModel implements IncomingDepositModel {
   const factory _IncomingDepositModel(
-      {required String amount,
-      required int confirmations,
-      @JsonKey(name: 'transaction_id') required String transactionId,
-      required DateTime timestamp,
-      @JsonKey(name: 'note', includeIfNull: false) String? note,
-      @JsonKey(name: 'unlock_time') int? unlockTime,
-      Asset? asset}) = _$_IncomingDepositModel;
+      {required final String amount,
+      required final int confirmations,
+      @JsonKey(name: 'transaction_id') required final String transactionId,
+      required final DateTime timestamp,
+      @JsonKey(name: 'note', includeIfNull: false) final String? note,
+      @JsonKey(name: 'unlock_time') final int? unlockTime,
+      final Asset? asset}) = _$_IncomingDepositModel;
 
   factory _IncomingDepositModel.fromJson(Map<String, dynamic> json) =
       _$_IncomingDepositModel.fromJson;
@@ -317,6 +289,6 @@ abstract class _IncomingDepositModel implements IncomingDepositModel {
   Asset? get asset;
   @override
   @JsonKey(ignore: true)
-  _$IncomingDepositModelCopyWith<_IncomingDepositModel> get copyWith =>
+  _$$_IncomingDepositModelCopyWith<_$_IncomingDepositModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

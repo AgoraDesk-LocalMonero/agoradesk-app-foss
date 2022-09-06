@@ -90,6 +90,7 @@ class _PostAdStep3State extends State<PostAdStep3> {
                   bodyTabIndex: widget.model.bodyTabIndex,
                   currentEditPrice: widget.model.currentEditPrice,
                   formulaInputValid: widget.model.formulaInputValid,
+                  isXmr: widget.model.asset == Asset.XMR,
                 ),
             ],
           ),

@@ -12,27 +12,7 @@ part of 'either.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$EitherTearOff {
-  const _$EitherTearOff();
-
-  _EitherLeft<L, R> left<L, R>(L left) {
-    return _EitherLeft<L, R>(
-      left,
-    );
-  }
-
-  _EitherRight<L, R> right<L, R>(R right) {
-    return _EitherRight<L, R>(
-      right,
-    );
-  }
-}
-
-/// @nodoc
-const $Either = _$EitherTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Either<L, R> {
@@ -93,29 +73,29 @@ class _$EitherCopyWithImpl<L, R, $Res> implements $EitherCopyWith<L, R, $Res> {
 }
 
 /// @nodoc
-abstract class _$EitherLeftCopyWith<L, R, $Res> {
-  factory _$EitherLeftCopyWith(
-          _EitherLeft<L, R> value, $Res Function(_EitherLeft<L, R>) then) =
-      __$EitherLeftCopyWithImpl<L, R, $Res>;
+abstract class _$$_EitherLeftCopyWith<L, R, $Res> {
+  factory _$$_EitherLeftCopyWith(
+          _$_EitherLeft<L, R> value, $Res Function(_$_EitherLeft<L, R>) then) =
+      __$$_EitherLeftCopyWithImpl<L, R, $Res>;
   $Res call({L left});
 }
 
 /// @nodoc
-class __$EitherLeftCopyWithImpl<L, R, $Res>
+class __$$_EitherLeftCopyWithImpl<L, R, $Res>
     extends _$EitherCopyWithImpl<L, R, $Res>
-    implements _$EitherLeftCopyWith<L, R, $Res> {
-  __$EitherLeftCopyWithImpl(
-      _EitherLeft<L, R> _value, $Res Function(_EitherLeft<L, R>) _then)
-      : super(_value, (v) => _then(v as _EitherLeft<L, R>));
+    implements _$$_EitherLeftCopyWith<L, R, $Res> {
+  __$$_EitherLeftCopyWithImpl(
+      _$_EitherLeft<L, R> _value, $Res Function(_$_EitherLeft<L, R>) _then)
+      : super(_value, (v) => _then(v as _$_EitherLeft<L, R>));
 
   @override
-  _EitherLeft<L, R> get _value => super._value as _EitherLeft<L, R>;
+  _$_EitherLeft<L, R> get _value => super._value as _$_EitherLeft<L, R>;
 
   @override
   $Res call({
     Object? left = freezed,
   }) {
-    return _then(_EitherLeft<L, R>(
+    return _then(_$_EitherLeft<L, R>(
       left == freezed
           ? _value.left
           : left // ignore: cast_nullable_to_non_nullable
@@ -126,31 +106,22 @@ class __$EitherLeftCopyWithImpl<L, R, $Res>
 
 /// @nodoc
 
-class _$_EitherLeft<L, R> extends _EitherLeft<L, R>
-    with DiagnosticableTreeMixin {
+class _$_EitherLeft<L, R> extends _EitherLeft<L, R> {
   const _$_EitherLeft(this.left) : super._();
 
   @override
   final L left;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Either<$L, $R>.left(left: $left)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Either<$L, $R>.left'))
-      ..add(DiagnosticsProperty('left', left));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EitherLeft<L, R> &&
+            other is _$_EitherLeft<L, R> &&
             const DeepCollectionEquality().equals(other.left, left));
   }
 
@@ -160,8 +131,8 @@ class _$_EitherLeft<L, R> extends _EitherLeft<L, R>
 
   @JsonKey(ignore: true)
   @override
-  _$EitherLeftCopyWith<L, R, _EitherLeft<L, R>> get copyWith =>
-      __$EitherLeftCopyWithImpl<L, R, _EitherLeft<L, R>>(this, _$identity);
+  _$$_EitherLeftCopyWith<L, R, _$_EitherLeft<L, R>> get copyWith =>
+      __$$_EitherLeftCopyWithImpl<L, R, _$_EitherLeft<L, R>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -227,39 +198,39 @@ class _$_EitherLeft<L, R> extends _EitherLeft<L, R>
 }
 
 abstract class _EitherLeft<L, R> extends Either<L, R> {
-  const factory _EitherLeft(L left) = _$_EitherLeft<L, R>;
+  const factory _EitherLeft(final L left) = _$_EitherLeft<L, R>;
   const _EitherLeft._() : super._();
 
   L get left;
   @JsonKey(ignore: true)
-  _$EitherLeftCopyWith<L, R, _EitherLeft<L, R>> get copyWith =>
+  _$$_EitherLeftCopyWith<L, R, _$_EitherLeft<L, R>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$EitherRightCopyWith<L, R, $Res> {
-  factory _$EitherRightCopyWith(
-          _EitherRight<L, R> value, $Res Function(_EitherRight<L, R>) then) =
-      __$EitherRightCopyWithImpl<L, R, $Res>;
+abstract class _$$_EitherRightCopyWith<L, R, $Res> {
+  factory _$$_EitherRightCopyWith(_$_EitherRight<L, R> value,
+          $Res Function(_$_EitherRight<L, R>) then) =
+      __$$_EitherRightCopyWithImpl<L, R, $Res>;
   $Res call({R right});
 }
 
 /// @nodoc
-class __$EitherRightCopyWithImpl<L, R, $Res>
+class __$$_EitherRightCopyWithImpl<L, R, $Res>
     extends _$EitherCopyWithImpl<L, R, $Res>
-    implements _$EitherRightCopyWith<L, R, $Res> {
-  __$EitherRightCopyWithImpl(
-      _EitherRight<L, R> _value, $Res Function(_EitherRight<L, R>) _then)
-      : super(_value, (v) => _then(v as _EitherRight<L, R>));
+    implements _$$_EitherRightCopyWith<L, R, $Res> {
+  __$$_EitherRightCopyWithImpl(
+      _$_EitherRight<L, R> _value, $Res Function(_$_EitherRight<L, R>) _then)
+      : super(_value, (v) => _then(v as _$_EitherRight<L, R>));
 
   @override
-  _EitherRight<L, R> get _value => super._value as _EitherRight<L, R>;
+  _$_EitherRight<L, R> get _value => super._value as _$_EitherRight<L, R>;
 
   @override
   $Res call({
     Object? right = freezed,
   }) {
-    return _then(_EitherRight<L, R>(
+    return _then(_$_EitherRight<L, R>(
       right == freezed
           ? _value.right
           : right // ignore: cast_nullable_to_non_nullable
@@ -270,31 +241,22 @@ class __$EitherRightCopyWithImpl<L, R, $Res>
 
 /// @nodoc
 
-class _$_EitherRight<L, R> extends _EitherRight<L, R>
-    with DiagnosticableTreeMixin {
+class _$_EitherRight<L, R> extends _EitherRight<L, R> {
   const _$_EitherRight(this.right) : super._();
 
   @override
   final R right;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'Either<$L, $R>.right(right: $right)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'Either<$L, $R>.right'))
-      ..add(DiagnosticsProperty('right', right));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EitherRight<L, R> &&
+            other is _$_EitherRight<L, R> &&
             const DeepCollectionEquality().equals(other.right, right));
   }
 
@@ -304,8 +266,9 @@ class _$_EitherRight<L, R> extends _EitherRight<L, R>
 
   @JsonKey(ignore: true)
   @override
-  _$EitherRightCopyWith<L, R, _EitherRight<L, R>> get copyWith =>
-      __$EitherRightCopyWithImpl<L, R, _EitherRight<L, R>>(this, _$identity);
+  _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith =>
+      __$$_EitherRightCopyWithImpl<L, R, _$_EitherRight<L, R>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -371,11 +334,11 @@ class _$_EitherRight<L, R> extends _EitherRight<L, R>
 }
 
 abstract class _EitherRight<L, R> extends Either<L, R> {
-  const factory _EitherRight(R right) = _$_EitherRight<L, R>;
+  const factory _EitherRight(final R right) = _$_EitherRight<L, R>;
   const _EitherRight._() : super._();
 
   R get right;
   @JsonKey(ignore: true)
-  _$EitherRightCopyWith<L, R, _EitherRight<L, R>> get copyWith =>
+  _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith =>
       throw _privateConstructorUsedError;
 }
