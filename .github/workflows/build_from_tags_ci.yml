@@ -1,12 +1,18 @@
+#  KEY_PROPERTIES - file
+#  RELEASE_AGORADESK_KEYSTORE
+#  RELEASE_AGORADESK_KEYSTORE_SECRET
+#  RELEASE_LOCALMONERO_KEYSTORE
+#  RELEASE_LOCALMONERO_KEYSTORE_SECRET
+
 name: BuildFromTagsCI
 
 on:
   push:
     tags:
-      - "v*.*.*" # on every version tag will build a new android artifact.
+      - "v*.*.*"
 jobs:
   build:
-    name: Build APK
+    name: Build APK & AppBundle
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,16 +28,16 @@ jobs:
       - name: Decoding android/key.properties
         run: |
         echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
-        gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > app/release.keystore
+        gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > app/agoradesk-keystore.jks
 
       - name: Pub Get Packages
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --split-per-abi --release
+        run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 
-      - name: Build APPBUNDLE
-        run: flutter build appbundle --release
+#      - name: Build APPBUNDLE
+#        run: flutter build appbundle --release
 
       - name: Create Github Release
         uses: ncipollo/release-action@v1
