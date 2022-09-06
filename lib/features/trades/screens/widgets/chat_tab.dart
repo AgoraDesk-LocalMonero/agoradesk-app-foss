@@ -229,7 +229,10 @@ class ChatTab extends StatelessWidget {
 
   Widget _buildTradeStepOne(BuildContext context) {
     if (model.tradeStatus == TradeStatus.created) {
-      return TradeStepOneForChat(model: model);
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+        child: TradeStepOneForChat(model: model),
+      );
     } else {
       return const SizedBox();
     }

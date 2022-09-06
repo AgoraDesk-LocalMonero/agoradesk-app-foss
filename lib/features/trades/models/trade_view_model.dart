@@ -37,7 +37,7 @@ import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
-const _kPollingSeconds = 30;
+const _kPollingSeconds = 15;
 const _kNewMessageDuration = Duration(milliseconds: 300);
 
 class TradeViewModel extends BaseViewModel
@@ -255,7 +255,7 @@ class TradeViewModel extends BaseViewModel
     } else {
       isSeller = false;
     }
-    _setTradeStatus();
+    _setTradeStatus(initial: true);
     _calcMinutesBeforeCancel();
     focusMessage.addListener(() {
       if (focusMessage.hasFocus != messageHasFocus) {
@@ -417,7 +417,7 @@ class TradeViewModel extends BaseViewModel
   }
 
   //todo - move to utils
-  void _setTradeStatus() {
+  void _setTradeStatus({bool initial = false}) {
     if (tradeForScreen.releasedAt != null &&
         tradeForScreen.transferToSellerTransactionId == null &&
         tradeForScreen.transferToBuyerTransactionId == null) {
@@ -447,7 +447,7 @@ class TradeViewModel extends BaseViewModel
     } else {
       tradeStatus = TradeStatus.created;
     }
-    _divideMessagesTwoParts(null);
+    _divideMessagesTwoParts(null, initial: initial);
   }
 
   Future releaseEscrow(BuildContext context) async {
@@ -770,10 +770,10 @@ class TradeViewModel extends BaseViewModel
   }
 
   void _divideMessagesTwoParts(List<MessageBoxModel>? messagesIn, {bool initial = false}) {
-    final parseLst = messagesIn ?? [...messagesBeforeSticky, ...messagesAfterSticky];
-    // messagesBeforeSticky.clear();
-    // messagesAfterSticky.clear();
-    if (tradeStatus == TradeStatus.paymentCompleted) {
+    final parseLst = messagesIn ?? (initial ? [...messagesBeforeSticky, ...messagesAfterSticky] : []);
+    if (tradeStatus == TradeStatus.created) {
+      _sortMessages(parseLst, tradeForScreen.createdAt ?? DateTime.now(), initial: initial);
+    } else if (tradeStatus == TradeStatus.paymentCompleted) {
       _sortMessages(parseLst, tradeForScreen.paymentCompletedAt ?? DateTime.now(), initial: initial);
     } else if (tradeStatus == TradeStatus.released || (tradeStatus.index > 5 && tradeStatus != TradeStatus.disputed)) {
       _sortMessages(parseLst, tradeForScreen.releasedAt ?? DateTime.now(), initial: initial);
