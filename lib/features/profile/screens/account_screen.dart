@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -13,7 +12,6 @@ import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart'
 import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 
@@ -174,14 +172,14 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                               //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
                               // copyToClipboard(gPlayState.toString(), context);
 
-                              late final String res;
-                              try {
-                                res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
-                              } catch (e) {
-                                res = e.toString();
-                              }
-                              copyToClipboard(res, context);
-                              eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
+                              // late final String res;
+                              // try {
+                              //   res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
+                              // } catch (e) {
+                              //   res = e.toString();
+                              // }
+                              // copyToClipboard(res, context);
+                              // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
                             },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
