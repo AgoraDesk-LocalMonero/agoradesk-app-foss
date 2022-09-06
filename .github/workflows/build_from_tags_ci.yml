@@ -27,8 +27,8 @@ jobs:
 
       - name: Decoding android/key.properties
         run: |
-        echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
-        gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > app/agoradesk-keystore.jks
+          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
+          gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > app/agoradesk-keystore.jks
 
       - name: Pub Get Packages
         run: flutter pub get
