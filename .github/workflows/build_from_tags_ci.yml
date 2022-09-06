@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
-          gpg --output agoradesk-keystore.jks --decrypt release.keystore.asc
+          gpg --dry-run --passwd echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --output agoradesk-keystore.jks --decrypt release.keystore.asc
 
       - uses: actions/setup-java@v1
         with:
