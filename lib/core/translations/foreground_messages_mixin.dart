@@ -1,8 +1,45 @@
+import 'dart:developer';
+import 'dart:io';
+import 'dart:math' as math;
+
+import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
+import 'package:agoradesk/main.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 
 mixin ForegroundMessagesMixin {
+  Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+    try {
+      bool googleAvailable = false;
+      if (!Platform.isIOS) {
+        googleAvailable = await checkGoogleAvailable();
+      }
+      if (googleAvailable || Platform.isIOS) {
+        await SecureStorage.ensureInitialized();
+        final SecureStorage _secureStorage = SecureStorage();
+        final l = await _secureStorage.read(SecureStorageKey.locale);
+        final String langCode = l ?? Platform.localeName.substring(0, 2);
+        final PushModel push = PushModel.fromJson(message.data);
+        final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+        await AwesomeNotifications().createNotification(
+          content: NotificationContent(
+            id: math.Random().nextInt(10000000),
+            channelKey: kNotificationsChannel,
+            title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+            body: translatedNotificationText(push, langCode),
+            notificationLayout: NotificationLayout.Default,
+            payload: payload,
+          ),
+        );
+      }
+    } catch (e) {
+      log('++++_firebaseMessagingBackgroundHandler error $e');
+    }
+  }
+
   List<String> getChannelNameDescription(String langCode) {
     // final UserLocalSettings userLocalSettings = ObjectBox.s.box<UserLocalSettings>().getAll()[0];
 
