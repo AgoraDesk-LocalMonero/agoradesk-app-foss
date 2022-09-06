@@ -11,7 +11,6 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/features/profile/models/email_view_model.dart';
 import 'package:agoradesk/features/profile/screens/widgets/enable_disable_line_surface5.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +37,7 @@ class EmailScreen extends StatelessWidget with UrlMixin {
           return KeyboardDismissOnTap(
             child: Scaffold(
               appBar: AgoraAppBar(
-                title: I18n.of(context)!.settings250Sbtab250Sbchange8722Sbemail8722Sbshort,
+                title: context.intl.settings250Sbtab250Sbchange8722Sbemail8722Sbshort,
               ),
               body: SafeArea(
                 child: Padding(
@@ -52,7 +51,7 @@ class EmailScreen extends StatelessWidget with UrlMixin {
                           _buildConfirmationTile(context, model),
                           const SizedBox(height: 8),
                           Text(
-                            I18n.of(context)!.current_email,
+                            context.intl.current_email,
                             style: context.txtBodySmallN60,
                           ),
                           const SizedBox(height: 8),
@@ -81,15 +80,17 @@ class EmailScreen extends StatelessWidget with UrlMixin {
     if (model.loading) {
       return const CupertinoActivityIndicator();
     }
-
     if (model.userSettingsModel.email != null) {
+      if (model.userSettingsModel.emailVerified == true) {
+        return const SizedBox();
+      }
       return ContainerInfoRadius12Border1(
         child: Padding(
           padding: const EdgeInsets.all(12),
           child: Column(
             children: [
               Text(
-                I18n.of(context)!.email_confirmation_we_ve_sent_an_email(model.userSettingsModel.email!),
+                context.intl.email_confirmation_we_ve_sent_an_email(model.userSettingsModel.email!),
                 style: context.txtBodySmallN80,
               ),
               const SizedBox(height: 6),
@@ -97,11 +98,11 @@ class EmailScreen extends StatelessWidget with UrlMixin {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: I18n.of(context)!.email_not_received_content + ' ',
+                      text: context.intl.email_not_received_content + ' ',
                       style: context.txtBodySmallN80,
                     ),
                     TextSpan(
-                      text: I18n.of(context)!.email_not_received_link,
+                      text: context.intl.email_not_received_link,
                       style: context.txtBodySmallP70P40,
                       recognizer: TapGestureRecognizer()..onTap = () => model.sendConfirmationEmail(),
                     ),
@@ -165,7 +166,7 @@ class EmailScreen extends StatelessWidget with UrlMixin {
         TextField(
           controller: model.ctrlEmail,
           decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                hintText: I18n.of(context)!.settings250Sbchange8722Sbemail250Sbnew,
+                hintText: context.intl.settings250Sbchange8722Sbemail250Sbnew,
               ),
         ),
         const SizedBox(height: 2),
