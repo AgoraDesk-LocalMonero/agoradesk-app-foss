@@ -16,7 +16,11 @@ jobs:
     name: Build APK & AppBundle
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        run: |
+          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
+          gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > agoradesk-keystore.jks
+
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
@@ -24,11 +28,6 @@ jobs:
         with:
           channel: 'stable'
       - run: flutter pub get
-
-      - name: Decoding android/key.properties
-        run: |
-          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
-          gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > agoradesk-keystore.jks
 
       - name: Build APK
         run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
