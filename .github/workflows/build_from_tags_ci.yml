@@ -27,7 +27,7 @@ jobs:
 
       - name: Decoding android/key.properties
         run: |
-          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > app/agoradesk-keystore.jks
+          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > agoradesk-keystore.jks
           gpd -d --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" --batch release.keystore.asc > app/agoradesk-keystore.jks
 
       - name: Build APK
