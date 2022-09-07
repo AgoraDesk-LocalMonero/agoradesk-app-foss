@@ -35,6 +35,9 @@ jobs:
           channel: 'stable'
       - run: flutter pub get
 
+  - name: Build-runner
+      run: flutter packages pub run build_runner build --delete-conflicting-outputs
+
       - name: Build APK
         run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
