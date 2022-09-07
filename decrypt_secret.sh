@@ -6,4 +6,7 @@
 # --yes to assume "yes" for questions
 #gpg --quiet --batch --yes --decrypt --passphrase="$RELEASE_AGORADESK_KEYSTORE_SECRET" \
 #--output $HOME/my_secret.json $RELEASE_AGORADESK_KEYSTORE
-gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET --output $HOME/my_secret.json $RELEASE_AGORADESK_KEYSTORE
+
+#gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET --output $HOME/my_secret.json $RELEASE_AGORADESK_KEYSTORE
+
+echo $RELEASE_AGORADESK_KEYSTORE_SECRET | gpg --batch --yes --passphrase-fd 0 $RELEASE_AGORADESK_KEYSTORE
