@@ -37,7 +37,7 @@ jobs:
 
       - name: Build APK
         run: build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
-#
+
 ##      - name: Build APPBUNDLE
 ##        run: flutter build appbundle --release
 #
