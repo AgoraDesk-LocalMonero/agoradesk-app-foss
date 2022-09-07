@@ -17,15 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-#      - run: |
-#          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
-#          echo "--passphrase" echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" | gpg --batch --yes --passphrase-fd 0 release.keystore.asc
+      - run: |
+          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > keystoreIn.jks
+          gpg -d --batch --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" keystoreIn.jks > releaseOut.jks
 
-      - name: Decrypt secret
-        run: ./decrypt_secret.sh
-        env:
-          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
-          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
+#      - name: Decrypt secret
+#        run: ./decrypt_secret.sh
+#        env:
+#          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
+#          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
 
 #      - uses: actions/setup-java@v1
 #        with:
