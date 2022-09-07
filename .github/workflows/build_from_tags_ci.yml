@@ -25,6 +25,7 @@ jobs:
         run: ./decrypt_secret.sh
         env:
           RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
+          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
 
       - uses: actions/setup-java@v1
         with:
