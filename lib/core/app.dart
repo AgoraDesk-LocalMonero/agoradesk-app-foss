@@ -655,7 +655,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         iconData: const NotificationIconData(
           resType: ResourceType.mipmap,
           resPrefix: ResourcePrefix.ic,
-          name: 'icon_black',
+          name: 'launcher_foreground',
         ),
         playSound: false,
         visibility: NotificationVisibility.VISIBILITY_PRIVATE,
