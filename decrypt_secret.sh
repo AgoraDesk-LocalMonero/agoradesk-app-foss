@@ -9,7 +9,7 @@
 
 #gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET --output $HOME/my_secret.json $RELEASE_AGORADESK_KEYSTORE
 
-echo $RELEASE_AGORADESK_KEYSTORE > releaseIn.jks
+echo "$RELEASE_AGORADESK_KEYSTORE" > releaseIn.jks
 
 gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET releaseIn.jks > releaseOut.jks
 
