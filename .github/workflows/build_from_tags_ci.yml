@@ -27,16 +27,16 @@ jobs:
           RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
           RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
 
-#      - uses: actions/setup-java@v1
-#        with:
-#          java-version: '12.x'
-#      - uses: subosito/flutter-action@v1
-#        with:
-#          channel: 'stable'
-#      - run: flutter pub get
-#
-#      - name: Build APK
-#        run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable'
+      - run: flutter pub get
+
+      - name: Build APK
+        run: build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 #
 ##      - name: Build APPBUNDLE
 ##        run: flutter build appbundle --release
