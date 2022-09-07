@@ -22,7 +22,7 @@ jobs:
 #          gpg -d --batch --passphrase echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" keystoreIn.jks > releaseOut.jks
 
       - name: Decrypt secret
-        run: ./decrypt_secret.sh
+        run: ./decrypt_secret.sh > ./android/app/agoradesk-keystore.jks
         env:
           RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
           RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
