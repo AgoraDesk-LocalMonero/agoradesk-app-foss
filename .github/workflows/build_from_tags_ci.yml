@@ -22,7 +22,7 @@ jobs:
 #          echo "--passphrase" echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" | gpg --batch --yes --passphrase-fd 0 release.keystore.asc
 
       - name: Decrypt secret
-        run: ./decrypt_secret.sh
+        run: decrypt_secret.sh
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
 
