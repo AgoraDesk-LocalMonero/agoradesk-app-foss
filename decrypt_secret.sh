@@ -4,7 +4,7 @@ echo $(ls)
 
 echo "$RELEASE_AGORADESK_KEYSTORE" > keystoreIn.jks
 
-gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET keystoreIn.jks > releaseOut.jks
+gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET keystoreIn.jks > $GITHUB_REPOSITORY/releaseOut.jks
 
 # --batch to prevent interactive command
 # --yes to assume "yes" for questions
