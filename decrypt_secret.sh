@@ -6,4 +6,4 @@ mkdir $HOME/secrets
 # --yes to assume "yes" for questions
 echo "$HOME"
 gpg --quiet --batch --yes --decrypt --passphrase="$RELEASE_AGORADESK_KEYSTORE_SECRET" \
---output $HOME/my_secret.json $RELEASE_AGORADESK_KEYSTORE
+--output my_secret.jks $RELEASE_AGORADESK_KEYSTORE
