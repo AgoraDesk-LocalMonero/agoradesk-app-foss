@@ -36,7 +36,7 @@ jobs:
       - run: flutter pub get
 
       - name: Build APK
-        run: build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+        run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 ##      - name: Build APPBUNDLE
 ##        run: flutter build appbundle --release
