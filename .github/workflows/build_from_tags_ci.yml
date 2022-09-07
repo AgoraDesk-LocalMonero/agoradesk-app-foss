@@ -16,10 +16,15 @@ jobs:
     name: Build APK & AppBundle
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
-          echo "--passphrase" echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" | gpg --batch --yes --passphrase-fd 0 release.keystore.asc
+      - uses: actions/checkout@v3
+#      - run: |
+#          echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE }}" > release.keystore.asc
+#          echo "--passphrase" echo "${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}" | gpg --batch --yes --passphrase-fd 0 release.keystore.asc
+
+      - name: Decrypt secret
+        run: ./decrypt_secret.sh
+        env:
+          LARGE_SECRET_PASSPHRASE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
 
       - uses: actions/setup-java@v1
         with:
