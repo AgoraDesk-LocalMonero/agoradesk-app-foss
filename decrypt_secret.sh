@@ -11,6 +11,6 @@
 
 echo $secrets.RELEASE_AGORADESK_KEYSTORE > release.keystore
 
-gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET --output $HOME/my_secret.json release77.keystore
+gpg -d --batch --passphrase $RELEASE_AGORADESK_KEYSTORE_SECRET release.keystore
 
 #echo $RELEASE_AGORADESK_KEYSTORE_SECRET | gpg --batch --yes --passphrase-fd 0 release.keystore
