@@ -1,7 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -11,7 +10,6 @@ import 'package:agoradesk/core/widgets/branded/agora_loading_indicator.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/box_surface5_copy_on_title_readmore.dart';
-import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_text_p70.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_info_s4_with_close_child.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
@@ -27,11 +25,10 @@ import 'package:agoradesk/features/market/screens/widgets/text_with_dot.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:agoradesk/router.gr.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin, UrlMixin {
   MarketAdInfoScreen({
@@ -87,23 +84,17 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
                                   text: model.ad!.msg,
                                 ),
                                 const SizedBox(height: 14),
-                                ButtonIconTextP70(
-                                  text: context.intl.report_this_ad,
-                                  iconData: AgoraFont.alert_circle,
-                                  onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
-                                ),
-                                const SizedBox(height: 14),
-                                model.isGuestMode
-                                    ? ButtonFilledP80(
-                                        onPressed: () => AutoRouter.of(context).push(LoginRoute(displaySkip: false)),
-                                        title: I18n.of(context)!.log_in_to_start_trading,
-                                      )
-                                    : ButtonFilledP80(
-                                        onPressed: () => AutoRouter.of(context).push(InitiateTradeRoute(model: model)),
-                                        title: sellPublicTypes.contains(model.ad!.tradeType)
-                                            ? I18n.of(context)!.ad8722Sblisting8722Sbtable250Sbsell8722Sbbtn
-                                            : I18n.of(context)!.ad8722Sblisting8722Sbtable250Sbbuy8722Sbbtn,
+                                model.isAdOwner
+                                    ? const SizedBox()
+                                    : Padding(
+                                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 14),
+                                        child: ButtonIconTextP70(
+                                          text: context.intl.report_this_ad,
+                                          iconData: AgoraFont.alert_circle,
+                                          onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
+                                        ),
                                       ),
+                                model.actionButton(context),
                                 const SizedBox(height: 14),
                               ],
                             ),

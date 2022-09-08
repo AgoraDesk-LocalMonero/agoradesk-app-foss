@@ -2,11 +2,11 @@ import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
+import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/network_fees.dart';
@@ -16,9 +16,11 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
+import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:vm/vm.dart';
 
 const _kDebounceTag = '_kDebounceTag';
 
@@ -77,6 +79,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
   String address = '';
 
   late final bool isSell;
+  late final bool isAdOwner;
 
   bool get isXmr => ad?.asset == Asset.XMR;
 
@@ -134,6 +137,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
       if (res.isRight) {
         ad = res.right;
         isSell = sellPublicTypes.contains(ad!.tradeType);
+        isAdOwner = ad!.profile == null;
         _asset = ad!.asset!;
         if (!isGuestMode) {
           await _getWalletsBalance();
@@ -145,6 +149,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
     } else {
       ad = adModel;
       isSell = sellPublicTypes.contains(ad!.tradeType);
+      isAdOwner = ad!.profile == null;
       _asset = ad!.asset!;
       if (!isGuestMode) {
         await _getWalletsBalance();
@@ -182,6 +187,29 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
       await getBtcFees(address: address);
     }
     notifyListeners();
+  }
+
+  Widget actionButton(BuildContext context) {
+    if (isGuestMode) {
+      return ButtonFilledP80(
+        onPressed: () => AutoRouter.of(context).push(LoginRoute(displaySkip: false)),
+        title: context.intl.log_in_to_start_trading,
+      );
+    }
+
+    if (isAdOwner) {
+      return ButtonFilledP80(
+        onPressed: () => context.pushRoute(AdEditRoute(ad: ad!)),
+        title: context.intl.ad8722Sbpage250Sbedit8722Sbad8722Sbbtn,
+      );
+    }
+
+    return ButtonFilledP80(
+      onPressed: () => context.pushRoute(InitiateTradeRoute(model: this)),
+      title: sellPublicTypes.contains(ad!.tradeType)
+          ? context.intl.ad8722Sblisting8722Sbtable250Sbsell8722Sbbtn
+          : context.intl.ad8722Sblisting8722Sbtable250Sbbuy8722Sbbtn,
+    );
   }
 
   Future<void> _getWalletsBalance() async {
