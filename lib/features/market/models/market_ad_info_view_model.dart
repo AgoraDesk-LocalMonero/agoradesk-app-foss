@@ -2,7 +2,7 @@ import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
@@ -22,7 +22,7 @@ import 'package:flutter/cupertino.dart';
 
 const _kDebounceTag = '_kDebounceTag';
 
-class MarketAdInfoViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, StringMixin {
+class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, StringMixin {
   MarketAdInfoViewModel({
     required TradeRepository tradeRepository,
     required WalletService walletService,

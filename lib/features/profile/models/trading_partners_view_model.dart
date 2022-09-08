@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class TradingPartnersViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin {
+class TradingPartnersViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   TradingPartnersViewModel({
     required UserService userService,
   }) : _userService = userService;

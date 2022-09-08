@@ -5,7 +5,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -40,7 +40,7 @@ import 'package:image_picker/image_picker.dart';
 const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
 
-class TradeViewModel extends BaseViewModel
+class TradeViewModel extends ViewModel
     with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin {
   TradeViewModel({
     required TradeRepository tradeRepository,

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/events.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -10,8 +9,9 @@ import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class ChangePasswordViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin {
+class ChangePasswordViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   ChangePasswordViewModel({
     required UserService userService,
     required AuthService authService,

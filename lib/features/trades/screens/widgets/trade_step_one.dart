@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';

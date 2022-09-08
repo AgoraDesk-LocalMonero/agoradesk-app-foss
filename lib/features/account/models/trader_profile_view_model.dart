@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
@@ -8,7 +8,7 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 
-class TraderProfileViewModel extends BaseViewModel with ErrorParseMixin {
+class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
   TraderProfileViewModel({
     required AccountService accountService,
     required AdsRepository adsRepository,

@@ -2,7 +2,7 @@ import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -30,7 +30,7 @@ import 'package:overlay_support/overlay_support.dart';
 
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
 
-class AdsViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin, ValidatorMixin {
+class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, ValidatorMixin {
   AdsViewModel({
     required UserService userService,
     required AdsRepository adsRepository,

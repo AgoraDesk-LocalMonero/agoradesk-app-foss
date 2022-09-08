@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -11,7 +11,7 @@ import 'package:agoradesk/features/wallet/data/models/transaction_types.dart';
 import 'package:agoradesk/features/wallet/data/models/transactions_request_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 
-class AffiliateProgramViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin {
+class AffiliateProgramViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   AffiliateProgramViewModel({
     required WalletService walletService,
     required UserService userService,

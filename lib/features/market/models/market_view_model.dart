@@ -1,7 +1,6 @@
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
@@ -19,8 +18,9 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class MarketViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin {
+class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin {
   MarketViewModel({
     required AdsRepository adsRepository,
     required PlacesSearch placesSearch,

@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:vm/vm.dart';
 
-class WelcomeViewModel extends BaseViewModel {
+class WelcomeViewModel extends ViewModel {
   late final PageController pageController = PageController();
   double page = 0;
   int slidesCount = 0;

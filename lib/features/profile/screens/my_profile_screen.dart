@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';

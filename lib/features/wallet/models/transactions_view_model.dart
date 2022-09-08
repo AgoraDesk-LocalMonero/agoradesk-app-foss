@@ -1,8 +1,8 @@
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
+import 'package:vm/vm.dart';
 
-class TransactionsViewModel extends BaseViewModel {
+class TransactionsViewModel extends ViewModel {
   TransactionsViewModel({
     required this.transactions,
   });

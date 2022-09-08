@@ -1,6 +1,6 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';

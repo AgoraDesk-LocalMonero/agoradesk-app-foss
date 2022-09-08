@@ -1,14 +1,14 @@
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/market_data.dart';
 import 'package:agoradesk/features/ads/data/models/pair_group.dart';
 import 'package:agoradesk/features/ads/screens/widgets/expandable_line.dart';
 import 'package:agoradesk/features/ads/screens/widgets/formula_action_line.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 const _kDefaultLocalCurrency = 'usdeur';
 
-class FormulaControlsViewModel extends BaseViewModel with ValidatorMixin {
+class FormulaControlsViewModel extends ViewModel with ValidatorMixin {
   // FormulaControlsViewModel({
   //   required AdsRepository adsRepository,
   // }) : _adsRepository = adsRepository;

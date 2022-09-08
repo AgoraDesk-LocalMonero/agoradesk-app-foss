@@ -6,7 +6,6 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
@@ -25,8 +24,9 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:vm/vm.dart';
 
-class TradesViewModel extends BaseViewModel with ErrorParseMixin {
+class TradesViewModel extends ViewModel with ErrorParseMixin {
   TradesViewModel({
     required TradeRepository tradeRepository,
     required AuthService authService,

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -13,7 +13,7 @@ import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-class Enable2faViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, UrlMixin {
+class Enable2faViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, UrlMixin {
   Enable2faViewModel({
     required UserService userService,
     required AuthService authService,
