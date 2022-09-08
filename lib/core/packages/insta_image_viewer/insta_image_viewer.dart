@@ -120,40 +120,34 @@
 //   }
 //
 //   void _dragUpdate(DragUpdateDetails details) {
-//     if (!widget.disableSwipeToDismiss) {
-//       setState(() {
-//         _currentPositionY = details.globalPosition.dy;
-//         _positionYDelta = _currentPositionY! - _initialPositionY!;
-//         setOpacity();
-//       });
-//     }
+//     setState(() {
+//       _currentPositionY = details.globalPosition.dy;
+//       _positionYDelta = _currentPositionY! - _initialPositionY!;
+//       setOpacity();
+//     });
 //   }
 //
 //   void _dragStart(DragStartDetails details) {
-//     if (!widget.disableSwipeToDismiss) {
-//       setState(() {
-//         _initialPositionY = details.globalPosition.dy;
-//       });
-//     }
+//     setState(() {
+//       _initialPositionY = details.globalPosition.dy;
+//     });
 //   }
 //
 //   _dragEnd(DragEndDetails details) {
-//     if (!widget.disableSwipeToDismiss) {
-//       if (_positionYDelta > _disposeLimit || _positionYDelta < -_disposeLimit) {
-//         Navigator.of(context).pop();
-//       } else {
-//         setState(() {
-//           _animationDuration = _kRouteDuration;
-//           _opacity = 1;
-//           _positionYDelta = 0;
-//         });
+//     if (_positionYDelta > _disposeLimit || _positionYDelta < -_disposeLimit) {
+//       Navigator.of(context).pop();
+//     } else {
+//       setState(() {
+//         _animationDuration = _kRouteDuration;
+//         _opacity = 1;
+//         _positionYDelta = 0;
+//       });
 //
-//         Future.delayed(_animationDuration).then((_) {
-//           setState(() {
-//             _animationDuration = Duration.zero;
-//           });
+//       Future.delayed(_animationDuration).then((_) {
+//         setState(() {
+//           _animationDuration = Duration.zero;
 //         });
-//       }
+//       });
 //     }
 //   }
 //
@@ -200,18 +194,26 @@
 //                 child: InteractiveViewer(
 //                   boundaryMargin: const EdgeInsets.all(double.infinity),
 //                   panEnabled: false,
-//                   child: KeymotionGestureDetector(
-//                     onStart: (details) => _dragStart(details),
-//                     onUpdate: (details) => _dragUpdate(details),
-//                     onEnd: (details) => _dragEnd(details),
-//                     child: ClipRRect(
-//                       borderRadius: const BorderRadius.all(
-//                         Radius.circular(40),
-//                       ),
-//                       clipBehavior: Clip.hardEdge,
-//                       child: widget.child,
-//                     ),
-//                   ),
+//                   child: widget.disableSwipeToDismiss
+//                       ? ClipRRect(
+//                           borderRadius: const BorderRadius.all(
+//                             Radius.circular(40),
+//                           ),
+//                           clipBehavior: Clip.hardEdge,
+//                           child: widget.child,
+//                         )
+//                       : KeymotionGestureDetector(
+//                           onStart: (details) => _dragStart(details),
+//                           onUpdate: (details) => _dragUpdate(details),
+//                           onEnd: (details) => _dragEnd(details),
+//                           child: ClipRRect(
+//                             borderRadius: const BorderRadius.all(
+//                               Radius.circular(40),
+//                             ),
+//                             clipBehavior: Clip.hardEdge,
+//                             child: widget.child,
+//                           ),
+//                         ),
 //                 ),
 //               ),
 //               Align(
