@@ -527,10 +527,10 @@ packages:
   flutter_foreground_task:
     dependency: "direct main"
     description:
-      name: flutter_foreground_task
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.7.3"
+      path: "../flutter_foreground_task"
+      relative: true
+    source: path
+    version: "3.8.2"
   flutter_highlight:
     dependency: transitive
     description:

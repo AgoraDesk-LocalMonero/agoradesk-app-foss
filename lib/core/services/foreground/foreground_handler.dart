@@ -6,6 +6,7 @@ import 'dart:math';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/main.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
@@ -13,17 +14,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:http/http.dart' as http;
 
-class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin {
+class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMixin {
   SendPort? _sendPort;
   int _eventCount = 0;
 
   @override
   Future<void> onStart(DateTime timestamp, SendPort? sendPort) async {
     _sendPort = sendPort;
-
-    // You can use the getData function to get the stored data.
-    // final customData = await FlutterForegroundTask.getData<String>(key: 'customData');
-    // print('customData: $customData');
   }
 
   @override
@@ -96,7 +93,6 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin {
 
   @override
   Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {
-    // You can use the clearAllData function to clear all the stored data.
     await FlutterForegroundTask.clearAllData();
   }
 
@@ -116,7 +112,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin {
     // Note that the app will only route to "/resume-route" when it is exited so
     // it will usually be necessary to send a message through the send port to
     // signal it to restore state when the app is already started.
-    FlutterForegroundTask.launchApp();
-    _sendPort?.send('onNotificationPressed');
+    // FlutterForegroundTask.wakeUpScreen();
+    // _sendPort?.send('onNotificationPressed');
   }
 }

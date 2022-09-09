@@ -41,8 +41,6 @@ mixin ForegroundMessagesMixin {
   }
 
   List<String> getChannelNameDescription(String langCode) {
-    // final UserLocalSettings userLocalSettings = ObjectBox.s.box<UserLocalSettings>().getAll()[0];
-
     try {
       return [_channelDescriptionMap[langCode]['name'], _channelDescriptionMap[langCode]['description']];
     } catch (e) {
@@ -52,8 +50,6 @@ mixin ForegroundMessagesMixin {
   }
 
   String translatedNotificationText(PushModel push, String langCode) {
-    // final UserLocalSettings userLocalSettings = ObjectBox.s.box<UserLocalSettings>().getAll()[0];
-    // final langCode = userLocalSettings.locale ?? Platform.localeName.substring(0, 2);
     final NotificationMessageType type = push.type;
 
     if (push.type == NotificationMessageType.MESSAGE) {
@@ -68,8 +64,6 @@ mixin ForegroundMessagesMixin {
   }
 
   static String translatedNotificationTitle(PushModel push, String langCode) {
-    // final UserLocalSettings userLocalSettings = ObjectBox.s.box<UserLocalSettings>().getAll()[0];
-    // final langCode = userLocalSettings.locale ?? Platform.localeName.substring(0, 2);
     final NotificationMessageType type = push.type;
 
     try {
@@ -199,37 +193,35 @@ mixin ForegroundMessagesMixin {
   final Map<String, dynamic> _channelDescriptionMap = {
     "en": {
       "name": "Notifications Service",
-      "description":
-          "Your phone doesn't have Google Services installed, so we're listening for your notifications using this service. It's safe to disable this notification in the settings to hide this bubble. Please make sure to launch the app after rebooting to keep receiving notifications.",
+      "description": "Checking for notifications. Tap to read more.",
     },
     "es": {
       "name": "Servicio de Notificaciones",
-      "description":
-          "Su teléfono no tiene instalados los Servicios de Google, por lo que estamos escuchando sus notificaciones usando este servicio. Es seguro deshabilitar esta notificación en la configuración para ocultar esta burbuja. Asegúrese de iniciar la aplicación después de reiniciar para seguir recibiendo notificaciones.",
+      "description": "Comprobación de notificaciones. Toque para leer más.",
     },
     "it": {
       "name": "Servizio Notifiche",
-      "description":
-          "Sul tuo telefono non sono installati i servizi Google, quindi stiamo ascoltando le tue notifiche utilizzando questo servizio. È sicuro disabilitare questa notifica nelle impostazioni per nascondere questo fumetto. Assicurati di avviare l'app dopo il riavvio per continuare a ricevere le notifiche.",
+      "description": "Controllo delle notifiche. Tocca per saperne di più.",
     },
     "ko": {
       "name": "알림 서비스",
-      "description":
-          "휴대전화에 Google 서비스가 설치되어 있지 않으므로 이 서비스를 사용하여 알림을 수신하고 있습니다. 이 말풍선을 숨기려면 설정에서 이 알림을 비활성화하는 것이 안전합니다. 알림을 계속 받으려면 재부팅 후 앱을 실행해야 합니다.",
+      "description": "알림을 확인 중입니다. 더 읽으려면 탭하세요.",
     },
     "pt": {
+      "name": "Serviço de notificações",
+      "description": "Verificando as notificações. Toque para ler mais.",
+    },
+    "pl": {
       "name": "Usługa powiadomień",
-      "description":
-          "Twój telefon nie ma zainstalowanych usług Google, więc oczekujemy na Twoje powiadomienia, korzystając z tej usługi. Możesz bezpiecznie wyłączyć to powiadomienie w ustawieniach, aby ukryć ten dymek. Pamiętaj, aby uruchomić aplikację po ponownym uruchomieniu, aby otrzymywać powiadomienia.",
+      "description": "Sprawdzam powiadomienia. Dotknij, aby przeczytać więcej.",
     },
     "ru": {
       "name": "Служба уведомлений",
-      "description":
-          "На вашем телефоне не установлены службы Google, поэтому мы прослушиваем ваши уведомления с помощью этой службы. Можно безопасно отключить это уведомление в настройках, чтобы скрыть это всплывающее окно. Не забудьте запустить приложение после перезагрузки, чтобы продолжать получать уведомления.",
+      "description": "Проверка уведомлений. Нажмите, чтобы узнать больше.",
     },
     "zh": {
       "name": "通知服务",
-      "description": "您的手机未安装 Google 服务，因此我们正在使用此服务收听您的通知。 在设置中禁用此通知以隐藏此气泡是安全的。 请确保在重新启动后启动应用程序以继续接收通知。",
+      "description": "检查通知。 点击阅读更多。",
     },
   };
 }

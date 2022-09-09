@@ -12,6 +12,7 @@ import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/foreground/foreground_handler.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -37,7 +38,6 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/data/services/trade_service.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -673,16 +673,17 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   Future<bool> _startForegroundTask() async {
     ReceivePort? receivePort;
     if (await FlutterForegroundTask.isRunningService) {
-      receivePort = await FlutterForegroundTask.restartService();
+      await FlutterForegroundTask.restartService();
     } else {
       final l = await _secureStorage.read(SecureStorageKey.locale);
       final langCode = l ?? Platform.localeName.substring(0, 2);
-      receivePort = await FlutterForegroundTask.startService(
-        notificationTitle: getChannelNameDescription(langCode)[0],
+      await FlutterForegroundTask.startService(
+        notificationTitle: GetIt.I<AppParameters>().appName + ' ' + getChannelNameDescription(langCode)[0],
         notificationText: getChannelNameDescription(langCode)[1],
         callback: startCallback,
       );
     }
+    receivePort = await FlutterForegroundTask.receivePort;
     return _registerReceivePort(receivePort);
   }
 
@@ -715,4 +716,11 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   }
 
   T? _ambiguate<T>(T? value) => value;
+}
+
+///
+/// Foreground Service. The callback function should always be a top-level function.
+///
+void startCallback() {
+  FlutterForegroundTask.setTaskHandler(ForegroundHandler());
 }
