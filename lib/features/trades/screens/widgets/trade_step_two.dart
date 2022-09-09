@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_box_open_close_line_s5_s3.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_p80.dart';
@@ -20,7 +21,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
 
-class TradeStepTwo extends StatelessWidget with DateMixin {
+class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
   const TradeStepTwo({
     Key? key,
     required this.model,
@@ -354,11 +355,12 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
                                 color: Theme.of(context).colorScheme.p80P70,
                               ),
                               opened: false,
-                              content: Text(
+                              content: SelectableText(
                                 model.tradeForScreen.buyerSettlementAddress!,
                                 style: Theme.of(context).textTheme.bodyTextXSmall.copyWith(
                                       color: Theme.of(context).colorScheme.n80N30,
                                     ),
+                                onTap: () => copyToClipboard(model.tradeForScreen.buyerSettlementAddress!, context),
                               ),
                               description: context.intl.trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning,
                             ),
