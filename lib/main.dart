@@ -48,7 +48,6 @@ void main() async {
   await ObjectBox.create();
   await SecureStorage.ensureInitialized();
   await findSystemLocale();
-
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     if (kDebugMode) DeviceOrientation.portraitDown,
@@ -90,7 +89,6 @@ void main() async {
     runApp(const App());
     return;
   }
-
   SentryFlutter.init(
     (options) {
       options
