@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -13,8 +12,9 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class MyProfileViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin {
+class MyProfileViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   MyProfileViewModel({
     required AccountService accountService,
     required AuthService authService,

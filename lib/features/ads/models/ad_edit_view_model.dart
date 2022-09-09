@@ -1,4 +1,4 @@
-// import 'package:agoradesk/core/mvvm/base_view_model.dart';
+// import 'package:vm/vm.dart';
 // import 'package:agoradesk/core/object_box.dart';
 // import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 // import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -12,7 +12,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:overlay_support/overlay_support.dart';
 //
-// class AdEditViewModel extends BaseViewModel {
+// class AdEditViewModel extends ViewModel {
 //   AdEditViewModel({
 //     required AdsRepository adsRepository,
 //     required AccountService accountService,

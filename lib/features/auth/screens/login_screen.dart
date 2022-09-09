@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';

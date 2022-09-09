@@ -1,4 +1,3 @@
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
@@ -6,8 +5,9 @@ import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/models/incoming_deposit_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
+import 'package:vm/vm.dart';
 
-class ReceiveAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
+class ReceiveAssetViewModel extends ViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
   ReceiveAssetViewModel({
     required this.address,
     required this.asset,

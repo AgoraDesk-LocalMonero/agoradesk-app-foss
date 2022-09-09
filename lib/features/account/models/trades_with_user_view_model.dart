@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -16,8 +15,9 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:vm/vm.dart';
 
-class TradesWithUserViewModel extends BaseViewModel with ErrorParseMixin {
+class TradesWithUserViewModel extends ViewModel with ErrorParseMixin {
   TradesWithUserViewModel({
     required this.username,
     required AccountService accountService,

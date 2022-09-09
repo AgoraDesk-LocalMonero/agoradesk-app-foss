@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
@@ -8,8 +7,9 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/dialog_captcha.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:vm/vm.dart';
 
-class LoginViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin {
+class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   LoginViewModel({
     required AuthService authService,
   }) : _authService = authService;

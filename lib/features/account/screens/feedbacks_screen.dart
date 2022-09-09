@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/load_more_widget.dart';

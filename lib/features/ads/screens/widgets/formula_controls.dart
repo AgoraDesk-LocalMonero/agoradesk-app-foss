@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80_radius6.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius4_border1.dart';

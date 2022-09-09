@@ -1,10 +1,10 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
 import 'package:get_it/get_it.dart';
+import 'package:vm/vm.dart';
 
-class TransactionViewModel extends BaseViewModel with StringMixin {
+class TransactionViewModel extends ViewModel with StringMixin {
   TransactionViewModel({
     required this.transaction,
   });

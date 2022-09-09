@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_box_open_close_line_s5_s3.dart';
@@ -19,6 +18,7 @@ import 'package:agoradesk/features/trades/screens/widgets/finalize_trade_dialog.
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class TradeStepTwo extends StatelessWidget with DateMixin {
   const TradeStepTwo({
@@ -36,7 +36,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
         initOnce: true,
         builder: (context, model, child) {
           if (model.isLocalTrade) {
-            return model.isSeller
+            return model.tradeForScreen.isSelling!
                 ? _buildLocalSecondStepSellerView(model, context)
                 : _buildLocalSecondStepBuyerView(model, context);
           }
@@ -44,7 +44,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin {
           if (model.tradeStatus.index > 4 && model.tradeStatus != TradeStatus.disputed) {
             return const SizedBox();
           }
-          return model.isSeller
+          return model.tradeForScreen.isSelling!
               ? _buildSecondStepSellerView(model, context)
               : _buildSecondStepBuyerView(model, context);
         });

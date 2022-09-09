@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';

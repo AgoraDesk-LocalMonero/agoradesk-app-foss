@@ -5,14 +5,12 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/foreground/foreground_handler.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
@@ -128,11 +126,4 @@ Future<bool> checkGoogleAvailable() async {
     return false;
   }
   return true;
-}
-
-///
-/// Foreground Service. The callback function should always be a top-level function.
-///
-void startCallback() {
-  FlutterForegroundTask.setTaskHandler(ForegroundHandler());
 }

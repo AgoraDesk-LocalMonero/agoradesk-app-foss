@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
@@ -36,7 +36,7 @@ const _kDelayAfterPress = Duration(milliseconds: 200);
 const _kDebounceTag = '_kDebounceTag';
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
 
-class AddEditAdViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, CountryInfoMixin {
+class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, CountryInfoMixin {
   AddEditAdViewModel({
     required AdsRepository adsRepository,
     required WalletService walletService,

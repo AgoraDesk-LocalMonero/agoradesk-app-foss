@@ -1,12 +1,12 @@
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/account/models/feedback_view_type.dart';
 import 'package:flutter/material.dart';
 
-class FeedbacksViewModel extends BaseViewModel with ErrorParseMixin {
+class FeedbacksViewModel extends ViewModel with ErrorParseMixin {
   FeedbacksViewModel({
     required AccountService accountService,
     required this.username,

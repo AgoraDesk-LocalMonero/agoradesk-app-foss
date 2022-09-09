@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_link.dart';
 import 'package:agoradesk/features/account/data/models/feedback_type.dart';

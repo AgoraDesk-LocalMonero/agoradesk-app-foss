@@ -1,15 +1,15 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:vm/vm.dart';
 
-class LanguageViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, StringMixin {
+class LanguageViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, StringMixin {
   LanguageViewModel({
     required AppState appState,
   }) : _appState = appState;

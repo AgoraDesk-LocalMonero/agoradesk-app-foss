@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/mvvm/view_model_builder.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -19,6 +18,7 @@ import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/finalize_trade_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
   const TradeStepOne({
@@ -54,8 +54,9 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
           }
           return Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-            child:
-                model.isSeller ? _buildFirstStepSellerView(model, context) : _buildFirstStepBuyerView(model, context),
+            child: model.tradeForScreen.isSelling!
+                ? _buildFirstStepSellerView(model, context)
+                : _buildFirstStepBuyerView(model, context),
           );
         });
   }

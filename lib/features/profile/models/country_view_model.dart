@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:vm/vm.dart';
 
-class CountryViewModel extends BaseViewModel with ErrorParseMixin, CountryInfoMixin {
+class CountryViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin {
   CountryViewModel({
     required AppState appState,
     required AdsRepository adsRepository,

@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -14,8 +13,9 @@ import 'package:agoradesk/features/wallet/data/models/send_asset_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/dialog_fee_changed.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class SendAssetViewModel extends BaseViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
+class SendAssetViewModel extends ViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
   SendAssetViewModel({
     required this.price,
     required this.balance,

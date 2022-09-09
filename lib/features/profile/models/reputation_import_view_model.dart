@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -9,8 +8,9 @@ import 'package:agoradesk/features/profile/data/models/reputation_model.dart';
 import 'package:agoradesk/features/profile/data/models/reputation_platform.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class ReputationImportViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin {
+class ReputationImportViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   ReputationImportViewModel({
     required UserService userService,
   }) : _userService = userService;

@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_markdown_with_close.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class PinCodeViewModel extends BaseViewModel {
+class PinCodeViewModel extends ViewModel {
   PinCodeViewModel({
     required SecureStorage secureStorage,
     required AppState appState,

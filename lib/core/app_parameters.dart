@@ -70,7 +70,9 @@ class AppParameters {
   final int maximumNumberOfAds = 800;
   final String assetSymbol = 'XMR';
 
-  /// Awesome notifications
+  /// Stores links
+  final String appstoreLink = 'https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678';
+  final String googlePlayLink = 'https://play.google.com/store/apps/details?id=com.agoradesk.app';
 
   /// languages
   final Map<String, dynamic> localesInfo = {

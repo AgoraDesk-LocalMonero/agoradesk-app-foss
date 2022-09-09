@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
+import 'package:vm/vm.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -12,7 +12,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TwoFactorAuthViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin {
+class TwoFactorAuthViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin {
   TwoFactorAuthViewModel({
     required UserService userService,
     required AuthService authService,

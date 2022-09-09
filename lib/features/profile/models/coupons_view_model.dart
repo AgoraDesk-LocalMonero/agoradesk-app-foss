@@ -1,14 +1,14 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/mvvm/base_view_model.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/profile/data/models/coupon_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:vm/vm.dart';
 
-class CouponsViewModel extends BaseViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin {
+class CouponsViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin {
   CouponsViewModel({
     required UserService userService,
   }) : _userService = userService;
