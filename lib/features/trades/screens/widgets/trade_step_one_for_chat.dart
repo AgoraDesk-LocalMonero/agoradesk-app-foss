@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -14,6 +13,7 @@ import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin {
   const TradeStepOneForChat({
@@ -44,7 +44,9 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
           if (model.tradeStatus.index > 4 && model.tradeStatus != TradeStatus.disputed) {
             return const SizedBox();
           }
-          return model.isSeller ? _buildFirstStepSellerView(model, context) : _buildFirstStepBuyerView(model, context);
+          return model.tradeForScreen.isSelling!
+              ? _buildFirstStepSellerView(model, context)
+              : _buildFirstStepBuyerView(model, context);
         });
   }
 

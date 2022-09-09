@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -16,6 +15,7 @@ import 'package:agoradesk/features/trades/screens/widgets/chat_bubble_yellow.dar
 import 'package:agoradesk/features/trades/screens/widgets/finalize_trade_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   const ChatBubbleSticky({
@@ -56,7 +56,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (model.tradeStatus == TradeStatus.created) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: model.isSeller
+                child: model.tradeForScreen.isSelling!
                     ? _buildFirstStepSellerView(model, context)
                     : _buildFirstStepBuyerView(model, context),
               );
@@ -65,7 +65,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (model.tradeStatus == TradeStatus.paymentCompleted) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: model.isSeller
+                child: model.tradeForScreen.isSelling!
                     ? _buildSecondStepSeller(model, context)
                     : ChatBubbleYellow(
                         text: context.intl.trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb3,

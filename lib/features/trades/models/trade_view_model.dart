@@ -5,7 +5,6 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -35,6 +34,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:vm/vm.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
@@ -130,7 +130,6 @@ class TradeViewModel extends ViewModel
   bool _messageFieldEnabled = true;
   bool _isTradeLoading = false;
   bool _pollingLoading = false;
-  late final bool isSeller;
   late final bool isLocalTrade;
   late final bool isXmr;
   String _repliedText = '';
@@ -220,10 +219,7 @@ class TradeViewModel extends ViewModel
 
   @override
   void init() {
-    // if (!_initialized) {
-    //   _initialized = true;
     _initialLoading();
-    // }
 
     super.init();
   }
@@ -235,6 +231,7 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
+
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors
     await getAdForLocalTrade();
@@ -250,11 +247,6 @@ class TradeViewModel extends ViewModel
 
     isXmr = tradeForScreen.asset == Asset.XMR;
 
-    if (_userSettings.username == tradeForScreen.seller.username) {
-      isSeller = true;
-    } else {
-      isSeller = false;
-    }
     _setTradeStatus(initial: true);
     _calcMinutesBeforeCancel();
     focusMessage.addListener(() {
@@ -603,7 +595,7 @@ class TradeViewModel extends ViewModel
   Future giveFeedback() async {
     postingFeedback = true;
     final res = await _accountService.giveFeedback(
-      isSeller ? tradeForScreen.buyer.username! : tradeForScreen.seller.username!,
+      tradeForScreen.isSelling! ? tradeForScreen.buyer.username! : tradeForScreen.seller.username!,
       feedbackType!,
       ctrlMessage.text,
     );

@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -19,6 +18,7 @@ import 'package:agoradesk/features/trades/screens/widgets/receipt_feedback_line.
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, ClipboardMixin {
   const TradeStepThree({
@@ -307,7 +307,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
     }
     return Column(
       children: [
-        model.isSeller
+        model.tradeForScreen.isSelling!
             ? Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                 child: BoxSurface5WithCopy(
