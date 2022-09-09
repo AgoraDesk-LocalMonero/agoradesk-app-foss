@@ -1,8 +1,10 @@
 import 'dart:io' show Platform;
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get_it/get_it.dart';
 
 class InstallAgoradeskWidget extends StatelessWidget {
   const InstallAgoradeskWidget({
@@ -42,20 +44,26 @@ class InstallAgoradeskWidget extends StatelessWidget {
           Platform.isAndroid
               ? Row(
                   children: [
-                    SvgPicture.asset(
-                      'assets/images/googleplay.svg',
-                      width: 140,
+                    GestureDetector(
+                      onTap: () => GetIt.I<AppParameters>().googlePlayLink,
+                      child: SvgPicture.asset(
+                        'assets/images/googleplay.svg',
+                        width: 140,
+                      ),
                     ),
-                    const SizedBox(width: 16),
-                    SvgPicture.asset(
-                      'assets/images/fdroid.svg',
-                      width: 160,
-                    ),
+                    // const SizedBox(width: 16),
+                    // SvgPicture.asset(
+                    //   'assets/images/fdroid.svg',
+                    //   width: 160,
+                    // ),
                   ],
                 )
-              : SvgPicture.asset(
-                  'assets/images/appstore.svg',
-                  width: 160,
+              : GestureDetector(
+                  onTap: () => GetIt.I<AppParameters>().appstoreLink,
+                  child: SvgPicture.asset(
+                    'assets/images/appstore.svg',
+                    width: 160,
+                  ),
                 ),
         ],
       ),
