@@ -731,28 +731,28 @@ void startCallback() {
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
-    bool googleAvailable = true;
-    if (Platform.isAndroid) {
-      googleAvailable = await checkGoogleAvailable();
-    }
-    if (googleAvailable || Platform.isIOS) {
-      await SecureStorage.ensureInitialized();
-      final SecureStorage _secureStorage = SecureStorage();
-      final l = await _secureStorage.read(SecureStorageKey.locale);
-      final String langCode = l ?? Platform.localeName.substring(0, 2);
-      final PushModel push = PushModel.fromJson(message.data);
-      final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-      await AwesomeNotifications().createNotification(
-        content: NotificationContent(
-          id: math.Random().nextInt(10000000),
-          channelKey: kNotificationsChannel,
-          title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-          body: push.msg,
-          notificationLayout: NotificationLayout.Default,
-          payload: payload,
-        ),
-      );
-    }
+    // bool googleAvailable = true;
+    // if (Platform.isAndroid) {
+    //   googleAvailable = await checkGoogleAvailable();
+    // }
+    // if (googleAvailable || Platform.isIOS) {
+    await SecureStorage.ensureInitialized();
+    final SecureStorage _secureStorage = SecureStorage();
+    final l = await _secureStorage.read(SecureStorageKey.locale);
+    final String langCode = l ?? Platform.localeName.substring(0, 2);
+    final PushModel push = PushModel.fromJson(message.data);
+    final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+    await AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: math.Random().nextInt(10000000),
+        channelKey: kNotificationsChannel,
+        title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+        body: push.msg,
+        notificationLayout: NotificationLayout.Default,
+        payload: payload,
+      ),
+    );
+    // }
   } catch (e) {
     print('++++_firebaseMessagingBackgroundHandler error $e');
   }

@@ -79,7 +79,7 @@ build-apk-ad:
 
 .PHONY: build-apk-lm
 build-apk-lm:
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.includeFcm=localmonero
+	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
 
 # APK FOSS
 .PHONY: build-foss-apk-all
