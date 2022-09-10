@@ -170,9 +170,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initUploadingStatusListener();
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
-    if (GetIt.I<AppParameters>().includeFcm) {
-      FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-    }
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     super.initState();
   }
 
@@ -731,11 +729,6 @@ void startCallback() {
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
-    // bool googleAvailable = true;
-    // if (Platform.isAndroid) {
-    //   googleAvailable = await checkGoogleAvailable();
-    // }
-    // if (googleAvailable || Platform.isIOS) {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();
     final l = await _secureStorage.read(SecureStorageKey.locale);
@@ -752,7 +745,6 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
         payload: payload,
       ),
     );
-    // }
   } catch (e) {
     print('++++_firebaseMessagingBackgroundHandler error $e');
   }
