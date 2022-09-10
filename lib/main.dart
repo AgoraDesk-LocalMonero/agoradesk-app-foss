@@ -29,7 +29,6 @@ void main() async {
 
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
   final includeFcm = includeFcmString != 'false' || Platform.isIOS;
-
   if (includeFcm) {
     if (flavor == FlavorType.localmonero) {
       await Firebase.initializeApp(
