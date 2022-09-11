@@ -90,7 +90,7 @@ void main() async {
         channelKey: kNotificationsChannel,
         channelName: 'Trades channel',
         channelDescription: 'Notifications about trades',
-        importance: NotificationImportance.Default,
+        importance: NotificationImportance.Max,
         channelShowBadge: true,
       ),
     ],
