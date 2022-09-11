@@ -3,12 +3,12 @@ import 'package:agoradesk/features/account/data/models/notification_message_type
 import 'package:flutter/cupertino.dart';
 
 mixin ForegroundMessagesMixin {
-  List<String> getChannelNameDescription(String langCode) {
+  static List<String> getChannelNameDescription(String langCode) {
     try {
-      return [_channelDescriptionMap[langCode]['name'], _channelDescriptionMap[langCode]['description']];
+      return [channelDescriptionMap[langCode]['name'], channelDescriptionMap[langCode]['description']];
     } catch (e) {
       debugPrint('[getChannelNameDescription error] $e');
-      return [_channelDescriptionMap['en']['name'], _channelDescriptionMap['en']['description']];
+      return [channelDescriptionMap['en']['name'], channelDescriptionMap['en']['description']];
     }
   }
 
@@ -19,9 +19,9 @@ mixin ForegroundMessagesMixin {
       return push.msg ?? ' ';
     } else {
       try {
-        return _replaceStringParameters(_notificationTextMap[langCode][type.name], push);
+        return replaceStringParameters(_notificationTextMap[langCode][type.name], push);
       } catch (e) {
-        return _replaceStringParameters(_notificationTextMap['en'][type.name], push);
+        return replaceStringParameters(_notificationTextMap['en'][type.name], push);
       }
     }
   }
@@ -36,7 +36,7 @@ mixin ForegroundMessagesMixin {
     }
   }
 
-  String _replaceStringParameters(String str, PushModel push) {
+  static String replaceStringParameters(String str, PushModel push) {
     final str2 = str.replaceAll('{tradeId}', push.objectId ?? '');
     final str3 = str2.replaceAll('{username}', push.username ?? '');
     return str3;
@@ -153,7 +153,7 @@ mixin ForegroundMessagesMixin {
     },
   };
 
-  final Map<String, dynamic> _channelDescriptionMap = {
+  static final Map<String, dynamic> channelDescriptionMap = {
     "en": {
       "name": "Notifications Service",
       "description": "Checking for notifications. Tap to read more.",

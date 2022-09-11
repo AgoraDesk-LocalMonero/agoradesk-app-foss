@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:isolate';
 import 'dart:math' as math;
 
 import 'package:agoradesk/core/app.dart';
@@ -15,6 +16,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
@@ -65,6 +67,11 @@ void main() async {
   ///
 
   final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
+
+  if (!isGoogleAvailable && Platform.isAndroid) {
+    _initForeground();
+  }
+
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
       flavor,
@@ -152,3 +159,97 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     print('++++_firebaseMessagingBackgroundHandler error $e');
   }
 }
+
+/// for receiving messages from the foreground service
+ReceivePort? _receivePort;
+
+///
+/// Foreground functions (in case the Google Play Services are not available)
+///
+void _initForeground() {
+  _initForegroundTask();
+  _ambiguate(WidgetsBinding.instance)?.addPostFrameCallback((_) async {
+    // You can get the previous ReceivePort without restarting the service.
+    if (await FlutterForegroundTask.isRunningService) {
+      final newReceivePort = await FlutterForegroundTask.receivePort;
+      _registerReceivePort(newReceivePort);
+    }
+  });
+  _startForegroundTask();
+}
+
+Future<void> _initForegroundTask() async {
+  await FlutterForegroundTask.init(
+    androidNotificationOptions: AndroidNotificationOptions(
+      channelId: 'foreground_notifications',
+      channelName: 'Foreground notifications',
+      channelDescription: 'Notifications when Google Play services are not available.',
+      channelImportance: NotificationChannelImportance.LOW,
+      priority: NotificationPriority.LOW,
+      iconData: const NotificationIconData(
+        resType: ResourceType.mipmap,
+        resPrefix: ResourcePrefix.ic,
+        name: 'icon_black',
+      ),
+      playSound: false,
+      visibility: NotificationVisibility.VISIBILITY_PRIVATE,
+      enableVibration: false,
+    ),
+    foregroundTaskOptions: const ForegroundTaskOptions(
+      interval: 15000,
+      autoRunOnBoot: true,
+      allowWifiLock: true,
+    ),
+    printDevLog: false,
+  );
+}
+
+Future<bool> _startForegroundTask() async {
+  ReceivePort? receivePort;
+  if (await FlutterForegroundTask.isRunningService) {
+    await FlutterForegroundTask.restartService();
+  } else {
+    await SecureStorage.ensureInitialized();
+    final SecureStorage _secureStorage = SecureStorage();
+    final l = await _secureStorage.read(SecureStorageKey.locale);
+    final langCode = l ?? Platform.localeName.substring(0, 2);
+    await FlutterForegroundTask.startService(
+      notificationTitle:
+          GetIt.I<AppParameters>().appName + ' ' + ForegroundMessagesMixin.getChannelNameDescription(langCode)[0],
+      notificationText: ForegroundMessagesMixin.getChannelNameDescription(langCode)[1],
+      callback: startCallback,
+    );
+  }
+  receivePort = await FlutterForegroundTask.receivePort;
+  return _registerReceivePort(receivePort);
+}
+
+bool _registerReceivePort(ReceivePort? receivePort) {
+  _closeReceivePort();
+
+  if (receivePort != null) {
+    _receivePort = receivePort;
+    _receivePort?.listen((message) {
+      if (message is int) {
+      } else if (message is String) {
+        if (message == 'onNotificationPressed') {
+          // if (message.isNotEmpty) {
+          //   GetIt.I<AppRouter>().push(TradeRoute(tradeId: push.objectId));
+          // }
+          // Navigator.of(context).pushNamed('/resume-route');
+        }
+      } else if (message is DateTime) {
+        debugPrint('++++timestamp: ${message.toString()}');
+      }
+    });
+    return true;
+  }
+  return false;
+}
+
+void _closeReceivePort() {
+  _receivePort?.close();
+  _receivePort = null;
+}
+
+T? _ambiguate<T>(T? value) => value;

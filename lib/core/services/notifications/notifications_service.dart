@@ -177,7 +177,7 @@ class NotificationsService with ForegroundMessagesMixin {
       appState.isPushTokenSavedToApi = false;
     }
 
-    // appState.isPushTokenSavedToApi = false;
+    appState.isPushTokenSavedToApi = false;
 
     if (appState.isPushTokenSavedToApi == false) {
       final res = await _saveFcmTokenToApi(
@@ -199,6 +199,7 @@ class NotificationsService with ForegroundMessagesMixin {
   /// Add new FCM push token to API
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
+    print('++++++++++++++++++++++++++++++888888888666666');
     try {
       debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
       final resp = await api.client.post(
