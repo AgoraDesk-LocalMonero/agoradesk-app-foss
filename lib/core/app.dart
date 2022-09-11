@@ -342,6 +342,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Handle [AuthState]
   ///
   void _initAuthHandler() {
+    _notificationsService.getToken();
     _authService.onAuthStateChange.listen((authState) {
       debugPrint('++++[$runtimeType] AuthState: $authState');
       // handle login & logout
@@ -657,7 +658,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         iconData: const NotificationIconData(
           resType: ResourceType.mipmap,
           resPrefix: ResourcePrefix.ic,
-          name: 'launcher_foreground_bw',
+          name: 'icon_black',
         ),
         playSound: false,
         visibility: NotificationVisibility.VISIBILITY_PRIVATE,

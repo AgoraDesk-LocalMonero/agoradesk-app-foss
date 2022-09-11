@@ -70,7 +70,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
             if (openedTradeId != push.objectId) {
               await AwesomeNotifications().createNotification(
                 content: NotificationContent(
-                  icon: 'resource://mipmap/ic_launcher_foreground',
+                  icon: 'resource://mipmap/ic_icon_black',
                   id: Random().nextInt(1000000),
                   channelKey: kNotificationsChannel,
                   title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),

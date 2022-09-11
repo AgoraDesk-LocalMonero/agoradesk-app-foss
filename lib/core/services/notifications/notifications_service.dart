@@ -136,19 +136,20 @@ class NotificationsService with ForegroundMessagesMixin {
   Future getToken() async {
     if (fcm != null) {
       bool userPermission = true;
-      if (Platform.isIOS) {
-        debugPrint('[$runtimeType] askIosPermission');
-        final settings = await fcm!.requestPermission(
-          alert: true,
-          announcement: false,
-          badge: true,
-          carPlay: false,
-          criticalAlert: false,
-          provisional: false,
-          sound: true,
-        );
-        userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
-      }
+      // if (Platform.isIOS) {
+      debugPrint('[$runtimeType] askIosPermission');
+      final settings = await fcm!.requestPermission(
+        alert: true,
+        announcement: false,
+        badge: true,
+        carPlay: false,
+        criticalAlert: false,
+        provisional: false,
+        sound: true,
+      );
+      userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
+      print('++++++++++++++++++++++++++++++1177777 -- ${settings.authorizationStatus}');
+      // }
       if (userPermission) {
         fcm!.getToken();
         final token = await fcm!.getToken();
