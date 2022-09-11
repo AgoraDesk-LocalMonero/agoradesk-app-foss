@@ -147,7 +147,6 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
-        icon: 'resource://mipmap/ic_icon_black',
         id: math.Random().nextInt(10000000),
         channelKey: kNotificationsChannel,
         title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
