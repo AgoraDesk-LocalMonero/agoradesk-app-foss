@@ -146,7 +146,6 @@ class NotificationsService with ForegroundMessagesMixin {
         sound: true,
       );
       userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
-      print('++++++++++++++++++++++++++++++1177777 -- ${settings.authorizationStatus}');
       // }
       if (userPermission) {
         fcm!.getToken();
@@ -199,7 +198,6 @@ class NotificationsService with ForegroundMessagesMixin {
   /// Add new FCM push token to API
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
-    print('++++++++++++++++++++++++++++++888888888666666');
     try {
       debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
       final resp = await api.client.post(
