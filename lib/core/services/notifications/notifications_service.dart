@@ -136,8 +136,6 @@ class NotificationsService with ForegroundMessagesMixin {
   Future getToken() async {
     if (fcm != null) {
       bool userPermission = true;
-      // if (Platform.isIOS) {
-      debugPrint('[$runtimeType] askIosPermission');
       final settings = await fcm!.requestPermission(
         alert: true,
         announcement: false,

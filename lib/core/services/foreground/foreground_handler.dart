@@ -68,7 +68,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
             final Map<String, String> payload =
                 push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
             if (openedTradeId != push.objectId) {
-              await AwesomeNotifications().createNotification(
+              final res = await AwesomeNotifications().createNotification(
                 content: NotificationContent(
                   icon: 'resource://mipmap/ic_icon_black',
                   id: Random().nextInt(1000000),

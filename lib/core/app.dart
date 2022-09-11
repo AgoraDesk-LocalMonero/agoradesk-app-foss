@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
 import 'dart:isolate';
-import 'dart:math' as math;
 
 import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
@@ -14,7 +13,6 @@ import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/foreground/foreground_handler.dart';
-import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -40,10 +38,8 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/data/services/trade_service.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -170,7 +166,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initUploadingStatusListener();
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     super.initState();
   }
 
@@ -213,9 +208,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
               supportedLocales: I18n.supportedLocales,
               routerDelegate: router.delegate(
                 placeholder: (_) => const SplashScreen(),
-                initialRoutes: [
-                  // const WelcomeRoute(),
-                ],
+                initialRoutes: [],
                 navigatorObservers: () => [
                   RoutesObserver(),
                 ],
@@ -726,27 +719,4 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 ///
 void startCallback() {
   FlutterForegroundTask.setTaskHandler(ForegroundHandler());
-}
-
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  try {
-    await SecureStorage.ensureInitialized();
-    final SecureStorage _secureStorage = SecureStorage();
-    final l = await _secureStorage.read(SecureStorageKey.locale);
-    final String langCode = l ?? Platform.localeName.substring(0, 2);
-    final PushModel push = PushModel.fromJson(message.data);
-    final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-    await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: math.Random().nextInt(10000000),
-        channelKey: kNotificationsChannel,
-        title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-        body: push.msg,
-        notificationLayout: NotificationLayout.Default,
-        payload: payload,
-      ),
-    );
-  } catch (e) {
-    print('++++_firebaseMessagingBackgroundHandler error $e');
-  }
 }

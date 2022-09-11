@@ -995,7 +995,8 @@ class TradeViewModel extends ViewModel
   void dispose() async {
     focusMessage.dispose();
     GetIt.I<AppParameters>().openedTradeId = null;
-    await _secureStorage.write(SecureStorageKey.openedTradeId, '');
+    print('++++++++++++++++++++++++++++++66611 -- ');
+    await _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
     tabController.dispose();
     ctrlMessage.dispose();
     ctrlPassword.dispose();

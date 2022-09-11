@@ -1,13 +1,17 @@
 import 'dart:io';
+import 'dart:math' as math;
 
 import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/models/push_model.dart';
+import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -39,6 +43,7 @@ void main() async {
         options: agoradesk_options.DefaultFirebaseOptions.currentPlatform,
       );
     }
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   }
 
   ///
@@ -77,8 +82,8 @@ void main() async {
       NotificationChannel(
         channelKey: kNotificationsChannel,
         channelName: 'Trades channel',
-        channelDescription: '',
-        importance: NotificationImportance.Max,
+        channelDescription: 'Notifications about trades',
+        importance: NotificationImportance.Default,
         channelShowBadge: true,
       ),
     ],
@@ -123,4 +128,27 @@ Future<bool> checkGoogleAvailable() async {
     return false;
   }
   return true;
+}
+
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  try {
+    await SecureStorage.ensureInitialized();
+    final SecureStorage _secureStorage = SecureStorage();
+    final l = await _secureStorage.read(SecureStorageKey.locale);
+    final String langCode = l ?? Platform.localeName.substring(0, 2);
+    final PushModel push = PushModel.fromJson(message.data);
+    final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+    await AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: math.Random().nextInt(10000000),
+        channelKey: kNotificationsChannel,
+        title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+        body: push.msg,
+        notificationLayout: NotificationLayout.Default,
+        payload: payload,
+      ),
+    );
+  } catch (e) {
+    print('++++_firebaseMessagingBackgroundHandler error $e');
+  }
 }
