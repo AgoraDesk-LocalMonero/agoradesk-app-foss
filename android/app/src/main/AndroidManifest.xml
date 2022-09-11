@@ -28,6 +28,14 @@
         android:name="${applicationName}"
        android:icon="@mipmap/ic_launcher"
        android:roundIcon="@mipmap/ic_launcher_round">
+
+       <receiver android:name="androidx.media.session.MediaButtonReceiver"
+           android:exported="true">
+           <intent-filter>
+               <action android:name="android.intent.action.MEDIA_BUTTON" />
+           </intent-filter>
+       </receiver>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -36,6 +44,8 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+
+
 
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN"/>
