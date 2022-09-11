@@ -66,8 +66,8 @@ dependencies:
   percent_indicator: ^4.2.1
   unifiedpush: ^4.0.0
   insta_image_viewer: ^1.0.2
-  firebase_core: ^1.20.0
-  firebase_messaging: ^12.0.1
+  firebase_core: ^1.22.0
+  firebase_messaging: ^13.0.1
   get_it: ^7.2.0
   awesome_notifications: ^0.6.17
   flutter_foreground_task: ^3.8.2
