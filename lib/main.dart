@@ -131,6 +131,7 @@ Future<bool> checkGoogleAvailable() async {
   return true;
 }
 
+@pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
     await SecureStorage.ensureInitialized();
