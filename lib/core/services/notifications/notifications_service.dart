@@ -170,13 +170,10 @@ class NotificationsService with ForegroundMessagesMixin {
     } else if (Platform.isIOS) {
       deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
       deviceName = deviceData['name'] ?? 'iPhone';
-      // deviceName = 'iPhone';
     }
     if (oldToken != newToken) {
       appState.isPushTokenSavedToApi = false;
     }
-
-    // appState.isPushTokenSavedToApi = false;
 
     if (appState.isPushTokenSavedToApi == false) {
       final res = await _saveFcmTokenToApi(
