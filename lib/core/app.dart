@@ -657,7 +657,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         enableVibration: false,
       ),
       foregroundTaskOptions: const ForegroundTaskOptions(
-        interval: 15000,
+        interval: 30000,
         autoRunOnBoot: true,
         allowWifiLock: true,
       ),
