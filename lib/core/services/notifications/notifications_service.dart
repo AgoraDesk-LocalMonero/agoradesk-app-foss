@@ -176,7 +176,7 @@ class NotificationsService with ForegroundMessagesMixin {
       appState.isPushTokenSavedToApi = false;
     }
 
-    appState.isPushTokenSavedToApi = false;
+    // appState.isPushTokenSavedToApi = false;
 
     if (appState.isPushTokenSavedToApi == false) {
       final res = await _saveFcmTokenToApi(
