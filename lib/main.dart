@@ -18,6 +18,7 @@ import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 import 'firebase_options_agoradesk.dart' as agoradesk_options;
@@ -44,6 +45,8 @@ void main() async {
       );
     }
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  } else {
+    Permission.notification.request();
   }
 
   ///
@@ -58,7 +61,7 @@ void main() async {
   ]);
 
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
   ///
   /// Initializations that are depend on flavor

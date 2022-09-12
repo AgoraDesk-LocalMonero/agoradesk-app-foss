@@ -77,6 +77,7 @@ dependencies:
   sticky_headers: ^0.3.0+2
   flutter_displaymode: ^0.4.0
   flutter_inappwebview: ^5.4.3+7
+  permission_handler: ^10.0.0
 
 dependency_overrides:
 #  flutter_foreground_task:
