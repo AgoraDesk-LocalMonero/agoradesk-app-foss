@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
+import 'dart:isolate';
 
 import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
@@ -16,6 +17,7 @@ import 'package:agoradesk/core/services/notifications/notifications_service.dart
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
+import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/core/utils/app_links_handler.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_info_dialog_for_root.dart';
@@ -65,7 +67,9 @@ class App extends StatefulWidget {
   _AppState createState() => _AppState();
 }
 
-class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, CountryInfoMixin {
+class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin {
+  /// for receiving messages from the foreground service
+  ReceivePort? _receivePort;
   late final SecureStorage _secureStorage;
   late final StreamSubscription<ConnectivityResult> _connectivitySubscription;
   late final ApiClient _api;
@@ -252,6 +256,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
     _notificationsService.startListenAwesomeNotificationsPressed();
+    if (!GetIt.I<AppParameters>().isGoogleAvailable && Platform.isAndroid) {
+      _initForeground();
+    }
   }
 
   Future<void> _afterConfigInit() async {}
@@ -616,6 +623,97 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+
+  ///
+  /// Foreground functions (in case the Google Play Services are not available)
+  ///
+  void _initForeground() {
+    _initForegroundTask();
+    _ambiguate(WidgetsBinding.instance)?.addPostFrameCallback((_) async {
+      // You can get the previous ReceivePort without restarting the service.
+      if (await FlutterForegroundTask.isRunningService) {
+        final newReceivePort = await FlutterForegroundTask.receivePort;
+        _registerReceivePort(newReceivePort);
+      }
+    });
+    _startForegroundTask();
+  }
+
+  Future<void> _initForegroundTask() async {
+    await FlutterForegroundTask.init(
+      androidNotificationOptions: AndroidNotificationOptions(
+        channelId: 'foreground_notifications',
+        channelName: 'Foreground notifications',
+        channelDescription: 'Notifications when Google Play services are not available.',
+        channelImportance: NotificationChannelImportance.LOW,
+        priority: NotificationPriority.LOW,
+        iconData: const NotificationIconData(
+          resType: ResourceType.mipmap,
+          resPrefix: ResourcePrefix.ic,
+          name: 'icon_black',
+        ),
+        playSound: false,
+        visibility: NotificationVisibility.VISIBILITY_PRIVATE,
+        enableVibration: false,
+      ),
+      foregroundTaskOptions: const ForegroundTaskOptions(
+        interval: 15000,
+        autoRunOnBoot: true,
+        allowWifiLock: true,
+      ),
+      printDevLog: false,
+    );
+  }
+
+  Future<bool> _startForegroundTask() async {
+    ReceivePort? receivePort;
+    if (await FlutterForegroundTask.isRunningService) {
+      await FlutterForegroundTask.restartService();
+    } else {
+      await SecureStorage.ensureInitialized();
+      final SecureStorage _secureStorage = SecureStorage();
+      final l = await _secureStorage.read(SecureStorageKey.locale);
+      final langCode = l ?? Platform.localeName.substring(0, 2);
+      await FlutterForegroundTask.startService(
+        notificationTitle:
+            GetIt.I<AppParameters>().appName + ' ' + ForegroundMessagesMixin.getChannelNameDescription(langCode)[0],
+        notificationText: ForegroundMessagesMixin.getChannelNameDescription(langCode)[1],
+        callback: startCallback,
+      );
+    }
+    receivePort = await FlutterForegroundTask.receivePort;
+    return _registerReceivePort(receivePort);
+  }
+
+  bool _registerReceivePort(ReceivePort? receivePort) {
+    _closeReceivePort();
+
+    if (receivePort != null) {
+      _receivePort = receivePort;
+      _receivePort?.listen((message) {
+        if (message is int) {
+        } else if (message is String) {
+          if (message == 'onNotificationPressed') {
+            // if (message.isNotEmpty) {
+            //   GetIt.I<AppRouter>().push(TradeRoute(tradeId: push.objectId));
+            // }
+            // Navigator.of(context).pushNamed('/resume-route');
+          }
+        } else if (message is DateTime) {
+          debugPrint('++++timestamp: ${message.toString()}');
+        }
+      });
+      return true;
+    }
+    return false;
+  }
+
+  void _closeReceivePort() {
+    _receivePort?.close();
+    _receivePort = null;
+  }
+
+  T? _ambiguate<T>(T? value) => value;
 }
 
 ///
