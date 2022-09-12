@@ -1,12 +1,11 @@
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_link.dart';
 import 'package:agoradesk/features/account/data/models/feedback_type.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:vm/vm.dart';
 
 class PostFeedbackDialog extends StatelessWidget {
   const PostFeedbackDialog({
@@ -41,19 +40,13 @@ class PostFeedbackDialog extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        I18n.of(context)!.trade250Sbleave8722Sbfeedback8722Sbbtn,
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleMedium!
-                            .copyWith(color: Theme.of(context).colorScheme.neutral90),
+                        context.intl.trade250Sbleave8722Sbfeedback8722Sbbtn,
+                        style: context.txtHead4N90N10,
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        I18n.of(context)!.trade250Sbfeedback250Sbtip,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodySmall!
-                            .copyWith(color: Theme.of(context).colorScheme.n80N30),
+                        context.intl.trade250Sbfeedback250Sbtip,
+                        style: context.txtBodySmallN80N30,
                       ),
                       const SizedBox(height: 8),
                       _buildRadioButtons(model),
@@ -61,10 +54,7 @@ class PostFeedbackDialog extends StatelessWidget {
                       TextFormField(
                         controller: model.ctrlFeedback,
                         maxLength: 256,
-                        decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                              labelText: I18n.of(context)!.trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtitle,
-                              contentPadding: const EdgeInsets.fromLTRB(10, 20, 0, 20),
-                            ),
+                        decoration: context.decorationTxtFieldMain,
                       ),
                       const SizedBox(height: 12),
                       Row(
@@ -72,18 +62,14 @@ class PostFeedbackDialog extends StatelessWidget {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           ButtonLink(
-                            title: I18n.of(context)!.cancel,
-                            style: Theme.of(context).textTheme.agoraLabelLarge.copyWith(
-                                  color: Theme.of(context).colorScheme.primary70,
-                                ),
+                            title: context.intl.cancel,
+                            style: context.txtLabelLargeP80P70,
                             onPressed: () => AutoRouter.of(context).pop(),
                           ),
                           const SizedBox(width: 20),
                           ButtonLink(
-                            title: I18n.of(context)!.homepage8722Sblocation250Sbsave8722Sbbtn,
-                            style: Theme.of(context).textTheme.agoraLabelLarge.copyWith(
-                                  color: Theme.of(context).colorScheme.primary70,
-                                ),
+                            title: context.intl.homepage8722Sblocation250Sbsave8722Sbbtn,
+                            style: context.txtLabelLargeP80P70,
                             loading: model.postingFeedback,
                             onPressed: model.giveFeedback,
                           ),
@@ -107,7 +93,6 @@ class PostFeedbackDialog extends StatelessWidget {
         itemCount: FeedbackType.values.length,
         itemBuilder: (context, index) {
           return GestureDetector(
-            behavior: HitTestBehavior.opaque,
             onTap: () {
               model.feedbackType = FeedbackType.values[index];
             },

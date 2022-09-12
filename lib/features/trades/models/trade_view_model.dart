@@ -66,6 +66,7 @@ class TradeViewModel extends ViewModel
   final TradeModel? tradeModel;
   final String? tradeId;
   final UserLocalSettings _userSettings;
+
   final ctrlPassword = TextEditingController();
   final ctrlFeedback = TextEditingController();
 
@@ -597,7 +598,7 @@ class TradeViewModel extends ViewModel
     final res = await _accountService.giveFeedback(
       tradeForScreen.isSelling! ? tradeForScreen.buyer.username! : tradeForScreen.seller.username!,
       feedbackType!,
-      ctrlMessage.text,
+      ctrlFeedback.text,
     );
     postingFeedback = false;
     if (res.isRight) {

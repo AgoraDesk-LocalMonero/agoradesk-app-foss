@@ -520,9 +520,11 @@ packages:
   flutter_foreground_task:
     dependency: "direct main"
     description:
-      path: "../flutter_foreground_task"
-      relative: true
-    source: path
+      path: "."
+      ref: master
+      resolved-ref: d74c807b9d71ad3b791757bc8639237cad8c71fb
+      url: "https://github.com/sergdeus/flutter_foreground_task"
+    source: git
     version: "3.8.2"
   flutter_highlight:
     dependency: transitive
