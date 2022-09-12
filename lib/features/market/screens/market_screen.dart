@@ -2,7 +2,6 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -31,58 +30,56 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_foreground_task/ui/with_foreground_task.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
+import 'package:vm/vm.dart';
 
 class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethodsMixin {
   MarketScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return WithForegroundTask(
-      child: ViewModelBuilder<MarketViewModel>(
-          model: MarketViewModel(
-            adsRepository: context.read<AdsRepository>(),
-            placesSearch: context.read<PlacesSearch>(),
-            authService: context.read<AuthService>(),
-            appState: context.read<AppState>(),
-          ),
-          // implicitView: true,
-          builder: (context, model, child) {
-            return Scaffold(
-              appBar: AgoraAppBar(
-                title: I18n.of(context)!.market,
-                leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
-                rightAction: AppBarButton(
-                  iconData: AgoraFont.help_circle,
-                  onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
-                ),
+    return ViewModelBuilder<MarketViewModel>(
+        model: MarketViewModel(
+          adsRepository: context.read<AdsRepository>(),
+          placesSearch: context.read<PlacesSearch>(),
+          authService: context.read<AuthService>(),
+          appState: context.read<AppState>(),
+        ),
+        // implicitView: true,
+        builder: (context, model, child) {
+          return Scaffold(
+            appBar: AgoraAppBar(
+              title: I18n.of(context)!.market,
+              leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
+              rightAction: AppBarButton(
+                iconData: AgoraFont.help_circle,
+                onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
               ),
-              // SingleChildScrollView for flexible keyboard insets
-              body: KeyboardDismissOnTap(
-                  child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: LayoutBuilder(builder: (context, constraints) {
-                  return SizedBox(
-                    height: constraints.maxHeight,
-                    child: Column(
-                      children: [
-                        _buildSelectAdType(context, model),
-                        const SizedBox(height: 16),
-                        Expanded(
-                          child: _buildAdsList(context, model),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-              )),
-            );
-          }),
-    );
+            ),
+            // SingleChildScrollView for flexible keyboard insets
+            body: KeyboardDismissOnTap(
+                child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: LayoutBuilder(builder: (context, constraints) {
+                return SizedBox(
+                  height: constraints.maxHeight,
+                  child: Column(
+                    children: [
+                      _buildSelectAdType(context, model),
+                      const SizedBox(height: 16),
+                      Expanded(
+                        child: _buildAdsList(context, model),
+                      ),
+                    ],
+                  ),
+                );
+              }),
+            )),
+          );
+        });
   }
 
   Widget _buildSelectAdType(BuildContext context, MarketViewModel model) {
