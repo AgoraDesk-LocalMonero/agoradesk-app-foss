@@ -621,6 +621,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     eventBus.destroy();
     ObjectBox.instance.store.close();
     WidgetsBinding.instance.removeObserver(this);
+    _closeReceivePort();
     super.dispose();
   }
 

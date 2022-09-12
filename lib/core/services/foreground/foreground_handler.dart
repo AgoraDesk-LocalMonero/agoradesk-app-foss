@@ -15,12 +15,11 @@ import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:http/http.dart' as http;
 
 class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMixin {
-  SendPort? _sendPort;
-  int _eventCount = 0;
+  // SendPort? _sendPort;
 
   @override
   Future<void> onStart(DateTime timestamp, SendPort? sendPort) async {
-    _sendPort = sendPort;
+    // _sendPort = sendPort;
   }
 
   @override
@@ -53,32 +52,34 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
         headers: headers,
       );
       if (resp.statusCode == 200) {
-        Map<String, dynamic> respMap = jsonDecode(resp.body);
-        List<ActivityNotificationModel> notifications = [];
-        if (respMap.containsKey('data')) {
-          for (final r in respMap['data']) {
-            notifications.add(ActivityNotificationModel.fromJson(r));
-          }
-          if (notifications.isNotEmpty) {
-            await _secureStorage.write(SecureStorageKey.lastNotificationTimeInt,
-                notifications.first.createdAt.millisecondsSinceEpoch.toString());
-            final ActivityNotificationModel notification = notifications.first;
-            final PushModel push = PushModel.fromActivityNotificationModel(notification);
+        if (resp.body.contains('created_at')) {
+          Map<String, dynamic> respMap = jsonDecode(resp.body);
+          List<ActivityNotificationModel> notifications = [];
+          if (respMap.containsKey('data') && respMap['data'][0].containsKey('id')) {
+            for (final r in respMap['data']) {
+              notifications.add(ActivityNotificationModel.fromJson(r));
+            }
+            if (notifications.isNotEmpty) {
+              await _secureStorage.write(SecureStorageKey.lastNotificationTimeInt,
+                  notifications.first.createdAt.millisecondsSinceEpoch.toString());
+              final ActivityNotificationModel notification = notifications.first;
+              final PushModel push = PushModel.fromActivityNotificationModel(notification);
 
-            final Map<String, String> payload =
-                push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-            if (openedTradeId != push.objectId) {
-              final res = await AwesomeNotifications().createNotification(
-                content: NotificationContent(
-                  icon: 'resource://mipmap/ic_icon_black',
-                  id: Random().nextInt(1000000),
-                  channelKey: kNotificationsChannel,
-                  title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-                  body: translatedNotificationText(push, langCode),
-                  notificationLayout: NotificationLayout.Default,
-                  payload: payload,
-                ),
-              );
+              final Map<String, String> payload =
+                  push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+              if (openedTradeId != push.objectId) {
+                final res = await AwesomeNotifications().createNotification(
+                  content: NotificationContent(
+                    icon: 'resource://mipmap/ic_icon_black',
+                    id: Random().nextInt(1000000),
+                    channelKey: kNotificationsChannel,
+                    title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+                    body: translatedNotificationText(push, langCode),
+                    notificationLayout: NotificationLayout.Default,
+                    payload: payload,
+                  ),
+                );
+              }
             }
           }
         }
@@ -86,14 +87,11 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
         debugPrint('++++error getting foreground notifications - ${resp.statusCode} - ${resp.body}');
       }
     }
-
-    sendPort?.send(_eventCount);
-    _eventCount++;
   }
 
   @override
   Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {
-    await FlutterForegroundTask.clearAllData();
+    // await FlutterForegroundTask.clearAllData();
   }
 
   @override
