@@ -58,24 +58,24 @@ jobs:
           key-path: '["version"]' # Access the runs key then the using key and retuns the value.
 
       - name: Display read-yaml output
-        env:
-          APP_VERSION: ${{ steps.yaml-data.outputs.data }}
         run: |
-          echo "$APP_VERSION" | cut -f2 -d"="
+          appVersionStr="${{ steps.yaml-data.outputs.data }}"
+          appBuildNumber=${$appVersionStr#*+}
+          echo "$appBuildNumber"
 
-#      - uses: subosito/flutter-action@v2
-#        with:
-#          channel: 'stable'
-#
-#      - run: flutter pub get
-#
-#      - name: Build-runner
-#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
 
-#      - name: Build AgoraDesk APK (Refular + FOSS)
-#        run: |
-#          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
-#          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ appBuildNumber }}.apk
+      - run: flutter pub get
+
+      - name: Build-runner
+        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+
+      - name: Build AgoraDesk APK (Refular + FOSS)
+        run: |
+          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{appBuildNumber}}.apk
 #          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 #          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_$appBuildNumber.apk
 
