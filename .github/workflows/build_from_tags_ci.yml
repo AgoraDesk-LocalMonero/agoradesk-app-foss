@@ -57,12 +57,6 @@ jobs:
           file: './pubspec.yaml'
           key-path: '["version"]' # Access the runs key then the using key and retuns the value.
 
-      - name: Display read-yaml output
-        run: |
-          appVersionStr="${{ steps.yaml-data.outputs.data }}"
-          appBuildNumber=${$appVersionStr#*+}
-          echo "$appBuildNumber"
-
       - name: Split version number
         id: split
         uses: jungwinter/split@v2
