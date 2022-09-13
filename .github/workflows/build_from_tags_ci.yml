@@ -23,47 +23,52 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Decrypt secret
-        env:
-          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
-          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
-        run: ./decrypt_secret.sh > ./android/app/agoradesk-keystore.jks
-
-      - name: Test print
-        env:
-          FIREBASE_OPTIONS_AGORADESK: ${{ secrets.FIREBASE_OPTIONS_AGORADESK }}
-        run: echo "$FIREBASE_OPTIONS_AGORADESK"
-
-      - name: Save Firebase options files
-        env:
-          KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
-          AGORADESK_GOOGLE_SERVICES_JSON: ${{ secrets.AGORADESK_GOOGLE_SERVICES_JSON }}
-          LOCALMONERO_GOOGLE_SERVICES_JSON: ${{ secrets.LOCALMONERO_GOOGLE_SERVICES_JSON }}
-          FIREBASE_OPTIONS_AGORADESK: ${{ secrets.FIREBASE_OPTIONS_AGORADESK }}
-          FIREBASE_OPTIONS_LOCALMONERO: ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }}
-          MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
-        run: |
-          printf "$KEY_PROPERTIES" > ./android/key.properties
-          printf "$AGORADESK_GOOGLE_SERVICES_JSON" > ./android/app/src/agoradesk/google-services.json
-          printf "$LOCALMONERO_GOOGLE_SERVICES_JSON" > ./android/app/src/localmonero/google-services.json
-          printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
-          printf "$FIREBASE_OPTIONS_LOCALMONERO" > ./lib/firebase_options_localmonero.dart
-          mkdir ./lib/keys
-          printf "const keysMapToken = '$MAPBOX_KEY';" > ./lib/keys/keys.dart
+#      - name: Decrypt secret
+#        env:
+#          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
+#          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
+#        run: ./decrypt_secret.sh > ./android/app/agoradesk-keystore.jks
+#
+#      - name: Save Firebase options files
+#        env:
+#          KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
+#          AGORADESK_GOOGLE_SERVICES_JSON: ${{ secrets.AGORADESK_GOOGLE_SERVICES_JSON }}
+#          LOCALMONERO_GOOGLE_SERVICES_JSON: ${{ secrets.LOCALMONERO_GOOGLE_SERVICES_JSON }}
+#          FIREBASE_OPTIONS_AGORADESK: ${{ secrets.FIREBASE_OPTIONS_AGORADESK }}
+#          FIREBASE_OPTIONS_LOCALMONERO: ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }}
+#          MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
+#        run: |
+#          printf "$KEY_PROPERTIES" > ./android/key.properties
+#          printf "$AGORADESK_GOOGLE_SERVICES_JSON" > ./android/app/src/agoradesk/google-services.json
+#          printf "$LOCALMONERO_GOOGLE_SERVICES_JSON" > ./android/app/src/localmonero/google-services.json
+#          printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
+#          printf "$FIREBASE_OPTIONS_LOCALMONERO" > ./lib/firebase_options_localmonero.dart
+#          mkdir ./lib/keys
+#          printf "const keysMapToken = '$MAPBOX_KEY';" > ./lib/keys/keys.dart
 
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
+
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
-      - run: flutter pub get
 
-      - name: Build-runner
-        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+      - run: |
+          echo cache-path=${{ steps.flutter-action.outputs.cache-path }}
+          echo cache-key=${{ steps.flutter-action.outputs.cache-key }}
+          echo channel=${{ steps.flutter-action.outputs.channel }}
+          echo version=${{ steps.flutter-action.outputs.version }}
+          echo architecture=${{ steps.flutter-action.outputs.architecture }}
+        shell: bash
 
-      - name: Build APK
-        run: flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+#      - run: flutter pub get
+#
+#      - name: Build-runner
+#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+#
+#      - name: Build APK
+#        run: flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 ##      - name: Build APPBUNDLE
 ##        run: flutter build appbundle --release
