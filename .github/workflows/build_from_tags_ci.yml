@@ -42,8 +42,8 @@ jobs:
           FIREBASE_OPTIONS_LOCALMONERO: ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }}
           MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
         run: |
-          printf "$AGORADESK_GOOGLE_SERVICES_JSON" > ./android/app/src/agoradesk/release/google-services.json
-          printf "$LOCALMONERO_GOOGLE_SERVICES_JSON" > ./android/app/src/localmonero/release/google-services.json
+          printf "$AGORADESK_GOOGLE_SERVICES_JSON" > ./android/app/src/agoradesk/google-services.json
+          printf "$LOCALMONERO_GOOGLE_SERVICES_JSON" > ./android/app/src/localmonero/google-services.json
           printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
           printf "$FIREBASE_OPTIONS_LOCALMONERO" > ./lib/firebase_options_localmonero.dart
           mkdir ./lib/keys
