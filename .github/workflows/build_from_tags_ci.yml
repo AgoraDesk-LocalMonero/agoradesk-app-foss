@@ -50,10 +50,9 @@ jobs:
         with:
           java-version: '12.x'
 
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-
       - run: |
           echo cache-path=${{ steps.flutter-action.outputs.cache-path }}
           echo cache-key=${{ steps.flutter-action.outputs.cache-key }}
