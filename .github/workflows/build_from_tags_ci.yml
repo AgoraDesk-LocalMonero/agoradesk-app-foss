@@ -63,6 +63,14 @@ jobs:
           appBuildNumber=${$appVersionStr#*+}
           echo "$appBuildNumber"
 
+      - name: Split version number
+        id: split
+        uses: jungwinter/split@v2
+        with:
+          msg: ${{ steps.yaml-data.outputs.data }}
+          separator: "+"
+        run: echo "${{ steps.split.outputs._2 }}"
+
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
@@ -75,7 +83,7 @@ jobs:
       - name: Build AgoraDesk APK (Refular + FOSS)
         run: |
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
-          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.appBuildNumber }}.apk
+          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._2 }}.apk
 #          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 #          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_$appBuildNumber.apk
 
