@@ -43,7 +43,7 @@ jobs:
           printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
           printf "$FIREBASE_OPTIONS_LOCALMONERO" > ./lib/firebase_options_localmonero.dart
           mkdir ./lib/keys
-          printf "$MAPBOX_KEY" > ./lib/keys/keys.dart
+          printf "const keysMapToken = '$MAPBOX_KEY';" > ./lib/keys/keys.dart
 
       - uses: actions/setup-java@v1
         with:
