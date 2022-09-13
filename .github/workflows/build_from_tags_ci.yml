@@ -64,26 +64,19 @@ jobs:
           msg: ${{ steps.yaml-data.outputs.data }}
           separator: "+"
 
-      - name: Check the build number
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - run: flutter pub get
+
+      - name: Build-runner
+        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+
+      - name: Build AgoraDesk APK (Refular + FOSS)
         run: |
-          echo "${{ steps.yaml-data.outputs.data }}"
-          echo "${{ steps.split.outputs._0 }}"
-          echo "${{ steps.split.outputs._1 }}"
-
-
-#      - uses: subosito/flutter-action@v2
-#        with:
-#          channel: 'stable'
-#
-#      - run: flutter pub get
-#
-#      - name: Build-runner
-#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
-#
-#      - name: Build AgoraDesk APK (Refular + FOSS)
-#        run: |
-#          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
-#          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._2 }}.apk
+          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._1 }}.apk
 #          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 #          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_$appBuildNumber.apk
 
