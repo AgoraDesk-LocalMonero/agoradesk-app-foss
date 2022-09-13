@@ -31,9 +31,10 @@ jobs:
 
       - name: Save Firebase options files
         run: |
+          echo "$FIREBASE_OPTIONS_AGORADESK"
           printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
-#          printf ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }} > ./lib/firebase_options_localmonero.dart
-#          printf ${{ secrets.MAPBOX_KEY }} > ./lib/keys/keys.dart
+          printf "$FIREBASE_OPTIONS_LOCALMONERO" > ./lib/firebase_options_localmonero.dart
+          printf "$MAPBOX_KEY" > ./lib/keys/keys.dart
 
       - uses: actions/setup-java@v1
         with:
