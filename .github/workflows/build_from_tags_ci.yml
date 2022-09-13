@@ -58,9 +58,11 @@ jobs:
           key-path: '["version"]' # Access the runs key then the using key and retuns the value.
 
       - name: Display read-yaml output
+        env:
+          APP_VERSION: ${{ steps.yaml-data.outputs.data }}
         run: |
-          appVersionStr="${{ steps.yaml-data.outputs.data }}"
-          appBuildNumber=${appVersionStr#*+}
+          echo "$APP_VERSION"
+          appBuildNumber=${{ APP_VERSION#*+ }}
           echo "${{ steps.appBuildNumber }}"
 
 #      - uses: subosito/flutter-action@v2
