@@ -59,9 +59,9 @@ jobs:
 
       - name: Display read-yaml output
         env:
-          APP_VERSION: ${{ steps.yaml-data.outputs.data }}  | cut -d "=" -f2
+          APP_VERSION: ${{ steps.yaml-data.outputs.data }}
         run: |
-          echo "$APP_VERSION"
+          echo "$APP_VERSION" | cut -d "=" -f2
 
 #      - uses: subosito/flutter-action@v2
 #        with:
