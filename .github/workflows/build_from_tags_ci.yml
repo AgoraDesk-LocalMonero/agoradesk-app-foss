@@ -61,7 +61,7 @@ jobs:
         run: |
           appVersionStr="${{ steps.yaml-data.outputs.data }}"
           appBuildNumber=${appVersionStr#*+}
-          echo "$appBuildNumber"
+          echo "${{ steps.appBuildNumber }}"
 
 #      - uses: subosito/flutter-action@v2
 #        with:
