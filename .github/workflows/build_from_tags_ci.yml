@@ -36,12 +36,16 @@ jobs:
 
       - name: Save Firebase options files
         env:
+          AGORADESK_GOOGLE_SERVICES_JSON: ${{ secrets.AGORADESK_GOOGLE_SERVICES_JSON }}
+          LOCALMONERO_GOOGLE_SERVICES_JSON: ${{ secrets.LOCALMONERO_GOOGLE_SERVICES_JSON }}
           FIREBASE_OPTIONS_AGORADESK: ${{ secrets.FIREBASE_OPTIONS_AGORADESK }}
           FIREBASE_OPTIONS_LOCALMONERO: ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }}
           MAPBOX_KEY: ${{ secrets.MAPBOX_KEY }}
         run: |
           printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
+          printf "$AGORADESK_GOOGLE_SERVICES_JSON" > ./android/app/src/agoradesk/release/google-services.json
           printf "$FIREBASE_OPTIONS_LOCALMONERO" > ./lib/firebase_options_localmonero.dart
+          printf "$LOCALMONERO_GOOGLE_SERVICES_JSON" > ./android/app/src/agoradesk/release/google-services.json
           mkdir ./lib/keys
           printf "const keysMapToken = '$MAPBOX_KEY';" > ./lib/keys/keys.dart
 
