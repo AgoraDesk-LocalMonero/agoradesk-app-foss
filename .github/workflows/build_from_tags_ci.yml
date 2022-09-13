@@ -63,19 +63,19 @@ jobs:
           appBuildNumber=${appVersionStr#*+}
           echo "$appBuildNumber"
 
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
+#      - uses: subosito/flutter-action@v2
+#        with:
+#          channel: 'stable'
+#
+#      - run: flutter pub get
+#
+#      - name: Build-runner
+#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
 
-      - run: flutter pub get
-
-      - name: Build-runner
-        run: flutter packages pub run build_runner build --delete-conflicting-outputs
-
-      - name: Build AgoraDesk APK (Refular + FOSS)
-        run: |
-          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
-          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ appBuildNumber }}.apk
+#      - name: Build AgoraDesk APK (Refular + FOSS)
+#        run: |
+#          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+#          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ appBuildNumber }}.apk
 #          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 #          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_$appBuildNumber.apk
 
