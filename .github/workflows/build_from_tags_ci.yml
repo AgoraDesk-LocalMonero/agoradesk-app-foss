@@ -69,11 +69,12 @@ jobs:
         with:
           msg: ${{ steps.yaml-data.outputs.data }}
           separator: "+"
-        run: echo "${{ steps.split.outputs._2 }}"
 
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+
+      - run: echo "${{ steps.split.outputs._2 }}"
 
       - run: flutter pub get
 
