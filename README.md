@@ -33,9 +33,7 @@ polling in the background mode. [More info](Notifications.md)
 4. For anonymisation reasons all notifications sent without translations and translated on client.
 So, we use data messages to display them with app code (not with the FCM).
 
-
 5. Made with Dart & Flutter ❤️
-
 
 ## Build
 

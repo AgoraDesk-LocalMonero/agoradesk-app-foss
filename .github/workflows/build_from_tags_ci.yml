@@ -1,48 +1,59 @@
-##  https://stefma.medium.com/how-to-store-a-android-keystore-safely-on-github-actions-f0cef9413784
-##  KEY_PROPERTIES - file
-##  RELEASE_AGORADESK_KEYSTORE
-##  RELEASE_AGORADESK_KEYSTORE_SECRET
-##  RELEASE_LOCALMONERO_KEYSTORE
-##  RELEASE_LOCALMONERO_KEYSTORE_SECRET
+#  https://stefma.medium.com/how-to-store-a-android-keystore-safely-on-github-actions-f0cef9413784
+#  KEY_PROPERTIES - file
+#  RELEASE_AGORADESK_KEYSTORE
+#  RELEASE_AGORADESK_KEYSTORE_SECRET
+#  RELEASE_LOCALMONERO_KEYSTORE
+#  RELEASE_LOCALMONERO_KEYSTORE_SECRET
+#  AGORADESK_GOOGLE_SERVICES_JSON
+#  LOCALMONERO_GOOGLE_SERVICES_JSON
+#  MAPBOX_KEY
+#  FIREBASE_OPTIONS_AGORADESK
+#  FIREBASE_OPTIONS_LOCALMONERO
+
+name: BuildFromTagsCI
+
+on:
+  push:
+#    tags:
+#      - "v*.*.*"
+jobs:
+  build:
+    name: Build APK & AppBundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Decrypt secret
+        run: ./decrypt_secret.sh > ./android/app/agoradesk-keystore.jks
+        env:
+          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
+          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
+
+      - name: Save Firebase options files
+        run: |
+          printf ${{ secrets.FIREBASE_OPTIONS_AGORADESK }} >> ./lib/firebase_options_agoradesk.dart
+          printf ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }} >> ./lib/firebase_options_localmonero.dart
+          printf ${{ secrets.MAPBOX_KEY }} >> ./lib/keys/keys.dart
+
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable'
+      - run: flutter pub get
+
+      - name: Build-runner
+        run: flutter packages pub run build_runner build --delete-conflicting-outputs
+
+      - name: Build APK
+        run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+
+##      - name: Build APPBUNDLE
+##        run: flutter build appbundle --release
 #
-#name: BuildFromTagsCI
-#
-#on:
-#  push:
-##    tags:
-##      - "v*.*.*"
-#jobs:
-#  build:
-#    name: Build APK & AppBundle
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#
-#      - name: Decrypt secret
-#        run: ./decrypt_secret.sh > ./android/app/agoradesk-keystore.jks
-#        env:
-#          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
-#          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
-#
-#      - uses: actions/setup-java@v1
+#      - name: Create Github Release
+#        uses: ncipollo/release-action@v1
 #        with:
-#          java-version: '12.x'
-#      - uses: subosito/flutter-action@v1
-#        with:
-#          channel: 'stable'
-#      - run: flutter pub get
-#
-#      - name: Build-runner
-#        run: flutter packages pub run build_runner build --delete-conflicting-outputs
-#
-#      - name: Build APK
-#        run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
-#
-###      - name: Build APPBUNDLE
-###        run: flutter build appbundle --release
-##
-##      - name: Create Github Release
-##        uses: ncipollo/release-action@v1
-##        with:
-##          artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/*.aab"
-##          token: ${{ secrets.RELEASES_TOKEN }}
+#          artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/*.aab"
+#          token: ${{ secrets.RELEASES_TOKEN }}

@@ -206,6 +206,7 @@ class _MainScreenState extends State<MainScreen> {
 ///
 /// Foreground Service. The callback function should always be a top-level function.
 ///
+@pragma('vm:entry-point')
 void startCallback() {
   FlutterForegroundTask.setTaskHandler(ForegroundHandler());
 }
