@@ -237,12 +237,24 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     }
 
     /// Configure [ApiClient] with cache
-    final String? token = await _secureStorage.read(SecureStorageKey.token);
+    String? token;
+    try {
+      token = await _secureStorage.read(SecureStorageKey.token);
+    } catch (e) {
+      _secureStorage.deleteAll();
+    }
+
     debugPrint('[init app, API token from secured storage] $token');
     _api.accessToken = token;
 
     /// Set pin code state
-    final String? pin = await _secureStorage.read(SecureStorageKey.pin);
+    String? pin;
+    try {
+      pin = await _secureStorage.read(SecureStorageKey.pin);
+    } catch (e) {
+      _secureStorage.deleteAll();
+    }
+
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
     await _afterConfigInit();

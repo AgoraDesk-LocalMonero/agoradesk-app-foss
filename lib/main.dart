@@ -139,7 +139,14 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();
-    final l = await _secureStorage.read(SecureStorageKey.locale);
+
+    String? l;
+    try {
+      l = await _secureStorage.read(SecureStorageKey.locale);
+    } catch (e) {
+      _secureStorage.deleteAll();
+    }
+
     final String langCode = l ?? Platform.localeName.substring(0, 2);
     final PushModel push = PushModel.fromJson(message.data);
     final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));

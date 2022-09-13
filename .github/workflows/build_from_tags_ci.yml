@@ -1,4 +1,11 @@
-#  https://stefma.medium.com/how-to-store-a-android-keystore-safely-on-github-actions-f0cef9413784
+# Creates release when tag pushed
+# Create tag:
+#  git tag <tagname>
+# Push it:
+#  git push origin <tag_name>
+# After that release will be created.
+
+# Used Github secrets
 #  KEY_PROPERTIES - file
 #  RELEASE_AGORADESK_KEYSTORE
 #  RELEASE_AGORADESK_KEYSTORE_SECRET
@@ -14,8 +21,8 @@ name: BuildFromTagsCI
 
 on:
   push:
-#    tags:
-#      - "v*.*.*"
+    tags:
+      - "v*.*.*"
 jobs:
   build:
     name: Build APK & AppBundle
