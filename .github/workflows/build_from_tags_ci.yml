@@ -31,7 +31,7 @@ jobs:
 
       - name: Save Firebase options files
         run: |
-          printf $FIREBASE_OPTIONS_AGORADESK >> ./lib/firebase_options_agoradesk.dart
+          printf "$FIREBASE_OPTIONS_AGORADESK" >> ./lib/firebase_options_agoradesk.dart
 #          printf ${{ secrets.FIREBASE_OPTIONS_LOCALMONERO }} > ./lib/firebase_options_localmonero.dart
 #          printf ${{ secrets.MAPBOX_KEY }} > ./lib/keys/keys.dart
 
