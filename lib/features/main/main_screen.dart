@@ -153,12 +153,7 @@ class _MainScreenState extends State<MainScreen> {
     } else {
       await SecureStorage.ensureInitialized();
       final SecureStorage _secureStorage = SecureStorage();
-      String? l;
-      try {
-        l = await _secureStorage.read(SecureStorageKey.locale);
-      } catch (e) {
-        _secureStorage.deleteAll();
-      }
+      final String? l = await _secureStorage.read(SecureStorageKey.locale);
       final langCode = l ?? Platform.localeName.substring(0, 2);
       await FlutterForegroundTask.startService(
         notificationTitle:

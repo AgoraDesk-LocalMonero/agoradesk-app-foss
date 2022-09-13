@@ -237,8 +237,10 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     }
 
     /// Configure [ApiClient] with cache
+
     String? token;
     try {
+      // fixing this https://github.com/mogol/flutter_secure_storage/issues/43#issuecomment-471642126
       token = await _secureStorage.read(SecureStorageKey.token);
     } catch (e) {
       _secureStorage.deleteAll();
@@ -248,12 +250,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _api.accessToken = token;
 
     /// Set pin code state
-    String? pin;
-    try {
-      pin = await _secureStorage.read(SecureStorageKey.pin);
-    } catch (e) {
-      _secureStorage.deleteAll();
-    }
+    final String? pin = await _secureStorage.read(SecureStorageKey.pin);
 
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
