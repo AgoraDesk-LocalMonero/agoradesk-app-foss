@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo $(ls)
+#echo $(ls)
 
 echo "$RELEASE_AGORADESK_KEYSTORE" > keystoreIn.jks
 
