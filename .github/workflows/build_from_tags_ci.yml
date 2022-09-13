@@ -49,7 +49,7 @@ jobs:
         run: flutter packages pub run build_runner build --delete-conflicting-outputs
 
       - name: Build APK
-        run: flutter build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+        run: flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 ##      - name: Build APPBUNDLE
 ##        run: flutter build appbundle --release
