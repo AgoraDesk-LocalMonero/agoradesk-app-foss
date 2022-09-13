@@ -67,7 +67,8 @@ jobs:
       - name: Check the build number
         run: |
           echo "${{ steps.yaml-data.outputs.data }}"
-          echo "${{ steps.split.outputs._2 }}"
+          echo "${{ steps.split.outputs._0 }}"
+          echo "${{ steps.split.outputs._1 }}"
 
 
 #      - uses: subosito/flutter-action@v2
