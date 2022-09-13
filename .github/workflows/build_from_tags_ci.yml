@@ -46,20 +46,24 @@ jobs:
 #          mkdir ./lib/keys
 #          printf "const keysMapToken = '$MAPBOX_KEY';" > ./lib/keys/keys.dart
 
-      - uses: actions/setup-java@v1
+      - uses: actions/setup-java@v2
         with:
           java-version: '12.x'
 
-      - uses: subosito/flutter-action@v2
+      - name: Run read-yaml action
+        id: yaml-data
+        uses: KJ002/read-yaml@main
         with:
-          channel: 'stable'
-      - run: |
-          echo cache-path=${{ steps.flutter-action.outputs.cache-path }}
-          echo cache-key=${{ steps.flutter-action.outputs.cache-key }}
-          echo channel=${{ steps.flutter-action.outputs.channel }}
-          echo version=${{ steps.flutter-action.outputs.version }}
-          echo architecture=${{ steps.flutter-action.outputs.architecture }}
-        shell: bash
+          file: './pubspec.yaml'
+          key-path: '["version"]' # Access the runs key then the using key and retuns the value.
+
+      - name: Display read-yaml output
+        run: |
+          echo "${{ steps.yaml-data.outputs.data }}"
+
+#      - uses: subosito/flutter-action@v2
+#        with:
+#          channel: 'stable'
 
 #      - run: flutter pub get
 #
