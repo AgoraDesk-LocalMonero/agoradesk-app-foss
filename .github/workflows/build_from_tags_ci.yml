@@ -61,8 +61,7 @@ jobs:
         env:
           APP_VERSION: ${{ steps.yaml-data.outputs.data }}
         run: |
-          b=${$APP_VERSION%+*}
-          echo "$b"
+          echo "$APP_VERSION" | cut -f2 -d"="
 
 #      - uses: subosito/flutter-action@v2
 #        with:
