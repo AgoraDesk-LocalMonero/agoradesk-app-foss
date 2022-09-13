@@ -75,7 +75,7 @@ jobs:
       - name: Build AgoraDesk APK (Refular + FOSS)
         run: |
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
-          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{appBuildNumber}}.apk
+          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.appBuildNumber }}.apk
 #          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 #          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_$appBuildNumber.apk
 
