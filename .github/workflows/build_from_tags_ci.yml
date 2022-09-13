@@ -46,7 +46,7 @@ jobs:
 #          mkdir ./lib/keys
 #          printf "const keysMapToken = '$MAPBOX_KEY';" > ./lib/keys/keys.dart
 
-      - uses: actions/setup-java@v2
+      - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
 
