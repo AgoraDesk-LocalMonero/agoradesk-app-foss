@@ -5,6 +5,9 @@
 #  git push origin <tag_name>
 # After that release will be created.
 
+# git tag --delete tagname
+# git push --delete origin tagname
+
 # Used Github secrets
 #  KEY_PROPERTIES - file
 #  RELEASE_AGORADESK_KEYSTORE
@@ -21,8 +24,8 @@ name: BuildFromTagsCI
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+#    tags:
+#      - "v*.*.*"
 jobs:
   build:
     name: Build APK & AppBundle
@@ -86,7 +89,6 @@ jobs:
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._1 }}.apk
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
-#         LoalMonero
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/com.localmonero.app_${{ steps.split.outputs._1 }}.apk
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
