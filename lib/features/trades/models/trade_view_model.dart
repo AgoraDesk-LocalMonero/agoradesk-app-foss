@@ -422,7 +422,7 @@ class TradeViewModel extends ViewModel
         (tradeForScreen.releasedAt != null && tradeForScreen.escrowedAt != null && tradeForScreen.fundedAt != null ||
             tradeForScreen.closedAt != null)) {
       tradeStatus = TradeStatus.released;
-      tradeStatusDate = tradeForScreen.fundedAt!;
+      tradeStatusDate = tradeForScreen.fundedAt ?? tradeForScreen.closedAt!;
     }
     // else if (tradeForScreen.releasedAt != null &&
     //     tradeForScreen.transferToSellerTransactionId != null &&
@@ -436,11 +436,12 @@ class TradeViewModel extends ViewModel
       tradeStatus = TradeStatus.disputed;
     } else if (tradeForScreen.paymentCompletedAt != null || paymentCompletedAt != null) {
       tradeStatus = TradeStatus.paymentCompleted;
-      tradeStatusDate = tradeForScreen.paymentCompletedAt!;
+      tradeStatusDate = tradeForScreen.paymentCompletedAt ?? paymentCompletedAt!;
     } else {
       tradeStatus = TradeStatus.created;
       tradeStatusDate = tradeForScreen.createdAt!;
     }
+    print('++++++++++++++++++++++++++++++110 ${tradeStatus}');
     if (initial) {
       _divideMessagesTwoParts(null, initial: initial);
     } else {
@@ -449,6 +450,7 @@ class TradeViewModel extends ViewModel
   }
 
   void _updateStickyBubblePosition(DateTime date) {
+    print('++++++++++++++++++++++++++++++11 -- ${date}');
     for (final m in messagesAfterSticky) {
       if (m.createdAt.isBefore(date)) {
         messagesBeforeSticky.insert(0, m);
