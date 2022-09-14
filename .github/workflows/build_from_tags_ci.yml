@@ -24,8 +24,8 @@ name: BuildFromTagsCI
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+#    tags:
+#      - "v*.*.*"
 
 jobs:
   build:
@@ -34,11 +34,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Decrypt secret
+      - name: AgoradDesk decrypt secret
         env:
-          RELEASE_AGORADESK_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
-          RELEASE_AGORADESK_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
+          RELEASE_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}
+          RELEASE_KEYSTORE: ${{ secrets.RELEASE_AGORADESK_KEYSTORE }}
         run: ./decrypt_secret.sh > ./android/app/agoradesk-keystore.jks
+
+      - name: LocalMonero decrypt secret
+        env:
+          RELEASE_KEYSTORE_SECRET: ${{ secrets.RELEASE_LOCALMONERO_KEYSTORE_SECRET }}
+          RELEASE_KEYSTORE: ${{ secrets.RELEASE_LOCALMONERO_KEYSTORE }}
+        run: ./decrypt_secret.sh > ./android/app/localmonero-keystore.jks
 
       - name: Save Firebase options files
         env:
