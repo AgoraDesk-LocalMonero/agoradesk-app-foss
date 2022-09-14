@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="@string/applicationId"
+    package="com.agoradesk.app"
     android:allowBackup="false"
     android:fullBackupContent="@xml/backup_rules">
     <uses-permission android:name="android.permission.INTERNET"/>
