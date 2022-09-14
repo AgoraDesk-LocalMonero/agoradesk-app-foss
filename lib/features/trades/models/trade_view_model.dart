@@ -405,20 +405,24 @@ class TradeViewModel extends ViewModel
 
   //todo - move to utils
   void _setTradeStatus({bool initial = false}) {
+    late final DateTime tradeStatusDate;
     if (tradeForScreen.releasedAt != null &&
         tradeForScreen.transferToSellerTransactionId == null &&
         tradeForScreen.transferToBuyerTransactionId == null) {
       tradeStatus = TradeStatus.awaitingToSellerWallet;
+      tradeStatusDate = tradeForScreen.releasedAt!;
     } else if (tradeForScreen.releasedAt != null &&
         tradeForScreen.transferToSellerTransactionId != null &&
         tradeForScreen.transferToBuyerTransactionId == null) {
       tradeStatus = TradeStatus.confirmingToSellerWallet;
+      tradeStatusDate = tradeForScreen.releasedAt!;
     } else if (tradeForScreen.releasedAt != null &&
             tradeForScreen.transferToSellerTransactionId != null &&
             tradeForScreen.transferToBuyerTransactionId != null ||
         (tradeForScreen.releasedAt != null && tradeForScreen.escrowedAt != null && tradeForScreen.fundedAt != null ||
             tradeForScreen.closedAt != null)) {
       tradeStatus = TradeStatus.released;
+      tradeStatusDate = tradeForScreen.fundedAt!;
     }
     // else if (tradeForScreen.releasedAt != null &&
     //     tradeForScreen.transferToSellerTransactionId != null &&
@@ -427,14 +431,32 @@ class TradeViewModel extends ViewModel
     // }
     else if (tradeForScreen.canceledAt != null) {
       tradeStatus = TradeStatus.canceled;
+      tradeStatusDate = tradeForScreen.canceledAt!;
     } else if (tradeForScreen.disputedAt != null) {
       tradeStatus = TradeStatus.disputed;
     } else if (tradeForScreen.paymentCompletedAt != null || paymentCompletedAt != null) {
       tradeStatus = TradeStatus.paymentCompleted;
+      tradeStatusDate = tradeForScreen.paymentCompletedAt!;
     } else {
       tradeStatus = TradeStatus.created;
+      tradeStatusDate = tradeForScreen.createdAt!;
     }
-    _divideMessagesTwoParts(null, initial: initial);
+    if (initial) {
+      _divideMessagesTwoParts(null, initial: initial);
+    } else {
+      _updateStickyBubblePosition(tradeStatusDate);
+    }
+  }
+
+  void _updateStickyBubblePosition(DateTime date) {
+    for (final m in messagesAfterSticky) {
+      if (m.createdAt.isBefore(date)) {
+        messagesBeforeSticky.insert(0, m);
+        messagesAfterSticky.removeWhere((e) => e == m);
+        _removeFromAnimatedList(m);
+      }
+    }
+    notifyListeners();
   }
 
   Future releaseEscrow(BuildContext context) async {

@@ -21,7 +21,7 @@
 #  FIREBASE_OPTIONS_LOCALMONERO
 #  RELEASE_TOKEN
 
-name: BuildFromTagsCI
+name: GithubRelease
 
 on:
   push:
