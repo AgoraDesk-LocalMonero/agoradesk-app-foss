@@ -1,7 +1,11 @@
 ### Updates
-1. Fixed bug with push notifications.
-2. Fixed bug with foreground services for receiving notifications when Google Play services are unavailable.
-3. Improved icons.
+1. Two times improved battery life in the FOSS app.
+2. Fixed bug with storage that could lead to login bug after shanging the user.
+3. Android menus made visible.
+4. Improved foreground service warning.
+5. Fix: buttons to AgoraDesk from LocalMonero app.
+6. Improved: feedback buttons behaviour.
+7. Increased animation speed.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
