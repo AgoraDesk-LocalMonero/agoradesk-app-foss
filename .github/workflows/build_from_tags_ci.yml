@@ -24,8 +24,9 @@ name: BuildFromTagsCI
 
 on:
   push:
-#    tags:
-#      - "v*.*.*"
+    tags:
+      - "v*.*.*"
+
 jobs:
   build:
     name: Build APK & AppBundle
