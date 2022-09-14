@@ -90,7 +90,6 @@ class TradeViewModel extends ViewModel
   List<String> tradeTypeMenu = [];
   List<String> assetMenu = [];
 
-  // TradeType? tradeType;
   Asset? _asset;
   int _bodyTabIndex = 0;
   int _prevBodyTabIndex = 0;
@@ -103,7 +102,6 @@ class TradeViewModel extends ViewModel
   XFile? imageForBubble;
 
   final focusMessage = FocusNode();
-  // final focusScreen = FocusNode();
   final ImagePicker picker = ImagePicker();
 
   late int minutesBeforeCancel;
@@ -197,10 +195,6 @@ class TradeViewModel extends ViewModel
   bool get infoTileOpened => _infoTileOpened;
 
   set infoTileOpened(bool v) => updateWith(infoTileOpened: v);
-
-  // bool get sendingImage => _sendingImage;
-  //
-  // set sendingImage(bool v) => updateWith(sendingImage: v);
 
   bool get sendingMessage => _sendingMessage;
 

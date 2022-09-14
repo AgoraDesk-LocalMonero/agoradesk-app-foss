@@ -19,6 +19,7 @@
 #  MAPBOX_KEY
 #  FIREBASE_OPTIONS_AGORADESK
 #  FIREBASE_OPTIONS_LOCALMONERO
+#  RELEASE_TOKEN
 
 name: BuildFromTagsCI
 
@@ -107,4 +108,4 @@ jobs:
         with:
           artifacts: "build/app/outputs/flutter-apk/*.apk"
           bodyFile: "RELEASE.md"
-          token: ${{ secrets.RELEASES_TOKEN }}
+          token: ${{ secrets.RELEASE_TOKEN }}
