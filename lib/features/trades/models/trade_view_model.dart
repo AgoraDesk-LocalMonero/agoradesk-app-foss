@@ -441,7 +441,6 @@ class TradeViewModel extends ViewModel
       tradeStatus = TradeStatus.created;
       tradeStatusDate = tradeForScreen.createdAt!;
     }
-    print('++++++++++++++++++++++++++++++110 ${tradeStatus}');
     if (initial) {
       _divideMessagesTwoParts(null, initial: initial);
     } else {
