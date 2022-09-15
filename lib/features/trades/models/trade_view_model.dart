@@ -94,9 +94,9 @@ class TradeViewModel extends ViewModel
   int _bodyTabIndex = 0;
   int _prevBodyTabIndex = 0;
   ImageSource? _imageSource = ImageSource.gallery;
-  List<MessageBoxModel> messages = [];
-  List<MessageBoxModel> messagesBeforeSticky = [];
-  List<MessageBoxModel> messagesAfterSticky = [];
+  final List<MessageBoxModel> messages = [];
+  final List<MessageBoxModel> messagesBeforeSticky = [];
+  final List<MessageBoxModel> messagesAfterSticky = [];
   final ctrlMessage = TextEditingController();
   XFile? _image;
   XFile? imageForBubble;
@@ -449,14 +449,18 @@ class TradeViewModel extends ViewModel
     }
   }
 
-  void _updateStickyBubblePosition(DateTime date) {
-    print('++++++++++++++++++++++++++++++11 -- ${date}');
+  Future _updateStickyBubblePosition(DateTime date) async {
+    final List<MessageBoxModel> listToUpdate = [];
     for (final m in messagesAfterSticky) {
       if (m.createdAt.isBefore(date)) {
-        messagesBeforeSticky.insert(0, m);
-        messagesAfterSticky.removeWhere((e) => e == m);
-        _removeFromAnimatedList(m);
+        listToUpdate.add(m);
       }
+    }
+    for (final m in listToUpdate.reversed) {
+      messagesBeforeSticky.insert(0, m);
+      _removeFromAnimatedList(m);
+      await Future.delayed(const Duration(milliseconds: 10));
+      messagesAfterSticky.removeWhere((e) => e == m);
     }
     notifyListeners();
   }
