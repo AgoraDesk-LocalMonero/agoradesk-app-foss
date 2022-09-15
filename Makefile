@@ -32,83 +32,83 @@ test:
 # Bundle
 .PHONY: build-bundle-all
 build-bundle-all:
-	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
-	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build appbundle --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build appbundle --flavor localmonero --dart-define=app.flavor=localmonero
 
 .PHONY: build-bundle-ad
 build-bundle-ad:
-	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build appbundle --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-bundle-lm
 build-bundle-lm:
-	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build appbundle --flavor localmonero --dart-define=app.flavor=localmonero
 
 # FOSS bundle
 .PHONY: build-foss-bundle-all
 build-foss-bundle-all:
-	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
-	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+	$(FLUTTER) build appbundle --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+	$(FLUTTER) build appbundle --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
 
 .PHONY: build-foss-bundle-ad
 build-foss-bundle-ad:
-	$(FLUTTER) build appbundle --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+	$(FLUTTER) build appbundle --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 
 .PHONY: build-foss-bundle-lm
 build-foss-bundle-lm:
-	$(FLUTTER) build appbundle --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+	$(FLUTTER) build appbundle --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
 
 # ALL APKs
 .PHONY: build-apks-for-release
 build-apks-for-release:
-	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 	mv /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/agoradesk/release/*.apk /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
 	mv /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/localmonero/release/*.apk /Users/macbook/projects/agoradesk-app-foss/build/app/outputs/apk/
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
-	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 # APK
 .PHONY: build-apk-all
 build-apk-all:
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
-	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-apk-ad
 build-apk-ad:
-	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-apk-lm
 build-apk-lm:
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero
 
 # APK FOSS
 .PHONY: build-foss-apk-all
 build-foss-apk-all:
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
-	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 
 .PHONY: build-foss-apk-ad
 build-foss-apk-ad:
-	$(FLUTTER) build apk --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
 
 .PHONY: build-foss-apk-lm
 build-foss-apk-lm:
-	$(FLUTTER) build apk --verbose --flavor localmonero --dart-define=app.includeFcm=localmonero --dart-define=app.includeFcm=false
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.includeFcm=localmonero --dart-define=app.includeFcm=false
 
 # iOS
 .PHONY: build-ios-all
 build-ios-all:
-	$(FLUTTER) build ipa --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build ipa --flavor localmonero --dart-define=app.flavor=localmonero
 	mv /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/macbook/projects/agoradesk-app-foss/build/ios/ipa/Localmonero.ipa
-	$(FLUTTER) build ipa --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build ipa --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-ios-ad
 build-ios-ad:
-	$(FLUTTER) build ipa --verbose --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build ipa --flavor agoradesk --dart-define=app.flavor=agoradesk
 
 .PHONY: build-ios-lm
 build-ios-lm:
-	$(FLUTTER) build ipa --verbose --flavor localmonero --dart-define=app.flavor=localmonero
+	$(FLUTTER) build ipa --flavor localmonero --dart-define=app.flavor=localmonero
 
 #
 #
