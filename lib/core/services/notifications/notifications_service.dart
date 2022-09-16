@@ -146,12 +146,22 @@ class NotificationsService with ForegroundMessagesMixin {
         sound: true,
       );
       userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
-      // }
       if (userPermission) {
-        fcm!.getToken();
-        final token = await fcm!.getToken();
-        debugPrint('[$runtimeType] FirebaseMessaging pushtoken created: $token');
-        _tokenUpdate(token);
+        String? token;
+        try {
+          token = await fcm!.getToken();
+        } catch (e) {
+          //todo - cover this logic with tests
+          if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
+            GetIt.I<AppParameters>().isGoogleAvailable = false;
+          }
+
+          debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
+        }
+        if (token != null) {
+          debugPrint('++++ FirebaseMessaging pushtoken created: $token');
+          _tokenUpdate(token);
+        }
       }
     }
   }

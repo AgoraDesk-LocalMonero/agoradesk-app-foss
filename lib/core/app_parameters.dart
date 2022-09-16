@@ -22,7 +22,6 @@ class AppParameters {
     required this.urlSupport,
     required this.urlFaq,
     required this.urlReceipt,
-    required this.isGoogleAvailable,
     required this.isAgora,
     required this.includeFcm,
   });
@@ -46,7 +45,6 @@ class AppParameters {
   final String urlSupport;
   final String urlFaq;
   final String urlReceipt;
-  final bool isGoogleAvailable;
   final bool isAgora;
   final bool includeFcm;
 
@@ -120,4 +118,5 @@ class AppParameters {
   /// state parameters that could be changed during app lifecycle
   ///
   String? openedTradeId;
+  bool isGoogleAvailable = true;
 }

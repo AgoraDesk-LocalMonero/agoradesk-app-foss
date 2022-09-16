@@ -27,10 +27,9 @@ AppParameters initAppParameters(
       urlSupport: 'https://localmonero.co/support',
       urlFaq: 'https://localmonero.co/faq',
       urlReceipt: 'http://agoradesk.com/receipt',
-      isGoogleAvailable: isGoogleAvailable,
       isAgora: false,
       includeFcm: includeFcm,
-    );
+    )..isGoogleAvailable = isGoogleAvailable;
   }
   return AppParameters(
     flavor: flavor,
@@ -52,8 +51,7 @@ AppParameters initAppParameters(
     urlSupport: 'https://agoradesk.com/support',
     urlFaq: 'https://agoradesk.com/faq',
     urlReceipt: 'http://agoradesk.com/receipt',
-    isGoogleAvailable: isGoogleAvailable,
     isAgora: true,
     includeFcm: includeFcm,
-  );
+  )..isGoogleAvailable = isGoogleAvailable;
 }

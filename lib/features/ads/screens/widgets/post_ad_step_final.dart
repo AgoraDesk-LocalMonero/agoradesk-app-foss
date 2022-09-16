@@ -98,7 +98,7 @@ class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMeth
                   model.tradeType == TradeType.ONLINE_SELL
                       ? AdsInfoLineTwoCells(
                           leftText: I18n.of(context)!.ads_first_trade_max_limit(model.selectedCurrency!.code),
-                          rightText: (model.tradeMaxLimit ?? 0).toString() + ' ' + model.selectedCurrency!.code,
+                          rightText: (model.firstTradeMaxLimit ?? 0).toString() + ' ' + model.selectedCurrency!.code,
                         )
                       : const SizedBox(),
                   model.tradeType == TradeType.ONLINE_BUY

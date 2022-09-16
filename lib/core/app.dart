@@ -139,7 +139,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       appState: appState,
       authService: _authService,
     )..init();
-
     _pollingService = PollingService(
       isAgora: GetIt.I<AppParameters>().isAgora,
       api: _api,

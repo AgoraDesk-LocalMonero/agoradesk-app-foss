@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
@@ -27,6 +26,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 export 'package:agoradesk/features/ads/data/models/asset.dart';
 export 'package:agoradesk/features/ads/data/models/price_input_type.dart';
@@ -80,7 +80,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
   final ctrl5MethodInfo = TextEditingController();
   final ctrl5Terms = TextEditingController();
   final ctrl6MinimumScore = TextEditingController();
-  final ctrl6TradeMaxLimit = TextEditingController();
+  final ctrl6FirstTradeMaxLimit = TextEditingController();
   final ctrl6PaymentWindow = TextEditingController();
 
   late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
@@ -128,7 +128,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
   bool _verifiedEmailOnly = false;
   double? minAmount;
   double? maxAmount;
-  double? tradeMaxLimit;
+  double? firstTradeMaxLimit;
   double? _calculatedPrice;
   double _balanceBtc = 0;
   double _balanceXmr = 0;
@@ -320,9 +320,9 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
         verifiedEmailOnly = ad!.verifiedEmailRequired ?? false;
         ctrl6MinimumScore.text = ad!.requireFeedbackScore != null ? ad!.requireFeedbackScore.toString() : '';
         if (ad!.asset == Asset.BTC) {
-          ctrl6TradeMaxLimit.text = ad!.firstTimeLimitBtc != null ? ad!.firstTimeLimitBtc.toString() : '';
+          ctrl6FirstTradeMaxLimit.text = ad!.firstTimeLimitBtc != null ? ad!.firstTimeLimitBtc.toString() : '';
         } else {
-          ctrl6TradeMaxLimit.text = ad!.firstTimeLimitXmr != null ? ad!.firstTimeLimitXmr.toString() : '';
+          ctrl6FirstTradeMaxLimit.text = ad!.firstTimeLimitXmr != null ? ad!.firstTimeLimitXmr.toString() : '';
         }
         ctrl2InputLocation.text = ad!.locationString ?? '';
         displayClear = ctrl2InputLocation.text.isNotEmpty;
@@ -420,6 +420,8 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
         minAmount: minAmount,
         maxAmount: maxAmount,
         limitToFiatAmounts: restrictLimit,
+        firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
+        firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
         trackMaxAmount: trackMaxAmount,
         paymentMethodDetail: ctrl5MethodDetails.text.isEmpty ? null : ctrl5MethodDetails.text,
         paymentMethodInfo: ctrl5MethodInfo.text.isEmpty ? null : ctrl5MethodInfo.text,
@@ -740,11 +742,11 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
         notifyListeners();
       });
     });
-    ctrl6TradeMaxLimit.addListener(() {
+    ctrl6FirstTradeMaxLimit.addListener(() {
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 200), () {
-        if (ctrl6TradeMaxLimit.text.isEmpty || validateDouble(ctrl6TradeMaxLimit.text)) {
+        if (ctrl6FirstTradeMaxLimit.text.isEmpty || validateDouble(ctrl6FirstTradeMaxLimit.text)) {
           tradeMaxLimitValid = true;
-          tradeMaxLimit = double.tryParse(ctrl4MinAmount.text);
+          firstTradeMaxLimit = double.tryParse(ctrl6FirstTradeMaxLimit.text);
         } else {
           tradeMaxLimitValid = false;
         }
@@ -831,7 +833,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
     ctrl5MethodInfo.dispose();
     ctrl5Terms.dispose();
     ctrl6MinimumScore.dispose();
-    ctrl6TradeMaxLimit.dispose();
+    ctrl6FirstTradeMaxLimit.dispose();
     ctrl6PaymentWindow.dispose();
     EasyDebounce.cancel(_kDebounceFormulaTag);
     EasyDebounce.cancel(_kDebounceTag);

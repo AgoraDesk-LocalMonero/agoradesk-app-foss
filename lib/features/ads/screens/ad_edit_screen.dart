@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
@@ -42,6 +41,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class AdEditScreen extends StatefulWidget {
   const AdEditScreen({
@@ -439,7 +439,7 @@ class _AdEditScreenState extends State<AdEditScreen>
                 : const SizedBox(),
             model.tradeType == TradeType.ONLINE_SELL
                 ? AdMaxLimit(
-                    controller: model.ctrl6TradeMaxLimit,
+                    controller: model.ctrl6FirstTradeMaxLimit,
                     asset: model.asset!,
                   )
                 : const SizedBox(),

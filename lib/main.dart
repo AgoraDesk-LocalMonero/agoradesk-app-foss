@@ -68,7 +68,6 @@ void main() async {
   ///
 
   final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
-
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
       flavor,
@@ -92,7 +91,6 @@ void main() async {
       ),
     ],
   );
-
   if (kDebugMode) {
     runApp(const App());
     return;
