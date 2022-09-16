@@ -4,8 +4,8 @@ import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:flutter/material.dart';
 
-class SendAssetTectField extends StatelessWidget {
-  const SendAssetTectField({
+class SendAssetTextField extends StatelessWidget {
+  const SendAssetTextField({
     Key? key,
     required this.focusNode,
     required this.textEditingController,

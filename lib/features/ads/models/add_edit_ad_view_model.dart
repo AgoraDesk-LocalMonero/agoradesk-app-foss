@@ -7,6 +7,7 @@ import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
+import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
@@ -36,7 +37,7 @@ const _kDelayAfterPress = Duration(milliseconds: 200);
 const _kDebounceTag = '_kDebounceTag';
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
 
-class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, CountryInfoMixin {
+class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, CountryInfoMixin, ClipboardMixin {
   AddEditAdViewModel({
     required AdsRepository adsRepository,
     required WalletService walletService,
@@ -64,6 +65,8 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
   //   apiKey: AppConst.mapboxToken,
   //   limit: 20,
   // );
+
+  final FocusNode addressFocus = FocusNode();
 
   final pageController = PageController();
   late final TabController tabController;
@@ -139,10 +142,15 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
   bool _loadingBalance = false;
   String _priceEquation = '';
   bool _displayClear = false;
+  bool _fieldHasValue = false;
 
   bool get displayClear => _displayClear;
 
   set displayClear(bool v) => updateWith(displayClear: v);
+
+  bool get fieldHasValue => _fieldHasValue;
+
+  set fieldHasValue(bool v) => updateWith(fieldHasValue: v);
 
   bool get isReadyToSave => _isReadyToSave;
 
@@ -674,9 +682,15 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
 
   void handleWalletAddress() async {
     final address = ctrl32WalletAddress.text;
-    isWalletValid = validateWalletAddress(asset!, address);
-    if (isWalletValid && asset == Asset.BTC) {
-      await getBtcFees(address: address);
+    if (address.isEmpty) {
+      fieldHasValue = false;
+      isWalletValid = false;
+    } else {
+      fieldHasValue = true;
+      isWalletValid = validateWalletAddress(asset!, address);
+      if (isWalletValid && asset == Asset.BTC) {
+        await getBtcFees(address: address);
+      }
     }
     notifyListeners();
   }
@@ -707,6 +721,32 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
     ctrl4RestrictLimit.addListener(() {
       restrictLimit = ctrl4RestrictLimit.text;
     });
+  }
+
+  void paste() async {
+    ctrl32WalletAddress.text = await pasteFromClipboard();
+  }
+
+  void clear() async {
+    ctrl32WalletAddress.text = '';
+  }
+
+  void handleScannedCode(Object? code) async {
+    String address = '';
+    if (code is String && code.isNotEmpty) {
+      address = code;
+      if (code.contains('monero:')) {
+        address = code.replaceFirst('monero:', '');
+      }
+      if (code.contains('bitcoin:')) {
+        address = code.replaceFirst('bitcoin:', '');
+      }
+      if (validateWalletAddress(asset!, address)) {
+        ctrl32WalletAddress.text = address;
+        await Future.delayed(const Duration(milliseconds: 100));
+        addressFocus.unfocus();
+      }
+    }
   }
 
   void _checkTradeTypesForPossibility() {
@@ -742,6 +782,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
         notifyListeners();
       });
     });
+
     ctrl6FirstTradeMaxLimit.addListener(() {
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 200), () {
         if (ctrl6FirstTradeMaxLimit.text.isEmpty || validateDouble(ctrl6FirstTradeMaxLimit.text)) {
@@ -775,6 +816,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
     double? price,
     double? currentEditPrice,
     double? calculatedPrice,
+    bool? fieldHasValue,
     bool? marginInputValid,
     bool? formulaInputValid,
     bool? step3Ready,
@@ -797,6 +839,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
     _priceInputType = priceInputType ?? _priceInputType;
     _displayClear = displayClear ?? _displayClear;
     _asset = asset ?? _asset;
+    _fieldHasValue = fieldHasValue ?? _fieldHasValue;
     _checkTradeTypesForPossibility();
     _price = price ?? _price;
     _marginInputValid = marginInputValid ?? _marginInputValid;
@@ -820,6 +863,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
 
   @override
   void dispose() {
+    print('++++++++++++++++++++++++++++++112222');
     ctrl3MarginInput.dispose();
     ctrl3FixedPrice.dispose();
     ctrl3FormulaInput.dispose();
@@ -835,6 +879,7 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
     ctrl6MinimumScore.dispose();
     ctrl6FirstTradeMaxLimit.dispose();
     ctrl6PaymentWindow.dispose();
+    addressFocus.dispose();
     EasyDebounce.cancel(_kDebounceFormulaTag);
     EasyDebounce.cancel(_kDebounceTag);
     _balanceSubcription.cancel();

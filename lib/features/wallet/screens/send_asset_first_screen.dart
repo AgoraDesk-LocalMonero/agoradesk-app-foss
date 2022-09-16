@@ -60,7 +60,7 @@ class SendAssetFirstScreen extends StatelessWidget {
                             style: context.txtBodySmallN60,
                           ),
                           const SizedBox(height: 12),
-                          SendAssetTectField(
+                          SendAssetTextField(
                             asset: asset,
                             focusNode: model.addressFocus,
                             textEditingController: model.ctrlAddress,

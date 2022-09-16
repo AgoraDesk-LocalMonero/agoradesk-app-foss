@@ -5,6 +5,9 @@ import 'package:agoradesk/core/widgets/branded/box_info_general.dart';
 import 'package:agoradesk/features/ads/data/models/network_fees.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
+import 'package:agoradesk/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -26,7 +29,9 @@ class PostAdStep32OnlineBuy extends StatefulWidget {
 class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) => widget.model.getBtcFees());
+    if (widget.model.asset == Asset.BTC) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => widget.model.getBtcFees());
+    }
     super.initState();
   }
 
@@ -69,7 +74,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
               child: AgoraDialogInfoWithMarkdown(
                 title: context.intl.what_is_settlement_fee_level,
                 text: context.intl.settlement_fee_level_selector_explanation,
-                linkTitle: context.intl.wallet250Sbsend250Sbpriority250Sbfaq8722Sblink,
+                linkTitle: context.intl.what_is_settlement_fee_level,
               ),
             ),
           ],
@@ -146,13 +151,19 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
           style: context.txtBodySmallN60N50,
         ),
         const SizedBox(height: 8),
-        TextFormField(
-          controller: widget.model.ctrl32WalletAddress,
-          decoration: context.decorationTxtFieldMain.copyWith(
-            hintText: context.intl
-                .address8722Sbinput250Sbbuyer8722Sbsettlement8722Sbaddress250Sblabel(widget.model.asset!.key()),
-            errorText: widget.model.isWalletValid || widget.model.ctrl32WalletAddress.text.isEmpty ? null : ' ',
-          ),
+        SendAssetTextField(
+          asset: widget.model.asset!,
+          focusNode: widget.model.addressFocus,
+          textEditingController: widget.model.ctrl32WalletAddress,
+          hasValue: widget.model.fieldHasValue,
+          clear: widget.model.clear,
+          paste: widget.model.paste,
+          qrPressed: () async {
+            final code = await AutoRouter.of(context).push(
+              const QrScanRoute(),
+            );
+            widget.model.handleScannedCode(code);
+          },
         ),
         const SizedBox(height: 12),
         BoxInfoGeneral(
