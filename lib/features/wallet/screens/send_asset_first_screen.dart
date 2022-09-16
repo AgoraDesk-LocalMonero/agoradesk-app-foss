@@ -1,13 +1,12 @@
-import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
-import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/send_asset_view_model.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -61,45 +60,19 @@ class SendAssetFirstScreen extends StatelessWidget {
                             style: context.txtBodySmallN60,
                           ),
                           const SizedBox(height: 12),
-                          TextField(
+                          SendAssetTectField(
+                            asset: asset,
                             focusNode: model.addressFocus,
-                            controller: model.ctrlAddress,
-                            decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                                  labelText: context.intl.wallet250Sbsend250Sbreceiving8722Sbaddress(asset.name),
-                                  suffixIcon: SizedBox(
-                                    width: model.fieldHasValue ? 118 : 118 - 32,
-                                    child: Row(
-                                      children: [
-                                        AnimatedOpacity(
-                                          opacity: model.fieldHasValue ? 1.0 : 0.0,
-                                          duration: const Duration(milliseconds: 800),
-                                          child: model.fieldHasValue
-                                              ? ButtonSquareIcon(
-                                                  iconData: AgoraFont.x,
-                                                  onPressed: () => model.clear(),
-                                                )
-                                              : const SizedBox(),
-                                        ),
-                                        const SizedBox(width: 4),
-                                        ButtonSquareIcon(
-                                          iconData: AgoraFont.clipboard,
-                                          onPressed: () => model.paste(),
-                                        ),
-                                        const SizedBox(width: 4),
-                                        ButtonSquareIcon(
-                                          iconData: AgoraFont.qrcode_scan,
-                                          onPressed: () async {
-                                            final code = await AutoRouter.of(context).push(
-                                              const QrScanRoute(),
-                                            );
-                                            model.handleScannedCode(code);
-                                          },
-                                        ),
-                                        const SizedBox(width: 10),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                            textEditingController: model.ctrlAddress,
+                            hasValue: model.fieldHasValue,
+                            clear: model.clear,
+                            paste: model.paste,
+                            qrPressed: () async {
+                              final code = await AutoRouter.of(context).push(
+                                const QrScanRoute(),
+                              );
+                              model.handleScannedCode(code);
+                            },
                           ),
                         ],
                       ),
