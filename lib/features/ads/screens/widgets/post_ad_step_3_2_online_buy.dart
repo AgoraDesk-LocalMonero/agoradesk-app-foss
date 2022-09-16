@@ -1,6 +1,7 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_info_link.dart';
+import 'package:agoradesk/core/widgets/branded/box_info_general.dart';
 import 'package:agoradesk/features/ads/data/models/network_fees.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
@@ -142,7 +143,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
         const SizedBox(height: 12),
         Text(
           context.intl.enter_your_settlement_wallet_address,
-          style: context.txtBodySmallN60,
+          style: context.txtBodySmallN60N50,
         ),
         const SizedBox(height: 8),
         TextFormField(
@@ -153,10 +154,9 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
             errorText: widget.model.isWalletValid || widget.model.ctrl32WalletAddress.text.isEmpty ? null : ' ',
           ),
         ),
-        const SizedBox(height: 8),
-        Text(
-          context.intl.ads_enter_verify_address(GetIt.I<AppParameters>().appName),
-          style: context.txtBodySmallN60,
+        const SizedBox(height: 12),
+        BoxInfoGeneral(
+          text: context.intl.ads_enter_verify_address(GetIt.I<AppParameters>().appName),
         ),
       ],
     );
