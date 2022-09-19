@@ -863,7 +863,6 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
 
   @override
   void dispose() {
-    print('++++++++++++++++++++++++++++++112222');
     ctrl3MarginInput.dispose();
     ctrl3FixedPrice.dispose();
     ctrl3FormulaInput.dispose();
