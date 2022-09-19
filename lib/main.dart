@@ -101,6 +101,7 @@ void main() async {
         ..dsn = GetIt.I<AppParameters>().sentryDsn
         ..reportSilentFlutterErrors = true
         ..attachStacktrace = false
+        ..enableAutoSessionTracking = false
         ..tracesSampleRate = 1.0;
     },
     appRunner: () => runApp(const App()),
