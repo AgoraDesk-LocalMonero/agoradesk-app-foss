@@ -1,7 +1,11 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class ThemeColors {
   ThemeColors._();
+
+  static final bool isAgora = GetIt.I<AppParameters>().isAgora;
 
   static const chatRed = Color(0xFFBE3F3A);
 
@@ -20,8 +24,8 @@ class ThemeColors {
   static const surface1Light = Color(0xFFeef3fd);
   static const surface1Dark = Color(0xFF212529);
   static const surface2Light = Color(0xFFe7effd);
-  static const surface2Dark = Color(0xFF252a30);
-  static const surface3Light = Color(0xFFdfe9fc);
+  static final surface2Dark = isAgora ? const Color(0xFF252a30) : const Color(0xFF262931);
+  static final surface3Light = isAgora ? const Color(0xFFdfe9fc) : const Color(0xFFe5e9f6);
   static const surface3Dark = Color(0xFF2a2f37);
   static const surface4Light = Color(0xFFdce7fb);
   static const surface4Dark = Color(0xFF2b3139);
@@ -34,8 +38,8 @@ class ThemeColors {
   static const primary40 = Color(0xFF0052DF);
 
   static const primary70Light = Color(0xFF77ADFC);
-  static const primary70 = Color(0xFF89A8FF);
-  static const primary80 = Color(0xFFA5C8FF);
+  static final primary70 = isAgora ? const Color(0xFF89A8FF) : const Color(0xFF77ADFC);
+  static final primary80 = isAgora ? const Color(0xFFB2C5FF) : const Color(0xFFA5C8FF);
   // static const primary80Light = Color(0xFFB2C5FF);
   // static const primary80Dark = Color(0xFFB2C5FF);
   static const primary90Light = Color(0xFFdae2ff);
@@ -43,12 +47,12 @@ class ThemeColors {
   static const primary95Dark = Color(0xFFEEF0FF);
   static const primary95Light = Color(0xFFEEF0FF);
 
-  static const tonal = Color(0xFF1E4792);
+  static final tonal = isAgora ? const Color(0xFF1E4792) : const Color(0xFF24518E);
 
   static const secondary10 = Color(0xFF000C61);
   static const secondary40 = Color(0xFF3D52C9);
   static const secondary80Light = Color(0xFFffffff);
-  static const secondary80 = Color(0xFFB9C3FF);
+  static final secondary80 = isAgora ? const Color(0xFFB9C3FF) : const Color(0xFFA5C8FF);
   static const secondary90 = Color(0xFFd8e2ff);
   static const secondary95 = Color(0xFFDDE0FF);
 
@@ -72,7 +76,7 @@ class ThemeColors {
 
   static const highlight = Color(0xFFC0D0FE);
   static const highlightLight = Color(0xFFB2C5FF);
-  static const highlightDark = Color(0xFF4C6EC0);
+  static final highlightDark = isAgora ? const Color(0xFF4C6EC0) : const Color(0xFF365D93);
 
   static const info = Color(0xFF2E334A);
   static const infoOutline = Color(0xFF40496B);

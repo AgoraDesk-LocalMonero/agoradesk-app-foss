@@ -37,7 +37,7 @@ class PostAdStep6 extends StatelessWidget {
               : const SizedBox(),
           model.tradeType == TradeType.ONLINE_SELL
               ? AdMaxLimit(
-                  controller: model.ctrl6TradeMaxLimit,
+                  controller: model.ctrl6FirstTradeMaxLimit,
                   asset: model.asset!,
                 )
               : const SizedBox(),

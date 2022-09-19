@@ -68,7 +68,6 @@ void main() async {
   ///
 
   final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
-
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
       flavor,
@@ -92,7 +91,6 @@ void main() async {
       ),
     ],
   );
-
   if (kDebugMode) {
     runApp(const App());
     return;
@@ -103,6 +101,7 @@ void main() async {
         ..dsn = GetIt.I<AppParameters>().sentryDsn
         ..reportSilentFlutterErrors = true
         ..attachStacktrace = false
+        ..enableAutoSessionTracking = false
         ..tracesSampleRate = 1.0;
     },
     appRunner: () => runApp(const App()),
