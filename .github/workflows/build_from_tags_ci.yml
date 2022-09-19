@@ -1,6 +1,6 @@
 # Creates release when tag pushed
 # Create tag:
-#  git tag <tagname>
+#  git tag vX.X.X
 # Push it:
 #  git push origin <tag_name>
 # After that release will be created.
@@ -101,7 +101,7 @@ jobs:
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/com.localmonero.app_${{ steps.split.outputs._1 }}.apk
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/com.localmonero.app-foss_${{ steps.split.outputs._1 }}.apk
-
+          rm build/app/outputs/flutter-apk/app.apk
 
       - name: Create Github Release
         uses: ncipollo/release-action@v1
