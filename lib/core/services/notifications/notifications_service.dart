@@ -73,8 +73,8 @@ class NotificationsService with ForegroundMessagesMixin {
             ///
             /// get trade it in case it's screen is opened in the app
             ///
-
-            if (GetIt.I<AppParameters>().openedTradeId != push.objectId) {
+            final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
+            if (openedTradeId != push.objectId) {
               await AwesomeNotifications().createNotification(
                 content: NotificationContent(
                   id: Random().nextInt(1000000),
@@ -155,7 +155,6 @@ class NotificationsService with ForegroundMessagesMixin {
           if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
             GetIt.I<AppParameters>().isGoogleAvailable = false;
           }
-
           debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
         }
         if (token != null) {
@@ -230,6 +229,31 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   /// Get notifications from the server
   ///
+  Future markTradeNotificationsAsRead({String? tradeId}) async {
+    int markedAsReadCounter = 0;
+    if (tradeId != null && tradeId.isNotEmpty) {
+      int index = 0;
+      await getNotifications();
+      for (final n in appState.notifications) {
+        if (n.contactId == tradeId && n.read == false) {
+          markedAsReadCounter++;
+          await accountService.markAsRead(n.id);
+          appState.notifications[index] = appState.notifications[index].copyWith(read: true);
+        }
+        index++;
+      }
+      await Future.delayed(const Duration(seconds: 1));
+      final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
+      await AwesomeNotifications().setGlobalBadgeCounter(badgesCounter - markedAsReadCounter);
+      // remove red dot in case all notifiations are read
+      appState.hasUnread =
+          !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
+    }
+  }
+
+  ///
+  /// Get notifications from the server
+  ///
   Future getNotifications() async {
     if (authService.isAuthenticated) {
       late bool hasUnreaded;
@@ -290,11 +314,12 @@ class NotificationsService with ForegroundMessagesMixin {
   void startListenAwesomeNotificationsPressed() {
     AwesomeNotifications().actionStream.listen((notification) {
       try {
-        AwesomeNotifications().getGlobalBadgeCounter().then(
-              (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
-            );
+        // AwesomeNotifications().getGlobalBadgeCounter().then(
+        //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
+        //     );
         final PushModel push = PushModel.fromJson(notification.payload ?? {});
         if (push.objectId != null && push.objectId!.isNotEmpty) {
+          markTradeNotificationsAsRead(tradeId: push.objectId!);
           _handleRoutes(push.objectId!);
         }
       } catch (e) {

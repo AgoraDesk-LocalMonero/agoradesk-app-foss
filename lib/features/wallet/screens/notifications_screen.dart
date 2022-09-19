@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -12,6 +11,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({
@@ -103,16 +103,5 @@ class _PopupMenu extends StatelessWidget {
       ),
       onPressed: model.markAllRead,
     );
-    // return AgoraPopupMenuButton(
-    //   icon: AgoraFont.check_circle,
-    //   itemBuilder: (context) => [
-    //     PopupMenuItem(
-    //       padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-    //       child: Text(context.intl.notification250Sbmarked8722Sball8722Sbread),
-    //       onTap: () => model.markAllRead(),
-    //       value: 1,
-    //     ),
-    //   ],
-    // );
   }
 }

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -14,6 +13,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
   NotificationsViewModel({
@@ -51,10 +51,7 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
 
   @override
   void init() {
-    // if (!_initialized) {
     _notificationStream = _appState.notifications$.listen(_updateNotifications);
-    // _initialized = true;
-    // }
     super.init();
   }
 
@@ -110,6 +107,7 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
       }
       notifications.clear();
       notifications.addAll(notificationsMarkedAsRead);
+      AwesomeNotifications().dismissAllNotifications();
       notifyListeners();
     } else {
       handleApiError(res.left, context);
