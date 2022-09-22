@@ -43,7 +43,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
                           icon: Icon(
                             AgoraFont.arrow_left,
                             size: 18,
-                            color: context.colPrimary80,
+                            color: context.colP80,
                           ),
                           onPressed: () => context.popRoute(),
                         ),
@@ -77,7 +77,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
                             child: DotsIndicator(
                               decorator: DotsDecorator(
                                 color: context.colN30,
-                                activeColor: context.colPrimary80,
+                                activeColor: context.colP80,
                               ),
                               dotsCount: slides.length,
                               position: model.page,

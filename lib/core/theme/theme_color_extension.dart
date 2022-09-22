@@ -29,6 +29,7 @@ extension ColorExtension on ColorScheme {
   Color get n20SurfLight => brightness == Brightness.dark ? ThemeColors.neutral20 : ThemeColors.surface4Light;
   Color get n30P80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary80;
   Color get n30P90 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary90;
+  Color get p20White => brightness == Brightness.dark ? ThemeColors.primary20 : Colors.white;
   Color get p70P40 => brightness == Brightness.dark ? ThemeColors.primary70 : ThemeColors.primary40;
   Color get p80P40 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary40;
   Color get p90P10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
@@ -59,19 +60,19 @@ extension ColorExtension on ColorScheme {
 
   Color get surf5darkSurfLight => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surfaceLight;
 
-  Color get primary20 => brightness == Brightness.dark ? ThemeColors.primary20Dark : ThemeColors.primary20Light;
+  Color get primary20 => ThemeColors.primary20;
 
   Color get primary40 => brightness == Brightness.dark ? ThemeColors.primary40 : ThemeColors.primary40;
 
   Color get primary70 => ThemeColors.primary70;
 
-  Color get p80P70 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70Light;
+  Color get p80P70 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70;
 
   Color get primary90 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
 
   Color get primary95 => brightness == Brightness.dark ? ThemeColors.primary95Dark : ThemeColors.primary95Light;
 
-  Color get tonalP90 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90Light;
+  Color get tonalP90 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90;
 
   Color get yellow85 => brightness == Brightness.dark ? const Color(0xffFFC970) : const Color(0xffFFC970);
 
@@ -120,7 +121,7 @@ extension ColorExtension on ColorScheme {
 
   Color get neutral90 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral10;
 
-  Color get highlight => brightness == Brightness.dark ? ThemeColors.highlightDark : ThemeColors.highlightLight;
+  Color get highlight => brightness == Brightness.dark ? ThemeColors.highlightDark : ThemeColors.highlight;
 
   Color get tipColor => brightness == Brightness.dark ? Colors.grey : Colors.grey;
 

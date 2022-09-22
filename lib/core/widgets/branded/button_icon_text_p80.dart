@@ -27,7 +27,7 @@ class ButtonIconTextP80 extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: context.colPrimary80,
+            color: context.colP80,
             size: 18,
           ),
           const SizedBox(width: 4),

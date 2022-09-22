@@ -109,7 +109,7 @@ class _FormulaBody extends StatelessWidget {
                             Icon(
                               AgoraFont.calculator_alt,
                               size: 18,
-                              color: context.colPrimary80,
+                              color: context.colP80,
                             ),
                             const SizedBox(width: 12),
                             Text(
@@ -122,7 +122,7 @@ class _FormulaBody extends StatelessWidget {
                           theme: ExpandableThemeData(
                             expandIcon: AgoraFont.plus,
                             collapseIcon: AgoraFont.minus,
-                            iconColor: context.colPrimary80,
+                            iconColor: context.colP80,
                             iconSize: 20,
                             iconRotationAngle: math.pi / 2,
                             iconPadding: const EdgeInsets.only(right: 5),
@@ -242,7 +242,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/GBP',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdgbp',
                 ),
               ),
@@ -251,7 +251,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/EUR',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdeur',
                 ),
               ),
@@ -260,7 +260,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/AUD',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdaud',
                 ),
               ),
@@ -269,7 +269,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/RUB',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdrub',
                 ),
               ),
@@ -282,7 +282,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/CNY',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdcny',
                 ),
               ),
@@ -291,7 +291,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/KES',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdkes',
                 ),
               ),
@@ -300,7 +300,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/VES',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdves',
                 ),
               ),
@@ -309,7 +309,7 @@ class _FormulaBody extends StatelessWidget {
                 flex: 1,
                 child: ButtonOutlinedP80Radius4(
                   title: 'USD/KAD',
-                  color: context.colSurf5darkSurfLight,
+                  color: context.colS5darkSLight,
                   onPressed: () => textController.text += 'usdkad',
                 ),
               ),
@@ -335,7 +335,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: '+',
                 onPressed: () => textController.text += '+',
               ),
@@ -344,7 +344,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: '-',
                 onPressed: () => textController.text += '-',
               ),
@@ -353,7 +353,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: '(',
                 onPressed: () => textController.text += '(',
               ),
@@ -362,7 +362,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: ')',
                 onPressed: () => textController.text += ')',
               ),
@@ -375,7 +375,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: '*',
                 onPressed: () => textController.text += '*',
               ),
@@ -384,7 +384,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: '÷',
                 onPressed: () => textController.text += '/',
               ),
@@ -393,7 +393,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: '.',
                 onPressed: () => textController.text += '.',
               ),
@@ -402,7 +402,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: ',',
                 onPressed: () => textController.text += ',',
               ),
@@ -420,7 +420,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: 'min(x1,x2,...,xn)',
                 onPressed: () => textController.text += 'min(x1,x2,...,xn)',
               ),
@@ -429,7 +429,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: 'floor(x)',
                 onPressed: () => textController.text += 'floor(x)',
               ),
@@ -442,7 +442,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: 'max(x1,x2,...,xn)',
                 onPressed: () => textController.text += 'max(x1,x2,...,xn)',
               ),
@@ -451,7 +451,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: 'ceiling(x)',
                 onPressed: () => textController.text += 'ceiling(x)',
               ),
@@ -464,7 +464,7 @@ class _FormulaBody extends StatelessWidget {
             Flexible(
               flex: 1,
               child: ButtonOutlinedP80Radius4(
-                color: context.colSurf5darkSurfLight,
+                color: context.colS5darkSLight,
                 title: 'avg(x1,x2,...,xn)',
                 onPressed: () => textController.text += 'avg(x1,x2,...,xn)',
               ),

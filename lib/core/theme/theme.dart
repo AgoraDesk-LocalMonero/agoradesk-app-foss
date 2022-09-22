@@ -454,31 +454,31 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colN90 => Theme.of(this).colorScheme.neutral90;
 
-  Color get colPrimary20 => Theme.of(this).colorScheme.primary20;
+  Color get colP20 => Theme.of(this).colorScheme.primary20;
 
-  Color get colPrimary40 => Theme.of(this).colorScheme.primary40;
+  Color get colP40 => Theme.of(this).colorScheme.primary40;
 
-  Color get colPrimary70 => Theme.of(this).colorScheme.primary70;
+  Color get colP70 => Theme.of(this).colorScheme.primary70;
 
-  Color get colPrimary80 => Theme.of(this).colorScheme.p80P70;
+  Color get colP80 => Theme.of(this).colorScheme.p80P70;
 
-  Color get colPrimary90 => Theme.of(this).colorScheme.primary90;
+  Color get colP90 => Theme.of(this).colorScheme.primary90;
 
-  Color get colPrimary95 => Theme.of(this).colorScheme.primary95;
+  Color get colP95 => Theme.of(this).colorScheme.primary95;
 
-  Color get colSecondary10 => Theme.of(this).colorScheme.secondary10;
+  Color get colSec10 => Theme.of(this).colorScheme.secondary10;
 
-  Color get colSecondary80 => Theme.of(this).colorScheme.secondary80;
+  Color get colSec80 => Theme.of(this).colorScheme.secondary80;
 
-  Color get colSurface1 => Theme.of(this).colorScheme.surface1;
+  Color get colS1 => Theme.of(this).colorScheme.surface1;
 
-  Color get colSurface2 => Theme.of(this).colorScheme.surface2;
+  Color get colS2 => Theme.of(this).colorScheme.surface2;
 
-  Color get colSurface3 => Theme.of(this).colorScheme.surface3;
+  Color get colS3 => Theme.of(this).colorScheme.surface3;
 
-  Color get colSurface4 => Theme.of(this).colorScheme.surface4;
+  Color get colS4 => Theme.of(this).colorScheme.surface4;
 
-  Color get colSurf5darkSurfLight => Theme.of(this).colorScheme.surf5darkSurfLight;
+  Color get colS5darkSLight => Theme.of(this).colorScheme.surf5darkSurfLight;
 
   Color get colTonal => Theme.of(this).colorScheme.tonalP90;
 
@@ -530,6 +530,7 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colN20SurfLight => Theme.of(this).colorScheme.n20SurfLight;
 
+  Color get colP20White => Theme.of(this).colorScheme.p20White;
   Color get colP80P40 => Theme.of(this).colorScheme.p80P40;
   Color get colP70P40 => Theme.of(this).colorScheme.p70P40;
   Color get colP90White => Theme.of(this).colorScheme.p90White;
@@ -545,17 +546,17 @@ extension ThemeShorcuts on BuildContext {
   ///
 
   DialogProps get dropdownDialogProps => DialogProps(
-        backgroundColor: colSurface3,
+        backgroundColor: colS3,
         shape: OutlineInputBorder(
-          borderSide: BorderSide(color: colSurface3, width: 0),
+          borderSide: BorderSide(color: colS3, width: 0),
           borderRadius: const BorderRadius.all(Radius.circular(4)),
         ),
       );
 
   MenuProps get dropdownMenuProps => MenuProps(
-        backgroundColor: colSurface3,
+        backgroundColor: colS3,
         shape: OutlineInputBorder(
-          borderSide: BorderSide(color: colSurface3, width: 0),
+          borderSide: BorderSide(color: colS3, width: 0),
           borderRadius: const BorderRadius.all(Radius.circular(4)),
         ),
       );

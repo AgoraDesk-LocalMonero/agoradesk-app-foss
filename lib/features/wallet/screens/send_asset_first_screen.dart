@@ -78,8 +78,8 @@ class SendAssetFirstScreen extends StatelessWidget {
                       ),
                       ButtonFilledInactiveSurface2(
                         title: context.intl.wallet250Sbsend250Sbcontinue8722Sbbtn,
-                        buttonColor: context.colPrimary80,
-                        textColor: context.colPrimary20,
+                        buttonColor: context.colP80,
+                        textColor: context.colP20,
                         active: model.isAddressCorrect,
                         onPressed: () => context.pushRoute(
                           SendAssetSecondRoute(

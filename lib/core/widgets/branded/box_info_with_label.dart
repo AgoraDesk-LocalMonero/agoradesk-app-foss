@@ -38,7 +38,7 @@ class BoxInfoWithLabel extends StatelessWidget {
                         borderRadius: const BorderRadius.all(
                           Radius.circular(4),
                         ),
-                        color: context.colSecondary80,
+                        color: context.colSec80,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(4, 2, 4, 4),

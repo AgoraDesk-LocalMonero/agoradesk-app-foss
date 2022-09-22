@@ -75,7 +75,7 @@ class _PostAdScreenState extends State<PostAdScreen> with TickerProviderStateMix
                                   position: model.page,
                                   decorator: DotsDecorator(
                                     color: context.colN30,
-                                    activeColor: context.colPrimary80,
+                                    activeColor: context.colP80,
                                   ),
                                 ),
                               )

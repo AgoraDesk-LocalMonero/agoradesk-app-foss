@@ -46,7 +46,7 @@ class TradingPartnerTile extends StatelessWidget with DateMixin {
                 Icon(
                   AgoraFont.list,
                   size: 10,
-                  color: context.colPrimary80,
+                  color: context.colP80,
                 ),
                 const SizedBox(width: 4),
                 Text(
@@ -57,7 +57,7 @@ class TradingPartnerTile extends StatelessWidget with DateMixin {
                 Icon(
                   AgoraFont.thumbs_up,
                   size: 10,
-                  color: context.colPrimary80,
+                  color: context.colP80,
                 ),
                 const SizedBox(width: 4),
                 Text(

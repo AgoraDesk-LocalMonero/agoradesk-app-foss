@@ -155,7 +155,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
               icon: Icon(
                 AgoraFont.star,
                 size: 14,
-                color: context.colPrimary20,
+                color: context.colP20,
               ),
               loading: model.postingFeedback,
               onPressed: () => model.giveFeedback(FeedbackType.trust),
@@ -167,7 +167,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
               icon: Icon(
                 AgoraFont.slash,
                 size: 14,
-                color: context.colPrimary80,
+                color: context.colP80,
               ),
               loading: model.postingFeedback,
               onPressed: () => model.giveFeedback(FeedbackType.block),
@@ -206,7 +206,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
           icon: Icon(
             AgoraFont.star,
             size: 14,
-            color: context.colPrimary20,
+            color: context.colP20,
           ),
           loading: model.postingFeedback,
           onPressed: () => model.giveFeedback(FeedbackType.neutral),
@@ -237,7 +237,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
           icon: Icon(
             AgoraFont.slash,
             size: 14,
-            color: context.colPrimary80,
+            color: context.colP80,
           ),
           loading: model.postingFeedback,
           onPressed: () => model.giveFeedback(FeedbackType.neutral),

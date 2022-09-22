@@ -137,7 +137,7 @@ class AffiliateProgramScreen extends StatelessWidget {
                               final t = model.transactions[index];
                               return TransactionTile(
                                 transaction: t,
-                                backgroundColor: context.colSurface2,
+                                backgroundColor: context.colS2,
                                 onPressed: () => context.pushRoute(TransactionRoute(transaction: t)),
                               );
                             },

@@ -13,7 +13,7 @@ class DropdownButtonSized extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: context.colSurface3,
+        color: context.colS3,
         borderRadius: const BorderRadius.all(
           Radius.circular(4),
         ),

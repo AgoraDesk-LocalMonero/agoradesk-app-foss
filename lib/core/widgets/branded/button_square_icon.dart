@@ -24,7 +24,7 @@ class ButtonSquareIcon extends StatelessWidget {
         minimumSize: size,
         maximumSize: size,
         fixedSize: size,
-        primary: context.colSurface3,
+        primary: context.colS3,
         padding: const EdgeInsets.all(0),
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -35,7 +35,7 @@ class ButtonSquareIcon extends StatelessWidget {
       child: Center(
         child: Icon(
           iconData,
-          color: iconColor ?? context.colPrimary90,
+          color: iconColor ?? context.colP90,
           size: 18,
         ),
       ),

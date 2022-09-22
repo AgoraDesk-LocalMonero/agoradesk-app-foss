@@ -44,7 +44,7 @@ class ButtonFilledWithIconP80 extends StatelessWidget {
           children: [
             loading
                 ? Center(
-                    child: CupertinoActivityIndicator(color: context.colPrimary20),
+                    child: CupertinoActivityIndicator(color: context.colP20),
                   )
                 : icon,
             SizedBox(width: delimiterWidth),

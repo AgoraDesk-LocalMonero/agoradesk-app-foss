@@ -27,13 +27,13 @@ class NotificationTile extends StatelessWidget with DateMixin {
           borderRadius: const BorderRadius.all(
             Radius.circular(12),
           ),
-          color: isRead ? context.colSurface1 : context.colSurf5darkSurfLight,
+          color: isRead ? context.colS1 : context.colS5darkSLight,
           border: isRead
               ? Border.all(
                   width: 1,
                   color: context.colN30Pri80,
                 )
-              : Border.all(width: 0, color: context.colSurf5darkSurfLight),
+              : Border.all(width: 0, color: context.colS5darkSLight),
         ),
         child: Padding(
           padding: const EdgeInsets.all(12),

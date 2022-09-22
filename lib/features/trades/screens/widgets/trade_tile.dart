@@ -100,7 +100,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                           Icon(
                             AgoraFont.user_alt,
                             size: iconSize,
-                            color: context.colPrimary80,
+                            color: context.colP80,
                           ),
                           const SizedBox(width: 4),
                           Text(
@@ -115,7 +115,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                         Icon(
                           AgoraFont.calendar,
                           size: iconSize,
-                          color: context.colPrimary80,
+                          color: context.colP80,
                         ),
                         const SizedBox(width: 4),
                         Text(
@@ -149,7 +149,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                         Icon(
                           AgoraFont.list,
                           size: iconSize,
-                          color: context.colPrimary80,
+                          color: context.colP80,
                         ),
                         const SizedBox(width: 4),
                         Text(

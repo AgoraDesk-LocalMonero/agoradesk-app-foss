@@ -41,7 +41,7 @@ class BoxSurface5WithTwoCopy extends StatelessWidget {
               icon: Icon(
                 iconData,
                 size: 14,
-                color: context.colPrimary80,
+                color: context.colP80,
               ),
               text: descr,
             ),
@@ -54,7 +54,7 @@ class BoxSurface5WithTwoCopy extends StatelessWidget {
               icon: Icon(
                 iconData2,
                 size: 14,
-                color: context.colPrimary80,
+                color: context.colP80,
               ),
               text: descr2,
             ),

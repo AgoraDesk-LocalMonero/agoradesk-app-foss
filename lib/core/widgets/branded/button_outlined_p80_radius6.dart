@@ -25,7 +25,7 @@ class ButtonOutlinedP80Radius4 extends StatelessWidget {
           borderRadius: BorderRadius.circular(6),
           side: BorderSide(
             width: 2,
-            color: context.colPrimary80,
+            color: context.colP80,
           ),
         ),
         padding: EdgeInsets.zero,

@@ -49,7 +49,7 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
         children: [
           loading
               ? Center(
-                  child: CupertinoActivityIndicator(color: borderColor ?? context.colPrimary80),
+                  child: CupertinoActivityIndicator(color: borderColor ?? context.colP80),
                 )
               : icon,
           SizedBox(width: delimiterWidth),

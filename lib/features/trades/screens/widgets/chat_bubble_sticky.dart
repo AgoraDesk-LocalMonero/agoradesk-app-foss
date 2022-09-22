@@ -32,7 +32,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
     }
 
     return Container(
-      color: context.colSurface1,
+      color: context.colS1,
       child: ViewModelBuilder<TradeViewModel>(
           model: model,
           disposable: false,

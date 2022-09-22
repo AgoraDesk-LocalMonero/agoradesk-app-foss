@@ -21,10 +21,10 @@ class FilterButton extends StatelessWidget {
         width: 55,
         height: 55,
         decoration: BoxDecoration(
-          color: selected ? context.colHighlight : context.colSurface3,
+          color: selected ? context.colHighlight : context.colS3,
           border: Border.all(
             width: 1,
-            color: selected ? context.colHighlight : context.colSurface3,
+            color: selected ? context.colHighlight : context.colS3,
           ),
           borderRadius: const BorderRadius.all(
             Radius.circular(5),
@@ -33,7 +33,7 @@ class FilterButton extends StatelessWidget {
         child: Icon(
           AgoraFont.configure,
           size: 26,
-          color: selected ? context.colPrimary90 : context.n80N30,
+          color: selected ? context.colP90 : context.n80N30,
         ),
       ),
     );

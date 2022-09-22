@@ -13,7 +13,7 @@ class CashTextField extends StatelessWidget {
           hintText: context.intl.cash_only,
           prefixIcon: Icon(
             AgoraFont.money_bill,
-            color: context.colPrimary80,
+            color: context.colP80,
             size: 20,
           ),
           prefixIconConstraints: const BoxConstraints(minHeight: 10, minWidth: 40)),

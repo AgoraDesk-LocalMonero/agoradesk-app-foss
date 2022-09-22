@@ -86,8 +86,8 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
                             const SizedBox(height: 12),
                             ButtonFilledInactiveSurface2(
                               title: context.intl.preview,
-                              buttonColor: context.colPrimary80,
-                              textColor: context.colPrimary20,
+                              buttonColor: context.colP80,
+                              textColor: context.colP20,
                               active: model.readyToStep3,
                               onPressed: () => context.pushRoute(SendAssetThirdRoute(model: model)),
                             ),

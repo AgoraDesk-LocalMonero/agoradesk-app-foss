@@ -30,7 +30,7 @@ class TradeLineWithCopy extends StatelessWidget with ClipboardMixin {
             children: [
               Icon(
                 iconData,
-                color: context.colPrimary80,
+                color: context.colP80,
                 size: 12,
               ),
               const SizedBox(width: 6),
@@ -57,7 +57,7 @@ class TradeLineWithCopy extends StatelessWidget with ClipboardMixin {
             },
             icon: Icon(
               AgoraFont.copy_alt,
-              color: context.colPrimary70,
+              color: context.colP70,
               size: 12,
             )),
       ],
