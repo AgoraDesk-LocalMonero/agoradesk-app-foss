@@ -75,9 +75,10 @@ class NotificationsService with ForegroundMessagesMixin {
             ///
             final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
             if (openedTradeId != push.objectId) {
-              await AwesomeNotifications().createNotification(
+              final awesomeMessageId = Random().nextInt(1000000);
+             final res = await AwesomeNotifications().createNotification(
                 content: NotificationContent(
-                  id: Random().nextInt(1000000),
+                  id: awesomeMessageId,
                   channelKey: kNotificationsChannel,
                   title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
                   body: translatedNotificationText(push, langCode),
@@ -85,6 +86,11 @@ class NotificationsService with ForegroundMessagesMixin {
                   payload: payload,
                 ),
               );
+              if (res) {
+                String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+                barMessagesString += ';$awesomeMessageId:${push.objectId}';
+                secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+              }
             }
           }
         } catch (e) {
@@ -234,20 +240,41 @@ class NotificationsService with ForegroundMessagesMixin {
     if (tradeId != null && tradeId.isNotEmpty) {
       int index = 0;
       await getNotifications();
+      final List<ActivityNotificationModel> editedNotifications = [];
+      editedNotifications.addAll(appState.notifications);
       for (final n in appState.notifications) {
         if (n.contactId == tradeId && n.read == false) {
           markedAsReadCounter++;
           await accountService.markAsRead(n.id);
-          appState.notifications[index] = appState.notifications[index].copyWith(read: true);
+          editedNotifications[index] = appState.notifications[index].copyWith(read: true);
         }
         index++;
       }
+      appState.notifications.clear();
+      appState.notifications.addAll(editedNotifications);
       await Future.delayed(const Duration(seconds: 1));
+      // badges (red circle counter on the app icon)
       final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
       await AwesomeNotifications().setGlobalBadgeCounter(badgesCounter - markedAsReadCounter);
       // remove red dot in case all notifiations are read
       appState.hasUnread =
           !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
+      // dismiss notifications on the phone events bar (not inside the app)
+      String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+      if (barMessagesString.isNotEmpty) {
+        final List<String> barMessages = barMessagesString.split(';');
+        final List<String> barMessagesNew = barMessagesString.split(';');
+        for (final m in barMessages) {
+          if (m.contains(tradeId)) {
+            final messageId = int.tryParse(m.split(':')[0]);
+            if (messageId != null) {
+              await AwesomeNotifications().dismiss(messageId);
+            }
+            barMessagesNew.remove(m);
+          }
+        }
+        await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
+      }
     }
   }
 

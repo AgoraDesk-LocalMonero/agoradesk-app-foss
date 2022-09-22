@@ -35,7 +35,7 @@ class LineIconTextPrimary95 extends StatelessWidget {
             text,
             textAlign: toCenter ? TextAlign.center : TextAlign.left,
             style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                  color: context.colPrimary95.withOpacity(active ? 1 : 0.5),
+                  color: context.colP95.withOpacity(active ? 1 : 0.5),
                 ),
           ),
         ),

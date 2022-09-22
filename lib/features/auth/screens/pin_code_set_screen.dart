@@ -64,7 +64,7 @@ class PinCodeSetScreen extends StatelessWidget {
                           color: Theme.of(context).colorScheme.neutral90,
                         ),
                         emptyIndicatorColor: context.colN30Pri80,
-                        filledIndicatorColor: context.colPrimary90,
+                        filledIndicatorColor: context.colP90,
                         buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                         deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                         deleteButtonColor: Theme.of(context).colorScheme.primary90,

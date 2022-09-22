@@ -163,7 +163,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
                   child: ButtonOutlinedWithIconP80(
                     icon: Icon(
                       AgoraFont.alert_circle,
-                      color: context.colPrimary80,
+                      color: context.colP80,
                     ),
                     title: context.intl.trade250Sbdispute8722Sbbtn,
                     onPressed: () => model.showDisputeDialog(),

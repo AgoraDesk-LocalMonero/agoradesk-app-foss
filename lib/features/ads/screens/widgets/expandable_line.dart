@@ -49,7 +49,7 @@ class ExpandableLine extends StatelessWidget {
                   theme: ExpandableThemeData(
                     expandIcon: Icons.keyboard_arrow_down_rounded,
                     collapseIcon: Icons.keyboard_arrow_up_rounded,
-                    iconColor: context.colPrimary90,
+                    iconColor: context.colP90,
                     iconSize: 28.0,
                     iconRotationAngle: pi / 2,
                     iconPadding: const EdgeInsets.only(right: 5),

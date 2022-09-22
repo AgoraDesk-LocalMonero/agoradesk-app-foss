@@ -24,7 +24,7 @@ class ButtonShareSquare extends StatelessWidget {
         minimumSize: size,
         maximumSize: size,
         fixedSize: size,
-        primary: context.colSurf5darkSurfLight,
+        primary: context.colS5darkSLight,
         padding: const EdgeInsets.all(0),
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -35,7 +35,7 @@ class ButtonShareSquare extends StatelessWidget {
       child: Center(
         child: Icon(
           AgoraFont.external_link,
-          color: context.colPrimary70,
+          color: context.colP70,
           size: iconSize,
         ),
       ),

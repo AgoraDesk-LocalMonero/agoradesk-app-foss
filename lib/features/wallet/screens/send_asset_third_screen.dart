@@ -118,8 +118,8 @@ class SendAssetThirdScreen extends StatelessWidget {
                             const SizedBox(height: 12),
                             ButtonFilledInactiveSurface2(
                               title: I18n.of(context)!.wallet250Sbtab250Sbsend8722Sbshort,
-                              buttonColor: context.colPrimary80,
-                              textColor: context.colPrimary20,
+                              buttonColor: context.colP80,
+                              textColor: context.colP20,
                               onPressed: () {
                                 showDialog(
                                   context: context,

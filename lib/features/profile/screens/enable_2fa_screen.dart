@@ -69,7 +69,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
               body: SafeArea(
                 child: Theme(
                   data: ThemeData(
-                    canvasColor: context.colSurface1,
+                    canvasColor: context.colS1,
                     colorScheme: Theme.of(context).colorScheme.copyWith(
                           primary: context.colHighlight,
                           background: context.colHighlight.withOpacity(0.5),
@@ -172,7 +172,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
               RepaintBoundary(
                 key: globalKey,
                 child: QrImage(
-                  backgroundColor: context.colSurface4,
+                  backgroundColor: context.colS4,
                   foregroundColor: Colors.white,
                   data: secretUri,
                   embeddedImage: AssetImage(GetIt.I<AppParameters>().appLogo),
@@ -243,9 +243,9 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
         VerificationCode(
           textStyle: context.txtLabelLargeP90P10,
           keyboardType: TextInputType.number,
-          underlineColor: context.colPrimary90,
+          underlineColor: context.colP90,
           length: 6,
-          cursorColor: context.colPrimary90,
+          cursorColor: context.colP90,
           fullBorder: true,
           onCompleted: model.verifyCode,
           onEditing: (bool value) {},

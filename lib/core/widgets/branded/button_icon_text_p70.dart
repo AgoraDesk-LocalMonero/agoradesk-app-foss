@@ -30,7 +30,7 @@ class ButtonIconTextP70 extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: context.colPrimary70,
+            color: context.colP70,
             size: 16,
           ),
           SizedBox(width: marginBetween),

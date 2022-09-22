@@ -35,7 +35,7 @@ class ButtonFilledP80 extends StatelessWidget {
           : Text(
               title,
               style: Theme.of(context).textTheme.agoraLabelLarge.copyWith(
-                    color: active ? Theme.of(context).colorScheme.primary20 : Theme.of(context).colorScheme.neutral70,
+                    color: active ? context.colP20White : Theme.of(context).colorScheme.neutral70,
                   ),
             ),
     );

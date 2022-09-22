@@ -111,7 +111,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
               Radius.circular(20.0),
             ),
           ),
-          backgroundColor: context.colSurface4,
+          backgroundColor: context.colS4,
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(

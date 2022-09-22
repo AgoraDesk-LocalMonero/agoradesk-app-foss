@@ -34,7 +34,7 @@ class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
               body: SafeArea(
                 child: Theme(
                   data: ThemeData(
-                    canvasColor: context.colSurface1,
+                    canvasColor: context.colS1,
                     colorScheme: Theme.of(context).colorScheme.copyWith(
                           primary: context.colHighlight,
                           background: context.colHighlight.withOpacity(0.5),

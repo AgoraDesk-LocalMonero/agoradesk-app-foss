@@ -19,7 +19,7 @@ class AgoraCopyIconLabelLarge extends StatelessWidget {
         children: [
           Icon(
             AgoraFont.copy_alt,
-            color: context.colPrimary70,
+            color: context.colP70,
             size: 18,
           ),
           const SizedBox(width: 10),

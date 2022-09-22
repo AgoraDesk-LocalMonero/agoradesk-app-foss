@@ -181,7 +181,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
               Icon(
                 AgoraFont.map_pin,
                 size: 12,
-                color: context.colPrimary80,
+                color: context.colP80,
               ),
               const SizedBox(width: 4),
               Expanded(
@@ -200,7 +200,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                   Icon(
                     AgoraFont.limits_3,
                     size: 12,
-                    color: context.colPrimary80,
+                    color: context.colP80,
                   ),
                   const SizedBox(width: 4),
                   SizedBox(

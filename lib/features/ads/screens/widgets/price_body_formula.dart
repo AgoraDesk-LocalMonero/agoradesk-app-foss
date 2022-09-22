@@ -80,8 +80,8 @@ class PriceBodyFormula extends StatelessWidget {
         FormulaControls(
           // addEditAdViewModel: model,
           formulaControlsViewModel: formulaControlsViewModel,
-          backgroundColor: context.colSurface3,
-          layerColor: context.colSurf5darkSurfLight,
+          backgroundColor: context.colS3,
+          layerColor: context.colS5darkSLight,
           textController: textController,
           tabController: tabController,
           bodyTabIndex: bodyTabIndex,

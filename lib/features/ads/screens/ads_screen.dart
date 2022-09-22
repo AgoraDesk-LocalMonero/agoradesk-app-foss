@@ -116,12 +116,12 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               floatingActionButton: model.isGuestMode
                   ? const SizedBox()
                   : FloatingActionButton(
-                      backgroundColor: context.colPrimary70,
+                      backgroundColor: context.colP70,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       child: Icon(
                         AgoraFont.plus,
                         size: 20,
-                        color: context.colPrimary20,
+                        color: context.colP20,
                       ),
                       onPressed: () async {
                         await AutoRouter.of(context).push(const PostAdRoute());
@@ -219,7 +219,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
           width: double.infinity,
           child: DropdownButtonSized(
             child: DropdownButton<AgoraMenuItem>(
-              dropdownColor: context.colSurface3,
+              dropdownColor: context.colS3,
               value: model.dropdownValue,
               items: model.bulkMenu.map((value) {
                 return DropdownMenuItem<AgoraMenuItem>(

@@ -140,7 +140,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
             Icon(
               AgoraFont.calendar,
               size: 12,
-              color: context.colPrimary80,
+              color: context.colP80,
             ),
             const SizedBox(width: 4),
             Text(
@@ -253,7 +253,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
               Icon(
                 AgoraFont.map_pin,
                 size: 12,
-                color: context.colPrimary80,
+                color: context.colP80,
               ),
               const SizedBox(width: 4),
               Expanded(
@@ -315,7 +315,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                       Icon(
                         AgoraFont.limits_3,
                         size: 12,
-                        color: context.colPrimary80,
+                        color: context.colP80,
                       ),
                       const SizedBox(width: 4),
                       Text(

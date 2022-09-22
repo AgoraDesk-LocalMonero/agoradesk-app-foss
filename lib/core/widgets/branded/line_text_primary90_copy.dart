@@ -26,7 +26,7 @@ class LineTextPrimary90Copy extends StatelessWidget with ClipboardMixin {
         ),
         ButtonSquareIcon(
           iconData: AgoraFont.copy_alt,
-          iconColor: context.colPrimary70,
+          iconColor: context.colP70,
           onPressed: () => copyToClipboard(textToCopy ?? text, context),
         )
       ],

@@ -112,7 +112,7 @@ class _CountryListItem extends StatelessWidget {
             ),
             Radio<bool>(
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              activeColor: context.colPrimary70,
+              activeColor: context.colP70,
               value: isActive,
               groupValue: true,
               onChanged: (bool? val) {

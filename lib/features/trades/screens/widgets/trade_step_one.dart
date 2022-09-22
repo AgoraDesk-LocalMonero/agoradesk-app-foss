@@ -226,7 +226,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                                 loading: model.markingAsPaid,
                                 icon: Icon(
                                   AgoraFont.check_circle_alt,
-                                  color: context.colPrimary40,
+                                  color: context.colP40,
                                 ),
                                 onPressed: () => _markAsPaidDialog(context, model),
                               ),
@@ -237,7 +237,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                                 loading: model.cancelingTrade,
                                 icon: Icon(
                                   AgoraFont.x_circle,
-                                  color: context.colPrimary80,
+                                  color: context.colP80,
                                 ),
                                 onPressed: () => _cancelTradeBuyerDialog(context, model),
                               )

@@ -35,7 +35,7 @@ class BoxSurface5WithCopy extends StatelessWidget {
               icon: Icon(
                 iconData,
                 size: 14,
-                color: context.colPrimary80,
+                color: context.colP80,
               ),
               text: iconDescr,
             ),

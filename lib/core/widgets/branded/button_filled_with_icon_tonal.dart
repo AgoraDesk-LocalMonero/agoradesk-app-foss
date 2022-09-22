@@ -45,7 +45,7 @@ class ButtonFilledWithIconTonal extends StatelessWidget {
                 children: [
                   Icon(
                     iconData,
-                    color: context.colPrimary90,
+                    color: context.colP90,
                     size: 15,
                   ),
                   const SizedBox(width: 10),

@@ -49,9 +49,9 @@ class Disable2faScreen extends StatelessWidget {
                       VerificationCode(
                         textStyle: context.txtLabelLargeP90P10,
                         keyboardType: TextInputType.number,
-                        underlineColor: context.colPrimary90,
+                        underlineColor: context.colP90,
                         length: 6,
-                        cursorColor: context.colPrimary90,
+                        cursorColor: context.colP90,
                         fullBorder: true,
                         onCompleted: model.verifyCode,
                         onEditing: (bool value) {},

@@ -22,7 +22,7 @@ class ActiveIcon extends StatelessWidget {
           borderRadius: const BorderRadius.all(
             Radius.circular(30),
           ),
-          color: brightness == Brightness.dark ? ThemeColors.highlightDark : ThemeColors.highlightLight,
+          color: brightness == Brightness.dark ? ThemeColors.highlightDark : ThemeColors.highlight,
         ),
         child: Center(
           child: Icon(
