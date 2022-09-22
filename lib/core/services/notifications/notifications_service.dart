@@ -243,11 +243,28 @@ class NotificationsService with ForegroundMessagesMixin {
         index++;
       }
       await Future.delayed(const Duration(seconds: 1));
+      // badges (red circle counter on the app icon)
       final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
       await AwesomeNotifications().setGlobalBadgeCounter(badgesCounter - markedAsReadCounter);
       // remove red dot in case all notifiations are read
       appState.hasUnread =
           !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
+      // dismiss notifications on the phone events bar (not inside the app)
+      String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+      if (barMessagesString.isNotEmpty) {
+        final List<String> barMessages = barMessagesString.split(';');
+        final List<String> barMessagesNew = barMessagesString.split(';');
+        for (final m in barMessages) {
+          if (m.contains(tradeId)) {
+            final messageId = int.tryParse(m.split(':')[0]);
+            if (messageId != null) {
+              await AwesomeNotifications().dismiss(messageId);
+            }
+            barMessagesNew.remove(m);
+          }
+        }
+        await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
+      }
     }
   }
 

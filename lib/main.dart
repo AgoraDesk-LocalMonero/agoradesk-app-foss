@@ -154,9 +154,9 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       ),
     );
     if (res) {
-      String phonePushesData = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      phonePushesData += ';$awesomeMessageId:${push.objectId}';
-      _secureStorage.write(SecureStorageKey.pushAndObjectIds, phonePushesData);
+      String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+      barMessagesString += ';$awesomeMessageId:${push.objectId}';
+      _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
     }
   } catch (e) {
     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
