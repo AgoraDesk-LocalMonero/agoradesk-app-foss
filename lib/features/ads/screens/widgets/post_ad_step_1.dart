@@ -114,7 +114,10 @@ class _PostAdStep1State extends State<PostAdStep1> {
         DropdownSearch<TradeType>(
           dropdownButtonProps: context.dropdownButtonProps,
           dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+          popupProps: PopupProps.menu(
+            menuProps: context.dropdownMenuProps,
+            fit: FlexFit.loose,
+          ),
           items: TradeType.values,
           itemAsString: (TradeType? t) => t?.translatedTitle(context).capitalize() ?? '',
           onChanged: (TradeType? data) => widget.model.tradeType = data,
@@ -129,7 +132,10 @@ class _PostAdStep1State extends State<PostAdStep1> {
         DropdownSearch<Asset>(
           dropdownButtonProps: context.dropdownButtonProps,
           dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+          popupProps: PopupProps.menu(
+            menuProps: context.dropdownMenuProps,
+            fit: FlexFit.loose,
+          ),
           items: Asset.values,
           itemAsString: (Asset? a) => a?.title() ?? '',
           onChanged: (Asset? data) => widget.model.asset = data,
@@ -138,37 +144,4 @@ class _PostAdStep1State extends State<PostAdStep1> {
       ],
     );
   }
-
-  ///
-  /// LocalMonero
-  ///
-// Widget _buildSelectAction() {
-//   return ListView.builder(
-//       padding: EdgeInsets.zero,
-//       shrinkWrap: true,
-//       itemCount: TradeType.values.length,
-//       itemBuilder: (context, index) {
-//         return GestureDetector(
-//           behavior: HitTestBehavior.opaque,
-//           onTap: () {
-//             widget.model.tradeType = TradeType.values[index];
-//           },
-//           child: Row(
-//             children: [
-//               SizedBox(
-//                 height: 30,
-//                 child: Radio<TradeType>(
-//                   value: TradeType.values[index],
-//                   groupValue: widget.model.tradeType,
-//                   onChanged: (TradeType? value) {
-//                     widget.model.tradeType = value;
-//                   },
-//                 ),
-//               ),
-//               Text(TradeType.values[index].translatedSign(context, 'Monero')),
-//             ],
-//           ),
-//         );
-//       });
-// }
 }
