@@ -41,7 +41,7 @@ class ThemeColors {
 
   // static final primary80Light = Color(0xFFB2C5FF);
   // static final primary80Dark = Color(0xFFB2C5FF);
-  static final primary90 = isAgora ? const Color(0xFF4C6EC0) : const Color(0xFFDAE2FF);
+  static final primary90 = isAgora ? const Color(0xFFDAE2FF) : const Color(0xFFDAE2FF);
   static final primary95Dark = Color(0xFFEEF0FF);
   static final primary95Light = Color(0xFFEEF0FF);
 
