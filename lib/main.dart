@@ -33,7 +33,7 @@ void main() async {
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
 
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
-  final includeFcm = includeFcmString != 'false' || Platform.isIOS;
+  const includeFcm = includeFcmString != 'false';
   if (includeFcm) {
     if (flavor == FlavorType.localmonero) {
       await Firebase.initializeApp(
