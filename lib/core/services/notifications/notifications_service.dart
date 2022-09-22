@@ -75,9 +75,10 @@ class NotificationsService with ForegroundMessagesMixin {
             ///
             final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
             if (openedTradeId != push.objectId) {
-              await AwesomeNotifications().createNotification(
+              final awesomeMessageId = Random().nextInt(1000000);
+             final res = await AwesomeNotifications().createNotification(
                 content: NotificationContent(
-                  id: Random().nextInt(1000000),
+                  id: awesomeMessageId,
                   channelKey: kNotificationsChannel,
                   title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
                   body: translatedNotificationText(push, langCode),
@@ -85,6 +86,11 @@ class NotificationsService with ForegroundMessagesMixin {
                   payload: payload,
                 ),
               );
+              if (res) {
+                String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+                barMessagesString += ';$awesomeMessageId:${push.objectId}';
+                secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+              }
             }
           }
         } catch (e) {
