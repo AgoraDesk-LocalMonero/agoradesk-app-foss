@@ -42,7 +42,7 @@ class PriceBodyMarket extends StatelessWidget {
             hintText: context.intl.post8722Sbad250Sbprice8722Sbtype250Sbmargin,
             errorText: model.marginInputValid ? null : ' ',
           ),
-          keyboardType: const TextInputType.numberWithOptions(decimal: true),
+          keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: true),
         ),
         const SizedBox(height: 12),
         Text(
