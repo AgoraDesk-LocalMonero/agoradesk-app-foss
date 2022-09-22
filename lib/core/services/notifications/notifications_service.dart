@@ -234,14 +234,18 @@ class NotificationsService with ForegroundMessagesMixin {
     if (tradeId != null && tradeId.isNotEmpty) {
       int index = 0;
       await getNotifications();
+      final List<ActivityNotificationModel> editedNotifications = [];
+      editedNotifications.addAll(appState.notifications);
       for (final n in appState.notifications) {
         if (n.contactId == tradeId && n.read == false) {
           markedAsReadCounter++;
           await accountService.markAsRead(n.id);
-          appState.notifications[index] = appState.notifications[index].copyWith(read: true);
+          editedNotifications[index] = appState.notifications[index].copyWith(read: true);
         }
         index++;
       }
+      appState.notifications.clear();
+      appState.notifications.addAll(editedNotifications);
       await Future.delayed(const Duration(seconds: 1));
       // badges (red circle counter on the app icon)
       final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
