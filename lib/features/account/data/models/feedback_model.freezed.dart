@@ -22,38 +22,28 @@ FeedbackModel _$FeedbackModelFromJson(Map<String, dynamic> json) {
 mixin _$FeedbackModel {
   @JsonKey(name: 'feedback_type', includeIfNull: false)
   FeedbackType get feedbackType => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'given_at',
-      includeIfNull: false,
-      fromJson: fromJsonDate,
-      toJson: toJsonDate)
+  @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
   DateTime get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'msg', includeIfNull: false)
   String? get text => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FeedbackModelCopyWith<FeedbackModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FeedbackModelCopyWith<FeedbackModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FeedbackModelCopyWith<$Res> {
-  factory $FeedbackModelCopyWith(
-          FeedbackModel value, $Res Function(FeedbackModel) then) =
+  factory $FeedbackModelCopyWith(FeedbackModel value, $Res Function(FeedbackModel) then) =
       _$FeedbackModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          FeedbackType feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          String? text});
+      {@JsonKey(name: 'feedback_type', includeIfNull: false) FeedbackType feedbackType,
+      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate) DateTime date,
+      @JsonKey(name: 'msg', includeIfNull: false) String? text});
 }
 
 /// @nodoc
-class _$FeedbackModelCopyWithImpl<$Res>
-    implements $FeedbackModelCopyWith<$Res> {
+class _$FeedbackModelCopyWithImpl<$Res> implements $FeedbackModelCopyWith<$Res> {
   _$FeedbackModelCopyWithImpl(this._value, this._then);
 
   final FeedbackModel _value;
@@ -84,27 +74,20 @@ class _$FeedbackModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_FeedbackModelCopyWith<$Res>
-    implements $FeedbackModelCopyWith<$Res> {
-  factory _$$_FeedbackModelCopyWith(
-          _$_FeedbackModel value, $Res Function(_$_FeedbackModel) then) =
+abstract class _$$_FeedbackModelCopyWith<$Res> implements $FeedbackModelCopyWith<$Res> {
+  factory _$$_FeedbackModelCopyWith(_$_FeedbackModel value, $Res Function(_$_FeedbackModel) then) =
       __$$_FeedbackModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          FeedbackType feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          String? text});
+      {@JsonKey(name: 'feedback_type', includeIfNull: false) FeedbackType feedbackType,
+      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate) DateTime date,
+      @JsonKey(name: 'msg', includeIfNull: false) String? text});
 }
 
 /// @nodoc
-class __$$_FeedbackModelCopyWithImpl<$Res>
-    extends _$FeedbackModelCopyWithImpl<$Res>
+class __$$_FeedbackModelCopyWithImpl<$Res> extends _$FeedbackModelCopyWithImpl<$Res>
     implements _$$_FeedbackModelCopyWith<$Res> {
-  __$$_FeedbackModelCopyWithImpl(
-      _$_FeedbackModel _value, $Res Function(_$_FeedbackModel) _then)
+  __$$_FeedbackModelCopyWithImpl(_$_FeedbackModel _value, $Res Function(_$_FeedbackModel) _then)
       : super(_value, (v) => _then(v as _$_FeedbackModel));
 
   @override
@@ -138,25 +121,17 @@ class __$$_FeedbackModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_FeedbackModel implements _FeedbackModel {
   const _$_FeedbackModel(
-      {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          required this.feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          this.text});
+      {@JsonKey(name: 'feedback_type', includeIfNull: false) required this.feedbackType,
+      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate) required this.date,
+      @JsonKey(name: 'msg', includeIfNull: false) this.text});
 
-  factory _$_FeedbackModel.fromJson(Map<String, dynamic> json) =>
-      _$$_FeedbackModelFromJson(json);
+  factory _$_FeedbackModel.fromJson(Map<String, dynamic> json) => _$$_FeedbackModelFromJson(json);
 
   @override
   @JsonKey(name: 'feedback_type', includeIfNull: false)
   final FeedbackType feedbackType;
   @override
-  @JsonKey(
-      name: 'given_at',
-      includeIfNull: false,
-      fromJson: fromJsonDate,
-      toJson: toJsonDate)
+  @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
   final DateTime date;
   @override
   @JsonKey(name: 'msg', includeIfNull: false)
@@ -172,19 +147,15 @@ class _$_FeedbackModel implements _FeedbackModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FeedbackModel &&
-            const DeepCollectionEquality()
-                .equals(other.feedbackType, feedbackType) &&
+            const DeepCollectionEquality().equals(other.feedbackType, feedbackType) &&
             const DeepCollectionEquality().equals(other.date, date) &&
             const DeepCollectionEquality().equals(other.text, text));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(feedbackType),
-      const DeepCollectionEquality().hash(date),
-      const DeepCollectionEquality().hash(text));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(feedbackType),
+      const DeepCollectionEquality().hash(date), const DeepCollectionEquality().hash(text));
 
   @JsonKey(ignore: true)
   @override
@@ -208,24 +179,18 @@ abstract class _FeedbackModel implements FeedbackModel {
       @JsonKey(name: 'msg', includeIfNull: false)
           final String? text}) = _$_FeedbackModel;
 
-  factory _FeedbackModel.fromJson(Map<String, dynamic> json) =
-      _$_FeedbackModel.fromJson;
+  factory _FeedbackModel.fromJson(Map<String, dynamic> json) = _$_FeedbackModel.fromJson;
 
   @override
   @JsonKey(name: 'feedback_type', includeIfNull: false)
   FeedbackType get feedbackType;
   @override
-  @JsonKey(
-      name: 'given_at',
-      includeIfNull: false,
-      fromJson: fromJsonDate,
-      toJson: toJsonDate)
+  @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
   DateTime get date;
   @override
   @JsonKey(name: 'msg', includeIfNull: false)
   String? get text;
   @override
   @JsonKey(ignore: true)
-  _$$_FeedbackModelCopyWith<_$_FeedbackModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FeedbackModelCopyWith<_$_FeedbackModel> get copyWith => throw _privateConstructorUsedError;
 }

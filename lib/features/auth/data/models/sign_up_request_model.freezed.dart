@@ -39,37 +39,27 @@ mixin _$SignUpRequestModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SignUpRequestModelCopyWith<SignUpRequestModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SignUpRequestModelCopyWith<SignUpRequestModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SignUpRequestModelCopyWith<$Res> {
-  factory $SignUpRequestModelCopyWith(
-          SignUpRequestModel value, $Res Function(SignUpRequestModel) then) =
+  factory $SignUpRequestModelCopyWith(SignUpRequestModel value, $Res Function(SignUpRequestModel) then) =
       _$SignUpRequestModelCopyWithImpl<$Res>;
   $Res call(
       {String? username,
-      @JsonKey(includeIfNull: false)
-          String? email,
-      @JsonKey(name: 'front_type', includeIfNull: false)
-          String? frontType,
+      @JsonKey(includeIfNull: false) String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
       String? password,
-      @JsonKey(includeIfNull: false)
-          String? otp,
-      @JsonKey(includeIfNull: false)
-          String? captcha,
-      @JsonKey(ignore: true)
-          String? captchaCookie,
-      @JsonKey(name: 'referral_code', includeIfNull: false)
-          String? referralCode,
-      @JsonKey(name: 'coupon_code', includeIfNull: false)
-          String? couponCode});
+      @JsonKey(includeIfNull: false) String? otp,
+      @JsonKey(includeIfNull: false) String? captcha,
+      @JsonKey(ignore: true) String? captchaCookie,
+      @JsonKey(name: 'referral_code', includeIfNull: false) String? referralCode,
+      @JsonKey(name: 'coupon_code', includeIfNull: false) String? couponCode});
 }
 
 /// @nodoc
-class _$SignUpRequestModelCopyWithImpl<$Res>
-    implements $SignUpRequestModelCopyWith<$Res> {
+class _$SignUpRequestModelCopyWithImpl<$Res> implements $SignUpRequestModelCopyWith<$Res> {
   _$SignUpRequestModelCopyWithImpl(this._value, this._then);
 
   final SignUpRequestModel _value;
@@ -130,37 +120,26 @@ class _$SignUpRequestModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_SignUpRequestModelCopyWith<$Res>
-    implements $SignUpRequestModelCopyWith<$Res> {
-  factory _$$_SignUpRequestModelCopyWith(_$_SignUpRequestModel value,
-          $Res Function(_$_SignUpRequestModel) then) =
+abstract class _$$_SignUpRequestModelCopyWith<$Res> implements $SignUpRequestModelCopyWith<$Res> {
+  factory _$$_SignUpRequestModelCopyWith(_$_SignUpRequestModel value, $Res Function(_$_SignUpRequestModel) then) =
       __$$_SignUpRequestModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? username,
-      @JsonKey(includeIfNull: false)
-          String? email,
-      @JsonKey(name: 'front_type', includeIfNull: false)
-          String? frontType,
+      @JsonKey(includeIfNull: false) String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
       String? password,
-      @JsonKey(includeIfNull: false)
-          String? otp,
-      @JsonKey(includeIfNull: false)
-          String? captcha,
-      @JsonKey(ignore: true)
-          String? captchaCookie,
-      @JsonKey(name: 'referral_code', includeIfNull: false)
-          String? referralCode,
-      @JsonKey(name: 'coupon_code', includeIfNull: false)
-          String? couponCode});
+      @JsonKey(includeIfNull: false) String? otp,
+      @JsonKey(includeIfNull: false) String? captcha,
+      @JsonKey(ignore: true) String? captchaCookie,
+      @JsonKey(name: 'referral_code', includeIfNull: false) String? referralCode,
+      @JsonKey(name: 'coupon_code', includeIfNull: false) String? couponCode});
 }
 
 /// @nodoc
-class __$$_SignUpRequestModelCopyWithImpl<$Res>
-    extends _$SignUpRequestModelCopyWithImpl<$Res>
+class __$$_SignUpRequestModelCopyWithImpl<$Res> extends _$SignUpRequestModelCopyWithImpl<$Res>
     implements _$$_SignUpRequestModelCopyWith<$Res> {
-  __$$_SignUpRequestModelCopyWithImpl(
-      _$_SignUpRequestModel _value, $Res Function(_$_SignUpRequestModel) _then)
+  __$$_SignUpRequestModelCopyWithImpl(_$_SignUpRequestModel _value, $Res Function(_$_SignUpRequestModel) _then)
       : super(_value, (v) => _then(v as _$_SignUpRequestModel));
 
   @override
@@ -234,8 +213,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
       @JsonKey(name: 'referral_code', includeIfNull: false) this.referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false) this.couponCode});
 
-  factory _$_SignUpRequestModel.fromJson(Map<String, dynamic> json) =>
-      _$$_SignUpRequestModelFromJson(json);
+  factory _$_SignUpRequestModel.fromJson(Map<String, dynamic> json) => _$$_SignUpRequestModelFromJson(json);
 
   @override
   final String? username;
@@ -279,12 +257,9 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.otp, otp) &&
             const DeepCollectionEquality().equals(other.captcha, captcha) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaCookie, captchaCookie) &&
-            const DeepCollectionEquality()
-                .equals(other.referralCode, referralCode) &&
-            const DeepCollectionEquality()
-                .equals(other.couponCode, couponCode));
+            const DeepCollectionEquality().equals(other.captchaCookie, captchaCookie) &&
+            const DeepCollectionEquality().equals(other.referralCode, referralCode) &&
+            const DeepCollectionEquality().equals(other.couponCode, couponCode));
   }
 
   @JsonKey(ignore: true)
@@ -304,8 +279,7 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
   @JsonKey(ignore: true)
   @override
   _$$_SignUpRequestModelCopyWith<_$_SignUpRequestModel> get copyWith =>
-      __$$_SignUpRequestModelCopyWithImpl<_$_SignUpRequestModel>(
-          this, _$identity);
+      __$$_SignUpRequestModelCopyWithImpl<_$_SignUpRequestModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -318,24 +292,16 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
 abstract class _SignUpRequestModel implements SignUpRequestModel {
   const factory _SignUpRequestModel(
       {final String? username,
-      @JsonKey(includeIfNull: false)
-          final String? email,
-      @JsonKey(name: 'front_type', includeIfNull: false)
-          final String? frontType,
+      @JsonKey(includeIfNull: false) final String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false) final String? frontType,
       final String? password,
-      @JsonKey(includeIfNull: false)
-          final String? otp,
-      @JsonKey(includeIfNull: false)
-          final String? captcha,
-      @JsonKey(ignore: true)
-          final String? captchaCookie,
-      @JsonKey(name: 'referral_code', includeIfNull: false)
-          final String? referralCode,
-      @JsonKey(name: 'coupon_code', includeIfNull: false)
-          final String? couponCode}) = _$_SignUpRequestModel;
+      @JsonKey(includeIfNull: false) final String? otp,
+      @JsonKey(includeIfNull: false) final String? captcha,
+      @JsonKey(ignore: true) final String? captchaCookie,
+      @JsonKey(name: 'referral_code', includeIfNull: false) final String? referralCode,
+      @JsonKey(name: 'coupon_code', includeIfNull: false) final String? couponCode}) = _$_SignUpRequestModel;
 
-  factory _SignUpRequestModel.fromJson(Map<String, dynamic> json) =
-      _$_SignUpRequestModel.fromJson;
+  factory _SignUpRequestModel.fromJson(Map<String, dynamic> json) = _$_SignUpRequestModel.fromJson;
 
   @override
   String? get username;
@@ -364,6 +330,5 @@ abstract class _SignUpRequestModel implements SignUpRequestModel {
   String? get couponCode;
   @override
   @JsonKey(ignore: true)
-  _$$_SignUpRequestModelCopyWith<_$_SignUpRequestModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SignUpRequestModelCopyWith<_$_SignUpRequestModel> get copyWith => throw _privateConstructorUsedError;
 }

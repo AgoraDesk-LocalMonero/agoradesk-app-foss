@@ -6,13 +6,10 @@ part of 'reputation_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ReputationModel _$$_ReputationModelFromJson(Map<String, dynamic> json) =>
-    _$_ReputationModel(
+_$_ReputationModel _$$_ReputationModelFromJson(Map<String, dynamic> json) => _$_ReputationModel(
       username: json['username'] as String?,
       verificationCode: json['verification_code'] as String?,
-      registeredAt: json['registered_at'] == null
-          ? null
-          : DateTime.parse(json['registered_at'] as String),
+      registeredAt: json['registered_at'] == null ? null : DateTime.parse(json['registered_at'] as String),
       feedbackScore: json['feedback_score'] as int?,
       trades: json['trades'] as int?,
       tradeVolume: json['trade_volume'] as int?,

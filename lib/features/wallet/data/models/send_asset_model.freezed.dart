@@ -30,14 +30,12 @@ mixin _$SendAssetModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SendAssetModelCopyWith<SendAssetModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SendAssetModelCopyWith<SendAssetModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SendAssetModelCopyWith<$Res> {
-  factory $SendAssetModelCopyWith(
-          SendAssetModel value, $Res Function(SendAssetModel) then) =
+  factory $SendAssetModelCopyWith(SendAssetModel value, $Res Function(SendAssetModel) then) =
       _$SendAssetModelCopyWithImpl<$Res>;
   $Res call(
       {String address,
@@ -48,8 +46,7 @@ abstract class $SendAssetModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SendAssetModelCopyWithImpl<$Res>
-    implements $SendAssetModelCopyWith<$Res> {
+class _$SendAssetModelCopyWithImpl<$Res> implements $SendAssetModelCopyWith<$Res> {
   _$SendAssetModelCopyWithImpl(this._value, this._then);
 
   final SendAssetModel _value;
@@ -90,10 +87,8 @@ class _$SendAssetModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_SendAssetModelCopyWith<$Res>
-    implements $SendAssetModelCopyWith<$Res> {
-  factory _$$_SendAssetModelCopyWith(
-          _$_SendAssetModel value, $Res Function(_$_SendAssetModel) then) =
+abstract class _$$_SendAssetModelCopyWith<$Res> implements $SendAssetModelCopyWith<$Res> {
+  factory _$$_SendAssetModelCopyWith(_$_SendAssetModel value, $Res Function(_$_SendAssetModel) then) =
       __$$_SendAssetModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -105,11 +100,9 @@ abstract class _$$_SendAssetModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SendAssetModelCopyWithImpl<$Res>
-    extends _$SendAssetModelCopyWithImpl<$Res>
+class __$$_SendAssetModelCopyWithImpl<$Res> extends _$SendAssetModelCopyWithImpl<$Res>
     implements _$$_SendAssetModelCopyWith<$Res> {
-  __$$_SendAssetModelCopyWithImpl(
-      _$_SendAssetModel _value, $Res Function(_$_SendAssetModel) _then)
+  __$$_SendAssetModelCopyWithImpl(_$_SendAssetModel _value, $Res Function(_$_SendAssetModel) _then)
       : super(_value, (v) => _then(v as _$_SendAssetModel));
 
   @override
@@ -159,8 +152,7 @@ class _$_SendAssetModel implements _SendAssetModel {
       @JsonKey(includeIfNull: false) required this.feeLevel,
       @JsonKey(includeIfNull: false) required this.otp});
 
-  factory _$_SendAssetModel.fromJson(Map<String, dynamic> json) =>
-      _$$_SendAssetModelFromJson(json);
+  factory _$_SendAssetModel.fromJson(Map<String, dynamic> json) => _$$_SendAssetModelFromJson(json);
 
   @override
   final String address;
@@ -217,15 +209,13 @@ class _$_SendAssetModel implements _SendAssetModel {
 
 abstract class _SendAssetModel implements SendAssetModel {
   const factory _SendAssetModel(
-          {required final String address,
-          required final double amount,
-          required final String password,
-          @JsonKey(includeIfNull: false) required final BtcFeesEnum? feeLevel,
-          @JsonKey(includeIfNull: false) required final String? otp}) =
-      _$_SendAssetModel;
+      {required final String address,
+      required final double amount,
+      required final String password,
+      @JsonKey(includeIfNull: false) required final BtcFeesEnum? feeLevel,
+      @JsonKey(includeIfNull: false) required final String? otp}) = _$_SendAssetModel;
 
-  factory _SendAssetModel.fromJson(Map<String, dynamic> json) =
-      _$_SendAssetModel.fromJson;
+  factory _SendAssetModel.fromJson(Map<String, dynamic> json) = _$_SendAssetModel.fromJson;
 
   @override
   String get address;
@@ -241,6 +231,5 @@ abstract class _SendAssetModel implements SendAssetModel {
   String? get otp;
   @override
   @JsonKey(ignore: true)
-  _$$_SendAssetModelCopyWith<_$_SendAssetModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SendAssetModelCopyWith<_$_SendAssetModel> get copyWith => throw _privateConstructorUsedError;
 }

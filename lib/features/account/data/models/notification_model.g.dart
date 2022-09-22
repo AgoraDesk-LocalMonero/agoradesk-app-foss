@@ -6,8 +6,7 @@ part of 'notification_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActivityNotificationModel _$$_ActivityNotificationModelFromJson(
-        Map<String, dynamic> json) =>
+_$_ActivityNotificationModel _$$_ActivityNotificationModelFromJson(Map<String, dynamic> json) =>
     _$_ActivityNotificationModel(
       id: json['id'] as String,
       read: json['read'] as bool,
@@ -18,8 +17,7 @@ _$_ActivityNotificationModel _$$_ActivityNotificationModelFromJson(
       type: $enumDecode(_$NotificationMessageTypeEnumMap, json['type']),
     );
 
-Map<String, dynamic> _$$_ActivityNotificationModelToJson(
-    _$_ActivityNotificationModel instance) {
+Map<String, dynamic> _$$_ActivityNotificationModelToJson(_$_ActivityNotificationModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'read': instance.read,
@@ -43,8 +41,7 @@ const _$NotificationMessageTypeEnumMap = {
   NotificationMessageType.MESSAGE: 'MESSAGE',
   NotificationMessageType.TRADE_REQUEST: 'TRADE_REQUEST',
   NotificationMessageType.TRADE_COMPLETE: 'TRADE_COMPLETE',
-  NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
-      'TRADE_PAYMENT_MARKED_COMPLETE',
+  NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE: 'TRADE_PAYMENT_MARKED_COMPLETE',
   NotificationMessageType.TRADE_CANCELLED: 'TRADE_CANCELLED',
   NotificationMessageType.TRADE_DISPUTED: 'TRADE_DISPUTED',
 };

@@ -78,10 +78,7 @@ import 'features/wallet/screens/transactions_screen.dart' as _i23;
 import 'features/wallet/screens/wallet_screen.dart' as _i45;
 
 class AppRouter extends _i50.RootStackRouter {
-  AppRouter(
-      {_i51.GlobalKey<_i51.NavigatorState>? navigatorKey,
-      required this.authGuard})
-      : super(navigatorKey);
+  AppRouter({_i51.GlobalKey<_i51.NavigatorState>? navigatorKey, required this.authGuard}) : super(navigatorKey);
 
   final _i52.AuthGuard authGuard;
 
@@ -89,10 +86,7 @@ class AppRouter extends _i50.RootStackRouter {
   final Map<String, _i50.PageFactory> pagesMap = {
     MainScreenRoute.name: (routeData) {
       return _i50.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i1.MainScreen(),
-          opaque: true,
-          barrierDismissible: false);
+          routeData: routeData, child: const _i1.MainScreen(), opaque: true, barrierDismissible: false);
     },
     WelcomeRoute.name: (routeData) {
       return _i50.CustomPage<dynamic>(
@@ -114,8 +108,7 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     SignUpRoute.name: (routeData) {
-      final args = routeData.argsAs<SignUpRouteArgs>(
-          orElse: () => const SignUpRouteArgs());
+      final args = routeData.argsAs<SignUpRouteArgs>(orElse: () => const SignUpRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
           child: _i4.SignUpScreen(key: args.key, displaySkip: args.displaySkip),
@@ -125,8 +118,7 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     LoginRoute.name: (routeData) {
-      final args = routeData.argsAs<LoginRouteArgs>(
-          orElse: () => const LoginRouteArgs());
+      final args = routeData.argsAs<LoginRouteArgs>(orElse: () => const LoginRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
           child: _i5.LoginScreen(key: args.key, displaySkip: args.displaySkip),
@@ -196,10 +188,7 @@ class AppRouter extends _i50.RootStackRouter {
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
           child: _i12.AdInfoScreen(
-              key: args.key,
-              ad: args.ad,
-              onGlobalVacation: args.onGlobalVacation,
-              adsViewModel: args.adsViewModel),
+              key: args.key, ad: args.ad, onGlobalVacation: args.onGlobalVacation, adsViewModel: args.adsViewModel),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -225,12 +214,10 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     MarketAdInfoRoute.name: (routeData) {
-      final args = routeData.argsAs<MarketAdInfoRouteArgs>(
-          orElse: () => const MarketAdInfoRouteArgs());
+      final args = routeData.argsAs<MarketAdInfoRouteArgs>(orElse: () => const MarketAdInfoRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i15.MarketAdInfoScreen(
-              key: args.key, ad: args.ad, adId: args.adId),
+          child: _i15.MarketAdInfoScreen(key: args.key, ad: args.ad, adId: args.adId),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -247,14 +234,10 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     TraderProfileRoute.name: (routeData) {
-      final args = routeData.argsAs<TraderProfileRouteArgs>(
-          orElse: () => const TraderProfileRouteArgs());
+      final args = routeData.argsAs<TraderProfileRouteArgs>(orElse: () => const TraderProfileRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i17.TraderProfileScreen(
-              key: args.key,
-              profileModel: args.profileModel,
-              username: args.username),
+          child: _i17.TraderProfileScreen(key: args.key, profileModel: args.profileModel, username: args.username),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -264,10 +247,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<FeedbacksRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i18.FeedbacksScreen(
-              key: args.key,
-              username: args.username,
-              feedbacks: args.feedbacks),
+          child: _i18.FeedbacksScreen(key: args.key, username: args.username, feedbacks: args.feedbacks),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -277,8 +257,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<UserAdsRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i19.UserAdsScreen(
-              key: args.key, username: args.username, ads: args.ads),
+          child: _i19.UserAdsScreen(key: args.key, username: args.username, ads: args.ads),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -288,22 +267,17 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<TradesWithUserRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child:
-              _i20.TradesWithUserScreen(key: args.key, username: args.username),
+          child: _i20.TradesWithUserScreen(key: args.key, username: args.username),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
           barrierDismissible: false);
     },
     TradeRoute.name: (routeData) {
-      final args = routeData.argsAs<TradeRouteArgs>(
-          orElse: () => const TradeRouteArgs());
+      final args = routeData.argsAs<TradeRouteArgs>(orElse: () => const TradeRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i21.TradeScreen(
-              key: args.key,
-              tradeModel: args.tradeModel,
-              tradeId: args.tradeId),
+          child: _i21.TradeScreen(key: args.key, tradeModel: args.tradeModel, tradeId: args.tradeId),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -313,8 +287,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<WebviewRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i22.WebviewScreen(
-              key: args.key, token: args.token, url: args.url),
+          child: _i22.WebviewScreen(key: args.key, token: args.token, url: args.url),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -324,8 +297,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<TransactionsRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i23.TransactionsScreen(
-              key: args.key, transactions: args.transactions),
+          child: _i23.TransactionsScreen(key: args.key, transactions: args.transactions),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -335,8 +307,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<TransactionRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i24.TransactionScreen(
-              key: args.key, transaction: args.transaction),
+          child: _i24.TransactionScreen(key: args.key, transaction: args.transaction),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -346,8 +317,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<IncomingDepositRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child:
-              _i25.IncomingDepositScreen(key: args.key, deposit: args.deposit),
+          child: _i25.IncomingDepositScreen(key: args.key, deposit: args.deposit),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -357,11 +327,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<SendAssetFirstRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i26.SendAssetFirstScreen(
-              key: args.key,
-              price: args.price,
-              balance: args.balance,
-              asset: args.asset),
+          child: _i26.SendAssetFirstScreen(key: args.key, price: args.price, balance: args.balance, asset: args.asset),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -391,8 +357,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<ReceiveAssetRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i29.ReceiveAssetScreen(
-              key: args.key, address: args.address, asset: args.asset),
+          child: _i29.ReceiveAssetScreen(key: args.key, address: args.address, asset: args.asset),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -498,8 +463,7 @@ class AppRouter extends _i50.RootStackRouter {
       final args = routeData.argsAs<ManageTwoFactorAuthRouteArgs>();
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i40.ManageTwoFactorAuthScreen(
-              key: args.key, enabled: args.enabled, model: args.model),
+          child: _i40.ManageTwoFactorAuthScreen(key: args.key, enabled: args.enabled, model: args.model),
           transitionsBuilder: _i50.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -535,8 +499,7 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     CountryRoute.name: (routeData) {
-      final args = routeData.argsAs<CountryRouteArgs>(
-          orElse: () => const CountryRouteArgs());
+      final args = routeData.argsAs<CountryRouteArgs>(orElse: () => const CountryRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
           child: _i44.CountryScreen(key: args.key),
@@ -564,8 +527,7 @@ class AppRouter extends _i50.RootStackRouter {
           barrierDismissible: false);
     },
     MarketRoute.name: (routeData) {
-      final args = routeData.argsAs<MarketRouteArgs>(
-          orElse: () => const MarketRouteArgs());
+      final args = routeData.argsAs<MarketRouteArgs>(orElse: () => const MarketRouteArgs());
       return _i50.CustomPage<dynamic>(
           routeData: routeData,
           child: _i47.MarketScreen(key: args.key),
@@ -599,24 +561,14 @@ class AppRouter extends _i50.RootStackRouter {
         _i50.RouteConfig(MainScreenRoute.name, path: '/', guards: [
           authGuard
         ], children: [
-          _i50.RouteConfig('#redirect',
-              path: '',
-              parent: MainScreenRoute.name,
-              redirectTo: 'market',
-              fullMatch: true),
-          _i50.RouteConfig(WalletRoute.name,
-              path: 'wallet', parent: MainScreenRoute.name),
-          _i50.RouteConfig(TradesRoute.name,
-              path: 'trades', parent: MainScreenRoute.name),
-          _i50.RouteConfig(MarketRoute.name,
-              path: 'market', parent: MainScreenRoute.name),
-          _i50.RouteConfig(AdsRoute.name,
-              path: 'ads', parent: MainScreenRoute.name),
-          _i50.RouteConfig(AccountRoute.name,
-              path: 'profile', parent: MainScreenRoute.name)
+          _i50.RouteConfig('#redirect', path: '', parent: MainScreenRoute.name, redirectTo: 'market', fullMatch: true),
+          _i50.RouteConfig(WalletRoute.name, path: 'wallet', parent: MainScreenRoute.name),
+          _i50.RouteConfig(TradesRoute.name, path: 'trades', parent: MainScreenRoute.name),
+          _i50.RouteConfig(MarketRoute.name, path: 'market', parent: MainScreenRoute.name),
+          _i50.RouteConfig(AdsRoute.name, path: 'ads', parent: MainScreenRoute.name),
+          _i50.RouteConfig(AccountRoute.name, path: 'profile', parent: MainScreenRoute.name)
         ]),
-        _i50.RouteConfig('*#redirect',
-            path: '*', redirectTo: '/', fullMatch: true),
+        _i50.RouteConfig('*#redirect', path: '*', redirectTo: '/', fullMatch: true),
         _i50.RouteConfig(WelcomeRoute.name, path: 'auth/welcomeScreen'),
         _i50.RouteConfig(WelcomeSlidesRoute.name, path: 'auth/welcomeSlides'),
         _i50.RouteConfig(SignUpRoute.name, path: 'auth/signUp'),
@@ -635,41 +587,29 @@ class AppRouter extends _i50.RootStackRouter {
         _i50.RouteConfig(TraderProfileRoute.name, path: 'account/profile'),
         _i50.RouteConfig(FeedbacksRoute.name, path: 'account/feedbacksToUser'),
         _i50.RouteConfig(UserAdsRoute.name, path: 'account/userAds'),
-        _i50.RouteConfig(TradesWithUserRoute.name,
-            path: 'account/tradesWithUser'),
+        _i50.RouteConfig(TradesWithUserRoute.name, path: 'account/tradesWithUser'),
         _i50.RouteConfig(TradeRoute.name, path: 'trades/trade'),
         _i50.RouteConfig(WebviewRoute.name, path: 'webviewScreen'),
         _i50.RouteConfig(TransactionsRoute.name, path: 'wallet/transactions'),
         _i50.RouteConfig(TransactionRoute.name, path: 'wallet/transaction'),
-        _i50.RouteConfig(IncomingDepositRoute.name,
-            path: 'wallet/incomingDeposit'),
+        _i50.RouteConfig(IncomingDepositRoute.name, path: 'wallet/incomingDeposit'),
         _i50.RouteConfig(SendAssetFirstRoute.name, path: 'wallet/sendAssetOne'),
-        _i50.RouteConfig(SendAssetSecondRoute.name,
-            path: 'wallet/sendAssetTwo'),
-        _i50.RouteConfig(SendAssetThirdRoute.name,
-            path: 'wallet/sendAssetThree'),
-        _i50.RouteConfig(ReceiveAssetRoute.name,
-            path: 'wallet/receiveAssetThree'),
+        _i50.RouteConfig(SendAssetSecondRoute.name, path: 'wallet/sendAssetTwo'),
+        _i50.RouteConfig(SendAssetThirdRoute.name, path: 'wallet/sendAssetThree'),
+        _i50.RouteConfig(ReceiveAssetRoute.name, path: 'wallet/receiveAssetThree'),
         _i50.RouteConfig(QrScanRoute.name, path: 'wallet/qrScanScreen'),
         _i50.RouteConfig(NotificationsRoute.name, path: 'notificationsScreen'),
         _i50.RouteConfig(MyProfileRoute.name, path: 'profile/myProfile'),
         _i50.RouteConfig(LinkAccountRoute.name, path: 'profile/linkAccount'),
-        _i50.RouteConfig(TradingPartnersRoute.name,
-            path: 'profile/tradingPartners'),
-        _i50.RouteConfig(AffiliateProgramRoute.name,
-            path: 'profile/affiliateProgram'),
+        _i50.RouteConfig(TradingPartnersRoute.name, path: 'profile/tradingPartners'),
+        _i50.RouteConfig(AffiliateProgramRoute.name, path: 'profile/affiliateProgram'),
         _i50.RouteConfig(CouponsRoute.name, path: 'profile/coupons'),
         _i50.RouteConfig(EmailRoute.name, path: 'profile/email'),
-        _i50.RouteConfig(ChangePasswordRoute.name,
-            path: 'profile/changePassword'),
-        _i50.RouteConfig(TwoFactorAuthRoute.name,
-            path: 'profile/twoFactorAuth'),
-        _i50.RouteConfig(ManageTwoFactorAuthRoute.name,
-            path: 'profile/manageTwoFactorAuth'),
-        _i50.RouteConfig(Enable2faRoute.name,
-            path: 'profile/enableTwoFactorAuth'),
-        _i50.RouteConfig(Disable2faRoute.name,
-            path: 'profile/disableTwoFactorAuth'),
+        _i50.RouteConfig(ChangePasswordRoute.name, path: 'profile/changePassword'),
+        _i50.RouteConfig(TwoFactorAuthRoute.name, path: 'profile/twoFactorAuth'),
+        _i50.RouteConfig(ManageTwoFactorAuthRoute.name, path: 'profile/manageTwoFactorAuth'),
+        _i50.RouteConfig(Enable2faRoute.name, path: 'profile/enableTwoFactorAuth'),
+        _i50.RouteConfig(Disable2faRoute.name, path: 'profile/disableTwoFactorAuth'),
         _i50.RouteConfig(LanguageRoute.name, path: 'profile/language'),
         _i50.RouteConfig(CountryRoute.name, path: 'profile/country')
       ];
@@ -697,8 +637,7 @@ class WelcomeRoute extends _i50.PageRouteInfo<void> {
 class WelcomeSlidesRoute extends _i50.PageRouteInfo<WelcomeSlidesRouteArgs> {
   WelcomeSlidesRoute({_i51.Key? key, required bool isBuy})
       : super(WelcomeSlidesRoute.name,
-            path: 'auth/welcomeSlides',
-            args: WelcomeSlidesRouteArgs(key: key, isBuy: isBuy));
+            path: 'auth/welcomeSlides', args: WelcomeSlidesRouteArgs(key: key, isBuy: isBuy));
 
   static const String name = 'WelcomeSlidesRoute';
 }
@@ -720,9 +659,7 @@ class WelcomeSlidesRouteArgs {
 /// [_i4.SignUpScreen]
 class SignUpRoute extends _i50.PageRouteInfo<SignUpRouteArgs> {
   SignUpRoute({_i51.Key? key, bool displaySkip = false})
-      : super(SignUpRoute.name,
-            path: 'auth/signUp',
-            args: SignUpRouteArgs(key: key, displaySkip: displaySkip));
+      : super(SignUpRoute.name, path: 'auth/signUp', args: SignUpRouteArgs(key: key, displaySkip: displaySkip));
 
   static const String name = 'SignUpRoute';
 }
@@ -744,9 +681,7 @@ class SignUpRouteArgs {
 /// [_i5.LoginScreen]
 class LoginRoute extends _i50.PageRouteInfo<LoginRouteArgs> {
   LoginRoute({_i51.Key? key, bool displaySkip = true})
-      : super(LoginRoute.name,
-            path: 'auth/login',
-            args: LoginRouteArgs(key: key, displaySkip: displaySkip));
+      : super(LoginRoute.name, path: 'auth/login', args: LoginRouteArgs(key: key, displaySkip: displaySkip));
 
   static const String name = 'LoginRoute';
 }
@@ -767,8 +702,7 @@ class LoginRouteArgs {
 /// generated route for
 /// [_i6.ForgotPasswordScreen]
 class ForgotPasswordRoute extends _i50.PageRouteInfo<void> {
-  const ForgotPasswordRoute()
-      : super(ForgotPasswordRoute.name, path: 'auth/forgotPassword');
+  const ForgotPasswordRoute() : super(ForgotPasswordRoute.name, path: 'auth/forgotPassword');
 
   static const String name = 'ForgotPasswordRoute';
 }
@@ -778,8 +712,7 @@ class ForgotPasswordRoute extends _i50.PageRouteInfo<void> {
 class ResetPasswordRoute extends _i50.PageRouteInfo<ResetPasswordRouteArgs> {
   ResetPasswordRoute({_i51.Key? key, required String token})
       : super(ResetPasswordRoute.name,
-            path: 'auth/resetPassword',
-            args: ResetPasswordRouteArgs(key: key, token: token));
+            path: 'auth/resetPassword', args: ResetPasswordRouteArgs(key: key, token: token));
 
   static const String name = 'ResetPasswordRoute';
 }
@@ -800,8 +733,7 @@ class ResetPasswordRouteArgs {
 /// generated route for
 /// [_i8.PinCodeSetScreen]
 class PinCodeSetRoute extends _i50.PageRouteInfo<void> {
-  const PinCodeSetRoute()
-      : super(PinCodeSetRoute.name, path: 'auth/pinCodeSet');
+  const PinCodeSetRoute() : super(PinCodeSetRoute.name, path: 'auth/pinCodeSet');
 
   static const String name = 'PinCodeSetRoute';
 }
@@ -809,8 +741,7 @@ class PinCodeSetRoute extends _i50.PageRouteInfo<void> {
 /// generated route for
 /// [_i9.PinCodeCheckScreen]
 class PinCodeCheckRoute extends _i50.PageRouteInfo<void> {
-  const PinCodeCheckRoute()
-      : super(PinCodeCheckRoute.name, path: 'auth/pinCodeCheck');
+  const PinCodeCheckRoute() : super(PinCodeCheckRoute.name, path: 'auth/pinCodeCheck');
 
   static const String name = 'PinCodeCheckRoute';
 }
@@ -827,9 +758,7 @@ class PostAdRoute extends _i50.PageRouteInfo<void> {
 /// [_i11.AdsSettingsScreen]
 class AdsSettingsRoute extends _i50.PageRouteInfo<AdsSettingsRouteArgs> {
   AdsSettingsRoute({_i51.Key? key, required _i53.AdsViewModel model})
-      : super(AdsSettingsRoute.name,
-            path: 'ads/adsSettings',
-            args: AdsSettingsRouteArgs(key: key, model: model));
+      : super(AdsSettingsRoute.name, path: 'ads/adsSettings', args: AdsSettingsRouteArgs(key: key, model: model));
 
   static const String name = 'AdsSettingsRoute';
 }
@@ -850,25 +779,16 @@ class AdsSettingsRouteArgs {
 /// generated route for
 /// [_i12.AdInfoScreen]
 class AdInfoRoute extends _i50.PageRouteInfo<AdInfoRouteArgs> {
-  AdInfoRoute(
-      {_i51.Key? key,
-      required _i54.AdModel ad,
-      bool? onGlobalVacation,
-      _i53.AdsViewModel? adsViewModel})
+  AdInfoRoute({_i51.Key? key, required _i54.AdModel ad, bool? onGlobalVacation, _i53.AdsViewModel? adsViewModel})
       : super(AdInfoRoute.name,
             path: 'ads/adInfo',
-            args: AdInfoRouteArgs(
-                key: key,
-                ad: ad,
-                onGlobalVacation: onGlobalVacation,
-                adsViewModel: adsViewModel));
+            args: AdInfoRouteArgs(key: key, ad: ad, onGlobalVacation: onGlobalVacation, adsViewModel: adsViewModel));
 
   static const String name = 'AdInfoRoute';
 }
 
 class AdInfoRouteArgs {
-  const AdInfoRouteArgs(
-      {this.key, required this.ad, this.onGlobalVacation, this.adsViewModel});
+  const AdInfoRouteArgs({this.key, required this.ad, this.onGlobalVacation, this.adsViewModel});
 
   final _i51.Key? key;
 
@@ -888,8 +808,7 @@ class AdInfoRouteArgs {
 /// [_i13.AdEditScreen]
 class AdEditRoute extends _i50.PageRouteInfo<AdEditRouteArgs> {
   AdEditRoute({_i51.Key? key, required _i54.AdModel ad})
-      : super(AdEditRoute.name,
-            path: 'ads/adEdit', args: AdEditRouteArgs(key: key, ad: ad));
+      : super(AdEditRoute.name, path: 'ads/adEdit', args: AdEditRouteArgs(key: key, ad: ad));
 
   static const String name = 'AdEditRoute';
 }
@@ -919,9 +838,7 @@ class MarketHelpRoute extends _i50.PageRouteInfo<void> {
 /// [_i15.MarketAdInfoScreen]
 class MarketAdInfoRoute extends _i50.PageRouteInfo<MarketAdInfoRouteArgs> {
   MarketAdInfoRoute({_i51.Key? key, _i54.AdModel? ad, String? adId})
-      : super(MarketAdInfoRoute.name,
-            path: 'market/adInfo',
-            args: MarketAdInfoRouteArgs(key: key, ad: ad, adId: adId));
+      : super(MarketAdInfoRoute.name, path: 'market/adInfo', args: MarketAdInfoRouteArgs(key: key, ad: ad, adId: adId));
 
   static const String name = 'MarketAdInfoRoute';
 }
@@ -946,8 +863,7 @@ class MarketAdInfoRouteArgs {
 class InitiateTradeRoute extends _i50.PageRouteInfo<InitiateTradeRouteArgs> {
   InitiateTradeRoute({_i51.Key? key, required _i55.MarketAdInfoViewModel model})
       : super(InitiateTradeRoute.name,
-            path: 'market/initiateTrade',
-            args: InitiateTradeRouteArgs(key: key, model: model));
+            path: 'market/initiateTrade', args: InitiateTradeRouteArgs(key: key, model: model));
 
   static const String name = 'InitiateTradeRoute';
 }
@@ -968,12 +884,10 @@ class InitiateTradeRouteArgs {
 /// generated route for
 /// [_i17.TraderProfileScreen]
 class TraderProfileRoute extends _i50.PageRouteInfo<TraderProfileRouteArgs> {
-  TraderProfileRoute(
-      {_i51.Key? key, _i56.AccountInfoModel? profileModel, String? username})
+  TraderProfileRoute({_i51.Key? key, _i56.AccountInfoModel? profileModel, String? username})
       : super(TraderProfileRoute.name,
             path: 'account/profile',
-            args: TraderProfileRouteArgs(
-                key: key, profileModel: profileModel, username: username));
+            args: TraderProfileRouteArgs(key: key, profileModel: profileModel, username: username));
 
   static const String name = 'TraderProfileRoute';
 }
@@ -996,21 +910,16 @@ class TraderProfileRouteArgs {
 /// generated route for
 /// [_i18.FeedbacksScreen]
 class FeedbacksRoute extends _i50.PageRouteInfo<FeedbacksRouteArgs> {
-  FeedbacksRoute(
-      {_i51.Key? key,
-      required String username,
-      required List<_i57.FeedbackModel> feedbacks})
+  FeedbacksRoute({_i51.Key? key, required String username, required List<_i57.FeedbackModel> feedbacks})
       : super(FeedbacksRoute.name,
             path: 'account/feedbacksToUser',
-            args: FeedbacksRouteArgs(
-                key: key, username: username, feedbacks: feedbacks));
+            args: FeedbacksRouteArgs(key: key, username: username, feedbacks: feedbacks));
 
   static const String name = 'FeedbacksRoute';
 }
 
 class FeedbacksRouteArgs {
-  const FeedbacksRouteArgs(
-      {this.key, required this.username, required this.feedbacks});
+  const FeedbacksRouteArgs({this.key, required this.username, required this.feedbacks});
 
   final _i51.Key? key;
 
@@ -1027,13 +936,9 @@ class FeedbacksRouteArgs {
 /// generated route for
 /// [_i19.UserAdsScreen]
 class UserAdsRoute extends _i50.PageRouteInfo<UserAdsRouteArgs> {
-  UserAdsRoute(
-      {_i51.Key? key,
-      required String username,
-      required List<_i54.AdModel> ads})
+  UserAdsRoute({_i51.Key? key, required String username, required List<_i54.AdModel> ads})
       : super(UserAdsRoute.name,
-            path: 'account/userAds',
-            args: UserAdsRouteArgs(key: key, username: username, ads: ads));
+            path: 'account/userAds', args: UserAdsRouteArgs(key: key, username: username, ads: ads));
 
   static const String name = 'UserAdsRoute';
 }
@@ -1058,8 +963,7 @@ class UserAdsRouteArgs {
 class TradesWithUserRoute extends _i50.PageRouteInfo<TradesWithUserRouteArgs> {
   TradesWithUserRoute({_i51.Key? key, required String username})
       : super(TradesWithUserRoute.name,
-            path: 'account/tradesWithUser',
-            args: TradesWithUserRouteArgs(key: key, username: username));
+            path: 'account/tradesWithUser', args: TradesWithUserRouteArgs(key: key, username: username));
 
   static const String name = 'TradesWithUserRoute';
 }
@@ -1082,9 +986,7 @@ class TradesWithUserRouteArgs {
 class TradeRoute extends _i50.PageRouteInfo<TradeRouteArgs> {
   TradeRoute({_i51.Key? key, _i58.TradeModel? tradeModel, String? tradeId})
       : super(TradeRoute.name,
-            path: 'trades/trade',
-            args: TradeRouteArgs(
-                key: key, tradeModel: tradeModel, tradeId: tradeId));
+            path: 'trades/trade', args: TradeRouteArgs(key: key, tradeModel: tradeModel, tradeId: tradeId));
 
   static const String name = 'TradeRoute';
 }
@@ -1108,9 +1010,7 @@ class TradeRouteArgs {
 /// [_i22.WebviewScreen]
 class WebviewRoute extends _i50.PageRouteInfo<WebviewRouteArgs> {
   WebviewRoute({_i51.Key? key, String? token, required String url})
-      : super(WebviewRoute.name,
-            path: 'webviewScreen',
-            args: WebviewRouteArgs(key: key, token: token, url: url));
+      : super(WebviewRoute.name, path: 'webviewScreen', args: WebviewRouteArgs(key: key, token: token, url: url));
 
   static const String name = 'WebviewRoute';
 }
@@ -1133,11 +1033,9 @@ class WebviewRouteArgs {
 /// generated route for
 /// [_i23.TransactionsScreen]
 class TransactionsRoute extends _i50.PageRouteInfo<TransactionsRouteArgs> {
-  TransactionsRoute(
-      {_i51.Key? key, required List<_i59.TransactionModel> transactions})
+  TransactionsRoute({_i51.Key? key, required List<_i59.TransactionModel> transactions})
       : super(TransactionsRoute.name,
-            path: 'wallet/transactions',
-            args: TransactionsRouteArgs(key: key, transactions: transactions));
+            path: 'wallet/transactions', args: TransactionsRouteArgs(key: key, transactions: transactions));
 
   static const String name = 'TransactionsRoute';
 }
@@ -1160,8 +1058,7 @@ class TransactionsRouteArgs {
 class TransactionRoute extends _i50.PageRouteInfo<TransactionRouteArgs> {
   TransactionRoute({_i51.Key? key, required _i59.TransactionModel transaction})
       : super(TransactionRoute.name,
-            path: 'wallet/transaction',
-            args: TransactionRouteArgs(key: key, transaction: transaction));
+            path: 'wallet/transaction', args: TransactionRouteArgs(key: key, transaction: transaction));
 
   static const String name = 'TransactionRoute';
 }
@@ -1181,13 +1078,10 @@ class TransactionRouteArgs {
 
 /// generated route for
 /// [_i25.IncomingDepositScreen]
-class IncomingDepositRoute
-    extends _i50.PageRouteInfo<IncomingDepositRouteArgs> {
-  IncomingDepositRoute(
-      {_i51.Key? key, required _i60.IncomingDepositModel deposit})
+class IncomingDepositRoute extends _i50.PageRouteInfo<IncomingDepositRouteArgs> {
+  IncomingDepositRoute({_i51.Key? key, required _i60.IncomingDepositModel deposit})
       : super(IncomingDepositRoute.name,
-            path: 'wallet/incomingDeposit',
-            args: IncomingDepositRouteArgs(key: key, deposit: deposit));
+            path: 'wallet/incomingDeposit', args: IncomingDepositRouteArgs(key: key, deposit: deposit));
 
   static const String name = 'IncomingDepositRoute';
 }
@@ -1208,25 +1102,16 @@ class IncomingDepositRouteArgs {
 /// generated route for
 /// [_i26.SendAssetFirstScreen]
 class SendAssetFirstRoute extends _i50.PageRouteInfo<SendAssetFirstRouteArgs> {
-  SendAssetFirstRoute(
-      {_i51.Key? key,
-      required double? price,
-      required double? balance,
-      required _i61.Asset asset})
+  SendAssetFirstRoute({_i51.Key? key, required double? price, required double? balance, required _i61.Asset asset})
       : super(SendAssetFirstRoute.name,
             path: 'wallet/sendAssetOne',
-            args: SendAssetFirstRouteArgs(
-                key: key, price: price, balance: balance, asset: asset));
+            args: SendAssetFirstRouteArgs(key: key, price: price, balance: balance, asset: asset));
 
   static const String name = 'SendAssetFirstRoute';
 }
 
 class SendAssetFirstRouteArgs {
-  const SendAssetFirstRouteArgs(
-      {this.key,
-      required this.price,
-      required this.balance,
-      required this.asset});
+  const SendAssetFirstRouteArgs({this.key, required this.price, required this.balance, required this.asset});
 
   final _i51.Key? key;
 
@@ -1244,12 +1129,10 @@ class SendAssetFirstRouteArgs {
 
 /// generated route for
 /// [_i27.SendAssetSecondScreen]
-class SendAssetSecondRoute
-    extends _i50.PageRouteInfo<SendAssetSecondRouteArgs> {
+class SendAssetSecondRoute extends _i50.PageRouteInfo<SendAssetSecondRouteArgs> {
   SendAssetSecondRoute({_i51.Key? key, required _i62.SendAssetViewModel model})
       : super(SendAssetSecondRoute.name,
-            path: 'wallet/sendAssetTwo',
-            args: SendAssetSecondRouteArgs(key: key, model: model));
+            path: 'wallet/sendAssetTwo', args: SendAssetSecondRouteArgs(key: key, model: model));
 
   static const String name = 'SendAssetSecondRoute';
 }
@@ -1272,8 +1155,7 @@ class SendAssetSecondRouteArgs {
 class SendAssetThirdRoute extends _i50.PageRouteInfo<SendAssetThirdRouteArgs> {
   SendAssetThirdRoute({_i51.Key? key, required _i62.SendAssetViewModel model})
       : super(SendAssetThirdRoute.name,
-            path: 'wallet/sendAssetThree',
-            args: SendAssetThirdRouteArgs(key: key, model: model));
+            path: 'wallet/sendAssetThree', args: SendAssetThirdRouteArgs(key: key, model: model));
 
   static const String name = 'SendAssetThirdRoute';
 }
@@ -1294,19 +1176,15 @@ class SendAssetThirdRouteArgs {
 /// generated route for
 /// [_i29.ReceiveAssetScreen]
 class ReceiveAssetRoute extends _i50.PageRouteInfo<ReceiveAssetRouteArgs> {
-  ReceiveAssetRoute(
-      {_i51.Key? key, required String? address, required _i61.Asset asset})
+  ReceiveAssetRoute({_i51.Key? key, required String? address, required _i61.Asset asset})
       : super(ReceiveAssetRoute.name,
-            path: 'wallet/receiveAssetThree',
-            args: ReceiveAssetRouteArgs(
-                key: key, address: address, asset: asset));
+            path: 'wallet/receiveAssetThree', args: ReceiveAssetRouteArgs(key: key, address: address, asset: asset));
 
   static const String name = 'ReceiveAssetRoute';
 }
 
 class ReceiveAssetRouteArgs {
-  const ReceiveAssetRouteArgs(
-      {this.key, required this.address, required this.asset});
+  const ReceiveAssetRouteArgs({this.key, required this.address, required this.asset});
 
   final _i51.Key? key;
 
@@ -1331,8 +1209,7 @@ class QrScanRoute extends _i50.PageRouteInfo<void> {
 /// generated route for
 /// [_i31.NotificationsScreen]
 class NotificationsRoute extends _i50.PageRouteInfo<void> {
-  const NotificationsRoute()
-      : super(NotificationsRoute.name, path: 'notificationsScreen');
+  const NotificationsRoute() : super(NotificationsRoute.name, path: 'notificationsScreen');
 
   static const String name = 'NotificationsRoute';
 }
@@ -1341,9 +1218,7 @@ class NotificationsRoute extends _i50.PageRouteInfo<void> {
 /// [_i32.MyProfileScreen]
 class MyProfileRoute extends _i50.PageRouteInfo<MyProfileRouteArgs> {
   MyProfileRoute({_i51.Key? key, required String username})
-      : super(MyProfileRoute.name,
-            path: 'profile/myProfile',
-            args: MyProfileRouteArgs(key: key, username: username));
+      : super(MyProfileRoute.name, path: 'profile/myProfile', args: MyProfileRouteArgs(key: key, username: username));
 
   static const String name = 'MyProfileRoute';
 }
@@ -1379,10 +1254,7 @@ class LinkAccountRoute extends _i50.PageRouteInfo<LinkAccountRouteArgs> {
 }
 
 class LinkAccountRouteArgs {
-  const LinkAccountRouteArgs(
-      {this.key,
-      required this.reputationImportViewModel,
-      required this.reputationPlatform});
+  const LinkAccountRouteArgs({this.key, required this.reputationImportViewModel, required this.reputationPlatform});
 
   final _i51.Key? key;
 
@@ -1399,8 +1271,7 @@ class LinkAccountRouteArgs {
 /// generated route for
 /// [_i34.TradingPartnersScreen]
 class TradingPartnersRoute extends _i50.PageRouteInfo<void> {
-  const TradingPartnersRoute()
-      : super(TradingPartnersRoute.name, path: 'profile/tradingPartners');
+  const TradingPartnersRoute() : super(TradingPartnersRoute.name, path: 'profile/tradingPartners');
 
   static const String name = 'TradingPartnersRoute';
 }
@@ -1408,8 +1279,7 @@ class TradingPartnersRoute extends _i50.PageRouteInfo<void> {
 /// generated route for
 /// [_i35.AffiliateProgramScreen]
 class AffiliateProgramRoute extends _i50.PageRouteInfo<void> {
-  const AffiliateProgramRoute()
-      : super(AffiliateProgramRoute.name, path: 'profile/affiliateProgram');
+  const AffiliateProgramRoute() : super(AffiliateProgramRoute.name, path: 'profile/affiliateProgram');
 
   static const String name = 'AffiliateProgramRoute';
 }
@@ -1426,9 +1296,7 @@ class CouponsRoute extends _i50.PageRouteInfo<void> {
 /// [_i37.EmailScreen]
 class EmailRoute extends _i50.PageRouteInfo<EmailRouteArgs> {
   EmailRoute({_i51.Key? key, required bool verified})
-      : super(EmailRoute.name,
-            path: 'profile/email',
-            args: EmailRouteArgs(key: key, verified: verified));
+      : super(EmailRoute.name, path: 'profile/email', args: EmailRouteArgs(key: key, verified: verified));
 
   static const String name = 'EmailRoute';
 }
@@ -1449,8 +1317,7 @@ class EmailRouteArgs {
 /// generated route for
 /// [_i38.ChangePasswordScreen]
 class ChangePasswordRoute extends _i50.PageRouteInfo<void> {
-  const ChangePasswordRoute()
-      : super(ChangePasswordRoute.name, path: 'profile/changePassword');
+  const ChangePasswordRoute() : super(ChangePasswordRoute.name, path: 'profile/changePassword');
 
   static const String name = 'ChangePasswordRoute';
 }
@@ -1458,31 +1325,24 @@ class ChangePasswordRoute extends _i50.PageRouteInfo<void> {
 /// generated route for
 /// [_i39.TwoFactorAuthScreen]
 class TwoFactorAuthRoute extends _i50.PageRouteInfo<void> {
-  const TwoFactorAuthRoute()
-      : super(TwoFactorAuthRoute.name, path: 'profile/twoFactorAuth');
+  const TwoFactorAuthRoute() : super(TwoFactorAuthRoute.name, path: 'profile/twoFactorAuth');
 
   static const String name = 'TwoFactorAuthRoute';
 }
 
 /// generated route for
 /// [_i40.ManageTwoFactorAuthScreen]
-class ManageTwoFactorAuthRoute
-    extends _i50.PageRouteInfo<ManageTwoFactorAuthRouteArgs> {
-  ManageTwoFactorAuthRoute(
-      {_i51.Key? key,
-      required bool enabled,
-      required _i65.TwoFactorAuthViewModel model})
+class ManageTwoFactorAuthRoute extends _i50.PageRouteInfo<ManageTwoFactorAuthRouteArgs> {
+  ManageTwoFactorAuthRoute({_i51.Key? key, required bool enabled, required _i65.TwoFactorAuthViewModel model})
       : super(ManageTwoFactorAuthRoute.name,
             path: 'profile/manageTwoFactorAuth',
-            args: ManageTwoFactorAuthRouteArgs(
-                key: key, enabled: enabled, model: model));
+            args: ManageTwoFactorAuthRouteArgs(key: key, enabled: enabled, model: model));
 
   static const String name = 'ManageTwoFactorAuthRoute';
 }
 
 class ManageTwoFactorAuthRouteArgs {
-  const ManageTwoFactorAuthRouteArgs(
-      {this.key, required this.enabled, required this.model});
+  const ManageTwoFactorAuthRouteArgs({this.key, required this.enabled, required this.model});
 
   final _i51.Key? key;
 
@@ -1501,8 +1361,7 @@ class ManageTwoFactorAuthRouteArgs {
 class Enable2faRoute extends _i50.PageRouteInfo<Enable2faRouteArgs> {
   Enable2faRoute({_i51.Key? key, required String secretUri})
       : super(Enable2faRoute.name,
-            path: 'profile/enableTwoFactorAuth',
-            args: Enable2faRouteArgs(key: key, secretUri: secretUri));
+            path: 'profile/enableTwoFactorAuth', args: Enable2faRouteArgs(key: key, secretUri: secretUri));
 
   static const String name = 'Enable2faRoute';
 }
@@ -1525,8 +1384,7 @@ class Enable2faRouteArgs {
 class Disable2faRoute extends _i50.PageRouteInfo<Disable2faRouteArgs> {
   Disable2faRoute({_i51.Key? key, required String password})
       : super(Disable2faRoute.name,
-            path: 'profile/disableTwoFactorAuth',
-            args: Disable2faRouteArgs(key: key, password: password));
+            path: 'profile/disableTwoFactorAuth', args: Disable2faRouteArgs(key: key, password: password));
 
   static const String name = 'Disable2faRoute';
 }
@@ -1555,9 +1413,7 @@ class LanguageRoute extends _i50.PageRouteInfo<void> {
 /// generated route for
 /// [_i44.CountryScreen]
 class CountryRoute extends _i50.PageRouteInfo<CountryRouteArgs> {
-  CountryRoute({_i51.Key? key})
-      : super(CountryRoute.name,
-            path: 'profile/country', args: CountryRouteArgs(key: key));
+  CountryRoute({_i51.Key? key}) : super(CountryRoute.name, path: 'profile/country', args: CountryRouteArgs(key: key));
 
   static const String name = 'CountryRoute';
 }
@@ -1592,9 +1448,7 @@ class TradesRoute extends _i50.PageRouteInfo<void> {
 /// generated route for
 /// [_i47.MarketScreen]
 class MarketRoute extends _i50.PageRouteInfo<MarketRouteArgs> {
-  MarketRoute({_i51.Key? key})
-      : super(MarketRoute.name,
-            path: 'market', args: MarketRouteArgs(key: key));
+  MarketRoute({_i51.Key? key}) : super(MarketRoute.name, path: 'market', args: MarketRouteArgs(key: key));
 
   static const String name = 'MarketRoute';
 }

@@ -6,8 +6,7 @@ part of 'send_asset_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SendAssetModel _$$_SendAssetModelFromJson(Map<String, dynamic> json) =>
-    _$_SendAssetModel(
+_$_SendAssetModel _$$_SendAssetModelFromJson(Map<String, dynamic> json) => _$_SendAssetModel(
       address: json['address'] as String,
       amount: (json['amount'] as num).toDouble(),
       password: json['password'] as String,

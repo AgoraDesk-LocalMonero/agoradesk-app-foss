@@ -22,8 +22,8 @@ class PushMessage extends StatelessWidget {
     if (sessionId != null && sessionId!.isNotEmpty) {
       tapHandler = () async {
         try {
-            if (onPress != null) onPress!();
-            // await context.navigateTo();
+          if (onPress != null) onPress!();
+          // await context.navigateTo();
         } catch (e) {
           debugPrint('[$runtimeType] Error: $e');
         }

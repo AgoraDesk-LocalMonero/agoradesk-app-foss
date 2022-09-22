@@ -27,24 +27,18 @@ mixin _$AffiliateModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AffiliateModelCopyWith<AffiliateModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AffiliateModelCopyWith<AffiliateModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AffiliateModelCopyWith<$Res> {
-  factory $AffiliateModelCopyWith(
-          AffiliateModel value, $Res Function(AffiliateModel) then) =
+  factory $AffiliateModelCopyWith(AffiliateModel value, $Res Function(AffiliateModel) then) =
       _$AffiliateModelCopyWithImpl<$Res>;
-  $Res call(
-      {String code,
-      @JsonKey(name: 'referred_user_count') int usersCount,
-      bool? enabled});
+  $Res call({String code, @JsonKey(name: 'referred_user_count') int usersCount, bool? enabled});
 }
 
 /// @nodoc
-class _$AffiliateModelCopyWithImpl<$Res>
-    implements $AffiliateModelCopyWith<$Res> {
+class _$AffiliateModelCopyWithImpl<$Res> implements $AffiliateModelCopyWith<$Res> {
   _$AffiliateModelCopyWithImpl(this._value, this._then);
 
   final AffiliateModel _value;
@@ -75,24 +69,17 @@ class _$AffiliateModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_AffiliateModelCopyWith<$Res>
-    implements $AffiliateModelCopyWith<$Res> {
-  factory _$$_AffiliateModelCopyWith(
-          _$_AffiliateModel value, $Res Function(_$_AffiliateModel) then) =
+abstract class _$$_AffiliateModelCopyWith<$Res> implements $AffiliateModelCopyWith<$Res> {
+  factory _$$_AffiliateModelCopyWith(_$_AffiliateModel value, $Res Function(_$_AffiliateModel) then) =
       __$$_AffiliateModelCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String code,
-      @JsonKey(name: 'referred_user_count') int usersCount,
-      bool? enabled});
+  $Res call({String code, @JsonKey(name: 'referred_user_count') int usersCount, bool? enabled});
 }
 
 /// @nodoc
-class __$$_AffiliateModelCopyWithImpl<$Res>
-    extends _$AffiliateModelCopyWithImpl<$Res>
+class __$$_AffiliateModelCopyWithImpl<$Res> extends _$AffiliateModelCopyWithImpl<$Res>
     implements _$$_AffiliateModelCopyWith<$Res> {
-  __$$_AffiliateModelCopyWithImpl(
-      _$_AffiliateModel _value, $Res Function(_$_AffiliateModel) _then)
+  __$$_AffiliateModelCopyWithImpl(_$_AffiliateModel _value, $Res Function(_$_AffiliateModel) _then)
       : super(_value, (v) => _then(v as _$_AffiliateModel));
 
   @override
@@ -126,12 +113,9 @@ class __$$_AffiliateModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_AffiliateModel implements _AffiliateModel {
   const _$_AffiliateModel(
-      {required this.code,
-      @JsonKey(name: 'referred_user_count') required this.usersCount,
-      this.enabled});
+      {required this.code, @JsonKey(name: 'referred_user_count') required this.usersCount, this.enabled});
 
-  factory _$_AffiliateModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AffiliateModelFromJson(json);
+  factory _$_AffiliateModel.fromJson(Map<String, dynamic> json) => _$$_AffiliateModelFromJson(json);
 
   @override
   final String code;
@@ -152,18 +136,14 @@ class _$_AffiliateModel implements _AffiliateModel {
         (other.runtimeType == runtimeType &&
             other is _$_AffiliateModel &&
             const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality()
-                .equals(other.usersCount, usersCount) &&
+            const DeepCollectionEquality().equals(other.usersCount, usersCount) &&
             const DeepCollectionEquality().equals(other.enabled, enabled));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(usersCount),
-      const DeepCollectionEquality().hash(enabled));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(usersCount), const DeepCollectionEquality().hash(enabled));
 
   @JsonKey(ignore: true)
   @override
@@ -184,8 +164,7 @@ abstract class _AffiliateModel implements AffiliateModel {
       @JsonKey(name: 'referred_user_count') required final int usersCount,
       final bool? enabled}) = _$_AffiliateModel;
 
-  factory _AffiliateModel.fromJson(Map<String, dynamic> json) =
-      _$_AffiliateModel.fromJson;
+  factory _AffiliateModel.fromJson(Map<String, dynamic> json) = _$_AffiliateModel.fromJson;
 
   @override
   String get code;
@@ -196,6 +175,5 @@ abstract class _AffiliateModel implements AffiliateModel {
   bool? get enabled;
   @override
   @JsonKey(ignore: true)
-  _$$_AffiliateModelCopyWith<_$_AffiliateModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AffiliateModelCopyWith<_$_AffiliateModel> get copyWith => throw _privateConstructorUsedError;
 }

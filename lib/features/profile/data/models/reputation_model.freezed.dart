@@ -35,33 +35,24 @@ mixin _$ReputationModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ReputationModelCopyWith<ReputationModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ReputationModelCopyWith<ReputationModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ReputationModelCopyWith<$Res> {
-  factory $ReputationModelCopyWith(
-          ReputationModel value, $Res Function(ReputationModel) then) =
+  factory $ReputationModelCopyWith(ReputationModel value, $Res Function(ReputationModel) then) =
       _$ReputationModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
-      @JsonKey(name: 'verification_code', includeIfNull: false)
-          String? verificationCode,
-      @JsonKey(name: 'registered_at', includeIfNull: false)
-          DateTime? registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          int? trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          int? tradeVolume});
+      {@JsonKey(includeIfNull: false) String? username,
+      @JsonKey(name: 'verification_code', includeIfNull: false) String? verificationCode,
+      @JsonKey(name: 'registered_at', includeIfNull: false) DateTime? registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) int? feedbackScore,
+      @JsonKey(includeIfNull: false) int? trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) int? tradeVolume});
 }
 
 /// @nodoc
-class _$ReputationModelCopyWithImpl<$Res>
-    implements $ReputationModelCopyWith<$Res> {
+class _$ReputationModelCopyWithImpl<$Res> implements $ReputationModelCopyWith<$Res> {
   _$ReputationModelCopyWithImpl(this._value, this._then);
 
   final ReputationModel _value;
@@ -107,33 +98,23 @@ class _$ReputationModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_ReputationModelCopyWith<$Res>
-    implements $ReputationModelCopyWith<$Res> {
-  factory _$$_ReputationModelCopyWith(
-          _$_ReputationModel value, $Res Function(_$_ReputationModel) then) =
+abstract class _$$_ReputationModelCopyWith<$Res> implements $ReputationModelCopyWith<$Res> {
+  factory _$$_ReputationModelCopyWith(_$_ReputationModel value, $Res Function(_$_ReputationModel) then) =
       __$$_ReputationModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
-      @JsonKey(name: 'verification_code', includeIfNull: false)
-          String? verificationCode,
-      @JsonKey(name: 'registered_at', includeIfNull: false)
-          DateTime? registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          int? trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          int? tradeVolume});
+      {@JsonKey(includeIfNull: false) String? username,
+      @JsonKey(name: 'verification_code', includeIfNull: false) String? verificationCode,
+      @JsonKey(name: 'registered_at', includeIfNull: false) DateTime? registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) int? feedbackScore,
+      @JsonKey(includeIfNull: false) int? trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) int? tradeVolume});
 }
 
 /// @nodoc
-class __$$_ReputationModelCopyWithImpl<$Res>
-    extends _$ReputationModelCopyWithImpl<$Res>
+class __$$_ReputationModelCopyWithImpl<$Res> extends _$ReputationModelCopyWithImpl<$Res>
     implements _$$_ReputationModelCopyWith<$Res> {
-  __$$_ReputationModelCopyWithImpl(
-      _$_ReputationModel _value, $Res Function(_$_ReputationModel) _then)
+  __$$_ReputationModelCopyWithImpl(_$_ReputationModel _value, $Res Function(_$_ReputationModel) _then)
       : super(_value, (v) => _then(v as _$_ReputationModel));
 
   @override
@@ -182,22 +163,15 @@ class __$$_ReputationModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_ReputationModel extends _ReputationModel {
   const _$_ReputationModel(
-      {@JsonKey(includeIfNull: false)
-          this.username,
-      @JsonKey(name: 'verification_code', includeIfNull: false)
-          this.verificationCode,
-      @JsonKey(name: 'registered_at', includeIfNull: false)
-          this.registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          this.feedbackScore,
-      @JsonKey(includeIfNull: false)
-          this.trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          this.tradeVolume})
+      {@JsonKey(includeIfNull: false) this.username,
+      @JsonKey(name: 'verification_code', includeIfNull: false) this.verificationCode,
+      @JsonKey(name: 'registered_at', includeIfNull: false) this.registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) this.feedbackScore,
+      @JsonKey(includeIfNull: false) this.trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) this.tradeVolume})
       : super._();
 
-  factory _$_ReputationModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ReputationModelFromJson(json);
+  factory _$_ReputationModel.fromJson(Map<String, dynamic> json) => _$$_ReputationModelFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -229,15 +203,11 @@ class _$_ReputationModel extends _ReputationModel {
         (other.runtimeType == runtimeType &&
             other is _$_ReputationModel &&
             const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality()
-                .equals(other.verificationCode, verificationCode) &&
-            const DeepCollectionEquality()
-                .equals(other.registeredAt, registeredAt) &&
-            const DeepCollectionEquality()
-                .equals(other.feedbackScore, feedbackScore) &&
+            const DeepCollectionEquality().equals(other.verificationCode, verificationCode) &&
+            const DeepCollectionEquality().equals(other.registeredAt, registeredAt) &&
+            const DeepCollectionEquality().equals(other.feedbackScore, feedbackScore) &&
             const DeepCollectionEquality().equals(other.trades, trades) &&
-            const DeepCollectionEquality()
-                .equals(other.tradeVolume, tradeVolume));
+            const DeepCollectionEquality().equals(other.tradeVolume, tradeVolume));
   }
 
   @JsonKey(ignore: true)
@@ -266,22 +236,15 @@ class _$_ReputationModel extends _ReputationModel {
 
 abstract class _ReputationModel extends ReputationModel {
   const factory _ReputationModel(
-      {@JsonKey(includeIfNull: false)
-          final String? username,
-      @JsonKey(name: 'verification_code', includeIfNull: false)
-          final String? verificationCode,
-      @JsonKey(name: 'registered_at', includeIfNull: false)
-          final DateTime? registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          final int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          final int? trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          final int? tradeVolume}) = _$_ReputationModel;
+      {@JsonKey(includeIfNull: false) final String? username,
+      @JsonKey(name: 'verification_code', includeIfNull: false) final String? verificationCode,
+      @JsonKey(name: 'registered_at', includeIfNull: false) final DateTime? registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) final int? feedbackScore,
+      @JsonKey(includeIfNull: false) final int? trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) final int? tradeVolume}) = _$_ReputationModel;
   const _ReputationModel._() : super._();
 
-  factory _ReputationModel.fromJson(Map<String, dynamic> json) =
-      _$_ReputationModel.fromJson;
+  factory _ReputationModel.fromJson(Map<String, dynamic> json) = _$_ReputationModel.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -303,6 +266,5 @@ abstract class _ReputationModel extends ReputationModel {
   int? get tradeVolume;
   @override
   @JsonKey(ignore: true)
-  _$$_ReputationModelCopyWith<_$_ReputationModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ReputationModelCopyWith<_$_ReputationModel> get copyWith => throw _privateConstructorUsedError;
 }

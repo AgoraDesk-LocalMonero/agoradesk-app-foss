@@ -6,15 +6,12 @@ part of 'attached_ad_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AttachedAdModel _$$_AttachedAdModelFromJson(Map<String, dynamic> json) =>
-    _$_AttachedAdModel(
+_$_AttachedAdModel _$$_AttachedAdModelFromJson(Map<String, dynamic> json) => _$_AttachedAdModel(
       id: json['id'] as String?,
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
       tradeType: $enumDecode(_$TradeTypeEnumMap, json['trade_type']),
-      advertiser: json['advertiser'] == null
-          ? null
-          : AccountInfoModel.fromJson(
-              json['advertiser'] as Map<String, dynamic>),
+      advertiser:
+          json['advertiser'] == null ? null : AccountInfoModel.fromJson(json['advertiser'] as Map<String, dynamic>),
       paymentMethod: json['payment_method'] as String?,
     );
 

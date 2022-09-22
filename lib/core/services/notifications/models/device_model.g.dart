@@ -6,8 +6,7 @@ part of 'device_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeviceModel _$$_DeviceModelFromJson(Map<String, dynamic> json) =>
-    _$_DeviceModel(
+_$_DeviceModel _$$_DeviceModelFromJson(Map<String, dynamic> json) => _$_DeviceModel(
       type: json['type'] as String?,
       deviceName: json['device_name'] as String?,
       token: json['token'] as String,

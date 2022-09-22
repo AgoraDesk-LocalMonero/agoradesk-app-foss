@@ -29,14 +29,12 @@ mixin _$ChangeEmailRequest {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChangeEmailRequestCopyWith<ChangeEmailRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ChangeEmailRequestCopyWith<ChangeEmailRequest> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChangeEmailRequestCopyWith<$Res> {
-  factory $ChangeEmailRequestCopyWith(
-          ChangeEmailRequest value, $Res Function(ChangeEmailRequest) then) =
+  factory $ChangeEmailRequestCopyWith(ChangeEmailRequest value, $Res Function(ChangeEmailRequest) then) =
       _$ChangeEmailRequestCopyWithImpl<$Res>;
   $Res call(
       {String? email,
@@ -46,8 +44,7 @@ abstract class $ChangeEmailRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChangeEmailRequestCopyWithImpl<$Res>
-    implements $ChangeEmailRequestCopyWith<$Res> {
+class _$ChangeEmailRequestCopyWithImpl<$Res> implements $ChangeEmailRequestCopyWith<$Res> {
   _$ChangeEmailRequestCopyWithImpl(this._value, this._then);
 
   final ChangeEmailRequest _value;
@@ -83,10 +80,8 @@ class _$ChangeEmailRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_ChangeEmailRequestCopyWith<$Res>
-    implements $ChangeEmailRequestCopyWith<$Res> {
-  factory _$$_ChangeEmailRequestCopyWith(_$_ChangeEmailRequest value,
-          $Res Function(_$_ChangeEmailRequest) then) =
+abstract class _$$_ChangeEmailRequestCopyWith<$Res> implements $ChangeEmailRequestCopyWith<$Res> {
+  factory _$$_ChangeEmailRequestCopyWith(_$_ChangeEmailRequest value, $Res Function(_$_ChangeEmailRequest) then) =
       __$$_ChangeEmailRequestCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -97,11 +92,9 @@ abstract class _$$_ChangeEmailRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ChangeEmailRequestCopyWithImpl<$Res>
-    extends _$ChangeEmailRequestCopyWithImpl<$Res>
+class __$$_ChangeEmailRequestCopyWithImpl<$Res> extends _$ChangeEmailRequestCopyWithImpl<$Res>
     implements _$$_ChangeEmailRequestCopyWith<$Res> {
-  __$$_ChangeEmailRequestCopyWithImpl(
-      _$_ChangeEmailRequest _value, $Res Function(_$_ChangeEmailRequest) _then)
+  __$$_ChangeEmailRequestCopyWithImpl(_$_ChangeEmailRequest _value, $Res Function(_$_ChangeEmailRequest) _then)
       : super(_value, (v) => _then(v as _$_ChangeEmailRequest));
 
   @override
@@ -145,8 +138,7 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
       @JsonKey(includeIfNull: false) this.captcha,
       @JsonKey(ignore: true) this.captchaCookie});
 
-  factory _$_ChangeEmailRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ChangeEmailRequestFromJson(json);
+  factory _$_ChangeEmailRequest.fromJson(Map<String, dynamic> json) => _$$_ChangeEmailRequestFromJson(json);
 
   @override
   final String? email;
@@ -172,8 +164,7 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.captcha, captcha) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaCookie, captchaCookie));
+            const DeepCollectionEquality().equals(other.captchaCookie, captchaCookie));
   }
 
   @JsonKey(ignore: true)
@@ -188,8 +179,7 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
   @JsonKey(ignore: true)
   @override
   _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
-      __$$_ChangeEmailRequestCopyWithImpl<_$_ChangeEmailRequest>(
-          this, _$identity);
+      __$$_ChangeEmailRequestCopyWithImpl<_$_ChangeEmailRequest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -201,14 +191,12 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
 
 abstract class _ChangeEmailRequest implements ChangeEmailRequest {
   const factory _ChangeEmailRequest(
-          {final String? email,
-          final String? password,
-          @JsonKey(includeIfNull: false) final String? captcha,
-          @JsonKey(ignore: true) final String? captchaCookie}) =
-      _$_ChangeEmailRequest;
+      {final String? email,
+      final String? password,
+      @JsonKey(includeIfNull: false) final String? captcha,
+      @JsonKey(ignore: true) final String? captchaCookie}) = _$_ChangeEmailRequest;
 
-  factory _ChangeEmailRequest.fromJson(Map<String, dynamic> json) =
-      _$_ChangeEmailRequest.fromJson;
+  factory _ChangeEmailRequest.fromJson(Map<String, dynamic> json) = _$_ChangeEmailRequest.fromJson;
 
   @override
   String? get email;
@@ -222,6 +210,5 @@ abstract class _ChangeEmailRequest implements ChangeEmailRequest {
   String? get captchaCookie;
   @override
   @JsonKey(ignore: true)
-  _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith => throw _privateConstructorUsedError;
 }

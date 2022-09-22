@@ -6,8 +6,7 @@ part of 'feedback_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FeedbackModel _$$_FeedbackModelFromJson(Map<String, dynamic> json) =>
-    _$_FeedbackModel(
+_$_FeedbackModel _$$_FeedbackModelFromJson(Map<String, dynamic> json) => _$_FeedbackModel(
       feedbackType: $enumDecode(_$FeedbackTypeEnumMap, json['feedback_type']),
       date: fromJsonDate(json['given_at'] as String),
       text: json['msg'] as String?,

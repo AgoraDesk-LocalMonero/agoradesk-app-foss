@@ -6,8 +6,7 @@ part of 'btc_fee_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BtcFeesModel _$$_BtcFeesModelFromJson(Map<String, dynamic> json) =>
-    _$_BtcFeesModel(
+_$_BtcFeesModel _$$_BtcFeesModelFromJson(Map<String, dynamic> json) => _$_BtcFeesModel(
       outgoingFeeRateHigh: json['outgoing_fee_rate_high'] as String,
       outgoingFeeRateMedium: json['outgoing_fee_rate_medium'] as String,
       outgoingFeeRateLow: json['outgoing_fee_rate_low'] as String,
@@ -16,8 +15,7 @@ _$_BtcFeesModel _$$_BtcFeesModelFromJson(Map<String, dynamic> json) =>
       outgoingFeeLow: json['outgoing_fee_low'] as String?,
     );
 
-Map<String, dynamic> _$$_BtcFeesModelToJson(_$_BtcFeesModel instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_BtcFeesModelToJson(_$_BtcFeesModel instance) => <String, dynamic>{
       'outgoing_fee_rate_high': instance.outgoingFeeRateHigh,
       'outgoing_fee_rate_medium': instance.outgoingFeeRateMedium,
       'outgoing_fee_rate_low': instance.outgoingFeeRateLow,

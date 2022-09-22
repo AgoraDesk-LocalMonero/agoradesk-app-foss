@@ -9,16 +9,13 @@ part of 'push_model.dart';
 _$_PushModel _$$_PushModelFromJson(Map<String, dynamic> json) => _$_PushModel(
       id: json['id'] as String,
       read: const BoolJsonConverter().fromJson(json['read'] as String),
-      createdAt: const DatetimeIntJsonConverter()
-          .fromJson(json['createdAt'] as String),
+      createdAt: const DatetimeIntJsonConverter().fromJson(json['createdAt'] as String),
       objectId: json['objectId'] as String?,
       msg: json['msg'] as String?,
       type: $enumDecode(_$NotificationMessageTypeEnumMap, json['type']),
       username: json['subject.username'] as String?,
-      tradeCount: const IntJsonConverter()
-          .fromJson(json['subject.tradeCount'] as String),
-      feedbackScore: const IntJsonConverter()
-          .fromJson(json['subject.feedbackScore'] as String),
+      tradeCount: const IntJsonConverter().fromJson(json['subject.tradeCount'] as String),
+      feedbackScore: const IntJsonConverter().fromJson(json['subject.feedbackScore'] as String),
     );
 
 Map<String, dynamic> _$$_PushModelToJson(_$_PushModel instance) {
@@ -38,10 +35,8 @@ Map<String, dynamic> _$$_PushModelToJson(_$_PushModel instance) {
   writeNotNull('msg', instance.msg);
   val['type'] = _$NotificationMessageTypeEnumMap[instance.type];
   writeNotNull('subject.username', instance.username);
-  writeNotNull('subject.tradeCount',
-      const IntJsonConverter().toJson(instance.tradeCount));
-  writeNotNull('subject.feedbackScore',
-      const IntJsonConverter().toJson(instance.feedbackScore));
+  writeNotNull('subject.tradeCount', const IntJsonConverter().toJson(instance.tradeCount));
+  writeNotNull('subject.feedbackScore', const IntJsonConverter().toJson(instance.feedbackScore));
   return val;
 }
 
@@ -49,8 +44,7 @@ const _$NotificationMessageTypeEnumMap = {
   NotificationMessageType.MESSAGE: 'MESSAGE',
   NotificationMessageType.TRADE_REQUEST: 'TRADE_REQUEST',
   NotificationMessageType.TRADE_COMPLETE: 'TRADE_COMPLETE',
-  NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
-      'TRADE_PAYMENT_MARKED_COMPLETE',
+  NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE: 'TRADE_PAYMENT_MARKED_COMPLETE',
   NotificationMessageType.TRADE_CANCELLED: 'TRADE_CANCELLED',
   NotificationMessageType.TRADE_DISPUTED: 'TRADE_DISPUTED',
 };

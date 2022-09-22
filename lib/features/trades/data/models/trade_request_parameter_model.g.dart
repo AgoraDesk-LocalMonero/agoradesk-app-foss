@@ -6,8 +6,7 @@ part of 'trade_request_parameter_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TradeRequestParameterModel _$$_TradeRequestParameterModelFromJson(
-        Map<String, dynamic> json) =>
+_$_TradeRequestParameterModel _$$_TradeRequestParameterModelFromJson(Map<String, dynamic> json) =>
     _$_TradeRequestParameterModel(
       page: json['page'] as int?,
       size: json['size'] as int?,
@@ -17,8 +16,7 @@ _$_TradeRequestParameterModel _$$_TradeRequestParameterModelFromJson(
       assetCode: json['asset'] as String?,
     );
 
-Map<String, dynamic> _$$_TradeRequestParameterModelToJson(
-    _$_TradeRequestParameterModel instance) {
+Map<String, dynamic> _$$_TradeRequestParameterModelToJson(_$_TradeRequestParameterModel instance) {
   final val = <String, dynamic>{
     'page': instance.page,
     'size': instance.size,

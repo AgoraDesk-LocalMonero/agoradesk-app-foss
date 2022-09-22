@@ -28,15 +28,12 @@ mixin _$DeviceModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceModelCopyWith<DeviceModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DeviceModelCopyWith<DeviceModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeviceModelCopyWith<$Res> {
-  factory $DeviceModelCopyWith(
-          DeviceModel value, $Res Function(DeviceModel) then) =
-      _$DeviceModelCopyWithImpl<$Res>;
+  factory $DeviceModelCopyWith(DeviceModel value, $Res Function(DeviceModel) then) = _$DeviceModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: false) String? type,
       @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName,
@@ -75,10 +72,8 @@ class _$DeviceModelCopyWithImpl<$Res> implements $DeviceModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_DeviceModelCopyWith<$Res>
-    implements $DeviceModelCopyWith<$Res> {
-  factory _$$_DeviceModelCopyWith(
-          _$_DeviceModel value, $Res Function(_$_DeviceModel) then) =
+abstract class _$$_DeviceModelCopyWith<$Res> implements $DeviceModelCopyWith<$Res> {
+  factory _$$_DeviceModelCopyWith(_$_DeviceModel value, $Res Function(_$_DeviceModel) then) =
       __$$_DeviceModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -90,8 +85,7 @@ abstract class _$$_DeviceModelCopyWith<$Res>
 /// @nodoc
 class __$$_DeviceModelCopyWithImpl<$Res> extends _$DeviceModelCopyWithImpl<$Res>
     implements _$$_DeviceModelCopyWith<$Res> {
-  __$$_DeviceModelCopyWithImpl(
-      _$_DeviceModel _value, $Res Function(_$_DeviceModel) _then)
+  __$$_DeviceModelCopyWithImpl(_$_DeviceModel _value, $Res Function(_$_DeviceModel) _then)
       : super(_value, (v) => _then(v as _$_DeviceModel));
 
   @override
@@ -130,8 +124,7 @@ class _$_DeviceModel extends _DeviceModel {
       required this.token})
       : super._();
 
-  factory _$_DeviceModel.fromJson(Map<String, dynamic> json) =>
-      _$$_DeviceModelFromJson(json);
+  factory _$_DeviceModel.fromJson(Map<String, dynamic> json) => _$$_DeviceModelFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -153,18 +146,14 @@ class _$_DeviceModel extends _DeviceModel {
         (other.runtimeType == runtimeType &&
             other is _$_DeviceModel &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.deviceName, deviceName) &&
+            const DeepCollectionEquality().equals(other.deviceName, deviceName) &&
             const DeepCollectionEquality().equals(other.token, token));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(deviceName),
-      const DeepCollectionEquality().hash(token));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(deviceName), const DeepCollectionEquality().hash(token));
 
   @JsonKey(ignore: true)
   @override
@@ -181,15 +170,12 @@ class _$_DeviceModel extends _DeviceModel {
 
 abstract class _DeviceModel extends DeviceModel {
   const factory _DeviceModel(
-      {@JsonKey(includeIfNull: false)
-          final String? type,
-      @JsonKey(name: 'device_name', includeIfNull: false)
-          final String? deviceName,
+      {@JsonKey(includeIfNull: false) final String? type,
+      @JsonKey(name: 'device_name', includeIfNull: false) final String? deviceName,
       required final String token}) = _$_DeviceModel;
   const _DeviceModel._() : super._();
 
-  factory _DeviceModel.fromJson(Map<String, dynamic> json) =
-      _$_DeviceModel.fromJson;
+  factory _DeviceModel.fromJson(Map<String, dynamic> json) = _$_DeviceModel.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -201,6 +187,5 @@ abstract class _DeviceModel extends DeviceModel {
   String get token;
   @override
   @JsonKey(ignore: true)
-  _$$_DeviceModelCopyWith<_$_DeviceModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_DeviceModelCopyWith<_$_DeviceModel> get copyWith => throw _privateConstructorUsedError;
 }

@@ -33,31 +33,25 @@ mixin _$AttachedAdModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AttachedAdModelCopyWith<AttachedAdModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AttachedAdModelCopyWith<AttachedAdModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AttachedAdModelCopyWith<$Res> {
-  factory $AttachedAdModelCopyWith(
-          AttachedAdModel value, $Res Function(AttachedAdModel) then) =
+  factory $AttachedAdModelCopyWith(AttachedAdModel value, $Res Function(AttachedAdModel) then) =
       _$AttachedAdModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) String? id,
       Asset? asset,
-      @JsonKey(name: 'trade_type')
-          TradeType tradeType,
+      @JsonKey(name: 'trade_type') TradeType tradeType,
       AccountInfoModel? advertiser,
-      @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod});
+      @JsonKey(name: 'payment_method', includeIfNull: false) String? paymentMethod});
 
   $AccountInfoModelCopyWith<$Res>? get advertiser;
 }
 
 /// @nodoc
-class _$AttachedAdModelCopyWithImpl<$Res>
-    implements $AttachedAdModelCopyWith<$Res> {
+class _$AttachedAdModelCopyWithImpl<$Res> implements $AttachedAdModelCopyWith<$Res> {
   _$AttachedAdModelCopyWithImpl(this._value, this._then);
 
   final AttachedAdModel _value;
@@ -109,32 +103,25 @@ class _$AttachedAdModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_AttachedAdModelCopyWith<$Res>
-    implements $AttachedAdModelCopyWith<$Res> {
-  factory _$$_AttachedAdModelCopyWith(
-          _$_AttachedAdModel value, $Res Function(_$_AttachedAdModel) then) =
+abstract class _$$_AttachedAdModelCopyWith<$Res> implements $AttachedAdModelCopyWith<$Res> {
+  factory _$$_AttachedAdModelCopyWith(_$_AttachedAdModel value, $Res Function(_$_AttachedAdModel) then) =
       __$$_AttachedAdModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) String? id,
       Asset? asset,
-      @JsonKey(name: 'trade_type')
-          TradeType tradeType,
+      @JsonKey(name: 'trade_type') TradeType tradeType,
       AccountInfoModel? advertiser,
-      @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod});
+      @JsonKey(name: 'payment_method', includeIfNull: false) String? paymentMethod});
 
   @override
   $AccountInfoModelCopyWith<$Res>? get advertiser;
 }
 
 /// @nodoc
-class __$$_AttachedAdModelCopyWithImpl<$Res>
-    extends _$AttachedAdModelCopyWithImpl<$Res>
+class __$$_AttachedAdModelCopyWithImpl<$Res> extends _$AttachedAdModelCopyWithImpl<$Res>
     implements _$$_AttachedAdModelCopyWith<$Res> {
-  __$$_AttachedAdModelCopyWithImpl(
-      _$_AttachedAdModel _value, $Res Function(_$_AttachedAdModel) _then)
+  __$$_AttachedAdModelCopyWithImpl(_$_AttachedAdModel _value, $Res Function(_$_AttachedAdModel) _then)
       : super(_value, (v) => _then(v as _$_AttachedAdModel));
 
   @override
@@ -178,17 +165,13 @@ class __$$_AttachedAdModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_AttachedAdModel implements _AttachedAdModel {
   const _$_AttachedAdModel(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          this.id,
+      {@JsonKey(name: 'id', includeIfNull: false) this.id,
       this.asset,
-      @JsonKey(name: 'trade_type')
-          required this.tradeType,
+      @JsonKey(name: 'trade_type') required this.tradeType,
       this.advertiser,
-      @JsonKey(name: 'payment_method', includeIfNull: false)
-          this.paymentMethod});
+      @JsonKey(name: 'payment_method', includeIfNull: false) this.paymentMethod});
 
-  factory _$_AttachedAdModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AttachedAdModelFromJson(json);
+  factory _$_AttachedAdModel.fromJson(Map<String, dynamic> json) => _$$_AttachedAdModelFromJson(json);
 
   @override
   @JsonKey(name: 'id', includeIfNull: false)
@@ -219,10 +202,8 @@ class _$_AttachedAdModel implements _AttachedAdModel {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
             const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
-            const DeepCollectionEquality()
-                .equals(other.advertiser, advertiser) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentMethod, paymentMethod));
+            const DeepCollectionEquality().equals(other.advertiser, advertiser) &&
+            const DeepCollectionEquality().equals(other.paymentMethod, paymentMethod));
   }
 
   @JsonKey(ignore: true)
@@ -250,17 +231,13 @@ class _$_AttachedAdModel implements _AttachedAdModel {
 
 abstract class _AttachedAdModel implements AttachedAdModel {
   const factory _AttachedAdModel(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          final String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) final String? id,
       final Asset? asset,
-      @JsonKey(name: 'trade_type')
-          required final TradeType tradeType,
+      @JsonKey(name: 'trade_type') required final TradeType tradeType,
       final AccountInfoModel? advertiser,
-      @JsonKey(name: 'payment_method', includeIfNull: false)
-          final String? paymentMethod}) = _$_AttachedAdModel;
+      @JsonKey(name: 'payment_method', includeIfNull: false) final String? paymentMethod}) = _$_AttachedAdModel;
 
-  factory _AttachedAdModel.fromJson(Map<String, dynamic> json) =
-      _$_AttachedAdModel.fromJson;
+  factory _AttachedAdModel.fromJson(Map<String, dynamic> json) = _$_AttachedAdModel.fromJson;
 
   @override
   @JsonKey(name: 'id', includeIfNull: false)
@@ -279,6 +256,5 @@ abstract class _AttachedAdModel implements AttachedAdModel {
   String? get paymentMethod;
   @override
   @JsonKey(ignore: true)
-  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,8 +6,7 @@ part of 'message_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MessageModel _$$_MessageModelFromJson(Map<String, dynamic> json) =>
-    _$_MessageModel(
+_$_MessageModel _$$_MessageModelFromJson(Map<String, dynamic> json) => _$_MessageModel(
       messageId: json['message_id'] as String?,
       tradeId: json['contact_id'] as String?,
       createdAt: fromJsonDate(json['created_at'] as String),
