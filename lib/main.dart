@@ -91,7 +91,7 @@ void main() async {
       ),
     ],
   );
-  if (kDebugMode) {
+  if (kDebugMode || includeFcm == false) {
     runApp(const App());
     return;
   }

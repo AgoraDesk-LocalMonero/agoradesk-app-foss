@@ -80,7 +80,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
-  late final Plausible _plausible;
+  Plausible? _plausible;
   late final AppState appState;
 
   Uri? _initialUri;
@@ -267,11 +267,13 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Initialize Mixpanel Analytics
   ///
   Future<void> _initPlausible() async {
-    try {
-      _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
-    } catch (e, stackTrace) {
-      debugPrint('[$runtimeType] Mixpanel Error: $e');
-      Sentry.captureException(e, stackTrace: stackTrace);
+    if (GetIt.I<AppParameters>().includeFcm) {
+      try {
+        _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
+      } catch (e, stackTrace) {
+        debugPrint('[$runtimeType] Mixpanel Error: $e');
+        Sentry.captureException(e, stackTrace: stackTrace);
+      }
     }
   }
 
@@ -467,7 +469,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       ..on<AnalyticsEvent>().listen((e) {
         debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
         if (appState.initialized) {
-          _plausible.event(name: e.event, referrer: e.properties.toString());
+          if (_plausible != null) {
+            _plausible!.event(name: e.event, referrer: e.properties.toString());
+          }
         }
       })
       ..on<LocaleChangedEvent>().listen((e) {
