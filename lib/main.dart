@@ -138,13 +138,14 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();
-    final l = await _secureStorage.read(SecureStorageKey.locale);
-    final String langCode = l ?? Platform.localeName.substring(0, 2);
+    final locale = await _secureStorage.read(SecureStorageKey.locale);
+    final String langCode = locale ?? Platform.localeName.substring(0, 2);
     final PushModel push = PushModel.fromJson(message.data);
+    final awesomeMessageId = math.Random().nextInt(10000000);
     final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-    await AwesomeNotifications().createNotification(
+    final bool res = await AwesomeNotifications().createNotification(
       content: NotificationContent(
-        id: math.Random().nextInt(10000000),
+        id: awesomeMessageId,
         channelKey: kNotificationsChannel,
         title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
         body: push.msg,
@@ -152,6 +153,11 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
         payload: payload,
       ),
     );
+    if (res) {
+      String phonePushesData = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+      phonePushesData += ';$awesomeMessageId:${push.objectId}';
+      _secureStorage.write(SecureStorageKey.pushAndObjectIds, phonePushesData);
+    }
   } catch (e) {
     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
   }

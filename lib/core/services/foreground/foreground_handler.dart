@@ -28,9 +28,9 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
     final SecureStorage _secureStorage = SecureStorage();
     final token = await _secureStorage.read(SecureStorageKey.token);
     final openedTradeId = await _secureStorage.read(SecureStorageKey.openedTradeId);
-    final l = await _secureStorage.read(SecureStorageKey.locale);
+    final locale = await _secureStorage.read(SecureStorageKey.locale);
     final String? lastNotificationTimeInt = await _secureStorage.read(SecureStorageKey.lastNotificationTimeInt);
-    final String langCode = l ?? Platform.localeName.substring(0, 2);
+    final String langCode = locale ?? Platform.localeName.substring(0, 2);
     if (token != null && token.isNotEmpty) {
       Map<String, String> headers = {
         'Authorization': token,
@@ -68,10 +68,11 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
               final Map<String, String> payload =
                   push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
               if (openedTradeId != push.objectId) {
+                final awesomeMessageId = Random().nextInt(1000000);
                 final res = await AwesomeNotifications().createNotification(
                   content: NotificationContent(
                     icon: 'resource://mipmap/ic_icon_black',
-                    id: Random().nextInt(1000000),
+                    id: awesomeMessageId,
                     channelKey: kNotificationsChannel,
                     title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
                     body: translatedNotificationText(push, langCode),
@@ -79,6 +80,11 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
                     payload: payload,
                   ),
                 );
+                if (res) {
+                  String phonePushesData = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+                  phonePushesData += ';$awesomeMessageId:${push.objectId}';
+                  _secureStorage.write(SecureStorageKey.pushAndObjectIds, phonePushesData);
+                }
               }
             }
           }

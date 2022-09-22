@@ -7,6 +7,9 @@ enum SecureStorageKey {
   locale,
   lastNotificationTimeInt,
   openedTradeId,
+  /// keep push id & trade id (objectId) in string format, separated by comma
+  /// 123:uytuyt;76587:uyytfYTD
+  pushAndObjectIds,
 }
 
 class SecureStorage {
