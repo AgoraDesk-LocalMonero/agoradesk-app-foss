@@ -71,7 +71,7 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
         mainAction: Restart.restartApp,
         mainActionText: context.intl.app_restart_now,
         secondAction: () => Navigator.of(context).pop(),
-        secondActionText: context.intl.app_restart_now,
+        secondActionText: context.intl.app_postpone,
       ),
     );
   }
