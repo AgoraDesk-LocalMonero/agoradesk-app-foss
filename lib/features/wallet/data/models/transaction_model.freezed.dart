@@ -38,12 +38,14 @@ mixin _$TransactionModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransactionModelCopyWith<TransactionModel> get copyWith => throw _privateConstructorUsedError;
+  $TransactionModelCopyWith<TransactionModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $TransactionModelCopyWith<$Res> {
-  factory $TransactionModelCopyWith(TransactionModel value, $Res Function(TransactionModel) then) =
+  factory $TransactionModelCopyWith(
+          TransactionModel value, $Res Function(TransactionModel) then) =
       _$TransactionModelCopyWithImpl<$Res>;
   $Res call(
       {String amount,
@@ -58,7 +60,8 @@ abstract class $TransactionModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TransactionModelCopyWithImpl<$Res> implements $TransactionModelCopyWith<$Res> {
+class _$TransactionModelCopyWithImpl<$Res>
+    implements $TransactionModelCopyWith<$Res> {
   _$TransactionModelCopyWithImpl(this._value, this._then);
 
   final TransactionModel _value;
@@ -119,8 +122,10 @@ class _$TransactionModelCopyWithImpl<$Res> implements $TransactionModelCopyWith<
 }
 
 /// @nodoc
-abstract class _$$_TransactionModelCopyWith<$Res> implements $TransactionModelCopyWith<$Res> {
-  factory _$$_TransactionModelCopyWith(_$_TransactionModel value, $Res Function(_$_TransactionModel) then) =
+abstract class _$$_TransactionModelCopyWith<$Res>
+    implements $TransactionModelCopyWith<$Res> {
+  factory _$$_TransactionModelCopyWith(
+          _$_TransactionModel value, $Res Function(_$_TransactionModel) then) =
       __$$_TransactionModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -136,9 +141,11 @@ abstract class _$$_TransactionModelCopyWith<$Res> implements $TransactionModelCo
 }
 
 /// @nodoc
-class __$$_TransactionModelCopyWithImpl<$Res> extends _$TransactionModelCopyWithImpl<$Res>
+class __$$_TransactionModelCopyWithImpl<$Res>
+    extends _$TransactionModelCopyWithImpl<$Res>
     implements _$$_TransactionModelCopyWith<$Res> {
-  __$$_TransactionModelCopyWithImpl(_$_TransactionModel _value, $Res Function(_$_TransactionModel) _then)
+  __$$_TransactionModelCopyWithImpl(
+      _$_TransactionModel _value, $Res Function(_$_TransactionModel) _then)
       : super(_value, (v) => _then(v as _$_TransactionModel));
 
   @override
@@ -212,7 +219,8 @@ class _$_TransactionModel extends _TransactionModel {
       required this.description})
       : super._();
 
-  factory _$_TransactionModel.fromJson(Map<String, dynamic> json) => _$$_TransactionModelFromJson(json);
+  factory _$_TransactionModel.fromJson(Map<String, dynamic> json) =>
+      _$$_TransactionModelFromJson(json);
 
   @override
   final String amount;
@@ -257,7 +265,8 @@ class _$_TransactionModel extends _TransactionModel {
             const DeepCollectionEquality().equals(other.isSent, isSent) &&
             const DeepCollectionEquality().equals(other.isBitcoin, isBitcoin) &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality().equals(other.description, description));
+            const DeepCollectionEquality()
+                .equals(other.description, description));
   }
 
   @JsonKey(ignore: true)
@@ -300,7 +309,8 @@ abstract class _TransactionModel extends TransactionModel {
       required final String description}) = _$_TransactionModel;
   const _TransactionModel._() : super._();
 
-  factory _TransactionModel.fromJson(Map<String, dynamic> json) = _$_TransactionModel.fromJson;
+  factory _TransactionModel.fromJson(Map<String, dynamic> json) =
+      _$_TransactionModel.fromJson;
 
   @override
   String get amount;
@@ -328,5 +338,6 @@ abstract class _TransactionModel extends TransactionModel {
   String get description;
   @override
   @JsonKey(ignore: true)
-  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

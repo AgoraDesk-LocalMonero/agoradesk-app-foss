@@ -21,13 +21,15 @@ _$_AdModel _$$_AdModelFromJson(Map<String, dynamic> json) => _$_AdModel(
       buyerSettlementAddress: json['buyer_settlement_address'] as String?,
       priceEquation: json['price_equation'] as String?,
       trackMaxAmount: json['track_max_amount'] as bool?,
-      requireTrustedByAdvertiser: json['require_trusted_by_advertiser'] as bool?,
+      requireTrustedByAdvertiser:
+          json['require_trusted_by_advertiser'] as bool?,
       floating: json['floating'] as bool?,
       verifiedEmailRequired: json['verified_email_required'] as bool?,
       msg: json['msg'] as String?,
       minAmount: stringToDouble(json['min_amount'] as String?),
       maxAmount: stringToDouble(json['max_amount'] as String?),
-      maxAmountAvailable: stringToDouble(json['max_amount_available'] as String?),
+      maxAmountAvailable:
+          stringToDouble(json['max_amount_available'] as String?),
       paymentWindowMinutes: json['payment_window_minutes'] as int?,
       limitToFiatAmounts: json['limit_to_fiat_amounts'] as String?,
       paymentMethodDetail: json['payment_method_detail'] as String?,
@@ -38,7 +40,9 @@ _$_AdModel _$$_AdModelFromJson(Map<String, dynamic> json) => _$_AdModel(
       requireFeedbackScore: json['require_feedback_score'] as int?,
       buyerSettlementFeeLevel: json['buyer_settlement_fee_level'] as String?,
       locationString: json['location_string'] as String?,
-      profile: json['profile'] == null ? null : AccountInfoModel.fromJson(json['profile'] as Map<String, dynamic>),
+      profile: json['profile'] == null
+          ? null
+          : AccountInfoModel.fromJson(json['profile'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_AdModelToJson(_$_AdModel instance) {
@@ -65,13 +69,15 @@ Map<String, dynamic> _$$_AdModelToJson(_$_AdModel instance) {
   writeNotNull('buyer_settlement_address', instance.buyerSettlementAddress);
   writeNotNull('price_equation', instance.priceEquation);
   writeNotNull('track_max_amount', instance.trackMaxAmount);
-  writeNotNull('require_trusted_by_advertiser', instance.requireTrustedByAdvertiser);
+  writeNotNull(
+      'require_trusted_by_advertiser', instance.requireTrustedByAdvertiser);
   writeNotNull('floating', instance.floating);
   writeNotNull('verified_email_required', instance.verifiedEmailRequired);
   writeNotNull('msg', instance.msg);
   writeNotNull('min_amount', doubleToString(instance.minAmount));
   writeNotNull('max_amount', doubleToString(instance.maxAmount));
-  writeNotNull('max_amount_available', doubleToString(instance.maxAmountAvailable));
+  writeNotNull(
+      'max_amount_available', doubleToString(instance.maxAmountAvailable));
   writeNotNull('payment_window_minutes', instance.paymentWindowMinutes);
   writeNotNull('limit_to_fiat_amounts', instance.limitToFiatAmounts);
   writeNotNull('payment_method_detail', instance.paymentMethodDetail);

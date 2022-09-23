@@ -93,6 +93,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => AutoRouter.of(context).push(const TwoFactorAuthRoute()),
                           ),
                           const SizedBox(height: 8),
+                          LineWithSwitcher(
+                            value: model.isSentryOn(),
+                            title: 'Crashlytics',
+                            onPressed: () => model.switchSentryStatus(context),
+                          ),
+                          const SizedBox(height: 8),
                           LineWithArrow(
                             title: context.intl.change_pin,
                             onPressed: () async {

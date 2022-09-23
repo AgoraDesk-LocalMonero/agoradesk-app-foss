@@ -35,38 +35,53 @@ mixin _$UserSettingsModel {
   @JsonKey(name: 'sensitive_emails', includeIfNull: false)
   bool? get sensitiveEmails => throw _privateConstructorUsedError;
   @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-  bool? get newTradeRequestEmailNotifications => throw _privateConstructorUsedError;
+  bool? get newTradeRequestEmailNotifications =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-  bool? get newOnlinePaymentEmailNotifications => throw _privateConstructorUsedError;
+  bool? get newOnlinePaymentEmailNotifications =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-  bool? get escrowReleaseEmailNotifications => throw _privateConstructorUsedError;
+  bool? get escrowReleaseEmailNotifications =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-  bool? get newMessageTelegramNotifications => throw _privateConstructorUsedError;
+  bool? get newMessageTelegramNotifications =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
   bool? get newMessageEmailNotifications => throw _privateConstructorUsedError;
-  @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-  bool? get newTradeRequestTelegramNotifications => throw _privateConstructorUsedError;
-  @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-  bool? get newOnlinePaymentTelegramNotifications => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'new_trade_request_telegram_notifications', includeIfNull: false)
+  bool? get newTradeRequestTelegramNotifications =>
+      throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'new_online_payment_telegram_notifications', includeIfNull: false)
+  bool? get newOnlinePaymentTelegramNotifications =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-  bool? get escrowReleaseTelegramNotifications => throw _privateConstructorUsedError;
+  bool? get escrowReleaseTelegramNotifications =>
+      throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get introduction => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get homepage => throw _privateConstructorUsedError;
   @JsonKey(name: 'telegram_id', includeIfNull: false)
   int? get telegramId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
+  @JsonKey(
+      name: 'two_factor_authentication_type',
+      fromJson: _twoFaFromJson,
+      toJson: _twoFaToJson,
+      includeIfNull: false)
   bool? get twoFaEnabled => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserSettingsModelCopyWith<UserSettingsModel> get copyWith => throw _privateConstructorUsedError;
+  $UserSettingsModelCopyWith<UserSettingsModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UserSettingsModelCopyWith<$Res> {
-  factory $UserSettingsModelCopyWith(UserSettingsModel value, $Res Function(UserSettingsModel) then) =
+  factory $UserSettingsModelCopyWith(
+          UserSettingsModel value, $Res Function(UserSettingsModel) then) =
       _$UserSettingsModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(ignore: true)
@@ -110,7 +125,8 @@ abstract class $UserSettingsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserSettingsModelCopyWithImpl<$Res> implements $UserSettingsModelCopyWith<$Res> {
+class _$UserSettingsModelCopyWithImpl<$Res>
+    implements $UserSettingsModelCopyWith<$Res> {
   _$UserSettingsModelCopyWithImpl(this._value, this._then);
 
   final UserSettingsModel _value;
@@ -168,19 +184,23 @@ class _$UserSettingsModelCopyWithImpl<$Res> implements $UserSettingsModelCopyWit
           ? _value.sensitiveEmails
           : sensitiveEmails // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications == freezed
+      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications ==
+              freezed
           ? _value.newTradeRequestEmailNotifications
           : newTradeRequestEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications == freezed
+      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications ==
+              freezed
           ? _value.newOnlinePaymentEmailNotifications
           : newOnlinePaymentEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications == freezed
+      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications ==
+              freezed
           ? _value.escrowReleaseEmailNotifications
           : escrowReleaseEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newMessageTelegramNotifications: newMessageTelegramNotifications == freezed
+      newMessageTelegramNotifications: newMessageTelegramNotifications ==
+              freezed
           ? _value.newMessageTelegramNotifications
           : newMessageTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -188,15 +208,18 @@ class _$UserSettingsModelCopyWithImpl<$Res> implements $UserSettingsModelCopyWit
           ? _value.newMessageEmailNotifications
           : newMessageEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestTelegramNotifications: newTradeRequestTelegramNotifications == freezed
+      newTradeRequestTelegramNotifications: newTradeRequestTelegramNotifications ==
+              freezed
           ? _value.newTradeRequestTelegramNotifications
           : newTradeRequestTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentTelegramNotifications: newOnlinePaymentTelegramNotifications == freezed
-          ? _value.newOnlinePaymentTelegramNotifications
-          : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications == freezed
+      newOnlinePaymentTelegramNotifications:
+          newOnlinePaymentTelegramNotifications == freezed
+              ? _value.newOnlinePaymentTelegramNotifications
+              : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
+                  as bool?,
+      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications ==
+              freezed
           ? _value.escrowReleaseTelegramNotifications
           : escrowReleaseTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -221,8 +244,10 @@ class _$UserSettingsModelCopyWithImpl<$Res> implements $UserSettingsModelCopyWit
 }
 
 /// @nodoc
-abstract class _$$_UserSettingsModelCopyWith<$Res> implements $UserSettingsModelCopyWith<$Res> {
-  factory _$$_UserSettingsModelCopyWith(_$_UserSettingsModel value, $Res Function(_$_UserSettingsModel) then) =
+abstract class _$$_UserSettingsModelCopyWith<$Res>
+    implements $UserSettingsModelCopyWith<$Res> {
+  factory _$$_UserSettingsModelCopyWith(_$_UserSettingsModel value,
+          $Res Function(_$_UserSettingsModel) then) =
       __$$_UserSettingsModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -267,9 +292,11 @@ abstract class _$$_UserSettingsModelCopyWith<$Res> implements $UserSettingsModel
 }
 
 /// @nodoc
-class __$$_UserSettingsModelCopyWithImpl<$Res> extends _$UserSettingsModelCopyWithImpl<$Res>
+class __$$_UserSettingsModelCopyWithImpl<$Res>
+    extends _$UserSettingsModelCopyWithImpl<$Res>
     implements _$$_UserSettingsModelCopyWith<$Res> {
-  __$$_UserSettingsModelCopyWithImpl(_$_UserSettingsModel _value, $Res Function(_$_UserSettingsModel) _then)
+  __$$_UserSettingsModelCopyWithImpl(
+      _$_UserSettingsModel _value, $Res Function(_$_UserSettingsModel) _then)
       : super(_value, (v) => _then(v as _$_UserSettingsModel));
 
   @override
@@ -326,19 +353,23 @@ class __$$_UserSettingsModelCopyWithImpl<$Res> extends _$UserSettingsModelCopyWi
           ? _value.sensitiveEmails
           : sensitiveEmails // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications == freezed
+      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications ==
+              freezed
           ? _value.newTradeRequestEmailNotifications
           : newTradeRequestEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications == freezed
+      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications ==
+              freezed
           ? _value.newOnlinePaymentEmailNotifications
           : newOnlinePaymentEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications == freezed
+      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications ==
+              freezed
           ? _value.escrowReleaseEmailNotifications
           : escrowReleaseEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newMessageTelegramNotifications: newMessageTelegramNotifications == freezed
+      newMessageTelegramNotifications: newMessageTelegramNotifications ==
+              freezed
           ? _value.newMessageTelegramNotifications
           : newMessageTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -346,15 +377,18 @@ class __$$_UserSettingsModelCopyWithImpl<$Res> extends _$UserSettingsModelCopyWi
           ? _value.newMessageEmailNotifications
           : newMessageEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestTelegramNotifications: newTradeRequestTelegramNotifications == freezed
+      newTradeRequestTelegramNotifications: newTradeRequestTelegramNotifications ==
+              freezed
           ? _value.newTradeRequestTelegramNotifications
           : newTradeRequestTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentTelegramNotifications: newOnlinePaymentTelegramNotifications == freezed
-          ? _value.newOnlinePaymentTelegramNotifications
-          : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications == freezed
+      newOnlinePaymentTelegramNotifications:
+          newOnlinePaymentTelegramNotifications == freezed
+              ? _value.newOnlinePaymentTelegramNotifications
+              : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
+                  as bool?,
+      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications ==
+              freezed
           ? _value.escrowReleaseTelegramNotifications
           : escrowReleaseTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -422,7 +456,8 @@ class _$_UserSettingsModel implements _UserSettingsModel {
       @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
           this.twoFaEnabled});
 
-  factory _$_UserSettingsModel.fromJson(Map<String, dynamic> json) => _$$_UserSettingsModelFromJson(json);
+  factory _$_UserSettingsModel.fromJson(Map<String, dynamic> json) =>
+      _$$_UserSettingsModelFromJson(json);
 
   @override
   @JsonKey(ignore: true)
@@ -461,10 +496,12 @@ class _$_UserSettingsModel implements _UserSettingsModel {
   @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
   final bool? newMessageEmailNotifications;
   @override
-  @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
+  @JsonKey(
+      name: 'new_trade_request_telegram_notifications', includeIfNull: false)
   final bool? newTradeRequestTelegramNotifications;
   @override
-  @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
+  @JsonKey(
+      name: 'new_online_payment_telegram_notifications', includeIfNull: false)
   final bool? newOnlinePaymentTelegramNotifications;
   @override
   @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
@@ -479,7 +516,11 @@ class _$_UserSettingsModel implements _UserSettingsModel {
   @JsonKey(name: 'telegram_id', includeIfNull: false)
   final int? telegramId;
   @override
-  @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
+  @JsonKey(
+      name: 'two_factor_authentication_type',
+      fromJson: _twoFaFromJson,
+      toJson: _twoFaToJson,
+      includeIfNull: false)
   final bool? twoFaEnabled;
 
   @override
@@ -494,30 +535,47 @@ class _$_UserSettingsModel implements _UserSettingsModel {
             other is _$_UserSettingsModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.emailVerified, emailVerified) &&
-            const DeepCollectionEquality().equals(other.sellingVacation, sellingVacation) &&
-            const DeepCollectionEquality().equals(other.buyingVacation, buyingVacation) &&
-            const DeepCollectionEquality().equals(other.webNotifications, webNotifications) &&
-            const DeepCollectionEquality().equals(other.sensitiveEmails, sensitiveEmails) &&
             const DeepCollectionEquality()
-                .equals(other.newTradeRequestEmailNotifications, newTradeRequestEmailNotifications) &&
+                .equals(other.emailVerified, emailVerified) &&
             const DeepCollectionEquality()
-                .equals(other.newOnlinePaymentEmailNotifications, newOnlinePaymentEmailNotifications) &&
+                .equals(other.sellingVacation, sellingVacation) &&
             const DeepCollectionEquality()
-                .equals(other.escrowReleaseEmailNotifications, escrowReleaseEmailNotifications) &&
+                .equals(other.buyingVacation, buyingVacation) &&
             const DeepCollectionEquality()
-                .equals(other.newMessageTelegramNotifications, newMessageTelegramNotifications) &&
-            const DeepCollectionEquality().equals(other.newMessageEmailNotifications, newMessageEmailNotifications) &&
+                .equals(other.webNotifications, webNotifications) &&
             const DeepCollectionEquality()
-                .equals(other.newTradeRequestTelegramNotifications, newTradeRequestTelegramNotifications) &&
+                .equals(other.sensitiveEmails, sensitiveEmails) &&
+            const DeepCollectionEquality().equals(
+                other.newTradeRequestEmailNotifications,
+                newTradeRequestEmailNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.newOnlinePaymentEmailNotifications,
+                newOnlinePaymentEmailNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.escrowReleaseEmailNotifications,
+                escrowReleaseEmailNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.newMessageTelegramNotifications,
+                newMessageTelegramNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.newMessageEmailNotifications,
+                newMessageEmailNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.newTradeRequestTelegramNotifications,
+                newTradeRequestTelegramNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.newOnlinePaymentTelegramNotifications,
+                newOnlinePaymentTelegramNotifications) &&
+            const DeepCollectionEquality().equals(
+                other.escrowReleaseTelegramNotifications,
+                escrowReleaseTelegramNotifications) &&
             const DeepCollectionEquality()
-                .equals(other.newOnlinePaymentTelegramNotifications, newOnlinePaymentTelegramNotifications) &&
-            const DeepCollectionEquality()
-                .equals(other.escrowReleaseTelegramNotifications, escrowReleaseTelegramNotifications) &&
-            const DeepCollectionEquality().equals(other.introduction, introduction) &&
+                .equals(other.introduction, introduction) &&
             const DeepCollectionEquality().equals(other.homepage, homepage) &&
-            const DeepCollectionEquality().equals(other.telegramId, telegramId) &&
-            const DeepCollectionEquality().equals(other.twoFaEnabled, twoFaEnabled));
+            const DeepCollectionEquality()
+                .equals(other.telegramId, telegramId) &&
+            const DeepCollectionEquality()
+                .equals(other.twoFaEnabled, twoFaEnabled));
   }
 
   @JsonKey(ignore: true)
@@ -536,8 +594,10 @@ class _$_UserSettingsModel implements _UserSettingsModel {
         const DeepCollectionEquality().hash(escrowReleaseEmailNotifications),
         const DeepCollectionEquality().hash(newMessageTelegramNotifications),
         const DeepCollectionEquality().hash(newMessageEmailNotifications),
-        const DeepCollectionEquality().hash(newTradeRequestTelegramNotifications),
-        const DeepCollectionEquality().hash(newOnlinePaymentTelegramNotifications),
+        const DeepCollectionEquality()
+            .hash(newTradeRequestTelegramNotifications),
+        const DeepCollectionEquality()
+            .hash(newOnlinePaymentTelegramNotifications),
         const DeepCollectionEquality().hash(escrowReleaseTelegramNotifications),
         const DeepCollectionEquality().hash(introduction),
         const DeepCollectionEquality().hash(homepage),
@@ -548,7 +608,8 @@ class _$_UserSettingsModel implements _UserSettingsModel {
   @JsonKey(ignore: true)
   @override
   _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
-      __$$_UserSettingsModelCopyWithImpl<_$_UserSettingsModel>(this, _$identity);
+      __$$_UserSettingsModelCopyWithImpl<_$_UserSettingsModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -599,7 +660,8 @@ abstract class _UserSettingsModel implements UserSettingsModel {
       @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
           final bool? twoFaEnabled}) = _$_UserSettingsModel;
 
-  factory _UserSettingsModel.fromJson(Map<String, dynamic> json) = _$_UserSettingsModel.fromJson;
+  factory _UserSettingsModel.fromJson(Map<String, dynamic> json) =
+      _$_UserSettingsModel.fromJson;
 
   @override
   @JsonKey(ignore: true)
@@ -638,10 +700,12 @@ abstract class _UserSettingsModel implements UserSettingsModel {
   @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
   bool? get newMessageEmailNotifications;
   @override
-  @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
+  @JsonKey(
+      name: 'new_trade_request_telegram_notifications', includeIfNull: false)
   bool? get newTradeRequestTelegramNotifications;
   @override
-  @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
+  @JsonKey(
+      name: 'new_online_payment_telegram_notifications', includeIfNull: false)
   bool? get newOnlinePaymentTelegramNotifications;
   @override
   @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
@@ -656,9 +720,14 @@ abstract class _UserSettingsModel implements UserSettingsModel {
   @JsonKey(name: 'telegram_id', includeIfNull: false)
   int? get telegramId;
   @override
-  @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
+  @JsonKey(
+      name: 'two_factor_authentication_type',
+      fromJson: _twoFaFromJson,
+      toJson: _twoFaToJson,
+      includeIfNull: false)
   bool? get twoFaEnabled;
   @override
   @JsonKey(ignore: true)
-  _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

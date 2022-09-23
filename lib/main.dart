@@ -93,7 +93,11 @@ void main() async {
       ),
     ],
   );
-  if (kDebugMode || includeFcm == false) {
+
+  final userSettings = ObjectBox.userLocalSettingsBox.getAll();
+  final bool sentryIsOn = userSettings.isNotEmpty && userSettings[0].sentryIsOn != false;
+
+  if (kDebugMode || includeFcm == false || sentryIsOn == false) {
     runApp(const App());
     return;
   }

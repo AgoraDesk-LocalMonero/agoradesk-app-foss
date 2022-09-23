@@ -80,6 +80,7 @@ dependencies:
   flutter_displaymode: ^0.4.0
   flutter_inappwebview: ^5.4.3+7
   permission_handler: ^10.0.0
+  restart_app: ^1.1.0
 
 dependency_overrides:
 #  flutter_foreground_task:

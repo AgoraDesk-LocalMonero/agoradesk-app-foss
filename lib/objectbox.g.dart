@@ -28,8 +28,16 @@ final _entities = <ModelEntity>[
       lastPropertyId: const IdUid(2, 7467240446810036079),
       flags: 0,
       properties: <ModelProperty>[
-        ModelProperty(id: const IdUid(1, 5125500188638038355), name: 'id', type: 6, flags: 1),
-        ModelProperty(id: const IdUid(2, 7467240446810036079), name: 'codes', type: 30, flags: 0)
+        ModelProperty(
+            id: const IdUid(1, 5125500188638038355),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        ModelProperty(
+            id: const IdUid(2, 7467240446810036079),
+            name: 'codes',
+            type: 30,
+            flags: 0)
       ],
       relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[]),
@@ -39,29 +47,90 @@ final _entities = <ModelEntity>[
       lastPropertyId: const IdUid(4, 2153158592528492626),
       flags: 0,
       properties: <ModelProperty>[
-        ModelProperty(id: const IdUid(1, 2903083617220170656), name: 'id', type: 6, flags: 1),
-        ModelProperty(id: const IdUid(2, 2381924483495142734), name: 'code', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(3, 3618533580658367531), name: 'name', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(4, 2153158592528492626), name: 'altcoin', type: 1, flags: 0)
+        ModelProperty(
+            id: const IdUid(1, 2903083617220170656),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        ModelProperty(
+            id: const IdUid(2, 2381924483495142734),
+            name: 'code',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(3, 3618533580658367531),
+            name: 'name',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(4, 2153158592528492626),
+            name: 'altcoin',
+            type: 1,
+            flags: 0)
       ],
       relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[]),
   ModelEntity(
       id: const IdUid(5, 5782449331183648541),
       name: 'UserLocalSettings',
-      lastPropertyId: const IdUid(11, 5156181534954807267),
+      lastPropertyId: const IdUid(12, 7145397620462196393),
       flags: 0,
       properties: <ModelProperty>[
-        ModelProperty(id: const IdUid(1, 5206477144598711401), name: 'autoId', type: 6, flags: 1),
-        ModelProperty(id: const IdUid(2, 3183680571458835517), name: 'pinIsActive', type: 1, flags: 0),
-        ModelProperty(id: const IdUid(3, 5440489619168820004), name: 'username', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(4, 5774264365403061578), name: 'dbThemeMode', type: 6, flags: 0),
-        ModelProperty(id: const IdUid(5, 2657915508267259814), name: 'locale', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(6, 2281791557889511102), name: 'countryCode', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(7, 2200225041036009445), name: 'pushFcmTokenSavedToApi', type: 1, flags: 0),
-        ModelProperty(id: const IdUid(8, 8691606086131470979), name: 'firstRun', type: 1, flags: 0),
-        ModelProperty(id: const IdUid(10, 8212590627535673531), name: 'cachedCountrySavedDate', type: 10, flags: 0),
-        ModelProperty(id: const IdUid(11, 5156181534954807267), name: 'cachedCurrencySavedDate', type: 10, flags: 0)
+        ModelProperty(
+            id: const IdUid(1, 5206477144598711401),
+            name: 'autoId',
+            type: 6,
+            flags: 1),
+        ModelProperty(
+            id: const IdUid(2, 3183680571458835517),
+            name: 'pinIsActive',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(3, 5440489619168820004),
+            name: 'username',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(4, 5774264365403061578),
+            name: 'dbThemeMode',
+            type: 6,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(5, 2657915508267259814),
+            name: 'locale',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(6, 2281791557889511102),
+            name: 'countryCode',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(7, 2200225041036009445),
+            name: 'pushFcmTokenSavedToApi',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(8, 8691606086131470979),
+            name: 'firstRun',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(10, 8212590627535673531),
+            name: 'cachedCountrySavedDate',
+            type: 10,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(11, 5156181534954807267),
+            name: 'cachedCurrencySavedDate',
+            type: 10,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(12, 7145397620462196393),
+            name: 'sentryIsOn',
+            type: 1,
+            flags: 0)
       ],
       relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[]),
@@ -71,17 +140,61 @@ final _entities = <ModelEntity>[
       lastPropertyId: const IdUid(14, 1518129399572326220),
       flags: 0,
       properties: <ModelProperty>[
-        ModelProperty(id: const IdUid(1, 7301636371006439812), name: 'id', type: 6, flags: 1),
-        ModelProperty(id: const IdUid(3, 2762531399580248451), name: 'createdAt', type: 10, flags: 0),
-        ModelProperty(id: const IdUid(4, 6064681318992915777), name: 'isAdmin', type: 1, flags: 0),
-        ModelProperty(id: const IdUid(5, 733721144192568964), name: 'senderUsername', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(6, 8288280743741757058), name: 'msg', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(7, 244254876140816740), name: 'attachmentName', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(9, 5355995342257906227), name: 'tradeId', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(10, 321933120204006371), name: 'isSending', type: 1, flags: 0),
-        ModelProperty(id: const IdUid(12, 4404191229373885425), name: 'attachmentUrl', type: 9, flags: 0),
-        ModelProperty(id: const IdUid(13, 4028909758467674766), name: 'isUpdated', type: 1, flags: 0),
-        ModelProperty(id: const IdUid(14, 1518129399572326220), name: 'messageId', type: 9, flags: 0)
+        ModelProperty(
+            id: const IdUid(1, 7301636371006439812),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        ModelProperty(
+            id: const IdUid(3, 2762531399580248451),
+            name: 'createdAt',
+            type: 10,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(4, 6064681318992915777),
+            name: 'isAdmin',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(5, 733721144192568964),
+            name: 'senderUsername',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(6, 8288280743741757058),
+            name: 'msg',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(7, 244254876140816740),
+            name: 'attachmentName',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(9, 5355995342257906227),
+            name: 'tradeId',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(10, 321933120204006371),
+            name: 'isSending',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(12, 4404191229373885425),
+            name: 'attachmentUrl',
+            type: 9,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(13, 4028909758467674766),
+            name: 'isUpdated',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(14, 1518129399572326220),
+            name: 'messageId',
+            type: 9,
+            flags: 0)
       ],
       relations: <ModelRelation>[],
       backlinks: <ModelBacklink>[])
@@ -111,7 +224,11 @@ ModelDefinition getObjectBoxModel() {
       lastIndexId: const IdUid(0, 0),
       lastRelationId: const IdUid(0, 0),
       lastSequenceId: const IdUid(0, 0),
-      retiredEntityUids: const [1787362192846975708, 7220610751543519366, 2447864522021408447],
+      retiredEntityUids: const [
+        1787362192846975708,
+        7220610751543519366,
+        2447864522021408447
+      ],
       retiredIndexUids: const [],
       retiredPropertyUids: const [
         5382707861830122101,
@@ -146,7 +263,8 @@ ModelDefinition getObjectBoxModel() {
           object.id = id;
         },
         objectToFB: (CountryCodeModel object, fb.Builder fbb) {
-          final codesOffset = fbb.writeList(object.codes.map(fbb.writeString).toList(growable: false));
+          final codesOffset = fbb.writeList(
+              object.codes.map(fbb.writeString).toList(growable: false));
           fbb.startTable(3);
           fbb.addInt64(0, object.id);
           fbb.addOffset(1, codesOffset);
@@ -158,7 +276,9 @@ ModelDefinition getObjectBoxModel() {
           final rootOffset = buffer.derefObject(0);
 
           final object = CountryCodeModel(
-              codes: const fb.ListReader<String>(fb.StringReader(asciiOptimization: true), lazy: false)
+              codes: const fb.ListReader<String>(
+                      fb.StringReader(asciiOptimization: true),
+                      lazy: false)
                   .vTableGet(buffer, rootOffset, 6, []))
             ..id = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
 
@@ -188,9 +308,12 @@ ModelDefinition getObjectBoxModel() {
           final rootOffset = buffer.derefObject(0);
 
           final object = CurrencyModel(
-              code: const fb.StringReader(asciiOptimization: true).vTableGet(buffer, rootOffset, 6, ''),
-              name: const fb.StringReader(asciiOptimization: true).vTableGet(buffer, rootOffset, 8, ''),
-              altcoin: const fb.BoolReader().vTableGet(buffer, rootOffset, 10, false))
+              code: const fb.StringReader(asciiOptimization: true)
+                  .vTableGet(buffer, rootOffset, 6, ''),
+              name: const fb.StringReader(asciiOptimization: true)
+                  .vTableGet(buffer, rootOffset, 8, ''),
+              altcoin: const fb.BoolReader()
+                  .vTableGet(buffer, rootOffset, 10, false))
             ..id = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
 
           return object;
@@ -204,10 +327,15 @@ ModelDefinition getObjectBoxModel() {
           object.autoId = id;
         },
         objectToFB: (UserLocalSettings object, fb.Builder fbb) {
-          final usernameOffset = object.username == null ? null : fbb.writeString(object.username!);
-          final localeOffset = object.locale == null ? null : fbb.writeString(object.locale!);
-          final countryCodeOffset = object.countryCode == null ? null : fbb.writeString(object.countryCode!);
-          fbb.startTable(12);
+          final usernameOffset = object.username == null
+              ? null
+              : fbb.writeString(object.username!);
+          final localeOffset =
+              object.locale == null ? null : fbb.writeString(object.locale!);
+          final countryCodeOffset = object.countryCode == null
+              ? null
+              : fbb.writeString(object.countryCode!);
+          fbb.startTable(13);
           fbb.addInt64(0, object.autoId);
           fbb.addBool(1, object.pinIsActive);
           fbb.addOffset(2, usernameOffset);
@@ -216,30 +344,43 @@ ModelDefinition getObjectBoxModel() {
           fbb.addOffset(5, countryCodeOffset);
           fbb.addBool(6, object.pushFcmTokenSavedToApi);
           fbb.addBool(7, object.firstRun);
-          fbb.addInt64(9, object.cachedCountrySavedDate?.millisecondsSinceEpoch);
-          fbb.addInt64(10, object.cachedCurrencySavedDate?.millisecondsSinceEpoch);
+          fbb.addInt64(
+              9, object.cachedCountrySavedDate?.millisecondsSinceEpoch);
+          fbb.addInt64(
+              10, object.cachedCurrencySavedDate?.millisecondsSinceEpoch);
+          fbb.addBool(11, object.sentryIsOn);
           fbb.finish(fbb.endTable());
           return object.autoId;
         },
         objectFromFB: (Store store, ByteData fbData) {
           final buffer = fb.BufferContext(fbData);
           final rootOffset = buffer.derefObject(0);
-          final cachedCountrySavedDateValue = const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 22);
-          final cachedCurrencySavedDateValue = const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 24);
+          final cachedCountrySavedDateValue =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 22);
+          final cachedCurrencySavedDateValue =
+              const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 24);
           final object = UserLocalSettings(
-              locale: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 12),
-              pinIsActive: const fb.BoolReader().vTableGetNullable(buffer, rootOffset, 6),
-              firstRun: const fb.BoolReader().vTableGetNullable(buffer, rootOffset, 18),
-              pushFcmTokenSavedToApi: const fb.BoolReader().vTableGetNullable(buffer, rootOffset, 16),
-              username: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 8),
-              countryCode: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 14),
+              locale: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 12),
+              pinIsActive: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 6),
+              sentryIsOn: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 26),
+              firstRun: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 18),
+              pushFcmTokenSavedToApi: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 16),
+              username: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 8),
+              countryCode: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14),
               cachedCountrySavedDate: cachedCountrySavedDateValue == null
                   ? null
-                  : DateTime.fromMillisecondsSinceEpoch(cachedCountrySavedDateValue),
-              cachedCurrencySavedDate: cachedCurrencySavedDateValue == null
-                  ? null
-                  : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue))
-            ..autoId = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0)
+                  : DateTime.fromMillisecondsSinceEpoch(
+                      cachedCountrySavedDateValue),
+              cachedCurrencySavedDate: cachedCurrencySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue))
+            ..autoId =
+                const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0)
             ..dbThemeMode = const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 10);
 
           return object;
@@ -254,11 +395,19 @@ ModelDefinition getObjectBoxModel() {
         },
         objectToFB: (MessageBoxModel object, fb.Builder fbb) {
           final senderUsernameOffset = fbb.writeString(object.senderUsername);
-          final msgOffset = object.msg == null ? null : fbb.writeString(object.msg!);
-          final attachmentNameOffset = object.attachmentName == null ? null : fbb.writeString(object.attachmentName!);
-          final tradeIdOffset = object.tradeId == null ? null : fbb.writeString(object.tradeId!);
-          final attachmentUrlOffset = object.attachmentUrl == null ? null : fbb.writeString(object.attachmentUrl!);
-          final messageIdOffset = object.messageId == null ? null : fbb.writeString(object.messageId!);
+          final msgOffset =
+              object.msg == null ? null : fbb.writeString(object.msg!);
+          final attachmentNameOffset = object.attachmentName == null
+              ? null
+              : fbb.writeString(object.attachmentName!);
+          final tradeIdOffset =
+              object.tradeId == null ? null : fbb.writeString(object.tradeId!);
+          final attachmentUrlOffset = object.attachmentUrl == null
+              ? null
+              : fbb.writeString(object.attachmentUrl!);
+          final messageIdOffset = object.messageId == null
+              ? null
+              : fbb.writeString(object.messageId!);
           fbb.startTable(15);
           fbb.addInt64(0, object.id);
           fbb.addInt64(2, object.createdAt.millisecondsSinceEpoch);
@@ -279,15 +428,22 @@ ModelDefinition getObjectBoxModel() {
           final rootOffset = buffer.derefObject(0);
 
           final object = MessageBoxModel(
-              tradeId: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 20),
-              messageId: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 30),
-              createdAt:
-                  DateTime.fromMillisecondsSinceEpoch(const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0)),
-              isAdmin: const fb.BoolReader().vTableGet(buffer, rootOffset, 10, false),
-              senderUsername: const fb.StringReader(asciiOptimization: true).vTableGet(buffer, rootOffset, 12, ''),
-              isSending: const fb.BoolReader().vTableGet(buffer, rootOffset, 22, false),
-              isUpdated: const fb.BoolReader().vTableGet(buffer, rootOffset, 28, false),
-              msg: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 14),
+              tradeId: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 20),
+              messageId: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 30),
+              createdAt: DateTime.fromMillisecondsSinceEpoch(
+                  const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0)),
+              isAdmin: const fb.BoolReader()
+                  .vTableGet(buffer, rootOffset, 10, false),
+              senderUsername: const fb.StringReader(asciiOptimization: true)
+                  .vTableGet(buffer, rootOffset, 12, ''),
+              isSending: const fb.BoolReader()
+                  .vTableGet(buffer, rootOffset, 22, false),
+              isUpdated: const fb.BoolReader()
+                  .vTableGet(buffer, rootOffset, 28, false),
+              msg: const fb.StringReader(asciiOptimization: true)
+                  .vTableGetNullable(buffer, rootOffset, 14),
               attachmentName: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 16),
               attachmentUrl: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 26))
             ..id = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
@@ -302,92 +458,123 @@ ModelDefinition getObjectBoxModel() {
 /// [CountryCodeModel] entity fields to define ObjectBox queries.
 class CountryCodeModel_ {
   /// see [CountryCodeModel.id]
-  static final id = QueryIntegerProperty<CountryCodeModel>(_entities[0].properties[0]);
+  static final id =
+      QueryIntegerProperty<CountryCodeModel>(_entities[0].properties[0]);
 
   /// see [CountryCodeModel.codes]
-  static final codes = QueryStringVectorProperty<CountryCodeModel>(_entities[0].properties[1]);
+  static final codes =
+      QueryStringVectorProperty<CountryCodeModel>(_entities[0].properties[1]);
 }
 
 /// [CurrencyModel] entity fields to define ObjectBox queries.
 class CurrencyModel_ {
   /// see [CurrencyModel.id]
-  static final id = QueryIntegerProperty<CurrencyModel>(_entities[1].properties[0]);
+  static final id =
+      QueryIntegerProperty<CurrencyModel>(_entities[1].properties[0]);
 
   /// see [CurrencyModel.code]
-  static final code = QueryStringProperty<CurrencyModel>(_entities[1].properties[1]);
+  static final code =
+      QueryStringProperty<CurrencyModel>(_entities[1].properties[1]);
 
   /// see [CurrencyModel.name]
-  static final name = QueryStringProperty<CurrencyModel>(_entities[1].properties[2]);
+  static final name =
+      QueryStringProperty<CurrencyModel>(_entities[1].properties[2]);
 
   /// see [CurrencyModel.altcoin]
-  static final altcoin = QueryBooleanProperty<CurrencyModel>(_entities[1].properties[3]);
+  static final altcoin =
+      QueryBooleanProperty<CurrencyModel>(_entities[1].properties[3]);
 }
 
 /// [UserLocalSettings] entity fields to define ObjectBox queries.
 class UserLocalSettings_ {
   /// see [UserLocalSettings.autoId]
-  static final autoId = QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[0]);
+  static final autoId =
+      QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[0]);
 
   /// see [UserLocalSettings.pinIsActive]
-  static final pinIsActive = QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[1]);
+  static final pinIsActive =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[1]);
 
   /// see [UserLocalSettings.username]
-  static final username = QueryStringProperty<UserLocalSettings>(_entities[2].properties[2]);
+  static final username =
+      QueryStringProperty<UserLocalSettings>(_entities[2].properties[2]);
 
   /// see [UserLocalSettings.dbThemeMode]
-  static final dbThemeMode = QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[3]);
+  static final dbThemeMode =
+      QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[3]);
 
   /// see [UserLocalSettings.locale]
-  static final locale = QueryStringProperty<UserLocalSettings>(_entities[2].properties[4]);
+  static final locale =
+      QueryStringProperty<UserLocalSettings>(_entities[2].properties[4]);
 
   /// see [UserLocalSettings.countryCode]
-  static final countryCode = QueryStringProperty<UserLocalSettings>(_entities[2].properties[5]);
+  static final countryCode =
+      QueryStringProperty<UserLocalSettings>(_entities[2].properties[5]);
 
   /// see [UserLocalSettings.pushFcmTokenSavedToApi]
-  static final pushFcmTokenSavedToApi = QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[6]);
+  static final pushFcmTokenSavedToApi =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[6]);
 
   /// see [UserLocalSettings.firstRun]
-  static final firstRun = QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[7]);
+  static final firstRun =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[7]);
 
   /// see [UserLocalSettings.cachedCountrySavedDate]
-  static final cachedCountrySavedDate = QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[8]);
+  static final cachedCountrySavedDate =
+      QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[8]);
 
   /// see [UserLocalSettings.cachedCurrencySavedDate]
-  static final cachedCurrencySavedDate = QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[9]);
+  static final cachedCurrencySavedDate =
+      QueryIntegerProperty<UserLocalSettings>(_entities[2].properties[9]);
+
+  /// see [UserLocalSettings.sentryIsOn]
+  static final sentryIsOn =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[10]);
 }
 
 /// [MessageBoxModel] entity fields to define ObjectBox queries.
 class MessageBoxModel_ {
   /// see [MessageBoxModel.id]
-  static final id = QueryIntegerProperty<MessageBoxModel>(_entities[3].properties[0]);
+  static final id =
+      QueryIntegerProperty<MessageBoxModel>(_entities[3].properties[0]);
 
   /// see [MessageBoxModel.createdAt]
-  static final createdAt = QueryIntegerProperty<MessageBoxModel>(_entities[3].properties[1]);
+  static final createdAt =
+      QueryIntegerProperty<MessageBoxModel>(_entities[3].properties[1]);
 
   /// see [MessageBoxModel.isAdmin]
-  static final isAdmin = QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[2]);
+  static final isAdmin =
+      QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[2]);
 
   /// see [MessageBoxModel.senderUsername]
-  static final senderUsername = QueryStringProperty<MessageBoxModel>(_entities[3].properties[3]);
+  static final senderUsername =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[3]);
 
   /// see [MessageBoxModel.msg]
-  static final msg = QueryStringProperty<MessageBoxModel>(_entities[3].properties[4]);
+  static final msg =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[4]);
 
   /// see [MessageBoxModel.attachmentName]
-  static final attachmentName = QueryStringProperty<MessageBoxModel>(_entities[3].properties[5]);
+  static final attachmentName =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[5]);
 
   /// see [MessageBoxModel.tradeId]
-  static final tradeId = QueryStringProperty<MessageBoxModel>(_entities[3].properties[6]);
+  static final tradeId =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[6]);
 
   /// see [MessageBoxModel.isSending]
-  static final isSending = QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[7]);
+  static final isSending =
+      QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[7]);
 
   /// see [MessageBoxModel.attachmentUrl]
-  static final attachmentUrl = QueryStringProperty<MessageBoxModel>(_entities[3].properties[8]);
+  static final attachmentUrl =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[8]);
 
   /// see [MessageBoxModel.isUpdated]
-  static final isUpdated = QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[9]);
+  static final isUpdated =
+      QueryBooleanProperty<MessageBoxModel>(_entities[3].properties[9]);
 
   /// see [MessageBoxModel.messageId]
-  static final messageId = QueryStringProperty<MessageBoxModel>(_entities[3].properties[10]);
+  static final messageId =
+      QueryStringProperty<MessageBoxModel>(_entities[3].properties[10]);
 }

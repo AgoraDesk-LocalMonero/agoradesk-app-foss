@@ -35,7 +35,8 @@ mixin _$AccountInfoModel {
   @JsonKey(name: 'localbitcoins_trade_volume', includeIfNull: false)
   double? get localbitcoinsTradeVolume => throw _privateConstructorUsedError;
   @JsonKey(name: 'localbitcoins_account_created_at', includeIfNull: false)
-  DateTime? get localbitcoinsAccountCreatedAt => throw _privateConstructorUsedError;
+  DateTime? get localbitcoinsAccountCreatedAt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'paxful_trade_count', includeIfNull: false)
   int? get paxfulTradeCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'paxful_feedback_score', includeIfNull: false)
@@ -46,7 +47,11 @@ mixin _$AccountInfoModel {
   DateTime? get paxfulAccountCreatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_online', includeIfNull: false)
   DateTime? get lastOnline => throw _privateConstructorUsedError;
-  @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'created_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'feedback_count', includeIfNull: false)
   int? get feedbackCount => throw _privateConstructorUsedError;
@@ -68,19 +73,29 @@ mixin _$AccountInfoModel {
   String? get sanctionReason => throw _privateConstructorUsedError;
   @JsonKey(name: 'sanction_type', includeIfNull: false)
   SanctionType? get sanctionType => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'sanctioned_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get sanctionedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'sanction_expires_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get sanctionExpiresAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AccountInfoModelCopyWith<AccountInfoModel> get copyWith => throw _privateConstructorUsedError;
+  $AccountInfoModelCopyWith<AccountInfoModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AccountInfoModelCopyWith<$Res> {
-  factory $AccountInfoModelCopyWith(AccountInfoModel value, $Res Function(AccountInfoModel) then) =
+  factory $AccountInfoModelCopyWith(
+          AccountInfoModel value, $Res Function(AccountInfoModel) then) =
       _$AccountInfoModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: false)
@@ -138,7 +153,8 @@ abstract class $AccountInfoModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AccountInfoModelCopyWithImpl<$Res> implements $AccountInfoModelCopyWith<$Res> {
+class _$AccountInfoModelCopyWithImpl<$Res>
+    implements $AccountInfoModelCopyWith<$Res> {
   _$AccountInfoModelCopyWithImpl(this._value, this._then);
 
   final AccountInfoModel _value;
@@ -284,8 +300,10 @@ class _$AccountInfoModelCopyWithImpl<$Res> implements $AccountInfoModelCopyWith<
 }
 
 /// @nodoc
-abstract class _$$_AccountInfoModelCopyWith<$Res> implements $AccountInfoModelCopyWith<$Res> {
-  factory _$$_AccountInfoModelCopyWith(_$_AccountInfoModel value, $Res Function(_$_AccountInfoModel) then) =
+abstract class _$$_AccountInfoModelCopyWith<$Res>
+    implements $AccountInfoModelCopyWith<$Res> {
+  factory _$$_AccountInfoModelCopyWith(
+          _$_AccountInfoModel value, $Res Function(_$_AccountInfoModel) then) =
       __$$_AccountInfoModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -344,9 +362,11 @@ abstract class _$$_AccountInfoModelCopyWith<$Res> implements $AccountInfoModelCo
 }
 
 /// @nodoc
-class __$$_AccountInfoModelCopyWithImpl<$Res> extends _$AccountInfoModelCopyWithImpl<$Res>
+class __$$_AccountInfoModelCopyWithImpl<$Res>
+    extends _$AccountInfoModelCopyWithImpl<$Res>
     implements _$$_AccountInfoModelCopyWith<$Res> {
-  __$$_AccountInfoModelCopyWithImpl(_$_AccountInfoModel _value, $Res Function(_$_AccountInfoModel) _then)
+  __$$_AccountInfoModelCopyWithImpl(
+      _$_AccountInfoModel _value, $Res Function(_$_AccountInfoModel) _then)
       : super(_value, (v) => _then(v as _$_AccountInfoModel));
 
   @override
@@ -549,7 +569,8 @@ class _$_AccountInfoModel extends _AccountInfoModel {
           this.sanctionExpiresAt})
       : super._();
 
-  factory _$_AccountInfoModel.fromJson(Map<String, dynamic> json) => _$$_AccountInfoModelFromJson(json);
+  factory _$_AccountInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AccountInfoModelFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -591,7 +612,11 @@ class _$_AccountInfoModel extends _AccountInfoModel {
   @JsonKey(name: 'last_online', includeIfNull: false)
   final DateTime? lastOnline;
   @override
-  @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'created_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? createdAt;
   @override
   @JsonKey(name: 'feedback_count', includeIfNull: false)
@@ -624,10 +649,18 @@ class _$_AccountInfoModel extends _AccountInfoModel {
   @JsonKey(name: 'sanction_type', includeIfNull: false)
   final SanctionType? sanctionType;
   @override
-  @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'sanctioned_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? sanctionedAt;
   @override
-  @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'sanction_expires_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? sanctionExpiresAt;
 
   @override
@@ -641,31 +674,55 @@ class _$_AccountInfoModel extends _AccountInfoModel {
         (other.runtimeType == runtimeType &&
             other is _$_AccountInfoModel &&
             const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality().equals(other.feedbackScore, feedbackScore) &&
-            const DeepCollectionEquality().equals(other.confirmedTradeCount, confirmedTradeCount) &&
-            const DeepCollectionEquality().equals(other.tradeCount, tradeCount) &&
-            const DeepCollectionEquality().equals(other.localbitcoinsTradeCount, localbitcoinsTradeCount) &&
-            const DeepCollectionEquality().equals(other.localbitcoinsFeedbackScore, localbitcoinsFeedbackScore) &&
-            const DeepCollectionEquality().equals(other.localbitcoinsTradeVolume, localbitcoinsTradeVolume) &&
-            const DeepCollectionEquality().equals(other.localbitcoinsAccountCreatedAt, localbitcoinsAccountCreatedAt) &&
-            const DeepCollectionEquality().equals(other.paxfulTradeCount, paxfulTradeCount) &&
-            const DeepCollectionEquality().equals(other.paxfulFeedbackScore, paxfulFeedbackScore) &&
-            const DeepCollectionEquality().equals(other.paxfulTradeVolume, paxfulTradeVolume) &&
-            const DeepCollectionEquality().equals(other.paxfulAccountCreatedAt, paxfulAccountCreatedAt) &&
-            const DeepCollectionEquality().equals(other.lastOnline, lastOnline) &&
+            const DeepCollectionEquality()
+                .equals(other.feedbackScore, feedbackScore) &&
+            const DeepCollectionEquality()
+                .equals(other.confirmedTradeCount, confirmedTradeCount) &&
+            const DeepCollectionEquality()
+                .equals(other.tradeCount, tradeCount) &&
+            const DeepCollectionEquality().equals(
+                other.localbitcoinsTradeCount, localbitcoinsTradeCount) &&
+            const DeepCollectionEquality().equals(
+                other.localbitcoinsFeedbackScore, localbitcoinsFeedbackScore) &&
+            const DeepCollectionEquality().equals(
+                other.localbitcoinsTradeVolume, localbitcoinsTradeVolume) &&
+            const DeepCollectionEquality().equals(
+                other.localbitcoinsAccountCreatedAt,
+                localbitcoinsAccountCreatedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.paxfulTradeCount, paxfulTradeCount) &&
+            const DeepCollectionEquality()
+                .equals(other.paxfulFeedbackScore, paxfulFeedbackScore) &&
+            const DeepCollectionEquality()
+                .equals(other.paxfulTradeVolume, paxfulTradeVolume) &&
+            const DeepCollectionEquality()
+                .equals(other.paxfulAccountCreatedAt, paxfulAccountCreatedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.lastOnline, lastOnline) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.feedbackCount, feedbackCount) &&
-            const DeepCollectionEquality().equals(other.feedbacksUnconfirmedCount, feedbacksUnconfirmedCount) &&
-            const DeepCollectionEquality().equals(other.tradingPartnersCount, tradingPartnersCount) &&
-            const DeepCollectionEquality().equals(other.releaseTimeMedium, releaseTimeMedium) &&
-            const DeepCollectionEquality().equals(other.hasCommonTrades, hasCommonTrades) &&
-            const DeepCollectionEquality().equals(other.myFeedback, myFeedback) &&
-            const DeepCollectionEquality().equals(other.introduction, introduction) &&
+            const DeepCollectionEquality()
+                .equals(other.feedbackCount, feedbackCount) &&
+            const DeepCollectionEquality().equals(
+                other.feedbacksUnconfirmedCount, feedbacksUnconfirmedCount) &&
+            const DeepCollectionEquality()
+                .equals(other.tradingPartnersCount, tradingPartnersCount) &&
+            const DeepCollectionEquality()
+                .equals(other.releaseTimeMedium, releaseTimeMedium) &&
+            const DeepCollectionEquality()
+                .equals(other.hasCommonTrades, hasCommonTrades) &&
+            const DeepCollectionEquality()
+                .equals(other.myFeedback, myFeedback) &&
+            const DeepCollectionEquality()
+                .equals(other.introduction, introduction) &&
             const DeepCollectionEquality().equals(other.homepage, homepage) &&
-            const DeepCollectionEquality().equals(other.sanctionReason, sanctionReason) &&
-            const DeepCollectionEquality().equals(other.sanctionType, sanctionType) &&
-            const DeepCollectionEquality().equals(other.sanctionedAt, sanctionedAt) &&
-            const DeepCollectionEquality().equals(other.sanctionExpiresAt, sanctionExpiresAt));
+            const DeepCollectionEquality()
+                .equals(other.sanctionReason, sanctionReason) &&
+            const DeepCollectionEquality()
+                .equals(other.sanctionType, sanctionType) &&
+            const DeepCollectionEquality()
+                .equals(other.sanctionedAt, sanctionedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.sanctionExpiresAt, sanctionExpiresAt));
   }
 
   @JsonKey(ignore: true)
@@ -769,7 +826,8 @@ abstract class _AccountInfoModel extends AccountInfoModel {
           final DateTime? sanctionExpiresAt}) = _$_AccountInfoModel;
   const _AccountInfoModel._() : super._();
 
-  factory _AccountInfoModel.fromJson(Map<String, dynamic> json) = _$_AccountInfoModel.fromJson;
+  factory _AccountInfoModel.fromJson(Map<String, dynamic> json) =
+      _$_AccountInfoModel.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -811,7 +869,11 @@ abstract class _AccountInfoModel extends AccountInfoModel {
   @JsonKey(name: 'last_online', includeIfNull: false)
   DateTime? get lastOnline;
   @override
-  @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'created_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get createdAt;
   @override
   @JsonKey(name: 'feedback_count', includeIfNull: false)
@@ -844,12 +906,21 @@ abstract class _AccountInfoModel extends AccountInfoModel {
   @JsonKey(name: 'sanction_type', includeIfNull: false)
   SanctionType? get sanctionType;
   @override
-  @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'sanctioned_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get sanctionedAt;
   @override
-  @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'sanction_expires_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get sanctionExpiresAt;
   @override
   @JsonKey(ignore: true)
-  _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

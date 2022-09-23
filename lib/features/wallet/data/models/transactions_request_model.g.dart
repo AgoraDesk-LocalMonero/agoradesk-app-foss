@@ -6,14 +6,16 @@ part of 'transactions_request_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TransactionsRequestModel _$$_TransactionsRequestModelFromJson(Map<String, dynamic> json) =>
+_$_TransactionsRequestModel _$$_TransactionsRequestModelFromJson(
+        Map<String, dynamic> json) =>
     _$_TransactionsRequestModel(
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
       type: $enumDecodeNullable(_$TransactionTypesEnumMap, json['type']),
       after: dateFromInt(json['after'] as int),
     );
 
-Map<String, dynamic> _$$_TransactionsRequestModelToJson(_$_TransactionsRequestModel instance) {
+Map<String, dynamic> _$$_TransactionsRequestModelToJson(
+    _$_TransactionsRequestModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

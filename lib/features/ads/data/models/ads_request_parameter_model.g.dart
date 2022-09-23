@@ -6,7 +6,8 @@ part of 'ads_request_parameter_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AdsRequestParameterModel _$$_AdsRequestParameterModelFromJson(Map<String, dynamic> json) =>
+_$_AdsRequestParameterModel _$$_AdsRequestParameterModelFromJson(
+        Map<String, dynamic> json) =>
     _$_AdsRequestParameterModel(
       page: json['page'] as int?,
       countryCode: json['countrycode'] as String?,
@@ -17,7 +18,8 @@ _$_AdsRequestParameterModel _$$_AdsRequestParameterModelFromJson(Map<String, dyn
       paymentMethodCode: json['payment_method_code'] as String?,
     );
 
-Map<String, dynamic> _$$_AdsRequestParameterModelToJson(_$_AdsRequestParameterModel instance) {
+Map<String, dynamic> _$$_AdsRequestParameterModelToJson(
+    _$_AdsRequestParameterModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
