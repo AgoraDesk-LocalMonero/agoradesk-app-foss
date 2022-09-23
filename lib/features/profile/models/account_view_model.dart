@@ -67,11 +67,11 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
       barrierDismissible: true,
       context: context,
       builder: (_) => AgoraDialogTwoButtons(
-        body: const Text('Crashlytics have disabled. To take it in force app have to be restarted. You can do it later or press restart now.'),
+        body: Text(context.intl.app_anonymous_crash_diagnostics_restart),
         mainAction: Restart.restartApp,
-        mainActionText: 'Restart now',
+        mainActionText: context.intl.app_restart_now,
         secondAction: () => Navigator.of(context).pop(),
-        secondActionText: 'Postpone',
+        secondActionText: context.intl.app_restart_now,
       ),
     );
   }

@@ -8497,6 +8497,18 @@ class I18nEs extends I18n {
   String get app_session_expired => 'Session expired';
 
   @override
+  String get app_anonymous_crash_diagnostics => 'Anonymous crash diagnostics';
+
+  @override
+  String get app_restart_now => 'Restart now';
+
+  @override
+  String get app_postpone => 'Postpone';
+
+  @override
+  String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
+
+  @override
   String get app_trading_partners => 'Trading partners';
 
   @override

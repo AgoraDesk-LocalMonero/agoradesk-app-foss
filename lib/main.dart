@@ -1,5 +1,4 @@
 /// main version
-
 import 'dart:io';
 import 'dart:math' as math;
 
@@ -16,6 +15,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
@@ -33,7 +33,6 @@ void main() async {
 
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
-
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
   final includeFcm = includeFcmString != 'false' || Platform.isIOS;
   if (includeFcm) {

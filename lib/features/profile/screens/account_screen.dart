@@ -95,7 +95,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           const SizedBox(height: 8),
                           LineWithSwitcher(
                             value: model.isSentryOn(),
-                            title: 'Crashlytics',
+                            title: context.intl.app_anonymous_crash_diagnostics,
                             onPressed: () => model.switchSentryStatus(context),
                           ),
                           const SizedBox(height: 8),
