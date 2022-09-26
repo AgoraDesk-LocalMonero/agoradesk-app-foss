@@ -1,10 +1,8 @@
 ### Updates
-1. QR scan for the wallet address during ad creation.
-2. Notifications - when visiting a trade all notifications about this trade are marked as read.
-3. Fix: ad edit, first trade limits.
-4. Feature: foreground notifications in case of the app installed with an alternative google play client.
-5. Fix: improved chat sticky bubbles behavior.
-6. Feature: different colors for the LocalMonero app.
+1. QR scanner replaced with open source code, without Google ML.
+2. Fix: searching by any country with EUR currency.
+3. Feature: disable anonymous crash diagnostics in the settings.
+4. Fix: remove old notifications from the phone notification bar.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
