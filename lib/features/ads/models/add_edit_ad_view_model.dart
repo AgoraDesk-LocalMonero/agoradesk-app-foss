@@ -140,7 +140,7 @@ class AddEditAdViewModel extends ViewModel
   String? restrictLimit;
   bool minAmountValid = true;
   bool maxAmountValid = true;
-  bool tradeMaxLimitValid = true;
+  bool firstTradeMaxLimitValid = true;
   bool _loadingBalance = false;
   String _priceEquation = '';
   bool _displayClear = false;
@@ -334,6 +334,7 @@ class AddEditAdViewModel extends ViewModel
         } else {
           ctrl6FirstTradeMaxLimit.text = ad!.firstTimeLimitXmr != null ? ad!.firstTimeLimitXmr.toString() : '';
         }
+        firstTradeMaxLimit = double.tryParse(ctrl6FirstTradeMaxLimit.text);
         ctrl2InputLocation.text = ad!.locationString ?? '';
         displayClear = ctrl2InputLocation.text.isNotEmpty;
         // currentEditPrice = await _calcPrice(priceEquation: ad!.priceEquation!, currency: ad!.currency);
@@ -781,11 +782,11 @@ class AddEditAdViewModel extends ViewModel
     ctrl6FirstTradeMaxLimit.addListener(() {
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 200), () {
         final txt = ctrl6FirstTradeMaxLimit.text.replaceAll(',', '.');
-        if (ctrl6FirstTradeMaxLimit.text.isEmpty || validateDouble(txt)) {
-          tradeMaxLimitValid = true;
+        if (validateDouble(txt)) {
+          firstTradeMaxLimitValid = true;
           firstTradeMaxLimit = double.tryParse(txt);
         } else {
-          tradeMaxLimitValid = false;
+          firstTradeMaxLimitValid = false;
         }
         notifyListeners();
       });
