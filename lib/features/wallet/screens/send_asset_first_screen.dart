@@ -3,6 +3,7 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
+import 'package:agoradesk/entities/qr_scanner.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/send_asset_view_model.dart';
@@ -68,9 +69,7 @@ class SendAssetFirstScreen extends StatelessWidget {
                             clear: model.clear,
                             paste: model.paste,
                             qrPressed: () async {
-                              final code = await AutoRouter.of(context).push(
-                                const QrScanRoute(),
-                              );
+                              final code = await presentQRScanner();
                               model.handleScannedCode(code);
                             },
                           ),

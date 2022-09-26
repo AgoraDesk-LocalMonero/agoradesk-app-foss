@@ -1,6 +1,5 @@
 import 'package:agoradesk/features/wallet/screens/incoming_deposit_screen.dart';
 import 'package:agoradesk/features/wallet/screens/notifications_screen.dart';
-import 'package:agoradesk/features/wallet/screens/qr_scan_screen.dart';
 import 'package:agoradesk/features/wallet/screens/receive_asset_screen.dart';
 import 'package:agoradesk/features/wallet/screens/send_asset_first_screen.dart';
 import 'package:agoradesk/features/wallet/screens/send_asset_second_screen.dart';
@@ -52,12 +51,12 @@ const walletRoutes = <AutoRoute>[
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),
-  CustomRoute(
-    path: 'wallet/qrScanScreen',
-    page: QrScanScreen,
-    durationInMilliseconds: 250,
-    transitionsBuilder: TransitionsBuilders.slideBottom,
-  ),
+  // CustomRoute(
+  //   path: 'wallet/qrScanScreen',
+  //   page: QrScanScreen,
+  //   durationInMilliseconds: 250,
+  //   transitionsBuilder: TransitionsBuilders.slideBottom,
+  // ),
   CustomRoute(
     path: 'notificationsScreen',
     page: NotificationsScreen,
