@@ -33,12 +33,14 @@ mixin _$IncomingDepositModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $IncomingDepositModelCopyWith<IncomingDepositModel> get copyWith => throw _privateConstructorUsedError;
+  $IncomingDepositModelCopyWith<IncomingDepositModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $IncomingDepositModelCopyWith<$Res> {
-  factory $IncomingDepositModelCopyWith(IncomingDepositModel value, $Res Function(IncomingDepositModel) then) =
+  factory $IncomingDepositModelCopyWith(IncomingDepositModel value,
+          $Res Function(IncomingDepositModel) then) =
       _$IncomingDepositModelCopyWithImpl<$Res>;
   $Res call(
       {String amount,
@@ -51,7 +53,8 @@ abstract class $IncomingDepositModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$IncomingDepositModelCopyWithImpl<$Res> implements $IncomingDepositModelCopyWith<$Res> {
+class _$IncomingDepositModelCopyWithImpl<$Res>
+    implements $IncomingDepositModelCopyWith<$Res> {
   _$IncomingDepositModelCopyWithImpl(this._value, this._then);
 
   final IncomingDepositModel _value;
@@ -102,8 +105,10 @@ class _$IncomingDepositModelCopyWithImpl<$Res> implements $IncomingDepositModelC
 }
 
 /// @nodoc
-abstract class _$$_IncomingDepositModelCopyWith<$Res> implements $IncomingDepositModelCopyWith<$Res> {
-  factory _$$_IncomingDepositModelCopyWith(_$_IncomingDepositModel value, $Res Function(_$_IncomingDepositModel) then) =
+abstract class _$$_IncomingDepositModelCopyWith<$Res>
+    implements $IncomingDepositModelCopyWith<$Res> {
+  factory _$$_IncomingDepositModelCopyWith(_$_IncomingDepositModel value,
+          $Res Function(_$_IncomingDepositModel) then) =
       __$$_IncomingDepositModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -117,9 +122,11 @@ abstract class _$$_IncomingDepositModelCopyWith<$Res> implements $IncomingDeposi
 }
 
 /// @nodoc
-class __$$_IncomingDepositModelCopyWithImpl<$Res> extends _$IncomingDepositModelCopyWithImpl<$Res>
+class __$$_IncomingDepositModelCopyWithImpl<$Res>
+    extends _$IncomingDepositModelCopyWithImpl<$Res>
     implements _$$_IncomingDepositModelCopyWith<$Res> {
-  __$$_IncomingDepositModelCopyWithImpl(_$_IncomingDepositModel _value, $Res Function(_$_IncomingDepositModel) _then)
+  __$$_IncomingDepositModelCopyWithImpl(_$_IncomingDepositModel _value,
+      $Res Function(_$_IncomingDepositModel) _then)
       : super(_value, (v) => _then(v as _$_IncomingDepositModel));
 
   @override
@@ -181,7 +188,8 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
       @JsonKey(name: 'unlock_time') this.unlockTime,
       this.asset});
 
-  factory _$_IncomingDepositModel.fromJson(Map<String, dynamic> json) => _$$_IncomingDepositModelFromJson(json);
+  factory _$_IncomingDepositModel.fromJson(Map<String, dynamic> json) =>
+      _$$_IncomingDepositModelFromJson(json);
 
   @override
   final String amount;
@@ -212,11 +220,14 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
         (other.runtimeType == runtimeType &&
             other is _$_IncomingDepositModel &&
             const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality().equals(other.confirmations, confirmations) &&
-            const DeepCollectionEquality().equals(other.transactionId, transactionId) &&
+            const DeepCollectionEquality()
+                .equals(other.confirmations, confirmations) &&
+            const DeepCollectionEquality()
+                .equals(other.transactionId, transactionId) &&
             const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
             const DeepCollectionEquality().equals(other.note, note) &&
-            const DeepCollectionEquality().equals(other.unlockTime, unlockTime) &&
+            const DeepCollectionEquality()
+                .equals(other.unlockTime, unlockTime) &&
             const DeepCollectionEquality().equals(other.asset, asset));
   }
 
@@ -235,7 +246,8 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
   @JsonKey(ignore: true)
   @override
   _$$_IncomingDepositModelCopyWith<_$_IncomingDepositModel> get copyWith =>
-      __$$_IncomingDepositModelCopyWithImpl<_$_IncomingDepositModel>(this, _$identity);
+      __$$_IncomingDepositModelCopyWithImpl<_$_IncomingDepositModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -255,7 +267,8 @@ abstract class _IncomingDepositModel implements IncomingDepositModel {
       @JsonKey(name: 'unlock_time') final int? unlockTime,
       final Asset? asset}) = _$_IncomingDepositModel;
 
-  factory _IncomingDepositModel.fromJson(Map<String, dynamic> json) = _$_IncomingDepositModel.fromJson;
+  factory _IncomingDepositModel.fromJson(Map<String, dynamic> json) =
+      _$_IncomingDepositModel.fromJson;
 
   @override
   String get amount;
@@ -276,5 +289,6 @@ abstract class _IncomingDepositModel implements IncomingDepositModel {
   Asset? get asset;
   @override
   @JsonKey(ignore: true)
-  _$$_IncomingDepositModelCopyWith<_$_IncomingDepositModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_IncomingDepositModelCopyWith<_$_IncomingDepositModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

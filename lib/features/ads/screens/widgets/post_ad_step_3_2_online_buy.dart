@@ -1,13 +1,12 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_info_link.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_general.dart';
 import 'package:agoradesk/features/ads/data/models/network_fees.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
-import 'package:agoradesk/router.gr.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -26,7 +25,7 @@ class PostAdStep32OnlineBuy extends StatefulWidget {
   State<PostAdStep32OnlineBuy> createState() => _PostAdStep32OnlineBuyState();
 }
 
-class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
+class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrScannerMixin {
   @override
   void initState() {
     if (widget.model.asset == Asset.BTC) {
@@ -159,9 +158,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> {
           clear: widget.model.clear,
           paste: widget.model.paste,
           qrPressed: () async {
-            final code = await AutoRouter.of(context).push(
-              const QrScanRoute(),
-            );
+            final code = await presentQRScanner();
             widget.model.handleScannedCode(code);
           },
         ),

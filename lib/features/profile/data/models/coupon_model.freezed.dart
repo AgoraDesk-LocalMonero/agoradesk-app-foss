@@ -32,18 +32,24 @@ mixin _$CouponModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CouponModelCopyWith<CouponModel> get copyWith => throw _privateConstructorUsedError;
+  $CouponModelCopyWith<CouponModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CouponModelCopyWith<$Res> {
-  factory $CouponModelCopyWith(CouponModel value, $Res Function(CouponModel) then) = _$CouponModelCopyWithImpl<$Res>;
+  factory $CouponModelCopyWith(
+          CouponModel value, $Res Function(CouponModel) then) =
+      _$CouponModelCopyWithImpl<$Res>;
   $Res call(
       {String code,
-      @JsonKey(name: 'ad_types') List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types')
+          List<TradeType> tradeTypes,
       List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier') int rebateMultiplier,
-      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate) DateTime expiresAt,
+      @JsonKey(name: 'rebate_multiplier')
+          int rebateMultiplier,
+      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
+          DateTime expiresAt,
       bool? enabled});
 }
 
@@ -94,23 +100,29 @@ class _$CouponModelCopyWithImpl<$Res> implements $CouponModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_CouponModelCopyWith<$Res> implements $CouponModelCopyWith<$Res> {
-  factory _$$_CouponModelCopyWith(_$_CouponModel value, $Res Function(_$_CouponModel) then) =
+abstract class _$$_CouponModelCopyWith<$Res>
+    implements $CouponModelCopyWith<$Res> {
+  factory _$$_CouponModelCopyWith(
+          _$_CouponModel value, $Res Function(_$_CouponModel) then) =
       __$$_CouponModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String code,
-      @JsonKey(name: 'ad_types') List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types')
+          List<TradeType> tradeTypes,
       List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier') int rebateMultiplier,
-      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate) DateTime expiresAt,
+      @JsonKey(name: 'rebate_multiplier')
+          int rebateMultiplier,
+      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
+          DateTime expiresAt,
       bool? enabled});
 }
 
 /// @nodoc
 class __$$_CouponModelCopyWithImpl<$Res> extends _$CouponModelCopyWithImpl<$Res>
     implements _$$_CouponModelCopyWith<$Res> {
-  __$$_CouponModelCopyWithImpl(_$_CouponModel _value, $Res Function(_$_CouponModel) _then)
+  __$$_CouponModelCopyWithImpl(
+      _$_CouponModel _value, $Res Function(_$_CouponModel) _then)
       : super(_value, (v) => _then(v as _$_CouponModel));
 
   @override
@@ -160,15 +172,19 @@ class __$$_CouponModelCopyWithImpl<$Res> extends _$CouponModelCopyWithImpl<$Res>
 class _$_CouponModel implements _CouponModel {
   const _$_CouponModel(
       {required this.code,
-      @JsonKey(name: 'ad_types') required final List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types')
+          required final List<TradeType> tradeTypes,
       required final List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier') required this.rebateMultiplier,
-      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate) required this.expiresAt,
+      @JsonKey(name: 'rebate_multiplier')
+          required this.rebateMultiplier,
+      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
+          required this.expiresAt,
       this.enabled})
       : _tradeTypes = tradeTypes,
         _assets = assets;
 
-  factory _$_CouponModel.fromJson(Map<String, dynamic> json) => _$$_CouponModelFromJson(json);
+  factory _$_CouponModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CouponModelFromJson(json);
 
   @override
   final String code;
@@ -207,9 +223,11 @@ class _$_CouponModel implements _CouponModel {
         (other.runtimeType == runtimeType &&
             other is _$_CouponModel &&
             const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other._tradeTypes, _tradeTypes) &&
+            const DeepCollectionEquality()
+                .equals(other._tradeTypes, _tradeTypes) &&
             const DeepCollectionEquality().equals(other._assets, _assets) &&
-            const DeepCollectionEquality().equals(other.rebateMultiplier, rebateMultiplier) &&
+            const DeepCollectionEquality()
+                .equals(other.rebateMultiplier, rebateMultiplier) &&
             const DeepCollectionEquality().equals(other.expiresAt, expiresAt) &&
             const DeepCollectionEquality().equals(other.enabled, enabled));
   }
@@ -241,13 +259,17 @@ class _$_CouponModel implements _CouponModel {
 abstract class _CouponModel implements CouponModel {
   const factory _CouponModel(
       {required final String code,
-      @JsonKey(name: 'ad_types') required final List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types')
+          required final List<TradeType> tradeTypes,
       required final List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier') required final int rebateMultiplier,
-      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate) required final DateTime expiresAt,
+      @JsonKey(name: 'rebate_multiplier')
+          required final int rebateMultiplier,
+      @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
+          required final DateTime expiresAt,
       final bool? enabled}) = _$_CouponModel;
 
-  factory _CouponModel.fromJson(Map<String, dynamic> json) = _$_CouponModel.fromJson;
+  factory _CouponModel.fromJson(Map<String, dynamic> json) =
+      _$_CouponModel.fromJson;
 
   @override
   String get code;
@@ -266,5 +288,6 @@ abstract class _CouponModel implements CouponModel {
   bool? get enabled;
   @override
   @JsonKey(ignore: true)
-  _$$_CouponModelCopyWith<_$_CouponModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_CouponModelCopyWith<_$_CouponModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

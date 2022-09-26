@@ -16654,6 +16654,30 @@ abstract class I18n {
   /// **'Session expired'**
   String get app_session_expired;
 
+  /// No description provided for @app_anonymous_crash_diagnostics.
+  ///
+  /// In en, this message translates to:
+  /// **'Anonymous crash diagnostics'**
+  String get app_anonymous_crash_diagnostics;
+
+  /// No description provided for @app_restart_now.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart now'**
+  String get app_restart_now;
+
+  /// No description provided for @app_postpone.
+  ///
+  /// In en, this message translates to:
+  /// **'Postpone'**
+  String get app_postpone;
+
+  /// No description provided for @app_anonymous_crash_diagnostics_restart.
+  ///
+  /// In en, this message translates to:
+  /// **'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.'**
+  String get app_anonymous_crash_diagnostics_restart;
+
   /// No description provided for @app_trading_partners.
   ///
   /// In en, this message translates to:

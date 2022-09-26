@@ -1,3 +1,5 @@
+/// main version
+
 import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
@@ -267,7 +269,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Initialize Mixpanel Analytics
   ///
   Future<void> _initPlausible() async {
-    if (GetIt.I<AppParameters>().includeFcm) {
+    if (GetIt.I<AppParameters>().includeFcm && ObjectBox.userLocalSettings.sentryIsOn == true) {
       try {
         _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
       } catch (e, stackTrace) {

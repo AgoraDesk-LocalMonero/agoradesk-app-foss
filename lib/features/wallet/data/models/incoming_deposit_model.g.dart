@@ -6,7 +6,9 @@ part of 'incoming_deposit_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_IncomingDepositModel _$$_IncomingDepositModelFromJson(Map<String, dynamic> json) => _$_IncomingDepositModel(
+_$_IncomingDepositModel _$$_IncomingDepositModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_IncomingDepositModel(
       amount: json['amount'] as String,
       confirmations: json['confirmations'] as int,
       transactionId: json['transaction_id'] as String,
@@ -16,7 +18,8 @@ _$_IncomingDepositModel _$$_IncomingDepositModelFromJson(Map<String, dynamic> js
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
     );
 
-Map<String, dynamic> _$$_IncomingDepositModelToJson(_$_IncomingDepositModel instance) {
+Map<String, dynamic> _$$_IncomingDepositModelToJson(
+    _$_IncomingDepositModel instance) {
   final val = <String, dynamic>{
     'amount': instance.amount,
     'confirmations': instance.confirmations,

@@ -1,3 +1,5 @@
+# main version
+
 name: agoradesk
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 
@@ -59,7 +61,8 @@ dependencies:
   #  readmore: ^2.1.0
   flutter_svg: ^1.1.0
   uni_links: ^0.5.1
-  mobile_scanner: ^1.1.1
+  barcode_scan2: 4.2.1
+#  mobile_scanner: ^1.1.1
   qr_flutter: ^4.0.0
   shimmer: ^2.0.0
   image_picker: ^0.8.5+3
@@ -78,6 +81,7 @@ dependencies:
   flutter_displaymode: ^0.4.0
   flutter_inappwebview: ^5.4.3+7
   permission_handler: ^10.0.0
+  restart_app: ^1.1.0
 
 dependency_overrides:
 #  flutter_foreground_task:

@@ -9,6 +9,7 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
+import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
@@ -37,7 +38,8 @@ const _kDelayAfterPress = Duration(milliseconds: 200);
 const _kDebounceTag = '_kDebounceTag';
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
 
-class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, CountryInfoMixin, ClipboardMixin {
+class AddEditAdViewModel extends ViewModel
+    with ValidatorMixin, ErrorParseMixin, CountryInfoMixin, ClipboardMixin, QrScannerMixin {
   AddEditAdViewModel({
     required AdsRepository adsRepository,
     required WalletService walletService,
@@ -732,15 +734,8 @@ class AddEditAdViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin,
   }
 
   void handleScannedCode(Object? code) async {
-    String address = '';
     if (code is String && code.isNotEmpty) {
-      address = code;
-      if (code.contains('monero:')) {
-        address = code.replaceFirst('monero:', '');
-      }
-      if (code.contains('bitcoin:')) {
-        address = code.replaceFirst('bitcoin:', '');
-      }
+      final address = getCoinAddressFromQr(code);
       if (validateWalletAddress(asset!, address)) {
         ctrl32WalletAddress.text = address;
         await Future.delayed(const Duration(milliseconds: 100));

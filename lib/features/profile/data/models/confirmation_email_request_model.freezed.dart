@@ -14,7 +14,8 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ConfirmationEmailRequestModel _$ConfirmationEmailRequestModelFromJson(Map<String, dynamic> json) {
+ConfirmationEmailRequestModel _$ConfirmationEmailRequestModelFromJson(
+    Map<String, dynamic> json) {
   return _ConfirmationEmailRequestModel.fromJson(json);
 }
 
@@ -31,14 +32,15 @@ mixin _$ConfirmationEmailRequestModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConfirmationEmailRequestModelCopyWith<ConfirmationEmailRequestModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ConfirmationEmailRequestModelCopyWith<ConfirmationEmailRequestModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ConfirmationEmailRequestModelCopyWith<$Res> {
   factory $ConfirmationEmailRequestModelCopyWith(
-          ConfirmationEmailRequestModel value, $Res Function(ConfirmationEmailRequestModel) then) =
+          ConfirmationEmailRequestModel value,
+          $Res Function(ConfirmationEmailRequestModel) then) =
       _$ConfirmationEmailRequestModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: true) String? email,
@@ -48,7 +50,8 @@ abstract class $ConfirmationEmailRequestModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConfirmationEmailRequestModelCopyWithImpl<$Res> implements $ConfirmationEmailRequestModelCopyWith<$Res> {
+class _$ConfirmationEmailRequestModelCopyWithImpl<$Res>
+    implements $ConfirmationEmailRequestModelCopyWith<$Res> {
   _$ConfirmationEmailRequestModelCopyWithImpl(this._value, this._then);
 
   final ConfirmationEmailRequestModel _value;
@@ -84,9 +87,11 @@ class _$ConfirmationEmailRequestModelCopyWithImpl<$Res> implements $Confirmation
 }
 
 /// @nodoc
-abstract class _$$_ConfirmationEmailRequestModelCopyWith<$Res> implements $ConfirmationEmailRequestModelCopyWith<$Res> {
+abstract class _$$_ConfirmationEmailRequestModelCopyWith<$Res>
+    implements $ConfirmationEmailRequestModelCopyWith<$Res> {
   factory _$$_ConfirmationEmailRequestModelCopyWith(
-          _$_ConfirmationEmailRequestModel value, $Res Function(_$_ConfirmationEmailRequestModel) then) =
+          _$_ConfirmationEmailRequestModel value,
+          $Res Function(_$_ConfirmationEmailRequestModel) then) =
       __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -97,14 +102,17 @@ abstract class _$$_ConfirmationEmailRequestModelCopyWith<$Res> implements $Confi
 }
 
 /// @nodoc
-class __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res> extends _$ConfirmationEmailRequestModelCopyWithImpl<$Res>
+class __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res>
+    extends _$ConfirmationEmailRequestModelCopyWithImpl<$Res>
     implements _$$_ConfirmationEmailRequestModelCopyWith<$Res> {
   __$$_ConfirmationEmailRequestModelCopyWithImpl(
-      _$_ConfirmationEmailRequestModel _value, $Res Function(_$_ConfirmationEmailRequestModel) _then)
+      _$_ConfirmationEmailRequestModel _value,
+      $Res Function(_$_ConfirmationEmailRequestModel) _then)
       : super(_value, (v) => _then(v as _$_ConfirmationEmailRequestModel));
 
   @override
-  _$_ConfirmationEmailRequestModel get _value => super._value as _$_ConfirmationEmailRequestModel;
+  _$_ConfirmationEmailRequestModel get _value =>
+      super._value as _$_ConfirmationEmailRequestModel;
 
   @override
   $Res call({
@@ -137,14 +145,16 @@ class __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res> extends _$Confirmatio
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_ConfirmationEmailRequestModel implements _ConfirmationEmailRequestModel {
+class _$_ConfirmationEmailRequestModel
+    implements _ConfirmationEmailRequestModel {
   const _$_ConfirmationEmailRequestModel(
       {@JsonKey(includeIfNull: true) required this.email,
       @JsonKey(includeIfNull: false) this.password,
       @JsonKey(includeIfNull: false) this.captcha,
       @JsonKey(ignore: true) this.captchaCookie});
 
-  factory _$_ConfirmationEmailRequestModel.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConfirmationEmailRequestModel.fromJson(
+          Map<String, dynamic> json) =>
       _$$_ConfirmationEmailRequestModelFromJson(json);
 
   @override
@@ -173,7 +183,8 @@ class _$_ConfirmationEmailRequestModel implements _ConfirmationEmailRequestModel
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.captcha, captcha) &&
-            const DeepCollectionEquality().equals(other.captchaCookie, captchaCookie));
+            const DeepCollectionEquality()
+                .equals(other.captchaCookie, captchaCookie));
   }
 
   @JsonKey(ignore: true)
@@ -187,8 +198,9 @@ class _$_ConfirmationEmailRequestModel implements _ConfirmationEmailRequestModel
 
   @JsonKey(ignore: true)
   @override
-  _$$_ConfirmationEmailRequestModelCopyWith<_$_ConfirmationEmailRequestModel> get copyWith =>
-      __$$_ConfirmationEmailRequestModelCopyWithImpl<_$_ConfirmationEmailRequestModel>(this, _$identity);
+  _$$_ConfirmationEmailRequestModelCopyWith<_$_ConfirmationEmailRequestModel>
+      get copyWith => __$$_ConfirmationEmailRequestModelCopyWithImpl<
+          _$_ConfirmationEmailRequestModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -198,12 +210,14 @@ class _$_ConfirmationEmailRequestModel implements _ConfirmationEmailRequestModel
   }
 }
 
-abstract class _ConfirmationEmailRequestModel implements ConfirmationEmailRequestModel {
+abstract class _ConfirmationEmailRequestModel
+    implements ConfirmationEmailRequestModel {
   const factory _ConfirmationEmailRequestModel(
-      {@JsonKey(includeIfNull: true) required final String? email,
-      @JsonKey(includeIfNull: false) final String? password,
-      @JsonKey(includeIfNull: false) final String? captcha,
-      @JsonKey(ignore: true) final String? captchaCookie}) = _$_ConfirmationEmailRequestModel;
+          {@JsonKey(includeIfNull: true) required final String? email,
+          @JsonKey(includeIfNull: false) final String? password,
+          @JsonKey(includeIfNull: false) final String? captcha,
+          @JsonKey(ignore: true) final String? captchaCookie}) =
+      _$_ConfirmationEmailRequestModel;
 
   factory _ConfirmationEmailRequestModel.fromJson(Map<String, dynamic> json) =
       _$_ConfirmationEmailRequestModel.fromJson;
@@ -222,6 +236,6 @@ abstract class _ConfirmationEmailRequestModel implements ConfirmationEmailReques
   String? get captchaCookie;
   @override
   @JsonKey(ignore: true)
-  _$$_ConfirmationEmailRequestModelCopyWith<_$_ConfirmationEmailRequestModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ConfirmationEmailRequestModelCopyWith<_$_ConfirmationEmailRequestModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

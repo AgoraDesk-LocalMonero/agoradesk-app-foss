@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.21"
+  barcode_scan2:
+    dependency: "direct main"
+    description:
+      name: barcode_scan2
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -912,13 +919,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  mobile_scanner:
-    dependency: "direct main"
-    description:
-      name: mobile_scanner
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.1"
   mocktail:
     dependency: "direct dev"
     description:
@@ -1199,6 +1199,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  protobuf:
+    dependency: transitive
+    description:
+      name: protobuf
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   provider:
     dependency: "direct main"
     description:
@@ -1248,6 +1255,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.0"
+  restart_app:
+    dependency: "direct main"
+    description:
+      name: restart_app
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0+1"
   rxdart:
     dependency: "direct main"
     description:

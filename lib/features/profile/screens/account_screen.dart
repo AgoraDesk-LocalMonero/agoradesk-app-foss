@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
@@ -92,6 +94,16 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.start250Sb2fa,
                             onPressed: () => AutoRouter.of(context).push(const TwoFactorAuthRoute()),
                           ),
+                          Platform.isAndroid
+                              ? Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                  child: LineWithSwitcher(
+                                    value: model.isSentryOn(),
+                                    title: context.intl.app_anonymous_crash_diagnostics,
+                                    onPressed: () => model.switchSentryStatus(context),
+                                  ),
+                                )
+                              : const SizedBox(),
                           const SizedBox(height: 8),
                           LineWithArrow(
                             title: context.intl.change_pin,
@@ -102,12 +114,14 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           ),
                           const SizedBox(height: 8),
                           context.read<AppState>().hasPinCode
-                              ? LineWithArrow(
-                                  title: context.intl.remove_pin,
-                                  onPressed: () => model.removePin(context),
+                              ? Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                  child: LineWithArrow(
+                                    title: context.intl.remove_pin,
+                                    onPressed: () => model.removePin(context),
+                                  ),
                                 )
                               : const SizedBox(),
-                          context.read<AppState>().hasPinCode ? const SizedBox(height: 8) : const SizedBox(),
                           Text(
                             context.intl.document8722Sbtitle250Sbsettings,
                             style: context.txtBodySmallN60,

@@ -7,6 +7,7 @@ class UserLocalSettings {
     this.themeMode,
     this.locale,
     this.pinIsActive,
+    this.sentryIsOn,
     this.firstRun,
     this.pushFcmTokenSavedToApi,
     this.username,
@@ -19,6 +20,7 @@ class UserLocalSettings {
   int autoId = 0;
   ThemeMode? themeMode;
   bool? pinIsActive;
+  bool?   sentryIsOn;
   bool? firstRun;
   bool? pushFcmTokenSavedToApi;
   String? username;

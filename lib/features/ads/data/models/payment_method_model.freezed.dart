@@ -22,18 +22,21 @@ mixin _$OnlineProvider {
   List<String> get currencies => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $OnlineProviderCopyWith<OnlineProvider> get copyWith => throw _privateConstructorUsedError;
+  $OnlineProviderCopyWith<OnlineProvider> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $OnlineProviderCopyWith<$Res> {
-  factory $OnlineProviderCopyWith(OnlineProvider value, $Res Function(OnlineProvider) then) =
+  factory $OnlineProviderCopyWith(
+          OnlineProvider value, $Res Function(OnlineProvider) then) =
       _$OnlineProviderCopyWithImpl<$Res>;
   $Res call({String url, String code, String name, List<String> currencies});
 }
 
 /// @nodoc
-class _$OnlineProviderCopyWithImpl<$Res> implements $OnlineProviderCopyWith<$Res> {
+class _$OnlineProviderCopyWithImpl<$Res>
+    implements $OnlineProviderCopyWith<$Res> {
   _$OnlineProviderCopyWithImpl(this._value, this._then);
 
   final OnlineProvider _value;
@@ -69,17 +72,21 @@ class _$OnlineProviderCopyWithImpl<$Res> implements $OnlineProviderCopyWith<$Res
 }
 
 /// @nodoc
-abstract class _$$_OnlineProviderCopyWith<$Res> implements $OnlineProviderCopyWith<$Res> {
-  factory _$$_OnlineProviderCopyWith(_$_OnlineProvider value, $Res Function(_$_OnlineProvider) then) =
+abstract class _$$_OnlineProviderCopyWith<$Res>
+    implements $OnlineProviderCopyWith<$Res> {
+  factory _$$_OnlineProviderCopyWith(
+          _$_OnlineProvider value, $Res Function(_$_OnlineProvider) then) =
       __$$_OnlineProviderCopyWithImpl<$Res>;
   @override
   $Res call({String url, String code, String name, List<String> currencies});
 }
 
 /// @nodoc
-class __$$_OnlineProviderCopyWithImpl<$Res> extends _$OnlineProviderCopyWithImpl<$Res>
+class __$$_OnlineProviderCopyWithImpl<$Res>
+    extends _$OnlineProviderCopyWithImpl<$Res>
     implements _$$_OnlineProviderCopyWith<$Res> {
-  __$$_OnlineProviderCopyWithImpl(_$_OnlineProvider _value, $Res Function(_$_OnlineProvider) _then)
+  __$$_OnlineProviderCopyWithImpl(
+      _$_OnlineProvider _value, $Res Function(_$_OnlineProvider) _then)
       : super(_value, (v) => _then(v as _$_OnlineProvider));
 
   @override
@@ -117,7 +124,10 @@ class __$$_OnlineProviderCopyWithImpl<$Res> extends _$OnlineProviderCopyWithImpl
 
 class _$_OnlineProvider implements _OnlineProvider {
   const _$_OnlineProvider(
-      {required this.url, required this.code, required this.name, required final List<String> currencies})
+      {required this.url,
+      required this.code,
+      required this.name,
+      required final List<String> currencies})
       : _currencies = currencies;
 
   @override
@@ -146,7 +156,8 @@ class _$_OnlineProvider implements _OnlineProvider {
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other._currencies, _currencies));
+            const DeepCollectionEquality()
+                .equals(other._currencies, _currencies));
   }
 
   @override
@@ -180,5 +191,6 @@ abstract class _OnlineProvider implements OnlineProvider {
   List<String> get currencies;
   @override
   @JsonKey(ignore: true)
-  _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith => throw _privateConstructorUsedError;
+  _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith =>
+      throw _privateConstructorUsedError;
 }

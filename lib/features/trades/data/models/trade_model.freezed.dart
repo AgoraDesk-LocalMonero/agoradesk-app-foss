@@ -42,21 +42,53 @@ mixin _$TradeModel {
   bool? get isBuying => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_selling', includeIfNull: false)
   bool? get isSelling => throw _privateConstructorUsedError;
-  @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'created_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'escrowed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'escrowed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get escrowedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'funded_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'funded_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get fundedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'canceled_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'canceled_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get canceledAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'closed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'closed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get closedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'released_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'released_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get releasedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'payment_completed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'payment_completed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get paymentCompletedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'disputed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'disputed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get disputedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'msg', includeIfNull: false)
   String? get text => throw _privateConstructorUsedError;
@@ -66,29 +98,43 @@ mixin _$TradeModel {
   String? get priceEquation => throw _privateConstructorUsedError;
   @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
   int? get paymentWindowMinutes => throw _privateConstructorUsedError;
-  @JsonKey(name: 'transfer_to_seller_non_custodial_wallet_transaction_id', includeIfNull: false)
-  String? get transferToSellerTransactionId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'transfer_to_seller_non_custodial_wallet_transaction_confirmations', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_seller_non_custodial_wallet_transaction_id',
+      includeIfNull: false)
+  String? get transferToSellerTransactionId =>
+      throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'transfer_to_seller_non_custodial_wallet_transaction_confirmations',
+      includeIfNull: false)
   int? get transferToSellerConfirmations => throw _privateConstructorUsedError;
   @JsonKey(name: 'seller_non_custodial_wallet_mnemonic', includeIfNull: false)
-  String? get sellerNonCustodialWalletMnemonic => throw _privateConstructorUsedError;
+  String? get sellerNonCustodialWalletMnemonic =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false)
   BtcFeesEnum? get btcFeesEnum => throw _privateConstructorUsedError;
   @JsonKey(name: 'buyer_settlement_address', includeIfNull: false)
   String? get buyerSettlementAddress => throw _privateConstructorUsedError;
-  @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_key', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_buyer_settlement_wallet_transaction_key',
+      includeIfNull: false)
   String? get transferToBuyerKey => throw _privateConstructorUsedError;
-  @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_id', includeIfNull: false)
-  String? get transferToBuyerTransactionId => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'transfer_to_buyer_settlement_wallet_transaction_id',
+      includeIfNull: false)
+  String? get transferToBuyerTransactionId =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TradeModelCopyWith<TradeModel> get copyWith => throw _privateConstructorUsedError;
+  $TradeModelCopyWith<TradeModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $TradeModelCopyWith<$Res> {
-  factory $TradeModelCopyWith(TradeModel value, $Res Function(TradeModel) then) = _$TradeModelCopyWithImpl<$Res>;
+  factory $TradeModelCopyWith(
+          TradeModel value, $Res Function(TradeModel) then) =
+      _$TradeModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'contact_id', includeIfNull: false)
           String tradeId,
@@ -313,7 +359,8 @@ class _$TradeModelCopyWithImpl<$Res> implements $TradeModelCopyWith<$Res> {
           ? _value.transferToSellerConfirmations
           : transferToSellerConfirmations // ignore: cast_nullable_to_non_nullable
               as int?,
-      sellerNonCustodialWalletMnemonic: sellerNonCustodialWalletMnemonic == freezed
+      sellerNonCustodialWalletMnemonic: sellerNonCustodialWalletMnemonic ==
+              freezed
           ? _value.sellerNonCustodialWalletMnemonic
           : sellerNonCustodialWalletMnemonic // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -359,8 +406,10 @@ class _$TradeModelCopyWithImpl<$Res> implements $TradeModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_TradeModelCopyWith<$Res> implements $TradeModelCopyWith<$Res> {
-  factory _$$_TradeModelCopyWith(_$_TradeModel value, $Res Function(_$_TradeModel) then) =
+abstract class _$$_TradeModelCopyWith<$Res>
+    implements $TradeModelCopyWith<$Res> {
+  factory _$$_TradeModelCopyWith(
+          _$_TradeModel value, $Res Function(_$_TradeModel) then) =
       __$$_TradeModelCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -434,8 +483,10 @@ abstract class _$$_TradeModelCopyWith<$Res> implements $TradeModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TradeModelCopyWithImpl<$Res> extends _$TradeModelCopyWithImpl<$Res> implements _$$_TradeModelCopyWith<$Res> {
-  __$$_TradeModelCopyWithImpl(_$_TradeModel _value, $Res Function(_$_TradeModel) _then)
+class __$$_TradeModelCopyWithImpl<$Res> extends _$TradeModelCopyWithImpl<$Res>
+    implements _$$_TradeModelCopyWith<$Res> {
+  __$$_TradeModelCopyWithImpl(
+      _$_TradeModel _value, $Res Function(_$_TradeModel) _then)
       : super(_value, (v) => _then(v as _$_TradeModel));
 
   @override
@@ -590,7 +641,8 @@ class __$$_TradeModelCopyWithImpl<$Res> extends _$TradeModelCopyWithImpl<$Res> i
           ? _value.transferToSellerConfirmations
           : transferToSellerConfirmations // ignore: cast_nullable_to_non_nullable
               as int?,
-      sellerNonCustodialWalletMnemonic: sellerNonCustodialWalletMnemonic == freezed
+      sellerNonCustodialWalletMnemonic: sellerNonCustodialWalletMnemonic ==
+              freezed
           ? _value.sellerNonCustodialWalletMnemonic
           : sellerNonCustodialWalletMnemonic // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -681,7 +733,8 @@ class _$_TradeModel extends _TradeModel {
           this.transferToBuyerTransactionId})
       : super._();
 
-  factory _$_TradeModel.fromJson(Map<String, dynamic> json) => _$$_TradeModelFromJson(json);
+  factory _$_TradeModel.fromJson(Map<String, dynamic> json) =>
+      _$$_TradeModelFromJson(json);
 
   @override
   @JsonKey(name: 'contact_id', includeIfNull: false)
@@ -720,28 +773,60 @@ class _$_TradeModel extends _TradeModel {
   @JsonKey(name: 'is_selling', includeIfNull: false)
   final bool? isSelling;
   @override
-  @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'created_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? createdAt;
   @override
-  @JsonKey(name: 'escrowed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'escrowed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? escrowedAt;
   @override
-  @JsonKey(name: 'funded_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'funded_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? fundedAt;
   @override
-  @JsonKey(name: 'canceled_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'canceled_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? canceledAt;
   @override
-  @JsonKey(name: 'closed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'closed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? closedAt;
   @override
-  @JsonKey(name: 'released_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'released_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? releasedAt;
   @override
-  @JsonKey(name: 'payment_completed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'payment_completed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? paymentCompletedAt;
   @override
-  @JsonKey(name: 'disputed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'disputed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   final DateTime? disputedAt;
   @override
   @JsonKey(name: 'msg', includeIfNull: false)
@@ -756,10 +841,14 @@ class _$_TradeModel extends _TradeModel {
   @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
   final int? paymentWindowMinutes;
   @override
-  @JsonKey(name: 'transfer_to_seller_non_custodial_wallet_transaction_id', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_seller_non_custodial_wallet_transaction_id',
+      includeIfNull: false)
   final String? transferToSellerTransactionId;
   @override
-  @JsonKey(name: 'transfer_to_seller_non_custodial_wallet_transaction_confirmations', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_seller_non_custodial_wallet_transaction_confirmations',
+      includeIfNull: false)
   final int? transferToSellerConfirmations;
   @override
   @JsonKey(name: 'seller_non_custodial_wallet_mnemonic', includeIfNull: false)
@@ -771,10 +860,14 @@ class _$_TradeModel extends _TradeModel {
   @JsonKey(name: 'buyer_settlement_address', includeIfNull: false)
   final String? buyerSettlementAddress;
   @override
-  @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_key', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_buyer_settlement_wallet_transaction_key',
+      includeIfNull: false)
   final String? transferToBuyerKey;
   @override
-  @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_id', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_buyer_settlement_wallet_transaction_id',
+      includeIfNull: false)
   final String? transferToBuyerTransactionId;
 
   @override
@@ -795,32 +888,52 @@ class _$_TradeModel extends _TradeModel {
             const DeepCollectionEquality().equals(other.feeXmr, feeXmr) &&
             const DeepCollectionEquality().equals(other.amountBtc, amountBtc) &&
             const DeepCollectionEquality().equals(other.feeBtc, feeBtc) &&
-            const DeepCollectionEquality().equals(other.advertisement, advertisement) &&
+            const DeepCollectionEquality()
+                .equals(other.advertisement, advertisement) &&
             const DeepCollectionEquality().equals(other.currency, currency) &&
             const DeepCollectionEquality().equals(other.country, country) &&
-            const DeepCollectionEquality().equals(other.accountInfo, accountInfo) &&
+            const DeepCollectionEquality()
+                .equals(other.accountInfo, accountInfo) &&
             const DeepCollectionEquality().equals(other.isBuying, isBuying) &&
             const DeepCollectionEquality().equals(other.isSelling, isSelling) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.escrowedAt, escrowedAt) &&
-            const DeepCollectionEquality().equals(other.fundedAt, fundedAt) &&
-            const DeepCollectionEquality().equals(other.canceledAt, canceledAt) &&
-            const DeepCollectionEquality().equals(other.closedAt, closedAt) &&
-            const DeepCollectionEquality().equals(other.releasedAt, releasedAt) &&
-            const DeepCollectionEquality().equals(other.paymentCompletedAt, paymentCompletedAt) &&
-            const DeepCollectionEquality().equals(other.disputedAt, disputedAt) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.verificationCode, verificationCode) &&
-            const DeepCollectionEquality().equals(other.priceEquation, priceEquation) &&
-            const DeepCollectionEquality().equals(other.paymentWindowMinutes, paymentWindowMinutes) &&
-            const DeepCollectionEquality().equals(other.transferToSellerTransactionId, transferToSellerTransactionId) &&
-            const DeepCollectionEquality().equals(other.transferToSellerConfirmations, transferToSellerConfirmations) &&
             const DeepCollectionEquality()
-                .equals(other.sellerNonCustodialWalletMnemonic, sellerNonCustodialWalletMnemonic) &&
-            const DeepCollectionEquality().equals(other.btcFeesEnum, btcFeesEnum) &&
-            const DeepCollectionEquality().equals(other.buyerSettlementAddress, buyerSettlementAddress) &&
-            const DeepCollectionEquality().equals(other.transferToBuyerKey, transferToBuyerKey) &&
-            const DeepCollectionEquality().equals(other.transferToBuyerTransactionId, transferToBuyerTransactionId));
+                .equals(other.escrowedAt, escrowedAt) &&
+            const DeepCollectionEquality().equals(other.fundedAt, fundedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.canceledAt, canceledAt) &&
+            const DeepCollectionEquality().equals(other.closedAt, closedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.releasedAt, releasedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.paymentCompletedAt, paymentCompletedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.disputedAt, disputedAt) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.verificationCode, verificationCode) &&
+            const DeepCollectionEquality()
+                .equals(other.priceEquation, priceEquation) &&
+            const DeepCollectionEquality()
+                .equals(other.paymentWindowMinutes, paymentWindowMinutes) &&
+            const DeepCollectionEquality().equals(
+                other.transferToSellerTransactionId,
+                transferToSellerTransactionId) &&
+            const DeepCollectionEquality().equals(
+                other.transferToSellerConfirmations,
+                transferToSellerConfirmations) &&
+            const DeepCollectionEquality().equals(
+                other.sellerNonCustodialWalletMnemonic,
+                sellerNonCustodialWalletMnemonic) &&
+            const DeepCollectionEquality()
+                .equals(other.btcFeesEnum, btcFeesEnum) &&
+            const DeepCollectionEquality()
+                .equals(other.buyerSettlementAddress, buyerSettlementAddress) &&
+            const DeepCollectionEquality()
+                .equals(other.transferToBuyerKey, transferToBuyerKey) &&
+            const DeepCollectionEquality().equals(
+                other.transferToBuyerTransactionId,
+                transferToBuyerTransactionId));
   }
 
   @JsonKey(ignore: true)
@@ -864,7 +977,8 @@ class _$_TradeModel extends _TradeModel {
 
   @JsonKey(ignore: true)
   @override
-  _$$_TradeModelCopyWith<_$_TradeModel> get copyWith => __$$_TradeModelCopyWithImpl<_$_TradeModel>(this, _$identity);
+  _$$_TradeModelCopyWith<_$_TradeModel> get copyWith =>
+      __$$_TradeModelCopyWithImpl<_$_TradeModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -938,7 +1052,8 @@ abstract class _TradeModel extends TradeModel {
           final String? transferToBuyerTransactionId}) = _$_TradeModel;
   const _TradeModel._() : super._();
 
-  factory _TradeModel.fromJson(Map<String, dynamic> json) = _$_TradeModel.fromJson;
+  factory _TradeModel.fromJson(Map<String, dynamic> json) =
+      _$_TradeModel.fromJson;
 
   @override
   @JsonKey(name: 'contact_id', includeIfNull: false)
@@ -977,28 +1092,60 @@ abstract class _TradeModel extends TradeModel {
   @JsonKey(name: 'is_selling', includeIfNull: false)
   bool? get isSelling;
   @override
-  @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'created_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get createdAt;
   @override
-  @JsonKey(name: 'escrowed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'escrowed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get escrowedAt;
   @override
-  @JsonKey(name: 'funded_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'funded_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get fundedAt;
   @override
-  @JsonKey(name: 'canceled_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'canceled_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get canceledAt;
   @override
-  @JsonKey(name: 'closed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'closed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get closedAt;
   @override
-  @JsonKey(name: 'released_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'released_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get releasedAt;
   @override
-  @JsonKey(name: 'payment_completed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'payment_completed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get paymentCompletedAt;
   @override
-  @JsonKey(name: 'disputed_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
+  @JsonKey(
+      name: 'disputed_at',
+      includeIfNull: false,
+      fromJson: fromJsonDateOrNull,
+      toJson: toJsonDateOrNull)
   DateTime? get disputedAt;
   @override
   @JsonKey(name: 'msg', includeIfNull: false)
@@ -1013,10 +1160,14 @@ abstract class _TradeModel extends TradeModel {
   @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
   int? get paymentWindowMinutes;
   @override
-  @JsonKey(name: 'transfer_to_seller_non_custodial_wallet_transaction_id', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_seller_non_custodial_wallet_transaction_id',
+      includeIfNull: false)
   String? get transferToSellerTransactionId;
   @override
-  @JsonKey(name: 'transfer_to_seller_non_custodial_wallet_transaction_confirmations', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_seller_non_custodial_wallet_transaction_confirmations',
+      includeIfNull: false)
   int? get transferToSellerConfirmations;
   @override
   @JsonKey(name: 'seller_non_custodial_wallet_mnemonic', includeIfNull: false)
@@ -1028,12 +1179,17 @@ abstract class _TradeModel extends TradeModel {
   @JsonKey(name: 'buyer_settlement_address', includeIfNull: false)
   String? get buyerSettlementAddress;
   @override
-  @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_key', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_buyer_settlement_wallet_transaction_key',
+      includeIfNull: false)
   String? get transferToBuyerKey;
   @override
-  @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_id', includeIfNull: false)
+  @JsonKey(
+      name: 'transfer_to_buyer_settlement_wallet_transaction_id',
+      includeIfNull: false)
   String? get transferToBuyerTransactionId;
   @override
   @JsonKey(ignore: true)
-  _$$_TradeModelCopyWith<_$_TradeModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_TradeModelCopyWith<_$_TradeModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

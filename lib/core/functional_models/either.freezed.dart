@@ -58,7 +58,9 @@ mixin _$Either<L, R> {
 
 /// @nodoc
 abstract class $EitherCopyWith<L, R, $Res> {
-  factory $EitherCopyWith(Either<L, R> value, $Res Function(Either<L, R>) then) = _$EitherCopyWithImpl<L, R, $Res>;
+  factory $EitherCopyWith(
+          Either<L, R> value, $Res Function(Either<L, R>) then) =
+      _$EitherCopyWithImpl<L, R, $Res>;
 }
 
 /// @nodoc
@@ -72,15 +74,18 @@ class _$EitherCopyWithImpl<L, R, $Res> implements $EitherCopyWith<L, R, $Res> {
 
 /// @nodoc
 abstract class _$$_EitherLeftCopyWith<L, R, $Res> {
-  factory _$$_EitherLeftCopyWith(_$_EitherLeft<L, R> value, $Res Function(_$_EitherLeft<L, R>) then) =
+  factory _$$_EitherLeftCopyWith(
+          _$_EitherLeft<L, R> value, $Res Function(_$_EitherLeft<L, R>) then) =
       __$$_EitherLeftCopyWithImpl<L, R, $Res>;
   $Res call({L left});
 }
 
 /// @nodoc
-class __$$_EitherLeftCopyWithImpl<L, R, $Res> extends _$EitherCopyWithImpl<L, R, $Res>
+class __$$_EitherLeftCopyWithImpl<L, R, $Res>
+    extends _$EitherCopyWithImpl<L, R, $Res>
     implements _$$_EitherLeftCopyWith<L, R, $Res> {
-  __$$_EitherLeftCopyWithImpl(_$_EitherLeft<L, R> _value, $Res Function(_$_EitherLeft<L, R>) _then)
+  __$$_EitherLeftCopyWithImpl(
+      _$_EitherLeft<L, R> _value, $Res Function(_$_EitherLeft<L, R>) _then)
       : super(_value, (v) => _then(v as _$_EitherLeft<L, R>));
 
   @override
@@ -121,7 +126,8 @@ class _$_EitherLeft<L, R> extends _EitherLeft<L, R> {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(left));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(left));
 
   @JsonKey(ignore: true)
   @override
@@ -197,20 +203,24 @@ abstract class _EitherLeft<L, R> extends Either<L, R> {
 
   L get left;
   @JsonKey(ignore: true)
-  _$$_EitherLeftCopyWith<L, R, _$_EitherLeft<L, R>> get copyWith => throw _privateConstructorUsedError;
+  _$$_EitherLeftCopyWith<L, R, _$_EitherLeft<L, R>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$_EitherRightCopyWith<L, R, $Res> {
-  factory _$$_EitherRightCopyWith(_$_EitherRight<L, R> value, $Res Function(_$_EitherRight<L, R>) then) =
+  factory _$$_EitherRightCopyWith(_$_EitherRight<L, R> value,
+          $Res Function(_$_EitherRight<L, R>) then) =
       __$$_EitherRightCopyWithImpl<L, R, $Res>;
   $Res call({R right});
 }
 
 /// @nodoc
-class __$$_EitherRightCopyWithImpl<L, R, $Res> extends _$EitherCopyWithImpl<L, R, $Res>
+class __$$_EitherRightCopyWithImpl<L, R, $Res>
+    extends _$EitherCopyWithImpl<L, R, $Res>
     implements _$$_EitherRightCopyWith<L, R, $Res> {
-  __$$_EitherRightCopyWithImpl(_$_EitherRight<L, R> _value, $Res Function(_$_EitherRight<L, R>) _then)
+  __$$_EitherRightCopyWithImpl(
+      _$_EitherRight<L, R> _value, $Res Function(_$_EitherRight<L, R>) _then)
       : super(_value, (v) => _then(v as _$_EitherRight<L, R>));
 
   @override
@@ -251,12 +261,14 @@ class _$_EitherRight<L, R> extends _EitherRight<L, R> {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(right));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(right));
 
   @JsonKey(ignore: true)
   @override
   _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith =>
-      __$$_EitherRightCopyWithImpl<L, R, _$_EitherRight<L, R>>(this, _$identity);
+      __$$_EitherRightCopyWithImpl<L, R, _$_EitherRight<L, R>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -327,5 +339,6 @@ abstract class _EitherRight<L, R> extends Either<L, R> {
 
   R get right;
   @JsonKey(ignore: true)
-  _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith => throw _privateConstructorUsedError;
+  _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

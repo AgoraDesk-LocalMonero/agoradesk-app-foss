@@ -60,11 +60,23 @@ mixin _$AdModel {
   bool? get verifiedEmailRequired => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get msg => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'min_amount', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'min_amount',
+      includeIfNull: false)
   double? get minAmount => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'max_amount',
+      includeIfNull: false)
   double? get maxAmount => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount_available', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'max_amount_available',
+      includeIfNull: false)
   double? get maxAmountAvailable => throw _privateConstructorUsedError;
   @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
   int? get paymentWindowMinutes => throw _privateConstructorUsedError;
@@ -95,7 +107,8 @@ mixin _$AdModel {
 
 /// @nodoc
 abstract class $AdModelCopyWith<$Res> {
-  factory $AdModelCopyWith(AdModel value, $Res Function(AdModel) then) = _$AdModelCopyWithImpl<$Res>;
+  factory $AdModelCopyWith(AdModel value, $Res Function(AdModel) then) =
+      _$AdModelCopyWithImpl<$Res>;
   $Res call(
       {Asset? asset,
       @JsonKey(name: 'ad_id', includeIfNull: false)
@@ -351,7 +364,9 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
-  factory _$$_AdModelCopyWith(_$_AdModel value, $Res Function(_$_AdModel) then) = __$$_AdModelCopyWithImpl<$Res>;
+  factory _$$_AdModelCopyWith(
+          _$_AdModel value, $Res Function(_$_AdModel) then) =
+      __$$_AdModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {Asset? asset,
@@ -421,7 +436,8 @@ abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res> implements _$$_AdModelCopyWith<$Res> {
+class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
+    implements _$$_AdModelCopyWith<$Res> {
   __$$_AdModelCopyWithImpl(_$_AdModel _value, $Res Function(_$_AdModel) _then)
       : super(_value, (v) => _then(v as _$_AdModel));
 
@@ -663,7 +679,8 @@ class _$_AdModel implements _AdModel {
           this.locationString,
       this.profile});
 
-  factory _$_AdModel.fromJson(Map<String, dynamic> json) => _$$_AdModelFromJson(json);
+  factory _$_AdModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AdModelFromJson(json);
 
   @override
   final Asset? asset;
@@ -724,13 +741,25 @@ class _$_AdModel implements _AdModel {
   @JsonKey(includeIfNull: false)
   final String? msg;
   @override
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'min_amount', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'min_amount',
+      includeIfNull: false)
   final double? minAmount;
   @override
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'max_amount',
+      includeIfNull: false)
   final double? maxAmount;
   @override
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount_available', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'max_amount_available',
+      includeIfNull: false)
   final double? maxAmountAvailable;
   @override
   @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
@@ -782,30 +811,48 @@ class _$_AdModel implements _AdModel {
             const DeepCollectionEquality().equals(other.visible, visible) &&
             const DeepCollectionEquality().equals(other.lat, lat) &&
             const DeepCollectionEquality().equals(other.lon, lon) &&
-            const DeepCollectionEquality().equals(other.countryCode, countryCode) &&
+            const DeepCollectionEquality()
+                .equals(other.countryCode, countryCode) &&
             const DeepCollectionEquality().equals(other.currency, currency) &&
             const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
-            const DeepCollectionEquality().equals(other.onlineProvider, onlineProvider) &&
-            const DeepCollectionEquality().equals(other.buyerSettlementAddress, buyerSettlementAddress) &&
-            const DeepCollectionEquality().equals(other.priceEquation, priceEquation) &&
-            const DeepCollectionEquality().equals(other.trackMaxAmount, trackMaxAmount) &&
-            const DeepCollectionEquality().equals(other.requireTrustedByAdvertiser, requireTrustedByAdvertiser) &&
+            const DeepCollectionEquality()
+                .equals(other.onlineProvider, onlineProvider) &&
+            const DeepCollectionEquality()
+                .equals(other.buyerSettlementAddress, buyerSettlementAddress) &&
+            const DeepCollectionEquality()
+                .equals(other.priceEquation, priceEquation) &&
+            const DeepCollectionEquality()
+                .equals(other.trackMaxAmount, trackMaxAmount) &&
+            const DeepCollectionEquality().equals(
+                other.requireTrustedByAdvertiser, requireTrustedByAdvertiser) &&
             const DeepCollectionEquality().equals(other.floating, floating) &&
-            const DeepCollectionEquality().equals(other.verifiedEmailRequired, verifiedEmailRequired) &&
+            const DeepCollectionEquality()
+                .equals(other.verifiedEmailRequired, verifiedEmailRequired) &&
             const DeepCollectionEquality().equals(other.msg, msg) &&
             const DeepCollectionEquality().equals(other.minAmount, minAmount) &&
             const DeepCollectionEquality().equals(other.maxAmount, maxAmount) &&
-            const DeepCollectionEquality().equals(other.maxAmountAvailable, maxAmountAvailable) &&
-            const DeepCollectionEquality().equals(other.paymentWindowMinutes, paymentWindowMinutes) &&
-            const DeepCollectionEquality().equals(other.limitToFiatAmounts, limitToFiatAmounts) &&
-            const DeepCollectionEquality().equals(other.paymentMethodDetail, paymentMethodDetail) &&
-            const DeepCollectionEquality().equals(other.paymentMethodInfo, paymentMethodInfo) &&
-            const DeepCollectionEquality().equals(other.firstTimeLimitAsset, firstTimeLimitAsset) &&
-            const DeepCollectionEquality().equals(other.firstTimeLimitXmr, firstTimeLimitXmr) &&
-            const DeepCollectionEquality().equals(other.firstTimeLimitBtc, firstTimeLimitBtc) &&
-            const DeepCollectionEquality().equals(other.requireFeedbackScore, requireFeedbackScore) &&
-            const DeepCollectionEquality().equals(other.buyerSettlementFeeLevel, buyerSettlementFeeLevel) &&
-            const DeepCollectionEquality().equals(other.locationString, locationString) &&
+            const DeepCollectionEquality()
+                .equals(other.maxAmountAvailable, maxAmountAvailable) &&
+            const DeepCollectionEquality()
+                .equals(other.paymentWindowMinutes, paymentWindowMinutes) &&
+            const DeepCollectionEquality()
+                .equals(other.limitToFiatAmounts, limitToFiatAmounts) &&
+            const DeepCollectionEquality()
+                .equals(other.paymentMethodDetail, paymentMethodDetail) &&
+            const DeepCollectionEquality()
+                .equals(other.paymentMethodInfo, paymentMethodInfo) &&
+            const DeepCollectionEquality()
+                .equals(other.firstTimeLimitAsset, firstTimeLimitAsset) &&
+            const DeepCollectionEquality()
+                .equals(other.firstTimeLimitXmr, firstTimeLimitXmr) &&
+            const DeepCollectionEquality()
+                .equals(other.firstTimeLimitBtc, firstTimeLimitBtc) &&
+            const DeepCollectionEquality()
+                .equals(other.requireFeedbackScore, requireFeedbackScore) &&
+            const DeepCollectionEquality().equals(
+                other.buyerSettlementFeeLevel, buyerSettlementFeeLevel) &&
+            const DeepCollectionEquality()
+                .equals(other.locationString, locationString) &&
             const DeepCollectionEquality().equals(other.profile, profile));
   }
 
@@ -849,7 +896,8 @@ class _$_AdModel implements _AdModel {
 
   @JsonKey(ignore: true)
   @override
-  _$$_AdModelCopyWith<_$_AdModel> get copyWith => __$$_AdModelCopyWithImpl<_$_AdModel>(this, _$identity);
+  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
+      __$$_AdModelCopyWithImpl<_$_AdModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -984,13 +1032,25 @@ abstract class _AdModel implements AdModel {
   @JsonKey(includeIfNull: false)
   String? get msg;
   @override
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'min_amount', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'min_amount',
+      includeIfNull: false)
   double? get minAmount;
   @override
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'max_amount',
+      includeIfNull: false)
   double? get maxAmount;
   @override
-  @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount_available', includeIfNull: false)
+  @JsonKey(
+      fromJson: stringToDouble,
+      toJson: doubleToString,
+      name: 'max_amount_available',
+      includeIfNull: false)
   double? get maxAmountAvailable;
   @override
   @JsonKey(name: 'payment_window_minutes', includeIfNull: false)
@@ -1026,5 +1086,6 @@ abstract class _AdModel implements AdModel {
   AccountInfoModel? get profile;
   @override
   @JsonKey(ignore: true)
-  _$$_AdModelCopyWith<_$_AdModel> get copyWith => throw _privateConstructorUsedError;
+  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

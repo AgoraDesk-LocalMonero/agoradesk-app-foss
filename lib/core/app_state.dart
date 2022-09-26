@@ -34,6 +34,13 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String? openedTradeId;
 
   String get username => _userSettingsBox.getAll()[0].username ?? '';
+  bool get sentryIsOn => _userSettingsBox.getAll()[0].sentryIsOn ?? true;
+
+  set sentryIsOn(bool val) {
+    final s = _userSettingsBox.getAll()[0];
+    s.sentryIsOn = val;
+    _userSettingsBox.put(s);
+  }
 
   bool get isPushTokenSavedToApi => _userSettingsBox.getAll()[0].pushFcmTokenSavedToApi ?? false;
 
