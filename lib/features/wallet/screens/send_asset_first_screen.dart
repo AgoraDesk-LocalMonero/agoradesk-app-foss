@@ -1,9 +1,9 @@
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
-import 'package:agoradesk/entities/qr_scanner.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/send_asset_view_model.dart';
@@ -15,7 +15,7 @@ import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
-class SendAssetFirstScreen extends StatelessWidget {
+class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
   const SendAssetFirstScreen({
     Key? key,
     required this.price,

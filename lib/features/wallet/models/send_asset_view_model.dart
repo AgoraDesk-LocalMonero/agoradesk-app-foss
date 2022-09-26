@@ -4,6 +4,7 @@ import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
+import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
@@ -15,7 +16,8 @@ import 'package:agoradesk/features/wallet/screens/widgets/dialog_fee_changed.dar
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
 
-class SendAssetViewModel extends ViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
+class SendAssetViewModel extends ViewModel
+    with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin, QrScannerMixin {
   SendAssetViewModel({
     required this.price,
     required this.balance,
@@ -142,15 +144,8 @@ class SendAssetViewModel extends ViewModel with StringMixin, ValidatorMixin, Cli
   }
 
   void handleScannedCode(Object? code) async {
-    String address = '';
     if (code is String && code.isNotEmpty) {
-      address = code;
-      if (code.contains('monero:')) {
-        address = code.replaceFirst('monero:', '');
-      }
-      if (code.contains('bitcoin:')) {
-        address = code.replaceFirst('bitcoin:', '');
-      }
+      final address = getCoinAddressFromQr(code);
       if (validateWalletAddress(asset, address)) {
         ctrlAddress.text = address;
         await Future.delayed(const Duration(milliseconds: 100));
