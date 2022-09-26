@@ -30,7 +30,7 @@ class AdMaxLimit extends StatelessWidget with UrlMixin {
             hintText: context.intl.enter_amount_min_0,
             // errorText: model.maxAmountValid ? null : ' ',
           ),
-          keyboardType: TextInputType.number,
+          keyboardType: const TextInputType.numberWithOptions(decimal: true),
         ),
       ],
     );

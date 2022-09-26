@@ -780,9 +780,10 @@ class AddEditAdViewModel extends ViewModel
 
     ctrl6FirstTradeMaxLimit.addListener(() {
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 200), () {
-        if (ctrl6FirstTradeMaxLimit.text.isEmpty || validateDouble(ctrl6FirstTradeMaxLimit.text)) {
+        final txt = ctrl6FirstTradeMaxLimit.text.replaceAll(',', '.');
+        if (ctrl6FirstTradeMaxLimit.text.isEmpty || validateDouble(txt)) {
           tradeMaxLimitValid = true;
-          firstTradeMaxLimit = double.tryParse(ctrl6FirstTradeMaxLimit.text);
+          firstTradeMaxLimit = double.tryParse(txt);
         } else {
           tradeMaxLimitValid = false;
         }
