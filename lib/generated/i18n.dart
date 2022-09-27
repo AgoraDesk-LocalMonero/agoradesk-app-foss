@@ -16639,7 +16639,7 @@ abstract class I18n {
   /// No description provided for @app_vacation_enabled.
   ///
   /// In en, this message translates to:
-  /// **'vacation enabled'**
+  /// **'Vacation enabled'**
   String get app_vacation_enabled;
 
   /// No description provided for @app_trade_created.

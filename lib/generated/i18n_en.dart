@@ -8488,7 +8488,7 @@ class I18nEn extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';

@@ -149,7 +149,7 @@ class I18nPl extends I18n {
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
-    return 'Musisz handlować za przynajmniej {minimum-amount} w tym ogłoszeniu.';
+    return 'Musisz handlować za przynajmniej $minimumAmount w tym ogłoszeniu.';
   }
 
   @override
@@ -8488,7 +8488,7 @@ class I18nPl extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';

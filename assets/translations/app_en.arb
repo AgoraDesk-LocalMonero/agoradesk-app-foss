@@ -3336,7 +3336,7 @@
   "app_permanent": "Permanent",
   "app_error_saving": "Error during saving. Changes wasn't save.",
   "app_manage_ads": "Manage ads",
-  "app_vacation_enabled": "vacation enabled",
+  "app_vacation_enabled": "Vacation enabled",
   "app_trade_created": "Trade created",
   "app_session_expired": "Session expired",
   "app_anonymous_crash_diagnostics": "Anonymous crash diagnostics",

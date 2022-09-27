@@ -8488,7 +8488,7 @@ class I18nZh extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';
@@ -8673,7 +8673,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
-    return '您可以從此廣告中購買的最小金額為{minimum-amount}。';
+    return '您可以從此廣告中購買的最小金額為$minimumAmount。';
   }
 
   @override

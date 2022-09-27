@@ -149,7 +149,7 @@ class I18nKo extends I18n {
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
-    return '{minimum-amount} 이상 거래량을 설정하여야 합니다.';
+    return '$minimumAmount 이상 거래량을 설정하여야 합니다.';
   }
 
   @override
@@ -8488,7 +8488,7 @@ class I18nKo extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';
