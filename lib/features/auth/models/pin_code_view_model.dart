@@ -6,6 +6,8 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_markdown_with_close.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:vm/vm.dart';
 
 class PinCodeViewModel extends ViewModel {
@@ -25,6 +27,7 @@ class PinCodeViewModel extends ViewModel {
   String _firstPinCode = '';
   String _secondPinCode = '';
   bool _isFirstPin = true;
+  final LocalAuthentication localAuth = LocalAuthentication();
 
   String get firstPinCode => _firstPinCode;
 
@@ -49,12 +52,31 @@ class PinCodeViewModel extends ViewModel {
       hasCurrentPin = true;
     }
     initializing = false;
+    _authenticateWithBiometrics();
     super.init();
   }
 
   @override
   void onAfterBuild() {
     notifyListeners();
+  }
+
+  Future<void> _authenticateWithBiometrics() async {
+    bool authenticated = false;
+    try {
+      authenticated = await localAuth.authenticate(
+        localizedReason: 'Scan your fingerprint (or face or whatever) to authenticate',
+        options: const AuthenticationOptions(
+          stickyAuth: true,
+          biometricOnly: true,
+        ),
+      );
+      if (authenticated) {
+        Navigator.of(context).pop();
+      }
+    } on PlatformException catch (e) {
+      return;
+    }
   }
 
   //todo create service

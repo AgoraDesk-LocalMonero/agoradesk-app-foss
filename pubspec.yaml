@@ -81,6 +81,7 @@ dependencies:
   flutter_inappwebview: ^5.4.3+7
   permission_handler: ^10.0.0
   restart_app: ^1.1.0
+  local_auth: ^2.1.2
 
 dependency_overrides:
 #  flutter_foreground_task:

@@ -98,9 +98,9 @@ jobs:
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero
-          mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/com.localmonero.app_${{ steps.split.outputs._1 }}.apk
+          mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app_${{ steps.split.outputs._1 }}.apk
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false
-          mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/com.localmonero.app-foss_${{ steps.split.outputs._1 }}.apk
+          mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app-foss_${{ steps.split.outputs._1 }}.apk
           rm build/app/outputs/flutter-apk/app.apk
 
       - name: Create Github Release
