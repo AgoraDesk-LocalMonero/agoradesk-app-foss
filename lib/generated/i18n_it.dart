@@ -7911,6 +7911,9 @@ class I18nIt extends I18n {
   String get pin_current => 'PIN attuale';
 
   @override
+  String get pin_set => 'Set PIN code';
+
+  @override
   String get pin_do_not_match => 'I perni non corrispondono';
 
   @override
@@ -8510,6 +8513,9 @@ class I18nIt extends I18n {
 
   @override
   String get app_biometric_authentication => 'Biometric authentication';
+
+  @override
+  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
 
   @override
   String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';

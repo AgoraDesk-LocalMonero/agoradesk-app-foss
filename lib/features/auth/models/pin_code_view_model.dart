@@ -7,7 +7,6 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_markdown_with_close.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:local_auth/local_auth.dart';
 import 'package:vm/vm.dart';
 
 class PinCodeViewModel extends ViewModel {
@@ -15,6 +14,7 @@ class PinCodeViewModel extends ViewModel {
     required SecureStorage secureStorage,
     required AppState appState,
     required NotificationsService notificationsService,
+    this.isSetFlow = false,
   })  : _secureStorage = secureStorage,
         _notificationsService = notificationsService,
         _appState = appState;
@@ -22,6 +22,7 @@ class PinCodeViewModel extends ViewModel {
   final SecureStorage _secureStorage;
   final AppState _appState;
   final NotificationsService _notificationsService;
+  final bool isSetFlow;
 
   String? currentPin;
   bool initializing = true;
@@ -30,7 +31,6 @@ class PinCodeViewModel extends ViewModel {
   String _firstPinCode = '';
   String _secondPinCode = '';
   bool _isFirstPin = true;
-  final LocalAuthentication localAuth = LocalAuthentication();
 
   String get firstPinCode => _firstPinCode;
 
@@ -41,6 +41,8 @@ class PinCodeViewModel extends ViewModel {
   set secondPinCode(String v) => updateWith(secondPinCode: v);
 
   bool get isFirstPin => _isFirstPin;
+
+  bool get biometricAuthIsOn => _appState.biometricAuthIsOn;
 
   set isFirstPin(bool v) => updateWith(isFirstPin: v);
 
@@ -55,11 +57,8 @@ class PinCodeViewModel extends ViewModel {
       hasCurrentPin = true;
     }
     initializing = false;
-    if (_appState.biometricAuthIsOn) {
-      final res = await _notificationsService.authenticateWithBiometrics();
-      if (res) {
-        Navigator.of(context).pop();
-      }
+    if (_appState.biometricAuthIsOn && !isSetFlow) {
+      await checkBiometrics();
     }
     super.init();
   }
@@ -73,6 +72,13 @@ class PinCodeViewModel extends ViewModel {
   Future setPin() async {
     await _secureStorage.write(SecureStorageKey.pin, _firstPinCode);
     _appState.hasPinCode = true;
+  }
+
+  Future checkBiometrics() async {
+    final res = await _notificationsService.authenticateWithBiometrics();
+    if (res) {
+      Navigator.of(context).pop();
+    }
   }
 
   bool checkPinCorrectness(String pin) {

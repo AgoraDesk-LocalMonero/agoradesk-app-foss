@@ -21,6 +21,7 @@ class PinCodeSetScreen extends StatelessWidget {
           secureStorage: context.read<SecureStorage>(),
           appState: context.read<AppState>(),
           notificationsService: context.read<NotificationsService>(),
+          isSetFlow: true,
         ),
         builder: (context, model, _) {
           return Scaffold(

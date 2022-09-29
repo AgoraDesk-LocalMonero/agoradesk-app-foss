@@ -104,8 +104,8 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
           context: context,
           builder: (_) => AgoraDialogTwoButtons(
             title: context.intl.app_biometric_authentication,
-            body: const Text('You have to set up a PIN code for using biometric authentication.'),
-            mainActionText: 'Set up PIN code',
+            body: Text(context.intl.app_biometric_authentication_message),
+            mainActionText: context.intl.pin_set,
             mainAction: () async {
               await setPinCode();
               Navigator.of(context).pop();
@@ -137,6 +137,7 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
   Future removePin(BuildContext contex) async {
     await _appState.removePinCode();
     _appState.hasPinCode = false;
+    _appState.biometricAuthIsOn = false;
     eventBus.fire(FlashEvent.success(context.intl.remove_pin_message_success));
     notifyListeners();
   }

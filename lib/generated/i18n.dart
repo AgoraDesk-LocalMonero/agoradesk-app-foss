@@ -15574,6 +15574,12 @@ abstract class I18n {
   /// **'Current PIN'**
   String get pin_current;
 
+  /// No description provided for @pin_set.
+  ///
+  /// In en, this message translates to:
+  /// **'Set PIN code'**
+  String get pin_set;
+
   /// No description provided for @pin_do_not_match.
   ///
   /// In en, this message translates to:
@@ -16683,6 +16689,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Biometric authentication'**
   String get app_biometric_authentication;
+
+  /// No description provided for @app_biometric_authentication_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Please set a PIN code to enable biometric authentication.'**
+  String get app_biometric_authentication_message;
 
   /// No description provided for @app_anonymous_crash_diagnostics_restart.
   ///
