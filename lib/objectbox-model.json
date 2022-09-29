@@ -53,7 +53,7 @@
     },
     {
       "id": "5:5782449331183648541",
-      "lastPropertyId": "12:7145397620462196393",
+      "lastPropertyId": "13:5285333424823935156",
       "name": "UserLocalSettings",
       "properties": [
         {
@@ -110,6 +110,11 @@
         {
           "id": "12:7145397620462196393",
           "name": "sentryIsOn",
+          "type": 1
+        },
+        {
+          "id": "13:5285333424823935156",
+          "name": "biometricAuthIsOn",
           "type": 1
         }
       ],

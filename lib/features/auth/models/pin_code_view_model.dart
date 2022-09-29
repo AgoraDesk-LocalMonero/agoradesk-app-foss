@@ -52,7 +52,9 @@ class PinCodeViewModel extends ViewModel {
       hasCurrentPin = true;
     }
     initializing = false;
-    _authenticateWithBiometrics();
+    if (_appState.biometricAuthIsOn) {
+      _authenticateWithBiometrics();
+    }
     super.init();
   }
 

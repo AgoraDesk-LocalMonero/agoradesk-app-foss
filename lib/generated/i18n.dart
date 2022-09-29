@@ -15868,6 +15868,12 @@ abstract class I18n {
   /// **'No pending deposits'**
   String get no_pending_deposits;
 
+  /// No description provided for @create_pin.
+  ///
+  /// In en, this message translates to:
+  /// **'Create PIN'**
+  String get create_pin;
+
   /// No description provided for @change_pin.
   ///
   /// In en, this message translates to:
@@ -16671,6 +16677,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Postpone'**
   String get app_postpone;
+
+  /// No description provided for @app_biometric_authentication.
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric authentication'**
+  String get app_biometric_authentication;
 
   /// No description provided for @app_anonymous_crash_diagnostics_restart.
   ///

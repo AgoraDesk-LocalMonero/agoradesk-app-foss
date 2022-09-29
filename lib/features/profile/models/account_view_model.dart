@@ -59,6 +59,10 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
     return _appState.sentryIsOn;
   }
 
+  bool hasCurrentPin() {
+    return _appState.hasPinCode;
+  }
+
   void switchSentryStatus(BuildContext context) {
     _appState.sentryIsOn = !_appState.sentryIsOn;
     notifyListeners();
@@ -78,6 +82,33 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
 
   bool isDarkTheme() {
     return _appState.themeMode == ThemeMode.dark;
+  }
+
+  bool biometricAuthIsOn() {
+    return _appState.biometricAuthIsOn;
+  }
+
+  void switchBiometricAuth() {
+    // in case switching on biometric auth the PIN code must be enabled.
+    if (!_appState.biometricAuthIsOn) {
+      if (!_appState.hasPinCode) {
+        showDialog(
+          barrierDismissible: true,
+          context: context,
+          builder: (_) => AgoraDialogTwoButtons(
+            title: 'title',
+            body: Text('bodyyyyy'),
+            mainActionText: 'Set PIN code',
+            mainAction: () {},
+            secondActionText: 'Cancel',
+            secondAction: () {},
+          ),
+        );
+      }
+    }
+
+    _appState.biometricAuthIsOn = !_appState.biometricAuthIsOn;
+    notifyListeners();
   }
 
   void switchTheme() {

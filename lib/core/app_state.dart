@@ -216,6 +216,14 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     notifyListeners();
   }
 
+  bool get biometricAuthIsOn => _userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
+
+  set biometricAuthIsOn(bool val) {
+    final s = _userSettingsBox.getAll()[0];
+    s.biometricAuthIsOn = val;
+    _userSettingsBox.put(s);
+  }
+
   ThemeMode get themeMode => _themeMode;
 
   set themeMode(ThemeMode mode) {

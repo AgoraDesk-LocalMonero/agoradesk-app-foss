@@ -73,7 +73,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(5, 5782449331183648541),
       name: 'UserLocalSettings',
-      lastPropertyId: const IdUid(12, 7145397620462196393),
+      lastPropertyId: const IdUid(13, 5285333424823935156),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -129,6 +129,11 @@ final _entities = <ModelEntity>[
         ModelProperty(
             id: const IdUid(12, 7145397620462196393),
             name: 'sentryIsOn',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(13, 5285333424823935156),
+            name: 'biometricAuthIsOn',
             type: 1,
             flags: 0)
       ],
@@ -335,7 +340,7 @@ ModelDefinition getObjectBoxModel() {
           final countryCodeOffset = object.countryCode == null
               ? null
               : fbb.writeString(object.countryCode!);
-          fbb.startTable(13);
+          fbb.startTable(14);
           fbb.addInt64(0, object.autoId);
           fbb.addBool(1, object.pinIsActive);
           fbb.addOffset(2, usernameOffset);
@@ -349,6 +354,7 @@ ModelDefinition getObjectBoxModel() {
           fbb.addInt64(
               10, object.cachedCurrencySavedDate?.millisecondsSinceEpoch);
           fbb.addBool(11, object.sentryIsOn);
+          fbb.addBool(12, object.biometricAuthIsOn);
           fbb.finish(fbb.endTable());
           return object.autoId;
         },
@@ -364,6 +370,8 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGetNullable(buffer, rootOffset, 12),
               pinIsActive: const fb.BoolReader()
                   .vTableGetNullable(buffer, rootOffset, 6),
+              biometricAuthIsOn: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 28),
               sentryIsOn: const fb.BoolReader()
                   .vTableGetNullable(buffer, rootOffset, 26),
               firstRun: const fb.BoolReader()
@@ -376,8 +384,7 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGetNullable(buffer, rootOffset, 14),
               cachedCountrySavedDate: cachedCountrySavedDateValue == null
                   ? null
-                  : DateTime.fromMillisecondsSinceEpoch(
-                      cachedCountrySavedDateValue),
+                  : DateTime.fromMillisecondsSinceEpoch(cachedCountrySavedDateValue),
               cachedCurrencySavedDate: cachedCurrencySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue))
             ..autoId =
                 const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0)
@@ -530,6 +537,10 @@ class UserLocalSettings_ {
   /// see [UserLocalSettings.sentryIsOn]
   static final sentryIsOn =
       QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[10]);
+
+  /// see [UserLocalSettings.biometricAuthIsOn]
+  static final biometricAuthIsOn =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[11]);
 }
 
 /// [MessageBoxModel] entity fields to define ObjectBox queries.

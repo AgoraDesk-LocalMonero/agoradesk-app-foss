@@ -8062,6 +8062,9 @@ class I18nEs extends I18n {
   String get no_pending_deposits => 'No hay depósitos pendientes';
 
   @override
+  String get create_pin => 'Create PIN';
+
+  @override
   String get change_pin => 'Cambiar el PIN';
 
   @override
@@ -8504,6 +8507,9 @@ class I18nEs extends I18n {
 
   @override
   String get app_postpone => 'Postpone';
+
+  @override
+  String get app_biometric_authentication => 'Biometric authentication';
 
   @override
   String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
