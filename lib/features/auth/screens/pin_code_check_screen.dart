@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/features/auth/models/pin_code_view_model.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class PinCodeCheckScreen extends StatelessWidget {
           model: PinCodeViewModel(
             secureStorage: context.read<SecureStorage>(),
             appState: context.read<AppState>(),
+            notificationsService: context.read<NotificationsService>(),
           ),
           builder: (context, model, _) {
             return Scaffold(

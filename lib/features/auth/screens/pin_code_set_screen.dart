@@ -1,6 +1,6 @@
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/spinner_widget.dart';
@@ -9,6 +9,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_widget/flutter_pin_code_widget.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class PinCodeSetScreen extends StatelessWidget {
   const PinCodeSetScreen({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class PinCodeSetScreen extends StatelessWidget {
         model: PinCodeViewModel(
           secureStorage: context.read<SecureStorage>(),
           appState: context.read<AppState>(),
+          notificationsService: context.read<NotificationsService>(),
         ),
         builder: (context, model, _) {
           return Scaffold(

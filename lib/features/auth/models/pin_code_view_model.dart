@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_markdown_with_close.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:vm/vm.dart';
 
@@ -14,11 +14,14 @@ class PinCodeViewModel extends ViewModel {
   PinCodeViewModel({
     required SecureStorage secureStorage,
     required AppState appState,
+    required NotificationsService notificationsService,
   })  : _secureStorage = secureStorage,
+        _notificationsService = notificationsService,
         _appState = appState;
 
   final SecureStorage _secureStorage;
   final AppState _appState;
+  final NotificationsService _notificationsService;
 
   String? currentPin;
   bool initializing = true;
@@ -53,7 +56,10 @@ class PinCodeViewModel extends ViewModel {
     }
     initializing = false;
     if (_appState.biometricAuthIsOn) {
-      _authenticateWithBiometrics();
+      final res = await _notificationsService.authenticateWithBiometrics();
+      if (res) {
+        Navigator.of(context).pop();
+      }
     }
     super.init();
   }
@@ -61,24 +67,6 @@ class PinCodeViewModel extends ViewModel {
   @override
   void onAfterBuild() {
     notifyListeners();
-  }
-
-  Future<void> _authenticateWithBiometrics() async {
-    bool authenticated = false;
-    try {
-      authenticated = await localAuth.authenticate(
-        localizedReason: 'Scan your fingerprint (or face or whatever) to authenticate',
-        options: const AuthenticationOptions(
-          stickyAuth: true,
-          biometricOnly: true,
-        ),
-      );
-      if (authenticated) {
-        Navigator.of(context).pop();
-      }
-    } on PlatformException catch (e) {
-      return;
-    }
   }
 
   //todo create service
@@ -96,7 +84,7 @@ class PinCodeViewModel extends ViewModel {
     return true;
   }
 
-  void handlePinInput(String pin) {
+  void handlePinInput(String pin) async {
     if (hasCurrentPin && !currentPinChecked) {
       if (pin != currentPin) {
         showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
@@ -109,7 +97,7 @@ class PinCodeViewModel extends ViewModel {
     } else {
       secondPinCode = pin;
       if (firstPinCode == secondPinCode) {
-        setPin();
+        await setPin();
         AutoRouter.of(context).pop();
       } else {
         showDialog(context: context, builder: (_) => _dialogNotMatch(context));

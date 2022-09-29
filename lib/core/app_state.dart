@@ -206,7 +206,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool get hasPinCode => _hasPinCode;
 
   set hasPinCode(bool val) {
-    updateWith(hasPinCode: val, notify: true);
+    updateWith(hasPinCode: val);
   }
 
   String? get pinCode => _pinCode;

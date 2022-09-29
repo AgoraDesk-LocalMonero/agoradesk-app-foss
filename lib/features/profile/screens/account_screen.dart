@@ -107,10 +107,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           const SizedBox(height: 8),
                           LineWithArrow(
                             title: model.hasCurrentPin() ? context.intl.change_pin : context.intl.create_pin,
-                            onPressed: () async {
-                              await AutoRouter.of(context).push(const PinCodeSetRoute());
-                              model.updateWith();
-                            },
+                            onPressed: model.setPinCode,
                           ),
                           const SizedBox(height: 8),
                           context.read<AppState>().hasPinCode
