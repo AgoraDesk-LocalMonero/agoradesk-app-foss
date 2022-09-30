@@ -1,6 +1,6 @@
 ### Updates
 1. Biometric authentication (fingerprints, Face ID).
-2. Fix: immedeate trade update after app is resumed.
+2. Fix: immediate trade update after the app is resumed.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
