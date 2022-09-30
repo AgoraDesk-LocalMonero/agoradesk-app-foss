@@ -41,7 +41,8 @@ const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
 
 class TradeViewModel extends ViewModel
-    with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin {
+    with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin
+    implements WidgetsBindingObserver {
   TradeViewModel({
     required TradeRepository tradeRepository,
     this.tradeModel,
@@ -116,6 +117,7 @@ class TradeViewModel extends ViewModel
   bool _displaySend = false;
   bool _sendingMessage = false;
   bool _sendingImage = false;
+
   // bool _initialized = false;
   bool _infoTileOpened = true;
   bool _passwordInputValid = true;
@@ -1026,5 +1028,61 @@ class TradeViewModel extends ViewModel
     listController.dispose();
     _timer?.cancel();
     super.dispose();
+  }
+
+  @override
+  void didChangeAccessibilityFeatures() {
+    // TODO: implement didChangeAccessibilityFeatures
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    if (state == AppLifecycleState.resumed) {
+      await indicatorKey.currentState?.show();
+      await _getMessages(polling: true);
+    }
+  }
+
+  @override
+  void didChangeLocales(List<Locale>? locales) {
+    // TODO: implement didChangeLocales
+  }
+
+  @override
+  void didChangeMetrics() {
+    // TODO: implement didChangeMetrics
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    // TODO: implement didChangePlatformBrightness
+  }
+
+  @override
+  void didChangeTextScaleFactor() {
+    // TODO: implement didChangeTextScaleFactor
+  }
+
+  @override
+  void didHaveMemoryPressure() {
+    // TODO: implement didHaveMemoryPressure
+  }
+
+  @override
+  Future<bool> didPopRoute() {
+    // TODO: implement didPopRoute
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> didPushRoute(String route) {
+    // TODO: implement didPushRoute
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
+    // TODO: implement didPushRouteInformation
+    throw UnimplementedError();
   }
 }

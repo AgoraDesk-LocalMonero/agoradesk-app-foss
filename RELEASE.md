@@ -1,8 +1,6 @@
 ### Updates
-1. QR scanner replaced with open source code, without Google ML.
-2. Fix: searching by any country with EUR currency.
-3. Feature: disable anonymous crash diagnostics in the settings.
-4. Fix: remove old notifications from the phone notification bar.
+1. Biometric authentication (fingerprints, Face ID).
+2. Fix: immedeate trade update after app is resumed.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

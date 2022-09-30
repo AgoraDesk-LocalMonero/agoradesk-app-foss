@@ -106,11 +106,8 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                               : const SizedBox(),
                           const SizedBox(height: 8),
                           LineWithArrow(
-                            title: context.intl.change_pin,
-                            onPressed: () async {
-                              await AutoRouter.of(context).push(const PinCodeSetRoute());
-                              model.updateWith();
-                            },
+                            title: model.hasCurrentPin() ? context.intl.change_pin : context.intl.create_pin,
+                            onPressed: model.setPinCode,
                           ),
                           const SizedBox(height: 8),
                           context.read<AppState>().hasPinCode
@@ -122,6 +119,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                                   ),
                                 )
                               : const SizedBox(),
+                          const SizedBox(height: 8),
+                          LineWithSwitcher(
+                            value: model.biometricAuthIsOn(),
+                            title: context.intl.app_biometric_authentication,
+                            onPressed: () => model.switchBiometricAuth(),
+                          ),
                           Text(
                             context.intl.document8722Sbtitle250Sbsettings,
                             style: context.txtBodySmallN60,

@@ -1,3 +1,4 @@
+
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
@@ -14,14 +15,14 @@ import 'i18n_pt.dart';
 import 'i18n_ru.dart';
 import 'i18n_zh.dart';
 
-/// Callers can lookup localized strings with an instance of I18n
-/// returned by `I18n.of(context)`.
+/// Callers can lookup localized strings with an instance of I18n returned
+/// by `I18n.of(context)`.
 ///
 /// Applications need to include `I18n.delegate()` in their app's
-/// `localizationDelegates` list, and the locales they support in the app's
-/// `supportedLocales` list. For example:
+/// localizationDelegates list, and the locales they support in the app's
+/// supportedLocales list. For example:
 ///
-/// ```dart
+/// ```
 /// import 'generated/i18n.dart';
 ///
 /// return MaterialApp(
@@ -36,14 +37,14 @@ import 'i18n_zh.dart';
 /// Please make sure to update your pubspec.yaml to include the following
 /// packages:
 ///
-/// ```yaml
+/// ```
 /// dependencies:
 ///   # Internationalization support.
 ///   flutter_localizations:
 ///     sdk: flutter
 ///   intl: any # Use the pinned version from flutter_localizations
 ///
-///   # Rest of dependencies
+///   # rest of dependencies
 /// ```
 ///
 /// ## iOS Applications
@@ -15574,6 +15575,12 @@ abstract class I18n {
   /// **'Current PIN'**
   String get pin_current;
 
+  /// No description provided for @pin_set.
+  ///
+  /// In en, this message translates to:
+  /// **'Set PIN code'**
+  String get pin_set;
+
   /// No description provided for @pin_do_not_match.
   ///
   /// In en, this message translates to:
@@ -15867,6 +15874,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'No pending deposits'**
   String get no_pending_deposits;
+
+  /// No description provided for @create_pin.
+  ///
+  /// In en, this message translates to:
+  /// **'Create PIN'**
+  String get create_pin;
 
   /// No description provided for @change_pin.
   ///
@@ -16639,7 +16652,7 @@ abstract class I18n {
   /// No description provided for @app_vacation_enabled.
   ///
   /// In en, this message translates to:
-  /// **'vacation enabled'**
+  /// **'Vacation enabled'**
   String get app_vacation_enabled;
 
   /// No description provided for @app_trade_created.
@@ -16671,6 +16684,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Postpone'**
   String get app_postpone;
+
+  /// No description provided for @app_biometric_authentication.
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric authentication'**
+  String get app_biometric_authentication;
+
+  /// No description provided for @app_biometric_authentication_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Please set a PIN code to enable biometric authentication.'**
+  String get app_biometric_authentication_message;
 
   /// No description provided for @app_anonymous_crash_diagnostics_restart.
   ///

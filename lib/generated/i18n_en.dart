@@ -1,3 +1,6 @@
+
+
+
 import 'i18n.dart';
 
 /// The translations for English (`en`).
@@ -7911,6 +7914,9 @@ class I18nEn extends I18n {
   String get pin_current => 'Current PIN';
 
   @override
+  String get pin_set => 'Set PIN code';
+
+  @override
   String get pin_do_not_match => 'PINs don\'t match';
 
   @override
@@ -8060,6 +8066,9 @@ class I18nEn extends I18n {
 
   @override
   String get no_pending_deposits => 'No pending deposits';
+
+  @override
+  String get create_pin => 'Create PIN';
 
   @override
   String get change_pin => 'Change PIN';
@@ -8488,7 +8497,7 @@ class I18nEn extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';
@@ -8504,6 +8513,12 @@ class I18nEn extends I18n {
 
   @override
   String get app_postpone => 'Postpone';
+
+  @override
+  String get app_biometric_authentication => 'Biometric authentication';
+
+  @override
+  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
 
   @override
   String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';

@@ -206,7 +206,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool get hasPinCode => _hasPinCode;
 
   set hasPinCode(bool val) {
-    updateWith(hasPinCode: val, notify: true);
+    updateWith(hasPinCode: val);
   }
 
   String? get pinCode => _pinCode;
@@ -214,6 +214,14 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   set pinCode(String? val) {
     _pinCode = val;
     notifyListeners();
+  }
+
+  bool get biometricAuthIsOn => _userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
+
+  set biometricAuthIsOn(bool val) {
+    final s = _userSettingsBox.getAll()[0];
+    s.biometricAuthIsOn = val;
+    _userSettingsBox.put(s);
   }
 
   ThemeMode get themeMode => _themeMode;

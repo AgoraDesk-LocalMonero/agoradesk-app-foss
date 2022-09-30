@@ -83,7 +83,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
                 if (res) {
                   String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
                   barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                  _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+                  await _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
                 }
               }
             }

@@ -1,3 +1,6 @@
+
+
+
 import 'i18n.dart';
 
 /// The translations for Italian (`it`).
@@ -149,7 +152,7 @@ class I18nIt extends I18n {
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
-    return 'Devi fare uno scambio per almeno {minimum-amount} con questo annuncio.';
+    return 'Devi fare uno scambio per almeno $minimumAmount con questo annuncio.';
   }
 
   @override
@@ -7911,6 +7914,9 @@ class I18nIt extends I18n {
   String get pin_current => 'PIN attuale';
 
   @override
+  String get pin_set => 'Set PIN code';
+
+  @override
   String get pin_do_not_match => 'I perni non corrispondono';
 
   @override
@@ -8060,6 +8066,9 @@ class I18nIt extends I18n {
 
   @override
   String get no_pending_deposits => 'Nessun deposito in sospeso';
+
+  @override
+  String get create_pin => 'Create PIN';
 
   @override
   String get change_pin => 'Modifica del PIN';
@@ -8488,7 +8497,7 @@ class I18nIt extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';
@@ -8504,6 +8513,12 @@ class I18nIt extends I18n {
 
   @override
   String get app_postpone => 'Postpone';
+
+  @override
+  String get app_biometric_authentication => 'Biometric authentication';
+
+  @override
+  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
 
   @override
   String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';

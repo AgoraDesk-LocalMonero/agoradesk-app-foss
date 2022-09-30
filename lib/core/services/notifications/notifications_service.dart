@@ -21,7 +21,9 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
+import 'package:local_auth/local_auth.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
@@ -49,6 +51,7 @@ class NotificationsService with ForegroundMessagesMixin {
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
+  final LocalAuthentication localAuth = LocalAuthentication();
   final bool includeFcm;
 
   Future init() async {
@@ -76,7 +79,7 @@ class NotificationsService with ForegroundMessagesMixin {
             final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
             if (openedTradeId != push.objectId) {
               final awesomeMessageId = Random().nextInt(1000000);
-             final res = await AwesomeNotifications().createNotification(
+              final res = await AwesomeNotifications().createNotification(
                 content: NotificationContent(
                   id: awesomeMessageId,
                   channelKey: kNotificationsChannel,
@@ -89,7 +92,7 @@ class NotificationsService with ForegroundMessagesMixin {
               if (res) {
                 String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
                 barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+                await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
               }
             }
           }
@@ -353,6 +356,22 @@ class NotificationsService with ForegroundMessagesMixin {
         debugPrint('++++error parsing push in actionStream - $e');
       }
     });
+  }
+
+  Future<bool> authenticateWithBiometrics() async {
+    bool authenticated = false;
+    try {
+      authenticated = await localAuth.authenticate(
+        localizedReason: 'Scan your fingerprint (or face or whatever) to authenticate',
+        options: const AuthenticationOptions(
+          stickyAuth: true,
+          biometricOnly: true,
+        ),
+      );
+    } on PlatformException catch (e) {
+      return false;
+    }
+    return authenticated;
   }
 
   ///

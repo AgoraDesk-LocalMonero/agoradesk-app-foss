@@ -1,3 +1,6 @@
+
+
+
 import 'i18n.dart';
 
 /// The translations for Chinese (`zh`).
@@ -7911,6 +7914,9 @@ class I18nZh extends I18n {
   String get pin_current => '当前密码';
 
   @override
+  String get pin_set => 'Set PIN code';
+
+  @override
   String get pin_do_not_match => '引脚不匹配';
 
   @override
@@ -8060,6 +8066,9 @@ class I18nZh extends I18n {
 
   @override
   String get no_pending_deposits => '没有待定存款';
+
+  @override
+  String get create_pin => 'Create PIN';
 
   @override
   String get change_pin => '更改密码';
@@ -8488,7 +8497,7 @@ class I18nZh extends I18n {
   String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => 'vacation enabled';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
   String get app_trade_created => 'Trade created';
@@ -8504,6 +8513,12 @@ class I18nZh extends I18n {
 
   @override
   String get app_postpone => 'Postpone';
+
+  @override
+  String get app_biometric_authentication => 'Biometric authentication';
+
+  @override
+  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
 
   @override
   String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
@@ -8673,7 +8688,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
-    return '您可以從此廣告中購買的最小金額為{minimum-amount}。';
+    return '您可以從此廣告中購買的最小金額為$minimumAmount。';
   }
 
   @override

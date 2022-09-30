@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_markdown_with_close.dart';
 import 'package:auto_route/auto_route.dart';
@@ -12,11 +13,16 @@ class PinCodeViewModel extends ViewModel {
   PinCodeViewModel({
     required SecureStorage secureStorage,
     required AppState appState,
+    required NotificationsService notificationsService,
+    this.isSetFlow = false,
   })  : _secureStorage = secureStorage,
+        _notificationsService = notificationsService,
         _appState = appState;
 
   final SecureStorage _secureStorage;
   final AppState _appState;
+  final NotificationsService _notificationsService;
+  final bool isSetFlow;
 
   String? currentPin;
   bool initializing = true;
@@ -36,6 +42,8 @@ class PinCodeViewModel extends ViewModel {
 
   bool get isFirstPin => _isFirstPin;
 
+  bool get biometricAuthIsOn => _appState.biometricAuthIsOn;
+
   set isFirstPin(bool v) => updateWith(isFirstPin: v);
 
   bool get currentPinChecked => _currentPinChecked;
@@ -49,6 +57,9 @@ class PinCodeViewModel extends ViewModel {
       hasCurrentPin = true;
     }
     initializing = false;
+    if (_appState.biometricAuthIsOn && !isSetFlow) {
+      await checkBiometrics();
+    }
     super.init();
   }
 
@@ -63,6 +74,13 @@ class PinCodeViewModel extends ViewModel {
     _appState.hasPinCode = true;
   }
 
+  Future checkBiometrics() async {
+    final res = await _notificationsService.authenticateWithBiometrics();
+    if (res) {
+      Navigator.of(context).pop();
+    }
+  }
+
   bool checkPinCorrectness(String pin) {
     if (pin != currentPin) {
       clearPins();
@@ -72,7 +90,7 @@ class PinCodeViewModel extends ViewModel {
     return true;
   }
 
-  void handlePinInput(String pin) {
+  void handlePinInput(String pin) async {
     if (hasCurrentPin && !currentPinChecked) {
       if (pin != currentPin) {
         showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
@@ -85,7 +103,7 @@ class PinCodeViewModel extends ViewModel {
     } else {
       secondPinCode = pin;
       if (firstPinCode == secondPinCode) {
-        setPin();
+        await setPin();
         AutoRouter.of(context).pop();
       } else {
         showDialog(context: context, builder: (_) => _dialogNotMatch(context));
