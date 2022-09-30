@@ -1,3 +1,4 @@
+
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
@@ -14,14 +15,14 @@ import 'i18n_pt.dart';
 import 'i18n_ru.dart';
 import 'i18n_zh.dart';
 
-/// Callers can lookup localized strings with an instance of I18n
-/// returned by `I18n.of(context)`.
+/// Callers can lookup localized strings with an instance of I18n returned
+/// by `I18n.of(context)`.
 ///
 /// Applications need to include `I18n.delegate()` in their app's
-/// `localizationDelegates` list, and the locales they support in the app's
-/// `supportedLocales` list. For example:
+/// localizationDelegates list, and the locales they support in the app's
+/// supportedLocales list. For example:
 ///
-/// ```dart
+/// ```
 /// import 'generated/i18n.dart';
 ///
 /// return MaterialApp(
@@ -36,14 +37,14 @@ import 'i18n_zh.dart';
 /// Please make sure to update your pubspec.yaml to include the following
 /// packages:
 ///
-/// ```yaml
+/// ```
 /// dependencies:
 ///   # Internationalization support.
 ///   flutter_localizations:
 ///     sdk: flutter
 ///   intl: any # Use the pinned version from flutter_localizations
 ///
-///   # Rest of dependencies
+///   # rest of dependencies
 /// ```
 ///
 /// ## iOS Applications

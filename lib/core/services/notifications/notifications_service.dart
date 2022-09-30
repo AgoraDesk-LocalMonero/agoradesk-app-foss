@@ -92,7 +92,7 @@ class NotificationsService with ForegroundMessagesMixin {
               if (res) {
                 String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
                 barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+                await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
               }
             }
           }
