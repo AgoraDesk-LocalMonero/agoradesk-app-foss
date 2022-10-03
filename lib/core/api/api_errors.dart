@@ -102,6 +102,20 @@ class ApiErrors {
         return context.intl.api_error_243;
       case 254:
         return context.intl.api_error_254;
+      case 260:
+        return context.intl.api_error_260;
+      case 261:
+        return context.intl.api_error_261;
+      case 262:
+        return context.intl.api_error_262;
+      case 263:
+        return context.intl.api_error_263;
+      case 264:
+        return context.intl.api_error_264;
+      case 265:
+        return context.intl.api_error_265;
+      case 267:
+        return context.intl.api_error_267;
       case 401:
         return context.intl.login250Sberror8722Sb0;
       case 403:

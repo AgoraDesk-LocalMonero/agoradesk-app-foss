@@ -14441,6 +14441,48 @@ abstract class I18n {
   /// **'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes'**
   String get api_error_254;
 
+  /// No description provided for @api_error_260.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to post a note on a user that doesn’t exist'**
+  String get api_error_260;
+
+  /// No description provided for @api_error_261.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to post a note on your own account'**
+  String get api_error_261;
+
+  /// No description provided for @api_error_262.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get a note on a user that doesn’t exist'**
+  String get api_error_262;
+
+  /// No description provided for @api_error_263.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get a note on your own account'**
+  String get api_error_263;
+
+  /// No description provided for @api_error_264.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a note on a user that doesn’t exist'**
+  String get api_error_264;
+
+  /// No description provided for @api_error_265.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a note on your own account'**
+  String get api_error_265;
+
+  /// No description provided for @api_error_267.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a user note that doesn’t exist'**
+  String get api_error_267;
+
   /// No description provided for @api_error_403.
   ///
   /// In en, this message translates to:

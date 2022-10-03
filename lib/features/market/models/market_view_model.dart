@@ -267,7 +267,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
       displayFilterMessage = false;
       loadingAds = true;
       initialLoading = false;
-      bool hasDuplicates = false;
 
       final res = await _adsRepository.publicAdSearch(
         asset: asset!,
@@ -298,7 +297,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
         // add ads
         ads.addAll(adsWithoutDuplicates);
         if (adsWithoutDuplicates.length < res.right.data.length) {
-          hasDuplicates = true;
           if (!reccursion) {
             getAds(loadMore: true, reccursion: true);
           }
@@ -390,42 +388,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     }
     return _countryPaymentMethods;
   }
-
-  // void setTradeType(String? selected) {
-  //   final index = tradeTypeMenu.indexWhere((e) => e == selected);
-  //   if (index == 0 || index == -1) {
-  //     tradeType = null;
-  //   } else {
-  //     tradeType = TradeType.values[index - 1];
-  //   }
-  //   filterAds();
-  //   notifyListeners();
-  // }
-
-  // void setAsset(String? selected) {
-  //   final index = assetMenu.indexWhere((e) => e == selected);
-  //   if (index == 0 || index == -1) {
-  //     asset = null;
-  //   } else {
-  //     asset = Asset.values[index - 1];
-  //   }
-  //   filterAds();
-  //   notifyListeners();
-  // }
-
-  // void filterAds() {
-  //   filteredAds.clear();
-  //   for (final ad in ads) {
-  //     if (tradeType == null) {
-  //       filteredAds.add(ad);
-  //     } else if (ad.tradeType == tradeType) {
-  //       filteredAds.add(ad);
-  //     }
-  //     if (asset != null) {
-  //       filteredAds.removeWhere((e) => e.asset != asset);
-  //     }
-  //   }
-  // }
 
   void updateWith({
     Asset? asset,

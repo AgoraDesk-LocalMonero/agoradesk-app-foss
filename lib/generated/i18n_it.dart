@@ -7347,6 +7347,27 @@ class I18nIt extends I18n {
   String get api_error_254 => 'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes';
 
   @override
+  String get api_error_260 => 'Attempting to post a note on a user that doesn’t exist';
+
+  @override
+  String get api_error_261 => 'Attempting to post a note on your own account';
+
+  @override
+  String get api_error_262 => 'Attempting to get a note on a user that doesn’t exist';
+
+  @override
+  String get api_error_263 => 'Attempting to get a note on your own account';
+
+  @override
+  String get api_error_264 => 'Attempting to delete a note on a user that doesn’t exist';
+
+  @override
+  String get api_error_265 => 'Attempting to delete a note on your own account';
+
+  @override
+  String get api_error_267 => 'Attempting to delete a user note that doesn’t exist';
+
+  @override
   String get api_error_403 => 'Non siete autorizzati a eseguire questa azione';
 
   @override
