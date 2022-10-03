@@ -49,6 +49,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   final List<AdModel> ads = [];
   late CountryCodeModel countryCodeModel;
   late String selectedCountryCode;
+
   // String selectedLocation = '';
   OnlineProvider? selectedOnlineProvider = const OnlineProvider(url: '', code: '', name: '', currencies: []);
   final List<OnlineProvider> _countryPaymentMethods = [];
@@ -79,6 +80,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   bool get displayClear => _displayClear;
 
   set displayClear(bool v) => updateWith(displayClear: v);
+
   bool get loadingLocation => _loadingLocation;
 
   set loadingLocation(bool v) => updateWith(loadingLocation: v);
@@ -258,11 +260,13 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
 
   Future getAds({
     bool loadMore = false,
+    bool reccursion = false,
   }) async {
     if (!loadingAds) {
       displayFilterMessage = false;
       loadingAds = true;
       initialLoading = false;
+      bool hasDuplicates = false;
 
       final res = await _adsRepository.publicAdSearch(
         asset: asset!,
@@ -280,7 +284,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
       }
       loadingAds = false;
       if (res.isRight) {
-        ads.addAll(res.right.data);
         paginationMeta = res.right.pagination;
         if (paginationMeta != null) {
           if (paginationMeta!.currentPage < paginationMeta!.totalPages) {
@@ -289,11 +292,45 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
             hasMorePages = false;
           }
         }
+        // remove dublicates and in case there was duplicates get ads again
+        final List<AdModel> adsWithoutDuplicates = _removeDuplicates(res.right.data);
+        // add ads
+        ads.addAll(adsWithoutDuplicates);
+        if (adsWithoutDuplicates.length < res.right.data.length) {
+          hasDuplicates = true;
+          if (!reccursion) {
+            getAds(loadMore: true, reccursion: true);
+          }
+        }
       } else {
         handleApiError(res.left, context);
       }
-      notifyListeners();
+      if (!hasDuplicates || reccursion) {
+        notifyListeners();
+      }
     }
+  }
+
+  List<AdModel> _removeDuplicates(List<AdModel> adsForCompress) {
+    final List<AdModel> adsForIterate = [...adsForCompress, ...ads];
+    final List<AdModel> newAds = [...adsForCompress];
+    final List<String> compressedAdsIds = [];
+    for (final ad in adsForIterate) {
+      for (var e in adsForCompress) {
+        if (e.id != ad.id &&
+            !compressedAdsIds.contains(e.id) &&
+            e.profile?.username == ad.profile?.username &&
+            e.tempPrice == ad.tempPrice &&
+            e.currency == ad.currency &&
+            e.onlineProvider == ad.onlineProvider &&
+            e.asset == ad.asset &&
+            e.tradeType == ad.tradeType) {
+          compressedAdsIds.add(ad.id!);
+          newAds.remove(e);
+        }
+      }
+    }
+    return newAds;
   }
 
   void changeOnlineProvider(OnlineProvider? val) {

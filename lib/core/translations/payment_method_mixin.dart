@@ -143,6 +143,8 @@ mixin PaymentMethodsMixin {
       'CASH_DEPOSIT': context.intl.method250Sbcash8722Sbdeposit,
       'LYDIA': 'Lydia',
       'ADVCASH': 'advcash',
+      'KORONAPAY': 'KoronaPay',
+      'PAYSEND': 'Paysend',
       'REVOLUT': 'Revolut',
       'VIRTUAL_VISA_MASTERCARD': 'Virtual Visa / MasterCard',
       'MONEYBOOKERS': 'Moneybookers / Skrill',
