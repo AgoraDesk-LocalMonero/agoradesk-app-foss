@@ -235,4 +235,22 @@ class AccountService {
       return Either.left(apiError);
     }
   }
+
+  ///
+  /// Get a note on user
+  ///
+  Future<Either<ApiError, bool>> getNote(String username) async {
+    try {
+      final resp = await _api.client.post('/note/$username');
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
 }
