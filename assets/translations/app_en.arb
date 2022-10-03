@@ -3303,6 +3303,19 @@
         "val": {}
       }
     },
+  "app_able_to_cancel": "({val1} will be able to cancel in {val2} min unless you mark paid)",
+  "@app_able_to_cancel": {
+      "placeholders": {
+        "val1": {},
+        "val2": {}
+      }
+    },
+  "app_able_to_cancel_now": "({val} is now able to cancel unless you mark paid)",
+  "@app_able_to_cancel_now": {
+      "placeholders": {
+        "val": {}
+      }
+    },
   "app_buying_from": "Buying {asset} {amount} from {username}",
   "@app_buying_from": {
       "placeholders": {

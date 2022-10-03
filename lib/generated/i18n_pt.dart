@@ -8430,6 +8430,16 @@ class I18nPt extends I18n {
   }
 
   @override
+  String app_able_to_cancel(Object val1, Object val2) {
+    return '($val1 will be able to cancel in $val2 min unless you mark paid)';
+  }
+
+  @override
+  String app_able_to_cancel_now(Object val) {
+    return '($val is now able to cancel unless you mark paid)';
+  }
+
+  @override
   String app_buying_from(Object asset, Object amount, Object username) {
     return 'Buying $asset $amount from $username';
   }

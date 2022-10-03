@@ -16,6 +16,7 @@ import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:collection/collection.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
@@ -309,26 +310,39 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     }
   }
 
-  List<AdModel> _removeDuplicates(List<AdModel> adsForCompress) {
-    final List<AdModel> adsForIterate = [...adsForCompress, ...ads];
-    final List<AdModel> newAds = [...adsForCompress];
-    final List<String> compressedAdsIds = [];
-    for (final ad in adsForIterate) {
-      for (var e in adsForIterate) {
-        if (e.id != ad.id &&
-            !compressedAdsIds.contains(e.id) &&
-            e.profile?.username == ad.profile?.username &&
-            e.tempPrice == ad.tempPrice &&
-            e.currency == ad.currency &&
-            e.onlineProvider == ad.onlineProvider &&
-            e.asset == ad.asset &&
-            e.tradeType == ad.tradeType) {
-          compressedAdsIds.add(ad.id!);
-          newAds.remove(e);
+  List<AdModel> _removeDuplicates(List<AdModel> adsIn) {
+    late final List<AdModel> res;
+    late final List<AdModel> adsForCompress;
+    if (ads.isNotEmpty) {
+      res = [
+        ...[ads.last],
+        ...adsIn
+      ];
+      adsForCompress = [
+        ...[ads.last],
+        ...adsIn
+      ];
+    } else {
+      res = [...adsIn];
+      adsForCompress = [...adsIn];
+    }
+    adsForCompress.forEachIndexed((index, val) {
+      if (index < (adsForCompress.length - 1)) {
+        final left = val;
+        final right = adsForCompress[index + 1];
+        if (left.id != right.id &&
+            left.profile?.username == right.profile?.username &&
+            left.tempPrice == right.tempPrice &&
+            left.currency == right.currency &&
+            left.onlineProvider == right.onlineProvider &&
+            left.asset == right.asset &&
+            left.tradeType == right.tradeType) {
+          res.remove(right);
         }
       }
-    }
-    return newAds;
+    });
+    res.removeAt(0);
+    return res;
   }
 
   void changeOnlineProvider(OnlineProvider? val) {

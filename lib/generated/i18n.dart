@@ -16523,6 +16523,18 @@ abstract class I18n {
   /// **'See trades with {val}'**
   String app_trades_with(Object val);
 
+  /// No description provided for @app_able_to_cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'({val1} will be able to cancel in {val2} min unless you mark paid)'**
+  String app_able_to_cancel(Object val1, Object val2);
+
+  /// No description provided for @app_able_to_cancel_now.
+  ///
+  /// In en, this message translates to:
+  /// **'({val} is now able to cancel unless you mark paid)'**
+  String app_able_to_cancel_now(Object val);
+
   /// No description provided for @app_buying_from.
   ///
   /// In en, this message translates to:

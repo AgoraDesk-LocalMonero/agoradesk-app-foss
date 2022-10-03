@@ -268,6 +268,7 @@ class TradeViewModel extends ViewModel
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async {
       await indicatorKey.currentState?.show();
+      _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
     });
   }
@@ -378,6 +379,13 @@ class TradeViewModel extends ViewModel
     }
     return stageText +
         '  ≈$minutesDefault ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
+  }
+
+  String canCancelText(BuildContext context) {
+    if (minutesBeforeCancel > 0) {
+      return context.intl.app_able_to_cancel(tradeForScreen.seller.username ?? '', minutesBeforeCancel);
+    }
+    return context.intl.app_able_to_cancel_now(tradeForScreen.seller.username ?? '');
   }
 
   String awaitingToByerText(BuildContext context) {
@@ -643,6 +651,7 @@ class TradeViewModel extends ViewModel
     if (minutesBeforeCancel < 0) {
       minutesBeforeCancel = 0;
     }
+    notifyListeners();
   }
 
   String paymentDetailsText(BuildContext context) {
@@ -1038,6 +1047,7 @@ class TradeViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
+      _calcMinutesBeforeCancel();
       await indicatorKey.currentState?.show();
       await _getMessages(polling: true);
     }
