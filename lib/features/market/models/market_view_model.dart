@@ -305,9 +305,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
       } else {
         handleApiError(res.left, context);
       }
-      if (!hasDuplicates || reccursion) {
-        notifyListeners();
-      }
+      notifyListeners();
     }
   }
 
@@ -316,7 +314,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     final List<AdModel> newAds = [...adsForCompress];
     final List<String> compressedAdsIds = [];
     for (final ad in adsForIterate) {
-      for (var e in adsForCompress) {
+      for (var e in adsForIterate) {
         if (e.id != ad.id &&
             !compressedAdsIds.contains(e.id) &&
             e.profile?.username == ad.profile?.username &&
