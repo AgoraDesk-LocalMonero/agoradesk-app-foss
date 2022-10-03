@@ -41,7 +41,7 @@ class TransactionsViewModel extends ViewModel {
       filteredTransactions.addAll(transactions);
     } else {
       for (final transaction in transactions) {
-        if (transaction.isBitcoin == asset!.isBitcoin()) {
+        if (transaction.asset!.isBitcoin() == asset!.isBitcoin()) {
           filteredTransactions.add(transaction);
         }
       }

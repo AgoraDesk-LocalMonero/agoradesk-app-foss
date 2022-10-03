@@ -18,7 +18,6 @@ class TransactionModel with _$TransactionModel {
     @JsonKey(name: 'tx_type_name') required TransactionTypes txType,
     @JsonKey(name: 'txid') String? txId,
     @JsonKey(defaultValue: true) bool? isSent,
-    @JsonKey(defaultValue: true) bool? isBitcoin,
     Asset? asset,
     required String description,
   }) = _TransactionModel;

@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
+import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
 import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
@@ -31,7 +32,7 @@ class TransactionViewModel extends ViewModel with StringMixin {
 
   void setLinkForTheChain() {
     if (transaction.txId != null && transaction.txId!.isNotEmpty) {
-      if (transaction.isBitcoin!) {
+      if (transaction.asset!.isBitcoin()) {
         linkForChain = GetIt.I<AppParameters>().btcChainUrl + (transaction.txId!);
       } else {
         linkForChain = GetIt.I<AppParameters>().xmrChainUrl + (transaction.txId!);

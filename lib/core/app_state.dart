@@ -34,6 +34,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String? openedTradeId;
 
   String get username => _userSettingsBox.getAll()[0].username ?? '';
+
   bool get sentryIsOn => _userSettingsBox.getAll()[0].sentryIsOn ?? true;
 
   set sentryIsOn(bool val) {
@@ -216,7 +217,13 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     notifyListeners();
   }
 
-  bool get biometricAuthIsOn => _userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
+  bool get biometricAuthIsOn {
+    try {
+      return _userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
+    } catch (e) {
+      return false;
+    }
+  }
 
   set biometricAuthIsOn(bool val) {
     final s = _userSettingsBox.getAll()[0];
