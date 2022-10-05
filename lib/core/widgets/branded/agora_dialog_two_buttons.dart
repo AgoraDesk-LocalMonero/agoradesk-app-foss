@@ -59,7 +59,7 @@ class AgoraDialogTwoButtons extends StatelessWidget {
                   title: secondActionText,
                   onPressed: secondAction,
                 ),
-                const SizedBox(width: 40),
+                const SizedBox(width: 20),
                 ButtonLink(
                   title: mainActionText,
                   onPressed: mainAction,

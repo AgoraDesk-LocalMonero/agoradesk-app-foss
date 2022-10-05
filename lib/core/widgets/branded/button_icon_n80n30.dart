@@ -6,10 +6,12 @@ class ButtonIconTextN80N30 extends StatelessWidget {
     Key? key,
     required this.iconData,
     required this.onPressed,
+    this.minimumSize,
   }) : super(key: key);
 
   final IconData iconData;
   final VoidCallback onPressed;
+  final Size? minimumSize;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class ButtonIconTextN80N30 extends StatelessWidget {
       style: TextButton.styleFrom(
         padding: EdgeInsets.zero,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        // minimumSize: const Size(50, 40),
+        minimumSize: minimumSize,
         alignment: Alignment.centerRight,
       ),
       child: Icon(

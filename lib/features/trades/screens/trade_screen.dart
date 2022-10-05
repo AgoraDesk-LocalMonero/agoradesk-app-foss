@@ -22,7 +22,7 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/agora_two_tabs_bar.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_tab.dart';
-import 'package:agoradesk/features/trades/screens/widgets/note_on_user.dart';
+import 'package:agoradesk/features/trades/screens/widgets/note_on_user_widget.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_info_tile.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_popup_menu.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_step_one.dart';
@@ -142,7 +142,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
       child: Column(
         children: [
           TradeInfoTile(model: model),
-          NoteOnUser(username: model.usernameStr()),
+          NoteOnUserWidget(username: model.usernameStr()),
           const SizedBox(height: 12),
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
