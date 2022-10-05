@@ -1,12 +1,13 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
-class AgoraDialogInfo extends StatelessWidget {
+class AgoraDialogInfo extends StatelessWidget with StringMixin {
   const AgoraDialogInfo({
     Key? key,
     this.title = '',
@@ -47,13 +48,7 @@ class AgoraDialogInfo extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             MarkdownWidget(
-              data: text
-                  .replaceAll('*', '\\*')
-                  .replaceAll('\n', '\n\n')
-                  .replaceAll('<strong> ', '**')
-                  .replaceAll(' </strong>', '**')
-                  .replaceAll('<strong>', '**')
-                  .replaceAll('</strong>', '**'),
+              data: replaceForMarkdown(text),
               shrinkWrap: true,
               styleConfig: StyleConfig(
                 markdownTheme: MarkdownTheme.darkTheme,

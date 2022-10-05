@@ -48,4 +48,17 @@ mixin StringMixin {
     }
     return Locale(code);
   }
+
+  ///
+  /// Replace symbols in a string for a correct markdown displaying
+  ///
+  String replaceForMarkdown(String text) {
+    return text
+        .replaceAll('*', '\\*')
+        .replaceAll('\n', '\n\n')
+        .replaceAll('<strong> ', '**')
+        .replaceAll(' </strong>', '**')
+        .replaceAll('<strong>', '**')
+        .replaceAll('</strong>', '**');
+  }
 }
