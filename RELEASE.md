@@ -1,6 +1,8 @@
 ### Updates
 1. Biometric authentication (fingerprints, Face ID).
-2. Fix: immediate trade update after the app is resumed.
+2. Ability to post notes on a user.
+3. Fix: immediate trade update after the app is resumed.
+4. Info about time until seller can cancel a trade in a chat.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
