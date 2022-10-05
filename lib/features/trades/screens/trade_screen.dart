@@ -143,9 +143,9 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
     return SingleChildScrollView(
       child: Column(
         children: [
-          TradeInfoTile(model: model),
           _noteOnUser(model),
           const SizedBox(height: 12),
+          TradeInfoTile(model: model),
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
           TradeStepThree(model: model),

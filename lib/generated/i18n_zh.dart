@@ -8519,6 +8519,9 @@ class I18nZh extends I18n {
   String get app_with => 'with';
 
   @override
+  String get app_edited => 'Edited';
+
+  @override
   String get app_permanent => 'Permanent';
 
   @override
@@ -8568,6 +8571,16 @@ class I18nZh extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String app_note_label(Object val) {
+    return 'Your note on $val (only seen by you)';
+  }
+
+  @override
+  String app_note_add(Object val) {
+    return 'Add a note on $val';
+  }
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

@@ -16685,6 +16685,12 @@ abstract class I18n {
   /// **'with'**
   String get app_with;
 
+  /// No description provided for @app_edited.
+  ///
+  /// In en, this message translates to:
+  /// **'Edited'**
+  String get app_edited;
+
   /// No description provided for @app_permanent.
   ///
   /// In en, this message translates to:
@@ -16786,6 +16792,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Gallery'**
   String get app_gallery;
+
+  /// No description provided for @app_note_label.
+  ///
+  /// In en, this message translates to:
+  /// **'Your note on {val} (only seen by you)'**
+  String app_note_label(Object val);
+
+  /// No description provided for @app_note_add.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a note on {val}'**
+  String app_note_add(Object val);
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

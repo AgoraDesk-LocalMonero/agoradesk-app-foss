@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/api/api_client.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/note_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -9,12 +9,12 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
   NoteOnUserViewModel({
     required this.username,
     required AccountService accountService,
-    required ApiClient apiClient,
-  })  : _apiClient = apiClient,
+    required AppState appState,
+  })  : _appState = appState,
         _accountService = accountService;
 
+  final AppState _appState;
   final AccountService _accountService;
-  final ApiClient _apiClient;
   final String username;
 
   final ctrlNote = TextEditingController();
@@ -23,6 +23,8 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
   bool _loading = false;
   bool _postingNote = false;
   bool _isNoteReadyToPost = false;
+  bool _expanded = false;
+  Size _noteWidgetSize = const Size(0, 0);
 
   bool get loading => _loading;
 
@@ -36,13 +38,27 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
 
   set isNoteReadyToPost(bool v) => updateWith(isNoteReadyToPost: v);
 
+  bool get expanded => _expanded;
+
+  set expanded(bool v) => updateWith(expanded: v);
+
+  Size get noteWidgetSize => _noteWidgetSize;
+
+  set noteWidgetSize(Size v) => updateWith(noteWidgetSize: v);
+
   @override
   void init() {
-    _getNote();
-    ctrlNote.addListener(() {
-      isNoteReadyToPost = ctrlNote.text.isNotEmpty && ctrlNote.text.length < 65536;
-    });
+    if (!isMyOwnProfile()) {
+      _getNote();
+      ctrlNote.addListener(() {
+        isNoteReadyToPost = ctrlNote.text.isNotEmpty && ctrlNote.text.length < 65536;
+      });
+    }
     super.init();
+  }
+
+  bool isMyOwnProfile() {
+    return username == _appState.username;
   }
 
   Future _getNote() async {
@@ -58,8 +74,10 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
 
   Future postNote() async {
     postingNote = true;
+
     final res = await _accountService.postNote(username, ctrlNote.text);
     if (res.isRight) {
+      resetWidgetSize();
       note = NoteModel(content: ctrlNote.text, createdAt: DateTime.now(), lastModifiedAt: DateTime.now());
       Navigator.of(context).pop();
     } else {
@@ -68,11 +86,16 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
     postingNote = false;
   }
 
+  void resetWidgetSize() {
+    _noteWidgetSize = const Size(0, 0);
+    notifyListeners();
+  }
+
   Future deleteNote() async {
     final res = await _accountService.deleteNote(username);
     if (res.isRight) {
       note = null;
-      notifyListeners();
+      resetWidgetSize();
     } else {
       handleApiError(res.left, context);
     }
@@ -86,10 +109,20 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
     bool? loading,
     bool? postingNote,
     bool? isNoteReadyToPost,
+    bool? expanded,
+    Size? noteWidgetSize,
   }) {
     _loading = loading ?? _loading;
     _postingNote = postingNote ?? _postingNote;
     _isNoteReadyToPost = isNoteReadyToPost ?? _isNoteReadyToPost;
+    _expanded = expanded ?? _expanded;
+    _noteWidgetSize = noteWidgetSize ?? _noteWidgetSize;
     notifyListeners();
+  }
+
+  @override
+  dispose() {
+    ctrlNote.dispose();
+    super.dispose();
   }
 }

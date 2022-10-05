@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
@@ -34,6 +35,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
 import 'note_on_user_view_model.dart';
@@ -235,7 +237,7 @@ class TradeViewModel extends ViewModel
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
       accountService: _accountService,
-      apiClient: _apiClient,
+      appState: context.read<AppState>(),
     );
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors

@@ -3355,6 +3355,7 @@
   "app_verification_code": "Verification code",
   "app_ad": "Ad",
   "app_with": "with",
+  "app_edited": "Edited",
   "app_permanent": "Permanent",
   "app_error_saving": "Error during saving. Changes wasn't save.",
   "app_manage_ads": "Manage ads",
@@ -3371,5 +3372,17 @@
   "app_trade_status_settlement_processing_description": "The settlement is being processed. Please wait, there's nothing that you need to do.",
   "app_buyer_settlement_fee_level_description": "Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.",
   "app_change_vacation_settings": "Change vacation settings.",
-  "app_gallery": "Gallery"
+  "app_gallery": "Gallery",
+  "app_note_label": "Your note on {val} (only seen by you)",
+  "@app_note_label": {
+    "placeholders": {
+      "val": {}
+    }
+  },
+  "app_note_add": "Add a note on {val}",
+  "@app_note_add": {
+    "placeholders": {
+      "val": {}
+    }
+  }
 }

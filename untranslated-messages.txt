@@ -241,6 +241,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -257,7 +258,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "it": [
@@ -502,6 +505,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -518,7 +522,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "ko": [
@@ -763,6 +769,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -779,7 +786,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "pl": [
@@ -1296,6 +1305,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -1312,7 +1322,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "pt": [
@@ -1557,6 +1569,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -1573,7 +1586,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "ru": [
@@ -1818,6 +1833,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -1834,7 +1850,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "zh": [
@@ -2079,6 +2097,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -2095,7 +2114,9 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ],
 
   "zh_TW": [
@@ -2340,6 +2361,7 @@
     "app_verification_code",
     "app_ad",
     "app_with",
+    "app_edited",
     "app_permanent",
     "app_error_saving",
     "app_manage_ads",
@@ -2356,6 +2378,8 @@
     "app_trade_status_settlement_processing_description",
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
-    "app_gallery"
+    "app_gallery",
+    "app_note_label",
+    "app_note_add"
   ]
 }
