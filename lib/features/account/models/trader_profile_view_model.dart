@@ -65,18 +65,17 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
 
   @override
   void init() async {
-    if (profileModel == null) {
-      initialLoading = true;
-    } else {
+    initialLoading = true;
+    if (profileModel != null) {
       profileForScreen = profileModel!;
     }
     await _getAccountInfo();
-    initialLoading = false;
     noteModel = NoteOnUserViewModel(
       username: profileForScreen.username!,
       accountService: _accountService,
       appState: context.read<AppState>(),
     );
+    initialLoading = false;
     _getUserAds();
     _getFeedbacks();
     super.init();

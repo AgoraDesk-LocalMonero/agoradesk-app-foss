@@ -65,7 +65,16 @@ class TraderProfileScreen extends StatelessWidget {
                               lastVisited: model.profileForScreen.lastOnline!,
                             ),
                             const SizedBox(height: 12),
-                            _noteOnUser(model),
+                            ViewModelBuilder<NoteOnUserViewModel>(
+                                model: model.noteModel,
+                                initOnce: true,
+                                disposable: false,
+                                builder: (context, noteModel, child) {
+                                  return NoteOnUserWidget(
+                                    username: model.profileForScreen.username!,
+                                    model: noteModel,
+                                  );
+                                }),
                             TraderSanctionBox(
                               accountInfo: model.profileForScreen,
                             ),
@@ -130,19 +139,6 @@ class TraderProfileScreen extends StatelessWidget {
                       ),
               ),
             ),
-          );
-        });
-  }
-
-  Widget _noteOnUser(TraderProfileViewModel model) {
-    return ViewModelBuilder<NoteOnUserViewModel>(
-        model: model.noteModel,
-        initOnce: true,
-        disposable: false,
-        builder: (context, noteModel, child) {
-          return NoteOnUserWidget(
-            username: model.profileForScreen.username!,
-            model: noteModel,
           );
         });
   }
