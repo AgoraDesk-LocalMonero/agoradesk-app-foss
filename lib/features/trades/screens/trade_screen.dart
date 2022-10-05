@@ -19,6 +19,7 @@ import 'package:agoradesk/features/profile/data/models/user_device_settings.dart
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
+import 'package:agoradesk/features/trades/models/note_on_user_view_model.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/agora_two_tabs_bar.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_tab.dart';
@@ -134,6 +135,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
     }
     return ChatTab(
       model: model,
+      noteOnUser: _noteOnUser(model),
     );
   }
 
@@ -142,7 +144,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
       child: Column(
         children: [
           TradeInfoTile(model: model),
-          NoteOnUserWidget(username: model.usernameStr()),
+          _noteOnUser(model),
           const SizedBox(height: 12),
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
@@ -177,5 +179,18 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
         ],
       ),
     );
+  }
+
+  Widget _noteOnUser(TradeViewModel model) {
+    return ViewModelBuilder<NoteOnUserViewModel>(
+        model: model.noteModel,
+        initOnce: true,
+        disposable: false,
+        builder: (context, noteModel, child) {
+          return NoteOnUserWidget(
+            username: model.usernameStr(),
+            model: noteModel,
+          );
+        });
   }
 }

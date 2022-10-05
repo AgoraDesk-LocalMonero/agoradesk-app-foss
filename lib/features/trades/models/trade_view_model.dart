@@ -36,6 +36,8 @@ import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:vm/vm.dart';
 
+import 'note_on_user_view_model.dart';
+
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
@@ -87,6 +89,8 @@ class TradeViewModel extends ViewModel
   late final TabController tabController;
   late TradeStatus tradeStatus;
   PaginationMeta? paginationMeta;
+
+  late NoteOnUserViewModel noteModel;
 
   List<String> tradeTypeMenu = [];
   List<String> assetMenu = [];
@@ -228,7 +232,11 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
-
+    noteModel = NoteOnUserViewModel(
+      username: usernameStr(),
+      accountService: _accountService,
+      apiClient: _apiClient,
+    );
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors
     await getAdForLocalTrade();

@@ -242,7 +242,7 @@ class AccountService {
   ///
   Future<Either<ApiError, NoteModel>> getNote(String username) async {
     try {
-      final resp = await _api.client.post('/note/$username');
+      final resp = await _api.client.get('/note/$username');
       if (resp.statusCode == 200) {
         return Either.right(NoteModel.fromJson(resp.data['data']));
       } else {

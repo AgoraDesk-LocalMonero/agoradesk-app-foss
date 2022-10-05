@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_loading_indicator.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
@@ -14,14 +13,17 @@ import 'package:agoradesk/features/trades/screens/widgets/trade_step_one_for_cha
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
+import 'package:vm/vm.dart';
 
 class ChatTab extends StatelessWidget {
   const ChatTab({
     Key? key,
     required this.model,
+    required this.noteOnUser,
   }) : super(key: key);
 
   final TradeViewModel model;
+  final Widget noteOnUser;
 
   @override
   Widget build(BuildContext context) {
@@ -215,15 +217,20 @@ class ChatTab extends StatelessWidget {
   }
 
   Widget _buildWarning(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-      child: BoxInfoWithLabel(
-        label: context.intl.important,
-        child: Text(
-          context.intl.app_trade_warning_impersonation(GetIt.I<AppParameters>().appName),
-          style: context.txtBodyXSmallN80,
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+          child: BoxInfoWithLabel(
+            label: context.intl.important,
+            child: Text(
+              context.intl.app_trade_warning_impersonation(GetIt.I<AppParameters>().appName),
+              style: context.txtBodyXSmallN80,
+            ),
+          ),
         ),
-      ),
+        noteOnUser,
+      ],
     );
   }
 
