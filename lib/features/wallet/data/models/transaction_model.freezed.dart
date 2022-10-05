@@ -31,8 +31,6 @@ mixin _$TransactionModel {
   String? get txId => throw _privateConstructorUsedError;
   @JsonKey(defaultValue: true)
   bool? get isSent => throw _privateConstructorUsedError;
-  @JsonKey(defaultValue: true)
-  bool? get isBitcoin => throw _privateConstructorUsedError;
   Asset? get asset => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
@@ -54,7 +52,6 @@ abstract class $TransactionModelCopyWith<$Res> {
       @JsonKey(name: 'tx_type_name') TransactionTypes txType,
       @JsonKey(name: 'txid') String? txId,
       @JsonKey(defaultValue: true) bool? isSent,
-      @JsonKey(defaultValue: true) bool? isBitcoin,
       Asset? asset,
       String description});
 }
@@ -76,7 +73,6 @@ class _$TransactionModelCopyWithImpl<$Res>
     Object? txType = freezed,
     Object? txId = freezed,
     Object? isSent = freezed,
-    Object? isBitcoin = freezed,
     Object? asset = freezed,
     Object? description = freezed,
   }) {
@@ -105,10 +101,6 @@ class _$TransactionModelCopyWithImpl<$Res>
           ? _value.isSent
           : isSent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isBitcoin: isBitcoin == freezed
-          ? _value.isBitcoin
-          : isBitcoin // ignore: cast_nullable_to_non_nullable
-              as bool?,
       asset: asset == freezed
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -135,7 +127,6 @@ abstract class _$$_TransactionModelCopyWith<$Res>
       @JsonKey(name: 'tx_type_name') TransactionTypes txType,
       @JsonKey(name: 'txid') String? txId,
       @JsonKey(defaultValue: true) bool? isSent,
-      @JsonKey(defaultValue: true) bool? isBitcoin,
       Asset? asset,
       String description});
 }
@@ -159,7 +150,6 @@ class __$$_TransactionModelCopyWithImpl<$Res>
     Object? txType = freezed,
     Object? txId = freezed,
     Object? isSent = freezed,
-    Object? isBitcoin = freezed,
     Object? asset = freezed,
     Object? description = freezed,
   }) {
@@ -188,10 +178,6 @@ class __$$_TransactionModelCopyWithImpl<$Res>
           ? _value.isSent
           : isSent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isBitcoin: isBitcoin == freezed
-          ? _value.isBitcoin
-          : isBitcoin // ignore: cast_nullable_to_non_nullable
-              as bool?,
       asset: asset == freezed
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -214,7 +200,6 @@ class _$_TransactionModel extends _TransactionModel {
       @JsonKey(name: 'tx_type_name') required this.txType,
       @JsonKey(name: 'txid') this.txId,
       @JsonKey(defaultValue: true) this.isSent,
-      @JsonKey(defaultValue: true) this.isBitcoin,
       this.asset,
       required this.description})
       : super._();
@@ -240,16 +225,13 @@ class _$_TransactionModel extends _TransactionModel {
   @JsonKey(defaultValue: true)
   final bool? isSent;
   @override
-  @JsonKey(defaultValue: true)
-  final bool? isBitcoin;
-  @override
   final Asset? asset;
   @override
   final String description;
 
   @override
   String toString() {
-    return 'TransactionModel(amount: $amount, createdAt: $createdAt, txNum: $txNum, txType: $txType, txId: $txId, isSent: $isSent, isBitcoin: $isBitcoin, asset: $asset, description: $description)';
+    return 'TransactionModel(amount: $amount, createdAt: $createdAt, txNum: $txNum, txType: $txType, txId: $txId, isSent: $isSent, asset: $asset, description: $description)';
   }
 
   @override
@@ -263,7 +245,6 @@ class _$_TransactionModel extends _TransactionModel {
             const DeepCollectionEquality().equals(other.txType, txType) &&
             const DeepCollectionEquality().equals(other.txId, txId) &&
             const DeepCollectionEquality().equals(other.isSent, isSent) &&
-            const DeepCollectionEquality().equals(other.isBitcoin, isBitcoin) &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
             const DeepCollectionEquality()
                 .equals(other.description, description));
@@ -279,7 +260,6 @@ class _$_TransactionModel extends _TransactionModel {
       const DeepCollectionEquality().hash(txType),
       const DeepCollectionEquality().hash(txId),
       const DeepCollectionEquality().hash(isSent),
-      const DeepCollectionEquality().hash(isBitcoin),
       const DeepCollectionEquality().hash(asset),
       const DeepCollectionEquality().hash(description));
 
@@ -304,7 +284,6 @@ abstract class _TransactionModel extends TransactionModel {
       @JsonKey(name: 'tx_type_name') required final TransactionTypes txType,
       @JsonKey(name: 'txid') final String? txId,
       @JsonKey(defaultValue: true) final bool? isSent,
-      @JsonKey(defaultValue: true) final bool? isBitcoin,
       final Asset? asset,
       required final String description}) = _$_TransactionModel;
   const _TransactionModel._() : super._();
@@ -329,9 +308,6 @@ abstract class _TransactionModel extends TransactionModel {
   @override
   @JsonKey(defaultValue: true)
   bool? get isSent;
-  @override
-  @JsonKey(defaultValue: true)
-  bool? get isBitcoin;
   @override
   Asset? get asset;
   @override

@@ -1,5 +1,5 @@
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
@@ -7,6 +7,9 @@ import 'package:agoradesk/features/account/data/models/feedback_type.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
+import 'package:agoradesk/features/trades/models/note_on_user_view_model.dart';
+import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
   TraderProfileViewModel({
@@ -23,6 +26,7 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
   final AccountInfoModel? profileModel;
   final String? username;
   AccountInfoModel profileForScreen = const AccountInfoModel();
+  late NoteOnUserViewModel noteModel;
 
   List<AdModel> ads = [];
   List<FeedbackModel> feedbacks = [];
@@ -61,12 +65,16 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
 
   @override
   void init() async {
-    if (profileModel == null) {
-      initialLoading = true;
-    } else {
+    initialLoading = true;
+    if (profileModel != null) {
       profileForScreen = profileModel!;
     }
     await _getAccountInfo();
+    noteModel = NoteOnUserViewModel(
+      username: profileForScreen.username!,
+      accountService: _accountService,
+      appState: context.read<AppState>(),
+    );
     initialLoading = false;
     _getUserAds();
     _getFeedbacks();

@@ -184,12 +184,12 @@ class WalletViewModel extends ViewModel {
     }
     if (xmr.receivedTransactions != null) {
       for (final val in xmr.receivedTransactions!) {
-        transactions.add(val.copyWith(isSent: false, isBitcoin: false, asset: Asset.XMR));
+        transactions.add(val.copyWith(isSent: false, asset: Asset.XMR));
       }
     }
     if (xmr.sentTransactions != null) {
       for (final val in xmr.sentTransactions!) {
-        transactions.add(val.copyWith(isBitcoin: false, asset: Asset.XMR));
+        transactions.add(val.copyWith(asset: Asset.XMR));
       }
     }
     transactions.sort((a, b) => b.createdAt.compareTo(a.createdAt));

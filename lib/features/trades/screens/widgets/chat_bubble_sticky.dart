@@ -224,6 +224,15 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                           )
                         ],
                       ),
+                      const SizedBox(height: 6),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        child: Text(
+                          model.canCancelText(context),
+                          style: context.txtLabelMediumPrimary10,
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                     ],
                   ),
                 ],

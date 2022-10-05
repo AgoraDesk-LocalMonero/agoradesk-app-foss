@@ -1,4 +1,3 @@
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_link.dart';
@@ -15,11 +14,14 @@ import 'package:agoradesk/features/account/screens/widgets/trader_sanction_box.d
 import 'package:agoradesk/features/account/screens/widgets/trader_website_box.dart';
 import 'package:agoradesk/features/account/screens/widgets/user_seen_tile.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
+import 'package:agoradesk/features/trades/models/note_on_user_view_model.dart';
+import 'package:agoradesk/features/trades/screens/widgets/note_on_user_widget.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class TraderProfileScreen extends StatelessWidget {
   const TraderProfileScreen({
@@ -62,6 +64,17 @@ class TraderProfileScreen extends StatelessWidget {
                               userName: model.profileForScreen.username!,
                               lastVisited: model.profileForScreen.lastOnline!,
                             ),
+                            const SizedBox(height: 12),
+                            ViewModelBuilder<NoteOnUserViewModel>(
+                                model: model.noteModel,
+                                initOnce: true,
+                                disposable: false,
+                                builder: (context, noteModel, child) {
+                                  return NoteOnUserWidget(
+                                    username: model.profileForScreen.username!,
+                                    model: noteModel,
+                                  );
+                                }),
                             TraderSanctionBox(
                               accountInfo: model.profileForScreen,
                             ),

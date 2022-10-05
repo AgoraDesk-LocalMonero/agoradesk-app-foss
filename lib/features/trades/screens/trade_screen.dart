@@ -4,7 +4,6 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
@@ -20,9 +19,11 @@ import 'package:agoradesk/features/profile/data/models/user_device_settings.dart
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
+import 'package:agoradesk/features/trades/models/note_on_user_view_model.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/agora_two_tabs_bar.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_tab.dart';
+import 'package:agoradesk/features/trades/screens/widgets/note_on_user_widget.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_info_tile.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_popup_menu.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_step_one.dart';
@@ -32,6 +33,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class TradeScreen extends StatefulWidget {
   const TradeScreen({
@@ -133,6 +135,7 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
     }
     return ChatTab(
       model: model,
+      noteOnUser: _noteOnUser(model),
     );
   }
 
@@ -140,6 +143,8 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
     return SingleChildScrollView(
       child: Column(
         children: [
+          _noteOnUser(model),
+          const SizedBox(height: 12),
           TradeInfoTile(model: model),
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
@@ -174,5 +179,18 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
         ],
       ),
     );
+  }
+
+  Widget _noteOnUser(TradeViewModel model) {
+    return ViewModelBuilder<NoteOnUserViewModel>(
+        model: model.noteModel,
+        initOnce: true,
+        disposable: false,
+        builder: (context, noteModel, child) {
+          return NoteOnUserWidget(
+            username: model.usernameStr(),
+            model: noteModel,
+          );
+        });
   }
 }

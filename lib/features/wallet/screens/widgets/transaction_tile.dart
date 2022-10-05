@@ -1,6 +1,7 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
+import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_types.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/transaction_icon.dart';
@@ -20,7 +21,7 @@ class TransactionTile extends StatelessWidget with DateMixin, StringMixin {
 
   @override
   Widget build(BuildContext context) {
-    final assetString = transaction.isBitcoin! ? 'BTC' : 'XMR';
+    final assetString = transaction.asset!.isBitcoin() ? 'BTC' : 'XMR';
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: onPressed,

@@ -2841,6 +2841,13 @@
       "api_error_239": "Incorrect password when trying to release a trade",
       "api_error_243": "Internal AgoraDesk address can't be used for trade settlement. Please input an outside, non-AgoraDesk XMR address to continue.",
       "api_error_254": "Attempting to post a withdrawal to an identical address and amount within the last 10 minutes",
+      "api_error_260": "Attempting to post a note on a user that doesn’t exist",
+      "api_error_261": "Attempting to post a note on your own account",
+      "api_error_262": "Attempting to get a note on a user that doesn’t exist",
+      "api_error_263": "Attempting to get a note on your own account",
+      "api_error_264": "Attempting to delete a note on a user that doesn’t exist",
+      "api_error_265": "Attempting to delete a note on your own account",
+      "api_error_267": "Attempting to delete a user note that doesn’t exist",
       "api_error_403": "You are not authorized to perform this action",
       "api_error_4000": "No internet connection.",
       "api_error_4001": "Connection timeout, please check internet connection.",
@@ -3303,6 +3310,19 @@
         "val": {}
       }
     },
+  "app_able_to_cancel": "({val1} will be able to cancel in {val2} min unless you mark paid)",
+  "@app_able_to_cancel": {
+      "placeholders": {
+        "val1": {},
+        "val2": {}
+      }
+    },
+  "app_able_to_cancel_now": "({val} is now able to cancel unless you mark paid)",
+  "@app_able_to_cancel_now": {
+      "placeholders": {
+        "val": {}
+      }
+    },
   "app_buying_from": "Buying {asset} {amount} from {username}",
   "@app_buying_from": {
       "placeholders": {
@@ -3335,6 +3355,7 @@
   "app_verification_code": "Verification code",
   "app_ad": "Ad",
   "app_with": "with",
+  "app_edited": "Edited",
   "app_permanent": "Permanent",
   "app_error_saving": "Error during saving. Changes wasn't save.",
   "app_manage_ads": "Manage ads",
@@ -3351,5 +3372,17 @@
   "app_trade_status_settlement_processing_description": "The settlement is being processed. Please wait, there's nothing that you need to do.",
   "app_buyer_settlement_fee_level_description": "Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.",
   "app_change_vacation_settings": "Change vacation settings.",
-  "app_gallery": "Gallery"
+  "app_gallery": "Gallery",
+  "app_note_label": "Your note on {val} (only seen by you)",
+  "@app_note_label": {
+    "placeholders": {
+      "val": {}
+    }
+  },
+  "app_note_add": "Add a note on {val}",
+  "@app_note_add": {
+    "placeholders": {
+      "val": {}
+    }
+  }
 }

@@ -14441,6 +14441,48 @@ abstract class I18n {
   /// **'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes'**
   String get api_error_254;
 
+  /// No description provided for @api_error_260.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to post a note on a user that doesn’t exist'**
+  String get api_error_260;
+
+  /// No description provided for @api_error_261.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to post a note on your own account'**
+  String get api_error_261;
+
+  /// No description provided for @api_error_262.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get a note on a user that doesn’t exist'**
+  String get api_error_262;
+
+  /// No description provided for @api_error_263.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to get a note on your own account'**
+  String get api_error_263;
+
+  /// No description provided for @api_error_264.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a note on a user that doesn’t exist'**
+  String get api_error_264;
+
+  /// No description provided for @api_error_265.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a note on your own account'**
+  String get api_error_265;
+
+  /// No description provided for @api_error_267.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete a user note that doesn’t exist'**
+  String get api_error_267;
+
   /// No description provided for @api_error_403.
   ///
   /// In en, this message translates to:
@@ -16523,6 +16565,18 @@ abstract class I18n {
   /// **'See trades with {val}'**
   String app_trades_with(Object val);
 
+  /// No description provided for @app_able_to_cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'({val1} will be able to cancel in {val2} min unless you mark paid)'**
+  String app_able_to_cancel(Object val1, Object val2);
+
+  /// No description provided for @app_able_to_cancel_now.
+  ///
+  /// In en, this message translates to:
+  /// **'({val} is now able to cancel unless you mark paid)'**
+  String app_able_to_cancel_now(Object val);
+
   /// No description provided for @app_buying_from.
   ///
   /// In en, this message translates to:
@@ -16631,6 +16685,12 @@ abstract class I18n {
   /// **'with'**
   String get app_with;
 
+  /// No description provided for @app_edited.
+  ///
+  /// In en, this message translates to:
+  /// **'Edited'**
+  String get app_edited;
+
   /// No description provided for @app_permanent.
   ///
   /// In en, this message translates to:
@@ -16732,6 +16792,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Gallery'**
   String get app_gallery;
+
+  /// No description provided for @app_note_label.
+  ///
+  /// In en, this message translates to:
+  /// **'Your note on {val} (only seen by you)'**
+  String app_note_label(Object val);
+
+  /// No description provided for @app_note_add.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a note on {val}'**
+  String app_note_add(Object val);
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

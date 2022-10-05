@@ -7347,6 +7347,27 @@ class I18nIt extends I18n {
   String get api_error_254 => 'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes';
 
   @override
+  String get api_error_260 => 'Attempting to post a note on a user that doesn’t exist';
+
+  @override
+  String get api_error_261 => 'Attempting to post a note on your own account';
+
+  @override
+  String get api_error_262 => 'Attempting to get a note on a user that doesn’t exist';
+
+  @override
+  String get api_error_263 => 'Attempting to get a note on your own account';
+
+  @override
+  String get api_error_264 => 'Attempting to delete a note on a user that doesn’t exist';
+
+  @override
+  String get api_error_265 => 'Attempting to delete a note on your own account';
+
+  @override
+  String get api_error_267 => 'Attempting to delete a user note that doesn’t exist';
+
+  @override
   String get api_error_403 => 'Non siete autorizzati a eseguire questa azione';
 
   @override
@@ -8430,6 +8451,16 @@ class I18nIt extends I18n {
   }
 
   @override
+  String app_able_to_cancel(Object val1, Object val2) {
+    return '($val1 will be able to cancel in $val2 min unless you mark paid)';
+  }
+
+  @override
+  String app_able_to_cancel_now(Object val) {
+    return '($val is now able to cancel unless you mark paid)';
+  }
+
+  @override
   String app_buying_from(Object asset, Object amount, Object username) {
     return 'Buying $asset $amount from $username';
   }
@@ -8488,6 +8519,9 @@ class I18nIt extends I18n {
   String get app_with => 'with';
 
   @override
+  String get app_edited => 'Edited';
+
+  @override
   String get app_permanent => 'Permanent';
 
   @override
@@ -8537,4 +8571,14 @@ class I18nIt extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String app_note_label(Object val) {
+    return 'Your note on $val (only seen by you)';
+  }
+
+  @override
+  String app_note_add(Object val) {
+    return 'Add a note on $val';
+  }
 }

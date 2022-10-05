@@ -16,6 +16,7 @@ import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:collection/collection.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
@@ -49,6 +50,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   final List<AdModel> ads = [];
   late CountryCodeModel countryCodeModel;
   late String selectedCountryCode;
+
   // String selectedLocation = '';
   OnlineProvider? selectedOnlineProvider = const OnlineProvider(url: '', code: '', name: '', currencies: []);
   final List<OnlineProvider> _countryPaymentMethods = [];
@@ -79,6 +81,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   bool get displayClear => _displayClear;
 
   set displayClear(bool v) => updateWith(displayClear: v);
+
   bool get loadingLocation => _loadingLocation;
 
   set loadingLocation(bool v) => updateWith(loadingLocation: v);
@@ -258,6 +261,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
 
   Future getAds({
     bool loadMore = false,
+    bool reccursion = false,
   }) async {
     if (!loadingAds) {
       displayFilterMessage = false;
@@ -280,7 +284,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
       }
       loadingAds = false;
       if (res.isRight) {
-        ads.addAll(res.right.data);
         paginationMeta = res.right.pagination;
         if (paginationMeta != null) {
           if (paginationMeta!.currentPage < paginationMeta!.totalPages) {
@@ -289,11 +292,55 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
             hasMorePages = false;
           }
         }
+        // remove dublicates and in case there was duplicates get ads again
+        final List<AdModel> adsWithoutDuplicates = _removeDuplicates(res.right.data);
+        // add ads
+        ads.addAll(adsWithoutDuplicates);
+        if (adsWithoutDuplicates.length < res.right.data.length) {
+          if (!reccursion) {
+            getAds(loadMore: true, reccursion: true);
+          }
+        }
       } else {
         handleApiError(res.left, context);
       }
       notifyListeners();
     }
+  }
+
+  List<AdModel> _removeDuplicates(List<AdModel> adsIn) {
+    late final List<AdModel> res;
+    late final List<AdModel> adsForCompress;
+    if (ads.isNotEmpty) {
+      res = [
+        ...[ads.last],
+        ...adsIn
+      ];
+      adsForCompress = [
+        ...[ads.last],
+        ...adsIn
+      ];
+    } else {
+      res = [...adsIn];
+      adsForCompress = [...adsIn];
+    }
+    adsForCompress.forEachIndexed((index, val) {
+      if (index < (adsForCompress.length - 1)) {
+        final left = val;
+        final right = adsForCompress[index + 1];
+        if (left.id != right.id &&
+            left.profile?.username == right.profile?.username &&
+            left.tempPrice == right.tempPrice &&
+            left.currency == right.currency &&
+            left.onlineProvider == right.onlineProvider &&
+            left.asset == right.asset &&
+            left.tradeType == right.tradeType) {
+          res.remove(right);
+        }
+      }
+    });
+    res.removeAt(0);
+    return res;
   }
 
   void changeOnlineProvider(OnlineProvider? val) {
@@ -341,42 +388,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     }
     return _countryPaymentMethods;
   }
-
-  // void setTradeType(String? selected) {
-  //   final index = tradeTypeMenu.indexWhere((e) => e == selected);
-  //   if (index == 0 || index == -1) {
-  //     tradeType = null;
-  //   } else {
-  //     tradeType = TradeType.values[index - 1];
-  //   }
-  //   filterAds();
-  //   notifyListeners();
-  // }
-
-  // void setAsset(String? selected) {
-  //   final index = assetMenu.indexWhere((e) => e == selected);
-  //   if (index == 0 || index == -1) {
-  //     asset = null;
-  //   } else {
-  //     asset = Asset.values[index - 1];
-  //   }
-  //   filterAds();
-  //   notifyListeners();
-  // }
-
-  // void filterAds() {
-  //   filteredAds.clear();
-  //   for (final ad in ads) {
-  //     if (tradeType == null) {
-  //       filteredAds.add(ad);
-  //     } else if (ad.tradeType == tradeType) {
-  //       filteredAds.add(ad);
-  //     }
-  //     if (asset != null) {
-  //       filteredAds.removeWhere((e) => e.asset != asset);
-  //     }
-  //   }
-  // }
 
   void updateWith({
     Asset? asset,

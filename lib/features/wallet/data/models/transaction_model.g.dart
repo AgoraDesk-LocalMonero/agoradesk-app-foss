@@ -14,7 +14,6 @@ _$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
       txType: $enumDecode(_$TransactionTypesEnumMap, json['tx_type_name']),
       txId: json['txid'] as String?,
       isSent: json['isSent'] as bool? ?? true,
-      isBitcoin: json['isBitcoin'] as bool? ?? true,
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
       description: json['description'] as String,
     );
@@ -27,7 +26,6 @@ Map<String, dynamic> _$$_TransactionModelToJson(_$_TransactionModel instance) =>
       'tx_type_name': _$TransactionTypesEnumMap[instance.txType],
       'txid': instance.txId,
       'isSent': instance.isSent,
-      'isBitcoin': instance.isBitcoin,
       'asset': _$AssetEnumMap[instance.asset],
       'description': instance.description,
     };

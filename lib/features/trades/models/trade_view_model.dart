@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
@@ -34,7 +35,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
+
+import 'note_on_user_view_model.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
@@ -87,6 +91,8 @@ class TradeViewModel extends ViewModel
   late final TabController tabController;
   late TradeStatus tradeStatus;
   PaginationMeta? paginationMeta;
+
+  late NoteOnUserViewModel noteModel;
 
   List<String> tradeTypeMenu = [];
   List<String> assetMenu = [];
@@ -228,7 +234,11 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
-
+    noteModel = NoteOnUserViewModel(
+      username: usernameStr(),
+      accountService: _accountService,
+      appState: context.read<AppState>(),
+    );
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors
     await getAdForLocalTrade();
@@ -268,6 +278,7 @@ class TradeViewModel extends ViewModel
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async {
       await indicatorKey.currentState?.show();
+      _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
     });
   }
@@ -378,6 +389,13 @@ class TradeViewModel extends ViewModel
     }
     return stageText +
         '  ≈$minutesDefault ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
+  }
+
+  String canCancelText(BuildContext context) {
+    if (minutesBeforeCancel > 0) {
+      return context.intl.app_able_to_cancel(tradeForScreen.seller.username ?? '', minutesBeforeCancel);
+    }
+    return context.intl.app_able_to_cancel_now(tradeForScreen.seller.username ?? '');
   }
 
   String awaitingToByerText(BuildContext context) {
@@ -643,6 +661,7 @@ class TradeViewModel extends ViewModel
     if (minutesBeforeCancel < 0) {
       minutesBeforeCancel = 0;
     }
+    notifyListeners();
   }
 
   String paymentDetailsText(BuildContext context) {
@@ -1038,6 +1057,7 @@ class TradeViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
+      _calcMinutesBeforeCancel();
       await indicatorKey.currentState?.show();
       await _getMessages(polling: true);
     }

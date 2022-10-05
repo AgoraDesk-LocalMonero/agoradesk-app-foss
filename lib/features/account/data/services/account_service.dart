@@ -7,6 +7,7 @@ import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_type.dart';
+import 'package:agoradesk/features/account/data/models/note_model.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/models/feedback_view_type.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
@@ -224,6 +225,68 @@ class AccountService {
           "msg": msg ?? '',
         },
       );
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Get a note on user
+  ///
+  Future<Either<ApiError, NoteModel>> getNote(String username) async {
+    try {
+      final resp = await _api.client.get('/note/$username');
+      if (resp.statusCode == 200) {
+        return Either.right(NoteModel.fromJson(resp.data['data']));
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Leave a note on user
+  ///
+  Future<Either<ApiError, bool>> postNote(
+    String username,
+    String content,
+  ) async {
+    try {
+      final resp = await _api.client.post(
+        '/note/$username',
+        data: {
+          "content": content,
+        },
+      );
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Delete a note on user
+  ///
+  Future<Either<ApiError, bool>> deleteNote(String username) async {
+    try {
+      final resp = await _api.client.post('/note/$username/delete');
       if (resp.statusCode == 200) {
         return const Either.right(true);
       } else {
