@@ -284,10 +284,7 @@ class AccountService {
   ///
   /// Delete a note on user
   ///
-  Future<Either<ApiError, bool>> deleteNote(
-    String username,
-    String content,
-  ) async {
+  Future<Either<ApiError, bool>> deleteNote(String username) async {
     try {
       final resp = await _api.client.post('/note/$username/delete');
       if (resp.statusCode == 200) {

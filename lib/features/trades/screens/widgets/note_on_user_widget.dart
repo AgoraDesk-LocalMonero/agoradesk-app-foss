@@ -81,7 +81,7 @@ class NoteOnUserWidget extends StatelessWidget with StringMixin {
               ButtonIconTextN80N30(
                 iconData: AgoraFont.trash_24px,
                 minimumSize: const Size(34, 30),
-                onPressed: () {},
+                onPressed: model.deleteNote,
               ),
             ],
           ),

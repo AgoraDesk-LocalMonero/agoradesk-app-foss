@@ -229,7 +229,10 @@ class ChatTab extends StatelessWidget {
             ),
           ),
         ),
-        noteOnUser,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+          child: noteOnUser,
+        ),
       ],
     );
   }

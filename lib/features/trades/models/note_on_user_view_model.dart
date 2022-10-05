@@ -68,6 +68,16 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
     postingNote = false;
   }
 
+  Future deleteNote() async {
+    final res = await _accountService.deleteNote(username);
+    if (res.isRight) {
+      note = null;
+      notifyListeners();
+    } else {
+      handleApiError(res.left, context);
+    }
+  }
+
   bool noteIsNotEmpty() {
     return note != null && note!.content.isNotEmpty;
   }
