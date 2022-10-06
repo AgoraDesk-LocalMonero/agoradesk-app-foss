@@ -1,11 +1,13 @@
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
+import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:overlay_support/overlay_support.dart';
+import 'package:provider/provider.dart';
 
 class AwesomeNotificationController {
   /// Use this method to detect when a new notification or a schedule is created
@@ -30,48 +32,41 @@ class AwesomeNotificationController {
   @pragma("vm:entry-point")
   static Future<void> onActionReceivedMethod(BuildContext context, ReceivedAction receivedAction) async {
     print('+++++++++++++++++++++++++++++++++++++1177777 - ${receivedAction.payload}');
-    showSimpleNotification(
-      Text(
-        'notification ${receivedAction.payload}',
-      ),
-      background: Colors.blue,
-      autoDismiss: true,
-      key: UniqueKey(),
-      slideDismissDirection: DismissDirection.up,
-      duration: const Duration(seconds: 4),
-    );
     try {
       // AwesomeNotifications().getGlobalBadgeCounter().then(
       //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
       //     );
+      final authService = context.read<AuthService>();
+      final notificationService = context.read<NotificationsService>();
       final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
       final String tradeId = push.objectId!;
       if (push.objectId != null && push.objectId!.isNotEmpty) {
-// markTradeNotificationsAsRead(tradeId: push.objectId!);
+        notificationService.markTradeNotificationsAsRead(tradeId: push.objectId!);
 
         final AppRouter router = GetIt.I<AppRouter>();
         final routes = <PageRouteInfo>[];
         if (router.current.name == PinCodeCheckRoute.name) {
-// authService.authState = AuthState.displayPinCode;
+          authService.authState = AuthState.displayPinCode;
         }
-// if (authService.authState == AuthState.displayPinCode) {
-//   router.removeWhere((route) {
-//     return route.name == PinCodeCheckRoute.name;
-//   });
-//   if (router.current.name == TradeRoute.name) {
-//     await router.pop();
-//   }
-//
-//   routes.add(TradeRoute(tradeId: tradeId));
-// } else {
-        if (router.current.name == TradeRoute.name) {
-          await router.pop();
+        if (authService.authState == AuthState.displayPinCode) {
+          router.removeWhere((route) {
+            return route.name == PinCodeCheckRoute.name;
+          });
+          if (router.current.name == TradeRoute.name) {
+            await router.pop();
+          }
+
+          routes.add(TradeRoute(tradeId: tradeId));
+        } else {
+          if (router.current.name == TradeRoute.name) {
+            await router.pop();
+          }
+          routes.add(TradeRoute(tradeId: tradeId));
         }
-        routes.add(TradeRoute(tradeId: tradeId));
-// }
-//         await router.pushAll(routes);
+        await router.pushAll(routes);
       }
     } catch (e) {
+      print('+++++++++++++++++++++++++++++++++++++22222222');
       debugPrint('++++error parsing push in actionStream - $e');
     }
 
