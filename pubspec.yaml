@@ -69,7 +69,7 @@ dependencies:
   firebase_core: ^1.22.0
   firebase_messaging: ^13.0.1
   get_it: ^7.2.0
-  awesome_notifications: ^0.6.17
+  awesome_notifications: ^0.7.1
   flutter_foreground_task: ^3.8.2
   google_api_availability: ^3.0.1
   duration: ^3.0.11

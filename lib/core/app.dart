@@ -11,6 +11,7 @@ import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/awesome_notifications_controller.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -38,6 +39,7 @@ import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -154,6 +156,22 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initUserAgent();
     _initPlausible();
     _initUploadingStatusListener();
+
+    AwesomeNotifications().setListeners(
+      onActionReceivedMethod: (ReceivedAction receivedAction) {
+        return AwesomeNotificationController.onActionReceivedMethod(receivedAction);
+      },
+      // onNotificationCreatedMethod: (ReceivedNotification receivedNotification) {
+      //   AwesomeNotificationController.onNotificationCreatedMethod(context, receivedNotification);
+      // },
+      // onNotificationDisplayedMethod: (ReceivedNotification receivedNotification) {
+      //   AwesomeNotificationController.onNotificationDisplayedMethod(context, receivedNotification);
+      // },
+      // onDismissActionReceivedMethod: (ReceivedAction receivedAction) {
+      //   AwesomeNotificationController.onDismissActionReceivedMethod(context, receivedAction);
+      // },
+    );
+
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     super.initState();
@@ -258,7 +276,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
-    _notificationsService.startListenAwesomeNotificationsPressed();
+    // _notificationsService.startListenAwesomeNotificationsPressed();
   }
 
   Future<void> _afterConfigInit() async {}
