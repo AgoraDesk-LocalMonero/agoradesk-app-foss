@@ -29,8 +29,10 @@ const kNotificationsChannel = 'trades_channel';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // if the app is terminated and user presses to a notification
+  // here we got payload info
   ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
-  print('+++++++++++++++++++++++++++++++++++++99999999911 - ${receivedAction?.payload}');
+  print('+++++++++++++++++++++++++++++++++++++11 - ${receivedAction?.payload}');
 
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
