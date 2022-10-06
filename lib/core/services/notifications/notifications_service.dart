@@ -343,13 +343,16 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   void startListenAwesomeNotificationsPressed() {
     AwesomeNotifications().actionStream.listen((notification) {
+      print('+++++++++++++++++++++++++++++++++++++1177777');
       try {
         // AwesomeNotifications().getGlobalBadgeCounter().then(
         //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
         //     );
         final PushModel push = PushModel.fromJson(notification.payload ?? {});
         if (push.objectId != null && push.objectId!.isNotEmpty) {
-          markTradeNotificationsAsRead(tradeId: push.objectId!);
+          try {
+            markTradeNotificationsAsRead(tradeId: push.objectId!);
+          } catch (e) {}
           _handleRoutes(push.objectId!);
         }
       } catch (e) {
