@@ -9,8 +9,6 @@ import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/init_app_parameters.dart';
-import 'package:agoradesk/router.gr.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -20,7 +18,6 @@ import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
-import 'package:overlay_support/overlay_support.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
@@ -167,60 +164,4 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   } catch (e) {
     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
   }
-}
-
-@pragma("vm:entry-point")
-Future<void> onActionReceivedMethod(ReceivedAction receivedAction) async {
-  print('+++++++++++++++++++++++++++++++++++++1177777 - ${receivedAction.payload}');
-  showSimpleNotification(
-    Text(
-      'notification ${receivedAction.payload}',
-    ),
-    background: Colors.blue,
-    autoDismiss: true,
-    key: UniqueKey(),
-    slideDismissDirection: DismissDirection.up,
-    duration: const Duration(seconds: 4),
-  );
-  try {
-// AwesomeNotifications().getGlobalBadgeCounter().then(
-//       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
-//     );
-    final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
-    final String tradeId = push.objectId!;
-    if (push.objectId != null && push.objectId!.isNotEmpty) {
-// markTradeNotificationsAsRead(tradeId: push.objectId!);
-
-      final AppRouter router = GetIt.I<AppRouter>();
-      final routes = <PageRouteInfo>[];
-      if (router.current.name == PinCodeCheckRoute.name) {
-// authService.authState = AuthState.displayPinCode;
-      }
-// if (authService.authState == AuthState.displayPinCode) {
-//   router.removeWhere((route) {
-//     return route.name == PinCodeCheckRoute.name;
-//   });
-//   if (router.current.name == TradeRoute.name) {
-//     await router.pop();
-//   }
-//
-//   routes.add(TradeRoute(tradeId: tradeId));
-// } else {
-      if (router.current.name == TradeRoute.name) {
-        await router.pop();
-      }
-      routes.add(TradeRoute(tradeId: tradeId));
-// }
-      await router.pushAll(routes);
-    }
-  } catch (e) {
-    debugPrint('++++error parsing push in actionStream - $e');
-  }
-
-// Navigate into pages, avoiding to open the notification details page over another details page already opened
-// MyApp.navigatorKey.currentState?.pushNamedAndRemoveUntil('/notification-page',
-//         (route) => (route.settings.name != '/notification-page') || route.isFirst,
-//     arguments: receivedAction);
-
-  return;
 }
