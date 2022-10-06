@@ -341,23 +341,25 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   /// Event that AwesomeNotification pressed and app opens
   ///
-  // void startListenAwesomeNotificationsPressed() {
-  //   AwesomeNotifications().actionStream.listen((notification) {
-  //     print('+++++++++++++++++++++++++++++++++++++1177777');
-  //     try {
-  //       // AwesomeNotifications().getGlobalBadgeCounter().then(
-  //       //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
-  //       //     );
-  //       final PushModel push = PushModel.fromJson(notification.payload ?? {});
-  //       if (push.objectId != null && push.objectId!.isNotEmpty) {
-  //         markTradeNotificationsAsRead(tradeId: push.objectId!);
-  //         _handleRoutes(push.objectId!);
-  //       }
-  //     } catch (e) {
-  //       debugPrint('++++error parsing push in actionStream - $e');
-  //     }
-  //   });
-  // }
+
+  void startListenAwesomeNotificationsPressed() {
+    AwesomeNotifications().setListeners(onActionReceivedMethod: (ReceivedAction receivedAction) async {
+      print('+++++++++++++++++++++++++++++++++++++333333333333');
+      try {
+        // AwesomeNotifications().getGlobalBadgeCounter().then(
+        //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
+        //     );
+        final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
+        if (push.objectId != null && push.objectId!.isNotEmpty) {
+          await markTradeNotificationsAsRead(tradeId: push.objectId!);
+          return await _handleRoutes(push.objectId!);
+        }
+      } catch (e) {
+        debugPrint('++++error parsing push in actionStream - $e');
+        return Future.delayed(Duration.zero);
+      }
+    });
+  }
 
   Future<bool> authenticateWithBiometrics() async {
     bool authenticated = false;

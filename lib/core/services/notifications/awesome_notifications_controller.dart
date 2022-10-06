@@ -41,9 +41,9 @@ class AwesomeNotificationController {
       duration: const Duration(seconds: 4),
     );
     try {
-// AwesomeNotifications().getGlobalBadgeCounter().then(
-//       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
-//     );
+      // AwesomeNotifications().getGlobalBadgeCounter().then(
+      //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
+      //     );
       final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
       final String tradeId = push.objectId!;
       if (push.objectId != null && push.objectId!.isNotEmpty) {
