@@ -11,7 +11,6 @@ import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/notifications/awesome_notifications_controller.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -37,6 +36,7 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/data/services/trade_service.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
@@ -159,7 +159,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
     AwesomeNotifications().setListeners(
       onActionReceivedMethod: (ReceivedAction receivedAction) {
-        return AwesomeNotificationController.onActionReceivedMethod(receivedAction);
+        return onActionReceivedMethod(receivedAction);
       },
       // onNotificationCreatedMethod: (ReceivedNotification receivedNotification) {
       //   AwesomeNotificationController.onNotificationCreatedMethod(context, receivedNotification);
