@@ -157,8 +157,14 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initPlausible();
     _initUploadingStatusListener();
 
+    // this listener calls if the app is not terminated
+    // in case app is terminated there is info in main.dart
+    // ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
     AwesomeNotifications().setListeners(
-      onActionReceivedMethod: AwesomeNotificationController.onActionReceivedMethod,
+      onActionReceivedMethod: (ReceivedAction receivedAction) {
+        AwesomeNotificationController.onActionReceivedMethod(context, receivedAction);
+        return Future.value();
+      },
     );
 
     WidgetsBinding.instance.addObserver(this);

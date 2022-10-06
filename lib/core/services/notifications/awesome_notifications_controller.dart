@@ -28,7 +28,7 @@ class AwesomeNotificationController {
 
   /// Use this method to detect when the user taps on a notification or action button
   @pragma("vm:entry-point")
-  static Future<void> onActionReceivedMethod(ReceivedAction receivedAction) async {
+  static Future<void> onActionReceivedMethod(BuildContext context, ReceivedAction receivedAction) async {
     print('+++++++++++++++++++++++++++++++++++++1177777 - ${receivedAction.payload}');
     showSimpleNotification(
       Text(
