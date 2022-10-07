@@ -31,9 +31,10 @@ AppParameters initAppParameters(
       urlReceipt: 'http://agoradesk.com/receipt',
       isAgora: false,
       includeFcm: includeFcm,
-      appRanFromPush: appRanFromPush,
-      tradeId: tradeId,
-    )..isGoogleAvailable = isGoogleAvailable;
+    )
+      ..isGoogleAvailable = isGoogleAvailable
+      ..appRanFromPush = appRanFromPush
+      ..tradeId = tradeId;
   }
   return AppParameters(
     flavor: flavor,
@@ -57,7 +58,5 @@ AppParameters initAppParameters(
     urlReceipt: 'http://agoradesk.com/receipt',
     isAgora: true,
     includeFcm: includeFcm,
-    appRanFromPush: appRanFromPush,
-    tradeId: tradeId,
   )..isGoogleAvailable = isGoogleAvailable;
 }

@@ -24,8 +24,6 @@ class AppParameters {
     required this.urlReceipt,
     required this.isAgora,
     required this.includeFcm,
-    required this.appRanFromPush,
-    required this.tradeId,
   });
 
   final FlavorType flavor;
@@ -49,8 +47,6 @@ class AppParameters {
   final String urlReceipt;
   final bool isAgora;
   final bool includeFcm;
-  final bool appRanFromPush;
-  final String? tradeId;
 
   final mapboxToken = keysMapToken;
 
@@ -123,4 +119,6 @@ class AppParameters {
   ///
   String? openedTradeId;
   bool isGoogleAvailable = true;
+  bool appRanFromPush = false;
+  String? tradeId;
 }
