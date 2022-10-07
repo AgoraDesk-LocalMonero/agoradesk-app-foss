@@ -29,6 +29,20 @@ const kNotificationsChannel = 'trades_channel';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // if the app is terminated and user presses to a notification
+  // here we got payload info
+  bool appRanFromPush = false;
+  String? tradeId;
+  ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
+
+  if (receivedAction != null && receivedAction.payload != null) {
+    final PushModel push = PushModel.fromJson(receivedAction.payload!);
+    if (push.objectId != null && push.objectId!.isNotEmpty) {
+      appRanFromPush = true;
+      tradeId = push.objectId;
+    }
+  }
+
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
@@ -43,7 +57,7 @@ void main() async {
         options: agoradesk_options.DefaultFirebaseOptions.currentPlatform,
       );
     }
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   } else {
     Permission.notification.request();
   }
@@ -72,6 +86,8 @@ void main() async {
       flavor,
       isGoogleAvailable,
       includeFcm,
+      appRanFromPush,
+      tradeId,
     ),
   );
 
@@ -114,6 +130,7 @@ void main() async {
 ///
 /// detect does Google Play available or not
 ///
+@pragma('vm:entry-point')
 Future<bool> checkGoogleAvailable() async {
   // We use this check to run foreground isolate task on Android.
   // So, in case it is not Android we returns true, because with true isolate won't start.
@@ -137,7 +154,7 @@ Future<bool> checkGoogleAvailable() async {
 }
 
 @pragma('vm:entry-point')
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();

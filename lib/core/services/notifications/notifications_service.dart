@@ -101,17 +101,7 @@ class NotificationsService with ForegroundMessagesMixin {
         }
       });
     }
-
-    // AwesomeNotifications().createdStream.listen((notification) {
-    // });
-
-    AwesomeNotifications().dismissedStream.listen((notification) {
-      getNotifications();
-    });
-
-    // AwesomeNotifications().displayedStream.listen((notification) {
-    // });
-
+    // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
     ///
@@ -238,46 +228,51 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   /// Get notifications from the server
   ///
-  Future markTradeNotificationsAsRead({String? tradeId}) async {
-    int markedAsReadCounter = 0;
-    if (tradeId != null && tradeId.isNotEmpty) {
-      int index = 0;
-      await getNotifications();
-      final List<ActivityNotificationModel> editedNotifications = [];
-      editedNotifications.addAll(appState.notifications);
-      for (final n in appState.notifications) {
-        if (n.contactId == tradeId && n.read == false) {
-          markedAsReadCounter++;
-          await accountService.markAsRead(n.id);
-          editedNotifications[index] = appState.notifications[index].copyWith(read: true);
-        }
-        index++;
-      }
-      appState.notifications.clear();
-      appState.notifications.addAll(editedNotifications);
-      await Future.delayed(const Duration(seconds: 1));
-      // badges (red circle counter on the app icon)
-      final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
-      await AwesomeNotifications().setGlobalBadgeCounter(badgesCounter - markedAsReadCounter);
-      // remove red dot in case all notifiations are read
-      appState.hasUnread =
-          !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
-      // dismiss notifications on the phone events bar (not inside the app)
-      String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      if (barMessagesString.isNotEmpty) {
-        final List<String> barMessages = barMessagesString.split(';');
-        final List<String> barMessagesNew = barMessagesString.split(';');
-        for (final m in barMessages) {
-          if (m.contains(tradeId)) {
-            final messageId = int.tryParse(m.split(':')[0]);
-            if (messageId != null) {
-              await AwesomeNotifications().dismiss(messageId);
-            }
-            barMessagesNew.remove(m);
+  Future markTradeNotificationsAsRead(String? tradeId) async {
+    try {
+      int markedAsReadCounter = 0;
+      if (tradeId != null && tradeId.isNotEmpty) {
+        int index = 0;
+        await getNotifications();
+        final List<ActivityNotificationModel> editedNotifications = [];
+        editedNotifications.addAll(appState.notifications);
+        for (final n in appState.notifications) {
+          if (n.contactId == tradeId && n.read == false) {
+            markedAsReadCounter++;
+            await accountService.markAsRead(n.id);
+            editedNotifications[index] = appState.notifications[index].copyWith(read: true);
           }
+          index++;
         }
-        await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
+        appState.notifications.clear();
+        appState.notifications.addAll(editedNotifications);
+        await Future.delayed(const Duration(seconds: 1));
+        // badges (red circle counter on the app icon)
+        final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
+        final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
+        await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
+        // remove red dot in case all notifiations are read
+        appState.hasUnread =
+            !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
+        // dismiss notifications on the phone events bar (not inside the app)
+        String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+        if (barMessagesString.isNotEmpty) {
+          final List<String> barMessages = barMessagesString.split(';');
+          final List<String> barMessagesNew = barMessagesString.split(';');
+          for (final m in barMessages) {
+            if (m.contains(tradeId)) {
+              final messageId = int.tryParse(m.split(':')[0]);
+              if (messageId != null) {
+                await AwesomeNotifications().dismiss(messageId);
+              }
+              barMessagesNew.remove(m);
+            }
+          }
+          await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
+        }
       }
+    } catch (e) {
+      debugPrint('++++markTradeNotificationsAsRead exception - $e');
     }
   }
 
@@ -338,28 +333,20 @@ class NotificationsService with ForegroundMessagesMixin {
     };
   }
 
-  ///
-  /// Event that AwesomeNotification pressed and app opens
-  ///
-  void startListenAwesomeNotificationsPressed() {
-    AwesomeNotifications().actionStream.listen((notification) {
-      print('+++++++++++++++++++++++++++++++++++++1177777');
-      try {
-        // AwesomeNotifications().getGlobalBadgeCounter().then(
-        //       (value) => AwesomeNotifications().setGlobalBadgeCounter(value - 1),
-        //     );
-        final PushModel push = PushModel.fromJson(notification.payload ?? {});
-        if (push.objectId != null && push.objectId!.isNotEmpty) {
-          try {
-            markTradeNotificationsAsRead(tradeId: push.objectId!);
-          } catch (e) {}
-          _handleRoutes(push.objectId!);
-        }
-      } catch (e) {
-        debugPrint('++++error parsing push in actionStream - $e');
-      }
-    });
-  }
+  // void startListenAwesomeNotificationsPressed() {
+  //   AwesomeNotifications().setListeners(onActionReceivedMethod: (ReceivedAction receivedAction) async {
+  //     try {
+  //       final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
+  //       if (push.objectId != null && push.objectId!.isNotEmpty) {
+  //         await markTradeNotificationsAsRead(tradeId: push.objectId!);
+  //         return await notificationHandleRoutes(push.objectId!);
+  //       }
+  //     } catch (e) {
+  //       debugPrint('++++error parsing push in actionStream - $e');
+  //       return Future.delayed(Duration.zero);
+  //     }
+  //   });
+  // }
 
   Future<bool> authenticateWithBiometrics() async {
     bool authenticated = false;
@@ -380,7 +367,7 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   /// Pincode route logic
   ///
-  Future<void> _handleRoutes(String tradeId) async {
+  Future<void> notificationHandleRoutes(String tradeId) async {
     final AppRouter router = GetIt.I<AppRouter>();
     final routes = <PageRouteInfo>[];
     if (router.current.name == PinCodeCheckRoute.name) {

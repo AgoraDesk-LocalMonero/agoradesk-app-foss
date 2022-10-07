@@ -97,6 +97,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
 
   @override
   Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {
+    ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
     // await FlutterForegroundTask.clearAllData();
   }
 

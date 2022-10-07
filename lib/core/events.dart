@@ -77,3 +77,13 @@ class FlashEvent {
     return FlashEvent._(FlashEventType.info, message);
   }
 }
+
+///
+/// Awesome notifications message clicked on the phone tray
+///
+
+class AwesomeMessageClickedEvent {
+  final String? tradeId;
+
+  const AwesomeMessageClickedEvent(this.tradeId);
+}
