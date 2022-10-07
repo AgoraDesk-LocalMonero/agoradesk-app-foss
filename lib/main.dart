@@ -34,6 +34,7 @@ void main() async {
   bool appRanFromPush = false;
   String? tradeId;
   ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
+
   if (receivedAction != null && receivedAction.payload != null) {
     final PushModel push = PushModel.fromJson(receivedAction.payload!);
     if (push.objectId != null && push.objectId!.isNotEmpty) {
@@ -129,6 +130,7 @@ void main() async {
 ///
 /// detect does Google Play available or not
 ///
+@pragma('vm:entry-point')
 Future<bool> checkGoogleAvailable() async {
   // We use this check to run foreground isolate task on Android.
   // So, in case it is not Android we returns true, because with true isolate won't start.
