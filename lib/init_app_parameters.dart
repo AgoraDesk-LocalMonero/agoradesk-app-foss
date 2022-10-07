@@ -5,6 +5,8 @@ AppParameters initAppParameters(
   FlavorType flavor,
   bool isGoogleAvailable,
   bool includeFcm,
+  bool appRanFromPush,
+  String? tradeId,
 ) {
   if (flavor == FlavorType.localmonero) {
     return AppParameters(
@@ -29,7 +31,10 @@ AppParameters initAppParameters(
       urlReceipt: 'http://agoradesk.com/receipt',
       isAgora: false,
       includeFcm: includeFcm,
-    )..isGoogleAvailable = isGoogleAvailable;
+    )
+      ..isGoogleAvailable = isGoogleAvailable
+      ..appRanFromPush = appRanFromPush
+      ..tradeId = tradeId;
   }
   return AppParameters(
     flavor: flavor,

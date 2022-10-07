@@ -119,4 +119,6 @@ class AppParameters {
   ///
   String? openedTradeId;
   bool isGoogleAvailable = true;
+  bool appRanFromPush = false;
+  String? tradeId;
 }
