@@ -176,9 +176,14 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         _activatePin = false;
       }
     }
-    if (state == AppLifecycleState.detached) {}
-    if (state == AppLifecycleState.inactive) {}
+    if (state == AppLifecycleState.detached) {
+      _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
+    }
+    if (state == AppLifecycleState.inactive) {
+      _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
+    }
     if (state == AppLifecycleState.paused) {
+      _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
       Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
     super.didChangeAppLifecycleState(state);

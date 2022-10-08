@@ -49,7 +49,8 @@ class TradeScreen extends StatefulWidget {
   State<TradeScreen> createState() => _TradeScreenState();
 }
 
-class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin, DateMixin, CountryInfoMixin {
+class _TradeScreenState extends State<TradeScreen>
+    with TickerProviderStateMixin, DateMixin, CountryInfoMixin, WidgetsBindingObserver {
   late final TradeViewModel _model;
 
   @override
@@ -67,6 +68,14 @@ class _TradeScreenState extends State<TradeScreen> with TickerProviderStateMixin
     _model.tabController = TabController(length: 2, vsync: this);
 
     super.initState();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _model.secureStorage.write(SecureStorageKey.openedTradeId, widget.tradeId ?? widget.tradeModel?.tradeId ?? '');
+    }
+    super.didChangeAppLifecycleState(state);
   }
 
   @override

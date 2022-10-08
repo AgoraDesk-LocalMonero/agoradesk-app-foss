@@ -64,7 +64,6 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
                   notifications.first.createdAt.millisecondsSinceEpoch.toString());
               final ActivityNotificationModel notification = notifications.first;
               final PushModel push = PushModel.fromActivityNotificationModel(notification);
-
               final Map<String, String> payload =
                   push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
               if (openedTradeId != push.objectId) {

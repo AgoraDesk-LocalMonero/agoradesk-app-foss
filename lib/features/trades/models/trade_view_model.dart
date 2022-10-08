@@ -53,19 +53,18 @@ class TradeViewModel extends ViewModel
     this.tradeId,
     required UserLocalSettings userSettings,
     required AccountService accountService,
-    required SecureStorage secureStorage,
+    required this.secureStorage,
     required AdsRepository adsRepository,
     required ApiClient apiClient,
   })  : _tradeRepository = tradeRepository,
         _userSettings = userSettings,
-        _secureStorage = secureStorage,
         _apiClient = apiClient,
         _accountService = accountService,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
   final AccountService _accountService;
-  final SecureStorage _secureStorage;
+  final SecureStorage secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
   final TradeModel? tradeModel;
@@ -250,7 +249,7 @@ class TradeViewModel extends ViewModel
     // for FCM
     GetIt.I<AppParameters>().openedTradeId = tradeForScreen.tradeId;
     // when FCM is not available
-    _secureStorage.write(SecureStorageKey.openedTradeId, tradeForScreen.tradeId);
+    secureStorage.write(SecureStorageKey.openedTradeId, tradeForScreen.tradeId);
 
     isXmr = tradeForScreen.asset == Asset.XMR;
 
@@ -696,7 +695,9 @@ class TradeViewModel extends ViewModel
             final message = reversedLst[i];
             if (_checkMessageUnique(message, i)) {
               messagesAfterSticky.insert(0, message);
-              messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
+              if (messagesListKey.currentState != null) {
+                messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
+              }
               await Future.delayed(const Duration(milliseconds: 500));
             } else {
               messagesAfterSticky[i].isSending = false;
@@ -1038,7 +1039,7 @@ class TradeViewModel extends ViewModel
   void dispose() async {
     focusMessage.dispose();
     GetIt.I<AppParameters>().openedTradeId = null;
-    await _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
+    await secureStorage.write(SecureStorageKey.openedTradeId, 'null');
     tabController.dispose();
     ctrlMessage.dispose();
     ctrlPassword.dispose();
