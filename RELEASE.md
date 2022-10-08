@@ -4,6 +4,7 @@
 3. Fix: immediate trade update after the app is resumed.
 4. Info about time until seller can cancel a trade in a chat.
 5. Fix: Redirect to the trade screen when terminated app opens with click on the push message.
+6. Fix: App freezed due to Android 13 plugins conflict.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
