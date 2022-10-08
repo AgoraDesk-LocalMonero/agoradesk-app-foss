@@ -29,20 +29,6 @@ const kNotificationsChannel = 'trades_channel';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // if the app is terminated and user presses to a notification
-  // here we got payload info
-  bool appRanFromPush = false;
-  String? tradeId;
-  ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
-
-  if (receivedAction != null && receivedAction.payload != null) {
-    final PushModel push = PushModel.fromJson(receivedAction.payload!);
-    if (push.objectId != null && push.objectId!.isNotEmpty) {
-      appRanFromPush = true;
-      tradeId = push.objectId;
-    }
-  }
-
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
@@ -86,15 +72,15 @@ void main() async {
       flavor,
       isGoogleAvailable,
       includeFcm,
-      appRanFromPush,
-      tradeId,
+      false,
+      'tradeId',
     ),
   );
 
   ///
   /// Init awesome notofications
   ///
-  AwesomeNotifications().initialize(
+  await AwesomeNotifications().initialize(
     null,
     [
       NotificationChannel(
@@ -106,6 +92,20 @@ void main() async {
       ),
     ],
   );
+
+  // if the app is terminated and user presses to a notification
+  // here we got payload info
+  bool appRanFromPush = false;
+  String? tradeId;
+  ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
+
+  if (receivedAction != null && receivedAction.payload != null) {
+    final PushModel push = PushModel.fromJson(receivedAction.payload!);
+    if (push.objectId != null && push.objectId!.isNotEmpty) {
+      appRanFromPush = true;
+      tradeId = push.objectId;
+    }
+  }
 
   final userSettings = ObjectBox.userLocalSettingsBox.getAll();
   final bool sentryIsOn = userSettings.isNotEmpty && userSettings[0].sentryIsOn != false;

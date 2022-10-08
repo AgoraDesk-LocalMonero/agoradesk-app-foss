@@ -5,6 +5,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AwesomeNotificationController {
+  static Future<ReceivedAction?> interceptInitialCallActionRequest() async {
+    ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
+    if (receivedAction?.channelKey == 'call_channel') return receivedAction;
+    return null;
+  }
+
   /// Use this method to detect when a new notification or a schedule is created
   @pragma("vm:entry-point")
   static Future<void> onNotificationCreatedMethod(ReceivedNotification receivedNotification) async {
