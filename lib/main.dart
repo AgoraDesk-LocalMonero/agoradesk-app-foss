@@ -63,21 +63,6 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
   ///
-  /// Initializations that are depend on flavor
-  ///
-
-  final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
-  GetIt.I.registerSingleton<AppParameters>(
-    initAppParameters(
-      flavor,
-      isGoogleAvailable,
-      includeFcm,
-      false,
-      'tradeId',
-    ),
-  );
-
-  ///
   /// Init awesome notofications
   ///
   await AwesomeNotifications().initialize(
@@ -93,8 +78,10 @@ void main() async {
     ],
   );
 
-  // if the app is terminated and user presses to a notification
-  // here we got payload info
+  ///
+  /// if the app is terminated and user presses to a notification
+  /// here we got payload info
+  ///
   bool appRanFromPush = false;
   String? tradeId;
   ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
@@ -106,6 +93,21 @@ void main() async {
       tradeId = push.objectId;
     }
   }
+
+  ///
+  /// Initializations that are depend on flavor
+  ///
+
+  final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
+  GetIt.I.registerSingleton<AppParameters>(
+    initAppParameters(
+      flavor,
+      isGoogleAvailable,
+      includeFcm,
+      appRanFromPush,
+      tradeId,
+    ),
+  );
 
   final userSettings = ObjectBox.userLocalSettingsBox.getAll();
   final bool sentryIsOn = userSettings.isNotEmpty && userSettings[0].sentryIsOn != false;
