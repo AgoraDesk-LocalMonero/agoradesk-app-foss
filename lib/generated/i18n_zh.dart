@@ -5818,7 +5818,9 @@ class I18nZh extends I18n {
   String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => '我已付款';
 
   @override
-  String get trade250Sbinfo250Sbfee250Sblabel => '1%{appName}费用：';
+  String trade250Sbinfo250Sbfee250Sblabel(Object appName) {
+    return '1%$appName费用：';
+  }
 
   @override
   String get trade250Sbinfo250Sbtrade8722Sbad => '交易广告（{ad_type}）';
@@ -8568,6 +8570,12 @@ class I18nZh extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_one_percent => '1% fee';
+
+  @override
+  String get app_final_amount => 'Final amount';
 
   @override
   String app_note_label(Object val) {
@@ -14398,7 +14406,9 @@ class I18nZhTw extends I18nZh {
   String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => '我已付款';
 
   @override
-  String get trade250Sbinfo250Sbfee250Sblabel => '1%{appName}費用：';
+  String trade250Sbinfo250Sbfee250Sblabel(Object appName) {
+    return '1%$appName費用：';
+  }
 
   @override
   String get trade250Sbinfo250Sbtrade8722Sbad => '交易廣告（{ad_type}）';

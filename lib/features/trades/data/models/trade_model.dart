@@ -67,6 +67,7 @@ class TradeModel with _$TradeModel {
 
   /// trade could be XMR or BTC, getter gives the amount of active asset
   String get assetAmount => amountXmr != null ? amountXmr! : amountBtc!;
+  String get assetFee => feeXmr != null ? feeXmr! : (feeBtc ?? '');
 
   factory TradeModel.fromJson(Map<String, dynamic> json) => _$TradeModelFromJson(json);
 

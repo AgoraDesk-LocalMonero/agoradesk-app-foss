@@ -259,6 +259,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -523,6 +525,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -787,6 +791,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -1323,6 +1329,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -1587,6 +1595,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -1851,6 +1861,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -2115,6 +2127,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ],
@@ -2379,6 +2393,8 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_one_percent",
+    "app_final_amount",
     "app_note_label",
     "app_note_add"
   ]

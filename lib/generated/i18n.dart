@@ -11552,7 +11552,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'1% {appName} fee:'**
-  String get trade250Sbinfo250Sbfee250Sblabel;
+  String trade250Sbinfo250Sbfee250Sblabel(Object appName);
 
   /// No description provided for @trade250Sbinfo250Sbtrade8722Sbad.
   ///
@@ -16791,6 +16791,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Gallery'**
   String get app_gallery;
+
+  /// No description provided for @app_one_percent.
+  ///
+  /// In en, this message translates to:
+  /// **'1% fee'**
+  String get app_one_percent;
+
+  /// No description provided for @app_final_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Final amount'**
+  String get app_final_amount;
 
   /// No description provided for @app_note_label.
   ///

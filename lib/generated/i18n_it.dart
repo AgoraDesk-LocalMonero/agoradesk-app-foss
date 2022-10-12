@@ -5818,7 +5818,9 @@ class I18nIt extends I18n {
   String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => 'Ho pagato';
 
   @override
-  String get trade250Sbinfo250Sbfee250Sblabel => '1% di {appName} commissione:';
+  String trade250Sbinfo250Sbfee250Sblabel(Object appName) {
+    return '1% di $appName commissione:';
+  }
 
   @override
   String get trade250Sbinfo250Sbtrade8722Sbad => 'Annuncio commerciale ({ad_type})';
@@ -8568,6 +8570,12 @@ class I18nIt extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_one_percent => '1% fee';
+
+  @override
+  String get app_final_amount => 'Final amount';
 
   @override
   String app_note_label(Object val) {

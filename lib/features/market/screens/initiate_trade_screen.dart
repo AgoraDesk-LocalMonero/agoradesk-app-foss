@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -21,6 +20,7 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:vm/vm.dart';
 
 class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin {
   InitiateTradeScreen({
@@ -111,7 +111,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                 Expanded(
                   flex: 1,
                   child: Text(
-                    model.howMuchSign(),
+                    model.howMuchSign(context),
                     style: context.txtBodySmallN60,
                   ),
                 ),
