@@ -89,8 +89,6 @@ PODS:
     - GoogleUtilities/Logger
   - image_picker_ios (0.0.1):
     - Flutter
-  - in_app_review (0.2.0):
-    - Flutter
   - IosAwnCore (0.7.1)
   - local_auth_ios (0.0.1):
     - Flutter
@@ -148,7 +146,6 @@ DEPENDENCIES:
   - flutter_keyboard_visibility (from `.symlinks/plugins/flutter_keyboard_visibility/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
-  - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
   - local_auth_ios (from `.symlinks/plugins/local_auth_ios/ios`)
   - objectbox_flutter_libs (from `.symlinks/plugins/objectbox_flutter_libs/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
@@ -208,8 +205,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
-  in_app_review:
-    :path: ".symlinks/plugins/in_app_review/ios"
   local_auth_ios:
     :path: ".symlinks/plugins/local_auth_ios/ios"
   objectbox_flutter_libs:
@@ -257,7 +252,6 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
   image_picker_ios: b786a5dcf033a8336a657191401bfdf12017dabb
-  in_app_review: 4a97249f7a2f539a0f294c2d9196b7fe35e49541
   IosAwnCore: fd348a51573643e26a194fe20fc78e4190dcadf6
   local_auth_ios: 0d333dde7780f669e66f19d2ff6005f3ea84008d
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb

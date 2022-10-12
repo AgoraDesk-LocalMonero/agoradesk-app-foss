@@ -5818,7 +5818,9 @@ class I18nEs extends I18n {
   String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => 'He pagado';
 
   @override
-  String get trade250Sbinfo250Sbfee250Sblabel => 'Tarifa de 1% {appName}:';
+  String trade250Sbinfo250Sbfee250Sblabel(Object appName) {
+    return 'Tarifa de 1% $appName:';
+  }
 
   @override
   String get trade250Sbinfo250Sbtrade8722Sbad => 'Anuncio comercial ({ad_type})';
@@ -8568,6 +8570,12 @@ class I18nEs extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_one_percent => '1% fee';
+
+  @override
+  String get app_final_amount => 'Final amount';
 
   @override
   String app_note_label(Object val) {

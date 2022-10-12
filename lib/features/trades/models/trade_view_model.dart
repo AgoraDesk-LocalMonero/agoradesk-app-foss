@@ -5,12 +5,14 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
+import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
+import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80_old.dart';
@@ -45,7 +47,7 @@ const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
 
 class TradeViewModel extends ViewModel
-    with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin
+    with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin, StringMixin
     implements WidgetsBindingObserver {
   TradeViewModel({
     required TradeRepository tradeRepository,
@@ -302,6 +304,32 @@ class TradeViewModel extends ViewModel
 
   String priceFormulaParsed(BuildContext context) {
     return tradeForScreen.priceEquation?.priceParsedString(context, tradeForScreen.currency) ?? '';
+  }
+
+  String finalAmount() {
+    if (tradeForScreen.assetFee.isNotEmpty) {
+      final receive = double.tryParse(tradeForScreen.assetAmount);
+      final fee = double.tryParse(tradeForScreen.assetFee);
+      if (receive != null && fee != null) {
+        final int digitsToRound = getBankersDigits(tradeForScreen.asset.name);
+        if (tradeForScreen.isBuying!) {
+          return (receive - fee).bankerRound(digitsToRound).toDouble().toString();
+        } else {
+          return (receive + fee).bankerRound(digitsToRound).toDouble().toString();
+        }
+      } else {
+        return '';
+      }
+    }
+    return '';
+  }
+
+  bool isFeeDisplayed() {
+    if (tradeForScreen.advertisement.tradeType.isSell()) {
+      return tradeForScreen.isSelling != null && tradeForScreen.isSelling!;
+    } else {
+      return tradeForScreen.isBuying != null && tradeForScreen.isBuying!;
+    }
   }
 
   Future getTrade({bool polling = false}) async {

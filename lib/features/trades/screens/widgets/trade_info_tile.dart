@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -22,6 +21,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:timeago/timeago.dart' as timeago;
+import 'package:vm/vm.dart';
 
 class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
   TradeInfoTile({
@@ -124,6 +124,20 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                                             title: context.intl.formula250Sbinput8722Sblabel,
                                             text: model.priceFormulaParsed(context),
                                           ),
+                                    model.isFeeDisplayed()
+                                        ? TradeLineWithCopy(
+                                            iconData: AgoraFont.arrow_down_circle,
+                                            title: context.intl.app_one_percent,
+                                            text: model.tradeForScreen.assetFee,
+                                          )
+                                        : const SizedBox(),
+                                    model.isFeeDisplayed()
+                                        ? TradeLineWithCopy(
+                                            iconData: AgoraFont.arrow_down_circle,
+                                            title: context.intl.app_final_amount,
+                                            text: model.finalAmount(),
+                                          )
+                                        : const SizedBox(),
                                     TradeLineWithCopy(
                                       iconData: AgoraFont.clock,
                                       title: context.intl.dashboard250Sbtrade250Sbcreated8722Sbat,

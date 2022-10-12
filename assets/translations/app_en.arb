@@ -2151,6 +2151,11 @@
     "trade250Sbfund8722Sbtrade8722Sbbtn": "Fund this trade",
     "trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn": "I have paid",
     "trade250Sbinfo250Sbfee250Sblabel": "1% {appName} fee:",
+    "@trade250Sbinfo250Sbfee250Sblabel": {
+      "placeholders": {
+        "appName": {}
+      }
+    },
     "trade250Sbinfo250Sbtrade8722Sbad": "Trade ad ({ad_type})",
     "trade250Sbleave8722Sbfeedback8722Sbbtn": "Leave feedback",
     "trade250Sblocal250Sbbuyer250Sbescrowed": "The seller has enabled arbitration bond protection on this trade, meaning the seller can't cancel this trade.",
@@ -3373,6 +3378,8 @@
   "app_buyer_settlement_fee_level_description": "Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.",
   "app_change_vacation_settings": "Change vacation settings.",
   "app_gallery": "Gallery",
+  "app_one_percent": "1% fee",
+  "app_final_amount": "Final amount",
   "app_note_label": "Your note on {val} (only seen by you)",
   "@app_note_label": {
     "placeholders": {
