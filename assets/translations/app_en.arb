@@ -1426,6 +1426,7 @@
     "method250Sbcash": "Cash (locally)",
     "method250Sbcash8722Sbat8722Sbatm": "Cash at ATM",
     "method250Sbcash8722Sbby8722Sbmail": "Cash by mail",
+    "method250Sbcash8722Sbon8722Sbdelivery": "Cash on delivery",
     "method250Sbcash8722Sbdeposit": "Cash deposit",
     "method250Sbcashiers8722Sbcheck": "Cashier's check",
     "method250Sbcreditcard": "Credit card",

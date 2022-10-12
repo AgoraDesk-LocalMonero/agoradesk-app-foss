@@ -4111,6 +4111,9 @@ class I18nIt extends I18n {
   String get method250Sbcash8722Sbby8722Sbmail => 'Contanti per posta';
 
   @override
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+
+  @override
   String get method250Sbcash8722Sbdeposit => 'Deposito contanti';
 
   @override

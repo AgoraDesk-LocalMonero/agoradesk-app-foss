@@ -46,6 +46,7 @@ mixin PaymentMethodsMixin {
       'any_payment_method': context.intl.any_payment_method,
       'NATIONAL_BANK': context.intl.method250Sbnational8722Sbbank,
       'CASH_BY_MAIL': context.intl.method250Sbcash8722Sbby8722Sbmail,
+      'CASH_ON_DELIVERY': context.intl.method250Sbcash8722Sbon8722Sbdelivery,
       'SATISPAY': 'Satispay',
       'PRIVAT24': 'Privat24',
       'CRYPTOCURRENCY': context.intl.method250Sbcryptocurrency,

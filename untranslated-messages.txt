@@ -1,5 +1,6 @@
 {
   "es": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -266,6 +267,7 @@
   ],
 
   "it": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -532,6 +534,7 @@
   ],
 
   "ko": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -798,6 +801,7 @@
   ],
 
   "pl": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy",
     "ads",
     "unknown_error",
@@ -1336,6 +1340,7 @@
   ],
 
   "pt": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -1602,6 +1607,7 @@
   ],
 
   "ru": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -1868,6 +1874,7 @@
   ],
 
   "zh": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -2134,6 +2141,7 @@
   ],
 
   "zh_TW": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",

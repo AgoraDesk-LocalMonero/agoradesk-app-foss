@@ -8266,6 +8266,12 @@ abstract class I18n {
   /// **'Cash by mail'**
   String get method250Sbcash8722Sbby8722Sbmail;
 
+  /// No description provided for @method250Sbcash8722Sbon8722Sbdelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash on delivery'**
+  String get method250Sbcash8722Sbon8722Sbdelivery;
+
   /// No description provided for @method250Sbcash8722Sbdeposit.
   ///
   /// In en, this message translates to:

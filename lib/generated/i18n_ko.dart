@@ -4111,6 +4111,9 @@ class I18nKo extends I18n {
   String get method250Sbcash8722Sbby8722Sbmail => '현금우편';
 
   @override
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+
+  @override
   String get method250Sbcash8722Sbdeposit => 'Cash deposit';
 
   @override
