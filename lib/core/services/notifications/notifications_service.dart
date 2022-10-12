@@ -1,25 +1,18 @@
 import 'dart:async';
-import 'dart:io';
-import 'dart:math';
 
 import 'package:agoradesk/core/api/api_client.dart';
-import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/notifications/models/device_model.dart';
-import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
@@ -34,7 +27,6 @@ final _readedEmptyNotification = ActivityNotificationModel(
 class NotificationsService with ForegroundMessagesMixin {
   NotificationsService({
     required this.api,
-    required this.fcm,
     required this.secureStorage,
     required this.accountService,
     required this.appState,
@@ -42,7 +34,6 @@ class NotificationsService with ForegroundMessagesMixin {
   }) : includeFcm = GetIt.I<AppParameters>().includeFcm;
 
   final ApiClient api;
-  final FirebaseMessaging? fcm;
   final SecureStorage secureStorage;
   final AccountService accountService;
   final AuthService authService;
@@ -60,48 +51,6 @@ class NotificationsService with ForegroundMessagesMixin {
     /// in case Firebase service is not available the app uses polling
     ///
 
-    if (includeFcm) {
-      // FirebaseMessaging.onMessageOpenedApp.listen((message) async {});
-      FirebaseMessaging.onMessage.listen((message) async {
-        debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
-        debugPrint('++++[$runtimeType][onMessage] data: ${message.data}');
-        try {
-          if (message.data.isNotEmpty) {
-            final l = await secureStorage.read(SecureStorageKey.locale);
-            final String langCode = l ?? Platform.localeName.substring(0, 2);
-            final PushModel push = PushModel.fromJson(message.data);
-            final Map<String, String> payload =
-                push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-
-            ///
-            /// get trade it in case it's screen is opened in the app
-            ///
-            final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
-            if (openedTradeId != push.objectId) {
-              final awesomeMessageId = Random().nextInt(1000000);
-              final res = await AwesomeNotifications().createNotification(
-                content: NotificationContent(
-                  id: awesomeMessageId,
-                  channelKey: kNotificationsChannel,
-                  title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-                  body: translatedNotificationText(push, langCode),
-                  notificationLayout: NotificationLayout.Default,
-                  payload: payload,
-                ),
-              );
-              if (res) {
-                String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-                barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-              }
-            }
-          }
-        } catch (e) {
-          debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
-        }
-      });
-    }
-    // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
     ///
@@ -111,18 +60,6 @@ class NotificationsService with ForegroundMessagesMixin {
     _timer = Timer.periodic(const Duration(seconds: _kNotificationsPollingSeconds), (_) => getNotifications());
 
     ///
-    /// start listener for push token updates
-    ///
-    if (includeFcm) {
-      FirebaseMessaging.instance.onTokenRefresh.listen((token) {
-        debugPrint('[$runtimeType] FirebaseMessaging token updated: $token');
-        if (api.accessToken != null) {
-          _tokenUpdate(token);
-        }
-      });
-    }
-
-    ///
     /// Listen that notifications inside the app marked as read
     ///
     appState.notificationsMarkedRead$.listen((e) {
@@ -130,99 +67,6 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.hasUnread = false;
       }
     });
-  }
-
-  Future getToken() async {
-    if (fcm != null) {
-      bool userPermission = true;
-      final settings = await fcm!.requestPermission(
-        alert: true,
-        announcement: false,
-        badge: true,
-        carPlay: false,
-        criticalAlert: false,
-        provisional: false,
-        sound: true,
-      );
-      userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
-      if (userPermission) {
-        String? token;
-        try {
-          token = await fcm!.getToken();
-        } catch (e) {
-          //todo - cover this logic with tests
-          if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
-            GetIt.I<AppParameters>().isGoogleAvailable = false;
-          }
-          debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
-        }
-        if (token != null) {
-          debugPrint('++++ FirebaseMessaging pushtoken created: $token');
-          _tokenUpdate(token);
-        }
-      }
-    }
-  }
-
-  ///
-  /// token manager - update, add to api, remove old from api
-  ///
-  void _tokenUpdate(String? newToken) async {
-    final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
-
-    late String deviceName;
-    var deviceData = <String, dynamic>{};
-    if (Platform.isAndroid) {
-      deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
-      deviceName = deviceData['device'] ?? 'Android';
-    } else if (Platform.isIOS) {
-      deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
-      deviceName = deviceData['name'] ?? 'iPhone';
-    }
-    if (oldToken != newToken) {
-      appState.isPushTokenSavedToApi = false;
-    }
-
-    if (appState.isPushTokenSavedToApi == false) {
-      final res = await _saveFcmTokenToApi(
-        DeviceModel(
-          token: newToken ?? oldToken!,
-          deviceName: deviceName,
-          type: 'FCM',
-        ),
-      );
-      if (res) {
-        await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
-      }
-    }
-    // eventBus.fire(FcmTokenChangedEvent(newToken));
-    // }
-  }
-
-  ///
-  /// Add new FCM push token to API
-  ///
-  Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
-    try {
-      debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
-      final resp = await api.client.post(
-        '/push/registration',
-        data: device.toJson(),
-      );
-      if (resp.statusCode == 200) {
-        appState.isPushTokenSavedToApi = true;
-      }
-
-      return resp.statusCode == 200;
-    } catch (e) {
-      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
-      if (apiError.message.containsKey('error_code')) {
-        if (apiError.message['error_code'] == 256) {
-          appState.isPushTokenSavedToApi = true;
-        }
-      }
-      return false;
-    }
   }
 
   ///
@@ -320,33 +164,6 @@ class NotificationsService with ForegroundMessagesMixin {
       }
     }
   }
-
-  Map<String, dynamic> _readAndroidBuildData(AndroidDeviceInfo build) {
-    return <String, dynamic>{
-      'device': build.device,
-    };
-  }
-
-  Map<String, dynamic> _readIosDeviceInfo(IosDeviceInfo data) {
-    return <String, dynamic>{
-      'name': data.name,
-    };
-  }
-
-  // void startListenAwesomeNotificationsPressed() {
-  //   AwesomeNotifications().setListeners(onActionReceivedMethod: (ReceivedAction receivedAction) async {
-  //     try {
-  //       final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
-  //       if (push.objectId != null && push.objectId!.isNotEmpty) {
-  //         await markTradeNotificationsAsRead(tradeId: push.objectId!);
-  //         return await notificationHandleRoutes(push.objectId!);
-  //       }
-  //     } catch (e) {
-  //       debugPrint('++++error parsing push in actionStream - $e');
-  //       return Future.delayed(Duration.zero);
-  //     }
-  //   });
-  // }
 
   Future<bool> authenticateWithBiometrics() async {
     bool authenticated = false;

@@ -14,7 +14,6 @@ import 'package:agoradesk/features/profile/data/models/user_device_settings.dart
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/objectbox.g.dart';
 import 'package:dio/dio.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -318,7 +317,6 @@ class AuthService with FileUtilsMixin {
   Future<bool> logOut({bool sendRequest = false}) async {
     _api.accessToken = null;
     _appState.hasPinCode = false;
-    await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
     _userSettingsBox.removeAll();
     _authStateController.add(AuthState.loggedOut);

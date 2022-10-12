@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
@@ -43,17 +42,14 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:get_it/get_it.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:plausible_analytics/plausible_analytics.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
 
@@ -82,7 +78,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
-  Plausible? _plausible;
   late final AppState appState;
 
   Uri? _initialUri;
@@ -134,7 +129,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     GetIt.I.registerSingleton<AppRouter>(_appRouter);
     router = GetIt.I<AppRouter>();
     _notificationsService = NotificationsService(
-      fcm: GetIt.I<AppParameters>().includeFcm ? FirebaseMessaging.instance : null,
       api: _api,
       secureStorage: _secureStorage,
       accountService: _accountService,
@@ -154,7 +148,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initGlobalEvents();
     _initHttpHandler();
     _initUserAgent();
-    _initPlausible();
     _initUploadingStatusListener();
 
     // this listener calls if the app is not terminated
@@ -278,20 +271,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   Future<void> _afterConfigInit() async {}
 
   ///
-  /// Initialize Mixpanel Analytics
-  ///
-  Future<void> _initPlausible() async {
-    if (GetIt.I<AppParameters>().includeFcm && ObjectBox.userLocalSettings.sentryIsOn == true) {
-      try {
-        _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
-      } catch (e, stackTrace) {
-        debugPrint('[$runtimeType] Mixpanel Error: $e');
-        Sentry.captureException(e, stackTrace: stackTrace);
-      }
-    }
-  }
-
-  ///
   /// Images uploading in chats - spinner over all app
   ///
   void _initUploadingStatusListener() {
@@ -350,7 +329,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   /// Handle [AuthState]
   ///
   void _initAuthHandler() {
-    _notificationsService.getToken();
     _authService.onAuthStateChange.listen((authState) {
       debugPrint('++++[$runtimeType] AuthState: $authState');
       // handle login & logout
@@ -359,7 +337,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           _initStartRoute();
           break;
         case AuthState.loggedIn:
-          _notificationsService.getToken();
           _pollingService.getBalances();
           _initStartRoute();
           break;
@@ -483,14 +460,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
   void _initGlobalEvents() {
     eventBus
-      ..on<AnalyticsEvent>().listen((e) {
-        debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
-        if (appState.initialized) {
-          if (_plausible != null) {
-            _plausible!.event(name: e.event, referrer: e.properties.toString());
-          }
-        }
-      })
       ..on<LocaleChangedEvent>().listen((e) {
         // _api.locale = e.locale;
       })
@@ -628,7 +597,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           initialData: ConnectivityResult.none,
         ),
         Provider.value(value: _api),
-        Provider.value(value: _plausible),
         Provider.value(value: _adsRepository),
         Provider.value(value: _tradeRepository),
         Provider.value(value: _authService),
