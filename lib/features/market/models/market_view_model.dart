@@ -315,7 +315,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     for (var val in ads) {
       final left = val;
       for (final right in adsInForIterate) {
-        print('+++&&&&& - ${right.profile?.username}');
         if (left.profile?.username == right.profile?.username &&
             left.tempPrice == right.tempPrice &&
             left.currency == right.currency &&
