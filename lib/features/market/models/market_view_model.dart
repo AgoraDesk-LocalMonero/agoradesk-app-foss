@@ -16,7 +16,6 @@ import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:collection/collection.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
@@ -309,38 +308,46 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   }
 
   List<AdModel> _removeDuplicates(List<AdModel> adsIn) {
-    late final List<AdModel> res;
-    late final List<AdModel> adsForCompress;
-    if (ads.isNotEmpty) {
-      res = [
-        ...[ads.last],
-        ...adsIn
-      ];
-      adsForCompress = [
-        ...[ads.last],
-        ...adsIn
-      ];
-    } else {
-      res = [...adsIn];
-      adsForCompress = [...adsIn];
+    for (final aaaa in adsIn) {}
+    final List<AdModel> adsInForCompress = [...adsIn];
+    final List<AdModel> adsInForIterate = [...adsIn];
+
+    for (var val in ads) {
+      final left = val;
+      for (final right in adsInForIterate) {
+        print('+++&&&&& - ${right.profile?.username}');
+        if (left.profile?.username == right.profile?.username &&
+            left.tempPrice == right.tempPrice &&
+            left.currency == right.currency &&
+            left.onlineProvider == right.onlineProvider &&
+            left.asset == right.asset &&
+            left.tradeType == right.tradeType) {
+          adsInForCompress.remove(right);
+        }
+      }
     }
-    adsForCompress.forEachIndexed((index, val) {
-      if (index < (adsForCompress.length - 1)) {
-        final left = val;
-        final right = adsForCompress[index + 1];
+
+    adsInForIterate.clear();
+    adsInForIterate.addAll(adsInForCompress);
+
+    final List<String> doNotRemoveIds = [];
+    for (var val in adsInForIterate) {
+      final left = val;
+      for (final right in adsInForIterate) {
         if (left.id != right.id &&
+            !doNotRemoveIds.contains(right.id) &&
             left.profile?.username == right.profile?.username &&
             left.tempPrice == right.tempPrice &&
             left.currency == right.currency &&
             left.onlineProvider == right.onlineProvider &&
             left.asset == right.asset &&
             left.tradeType == right.tradeType) {
-          res.remove(right);
+          adsInForCompress.remove(right);
+          doNotRemoveIds.add(left.id ?? '');
         }
       }
-    });
-    res.removeAt(0);
-    return res;
+    }
+    return adsInForCompress;
   }
 
   void changeOnlineProvider(OnlineProvider? val) {
