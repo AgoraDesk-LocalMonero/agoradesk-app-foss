@@ -1,10 +1,8 @@
 ### Updates
-1. Biometric authentication (fingerprints, Face ID).
-2. Ability to post notes on a user.
-3. Fix: immediate trade update after the app is resumed.
-4. Info about time until seller can cancel a trade in a chat.
-5. Fix: Redirect to the trade screen when terminated app opens with click on the push message.
-6. Fix: App freezed due to Android 13 plugins conflict.
+1. Fix: some ads are visible on the website but not in the app.
+2. Improved top of the chat page.
+3. Fix: messages doubling in the chat.
+4. Fix: the app is the missing the "XMR you receive".
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
