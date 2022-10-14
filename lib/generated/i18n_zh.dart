@@ -8473,6 +8473,11 @@ class I18nZh extends I18n {
   }
 
   @override
+  String app_for_sum(Object val) {
+    return 'for $val';
+  }
+
+  @override
   String get app_buy_crypto => 'Buy crypto from';
 
   @override
@@ -8573,6 +8578,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_via => 'via';
 
   @override
   String get app_one_percent => '1% fee';

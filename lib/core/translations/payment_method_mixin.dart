@@ -16,12 +16,12 @@ mixin PaymentMethodsMixin {
     "PERFECT_MONEY",
   ];
 
-  Widget getPaymentMethodIcon(BuildContext context, String code) {
+  Widget getPaymentMethodIcon(BuildContext context, String code, {double size = 14}) {
     try {
       return SvgPicture.asset(
         'assets/banks/$code.svg',
-        height: 14,
-        width: 14,
+        height: size,
+        width: size,
       );
     } catch (e) {
       debugPrint('[getPaymentMethodIcon error] $e');

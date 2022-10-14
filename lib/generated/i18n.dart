@@ -16594,6 +16594,12 @@ abstract class I18n {
   /// **'Selling {asset} {amount} to {username}'**
   String app_selling_to(Object asset, Object amount, Object username);
 
+  /// No description provided for @app_for_sum.
+  ///
+  /// In en, this message translates to:
+  /// **'for {val}'**
+  String app_for_sum(Object val);
+
   /// No description provided for @app_buy_crypto.
   ///
   /// In en, this message translates to:
@@ -16797,6 +16803,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Gallery'**
   String get app_gallery;
+
+  /// No description provided for @app_via.
+  ///
+  /// In en, this message translates to:
+  /// **'via'**
+  String get app_via;
 
   /// No description provided for @app_one_percent.
   ///
