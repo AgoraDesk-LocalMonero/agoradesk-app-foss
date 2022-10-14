@@ -308,7 +308,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   }
 
   List<AdModel> _removeDuplicates(List<AdModel> adsIn) {
-    for (final aaaa in adsIn) {}
     final List<AdModel> adsInForCompress = [...adsIn];
     final List<AdModel> adsInForIterate = [...adsIn];
 
