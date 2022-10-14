@@ -1,6 +1,7 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_loading_indicator.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/close_icon_box.dart';
@@ -15,8 +16,8 @@ import 'package:get_it/get_it.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 import 'package:vm/vm.dart';
 
-class ChatTab extends StatelessWidget {
-  const ChatTab({
+class ChatTab extends StatelessWidget with PaymentMethodsMixin {
+  ChatTab({
     Key? key,
     required this.model,
     required this.noteOnUser,
@@ -42,7 +43,7 @@ class ChatTab extends StatelessWidget {
                       ? const AgoraLoadingIndicator()
                       : RepaintBoundary(
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(16, 22, 16, 0),
+                            padding: const EdgeInsets.fromLTRB(16, 38, 16, 0),
                             child: ListView(
                               controller: model.chatController,
                               reverse: true,
@@ -63,21 +64,6 @@ class ChatTab extends StatelessWidget {
             );
           });
         });
-  }
-
-  Widget _tradeInfoLine(BuildContext context, TradeViewModel model) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
-        child: Text(
-          '${model.buySellStr(context)} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
-          textAlign: TextAlign.center,
-          style: context.txtBodySmallN60N50,
-          maxLines: 1,
-        ),
-      ),
-    );
   }
 
   Widget _sendMessageField(BuildContext context, TradeViewModel model) {
@@ -214,6 +200,48 @@ class ChatTab extends StatelessWidget {
             ),
           )
         : const SizedBox();
+  }
+
+  Widget _tradeInfoLine(BuildContext context, TradeViewModel model) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              '${model.buySellStr(context)} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
+              textAlign: TextAlign.center,
+              style: context.txtBodySmallN60N50,
+              maxLines: 2,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  context.intl.app_for_sum(model.tradeForScreen.amount) + ' ' + model.tradeForScreen.currency,
+                  style: context.txtBodySmallN60N50,
+                ),
+                const SizedBox(width: 4),
+                Text(
+                  context.intl.app_via,
+                  style: context.txtBodySmallN60N50,
+                ),
+                const SizedBox(width: 4),
+                getPaymentMethodIcon(context, model.tradeForScreen.advertisement.paymentMethod!, size: 10),
+                const SizedBox(width: 2),
+                Text(
+                  getPaymentMethodName(context, model.tradeForScreen.advertisement.paymentMethod!,
+                      model.tradeForScreen.advertisement.tradeType),
+                  style: context.txtBodySmallN60N50,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget _buildWarning(BuildContext context) {

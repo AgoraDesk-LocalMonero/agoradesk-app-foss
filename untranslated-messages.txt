@@ -1,5 +1,6 @@
 {
   "es": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -225,6 +226,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -259,6 +261,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -266,6 +269,7 @@
   ],
 
   "it": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -491,6 +495,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -525,6 +530,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -532,6 +538,7 @@
   ],
 
   "ko": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -757,6 +764,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -791,6 +799,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -798,6 +807,7 @@
   ],
 
   "pl": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy",
     "ads",
     "unknown_error",
@@ -1295,6 +1305,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -1329,6 +1340,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -1336,6 +1348,7 @@
   ],
 
   "pt": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -1561,6 +1574,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -1595,6 +1609,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -1602,6 +1617,7 @@
   ],
 
   "ru": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -1827,6 +1843,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -1861,6 +1878,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -1868,6 +1886,7 @@
   ],
 
   "zh": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -2093,6 +2112,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -2127,6 +2147,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
@@ -2134,6 +2155,7 @@
   ],
 
   "zh_TW": [
+    "method250Sbcash8722Sbon8722Sbdelivery",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -2359,6 +2381,7 @@
     "app_able_to_cancel_now",
     "app_buying_from",
     "app_selling_to",
+    "app_for_sum",
     "app_buy_crypto",
     "app_sell_crypto",
     "app_intall_trade_title",
@@ -2393,6 +2416,7 @@
     "app_buyer_settlement_fee_level_description",
     "app_change_vacation_settings",
     "app_gallery",
+    "app_via",
     "app_one_percent",
     "app_final_amount",
     "app_note_label",

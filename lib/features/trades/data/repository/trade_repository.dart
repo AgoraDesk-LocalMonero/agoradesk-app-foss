@@ -75,9 +75,11 @@ class TradeRepository with ErrorParseMixin {
     if (res.isRight) {
       for (final m in res.right.data) {
         final messageWithTradeId = m.copyWith(tradeId: tradeId);
-        messages.insert(0, MessageBoxModel.fromMessageModel(messageWithTradeId));
-        newMessages.insert(0, MessageBoxModel.fromMessageModel(messageWithTradeId));
-        _messagesBox.put(MessageBoxModel.fromMessageModel(messageWithTradeId));
+        if (checkMessageUniquess(messageWithTradeId)) {
+          messages.insert(0, MessageBoxModel.fromMessageModel(messageWithTradeId));
+          newMessages.insert(0, MessageBoxModel.fromMessageModel(messageWithTradeId));
+          _messagesBox.put(MessageBoxModel.fromMessageModel(messageWithTradeId));
+        }
       }
     } else {
       if (!polling) {
@@ -91,6 +93,12 @@ class TradeRepository with ErrorParseMixin {
     }
     messages.sort((a, b) => b.createdAt.compareTo(a.createdAt));
     return messages;
+  }
+
+  bool checkMessageUniquess(MessageModel message) {
+    final query = _messagesBox.query(MessageBoxModel_.messageId.equals(message.messageId ?? 'HFTyrdYDRTr')).build();
+    final res = query.find();
+    return res.isEmpty;
   }
 
   ///
