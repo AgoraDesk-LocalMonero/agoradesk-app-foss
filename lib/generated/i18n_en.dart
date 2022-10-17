@@ -4123,6 +4123,9 @@ class I18nEn extends I18n {
   String get method250Sbcreditcard => 'Credit card';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get method250Sbcryptocurrency => 'Cryptocurrency';
 
   @override

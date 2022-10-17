@@ -152,6 +152,7 @@ mixin PaymentMethodsMixin {
       'POSTAL_ORDER': 'Postal order',
       'CASH': context.intl.method250Sbcash,
       'MERCADO_PAGO': 'Mercado Pago',
+      'YOOMONEY': context.intl.method250Sbyoomoney,
     };
   }
 }

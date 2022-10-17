@@ -4123,6 +4123,9 @@ class I18nPl extends I18n {
   String get method250Sbcreditcard => 'Karta kredytowa';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get method250Sbcryptocurrency => 'Kryptowaluta';
 
   @override

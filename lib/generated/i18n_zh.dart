@@ -4123,6 +4123,9 @@ class I18nZh extends I18n {
   String get method250Sbcreditcard => '信用卡';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get method250Sbcryptocurrency => '加密币';
 
   @override

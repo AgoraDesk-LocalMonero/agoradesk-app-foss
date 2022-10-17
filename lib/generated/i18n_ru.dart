@@ -4123,6 +4123,9 @@ class I18nRu extends I18n {
   String get method250Sbcreditcard => 'Кредитная карта';
 
   @override
+  String get method250Sbyoomoney => 'ЮMoney';
+
+  @override
   String get method250Sbcryptocurrency => 'Криптовалюты';
 
   @override

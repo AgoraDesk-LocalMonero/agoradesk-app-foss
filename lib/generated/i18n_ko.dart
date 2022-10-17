@@ -4123,6 +4123,9 @@ class I18nKo extends I18n {
   String get method250Sbcreditcard => '신용카드';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get method250Sbcryptocurrency => '가상화폐';
 
   @override

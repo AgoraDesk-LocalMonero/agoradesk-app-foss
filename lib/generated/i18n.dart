@@ -8290,6 +8290,12 @@ abstract class I18n {
   /// **'Credit card'**
   String get method250Sbcreditcard;
 
+  /// No description provided for @method250Sbyoomoney.
+  ///
+  /// In en, this message translates to:
+  /// **'YooMoney'**
+  String get method250Sbyoomoney;
+
   /// No description provided for @method250Sbcryptocurrency.
   ///
   /// In en, this message translates to:
