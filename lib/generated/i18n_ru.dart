@@ -8249,9 +8249,6 @@ class I18nRu extends I18n {
   String get my_profile => 'Мой профиль';
 
   @override
-  String get country => 'Страна';
-
-  @override
   String get choose_ad_default_region => 'Выберите регион по умолчанию для рекламы';
 
   @override

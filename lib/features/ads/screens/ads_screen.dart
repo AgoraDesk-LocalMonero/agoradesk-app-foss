@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -39,6 +38,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class AdsScreen extends StatefulWidget {
   const AdsScreen({
@@ -444,14 +444,15 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               ),
             ],
           ),
-          model.displayFilter ? _adsFilter(context, model) : const SizedBox(),
+          model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
         ],
       ),
     );
   }
 
-  Widget _adsFilter(BuildContext context, AdsViewModel model) {
+  Widget _buildExpandedFilter(BuildContext context, AdsViewModel model) {
     final widthHalf = MediaQuery.of(context).size.width / 2 - 16;
+    const marginTextList = 4.0;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -461,7 +462,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
           context.intl.dashboard250Sbads250Sbfilter250Sbvisibility,
           style: context.txtBodySmallN60,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: marginTextList),
         DropdownSearch<String>(
           key: model.visibilityDropdownKey,
           dropdownButtonProps: context.dropdownButtonProps,
@@ -478,10 +479,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
         ),
         const SizedBox(height: 8),
         Text(
-          context.intl.country,
+          context.intl.post8722Sbad250Sbcountry250Sbtitle,
           style: context.txtBodySmallN60,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: marginTextList),
         DropdownSearch<String>(
           key: model.countryDropdownKey,
           dropdownButtonProps: context.dropdownButtonProps,
@@ -500,7 +501,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
           context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbcurrency,
           style: context.txtBodySmallN60,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: marginTextList),
         DropdownSearch<CurrencyModel?>(
           key: model.currencyDropdownKey,
           dropdownButtonProps: context.dropdownButtonProps,
@@ -519,7 +520,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
           context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbpayment8722Sbmethod,
           style: context.txtBodySmallN60,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: marginTextList),
         DropdownSearch<OnlineProvider?>(
           dropdownButtonProps: context.dropdownButtonProps,
           dropdownDecoratorProps: context.dropdownDecoration,

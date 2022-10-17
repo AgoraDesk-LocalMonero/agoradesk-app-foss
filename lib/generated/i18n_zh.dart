@@ -8249,9 +8249,6 @@ class I18nZh extends I18n {
   String get my_profile => '我的简历';
 
   @override
-  String get country => '国家';
-
-  @override
   String get choose_ad_default_region => '选择广告默认区域';
 
   @override
@@ -16221,9 +16218,6 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get my_profile => '我的簡歷';
-
-  @override
-  String get country => '國家';
 
   @override
   String get choose_ad_default_region => '選擇廣告默認區域';

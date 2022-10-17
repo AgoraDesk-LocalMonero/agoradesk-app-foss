@@ -8249,9 +8249,6 @@ class I18nPl extends I18n {
   String get my_profile => 'My profile';
 
   @override
-  String get country => 'Country';
-
-  @override
   String get choose_ad_default_region => 'Choose ad default region';
 
   @override

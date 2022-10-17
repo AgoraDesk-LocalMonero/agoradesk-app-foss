@@ -8249,9 +8249,6 @@ class I18nIt extends I18n {
   String get my_profile => 'Il mio profilo';
 
   @override
-  String get country => 'paese';
-
-  @override
   String get choose_ad_default_region => 'Scegliere la regione predefinita per l\'annuncio';
 
   @override

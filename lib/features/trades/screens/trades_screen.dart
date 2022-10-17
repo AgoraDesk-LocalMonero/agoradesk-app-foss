@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -29,6 +28,7 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class TradesScreen extends StatefulWidget {
   const TradesScreen({
@@ -157,7 +157,7 @@ class _TradesScreenState extends State<TradesScreen>
       children: [
         const SizedBox(height: 8),
         Text(
-          context.intl.country,
+          context.intl.post8722Sbad250Sbcountry250Sbtitle,
           style: context.txtBodySmallN60,
         ),
         const SizedBox(height: 8),

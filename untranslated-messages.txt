@@ -1246,7 +1246,6 @@
     "verifying_the_code",
     "language",
     "my_profile",
-    "country",
     "choose_ad_default_region",
     "knowledge_base",
     "report_this_ad",

@@ -8249,9 +8249,6 @@ class I18nKo extends I18n {
   String get my_profile => '내 프로필';
 
   @override
-  String get country => '국가';
-
-  @override
   String get choose_ad_default_region => '광고 기본 지역 선택';
 
   @override

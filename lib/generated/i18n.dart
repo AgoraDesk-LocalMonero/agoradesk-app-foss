@@ -16222,12 +16222,6 @@ abstract class I18n {
   /// **'My profile'**
   String get my_profile;
 
-  /// No description provided for @country.
-  ///
-  /// In en, this message translates to:
-  /// **'Country'**
-  String get country;
-
   /// No description provided for @choose_ad_default_region.
   ///
   /// In en, this message translates to:
