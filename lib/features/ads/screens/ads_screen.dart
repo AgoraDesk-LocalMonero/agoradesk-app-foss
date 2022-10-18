@@ -10,6 +10,7 @@ import 'package:agoradesk/core/widgets/branded/agora_switcher.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_n80n30.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
+import 'package:agoradesk/core/widgets/branded/button_square_icon_child.dart';
 import 'package:agoradesk/core/widgets/branded/button_text_primary70.dart';
 import 'package:agoradesk/core/widgets/branded/container_info_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
@@ -17,6 +18,8 @@ import 'package:agoradesk/core/widgets/branded/dropdown_button_sized.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
+import 'package:agoradesk/features/ads/data/models/sorting_direction_type.dart';
+import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/ads_view_model.dart';
 import 'package:agoradesk/features/ads/models/agora_menu_item.dart';
@@ -34,6 +37,7 @@ import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
@@ -439,131 +443,204 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
                 child: FilterButton(
                   selected: model.displayFilter,
-                  onPressed: () => model.displayFilter = !model.displayFilter,
+                  onPressed: () => _buildExpandedFilter(context, model),
                 ),
               ),
             ],
           ),
-          model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
+          // model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
         ],
       ),
     );
   }
 
-  Widget _buildExpandedFilter(BuildContext context, AdsViewModel model) {
+  void _buildExpandedFilter(BuildContext context, AdsViewModel model) {
     final widthHalf = MediaQuery.of(context).size.width / 2 - 16;
     const marginTextList = 4.0;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 8),
-        Text(
-          context.intl.dashboard250Sbads250Sbfilter250Sbvisibility,
-          style: context.txtBodySmallN60,
+    const radius = Radius.circular(20);
+    final height = MediaQuery.of(context).size.height - 70;
+
+    showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        isDismissible: true,
+        enableDrag: true,
+        constraints: BoxConstraints(maxHeight: height),
+        clipBehavior: Clip.antiAlias,
+        backgroundColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(topLeft: radius, topRight: radius),
         ),
-        const SizedBox(height: marginTextList),
-        DropdownSearch<String>(
-          key: model.visibilityDropdownKey,
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          // itemAsString: (String? val) => getVisibilityName(val ?? 'All'),
-          asyncItems: (String? filter) => model.getVisibilityChoices(),
-          // showSearchBox: true,
-          selectedItem: model.selectedVisibility,
-          onChanged: (val) => model.handleVisibility(val),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          context.intl.post8722Sbad250Sbcountry250Sbtitle,
-          style: context.txtBodySmallN60,
-        ),
-        const SizedBox(height: marginTextList),
-        DropdownSearch<String>(
-          key: model.countryDropdownKey,
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          itemAsString: (String? code) => getCountryName(code ?? ''),
-          asyncItems: (String? filter) => model.getCountryCodes(),
-          selectedItem: model.selectedCountryCode,
-          onChanged: (val) => model.setSelectedCountryCode(val),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbcurrency,
-          style: context.txtBodySmallN60,
-        ),
-        const SizedBox(height: marginTextList),
-        DropdownSearch<CurrencyModel?>(
-          key: model.currencyDropdownKey,
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
-          asyncItems: (String? filter) => model.getCurrencies(),
-          selectedItem: model.selectedCurrency,
-          onChanged: (val) => model.selectedCurrency = val,
-        ),
-        const SizedBox(height: 8),
-        Text(
-          context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbpayment8722Sbmethod,
-          style: context.txtBodySmallN60,
-        ),
-        const SizedBox(height: marginTextList),
-        DropdownSearch<OnlineProvider?>(
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-          asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
-          selectedItem: model.selectedOnlineProvider,
-          onChanged: (val) => model.selectedOnlineProvider = val,
-        ),
-        const SizedBox(height: 8),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: widthHalf - 4,
-              child: Center(
-                child: ButtonOutlinedP80(
-                  title: context.intl.clear_all,
-                  minimumSize: const Size.fromHeight(40),
-                  onPressed: () {
-                    model.clearFilter();
-                  },
-                ),
-              ),
-            ),
-            SizedBox(
-              width: widthHalf - 4,
-              child: ButtonFilledP80(
-                title: context.intl.apply,
-                onPressed: () {
-                  model.indicatorKey.currentState?.show();
-                  model.displayFilter = false;
-                },
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 8),
-      ],
-    );
+        builder: (context) {
+          return ViewModelBuilder<AdsViewModel>(
+              model: model,
+              disposable: false,
+              builder: (context, model, child) {
+                print('+++++++++++++++++++++++++++++++++++++11 - ${model.sortingDirectionType}');
+                return Container(
+                  color: context.colSurf4Surf1,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.dashboard250Sbads250Sbfilter250Sbsort,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: marginTextList),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: DropdownSearch<SortingType?>(
+                                  key: model.sortDropdownKey,
+                                  dropdownButtonProps: context.dropdownButtonProps,
+                                  dropdownDecoratorProps: context.dropdownDecoration,
+                                  popupProps: PopupProps.dialog(
+                                    dialogProps: context.dropdownDialogProps,
+                                  ),
+                                  itemAsString: (SortingType? type) => getSortingTypeName(context, type),
+                                  asyncItems: (String? filter) => model.getSortingChoices(),
+                                  // showSearchBox: true,
+                                  selectedItem: model.selectedSorting,
+                                  onChanged: (val) => model.selectedSorting = val,
+                                ),
+                              ),
+                              ButtonSquareIconChild(
+                                child: model.sortingDirectionType == SortingDirectionType.asc
+                                    ? Icon(
+                                        AgoraFont.sortUp,
+                                        color: context.colP90,
+                                        size: 18,
+                                      )
+                                    : Icon(
+                                        AgoraFont.sortDown,
+                                        color: context.colP90,
+                                        size: 18,
+                                      ),
+                                size: const Size(40, 40),
+                                onPressed: model.changeSortingDirection,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.dashboard250Sbads250Sbfilter250Sbvisibility,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: marginTextList),
+                          DropdownSearch<String>(
+                            key: model.visibilityDropdownKey,
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.menu(
+                              menuProps: context.dropdownMenuProps,
+                              fit: FlexFit.loose,
+                            ),
+                            // itemAsString: (String? val) => getVisibilityName(val ?? 'All'),
+                            asyncItems: (String? filter) => model.getVisibilityChoices(context),
+                            // showSearchBox: true,
+                            selectedItem: model.selectedVisibility,
+                            onChanged: (val) => model.handleVisibility(val),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.post8722Sbad250Sbcountry250Sbtitle,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: marginTextList),
+                          DropdownSearch<String>(
+                            key: model.countryDropdownKey,
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.dialog(
+                              dialogProps: context.dropdownDialogProps,
+                              showSearchBox: true,
+                            ),
+                            itemAsString: (String? code) => getCountryName(code ?? ''),
+                            asyncItems: (String? filter) => model.getCountryCodes(),
+                            selectedItem: model.selectedCountryCode,
+                            onChanged: (val) => model.setSelectedCountryCode(val),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbcurrency,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: marginTextList),
+                          DropdownSearch<CurrencyModel?>(
+                            key: model.currencyDropdownKey,
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.dialog(
+                              dialogProps: context.dropdownDialogProps,
+                              showSearchBox: true,
+                            ),
+                            itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
+                            asyncItems: (String? filter) => model.getCurrencies(),
+                            selectedItem: model.selectedCurrency,
+                            onChanged: (val) => model.selectedCurrency = val,
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbpayment8722Sbmethod,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: marginTextList),
+                          DropdownSearch<OnlineProvider?>(
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.dialog(
+                              dialogProps: context.dropdownDialogProps,
+                              showSearchBox: true,
+                            ),
+                            itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
+                            asyncItems: (String? filter) =>
+                                model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                            selectedItem: model.selectedOnlineProvider,
+                            onChanged: (val) => model.selectedOnlineProvider = val,
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: widthHalf - 4,
+                                child: Center(
+                                  child: ButtonOutlinedP80(
+                                    title: context.intl.clear_all,
+                                    minimumSize: const Size.fromHeight(40),
+                                    onPressed: () {
+                                      model.clearFilter();
+                                    },
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: widthHalf - 4,
+                                child: ButtonFilledP80(
+                                  title: context.intl.apply,
+                                  onPressed: () {
+                                    model.indicatorKey.currentState?.show();
+                                    model.displayFilter = false;
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 40),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              });
+        });
   }
 
   Widget _dialogBulkDeleteAds(BuildContext context, AdsViewModel model) {
