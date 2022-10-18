@@ -477,7 +477,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               model: model,
               disposable: false,
               builder: (context, model, child) {
-                print('+++++++++++++++++++++++++++++++++++++11 - ${model.sortingDirectionType}');
                 return Container(
                   color: context.colSurf4Surf1,
                   child: Padding(
