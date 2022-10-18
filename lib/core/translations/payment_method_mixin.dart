@@ -33,7 +33,6 @@ mixin PaymentMethodsMixin {
   String getSortingTypeName(BuildContext context, SortingType? sortingType) {
     try {
       if (sortingType != null) {
-        print('+++++++++++++++++++++++++++++++++++++11 - ${sortingType.name}');
         return sortingType.translated(context);
       }
       return '';
