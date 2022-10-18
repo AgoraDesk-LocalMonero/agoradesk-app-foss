@@ -162,7 +162,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                     color: context.colSurf4Surf1,
                     child: SingleChildScrollView(
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(16, 20, 16, 10 + keybrdData.keyboardHeight),
+                        padding: EdgeInsets.fromLTRB(16, 20, 16, 20 + keybrdData.keyboardHeight),
                         child: Column(
                           children: [
                             const SizedBox(height: 12),
@@ -298,6 +298,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                       onPressed: () {
                                         model.indicatorKey.currentState?.show();
                                         model.displayFilter = false;
+                                        Navigator.of(context).pop();
                                       },
                                     ),
                                   ),

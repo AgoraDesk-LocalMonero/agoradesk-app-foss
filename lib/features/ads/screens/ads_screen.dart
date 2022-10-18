@@ -480,7 +480,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 return Container(
                   color: context.colSurf4Surf1,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
+                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
