@@ -47,6 +47,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:get_it/get_it.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -235,7 +236,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       data: mq.copyWith(
         textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,
       ),
-      child: child!,
+      child: KeyboardSizeProvider(
+        child: child!,
+      ),
     );
   }
 

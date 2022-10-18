@@ -30,6 +30,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
@@ -125,160 +126,192 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
               padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
               child: FilterButton(
                 selected: model.displayFilter,
-                onPressed: () => model.displayFilter = !model.displayFilter,
+                onPressed: () => _buildExpandedFilter(context, model),
               ),
             ),
           ],
         ),
-        model.displayFilter ? _tradesFilter(context, model) : const SizedBox(),
       ],
     );
   }
 
-  Widget _tradesFilter(BuildContext context, MarketViewModel model) {
+  void _buildExpandedFilter(BuildContext context, MarketViewModel model) {
     final widthHalf = MediaQuery.of(context).size.width / 2 - 16;
     final bool isLocalTrade = model.tradeType!.isLocal();
-    return Column(
-      children: [
-        const SizedBox(height: 12),
-        isLocalTrade
-            ? Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-                child: TextFieldSearch(
-                  initialList: const [],
-                  label: context.intl.search250Sblocation8722Sbplaceholder,
-                  decoration: context.decorationTxtFieldMain.copyWith(
-                    // labelText: context.intl.search250Sblocation8722Sbplaceholder,
-                    hintText: context.intl.search250Sblocation8722Sbplaceholder,
-                    suffixIcon: SizedBox(
-                      width: 32,
-                      child: Row(
-                        children: [
-                          AnimatedOpacity(
-                            opacity: model.displayClear ? 1.0 : 0.0,
-                            duration: const Duration(milliseconds: 800),
-                            child: model.displayClear
-                                ? ButtonSquareIcon(
-                                    iconData: AgoraFont.x,
-                                    onPressed: () => model.locationFieldClear(),
+    const radius = Radius.circular(20);
+    final height = MediaQuery.of(context).size.height - 70;
+
+    showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        isDismissible: true,
+        enableDrag: true,
+        constraints: BoxConstraints(maxHeight: height),
+        clipBehavior: Clip.antiAlias,
+        backgroundColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(topLeft: radius, topRight: radius),
+        ),
+        builder: (context) {
+          return Consumer<ScreenHeight>(builder: (context, keybrdData, child) {
+            return ViewModelBuilder<MarketViewModel>(
+                model: model,
+                disposable: false,
+                builder: (context, model, child) {
+                  return Container(
+                    color: context.colSurf4Surf1,
+                    child: SingleChildScrollView(
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(16, 20, 16, 10 + keybrdData.keyboardHeight),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 12),
+                            isLocalTrade
+                                ? Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+                                    child: TextFieldSearch(
+                                      initialList: const [],
+                                      label: context.intl.search250Sblocation8722Sbplaceholder,
+                                      decoration: context.decorationTxtFieldMain.copyWith(
+                                        // labelText: context.intl.search250Sblocation8722Sbplaceholder,
+                                        hintText: context.intl.search250Sblocation8722Sbplaceholder,
+                                        suffixIcon: SizedBox(
+                                          width: 32,
+                                          child: Row(
+                                            children: [
+                                              AnimatedOpacity(
+                                                opacity: model.displayClear ? 1.0 : 0.0,
+                                                duration: const Duration(milliseconds: 800),
+                                                child: model.displayClear
+                                                    ? ButtonSquareIcon(
+                                                        iconData: AgoraFont.x,
+                                                        onPressed: () => model.locationFieldClear(),
+                                                      )
+                                                    : const SizedBox(),
+                                              ),
+                                              const SizedBox(width: 10),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      controller: model.ctrlLocation,
+                                      future: model.findLocations,
+                                      getSelectedValue: model.addLocation,
+                                    ),
                                   )
                                 : const SizedBox(),
-                          ),
-                          const SizedBox(width: 10),
-                        ],
+                            isLocalTrade
+                                ? const CashTextField()
+                                : DropdownSearch<OnlineProvider?>(
+                                    dropdownButtonProps: context.dropdownButtonProps,
+                                    dropdownDecoratorProps: context.dropdownDecoration,
+                                    popupProps: PopupProps.dialog(
+                                      dialogProps: context.dropdownDialogProps,
+                                      showSearchBox: true,
+                                    ),
+                                    itemAsString: (OnlineProvider? method) =>
+                                        getPaymentMethodName(context, method?.code, null),
+                                    asyncItems: (String? filter) =>
+                                        model.getCountryPaymentMethods(model.selectedCountryCode),
+                                    // showSearchBox: true,
+                                    selectedItem: model.selectedOnlineProvider,
+                                    onChanged: (val) => model.changeOnlineProvider(val),
+                                  ),
+                            const SizedBox(height: 12),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SizedBox(
+                                    width: widthHalf - 4,
+                                    child: TextFormField(
+                                      controller: model.ctrlAmount,
+                                      decoration: context.decorationTxtFieldMain.copyWith(
+                                        hintText: I18n.of(context)!.enter_amount,
+                                        errorText: (model.amountInputValid) ? null : ' ',
+                                        contentPadding: const EdgeInsets.fromLTRB(10, 20, 0, 20),
+                                      ),
+                                      keyboardType: const TextInputType.numberWithOptions(decimal: false),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: widthHalf - 4,
+                                    child: DropdownSearch<CurrencyModel?>(
+                                      key: model.currencyDropdownKey,
+                                      dropdownButtonProps: context.dropdownButtonProps,
+                                      dropdownDecoratorProps: context.dropdownDecoration,
+                                      popupProps: PopupProps.dialog(
+                                        dialogProps: context.dropdownDialogProps,
+                                        showSearchBox: true,
+                                      ),
+                                      // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
+                                      itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
+                                      asyncItems: (String? filter) => model.getCurrenciesFromPaymentMethod(),
+                                      // showSearchBox: true,
+                                      selectedItem: model.selectedCurrency,
+                                      onChanged: (val) => model.changeSelectedCurrency(val),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            isLocalTrade
+                                ? const SizedBox()
+                                : Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+                                    child: DropdownSearch<String>(
+                                      key: model.countryDropdownKey,
+                                      dropdownButtonProps: context.dropdownButtonProps,
+                                      dropdownDecoratorProps: context.dropdownDecoration,
+                                      popupProps: PopupProps.dialog(
+                                        dialogProps: context.dropdownDialogProps,
+                                        showSearchBox: true,
+                                      ),
+                                      itemAsString: (String? code) => getCountryName(code ?? ''),
+                                      asyncItems: (String? filter) => model.getCountryCodes(),
+                                      // showSearchBox: true,
+                                      selectedItem: model.selectedCountryCode,
+                                      onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val),
+                                    ),
+                                  ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SizedBox(
+                                    width: widthHalf - 4,
+                                    child: Center(
+                                      child: ButtonOutlinedP80(
+                                        title: context.intl.clear_all,
+                                        minimumSize: const Size.fromHeight(40),
+                                        onPressed: model.clearFilter,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: widthHalf - 4,
+                                    child: ButtonFilledP80(
+                                      title: I18n.of(context)!.apply,
+                                      active: !isLocalTrade || model.isLocalFilterReadyToSearch(),
+                                      onPressed: () {
+                                        model.indicatorKey.currentState?.show();
+                                        model.displayFilter = false;
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  controller: model.ctrlLocation,
-                  future: model.findLocations,
-                  getSelectedValue: model.addLocation,
-                ),
-              )
-            : const SizedBox(),
-        isLocalTrade
-            ? const CashTextField()
-            : DropdownSearch<OnlineProvider?>(
-                dropdownButtonProps: context.dropdownButtonProps,
-                dropdownDecoratorProps: context.dropdownDecoration,
-                popupProps: PopupProps.dialog(
-                  dialogProps: context.dropdownDialogProps,
-                  showSearchBox: true,
-                ),
-                itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-                asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
-                // showSearchBox: true,
-                selectedItem: model.selectedOnlineProvider,
-                onChanged: (val) => model.changeOnlineProvider(val),
-              ),
-        const SizedBox(height: 12),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: widthHalf - 4,
-                child: TextFormField(
-                  controller: model.ctrlAmount,
-                  decoration: context.decorationTxtFieldMain.copyWith(
-                    hintText: I18n.of(context)!.enter_amount,
-                    errorText: (model.amountInputValid) ? null : ' ',
-                    contentPadding: const EdgeInsets.fromLTRB(10, 20, 0, 20),
-                  ),
-                  keyboardType: const TextInputType.numberWithOptions(decimal: false),
-                ),
-              ),
-              SizedBox(
-                width: widthHalf - 4,
-                child: DropdownSearch<CurrencyModel?>(
-                  key: model.currencyDropdownKey,
-                  dropdownButtonProps: context.dropdownButtonProps,
-                  dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.dialog(
-                    dialogProps: context.dropdownDialogProps,
-                    showSearchBox: true,
-                  ),
-                  // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
-                  itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
-                  asyncItems: (String? filter) => model.getCurrenciesFromPaymentMethod(),
-                  // showSearchBox: true,
-                  selectedItem: model.selectedCurrency,
-                  onChanged: (val) => model.changeSelectedCurrency(val),
-                ),
-              ),
-            ],
-          ),
-        ),
-        isLocalTrade
-            ? const SizedBox()
-            : Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-                child: DropdownSearch<String>(
-                  key: model.countryDropdownKey,
-                  dropdownButtonProps: context.dropdownButtonProps,
-                  dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.dialog(
-                    dialogProps: context.dropdownDialogProps,
-                    showSearchBox: true,
-                  ),
-                  itemAsString: (String? code) => getCountryName(code ?? ''),
-                  asyncItems: (String? filter) => model.getCountryCodes(),
-                  // showSearchBox: true,
-                  selectedItem: model.selectedCountryCode,
-                  onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val),
-                ),
-              ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: widthHalf - 4,
-                child: Center(
-                  child: ButtonOutlinedP80(
-                    title: context.intl.clear_all,
-                    minimumSize: const Size.fromHeight(40),
-                    onPressed: model.clearFilter,
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: widthHalf - 4,
-                child: ButtonFilledP80(
-                  title: I18n.of(context)!.apply,
-                  active: !isLocalTrade || model.isLocalFilterReadyToSearch(),
-                  onPressed: () {
-                    model.indicatorKey.currentState?.show();
-                    model.displayFilter = false;
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
+                  );
+                });
+          });
+        });
   }
 
   Widget _buildAdsList(BuildContext context, MarketViewModel model) {
