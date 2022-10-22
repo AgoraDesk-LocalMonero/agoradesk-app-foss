@@ -1,14 +1,12 @@
-import 'dart:convert';
-
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/packages/mapbox/mapbox_location.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/mapbox/types.dart';
+import 'package:flutter/foundation.dart';
+import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 
 class PlacesSearch {
-  /// API Key of the MapBox.
-  final String apiKey;
-
   /// Specify the user’s language. This parameter controls the language of the text supplied in responses.
   ///
   /// Check the full list of [supported languages](https://docs.mapbox.com/api/search/#language-coverage) for the MapBox API
@@ -29,10 +27,7 @@ class PlacesSearch {
   /// For more information on the available types, see the [data types section](https://docs.mapbox.com/api/search/geocoding/#data-types).
   final PlaceType? types;
 
-  final String _url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
-
   PlacesSearch({
-    required this.apiKey,
     this.country,
     this.limit,
     this.language,
@@ -40,8 +35,8 @@ class PlacesSearch {
   });
 
   String _createUrl(String queryText, [MapboxLocation? location]) {
+    final String _url = GetIt.I<AppParameters>().urlApiBase + '/mapbox/geocoding/places/';
     String finalUrl = '$_url${Uri.encodeFull(queryText)}.json?';
-    finalUrl += 'access_token=$apiKey';
 
     if (location != null) {
       finalUrl += '&proximity=${location.lng}%2C${location.lat}';
@@ -72,11 +67,11 @@ class PlacesSearch {
   }) async {
     String url = _createUrl(queryText, location);
     final response = await http.get(Uri.parse(url));
-
-    if (response.body.contains('message')) {
-      throw Exception(json.decode(response.body)['message']);
+    try {
+      return Predictions.fromRawJson(response.body).features;
+    } catch (e) {
+      debugPrint('[++++ places search error] - $e');
+      return [];
     }
-
-    return Predictions.fromRawJson(response.body).features;
   }
 }

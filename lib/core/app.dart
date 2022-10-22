@@ -126,7 +126,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       ObjectBox.s.box<MessageBoxModel>(),
     );
     _placesSearch = PlacesSearch(
-      apiKey: GetIt.I<AppParameters>().mapboxToken,
       limit: 20,
     );
     _appRouter = AppRouter(

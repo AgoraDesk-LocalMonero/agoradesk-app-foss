@@ -23,7 +23,6 @@ dependencies:
   event_bus: ^2.0.0
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2
-#  in_app_review: ^2.0.4
   url_launcher: ^6.0.17
   intl: ^0.17.0
   rxdart: ^0.27.3
@@ -54,8 +53,6 @@ dependencies:
   dropdown_search: ^5.0.3
   markdown_widget: ^1.2.9
   expandable: ^5.0.1
-  #  flutter_mapbox_autocomplete: ^2.0.0
-  mapbox_search: ^3.0.1+2
   #  readmore: ^2.1.0
   flutter_svg: ^1.1.0
   uni_links: ^0.5.1
@@ -82,8 +79,8 @@ dependencies:
   flutter_keyboard_size: ^1.0.1
 
 dependency_overrides:
-#  flutter_foreground_task:
-#    path: ../flutter_foreground_task
+  #  flutter_foreground_task:
+  #    path: ../flutter_foreground_task
   flutter_foreground_task:
     git:
       url: https://github.com/sergdeus/flutter_foreground_task

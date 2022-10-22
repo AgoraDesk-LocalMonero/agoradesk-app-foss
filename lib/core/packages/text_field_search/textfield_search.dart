@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldSearch extends StatefulWidget {
@@ -158,7 +159,7 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
     }
 
     // throw error if we don't have an initial list or a future
-    if (widget.initialList == null && widget.future == null) {
+    if (widget.future == null) {
       throw ('Error: Missing required initial list or future that returns list');
     }
     if (widget.future != null) {
@@ -264,13 +265,11 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
 
   /// A default loading indicator to display when executing a Future
   Widget _loadingIndicator() {
-    return SizedBox(
+    return const SizedBox(
       width: 50,
       height: 50,
       child: Center(
-        child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).colorScheme.secondary),
-        ),
+        child: CupertinoActivityIndicator(),
       ),
     );
   }
@@ -409,7 +408,7 @@ class SearchItem {
     try {
       countryCode = place.context?.last.toJson()['short_code'].toString().toUpperCase();
     } catch (e) {
-      debugPrint('++++fromPlace error - ${e}');
+      debugPrint('++++fromPlace error - $e');
     }
     return SearchItem(
       label: place.placeName ?? '',

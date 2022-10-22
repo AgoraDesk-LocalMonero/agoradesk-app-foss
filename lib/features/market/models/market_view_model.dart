@@ -69,6 +69,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   List<String> assetMenu = [];
   bool _reloadPaymentMethods = true;
   bool displayFilterMessage = false;
+  bool filterIsOpened = false;
 
   bool _loadingAds = false;
   bool initialLoading = true;
@@ -134,7 +135,9 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
 
   @override
   void onAfterBuild() async {
-    indicatorKey.currentState?.show();
+    if (!filterIsOpened) {
+      indicatorKey.currentState?.show();
+    }
   }
 
   void initMenus() {
@@ -262,6 +265,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     bool loadMore = false,
     bool reccursion = false,
   }) async {
+    print('+++++++++++++++++++++++++++++++++++++11666666');
     if (!loadingAds) {
       displayFilterMessage = false;
       loadingAds = true;
@@ -412,7 +416,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     }
     _displayFilter = displayFilter ?? _displayFilter;
     if (tradeType != null && tradeType.isLocal()) {
-      _displayFilter = true;
       reloadAds = false;
       displayFilterMessage = true;
       ads.clear();

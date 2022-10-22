@@ -140,7 +140,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
     final bool isLocalTrade = model.tradeType!.isLocal();
     const radius = Radius.circular(20);
     final height = MediaQuery.of(context).size.height - 70;
-
+    model.filterIsOpened = true;
     showModalBottomSheet(
         context: context,
         isScrollControlled: true,
@@ -312,7 +312,9 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                   );
                 });
           });
-        });
+        }).whenComplete(() {
+      model.filterIsOpened = false;
+    });
   }
 
   Widget _buildAdsList(BuildContext context, MarketViewModel model) {
