@@ -35,6 +35,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Exit if not on main branch
+        if: endsWith(github.ref, 'main') == false
+        run: exit -1
+
       - name: AgoradDesk decrypt secret
         env:
           RELEASE_KEYSTORE_SECRET: ${{ secrets.RELEASE_AGORADESK_KEYSTORE_SECRET }}

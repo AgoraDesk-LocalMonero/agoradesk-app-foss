@@ -8266,6 +8266,12 @@ abstract class I18n {
   /// **'Cash by mail'**
   String get method250Sbcash8722Sbby8722Sbmail;
 
+  /// No description provided for @method250Sbcash8722Sbon8722Sbdelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash on delivery'**
+  String get method250Sbcash8722Sbon8722Sbdelivery;
+
   /// No description provided for @method250Sbcash8722Sbdeposit.
   ///
   /// In en, this message translates to:
@@ -8283,6 +8289,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Credit card'**
   String get method250Sbcreditcard;
+
+  /// No description provided for @method250Sbyoomoney.
+  ///
+  /// In en, this message translates to:
+  /// **'YooMoney'**
+  String get method250Sbyoomoney;
 
   /// No description provided for @method250Sbcryptocurrency.
   ///
@@ -16210,12 +16222,6 @@ abstract class I18n {
   /// **'My profile'**
   String get my_profile;
 
-  /// No description provided for @country.
-  ///
-  /// In en, this message translates to:
-  /// **'Country'**
-  String get country;
-
   /// No description provided for @choose_ad_default_region.
   ///
   /// In en, this message translates to:
@@ -16588,6 +16594,12 @@ abstract class I18n {
   /// **'Selling {asset} {amount} to {username}'**
   String app_selling_to(Object asset, Object amount, Object username);
 
+  /// No description provided for @app_for_sum.
+  ///
+  /// In en, this message translates to:
+  /// **'for {val}'**
+  String app_for_sum(Object val);
+
   /// No description provided for @app_buy_crypto.
   ///
   /// In en, this message translates to:
@@ -16791,6 +16803,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Gallery'**
   String get app_gallery;
+
+  /// No description provided for @app_via.
+  ///
+  /// In en, this message translates to:
+  /// **'via'**
+  String get app_via;
 
   /// No description provided for @app_one_percent.
   ///

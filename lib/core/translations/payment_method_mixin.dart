@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
@@ -16,16 +17,28 @@ mixin PaymentMethodsMixin {
     "PERFECT_MONEY",
   ];
 
-  Widget getPaymentMethodIcon(BuildContext context, String code) {
+  Widget getPaymentMethodIcon(BuildContext context, String code, {double size = 14}) {
     try {
       return SvgPicture.asset(
         'assets/banks/$code.svg',
-        height: 14,
-        width: 14,
+        height: size,
+        width: size,
       );
     } catch (e) {
       debugPrint('[getPaymentMethodIcon error] $e');
       return const SizedBox();
+    }
+  }
+
+  String getSortingTypeName(BuildContext context, SortingType? sortingType) {
+    try {
+      if (sortingType != null) {
+        return sortingType.translated(context);
+      }
+      return '';
+    } catch (e) {
+      debugPrint('[getSortingTypeName error] $e');
+      return '';
     }
   }
 
@@ -46,6 +59,7 @@ mixin PaymentMethodsMixin {
       'any_payment_method': context.intl.any_payment_method,
       'NATIONAL_BANK': context.intl.method250Sbnational8722Sbbank,
       'CASH_BY_MAIL': context.intl.method250Sbcash8722Sbby8722Sbmail,
+      'CASH_ON_DELIVERY': context.intl.method250Sbcash8722Sbon8722Sbdelivery,
       'SATISPAY': 'Satispay',
       'PRIVAT24': 'Privat24',
       'CRYPTOCURRENCY': context.intl.method250Sbcryptocurrency,
@@ -151,6 +165,7 @@ mixin PaymentMethodsMixin {
       'POSTAL_ORDER': 'Postal order',
       'CASH': context.intl.method250Sbcash,
       'MERCADO_PAGO': 'Mercado Pago',
+      'YOOMONEY': context.intl.method250Sbyoomoney,
     };
   }
 }

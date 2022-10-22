@@ -1,18 +1,16 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 
-class ButtonSquareIcon extends StatelessWidget {
-  const ButtonSquareIcon({
+class ButtonSquareIconChild extends StatelessWidget {
+  const ButtonSquareIconChild({
     Key? key,
-    required this.iconData,
+    required this.child,
     required this.onPressed,
-    this.iconColor,
     this.size = const Size(32, 32),
   }) : super(key: key);
 
-  final IconData iconData;
+  final Widget child;
   final VoidCallback onPressed;
-  final Color? iconColor;
   final Size size;
 
   @override
@@ -33,11 +31,7 @@ class ButtonSquareIcon extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Icon(
-          iconData,
-          color: iconColor ?? context.colP90,
-          size: 18,
-        ),
+        child: child,
       ),
     );
   }

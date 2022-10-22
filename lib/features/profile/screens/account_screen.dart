@@ -142,7 +142,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           ),
                           const SizedBox(height: 8),
                           LineWithArrow(
-                            title: context.intl.country,
+                            title: context.intl.post8722Sbad250Sbcountry250Sbtitle,
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
 

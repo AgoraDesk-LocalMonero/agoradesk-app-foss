@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -29,6 +28,7 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class TradesScreen extends StatefulWidget {
   const TradesScreen({
@@ -138,114 +138,146 @@ class _TradesScreenState extends State<TradesScreen>
                 padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
                 child: FilterButton(
                   selected: model.displayFilter,
-                  onPressed: () => model.displayFilter = !model.displayFilter,
+                  onPressed: () => _buildExpandedFilter(context, model),
                 ),
               ),
             ],
           ),
-          model.displayFilter ? _tradesFilter(context, model) : const SizedBox(),
+          // model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
         ],
       ),
     );
   }
 
-  Widget _tradesFilter(BuildContext context, TradesViewModel model) {
+  void _buildExpandedFilter(BuildContext context, TradesViewModel model) {
     final widthHalf = MediaQuery.of(context).size.width / 2 - 16;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 8),
-        Text(
-          context.intl.country,
-          style: context.txtBodySmallN60,
+    const radius = Radius.circular(20);
+    final height = MediaQuery.of(context).size.height - 70;
+
+    showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        isDismissible: true,
+        enableDrag: true,
+        constraints: BoxConstraints(maxHeight: height),
+        clipBehavior: Clip.antiAlias,
+        backgroundColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(topLeft: radius, topRight: radius),
         ),
-        const SizedBox(height: 8),
-        DropdownSearch<String>(
-          key: model.countryDropdownKey,
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          itemAsString: (String? code) => getCountryName(code ?? ''),
-          asyncItems: (String? filter) => model.getCountryCodes(),
-          // showSearchBox: true,
-          selectedItem: model.selectedCountryCode,
-          onChanged: (val) => model.selectedCountryCode = val ?? 'US',
-        ),
-        const SizedBox(height: 8),
-        Text(
-          context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbcurrency,
-          style: context.txtBodySmallN60,
-        ),
-        const SizedBox(height: 8),
-        DropdownSearch<CurrencyModel?>(
-          key: model.currencyDropdownKey,
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
-          itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
-          asyncItems: (String? filter) => model.getCurrencies(),
-          // showSearchBox: true,
-          selectedItem: model.selectedCurrency,
-          onChanged: (val) => model.selectedCurrency = val ?? CurrencyModel(code: 'USD', name: 'USD', altcoin: true),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbpayment8722Sbmethod,
-          style: context.txtBodySmallN60,
-        ),
-        const SizedBox(height: 8),
-        DropdownSearch<OnlineProvider?>(
-          dropdownButtonProps: context.dropdownButtonProps,
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.dialog(
-            dialogProps: context.dropdownDialogProps,
-            showSearchBox: true,
-          ),
-          itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-          asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
-          // showSearchBox: true,
-          selectedItem: model.selectedOnlineProvider,
-          onChanged: (val) => model.selectedOnlineProvider = val,
-        ),
-        const SizedBox(height: 8),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: widthHalf - 4,
-              child: Center(
-                child: ButtonOutlinedP80(
-                  title: context.intl.clear_all,
-                  minimumSize: const Size.fromHeight(40),
-                  onPressed: () {
-                    model.clearFilter();
-                  },
-                ),
-              ),
-            ),
-            SizedBox(
-              width: widthHalf - 4,
-              child: ButtonFilledP80(
-                title: I18n.of(context)!.apply,
-                onPressed: () {
-                  model.indicatorKey.currentState?.show();
-                  model.displayFilter = false;
-                },
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 8),
-      ],
-    );
+        builder: (context) {
+          return ViewModelBuilder<TradesViewModel>(
+              model: model,
+              disposable: false,
+              builder: (context, model, child) {
+                return Container(
+                  color: context.colSurf4Surf1,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.post8722Sbad250Sbcountry250Sbtitle,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          DropdownSearch<String>(
+                            key: model.countryDropdownKey,
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.dialog(
+                              dialogProps: context.dropdownDialogProps,
+                              showSearchBox: true,
+                            ),
+                            itemAsString: (String? code) => getCountryName(code ?? ''),
+                            asyncItems: (String? filter) => model.getCountryCodes(),
+                            // showSearchBox: true,
+                            selectedItem: model.selectedCountryCode,
+                            onChanged: (val) => model.selectedCountryCode = val ?? 'US',
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbcurrency,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          DropdownSearch<CurrencyModel?>(
+                            key: model.currencyDropdownKey,
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.dialog(
+                              dialogProps: context.dropdownDialogProps,
+                              showSearchBox: true,
+                            ),
+                            // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
+                            itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
+                            asyncItems: (String? filter) => model.getCurrencies(),
+                            // showSearchBox: true,
+                            selectedItem: model.selectedCurrency,
+                            onChanged: (val) =>
+                                model.selectedCurrency = val ?? CurrencyModel(code: 'USD', name: 'USD', altcoin: true),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            context.intl.guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbpayment8722Sbmethod,
+                            style: context.txtBodySmallN60,
+                          ),
+                          const SizedBox(height: 8),
+                          DropdownSearch<OnlineProvider?>(
+                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownDecoratorProps: context.dropdownDecoration,
+                            popupProps: PopupProps.dialog(
+                              dialogProps: context.dropdownDialogProps,
+                              showSearchBox: true,
+                            ),
+                            itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
+                            asyncItems: (String? filter) =>
+                                model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                            // showSearchBox: true,
+                            selectedItem: model.selectedOnlineProvider,
+                            onChanged: (val) => model.selectedOnlineProvider = val,
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: widthHalf - 4,
+                                child: Center(
+                                  child: ButtonOutlinedP80(
+                                    title: context.intl.clear_all,
+                                    minimumSize: const Size.fromHeight(40),
+                                    onPressed: () {
+                                      model.clearFilter();
+                                    },
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: widthHalf - 4,
+                                child: ButtonFilledP80(
+                                  title: I18n.of(context)!.apply,
+                                  onPressed: () {
+                                    model.indicatorKey.currentState?.show();
+                                    model.displayFilter = false;
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              });
+        });
   }
 
   Widget _buildBody(BuildContext context, TradesViewModel model) {

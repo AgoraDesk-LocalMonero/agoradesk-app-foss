@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:agoradesk/keys/keys.dart';
 
 class AppParameters {
   AppParameters({
@@ -47,8 +46,6 @@ class AppParameters {
   final String urlReceipt;
   final bool isAgora;
   final bool includeFcm;
-
-  final mapboxToken = keysMapToken;
 
   /// plausible analytics
   final String urlPlausibleServer = 'https://a.agoradesk.com';

@@ -15,6 +15,7 @@ _$_AdsRequestParameterModel _$$_AdsRequestParameterModelFromJson(
       tradeType: $enumDecodeNullable(_$TradeTypeEnumMap, json['trade_type']),
       visible: _boolFromJson(json['visible'] as int),
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
+      sort: json['sort'] as String?,
       paymentMethodCode: json['payment_method_code'] as String?,
     );
 
@@ -34,6 +35,7 @@ Map<String, dynamic> _$$_AdsRequestParameterModelToJson(
   writeNotNull('trade_type', _$TradeTypeEnumMap[instance.tradeType]);
   writeNotNull('visible', _boolToJson(instance.visible));
   writeNotNull('asset', _$AssetEnumMap[instance.asset]);
+  writeNotNull('sort', instance.sort);
   writeNotNull('payment_method_code', instance.paymentMethodCode);
   return val;
 }

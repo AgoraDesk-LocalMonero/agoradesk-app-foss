@@ -5,16 +5,6 @@
 //    - family: agoraFont
 //      fonts:
 //       - asset: fonts/agoraFont.ttf
-
-// ignore_for_file: constant_identifier_names
-
-// Place fonts/agoraFont.ttf in your fonts/ directory and
-// add the following to your pubspec.yaml
-// flutter:
-//   fonts:
-//    - family: agoraFont
-//      fonts:
-//       - asset: fonts/agoraFont.ttf
 import 'package:flutter/widgets.dart';
 
 class AgoraFont {
@@ -22,6 +12,8 @@ class AgoraFont {
 
   static const String _fontFamily = 'agoraFont';
 
+  static const IconData sortDown = IconData(0xe958, fontFamily: _fontFamily);
+  static const IconData sortUp = IconData(0xe959, fontFamily: _fontFamily);
   static const IconData faq_24px = IconData(0xe91e, fontFamily: _fontFamily);
   static const IconData comment_question_24px = IconData(0xe927, fontFamily: _fontFamily);
   static const IconData share_24px = IconData(0xe956, fontFamily: _fontFamily);

@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -8,6 +7,7 @@ import 'package:agoradesk/features/profile/models/country_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class CountryScreen extends StatelessWidget with CountryInfoMixin {
   CountryScreen({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class CountryScreen extends StatelessWidget with CountryInfoMixin {
         builder: (context, model, _) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: context.intl.country,
+              title: context.intl.post8722Sbad250Sbcountry250Sbtitle,
             ),
             body: SafeArea(
               child: Padding(

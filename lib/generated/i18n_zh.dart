@@ -4111,6 +4111,9 @@ class I18nZh extends I18n {
   String get method250Sbcash8722Sbby8722Sbmail => '邮寄现金';
 
   @override
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+
+  @override
   String get method250Sbcash8722Sbdeposit => '现金存款';
 
   @override
@@ -4118,6 +4121,9 @@ class I18nZh extends I18n {
 
   @override
   String get method250Sbcreditcard => '信用卡';
+
+  @override
+  String get method250Sbyoomoney => 'YooMoney';
 
   @override
   String get method250Sbcryptocurrency => '加密币';
@@ -8243,9 +8249,6 @@ class I18nZh extends I18n {
   String get my_profile => '我的简历';
 
   @override
-  String get country => '国家';
-
-  @override
   String get choose_ad_default_region => '选择广告默认区域';
 
   @override
@@ -8470,6 +8473,11 @@ class I18nZh extends I18n {
   }
 
   @override
+  String app_for_sum(Object val) {
+    return 'for $val';
+  }
+
+  @override
   String get app_buy_crypto => 'Buy crypto from';
 
   @override
@@ -8570,6 +8578,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_via => 'via';
 
   @override
   String get app_one_percent => '1% fee';
@@ -16207,9 +16218,6 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get my_profile => '我的簡歷';
-
-  @override
-  String get country => '國家';
 
   @override
   String get choose_ad_default_region => '選擇廣告默認區域';

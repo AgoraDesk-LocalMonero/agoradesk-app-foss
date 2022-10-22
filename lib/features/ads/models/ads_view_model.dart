@@ -2,7 +2,6 @@ import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -13,6 +12,8 @@ import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/country_code_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
+import 'package:agoradesk/features/ads/data/models/sorting_direction_type.dart';
+import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/agora_menu_item.dart';
@@ -27,6 +28,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:overlay_support/overlay_support.dart';
+import 'package:vm/vm.dart';
 
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
 
@@ -48,6 +50,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final currencyDropdownKey = GlobalKey<DropdownSearchState>();
   final countryDropdownKey = GlobalKey<DropdownSearchState>();
   final visibilityDropdownKey = GlobalKey<DropdownSearchState>();
+  final sortDropdownKey = GlobalKey<DropdownSearchState>();
 
   late final TabController tabController;
 
@@ -65,6 +68,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   String? selectedCountryCode;
   String? adUpdatingId;
   String? selectedVisibility;
+  SortingType? selectedSorting;
   CurrencyModel? selectedCurrency;
   CurrencyModel? defaultCurrency;
 
@@ -77,6 +81,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool _changingVisibility = false;
 
   Asset? _asset;
+  SortingDirectionType _sortingDirectionType = SortingDirectionType.asc;
   final List<AdModel> ads = [];
   final List<String> selectedAdIds = [];
 
@@ -188,6 +193,10 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   set asset(Asset? v) => updateWith(asset: v);
 
+  SortingDirectionType get sortingDirectionType => _sortingDirectionType;
+
+  set sortingDirectionType(SortingDirectionType v) => updateWith(sortingDirectionType: v);
+
   @override
   void init() {
     _initBulkMenu();
@@ -255,7 +264,16 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     }
   }
 
-  Future<List<String>> getVisibilityChoices() async {
+  Future<List<SortingType>> getSortingChoices() async {
+    final List<SortingType> choices = [];
+
+    for (final s in SortingType.values) {
+      choices.add(s);
+    }
+    return choices;
+  }
+
+  Future<List<String>> getVisibilityChoices(BuildContext context) async {
     return [
       context.intl.dashboard250Sbfilter250Sball,
       context.intl.dashboard250Sbfilter250Sbvisibility250Sbvisible,
@@ -343,6 +361,14 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     }
   }
 
+  void changeSortingDirection() {
+    if (sortingDirectionType == SortingDirectionType.asc) {
+      sortingDirectionType = SortingDirectionType.desc;
+    } else {
+      sortingDirectionType = SortingDirectionType.asc;
+    }
+  }
+
   Future setSettings(UserSettingsModel s, BuildContext context) async {
     final res = await _userService.setSettings(s);
     if (res.isRight) {
@@ -383,6 +409,10 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   }) async {
     if (!loadingAds) {
       loadingAds = true;
+      String? sort;
+      if (selectedSorting != null) {
+        sort = '${selectedSorting!.name},${sortingDirectionType.name}';
+      }
       final requestParameter = AdsRequestParameterModel(
         page: loadMore ? (paginationMeta?.currentPage ?? 0) + 1 : 0,
         visible: _selVisibility,
@@ -391,6 +421,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
         currencyCode: selectedCurrency?.name == kAnyCurrency.name ? null : selectedCurrency?.code,
         countryCode: selectedCountryCode == kAnyCountry ? null : selectedCountryCode,
         asset: asset,
+        sort: sort,
       );
       final res = await _adsRepository.getAds(requestParameter: requestParameter);
       loadingAds = false;
@@ -803,6 +834,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   void updateWith({
     Asset? asset,
+    SortingDirectionType? sortingDirectionType,
     bool? loadingAds,
     bool? changingVisibility,
     bool? formulaInputValid,
@@ -822,6 +854,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     bool? loadingSettings,
   }) {
     _asset = asset ?? _asset;
+    _sortingDirectionType = sortingDirectionType ?? _sortingDirectionType;
     _changingVisibility = changingVisibility ?? _changingVisibility;
     _price = price ?? _price;
     _formulaInputValid = formulaInputValid ?? _formulaInputValid;

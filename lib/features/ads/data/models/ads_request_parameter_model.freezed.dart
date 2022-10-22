@@ -33,6 +33,8 @@ mixin _$AdsRequestParameterModel {
   bool? get visible => throw _privateConstructorUsedError;
   @JsonKey(name: 'asset', includeIfNull: false)
   Asset? get asset => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  String? get sort => throw _privateConstructorUsedError;
   @JsonKey(name: 'payment_method_code', includeIfNull: false)
   String? get paymentMethodCode => throw _privateConstructorUsedError;
 
@@ -60,6 +62,8 @@ abstract class $AdsRequestParameterModelCopyWith<$Res> {
           bool? visible,
       @JsonKey(name: 'asset', includeIfNull: false)
           Asset? asset,
+      @JsonKey(includeIfNull: false)
+          String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
           String? paymentMethodCode});
 }
@@ -81,6 +85,7 @@ class _$AdsRequestParameterModelCopyWithImpl<$Res>
     Object? tradeType = freezed,
     Object? visible = freezed,
     Object? asset = freezed,
+    Object? sort = freezed,
     Object? paymentMethodCode = freezed,
   }) {
     return _then(_value.copyWith(
@@ -108,6 +113,10 @@ class _$AdsRequestParameterModelCopyWithImpl<$Res>
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentMethodCode: paymentMethodCode == freezed
           ? _value.paymentMethodCode
           : paymentMethodCode // ignore: cast_nullable_to_non_nullable
@@ -137,6 +146,8 @@ abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
           bool? visible,
       @JsonKey(name: 'asset', includeIfNull: false)
           Asset? asset,
+      @JsonKey(includeIfNull: false)
+          String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
           String? paymentMethodCode});
 }
@@ -161,6 +172,7 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
     Object? tradeType = freezed,
     Object? visible = freezed,
     Object? asset = freezed,
+    Object? sort = freezed,
     Object? paymentMethodCode = freezed,
   }) {
     return _then(_$_AdsRequestParameterModel(
@@ -188,6 +200,10 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as String?,
       paymentMethodCode: paymentMethodCode == freezed
           ? _value.paymentMethodCode
           : paymentMethodCode // ignore: cast_nullable_to_non_nullable
@@ -213,6 +229,8 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
           this.visible,
       @JsonKey(name: 'asset', includeIfNull: false)
           this.asset,
+      @JsonKey(includeIfNull: false)
+          this.sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
           this.paymentMethodCode});
 
@@ -238,12 +256,15 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
   @JsonKey(name: 'asset', includeIfNull: false)
   final Asset? asset;
   @override
+  @JsonKey(includeIfNull: false)
+  final String? sort;
+  @override
   @JsonKey(name: 'payment_method_code', includeIfNull: false)
   final String? paymentMethodCode;
 
   @override
   String toString() {
-    return 'AdsRequestParameterModel(page: $page, countryCode: $countryCode, currencyCode: $currencyCode, tradeType: $tradeType, visible: $visible, asset: $asset, paymentMethodCode: $paymentMethodCode)';
+    return 'AdsRequestParameterModel(page: $page, countryCode: $countryCode, currencyCode: $currencyCode, tradeType: $tradeType, visible: $visible, asset: $asset, sort: $sort, paymentMethodCode: $paymentMethodCode)';
   }
 
   @override
@@ -259,6 +280,7 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
             const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
             const DeepCollectionEquality().equals(other.visible, visible) &&
             const DeepCollectionEquality().equals(other.asset, asset) &&
+            const DeepCollectionEquality().equals(other.sort, sort) &&
             const DeepCollectionEquality()
                 .equals(other.paymentMethodCode, paymentMethodCode));
   }
@@ -273,6 +295,7 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
       const DeepCollectionEquality().hash(tradeType),
       const DeepCollectionEquality().hash(visible),
       const DeepCollectionEquality().hash(asset),
+      const DeepCollectionEquality().hash(sort),
       const DeepCollectionEquality().hash(paymentMethodCode));
 
   @JsonKey(ignore: true)
@@ -303,6 +326,8 @@ abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
           final bool? visible,
       @JsonKey(name: 'asset', includeIfNull: false)
           final Asset? asset,
+      @JsonKey(includeIfNull: false)
+          final String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
           final String? paymentMethodCode}) = _$_AdsRequestParameterModel;
 
@@ -327,6 +352,9 @@ abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
   @override
   @JsonKey(name: 'asset', includeIfNull: false)
   Asset? get asset;
+  @override
+  @JsonKey(includeIfNull: false)
+  String? get sort;
   @override
   @JsonKey(name: 'payment_method_code', includeIfNull: false)
   String? get paymentMethodCode;

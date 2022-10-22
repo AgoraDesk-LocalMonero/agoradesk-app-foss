@@ -4111,6 +4111,9 @@ class I18nRu extends I18n {
   String get method250Sbcash8722Sbby8722Sbmail => 'Наличные по почте';
 
   @override
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+
+  @override
   String get method250Sbcash8722Sbdeposit => 'Внесение наличных на счёт';
 
   @override
@@ -4118,6 +4121,9 @@ class I18nRu extends I18n {
 
   @override
   String get method250Sbcreditcard => 'Кредитная карта';
+
+  @override
+  String get method250Sbyoomoney => 'ЮMoney';
 
   @override
   String get method250Sbcryptocurrency => 'Криптовалюты';
@@ -8243,9 +8249,6 @@ class I18nRu extends I18n {
   String get my_profile => 'Мой профиль';
 
   @override
-  String get country => 'Страна';
-
-  @override
   String get choose_ad_default_region => 'Выберите регион по умолчанию для рекламы';
 
   @override
@@ -8470,6 +8473,11 @@ class I18nRu extends I18n {
   }
 
   @override
+  String app_for_sum(Object val) {
+    return 'for $val';
+  }
+
+  @override
   String get app_buy_crypto => 'Buy crypto from';
 
   @override
@@ -8570,6 +8578,9 @@ class I18nRu extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_via => 'via';
 
   @override
   String get app_one_percent => '1% fee';

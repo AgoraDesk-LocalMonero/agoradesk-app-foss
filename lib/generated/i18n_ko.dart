@@ -4111,6 +4111,9 @@ class I18nKo extends I18n {
   String get method250Sbcash8722Sbby8722Sbmail => '현금우편';
 
   @override
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+
+  @override
   String get method250Sbcash8722Sbdeposit => 'Cash deposit';
 
   @override
@@ -4118,6 +4121,9 @@ class I18nKo extends I18n {
 
   @override
   String get method250Sbcreditcard => '신용카드';
+
+  @override
+  String get method250Sbyoomoney => 'YooMoney';
 
   @override
   String get method250Sbcryptocurrency => '가상화폐';
@@ -8243,9 +8249,6 @@ class I18nKo extends I18n {
   String get my_profile => '내 프로필';
 
   @override
-  String get country => '국가';
-
-  @override
   String get choose_ad_default_region => '광고 기본 지역 선택';
 
   @override
@@ -8470,6 +8473,11 @@ class I18nKo extends I18n {
   }
 
   @override
+  String app_for_sum(Object val) {
+    return 'for $val';
+  }
+
+  @override
   String get app_buy_crypto => 'Buy crypto from';
 
   @override
@@ -8570,6 +8578,9 @@ class I18nKo extends I18n {
 
   @override
   String get app_gallery => 'Gallery';
+
+  @override
+  String get app_via => 'via';
 
   @override
   String get app_one_percent => '1% fee';
