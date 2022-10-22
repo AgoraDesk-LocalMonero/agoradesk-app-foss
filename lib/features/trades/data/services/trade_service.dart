@@ -65,7 +65,6 @@ class TradeService {
   Future<Either<ApiError, TradeModel>> getTrade({required String id}) async {
     try {
       final resp = await _api.client.get('/contact_info/$id');
-
       if (resp.statusCode == 200) {
         final TradeModel trade = TradeModel.fromJson(resp.data['data']['data']);
         return Either.right(trade);

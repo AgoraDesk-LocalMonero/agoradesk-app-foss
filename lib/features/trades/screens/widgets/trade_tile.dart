@@ -13,6 +13,7 @@ import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
+import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/highlight_box.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
@@ -36,8 +37,10 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
     const iconSize = 14.0;
 
     final isSell = trade.isSelling!;
-    final buyerStr = (trade.buyer.username ?? '') + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbbuyer})';
-    final sellerStr = (trade.seller.username ?? '') + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbseller})';
+    final buyerStr =
+        (trade.buyer.username ?? kDeletedUserName) + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbbuyer})';
+    final sellerStr =
+        (trade.seller.username ?? kDeletedUserName) + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbseller})';
 
     final username = isSell ? buyerStr : sellerStr;
     final trader = isSell ? trade.buyer : trade.seller;

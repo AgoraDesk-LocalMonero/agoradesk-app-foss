@@ -1,4 +1,5 @@
 import 'package:agoradesk/features/trades/data/models/message_model.dart';
+import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
@@ -37,7 +38,7 @@ class MessageBoxModel {
       createdAt: model.createdAt,
       isAdmin: model.isAdmin,
       isSending: false,
-      senderUsername: model.sender.username!,
+      senderUsername: model.sender.username ?? kDeletedUserName,
       attachmentUrl: model.attachmentUrl,
       attachmentName: model.attachmentName,
       msg: model.msg,
