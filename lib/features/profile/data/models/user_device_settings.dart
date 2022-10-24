@@ -15,6 +15,8 @@ class UserLocalSettings {
     this.countryCode,
     this.cachedCountrySavedDate,
     this.cachedCurrencySavedDate,
+    this.ignoreAllUpdates = false,
+    this.ignoredUpdate,
   });
 
   @Id()
@@ -26,6 +28,8 @@ class UserLocalSettings {
   bool? firstRun;
   bool? pushFcmTokenSavedToApi;
   String? username;
+  bool ignoreAllUpdates;
+  String? ignoredUpdate;
   String? locale;
   String? countryCode;
   DateTime? cachedCountrySavedDate;

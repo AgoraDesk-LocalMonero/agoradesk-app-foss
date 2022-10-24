@@ -51,12 +51,6 @@ const walletRoutes = <AutoRoute>[
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),
-  // CustomRoute(
-  //   path: 'wallet/qrScanScreen',
-  //   page: QrScanScreen,
-  //   durationInMilliseconds: 250,
-  //   transitionsBuilder: TransitionsBuilders.slideBottom,
-  // ),
   CustomRoute(
     path: 'notificationsScreen',
     page: NotificationsScreen,

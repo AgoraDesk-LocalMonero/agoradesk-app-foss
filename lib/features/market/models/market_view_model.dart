@@ -1,6 +1,8 @@
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
+import 'package:agoradesk/core/packages/github_update/github_update.dart';
+import 'package:agoradesk/core/packages/github_update/services/github_update_service.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
@@ -20,7 +22,9 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
 
-class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin {
+class MarketViewModel extends ViewModel
+    with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin
+    implements WidgetsBindingObserver {
   MarketViewModel({
     required AdsRepository adsRepository,
     required PlacesSearch placesSearch,
@@ -265,7 +269,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     bool loadMore = false,
     bool reccursion = false,
   }) async {
-    print('+++++++++++++++++++++++++++++++++++++11666666');
     if (!loadingAds) {
       displayFilterMessage = false;
       loadingAds = true;
@@ -437,5 +440,69 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     ctrlAmount.dispose();
     ctrlLocation.dispose();
     super.dispose();
+  }
+
+  @override
+  void didChangeAccessibilityFeatures() {
+    // TODO: implement didChangeAccessibilityFeatures
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    if (state == AppLifecycleState.resumed) {
+      final newVersion = await GithubUpdateService().getReleaseVersion();
+      if (newVersion != null) {
+        print('+++++++++++++++++++++++++++++++++++++999991');
+        await Future.delayed(Duration(seconds: 1));
+        showDialog(
+            context: context,
+            builder: (context) {
+              return GithubUpdate();
+            });
+      }
+    }
+  }
+
+  @override
+  void didChangeLocales(List<Locale>? locales) {
+    // TODO: implement didChangeLocales
+  }
+
+  @override
+  void didChangeMetrics() {
+    // TODO: implement didChangeMetrics
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    // TODO: implement didChangePlatformBrightness
+  }
+
+  @override
+  void didChangeTextScaleFactor() {
+    // TODO: implement didChangeTextScaleFactor
+  }
+
+  @override
+  void didHaveMemoryPressure() {
+    // TODO: implement didHaveMemoryPressure
+  }
+
+  @override
+  Future<bool> didPopRoute() {
+    // TODO: implement didPopRoute
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> didPushRoute(String route) {
+    // TODO: implement didPushRoute
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
+    // TODO: implement didPushRouteInformation
+    throw UnimplementedError();
   }
 }
