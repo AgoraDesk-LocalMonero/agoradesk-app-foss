@@ -34,7 +34,13 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   String get username => userSettingsBox.getAll()[0].username ?? '';
 
-  bool get sentryIsOn => userSettingsBox.getAll()[0].sentryIsOn ?? true;
+  bool get sentryIsOn {
+    try {
+      return userSettingsBox.getAll()[0].sentryIsOn ?? true;
+    } catch (e) {
+      return true;
+    }
+  }
 
   set sentryIsOn(bool val) {
     final s = userSettingsBox.getAll()[0];
