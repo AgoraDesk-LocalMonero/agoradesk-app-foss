@@ -12,6 +12,7 @@ import 'package:agoradesk/features/trades/screens/widgets/chat_bubble.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_bubble_sticky.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_step_one_for_chat.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 import 'package:vm/vm.dart';
@@ -126,20 +127,22 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
               ),
               onPressed: () => model.sendMessage(),
             )
-          : IconButton(
-              padding: EdgeInsets.zero,
-              iconSize: 72,
-              alignment: Alignment.centerRight,
-              icon: Padding(
-                padding: EdgeInsets.fromLTRB(0, topPadding + 4, buttonLeftPadding, buttonBottomPadding + 20),
-                child: Icon(
-                  AgoraFont.paperclip,
-                  color: context.n80N30,
-                  size: 22,
+          : Consumer<ScreenHeight>(builder: (context, keybrd, child) {
+              return IconButton(
+                padding: EdgeInsets.zero,
+                iconSize: 72,
+                alignment: Alignment.centerRight,
+                icon: Padding(
+                  padding: EdgeInsets.fromLTRB(0, topPadding + 4, buttonLeftPadding, buttonBottomPadding + 20),
+                  child: Icon(
+                    AgoraFont.paperclip,
+                    color: context.n80N30,
+                    size: 22,
+                  ),
                 ),
-              ),
-              onPressed: () => model.selectImage(),
-            ),
+                onPressed: () => model.selectImage(context, keybrd.isOpen),
+              );
+            }),
     );
   }
 

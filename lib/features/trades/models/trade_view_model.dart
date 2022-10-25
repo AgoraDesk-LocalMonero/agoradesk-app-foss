@@ -898,7 +898,11 @@ class TradeViewModel extends ViewModel
     }
   }
 
-  Future selectImage() async {
+  Future selectImage(BuildContext context, bool isKeyboardOpen) async {
+    if (isKeyboardOpen) {
+      FocusScope.of(context).unfocus();
+      await Future.delayed(Duration(milliseconds: 200));
+    }
     await _showGalleryCameraSelection(context);
     if (_imageSource != null) {
       _image = await picker.pickImage(source: _imageSource!);
