@@ -7,7 +7,7 @@ part of 'push_model.dart';
 // **************************************************************************
 
 _$_PushModel _$$_PushModelFromJson(Map<String, dynamic> json) => _$_PushModel(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       read: const BoolJsonConverter().fromJson(json['read'] as String),
       createdAt: const DatetimeIntJsonConverter()
           .fromJson(json['createdAt'] as String),

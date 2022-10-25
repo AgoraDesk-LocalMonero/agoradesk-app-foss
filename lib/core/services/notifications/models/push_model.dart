@@ -16,7 +16,7 @@ class PushModel with _$PushModel {
 
   @JsonSerializable(explicitToJson: true)
   const factory PushModel({
-    required String id,
+    String? id,
     @BoolJsonConverter() required bool read,
     @DatetimeIntJsonConverter() required DateTime createdAt,
     @JsonKey(includeIfNull: false) String? objectId,

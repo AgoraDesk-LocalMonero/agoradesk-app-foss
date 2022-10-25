@@ -333,21 +333,6 @@ class NotificationsService with ForegroundMessagesMixin {
     };
   }
 
-  // void startListenAwesomeNotificationsPressed() {
-  //   AwesomeNotifications().setListeners(onActionReceivedMethod: (ReceivedAction receivedAction) async {
-  //     try {
-  //       final PushModel push = PushModel.fromJson(receivedAction.payload ?? {});
-  //       if (push.objectId != null && push.objectId!.isNotEmpty) {
-  //         await markTradeNotificationsAsRead(tradeId: push.objectId!);
-  //         return await notificationHandleRoutes(push.objectId!);
-  //       }
-  //     } catch (e) {
-  //       debugPrint('++++error parsing push in actionStream - $e');
-  //       return Future.delayed(Duration.zero);
-  //     }
-  //   });
-  // }
-
   Future<bool> authenticateWithBiometrics() async {
     bool authenticated = false;
     try {
