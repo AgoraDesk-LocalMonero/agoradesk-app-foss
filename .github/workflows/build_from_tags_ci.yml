@@ -35,9 +35,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-#      - name: Exit if not on main branch
-#        if: endsWith(github.ref, 'main') == false
-#        run: exit -1
+      - name: Exit if not on main branch
+        if: endsWith(github.ref, 'main') == false
+        run: exit -1
 
       - name: AgoradDesk decrypt secret
         env:
@@ -114,14 +114,14 @@ jobs:
           bodyFile: "RELEASE.md"
           token: ${{ secrets.RELEASE_TOKEN }}
 
-      - name: Generates release files hashes
-        uses: MCJack123/ghaction-generate-release-hashes@v3
-        with:
-          hash-type: sha256
-          file-name: hashes.txt
-
-      - name: Upload hashes
-        uses: actions/upload-artifact@v2
-        with:
-          name: Asset Hashes
-          path: hashes.txt
+#      - name: Generates release files hashes
+#        uses: MCJack123/ghaction-generate-release-hashes@v3
+#        with:
+#          hash-type: sha256
+#          file-name: hashes.txt
+#
+#      - name: Upload hashes
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: Asset Hashes
+#          path: hashes.txt
