@@ -241,7 +241,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
   }
 
   Widget _buildBottom(BuildContext context) {
-    final bool lowBalanceForAd = (ad.minAmount ?? 0) > (ad.maxAmountAvailable ?? 0);
+    final bool lowBalanceForAd = (ad.minAmount ?? 0) > (ad.maxAmountAvailable ?? 0) && ad.tradeType.isSell();
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
