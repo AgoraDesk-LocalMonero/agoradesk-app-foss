@@ -1,8 +1,6 @@
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
-import 'package:agoradesk/core/packages/github_update/github_update.dart';
-import 'package:agoradesk/core/packages/github_update/services/github_update_service.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
@@ -16,6 +14,8 @@ import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
+import 'package:agoradesk/features/app_update/data/services/app_update_service.dart';
+import 'package:agoradesk/features/app_update/screens/app_update_widget.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -450,14 +450,15 @@ class MarketViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
-      final newVersion = await GithubUpdateService().getReleaseVersion();
+      final newVersion = await AppUpdateService().getReleaseVersion();
       if (newVersion != null) {
-        print('+++++++++++++++++++++++++++++++++++++999991');
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         showDialog(
             context: context,
             builder: (context) {
-              return GithubUpdate();
+              return AppUpdateWidget(
+                newVesrionNumber: newVersion,
+              );
             });
       }
     }

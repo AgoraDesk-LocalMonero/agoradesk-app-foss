@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:store_checker/store_checker.dart';
 
-class GithubUpdateService {
+class AppUpdateService {
   // https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases/download/v1.0.27/co.localmonero.app-foss_51.apk
 
   Future<String?> getReleaseVersion() async {
@@ -43,7 +43,6 @@ class GithubUpdateService {
 
   Future<bool> githubCheckUpdateNeeded() async {
     Source installationSource = await StoreChecker.getSource;
-    print('+++++++++++++++++++++++++++++++++++++11 - ${installationSource}');
     if (installationSource != Source.IS_INSTALLED_FROM_PLAY_STORE && Platform.isAndroid) {
       return true;
     } else {
