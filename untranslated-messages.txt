@@ -266,7 +266,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "it": [
@@ -536,7 +540,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "ko": [
@@ -806,7 +814,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "pl": [
@@ -1347,7 +1359,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "pt": [
@@ -1617,7 +1633,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "ru": [
@@ -1886,7 +1906,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "zh": [
@@ -2156,7 +2180,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "zh_TW": [
@@ -2426,6 +2454,10 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ]
 }

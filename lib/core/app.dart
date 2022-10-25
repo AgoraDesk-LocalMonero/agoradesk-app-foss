@@ -91,7 +91,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void initState() {
     _secureStorage = SecureStorage();
     appState = AppState(
-      userLocalSettingsBox: ObjectBox.userLocalSettingsBox,
+      userSettingsBox: ObjectBox.userLocalSettingsBox,
       secureStorage: _secureStorage,
     );
     _api = ApiClient(

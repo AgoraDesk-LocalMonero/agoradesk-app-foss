@@ -69,6 +69,9 @@ class AppParameters {
   final String appstoreLink = 'https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678';
   final String googlePlayLink = 'https://play.google.com/store/apps/details?id=com.agoradesk.app';
 
+  /// Github
+  final String githubLatestReleaseUrl = 'https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases/latest';
+
   /// languages
   final Map<String, dynamic> localesInfo = {
     'en': {

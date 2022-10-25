@@ -1,7 +1,7 @@
 PODS:
   - awesome_notifications (0.0.5):
     - Flutter
-    - IosAwnCore (= 0.7.1)
+    - IosAwnCore (= 0.7.3)
   - barcode_scan2 (0.0.1):
     - Flutter
     - MTBBarcodeScanner
@@ -89,7 +89,7 @@ PODS:
     - GoogleUtilities/Logger
   - image_picker_ios (0.0.1):
     - Flutter
-  - IosAwnCore (0.7.1)
+  - IosAwnCore (0.7.3)
   - local_auth_ios (0.0.1):
     - Flutter
   - MTBBarcodeScanner (5.0.11)
@@ -125,6 +125,8 @@ PODS:
   - sqflite (0.0.2):
     - Flutter
     - FMDB (>= 2.7.5)
+  - store_checker (0.0.1):
+    - Flutter
   - SwiftProtobuf (1.20.2)
   - uni_links (0.0.1):
     - Flutter
@@ -155,6 +157,7 @@ DEPENDENCIES:
   - share_plus (from `.symlinks/plugins/share_plus/ios`)
   - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - store_checker (from `.symlinks/plugins/store_checker/ios`)
   - uni_links (from `.symlinks/plugins/uni_links/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
   - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/ios`)
@@ -223,6 +226,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/shared_preferences_ios/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
+  store_checker:
+    :path: ".symlinks/plugins/store_checker/ios"
   uni_links:
     :path: ".symlinks/plugins/uni_links/ios"
   url_launcher_ios:
@@ -231,7 +236,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_player_avfoundation/ios"
 
 SPEC CHECKSUMS:
-  awesome_notifications: 5e8d47907a4b29c182e5732b5ee224ca838f6802
+  awesome_notifications: d63d9a25f126860f9a600850d99772237895b3ba
   barcode_scan2: 0af2bb63c81b4565aab6cd78278e4c0fa136dbb0
   connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
   device_info_plus: e5c5da33f982a436e103237c0c85f9031142abed
@@ -252,7 +257,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
   image_picker_ios: b786a5dcf033a8336a657191401bfdf12017dabb
-  IosAwnCore: fd348a51573643e26a194fe20fc78e4190dcadf6
+  IosAwnCore: 6494e0e174d49f04f513e8a002187be226889a37
   local_auth_ios: 0d333dde7780f669e66f19d2ff6005f3ea84008d
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
@@ -269,6 +274,7 @@ SPEC CHECKSUMS:
   share_plus: 056a1e8ac890df3e33cb503afffaf1e9b4fbae68
   shared_preferences_ios: 548a61f8053b9b8a49ac19c1ffbc8b92c50d68ad
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  store_checker: 359c5051d9ec30ff0a8fa39eb5ec9df021bb745d
   SwiftProtobuf: 9f458aaa7844a2fc0b910053e66578bc4e2da9c1
   uni_links: d97da20c7701486ba192624d99bffaaffcfc298a
   url_launcher_ios: 839c58cdb4279282219f5e248c3321761ff3c4de

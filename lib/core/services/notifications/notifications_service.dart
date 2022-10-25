@@ -176,6 +176,7 @@ class NotificationsService with ForegroundMessagesMixin {
         ),
       );
     } on PlatformException catch (e) {
+      debugPrint('[++++ authenticateWithBiometrics error] - $e');
       return false;
     }
     return authenticated;

@@ -16833,6 +16833,30 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Add a note on {val}'**
   String app_note_add(Object val);
+
+  /// No description provided for @app_update_new_version_available.
+  ///
+  /// In en, this message translates to:
+  /// **'New version {val} is available.'**
+  String app_update_new_version_available(Object val);
+
+  /// No description provided for @app_update_now.
+  ///
+  /// In en, this message translates to:
+  /// **'Update now'**
+  String get app_update_now;
+
+  /// No description provided for @app_update_ingnor_until_next.
+  ///
+  /// In en, this message translates to:
+  /// **'Ignore until next update'**
+  String get app_update_ingnor_until_next;
+
+  /// No description provided for @app_update_ignore_always.
+  ///
+  /// In en, this message translates to:
+  /// **'Always ignore'**
+  String get app_update_ignore_always;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

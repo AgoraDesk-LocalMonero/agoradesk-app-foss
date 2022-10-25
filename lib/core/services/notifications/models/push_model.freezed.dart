@@ -20,7 +20,7 @@ PushModel _$PushModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PushModel {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @BoolJsonConverter()
   bool get read => throw _privateConstructorUsedError;
   @DatetimeIntJsonConverter()
@@ -50,7 +50,7 @@ abstract class $PushModelCopyWith<$Res> {
   factory $PushModelCopyWith(PushModel value, $Res Function(PushModel) then) =
       _$PushModelCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @BoolJsonConverter()
           bool read,
       @DatetimeIntJsonConverter()
@@ -94,7 +94,7 @@ class _$PushModelCopyWithImpl<$Res> implements $PushModelCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       read: read == freezed
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
@@ -138,7 +138,7 @@ abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
       __$$_PushModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @BoolJsonConverter()
           bool read,
       @DatetimeIntJsonConverter()
@@ -184,7 +184,7 @@ class __$$_PushModelCopyWithImpl<$Res> extends _$PushModelCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       read: read == freezed
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
@@ -226,7 +226,7 @@ class __$$_PushModelCopyWithImpl<$Res> extends _$PushModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PushModel extends _PushModel {
   const _$_PushModel(
-      {required this.id,
+      {this.id,
       @BoolJsonConverter()
           required this.read,
       @DatetimeIntJsonConverter()
@@ -250,7 +250,7 @@ class _$_PushModel extends _PushModel {
       _$$_PushModelFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @BoolJsonConverter()
   final bool read;
@@ -329,7 +329,7 @@ class _$_PushModel extends _PushModel {
 
 abstract class _PushModel extends PushModel {
   const factory _PushModel(
-      {required final String id,
+      {final String? id,
       @BoolJsonConverter()
           required final bool read,
       @DatetimeIntJsonConverter()
@@ -353,7 +353,7 @@ abstract class _PushModel extends PushModel {
       _$_PushModel.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @BoolJsonConverter()
   bool get read;
