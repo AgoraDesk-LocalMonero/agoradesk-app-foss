@@ -1,8 +1,11 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_three_buttons.dart';
+import 'package:agoradesk/features/app_update/models/app_update_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class AppUpdateWidget extends StatelessWidget {
+class AppUpdateWidget extends StatelessWidget with UrlMixin {
   const AppUpdateWidget({
     Key? key,
     required this.newVesrionNumber,
@@ -12,20 +15,24 @@ class AppUpdateWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AgoraDialogThreeButtons(
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-        child: Text(
-          'New version $newVesrionNumber is available.',
-          style: context.txtHead4N90,
-        ),
-      ),
-      mainActionText: 'Update now',
-      mainAction: () {},
-      secondActionText: 'Ignore until next update',
-      secondAction: () {},
-      thirdActionText: 'Always ignore',
-      thirdAction: () {},
-    );
+    return ViewModelBuilder<AppUpdateViewModel>(
+        model: AppUpdateViewModel(),
+        builder: (context, model, child) {
+          return AgoraDialogThreeButtons(
+            body: Padding(
+              padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+              child: Text(
+                context.intl.app_update_new_version_available(newVesrionNumber),
+                style: context.txtHead4N90,
+              ),
+            ),
+            mainActionText: context.intl.app_update_now,
+            mainAction: model.openUpdateUrl,
+            secondActionText: context.intl.app_update_ingnor_until_next,
+            secondAction: () {},
+            thirdActionText: context.intl.app_update_ignore_always,
+            thirdAction: () {},
+          );
+        });
   }
 }

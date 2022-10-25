@@ -3399,5 +3399,14 @@
     "placeholders": {
       "val": {}
     }
-  }
+  },
+  "app_update_new_version_available": "New version {val} is available.",
+  "@app_update_new_version_available": {
+    "placeholders": {
+      "val": {}
+    }
+  },
+  "app_update_now": "Update now",
+  "app_update_ingnor_until_next": "Ignore until next update",
+  "app_update_ignore_always": "Always ignore"
 }

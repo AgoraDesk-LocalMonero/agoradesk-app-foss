@@ -8597,4 +8597,18 @@ class I18nRu extends I18n {
   String app_note_add(Object val) {
     return 'Add a note on $val';
   }
+
+  @override
+  String app_update_new_version_available(Object val) {
+    return 'New version $val is available.';
+  }
+
+  @override
+  String get app_update_now => 'Update now';
+
+  @override
+  String get app_update_ingnor_until_next => 'Ignore until next update';
+
+  @override
+  String get app_update_ignore_always => 'Always ignore';
 }
