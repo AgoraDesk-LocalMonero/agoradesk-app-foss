@@ -73,7 +73,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(5, 5782449331183648541),
       name: 'UserLocalSettings',
-      lastPropertyId: const IdUid(13, 5285333424823935156),
+      lastPropertyId: const IdUid(15, 993411353141141336),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -135,6 +135,16 @@ final _entities = <ModelEntity>[
             id: const IdUid(13, 5285333424823935156),
             name: 'biometricAuthIsOn',
             type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(14, 1841214546075048015),
+            name: 'ignoreAllUpdates',
+            type: 1,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(15, 993411353141141336),
+            name: 'ignoredUpdate',
+            type: 9,
             flags: 0)
       ],
       relations: <ModelRelation>[],
@@ -340,7 +350,10 @@ ModelDefinition getObjectBoxModel() {
           final countryCodeOffset = object.countryCode == null
               ? null
               : fbb.writeString(object.countryCode!);
-          fbb.startTable(14);
+          final ignoredUpdateOffset = object.ignoredUpdate == null
+              ? null
+              : fbb.writeString(object.ignoredUpdate!);
+          fbb.startTable(16);
           fbb.addInt64(0, object.autoId);
           fbb.addBool(1, object.pinIsActive);
           fbb.addOffset(2, usernameOffset);
@@ -355,6 +368,8 @@ ModelDefinition getObjectBoxModel() {
               10, object.cachedCurrencySavedDate?.millisecondsSinceEpoch);
           fbb.addBool(11, object.sentryIsOn);
           fbb.addBool(12, object.biometricAuthIsOn);
+          fbb.addBool(13, object.ignoreAllUpdates);
+          fbb.addOffset(14, ignoredUpdateOffset);
           fbb.finish(fbb.endTable());
           return object.autoId;
         },
@@ -385,7 +400,9 @@ ModelDefinition getObjectBoxModel() {
               cachedCountrySavedDate: cachedCountrySavedDateValue == null
                   ? null
                   : DateTime.fromMillisecondsSinceEpoch(cachedCountrySavedDateValue),
-              cachedCurrencySavedDate: cachedCurrencySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue))
+              cachedCurrencySavedDate: cachedCurrencySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue),
+              ignoreAllUpdates: const fb.BoolReader().vTableGet(buffer, rootOffset, 30, false),
+              ignoredUpdate: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 32))
             ..autoId =
                 const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0)
             ..dbThemeMode = const fb.Int64Reader().vTableGetNullable(buffer, rootOffset, 10);
@@ -541,6 +558,14 @@ class UserLocalSettings_ {
   /// see [UserLocalSettings.biometricAuthIsOn]
   static final biometricAuthIsOn =
       QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[11]);
+
+  /// see [UserLocalSettings.ignoreAllUpdates]
+  static final ignoreAllUpdates =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[12]);
+
+  /// see [UserLocalSettings.ignoredUpdate]
+  static final ignoredUpdate =
+      QueryStringProperty<UserLocalSettings>(_entities[2].properties[13]);
 }
 
 /// [MessageBoxModel] entity fields to define ObjectBox queries.

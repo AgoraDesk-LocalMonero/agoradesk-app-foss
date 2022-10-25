@@ -115,31 +115,30 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
     return Align(
       alignment: Alignment.bottomRight,
       child: model.displaySend
-          ? Padding(
-              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, buttonBottomPadding),
-              child: IconButton(
-                padding: EdgeInsets.zero,
-                iconSize: 22,
-                alignment: Alignment.centerRight,
-                icon: Icon(
-                  AgoraFont.arrow_up_circle,
-                  color: context.n80N30,
-                ),
-                onPressed: () => model.sendMessage(),
+          ? IconButton(
+              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, buttonBottomPadding + 10),
+              iconSize: 32,
+              alignment: Alignment.centerRight,
+              icon: Icon(
+                AgoraFont.arrow_up_circle,
+                color: context.n80N30,
+                size: 22,
               ),
+              onPressed: () => model.sendMessage(),
             )
-          : Padding(
-              padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, buttonBottomPadding),
-              child: IconButton(
-                padding: EdgeInsets.zero,
-                iconSize: 22,
-                alignment: Alignment.centerRight,
-                icon: Icon(
+          : IconButton(
+              padding: EdgeInsets.zero,
+              iconSize: 72,
+              alignment: Alignment.centerRight,
+              icon: Padding(
+                padding: EdgeInsets.fromLTRB(0, topPadding + 4, buttonLeftPadding, buttonBottomPadding + 20),
+                child: Icon(
                   AgoraFont.paperclip,
                   color: context.n80N30,
+                  size: 22,
                 ),
-                onPressed: () => model.selectImage(),
               ),
+              onPressed: () => model.selectImage(),
             ),
     );
   }

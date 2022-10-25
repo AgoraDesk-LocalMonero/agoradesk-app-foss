@@ -2,8 +2,6 @@ import 'dart:io';
 
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/events.dart';
-import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -142,7 +140,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           ),
                           const SizedBox(height: 8),
                           LineWithArrow(
-                            title: context.intl.country,
+                            title: context.intl.post8722Sbad250Sbcountry250Sbtitle,
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
 
@@ -184,22 +182,22 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           GestureDetector(
                             behavior: HitTestBehavior.opaque,
                             onTap: () => copyToClipboard(model.appVersionStr, context),
-                            onDoubleTap: () async {
-                              final res = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                            // onDoubleTap: () async {
+                            //   final res = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
 
-                              // final GooglePlayServicesAvailability gPlayState =
-                              //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
-                              // copyToClipboard(gPlayState.toString(), context);
+                            // final GooglePlayServicesAvailability gPlayState =
+                            //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
+                            // copyToClipboard(gPlayState.toString(), context);
 
-                              // late final String res;
-                              // try {
-                              //   res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
-                              // } catch (e) {
-                              //   res = e.toString();
-                              // }
-                              copyToClipboard(res, context);
-                              eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
-                            },
+                            // late final String res;
+                            // try {
+                            //   res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
+                            // } catch (e) {
+                            //   res = e.toString();
+                            // }
+                            // copyToClipboard(res, context);
+                            // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
+                            // },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
                               child: Center(

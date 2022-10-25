@@ -1,6 +1,7 @@
 {
   "es": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -265,11 +266,16 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "it": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -534,11 +540,16 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "ko": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -803,11 +814,16 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "pl": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy",
     "ads",
     "unknown_error",
@@ -1242,7 +1258,6 @@
     "verifying_the_code",
     "language",
     "my_profile",
-    "country",
     "choose_ad_default_region",
     "knowledge_base",
     "report_this_ad",
@@ -1344,11 +1359,16 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "pt": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -1613,7 +1633,11 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "ru": [
@@ -1882,11 +1906,16 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "zh": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -2151,11 +2180,16 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ],
 
   "zh_TW": [
     "method250Sbcash8722Sbon8722Sbdelivery",
+    "method250Sbyoomoney",
     "no_feedbacks",
     "you_buy",
     "you_pay",
@@ -2420,6 +2454,10 @@
     "app_one_percent",
     "app_final_amount",
     "app_note_label",
-    "app_note_add"
+    "app_note_add",
+    "app_update_new_version_available",
+    "app_update_now",
+    "app_update_ingnor_until_next",
+    "app_update_ignore_always"
   ]
 }

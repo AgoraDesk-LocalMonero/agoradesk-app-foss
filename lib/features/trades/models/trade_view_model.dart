@@ -45,6 +45,7 @@ import 'note_on_user_view_model.dart';
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
 const _kNewMessageDuration = Duration(milliseconds: 300);
+const kDeletedUserName = '[DELETED]';
 
 class TradeViewModel extends ViewModel
     with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin, StringMixin
@@ -244,7 +245,7 @@ class TradeViewModel extends ViewModel
     // recevining silently, without handling errors
     await getAdForLocalTrade();
     // also we need to get Full data for user with whom we made trade
-    await _getAccountInfo(tradeForScreen.isSelling! ? tradeForScreen.buyer.username! : tradeForScreen.seller.username!);
+    await _getAccountInfo(tradeForScreen.isSelling! ? tradeForScreen.buyer.username : tradeForScreen.seller.username);
 
     isTradeLoading = false;
     isLocalTrade = tradeForScreen.advertisement.tradeType.isLocal();
@@ -284,10 +285,14 @@ class TradeViewModel extends ViewModel
     });
   }
 
-  Future _getAccountInfo(String username) async {
-    final res = await _accountService.getAccountInfo(username);
-    if (res.isRight) {
-      accountInfoModel = res.right;
+  Future _getAccountInfo(String? username) async {
+    if (username != null) {
+      final res = await _accountService.getAccountInfo(username);
+      if (res.isRight) {
+        accountInfoModel = res.right;
+      }
+    } else {
+      accountInfoModel = const AccountInfoModel(username: kDeletedUserName);
     }
   }
 
@@ -649,9 +654,9 @@ class TradeViewModel extends ViewModel
 
   String usernameStr() {
     if (tradeForScreen.isSelling!) {
-      return tradeForScreen.buyer.username ?? '';
+      return tradeForScreen.buyer.username ?? kDeletedUserName;
     }
-    return tradeForScreen.seller.username ?? '';
+    return tradeForScreen.seller.username ?? kDeletedUserName;
   }
 
   AccountInfoModel userForTrade() {

@@ -154,15 +154,20 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                                         flex: 2,
                                         child: Row(
                                           children: [
-                                            ButtonLink(
-                                              title: model.usernameStr(),
-                                              alignment: Alignment.centerLeft,
-                                              onPressed: () => context.pushRoute(
-                                                TraderProfileRoute(
-                                                  profileModel: model.userForTrade(),
-                                                ),
-                                              ),
-                                            ),
+                                            model.usernameStr() == kDeletedUserName
+                                                ? Text(
+                                                    kDeletedUserName,
+                                                    style: context.txtBodyXSmallN90,
+                                                  )
+                                                : ButtonLink(
+                                                    title: model.usernameStr(),
+                                                    alignment: Alignment.centerLeft,
+                                                    onPressed: () => context.pushRoute(
+                                                      TraderProfileRoute(
+                                                        profileModel: model.userForTrade(),
+                                                      ),
+                                                    ),
+                                                  ),
                                           ],
                                         ),
                                       ),

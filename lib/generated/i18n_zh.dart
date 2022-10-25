@@ -4123,6 +4123,9 @@ class I18nZh extends I18n {
   String get method250Sbcreditcard => '信用卡';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get method250Sbcryptocurrency => '加密币';
 
   @override
@@ -8246,9 +8249,6 @@ class I18nZh extends I18n {
   String get my_profile => '我的简历';
 
   @override
-  String get country => '国家';
-
-  @override
   String get choose_ad_default_region => '选择广告默认区域';
 
   @override
@@ -8597,6 +8597,20 @@ class I18nZh extends I18n {
   String app_note_add(Object val) {
     return 'Add a note on $val';
   }
+
+  @override
+  String app_update_new_version_available(Object val) {
+    return 'New version $val is available.';
+  }
+
+  @override
+  String get app_update_now => 'Update now';
+
+  @override
+  String get app_update_ingnor_until_next => 'Ignore until next update';
+
+  @override
+  String get app_update_ignore_always => 'Always ignore';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -16218,9 +16232,6 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get my_profile => '我的簡歷';
-
-  @override
-  String get country => '國家';
 
   @override
   String get choose_ad_default_region => '選擇廣告默認區域';

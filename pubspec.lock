@@ -56,7 +56,7 @@ packages:
       name: awesome_notifications
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.7.2"
+    version: "0.7.4"
   barcode_scan2:
     dependency: "direct main"
     description:
@@ -371,7 +371,7 @@ packages:
       name: dropdown_search
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.2"
+    version: "5.0.3"
   duration:
     dependency: "direct main"
     description:
@@ -547,6 +547,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.4.3+7"
+  flutter_keyboard_size:
+    dependency: "direct main"
+    description:
+      name: flutter_keyboard_size
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   flutter_keyboard_visibility:
     dependency: "direct main"
     description:
@@ -891,13 +898,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  mapbox_search:
-    dependency: "direct main"
-    description:
-      name: mapbox_search
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.1+2"
   markdown:
     dependency: transitive
     description:
@@ -1233,7 +1233,7 @@ packages:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.3"
+    version: "6.0.4"
   pub_semver:
     dependency: transitive
     description:
@@ -1512,6 +1512,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0+2"
+  store_checker:
+    dependency: "direct main"
+    description:
+      name: store_checker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   stream_channel:
     dependency: transitive
     description:
@@ -1735,7 +1742,7 @@ packages:
       name: vm
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3+1"
+    version: "1.0.4"
   vm_service:
     dependency: transitive
     description:

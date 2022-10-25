@@ -8290,6 +8290,12 @@ abstract class I18n {
   /// **'Credit card'**
   String get method250Sbcreditcard;
 
+  /// No description provided for @method250Sbyoomoney.
+  ///
+  /// In en, this message translates to:
+  /// **'YooMoney'**
+  String get method250Sbyoomoney;
+
   /// No description provided for @method250Sbcryptocurrency.
   ///
   /// In en, this message translates to:
@@ -16216,12 +16222,6 @@ abstract class I18n {
   /// **'My profile'**
   String get my_profile;
 
-  /// No description provided for @country.
-  ///
-  /// In en, this message translates to:
-  /// **'Country'**
-  String get country;
-
   /// No description provided for @choose_ad_default_region.
   ///
   /// In en, this message translates to:
@@ -16833,6 +16833,30 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Add a note on {val}'**
   String app_note_add(Object val);
+
+  /// No description provided for @app_update_new_version_available.
+  ///
+  /// In en, this message translates to:
+  /// **'New version {val} is available.'**
+  String app_update_new_version_available(Object val);
+
+  /// No description provided for @app_update_now.
+  ///
+  /// In en, this message translates to:
+  /// **'Update now'**
+  String get app_update_now;
+
+  /// No description provided for @app_update_ingnor_until_next.
+  ///
+  /// In en, this message translates to:
+  /// **'Ignore until next update'**
+  String get app_update_ingnor_until_next;
+
+  /// No description provided for @app_update_ignore_always.
+  ///
+  /// In en, this message translates to:
+  /// **'Always ignore'**
+  String get app_update_ignore_always;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

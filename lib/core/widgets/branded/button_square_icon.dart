@@ -7,16 +7,16 @@ class ButtonSquareIcon extends StatelessWidget {
     required this.iconData,
     required this.onPressed,
     this.iconColor,
+    this.size = const Size(32, 32),
   }) : super(key: key);
 
   final IconData iconData;
   final VoidCallback onPressed;
   final Color? iconColor;
+  final Size size;
 
   @override
   Widget build(BuildContext context) {
-    const Size size = Size(32, 32);
-
     return ElevatedButton(
       onPressed: onPressed,
       clipBehavior: Clip.none,

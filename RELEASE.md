@@ -1,8 +1,5 @@
 ### Updates
-1. Fix: some ads are visible on the website but not in the app.
-2. Improved top of the chat page.
-3. Fix: messages doubling in the chat.
-4. Fix: the app is the missing the "XMR you receive".
+1. Fix: display trade info with deleted user.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

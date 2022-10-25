@@ -4123,6 +4123,9 @@ class I18nPt extends I18n {
   String get method250Sbcreditcard => 'Cartão de crédito';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get method250Sbcryptocurrency => 'Criptomoeda';
 
   @override
@@ -8246,9 +8249,6 @@ class I18nPt extends I18n {
   String get my_profile => 'Meu perfil';
 
   @override
-  String get country => 'País';
-
-  @override
   String get choose_ad_default_region => 'Escolha a região padrão do anúncio';
 
   @override
@@ -8597,4 +8597,18 @@ class I18nPt extends I18n {
   String app_note_add(Object val) {
     return 'Add a note on $val';
   }
+
+  @override
+  String app_update_new_version_available(Object val) {
+    return 'New version $val is available.';
+  }
+
+  @override
+  String get app_update_now => 'Update now';
+
+  @override
+  String get app_update_ingnor_until_next => 'Ignore until next update';
+
+  @override
+  String get app_update_ignore_always => 'Always ignore';
 }

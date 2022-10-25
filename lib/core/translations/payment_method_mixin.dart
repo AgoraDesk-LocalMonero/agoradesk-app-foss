@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,6 +27,18 @@ mixin PaymentMethodsMixin {
     } catch (e) {
       debugPrint('[getPaymentMethodIcon error] $e');
       return const SizedBox();
+    }
+  }
+
+  String getSortingTypeName(BuildContext context, SortingType? sortingType) {
+    try {
+      if (sortingType != null) {
+        return sortingType.translated(context);
+      }
+      return '';
+    } catch (e) {
+      debugPrint('[getSortingTypeName error] $e');
+      return '';
     }
   }
 
@@ -152,6 +165,7 @@ mixin PaymentMethodsMixin {
       'POSTAL_ORDER': 'Postal order',
       'CASH': context.intl.method250Sbcash,
       'MERCADO_PAGO': 'Mercado Pago',
+      'YOOMONEY': context.intl.method250Sbyoomoney,
     };
   }
 }

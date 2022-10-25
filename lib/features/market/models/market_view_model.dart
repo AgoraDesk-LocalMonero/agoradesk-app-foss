@@ -14,13 +14,18 @@ import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
+import 'package:agoradesk/features/app_update/data/services/app_update_service.dart';
+import 'package:agoradesk/features/app_update/screens/app_update_widget.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:vm/vm.dart';
 
-class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin {
+class MarketViewModel extends ViewModel
+    with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin
+    implements WidgetsBindingObserver {
   MarketViewModel({
     required AdsRepository adsRepository,
     required PlacesSearch placesSearch,
@@ -69,6 +74,7 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
   List<String> assetMenu = [];
   bool _reloadPaymentMethods = true;
   bool displayFilterMessage = false;
+  bool filterIsOpened = false;
 
   bool _loadingAds = false;
   bool initialLoading = true;
@@ -134,7 +140,9 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
 
   @override
   void onAfterBuild() async {
-    indicatorKey.currentState?.show();
+    if (!filterIsOpened) {
+      indicatorKey.currentState?.show();
+    }
   }
 
   void initMenus() {
@@ -412,7 +420,6 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     }
     _displayFilter = displayFilter ?? _displayFilter;
     if (tradeType != null && tradeType.isLocal()) {
-      _displayFilter = true;
       reloadAds = false;
       displayFilterMessage = true;
       ads.clear();
@@ -434,5 +441,72 @@ class MarketViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, 
     ctrlAmount.dispose();
     ctrlLocation.dispose();
     super.dispose();
+  }
+
+  @override
+  void didChangeAccessibilityFeatures() {
+    // TODO: implement didChangeAccessibilityFeatures
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    if (state == AppLifecycleState.resumed) {
+      final newVersion = await AppUpdateService(
+        appState: context.read<AppState>(),
+      ).getReleaseVersion();
+      if (newVersion != null) {
+        await Future.delayed(const Duration(seconds: 1));
+        showDialog(
+            context: context,
+            builder: (context) {
+              return AppUpdateWidget(
+                newVesrionNumber: newVersion,
+              );
+            });
+      }
+    }
+  }
+
+  @override
+  void didChangeLocales(List<Locale>? locales) {
+    // TODO: implement didChangeLocales
+  }
+
+  @override
+  void didChangeMetrics() {
+    // TODO: implement didChangeMetrics
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    // TODO: implement didChangePlatformBrightness
+  }
+
+  @override
+  void didChangeTextScaleFactor() {
+    // TODO: implement didChangeTextScaleFactor
+  }
+
+  @override
+  void didHaveMemoryPressure() {
+    // TODO: implement didHaveMemoryPressure
+  }
+
+  @override
+  Future<bool> didPopRoute() {
+    // TODO: implement didPopRoute
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> didPushRoute(String route) {
+    // TODO: implement didPushRoute
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
+    // TODO: implement didPushRouteInformation
+    throw UnimplementedError();
   }
 }

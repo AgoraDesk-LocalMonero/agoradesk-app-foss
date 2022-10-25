@@ -53,7 +53,7 @@
     },
     {
       "id": "5:5782449331183648541",
-      "lastPropertyId": "13:5285333424823935156",
+      "lastPropertyId": "15:993411353141141336",
       "name": "UserLocalSettings",
       "properties": [
         {
@@ -116,6 +116,16 @@
           "id": "13:5285333424823935156",
           "name": "biometricAuthIsOn",
           "type": 1
+        },
+        {
+          "id": "14:1841214546075048015",
+          "name": "ignoreAllUpdates",
+          "type": 1
+        },
+        {
+          "id": "15:993411353141141336",
+          "name": "ignoredUpdate",
+          "type": 9
         }
       ],
       "relations": []

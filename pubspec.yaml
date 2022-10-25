@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.27+51
+version: 1.0.28+52
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   auto_route: ^5.0.1
-  vm: ^1.0.3+1
+  vm: ^1.0.4
   auto_size_text: ^3.0.0
   connectivity_plus: ^2.3.0
   flutter_verification_code: ^1.1.2+1
@@ -23,7 +23,6 @@ dependencies:
   event_bus: ^2.0.0
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2
-#  in_app_review: ^2.0.4
   url_launcher: ^6.0.17
   intl: ^0.17.0
   rxdart: ^0.27.3
@@ -51,11 +50,9 @@ dependencies:
   dots_indicator: ^2.0.0
   currency_picker: ^2.0.7
   country_picker: ^2.0.11
-  dropdown_search: ^5.0.2
+  dropdown_search: ^5.0.3
   markdown_widget: ^1.2.9
   expandable: ^5.0.1
-  #  flutter_mapbox_autocomplete: ^2.0.0
-  mapbox_search: ^3.0.1+2
   #  readmore: ^2.1.0
   flutter_svg: ^1.1.0
   uni_links: ^0.5.1
@@ -68,7 +65,7 @@ dependencies:
   firebase_core: ^1.22.0
   firebase_messaging: ^13.0.1
   get_it: ^7.2.0
-  awesome_notifications: ^0.7.2
+  awesome_notifications: ^0.7.4
   flutter_foreground_task: ^3.8.2
   google_api_availability: ^3.0.1
   duration: ^3.0.11
@@ -79,10 +76,12 @@ dependencies:
   permission_handler: ^10.0.0
   restart_app: ^1.1.0
   local_auth: ^2.1.2
+  flutter_keyboard_size: ^1.0.1
+  store_checker: ^1.1.0
 
 dependency_overrides:
-#  flutter_foreground_task:
-#    path: ../flutter_foreground_task
+  #  flutter_foreground_task:
+  #    path: ../flutter_foreground_task
   flutter_foreground_task:
     git:
       url: https://github.com/sergdeus/flutter_foreground_task
