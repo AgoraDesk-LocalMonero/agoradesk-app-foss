@@ -20,6 +20,7 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:vm/vm.dart';
 
 class MarketViewModel extends ViewModel
@@ -450,7 +451,9 @@ class MarketViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
-      final newVersion = await AppUpdateService().getReleaseVersion();
+      final newVersion = await AppUpdateService(
+        appState: context.read<AppState>(),
+      ).getReleaseVersion();
       if (newVersion != null) {
         await Future.delayed(const Duration(seconds: 1));
         showDialog(

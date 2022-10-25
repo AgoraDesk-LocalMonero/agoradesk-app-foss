@@ -16,14 +16,13 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
     Locale? locale,
     ThemeMode theme = ThemeMode.dark,
-    required Box<UserLocalSettings> userLocalSettingsBox,
+    required this.userSettingsBox,
     required SecureStorage secureStorage,
   })  : _locale = locale,
-        _userSettingsBox = userLocalSettingsBox,
         _secureStorage = secureStorage,
         _themeMode = theme;
 
-  final Box<UserLocalSettings> _userSettingsBox;
+  final Box<UserLocalSettings> userSettingsBox;
   final SecureStorage _secureStorage;
   ThemeMode _themeMode;
   Locale? _locale;
@@ -33,22 +32,22 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String? _pinCode;
   String? openedTradeId;
 
-  String get username => _userSettingsBox.getAll()[0].username ?? '';
+  String get username => userSettingsBox.getAll()[0].username ?? '';
 
-  bool get sentryIsOn => _userSettingsBox.getAll()[0].sentryIsOn ?? true;
+  bool get sentryIsOn => userSettingsBox.getAll()[0].sentryIsOn ?? true;
 
   set sentryIsOn(bool val) {
-    final s = _userSettingsBox.getAll()[0];
+    final s = userSettingsBox.getAll()[0];
     s.sentryIsOn = val;
-    _userSettingsBox.put(s);
+    userSettingsBox.put(s);
   }
 
-  bool get isPushTokenSavedToApi => _userSettingsBox.getAll()[0].pushFcmTokenSavedToApi ?? false;
+  bool get isPushTokenSavedToApi => userSettingsBox.getAll()[0].pushFcmTokenSavedToApi ?? false;
 
   set isPushTokenSavedToApi(bool val) {
-    final s = _userSettingsBox.getAll()[0];
+    final s = userSettingsBox.getAll()[0];
     s.pushFcmTokenSavedToApi = val;
-    _userSettingsBox.put(s);
+    userSettingsBox.put(s);
   }
 
   String get langCode => locale.languageCode.substring(0, 2);
@@ -156,9 +155,9 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String get countryCode => _countryCode ?? 'US';
 
   set countryCode(String code) {
-    final s = _userSettingsBox.getAll()[0];
+    final s = userSettingsBox.getAll()[0];
     s.countryCode = code;
-    _userSettingsBox.put(s);
+    userSettingsBox.put(s);
     updateWith(countryCode: code);
   }
 
@@ -195,9 +194,9 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
       const Duration(milliseconds: 100),
       () {
         updateWith(locale: locale);
-        final s = _userSettingsBox.getAll()[0];
+        final s = userSettingsBox.getAll()[0];
         s.locale = locale.languageCode;
-        _userSettingsBox.put(s);
+        userSettingsBox.put(s);
         _secureStorage.write(SecureStorageKey.locale, locale.languageCode);
         eventBus.fire(LocaleChangedEvent(locale));
       },
@@ -219,24 +218,24 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   bool get biometricAuthIsOn {
     try {
-      return _userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
+      return userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
     } catch (e) {
       return false;
     }
   }
 
   set biometricAuthIsOn(bool val) {
-    final s = _userSettingsBox.getAll()[0];
+    final s = userSettingsBox.getAll()[0];
     s.biometricAuthIsOn = val;
-    _userSettingsBox.put(s);
+    userSettingsBox.put(s);
   }
 
   ThemeMode get themeMode => _themeMode;
 
   set themeMode(ThemeMode mode) {
-    final s = _userSettingsBox.getAll()[0];
+    final s = userSettingsBox.getAll()[0];
     s.themeMode = mode;
-    _userSettingsBox.put(s);
+    userSettingsBox.put(s);
     updateWith(themeMode: mode);
     eventBus.fire(ThemeModeChangedEvent(mode));
   }
