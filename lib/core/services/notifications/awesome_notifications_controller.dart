@@ -29,12 +29,12 @@ class AwesomeNotificationController {
   @pragma("vm:entry-point")
   static Future<void> onActionReceivedMethod(ReceivedAction receivedAction) async {
     try {
-      bool appRanFromPush = false;
+      // bool appRanFromPush = false;
       String? tradeId;
       if (receivedAction.payload != null) {
         final PushModel push = PushModel.fromJson(receivedAction.payload!);
         if (push.objectId != null && push.objectId!.isNotEmpty) {
-          appRanFromPush = true;
+          // appRanFromPush = true;
           tradeId = push.objectId;
         }
       }
