@@ -69,10 +69,8 @@
                 android:autoVerify="true"
                 android:priority="@string/links_priority">
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
                     android:host="@string/app_host"
                     android:scheme="https" />
@@ -82,10 +80,8 @@
                 android:autoVerify="true"
                 android:priority="@string/links_priority">
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data
                     android:host="@string/app_host_2"
                     android:scheme="https" />

@@ -32,13 +32,10 @@ class AwesomeNotificationController {
       bool appRanFromPush = false;
       String? tradeId;
       if (receivedAction.payload != null) {
-        print('+++++++++++++++++++++++++++++++++++++11 - ${receivedAction.payload!}');
         final PushModel push = PushModel.fromJson(receivedAction.payload!);
-        print('+++++++++++++++++++++++++++++++++++++112');
         if (push.objectId != null && push.objectId!.isNotEmpty) {
           appRanFromPush = true;
           tradeId = push.objectId;
-          print('+++++++++++++++++++++++++++++++++++++113');
         }
       }
       eventBus.fire(AwesomeMessageClickedEvent(tradeId));
