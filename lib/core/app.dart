@@ -161,6 +161,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     // in case app is terminated there is info in main.dart
     AwesomeNotifications().setListeners(
       onActionReceivedMethod: AwesomeNotificationController.onActionReceivedMethod,
+      onDismissActionReceivedMethod: AwesomeNotificationController.onDismissActionReceivedMethod,
     );
 
     WidgetsBinding.instance.addObserver(this);
