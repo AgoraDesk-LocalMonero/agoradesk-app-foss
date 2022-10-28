@@ -326,7 +326,6 @@ class AuthService with FileUtilsMixin {
     await Future.delayed(const Duration(milliseconds: 100));
     ObjectBox.s.box<MessageBoxModel>().removeAll();
     await Future.delayed(const Duration(milliseconds: 100));
-    final val = _userSettingsBox.getAll();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
 
