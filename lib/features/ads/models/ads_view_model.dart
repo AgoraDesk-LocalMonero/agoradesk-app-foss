@@ -256,9 +256,11 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
         await Future.delayed(const Duration(seconds: 3));
         if (!_checkTooltipWasDisplayed(TooltipType.adEye)) {
           _displayEyeTooltip();
+          HapticFeedback.heavyImpact();
           _markTooltipAsShown(TooltipType.adEye);
-        } else if (!_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
+        } else if (_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
           _displayPressTooltip();
+          HapticFeedback.heavyImpact();
           _markTooltipAsShown(TooltipType.adLongPress);
         }
       }
