@@ -322,10 +322,14 @@ class AuthService with FileUtilsMixin {
     _appState.hasPinCode = false;
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
-    _userSettingsBox.removeAll();
+    ObjectBox.s.box<UserLocalSettings>().removeAll();
+    await Future.delayed(const Duration(milliseconds: 100));
     ObjectBox.s.box<MessageBoxModel>().removeAll();
+    await Future.delayed(const Duration(milliseconds: 100));
+    final val = _userSettingsBox.getAll();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
+
     return true;
   }
 

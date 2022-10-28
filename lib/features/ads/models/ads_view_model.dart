@@ -101,6 +101,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool _init = false;
 
   bool _loadingAds = false;
+  bool _displayingTooltip = false;
   bool _reloadPaymentMethods = true;
   bool _loadingSettings = true;
   List<String> tradeTypeMenu = [];
@@ -248,15 +249,20 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     await getCurrencies();
   }
 
-  void displayTooltips(int length) {
-    if (length > 1) {
-      if (!_checkTooltipWasDisplayed(TooltipType.adEye)) {
-        _displayEyeTooltip();
-        _markTooltipAsShown(TooltipType.adEye);
-      } else if (!_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
-        _displayPressTooltip();
-        _markTooltipAsShown(TooltipType.adLongPress);
+  Future displayTooltips(int length) async {
+    if (!_displayingTooltip) {
+      _displayingTooltip = true;
+      if (length > 1) {
+        await Future.delayed(const Duration(seconds: 3));
+        if (!_checkTooltipWasDisplayed(TooltipType.adEye)) {
+          _displayEyeTooltip();
+          _markTooltipAsShown(TooltipType.adEye);
+        } else if (!_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
+          _displayPressTooltip();
+          _markTooltipAsShown(TooltipType.adLongPress);
+        }
       }
+      _displayingTooltip = false;
     }
   }
 
@@ -264,8 +270,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     final val = box.getAll()[0];
     if (!val.tooltipsShown.contains(tooltipType.name)) {
       val.tooltipsShown.add(tooltipType.name);
+      box.put(val);
     }
-    box.put(val);
   }
 
   bool _checkTooltipWasDisplayed(TooltipType tooltipType) {
@@ -274,12 +280,10 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   }
 
   Future _displayEyeTooltip() async {
-    await Future.delayed(const Duration(seconds: 3));
     tooltipEyeController.showTooltip();
   }
 
   Future _displayPressTooltip() async {
-    await Future.delayed(const Duration(seconds: 3));
     tooltipPressController.showTooltip();
   }
 
