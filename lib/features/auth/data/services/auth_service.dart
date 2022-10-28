@@ -323,9 +323,9 @@ class AuthService with FileUtilsMixin {
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
     ObjectBox.s.box<UserLocalSettings>().removeAll();
-    await Future.delayed(const Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 10));
     ObjectBox.s.box<MessageBoxModel>().removeAll();
-    await Future.delayed(const Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 10));
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
 
