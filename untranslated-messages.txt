@@ -270,7 +270,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "it": [
@@ -544,7 +546,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "ko": [
@@ -818,7 +822,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "pl": [
@@ -1363,7 +1369,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "pt": [
@@ -1637,7 +1645,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "ru": [
@@ -1910,7 +1920,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "zh": [
@@ -2184,7 +2196,9 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ],
 
   "zh_TW": [
@@ -2458,6 +2472,8 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad"
   ]
 }

@@ -27,6 +27,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
+import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:vm/vm.dart';
 
@@ -51,6 +52,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final countryDropdownKey = GlobalKey<DropdownSearchState>();
   final visibilityDropdownKey = GlobalKey<DropdownSearchState>();
   final sortDropdownKey = GlobalKey<DropdownSearchState>();
+  final tooltipEyeController = JustTheController();
+  final tooltipPressController = JustTheController();
 
   late final TabController tabController;
 
@@ -233,6 +236,17 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   Future _loadCaches() async {
     await getCountryCodes();
     await getCurrencies();
+  }
+
+  void displayTooltips(int length) {
+    if (length > 0) {
+      if (_app) _displayEyeTooltip();
+    }
+  }
+
+  Future _displayEyeTooltip() async {
+    await Future.delayed(const Duration(seconds: 3));
+    tooltipEyeController.showTooltip();
   }
 
   @override
@@ -440,6 +454,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
           // filteredAds.clear();
         }
         ads.addAll(res.right.data);
+        displayTooltips(ads.length);
         // filteredAds.addAll(res.right);
       } else {
         handleApiError(res.left, context);
@@ -885,6 +900,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     ctrlBulkMaxAmount.dispose();
     ctrlBulkSettlementWalletAddress.dispose();
     ctrl3FormulaInput.dispose();
+    tooltipEyeController.dispose();
     super.dispose();
   }
 }

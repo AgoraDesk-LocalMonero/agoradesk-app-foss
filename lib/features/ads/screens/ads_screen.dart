@@ -200,8 +200,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 onPressed: () => model.managePressToAd(ad, context),
                 onLongPress: () => model.handleLongPressToAd(ad),
                 onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                // isOnGlobalVacation: model.checkAdVacation(ad),
-                // globalVacationPressed: () {},
+                tooltipController: model.tooltipController(index),
+                onTooltipDismiss: () => model.onTooltipDismiss(index),
               );
             },
           );

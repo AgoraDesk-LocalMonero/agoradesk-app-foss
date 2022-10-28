@@ -78,6 +78,7 @@ dependencies:
   local_auth: ^2.1.2
   flutter_keyboard_size: ^1.0.1
   store_checker: ^1.1.0
+  just_the_tooltip: ^0.0.12
 
 dependency_overrides:
   #  flutter_foreground_task:

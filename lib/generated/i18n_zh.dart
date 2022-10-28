@@ -8611,6 +8611,12 @@ class I18nZh extends I18n {
 
   @override
   String get app_update_ignore_always => 'Always ignore';
+
+  @override
+  String get app_tooltip_visibility => 'Tap to toggle visibility';
+
+  @override
+  String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

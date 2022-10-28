@@ -849,6 +849,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.2.0"
+  just_the_tooltip:
+    dependency: "direct main"
+    description:
+      name: just_the_tooltip
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.12"
   lints:
     dependency: transitive
     description:

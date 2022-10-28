@@ -3408,5 +3408,7 @@
   },
   "app_update_now": "Update now",
   "app_update_ingnor_until_next": "Ignore until next update",
-  "app_update_ignore_always": "Always ignore"
+  "app_update_ignore_always": "Always ignore",
+  "app_tooltip_visibility": "Tap to toggle visibility",
+  "app_tooltip_long_press_ad": "Long press on the ad to enable group editing"
 }

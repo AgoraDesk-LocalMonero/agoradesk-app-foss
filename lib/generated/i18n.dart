@@ -16857,6 +16857,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Always ignore'**
   String get app_update_ignore_always;
+
+  /// No description provided for @app_tooltip_visibility.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to toggle visibility'**
+  String get app_tooltip_visibility;
+
+  /// No description provided for @app_tooltip_long_press_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Long press on the ad to enable group editing'**
+  String get app_tooltip_long_press_ad;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

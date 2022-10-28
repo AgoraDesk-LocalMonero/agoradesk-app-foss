@@ -15,6 +15,7 @@ import 'package:agoradesk/features/trades/screens/widgets/highlight_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:just_the_tooltip/just_the_tooltip.dart';
 
 //todo - merge with AdMarketTile
 class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMethodsMixin {
@@ -25,23 +26,25 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
     required this.index,
     this.onLongPress,
     required this.onVisiblePressed,
-    // required this.globalVacationPressed,
-    // required this.isOnGlobalVacation,
     this.isSelected = false,
     this.changingVisibility = false,
     this.changingIndex = 0,
+    this.tooltipController,
+    this.onTooltipDismiss,
   }) : super(key: key);
 
   final AdModel ad;
   final VoidCallback? onPressed;
   final VoidCallback? onLongPress;
   final VoidCallback onVisiblePressed;
-  // final VoidCallback globalVacationPressed;
+
   final bool isSelected;
-  // final bool isOnGlobalVacation;
+
   final bool changingVisibility;
   final int changingIndex;
   final int index;
+  final JustTheController? tooltipController;
+  final VoidCallback? onTooltipDismiss;
 
   @override
   Widget build(BuildContext context) {
@@ -91,52 +94,41 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
               color: ad.tradeType.colorForTrade(context),
               textColor: ad.tradeType.textColorForTrade(context),
             ),
-            GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: onVisiblePressed,
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
-                child: changingVisibility && changingIndex == index
-                    ? const CupertinoActivityIndicator(
-                        radius: 8,
-                      )
-                    : Icon(
-                        ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
-                        color: context.colN80N30,
-                        size: 16,
-                      ),
+            JustTheTooltip(
+              controller: tooltipController,
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: onVisiblePressed,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
+                  child: changingVisibility && changingIndex == index
+                      ? const CupertinoActivityIndicator(
+                          radius: 8,
+                        )
+                      : Icon(
+                          ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
+                          color: context.colN80N30,
+                          size: 16,
+                        ),
+                ),
+              ),
+              backgroundColor: context.colInfoOutlineSec90,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(12),
+              ),
+              margin: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+              content: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  context.intl.app_tooltip_visibility,
+                  style: context.txtLabelMediumP90P10,
+                ),
               ),
             ),
           ],
         ),
         Row(
           children: [
-            // isOnGlobalVacation
-            //     ? GestureDetector(
-            //         behavior: HitTestBehavior.opaque,
-            //         onTap: () {
-            //           showDialog(
-            //             context: context,
-            //             builder: (_) => AgoraDialogInfoNoTitle(
-            //               child: Text(
-            //                 context.intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
-            //                 style: context.txtBodySmallN80N30,
-            //               ),
-            //             ),
-            //           );
-            //         },
-            //         child: Padding(
-            //           padding: const EdgeInsets.fromLTRB(6, 0, 12, 0),
-            //           child: Text(
-            //             '⛱',
-            //             style: context.txtLabelRed60Red40.copyWith(
-            //               fontSize: 16,
-            //               color: context.colRed60Red40,
-            //             ),
-            //           ),
-            //         ),
-            //       )
-            //     : const SizedBox(),
             Icon(
               AgoraFont.calendar,
               size: 12,
