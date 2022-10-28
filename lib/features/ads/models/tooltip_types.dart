@@ -1,0 +1,4 @@
+enum TooltipType {
+  adEye,
+  adLongPress,
+}

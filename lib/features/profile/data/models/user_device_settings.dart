@@ -17,7 +17,7 @@ class UserLocalSettings {
     this.cachedCurrencySavedDate,
     this.ignoreAllUpdates = false,
     this.ignoredUpdate,
-    this.tooltipsShown,
+    this.tooltipsShown = const [],
   });
 
   @Id()
@@ -35,7 +35,7 @@ class UserLocalSettings {
   String? countryCode;
   DateTime? cachedCountrySavedDate;
   DateTime? cachedCurrencySavedDate;
-  Map<String, bool>? tooltipsShown;
+  List<String> tooltipsShown;
 
   /// converter - required by object box
   int? get dbThemeMode {

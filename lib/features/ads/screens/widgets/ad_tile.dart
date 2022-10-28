@@ -30,6 +30,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
     this.changingVisibility = false,
     this.changingIndex = 0,
     this.tooltipController,
+    this.tooltipPressController,
     this.onTooltipDismiss,
   }) : super(key: key);
 
@@ -44,6 +45,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
   final int changingIndex;
   final int index;
   final JustTheController? tooltipController;
+  final JustTheController? tooltipPressController;
   final VoidCallback? onTooltipDismiss;
 
   @override
@@ -95,6 +97,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
               textColor: ad.tradeType.textColorForTrade(context),
             ),
             JustTheTooltip(
+              key: UniqueKey(),
               controller: tooltipController,
               child: GestureDetector(
                 behavior: HitTestBehavior.opaque,
@@ -181,9 +184,25 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                           ],
                         ),
                         const SizedBox(height: verticalPadding),
-                        Text(
-                          ad.paymentMethodDetail ?? '',
-                          style: context.txtTermsN90,
+                        JustTheTooltip(
+                          key: UniqueKey(),
+                          controller: tooltipPressController,
+                          child: Text(
+                            ad.paymentMethodDetail ?? '',
+                            style: context.txtTermsN90,
+                          ),
+                          backgroundColor: context.colInfoOutlineSec90,
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(12),
+                          ),
+                          margin: const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                          content: Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Text(
+                              context.intl.app_tooltip_long_press_ad,
+                              style: context.txtLabelMediumP90P10,
+                            ),
+                          ),
                         ),
                       ],
                     )
