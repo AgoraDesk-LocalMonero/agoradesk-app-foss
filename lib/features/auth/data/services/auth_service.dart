@@ -323,9 +323,13 @@ class AuthService with FileUtilsMixin {
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
     ObjectBox.s.box<UserLocalSettings>().removeAll();
-    await Future.delayed(const Duration(milliseconds: 10));
+    await Future.delayed(const Duration(milliseconds: 100));
     ObjectBox.s.box<MessageBoxModel>().removeAll();
-    await Future.delayed(const Duration(milliseconds: 10));
+    await Future.delayed(const Duration(milliseconds: 100));
+
+    // fix the bug when data isn't removed
+    final val = ObjectBox.s.box<UserLocalSettings>().getAll();
+    final val2 = ObjectBox.s.box<MessageBoxModel>().getAll();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
 
