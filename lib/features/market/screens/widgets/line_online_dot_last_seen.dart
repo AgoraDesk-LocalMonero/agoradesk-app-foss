@@ -14,32 +14,32 @@ class LineOnlineDotLastSeen extends StatelessWidget with DateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
-          child: Icon(
-            Icons.circle,
-            size: 8,
-            color: isRecentColor(date, context),
-          ),
-        ),
-        const SizedBox(width: 4),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 3, 0, 0),
+              child: Icon(
+                Icons.circle,
+                size: 8,
+                color: isRecentColor(date, context),
+              ),
+            ),
+            const SizedBox(width: 4),
+            Expanded(
+              child: Text(
                 text,
                 style: context.txtBodyXSmallN90N10,
               ),
-              Text(
-                context.intl.app_last_seen(timeAgoFromNow(date ?? DateTime.now())),
-                style: context.txtBodyXXSmallN60N50,
-              ),
-            ],
-          ),
+            ),
+          ],
+        ),
+        Text(
+          context.intl.app_last_seen(timeAgoFromNow(date ?? DateTime.now())),
+          style: context.txtBodyXXSmallN60N50,
         ),
       ],
     );

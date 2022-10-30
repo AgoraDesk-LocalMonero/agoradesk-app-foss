@@ -57,6 +57,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
               leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
               rightAction: AppBarButton(
                 iconData: AgoraFont.help_circle,
+                label: context.intl.help,
                 onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
               ),
             ),

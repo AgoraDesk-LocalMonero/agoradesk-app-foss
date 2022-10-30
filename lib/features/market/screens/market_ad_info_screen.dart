@@ -60,6 +60,7 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
                   : model.ad!.tradeType.translatedPublicSign(context, model.ad!.asset!.title()),
               rightAction: AppBarButton(
                 iconData: AgoraFont.info,
+                label: context.intl.user250Sbinformation,
                 onPressed: () => _alertDialog(context, model.asset),
               ),
             ),

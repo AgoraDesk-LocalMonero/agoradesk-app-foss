@@ -66,6 +66,7 @@ class PinCodeCheckScreen extends StatelessWidget {
                           onChangedPin: (_) {},
                           leftBottomWidget: model.biometricAuthIsOn
                               ? IconButton(
+                                  tooltip: context.intl.app_biometric_authentication,
                                   icon: Icon(
                                     Icons.fingerprint,
                                     size: 40,

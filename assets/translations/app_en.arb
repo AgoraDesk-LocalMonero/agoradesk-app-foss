@@ -3421,5 +3421,6 @@
     "placeholders": {
       "val": {}
     }
-  }
+  },
+  "app_open_additional_filters": "Open additional filters"
 }

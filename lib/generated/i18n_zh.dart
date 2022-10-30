@@ -8637,6 +8637,9 @@ class I18nZh extends I18n {
   String app_last_seen(Object val) {
     return 'Last seen $val';
   }
+
+  @override
+  String get app_open_additional_filters => 'Open additional filters';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

@@ -46,6 +46,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                     : context.intl.buy_from(ad.profile!.username!),
                 rightAction: AppBarButton(
                   iconData: AgoraFont.info,
+                  label: context.intl.user250Sbinformation,
                   onPressed: () {},
                 ),
               ),

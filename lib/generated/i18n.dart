@@ -16905,6 +16905,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Last seen {val}'**
   String app_last_seen(Object val);
+
+  /// No description provided for @app_open_additional_filters.
+  ///
+  /// In en, this message translates to:
+  /// **'Open additional filters'**
+  String get app_open_additional_filters;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

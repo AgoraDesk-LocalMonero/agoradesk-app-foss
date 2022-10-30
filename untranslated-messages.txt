@@ -278,7 +278,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "it": [
@@ -560,7 +561,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "ko": [
@@ -842,7 +844,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "pl": [
@@ -1395,7 +1398,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "pt": [
@@ -1677,7 +1681,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "ru": [
@@ -1958,7 +1963,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "zh": [
@@ -2240,7 +2246,8 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ],
 
   "zh_TW": [
@@ -2522,6 +2529,7 @@
     "app_display_password",
     "app_hide_password",
     "app_trade_has_been_cancelled",
-    "app_last_seen"
+    "app_last_seen",
+    "app_open_additional_filters"
   ]
 }
