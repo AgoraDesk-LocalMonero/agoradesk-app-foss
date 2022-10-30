@@ -102,6 +102,14 @@ mixin DateMixin {
   }
 
   ///
+  /// short Last Seen
+  ///
+  String timeAgoFromNowShort(DateTime date) {
+    final now = DateTime.now();
+    return timeago.format(now.subtract(now.difference(date)), locale: 'en_short');
+  }
+
+  ///
   /// returns colors for different durations
   ///
   Color isRecentColor(DateTime? date, BuildContext context) {

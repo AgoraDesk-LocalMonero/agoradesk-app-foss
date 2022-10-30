@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
@@ -14,6 +13,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/src/provider.dart';
+import 'package:vm/vm.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({
@@ -72,15 +72,18 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                     ),
                                   ),
                                   const SizedBox(height: 16),
-                                  TextField(
-                                    decoration: context.decorationTxtFieldMain.copyWith(
-                                      hintText: context.intl.login250Sbusername,
-                                      errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
+                                  Semantics(
+                                    tooltip: context.intl.login250Sbusername,
+                                    child: TextField(
+                                      decoration: context.decorationTxtFieldMain.copyWith(
+                                        hintText: context.intl.login250Sbusername,
+                                        errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
+                                      ),
+                                      autofillHints: const [AutofillHints.username],
+                                      onChanged: (input) {
+                                        model.username = input;
+                                      },
                                     ),
-                                    autofillHints: const [AutofillHints.username],
-                                    onChanged: (input) {
-                                      model.username = input;
-                                    },
                                   ),
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(

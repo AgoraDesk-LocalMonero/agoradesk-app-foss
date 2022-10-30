@@ -16869,6 +16869,42 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Long press on the ad to enable group editing'**
   String get app_tooltip_long_press_ad;
+
+  /// No description provided for @app_join_telegram.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Telegram group'**
+  String get app_join_telegram;
+
+  /// No description provided for @app_join_matrix.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Matrix group'**
+  String get app_join_matrix;
+
+  /// No description provided for @app_display_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Display password'**
+  String get app_display_password;
+
+  /// No description provided for @app_hide_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide password'**
+  String get app_hide_password;
+
+  /// No description provided for @app_trade_has_been_cancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'The trade has been cancelled.'**
+  String get app_trade_has_been_cancelled;
+
+  /// No description provided for @app_last_seen.
+  ///
+  /// In en, this message translates to:
+  /// **'Last seen {val}'**
+  String app_last_seen(Object val);
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

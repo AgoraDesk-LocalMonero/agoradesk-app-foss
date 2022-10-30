@@ -8617,4 +8617,24 @@ class I18nPt extends I18n {
 
   @override
   String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
+
+  @override
+  String get app_join_telegram => 'Join Telegram group';
+
+  @override
+  String get app_join_matrix => 'Join Matrix group';
+
+  @override
+  String get app_display_password => 'Display password';
+
+  @override
+  String get app_hide_password => 'Hide password';
+
+  @override
+  String get app_trade_has_been_cancelled => 'The trade has been cancelled.';
+
+  @override
+  String app_last_seen(Object val) {
+    return 'Last seen $val';
+  }
 }
