@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/agora_box_open_close_line_s5_widget.dart';
@@ -20,6 +19,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class CouponsScreen extends StatelessWidget {
   const CouponsScreen({Key? key}) : super(key: key);
@@ -68,6 +68,7 @@ class CouponsScreen extends StatelessWidget {
                                   padding: const EdgeInsets.all(4),
                                   child: ButtonSquareIcon(
                                     iconData: AgoraFont.clipboard,
+                                    label: context.intl.copy,
                                     onPressed: () => model.paste(),
                                   ),
                                 ),

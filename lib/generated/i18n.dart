@@ -16911,6 +16911,30 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Open additional filters'**
   String get app_open_additional_filters;
+
+  /// No description provided for @app_select_asset.
+  ///
+  /// In en, this message translates to:
+  /// **'Select asset'**
+  String get app_select_asset;
+
+  /// No description provided for @app_select_trade_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Select trade type'**
+  String get app_select_trade_type;
+
+  /// No description provided for @app_paste.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste'**
+  String get app_paste;
+
+  /// No description provided for @app_scan_qr_code.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan QR code'**
+  String get app_scan_qr_code;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

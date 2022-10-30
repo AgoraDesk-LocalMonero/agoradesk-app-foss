@@ -22,6 +22,7 @@ class LineTextNeutral80Copy extends StatelessWidget with ClipboardMixin {
         ButtonSquareIcon(
           iconData: AgoraFont.copy_alt,
           iconColor: context.colP70,
+          label: context.intl.copy,
           onPressed: () => copyToClipboard(text, context),
         )
       ],

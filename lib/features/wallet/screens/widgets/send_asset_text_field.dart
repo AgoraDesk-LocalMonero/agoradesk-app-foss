@@ -41,6 +41,7 @@ class SendAssetTextField extends StatelessWidget {
                     child: hasValue
                         ? ButtonSquareIcon(
                             iconData: AgoraFont.x,
+                            label: context.intl.app_clear,
                             onPressed: clear,
                           )
                         : const SizedBox(),
@@ -48,10 +49,15 @@ class SendAssetTextField extends StatelessWidget {
                   const SizedBox(width: 4),
                   ButtonSquareIcon(
                     iconData: AgoraFont.clipboard,
+                    label: context.intl.app_paste,
                     onPressed: paste,
                   ),
                   const SizedBox(width: 4),
-                  ButtonSquareIcon(iconData: AgoraFont.qrcode_scan, onPressed: qrPressed),
+                  ButtonSquareIcon(
+                    iconData: AgoraFont.qrcode_scan,
+                    label: context.intl.app_scan_qr_code,
+                    onPressed: qrPressed,
+                  ),
                   const SizedBox(width: 10),
                 ],
               ),

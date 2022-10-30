@@ -3422,5 +3422,9 @@
       "val": {}
     }
   },
-  "app_open_additional_filters": "Open additional filters"
+  "app_open_additional_filters": "Open additional filters",
+  "app_select_asset": "Select asset",
+  "app_select_trade_type": "Select trade type",
+  "app_paste": "Paste",
+  "app_scan_qr_code": "Scan QR code"
 }

@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 enum TrimMode {
-  Length,
-  Line,
+  length,
+  line,
 }
 
 class ReadMoreText extends StatefulWidget {
@@ -19,7 +19,7 @@ class ReadMoreText extends StatefulWidget {
     this.colorClickableText,
     this.trimLength = 240,
     this.trimLines = 2,
-    this.trimMode = TrimMode.Length,
+    this.trimMode = TrimMode.length,
     this.style,
     this.textAlign,
     this.textDirection,
@@ -122,13 +122,14 @@ class ReadMoreTextState extends State<ReadMoreText> {
     );
 
     TextSpan _delimiter = TextSpan(
+      semanticsLabel: '',
       text: _readMore
           ? widget.trimCollapsedText.isNotEmpty
               ? widget.delimiter
               : ''
           : '',
       style: _defaultDelimiterStyle,
-      recognizer: TapGestureRecognizer()..onTap = _onTapLink,
+      // recognizer: TapGestureRecognizer()..onTap = _onTapLink,
     );
 
     Widget result = LayoutBuilder(
@@ -138,16 +139,18 @@ class ReadMoreTextState extends State<ReadMoreText> {
 
         TextSpan? preTextSpan;
         TextSpan? postTextSpan;
-        if (widget.preDataText != null)
+        if (widget.preDataText != null) {
           preTextSpan = TextSpan(
             text: widget.preDataText! + " ",
             style: widget.preDataTextStyle ?? effectiveTextStyle,
           );
-        if (widget.postDataText != null)
+        }
+        if (widget.postDataText != null) {
           postTextSpan = TextSpan(
             text: " " + widget.postDataText!,
             style: widget.postDataTextStyle ?? effectiveTextStyle,
           );
+        }
 
         // Create a TextSpan with data
         final text = TextSpan(
@@ -200,14 +203,14 @@ class ReadMoreTextState extends State<ReadMoreText> {
           linkLongerThanLine = true;
         }
 
-        var textSpan;
+        TextSpan textSpan;
         switch (widget.trimMode) {
-          case TrimMode.Length:
+          case TrimMode.length:
             if (widget.trimLength < widget.data.length) {
               textSpan = TextSpan(
                 style: effectiveTextStyle,
                 text: _readMore ? widget.data.substring(0, widget.trimLength) : widget.data,
-                children: <TextSpan>[_delimiter, link],
+                children: <TextSpan>[link],
               );
             } else {
               textSpan = TextSpan(
@@ -216,14 +219,18 @@ class ReadMoreTextState extends State<ReadMoreText> {
               );
             }
             break;
-          case TrimMode.Line:
+          case TrimMode.line:
             if (textPainter.didExceedMaxLines) {
               textSpan = TextSpan(
+                semanticsLabel: _readMore ? widget.trimCollapsedText : widget.trimExpandedText,
                 style: effectiveTextStyle,
                 text: _readMore
                     ? widget.data.substring(0, endIndex) + (linkLongerThanLine ? _kLineSeparator : '')
                     : widget.data,
-                children: <TextSpan>[_delimiter, link],
+                children: <TextSpan>[
+                  _delimiter,
+                  link,
+                ],
               );
             } else {
               textSpan = TextSpan(

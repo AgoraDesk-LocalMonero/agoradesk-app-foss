@@ -8640,4 +8640,16 @@ class I18nPt extends I18n {
 
   @override
   String get app_open_additional_filters => 'Open additional filters';
+
+  @override
+  String get app_select_asset => 'Select asset';
+
+  @override
+  String get app_select_trade_type => 'Select trade type';
+
+  @override
+  String get app_paste => 'Paste';
+
+  @override
+  String get app_scan_qr_code => 'Scan QR code';
 }
