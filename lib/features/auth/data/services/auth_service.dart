@@ -66,6 +66,9 @@ class AuthService with FileUtilsMixin {
   /// TODO: check expires_in
   ///
   Future<void> init() async {
+    if (_api.accessToken != null && _api.accessToken!.isNotEmpty) {
+      authState = AuthState.loggedIn;
+    }
     debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
   }
 
