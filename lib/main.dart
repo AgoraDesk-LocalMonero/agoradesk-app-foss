@@ -7,7 +7,6 @@ import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
-import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,6 +20,7 @@ import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
+import 'core/translations/foreground_messages_mixin.dart';
 import 'firebase_options_agoradesk.dart' as agoradesk_options;
 import 'firebase_options_localmonero.dart' as localmonero_options;
 

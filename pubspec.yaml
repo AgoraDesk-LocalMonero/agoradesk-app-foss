@@ -62,8 +62,8 @@ dependencies:
   image_picker: ^0.8.5+3
   percent_indicator: ^4.2.1
   insta_image_viewer: ^1.0.2
-  firebase_core: ^1.22.0
-  firebase_messaging: ^13.0.1
+  firebase_core: ^2.1.1
+  firebase_messaging: ^14.0.3
   get_it: ^7.2.0
   awesome_notifications: ^0.7.4
   flutter_foreground_task: ^3.8.2
