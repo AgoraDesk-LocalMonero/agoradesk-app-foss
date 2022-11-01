@@ -516,6 +516,7 @@ extension ThemeShorcuts on BuildContext {
   Color get colN80N30 => Theme.of(this).colorScheme.n80N30;
 
   Color get colN90N10 => Theme.of(this).colorScheme.n90N10;
+  Color get colN90N50 => Theme.of(this).colorScheme.n90N50;
 
   Color get colN30Pri80 => Theme.of(this).colorScheme.n30P80;
 

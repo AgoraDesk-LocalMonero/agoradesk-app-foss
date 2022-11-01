@@ -25,6 +25,7 @@ extension ColorExtension on ColorScheme {
   Color get n70N50 => brightness == Brightness.dark ? ThemeColors.neutral70 : ThemeColors.neutral50;
   Color get n90N60 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral60;
   Color get n90N10 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral10;
+  Color get n90N50 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral50;
   Color get n95N10 => brightness == Brightness.dark ? ThemeColors.neutral95 : ThemeColors.neutral10;
   Color get n40inactive => brightness == Brightness.dark ? ThemeColors.neutral40 : ThemeColors.inactive;
   Color get n20SurfLight => brightness == Brightness.dark ? ThemeColors.neutral20 : ThemeColors.surface4Light;
