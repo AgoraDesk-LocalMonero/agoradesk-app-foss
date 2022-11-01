@@ -232,6 +232,10 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
   Widget appBuilder(context, Widget? child) {
     final mq = MediaQuery.of(context);
+    appState.updateWith(
+      screenHeight: mq.size.height,
+      notify: false,
+    );
     return MediaQuery(
       data: mq.copyWith(
         textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,

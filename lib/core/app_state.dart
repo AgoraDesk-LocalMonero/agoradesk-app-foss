@@ -11,6 +11,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:timeago/timeago.dart';
 
 const _kLocaleDebounceTag = 'switch-locale';
+const _kSmallScreenHeigh = 700.0;
 
 class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
@@ -31,8 +32,11 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   bool _hasPinCode = false;
   String? _pinCode;
   String? openedTradeId;
+  double? _screenHeight;
 
   String get username => userSettingsBox.getAll()[0].username ?? '';
+
+  bool get isSmallScreen => _screenHeight != null && _screenHeight! < _kSmallScreenHeigh;
 
   bool get sentryIsOn {
     try {
