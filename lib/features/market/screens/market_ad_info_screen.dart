@@ -64,43 +64,41 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
                 onPressed: () => _alertDialog(context, model.asset),
               ),
             ),
-            body: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-                child: model.initialLoadingAd
-                    ? const AgoraLoadingIndicator()
-                    : model.ad!.asset == Asset.BTC && GetIt.I<AppParameters>().flavor == FlavorType.localmonero
-                        ? const InstallAgoradeskWidget(isAd: true)
-                        : SingleChildScrollView(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                _buildFirstTile(context, model),
-                                const SizedBox(height: 12),
-                                AdInfoBox(ad: model.ad!),
-                                const SizedBox(height: 12),
-                                BoxSurface5CopyOnTitleReadmore(
-                                  title: context.intl
-                                      .ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile?.username ?? ''),
-                                  text: model.ad!.msg,
-                                ),
-                                const SizedBox(height: 14),
-                                model.isAdOwner
-                                    ? const SizedBox()
-                                    : Padding(
-                                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 14),
-                                        child: ButtonIconTextP70(
-                                          text: context.intl.report_this_ad,
-                                          iconData: AgoraFont.alert_circle,
-                                          onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
-                                        ),
+            body: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
+              child: model.initialLoadingAd
+                  ? const AgoraLoadingIndicator()
+                  : model.ad!.asset == Asset.BTC && GetIt.I<AppParameters>().flavor == FlavorType.localmonero
+                      ? const InstallAgoradeskWidget(isAd: true)
+                      : SingleChildScrollView(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              _buildFirstTile(context, model),
+                              const SizedBox(height: 12),
+                              AdInfoBox(ad: model.ad!),
+                              const SizedBox(height: 12),
+                              BoxSurface5CopyOnTitleReadmore(
+                                title: context.intl
+                                    .ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile?.username ?? ''),
+                                text: model.ad!.msg,
+                              ),
+                              const SizedBox(height: 14),
+                              model.isAdOwner
+                                  ? const SizedBox()
+                                  : Padding(
+                                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 14),
+                                      child: ButtonIconTextP70(
+                                        text: context.intl.report_this_ad,
+                                        iconData: AgoraFont.alert_circle,
+                                        onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
                                       ),
-                                model.actionButton(context),
-                                const SizedBox(height: 14),
-                              ],
-                            ),
+                                    ),
+                              model.actionButton(context),
+                              const SizedBox(height: 44),
+                            ],
                           ),
-              ),
+                        ),
             ),
           );
         });

@@ -203,8 +203,8 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
   }
 
   void _displayAgreeDialog(BuildContext context, MarketAdInfoViewModel model) async {
+    final maxHeight = MediaQuery.of(context).size.height - 300;
     showDialog(
-      barrierDismissible: true,
       context: context,
       builder: (dialogContext) => ViewModelBuilder<MarketAdInfoViewModel>(
           model: model,
@@ -212,33 +212,40 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
           builder: (context, model, child) {
             return AgoraDialogOnFilledButton(
               title: context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbtitle,
-              content: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      context.intl.ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile!.username!) + ':',
-                      style: context.txtBodySmallP90,
-                    ),
-                    const SizedBox(height: 12),
-                    ContainerSurface2Radius12Border1(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Text(
-                          model.ad!.msg?.trim() ?? '',
-                          style: context.txtBodyXSmallN80,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Center(
-                      child: Text(
-                        context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbsubtitle,
+              content: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 20,
+                  maxHeight: maxHeight,
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        context.intl.ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile!.username!) + ':',
                         style: context.txtBodySmallP90,
                       ),
-                    ),
-                    const SizedBox(height: 6),
-                  ],
+                      const SizedBox(height: 12),
+                      ContainerSurface2Radius12Border1(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            model.ad!.msg?.trim() ?? '',
+                            style: context.txtBodyXSmallN80,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      Center(
+                        child: Text(
+                          context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbsubtitle,
+                          style: context.txtBodySmallP90,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                    ],
+                  ),
                 ),
               ),
               filledButtonTitle: model.isSell
@@ -260,7 +267,6 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
 
   void _displayAddressDialog(BuildContext context, MarketAdInfoViewModel model) async {
     showDialog(
-      barrierDismissible: true,
       context: context,
       builder: (_) => KeyboardDismissOnTap(
         child: ViewModelBuilder<MarketAdInfoViewModel>(
@@ -320,7 +326,6 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
 
   void _displayBtcFeesDialog(BuildContext context, MarketAdInfoViewModel model) async {
     showDialog(
-      barrierDismissible: true,
       context: context,
       builder: (_) => KeyboardDismissOnTap(
         child: ViewModelBuilder<MarketAdInfoViewModel>(
