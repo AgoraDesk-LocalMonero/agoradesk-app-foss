@@ -157,9 +157,11 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtLabelMediumPrimary10 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
         color: ThemeColors.primary10,
       );
+
   TextStyle get txtLabelMediumP90P10 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
         color: Theme.of(this).colorScheme.p90P10,
       );
+
   TextStyle get txtLabelMediumN90N10 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
         color: Theme.of(this).colorScheme.n90N10,
       );
@@ -175,6 +177,7 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtLabelLargeCustom08 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.yellow80,
       );
+
   TextStyle get txtLabelLargeCustom28 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.custom28,
       );
@@ -182,6 +185,7 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtLabelLargeNeutral50 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.neutral50,
       );
+
   TextStyle get txtLabelLargeNeutral30 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.neutral30,
       );
@@ -209,6 +213,7 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtLabelLargeP80P70 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.p80P70,
       );
+
   TextStyle get txtLabelLargeP80P40 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.p80P40,
       );
@@ -330,6 +335,7 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtTermsN90 => Theme.of(this).textTheme.terms.copyWith(
         color: Theme.of(this).colorScheme.neutral90,
       );
+
   TextStyle get txtTermsN30N50 => Theme.of(this).textTheme.terms.copyWith(
         color: Theme.of(this).colorScheme.n30N50,
       );
@@ -408,6 +414,7 @@ extension ThemeShorcuts on BuildContext {
   Color get colDs2Ls1 => Theme.of(this).colorScheme.ds2Ls1;
 
   Color get colDs2Ls3 => Theme.of(this).colorScheme.ds2Ls3;
+
   Color get colDs4Ls1 => Theme.of(this).colorScheme.ds4Ls1;
 
   Color get colError30 => Theme.of(this).colorScheme.error30;
@@ -451,6 +458,8 @@ extension ThemeShorcuts on BuildContext {
   Color get n80N30 => Theme.of(this).colorScheme.n80N30;
 
   Color get colN80 => ThemeColors.neutral80;
+
+  Color get colN40inactive => Theme.of(this).colorScheme.n40inactive;
 
   Color get colN90 => Theme.of(this).colorScheme.neutral90;
 
@@ -499,13 +508,17 @@ extension ThemeShorcuts on BuildContext {
   Color get colC08c07 => Theme.of(this).colorScheme.c08c07;
 
   Color get colC85c09 => Theme.of(this).colorScheme.c85c09;
+
   Color get colN30N80 => Theme.of(this).colorScheme.n30N80;
+
   Color get colN70N50 => Theme.of(this).colorScheme.n70N50;
 
   Color get colN80N30 => Theme.of(this).colorScheme.n80N30;
+
   Color get colN90N10 => Theme.of(this).colorScheme.n90N10;
 
   Color get colN30Pri80 => Theme.of(this).colorScheme.n30P80;
+
   Color get colN30Pri90 => Theme.of(this).colorScheme.n30P90;
 
   Color get colSecContainerWhite => Theme.of(this).colorScheme.secContainerWhite;
@@ -519,9 +532,13 @@ extension ThemeShorcuts on BuildContext {
   Color get colSec80Pri10 => Theme.of(this).colorScheme.sec80P10;
 
   Color get colSurf4SurfLight => Theme.of(this).colorScheme.surf4SurfLight;
+
   Color get colSurf4Surf1 => Theme.of(this).colorScheme.surf4Surf1;
+
   Color get colSurf5Surf4 => Theme.of(this).colorScheme.surf5Surf4;
+
   Color get colSurf2Surf5 => Theme.of(this).colorScheme.surf5Surf4;
+
   Color get colSurf3Surf1Light => Theme.of(this).colorScheme.surf3Surf1Light;
 
   Color get colChatRedError80 => Theme.of(this).colorScheme.chatRedError80;
@@ -531,9 +548,13 @@ extension ThemeShorcuts on BuildContext {
   Color get colN20SurfLight => Theme.of(this).colorScheme.n20SurfLight;
 
   Color get colP20White => Theme.of(this).colorScheme.p20White;
+
   Color get colP80P40 => Theme.of(this).colorScheme.p80P40;
+
   Color get colP70P40 => Theme.of(this).colorScheme.p70P40;
+
   Color get colP90White => Theme.of(this).colorScheme.p90White;
+
   Color get colTonalP40 => Theme.of(this).colorScheme.tonalP40;
 
   ///
