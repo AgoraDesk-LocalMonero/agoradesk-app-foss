@@ -263,10 +263,12 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     Locale? locale,
     ThemeMode? themeMode,
     bool? hasPinCode,
+    double? screenHeight,
     String? countryCode,
     bool notify = true,
   }) {
     _locale = locale ?? _locale;
+    _screenHeight = screenHeight ?? _screenHeight;
     _themeMode = themeMode ?? _themeMode;
     _hasPinCode = hasPinCode ?? _hasPinCode;
     if (countryCode != null && countryCode != _countryCode) {

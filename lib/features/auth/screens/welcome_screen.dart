@@ -56,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                 ],
               ),
               Expanded(
-                flex: 3,
+                flex: _appState.isSmallScreen ? 2 : 3,
                 child: WelcomeImages.welcomeImage(_isDark),
               ),
               Expanded(
