@@ -3,17 +3,21 @@ import 'dart:isolate';
 
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/foreground/foreground_handler.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/features/main/widgets/active_icon.dart';
 import 'package:agoradesk/features/main/widgets/inactive_icon.dart';
+import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -28,9 +32,8 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    if (!GetIt.I<AppParameters>().isGoogleAvailable && Platform.isAndroid) {
-      _initForeground();
-    }
+    _initForeground();
+    _initIosNotifications();
     super.initState();
   }
 
@@ -106,18 +109,41 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   ///
+  /// Fixing iOS 16 bug - on the very first app run call silent notification
+  ///
+  void _initIosNotifications() async {
+    final appState = context.read<AppState>();
+    final bool iosFirstNotificationWasRun = appState.iosFirstNotificationWasRun;
+    if (!iosFirstNotificationWasRun) {
+      final res = await AwesomeNotifications().createNotification(
+        content: NotificationContent(
+          id: 436456,
+          channelKey: kNotificationsChannel,
+          notificationLayout: NotificationLayout.Default,
+          payload: {},
+        ),
+      );
+      if (res) {
+        appState.iosFirstNotificationWasRun = true;
+      }
+    }
+  }
+
+  ///
   /// Foreground functions (in case the Google Play Services are not available)
   ///
   void _initForeground() {
-    _initForegroundTask();
-    _ambiguate(WidgetsBinding.instance)?.addPostFrameCallback((_) async {
-      // You can get the previous ReceivePort without restarting the service.
-      if (await FlutterForegroundTask.isRunningService) {
-        final newReceivePort = await FlutterForegroundTask.receivePort;
-        _registerReceivePort(newReceivePort);
-      }
-    });
-    _startForegroundTask();
+    if (!GetIt.I<AppParameters>().isGoogleAvailable && Platform.isAndroid) {
+      _initForegroundTask();
+      _ambiguate(WidgetsBinding.instance)?.addPostFrameCallback((_) async {
+        // You can get the previous ReceivePort without restarting the service.
+        if (await FlutterForegroundTask.isRunningService) {
+          final newReceivePort = await FlutterForegroundTask.receivePort;
+          _registerReceivePort(newReceivePort);
+        }
+      });
+      _startForegroundTask();
+    }
   }
 
   Future<void> _initForegroundTask() async {

@@ -7,6 +7,7 @@ class UserLocalSettings {
     this.themeMode,
     this.locale,
     this.pinIsActive,
+    this.iosFirstNotificationWasRun,
     this.biometricAuthIsOn,
     this.sentryIsOn,
     this.firstRun,
@@ -24,6 +25,7 @@ class UserLocalSettings {
   int autoId = 0;
   ThemeMode? themeMode;
   bool? pinIsActive;
+  bool? iosFirstNotificationWasRun;
   bool? biometricAuthIsOn;
   bool? sentryIsOn;
   bool? firstRun;

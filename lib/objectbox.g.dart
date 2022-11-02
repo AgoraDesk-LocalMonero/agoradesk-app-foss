@@ -73,7 +73,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(5, 5782449331183648541),
       name: 'UserLocalSettings',
-      lastPropertyId: const IdUid(16, 8028494485770338323),
+      lastPropertyId: const IdUid(17, 2870991536340097859),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -150,6 +150,11 @@ final _entities = <ModelEntity>[
             id: const IdUid(16, 8028494485770338323),
             name: 'tooltipsShown',
             type: 30,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(17, 2870991536340097859),
+            name: 'iosFirstNotificationWasRun',
+            type: 1,
             flags: 0)
       ],
       relations: <ModelRelation>[],
@@ -361,7 +366,7 @@ ModelDefinition getObjectBoxModel() {
           final tooltipsShownOffset = fbb.writeList(object.tooltipsShown
               .map(fbb.writeString)
               .toList(growable: false));
-          fbb.startTable(17);
+          fbb.startTable(18);
           fbb.addInt64(0, object.autoId);
           fbb.addBool(1, object.pinIsActive);
           fbb.addOffset(2, usernameOffset);
@@ -379,6 +384,7 @@ ModelDefinition getObjectBoxModel() {
           fbb.addBool(13, object.ignoreAllUpdates);
           fbb.addOffset(14, ignoredUpdateOffset);
           fbb.addOffset(15, tooltipsShownOffset);
+          fbb.addBool(16, object.iosFirstNotificationWasRun);
           fbb.finish(fbb.endTable());
           return object.autoId;
         },
@@ -394,6 +400,8 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGetNullable(buffer, rootOffset, 12),
               pinIsActive: const fb.BoolReader()
                   .vTableGetNullable(buffer, rootOffset, 6),
+              iosFirstNotificationWasRun: const fb.BoolReader()
+                  .vTableGetNullable(buffer, rootOffset, 36),
               biometricAuthIsOn: const fb.BoolReader()
                   .vTableGetNullable(buffer, rootOffset, 28),
               sentryIsOn: const fb.BoolReader()
@@ -404,11 +412,9 @@ ModelDefinition getObjectBoxModel() {
                   .vTableGetNullable(buffer, rootOffset, 16),
               username: const fb.StringReader(asciiOptimization: true)
                   .vTableGetNullable(buffer, rootOffset, 8),
-              countryCode: const fb.StringReader(asciiOptimization: true)
-                  .vTableGetNullable(buffer, rootOffset, 14),
-              cachedCountrySavedDate: cachedCountrySavedDateValue == null
-                  ? null
-                  : DateTime.fromMillisecondsSinceEpoch(cachedCountrySavedDateValue),
+              countryCode:
+                  const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 14),
+              cachedCountrySavedDate: cachedCountrySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCountrySavedDateValue),
               cachedCurrencySavedDate: cachedCurrencySavedDateValue == null ? null : DateTime.fromMillisecondsSinceEpoch(cachedCurrencySavedDateValue),
               ignoreAllUpdates: const fb.BoolReader().vTableGet(buffer, rootOffset, 30, false),
               ignoredUpdate: const fb.StringReader(asciiOptimization: true).vTableGetNullable(buffer, rootOffset, 32),
@@ -580,6 +586,10 @@ class UserLocalSettings_ {
   /// see [UserLocalSettings.tooltipsShown]
   static final tooltipsShown =
       QueryStringVectorProperty<UserLocalSettings>(_entities[2].properties[14]);
+
+  /// see [UserLocalSettings.iosFirstNotificationWasRun]
+  static final iosFirstNotificationWasRun =
+      QueryBooleanProperty<UserLocalSettings>(_entities[2].properties[15]);
 }
 
 /// [MessageBoxModel] entity fields to define ObjectBox queries.

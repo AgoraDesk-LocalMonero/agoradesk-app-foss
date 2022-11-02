@@ -30,6 +30,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String? _countryCode;
   String? _currencyCode = 'USD';
   bool _hasPinCode = false;
+
   String? _pinCode;
   String? openedTradeId;
   double? _screenHeight;
@@ -53,6 +54,14 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   }
 
   bool get isPushTokenSavedToApi => userSettingsBox.getAll()[0].pushFcmTokenSavedToApi ?? false;
+
+  bool get iosFirstNotificationWasRun => userSettingsBox.getAll()[0].iosFirstNotificationWasRun ?? false;
+
+  set iosFirstNotificationWasRun(bool val) {
+    final s = userSettingsBox.getAll()[0];
+    s.iosFirstNotificationWasRun = val;
+    userSettingsBox.put(s);
+  }
 
   set isPushTokenSavedToApi(bool val) {
     final s = userSettingsBox.getAll()[0];
