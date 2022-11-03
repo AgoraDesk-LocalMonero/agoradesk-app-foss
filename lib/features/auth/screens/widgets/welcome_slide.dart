@@ -17,7 +17,13 @@ class WelcomeSlide extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(imagePath),
+        Expanded(
+          flex: 5,
+          child: Image.asset(
+            imagePath,
+            fit: BoxFit.fitHeight,
+          ),
+        ),
         const SizedBox(height: 8),
         Text(
           context.intl.post8722Sbad250Sbstep8722Sb1(step),
@@ -26,14 +32,17 @@ class WelcomeSlide extends StatelessWidget {
               ),
         ),
         const SizedBox(height: 8),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-          child: Text(
-            text,
-            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: Theme.of(context).colorScheme.neutral90,
-                ),
-            textAlign: TextAlign.center,
+        Expanded(
+          flex: 1,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: Theme.of(context).colorScheme.neutral90,
+                  ),
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
         const SizedBox(height: 8),

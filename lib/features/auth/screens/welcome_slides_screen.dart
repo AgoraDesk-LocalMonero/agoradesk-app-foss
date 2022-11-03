@@ -24,7 +24,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
     final appState = context.read<AppState>();
     final isDark = appState.themeMode == ThemeMode.dark;
     final List<Widget> slides = WelcomeSlidesList.getSlides(isDark, isBuy, context);
-    final double boxHeight = appState.isSmallScreen ? 330 : 500;
+    final double boxHeight = appState.isSmallScreen ? 400 : 500;
 
     return ViewModelBuilder<WelcomeViewModel>(
         model: WelcomeViewModel(),
@@ -57,8 +57,8 @@ class WelcomeSlidesScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: boxHeight,
+                    Expanded(
+                      flex: 8,
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                         child: PageView(
