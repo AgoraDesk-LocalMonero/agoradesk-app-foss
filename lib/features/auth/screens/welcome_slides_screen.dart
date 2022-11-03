@@ -24,7 +24,6 @@ class WelcomeSlidesScreen extends StatelessWidget {
     final appState = context.read<AppState>();
     final isDark = appState.themeMode == ThemeMode.dark;
     final List<Widget> slides = WelcomeSlidesList.getSlides(isDark, isBuy, context);
-    final double boxHeight = appState.isSmallScreen ? 400 : 500;
 
     return ViewModelBuilder<WelcomeViewModel>(
         model: WelcomeViewModel(),
