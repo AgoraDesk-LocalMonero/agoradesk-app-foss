@@ -1,9 +1,10 @@
 ### Updates
-1. Update alert/link on update, for those using the APK download application.
-2. Fix: display trade info with deleted user.
-3. Fix: buy ad wrong warning.
-4. Fix: chat buttons - increased pressable area.
-5. Fix: if the trade counterparty deleted the trade page doesn't load.
+1. Feat: if user dismiss push message he will be marked as online.
+2. Feat: FOSS versions - alert dialog when new version is available.
+3. Feat: tooltips for ad actions.
+4. Fix: accessibility improvements - named buttons and elements.
+5. Fix: managing badge on the app icon when push messages have tapped.
+
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
