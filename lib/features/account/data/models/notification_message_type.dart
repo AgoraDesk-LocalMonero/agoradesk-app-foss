@@ -51,6 +51,9 @@ extension NotificationMessageTypeExt on NotificationMessageType {
     if (position == -1) {
       position = lst.indexOf('with');
     }
+    if (position == -1) {
+      position = lst.indexOf('by');
+    }
     final String username = position == -1 || (position == lst.length - 1) ? '' : lst[position + 1];
 
     switch (this) {

@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -64,6 +65,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
       adsRepository: context.read<AdsRepository>(),
       userService: context.read<UserService>(),
       authService: context.read<AuthService>(),
+      appState: context.read<AppState>(),
     );
     _model.tabController = TabController(length: 3, vsync: this);
     super.initState();
@@ -200,8 +202,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 onPressed: () => model.managePressToAd(ad, context),
                 onLongPress: () => model.handleLongPressToAd(ad),
                 onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                // isOnGlobalVacation: model.checkAdVacation(ad),
-                // globalVacationPressed: () {},
+                tooltipController: index == 0 ? model.tooltipEyeController : null,
+                tooltipPressController: index == 1 ? model.tooltipPressController : null,
               );
             },
           );

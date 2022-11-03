@@ -34,6 +34,7 @@ class AgoraDialogInfoNoTitle extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
                 child: ButtonSquareIcon(
+                  label: context.intl.close,
                   iconData: AgoraFont.x,
                   onPressed: () => AutoRouter.of(context).pop(),
                 ),

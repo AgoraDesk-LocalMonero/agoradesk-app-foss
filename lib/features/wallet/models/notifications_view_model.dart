@@ -8,7 +8,6 @@ import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
-import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
@@ -20,16 +19,13 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
   NotificationsViewModel({
     required AppState appState,
     required NotificationsService notificationsService,
-    required TradeRepository tradeRepository,
     required AccountService accountService,
   })  : _appState = appState,
         _accountService = accountService,
-        _tradeRepository = tradeRepository,
         _notificationsService = notificationsService;
 
   final AppState _appState;
   final NotificationsService _notificationsService;
-  final TradeRepository _tradeRepository;
   final AccountService _accountService;
 
   final indicatorKey = GlobalKey<RefreshIndicatorState>();

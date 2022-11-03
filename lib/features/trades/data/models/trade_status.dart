@@ -92,7 +92,7 @@ extension TradeStatusExt on TradeStatus {
       case TradeStatus.closed:
         return context.colN40;
       case TradeStatus.canceled:
-        return context.colN40;
+        return context.colN40inactive;
       case TradeStatus.confirmingToSellerWallet:
       case TradeStatus.awaitingToSellerWallet:
       case TradeStatus.awaitingToBuyerWallet:

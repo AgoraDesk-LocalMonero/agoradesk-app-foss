@@ -1,10 +1,10 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class SearchLocation extends StatelessWidget {
   const SearchLocation({
@@ -40,6 +40,7 @@ class SearchLocation extends StatelessWidget {
                         child: model.displayClear
                             ? ButtonSquareIcon(
                                 iconData: AgoraFont.x,
+                                label: context.intl.app_clear,
                                 onPressed: () => model.locationFieldClear(),
                               )
                             : const SizedBox(),

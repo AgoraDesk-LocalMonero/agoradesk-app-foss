@@ -78,7 +78,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                 child: ChatBubbleYellow(
-                  text: context.intl.web8722Sbnotification250Sbtrade8722Sbcancelled,
+                  text: context.intl.app_trade_has_been_cancelled,
                   date: model.tradeForScreen.canceledAt,
                 ),
               );

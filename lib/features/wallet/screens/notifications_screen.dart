@@ -4,7 +4,6 @@ import 'package:agoradesk/core/services/notifications/notifications_service.dart
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
-import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/models/notifications_view_model.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/notification_tile.dart';
 import 'package:auto_route/auto_route.dart';
@@ -26,7 +25,6 @@ class NotificationsScreen extends StatelessWidget {
           model: NotificationsViewModel(
             appState: context.read<AppState>(),
             notificationsService: context.read<NotificationsService>(),
-            tradeRepository: context.read<TradeRepository>(),
             accountService: context.read<AccountService>(),
           ),
           builder: (context, model, child) {

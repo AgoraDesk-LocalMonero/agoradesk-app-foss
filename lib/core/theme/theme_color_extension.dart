@@ -25,7 +25,9 @@ extension ColorExtension on ColorScheme {
   Color get n70N50 => brightness == Brightness.dark ? ThemeColors.neutral70 : ThemeColors.neutral50;
   Color get n90N60 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral60;
   Color get n90N10 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral10;
+  Color get n90N50 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral50;
   Color get n95N10 => brightness == Brightness.dark ? ThemeColors.neutral95 : ThemeColors.neutral10;
+  Color get n40inactive => brightness == Brightness.dark ? ThemeColors.neutral40 : ThemeColors.inactive;
   Color get n20SurfLight => brightness == Brightness.dark ? ThemeColors.neutral20 : ThemeColors.surface4Light;
   Color get n30P80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary80;
   Color get n30P90 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary90;
@@ -136,32 +138,6 @@ extension ColorExtension on ColorScheme {
   TextStyle get tipStyle => ThemeData().textTheme.bodyText2!.copyWith(color: tipColor);
 
   TextStyle get errorStyle => ThemeData().textTheme.bodyText2!.copyWith(color: errorColor);
-
-  // InputDecoration get inputDecoration1 => brightness == Brightness.dark
-  //     ? InputDecoration(
-  //         hintText: '',
-  //         contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-  //         border: const OutlineInputBorder(
-  //           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-  //         ),
-  //         enabledBorder: OutlineInputBorder(
-  //           borderSide: BorderSide(color: primary, width: 1.0),
-  //           borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-  //         ),
-  //         disabledBorder: OutlineInputBorder(
-  //           borderSide: BorderSide(color: primary, width: 1.0),
-  //           borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-  //         ),
-  //         focusedBorder: const OutlineInputBorder(
-  //           borderSide: BorderSide(
-  //             color: Colors.blueAccent,
-  //             width: 2.0,
-  //           ),
-  //           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-  //         ),
-  //         floatingLabelBehavior: FloatingLabelBehavior.auto,
-  //       )
-  //     : const InputDecoration();
 
   InputDecoration get txtFieldMainDecoration => brightness == Brightness.dark
       ? InputDecoration(

@@ -9,7 +9,7 @@ import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_borde
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_shadow.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
-import 'package:agoradesk/features/market/screens/widgets/line_online_dot.dart';
+import 'package:agoradesk/features/market/screens/widgets/line_online_dot_last_seen.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
@@ -56,9 +56,14 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
-                  child: LineOnlineDot(
-                    text: ad.profile?.username ?? '',
-                    date: ad.profile?.lastOnline,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      LineOnlineDotLastSeen(
+                        text: ad.profile?.username ?? '',
+                        date: ad.profile?.lastOnline,
+                      ),
+                    ],
                   ),
                 ),
                 Row(

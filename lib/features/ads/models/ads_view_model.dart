@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -17,9 +18,12 @@ import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/agora_menu_item.dart';
+import 'package:agoradesk/features/ads/models/tooltip_types.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
+import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
+import 'package:agoradesk/objectbox.g.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -27,6 +31,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
+import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:vm/vm.dart';
 
@@ -37,13 +42,16 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     required UserService userService,
     required AdsRepository adsRepository,
     required AuthService authService,
+    required AppState appState,
   })  : _userService = userService,
         _adsRepository = adsRepository,
+        _appState = appState,
         _authService = authService;
 
   final UserService _userService;
   final AdsRepository _adsRepository;
   final AuthService _authService;
+  final AppState _appState;
 
   final indicatorKey = GlobalKey<RefreshIndicatorState>();
   final onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
@@ -51,6 +59,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final countryDropdownKey = GlobalKey<DropdownSearchState>();
   final visibilityDropdownKey = GlobalKey<DropdownSearchState>();
   final sortDropdownKey = GlobalKey<DropdownSearchState>();
+  final tooltipEyeController = JustTheController();
+  final tooltipPressController = JustTheController();
 
   late final TabController tabController;
 
@@ -61,6 +71,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final ctrlBulkMaxAmount = TextEditingController();
   final ctrlBulkSettlementWalletAddress = TextEditingController();
   final ctrl3FormulaInput = TextEditingController();
+
+  late final Box<UserLocalSettings> box;
 
   late CountryCodeModel countryCodeModel;
   OnlineProvider? selectedOnlineProvider;
@@ -89,6 +101,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool _init = false;
 
   bool _loadingAds = false;
+  bool _displayingTooltip = false;
   bool _reloadPaymentMethods = true;
   bool _loadingSettings = true;
   List<String> tradeTypeMenu = [];
@@ -199,6 +212,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   @override
   void init() {
+    box = _appState.userSettingsBox;
     _initBulkMenu();
     _ctrlListeners();
     //todo - refactor me (maybe with AutoRoute)
@@ -233,6 +247,46 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   Future _loadCaches() async {
     await getCountryCodes();
     await getCurrencies();
+  }
+
+  Future displayTooltips(int length) async {
+    if (!_displayingTooltip) {
+      _displayingTooltip = true;
+      if (length > 1) {
+        await Future.delayed(const Duration(seconds: 3));
+        if (!_checkTooltipWasDisplayed(TooltipType.adEye)) {
+          _displayEyeTooltip();
+          HapticFeedback.heavyImpact();
+          _markTooltipAsShown(TooltipType.adEye);
+        } else if (!_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
+          _displayPressTooltip();
+          HapticFeedback.heavyImpact();
+          _markTooltipAsShown(TooltipType.adLongPress);
+        }
+      }
+      _displayingTooltip = false;
+    }
+  }
+
+  void _markTooltipAsShown(TooltipType tooltipType) {
+    final val = box.getAll()[0];
+    if (!val.tooltipsShown.contains(tooltipType.name)) {
+      val.tooltipsShown.add(tooltipType.name);
+      box.put(val);
+    }
+  }
+
+  bool _checkTooltipWasDisplayed(TooltipType tooltipType) {
+    final val = box.getAll()[0];
+    return val.tooltipsShown.contains(tooltipType.name);
+  }
+
+  Future _displayEyeTooltip() async {
+    tooltipEyeController.showTooltip();
+  }
+
+  Future _displayPressTooltip() async {
+    tooltipPressController.showTooltip();
   }
 
   @override
@@ -440,6 +494,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
           // filteredAds.clear();
         }
         ads.addAll(res.right.data);
+        displayTooltips(ads.length);
         // filteredAds.addAll(res.right);
       } else {
         handleApiError(res.left, context);
@@ -885,6 +940,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     ctrlBulkMaxAmount.dispose();
     ctrlBulkSettlementWalletAddress.dispose();
     ctrl3FormulaInput.dispose();
+    tooltipEyeController.dispose();
     super.dispose();
   }
 }

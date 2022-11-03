@@ -11,6 +11,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:timeago/timeago.dart';
 
 const _kLocaleDebounceTag = 'switch-locale';
+const _kSmallScreenHeigh = 700.0;
 
 class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
@@ -29,10 +30,14 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String? _countryCode;
   String? _currencyCode = 'USD';
   bool _hasPinCode = false;
+
   String? _pinCode;
   String? openedTradeId;
+  double? _screenHeight;
 
   String get username => userSettingsBox.getAll()[0].username ?? '';
+
+  bool get isSmallScreen => _screenHeight != null && _screenHeight! < _kSmallScreenHeigh;
 
   bool get sentryIsOn {
     try {
@@ -49,6 +54,14 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   }
 
   bool get isPushTokenSavedToApi => userSettingsBox.getAll()[0].pushFcmTokenSavedToApi ?? false;
+
+  bool get iosFirstNotificationWasRun => userSettingsBox.getAll()[0].iosFirstNotificationWasRun ?? false;
+
+  set iosFirstNotificationWasRun(bool val) {
+    final s = userSettingsBox.getAll()[0];
+    s.iosFirstNotificationWasRun = val;
+    userSettingsBox.put(s);
+  }
 
   set isPushTokenSavedToApi(bool val) {
     final s = userSettingsBox.getAll()[0];
@@ -259,10 +272,12 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     Locale? locale,
     ThemeMode? themeMode,
     bool? hasPinCode,
+    double? screenHeight,
     String? countryCode,
     bool notify = true,
   }) {
     _locale = locale ?? _locale;
+    _screenHeight = screenHeight ?? _screenHeight;
     _themeMode = themeMode ?? _themeMode;
     _hasPinCode = hasPinCode ?? _hasPinCode;
     if (countryCode != null && countryCode != _countryCode) {

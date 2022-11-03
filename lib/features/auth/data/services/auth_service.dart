@@ -66,6 +66,9 @@ class AuthService with FileUtilsMixin {
   /// TODO: check expires_in
   ///
   Future<void> init() async {
+    if (_api.accessToken != null && _api.accessToken!.isNotEmpty) {
+      authState = AuthState.loggedIn;
+    }
     debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
   }
 
@@ -322,10 +325,17 @@ class AuthService with FileUtilsMixin {
     _appState.hasPinCode = false;
     await FirebaseMessaging.instance.deleteToken();
     await _secureStorage.deleteAll();
-    _userSettingsBox.removeAll();
+    ObjectBox.s.box<UserLocalSettings>().removeAll();
+    await Future.delayed(const Duration(milliseconds: 100));
     ObjectBox.s.box<MessageBoxModel>().removeAll();
+    await Future.delayed(const Duration(milliseconds: 100));
+
+    // fix the bug when data isn't removed
+    final val = ObjectBox.s.box<UserLocalSettings>().getAll();
+    final val2 = ObjectBox.s.box<MessageBoxModel>().getAll();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
+
     return true;
   }
 

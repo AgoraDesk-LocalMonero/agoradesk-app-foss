@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.29+53
+version: 1.0.31+55
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -53,7 +53,6 @@ dependencies:
   dropdown_search: ^5.0.3
   markdown_widget: ^1.2.9
   expandable: ^5.0.1
-  #  readmore: ^2.1.0
   flutter_svg: ^1.1.0
   uni_links: ^0.5.1
   barcode_scan2: 4.2.1
@@ -62,8 +61,8 @@ dependencies:
   image_picker: ^0.8.5+3
   percent_indicator: ^4.2.1
   insta_image_viewer: ^1.0.2
-  firebase_core: ^1.22.0
-  firebase_messaging: ^13.0.1
+  firebase_core: ^2.1.1
+  firebase_messaging: ^14.0.3
   get_it: ^7.2.0
   awesome_notifications: ^0.7.4
   flutter_foreground_task: ^3.8.2
@@ -78,6 +77,7 @@ dependencies:
   local_auth: ^2.1.2
   flutter_keyboard_size: ^1.0.1
   store_checker: ^1.1.0
+  just_the_tooltip: ^0.0.12
 
 dependency_overrides:
   #  flutter_foreground_task:

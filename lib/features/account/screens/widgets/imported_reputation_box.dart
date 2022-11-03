@@ -114,7 +114,7 @@ class _InfoLine extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.app_trades,
+                    context.intl.reputation8722Sbimport250Sbstats250Sbtrades,
                     style: context.txtBodyXXSmallN60N50,
                   ),
                   const SizedBox(height: 4),
@@ -148,7 +148,7 @@ class _InfoLine extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.app_trades,
+                    context.intl.reputation8722Sbimport250Sbstats250Sbvolume,
                     style: context.txtBodyXXSmallN60N50,
                   ),
                   const SizedBox(height: 4),
@@ -165,7 +165,7 @@ class _InfoLine extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.app_trades,
+                    context.intl.reputation8722Sbimport250Sbstats250Sbregistered,
                     style: context.txtBodyXXSmallN60N50,
                   ),
                   const SizedBox(height: 4),

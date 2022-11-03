@@ -45,6 +45,7 @@ class DialogInfoS4WithCloseChildContinue extends StatelessWidget {
                     ),
                     ButtonSquareIcon(
                       iconData: AgoraFont.x,
+                      label: context.intl.close,
                       onPressed: () => context.popRoute(),
                     ),
                   ],

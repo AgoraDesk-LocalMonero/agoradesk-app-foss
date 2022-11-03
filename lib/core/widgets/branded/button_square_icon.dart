@@ -6,6 +6,7 @@ class ButtonSquareIcon extends StatelessWidget {
     Key? key,
     required this.iconData,
     required this.onPressed,
+    required this.label,
     this.iconColor,
     this.size = const Size(32, 32),
   }) : super(key: key);
@@ -14,29 +15,35 @@ class ButtonSquareIcon extends StatelessWidget {
   final VoidCallback onPressed;
   final Color? iconColor;
   final Size size;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      clipBehavior: Clip.none,
-      style: ElevatedButton.styleFrom(
-        minimumSize: size,
-        maximumSize: size,
-        fixedSize: size,
-        primary: context.colS3,
-        padding: const EdgeInsets.all(0),
-        elevation: 0,
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
+    return Semantics(
+      button: true,
+      enabled: true,
+      label: label,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        clipBehavior: Clip.none,
+        style: ElevatedButton.styleFrom(
+          minimumSize: size,
+          maximumSize: size,
+          fixedSize: size,
+          primary: context.colS3,
+          padding: const EdgeInsets.all(0),
+          elevation: 0,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(4),
+          ),
         ),
-      ),
-      child: Center(
-        child: Icon(
-          iconData,
-          color: iconColor ?? context.colP90,
-          size: 18,
+        child: Center(
+          child: Icon(
+            iconData,
+            color: iconColor ?? context.colP90,
+            size: 18,
+          ),
         ),
       ),
     );

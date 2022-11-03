@@ -216,7 +216,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
               '${model.buySellStr(context)} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
               textAlign: TextAlign.center,
               style: context.txtBodySmallN60N50,
-              maxLines: 2,
+              maxLines: 1,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

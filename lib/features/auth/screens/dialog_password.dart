@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -7,6 +6,7 @@ import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:agoradesk/features/auth/models/dialog_password_view_model.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class DialogPassword extends StatelessWidget {
   const DialogPassword({
@@ -43,6 +43,7 @@ class DialogPassword extends StatelessWidget {
                       ),
                       ButtonSquareIcon(
                         iconData: AgoraFont.x,
+                        label: context.intl.close,
                         onPressed: () => context.popRoute(),
                       ),
                     ],

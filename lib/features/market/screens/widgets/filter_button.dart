@@ -14,26 +14,31 @@ class FilterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: onPressed,
-      child: Container(
-        width: 55,
-        height: 55,
-        decoration: BoxDecoration(
-          color: selected ? context.colHighlight : context.colS3,
-          border: Border.all(
-            width: 1,
+    return Semantics(
+      button: true,
+      enabled: true,
+      label: context.intl.app_open_additional_filters,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: onPressed,
+        child: Container(
+          width: 55,
+          height: 55,
+          decoration: BoxDecoration(
             color: selected ? context.colHighlight : context.colS3,
+            border: Border.all(
+              width: 1,
+              color: selected ? context.colHighlight : context.colS3,
+            ),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(5),
+            ),
           ),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(5),
+          child: Icon(
+            AgoraFont.configure,
+            size: 26,
+            color: selected ? context.colP90 : context.n80N30,
           ),
-        ),
-        child: Icon(
-          AgoraFont.configure,
-          size: 26,
-          color: selected ? context.colP90 : context.n80N30,
         ),
       ),
     );

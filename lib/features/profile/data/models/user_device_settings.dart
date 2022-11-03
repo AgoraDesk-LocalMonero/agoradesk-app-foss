@@ -7,6 +7,7 @@ class UserLocalSettings {
     this.themeMode,
     this.locale,
     this.pinIsActive,
+    this.iosFirstNotificationWasRun,
     this.biometricAuthIsOn,
     this.sentryIsOn,
     this.firstRun,
@@ -17,12 +18,14 @@ class UserLocalSettings {
     this.cachedCurrencySavedDate,
     this.ignoreAllUpdates = false,
     this.ignoredUpdate,
+    this.tooltipsShown = const [],
   });
 
   @Id()
   int autoId = 0;
   ThemeMode? themeMode;
   bool? pinIsActive;
+  bool? iosFirstNotificationWasRun;
   bool? biometricAuthIsOn;
   bool? sentryIsOn;
   bool? firstRun;
@@ -34,6 +37,7 @@ class UserLocalSettings {
   String? countryCode;
   DateTime? cachedCountrySavedDate;
   DateTime? cachedCurrencySavedDate;
+  List<String> tooltipsShown;
 
   /// converter - required by object box
   int? get dbThemeMode {

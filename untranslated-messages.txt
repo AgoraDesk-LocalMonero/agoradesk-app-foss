@@ -270,7 +270,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "it": [
@@ -544,7 +557,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "ko": [
@@ -818,7 +844,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "pl": [
@@ -1363,7 +1402,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "pt": [
@@ -1637,7 +1689,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "ru": [
@@ -1910,7 +1975,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "zh": [
@@ -2184,7 +2262,20 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ],
 
   "zh_TW": [
@@ -2458,6 +2549,19 @@
     "app_update_new_version_available",
     "app_update_now",
     "app_update_ingnor_until_next",
-    "app_update_ignore_always"
+    "app_update_ignore_always",
+    "app_tooltip_visibility",
+    "app_tooltip_long_press_ad",
+    "app_join_telegram",
+    "app_join_matrix",
+    "app_display_password",
+    "app_hide_password",
+    "app_trade_has_been_cancelled",
+    "app_last_seen",
+    "app_open_additional_filters",
+    "app_select_asset",
+    "app_select_trade_type",
+    "app_paste",
+    "app_scan_qr_code"
   ]
 }
