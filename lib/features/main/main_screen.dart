@@ -112,19 +112,22 @@ class _MainScreenState extends State<MainScreen> {
   /// Fixing iOS 16 bug - on the very first app run call silent notification
   ///
   void _initIosNotifications() async {
-    final appState = context.read<AppState>();
-    final bool iosFirstNotificationWasRun = appState.iosFirstNotificationWasRun;
-    if (!iosFirstNotificationWasRun) {
-      final res = await AwesomeNotifications().createNotification(
-        content: NotificationContent(
-          id: 436456,
-          channelKey: kNotificationsChannel,
-          notificationLayout: NotificationLayout.Default,
-          payload: {},
-        ),
-      );
-      if (res) {
-        appState.iosFirstNotificationWasRun = true;
+    if (Platform.isIOS) {
+      final appState = context.read<AppState>();
+      final bool iosFirstNotificationWasRun = appState.iosFirstNotificationWasRun;
+      if (!iosFirstNotificationWasRun) {
+        final res = await AwesomeNotifications().createNotification(
+          content: NotificationContent(
+            id: 436456,
+            channelKey: kNotificationsChannel,
+            notificationLayout: NotificationLayout.Default,
+            payload: {},
+          ),
+        );
+        AwesomeNotifications().decrementGlobalBadgeCounter();
+        if (res) {
+          appState.iosFirstNotificationWasRun = true;
+        }
       }
     }
   }
