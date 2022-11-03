@@ -53,7 +53,6 @@ dependencies:
   dropdown_search: ^5.0.3
   markdown_widget: ^1.2.9
   expandable: ^5.0.1
-  #  readmore: ^2.1.0
   flutter_svg: ^1.1.0
   uni_links: ^0.5.1
   barcode_scan2: 4.2.1
