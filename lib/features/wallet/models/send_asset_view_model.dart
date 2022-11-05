@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -254,8 +255,9 @@ class SendAssetViewModel extends ViewModel
     } else {
       try {
         if (fiatAmount != double.parse(ctrlFiat.text)) {
+          final int digitsToRound = getBankersDigits(asset.name);
           fiatAmount = double.parse(ctrlFiat.text);
-          assetAmount = fiatAmount / price!;
+          assetAmount = (fiatAmount / price!).bankerRound(digitsToRound).toDouble();
           ctrlAsset.text = assetAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;

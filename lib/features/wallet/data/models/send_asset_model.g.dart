@@ -11,7 +11,7 @@ _$_SendAssetModel _$$_SendAssetModelFromJson(Map<String, dynamic> json) =>
       address: json['address'] as String,
       amount: (json['amount'] as num).toDouble(),
       password: json['password'] as String,
-      feeLevel: $enumDecodeNullable(_$BtcFeesEnumEnumMap, json['feeLevel']),
+      feeLevel: $enumDecodeNullable(_$BtcFeesEnumEnumMap, json['fee_level']),
       otp: json['otp'] as int?,
     );
 
@@ -28,7 +28,7 @@ Map<String, dynamic> _$$_SendAssetModelToJson(_$_SendAssetModel instance) {
     }
   }
 
-  writeNotNull('feeLevel', _$BtcFeesEnumEnumMap[instance.feeLevel]);
+  writeNotNull('fee_level', _$BtcFeesEnumEnumMap[instance.feeLevel]);
   writeNotNull('otp', instance.otp);
   return val;
 }

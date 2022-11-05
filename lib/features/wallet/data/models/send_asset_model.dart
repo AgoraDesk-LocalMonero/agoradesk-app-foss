@@ -13,7 +13,7 @@ class SendAssetModel with _$SendAssetModel {
     required String address,
     required double amount,
     required String password,
-    @JsonKey(includeIfNull: false) required BtcFeesEnum? feeLevel,
+    @JsonKey(name: 'fee_level', includeIfNull: false) required BtcFeesEnum? feeLevel,
     @JsonKey(includeIfNull: false) required int? otp,
   }) = _SendAssetModel;
 
