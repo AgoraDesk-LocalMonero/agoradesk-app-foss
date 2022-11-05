@@ -42,6 +42,7 @@ class SendAssetViewModel extends ViewModel
   TabController? tabController;
   final Asset asset;
   bool _isAddressCorrect = false;
+
   // bool _initialized = false;
   bool _loadingFees = false;
   bool _sendingAsset = false;
@@ -190,6 +191,10 @@ class SendAssetViewModel extends ViewModel
   void _manageAssetField() {
     inputAssetError = null;
     inputFiatError = null;
+    if (ctrlAsset.text.contains(',')) {
+      ctrlAsset.text = ctrlAsset.text.replaceAll(',', '.');
+      ctrlAsset.selection = TextSelection.fromPosition(TextPosition(offset: ctrlAsset.text.length));
+    }
     if (ctrlAsset.text.isEmpty) {
       if (_assetAmount > 0) {
         _assetAmount = 0;
@@ -207,6 +212,9 @@ class SendAssetViewModel extends ViewModel
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
             readyToStep3 = false;
+          } else if (!_checkStringCorrectAssetNumberAfterComma(ctrlAsset.text)) {
+            inputAssetError = '';
+            readyToStep3 = false;
           } else {
             inputAssetError = null;
             readyToStep3 = true;
@@ -217,6 +225,19 @@ class SendAssetViewModel extends ViewModel
         readyToStep3 = false;
       }
     }
+  }
+
+  bool _checkStringCorrectAssetNumberAfterComma(String str) {
+    final lst = str.split('.');
+    if (lst.length > 1) {
+      final int digitsToRound = getBankersDigits(asset.name);
+      if (lst[1].length <= digitsToRound) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return true;
   }
 
   void _manageFiatField() {
@@ -300,7 +321,7 @@ class SendAssetViewModel extends ViewModel
           amount: assetAmountToReceive,
           password: ctrlPassword.text,
           feeLevel: btcFeesEnum,
-          otp: ctrlOtp.text.isEmpty ? null : ctrlOtp.text,
+          otp: ctrlOtp.text.isEmpty ? null : int.tryParse(ctrlOtp.text),
         );
 
         final res = await _walletService.walletSend(

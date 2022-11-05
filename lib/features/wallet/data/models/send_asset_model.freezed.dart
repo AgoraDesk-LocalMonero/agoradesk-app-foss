@@ -26,7 +26,7 @@ mixin _$SendAssetModel {
   @JsonKey(includeIfNull: false)
   BtcFeesEnum? get feeLevel => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
-  String? get otp => throw _privateConstructorUsedError;
+  int? get otp => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,7 +44,7 @@ abstract class $SendAssetModelCopyWith<$Res> {
       double amount,
       String password,
       @JsonKey(includeIfNull: false) BtcFeesEnum? feeLevel,
-      @JsonKey(includeIfNull: false) String? otp});
+      @JsonKey(includeIfNull: false) int? otp});
 }
 
 /// @nodoc
@@ -84,7 +84,7 @@ class _$SendAssetModelCopyWithImpl<$Res>
       otp: otp == freezed
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
     ));
   }
 }
@@ -101,7 +101,7 @@ abstract class _$$_SendAssetModelCopyWith<$Res>
       double amount,
       String password,
       @JsonKey(includeIfNull: false) BtcFeesEnum? feeLevel,
-      @JsonKey(includeIfNull: false) String? otp});
+      @JsonKey(includeIfNull: false) int? otp});
 }
 
 /// @nodoc
@@ -143,7 +143,7 @@ class __$$_SendAssetModelCopyWithImpl<$Res>
       otp: otp == freezed
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
     ));
   }
 }
@@ -173,7 +173,7 @@ class _$_SendAssetModel implements _SendAssetModel {
   final BtcFeesEnum? feeLevel;
   @override
   @JsonKey(includeIfNull: false)
-  final String? otp;
+  final int? otp;
 
   @override
   String toString() {
@@ -221,7 +221,7 @@ abstract class _SendAssetModel implements SendAssetModel {
           required final double amount,
           required final String password,
           @JsonKey(includeIfNull: false) required final BtcFeesEnum? feeLevel,
-          @JsonKey(includeIfNull: false) required final String? otp}) =
+          @JsonKey(includeIfNull: false) required final int? otp}) =
       _$_SendAssetModel;
 
   factory _SendAssetModel.fromJson(Map<String, dynamic> json) =
@@ -238,7 +238,7 @@ abstract class _SendAssetModel implements SendAssetModel {
   BtcFeesEnum? get feeLevel;
   @override
   @JsonKey(includeIfNull: false)
-  String? get otp;
+  int? get otp;
   @override
   @JsonKey(ignore: true)
   _$$_SendAssetModelCopyWith<_$_SendAssetModel> get copyWith =>

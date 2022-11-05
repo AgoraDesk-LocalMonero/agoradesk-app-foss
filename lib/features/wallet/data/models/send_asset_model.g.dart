@@ -12,7 +12,7 @@ _$_SendAssetModel _$$_SendAssetModelFromJson(Map<String, dynamic> json) =>
       amount: (json['amount'] as num).toDouble(),
       password: json['password'] as String,
       feeLevel: $enumDecodeNullable(_$BtcFeesEnumEnumMap, json['feeLevel']),
-      otp: json['otp'] as String?,
+      otp: json['otp'] as int?,
     );
 
 Map<String, dynamic> _$$_SendAssetModelToJson(_$_SendAssetModel instance) {
