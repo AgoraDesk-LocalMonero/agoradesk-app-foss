@@ -1,9 +1,5 @@
 ### Updates
-1. Feat: if user dismiss push message he will be marked as online.
-2. Feat: FOSS versions - alert dialog when new version is available.
-3. Feat: tooltips for ad actions.
-4. Fix: accessibility improvements - named buttons and elements.
-5. Fix: managing badge on the app icon when push messages have tapped.
+1. Fix: transfer assets from the wallet gives an error with some conditions.
 
 
 ### About the attached app's
