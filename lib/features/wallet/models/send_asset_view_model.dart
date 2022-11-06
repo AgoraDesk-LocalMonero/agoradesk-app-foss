@@ -192,28 +192,21 @@ class SendAssetViewModel extends ViewModel
   void _manageAssetField() {
     inputAssetError = null;
     inputFiatError = null;
-    if (ctrlAsset.text.contains(',')) {
-      ctrlAsset.text = ctrlAsset.text.replaceAll(',', '.');
-      ctrlAsset.selection = TextSelection.fromPosition(TextPosition(offset: ctrlAsset.text.length));
-    }
+    _changeCommaToDotCtrl(ctrlAsset);
     if (ctrlAsset.text.isEmpty) {
       if (_assetAmount > 0) {
-        _assetAmount = 0;
-        _fiatAmount = 0;
-        ctrlFiat.clear();
-        ctrlAsset.clear();
-        readyToStep3 = false;
+        resetCtrls();
       }
     } else {
       try {
         if (assetAmount != double.parse(ctrlAsset.text)) {
           assetAmount = double.parse(ctrlAsset.text);
-          fiatAmount = assetAmount * price!;
+          fiatAmount = (assetAmount * price!).bankerRound(2).toDouble();
           ctrlFiat.text = fiatAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
             readyToStep3 = false;
-          } else if (!_checkStringCorrectAssetNumberAfterComma(ctrlAsset.text)) {
+          } else if (!_checkStringCorrectAssetNumberAfterComma(ctrlAsset.text, asset.name)) {
             inputAssetError = '';
             readyToStep3 = false;
           } else {
@@ -228,29 +221,13 @@ class SendAssetViewModel extends ViewModel
     }
   }
 
-  bool _checkStringCorrectAssetNumberAfterComma(String str) {
-    final lst = str.split('.');
-    if (lst.length > 1) {
-      final int digitsToRound = getBankersDigits(asset.name);
-      if (lst[1].length <= digitsToRound) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-    return true;
-  }
-
   void _manageFiatField() {
     inputAssetError = null;
     inputFiatError = null;
+    _changeCommaToDotCtrl(ctrlFiat);
     if (ctrlFiat.text.isEmpty) {
       if (_fiatAmount > 0) {
-        _assetAmount = 0;
-        _fiatAmount = 0;
-        ctrlFiat.clear();
-        ctrlAsset.clear();
-        readyToStep3 = false;
+        resetCtrls();
       }
     } else {
       try {
@@ -262,6 +239,9 @@ class SendAssetViewModel extends ViewModel
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
             readyToStep3 = false;
+          } else if (!_checkStringCorrectAssetNumberAfterComma(ctrlFiat.text, 'fiat')) {
+            inputFiatError = '';
+            readyToStep3 = false;
           } else {
             inputAssetError = inputFiatError = null;
             readyToStep3 = true;
@@ -271,6 +251,34 @@ class SendAssetViewModel extends ViewModel
         inputFiatError = context.intl.error_only_numbers_are_possible;
         readyToStep3 = false;
       }
+    }
+  }
+
+  void resetCtrls() {
+    _assetAmount = 0;
+    _fiatAmount = 0;
+    ctrlFiat.clear();
+    ctrlAsset.clear();
+    readyToStep3 = false;
+  }
+
+  bool _checkStringCorrectAssetNumberAfterComma(String str, String assetName) {
+    final lst = str.split('.');
+    if (lst.length > 1) {
+      final int digitsToRound = getBankersDigits(assetName);
+      if (lst[1].length <= digitsToRound) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  void _changeCommaToDotCtrl(TextEditingController controller) {
+    if (controller.text.contains(',')) {
+      controller.text = controller.text.replaceAll(',', '.');
+      controller.selection = TextSelection.fromPosition(TextPosition(offset: controller.text.length));
     }
   }
 
