@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/object_box.dart';
@@ -96,8 +97,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void initState() {
     _secureStorage = SecureStorage();
     appState = AppState(
-      userSettingsBox: ObjectBox.userLocalSettingsBox,
       secureStorage: _secureStorage,
+      locale: AppSharedPrefs().locale,
+      themeMode: AppSharedPrefs().themeMode,
     );
     _api = ApiClient(
       debug: kDebugMode,
@@ -106,7 +108,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _authService = AuthService(
       api: _api,
       userSettings: _userSettings,
-      userSettingsBox: ObjectBox.userLocalSettingsBox,
       secureStorage: _secureStorage,
       appState: appState,
     );

@@ -26,14 +26,12 @@ class AuthService with FileUtilsMixin {
   AuthService({
     required ApiClient api,
     required UserLocalSettings userSettings,
-    required Box<UserLocalSettings> userSettingsBox,
     required SecureStorage secureStorage,
     required AppState appState,
   })  : _api = api,
         _userSettings = userSettings,
         _secureStorage = secureStorage,
-        _appState = appState,
-        _userSettingsBox = userSettingsBox;
+        _appState = appState;
 
   ///
   /// Service requires [ApiClient] to communication
@@ -41,7 +39,6 @@ class AuthService with FileUtilsMixin {
   ///
   final ApiClient _api;
   final UserLocalSettings _userSettings;
-  final Box<UserLocalSettings> _userSettingsBox;
   final SecureStorage _secureStorage;
   final AppState _appState;
 
@@ -330,9 +327,6 @@ class AuthService with FileUtilsMixin {
     ObjectBox.s.box<MessageBoxModel>().removeAll();
     await Future.delayed(const Duration(milliseconds: 100));
 
-    // fix the bug when data isn't removed
-    final val = ObjectBox.s.box<UserLocalSettings>().getAll();
-    final val2 = ObjectBox.s.box<MessageBoxModel>().getAll();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
 

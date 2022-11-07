@@ -144,4 +144,24 @@ mixin DateMixin {
       locale: DurationLocale.fromLanguageCode(langCode)!,
     );
   }
+
+  ///
+  ///
+  ///
+  DateTime? dateTimeFromString(String? str) {
+    if (str == null) {
+      return null;
+    }
+    return DateTime.tryParse(str);
+  }
+
+  ///
+  ///
+  ///
+  String? dateTimeToString(DateTime? date) {
+    if (date == null) {
+      return null;
+    }
+    return date.toIso8601String();
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,7 +23,7 @@ enum AppSharedPrefsKey {
   tooltipsShown,
 }
 
-class AppSharedPrefs {
+class AppSharedPrefs with DateMixin {
   static AppSharedPrefs? _instance;
   static SharedPreferences? _prefs;
 
@@ -65,38 +66,45 @@ class AppSharedPrefs {
 
   String? get countryCode => getString(AppSharedPrefsKey.countryCode);
 
-  DateTime? get cachedCountrySavedDate => _parseDateTime(getString(AppSharedPrefsKey.cachedCountrySavedDate));
+  DateTime? get cachedCountrySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
 
-  DateTime? get cachedCurrencySavedDate => _parseDateTime(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
+  DateTime? get cachedCurrencySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
 
   bool? get tooltipsShown => getBool(AppSharedPrefsKey.tooltipsShown);
 
   ///
-  /// if [value] is null then data will be removed.
+  /// if [val] is null then data will be removed.
   ///
-  Future<bool> setString(AppSharedPrefsKey key, value) {
-    if (value != null) {
-      return _prefs!.setString(_key(key), value);
+  Future<bool> setString(AppSharedPrefsKey key, String? val) {
+    if (val != null) {
+      return _prefs!.setString(_key(key), val);
     }
     return _prefs!.remove(_key(key));
   }
 
-  Future<bool> setListStrings(AppSharedPrefsKey key, List<String>? value) {
-    if (value != null) {
-      return _prefs!.setStringList(_key(key), value);
+  Future<bool> setDate(AppSharedPrefsKey key, DateTime? val) {
+    if (val != null) {
+      return _prefs!.setString(_key(key), val.toIso8601String());
     }
     return _prefs!.remove(_key(key));
   }
 
-  Future<bool> setInt(AppSharedPrefsKey key, int? value) {
-    if (value != null) {
-      return _prefs!.setInt(_key(key), value);
+  Future<bool> setListStrings(AppSharedPrefsKey key, List<String>? val) {
+    if (val != null) {
+      return _prefs!.setStringList(_key(key), val);
     }
     return _prefs!.remove(_key(key));
   }
 
-  Future<bool> setBool(AppSharedPrefsKey key, {required bool value}) {
-    return _prefs!.setBool(_key(key), value);
+  Future<bool> setInt(AppSharedPrefsKey key, int? val) {
+    if (val != null) {
+      return _prefs!.setInt(_key(key), val);
+    }
+    return _prefs!.remove(_key(key));
+  }
+
+  Future<bool> setBool(AppSharedPrefsKey key, {required bool val}) {
+    return _prefs!.setBool(_key(key), val);
   }
 
   String? getString(AppSharedPrefsKey key) {
@@ -151,15 +159,5 @@ class AppSharedPrefs {
       }
     }
     return null;
-  }
-
-  ///
-  /// Generate [DateTime] from the string.
-  ///
-  DateTime? _parseDateTime(String? str) {
-    if (str == null) {
-      return null;
-    }
-    return DateTime.tryParse(str);
   }
 }

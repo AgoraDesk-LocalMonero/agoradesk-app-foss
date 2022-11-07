@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -50,8 +51,8 @@ void main() async {
   ///
   /// common initializations
   ///
-  await ObjectBox.create();
   await SecureStorage.ensureInitialized();
+  await AppSharedPrefs.ensureInitialized();
   await findSystemLocale();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
