@@ -62,7 +62,7 @@ class AppSharedPrefs with DateMixin {
 
   bool? get ignoreAllUpdates => getBool(AppSharedPrefsKey.ignoreAllUpdates);
 
-  bool? get ignoredUpdate => getBool(AppSharedPrefsKey.ignoredUpdate);
+  String? get ignoredUpdate => getString(AppSharedPrefsKey.ignoredUpdate);
 
   String? get countryCode => getString(AppSharedPrefsKey.countryCode);
 
@@ -159,5 +159,12 @@ class AppSharedPrefs with DateMixin {
       }
     }
     return null;
+  }
+
+  ///
+  /// Remove all
+  ///
+  Future clear() async {
+    await _instance?.clear();
   }
 }
