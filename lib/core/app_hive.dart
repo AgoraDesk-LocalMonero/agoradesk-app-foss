@@ -19,11 +19,11 @@ class AppHive {
   static ensureInitialized() async {
     await Hive.initFlutter();
     Hive.registerAdapter(CountryCodeModelAdapter());
-    await Hive.openLazyBox<CountryCodeModel>(HiveBoxName.country);
+    await Hive.openBox<CountryCodeModel>(HiveBoxName.country);
     Hive.registerAdapter(CurrencyModelAdapter());
-    await Hive.openLazyBox<CurrencyModel>(HiveBoxName.currency);
+    await Hive.openBox<CurrencyModel>(HiveBoxName.currency);
     Hive.registerAdapter(MessageBoxModelAdapter());
-    await Hive.openLazyBox<MessageBoxModel>(HiveBoxName.message);
+    await Hive.openBox<MessageBoxModel>(HiveBoxName.message);
     _instance ??= const AppHive._();
   }
 
