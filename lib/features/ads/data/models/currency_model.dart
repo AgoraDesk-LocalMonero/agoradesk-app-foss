@@ -8,7 +8,7 @@ final kAnyCurrency = CurrencyModel(code: 'Any currency', name: 'Any currency', a
 
 @JsonSerializable(explicitToJson: true)
 @HiveType(typeId: 1)
-class CurrencyModel {
+class CurrencyModel extends HiveObject {
   CurrencyModel({
     required this.code,
     required this.name,

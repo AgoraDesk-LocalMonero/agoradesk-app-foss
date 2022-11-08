@@ -7,7 +7,7 @@ const kAnyCountry = 'ANY';
 
 @JsonSerializable(explicitToJson: true)
 @HiveType(typeId: 0)
-class CountryCodeModel {
+class CountryCodeModel extends HiveObject {
   CountryCodeModel({
     required this.codes,
   });

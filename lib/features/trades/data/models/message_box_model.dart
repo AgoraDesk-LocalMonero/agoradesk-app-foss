@@ -2,8 +2,10 @@ import 'package:agoradesk/features/trades/data/models/message_model.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+part 'message_box_model.g.dart';
+
 @HiveType(typeId: 2)
-class MessageBoxModel {
+class MessageBoxModel extends HiveObject {
   MessageBoxModel({
     this.tradeId,
     this.messageId,
@@ -17,7 +19,6 @@ class MessageBoxModel {
     this.attachmentUrl,
   });
 
-  /// message id
   @HiveField(0)
   String? messageId;
   @HiveField(1)

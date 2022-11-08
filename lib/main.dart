@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:agoradesk/core/app.dart';
+import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
@@ -16,7 +17,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
@@ -53,7 +53,7 @@ void main() async {
   ///
   await SecureStorage.ensureInitialized();
   await AppSharedPrefs.ensureInitialized();
-  await Hive.initFlutter();
+  await AppHive.ensureInitialized();
   await findSystemLocale();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

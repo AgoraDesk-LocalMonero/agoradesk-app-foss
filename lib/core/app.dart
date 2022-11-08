@@ -107,7 +107,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _initLocalSettings();
     _authService = AuthService(
       api: _api,
-      userSettings: _userSettings,
       secureStorage: _secureStorage,
       appState: appState,
     );
