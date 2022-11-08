@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -19,13 +20,16 @@ class MyProfileViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin 
     required AccountService accountService,
     required AuthService authService,
     required AdsRepository adsRepository,
+    required AppState appState,
   })  : _accountService = accountService,
         _authService = authService,
+        _appState = appState,
         _adsRepository = adsRepository;
 
   final AdsRepository _adsRepository;
   final AuthService _authService;
   final AccountService _accountService;
+  final AppState _appState;
 
   TextEditingController ctrlPassword = TextEditingController();
   TextEditingController ctrlIntroduction = TextEditingController();
@@ -96,7 +100,7 @@ class MyProfileViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin 
   Future<void> init() async {
     if (!_initialised) {
       _initialised = true;
-      username = _authService.userSettings.username ?? '';
+      username = _appState.username;
       ctrlPassword.addListener(() {
         password = ctrlPassword.text;
         readyToDelete = validatePassword(ctrlPassword.text);
