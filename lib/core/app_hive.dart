@@ -26,6 +26,10 @@ class AppHive {
     await Hive.openLazyBox<MessageBoxModel>(HiveBoxName.message);
     _instance ??= const AppHive._();
   }
+
+  static close() async {
+    await Hive.close();
+  }
 }
 
 class HiveBoxName {

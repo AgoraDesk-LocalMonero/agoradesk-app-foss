@@ -12,6 +12,7 @@ import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
 import 'package:agoradesk/features/trades/data/services/trade_service.dart';
 import 'package:agoradesk/objectbox.g.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 
 class TradeRepository with ErrorParseMixin {
