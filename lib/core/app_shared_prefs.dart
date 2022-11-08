@@ -20,7 +20,7 @@ enum AppSharedPrefsKey {
   countryCode,
   cachedCountrySavedDate,
   cachedCurrencySavedDate,
-  tooltipsShown,
+  tooltipShownNames,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -70,7 +70,7 @@ class AppSharedPrefs with DateMixin {
 
   DateTime? get cachedCurrencySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
 
-  bool? get tooltipsShown => getBool(AppSharedPrefsKey.tooltipsShown);
+  List<String> get tooltipShownNames => getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
 
   ///
   /// if [val] is null then data will be removed.
@@ -111,7 +111,7 @@ class AppSharedPrefs with DateMixin {
     return _prefs!.getString(_key(key));
   }
 
-  List<String>? getsetListStrings(AppSharedPrefsKey key) {
+  List<String>? getListStrings(AppSharedPrefsKey key) {
     return _prefs!.getStringList(_key(key));
   }
 
@@ -122,8 +122,6 @@ class AppSharedPrefs with DateMixin {
   bool? getBool(AppSharedPrefsKey key) {
     return _prefs!.getBool(_key(key));
   }
-
-  // TODO:  setInt, getInt, etc...
 
   ///
   /// Convert [key] to the short name representation.
