@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -15,7 +16,6 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/market/screens/widgets/install_agoradesk_widget.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
@@ -60,10 +60,10 @@ class _TradeScreenState extends State<TradeScreen>
       tradeId: widget.tradeId,
       tradeRepository: context.read<TradeRepository>(),
       accountService: context.read<AccountService>(),
-      userSettings: context.read<UserLocalSettings>(),
       secureStorage: context.read<SecureStorage>(),
       apiClient: context.read<ApiClient>(),
       adsRepository: context.read<AdsRepository>(),
+      appState: context.read<AppState>(),
     );
     _model.tabController = TabController(length: 2, vsync: this);
 
