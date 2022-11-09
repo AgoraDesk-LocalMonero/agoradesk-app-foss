@@ -598,12 +598,12 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   }
 
   Future _initLocalSettings() async {
-    if (AppSharedPrefs().username != null || AppSharedPrefs().username!.isEmpty) {
+    if (AppSharedPrefs().username == null || AppSharedPrefs().username!.isEmpty) {
       // app runs first time, we should clean FlutterSecureStorage items
       // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
       if (token != null) {
         final res = await _accountService.getMyself();
-        if (res.isRight && res.right.username != null && AppSharedPrefs().username!.isNotEmpty) {
+        if (res.isRight && res.right.username != null) {
           await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
         } else {
           _secureStorage.deleteAll();
