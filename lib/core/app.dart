@@ -85,6 +85,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   late final PollingService _pollingService;
   Plausible? _plausible;
   late final AppState appState;
+  String? token;
 
   Uri? _initialUri;
 
@@ -103,7 +104,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     _api = ApiClient(
       debug: kDebugMode,
     )..setBaseUrl(GetIt.I<AppParameters>().urlApiBase);
-    _initLocalSettings();
     _authService = AuthService(
       api: _api,
       secureStorage: _secureStorage,
@@ -123,6 +123,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       TradeService(api: _api, appState: appState),
       Hive.box<MessageBoxModel>(HiveBoxName.message),
     );
+
     _placesSearch = PlacesSearch(
       limit: 20,
     );
@@ -256,7 +257,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
     /// Configure [ApiClient] with cache
 
-    String? token;
     try {
       // fixing this https://github.com/mogol/flutter_secure_storage/issues/43#issuecomment-471642126
       token = await _secureStorage.read(SecureStorageKey.token);
@@ -274,6 +274,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     appState.pinCode = pin;
     await _afterConfigInit();
     await _authService.init();
+    await _initLocalSettings();
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
@@ -596,11 +597,20 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     });
   }
 
-  void _initLocalSettings() {
-    if (AppSharedPrefs().username == null || AppSharedPrefs().username!.isEmpty) {
+  Future _initLocalSettings() async {
+    if (AppSharedPrefs().username != null || AppSharedPrefs().username!.isEmpty) {
       // app runs first time, we should clean FlutterSecureStorage items
       // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
-      _secureStorage.deleteAll();
+      if (token != null) {
+        final res = await _accountService.getMyself();
+        if (res.isRight && res.right.username != null && AppSharedPrefs().username!.isNotEmpty) {
+          await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
+        } else {
+          _secureStorage.deleteAll();
+        }
+      } else {
+        _secureStorage.deleteAll();
+      }
     }
 
     // final brightness = SchedulerBinding.instance.window.platformBrightness;

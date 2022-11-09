@@ -41,6 +41,25 @@ class AccountService {
   }
 
   ///
+  /// Get myself info
+  ///
+  Future<Either<ApiError, AccountInfoModel>> getMyself() async {
+    try {
+      final resp = await _api.client.get('/myself');
+      if (resp.statusCode == 200) {
+        Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
+        return Either.right(AccountInfoModel.fromJson(respMap));
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
   /// Get trades with user
   ///
   Future<Either<ApiError, Pagination<TradeModel>>> getTradesWithUser(
