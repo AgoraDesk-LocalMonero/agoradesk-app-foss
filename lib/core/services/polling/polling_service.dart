@@ -64,8 +64,12 @@ class PollingService with ErrorParseMixin {
               resBtc.right,
             ]);
           } else {
-            debugPrint(
-                '++++[Polling service - getBalances error] - BTC ${resBtc.left.statusCode} - XMR ${resXmr.left.statusCode}');
+            if (resBtc.isLeft) {
+              debugPrint('++++[Polling service - getBalances error] - BTC ${resBtc.left.statusCode}');
+            }
+            if (resXmr.isLeft) {
+              debugPrint('++++[Polling service - getBalances error] - BTC ${resXmr.left.statusCode}');
+            }
           }
         } else {
           final resXmr = await walletService.getBalance(Asset.XMR);

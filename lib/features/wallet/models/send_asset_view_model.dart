@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -42,6 +43,7 @@ class SendAssetViewModel extends ViewModel
   TabController? tabController;
   final Asset asset;
   bool _isAddressCorrect = false;
+
   // bool _initialized = false;
   bool _loadingFees = false;
   bool _sendingAsset = false;
@@ -190,22 +192,22 @@ class SendAssetViewModel extends ViewModel
   void _manageAssetField() {
     inputAssetError = null;
     inputFiatError = null;
+    _changeCommaToDotCtrl(ctrlAsset);
     if (ctrlAsset.text.isEmpty) {
       if (_assetAmount > 0) {
-        _assetAmount = 0;
-        _fiatAmount = 0;
-        ctrlFiat.clear();
-        ctrlAsset.clear();
-        readyToStep3 = false;
+        resetCtrls();
       }
     } else {
       try {
         if (assetAmount != double.parse(ctrlAsset.text)) {
           assetAmount = double.parse(ctrlAsset.text);
-          fiatAmount = assetAmount * price!;
+          fiatAmount = (assetAmount * price!).bankerRound(2).toDouble();
           ctrlFiat.text = fiatAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
+            readyToStep3 = false;
+          } else if (!_checkStringCorrectAssetNumberAfterComma(ctrlAsset.text, asset.name)) {
+            inputAssetError = '';
             readyToStep3 = false;
           } else {
             inputAssetError = null;
@@ -222,22 +224,23 @@ class SendAssetViewModel extends ViewModel
   void _manageFiatField() {
     inputAssetError = null;
     inputFiatError = null;
+    _changeCommaToDotCtrl(ctrlFiat);
     if (ctrlFiat.text.isEmpty) {
       if (_fiatAmount > 0) {
-        _assetAmount = 0;
-        _fiatAmount = 0;
-        ctrlFiat.clear();
-        ctrlAsset.clear();
-        readyToStep3 = false;
+        resetCtrls();
       }
     } else {
       try {
         if (fiatAmount != double.parse(ctrlFiat.text)) {
+          final int digitsToRound = getBankersDigits(asset.name);
           fiatAmount = double.parse(ctrlFiat.text);
-          assetAmount = fiatAmount / price!;
+          assetAmount = (fiatAmount / price!).bankerRound(digitsToRound).toDouble();
           ctrlAsset.text = assetAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
+            readyToStep3 = false;
+          } else if (!_checkStringCorrectAssetNumberAfterComma(ctrlFiat.text, 'fiat')) {
+            inputFiatError = '';
             readyToStep3 = false;
           } else {
             inputAssetError = inputFiatError = null;
@@ -248,6 +251,34 @@ class SendAssetViewModel extends ViewModel
         inputFiatError = context.intl.error_only_numbers_are_possible;
         readyToStep3 = false;
       }
+    }
+  }
+
+  void resetCtrls() {
+    _assetAmount = 0;
+    _fiatAmount = 0;
+    ctrlFiat.clear();
+    ctrlAsset.clear();
+    readyToStep3 = false;
+  }
+
+  bool _checkStringCorrectAssetNumberAfterComma(String str, String assetName) {
+    final lst = str.split('.');
+    if (lst.length > 1) {
+      final int digitsToRound = getBankersDigits(assetName);
+      if (lst[1].length <= digitsToRound) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  void _changeCommaToDotCtrl(TextEditingController controller) {
+    if (controller.text.contains(',')) {
+      controller.text = controller.text.replaceAll(',', '.');
+      controller.selection = TextSelection.fromPosition(TextPosition(offset: controller.text.length));
     }
   }
 
@@ -300,7 +331,7 @@ class SendAssetViewModel extends ViewModel
           amount: assetAmountToReceive,
           password: ctrlPassword.text,
           feeLevel: btcFeesEnum,
-          otp: ctrlOtp.text.isEmpty ? null : ctrlOtp.text,
+          otp: ctrlOtp.text.isEmpty ? null : int.tryParse(ctrlOtp.text),
         );
 
         final res = await _walletService.walletSend(

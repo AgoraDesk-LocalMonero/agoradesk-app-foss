@@ -16857,6 +16857,84 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Always ignore'**
   String get app_update_ignore_always;
+
+  /// No description provided for @app_tooltip_visibility.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to toggle visibility'**
+  String get app_tooltip_visibility;
+
+  /// No description provided for @app_tooltip_long_press_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Long press on the ad to enable group editing'**
+  String get app_tooltip_long_press_ad;
+
+  /// No description provided for @app_join_telegram.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Telegram group'**
+  String get app_join_telegram;
+
+  /// No description provided for @app_join_matrix.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Matrix group'**
+  String get app_join_matrix;
+
+  /// No description provided for @app_display_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Display password'**
+  String get app_display_password;
+
+  /// No description provided for @app_hide_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide password'**
+  String get app_hide_password;
+
+  /// No description provided for @app_trade_has_been_cancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'The trade has been cancelled.'**
+  String get app_trade_has_been_cancelled;
+
+  /// No description provided for @app_last_seen.
+  ///
+  /// In en, this message translates to:
+  /// **'Last seen {val}'**
+  String app_last_seen(Object val);
+
+  /// No description provided for @app_open_additional_filters.
+  ///
+  /// In en, this message translates to:
+  /// **'Open additional filters'**
+  String get app_open_additional_filters;
+
+  /// No description provided for @app_select_asset.
+  ///
+  /// In en, this message translates to:
+  /// **'Select asset'**
+  String get app_select_asset;
+
+  /// No description provided for @app_select_trade_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Select trade type'**
+  String get app_select_trade_type;
+
+  /// No description provided for @app_paste.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste'**
+  String get app_paste;
+
+  /// No description provided for @app_scan_qr_code.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan QR code'**
+  String get app_scan_qr_code;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

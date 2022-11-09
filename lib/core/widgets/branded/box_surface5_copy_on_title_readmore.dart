@@ -36,7 +36,7 @@ class BoxSurface5CopyOnTitleReadmore extends StatelessWidget {
                         text!.trim(),
                         style: context.txtBodySmallN80,
                         trimLines: 10,
-                        trimMode: TrimMode.Line,
+                        trimMode: TrimMode.line,
                         moreStyle: context.txtBodySmallP70P40,
                         lessStyle: context.txtBodySmallP70P40,
                       ),

@@ -1,9 +1,11 @@
 import 'package:agoradesk/features/trades/data/models/message_model.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
-import 'package:objectbox/objectbox.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-@Entity()
-class MessageBoxModel {
+part 'message_box_model.g.dart';
+
+@HiveType(typeId: 2)
+class MessageBoxModel extends HiveObject {
   MessageBoxModel({
     this.tradeId,
     this.messageId,
@@ -17,18 +19,25 @@ class MessageBoxModel {
     this.attachmentUrl,
   });
 
-  int id = 0;
-
-  /// message id
+  @HiveField(0)
   String? messageId;
+  @HiveField(1)
   String? tradeId;
+  @HiveField(2)
   DateTime createdAt;
+  @HiveField(3)
   bool isAdmin;
+  @HiveField(4)
   bool isSending;
+  @HiveField(5)
   bool isUpdated;
+  @HiveField(6)
   String senderUsername;
+  @HiveField(7)
   String? msg;
+  @HiveField(8)
   String? attachmentName;
+  @HiveField(9)
   String? attachmentUrl;
 
   factory MessageBoxModel.fromMessageModel(MessageModel model) {

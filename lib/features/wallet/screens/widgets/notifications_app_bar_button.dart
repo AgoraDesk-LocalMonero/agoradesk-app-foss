@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
@@ -19,6 +20,7 @@ class NotificationsAppBarButton extends StatelessWidget {
             iconData: AgoraFont.bell,
             isRight: false,
             hasUnreaded: hasUnreaded,
+            label: context.intl.settings250Sbnotifications250Sbtitle,
             onPressed: () => context.pushRoute(const NotificationsRoute()),
           );
         });

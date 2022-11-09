@@ -102,6 +102,14 @@ mixin DateMixin {
   }
 
   ///
+  /// short Last Seen
+  ///
+  String timeAgoFromNowShort(DateTime date) {
+    final now = DateTime.now();
+    return timeago.format(now.subtract(now.difference(date)), locale: 'en_short');
+  }
+
+  ///
   /// returns colors for different durations
   ///
   Color isRecentColor(DateTime? date, BuildContext context) {
@@ -135,5 +143,25 @@ mixin DateMixin {
       abbreviated: false,
       locale: DurationLocale.fromLanguageCode(langCode)!,
     );
+  }
+
+  ///
+  ///
+  ///
+  DateTime? dateTimeFromString(String? str) {
+    if (str == null) {
+      return null;
+    }
+    return DateTime.tryParse(str);
+  }
+
+  ///
+  ///
+  ///
+  String? dateTimeToString(DateTime? date) {
+    if (date == null) {
+      return null;
+    }
+    return date.toIso8601String();
   }
 }

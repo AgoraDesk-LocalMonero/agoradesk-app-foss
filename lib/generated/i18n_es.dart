@@ -8611,4 +8611,45 @@ class I18nEs extends I18n {
 
   @override
   String get app_update_ignore_always => 'Always ignore';
+
+  @override
+  String get app_tooltip_visibility => 'Tap to toggle visibility';
+
+  @override
+  String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
+
+  @override
+  String get app_join_telegram => 'Join Telegram group';
+
+  @override
+  String get app_join_matrix => 'Join Matrix group';
+
+  @override
+  String get app_display_password => 'Display password';
+
+  @override
+  String get app_hide_password => 'Hide password';
+
+  @override
+  String get app_trade_has_been_cancelled => 'The trade has been cancelled.';
+
+  @override
+  String app_last_seen(Object val) {
+    return 'Last seen $val';
+  }
+
+  @override
+  String get app_open_additional_filters => 'Open additional filters';
+
+  @override
+  String get app_select_asset => 'Select asset';
+
+  @override
+  String get app_select_trade_type => 'Select trade type';
+
+  @override
+  String get app_paste => 'Paste';
+
+  @override
+  String get app_scan_qr_code => 'Scan QR code';
 }

@@ -56,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                 ],
               ),
               Expanded(
-                flex: 3,
+                flex: _appState.isSmallScreen ? 2 : 3,
                 child: WelcomeImages.welcomeImage(_isDark),
               ),
               Expanded(
@@ -134,22 +134,28 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    GestureDetector(
-                      behavior: HitTestBehavior.opaque,
-                      onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
-                      child: SvgPicture.asset(
-                        'assets/images/matrix-logo.svg',
-                        color: Colors.white,
-                        width: 100,
+                    Semantics(
+                      label: context.intl.app_join_matrix,
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
+                        child: SvgPicture.asset(
+                          'assets/images/matrix-logo.svg',
+                          color: Colors.white,
+                          width: 100,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 40),
-                    GestureDetector(
-                      behavior: HitTestBehavior.opaque,
-                      onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
-                      child: Image.asset(
-                        'assets/images/telegram-logo.png',
-                        height: 70,
+                    Semantics(
+                      label: context.intl.app_join_telegram,
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
+                        child: Image.asset(
+                          'assets/images/telegram-logo.png',
+                          height: 70,
+                        ),
                       ),
                     ),
                   ],

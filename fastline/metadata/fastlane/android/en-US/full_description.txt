@@ -30,3 +30,5 @@ Source Code:
 The source code is available at the following GitHub repository:
 [https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss]
 
+Anti-Features:
+* NonFreeNet - May use map data and API from non-free online services.

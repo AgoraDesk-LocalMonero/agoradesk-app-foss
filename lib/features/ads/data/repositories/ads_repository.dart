@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
@@ -9,41 +10,35 @@ import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/services/ads_service.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
-import 'package:objectbox/objectbox.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class AdsRepository {
   AdsRepository(
     this._adsService,
     this._codesBox,
     this._currenciesBox,
-    this._userLocalSettings,
   );
 
   final AdsService _adsService;
   final Box<CountryCodeModel> _codesBox;
   final Box<CurrencyModel> _currenciesBox;
-  final Box<UserLocalSettings> _userLocalSettings;
 
   ///
   /// Get currencies list
   ///
   Future<Either<ApiError, List<CurrencyModel>>> getCurrencies() async {
-    final userSettings = _userLocalSettings.getAll().last;
-    if (_currenciesBox.getAll().isNotEmpty &&
-        userSettings.cachedCurrencySavedDate != null &&
-        userSettings.cachedCurrencySavedDate!.isAfter(
-          DateTime.now().subtract(
-            const Duration(days: 1),
-          ),
+    final cachedCurrencySavedDate = AppSharedPrefs().cachedCurrencySavedDate;
+    if (_currenciesBox.values.isNotEmpty &&
+        cachedCurrencySavedDate != null &&
+        cachedCurrencySavedDate.isAfter(
+          DateTime.now().subtract(const Duration(days: 1)),
         )) {
-      return Either.right(_currenciesBox.getAll());
+      return Either.right(_currenciesBox.values.toList());
     }
     final res = await _adsService.getCurrencies();
     if (res.isRight) {
-      _currenciesBox.putMany(res.right);
-      userSettings.cachedCurrencySavedDate = DateTime.now();
-      _userLocalSettings.put(userSettings);
+      await _currenciesBox.addAll(res.right);
+      await AppSharedPrefs().setDate(AppSharedPrefsKey.cachedCurrencySavedDate, DateTime.now());
     }
     return res;
   }
@@ -52,21 +47,19 @@ class AdsRepository {
   /// Get country code list
   ///
   Future<Either<ApiError, CountryCodeModel>> getCountryCodes() async {
-    final userSettings = _userLocalSettings.getAll().last;
-    if (_codesBox.getAll().isNotEmpty &&
-        userSettings.cachedCountrySavedDate != null &&
-        userSettings.cachedCountrySavedDate!.isAfter(
-          DateTime.now().subtract(
-            const Duration(days: 1),
-          ),
+    final cachedCountrySavedDate = AppSharedPrefs().cachedCountrySavedDate;
+    if (_codesBox.values.isNotEmpty &&
+        cachedCountrySavedDate != null &&
+        cachedCountrySavedDate.isAfter(
+          DateTime.now().subtract(const Duration(days: 1)),
         )) {
-      return Either.right(_codesBox.getAll()[0]);
+      return Either.right(_codesBox.values.first);
     }
     final res = await _adsService.getCountryCodes();
     if (res.isRight) {
-      _codesBox.put(res.right);
-      userSettings.cachedCountrySavedDate = DateTime.now();
-      _userLocalSettings.put(userSettings);
+      await _codesBox.clear();
+      await _codesBox.add(res.right);
+      await AppSharedPrefs().setDate(AppSharedPrefsKey.cachedCountrySavedDate, DateTime.now());
     }
     return res;
   }

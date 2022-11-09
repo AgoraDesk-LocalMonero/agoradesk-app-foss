@@ -51,8 +51,8 @@ class PinCodeCheckScreen extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                             color: Theme.of(context).colorScheme.neutral90,
                           ),
-                          emptyIndicatorColor: Theme.of(context).colorScheme.neutral30,
-                          filledIndicatorColor: Theme.of(context).colorScheme.primary90,
+                          emptyIndicatorColor: context.colN30Pri80,
+                          filledIndicatorColor: context.colP90,
                           buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteButtonColor: Theme.of(context).colorScheme.primary90,
@@ -66,6 +66,7 @@ class PinCodeCheckScreen extends StatelessWidget {
                           onChangedPin: (_) {},
                           leftBottomWidget: model.biometricAuthIsOn
                               ? IconButton(
+                                  tooltip: context.intl.app_biometric_authentication,
                                   icon: Icon(
                                     Icons.fingerprint,
                                     size: 40,

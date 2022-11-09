@@ -53,7 +53,7 @@
     },
     {
       "id": "5:5782449331183648541",
-      "lastPropertyId": "15:993411353141141336",
+      "lastPropertyId": "17:2870991536340097859",
       "name": "UserLocalSettings",
       "properties": [
         {
@@ -126,6 +126,16 @@
           "id": "15:993411353141141336",
           "name": "ignoredUpdate",
           "type": 9
+        },
+        {
+          "id": "16:8028494485770338323",
+          "name": "tooltipsShown",
+          "type": 30
+        },
+        {
+          "id": "17:2870991536340097859",
+          "name": "iosFirstNotificationWasRun",
+          "type": 1
         }
       ],
       "relations": []

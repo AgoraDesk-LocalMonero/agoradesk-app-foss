@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 mixin ApiHelper {
   static String? parseErrorToString(DioError e) {
@@ -58,6 +59,7 @@ mixin ApiHelper {
         try {
           messageMap = json.decode(json.decode(e.error));
         } catch (e) {
+          debugPrint('[++++parseErrorToApiError] - $e');
           messageMap = {'message': 'Unknow error'};
         }
 

@@ -57,6 +57,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
               leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
               rightAction: AppBarButton(
                 iconData: AgoraFont.help_circle,
+                label: context.intl.help,
                 onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
               ),
             ),
@@ -91,34 +92,40 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
           children: [
             Expanded(
               flex: 1,
-              child: DropdownSearch<TradeType>(
-                dropdownButtonProps: context.dropdownButtonProps,
-                dropdownDecoratorProps: context.dropdownDecoration,
-                popupProps: PopupProps.menu(
-                  menuProps: context.dropdownMenuProps,
-                  fit: FlexFit.loose,
+              child: Semantics(
+                label: context.intl.app_select_trade_type,
+                child: DropdownSearch<TradeType>(
+                  dropdownButtonProps: context.dropdownButtonProps,
+                  dropdownDecoratorProps: context.dropdownDecoration,
+                  popupProps: PopupProps.menu(
+                    menuProps: context.dropdownMenuProps,
+                    fit: FlexFit.loose,
+                  ),
+                  items: TradeType.values,
+                  itemAsString: (TradeType? t) => t?.translatedTitle(context).capitalize() ?? '',
+                  onChanged: (TradeType? data) => model.tradeType = data,
+                  selectedItem: model.tradeType,
                 ),
-                items: TradeType.values,
-                itemAsString: (TradeType? t) => t?.translatedTitle(context).capitalize() ?? '',
-                onChanged: (TradeType? data) => model.tradeType = data,
-                selectedItem: model.tradeType,
               ),
             ),
             const SizedBox(width: 10),
             GetIt.I<AppParameters>().isAgoraDesk
                 ? Expanded(
                     flex: 1,
-                    child: DropdownSearch<Asset>(
-                      dropdownButtonProps: context.dropdownButtonProps,
-                      dropdownDecoratorProps: context.dropdownDecoration,
-                      popupProps: PopupProps.menu(
-                        menuProps: context.dropdownMenuProps,
-                        fit: FlexFit.loose,
+                    child: Semantics(
+                      label: context.intl.app_select_asset,
+                      child: DropdownSearch<Asset>(
+                        dropdownButtonProps: context.dropdownButtonProps,
+                        dropdownDecoratorProps: context.dropdownDecoration,
+                        popupProps: PopupProps.menu(
+                          menuProps: context.dropdownMenuProps,
+                          fit: FlexFit.loose,
+                        ),
+                        items: Asset.values,
+                        itemAsString: (Asset? a) => a?.title() ?? '',
+                        onChanged: (Asset? data) => model.asset = data,
+                        selectedItem: model.asset,
                       ),
-                      items: Asset.values,
-                      itemAsString: (Asset? a) => a?.title() ?? '',
-                      onChanged: (Asset? data) => model.asset = data,
-                      selectedItem: model.asset,
                     ),
                   )
                 : const SizedBox(),
@@ -185,6 +192,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                                 child: model.displayClear
                                                     ? ButtonSquareIcon(
                                                         iconData: AgoraFont.x,
+                                                        label: context.intl.app_clear,
                                                         onPressed: () => model.locationFieldClear(),
                                                       )
                                                     : const SizedBox(),

@@ -113,19 +113,15 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
 
   @override
   void init() {
-    // if (!_initialized) {
-    //   _initialized = true;
     //todo - refactor me (maybe with AutoRoute)
-    isGuestMode = _authService.authState == AuthState.guest;
+    isGuestMode = _authService.authState == AuthState.guest || _authService.authState == AuthState.initial;
     _authService.onAuthStateChange.listen((e) {
-      isGuestMode = e == AuthState.guest;
-
+      isGuestMode = e == AuthState.guest || _authService.authState == AuthState.initial;
       notifyListeners();
     });
     _initMenus();
     _textFieldsListeners();
     _initialLoading();
-    // }
     super.init();
   }
 

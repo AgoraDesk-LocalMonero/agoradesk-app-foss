@@ -10,8 +10,9 @@ import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_request_parameter_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
 import 'package:agoradesk/features/trades/data/services/trade_service.dart';
-import 'package:agoradesk/objectbox.g.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 
 class TradeRepository with ErrorParseMixin {
@@ -46,13 +47,6 @@ class TradeRepository with ErrorParseMixin {
   }
 
   ///
-  /// Update message in the box
-  ///
-  void boxUpdateMessage(MessageBoxModel m) {
-    _messagesBox.put(m);
-  }
-
-  ///
   /// get user's active trades
   ///
   Future<List<MessageBoxModel>> getMessages({
@@ -64,8 +58,8 @@ class TradeRepository with ErrorParseMixin {
     DateTime? after;
     final List<MessageBoxModel> messages = [];
     final List<MessageBoxModel> newMessages = [];
-    final query = _messagesBox.query(MessageBoxModel_.tradeId.equals(tradeId)).build();
-    messages.addAll(query.find());
+    final List<MessageBoxModel> cachedMessages = _messagesBox.values.where((e) => e.tradeId == tradeId).toList();
+    messages.addAll(cachedMessages);
     messages.sort((a, b) => b.createdAt.compareTo(a.createdAt));
     if (messages.isNotEmpty) {
       after = messages.first.createdAt.toUtc();
@@ -78,7 +72,7 @@ class TradeRepository with ErrorParseMixin {
         if (checkMessageUniquess(messageWithTradeId)) {
           messages.insert(0, MessageBoxModel.fromMessageModel(messageWithTradeId));
           newMessages.insert(0, MessageBoxModel.fromMessageModel(messageWithTradeId));
-          _messagesBox.put(MessageBoxModel.fromMessageModel(messageWithTradeId));
+          await _messagesBox.add(MessageBoxModel.fromMessageModel(messageWithTradeId));
         }
       }
     } else {
@@ -96,9 +90,8 @@ class TradeRepository with ErrorParseMixin {
   }
 
   bool checkMessageUniquess(MessageModel message) {
-    final query = _messagesBox.query(MessageBoxModel_.messageId.equals(message.messageId ?? 'HFTyrdYDRTr')).build();
-    final res = query.find();
-    return res.isEmpty;
+    final res = _messagesBox.values.firstWhereOrNull((e) => e.messageId == message.messageId);
+    return res == null;
   }
 
   ///

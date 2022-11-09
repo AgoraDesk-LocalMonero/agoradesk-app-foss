@@ -3,10 +3,11 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:agoradesk/core/api/api_client.dart';
+import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
-import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -28,7 +29,6 @@ import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/data/services/ads_service.dart';
 import 'package:agoradesk/features/auth/auth_guard.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/features/splash/splash_screen.dart';
 import 'package:agoradesk/features/trades/data/models/message_box_model.dart';
@@ -47,6 +47,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:get_it/get_it.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
@@ -74,12 +75,12 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   late final UserService _userService;
   late final AccountService _accountService;
   late final AppRouter router;
-  late final UserLocalSettings _userSettings;
   late final PlacesSearch _placesSearch;
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
   late final AppState appState;
+  String? token;
 
   Uri? _initialUri;
 
@@ -91,17 +92,15 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void initState() {
     _secureStorage = SecureStorage();
     appState = AppState(
-      userSettingsBox: ObjectBox.userLocalSettingsBox,
       secureStorage: _secureStorage,
+      locale: AppSharedPrefs().locale,
+      themeMode: AppSharedPrefs().themeMode,
     );
     _api = ApiClient(
       debug: kDebugMode,
     )..setBaseUrl(GetIt.I<AppParameters>().urlApiBase);
-    _initLocalSettings();
     _authService = AuthService(
       api: _api,
-      userSettings: _userSettings,
-      userSettingsBox: ObjectBox.userLocalSettingsBox,
       secureStorage: _secureStorage,
       appState: appState,
     );
@@ -109,17 +108,17 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
     _adsRepository = AdsRepository(
       AdsService(api: _api),
-      ObjectBox.s.box<CountryCodeModel>(),
-      ObjectBox.s.box<CurrencyModel>(),
-      ObjectBox.s.box<UserLocalSettings>(),
+      Hive.box<CountryCodeModel>(HiveBoxName.country),
+      Hive.box<CurrencyModel>(HiveBoxName.currency),
     );
     _walletService = WalletService(api: _api);
     _userService = UserService(api: _api);
     _accountService = AccountService(api: _api);
     _tradeRepository = TradeRepository(
       TradeService(api: _api, appState: appState),
-      ObjectBox.s.box<MessageBoxModel>(),
+      Hive.box<MessageBoxModel>(HiveBoxName.message),
     );
+
     _placesSearch = PlacesSearch(
       limit: 20,
     );
@@ -154,6 +153,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     // in case app is terminated there is info in main.dart
     AwesomeNotifications().setListeners(
       onActionReceivedMethod: AwesomeNotificationController.onActionReceivedMethod,
+      onDismissActionReceivedMethod: AwesomeNotificationController.onDismissActionReceivedMethod,
     );
 
     WidgetsBinding.instance.addObserver(this);
@@ -224,6 +224,10 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
   Widget appBuilder(context, Widget? child) {
     final mq = MediaQuery.of(context);
+    appState.updateWith(
+      screenHeight: mq.size.height,
+      notify: false,
+    );
     return MediaQuery(
       data: mq.copyWith(
         textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,
@@ -246,7 +250,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
     /// Configure [ApiClient] with cache
 
-    String? token;
     try {
       // fixing this https://github.com/mogol/flutter_secure_storage/issues/43#issuecomment-471642126
       token = await _secureStorage.read(SecureStorageKey.token);
@@ -264,6 +267,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     appState.pinCode = pin;
     await _afterConfigInit();
     await _authService.init();
+    await _initLocalSettings();
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
@@ -562,29 +566,34 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     });
   }
 
-  void _initLocalSettings() {
-    if (ObjectBox.userLocalSettingsBox.getAll().isEmpty) {
+  Future _initLocalSettings() async {
+    if (AppSharedPrefs().username != null) {
       // app runs first time, we should clean FlutterSecureStorage items
       // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
-      _secureStorage.deleteAll();
-      _userSettings = UserLocalSettings();
-      ObjectBox.userLocalSettingsBox.put(_userSettings);
-    } else {
-      _userSettings = ObjectBox.userLocalSettings;
+      if (token != null) {
+        final res = await _accountService.getMyself();
+        if (res.isRight && res.right.username != null && AppSharedPrefs().username!.isNotEmpty) {
+          await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
+        } else {
+          _secureStorage.deleteAll();
+        }
+      } else {
+        _secureStorage.deleteAll();
+      }
     }
 
     // final brightness = SchedulerBinding.instance.window.platformBrightness;
     // final bool isDarkMode = brightness == Brightness.dark;
     // ThemeMode mode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
     ThemeMode mode = ThemeMode.dark;
-    final int cacheThemeModeIndex = ObjectBox.userLocalSettings.themeMode?.index ?? 0;
+    final int cacheThemeModeIndex = AppSharedPrefs().themeMode.index;
     if (cacheThemeModeIndex != 0) {
-      mode = ObjectBox.userLocalSettings.themeMode!;
+      mode = AppSharedPrefs().themeMode;
     }
     // appState.setThemeModeNoUpdate(isDarkMode ? ThemeMode.dark : ThemeMode.light);
     appState.updateWith(
-      locale: getLocaleWithCountry(ObjectBox.userLocalSettings.locale),
-      countryCode: ObjectBox.userLocalSettings.countryCode ?? countryCodeMixin,
+      locale: getLocaleWithCountry(AppSharedPrefs().locale?.countryCode),
+      countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
       themeMode: mode,
       notify: false,
     );
@@ -605,8 +614,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
         Provider.value(value: _walletService),
         Provider.value(value: _userService),
         Provider.value(value: _accountService),
-        Provider.value(value: _userSettings),
-        Provider.value(value: ObjectBox.userLocalSettingsBox),
         Provider.value(value: _secureStorage),
         Provider.value(value: _placesSearch),
         Provider.value(value: _notificationsService),
@@ -617,9 +624,8 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   void dispose() {
     _connectivitySubscription.cancel();
     eventBus.destroy();
-    ObjectBox.instance.store.close();
+    AppHive.close();
     WidgetsBinding.instance.removeObserver(this);
-
     super.dispose();
   }
 }

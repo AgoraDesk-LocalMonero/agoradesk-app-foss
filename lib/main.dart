@@ -1,7 +1,8 @@
 import 'package:agoradesk/core/app.dart';
+import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/init_app_parameters.dart';
@@ -17,7 +18,6 @@ const kNotificationsChannel = 'trades_channel';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
@@ -27,8 +27,9 @@ void main() async {
   ///
   /// common initializations
   ///
-  await ObjectBox.create();
   await SecureStorage.ensureInitialized();
+  await AppSharedPrefs.ensureInitialized();
+  await AppHive.ensureInitialized();
   await findSystemLocale();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

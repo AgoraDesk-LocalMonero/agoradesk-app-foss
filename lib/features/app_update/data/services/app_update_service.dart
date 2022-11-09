@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
@@ -50,15 +51,11 @@ class AppUpdateService {
   }
 
   bool isIgnoreAllUpdates() {
-    final box = _appState.userSettingsBox;
-    final val = box.getAll()[0];
-    return val.ignoreAllUpdates;
+    return AppSharedPrefs().ignoreAllUpdates ?? false;
   }
 
   String? lastIgnoredUpdate() {
-    final box = _appState.userSettingsBox;
-    final val = box.getAll()[0];
-    return val.ignoredUpdate;
+    return AppSharedPrefs().ignoredUpdate;
   }
 
   Future<bool> githubCheckUpdateNeeded() async {

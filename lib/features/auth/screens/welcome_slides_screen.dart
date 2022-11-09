@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/features/auth/models/welcome_slides_list.dart';
@@ -10,6 +9,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class WelcomeSlidesScreen extends StatelessWidget {
   const WelcomeSlidesScreen({
@@ -24,7 +24,6 @@ class WelcomeSlidesScreen extends StatelessWidget {
     final appState = context.read<AppState>();
     final isDark = appState.themeMode == ThemeMode.dark;
     final List<Widget> slides = WelcomeSlidesList.getSlides(isDark, isBuy, context);
-    final double boxHeight = MediaQuery.of(context).size.height < 680 ? 470 : 500;
 
     return ViewModelBuilder<WelcomeViewModel>(
         model: WelcomeViewModel(),
@@ -40,6 +39,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(
+                          tooltip: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
                           icon: Icon(
                             AgoraFont.arrow_left,
                             size: 18,
@@ -56,8 +56,8 @@ class WelcomeSlidesScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: boxHeight,
+                    Expanded(
+                      flex: 8,
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                         child: PageView(

@@ -12,7 +12,10 @@ mixin CountryInfoMixin {
   }
 
   String getCountryName(String code, {bool lowerCase = false}) {
-    final langCode = Platform.localeName.substring(0, 2);
+    String langCode = Platform.localeName.substring(0, 2);
+    if (langCode.isEmpty) {
+      langCode = 'en';
+    }
     try {
       if (lowerCase) {
         return _countryName[langCode][code].toLowerCase();

@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -23,6 +22,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin {
   AdInfoScreen({
@@ -42,6 +42,7 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
         model: AdInfoViewModel(
           adsRepository: context.read<AdsRepository>(),
           accountService: context.read<AccountService>(),
+          appState: context.read<AppState>(),
           ad: ad,
           onGlobalVacation: onGlobalVacation,
         ),

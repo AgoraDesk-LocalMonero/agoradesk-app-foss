@@ -159,9 +159,9 @@ class ApiClient {
   }
 }
 
-/// ============================================
+///
 /// Helpers
-/// ============================================
+///
 
 dynamic _parseAndDecode(String response) {
   return jsonDecode(response);

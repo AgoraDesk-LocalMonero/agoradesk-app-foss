@@ -182,22 +182,21 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           GestureDetector(
                             behavior: HitTestBehavior.opaque,
                             onTap: () => copyToClipboard(model.appVersionStr, context),
-                            // onDoubleTap: () async {
-                            //   final res = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
-
-                            // final GooglePlayServicesAvailability gPlayState =
-                            //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
-                            // copyToClipboard(gPlayState.toString(), context);
-
-                            // late final String res;
-                            // try {
-                            //   res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
-                            // } catch (e) {
-                            //   res = e.toString();
-                            // }
-                            // copyToClipboard(res, context);
-                            // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
-                            // },
+                            onDoubleTap: () async {
+                              // final res1 = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                              // final GooglePlayServicesAvailability gPlayState =
+                              //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
+                              // copyToClipboard(gPlayState.toString(), context);
+                              //
+                              // late final String res;
+                              // try {
+                              //   res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
+                              // } catch (e) {
+                              //   res = e.toString();
+                              // }
+                              // copyToClipboard(res, context);
+                              // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
+                            },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
                               child: Center(
