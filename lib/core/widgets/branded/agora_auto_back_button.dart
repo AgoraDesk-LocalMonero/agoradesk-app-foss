@@ -39,22 +39,20 @@ class _AgoraAutoBackButtonState extends State<AgoraAutoBackButton> {
   Widget build(BuildContext context) {
     final scope = RouterScope.of(context, watch: true);
     if (_canPopSelfOrChildren(scope.controller)) {
-      return Semantics(
-        label: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbback8722Sbbtn,
-        child: TextButton(
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            alignment: Alignment.centerLeft,
-          ),
-          child: Icon(
-            AgoraFont.arrow_left,
-            color: context.n80N30,
-            size: 20,
-          ),
-          onPressed: () => context.popRoute('backButton'),
-          // onPressed: scope.controller.popTop,
+      return IconButton(
+        tooltip: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbback8722Sbbtn,
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          alignment: Alignment.centerLeft,
         ),
+        icon: Icon(
+          AgoraFont.arrow_left,
+          color: context.n80N30,
+          size: 20,
+        ),
+        onPressed: () => context.popRoute('backButton'),
+        // onPressed: scope.controller.popTop,
       );
     }
     return const SizedBox.shrink();

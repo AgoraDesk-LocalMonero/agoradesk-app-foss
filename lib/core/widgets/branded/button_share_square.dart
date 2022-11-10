@@ -18,8 +18,6 @@ class ButtonShareSquare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      button: true,
-      enabled: true,
       label: context.intl.share,
       child: ElevatedButton(
         onPressed: () => Share.share(link),

@@ -46,7 +46,7 @@ dependencies:
   extended_image: ^6.0.1
   pretty_dio_logger: ^1.1.1
   path_provider: ^2.0.8
-  flutter_pin_code_widget: 0.0.4+2
+  flutter_pin_code_widget: 0.0.5
   flutter_secure_storage: ^5.0.2
   dots_indicator: ^2.0.0
   currency_picker: ^2.0.7
