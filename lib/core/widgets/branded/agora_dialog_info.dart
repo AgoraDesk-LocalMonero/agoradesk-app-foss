@@ -44,8 +44,8 @@ class AgoraDialogInfo extends StatelessWidget with StringMixin {
                   ),
                 ),
                 ButtonSquareIcon(
-                  iconData: AgoraFont.x,
                   label: context.intl.close,
+                  iconData: AgoraFont.x,
                   onPressed: () => AutoRouter.of(context).pop(),
                 )
               ],

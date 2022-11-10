@@ -122,6 +122,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               floatingActionButton: model.isGuestMode
                   ? const SizedBox()
                   : FloatingActionButton(
+                      tooltip: context.intl.document8722Sbtitle250Sbpost8722Sbad,
                       backgroundColor: context.colP70,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       child: Icon(

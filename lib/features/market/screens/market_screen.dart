@@ -191,8 +191,8 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                                 duration: const Duration(milliseconds: 800),
                                                 child: model.displayClear
                                                     ? ButtonSquareIcon(
-                                                        iconData: AgoraFont.x,
                                                         label: context.intl.app_clear,
+                                                        iconData: AgoraFont.x,
                                                         onPressed: () => model.locationFieldClear(),
                                                       )
                                                     : const SizedBox(),

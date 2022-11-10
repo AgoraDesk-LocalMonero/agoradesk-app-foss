@@ -42,8 +42,8 @@ class DialogPassword extends StatelessWidget {
                         style: context.txtHead4N90,
                       ),
                       ButtonSquareIcon(
-                        iconData: AgoraFont.x,
                         label: context.intl.close,
+                        iconData: AgoraFont.x,
                         onPressed: () => context.popRoute(),
                       ),
                     ],
