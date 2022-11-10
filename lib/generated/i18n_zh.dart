@@ -8652,6 +8652,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_scan_qr_code => 'Scan QR code';
+
+  @override
+  String get app_report_this_user => 'Report this user';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

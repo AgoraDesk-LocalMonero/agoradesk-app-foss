@@ -141,7 +141,7 @@ mixin DateMixin {
     return printDuration(
       d,
       abbreviated: false,
-      locale: DurationLocale.fromLanguageCode(langCode)!,
+      locale: DurationLocale.fromLanguageCode(langCode.toLowerCase())!,
     );
   }
 

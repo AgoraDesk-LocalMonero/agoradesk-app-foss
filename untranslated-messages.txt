@@ -283,7 +283,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "it": [
@@ -570,7 +571,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "ko": [
@@ -857,7 +859,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "pl": [
@@ -1415,7 +1418,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "pt": [
@@ -1702,7 +1706,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "ru": [
@@ -1988,7 +1993,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "zh": [
@@ -2275,7 +2281,8 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ],
 
   "zh_TW": [
@@ -2562,6 +2569,7 @@
     "app_select_asset",
     "app_select_trade_type",
     "app_paste",
-    "app_scan_qr_code"
+    "app_scan_qr_code",
+    "app_report_this_user"
   ]
 }

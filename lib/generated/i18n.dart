@@ -16935,6 +16935,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Scan QR code'**
   String get app_scan_qr_code;
+
+  /// No description provided for @app_report_this_user.
+  ///
+  /// In en, this message translates to:
+  /// **'Report this user'**
+  String get app_report_this_user;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
