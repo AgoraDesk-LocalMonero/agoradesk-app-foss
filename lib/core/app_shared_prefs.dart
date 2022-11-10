@@ -163,6 +163,6 @@ class AppSharedPrefs with DateMixin {
   /// Remove all
   ///
   Future clear() async {
-    await _instance?.clear();
+    await _prefs?.clear();
   }
 }
