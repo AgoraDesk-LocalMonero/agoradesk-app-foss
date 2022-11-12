@@ -1,0 +1,5 @@
+1. Update alert/link on update, for those using the APK download application.
+2. Fix: display trade info with deleted user.
+3. Fix: buy ad wrong warning.
+4. Fix: chat buttons - increased pressable area.
+5. Fix: if the trade counterparty deleted the trade page doesn't load.
