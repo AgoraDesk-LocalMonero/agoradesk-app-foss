@@ -99,7 +99,7 @@ extension TradeStatusExt on TradeStatus {
       case TradeStatus.released:
         return Theme.of(context).colorScheme.custom29;
       case TradeStatus.disputed:
-        return Theme.of(context).colorScheme.yellow85;
+        return Theme.of(context).colorScheme.error80;
     }
   }
 
