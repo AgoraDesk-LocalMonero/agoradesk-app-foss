@@ -319,9 +319,9 @@ class TradeService {
   }
 
   ///
-  /// Start a trade
+  /// Start a trade, returns a created trade id
   ///
-  Future<Either<ApiError, bool>> startTrade({
+  Future<Either<ApiError, String>> startTrade({
     required bool isSell,
     required Asset asset,
     required String adId,
@@ -353,7 +353,13 @@ class TradeService {
         data: dataMap,
       );
       if (resp.statusCode == 200) {
-        return const Either.right(true);
+        try {
+          final String tradeId = jsonDecode(jsonEncode(resp.data!))['actions']['contact_url'].split('/').last;
+          return Either.right(tradeId);
+        } catch (e) {
+          ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+          return Either.left(apiError);
+        }
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data as Map<String, dynamic>);
         return Either.left(apiError);

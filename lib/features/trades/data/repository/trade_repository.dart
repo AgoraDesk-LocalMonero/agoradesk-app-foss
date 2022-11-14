@@ -144,9 +144,9 @@ class TradeRepository with ErrorParseMixin {
   }
 
   ///
-  /// Start a trade
+  /// Start a trade, returns a created trade id
   ///
-  Future<Either<ApiError, bool>> startTrade({
+  Future<Either<ApiError, String>> startTrade({
     required bool isSell,
     required Asset asset,
     required String adId,

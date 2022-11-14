@@ -361,8 +361,10 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
       );
       startingTrade = false;
       if (res.isRight) {
+        print('+++++++++++++++++++++++++++++++++++++55554 - ${res.right}');
         eventBus.fire(FlashEvent.success(context.intl.app_trade_created));
         context.router.popUntilRoot();
+        context.router.push(TradeRoute(tradeId: res.right));
       } else {
         handleApiError(res.left, context);
       }

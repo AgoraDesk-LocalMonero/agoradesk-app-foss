@@ -91,8 +91,8 @@ class ApiClient {
         onResponse: (Response response, handler) async {
           final String res = response.data.toString();
           debugPrint(
-              '+++++++++++++++++++++++++++++++++++++00 -  [++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} -----');
-          debugPrint('+++++++++++++++++++++++++++++++++++++11 - ${response.data}');
+              '+++++++++++++++++++++++++++++++++++++9999991 -  [++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} -----');
+          debugPrint('+++++++++++++++++++++++++++++++++++++99999992 - ${response.data}');
           if (res.contains('html')) {
             // log('++++res.contains(html) -- $res');
           }
