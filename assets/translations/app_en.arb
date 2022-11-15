@@ -3427,5 +3427,6 @@
   "app_select_trade_type": "Select trade type",
   "app_paste": "Paste",
   "app_scan_qr_code": "Scan QR code",
-  "app_report_this_user": "Report this user"
+  "app_report_this_user": "Report this user",
+  "app_open_dropdown": "Open dropdown"
 }

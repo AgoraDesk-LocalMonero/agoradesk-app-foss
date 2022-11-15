@@ -44,7 +44,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
         ),
         const SizedBox(height: 8),
         DropdownSearch<String>(
-          dropdownButtonProps: context.dropdownButtonProps,
+          dropdownButtonProps: context.dropdownButtonProps(),
           dropdownDecoratorProps: context.dropdownDecoration,
           popupProps: PopupProps.dialog(
             dialogProps: context.dropdownDialogProps,
@@ -72,7 +72,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
         const SizedBox(height: 8),
         DropdownSearch<CurrencyModel?>(
           key: model.currencyDropdownKey,
-          dropdownButtonProps: context.dropdownButtonProps,
+          dropdownButtonProps: context.dropdownButtonProps(),
           dropdownDecoratorProps: context.dropdownDecoration,
           popupProps: PopupProps.dialog(
             dialogProps: context.dropdownDialogProps,
@@ -101,7 +101,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
         model.isLocalAd
             ? const CashTextField()
             : DropdownSearch<OnlineProvider?>(
-                dropdownButtonProps: context.dropdownButtonProps,
+                dropdownButtonProps: context.dropdownButtonProps(),
                 dropdownDecoratorProps: context.dropdownDecoration,
                 popupProps: PopupProps.dialog(
                   dialogProps: context.dropdownDialogProps,

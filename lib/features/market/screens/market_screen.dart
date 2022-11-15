@@ -53,7 +53,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: I18n.of(context)!.market,
+              title: context.intl.market,
               leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
               rightAction: AppBarButton(
                 iconData: AgoraFont.help_circle,
@@ -95,7 +95,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
               child: Semantics(
                 label: context.intl.app_select_trade_type,
                 child: DropdownSearch<TradeType>(
-                  dropdownButtonProps: context.dropdownButtonProps,
+                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_trade_type),
                   dropdownDecoratorProps: context.dropdownDecoration,
                   popupProps: PopupProps.menu(
                     menuProps: context.dropdownMenuProps,
@@ -115,7 +115,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                     child: Semantics(
                       label: context.intl.app_select_asset,
                       child: DropdownSearch<Asset>(
-                        dropdownButtonProps: context.dropdownButtonProps,
+                        dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_asset),
                         dropdownDecoratorProps: context.dropdownDecoration,
                         popupProps: PopupProps.menu(
                           menuProps: context.dropdownMenuProps,
@@ -211,7 +211,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                             isLocalTrade
                                 ? const CashTextField()
                                 : DropdownSearch<OnlineProvider?>(
-                                    dropdownButtonProps: context.dropdownButtonProps,
+                                    dropdownButtonProps: context.dropdownButtonProps(),
                                     dropdownDecoratorProps: context.dropdownDecoration,
                                     popupProps: PopupProps.dialog(
                                       dialogProps: context.dropdownDialogProps,
@@ -247,7 +247,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                     width: widthHalf - 4,
                                     child: DropdownSearch<CurrencyModel?>(
                                       key: model.currencyDropdownKey,
-                                      dropdownButtonProps: context.dropdownButtonProps,
+                                      dropdownButtonProps: context.dropdownButtonProps(),
                                       dropdownDecoratorProps: context.dropdownDecoration,
                                       popupProps: PopupProps.dialog(
                                         dialogProps: context.dropdownDialogProps,
@@ -270,7 +270,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                                     child: DropdownSearch<String>(
                                       key: model.countryDropdownKey,
-                                      dropdownButtonProps: context.dropdownButtonProps,
+                                      dropdownButtonProps: context.dropdownButtonProps(),
                                       dropdownDecoratorProps: context.dropdownDecoration,
                                       popupProps: PopupProps.dialog(
                                         dialogProps: context.dropdownDialogProps,

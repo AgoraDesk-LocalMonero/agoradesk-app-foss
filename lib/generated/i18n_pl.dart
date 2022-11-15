@@ -8655,4 +8655,7 @@ class I18nPl extends I18n {
 
   @override
   String get app_report_this_user => 'Report this user';
+
+  @override
+  String get app_open_dropdown => 'Open dropdown';
 }

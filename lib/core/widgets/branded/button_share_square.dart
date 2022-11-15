@@ -17,28 +17,31 @@ class ButtonShareSquare extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Semantics(
-      label: context.intl.share,
-      child: ElevatedButton(
-        onPressed: () => Share.share(link),
-        clipBehavior: Clip.none,
-        style: ElevatedButton.styleFrom(
-          minimumSize: size,
-          maximumSize: size,
-          fixedSize: size,
-          primary: context.colS5darkSLight,
-          padding: const EdgeInsets.all(0),
-          elevation: 0,
-          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(4),
+    return MergeSemantics(
+      child: Semantics(
+        label: context.intl.share,
+        child: ElevatedButton(
+          onPressed: () => Share.share(link),
+          clipBehavior: Clip.none,
+          style: ElevatedButton.styleFrom(
+            minimumSize: size,
+            maximumSize: size,
+            fixedSize: size,
+            primary: context.colS5darkSLight,
+            padding: const EdgeInsets.all(0),
+            elevation: 0,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
           ),
-        ),
-        child: Center(
-          child: Icon(
-            AgoraFont.external_link,
-            color: context.colP70,
-            size: iconSize,
+          child: Center(
+            child: Icon(
+              AgoraFont.external_link,
+              color: context.colP70,
+              size: iconSize,
+              semanticLabel: context.intl.share,
+            ),
           ),
         ),
       ),

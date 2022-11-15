@@ -16941,6 +16941,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Report this user'**
   String get app_report_this_user;
+
+  /// No description provided for @app_open_dropdown.
+  ///
+  /// In en, this message translates to:
+  /// **'Open dropdown'**
+  String get app_open_dropdown;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

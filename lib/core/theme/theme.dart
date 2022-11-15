@@ -607,9 +607,9 @@ extension ThemeShorcuts on BuildContext {
         ),
       );
 
-  DropdownButtonProps get dropdownButtonProps => DropdownButtonProps(
+  DropdownButtonProps dropdownButtonProps({String? label}) => DropdownButtonProps(
         icon: Semantics(
-          label: 'Select',
+          label: label ?? '',
           child: Icon(
             AgoraFont.chevron_down,
             size: 18,

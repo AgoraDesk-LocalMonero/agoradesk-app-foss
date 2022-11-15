@@ -88,8 +88,8 @@ class ApiClient {
         },
         onResponse: (Response response, handler) async {
           final String res = response.data.toString();
-          debugPrint(
-              '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
+          // debugPrint(
+          //     '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id="')) {
             bool checkRes = await _checkCaptchaInHeadlessWebView();
             if (checkRes == false) {

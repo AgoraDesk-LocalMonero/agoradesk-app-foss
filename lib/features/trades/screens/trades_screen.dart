@@ -108,7 +108,7 @@ class _TradesScreenState extends State<TradesScreen>
                 child: Semantics(
                   label: context.intl.dashboard250Sbfilter250Sbrole250Sbboth,
                   child: DropdownSearch<String>(
-                    dropdownButtonProps: context.dropdownButtonProps,
+                    dropdownButtonProps: context.dropdownButtonProps(),
                     dropdownDecoratorProps: context.dropdownDecoration,
                     popupProps: PopupProps.menu(
                       menuProps: context.dropdownMenuProps,
@@ -127,7 +127,7 @@ class _TradesScreenState extends State<TradesScreen>
                       child: Semantics(
                         label: context.intl.app_select_asset,
                         child: DropdownSearch<String>(
-                          dropdownButtonProps: context.dropdownButtonProps,
+                          dropdownButtonProps: context.dropdownButtonProps(),
                           dropdownDecoratorProps: context.dropdownDecoration,
                           popupProps: PopupProps.menu(
                             menuProps: context.dropdownMenuProps,
@@ -193,7 +193,7 @@ class _TradesScreenState extends State<TradesScreen>
                           const SizedBox(height: 8),
                           DropdownSearch<String>(
                             key: model.countryDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
@@ -213,7 +213,7 @@ class _TradesScreenState extends State<TradesScreen>
                           const SizedBox(height: 8),
                           DropdownSearch<CurrencyModel?>(
                             key: model.currencyDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
@@ -234,7 +234,7 @@ class _TradesScreenState extends State<TradesScreen>
                           ),
                           const SizedBox(height: 8),
                           DropdownSearch<OnlineProvider?>(
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,

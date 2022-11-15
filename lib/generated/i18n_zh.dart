@@ -8655,6 +8655,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_report_this_user => 'Report this user';
+
+  @override
+  String get app_open_dropdown => 'Open dropdown';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

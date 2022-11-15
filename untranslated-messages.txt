@@ -284,7 +284,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "it": [
@@ -572,7 +573,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "ko": [
@@ -860,7 +862,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "pl": [
@@ -1419,7 +1422,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "pt": [
@@ -1707,7 +1711,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "ru": [
@@ -1994,7 +1999,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "zh": [
@@ -2282,7 +2288,8 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ],
 
   "zh_TW": [
@@ -2570,6 +2577,7 @@
     "app_select_trade_type",
     "app_paste",
     "app_scan_qr_code",
-    "app_report_this_user"
+    "app_report_this_user",
+    "app_open_dropdown"
   ]
 }
