@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -91,6 +93,19 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   set connection(bool v) => _connectionController.add(v);
 
   bool get connection => connection$.value;
+
+  ///
+  /// Reload market stream
+  ///
+  final StreamController<bool> _reloadMarketController = StreamController<bool>.broadcast();
+
+  Stream<bool> get reloadMarket => _reloadMarketController.stream;
+
+  Sink get sinkReloadMarket => _reloadMarketController;
+
+  // final StreamController<bool> _amenPressedDown = StreamController<bool>.broadcast();
+  // Stream<bool> get amenPressedDown => _amenPressedDown.stream;
+  // Sink get sinkAmenPressedDown => _amenPressedDown;
 
   ///
   /// Unread / read state across the app

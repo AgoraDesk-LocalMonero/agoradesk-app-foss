@@ -92,7 +92,6 @@ class ApiClient {
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id="')) {
             bool checkRes = await _checkCaptchaInHeadlessWebView();
-            print('+++++++++++++++++++++++++++++++++++++888889 - $checkRes');
             if (checkRes == false) {
               final cookiesLst = response.headers.map['set-cookie'] ?? [];
               eventBus.fire(DisplayCaptchaEvent(
@@ -176,7 +175,6 @@ class ApiClient {
   Future _getCookies() async {
     CookieManager cookieManager = CookieManager.instance();
     List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
-    print('+++++++++++++++++++++++++++++++++++++8888888884 - ${cookies}');
     GetIt.I<AppParameters>().cookies = cookies;
   }
 

@@ -1,10 +1,12 @@
 import 'dart:collection';
 
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get_it/get_it.dart';
+import 'package:provider/provider.dart';
 
 class WebviewScreen extends StatefulWidget {
   const WebviewScreen({
@@ -95,8 +97,8 @@ class WebViewExampleState extends State<WebviewScreen> {
         onLoadStop: (controller, _) async {
           final title = await controller.getTitle() ?? '';
           await _getCookies();
-          print('+++++++++++++++++++++++++++++++++++++55555 - ${title} - ${widget.isFromCaptchaEvent}');
           if (widget.isFromCaptchaEvent && title.contains('Sell')) {
+            context.read<AppState>().sinkReloadMarket.add(true);
             Navigator.of(context).pop();
           }
         },
@@ -113,6 +115,5 @@ class WebViewExampleState extends State<WebviewScreen> {
   Future _getCookies() async {
     List<Cookie> cookies = await cookieManager.getCookies(url: _uri);
     GetIt.I<AppParameters>().cookies = cookies;
-    print('+++++++++++++++++++++++++++++++++++++3333333 - ${cookies}');
   }
 }

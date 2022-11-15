@@ -608,10 +608,13 @@ extension ThemeShorcuts on BuildContext {
       );
 
   DropdownButtonProps get dropdownButtonProps => DropdownButtonProps(
-        icon: Icon(
-          AgoraFont.chevron_down,
-          size: 18,
-          color: n80N30,
+        icon: Semantics(
+          label: 'Select',
+          child: Icon(
+            AgoraFont.chevron_down,
+            size: 18,
+            color: n80N30,
+          ),
         ),
       );
 }
