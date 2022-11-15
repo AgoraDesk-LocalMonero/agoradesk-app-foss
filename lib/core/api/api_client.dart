@@ -3,9 +3,11 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:ui';
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:get_it/get_it.dart';
 
 import 'api_helper.dart';
 import 'mock_interceptor.dart';
@@ -63,26 +65,23 @@ class ApiClient {
       _dio.interceptors.add(MockInterceptor());
     }
 
-    // _dio.interceptors.add(PrettyDioLogger(
-    //   requestHeader: true,
-    //   request: true,
-    //   requestBody: true,
-    //   responseBody: true,
-    //   responseHeader: true,
-    //   error: true,
-    //   compact: true,
-    //   maxWidth: 12000,
-    // ));
-
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
           if (accessToken != null) {
             options.headers['Authorization'] = '$accessToken';
           }
-          // if (locale != null) {
-          //   options.headers['Accept-Language'] = locale.toString();
-          // }
+          List<String> cookiesLst = [];
+          if (GetIt.I<AppParameters>().cookies != null) {
+            for (final val in GetIt.I<AppParameters>().cookies!) {
+              if (val.name.contains('540')) {
+                cookiesLst.add('${val.name}=${val.value}');
+              }
+            }
+          }
+          print('+++++++++++++++++++++++++++++++++++++999999991');
+          options.headers["cookie"] = cookiesLst.join(';');
+          print('+++++++++++++++++++++++++++++++++++++999999992 - ${cookiesLst.join(';')}');
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
@@ -91,10 +90,14 @@ class ApiClient {
         onResponse: (Response response, handler) async {
           final String res = response.data.toString();
           debugPrint(
-              '+++++++++++++++++++++++++++++++++++++9999991 -  [++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} -----');
-          debugPrint('+++++++++++++++++++++++++++++++++++++99999992 - ${response.data}');
-          if (res.contains('html')) {
-            // log('++++res.contains(html) -- $res');
+              '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
+          if (res.contains('<iframe id="')) {
+            final cookiesLst = response.headers.map['set-cookie'] ?? [];
+            eventBus.fire(DisplayCaptchaEvent(
+              cookie1: cookiesLst.isNotEmpty ? response.headers.map['set-cookie']![0].split(';').first : '',
+              cookie2: cookiesLst.length > 1 ? response.headers.map['set-cookie']![1].split(';').first : '',
+              body: response.data,
+            ));
           }
           return handler.next(response);
         },
@@ -136,24 +139,10 @@ class ApiClient {
               eventBus.fire(FlashEvent.error(message));
             }
           }
-
           return handler.next(finalError ?? error);
         },
       ),
     );
-
-//     if (!kIsWeb) {
-//       (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (client) {
-//         if (proxy != null) {
-//           client.findProxy = (url) {
-//             return 'PROXY $proxy';
-//           };
-//         }
-//         client.badCertificateCallback = (cert, host, port) => true;
-// //        client.badCertificateCallback =
-// //            (X509Certificate cert, String host, int port) => Platform.isAndroid;
-//       };
-//     }
   }
 
   void setBaseUrl(String url) {
@@ -161,9 +150,9 @@ class ApiClient {
   }
 }
 
-/// ============================================
+///
 /// Helpers
-/// ============================================
+///
 
 dynamic _parseAndDecode(String response) {
   return jsonDecode(response);

@@ -505,6 +505,19 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           _authService.logOut();
         }
       })
+      ..on<DisplayCaptchaEvent>().listen((e) {
+        if (router.current.name != WebviewRoute.name) {
+          router.push(
+            WebviewRoute(
+              cookie1: e.cookie1,
+              cookie2: e.cookie1,
+              token: token,
+              url: 'https://agoradesk.com',
+              isFromCaptchaEvent: true,
+            ),
+          );
+        }
+      })
       ..on<FlashEvent>().listen((e) {
         if (e.message == null) {
           return;

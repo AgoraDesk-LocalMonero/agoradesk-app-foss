@@ -18,7 +18,9 @@ mixin ErrorParseMixin {
     } else if (error.message.containsKey('validation')) {
       errorMessage = ApiErrors.translateValidationError(error.message['validation'], context);
     } else {
-      errorMessage = error.message.toString();
+      if (!error.message.toString().contains('Unknown')) {
+        errorMessage = error.message.toString();
+      }
     }
     debugPrint('[$runtimeType] $errorMessage');
     eventBus.fire(FlashEvent.error(errorMessage));

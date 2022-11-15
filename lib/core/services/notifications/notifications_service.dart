@@ -313,7 +313,7 @@ class NotificationsService with ForegroundMessagesMixin {
           appState.hasUnread = hasUnreaded;
         } else {
           if (res.isLeft) {
-            debugPrint('++++_getNotifications error ${res.left}');
+            debugPrint('++++getNotifications error ${res.left}');
           }
           // handleApiError(res.left, context);
         }
