@@ -1,5 +1,10 @@
 ### Updates
-1. Fix: transfer assets from the wallet gives an error with some conditions.
+1. Feat: improved translations.
+2. Fix: assessibility buttons.
+3. Feat: added brute-force attack captcha
+4. Feat: open a trade screen after the trade initiated.
+5. Fix: changed dispute label color.
+6. Fix: FOSS version can't logout.
 
 
 ### About the attached app's
