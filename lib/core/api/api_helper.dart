@@ -39,7 +39,7 @@ mixin ApiHelper {
   }
 
   static ApiError parseErrorToApiError(dynamic err, String? objectStr) {
-    log('++++objectStr - parseErrorToApiError $err');
+    debugPrint('[++++parseErrorToApiError objectStr] $err');
     try {
       final e = err as DioError;
       String message = '';

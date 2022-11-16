@@ -61,7 +61,7 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
               rightAction: AppBarButton(
                 iconData: AgoraFont.info,
                 label: context.intl.user250Sbinformation,
-                onPressed: () => _alertDialog(context, model.asset),
+                onPressed: () => _showDialog(context, model.asset),
               ),
             ),
             body: Padding(
@@ -143,7 +143,7 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
   //   return
   // }
 
-  void _alertDialog(BuildContext context, Asset? asset) {
+  void _showDialog(BuildContext context, Asset? asset) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       showDialog(
         barrierDismissible: true,

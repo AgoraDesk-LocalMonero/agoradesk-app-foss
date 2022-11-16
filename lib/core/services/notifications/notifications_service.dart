@@ -180,10 +180,10 @@ class NotificationsService with ForegroundMessagesMixin {
       deviceName = deviceData['name'] ?? 'iPhone';
     }
     if (oldToken != newToken) {
-      appState.isPushTokenSavedToApi = false;
+      appState.pushFcmTokenSavedToApi = false;
     }
 
-    if (appState.isPushTokenSavedToApi == false) {
+    if (appState.pushFcmTokenSavedToApi == false) {
       final res = await _saveFcmTokenToApi(
         DeviceModel(
           token: newToken ?? oldToken!,
@@ -210,7 +210,7 @@ class NotificationsService with ForegroundMessagesMixin {
         data: device.toJson(),
       );
       if (resp.statusCode == 200) {
-        appState.isPushTokenSavedToApi = true;
+        appState.pushFcmTokenSavedToApi = true;
       }
 
       return resp.statusCode == 200;
@@ -218,7 +218,7 @@ class NotificationsService with ForegroundMessagesMixin {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       if (apiError.message.containsKey('error_code')) {
         if (apiError.message['error_code'] == 256) {
-          appState.isPushTokenSavedToApi = true;
+          appState.pushFcmTokenSavedToApi = true;
         }
       }
       return false;
@@ -313,7 +313,7 @@ class NotificationsService with ForegroundMessagesMixin {
           appState.hasUnread = hasUnreaded;
         } else {
           if (res.isLeft) {
-            debugPrint('++++_getNotifications error ${res.left}');
+            debugPrint('++++getNotifications error ${res.left}');
           }
           // handleApiError(res.left, context);
         }

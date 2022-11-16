@@ -4,17 +4,14 @@ import 'dart:math';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
-import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
-import 'package:agoradesk/features/trades/data/models/message_box_model.dart';
-import 'package:agoradesk/objectbox.g.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -25,23 +22,17 @@ enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
 class AuthService with FileUtilsMixin {
   AuthService({
     required ApiClient api,
-    required UserLocalSettings userSettings,
-    required Box<UserLocalSettings> userSettingsBox,
     required SecureStorage secureStorage,
     required AppState appState,
   })  : _api = api,
-        _userSettings = userSettings,
         _secureStorage = secureStorage,
-        _appState = appState,
-        _userSettingsBox = userSettingsBox;
+        _appState = appState;
 
   ///
   /// Service requires [ApiClient] to communication
   /// with the backend.
   ///
   final ApiClient _api;
-  final UserLocalSettings _userSettings;
-  final Box<UserLocalSettings> _userSettingsBox;
   final SecureStorage _secureStorage;
   final AppState _appState;
 
@@ -54,8 +45,6 @@ class AuthService with FileUtilsMixin {
   set authState(AuthState v) => _authStateController.add(v);
 
   bool get isAuthenticated => _api.accessToken != null;
-
-  UserLocalSettings get userSettings => _userSettings;
 
   bool showPinSetUp = false;
 
@@ -321,27 +310,19 @@ class AuthService with FileUtilsMixin {
   /// Sign out from the app.
   ///
   Future<bool> logOut({bool sendRequest = false}) async {
-    _api.accessToken = null;
-    _appState.hasPinCode = false;
-    await FirebaseMessaging.instance.deleteToken();
+    try {
+      await FirebaseMessaging.instance.deleteToken();
+    } catch (e) {}
     await _secureStorage.deleteAll();
-    ObjectBox.s.box<UserLocalSettings>().removeAll();
-    await Future.delayed(const Duration(milliseconds: 100));
-    ObjectBox.s.box<MessageBoxModel>().removeAll();
-    await Future.delayed(const Duration(milliseconds: 100));
-
-    // fix the bug when data isn't removed
-    final val = ObjectBox.s.box<UserLocalSettings>().getAll();
-    final val2 = ObjectBox.s.box<MessageBoxModel>().getAll();
+    await AppSharedPrefs().clear();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
-
+    _appState.hasPinCode = false;
     return true;
   }
 
-  void _saveUserName(String username) {
-    _userSettings.username = username;
-    _userSettingsBox.put(_userSettings);
+  void _saveUserName(String username) async {
+    await AppSharedPrefs().setString(AppSharedPrefsKey.username, username);
   }
 
   Future<bool> _handleTokenResponse(Response<Map> resp) async {

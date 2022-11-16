@@ -54,7 +54,7 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
   }
 
   void initModel() async {
-    userName = _authService.userSettings.username ?? '';
+    userName = _appState.username;
   }
 
   bool isSentryOn() {

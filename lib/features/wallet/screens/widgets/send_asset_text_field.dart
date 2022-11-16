@@ -40,8 +40,8 @@ class SendAssetTextField extends StatelessWidget {
                     duration: const Duration(milliseconds: 800),
                     child: hasValue
                         ? ButtonSquareIcon(
-                            iconData: AgoraFont.x,
                             label: context.intl.app_clear,
+                            iconData: AgoraFont.x,
                             onPressed: clear,
                           )
                         : const SizedBox(),

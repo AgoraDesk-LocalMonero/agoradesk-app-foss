@@ -1,10 +1,11 @@
+import 'dart:async';
+
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
-import 'package:agoradesk/objectbox.g.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -16,14 +17,12 @@ const _kSmallScreenHeigh = 700.0;
 class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
     Locale? locale,
-    ThemeMode theme = ThemeMode.dark,
-    required this.userSettingsBox,
+    ThemeMode themeMode = ThemeMode.dark,
     required SecureStorage secureStorage,
   })  : _locale = locale,
         _secureStorage = secureStorage,
-        _themeMode = theme;
+        _themeMode = themeMode;
 
-  final Box<UserLocalSettings> userSettingsBox;
   final SecureStorage _secureStorage;
   ThemeMode _themeMode;
   Locale? _locale;
@@ -35,38 +34,32 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String? openedTradeId;
   double? _screenHeight;
 
-  String get username => userSettingsBox.getAll()[0].username ?? '';
+  String get username => AppSharedPrefs().username ?? '';
 
   bool get isSmallScreen => _screenHeight != null && _screenHeight! < _kSmallScreenHeigh;
 
   bool get sentryIsOn {
     try {
-      return userSettingsBox.getAll()[0].sentryIsOn ?? true;
+      return AppSharedPrefs().sentryIsOn ?? true;
     } catch (e) {
       return true;
     }
   }
 
   set sentryIsOn(bool val) {
-    final s = userSettingsBox.getAll()[0];
-    s.sentryIsOn = val;
-    userSettingsBox.put(s);
+    AppSharedPrefs().setBool(AppSharedPrefsKey.sentryIsOn, val: val);
   }
 
-  bool get isPushTokenSavedToApi => userSettingsBox.getAll()[0].pushFcmTokenSavedToApi ?? false;
+  bool get pushFcmTokenSavedToApi => AppSharedPrefs().pushFcmTokenSavedToApi ?? false;
 
-  bool get iosFirstNotificationWasRun => userSettingsBox.getAll()[0].iosFirstNotificationWasRun ?? false;
+  bool get iosFirstNotificationWasRun => AppSharedPrefs().iosFirstNotificationWasRun ?? false;
 
   set iosFirstNotificationWasRun(bool val) {
-    final s = userSettingsBox.getAll()[0];
-    s.iosFirstNotificationWasRun = val;
-    userSettingsBox.put(s);
+    AppSharedPrefs().setBool(AppSharedPrefsKey.iosFirstNotificationWasRun, val: val);
   }
 
-  set isPushTokenSavedToApi(bool val) {
-    final s = userSettingsBox.getAll()[0];
-    s.pushFcmTokenSavedToApi = val;
-    userSettingsBox.put(s);
+  set pushFcmTokenSavedToApi(bool val) {
+    AppSharedPrefs().setBool(AppSharedPrefsKey.pushFcmTokenSavedToApi, val: val);
   }
 
   String get langCode => locale.languageCode.substring(0, 2);
@@ -100,6 +93,19 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   set connection(bool v) => _connectionController.add(v);
 
   bool get connection => connection$.value;
+
+  ///
+  /// Reload market stream
+  ///
+  final StreamController<bool> _reloadMarketController = StreamController<bool>.broadcast();
+
+  Stream<bool> get reloadMarket => _reloadMarketController.stream;
+
+  Sink get sinkReloadMarket => _reloadMarketController;
+
+  // final StreamController<bool> _amenPressedDown = StreamController<bool>.broadcast();
+  // Stream<bool> get amenPressedDown => _amenPressedDown.stream;
+  // Sink get sinkAmenPressedDown => _amenPressedDown;
 
   ///
   /// Unread / read state across the app
@@ -173,11 +179,8 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   String get countryCode => _countryCode ?? 'US';
 
-  set countryCode(String code) {
-    final s = userSettingsBox.getAll()[0];
-    s.countryCode = code;
-    userSettingsBox.put(s);
-    updateWith(countryCode: code);
+  set countryCode(String val) {
+    AppSharedPrefs().setString(AppSharedPrefsKey.countryCode, val);
   }
 
   bool initialized = false;
@@ -213,9 +216,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
       const Duration(milliseconds: 100),
       () {
         updateWith(locale: locale);
-        final s = userSettingsBox.getAll()[0];
-        s.locale = locale.languageCode;
-        userSettingsBox.put(s);
+        AppSharedPrefs().setString(AppSharedPrefsKey.locale, locale.countryCode);
         _secureStorage.write(SecureStorageKey.locale, locale.languageCode);
         eventBus.fire(LocaleChangedEvent(locale));
       },
@@ -237,30 +238,22 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   bool get biometricAuthIsOn {
     try {
-      return userSettingsBox.getAll()[0].biometricAuthIsOn ?? false;
+      return AppSharedPrefs().biometricAuthIsOn ?? false;
     } catch (e) {
       return false;
     }
   }
 
   set biometricAuthIsOn(bool val) {
-    final s = userSettingsBox.getAll()[0];
-    s.biometricAuthIsOn = val;
-    userSettingsBox.put(s);
+    AppSharedPrefs().setBool(AppSharedPrefsKey.biometricAuthIsOn, val: val);
   }
 
   ThemeMode get themeMode => _themeMode;
 
   set themeMode(ThemeMode mode) {
-    final s = userSettingsBox.getAll()[0];
-    s.themeMode = mode;
-    userSettingsBox.put(s);
+    AppSharedPrefs().setString(AppSharedPrefsKey.themeMode, mode.name);
     updateWith(themeMode: mode);
     eventBus.fire(ThemeModeChangedEvent(mode));
-  }
-
-  setThemeModeNoUpdate(ThemeMode mode) {
-    _themeMode = mode;
   }
 
   // todo move to service

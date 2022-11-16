@@ -112,7 +112,7 @@ class _PostAdStep1State extends State<PostAdStep1> {
         ),
         const SizedBox(height: 8),
         DropdownSearch<TradeType>(
-          dropdownButtonProps: context.dropdownButtonProps,
+          dropdownButtonProps: context.dropdownButtonProps(),
           dropdownDecoratorProps: context.dropdownDecoration,
           popupProps: PopupProps.menu(
             menuProps: context.dropdownMenuProps,
@@ -130,7 +130,7 @@ class _PostAdStep1State extends State<PostAdStep1> {
         ),
         const SizedBox(height: 8),
         DropdownSearch<Asset>(
-          dropdownButtonProps: context.dropdownButtonProps,
+          dropdownButtonProps: context.dropdownButtonProps(),
           dropdownDecoratorProps: context.dropdownDecoration,
           popupProps: PopupProps.menu(
             menuProps: context.dropdownMenuProps,

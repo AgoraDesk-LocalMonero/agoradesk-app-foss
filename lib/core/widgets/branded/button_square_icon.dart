@@ -41,6 +41,7 @@ class ButtonSquareIcon extends StatelessWidget {
         child: Center(
           child: Icon(
             iconData,
+            semanticLabel: label,
             color: iconColor ?? context.colP90,
             size: 18,
           ),

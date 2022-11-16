@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
@@ -20,10 +21,8 @@ import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/agora_menu_item.dart';
 import 'package:agoradesk/features/ads/models/tooltip_types.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
-import 'package:agoradesk/objectbox.g.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -71,8 +70,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final ctrlBulkMaxAmount = TextEditingController();
   final ctrlBulkSettlementWalletAddress = TextEditingController();
   final ctrl3FormulaInput = TextEditingController();
-
-  late final Box<UserLocalSettings> box;
 
   late CountryCodeModel countryCodeModel;
   OnlineProvider? selectedOnlineProvider;
@@ -212,7 +209,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   @override
   void init() {
-    box = _appState.userSettingsBox;
     _initBulkMenu();
     _ctrlListeners();
     //todo - refactor me (maybe with AutoRoute)
@@ -269,16 +265,16 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   }
 
   void _markTooltipAsShown(TooltipType tooltipType) {
-    final val = box.getAll()[0];
-    if (!val.tooltipsShown.contains(tooltipType.name)) {
-      val.tooltipsShown.add(tooltipType.name);
-      box.put(val);
+    final val = AppSharedPrefs().tooltipShownNames;
+    if (!val.contains(tooltipType.name)) {
+      val.add(tooltipType.name);
+      AppSharedPrefs().setListStrings(AppSharedPrefsKey.tooltipShownNames, val);
     }
   }
 
   bool _checkTooltipWasDisplayed(TooltipType tooltipType) {
-    final val = box.getAll()[0];
-    return val.tooltipsShown.contains(tooltipType.name);
+    final val = AppSharedPrefs().tooltipShownNames;
+    return val.contains(tooltipType.name);
   }
 
   Future _displayEyeTooltip() async {

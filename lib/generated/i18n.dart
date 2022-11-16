@@ -13867,7 +13867,7 @@ abstract class I18n {
   /// No description provided for @ads_enter_verify_address.
   ///
   /// In en, this message translates to:
-  /// **'Enter and verify your address to which the coins will be sent to. Cannot be an internal {appName} address.'**
+  /// **'Enter and verify your address to which the coins will be sent to. Cannot be an internal FRONT_TYPE address.'**
   String ads_enter_verify_address(Object appName);
 
   /// No description provided for @what_is_settlement_fee_level.
@@ -16159,7 +16159,7 @@ abstract class I18n {
   /// No description provided for @app_staff.
   ///
   /// In en, this message translates to:
-  /// **'{appName} staff'**
+  /// **'FRONT_TYPE staff'**
   String app_staff(Object appName);
 
   /// No description provided for @current_password.
@@ -16393,13 +16393,13 @@ abstract class I18n {
   /// No description provided for @affiliate__terms__text___agoradesk.
   ///
   /// In en, this message translates to:
-  /// **'• You can link to any individual page, such as country listing or payment method listing, or anything else on {appName}. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your {appName} wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for {appName} (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• {appName} has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.'**
+  /// **'• You can link to any individual page, such as country listing or payment method listing, or anything else on FRONT_TYPE. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your FRONT_TYPE wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for FRONT_TYPE (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• FRONT_TYPE has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.'**
   String affiliate__terms__text___agoradesk(Object appName);
 
   /// No description provided for @affiliate__example__text.
   ///
   /// In en, this message translates to:
-  /// **'You get two users, buyer and seller of the {assetName} registered on {appName}, and they do one trade valued 100 {assetSymbol}. You earn 20% commission on the {appName} trading fees from both participants, in total 40% of the {appName} fee.\n\nYour earned sum is 0.4 {assetSymbol}. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\n{appName} support is more than willing to help you with any questions.'**
+  /// **'You get two users, buyer and seller of the {assetName} registered on FRONT_TYPE, and they do one trade valued 100 {assetSymbol}. You earn 20% commission on the FRONT_TYPE trading fees from both participants, in total 40% of the FRONT_TYPE fee.\n\nYour earned sum is 0.4 {assetSymbol}. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\nFRONT_TYPE support is more than willing to help you with any questions.'**
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName);
 
   /// No description provided for @affiliate__enable_btn.
@@ -16411,7 +16411,7 @@ abstract class I18n {
   /// No description provided for @affiliate__enabled.
   ///
   /// In en, this message translates to:
-  /// **'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag {ref_code} to any {appName} URL.'**
+  /// **'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag {ref_code} to any FRONT_TYPE URL.'**
   String affiliate__enabled(Object ref_code, Object appName);
 
   /// No description provided for @reputation_import__step__username__input__label.
@@ -16525,7 +16525,7 @@ abstract class I18n {
   /// No description provided for @app_settings_2fa_step_two.
   ///
   /// In en, this message translates to:
-  /// **'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. {appName} will not be able to help you should you lose this code.'**
+  /// **'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. FRONT_TYPE will not be able to help you should you lose this code.'**
   String app_settings_2fa_step_two(Object appName);
 
   /// No description provided for @ad_post_ad_rules_text_0.
@@ -16537,7 +16537,7 @@ abstract class I18n {
   /// No description provided for @app_trade_warning_impersonation.
   ///
   /// In en, this message translates to:
-  /// **'Beware of scammers trying to impersonate staff! \n{appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.'**
+  /// **'Beware of scammers trying to impersonate staff! \nFRONT_TYPE administrators will never tell you to finalize a trade. \nStaff messages have a red background.'**
   String app_trade_warning_impersonation(Object appName);
 
   /// No description provided for @app_buy_sell.
@@ -16935,6 +16935,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Scan QR code'**
   String get app_scan_qr_code;
+
+  /// No description provided for @app_report_this_user.
+  ///
+  /// In en, this message translates to:
+  /// **'Report this user'**
+  String get app_report_this_user;
+
+  /// No description provided for @app_open_dropdown.
+  ///
+  /// In en, this message translates to:
+  /// **'Open dropdown'**
+  String get app_open_dropdown;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

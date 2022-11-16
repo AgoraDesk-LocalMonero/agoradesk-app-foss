@@ -25,7 +25,6 @@ import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/price_input_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/features/trades/data/models/message_box_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
@@ -54,15 +53,15 @@ class TradeViewModel extends ViewModel
     required TradeRepository tradeRepository,
     this.tradeModel,
     this.tradeId,
-    required UserLocalSettings userSettings,
     required AccountService accountService,
     required this.secureStorage,
     required AdsRepository adsRepository,
     required ApiClient apiClient,
+    required AppState appState,
   })  : _tradeRepository = tradeRepository,
-        _userSettings = userSettings,
         _apiClient = apiClient,
         _accountService = accountService,
+        _appState = appState,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
@@ -70,9 +69,9 @@ class TradeViewModel extends ViewModel
   final SecureStorage secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
+  final AppState _appState;
   final TradeModel? tradeModel;
   final String? tradeId;
-  final UserLocalSettings _userSettings;
 
   final ctrlPassword = TextEditingController();
   final ctrlFeedback = TextEditingController();
@@ -776,7 +775,7 @@ class TradeViewModel extends ViewModel
       messagesAfterSticky.insert(
         0,
         MessageBoxModel(
-          senderUsername: _userSettings.username!,
+          senderUsername: _appState.username,
           isAdmin: false,
           isSending: true,
           isUpdated: true,
@@ -814,7 +813,7 @@ class TradeViewModel extends ViewModel
       messagesAfterSticky.insert(
         0,
         MessageBoxModel(
-          senderUsername: _userSettings.username!,
+          senderUsername: _appState.username,
           isAdmin: false,
           isSending: true,
           createdAt: DateTime.now(),
@@ -993,7 +992,7 @@ class TradeViewModel extends ViewModel
   }
 
   bool isMyMessage(MessageBoxModel message) {
-    return message.senderUsername == _userSettings.username;
+    return message.senderUsername == _appState.username;
   }
 
   bool isProcessing() {

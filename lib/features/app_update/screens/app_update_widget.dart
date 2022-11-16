@@ -1,10 +1,8 @@
-import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_three_buttons.dart';
 import 'package:agoradesk/features/app_update/models/app_update_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
 class AppUpdateWidget extends StatelessWidget with UrlMixin {
@@ -18,9 +16,7 @@ class AppUpdateWidget extends StatelessWidget with UrlMixin {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<AppUpdateViewModel>(
-        model: AppUpdateViewModel(
-          appState: context.read<AppState>(),
-        ),
+        model: AppUpdateViewModel(),
         builder: (context, model, child) {
           return AgoraDialogThreeButtons(
             body: Padding(

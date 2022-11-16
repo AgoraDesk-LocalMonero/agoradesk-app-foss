@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/flavor_type.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class AppParameters {
   AppParameters({
@@ -46,6 +47,9 @@ class AppParameters {
   final String urlReceipt;
   final bool isAgora;
   final bool includeFcm;
+  String captchaCookie1 = '';
+  String captchaCookie2 = '';
+  List<Cookie>? cookies;
 
   /// plausible analytics
   final String urlPlausibleServer = 'https://a.agoradesk.com';

@@ -15,8 +15,6 @@ class FilterButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      button: true,
-      enabled: true,
       label: context.intl.app_open_additional_filters,
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,

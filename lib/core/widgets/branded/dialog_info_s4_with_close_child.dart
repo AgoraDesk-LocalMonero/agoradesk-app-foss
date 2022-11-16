@@ -33,6 +33,7 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
                       child: Text(
@@ -52,7 +53,7 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: SizedBox(
-                      height: dialogHeight - 120,
+                      height: dialogHeight - 130,
                       child: SingleChildScrollView(
                         child: child,
                       ),

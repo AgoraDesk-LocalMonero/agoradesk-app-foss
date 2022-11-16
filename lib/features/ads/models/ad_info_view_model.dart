@@ -1,5 +1,4 @@
-import 'package:vm/vm.dart';
-import 'package:agoradesk/core/object_box.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -7,30 +6,30 @@ import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/ads_view_model.dart';
-import 'package:agoradesk/features/profile/data/models/user_device_settings.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:agoradesk/objectbox.g.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:overlay_support/overlay_support.dart';
+import 'package:vm/vm.dart';
 
 class AdInfoViewModel extends ViewModel with ErrorParseMixin {
   AdInfoViewModel({
     required AdsRepository adsRepository,
     required AccountService accountService,
+    required AppState appState,
     required this.ad,
     this.onGlobalVacation,
   })  : _accountService = accountService,
+        _appState = appState,
         _adsRepository = adsRepository;
 
   final AdsRepository _adsRepository;
   final AccountService _accountService;
+  final AppState _appState;
   final AdModel ad;
   final bool? onGlobalVacation;
 
-  final Box<UserLocalSettings> userSettingsBox = ObjectBox.s.box<UserLocalSettings>();
-  late UserLocalSettings userSettings;
   AccountInfoModel accountInfoModel = const AccountInfoModel();
 
   bool _loadingAd = false;
@@ -53,10 +52,7 @@ class AdInfoViewModel extends ViewModel with ErrorParseMixin {
 
   @override
   void init() {
-    if (userSettingsBox.getAll().isNotEmpty) {
-      userSettings = userSettingsBox.getAll()[0];
-    }
-    _getAccountInfo(userSettings.username!);
+    _getAccountInfo(_appState.username);
     adEdits = ad;
     onVacation = onGlobalVacation;
     super.init();

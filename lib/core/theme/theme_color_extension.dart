@@ -76,7 +76,7 @@ extension ColorExtension on ColorScheme {
 
   Color get tonalP90 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90;
 
-  Color get yellow85 => brightness == Brightness.dark ? const Color(0xffFFC970) : const Color(0xffFFC970);
+  Color get yellow85 => const Color(0xffFFC970);
 
   Color get custom03 => const Color(0xff624000);
 

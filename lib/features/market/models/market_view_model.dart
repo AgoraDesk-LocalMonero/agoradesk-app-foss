@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
@@ -65,6 +67,7 @@ class MarketViewModel extends ViewModel
   final onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
   final currencyDropdownKey = GlobalKey<DropdownSearchState>();
   final countryDropdownKey = GlobalKey<DropdownSearchState>();
+  late final StreamSubscription<bool> subscriptionReload;
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
   double? _lon;
@@ -120,6 +123,12 @@ class MarketViewModel extends ViewModel
       isGuestMode = e == AuthState.guest;
       notifyListeners();
     });
+
+    subscriptionReload = _appState.reloadMarket.listen((bool val) {
+      if (val) {
+        indicatorKey.currentState?.show();
+      }
+    });
     initMenus();
     ctrlLocation.addListener(_locationListener);
     selectedCountryCode = _appState.countryCode;
@@ -135,6 +144,7 @@ class MarketViewModel extends ViewModel
     if (_appState.hasPinCode) {
       await getAds();
     }
+
     super.init();
   }
 
@@ -440,6 +450,7 @@ class MarketViewModel extends ViewModel
   void dispose() {
     ctrlAmount.dispose();
     ctrlLocation.dispose();
+    subscriptionReload.cancel();
     super.dispose();
   }
 

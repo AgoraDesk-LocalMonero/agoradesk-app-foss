@@ -2,9 +2,10 @@ import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:agoradesk/core/app.dart';
+import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:agoradesk/core/object_box.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/init_app_parameters.dart';
@@ -50,8 +51,9 @@ void main() async {
   ///
   /// common initializations
   ///
-  await ObjectBox.create();
   await SecureStorage.ensureInitialized();
+  await AppSharedPrefs.ensureInitialized();
+  await AppHive.ensureInitialized();
   await findSystemLocale();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -108,8 +110,7 @@ void main() async {
     ),
   );
 
-  final userSettings = ObjectBox.userLocalSettingsBox.getAll();
-  final bool sentryIsOn = userSettings.isNotEmpty && userSettings[0].sentryIsOn != false;
+  final bool sentryIsOn = AppSharedPrefs().sentryIsOn != false;
 
   if (kDebugMode || includeFcm == false || sentryIsOn == false) {
     runApp(const App());

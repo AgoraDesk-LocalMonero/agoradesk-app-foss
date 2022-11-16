@@ -314,7 +314,12 @@ class AppRouter extends _i49.RootStackRouter {
       return _i49.CustomPage<dynamic>(
           routeData: routeData,
           child: _i22.WebviewScreen(
-              key: args.key, token: args.token, url: args.url),
+              key: args.key,
+              token: args.token,
+              cookie1: args.cookie1,
+              cookie2: args.cookie2,
+              isFromCaptchaEvent: args.isFromCaptchaEvent,
+              url: args.url),
           transitionsBuilder: _i49.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 200,
           opaque: true,
@@ -1097,26 +1102,50 @@ class TradeRouteArgs {
 /// generated route for
 /// [_i22.WebviewScreen]
 class WebviewRoute extends _i49.PageRouteInfo<WebviewRouteArgs> {
-  WebviewRoute({_i52.Key? key, String? token, required String url})
+  WebviewRoute(
+      {_i52.Key? key,
+      String? token,
+      String cookie1 = '',
+      String cookie2 = '',
+      bool isFromCaptchaEvent = false,
+      required String url})
       : super(WebviewRoute.name,
             path: 'webviewScreen',
-            args: WebviewRouteArgs(key: key, token: token, url: url));
+            args: WebviewRouteArgs(
+                key: key,
+                token: token,
+                cookie1: cookie1,
+                cookie2: cookie2,
+                isFromCaptchaEvent: isFromCaptchaEvent,
+                url: url));
 
   static const String name = 'WebviewRoute';
 }
 
 class WebviewRouteArgs {
-  const WebviewRouteArgs({this.key, this.token, required this.url});
+  const WebviewRouteArgs(
+      {this.key,
+      this.token,
+      this.cookie1 = '',
+      this.cookie2 = '',
+      this.isFromCaptchaEvent = false,
+      required this.url});
 
   final _i52.Key? key;
 
   final String? token;
 
+  final String cookie1;
+
+  final String cookie2;
+
+  final bool isFromCaptchaEvent;
+
   final String url;
 
   @override
   String toString() {
-    return 'WebviewRouteArgs{key: $key, token: $token, url: $url}';
+    return 'WebviewRouteArgs{key: $key, token: $token, cookie1: $cookie1, cookie2: $cookie2, isFromCaptchaEvent: $isFromCaptchaEvent, url: $url}';
   }
 }
 

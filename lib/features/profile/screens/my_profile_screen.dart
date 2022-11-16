@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -24,6 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/src/provider.dart';
+import 'package:vm/vm.dart';
 
 class MyProfileScreen extends StatelessWidget with UrlMixin {
   const MyProfileScreen({
@@ -40,6 +41,7 @@ class MyProfileScreen extends StatelessWidget with UrlMixin {
           adsRepository: context.read<AdsRepository>(),
           authService: context.read<AuthService>(),
           accountService: context.read<AccountService>(),
+          appState: context.read<AppState>(),
         ),
         builder: (context, model, _) {
           return Scaffold(
