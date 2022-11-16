@@ -88,9 +88,9 @@ class ApiClient {
         },
         onResponse: (Response response, handler) async {
           final String res = response.data.toString();
-          // debugPrint(
-          //     '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
-          if (res.contains('<iframe id="')) {
+          debugPrint(
+              '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
+          if (res.contains('<iframe id')) {
             bool checkRes = await _checkCaptchaInHeadlessWebView();
             if (checkRes == false) {
               final cookiesLst = response.headers.map['set-cookie'] ?? [];
@@ -160,8 +160,8 @@ class ApiClient {
       onLoadStop: (controller, url) async {
         final title = await controller.getTitle() ?? '';
         if (title.contains('Sell')) {
+          _getCookies(res);
           res = true;
-          await _getCookies();
         }
       },
     );
@@ -172,10 +172,12 @@ class ApiClient {
     return res;
   }
 
-  Future _getCookies() async {
-    CookieManager cookieManager = CookieManager.instance();
-    List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
-    GetIt.I<AppParameters>().cookies = cookies;
+  Future _getCookies(bool isGetting) async {
+    if (!isGetting) {
+      CookieManager cookieManager = CookieManager.instance();
+      List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
+      GetIt.I<AppParameters>().cookies = cookies;
+    }
   }
 
   void setBaseUrl(String url) {

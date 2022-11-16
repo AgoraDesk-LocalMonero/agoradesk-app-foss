@@ -20,9 +20,13 @@ mixin ErrorParseMixin {
     } else {
       if (!error.message.toString().contains('Unknown')) {
         errorMessage = error.message.toString();
+      } else {
+        errorMessage = '';
       }
     }
     debugPrint('[$runtimeType] $errorMessage');
-    eventBus.fire(FlashEvent.error(errorMessage));
+    if (errorMessage.isNotEmpty) {
+      eventBus.fire(FlashEvent.error(errorMessage));
+    }
   }
 }
