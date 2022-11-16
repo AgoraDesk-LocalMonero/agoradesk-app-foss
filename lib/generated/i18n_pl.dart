@@ -6908,1396 +6908,1396 @@ class I18nPl extends I18n {
   String get widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate => 'Widżet ceny rynkowej {assetName}';
 
   @override
-  String get ads => 'Ads';
+  String get ads => 'Reklamy';
 
   @override
-  String get unknown_error => 'Unknown error';
+  String get unknown_error => 'Nieznany błąd';
 
   @override
-  String get ads_choose_ad_type => 'Choose ad type';
+  String get ads_choose_ad_type => 'Wybierz typ reklamy';
 
   @override
-  String get ads_ad_type => 'Ad type';
+  String get ads_ad_type => 'Typ reklamy';
 
   @override
-  String get ads_choose_ad_cryptocurrency => 'Choose cryptocurrency';
+  String get ads_choose_ad_cryptocurrency => 'Wybierz kryptowalutę';
 
   @override
-  String get ads_choose_price_type => 'Choose price type';
+  String get ads_choose_price_type => 'Wybierz rodzaj ceny';
 
   @override
-  String get ads_which_type_to_choose => 'Which type to choose?';
+  String get ads_which_type_to_choose => 'Jaki typ wybrać?';
 
   @override
-  String get enter_margin => 'Enter margin';
+  String get enter_margin => 'Wprowadź margines';
 
   @override
-  String get what_is_margin => 'What\'s a margin?';
+  String get what_is_margin => 'Co to jest marża?';
 
   @override
-  String get price_formula_examples => 'Price formula examples';
+  String get price_formula_examples => 'Przykłady formuł cenowych';
 
   @override
-  String get see_examples => 'See examples';
+  String get see_examples => 'Zobacz przykłady';
 
   @override
-  String get see_example => 'See example';
+  String get see_example => 'Zobacz przykład';
 
   @override
-  String get final_price_in => 'Final price in';
+  String get final_price_in => 'Cena końcowa w';
 
   @override
-  String get show_formula_controls => 'Show formula controls';
+  String get show_formula_controls => 'Pokaż kontrolki formuł';
 
   @override
-  String get market_rates => 'Market Rates';
+  String get market_rates => 'Kursy rynkowe';
 
   @override
-  String get set_trade_limits => 'Set trade limits (optional):';
+  String get set_trade_limits => 'Ustaw limity handlowe (opcjonalnie):';
 
   @override
-  String get restrict_limit_amounts_to => 'Restrict limit amounts to';
+  String get restrict_limit_amounts_to => 'Ogranicz kwoty limitu do';
 
   @override
-  String get restrict_limit_amounts => 'Restrict limit amounts';
+  String get restrict_limit_amounts => 'Ogranicz kwoty limitów';
 
   @override
-  String get what_does_it_mean => 'What does it mean?';
+  String get what_does_it_mean => 'Co to znaczy?';
 
   @override
   String ads_enter_amount(Object currency) {
-    return 'Enter amount $currency';
+    return 'Podaj kwotę {waluta}';
   }
 
   @override
   String ads_enter_comma_sep_amounts(Object currency) {
-    return 'Enter comma-separated amounts $currency';
+    return 'Wpisz kwoty rozdzielone przecinkami $currency';
   }
 
   @override
   String ads_first_trade_max_limit(Object currency) {
-    return 'First trade maximum limit $currency';
+    return 'Maksymalny limit pierwszej transakcji $currency';
   }
 
   @override
-  String get ads_specify_trade_details => 'Specify trade details (optional):';
+  String get ads_specify_trade_details => 'Określ szczegóły handlu (opcjonalnie):';
 
   @override
-  String get ads_payment_method_details => 'Payment method details';
+  String get ads_payment_method_details => 'Szczegóły metody płatności';
 
   @override
-  String get ads_payment_method_details_64 => 'Shown in the ad list. Maximum 64 characters.';
+  String get ads_payment_method_details_64 => 'Wyświetlane na liście reklam. Maksymalnie 64 znaki.';
 
   @override
-  String get ads_maximum_64 => 'Maximum 64 characters';
+  String get ads_maximum_64 => 'Maksymalnie 64 znaki';
 
   @override
-  String get ads_payment_method_info_trade => 'Payment method info';
+  String get ads_payment_method_info_trade => 'Informacje o metodzie płatności';
 
   @override
-  String get ads_payment_method_info_trade_4096 => 'Shown during trade. Maximum 4096 characters.';
+  String get ads_payment_method_info_trade_4096 => 'Pokazane podczas handlu. Maksymalnie 4096 znaków.';
 
   @override
-  String get ads_specify_restrictions => 'Specify restrictions (optional):';
+  String get ads_specify_restrictions => 'Określ ograniczenia (opcjonalnie):';
 
   @override
-  String get maximum_4096 => 'Maximum 4096 characters';
+  String get maximum_4096 => 'Maksymalnie 4096 znaków';
 
   @override
-  String get enter_number_0_100 => 'Enter number from 0 to 100';
+  String get enter_number_0_100 => 'Wpisz liczbę od 0 do 100';
 
   @override
-  String get enter_number_15_90 => 'Enter number between 15-90';
+  String get enter_number_15_90 => 'Wpisz liczbę od 15 do 90';
 
   @override
-  String get enter_amount_min_0 => 'Enter amount (min 0)';
+  String get enter_amount_min_0 => 'Wpisz kwotę (min. 0)';
 
   @override
-  String get currency => 'Currency:';
+  String get currency => 'Waluta:';
 
   @override
-  String get payment_method => 'Payment method:';
+  String get payment_method => 'Metoda płatności:';
 
   @override
-  String get restrict_amounts_to => 'Restrict amounts to:';
+  String get restrict_amounts_to => 'Ogranicz kwoty do:';
 
   @override
-  String get payment_method_details => 'Payment method details:';
+  String get payment_method_details => 'Szczegóły metody płatności:';
 
   @override
-  String get review => 'Review';
+  String get review => 'Recenzja';
 
   @override
-  String get publish => 'Publish';
+  String get publish => 'Publikować';
 
   @override
-  String get enter_your_settlement_wallet_address => 'Enter your settlement wallet address:';
+  String get enter_your_settlement_wallet_address => 'Wpisz adres swojego portfela rozliczeniowego:';
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Enter and verify your address to which the coins will be sent to. Cannot be an internal $appName address.';
+    return 'Wpisz i zweryfikuj swój adres, na który będą wysyłane monety. Nie może być adresem wewnętrznym FRONT_TYPE.';
   }
 
   @override
-  String get what_is_settlement_fee_level => 'What is settlement fee level?';
+  String get what_is_settlement_fee_level => 'Jaki jest poziom opłaty rozliczeniowej?';
 
   @override
-  String get settlement_fee_level_selector_explanation => 'This selector allows you to choose which network fee level to use when sending the transaction to your wallet. If you\'re not sure what fee level you want, select the medium fee.';
+  String get settlement_fee_level_selector_explanation => 'Ten selektor pozwala wybrać poziom opłaty sieciowej do wykorzystania podczas wysyłania transakcji do portfela. Jeśli nie masz pewności, jaki poziom opłaty chcesz, wybierz średnią opłatę.';
 
   @override
-  String get ads_payment_window => 'Payment window time (minutes)';
+  String get ads_payment_window => 'Czas w oknie płatności (minuty)';
 
   @override
-  String get ads_payment_window_short => 'Payment window';
+  String get ads_payment_window_short => 'Okno płatności';
 
   @override
-  String get ads_havent_posted => 'You haven’t posted any ads yet.';
+  String get ads_havent_posted => 'Nie opublikowałeś jeszcze żadnych reklam.';
 
   @override
-  String get no_trades => 'You have no trades, yet.';
+  String get no_trades => 'Nie masz jeszcze transakcji.';
 
   @override
-  String get no_feedbacks => 'No feedbacks.';
+  String get no_feedbacks => 'Brak informacji zwrotnych.';
 
   @override
-  String get ad_settings => 'Ad settings';
+  String get ad_settings => 'Ustawienia reklam';
 
   @override
-  String get settings_saved => 'Settings saved';
+  String get settings_saved => 'Ustawienia zapisane';
 
   @override
-  String get preferences => 'Preferences';
+  String get preferences => 'Preferencje';
 
   @override
-  String get about_this_ad => 'About this ad';
+  String get about_this_ad => 'O reklamie';
 
   @override
-  String get price => 'Price';
+  String get price => 'Cena £';
 
   @override
-  String get activity => 'Activity';
+  String get activity => 'Działalność';
 
   @override
-  String get chat => 'Chat';
+  String get chat => 'Czat';
 
   @override
-  String get market => 'Market';
+  String get market => 'Rynek';
 
   @override
-  String get help => 'Help';
+  String get help => 'Pomoc';
 
   @override
   String sell_asset(Object asset) {
-    return 'Sell $asset';
+    return 'Sprzedaj {zasób}';
   }
 
   @override
   String buy_asset(Object asset) {
-    return 'Buy $asset';
+    return 'Kup {zasób}';
   }
 
   @override
-  String get trader_profile => 'Trader\'s profile';
+  String get trader_profile => 'Profil tradera';
 
   @override
-  String get trader_info => 'Trader\'s info';
+  String get trader_info => 'Informacje przedsiębiorcy';
 
   @override
-  String get trading_tips => 'Trading Tips';
+  String get trading_tips => 'Porady handlowe';
 
   @override
-  String get clear_all => 'Clear all';
+  String get clear_all => 'Wyczyść wszystko';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Stosować';
 
   @override
-  String get enter_amount => 'Enter amount';
+  String get enter_amount => 'Wprowadź ilość';
 
   @override
-  String get any_payment_method => 'Any Payment Method';
+  String get any_payment_method => 'Dowolna metoda płatności';
 
   @override
-  String get see_more_feedback => 'See more feedback';
+  String get see_more_feedback => 'Zobacz więcej opinii';
 
   @override
-  String get see_more_ads => 'See more ads';
+  String get see_more_ads => 'Zobacz więcej reklam';
 
   @override
   String feedback_title(Object user) {
-    return 'Feedback on $user';
+    return 'Opinia na temat {użytkownika}';
   }
 
   @override
-  String get active_ads => 'Active ads';
+  String get active_ads => 'Aktywne reklamy';
 
   @override
-  String get you_sell => 'You sell';
+  String get you_sell => 'Sprzedajesz';
 
   @override
-  String get you_buy => 'You buy';
+  String get you_buy => 'Kupujesz';
 
   @override
-  String get you_receive => 'You receive';
+  String get you_receive => 'Otrzymujesz';
 
   @override
-  String get you_pay => 'You pay';
+  String get you_pay => 'Ty płacisz';
 
   @override
-  String get export_csv => 'Export CSV';
+  String get export_csv => 'Eksportuj CSV';
 
   @override
-  String get copy => 'Copy';
+  String get copy => 'Kopiuj';
 
   @override
   String sell_via(Object asset, Object provider) {
-    return 'Sell $asset via $provider';
+    return 'Sprzedaj $asset za pośrednictwem $provider';
   }
 
   @override
   String buy_via(Object asset, Object provider) {
-    return 'Buy $asset via $provider';
+    return 'Kup $asset przez $provider';
   }
 
   @override
   String sell_to(Object user) {
-    return 'Sell to $user';
+    return 'Sprzedaj $user';
   }
 
   @override
   String buy_from(Object user) {
-    return 'Buy from $user';
+    return 'Kup od $user';
   }
 
   @override
   String must_be_at_least(Object num, Object currency) {
-    return 'Must be at least $num $currency';
+    return 'Musi wynosić co najmniej $num {waluta}';
   }
 
   @override
   String must_be_less(Object num, Object currency) {
-    return 'Must be less $num $currency';
+    return 'Musi być mniej $num $currency';
   }
 
   @override
   String send_all(Object asset) {
-    return 'Send all $asset';
+    return 'Wyślij wszystkie $asset';
   }
 
   @override
   String about_transactions(Object asset) {
-    return 'About $asset transactions';
+    return 'O transakcjach $asset';
   }
 
   @override
-  String get trade_id => 'Trade ID';
+  String get trade_id => 'Identyfikator handlu';
 
   @override
-  String get view_trade => 'View trade';
+  String get view_trade => 'Zobacz handel';
 
   @override
-  String get receiving => 'Receiving';
+  String get receiving => 'Otrzymujący';
 
   @override
-  String get paying => 'Paying';
+  String get paying => 'Intratny';
 
   @override
-  String get rate => 'Rate';
+  String get rate => 'Wskaźnik';
 
   @override
-  String get enter_your_password => 'Enter your password';
+  String get enter_your_password => 'Wprowadź hasło';
 
   @override
-  String get good_seller => 'Good seller';
+  String get good_seller => 'Dobry sprzedawca';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Anulować';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Usuwać';
 
   @override
-  String get important => 'Important';
+  String get important => 'Ważny';
 
   @override
-  String get feedback_updated_successfully => 'Feedback updated successfully.';
+  String get feedback_updated_successfully => 'Opinia została zaktualizowana pomyślnie.';
 
   @override
-  String get pay => 'Pay';
+  String get pay => 'Płacić';
 
   @override
-  String get send_trade_request => 'Send a trade request';
+  String get send_trade_request => 'Wyślij prośbę o wymianę';
 
   @override
-  String get start_trading => 'Start trading';
+  String get start_trading => 'Rozpocznij handel';
 
   @override
-  String get api_error_13 => 'Something went wrong on the request. It\'s most likely a validation issue. Check your request parameters, and if this still doesn\'t seem right, please contact our support.';
+  String get api_error_13 => 'Coś poszło nie tak z żądaniem. Najprawdopodobniej jest to problem z walidacją. Sprawdź parametry żądania, a jeśli nadal nie jest to prawidłowe, skontaktuj się z naszym działem pomocy.';
 
   @override
-  String get api_error_49 => 'The old password provided in the password change request doesn’t match the current password';
+  String get api_error_49 => 'Stare hasło podane w żądaniu zmiany hasła nie jest zgodne z bieżącym hasłem';
 
   @override
-  String get api_error_60 => 'The password provided for changing the email is incorrect';
+  String get api_error_60 => 'Hasło podane do zmiany adresu e-mail jest nieprawidłowe';
 
   @override
-  String get api_error_61 => 'This email is already linked to another account';
+  String get api_error_61 => 'Ten e-mail jest już połączony z innym kontem';
 
   @override
-  String get api_error_73 => 'The password provided during withdrawal request is incorrect';
+  String get api_error_73 => 'Hasło podane podczas prośby o wypłatę jest nieprawidłowe';
 
   @override
-  String get api_error_74 => 'Insufficient funds to conduct withdrawal for the requested amount';
+  String get api_error_74 => 'Niewystarczające środki do przeprowadzenia wypłaty na wnioskowaną kwotę';
 
   @override
-  String get api_error_75 => 'Attempting to withdraw funds to an internal address that doesn’t exist';
+  String get api_error_75 => 'Próba wypłaty środków na nieistniejący adres wewnętrzny';
 
   @override
-  String get api_error_76 => 'Attempting to withdraw funds to the same account as the account that’s requesting the withdrawal';
+  String get api_error_76 => 'Próba wypłaty środków na to samo konto, co konto, z którego pochodzi wypłata';
 
   @override
-  String get api_error_77 => 'Insufficient funds to conduct internal transfer for the requested amount';
+  String get api_error_77 => 'Niewystarczające środki do wykonania przelewu wewnętrznego na żądaną kwotę';
 
   @override
-  String get api_error_103 => 'Requesting trade for ad who’s poster is on selling vacation';
+  String get api_error_103 => 'Prośba o wymianę na reklamę, której plakat sprzedaje wakacje';
 
   @override
-  String get api_error_105 => 'Poster of the ad for which the trade is being requested doesn’t have enough balance to fund the escrow';
+  String get api_error_105 => 'Plakat reklamy, dla której żądana jest transakcja, nie ma wystarczającego salda, aby sfinansować escrow';
 
   @override
-  String get api_error_107 => 'Trying to track liquidity without setting maxAmount';
+  String get api_error_107 => 'Próbuję śledzić płynność bez ustawiania maxAmount';
 
   @override
-  String get api_error_137 => 'Attempting to register 2FA while providing incorrect password';
+  String get api_error_137 => 'Próba zarejestrowania 2FA przy podaniu nieprawidłowego hasła';
 
   @override
-  String get api_error_138 => 'Attempting to validate 2FA while providing incorrect OTP';
+  String get api_error_138 => 'Próba walidacji 2FA z nieprawidłowym OTP';
 
   @override
-  String get api_error_139 => 'Either password or OTP incorrect when attempting to disable 2FA';
+  String get api_error_139 => 'Niepoprawne hasło lub hasło jednorazowe podczas próby wyłączenia funkcji 2FA';
 
   @override
-  String get api_error_140 => 'OTP incorrect when attempting to withdraw coins from wallet';
+  String get api_error_140 => 'OTP niepoprawne podczas próby wypłaty monet z portfela';
 
   @override
-  String get api_error_146 => 'Attempting to enable affiliate program for account that already has it enabled';
+  String get api_error_146 => 'Próba włączenia programu partnerskiego dla konta, na którym jest już włączony';
 
   @override
-  String get api_error_170 => 'Amount that has been requested for withdrawal is less than the minimum possible amount for the given cryptocurrency';
+  String get api_error_170 => 'Kwota, którą zażądano wypłaty jest mniejsza niż minimalna możliwa kwota dla danej kryptowaluty';
 
   @override
-  String get api_error_171 => 'Invalid address provided when requesting withdrawal';
+  String get api_error_171 => 'Nieprawidłowy adres podany przy żądaniu wypłaty';
 
   @override
-  String get api_error_173 => 'Attempting to open too many trades at once for a new account';
+  String get api_error_173 => 'Próba otwarcia zbyt wielu transakcji jednocześnie dla nowego konta';
 
   @override
-  String get api_error_178 => 'Attempting to redeem coupon for user that doesn’t exist';
+  String get api_error_178 => 'Próba wykorzystania kuponu dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_179 => 'Attempting to redeem coupon that doesn’t exist';
+  String get api_error_179 => 'Próba zrealizowania kuponu, który nie istnieje';
 
   @override
-  String get api_error_180 => 'Attempting to redeem coupon that’s expired';
+  String get api_error_180 => 'Próba zrealizowania kuponu, który wygasł';
 
   @override
-  String get api_error_181 => 'Attempting to redeem coupon that’s only allowed to be redeemed during registration';
+  String get api_error_181 => 'Próba zrealizowania kuponu, który można zrealizować tylko podczas rejestracji';
 
   @override
-  String get api_error_182 => 'Attempting to redeem coupon that’s already been redeemed by this user';
+  String get api_error_182 => 'Próba zrealizowania kuponu, który został już wykorzystany przez tego użytkownika';
 
   @override
-  String get api_error_183 => 'Attempting to redeem coupon that’s out of stock';
+  String get api_error_183 => 'Próba zrealizowania kuponu, którego nie ma w magazynie';
 
   @override
-  String get api_error_184 => 'Attempting to redeem coupon when there’s a currently active coupon';
+  String get api_error_184 => 'Próba zrealizowania kuponu, gdy jest aktywny kupon';
 
   @override
-  String get api_error_204 => 'Attempting to request reputation import code for account that doesn’t exist';
+  String get api_error_204 => 'Próba zażądania kodu importu reputacji dla konta, które nie istnieje';
 
   @override
-  String get api_error_205 => 'Attempting to generate verification code for reputation import for a platform that already has a verification code generated for it';
+  String get api_error_205 => 'Próba wygenerowania kodu weryfikacyjnego do importu reputacji dla platformy, która ma już wygenerowany kod weryfikacyjny';
 
   @override
-  String get api_error_206 => 'Attempting to generate verification code for reputation import for a platform from which reputation was already imported';
+  String get api_error_206 => 'Próba wygenerowania kodu weryfikacyjnego do importu reputacji dla platformy, z której reputacja została już zaimportowana';
 
   @override
-  String get api_error_207 => 'Attempting to confirm reputation import verification code placement for user that doesn’t exist';
+  String get api_error_207 => 'Próba potwierdzenia umieszczenia kodu weryfikacyjnego importu reputacji dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_208 => 'Attempting to confirm reputation import verification code placement for user that isn’t in step 1 of the reputation import flow';
+  String get api_error_208 => 'Próba potwierdzenia umieszczenia kodu weryfikacyjnego importu reputacji dla użytkownika, który nie znajduje się w kroku 1 procesu importowania reputacji';
 
   @override
-  String get api_error_209 => 'LocalBitcoins error when attempting to confirm reputation import verification code placement. Perhaps the username is wrong or the profile is not visible';
+  String get api_error_209 => 'Błąd LocalBitcoins podczas próby potwierdzenia umieszczenia kodu weryfikacyjnego importu reputacji. Być może nazwa użytkownika jest nieprawidłowa lub profil nie jest widoczny';
 
   @override
-  String get api_error_210 => 'Paxful error when attempting to confirm reputation import verification code placement Perhaps the username is wrong or the profile is not visible';
+  String get api_error_210 => 'Błąd podczas próby potwierdzenia umieszczenia kodu weryfikacyjnego importu reputacji Być może nazwa użytkownika jest nieprawidłowa lub profil nie jest widoczny';
 
   @override
-  String get api_error_225 => 'LocalBitcoins API returning “Invalid user” as error when attempting to confirm reputation code placement';
+  String get api_error_225 => 'Interfejs API LocalBitcoins zwraca „Nieprawidłowy użytkownik” jako błąd podczas próby potwierdzenia umieszczenia kodu reputacji';
 
   @override
-  String get api_error_226 => 'Incorrect password when attempting to delete account';
+  String get api_error_226 => 'Nieprawidłowe hasło podczas próby usunięcia konta';
 
   @override
-  String get api_error_238 => 'Fee level not specified for external Bitcoin withdrawal';
+  String get api_error_238 => 'Nie określono poziomu opłaty za zewnętrzną wypłatę Bitcoinów';
 
   @override
-  String get api_error_239 => 'Incorrect password when trying to release a trade';
+  String get api_error_239 => 'Nieprawidłowe hasło podczas próby zwolnienia transakcji';
 
   @override
-  String get api_error_243 => 'Internal AgoraDesk address can\'t be used for trade settlement. Please input an outside, non-AgoraDesk XMR address to continue.';
+  String get api_error_243 => 'Wewnętrzny adres AgoraDesk nie może być używany do rozliczania transakcji. Aby kontynuować, wprowadź zewnętrzny adres XMR inny niż AgoraDesk.';
 
   @override
-  String get api_error_254 => 'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes';
+  String get api_error_254 => 'Próba zaksięgowania wypłaty na identyczny adres i kwotę w ciągu ostatnich 10 minut';
 
   @override
-  String get api_error_260 => 'Attempting to post a note on a user that doesn’t exist';
+  String get api_error_260 => 'Próba opublikowania notatki o użytkowniku, który nie istnieje';
 
   @override
-  String get api_error_261 => 'Attempting to post a note on your own account';
+  String get api_error_261 => 'Próba opublikowania notatki na własnym koncie';
 
   @override
-  String get api_error_262 => 'Attempting to get a note on a user that doesn’t exist';
+  String get api_error_262 => 'Próba uzyskania notatki o użytkowniku, który nie istnieje';
 
   @override
-  String get api_error_263 => 'Attempting to get a note on your own account';
+  String get api_error_263 => 'Próba uzyskania notatki na własne konto';
 
   @override
-  String get api_error_264 => 'Attempting to delete a note on a user that doesn’t exist';
+  String get api_error_264 => 'Próba usunięcia notatki o użytkowniku, który nie istnieje';
 
   @override
-  String get api_error_265 => 'Attempting to delete a note on your own account';
+  String get api_error_265 => 'Próba usunięcia notatki na własnym koncie';
 
   @override
-  String get api_error_267 => 'Attempting to delete a user note that doesn’t exist';
+  String get api_error_267 => 'Próba usunięcia notatki użytkownika, która nie istnieje';
 
   @override
-  String get api_error_403 => 'You are not authorized to perform this action';
+  String get api_error_403 => 'Nie masz uprawnień do wykonania tej czynności';
 
   @override
-  String get api_error_4000 => 'No internet connection.';
+  String get api_error_4000 => 'Brak połączenia z internetem.';
 
   @override
-  String get api_error_4001 => 'Connection timeout, please check internet connection.';
+  String get api_error_4001 => 'Przekroczono limit czasu połączenia, sprawdź połączenie internetowe.';
 
   @override
-  String get api_error_45 => 'You can\'t have both \'first_time_limit_asset\' and \'first_time_limit_{btc | xmr}\' in your request. Remove one of them (they are interchangeable).';
+  String get api_error_45 => 'Nie możesz mieć jednocześnie \'first_time_limit_asset\' i \'first_time_limit_{btc | xmr}” we wniosku. Usuń jeden z nich (są wymienne).';
 
   @override
-  String get api_error_46 => 'Request must contain EITHER an application/json request body with a “msg” parameter OR a multipart/form-data request body with the image file listed under the parameter “document”';
+  String get api_error_46 => 'Żądanie musi zawierać ALBO treść żądania aplikacji/json z parametrem „msg” LUB treść żądania danych wieloczęściowych/formularzy z plikiem obrazu wymienionym pod parametrem „dokument”';
 
   @override
-  String get api_error_47 => 'User with that username already exists';
+  String get api_error_47 => 'Użytkownik o tej nazwie już istnieje';
 
   @override
-  String get api_error_48 => 'User with that email already exists';
+  String get api_error_48 => 'Użytkownik z tym adresem e-mail już istnieje';
 
   @override
-  String get api_error_50 => 'Attempting to send an email to a user without an email set';
+  String get api_error_50 => 'Próba wysłania wiadomości e-mail do użytkownika bez zestawu e-mail';
 
   @override
-  String get api_error_51 => 'Token provided for email verification is given to a user who does not exist';
+  String get api_error_51 => 'Token dostarczony do weryfikacji e-mail jest przyznawany użytkownikowi, który nie istnieje';
 
   @override
-  String get api_error_52 => 'Token provided for email verification is invalid';
+  String get api_error_52 => 'Token podany do weryfikacji adresu e-mail jest nieprawidłowy';
 
   @override
-  String get api_error_53 => 'The email in the token doesn’t match the current email in the database';
+  String get api_error_53 => 'E-mail w tokenie nie zgadza się z aktualnym adresem e-mail w bazie danych';
 
   @override
-  String get api_error_54 => 'Token provided for password reset is given to a email that does not exist in the database';
+  String get api_error_54 => 'Token udostępniony do zresetowania hasła jest przekazywany na e-mail, który nie istnieje w bazie danych';
 
   @override
-  String get api_error_55 => 'Token provided for password reset is invalid';
+  String get api_error_55 => 'Token dostarczony do zresetowania hasła jest nieprawidłowy';
 
   @override
-  String get api_error_56 => 'Attempting to send a password reset email to an email that isn’t in the database';
+  String get api_error_56 => 'Próba wysłania wiadomości e-mail dotyczącej resetowania hasła na e-mail, którego nie ma w bazie danych';
 
   @override
-  String get api_error_57 => 'Token provided for password reset is not a reset token';
+  String get api_error_57 => 'Token dostarczony do resetowania hasła nie jest tokenem resetowania';
 
   @override
-  String get api_error_58 => 'Trying to send a password-reset email to a user with an unverified email';
+  String get api_error_58 => 'Próbujesz wysłać wiadomość e-mail umożliwiającą zresetowanie hasła do użytkownika z niezweryfikowanym adresem e-mail';
 
   @override
-  String get api_error_59 => 'Trying reset a password for a user with an unverified email';
+  String get api_error_59 => 'Próbuję zresetować hasło użytkownika z niezweryfikowanym adresem e-mail';
 
   @override
-  String get api_error_62 => 'No account exists with the username provided for the account public data request';
+  String get api_error_62 => 'Nie istnieje konto z nazwą użytkownika podaną w żądaniu danych publicznych konta';
 
   @override
-  String get api_error_63 => 'Attempting to upload file of a forbidden type';
+  String get api_error_63 => 'Próba przesłania pliku niedozwolonego typu';
 
   @override
-  String get api_error_64 => 'Attempting to mark a non-existent notification as read';
+  String get api_error_64 => 'Próba oznaczenia nieistniejącego powiadomienia jako przeczytanego';
 
   @override
-  String get api_error_65 => 'Attempting to mark an already read notification as read';
+  String get api_error_65 => 'Próba oznaczenia już przeczytanego powiadomienia jako przeczytanego';
 
   @override
-  String get api_error_66 => 'Attempting to upload chat attachment to trade that doesn’t exist';
+  String get api_error_66 => 'Próba przesłania załącznika czatu do handlu, który nie istnieje';
 
   @override
-  String get api_error_67 => 'Attempting to send chat message to trade that doesn’t exist';
+  String get api_error_67 => 'Próba wysłania wiadomości na czacie w celu handlu, która nie istnieje';
 
   @override
-  String get api_error_68 => 'Attempting to get chat message list of trade that doesn’t exist';
+  String get api_error_68 => 'Próba uzyskania listy wiadomości czatu dotyczących handlu, który nie istnieje';
 
   @override
-  String get api_error_69 => 'Attempting to get chat message that doesn’t exist';
+  String get api_error_69 => 'Próba uzyskania wiadomości na czacie, która nie istnieje';
 
   @override
-  String get api_error_70 => 'Attempting to get wallet address of account that doesn’t exist';
+  String get api_error_70 => 'Próba uzyskania adresu portfela konta, które nie istnieje';
 
   @override
-  String get api_error_71 => 'Attempting to get transactions of an account that doesn’t exist';
+  String get api_error_71 => 'Próba uzyskania transakcji z konta, które nie istnieje';
 
   @override
-  String get api_error_72 => 'Attempting to withdraw funds of an account that doesn’t exist';
+  String get api_error_72 => 'Próba wypłaty środków z konta, które nie istnieje';
 
   @override
-  String get api_error_78 => 'Attempting to make get ads with an illegal combination of parameters';
+  String get api_error_78 => 'Próba uzyskania reklam z nielegalną kombinacją parametrów';
 
   @override
-  String get api_error_79 => 'The requested ad ID doesn’t exist';
+  String get api_error_79 => 'Żądany identyfikator reklamy nie istnieje';
 
   @override
-  String get api_error_80 => 'Didn’t set both lat and lon in the ad update/create request';
+  String get api_error_80 => 'W żądaniu aktualizacji/utworzenia reklamy nie ustawiono zarówno długości geograficznej, jak i długiej';
 
   @override
-  String get api_error_81 => 'Didn’t set price formula when posting ad';
+  String get api_error_81 => 'Nie ustawiłem formuły ceny podczas publikowania reklamy';
 
   @override
-  String get api_error_82 => 'Trying to set lat and lon for an online ad';
+  String get api_error_82 => 'Próbuję ustawić długość i długość lat dla reklamy online';
 
   @override
-  String get api_error_83 => 'Trying to set ONLINE_SELL/CALL_SELL/PUT_BUY-specific properties to a different type of ad';
+  String get api_error_83 => 'Próba ustawienia właściwości specyficznych dla ONLINE_SELL/CALL_SELL/PUT_BUY na inny typ reklamy';
 
   @override
-  String get api_error_84 => 'Trying to set ONLINE_BUY/CALL_BUY/PUT_SELL-specific properties to a different type of ad';
+  String get api_error_84 => 'Próba ustawienia właściwości specyficznych dla ONLINE_BUY/CALL_BUY/PUT_SELL na inny typ reklamy';
 
   @override
-  String get api_error_85 => 'Trying to set LOCAL_SELL-specific properties to a different type of ad';
+  String get api_error_85 => 'Próba ustawienia właściwości specyficznych dla LOCAL_SELL na inny typ reklamy';
 
   @override
-  String get api_error_86 => 'Attempting to set country or payment method or currency that isn’t valid when creating/updating ad';
+  String get api_error_86 => 'Próba ustawienia kraju, metody płatności lub waluty, która jest nieprawidłowa podczas tworzenia/aktualizowania reklamy';
 
   @override
-  String get api_error_87 => 'Trying to set a payment method that is invalid to that country when creating/updating ad';
+  String get api_error_87 => 'Próbujesz ustawić metodę płatności, która jest nieprawidłowa dla tego kraju podczas tworzenia/aktualizowania reklamy';
 
   @override
-  String get api_error_88 => 'Trying to set a currency that is invalid to that payment method when creating/updating ad';
+  String get api_error_88 => 'Próbujesz ustawić walutę, która jest nieprawidłowa dla tej metody płatności podczas tworzenia/aktualizowania reklamy';
 
   @override
-  String get api_error_89 => 'Trying to create a LOCAL_* ad without setting lon/lat';
+  String get api_error_89 => 'Próba utworzenia reklamy LOCAL_* bez ustawiania dł./szer.';
 
   @override
-  String get api_error_90 => 'Trying to access trades of a user that doesn’t exist.';
+  String get api_error_90 => 'Próba uzyskania dostępu do transakcji użytkownika, który nie istnieje.';
 
   @override
-  String get api_error_91 => 'Trying to access account public data using a token of a user that doesn’t exist';
+  String get api_error_91 => 'Próba uzyskania dostępu do publicznych danych konta przy użyciu nieistniejącego tokena użytkownika';
 
   @override
-  String get api_error_92 => 'Trying to get notifications for user that doesn’t exist';
+  String get api_error_92 => 'Próbuję otrzymywać powiadomienia dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_93 => 'Trying to get pending deposits for a user that doesn’t exist';
+  String get api_error_93 => 'Próba uzyskania oczekujących depozytów dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_94 => 'Trying to get feedback score for user that doesn’t exist';
+  String get api_error_94 => 'Próbuję uzyskać wynik opinii dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_95 => 'Trying to get ads for user that doesn’t exist';
+  String get api_error_95 => 'Próbuję uzyskać reklamy dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_96 => 'Non-existent user trying to create a trade';
+  String get api_error_96 => 'Nieistniejący użytkownik próbujący utworzyć transakcję';
 
   @override
-  String get api_error_97 => 'Trying to create a trade for ad that doesn’t exist';
+  String get api_error_97 => 'Próba stworzenia handlu na reklamę, która nie istnieje';
 
   @override
-  String get api_error_98 => 'Trying to create a trade for an ad who’s poster doesn’t exist';
+  String get api_error_98 => 'Próba stworzenia handlu na reklamę, której plakat nie istnieje';
 
   @override
-  String get api_error_99 => 'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade';
+  String get api_error_99 => 'Próbujesz zażądać wyższej kwoty niż dozwolona przez first_time_limit_asset podczas tworzenia pierwszej transakcji';
 
   @override
-  String get api_error_100 => 'Cannot request less than 0.0000000001 XMR for trade creation';
+  String get api_error_100 => 'Nie można zażądać mniej niż 0,000000001 XMR w celu utworzenia transakcji';
 
   @override
-  String get api_error_101 => 'Requested amount is less than ad’s min_amount when creating trade';
+  String get api_error_101 => 'Żądana kwota jest mniejsza niż min_amount reklamy podczas tworzenia transakcji';
 
   @override
-  String get api_error_102 => 'Requested amount is more than ad’s max_amount_available when creating trade';
+  String get api_error_102 => 'Żądana kwota jest większa niż max_amount_available podczas tworzenia transakcji';
 
   @override
-  String get api_error_104 => 'Requesting trade for ad who’s poster is on buying vacation';
+  String get api_error_104 => 'Prośba o wymianę na reklamę, której plakat jest na zakupie wakacji';
 
   @override
-  String get api_error_106 => 'Requester of the trade doesn’t have enough balance to fund the trade request';
+  String get api_error_106 => 'Zleceniodawca transakcji nie ma wystarczającego salda, aby sfinansować żądanie wymiany';
 
   @override
-  String get api_error_108 => 'minAmount cannot be equal to or larger than maxAmount';
+  String get api_error_108 => 'minAmount nie może być równa ani większa niż maxAmount';
 
   @override
-  String get api_error_109 => 'Requested amount is more than ad’s maxAmount when creating trade';
+  String get api_error_109 => 'Żądana kwota jest większa niż maxAmount reklamy podczas tworzenia transakcji';
 
   @override
-  String get api_error_110 => 'Trade requester has lower feedback score than what is required by the poster';
+  String get api_error_110 => 'Zlecający wymianę ma niższy wynik opinii niż wymagany przez autora';
 
   @override
-  String get api_error_111 => 'Requested amount is not one of the accepted amounts, see limit_to_fiat_amounts';
+  String get api_error_111 => 'Żądana kwota nie jest jedną z akceptowanych kwot, zobacz limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => 'Can’t request a trade for an ad you posted yourself';
+  String get api_error_112 => 'Nie możesz poprosić o wymianę na ogłoszenie, które sam zamieściłeś';
 
   @override
-  String get api_error_113 => 'Can’t set paymentWindowMinutes to <15 or >90 when updating ad';
+  String get api_error_113 => 'Nie można ustawić paymentWindowMinutes na <15 lub >90 podczas aktualizacji reklamy';
 
   @override
-  String get api_error_114 => 'Can’t set paymentWindowMinutes to <15 or >90 when creating ad';
+  String get api_error_114 => 'Nie można ustawić paymentWindowMinutes na <15 lub >90 podczas tworzenia reklamy';
 
   @override
-  String get api_error_115 => 'Trade by requested ID doesn’t exist';
+  String get api_error_115 => 'Handel według żądanego identyfikatora nie istnieje';
 
   @override
-  String get api_error_116 => 'User requesting trade doesn’t exist';
+  String get api_error_116 => 'Użytkownik proszący o wymianę nie istnieje';
 
   @override
-  String get api_error_117 => 'The currency for which the exchange rate has been requested does not exist';
+  String get api_error_117 => 'Waluta, dla której zażądano kursu wymiany, nie istnieje';
 
   @override
-  String get api_error_118 => 'User requesting funding of trade doesn’t exist';
+  String get api_error_118 => 'Użytkownik proszący o finansowanie handlu nie istnieje';
 
   @override
-  String get api_error_119 => 'Attempting to fund a trade that doesn’t exist';
+  String get api_error_119 => 'Próba sfinansowania transakcji, która nie istnieje';
 
   @override
-  String get api_error_120 => 'User requesting escrow of trade doesn’t exist';
+  String get api_error_120 => 'Użytkownik żądający depozytu handlowego nie istnieje';
 
   @override
-  String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
+  String get api_error_121 => 'Próba zdeponowania transakcji, która nie istnieje';
 
   @override
-  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
+  String get api_error_122 => 'Niewystarczające środki, aby sfinansować zmienną transakcję LOCAL_SELL';
 
   @override
-  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
+  String get api_error_123 => 'Niewystarczające środki na sfinansowanie niezmiennej transakcji LOCAL_SELL';
 
   @override
-  String get api_error_124 => 'Error when funding a LOCAL_SELL';
+  String get api_error_124 => 'Błąd podczas finansowania LOCAL_SELL';
 
   @override
-  String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
+  String get api_error_125 => 'Użytkownik żądający anulowania transakcji nie istnieje';
 
   @override
-  String get api_error_126 => 'Attempting to cancel a trade that doesn’t exist';
+  String get api_error_126 => 'Próba anulowania transakcji, która nie istnieje';
 
   @override
-  String get api_error_127 => 'User requesting payment of trade doesn’t exist';
+  String get api_error_127 => 'Użytkownik żądający zapłaty za handel nie istnieje';
 
   @override
-  String get api_error_128 => 'Attempting to mark a trade that doesn’t exist paid';
+  String get api_error_128 => 'Próba oznaczenia transakcji, która nie istnieje, została opłacona';
 
   @override
-  String get api_error_129 => 'User requesting release of trade doesn’t exist';
+  String get api_error_129 => 'Użytkownik wnioskujący o zwolnienie transakcji nie istnieje';
 
   @override
-  String get api_error_130 => 'Attempting to release a trade that doesn’t exist';
+  String get api_error_130 => 'Próba zwolnienia transakcji, która nie istnieje';
 
   @override
-  String get api_error_131 => 'User requesting dispute of trade doesn’t exist';
+  String get api_error_131 => 'Użytkownik zgłaszający spór handlowy nie istnieje';
 
   @override
-  String get api_error_132 => 'Attempting to dispute a trade that doesn’t exist';
+  String get api_error_132 => 'Próba zakwestionowania transakcji, która nie istnieje';
 
   @override
-  String get api_error_133 => 'Attempting to get feedback of a user that doesn’t exist';
+  String get api_error_133 => 'Próba uzyskania opinii użytkownika, który nie istnieje';
 
   @override
-  String get api_error_134 => 'Attempting to create an ad when user already has the maximum allowed number of ads';
+  String get api_error_134 => 'Próba utworzenia reklamy, gdy użytkownik ma już maksymalną dozwoloną liczbę reklam';
 
   @override
-  String get api_error_135 => 'Somehow the maxAmount is set to null while trackingMaxAmount is set to true';
+  String get api_error_135 => 'W jakiś sposób maxAmount jest ustawiona na null, podczas gdy trackingMaxAmount jest ustawiona na true';
 
   @override
-  String get api_error_136 => 'Attempting to post a ad with balance less than minimum required balance.';
+  String get api_error_136 => 'Próba opublikowania ogłoszenia z saldem mniejszym niż minimalne wymagane saldo.';
 
   @override
-  String get api_error_141 => 'Attempting to create a trade for an amount that’s less than the minimum allowed amount';
+  String get api_error_141 => 'Próba utworzenia transakcji na kwotę mniejszą niż minimalna dozwolona kwota';
 
   @override
-  String get api_error_142 => 'Attempting to set a fiat limit that is less than minAmount when creating ad';
+  String get api_error_142 => 'Próba ustawienia stałego limitu, który jest mniejszy niż minAmount podczas tworzenia reklamy';
 
   @override
-  String get api_error_143 => 'Attempting to set a fiat limit that is more than maxAmount when creating ad';
+  String get api_error_143 => 'Próba ustawienia stałego limitu przekraczającego maxAmount podczas tworzenia reklamy';
 
   @override
-  String get api_error_144 => 'Attempting to set a fiat limit that is less than minAmount when updating ad';
+  String get api_error_144 => 'Próba ustawienia stałego limitu, który jest mniejszy niż minAmount podczas aktualizacji reklamy';
 
   @override
-  String get api_error_145 => 'Attempting to set a fiat limit that is more than maxAmount when updating ad';
+  String get api_error_145 => 'Próba ustawienia stałego limitu przekraczającego maxAmount podczas aktualizacji reklamy';
 
   @override
-  String get api_error_147 => 'Attempting to get affiliate data for user that doesn’t have the affiliate program enabled';
+  String get api_error_147 => 'Próba uzyskania danych partnerskich dla użytkownika, który nie ma włączonego programu partnerskiego';
 
   @override
-  String get api_error_148 => 'Attempting to set a telegram ID that’s already set';
+  String get api_error_148 => 'Próba ustawienia identyfikatora telegramu, który jest już ustawiony';
 
   @override
-  String get api_error_149 => 'Priority not specified for external withdrawal';
+  String get api_error_149 => 'Nie określono priorytetu dla wypłaty zewnętrznej';
 
   @override
-  String get api_error_150 => 'Attempting to start a trade on an ad where the requesting user is blocked by the ad poster';
+  String get api_error_150 => 'Próba rozpoczęcia handlu na reklamie, w której żądający użytkownik jest blokowany przez nadawcę reklamy';
 
   @override
-  String get api_error_151 => 'Attempting to start a trade on an ad where the requesting user is not trusted by the ad poster';
+  String get api_error_151 => 'Próba rozpoczęcia handlu na reklamie, w której żądający użytkownik nie jest zaufany przez autora reklamy';
 
   @override
-  String get api_error_152 => 'Attempting to cancel a trade that’s already closed';
+  String get api_error_152 => 'Próba anulowania transakcji, która jest już zamknięta';
 
   @override
-  String get api_error_153 => 'Attempting to release a trade that’s already closed';
+  String get api_error_153 => 'Próba zwolnienia transakcji, która jest już zamknięta';
 
   @override
-  String get api_error_154 => 'Attempting to request trades for an account that doesn’t exist';
+  String get api_error_154 => 'Próba zażądania transakcji dla konta, które nie istnieje';
 
   @override
-  String get api_error_155 => 'Attempting to get list of trusted users for a user that doesn’t exist';
+  String get api_error_155 => 'Próba uzyskania listy zaufanych użytkowników dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_156 => 'Attempting to get list of blocked users for a user that doesn’t exist';
+  String get api_error_156 => 'Próba uzyskania listy zablokowanych użytkowników dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_157 => 'Attempting to set option-specific properties for a non-option ad';
+  String get api_error_157 => 'Próba ustawienia właściwości specyficznych dla opcji dla reklamy bez opcji';
 
   @override
-  String get api_error_158 => 'Attempting to create an option ad without setting option-specific properties';
+  String get api_error_158 => 'Próba utworzenia reklamy opcji bez ustawiania właściwości specyficznych dla opcji';
 
   @override
-  String get api_error_159 => 'User requesting to mark premium payment of trade doesn’t exist';
+  String get api_error_159 => 'Użytkownik proszący o oznaczenie płatności premiowej w handlu nie istnieje';
 
   @override
-  String get api_error_160 => 'Attempting to mark premium paid for a trade that doesn’t exist';
+  String get api_error_160 => 'Próba oznaczenia premii zapłaconej za transakcję, która nie istnieje';
 
   @override
-  String get api_error_161 => 'User requesting to exercise option doesn’t exist';
+  String get api_error_161 => 'Użytkownik proszący o skorzystanie z opcji nie istnieje';
 
   @override
-  String get api_error_162 => 'Attempting to exercise option for a trade that doesn’t exist';
+  String get api_error_162 => 'Próba wykonania opcji na transakcję, która nie istnieje';
 
   @override
-  String get api_error_163 => 'User requesting to confirm premium payment of trade doesn’t exist';
+  String get api_error_163 => 'Użytkownik proszący o potwierdzenie płatności premii w handlu nie istnieje';
 
   @override
-  String get api_error_164 => 'Attempting to confirm premium paid for a trade that doesn’t exist';
+  String get api_error_164 => 'Próba potwierdzenia opłaconej premii za transakcję, która nie istnieje';
 
   @override
-  String get api_error_165 => 'User requesting to exercise trade with net settlement doesn’t exist';
+  String get api_error_165 => 'Użytkownik proszący o wykonanie transakcji z rozliczeniem netto nie istnieje';
 
   @override
-  String get api_error_166 => 'Attempting to exercise with net settlement a trade that doesn’t exist';
+  String get api_error_166 => 'Próba wykonania z rozliczeniem netto transakcji, która nie istnieje';
 
   @override
-  String get api_error_167 => 'The current market price is less than or equal to the exercise price when netting a CALL trade. The trade is out-of-the-money by market standards, therefore cannot be netted. Use normal settlement if needed.';
+  String get api_error_167 => 'Aktualna cena rynkowa jest mniejsza lub równa cenie wykonania przy kompensowaniu transakcji CALL. Handel jest out-of-the-money według standardów rynkowych, dlatego nie może być kompensowany. W razie potrzeby użyj normalnego rozliczenia.';
 
   @override
-  String get api_error_168 => 'User requesting to confirm cover payment of trade doesn’t exist';
+  String get api_error_168 => 'Użytkownik proszący o potwierdzenie pokrycia płatności handlu nie istnieje';
 
   @override
-  String get api_error_169 => 'Attempting to confirm cover paid for a trade that doesn’t exist';
+  String get api_error_169 => 'Próba potwierdzenia pokrycia opłaconego dla transakcji, która nie istnieje';
 
   @override
-  String get api_error_172 => 'Attempting to post an ad where the asset is the same as the ad currency';
+  String get api_error_172 => 'Próba opublikowania reklamy, w której zasób jest taki sam jak waluta reklamy';
 
   @override
-  String get api_error_174 => 'Attempting to exercise out-of-the-money PUT trade';
+  String get api_error_174 => 'Próba skorzystania z transakcji PUT out-of-the-money';
 
   @override
-  String get api_error_175 => 'Attempting to redeem coupon that doesn’t exist during registration';
+  String get api_error_175 => 'Próba zrealizowania kuponu, który nie istnieje podczas rejestracji';
 
   @override
-  String get api_error_176 => 'Attempting to redeem an expired coupon during registration';
+  String get api_error_176 => 'Próba zrealizowania wygasłego kuponu podczas rejestracji';
 
   @override
-  String get api_error_177 => 'Attempting to redeem a coupon that’s out of stock during registration';
+  String get api_error_177 => 'Próba zrealizowania kuponu, którego nie ma w magazynie podczas rejestracji';
 
   @override
-  String get api_error_185 => 'Attempting to get coupons for user that doesn’t exist';
+  String get api_error_185 => 'Próba zdobycia kuponów dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_186 => 'Attempting to get more than 50 ads when getting ads by ID';
+  String get api_error_186 => 'Próba uzyskania ponad 50 reklam podczas pobierania reklam według identyfikatora';
 
   @override
-  String get api_error_187 => 'Attempting to give an empty list of IDs when getting ads by ID';
+  String get api_error_187 => 'Próba podania pustej listy identyfikatorów podczas pobierania reklam według identyfikatora';
 
   @override
-  String get api_error_188 => 'Not a single of the requested ad IDs is a valid ID when getting ads by ID';
+  String get api_error_188 => 'Żaden z żądanych identyfikatorów reklam nie jest prawidłowym identyfikatorem przy otrzymywaniu reklam według identyfikatora';
 
   @override
-  String get api_error_189 => 'Not a single of the requested ads exist when getting ads by ID';
+  String get api_error_189 => 'Żadna z żądanych reklam nie istnieje podczas pobierania reklam według identyfikatora';
 
   @override
-  String get api_error_190 => 'Attempting to give an empty list of IDs when getting trades by ID';
+  String get api_error_190 => 'Próba podania pustej listy identyfikatorów podczas uzyskiwania transakcji według identyfikatora';
 
   @override
-  String get api_error_191 => 'Attempting to get more than 50 ads when getting trades by ID';
+  String get api_error_191 => 'Próba uzyskania ponad 50 reklam podczas uzyskiwania transakcji według ID';
 
   @override
-  String get api_error_192 => 'Not a single of the requested trade IDs is a valid ID when getting trades by ID';
+  String get api_error_192 => 'Żaden z żądanych identyfikatorów transakcji nie jest prawidłowym identyfikatorem podczas uzyskiwania transakcji według identyfikatora';
 
   @override
-  String get api_error_193 => 'Not a single of the requested trades exist when getting trades by ID';
+  String get api_error_193 => 'Żadna z żądanych transakcji nie istnieje podczas uzyskiwania transakcji według ID';
 
   @override
-  String get api_error_194 => 'Attempting to generate public API token for user that doesn’t exist';
+  String get api_error_194 => 'Próba wygenerowania publicznego tokena API dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_195 => 'Incorrect password when attempting to get public API token';
+  String get api_error_195 => 'Nieprawidłowe hasło podczas próby uzyskania publicznego tokena API';
 
   @override
-  String get api_error_196 => 'Attempting to get recent messages for user that doesn’t exist';
+  String get api_error_196 => 'Próba pobrania ostatnich wiadomości dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_197 => 'Attempting to get trade chat messages with “after” timestamp that’s outside of the allowed range';
+  String get api_error_197 => 'Próba otrzymywania wiadomości na czacie handlowym ze znacznikiem czasu „po”, który jest poza dozwolonym zakresem';
 
   @override
-  String get api_error_198 => 'Attempting to get account recent chat messages with “after” timestamp that’s outside of the allowed range';
+  String get api_error_198 => 'Próba uzyskania ostatnich wiadomości na czacie konta z sygnaturą czasową „po”, która jest poza dozwolonym zakresem';
 
   @override
-  String get api_error_199 => 'Attempting to get public API token for user that doesn’t exist';
+  String get api_error_199 => 'Próba uzyskania publicznego tokena API dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_200 => 'Attempting to expire and delete public API token for user without a public API token';
+  String get api_error_200 => 'Próba wygaśnięcia i usunięcia publicznego tokena API dla użytkownika bez publicznego tokena API';
 
   @override
-  String get api_error_201 => 'Attempting to update price formula for ad that doesn’t exist';
+  String get api_error_201 => 'Próba aktualizacji formuły ceny dla reklamy, która nie istnieje';
 
   @override
-  String get api_error_202 => 'Attempting to get account transactions with “after” timestamp that’s outside of the allowed range';
+  String get api_error_202 => 'Próba uzyskania transakcji na koncie ze znacznikiem czasu „po”, który jest poza dozwolonym zakresem';
 
   @override
-  String get api_error_203 => 'Attempting to get reputation import data for account that doesn’t exist';
+  String get api_error_203 => 'Próba uzyskania danych importu reputacji dla konta, które nie istnieje';
 
   @override
-  String get api_error_211 => 'Attempting to approve reputation import for user that doesn’t exist';
+  String get api_error_211 => 'Próba zatwierdzenia importu reputacji użytkownika, który nie istnieje';
 
   @override
-  String get api_error_212 => 'Attempting to approve reputation import for user that isn’t in step 2 of the reputation import flow';
+  String get api_error_212 => 'Próba zatwierdzenia importu reputacji dla użytkownika, który nie znajduje się w kroku 2 przepływu importu reputacji';
 
   @override
-  String get api_error_213 => 'Attempting to deny reputation import for user that doesn’t exist';
+  String get api_error_213 => 'Próba odmowy importu reputacji dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_214 => 'Attempting to deny reputation import for user that isn’t in step 2 of the reputation import flow';
+  String get api_error_214 => 'Próba odmowy importu reputacji dla użytkownika, który nie znajduje się w kroku 2 przepływu importu reputacji';
 
   @override
-  String get api_error_215 => 'Attempting to specify both country_code and currency_code when requesting most popular payment methods';
+  String get api_error_215 => 'Próba podania zarówno kodu kraju, jak i kodu waluty przy żądaniu najpopularniejszych metod płatności';
 
   @override
-  String get api_error_216 => 'Attempting to request most popular payment methods for a country_code that doesn’t exist';
+  String get api_error_216 => 'Próba zażądania najpopularniejszych metod płatności dla nieistniejącego kodu kraju';
 
   @override
-  String get api_error_217 => 'Attempting to request most popular payment methods for a currency_code that doesn’t exist';
+  String get api_error_217 => 'Próba zażądania najpopularniejszych metod płatności dla nieistniejącego kodu waluty';
 
   @override
-  String get api_error_218 => 'Attempting to open a trade on an ad that requires a verified email when the requesting user doesn’t have a verified email';
+  String get api_error_218 => 'Próba otwarcia transakcji na reklamie, która wymaga zweryfikowanego adresu e-mail, gdy użytkownik składający prośbę nie ma zweryfikowanego adresu e-mail';
 
   @override
-  String get api_error_219 => 'Attempting to register with an email that’s from a disposable email provider';
+  String get api_error_219 => 'Próba zarejestrowania się za pomocą wiadomości e-mail pochodzącej od jednorazowego dostawcy poczty e-mail';
 
   @override
-  String get api_error_220 => 'Attempting to change account email to an email from a disposable email provider';
+  String get api_error_220 => 'Próba zmiany adresu e-mail konta na e-mail od jednorazowego dostawcy poczty e-mail';
 
   @override
-  String get api_error_221 => 'Attempting to mark all notifications read for a user that doesn’t exist';
+  String get api_error_221 => 'Próba oznaczenia wszystkich powiadomień jako przeczytanych dla użytkownika, który nie istnieje';
 
   @override
-  String get api_error_222 => 'Attempting to request reputation code for a outside platform account that has already been imported';
+  String get api_error_222 => 'Próba zażądania kodu reputacji dla konta platformy zewnętrznej, które zostało już zaimportowane';
 
   @override
-  String get api_error_223 => 'Attempting to update ad with specifying verificationRequired as true while verificationMsg is null';
+  String get api_error_223 => 'Próba zaktualizowania reklamy z określeniem weryfikacjiWymagane jako prawda, gdy komunikat weryfikacyjny ma wartość null';
 
   @override
-  String get api_error_224 => 'Attempting to update ad with specifying verificationMsg but the ad not requiring verification and the ad update request also not setting verificationRequired as true';
+  String get api_error_224 => 'Próba aktualizacji reklamy z określeniem komunikatu weryfikacyjnego, ale reklama niewymagająca weryfikacji i żądanie aktualizacji reklamy również nie ustawiają weryfikacjiWymagane jako prawda';
 
   @override
-  String get api_error_227 => 'Attempting to sanction a user that doesn’t exist';
+  String get api_error_227 => 'Próba nałożenia sankcji na użytkownika, który nie istnieje';
 
   @override
-  String get api_error_228 => 'Attempting to sanction user with an admin account that doesn’t exist';
+  String get api_error_228 => 'Próba nałożenia sankcji na użytkownika z kontem administratora, które nie istnieje';
 
   @override
-  String get api_error_229 => 'Attempting to remove a sanction from a user that doesn’t exist';
+  String get api_error_229 => 'Próba usunięcia sankcji z użytkownika, który nie istnieje';
 
   @override
-  String get api_error_230 => 'Attempting to remove a sanction from a user with an admin account that doesn’t exist';
+  String get api_error_230 => 'Próba usunięcia sankcji dla użytkownika z kontem administratora, które nie istnieje';
 
   @override
-  String get api_error_231 => 'Attempting to remove a sanction from a user that doesn’t have any sanctions on them';
+  String get api_error_231 => 'Próba usunięcia sankcji z użytkownika, który nie ma na niego żadnych sankcji';
 
   @override
-  String get api_error_232 => 'Attempting to open a trade with a user that’s currently prohibited from trading due to a sanction';
+  String get api_error_232 => 'Próba otwarcia transakcji z użytkownikiem, któremu obecnie nie wolno handlować z powodu sankcji';
 
   @override
-  String get api_error_233 => 'Attempting to remove feedback with ID that doesn’t exist';
+  String get api_error_233 => 'Próba usunięcia opinii z nieistniejącym identyfikatorem';
 
   @override
-  String get api_error_234 => 'Attempting to remove feedback that’s already removed';
+  String get api_error_234 => 'Próba usunięcia opinii, która została już usunięta';
 
   @override
-  String get api_error_235 => 'Attempting to remove dispute status from a trade that doesn’t exist';
+  String get api_error_235 => 'Próba usunięcia statusu sporu z transakcji, która nie istnieje';
 
   @override
-  String get api_error_236 => 'Attempting to remove dispute status from a trade that isn’t disputed';
+  String get api_error_236 => 'Próba usunięcia statusu sporu z transakcji, która nie jest kwestionowana';
 
   @override
-  String get api_error_237 => 'Attempting to open a trade as a user that doesn’t exist when calling the trade opening endpoint as an admin and specifying the openAsUsername parameter';
+  String get api_error_237 => 'Próba otwarcia transakcji jako użytkownik, która nie istnieje podczas wywoływania punktu końcowego otwarcia transakcji jako administrator i określania parametru openAsUsername';
 
   @override
-  String get api_error_240 => 'Invalid address provided by the buyer when responding to a SELL-type ad';
+  String get api_error_240 => 'Nieprawidłowy adres podany przez kupującego w odpowiedzi na ogłoszenie typu SPRZEDAJ';
 
   @override
-  String get api_error_241 => 'Buyer attempting to provide an internal address when responding to a SELL-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+  String get api_error_241 => 'Kupujący próbuje podać adres wewnętrzny w odpowiedzi na reklamę typu SPRZEDAJ (adresy wewnętrzne nie są dozwolone do celów rozliczenia transakcji)';
 
   @override
-  String get api_error_242 => 'Invalid address provided by the buyer when creating a BUY-type ad';
+  String get api_error_242 => 'Nieprawidłowy adres podany przez kupującego podczas tworzenia reklamy typu KUP';
 
   @override
-  String get api_error_244 => 'Invalid address provided by the buyer when updating a BUY-type ad';
+  String get api_error_244 => 'Nieprawidłowy adres podany przez kupującego podczas aktualizacji ogłoszenia typu KUP';
 
   @override
-  String get api_error_245 => 'Buyer attempting to provide an internal address when updating a BUY-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+  String get api_error_245 => 'Kupujący próbuje podać adres wewnętrzny podczas aktualizacji ogłoszenia typu KUP (adresy wewnętrzne nie są dozwolone do celów rozliczenia transakcji)';
 
   @override
-  String get api_error_246 => 'Attempting to start a trade from a BUY-type ad that doesn’t specify the buyer settlement address';
+  String get api_error_246 => 'Próba rozpoczęcia transakcji z reklamy typu KUP, która nie podaje adresu rozliczenia kupującego';
 
   @override
-  String get api_error_247 => 'Attempting to release a trade from an account that’s prohibited from withdrawing due to sanctions';
+  String get api_error_247 => 'Próba zwolnienia transakcji z konta, którego wycofanie jest zabronione z powodu sankcji';
 
   @override
-  String get api_error_248 => 'Attempting to release a trade when the amount of the trade isn’t enough to cover the settlement-related fees';
+  String get api_error_248 => 'Próba zwolnienia transakcji, gdy kwota transakcji nie wystarcza na pokrycie opłat związanych z rozliczeniem';
 
   @override
-  String get api_error_249 => 'Attempting to update a BUY-type ad that doesn’t have buyerSettlementAddress set without setting the buyerSettlementAddress parameter in the update request';
+  String get api_error_249 => 'Próba aktualizacji reklamy typu BUY, która nie ma ustawionego adresu BuyerSettlementAddress bez ustawienia parametru BuyerSettlementAddress w żądaniu aktualizacji';
 
   @override
-  String get api_error_250 => 'Invalid address provided when requesting withdrawal fee for BTC';
+  String get api_error_250 => 'Nieprawidłowy adres podany przy żądaniu opłaty za wypłatę BTC';
 
   @override
-  String get api_error_251 => 'Fee level not provided when opening a trade by responding to a BTC SELL-type ad';
+  String get api_error_251 => 'Poziom opłaty nie został podany podczas otwierania transakcji poprzez odpowiedź na reklamę typu BTC SELL';
 
   @override
-  String get api_error_252 => 'Fee level not provided when creating a BTC BUY-type ad';
+  String get api_error_252 => 'Nie podano poziomu opłaty podczas tworzenia reklamy typu BTC BUY';
 
   @override
-  String get api_error_253 => 'Fee level not provided when updating a BTC BUY-type ad that doesn’t have a fee level set';
+  String get api_error_253 => 'Nie podano poziomu opłaty podczas aktualizacji reklamy typu BTC BUY, która nie ma ustawionego poziomu opłaty';
 
   @override
-  String get api_error_255 => 'Attempting to get notifications with “after” timestamp that’s outside of the allowed range';
+  String get api_error_255 => 'Próba otrzymywania powiadomień ze znacznikiem czasu „po”, który jest poza dozwolonym zakresem';
 
   @override
-  String get api_error_256 => 'Attempting to register a push notification token that already exists';
+  String get api_error_256 => 'Próba zarejestrowania tokenu powiadomienia push, który już istnieje';
 
   @override
-  String get api_error_257 => 'Attempting to register a push notification token that isn’t valid';
+  String get api_error_257 => 'Próba zarejestrowania nieprawidłowego tokena powiadomienia push';
 
   @override
-  String get api_error_258 => 'Attempting to register a push notification token for an account that already has 500 device tokens, delete one of the existing tokens before trying this again';
+  String get api_error_258 => 'Próba zarejestrowania tokena powiadomień wypychanych dla konta, które ma już 500 tokenów urządzeń, usuń jeden z istniejących tokenów przed ponowną próbą';
 
   @override
-  String get api_error_259 => 'Attempting to delete a token that doesn’t exist or doesn’t belong to this user';
+  String get api_error_259 => 'Próba usunięcia tokena, który nie istnieje lub nie należy do tego użytkownika';
 
   @override
-  String get account => 'Account';
+  String get account => 'Rachunek';
 
   @override
-  String get login => 'Login';
+  String get login => 'Zaloguj sie';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Pomijać';
 
   @override
-  String get pin_setup => 'Set up PIN';
+  String get pin_setup => 'Ustaw kod PIN';
 
   @override
-  String get pin_enter_continue => 'Enter PIN to continue';
+  String get pin_enter_continue => 'Wpisz kod PIN, aby kontynuować';
 
   @override
-  String get pin_enter => 'Enter PIN';
+  String get pin_enter => 'Wpisz PIN';
 
   @override
-  String get pin_enter_to_confirm_transaction => 'Enter PIN to confirm transaction';
+  String get pin_enter_to_confirm_transaction => 'Wpisz PIN, aby potwierdzić transakcję';
 
   @override
-  String get pin_you_can_use => 'You can use this PIN to unlock the app.';
+  String get pin_you_can_use => 'Możesz użyć tego kodu PIN do odblokowania aplikacji.';
 
   @override
-  String get pin_confirm => 'Confirm PIN';
+  String get pin_confirm => 'Potwierdź PIN';
 
   @override
-  String get pin_current => 'Current PIN';
+  String get pin_current => 'Aktualny PIN';
 
   @override
-  String get pin_set => 'Set PIN code';
+  String get pin_set => 'Ustaw kod PIN';
 
   @override
-  String get pin_do_not_match => 'PINs don\'t match';
+  String get pin_do_not_match => 'Niezgodne kody PIN';
 
   @override
-  String get pin_second_as_first => 'The PIN you entered the second time doesn\'t match the first one.';
+  String get pin_second_as_first => 'Kod PIN wprowadzony po raz drugi nie pasuje do pierwszego.';
 
   @override
-  String get pin_wrong_current => 'Wrong current PIN';
+  String get pin_wrong_current => 'Nieprawidłowy aktualny PIN';
 
   @override
-  String get pin_please_input_correct => 'Please input correct current PIN.';
+  String get pin_please_input_correct => 'Wprowadź poprawny aktualny kod PIN.';
 
   @override
-  String get enter_email => 'Enter email';
+  String get enter_email => 'Wprowadź e-mail';
 
   @override
-  String get convert => 'Convert';
+  String get convert => 'Konwertować';
 
   @override
-  String get recent_transactions => 'Recent transactions';
+  String get recent_transactions => 'Ostatnie tranzakcje';
 
   @override
-  String get transactions_30_days => 'Transactions for the last 30 days';
+  String get transactions_30_days => 'Transakcje z ostatnich 30 dni';
 
   @override
-  String get forgot_password => 'Forgot password?';
+  String get forgot_password => 'Zapomniałeś hasła?';
 
   @override
-  String get password_have_changed => 'Password have changed.';
+  String get password_have_changed => 'Hasło zostało zmienione.';
 
   @override
-  String get i_want_to_buy => 'I want to buy';
+  String get i_want_to_buy => 'chcę kupić';
 
   @override
-  String get error_password_reset_token_invalid => 'Token provided for password reset is invalid';
+  String get error_password_reset_token_invalid => 'Token dostarczony do zresetowania hasła jest nieprawidłowy';
 
   @override
-  String get error_password_reset_unverified_email => 'Trying reset a password for a user with an unverified email';
+  String get error_password_reset_unverified_email => 'Próbuję zresetować hasło użytkownika z niezweryfikowanym adresem e-mail';
 
   @override
-  String get i_want_to_buy_new => 'I want to buy';
+  String get i_want_to_buy_new => 'chcę kupić';
 
   @override
-  String get new_password => 'New password (8-72 characters)';
+  String get new_password => 'Nowe hasło (8-72 znaków)';
 
   @override
-  String get i_want_to_sell => 'I want to sell';
+  String get i_want_to_sell => 'chcę sprzedać';
 
   @override
-  String get log_in_to_start_trading => 'Log in to start trading';
+  String get log_in_to_start_trading => 'Zaloguj się, aby rozpocząć handel';
 
   @override
-  String get why_do_you_need_my_email => 'Why do you need my email?';
+  String get why_do_you_need_my_email => 'Dlaczego potrzebujesz mojego e-maila?';
 
   @override
-  String get view_all_transactions => 'View all transactions';
+  String get view_all_transactions => 'Zobacz wszystkie transakcje';
 
   @override
-  String get email_is_used_to => 'Email is used to recover your password or send you email notifications. Your email will be checked against a third-party database of disposable email providers.';
+  String get email_is_used_to => 'E-mail służy do odzyskiwania hasła lub wysyłania powiadomień e-mail. Twoja poczta e-mail zostanie porównana z zewnętrzną bazą danych jednorazowych dostawców poczty e-mail.';
 
   @override
-  String get email_verified => 'Email is verified.';
+  String get email_verified => 'E-mail został zweryfikowany.';
 
   @override
-  String get email_verification_error => 'Email verification error.';
+  String get email_verification_error => 'Błąd weryfikacji adresu e-mail.';
 
   @override
-  String get email_token_error => 'Token or email are wrong. Email was not verified.';
+  String get email_token_error => 'Token lub e-mail są nieprawidłowe. E-mail nie został zweryfikowany.';
 
   @override
-  String get welcome_screen_about => 'Safe and easy-to-use person-to-person platform for trading local currency for Bitcoin and Monero.';
+  String get welcome_screen_about => 'Bezpieczna i łatwa w użyciu platforma typu „osoba do osoby” do handlu lokalną walutą za Bitcoin i Monero.';
 
   @override
-  String get view_in_block_explorer => 'View in block explorer';
+  String get view_in_block_explorer => 'Zobacz w eksploratorze bloków';
 
   @override
-  String get welcome_pick_a_payment_method => 'Pick a payment method or choose from all the available offers.';
+  String get welcome_pick_a_payment_method => 'Wybierz metodę płatności lub wybierz spośród wszystkich dostępnych ofert.';
 
   @override
-  String get welcome_buy_press_buy => 'Press BUY to start the trade.';
+  String get welcome_buy_press_buy => 'Naciśnij KUP, aby rozpocząć handel.';
 
   @override
-  String get welcome_buy_follow_the_sellers => 'Follow the seller\'s instructions in the trade chat!';
+  String get welcome_buy_follow_the_sellers => 'Postępuj zgodnie z instrukcjami sprzedającego na czacie handlowym!';
 
   @override
-  String get welcome_sell_go_to_wallet => 'Go to your wallet and deposit your coins.';
+  String get welcome_sell_go_to_wallet => 'Przejdź do portfela i wpłać swoje monety.';
 
   @override
-  String get welcome_sell_press_sell => 'Press SELL to start the trade.';
+  String get welcome_sell_press_sell => 'Naciśnij SPRZEDAJ, aby rozpocząć handel.';
 
   @override
-  String get welcome_sell_follow_the_buyer => 'Follow the buyer\'s instructions in the trade chat!';
+  String get welcome_sell_follow_the_buyer => 'Postępuj zgodnie z instrukcjami kupującego na czacie handlowym!';
 
   @override
-  String get get_started => 'Get started';
+  String get get_started => 'Zaczynaj';
 
   @override
-  String get send_to => 'Send to';
+  String get send_to => 'Wysłać do';
 
   @override
-  String get error_only_numbers_are_possible => 'Only numbers are possible.';
+  String get error_only_numbers_are_possible => 'Możliwe są tylko liczby.';
 
   @override
-  String get error_entered_greater_than_balance => 'The entered value is greater than the balance.';
+  String get error_entered_greater_than_balance => 'Wprowadzona wartość jest większa niż saldo.';
 
   @override
-  String get amount_to_receive => 'Amount to receive';
+  String get amount_to_receive => 'Kwota do otrzymania';
 
   @override
-  String get amount_to_send => 'Amount to send';
+  String get amount_to_send => 'Kwota do wysłania';
 
   @override
   String your_deposit_address(Object asset) {
-    return 'Your $asset deposit address';
+    return 'Twój adres wpłaty $asset';
   }
 
   @override
   String pending(Object num1, Object num2) {
-    return 'Pending ($num1/$num2)';
+    return 'Oczekujące ($num1/$num2)';
   }
 
   @override
-  String get preview => 'Preview';
+  String get preview => 'Zapowiedź';
 
   @override
-  String get close => 'Close';
+  String get close => 'Blisko';
 
   @override
-  String get deposit => 'Deposit';
+  String get deposit => 'Kaucja';
 
   @override
-  String get share => 'Share';
+  String get share => 'Dzielić';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Edytować';
 
   @override
-  String get confirm_transaction => 'Confirm transaction';
+  String get confirm_transaction => 'Potwierdź transakcję';
 
   @override
-  String get transaction_fee => 'Transaction fee';
+  String get transaction_fee => 'Opłata transakcyjna';
 
   @override
-  String get show_qr_code => 'Show QR code';
+  String get show_qr_code => 'Pokaż kod QR';
 
   @override
-  String get security => 'Security';
+  String get security => 'Bezpieczeństwo';
 
   @override
-  String get no_pending_deposits => 'No pending deposits';
+  String get no_pending_deposits => 'Brak oczekujących depozytów';
 
   @override
-  String get create_pin => 'Create PIN';
+  String get create_pin => 'Utwórz PIN';
 
   @override
-  String get change_pin => 'Change PIN';
+  String get change_pin => 'Zmień PIN';
 
   @override
-  String get remove_pin => 'Remove PIN';
+  String get remove_pin => 'Usuń kod PIN';
 
   @override
-  String get remove_pin_message_success => 'PIN removed';
+  String get remove_pin_message_success => 'Usunięto kod PIN';
 
   @override
-  String get you_will_receive => 'You will receive';
+  String get you_will_receive => 'Otrzymacie';
 
   @override
-  String get total_amount_to_send => 'Total amount to send';
+  String get total_amount_to_send => 'Całkowita kwota do wysłania';
 
   @override
-  String get enter_amount_to_receive_without_fee => 'Enter amount to be received (w/o fee)';
+  String get enter_amount_to_receive_without_fee => 'Wprowadź kwotę do otrzymania (bez opłat)';
 
   @override
-  String get enter_amount_to_receive_with_fee => 'Enter amount to be deducted (with fee)';
+  String get enter_amount_to_receive_with_fee => 'Wpisz kwotę do odliczenia (z opłatą)';
 
   @override
-  String get return_reserve_from_trade => 'Return reserve from trade';
+  String get return_reserve_from_trade => 'Rezerwa zwrotu z handlu';
 
   @override
-  String get user_profile => 'User profile';
+  String get user_profile => 'Profil użytkownika';
 
   @override
-  String get personal_introduction => 'Personal introduction';
+  String get personal_introduction => 'Osobiste wprowadzenie';
 
   @override
-  String get trading_reputation_on_other_platforms => 'Trading reputation on other platforms';
+  String get trading_reputation_on_other_platforms => 'Reputacja handlowa na innych platformach';
 
   @override
-  String get how_to_link_my_account => 'How to link my account?';
+  String get how_to_link_my_account => 'Jak połączyć moje konto?';
 
   @override
   String link_account(Object platform) {
-    return 'Link $platform account';
+    return 'Połącz konto {platforma}';
   }
 
   @override
   String what_is_your_username(Object platform) {
-    return 'What is your username on $platform?';
+    return 'Jaka jest Twoja nazwa użytkownika na {platformie}?';
   }
 
   @override
-  String get enter_username => 'Enter username';
+  String get enter_username => 'Wpisz nazwę użytkownika';
 
   @override
-  String get edit_personal_introduction => 'Edit personal introduction';
+  String get edit_personal_introduction => 'Edytuj osobiste wprowadzenie';
 
   @override
-  String get your_info => 'Your info';
+  String get your_info => 'Twoje informacje';
 
   @override
-  String get website => 'Website';
+  String get website => 'Stronie internetowej';
 
   @override
-  String get are_you_sure => 'Are you sure?';
+  String get are_you_sure => 'Jesteś pewny?';
 
   @override
-  String get no_trusted_users_yet => 'No trusted users yet.';
+  String get no_trusted_users_yet => 'Brak zaufanych użytkowników.';
 
   @override
-  String get no_blocked_users_yet => 'No blocked users yet.';
+  String get no_blocked_users_yet => 'Brak zablokowanych użytkowników.';
 
   @override
-  String get no_transactions_yet => 'No transactions yet.';
+  String get no_transactions_yet => 'Brak transakcji.';
 
   @override
-  String get web_links => 'Web links';
+  String get web_links => 'linki internetowe';
 
   @override
-  String get tor_links => 'Tor links';
+  String get tor_links => 'Linki do Tora';
 
   @override
-  String get i2p_links => 'I2P links';
+  String get i2p_links => 'Łącza I2P';
 
   @override
-  String get active_coupons => 'Active coupons';
+  String get active_coupons => 'Aktywne kupony';
 
   @override
-  String get expired_coupons => 'Expired coupons';
+  String get expired_coupons => 'Wygasłe kupony';
 
   @override
-  String get hide_expired_coupons => 'Hide expired coupons';
+  String get hide_expired_coupons => 'Ukryj wygasłe kupony';
 
   @override
-  String get show_expired_coupons => 'Show expired coupons';
+  String get show_expired_coupons => 'Pokaż wygasłe kupony';
 
   @override
-  String get terms_and_conditions => 'Terms and conditions';
+  String get terms_and_conditions => 'Zasady i warunki';
 
   @override
-  String get current_email => 'Current email';
+  String get current_email => 'Bieżący e-mail';
 
   @override
-  String get remove_email => 'Remove email';
+  String get remove_email => 'Usuń e-mail';
 
   @override
-  String get email_not_received_content => 'If you have not received the verification email, please check your “Spam” folder or';
+  String get email_not_received_content => 'Jeśli nie otrzymałeś e-maila weryfikacyjnego, sprawdź folder „Spam” lub';
 
   @override
-  String get email_not_received_link => 'click here to resend the email.';
+  String get email_not_received_link => 'kliknij tutaj, aby ponownie wysłać wiadomość e-mail.';
 
   @override
-  String get email_confirm_delete => 'Confirm email delete';
+  String get email_confirm_delete => 'Potwierdź usunięcie e-maila';
 
   @override
-  String get email_deleted => 'Email deleted.';
+  String get email_deleted => 'E-mail został usunięty.';
 
   @override
   String email_confirmation_we_ve_sent_an_email(Object email) {
-    return 'We’ve sent an email to $email. Click the link in the email to verify your email address.';
+    return 'Wysłaliśmy e-maila na adres $email. Kliknij link w wiadomości e-mail, aby zweryfikować swój adres e-mail.';
   }
 
   @override
   String app_staff(Object appName) {
-    return '$appName staff';
+    return 'Personel FRONT_TYPE';
   }
 
   @override
-  String get current_password => 'Current password';
+  String get current_password => 'Aktualne hasło';
 
   @override
-  String get save_your_backup_code => 'Save your backup code';
+  String get save_your_backup_code => 'Zapisz kod zapasowy';
 
   @override
-  String get your_backup_code => 'Your backup code';
+  String get your_backup_code => 'Twój kod zapasowy';
 
   @override
-  String get set_up_2fa => 'Set up 2FA';
+  String get set_up_2fa => 'Skonfiguruj 2FA';
 
   @override
-  String get download_2fa => 'Download a 2FA app. Copy the code below and paste it into your 2FA app.';
+  String get download_2fa => 'Pobierz aplikację 2FA. Skopiuj poniższy kod i wklej go do swojej aplikacji 2FA.';
 
   @override
-  String get paste_code => 'Paste code';
+  String get paste_code => 'Wklej kod';
 
   @override
-  String get code_valid => 'Code valid';
+  String get code_valid => 'Kod ważny';
 
   @override
-  String get verifying_the_code => 'Verifying the code...';
+  String get verifying_the_code => 'Weryfikuję kod...';
 
   @override
-  String get language => 'Language';
+  String get language => 'Język';
 
   @override
-  String get my_profile => 'My profile';
+  String get my_profile => 'Mój profil';
 
   @override
-  String get choose_ad_default_region => 'Choose ad default region';
+  String get choose_ad_default_region => 'Wybierz domyślny region reklamy';
 
   @override
-  String get knowledge_base => 'Knowledge base';
+  String get knowledge_base => 'Baza wiedzy';
 
   @override
-  String get report_this_ad => 'Report this ad';
+  String get report_this_ad => 'Zgłoś tę reklamę';
 
   @override
-  String get cash_only => 'Cash only';
+  String get cash_only => 'Tylko gotówka';
 
   @override
-  String get dispute_started => 'Dispute started';
+  String get dispute_started => 'Rozpoczęto spór';
 
   @override
-  String get payment_info => 'Payment info';
+  String get payment_info => 'Informacje o płatności';
 
   @override
-  String get trade_ad => 'Trade ad';
+  String get trade_ad => 'Reklama handlowa';
 
   @override
-  String get ask_delete_ad => 'Are you sure you want to delete this ad?';
+  String get ask_delete_ad => 'Czy na pewno chcesz usunąć tę reklamę?';
 
   @override
-  String get general => 'General';
+  String get general => 'Ogólny';
 
   @override
-  String get final_price => 'Final price';
+  String get final_price => 'Cena ostateczna';
 
   @override
-  String get use_price_formula_to_calculate => 'Use price formula to calculate';
+  String get use_price_formula_to_calculate => 'Użyj formuły ceny, aby obliczyć';
 
   @override
-  String get enter_price_formula => 'Enter price formula';
+  String get enter_price_formula => 'Wprowadź formułę ceny';
 
   @override
-  String get trade_limits => 'Trade limits (optional)';
+  String get trade_limits => 'Limity handlowe (opcjonalnie)';
 
   @override
-  String get trade_details => 'Trade details (optional)';
+  String get trade_details => 'Dane handlowe (opcjonalnie)';
 
   @override
-  String get reply => 'Reply';
+  String get reply => 'Odpowiedź';
 
   @override
-  String get trade_loading_failed => 'Trade loading failed, please check connection.';
+  String get trade_loading_failed => 'Ładowanie transakcji nie powiodło się, sprawdź połączenie.';
 
   @override
-  String get dark_theme => 'Dark theme';
+  String get dark_theme => 'ciemny schemat';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Agree to terms and continue';
@@ -8319,44 +8319,44 @@ class I18nPl extends I18n {
 
   @override
   String search__no_results(Object country) {
-    return 'No results in $country with the selected criteria... yet. ';
+    return 'Brak wyników w $country z wybranymi kryteriami... jeszcze. ';
   }
 
   @override
   String get logout250Sbtitle => 'Log out';
 
   @override
-  String get affiliate__explain_is_reg => 'Affiliation is registered when any user signs up after landing on the site from a link with your referral code.';
+  String get affiliate__explain_is_reg => 'Przynależność jest rejestrowana, gdy jakikolwiek użytkownik zarejestruje się po wejściu na stronę z linku z Twoim kodem polecającym.';
 
   @override
-  String get affiliate__ref_code_title => 'Your referral code';
+  String get affiliate__ref_code_title => 'Twój kod polecający';
 
   @override
   String affiliate__users__text(Object number) {
-    return 'You are currently registered as an affiliate for $number users and will earn commissions from all trades done by these.';
+    return 'Jesteś obecnie zarejestrowany jako partner dla $number użytkowników i będziesz otrzymywać prowizje od wszystkich transakcji dokonanych przez nich.';
   }
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• You can link to any individual page, such as country listing or payment method listing, or anything else on $appName. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your $appName wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for $appName (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• $appName has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.';
+    return '• Możesz umieścić link do dowolnej strony, takiej jak kraj, informacja o metodzie płatności lub cokolwiek innego na FRONT_TYPE.\n• Będziesz zarabiać kryptowalutę od użytkowników, którzy dotrą do witryny za pośrednictwem Twojego rejestru linków partnerskich i dokonają transakcji.\n• Wypłaty będą dokonywane codziennie na Twój portfel FRONT_TYPE w odpowiednich kryptowalutach.\n• Prowizje będą wypłacane przez rok od rejestracji użytkownika. Prowizja jest oparta na dochodach, jakie nowy użytkownik przynosi za FRONT_TYPE (opłaty transakcyjne).\n• Wszelkie nieczyste zagrania, takie jak wprowadzająca w błąd reklama, są zabronione.\n• Spamowanie jest zabronione. Spamowanie obejmuje wysyłanie niesubskrybowanych prywatnych lub publicznych wiadomości na forach/reddicie, niesubskrybowanej poczty masowej itp.\n• Dodawanie ukrytych ramek iframe na stronie internetowej w celu przechwycenia partnerów jest zabronione. Dozwolone są tylko powiązane elementy iframe lub bezpośrednie linki do strony internetowej.\n• FRONT_TYPE ma prawo w dowolnym momencie wyłączyć dowolnego użytkownika stowarzyszonego. Jeśli złamiesz warunki, Twój program partnerski zostanie zakończony.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'You get two users, buyer and seller of the $assetName registered on $appName, and they do one trade valued 100 $assetSymbol. You earn 20% commission on the $appName trading fees from both participants, in total 40% of the $appName fee.\n\nYour earned sum is 0.4 $assetSymbol. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\n$appName support is more than willing to help you with any questions.';
+    return 'Otrzymujesz dwóch użytkowników, kupującego i sprzedającego $assetName, zarejestrowanych na FRONT_TYPE, którzy wykonują jedną transakcję o wartości 100 $assetSymbol. Zarabiasz 20% prowizji od opłat transakcyjnych FRONT_TYPE od obu uczestników, łącznie 40% opłaty FRONT_TYPE.\n\nTwoja zarobiona suma wynosi 0,4 $assetSymbol. Liczą się tylko sfinalizowane sprzedaże, które przechodzą przez nasz proces transakcyjny. Wypłaty dokonywane są codziennie.\n\nZespół pomocy FRONT_TYPE chętnie odpowie na wszelkie pytania.';
   }
 
   @override
-  String get affiliate__enable_btn => 'Enable affiliate program';
+  String get affiliate__enable_btn => 'Włącz program partnerski';
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag $ref_code to any $appName URL.';
+    return 'Twój program partnerski jest włączony i możesz zarabiać prowizje, dodając swój tag partnerski $ref_code do dowolnego adresu URL FRONT_TYPE.';
   }
 
   @override
   String reputation_import__step__username__input__label(Object platform) {
-    return 'Your $platform username';
+    return 'Twoja nazwa użytkownika {platformy}';
   }
 
   @override
@@ -8364,294 +8364,294 @@ class I18nPl extends I18n {
 
   @override
   String reputation_import__step__code__message(Object platform) {
-    return 'Add this code somewhere on your public $platform profile. Once we\'ve verified the code, you can remove it.';
+    return 'Dodaj ten kod gdzieś w swoim publicznym profilu $platform. Po zweryfikowaniu kodu możesz go usunąć.';
   }
 
   @override
   String settings__homepage_tip(Object example_url) {
-    return 'Shown on your public profile. Only valid URL accepted (e.g. https://$example_url)';
+    return 'Wyświetlane w Twoim profilu publicznym. Akceptowane są tylko prawidłowe adresy URL (np. https://$example_url)';
   }
 
   @override
-  String get settings__personal_info_tip => 'Shown on your public profile. Maximum 65536 characters. Can use markdown for styling.';
+  String get settings__personal_info_tip => 'Wyświetlane w Twoim profilu publicznym. Maksymalnie 65536 znaków. Może używać przecen do stylizacji.';
 
   @override
-  String get settings__personal_info_tip_1 => 'Shown on your public profile. Maximum 65536 characters.';
+  String get settings__personal_info_tip_1 => 'Wyświetlane w Twoim profilu publicznym. Maksymalnie 65536 znaków.';
 
   @override
-  String get coupons__coupon__type_here => 'Type your coupon here';
+  String get coupons__coupon__type_here => 'Wpisz swój kupon tutaj';
 
   @override
-  String get trade__mark_pay_according => ' Pay according to the payment details shown below. If you have any questions, ask the seller in the chat.';
+  String get trade__mark_pay_according => ' Zapłać zgodnie ze szczegółami płatności podanymi poniżej. Jeśli masz jakieś pytania, zapytaj sprzedawcę na czacie.';
 
   @override
-  String get dashboard__trade__status__open => 'Open';
+  String get dashboard__trade__status__open => 'otwarty';
 
   @override
-  String get wallet__available_balance => 'Available Balance';
+  String get wallet__available_balance => 'Dostępne saldo';
 
   @override
-  String get trade__dialog__confirm_release_monero_text_password => 'This password is used as the offset to generate the non-custodial settlement wallet and sign the transaction. LocalMonero will have no way of recovering the wallet if you lose this password.';
+  String get trade__dialog__confirm_release_monero_text_password => 'To hasło jest używane jako offset w celu wygenerowania portfela rozliczeniowego bez powiernictwa i podpisania transakcji. LocalMonero nie będzie mieć możliwości odzyskania portfela, jeśli zgubisz to hasło.';
 
   @override
-  String get dont_have_an_account_yet => 'Don\'t have an account yet?';
+  String get dont_have_an_account_yet => 'Nie masz jeszcze konta?';
 
   @override
-  String get app_trades => 'Trades';
+  String get app_trades => 'Transakcje';
 
   @override
-  String get app_unlimited => 'Unlimited';
+  String get app_unlimited => 'Nieograniczony';
 
   @override
-  String get app_guides => 'Guides';
+  String get app_guides => 'Przewodniki';
 
   @override
-  String get app_edit_this_ad => 'Edit this ad';
+  String get app_edit_this_ad => 'Edytuj tę reklamę';
 
   @override
-  String get app_you_can_use_markdown => 'You can use markdown to style your ad\'s terms (images not allowed).';
+  String get app_you_can_use_markdown => 'Możesz użyć przecen do stylizacji haseł reklamy (niedozwolone obrazy).';
 
   @override
-  String get app_no_trades_to_export => 'No trades to export.';
+  String get app_no_trades_to_export => 'Brak transakcji do eksportu.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. $appName will not be able to help you should you lose this code.';
+    return 'Zapisz kod zapasowy (powyżej na zielono) na kartce papieru i przechowuj go w bezpiecznym miejscu. Będziesz go potrzebować, jeśli zgubisz telefon lub stracisz dostęp do konta. FRONT_TYPE nie będzie w stanie Ci pomóc, jeśli zgubisz ten kod.';
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => 'Before creating an advertisement please read through our ';
+  String get ad_post_ad_rules_text_0 => 'Przed utworzeniem ogłoszenia prosimy o zapoznanie się z naszymi ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Beware of scammers trying to impersonate staff! \n${appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
+    return 'Uważaj na oszustów próbujących podszyć się pod personel!\nAdministratorzy FRONT_TYPE nigdy nie powiedzą Ci, aby sfinalizować transakcję.\nWiadomości personelu mają czerwone tło.';
   }
 
   @override
   String app_buy_sell(Object val) {
-    return 'How much do you wish to $val?';
+    return 'Ile chcesz $val?';
   }
 
   @override
   String app_buyer_marked_as_paid(Object val) {
-    return '$val has marked the trade as paid';
+    return '$val oznaczył transakcję jako opłaconą';
   }
 
   @override
   String app_buy_crypto_from(Object val) {
-    return 'Buy crypto from $val';
+    return 'Kup krypto od $val';
   }
 
   @override
   String app_sell_crypto_to(Object val) {
-    return 'Sell crypto to $val';
+    return 'Sprzedaj krypto do $val';
   }
 
   @override
   String app_trades_with(Object val) {
-    return 'See trades with $val';
+    return 'Zobacz transakcje z $val';
   }
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '($val1 will be able to cancel in $val2 min unless you mark paid)';
+    return '($val1 będzie mógł anulować za $val2 min, chyba że oznaczysz jako zapłacone)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val is now able to cancel unless you mark paid)';
+    return '($val może teraz anulować, chyba że oznaczysz jako zapłacone)';
   }
 
   @override
   String app_buying_from(Object asset, Object amount, Object username) {
-    return 'Buying $asset $amount from $username';
+    return 'Kupowanie $asset $amount od $username';
   }
 
   @override
   String app_selling_to(Object asset, Object amount, Object username) {
-    return 'Selling $asset $amount to $username';
+    return 'Sprzedaje $asset $amount użytkownikowi $username';
   }
 
   @override
   String app_for_sum(Object val) {
-    return 'for $val';
+    return 'za $val';
   }
 
   @override
-  String get app_buy_crypto => 'Buy crypto from';
+  String get app_buy_crypto => 'Kup krypto od';
 
   @override
-  String get app_sell_crypto => 'Sell crypto to';
+  String get app_sell_crypto => 'Sprzedaj krypto do';
 
   @override
-  String get app_intall_trade_title => 'Please install AgoraDesk to view this trade';
+  String get app_intall_trade_title => 'Aby wyświetlić tę transakcję, zainstaluj AgoraDesk';
 
   @override
-  String get app_intall_ad_title => 'Please install AgoraDesk to view this ad';
+  String get app_intall_ad_title => 'Aby wyświetlić tę reklamę, zainstaluj AgoraDesk';
 
   @override
-  String get app_intall_trade_body => 'This is a Bitcoin-based trade, it requires our AgoraDesk app to view.';
+  String get app_intall_trade_body => 'Jest to transakcja oparta na Bitcoinie, wymaga naszej aplikacji AgoraDesk do wyświetlenia.';
 
   @override
-  String get app_intall_ad_body => 'This is a Bitcoin-based ad, it requires our AgoraDesk app to view.';
+  String get app_intall_ad_body => 'Jest to reklama oparta na Bitcoinie, do jej wyświetlenia wymagana jest nasza aplikacja AgoraDesk.';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => 'Never finalize a trade until you are 100% sure you have received the money. Scammers will try to trick you into finalizing early.';
+  String get app_trade_option_payment_receiver_cancel_notice => 'Nigdy nie finalizuj transakcji, dopóki nie będziesz w 100% pewien, że otrzymałeś pieniądze. Oszuści będą próbowali nakłonić Cię do wcześniejszego sfinalizowania.';
 
   @override
-  String get app_cancel_trade_message => 'Made a mistake or want to try another trader? If you have transferred the funds already and want to cancel now, you need to negotiate the return of your payment with your trading partner by yourself. Never cancel unless you are sure you have received your money back.';
+  String get app_cancel_trade_message => 'Popełniłeś błąd lub chcesz wypróbować innego tradera? Jeśli już przesłałeś środki i chcesz teraz je anulować, musisz samodzielnie wynegocjować zwrot płatności ze swoim partnerem handlowym. Nigdy nie anuluj, chyba że masz pewność, że otrzymałeś zwrot pieniędzy.';
 
   @override
-  String get app_all_feedback => 'All feedback';
+  String get app_all_feedback => 'Wszystkie opinie';
 
   @override
-  String get app_camera => 'Camera';
+  String get app_camera => 'Aparat fotograficzny';
 
   @override
-  String get app_clear => 'Clear';
+  String get app_clear => 'Jasne';
 
   @override
-  String get app_ad_deleted => 'Ad deleted';
+  String get app_ad_deleted => 'Reklama usunięta';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'This is your verification code. You can tell it to the buyer so that the buyer can verify you’ve finalized the trade without them needing to use the device.';
+  String get app_verifiacetion_code_to_seller => 'To jest Twój kod weryfikacyjny. Możesz powiedzieć to kupującemu, aby mógł zweryfikować, że sfinalizowałeś transakcję, bez konieczności korzystania z urządzenia.';
 
   @override
-  String get app_verification_code => 'Verification code';
+  String get app_verification_code => 'Kod weryfikacyjny';
 
   @override
-  String get app_ad => 'Ad';
+  String get app_ad => 'Ogłoszenie';
 
   @override
-  String get app_with => 'with';
+  String get app_with => 'z';
 
   @override
-  String get app_edited => 'Edited';
+  String get app_edited => 'Edytowane';
 
   @override
-  String get app_permanent => 'Permanent';
+  String get app_permanent => 'Stały';
 
   @override
-  String get app_error_saving => 'Error during saving. Changes wasn\'t save.';
+  String get app_error_saving => 'Błąd podczas zapisywania. Zmiany nie zostały zapisane.';
 
   @override
-  String get app_manage_ads => 'Manage ads';
+  String get app_manage_ads => 'Zarządzaj reklamami';
 
   @override
-  String get app_vacation_enabled => 'Vacation enabled';
+  String get app_vacation_enabled => 'Włączone wakacje';
 
   @override
-  String get app_trade_created => 'Trade created';
+  String get app_trade_created => 'Utworzono handel';
 
   @override
-  String get app_session_expired => 'Session expired';
+  String get app_session_expired => 'Sesja wygasła';
 
   @override
-  String get app_anonymous_crash_diagnostics => 'Anonymous crash diagnostics';
+  String get app_anonymous_crash_diagnostics => 'Anonimowa diagnostyka awarii';
 
   @override
-  String get app_restart_now => 'Restart now';
+  String get app_restart_now => 'Zrestartuj teraz';
 
   @override
-  String get app_postpone => 'Postpone';
+  String get app_postpone => 'Odłożyć';
 
   @override
-  String get app_biometric_authentication => 'Biometric authentication';
+  String get app_biometric_authentication => 'Uwierzytelnianie biometryczne';
 
   @override
-  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
+  String get app_biometric_authentication_message => 'Ustaw kod PIN, aby włączyć uwierzytelnianie biometryczne.';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
+  String get app_anonymous_crash_diagnostics_restart => 'Anonimowa diagnostyka awarii została wyłączona i nie zostanie wysłana po ponownym uruchomieniu aplikacji.';
 
   @override
-  String get app_trading_partners => 'Trading partners';
+  String get app_trading_partners => 'Partnerów handlowych';
 
   @override
-  String get app_trade_status_settlement_processing_description => 'The settlement is being processed. Please wait, there\'s nothing that you need to do.';
+  String get app_trade_status_settlement_processing_description => 'Trwa przetwarzanie ugody. Proszę czekać, nie musisz nic robić.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => 'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.';
+  String get app_buyer_settlement_fee_level_description => 'Wybierz poziom opłaty, który będzie używany podczas rozliczenia handlu. Przedstawione tutaj wartości są bieżącymi szacunkami kursów i mogą różnić się od tych stosowanych podczas rozliczenia transakcji. Jeżeli kwota transakcji będzie zbyt niska, aby rozliczyć transakcję z wybranym poziomem opłaty, podczas rozliczenia zostanie automatycznie wybrany niższy poziom opłaty.';
 
   @override
-  String get app_change_vacation_settings => 'Change vacation settings.';
+  String get app_change_vacation_settings => 'Zmień ustawienia wakacji.';
 
   @override
-  String get app_gallery => 'Gallery';
+  String get app_gallery => 'Galeria';
 
   @override
-  String get app_via => 'via';
+  String get app_via => 'przez';
 
   @override
-  String get app_one_percent => '1% fee';
+  String get app_one_percent => '1% opłaty';
 
   @override
-  String get app_final_amount => 'Final amount';
+  String get app_final_amount => 'Końcowa kwota';
 
   @override
   String app_note_label(Object val) {
-    return 'Your note on $val (only seen by you)';
+    return 'Twoja notatka z dnia $val (widziana tylko przez Ciebie)';
   }
 
   @override
   String app_note_add(Object val) {
-    return 'Add a note on $val';
+    return 'Dodaj notatkę o $val';
   }
 
   @override
   String app_update_new_version_available(Object val) {
-    return 'New version $val is available.';
+    return 'Dostępna jest nowa wersja $val.';
   }
 
   @override
-  String get app_update_now => 'Update now';
+  String get app_update_now => 'Aktualizuj teraz';
 
   @override
-  String get app_update_ingnor_until_next => 'Ignore until next update';
+  String get app_update_ingnor_until_next => 'Ignoruj do następnej aktualizacji';
 
   @override
-  String get app_update_ignore_always => 'Always ignore';
+  String get app_update_ignore_always => 'Zawsze ignoruj';
 
   @override
-  String get app_tooltip_visibility => 'Tap to toggle visibility';
+  String get app_tooltip_visibility => 'Dotknij, aby przełączyć widoczność';
 
   @override
-  String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
+  String get app_tooltip_long_press_ad => 'Naciśnij i przytrzymaj reklamę, aby włączyć edycję grupy';
 
   @override
-  String get app_join_telegram => 'Join Telegram group';
+  String get app_join_telegram => 'Dołącz do grupy Telegram';
 
   @override
-  String get app_join_matrix => 'Join Matrix group';
+  String get app_join_matrix => 'Dołącz do grupy Matrix';
 
   @override
-  String get app_display_password => 'Display password';
+  String get app_display_password => 'Wyświetl hasło';
 
   @override
-  String get app_hide_password => 'Hide password';
+  String get app_hide_password => 'Ukryj hasło';
 
   @override
-  String get app_trade_has_been_cancelled => 'The trade has been cancelled.';
+  String get app_trade_has_been_cancelled => 'Transakcja została anulowana.';
 
   @override
   String app_last_seen(Object val) {
-    return 'Last seen $val';
+    return 'Ostatnio widziany $val';
   }
 
   @override
-  String get app_open_additional_filters => 'Open additional filters';
+  String get app_open_additional_filters => 'Otwórz dodatkowe filtry';
 
   @override
-  String get app_select_asset => 'Select asset';
+  String get app_select_asset => 'Wybierz zasób';
 
   @override
-  String get app_select_trade_type => 'Select trade type';
+  String get app_select_trade_type => 'Wybierz rodzaj handlu';
 
   @override
-  String get app_paste => 'Paste';
+  String get app_paste => 'Pasta';
 
   @override
-  String get app_scan_qr_code => 'Scan QR code';
+  String get app_scan_qr_code => 'Skanowania QR code';
 
   @override
   String get app_report_this_user => 'Report this user';
