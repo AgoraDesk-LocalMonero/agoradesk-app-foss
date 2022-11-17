@@ -4078,7 +4078,7 @@ class I18nPt extends I18n {
   String get login250Sbreset8722Sblink => 'Reiniciar.';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Você pode usar suas credenciais {front_type_url} para fazer login.';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Você pode usar suas credenciais {{appName}_url} para fazer login.';
 
   @override
   String get login250Sbsignup => 'Ainda não tem uma conta? {link}';
@@ -7035,7 +7035,7 @@ class I18nPt extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Insira e verifique seu endereço para o qual as moedas serão enviadas. Não pode ser um endereço interno FRONT_TYPE.';
+    return 'Insira e verifique seu endereço para o qual as moedas serão enviadas. Não pode ser um endereço interno $appName.';
   }
 
   @override
@@ -8215,7 +8215,7 @@ class I18nPt extends I18n {
 
   @override
   String app_staff(Object appName) {
-    return 'Pessoal da FRONT_TYPE';
+    return 'Pessoal da $appName';
   }
 
   @override
@@ -8338,12 +8338,12 @@ class I18nPt extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '- Você pode fazer um link para qualquer página individual, como listagem de países ou listagem de formas de pagamento, ou qualquer outra coisa em FRONT_TYPE.\n- Você ganhará moeda criptográfica dos usuários que chegarem ao site através do registro de seu link de afiliado e fazer negócios.\n- Os pagamentos serão feitos diariamente à sua carteira FRONT_TYPE nas moedas criptográficas relevantes.\n- As comissões serão pagas durante um ano a partir do registro do usuário. A comissão é baseada na renda que o novo usuário traz para FRONT_TYPE (taxas de negociação).\n- Qualquer jogo sujo, tal como publicidade enganosa, é proibido.\n- O spamming é proibido. Spamming inclui o envio de mensagens privadas ou públicas não subscritas em fóruns/reddit, e-mails em massa não subscritos, etc.\n- É proibido adicionar iframes ocultos em um site a fim de capturar afiliados. Somente são permitidos iframes afiliados ou links diretos para a página da web.\n- FRONT_TYPE tem o direito de desativar qualquer usuário afiliado a qualquer momento. Se você violar os termos, seu programa de afiliados será encerrado.';
+    return '- Você pode fazer um link para qualquer página individual, como listagem de países ou listagem de formas de pagamento, ou qualquer outra coisa em $appName.\n- Você ganhará moeda criptográfica dos usuários que chegarem ao site através do registro de seu link de afiliado e fazer negócios.\n- Os pagamentos serão feitos diariamente à sua carteira $appName nas moedas criptográficas relevantes.\n- As comissões serão pagas durante um ano a partir do registro do usuário. A comissão é baseada na renda que o novo usuário traz para $appName (taxas de negociação).\n- Qualquer jogo sujo, tal como publicidade enganosa, é proibido.\n- O spamming é proibido. Spamming inclui o envio de mensagens privadas ou públicas não subscritas em fóruns/reddit, e-mails em massa não subscritos, etc.\n- É proibido adicionar iframes ocultos em um site a fim de capturar afiliados. Somente são permitidos iframes afiliados ou links diretos para a página da web.\n- $appName tem o direito de desativar qualquer usuário afiliado a qualquer momento. Se você violar os termos, seu programa de afiliados será encerrado.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'Você recebe dois usuários, comprador e vendedor do $assetName registrados no FRONT_TYPE, e eles fazem uma negociação no valor de 100 $assetSymbol. Você ganha 20% de comissão sobre as taxas de negociação FRONT_TYPE de ambos os participantes, no total 40% da taxa FRONT_TYPE.\n\nSua soma ganha é de 0,4 $assetSymbol. Somente as vendas finalizadas que passam por nosso processo de transação são importantes. Os pagamentos são feitos diariamente.\n\nO suporte FRONT_TYPE está mais do que disposto a ajudá-lo com qualquer dúvida.';
+    return 'Você recebe dois usuários, comprador e vendedor do $assetName registrados no $appName, e eles fazem uma negociação no valor de 100 $assetSymbol. Você ganha 20% de comissão sobre as taxas de negociação $appName de ambos os participantes, no total 40% da taxa $appName.\n\nSua soma ganha é de 0,4 $assetSymbol. Somente as vendas finalizadas que passam por nosso processo de transação são importantes. Os pagamentos são feitos diariamente.\n\nO suporte $appName está mais do que disposto a ajudá-lo com qualquer dúvida.';
   }
 
   @override
@@ -8351,7 +8351,7 @@ class I18nPt extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Seu programa de afiliados está habilitado, e você pode ganhar comissões adicionando sua etiqueta de afiliado $ref_code a qualquer URL FRONT_TYPE.';
+    return 'Seu programa de afiliados está habilitado, e você pode ganhar comissões adicionando sua etiqueta de afiliado $ref_code a qualquer URL $appName.';
   }
 
   @override
@@ -8416,7 +8416,7 @@ class I18nPt extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Anote seu código de backup (acima em verde) em um pedaço de papel e guarde-o em um local seguro. Você precisará dele se perder seu telefone ou será bloqueado em sua conta. FRONT_TYPE não poderá ajudá-lo caso você perca este código.';
+    return 'Anote seu código de backup (acima em verde) em um pedaço de papel e guarde-o em um local seguro. Você precisará dele se perder seu telefone ou será bloqueado em sua conta. $appName não poderá ajudá-lo caso você perca este código.';
   }
 
   @override
@@ -8424,7 +8424,7 @@ class I18nPt extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Cuidado com os golpistas que tentam se passar por funcionários!\nOs administradores do FRONT_TYPE nunca lhe dirão para finalizar uma negociação.\nAs mensagens da equipe têm um fundo vermelho.';
+    return 'Cuidado com os golpistas que tentam se passar por funcionários!\nOs administradores do $appName nunca lhe dirão para finalizar uma negociação.\nAs mensagens da equipe têm um fundo vermelho.';
   }
 
   @override

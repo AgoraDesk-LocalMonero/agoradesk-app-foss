@@ -4078,7 +4078,7 @@ class I18nIt extends I18n {
   String get login250Sbreset8722Sblink => 'Ripristina qui.';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Puoi utilizzare le tue {front_type_url} credenziali per accedere.';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Puoi utilizzare le tue {{appName}_url} credenziali per accedere.';
 
   @override
   String get login250Sbsignup => 'Non hai ancora un account? {link}';
@@ -7035,7 +7035,7 @@ class I18nIt extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Inserire e verificare l\'indirizzo a cui verranno inviate le monete. Non può essere un indirizzo FRONT_TYPE interno.';
+    return 'Inserire e verificare l\'indirizzo a cui verranno inviate le monete. Non può essere un indirizzo $appName interno.';
   }
 
   @override
@@ -8215,7 +8215,7 @@ class I18nIt extends I18n {
 
   @override
   String app_staff(Object appName) {
-    return 'Personale FRONT_TYPE';
+    return 'Personale $appName';
   }
 
   @override
@@ -8338,12 +8338,12 @@ class I18nIt extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '- È possibile collegarsi a qualsiasi pagina individuale, come l\'elenco dei Paesi o dei metodi di pagamento, o qualsiasi altra pagina di FRONT_TYPE.\n- Guadagnerete criptovalute dagli utenti che arriveranno al sito attraverso il vostro link di affiliazione, si registreranno ed effettueranno transazioni.\n- I pagamenti saranno effettuati quotidianamente sul vostro portafoglio FRONT_TYPE nelle criptovalute pertinenti.\n- Le commissioni saranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sulle entrate che il nuovo utente porta a FRONT_TYPE (commissioni di trading).\n- È vietata qualsiasi pratica scorretta, come la pubblicità ingannevole.\n- È vietato lo spamming. Lo spamming comprende l\'invio di messaggi privati o pubblici non sottoscritti su forum/reddit, mass-mail non sottoscritte, ecc.\n- È vietato aggiungere iframes nascosti su un sito web per catturare gli affiliati. Sono consentiti solo iframes di affiliazione o link diretti alla pagina web.\n- FRONT_TYPE ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. In caso di violazione dei termini, il programma di affiliazione verrà interrotto.';
+    return '- È possibile collegarsi a qualsiasi pagina individuale, come l\'elenco dei Paesi o dei metodi di pagamento, o qualsiasi altra pagina di $appName.\n- Guadagnerete criptovalute dagli utenti che arriveranno al sito attraverso il vostro link di affiliazione, si registreranno ed effettueranno transazioni.\n- I pagamenti saranno effettuati quotidianamente sul vostro portafoglio $appName nelle criptovalute pertinenti.\n- Le commissioni saranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sulle entrate che il nuovo utente porta a $appName (commissioni di trading).\n- È vietata qualsiasi pratica scorretta, come la pubblicità ingannevole.\n- È vietato lo spamming. Lo spamming comprende l\'invio di messaggi privati o pubblici non sottoscritti su forum/reddit, mass-mail non sottoscritte, ecc.\n- È vietato aggiungere iframes nascosti su un sito web per catturare gli affiliati. Sono consentiti solo iframes di affiliazione o link diretti alla pagina web.\n- $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. In caso di violazione dei termini, il programma di affiliazione verrà interrotto.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'Si hanno due utenti, acquirente e venditore di $assetName registrati su FRONT_TYPE, che effettuano una compravendita del valore di 100 $assetSymbol. Guadagnate il 20% di commissione sulle commissioni di negoziazione di FRONT_TYPE da entrambi i partecipanti, in totale il 40% della commissione di FRONT_TYPE.\n\nLa somma guadagnata è di 0,4 $assetSymbol. Solo le vendite finalizzate che passano attraverso il nostro processo di transazione sono rilevanti. I pagamenti vengono effettuati quotidianamente.\n\nIl supporto di FRONT_TYPE è più che disponibile ad aiutarti con qualsiasi domanda.';
+    return 'Si hanno due utenti, acquirente e venditore di $assetName registrati su $appName, che effettuano una compravendita del valore di 100 $assetSymbol. Guadagnate il 20% di commissione sulle commissioni di negoziazione di $appName da entrambi i partecipanti, in totale il 40% della commissione di $appName.\n\nLa somma guadagnata è di 0,4 $assetSymbol. Solo le vendite finalizzate che passano attraverso il nostro processo di transazione sono rilevanti. I pagamenti vengono effettuati quotidianamente.\n\nIl supporto di $appName è più che disponibile ad aiutarti con qualsiasi domanda.';
   }
 
   @override
@@ -8351,7 +8351,7 @@ class I18nIt extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Il vostro programma di affiliazione è attivo e potete guadagnare commissioni aggiungendo il vostro tag di affiliazione $ref_code a qualsiasi URL FRONT_TYPE.';
+    return 'Il vostro programma di affiliazione è attivo e potete guadagnare commissioni aggiungendo il vostro tag di affiliazione $ref_code a qualsiasi URL $appName.';
   }
 
   @override
@@ -8416,7 +8416,7 @@ class I18nIt extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Annota il tuo codice di backup (sopra in verde) su un pezzo di carta e conservalo in un luogo sicuro. Ne avrai bisogno se perdi il telefono o verrai bloccato fuori dal tuo account. FRONT_TYPE non sarà in grado di aiutarti se dovessi perdere questo codice.';
+    return 'Annota il tuo codice di backup (sopra in verde) su un pezzo di carta e conservalo in un luogo sicuro. Ne avrai bisogno se perdi il telefono o verrai bloccato fuori dal tuo account. $appName non sarà in grado di aiutarti se dovessi perdere questo codice.';
   }
 
   @override
@@ -8424,7 +8424,7 @@ class I18nIt extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Fai attenzione ai truffatori che cercano di impersonare il personale!\nGli amministratori di FRONT_TYPE non ti diranno mai di finalizzare un\'operazione.\nI messaggi del personale hanno uno sfondo rosso.';
+    return 'Fai attenzione ai truffatori che cercano di impersonare il personale!\nGli amministratori di $appName non ti diranno mai di finalizzare un\'operazione.\nI messaggi del personale hanno uno sfondo rosso.';
   }
 
   @override

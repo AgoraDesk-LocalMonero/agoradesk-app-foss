@@ -4078,7 +4078,7 @@ class I18nZh extends I18n {
   String get login250Sbreset8722Sblink => '这里重置';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => '您可以使用 {front_type_url} 凭据登录。';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => '您可以使用 {{appName}_url} 凭据登录。';
 
   @override
   String get login250Sbsignup => '没有账户吗？ {link}';
@@ -8416,7 +8416,7 @@ class I18nZh extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return '在一张纸上写下您的备份代码（上方为绿色）并将其存放在安全的地方。如果您丢失了手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失此代码，FRONT_TYPE 将无法帮助您。';
+    return '在一张纸上写下您的备份代码（上方为绿色）并将其存放在安全的地方。如果您丢失了手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失此代码，$appName 将无法帮助您。';
   }
 
   @override
@@ -8424,7 +8424,7 @@ class I18nZh extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '谨防试图冒充员工的骗子！\nFRONT_TYPE 管理员永远不会告诉您完成交易。\n员工消息的背景为红色。';
+    return '谨防试图冒充员工的骗子！\n${appName} 管理员永远不会告诉您完成交易。\n员工消息的背景为红色。';
   }
 
   @override
@@ -12738,7 +12738,7 @@ class I18nZhTw extends I18nZh {
   String get login250Sbreset8722Sblink => '這裡重置';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => '您可以使用 {front_type_url} 憑據登錄。';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => '您可以使用 {{appName}_url} 憑據登錄。';
 
   @override
   String get login250Sbsignup => '沒有賬戶嗎？ {link}';
@@ -15689,7 +15689,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return '輸入並驗證您的硬幣將被發送到的地址。不能是內部 FRONT_TYPE 地址。';
+    return '輸入並驗證您的硬幣將被發送到的地址。不能是內部 $appName 地址。';
   }
 
   @override
@@ -16869,7 +16869,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String app_staff(Object appName) {
-    return 'FRONT_TYPE 員工';
+    return '$appName 員工';
   }
 
   @override
@@ -16992,12 +16992,12 @@ class I18nZhTw extends I18nZh {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• 您可以鏈接到任何單獨的頁面，例如國家/地區列表或付款方式列表，或 FRONT_TYPE 上的任何其他內容。\n• 您將從通過您的會員鏈接註冊並進行交易的用戶那裡獲得加密貨幣。\n• 每天都會以相關加密貨幣向您的 FRONT_TYPE 錢包付款。\n• 佣金將在用戶註冊後一年內支付。佣金基於新用戶為 FRONT_TYPE（交易費用）帶來的收入。\n• 禁止任何犯規行為，例如誤導性廣告。\n• 禁止發送垃圾郵件。垃圾郵件包括在論壇/reddit 上發送未訂閱的私人或公共消息、未訂閱的群發郵件等。\n• 禁止在網站上添加隱藏的 iframe 以捕獲關聯公司。只允許使用附屬 iframe 或網頁的直接鏈接。\n• FRONT_TYPE 有權在任何給定時間禁用任何附屬用戶。如果您違反這些條款，您的聯屬網絡營銷計劃將被終止。';
+    return '• 您可以鏈接到任何單獨的頁面，例如國家/地區列表或付款方式列表，或 $appName 上的任何其他內容。\n• 您將從通過您的會員鏈接註冊並進行交易的用戶那裡獲得加密貨幣。\n• 每天都會以相關加密貨幣向您的 $appName 錢包付款。\n• 佣金將在用戶註冊後一年內支付。佣金基於新用戶為 $appName（交易費用）帶來的收入。\n• 禁止任何犯規行為，例如誤導性廣告。\n• 禁止發送垃圾郵件。垃圾郵件包括在論壇/reddit 上發送未訂閱的私人或公共消息、未訂閱的群發郵件等。\n• 禁止在網站上添加隱藏的 iframe 以捕獲關聯公司。只允許使用附屬 iframe 或網頁的直接鏈接。\n• $appName 有權在任何給定時間禁用任何附屬用戶。如果您違反這些條款，您的聯屬網絡營銷計劃將被終止。';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return '您有兩個用戶，即在 FRONT_TYPE 上註冊的 $assetName 的買方和賣方，他們進行了一筆價值為 100 $assetSymbol的交易。您從兩個參與者那裡獲得 FRONT_TYPE 交易費用的 20% 佣金，總計 FRONT_TYPE 費用的 40%。\n\n您的收入為 0.4 $assetSymbol。只有通過我們的交易流程完成的銷售才重要。每天進行支付。\n\nFRONT_TYPE 支持非常願意幫助您解決任何問題。';
+    return '您有兩個用戶，即在 $appName 上註冊的 $assetName 的買方和賣方，他們進行了一筆價值為 100 $assetSymbol的交易。您從兩個參與者那裡獲得 $appName 交易費用的 20% 佣金，總計 $appName 費用的 40%。\n\n您的收入為 0.4 $assetSymbol。只有通過我們的交易流程完成的銷售才重要。每天進行支付。\n\n$appName 支持非常願意幫助您解決任何問題。';
   }
 
   @override
@@ -17005,7 +17005,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return '您的聯屬網絡營銷計劃已啟用，您可以通過將聯屬網絡營銷標籤 $ref_code 添加到任何 FRONT_TYPE URL 來賺取佣金。';
+    return '您的聯屬網絡營銷計劃已啟用，您可以通過將聯屬網絡營銷標籤 $ref_code 添加到任何 $appName URL 來賺取佣金。';
   }
 
   @override
@@ -17070,7 +17070,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return '在一張紙上寫下您的備份代碼（上方為綠色）並將其存放在安全的地方。如果您丟失了手機，您將需要它，否則您將被鎖定在您的帳戶之外。如果您丟失此代碼，FRONT_TYPE 將無法幫助您。';
+    return '在一張紙上寫下您的備份代碼（上方為綠色）並將其存放在安全的地方。如果您丟失了手機，您將需要它，否則您將被鎖定在您的帳戶之外。如果您丟失此代碼，$appName 將無法幫助您。';
   }
 
   @override
@@ -17078,7 +17078,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '謹防試圖冒充員工的騙子！\nFRONT_TYPE 管理員永遠不會告訴您完成交易。\n員工消息的背景為紅色。';
+    return '謹防試圖冒充員工的騙子！\n${appName} 管理員永遠不會告訴您完成交易。\n員工消息的背景為紅色。';
   }
 
   @override
