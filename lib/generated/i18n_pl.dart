@@ -4078,7 +4078,7 @@ class I18nPl extends I18n {
   String get login250Sbreset8722Sblink => 'Zresetuj tutaj.';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Możesz użyć swoich danych {front_type_url} do zalogowania się.';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Możesz użyć swoich danych {{appName}_url} do zalogowania się.';
 
   @override
   String get login250Sbsignup => 'Nie masz jeszcze konta? {link}';
@@ -7035,7 +7035,7 @@ class I18nPl extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Wpisz i zweryfikuj swój adres, na który będą wysyłane monety. Nie może być adresem wewnętrznym FRONT_TYPE.';
+    return 'Wpisz i zweryfikuj swój adres, na który będą wysyłane monety. Nie może być adresem wewnętrznym $appName.';
   }
 
   @override
@@ -8215,7 +8215,7 @@ class I18nPl extends I18n {
 
   @override
   String app_staff(Object appName) {
-    return 'Personel FRONT_TYPE';
+    return 'Personel $appName';
   }
 
   @override
@@ -8338,12 +8338,12 @@ class I18nPl extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• Możesz umieścić link do dowolnej strony, takiej jak kraj, informacja o metodzie płatności lub cokolwiek innego na FRONT_TYPE.\n• Będziesz zarabiać kryptowalutę od użytkowników, którzy dotrą do witryny za pośrednictwem Twojego rejestru linków partnerskich i dokonają transakcji.\n• Wypłaty będą dokonywane codziennie na Twój portfel FRONT_TYPE w odpowiednich kryptowalutach.\n• Prowizje będą wypłacane przez rok od rejestracji użytkownika. Prowizja jest oparta na dochodach, jakie nowy użytkownik przynosi za FRONT_TYPE (opłaty transakcyjne).\n• Wszelkie nieczyste zagrania, takie jak wprowadzająca w błąd reklama, są zabronione.\n• Spamowanie jest zabronione. Spamowanie obejmuje wysyłanie niesubskrybowanych prywatnych lub publicznych wiadomości na forach/reddicie, niesubskrybowanej poczty masowej itp.\n• Dodawanie ukrytych ramek iframe na stronie internetowej w celu przechwycenia partnerów jest zabronione. Dozwolone są tylko powiązane elementy iframe lub bezpośrednie linki do strony internetowej.\n• FRONT_TYPE ma prawo w dowolnym momencie wyłączyć dowolnego użytkownika stowarzyszonego. Jeśli złamiesz warunki, Twój program partnerski zostanie zakończony.';
+    return '• Możesz umieścić link do dowolnej strony, takiej jak kraj, informacja o metodzie płatności lub cokolwiek innego na $appName.\n• Będziesz zarabiać kryptowalutę od użytkowników, którzy dotrą do witryny za pośrednictwem Twojego rejestru linków partnerskich i dokonają transakcji.\n• Wypłaty będą dokonywane codziennie na Twój portfel $appName w odpowiednich kryptowalutach.\n• Prowizje będą wypłacane przez rok od rejestracji użytkownika. Prowizja jest oparta na dochodach, jakie nowy użytkownik przynosi za $appName (opłaty transakcyjne).\n• Wszelkie nieczyste zagrania, takie jak wprowadzająca w błąd reklama, są zabronione.\n• Spamowanie jest zabronione. Spamowanie obejmuje wysyłanie niesubskrybowanych prywatnych lub publicznych wiadomości na forach/reddicie, niesubskrybowanej poczty masowej itp.\n• Dodawanie ukrytych ramek iframe na stronie internetowej w celu przechwycenia partnerów jest zabronione. Dozwolone są tylko powiązane elementy iframe lub bezpośrednie linki do strony internetowej.\n• $appName ma prawo w dowolnym momencie wyłączyć dowolnego użytkownika stowarzyszonego. Jeśli złamiesz warunki, Twój program partnerski zostanie zakończony.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'Otrzymujesz dwóch użytkowników, kupującego i sprzedającego $assetName, zarejestrowanych na FRONT_TYPE, którzy wykonują jedną transakcję o wartości 100 $assetSymbol. Zarabiasz 20% prowizji od opłat transakcyjnych FRONT_TYPE od obu uczestników, łącznie 40% opłaty FRONT_TYPE.\n\nTwoja zarobiona suma wynosi 0,4 $assetSymbol. Liczą się tylko sfinalizowane sprzedaże, które przechodzą przez nasz proces transakcyjny. Wypłaty dokonywane są codziennie.\n\nZespół pomocy FRONT_TYPE chętnie odpowie na wszelkie pytania.';
+    return 'Otrzymujesz dwóch użytkowników, kupującego i sprzedającego $assetName, zarejestrowanych na $appName, którzy wykonują jedną transakcję o wartości 100 $assetSymbol. Zarabiasz 20% prowizji od opłat transakcyjnych $appName od obu uczestników, łącznie 40% opłaty $appName.\n\nTwoja zarobiona suma wynosi 0,4 $assetSymbol. Liczą się tylko sfinalizowane sprzedaże, które przechodzą przez nasz proces transakcyjny. Wypłaty dokonywane są codziennie.\n\nZespół pomocy $appName chętnie odpowie na wszelkie pytania.';
   }
 
   @override
@@ -8351,7 +8351,7 @@ class I18nPl extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Twój program partnerski jest włączony i możesz zarabiać prowizje, dodając swój tag partnerski $ref_code do dowolnego adresu URL FRONT_TYPE.';
+    return 'Twój program partnerski jest włączony i możesz zarabiać prowizje, dodając swój tag partnerski $ref_code do dowolnego adresu URL $appName.';
   }
 
   @override
@@ -8416,7 +8416,7 @@ class I18nPl extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Zapisz kod zapasowy (powyżej na zielono) na kartce papieru i przechowuj go w bezpiecznym miejscu. Będziesz go potrzebować, jeśli zgubisz telefon lub stracisz dostęp do konta. FRONT_TYPE nie będzie w stanie Ci pomóc, jeśli zgubisz ten kod.';
+    return 'Zapisz kod zapasowy (powyżej na zielono) na kartce papieru i przechowuj go w bezpiecznym miejscu. Będziesz go potrzebować, jeśli zgubisz telefon lub stracisz dostęp do konta. $appName nie będzie w stanie Ci pomóc, jeśli zgubisz ten kod.';
   }
 
   @override
@@ -8424,7 +8424,7 @@ class I18nPl extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Uważaj na oszustów próbujących podszyć się pod personel!\nAdministratorzy FRONT_TYPE nigdy nie powiedzą Ci, aby sfinalizować transakcję.\nWiadomości personelu mają czerwone tło.';
+    return 'Uważaj na oszustów próbujących podszyć się pod personel!\nAdministratorzy $appName nigdy nie powiedzą Ci, aby sfinalizować transakcję.\nWiadomości personelu mają czerwone tło.';
   }
 
   @override

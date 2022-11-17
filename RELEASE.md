@@ -1,10 +1,6 @@
 ### Updates
-1. Feat: improved translations.
-2. Fix: assessibility buttons.
-3. Feat: added brute-force attack captcha
-4. Feat: open a trade screen after the trade initiated.
-5. Fix: changed dispute label color.
-6. Fix: FOSS version can't logout.
+1. HotFix: translated strings bug.
+2. Fix: ad edit BTC fee settlement bug.
 
 
 ### About the attached app's

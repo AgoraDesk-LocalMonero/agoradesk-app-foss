@@ -4078,7 +4078,7 @@ class I18nKo extends I18n {
   String get login250Sbreset8722Sblink => '여기서 재설정';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => '{front_type_url} 설정을 이용해 로그인하세요.';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => '{{appName}_url} 설정을 이용해 로그인하세요.';
 
   @override
   String get login250Sbsignup => '아직도 계정이 없으십니까? {link}';
@@ -7035,7 +7035,7 @@ class I18nKo extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return '코인을 받을 주소를 입력하고 확인하세요. 내부 FRONT_TYPE 주소가 될 수 없습니다.';
+    return '코인을 받을 주소를 입력하고 확인하세요. 내부 $appName 주소가 될 수 없습니다.';
   }
 
   @override
@@ -8215,7 +8215,7 @@ class I18nKo extends I18n {
 
   @override
   String app_staff(Object appName) {
-    return 'FRONT_TYPE 직원';
+    return '$appName 직원';
   }
 
   @override
@@ -8338,12 +8338,12 @@ class I18nKo extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• 국가 목록, 지불 방법 목록 또는 FRONT_TYPE의 기타 항목과 같은 개별 페이지에 연결할 수 있습니다.\n• 제휴 링크 등록을 통해 사이트에 도착하여 거래를 하는 사용자로부터 암호화폐를 얻습니다.\n• 지불은 관련 암호화폐의 FRONT_TYPE 지갑으로 매일 지급됩니다.\n• 커미션은 사용자 등록일로부터 1년 동안 지급됩니다. 수수료는 신규 사용자가 FRONT_TYPE(거래 수수료)에 대해 가져오는 수입을 기반으로 합니다.\n• 현혹 광고 등 부정행위를 금합니다.\n• 스팸은 금지되어 있습니다. 스팸에는 포럼/레딧에서 구독하지 않은 비공개 또는 공개 메시지 보내기, 구독하지 않은 대량 메일 등이 포함됩니다.\n• 제휴사를 캡처하기 위해 웹사이트에 숨겨진 iframe을 추가하는 것은 금지되어 있습니다. 제휴 iframe 또는 웹페이지에 대한 직접 링크만 허용됩니다.\n• FRONT_TYPE은(는) 언제든지 제휴 사용자를 비활성화할 수 있는 권한이 있습니다. 약관을 위반하면 제휴 프로그램이 종료됩니다.';
+    return '• 국가 목록, 지불 방법 목록 또는 $appName의 기타 항목과 같은 개별 페이지에 연결할 수 있습니다.\n• 제휴 링크 등록을 통해 사이트에 도착하여 거래를 하는 사용자로부터 암호화폐를 얻습니다.\n• 지불은 관련 암호화폐의 $appName 지갑으로 매일 지급됩니다.\n• 커미션은 사용자 등록일로부터 1년 동안 지급됩니다. 수수료는 신규 사용자가 $appName(거래 수수료)에 대해 가져오는 수입을 기반으로 합니다.\n• 현혹 광고 등 부정행위를 금합니다.\n• 스팸은 금지되어 있습니다. 스팸에는 포럼/레딧에서 구독하지 않은 비공개 또는 공개 메시지 보내기, 구독하지 않은 대량 메일 등이 포함됩니다.\n• 제휴사를 캡처하기 위해 웹사이트에 숨겨진 iframe을 추가하는 것은 금지되어 있습니다. 제휴 iframe 또는 웹페이지에 대한 직접 링크만 허용됩니다.\n• $appName은(는) 언제든지 제휴 사용자를 비활성화할 수 있는 권한이 있습니다. 약관을 위반하면 제휴 프로그램이 종료됩니다.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'FRONT_TYPE에 등록된 $assetName 의 구매자와 판매자라는 두 명의 사용자가 있고 그들은 100 $assetSymbol가치가 있는 하나의 거래를 수행합니다. 두 참가자로부터 FRONT_TYPE 거래 수수료의 20%, 총 FRONT_TYPE 수수료의 40%를 받습니다.\n\n획득한 금액은 0.4 $assetSymbol입니다. 거래 프로세스를 거치는 최종 판매만 중요합니다. 지불은 매일 이루어집니다.\n\nFRONT_TYPE 지원팀은 질문이 있으면 기꺼이 도와드립니다.';
+    return '$appName에 등록된 $assetName 의 구매자와 판매자라는 두 명의 사용자가 있고 그들은 100 $assetSymbol가치가 있는 하나의 거래를 수행합니다. 두 참가자로부터 $appName 거래 수수료의 20%, 총 $appName 수수료의 40%를 받습니다.\n\n획득한 금액은 0.4 $assetSymbol입니다. 거래 프로세스를 거치는 최종 판매만 중요합니다. 지불은 매일 이루어집니다.\n\n$appName 지원팀은 질문이 있으면 기꺼이 도와드립니다.';
   }
 
   @override
@@ -8351,7 +8351,7 @@ class I18nKo extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return '제휴 프로그램이 활성화되었으며 FRONT_TYPE URL에 제휴 태그 $ref_code 를 추가하여 수수료를 받을 수 있습니다.';
+    return '제휴 프로그램이 활성화되었으며 $appName URL에 제휴 태그 $ref_code 를 추가하여 수수료를 받을 수 있습니다.';
   }
 
   @override
@@ -8416,7 +8416,7 @@ class I18nKo extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return '백업 코드(위의 녹색)를 종이에 적어 안전한 장소에 보관하십시오. 휴대전화를 분실하거나 계정에 액세스할 수 없는 경우 필요합니다. 이 코드를 분실하면 FRONT_TYPE에서 도움을 드릴 수 없습니다.';
+    return '백업 코드(위의 녹색)를 종이에 적어 안전한 장소에 보관하십시오. 휴대전화를 분실하거나 계정에 액세스할 수 없는 경우 필요합니다. 이 코드를 분실하면 $appName에서 도움을 드릴 수 없습니다.';
   }
 
   @override
@@ -8424,7 +8424,7 @@ class I18nKo extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '직원을 사칭하려는 사기꾼을 조심하십시오!\nFRONT_TYPE 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지에는 빨간색 배경이 있습니다.';
+    return '직원을 사칭하려는 사기꾼을 조심하십시오!\n${appName} 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지에는 빨간색 배경이 있습니다.';
   }
 
   @override

@@ -7035,7 +7035,7 @@ class I18nEn extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Enter and verify your address to which the coins will be sent to. Cannot be an internal FRONT_TYPE address.';
+    return 'Enter and verify your address to which the coins will be sent to. Cannot be an internal $appName address.';
   }
 
   @override
@@ -8215,7 +8215,7 @@ class I18nEn extends I18n {
 
   @override
   String app_staff(Object appName) {
-    return 'FRONT_TYPE staff';
+    return '$appName staff';
   }
 
   @override
@@ -8338,12 +8338,12 @@ class I18nEn extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• You can link to any individual page, such as country listing or payment method listing, or anything else on FRONT_TYPE. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your FRONT_TYPE wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for FRONT_TYPE (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• FRONT_TYPE has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.';
+    return '• You can link to any individual page, such as country listing or payment method listing, or anything else on $appName. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your $appName wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for $appName (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• $appName has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'You get two users, buyer and seller of the $assetName registered on FRONT_TYPE, and they do one trade valued 100 $assetSymbol. You earn 20% commission on the FRONT_TYPE trading fees from both participants, in total 40% of the FRONT_TYPE fee.\n\nYour earned sum is 0.4 $assetSymbol. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\nFRONT_TYPE support is more than willing to help you with any questions.';
+    return 'You get two users, buyer and seller of the $assetName registered on $appName, and they do one trade valued 100 $assetSymbol. You earn 20% commission on the $appName trading fees from both participants, in total 40% of the $appName fee.\n\nYour earned sum is 0.4 $assetSymbol. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\n$appName support is more than willing to help you with any questions.';
   }
 
   @override
@@ -8351,7 +8351,7 @@ class I18nEn extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag $ref_code to any FRONT_TYPE URL.';
+    return 'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag $ref_code to any $appName URL.';
   }
 
   @override
@@ -8416,7 +8416,7 @@ class I18nEn extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. FRONT_TYPE will not be able to help you should you lose this code.';
+    return 'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. $appName will not be able to help you should you lose this code.';
   }
 
   @override
@@ -8424,7 +8424,7 @@ class I18nEn extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Beware of scammers trying to impersonate staff! \nFRONT_TYPE administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
+    return 'Beware of scammers trying to impersonate staff! \n${appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
   }
 
   @override
