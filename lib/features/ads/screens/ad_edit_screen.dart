@@ -189,7 +189,7 @@ class _AdEditScreenState extends State<AdEditScreen>
                 ? const CupertinoActivityIndicator()
                 : DropdownSearch<CurrencyModel?>(
                     key: model.currencyDropdownKey,
-                    dropdownButtonProps: context.dropdownButtonProps,
+                    dropdownButtonProps: context.dropdownButtonProps(),
                     dropdownDecoratorProps: context.dropdownDecoration,
                     popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
                     itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
@@ -219,7 +219,7 @@ class _AdEditScreenState extends State<AdEditScreen>
         model.isLocalAd
             ? const CashTextField()
             : DropdownSearch<OnlineProvider?>(
-                dropdownButtonProps: context.dropdownButtonProps,
+                dropdownButtonProps: context.dropdownButtonProps(),
                 dropdownDecoratorProps: context.dropdownDecoration,
                 popupProps: PopupProps.dialog(
                   dialogProps: context.dropdownDialogProps,

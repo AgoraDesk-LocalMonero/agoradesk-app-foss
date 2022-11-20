@@ -1,5 +1,6 @@
 ### Updates
-1. Fix: transfer assets from the wallet gives an error with some conditions.
+1. HotFix: translated strings bug.
+2. Fix: ad edit BTC fee settlement bug.
 
 
 ### About the attached app's

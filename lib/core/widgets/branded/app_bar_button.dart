@@ -33,32 +33,35 @@ class AppBarButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: hasUnreaded
-            ? SizedBox(
-                width: size,
-                height: size,
-                child: Stack(
-                  children: [
-                    Icon(
-                      iconData,
-                      color: context.n80N30,
-                      size: size,
-                    ),
-                    Align(
-                        alignment: Alignment.topRight,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 1, 0),
-                          child: Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.all(
-                                Radius.circular(size),
+            ? Semantics(
+                label: label,
+                child: SizedBox(
+                  width: size,
+                  height: size,
+                  child: Stack(
+                    children: [
+                      Icon(
+                        iconData,
+                        color: context.n80N30,
+                        size: size,
+                      ),
+                      Align(
+                          alignment: Alignment.topRight,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 0, 1, 0),
+                            child: Container(
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.all(
+                                  Radius.circular(size),
+                                ),
+                                color: Theme.of(context).colorScheme.error60,
                               ),
-                              color: Theme.of(context).colorScheme.error60,
                             ),
-                          ),
-                        ))
-                  ],
+                          ))
+                    ],
+                  ),
                 ),
               )
             : Icon(

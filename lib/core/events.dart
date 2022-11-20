@@ -31,6 +31,18 @@ class ThemeModeChangedEvent {
   const ThemeModeChangedEvent(this.mode);
 }
 
+class DisplayCaptchaEvent {
+  const DisplayCaptchaEvent({
+    required this.cookie1,
+    required this.cookie2,
+    required this.body,
+  });
+
+  final String cookie1;
+  final String cookie2;
+  final String? body;
+}
+
 ///
 /// Push events
 ///

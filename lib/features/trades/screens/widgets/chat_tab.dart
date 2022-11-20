@@ -188,6 +188,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
                       ),
                     ),
                     IconButton(
+                      tooltip: context.intl.app_clear,
                       padding: EdgeInsets.zero,
                       icon: Icon(
                         AgoraFont.x,

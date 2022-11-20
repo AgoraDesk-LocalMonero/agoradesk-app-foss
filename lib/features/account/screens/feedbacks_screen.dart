@@ -1,18 +1,14 @@
-import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
-import 'package:vm/vm.dart';
-import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/load_more_widget.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
-import 'package:agoradesk/features/account/models/feedback_view_type.dart';
 import 'package:agoradesk/features/account/models/feedbacks_view_model.dart';
 import 'package:agoradesk/features/account/screens/widgets/feedback_tile.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class FeedbacksScreen extends StatelessWidget {
   const FeedbacksScreen({
@@ -42,7 +38,7 @@ class FeedbacksScreen extends StatelessWidget {
               child: Column(
                 children: [
                   // DropdownSearch<FeedbackViewType>(
-                  //   dropdownButtonProps: context.dropdownButtonProps,
+                  //   dropdownButtonProps: context.dropdownButtonProps(),
                   //   dropdownDecoratorProps: context.dropdownDecoration,
                   //   popupProps: PopupProps.menu(
                   //     menuProps: context.dropdownMenuProps,

@@ -544,7 +544,7 @@ packages:
       name: flutter_pin_code_widget
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.4+2"
+    version: "0.0.5"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:

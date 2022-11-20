@@ -4078,7 +4078,7 @@ class I18nKo extends I18n {
   String get login250Sbreset8722Sblink => '여기서 재설정';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => '{front_type_url} 설정을 이용해 로그인하세요.';
+  String get login250Sbsame8722Sbcredentials8722Sbtip => '{{appName}_url} 설정을 이용해 로그인하세요.';
 
   @override
   String get login250Sbsignup => '아직도 계정이 없으십니까? {link}';
@@ -7057,7 +7057,7 @@ class I18nKo extends I18n {
   String get no_trades => '아직 거래가 없습니다.';
 
   @override
-  String get no_feedbacks => 'No feedbacks.';
+  String get no_feedbacks => '피드백이 없습니다.';
 
   @override
   String get ad_settings => '광고 설정';
@@ -7135,13 +7135,13 @@ class I18nKo extends I18n {
   String get you_sell => '당신은 판매';
 
   @override
-  String get you_buy => 'You buy';
+  String get you_buy => '당신은 구매';
 
   @override
   String get you_receive => '당신은 받는다';
 
   @override
-  String get you_pay => 'You pay';
+  String get you_pay => '당신은 지불';
 
   @override
   String get export_csv => 'CSV 내보내기';
@@ -7156,7 +7156,7 @@ class I18nKo extends I18n {
 
   @override
   String buy_via(Object asset, Object provider) {
-    return 'Buy $asset via $provider';
+    return '$provider를 통해 $asset 구매';
   }
 
   @override
@@ -7176,7 +7176,7 @@ class I18nKo extends I18n {
 
   @override
   String must_be_less(Object num, Object currency) {
-    return 'Must be less $num $currency';
+    return '$num $currency보다 작아야 합니다.';
   }
 
   @override
@@ -7199,7 +7199,7 @@ class I18nKo extends I18n {
   String get receiving => '전수';
 
   @override
-  String get paying => 'Paying';
+  String get paying => '지불';
 
   @override
   String get rate => '율';
@@ -7235,7 +7235,7 @@ class I18nKo extends I18n {
   String get api_error_13 => '요청에 문제가 발생했습니다. 검증 문제일 가능성이 큽니다. 요청 매개변수를 확인하고 여전히 올바르지 않은 경우 지원팀에 문의하세요.';
 
   @override
-  String get api_error_49 => 'The old password provided in the password change request doesn’t match the current password';
+  String get api_error_49 => '비밀번호 변경 요청에 제공된 이전 비밀번호가 현재 비밀번호와 일치하지 않습니다.';
 
   @override
   String get api_error_60 => '이메일 변경을 위해 제공된 비밀번호가 올바르지 않습니다.';
@@ -7259,10 +7259,10 @@ class I18nKo extends I18n {
   String get api_error_77 => '요청한 금액에 대해 내부 이체를 수행할 자금이 부족합니다.';
 
   @override
-  String get api_error_103 => 'Requesting trade for ad who’s poster is on selling vacation';
+  String get api_error_103 => '판매휴가 중인 포스터의 광고 거래 요청';
 
   @override
-  String get api_error_105 => 'Poster of the ad for which the trade is being requested doesn’t have enough balance to fund the escrow';
+  String get api_error_105 => '거래가 요청되는 광고의 포스터에 에스크로 자금을 조달하기에 충분한 잔액이 없습니다.';
 
   @override
   String get api_error_107 => 'maxAmount를 설정하지 않고 유동성 추적 시도';
@@ -7274,7 +7274,7 @@ class I18nKo extends I18n {
   String get api_error_138 => '잘못된 OTP를 제공하면서 2FA 검증 시도';
 
   @override
-  String get api_error_139 => 'Either password or OTP incorrect when attempting to disable 2FA';
+  String get api_error_139 => '2FA 비활성화 시도 시 비밀번호 또는 OTP가 올바르지 않음';
 
   @override
   String get api_error_140 => '지갑에서 코인을 인출하려고 할 때 OTP가 잘못됨';
@@ -7343,34 +7343,34 @@ class I18nKo extends I18n {
   String get api_error_238 => '외부 Bitcoin 인출에 대한 수수료 수준이 지정되지 않았습니다.';
 
   @override
-  String get api_error_239 => 'Incorrect password when trying to release a trade';
+  String get api_error_239 => '거래를 해제하려고 할 때 잘못된 비밀번호';
 
   @override
-  String get api_error_243 => 'Internal AgoraDesk address can\'t be used for trade settlement. Please input an outside, non-AgoraDesk XMR address to continue.';
+  String get api_error_243 => '내부 AgoraDesk 주소는 거래 결제에 사용할 수 없습니다. 계속하려면 외부의 비 AgoraDesk XMR 주소를 입력하십시오.';
 
   @override
-  String get api_error_254 => 'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes';
+  String get api_error_254 => '최근 10분 이내에 동일한 주소와 금액으로 출금을 시도하는 경우';
 
   @override
-  String get api_error_260 => 'Attempting to post a note on a user that doesn’t exist';
+  String get api_error_260 => '존재하지 않는 사용자에 대한 메모 게시 시도';
 
   @override
-  String get api_error_261 => 'Attempting to post a note on your own account';
+  String get api_error_261 => '자신의 계정에 메모를 게시하려고 합니다.';
 
   @override
-  String get api_error_262 => 'Attempting to get a note on a user that doesn’t exist';
+  String get api_error_262 => '존재하지 않는 사용자에 대한 메모를 얻으려는 시도';
 
   @override
-  String get api_error_263 => 'Attempting to get a note on your own account';
+  String get api_error_263 => '자신의 계정에서 메모를 얻으려고 시도합니다.';
 
   @override
-  String get api_error_264 => 'Attempting to delete a note on a user that doesn’t exist';
+  String get api_error_264 => '존재하지 않는 사용자의 메모 삭제 시도';
 
   @override
-  String get api_error_265 => 'Attempting to delete a note on your own account';
+  String get api_error_265 => '자신의 계정에서 메모 삭제 시도';
 
   @override
-  String get api_error_267 => 'Attempting to delete a user note that doesn’t exist';
+  String get api_error_267 => '존재하지 않는 사용자 메모 삭제 시도';
 
   @override
   String get api_error_403 => '이 작업을 수행할 권한이 없습니다.';
@@ -7382,532 +7382,532 @@ class I18nKo extends I18n {
   String get api_error_4001 => '연결 시간이 초과되었습니다. 인터넷 연결을 확인하십시오.';
 
   @override
-  String get api_error_45 => 'You can\'t have both \'first_time_limit_asset\' and \'first_time_limit_{btc | xmr}\' in your request. Remove one of them (they are interchangeable).';
+  String get api_error_45 => '\'first_time_limit_asset\' 및 \'first_time_limit_{btc | xmr}\' 요청에 포함됩니다. 그 중 하나를 제거하십시오(교체 가능).';
 
   @override
-  String get api_error_46 => 'Request must contain EITHER an application/json request body with a “msg” parameter OR a multipart/form-data request body with the image file listed under the parameter “document”';
+  String get api_error_46 => '요청에는 \"msg\" 매개변수가 있는 application/json 요청 본문 또는 \"document\" 매개변수 아래에 나열된 이미지 파일이 있는 multipart/form-data 요청 본문이 포함되어야 합니다.';
 
   @override
-  String get api_error_47 => 'User with that username already exists';
+  String get api_error_47 => '해당 사용자 이름을 가진 사용자가 이미 있습니다.';
 
   @override
-  String get api_error_48 => 'User with that email already exists';
+  String get api_error_48 => '해당 이메일을 가진 사용자가 이미 있습니다.';
 
   @override
-  String get api_error_50 => 'Attempting to send an email to a user without an email set';
+  String get api_error_50 => '이메일이 설정되지 않은 사용자에게 이메일 전송 시도';
 
   @override
-  String get api_error_51 => 'Token provided for email verification is given to a user who does not exist';
+  String get api_error_51 => '이메일 인증을 위해 제공된 토큰은 존재하지 않는 사용자에게 주어집니다.';
 
   @override
-  String get api_error_52 => 'Token provided for email verification is invalid';
+  String get api_error_52 => '이메일 확인을 위해 제공된 토큰이 잘못되었습니다.';
 
   @override
-  String get api_error_53 => 'The email in the token doesn’t match the current email in the database';
+  String get api_error_53 => '토큰의 이메일이 데이터베이스의 현재 이메일과 일치하지 않습니다.';
 
   @override
-  String get api_error_54 => 'Token provided for password reset is given to a email that does not exist in the database';
+  String get api_error_54 => '비밀번호 재설정을 위해 제공된 토큰은 데이터베이스에 존재하지 않는 이메일에 부여됩니다.';
 
   @override
-  String get api_error_55 => 'Token provided for password reset is invalid';
+  String get api_error_55 => '비밀번호 재설정을 위해 제공된 토큰이 잘못되었습니다.';
 
   @override
-  String get api_error_56 => 'Attempting to send a password reset email to an email that isn’t in the database';
+  String get api_error_56 => '데이터베이스에 없는 이메일로 비밀번호 재설정 이메일 전송 시도';
 
   @override
-  String get api_error_57 => 'Token provided for password reset is not a reset token';
+  String get api_error_57 => '비밀번호 재설정을 위해 제공된 토큰은 재설정 토큰이 아닙니다.';
 
   @override
-  String get api_error_58 => 'Trying to send a password-reset email to a user with an unverified email';
+  String get api_error_58 => '확인되지 않은 이메일로 사용자에게 비밀번호 재설정 이메일을 보내려고 합니다.';
 
   @override
-  String get api_error_59 => 'Trying reset a password for a user with an unverified email';
+  String get api_error_59 => '확인되지 않은 이메일로 사용자의 비밀번호 재설정 시도';
 
   @override
-  String get api_error_62 => 'No account exists with the username provided for the account public data request';
+  String get api_error_62 => '계정 공개 데이터 요청에 제공된 사용자 이름을 가진 계정이 없습니다.';
 
   @override
-  String get api_error_63 => 'Attempting to upload file of a forbidden type';
+  String get api_error_63 => '금지된 유형의 파일 업로드 시도';
 
   @override
-  String get api_error_64 => 'Attempting to mark a non-existent notification as read';
+  String get api_error_64 => '존재하지 않는 알림을 읽은 것으로 표시하려고 시도';
 
   @override
-  String get api_error_65 => 'Attempting to mark an already read notification as read';
+  String get api_error_65 => '이미 읽은 알림을 읽음으로 표시하려고 시도 중';
 
   @override
-  String get api_error_66 => 'Attempting to upload chat attachment to trade that doesn’t exist';
+  String get api_error_66 => '존재하지 않는 거래에 채팅 첨부 파일 업로드 시도';
 
   @override
-  String get api_error_67 => 'Attempting to send chat message to trade that doesn’t exist';
+  String get api_error_67 => '존재하지 않는 거래를 위해 채팅 메시지 전송 시도';
 
   @override
-  String get api_error_68 => 'Attempting to get chat message list of trade that doesn’t exist';
+  String get api_error_68 => '존재하지 않는 거래의 채팅 메시지 목록 가져오기 시도';
 
   @override
-  String get api_error_69 => 'Attempting to get chat message that doesn’t exist';
+  String get api_error_69 => '존재하지 않는 채팅 메시지 수신 시도';
 
   @override
-  String get api_error_70 => 'Attempting to get wallet address of account that doesn’t exist';
+  String get api_error_70 => '존재하지 않는 계정의 지갑 주소를 얻으려는 시도';
 
   @override
-  String get api_error_71 => 'Attempting to get transactions of an account that doesn’t exist';
+  String get api_error_71 => '존재하지 않는 계정의 거래를 얻으려는 시도';
 
   @override
-  String get api_error_72 => 'Attempting to withdraw funds of an account that doesn’t exist';
+  String get api_error_72 => '존재하지 않는 계좌의 자금 인출 시도';
 
   @override
-  String get api_error_78 => 'Attempting to make get ads with an illegal combination of parameters';
+  String get api_error_78 => '매개변수의 잘못된 조합으로 광고를 얻으려고 시도함';
 
   @override
-  String get api_error_79 => 'The requested ad ID doesn’t exist';
+  String get api_error_79 => '요청한 광고 ID가 존재하지 않습니다';
 
   @override
-  String get api_error_80 => 'Didn’t set both lat and lon in the ad update/create request';
+  String get api_error_80 => '광고 업데이트/생성 요청에서 위도와 경도를 모두 설정하지 않았습니다.';
 
   @override
-  String get api_error_81 => 'Didn’t set price formula when posting ad';
+  String get api_error_81 => '광고 게시 시 가격 공식을 설정하지 않았습니다.';
 
   @override
-  String get api_error_82 => 'Trying to set lat and lon for an online ad';
+  String get api_error_82 => '온라인 광고의 위도와 경도를 설정하려고 합니다.';
 
   @override
-  String get api_error_83 => 'Trying to set ONLINE_SELL/CALL_SELL/PUT_BUY-specific properties to a different type of ad';
+  String get api_error_83 => 'ONLINE_SELL/CALL_SELL/PUT_BUY 관련 속성을 다른 유형의 광고로 설정하려고 합니다.';
 
   @override
-  String get api_error_84 => 'Trying to set ONLINE_BUY/CALL_BUY/PUT_SELL-specific properties to a different type of ad';
+  String get api_error_84 => 'ONLINE_BUY/CALL_BUY/PUT_SELL 관련 속성을 다른 유형의 광고로 설정하려고 합니다.';
 
   @override
-  String get api_error_85 => 'Trying to set LOCAL_SELL-specific properties to a different type of ad';
+  String get api_error_85 => 'LOCAL_SELL 관련 속성을 다른 유형의 광고로 설정하려고 함';
 
   @override
-  String get api_error_86 => 'Attempting to set country or payment method or currency that isn’t valid when creating/updating ad';
+  String get api_error_86 => '광고 생성/업데이트 시 유효하지 않은 국가, 결제 수단 또는 통화 설정 시도';
 
   @override
-  String get api_error_87 => 'Trying to set a payment method that is invalid to that country when creating/updating ad';
+  String get api_error_87 => '광고 생성/업데이트 시 해당 국가에 유효하지 않은 결제 수단을 설정하려고 함';
 
   @override
-  String get api_error_88 => 'Trying to set a currency that is invalid to that payment method when creating/updating ad';
+  String get api_error_88 => '광고 생성/업데이트 시 해당 결제 수단에 유효하지 않은 통화를 설정하려고 합니다.';
 
   @override
-  String get api_error_89 => 'Trying to create a LOCAL_* ad without setting lon/lat';
+  String get api_error_89 => '경도/위도를 설정하지 않고 LOCAL_* 광고를 만들려고 합니다.';
 
   @override
-  String get api_error_90 => 'Trying to access trades of a user that doesn’t exist.';
+  String get api_error_90 => '존재하지 않는 사용자의 거래에 액세스하려고 합니다.';
 
   @override
-  String get api_error_91 => 'Trying to access account public data using a token of a user that doesn’t exist';
+  String get api_error_91 => '존재하지 않는 사용자의 토큰을 사용하여 계정 공개 데이터에 액세스하려는 경우';
 
   @override
-  String get api_error_92 => 'Trying to get notifications for user that doesn’t exist';
+  String get api_error_92 => '존재하지 않는 사용자에 대한 알림을 받으려고 합니다.';
 
   @override
-  String get api_error_93 => 'Trying to get pending deposits for a user that doesn’t exist';
+  String get api_error_93 => '존재하지 않는 사용자에 대해 보류 중인 예금을 얻으려고 합니다.';
 
   @override
-  String get api_error_94 => 'Trying to get feedback score for user that doesn’t exist';
+  String get api_error_94 => '존재하지 않는 사용자에 대한 피드백 점수를 얻으려고 합니다.';
 
   @override
-  String get api_error_95 => 'Trying to get ads for user that doesn’t exist';
+  String get api_error_95 => '존재하지 않는 사용자에 대한 광고를 얻으려고 함';
 
   @override
-  String get api_error_96 => 'Non-existent user trying to create a trade';
+  String get api_error_96 => '거래를 생성하려는 존재하지 않는 사용자';
 
   @override
-  String get api_error_97 => 'Trying to create a trade for ad that doesn’t exist';
+  String get api_error_97 => '존재하지 않는 광고에 대한 거래를 생성하려고 함';
 
   @override
-  String get api_error_98 => 'Trying to create a trade for an ad who’s poster doesn’t exist';
+  String get api_error_98 => '포스터가 존재하지 않는 광고에 대한 거래를 생성하려고 합니다.';
 
   @override
-  String get api_error_99 => 'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade';
+  String get api_error_99 => '첫 거래를 생성할 때 first_time_limit_asset에서 허용하는 것보다 더 많은 금액을 요청하려고 시도합니다.';
 
   @override
-  String get api_error_100 => 'Cannot request less than 0.0000000001 XMR for trade creation';
+  String get api_error_100 => '거래 생성을 위해 0.0000000001 XMR 미만을 요청할 수 없습니다.';
 
   @override
-  String get api_error_101 => 'Requested amount is less than ad’s min_amount when creating trade';
+  String get api_error_101 => '거래를 생성할 때 요청한 금액이 광고의 min_mount보다 적습니다.';
 
   @override
-  String get api_error_102 => 'Requested amount is more than ad’s max_amount_available when creating trade';
+  String get api_error_102 => '거래를 생성할 때 요청한 금액이 광고의 max_amount_available보다 많습니다.';
 
   @override
-  String get api_error_104 => 'Requesting trade for ad who’s poster is on buying vacation';
+  String get api_error_104 => '포스터 구매 휴가 중인 광고에 대한 거래 요청';
 
   @override
-  String get api_error_106 => 'Requester of the trade doesn’t have enough balance to fund the trade request';
+  String get api_error_106 => '거래 요청자가 거래 요청에 자금을 조달할 만큼 잔액이 충분하지 않습니다.';
 
   @override
-  String get api_error_108 => 'minAmount cannot be equal to or larger than maxAmount';
+  String get api_error_108 => 'minAmount는 maxAmount보다 크거나 같을 수 없습니다.';
 
   @override
-  String get api_error_109 => 'Requested amount is more than ad’s maxAmount when creating trade';
+  String get api_error_109 => '거래 생성 시 요청 금액이 광고의 maxAmount보다 큽니다.';
 
   @override
-  String get api_error_110 => 'Trade requester has lower feedback score than what is required by the poster';
+  String get api_error_110 => '거래 요청자가 포스터에서 요구하는 것보다 피드백 점수가 낮습니다.';
 
   @override
-  String get api_error_111 => 'Requested amount is not one of the accepted amounts, see limit_to_fiat_amounts';
+  String get api_error_111 => '요청한 금액이 허용된 금액 중 하나가 아닙니다. limit_to_fiat_amounts를 참조하세요.';
 
   @override
-  String get api_error_112 => 'Can’t request a trade for an ad you posted yourself';
+  String get api_error_112 => '자신이 게시한 광고에 대한 거래를 요청할 수 없습니다.';
 
   @override
-  String get api_error_113 => 'Can’t set paymentWindowMinutes to <15 or >90 when updating ad';
+  String get api_error_113 => '광고를 업데이트할 때 paymentWindowMinutes를 <15 또는 >90으로 설정할 수 없습니다.';
 
   @override
-  String get api_error_114 => 'Can’t set paymentWindowMinutes to <15 or >90 when creating ad';
+  String get api_error_114 => '광고를 만들 때 paymentWindowMinutes를 <15 또는 >90으로 설정할 수 없습니다.';
 
   @override
-  String get api_error_115 => 'Trade by requested ID doesn’t exist';
+  String get api_error_115 => '요청한 ID로 거래가 존재하지 않습니다';
 
   @override
-  String get api_error_116 => 'User requesting trade doesn’t exist';
+  String get api_error_116 => '거래를 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_117 => 'The currency for which the exchange rate has been requested does not exist';
+  String get api_error_117 => '환율을 요청한 통화가 존재하지 않습니다.';
 
   @override
-  String get api_error_118 => 'User requesting funding of trade doesn’t exist';
+  String get api_error_118 => '거래 자금을 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_119 => 'Attempting to fund a trade that doesn’t exist';
+  String get api_error_119 => '존재하지 않는 거래에 자금을 지원하려는 시도';
 
   @override
-  String get api_error_120 => 'User requesting escrow of trade doesn’t exist';
+  String get api_error_120 => '거래 에스크로를 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
+  String get api_error_121 => '존재하지 않는 거래에 대한 에스크로 시도';
 
   @override
-  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
+  String get api_error_122 => '유동 LOCAL_SELL 거래에 자금을 조달할 자금이 부족합니다.';
 
   @override
-  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
+  String get api_error_123 => '유동적이지 않은 LOCAL_SELL 거래에 자금을 조달할 자금이 부족합니다.';
 
   @override
-  String get api_error_124 => 'Error when funding a LOCAL_SELL';
+  String get api_error_124 => 'LOCAL_SELL 자금 조달 중 오류';
 
   @override
-  String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
+  String get api_error_125 => '거래 취소를 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_126 => 'Attempting to cancel a trade that doesn’t exist';
+  String get api_error_126 => '존재하지 않는 거래 취소 시도';
 
   @override
-  String get api_error_127 => 'User requesting payment of trade doesn’t exist';
+  String get api_error_127 => '거래대금을 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_128 => 'Attempting to mark a trade that doesn’t exist paid';
+  String get api_error_128 => '존재하지 않는 거래를 유료로 표시하려는 시도';
 
   @override
-  String get api_error_129 => 'User requesting release of trade doesn’t exist';
+  String get api_error_129 => '거래 해제를 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_130 => 'Attempting to release a trade that doesn’t exist';
+  String get api_error_130 => '존재하지 않는 거래를 해제하려고 시도';
 
   @override
-  String get api_error_131 => 'User requesting dispute of trade doesn’t exist';
+  String get api_error_131 => '거래 분쟁을 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_132 => 'Attempting to dispute a trade that doesn’t exist';
+  String get api_error_132 => '존재하지 않는 거래에 대한 이의 제기 시도';
 
   @override
-  String get api_error_133 => 'Attempting to get feedback of a user that doesn’t exist';
+  String get api_error_133 => '존재하지 않는 사용자의 피드백을 받으려는 시도';
 
   @override
-  String get api_error_134 => 'Attempting to create an ad when user already has the maximum allowed number of ads';
+  String get api_error_134 => '사용자가 이미 최대 허용 광고 수를 가지고 있을 때 광고 생성 시도';
 
   @override
-  String get api_error_135 => 'Somehow the maxAmount is set to null while trackingMaxAmount is set to true';
+  String get api_error_135 => '어떻게 든 maxAmount는 null로 설정되고 trackMaxAmount는 true로 설정됩니다.';
 
   @override
-  String get api_error_136 => 'Attempting to post a ad with balance less than minimum required balance.';
+  String get api_error_136 => '최소 요구 잔액보다 적은 잔액으로 광고를 게시하려고 합니다.';
 
   @override
-  String get api_error_141 => 'Attempting to create a trade for an amount that’s less than the minimum allowed amount';
+  String get api_error_141 => '최소 허용 금액보다 적은 금액으로 거래를 시도하는 경우';
 
   @override
-  String get api_error_142 => 'Attempting to set a fiat limit that is less than minAmount when creating ad';
+  String get api_error_142 => '광고 생성 시 법정화폐 한도를 minAmount 미만으로 설정하려고 시도함';
 
   @override
-  String get api_error_143 => 'Attempting to set a fiat limit that is more than maxAmount when creating ad';
+  String get api_error_143 => '광고 생성 시 법정화폐 한도를 maxAmount보다 높게 설정하려고 시도함';
 
   @override
-  String get api_error_144 => 'Attempting to set a fiat limit that is less than minAmount when updating ad';
+  String get api_error_144 => '광고를 업데이트할 때 법정화폐 한도를 minAmount 미만으로 설정하려고 합니다.';
 
   @override
-  String get api_error_145 => 'Attempting to set a fiat limit that is more than maxAmount when updating ad';
+  String get api_error_145 => '광고를 업데이트할 때 법정화폐 한도를 maxAmount보다 크게 설정하려고 합니다.';
 
   @override
-  String get api_error_147 => 'Attempting to get affiliate data for user that doesn’t have the affiliate program enabled';
+  String get api_error_147 => '제휴 프로그램이 활성화되지 않은 사용자에 대한 제휴 데이터를 얻으려고 시도하는 경우';
 
   @override
-  String get api_error_148 => 'Attempting to set a telegram ID that’s already set';
+  String get api_error_148 => '이미 설정되어 있는 텔레그램 아이디 설정 시도';
 
   @override
-  String get api_error_149 => 'Priority not specified for external withdrawal';
+  String get api_error_149 => '외부 출금에 대한 우선 순위가 지정되지 않았습니다.';
 
   @override
-  String get api_error_150 => 'Attempting to start a trade on an ad where the requesting user is blocked by the ad poster';
+  String get api_error_150 => '광고 포스터에 의해 요청 사용자가 차단된 광고에서 거래 시작 시도';
 
   @override
-  String get api_error_151 => 'Attempting to start a trade on an ad where the requesting user is not trusted by the ad poster';
+  String get api_error_151 => '광고 포스터가 요청한 사용자를 신뢰하지 않는 광고에서 거래 시작 시도';
 
   @override
-  String get api_error_152 => 'Attempting to cancel a trade that’s already closed';
+  String get api_error_152 => '이미 마감된 거래 취소 시도';
 
   @override
-  String get api_error_153 => 'Attempting to release a trade that’s already closed';
+  String get api_error_153 => '이미 마감된 거래를 해제하려고 시도합니다.';
 
   @override
-  String get api_error_154 => 'Attempting to request trades for an account that doesn’t exist';
+  String get api_error_154 => '존재하지 않는 계정에 대한 거래 요청 시도';
 
   @override
-  String get api_error_155 => 'Attempting to get list of trusted users for a user that doesn’t exist';
+  String get api_error_155 => '존재하지 않는 사용자의 신뢰할 수 있는 사용자 목록 가져오기 시도';
 
   @override
-  String get api_error_156 => 'Attempting to get list of blocked users for a user that doesn’t exist';
+  String get api_error_156 => '존재하지 않는 사용자의 차단된 사용자 목록 가져오기 시도';
 
   @override
-  String get api_error_157 => 'Attempting to set option-specific properties for a non-option ad';
+  String get api_error_157 => '옵션이 아닌 광고에 대한 옵션별 속성 설정 시도';
 
   @override
-  String get api_error_158 => 'Attempting to create an option ad without setting option-specific properties';
+  String get api_error_158 => '옵션별 속성을 설정하지 않고 옵션 광고 생성 시도';
 
   @override
-  String get api_error_159 => 'User requesting to mark premium payment of trade doesn’t exist';
+  String get api_error_159 => '거래의 프리미엄 지불 표시를 요청한 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_160 => 'Attempting to mark premium paid for a trade that doesn’t exist';
+  String get api_error_160 => '존재하지 않는 거래에 대해 지불한 프리미엄 표시 시도';
 
   @override
-  String get api_error_161 => 'User requesting to exercise option doesn’t exist';
+  String get api_error_161 => '옵션 실행을 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_162 => 'Attempting to exercise option for a trade that doesn’t exist';
+  String get api_error_162 => '존재하지 않는 거래에 대한 옵션 행사 시도';
 
   @override
-  String get api_error_163 => 'User requesting to confirm premium payment of trade doesn’t exist';
+  String get api_error_163 => '거래의 프리미엄 지불 확인을 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_164 => 'Attempting to confirm premium paid for a trade that doesn’t exist';
+  String get api_error_164 => '존재하지 않는 거래에 대해 지불한 프리미엄 확인 시도';
 
   @override
-  String get api_error_165 => 'User requesting to exercise trade with net settlement doesn’t exist';
+  String get api_error_165 => '순결제로 거래를 요청하는 사용자가 존재하지 않습니다.';
 
   @override
-  String get api_error_166 => 'Attempting to exercise with net settlement a trade that doesn’t exist';
+  String get api_error_166 => '존재하지 않는 거래를 순결제로 행사 시도';
 
   @override
-  String get api_error_167 => 'The current market price is less than or equal to the exercise price when netting a CALL trade. The trade is out-of-the-money by market standards, therefore cannot be netted. Use normal settlement if needed.';
+  String get api_error_167 => '현재 시장 가격은 CALL 거래를 네팅할 때 행사 가격보다 작거나 같습니다. 거래는 시장 기준에 따라 외가격이므로 상계할 수 없습니다. 필요한 경우 일반 결제를 사용합니다.';
 
   @override
-  String get api_error_168 => 'User requesting to confirm cover payment of trade doesn’t exist';
+  String get api_error_168 => '거래의 커버 지불 확인을 요청하는 사용자가 존재하지 않습니다';
 
   @override
-  String get api_error_169 => 'Attempting to confirm cover paid for a trade that doesn’t exist';
+  String get api_error_169 => '존재하지 않는 거래에 대해 지불된 커버 확인 시도';
 
   @override
-  String get api_error_172 => 'Attempting to post an ad where the asset is the same as the ad currency';
+  String get api_error_172 => '자산이 광고 통화와 동일한 위치에 광고 게시 시도';
 
   @override
-  String get api_error_174 => 'Attempting to exercise out-of-the-money PUT trade';
+  String get api_error_174 => '외가격 PUT 거래를 시도합니다.';
 
   @override
-  String get api_error_175 => 'Attempting to redeem coupon that doesn’t exist during registration';
+  String get api_error_175 => '등록 시 존재하지 않는 쿠폰 사용 시도';
 
   @override
-  String get api_error_176 => 'Attempting to redeem an expired coupon during registration';
+  String get api_error_176 => '등록 중 만료된 쿠폰 사용 시도';
 
   @override
-  String get api_error_177 => 'Attempting to redeem a coupon that’s out of stock during registration';
+  String get api_error_177 => '등록 중 품절된 쿠폰 사용 시도';
 
   @override
-  String get api_error_185 => 'Attempting to get coupons for user that doesn’t exist';
+  String get api_error_185 => '존재하지 않는 사용자에 대한 쿠폰을 얻으려고 시도합니다.';
 
   @override
-  String get api_error_186 => 'Attempting to get more than 50 ads when getting ads by ID';
+  String get api_error_186 => 'ID로 광고를 받을 때 50개 이상의 광고를 얻으려고 하는 경우';
 
   @override
-  String get api_error_187 => 'Attempting to give an empty list of IDs when getting ads by ID';
+  String get api_error_187 => 'ID로 광고를 가져올 때 ID의 빈 목록을 제공하려고 합니다.';
 
   @override
-  String get api_error_188 => 'Not a single of the requested ad IDs is a valid ID when getting ads by ID';
+  String get api_error_188 => 'ID로 광고를 가져올 때 요청한 광고 ID 중 하나가 유효한 ID가 아닙니다.';
 
   @override
-  String get api_error_189 => 'Not a single of the requested ads exist when getting ads by ID';
+  String get api_error_189 => 'ID로 광고를 가져올 때 요청한 광고가 하나도 없습니다.';
 
   @override
-  String get api_error_190 => 'Attempting to give an empty list of IDs when getting trades by ID';
+  String get api_error_190 => 'ID로 거래를 가져올 때 ID의 빈 목록을 제공하려고 시도합니다.';
 
   @override
-  String get api_error_191 => 'Attempting to get more than 50 ads when getting trades by ID';
+  String get api_error_191 => '아이디 거래시 50개 이상의 광고 노출 시도';
 
   @override
-  String get api_error_192 => 'Not a single of the requested trade IDs is a valid ID when getting trades by ID';
+  String get api_error_192 => 'ID로 거래를 가져올 때 요청한 거래 ID 중 하나가 유효한 ID가 아닙니다.';
 
   @override
-  String get api_error_193 => 'Not a single of the requested trades exist when getting trades by ID';
+  String get api_error_193 => 'ID로 거래를 가져올 때 요청한 거래가 하나도 없습니다.';
 
   @override
-  String get api_error_194 => 'Attempting to generate public API token for user that doesn’t exist';
+  String get api_error_194 => '존재하지 않는 사용자에 대한 공개 API 토큰 생성 시도';
 
   @override
-  String get api_error_195 => 'Incorrect password when attempting to get public API token';
+  String get api_error_195 => '공개 API 토큰을 가져오려고 할 때 잘못된 비밀번호';
 
   @override
-  String get api_error_196 => 'Attempting to get recent messages for user that doesn’t exist';
+  String get api_error_196 => '존재하지 않는 사용자에 대한 최근 메시지 가져오기 시도';
 
   @override
-  String get api_error_197 => 'Attempting to get trade chat messages with “after” timestamp that’s outside of the allowed range';
+  String get api_error_197 => '허용 범위를 벗어난 \"이후\" 타임스탬프가 있는 거래 채팅 메시지를 받으려고 시도합니다.';
 
   @override
-  String get api_error_198 => 'Attempting to get account recent chat messages with “after” timestamp that’s outside of the allowed range';
+  String get api_error_198 => '허용 범위를 벗어난 \"이후\" 타임스탬프가 있는 계정의 최근 채팅 메시지를 가져오려고 시도합니다.';
 
   @override
-  String get api_error_199 => 'Attempting to get public API token for user that doesn’t exist';
+  String get api_error_199 => '존재하지 않는 사용자에 대한 공개 API 토큰 가져오기 시도';
 
   @override
-  String get api_error_200 => 'Attempting to expire and delete public API token for user without a public API token';
+  String get api_error_200 => '공개 API 토큰이 없는 사용자의 공개 API 토큰 만료 및 삭제 시도';
 
   @override
-  String get api_error_201 => 'Attempting to update price formula for ad that doesn’t exist';
+  String get api_error_201 => '존재하지 않는 광고에 대한 가격 공식 업데이트 시도';
 
   @override
-  String get api_error_202 => 'Attempting to get account transactions with “after” timestamp that’s outside of the allowed range';
+  String get api_error_202 => '허용 범위를 벗어난 \"이후\" 타임스탬프가 있는 계정 거래를 가져오려고 시도합니다.';
 
   @override
-  String get api_error_203 => 'Attempting to get reputation import data for account that doesn’t exist';
+  String get api_error_203 => '존재하지 않는 계정에 대한 평판 가져오기 데이터 가져오기 시도';
 
   @override
-  String get api_error_211 => 'Attempting to approve reputation import for user that doesn’t exist';
+  String get api_error_211 => '존재하지 않는 사용자에 대한 평판 가져오기 승인 시도';
 
   @override
-  String get api_error_212 => 'Attempting to approve reputation import for user that isn’t in step 2 of the reputation import flow';
+  String get api_error_212 => '평판 가져오기 흐름 2단계에 있지 않은 사용자에 대한 평판 가져오기 승인 시도';
 
   @override
-  String get api_error_213 => 'Attempting to deny reputation import for user that doesn’t exist';
+  String get api_error_213 => '존재하지 않는 사용자에 대한 평판 가져오기 거부 시도';
 
   @override
-  String get api_error_214 => 'Attempting to deny reputation import for user that isn’t in step 2 of the reputation import flow';
+  String get api_error_214 => '평판 가져오기 흐름 2단계에 있지 않은 사용자에 대한 평판 가져오기 거부 시도';
 
   @override
-  String get api_error_215 => 'Attempting to specify both country_code and currency_code when requesting most popular payment methods';
+  String get api_error_215 => '가장 많이 사용되는 결제 방법을 요청할 때 country_code와 currency_code를 모두 지정하려고 합니다.';
 
   @override
-  String get api_error_216 => 'Attempting to request most popular payment methods for a country_code that doesn’t exist';
+  String get api_error_216 => '존재하지 않는 country_code에 대해 가장 많이 사용되는 결제 수단을 요청하려고 시도합니다.';
 
   @override
-  String get api_error_217 => 'Attempting to request most popular payment methods for a currency_code that doesn’t exist';
+  String get api_error_217 => '존재하지 않는 currency_code에 대해 가장 많이 사용되는 결제 수단을 요청하려고 시도합니다.';
 
   @override
-  String get api_error_218 => 'Attempting to open a trade on an ad that requires a verified email when the requesting user doesn’t have a verified email';
+  String get api_error_218 => '요청한 사용자에게 확인된 이메일이 없을 때 확인된 이메일이 필요한 광고에서 거래를 시도하는 경우';
 
   @override
-  String get api_error_219 => 'Attempting to register with an email that’s from a disposable email provider';
+  String get api_error_219 => '일회용 이메일 제공업체의 이메일로 등록 시도';
 
   @override
-  String get api_error_220 => 'Attempting to change account email to an email from a disposable email provider';
+  String get api_error_220 => '계정 이메일을 일회용 이메일 제공업체의 이메일로 변경 시도';
 
   @override
-  String get api_error_221 => 'Attempting to mark all notifications read for a user that doesn’t exist';
+  String get api_error_221 => '존재하지 않는 사용자에 대해 모든 알림을 읽음으로 표시하려고 시도';
 
   @override
-  String get api_error_222 => 'Attempting to request reputation code for a outside platform account that has already been imported';
+  String get api_error_222 => '이미 가져온 외부 플랫폼 계정에 대한 평판 코드 요청 시도';
 
   @override
-  String get api_error_223 => 'Attempting to update ad with specifying verificationRequired as true while verificationMsg is null';
+  String get api_error_223 => 'validationMsg가 null인 동안 validationRequired를 true로 지정하여 광고 업데이트 시도';
 
   @override
-  String get api_error_224 => 'Attempting to update ad with specifying verificationMsg but the ad not requiring verification and the ad update request also not setting verificationRequired as true';
+  String get api_error_224 => '확인 메시지를 지정하여 광고를 업데이트하려고 시도하지만 확인이 필요하지 않은 광고와 광고 업데이트 요청도 validationRequired를 true로 설정하지 않음';
 
   @override
-  String get api_error_227 => 'Attempting to sanction a user that doesn’t exist';
+  String get api_error_227 => '존재하지 않는 사용자에 대한 제재 시도';
 
   @override
-  String get api_error_228 => 'Attempting to sanction user with an admin account that doesn’t exist';
+  String get api_error_228 => '존재하지 않는 관리자 계정으로 사용자 제재 시도';
 
   @override
-  String get api_error_229 => 'Attempting to remove a sanction from a user that doesn’t exist';
+  String get api_error_229 => '존재하지 않는 사용자로부터 제재 제거 시도';
 
   @override
-  String get api_error_230 => 'Attempting to remove a sanction from a user with an admin account that doesn’t exist';
+  String get api_error_230 => '존재하지 않는 관리자 계정을 가진 사용자로부터 제재 제거 시도';
 
   @override
-  String get api_error_231 => 'Attempting to remove a sanction from a user that doesn’t have any sanctions on them';
+  String get api_error_231 => '제재가 없는 사용자로부터 제재를 해제하려고 시도하는 경우';
 
   @override
-  String get api_error_232 => 'Attempting to open a trade with a user that’s currently prohibited from trading due to a sanction';
+  String get api_error_232 => '제재로 인해 현재 거래가 금지된 사용자와 거래를 시도하는 경우';
 
   @override
-  String get api_error_233 => 'Attempting to remove feedback with ID that doesn’t exist';
+  String get api_error_233 => '존재하지 않는 ID로 피드백 제거 시도';
 
   @override
-  String get api_error_234 => 'Attempting to remove feedback that’s already removed';
+  String get api_error_234 => '이미 제거된 피드백 제거 시도';
 
   @override
-  String get api_error_235 => 'Attempting to remove dispute status from a trade that doesn’t exist';
+  String get api_error_235 => '존재하지 않는 거래에서 분쟁 상태를 제거하려는 시도';
 
   @override
-  String get api_error_236 => 'Attempting to remove dispute status from a trade that isn’t disputed';
+  String get api_error_236 => '분쟁이 없는 거래에서 분쟁 상태를 제거하려는 시도';
 
   @override
-  String get api_error_237 => 'Attempting to open a trade as a user that doesn’t exist when calling the trade opening endpoint as an admin and specifying the openAsUsername parameter';
+  String get api_error_237 => '거래 개시 엔드포인트를 관리자로 호출하고 openAsUsername 매개변수를 지정할 때 존재하지 않는 사용자로 거래를 열려고 시도하는 경우';
 
   @override
-  String get api_error_240 => 'Invalid address provided by the buyer when responding to a SELL-type ad';
+  String get api_error_240 => 'SELL 유형 광고에 응답할 때 구매자가 제공한 잘못된 주소';
 
   @override
-  String get api_error_241 => 'Buyer attempting to provide an internal address when responding to a SELL-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+  String get api_error_241 => 'SELL형 광고 대응 시 내부 주소 제공을 시도하는 구매자';
 
   @override
-  String get api_error_242 => 'Invalid address provided by the buyer when creating a BUY-type ad';
+  String get api_error_242 => 'BUY 유형 광고를 만들 때 구매자가 제공한 잘못된 주소';
 
   @override
-  String get api_error_244 => 'Invalid address provided by the buyer when updating a BUY-type ad';
+  String get api_error_244 => 'BUY 유형 광고를 업데이트할 때 구매자가 제공한 잘못된 주소';
 
   @override
-  String get api_error_245 => 'Buyer attempting to provide an internal address when updating a BUY-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+  String get api_error_245 => '구매자가 BUY형 광고 업데이트 시 내부 주소 제공을 시도하는 경우 (내부 주소는 거래 결제 목적으로 허용되지 않음)';
 
   @override
-  String get api_error_246 => 'Attempting to start a trade from a BUY-type ad that doesn’t specify the buyer settlement address';
+  String get api_error_246 => '구매자 결제 주소가 명시되지 않은 BUY형 광고에서 거래를 시도하는 경우';
 
   @override
-  String get api_error_247 => 'Attempting to release a trade from an account that’s prohibited from withdrawing due to sanctions';
+  String get api_error_247 => '제재로 인해 출금이 금지된 계좌에서 거래를 해제하려고 시도하는 경우';
 
   @override
-  String get api_error_248 => 'Attempting to release a trade when the amount of the trade isn’t enough to cover the settlement-related fees';
+  String get api_error_248 => '거래 금액이 결제 관련 수수료를 충당하기에 충분하지 않은 경우 거래를 해제하려고 시도하는 경우';
 
   @override
-  String get api_error_249 => 'Attempting to update a BUY-type ad that doesn’t have buyerSettlementAddress set without setting the buyerSettlementAddress parameter in the update request';
+  String get api_error_249 => '업데이트 요청에서 BuyerSettlementAddress 매개변수를 설정하지 않고 buySettlementAddress가 설정되지 않은 BUY 유형 광고 업데이트 시도';
 
   @override
-  String get api_error_250 => 'Invalid address provided when requesting withdrawal fee for BTC';
+  String get api_error_250 => 'BTC 출금 수수료 요청 시 잘못된 주소 제공';
 
   @override
-  String get api_error_251 => 'Fee level not provided when opening a trade by responding to a BTC SELL-type ad';
+  String get api_error_251 => 'BTC SELL형 광고에 대응하여 거래 개시 시 수수료 수준이 제공되지 않음';
 
   @override
-  String get api_error_252 => 'Fee level not provided when creating a BTC BUY-type ad';
+  String get api_error_252 => 'BTC BUY형 광고 생성 시 수수료 수준이 제공되지 않음';
 
   @override
-  String get api_error_253 => 'Fee level not provided when updating a BTC BUY-type ad that doesn’t have a fee level set';
+  String get api_error_253 => '수수료가 설정되지 않은 BTC BUY형 광고 업데이트 시 수수료가 제공되지 않음';
 
   @override
-  String get api_error_255 => 'Attempting to get notifications with “after” timestamp that’s outside of the allowed range';
+  String get api_error_255 => '허용 범위를 벗어난 \"이후\" 타임스탬프가 있는 알림 수신 시도';
 
   @override
-  String get api_error_256 => 'Attempting to register a push notification token that already exists';
+  String get api_error_256 => '이미 존재하는 푸시 알림 토큰 등록 시도';
 
   @override
-  String get api_error_257 => 'Attempting to register a push notification token that isn’t valid';
+  String get api_error_257 => '유효하지 않은 푸시 알림 토큰 등록 시도';
 
   @override
-  String get api_error_258 => 'Attempting to register a push notification token for an account that already has 500 device tokens, delete one of the existing tokens before trying this again';
+  String get api_error_258 => '이미 500개의 디바이스 토큰이 있는 계정에 대해 푸시 알림 토큰을 등록하려고 시도하는 경우 다시 시도하기 전에 기존 토큰 중 하나를 삭제하세요.';
 
   @override
-  String get api_error_259 => 'Attempting to delete a token that doesn’t exist or doesn’t belong to this user';
+  String get api_error_259 => '존재하지 않거나 이 사용자에게 속하지 않는 토큰 삭제 시도';
 
   @override
   String get account => '계정';
@@ -7940,7 +7940,7 @@ class I18nKo extends I18n {
   String get pin_current => '현재 PIN';
 
   @override
-  String get pin_set => 'Set PIN code';
+  String get pin_set => 'PIN 코드 설정';
 
   @override
   String get pin_do_not_match => '핀이 일치하지 않습니다.';
@@ -8006,7 +8006,7 @@ class I18nKo extends I18n {
   String get email_verified => '이메일이 확인되었습니다.';
 
   @override
-  String get email_verification_error => 'Email verification error.';
+  String get email_verification_error => '이메일 확인 오류입니다.';
 
   @override
   String get email_token_error => '토큰 또는 이메일이 잘못되었습니다. 이메일이 확인되지 않았습니다.';
@@ -8021,19 +8021,19 @@ class I18nKo extends I18n {
   String get welcome_pick_a_payment_method => '지불 방법을 선택하거나 사용 가능한 모든 제안 중에서 선택하십시오.';
 
   @override
-  String get welcome_buy_press_buy => 'Press BUY to start the trade.';
+  String get welcome_buy_press_buy => 'BUY를 눌러 거래를 시작하세요.';
 
   @override
-  String get welcome_buy_follow_the_sellers => 'Follow the seller\'s instructions in the trade chat!';
+  String get welcome_buy_follow_the_sellers => '거래 채팅에서 판매자의 지시를 따르십시오!';
 
   @override
-  String get welcome_sell_go_to_wallet => 'Go to your wallet and deposit your coins.';
+  String get welcome_sell_go_to_wallet => '지갑으로 이동하여 동전을 입금하십시오.';
 
   @override
-  String get welcome_sell_press_sell => 'Press SELL to start the trade.';
+  String get welcome_sell_press_sell => 'SELL을 눌러 거래를 시작하세요.';
 
   @override
-  String get welcome_sell_follow_the_buyer => 'Follow the buyer\'s instructions in the trade chat!';
+  String get welcome_sell_follow_the_buyer => '거래 채팅에서 구매자의 지시를 따르십시오!';
 
   @override
   String get get_started => '시작하다';
@@ -8094,16 +8094,16 @@ class I18nKo extends I18n {
   String get no_pending_deposits => '미결제 입금 없음';
 
   @override
-  String get create_pin => 'Create PIN';
+  String get create_pin => 'PIN 생성';
 
   @override
   String get change_pin => 'PIN 변경';
 
   @override
-  String get remove_pin => 'Remove PIN';
+  String get remove_pin => 'PIN 제거';
 
   @override
-  String get remove_pin_message_success => 'PIN removed';
+  String get remove_pin_message_success => 'PIN이 삭제됨';
 
   @override
   String get you_will_receive => '당신은 받게 될 것입니다';
@@ -8394,262 +8394,268 @@ class I18nKo extends I18n {
   String get trade__dialog__confirm_release_monero_text_password => '이 비밀번호는 비수탁결제 지갑을 생성하고 거래에 서명하기 위한 오프셋으로 사용됩니다. LocalMonero는 이 비밀번호를 분실한 경우 지갑을 복구할 방법이 없습니다.';
 
   @override
-  String get dont_have_an_account_yet => 'Don\'t have an account yet?';
+  String get dont_have_an_account_yet => '아직 계정이 없으신가요?';
 
   @override
-  String get app_trades => 'Trades';
+  String get app_trades => '거래';
 
   @override
-  String get app_unlimited => 'Unlimited';
+  String get app_unlimited => '제한 없는';
 
   @override
-  String get app_guides => 'Guides';
+  String get app_guides => '가이드';
 
   @override
-  String get app_edit_this_ad => 'Edit this ad';
+  String get app_edit_this_ad => '이 광고 수정';
 
   @override
-  String get app_you_can_use_markdown => 'You can use markdown to style your ad\'s terms (images not allowed).';
+  String get app_you_can_use_markdown => '마크다운을 사용하여 광고 용어의 스타일을 지정할 수 있습니다(이미지는 허용되지 않음).';
 
   @override
-  String get app_no_trades_to_export => 'No trades to export.';
+  String get app_no_trades_to_export => '수출할 거래가 없습니다.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. $appName will not be able to help you should you lose this code.';
+    return '백업 코드(위의 녹색)를 종이에 적어 안전한 장소에 보관하십시오. 휴대전화를 분실하거나 계정에 액세스할 수 없는 경우 필요합니다. 이 코드를 분실하면 $appName에서 도움을 드릴 수 없습니다.';
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => 'Before creating an advertisement please read through our ';
+  String get ad_post_ad_rules_text_0 => '광고를 만들기 전에 당사의 ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Beware of scammers trying to impersonate staff! \n${appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
+    return '직원을 사칭하려는 사기꾼을 조심하십시오!\n${appName} 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지에는 빨간색 배경이 있습니다.';
   }
 
   @override
   String app_buy_sell(Object val) {
-    return 'How much do you wish to $val?';
+    return '$val 얼마를 원하십니까?';
   }
 
   @override
   String app_buyer_marked_as_paid(Object val) {
-    return '$val has marked the trade as paid';
+    return '$val은(는) 거래를 지불된 것으로 표시했습니다.';
   }
 
   @override
   String app_buy_crypto_from(Object val) {
-    return 'Buy crypto from $val';
+    return '$val에서 암호화폐 구매';
   }
 
   @override
   String app_sell_crypto_to(Object val) {
-    return 'Sell crypto to $val';
+    return '암호화폐를 $val에 판매';
   }
 
   @override
   String app_trades_with(Object val) {
-    return 'See trades with $val';
+    return '$val과의 거래 보기';
   }
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '($val1 will be able to cancel in $val2 min unless you mark paid)';
+    return '($val1은(는) 유료로 표시하지 않는 한 $val2분 후에 취소할 수 있습니다.)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val is now able to cancel unless you mark paid)';
+    return '($val은(는) 이제 유료로 표시하지 않는 한 취소할 수 있습니다.)';
   }
 
   @override
   String app_buying_from(Object asset, Object amount, Object username) {
-    return 'Buying $asset $amount from $username';
+    return '$username에서 $asset {mount} 구매';
   }
 
   @override
   String app_selling_to(Object asset, Object amount, Object username) {
-    return 'Selling $asset $amount to $username';
+    return '$username에게 $asset $amount 판매';
   }
 
   @override
   String app_for_sum(Object val) {
-    return 'for $val';
+    return '$val에 대한';
   }
 
   @override
-  String get app_buy_crypto => 'Buy crypto from';
+  String get app_buy_crypto => '다음에서 암호화 구매';
 
   @override
-  String get app_sell_crypto => 'Sell crypto to';
+  String get app_sell_crypto => '암호화폐 판매';
 
   @override
-  String get app_intall_trade_title => 'Please install AgoraDesk to view this trade';
+  String get app_intall_trade_title => '이 거래를 보려면 AgoraDesk를 설치하십시오';
 
   @override
-  String get app_intall_ad_title => 'Please install AgoraDesk to view this ad';
+  String get app_intall_ad_title => '이 광고를 보려면 AgoraDesk를 설치하세요.';
 
   @override
-  String get app_intall_trade_body => 'This is a Bitcoin-based trade, it requires our AgoraDesk app to view.';
+  String get app_intall_trade_body => '이것은 Bitcoin 기반 거래이며 보려면 AgoraDesk 앱이 필요합니다.';
 
   @override
-  String get app_intall_ad_body => 'This is a Bitcoin-based ad, it requires our AgoraDesk app to view.';
+  String get app_intall_ad_body => '이것은 비트코인 기반 광고이며 보려면 AgoraDesk 앱이 필요합니다.';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => 'Never finalize a trade until you are 100% sure you have received the money. Scammers will try to trick you into finalizing early.';
+  String get app_trade_option_payment_receiver_cancel_notice => '돈을 받았다고 100% 확신할 때까지 거래를 완료하지 마십시오. 사기꾼은 당신을 속여서 조기에 마무리하려고 할 것입니다.';
 
   @override
-  String get app_cancel_trade_message => 'Made a mistake or want to try another trader? If you have transferred the funds already and want to cancel now, you need to negotiate the return of your payment with your trading partner by yourself. Never cancel unless you are sure you have received your money back.';
+  String get app_cancel_trade_message => '실수를 했거나 다른 상인을 시도하고 싶습니까? 이미 자금을 이체했고 지금 취소하려면 거래 파트너와 직접 지불 반환을 협상해야 합니다. 환불이 확실하지 않으면 절대 취소하지 마십시오.';
 
   @override
-  String get app_all_feedback => 'All feedback';
+  String get app_all_feedback => '모든 피드백';
 
   @override
-  String get app_camera => 'Camera';
+  String get app_camera => '카메라';
 
   @override
-  String get app_clear => 'Clear';
+  String get app_clear => '분명한';
 
   @override
-  String get app_ad_deleted => 'Ad deleted';
+  String get app_ad_deleted => '광고 삭제됨';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'This is your verification code. You can tell it to the buyer so that the buyer can verify you’ve finalized the trade without them needing to use the device.';
+  String get app_verifiacetion_code_to_seller => '인증 코드입니다. 구매자에게 알려주면 구매자가 기기를 사용할 필요 없이 거래가 완료되었음을 확인할 수 있습니다.';
 
   @override
-  String get app_verification_code => 'Verification code';
+  String get app_verification_code => '확인 코드';
 
   @override
-  String get app_ad => 'Ad';
+  String get app_ad => '기원 후';
 
   @override
-  String get app_with => 'with';
+  String get app_with => '~와 함께';
 
   @override
-  String get app_edited => 'Edited';
+  String get app_edited => '수정됨';
 
   @override
-  String get app_permanent => 'Permanent';
+  String get app_permanent => '영구적 인';
 
   @override
-  String get app_error_saving => 'Error during saving. Changes wasn\'t save.';
+  String get app_error_saving => '저장하는 동안 오류가 발생했습니다. 변경 사항이 저장되지 않았습니다.';
 
   @override
-  String get app_manage_ads => 'Manage ads';
+  String get app_manage_ads => '광고 관리';
 
   @override
-  String get app_vacation_enabled => 'Vacation enabled';
+  String get app_vacation_enabled => '휴가 사용 가능';
 
   @override
-  String get app_trade_created => 'Trade created';
+  String get app_trade_created => '거래 생성';
 
   @override
-  String get app_session_expired => 'Session expired';
+  String get app_session_expired => '세션이 만료되었습니다.';
 
   @override
-  String get app_anonymous_crash_diagnostics => 'Anonymous crash diagnostics';
+  String get app_anonymous_crash_diagnostics => '익명의 충돌 진단';
 
   @override
-  String get app_restart_now => 'Restart now';
+  String get app_restart_now => '지금 다시 시작';
 
   @override
-  String get app_postpone => 'Postpone';
+  String get app_postpone => '연기하다';
 
   @override
-  String get app_biometric_authentication => 'Biometric authentication';
+  String get app_biometric_authentication => '생체 인증';
 
   @override
-  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
+  String get app_biometric_authentication_message => '생체 인증을 활성화하려면 PIN 코드를 설정하세요.';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
+  String get app_anonymous_crash_diagnostics_restart => '익명 충돌 진단이 비활성화되었으며 앱을 다시 시작한 후 전송되지 않습니다.';
 
   @override
-  String get app_trading_partners => 'Trading partners';
+  String get app_trading_partners => '거래 파트너';
 
   @override
-  String get app_trade_status_settlement_processing_description => 'The settlement is being processed. Please wait, there\'s nothing that you need to do.';
+  String get app_trade_status_settlement_processing_description => '결제 처리 중입니다. 잠시만 기다려 주십시오. 당신이 해야 할 일은 없습니다.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => 'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.';
+  String get app_buyer_settlement_fee_level_description => '거래 정산 시 사용할 수수료 수준을 선택합니다. 여기에 표시된 값은 현재 예상 환율이며 거래 결제 시 적용된 값과 다를 수 있습니다. 거래 금액이 너무 낮아 선택한 수수료 수준으로 거래를 결제할 수 없는 경우 결제 시 더 낮은 수수료 수준이 자동으로 선택됩니다.';
 
   @override
-  String get app_change_vacation_settings => 'Change vacation settings.';
+  String get app_change_vacation_settings => '휴가 설정을 변경합니다.';
 
   @override
-  String get app_gallery => 'Gallery';
+  String get app_gallery => '갤러리';
 
   @override
-  String get app_via => 'via';
+  String get app_via => '~을 통해';
 
   @override
-  String get app_one_percent => '1% fee';
+  String get app_one_percent => '수수료 1%';
 
   @override
-  String get app_final_amount => 'Final amount';
+  String get app_final_amount => '최종 금액';
 
   @override
   String app_note_label(Object val) {
-    return 'Your note on $val (only seen by you)';
+    return '$val에 대한 메모(본인만 볼 수 있음)';
   }
 
   @override
   String app_note_add(Object val) {
-    return 'Add a note on $val';
+    return '$val에 메모 추가';
   }
 
   @override
   String app_update_new_version_available(Object val) {
-    return 'New version $val is available.';
+    return '새 버전 $val을 사용할 수 있습니다.';
   }
 
   @override
-  String get app_update_now => 'Update now';
+  String get app_update_now => '지금 업데이트';
 
   @override
-  String get app_update_ingnor_until_next => 'Ignore until next update';
+  String get app_update_ingnor_until_next => '다음 업데이트까지 무시';
 
   @override
-  String get app_update_ignore_always => 'Always ignore';
+  String get app_update_ignore_always => '항상 무시';
 
   @override
-  String get app_tooltip_visibility => 'Tap to toggle visibility';
+  String get app_tooltip_visibility => '탭하여 가시성 전환';
 
   @override
-  String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
+  String get app_tooltip_long_press_ad => '그룹 수정을 사용하려면 광고를 길게 누르세요.';
 
   @override
-  String get app_join_telegram => 'Join Telegram group';
+  String get app_join_telegram => '텔레그램 그룹 가입';
 
   @override
-  String get app_join_matrix => 'Join Matrix group';
+  String get app_join_matrix => '매트릭스 그룹에 가입';
 
   @override
-  String get app_display_password => 'Display password';
+  String get app_display_password => '비밀번호 표시';
 
   @override
-  String get app_hide_password => 'Hide password';
+  String get app_hide_password => '비밀번호 숨기기';
 
   @override
-  String get app_trade_has_been_cancelled => 'The trade has been cancelled.';
+  String get app_trade_has_been_cancelled => '거래가 취소되었습니다.';
 
   @override
   String app_last_seen(Object val) {
-    return 'Last seen $val';
+    return '마지막으로 본 $val';
   }
 
   @override
-  String get app_open_additional_filters => 'Open additional filters';
+  String get app_open_additional_filters => '추가 필터 열기';
 
   @override
-  String get app_select_asset => 'Select asset';
+  String get app_select_asset => '자산 선택';
 
   @override
-  String get app_select_trade_type => 'Select trade type';
+  String get app_select_trade_type => '거래 유형 선택';
 
   @override
-  String get app_paste => 'Paste';
+  String get app_paste => '반죽';
 
   @override
-  String get app_scan_qr_code => 'Scan QR code';
+  String get app_scan_qr_code => 'QR 코드 스캔';
+
+  @override
+  String get app_report_this_user => 'Report this user';
+
+  @override
+  String get app_open_dropdown => 'Open dropdown';
 }

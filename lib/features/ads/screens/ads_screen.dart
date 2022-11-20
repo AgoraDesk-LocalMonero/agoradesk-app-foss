@@ -122,6 +122,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               floatingActionButton: model.isGuestMode
                   ? const SizedBox()
                   : FloatingActionButton(
+                      tooltip: context.intl.document8722Sbtitle250Sbpost8722Sbad,
                       backgroundColor: context.colP70,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       child: Icon(
@@ -413,7 +414,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               Expanded(
                 flex: 1,
                 child: DropdownSearch<String>(
-                  dropdownButtonProps: context.dropdownButtonProps,
+                  dropdownButtonProps: context.dropdownButtonProps(),
                   dropdownDecoratorProps: context.dropdownDecoration,
                   popupProps: PopupProps.menu(
                     menuProps: context.dropdownMenuProps,
@@ -429,7 +430,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                   ? Expanded(
                       flex: 1,
                       child: DropdownSearch<String>(
-                        dropdownButtonProps: context.dropdownButtonProps,
+                        dropdownButtonProps: context.dropdownButtonProps(),
                         dropdownDecoratorProps: context.dropdownDecoration,
                         popupProps: PopupProps.menu(
                           menuProps: context.dropdownMenuProps,
@@ -499,7 +500,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                               Expanded(
                                 child: DropdownSearch<SortingType?>(
                                   key: model.sortDropdownKey,
-                                  dropdownButtonProps: context.dropdownButtonProps,
+                                  dropdownButtonProps: context.dropdownButtonProps(),
                                   dropdownDecoratorProps: context.dropdownDecoration,
                                   popupProps: PopupProps.dialog(
                                     dialogProps: context.dropdownDialogProps,
@@ -536,7 +537,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                           const SizedBox(height: marginTextList),
                           DropdownSearch<String>(
                             key: model.visibilityDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.menu(
                               menuProps: context.dropdownMenuProps,
@@ -556,7 +557,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                           const SizedBox(height: marginTextList),
                           DropdownSearch<String>(
                             key: model.countryDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
@@ -575,7 +576,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                           const SizedBox(height: marginTextList),
                           DropdownSearch<CurrencyModel?>(
                             key: model.currencyDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
@@ -593,7 +594,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                           ),
                           const SizedBox(height: marginTextList),
                           DropdownSearch<OnlineProvider?>(
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,

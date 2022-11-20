@@ -105,32 +105,38 @@ class _TradesScreenState extends State<TradesScreen>
             children: [
               Expanded(
                 flex: 1,
-                child: DropdownSearch<String>(
-                  dropdownButtonProps: context.dropdownButtonProps,
-                  dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.menu(
-                    menuProps: context.dropdownMenuProps,
-                    fit: FlexFit.loose,
+                child: Semantics(
+                  label: context.intl.dashboard250Sbfilter250Sbrole250Sbboth,
+                  child: DropdownSearch<String>(
+                    dropdownButtonProps: context.dropdownButtonProps(),
+                    dropdownDecoratorProps: context.dropdownDecoration,
+                    popupProps: PopupProps.menu(
+                      menuProps: context.dropdownMenuProps,
+                      fit: FlexFit.loose,
+                    ),
+                    items: model.tradeTypeMenu,
+                    onChanged: model.setTradeType,
+                    selectedItem: model.tradeTypeMenu[0],
                   ),
-                  items: model.tradeTypeMenu,
-                  onChanged: model.setTradeType,
-                  selectedItem: model.tradeTypeMenu[0],
                 ),
               ),
               GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 6) : const SizedBox(),
               GetIt.I<AppParameters>().isAgoraDesk
                   ? Expanded(
                       flex: 1,
-                      child: DropdownSearch<String>(
-                        dropdownButtonProps: context.dropdownButtonProps,
-                        dropdownDecoratorProps: context.dropdownDecoration,
-                        popupProps: PopupProps.menu(
-                          menuProps: context.dropdownMenuProps,
-                          fit: FlexFit.loose,
+                      child: Semantics(
+                        label: context.intl.app_select_asset,
+                        child: DropdownSearch<String>(
+                          dropdownButtonProps: context.dropdownButtonProps(),
+                          dropdownDecoratorProps: context.dropdownDecoration,
+                          popupProps: PopupProps.menu(
+                            menuProps: context.dropdownMenuProps,
+                            fit: FlexFit.loose,
+                          ),
+                          items: model.assetMenu,
+                          onChanged: model.setAsset,
+                          selectedItem: model.assetMenu[0],
                         ),
-                        items: model.assetMenu,
-                        onChanged: model.setAsset,
-                        selectedItem: model.assetMenu[0],
                       ),
                     )
                   : const SizedBox(),
@@ -187,7 +193,7 @@ class _TradesScreenState extends State<TradesScreen>
                           const SizedBox(height: 8),
                           DropdownSearch<String>(
                             key: model.countryDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
@@ -207,7 +213,7 @@ class _TradesScreenState extends State<TradesScreen>
                           const SizedBox(height: 8),
                           DropdownSearch<CurrencyModel?>(
                             key: model.currencyDropdownKey,
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
@@ -228,7 +234,7 @@ class _TradesScreenState extends State<TradesScreen>
                           ),
                           const SizedBox(height: 8),
                           DropdownSearch<OnlineProvider?>(
-                            dropdownButtonProps: context.dropdownButtonProps,
+                            dropdownButtonProps: context.dropdownButtonProps(),
                             dropdownDecoratorProps: context.dropdownDecoration,
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,

@@ -1,5 +1,9 @@
+import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/core/widgets/branded/button_icon_text_p70.dart';
 import 'package:agoradesk/core/widgets/branded/button_link.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -20,10 +24,11 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
-class TraderProfileScreen extends StatelessWidget {
+class TraderProfileScreen extends StatelessWidget with UrlMixin {
   const TraderProfileScreen({
     Key? key,
     this.profileModel,
@@ -89,7 +94,13 @@ class TraderProfileScreen extends StatelessWidget {
                               intro: model.profileForScreen.introduction,
                               loading: model.loadingAccountInfo,
                             ),
-                            const SizedBox(height: 12),
+                            const SizedBox(height: 6),
+                            ButtonIconTextP70(
+                              text: context.intl.app_report_this_user,
+                              iconData: AgoraFont.alert_circle,
+                              onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
+                            ),
+                            const SizedBox(height: 6),
                             TraderWebsiteBox(
                               url: model.profileForScreen.homepage,
                               loading: model.loadingAccountInfo,
