@@ -1,3 +1,5 @@
+import com.android.build.OutputFile
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 
@@ -124,6 +126,6 @@ android.applicationVariants.all { variant ->
 //        def flavor = variant.flavorName
         def flavor = variant.applicationId
 //        outputFileName = "app-${flavor}-${builtType}-${versionName}-${versionCode}.apk"
-        outputFileName = "${flavor}_${versionCode}.apk"
+        outputFileName = "${flavor}_${versionCode}_${output.getFilter(OutputFile.ABI)}.apk"
     }
 }
