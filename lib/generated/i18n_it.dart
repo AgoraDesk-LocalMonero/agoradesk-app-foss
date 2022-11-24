@@ -8,19 +8,27 @@ class I18nIt extends I18n {
   String get numSb404 => 'OPS. Questa pagina non esiste.';
 
   @override
-  String get about250Sbblock8722Sb18722Sbtext => 'In {appName}, il nostro obiettivo è quello di creare una piattaforma personale e di facile utilizzo per consentire a chiunque di scambiare la propria moneta locale con Monero, ovunque. I nostri utenti pubblicano annunci che specificano il loro metodo di pagamento preferito (ad es. Bonifico bancario, contanti, online come PayPal, buoni regalo, ecc.), Altri utenti rispondono a questi annunci e {appName} prende un\'obbligazione di arbitrato pari all\'importo dello scambio dall\'utente che è il venditore di Monero in un dato scambio e il venditore invia i Monero all\'acquirente quando il venditore conferma di aver ricevuto il pagamento dall\'acquirente, dopo di che l\'obbligazione di arbitrato viene restituita al venditore.{appName} può anche intervenire per mediare qualsiasi controversia che possa sorgere.';
+  String about250Sbblock8722Sb18722Sbtext(Object appName) {
+    return 'In $appName, il nostro obiettivo è quello di creare una piattaforma personale e di facile utilizzo per consentire a chiunque di scambiare la propria moneta locale con Monero, ovunque. I nostri utenti pubblicano annunci che specificano il loro metodo di pagamento preferito (ad es. Bonifico bancario, contanti, online come PayPal, buoni regalo, ecc.), Altri utenti rispondono a questi annunci e $appName prende un\'obbligazione di arbitrato pari all\'importo dello scambio dall\'utente che è il venditore di Monero in un dato scambio e il venditore invia i Monero all\'acquirente quando il venditore conferma di aver ricevuto il pagamento dall\'acquirente, dopo di che l\'obbligazione di arbitrato viene restituita al venditore.$appName può anche intervenire per mediare qualsiasi controversia che possa sorgere.';
+  }
 
   @override
-  String get about250Sbblock8722Sb18722Sbtext57Sbagoradesk => 'A {appName}, il nostro obiettivo è quello di stabilire una piattaforma da persona a persona sicura e facile da usare per consentire a chiunque di scambiare la propria valuta locale per criptovaluta, ovunque. I nostri utenti pubblicano annunci che specificano il loro metodo di pagamento preferito (ad es. Bonifico bancario, contanti, processore di pagamento online come PayPal, buoni regalo, ecc.), Altri utenti rispondono a questi annunci, {appName} prende un vincolo di arbitraggio pari all\'importo della transazione dall\'utente che è il venditore di criptovalute in una data transazione e il venditore invia la criptovaluta all\'acquirente quando il venditore conferma di aver ricevuto il pagamento dall\'acquirente, dopo di che il vincolo di arbitraggio viene restituito al venditore. {appName} può anche intervenire per mediare su eventuali controversie che potrebbero insorgere.';
+  String about250Sbblock8722Sb18722Sbtext57Sbagoradesk(Object appName) {
+    return 'A $appName, il nostro obiettivo è quello di stabilire una piattaforma da persona a persona sicura e facile da usare per consentire a chiunque di scambiare la propria valuta locale per criptovaluta, ovunque. I nostri utenti pubblicano annunci che specificano il loro metodo di pagamento preferito (ad es. Bonifico bancario, contanti, processore di pagamento online come PayPal, buoni regalo, ecc.), Altri utenti rispondono a questi annunci, $appName prende un vincolo di arbitraggio pari all\'importo della transazione dall\'utente che è il venditore di criptovalute in una data transazione e il venditore invia la criptovaluta all\'acquirente quando il venditore conferma di aver ricevuto il pagamento dall\'acquirente, dopo di che il vincolo di arbitraggio viene restituito al venditore. $appName può anche intervenire per mediare su eventuali controversie che potrebbero insorgere.';
+  }
 
   @override
   String get about250Sbblock8722Sb18722Sbtitle => 'La nostra missione';
 
   @override
-  String get about250Sbblock8722Sb28722Sbtext => 'Su {appName} hai a che fare con degli esperti. A differenza degli scambi centralizzati di criptovalute, tu fai uno scambio direttamente con una persona reale. Questo rende il processo snello e veloce ed ottieni il tuo Monero all\'istante. Inoltre, {appName} può supportare ogni metodo di pagamento supportato dalla comunità degli utenti, rendendo possibile agli utenti che non hanno accesso al banking tradizionale di poter acquistare o vendere Monero. Per ogni transazione, {appName} richiede al venditore di postare un vincolo arbitrale per proteggere il compratore di Monero.';
+  String about250Sbblock8722Sb28722Sbtext(Object appName) {
+    return 'Su $appName hai a che fare con degli esperti. A differenza degli scambi centralizzati di criptovalute, tu fai uno scambio direttamente con una persona reale. Questo rende il processo snello e veloce ed ottieni il tuo Monero all\'istante. Inoltre, $appName può supportare ogni metodo di pagamento supportato dalla comunità degli utenti, rendendo possibile agli utenti che non hanno accesso al banking tradizionale di poter acquistare o vendere Monero. Per ogni transazione, $appName richiede al venditore di postare un vincolo arbitrale per proteggere il compratore di Monero.';
+  }
 
   @override
-  String get about250Sbblock8722Sb28722Sbtext57Sbagoradesk => 'Su {appName} hai a che fare con umani. A differenza degli scambi centralizzati di criptovaluta, fai uno scambio direttamente con un\'altra persona. Questo rende il processo snello e veloce, in quanto non vi è alcun sovraccarico aziendale. Ottieni immediatamente la tua criptovaluta. Inoltre, {appName} può supportare tutti i metodi di pagamento supportati dalla sua comunità di utenti, consentendo agli utenti senza accesso al sistema bancario tradizionale di essere in grado di scambiare criptovaluta. Per ogni transazione, {appName} richiede al venditore di postare un vincolo arbitrale per proteggere l\'acquirente di criptovalute.';
+  String about250Sbblock8722Sb28722Sbtext57Sbagoradesk(Object appName) {
+    return 'Su $appName hai a che fare con umani. A differenza degli scambi centralizzati di criptovaluta, fai uno scambio direttamente con un\'altra persona. Questo rende il processo snello e veloce, in quanto non vi è alcun sovraccarico aziendale. Ottieni immediatamente la tua criptovaluta. Inoltre, $appName può supportare tutti i metodi di pagamento supportati dalla sua comunità di utenti, consentendo agli utenti senza accesso al sistema bancario tradizionale di essere in grado di scambiare criptovaluta. Per ogni transazione, $appName richiede al venditore di postare un vincolo arbitrale per proteggere l\'acquirente di criptovalute.';
+  }
 
   @override
   String get about250Sbblock8722Sb28722Sbtitle => 'In cosa siamo diversi';
@@ -50,7 +58,9 @@ class I18nIt extends I18n {
   String get ad8722Sblisting8722Sbtable250Sbmethod => 'Metodi di pagamento';
 
   @override
-  String get ad8722Sblisting8722Sbtable250Sbprice => 'Prezzo/{assetSymbol}';
+  String ad8722Sblisting8722Sbtable250Sbprice(Object assetSymbol) {
+    return 'Prezzo/$assetSymbol';
+  }
 
   @override
   String get ad8722Sblisting8722Sbtable250Sbsell8722Sbbtn => 'Vendi';
@@ -62,16 +72,24 @@ class I18nIt extends I18n {
   String get ad8722Sblisting8722Sbtable250Sbshow8722Sbmore => 'Mostra altri...';
 
   @override
-  String get ad8722Sblisting8722Sbtable250Sbshow8722Sbmore8722Sbby8722Sbuser => 'Visualizza altri annunci di questo tipo dell\'utente {user}...';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore8722Sbby8722Sbuser(Object user) {
+    return 'Visualizza altri annunci di questo tipo dell\'utente $user...';
+  }
 
   @override
-  String get ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency => 'Tutto in {country-or-currency}';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
+    return 'Tutto in $countryOrcurrency';
+  }
 
   @override
-  String get ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbhide => 'Nascondi gli annunci simili di {username}';
+  String ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbhide(Object username) {
+    return 'Nascondi gli annunci simili di $username';
+  }
 
   @override
-  String get ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbshow => 'Mostra {numberOfSimilarAds} altri annunci simili di {username}';
+  String ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbshow(Object numberOfSimilarAds, Object username) {
+    return 'Mostra $numberOfSimilarAds altri annunci simili di $username';
+  }
 
   @override
   String get ad8722Sbpage250Sbcant8722Sbsend8722Sbtrade8722Sbrequest => 'Impossibile richiedere uno scambio per questo annuncio al momento';
@@ -83,7 +101,9 @@ class I18nIt extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Errore nella richiesta di scambio';
 
   @override
-  String get ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip => 'Questo trader consente un massimo di {first-time-limit-xmr} per avviare il primo scambio assieme.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
+    return 'Questo trader consente un massimo di $firstTimelimitxmr per avviare il primo scambio assieme.';
+  }
 
   @override
   String ad8722Sbpage250Sbfluctuations8722Sbtip(Object assetSymbol) {
@@ -91,34 +111,34 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get ad8722Sbpage250Sbfor8722Sbtrusted => 'Solo per utenti fidati di {username} ';
+  String ad8722Sbpage250Sbfor8722Sbtrusted(Object username) {
+    return 'Solo per utenti fidati di $username ';
+  }
 
   @override
-  String get ad8722Sbpage250Sbheading8722Sbcall8722Sbbuy => 'Vendi l\'opzione di chiamata {assetName} utilizzando {payment-method}{detail}  con {currency}';
+  String ad8722Sbpage250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object user, Object currency) {
+    return 'Vendi $assetName per contanti in $location da $user con $currency';
+  }
 
   @override
-  String get ad8722Sbpage250Sbheading8722Sbcall8722Sbsell => 'Acquista l\'opzione di chiamata {assetName} utilizzando {payment-method}{detail} con {currency}';
+  String ad8722Sbpage250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object user, Object currency) {
+    return 'Compra $assetName con contanti in $location da $user con $currency';
+  }
 
   @override
-  String get ad8722Sbpage250Sbheading8722Sblocal8722Sbbuy => 'Vendi {assetName} per contanti in {location} da {user} con {currency}';
+  String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
+    return 'Vendi $assetName usando $paymentMethod${detail} con $currency';
+  }
 
   @override
-  String get ad8722Sbpage250Sbheading8722Sblocal8722Sbsell => 'Compra {assetName} con contanti in {location} da {user} con {currency}';
+  String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
+    return 'Compra $assetName usando $paymentMethod${detail} con $currency';
+  }
 
   @override
-  String get ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy => 'Vendi {assetName} usando {payment-method}{detail} con {currency}';
-
-  @override
-  String get ad8722Sbpage250Sbheading8722Sbonline8722Sbsell => 'Compra {assetName} usando {payment-method}{detail} con {currency}';
-
-  @override
-  String get ad8722Sbpage250Sbheading8722Sbput8722Sbbuy => 'Vendi {assetName} opzione put usando {payment-method}{detail} con {currency}';
-
-  @override
-  String get ad8722Sbpage250Sbheading8722Sbput8722Sbsell => 'Acquista {assetName} opzione put usando {payment-method}{detail} con {currency}';
-
-  @override
-  String get ad8722Sbpage250Sbhidden8722Sbwarning8722Sb0 => 'La visibilità di questo annuncio è stata impostata su nascosta. Puoi cambiarlo alla pagina {edit-ad}.';
+  String ad8722Sbpage250Sbhidden8722Sbwarning8722Sb0(Object editAd) {
+    return 'La visibilità di questo annuncio è stata impostata su nascosta. Puoi cambiarlo alla pagina $editAd.';
+  }
 
   @override
   String get ad8722Sbpage250Sbhidden8722Sbwarning8722Sb08722Sbedit8722Sbad => 'Modifica annuncio';
@@ -130,7 +150,9 @@ class I18nIt extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Compra';
 
   @override
-  String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell => 'Quanto vuoi per {buy-or-sell}?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
+    return 'Quanto vuoi per $buyOrsell?';
+  }
 
   @override
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell => 'Vendi';
@@ -145,7 +167,9 @@ class I18nIt extends I18n {
   String get ad8722Sbpage250Sbinfo250Sbuser => 'Utente';
 
   @override
-  String get ad8722Sbpage250Sblimit8722Sbto8722Sbamounts => 'Questo trader ha importi di trading limitati a {amounts} {currency}';
+  String ad8722Sbpage250Sblimit8722Sbto8722Sbamounts(Object amounts, Object currency) {
+    return 'Questo trader ha importi di trading limitati a $amounts $currency';
+  }
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
@@ -153,13 +177,17 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip => 'Questo scambio richiede almeno {minimum-feedback-score} di feedback per funzionare.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
+    return 'Questo scambio richiede almeno $minimumFeedbackscore di feedback per funzionare.';
+  }
 
   @override
   String get ad8722Sbpage250Sbreport8722Sbad => 'Segnala questo annuncio aprendo un ticket';
 
   @override
-  String get ad8722Sbpage250Sbrequest8722Sbtrade250Sbmin8722Sbrequired8722Sbbalance => 'Devi avere {amount} nel tuo portafoglio di obbligazioni arbitrali {appName} per coprire la tassa di protezione arbitrale dell\'1% per questa operazione.';
+  String ad8722Sbpage250Sbrequest8722Sbtrade250Sbmin8722Sbrequired8722Sbbalance(Object amount, Object appName) {
+    return 'Devi avere $amount nel tuo portafoglio di obbligazioni arbitrali $appName per coprire la tassa di protezione arbitrale dell\'1% per questa operazione.';
+  }
 
   @override
   String get ad8722Sbpage250Sbrequest8722Sbtrade250Sbprice8722Sbchanged250Sbaccept8722Sbprice => 'Accetta il prezzo e continua';
@@ -223,36 +251,6 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get ad250Sbbroker8722Sbwarn250Sbagree => 'Ne <strong>comprendo completamente</strong> le implicazioni e <strong> non contesterò lo scambio</strong> per questi motivi';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbback => 'Sceglierò un altro commerciante';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbbuy8722Sb0 => 'L\'acquirente potrebbe impiegare <strong>FINO A {days} GIORNI LAVORATIVI</strong> per completare il pagamento.';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbbuy8722Sb1 => 'L\'importo totale potrebbe esserti inviato in <strong>PARTI MULTIPLE DA ACCOUNT DIFFERENTI</strong>.';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbbuy8722Sb2 => 'Questo acquirente <strong>NON ANNULLERÀ LO SCAMBIO</strong> se cambi idea prima dello scambio, se finalizzato.';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbsell8722Sb0 => 'Questo venditore potrebbe impiegare <strong>FINO A 72 ORE</strong> per confermare il pagamento.';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbsell8722Sb1 => 'Potrebbe essere necessario inviare il pagamento in <strong>PARTI MULTIPLE</strong> a diversi account.';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbsell8722Sb2 => 'Questo venditore <strong>RICHIEDERÀ LA VERIFICA VIDEO DI TE E DEL TUO PAGAMENTO.</strong>';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbsell8722Sb3 => 'Questo venditore <strong>NON TI RIMBORSERÀ</strong> se decidi di non continuare con lo scambio.';
-
-  @override
-  String get ad250Sbbroker8722Sbwarn250Sbtitle => 'LEGGI QUESTO prima di andare avanti';
-
-  @override
   String get ad250Sbconfirmation250Sbaccept8722Sbterms8722Sbbtn => 'Accettare i termini';
 
   @override
@@ -272,31 +270,29 @@ class I18nIt extends I18n {
   String get ad250Sbdeleted => 'Questo annuncio è stato cancellato';
 
   @override
-  String get ad250Sbhomepage8722Sblisting250Sbcall8722Sbbuy8722Sbheading => 'Vendi {assetName} opzione call online in {country}';
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+    return 'Vendi $assetName con denaro in $country';
+  }
 
   @override
-  String get ad250Sbhomepage8722Sblisting250Sbcall8722Sbsell8722Sbheading => 'Acquista l\'opzione di chiamata {assetName} online in {country}';
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+    return 'Compra $assetName con contanti in $country';
+  }
 
   @override
-  String get ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading => 'Vendi {assetName} con denaro in {country}';
+  String ad250Sbhomepage8722Sblisting250Sbonline8722Sbbuy8722Sbheading(Object assetName, Object country) {
+    return 'Vendi $assetName online in $country';
+  }
 
   @override
-  String get ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading => 'Compra {assetName} con contanti in {country}';
+  String ad250Sbhomepage8722Sblisting250Sbonline8722Sbsell8722Sbheading(Object assetName, Object country) {
+    return 'Compra $assetName online in $country';
+  }
 
   @override
-  String get ad250Sbhomepage8722Sblisting250Sbonline8722Sbbuy8722Sbheading => 'Vendi {assetName} online in {country}';
-
-  @override
-  String get ad250Sbhomepage8722Sblisting250Sbonline8722Sbsell8722Sbheading => 'Compra {assetName} online in {country}';
-
-  @override
-  String get ad250Sbhomepage8722Sblisting250Sbput8722Sbbuy8722Sbheading => 'Vendi {assetName} opzione put online in {country}';
-
-  @override
-  String get ad250Sbhomepage8722Sblisting250Sbput8722Sbsell8722Sbheading => 'Acquista {assetName} opzione put online in {country}';
-
-  @override
-  String get ad250Sblinks250Sbsubtitle => 'Non hai trovato l\'offerta che cercavi? Queste inserzioni {appName} hanno più offerte commerciali {assetName} simili a questa:';
+  String ad250Sblinks250Sbsubtitle(Object appName, Object assetName) {
+    return 'Non hai trovato l\'offerta che cercavi? Queste inserzioni $appName hanno più offerte commerciali $assetName simili a questa:';
+  }
 
   @override
   String get ad250Sblinks250Sbtitle => 'Annunci con questo annuncio';
@@ -314,6 +310,14 @@ class I18nIt extends I18n {
   String get ad250Sbno8722Sbterms => 'Nessun termine commerciale specificato.';
 
   @override
+  String ad250Sbnotice250Sbprotected(Object link) {
+    return 'Questo commercio è protetto da una $link';
+  }
+
+  @override
+  String get ad250Sbnotice250Sbprotected250Sblink => 'garanzia di arbitrato';
+
+  @override
   String get ad250Sbself8722Sbvacation8722Sbnotice => 'Questo annuncio non è visibile al pubblico perché sei attualmente in vacanza. Puoi cambiarlo nelle impostazioni o nella dashboard.';
 
   @override
@@ -328,7 +332,9 @@ class I18nIt extends I18n {
   String get affiliate250Sbbanner250Sbcode => 'Codice banner:';
 
   @override
-  String get affiliate250Sbbanner250Sbtext => 'I banner promuovono {appName} con il tuo link di affiliato. Puoi aggiungere banner HTML ai tuoi blog e siti web. {linebreak} {iframe} i banner per il tuo annuncio (dimensioni 234 x 60 pixel)';
+  String affiliate250Sbbanner250Sbtext(Object appName, Object linebreak, Object iframe) {
+    return 'I banner promuovono $appName con il tuo link di affiliato. Puoi aggiungere banner HTML ai tuoi blog e siti web. $linebreak  $iframe i banner per il tuo annuncio (dimensioni 234 x 60 pixel)';
+  }
 
   @override
   String get affiliate250Sbbanner250Sbtitle => 'Banner';
@@ -338,11 +344,13 @@ class I18nIt extends I18n {
 
   @override
   String affiliate250Sbenabled(Object refCode, Object appName) {
-    return 'Il tuo programma di affiliazione è abilitato e puoi guadagnare commissioni aggiungendo il tuo tag di affiliazione {ref-code} a qualsiasi URL $appName.';
+    return 'Il tuo programma di affiliazione è abilitato e puoi guadagnare commissioni aggiungendo il tuo tag di affiliazione $refCode a qualsiasi URL $appName.';
   }
 
   @override
-  String get affiliate250Sbexample250Sbtext => 'Due utenti compratore e venditore fanno uno scambio per un valore di 100 {assetSymbol}. Guadagni una commissione del 20% sulle commissioni di trading di {appName} da entrambi i partecipanti, per un totale di 40% della commissione di {appName}. La tua somma guadagnata è 0.4 {assetSymbol}. I pagamenti sono fatti giornalmente. {linebreak} Il {support} {appName} è pronto ad aiutarti su qualsiasi tuo dubbio.';
+  String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
+    return 'Due utenti compratore e venditore fanno uno scambio per un valore di 100 $assetSymbol. Guadagni una commissione del 20% sulle commissioni di trading di $appName da entrambi i partecipanti, per un totale di 40% della commissione di $appName. La tua somma guadagnata è 0.4 $assetSymbol. I pagamenti sono fatti giornalmente. $linebreak  Il $support $appName è pronto ad aiutarti su qualsiasi tuo dubbio.';
+  }
 
   @override
   String get affiliate250Sbexample250Sbtext8722Sbsupport => 'supporto';
@@ -357,13 +365,17 @@ class I18nIt extends I18n {
   String get affiliate250Sbinstructions8722Sblink8722Sbtype8722Sbregular8722Sbsubtitle => 'Regolare:';
 
   @override
-  String get affiliate250Sbinstructions8722Sbtext => 'Puoi utilizzare qualsiasi link {appName}. ad esempio:';
+  String affiliate250Sbinstructions8722Sbtext(Object appName) {
+    return 'Puoi utilizzare qualsiasi link $appName. ad esempio:';
+  }
 
   @override
   String get affiliate250Sbinstructions8722Sbtitle => 'Link di esempio';
 
   @override
-  String get affiliate250Sblogged8722Sbout => 'Puoi abilitare il programma di affiliazione dopo l\' {sign-up} o il {log-in}.';
+  String affiliate250Sblogged8722Sbout(Object signUp, Object logIn) {
+    return 'Puoi abilitare il programma di affiliazione dopo l\' $signUp o il $logIn.';
+  }
 
   @override
   String get affiliate250Sblogged8722Sbout8722Sblog8722Sbin => 'log in';
@@ -390,13 +402,19 @@ class I18nIt extends I18n {
   String get affiliate250Sbpayouts250Sbtitle => 'Pagamenti';
 
   @override
-  String get affiliate250Sbref8722Sbcode => 'Il tuo codice di riferimento è: {ref-code}';
+  String affiliate250Sbref8722Sbcode(Object refCode) {
+    return 'Il tuo codice di riferimento è: $refCode';
+  }
 
   @override
-  String get affiliate250Sbterms250Sbtext => '• Puoi collegarti a qualsiasi singola pagina, ad esempio elenco dei Paesi o elenco dei metodi di pagamento, o qualsiasi altra pagina su {appName}. <br/> • Guadagnerai {assetName} dagli utenti che arrivano al sito attraverso il tuo registro di affiliazione e faranno degli scambi. <br/> • I pagamenti saranno effettuati giornalmente sul tuo portafoglio {appName}. <br/> • Le commissioni verranno pagate per un anno dalla registrazione dell\'utente. La Commissione si basa sul reddito che il nuovo utente porta per {appName} (commissioni di negoziazione).<br/>• Se disponi di coupon attivi, gli sconti sui coupon totali per un determinato periodo verranno sottratti dalle entrate della tua affiliazione per lo stesso periodo. Se l\'importo del rimborso totale per un determinato periodo è maggiore o uguale ai guadagni della filiale per lo stesso periodo, non riceverai alcun guadagno della filiale per quel determinato periodo. <br/> • È vietato qualsiasi gioco scorretto, come pubblicità ingannevoli. <br/> • Lo spamming è vietato. Lo spamming include l\'invio di messaggi privati • o pubblici su forum / reddit, mass-mail non iscritte, ecc. <br/> • È vietato aggiungere iframe nascosti su un sito Web per catturare affiliati. Sono ammessi solo iframe di affiliazione o collegamenti diretti alla pagina web. <br/> • {appName} ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. Se si violano i termini, il programma di affiliazione verrà chiuso.';
+  String affiliate250Sbterms250Sbtext(Object appName, Object assetName) {
+    return '• Puoi collegarti a qualsiasi singola pagina, ad esempio elenco dei Paesi o elenco dei metodi di pagamento, o qualsiasi altra pagina su $appName. <br/> • Guadagnerai $assetName dagli utenti che arrivano al sito attraverso il tuo registro di affiliazione e faranno degli scambi. <br/> • I pagamenti saranno effettuati giornalmente sul tuo portafoglio $appName. <br/> • Le commissioni verranno pagate per un anno dalla registrazione dell\'utente. La Commissione si basa sul reddito che il nuovo utente porta per $appName (commissioni di negoziazione).<br/>• Se disponi di coupon attivi, gli sconti sui coupon totali per un determinato periodo verranno sottratti dalle entrate della tua affiliazione per lo stesso periodo. Se l\'importo del rimborso totale per un determinato periodo è maggiore o uguale ai guadagni della filiale per lo stesso periodo, non riceverai alcun guadagno della filiale per quel determinato periodo. <br/> • È vietato qualsiasi gioco scorretto, come pubblicità ingannevoli. <br/> • Lo spamming è vietato. Lo spamming include l\'invio di messaggi privati • o pubblici su forum / reddit, mass-mail non iscritte, ecc. <br/> • È vietato aggiungere iframe nascosti su un sito Web per catturare affiliati. Sono ammessi solo iframe di affiliazione o collegamenti diretti alla pagina web. <br/> • $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. Se si violano i termini, il programma di affiliazione verrà chiuso.';
+  }
 
   @override
-  String get affiliate250Sbterms250Sbtext57Sbagoradesk => '• Puoi collegarti a qualsiasi singola pagina, come l\'elenco dei paesi o l\'elenco dei metodi di pagamento o qualsiasi altra cosa su {appName}. <br/> • Guadagnerai criptovaluta dagli utenti che arrivano al sito attraverso il tuo registro dei link di affiliazione e fai trading. <br/> • I pagamenti verranno effettuati quotidianamente sul tuo portafoglio {appName} nelle relative criptovalute. <br/> • Le commissioni verranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sulle entrate che il nuovo utente porta per {appName} (commissioni di negoziazione). <br/> • È vietato qualsiasi gioco illecito, come la pubblicità ingannevole. <br/> • Lo spamming è proibito. Lo spamming include l\'invio di messaggi privati ​​o pubblici non sottoscritti su forum / reddit, e-mail di massa non iscritte, ecc. <br/> • È vietato aggiungere iframe nascosti su un sito Web per acquisire affiliati. Sono ammessi solo iframe affiliati o collegamenti diretti alla pagina Web. <br/> • {appName} ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. In caso di violazione dei termini, il programma di affiliazione verrà chiuso.';
+  String affiliate250Sbterms250Sbtext57Sbagoradesk(Object appName) {
+    return '• Puoi collegarti a qualsiasi singola pagina, come l\'elenco dei paesi o l\'elenco dei metodi di pagamento o qualsiasi altra cosa su $appName. <br/> • Guadagnerai criptovaluta dagli utenti che arrivano al sito attraverso il tuo registro dei link di affiliazione e fai trading. <br/> • I pagamenti verranno effettuati quotidianamente sul tuo portafoglio $appName nelle relative criptovalute. <br/> • Le commissioni verranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sulle entrate che il nuovo utente porta per $appName (commissioni di negoziazione). <br/> • È vietato qualsiasi gioco illecito, come la pubblicità ingannevole. <br/> • Lo spamming è proibito. Lo spamming include l\'invio di messaggi privati ​​o pubblici non sottoscritti su forum / reddit, e-mail di massa non iscritte, ecc. <br/> • È vietato aggiungere iframe nascosti su un sito Web per acquisire affiliati. Sono ammessi solo iframe affiliati o collegamenti diretti alla pagina Web. <br/> • $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. In caso di violazione dei termini, il programma di affiliazione verrà chiuso.';
+  }
 
   @override
   String get affiliate250Sbterms250Sbtitle => 'Termini del programma di affiliazione';
@@ -405,109 +423,34 @@ class I18nIt extends I18n {
   String get affiliate250Sbtitle => 'Programma di affiliazione';
 
   @override
-  String get affiliate250Sbusers250Sbtext => 'Sei attualmente registrato come affiliato per {number} utenti e guadagnerai commissioni da tutti gli scambi fatti da questi.';
+  String affiliate250Sbusers250Sbtext(Object number) {
+    return 'Sei attualmente registrato come affiliato per $number utenti e guadagnerai commissioni da tutti gli scambi fatti da questi.';
+  }
 
   @override
   String get affiliate250Sbusers250Sbtitle => 'Utenti';
 
   @override
-  String get agoradesk250Sbad8722Sblisting250Sbload8722Sbmore250Sbitm => 'Carica più annunci in the money ...';
-
-  @override
-  String get agoradesk250Sbad8722Sblisting250Sbload8722Sbmore250Sbotm => 'Carica più annunci out-of-the-money ...';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbhow8722Sbmuch8722Sbnotional8722Sbamount => 'Inserisci l\'importo di {notional} {currencyCode} OPPURE {or} {underlying} {assetSymbol} ';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbhow8722Sbmuch8722Sbnotional8722Sbamount250Sbnotional => 'valore nozionale';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbhow8722Sbmuch8722Sbnotional8722Sbamount250Sbnotional250Sbtip => 'Il valore {currencyCode} dell\'importo sottostante {assetSymbol} questa opzione dà diritto a {buy_or_sell}';
-
-  @override
   String get agoradesk250Sbad8722Sbpage250Sbhow8722Sbmuch8722Sbnotional8722Sbamount250Sbor => 'o';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbhow8722Sbmuch8722Sbnotional8722Sbamount250Sbunderlying => 'importo sottostante';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbnotional8722Sbinput250Sblabel => 'Importo nozionale {currencyCode} ';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbpremium8722Sbcalculator250Sbidle8722Sblabel => 'Il totale stimato {premium} verrà mostrato qui';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbpremium8722Sbcalculator250Sbidle8722Sblabel250Sbpremium => 'premio';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbpremium8722Sbcalculator250Sbidle8722Sblabel250Sbpremium250Sbtip8722Sbbuyer => 'L\'importo totale di {currencyCode} che devi pagare per acquistare l\'opzione';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbpremium8722Sbcalculator250Sbidle8722Sblabel250Sbpremium250Sbtip8722Sbseller => 'L\'importo totale di {currencyCode} ti verrà pagato per la vendita dell\'opzione';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbpremium8722Sbcalculator250Sblabel => 'Totale stimato {premium}:';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbrtfm8722Sbwarning => 'Assicurati di aver letto l\'opzione {call_or_put}  {buying_or_selling} guida';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbrtfm8722Sbwarning250Sbbuying => 'acquisto';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbrtfm8722Sbwarning250Sbselling => 'vendita';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbunderlying8722Sbamount8722Sbtip => 'L\'importo di {asset} questa opzione dà il diritto a {buy_or_sell}';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbunderlying8722Sbamount8722Sbtip8722Sbbuy => 'Acquistare';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbunderlying8722Sbamount8722Sbtip8722Sbsell => 'Vendere';
-
-  @override
-  String get agoradesk250Sbad8722Sbpage250Sbunderlying8722Sbinput250Sblabel => 'Importo sottostante {assetName} ';
-
-  @override
-  String get agoradesk250Sbad250Sbpremium8722Sbrate => '{premiumRatePercent}% del prezzo';
 
   @override
   String get agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbads250Sball => 'MOSTRA TUTTI GLI ANNUNCI';
 
   @override
-  String get agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbads250Sbcoin => '{assetSymbol} SOLO ANNUNCI';
+  String agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbads250Sbcoin(Object assetSymbol) {
+    return '$assetSymbol SOLO ANNUNCI';
+  }
 
   @override
   String get agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sball => 'MOSTRA TUTTO';
 
   @override
-  String get agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbcoin => '{assetSymbol} SOLO';
+  String agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbcoin(Object assetSymbol) {
+    return '$assetSymbol SOLO';
+  }
 
   @override
   String get agoradesk250Sbasset250Sblabel => 'Asset di criptovaluta';
-
-  @override
-  String get agoradesk250Sbexpiry => 'Scadenza';
-
-  @override
-  String get agoradesk250Sbexpiry8722Sbdays => '{number_of_days} giorni';
-
-  @override
-  String get agoradesk250Sbexpiry250Sbtip => 'Il periodo di tempo dopo il quale questa opzione non è più in vigore. Il conto alla rovescia inizia dopo che il {seller_or_buyer} ha confermato di aver ricevuto il pagamento {cover_or_premium}.';
-
-  @override
-  String get agoradesk250Sbexpiry250Sbtip250Sbbuyer => 'l\'acquirente';
-
-  @override
-  String get agoradesk250Sbexpiry250Sbtip250Sbcover => 'della copertura';
-
-  @override
-  String get agoradesk250Sbexpiry250Sbtip250Sbpremium => 'del premio';
-
-  @override
-  String get agoradesk250Sbexpiry250Sbtip250Sbseller => 'venditore';
 
   @override
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuy => 'Acquistare';
@@ -516,10 +459,14 @@ class I18nIt extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'acquirente';
 
   @override
-  String get agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral => 'Dopo aver premuto il pulsante \'{buy_or_sell_button_name}\' vedrai ulteriori informazioni sulla pubblicità, inclusi i termini del commercio. Leggili prima di inviare la richiesta commerciale, se non sei d\'accordo con loro puoi tornare alla pagina precedente e scegliere un altro annuncio.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
+    return 'Dopo aver premuto il pulsante \'$buy_or_sell_button_name\' vedrai ulteriori informazioni sulla pubblicità, inclusi i termini del commercio. Leggili prima di inviare la richiesta commerciale, se non sei d\'accordo con loro puoi tornare alla pagina precedente e scegliere un altro annuncio.';
+  }
 
   @override
-  String get agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart => 'Per iniziare lo scambio, digita quanto {asset} vuoi {buy_or_sell} e fai clic sul pulsante \"Invia richiesta di scambio\" per avviare lo scambio.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
+    return 'Per iniziare lo scambio, digita quanto $asset vuoi $buy_or_sell e fai clic sul pulsante \"Invia richiesta di scambio\" per avviare lo scambio.';
+  }
 
   @override
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbsell => 'Vendere';
@@ -540,13 +487,12 @@ class I18nIt extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Acquistare';
 
   @override
-  String get agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype => 'Nella colonna di sinistra dovresti quindi selezionare la scheda \'{buy_or_sell_tab_name}\'. Se si desidera modificare il paese, la valuta, il metodo di pagamento o specificare l\'importo necessario, fare clic sul pulsante \'Mostra menu di ricerca\', selezionare i parametri desiderati e premere il pulsante di ricerca.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
+    return 'Nella colonna di sinistra dovresti quindi selezionare la scheda \'$buy_or_sell_tab_name\'. Se si desidera modificare il paese, la valuta, il metodo di pagamento o specificare l\'importo necessario, fare clic sul pulsante \'Mostra menu di ricerca\', selezionare i parametri desiderati e premere il pulsante di ricerca.';
+  }
 
   @override
   String get agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbasset => 'Quindi, seleziona la criptovaluta che desideri negoziare premendo la scheda corrispondente nella riga sopra la tabella degli annunci. Per questo esempio sceglieremo BTC.';
-
-  @override
-  String get agoradesk250Sbguide250Sbsearch250Sbchoose8722Sboptions => 'Nella barra superiore del sito Web, seleziona \'Opzioni di trading\'.';
 
   @override
   String get agoradesk250Sbguide250Sbsearch250Sbmain8722Sbpage => 'Vai alla pagina principale.';
@@ -561,25 +507,13 @@ class I18nIt extends I18n {
   String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbbuy => 'Acquistare';
 
   @override
-  String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbcall => 'Call';
-
-  @override
   String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbcoins => 'Scambia monete';
-
-  @override
-  String get agoradesk250Sbindex250Sbad8722Sbselectors250Sboptions => 'Opzioni commerciali';
-
-  @override
-  String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbput => 'Put';
 
   @override
   String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbsell => 'Vendere';
 
   @override
   String get agoradesk250Sbindex250Sbads8722Sbtable250Sbitm8722Sbotm8722Sbseparator250Sbcurrent8722Sbmarket8722Sbprice => 'Prezzo di mercato';
-
-  @override
-  String get agoradesk250Sbindex250Sbads8722Sbtable250Sbitm8722Sbotm8722Sbtip => 'Le opzioni in verde sono in-the-money e le opzioni in rosso sono out-of-the-money';
 
   @override
   String get agoradesk250Sbindex250Sbads8722Sbtable250Sbload8722Sbmor250Sbbutton => 'Carica altro ...';
@@ -603,7 +537,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb1 => 'Qualsiasi valuta, qualsiasi metodo di pagamento, ovunque';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb10 => '{nojs} (carica per impostazione predefinita quando si accede da Tor o I2P)';
+  String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb10(Object nojs) {
+    return '$nojs (carica per impostazione predefinita quando si accede da Tor o I2P)';
+  }
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb108722Sb1 => 'Versione senza JavaScript del sito';
@@ -612,7 +548,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb11 => 'Perfettamente funzionante quando Google è bloccato';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb12 => '{affiliate}: guadagna commissioni per invitare gli utenti di trading';
+  String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb12(Object affiliate) {
+    return '$affiliate: guadagna commissioni per invitare gli utenti di trading';
+  }
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb128722Sb1 => 'Programma di affiliazione';
@@ -621,7 +559,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb13 => 'Multilingue: supportiamo inglese, russo, cinese (sia semplificato che tradizionale), italiano, portoghese e spagnolo';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb14 => 'Notifiche mobili tramite {telegram}, in modo da non dover installare ancora un\'altra app sul tuo telefono solo per ricevere notifiche push sulle tue operazioni (LocalBitcoins ha implementato questa funzione dopo di noi)';
+  String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb14(Object telegram) {
+    return 'Notifiche mobili tramite $telegram, in modo da non dover installare ancora un\'altra app sul tuo telefono solo per ricevere notifiche push sulle tue operazioni (LocalBitcoins ha implementato questa funzione dopo di noi)';
+  }
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb15 => 'Bellissime pubblicità attraverso l\'uso di Markdown';
@@ -642,7 +582,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb2 => 'Trading online di Bitcoin';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb20 => '{api} completamente funzionale modellata sull\'API LocalBitcoins per una facile transizione';
+  String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb20(Object api) {
+    return '$api completamente funzionale modellata sull\'API LocalBitcoins per una facile transizione';
+  }
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb208722Sb1 => 'API';
@@ -681,7 +623,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbhtml8722Sbdescription => 'Alla ricerca di un analogo LocalBitcoins per scambiare Bitcoin peer-to-peer senza KYC / AML o verifica? AgoraDesk è una nuova piattaforma P2P per il trading di Bitcoin creata dal team dietro LocalMonero, l\'equivalente di LocalBitcoin di Monero. Offriamo la stessa esperienza di trading Bitcoin semplice e veloce fornita da LocalBitcoin e altro ancora.';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbintroduction => 'Alla ricerca di un analogo {lbc} per scambiare Bitcoin peer-to-peer senza KYC / AML o verifica? AgoraDesk è una nuova piattaforma P2P per il trading di Bitcoin creata dal team dietro LocalMonero, l\'equivalente di {lm} di Monero.';
+  String agoradesk250Sblbc8722Sbalternative250Sbintroduction(Object lbc, Object lm) {
+    return 'Alla ricerca di un analogo $lbc per scambiare Bitcoin peer-to-peer senza KYC / AML o verifica? AgoraDesk è una nuova piattaforma P2P per il trading di Bitcoin creata dal team dietro LocalMonero, l\'equivalente di $lm di Monero.';
+  }
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbno8722Sbkyc250Sbcontent => 'AgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. <strong> Non impieghiamo KYC / AML, né prevediamo mai di farlo</strong>. Crediamo fermamente che il concetto stesso di KYC / AML sia completamente antitetico all\'idea stessa di uno scambio da banco peer-to-peer come il nostro, e fino a quando non ci saranno più modi legali sul <i>pianeta Terra</i> per evitare l\'implementazione di KYC / AML, faremo tutto il possibile per offrirti un\'esperienza senza problemi.';
@@ -696,7 +640,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Funziona senza JavaScript';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent => 'Il nostro sito è facilmente accessibile attraverso il nostro {tor_link} (che è ottimizzato per le massime prestazioni per il vostro comfort attraverso il nostro uso di {advanced_routing}) e persino attraverso un {i2p_link}. Ciò garantisce non solo che sarai in grado di nasconderci il tuo vero IP (che comunque non associamo mai al tuo account), ma che se per qualsiasi motivo il nostro normale dominio diventa inaccessibile a te, ci saranno altri modi per accedervi nostro servizio. Apprezziamo così tanto la tua privacy, {dont_ask_email}.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
+    return 'Il nostro sito è facilmente accessibile attraverso il nostro $tor_link (che è ottimizzato per le massime prestazioni per il vostro comfort attraverso il nostro uso di $advanced_routing) e persino attraverso un $i2p_link. Ciò garantisce non solo che sarai in grado di nasconderci il tuo vero IP (che comunque non associamo mai al tuo account), ma che se per qualsiasi motivo il nostro normale dominio diventa inaccessibile a te, ci saranno altri modi per accedervi nostro servizio. Apprezziamo così tanto la tua privacy, $dont_ask_email.';
+  }
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbadvanced8722Sbrouting => 'funzionalità avanzate di instradamento delle cipolle';
@@ -744,9 +690,6 @@ class I18nIt extends I18n {
   String get agoradesk250Sblink8722Sbfrom8722Sblocalmonero => 'Scambia BTC';
 
   @override
-  String get agoradesk250Sbnotional8722Sbvalue250Sblabel => 'valore nozionale';
-
-  @override
   String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sblocal8722Sbbuy => 'Acquista monete per contanti (localmente)';
 
   @override
@@ -759,10 +702,9 @@ class I18nIt extends I18n {
   String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sbonline8722Sbsell => 'Vendi monete online';
 
   @override
-  String get agoradesk250Sbpremium => 'Premio';
-
-  @override
-  String get agoradesk250Sbstart250Sbcoins => '{appName} guide al trading di monete';
+  String agoradesk250Sbstart250Sbcoins(Object appName) {
+    return '$appName guide al trading di monete';
+  }
 
   @override
   String get agoradesk250Sbtrade250Sbaction250Sberror8722Sbdialog250Sbcontent => 'La tua azione ha causato un errore, ricaricare la pagina.';
@@ -795,21 +737,6 @@ class I18nIt extends I18n {
 
   @override
   String get agoradesk250Sbtrade250Sbstatus250Sbexercised250Sbcontent8722Sbseller => 'venditore';
-
-  @override
-  String get agoradesk250Sbtrade250Sbstatus250Sbexpired => 'Opzione scaduta';
-
-  @override
-  String get agoradesk250Sbtrade250Sbstatus250Sbexpired250Sbcontent => 'Il contratto di opzione è scaduto a {time}.';
-
-  @override
-  String get agoradesk250Sbtrade250Sbstatus250Sbexpired250Sbtitle => 'Opzione scaduta';
-
-  @override
-  String get agoradesk250Sbtrade250Sbstatus250Sbnetted250Sbcontent => 'L\'opzione è stata esercitata a {time}.';
-
-  @override
-  String get agoradesk250Sbunderlying8722Sbasset250Sblabel => 'Attività sottostante';
 
   @override
   String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
@@ -850,28 +777,24 @@ class I18nIt extends I18n {
   String get asset8722Sbprops250Sbname250Sbxmr => 'Monero';
 
   @override
-  String get breadcrumbs250Sbcall8722Sbbuy => 'Vendi {asset} opzione call per {currencyCode}';
+  String breadcrumbs250Sblocal8722Sbbuy(Object asset, Object currencyCode) {
+    return 'Vendi $asset per $currencyCode';
+  }
 
   @override
-  String get breadcrumbs250Sbcall8722Sbsell => 'Acquista l\'opzione di chiamata {asset} per {currencyCode}';
+  String breadcrumbs250Sblocal8722Sbsell(Object asset, Object currencyCode) {
+    return 'Acquista $asset per $currencyCode';
+  }
 
   @override
-  String get breadcrumbs250Sblocal8722Sbbuy => 'Vendi {asset} per {currencyCode}';
+  String breadcrumbs250Sbonline8722Sbbuy(Object asset, Object currencyCode) {
+    return 'Vendi $asset per $currencyCode';
+  }
 
   @override
-  String get breadcrumbs250Sblocal8722Sbsell => 'Acquista {asset} per {currencyCode}';
-
-  @override
-  String get breadcrumbs250Sbonline8722Sbbuy => 'Vendi {asset} per {currencyCode}';
-
-  @override
-  String get breadcrumbs250Sbonline8722Sbsell => 'Acquista {asset} per {currencyCode}';
-
-  @override
-  String get breadcrumbs250Sbput8722Sbbuy => 'Vendi {asset} opzione put per {currencyCode}';
-
-  @override
-  String get breadcrumbs250Sbput8722Sbsell => 'Acquista {asset} opzione put per {currencyCode}';
+  String breadcrumbs250Sbonline8722Sbsell(Object asset, Object currencyCode) {
+    return 'Acquista $asset per $currencyCode';
+  }
 
   @override
   String get button250Sbaccept => 'Accettare';
@@ -907,10 +830,15 @@ class I18nIt extends I18n {
   String get chat250Sbbtn => 'Invia messaggio';
 
   @override
+  String get chat250Sbcash8722Sbdeposit8722Sbseller8722Sbwarning => '<strong>Avviso:</strong> si sono verificati casi in cui i venditori hanno ricevuto un assegno depositato che è stato successivamente stornato. Assicurati di verificare (ad esempio chiamando la banca) qualsiasi deposito che ricevi!';
+
+  @override
   String get chat250Sbeu8722Sbfraud8722Sbwarning => 'Sembra che ci sia un\'ondata di frodi nei conti bancari nella nostra regione europea in questo momento. <br /> Consigliamo a tutti i nostri trader della regione europea di esercitare estrema cautela quando trattare con nuovi partner commerciali, come chiedere una fotografia di loro stessi in possesso di un documento d\'identità e un pezzo di carta con informazioni commerciali (come ID commerciale, importo, nome utente e data). Tenere presente che i truffatori potrebbero essere in possesso di documenti KYC rubati. <br /> ';
 
   @override
-  String get chat250Sbinput8722Sbtip => 'Premi <strong>Invio</strong> per iniziare una nuova riga, <strong>Alt + Invio</strong> per inviare un messaggio. Massimo 65536 caratteri. {appName} crittografa e memorizza i messaggi di chat per 180 giorni a scopo di mediazione delle controversie.';
+  String chat250Sbinput8722Sbtip(Object appName) {
+    return 'Premi <strong>Invio</strong> per iniziare una nuova riga, <strong>Alt + Invio</strong> per inviare un messaggio. Massimo 65536 caratteri. $appName crittografa e memorizza i messaggi di chat per 180 giorni a scopo di mediazione delle controversie.';
+  }
 
   @override
   String chat250Sbinput8722Sbtip8722Sbshort(Object appName) {
@@ -924,10 +852,18 @@ class I18nIt extends I18n {
   String get chat250Sbmitm8722Sbcryptocurency8722Sbwarning => 'Attenzione: ottenere l\'indirizzo del venditore solo in questa chat commerciale o dalla sezione dei dettagli di pagamento su questa pagina commerciale e non inviare gli ID delle transazioni di pagamento al di fuori di questa chat commerciale! Si raccomanda inoltre di mantenere tutte le comunicazioni in questa chat commerciale.';
 
   @override
+  String get chat250Sbmitm8722Sbwarning250Sb0 => '⚠️ PSA: è attivo un nuovo scammer che agisce come uomo nel mezzo. Il truffatore vi contatta al di fuori della piattaforma fingendo di essere un venditore della piattaforma che vi offre di acquistare XMR da lui in cambio di BTC a un prezzo ridotto (ad esempio, paga 8 XMR di BTC per acquistare 10 XMR). Allo stesso tempo aprono una transazione con il venditore che impersonano sulla piattaforma per l\'importo ridotto.';
+
+  @override
+  String get chat250Sbmitm8722Sbwarning250Sb1 => '<p>Il truffatore dice quindi all\'acquirente di avviare lo scambio per l\'intero importo e di pagare l\'importo ridotto, monitorando allo stesso tempo l\'indirizzo di ricezione del venditore sulla blockchain e osservando la transazione con importo ridotto dell\'acquirente legittimo. Il truffatore prende quindi il txid dell\'acquirente legittimo e lo fornisce al venditore come prova del pagamento. Il venditore rilascia le monete al truffatore poiché ha due scambi aperti, uno per l\'intero importo dal legittimo acquirente e uno per l\'importo ridotto dal truffatore, pensando che sia stato il truffatore a pagare perché l\'importo corrisponde al suo importo commerciale.</p>\n<p> <strong> NON CONDURRE COMMERCIALI FUORI PIATTAFORMA. SE QUALCUNO SI AVVICINA FUORI PIATTAFORMA, APRI UN COMMERCIO CON LORO SULLA PIATTAFORMA E VERIFICA CHE SIANO CHI DICONO DI ESSERE E MANTENERE TUTTE LE COMUNICAZIONI LÀ. </strong> </p>\n<p> <strong> VENDITORI CHE ACCETTANO PAGAMENTI SU CATENE DI CRITTOGRAFIA TRASPARENTI: ASSICURARSI DI FARE UN\'ADEGUATA DIFFERENZIAZIONE DI PAGAMENTO TRA I TUOI CLIENTI E LE OPERAZIONI PER EVITARE DI CADERE VITTIMA DI QUESTO. </strong> </p>\n<p> Usa sempre indirizzi diversi per ogni operazione su una criptovaluta ricercabile pubblicamente come BTC. </p>';
+
+  @override
   String get chat250Sbno8722Sbmessages => 'Ancora nessun messaggio';
 
   @override
-  String get chat250Sbsecurity8722Sbwarning => 'Do not open any external links you receive in the chat or download any files received from other users externally. It is best to use a separate browser for all your {appName} activity.';
+  String chat250Sbsecurity8722Sbwarning(Object appName) {
+    return 'Do not open any external links you receive in the chat or download any files received from other users externally. It is best to use a separate browser for all your $appName activity.';
+  }
 
   @override
   String get chat250Sbselect8722Sbfile => 'Seleziona un file...';
@@ -939,7 +875,9 @@ class I18nIt extends I18n {
   String get chat250Sbshortcuts => 'Invio: nuova riga, Alt+Invio: invio';
 
   @override
-  String get chat250Sbtitle => 'Invia il messaggio a {user}';
+  String chat250Sbtitle(Object user) {
+    return 'Invia il messaggio a $user';
+  }
 
   @override
   String get chat250Sbupload8722Sberror8722Sbdialog8722Sbtext => 'Gli allegati possono essere solo .jpg or .png per un massimo di 5MB.';
@@ -963,22 +901,30 @@ class I18nIt extends I18n {
   String get completed250Sbtitle => 'Scambi completati';
 
   @override
-  String get contact250Sble => 'Per richieste di informazioni da parte delle forze dell\'ordine, leggi {law-enforcement-inquiries}.';
+  String contact250Sble(Object lawEnforcementinquiries) {
+    return 'Per richieste di informazioni da parte delle forze dell\'ordine, leggi $lawEnforcementinquiries.';
+  }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'la nostra politica';
 
   @override
-  String get contact250Sbtext8722Sb0 => 'Puoi contattare il nostro supporto {open-a-ticket} o inviando una email a {email}';
+  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
+    return 'Puoi contattare il nostro supporto $openAticket o inviando una email a $email';
+  }
 
   @override
   String get contact250Sbtext8722Sb08722Sbopen8722Sba8722Sbticket => 'aprendo un ticket';
 
   @override
-  String get contact250Sbtext8722Sb1 => 'Per informazioni commerciali, stampa/pubblicità o altre richieste inviate una email a {email}';
+  String contact250Sbtext8722Sb1(Object email) {
+    return 'Per informazioni commerciali, stampa/pubblicità o altre richieste inviate una email a $email';
+  }
 
   @override
-  String get contact250Sbtext8722Sb2 => 'Puoi scaricare il logo {appName} in alta definizione {here}.';
+  String contact250Sbtext8722Sb2(Object appName, Object here) {
+    return 'Puoi scaricare il logo $appName in alta definizione $here.';
+  }
 
   @override
   String get contact250Sbtext8722Sb28722Sbhere => 'qui';
@@ -993,13 +939,9 @@ class I18nIt extends I18n {
   String get coupons250Sbcoupon250Sbbutton250Sblabel => 'Attivare';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription => 'Riduzione del {percent}% delle commissioni sulle negoziazioni {types} {assets}.';
-
-  @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'acquisto di opzioni call';
-
-  @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vendita di opzioni call';
+  String coupons250Sbcoupon250Sbdescription(Object percent, Object assets, Object types) {
+    return 'Riduzione del $percent% delle commissioni sulle negoziazioni $types $assets.';
+  }
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_buy => 'acquisto locali';
@@ -1065,7 +1007,9 @@ class I18nIt extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Errore nel riscatto del coupon';
 
   @override
-  String get coupons250Sberror250Sbgeneric => 'Qualcosa è andato storto durante il riscatto di un coupon. Se ciò non sembra corretto, contatta l\'assistenza. Codice errore: {error_code}.';
+  String coupons250Sberror250Sbgeneric(Object error_code) {
+    return 'Qualcosa è andato storto durante il riscatto di un coupon. Se ciò non sembra corretto, contatta l\'assistenza. Codice errore: $error_code.';
+  }
 
   @override
   String get coupons250Sbshow8722Sbexpired8722Sbbtn250Sbhide => 'Nascondi i coupon scaduti';
@@ -1127,10 +1071,14 @@ class I18nIt extends I18n {
   String get dashboard250Sbad250Sbmethod250Sbcash => 'Contanti';
 
   @override
-  String get dashboard250Sbad250Sbprice8722Sbtype250Sbmarket8722Sbnegative => 'Mercato {percent}';
+  String dashboard250Sbad250Sbprice8722Sbtype250Sbmarket8722Sbnegative(Object percent) {
+    return 'Mercato $percent';
+  }
 
   @override
-  String get dashboard250Sbad250Sbprice8722Sbtype250Sbmarket8722Sbpositive => 'Mercato +{percent}';
+  String dashboard250Sbad250Sbprice8722Sbtype250Sbmarket8722Sbpositive(Object percent) {
+    return 'Mercato +$percent';
+  }
 
   @override
   String get dashboard250Sbad250Sbtable8722Sbcreated8722Sbat => 'Creato';
@@ -1271,9 +1219,6 @@ class I18nIt extends I18n {
   String get dashboard250Sbtrade250Sbstatus250Sbdisputed => 'Contestato';
 
   @override
-  String get dashboard250Sbtrade250Sbstatus250Sbexercised => 'Esercitato';
-
-  @override
   String get dashboard250Sbtrade250Sbstatus250Sbfunded => 'Finanziato';
 
   @override
@@ -1289,7 +1234,9 @@ class I18nIt extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Quantità (currency)';
 
   @override
-  String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb => 'Quantità ({assetSymbol})';
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+    return 'Quantità ($assetSymbol)';
+  }
 
   @override
   String get dashboard250Sbtrade250Sbtable8722Sbid58Sb => 'ID';
@@ -1337,58 +1284,92 @@ class I18nIt extends I18n {
   String get description => 'Ottieni Monero. Veloce, facile e sicuro. Vicino a te.';
 
   @override
-  String get description250Sbaffiliate => 'Guadagni il 20% delle commissioni di trading generate dagli utenti a cui hai fatto riferimento, che verranno effettuati su base giornaliera come Monero nel tuo portafoglio {appName}. Gli utenti che ti hanno inviato genereranno commissioni per un periodo di 1 anno dalla data di registrazione. ';
+  String description250Sbaffiliate(Object appName) {
+    return 'Guadagni il 20% delle commissioni di trading generate dagli utenti a cui hai fatto riferimento, che verranno effettuati su base giornaliera come Monero nel tuo portafoglio $appName. Gli utenti che ti hanno inviato genereranno commissioni per un periodo di 1 anno dalla data di registrazione. ';
+  }
 
   @override
-  String get description250Sbaffiliate57Sbagoradesk => 'Guadagni il 20% delle commissioni di trading generate dagli utenti che hai indicato. Questi pagamenti verranno effettuati su base giornaliera come criptovalute pertinenti nel tuo portafoglio {appName}. I tuoi utenti indirizzati genereranno commissioni per te per un periodo di 1 anno dalla loro data di registrazione.';
+  String description250Sbaffiliate57Sbagoradesk(Object appName) {
+    return 'Guadagni il 20% delle commissioni di trading generate dagli utenti che hai indicato. Questi pagamenti verranno effettuati su base giornaliera come criptovalute pertinenti nel tuo portafoglio $appName. I tuoi utenti indirizzati genereranno commissioni per te per un periodo di 1 anno dalla loro data di registrazione.';
+  }
 
   @override
-  String get description250Sbfaq => 'Trova le risposte alle domande più frequenti sul trading Monero e altre domande relative a {appName}.';
+  String description250Sbfaq(Object appName) {
+    return 'Trova le risposte alle domande più frequenti sul trading Monero e altre domande relative a $appName.';
+  }
 
   @override
-  String get description250Sbfaq57Sbagoradesk => 'Trova le risposte alle domande più frequenti sul trading di criptovaluta e altre domande relative a {appName}.';
+  String description250Sbfaq57Sbagoradesk(Object appName) {
+    return 'Trova le risposte alle domande più frequenti sul trading di criptovaluta e altre domande relative a $appName.';
+  }
 
   @override
-  String get description250Sbfee => 'Registrarsi, comprare e vendere Monero è completamente gratuito. Agli utenti di {appName} che creano annunci viene addebitata una tassa di protezione dell\'arbitraggio dell\'1% per ogni scambio completato.';
+  String description250Sbfee(Object appName) {
+    return 'Registrarsi, comprare e vendere Monero è completamente gratuito. Agli utenti di $appName che creano annunci viene addebitata una tassa di protezione dell\'arbitraggio dell\'1% per ogni scambio completato.';
+  }
 
   @override
-  String get description250Sbfee57Sbagoradesk => 'Registrarsi, comprare e vendere criptovalute è completamente gratuito. Agli utenti di {appName} che creano annunci viene addebitata una tassa di protezione arbitrale dell\'1% per ogni scambio completato.';
+  String description250Sbfee57Sbagoradesk(Object appName) {
+    return 'Registrarsi, comprare e vendere criptovalute è completamente gratuito. Agli utenti di $appName che creano annunci viene addebitata una tassa di protezione arbitrale dell\'1% per ogni scambio completato.';
+  }
 
   @override
-  String get description250Sbguide250Sb2fa => 'Questa guida ti aiuterà a configurare l\'autenticazione Two Factor per il tuo account {appName}.';
+  String description250Sbguide250Sb2fa(Object appName) {
+    return 'Questa guida ti aiuterà a configurare l\'autenticazione Two Factor per il tuo account $appName.';
+  }
 
   @override
   String get description250Sbguide250Sbbtc => 'I giorni in cui è possibile acquistare bitcoin con una carta di credito istantaneamente e senza alcuna verifica dietro di noi? Non proprio. Qui, ti presentiamo un modo facile, anonimo, privato e rapido per acquisire bitcoin con contanti in pochi passaggi. ';
 
   @override
-  String get description250Sbguide250Sbbuy => 'Questa guida ti aiuterà a capire come acquistare Monero con i più diffusi metodi di pagamento online (come bonifico bancario, PayPal, carta di credito, Western Union ecc.) {appName} è un modo sicuro, veloce e semplice per acquistare XMR in modo anonimo senza verifica dell\'ID. ';
+  String description250Sbguide250Sbbuy(Object appName) {
+    return 'Questa guida ti aiuterà a capire come acquistare Monero con i più diffusi metodi di pagamento online (come bonifico bancario, PayPal, carta di credito, Western Union ecc.) $appName è un modo sicuro, veloce e semplice per acquistare XMR in modo anonimo senza verifica dell\'ID. ';
+  }
 
   @override
-  String get description250Sbguide250Sbbuy57Sbagoradesk => 'Questa guida ti aiuterà a capire come acquistare criptovaluta con i metodi di pagamento online più diffusi (come bonifico bancario, PayPal, carta di credito ecc.). {appName} è un modo sicuro, rapido e semplice per acquistare criptovaluta in modo anonimo senza verifica dell\'ID.';
+  String description250Sbguide250Sbbuy57Sbagoradesk(Object appName) {
+    return 'Questa guida ti aiuterà a capire come acquistare criptovaluta con i metodi di pagamento online più diffusi (come bonifico bancario, PayPal, carta di credito ecc.). $appName è un modo sicuro, rapido e semplice per acquistare criptovaluta in modo anonimo senza verifica dell\'ID.';
+  }
 
   @override
-  String get description250Sbguide250Sblocal => 'Questa guida ti aiuterà a capire come acquistare o vendere in modo anonimo Monero in contanti tramite il meetup locale. {appName} è un modo sicuro, veloce e semplice per scambiare XMR senza verifica dell\'ID.';
+  String description250Sbguide250Sblocal(Object appName) {
+    return 'Questa guida ti aiuterà a capire come acquistare o vendere in modo anonimo Monero in contanti tramite il meetup locale. $appName è un modo sicuro, veloce e semplice per scambiare XMR senza verifica dell\'ID.';
+  }
 
   @override
-  String get description250Sbguide250Sblocal57Sbagoradesk => 'Questa guida ti aiuterà a capire come acquistare o vendere in modo anonimo criptovalute in contanti tramite meetup locale. Su {appName} puoi scambiare criptovalute senza verifica ID.';
+  String description250Sbguide250Sblocal57Sbagoradesk(Object appName) {
+    return 'Questa guida ti aiuterà a capire come acquistare o vendere in modo anonimo criptovalute in contanti tramite meetup locale. Su $appName puoi scambiare criptovalute senza verifica ID.';
+  }
 
   @override
-  String get description250Sbguide250Sbsell => 'Questa guida ti aiuterà a capire come vendere Monero con i più diffusi metodi di pagamento online (come bonifico bancario, PayPal, carta di credito, Western Union ecc.) {appName} è un modo sicuro, veloce e semplice per vendere XMR senza Verifica dell\'ID. ';
+  String description250Sbguide250Sbsell(Object appName) {
+    return 'Questa guida ti aiuterà a capire come vendere Monero con i più diffusi metodi di pagamento online (come bonifico bancario, PayPal, carta di credito, Western Union ecc.) $appName è un modo sicuro, veloce e semplice per vendere XMR senza Verifica dell\'ID. ';
+  }
 
   @override
-  String get description250Sbguide250Sbsell57Sbagoradesk => 'Questa guida ti aiuterà a capire come vendere criptovaluta con metodi di pagamento online popolari (come bonifico bancario, PayPal, carta di credito ecc.). {appName} è un modo sicuro, rapido e semplice per vendere criptovaluta senza verifica dell\'ID.';
+  String description250Sbguide250Sbsell57Sbagoradesk(Object appName) {
+    return 'Questa guida ti aiuterà a capire come vendere criptovaluta con metodi di pagamento online popolari (come bonifico bancario, PayPal, carta di credito ecc.). $appName è un modo sicuro, rapido e semplice per vendere criptovaluta senza verifica dell\'ID.';
+  }
 
   @override
-  String get description250Sbguide250Sbtelegram => 'Questa guida ti aiuterà a configurare le notifiche Telegram per {appName}.';
+  String description250Sbguide250Sbtelegram(Object appName) {
+    return 'Questa guida ti aiuterà a configurare le notifiche Telegram per $appName.';
+  }
 
   @override
-  String get description250Sbguide250Sbtrade => 'Questa guida ti aiuterà a capire le basi del trading Monero su uno scambio P2P {appName}.';
+  String description250Sbguide250Sbtrade(Object appName) {
+    return 'Questa guida ti aiuterà a capire le basi del trading Monero su uno scambio P2P $appName.';
+  }
 
   @override
-  String get description250Sbguide250Sbtrade57Sbagoradesk => 'Questa guida ti aiuterà a comprendere le basi del trading di criptovaluta su un desk OTC P2P {appName}.';
+  String description250Sbguide250Sbtrade57Sbagoradesk(Object appName) {
+    return 'Questa guida ti aiuterà a comprendere le basi del trading di criptovaluta su un desk OTC P2P $appName.';
+  }
 
   @override
-  String get description250Sbguide250Sbxmr => 'Come acquistare Monero in modo anonimo senza ID? {appName} offre un modo per acquistare XMR senza la verifica KYC, così puoi proteggere la tua privacy!';
+  String description250Sbguide250Sbxmr(Object appName) {
+    return 'Come acquistare Monero in modo anonimo senza ID? $appName offre un modo per acquistare XMR senza la verifica KYC, così puoi proteggere la tua privacy!';
+  }
 
   @override
   String get description250Sbhomepage => 'Acquista e vendi Monero (XMR) online senza verifica ID - usa PayPal, carta di credito / debito o bonifico bancario, carte regalo, contanti per posta, Venmo, BTC o qualsiasi altro metodo.';
@@ -1397,34 +1378,50 @@ class I18nIt extends I18n {
   String get description250Sbhomepage57Sbagoradesk => 'Acquista e vendi Bitcoin online senza verifica ID: usa PayPal, carta di credito / debito o bonifico bancario, buoni regalo, contanti per posta, Venmo o qualsiasi altro metodo.';
 
   @override
-  String get description250Sblogin => 'Accedi al tuo account {appName} per iniziare a fare trading ora.';
+  String description250Sblogin(Object appName) {
+    return 'Accedi al tuo account $appName per iniziare a fare trading ora.';
+  }
 
   @override
   String get description250Sbnew => 'Crea un nuovo annuncio per acquistare o vendere Monero localmente per contanti o online.';
 
   @override
-  String get description250Sbnew57Sbagoradesk => 'Crea un nuovo annuncio per acquistare o vendere criptovaluta o criptovaluta e opzioni put.';
+  String get description250Sbnew57Sbagoradesk => 'Crea un nuovo annuncio per acquistare o vendere criptovalutat.';
 
   @override
-  String get description250Sbsignup => 'Crea un account {appName} — è completamente gratuito - e inizia a fare trading con Monero!';
+  String description250Sbsignup(Object appName) {
+    return 'Crea un account $appName — è completamente gratuito - e inizia a fare trading con Monero!';
+  }
 
   @override
-  String get description250Sbsignup57Sbagoradesk => 'Crea un account {appName} — è completamente gratuito - e inizia a fare trading di criptovalute!';
+  String description250Sbsignup57Sbagoradesk(Object appName) {
+    return 'Crea un account $appName — è completamente gratuito - e inizia a fare trading di criptovalute!';
+  }
 
   @override
-  String get description250Sbstart => 'Guide di {appName} per aiutarti a comprendere i principi base e avanzati di acquisto o vendita di Monero.';
+  String description250Sbstart(Object appName) {
+    return 'Guide di $appName per aiutarti a comprendere i principi base e avanzati di acquisto o vendita di Monero.';
+  }
 
   @override
-  String get description250Sbstart57Sbagoradesk => 'Guide {appName} per aiutarti a comprendere i principi di base e avanzati di acquisto o vendita di Bitcon, Monero e le loro opzioni.';
+  String description250Sbstart57Sbagoradesk(Object appName) {
+    return 'Guide $appName per aiutarti a comprendere i principi di base e avanzati di acquisto o vendita di Bitcon e Monero.';
+  }
 
   @override
-  String get description250Sbstatistics => 'Ottieni il prezzo medio di {appName} in base a tutte le negoziazioni nelle precedenti 1, 6, 12 o 24 ore.';
+  String description250Sbstatistics(Object appName) {
+    return 'Ottieni il prezzo medio di $appName in base a tutte le negoziazioni nelle precedenti 1, 6, 12 o 24 ore.';
+  }
 
   @override
-  String get description250Sbuser => 'Profilo {appName} di {user}.';
+  String description250Sbuser(Object user, Object appName) {
+    return 'Profilo $appName di $user.';
+  }
 
   @override
-  String get description250Sbuser8722Sbads => 'Annunci {appName} di {user}';
+  String description250Sbuser8722Sbads(Object user, Object appName) {
+    return 'Annunci $appName di $user';
+  }
 
   @override
   String get distance250Sbkilometers => 'km';
@@ -1469,13 +1466,17 @@ class I18nIt extends I18n {
   String get document8722Sbtitle250Sbfee => 'Tasse';
 
   @override
-  String get document8722Sbtitle250Sbfeedback => 'Feedback dell\'{user}';
+  String document8722Sbtitle250Sbfeedback(Object user) {
+    return 'Feedback dell\'$user';
+  }
 
   @override
   String get document8722Sbtitle250Sbguide250Sb2fa => 'Come abilitare 2FA';
 
   @override
-  String get document8722Sbtitle250Sbguide250Sbbtc => 'Come acquistare Bitcoins in modo anonimo (senza ID) Guida - Il modo più privato in {year}';
+  String document8722Sbtitle250Sbguide250Sbbtc(Object year) {
+    return 'Come acquistare Bitcoins in modo anonimo (senza ID) Guida - Il modo più privato in $year';
+  }
 
   @override
   String get document8722Sbtitle250Sbguide250Sbbuy => 'Come comprare Monero';
@@ -1490,7 +1491,9 @@ class I18nIt extends I18n {
   String get document8722Sbtitle250Sbguide250Sbsell57Sbagoradesk => 'Come vendere criptovaluta';
 
   @override
-  String get document8722Sbtitle250Sbguide250Sbxmr => 'Come acquistare Monero (XMR) Guida anonima (senza ID) - Il modo più privato in {year}';
+  String document8722Sbtitle250Sbguide250Sbxmr(Object year) {
+    return 'Come acquistare Monero (XMR) Guida anonima (senza ID) - Il modo più privato in $year';
+  }
 
   @override
   String get document8722Sbtitle250Sbindex => 'Compra o Vendi Monero in modo anonimo, rapido e semplice';
@@ -1508,79 +1511,49 @@ class I18nIt extends I18n {
   String get document8722Sbtitle250Sbreset8722Sbpassword => 'Resetta la password';
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbcall250Sbcountry => 'Acquista l\'opzione di chiamata {assetName} in {country}';
+  String document8722Sbtitle250Sbsearch250Sbbuy250Sbcountry(Object assetName, Object country) {
+    return 'Acquista $assetName in $country';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbcall250Sbcountry8722Sbmethod => 'Acquista l\'opzione di chiamata {assetName} in {country} con {method}';
+  String document8722Sbtitle250Sbsearch250Sbbuy250Sbcountry8722Sbmethod(Object assetName, Object country, Object method) {
+    return 'Acquista $assetName in $country con $method';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbcall250Sbcurrency => 'Acquista l\'opzione di chiamata {assetName} per {currency}';
+  String document8722Sbtitle250Sbsearch250Sbbuy250Sbcurrency(Object assetName, Object currency) {
+    return 'Acquista $assetName per $currency';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbcall250Sbmethod => 'Acquista l\'opzione di chiamata {assetName} con {method}';
+  String document8722Sbtitle250Sbsearch250Sbbuy250Sbmethod(Object assetName, Object method) {
+    return 'Acquista $assetName con $method';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbput250Sbcountry => 'Acquista {assetName} opzione put in {country}';
+  String document8722Sbtitle250Sbsearch250Sbsell(Object assetName, Object country) {
+    return 'Vendi $assetName in $country';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbput250Sbcountry8722Sbmethod => 'Acquista {assetName} opzione put in {country} con {method}';
+  String document8722Sbtitle250Sbsearch250Sbsell250Sbcountry(Object assetName, Object country) {
+    return 'Vendi $assetName in $country';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbput250Sbcurrency => 'Acquista {assetName} opzione put per {currency}';
+  String document8722Sbtitle250Sbsearch250Sbsell250Sbcountry8722Sbmethod(Object assetName, Object country, Object method) {
+    return 'Vendi $assetName in $country con $method';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy8722Sbput250Sbmethod => 'Acquista {assetName} opzione put con {method}';
+  String document8722Sbtitle250Sbsearch250Sbsell250Sbcurrency(Object assetName, Object currency) {
+    return 'Vendi $assetName per $currency';
+  }
 
   @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy250Sbcountry => 'Acquista {assetName} in {country}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy250Sbcountry8722Sbmethod => 'Acquista {assetName} in {country} con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy250Sbcurrency => 'Acquista {assetName} per {currency}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbbuy250Sbmethod => 'Acquista {assetName} con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell => 'Vendi {assetName} in {country}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbcall250Sbcountry => 'Vendi {assetName} opzione call in {country}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbcall250Sbcountry8722Sbmethod => 'Vendi {assetName} opzione call in {country} con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbcall250Sbcurrency => 'Vendi {assetName} opzione call per {currency}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbcall250Sbmethod => 'Vendi {assetName} opzione call con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbput250Sbcountry => 'Vendi {assetName} opzione put in {country}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbput250Sbcountry8722Sbmethod => 'Vendi {assetName} opzione put in {country} con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbput250Sbcurrency => 'Vendi {assetName} opzione put per {currency}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell8722Sbput250Sbmethod => 'Vendi {assetName} opzione put con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell250Sbcountry => 'Vendi {assetName} in {country}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell250Sbcountry8722Sbmethod => 'Vendi {assetName} in {country} con {method}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell250Sbcurrency => 'Vendi {assetName} per {currency}';
-
-  @override
-  String get document8722Sbtitle250Sbsearch250Sbsell250Sbmethod => 'Vendi {assetName} con {method}';
+  String document8722Sbtitle250Sbsearch250Sbsell250Sbmethod(Object assetName, Object method) {
+    return 'Vendi $assetName con $method';
+  }
 
   @override
   String get document8722Sbtitle250Sbsettings => 'Impostazioni';
@@ -1592,10 +1565,14 @@ class I18nIt extends I18n {
   String get document8722Sbtitle250Sbsignup8722Sbsuccess => 'Iscrizione avvenuta';
 
   @override
-  String get document8722Sbtitle250Sbstart => 'Inizia';
+  String document8722Sbtitle250Sbstart(Object appName) {
+    return 'Inizia';
+  }
 
   @override
-  String get document8722Sbtitle250Sbstart57Sbagoradesk => 'Guide {appName}: come acquistare o vendere criptovalute e opzioni';
+  String document8722Sbtitle250Sbstart57Sbagoradesk(Object appName) {
+    return 'Guide $appName: come acquistare o vendere criptovalute';
+  }
 
   @override
   String document8722Sbtitle250Sbtrade(Object id) {
@@ -1603,7 +1580,9 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get document8722Sbtitle250Sbuser8722Sbads => 'Gli annunci di {user}';
+  String document8722Sbtitle250Sbuser8722Sbads(Object user) {
+    return 'Gli annunci di $user';
+  }
 
   @override
   String get document8722Sbtitle250Sbverify8722Sbemail => 'Verifica email';
@@ -1639,31 +1618,29 @@ class I18nIt extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Salva modifiche';
 
   @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto => 'Questo annuncio è per {ad-type} {created-at} {time-of-creation}. Per cambiare tipo di annuncio, perfavore {create-a-new-ad}';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
+    return 'Questo annuncio è per $adType $createdAt $timeOfcreation. Per cambiare tipo di annuncio, perfavore $createAnewad';
+  }
 
   @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbcall8722Sbbuy => 'acquista l\'opzione di chiamata {assetName} ';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbbuy(Object assetName) {
+    return 'compra $assetName con contanti (vicino a te)';
+  }
 
   @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbcall8722Sbsell => 'vendi l\'opzione di chiamata {assetName} ';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbsell(Object assetName) {
+    return 'vendi $assetName per contanti (vicino a te)';
+  }
 
   @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbbuy => 'compra {assetName} con contanti (vicino a te)';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbbuy(Object assetName) {
+    return 'compra $assetName online';
+  }
 
   @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbsell => 'vendi {assetName} per contanti (vicino a te)';
-
-  @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbbuy => 'compra {assetName} online';
-
-  @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbsell => 'vendi {assetName} online';
-
-  @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbput8722Sbbuy => 'acquista {assetName} opzione put';
-
-  @override
-  String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbput8722Sbsell => 'vendi {assetName} opzione put';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbsell(Object assetName) {
+    return 'vendi $assetName online';
+  }
 
   @override
   String get edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbcreate8722Sbnew => 'creara un nuovo annuncio ';
@@ -1693,7 +1670,9 @@ class I18nIt extends I18n {
   String get error8722Sbpage => 'Oops! Qualcosa è andato storto. Per favore riprova.';
 
   @override
-  String get error8722Sbpage250Sbsubtext => 'Se il problema persiste, prova a cancellare i cookie o a utilizzare un browser diverso. In caso contrario, {open_a_ticket}';
+  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
+    return 'Se il problema persiste, prova a cancellare i cookie o a utilizzare un browser diverso. In caso contrario, $open_a_ticket';
+  }
 
   @override
   String get error8722Sbpage250Sbsubtext250Sbticket => 'aprire un ticket di supporto.';
@@ -1705,10 +1684,14 @@ class I18nIt extends I18n {
   String get error250Sbedit250Sb244 => 'L\'indirizzo del portafoglio di regolamento fornito non è valido';
 
   @override
-  String get error250Sbedit250Sb245 => 'L\'indirizzo interno {appName} non può essere usato per il regolamento delle transazioni. Inserisci un indirizzo esterno, non {appName} {asset} per continuare.';
+  String error250Sbedit250Sb245(Object appName, Object asset) {
+    return 'L\'indirizzo interno $appName non può essere usato per il regolamento delle transazioni. Inserisci un indirizzo esterno, non $appName $asset per continuare.';
+  }
 
   @override
-  String get error250Sbedit250Sb245250Sbnojs => 'L\'indirizzo interno {appName} non può essere usato per il regolamento delle transazioni. Inserisci un indirizzo esterno, non {appName} per continuare.';
+  String error250Sbedit250Sb245250Sbnojs(Object appName) {
+    return 'L\'indirizzo interno $appName non può essere usato per il regolamento delle transazioni. Inserisci un indirizzo esterno, non $appName per continuare.';
+  }
 
   @override
   String get error250Sbedit250Sb249 => 'È necessario impostare un indirizzo del portafoglio di regolamento per continuare.';
@@ -1723,7 +1706,9 @@ class I18nIt extends I18n {
   String get error250Sbpost8722Sbad250Sb114 => 'La finestra di pagamento deve essere di 15-90 minuti';
 
   @override
-  String get error250Sbpost8722Sbad250Sb132 => 'Impossibile creare più di {maximumNumberOfAds} annunci. Elimina uno dei tuoi vecchi annunci per crearne uno nuovo.';
+  String error250Sbpost8722Sbad250Sb132(Object maximumNumberOfAds) {
+    return 'Impossibile creare più di $maximumNumberOfAds annunci. Elimina uno dei tuoi vecchi annunci per crearne uno nuovo.';
+  }
 
   @override
   String get error250Sbpost8722Sbad250Sb142 => 'Can\'t set a fiat limit that is less than minimum amount.';
@@ -1768,7 +1753,9 @@ class I18nIt extends I18n {
   String get error250Sbsignup250Sb48 => 'Esiste già un utente con questa email';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb100 => 'Impossibile richiedere meno di {min_asset_amount} {assetSymbol} per la creazione di transazioni.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
+    return 'Impossibile richiedere meno di $min_asset_amount $assetSymbol per la creazione di transazioni.';
+  }
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb101 => 'L\'importo richiesto è inferiore all\'importo della transazione minima dell\'annuncio.';
@@ -1783,7 +1770,9 @@ class I18nIt extends I18n {
   String get error250Sbtrade8722Sbrequest250Sb105 => 'Questo trader non ha abbastanza disponibilità per iniziare una transazione per questo importo.';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb106 => 'Non hai abbastanza disponibilità nel tuo portafoglio {appName} per iniziare una transazione!';
+  String error250Sbtrade8722Sbrequest250Sb106(Object appName) {
+    return 'Non hai abbastanza disponibilità nel tuo portafoglio $appName per iniziare una transazione!';
+  }
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb109 => 'L\'importo richiesto è più di quanto il trader abbia disponibile per questo annuncio';
@@ -1822,7 +1811,9 @@ class I18nIt extends I18n {
   String get error250Sbtrade8722Sbrequest250Sb240 => 'L\'indirizzo del portafoglio di regolamento fornito non è valido';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb241 => 'L\'indirizzo interno {appName} non può essere usato per il regolamento delle transazioni. Inserisci un indirizzo esterno, non {appName} {asset} per continuare.';
+  String error250Sbtrade8722Sbrequest250Sb241(Object appName, Object asset) {
+    return 'L\'indirizzo interno $appName non può essere usato per il regolamento delle transazioni. Inserisci un indirizzo esterno, non $appName $asset per continuare.';
+  }
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb246 => 'Non puoi aprire uno scambio: questo commerciante non ha ancora fornito un indirizzo di pagamento per questo annuncio. Contatta il venditore se puoi, o riprova più tardi, o cerca un\'altra offerta.';
@@ -1846,7 +1837,9 @@ class I18nIt extends I18n {
   String get error250Sbwithdraw250Sb7438Sb77 => 'Fondi insufficienti';
 
   @override
-  String get error250Sbwithdraw250Sb75 => 'Questo indirizzo non esiste nel database {appName}';
+  String error250Sbwithdraw250Sb75(Object appName) {
+    return 'Questo indirizzo non esiste nel database $appName';
+  }
 
   @override
   String get error250Sbwithdraw250Sb76 => 'Tentare di ritirare un\'obbligazione arbitrale allo stesso indirizzo del conto che sta richiedendo il ritiro';
@@ -1855,19 +1848,27 @@ class I18nIt extends I18n {
   String get error250Sbwithdraw250Sbclosed8722Sbconnection => 'Qualcosa è andato storto sulla richiesta, ma la transazione potrebbe essere già stata inviata. Ricarica la pagina, controlla se la transazione è stata inviata e, se necessario, ripeti l\'operazione. Se l\'errore persiste, per favore contatta il nostro supporto. ';
 
   @override
-  String get error250Sbwithdraw250Sbgeneric => 'Qualcosa è andato storto, per favore controlla l\'indirizzo {assetName} del ricevente.';
+  String error250Sbwithdraw250Sbgeneric(Object assetName) {
+    return 'Qualcosa è andato storto, per favore controlla l\'indirizzo $assetName del ricevente.';
+  }
 
   @override
   String get faq8722Sbquestion8722Sb31 => 'Cosa c\'è da sapere sui metodi di pagamento ad alto rischio?';
 
   @override
-  String get faq250Sbanswer8722Sb0 => '{appName} è uno scambio di Monero peer-to-peer. Siamo un mercato in cui gli utenti possono acquistare e vendere Monero l\'uno dall\'altro. Gli utenti, chiamati commercianti, creano annunci con il prezzo e il metodo di pagamento che vogliono offrire. Puoi consultare il nostro sito Web per gli annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai commercianti che comprano e vendono Monero online per oltre 60 diversi metodi di pagamento. Se sei un nuovo utente e vuoi acquistare Monero, dai un\'occhiata sulla nostra guida.';
+  String faq250Sbanswer8722Sb0(Object appName) {
+    return '$appName è uno scambio di Monero peer-to-peer. Siamo un mercato in cui gli utenti possono acquistare e vendere Monero l\'uno dall\'altro. Gli utenti, chiamati commercianti, creano annunci con il prezzo e il metodo di pagamento che vogliono offrire. Puoi consultare il nostro sito Web per gli annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai commercianti che comprano e vendono Monero online per oltre 60 diversi metodi di pagamento. Se sei un nuovo utente e vuoi acquistare Monero, dai un\'occhiata sulla nostra guida.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb057Sbagoradesk => '{appName} è un banco OTC di criptovaluta peer-to-peer. Siamo un marketplace in cui gli utenti possono acquistare e vendere criptovalute da e verso l\'altro. Gli utenti, chiamati commercianti, creano annunci pubblicitari con il prezzo e il metodo di pagamento che desiderano offrire. Puoi navigare nel nostro sito Web per annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai commercianti che acquistano e vendono criptovalute online per oltre 60 diversi metodi di pagamento. Se non conosci {appName} e desideri acquistare criptovalute, dai un\'occhiata alle nostre guide.';
+  String faq250Sbanswer8722Sb057Sbagoradesk(Object appName) {
+    return '$appName è un banco OTC di criptovaluta peer-to-peer. Siamo un marketplace in cui gli utenti possono acquistare e vendere criptovalute da e verso l\'altro. Gli utenti, chiamati commercianti, creano annunci pubblicitari con il prezzo e il metodo di pagamento che desiderano offrire. Puoi navigare nel nostro sito Web per annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai commercianti che acquistano e vendono criptovalute online per oltre 60 diversi metodi di pagamento. Se non conosci $appName e desideri acquistare criptovalute, dai un\'occhiata alle nostre guide.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb1 => 'Puoi consultare le nostre guide sull\' {buying} e sulla {selling} per iniziare a fare scambi.';
+  String faq250Sbanswer8722Sb1(Object buying, Object selling) {
+    return 'Puoi consultare le nostre guide sull\' $buying e sulla $selling per iniziare a fare scambi.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb18722Sbbuying => 'acquisto';
@@ -1876,52 +1877,76 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb18722Sbselling => 'vendita';
 
   @override
-  String get faq250Sbanswer8722Sb157Sbagoradesk => 'Puoi consultare le nostre guide {buying} e {selling} per iniziare a fare trading di criptovalute.';
+  String faq250Sbanswer8722Sb157Sbagoradesk(Object buying, Object selling) {
+    return 'Puoi consultare le nostre guide $buying e $selling per iniziare a fare trading di criptovalute.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb10 => 'Se acquisti Monero usando {appName}, il Monero sarà inviato al tuo portafoglio di regolamento Monero fornito. Da lì puoi inviarlo dove vuoi. Se vuoi vendere Monero, devi prima depositare l\'obbligazione arbitrale nel tuo portafoglio di obbligazioni arbitrali {appName} Monero.';
+  String faq250Sbanswer8722Sb10(Object appName) {
+    return 'Se acquisti Monero usando $appName, il Monero sarà inviato al tuo portafoglio di regolamento Monero fornito. Da lì puoi inviarlo dove vuoi. Se vuoi vendere Monero, devi prima depositare l\'obbligazione arbitrale nel tuo portafoglio di obbligazioni arbitrali $appName Monero.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb108722Sbwallet8722Sbpage => 'pagina del portafoglio';
 
   @override
-  String get faq250Sbanswer8722Sb1057Sbagoradesk => 'Se acquisti criptovalute usando {appName}, le monete saranno inviate al tuo portafoglio di regolamento fornito. Da lì puoi inviarle dove vuoi. Se vuoi vendere criptovalute, devi prima depositare l\'obbligazione arbitrale nel tuo portafoglio di obbligazioni arbitrali {appName}.';
+  String faq250Sbanswer8722Sb1057Sbagoradesk(Object appName) {
+    return 'Se acquisti criptovalute usando $appName, le monete saranno inviate al tuo portafoglio di regolamento fornito. Da lì puoi inviarle dove vuoi. Se vuoi vendere criptovalute, devi prima depositare l\'obbligazione arbitrale nel tuo portafoglio di obbligazioni arbitrali $appName.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb11 => 'Per vendere Monero su {appName} dovrai prima inviare alcuni Monero per l\'obbligazione arbitrale al tuo portafoglio di obbligazioni arbitrali {appName}. Per fare questo avrete bisogno di un account {appName}, l\'accesso a Monero in un altro portafoglio Monero e avete bisogno di conoscere il vostro indirizzo di ricezione {appName}. Per trovare il tuo indirizzo di ricezione {appName} devi andare a visitare il {wallet-page}. La parte superiore della pagina è divisa in tre parti che ti permettono sia di inviare, ricevere Monero arbitration bond e visualizzare le tue transazioni. Nella scheda \'Receive\' troverai il tuo indirizzo di ricezione. Una volta che conosci il tuo indirizzo di ricezione {appName}, puoi andare sul tuo altro portafoglio Monero e usare questo indirizzo per inviare Monero al tuo indirizzo {appName}.';
+  String faq250Sbanswer8722Sb11(Object appName, Object walletPage) {
+    return 'Per vendere Monero su $appName dovrai prima inviare alcuni Monero per l\'obbligazione arbitrale al tuo portafoglio di obbligazioni arbitrali $appName. Per fare questo avrete bisogno di un account $appName, l\'accesso a Monero in un altro portafoglio Monero e avete bisogno di conoscere il vostro indirizzo di ricezione $appName. Per trovare il tuo indirizzo di ricezione $appName devi andare a visitare il $walletPage. La parte superiore della pagina è divisa in tre parti che ti permettono sia di inviare, ricevere Monero arbitration bond e visualizzare le tue transazioni. Nella scheda \'Receive\' troverai il tuo indirizzo di ricezione. Una volta che conosci il tuo indirizzo di ricezione $appName, puoi andare sul tuo altro portafoglio Monero e usare questo indirizzo per inviare Monero al tuo indirizzo $appName.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb1157Sbagoradesk => 'Per vendere criptovalute su {appName} dovrai prima inviare alcune monete per l\'obbligazione arbitrale al tuo portafoglio di obbligazioni arbitrali {appName}. Per farlo avrai bisogno di un conto {appName}, di un accesso alle monete in un altro portafoglio e devi conoscere il tuo indirizzo di ricezione {appName}. Per trovare il tuo indirizzo di ricezione {appName} devi andare a visitare il {wallet-page}. Seleziona la criptovaluta in questione, la parte superiore della pagina del portafoglio è divisa in tre parti che ti permettono sia di inviare, ricevere il legame arbitrale che di visualizzare le tue transazioni. Nella scheda \'Ricevi\' troverai il tuo indirizzo di ricezione. Una volta che conosci il tuo indirizzo di ricezione {appName}, puoi andare nel tuo altro portafoglio e usare questo indirizzo per inviare le monete al tuo indirizzo {appName}.';
+  String faq250Sbanswer8722Sb1157Sbagoradesk(Object appName, Object walletPage) {
+    return 'Per vendere criptovalute su $appName dovrai prima inviare alcune monete per l\'obbligazione arbitrale al tuo portafoglio di obbligazioni arbitrali $appName. Per farlo avrai bisogno di un conto $appName, di un accesso alle monete in un altro portafoglio e devi conoscere il tuo indirizzo di ricezione $appName. Per trovare il tuo indirizzo di ricezione $appName devi andare a visitare il $walletPage. Seleziona la criptovaluta in questione, la parte superiore della pagina del portafoglio è divisa in tre parti che ti permettono sia di inviare, ricevere il legame arbitrale che di visualizzare le tue transazioni. Nella scheda \'Ricevi\' troverai il tuo indirizzo di ricezione. Una volta che conosci il tuo indirizzo di ricezione $appName, puoi andare nel tuo altro portafoglio e usare questo indirizzo per inviare le monete al tuo indirizzo $appName.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb12 => 'Le transazioni richiedono dai 10 ai 60 minuti quando invii Monero al tuo portafoglio {appName} o quando invii Monero dal tuo portafoglio {appName}.';
+  String faq250Sbanswer8722Sb12(Object appName) {
+    return 'Le transazioni richiedono dai 10 ai 60 minuti quando invii Monero al tuo portafoglio $appName o quando invii Monero dal tuo portafoglio $appName.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb1257Sbagoradesk => 'Le transazioni richiedono dai 10 ai 60 minuti quando si inviano monete al proprio portafoglio {appName} o quando si inviano monete dal proprio portafoglio {appName}.';
+  String faq250Sbanswer8722Sb1257Sbagoradesk(Object appName) {
+    return 'Le transazioni richiedono dai 10 ai 60 minuti quando si inviano monete al proprio portafoglio $appName o quando si inviano monete dal proprio portafoglio $appName.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb13 => 'La rete Monero potrebbe essere soggetta a congestione, in questo caso le transazioni richiederanno molto più tempo. Le transazioni Monero devono essere confermate dalla rete Monero. Quando una transazione viene effettuata, viene inviata a un pool di transazioni da dove viene raggruppata in blocchi che i minatori Monero confermano attraverso l\'estrazione. I blocchi vengono estratti in media ogni due minuti. Una volta che la transazione è stata inclusa in un blocco ed è stata estratta, è stata confermata una volta. Quando il conteggio di conferma della transazione raggiunge una certa soglia, attualmente 10 conferme, la transazione appare nei portafogli di ricezione. Puoi leggere ulteriori informazioni sulle conferme su Monero wikipedia e puoi vedere il numero corrente di transazioni non confermate sulla rete Monero nel tuo {wallet}';
+  String faq250Sbanswer8722Sb13(Object wallet) {
+    return 'La rete Monero potrebbe essere soggetta a congestione, in questo caso le transazioni richiederanno molto più tempo. Le transazioni Monero devono essere confermate dalla rete Monero. Quando una transazione viene effettuata, viene inviata a un pool di transazioni da dove viene raggruppata in blocchi che i minatori Monero confermano attraverso l\'estrazione. I blocchi vengono estratti in media ogni due minuti. Una volta che la transazione è stata inclusa in un blocco ed è stata estratta, è stata confermata una volta. Quando il conteggio di conferma della transazione raggiunge una certa soglia, attualmente 10 conferme, la transazione appare nei portafogli di ricezione. Puoi leggere ulteriori informazioni sulle conferme su Monero wikipedia e puoi vedere il numero corrente di transazioni non confermate sulla rete Monero nel tuo $wallet';
+  }
 
   @override
   String get faq250Sbanswer8722Sb138722Sbwallet => 'portafoglio';
 
   @override
-  String get faq250Sbanswer8722Sb1357Sbagoradesk => 'La rete di criptovaluta pertinente potrebbe essere soggetta a congestione, in questo caso le transazioni impiegheranno molto più tempo a passare. Le transazioni di criptovaluta devono essere confermate dalla rete di criptovaluta. Quando viene effettuata una transazione, questa viene inviata in un pool di transazioni da dove viene raggruppata in blocchi che i minatori confermano attraverso il mining. Una volta che la transazione è stata inclusa in un blocco ed è stata estratta, è stata confermata una volta. Quando il conteggio di conferma della transazione raggiunge una determinata soglia, la transazione appare nel portafoglio di destinazione. Puoi vedere il numero corrente di transazioni non confermate sulla rete nel tuo {wallet}.';
+  String faq250Sbanswer8722Sb1357Sbagoradesk(Object wallet) {
+    return 'La rete di criptovaluta pertinente potrebbe essere soggetta a congestione, in questo caso le transazioni impiegheranno molto più tempo a passare. Le transazioni di criptovaluta devono essere confermate dalla rete di criptovaluta. Quando viene effettuata una transazione, questa viene inviata in un pool di transazioni da dove viene raggruppata in blocchi che i minatori confermano attraverso il mining. Una volta che la transazione è stata inclusa in un blocco ed è stata estratta, è stata confermata una volta. Quando il conteggio di conferma della transazione raggiunge una determinata soglia, la transazione appare nel portafoglio di destinazione. Puoi vedere il numero corrente di transazioni non confermate sulla rete nel tuo $wallet.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb17 => '{appName} utilizza un sistema di feedback che mostra un punteggio sul tuo profilo pubblico. Questo punteggio, una percentuale, mostra quanti feedback positivi ha un utente. Puoi dare un solo feedback ad utente. Il feedback può essere di tre tipi: Positivo, Neutro e Negativo. Una volta dato, il feedback sarà visibile sul profilo pubblico dell\'utente se vengono soddisfatte determinate condizioni, altrimenti il feedback rimane non confermato e non influenza il punteggio di feedback. Gli utenti che non hanno mai completato operazioni non possono lasciare un feedback.';
+  String faq250Sbanswer8722Sb17(Object appName) {
+    return '$appName utilizza un sistema di feedback che mostra un punteggio sul tuo profilo pubblico. Questo punteggio, una percentuale, mostra quanti feedback positivi ha un utente. Puoi dare un solo feedback ad utente. Il feedback può essere di tre tipi: Positivo, Neutro e Negativo. Una volta dato, il feedback sarà visibile sul profilo pubblico dell\'utente se vengono soddisfatte determinate condizioni, altrimenti il feedback rimane non confermato e non influenza il punteggio di feedback. Gli utenti che non hanno mai completato operazioni non possono lasciare un feedback.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb18 => 'Il feedback che è stato dato può essere confermato o non confermato. Il feedback confermato viene mostrato sul profilo pubblico di un utente e influisce sul punteggio di feedback dell\'utente. Affinché un feedback non confermato diventi confermato, il volume totale degli scambi deve essere superiore a {minimumFeedbackAmount} XMR.';
 
   @override
-  String get faq250Sbanswer8722Sb19 => 'Le notifiche Web ti consentono di ricevere notifiche popup tramite il tuo browser ogni volta che ricevi una nuova notifica su {appName}. Se stai scambiando Monero e vuoi sapere immediatamente quando succede qualcosa, {enable-web-notifications-from-your-profile}. Sposta l\'interruttore che dice Abilita notifiche Web e quando il browser chiede l\'autorizzazione per mostrare le notifiche Web premi Accetta. Ora sei pronto e inizierai a ricevere le notifiche.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
+    return 'Le notifiche Web ti consentono di ricevere notifiche popup tramite il tuo browser ogni volta che ricevi una nuova notifica su $appName. Se stai scambiando Monero e vuoi sapere immediatamente quando succede qualcosa, $enableWebnotificationsfromyourprofile. Sposta l\'interruttore che dice Abilita notifiche Web e quando il browser chiede l\'autorizzazione per mostrare le notifiche Web premi Accetta. Ora sei pronto e inizierai a ricevere le notifiche.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb198722Sbenable8722Sbweb8722Sbnotifications8722Sbfrom8722Sbyour8722Sbprofile => 'abilita le notifiche web dal tuo profilo';
 
   @override
-  String get faq250Sbanswer8722Sb2 => 'Leggi la nostra {guide} per trovare informazioni in merito.';
+  String faq250Sbanswer8722Sb2(Object guide) {
+    return 'Leggi la nostra $guide per trovare informazioni in merito.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb28722Sbguide => 'guida all\'autenticazione a due fattori';
@@ -1930,10 +1955,14 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb20 => 'A volte un trader può chiedere il tuo documento. Se stai scambiando per la prima volta con un operatore, potrebbe chiederti di identificarti. Questo perché in alcuni paesi i venditori sono tenuti dalle leggi locali per sapere chi sono i loro clienti. La maggior parte dei venditori spiega nei propri termini se richiedono o meno la verifica dell\'identità. Se non desideri fornire al venditore il tuo ID, puoi sempre annullare il trade e cercare un trader con requisiti meno severi. Invia sempre il tuo ID al venditore tramite la chat commerciale, i nostri messaggi commerciali vengono mantenuti crittografati sui nostri server e vengono cancellati dopo 180 giorni. Tutte le fotografie inviate alla chat commerciale sono inoltre contrassegnate da una filigrana per impedire l\'uso improprio delle immagini.';
 
   @override
-  String get faq250Sbanswer8722Sb21 => 'I venditori di solito finalizzano uno scambio non appena vedono il tuo pagamento, il che a volte può richiedere un\'ora o due. Se hai pagato ma stai ancora aspettando non c\'è nulla di cui preoccuparsi, perché tutte le transazioni online sono protette da un vincolo arbitrale e il venditore non può scappare con il tuo Monero. Se ci sono problemi con uno scambio e il venditore non vuole finalizzarlo, è possibile contestare lo scambio per avere il supporto di {appName} risolvere il problema. Se stai comprando o vendendo Monero online, puoi contestare lo scambio dopo aver segnato il pagamento completato. Una controversia non può più essere avviata se lo scambio è stato finalizzato o se si tratta di uno scambio locale senza protezione del vincolo di arbitrato abilitata. Quando una compravendita in cui sei coinvolto viene contestata, riceverai un\'e-mail. Una compravendita contestata viene solitamente risolta entro 24-48 ore.';
+  String faq250Sbanswer8722Sb21(Object appName) {
+    return 'I venditori di solito finalizzano uno scambio non appena vedono il tuo pagamento, il che a volte può richiedere un\'ora o due. Se hai pagato ma stai ancora aspettando non c\'è nulla di cui preoccuparsi, perché tutte le transazioni online sono protette da un vincolo arbitrale e il venditore non può scappare con il tuo Monero. Se ci sono problemi con uno scambio e il venditore non vuole finalizzarlo, è possibile contestare lo scambio per avere il supporto di $appName risolvere il problema. Se stai comprando o vendendo Monero online, puoi contestare lo scambio dopo aver segnato il pagamento completato. Una controversia non può più essere avviata se lo scambio è stato finalizzato o se si tratta di uno scambio locale senza protezione del vincolo di arbitrato abilitata. Quando una compravendita in cui sei coinvolto viene contestata, riceverai un\'e-mail. Una compravendita contestata viene solitamente risolta entro 24-48 ore.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb2157Sbagoradesk => 'I venditori di solito finalizzano uno scambio non appena vedono il tuo pagamento, il che a volte può richiedere un\'ora o due. Se hai pagato ma stai ancora aspettando non c\'è nulla di cui preoccuparsi, perché tutte le transazioni online sono protette da un vincolo arbitrale e il venditore non può scappare con il tuo Monero. Se ci sono problemi con uno scambio e il venditore non vuole finalizzarlo, è possibile contestare lo scambio per avere il supporto di {appName} risolvere il problema. Se stai comprando o vendendo criptovalute online, puoi contestare lo scambio dopo aver segnato il pagamento completato. Una controversia non può più essere avviata se lo scambio è stato finalizzato o se si tratta di uno scambio locale senza protezione del vincolo di arbitrato abilitata. Quando una compravendita in cui sei coinvolto viene contestata, riceverai un\'e-mail. Una compravendita contestata viene solitamente risolta entro 24-48 ore.';
+  String faq250Sbanswer8722Sb2157Sbagoradesk(Object appName) {
+    return 'I venditori di solito finalizzano uno scambio non appena vedono il tuo pagamento, il che a volte può richiedere un\'ora o due. Se hai pagato ma stai ancora aspettando non c\'è nulla di cui preoccuparsi, perché tutte le transazioni online sono protette da un vincolo arbitrale e il venditore non può scappare con il tuo Monero. Se ci sono problemi con uno scambio e il venditore non vuole finalizzarlo, è possibile contestare lo scambio per avere il supporto di $appName risolvere il problema. Se stai comprando o vendendo criptovalute online, puoi contestare lo scambio dopo aver segnato il pagamento completato. Una controversia non può più essere avviata se lo scambio è stato finalizzato o se si tratta di uno scambio locale senza protezione del vincolo di arbitrato abilitata. Quando una compravendita in cui sei coinvolto viene contestata, riceverai un\'e-mail. Una compravendita contestata viene solitamente risolta entro 24-48 ore.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb22 => 'Prenotiamo una piccola somma di Monero dal saldo del portafoglio per pagare la commissione di Monero alla rete Monero. Ogni transazione Monero deve pagare una piccola quota alla rete per essere confermata indipendentemente da dove viene inviata. Riserviamo questa commissione in anticipo per evitare che il saldo del tuo portafoglio diventi negativo.';
@@ -1942,7 +1971,9 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Ci riserviamo un piccolo importo dal saldo del tuo portafoglio per pagare la commissione di transazione della rete. Ogni transazione di criptovaluta deve pagare una piccola commissione alla rete per essere confermata, indipendentemente da dove viene inviata.';
 
   @override
-  String get faq250Sbanswer8722Sb24 => 'Questa risposta riguarda il caso in cui stai comprando Monero online. Dopo aver inviato una richiesta di scambio al venditore di Monero, hai una finestra di tempo per completare il pagamento prima che il venditore sia in grado di annullare lo scambio (la finestra di pagamento varia a seconda del metodo di pagamento dello scambio). Durante questo tempo devi completare il pagamento e premere il pulsante Ho pagato. Il venditore viene avvisato che hai effettuato il pagamento e i Monero saranno tenuti in deposito arbitrale fino a quando il venditore finalizza la compravendita per te vedendo il pagamento sul suo conto. Se hai pagato per l\'acquisto, ma non hai segnato il pagamento completo prima della scadenza della finestra temporale di pagamento, contatta il venditore attraverso la compravendita. Puoi contattare il venditore e gli altri tuoi contatti commerciali esistenti dal {dashboard} nel tuo profilo utente {appName}. Invia un messaggio al venditore e spiega gentilmente la situazione e il motivo per cui non hai potuto completare il pagamento entro la finestra temporale. Se il venditore non risponde a questa richiesta, contatta il supporto {appName} utilizzando il {support-request-form} e menziona il tuo ID commerciale.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
+    return 'Questa risposta riguarda il caso in cui stai comprando Monero online. Dopo aver inviato una richiesta di scambio al venditore di Monero, hai una finestra di tempo per completare il pagamento prima che il venditore sia in grado di annullare lo scambio (la finestra di pagamento varia a seconda del metodo di pagamento dello scambio). Durante questo tempo devi completare il pagamento e premere il pulsante Ho pagato. Il venditore viene avvisato che hai effettuato il pagamento e i Monero saranno tenuti in deposito arbitrale fino a quando il venditore finalizza la compravendita per te vedendo il pagamento sul suo conto. Se hai pagato per l\'acquisto, ma non hai segnato il pagamento completo prima della scadenza della finestra temporale di pagamento, contatta il venditore attraverso la compravendita. Puoi contattare il venditore e gli altri tuoi contatti commerciali esistenti dal $dashboard nel tuo profilo utente $appName. Invia un messaggio al venditore e spiega gentilmente la situazione e il motivo per cui non hai potuto completare il pagamento entro la finestra temporale. Se il venditore non risponde a questa richiesta, contatta il supporto $appName utilizzando il $supportRequestform e menziona il tuo ID commerciale.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb248722Sbdashboard => 'Dashboard';
@@ -1951,22 +1982,32 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'Modulo di richiesta di supporto';
 
   @override
-  String get faq250Sbanswer8722Sb2457Sbagoradesk => 'Dopo aver inviato una richiesta di scambio, hai una finestra di tempo per completare il pagamento prima che l\'altra parte possa cancellare lo scambio. Durante questo tempo devi completare il pagamento e premere il pulsante \"Ho pagato\". L\'altra parte viene informata che hai effettuato il pagamento e le monete saranno tenute in deposito arbitrale fino a quando l\'altra parte non finalizzerà la compravendita per te dopo aver visto il pagamento sul suo conto. Se hai pagato per l\'acquisto, ma non hai segnato il pagamento completo prima della scadenza della finestra di pagamento, contatta l\'altra parte attraverso la chat commerciale. Puoi contattare l\'altra parte e i tuoi altri contatti commerciali esistenti dal {dashboard}. Invia un messaggio all\'altra parte e spiega gentilmente la situazione e perché non hai potuto completare il pagamento entro la finestra temporale. Se l\'altra parte non risponde a questa richiesta, contatta lo staff di {appName} usando il {support-request-form} e menziona il tuo trade ID.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
+    return 'Dopo aver inviato una richiesta di scambio, hai una finestra di tempo per completare il pagamento prima che l\'altra parte possa cancellare lo scambio. Durante questo tempo devi completare il pagamento e premere il pulsante \"Ho pagato\". L\'altra parte viene informata che hai effettuato il pagamento e le monete saranno tenute in deposito arbitrale fino a quando l\'altra parte non finalizzerà la compravendita per te dopo aver visto il pagamento sul suo conto. Se hai pagato per l\'acquisto, ma non hai segnato il pagamento completo prima della scadenza della finestra di pagamento, contatta l\'altra parte attraverso la chat commerciale. Puoi contattare l\'altra parte e i tuoi altri contatti commerciali esistenti dal $dashboard. Invia un messaggio all\'altra parte e spiega gentilmente la situazione e perché non hai potuto completare il pagamento entro la finestra temporale. Se l\'altra parte non risponde a questa richiesta, contatta lo staff di $appName usando il $supportRequestform e menziona il tuo trade ID.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb25 => 'Quando l\'acquirente o il venditore avvia una controversia, un amministratore entra nella chat commerciale e chiede a entrambe le parti la prova di cosa sia successo e tiene conto della cronologia della chat e della reputazione per rendere più equa possibile una decisione.';
 
   @override
-  String get faq250Sbanswer8722Sb26 => 'Le transazioni Monero sono irreversibili, una volta che hai inviato denaro ad un altro indirizzo Monero non è possibile per te o {appName} riaverli.';
+  String faq250Sbanswer8722Sb26(Object appName) {
+    return 'Le transazioni Monero sono irreversibili, una volta che hai inviato denaro ad un altro indirizzo Monero non è possibile per te o $appName riaverli.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb2657Sbagoradesk => 'Le transazioni in criptovaluta sono irreversibili, una volta che hai inviato le monete a un altro indirizzo non è possibile per te o {appName} invertirlo.';
+  String faq250Sbanswer8722Sb2657Sbagoradesk(Object appName) {
+    return 'Le transazioni in criptovaluta sono irreversibili, una volta che hai inviato le monete a un altro indirizzo non è possibile per te o $appName invertirlo.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb27 => 'I prezzi degli annunci sono basati sui tassi di cambio Monero. Il tasso di cambio Monero è volatile e potrebbe cambiare rapidamente. {appName} aggiorna i tassi di cambio e i prezzi degli annunci ogni dieci minuti. I prezzi mostrati nelle inserzioni e nella prima pagina sono memorizzati nella cache e si aggiornano più lentamente. A volte, quando il prezzo del Monero oscilla rapidamente, le pubblicità con la stessa equazione di prezzo possono mostrare prezzi diversi. A volte i dati di mercato non sono disponibili per alcune valute, il che porta ritardi nell\'aggiornamento dei prezzi degli annunci. Tuttavia, quando apri la pagina pubblicitaria, il prezzo sarà più aggiornato. Il prezzo dell\'acquisto è determinato nel momento in cui l\'acquirente Monero invia la richiesta commerciale.';
+  String faq250Sbanswer8722Sb27(Object appName) {
+    return 'I prezzi degli annunci sono basati sui tassi di cambio Monero. Il tasso di cambio Monero è volatile e potrebbe cambiare rapidamente. $appName aggiorna i tassi di cambio e i prezzi degli annunci ogni dieci minuti. I prezzi mostrati nelle inserzioni e nella prima pagina sono memorizzati nella cache e si aggiornano più lentamente. A volte, quando il prezzo del Monero oscilla rapidamente, le pubblicità con la stessa equazione di prezzo possono mostrare prezzi diversi. A volte i dati di mercato non sono disponibili per alcune valute, il che porta ritardi nell\'aggiornamento dei prezzi degli annunci. Tuttavia, quando apri la pagina pubblicitaria, il prezzo sarà più aggiornato. Il prezzo dell\'acquisto è determinato nel momento in cui l\'acquirente Monero invia la richiesta commerciale.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb2757Sbagoradesk => 'I prezzi delle pubblicità si basano sui tassi di cambio della criptovaluta. I tassi di cambio sono volatili e possono variare rapidamente. {appName} aggiorna i suoi tassi di cambio e i prezzi degli annunci ogni dodici minuti. I prezzi mostrati negli elenchi e sulla prima pagina sono memorizzati nella cache e si aggiornano un po \'più lentamente. A volte, quando il prezzo oscilla rapidamente, gli annunci pubblicitari con la stessa formula di prezzo possono visualizzare prezzi diversi. A volte i dati di mercato non sono disponibili per alcune valute, il che comporta ritardi nell\'aggiornamento dei prezzi degli annunci. Tuttavia, quando apri la pagina stessa dell\'annuncio, il prezzo sarà più aggiornato. Il prezzo viene determinato quando viene inviata la richiesta commerciale.';
+  String faq250Sbanswer8722Sb2757Sbagoradesk(Object appName) {
+    return 'I prezzi delle pubblicità si basano sui tassi di cambio della criptovaluta. I tassi di cambio sono volatili e possono variare rapidamente. $appName aggiorna i suoi tassi di cambio e i prezzi degli annunci ogni dodici minuti. I prezzi mostrati negli elenchi e sulla prima pagina sono memorizzati nella cache e si aggiornano un po \'più lentamente. A volte, quando il prezzo oscilla rapidamente, gli annunci pubblicitari con la stessa formula di prezzo possono visualizzare prezzi diversi. A volte i dati di mercato non sono disponibili per alcune valute, il che comporta ritardi nell\'aggiornamento dei prezzi degli annunci. Tuttavia, quando apri la pagina stessa dell\'annuncio, il prezzo sarà più aggiornato. Il prezzo viene determinato quando viene inviata la richiesta commerciale.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb28 => 'Quando il prezzo è variabile, l\'importo Monero acquistato oscilla con il tasso di cambio Monero. L\'ammontare del Monero scambiato viene determinato quando lo scambio è chiuso, invece che quando lo scambio è aperto. Ciò riduce i rischi del tasso di mercato nelle transazioni di contante locali in cui il tempo tra l\'apertura della transazione e la chiusura del commercio può essere di diversi giorni.';
@@ -1975,13 +2016,17 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb2857Sbagoradesk => 'Quando il prezzo è fluttuante, l\'importo della criptovaluta acquistata fluttua con il tasso di cambio. L\'importo negoziato viene determinato quando lo scambio viene chiuso, anziché quando viene aperto lo scambio. Ciò riduce i rischi di tasso di mercato nelle transazioni in contanti locali in cui il tempo tra l\'apertura e la chiusura può essere di diversi giorni.';
 
   @override
-  String get faq250Sbanswer8722Sb29 => 'Puoi controllare tutte le informazioni sulle tariffe correnti sulla nostra {fees-page}';
+  String faq250Sbanswer8722Sb29(Object feesPage) {
+    return 'Puoi controllare tutte le informazioni sulle tariffe correnti sulla nostra $feesPage';
+  }
 
   @override
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'pagina delle tasse';
 
   @override
-  String get faq250Sbanswer8722Sb30 => 'Al momento, non c\'è una nostra app mobile. Ma puoi ricevere le notifiche mobili con {telegram}! {this-guide} ti aiuta all\'attivazione delle notifiche di Telegram (è semplice non ti preoccupare). Il nostro bot ti invierà notifiche sugli eventi di {appName}.';
+  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
+    return 'Al momento, non c\'è una nostra app mobile. Ma puoi ricevere le notifiche mobili con $telegram! $thisGuide ti aiuta all\'attivazione delle notifiche di Telegram (è semplice non ti preoccupare). Il nostro bot ti invierà notifiche sugli eventi di $appName.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb308722Sbthis8722Sbguide => 'Questa guida';
@@ -1993,49 +2038,73 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb32250Sb1 => 'In Bitcoin, i livelli delle commissioni influenzano la velocità con cui la transazione verrà confermata incentivando i miner a dare la priorità alla transazione per una commissione più alta. Si stima che una transazione con commissioni elevate venga confermata entro pochi blocchi; Si stima che una transazione a tariffa media venga confermata entro un giorno; Si stima che una transazione a basso costo venga confermata entro una settimana.';
 
   @override
-  String get faq250Sbanswer8722Sb33 => 'Puoi prelevare il titolo arbitrale dal portafoglio del titolo arbitrale {appName} al tuo portafoglio personale di una criptovaluta diversa dalla valuta del portafoglio arbitrale {appName}. Per farlo, devi prima spuntare la casella \"Voglio ricevere un\'altra valuta\". In seguito, seleziona la criptovaluta ricevente desiderata e digita l\'indirizzo a cui inviare le monete. Poi, scegli se vuoi fornire l\'importo in monete inviate dal tuo portafoglio o nelle monete convertite ricevute al portafoglio di destinazione e digita la quantità. Premi \"Continua\", e ti verranno mostrate le offerte corrispondenti alle tue esigenze. Se l\'elenco è vuoto, prova a modificare l\'importo. Il tasso di conversione verrà visualizzato per ogni offerta, e se è accettabile, tutto quello che devi fare è premere \"Trade\", accettare i termini, e uno scambio per l\'importo corrispondente verrà creato automaticamente per te. L\'indirizzo di destinazione sarà automaticamente fornito all\'acquirente attraverso la chat commerciale. Il resto viene gestito come qualsiasi altro scambio su {appName} - l\'acquirente invierà la valuta desiderata all\'indirizzo che hai fornito, e dopo aver ricevuto le monete, si dovrebbe finalizzare uno scambio. Questo è tutto!';
+  String faq250Sbanswer8722Sb33(Object appName) {
+    return 'Puoi prelevare il titolo arbitrale dal portafoglio del titolo arbitrale $appName al tuo portafoglio personale di una criptovaluta diversa dalla valuta del portafoglio arbitrale $appName. Per farlo, devi prima spuntare la casella \"Voglio ricevere un\'altra valuta\". In seguito, seleziona la criptovaluta ricevente desiderata e digita l\'indirizzo a cui inviare le monete. Poi, scegli se vuoi fornire l\'importo in monete inviate dal tuo portafoglio o nelle monete convertite ricevute al portafoglio di destinazione e digita la quantità. Premi \"Continua\", e ti verranno mostrate le offerte corrispondenti alle tue esigenze. Se l\'elenco è vuoto, prova a modificare l\'importo. Il tasso di conversione verrà visualizzato per ogni offerta, e se è accettabile, tutto quello che devi fare è premere \"Trade\", accettare i termini, e uno scambio per l\'importo corrispondente verrà creato automaticamente per te. L\'indirizzo di destinazione sarà automaticamente fornito all\'acquirente attraverso la chat commerciale. Il resto viene gestito come qualsiasi altro scambio su $appName - l\'acquirente invierà la valuta desiderata all\'indirizzo che hai fornito, e dopo aver ricevuto le monete, si dovrebbe finalizzare uno scambio. Questo è tutto!';
+  }
 
   @override
   String get faq250Sbanswer8722Sb338722Sbmorphtoken8722Sbfaq8722Sblink => 'Qui puoi leggere di più su come funziona ChangeNow, il loro servizio e le tariffe di rete';
 
   @override
-  String get faq250Sbanswer8722Sb4 => 'Se hai il tuo codice di backup, utilizza un servizio di generazione QR come {this} per generare il QR dal tuo codice di backup. Quindi scannerizza il QR generato con la tua app 2FA. Se non hai il tuo codice di backup, significa che hai perso l\'accesso al tuo account. Sfortunatamente non siamo in grado di riattivare l\'account.';
+  String faq250Sbanswer8722Sb4(Object value) {
+    return 'Se hai il tuo codice di backup, utilizza un servizio di generazione QR come $value per generare il QR dal tuo codice di backup. Quindi scannerizza il QR generato con la tua app 2FA. Se non hai il tuo codice di backup, significa che hai perso l\'accesso al tuo account. Sfortunatamente non siamo in grado di riattivare l\'account.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb48722Sbthis => 'questo';
 
   @override
-  String get faq250Sbanswer8722Sb5 => 'Sì, lo abbiamo! Eccolo: {onion-url} (è necessario {tor} per aprire questo link). Dovrai abilitare i JavaScript. La versione gratuita di {appName} scaricabile è in arrivo! {linebreak} In caso di problemi con il caricamento del sito Web e se il livello di sicurezza di Tor è impostato su \'Alto\', prova a impostarlo su \'Medio.';
+  String faq250Sbanswer8722Sb5(Object onionUrl, Object tor) {
+    return 'Sì, lo abbiamo! Eccolo: $onionUrl (è necessario $tor per aprire questo link). Dovrai abilitare i JavaScript. La versione gratuita di {appName} scaricabile è in arrivo! {linebreak}  In caso di problemi con il caricamento del sito Web e se il livello di sicurezza di Tor è impostato su \'Alto\', prova a impostarlo su \'Medio.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb6 => 'Sì, ne abbiamo due! Eccoli: {b32-i2p-url} o {i2p-url} (è necessario {i2p} per aprire questi collegamenti).';
+  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
+    return 'Sì, ne abbiamo due! Eccoli: $b32I2purl o $i2pUrl (è necessario $i2p per aprire questi collegamenti).';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb7 => 'Sì! Controlla {here}.';
+  String faq250Sbanswer8722Sb7(Object here) {
+    return 'Sì! Controlla $here.';
+  }
 
   @override
   String get faq250Sbanswer8722Sb78722Sbhere => 'qui';
 
   @override
-  String get faq250Sbanswer8722Sb8 => 'Tutte le transazioni online sono protette da un vincolo arbitrale. Quando viene avviata una transazione, la quantità di Monero per la transazione viene automaticamente riservata dal portafoglio {appName} del venditore. Questo significa che se il venditore scappa con i tuoi soldi e non finalizza la compravendita, il supporto di {appName} può finalizzare la compravendita con i Monero tenuti nel vincolo di arbitraggio. Se stai vendendo Monero, non finalizzare mai lo scambio prima di sapere che hai ricevuto i soldi dal compratore di Monero. Si prega di notare che le transazioni locali non hanno la protezione dell\'arbitrato abilitata per impostazione predefinita.';
+  String faq250Sbanswer8722Sb8(Object appName) {
+    return 'Tutte le transazioni online sono protette da un vincolo arbitrale. Quando viene avviata una transazione, la quantità di Monero per la transazione viene automaticamente riservata dal portafoglio $appName del venditore. Questo significa che se il venditore scappa con i tuoi soldi e non finalizza la compravendita, il supporto di $appName può finalizzare la compravendita con i Monero tenuti nel vincolo di arbitraggio. Se stai vendendo Monero, non finalizzare mai lo scambio prima di sapere che hai ricevuto i soldi dal compratore di Monero. Si prega di notare che le transazioni locali non hanno la protezione dell\'arbitrato abilitata per impostazione predefinita.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb857Sbagoradesk => 'Tutte le compravendite online sono protette da un vincolo arbitrale. Quando viene avviata una transazione, la quantità di criptovaluta per la transazione viene automaticamente riservata dal portafoglio {appName} del venditore. Questo significa che se il venditore scappa con i tuoi soldi e non finalizza la compravendita, il supporto di {appName} può finalizzare la compravendita con le monete contenute nel vincolo arbitrale. Se stai vendendo criptovalute, non finalizzare mai lo scambio prima di sapere che hai ricevuto i soldi dall\'acquirente. Si prega di notare che le transazioni locali non hanno la protezione del vincolo di arbitraggio abilitata per impostazione predefinita.';
+  String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
+    return 'Tutte le compravendite online sono protette da un vincolo arbitrale. Quando viene avviata una transazione, la quantità di criptovaluta per la transazione viene automaticamente riservata dal portafoglio $appName del venditore. Questo significa che se il venditore scappa con i tuoi soldi e non finalizza la compravendita, il supporto di $appName può finalizzare la compravendita con le monete contenute nel vincolo arbitrale. Se stai vendendo criptovalute, non finalizzare mai lo scambio prima di sapere che hai ricevuto i soldi dall\'acquirente. Si prega di notare che le transazioni locali non hanno la protezione del vincolo di arbitraggio abilitata per impostazione predefinita.';
+  }
 
   @override
-  String get faq250Sbanswer8722Sb9 => 'Abbiamo due diversi tipi di scambi su {appName}, scambi locali e scambi online. Le compravendite online avvengono interamente online attraverso la nostra piattaforma di trading senza che tu debba mai incontrare il tuo partner commerciale. Il vincolo arbitrale è automaticamente abilitato e finanziato per le transazioni online, il che significa che come acquirente sei automaticamente protetto dal nostro sistema di protezione del vincolo arbitrale. La maggior parte delle compravendite su {appName} sono compravendite online. Le compravendite locali sono fatte per essere effettuate faccia a faccia, e la protezione dell\'arbitrato non è automaticamente abilitata. Per questo motivo non è sicuro pagare il venditore con un metodo di pagamento online in una compravendita locale. I metodi di pagamento online sono, per esempio, trasferimenti bancari; PayPal; codici di carte regalo ecc.';
+  String faq250Sbanswer8722Sb9(Object appName) {
+    return 'Abbiamo due diversi tipi di scambi su $appName, scambi locali e scambi online. Le compravendite online avvengono interamente online attraverso la nostra piattaforma di trading senza che tu debba mai incontrare il tuo partner commerciale. Il vincolo arbitrale è automaticamente abilitato e finanziato per le transazioni online, il che significa che come acquirente sei automaticamente protetto dal nostro sistema di protezione del vincolo arbitrale. La maggior parte delle compravendite su $appName sono compravendite online. Le compravendite locali sono fatte per essere effettuate faccia a faccia, e la protezione dell\'arbitrato non è automaticamente abilitata. Per questo motivo non è sicuro pagare il venditore con un metodo di pagamento online in una compravendita locale. I metodi di pagamento online sono, per esempio, trasferimenti bancari; PayPal; codici di carte regalo ecc.';
+  }
 
   @override
-  String get faq250Sbmorph8722Sbdeposit250Sbcontent => 'Se desideri depositare monete sul portafoglio {appName} da un portafoglio BTC, ETH, LTC, BCH o DASH devi selezionare la casella \'Desidero depositare da un portafoglio BTC, ETH, LTC, BCH o DASH\' nella scheda Ricevi della pagina del portafoglio. Nella sezione visualizzata selezionare la valuta di deposito desiderata e immettere il rispettivo indirizzo di rimborso BTC, ETH, LTC, BCH o DASH che verrà utilizzato se qualcosa non va nella transazione. Dopo averlo fatto, fai clic su \'Mostrami l\'indirizzo di deposito!\' pulsante, che aprirà una finestra in cui vedrai l\'indirizzo del deposito e i limiti di deposito ChangeNow. Invia le monete dal tuo portafoglio all\'indirizzo di deposito ChangeNow fornito. A questo punto, ChangeNow convertirà le tue monete e le trasferirà sul tuo portafoglio {appName}.';
+  String faq250Sbmorph8722Sbdeposit250Sbcontent(Object appName) {
+    return 'Se desideri depositare monete sul portafoglio $appName da un portafoglio BTC, ETH, LTC, BCH o DASH devi selezionare la casella \'Desidero depositare da un portafoglio BTC, ETH, LTC, BCH o DASH\' nella scheda Ricevi della pagina del portafoglio. Nella sezione visualizzata selezionare la valuta di deposito desiderata e immettere il rispettivo indirizzo di rimborso BTC, ETH, LTC, BCH o DASH che verrà utilizzato se qualcosa non va nella transazione. Dopo averlo fatto, fai clic su \'Mostrami l\'indirizzo di deposito!\' pulsante, che aprirà una finestra in cui vedrai l\'indirizzo del deposito e i limiti di deposito ChangeNow. Invia le monete dal tuo portafoglio all\'indirizzo di deposito ChangeNow fornito. A questo punto, ChangeNow convertirà le tue monete e le trasferirà sul tuo portafoglio $appName.';
+  }
 
   @override
-  String get faq250Sbmorph8722Sbdeposit250Sbcontent57Sbagoradesk => 'Se desideri depositare monete sul portafoglio {appName} da un portafoglio BTC, XMR, ETH, LTC, BCH o DASH devi selezionare la casella \'Desidero depositare da un portafoglio BTC, XMR, ETH, LTC, BCH o DASH\' nella scheda Ricevi della pagina del portafoglio. Nella sezione visualizzata selezionare la valuta di deposito desiderata e inserire il rispettivo indirizzo di rimborso BTC, XMR, ETH, LTC, BCH o DASH che verrà utilizzato in caso di problemi con la transazione. Dopo averlo fatto, fai clic su \'Mostrami l\'indirizzo di deposito!\' pulsante, che aprirà una finestra in cui vedrai l\'indirizzo del deposito e i limiti di deposito ChangeNow. Invia le monete dal tuo portafoglio all\'indirizzo di deposito ChangeNow fornito. A questo punto, ChangeNow convertirà le tue monete e le trasferirà sul tuo portafoglio {appName}.';
+  String faq250Sbmorph8722Sbdeposit250Sbcontent57Sbagoradesk(Object appName) {
+    return 'Se desideri depositare monete sul portafoglio $appName da un portafoglio BTC, XMR, ETH, LTC, BCH o DASH devi selezionare la casella \'Desidero depositare da un portafoglio BTC, XMR, ETH, LTC, BCH o DASH\' nella scheda Ricevi della pagina del portafoglio. Nella sezione visualizzata selezionare la valuta di deposito desiderata e inserire il rispettivo indirizzo di rimborso BTC, XMR, ETH, LTC, BCH o DASH che verrà utilizzato in caso di problemi con la transazione. Dopo averlo fatto, fai clic su \'Mostrami l\'indirizzo di deposito!\' pulsante, che aprirà una finestra in cui vedrai l\'indirizzo del deposito e i limiti di deposito ChangeNow. Invia le monete dal tuo portafoglio all\'indirizzo di deposito ChangeNow fornito. A questo punto, ChangeNow convertirà le tue monete e le trasferirà sul tuo portafoglio $appName.';
+  }
 
   @override
-  String get faq250Sbmorph8722Sbdeposit250Sbtitle => 'Come posso depositare altre criptovalute sul portafoglio {appName}?';
+  String faq250Sbmorph8722Sbdeposit250Sbtitle(Object appName) {
+    return 'Come posso depositare altre criptovalute sul portafoglio $appName?';
+  }
 
   @override
-  String get faq250Sbquestion8722Sb0 => 'Cos\'è {appName}?';
+  String faq250Sbquestion8722Sb0(Object appName) {
+    return 'Cos\'è $appName?';
+  }
 
   @override
   String get faq250Sbquestion8722Sb1 => 'Come posso acquistare o vendere Monero?';
@@ -2050,16 +2119,24 @@ class I18nIt extends I18n {
   String get faq250Sbquestion8722Sb1057Sbagoradesk => 'Come posso inviare criptovalute e come posso pagare con le criptovalute dopo averle acquistate?';
 
   @override
-  String get faq250Sbquestion8722Sb11 => 'Come ricevo Monero sul mio Portafoglio {appName}?';
+  String faq250Sbquestion8722Sb11(Object appName) {
+    return 'Come ricevo Monero sul mio Portafoglio $appName?';
+  }
 
   @override
-  String get faq250Sbquestion8722Sb1157Sbagoradesk => 'Come posso ricevere criptovaluta sul mio portafoglio {appName}?';
+  String faq250Sbquestion8722Sb1157Sbagoradesk(Object appName) {
+    return 'Come posso ricevere criptovaluta sul mio portafoglio $appName?';
+  }
 
   @override
-  String get faq250Sbquestion8722Sb12 => 'Quanto tempo è necessario per inviare o ricevere Monero sul mio Portafoglio {appName}?';
+  String faq250Sbquestion8722Sb12(Object appName) {
+    return 'Quanto tempo è necessario per inviare o ricevere Monero sul mio Portafoglio $appName?';
+  }
 
   @override
-  String get faq250Sbquestion8722Sb1257Sbagoradesk => 'Quanto tempo ci vuole per inviare o ricevere criptovalute sul mio portafoglio {appName}?';
+  String faq250Sbquestion8722Sb1257Sbagoradesk(Object appName) {
+    return 'Quanto tempo ci vuole per inviare o ricevere criptovalute sul mio portafoglio $appName?';
+  }
 
   @override
   String get faq250Sbquestion8722Sb13 => 'Ho aspettato 60 minuti e la mia transazione è ancora in sospeso, e adesso?';
@@ -2092,7 +2169,9 @@ class I18nIt extends I18n {
   String get faq250Sbquestion8722Sb2257Sbagoradesk => 'Perché non riesco a inviare tutte le monete che sono nel mio portafoglio?';
 
   @override
-  String get faq250Sbquestion8722Sb23 => 'Ho effettuato una transazione da {appName} e non viene visualizzata dal ricevente!';
+  String faq250Sbquestion8722Sb23(Object appName) {
+    return 'Ho effettuato una transazione da $appName e non viene visualizzata dal ricevente!';
+  }
 
   @override
   String get faq250Sbquestion8722Sb24 => 'Ho effettuato il pagamento, ma ho dimenticato di premere il pulsante \'Ho pagato\' o non l\'ho premuto in tempo';
@@ -2128,10 +2207,14 @@ class I18nIt extends I18n {
   String get faq250Sbquestion8722Sb32250Sb1 => 'Cos\'è un livello di commissione?';
 
   @override
-  String get faq250Sbquestion8722Sb33 => 'Come posso prelevare Monero in un altro portafoglio di criptovalute dal mio portafoglio {appName}?';
+  String faq250Sbquestion8722Sb33(Object appName) {
+    return 'Come posso prelevare Monero in un altro portafoglio di criptovalute dal mio portafoglio $appName?';
+  }
 
   @override
-  String get faq250Sbquestion8722Sb3357Sbagoradesk => 'Come posso prelevare altre criptovalute dal mio portafoglio {appName}?';
+  String faq250Sbquestion8722Sb3357Sbagoradesk(Object appName) {
+    return 'Come posso prelevare altre criptovalute dal mio portafoglio $appName?';
+  }
 
   @override
   String get faq250Sbquestion8722Sb5 => 'Ho perso l\'autenticazione a due fattori, cosa posso fare?';
@@ -2155,16 +2238,24 @@ class I18nIt extends I18n {
   String get feedback250Sbnone => 'Ancora nessuna risposta';
 
   @override
-  String get feedback250Sbtitle => 'Feedback su {user}';
+  String feedback250Sbtitle(Object user) {
+    return 'Feedback su $user';
+  }
 
   @override
-  String get fees250Sbtitle => 'Tariffe di {appName}';
+  String fees250Sbtitle(Object appName) {
+    return 'Tariffe di $appName';
+  }
 
   @override
-  String get fees250Sbtrading250Sbtext => 'Registrarsi, comprare e vendere Monero è completamente <strong>gratuito</strong>. <br/> Agli utenti {appName} che creano annunci viene addebitata una <strong> 1% di protezione arbitrale </strong> per ogni scambio completato.';
+  String fees250Sbtrading250Sbtext(Object appName) {
+    return 'Registrarsi, comprare e vendere Monero è completamente <strong>gratuito</strong>. <br/> Agli utenti $appName che creano annunci viene addebitata una <strong> 1% di protezione arbitrale </strong> per ogni scambio completato.';
+  }
 
   @override
-  String get fees250Sbtrading250Sbtext57Sbagoradesk => 'Registrarsi, comprare e vendere criptovalute è completamente <strong>gratuito</strong>. <br/> Agli utenti {appName} che creano annunci viene addebitata una <strong> 1% di tassa di protezione arbitrale </strong> per ogni scambio completato.';
+  String fees250Sbtrading250Sbtext57Sbagoradesk(Object appName) {
+    return 'Registrarsi, comprare e vendere criptovalute è completamente <strong>gratuito</strong>. <br/> Agli utenti $appName che creano annunci viene addebitata una <strong> 1% di tassa di protezione arbitrale </strong> per ogni scambio completato.';
+  }
 
   @override
   String get fees250Sbtrading250Sbtitle => 'Monero trading';
@@ -2173,7 +2264,9 @@ class I18nIt extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Trading di criptovaluta';
 
   @override
-  String get fees250Sbtx250Sbtext => 'Le transazioni verso i portafogli di altri utenti di {appName} sono {free}. {linebreak} Le transazioni con altri portafogli Monero sono soggette alla commissione di transazione della rete Monero. Il canone corrente è visibile sulla {wallet-page} sotto il titolo {outgoing-monero-fees}. La commissione di transazione viene pagata dal tuo portafoglio {appName} quando invii una transazione.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
+    return 'Le transazioni verso i portafogli di altri utenti di $appName sono $free. $linebreak  Le transazioni con altri portafogli Monero sono soggette alla commissione di transazione della rete Monero. Il canone corrente è visibile sulla $walletPage sotto il titolo $outgoingMonerofees. La commissione di transazione viene pagata dal tuo portafoglio $appName quando invii una transazione.';
+  }
 
   @override
   String get fees250Sbtx250Sbtext8722Sbfree => 'gratis';
@@ -2182,7 +2275,9 @@ class I18nIt extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'pagina del portafoglio';
 
   @override
-  String get fees250Sbtx250Sbtext57Sbagoradesk => 'Le transazioni su portafogli di altri utenti {appName} sono {free}. {linebreak} Le transazioni verso portafogli di criptovaluta esterne sono soggette alla commissione di transazione relativa alla rete di criptovaluta. La commissione corrente è visibile su {wallet-page} alla voce {outgoing-monero-fees}. La commissione di transazione viene pagata dal tuo portafoglio {appName} quando invii una transazione.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
+    return 'Le transazioni su portafogli di altri utenti $appName sono $free. $linebreak  Le transazioni verso portafogli di criptovaluta esterne sono soggette alla commissione di transazione relativa alla rete di criptovaluta. La commissione corrente è visibile su $walletPage alla voce $outgoingMonerofees. La commissione di transazione viene pagata dal tuo portafoglio $appName quando invii una transazione.';
+  }
 
   @override
   String get fees250Sbtx250Sbtitle => 'Commissioni di transazione Monero';
@@ -2260,9 +2355,6 @@ class I18nIt extends I18n {
   String get formula250Sbno8722Sbformula8722Sbmessage => 'Inserisci una formula valida per vedere il prezzo';
 
   @override
-  String get formula250Sbno8722Sbformula8722Sbmessage250Sbpremium => 'Inserisci una formula valida per vedere il premio';
-
-  @override
   String get formula250Sboperators => 'Operators';
 
   @override
@@ -2278,16 +2370,22 @@ class I18nIt extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Con la tua app scansiona il codice QR mostrato sulla pagina. Dopo averlo fatto, i codici a tempo a 6 cifre inizieranno a essere visualizzate nell\'app.';
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbfour8722Sbtext => 'Installa l\'app di autenticazione sul tuo telefono. Puoi {choose-any-app} che supporti TOTP. Per esempio, {andotp} è gratuito e open source.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
+    return 'Installa l\'app di autenticazione sul tuo telefono. Puoi $chooseAnyapp che supporti TOTP. Per esempio, $andotp è gratuito e open source.';
+  }
 
   @override
   String get guide250Sb2fa250Sbstep8722Sbfour8722Sbtext8722Sbchoose8722Sbany8722Sbapp => 'scegliere qualsiasi app';
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb0 => 'Puoi abilitare l\'autenticazione a due fattori (2FA) nelle impostazioni del tuo profilo. Quando si attiva l\'autenticazione a due fattori è molto importante che <strong>copi il codice di backup</strong> e lo tieni in un posto sicuro, preferibilmente su carta. Se perdi l\'accesso ai tuoi codici a due fattori, non sarai più in grado di accedere al tuo account e {appName} non sarà in grado di aiutarti. <strong>Usa a tuo rischio.</strong>';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb0(Object appName) {
+    return 'Puoi abilitare l\'autenticazione a due fattori (2FA) nelle impostazioni del tuo profilo. Quando si attiva l\'autenticazione a due fattori è molto importante che <strong>copi il codice di backup</strong> e lo tieni in un posto sicuro, preferibilmente su carta. Se perdi l\'accesso ai tuoi codici a due fattori, non sarai più in grado di accedere al tuo account e $appName non sarà in grado di aiutarti. <strong>Usa a tuo rischio.</strong>';
+  }
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1 => '{appName} offre {totp} 2FA. Una volta abilitata la 2FA, {auth-mobile-app} sarà sincronizzato con {appName} e produrrà password monouso di 6 cifre. Questa password viene cambiata ogni minuto. Per effettuare il login o ritirare un\'obbligazione arbitrale, oltre alla tua password devi anche inserire questa password monouso prima che scada.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
+    return '$appName offre $totp 2FA. Una volta abilitata la 2FA, $authMobileapp sarà sincronizzato con $appName e produrrà password monouso di 6 cifre. Questa password viene cambiata ogni minuto. Per effettuare il login o ritirare un\'obbligazione arbitrale, oltre alla tua password devi anche inserire questa password monouso prima che scada.';
+  }
 
   @override
   String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb18722Sbauth8722Sbmobile8722Sbapp => 'autenticazione app mobile';
@@ -2296,7 +2394,9 @@ class I18nIt extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb18722Sbtotp => 'Algoritmo che genera una password una tantum a tempo (TOTP)';
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb2 => 'Per avviare l\'attivazione dell\'autenticazione a due fattori, vai alla pagina {settings-page} e seleziona la scheda \'Autenticazione a due fattori\'.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb2(Object settingsPage) {
+    return 'Per avviare l\'attivazione dell\'autenticazione a due fattori, vai alla pagina $settingsPage e seleziona la scheda \'Autenticazione a due fattori\'.';
+  }
 
   @override
   String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb28722Sbsettings8722Sbpage => 'impostazioni';
@@ -2350,7 +2450,9 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb7250Sbtitle => 'Come Monero risolve questo';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb8 => 'Puoi farloHo la certezza che non è possibile possedere Monero \'contaminato\'. Questo è un concetto in economia noto come \'fungibilità\' ed è storicamente considerato una caratteristica importante per qualsiasi valuta. ';
+  String guide250Sbbtc250Sbcard8722Sbfive8722Sb8(Object fungibility) {
+    return 'Puoi farloHo la certezza che non è possibile possedere Monero \'contaminato\'. Questo è un concetto in economia noto come \'fungibilità\' ed è storicamente considerato una caratteristica importante per qualsiasi valuta. ';
+  }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfive250Sbtitle => 'Perché la privacy finanziaria è importante';
@@ -2359,13 +2461,19 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbfour8722Sb1 => 'Usa Tor';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfour8722Sb2 => 'Secondo {tor}, Tor è un software gratuito e una rete aperta che ti aiuta a difendere contro l\'analisi del traffico, una forma di sorveglianza della rete che minaccia la libertà personale e la privacy, attività commerciali riservate e relazioni e sicurezza dello stato. ';
+  String guide250Sbbtc250Sbcard8722Sbfour8722Sb2(Object tor) {
+    return 'Secondo $tor, Tor è un software gratuito e una rete aperta che ti aiuta a difendere contro l\'analisi del traffico, una forma di sorveglianza della rete che minaccia la libertà personale e la privacy, attività commerciali riservate e relazioni e sicurezza dello stato. ';
+  }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfour8722Sb3 => 'Per utilizzarlo, scarica e installa il {tor-browser} dal loro sito Web ufficiale. Dopo averlo avviato, puoi accedere a {appName} tramite il nostro portale Tor speciale: {tor-link}';
+  String guide250Sbbtc250Sbcard8722Sbfour8722Sb3(Object torBrowser, Object appName, Object torLink) {
+    return 'Per utilizzarlo, scarica e installa il $torBrowser dal loro sito Web ufficiale. Dopo averlo avviato, puoi accedere a $appName tramite il nostro portale Tor speciale: $torLink';
+  }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfour8722Sb4 => 'Quando acquisti su {appName}, usa metodi di pagamento che coinvolgono i contanti';
+  String guide250Sbbtc250Sbcard8722Sbfour8722Sb4(Object appName) {
+    return 'Quando acquisti su $appName, usa metodi di pagamento che coinvolgono i contanti';
+  }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfour8722Sb5 => 'Ogni volta che acquisti utilizzando un bonifico bancario, PayPal o altre opzioni di pagamento, ci sarà sempre una perdita di privacy dovuta alle registrazioni tenute dalle società che elaborano il pagamento. Per evitare quella perdita di privacy, attenersi a metodi che comportano denaro. ';
@@ -2377,7 +2485,9 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbfour250Sbtitle => 'Tecniche avanzate di rimanere anonimi usando questo metodo di acquisto di Bitcoin';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbone8722Sb1 => 'Come per {wikipedia}:';
+  String guide250Sbbtc250Sbcard8722Sbone8722Sb1(Object wikipedia) {
+    return 'Come per $wikipedia:';
+  }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbone8722Sb2 => 'Monero è una criptovaluta open source creata nell\'aprile 2014 che si concentra su <strong> fungibilità, privacy e decentralizzazione. </strong> Monero utilizza un libro mastro pubblico offuscato, il che significa che chiunque può trasmettere o inviare transazioni, ma nessun osservatore esterno può dire la fonte, l\'importo o la destinazione Monero usa un meccanismo Proof of Work per emettere nuove monete e incentivare i minatori per proteggere la rete e convalidare le transazioni. ';
@@ -2389,22 +2499,30 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbone250Sbtitle => '1. Che cos\'è Monero?';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb1 => 'Passo 6: Ritirare Bitcoin da {appName}';
+  String guide250Sbbtc250Sbcard8722Sbthree8722Sb1(Object appName) {
+    return 'Passo 6: Ritirare Bitcoin da $appName';
+  }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbthree8722Sb2 => 'Ora vai alla pagina del wallet e seleziona la casella \'Voglio ritirare un portafoglio BTC, ETH, LTC, BCH o DASH\' nella scheda \'Invia Monero\' of la pagina del wallet. Nella sezione apparirà selezionare BTC e inserire il rispettivo indirizzo BTC ricevente. Quindi inserisci l\'importo in XMR, seleziona la priorità e fai clic su \'Continua\'. Si prega di notare che l\'importo di ricezione in XMR dovrebbe rientrare nei limiti ChangeNow previsti. ';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb3 => 'Quindi, dopo aver inserito la password e (se abilitata) una password unica, {appName} invierà le monete a {morphtoken} per la conversione.';
+  String guide250Sbbtc250Sbcard8722Sbthree8722Sb3(Object appName, Object morphtoken) {
+    return 'Quindi, dopo aver inserito la password e (se abilitata) una password unica, $appName invierà le monete a $morphtoken per la conversione.';
+  }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb4 => 'A questo punto non devi fare nulla, e una nuova finestra in cui puoi monitorare lo stato della transazione verrà aperta nel tuo browser (se non è aperta per favore clicca sul link fornito e assicurati di salvarlo in modo da poter vedere il flusso della transazione). Se qualcosa dovesse andare storto con la transazione, le monete saranno rimborsate sul tuo portafoglio {appName}. ';
+  String guide250Sbbtc250Sbcard8722Sbthree8722Sb4(Object appName) {
+    return 'A questo punto non devi fare nulla, e una nuova finestra in cui puoi monitorare lo stato della transazione verrà aperta nel tuo browser (se non è aperta per favore clicca sul link fornito e assicurati di salvarlo in modo da poter vedere il flusso della transazione). Se qualcosa dovesse andare storto con la transazione, le monete saranno rimborsate sul tuo portafoglio $appName. ';
+  }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbthree8722Sb5 => 'Step 7';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb6 => 'Dopodiché, aspetta solo che la transazione vada in porto (circa 15 minuti) e {morphtoken} invierà i bitcoin all\'indirizzo fornito. Fatto!';
+  String guide250Sbbtc250Sbcard8722Sbthree8722Sb6(Object morphtoken) {
+    return 'Dopodiché, aspetta solo che la transazione vada in porto (circa 15 minuti) e $morphtoken invierà i bitcoin all\'indirizzo fornito. Fatto!';
+  }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbthree250Sbtitle => 'Acquisto di Bitcoin in modo anonimo con denaro contante';
@@ -2434,7 +2552,9 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb8 => '<strong> Monero è denaro elettronico che consente pagamenti rapidi e poco costosi da e verso qualsiasi parte del mondo. </strong> <br/> Non ci sono periodi di detenzione di più giorni e nessun rischio di chargeback fraudolento, è al sicuro dai \'controlli sui capitali\' - si tratta di misure che limitano il flusso delle monete tradizionali, a volte in misura estrema, nei paesi che stanno vivendo una situazione di instabilità economica. ';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo250Sbtitle => '2. Perché Monero? (come spiegato da {getmonero})';
+  String guide250Sbbtc250Sbcard8722Sbtwo250Sbtitle(Object getmonero) {
+    return '2. Perché Monero? (come spiegato da $getmonero)';
+  }
 
   @override
   String get guide250Sbbtc250Sbconclusion8722Sb1 => 'Sta diventando sempre più difficile col passare del tempo, ma è ancora possibile ottenere un acquisto anonimo di bitcoin a patto che tu voglia fare un ulteriore passaggio di <strong> conversione da Monero. </strong> Fortunatamente, Monero serve solo ad aumentare ulteriormente la privacy e l\'anonimato, mentre nella maggior parte delle altre guide disponibili online suggeriscono metodi che prevedono passaggi che creano ulteriori fughe di privacy, questa guida fornisce un modo questo non solo ridurrà al minimo le perdite di privacy, ma migliorerà anche il tuo livello di privacy rispetto all\'acquisto di bitcoin direttamente in contanti, poiché <strong> sarai protetto dalle funzionalità di privacy di Monero. </strong> ';
@@ -2446,7 +2566,9 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong> L\'acquisto di bitcoin in modo anonimo è diventato un compito sempre più difficile. </strong>';
 
   @override
-  String get guide250Sbbtc250Sbintro8722Sb2 => 'Ogni giorno che passa, sembra che la maggior parte se non tutti i metodi tradizionali di acquisizione di bitcoin abbiano iniziato a richiedere la verifica dell\'ID, rendendo oggi disponibili la maggior parte delle guide online come quella su {ninety-nine-bitcoins} o {coincentral} obsolete. {linebreak} {gutter} Il modo tradizionale di acquistare bitcoin senza ID è stato principalmente attraverso la piattaforma di scambio P2P Bitcoin {localbitcoins}, un posto particolarmente popolare per l\'acquisto di bitcoin in modo anonimo con {paypal}. ';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Ogni giorno che passa, sembra che la maggior parte se non tutti i metodi tradizionali di acquisizione di bitcoin abbiano iniziato a richiedere la verifica dell\'ID, rendendo oggi disponibili la maggior parte delle guide online come quella su $ninetyNinebitcoins o $coincentral obsolete. $linebreak  $gutter Il modo tradizionale di acquistare bitcoin senza ID è stato principalmente attraverso la piattaforma di scambio P2P Bitcoin $localbitcoins, un posto particolarmente popolare per l\'acquisto di bitcoin in modo anonimo con $paypal. ';
+  }
 
   @override
   String get guide250Sbbtc250Sbintro8722Sb3 => 'Ma, sfortunatamente, anche <strong> LocalBitcoins ha iniziato a richiedere la verifica dell\'ID da tutti i suoi trader. </strong>';
@@ -2458,28 +2580,40 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbtitle => 'Come acquistare Bitcoin in modo anonimo';
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbfive8722Sbtext => 'Una volta effettuato il pagamento, clicca sul pulsante \"Ho pagato\". Una volta che il trader ha verificato che il tuo pagamento è stato ricevuto, il trade sarà finalizzato e presto vedrai il {assetName} nel tuo portafoglio di regolamento. E questo è tutto, congratulazioni per il tuo primo scambio {assetName}!';
+  String guide250Sbbuy250Sbstep8722Sbfive8722Sbtext(Object assetName) {
+    return 'Una volta effettuato il pagamento, clicca sul pulsante \"Ho pagato\". Una volta che il trader ha verificato che il tuo pagamento è stato ricevuto, il trade sarà finalizzato e presto vedrai il $assetName nel tuo portafoglio di regolamento. E questo è tutto, congratulazioni per il tuo primo scambio $assetName!';
+  }
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbfive8722Sbtext8722Sblocalmonero8722Sbwallet => 'Portafoglio {appName}';
+  String guide250Sbbuy250Sbstep8722Sbfive8722Sbtext8722Sblocalmonero8722Sbwallet(Object appName) {
+    return 'Portafoglio $appName';
+  }
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbfour8722Sbtext => 'Dopo aver premuto il pulsante \'Acquista\', vedrai ulteriori informazioni sull\'annuncio, compresi i termini del contratto. Leggili attentamente prima di inviare la richiesta di scambio. Se non si soddisfatto puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanti {assetName} vuoi acquistare e fai clic sul pulsante \'Invia richiesta commerciale\' per avviare lo scambio. Assicurati di essere pronto a pagare quando fai clic sul pulsante, se non paghi prima che finisca il tempo impostato per il pagamento, il venditore potrà annullare la transazione.';
+  String guide250Sbbuy250Sbstep8722Sbfour8722Sbtext(Object assetName) {
+    return 'Dopo aver premuto il pulsante \'Acquista\', vedrai ulteriori informazioni sull\'annuncio, compresi i termini del contratto. Leggili attentamente prima di inviare la richiesta di scambio. Se non si soddisfatto puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanti $assetName vuoi acquistare e fai clic sul pulsante \'Invia richiesta commerciale\' per avviare lo scambio. Assicurati di essere pronto a pagare quando fai clic sul pulsante, se non paghi prima che finisca il tempo impostato per il pagamento, il venditore potrà annullare la transazione.';
+  }
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext => '{register-an-account} su {appName}. Ottieni un portafoglio Monero online gratuito e sicuro. Non sono necessarie altre app. Se hai già un account, vai al passaggio successivo.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
+    return '$registerAnaccount su $appName. Ottieni un portafoglio Monero online gratuito e sicuro. Non sono necessarie altre app. Se hai già un account, vai al passaggio successivo.';
+  }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Registra un account';
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk => '{register-an-account} con {appName}. Ottieni un portafoglio di criptovaluta online gratuito e sicuro. Non sono necessarie app aggiuntive. Se hai già un account, vai al passaggio successivo.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
+    return '$registerAnaccount con $appName. Ottieni un portafoglio di criptovaluta online gratuito e sicuro. Non sono necessarie app aggiuntive. Se hai già un account, vai al passaggio successivo.';
+  }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbthree8722Sbtext => 'Dalla lista degli annunci, scegli un trader con un buon punteggio di reputazione e una quantità elevata di scambi. Un cerchio verde significa che il trader è online oggi, un cerchio giallo significa che hanno visitato il sito questa settimana e un cerchio grigio significa che il trader non è qui da più di una settimana. È possibile fare clic sul pulsante \'Acquista\' per visualizzare ulteriori informazioni sull\' annuncio.';
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbtwo8722Sbtext => 'Vai alla {main-page} e nella casella di ricerca compila il modulo con l\'importo che desideri acquistare nella tua valuta, la tua posizione e un metodo di pagamento. Se non sei sicuro di come vuoi pagare, scegli \'Tutte le offerte online\' come metodo di pagamento. Il sito elencherà i commercianti {assetName} disponibili nella tua zona.';
+  String guide250Sbbuy250Sbstep8722Sbtwo8722Sbtext(Object mainPage, Object assetName) {
+    return 'Vai alla $mainPage e nella casella di ricerca compila il modulo con l\'importo che desideri acquistare nella tua valuta, la tua posizione e un metodo di pagamento. Se non sei sicuro di come vuoi pagare, scegli \'Tutte le offerte online\' come metodo di pagamento. Il sito elencherà i commercianti $assetName disponibili nella tua zona.';
+  }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbtwo8722Sbtext8722Sbmain8722Sbpage => 'pagina principale';
@@ -2563,7 +2697,9 @@ class I18nIt extends I18n {
   String get guide250Sbcbm250Sbtitle => 'Stare al sicuro con i contanti per posta';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb0 => '{appName} offre due tipi principali di annunci, {online} e annunci locali. Attraverso le pubblicità locali, vi incontrate fisicamente con il vostro partner commerciale e completate il commercio faccia a faccia. Questa guida illustra le nozioni di base su come impostare gli annunci pubblicitari locali e su come commerciare localmente in zona.';
+  String guide250Sblocal250Sbtext8722Sb0(Object appName, Object online) {
+    return '$appName offre due tipi principali di annunci, $online e annunci locali. Attraverso le pubblicità locali, vi incontrate fisicamente con il vostro partner commerciale e completate il commercio faccia a faccia. Questa guida illustra le nozioni di base su come impostare gli annunci pubblicitari locali e su come commerciare localmente in zona.';
+  }
 
   @override
   String get guide250Sblocal250Sbtext8722Sb08722Sbonline => 'online';
@@ -2572,13 +2708,19 @@ class I18nIt extends I18n {
   String get guide250Sblocal250Sbtext8722Sb1 => 'Esiste un mercato/domanda?';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb2 => 'Dipende da dove vivi, in città più grandi troverai più gente interessata ad acquistare {assetName}. Poiché le transazioni {assetName} sono irreversibili, ma le forme più tradizionali di pagamento online sono reversibili, vendere {assetName} direttamente a livello locale con contanti rende molto più sicuro accettare pagamenti. Alcune persone apprezzano la privacy che offrono i contanti. L\'acquisto di una piccola quantità di {assetName} con contanti è anche un ottimo modo per iniziare senza troppi problemi.';
+  String guide250Sblocal250Sbtext8722Sb2(Object assetName) {
+    return 'Dipende da dove vivi, in città più grandi troverai più gente interessata ad acquistare $assetName. Poiché le transazioni $assetName sono irreversibili, ma le forme più tradizionali di pagamento online sono reversibili, vendere $assetName direttamente a livello locale con contanti rende molto più sicuro accettare pagamenti. Alcune persone apprezzano la privacy che offrono i contanti. L\'acquisto di una piccola quantità di $assetName con contanti è anche un ottimo modo per iniziare senza troppi problemi.';
+  }
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb3 => 'Cosa succede se ho esaurito i {assetName}?';
+  String guide250Sblocal250Sbtext8722Sb3(Object assetName) {
+    return 'Cosa succede se ho esaurito i $assetName?';
+  }
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb4 => 'Se esaurisci i {assetName}, li puoi acquistare più velocemente da un exchange {assetName}, anche se di solito sono necessari alcuni giorni perché dovrai acquistare tramite bonifico bancario.';
+  String guide250Sblocal250Sbtext8722Sb4(Object assetName) {
+    return 'Se esaurisci i $assetName, li puoi acquistare più velocemente da un exchange $assetName, anche se di solito sono necessari alcuni giorni perché dovrai acquistare tramite bonifico bancario.';
+  }
 
   @override
   String get guide250Sblocal250Sbtext8722Sb5 => 'Assicurati di essere facilmente raggiungibile! Nel tuo annuncio, specifica il tuo posto preferito e il giorno per incontrarti. Puoi includere il tuo numero di cellulare.';
@@ -2587,13 +2729,17 @@ class I18nIt extends I18n {
   String get guide250Sblocal250Sbtext8722Sb58722Sbtitle => 'Pubblicità';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb6 => 'Tutti i rischi tradizionali che regolano lo scambio di denaro ci sono anche con {assetName}. Si prega di considerare attentamente i rischi ed utilizzare il sistema di feedback e altre misure per garantire la tua sicurezza.';
+  String guide250Sblocal250Sbtext8722Sb6(Object assetName) {
+    return 'Tutti i rischi tradizionali che regolano lo scambio di denaro ci sono anche con $assetName. Si prega di considerare attentamente i rischi ed utilizzare il sistema di feedback e altre misure per garantire la tua sicurezza.';
+  }
 
   @override
   String get guide250Sblocal250Sbtext8722Sb68722Sbtitle => 'Rischi';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb7 => 'Attenzione ai soldi falsi. Porta con te eventualmente un rilevatore di contraffazioni quando si effettua lo scambio con i contanti in modo da controllarli.';
+  String guide250Sblocal250Sbtext8722Sb7(Object assetName) {
+    return 'Attenzione ai soldi falsi. Porta con te eventualmente un rilevatore di contraffazioni quando si effettua lo scambio con i contanti in modo da controllarli.';
+  }
 
   @override
   String get guide250Sblocal250Sbtext8722Sb78722Sbtitle => 'Soldi contraffatti';
@@ -2608,16 +2754,22 @@ class I18nIt extends I18n {
   String get guide250Sblocal250Sbtext8722Sbfour => 'Invia link ai tuoi amici, fai pubblicità sui social e a livello locale, attendi che gli ordini inizino';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbstep8722Sbone => '{sign-up} se non l\'hai già fatto';
+  String guide250Sblocal250Sbtext8722Sbstep8722Sbone(Object signUp) {
+    return '$signUp se non l\'hai già fatto';
+  }
 
   @override
   String get guide250Sblocal250Sbtext8722Sbstep8722Sbone8722Sbsign8722Sbup => 'Iscriviti';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbstep8722Sbthree => '{load-monero}, se stai vendendo';
+  String guide250Sblocal250Sbtext8722Sbstep8722Sbthree(Object loadMonero) {
+    return '$loadMonero, se stai vendendo';
+  }
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbstep8722Sbthree8722Sbload8722Sbmonero => 'Carica {assetName} nel tuo portafoglio';
+  String guide250Sblocal250Sbtext8722Sbstep8722Sbthree8722Sbload8722Sbmonero(Object assetName) {
+    return 'Carica $assetName nel tuo portafoglio';
+  }
 
   @override
   String get guide250Sblocal250Sbtext8722Sbstep8722Sbtwo => 'Pubblica un annuncio pubblicitario';
@@ -2632,7 +2784,9 @@ class I18nIt extends I18n {
   String get guide250Sblocal250Sbtitle57Sbagoradesk => 'Come acquistare o vendere criptovaluta per la guida in contanti';
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbdescription => 'In questa guida imparerai come ripristinare il tuo portafoglio di insediamento non custodiale {appName} dal seme mnemonico mostrato nella pagina commerciale.';
+  String guide250Sbmnemonic250Sbbtc250Sbdescription(Object appName) {
+    return 'In questa guida imparerai come ripristinare il tuo portafoglio di insediamento non custodiale $appName dal seme mnemonico mostrato nella pagina commerciale.';
+  }
 
   @override
   String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb1 => 'Scarica l\'ultima versione del portafoglio Electrum da <a target=\"_blank\" href=\"https://electrum.org/#download\" class=\"next-link\">electrum.org</a> e lanciala.';
@@ -2650,10 +2804,14 @@ class I18nIt extends I18n {
   String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb5 => 'Incolla il seme mnemonico dalla pagina commerciale nell\'input. Poi, premi \"Opzioni\" sotto il campo di inserimento del seme mnemonico e spunta sia \"Estendi questo seme con parole personalizzate\" che \"Seme BIP39\", premi \"OK\" e poi \"Avanti\".';
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb6 => 'Nell\'input \"Seed extension\", digita la password {appName} che hai usato quando hai finalizzato lo scambio e premi \"Next\".';
+  String guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb6(Object appName) {
+    return 'Nell\'input \"Seed extension\", digita la password $appName che hai usato quando hai finalizzato lo scambio e premi \"Next\".';
+  }
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb7 => 'Selezionate \"segwit nativo (p2wpkh)\" e nell\'input del percorso di derivazione sotto scrivete {formattedDerivationPath}. Premi \"Avanti\".';
+  String guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb7(Object formattedDerivationPath) {
+    return 'Selezionate \"segwit nativo (p2wpkh)\" e nell\'input del percorso di derivazione sotto scrivete $formattedDerivationPath. Premi \"Avanti\".';
+  }
 
   @override
   String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb8 => 'Scegli la password che vuoi per il tuo portafoglio e premi \"Avanti\".';
@@ -2668,7 +2826,9 @@ class I18nIt extends I18n {
   String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb1 => 'Scarica l\'ultima versione del portafoglio Monero CLI per il tuo sistema operativo da <a target=\"_blank\" href=\"https://getmonero.org/downloads\" class=\"next-link\">getmonero.org</a>.';
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb2 => 'Lancia il portafoglio con il flag {formattedFlag} .';
+  String guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb2(Object formattedFlag) {
+    return 'Lancia il portafoglio con il flag $formattedFlag .';
+  }
 
   @override
   String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb3 => 'Inserisci il nome che vuoi per il tuo portafoglio.';
@@ -2677,13 +2837,17 @@ class I18nIt extends I18n {
   String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb4 => 'Quando ti viene chiesto di <strong>\"Specificare il seme di Electrum\"</strong>incolla il seme mnemonico della pagina commerciale.';
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb5 => 'Quando ti viene chiesto di <strong>\"Inserire la passphrase di offset del seme\",</strong> digita la password di {appName} che hai usato quando hai finalizzato lo scambio.';
+  String guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb5(Object appName) {
+    return 'Quando ti viene chiesto di <strong>\"Inserire la passphrase di offset del seme\",</strong> digita la password di $appName che hai usato quando hai finalizzato lo scambio.';
+  }
 
   @override
   String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb6 => 'Rispondi alle prossime domande in base alle tue preferenze.';
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb7 => 'Questo è tutto! Dopo che il portafoglio è sincronizzato, vedrai tutte le transazioni usando il comando {formattedCommand} .';
+  String guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb7(Object formattedCommand) {
+    return 'Questo è tutto! Dopo che il portafoglio è sincronizzato, vedrai tutte le transazioni usando il comando $formattedCommand .';
+  }
 
   @override
   String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbtitle => 'Usare il portafoglio CLI ufficiale';
@@ -2695,7 +2859,9 @@ class I18nIt extends I18n {
   String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb2 => 'Scegli quale modalità di portafoglio preferisci, e poi seleziona \"Ripristina portafoglio da chiavi o semi mnemonici\".';
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb3 => 'Scegli \"Restore from seed\" (selezionato per default) e incolla il seme mnemonico dalla pagina di scambio nell\'input sottostante. Poi, seleziona \"Seed offset passphrase\" e digita la password {appName} che hai usato quando hai finalizzato lo scambio. Premi \"Avanti\".';
+  String guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb3(Object appName) {
+    return 'Scegli \"Restore from seed\" (selezionato per default) e incolla il seme mnemonico dalla pagina di scambio nell\'input sottostante. Poi, seleziona \"Seed offset passphrase\" e digita la password $appName che hai usato quando hai finalizzato lo scambio. Premi \"Avanti\".';
+  }
 
   @override
   String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb4 => 'Questo è tutto! Dopo che il portafoglio è sincronizzato, vedrai tutte le transazioni sotto la scheda \"Transazioni\".';
@@ -2716,7 +2882,9 @@ class I18nIt extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb157Sbagoradesk => 'Vai alla pagina principale <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> - vedrai le migliori offerte per la tua regione predefinita. Poi, seleziona la criptovaluta che vuoi scambiare premendo la scheda corrispondente sulla riga sopra la tabella degli annunci. Per questo esempio, sceglieremo BTC. Nella colonna di sinistra dovresti poi selezionare la scheda \"Acquista\". Puoi raffinare i tuoi risultati inserendo l\'importo desiderato e cambiando la valuta, il paese o il metodo di pagamento (seleziona \"Tutte le offerte online\" se non sei sicuro del metodo di pagamento che vuoi utilizzare) nella casella di ricerca e premendo il pulsante blu con l\'icona \"Cerca\".';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb2 => 'Dopo aver premuto il pulsante \"Acquista\", vedrai più informazioni sull\'annuncio, compresi i termini dello scambio. Leggili prima di inviare la richiesta di scambio, se non sei d\'accordo, puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanto {assetName} vuoi comprare e clicca sul pulsante \"Invia richiesta di scambio\". Ti verranno mostrati ancora una volta i termini dello scambio, leggili attentamente un\'altra volta e assicurati di essere d\'accordo, poi premi \"Accetta i termini\".';
+  String guide250Sbnon8722Sbcustodial250Sbbuy250Sb2(Object assetName) {
+    return 'Dopo aver premuto il pulsante \"Acquista\", vedrai più informazioni sull\'annuncio, compresi i termini dello scambio. Leggili prima di inviare la richiesta di scambio, se non sei d\'accordo, puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanto $assetName vuoi comprare e clicca sul pulsante \"Invia richiesta di scambio\". Ti verranno mostrati ancora una volta i termini dello scambio, leggili attentamente un\'altra volta e assicurati di essere d\'accordo, poi premi \"Accetta i termini\".';
+  }
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb3 => 'Successivamente, ti verrà richiesto di inserire l\'indirizzo del tuo portafoglio di regolamento. Questo è l\'indirizzo a cui verranno inviate le monete che hai comprato. Se non hai un portafoglio XMR personale, puoi usare il portafoglio <a target=\"_blank\" href=\"https://www.getmonero.org/downloads/\" class=\"next-link\">ufficiale Monero GUI o CLI</a> o <a target=\"_blank\" href=\"https://featherwallet.org/\" class=\"next-link\">portafoglio Feather</a>. Copia il tuo indirizzo dal tuo portafoglio e incollalo nell\'input \"Receiving Monero address\" (assicurati che l\'indirizzo incollato sia lo stesso di quello copiato per evitare di perdere le tue monete). Si prega di notare che il portafoglio che si utilizza per il regolamento degli scambi deve essere il proprio, i portafogli ospitati da terzi non sono ammessi. Una volta fatto, premi \"Start trading\" per iniziare lo scambio.';
@@ -2737,10 +2905,14 @@ class I18nIt extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb8 => 'Questo è tutto! Una volta che la transazione è finita e hai ricevuto le tue monete, sarai in grado di vedere i dettagli della transazione espandendo la sezione \"Dettagli della transazione\" nella pagina dello scambio. Non dimenticare di lasciare un feedback sulla tua esperienza con questo venditore!';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbregister => '<a target=\"_blank\" href=\"/signup\" class=\"next-link\">Registra un account</a> con {appName}. Se hai già un account, passa al passo successivo.';
+  String guide250Sbnon8722Sbcustodial250Sbregister(Object appName) {
+    return '<a target=\"_blank\" href=\"/signup\" class=\"next-link\">Registra un account</a> con $appName. Se hai già un account, passa al passo successivo.';
+  }
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb1 => 'Deposita le monete nel tuo portafoglio di obbligazioni arbitrali <a target=\"_blank\" href=\"/account/wallet\" class=\"next-link\">{appName}</a>. Vedrai il tuo indirizzo di deposito {appName} sotto la scheda \"Ricevi\".';
+  String guide250Sbnon8722Sbcustodial250Sbsell250Sb1(Object appName) {
+    return 'Deposita le monete nel tuo portafoglio di obbligazioni arbitrali <a target=\"_blank\" href=\"/account/wallet\" class=\"next-link\">$appName</a>. Vedrai il tuo indirizzo di deposito $appName sotto la scheda \"Ricevi\".';
+  }
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2 => 'Vai alla pagina principale <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> e nella casella di ricerca seleziona \"Vendere\". Puoi affinare ulteriormente i risultati inserendo l\'importo desiderato e cambiando la valuta, il paese o il metodo di pagamento (seleziona \"Tutte le offerte online\" se non sei sicuro del metodo di pagamento che vuoi utilizzare) nella casella di ricerca. Premi \"Cerca\".';
@@ -2755,7 +2927,9 @@ class I18nIt extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb257Sbagoradesk => 'Vai alla pagina principale <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> e nella colonna di sinistra, seleziona la scheda \"Vendi\". Poi, seleziona la criptovaluta che vuoi scambiare premendo la scheda corrispondente nella riga sopra la tabella degli annunci. Per questo esempio, sceglieremo BTC. Puoi raffinare ulteriormente i tuoi risultati inserendo l\'importo desiderato e cambiando la valuta, il paese o il metodo di pagamento (seleziona \"Tutte le offerte online\" se non sei sicuro del metodo di pagamento che vuoi usare) nella casella di ricerca. Premi il pulsante blu con l\'icona \"Cerca\".';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb3 => 'Dopo aver premuto il pulsante \"Vendi\", vedrai più informazioni sull\'annuncio, inclusi i termini dello scambio. Leggili prima di inviare la richiesta di scambio, se non sei d\'accordo puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanto {assetName} vuoi vendere e clicca sul pulsante \"Invia richiesta di scambio\". Ti verranno mostrati ancora una volta i termini dello scambio, leggili attentamente un\'altra volta e assicurati di essere d\'accordo, poi premi \"Accetta i termini e inizia lo scambio\".';
+  String guide250Sbnon8722Sbcustodial250Sbsell250Sb3(Object assetName) {
+    return 'Dopo aver premuto il pulsante \"Vendi\", vedrai più informazioni sull\'annuncio, inclusi i termini dello scambio. Leggili prima di inviare la richiesta di scambio, se non sei d\'accordo puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanto $assetName vuoi vendere e clicca sul pulsante \"Invia richiesta di scambio\". Ti verranno mostrati ancora una volta i termini dello scambio, leggili attentamente un\'altra volta e assicurati di essere d\'accordo, poi premi \"Accetta i termini e inizia lo scambio\".';
+  }
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb4 => 'Si aprirà una pagina commerciale nel tuo browser. Comunica con l\'acquirente attraverso la chat commerciale e forniscigli i tuoi dati di pagamento.';
@@ -2764,7 +2938,9 @@ class I18nIt extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb5 => 'Sarai avvisato quando l\'acquirente avrà effettuato il pagamento. Assicurati di aver ricevuto il pagamento e che sia l\'importo giusto. Una volta verificato che il pagamento è corretto al 100%, premi \"Finalizza\".';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb6 => 'A questo punto, ti verrà richiesto di inserire la tua attuale password {appName}. Inseriscila e premi conferma. Inserendo la password, stai generando un portafoglio di regolamento e firmando la transazione in criptovaluta, quindi assicurati di non dimenticare o perdere la password almeno fino a quando la transazione non sarà regolata.';
+  String guide250Sbnon8722Sbcustodial250Sbsell250Sb6(Object appName) {
+    return 'A questo punto, ti verrà richiesto di inserire la tua attuale password $appName. Inseriscila e premi conferma. Inserendo la password, stai generando un portafoglio di regolamento e firmando la transazione in criptovaluta, quindi assicurati di non dimenticare o perdere la password almeno fino a quando la transazione non sarà regolata.';
+  }
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb7 => 'Vedrai che lo stato dello scambio sarà cambiato in \"Processing\". A questo punto, non c\'è nient\'altro da fare - le monete saranno trasferite automaticamente all\'indirizzo del portafoglio dell\'acquirente.';
@@ -2773,16 +2949,22 @@ class I18nIt extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb8 => 'Questo è tutto! Una volta che la transazione è finita, sarai in grado di vedere i dettagli della transazione espandendo la sezione \"Dettagli della transazione\" nella pagina dello scambio. Non dimenticare di lasciare un feedback sulla tua esperienza con questo acquirente!';
 
   @override
-  String get guide250Sbsell250Sbstep8722Sbfive8722Sbtext => 'Dopo che hai inviato la richiesta di scambio, l\'acquirente ti chiederà i tuoi dati di pagamento (ad esempio, se vuoi vendere con un bonifico bancario, l\'acquirente ti chiederà le informazioni del tuo conto corrente). Dopo che l\'acquirente ha ricevuto le informazioni di pagamento, pagherà per il {assetName} e te lo confermerà. Assicurati di aver ricevuto i soldi sul tuo conto prima di finalizzare lo scambio. Non finalizzare MAI la compravendita prima di aver ricevuto il pagamento. Le transazioni {assetName} sono irreversibili, una volta che hai inviato i {assetName} all\'acquirente non c\'è modo di riaverli indietro, anche se il pagamento dell\'acquirente non arriva. Una volta confermato che il pagamento è stato effettuato, puoi scorrere la pagina e selezionare \'Finalizza\'. Questo invierà i {assetName} al portafoglio di regolamento dell\'acquirente e completerà lo scambio.';
+  String guide250Sbsell250Sbstep8722Sbfive8722Sbtext(Object assetName) {
+    return 'Dopo che hai inviato la richiesta di scambio, l\'acquirente ti chiederà i tuoi dati di pagamento (ad esempio, se vuoi vendere con un bonifico bancario, l\'acquirente ti chiederà le informazioni del tuo conto corrente). Dopo che l\'acquirente ha ricevuto le informazioni di pagamento, pagherà per il $assetName e te lo confermerà. Assicurati di aver ricevuto i soldi sul tuo conto prima di finalizzare lo scambio. Non finalizzare MAI la compravendita prima di aver ricevuto il pagamento. Le transazioni $assetName sono irreversibili, una volta che hai inviato i $assetName all\'acquirente non c\'è modo di riaverli indietro, anche se il pagamento dell\'acquirente non arriva. Una volta confermato che il pagamento è stato effettuato, puoi scorrere la pagina e selezionare \'Finalizza\'. Questo invierà i $assetName al portafoglio di regolamento dell\'acquirente e completerà lo scambio.';
+  }
 
   @override
-  String get guide250Sbsell250Sbstep8722Sbfour8722Sbtext => 'Dopo aver premuto il pulsante \'Vendi\' vedrai più informazioni sull\'annuncio, inclusi i termini dello scambio. Leggili prima di inviare la richiesta di scambio, se non sei d\'accordo puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanto {assetName} vuoi vendere e clicca sul pulsante \'Invia richiesta di scambio\' per iniziare lo scambio. Una volta avviata la compravendita il tuo {assetName} verrà spostato dal tuo portafoglio all\'obbligazione arbitrale per la protezione del commercio.';
+  String guide250Sbsell250Sbstep8722Sbfour8722Sbtext(Object assetName) {
+    return 'Dopo aver premuto il pulsante \'Vendi\' vedrai più informazioni sull\'annuncio, inclusi i termini dello scambio. Leggili prima di inviare la richiesta di scambio, se non sei d\'accordo puoi tornare alla pagina precedente e scegliere un altro annuncio. Per iniziare lo scambio, digita quanto $assetName vuoi vendere e clicca sul pulsante \'Invia richiesta di scambio\' per iniziare lo scambio. Una volta avviata la compravendita il tuo $assetName verrà spostato dal tuo portafoglio all\'obbligazione arbitrale per la protezione del commercio.';
+  }
 
   @override
   String get guide250Sbsell250Sbstep8722Sbthree8722Sbtext => 'Dalla lista degli annunci, scegliere un trader con un buon punteggio di reputazione e una quantità elevata di scambi. Un cerchio verde significa che il trader è online oggi, un cerchio giallo significa che ha visitato il sito questa settimana e un cerchio grigio significa che il trader non è qui da più di una settimana. È possibile fare clic sul pulsante \'Vendi\' per visualizzare ulteriori informazioni su un annuncio.';
 
   @override
-  String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb0 => 'Vai alla {main-page} e nel menu seleziona la scheda \'Vendi\', compila il modulo con l\'importo che si desidera vendere nella propria valuta, la propria posizione e scegliere un metodo di pagamento. Se non sei sicuro di come vuoi essere pagato, scegli \'Tutte le offerte online\'. Il sito elencherà i commercianti {assetName} disponibili nella tua zona.';
+  String guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb0(Object mainPage, Object assetName) {
+    return 'Vai alla $mainPage e nel menu seleziona la scheda \'Vendi\', compila il modulo con l\'importo che si desidera vendere nella propria valuta, la propria posizione e scegliere un metodo di pagamento. Se non sei sicuro di come vuoi essere pagato, scegli \'Tutte le offerte online\'. Il sito elencherà i commercianti $assetName disponibili nella tua zona.';
+  }
 
   @override
   String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb08722Sbmain8722Sbpage => 'Pagina principale';
@@ -2806,7 +2988,9 @@ class I18nIt extends I18n {
   String get guide250Sbtelegram250Sbconclusion => 'Complimenti! Ora puoi rispondere immediatamente ai tuoi clienti!';
 
   @override
-  String get guide250Sbtelegram250Sbdisable8722Sbtext => 'Se desideri disabilitare le notifiche del nostro bot, torna alla scheda \'Notifiche\' nelle {account-settings} e fai clic sul pulsante rosso \'Disattiva le notifiche Telegram\'.';
+  String guide250Sbtelegram250Sbdisable8722Sbtext(Object accountSettings) {
+    return 'Se desideri disabilitare le notifiche del nostro bot, torna alla scheda \'Notifiche\' nelle $accountSettings e fai clic sul pulsante rosso \'Disattiva le notifiche Telegram\'.';
+  }
 
   @override
   String get guide250Sbtelegram250Sbdisable8722Sbtext8722Sbaccount8722Sbsettings => 'impostazioni account';
@@ -2815,22 +2999,30 @@ class I18nIt extends I18n {
   String get guide250Sbtelegram250Sbdisable8722Sbtitle => 'Come disabilitare le notifiche?';
 
   @override
-  String get guide250Sbtelegram250Sbprologue8722Sb0 => '{telegram} ti permette di ricevere le notifiche {appName} (come le notifiche di nuovi scambi, nuovi pagamenti, finalizzazione di scambi o nuovi messaggi di chat) sotto forma di messaggi Telegram dal nostro bot di notifica.';
+  String guide250Sbtelegram250Sbprologue8722Sb0(Object telegram, Object appName) {
+    return '$telegram ti permette di ricevere le notifiche $appName (come le notifiche di nuovi scambi, nuovi pagamenti, finalizzazione di scambi o nuovi messaggi di chat) sotto forma di messaggi Telegram dal nostro bot di notifica.';
+  }
 
   @override
-  String get guide250Sbtelegram250Sbprologue8722Sb1 => 'Telegram è un\'app di messaggistica mobile. Puoi leggere di più su Telegram nelle {official-faq}.';
+  String guide250Sbtelegram250Sbprologue8722Sb1(Object officialFaq) {
+    return 'Telegram è un\'app di messaggistica mobile. Puoi leggere di più su Telegram nelle $officialFaq.';
+  }
 
   @override
   String get guide250Sbtelegram250Sbprologue8722Sb18722Sbofficial8722Sbfaq => 'FAQ ufficiali';
 
   @override
-  String get guide250Sbtelegram250Sbprologue8722Sb2 => 'Per attivare le notifiche è necessario avere la app di Telegram {installed}.';
+  String guide250Sbtelegram250Sbprologue8722Sb2(Object installed) {
+    return 'Per attivare le notifiche è necessario avere la app di Telegram $installed.';
+  }
 
   @override
   String get guide250Sbtelegram250Sbprologue8722Sb28722Sbinstalled => 'installata sul tuo dispositivo';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb0 => '{press-this} oppure cerca \'Bot di notifica {appName}\' nel campo di ricerca di Telegram e seleziona Bot di notifica {appName}.';
+  String guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb0(Object pressThis, Object appName) {
+    return '$pressThis oppure cerca \'Bot di notifica $appName\' nel campo di ricerca di Telegram e seleziona Bot di notifica $appName.';
+  }
 
   @override
   String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb08722Sbpress8722Sbthis => 'Premi qui';
@@ -2845,7 +3037,9 @@ class I18nIt extends I18n {
   String get guide250Sbtelegram250Sbstep8722Sbthree8722Sbtext => 'Questo è tutto! Ora riceverai le notifiche dal nostro bot.';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb0 => 'Vai alle {account-settings} e seleziona il tab \'Notifiche\'.';
+  String guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb0(Object accountSettings) {
+    return 'Vai alle $accountSettings e seleziona il tab \'Notifiche\'.';
+  }
 
   @override
   String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb08722Sbsettings => 'impostazioni account';
@@ -2860,10 +3054,14 @@ class I18nIt extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Come attivare le notifiche Telegram';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0 => 'Il processo è simile quando acquisti {assetName} online, ma per questo esempio ci stiamo concentrando sulla vendita di {assetName}, poiché questo è il tipo di commercio più comune. {linebreak} Prima devi {create} {a-sell-monero-ad} (chiamato pubblicità di vendita online). Quando si effettua l\'annuncio si sceglie un metodo di pagamento, si impostano i prezzi, i limiti e si scrivono i termini del contratto come un messaggio di forma libera. {linebreak} Quindi devi {fund} il tuo {localmonero-wallet} con {assetName}.';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
+    return 'Il processo è simile quando acquisti $assetName online, ma per questo esempio ci stiamo concentrando sulla vendita di $assetName, poiché questo è il tipo di commercio più comune. $linebreak  Prima devi $create $aSellmoneroad (chiamato pubblicità di vendita online). Quando si effettua l\'annuncio si sceglie un metodo di pagamento, si impostano i prezzi, i limiti e si scrivono i termini del contratto come un messaggio di forma libera. $linebreak  Quindi devi {fund} il tuo $localmoneroWallet con $assetName.';
+  }
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sba8722Sbsell8722Sbmonero8722Sbad => 'un annuncio online {assetName}';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sba8722Sbsell8722Sbmonero8722Sbad(Object assetName) {
+    return 'un annuncio online $assetName';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sbcreate => 'Creare';
@@ -2872,22 +3070,30 @@ class I18nIt extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sbfund => 'fondo';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sblocalmonero8722Sbwallet => 'Portafoglio {appName}';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sblocalmonero8722Sbwallet(Object appName) {
+    return 'Portafoglio $appName';
+  }
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb1 => 'Devi avere {assetName} nel tuo portafoglio di obbligazioni arbitrali {appName} perché i clienti possano aprire richieste di scambio dai tuoi annunci. <br/><br/>Quando un compratore <strong>apre una compravendita con te</strong>, {assetName} per l\'intero importo della compravendita viene automaticamente preso dal tuo portafoglio in arbitration bond. Dai all\'acquirente le istruzioni di pagamento e guida l\'acquirente nel pagamento della compravendita. Riceverai notifiche via email quando qualcuno risponde al tuo annuncio. <br/><br/> Una volta che l\'acquirente ha pagato e premuto il pulsante<strong> Ho pagato</strong> riceverai una notifica via e-mail e sul sito web che uno scambio è stato pagato. <br/><br/> Quando hai confermato di aver ricevuto il pagamento, è il momento di <strong>finalizzare la compravendita</strong>. Questo ti restituisce il vincolo arbitrale e invia il {assetName} al portafoglio di regolamento dell\'acquirente. <br/><br/> Il passo finale è quello di <strong>lasciare un feedback</strong> per l\'acquirente e incoraggiare l\'acquirente a fare lo stesso per te. Il feedback è importante per guadagnare reputazione e fare più scambi.';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb1(Object assetName, Object appName) {
+    return 'Devi avere $assetName nel tuo portafoglio di obbligazioni arbitrali $appName affinché i clienti possano aprire richieste di scambio dai tuoi annunci. <br/><br/>Quando un <strong>acquirente apre uno scambio con te</strong>, $assetName per l\'intero importo dello scambio viene automaticamente prenotato dal tuo portafoglio. Fornisci all\'acquirente le istruzioni di pagamento e guida l\'acquirente attraverso il pagamento dell\'operazione. Riceverai notifiche via e-mail quando qualcuno risponde al tuo annuncio. <br/><br/> Una volta che l\'acquirente ha pagato e premuto il pulsante <strong> Ho pagato</strong> riceverai una notifica via e-mail e sul sito web che un\'operazione è stata pagata. <br/><br/> Dopo aver confermato di aver ricevuto il pagamento, è il momento di finalizzare lo scambio. Dopo che l\'operazione è stata finalizzata e regolata, l\'acquirente avrà $assetName nel suo portafoglio di regolamento. <br/><br/> Il passaggio finale è <strong>lasciare un feedback</strong> per l\'acquirente e incoraggiare l\'acquirente a fare lo stesso per te. Il feedback è importante per guadagnare reputazione e fare più scambi.';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb18722Sbtitle => 'Panoramica del processo di negoziazione';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb28722Sbtext => 'Prima di iniziare a fare trading, devi considerare i metodi di pagamento che fornirai in modo da sapere come funziona. Quando inizi a fare trading, ti consigliamo di non scegliere un metodo di pagamento ad alto rischio. Il trasferimento con una banca può essere un buon metodo di pagamento iniziale, specialmente se nel tuo Paese ci sono pochi operatori attivi. <br/> <br/> <strong> Prima di iniziare a fare trading </strong> <br/> <br/> Prima di iniziare a fare trading, assicurati di <strong> familiarizzare con la legislazione del tuo paese </strong> e che possiedi eventuali licenze commerciali necessarie per la giurisdizione in cui stai operando. <br/> <br/> La legislazione varia molto da paese a paese se stai commerciando come individuo o come azienda. <br/> <br/> <strong> Ricerca il metodo di pagamento </strong> che offrirai. Leggi gli annunci di altri trader con lo stesso metodo di pagamento e fai alcuni scambi con loro. Cerca di identificare possibili problemi prima di iniziare a fare trading. <br/> <br/> <strong> Utilizza gli account di pagamento solo per il trading {assetName}. </strong> Alcuni fornitori di pagamenti chiuderanno temporaneamente o definitivamente il tuo account se ricevi pagamenti non autorizzati correlati a frodi. Usare gli account solo per il trading {assetName} protegge le tue finanze personali.';
+  String guide250Sbtrade250Sbblock8722Sb28722Sbtext(Object assetName) {
+    return 'Prima di iniziare a fare trading, devi considerare i metodi di pagamento che fornirai in modo da sapere come funziona. Quando inizi a fare trading, ti consigliamo di non scegliere un metodo di pagamento ad alto rischio. Il trasferimento con una banca può essere un buon metodo di pagamento iniziale, specialmente se nel tuo Paese ci sono pochi operatori attivi. <br/> <br/> <strong> Prima di iniziare a fare trading </strong> <br/> <br/> Prima di iniziare a fare trading, assicurati di <strong> familiarizzare con la legislazione del tuo paese </strong> e che possiedi eventuali licenze commerciali necessarie per la giurisdizione in cui stai operando. <br/> <br/> La legislazione varia molto da paese a paese se stai commerciando come individuo o come azienda. <br/> <br/> <strong> Ricerca il metodo di pagamento </strong> che offrirai. Leggi gli annunci di altri trader con lo stesso metodo di pagamento e fai alcuni scambi con loro. Cerca di identificare possibili problemi prima di iniziare a fare trading. <br/> <br/> <strong> Utilizza gli account di pagamento solo per il trading $assetName. </strong> Alcuni fornitori di pagamenti chiuderanno temporaneamente o definitivamente il tuo account se ricevi pagamenti non autorizzati correlati a frodi. Usare gli account solo per il trading $assetName protegge le tue finanze personali.';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Iniziare';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0 => 'La {advertisement-creation-page} è dove si creano nuovi annunci pubblicitari. {linebreak} Troverai alcune opzioni quando crei un annuncio che dovrai completare e troverai anche molte opzioni extra facoltative ma raccomandate. L\'utilizzo delle opzioni extra ti consente di adattare il tuo annuncio alla tua strategia di trading. {linebreak} Puoi trovare tutti gli annunci creati nella tua {dashboard}. Nella dashboard puoi anche trovare le tue posizioni aperte. {linebreak} {required-options} {linebreak} {location} Inserisci il paese in cui vuoi che compaia il tuo annuncio. {linebreak} {payment-method} Seleziona il metodo di pagamento che vuoi offrire dal menu a discesa. {linebreak} {currency} Scegli la valuta per cui stai vendendo. Ad esempio, se vendi in Francia, devi selezionare EUR. Puoi usare {this-list} per trovare qual\'è la tua valuta.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return 'La $advertisementCreationpage è dove si creano nuovi annunci pubblicitari. $linebreak  Troverai alcune opzioni quando crei un annuncio che dovrai completare e troverai anche molte opzioni extra facoltative ma raccomandate. L\'utilizzo delle opzioni extra ti consente di adattare il tuo annuncio alla tua strategia di trading. $linebreak  Puoi trovare tutti gli annunci creati nella tua $dashboard. Nella dashboard puoi anche trovare le tue posizioni aperte. $linebreak  $requiredOptions $linebreak  $location Inserisci il paese in cui vuoi che compaia il tuo annuncio. $linebreak  $paymentMethod Seleziona il metodo di pagamento che vuoi offrire dal menu a discesa. $linebreak  $currency Scegli la valuta per cui stai vendendo. Ad esempio, se vendi in Francia, devi selezionare EUR. Puoi usare $thisList per trovare qual\'è la tua valuta.';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbadvertisement8722Sbcreation8722Sbpage => 'pagina di creazione annunci';
@@ -2911,10 +3117,14 @@ class I18nIt extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbthis8722Sblist => 'questa lista';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1 => '<strong> Prezzo di mercato o prezzo fisso </strong><br/> Per prezzare la tua inserzione puoi inserire un margine che vuoi sopra il prezzo di mercato {assetName} . Per farlo, inserisci una percentuale nel campo del margine dopo aver scelto l\'opzione \"Prezzo di mercato\". Potresti anche voler specificare un prezzo fisso che non cambierà finché non lo cambierai manualmente. Per questo devi scegliere l\'opzione \"Prezzo fisso\" e inserire il valore del prezzo. <br/><br/> <strong> Min. / Limite massimo di transazione </strong><br/> Il limite minimo di transazione imposta il più piccolo importo che qualcuno può comprare. Se lo impostate a cinque, e la vostra valuta è impostata su EUR, significa che il più piccolo importo che qualcuno può aprire una transazione con voi sarà di 5 EUR. Il limite massimo di transazione imposta l\'importo più grande che volete accettare. <br/><br/> <strong> Termini di scambio </strong><br/> Questo è il testo che l\'acquirente vede prima di aprire uno scambio con te. È una buona idea scrivere le istruzioni per l\'acquirente su come vuoi che lo scambio proceda e se hai qualche istruzione specifica. Se richiedi, per esempio, che l\'acquirente invii una ricevuta come prova di pagamento prima di finalizzare uno scambio o se hai bisogno che l\'acquirente fornisca un documento d\'identità, questo è il posto giusto per menzionarlo. Puoi dare un\'occhiata agli annunci di altri commercianti per il metodo di pagamento che vuoi usare per farti un\'idea di cosa contengono le buone condizioni di scambio. <br/><br/> <strong> Opzioni extra </strong><br/><br/> <strong> Limitare gli importi a </strong><br/> Potete limitare l\'inserzione in modo che sia in grado di aprire compravendite solo per importi specifici. Se inserisci 20,30,60 nella casella, un potenziale partner commerciale potrebbe aprire un trade solo per 20, 30 o 60 EUR. <br/><br/> <strong> Dettagli di pagamento </strong><br/> Inserisci qui le informazioni specifiche relative a come l\'acquirente deve pagare, questo può essere il tuo numero di conto bancario o l\'indirizzo e-mail (ad esempio per PayPal). <br/><br/> <strong> Punteggio minimo di feedback richiesto </strong><br/> Il feedback minimo ti permette di impostare un punteggio minimo di feedback da avere per aprire uno scambio usando la tua pubblicità. <br/><br/> <strong> Limite di prima volta ({assetSymbol}) </strong><br/> Questo è un limite massimo di transazione specifico per i nuovi utenti. Se un acquirente che non ha precedenti transazioni con te vuole aprire una transazione con te, questo è l\'importo massimo per il quale può aprire una transazione. <br/><br/> <strong> Finestra di pagamento </strong><br/> Il tempo che l\'acquirente ha per completare il pagamento prima che il venditore possa cancellare la compravendita. <br/><br/> <strong> Traccia la quantità massima di liquidità </strong><br/> Abilitando il tracciamento della liquidità si abbassa il limite massimo dell\'annuncio dell\'importo che è attualmente trattenuto nelle operazioni aperte. <br/><br/> <strong> Consigli rapidi per identificare i truffatori </strong> <br/><br/><strong>Gli acquirenti fraudolenti hanno spesso fretta.</strong> Più un cliente ti chiede di fare in fretta e più dovresti essere sospettoso, i veri clienti hanno sempre pazienza. <br/><br/>Gli acquirenti fraudolenti spesso <strong>suggeriscono di fare tutta o parte della transazione al di fuori del sistema di protezione delle obbligazioni arbitrali </strong>e poi non completano la loro parte della transazione. <br/><br/> Fai attenzione alle <strong>prove di pagamento photoshoppate</strong>non finalizzare una transazione finché non hai confermato di aver ricevuto il denaro. Non sei obbligato a finalizzare una transazione finché non puoi verificare di aver ricevuto il pagamento dell\'acquirente. <br/><br/><strong>Non aprire nessun link che il tuo partner commerciale ti sta inviando</strong>. Se devi, usa un browser diverso da quello che stai usando. <br/><br/>Non visitare siti web diversi da {appName} con il browser che stai usando per commerciare. <strong>Usa un browser diverso per gli altri siti web.</strong> <br/><br/> Aggiungi un segnalibro a {appName} nel tuo browser e usa sempre il segnalibro quando visiti il sito web. Questo ti aiuta ad evitare di visitare accidentalmente siti web di phishing, esistono e possono essere molto convincenti.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
+    return '<strong> Prezzo di mercato o fisso </strong><br/> Per valutare il tuo annuncio puoi inserire un margine che desideri sopra il prezzo di mercato $assetName. Per farlo, inserisci una percentuale nel campo del margine dopo aver scelto l\'opzione \"Prezzo di mercato\". Potresti anche voler specificare un prezzo fisso che non cambierà fino a quando non lo cambierai manualmente. Per questo è necessario scegliere l\'opzione \"Prezzo fisso\" e inserire il valore del prezzo. <br/><br/> <strong> min. / Massimo. limite di transazione </strong><br/> Il limite minimo di transazione imposta l\'importo minimo che qualcuno può acquistare. Se lo imposti su cinque e la tua valuta è impostata su EUR, significa che l\'importo minimo di negoziazione per cui qualcuno può aprire un\'operazione con te sarà di 5 EUR. Il limite massimo di transazione stabilisce qual è l\'importo più grande che vuoi accettare. <br/><br/> <strong> Termini di scambio </strong><br/> Questo è il testo che l\'acquirente vede prima di aprire uno scambio con te. È una buona idea scrivere istruzioni per l\'acquirente su come si desidera che il commercio proceda e se si hanno istruzioni specifiche. Se richiedi, ad esempio, che l\'acquirente invii una ricevuta come prova di pagamento prima di finalizzare un\'operazione o se hai bisogno che l\'acquirente fornisca un documento d\'identità, questo è il posto giusto per menzionarlo. Puoi dare un\'occhiata agli annunci di altri trader per il metodo di pagamento che desideri utilizzare per avere un\'idea di quali buone condizioni commerciali contengono. <br/><br/> <strong> Opzioni extra </strong><br/><br/> <strong> Limita gli importi a </strong><br/> È possibile restringere l\'annuncio in modo che sia possibile aprire negoziazioni solo per importi specifici. Se inserisci 20,30,60 nella casella, un potenziale partner commerciale potrebbe aprire uno scambio solo per 20, 30 o 60 EUR. <br/><br/> <strong> Dettagli del pagamento </strong><br/> Inserisci qui informazioni specifiche relative a come l\'acquirente dovrebbe pagare, questo può essere il tuo numero di conto bancario o indirizzo e-mail (ad es. per PayPal). <br/><br/> <strong> Punteggio di feedback minimo richiesto </strong><br/> Il punteggio di feedback minimo ti consente di impostare un punteggio di feedback minimo richiesto per aprire uno scambio utilizzando il tuo annuncio. <br/><br/> <strong> Primo limite di tempo ($assetSymbol) </strong><br/> Si tratta di un limite massimo specifico per le transazioni per i nuovi utenti. Se un acquirente senza precedenti di trading con te desidera aprire uno scambio con te, questo è l\'importo massimo per cui può aprire uno scambio. <br/><br/> <strong> Finestra di pagamento </strong><br/> La quantità di tempo a disposizione dell\'acquirente per completare il pagamento prima che il venditore sia in grado di annullare l\'operazione. <br/><br/> <strong> Tieni traccia dell\'importo massimo della liquidità </strong><br/> L\'abilitazione del monitoraggio della liquidità abbassa il limite massimo dell\'annuncio dell\'importo attualmente trattenuto nelle negoziazioni aperte. <br/><br/> <strong> Suggerimenti rapidi per identificare i truffatori </strong> <br/><br/><strong>Gli acquirenti fraudolenti hanno spesso fretta.</strong> Più un cliente ti chiede di sbrigarti, più sono sospettosi dovresti esserlo, i veri clienti hanno sempre pazienza. <br/><br/>Gli acquirenti fraudolenti spesso <strong>suggeriscono di eseguire tutta o parte della transazione al di fuori del sistema di protezione del vincolo arbitrale </strong>e poi non completano la loro parte della transazione. <br/><br/> Fai attenzione alle <strong>prove di pagamento modificate con photoshop</strong>, non finalizzare uno scambio finché non avrai confermato di aver ricevuto il denaro. Non sei obbligato a finalizzare un\'operazione fino a quando non puoi verificare di aver ricevuto il pagamento dell\'acquirente. <br/><br/><strong>Non aprire nessun link che il tuo partner commerciale ti sta inviando</strong>. Se necessario, utilizza un browser diverso da quello che stai utilizzando. <br/><br/>Non visitare siti web diversi da $appName con il browser che stai utilizzando per fare trading. <strong>Usa un browser diverso per altri siti web.</strong> <br/><br/> Aggiungi $appName ai segnalibri nel tuo browser e utilizza sempre i segnalibri quando visiti il sito web. Questo ti aiuta a evitare di visitare accidentalmente siti Web di phishing, esistono e possono essere molto convincenti.';
+  }
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb2 => 'Se non sei sicuro di un utente, puoi sempre {contact-support} per richiedere aiuto.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb2(Object contactSupport) {
+    return 'Se non sei sicuro di un utente, puoi sempre $contactSupport per richiedere aiuto.';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb28722Sbcontact8722Sbsupport => 'contatta il supporto';
@@ -2923,19 +3133,25 @@ class I18nIt extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Impostazione di un annuncio';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0 => 'Per favore, leggi i nostri {terms-of-service}.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
+    return 'Per favore, leggi i nostri $termsOfservice.';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice => 'termini di servizio';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb1 => '<br/><br/>Il supporto {appName} gestisce le controversie in base alle prove fornite dai partecipanti al commercio e alla loro reputazione. <br/><br/>Le controversie possono essere avviate dopo che il pagamento è stato contrassegnato come completo. <br/><br/>Dopo che lo scambio è stato finalizzato, lo scambio è considerato finito da {appName} e non può essere contestato. <br/><br/> Quando un venditore {assetName} non risponde, {appName} concluderà la compravendita se l\'acquirente può fornire una prova di pagamento valida. <br/><br/>Se l\'acquirente non risponde dopo aver iniziato una compravendita, il vincolo arbitrale sarà restituito al venditore dal supporto di {appName}.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb1(Object appName, Object assetName) {
+    return '<br/><br/>Il supporto $appName gestisce le controversie in base alle prove fornite dai partecipanti al commercio e alla loro reputazione. <br/><br/>Le controversie possono essere avviate dopo che il pagamento è stato contrassegnato come completo. <br/><br/>Dopo che lo scambio è stato finalizzato, lo scambio è considerato finito da $appName e non può essere contestato. <br/><br/> Quando un venditore $assetName non risponde, $appName concluderà la compravendita se l\'acquirente può fornire una prova di pagamento valida. <br/><br/>Se l\'acquirente non risponde dopo aver iniziato una compravendita, il vincolo arbitrale sarà restituito al venditore dal supporto di $appName.';
+  }
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb48722Sbtitle => 'Controversie';
 
   @override
-  String get guide250Sbtrade250Sbhappy8722Sbtrading => '{appName} ti augura buon trading!';
+  String guide250Sbtrade250Sbhappy8722Sbtrading(Object appName) {
+    return '$appName ti augura buon trading!';
+  }
 
   @override
   String get guide250Sbtrade250Sbtitle => 'Introduzione al trading con Monero';
@@ -2959,13 +3175,17 @@ class I18nIt extends I18n {
   String get home250Sbgreeting250Sbanywhere => 'Ovunque.';
 
   @override
-  String get home250Sbgreeting250Sbbuy8722Sbmonero => 'Compra {assetName}.';
+  String home250Sbgreeting250Sbbuy8722Sbmonero(Object assetName) {
+    return 'Compra $assetName.';
+  }
 
   @override
   String get home250Sbgreeting250Sbcash8722Sbor8722Sbonline => 'Con contanti o direttamente online.';
 
   @override
-  String get home250Sbgreeting250Sbsell8722Sbmonero => 'Vendi {assetName}.';
+  String home250Sbgreeting250Sbsell8722Sbmonero(Object assetName) {
+    return 'Vendi $assetName.';
+  }
 
   @override
   String get home250Sbgreeting250Sbsignup8722Sbbtn => 'Iscriviti gratis';
@@ -2983,16 +3203,22 @@ class I18nIt extends I18n {
   String get homepage8722Sblocation250Sbsave8722Sbbtn => 'Salva';
 
   @override
-  String get homepage8722Sblocation250Sbtitle => 'Mostra gli annunci pubblicitari in {location}';
+  String homepage8722Sblocation250Sbtitle(Object location) {
+    return 'Mostra gli annunci pubblicitari in $location';
+  }
 
   @override
   String get homepage250Sbagora250Sbcoin8722Sbtrading8722Sbtitle => 'Scambia Bitcoin';
 
   @override
-  String get homepage250Sbno8722Sbresults8722Sb0 => 'Nessun annuncio {asset} attivo in {country}... ancora.';
+  String homepage250Sbno8722Sbresults8722Sb0(Object asset, Object country) {
+    return 'Nessun annuncio $asset attivo in $country... ancora.';
+  }
 
   @override
-  String get homepage250Sbno8722Sbresults8722Sb1 => 'Puoi essere il primo a {post_an_ad} nelle seguenti categorie:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
+    return 'Puoi essere il primo a $post_an_ad nelle seguenti categorie:';
+  }
 
   @override
   String get homepage250Sbno8722Sbresults8722Sb18722Sbpost8722Sban8722Sbad => 'pubblicare un annuncio';
@@ -3013,7 +3239,7 @@ class I18nIt extends I18n {
   String get keywords => 'Acquista Monero xmr contanti carta di credito usd sterlina euro bonifico bancario locale vendi in modo anonimo criptovaluta';
 
   @override
-  String get keywords57Sbagoradesk => 'comprare bitcoin btc monero xmr opzioni call put contanti carta di credito usd euro sterlina bonifico bancario locale vendere criptovaluta in modo anonimo';
+  String get keywords57Sbagoradesk => 'comprare bitcoin btc monero xmr contanti carta di credito usd euro sterlina bonifico bancario locale vendere criptovaluta in modo anonimo';
 
   @override
   String get knowledge250Sbatomic250Sb0250Sbtext => '<p>Nel perseguimento del decentramento e di un sistema veramente senza autorizzazione, poche cose sono tanto ambite nello spazio delle criptovalute quanto gli scambi decentralizzati e gli scambi atomici. Fin dal suo inizio, Monero ha lottato per implementare gli atomic swap, poiché le funzionalità di privacy creano problemi unici quando si cerca di progettare un protocollo.</p>\n<p>Ma prima torniamo indietro. Cosa sono gli atomic swap? Uno scambio atomico è un protocollo mediante il quale due diverse criptovalute, su diverse blockchain, possono essere scambiate in modo trustless senza intermediari. Ciò significa che se qualcuno volesse scambiare la criptovaluta A con la criptovaluta B, sarebbe in grado di farlo senza uno scambio, centralizzato o decentralizzato. Come si potrebbe immaginare, questo richiede una notevole ricerca e tutti i dettagli tecnici che lo rendono possibile diventano piuttosto complicati. Ancora una volta, LocalMonero è qui per aiutare e dare una semplice spiegazione alla persona comune.</p>\n<p>Per iniziare, consideriamo la forma più semplice di atomic swap, implementata da Bitcoin. Se qualcuno desidera scambiare Bitcoin con un\'altra moneta che utilizza la stessa tecnologia del contratto di blocco dell\'ora di hash, può farlo nel modo seguente. Alice ha Bitcoin (BTC), ma vuole Litecoin (LTC) e Bob ha LTC, ma vuole BTC. Decidono di fare uno scambio atomico in modo che ognuno riceva la moneta che desidera. Alice invia il suo BTC a un indirizzo speciale, utilizzando script che bloccano i fondi in modo che nemmeno lei possa accedervi. Puoi pensarlo come se Alice mettesse il suo BTC in una cassetta di sicurezza. Quando viene creato il lockbox, ottiene una chiave e invia un hash di questa chiave a Bob. Ora Bob non ha la chiave stessa, solo l\'hash, quindi non può ancora accedere ai fondi.</p>\n<p>Bob utilizza questo hash come seme da cui genera il proprio lockbox e invia lì il suo LTC, dove è anche bloccato. Poiché l\'hash della chiave di Alice è stato utilizzato come seme con cui è stato creato il lockbox di Bob, può usare la sua chiave per rivendicare l\'LTC nel lockbox di Bob. La sua chiave si adatta! Ma, usando la magia matematica vudù, quando usa la sua chiave per aprire il lucchetto LTC, rivela la chiave a Bob, che può quindi usarla per richiedere il BTC che ha messo nel suo armadietto. In questo modo, senza intermediari, Alice e Bob si sono scambiati con successo i loro beni.</p>\n<p>Ma c\'è un piccolo problema. E se Alice lo manda al suo armadietto e Bob decide che non vuole più fare scambi. Ora, poiché Alice non può accedere al suo BTC che ha bloccato e Bob non completerà la sua parte della transazione, Alice perde i suoi soldi per sempre. Bene, fortunatamente, Bitcoin ha una piccola tecnologia chiamata transazioni di rimborso, quindi dopo un periodo di tempo, se il BTC non viene rivendicato da Bob, gli script hanno un sistema di sicurezza integrato, in cui il BTC tornerà automaticamente ad Alice. Questo è stato lo speedbump principale per l\'implementazione degli atomic swap di Monero. A causa della <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">tecnologia per la privacy delle firme ad anello</a>di Monero, il mittente di una transazione è sempre incerto. Come può il protocollo eseguire una transazione di rimborso se anche non sa da dove proviene la transazione?</p>\n<p>Nel 2017, un piccolo gruppo di ricercatori ha delineato un metodo diverso con cui gli scambi atomici avrebbero funzionato in Monero. Dopo diversi anni di perfezionamento, i ricercatori hanno finalizzato un processo mediante il quale Monero sarebbe stata in grado di fare atomic swap con Bitcoin, anche senza transazioni di rimborso.</p>\n<p>Come per molte cose di questo livello di complessità tecnica, la nostra spiegazione semplificherà eccessivamente alcune cose per trasmettere l\'idea, ma darà comunque un\'idea solida dei meccanismi con cui questo processo funzionerebbe.</p>\n<p>Sia Alice (che ha XMR e vuole BTC) che Bob (che ha BTC e vuole XMR) devono scaricare ed eseguire un programma che supporti lo scambio atomico. Questo può essere implementato in portafogli, scambi decentralizzati o programmi speciali e specifici, ma il software deve eseguire il protocollo di scambio atomico. Nella prima fase, i client di Alice e Bob si connettono tra loro e creano diversi segreti e chiavi condivisi. In questo passaggio, viene creato un nuovo indirizzo Monero, con Alice che ha una metà della chiave e Bob che ha l\'altra. Nessun Monero è ancora lì, quindi non c\'è niente da spendere. Un\'ultima cosa da notare su questo indirizzo è che entrambi hanno la chiave di visualizzazione per questo portafoglio, quindi possono entrambi sbirciare dentro per vedere se o quando arriva Monero.</p>\n<p>Nella seconda fase, Bob invia il suo BTC a un indirizzo speciale, simile al protocollo di scambio atomico di Bitcoin di cui abbiamo già parlato. Dopo che Alice vede il BTC arrivare a questo indirizzo sulla blockchain, invia il suo Monero all\'indirizzo Monero a cui lei e Bob hanno entrambi metà della chiave. Bob può verificare che il Monero sia arrivato poiché ha anche la chiave di visualizzazione, e una volta che vede il Monero è al sicuro nel portafoglio, invia ad Alice un pezzo di una chiave che le permetterà di ritirare il Bitcoin. Simile all\'altro protocollo, il processo di rivendicazione del Bitcoin rivela a Bob la sua metà della chiave Monero. Ora Bob ha entrambe le metà, quindi può rivendicare il Monero, mentre Alice ha solo la sua metà, quindi non può provare a prenderlo prima di lui.</p>\n<p>Quindi, se hai esaminato tutto questo e sei ancora un po \'confuso su come Monero sia stata in grado di aggirare il problema delle transazioni di rimborso, la risposta è abbastanza semplice. Poiché Monero stesso non ha transazioni di rimborso, il lettore dovrebbe notare che il Bitcoin (che ha transazioni di rimborso) viene inviato per primo, e solo dopo che è stato verificato come essere sulla blockchain viene inviato Monero. Ciò consente a Monero di utilizzare la capacità di Bitcoin di eseguire script nelle transazioni di rimborso e di trarne vantaggio, senza la necessità di avere queste funzionalità stesse.</p>\n<p>Lo scambio atomico è ora completo, ma da qui Bob ha un paio di opzioni per il suo XMR appena rivendicato. Può usare questo portafoglio Monero così com\'è o spostare l\'XMR su un altro portafoglio che già possiede. Molto probabilmente Bob sposterà il Monero su un altro portafoglio, perché Alice ha ancora la chiave di visualizzazione e può vedere all\'interno.</p>\n<p>La bellezza di questo protocollo è che è ancora abbastanza nuovo e c\'è molto spazio per le ottimizzazioni. È anche abbastanza flessibile nella sua architettura, quindi l\'implementazione in altri portafogli o scambi decentralizzati dovrebbe essere semplice e adattarsi perfettamente alla loro architettura esistente.</p>';
@@ -3514,7 +3740,7 @@ class I18nIt extends I18n {
   String get knowledge250Sbnodes250Sbtitle => 'Come i nodi remoti impattano sulla privacy di Monero';
 
   @override
-  String get knowledge250Sboutputs250Sb0250Sbtext => '<p>Monero, come altre criptovalute, utilizza gli output come mezzo per contabilizzare i fondi. Molti utenti esperti di criptovaluta hanno probabilmente sentito questo termine prima, ma non tutti capiscono cosa intendono e come funzionano. Come esplorato nel nostro <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">articolo sulle firme ad anello</a>, gli output sono l\'unità effettiva scambiata sulla blockchain tra le parti che effettuano transazioni. Simile a una banconota da un dollaro, ma l\'importo non è in una denominazione fissa.</p>\n<p>Se vieni pagato \$ 16 per un lavoro, potresti ricevere una banconota da un dollaro, una banconota da cinque dollari e una banconota da dieci dollari. Hai \$ 16, ma hai anche tre diverse banconote nel tuo portafoglio. Se volessi pagare a qualcuno 6 dollari, potresti usare il 5 e il conto 1, ma se volessi pagare a qualcuno \$ 8 potresti usare solo \$ 10 e ricevere \$ 2 in cambio. Infine, se volessi pagare \$ 14 a qualcuno dovresti usare tutte e tre le banconote e riceveresti \$ 2 in cambio, ma per un momento, quando consegni tutte e tre le banconote, non hai soldi nel tuo portafoglio finché non ottieni il cambiare indietro.</p>\n<p>Monero funziona in modo simile. Supponiamo che tu gestisca un negozio e effettui tre vendite su tre articoli diversi. Potresti ricevere 1.5 XMR, 2.25 XMR e 5.25 XMR per un totale di 9 XMR, ma hai anche tre diverse uscite nel tuo portafoglio delle denominazioni indicate in precedenza. Proprio come con i dollari, potresti voler pagare a qualcuno 3 XMR. È possibile utilizzare solo l\'uscita XMR 5,25 e ricevere di nuovo 1,75 XMR in cambio, oppure è possibile combinare le uscite XMR 1,5 e 2,25 e ottenere 0,75 XMR in cambio.</p>\n<p>Ma, non appena invii la transazione, gli output che usi vengono messi in uno stato \"bloccato\", il che significa che sono inaccessibili finché non ricevi la modifica. Il protocollo sblocca i fondi (ovvero ti restituisce la modifica) dopo 10 conferme o circa 20 minuti. Proprio come una volta che hai consegnato le banconote in dollari dal tuo portafoglio, non puoi riutilizzare il denaro finché non ricevi il resto dalla cassa, il tuo Monero è inaccessibile finché non ricevi il resto.</p>\n<p>Torniamo all\'esempio dell\'invio di 3 XMR a qualcuno e utilizzi l\'uscita 5.25 XMR. Ora, mentre aspetti che l\'1,75 XMR torni in cambio, non puoi usarlo. Questo 1,75 XMR è inaccessibile per te. Ma puoi comunque utilizzare le uscite 1.5 XMR e 2.25 XMR, poiché non sono state spese. Tornando all\'esempio del dollaro, se pagassi a qualcuno \$ 8, come nell\'esempio precedente, non saresti in grado di utilizzare i \$ 2 che ti aspetti in cambio fino a quando non ti viene dato, ma in questo esempio, hai ancora un Banconota da \$ 10 non utilizzata nel tuo portafoglio. Questo può ancora essere utilizzato per acquistare quello che vuoi mentre aspetti il cambiamento. Lo stesso con Monero.</p>\n<p>Questo è spesso un punto di confusione per i nuovi utenti Monero. Spesso, un utente può avere solo un output nel proprio portafoglio, ricevuto da uno scambio o da un amico. Diciamo che questo output è 20 XMR. Non hanno altre uscite nel loro portafoglio. Ora vogliono fare una donazione a due dei loro enti di beneficenza preferiti. Mandano 5 XMR al primo ente di beneficenza e poi sono confusi perché, anche se dovrebbero avere 15 XMR rimasti, non possono inviare immediatamente la donazione successiva al secondo ente di beneficenza. Come avrai intuito, questo perché il 15 XMR è bloccato. Non può essere speso finché non viene restituito come resto (10 conferme o circa 20 minuti). Una volta sbloccati i fondi, potranno inviare la seconda donazione.</p>\n<p>Giusto per ribadire il punto, non avrebbero avuto questo problema se avessero invece avuto più uscite, come due uscite 10 XMR o simili. Sarebbero in grado di inviare entrambe le donazioni una dopo l\'altra, perché la prima donazione userebbe una delle 10 uscite XMR (e attenderebbe 10 conferme per ricevere 5 XMR in cambio), e la seconda donazione userebbe le altre 10 XMR produzione.</p>\n<p>Alcuni portafogli di criptovaluta hanno una funzione chiamata \"gestione dell\'output\", che mostra semplicemente a un utente quali output ha attualmente (oltre alla loro somma totale) e gli consente di scegliere quali desidera utilizzare quando spende la loro criptovaluta.</p>\n<p>A partire da ora, la GUI di Monero seleziona automaticamente gli output per gli utenti, poiché gli utenti che selezionano i propri output spesso creano confusione o, in alcuni casi, danneggiano la privacy. Ci sono portafogli in costruzione tuttavia, come il nuovo progetto di portafoglio Feather, che conterrà queste funzionalità di gestione dell\'output.</p>\n<p>Abbiamo parlato molto della parte di invio, ma accade qualcosa di affascinante all\'estremità ricevente. Tornando al nostro esempio di invio di 3 XMR a qualcuno e utilizzando le tue uscite 1.5 XMR e 2.25 XMR nella transazione (aspettandoti 0,75 XMR in cambio), il ricevitore NON riceve due uscite di 1.5 XMR e 2.25 XMR. Ricevono invece ONE 3 XMR output.</p>\n<p>In background, il protocollo combina tutti gli output utilizzati per la spesa e fornisce al destinatario un output dell\'importo pagato e invia un output di modifica al mittente. Quindi il mittente riceverà anche un output come resto, indipendentemente dal fatto che abbia utilizzato due, tre o dieci output per inviare la transazione.</p>\n<p>Ci auguriamo che questo abbia chiarito un po \'di confusione sugli output e su come funziona la contabilità interna del protocollo, così come l\'utente comune deve affrontare problemi di confusione quando incontra fondi bloccati. In un altro articolo esploreremo la gestione dei tuoi output in modo da ridurre al minimo la possibilità di dover attendere i fondi sbloccati prima di inviare transazioni future.</p>';
+  String get knowledge250Sboutputs250Sb0250Sbtext => '<p>Monero, come altre criptovalute, utilizza gli output come mezzo per contabilizzare i fondi. Molti utenti esperti di criptovaluta hanno probabilmente sentito questo termine prima, ma non tutti capiscono cosa intendono e come funzionano. Come esplorato nel nostro <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">articolo sulle firme ad anello</a>, gli output sono l\'unità effettiva scambiata sulla blockchain tra le parti che effettuano transazioni. Simile a una banconota da un dollaro, ma l\'importo non è in una denominazione fissa.</p>\n<p>Se vieni pagato \$ 16 per un lavoro, potresti ricevere una banconota da un dollaro, una banconota da cinque dollari e una banconota da dieci dollari. Hai \$ 16, ma hai anche tre diverse banconote nel tuo portafoglio. Se volessi pagare a qualcuno 6 dollari, potresti usare il 5 e il conto 1, ma se volessi pagare a qualcuno \$ 8 potresti usare solo \$ 10 e ricevere \$ 2 in cambio. Infine, se volessi pagare \$ 14 a qualcuno dovresti usare tutte e tre le banconote e riceveresti \$ 2 in cambio, ma per un momento, quando consegni tutte e tre le banconote, non hai soldi nel tuo portafoglio finché non ottieni il cambiare indietro.</p>\n<p>Monero funziona in modo simile. Supponiamo che tu gestisca un negozio e effettui tre vendite su tre articoli diversi. Potresti ricevere 1.5 XMR, 2.25 XMR e 5.25 XMR per un totale di 9 XMR, ma hai anche tre diverse uscite nel tuo portafoglio delle denominazioni indicate in precedenza. Proprio come con i dollari, potresti voler pagare a qualcuno 3 XMR. È possibile utilizzare solo l\'uscita XMR 5,25 e ricevere di nuovo 2.25 XMR in cambio, oppure è possibile combinare le uscite XMR 1,5 e 2,25 e ottenere 0,75 XMR in cambio.</p>\n<p>Ma, non appena invii la transazione, gli output che usi vengono messi in uno stato \"bloccato\", il che significa che sono inaccessibili finché non ricevi la modifica. Il protocollo sblocca i fondi (ovvero ti restituisce la modifica) dopo 10 conferme o circa 20 minuti. Proprio come una volta che hai consegnato le banconote in dollari dal tuo portafoglio, non puoi riutilizzare il denaro finché non ricevi il resto dalla cassa, il tuo Monero è inaccessibile finché non ricevi il resto.</p>\n<p>Torniamo all\'esempio dell\'invio di 3 XMR a qualcuno e utilizzi l\'uscita 5.25 XMR. Ora, mentre aspetti che l\'1,75 XMR torni in cambio, non puoi usarlo. Questo 1,75 XMR è inaccessibile per te. Ma puoi comunque utilizzare le uscite 1.5 XMR e 2.25 XMR, poiché non sono state spese. Tornando all\'esempio del dollaro, se pagassi a qualcuno \$ 8, come nell\'esempio precedente, non saresti in grado di utilizzare i \$ 2 che ti aspetti in cambio fino a quando non ti viene dato, ma in questo esempio, hai ancora un Banconota da \$ 10 non utilizzata nel tuo portafoglio. Questo può ancora essere utilizzato per acquistare quello che vuoi mentre aspetti il cambiamento. Lo stesso con Monero.</p>\n<p>Questo è spesso un punto di confusione per i nuovi utenti Monero. Spesso, un utente può avere solo un output nel proprio portafoglio, ricevuto da uno scambio o da un amico. Diciamo che questo output è 20 XMR. Non hanno altre uscite nel loro portafoglio. Ora vogliono fare una donazione a due dei loro enti di beneficenza preferiti. Mandano 5 XMR al primo ente di beneficenza e poi sono confusi perché, anche se dovrebbero avere 15 XMR rimasti, non possono inviare immediatamente la donazione successiva al secondo ente di beneficenza. Come avrai intuito, questo perché il 15 XMR è bloccato. Non può essere speso finché non viene restituito come resto (10 conferme o circa 20 minuti). Una volta sbloccati i fondi, potranno inviare la seconda donazione.</p>\n<p>Giusto per ribadire il punto, non avrebbero avuto questo problema se avessero invece avuto più uscite, come due uscite 10 XMR o simili. Sarebbero in grado di inviare entrambe le donazioni una dopo l\'altra, perché la prima donazione userebbe una delle 10 uscite XMR (e attenderebbe 10 conferme per ricevere 5 XMR in cambio), e la seconda donazione userebbe le altre 10 XMR produzione.</p>\n<p>Alcuni portafogli di criptovaluta hanno una funzione chiamata \"gestione dell\'output\", che mostra semplicemente a un utente quali output ha attualmente (oltre alla loro somma totale) e gli consente di scegliere quali desidera utilizzare quando spende la loro criptovaluta.</p>\n<p>A partire da ora, la GUI di Monero seleziona automaticamente gli output per gli utenti, poiché gli utenti che selezionano i propri output spesso creano confusione o, in alcuni casi, danneggiano la privacy. Ci sono portafogli in costruzione tuttavia, come il nuovo progetto di portafoglio Feather, che conterrà queste funzionalità di gestione dell\'output.</p>\n<p>Abbiamo parlato molto della parte di invio, ma accade qualcosa di affascinante all\'estremità ricevente. Tornando al nostro esempio di invio di 3 XMR a qualcuno e utilizzando le tue uscite 1.5 XMR e 2.25 XMR nella transazione (aspettandoti 0,75 XMR in cambio), il ricevitore NON riceve due uscite di 1.5 XMR e 2.25 XMR. Ricevono invece ONE 3 XMR output.</p>\n<p>In background, il protocollo combina tutti gli output utilizzati per la spesa e fornisce al destinatario un output dell\'importo pagato e invia un output di modifica al mittente. Quindi il mittente riceverà anche un output come resto, indipendentemente dal fatto che abbia utilizzato due, tre o dieci output per inviare la transazione.</p>\n<p>Ci auguriamo che questo abbia chiarito un po \'di confusione sugli output e su come funziona la contabilità interna del protocollo, così come l\'utente comune deve affrontare problemi di confusione quando incontra fondi bloccati. In un altro articolo esploreremo la gestione dei tuoi output in modo da ridurre al minimo la possibilità di dover attendere i fondi sbloccati prima di inviare transazioni future.</p>';
 
   @override
   String get knowledge250Sboutputs250Sbdescription => 'Molti utenti esperti di crittografia hanno probabilmente già sentito il termine \"output\", ma non tutti capiscono cosa significano e come funzionano.';
@@ -4072,16 +4298,22 @@ class I18nIt extends I18n {
   String get login250Sbremember8722Sbme => 'Ricordati di me';
 
   @override
-  String get login250Sbreset => 'Hai dimenticato la password? {link}';
+  String login250Sbreset(Object link) {
+    return 'Hai dimenticato la password? $link';
+  }
 
   @override
   String get login250Sbreset8722Sblink => 'Ripristina qui.';
 
   @override
-  String get login250Sbsame8722Sbcredentials8722Sbtip => 'Puoi utilizzare le tue {{appName}_url} credenziali per accedere.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
+    return 'Puoi utilizzare le tue $front_type_url credenziali per accedere.';
+  }
 
   @override
-  String get login250Sbsignup => 'Non hai ancora un account? {link}';
+  String login250Sbsignup(Object link) {
+    return 'Non hai ancora un account? $link';
+  }
 
   @override
   String get login250Sbsignup8722Sblink => 'Registrati';
@@ -4111,19 +4343,16 @@ class I18nIt extends I18n {
   String get method250Sbcash8722Sbby8722Sbmail => 'Contanti per posta';
 
   @override
-  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+  String get method250Sbcash8722Sbdeposit => 'Deposito contanti';
 
   @override
-  String get method250Sbcash8722Sbdeposit => 'Deposito contanti';
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Contanti alla consegna';
 
   @override
   String get method250Sbcashiers8722Sbcheck => 'Assegno circolare';
 
   @override
   String get method250Sbcreditcard => 'Carta di credito';
-
-  @override
-  String get method250Sbyoomoney => 'YooMoney';
 
   @override
   String get method250Sbcryptocurrency => 'Criptovaluta';
@@ -4189,16 +4418,23 @@ class I18nIt extends I18n {
   String get method250Sbyandex => 'Denaro Yandex';
 
   @override
+  String get method250Sbyoomoney => 'YooMoney';
+
+  @override
   String get morph250Sbcheckbox250Sbfaq8722Sblink => 'Come funziona?';
 
   @override
   String get morph250Sbdeposit250Sbaddress8722Sbinput250Sbhelper => 'Questo indirizzo verrà utilizzato per un rimborso se qualcosa va storto durante lo scambio ChangeNow';
 
   @override
-  String get morph250Sbdeposit250Sbaddress8722Sbinput250Sbtext => 'Indirizzo di rimborso {cryptocurrency-name}';
+  String morph250Sbdeposit250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+    return 'Indirizzo di rimborso $cryptocurrencyName';
+  }
 
   @override
-  String get morph250Sbdeposit250Sbbutton => 'Mostrami l\'indirizzo di deposito {cryptocurrency-name}!';
+  String morph250Sbdeposit250Sbbutton(Object cryptocurencyName) {
+    return 'Mostrami l\'indirizzo di deposito {cryptocurrencyName}!';
+  }
 
   @override
   String get morph250Sberror250Sbtitle => 'Errore durante la creazione dello scambio ChangeNow!';
@@ -4208,7 +4444,7 @@ class I18nIt extends I18n {
 
   @override
   String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return 'Indirizzo di ricezione di {cryptocurrency-name}';
+    return 'Indirizzo di ricezione di $cryptocurrencyName';
   }
 
   @override
@@ -4232,7 +4468,9 @@ class I18nIt extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Utile se riscontri problemi con i \"coinlockers\"';
 
   @override
-  String get new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins => 'Scambia {assetName}';
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+    return 'Scambia $assetName';
+  }
 
   @override
   String get new8722Sbad250Sbreview250Sbemail8722Sbverified => 'Solo per utenti con email verificata';
@@ -4247,7 +4485,9 @@ class I18nIt extends I18n {
   String get nojs250Sberror250Sbserver => 'Qualcosa non ha funzionato nella richiesta. Aggiorna la pagina e riprova Se il problema persiste, contatta il nostro supporto.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbaddress => 'Si prega di fornire un indirizzo {assetName} valido.';
+  String nojs250Sberror250Sbvalidation250Sbaddress(Object assetName) {
+    return 'Si prega di fornire un indirizzo $assetName valido.';
+  }
 
   @override
   String get nojs250Sberror250Sbvalidation250Sbamount => 'Inserisci un importo di criptovaluta valido.';
@@ -4286,7 +4526,9 @@ class I18nIt extends I18n {
   String get nojs250Sberror250Sbvalidation250Sbreputation8722Sbimport8722Sbplatform8722Sbusername => 'Il nome utente deve essere una stringa di 1-30 caratteri.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbtos => 'Per utilizzare il nostro sito, leggi e accetta i Termini di servizio di {appName}.';
+  String nojs250Sberror250Sbvalidation250Sbtos(Object appName) {
+    return 'Per utilizzare il nostro sito, leggi e accetta i Termini di servizio di $appName.';
+  }
 
   @override
   String get nojs250Sberror250Sbvalidation250Sbusername => 'Il nome utente deve essere lungo 3-16 caratteri. Caratteri consentiti: a-z, A-Z, 0-9, -, _';
@@ -4319,16 +4561,22 @@ class I18nIt extends I18n {
   String get nojs250Sbformula250Sbvalidator250Sblabel => 'Strumento di convalida delle formule';
 
   @override
-  String get nojs250Sbmorph8722Sbwithdrawal => 'Voglio ritirare l\'obbligazione arbitrale in un portafoglio {cryptocurrency-name} ';
+  String nojs250Sbmorph8722Sbwithdrawal(Object cryptocurrencyName) {
+    return 'Voglio ritirare l\'obbligazione arbitrale in un portafoglio $cryptocurrencyName ';
+  }
 
   @override
   String get nojs250Sbmorph8722Sbwithdrawal250Sbbutton8722Sblabel => 'inizio';
 
   @override
-  String get nojs250Sbmorph8722Sbwithdrawal250Sbnotice => 'Prelevare {assetSymbol} vincolo arbitrale in un portafoglio {cryptocurrency-name} ';
+  String nojs250Sbmorph8722Sbwithdrawal250Sbnotice(Object assetSymbol, Object cryptocurrencyName) {
+    return 'Prelevare $assetSymbol vincolo arbitrale in un portafoglio $cryptocurrencyName ';
+  }
 
   @override
-  String get nojs250Sbno8722Sbgoogle8722Sbtext => 'Puoi utilizzare il servizio {this} per ottenere le coordinate della tua posizione';
+  String nojs250Sbno8722Sbgoogle8722Sbtext(Object value) {
+    return 'Puoi utilizzare il servizio $value per ottenere le coordinate della tua posizione';
+  }
 
   @override
   String get nojs250Sbsettings250Sbsave8722Sbtelegram8722Sbid250Sbbutton8722Sblabel => 'Salva ID Telegram';
@@ -4337,7 +4585,32 @@ class I18nIt extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Aggiorna';
 
   @override
-  String get notice250Sbnon8722Sbcustodial => 'Gli accordi commerciali completamente non detentivi sono ora attivi! <a href=\"https://t.me/{appName}\" target=\"_blank\" class=\"next-link\">Facci sapere</a> se hai domande o riscontri problemi. Nel caso ve lo foste perso, <a href=\"/blog/announcements/fully-non-custodial-trade-settlements\" target=\"_blank\" class=\"next-link\">potete leggere l\'aggiornamento in dettaglio qui.</a>';
+  String note250Sbbutton(Object username) {
+    return 'Aggiungere una nota su $username';
+  }
+
+  @override
+  String note250Sbcreated(Object at) {
+    return 'Creato $at';
+  }
+
+  @override
+  String get note250Sbinput250Sbplaceholder => 'Questa è una nota privata per il vostro riferimento, non sarà visibile a questo utente o a qualsiasi altro utente.';
+
+  @override
+  String note250Sbtitle(Object username) {
+    return 'La vostra nota su $username (vista solo da voi)';
+  }
+
+  @override
+  String note250Sbupdated(Object at) {
+    return 'modificato $at';
+  }
+
+  @override
+  String notice250Sbnon8722Sbcustodial(Object appName) {
+    return 'Gli accordi commerciali completamente non detentivi sono ora attivi! <a href=\"https://t.me/$appName\" target=\"_blank\" class=\"next-link\">Facci sapere</a> se hai domande o riscontri problemi. Nel caso ve lo foste perso, <a href=\"/blog/announcements/fully-non-custodial-trade-settlements\" target=\"_blank\" class=\"next-link\">potete leggere l\'aggiornamento in dettaglio qui.</a>';
+  }
 
   @override
   String get notification250Sbmarked8722Sball8722Sbread => 'Contrassegna tutte le notifiche come lette';
@@ -4364,28 +4637,14 @@ class I18nIt extends I18n {
   }
 
   @override
-  String notification250Sbtrade8722Sbcovered(Object tradeId, Object username) {
-    return '$username ha confermato il pagamento della copertura commerciale $tradeId. L\'opzione è ora attiva!';
-  }
-
-  @override
   String notification250Sbtrade8722Sbdisputed(Object tradeId, Object username) {
     return 'La compravendita $tradeId è stata contestata da $username';
   }
 
   @override
-  String get notification250Sbtrade8722Sbexercised => '{username} ha esercitato l\'opzione nel commercio {tradeId}';
-
-  @override
-  String notification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete(Object tradeId, Object username) {
+  String notification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete(Object username, Object tradeId) {
     return '$username ha completato il pagamento nella compravendita $tradeId';
   }
-
-  @override
-  String get notification250Sbtrade8722Sbpremium8722Sbpayment8722Sbconfirmed => '{username} ha confermato il pagamento del premio negli scambi {tradeId}. L\'opzione è ora attiva!';
-
-  @override
-  String get notification250Sbtrade8722Sbpremium8722Sbpayment8722Sbmarked8722Sbcomplete => '{username} ha contrassegnato il premio pagato nel commercio {tradeId}';
 
   @override
   String notification250Sbtrade8722Sbrequest(Object tradeId, Object username) {
@@ -4471,7 +4730,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Troppi annunci';
 
   @override
-  String get post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid => 'Si prega di inserire un valore limite di {assetSymbol} valido. Sono consentiti solo numeri compresi tra {min_asset_amount} e {max_asset_amount}.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
+    return 'Si prega di inserire un valore limite di $assetSymbol valido. Sono consentiti solo numeri compresi tra $min_asset_amount e $max_asset_amount.';
+  }
 
   @override
   String get post8722Sbad250Sberror250Sblimit8722Sbamounts8722Sbnot8722Sbvalid => 'Si prega di inserire un limite valido per il valore degli importi. Sono consentiti solo numeri interi compresi tra 1 e 1000000000000.';
@@ -4489,7 +4750,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sberror250Sbmax8722Sbamount8722Sbnot8722Sbvalid => 'Si prega di inserire un valore massimo valido. Sono consentiti solo numeri compresi tra 0.000000000001 e 10000000000000.';
 
   @override
-  String get post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance => 'L\'importo minimo della transazione non può essere inferiore al saldo corrente. Prova a ridurre l\'importo minimo o depositare fondi sul tuo portafoglio {appName}.';
+  String post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance(Object appName) {
+    return 'L\'importo minimo della transazione non può essere inferiore al saldo corrente. Prova a ridurre l\'importo minimo o depositare fondi sul tuo portafoglio $appName.';
+  }
 
   @override
   String get post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbnot8722Sbvalid => 'Si prega di inserire un valore minimo valido. Sono consentiti solo numeri compresi tra 0.000000000001 e 10000000000000.';
@@ -4510,7 +4773,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Saldo inferiore al minimo richiesto per questo tipo di annuncio';
 
   @override
-  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Primo limite di tempo ({assetSymbol})';
+  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
+    return 'Primo limite di tempo ($assetSymbol)';
+  }
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Opzionale. Limita l\'importo max della transazione per gli utenti con cui non hai precedenti negoziazioni. Minimo 0.';
@@ -4531,7 +4796,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sblocation250Sbtitle => 'Posizione';
 
   @override
-  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice => 'Per pubblicare un nuovo annuncio, fai clic su {log-in} o {sign-up}';
+  String post8722Sbad250Sblogged8722Sbout8722Sbnotice(Object logIn, Object signUp) {
+    return 'Per pubblicare un nuovo annuncio, fai clic su $logIn o $signUp';
+  }
 
   @override
   String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sblog8722Sbin => 'accedi';
@@ -4598,7 +4865,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sbprice8722Sbtype250Sbfloating => 'Variazione di prezzo';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip => 'Fai fluttuare il tasso di cambio con il mercato mentre il commercio è aperto. Il prezzo di scambio è determinato al momento della finalizzazione. Si noti che una riserva extra del 15% viene aggiunta all\'importo {assetName} riservato nell\'obbligazione arbitrale. L\'importo in eccesso sarà restituito dopo la finalizzazione dello scambio.';
+  String post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip(Object assetName) {
+    return 'Fai fluttuare il tasso di cambio con il mercato mentre il commercio è aperto. Il prezzo di scambio è determinato al momento della finalizzazione. Si noti che una riserva extra del 15% viene aggiunta all\'importo $assetName riservato nell\'obbligazione arbitrale. L\'importo in eccesso sarà restituito dopo la finalizzazione dello scambio.';
+  }
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip250Sbnojs => 'Fai fluttuare il tasso di cambio con il mercato mentre il commercio è aperto. Il prezzo di scambio è determinato al momento della finalizzazione dello scambio. Si noti che una riserva extra del 15% viene aggiunta all\'importo dell\'asset criptovaluta selezionato riservato all\'obbligazione arbitrale. L\'importo in eccesso sarà restituito al termine della negoziazione.';
@@ -4611,15 +4880,6 @@ class I18nIt extends I18n {
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbmarket => 'Prezzo di mercato';
-
-  @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbpremium8722Sbfixed => 'Premium fisso';
-
-  @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbpremium8722Sbformula => 'Formula premium';
-
-  @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbpremium8722Sbrate => 'Tariffa premium in %';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbradio250Sbformula => 'Formula prezzo (avanzata)';
@@ -4658,7 +4918,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'si';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb0 => 'Prima di creare un annuncio, leggi i nostri {terms-of-service} e {guides}';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
+    return 'Prima di creare un annuncio, leggi i nostri $termsOfservice e $guides';
+  }
 
   @override
   String get post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides => 'guide';
@@ -4670,7 +4932,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb0 => 'Ogni operazione completata costa agli inserzionisti l\'1% dell\'importo totale dell\'operazione (tassa di protezione dell\'arbitrato).';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1 => 'Devi avere almeno {minimumXmrAmount} {assetSymbol} nel tuo portafoglio {appName} arbitrale perché un annuncio di vendita pubblicato {assetSymbol} sia visibile.';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1(Object minimumXmrAmount, Object assetSymbol, Object appName) {
+    return 'Devi avere almeno $minimumXmrAmount $assetSymbol nel tuo portafoglio $appName arbitrale perché un annuncio di vendita pubblicato $assetSymbol sia visibile.';
+  }
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1250Sbagoradesk8722Sbnojs(Object minimumXmrAmount, Object assetSymbol, Object appName) {
@@ -4686,13 +4950,12 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb3 => 'Una volta che uno scambio è aperto, il prezzo è definitivo, tranne quando vi è un chiaro errore nel prezzo.';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb3250Sbnojs => 'Una volta aperto uno scambio, il prezzo e / o il premio sono definitivi, tranne quando vi è un chiaro errore nel prezzo.';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb4(Object assetName) {
+    return 'Non è consentito acquistare o vendere $assetName per conto di qualcun altro.';
+  }
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb4 => 'Non è consentito acquistare o vendere {assetName} per conto di qualcun altro.';
-
-  @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb4250Sbnojs => 'Non ti è permesso acquistare o vendere criptovaluta o opzioni di criptovaluta per conto di qualcun altro (intermediazione).';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb4250Sbnojs => 'Non ti è permesso acquistare o vendere criptovaluta per conto di qualcun altro (intermediazione).';
 
   @override
   String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb5 => 'È possibile utilizzare solo account di pagamento registrati a proprio nome (non si accettano pagamenti di terze parti!).';
@@ -4709,7 +4972,9 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sbrules8722Sbtitle => 'Regole e requisiti per la pubblicità';
 
   @override
-  String get post8722Sbad250Sbsettlement8722Sbaddress250Sbtip => 'Richiesto. L\'indirizzo a cui verranno inviate le monete. Non può essere un indirizzo interno {appName}.';
+  String post8722Sbad250Sbsettlement8722Sbaddress250Sbtip(Object appName) {
+    return 'Richiesto. L\'indirizzo a cui verranno inviate le monete. Non può essere un indirizzo interno $appName.';
+  }
 
   @override
   String post8722Sbad250Sbstep8722Sb1(Object step_number) {
@@ -4756,13 +5021,8 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity8722Sbtip => 'Questa opzione limita la liquidità di questo annuncio al massimo. Limite di transazione. Gli acquirenti non possono aprire e completare operazioni al di sopra di questo importo. Esempio: se la liquidità attivata e il massimo limite di transazione è fissato a 100 EUR quando un acquirente apre uno scambio per 20 EUR al massimo, il limite di transazione viene automaticamente ridotto a 80 EUR. Ritorna a 100 EUR se l\'acquirente annulla la transazione e rimane a 80 EUR se la transazione è completata.';
 
   @override
-  String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbsell(Object assetName) {
-    return 'Vendere $assetName online';
-  }
-
-  @override
-  String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
-    return 'Acquista $assetName online';
+  String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbbuy(Object assetName) {
+    return 'Comprare $assetName con cantanti (trovando qualcuno vicino a me)';
   }
 
   @override
@@ -4771,21 +5031,32 @@ class I18nIt extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbbuy(Object assetName) {
-    return 'Comprare $assetName con cantanti (trovando qualcuno vicino a me)';
+  String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbbuy(Object assetName) {
+    return 'Comprare $assetName online';
+  }
+
+  @override
+  String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbsell(Object assetName) {
+    return 'Vendere $assetName online';
   }
 
   @override
   String get post8722Sbad250Sbtrade8722Sbtype250Sbsubtitle => 'Vorrei...';
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbtip => 'Che tipo di pubblicità commerciale vuoi creare? Se desideri vendere {assetName} assicurati di avere {assetName} nel tuo portafoglio di obbligazioni arbitrali {appName}.';
+  String post8722Sbad250Sbtrade8722Sbtype250Sbtip(Object assetName, Object appName) {
+    return 'Che tipo di pubblicità commerciale vuoi creare? Se desideri vendere $assetName assicurati di avere $assetName nel tuo portafoglio di obbligazioni arbitrali $appName.';
+  }
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs => 'Che tipo di pubblicità commerciale desideri creare? Se desideri vendere Monero, assicurati di avere Monero nel tuo portafoglio {appName}.';
+  String post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs(Object appName) {
+    return 'Che tipo di pubblicità commerciale desideri creare? Se desideri vendere Monero, assicurati di avere Monero nel tuo portafoglio $appName.';
+  }
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs57Sbagoradesk => 'Che tipo di annuncio commerciale desideri creare?  Se desideri vendere criptovalute, vendere opzioni call su criptovalute o comprare opzioni put su criptovalute, assicurati di avere la criptovaluta in questione nel tuo portafoglio di obbligazioni arbitrali {appName}.';
+  String post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs57Sbagoradesk(Object appName) {
+    return 'Che tipo di annuncio commerciale desideri creare?  Se desideri vendere criptovalute, assicurati di avere la criptovaluta in questione nel tuo portafoglio di obbligazioni arbitrali $appName.';
+  }
 
   @override
   String get post8722Sbad250Sbtrade8722Sbtype250Sbtitle => 'Tipo di scambio';
@@ -4797,6 +5068,9 @@ class I18nIt extends I18n {
 
   @override
   String get price8722Sbformula8722Sbinterface250Sbtickers250Sbasset8722Sbpairs250Sbother8722Sbasset => 'Altro';
+
+  @override
+  String get read8722Sbmore => 'Leggi tutto';
 
   @override
   String get recaptcha250Sbno8722Sbgoogle8722Sbmessage => 'We have noticed that Google Services are blocked in your browser. Since we use Google\'s reCAPTCHA for some site actions, you will need to find a way to reach Google\'s services (e.g. VPN, proxy, or using a Tor browser).';
@@ -4814,7 +5088,9 @@ class I18nIt extends I18n {
   String get receipt250Sbno8722SbaccountInfo => 'Nessuna informazione sul metodo di pagamento';
 
   @override
-  String get receipt250Sbtitle => '{appName} — ID dell scambio: {id}';
+  String receipt250Sbtitle(Object appName, Object id) {
+    return '$appName — ID dell scambio: $id';
+  }
 
   @override
   String get reputation8722Sbimport250Sbdenied250Sbtip => 'Puoi riprovare con un nome utente diverso';
@@ -4835,7 +5111,9 @@ class I18nIt extends I18n {
   String get reputation8722Sbimport250Sbstats250Sbregistered => 'registrato';
 
   @override
-  String get reputation8722Sbimport250Sbstats250Sbtitle => '{platform} reputazione';
+  String reputation8722Sbimport250Sbstats250Sbtitle(Object platform) {
+    return '$platform reputazione';
+  }
 
   @override
   String get reputation8722Sbimport250Sbstats250Sbtrades => 'trades';
@@ -4844,7 +5122,9 @@ class I18nIt extends I18n {
   String get reputation8722Sbimport250Sbstats250Sbvolume => 'volume';
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage => 'Aggiungi questo codice da qualche parte nel tuo profilo {platform} pubblico. Una volta verificato il codice, puoi rimuoverlo.';
+  String reputation8722Sbimport250Sbstep250Sbcode250Sbmessage(Object platform) {
+    return 'Aggiungi questo codice da qualche parte nel tuo profilo $platform pubblico. Una volta verificato il codice, puoi rimuoverlo.';
+  }
 
   @override
   String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Aggiungi questo codice al tuo profilo LocalBitcoins come pagina web personale, aggiungendo \".com\" alla fine. Una volta che abbiamo verificato il codice, puoi rimuoverlo.';
@@ -4856,10 +5136,14 @@ class I18nIt extends I18n {
   String get reputation8722Sbimport250Sbstep250Sbfinal250Sbtitle => 'Attendi la verifica';
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbusername250Sbinput250Sblabel => 'Il tuo nome utente {platform} ';
+  String reputation8722Sbimport250Sbstep250Sbusername250Sbinput250Sblabel(Object platform) {
+    return 'Il tuo nome utente $platform ';
+  }
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbusername250Sbmessage => 'Qual è il tuo nome utente su {platform}?';
+  String reputation8722Sbimport250Sbstep250Sbusername250Sbmessage(Object platform) {
+    return 'Qual è il tuo nome utente su $platform?';
+  }
 
   @override
   String get reputation8722Sbimport250Sbstep250Sbusername250Sbtitle => 'Seleziona nome utente';
@@ -4964,7 +5248,9 @@ class I18nIt extends I18n {
   String get sanction250Sbwallet8722Sbfreeze250Sblabel => 'Portafoglio congelato, commercio sospeso';
 
   @override
-  String get search250Sball8722Sbmethods => 'Tutti i metodi {code} ';
+  String search250Sball8722Sbmethods(Object code) {
+    return 'Tutti i metodi $code ';
+  }
 
   @override
   String get search250Sbamount => 'Quantità';
@@ -4982,55 +5268,61 @@ class I18nIt extends I18n {
   String get search250Sbcoordinates250Sblon => 'Longitudine';
 
   @override
-  String get search250Sbheading8722Sbcall8722Sbbuy => 'Vendi l\'opzione di chiamata {assetName} in {country} {using-method}';
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+    return 'Vendi $assetName per contanti in $location';
+  }
 
   @override
-  String get search250Sbheading8722Sbcall8722Sbsell => 'Acquista l\'opzione di chiamata {assetName} in {country} {using-method}';
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+    return 'Compra $assetName con contanti in $location';
+  }
 
   @override
-  String get search250Sbheading8722Sblocal8722Sbbuy => 'Vendi {assetName} per contanti in {location}';
+  String search250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object country, Object usingMethod) {
+    return 'Venti $assetName online in $country $usingMethod';
+  }
 
   @override
-  String get search250Sbheading8722Sblocal8722Sbsell => 'Compra {assetName} con contanti in {location}';
+  String search250Sbheading8722Sbonline8722Sbsell(Object assetName, Object country, Object usingMethod) {
+    return 'Compra $assetName online in $country $usingMethod';
+  }
 
   @override
-  String get search250Sbheading8722Sbonline8722Sbbuy => 'Venti {assetName} online in {country} {using-method}';
-
-  @override
-  String get search250Sbheading8722Sbonline8722Sbsell => 'Compra {assetName} online in {country} {using-method}';
-
-  @override
-  String get search250Sbheading8722Sbput8722Sbbuy => 'Vendi {assetName} opzione put in {country} {using-method}';
-
-  @override
-  String get search250Sbheading8722Sbput8722Sbsell => 'Acquista {assetName} opzione put in {country} {using-method}';
-
-  @override
-  String get search250Sbheading8722Sbusing8722Sbmethod => 'Usa {method}';
+  String search250Sbheading8722Sbusing8722Sbmethod(Object method) {
+    return 'Usa $method';
+  }
 
   @override
   String get search250Sblocation8722Sbplaceholder => 'Digita la tua posizione...';
 
   @override
-  String get search250Sbno8722Sbgoogle8722Sbtext => 'Abbiamo notato che i servizi Google sono bloccati nel tuo browser. Nessun problema, ma li stiamo usando per trovare offerte locali vicino a te. Ciò significa che dovrai inserire le tue coordinate manualmente. È possibile utilizzare servizi come {this} per aiutarti a calcolarle.';
+  String search250Sbno8722Sbgoogle8722Sbtext(Object value) {
+    return 'Abbiamo notato che i servizi Google sono bloccati nel tuo browser. Nessun problema, ma li stiamo usando per trovare offerte locali vicino a te. Ciò significa che dovrai inserire le tue coordinate manualmente. È possibile utilizzare servizi come $value per aiutarti a calcolarle.';
+  }
 
   @override
   String get search250Sbno8722Sbgoogle8722Sbtext8722Sbhere => 'questo';
 
   @override
-  String get search250Sbno8722Sbresults => 'Nessun risultato in {country} con i criteri selezionati.';
+  String search250Sbno8722Sbresults(Object country) {
+    return 'Nessun risultato in $country con i criteri selezionati.';
+  }
 
   @override
   String get search250Sbno8722Sbresults8722Sb1 => 'Prova con un metodo di pagamento differente o quantità differente.';
 
   @override
-  String get search250Sbno8722Sbresults8722Sb2 => 'In alternativa {post-an-ad} aquí!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
+    return 'In alternativa $postAnad aquí!';
+  }
 
   @override
   String get search250Sbno8722Sbresults8722Sbpost8722Sban8722Sbad => 'pubblica un annuncio';
 
   @override
-  String get search250Sbpopular8722Sbmethods => '🔥 Metodi popolari {code} ';
+  String search250Sbpopular8722Sbmethods(Object code) {
+    return '🔥 Metodi popolari $code ';
+  }
 
   @override
   String get search250Sbsell8722Sbtab => 'Vendi';
@@ -5108,7 +5400,9 @@ class I18nIt extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong>Inserisci il codice</strong> nella casella sottostante il codice QR e <strong> premi il pulsante \'Verifica 2FA\'</strong>.';
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbone => '{download-a-2fa-app} come {andotp} o {any-other-2fa-app} che supporta {totp} per il tuo dispositivo.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
+    return '$downloadA2faapp come $andotp o $anyOther2faapp che supporta $totp per il tuo dispositivo.';
+  }
 
   @override
   String get settings250Sb2fa250Sbstep8722Sbone8722Sbany8722Sbother8722Sb2fa8722Sbapp => 'altre app per l\'autenticazione a due fattori';
@@ -5120,7 +5414,9 @@ class I18nIt extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbthree => 'Avvia l\'app per l\'autenticazione a due fattori sul tuo dispositivo. <strong>Scansiona il codice QR</strong> che vedi in questa pagina.';
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbtwo => '<strong> Annota il codice di backup </strong> (sopra in verde) su un pezzo di carta e conservarlo in un luogo sicuro. Ti servirà se perdi il telefono o cancelli la app. {appName} non sarà in grado di aiutarti se dovessi perdere questo codice.';
+  String settings250Sb2fa250Sbstep8722Sbtwo(Object appName) {
+    return '<strong> Annota il codice di backup </strong> (sopra in verde) su un pezzo di carta e conservarlo in un luogo sicuro. Ti servirà se perdi il telefono o cancelli la app. $appName non sarà in grado di aiutarti se dovessi perdere questo codice.';
+  }
 
   @override
   String get settings250Sb2fa250Sbsubtitle => 'Quando l\'autenticazione a due fattori è attiva, è necessario inserire il codice di verifica ogni volta che si accede o si prelevano fondi.';
@@ -5141,7 +5437,10 @@ class I18nIt extends I18n {
   String get settings250Sb2fa250Sbverify8722Sbbtn => 'Verifica 2FA';
 
   @override
-  String get settings250Sb2fa250Sbwarning => '<strong>SI PREGA DI NOTARE:</strong> Se perdi le credenziali di 2FA (perdi o rompi il telefono, elimini l\'app di 2FA o perdi il tuo codice di backup) <strong>non sarai mai più in grado di accedere al tuo account</strong>. {appName} non sarà in grado di aiutarti. <strong>Utilizzare a proprio rischio</strong>.';
+  String get settings250Sb2fa250Sbwarning => 'Si consiglia vivamente di attivare il 2FA sul proprio account per una maggiore sicurezza.';
+
+  @override
+  String get settings250Sb2fa250Sbwarning250Sbenable => 'Abilita';
 
   @override
   String get settings250Sb2fa250Sbwrong8722Sbotp => 'Password non valida.';
@@ -5165,7 +5464,9 @@ class I18nIt extends I18n {
   String get settings250Sbapi8722Sbkey250Sblabel => 'Api Key';
 
   @override
-  String get settings250Sbapi8722Sbkey250Sblabel250Sbcaption => 'Per poter utilizzare endpoint API privati, è necessario impostare la chiave API come intestazione \"Authorization\". La chiave scade tra 5 anni. Trova maggiori dettagli nei {api-docs}.';
+  String settings250Sbapi8722Sbkey250Sblabel250Sbcaption(Object apiDocs) {
+    return 'Per poter utilizzare endpoint API privati, è necessario impostare la chiave API come intestazione \"Authorization\". La chiave scade tra 5 anni. Trova maggiori dettagli nei $apiDocs.';
+  }
 
   @override
   String get settings250Sbapi8722Sbkey250Sblabel250Sbcaption250Sbapi8722Sbdocs8722Sblink => 'documenti API';
@@ -5192,7 +5493,9 @@ class I18nIt extends I18n {
   String get settings250Sbchange8722Sbemail250Sbnone => 'Nessuna email fornita';
 
   @override
-  String get settings250Sbchange8722Sbemail250Sbsubtitle => 'Email attuale: {email}';
+  String settings250Sbchange8722Sbemail250Sbsubtitle(Object email) {
+    return 'Email attuale: $email';
+  }
 
   @override
   String get settings250Sbchange8722Sbemail250Sbtitle => 'Modifica/verifica email';
@@ -5263,7 +5566,9 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get settings250Sbno8722Sbemail8722Sbwarn => 'Il tuo account non ha un indirizzo e-mail verificato. Se si perde la password, {appName} non sarà in grado di aiutarti a ripristinarlo.';
+  String settings250Sbno8722Sbemail8722Sbwarn(Object appName) {
+    return 'Il tuo account non ha un indirizzo e-mail verificato. Se si perde la password, $appName non sarà in grado di aiutarti a ripristinarlo.';
+  }
 
   @override
   String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sblong => 'Invia notifiche e-mail quando viene ricevuto un nuovo messaggio commerciale (una volta all\'ora)';
@@ -5332,13 +5637,17 @@ class I18nIt extends I18n {
   String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sbshort => 'Scambio finalizzato';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbhow8722Sbto => 'Come attivare le notifiche di {appName} su Telegram?';
+  String settings250Sbnotifications250Sbtelegram250Sbhow8722Sbto(Object appName) {
+    return 'Come attivare le notifiche di $appName su Telegram?';
+  }
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sbid => 'ID notifiche Telegram';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbid8722Sbtip => 'ID notifiche Telegram assegnato dal BOT di {appName}';
+  String settings250Sbnotifications250Sbtelegram250Sbid8722Sbtip(Object appName) {
+    return 'ID notifiche Telegram assegnato dal BOT di $appName';
+  }
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong => 'Invia notifiche Telegram per i nuovi messaggi di scambio';
@@ -5386,7 +5695,9 @@ class I18nIt extends I18n {
   String get settings250Sbreputation8722Sbimport250Sberror250Sbimported8722Sbby8722Sbother8722Sbuser => 'La reputazione di questo account è già stata importata da un altro utente. Forse hai fatto un errore di battitura nel nome utente o forse hai scelto la piattaforma sbagliata?';
 
   @override
-  String get settings250Sbreputation8722Sbimport250Sberror250Sblbc8722Sbinvalid8722Sbusername => 'Il tuo profilo LocalBitcoins non è disponibile pubblicamente, puoi testarlo tu stesso tentando di aprire il tuo profilo LocalBitcoins mentre sei disconnesso: {link}. Non possiamo importare profili che non sono disponibili pubblicamente. Prova a contattare il supporto di LocalBitcoins per risolvere il problema, ma rimuovi il codice dall\'introduzione di LocalBitcoins prima di farlo.';
+  String settings250Sbreputation8722Sbimport250Sberror250Sblbc8722Sbinvalid8722Sbusername(Object link) {
+    return 'Il tuo profilo LocalBitcoins non è disponibile pubblicamente, puoi testarlo tu stesso tentando di aprire il tuo profilo LocalBitcoins mentre sei disconnesso: $link. Non possiamo importare profili che non sono disponibili pubblicamente. Prova a contattare il supporto di LocalBitcoins per risolvere il problema, ma rimuovi il codice dall\'introduzione di LocalBitcoins prima di farlo.';
+  }
 
   @override
   String get settings250Sbreputation8722Sbimport250Sberror250Sbplatform8722Sberror => 'Qualcosa è andato storto. Verifica che il nome utente sia corretto e di aver selezionato la piattaforma corretta. Se sono corretti, riprova tra 5 minuti. Se il problema persiste, apri un ticket di supporto.';
@@ -5499,7 +5810,9 @@ class I18nIt extends I18n {
   String get signup250Sbtitle => 'Iscriviti';
 
   @override
-  String get signup250Sbtos8722Sbdialog8722Sbtext => 'Per registrarti, leggi e accetta i {terms}';
+  String signup250Sbtos8722Sbdialog8722Sbtext(Object terms) {
+    return 'Per registrarti, leggi e accetta i $terms';
+  }
 
   @override
   String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbagree => 'Accetto';
@@ -5508,7 +5821,9 @@ class I18nIt extends I18n {
   String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbdisagree => 'Non accetto';
 
   @override
-  String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbterms => 'Termini di servizio di {appName}';
+  String signup250Sbtos8722Sbdialog8722Sbtext8722Sbterms(Object appName) {
+    return 'Termini di servizio di $appName';
+  }
 
   @override
   String get signup250Sbtos8722Sbdialog8722Sbtitle => 'Termini di servizio';
@@ -5517,10 +5832,12 @@ class I18nIt extends I18n {
   String get sso250Sblogout8722Sbportal => 'You are being logged out...';
 
   @override
-  String get sso250Sbunverified8722Sbemail8722Sbtext => 'You need to verify your email to continue. You can do it at the {settings-page}.';
+  String sso250Sbunverified8722Sbemail8722Sbtext(Object settingsPage) {
+    return 'You need to verify your email to continue. You can do it at the $settingsPage.';
+  }
 
   @override
-  String get sso250Sbunverified8722Sbemail8722Sbtext8722Sbsettings8722Sbpage => 'Pagina Impostazioni';
+  String get sso250Sbunverified8722Sbemail8722Sbtext8722Sbsettings8722Sbpage => 'pagina delle impostazioni';
 
   @override
   String get sso250Sbunverified8722Sbemail8722Sbtitle => 'Unverified email';
@@ -5529,7 +5846,9 @@ class I18nIt extends I18n {
   String get start250Sb2fa => 'Autenticazione a due fattori';
 
   @override
-  String get start250Sbbuy8722Sbonline => 'Come acquistare {assetName} online';
+  String start250Sbbuy8722Sbonline(Object assetName) {
+    return 'Come acquistare $assetName online';
+  }
 
   @override
   String get start250Sbbuy8722Sbonline57Sbagoradesk => 'Come acquistare criptovalute online';
@@ -5538,19 +5857,27 @@ class I18nIt extends I18n {
   String get start250Sblearn8722Sbmore => 'Leggi di più';
 
   @override
-  String get start250Sblocal => 'Come commerciare {assetName} localmente';
+  String start250Sblocal(Object assetName) {
+    return 'Come commerciare $assetName localmente';
+  }
 
   @override
   String get start250Sblocal57Sbagoradesk => 'Come acquistare o vendere criptovalute in contanti';
 
   @override
-  String get start250Sbsettings => 'Impostazioni {appName}';
+  String start250Sbsettings(Object appName) {
+    return 'Impostazioni $appName';
+  }
 
   @override
-  String get start250Sbtitle => 'Inizia';
+  String start250Sbtitle(Object appName) {
+    return 'Inizia';
+  }
 
   @override
-  String get start250Sbtrade => 'Introduzione al trading {assetName}';
+  String start250Sbtrade(Object assetName) {
+    return 'Introduzione al trading $assetName';
+  }
 
   @override
   String get start250Sbtrade57Sbagoradesk => 'Introduzione al trading di criptovalute';
@@ -5571,25 +5898,33 @@ class I18nIt extends I18n {
   String get statistics250Sbticker8722Sb6hr => '6 ore:';
 
   @override
-  String get statistics250Sbticker8722Sbapi8722Sbtitle => '{appName} Average Ticker API';
+  String statistics250Sbticker8722Sbapi8722Sbtitle(Object appName) {
+    return '$appName Average Ticker API';
+  }
 
   @override
   String get statistics250Sbticker8722Sbsubtitle => 'Vengono visualizzate solo le valute con i dati disponibili';
 
   @override
-  String get statistics250Sbticker8722Sbtitle => 'Prezzo medio / {assetSymbol} basato su operazioni concluse';
+  String statistics250Sbticker8722Sbtitle(Object assetSymbol) {
+    return 'Prezzo medio / $assetSymbol basato su operazioni concluse';
+  }
 
   @override
   String get statistics250Sbtitle => 'Statistiche';
 
   @override
-  String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbconvert => 'Converti in {currencyCode} da USD';
+  String statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbconvert(Object currencyCode) {
+    return 'Converti in $currencyCode da USD';
+  }
 
   @override
   String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbnone => 'Mostra il messaggio \'Nessun dato\'';
 
   @override
-  String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbtitle => 'Se non sono presenti dati per {currencyCode} ...';
+  String statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbtitle(Object currencyCode) {
+    return 'Se non sono presenti dati per $currencyCode ...';
+  }
 
   @override
   String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbusd => 'Mostra il prezzo in USD';
@@ -5607,7 +5942,9 @@ class I18nIt extends I18n {
   String get support250Sbemail250Sbbutton => 'Invia una email';
 
   @override
-  String get support250Sbemail250Sbdescription => 'Puoi inviare un\'e-mail a {email}';
+  String support250Sbemail250Sbdescription(Object email) {
+    return 'Puoi inviare un\'e-mail a $email';
+  }
 
   @override
   String get support250Sbemail250Sbtitle => 'E-mail';
@@ -5743,10 +6080,14 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get trade250Sbdialog250Sbconfirm8722Sbrelease250Sboffset8722Sbnotice => 'Questa password è usata come offset per generare il portafoglio di regolamento non custodiale e firmare la transazione. {appName} non avrà modo di recuperare il portafoglio se si perde questa password.';
+  String trade250Sbdialog250Sbconfirm8722Sbrelease250Sboffset8722Sbnotice(Object appName) {
+    return 'Questa password è usata come offset per generare il portafoglio di regolamento non custodiale e firmare la transazione. $appName non avrà modo di recuperare il portafoglio se si perde questa password.';
+  }
 
   @override
-  String get trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext => 'Conferma di voler finanziare lo scambio dal tuo portafoglio {appName}';
+  String trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext(Object appName) {
+    return 'Conferma di voler finanziare lo scambio dal tuo portafoglio $appName';
+  }
 
   @override
   String get trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle => 'Conferma il finanziamento';
@@ -5761,7 +6102,9 @@ class I18nIt extends I18n {
   String get trade250Sbdispute8722Sbbtn => 'Inizia una controversia';
 
   @override
-  String get trade250Sbdispute8722Sbtext => 'In caso di disaccordo in merito allo scambio è possibile avviare una controversia. Dopodiché, il supporto di {appName} ti contatterà attraverso la chat di questo trade.';
+  String trade250Sbdispute8722Sbtext(Object appName) {
+    return 'In caso di disaccordo in merito allo scambio è possibile avviare una controversia. Dopodiché, il supporto di $appName ti contatterà attraverso la chat di questo trade.';
+  }
 
   @override
   String get trade250Sbenable8722Sbescrow8722Sbbtn => 'Abilitare il legame di arbitrato';
@@ -5773,19 +6116,27 @@ class I18nIt extends I18n {
   String get trade250Sberror250Sb248 => 'L\'importo della transazione non è sufficiente a coprire le spese di liquidazione. Per favore riprova più tardi quando le commissioni sono più basse o riapri la transazione per un importo maggiore e cancella questa.';
 
   @override
-  String get trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0 => '{appName} può offrire protezione solo se la protezione dell\'obbligazione di arbitraggio per la negoziazione è stata abilitata';
+  String trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0(Object appName) {
+    return '$appName può offrire protezione solo se la protezione dell\'obbligazione di arbitraggio per la negoziazione è stata abilitata';
+  }
 
   @override
-  String get trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb1 => 'Se abilitato, solo l\'acquirente e lo staff di {appName} possono annullare lo scambio';
+  String trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb1(Object appName) {
+    return 'Se abilitato, solo l\'acquirente e lo staff di $appName possono annullare lo scambio';
+  }
 
   @override
-  String get trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtitle => '{appName} termini e informazioni sulla protezione delle obbligazioni arbitrali';
+  String trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtitle(Object appName) {
+    return '$appName termini e informazioni sulla protezione delle obbligazioni arbitrali';
+  }
 
   @override
   String get trade250Sbfeedback250Sbblock => 'Block user';
 
   @override
-  String get trade250Sbfeedback250Sbleave8722Sbfeedback8722Sbon => 'Lascia un feedback a {username}';
+  String trade250Sbfeedback250Sbleave8722Sbfeedback8722Sbon(Object username) {
+    return 'Lascia un feedback a $username';
+  }
 
   @override
   String get trade250Sbfeedback250Sbnegative => 'Negativo';
@@ -5803,16 +6154,22 @@ class I18nIt extends I18n {
   String get trade250Sbfeedback250Sbtrust => 'Trustworthy';
 
   @override
-  String get trade250Sbfeedback250Sbupdate8722Sbfeedback8722Sbon => 'Aggiorna feedback di {username}';
+  String trade250Sbfeedback250Sbupdate8722Sbfeedback8722Sbon(Object username) {
+    return 'Aggiorna feedback di $username';
+  }
 
   @override
-  String get trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip => 'Opzionale. Lascia un messaggio su {username} da visualizzare assieme al punteggio sulla pagina del profilo del commerciante. Massimo 256 caratteri.';
+  String trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip(Object username) {
+    return 'Opzionale. Lascia un messaggio su $username da visualizzare assieme al punteggio sulla pagina del profilo del commerciante. Massimo 256 caratteri.';
+  }
 
   @override
   String get trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtitle => 'Il tuo commento';
 
   @override
-  String get trade250Sbfloating8722Sbprice8722Sbtext => 'L\'importo del {assetName} è {floating} con il prezzo di mercato.';
+  String trade250Sbfloating8722Sbprice8722Sbtext(Object assetName, Object floating) {
+    return 'L\'importo del $assetName è $floating con il prezzo di mercato.';
+  }
 
   @override
   String get trade250Sbfloating8722Sbprice8722Sbtext8722Sbfloating => 'fluttuante';
@@ -5829,7 +6186,9 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get trade250Sbinfo250Sbtrade8722Sbad => 'Annuncio commerciale ({ad_type})';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
+    return 'Annuncio commerciale ($ad_type)';
+  }
 
   @override
   String get trade250Sbleave8722Sbfeedback8722Sbbtn => 'Lascia un feedback';
@@ -5849,10 +6208,14 @@ class I18nIt extends I18n {
   String get trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle => 'Aspettando che il venditore finanzi il commercio';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding => 'Attendi che il venditore depositi più monete nel suo portafoglio {appName} per coprire l\'importo di questo scambio.';
+  String trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(Object appName) {
+    return 'Attendi che il venditore depositi più monete nel suo portafoglio $appName per coprire l\'importo di questo scambio.';
+  }
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbfund8722Sbthe8722Sbtrade => 'Devi avere almeno {amount} nel tuo portafoglio {appName} per finanziare questo scambio.';
+  String trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbfund8722Sbthe8722Sbtrade(Object amount, Object appName) {
+    return 'Devi avere almeno $amount nel tuo portafoglio $appName per finanziare questo scambio.';
+  }
 
   @override
   String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn => 'Dopo aver depositato l\'importo richiesto, premi il pulsante per finanziare lo scambio.';
@@ -5873,7 +6236,9 @@ class I18nIt extends I18n {
   String get trade250Sblocal250Sbstep8722Sb2250Sbbuyer250Sbcompleted => 'Lo scambio è ora completato, le monete sono nel tuo portafoglio!';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb2250Sbseller250Sbverification8722Sbcode => '{verificationCode} è il codice di verifica. Puoi dirlo all\'acquirente in modo che possa verificare che hai finalizzato lo scambio senza che abbia bisogno di usare un dispositivo.';
+  String trade250Sblocal250Sbstep8722Sb2250Sbseller250Sbverification8722Sbcode(Object verificationCode) {
+    return '$verificationCode è il codice di verifica. Puoi dirlo all\'acquirente in modo che possa verificare che hai finalizzato lo scambio senza che abbia bisogno di usare un dispositivo.';
+  }
 
   @override
   String get trade250Sbmark8722Sbpaid => 'Quando hai pagato, premi il pulsante \"Ho pagato\". Ciò impedirà al venditore di annullare l\'operazione. Non premere questo pulsante a meno che tu non abbia effettivamente pagato.';
@@ -5894,7 +6259,9 @@ class I18nIt extends I18n {
   String get trade250Sbpayment8722Sbdetails => 'Dettagli del pagamento';
 
   @override
-  String get trade250Sbprice => 'Prezzo: {price} {currency} / {assetSymbol}';
+  String trade250Sbprice(Object price, Object currency, Object assetSymbol) {
+    return 'Prezzo: $price $currency / $assetSymbol';
+  }
 
   @override
   String get trade250Sbreceipt250Sbbtn => 'Visualizza ricevuta';
@@ -5919,14 +6286,16 @@ class I18nIt extends I18n {
 
   @override
   String trade250Sbstatus250Sbcancelled8722Sbtext(Object linebreak, Object time) {
-    return 'Questo scambio è stato cancellato $linebreak alle $time.';
+    return 'Questo scambio è stato cancellato $linebreak  alle $time.';
   }
 
   @override
   String get trade250Sbstatus250Sbcancelled8722Sbtitle => 'Cancellato';
 
   @override
-  String get trade250Sbstatus250Sbclosed8722Sbtext8722Sb0 => 'Questo scambio è stato chiuso dall\' amministratore {linebreak} alle {time}.';
+  String trade250Sbstatus250Sbclosed8722Sbtext8722Sb0(Object linebreak, Object time) {
+    return 'Questo scambio è stato chiuso dall\' amministratore $linebreak  alle $time.';
+  }
 
   @override
   String get trade250Sbstatus250Sbclosed8722Sbtext8722Sb1 => 'Lo scambio non è stato né finalizzato né annullato.';
@@ -5936,7 +6305,7 @@ class I18nIt extends I18n {
 
   @override
   String trade250Sbstatus250Sbcompleted8722Sbtext(Object linebreak, Object time) {
-    return 'Questo scambio è stato completato $linebreak alle $time.';
+    return 'Questo scambio è stato completato $linebreak  alle $time.';
   }
 
   @override
@@ -5944,11 +6313,13 @@ class I18nIt extends I18n {
 
   @override
   String trade250Sbstatus250Sbdisputed8722Sbtext8722Sb0(Object linebreak, Object time) {
-    return 'Questo scambio è stato contestato $linebreak alle $time.';
+    return 'Questo scambio è stato contestato $linebreak  alle $time.';
   }
 
   @override
-  String get trade250Sbstatus250Sbdisputed8722Sbtext8722Sb1 => 'Attendi che l\'amministratore di {appName} si unisca alla chat e decida il risultato dello scambio.';
+  String trade250Sbstatus250Sbdisputed8722Sbtext8722Sb1(Object appName) {
+    return 'Attendi che l\'amministratore di $appName si unisca alla chat e decida il risultato dello scambio.';
+  }
 
   @override
   String get trade250Sbstatus250Sbdisputed8722Sbtitle => 'Contestato';
@@ -6030,7 +6401,13 @@ class I18nIt extends I18n {
   }
 
   @override
+  String get trade250Sbstatus250Sbsettlement250Sbproof => 'Prova di liquidazione';
+
+  @override
   String get trade250Sbstatus250Sbsettlement250Sbseller8722Sbtx250Sbtitle => 'Trasferimento al portafoglio non custodiale del venditore';
+
+  @override
+  String get trade250Sbstatus250Sbsettlement250Sbshow8722Sbproof => 'Mostrare la prova di pagamento';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbtx8722Sbkey => 'Chiave di transazione';
@@ -6045,19 +6422,17 @@ class I18nIt extends I18n {
   String get trade250Sbstep250Sbprocessing8722Sbsettlement => 'L\'insediamento è in fase di elaborazione, le monete vengono trasferite nel tuo portafoglio. Per favore aspetta, non c\'è niente che tu debba fare.';
 
   @override
-  String get trade250Sbsubtitle8722Sbcall8722Sbbuy8722Sbadvertisement => 'opzione call acquisto pubblicità';
-
-  @override
-  String get trade250Sbsubtitle8722Sbcall8722Sbsell8722Sbadvertisement => 'opzione call vendi pubblicità';
-
-  @override
-  String get trade250Sbsubtitle8722Sblocal8722Sbbuy => '{username} ha risposto a {ad} alle {time}';
+  String trade250Sbsubtitle8722Sblocal8722Sbbuy(Object username, Object ad, Object time) {
+    return '$username ha risposto a $ad alle $time';
+  }
 
   @override
   String get trade250Sbsubtitle8722Sblocal8722Sbbuy8722Sbad => 'compra pubblicità locale';
 
   @override
-  String get trade250Sbsubtitle8722Sblocal8722Sbbuy8722Sbseller => 'Hai risposto a {username} {ad} alle {time}';
+  String trade250Sbsubtitle8722Sblocal8722Sbbuy8722Sbseller(Object username, Object ad, Object time) {
+    return 'Hai risposto a $username $ad alle $time';
+  }
 
   @override
   String get trade250Sbsubtitle8722Sblocal8722Sbsell8722Sbbuyer => 'pubblicità di vendita locale';
@@ -6067,12 +6442,6 @@ class I18nIt extends I18n {
 
   @override
   String get trade250Sbsubtitle8722Sbonline8722Sbsell8722Sbadvertisement => 'pubblicità di vendita online';
-
-  @override
-  String get trade250Sbsubtitle8722Sbput8722Sbbuy8722Sbadvertisement => 'opzione put acquisto pubblicità';
-
-  @override
-  String get trade250Sbsubtitle8722Sbput8722Sbsell8722Sbadvertisement => 'opzione put vendere pubblicità';
 
   @override
   String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0 => 'L\'acquirente non ha bisogno di un dispositivo - conferma la transazione con il codice di verifica';
@@ -6087,40 +6456,45 @@ class I18nIt extends I18n {
   String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb5 => 'Si prega di non utilizzare i metodi di pagamento! Utilizza gli scambi online';
 
   @override
-  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtitle => 'Informazioni e termini relativi alle transazioni in contanti locali di {appName}';
+  String trade250Sbterms8722Sband8722Sbinfo8722Sbtitle(Object appName) {
+    return 'Informazioni e termini relativi alle transazioni in contanti locali di $appName';
+  }
 
   @override
-  String get trade250Sbterms8722Sbtitle => 'Condizioni di scambio con {username}';
+  String trade250Sbterms8722Sbtitle(Object username) {
+    return 'Condizioni di scambio con $username';
+  }
 
   @override
-  String get trade250Sbtitle8722Sbid => 'ID scambio: {id}';
+  String trade250Sbtitle8722Sbid(Object id) {
+    return 'ID scambio: $id';
+  }
 
   @override
-  String get trade250Sbtitle8722Sblocal8722Sbbuy => 'Acquisto di {amountXmr} {assetSymbol} in {amountFiat} {currency}';
+  String trade250Sbtitle8722Sblocal8722Sbbuy(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency) {
+    return 'Acquisto di $amountXmr $assetSymbol in $amountFiat $currency';
+  }
 
   @override
-  String get trade250Sbtitle8722Sblocal8722Sbsell => 'Vendita di {amountXmr} {assetSymbol} per {amountFiat} {currency}';
+  String trade250Sbtitle8722Sblocal8722Sbsell(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency) {
+    return 'Vendita di $amountXmr $assetSymbol per $amountFiat $currency';
+  }
 
   @override
-  String get trade250Sbtitle8722Sbonline8722Sbbuy => 'Acquisto di {amountXmr} {assetSymbol} per {amountFiat} {currency} usando {method}';
+  String trade250Sbtitle8722Sbonline8722Sbbuy(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency, Object method) {
+    return 'Acquisto di $amountXmr $assetSymbol per $amountFiat $currency usando $method';
+  }
 
   @override
-  String get trade250Sbtitle8722Sbonline8722Sbsell => 'Vendita di {amountXmr} {assetSymbol} per {amountFiat} {currency} usando {method}';
+  String trade250Sbtitle8722Sbonline8722Sbsell(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency, Object method) {
+    return 'Vendita di $amountXmr $assetSymbol per $amountFiat $currency usando $method';
+  }
 
   @override
   String get trade250Sbtitle250Sbbuying => 'Acquisto';
 
   @override
-  String get trade250Sbtitle250Sbcall => 'call';
-
-  @override
   String get trade250Sbtitle250Sbexpiry => 'Durata del contratto:';
-
-  @override
-  String get trade250Sbtitle250Sbpremium => 'Premium per il commercio:';
-
-  @override
-  String get trade250Sbtitle250Sbput => 'put';
 
   @override
   String get trade250Sbtitle250Sbselling => 'vendita';
@@ -6129,7 +6503,9 @@ class I18nIt extends I18n {
   String get trade250Sbupdate8722Sbfeedback8722Sbbtn => 'Aggiorna feedback';
 
   @override
-  String get trade250Sbwarning250Sbimpersonation => 'Fai attenzione ai truffatori che cercano di impersonare il personale! <br /> Gli amministratori di {appName} non ti diranno mai di finalizzare un\'operazione. <br /> I messaggi del personale hanno uno sfondo rosso.';
+  String trade250Sbwarning250Sbimpersonation(Object appName) {
+    return 'Fai attenzione ai truffatori che cercano di impersonare il personale! <br /> Gli amministratori di $appName non ti diranno mai di finalizzare un\'operazione. <br /> I messaggi del personale hanno uno sfondo rosso.';
+  }
 
   @override
   String get trades8722Sbtable250Sbstatus250Sbnot8722Sbpaid => 'non pagato';
@@ -6144,28 +6520,24 @@ class I18nIt extends I18n {
   String get user250Sbaccount8722Sbcreated => 'Account creato:';
 
   @override
-  String get user250Sbads250Sbheading8722Sbcall8722Sbbuy8722Sbtitle => 'Vendi {assetName} opzione call da {user}';
+  String user250Sbads250Sblocal8722Sbbuy8722Sbtitle(Object assetName, Object user) {
+    return 'Vendi $assetName per contanti con $user';
+  }
 
   @override
-  String get user250Sbads250Sbheading8722Sbcall8722Sbsell8722Sbtitle => 'Acquista l\'opzione di chiamata {assetName} da {user}';
+  String user250Sbads250Sblocal8722Sbsell8722Sbtitle(Object assetName, Object user) {
+    return 'Acquista $assetName in contanti dall\'utente $user';
+  }
 
   @override
-  String get user250Sbads250Sbheading8722Sbput8722Sbbuy8722Sbtitle => 'Vendi {assetName} opzione put da {user}';
+  String user250Sbads250Sbonline8722Sbbuy8722Sbtitle(Object assetName, Object user) {
+    return 'Vendi $assetName online all\'utente $user';
+  }
 
   @override
-  String get user250Sbads250Sbheading8722Sbput8722Sbsell8722Sbtitle => 'Acquista {assetName} opzione put da {user}';
-
-  @override
-  String get user250Sbads250Sblocal8722Sbbuy8722Sbtitle => 'Vendi {assetName} per contanti con {user}';
-
-  @override
-  String get user250Sbads250Sblocal8722Sbsell8722Sbtitle => 'Acquista {assetName} in contanti dall\'utente {user}';
-
-  @override
-  String get user250Sbads250Sbonline8722Sbbuy8722Sbtitle => 'Vendi {assetName} online all\'utente {user}';
-
-  @override
-  String get user250Sbads250Sbonline8722Sbsell8722Sbtitle => 'Compra {assetName} online dall\'utente {user}';
+  String user250Sbads250Sbonline8722Sbsell8722Sbtitle(Object assetName, Object user) {
+    return 'Compra $assetName online dall\'utente $user';
+  }
 
   @override
   String user250Sbblock8722Sbbtn(Object username) {
@@ -6187,7 +6559,9 @@ class I18nIt extends I18n {
   String get user250Sbcache8722Sbdisclaimer => 'Updated once an hour';
 
   @override
-  String get user250Sbfeedback8722Sbmore => 'Vedi più feedback di {user}';
+  String user250Sbfeedback8722Sbmore(Object user) {
+    return 'Vedi più feedback di $user';
+  }
 
   @override
   String get user250Sbfeedback8722Sbscore => 'Punteggio feedback:';
@@ -6270,7 +6644,9 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get user250Sbupdate8722Sbfeedback8722Sbtitle => 'Update feedback on {username}';
+  String user250Sbupdate8722Sbfeedback8722Sbtitle(Object username) {
+    return 'Update feedback on $username';
+  }
 
   @override
   String get validation250Sberror250Sbad8722Sbid => 'ID non valido!';
@@ -6333,10 +6709,14 @@ class I18nIt extends I18n {
   String get wallet250Sbfee250Sbxmr250Sbstandard => 'Standard';
 
   @override
-  String get wallet250Sbfunds8722Sbunlock8722Sbtime8722Sbblock => 'I fondi saranno sbloccati al blocco {block-height}';
+  String wallet250Sbfunds8722Sbunlock8722Sbtime8722Sbblock(Object blockHeight) {
+    return 'I fondi saranno sbloccati al blocco $blockHeight';
+  }
 
   @override
-  String get wallet250Sbfunds8722Sbunlock8722Sbtime8722Sbtime => 'I fondi saranno sbloccati alle {time}';
+  String wallet250Sbfunds8722Sbunlock8722Sbtime8722Sbtime(Object time) {
+    return 'I fondi saranno sbloccati alle $time';
+  }
 
   @override
   String get wallet250Sbfunds8722Sbunlocked => 'Sbloccato';
@@ -6351,7 +6731,9 @@ class I18nIt extends I18n {
   String get wallet250Sbpassword8722Sbtip => 'Si prega di inserire la password per procedere. 8-72 caratteri.';
 
   @override
-  String get wallet250Sbpriority250Sbfee => 'commissione: {amount} {asset}';
+  String wallet250Sbpriority250Sbfee(Object amount, Object asset) {
+    return 'commissione: $amount $asset';
+  }
 
   @override
   String get wallet250Sbpriority250Sblow => 'basso';
@@ -6360,7 +6742,9 @@ class I18nIt extends I18n {
   String get wallet250Sbpriority250Sbstandard => 'Standard';
 
   @override
-  String get wallet250Sbreceive250Sbaddress => 'Il tuo indirizzo {assetName}:';
+  String wallet250Sbreceive250Sbaddress(Object assetName) {
+    return 'Il tuo indirizzo $assetName:';
+  }
 
   @override
   String get wallet250Sbreceive250Sbcopied => 'Copiato negli appunti!';
@@ -6396,7 +6780,9 @@ class I18nIt extends I18n {
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbtitle => 'Dettagli del deposito';
 
   @override
-  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbamount => 'Importo {assetSymbol}';
+  String wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbamount(Object assetSymbol) {
+    return 'Importo $assetSymbol';
+  }
 
   @override
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sblong => 'Conferme';
@@ -6420,7 +6806,9 @@ class I18nIt extends I18n {
   String get wallet250Sbreceive250Sbno8722Sbincoming => 'I tuoi depositi in sospeso verranno mostrati qui';
 
   @override
-  String get wallet250Sbreceive250Sbqr => 'Rappresentazione QR del tuo indirizzo {appName} {assetSymbol} ';
+  String wallet250Sbreceive250Sbqr(Object appName, Object assetSymbol) {
+    return 'Rappresentazione QR del tuo indirizzo $appName $assetSymbol ';
+  }
 
   @override
   String wallet250Sbreceive250Sbtitle(Object assetName) {
@@ -6431,25 +6819,37 @@ class I18nIt extends I18n {
   String get wallet250Sbselect8722Sball8722Sbbalance => 'Tutto il saldo disponibile';
 
   @override
-  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived => 'Ricevi importo in {assetName}';
+  String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived(Object assetName) {
+    return 'Ricevi importo in $assetName';
+  }
 
   @override
-  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip => 'Questa è la quantità di {assetName} da ricevere all\'indirizzo {assetName} fornito.';
+  String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip(Object assetName) {
+    return 'Questa è la quantità di $assetName da ricevere all\'indirizzo $assetName fornito.';
+  }
 
   @override
   String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip250Sbfee8722Sbon8722Sbtop => 'La commissione per le transazioni di rete verrà aggiunta a questo importo.';
 
   @override
-  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn => 'Importo da detrarre in {assetName}';
+  String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn(Object assetName) {
+    return 'Importo da detrarre in $assetName';
+  }
 
   @override
-  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip => 'Questo è l\'importo stimato di {assetSymbol} da detrarre dal tuo portafoglio {appName} {assetName} per coprire la {assetName} commissione sulla rete di transazione.';
+  String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip(Object assetSymbol, Object appName, Object assetName) {
+    return 'Questo è l\'importo stimato di $assetSymbol da detrarre dal tuo portafoglio $appName $assetName per coprire la $assetName commissione sulla rete di transazione.';
+  }
 
   @override
-  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip250Sbonly8722Sbfor8722Sbexternal => 'Rilevante solo per le transazioni inviate a un portafoglio {assetName} esterno. Le transazioni interne tra i portafogli {appName} sono completamente gratuite.';
+  String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip250Sbonly8722Sbfor8722Sbexternal(Object assetName, Object appName) {
+    return 'Rilevante solo per le transazioni inviate a un portafoglio $assetName esterno. Le transazioni interne tra i portafogli $appName sono completamente gratuite.';
+  }
 
   @override
-  String get wallet250Sbsend250Sbavailable8722Sbbalance => 'Puoi inviare fino a {amount} {assetSymbol}';
+  String wallet250Sbsend250Sbavailable8722Sbbalance(Object amount, Object assetSymbol) {
+    return 'Puoi inviare fino a $amount $assetSymbol';
+  }
 
   @override
   String get wallet250Sbsend250Sbcontinue8722Sbbtn => 'Continua';
@@ -6458,7 +6858,9 @@ class I18nIt extends I18n {
   String get wallet250Sbsend250Sbdialog250Sbconfirm8722Sbtitle => 'Confermare il ritiro del vincolo arbitrale';
 
   @override
-  String get wallet250Sbsend250Sblocal8722Sbwallet => 'Indirizzo portafoglio {appName}';
+  String wallet250Sbsend250Sblocal8722Sbwallet(Object appName) {
+    return 'Indirizzo portafoglio $appName';
+  }
 
   @override
   String get wallet250Sbsend250Sbpriority250Sbfaq8722Sblink => 'Cos\'è questo?';
@@ -6472,7 +6874,9 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get wallet250Sbsend250Sbreceiving8722Sbaddress8722Sbtip => 'Accettiamo solo inidirizzi {assetName} validi';
+  String wallet250Sbsend250Sbreceiving8722Sbaddress8722Sbtip(Object assetName) {
+    return 'Accettiamo solo inidirizzi $assetName validi';
+  }
 
   @override
   String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
@@ -6498,10 +6902,14 @@ class I18nIt extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle57Sbagoradesk => 'Quanto tempo richiede una transazione di criptovaluta?';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb18722Sbtext => 'Il portafoglio di {appName} è un portafoglio Web: gli indirizzi Monero in uscita non sono collegati al tuo account. Se stai chiedendo il rimborso ad un commerciante, ti preghiamo di chiedere di inviare il rimborso al tuo portafoglio personale.';
+  String wallet250Sbsend250Sbtip8722Sb18722Sbtext(Object appName) {
+    return 'Il portafoglio di $appName è un portafoglio Web: gli indirizzi Monero in uscita non sono collegati al tuo account. Se stai chiedendo il rimborso ad un commerciante, ti preghiamo di chiedere di inviare il rimborso al tuo portafoglio personale.';
+  }
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb18722Sbtext57Sbagoradesk => 'Il portafoglio {appName} è un portafoglio Web: gli indirizzi di criptovaluta in uscita non sono collegati al tuo account. Se stai chiedendo un rimborso da un commerciante, chiedi loro di inviare il rimborso al tuo indirizzo di ricezione.';
+  String wallet250Sbsend250Sbtip8722Sb18722Sbtext57Sbagoradesk(Object appName) {
+    return 'Il portafoglio $appName è un portafoglio Web: gli indirizzi di criptovaluta in uscita non sono collegati al tuo account. Se stai chiedendo un rimborso da un commerciante, chiedi loro di inviare il rimborso al tuo indirizzo di ricezione.';
+  }
 
   @override
   String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle => 'Rimborsi e pagamenti Monero';
@@ -6515,13 +6923,19 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee => 'Commissione di rete {assetName} corrente in uscita';
+  String wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee(Object assetName) {
+    return 'Commissione di rete $assetName corrente in uscita';
+  }
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee8722Sbrates => 'Attuali tariffe di rete in uscita {assetName} ';
+  String wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee8722Sbrates(Object assetName) {
+    return 'Attuali tariffe di rete in uscita $assetName ';
+  }
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb28722Sbtext57Sbagoradesk => 'Quando invii dal portafoglio {appName}, una commissione di rete è riservata e detratta dal tuo saldo. Le transazioni su portafogli di altri utenti {appName} sono gratuite.';
+  String wallet250Sbsend250Sbtip8722Sb28722Sbtext57Sbagoradesk(Object appName) {
+    return 'Quando invii dal portafoglio $appName, una commissione di rete è riservata e detratta dal tuo saldo. Le transazioni su portafogli di altri utenti $appName sono gratuite.';
+  }
 
   @override
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle => 'Commissioni Monero in uscita';
@@ -6530,7 +6944,9 @@ class I18nIt extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Commissioni di criptovaluta in uscita';
 
   @override
-  String get wallet250Sbsend250Sbtitle => 'Invia {assetName}';
+  String wallet250Sbsend250Sbtitle(Object assetName) {
+    return 'Invia $assetName';
+  }
 
   @override
   String get wallet250Sbswap250Sbcheckbox250Sbdeposit => 'Voglio depositare un\'altra valuta';
@@ -6539,13 +6955,19 @@ class I18nIt extends I18n {
   String get wallet250Sbswap250Sbcheckbox250Sbwithdraw => 'Voglio ricevere un\'altra valuta';
 
   @override
-  String get wallet250Sbswap250Sbconfirmation250Sbtitle => 'Il tuo {partner} scambio';
+  String wallet250Sbswap250Sbconfirmation250Sbtitle(Object partner) {
+    return 'Il tuo $partner scambio';
+  }
 
   @override
-  String get wallet250Sbswap250Sbconnection8722Sberror => 'Qualcosa è andato storto durante la connessione a {partner}, riprova più tardi.';
+  String wallet250Sbswap250Sbconnection8722Sberror(Object partner) {
+    return 'Qualcosa è andato storto durante la connessione a $partner, riprova più tardi.';
+  }
 
   @override
-  String get wallet250Sbswap250Sbcontinue8722Sbon => 'Continua su {partner}';
+  String wallet250Sbswap250Sbcontinue8722Sbon(Object partner) {
+    return 'Continua su $partner';
+  }
 
   @override
   String get wallet250Sbswap250Sbcurrencies250Sbdeposit => 'Voglio inviare...';
@@ -6557,7 +6979,9 @@ class I18nIt extends I18n {
   String get wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress => 'a questo indirizzo:';
 
   @override
-  String get wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress250Sbhelper => 'Dopo aver ricevuto la transazione, {partner} invierà {asset} al tuo portafoglio {appName}';
+  String wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress250Sbhelper(Object partner, Object asset, Object appName) {
+    return 'Dopo aver ricevuto la transazione, $partner invierà $asset al tuo portafoglio $appName';
+  }
 
   @override
   String get wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress250Sbsend => 'Inviare';
@@ -6566,7 +6990,9 @@ class I18nIt extends I18n {
   String get wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress250Sbto8722Sbthis => ' a questo indirizzo:';
 
   @override
-  String get wallet250Sbswap250Sbdeposits250Sbhelper => 'Vedrai la transazione sul portafoglio di ricezione dopo che è stata confermata dalla rete {asset} (≈10-60 min)';
+  String wallet250Sbswap250Sbdeposits250Sbhelper(Object asset) {
+    return 'Vedrai la transazione sul portafoglio di ricezione dopo che è stata confermata dalla rete $asset (≈10-60 min)';
+  }
 
   @override
   String get wallet250Sbswap250Sblimits250Sbdeposit250SbmaxAmount => 'Importo massimo del deposito';
@@ -6575,19 +7001,29 @@ class I18nIt extends I18n {
   String get wallet250Sbswap250Sblimits250Sbdeposit250SbminAmount => 'Importo minimo del deposito';
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbnojs8722Sbdescription => 'Scegli se vuoi calcolare lo scambio in base a quanto {asset} vuoi inviare o quanto {currencyCode} vuoi ricevere. Lo useremo per trovare le migliori offerte per te.';
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbnojs8722Sbdescription(Object asset, Object currencyCode) {
+    return 'Scegli se vuoi calcolare lo scambio in base a quanto $asset vuoi inviare o quanto $currencyCode vuoi ricevere. Lo useremo per trovare le migliori offerte per te.';
+  }
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive => 'Ricevere {currencyCode}';
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+    return 'Ricevere $currencyCode';
+  }
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend => 'Invia {asset}';
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+    return 'Invia $asset';
+  }
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbamount250Sbdescription250Sbamount8722Sbtype8722Sbreceive => 'La quantità di {currencyCode} che vuoi ricevere';
+  String wallet250Sbswap250Sbnative250Sbamount250Sbdescription250Sbamount8722Sbtype8722Sbreceive(Object currencyCode) {
+    return 'La quantità di $currencyCode che vuoi ricevere';
+  }
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbamount250Sbdescription250Sbamount8722Sbtype8722Sbsend => 'La quantità di {asset} che vuoi inviare';
+  String wallet250Sbswap250Sbnative250Sbamount250Sbdescription250Sbamount8722Sbtype8722Sbsend(Object asset) {
+    return 'La quantità di $asset che vuoi inviare';
+  }
 
   @override
   String get wallet250Sbswap250Sbnative250Sberror250Sbinvalid8722Sbamount => 'Importo non valido';
@@ -6605,10 +7041,14 @@ class I18nIt extends I18n {
   String get wallet250Sbswap250Sbnative250Sbtrade8722Sbbutton => 'Scambio';
 
   @override
-  String get wallet250Sbswap250Sbpowered8722Sbby => 'fornito da {partner}';
+  String wallet250Sbswap250Sbpowered8722Sbby(Object partner) {
+    return 'fornito da $partner';
+  }
 
   @override
-  String get wallet250Sbswap250Sbprovide8722Sbemail => 'Dai a {partner} il mio indirizzo email di contatto';
+  String wallet250Sbswap250Sbprovide8722Sbemail(Object partner) {
+    return 'Dai a $partner il mio indirizzo email di contatto';
+  }
 
   @override
   String get wallet250Sbswap250Sbsave8722Sblink => 'Assicurati di salvare questo collegamento, è il tuo unico modo per monitorare il commercio!';
@@ -6620,37 +7060,57 @@ class I18nIt extends I18n {
   String get wallet250Sbswap250Sbstatus250Sbavailable => 'Stato: disponibile';
 
   @override
-  String get wallet250Sbswap250Sbswap8722Sbasset8722Sbinput250Sbwithdrawal => 'Stimato inviato {asset}';
+  String wallet250Sbswap250Sbswap8722Sbasset8722Sbinput250Sbwithdrawal(Object asset) {
+    return 'Stimato inviato $asset';
+  }
 
   @override
-  String get wallet250Sbswap250Sbswap8722Sbasset8722Sbinput250Sbwithdrawal250Sbhelper => 'Importo stimato di {asset} da detrarre dal tuo portafoglio {appName} {assetName} per ricevere l\'importo {currency} di cui sopra e coprire la {assetName} tariffa di rete della transazione. Può variare leggermente a causa delle fluttuazioni delle tariffe di rete.';
+  String wallet250Sbswap250Sbswap8722Sbasset8722Sbinput250Sbwithdrawal250Sbhelper(Object asset, Object appName, Object assetName, Object currency) {
+    return 'Importo stimato di $asset da detrarre dal tuo portafoglio $appName $assetName per ricevere l\'importo $currency di cui sopra e coprire la $assetName tariffa di rete della transazione. Può variare leggermente a causa delle fluttuazioni delle tariffe di rete.';
+  }
 
   @override
-  String get wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbdeposit => 'Quanto {currency} vuoi inviare?';
+  String wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbdeposit(Object currency) {
+    return 'Quanto $currency vuoi inviare?';
+  }
 
   @override
-  String get wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbwithdrawal => 'Stima ricevuta {currency}';
+  String wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbwithdrawal(Object currency) {
+    return 'Stima ricevuta $currency';
+  }
 
   @override
-  String get wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbwithdrawal250Sbhelper => 'Importo stimato di {currency} che otterrai. Utilizzare l\'ingresso di seguito per modificarlo. Può variare leggermente a causa delle {partner} fluttuazioni del tasso di cambio.';
+  String wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbwithdrawal250Sbhelper(Object currency, Object partner) {
+    return 'Importo stimato di $currency che otterrai. Utilizzare l\'ingresso di seguito per modificarlo. Può variare leggermente a causa delle $partner fluttuazioni del tasso di cambio.';
+  }
 
   @override
-  String get wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbhelper => 'Rilassati, attendi {time} minuti e {partner} ti invierà {currency}';
+  String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbhelper(Object time, Object partner, Object currency) {
+    return 'Rilassati, attendi $time minuti e $partner ti invierà $currency';
+  }
 
   @override
-  String get wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle => ' Abbiamo inviato {asset} a {partner}';
+  String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle(Object asset, Object partner) {
+    return ' Abbiamo inviato $asset a $partner';
+  }
 
   @override
-  String get wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle250Sball8722Sbset => 'Tutto pronto per il {partner} scambio!';
+  String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle250Sball8722Sbset(Object partner) {
+    return 'Tutto pronto per il $partner scambio!';
+  }
 
   @override
-  String get wallet250Sbtab250Sbreceive8722Sblong => 'Ricevi {assetName}';
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+    return 'Ricevi $assetName';
+  }
 
   @override
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Ricevi';
 
   @override
-  String get wallet250Sbtab250Sbsend8722Sblong => 'Invia {assetName}';
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+    return 'Invia $assetName';
+  }
 
   @override
   String get wallet250Sbtab250Sbsend8722Sbshort => 'Invia';
@@ -6719,13 +7179,68 @@ class I18nIt extends I18n {
   String get wallet250Sbtx250Sbsend => 'Inviato a';
 
   @override
-  String get wallet250Sbtx250Sbsend8722Sbid => 'ID della transazione {assetName}:';
+  String wallet250Sbtx250Sbsend8722Sbid(Object assetName) {
+    return 'ID della transazione $assetName:';
+  }
 
   @override
   String get wallet250Sbtxs250Sbdetails8722Sbdialog250Sbtitle => 'Dettagli transazione';
 
   @override
-  String get wallet250Sbtxs250Sbtable250Sbamount => 'Importo {assetSymbol}';
+  String get wallet250Sbtxs250Sbfilter250Sbdetails => 'Dettagli';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'ID Tx, indirizzo, ID commerciale, nome utente ecc.';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbfrom => 'Da';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtitle => 'Filtrare le transazioni';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbto => 'a';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype => 'Tipo';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => 'Commissione di affiliazione';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sball => 'Tutti i tipi';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbcoupon => 'Abbuono del coupon';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbfee => 'Canone di rete';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbreceive => 'Ricezione interna';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbsend => 'Invio interno';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbpending => 'In attesa di invio';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreceive => 'Ricevi';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => 'Riserva commerciale';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => 'Rendimento della riserva commerciale';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbsend => 'Invia';
+
+  @override
+  String wallet250Sbtxs250Sbtable250Sbamount(Object assetSymbol) {
+    return 'Importo $assetSymbol';
+  }
 
   @override
   String get wallet250Sbtxs250Sbtable250Sbdate => 'Data';
@@ -6734,25 +7249,35 @@ class I18nIt extends I18n {
   String get wallet250Sbtxs250Sbtable250Sbdescription => 'Descrizione';
 
   @override
-  String get wallet250Sbtxs250Sbtable250Sbreceived => '{assetSymbol} ricevuti';
+  String wallet250Sbtxs250Sbtable250Sbreceived(Object assetSymbol) {
+    return '$assetSymbol ricevuti';
+  }
 
   @override
-  String get wallet250Sbtxs250Sbtable250Sbsent => '{assetSymbol} inviati';
+  String wallet250Sbtxs250Sbtable250Sbsent(Object assetSymbol) {
+    return '$assetSymbol inviati';
+  }
 
   @override
-  String get wallet250Sbtxs250Sbtip8722Sbtext => 'Se è possibile visualizzare un ID di transazione con un collegamento al blockchain explorer nella descrizione, significa che la transazione è stata trasmessa correttamente. Assicurati che il tuo portafoglio sia completamente sincronizzato e che stai utilizzando l\' {latest-version} del portafoglio {assetName}';
+  String wallet250Sbtxs250Sbtip8722Sbtext(Object latestVersion, Object assetName) {
+    return 'Se è possibile visualizzare un ID di transazione con un collegamento al blockchain explorer nella descrizione, significa che la transazione è stata trasmessa correttamente. Assicurati che il tuo portafoglio sia completamente sincronizzato e che stai utilizzando l\' $latestVersion del portafoglio $assetName';
+  }
 
   @override
   String get wallet250Sbtxs250Sbtip8722Sbtext8722Sblatest8722Sbversion => 'ultima versione';
 
   @override
-  String get wallet250Sbtxs250Sbtip8722Sbtitle => 'Suggerimento: ritirati i fondi da {appName} e non li vedi nel tuo portafoglio?';
+  String wallet250Sbtxs250Sbtip8722Sbtitle(Object appName) {
+    return 'Suggerimento: ritirati i fondi da $appName e non li vedi nel tuo portafoglio?';
+  }
 
   @override
   String get wallet250Sbtxs250Sbtitle => 'Transazioni a portafoglio';
 
   @override
-  String get wallet250Sbupdate8722Sbsoft8722Sbwarn => 'È disponibile una nuova versione del software Monero! Non dimenticare di {update} il tuo software di portafoglio, altrimenti non sarai in grado di inviare e ricevere transazioni.';
+  String wallet250Sbupdate8722Sbsoft8722Sbwarn(Object update) {
+    return 'È disponibile una nuova versione del software Monero! Non dimenticare di $update il tuo software di portafoglio, altrimenti non sarai in grado di inviare e ricevere transazioni.';
+  }
 
   @override
   String get wallet250Sbupdate8722Sbsoft8722Sbwarn8722Sbupdate => 'update';
@@ -6830,10 +7355,14 @@ class I18nIt extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Cambia indirizzo';
 
   @override
-  String get wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel => 'Importo ({asset})';
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+    return 'Importo ($asset)';
+  }
 
   @override
-  String get wallet250Sbwithdrawal250Sbconfirmation250Sbfee => '+ tariffa di rete (≈ {fee} {currency})';
+  String wallet250Sbwithdrawal250Sbconfirmation250Sbfee(Object fee, Object currency) {
+    return '+ tariffa di rete (≈ $fee $currency)';
+  }
 
   @override
   String get wallet250Sbwithdrawal250Sberror250Sbtoo8722Sbsmall => 'L\'importo che è stato richiesto per il prelievo è inferiore all\'importo minimo possibile';
@@ -6845,19 +7374,27 @@ class I18nIt extends I18n {
   String get warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb0 => '<strong>NOTE:</strong> Questo metodo di pagamento è <strong> ad alto rischio </strong>, poiché è <strong> reversibile </strong> e per questo motivo viene spesso utilizzato dagli scammer.';
 
   @override
-  String get warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1 => 'Anche se scambi solo con compratori affidabili, non c\'è alcuna garanzia che non finirai in una situazione di controversia {method}. Ecco qualcosa che puoi fare per aumentare le tue possibilità: {linebreak} 1. Richiedi 2 scansioni con ID foto dell\'acquirente (ad esempio passaporto e patente di guida), assicurati che il nome dell\'account {method} corrisponda all\'ID. {linebreak} 2. Spiega all\'acquirente di inviarti un\'email dall\'account email {method}. {linebreak} 3. Carica dei premi molto alti per {metodo} il commercio. Ad esempio, 25% e oltre. In questo modo sei coperto se 1 su 5 delle tue negoziazioni su {method} sono truffe (a parità di quantità commerciali). {linebreak} 4. Diffida delle elevate quantità di scambi. Cerca di ottenere alcune transazioni di importo inferiore prima con un operatore. {linebreak}';
+  String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
+    return 'Anche se scambi solo con compratori affidabili, non c\'è alcuna garanzia che non finirai in una situazione di controversia $method. Ecco qualcosa che puoi fare per aumentare le tue possibilità: $linebreak  1. Richiedi 2 scansioni con ID foto dell\'acquirente (ad esempio passaporto e patente di guida), assicurati che il nome dell\'account $method corrisponda all\'ID. $linebreak  2. Spiega all\'acquirente di inviarti un\'email dall\'account email $method. $linebreak  3. Carica dei premi molto alti per {metodo} il commercio. Ad esempio, 25% e oltre. In questo modo sei coperto se 1 su 5 delle tue negoziazioni su $method sono truffe (a parità di quantità commerciali). $linebreak  4. Diffida delle elevate quantità di scambi. Cerca di ottenere alcune transazioni di importo inferiore prima con un operatore. $linebreak ';
+  }
 
   @override
   String get warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0 => 'Questo annuncio è stato nascosto perché l\'importo minimo che hai specificato è inferiore all\'importo massimo disponibile';
 
   @override
-  String get warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb1 => 'Questo trader è in vacanza o probabilmente offline da {assetName}. Si prega di riprovare più tardi o cercare altre offerte.';
+  String warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb1(Object assetName) {
+    return 'Questo trader è in vacanza o probabilmente offline da $assetName. Si prega di riprovare più tardi o cercare altre offerte.';
+  }
 
   @override
-  String get warning250Sbnot8722Sbenough8722Sbbalance => 'Tutti i tuoi annunci di vendita {asset} sono stati nascosti alla ricerca pubblica perché il saldo del tuo portafoglio di obbligazioni arbitrali è inferiore a {min-required-balance}. Affinché i tuoi annunci di vendita diventino visibili, deposita almeno {amount-xmr} nel tuo portafoglio di obbligazioni arbitrali {localmonero-wallet}.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Tutti i tuoi annunci di vendita $asset sono stati nascosti alla ricerca pubblica perché il saldo del tuo portafoglio di obbligazioni arbitrali è inferiore a $minRequiredbalance. Affinché i tuoi annunci di vendita diventino visibili, deposita almeno $amountXmr nel tuo portafoglio di obbligazioni arbitrali $localmoneroWallet.';
+  }
 
   @override
-  String get warning250Sbnot8722Sbenough8722Sbbalance8722Sblocalmonero8722Sbwallet => 'Portafoglio {appName}';
+  String warning250Sbnot8722Sbenough8722Sbbalance8722Sblocalmonero8722Sbwallet(Object appName) {
+    return 'Portafoglio $appName';
+  }
 
   @override
   String get web8722Sbnotification250Sbmessage => 'Hai un nuovo messagio.';
@@ -6869,22 +7406,10 @@ class I18nIt extends I18n {
   String get web8722Sbnotification250Sbtrade8722Sbcomplete => 'Una compravendita è stata completata.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbcovered => 'Pagamento della copertura confermato';
-
-  @override
   String get web8722Sbnotification250Sbtrade8722Sbdisputed => 'Una tua compravendita è stata contestata.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbexercised => 'L\'opzione è stata esercitata';
-
-  @override
   String get web8722Sbnotification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete => 'Pagamento completato.';
-
-  @override
-  String get web8722Sbnotification250Sbtrade8722Sbpremium8722Sbpayment8722Sbconfirmed => 'Pagamento premium confermato';
-
-  @override
-  String get web8722Sbnotification250Sbtrade8722Sbpremium8722Sbpayment8722Sbmarked8722Sbcomplete => 'Pagamento premium contrassegnato come completo';
 
   @override
   String get web8722Sbnotification250Sbtrade8722Sbrequest => 'Hai una nuova compravendita.';
@@ -6899,13 +7424,19 @@ class I18nIt extends I18n {
   String get widget8722Sbinstructions250Sbaffiliate8722Sbnot8722Sbenabled => 'Abilita il programma di affiliazione per allegare il codice di riferimento al widget';
 
   @override
-  String get widget8722Sbinstructions250Sbinstructions => 'Per ottenere un widget di prezzo stradale {assetName} per il tuo sito web seleziona la seguente valuta desiderata e semplicemente incolla il seguente codice nella tua pagina web:';
+  String widget8722Sbinstructions250Sbinstructions(Object assetName) {
+    return 'Per ottenere un widget di prezzo stradale $assetName per il tuo sito web seleziona la seguente valuta desiderata e semplicemente incolla il seguente codice nella tua pagina web:';
+  }
 
   @override
-  String get widget8722Sbinstructions250Sbtitle8722Sbaffiliate => '{assetName} Street Price Widget (con il tuo codice affiliato)';
+  String widget8722Sbinstructions250Sbtitle8722Sbaffiliate(Object assetName) {
+    return '$assetName Street Price Widget (con il tuo codice affiliato)';
+  }
 
   @override
-  String get widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate => '{assetName} Street Price Widget';
+  String widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate(Object assetName) {
+    return '$assetName Street Price Widget';
+  }
 
   @override
   String get ads => 'Annunci';
@@ -7035,7 +7566,7 @@ class I18nIt extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Inserire e verificare l\'indirizzo a cui verranno inviate le monete. Non può essere un indirizzo $appName interno.';
+    return 'Inserisci e verifica il tuo indirizzo a cui verranno inviate le monete. Non può essere un indirizzo $appName interno.';
   }
 
   @override
@@ -7382,7 +7913,7 @@ class I18nIt extends I18n {
   String get api_error_4001 => 'Timeout della connessione, controllare la connessione a Internet.';
 
   @override
-  String get api_error_45 => 'Non puoi avere sia \'first_time_limit_asset\' che \'first_time_limit_{btc | xmr}\' nella tua richiesta. Rimuovine uno (sono intercambiabili).';
+  String get api_error_45 => 'Non puoi avere sia \"first_time_limit_asset\" che \"first_time_limit_TICKER\" nella tua richiesta. Rimuovere uno di loro (sono intercambiabili).';
 
   @override
   String get api_error_46 => 'La richiesta deve contenere O un corpo di richiesta applicazione/json con un parametro \"msg\" OPPURE un corpo di richiesta multipart/form-data con il file immagine elencato sotto il parametro \"documento\"';
@@ -8215,7 +8746,7 @@ class I18nIt extends I18n {
 
   @override
   String app_staff(Object appName) {
-    return 'Personale $appName';
+    return '$appName personale';
   }
 
   @override
@@ -8300,30 +8831,9 @@ class I18nIt extends I18n {
   String get dark_theme => 'Tema scuro';
 
   @override
-  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Accettare i termini e continuare';
-
-  @override
-  String get coupons250Sbcode8722Sbapply => 'Applicare un codice coupon';
-
-  @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Lettera di reimpostazione della password inviata! Controlla la tua casella di posta.';
-
-  @override
-  String get error250Sbwithdraw250Sb738722Sb140 => 'Password errata/password unica';
-
-  @override
-  String get error250Sbsignup250Sb175 => 'Tentativo di riscattare un coupon inesistente durante la registrazione';
-
-  @override
-  String get error250Sbsignup250Sb176 => 'Tentativo di riscattare un coupon scaduto durante la registrazione';
-
-  @override
   String search__no_results(Object country) {
     return 'Nessun risultato in $country con i criteri selezionati... ancora.';
   }
-
-  @override
-  String get logout250Sbtitle => 'Disconnettersi';
 
   @override
   String get affiliate__explain_is_reg => 'L\'affiliazione viene registrata quando un utente si iscrive dopo essere arrivato sul sito da un link con il vostro codice di riferimento.';
@@ -8338,12 +8848,12 @@ class I18nIt extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '- È possibile collegarsi a qualsiasi pagina individuale, come l\'elenco dei Paesi o dei metodi di pagamento, o qualsiasi altra pagina di $appName.\n- Guadagnerete criptovalute dagli utenti che arriveranno al sito attraverso il vostro link di affiliazione, si registreranno ed effettueranno transazioni.\n- I pagamenti saranno effettuati quotidianamente sul vostro portafoglio $appName nelle criptovalute pertinenti.\n- Le commissioni saranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sulle entrate che il nuovo utente porta a $appName (commissioni di trading).\n- È vietata qualsiasi pratica scorretta, come la pubblicità ingannevole.\n- È vietato lo spamming. Lo spamming comprende l\'invio di messaggi privati o pubblici non sottoscritti su forum/reddit, mass-mail non sottoscritte, ecc.\n- È vietato aggiungere iframes nascosti su un sito web per catturare gli affiliati. Sono consentiti solo iframes di affiliazione o link diretti alla pagina web.\n- $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. In caso di violazione dei termini, il programma di affiliazione verrà interrotto.';
+    return '• Puoi collegarti a qualsiasi singola pagina, come l\'elenco dei paesi o dei metodi di pagamento, o qualsiasi altra cosa su $appName.\n• Guadagnerai criptovaluta dagli utenti che arrivano al sito tramite il tuo link di affiliazione registrati ed effettuano scambi.\n• I pagamenti verranno effettuati giornalmente sul tuo portafoglio $appName nelle relative criptovalute.\n• Le commissioni saranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sul reddito che il nuovo utente porta per $appName (commissioni di negoziazione).\n• È vietato qualsiasi gioco scorretto, come pubblicità ingannevole.\n• Lo spam è vietato. Lo spamming include l\'invio di messaggi privati o pubblici non iscritti su forum/reddit, e-mail di massa non iscritte, ecc.\n• È vietato aggiungere iframe nascosti su un sito web per catturare gli affiliati. Sono consentiti solo iframe di affiliazione o link diretti alla pagina web.\n• $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. Se violi i termini, il tuo programma di affiliazione verrà terminato.';
   }
 
   @override
-  String affiliate__example__text(Object assetName, Object assetSymbol, Object appName) {
-    return 'Si hanno due utenti, acquirente e venditore di $assetName registrati su $appName, che effettuano una compravendita del valore di 100 $assetSymbol. Guadagnate il 20% di commissione sulle commissioni di negoziazione di $appName da entrambi i partecipanti, in totale il 40% della commissione di $appName.\n\nLa somma guadagnata è di 0,4 $assetSymbol. Solo le vendite finalizzate che passano attraverso il nostro processo di transazione sono rilevanti. I pagamenti vengono effettuati quotidianamente.\n\nIl supporto di $appName è più che disponibile ad aiutarti con qualsiasi domanda.';
+  String affiliate__example__text(Object assetName, Object appName, Object assetSymbol) {
+    return 'Ottieni due utenti, acquirente e venditore di $assetName registrati su $appName, e fanno uno scambio del valore di 100 $assetSymbol. Guadagni una commissione del 20% sulle commissioni di negoziazione di $appName da entrambi i partecipanti, in totale il 40% della commissione di $appName.\n\nLa tua somma guadagnata è 0,4 $assetSymbol. Contano solo le vendite finalizzate che passano attraverso il nostro processo di transazione. I pagamenti vengono effettuati giornalmente.\n\nL\'assistenza $appName è più che disposta ad aiutarti per qualsiasi domanda.';
   }
 
   @override
@@ -8351,16 +8861,13 @@ class I18nIt extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Il vostro programma di affiliazione è attivo e potete guadagnare commissioni aggiungendo il vostro tag di affiliazione $ref_code a qualsiasi URL $appName.';
+    return 'Il tuo programma di affiliazione è abilitato e puoi guadagnare commissioni aggiungendo il tuo tag di affiliazione $ref_code a qualsiasi URL $appName.';
   }
 
   @override
   String reputation_import__step__username__input__label(Object platform) {
     return 'Il tuo nome utente $platform ';
   }
-
-  @override
-  String get error250Sbsignup250Sb177 => 'Tentativo di riscattare un coupon che è esaurito durante la registrazione';
 
   @override
   String reputation_import__step__code__message(Object platform) {
@@ -8416,7 +8923,7 @@ class I18nIt extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Annota il tuo codice di backup (sopra in verde) su un pezzo di carta e conservalo in un luogo sicuro. Ne avrai bisogno se perdi il telefono o verrai bloccato fuori dal tuo account. $appName non sarà in grado di aiutarti se dovessi perdere questo codice.';
+    return 'Annota il tuo codice di backup (sopra in verde) su un pezzo di carta e conservalo in un luogo sicuro. Ne avrai bisogno se perdi il telefono o sarai bloccato fuori dal tuo account. $appName non sarà in grado di aiutarti se perdi questo codice.';
   }
 
   @override
@@ -8424,7 +8931,7 @@ class I18nIt extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Fai attenzione ai truffatori che cercano di impersonare il personale!\nGli amministratori di $appName non ti diranno mai di finalizzare un\'operazione.\nI messaggi del personale hanno uno sfondo rosso.';
+    return 'Fai attenzione ai truffatori che cercano di impersonare il personale!\nGli amministratori di $appName non ti diranno mai di finalizzare uno scambio.\nI messaggi del personale hanno uno sfondo rosso.';
   }
 
   @override
@@ -8434,7 +8941,7 @@ class I18nIt extends I18n {
 
   @override
   String app_buyer_marked_as_paid(Object val) {
-    return '$val ha contrassegnato lo scambio come pagato';
+    return '$val ha contrassegnato l\'operazione come pagata';
   }
 
   @override
@@ -8449,17 +8956,17 @@ class I18nIt extends I18n {
 
   @override
   String app_trades_with(Object val) {
-    return 'Vedi le operazioni con $val';
+    return 'Vedi le negoziazioni con $val';
   }
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '($val1 sarà in grado di annullare in $val2 min a meno che non venga contrassegnato come pagato)';
+    return '($val1 sarà in grado di annullare in $val2 min a meno che non contrassegni come pagato)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val ora è in grado di annullare a meno che non venga contrassegnato come pagato)';
+    return '($val ora è in grado di annullare a meno che non contrassegni come pagato)';
   }
 
   @override
@@ -8590,7 +9097,7 @@ class I18nIt extends I18n {
 
   @override
   String app_note_label(Object val) {
-    return 'La tua nota su $val (visto solo da te)';
+    return 'La tua nota su $val (vista solo da te)';
   }
 
   @override
@@ -8635,7 +9142,7 @@ class I18nIt extends I18n {
 
   @override
   String app_last_seen(Object val) {
-    return 'Visto l\'ultima volta $val';
+    return 'Ultimo accesso $val';
   }
 
   @override
@@ -8654,8 +9161,70 @@ class I18nIt extends I18n {
   String get app_scan_qr_code => 'Scansiona il codice QR';
 
   @override
-  String get app_report_this_user => 'Report this user';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin in modo anonimo, senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
-  String get app_open_dropdown => 'Open dropdown';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: acquista Bitcoin facilmente';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: acquista facilmente XMR';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\nAcquista o vendi Monero senza verifica dell\'identità. ATTENZIONE: QUESTA APP È ATTUALMENTE IN OPEN BETA!\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: acquista XMR privatamente';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: acquista BTC in modo anonimo';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin senza verifica dell\'identità. Contanti o online.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'criptovaluta,anonimo,privato,monero,xmr,p2p';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'criptovaluta,bitcoin,monero,BTC,XMR,anonimo,privato';
+
+  @override
+  String get app_report_this_user => 'Segnala questo utente';
+
+  @override
+  String get app_open_dropdown => 'Apri il menu a discesa';
+
+  @override
+  String get error250Sbsignup250Sb175 => 'Tentativo di riscattare coupon che non esiste durante la registrazione';
+
+  @override
+  String get error250Sbsignup250Sb176 => 'Tentativo di riscattare un coupon scaduto durante la registrazione';
+
+  @override
+  String get error250Sbsignup250Sb177 => 'Tentativo di riscattare un coupon esaurito durante la registrazione';
+
+  @override
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Lettera di reimpostazione password inviata! Controlla la tua casella di posta.';
+
+  @override
+  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Accetta i termini e continua';
+
+  @override
+  String get logout250Sbtitle => 'Disconnettersi';
+
+  @override
+  String get coupons250Sbcode8722Sbapply => 'Applica un codice coupon';
+
+  @override
+  String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
+    return 'Acquista $assetName online';
+  }
+
+  @override
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'acquisto di opzione call';
+
+  @override
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vendita di opzioni call';
 }

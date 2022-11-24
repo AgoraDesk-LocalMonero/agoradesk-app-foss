@@ -194,6 +194,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       child: Consumer<AppState>(
         builder: (context, appState, _) {
           // TODO: find better way
+          print('+++++++++++++++++++++++++++++++++++++11 - ${appState.locale.languageCode}');
           setLocaleMessages(appState.locale.languageCode, appState.messagesLocaleTimeago);
           return OverlaySupport.global(
             child: MaterialApp.router(
@@ -466,9 +467,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
   void _initGlobalEvents() {
     eventBus
-      ..on<LocaleChangedEvent>().listen((e) {
-        // _api.locale = e.locale;
-      })
       ..on<LogOutEvent>().listen((e) {
         if (_authService.isAuthenticated) {
           _authService.logOut();
@@ -604,8 +602,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       mode = AppSharedPrefs().themeMode;
     }
     // appState.setThemeModeNoUpdate(isDarkMode ? ThemeMode.dark : ThemeMode.light);
+    final countryCode = AppSharedPrefs().locale?.countryCode;
     appState.updateWith(
-      locale: getLocaleWithCountry(AppSharedPrefs().locale?.countryCode),
+      locale: getLocaleWithCountry(countryCode == 'US' ? 'en' : countryCode),
       countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
       themeMode: mode,
       notify: false,
