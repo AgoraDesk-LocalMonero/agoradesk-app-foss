@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
-import 'dart:ui';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
@@ -36,9 +35,6 @@ class ApiClient {
   String? accessToken;
 
   String? userAgent;
-
-  /// Api language
-  Locale? locale;
 
   /// Debug mode, monitor requests and responses through cli
   final bool _debug;

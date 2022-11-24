@@ -1,4 +1,3 @@
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -9,6 +8,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:vm/vm.dart';
 
 class PasswordOtpDialog extends StatelessWidget {
   const PasswordOtpDialog({
@@ -112,7 +112,7 @@ class PasswordOtpDialog extends StatelessWidget {
             style: context.txtBodyMediumN90N10,
           ),
           Text(
-            context.intl.wallet250Sbswap250Sbdeposits250Sbhelper,
+            context.intl.wallet250Sbswap250Sbdeposits250Sbhelper(''),
             style: context.txtBodyXSmallN80N30,
           ),
         ],
