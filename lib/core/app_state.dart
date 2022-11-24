@@ -216,7 +216,8 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
       const Duration(milliseconds: 100),
       () {
         updateWith(locale: locale);
-        AppSharedPrefs().setString(AppSharedPrefsKey.locale, locale.countryCode);
+        print('+++++++++++++++++++++++++++++++++++++222 - ${locale.languageCode}');
+        AppSharedPrefs().setString(AppSharedPrefsKey.locale, locale.languageCode);
         _secureStorage.write(SecureStorageKey.locale, locale.languageCode);
         eventBus.fire(LocaleChangedEvent(locale));
       },

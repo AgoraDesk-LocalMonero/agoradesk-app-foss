@@ -635,9 +635,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       mode = AppSharedPrefs().themeMode;
     }
     // appState.setThemeModeNoUpdate(isDarkMode ? ThemeMode.dark : ThemeMode.light);
+    final countryCode = AppSharedPrefs().locale?.countryCode;
     appState.updateWith(
-      locale: getLocaleWithCountry(
-          AppSharedPrefs().locale?.countryCode == 'US' ? 'en' : AppSharedPrefs().locale?.countryCode),
+      locale: getLocaleWithCountry(countryCode == 'US' ? 'en' : countryCode),
       countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
       themeMode: mode,
       notify: false,

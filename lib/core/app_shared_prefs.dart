@@ -150,7 +150,7 @@ class AppSharedPrefs with DateMixin {
     if (locale != null) {
       final subTags = locale.split('_');
       if (subTags.length == 2) {
-        return Locale(subTags[0], subTags[1]);
+        return Locale(subTags[0], '');
       }
       if (subTags.length == 1) {
         return Locale(subTags[0], '');
