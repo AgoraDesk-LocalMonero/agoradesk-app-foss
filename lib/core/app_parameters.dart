@@ -80,25 +80,21 @@ class AppParameters {
   final Map<String, dynamic> localesInfo = {
     'ar': {
       'name': 'Arabic',
-      'origName': 'Arabic',
+      'origName': 'العربية',
     },
     'bg': {
       'name': 'Bulgarian',
-      'origName': 'Bulgarian',
+      'origName': 'български език',
     },
     'cs': {
       'name': 'Czech',
-      'origName': 'Czech',
+      'origName': 'čeština, český jazyk',
     },
     'de': {
       'name': 'German',
-      'origName': 'German',
+      'origName': 'Deutsch',
     },
     'en': {
-      'name': 'English',
-      'origName': 'English',
-    },
-    'en_US': {
       'name': 'English',
       'origName': 'English',
     },
@@ -108,11 +104,11 @@ class AppParameters {
     },
     'fr': {
       'name': 'French',
-      'origName': 'French',
+      'origName': 'français, langue française',
     },
     'hu': {
       'name': 'Hungarian',
-      'origName': 'Hungarian',
+      'origName': 'magyar',
     },
     'it': {
       'name': 'Italian',
@@ -120,7 +116,7 @@ class AppParameters {
     },
     'ja': {
       'name': 'Japanese',
-      'origName': 'Japanese',
+      'origName': '日本語 (にほんご)',
     },
     'ko': {
       'name': 'Korean',
@@ -128,27 +124,27 @@ class AppParameters {
     },
     'lv': {
       'name': 'Latvian',
-      'origName': 'Latvian',
+      'origName': 'latviešu valoda',
     },
     'nl': {
-      'name': 'Dutch Flemish',
-      'origName': 'Dutch Flemish',
+      'name': 'Dutch',
+      'origName': 'Nederlands, Vlaams',
     },
     'pl': {
       'name': 'Polish',
-      'origName': 'Polski',
+      'origName': 'język polski, polszczyzna',
     },
     'pt': {
       'name': 'Portuguese',
-      'origName': 'Portugues',
+      'origName': 'Português',
     },
     'pt_BR': {
       'name': 'Portuguese Brasil',
       'origName': 'Portugues do Brasil',
     },
     'ro': {
-      'name': 'Romanian Moldavian Moldovan',
-      'origName': 'Romanian Moldavian Moldovan',
+      'name': 'Romanian',
+      'origName': 'Română',
     },
     'ru': {
       'name': 'Russian',
@@ -156,23 +152,23 @@ class AppParameters {
     },
     'sk': {
       'name': 'Slovak',
-      'origName': 'Slovak',
+      'origName': 'slovenčina, slovenský jazyk',
     },
     'sw': {
       'name': 'Swahili',
-      'origName': 'Swahili',
+      'origName': 'Kiswahili',
     },
     'tl': {
       'name': 'Tagalog',
-      'origName': 'Tagalog',
+      'origName': 'Wikang Tagalog',
     },
     'tr': {
       'name': 'Turkish',
-      'origName': 'Turkish',
+      'origName': 'Türkçe',
     },
     'ur': {
       'name': 'Urdu',
-      'origName': 'Urdu',
+      'origName': 'اردو',
     },
     'zh_TW': {
       'name': 'Chinese',
