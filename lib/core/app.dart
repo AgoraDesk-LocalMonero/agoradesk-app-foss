@@ -95,7 +95,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
 
   @override
   void initState() {
-    print('+++++++++++++++++++++++++++++++++++++0000 - ${AppSharedPrefs().locale}');
     _secureStorage = SecureStorage();
     appState = AppState(
       secureStorage: _secureStorage,
@@ -202,9 +201,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       child: Consumer<AppState>(
         builder: (context, appState, _) {
           // TODO: find better way
-          print('+++++++++++++++++++++++++++++++++++++11 - ${appState.locale.languageCode}');
           setLocaleMessages(appState.locale.languageCode, appState.messagesLocaleTimeago);
-          print('+++++++++++++++++++++++++++++++++++++222');
           return OverlaySupport.global(
             child: MaterialApp.router(
               theme: lightTheme,

@@ -43,7 +43,7 @@ class AppSharedPrefs with DateMixin {
 
   ThemeMode get themeMode => _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
 
-  Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? const Locale('en'));
+  Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
@@ -145,7 +145,7 @@ class AppSharedPrefs with DateMixin {
   ///
   /// Generate [Locale] from the [locale] string.
   ///
-  Locale? _parseLocale(locale) {
+  Locale? _parseLocale(String? locale) {
     if (locale != null) {
       final subTags = locale.split('_');
       if (subTags.length == 2) {

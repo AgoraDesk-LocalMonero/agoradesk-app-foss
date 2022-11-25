@@ -239,7 +239,6 @@ class AddEditAdViewModel extends ViewModel
     final currencyCode = getCountryCurrencyCode(selectedCountryCode);
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
     adEdits = ad;
-    print('+++++++++++++++++++++++++++++++++++++11 - ${ad?.buyerSettlementFeeLevel}');
     btcFeesEnum = BtcFeesEnum.values.firstWhere((e) => e.name == (ad?.buyerSettlementFeeLevel ?? 'MEDIUM'));
     _setInitValuesEditMode();
     pageController.addListener(() {
