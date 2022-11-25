@@ -183,18 +183,18 @@ class NotificationsService with ForegroundMessagesMixin {
       appState.pushFcmTokenSavedToApi = false;
     }
 
-    if (appState.pushFcmTokenSavedToApi == false) {
-      final res = await _saveFcmTokenToApi(
-        DeviceModel(
-          token: newToken ?? oldToken!,
-          deviceName: deviceName,
-          type: 'FCM',
-        ),
-      );
-      if (res) {
-        await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
-      }
-    }
+    // if (appState.pushFcmTokenSavedToApi == false) {
+    //   final res = await _saveFcmTokenToApi(
+    //     DeviceModel(
+    //       token: newToken ?? oldToken!,
+    //       deviceName: deviceName,
+    //       type: 'FCM',
+    //     ),
+    //   );
+    //   if (res) {
+    //     await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
+    //   }
+    // }
     // eventBus.fire(FcmTokenChangedEvent(newToken));
     // }
   }
