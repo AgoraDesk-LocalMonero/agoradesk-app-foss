@@ -98,7 +98,15 @@ mixin DateMixin {
   ///
   String timeAgoFromNow(DateTime date) {
     final now = DateTime.now();
-    return timeago.format(now.subtract(now.difference(date)));
+    final int daysDiff = now.difference(date).inDays;
+    DateTime newDate = now.subtract(now.difference(date));
+
+    // bug https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues/130
+    if (daysDiff > 365) {
+      final int subtructDays = daysDiff % 365 > 180 ? 180 : 0;
+      newDate = now.subtract(now.difference(date.subtract(days(subtructDays))));
+    }
+    return timeago.format(newDate);
   }
 
   ///
