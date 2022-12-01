@@ -464,7 +464,6 @@ class MarketViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
-      print('+++++++++++++++++++++++++++++++++++++11 - ${GetIt.I<AppParameters>().isCheckUpdates}');
       if (GetIt.I<AppParameters>().isCheckUpdates) {
         final newVersion = await AppUpdateService(
           appState: context.read<AppState>(),
