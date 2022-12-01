@@ -11,7 +11,6 @@ import 'package:agoradesk/features/ads/data/models/country_code_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
-import 'package:flutter/cupertino.dart';
 
 class AdsService {
   AdsService({
@@ -166,7 +165,6 @@ class AdsService {
       );
       if (resp.statusCode == 200) {
         List<dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['ad_list']));
-        debugPrint('+++++++++++++++++++++++++++++++++++++2222 - ${resp.data['data']['ad_list']}');
         PaginationMeta pagination = PaginationMeta.zero();
         if (resp.data['pagination'] != null) {
           pagination = PaginationMeta.fromJson(resp.data['pagination']);

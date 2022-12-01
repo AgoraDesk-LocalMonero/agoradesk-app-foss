@@ -90,14 +90,17 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                     controller: model.passwordController,
                                   ),
                                   const SizedBox(height: 16),
-                                  TextField(
-                                    controller: model.otpController,
-                                    keyboardType: TextInputType.number,
-                                    decoration: context.decorationTxtFieldMain.copyWith(
-                                      hintText: context.intl.otp8722Sbtitle8722Sb0,
-                                      errorText: validateOtpWithNull(model.otp) ? null : '',
+                                  Semantics(
+                                    tooltip: context.intl.otp8722Sbtitle8722Sb0,
+                                    child: TextField(
+                                      controller: model.otpController,
+                                      keyboardType: TextInputType.number,
+                                      decoration: context.decorationTxtFieldMain.copyWith(
+                                        hintText: context.intl.otp8722Sbtitle8722Sb0,
+                                        errorText: validateOtpWithNull(model.otp) ? null : '',
+                                      ),
+                                      autofillHints: const [AutofillHints.oneTimeCode],
                                     ),
-                                    autofillHints: const [AutofillHints.oneTimeCode],
                                   ),
                                   const SizedBox(height: 6),
                                   Padding(

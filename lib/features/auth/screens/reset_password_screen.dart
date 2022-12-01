@@ -1,4 +1,3 @@
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -7,6 +6,7 @@ import 'package:agoradesk/features/auth/models/reset_password_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 ///
 /// Reset password by link with token (user gets it in email)
@@ -42,16 +42,22 @@ class ResetPasswordScreen extends StatelessWidget {
                           children: [
                             const SizedBox(height: 16),
                             Center(
-                              child: Text(
-                                context.intl.password8722Sbreset250Sbtitle,
-                                style: context.txtHead1N90,
+                              child: Semantics(
+                                label: context.intl.password8722Sbreset250Sbtitle,
+                                child: Text(
+                                  context.intl.password8722Sbreset250Sbtitle,
+                                  style: context.txtHead1N90,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 16),
-                            Text(
-                              context.intl.settings250Sbchange8722Sbpassword250Sbsubtitle,
-                              textAlign: TextAlign.center,
-                              style: context.txtBodyMediumNeutral80,
+                            Semantics(
+                              label: context.intl.settings250Sbchange8722Sbpassword250Sbsubtitle,
+                              child: Text(
+                                context.intl.settings250Sbchange8722Sbpassword250Sbsubtitle,
+                                textAlign: TextAlign.center,
+                                style: context.txtBodyMediumNeutral80,
+                              ),
                             ),
                             const SizedBox(height: 16),
                             TextField(

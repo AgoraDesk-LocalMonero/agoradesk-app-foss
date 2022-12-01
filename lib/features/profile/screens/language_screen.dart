@@ -1,10 +1,10 @@
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/features/profile/models/language_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class LanguageScreen extends StatelessWidget {
   const LanguageScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class LanguageScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
       child: ListView.separated(
-        padding: const EdgeInsets.all(0),
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 60),
         itemCount: model.supportedLocales.length,
         itemBuilder: (context, i) {
           final Map<String, dynamic> infoMap = model.supportedLocales.elementAt(i);

@@ -1,7 +1,6 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:intl/intl.dart';
 
 mixin StringMixin {
   ///
@@ -27,26 +26,6 @@ mixin StringMixin {
   Map<String, dynamic>? getLocaleInfo(Locale l) {
     final key = l.toString();
     return GetIt.I<AppParameters>().localesInfo.containsKey(key) ? GetIt.I<AppParameters>().localesInfo[key] : null;
-  }
-
-  ///
-  /// Get local letters
-  /// Soves problem when phone gives zh_Hant_TW string
-  ///
-  Locale getLocaleWithCountry(String? code) {
-    if (code == null) {
-      final c = Intl.getCurrentLocale();
-      String res = c.substring(0, 2);
-      if (res == 'zh') {
-        if (c.substring(c.length - 2) == 'TW') {
-          return const Locale('zh', 'TW');
-        } else {
-          return const Locale('zh');
-        }
-      }
-      return Locale(res);
-    }
-    return Locale(code);
   }
 
   ///

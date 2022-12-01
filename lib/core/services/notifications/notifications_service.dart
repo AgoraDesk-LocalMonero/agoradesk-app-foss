@@ -25,6 +25,8 @@ import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 
+import '../../events.dart';
+
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
 
@@ -115,7 +117,6 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
     if (includeFcm) {
       FirebaseMessaging.instance.onTokenRefresh.listen((token) {
-        debugPrint('[$runtimeType] FirebaseMessaging token updated: $token');
         if (api.accessToken != null) {
           _tokenUpdate(token);
         }
@@ -195,8 +196,7 @@ class NotificationsService with ForegroundMessagesMixin {
         await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
       }
     }
-    // eventBus.fire(FcmTokenChangedEvent(newToken));
-    // }
+    eventBus.fire(FcmTokenChangedEvent(newToken));
   }
 
   ///
@@ -363,9 +363,10 @@ class NotificationsService with ForegroundMessagesMixin {
         return route.name == PinCodeCheckRoute.name;
       });
       if (router.current.name == TradeRoute.name) {
-        await router.pop();
+        // router.removeWhere((route) {
+        //   return route.name == TradeRoute.name;
+        // });
       }
-
       routes.add(TradeRoute(tradeId: tradeId));
     } else {
       if (router.current.name == TradeRoute.name) {

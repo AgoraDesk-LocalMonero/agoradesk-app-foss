@@ -123,7 +123,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       TradeService(api: _api, appState: appState),
       Hive.box<MessageBoxModel>(HiveBoxName.message),
     );
-
     _placesSearch = PlacesSearch(
       limit: 20,
     );
@@ -440,9 +439,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       _authService.showPinSetUp = false;
     } else {
       newRoutes.add(const MainScreenRoute());
-      if (GetIt.I<AppParameters>().appRanFromPush) {
-        newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
-      }
+      // if (GetIt.I<AppParameters>().appRanFromPush) {
+      //   newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
+      // }
       _addUniLinksRouts();
       if (appState.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());
@@ -497,9 +496,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           }
         }
       })
-      ..on<LocaleChangedEvent>().listen((e) {
-        // _api.locale = e.locale;
-      })
+      ..on<LocaleChangedEvent>().listen((e) {})
       ..on<LogOutEvent>().listen((e) {
         if (_authService.isAuthenticated) {
           _authService.logOut();
@@ -634,9 +631,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     if (cacheThemeModeIndex != 0) {
       mode = AppSharedPrefs().themeMode;
     }
-    // appState.setThemeModeNoUpdate(isDarkMode ? ThemeMode.dark : ThemeMode.light);
     appState.updateWith(
-      locale: getLocaleWithCountry(AppSharedPrefs().locale?.countryCode),
       countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
       themeMode: mode,
       notify: false,

@@ -298,12 +298,10 @@ class TradeViewModel extends ViewModel
   void openReceipt(BuildContext context) {
     context.pushRoute(
       WebviewRoute(
-          token: _apiClient.accessToken ?? '', url: '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}'),
+        token: _apiClient.accessToken ?? '',
+        url: '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}',
+      ),
     );
-    // openLink(
-    //   '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}',
-    //   token: _apiClient.accessToken,
-    // );
   }
 
   String priceFormulaParsed(BuildContext context) {

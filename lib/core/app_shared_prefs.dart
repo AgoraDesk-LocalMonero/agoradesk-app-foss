@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // TODO: migrate to objectBox
@@ -44,7 +43,7 @@ class AppSharedPrefs with DateMixin {
 
   ThemeMode get themeMode => _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
 
-  Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? Intl.getCurrentLocale());
+  Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
@@ -146,11 +145,11 @@ class AppSharedPrefs with DateMixin {
   ///
   /// Generate [Locale] from the [locale] string.
   ///
-  Locale? _parseLocale(locale) {
+  Locale? _parseLocale(String? locale) {
     if (locale != null) {
       final subTags = locale.split('_');
       if (subTags.length == 2) {
-        return Locale(subTags[0], subTags[1]);
+        return Locale(subTags[0], '');
       }
       if (subTags.length == 1) {
         return Locale(subTags[0], '');

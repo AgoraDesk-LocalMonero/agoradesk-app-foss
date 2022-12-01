@@ -28,7 +28,7 @@ AppParameters initAppParameters(
       urlGuides: 'https://localmonero.co/guides',
       urlSupport: 'https://localmonero.co/support',
       urlFaq: 'https://localmonero.co/faq',
-      urlReceipt: 'http://agoradesk.com/receipt',
+      urlReceipt: 'https://agoradesk.com/receipt',
       isAgora: false,
       includeFcm: includeFcm,
     )
@@ -55,7 +55,7 @@ AppParameters initAppParameters(
     urlGuides: 'https://agoradesk.com/guides',
     urlSupport: 'https://agoradesk.com/support',
     urlFaq: 'https://agoradesk.com/faq',
-    urlReceipt: 'http://agoradesk.com/receipt',
+    urlReceipt: 'https://agoradesk.com/receipt',
     isAgora: true,
     includeFcm: includeFcm,
   )..isGoogleAvailable = isGoogleAvailable;

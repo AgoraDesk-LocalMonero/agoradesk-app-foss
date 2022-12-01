@@ -78,39 +78,103 @@ class AppParameters {
 
   /// languages
   final Map<String, dynamic> localesInfo = {
+    'ar': {
+      'name': 'Arabic',
+      'origName': 'العربية',
+    },
+    'bg': {
+      'name': 'Bulgarian',
+      'origName': 'български език',
+    },
+    'cs': {
+      'name': 'Czech',
+      'origName': 'čeština, český jazyk',
+    },
+    'de': {
+      'name': 'German',
+      'origName': 'Deutsch',
+    },
     'en': {
       'name': 'English',
       'origName': 'English',
-    },
-    'ru': {
-      'name': 'Russian',
-      'origName': 'Русский',
-    },
-    'pt': {
-      'name': 'Portuguese Brasil',
-      'origName': 'Portugues do Brasil',
-    },
-    'pl': {
-      'name': 'Polish',
-      'origName': 'Polski',
-    },
-    'ko': {
-      'name': 'Korean',
-      'origName': '한국어',
     },
     'es': {
       'name': 'Spanish',
       'origName': 'Español',
     },
+    'fr': {
+      'name': 'French',
+      'origName': 'français, langue française',
+    },
+    'hu': {
+      'name': 'Hungarian',
+      'origName': 'magyar',
+    },
     'it': {
       'name': 'Italian',
       'origName': 'Italiano',
+    },
+    'ja': {
+      'name': 'Japanese',
+      'origName': '日本語 (にほんご)',
+    },
+    'ko': {
+      'name': 'Korean',
+      'origName': '한국어',
+    },
+    'lv': {
+      'name': 'Latvian',
+      'origName': 'latviešu valoda',
+    },
+    'nl': {
+      'name': 'Dutch',
+      'origName': 'Nederlands, Vlaams',
+    },
+    'pl': {
+      'name': 'Polish',
+      'origName': 'język polski, polszczyzna',
+    },
+    'pt': {
+      'name': 'Portuguese',
+      'origName': 'Português',
+    },
+    'pt_BR': {
+      'name': 'Portuguese Brasil',
+      'origName': 'Portugues do Brasil',
+    },
+    'ro': {
+      'name': 'Romanian',
+      'origName': 'Română',
+    },
+    'ru': {
+      'name': 'Russian',
+      'origName': 'Русский',
+    },
+    'sk': {
+      'name': 'Slovak',
+      'origName': 'slovenčina, slovenský jazyk',
+    },
+    'sw': {
+      'name': 'Swahili',
+      'origName': 'Kiswahili',
+    },
+    'tl': {
+      'name': 'Tagalog',
+      'origName': 'Wikang Tagalog',
+    },
+    'tr': {
+      'name': 'Turkish',
+      'origName': 'Türkçe',
+    },
+    'ur': {
+      'name': 'Urdu',
+      'origName': 'اردو',
     },
     'zh_TW': {
       'name': 'Chinese',
       'origName': '繁體中文',
     },
-    'zh': {
+    'zh_CN': {
       'name': 'Simple Chinese',
       'origName': '简体中文',
     },
