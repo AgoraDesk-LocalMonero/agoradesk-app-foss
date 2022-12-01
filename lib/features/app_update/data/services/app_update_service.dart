@@ -48,6 +48,7 @@ class AppUpdateService {
         return null;
       }
     }
+    return null;
   }
 
   bool isIgnoreAllUpdates() {
