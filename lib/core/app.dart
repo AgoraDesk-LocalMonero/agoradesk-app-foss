@@ -59,7 +59,7 @@ import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
 
-const _kPinDelay = Duration(seconds: 1);
+const _kPinDelay = Duration(seconds: 300);
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -170,7 +170,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      print('+++++++++++++++++++++++++++++++++++++11');
       if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;

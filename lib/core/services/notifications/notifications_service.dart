@@ -363,7 +363,9 @@ class NotificationsService with ForegroundMessagesMixin {
         return route.name == PinCodeCheckRoute.name;
       });
       if (router.current.name == TradeRoute.name) {
-        router.pop();
+        // router.removeWhere((route) {
+        //   return route.name == TradeRoute.name;
+        // });
       }
       routes.add(TradeRoute(tradeId: tradeId));
     } else {
