@@ -170,7 +170,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      print('+++++++++++++++++++++++++++++++++++++11 ');
+      print('+++++++++++++++++++++++++++++++++++++11');
       if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;
@@ -178,13 +178,11 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     }
     if (state == AppLifecycleState.detached) {
       _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
-      Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
     if (state == AppLifecycleState.inactive) {
       _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
     }
     if (state == AppLifecycleState.paused) {
-      print('+++++++++++++++++++++++++++++++++++++44');
       _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
       Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
@@ -442,9 +440,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       _authService.showPinSetUp = false;
     } else {
       newRoutes.add(const MainScreenRoute());
-      if (GetIt.I<AppParameters>().appRanFromPush) {
-        newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
-      }
+      // if (GetIt.I<AppParameters>().appRanFromPush) {
+      //   newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
+      // }
       _addUniLinksRouts();
       if (appState.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());

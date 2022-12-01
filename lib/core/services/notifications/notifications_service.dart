@@ -363,9 +363,8 @@ class NotificationsService with ForegroundMessagesMixin {
         return route.name == PinCodeCheckRoute.name;
       });
       if (router.current.name == TradeRoute.name) {
-        await router.pop();
+        router.pop();
       }
-
       routes.add(TradeRoute(tradeId: tradeId));
     } else {
       if (router.current.name == TradeRoute.name) {
