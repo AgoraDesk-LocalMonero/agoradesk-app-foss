@@ -1,6 +1,11 @@
 ### Updates
-1. HotFix: translated strings bug.
-2. Fix: ad edit BTC fee settlement bug.
+1. Feat: added a lot of new languages.
+2. Fix: improved brute-force attack captcha.
+3. Fix: Android: able to open trade chat without PIN.
+4. Fix: fixed few accessibility bugs.
+5. Fix: account created times are different with web.
+6. Fix: view receipt bug.
+7. Fix: tradeview fixes for deleted accounts.
 
 
 ### About the attached app's
