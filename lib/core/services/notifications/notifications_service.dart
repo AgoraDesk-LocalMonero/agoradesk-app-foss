@@ -25,6 +25,8 @@ import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 
+import '../../events.dart';
+
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
 
@@ -115,7 +117,6 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
     if (includeFcm) {
       FirebaseMessaging.instance.onTokenRefresh.listen((token) {
-        debugPrint('[$runtimeType] FirebaseMessaging token updated: $token');
         if (api.accessToken != null) {
           _tokenUpdate(token);
         }
@@ -183,20 +184,19 @@ class NotificationsService with ForegroundMessagesMixin {
       appState.pushFcmTokenSavedToApi = false;
     }
 
-    // if (appState.pushFcmTokenSavedToApi == false) {
-    //   final res = await _saveFcmTokenToApi(
-    //     DeviceModel(
-    //       token: newToken ?? oldToken!,
-    //       deviceName: deviceName,
-    //       type: 'FCM',
-    //     ),
-    //   );
-    //   if (res) {
-    //     await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
-    //   }
-    // }
-    // eventBus.fire(FcmTokenChangedEvent(newToken));
-    // }
+    if (appState.pushFcmTokenSavedToApi == false) {
+      final res = await _saveFcmTokenToApi(
+        DeviceModel(
+          token: newToken ?? oldToken!,
+          deviceName: deviceName,
+          type: 'FCM',
+        ),
+      );
+      if (res) {
+        await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
+      }
+    }
+    eventBus.fire(FcmTokenChangedEvent(newToken));
   }
 
   ///

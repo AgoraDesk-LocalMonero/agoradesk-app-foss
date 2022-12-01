@@ -59,7 +59,7 @@ import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
 
-const _kPinDelay = Duration(seconds: 300);
+const _kPinDelay = Duration(seconds: 1);
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -123,7 +123,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       TradeService(api: _api, appState: appState),
       Hive.box<MessageBoxModel>(HiveBoxName.message),
     );
-
     _placesSearch = PlacesSearch(
       limit: 20,
     );
@@ -171,6 +170,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
+      print('+++++++++++++++++++++++++++++++++++++11 ');
       if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;
@@ -178,11 +178,13 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
     }
     if (state == AppLifecycleState.detached) {
       _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
+      Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
     if (state == AppLifecycleState.inactive) {
       _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
     }
     if (state == AppLifecycleState.paused) {
+      print('+++++++++++++++++++++++++++++++++++++44');
       _secureStorage.write(SecureStorageKey.openedTradeId, 'null');
       Future.delayed(_kPinDelay).then((value) => _activatePin = true);
     }
