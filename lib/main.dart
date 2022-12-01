@@ -23,6 +23,8 @@ void main() async {
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
   const includeFcm = false;
   Permission.notification.request();
+  const String checkUpdates = String.fromEnvironment('app.checkUpdates');
+  const isCheckUpdates = checkUpdates == 'true';
 
   ///
   /// common initializations
@@ -83,6 +85,7 @@ void main() async {
       includeFcm,
       appRanFromPush,
       tradeId,
+      isCheckUpdates,
     ),
   );
 

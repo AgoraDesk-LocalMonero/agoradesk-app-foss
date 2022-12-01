@@ -24,6 +24,7 @@ class AppParameters {
     required this.urlReceipt,
     required this.isAgora,
     required this.includeFcm,
+    required this.isCheckUpdates,
   });
 
   final FlavorType flavor;
@@ -47,6 +48,7 @@ class AppParameters {
   final String urlReceipt;
   final bool isAgora;
   final bool includeFcm;
+  final bool isCheckUpdates;
   String captchaCookie1 = '';
   String captchaCookie2 = '';
   List<Cookie>? cookies;

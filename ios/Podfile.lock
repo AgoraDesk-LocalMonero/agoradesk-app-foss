@@ -11,6 +11,41 @@ PODS:
     - ReachabilitySwift
   - device_info_plus (0.0.1):
     - Flutter
+<<<<<<< HEAD
+=======
+  - Firebase/CoreOnly (10.0.0):
+    - FirebaseCore (= 10.0.0)
+  - Firebase/Messaging (10.0.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 10.0.0)
+  - firebase_core (2.1.1):
+    - Firebase/CoreOnly (= 10.0.0)
+    - Flutter
+  - firebase_messaging (14.0.3):
+    - Firebase/Messaging (= 10.0.0)
+    - firebase_core
+    - Flutter
+  - FirebaseCore (10.0.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreInternal (10.2.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseInstallations (10.2.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (10.0.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Reachability (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+>>>>>>> iteration_13
   - Flutter (1.0.0)
   - flutter_foreground_task (0.0.1):
     - Flutter
@@ -28,6 +63,30 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+<<<<<<< HEAD
+=======
+  - GoogleDataTransport (9.2.0):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.10.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.10.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.10.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/Network (7.10.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.10.0)"
+  - GoogleUtilities/Reachability (7.10.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.10.0):
+    - GoogleUtilities/Logger
+>>>>>>> iteration_13
   - image_picker_ios (0.0.1):
     - Flutter
   - IosAwnCore (0.7.3)
@@ -51,7 +110,7 @@ PODS:
     - FMDB (>= 2.7.5)
   - store_checker (0.0.1):
     - Flutter
-  - SwiftProtobuf (1.20.2)
+  - SwiftProtobuf (1.20.3)
   - uni_links (0.0.1):
     - Flutter
   - url_launcher_ios (0.0.1):
@@ -140,12 +199,27 @@ SPEC CHECKSUMS:
   barcode_scan2: 0af2bb63c81b4565aab6cd78278e4c0fa136dbb0
   connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
   device_info_plus: e5c5da33f982a436e103237c0c85f9031142abed
+<<<<<<< HEAD
+=======
+  Firebase: 1b810f3d0c0532e27a48f1961f8c0400a668a2cf
+  firebase_core: 5c0bb0ca7d0e70480a68a6e9ad9bf55d1edd5305
+  firebase_messaging: 46616a7ded661b632eb7a28846d906849c8b15af
+  FirebaseCore: 97f48a3a567a72b8d4daa0f03c3aadb78df4e995
+  FirebaseCoreInternal: 091bde13e47bb1c5e9fe397634f3593dc390430f
+  FirebaseInstallations: 004915af170935e3a583faefd5f8bc851afc220f
+  FirebaseMessaging: 8916bf5edb1dbfac74665a181e4d1ab3a78a08a2
+>>>>>>> iteration_13
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_foreground_task: 21ef182ab0a29a3005cc72cd70e5f45cb7f7f817
   flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   flutter_keyboard_visibility: 0339d06371254c3eb25eeb90ba8d17dca8f9c069
   flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+<<<<<<< HEAD
+=======
+  GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
+  GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
+>>>>>>> iteration_13
   image_picker_ios: b786a5dcf033a8336a657191401bfdf12017dabb
   IosAwnCore: 6494e0e174d49f04f513e8a002187be226889a37
   local_auth_ios: 0d333dde7780f669e66f19d2ff6005f3ea84008d
@@ -159,7 +233,7 @@ SPEC CHECKSUMS:
   shared_preferences_ios: 548a61f8053b9b8a49ac19c1ffbc8b92c50d68ad
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
   store_checker: 359c5051d9ec30ff0a8fa39eb5ec9df021bb745d
-  SwiftProtobuf: 9f458aaa7844a2fc0b910053e66578bc4e2da9c1
+  SwiftProtobuf: b02b5075dcf60c9f5f403000b3b0c202a11b6ae1
   uni_links: d97da20c7701486ba192624d99bffaaffcfc298a
   url_launcher_ios: 839c58cdb4279282219f5e248c3321761ff3c4de
   video_player_avfoundation: e489aac24ef5cf7af82702979ed16f2a5ef84cff
