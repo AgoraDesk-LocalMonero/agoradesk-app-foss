@@ -9230,6 +9230,9 @@ class I18nPt extends I18n {
 
   @override
   String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+
+  @override
+  String get app_ad_created => 'Ad created';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

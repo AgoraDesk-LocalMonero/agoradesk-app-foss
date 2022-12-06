@@ -16571,6 +16571,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Edit box password, double tap to edit'**
   String get app_accessibility_edit_box_password;
+
+  /// No description provided for @app_ad_created.
+  ///
+  /// In en, this message translates to:
+  /// **'Ad created'**
+  String get app_ad_created;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

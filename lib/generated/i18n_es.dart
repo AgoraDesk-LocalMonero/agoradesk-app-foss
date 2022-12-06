@@ -9230,4 +9230,7 @@ class I18nEs extends I18n {
 
   @override
   String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+
+  @override
+  String get app_ad_created => 'Ad created';
 }

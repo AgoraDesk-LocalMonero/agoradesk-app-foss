@@ -1,57 +1,70 @@
 {
   "ar": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "bg": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "cs": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "de": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "es": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "fr": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "hu": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "it": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "ja": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "ko": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "lv": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "nl": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "pl": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "pt": [
@@ -100,28 +113,33 @@
     "app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk",
     "app_report_this_user",
     "app_open_dropdown",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "pt_BR": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "ro": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "ru": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "sk": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "sw": [
@@ -129,7 +147,8 @@
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "tl": [
@@ -137,16 +156,19 @@
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "tr": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "ur": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "zh": [
@@ -195,7 +217,8 @@
     "app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk",
     "app_report_this_user",
     "app_open_dropdown",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "zh_CN": [
@@ -765,10 +788,12 @@
     "post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy",
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy",
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell",
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ],
 
   "zh_TW": [
-    "app_accessibility_edit_box_password"
+    "app_accessibility_edit_box_password",
+    "app_ad_created"
   ]
 }
