@@ -1,14 +1,57 @@
 {
+  "ar": [
+    "app_accessibility_edit_box_password"
+  ],
+
   "bg": [
-    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_accessibility_edit_box_password"
+  ],
+
+  "cs": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "de": [
+    "app_accessibility_edit_box_password"
   ],
 
   "es": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_accessibility_edit_box_password"
   ],
 
   "fr": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_accessibility_edit_box_password"
+  ],
+
+  "hu": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "it": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "ja": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "ko": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "lv": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "nl": [
+    "app_accessibility_edit_box_password"
+  ],
+
+  "pl": [
+    "app_accessibility_edit_box_password"
   ],
 
   "pt": [
@@ -56,39 +99,54 @@
     "app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk",
     "app_report_this_user",
-    "app_open_dropdown"
+    "app_open_dropdown",
+    "app_accessibility_edit_box_password"
   ],
 
   "pt_BR": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_accessibility_edit_box_password"
+  ],
+
+  "ro": [
+    "app_accessibility_edit_box_password"
   ],
 
   "ru": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_accessibility_edit_box_password"
   ],
 
   "sk": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_accessibility_edit_box_password"
   ],
 
   "sw": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_accessibility_edit_box_password"
   ],
 
   "tl": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_accessibility_edit_box_password"
   ],
 
   "tr": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_accessibility_edit_box_password"
+  ],
+
+  "ur": [
+    "app_accessibility_edit_box_password"
   ],
 
   "zh": [
@@ -136,7 +194,8 @@
     "app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk",
     "app_report_this_user",
-    "app_open_dropdown"
+    "app_open_dropdown",
+    "app_accessibility_edit_box_password"
   ],
 
   "zh_CN": [
@@ -705,6 +764,11 @@
     "coupons250Sbcode8722Sbapply",
     "post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy",
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy",
-    "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell"
+    "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell",
+    "app_accessibility_edit_box_password"
+  ],
+
+  "zh_TW": [
+    "app_accessibility_edit_box_password"
   ]
 }

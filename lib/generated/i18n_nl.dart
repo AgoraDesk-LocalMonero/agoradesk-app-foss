@@ -9227,4 +9227,7 @@ class I18nNl extends I18n {
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'calloptie verkopen';
+
+  @override
+  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
 }

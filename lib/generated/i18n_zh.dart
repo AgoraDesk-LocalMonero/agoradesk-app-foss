@@ -9227,6 +9227,9 @@ class I18nZh extends I18n {
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => '看涨期权卖出';
+
+  @override
+  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

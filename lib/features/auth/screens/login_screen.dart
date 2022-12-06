@@ -86,8 +86,13 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                     ),
                                   ),
                                   const SizedBox(height: 16),
-                                  AgoraPasswordField(
-                                    controller: model.passwordController,
+                                  MergeSemantics(
+                                    child: Semantics(
+                                      tooltip: context.intl.app_accessibility_edit_box_password,
+                                      child: AgoraPasswordField(
+                                        controller: model.passwordController,
+                                      ),
+                                    ),
                                   ),
                                   const SizedBox(height: 16),
                                   Semantics(

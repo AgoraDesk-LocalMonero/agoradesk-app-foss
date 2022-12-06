@@ -9227,6 +9227,9 @@ class I18nPt extends I18n {
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'venda de opção de compra';
+
+  @override
+  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

@@ -16565,6 +16565,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'call option sell'**
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell;
+
+  /// No description provided for @app_accessibility_edit_box_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit box password, double tap to edit'**
+  String get app_accessibility_edit_box_password;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
