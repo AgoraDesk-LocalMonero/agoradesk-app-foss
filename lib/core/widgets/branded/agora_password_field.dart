@@ -56,13 +56,18 @@ class _AgoraPasswordFieldState extends State<AgoraPasswordField> with ValidatorM
       );
     }
 
-    return TextField(
-      controller: widget.controller,
-      autofocus: widget.autofocus,
-      enabled: widget.enabled,
-      obscureText: _obscure,
-      decoration: decoration,
-      autofillHints: const [AutofillHints.password],
+    return MergeSemantics(
+      child: Semantics(
+        tooltip: context.intl.app_accessibility_edit_box_password,
+        child: TextField(
+          controller: widget.controller,
+          autofocus: widget.autofocus,
+          enabled: widget.enabled,
+          obscureText: _obscure,
+          decoration: decoration,
+          autofillHints: const [AutofillHints.password],
+        ),
+      ),
     );
   }
 }
