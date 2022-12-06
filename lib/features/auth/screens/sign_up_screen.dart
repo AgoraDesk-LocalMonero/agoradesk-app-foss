@@ -80,7 +80,9 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   const SizedBox(height: 25),
                                   TextField(
                                     decoration: decoration.copyWith(
-                                      hintText: context.intl.login250Sbusername,
+                                      labelText: context.intl.login250Sbusername,
+                                      labelStyle: context.txtBodyMediumNeutral70,
+                                      floatingLabelBehavior: FloatingLabelBehavior.never,
                                       errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
                                     ),
                                     autofillHints: const [AutofillHints.username],
@@ -91,7 +93,9 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   const SizedBox(height: 16),
                                   TextField(
                                     decoration: decoration.copyWith(
-                                      hintText: context.intl.signup250Sbemail,
+                                      labelText: context.intl.signup250Sbemail,
+                                      labelStyle: context.txtBodyMediumNeutral70,
+                                      floatingLabelBehavior: FloatingLabelBehavior.never,
                                       errorText: validateEmailWithNull(model.email) ? null : '',
                                     ),
                                     autofillHints: const [AutofillHints.email],
@@ -133,38 +137,40 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                     ),
                                   ),
                                   const SizedBox(height: 16),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: model.isTermsAgree,
-                                        onChanged: (bool? val) {
-                                          if (val != null) {
-                                            model.isTermsAgree = val;
-                                          }
-                                        },
-                                      ),
-                                      Expanded(
-                                        child: RichText(
-                                          text: TextSpan(
-                                            children: [
-                                              TextSpan(
-                                                text: context.intl.signup250Sbagree8722Sbto8722Sbtos(' '),
-                                                style: promptStyle,
-                                              ),
-                                              TextSpan(
-                                                text: context.intl.signup250Sbagree8722Sbto8722Sbtos8722Sbterms(
-                                                    GetIt.I<AppParameters>().appName),
-                                                style: linkStyle,
-                                                recognizer: TapGestureRecognizer()
-                                                  ..onTap = () {
-                                                    openLink(GetIt.I<AppParameters>().urlPrivacy);
-                                                  },
-                                              ),
-                                            ],
+                                  MergeSemantics(
+                                    child: Row(
+                                      children: [
+                                        Checkbox(
+                                          value: model.isTermsAgree,
+                                          onChanged: (bool? val) {
+                                            if (val != null) {
+                                              model.isTermsAgree = val;
+                                            }
+                                          },
+                                        ),
+                                        Expanded(
+                                          child: RichText(
+                                            text: TextSpan(
+                                              children: [
+                                                TextSpan(
+                                                  text: context.intl.signup250Sbagree8722Sbto8722Sbtos(' '),
+                                                  style: promptStyle,
+                                                ),
+                                                TextSpan(
+                                                  text: context.intl.signup250Sbagree8722Sbto8722Sbtos8722Sbterms(
+                                                      GetIt.I<AppParameters>().appName),
+                                                  style: linkStyle,
+                                                  recognizer: TapGestureRecognizer()
+                                                    ..onTap = () {
+                                                      openLink(GetIt.I<AppParameters>().urlPrivacy);
+                                                    },
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                   if (model.displayError) const SizedBox(height: 26),
                                   if (model.displayError)
