@@ -40,26 +40,26 @@ class ResetPasswordScreen extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            const SizedBox(height: 16),
-                            Center(
-                              child: Semantics(
-                                label: context.intl.password8722Sbreset250Sbtitle,
-                                child: Text(
-                                  context.intl.password8722Sbreset250Sbtitle,
-                                  style: context.txtHead1N90,
-                                ),
+                            MergeSemantics(
+                              child: Column(
+                                children: [
+                                  const SizedBox(height: 16),
+                                  Center(
+                                    child: Text(
+                                      context.intl.password8722Sbreset250Sbtitle,
+                                      style: context.txtHead1N90,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  Text(
+                                    context.intl.settings250Sbchange8722Sbpassword250Sbsubtitle,
+                                    textAlign: TextAlign.center,
+                                    style: context.txtBodyMediumNeutral80,
+                                  ),
+                                  const SizedBox(height: 16),
+                                ],
                               ),
                             ),
-                            const SizedBox(height: 16),
-                            Semantics(
-                              label: context.intl.settings250Sbchange8722Sbpassword250Sbsubtitle,
-                              child: Text(
-                                context.intl.settings250Sbchange8722Sbpassword250Sbsubtitle,
-                                textAlign: TextAlign.center,
-                                style: context.txtBodyMediumNeutral80,
-                              ),
-                            ),
-                            const SizedBox(height: 16),
                             TextField(
                               controller: model.ctrlPassword1,
                               decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
