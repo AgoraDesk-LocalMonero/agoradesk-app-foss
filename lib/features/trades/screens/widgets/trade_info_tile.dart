@@ -20,7 +20,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:timeago/timeago.dart' as timeago;
 import 'package:vm/vm.dart';
 
 class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
@@ -33,9 +32,6 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
 
   @override
   Widget build(BuildContext context) {
-    final now = DateTime.now();
-    final timeDiff = now.subtract(now.difference(model.tradeForScreen.createdAt!));
-
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
@@ -143,7 +139,7 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                                       title: context.intl.dashboard250Sbtrade250Sbcreated8722Sbat,
                                       text: niceDateFromString(model.tradeForScreen.createdAt.toString()) +
                                           ' (' +
-                                          timeago.format(timeDiff) +
+                                          timeAgoFromNow(model.tradeForScreen.createdAt) +
                                           ')',
                                     ),
                                     TradeLineWithCopy(

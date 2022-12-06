@@ -96,7 +96,10 @@ mixin DateMixin {
   ///
   /// pretty Last Seen display
   ///
-  String timeAgoFromNow(DateTime date) {
+  String timeAgoFromNow(DateTime? date) {
+    if (date == null) {
+      return '';
+    }
     try {
       final now = DateTime.now();
       final int daysDiff = now.difference(date).inDays;
