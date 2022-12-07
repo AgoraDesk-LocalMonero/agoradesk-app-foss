@@ -22,7 +22,7 @@ class MarketData {
 
   static const marketsHasQoutes = {
     'CoinGecko': null,
-    'Binance': quotes,
+    'Binance': binanceQuotes,
     'Bitfinex': quotes,
     'Bitstamp': quotes,
     'Bittrex': quotes,
@@ -208,11 +208,12 @@ class MarketData {
       'ltcbtc',
       'ltceth',
       'sceth',
-      'scbtc',
       'xrpbtc',
       'xrpeth',
       'zecbtc',
       'zeceth',
+      'xmrusdt',
+      'btcusdt',
     ],
     'bitstamp': [
       'btceur',
@@ -263,6 +264,11 @@ class MarketData {
     'high',
     'low',
     'open',
+    'last',
+  ];
+
+// Binance quotes.
+  static const binanceQuotes = [
     'last',
   ];
 
