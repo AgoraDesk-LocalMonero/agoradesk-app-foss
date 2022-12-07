@@ -3217,7 +3217,7 @@ mixin CountryInfoMixin {
     "JP": "JPY",
     "KE": "KES",
     "KG": "KGS",
-    "KH": "KHR",
+    "KH": "USD",
     "KI": "AUD",
     "KM": "KMF",
     "KN": "XCD",
