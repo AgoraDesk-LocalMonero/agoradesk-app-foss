@@ -280,9 +280,6 @@ class NotificationsService with ForegroundMessagesMixin {
   /// Get notifications from the server
   ///
   Future getNotifications() async {
-    eventBus.fire(
-      const Display503Event(),
-    );
     if (authService.isAuthenticated) {
       late bool hasUnreaded;
       if (!_loading) {
