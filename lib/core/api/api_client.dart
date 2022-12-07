@@ -121,10 +121,6 @@ class ApiClient {
                 requestOptions: error.requestOptions,
                 response: error.response,
               );
-
-              // if (kDebugMode) {
-              //   eventBus.fire(FlashEvent.error(message));
-              // }
             }
           } else if (statusCode == 500) {
             if (kDebugMode) {
@@ -136,6 +132,10 @@ class ApiClient {
             if (kDebugMode) {
               eventBus.fire(FlashEvent.error(message));
             }
+          } else if (statusCode == 503) {
+            eventBus.fire(
+              const Display503Event(),
+            );
           }
           return handler.next(finalError ?? error);
         },

@@ -16577,6 +16577,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Ad created'**
   String get app_ad_created;
+
+  /// No description provided for @app_503_title.
+  ///
+  /// In en, this message translates to:
+  /// **'{val} App Maintenance'**
+  String app_503_title(Object val);
+
+  /// No description provided for @app_503_body.
+  ///
+  /// In en, this message translates to:
+  /// **'{val} will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:'**
+  String app_503_body(Object val);
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

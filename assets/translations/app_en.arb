@@ -5477,5 +5477,17 @@
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy": "call option buy",
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell": "call option sell",
     "app_accessibility_edit_box_password": "Edit box password, double tap to edit",
-    "app_ad_created": "Ad created"
+    "app_ad_created": "Ad created",
+    "app_503_title": "{val} App Maintenance",
+    "@app_503_title": {
+        "placeholders": {
+            "val": {}
+        }
+    },
+    "app_503_body": "{val} will be back soon!\nSorry for the inconvenience but we're performing some scheduled maintenance at the moment.\nWe'll probably be back online soon. Stay updated in our community groups:",
+    "@app_503_body": {
+        "placeholders": {
+            "val": {}
+        }
+    }
 }

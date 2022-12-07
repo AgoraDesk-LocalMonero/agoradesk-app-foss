@@ -9233,6 +9233,16 @@ class I18nPt extends I18n {
 
   @override
   String get app_ad_created => 'Ad created';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val App Maintenance';
+  }
+
+  @override
+  String app_503_body(Object val) {
+    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+  }
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
