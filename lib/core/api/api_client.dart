@@ -76,7 +76,11 @@ class ApiClient {
               }
             }
           }
-          options.headers["cookie"] = cookiesLst.join(';');
+          if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {
+            options.headers["cookie"] = options.headers["cookie"] + ';' + cookiesLst.join(';');
+          } else {
+            options.headers["cookie"] = cookiesLst.join(';');
+          }
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
