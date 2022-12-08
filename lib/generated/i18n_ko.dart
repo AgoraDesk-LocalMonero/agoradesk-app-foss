@@ -9227,4 +9227,20 @@ class I18nKo extends I18n {
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => '콜옵션 매도';
+
+  @override
+  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+
+  @override
+  String get app_ad_created => 'Ad created';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val App Maintenance';
+  }
+
+  @override
+  String app_503_body(Object val) {
+    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+  }
 }

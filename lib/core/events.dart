@@ -65,6 +65,10 @@ class PushReceivedEvent {
   });
 }
 
+class Display503Event {
+  const Display503Event();
+}
+
 ///
 /// Flash events
 ///

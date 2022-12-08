@@ -95,20 +95,29 @@ jobs:
       - name: Build-runner
         run: flutter packages pub run build_runner build --delete-conflicting-outputs
 
-      - name: Build AgoraDesk APK (Refular + FOSS)
+      - name: Build AgoraDesk APK (Regular)
         run: |
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.checkUpdates=true
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._1 }}.apk
           
-          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
-          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
-          
+#          flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
+#          mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
+
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.checkUpdates=true
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app_${{ steps.split.outputs._1 }}.apk
           
-          flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
-          mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app-foss_${{ steps.split.outputs._1 }}.apk
+#          flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
+#          mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app-foss_${{ steps.split.outputs._1 }}.apk
           rm build/app/outputs/flutter-apk/app.apk
+
+      - uses: actions/checkout@v3
+        with:
+          ref: fdroid_ad
+
+      - name: Build AgoraDesk APK (FOSS)
+          run: |
+            flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
+            mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
 
       - name: Create Github Release
         uses: ncipollo/release-action@v1

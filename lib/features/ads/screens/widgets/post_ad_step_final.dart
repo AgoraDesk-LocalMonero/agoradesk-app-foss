@@ -131,7 +131,7 @@ class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMeth
             loading: model.creatingAd,
             nextText: I18n.of(context)!.publish,
             onPressNext: () async {
-              await model.createAd();
+              await model.createAd(context);
             },
           ),
         ],

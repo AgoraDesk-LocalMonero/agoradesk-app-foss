@@ -119,7 +119,6 @@ class MarketViewModel extends ViewModel
   @override
   void init() async {
     //todo - refactor me (maybe with AutoRoute)
-
     isGuestMode = _authService.authState == AuthState.guest;
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest;
@@ -508,7 +507,6 @@ class MarketViewModel extends ViewModel
 
   @override
   Future<bool> didPopRoute() {
-    // TODO: implement didPopRoute
     throw UnimplementedError();
   }
 

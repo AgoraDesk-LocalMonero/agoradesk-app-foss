@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:flutter/cupertino.dart';
 
 mixin CountryInfoMixin {
@@ -12,7 +13,8 @@ mixin CountryInfoMixin {
   }
 
   String getCountryName(String code, {bool lowerCase = false}) {
-    String langCode = Platform.localeName.substring(0, 2);
+    String? langCode = AppSharedPrefs().locale?.languageCode;
+    langCode ??= 'en';
     if (langCode.isEmpty) {
       langCode = 'en';
     }
@@ -28,7 +30,12 @@ mixin CountryInfoMixin {
   }
 
   String getCurrencyName(String code) {
-    final langCode = Platform.localeName.substring(0, 2);
+    String? langCode = AppSharedPrefs().locale?.languageCode;
+
+    langCode ??= 'en';
+    if (langCode.isEmpty) {
+      langCode = 'en';
+    }
     try {
       return currencyName[langCode][code];
     } catch (e) {
@@ -38,7 +45,12 @@ mixin CountryInfoMixin {
   }
 
   String getCurrencyNameWithCode(String code) {
-    final langCode = Platform.localeName.substring(0, 2);
+    String? langCode = AppSharedPrefs().locale?.languageCode;
+
+    langCode ??= 'en';
+    if (langCode.isEmpty) {
+      langCode = 'en';
+    }
     try {
       return '$code (${currencyName[langCode][code]})';
     } catch (e) {
@@ -3205,7 +3217,7 @@ mixin CountryInfoMixin {
     "JP": "JPY",
     "KE": "KES",
     "KG": "KGS",
-    "KH": "KHR",
+    "KH": "USD",
     "KI": "AUD",
     "KM": "KMF",
     "KN": "XCD",
