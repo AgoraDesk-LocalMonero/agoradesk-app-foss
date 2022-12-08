@@ -14,13 +14,16 @@ class PasswordSuffixIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-        tooltip: passwordVisible ? context.intl.app_hide_password : context.intl.app_display_password,
-        onPressed: onPressed,
-        icon: Icon(
-          passwordVisible ? AgoraFont.eye_off : AgoraFont.eye,
-          size: 16,
-          color: context.colN70N50,
-        ));
+    return Semantics(
+      excludeSemantics: true,
+      child: IconButton(
+          tooltip: passwordVisible ? context.intl.app_hide_password : context.intl.app_display_password,
+          onPressed: onPressed,
+          icon: Icon(
+            passwordVisible ? AgoraFont.eye_off : AgoraFont.eye,
+            size: 16,
+            color: context.colN70N50,
+          )),
+    );
   }
 }

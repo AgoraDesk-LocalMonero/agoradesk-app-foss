@@ -76,7 +76,11 @@ class ApiClient {
               }
             }
           }
-          options.headers["cookie"] = cookiesLst.join(';');
+          if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {
+            options.headers["cookie"] = options.headers["cookie"] + ';' + cookiesLst.join(';');
+          } else {
+            options.headers["cookie"] = cookiesLst.join(';');
+          }
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
@@ -121,10 +125,6 @@ class ApiClient {
                 requestOptions: error.requestOptions,
                 response: error.response,
               );
-
-              // if (kDebugMode) {
-              //   eventBus.fire(FlashEvent.error(message));
-              // }
             }
           } else if (statusCode == 500) {
             if (kDebugMode) {
@@ -136,6 +136,10 @@ class ApiClient {
             if (kDebugMode) {
               eventBus.fire(FlashEvent.error(message));
             }
+          } else if (statusCode == 503) {
+            eventBus.fire(
+              const Display503Event(),
+            );
           }
           return handler.next(finalError ?? error);
         },

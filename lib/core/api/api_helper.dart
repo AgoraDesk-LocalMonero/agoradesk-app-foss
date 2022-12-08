@@ -58,9 +58,14 @@ mixin ApiHelper {
         late Map<String, dynamic> messageMap;
         try {
           messageMap = json.decode(json.decode(e.error));
-        } catch (e) {
-          debugPrint('[++++parseErrorToApiError] - $e');
-          messageMap = {'message': 'Unknow error'};
+        } catch (e2) {
+          try {
+            messageMap = json.decode(e.response.toString())['error'];
+          } catch (e3) {
+            debugPrint('[++++parseErrorToApiError2] - $e2');
+            debugPrint('[++++parseErrorToApiError3] - $e3');
+            messageMap = {'message': 'Unknow error'};
+          }
         }
 
         return ApiError(

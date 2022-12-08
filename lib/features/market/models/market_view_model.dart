@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
@@ -23,6 +24,7 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
+import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
 class MarketViewModel extends ViewModel
@@ -117,7 +119,6 @@ class MarketViewModel extends ViewModel
   @override
   void init() async {
     //todo - refactor me (maybe with AutoRoute)
-
     isGuestMode = _authService.authState == AuthState.guest;
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest;
@@ -462,18 +463,19 @@ class MarketViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
-      final newVersion = await AppUpdateService(
-        appState: context.read<AppState>(),
-      ).getReleaseVersion();
-      if (newVersion != null) {
-        await Future.delayed(const Duration(seconds: 1));
-        showDialog(
-            context: context,
-            builder: (context) {
-              return AppUpdateWidget(
-                newVesrionNumber: newVersion,
-              );
-            });
+      if (GetIt.I<AppParameters>().isCheckUpdates) {
+        final newVersion = await AppUpdateService(
+          appState: context.read<AppState>(),
+        ).getReleaseVersion();
+        if (newVersion != null) {
+          await Future.delayed(const Duration(seconds: 1));
+          showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (context) {
+                return AppUpdateWidget(newVesrionNumber: newVersion);
+              });
+        }
       }
     }
   }
@@ -505,7 +507,6 @@ class MarketViewModel extends ViewModel
 
   @override
   Future<bool> didPopRoute() {
-    // TODO: implement didPopRoute
     throw UnimplementedError();
   }
 

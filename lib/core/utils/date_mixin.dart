@@ -96,9 +96,24 @@ mixin DateMixin {
   ///
   /// pretty Last Seen display
   ///
-  String timeAgoFromNow(DateTime date) {
-    final now = DateTime.now();
-    return timeago.format(now.subtract(now.difference(date)));
+  String timeAgoFromNow(DateTime? date) {
+    if (date == null) {
+      return '';
+    }
+    try {
+      final now = DateTime.now();
+      final int daysDiff = now.difference(date).inDays;
+      DateTime newDate = now.subtract(now.difference(date));
+
+      // bug https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues/130
+      if (daysDiff > 365) {
+        final int subtructDays = daysDiff % 365 > 180 ? 180 : 0;
+        newDate = now.subtract(now.difference(date.subtract(days(subtructDays))));
+      }
+      return timeago.format(newDate);
+    } catch (e) {
+      return '';
+    }
   }
 
   ///
@@ -137,12 +152,16 @@ mixin DateMixin {
   ///
   ///
   String secondsToString(int m, String langCode) {
-    final d = Duration(seconds: m);
-    return printDuration(
-      d,
-      abbreviated: false,
-      locale: DurationLocale.fromLanguageCode(langCode.toLowerCase())!,
-    );
+    try {
+      final d = Duration(seconds: m);
+      return printDuration(
+        d,
+        abbreviated: false,
+        locale: DurationLocale.fromLanguageCode(langCode.toLowerCase())!,
+      );
+    } catch (e) {
+      return '';
+    }
   }
 
   ///

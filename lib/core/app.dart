@@ -19,7 +19,10 @@ import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/core/utils/app_links_handler.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
+import 'package:agoradesk/core/widgets/branded/agora_dialog_info_widget.dart';
 import 'package:agoradesk/core/widgets/branded/agora_info_dialog_for_root.dart';
+import 'package:agoradesk/core/widgets/branded/button_link.dart';
 import 'package:agoradesk/core/widgets/branded/uploading_progress_indicator.dart';
 import 'package:agoradesk/core/widgets/push_message.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -64,7 +67,8 @@ class App extends StatefulWidget {
   _AppState createState() => _AppState();
 }
 
-class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin {
+class _AppState extends State<App>
+    with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin, UrlMixin {
   late final SecureStorage _secureStorage;
   late final StreamSubscription<ConnectivityResult> _connectivitySubscription;
   late final ApiClient _api;
@@ -87,6 +91,7 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
   String _prevErrorMessage = '';
   DateTime _lastUsedErrorMessage = DateTime.now().subtract(const Duration(hours: 1));
   bool _activatePin = false;
+  bool _dialogOpened = false;
 
   @override
   void initState() {
@@ -118,7 +123,6 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       TradeService(api: _api, appState: appState),
       Hive.box<MessageBoxModel>(HiveBoxName.message),
     );
-
     _placesSearch = PlacesSearch(
       limit: 20,
     );
@@ -417,9 +421,9 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
       _authService.showPinSetUp = false;
     } else {
       newRoutes.add(const MainScreenRoute());
-      if (GetIt.I<AppParameters>().appRanFromPush) {
-        newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
-      }
+      // if (GetIt.I<AppParameters>().appRanFromPush) {
+      //   newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
+      // }
       _addUniLinksRouts();
       if (appState.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());
@@ -546,6 +550,35 @@ class _AppState extends State<App> with WidgetsBindingObserver, StringMixin, Cou
           },
           duration: const Duration(seconds: 4),
         );
+      })
+      ..on<Display503Event>().listen((e) {
+        if (!_dialogOpened) {
+          _dialogOpened = true;
+          showDialog(
+            context: router.navigatorKey.currentContext!,
+            builder: (context) => AgoraDialogInfoWidget(
+              title: context.intl.app_503_title(GetIt.I<AppParameters>().appName),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    context.intl.app_503_body(GetIt.I<AppParameters>().appName),
+                    style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
+                  ),
+                  const SizedBox(height: 6),
+                  ButtonLink(
+                    title: GetIt.I<AppParameters>().matrixChannel,
+                    onPressed: () => openLink(GetIt.I<AppParameters>().matrixChannel),
+                  ),
+                  ButtonLink(
+                    title: GetIt.I<AppParameters>().telegramChannel,
+                    onPressed: () => openLink(GetIt.I<AppParameters>().telegramChannel),
+                  ),
+                ],
+              ),
+            ),
+          ).then((value) => _dialogOpened = false);
+        }
       })
       ..on<AwesomeMessageClickedEvent>().listen((e) async {
         if (e.tradeId != null && e.tradeId!.isNotEmpty) {

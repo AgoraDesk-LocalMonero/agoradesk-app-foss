@@ -72,18 +72,17 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                     ),
                                   ),
                                   const SizedBox(height: 16),
-                                  Semantics(
-                                    tooltip: context.intl.login250Sbusername,
-                                    child: TextField(
-                                      decoration: context.decorationTxtFieldMain.copyWith(
-                                        hintText: context.intl.login250Sbusername,
-                                        errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
-                                      ),
-                                      autofillHints: const [AutofillHints.username],
-                                      onChanged: (input) {
-                                        model.username = input;
-                                      },
+                                  TextField(
+                                    decoration: context.decorationTxtFieldMain.copyWith(
+                                      labelText: context.intl.login250Sbusername,
+                                      labelStyle: context.txtBodyMediumNeutral70,
+                                      floatingLabelBehavior: FloatingLabelBehavior.never,
+                                      errorText: validateAlphanumericUnderscoreWithNull(model.username) ? null : '',
                                     ),
+                                    autofillHints: const [AutofillHints.username],
+                                    onChanged: (input) {
+                                      model.username = input;
+                                    },
                                   ),
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(
@@ -94,6 +93,9 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                     controller: model.otpController,
                                     keyboardType: TextInputType.number,
                                     decoration: context.decorationTxtFieldMain.copyWith(
+                                      labelText: context.intl.otp8722Sbtitle8722Sb0,
+                                      labelStyle: context.txtBodyMediumNeutral70,
+                                      floatingLabelBehavior: FloatingLabelBehavior.never,
                                       hintText: context.intl.otp8722Sbtitle8722Sb0,
                                       errorText: validateOtpWithNull(model.otp) ? null : '',
                                     ),

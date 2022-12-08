@@ -22,8 +22,11 @@ class AppParameters {
     required this.urlSupport,
     required this.urlFaq,
     required this.urlReceipt,
+    required this.telegramChannel,
+    required this.matrixChannel,
     required this.isAgora,
     required this.includeFcm,
+    required this.isCheckUpdates,
   });
 
   final FlavorType flavor;
@@ -45,8 +48,11 @@ class AppParameters {
   final String urlSupport;
   final String urlFaq;
   final String urlReceipt;
+  final String telegramChannel;
+  final String matrixChannel;
   final bool isAgora;
   final bool includeFcm;
+  final bool isCheckUpdates;
   String captchaCookie1 = '';
   String captchaCookie2 = '';
   List<Cookie>? cookies;

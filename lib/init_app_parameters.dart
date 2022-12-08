@@ -7,6 +7,7 @@ AppParameters initAppParameters(
   bool includeFcm,
   bool appRanFromPush,
   String? tradeId,
+  bool isCheckUpdates,
 ) {
   if (flavor == FlavorType.localmonero) {
     return AppParameters(
@@ -28,9 +29,12 @@ AppParameters initAppParameters(
       urlGuides: 'https://localmonero.co/guides',
       urlSupport: 'https://localmonero.co/support',
       urlFaq: 'https://localmonero.co/faq',
-      urlReceipt: 'http://agoradesk.com/receipt',
+      urlReceipt: 'https://agoradesk.com/receipt',
+      telegramChannel: 'https://t.me/LocalMonero',
+      matrixChannel: 'https://matrix.to/#/#localmonero:agoradesk.com',
       isAgora: false,
       includeFcm: includeFcm,
+      isCheckUpdates: isCheckUpdates,
     )
       ..isGoogleAvailable = isGoogleAvailable
       ..appRanFromPush = appRanFromPush
@@ -55,8 +59,11 @@ AppParameters initAppParameters(
     urlGuides: 'https://agoradesk.com/guides',
     urlSupport: 'https://agoradesk.com/support',
     urlFaq: 'https://agoradesk.com/faq',
-    urlReceipt: 'http://agoradesk.com/receipt',
+    urlReceipt: 'https://agoradesk.com/receipt',
+    telegramChannel: 'https://t.me/LocalMonero',
+    matrixChannel: 'https://matrix.to/#/#localmonero:agoradesk.com',
     isAgora: true,
     includeFcm: includeFcm,
+    isCheckUpdates: isCheckUpdates,
   )..isGoogleAvailable = isGoogleAvailable;
 }

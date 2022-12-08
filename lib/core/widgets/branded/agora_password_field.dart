@@ -34,31 +34,39 @@ class _AgoraPasswordFieldState extends State<AgoraPasswordField> with ValidatorM
   Widget build(BuildContext context) {
     if (widget.decoration != null) {
       decoration = widget.decoration!.copyWith(
-        suffixIcon: PasswordSuffixIcon(
-          passwordVisible: !_obscure,
-          onPressed: () => setState(() => _obscure = !_obscure),
+        suffixIcon: Semantics(
+          excludeSemantics: true,
+          child: PasswordSuffixIcon(
+            passwordVisible: !_obscure,
+            onPressed: () => setState(() => _obscure = !_obscure),
+          ),
         ),
       );
     } else {
       decoration = context.decorationTxtFieldMain.copyWith(
         hintText: context.intl.password,
         errorText: validatePasswordWithNull(widget.controller.text) ? null : '',
-        suffixIcon: PasswordSuffixIcon(
-          passwordVisible: !_obscure,
-          onPressed: () => setState(() => _obscure = !_obscure),
+        suffixIcon: Semantics(
+          excludeSemantics: true,
+          child: PasswordSuffixIcon(
+            passwordVisible: !_obscure,
+            onPressed: () => setState(() => _obscure = !_obscure),
+          ),
         ),
       );
     }
 
-    return Semantics(
-      tooltip: context.intl.password,
-      child: TextField(
-        controller: widget.controller,
-        autofocus: widget.autofocus,
-        enabled: widget.enabled,
-        obscureText: _obscure,
-        decoration: decoration,
-        autofillHints: const [AutofillHints.password],
+    return MergeSemantics(
+      child: Semantics(
+        tooltip: context.intl.app_accessibility_edit_box_password,
+        child: TextField(
+          controller: widget.controller,
+          autofocus: widget.autofocus,
+          enabled: widget.enabled,
+          obscureText: _obscure,
+          decoration: decoration,
+          autofillHints: const [AutofillHints.password],
+        ),
       ),
     );
   }

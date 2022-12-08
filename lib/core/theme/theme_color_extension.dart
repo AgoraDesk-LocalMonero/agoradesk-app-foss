@@ -142,6 +142,7 @@ extension ColorExtension on ColorScheme {
   InputDecoration get txtFieldMainDecoration => brightness == Brightness.dark
       ? InputDecoration(
           hintText: '',
+          hintStyle: textTheme.bodyMedium!.copyWith(color: neutral70),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
           labelText: '',

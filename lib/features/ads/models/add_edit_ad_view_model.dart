@@ -456,7 +456,7 @@ class AddEditAdViewModel extends ViewModel
     updatingAd = false;
   }
 
-  Future createAd() async {
+  Future createAd(BuildContext context) async {
     if (!_creatingAd) {
       creatingAd = true;
 
@@ -484,6 +484,7 @@ class AddEditAdViewModel extends ViewModel
       final res = await _adsRepository.adCreate(ad);
       creatingAd = false;
       if (res.isRight) {
+        eventBus.fire(FlashEvent.info(context.intl.app_ad_created));
         AutoRouter.of(context).popUntilRoot();
       } else {
         handleApiError(res.left, context);

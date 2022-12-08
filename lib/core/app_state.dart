@@ -181,6 +181,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   set countryCode(String val) {
     AppSharedPrefs().setString(AppSharedPrefsKey.countryCode, val);
+    updateWith(countryCode: val);
   }
 
   bool initialized = false;
