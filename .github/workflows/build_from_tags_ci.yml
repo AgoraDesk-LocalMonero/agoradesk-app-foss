@@ -1,6 +1,6 @@
 # Creates release when tag pushed
 # Create tag:
-#  git tag vX.X.X
+#  git tag vX.X.X-github
 # Push it:
 #  git push origin <tag_name>
 # After that release will be created.

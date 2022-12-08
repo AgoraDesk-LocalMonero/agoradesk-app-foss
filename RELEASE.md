@@ -1,6 +1,11 @@
 ### Updates
-1. HotFix: translated strings bug.
-2. Fix: ad edit BTC fee settlement bug.
+1. HotFix: captcha loop.
+2. Feat: assessibility improvements.
+3. Feat: maintenance mode when backend is not available.
+4. Fix: bug with the ad creation.
+5. Feat: when the ad is created, display message.
+6. Fix: cancel button for seller in disputed trades.
+7. Fix: able to open trade chat without PIN.
 
 
 ### About the attached app's
