@@ -30,7 +30,7 @@ localmonero/something AgoraDesk app will be opened).
 (for example in China or with GrapheneOS) can't receive pushes, app detects it and start
 polling in the background mode. [More info](Notifications.md)
 
-4. For anonymisation reasons all notifications sent without translations and translated on client.
+4. For anonymisation reasons all notifications sent without translations and arte translated on the client side.
 So, we use data messages to display them with app code (not with the FCM).
 
 5. Made with Dart & Flutter ❤️
