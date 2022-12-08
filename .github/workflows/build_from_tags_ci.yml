@@ -26,7 +26,7 @@ name: GithubRelease
 on:
   push:
     tags:
-      - "v*.*.*-github"
+      - "v*.*.*"
 
 jobs:
   build:
