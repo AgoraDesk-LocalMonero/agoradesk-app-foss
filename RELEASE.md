@@ -1,11 +1,10 @@
 ### Updates
-1. HotFix: captcha loop.
+1. HotFix: avoid request in un-authorised state.
 2. Feat: assessibility improvements.
-3. Feat: maintenance mode when backend is not available.
-4. Fix: bug with the ad creation.
-5. Feat: when the ad is created, display message.
-6. Fix: cancel button for seller in disputed trades.
-7. Fix: able to open trade chat without PIN.
+3. Feat: correct no connnection messages on the main pages.
+4. Fix: app update link opens separate browser.
+5. Feat: add mail icon to the ads that require email.
+6. Fix: high battery drain - increase requests time interval 2 times.
 
 
 ### About the attached app's
