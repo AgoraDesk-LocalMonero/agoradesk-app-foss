@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.39+63
+version: 1.0.40+64
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -46,7 +46,7 @@ dependencies:
   easy_debounce: ^2.0.2
   extended_image: ^6.0.1
   path_provider: ^2.0.8
-  flutter_pin_code_widget: 0.0.5
+  flutter_pin_code_widget: 0.0.5+1
   flutter_secure_storage: ^5.0.2
   dots_indicator: ^2.0.0
   currency_picker: ^2.0.7

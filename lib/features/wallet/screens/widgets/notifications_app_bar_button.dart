@@ -12,20 +12,22 @@ class NotificationsAppBarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Semantics(
-      label: context.intl.settings250Sbnotifications250Sbtitle,
-      child: StreamBuilder<bool>(
-          stream: context.read<AppState>().hasUnread$,
-          builder: (context, snapshot) {
-            final bool hasUnreaded = snapshot.data ?? false;
-            return AppBarButton(
-              iconData: AgoraFont.bell,
-              isRight: false,
-              hasUnreaded: hasUnreaded,
-              label: context.intl.settings250Sbnotifications250Sbtitle,
-              onPressed: () => context.pushRoute(const NotificationsRoute()),
-            );
-          }),
+    return MergeSemantics(
+      child: Semantics(
+        label: context.intl.settings250Sbnotifications250Sbtitle,
+        child: StreamBuilder<bool>(
+            stream: context.read<AppState>().hasUnread$,
+            builder: (context, snapshot) {
+              final bool hasUnreaded = snapshot.data ?? false;
+              return AppBarButton(
+                iconData: AgoraFont.bell,
+                isRight: false,
+                hasUnreaded: hasUnreaded,
+                label: context.intl.settings250Sbnotifications250Sbtitle,
+                onPressed: () => context.pushRoute(const NotificationsRoute()),
+              );
+            }),
+      ),
     );
   }
 }

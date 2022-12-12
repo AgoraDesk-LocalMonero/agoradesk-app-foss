@@ -5,13 +5,13 @@ There are two apps under one code base in this repository.
 First app - AgoraDesk:
 - [Appstore](https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678)
 - [Google Play](https://play.google.com/store/apps/details?id=com.agoradesk.app)
-- F-Droid - soon
+- [F-Droid](https://f-droid.org/en/packages/com.agoradesk.app/)
 - [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
 
 Second app - LocalMonero:
 - [Appstore](https://apps.apple.com/app/localmonero-p2p-xmr-trading/id1627693140)
 - [Google Play](https://play.google.com/store/apps/details?id=co.localmonero.app)
-- F-Droid - soon
+- [F-Droid](https://f-droid.org/en/packages/co.localmonero.app/)
 - [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
 
 
@@ -30,7 +30,7 @@ localmonero/something AgoraDesk app will be opened).
 (for example in China or with GrapheneOS) can't receive pushes, app detects it and start
 polling in the background mode. [More info](Notifications.md)
 
-4. For anonymisation reasons all notifications sent without translations and translated on client.
+4. For anonymisation reasons all notifications sent without translations and arte translated on the client's side.
 So, we use data messages to display them with app code (not with the FCM).
 
 5. Made with Dart & Flutter ❤️

@@ -16589,6 +16589,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'{val} will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:'**
   String app_503_body(Object val);
+
+  /// No description provided for @app_select_ad_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Select ad type'**
+  String get app_select_ad_type;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

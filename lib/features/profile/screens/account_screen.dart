@@ -143,34 +143,6 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.post8722Sbad250Sbcountry250Sbtitle,
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
-
-                          // const SizedBox(height: 8),
-                          // LineWithArrow(
-                          //   title: 'Test error message dialog',
-                          //   onPressed: () => eventBus.fire(FlashEvent.error('errorMessage')),
-                          // ),
-                          // const SizedBox(height: 8),
-                          // LineWithArrow(
-                          //   title: 'Test success message',
-                          //   onPressed: () => eventBus.fire(FlashEvent.success('Copied to success!')),
-                          // ),
-                          // const SizedBox(height: 8),
-                          // LineWithArrow(
-                          //   title: 'Test info message',
-                          //   onPressed: () => eventBus.fire(FlashEvent.info('Test info message')),
-                          // ),
-                          // const SizedBox(height: 16),
-                          // LineWithArrow(
-                          //   title: 'Test custom overlay',
-                          //   onPressed: () {
-                          //     showOverlay((context, t) {
-                          //       return Opacity(
-                          //         opacity: t,
-                          //         child: IosStyleToast(),
-                          //       );
-                          //     }, duration: Duration.zero);
-                          //   },
-                          // ),
                           const SizedBox(height: 16),
                           Center(
                             child: ButtonFilledWithIconTonal(
@@ -182,7 +154,11 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                           GestureDetector(
                             behavior: HitTestBehavior.opaque,
                             onTap: () => copyToClipboard(model.appVersionStr, context),
-                            onDoubleTap: () async {},
+                            onDoubleTap: () async {
+                              // final res1 = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                              // copyToClipboard(res1, context);
+                              // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
+                            },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
                               child: Center(

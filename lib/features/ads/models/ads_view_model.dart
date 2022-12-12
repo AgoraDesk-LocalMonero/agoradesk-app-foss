@@ -87,6 +87,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool _deletingAds = false;
   bool _applyingChanges = false;
 
+  bool connection = true;
+
   bool _changingVisibility = false;
 
   Asset? _asset;

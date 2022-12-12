@@ -68,6 +68,7 @@ class TradesViewModel extends ViewModel with ErrorParseMixin {
   bool hasMorePages = false;
   bool _loading = false;
   bool _disableTabBar = false;
+  bool connection = true;
 
   int get bodyTabIndex => _bodyTabIndex;
 
