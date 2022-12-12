@@ -55,6 +55,7 @@ class MarketViewModel extends ViewModel
   late bool isGuestMode;
 
   Asset? _asset = Asset.XMR;
+  bool connection = true;
   final List<AdModel> ads = [];
   late CountryCodeModel countryCodeModel;
   late String selectedCountryCode;

@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -287,52 +288,68 @@ class _TradesScreenState extends State<TradesScreen>
   }
 
   Widget _buildBody(BuildContext context, TradesViewModel model) {
-    return Column(
-      children: [
-        _buildTopFilter(context, model),
-        Expanded(
-          child: RefreshIndicator(
-            key: model.indicatorKey,
-            onRefresh: model.getTrades,
-            child: LayoutBuilder(builder: (context, constraints) {
-              return ListView.builder(
-                shrinkWrap: false,
-                itemCount: model.trades.isEmpty ? 1 : model.trades.length + 1,
-                itemBuilder: (context, index) {
-                  if (model.trades.isEmpty) {
-                    if (model.loading) {
-                      return const SizedBox();
-                    }
-                    return ConstrainedBox(
-                      constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                      child: model.loading
-                          ? const SizedBox()
-                          : NoSearchResults(
-                              text: I18n.of(context)!.no_trades,
-                            ),
-                    );
-                  }
-                  if (index < model.trades.length) {
-                    return TradeTile(
-                      trade: model.trades[index],
-                      tradeStatus: getTradeStatus(model.trades[index]),
-                      onPressed: () async {
-                        await AutoRouter.of(context).push(TradeRoute(tradeModel: model.trades[index]));
-                        model.indicatorKey.currentState?.show();
+    return StreamBuilder<bool>(
+        stream: context.read<AppState>().connection$,
+        builder: (context, snapshot) {
+          if (snapshot.data == false) {
+            model.connection = false;
+            return NoSearchResults(
+              text: context.intl.api_error_4000,
+            );
+          }
+
+          if (!model.connection) {
+            model.connection = true;
+            model.indicatorKey.currentState?.show();
+          }
+
+          return Column(
+            children: [
+              _buildTopFilter(context, model),
+              Expanded(
+                child: RefreshIndicator(
+                  key: model.indicatorKey,
+                  onRefresh: model.getTrades,
+                  child: LayoutBuilder(builder: (context, constraints) {
+                    return ListView.builder(
+                      shrinkWrap: false,
+                      itemCount: model.trades.isEmpty ? 1 : model.trades.length + 1,
+                      itemBuilder: (context, index) {
+                        if (model.trades.isEmpty) {
+                          if (model.loading) {
+                            return const SizedBox();
+                          }
+                          return ConstrainedBox(
+                            constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                            child: model.loading
+                                ? const SizedBox()
+                                : NoSearchResults(
+                                    text: I18n.of(context)!.no_trades,
+                                  ),
+                          );
+                        }
+                        if (index < model.trades.length) {
+                          return TradeTile(
+                            trade: model.trades[index],
+                            tradeStatus: getTradeStatus(model.trades[index]),
+                            onPressed: () async {
+                              await AutoRouter.of(context).push(TradeRoute(tradeModel: model.trades[index]));
+                              model.indicatorKey.currentState?.show();
+                            },
+                          );
+                        } else {
+                          return LoadMoreWidget(
+                            hasMore: model.hasMorePages,
+                            loadCallback: () => model.getTrades(loadMore: true),
+                          );
+                        }
                       },
                     );
-                  } else {
-                    return LoadMoreWidget(
-                      hasMore: model.hasMorePages,
-                      loadCallback: () => model.getTrades(loadMore: true),
-                    );
-                  }
-                },
-              );
-            }),
-          ),
-        ),
-      ],
-    );
+                  }),
+                ),
+              ),
+            ],
+          );
+        });
   }
 }

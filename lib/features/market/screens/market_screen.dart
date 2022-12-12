@@ -330,51 +330,67 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
       key: model.indicatorKey,
       onRefresh: model.getAds,
       child: LayoutBuilder(builder: (context, constraints) {
-        return ListView.builder(
-          shrinkWrap: true,
-          itemCount: model.ads.length + 1,
-          itemBuilder: (context, index) {
-            if (model.ads.isEmpty) {
-              return ConstrainedBox(
-                constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                child: model.loadingAds || model.initialLoading
-                    ? const SizedBox()
-                    : NoSearchResults(
-                        text: _haventFindAds(context, model),
-                      ),
-              );
-            }
+        return StreamBuilder<bool>(
+            stream: context.read<AppState>().connection$,
+            builder: (context, snapshot) {
+              if (snapshot.data == false) {
+                model.connection = false;
+                return NoSearchResults(
+                  text: context.intl.api_error_4000,
+                );
+              }
 
-            if (index < model.ads.length) {
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: AdMarketTile(
-                  ad: model.ads[index],
-                  onPressed: () async {
-                    await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.ads[index]));
-                  },
-                ),
-              );
-            } else {
-              return model.hasMorePages
-                  ? VisibilityDetector(
-                      key: UniqueKey(),
-                      onVisibilityChanged: (VisibilityInfo info) {
-                        if (info.visibleFraction > 0.1) {
-                          model.getAds(loadMore: true);
-                        }
-                      },
-                      child: const SizedBox(
-                        height: 80,
-                        child: Center(
-                          child: CupertinoActivityIndicator(),
-                        ),
+              if (!model.connection) {
+                model.connection = true;
+                model.indicatorKey.currentState?.show();
+              }
+
+              return ListView.builder(
+                shrinkWrap: true,
+                itemCount: model.ads.length + 1,
+                itemBuilder: (context, index) {
+                  if (model.ads.isEmpty) {
+                    return ConstrainedBox(
+                      constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                      child: model.loadingAds || model.initialLoading
+                          ? const SizedBox()
+                          : NoSearchResults(
+                              text: _haventFindAds(context, model),
+                            ),
+                    );
+                  }
+
+                  if (index < model.ads.length) {
+                    return Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                      child: AdMarketTile(
+                        ad: model.ads[index],
+                        onPressed: () async {
+                          await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.ads[index]));
+                        },
                       ),
-                    )
-                  : const SizedBox();
-            }
-          },
-        );
+                    );
+                  } else {
+                    return model.hasMorePages
+                        ? VisibilityDetector(
+                            key: UniqueKey(),
+                            onVisibilityChanged: (VisibilityInfo info) {
+                              if (info.visibleFraction > 0.1) {
+                                model.getAds(loadMore: true);
+                              }
+                            },
+                            child: const SizedBox(
+                              height: 80,
+                              child: Center(
+                                child: CupertinoActivityIndicator(),
+                              ),
+                            ),
+                          )
+                        : const SizedBox();
+                  }
+                },
+              );
+            });
       }),
     );
   }
