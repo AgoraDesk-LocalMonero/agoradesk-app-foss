@@ -222,7 +222,7 @@ class ReadMoreTextState extends State<ReadMoreText> {
           case TrimMode.line:
             if (textPainter.didExceedMaxLines) {
               textSpan = TextSpan(
-                semanticsLabel: _readMore ? widget.trimCollapsedText : widget.trimExpandedText,
+                // semanticsLabel: _readMore ? widget.trimCollapsedText : widget.trimExpandedText,
                 style: effectiveTextStyle,
                 text: _readMore
                     ? widget.data.substring(0, endIndex) + (linkLongerThanLine ? _kLineSeparator : '')
@@ -260,13 +260,7 @@ class ReadMoreTextState extends State<ReadMoreText> {
       },
     );
     if (widget.semanticsLabel != null) {
-      result = Semantics(
-        textDirection: widget.textDirection,
-        label: widget.semanticsLabel,
-        child: ExcludeSemantics(
-          child: result,
-        ),
-      );
+      result = result;
     }
     return result;
   }

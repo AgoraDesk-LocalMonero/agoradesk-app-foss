@@ -49,6 +49,8 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   }
 
   Widget _buildTop(BuildContext context) {
+    final bool verifiedEmailRequired = ad.verifiedEmailRequired != null && ad.verifiedEmailRequired == true;
+
     return displayUserLine
         ? Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
@@ -69,6 +71,15 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    verifiedEmailRequired
+                        ? Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
+                            child: Icon(
+                              CupertinoIcons.mail,
+                              size: 12,
+                            ),
+                          )
+                        : const SizedBox(),
                     const Icon(
                       CupertinoIcons.square_list,
                       size: 12,
@@ -78,7 +89,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                       ad.profile?.allCounts.toString() ?? '',
                       style: context.txtBodyXSmallN90N10.copyWith(height: 1),
                     ),
-                    const SizedBox(width: 16),
+                    const SizedBox(width: 12),
                     const Icon(
                       CupertinoIcons.hand_thumbsup,
                       size: 12,
