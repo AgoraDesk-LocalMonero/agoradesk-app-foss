@@ -889,9 +889,11 @@ class TradeViewModel extends ViewModel
   void _removeFromAnimatedList(MessageBoxModel? msg) {
     if (msg != null) {
       final position = messagesAfterSticky.indexOf(msg);
-      messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
-        return const SizedBox();
-      });
+      if (position != -1) {
+        messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
+          return const SizedBox();
+        });
+      }
     }
   }
 
