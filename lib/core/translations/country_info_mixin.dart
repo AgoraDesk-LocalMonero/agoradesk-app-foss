@@ -64,7 +64,7 @@ mixin CountryInfoMixin {
       return _countryCurrency[countryCode]!;
     } catch (e) {
       debugPrint('[getCountryCurrencyCode error] $e');
-      return '';
+      return 'USD';
     }
   }
 
