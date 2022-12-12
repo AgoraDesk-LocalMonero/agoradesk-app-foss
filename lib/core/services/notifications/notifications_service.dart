@@ -184,7 +184,7 @@ class NotificationsService with ForegroundMessagesMixin {
       appState.pushFcmTokenSavedToApi = false;
     }
 
-    if (appState.pushFcmTokenSavedToApi == false) {
+    if (appState.pushFcmTokenSavedToApi == false && appState.username.isNotEmpty) {
       final res = await _saveFcmTokenToApi(
         DeviceModel(
           token: newToken ?? oldToken!,

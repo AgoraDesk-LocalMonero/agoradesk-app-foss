@@ -136,6 +136,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
         isAdOwner = ad!.profile == null;
         _asset = ad!.asset!;
         if (!isGuestMode) {
+          await Future.delayed(const Duration(seconds: 5));
           await _getWalletsBalance();
         }
         initialLoadingAd = false;

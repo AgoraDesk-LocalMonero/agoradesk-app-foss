@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -9,6 +8,7 @@ import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class Disable2faViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin {
   Disable2faViewModel({
@@ -83,7 +83,8 @@ class Disable2faViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin
   }
 
   @override
-  void dispose() {
+  void dispose() async {
+    await _pasteCode.close();
     super.dispose();
   }
 }
