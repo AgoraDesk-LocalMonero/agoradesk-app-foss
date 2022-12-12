@@ -72,6 +72,9 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     });
     otpController.addListener(() {
       otp = otpController.text;
+      if (otp!.isEmpty) {
+        otp = null;
+      }
     });
     super.init();
   }

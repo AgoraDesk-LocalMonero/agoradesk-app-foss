@@ -171,46 +171,62 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
   }
 
   Widget _buildBody(BuildContext context, AdsViewModel model) {
-    return Expanded(
-      child: RefreshIndicator(
-        key: model.indicatorKey,
-        onRefresh: model.getAds,
-        child: LayoutBuilder(builder: (context, constraints) {
-          return ListView.builder(
-            shrinkWrap: true,
-            itemCount: model.ads.isEmpty ? 1 : model.ads.length,
-            itemBuilder: (context, index) {
-              if (model.ads.isEmpty) {
-                if (model.loadingAds) {
-                  return const SizedBox();
-                }
+    return StreamBuilder<bool>(
+        stream: context.read<AppState>().connection$,
+        builder: (context, snapshot) {
+          if (snapshot.data == false) {
+            model.connection = false;
+            return NoSearchResults(
+              text: context.intl.api_error_4000,
+            );
+          }
 
-                return ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: NoSearchResults(
-                    text: context.intl.ads_havent_posted,
-                  ),
+          if (!model.connection) {
+            model.connection = true;
+            model.indicatorKey.currentState?.show();
+          }
+
+          return Expanded(
+            child: RefreshIndicator(
+              key: model.indicatorKey,
+              onRefresh: model.getAds,
+              child: LayoutBuilder(builder: (context, constraints) {
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: model.ads.isEmpty ? 1 : model.ads.length,
+                  itemBuilder: (context, index) {
+                    if (model.ads.isEmpty) {
+                      if (model.loadingAds) {
+                        return const SizedBox();
+                      }
+
+                      return ConstrainedBox(
+                        constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                        child: NoSearchResults(
+                          text: context.intl.ads_havent_posted,
+                        ),
+                      );
+                    }
+
+                    final ad = model.ads[index];
+                    return AdTile(
+                      ad: ad,
+                      index: index,
+                      changingIndex: model.changingAdIndex,
+                      changingVisibility: model.changingVisibility,
+                      isSelected: model.isAdSelected(ad),
+                      onPressed: () => model.managePressToAd(ad, context),
+                      onLongPress: () => model.handleLongPressToAd(ad),
+                      onVisiblePressed: () => model.changeAdVisibility(ad, index),
+                      tooltipController: index == 0 ? model.tooltipEyeController : null,
+                      tooltipPressController: index == 1 ? model.tooltipPressController : null,
+                    );
+                  },
                 );
-              }
-
-              final ad = model.ads[index];
-              return AdTile(
-                ad: ad,
-                index: index,
-                changingIndex: model.changingAdIndex,
-                changingVisibility: model.changingVisibility,
-                isSelected: model.isAdSelected(ad),
-                onPressed: () => model.managePressToAd(ad, context),
-                onLongPress: () => model.handleLongPressToAd(ad),
-                onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                tooltipController: index == 0 ? model.tooltipEyeController : null,
-                tooltipPressController: index == 1 ? model.tooltipPressController : null,
-              );
-            },
+              }),
+            ),
           );
-        }),
-      ),
-    );
+        });
   }
 
   Widget _buildFilterBulkActions(BuildContext context, AdsViewModel model) {
@@ -414,7 +430,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               Expanded(
                 flex: 1,
                 child: DropdownSearch<String>(
-                  dropdownButtonProps: context.dropdownButtonProps(),
+                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_ad_type),
                   dropdownDecoratorProps: context.dropdownDecoration,
                   popupProps: PopupProps.menu(
                     menuProps: context.dropdownMenuProps,

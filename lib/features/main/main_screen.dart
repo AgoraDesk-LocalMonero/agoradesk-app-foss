@@ -19,6 +19,8 @@ import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
+const _kForegroungPollingInterval = 60000;
+
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -167,7 +169,7 @@ class _MainScreenState extends State<MainScreen> {
         enableVibration: false,
       ),
       foregroundTaskOptions: const ForegroundTaskOptions(
-        interval: 30000,
+        interval: _kForegroungPollingInterval,
         autoRunOnBoot: true,
         allowWifiLock: true,
       ),

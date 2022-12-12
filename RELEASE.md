@@ -1,6 +1,10 @@
 ### Updates
-1. HotFix: translated strings bug.
-2. Fix: ad edit BTC fee settlement bug.
+1. HotFix: avoid requests in an unauthorised state.
+2. Feat: accessibility improvements.
+3. Feat: correct no connection messages on the main pages.
+4. Fix: app update link opens the separate browser.
+5. Feat: add a mail icon to the ads that require an email.
+6. Fix: high battery drain - increase requests time interval 2 times.
 
 
 ### About the attached app's

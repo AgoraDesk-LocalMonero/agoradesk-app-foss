@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -14,7 +13,6 @@ import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart'
 import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
@@ -145,34 +143,6 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.post8722Sbad250Sbcountry250Sbtitle,
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
-
-                          // const SizedBox(height: 8),
-                          // LineWithArrow(
-                          //   title: 'Test error message dialog',
-                          //   onPressed: () => eventBus.fire(FlashEvent.error('errorMessage')),
-                          // ),
-                          // const SizedBox(height: 8),
-                          // LineWithArrow(
-                          //   title: 'Test success message',
-                          //   onPressed: () => eventBus.fire(FlashEvent.success('Copied to success!')),
-                          // ),
-                          // const SizedBox(height: 8),
-                          // LineWithArrow(
-                          //   title: 'Test info message',
-                          //   onPressed: () => eventBus.fire(FlashEvent.info('Test info message')),
-                          // ),
-                          // const SizedBox(height: 16),
-                          // LineWithArrow(
-                          //   title: 'Test custom overlay',
-                          //   onPressed: () {
-                          //     showOverlay((context, t) {
-                          //       return Opacity(
-                          //         opacity: t,
-                          //         child: IosStyleToast(),
-                          //       );
-                          //     }, duration: Duration.zero);
-                          //   },
-                          // ),
                           const SizedBox(height: 16),
                           Center(
                             child: ButtonFilledWithIconTonal(
@@ -186,18 +156,8 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onTap: () => copyToClipboard(model.appVersionStr, context),
                             onDoubleTap: () async {
                               // final res1 = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
-                              // final GooglePlayServicesAvailability gPlayState =
-                              //     await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
-                              // copyToClipboard(gPlayState.toString(), context);
-                              //
-                              late final String res;
-                              try {
-                                res = await FirebaseMessaging.instance.getToken() ?? 'FCM getToken returns null';
-                              } catch (e) {
-                                res = e.toString();
-                              }
-                              copyToClipboard(res, context);
-                              eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
+                              // copyToClipboard(res1, context);
+                              // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
                             },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
