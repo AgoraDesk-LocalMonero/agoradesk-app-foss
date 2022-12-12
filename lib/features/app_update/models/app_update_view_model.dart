@@ -14,7 +14,7 @@ class AppUpdateViewModel extends ViewModel with UrlMixin {
   }
 
   void openUpdateUrl(String currentRelease) {
-    openLink(GetIt.I<AppParameters>().githubLatestReleaseUrl);
+    openLinkBrowser(GetIt.I<AppParameters>().githubLatestReleaseUrl);
     setUgnoreUntilNext(currentRelease);
     Navigator.of(context).pop();
   }
