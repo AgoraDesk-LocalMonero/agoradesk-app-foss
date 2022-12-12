@@ -97,7 +97,7 @@ jobs:
 
       - name: Build AgoraDesk APK (Refular + FOSS)
         run: |
-          git checkout fdroid-ad
+          git checkout fdroid_ad
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
           
