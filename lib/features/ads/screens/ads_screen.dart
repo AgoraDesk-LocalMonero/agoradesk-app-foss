@@ -414,7 +414,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               Expanded(
                 flex: 1,
                 child: DropdownSearch<String>(
-                  dropdownButtonProps: context.dropdownButtonProps(),
+                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_ad_type),
                   dropdownDecoratorProps: context.dropdownDecoration,
                   popupProps: PopupProps.menu(
                     menuProps: context.dropdownMenuProps,

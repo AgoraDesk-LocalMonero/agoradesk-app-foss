@@ -117,6 +117,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
       alignment: Alignment.bottomRight,
       child: model.displaySend
           ? IconButton(
+              tooltip: context.intl.chat250Sbsend,
               padding: EdgeInsets.fromLTRB(0, topPadding, buttonLeftPadding, buttonBottomPadding + 10),
               iconSize: 32,
               alignment: Alignment.centerRight,
@@ -129,6 +130,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
             )
           : Consumer<ScreenHeight>(builder: (context, keybrd, child) {
               return IconButton(
+                tooltip: context.intl.chat250Sbattach,
                 padding: EdgeInsets.zero,
                 iconSize: 72,
                 alignment: Alignment.centerRight,

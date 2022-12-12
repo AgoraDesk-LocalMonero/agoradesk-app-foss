@@ -9243,4 +9243,7 @@ class I18nHu extends I18n {
   String app_503_body(Object val) {
     return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
   }
+
+  @override
+  String get app_select_ad_type => 'Select ad type';
 }

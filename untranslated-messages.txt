@@ -3,7 +3,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "bg": [
@@ -11,21 +12,24 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "cs": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "de": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "es": [
@@ -33,7 +37,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "fr": [
@@ -41,56 +46,64 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "hu": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "it": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "ja": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "ko": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "lv": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "nl": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "pl": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "pt": [
@@ -142,7 +155,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "pt_BR": [
@@ -150,14 +164,16 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "ro": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "ru": [
@@ -165,7 +181,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "sk": [
@@ -175,7 +192,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "sw": [
@@ -186,7 +204,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "tl": [
@@ -197,7 +216,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "tr": [
@@ -205,14 +225,16 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "ur": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "zh": [
@@ -264,7 +286,8 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "zh_CN": [
@@ -837,13 +860,15 @@
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ],
 
   "zh_TW": [
     "app_accessibility_edit_box_password",
     "app_ad_created",
     "app_503_title",
-    "app_503_body"
+    "app_503_body",
+    "app_select_ad_type"
   ]
 }

@@ -5489,5 +5489,6 @@
         "placeholders": {
             "val": {}
         }
-    }
+    },
+    "app_select_ad_type": "Select ad type"
 }
