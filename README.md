@@ -2,7 +2,8 @@
 
 There are two apps under one code base in this repository.
 
-First app - AgoraDesk:
+## AgoraDesk
+
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
 <a href="https://play.google.com/store/apps/details?id=com.agoradesk.app" target="_blank" rel="noopener noreferrer">
 <img alt="Get it on Google Play" src="https://agoradesk.com/static/img/mobile-app-banner/google.png" style="height: 45px; border-radius: 8px;"></a>
@@ -14,17 +15,18 @@ First app - AgoraDesk:
 <img alt="Download .apk directly from GitHub" src="https://agoradesk.com/static/img/mobile-app-banner/apk.png" style="height: 45px; border-radius: 8px;"></a>
 </div>
 
-- [Appstore](https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678)
-- [Google Play](https://play.google.com/store/apps/details?id=com.agoradesk.app)
-- [F-Droid](https://f-droid.org/en/packages/com.agoradesk.app/)
-- [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
+## LocalMonero
 
-Second app - LocalMonero:
-- [Appstore](https://apps.apple.com/app/localmonero-p2p-xmr-trading/id1627693140)
-- [Google Play](https://play.google.com/store/apps/details?id=co.localmonero.app)
-- [F-Droid](https://f-droid.org/en/packages/co.localmonero.app/)
-- [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
-
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
+<a href="https://play.google.com/store/apps/details?id=co.localmonero.app" target="_blank" rel="noopener noreferrer">
+<img alt="Get it on Google Play" src="https://localmonero.co/static/img/mobile-app-banner/google.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://apps.apple.com/app/localmonero-p2p-xmr-trading/id1627693140" target="_blank" rel="noopener noreferrer">
+<img alt="Download on the App Store" src="https://localmonero.co/static/img/mobile-app-banner/apple.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://f-droid.org/en/packages/co.localmonero.app/" target="_blank" rel="noopener noreferrer">
+<img alt="Get in on F-Droid" src="https://localmonero.co/static/img/mobile-app-banner/fdroid.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases" target="_blank" rel="noopener noreferrer">
+<img alt="Download .apk directly from GitHub" src="https://localmonero.co/static/img/mobile-app-banner/apk.png" style="height: 45px; border-radius: 8px;"></a>
+</div>
 
 ## App Features 🔥
 
