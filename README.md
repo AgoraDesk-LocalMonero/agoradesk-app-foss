@@ -3,6 +3,18 @@
 There are two apps under one code base in this repository.
 
 First app - AgoraDesk:
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
+<a href="https://play.google.com/store/apps/details?id=com.agoradesk.app" target="_blank" rel="noopener noreferrer">
+<img alt="Get it on Google Play" src="/static/img/mobile-app-banner/google.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678" target="_blank" rel="noopener noreferrer">
+<img alt="Download on the App Store" src="/static/img/mobile-app-banner/apple.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://f-droid.org/en/packages/com.agoradesk.app/" target="_blank" rel="noopener noreferrer">
+<img alt="Get in on F-Droid" src="/static/img/mobile-app-banner/fdroid.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases" target="_blank" rel="noopener noreferrer">
+<img alt="Download .apk directly from GitHub" src="/static/img/mobile-app-banner/apk.png" style="height: 45px; border-radius: 8px;"></a>
+</div>
+
 - [Appstore](https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678)
 - [Google Play](https://play.google.com/store/apps/details?id=com.agoradesk.app)
 - [F-Droid](https://f-droid.org/en/packages/com.agoradesk.app/)
