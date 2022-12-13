@@ -77,7 +77,7 @@ https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
 ### How to build iOS with run parameters
 - https://stackoverflow.com/a/65315937/7198006
 
-### Fastline
+### Fastlane
 - https://roszkowski.dev/2019/flutter-flavors/
 
 ### Initial settings
