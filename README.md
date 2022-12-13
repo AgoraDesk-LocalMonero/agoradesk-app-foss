@@ -118,8 +118,9 @@ Also we can use following:
 
 The source: https://ec.europa.eu/component-library/v1.15.0/eu/docs/conventions/git/#:~:text=feat%3A%20A%20new%20feature,bug%20nor%20adds%20a%20feature
 
+## Credits
 
-
+- We thank shortwavesurfer2009 for extensive accessibility testing
 
 
 
