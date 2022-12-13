@@ -34,17 +34,17 @@ There are two apps under one code base in this repository.
 Each app can be built as Android and iOS native app.
 Design and logic separation made with flavors (more info further in this doc).
 
-2. Universal Links work for Android and iOS. In case app is installed on the device,
-the regular links will run apps instead of browser.
-In case of two apps installed on one device the AgoraDesk app prioritized (it means in case of link
+2. Universal Links work for Android and iOS. In case the app is installed on the device,
+the regular links will run apps instead of browsers.
+In case of two apps installed on one device the AgoraDesk app is prioritized (it means in case of link
 localmonero/something AgoraDesk app will be opened).
 
-3. Push notifications work on iOS & Android. In case user's device
-(for example in China or with GrapheneOS) can't receive pushes, app detects it and start
+3. Push notifications to work on iOS & Android. In case the user's device
+(for example in China or with GrapheneOS) can't receive pushes, the app detects it and start
 polling in the background mode. [More info](Notifications.md)
 
-4. For anonymisation reasons all notifications sent without translations and arte translated on the client's side.
-So, we use data messages to display them with app code (not with the FCM).
+4. For anonymization reasons all notifications are sent without translations and are translated on the client's side.
+So, we use data messages to display them with the app code (not with the FCM).
 
 5. Made with Dart & Flutter ❤️
 
@@ -52,7 +52,7 @@ So, we use data messages to display them with app code (not with the FCM).
 
 For build the app locally after getting code from repository use FOSS commands in `Makefile`.
 
-For example, to build FOSS apk LocalMonero app
+For example, to build a FOSS apk LocalMonero app
 
 `flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
 
@@ -102,13 +102,15 @@ ios/Runner/Runner-localmonero.entitlements
 
 ### Push notifications
 
-Backend sends data messages. We get them in the app, translate and display.
+The backend sends data messages. We get them in the app, translate and display them.
 So, when the app is terminated, we should run the app, handle the message and display it.
 
 #### iOS issues
 
-1. Crashes when receiving notification. Connected with awesome notifications settings.
-https://github.com/firebase/flutterfire/issues/4026
+1. As we use data messages, when the app is killed (terminated, swipe up), iOS terminate all app activities and 
+the app can't display messages.
+https://developer.apple.com/forums/thread/132191
+
 
 ## Contribution
 
