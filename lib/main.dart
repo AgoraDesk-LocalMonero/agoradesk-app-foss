@@ -51,16 +51,13 @@ void main() async {
   }
 
   ///
-  /// common initializations
+  /// general initializations
   ///
   await SecureStorage.ensureInitialized();
   await AppSharedPrefs.ensureInitialized();
   await AppHive.ensureInitialized();
   await findSystemLocale();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    if (kDebugMode) DeviceOrientation.portraitDown,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));

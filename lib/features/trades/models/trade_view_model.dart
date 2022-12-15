@@ -439,6 +439,13 @@ class TradeViewModel extends ViewModel
         '  ≈2 ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
   }
 
+  bool displayStickyBubble() {
+    if (messageHasFocus && _appState.isSmallScreen) {
+      return false;
+    }
+    return true;
+  }
+
   String settlementRemainingMinutes() {
     final totalMinutes = tradeForScreen.asset == Asset.BTC ? 60 : 27;
     int minutes = totalMinutes - DateTime.now().difference(tradeForScreen.releasedAt!).inMinutes;
