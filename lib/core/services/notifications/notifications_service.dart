@@ -96,6 +96,9 @@ class NotificationsService with ForegroundMessagesMixin {
                 barMessagesString += ';$awesomeMessageId:${push.objectId}';
                 await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
               }
+            } else {
+              // send signal to update the chat state
+              eventBus.fire(const UpdateOpenedChatEvent());
             }
           }
         } catch (e) {

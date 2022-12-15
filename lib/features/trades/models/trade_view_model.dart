@@ -115,6 +115,8 @@ class TradeViewModel extends ViewModel
   late int minutesBeforeCancel;
   DateTime? paymentCompletedAt;
 
+  late StreamSubscription _updateOpenedChatSubscription;
+
   late TradeModel tradeForScreen;
 
   bool _loadingMessagesInit = false;
@@ -224,6 +226,7 @@ class TradeViewModel extends ViewModel
   @override
   void init() {
     _initialLoading();
+    _listenEventBus();
 
     super.init();
   }
@@ -282,6 +285,15 @@ class TradeViewModel extends ViewModel
       _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
     });
+  }
+
+  _listenEventBus() {
+    _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) {
+      indicatorKey.currentState?.show();
+      _calcMinutesBeforeCancel();
+      _getMessages(polling: true);
+    });
+    eventBus.on<UpdateOpenedChatEvent>().listen((e) {});
   }
 
   Future _getAccountInfo(String? username) async {
@@ -1090,6 +1102,7 @@ class TradeViewModel extends ViewModel
     chatController.dispose();
     listController.dispose();
     _timer?.cancel();
+    _updateOpenedChatSubscription.cancel();
     super.dispose();
   }
 
