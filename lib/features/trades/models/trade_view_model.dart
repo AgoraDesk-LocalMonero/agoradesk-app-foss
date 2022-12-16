@@ -284,9 +284,11 @@ class TradeViewModel extends ViewModel
   }
 
   Future _polling() async {
-    await indicatorKey.currentState?.show();
-    _calcMinutesBeforeCancel();
-    await _getMessages(polling: true);
+    if (GetIt.I<AppParameters>().includeFcm == false || GetIt.I<AppParameters>().isGoogleAvailable == false) {
+      await indicatorKey.currentState?.show();
+      _calcMinutesBeforeCancel();
+      await _getMessages(polling: true);
+    }
   }
 
   _listenEventBus() {
