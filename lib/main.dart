@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:math' as math;
 
 import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_hive.dart';
@@ -21,7 +20,6 @@ import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
-import 'core/translations/foreground_messages_mixin.dart';
 import 'firebase_options_agoradesk.dart' as agoradesk_options;
 import 'firebase_options_localmonero.dart' as localmonero_options;
 
@@ -160,26 +158,26 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   try {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();
-    final locale = await _secureStorage.read(SecureStorageKey.locale);
-    final String langCode = locale ?? Platform.localeName.substring(0, 2);
+    // final locale = await _secureStorage.read(SecureStorageKey.locale);
+    // final String langCode = locale ?? Platform.localeName.substring(0, 2);
     final PushModel push = PushModel.fromJson(message.data);
-    final awesomeMessageId = math.Random().nextInt(10000000);
-    final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-    final bool res = await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: awesomeMessageId,
-        channelKey: kNotificationsChannel,
-        title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-        body: push.msg,
-        notificationLayout: NotificationLayout.Default,
-        payload: payload,
-      ),
-    );
-    if (res) {
-      String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      barMessagesString += ';$awesomeMessageId:${push.objectId}';
-      _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-    }
+    // final awesomeMessageId = math.Random().nextInt(10000000);
+    // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+    // final bool res = await AwesomeNotifications().createNotification(
+    //   content: NotificationContent(
+    //     id: awesomeMessageId,
+    //     channelKey: kNotificationsChannel,
+    //     title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+    //     body: push.msg,
+    //     notificationLayout: NotificationLayout.Default,
+    //     payload: payload,
+    //   ),
+    // );
+    // if (res) {
+    String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+    barMessagesString += ';${message.messageId}:${push.objectId}';
+    _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+    // }
   } catch (e) {
     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
   }
