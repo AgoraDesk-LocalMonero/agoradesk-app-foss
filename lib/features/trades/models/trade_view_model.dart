@@ -280,11 +280,13 @@ class TradeViewModel extends ViewModel
     _getMessages();
 
     _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async {
-      await indicatorKey.currentState?.show();
-      _calcMinutesBeforeCancel();
-      await _getMessages(polling: true);
-    });
+    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
+  }
+
+  Future _polling() async {
+    await indicatorKey.currentState?.show();
+    _calcMinutesBeforeCancel();
+    await _getMessages(polling: true);
   }
 
   _listenEventBus() {
