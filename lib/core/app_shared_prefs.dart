@@ -139,7 +139,7 @@ class AppSharedPrefs with DateMixin {
       case 'light':
         return ThemeMode.light;
     }
-    return ThemeMode.system;
+    return ThemeMode.dark;
   }
 
   ///
