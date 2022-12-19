@@ -16,6 +16,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
@@ -61,22 +62,6 @@ void main() async {
 
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-
-  ///
-  /// Init awesome notofications
-  ///
-  await AwesomeNotifications().initialize(
-    null,
-    [
-      NotificationChannel(
-        channelKey: kNotificationsChannel,
-        channelName: 'Trades channel',
-        channelDescription: 'Notifications about trades',
-        importance: NotificationImportance.Max,
-        channelShowBadge: true,
-      ),
-    ],
-  );
 
   ///
   /// if the app is terminated and user presses to a notification
@@ -165,22 +150,72 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     final PushModel push = PushModel.fromJson(message.data);
     final awesomeMessageId = Random().nextInt(10000000);
     final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-    final bool res = await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: awesomeMessageId,
-        channelKey: kNotificationsChannel,
-        title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-        body: push.msg,
-        notificationLayout: NotificationLayout.Default,
-        payload: payload,
-      ),
-    );
-    if (res) {
-      String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      barMessagesString += ';${message.messageId}:${push.objectId}';
-      _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-    }
+
+    String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+    barMessagesString += ';${message.messageId}:${push.objectId}';
+    _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
   } catch (e) {
     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
   }
 }
+
+/// Create a [AndroidNotificationChannel] for heads up notifications
+late AndroidNotificationChannel channel;
+
+bool isFlutterLocalNotificationsInitialized = false;
+
+Future<void> setupFlutterNotifications() async {
+  if (isFlutterLocalNotificationsInitialized) {
+    return;
+  }
+  channel = const AndroidNotificationChannel(
+    kNotificationsChannel, // id
+    'Trades channel', // title
+    description: 'Notifications about trades', // description
+    importance: Importance.high,
+  );
+
+  flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+  /// Create an Android Notification Channel.
+  ///
+  /// We use this channel in the `AndroidManifest.xml` file to override the
+  /// default FCM channel to enable heads up notifications.
+  await flutterLocalNotificationsPlugin
+      .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
+      ?.createNotificationChannel(channel);
+
+  /// Update the iOS foreground notification presentation options to allow
+  /// heads up notifications.
+  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+    alert: false,
+    badge: false,
+    sound: false,
+  );
+  isFlutterLocalNotificationsInitialized = true;
+}
+
+void showFlutterNotification(RemoteMessage message) {
+  RemoteNotification? notification = message.notification;
+  AndroidNotification? android = message.notification?.android;
+  if (notification != null && android != null && !kIsWeb) {
+    flutterLocalNotificationsPlugin.show(
+      notification.hashCode,
+      notification.title,
+      notification.body,
+      NotificationDetails(
+        android: AndroidNotificationDetails(
+          channel.id,
+          channel.name,
+          channelDescription: channel.description,
+          // TODO add a proper drawable resource to android, for now using
+          //      one that already exists in example app.
+          icon: 'launch_background',
+        ),
+      ),
+    );
+  }
+}
+
+/// Initialize the [FlutterLocalNotificationsPlugin] package.
+late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
