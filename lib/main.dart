@@ -189,7 +189,11 @@ Future<void> setupFlutterNotifications() async {
   await flutterLocalNotificationsPlugin.initialize(
     const InitializationSettings(
       android: AndroidInitializationSettings('background'),
-      iOS: DarwinInitializationSettings(),
+      iOS: DarwinInitializationSettings(
+        requestAlertPermission: true,
+        requestSoundPermission: true,
+        requestBadgePermission: true,
+      ),
     ),
   );
 
@@ -205,8 +209,7 @@ Future<void> setupFlutterNotifications() async {
 
 void showFlutterNotification(RemoteMessage message) {
   RemoteNotification? notification = message.notification;
-  AndroidNotification? android = message.notification?.android;
-  if (notification != null && android != null && !kIsWeb) {
+  if (notification != null) {
     flutterLocalNotificationsPlugin.show(
       notification.hashCode,
       notification.title,
@@ -216,9 +219,9 @@ void showFlutterNotification(RemoteMessage message) {
           channel.id,
           channel.name,
           channelDescription: channel.description,
-          // TODO add a proper drawable resource to android, for now using
-          //      one that already exists in example app.
-          // icon: 'launch_background',
+          icon: 'background',
+          color: const Color.fromARGB(255, 255, 0, 0),
+          colorized: true,
         ),
       ),
     );
