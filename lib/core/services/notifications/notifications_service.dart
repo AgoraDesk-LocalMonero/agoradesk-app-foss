@@ -17,7 +17,6 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +62,9 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
 
     if (includeFcm) {
-      // FirebaseMessaging.onMessageOpenedApp.listen((message) async {});
+      FirebaseMessaging.onMessageOpenedApp.listen((message) async {
+        showFlutterNotification(message);
+      });
       FirebaseMessaging.onMessage.listen((message) async {
         debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
         debugPrint('++++[$runtimeType][onMessage] data: ${message.data}');
@@ -81,21 +82,22 @@ class NotificationsService with ForegroundMessagesMixin {
             final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
             if (openedTradeId != push.objectId) {
               final awesomeMessageId = Random().nextInt(1000000);
-              final res = await AwesomeNotifications().createNotification(
-                content: NotificationContent(
-                  id: awesomeMessageId,
-                  channelKey: kNotificationsChannel,
-                  title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-                  body: translatedNotificationText(push, langCode),
-                  notificationLayout: NotificationLayout.Default,
-                  payload: payload,
-                ),
-              );
-              if (res) {
-                String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-                barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-              }
+              showFlutterNotification(message);
+              // final res = await AwesomeNotifications().createNotification(
+              //   content: NotificationContent(
+              //     id: awesomeMessageId,
+              //     channelKey: kNotificationsChannel,
+              //     title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+              //     body: translatedNotificationText(push, langCode),
+              //     notificationLayout: NotificationLayout.Default,
+              //     payload: payload,
+              //   ),
+              // );
+              // if (res) {
+              //   String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+              //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
+              //   await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+              // }
             } else {
               // send signal to update the chat state
               eventBus.fire(const UpdateOpenedChatEvent());
@@ -251,9 +253,9 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.notifications.addAll(editedNotifications);
         await Future.delayed(const Duration(seconds: 1));
         // badges (red circle counter on the app icon)
-        final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
-        final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
-        await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
+        // final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
+        // final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
+        // await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
         // remove red dot in case all notifiations are read
         appState.hasUnread =
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
@@ -266,7 +268,7 @@ class NotificationsService with ForegroundMessagesMixin {
             if (m.contains(tradeId)) {
               final messageId = int.tryParse(m.split(':')[0]);
               if (messageId != null) {
-                await AwesomeNotifications().dismiss(messageId);
+                // await AwesomeNotifications().dismiss(messageId);
               }
               barMessagesNew.remove(m);
             }

@@ -8,8 +8,6 @@ import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
-import 'package:agoradesk/main.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:http/http.dart' as http;
@@ -68,22 +66,22 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
                   push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
               if (openedTradeId != push.objectId) {
                 final awesomeMessageId = Random().nextInt(1000000);
-                final res = await AwesomeNotifications().createNotification(
-                  content: NotificationContent(
-                    icon: 'resource://mipmap/ic_icon_black',
-                    id: awesomeMessageId,
-                    channelKey: kNotificationsChannel,
-                    title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-                    body: translatedNotificationText(push, langCode),
-                    notificationLayout: NotificationLayout.Default,
-                    payload: payload,
-                  ),
-                );
-                if (res) {
-                  String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-                  barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                  await _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-                }
+                // final res = await AwesomeNotifications().createNotification(
+                //   content: NotificationContent(
+                //     icon: 'resource://mipmap/ic_icon_black',
+                //     id: awesomeMessageId,
+                //     channelKey: kNotificationsChannel,
+                //     title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+                //     body: translatedNotificationText(push, langCode),
+                //     notificationLayout: NotificationLayout.Default,
+                //     payload: payload,
+                //   ),
+                // );
+                // if (res) {
+                //   String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+                //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
+                //   await _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+                // }
               }
             }
           }
@@ -96,7 +94,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
 
   @override
   Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {
-    ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
+    // ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
     // await FlutterForegroundTask.clearAllData();
   }
 

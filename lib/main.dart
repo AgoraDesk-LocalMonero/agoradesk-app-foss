@@ -8,9 +8,7 @@ import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
-import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/init_app_parameters.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -51,6 +49,8 @@ void main() async {
     Permission.notification.request();
   }
 
+  await setupFlutterNotifications();
+
   ///
   /// general initializations
   ///
@@ -69,15 +69,15 @@ void main() async {
   ///
   bool appRanFromPush = false;
   String? tradeId;
-  ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
-
-  if (receivedAction != null && receivedAction.payload != null) {
-    final PushModel push = PushModel.fromJson(receivedAction.payload!);
-    if (push.objectId != null && push.objectId!.isNotEmpty) {
-      appRanFromPush = true;
-      tradeId = push.objectId;
-    }
-  }
+  // ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
+  //
+  // if (receivedAction != null && receivedAction.payload != null) {
+  //   final PushModel push = PushModel.fromJson(receivedAction.payload!);
+  //   if (push.objectId != null && push.objectId!.isNotEmpty) {
+  //     appRanFromPush = true;
+  //     tradeId = push.objectId;
+  //   }
+  // }
 
   ///
   /// Initializations that are depend on flavor
@@ -168,6 +168,7 @@ Future<void> setupFlutterNotifications() async {
   if (isFlutterLocalNotificationsInitialized) {
     return;
   }
+
   channel = const AndroidNotificationChannel(
     kNotificationsChannel, // id
     'Trades channel', // title
@@ -184,6 +185,13 @@ Future<void> setupFlutterNotifications() async {
   await flutterLocalNotificationsPlugin
       .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);
+
+  await flutterLocalNotificationsPlugin.initialize(
+    const InitializationSettings(
+      android: AndroidInitializationSettings('background'),
+      iOS: DarwinInitializationSettings(),
+    ),
+  );
 
   /// Update the iOS foreground notification presentation options to allow
   /// heads up notifications.
@@ -210,7 +218,7 @@ void showFlutterNotification(RemoteMessage message) {
           channelDescription: channel.description,
           // TODO add a proper drawable resource to android, for now using
           //      one that already exists in example app.
-          icon: 'launch_background',
+          // icon: 'launch_background',
         ),
       ),
     );
