@@ -83,7 +83,6 @@ void main() async {
     final NotificationAppLaunchDetails? notificationAppLaunchDetails =
         await localNotificationsPlugin.getNotificationAppLaunchDetails();
     final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
-    print('+++++++++++++++++++++++++++++++++++++113 - ${payload}');
     if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
       final PushModel push = PushModel.fromJson(jsonDecode(payload));
       if (push.objectId != null && push.objectId!.isNotEmpty) {
