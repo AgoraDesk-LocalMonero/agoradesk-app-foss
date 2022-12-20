@@ -35,7 +35,7 @@ class LocalNotificationController with ForegroundMessagesMixin {
     );
 
     flutterLocalNotificationsPlugin.show(
-      888,
+      int.tryParse(push.id ?? '0') ?? 0,
       ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
       translatedNotificationText(push, langCode), // body
       payload: jsonEncode(push.toJson()), //payload

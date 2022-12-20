@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
@@ -149,7 +150,7 @@ class NotificationsService with ForegroundMessagesMixin {
       }
       eventBus.fire(AwesomeMessageClickedEvent(tradeId));
     } catch (e) {
-      debugPrint('++++error parsing push in actionStream - $e');
+      debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
     }
   }
 
@@ -160,6 +161,7 @@ class NotificationsService with ForegroundMessagesMixin {
         notification.hashCode,
         notification.title,
         notification.body,
+        payload: jsonEncode(message.data), //payload
         NotificationDetails(
           android: AndroidNotificationDetails(
             channel.id,

@@ -231,6 +231,6 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(AwesomeMessageClickedEvent(tradeId));
   } catch (e) {
-    debugPrint('++++error parsing push in actionStream - $e');
+    debugPrint('++++error parsing push in actionStream [main]- $e');
   }
 }
