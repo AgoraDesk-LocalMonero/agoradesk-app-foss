@@ -9,7 +9,7 @@ import 'package:agoradesk/main.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class LocalNotificationController with ForegroundMessagesMixin {
-  Future displayLocalNotification(PushModel push) async {
+  Future displayLocalNotificationAppTerminated(PushModel push) async {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();
     final locale = await _secureStorage.read(SecureStorageKey.locale);

@@ -60,7 +60,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
               final ActivityNotificationModel notification = notifications.first;
               final PushModel push = PushModel.fromActivityNotificationModel(notification);
               if (openedTradeId != push.objectId) {
-                LocalNotificationController().displayLocalNotification(push);
+                LocalNotificationController().displayLocalNotificationAppTerminated(push);
               }
             }
           }
