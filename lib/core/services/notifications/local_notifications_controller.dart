@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
@@ -44,7 +45,7 @@ class LocalNotificationController with ForegroundMessagesMixin {
           channel.name,
           channelDescription: channel.description,
           icon: 'launch_push',
-          // color: const Color.fromARGB(255, 255, 0, 0),
+          color: const Color.fromRGBO(0, 0, 0, 1),
           // colorized: true,
         ),
       ),
