@@ -5,8 +5,6 @@ import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/main.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class LocalNotificationController with ForegroundMessagesMixin {
@@ -46,8 +44,8 @@ class LocalNotificationController with ForegroundMessagesMixin {
           channel.name,
           channelDescription: channel.description,
           icon: 'launch_push',
-          color: const Color.fromARGB(255, 255, 0, 0),
-          colorized: true,
+          // color: const Color.fromARGB(255, 255, 0, 0),
+          // colorized: true,
         ),
       ),
     );

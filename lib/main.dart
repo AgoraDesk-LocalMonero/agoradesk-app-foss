@@ -228,8 +228,8 @@ void showFlutterNotification(RemoteMessage message) {
           channel.name,
           channelDescription: channel.description,
           icon: 'launch_push',
-          color: const Color.fromARGB(255, 255, 0, 0),
-          colorized: true,
+          // color: const Color.fromARGB(255, 255, 0, 0),
+          // colorized: true,
         ),
       ),
     );
