@@ -63,7 +63,7 @@ class NotificationsService with ForegroundMessagesMixin {
 
     if (includeFcm) {
       FirebaseMessaging.onMessageOpenedApp.listen((message) async {
-        showFlutterNotification(message);
+        displayLocalNotification(message);
       });
       FirebaseMessaging.onMessage.listen((message) async {
         debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
@@ -82,7 +82,7 @@ class NotificationsService with ForegroundMessagesMixin {
             final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
             if (openedTradeId != push.objectId) {
               final awesomeMessageId = Random().nextInt(1000000);
-              showFlutterNotification(message);
+              displayLocalNotification(message);
               // final res = await AwesomeNotifications().createNotification(
               //   content: NotificationContent(
               //     id: awesomeMessageId,

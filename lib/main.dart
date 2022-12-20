@@ -6,6 +6,7 @@ import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
@@ -50,7 +51,7 @@ void main() async {
     Permission.notification.request();
   }
 
-  await setupFlutterNotifications();
+  await setupLocalNotifications();
 
   ///
   /// general initializations
@@ -80,7 +81,7 @@ void main() async {
   String? tradeId;
   if (isGoogleAvailable == false) {
     final NotificationAppLaunchDetails? notificationAppLaunchDetails =
-        await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+        await localNotificationsPlugin.getNotificationAppLaunchDetails();
     final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
 
     if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
@@ -172,7 +173,7 @@ late AndroidNotificationChannel channel;
 
 bool isFlutterLocalNotificationsInitialized = false;
 
-Future<void> setupFlutterNotifications() async {
+Future<void> setupLocalNotifications() async {
   if (isFlutterLocalNotificationsInitialized) {
     return;
   }
@@ -184,17 +185,17 @@ Future<void> setupFlutterNotifications() async {
     importance: Importance.high,
   );
 
-  flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+  localNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
   /// Create an Android Notification Channel.
   ///
   /// We use this channel in the `AndroidManifest.xml` file to override the
   /// default FCM channel to enable heads up notifications.
-  await flutterLocalNotificationsPlugin
+  await localNotificationsPlugin
       .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);
 
-  await flutterLocalNotificationsPlugin.initialize(
+  await localNotificationsPlugin.initialize(
     const InitializationSettings(
       android: AndroidInitializationSettings('launch_push'),
       iOS: DarwinInitializationSettings(
@@ -203,6 +204,7 @@ Future<void> setupFlutterNotifications() async {
         requestBadgePermission: true,
       ),
     ),
+    onDidReceiveNotificationResponse: notificationResponse,
   );
 
   /// Update the iOS foreground notification presentation options to allow
@@ -215,10 +217,10 @@ Future<void> setupFlutterNotifications() async {
   isFlutterLocalNotificationsInitialized = true;
 }
 
-void showFlutterNotification(RemoteMessage message) {
+void displayLocalNotification(RemoteMessage message) {
   RemoteNotification? notification = message.notification;
   if (notification != null) {
-    flutterLocalNotificationsPlugin.show(
+    localNotificationsPlugin.show(
       notification.hashCode,
       notification.title,
       notification.body,
@@ -237,4 +239,20 @@ void showFlutterNotification(RemoteMessage message) {
 }
 
 /// Initialize the [FlutterLocalNotificationsPlugin] package.
-late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+late FlutterLocalNotificationsPlugin localNotificationsPlugin;
+
+Future notificationResponse(NotificationResponse notificationResponse) async {
+  try {
+    String? tradeId;
+    final String? payload = notificationResponse.payload;
+    if (payload != null) {
+      final PushModel push = PushModel.fromJson(jsonDecode(payload));
+      if (push.objectId != null && push.objectId!.isNotEmpty) {
+        tradeId = push.objectId;
+      }
+    }
+    eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+  } catch (e) {
+    debugPrint('++++error parsing push in actionStream - $e');
+  }
+}
