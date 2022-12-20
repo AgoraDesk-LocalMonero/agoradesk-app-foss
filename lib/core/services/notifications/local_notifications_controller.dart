@@ -13,10 +13,7 @@ class LocalNotificationController with ForegroundMessagesMixin {
   Future displayLocalNotification(PushModel push) async {
     await SecureStorage.ensureInitialized();
     final SecureStorage _secureStorage = SecureStorage();
-    final token = await _secureStorage.read(SecureStorageKey.token);
-    final openedTradeId = await _secureStorage.read(SecureStorageKey.openedTradeId);
     final locale = await _secureStorage.read(SecureStorageKey.locale);
-    final String? lastNotificationTimeInt = await _secureStorage.read(SecureStorageKey.lastNotificationTimeInt);
     final String langCode = locale ?? Platform.localeName.substring(0, 2);
 
     const channel = AndroidNotificationChannel(
@@ -40,9 +37,9 @@ class LocalNotificationController with ForegroundMessagesMixin {
 
     flutterLocalNotificationsPlugin.show(
       888,
-      ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-      translatedNotificationText(push, langCode),
-      payload: jsonEncode(push.toJson()),
+      ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
+      translatedNotificationText(push, langCode), // body
+      payload: jsonEncode(push.toJson()), //payload
       NotificationDetails(
         android: AndroidNotificationDetails(
           channel.id,

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:isolate';
 
 import 'package:agoradesk/core/secure_storage.dart';
@@ -26,9 +25,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
     final SecureStorage _secureStorage = SecureStorage();
     final token = await _secureStorage.read(SecureStorageKey.token);
     final openedTradeId = await _secureStorage.read(SecureStorageKey.openedTradeId);
-    final locale = await _secureStorage.read(SecureStorageKey.locale);
     final String? lastNotificationTimeInt = await _secureStorage.read(SecureStorageKey.lastNotificationTimeInt);
-    final String langCode = locale ?? Platform.localeName.substring(0, 2);
     if (token != null && token.isNotEmpty) {
       Map<String, String> headers = {
         'Authorization': token,
@@ -62,28 +59,8 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
                   notifications.first.createdAt.millisecondsSinceEpoch.toString());
               final ActivityNotificationModel notification = notifications.first;
               final PushModel push = PushModel.fromActivityNotificationModel(notification);
-              final Map<String, String> payload =
-                  push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
               if (openedTradeId != push.objectId) {
                 LocalNotificationController().displayLocalNotification(push);
-
-                // final awesomeMessageId = Random().nextInt(1000000);
-                // final res = await AwesomeNotifications().createNotification(
-                //   content: NotificationContent(
-                //     icon: 'resource://mipmap/ic_icon_black',
-                //     id: awesomeMessageId,
-                //     channelKey: kNotificationsChannel,
-                //     title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-                //     body: translatedNotificationText(push, langCode),
-                //     notificationLayout: NotificationLayout.Default,
-                //     payload: payload,
-                //   ),
-                // );
-                // if (res) {
-                //   String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-                //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
-                //   await _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-                // }
               }
             }
           }
