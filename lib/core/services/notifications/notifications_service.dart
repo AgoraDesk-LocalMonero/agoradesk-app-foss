@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'dart:math';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
@@ -64,52 +63,25 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
 
     if (includeFcm) {
+      ///
+      /// When app was terminated this listener
+      ///
       FirebaseMessaging.onMessageOpenedApp.listen((message) async {
-        parseNotificationData(message);
+        _parseNotificationData(message);
       });
-      FirebaseMessaging.onMessage.listen((message) async {
-        debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
-        debugPrint('++++[$runtimeType][onMessage] data: ${message.data}');
-        try {
-          if (message.data.isNotEmpty) {
-            final l = await secureStorage.read(SecureStorageKey.locale);
-            final String langCode = l ?? Platform.localeName.substring(0, 2);
-            final PushModel push = PushModel.fromJson(message.data);
-            final Map<String, String> payload =
-                push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
 
-            ///
-            /// get trade it in case it's screen is opened in the app
-            ///
-            final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
-            if (openedTradeId != push.objectId) {
-              final awesomeMessageId = Random().nextInt(1000000);
-              displayLocalNotification(message);
-              // final res = await AwesomeNotifications().createNotification(
-              //   content: NotificationContent(
-              //     id: awesomeMessageId,
-              //     channelKey: kNotificationsChannel,
-              //     title: ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-              //     body: translatedNotificationText(push, langCode),
-              //     notificationLayout: NotificationLayout.Default,
-              //     payload: payload,
-              //   ),
-              // );
-              // if (res) {
-              //   String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-              //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
-              //   await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-              // }
-            } else {
-              // send signal to update the chat state
-              eventBus.fire(const UpdateOpenedChatEvent());
-            }
-          }
+      ///
+      /// When app is on the screen
+      ///
+      FirebaseMessaging.onMessage.listen((message) async {
+        try {
+          await _displayLocalNotification(message);
         } catch (e) {
           debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
         }
       });
     }
+
     // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
@@ -117,6 +89,7 @@ class NotificationsService with ForegroundMessagesMixin {
     /// Polling notifications from the server
     ///
     _timer?.cancel();
+
     _timer = Timer.periodic(const Duration(seconds: _kNotificationsPollingSeconds), (_) => getNotifications());
 
     ///
@@ -140,7 +113,7 @@ class NotificationsService with ForegroundMessagesMixin {
     });
   }
 
-  Future parseNotificationData(RemoteMessage message) async {
+  Future _parseNotificationData(RemoteMessage message) async {
     try {
       String? tradeId;
       final Map<String, dynamic> payload = message.data;
@@ -154,26 +127,44 @@ class NotificationsService with ForegroundMessagesMixin {
     }
   }
 
-  void displayLocalNotification(RemoteMessage message) {
-    RemoteNotification? notification = message.notification;
-    if (notification != null) {
-      localNotificationsPlugin.show(
-        notification.hashCode,
-        notification.title,
-        notification.body,
-        payload: jsonEncode(message.data), //payload
-        NotificationDetails(
-          android: AndroidNotificationDetails(
-            channel.id,
-            channel.name,
-            channelDescription: channel.description,
-            icon: 'launch_push',
-            // color: const Color.fromARGB(255, 255, 0, 0),
-            // colorized: true,
+  Future _displayLocalNotification(RemoteMessage message) async {
+    ///
+    /// get trade it in case it's screen is opened in the app
+    ///
+    final PushModel push = PushModel.fromJson(message.data);
+    final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
+    if (openedTradeId != push.objectId) {
+      RemoteNotification? notification = message.notification;
+      final l = await secureStorage.read(SecureStorageKey.locale);
+      final String langCode = l ?? Platform.localeName.substring(0, 2);
+
+      if (notification != null) {
+        localNotificationsPlugin.show(
+          notification.hashCode,
+          ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+          translatedNotificationText(push, langCode),
+          payload: jsonEncode(message.data), //payload
+          NotificationDetails(
+            android: AndroidNotificationDetails(
+              channel.id,
+              channel.name,
+              channelDescription: channel.description,
+              icon: 'launch_push',
+              // color: const Color.fromARGB(255, 255, 0, 0),
+              // colorized: true,
+            ),
           ),
-        ),
-      );
+        );
+      }
+    } else {
+      // send signal to update the chat state
+      eventBus.fire(const UpdateOpenedChatEvent());
     }
+    // if (res) {
+    //   String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
+    //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
+    //   await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
+    // }
   }
 
   Future getToken() async {
