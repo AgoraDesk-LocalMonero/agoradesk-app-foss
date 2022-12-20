@@ -12,6 +12,7 @@ import 'package:agoradesk/features/main/widgets/active_icon.dart';
 import 'package:agoradesk/features/main/widgets/inactive_icon.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
@@ -150,6 +151,12 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Future<void> _initForegroundTask() async {
+    int pollingInterval = _kForegroungPollingInterval;
+
+    if (kDebugMode) {
+      pollingInterval = 15000;
+    }
+
     await FlutterForegroundTask.init(
       androidNotificationOptions: AndroidNotificationOptions(
         channelId: 'foreground_notifications',
@@ -166,8 +173,8 @@ class _MainScreenState extends State<MainScreen> {
         visibility: NotificationVisibility.VISIBILITY_PRIVATE,
         enableVibration: false,
       ),
-      foregroundTaskOptions: const ForegroundTaskOptions(
-        interval: _kForegroungPollingInterval,
+      foregroundTaskOptions: ForegroundTaskOptions(
+        interval: pollingInterval,
         autoRunOnBoot: true,
         allowWifiLock: true,
       ),
