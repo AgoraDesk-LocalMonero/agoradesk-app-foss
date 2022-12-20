@@ -21,6 +21,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 
@@ -63,7 +64,7 @@ class NotificationsService with ForegroundMessagesMixin {
 
     if (includeFcm) {
       FirebaseMessaging.onMessageOpenedApp.listen((message) async {
-        displayLocalNotification(message);
+        parseNotificationData(message);
       });
       FirebaseMessaging.onMessage.listen((message) async {
         debugPrint('++++[$runtimeType][onMessage] notification: ${message.notification.toString()}');
@@ -136,6 +137,41 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.hasUnread = false;
       }
     });
+  }
+
+  Future parseNotificationData(RemoteMessage message) async {
+    try {
+      String? tradeId;
+      final Map<String, dynamic> payload = message.data;
+      final PushModel push = PushModel.fromJson(payload);
+      if (push.objectId != null && push.objectId!.isNotEmpty) {
+        tradeId = push.objectId;
+      }
+      eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+    } catch (e) {
+      debugPrint('++++error parsing push in actionStream - $e');
+    }
+  }
+
+  void displayLocalNotification(RemoteMessage message) {
+    RemoteNotification? notification = message.notification;
+    if (notification != null) {
+      localNotificationsPlugin.show(
+        notification.hashCode,
+        notification.title,
+        notification.body,
+        NotificationDetails(
+          android: AndroidNotificationDetails(
+            channel.id,
+            channel.name,
+            channelDescription: channel.description,
+            icon: 'launch_push',
+            // color: const Color.fromARGB(255, 255, 0, 0),
+            // colorized: true,
+          ),
+        ),
+      );
+    }
   }
 
   Future getToken() async {

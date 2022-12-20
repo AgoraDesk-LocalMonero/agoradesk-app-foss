@@ -203,7 +203,7 @@ Future<void> setupLocalNotifications() async {
         requestBadgePermission: true,
       ),
     ),
-    onDidReceiveNotificationResponse: notificationResponse,
+    onDidReceiveNotificationResponse: _notificationResponse,
   );
 
   /// Update the iOS foreground notification presentation options to allow
@@ -216,31 +216,10 @@ Future<void> setupLocalNotifications() async {
   isFlutterLocalNotificationsInitialized = true;
 }
 
-void displayLocalNotification(RemoteMessage message) {
-  RemoteNotification? notification = message.notification;
-  if (notification != null) {
-    localNotificationsPlugin.show(
-      notification.hashCode,
-      notification.title,
-      notification.body,
-      NotificationDetails(
-        android: AndroidNotificationDetails(
-          channel.id,
-          channel.name,
-          channelDescription: channel.description,
-          icon: 'launch_push',
-          // color: const Color.fromARGB(255, 255, 0, 0),
-          // colorized: true,
-        ),
-      ),
-    );
-  }
-}
-
 /// Initialize the [FlutterLocalNotificationsPlugin] package.
 late FlutterLocalNotificationsPlugin localNotificationsPlugin;
 
-Future notificationResponse(NotificationResponse notificationResponse) async {
+Future _notificationResponse(NotificationResponse notificationResponse) async {
   try {
     String? tradeId;
     final String? payload = notificationResponse.payload;
