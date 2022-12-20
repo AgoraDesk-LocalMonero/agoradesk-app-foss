@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
@@ -64,26 +65,33 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
   ///
-  /// if the app is terminated and user presses to a notification
-  /// here we got payload info
-  ///
-  bool appRanFromPush = false;
-  String? tradeId;
-  // ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
-  //
-  // if (receivedAction != null && receivedAction.payload != null) {
-  //   final PushModel push = PushModel.fromJson(receivedAction.payload!);
-  //   if (push.objectId != null && push.objectId!.isNotEmpty) {
-  //     appRanFromPush = true;
-  //     tradeId = push.objectId;
-  //   }
-  // }
-
-  ///
   /// Initializations that are depend on flavor
   ///
 
   final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
+
+  ///
+  /// if isGoogleAvailable == false
+  /// if the app is terminated and user presses to a notification
+  /// here we got payload info
+  /// in case with FCM we use built-in listeners
+  ///
+  bool appRanFromPush = false;
+  String? tradeId;
+  if (isGoogleAvailable == false) {
+    final NotificationAppLaunchDetails? notificationAppLaunchDetails =
+        await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+    final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
+
+    if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
+      final PushModel push = PushModel.fromJson(jsonDecode(payload));
+      if (push.objectId != null && push.objectId!.isNotEmpty) {
+        appRanFromPush = true;
+        tradeId = push.objectId;
+      }
+    }
+  }
+
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
       flavor,
@@ -188,7 +196,7 @@ Future<void> setupFlutterNotifications() async {
 
   await flutterLocalNotificationsPlugin.initialize(
     const InitializationSettings(
-      android: AndroidInitializationSettings('background'),
+      android: AndroidInitializationSettings('launch_push'),
       iOS: DarwinInitializationSettings(
         requestAlertPermission: true,
         requestSoundPermission: true,
@@ -219,7 +227,7 @@ void showFlutterNotification(RemoteMessage message) {
           channel.id,
           channel.name,
           channelDescription: channel.description,
-          icon: 'background',
+          icon: 'launch_push',
           color: const Color.fromARGB(255, 255, 0, 0),
           colorized: true,
         ),

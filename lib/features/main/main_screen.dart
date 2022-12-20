@@ -17,7 +17,7 @@ import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
-const _kForegroungPollingInterval = 60000;
+const _kForegroungPollingInterval = 15000;
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

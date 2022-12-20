@@ -441,9 +441,9 @@ class _AppState extends State<App>
       _authService.showPinSetUp = false;
     } else {
       newRoutes.add(const MainScreenRoute());
-      // if (GetIt.I<AppParameters>().appRanFromPush) {
-      //   newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
-      // }
+      if (GetIt.I<AppParameters>().appRanFromPush) {
+        newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
+      }
       _addUniLinksRouts();
       if (appState.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());

@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:isolate';
-import 'dart:math';
 
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/local_notifications_controller.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
@@ -65,7 +65,9 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
               final Map<String, String> payload =
                   push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
               if (openedTradeId != push.objectId) {
-                final awesomeMessageId = Random().nextInt(1000000);
+                LocalNotificationController().displayLocalNotification(push);
+
+                // final awesomeMessageId = Random().nextInt(1000000);
                 // final res = await AwesomeNotifications().createNotification(
                 //   content: NotificationContent(
                 //     icon: 'resource://mipmap/ic_icon_black',
