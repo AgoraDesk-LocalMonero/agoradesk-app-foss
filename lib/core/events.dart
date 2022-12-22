@@ -19,6 +19,10 @@ class AfterAppInitEvent {
   const AfterAppInitEvent();
 }
 
+class UpdateOpenedChatEvent {
+  const UpdateOpenedChatEvent();
+}
+
 class LocaleChangedEvent {
   final Locale? locale;
 

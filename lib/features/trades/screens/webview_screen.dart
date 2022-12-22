@@ -83,7 +83,7 @@ class WebViewExampleState extends State<WebviewScreen> {
             cookieManager.setCookie(
               url: _uri,
               name: cookie2Name,
-              value: widget.cookie1.substring(cookie1Name.length + 1),
+              value: widget.cookie2.substring(cookie2Name.length + 1),
               domain: ".agoradesk.com",
               isSecure: true,
             );
@@ -97,7 +97,7 @@ class WebViewExampleState extends State<WebviewScreen> {
         onLoadStop: (controller, _) async {
           final title = await controller.getTitle() ?? '';
           await _getCookies();
-          if (widget.isFromCaptchaEvent && title.contains('Sell')) {
+          if (widget.isFromCaptchaEvent && (title.contains('LocalMonero') || title.contains('AgoraDesk'))) {
             context.read<AppState>().sinkReloadMarket.add(true);
             Navigator.of(context).pop();
           }

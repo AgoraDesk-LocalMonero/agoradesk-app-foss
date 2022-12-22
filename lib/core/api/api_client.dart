@@ -6,7 +6,6 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get_it/get_it.dart';
 
 import 'api_helper.dart';
@@ -91,15 +90,15 @@ class ApiClient {
           debugPrint(
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id')) {
-            bool checkRes = await _checkCaptchaInHeadlessWebView();
-            if (checkRes == false) {
-              final cookiesLst = response.headers.map['set-cookie'] ?? [];
-              eventBus.fire(DisplayCaptchaEvent(
-                cookie1: cookiesLst.isNotEmpty ? response.headers.map['set-cookie']![0].split(';').first : '',
-                cookie2: cookiesLst.length > 1 ? response.headers.map['set-cookie']![1].split(';').first : '',
-                body: response.data,
-              ));
-            }
+            // bool checkRes = await _checkCaptchaInHeadlessWebView();
+            // if (checkRes == false) {
+            final cookiesLst = response.headers.map['set-cookie'] ?? [];
+            eventBus.fire(DisplayCaptchaEvent(
+              cookie1: cookiesLst.isNotEmpty ? response.headers.map['set-cookie']![0].split(';').first : '',
+              cookie2: cookiesLst.length > 1 ? response.headers.map['set-cookie']![1].split(';').first : '',
+              body: response.data,
+            ));
+            // }
           }
           return handler.next(response);
         },
@@ -147,38 +146,38 @@ class ApiClient {
     );
   }
 
-  Future<bool> _checkCaptchaInHeadlessWebView() async {
-    HeadlessInAppWebView? headlessWebView;
-
-    bool res = false;
-
-    headlessWebView = HeadlessInAppWebView(
-      initialUrlRequest: URLRequest(url: Uri.parse(GetIt.I<AppParameters>().urlBase)),
-      onWebViewCreated: (controller) {},
-      onConsoleMessage: (controller, consoleMessage) {},
-      onLoadStart: (controller, url) async {},
-      onLoadStop: (controller, url) async {
-        final title = await controller.getTitle() ?? '';
-        if (title.contains('Sell')) {
-          _getCookies(res);
-          res = true;
-        }
-      },
-    );
-
-    headlessWebView.run();
-    await Future.delayed(const Duration(seconds: 2));
-    headlessWebView.dispose();
-    return res;
-  }
-
-  Future _getCookies(bool isGetting) async {
-    if (!isGetting) {
-      CookieManager cookieManager = CookieManager.instance();
-      List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
-      GetIt.I<AppParameters>().cookies = cookies;
-    }
-  }
+  // Future<bool> _checkCaptchaInHeadlessWebView() async {
+  //   HeadlessInAppWebView? headlessWebView;
+  //
+  //   bool res = false;
+  //
+  //   headlessWebView = HeadlessInAppWebView(
+  //     initialUrlRequest: URLRequest(url: Uri.parse(GetIt.I<AppParameters>().urlBase)),
+  //     onWebViewCreated: (controller) {},
+  //     onConsoleMessage: (controller, consoleMessage) {},
+  //     onLoadStart: (controller, url) async {},
+  //     onLoadStop: (controller, url) async {
+  //       final title = await controller.getTitle() ?? '';
+  //       if (title.contains('Sell')) {
+  //         _getCookies(res);
+  //         res = true;
+  //       }
+  //     },
+  //   );
+  //
+  //   headlessWebView.run();
+  //   await Future.delayed(const Duration(seconds: 2));
+  //   headlessWebView.dispose();
+  //   return res;
+  // }
+  //
+  // Future _getCookies(bool isGetting) async {
+  //   if (!isGetting) {
+  //     CookieManager cookieManager = CookieManager.instance();
+  //     List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
+  //     GetIt.I<AppParameters>().cookies = cookies;
+  //   }
+  // }
 
   void setBaseUrl(String url) {
     _dio.options.baseUrl = url;

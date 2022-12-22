@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -155,9 +157,9 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             behavior: HitTestBehavior.opaque,
                             onTap: () => copyToClipboard(model.appVersionStr, context),
                             onDoubleTap: () async {
-                              // final res1 = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
-                              // copyToClipboard(res1, context);
-                              // eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
+                              final res1 = await context.read<SecureStorage>().read(SecureStorageKey.pushToken);
+                              copyToClipboard(res1, context);
+                              eventBus.fire(FlashEvent.success('Info copied to clipboard.'));
                             },
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),

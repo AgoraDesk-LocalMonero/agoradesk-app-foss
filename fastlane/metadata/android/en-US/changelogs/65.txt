@@ -1,0 +1,4 @@
+1. Feat: a new way of delivering push notifications, solved the iOS issues with disappearing notifications when the app is terminated.
+2. Fix: remove the Cancel button on the buyer side in disputed trades.
+3. Feat: disable trades polling when FCM is available, get info from push notifications.
+4. Feat: display sticky bubble for big screens when a keyboard is opened.

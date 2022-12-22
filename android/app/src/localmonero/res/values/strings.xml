@@ -1,0 +1,4 @@
+<resources>
+    <string name="TRADE_REQUEST">You have a new offer %1$s from user %2$s</string>
+    <string name="TRADE_COMPLETE">Your trade %1$s with %2$s has been completed</string>
+</resources>
