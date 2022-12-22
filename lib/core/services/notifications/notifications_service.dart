@@ -75,7 +75,44 @@ class NotificationsService with ForegroundMessagesMixin {
       ///
       FirebaseMessaging.onMessage.listen((message) async {
         try {
-          await _displayLocalNotification(message);
+          //TODO: Remove with the next release
+          if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 12, 0))) {
+            final locale = await secureStorage.read(SecureStorageKey.locale);
+            final String langCode = locale ?? Platform.localeName.substring(0, 2);
+            final PushModel push = PushModel.fromJson(message.data);
+            // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+
+            final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+            await flutterLocalNotificationsPlugin.initialize(
+              const InitializationSettings(
+                android: AndroidInitializationSettings('launch_push'),
+                iOS: DarwinInitializationSettings(
+                  requestAlertPermission: true,
+                  requestSoundPermission: true,
+                  requestBadgePermission: true,
+                ),
+              ),
+            );
+
+            flutterLocalNotificationsPlugin.show(
+              int.tryParse(push.id ?? '0') ?? 0,
+              ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
+              ForegroundMessagesMixin().translatedNotificationText(push, langCode), // body
+              payload: jsonEncode(push.toJson()), //payload
+              NotificationDetails(
+                android: AndroidNotificationDetails(
+                  channel.id,
+                  channel.name,
+                  channelDescription: channel.description,
+                  icon: 'launch_push',
+                  color: const Color.fromRGBO(0, 0, 0, 1),
+                  // colorized: true,
+                ),
+              ),
+            );
+          } else {
+            await _displayLocalNotification(message);
+          }
         } catch (e) {
           debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
         }
