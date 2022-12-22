@@ -324,6 +324,19 @@ class TradeViewModel extends ViewModel
     return tradeForScreen.priceEquation?.priceParsedString(context, tradeForScreen.currency) ?? '';
   }
 
+  bool displayCancelStepOne() {
+    if (minutesBeforeCancel > 0 && tradeModel!.isSelling!) {
+      return false;
+    } else if (minutesBeforeCancel > 0) {
+      return true;
+    }
+    if (tradeStatus == TradeStatus.disputed && tradeModel?.isSelling == true) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   String finalAmount() {
     if (tradeForScreen.assetFee.isNotEmpty) {
       final receive = double.tryParse(tradeForScreen.assetAmount);
