@@ -282,7 +282,6 @@ class _AppState extends State<App>
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
-    // _notificationsService.startListenAwesomeNotificationsPressed();
   }
 
   Future<void> _afterConfigInit() async {}

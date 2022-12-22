@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'dart:math' as math;
+import 'dart:math';
 
 import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_hive.dart';
@@ -8,6 +8,7 @@ import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
+import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,7 +22,6 @@ import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
-import 'core/translations/foreground_messages_mixin.dart';
 import 'firebase_options_agoradesk.dart' as agoradesk_options;
 import 'firebase_options_localmonero.dart' as localmonero_options;
 
@@ -51,16 +51,13 @@ void main() async {
   }
 
   ///
-  /// common initializations
+  /// general initializations
   ///
   await SecureStorage.ensureInitialized();
   await AppSharedPrefs.ensureInitialized();
   await AppHive.ensureInitialized();
   await findSystemLocale();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    if (kDebugMode) DeviceOrientation.portraitDown,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
@@ -166,7 +163,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     final locale = await _secureStorage.read(SecureStorageKey.locale);
     final String langCode = locale ?? Platform.localeName.substring(0, 2);
     final PushModel push = PushModel.fromJson(message.data);
-    final awesomeMessageId = math.Random().nextInt(10000000);
+    final awesomeMessageId = Random().nextInt(10000000);
     final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
     final bool res = await AwesomeNotifications().createNotification(
       content: NotificationContent(
@@ -180,7 +177,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
     );
     if (res) {
       String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      barMessagesString += ';$awesomeMessageId:${push.objectId}';
+      barMessagesString += ';${message.messageId}:${push.objectId}';
       _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
     }
   } catch (e) {

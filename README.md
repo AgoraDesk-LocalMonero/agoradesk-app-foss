@@ -2,18 +2,31 @@
 
 There are two apps under one code base in this repository.
 
-First app - AgoraDesk:
-- [Appstore](https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678)
-- [Google Play](https://play.google.com/store/apps/details?id=com.agoradesk.app)
-- [F-Droid](https://f-droid.org/en/packages/com.agoradesk.app/)
-- [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
+## AgoraDesk
 
-Second app - LocalMonero:
-- [Appstore](https://apps.apple.com/app/localmonero-p2p-xmr-trading/id1627693140)
-- [Google Play](https://play.google.com/store/apps/details?id=co.localmonero.app)
-- [F-Droid](https://f-droid.org/en/packages/co.localmonero.app/)
-- [Download .apk](https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases)
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
+<a href="https://play.google.com/store/apps/details?id=com.agoradesk.app" target="_blank" rel="noopener noreferrer">
+<img alt="Get it on Google Play" src="https://agoradesk.com/static/img/mobile-app-banner/google.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678" target="_blank" rel="noopener noreferrer">
+<img alt="Download on the App Store" src="https://agoradesk.com/static/img/mobile-app-banner/apple.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://f-droid.org/en/packages/com.agoradesk.app/" target="_blank" rel="noopener noreferrer">
+<img alt="Get in on F-Droid" src="https://agoradesk.com/static/img/mobile-app-banner/fdroid.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases" target="_blank" rel="noopener noreferrer">
+<img alt="Download .apk directly from GitHub" src="https://agoradesk.com/static/img/mobile-app-banner/apk.png" style="height: 45px; border-radius: 8px;"></a>
+</div>
 
+## LocalMonero
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;">
+<a href="https://play.google.com/store/apps/details?id=co.localmonero.app" target="_blank" rel="noopener noreferrer">
+<img alt="Get it on Google Play" src="https://localmonero.co/static/img/mobile-app-banner/google.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://apps.apple.com/app/localmonero-p2p-xmr-trading/id1627693140" target="_blank" rel="noopener noreferrer">
+<img alt="Download on the App Store" src="https://localmonero.co/static/img/mobile-app-banner/apple.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://f-droid.org/en/packages/co.localmonero.app/" target="_blank" rel="noopener noreferrer">
+<img alt="Get in on F-Droid" src="https://localmonero.co/static/img/mobile-app-banner/fdroid.png" style="height: 45px; border-radius: 8px;"></a>
+<a href="https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases" target="_blank" rel="noopener noreferrer">
+<img alt="Download .apk directly from GitHub" src="https://localmonero.co/static/img/mobile-app-banner/apk.png" style="height: 45px; border-radius: 8px;"></a>
+</div>
 
 ## App Features 🔥
 
@@ -21,17 +34,17 @@ Second app - LocalMonero:
 Each app can be built as Android and iOS native app.
 Design and logic separation made with flavors (more info further in this doc).
 
-2. Universal Links work for Android and iOS. In case app is installed on the device,
-the regular links will run apps instead of browser.
-In case of two apps installed on one device the AgoraDesk app prioritized (it means in case of link
+2. Universal Links work for Android and iOS. In case the app is installed on the device,
+the regular links will run apps instead of browsers.
+In case of two apps installed on one device the AgoraDesk app is prioritized (it means in case of link
 localmonero/something AgoraDesk app will be opened).
 
-3. Push notifications work on iOS & Android. In case user's device
-(for example in China or with GrapheneOS) can't receive pushes, app detects it and start
+3. Push notifications to work on iOS & Android. In case the user's device
+(for example in China or with GrapheneOS) can't receive pushes, the app detects it and start
 polling in the background mode. [More info](Notifications.md)
 
-4. For anonymisation reasons all notifications sent without translations and arte translated on the client's side.
-So, we use data messages to display them with app code (not with the FCM).
+4. For anonymization reasons all notifications are sent without translations and are translated on the client's side.
+So, we use data messages to display them with the app code (not with the FCM).
 
 5. Made with Dart & Flutter ❤️
 
@@ -39,7 +52,7 @@ So, we use data messages to display them with app code (not with the FCM).
 
 For build the app locally after getting code from repository use FOSS commands in `Makefile`.
 
-For example, to build FOSS apk LocalMonero app
+For example, to build a FOSS apk LocalMonero app
 
 `flutter build apk --verbose --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false`
 
@@ -64,7 +77,7 @@ https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
 ### How to build iOS with run parameters
 - https://stackoverflow.com/a/65315937/7198006
 
-### Fastline
+### Fastlane
 - https://roszkowski.dev/2019/flutter-flavors/
 
 ### Initial settings
@@ -89,13 +102,15 @@ ios/Runner/Runner-localmonero.entitlements
 
 ### Push notifications
 
-Backend sends data messages. We get them in the app, translate and display.
+The backend sends data messages. We get them in the app, translate and display them.
 So, when the app is terminated, we should run the app, handle the message and display it.
 
 #### iOS issues
 
-1. Crashes when receiving notification. Connected with awesome notifications settings.
-https://github.com/firebase/flutterfire/issues/4026
+1. As we use data messages, when the app is killed (terminated, swipe up), iOS terminate all app activities and 
+the app can't display messages.
+https://developer.apple.com/forums/thread/132191
+
 
 ## Contribution
 
