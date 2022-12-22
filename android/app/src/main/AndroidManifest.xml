@@ -36,6 +36,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round">
 
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/launch_push" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/brand_color" />
+
         <receiver
             android:name="androidx.media.session.MediaButtonReceiver"
             android:exported="true">

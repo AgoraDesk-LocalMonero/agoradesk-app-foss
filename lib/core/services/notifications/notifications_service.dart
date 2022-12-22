@@ -11,7 +11,6 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -46,17 +45,14 @@ class NotificationsService with ForegroundMessagesMixin {
   final bool includeFcm;
 
   Future init() async {
-    ///
-    /// start listener for FCM messages that appears when the app is open
-    /// in case Firebase service is not available the app uses polling
-    ///
-
+    // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
     ///
     /// Polling notifications from the server
     ///
     _timer?.cancel();
+
     _timer = Timer.periodic(const Duration(seconds: _kNotificationsPollingSeconds), (_) => getNotifications());
 
     ///
@@ -92,9 +88,9 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.notifications.addAll(editedNotifications);
         await Future.delayed(const Duration(seconds: 1));
         // badges (red circle counter on the app icon)
-        final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
-        final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
-        await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
+        // final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
+        // final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
+        // await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
         // remove red dot in case all notifiations are read
         appState.hasUnread =
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
@@ -107,7 +103,7 @@ class NotificationsService with ForegroundMessagesMixin {
             if (m.contains(tradeId)) {
               final messageId = int.tryParse(m.split(':')[0]);
               if (messageId != null) {
-                await AwesomeNotifications().dismiss(messageId);
+                // await AwesomeNotifications().dismiss(messageId);
               }
               barMessagesNew.remove(m);
             }

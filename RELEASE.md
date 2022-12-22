@@ -1,10 +1,8 @@
 ### Updates
-1. HotFix: avoid requests in an unauthorised state.
-2. Feat: accessibility improvements.
-3. Feat: correct no connection messages on the main pages.
-4. Fix: app update link opens the separate browser.
-5. Feat: add a mail icon to the ads that require an email.
-6. Fix: high battery drain - increase requests time interval 2 times.
+1. Feat: a new way of delivering push notifications, solved iOS issue with disappearing notifications when the app is terminated.
+2. Fix: remove the Cancel button on the buyer side in disputed trades.
+3. Feat: disable trades polling when FCM is available, get info from push notifications.
+4. Feat: display sticky bubble for big screens when a keyboard is opened.
 
 
 ### About the attached app's

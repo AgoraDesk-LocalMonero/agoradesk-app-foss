@@ -2,7 +2,7 @@ import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
 import 'package:flutter/cupertino.dart';
 
-mixin ForegroundMessagesMixin {
+class ForegroundMessagesMixin {
   static List<String> getChannelNameDescription(String langCode) {
     try {
       return [channelDescriptionMap[langCode]['name'], channelDescriptionMap[langCode]['description']];

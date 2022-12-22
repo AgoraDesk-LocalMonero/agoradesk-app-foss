@@ -1,15 +1,18 @@
+import 'dart:convert';
+
 import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/init_app_parameters.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -25,58 +28,47 @@ void main() async {
   Permission.notification.request();
   const isCheckUpdates = false;
 
+  await setupLocalNotifications();
+
   ///
-  /// common initializations
+  /// general initializations
   ///
   await SecureStorage.ensureInitialized();
   await AppSharedPrefs.ensureInitialized();
   await AppHive.ensureInitialized();
   await findSystemLocale();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    if (kDebugMode) DeviceOrientation.portraitDown,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-
-  ///
-  /// Init awesome notofications
-  ///
-  await AwesomeNotifications().initialize(
-    null,
-    [
-      NotificationChannel(
-        channelKey: kNotificationsChannel,
-        channelName: 'Trades channel',
-        channelDescription: 'Notifications about trades',
-        importance: NotificationImportance.Max,
-        channelShowBadge: true,
-      ),
-    ],
-  );
-
-  ///
-  /// if the app is terminated and user presses to a notification
-  /// here we got payload info
-  ///
-  bool appRanFromPush = false;
-  String? tradeId;
-  ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
-
-  if (receivedAction != null && receivedAction.payload != null) {
-    final PushModel push = PushModel.fromJson(receivedAction.payload!);
-    if (push.objectId != null && push.objectId!.isNotEmpty) {
-      appRanFromPush = true;
-      tradeId = push.objectId;
-    }
-  }
 
   ///
   /// Initializations that are depend on flavor
   ///
 
   const bool isGoogleAvailable = false;
+
+  ///
+  /// if isGoogleAvailable == false
+  /// if the app is terminated and user presses to a notification
+  /// here we got payload info
+  /// in case with FCM we use built-in listeners
+  ///
+  bool appRanFromPush = false;
+  String? tradeId;
+  if (isGoogleAvailable == false) {
+    final NotificationAppLaunchDetails? notificationAppLaunchDetails =
+        await localNotificationsPlugin.getNotificationAppLaunchDetails();
+    final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
+    if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
+      final PushModel push = PushModel.fromJson(jsonDecode(payload));
+      if (push.objectId != null && push.objectId!.isNotEmpty) {
+        appRanFromPush = true;
+        tradeId = push.objectId;
+      }
+    }
+  }
+
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
       flavor,
@@ -89,4 +81,65 @@ void main() async {
   );
 
   runApp(const App());
+}
+
+/// Create a [AndroidNotificationChannel] for heads up notifications
+late AndroidNotificationChannel channel;
+
+bool isFlutterLocalNotificationsInitialized = false;
+
+Future<void> setupLocalNotifications() async {
+  if (isFlutterLocalNotificationsInitialized) {
+    return;
+  }
+
+  channel = const AndroidNotificationChannel(
+    kNotificationsChannel, // id
+    'Trades channel', // title
+    description: 'Notifications about trades', // description
+    importance: Importance.high,
+  );
+
+  localNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+  /// Create an Android Notification Channel.
+  ///
+  /// We use this channel in the `AndroidManifest.xml` file to override the
+  /// default FCM channel to enable heads up notifications.
+  await localNotificationsPlugin
+      .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
+      ?.createNotificationChannel(channel);
+
+  await localNotificationsPlugin.initialize(
+    const InitializationSettings(
+      android: AndroidInitializationSettings('launch_push_fdroid'),
+      iOS: DarwinInitializationSettings(
+        requestAlertPermission: true,
+        requestSoundPermission: true,
+        requestBadgePermission: true,
+      ),
+    ),
+    onDidReceiveNotificationResponse: _notificationResponse,
+  );
+
+  isFlutterLocalNotificationsInitialized = true;
+}
+
+/// Initialize the [FlutterLocalNotificationsPlugin] package.
+late FlutterLocalNotificationsPlugin localNotificationsPlugin;
+
+Future _notificationResponse(NotificationResponse notificationResponse) async {
+  try {
+    String? tradeId;
+    final String? payload = notificationResponse.payload;
+    if (payload != null) {
+      final PushModel push = PushModel.fromJson(jsonDecode(payload));
+      if (push.objectId != null && push.objectId!.isNotEmpty) {
+        tradeId = push.objectId;
+      }
+    }
+    eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+  } catch (e) {
+    debugPrint('++++error parsing push in actionStream [main]- $e');
+  }
 }

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Runner
+
+  Created by Macbook on 20.12.22.
+  Copyright © 2022 Blue Sunday Limited. All rights reserved.
+*/
+
+"TRADE_REQUEST" = "RU You have a new offer %@ from user %@";
+"TRADE_COMPLETE" = "RU Your trade %@ with %@ has been completed";

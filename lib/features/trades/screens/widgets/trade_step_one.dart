@@ -93,11 +93,11 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                           const SizedBox(height: 12),
                           Row(
-                            mainAxisAlignment: model.minutesBeforeCancel > 0
-                                ? MainAxisAlignment.center
-                                : MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: model.displayCancelStepOne()
+                                ? MainAxisAlignment.spaceBetween
+                                : MainAxisAlignment.center,
                             children: [
-                              model.minutesBeforeCancel <= 0
+                              model.displayCancelStepOne()
                                   ? ButtonOutlinedWithIconP80(
                                       title: context.intl.cancel,
                                       // insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
