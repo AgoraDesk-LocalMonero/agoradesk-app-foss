@@ -51,6 +51,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
           Map<String, dynamic> respMap = jsonDecode(resp.body);
           List<ActivityNotificationModel> notifications = [];
           if (respMap.containsKey('data') && respMap['data'][0].containsKey('id')) {
+            print('+++++++++++++++++++++++++++++++++++++11 - ${respMap['data']}');
             for (final r in respMap['data']) {
               notifications.add(ActivityNotificationModel.fromJson(r));
             }

@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Runner
+
+  Created by Macbook on 20.12.22.
+  Copyright © 2022 Blue Sunday Limited. All rights reserved.
+*/
+
+"MESSAGE_TITLE" = "Avete un nuovo messaggio in uno scambio";
+"TRADE_REQUEST_TITLE" = "Hai una nuova offerta";
+"TRADE_COMPLETE_TITLE" = "Scambio completato";
+"TRADE_PAYMENT_MARKED_COMPLETE_TITLE" = "Scambio contrassegnato come completato";
+"TRADE_CANCELLED_TITLE" = "Scambio annullato";
+"TRADE_DISPUTED_TITLE" = "Scambio contestato";
+"TRADE_REQUEST" = "Hai una nuova offerta %@ dall'utente %@";
+"TRADE_COMPLETE" = "La tua compravendita %@ con %@ è completata";
+"TRADE_PAYMENT_MARKED_COMPLETE" = "%@ ha completato il pagamento nella compravendita %@";
+"TRADE_CANCELLED" = "La compravendita %@ è stata cancellata da %@";
+"TRADE_DISPUTED" = "La compravendita %@ è stata contestata da %@";
+"MESSAGE" = "%@";

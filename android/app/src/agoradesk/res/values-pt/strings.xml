@@ -1,0 +1,14 @@
+<resources>
+    <string name="MESSAGE_TITLE">Masz nową wiadomość w transakcji</string>
+    <string name="TRADE_REQUEST_TITLE">Masz nową ofertę</string>
+    <string name="TRADE_COMPLETE_TITLE">Handel zakończony</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE_TITLE">Transakcja oznaczona jako zakończona</string>
+    <string name="TRADE_CANCELLED_TITLE">Transakcja anulowana</string>
+    <string name="TRADE_DISPUTED_TITLE">Handel sporny</string>
+    <string name="TRADE_REQUEST">Nova negociação %1$s do usuário %2$s</string>
+    <string name="TRADE_COMPLETE">Negociação %1$s com %2$s concluída</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE">%1$s marcou pagamento como realizado na negociação %2$s</string>
+    <string name="TRADE_CANCELLED">Negociação %1$s foi cancelada por %2$s</string>
+    <string name="TRADE_DISPUTED">Negociação %1$s disputada por %2$s</string>
+    <string name="MESSAGE">%1$s</string>
+</resources>
