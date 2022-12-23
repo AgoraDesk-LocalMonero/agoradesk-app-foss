@@ -219,7 +219,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
 @pragma('vm:entry-point')
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   //TODO: Remove with the next release
-  if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 12, 0))) {
+  if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
     try {
       await SecureStorage.ensureInitialized();
       final SecureStorage _secureStorage = SecureStorage();

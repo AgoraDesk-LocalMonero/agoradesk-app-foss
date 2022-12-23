@@ -76,7 +76,7 @@ class NotificationsService with ForegroundMessagesMixin {
       FirebaseMessaging.onMessage.listen((message) async {
         try {
           //TODO: Remove with the next release
-          if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 12, 0))) {
+          if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
             final locale = await secureStorage.read(SecureStorageKey.locale);
             final String langCode = locale ?? Platform.localeName.substring(0, 2);
             final PushModel push = PushModel.fromJson(message.data);
