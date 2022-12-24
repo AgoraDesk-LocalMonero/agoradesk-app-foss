@@ -27,6 +27,8 @@ import 'firebase_options_agoradesk.dart' as agoradesk_options;
 import 'firebase_options_localmonero.dart' as localmonero_options;
 
 const kNotificationsChannel = 'trades_channel';
+const kNotificationIcon = '@mipmap/ic_icon_black';
+// const kNotificationIcon = '@drawable/launch_push';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -177,7 +179,7 @@ Future<void> setupLocalNotifications() async {
 
   await localNotificationsPlugin.initialize(
     const InitializationSettings(
-      android: AndroidInitializationSettings('launch_push'),
+      android: AndroidInitializationSettings(kNotificationIcon),
       iOS: DarwinInitializationSettings(
         requestAlertPermission: true,
         requestSoundPermission: true,
@@ -238,7 +240,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
       final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
       await flutterLocalNotificationsPlugin.initialize(
         const InitializationSettings(
-          android: AndroidInitializationSettings('launch_push'),
+          android: AndroidInitializationSettings(kNotificationIcon),
           iOS: DarwinInitializationSettings(
             requestAlertPermission: true,
             requestSoundPermission: true,
@@ -257,7 +259,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
             channel.id,
             channel.name,
             channelDescription: channel.description,
-            icon: 'launch_push',
+            icon: kNotificationIcon,
             color: const Color.fromRGBO(0, 0, 0, 1),
             // colorized: true,
           ),
