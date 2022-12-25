@@ -100,9 +100,7 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
   }
 
   Future markAllRead() async {
-    // AwesomeNotifications().getGlobalBadgeCounter().then(
-    //       (value) => AwesomeNotifications().setGlobalBadgeCounter(0),
-    //     );
+    FlutterAppBadger.removeBadge();
     final res = await _accountService.markAllRead();
     if (res.isRight) {
       _appState.notificationsMarkedRead = true;
@@ -118,7 +116,6 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
       }
       notifications.clear();
       notifications.addAll(notificationsMarkedAsRead);
-      FlutterAppBadger.removeBadge();
       notifyListeners();
     } else {
       handleApiError(res.left, context);
