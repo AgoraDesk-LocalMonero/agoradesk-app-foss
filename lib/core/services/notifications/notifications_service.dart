@@ -21,6 +21,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
@@ -68,6 +69,7 @@ class NotificationsService with ForegroundMessagesMixin {
       ///
       FirebaseMessaging.onMessageOpenedApp.listen((message) async {
         _parseNotificationData(message);
+        FlutterAppBadger.removeBadge();
       });
 
       ///
@@ -158,7 +160,7 @@ class NotificationsService with ForegroundMessagesMixin {
       if (push.objectId != null && push.objectId!.isNotEmpty) {
         tradeId = push.objectId;
       }
-      eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+      eventBus.fire(NoificationClickedEvent(tradeId));
     } catch (e) {
       debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
     }

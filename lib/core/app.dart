@@ -609,7 +609,7 @@ class _AppState extends State<App>
           ).then((value) => _dialogOpened = false);
         }
       })
-      ..on<AwesomeMessageClickedEvent>().listen((e) async {
+      ..on<NoificationClickedEvent>().listen((e) async {
         if (e.tradeId != null && e.tradeId!.isNotEmpty) {
           await Future.delayed(const Duration(seconds: 1));
           await _notificationsService.notificationHandleRoutes(e.tradeId!);

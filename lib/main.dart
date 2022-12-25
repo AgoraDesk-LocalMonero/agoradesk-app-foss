@@ -212,7 +212,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
         tradeId = push.objectId;
       }
     }
-    eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+    eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
     debugPrint('++++error parsing push in actionStream [main]- $e');
   }
