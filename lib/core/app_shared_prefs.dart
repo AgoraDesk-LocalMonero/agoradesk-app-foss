@@ -8,7 +8,6 @@ enum AppSharedPrefsKey {
   themeMode,
   locale,
   pinIsActive,
-  iosFirstNotificationWasRun,
   biometricAuthIsOn,
   sentryIsOn,
   firstRun,
@@ -46,8 +45,6 @@ class AppSharedPrefs with DateMixin {
   Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
-
-  bool? get iosFirstNotificationWasRun => getBool(AppSharedPrefsKey.iosFirstNotificationWasRun);
 
   bool? get biometricAuthIsOn => getBool(AppSharedPrefsKey.biometricAuthIsOn);
 

@@ -321,9 +321,7 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.notifications.addAll(editedNotifications);
         await Future.delayed(const Duration(seconds: 1));
         // badges (red circle counter on the app icon)
-        // final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
-        // final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
-        // await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
+        FlutterAppBadger.removeBadge();
         // remove red dot in case all notifiations are read
         appState.hasUnread =
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;

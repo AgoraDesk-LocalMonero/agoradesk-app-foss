@@ -52,12 +52,6 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   bool get pushFcmTokenSavedToApi => AppSharedPrefs().pushFcmTokenSavedToApi ?? false;
 
-  bool get iosFirstNotificationWasRun => AppSharedPrefs().iosFirstNotificationWasRun ?? false;
-
-  set iosFirstNotificationWasRun(bool val) {
-    AppSharedPrefs().setBool(AppSharedPrefsKey.iosFirstNotificationWasRun, val: val);
-  }
-
   set pushFcmTokenSavedToApi(bool val) {
     AppSharedPrefs().setBool(AppSharedPrefsKey.pushFcmTokenSavedToApi, val: val);
   }

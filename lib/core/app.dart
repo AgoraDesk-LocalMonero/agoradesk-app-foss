@@ -158,13 +158,6 @@ class _AppState extends State<App>
     _initPlausible();
     _initUploadingStatusListener();
 
-    // this listener calls if the app is not terminated
-    // in case app is terminated there is info in main.dart
-    // AwesomeNotifications().setListeners(
-    //   onActionReceivedMethod: AwesomeNotificationController.onActionReceivedMethod,
-    //   onDismissActionReceivedMethod: AwesomeNotificationController.onDismissActionReceivedMethod,
-    // );
-
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     super.initState();

@@ -72,28 +72,11 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
   }
 
   @override
-  Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {
-    // ReceivedAction? receivedAction = await AwesomeNotifications().getInitialNotificationAction();
-    // await FlutterForegroundTask.clearAllData();
-  }
+  Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {}
 
   @override
-  void onButtonPressed(String id) {
-    // Called when the notification button on the Android platform is pressed.
-    // print('onButtonPressed >> $id');
-  }
+  void onButtonPressed(String id) {}
 
   @override
-  void onNotificationPressed() {
-    // Called when the notification itself on the Android platform is pressed.
-    //
-    // "android.permission.SYSTEM_ALERT_WINDOW" permission must be granted for
-    // this function to be called.
-
-    // Note that the app will only route to "/resume-route" when it is exited so
-    // it will usually be necessary to send a message through the send port to
-    // signal it to restore state when the app is already started.
-    // FlutterForegroundTask.wakeUpScreen();
-    // _sendPort?.send('onNotificationPressed');
-  }
+  void onNotificationPressed() {}
 }

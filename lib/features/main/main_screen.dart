@@ -3,7 +3,6 @@ import 'dart:isolate';
 
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/foreground/foreground_handler.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -16,7 +15,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
-import 'package:provider/provider.dart';
 
 const _kForegroungPollingInterval = 60000;
 
@@ -34,7 +32,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     _initForeground();
-    _initIosNotifications();
     super.initState();
   }
 
@@ -107,30 +104,6 @@ class _MainScreenState extends State<MainScreen> {
         );
       },
     );
-  }
-
-  ///
-  /// Fixing iOS 16 bug - on the very first app run call silent notification
-  ///
-  void _initIosNotifications() async {
-    if (Platform.isIOS) {
-      final appState = context.read<AppState>();
-      final bool iosFirstNotificationWasRun = appState.iosFirstNotificationWasRun;
-      if (!iosFirstNotificationWasRun) {
-        // final res = await AwesomeNotifications().createNotification(
-        //   content: NotificationContent(
-        //     id: 436456,
-        //     channelKey: kNotificationsChannel,
-        //     notificationLayout: NotificationLayout.Default,
-        //     payload: {},
-        //   ),
-        // );
-        // AwesomeNotifications().decrementGlobalBadgeCounter();
-        // if (res) {
-        //   appState.iosFirstNotificationWasRun = true;
-        // }
-      }
-    }
   }
 
   ///
