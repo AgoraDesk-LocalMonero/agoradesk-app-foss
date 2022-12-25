@@ -80,5 +80,9 @@
 	<true/>
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>remote-notification</string>
+    </array>
 </dict>
 </plist>

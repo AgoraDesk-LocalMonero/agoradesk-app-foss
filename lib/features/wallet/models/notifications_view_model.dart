@@ -12,6 +12,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:vm/vm.dart';
 
 class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
@@ -117,7 +118,7 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
       }
       notifications.clear();
       notifications.addAll(notificationsMarkedAsRead);
-      // AwesomeNotifications().dismissAllNotifications();
+      FlutterAppBadger.removeBadge();
       notifyListeners();
     } else {
       handleApiError(res.left, context);
