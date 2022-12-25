@@ -98,10 +98,6 @@ class FlashEvent {
   }
 }
 
-///
-/// Awesome notifications message clicked on the phone tray
-///
-
 class NoificationClickedEvent {
   final String? tradeId;
 

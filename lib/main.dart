@@ -265,28 +265,8 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
           ),
         ),
       );
-
-      String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      barMessagesString += ';${message.messageId}:${push.objectId}';
-      _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
     } catch (e) {
       debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
     }
   }
-
-  // try {
-  //   await SecureStorage.ensureInitialized();
-  //   final SecureStorage _secureStorage = SecureStorage();
-  //   final locale = await _secureStorage.read(SecureStorageKey.locale);
-  //   final String langCode = locale ?? Platform.localeName.substring(0, 2);
-  //   final PushModel push = PushModel.fromJson(message.data);
-  //   final awesomeMessageId = Random().nextInt(10000000);
-  //   final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-  //
-  //   String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-  //   barMessagesString += ';${message.messageId}:${push.objectId}';
-  //   _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-  // } catch (e) {
-  //   debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
-  // }
 }

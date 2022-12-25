@@ -121,7 +121,6 @@ class NotificationsService with ForegroundMessagesMixin {
       });
     }
 
-    // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
     ///
@@ -189,8 +188,6 @@ class NotificationsService with ForegroundMessagesMixin {
               channel.name,
               channelDescription: channel.description,
               icon: kNotificationIcon,
-              // color: const Color.fromARGB(255, 255, 0, 0),
-              // colorized: true,
             ),
           ),
         );
@@ -199,11 +196,6 @@ class NotificationsService with ForegroundMessagesMixin {
       // send signal to update the chat state
       eventBus.fire(const UpdateOpenedChatEvent());
     }
-    // if (res) {
-    //   String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-    //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
-    //   await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-    // }
   }
 
   Future getToken() async {
@@ -325,22 +317,6 @@ class NotificationsService with ForegroundMessagesMixin {
         // remove red dot in case all notifiations are read
         appState.hasUnread =
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
-        // dismiss notifications on the phone events bar (not inside the app)
-        String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-        if (barMessagesString.isNotEmpty) {
-          final List<String> barMessages = barMessagesString.split(';');
-          final List<String> barMessagesNew = barMessagesString.split(';');
-          for (final m in barMessages) {
-            if (m.contains(tradeId)) {
-              final messageId = int.tryParse(m.split(':')[0]);
-              if (messageId != null) {
-                // await AwesomeNotifications().dismiss(messageId);
-              }
-              barMessagesNew.remove(m);
-            }
-          }
-          await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
-        }
       }
     } catch (e) {
       debugPrint('++++markTradeNotificationsAsRead exception - $e');
