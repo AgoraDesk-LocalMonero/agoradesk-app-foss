@@ -4,7 +4,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "bg": [
@@ -13,7 +15,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "cs": [
@@ -21,7 +25,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "de": [
@@ -29,7 +35,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "es": [
@@ -38,7 +46,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "fr": [
@@ -47,7 +57,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "hu": [
@@ -55,7 +67,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "it": [
@@ -63,7 +77,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "ja": [
@@ -71,7 +87,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "ko": [
@@ -79,7 +97,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "lv": [
@@ -87,7 +107,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "nl": [
@@ -95,7 +117,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "pl": [
@@ -103,7 +127,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "pt": [
@@ -156,7 +182,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "pt_BR": [
@@ -165,7 +193,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "ro": [
@@ -173,7 +203,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "ru": [
@@ -182,7 +214,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "sk": [
@@ -193,7 +227,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "sw": [
@@ -205,7 +241,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "tl": [
@@ -217,7 +255,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "tr": [
@@ -226,7 +266,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "ur": [
@@ -234,7 +276,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "zh": [
@@ -287,7 +331,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "zh_CN": [
@@ -861,7 +907,9 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ],
 
   "zh_TW": [
@@ -869,6 +917,8 @@
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review"
   ]
 }

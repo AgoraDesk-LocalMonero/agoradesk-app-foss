@@ -16595,6 +16595,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Select ad type'**
   String get app_select_ad_type;
+
+  /// No description provided for @app_chat_leave_review.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap here to leave a review!'**
+  String get app_chat_leave_review;
+
+  /// No description provided for @app_chat_update_review.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve already left this user a review. Would you like to update your review now?'**
+  String get app_chat_update_review;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

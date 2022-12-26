@@ -81,7 +81,7 @@ class TradeViewModel extends ViewModel
   final chatController = ScrollController();
   final listController = ScrollController();
 
-  FeedbackType? _feedbackType = FeedbackType.positive;
+  FeedbackType? _feedbackType;
 
   final List<TradeModel> filteredTrades = [];
   AdModel? fullAd;
@@ -305,6 +305,7 @@ class TradeViewModel extends ViewModel
       final res = await _accountService.getAccountInfo(username);
       if (res.isRight) {
         accountInfoModel = res.right;
+        feedbackType = accountInfoModel?.myFeedback;
       }
     } else {
       accountInfoModel = const AccountInfoModel(username: kDeletedUserName);
@@ -703,7 +704,7 @@ class TradeViewModel extends ViewModel
     postingFeedback = true;
     final res = await _accountService.giveFeedback(
       tradeForScreen.isSelling! ? tradeForScreen.buyer.username! : tradeForScreen.seller.username!,
-      feedbackType!,
+      feedbackType,
       ctrlFeedback.text,
     );
     postingFeedback = false;

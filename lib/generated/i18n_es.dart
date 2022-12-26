@@ -9246,4 +9246,10 @@ class I18nEs extends I18n {
 
   @override
   String get app_select_ad_type => 'Select ad type';
+
+  @override
+  String get app_chat_leave_review => 'Tap here to leave a review!';
+
+  @override
+  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
 }

@@ -5490,5 +5490,7 @@
             "val": {}
         }
     },
-    "app_select_ad_type": "Select ad type"
+    "app_select_ad_type": "Select ad type",
+    "app_chat_leave_review": "Tap here to leave a review!",
+    "app_chat_update_review": "You've already left this user a review. Would you like to update your review now?"
 }
