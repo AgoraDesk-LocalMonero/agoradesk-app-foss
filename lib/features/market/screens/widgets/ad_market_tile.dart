@@ -187,6 +187,12 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   }
 
   Widget _buildBottom(BuildContext context, double halfWidth) {
+    String tradeLimit = '${ad.minAmount ?? 0} - ';
+    if (ad.maxAmountAvailable != null) {
+      tradeLimit += '${ad.maxAmountAvailable} ${ad.currency}';
+    } else {
+      tradeLimit += ad.maxAmount != null ? '${ad.maxAmount} ${ad.currency}' : context.intl.app_unlimited;
+    }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -210,26 +216,24 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
           ),
         ),
         const SizedBox(width: 10),
-        ad.maxAmount != null
-            ? Row(
-                children: [
-                  Icon(
-                    AgoraFont.limits_3,
-                    size: 12,
-                    color: context.colP80,
-                  ),
-                  const SizedBox(width: 4),
-                  SizedBox(
-                    width: halfWidth,
-                    child: AutoSizeText(
-                      '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.minAmount ?? 0} - ${ad.maxAmount} ${ad.currency}',
-                      style: context.txtBodyXSmallN90,
-                      maxLines: 1,
-                    ),
-                  ),
-                ],
-              )
-            : const SizedBox(),
+        Row(
+          children: [
+            Icon(
+              AgoraFont.limits_3,
+              size: 12,
+              color: context.colP80,
+            ),
+            const SizedBox(width: 4),
+            SizedBox(
+              width: halfWidth,
+              child: AutoSizeText(
+                '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} $tradeLimit',
+                style: context.txtBodyXSmallN90,
+                maxLines: 1,
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }
