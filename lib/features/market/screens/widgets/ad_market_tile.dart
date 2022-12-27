@@ -72,8 +72,8 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     verifiedEmailRequired
-                        ? Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
+                        ? const Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
                             child: Icon(
                               CupertinoIcons.mail,
                               size: 12,
@@ -187,12 +187,6 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   }
 
   Widget _buildBottom(BuildContext context, double halfWidth) {
-    String tradeLimit = '${ad.minAmount ?? 0} - ';
-    if (ad.maxAmountAvailable != null) {
-      tradeLimit += '${ad.maxAmountAvailable} ${ad.currency}';
-    } else {
-      tradeLimit += ad.maxAmount != null ? '${ad.maxAmount} ${ad.currency}' : context.intl.app_unlimited;
-    }
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -227,7 +221,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
             SizedBox(
               width: halfWidth,
               child: AutoSizeText(
-                '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} $tradeLimit',
+                '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.tradeLimit(context)}',
                 style: context.txtBodyXSmallN90,
                 maxLines: 1,
               ),
