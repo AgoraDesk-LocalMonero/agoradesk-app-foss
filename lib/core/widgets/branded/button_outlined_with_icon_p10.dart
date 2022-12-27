@@ -3,20 +3,18 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ButtonOutlinedWithIconP80 extends StatelessWidget {
-  const ButtonOutlinedWithIconP80({
+class ButtonOutlinedWithIconP10 extends StatelessWidget {
+  const ButtonOutlinedWithIconP10({
     Key? key,
     required this.title,
     required this.onPressed,
-    required this.icon,
-    this.insidePadding = const EdgeInsets.fromLTRB(30, 10, 30, 10),
+    this.insidePadding = const EdgeInsets.fromLTRB(10, 10, 10, 10),
     this.delimiterWidth = 10,
     this.loading = false,
     this.borderColor,
     this.style,
   }) : super(key: key);
 
-  final Widget icon;
   final String title;
   final VoidCallback onPressed;
   final EdgeInsets insidePadding;
@@ -39,7 +37,7 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
           side: BorderSide(
             width: 1,
-            color: borderColor ?? Theme.of(context).colorScheme.p80P70,
+            color: borderColor ?? Theme.of(context).colorScheme.primary10,
           ),
         ),
       ),
@@ -47,18 +45,13 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          loading
-              ? Center(
-                  child: CupertinoActivityIndicator(color: borderColor ?? context.colP80),
-                )
-              : icon,
           SizedBox(width: delimiterWidth),
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
             child: AutoSizeText(
               title,
               maxLines: 1,
-              style: style ?? context.txtLabelLargeP80P70.copyWith(height: 1),
+              style: style ?? context.txtLabelLargeP10.copyWith(height: 1),
             ),
           ),
         ],

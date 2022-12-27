@@ -4,6 +4,7 @@ import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_two_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_p80.dart';
+import 'package:agoradesk/core/widgets/branded/button_outlined_with_icon_p10.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_with_icon_p80.dart';
 import 'package:agoradesk/core/widgets/branded/circle_with_icon.dart';
 import 'package:agoradesk/core/widgets/branded/container_c85c09_radius12.dart';
@@ -13,6 +14,7 @@ import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_bubble_yellow.dart';
 import 'package:agoradesk/features/trades/screens/widgets/finalize_trade_dialog.dart';
+import 'package:agoradesk/features/trades/screens/widgets/post_feedback_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
@@ -94,13 +96,34 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             }
 
             if (model.tradeStatus.index > 5) {
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: ChatBubbleYellow(
-                  text: context.intl.settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort,
-                  secondText: 'ksiehfwiu7777777',
-                  date: model.tradeForScreen.releasedAt,
-                ),
+              return Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                    child: ChatBubbleYellow(
+                      text: context.intl.settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort,
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
+                        child: Center(
+                          child: ButtonOutlinedWithIconP10(
+                            title: model.finalizedTradeFeedbackTitle(context),
+                            insidePadding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
+                            delimiterWidth: 4,
+                            onPressed: () {
+                              showDialog(
+                                barrierDismissible: true,
+                                context: context,
+                                barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+                                builder: (_) => PostFeedbackDialog(model: model),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                      date: model.tradeForScreen.releasedAt,
+                    ),
+                  ),
+                ],
               );
             }
 

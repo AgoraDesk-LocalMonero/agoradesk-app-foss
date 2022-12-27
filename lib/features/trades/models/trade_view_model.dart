@@ -312,6 +312,14 @@ class TradeViewModel extends ViewModel
     }
   }
 
+  String finalizedTradeFeedbackTitle(BuildContext context) {
+    if (feedbackType == null) {
+      return context.intl.trade250Sbleave8722Sbfeedback8722Sbbtn;
+    } else {
+      return context.intl.trade250Sbupdate8722Sbfeedback8722Sbbtn;
+    }
+  }
+
   void openReceipt(BuildContext context) {
     context.pushRoute(
       WebviewRoute(
