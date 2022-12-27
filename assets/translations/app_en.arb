@@ -5477,6 +5477,7 @@
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy": "call option buy",
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell": "call option sell",
     "app_accessibility_edit_box_password": "Edit box password, double tap to edit",
+    "app_accessibility_edit_box_confirm_password": "Confirm password edit box, double tap to edit",
     "app_ad_created": "Ad created",
     "app_503_title": "{val} App Maintenance",
     "@app_503_title": {

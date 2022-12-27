@@ -16572,6 +16572,12 @@ abstract class I18n {
   /// **'Edit box password, double tap to edit'**
   String get app_accessibility_edit_box_password;
 
+  /// No description provided for @app_accessibility_edit_box_confirm_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password edit box, double tap to edit'**
+  String get app_accessibility_edit_box_confirm_password;
+
   /// No description provided for @app_ad_created.
   ///
   /// In en, this message translates to:

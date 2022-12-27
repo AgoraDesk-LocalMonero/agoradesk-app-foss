@@ -9232,6 +9232,9 @@ class I18nCs extends I18n {
   String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
 
   @override
+  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+
+  @override
   String get app_ad_created => 'Ad created';
 
   @override

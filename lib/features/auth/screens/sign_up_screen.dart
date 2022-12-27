@@ -118,6 +118,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(
                                     controller: model.ctrlPassword2,
+                                    tooltipText: context.intl.app_accessibility_edit_box_confirm_password,
                                     decoration: decoration.copyWith(
                                       hintText: context.intl.signup250Sbconfirm8722Sbpass,
                                       errorText: validatePasswordWithNull(model.password2) &&
