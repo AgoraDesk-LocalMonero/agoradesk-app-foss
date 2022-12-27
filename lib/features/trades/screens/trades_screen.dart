@@ -109,7 +109,7 @@ class _TradesScreenState extends State<TradesScreen>
                 child: Semantics(
                   label: context.intl.dashboard250Sbfilter250Sbrole250Sbboth,
                   child: DropdownSearch<String>(
-                    dropdownButtonProps: context.dropdownButtonProps(),
+                    dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_buyer_seller),
                     dropdownDecoratorProps: context.dropdownDecoration,
                     popupProps: PopupProps.menu(
                       menuProps: context.dropdownMenuProps,

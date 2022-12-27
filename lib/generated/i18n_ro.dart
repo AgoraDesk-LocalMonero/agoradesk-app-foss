@@ -9255,4 +9255,7 @@ class I18nRo extends I18n {
 
   @override
   String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+
+  @override
+  String get app_select_buyer_seller => 'Select buyer or seller';
 }

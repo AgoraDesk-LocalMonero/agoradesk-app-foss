@@ -16613,6 +16613,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'You\'ve already left this user a review. Would you like to update your review now?'**
   String get app_chat_update_review;
+
+  /// No description provided for @app_select_buyer_seller.
+  ///
+  /// In en, this message translates to:
+  /// **'Select buyer or seller'**
+  String get app_select_buyer_seller;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
