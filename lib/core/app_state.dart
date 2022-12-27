@@ -36,6 +36,12 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   String get username => AppSharedPrefs().username ?? '';
 
+  bool get tradeTabDefault => AppSharedPrefs().tradeTabDefault ?? false;
+
+  set tradeTabDefault(bool val) {
+    AppSharedPrefs().setBool(AppSharedPrefsKey.tradeTabDefault, val: val);
+  }
+
   bool get isSmallScreen => _screenHeight != null && _screenHeight! < _kSmallScreenHeigh;
 
   bool get sentryIsOn {

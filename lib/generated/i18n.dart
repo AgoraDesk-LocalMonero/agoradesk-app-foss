@@ -16619,6 +16619,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Select buyer or seller'**
   String get app_select_buyer_seller;
+
+  /// No description provided for @app_trade_screen_default_tab.
+  ///
+  /// In en, this message translates to:
+  /// **'Set trade tab as default'**
+  String get app_trade_screen_default_tab;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

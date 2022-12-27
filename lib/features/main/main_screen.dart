@@ -28,11 +28,19 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   /// for receiving messages from the foreground service
   ReceivePort? _receivePort;
+  late TabsRouter tabsRouter;
 
   @override
   void initState() {
     _initForeground();
+    WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     super.initState();
+  }
+
+  void _afterLayout(_) async {
+    if (GetIt.I<AppParameters>().tradeTabDefault) {
+      tabsRouter.setActiveIndex(1);
+    }
   }
 
   @override
@@ -49,7 +57,8 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Theme.of(context).colorScheme.surface1,
       animationCurve: Curves.easeInOut,
       animationDuration: const Duration(milliseconds: 500),
-      bottomNavigationBuilder: (_, tabsRouter) {
+      bottomNavigationBuilder: (_, t) {
+        tabsRouter = t;
         return Theme(
           data: ThemeData(
             highlightColor: Colors.transparent,

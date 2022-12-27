@@ -9258,6 +9258,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_select_buyer_seller => 'Select buyer or seller';
+
+  @override
+  String get app_trade_screen_default_tab => 'Set trade tab as default';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

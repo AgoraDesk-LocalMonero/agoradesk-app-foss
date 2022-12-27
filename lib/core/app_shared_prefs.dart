@@ -19,6 +19,7 @@ enum AppSharedPrefsKey {
   cachedCountrySavedDate,
   cachedCurrencySavedDate,
   tooltipShownNames,
+  tradeTabDefault,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -53,6 +54,8 @@ class AppSharedPrefs with DateMixin {
   bool? get firstRun => getBool(AppSharedPrefsKey.firstRun);
 
   bool? get pushFcmTokenSavedToApi => getBool(AppSharedPrefsKey.pushFcmTokenSavedToApi);
+
+  bool get tradeTabDefault => getBool(AppSharedPrefsKey.tradeTabDefault) ?? false;
 
   String? get username => getString(AppSharedPrefsKey.username);
 

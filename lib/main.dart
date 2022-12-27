@@ -94,14 +94,17 @@ void main() async {
     }
   }
 
+  bool tradeTabDefault = AppSharedPrefs().tradeTabDefault;
+
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
-      flavor,
-      isGoogleAvailable,
-      includeFcm,
-      appRanFromPush,
-      tradeId,
-      isCheckUpdates,
+      flavor: flavor,
+      isGoogleAvailable: isGoogleAvailable,
+      includeFcm: includeFcm,
+      appRanFromPush: appRanFromPush,
+      tradeId: tradeId,
+      isCheckUpdates: isCheckUpdates,
+      tradeTabDefault: tradeTabDefault,
     ),
   );
 
