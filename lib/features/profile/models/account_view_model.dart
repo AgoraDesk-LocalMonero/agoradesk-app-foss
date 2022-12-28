@@ -26,19 +26,12 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
   String? userName;
   String appVersionStr = '';
 
-  bool _isTradeTabDefault = false;
-
-  bool get isTradeTabDefault => _isTradeTabDefault;
-
-  set isTradeTabDefault(bool val) => updateWith(isTradeTabDefault: val);
-
   late bool isGuestMode;
 
   @override
   Future<void> init() async {
     //todo - refactor me (maybe with AutoRoute)
     isGuestMode = _authService.authState == AuthState.guest;
-    isTradeTabDefault = _appState.tradeTabDefault;
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest;
       if (e == AuthState.loggedIn) {
@@ -98,16 +91,6 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
     return _appState.themeMode == ThemeMode.dark;
   }
 
-  void switchTradeTabDefault() {
-    if (isTradeTabDefault) {
-      _appState.tradeTabDefault = false;
-      isTradeTabDefault = false;
-    } else {
-      _appState.tradeTabDefault = true;
-      isTradeTabDefault = true;
-    }
-  }
-
   bool biometricAuthIsOn() {
     return _appState.biometricAuthIsOn;
   }
@@ -156,13 +139,6 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
     _appState.hasPinCode = false;
     _appState.biometricAuthIsOn = false;
     eventBus.fire(FlashEvent.success(context.intl.remove_pin_message_success));
-    notifyListeners();
-  }
-
-  void updateWith({
-    bool? isTradeTabDefault,
-  }) {
-    _isTradeTabDefault = isTradeTabDefault ?? _isTradeTabDefault;
     notifyListeners();
   }
 }

@@ -5,6 +5,7 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
+import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -12,20 +13,24 @@ import 'package:rxdart/rxdart.dart';
 import 'package:timeago/timeago.dart';
 
 const _kLocaleDebounceTag = 'switch-locale';
+const _kUpdateDelaySharedPrefs = Duration(milliseconds: 100);
 const _kSmallScreenHeigh = 700.0;
 
 class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
     Locale? locale,
+    TabType? defaultTab,
     ThemeMode themeMode = ThemeMode.dark,
     required SecureStorage secureStorage,
   })  : _locale = locale,
+        _defaultTab = defaultTab,
         _secureStorage = secureStorage,
         _themeMode = themeMode;
 
   final SecureStorage _secureStorage;
   ThemeMode _themeMode;
   Locale? _locale;
+  TabType? _defaultTab;
   String? _countryCode;
   String? _currencyCode = 'USD';
   bool _hasPinCode = false;
@@ -35,12 +40,6 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   double? _screenHeight;
 
   String get username => AppSharedPrefs().username ?? '';
-
-  bool get tradeTabDefault => AppSharedPrefs().tradeTabDefault ?? false;
-
-  set tradeTabDefault(bool val) {
-    AppSharedPrefs().setBool(AppSharedPrefsKey.tradeTabDefault, val: val);
-  }
 
   bool get isSmallScreen => _screenHeight != null && _screenHeight! < _kSmallScreenHeigh;
 
@@ -186,8 +185,6 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   bool initialized = false;
 
-  Locale get locale => _locale ?? const Locale('en');
-
   LookupMessages get messagesLocaleTimeago {
     return _lookupMessagesMap.containsKey(langCode) ? _lookupMessagesMap[langCode]! : _lookupMessagesMap['en']!;
   }
@@ -211,15 +208,31 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     'zh_short': ZhMessages(),
   };
 
+  Locale get locale => _locale ?? const Locale('en');
+
   set locale(Locale locale) {
     EasyDebounce.debounce(
       _kLocaleDebounceTag,
-      const Duration(milliseconds: 100),
+      _kUpdateDelaySharedPrefs,
       () {
         updateWith(locale: locale);
         AppSharedPrefs().setString(AppSharedPrefsKey.locale, locale.languageCode);
         _secureStorage.write(SecureStorageKey.locale, locale.languageCode);
         eventBus.fire(LocaleChangedEvent(locale));
+      },
+    );
+  }
+
+  TabType get defaultTab => _defaultTab ?? TabType.market;
+
+  set defaultTab(TabType tab) {
+    EasyDebounce.debounce(
+      _kLocaleDebounceTag,
+      _kUpdateDelaySharedPrefs,
+      () {
+        updateWith(defaultTab: defaultTab);
+        AppSharedPrefs().setString(AppSharedPrefsKey.defaultTab, tab.name);
+        // eventBus.fire(LocaleChangedEvent(locale));
       },
     );
   }
@@ -264,6 +277,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   void updateWith({
     Locale? locale,
+    TabType? defaultTab,
     ThemeMode? themeMode,
     bool? hasPinCode,
     double? screenHeight,
@@ -271,6 +285,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     bool notify = true,
   }) {
     _locale = locale ?? _locale;
+    _defaultTab = defaultTab ?? _defaultTab;
     _screenHeight = screenHeight ?? _screenHeight;
     _themeMode = themeMode ?? _themeMode;
     _hasPinCode = hasPinCode ?? _hasPinCode;

@@ -102,6 +102,7 @@ class _AppState extends State<App>
     appState = AppState(
       secureStorage: _secureStorage,
       locale: AppSharedPrefs().locale,
+      defaultTab: AppSharedPrefs().defaultTab,
       themeMode: AppSharedPrefs().themeMode,
     );
     _api = ApiClient(

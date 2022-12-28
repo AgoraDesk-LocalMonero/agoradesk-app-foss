@@ -8,7 +8,6 @@ AppParameters initAppParameters({
   required bool isGoogleAvailable,
   required bool appRanFromPush,
   String? tradeId,
-  required bool tradeTabDefault,
 }) {
   if (flavor == FlavorType.localmonero) {
     return AppParameters(
@@ -39,8 +38,7 @@ AppParameters initAppParameters({
     )
       ..isGoogleAvailable = isGoogleAvailable
       ..appRanFromPush = appRanFromPush
-      ..tradeId = tradeId
-      ..tradeTabDefault = tradeTabDefault;
+      ..tradeId = tradeId;
   }
   return AppParameters(
     flavor: flavor,
@@ -70,6 +68,5 @@ AppParameters initAppParameters({
   )
     ..isGoogleAvailable = isGoogleAvailable
     ..appRanFromPush = appRanFromPush
-    ..tradeId = tradeId
-    ..tradeTabDefault = tradeTabDefault;
+    ..tradeId = tradeId;
 }

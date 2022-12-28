@@ -94,8 +94,6 @@ void main() async {
     }
   }
 
-  bool tradeTabDefault = AppSharedPrefs().tradeTabDefault;
-
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
       flavor: flavor,
@@ -104,7 +102,6 @@ void main() async {
       appRanFromPush: appRanFromPush,
       tradeId: tradeId,
       isCheckUpdates: isCheckUpdates,
-      tradeTabDefault: tradeTabDefault,
     ),
   );
 

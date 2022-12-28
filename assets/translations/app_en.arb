@@ -5495,5 +5495,5 @@
     "app_chat_leave_review": "Tap here to leave a review!",
     "app_chat_update_review": "You've already left this user a review. Would you like to update your review now?",
     "app_select_buyer_seller": "Select buyer or seller",
-    "app_trade_screen_default_tab": "Set trade tab as default"
+    "app_default_tab": "Set a default tab"
 }

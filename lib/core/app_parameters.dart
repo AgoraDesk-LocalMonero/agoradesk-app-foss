@@ -193,7 +193,6 @@ class AppParameters {
   ///
   String? openedTradeId;
   bool isGoogleAvailable = true;
-  bool tradeTabDefault = false;
   String? tradeId;
   bool appRanFromPush = false;
 }

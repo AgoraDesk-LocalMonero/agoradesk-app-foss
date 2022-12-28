@@ -141,10 +141,9 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => model.switchTheme(),
                           ),
                           const SizedBox(height: 8),
-                          LineWithSwitcher(
-                            value: model.isTradeTabDefault,
-                            title: context.intl.app_trade_screen_default_tab,
-                            onPressed: () => model.switchTradeTabDefault(),
+                          LineWithArrow(
+                            title: context.intl.app_default_tab,
+                            onPressed: () => AutoRouter.of(context).push(const DefaultTabRoute()),
                           ),
                           const SizedBox(height: 8),
                           LineWithArrow(

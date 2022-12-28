@@ -9260,5 +9260,5 @@ class I18nNl extends I18n {
   String get app_select_buyer_seller => 'Select buyer or seller';
 
   @override
-  String get app_trade_screen_default_tab => 'Set trade tab as default';
+  String get app_default_tab => 'Set a default tab';
 }
