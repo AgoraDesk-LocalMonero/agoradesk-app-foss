@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -16,6 +17,7 @@ import 'package:agoradesk/core/widgets/branded/button_text_primary70.dart';
 import 'package:agoradesk/core/widgets/branded/container_info_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/dropdown_button_sized.dart';
+import 'package:agoradesk/core/widgets/branded/header_shadow.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
@@ -106,17 +108,17 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                       displaySkip: false,
                     )
                   : SafeArea(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                        child: Column(
-                          children: [
-                            _buildvacationWarning(context, model),
-                            model.isBulkActionsMode
-                                ? _buildFilterBulkActions(context, model)
-                                : _buildTopFilter(context, model),
-                            _buildBody(context, model),
-                          ],
-                        ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: kScreenPadding,
+                            child: _buildvacationWarning(context, model),
+                          ),
+                          model.isBulkActionsMode
+                              ? _buildFilterBulkActions(context, model)
+                              : _buildTopFilter(context, model),
+                          _buildBody(context, model),
+                        ],
                       ),
                     ),
               floatingActionButton: model.isGuestMode
@@ -191,37 +193,40 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
               key: model.indicatorKey,
               onRefresh: model.getAds,
               child: LayoutBuilder(builder: (context, constraints) {
-                return ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: model.ads.isEmpty ? 1 : model.ads.length,
-                  itemBuilder: (context, index) {
-                    if (model.ads.isEmpty) {
-                      if (model.loadingAds) {
-                        return const SizedBox();
+                return Padding(
+                  padding: kScreenPadding,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: model.ads.isEmpty ? 1 : model.ads.length,
+                    itemBuilder: (context, index) {
+                      if (model.ads.isEmpty) {
+                        if (model.loadingAds) {
+                          return const SizedBox();
+                        }
+
+                        return ConstrainedBox(
+                          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                          child: NoSearchResults(
+                            text: context.intl.ads_havent_posted,
+                          ),
+                        );
                       }
 
-                      return ConstrainedBox(
-                        constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                        child: NoSearchResults(
-                          text: context.intl.ads_havent_posted,
-                        ),
+                      final ad = model.ads[index];
+                      return AdTile(
+                        ad: ad,
+                        index: index,
+                        changingIndex: model.changingAdIndex,
+                        changingVisibility: model.changingVisibility,
+                        isSelected: model.isAdSelected(ad),
+                        onPressed: () => model.managePressToAd(ad, context),
+                        onLongPress: () => model.handleLongPressToAd(ad),
+                        onVisiblePressed: () => model.changeAdVisibility(ad, index),
+                        tooltipController: index == 0 ? model.tooltipEyeController : null,
+                        tooltipPressController: index == 1 ? model.tooltipPressController : null,
                       );
-                    }
-
-                    final ad = model.ads[index];
-                    return AdTile(
-                      ad: ad,
-                      index: index,
-                      changingIndex: model.changingAdIndex,
-                      changingVisibility: model.changingVisibility,
-                      isSelected: model.isAdSelected(ad),
-                      onPressed: () => model.managePressToAd(ad, context),
-                      onLongPress: () => model.handleLongPressToAd(ad),
-                      onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                      tooltipController: index == 0 ? model.tooltipEyeController : null,
-                      tooltipPressController: index == 1 ? model.tooltipPressController : null,
-                    );
-                  },
+                    },
+                  ),
                 );
               }),
             ),
@@ -421,55 +426,52 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
   }
 
   Widget _buildTopFilter(BuildContext context, AdsViewModel model) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Expanded(
-                flex: 1,
-                child: DropdownSearch<String>(
-                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_ad_type),
-                  dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.menu(
-                    menuProps: context.dropdownMenuProps,
-                    fit: FlexFit.loose,
-                  ),
-                  items: model.tradeTypeMenu,
-                  onChanged: model.setTradeType,
-                  selectedItem: model.tradeTypeMenu[0],
+    return HeaderShadow(
+      children: [
+        Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: DropdownSearch<String>(
+                dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_ad_type),
+                dropdownDecoratorProps: context.dropdownDecoration,
+                popupProps: PopupProps.menu(
+                  menuProps: context.dropdownMenuProps,
+                  fit: FlexFit.loose,
                 ),
+                items: model.tradeTypeMenu,
+                onChanged: model.setTradeType,
+                selectedItem: model.tradeTypeMenu[0],
               ),
-              GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 16) : const SizedBox(),
-              GetIt.I<AppParameters>().isAgoraDesk
-                  ? Expanded(
-                      flex: 1,
-                      child: DropdownSearch<String>(
-                        dropdownButtonProps: context.dropdownButtonProps(),
-                        dropdownDecoratorProps: context.dropdownDecoration,
-                        popupProps: PopupProps.menu(
-                          menuProps: context.dropdownMenuProps,
-                          fit: FlexFit.loose,
-                        ),
-                        items: model.assetMenu,
-                        onChanged: model.setAsset,
-                        selectedItem: model.assetMenu[0],
+            ),
+            GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 16) : const SizedBox(),
+            GetIt.I<AppParameters>().isAgoraDesk
+                ? Expanded(
+                    flex: 1,
+                    child: DropdownSearch<String>(
+                      dropdownButtonProps: context.dropdownButtonProps(),
+                      dropdownDecoratorProps: context.dropdownDecoration,
+                      popupProps: PopupProps.menu(
+                        menuProps: context.dropdownMenuProps,
+                        fit: FlexFit.loose,
                       ),
-                    )
-                  : const SizedBox(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
-                child: FilterButton(
-                  selected: model.displayFilter,
-                  onPressed: () => _buildExpandedFilter(context, model),
-                ),
+                      items: model.assetMenu,
+                      onChanged: model.setAsset,
+                      selectedItem: model.assetMenu[0],
+                    ),
+                  )
+                : const SizedBox(),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
+              child: FilterButton(
+                selected: model.displayFilter,
+                onPressed: () => _buildExpandedFilter(context, model),
               ),
-            ],
-          ),
-          // model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
-        ],
-      ),
+            ),
+          ],
+        ),
+        // model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
+      ],
     );
   }
 

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -17,8 +18,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
-
-const _kForegroungPollingInterval = 60000;
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -41,7 +40,6 @@ class _MainScreenState extends State<MainScreen> {
 
   void _afterLayout(_) async {
     final int index = context.read<AppState>().defaultTab.index;
-    print('+++++++++++++++++++++++++++++++++++++11 - ${index}');
     if (index != 2) {
       tabsRouter.setActiveIndex(index);
     }
@@ -137,7 +135,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Future<void> _initForegroundTask() async {
-    int pollingInterval = _kForegroungPollingInterval;
+    int pollingInterval = kForegroungPollingInterval;
 
     if (kDebugMode) {
       pollingInterval = 15000;
