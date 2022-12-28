@@ -3,8 +3,6 @@ import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// TODO: migrate to objectBox
-
 enum AppSharedPrefsKey {
   themeMode,
   locale,
