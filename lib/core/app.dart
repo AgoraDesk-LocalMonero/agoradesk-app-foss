@@ -97,6 +97,7 @@ class _AppState extends State<App>
     appState = AppState(
       secureStorage: _secureStorage,
       locale: AppSharedPrefs().locale,
+      defaultTab: AppSharedPrefs().defaultTab,
       themeMode: AppSharedPrefs().themeMode,
     );
     _api = ApiClient(
@@ -150,13 +151,6 @@ class _AppState extends State<App>
     _initHttpHandler();
     _initUserAgent();
     _initUploadingStatusListener();
-
-    // this listener calls if the app is not terminated
-    // in case app is terminated there is info in main.dart
-    // AwesomeNotifications().setListeners(
-    //   onActionReceivedMethod: AwesomeNotificationController.onActionReceivedMethod,
-    //   onDismissActionReceivedMethod: AwesomeNotificationController.onDismissActionReceivedMethod,
-    // );
 
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
@@ -577,7 +571,7 @@ class _AppState extends State<App>
           ).then((value) => _dialogOpened = false);
         }
       })
-      ..on<AwesomeMessageClickedEvent>().listen((e) async {
+      ..on<NoificationClickedEvent>().listen((e) async {
         if (e.tradeId != null && e.tradeId!.isNotEmpty) {
           await Future.delayed(const Duration(seconds: 1));
           await _notificationsService.notificationHandleRoutes(e.tradeId!);

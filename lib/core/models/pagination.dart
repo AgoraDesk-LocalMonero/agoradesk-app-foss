@@ -38,7 +38,7 @@ class PaginationMeta {
 
   const PaginationMeta({
     required this.totalElements,
-    this.elementsPerPage = 20,
+    this.elementsPerPage = 10,
     required this.totalPages,
     required this.currentPage,
   });

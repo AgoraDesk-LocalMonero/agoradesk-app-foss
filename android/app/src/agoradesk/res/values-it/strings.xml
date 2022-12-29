@@ -1,0 +1,14 @@
+<resources>
+    <string name="MESSAGE_TITLE">Avete un nuovo messaggio in uno scambio</string>
+    <string name="TRADE_REQUEST_TITLE">Hai una nuova offerta</string>
+    <string name="TRADE_COMPLETE_TITLE">Scambio completato</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE_TITLE">Scambio contrassegnato come completato</string>
+    <string name="TRADE_CANCELLED_TITLE">Scambio annullato</string>
+    <string name="TRADE_DISPUTED_TITLE">Scambio contestato</string>
+    <string name="TRADE_REQUEST">Hai una nuova offerta %1$s dallutente %2$s</string>
+    <string name="TRADE_COMPLETE">La tua compravendita %1$s con %2$s è completata</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE">%1$s ha completato il pagamento nella compravendita %2$s</string>
+    <string name="TRADE_CANCELLED">La compravendita %1$s è stata cancellata da %2$s</string>
+    <string name="TRADE_DISPUTED">La compravendita %1$s è stata contestata da %2$s</string>
+    <string name="MESSAGE">%1$s</string>
+</resources>

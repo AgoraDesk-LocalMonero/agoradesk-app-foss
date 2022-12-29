@@ -9,8 +9,8 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:vm/vm.dart';
 
-class LanguageViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, StringMixin {
-  LanguageViewModel({
+class LangugeViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, StringMixin {
+  LangugeViewModel({
     required AppState appState,
   }) : _appState = appState;
 
@@ -34,15 +34,5 @@ class LanguageViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, 
     if (_appState.locale != locale) {
       _appState.locale = locale;
     }
-  }
-
-  // void updateWith({
-  // }) {
-  //   notifyListeners();
-  // }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }

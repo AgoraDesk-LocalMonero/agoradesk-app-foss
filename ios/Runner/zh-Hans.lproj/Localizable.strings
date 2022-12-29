@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Runner
+
+  Created by Macbook on 20.12.22.
+  Copyright © 2022 Blue Sunday Limited. All rights reserved.
+*/
+
+"MESSAGE_TITLE" = "您在交易中有一条新消息";
+"TRADE_REQUEST_TITLE" = "你有一个新的报价";
+"TRADE_COMPLETE_TITLE" = "交易完成";
+"TRADE_PAYMENT_MARKED_COMPLETE_TITLE" = "交易标记为已完成";
+"TRADE_CANCELLED_TITLE" = "交易取消";
+"TRADE_DISPUTED_TITLE" = "贸易争议";
+"TRADE_REQUEST" = "用户%@发起了新交易%@";
+"TRADE_COMPLETE" = "你跟%@}的交易%@已完成。";
+"TRADE_PAYMENT_MARKED_COMPLETE" = "付款完成。";
+"TRADE_CANCELLED" = "用户%@取消了交易%@";
+"TRADE_DISPUTED" = "用户%@在交易%@发起了申诉";
+"MESSAGE" = "%@";

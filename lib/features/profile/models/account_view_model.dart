@@ -141,16 +141,4 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
     eventBus.fire(FlashEvent.success(context.intl.remove_pin_message_success));
     notifyListeners();
   }
-
-  void updateWith({
-    bool? displayCaptcha,
-    // bool? loading,
-  }) {
-    notifyListeners();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }

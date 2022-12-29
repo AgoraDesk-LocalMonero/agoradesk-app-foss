@@ -6,5 +6,15 @@
   Copyright © 2022 Blue Sunday Limited. All rights reserved.
 */
 
+"MESSAGE_TITLE" = "You have a new message in a trade";
+"TRADE_REQUEST_TITLE" = "You have a new offer";
+"TRADE_COMPLETE_TITLE" = "Trade completed";
+"TRADE_PAYMENT_MARKED_COMPLETE_TITLE" = "Trade marked as completed";
+"TRADE_CANCELLED_TITLE" = "Trade cancelled";
+"TRADE_DISPUTED_TITLE" = "Trade disputed";
 "TRADE_REQUEST" = "You have a new offer %@ from user %@";
 "TRADE_COMPLETE" = "Your trade %@ with %@ has been completed";
+"TRADE_PAYMENT_MARKED_COMPLETE" = "%@ has completed the payment in trade %@";
+"TRADE_CANCELLED" = "Trade %@ has been cancelled by %@";
+"TRADE_DISPUTED" = "Trade %@ has been disputed by %@";
+"MESSAGE" = "%@";

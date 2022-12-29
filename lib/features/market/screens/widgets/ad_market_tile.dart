@@ -29,19 +29,22 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   @override
   Widget build(BuildContext context) {
     final halfWidth = (MediaQuery.of(context).size.width - (16 * 2 + 12 * 2 + 12 * 2 + 26)) / 2;
-    return ContainerSurface5Radius12Shadow(
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTap: onPressed,
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            children: [
-              _buildTop(context),
-              _buildContent(context, halfWidth),
-              const SizedBox(height: 10),
-              _buildBottom(context, halfWidth),
-            ],
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 6, 0, 6),
+      child: ContainerSurface5Radius12Shadow(
+        child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: onPressed,
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              children: [
+                _buildTop(context),
+                _buildContent(context, halfWidth),
+                const SizedBox(height: 10),
+                _buildBottom(context, halfWidth),
+              ],
+            ),
           ),
         ),
       ),
@@ -72,8 +75,8 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     verifiedEmailRequired
-                        ? Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
+                        ? const Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
                             child: Icon(
                               CupertinoIcons.mail,
                               size: 12,
@@ -210,26 +213,24 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
           ),
         ),
         const SizedBox(width: 10),
-        ad.maxAmount != null
-            ? Row(
-                children: [
-                  Icon(
-                    AgoraFont.limits_3,
-                    size: 12,
-                    color: context.colP80,
-                  ),
-                  const SizedBox(width: 4),
-                  SizedBox(
-                    width: halfWidth,
-                    child: AutoSizeText(
-                      '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.minAmount ?? 0} - ${ad.maxAmount} ${ad.currency}',
-                      style: context.txtBodyXSmallN90,
-                      maxLines: 1,
-                    ),
-                  ),
-                ],
-              )
-            : const SizedBox(),
+        Row(
+          children: [
+            Icon(
+              AgoraFont.limits_3,
+              size: 12,
+              color: context.colP80,
+            ),
+            const SizedBox(width: 4),
+            SizedBox(
+              width: halfWidth,
+              child: AutoSizeText(
+                '${context.intl.ad8722Sblisting8722Sbtable250Sblimits} ${ad.tradeLimit(context)}',
+                style: context.txtBodyXSmallN90,
+                maxLines: 1,
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

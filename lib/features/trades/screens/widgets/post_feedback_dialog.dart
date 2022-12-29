@@ -69,7 +69,10 @@ class PostFeedbackDialog extends StatelessWidget {
                           const SizedBox(width: 20),
                           ButtonLink(
                             title: context.intl.homepage8722Sblocation250Sbsave8722Sbbtn,
-                            style: context.txtLabelLargeP80P70,
+                            style: model.feedbackType != null
+                                ? context.txtLabelLargeP80P70
+                                : context.txtLabelLargeNeutral50,
+                            isActive: model.feedbackType != null,
                             loading: model.postingFeedback,
                             onPressed: model.giveFeedback,
                           ),

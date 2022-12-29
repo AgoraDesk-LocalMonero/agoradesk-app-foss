@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -7,6 +8,7 @@ import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
+import 'package:agoradesk/core/widgets/branded/header_shadow.dart';
 import 'package:agoradesk/core/widgets/branded/load_more_widget.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
@@ -74,11 +76,11 @@ class _TradesScreenState extends State<TradesScreen>
                 ? const LoginScreen(
                     displaySkip: false,
                   )
-                : Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                    child: Column(
-                      children: [
-                        AgoraThreeTabsBar(
+                : Column(
+                    children: [
+                      Padding(
+                        padding: kScreenPadding,
+                        child: AgoraThreeTabsBar(
                           controller: model.tabController,
                           disable: model.disableTabBar,
                           textLeft: context.intl.dashboard__trade__status__open,
@@ -88,71 +90,67 @@ class _TradesScreenState extends State<TradesScreen>
                           textRight: context.intl.dashboard250Sbtrade250Sbstatus250Sbcancelled,
                           iconRight: AgoraFont.x_circle,
                         ),
-                        const SizedBox(height: 12),
-                        Expanded(child: _buildBody(context, model)),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(height: 12),
+                      Expanded(child: _buildBody(context, model)),
+                    ],
                   ),
           );
         });
   }
 
   Widget _buildTopFilter(BuildContext context, TradesViewModel model) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Expanded(
-                flex: 1,
-                child: Semantics(
-                  label: context.intl.dashboard250Sbfilter250Sbrole250Sbboth,
-                  child: DropdownSearch<String>(
-                    dropdownButtonProps: context.dropdownButtonProps(),
-                    dropdownDecoratorProps: context.dropdownDecoration,
-                    popupProps: PopupProps.menu(
-                      menuProps: context.dropdownMenuProps,
-                      fit: FlexFit.loose,
-                    ),
-                    items: model.tradeTypeMenu,
-                    onChanged: model.setTradeType,
-                    selectedItem: model.tradeTypeMenu[0],
+    return HeaderShadow(
+      children: [
+        Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Semantics(
+                label: context.intl.dashboard250Sbfilter250Sbrole250Sbboth,
+                child: DropdownSearch<String>(
+                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_buyer_seller),
+                  dropdownDecoratorProps: context.dropdownDecoration,
+                  popupProps: PopupProps.menu(
+                    menuProps: context.dropdownMenuProps,
+                    fit: FlexFit.loose,
                   ),
+                  items: model.tradeTypeMenu,
+                  onChanged: model.setTradeType,
+                  selectedItem: model.tradeTypeMenu[0],
                 ),
               ),
-              GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 6) : const SizedBox(),
-              GetIt.I<AppParameters>().isAgoraDesk
-                  ? Expanded(
-                      flex: 1,
-                      child: Semantics(
-                        label: context.intl.app_select_asset,
-                        child: DropdownSearch<String>(
-                          dropdownButtonProps: context.dropdownButtonProps(),
-                          dropdownDecoratorProps: context.dropdownDecoration,
-                          popupProps: PopupProps.menu(
-                            menuProps: context.dropdownMenuProps,
-                            fit: FlexFit.loose,
-                          ),
-                          items: model.assetMenu,
-                          onChanged: model.setAsset,
-                          selectedItem: model.assetMenu[0],
+            ),
+            GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 6) : const SizedBox(),
+            GetIt.I<AppParameters>().isAgoraDesk
+                ? Expanded(
+                    flex: 1,
+                    child: Semantics(
+                      label: context.intl.app_select_asset,
+                      child: DropdownSearch<String>(
+                        dropdownButtonProps: context.dropdownButtonProps(),
+                        dropdownDecoratorProps: context.dropdownDecoration,
+                        popupProps: PopupProps.menu(
+                          menuProps: context.dropdownMenuProps,
+                          fit: FlexFit.loose,
                         ),
+                        items: model.assetMenu,
+                        onChanged: model.setAsset,
+                        selectedItem: model.assetMenu[0],
                       ),
-                    )
-                  : const SizedBox(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
-                child: FilterButton(
-                  selected: model.displayFilter,
-                  onPressed: () => _buildExpandedFilter(context, model),
-                ),
+                    ),
+                  )
+                : const SizedBox(),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(6, 0, 0, 0),
+              child: FilterButton(
+                selected: model.displayFilter,
+                onPressed: () => _buildExpandedFilter(context, model),
               ),
-            ],
-          ),
-          // model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
@@ -307,45 +305,48 @@ class _TradesScreenState extends State<TradesScreen>
             children: [
               _buildTopFilter(context, model),
               Expanded(
-                child: RefreshIndicator(
-                  key: model.indicatorKey,
-                  onRefresh: model.getTrades,
-                  child: LayoutBuilder(builder: (context, constraints) {
-                    return ListView.builder(
-                      shrinkWrap: false,
-                      itemCount: model.trades.isEmpty ? 1 : model.trades.length + 1,
-                      itemBuilder: (context, index) {
-                        if (model.trades.isEmpty) {
-                          if (model.loading) {
-                            return const SizedBox();
+                child: Padding(
+                  padding: kScreenPadding,
+                  child: RefreshIndicator(
+                    key: model.indicatorKey,
+                    onRefresh: model.getTrades,
+                    child: LayoutBuilder(builder: (context, constraints) {
+                      return ListView.builder(
+                        shrinkWrap: false,
+                        itemCount: model.trades.isEmpty ? 1 : model.trades.length + 1,
+                        itemBuilder: (context, index) {
+                          if (model.trades.isEmpty) {
+                            if (model.loading) {
+                              return const SizedBox();
+                            }
+                            return ConstrainedBox(
+                              constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                              child: model.loading
+                                  ? const SizedBox()
+                                  : NoSearchResults(
+                                      text: I18n.of(context)!.no_trades,
+                                    ),
+                            );
                           }
-                          return ConstrainedBox(
-                            constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                            child: model.loading
-                                ? const SizedBox()
-                                : NoSearchResults(
-                                    text: I18n.of(context)!.no_trades,
-                                  ),
-                          );
-                        }
-                        if (index < model.trades.length) {
-                          return TradeTile(
-                            trade: model.trades[index],
-                            tradeStatus: getTradeStatus(model.trades[index]),
-                            onPressed: () async {
-                              await AutoRouter.of(context).push(TradeRoute(tradeModel: model.trades[index]));
-                              model.indicatorKey.currentState?.show();
-                            },
-                          );
-                        } else {
-                          return LoadMoreWidget(
-                            hasMore: model.hasMorePages,
-                            loadCallback: () => model.getTrades(loadMore: true),
-                          );
-                        }
-                      },
-                    );
-                  }),
+                          if (index < model.trades.length) {
+                            return TradeTile(
+                              trade: model.trades[index],
+                              tradeStatus: getTradeStatus(model.trades[index]),
+                              onPressed: () async {
+                                await AutoRouter.of(context).push(TradeRoute(tradeModel: model.trades[index]));
+                                model.indicatorKey.currentState?.show();
+                              },
+                            );
+                          } else {
+                            return LoadMoreWidget(
+                              hasMore: model.hasMorePages,
+                              loadCallback: () => model.getTrades(loadMore: true),
+                            );
+                          }
+                        },
+                      );
+                    }),
+                  ),
                 ),
               ),
             ],

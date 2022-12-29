@@ -1,14 +1,14 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 
-AppParameters initAppParameters(
-  FlavorType flavor,
-  bool isGoogleAvailable,
-  bool includeFcm,
-  bool appRanFromPush,
+AppParameters initAppParameters({
+  required FlavorType flavor,
+  required bool includeFcm,
+  required bool isCheckUpdates,
+  required bool isGoogleAvailable,
+  required bool appRanFromPush,
   String? tradeId,
-  bool isCheckUpdates,
-) {
+}) {
   if (flavor == FlavorType.localmonero) {
     return AppParameters(
       flavor: flavor,
@@ -65,5 +65,8 @@ AppParameters initAppParameters(
     isAgora: true,
     includeFcm: includeFcm,
     isCheckUpdates: isCheckUpdates,
-  )..isGoogleAvailable = isGoogleAvailable;
+  )
+    ..isGoogleAvailable = isGoogleAvailable
+    ..appRanFromPush = appRanFromPush
+    ..tradeId = tradeId;
 }

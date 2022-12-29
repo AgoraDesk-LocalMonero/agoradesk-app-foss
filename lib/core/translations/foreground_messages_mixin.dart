@@ -14,7 +14,6 @@ class ForegroundMessagesMixin {
 
   String translatedNotificationText(PushModel push, String langCode) {
     final NotificationMessageType type = push.type;
-
     if (push.type == NotificationMessageType.MESSAGE) {
       return push.msg ?? ' ';
     } else {

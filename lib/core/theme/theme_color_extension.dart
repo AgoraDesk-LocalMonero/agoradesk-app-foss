@@ -62,6 +62,7 @@ extension ColorExtension on ColorScheme {
 
   Color get surf5darkSurfLight => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surfaceLight;
 
+  Color get primary10 => ThemeColors.primary10;
   Color get primary20 => ThemeColors.primary20;
 
   Color get primary40 => brightness == Brightness.dark ? ThemeColors.primary40 : ThemeColors.primary40;

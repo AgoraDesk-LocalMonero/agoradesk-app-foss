@@ -51,7 +51,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+      padding: const EdgeInsets.fromLTRB(0, 6, 0, 6),
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: onPressed,

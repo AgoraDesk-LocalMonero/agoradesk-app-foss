@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Runner
+
+  Created by Macbook on 20.12.22.
+  Copyright © 2022 Blue Sunday Limited. All rights reserved.
+*/
+
+"MESSAGE_TITLE" = "거래에 새 메시지가 있습니다.";
+"TRADE_REQUEST_TITLE" = "새로운 제안이 있습니다";
+"TRADE_COMPLETE_TITLE" = "거래 완료";
+"TRADE_PAYMENT_MARKED_COMPLETE_TITLE" = "완료된 것으로 표시된 거래";
+"TRADE_CANCELLED_TITLE" = "거래 취소됨";
+"TRADE_DISPUTED_TITLE" = "무역 분쟁";
+"TRADE_REQUEST" = "%@로부터 새 거래 %@ 제안이 있습니다";
+"TRADE_COMPLETE" = "%@와의 거래 {tradeId}가 완료됐습니다";
+"TRADE_PAYMENT_MARKED_COMPLETE" = "%@가 거래 %@의 결제를 완료했습니다";
+"TRADE_CANCELLED" = "%@가 거래 %@를 최소했습니다";
+"TRADE_DISPUTED" = "%@가 거래%@의 분쟁 중재를 신청했습니다";
+"MESSAGE" = "%@";
