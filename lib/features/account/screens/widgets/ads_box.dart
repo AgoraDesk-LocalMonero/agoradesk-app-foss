@@ -17,12 +17,14 @@ class AdsBox extends StatelessWidget {
     required this.ads,
     this.loading = false,
     this.toEdit = false,
+    this.title,
   }) : super(key: key);
 
   final String username;
   final bool loading;
   final bool toEdit;
   final List<AdModel> ads;
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class AdsBox extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.active_ads,
+                    title ?? context.intl.active_ads,
                     style: context.txtBodyMediumP90,
                   ),
                   _buildAds(

@@ -9261,6 +9261,9 @@ class I18nPt extends I18n {
 
   @override
   String get app_default_tab => 'Set a default tab';
+
+  @override
+  String get app_your_ads => 'Your ads';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

@@ -9261,6 +9261,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_default_tab => 'Set a default tab';
+
+  @override
+  String get app_your_ads => 'Your ads';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

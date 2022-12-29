@@ -334,7 +334,7 @@ class TradeViewModel extends ViewModel
   }
 
   bool displayCancelStepOne() {
-    if (minutesBeforeCancel > 0 && tradeModel!.isSelling!) {
+    if (minutesBeforeCancel > 0 && tradeModel?.isSelling == true) {
       return false;
     } else if (minutesBeforeCancel > 0) {
       return true;

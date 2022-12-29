@@ -9,7 +9,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "bg": [
@@ -23,7 +24,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "cs": [
@@ -36,7 +38,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "de": [
@@ -49,7 +52,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "es": [
@@ -63,7 +67,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "fr": [
@@ -77,7 +82,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "hu": [
@@ -90,7 +96,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "it": [
@@ -103,7 +110,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ja": [
@@ -116,7 +124,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ko": [
@@ -129,7 +138,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "lv": [
@@ -142,7 +152,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "nl": [
@@ -155,7 +166,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "pl": [
@@ -168,7 +180,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "pt": [
@@ -226,7 +239,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "pt_BR": [
@@ -240,7 +254,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ro": [
@@ -253,7 +268,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ru": [
@@ -267,7 +283,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "sk": [
@@ -283,7 +300,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "sw": [
@@ -300,7 +318,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "tl": [
@@ -317,7 +336,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "tr": [
@@ -331,7 +351,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ur": [
@@ -344,7 +365,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "zh": [
@@ -402,7 +424,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "zh_CN": [
@@ -981,7 +1004,8 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "zh_TW": [
@@ -994,6 +1018,7 @@
     "app_chat_leave_review",
     "app_chat_update_review",
     "app_select_buyer_seller",
-    "app_default_tab"
+    "app_default_tab",
+    "app_your_ads"
   ]
 }

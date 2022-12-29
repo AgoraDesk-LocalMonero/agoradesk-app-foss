@@ -16625,6 +16625,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Set a default tab'**
   String get app_default_tab;
+
+  /// No description provided for @app_your_ads.
+  ///
+  /// In en, this message translates to:
+  /// **'Your ads'**
+  String get app_your_ads;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
