@@ -1,9 +1,9 @@
 ### Updates
 1. Design: light theme shadows.
-2. Feat: choose default tab sections that opens when we launch the app.
+2. Feat: choose default tab sections that open when we launch the app.
 3. Feat: improve accessibility.
 4. Feat: adding a review widget to the chat and activity tab when the trade is completed.
-5. Fix: ads loading on the ads screen.
+5. Fix: ads are loading on the ads screen.
 6. Fix: grey screen on the trade tab.
 7. Fix: notification icons on Android.
 
