@@ -40,7 +40,6 @@ import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
@@ -67,7 +66,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
       adsRepository: context.read<AdsRepository>(),
       userService: context.read<UserService>(),
       authService: context.read<AuthService>(),
-      appState: context.read<AppState>(),
     );
     _model.tabController = TabController(length: 3, vsync: this);
     super.initState();
