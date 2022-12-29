@@ -40,10 +40,12 @@ import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
 
 class AdsScreen extends StatefulWidget {
@@ -195,7 +197,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                   padding: kScreenPadding,
                   child: ListView.builder(
                     shrinkWrap: true,
-                    itemCount: model.ads.isEmpty ? 1 : model.ads.length,
+                    itemCount: model.ads.isEmpty ? 1 : model.ads.length + 1,
                     itemBuilder: (context, index) {
                       if (model.ads.isEmpty) {
                         if (model.loadingAds) {
@@ -210,19 +212,38 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                         );
                       }
 
-                      final ad = model.ads[index];
-                      return AdTile(
-                        ad: ad,
-                        index: index,
-                        changingIndex: model.changingAdIndex,
-                        changingVisibility: model.changingVisibility,
-                        isSelected: model.isAdSelected(ad),
-                        onPressed: () => model.managePressToAd(ad, context),
-                        onLongPress: () => model.handleLongPressToAd(ad),
-                        onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                        tooltipController: index == 0 ? model.tooltipEyeController : null,
-                        tooltipPressController: index == 1 ? model.tooltipPressController : null,
-                      );
+                      if (index < model.ads.length) {
+                        final ad = model.ads[index];
+                        return AdTile(
+                          ad: ad,
+                          index: index,
+                          changingIndex: model.changingAdIndex,
+                          changingVisibility: model.changingVisibility,
+                          isSelected: model.isAdSelected(ad),
+                          onPressed: () => model.managePressToAd(ad, context),
+                          onLongPress: () => model.handleLongPressToAd(ad),
+                          onVisiblePressed: () => model.changeAdVisibility(ad, index),
+                          tooltipController: index == 0 ? model.tooltipEyeController : null,
+                          tooltipPressController: index == 1 ? model.tooltipPressController : null,
+                        );
+                      } else {
+                        return model.hasMorePages
+                            ? VisibilityDetector(
+                                key: UniqueKey(),
+                                onVisibilityChanged: (VisibilityInfo info) {
+                                  if (info.visibleFraction > 0.1) {
+                                    model.getAds(loadMore: true);
+                                  }
+                                },
+                                child: const SizedBox(
+                                  height: 80,
+                                  child: Center(
+                                    child: CupertinoActivityIndicator(),
+                                  ),
+                                ),
+                              )
+                            : const SizedBox();
+                      }
                     },
                   ),
                 );
