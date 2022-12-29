@@ -9232,6 +9232,9 @@ class I18nRu extends I18n {
   String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
 
   @override
+  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+
+  @override
   String get app_ad_created => 'Ad created';
 
   @override
@@ -9246,4 +9249,19 @@ class I18nRu extends I18n {
 
   @override
   String get app_select_ad_type => 'Select ad type';
+
+  @override
+  String get app_chat_leave_review => 'Tap here to leave a review!';
+
+  @override
+  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+
+  @override
+  String get app_select_buyer_seller => 'Select buyer or seller';
+
+  @override
+  String get app_default_tab => 'Set a default tab';
+
+  @override
+  String get app_your_ads => 'Your ads';
 }

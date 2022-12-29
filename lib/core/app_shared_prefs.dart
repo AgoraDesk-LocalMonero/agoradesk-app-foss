@@ -1,14 +1,12 @@
 import 'package:agoradesk/core/utils/date_mixin.dart';
+import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-// TODO: migrate to objectBox
 
 enum AppSharedPrefsKey {
   themeMode,
   locale,
   pinIsActive,
-  iosFirstNotificationWasRun,
   biometricAuthIsOn,
   sentryIsOn,
   firstRun,
@@ -20,6 +18,7 @@ enum AppSharedPrefsKey {
   cachedCountrySavedDate,
   cachedCurrencySavedDate,
   tooltipShownNames,
+  defaultTab,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -45,9 +44,9 @@ class AppSharedPrefs with DateMixin {
 
   Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
 
-  bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
+  TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
-  bool? get iosFirstNotificationWasRun => getBool(AppSharedPrefsKey.iosFirstNotificationWasRun);
+  bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
   bool? get biometricAuthIsOn => getBool(AppSharedPrefsKey.biometricAuthIsOn);
 
@@ -153,6 +152,21 @@ class AppSharedPrefs with DateMixin {
       }
       if (subTags.length == 1) {
         return Locale(subTags[0], '');
+      }
+    }
+    return null;
+  }
+
+  ///
+  /// Generate [TabType] from the [defaultTab] string.
+  ///
+  TabType? _parseTabType(String? tabStr) {
+    if (tabStr != null) {
+      try {
+        final TabType tab = TabType.values.firstWhere((e) => e.name == tabStr);
+        return tab;
+      } catch (e) {
+        return null;
       }
     }
     return null;

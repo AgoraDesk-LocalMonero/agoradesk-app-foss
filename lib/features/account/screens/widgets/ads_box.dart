@@ -4,7 +4,6 @@ import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart'
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/market/screens/widgets/ad_market_tile.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,12 +17,14 @@ class AdsBox extends StatelessWidget {
     required this.ads,
     this.loading = false,
     this.toEdit = false,
+    this.title,
   }) : super(key: key);
 
   final String username;
   final bool loading;
   final bool toEdit;
   final List<AdModel> ads;
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class AdsBox extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    I18n.of(context)!.active_ads,
+                    title ?? context.intl.active_ads,
                     style: context.txtBodyMediumP90,
                   ),
                   _buildAds(
@@ -104,7 +105,7 @@ class AdsBox extends StatelessWidget {
                   ads: ads,
                 ),
               ),
-              title: I18n.of(context)!.see_more_ads,
+              title: context.intl.see_more_ads,
             ),
           )
         : const SizedBox();

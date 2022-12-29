@@ -1,9 +1,11 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:agoradesk/core/serializers/agora_serializers.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'ad_model.freezed.dart';
@@ -11,6 +13,7 @@ part 'ad_model.g.dart';
 
 @Freezed()
 class AdModel with _$AdModel {
+  const AdModel._();
   @JsonSerializable(explicitToJson: true)
   const factory AdModel({
     Asset? asset,
@@ -55,6 +58,16 @@ class AdModel with _$AdModel {
     @JsonKey(name: 'location_string', includeIfNull: false) String? locationString,
     AccountInfoModel? profile,
   }) = _AdModel;
+
+  String tradeLimit(BuildContext context) {
+    String limit = '${minAmount ?? 0} - ';
+    if (maxAmountAvailable != null) {
+      limit += '$maxAmountAvailable $currency';
+    } else {
+      limit += maxAmount != null ? '$maxAmount $currency' : context.intl.app_unlimited;
+    }
+    return limit;
+  }
 
   factory AdModel.fromJson(Map<String, dynamic> json) => _$AdModelFromJson(json);
 }

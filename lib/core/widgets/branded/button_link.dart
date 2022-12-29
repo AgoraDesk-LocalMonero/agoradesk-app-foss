@@ -23,7 +23,7 @@ class ButtonLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: isActive ? onPressed : () {},
+      onPressed: isActive ? onPressed : null,
       style: TextButton.styleFrom(
         padding: EdgeInsets.zero,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,

@@ -21,6 +21,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
@@ -68,58 +69,57 @@ class NotificationsService with ForegroundMessagesMixin {
       ///
       FirebaseMessaging.onMessageOpenedApp.listen((message) async {
         _parseNotificationData(message);
+        FlutterAppBadger.removeBadge();
       });
 
       ///
       /// When app is on the screen
       ///
       FirebaseMessaging.onMessage.listen((message) async {
-        try {
-          //TODO: Remove with the next release
-          if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
-            final locale = await secureStorage.read(SecureStorageKey.locale);
-            final String langCode = locale ?? Platform.localeName.substring(0, 2);
-            final PushModel push = PushModel.fromJson(message.data);
-            // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-
-            final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-            await flutterLocalNotificationsPlugin.initialize(
-              const InitializationSettings(
-                android: AndroidInitializationSettings(kNotificationIcon),
-                iOS: DarwinInitializationSettings(
-                  requestAlertPermission: true,
-                  requestSoundPermission: true,
-                  requestBadgePermission: true,
-                ),
-              ),
-            );
-
-            flutterLocalNotificationsPlugin.show(
-              int.tryParse(push.id ?? '0') ?? 0,
-              ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
-              ForegroundMessagesMixin().translatedNotificationText(push, langCode), // body
-              payload: jsonEncode(push.toJson()), //payload
-              NotificationDetails(
-                android: AndroidNotificationDetails(
-                  channel.id,
-                  channel.name,
-                  channelDescription: channel.description,
-                  icon: kNotificationIcon,
-                  color: const Color.fromRGBO(0, 0, 0, 1),
-                  // colorized: true,
-                ),
-              ),
-            );
-          } else {
-            await _displayLocalNotification(message);
-          }
-        } catch (e) {
-          debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
-        }
+        // try {
+        //   if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
+        //     final locale = await secureStorage.read(SecureStorageKey.locale);
+        //     final String langCode = locale ?? Platform.localeName.substring(0, 2);
+        //     final PushModel push = PushModel.fromJson(message.data);
+        //     // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+        //
+        //     final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+        //     await flutterLocalNotificationsPlugin.initialize(
+        //       const InitializationSettings(
+        //         android: AndroidInitializationSettings(kNotificationIcon),
+        //         iOS: DarwinInitializationSettings(
+        //           requestAlertPermission: true,
+        //           requestSoundPermission: true,
+        //           requestBadgePermission: true,
+        //         ),
+        //       ),
+        //     );
+        //
+        //     flutterLocalNotificationsPlugin.show(
+        //       int.tryParse(push.id ?? '0') ?? 0,
+        //       ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
+        //       ForegroundMessagesMixin().translatedNotificationText(push, langCode), // body
+        //       payload: jsonEncode(push.toJson()), //payload
+        //       NotificationDetails(
+        //         android: AndroidNotificationDetails(
+        //           channel.id,
+        //           channel.name,
+        //           channelDescription: channel.description,
+        //           icon: kNotificationIcon,
+        //           color: const Color.fromRGBO(0, 0, 0, 1),
+        //           // colorized: true,
+        //         ),
+        //       ),
+        //     );
+        //   } else {
+        await _displayLocalNotification(message);
+        //   }
+        // } catch (e) {
+        //   debugPrint('++++ FirebaseMessaging.onMessage.listen parsing bug');
+        // }
       });
     }
 
-    // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
     ///
@@ -158,7 +158,7 @@ class NotificationsService with ForegroundMessagesMixin {
       if (push.objectId != null && push.objectId!.isNotEmpty) {
         tradeId = push.objectId;
       }
-      eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+      eventBus.fire(NoificationClickedEvent(tradeId));
     } catch (e) {
       debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
     }
@@ -187,8 +187,6 @@ class NotificationsService with ForegroundMessagesMixin {
               channel.name,
               channelDescription: channel.description,
               icon: kNotificationIcon,
-              // color: const Color.fromARGB(255, 255, 0, 0),
-              // colorized: true,
             ),
           ),
         );
@@ -197,11 +195,6 @@ class NotificationsService with ForegroundMessagesMixin {
       // send signal to update the chat state
       eventBus.fire(const UpdateOpenedChatEvent());
     }
-    // if (res) {
-    //   String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-    //   barMessagesString += ';$awesomeMessageId:${push.objectId}';
-    //   await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-    // }
   }
 
   Future getToken() async {
@@ -319,28 +312,10 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.notifications.addAll(editedNotifications);
         await Future.delayed(const Duration(seconds: 1));
         // badges (red circle counter on the app icon)
-        // final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
-        // final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
-        // await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
+        FlutterAppBadger.removeBadge();
         // remove red dot in case all notifiations are read
         appState.hasUnread =
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
-        // dismiss notifications on the phone events bar (not inside the app)
-        String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-        if (barMessagesString.isNotEmpty) {
-          final List<String> barMessages = barMessagesString.split(';');
-          final List<String> barMessagesNew = barMessagesString.split(';');
-          for (final m in barMessages) {
-            if (m.contains(tradeId)) {
-              final messageId = int.tryParse(m.split(':')[0]);
-              if (messageId != null) {
-                // await AwesomeNotifications().dismiss(messageId);
-              }
-              barMessagesNew.remove(m);
-            }
-          }
-          await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
-        }
       }
     } catch (e) {
       debugPrint('++++markTradeNotificationsAsRead exception - $e');

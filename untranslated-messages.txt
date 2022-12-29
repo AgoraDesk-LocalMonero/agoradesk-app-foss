@@ -1,109 +1,187 @@
 {
   "ar": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "bg": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "cs": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "de": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "es": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "fr": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "hu": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "it": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ja": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ko": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "lv": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "nl": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "pl": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "pt": [
@@ -153,36 +231,60 @@
     "app_report_this_user",
     "app_open_dropdown",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "pt_BR": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ro": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ru": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "sk": [
@@ -190,10 +292,16 @@
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "sw": [
@@ -202,10 +310,16 @@
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "tl": [
@@ -214,27 +328,45 @@
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "tr": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "ur": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "zh": [
@@ -284,10 +416,16 @@
     "app_report_this_user",
     "app_open_dropdown",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "zh_CN": [
@@ -858,17 +996,29 @@
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy",
     "coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell",
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ],
 
   "zh_TW": [
     "app_accessibility_edit_box_password",
+    "app_accessibility_edit_box_confirm_password",
     "app_ad_created",
     "app_503_title",
     "app_503_body",
-    "app_select_ad_type"
+    "app_select_ad_type",
+    "app_chat_leave_review",
+    "app_chat_update_review",
+    "app_select_buyer_seller",
+    "app_default_tab",
+    "app_your_ads"
   ]
 }

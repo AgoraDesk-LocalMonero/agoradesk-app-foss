@@ -3,17 +3,13 @@ import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/container_c85c09_radius12.dart';
 import 'package:flutter/material.dart';
 
-class ChatBubbleYellow extends StatelessWidget with DateMixin {
-  const ChatBubbleYellow({
+class ChatBubbleYellowOneLine extends StatelessWidget with DateMixin {
+  const ChatBubbleYellowOneLine({
     Key? key,
-    required this.date,
     required this.text,
-    this.child,
   }) : super(key: key);
 
-  final DateTime? date;
   final String text;
-  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +24,16 @@ class ChatBubbleYellow extends StatelessWidget with DateMixin {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    text,
-                    style: context.txtLabelMediumPrimary10,
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    niceDateSecs(date),
-                    style: context.txtTermsN30N50,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
+                    child: Text(
+                      text,
+                      style: context.txtBodyXSmallP10,
+                    ),
                   ),
                 ],
               ),
             ),
-            child != null ? child! : const SizedBox(),
           ],
         ),
       ),

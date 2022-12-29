@@ -16572,6 +16572,12 @@ abstract class I18n {
   /// **'Edit box password, double tap to edit'**
   String get app_accessibility_edit_box_password;
 
+  /// No description provided for @app_accessibility_edit_box_confirm_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password edit box, double tap to edit'**
+  String get app_accessibility_edit_box_confirm_password;
+
   /// No description provided for @app_ad_created.
   ///
   /// In en, this message translates to:
@@ -16595,6 +16601,36 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Select ad type'**
   String get app_select_ad_type;
+
+  /// No description provided for @app_chat_leave_review.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap here to leave a review!'**
+  String get app_chat_leave_review;
+
+  /// No description provided for @app_chat_update_review.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve already left this user a review. Would you like to update your review now?'**
+  String get app_chat_update_review;
+
+  /// No description provided for @app_select_buyer_seller.
+  ///
+  /// In en, this message translates to:
+  /// **'Select buyer or seller'**
+  String get app_select_buyer_seller;
+
+  /// No description provided for @app_default_tab.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a default tab'**
+  String get app_default_tab;
+
+  /// No description provided for @app_your_ads.
+  ///
+  /// In en, this message translates to:
+  /// **'Your ads'**
+  String get app_your_ads;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

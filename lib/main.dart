@@ -9,7 +9,6 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
-import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -48,7 +47,7 @@ void main() async {
         options: agoradesk_options.DefaultFirebaseOptions.currentPlatform,
       );
     }
-    FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+    // FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   } else {
     Permission.notification.request();
   }
@@ -96,12 +95,12 @@ void main() async {
 
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
-      flavor,
-      isGoogleAvailable,
-      includeFcm,
-      appRanFromPush,
-      tradeId,
-      isCheckUpdates,
+      flavor: flavor,
+      isGoogleAvailable: isGoogleAvailable,
+      includeFcm: includeFcm,
+      appRanFromPush: appRanFromPush,
+      tradeId: tradeId,
+      isCheckUpdates: isCheckUpdates,
     ),
   );
 
@@ -212,81 +211,60 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
         tradeId = push.objectId;
       }
     }
-    eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+    eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
     debugPrint('++++error parsing push in actionStream [main]- $e');
   }
 }
 
-@pragma('vm:entry-point')
-Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  //TODO: Remove with the next release
-  if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
-    try {
-      await SecureStorage.ensureInitialized();
-      final SecureStorage _secureStorage = SecureStorage();
-      final locale = await _secureStorage.read(SecureStorageKey.locale);
-      final String langCode = locale ?? Platform.localeName.substring(0, 2);
-      final PushModel push = PushModel.fromJson(message.data);
-      // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-
-      channel = const AndroidNotificationChannel(
-        kNotificationsChannel, // id
-        'Trades channel', // title
-        description: 'Notifications about trades', // description
-        importance: Importance.high,
-      );
-
-      final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-      await flutterLocalNotificationsPlugin.initialize(
-        const InitializationSettings(
-          android: AndroidInitializationSettings(kNotificationIcon),
-          iOS: DarwinInitializationSettings(
-            requestAlertPermission: true,
-            requestSoundPermission: true,
-            requestBadgePermission: true,
-          ),
-        ),
-      );
-
-      await flutterLocalNotificationsPlugin.show(
-        int.tryParse(push.id ?? '0') ?? 0,
-        ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
-        ForegroundMessagesMixin().translatedNotificationText(push, langCode), // body
-        payload: jsonEncode(push.toJson()), //payload
-        NotificationDetails(
-          android: AndroidNotificationDetails(
-            channel.id,
-            channel.name,
-            channelDescription: channel.description,
-            icon: kNotificationIcon,
-            color: const Color.fromRGBO(0, 0, 0, 1),
-            // colorized: true,
-          ),
-        ),
-      );
-
-      String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-      barMessagesString += ';${message.messageId}:${push.objectId}';
-      _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-    } catch (e) {
-      debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
-    }
-  }
-
-  // try {
-  //   await SecureStorage.ensureInitialized();
-  //   final SecureStorage _secureStorage = SecureStorage();
-  //   final locale = await _secureStorage.read(SecureStorageKey.locale);
-  //   final String langCode = locale ?? Platform.localeName.substring(0, 2);
-  //   final PushModel push = PushModel.fromJson(message.data);
-  //   final awesomeMessageId = Random().nextInt(10000000);
-  //   final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-  //
-  //   String barMessagesString = await _secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-  //   barMessagesString += ';${message.messageId}:${push.objectId}';
-  //   _secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesString);
-  // } catch (e) {
-  //   debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
-  // }
-}
+// @pragma('vm:entry-point')
+// Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+// if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
+//   try {
+//     await SecureStorage.ensureInitialized();
+//     final SecureStorage _secureStorage = SecureStorage();
+//     final locale = await _secureStorage.read(SecureStorageKey.locale);
+//     final String langCode = locale ?? Platform.localeName.substring(0, 2);
+//     final PushModel push = PushModel.fromJson(message.data);
+//     // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
+//
+//     channel = const AndroidNotificationChannel(
+//       kNotificationsChannel, // id
+//       'Trades channel', // title
+//       description: 'Notifications about trades', // description
+//       importance: Importance.high,
+//     );
+//
+//     final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+//     await flutterLocalNotificationsPlugin.initialize(
+//       const InitializationSettings(
+//         android: AndroidInitializationSettings(kNotificationIcon),
+//         iOS: DarwinInitializationSettings(
+//           requestAlertPermission: true,
+//           requestSoundPermission: true,
+//           requestBadgePermission: true,
+//         ),
+//       ),
+//     );
+//
+//     await flutterLocalNotificationsPlugin.show(
+//       int.tryParse(push.id ?? '0') ?? 0,
+//       ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
+//       ForegroundMessagesMixin().translatedNotificationText(push, langCode), // body
+//       payload: jsonEncode(push.toJson()), //payload
+//       NotificationDetails(
+//         android: AndroidNotificationDetails(
+//           channel.id,
+//           channel.name,
+//           channelDescription: channel.description,
+//           icon: kNotificationIcon,
+//           color: const Color.fromRGBO(0, 0, 0, 1),
+//           // colorized: true,
+//         ),
+//       ),
+//     );
+//   } catch (e) {
+//     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
+//   }
+// }
+// }

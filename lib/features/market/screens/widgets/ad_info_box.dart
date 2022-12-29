@@ -33,13 +33,6 @@ class AdInfoBox extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
   @override
   Widget build(BuildContext context) {
     final now = DateTime.now();
-    String tradeLimit = '${ad.minAmount ?? 0} - ';
-    if (ad.maxAmountAvailable != null) {
-      tradeLimit += '${ad.maxAmountAvailable} ${ad.currency}';
-    } else {
-      tradeLimit += ad.maxAmount != null ? '${ad.maxAmount} ${ad.currency}' : context.intl.app_unlimited;
-    }
-
     return ContainerSurface5Radius12(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(14, 16, 14, 16),
@@ -93,8 +86,8 @@ class AdInfoBox extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                     iconData: AgoraFont.bolt_alt,
                     text: context.intl.activity,
                     child: LineOnlineDot(
-                      text: timeago.format(now.subtract(now.difference(ad.profile?.lastOnline ?? DateTime.now()))),
-                      date: ad.profile?.lastOnline ?? DateTime.now(),
+                      text: timeago.format(now.subtract(now.difference(ad.profile?.lastOnline ?? now))),
+                      date: ad.profile?.lastOnline ?? now,
                     ),
                   ),
                 ),
@@ -132,7 +125,7 @@ class AdInfoBox extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                   child: BoxIconP80TextN60DataN90(
                     iconData: AgoraFont.limits_3,
                     text: context.intl.ad8722Sbpage250Sbinfo250Sbtrade8722Sblimits,
-                    dataText: tradeLimit,
+                    dataText: ad.tradeLimit(context),
                   ),
                 ),
                 const SizedBox(width: 16),

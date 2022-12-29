@@ -233,14 +233,14 @@ class AccountService {
   ///
   Future<Either<ApiError, bool>> giveFeedback(
     String username,
-    FeedbackType type,
+    FeedbackType? type,
     String? msg,
   ) async {
     try {
       final resp = await _api.client.post(
         '/feedback/$username',
         data: {
-          "feedback": type.key(),
+          "feedback": type?.key(),
           "msg": msg ?? '',
         },
       );

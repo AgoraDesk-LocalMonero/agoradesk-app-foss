@@ -1,7 +1,6 @@
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -41,16 +40,13 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     required UserService userService,
     required AdsRepository adsRepository,
     required AuthService authService,
-    required AppState appState,
   })  : _userService = userService,
         _adsRepository = adsRepository,
-        _appState = appState,
         _authService = authService;
 
   final UserService _userService;
   final AdsRepository _adsRepository;
   final AuthService _authService;
-  final AppState _appState;
 
   final indicatorKey = GlobalKey<RefreshIndicatorState>();
   final onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
@@ -459,6 +455,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   Future getAds({
     bool loadMore = false,
   }) async {
+    print('+++++++++++++++++++++++++++++++++++++000001');
     if (!loadingAds) {
       loadingAds = true;
       String? sort;

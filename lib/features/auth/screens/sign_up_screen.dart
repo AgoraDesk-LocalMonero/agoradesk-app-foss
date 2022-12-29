@@ -35,10 +35,6 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMixin {
   @override
   Widget build(BuildContext context) {
-    final InputDecoration decoration = Theme.of(context).colorScheme.txtFieldMainDecoration;
-    final linkStyle = Theme.of(context).textTheme.bodySmall!.copyWith(color: Theme.of(context).colorScheme.primary70);
-    final promptStyle = Theme.of(context).textTheme.bodySmall!.copyWith(color: Theme.of(context).colorScheme.n80N30);
-
     return KeyboardDismissOnTap(
       child: Scaffold(
         appBar: AuthAppBar(
@@ -79,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                       : const SizedBox(),
                                   const SizedBox(height: 25),
                                   TextField(
-                                    decoration: decoration.copyWith(
+                                    decoration: context.decorationTxtFieldMain.copyWith(
                                       labelText: context.intl.login250Sbusername,
                                       labelStyle: context.txtBodyMediumNeutral70,
                                       floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -92,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   ),
                                   const SizedBox(height: 16),
                                   TextField(
-                                    decoration: decoration.copyWith(
+                                    decoration: context.decorationTxtFieldMain.copyWith(
                                       labelText: context.intl.signup250Sbemail,
                                       labelStyle: context.txtBodyMediumNeutral70,
                                       floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -118,7 +114,8 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(
                                     controller: model.ctrlPassword2,
-                                    decoration: decoration.copyWith(
+                                    tooltipText: context.intl.app_accessibility_edit_box_confirm_password,
+                                    decoration: context.decorationTxtFieldMain.copyWith(
                                       hintText: context.intl.signup250Sbconfirm8722Sbpass,
                                       errorText: validatePasswordWithNull(model.password2) &&
                                               (model.password2 == model.password || model.password2.isEmpty)
@@ -132,45 +129,43 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                     iconData: AgoraFont.coupon,
                                     content: TextField(
                                       controller: model.ctrlCoupon,
-                                      decoration: decoration.copyWith(
-                                          hintText: context.intl.coupons250Sbcode8722Sbinput250Sbplaceholder),
+                                      decoration: context.decorationTxtFieldMain
+                                          .copyWith(hintText: context.intl.coupons250Sbcode8722Sbinput250Sbplaceholder),
                                     ),
                                   ),
                                   const SizedBox(height: 16),
-                                  MergeSemantics(
-                                    child: Row(
-                                      children: [
-                                        Checkbox(
-                                          value: model.isTermsAgree,
-                                          onChanged: (bool? val) {
-                                            if (val != null) {
-                                              model.isTermsAgree = val;
-                                            }
-                                          },
-                                        ),
-                                        Expanded(
-                                          child: RichText(
-                                            text: TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: context.intl.signup250Sbagree8722Sbto8722Sbtos(' '),
-                                                  style: promptStyle,
-                                                ),
-                                                TextSpan(
-                                                  text: context.intl.signup250Sbagree8722Sbto8722Sbtos8722Sbterms(
-                                                      GetIt.I<AppParameters>().appName),
-                                                  style: linkStyle,
-                                                  recognizer: TapGestureRecognizer()
-                                                    ..onTap = () {
-                                                      openLink(GetIt.I<AppParameters>().urlPrivacy);
-                                                    },
-                                                ),
-                                              ],
-                                            ),
+                                  Row(
+                                    children: [
+                                      Checkbox(
+                                        value: model.isTermsAgree,
+                                        onChanged: (bool? val) {
+                                          if (val != null) {
+                                            model.isTermsAgree = val;
+                                          }
+                                        },
+                                      ),
+                                      Expanded(
+                                        child: RichText(
+                                          text: TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text: context.intl.signup250Sbagree8722Sbto8722Sbtos(' '),
+                                                style: context.txtBodySmallN80N30,
+                                              ),
+                                              TextSpan(
+                                                text: context.intl.signup250Sbagree8722Sbto8722Sbtos8722Sbterms(
+                                                    GetIt.I<AppParameters>().appName),
+                                                style: context.txtBodySmallP70P40,
+                                                recognizer: TapGestureRecognizer()
+                                                  ..onTap = () {
+                                                    openLink(GetIt.I<AppParameters>().urlPrivacy);
+                                                  },
+                                              ),
+                                            ],
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                   if (model.displayError) const SizedBox(height: 26),
                                   if (model.displayError)
@@ -198,11 +193,11 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                         children: [
                                           TextSpan(
                                             text: context.intl.signup250Sblogin(' '),
-                                            style: promptStyle,
+                                            style: context.txtBodySmallN80N30,
                                           ),
                                           TextSpan(
                                             text: context.intl.appbar8722Sbbtn250Sblogin,
-                                            style: linkStyle,
+                                            style: context.txtBodySmallP70P40,
                                             recognizer: TapGestureRecognizer()
                                               ..onTap = () {
                                                 AutoRouter.of(context)
