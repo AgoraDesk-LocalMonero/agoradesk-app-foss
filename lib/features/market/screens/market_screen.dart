@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
@@ -13,6 +14,7 @@ import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:agoradesk/core/widgets/branded/cash_textfield.dart';
+import 'package:agoradesk/core/widgets/branded/header_shadow.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
@@ -62,30 +64,28 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
               ),
             ),
             // SingleChildScrollView for flexible keyboard insets
-            body: KeyboardDismissOnTap(
-                child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-              child: LayoutBuilder(builder: (context, constraints) {
-                return SizedBox(
-                  height: constraints.maxHeight,
-                  child: Column(
-                    children: [
-                      _buildSelectAdType(context, model),
-                      const SizedBox(height: 16),
-                      Expanded(
+            body: KeyboardDismissOnTap(child: LayoutBuilder(builder: (context, constraints) {
+              return SizedBox(
+                height: constraints.maxHeight,
+                child: Column(
+                  children: [
+                    _buildSelectAdType(context, model),
+                    Expanded(
+                      child: Padding(
+                        padding: kScreenPadding,
                         child: _buildAdsList(context, model),
                       ),
-                    ],
-                  ),
-                );
-              }),
-            )),
+                    ),
+                  ],
+                ),
+              );
+            })),
           );
         });
   }
 
   Widget _buildSelectAdType(BuildContext context, MarketViewModel model) {
-    return Column(
+    return HeaderShadow(
       children: [
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -361,14 +361,11 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                   }
 
                   if (index < model.ads.length) {
-                    return Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                      child: AdMarketTile(
-                        ad: model.ads[index],
-                        onPressed: () async {
-                          await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.ads[index]));
-                        },
-                      ),
+                    return AdMarketTile(
+                      ad: model.ads[index],
+                      onPressed: () async {
+                        await AutoRouter.of(context).push(MarketAdInfoRoute(ad: model.ads[index]));
+                      },
                     );
                   } else {
                     return model.hasMorePages

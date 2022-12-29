@@ -18,15 +18,16 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dialogHeight = MediaQuery.of(context).size.height * 0.4;
-    return Dialog(
-        insetPadding: const EdgeInsets.all(24),
-        backgroundColor: Theme.of(context).colorScheme.surface4,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(28),
-          ),
+    return SimpleDialog(
+      insetPadding: const EdgeInsets.all(24),
+      backgroundColor: Theme.of(context).colorScheme.surface4,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(28),
         ),
-        child: SizedBox(
+      ),
+      children: [
+        SizedBox(
           height: dialogHeight,
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -63,6 +64,8 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        ),
+      ],
+    );
   }
 }

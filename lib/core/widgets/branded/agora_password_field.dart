@@ -10,12 +10,14 @@ class AgoraPasswordField extends StatefulWidget {
     this.decoration,
     this.autofocus = false,
     this.enabled = true,
+    this.tooltipText,
   }) : super(key: key);
 
   final TextEditingController controller;
   final InputDecoration? decoration;
   final bool autofocus;
   final bool enabled;
+  final String? tooltipText;
 
   @override
   State<AgoraPasswordField> createState() => _AgoraPasswordFieldState();
@@ -58,7 +60,7 @@ class _AgoraPasswordFieldState extends State<AgoraPasswordField> with ValidatorM
 
     return MergeSemantics(
       child: Semantics(
-        tooltip: context.intl.app_accessibility_edit_box_password,
+        tooltip: widget.tooltipText ?? context.intl.app_accessibility_edit_box_password,
         child: TextField(
           controller: widget.controller,
           autofocus: widget.autofocus,

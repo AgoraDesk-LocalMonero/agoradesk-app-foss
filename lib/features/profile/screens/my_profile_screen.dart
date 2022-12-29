@@ -95,6 +95,7 @@ class MyProfileScreen extends StatelessWidget with UrlMixin {
                     const ReputationImportWidget(),
                     const SizedBox(height: 12),
                     AdsBox(
+                      title: context.intl.app_your_ads,
                       username: username,
                       ads: model.ads,
                       loading: model.loadingAds,

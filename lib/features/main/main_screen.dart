@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -18,8 +19,6 @@ import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
-const _kForegroungPollingInterval = 60000;
-
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -30,12 +29,20 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   /// for receiving messages from the foreground service
   ReceivePort? _receivePort;
+  late TabsRouter tabsRouter;
 
   @override
   void initState() {
     _initForeground();
-    _initIosNotifications();
+    WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     super.initState();
+  }
+
+  void _afterLayout(_) async {
+    final int index = context.read<AppState>().defaultTab.index;
+    if (index != 2) {
+      tabsRouter.setActiveIndex(index);
+    }
   }
 
   @override
@@ -52,7 +59,8 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Theme.of(context).colorScheme.surface1,
       animationCurve: Curves.easeInOut,
       animationDuration: const Duration(milliseconds: 500),
-      bottomNavigationBuilder: (_, tabsRouter) {
+      bottomNavigationBuilder: (_, t) {
+        tabsRouter = t;
         return Theme(
           data: ThemeData(
             highlightColor: Colors.transparent,
@@ -110,30 +118,6 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   ///
-  /// Fixing iOS 16 bug - on the very first app run call silent notification
-  ///
-  void _initIosNotifications() async {
-    if (Platform.isIOS) {
-      final appState = context.read<AppState>();
-      final bool iosFirstNotificationWasRun = appState.iosFirstNotificationWasRun;
-      if (!iosFirstNotificationWasRun) {
-        // final res = await AwesomeNotifications().createNotification(
-        //   content: NotificationContent(
-        //     id: 436456,
-        //     channelKey: kNotificationsChannel,
-        //     notificationLayout: NotificationLayout.Default,
-        //     payload: {},
-        //   ),
-        // );
-        // AwesomeNotifications().decrementGlobalBadgeCounter();
-        // if (res) {
-        //   appState.iosFirstNotificationWasRun = true;
-        // }
-      }
-    }
-  }
-
-  ///
   /// Foreground functions (in case the Google Play Services are not available)
   ///
   void _initForeground() {
@@ -151,7 +135,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Future<void> _initForegroundTask() async {
-    int pollingInterval = _kForegroungPollingInterval;
+    int pollingInterval = kForegroungPollingInterval;
 
     if (kDebugMode) {
       pollingInterval = 15000;

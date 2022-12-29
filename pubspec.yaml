@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.41+65
+version: 1.0.43+67
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -79,6 +79,7 @@ dependencies:
   flutter_keyboard_size: ^1.0.1
   store_checker: ^1.1.0
   just_the_tooltip: ^0.0.12
+  flutter_app_badger: ^1.5.0
 
 dependency_overrides:
   #  flutter_foreground_task:

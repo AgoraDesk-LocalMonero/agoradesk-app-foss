@@ -1,0 +1,14 @@
+<resources>
+    <string name="MESSAGE_TITLE">Новое сообщение в сделке</string>
+    <string name="TRADE_REQUEST_TITLE">Новое предложение</string>
+    <string name="TRADE_COMPLETE_TITLE">Сделка завершена</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE_TITLE">Сделка отмечена как завершенная</string>
+    <string name="TRADE_CANCELLED_TITLE">Сделка отменена</string>
+    <string name="TRADE_DISPUTED_TITLE">Сделка оспорена</string>
+    <string name="TRADE_REQUEST">Вам пришло новое предложение о сделке %1$s от %2$s</string>
+    <string name="TRADE_COMPLETE">Завершилась сделка %1$s с %2$s</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE">%1$s оплатил сделку %2$s</string>
+    <string name="TRADE_CANCELLED">%1$s отменил сделку %2$s</string>
+    <string name="TRADE_DISPUTED">%1$s оспорил сделку %2$s</string>
+    <string name="MESSAGE">%1$s</string>
+</resources>

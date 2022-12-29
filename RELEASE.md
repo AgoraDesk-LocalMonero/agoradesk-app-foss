@@ -1,8 +1,11 @@
 ### Updates
-1. Feat: a new way of delivering push notifications, solved iOS issue with disappearing notifications when the app is terminated.
-2. Fix: remove the Cancel button on the buyer side in disputed trades.
-3. Feat: disable trades polling when FCM is available, get info from push notifications.
-4. Feat: display sticky bubble for big screens when a keyboard is opened.
+1. Design: light theme shadows.
+2. Feat: choose default tab sections that open when we launch the app.
+3. Feat: improve accessibility.
+4. Feat: adding a review widget to the chat and activity tab when the trade is completed.
+5. Fix: ads are loading on the ads screen.
+6. Fix: grey screen on the trade tab.
+7. Fix: notification icons on Android.
 
 
 ### About the attached app's

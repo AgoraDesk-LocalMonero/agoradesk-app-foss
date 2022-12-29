@@ -54,7 +54,7 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
     final adId = trade.advertisement.id != null ? trade.advertisement.id!.substring(0, 8) : context.intl.app_ad_deleted;
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
+      padding: const EdgeInsets.fromLTRB(0, 6, 0, 6),
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: onPressed,

@@ -25,7 +25,7 @@ class LocalNotificationController with ForegroundMessagesMixin {
     final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
     await flutterLocalNotificationsPlugin.initialize(
       const InitializationSettings(
-        android: AndroidInitializationSettings('launch_push_fdroid'),
+        android: AndroidInitializationSettings(kNotificationIcon),
         iOS: DarwinInitializationSettings(
           requestAlertPermission: true,
           requestSoundPermission: true,
@@ -44,7 +44,7 @@ class LocalNotificationController with ForegroundMessagesMixin {
           channel.id,
           channel.name,
           channelDescription: channel.description,
-          icon: 'launch_push',
+          icon: kNotificationIcon,
           color: const Color.fromRGBO(0, 0, 0, 1),
           // colorized: true,
         ),

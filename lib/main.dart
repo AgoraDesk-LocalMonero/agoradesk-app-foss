@@ -18,6 +18,8 @@ import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/
 import 'package:permission_handler/permission_handler.dart';
 
 const kNotificationsChannel = 'trades_channel';
+const kNotificationIcon = '@mipmap/ic_icon_black';
+// const kNotificationIcon = '@drawable/launch_push';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -71,12 +73,12 @@ void main() async {
 
   GetIt.I.registerSingleton<AppParameters>(
     initAppParameters(
-      flavor,
-      isGoogleAvailable,
-      includeFcm,
-      appRanFromPush,
-      tradeId,
-      isCheckUpdates,
+      flavor: flavor,
+      isGoogleAvailable: isGoogleAvailable,
+      includeFcm: includeFcm,
+      appRanFromPush: appRanFromPush,
+      tradeId: tradeId,
+      isCheckUpdates: isCheckUpdates,
     ),
   );
 
@@ -112,7 +114,7 @@ Future<void> setupLocalNotifications() async {
 
   await localNotificationsPlugin.initialize(
     const InitializationSettings(
-      android: AndroidInitializationSettings('launch_push_fdroid'),
+      android: AndroidInitializationSettings(kNotificationIcon),
       iOS: DarwinInitializationSettings(
         requestAlertPermission: true,
         requestSoundPermission: true,
@@ -138,7 +140,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
         tradeId = push.objectId;
       }
     }
-    eventBus.fire(AwesomeMessageClickedEvent(tradeId));
+    eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
     debugPrint('++++error parsing push in actionStream [main]- $e');
   }

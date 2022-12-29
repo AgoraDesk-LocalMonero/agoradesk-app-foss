@@ -8,10 +8,12 @@ class ChatBubbleYellow extends StatelessWidget with DateMixin {
     Key? key,
     required this.date,
     required this.text,
+    this.child,
   }) : super(key: key);
 
   final DateTime? date;
   final String text;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +40,7 @@ class ChatBubbleYellow extends StatelessWidget with DateMixin {
                 ],
               ),
             ),
+            child != null ? child! : const SizedBox(),
           ],
         ),
       ),

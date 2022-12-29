@@ -6,5 +6,15 @@
   Copyright © 2022 Blue Sunday Limited. All rights reserved.
 */
 
-"TRADE_REQUEST" = "RU You have a new offer %@ from user %@";
-"TRADE_COMPLETE" = "RU Your trade %@ with %@ has been completed";
+"MESSAGE_TITLE" = "Новое сообщение в сделке";
+"TRADE_REQUEST_TITLE" = "Новое предложение";
+"TRADE_COMPLETE_TITLE" = "Сделка завершена";
+"TRADE_PAYMENT_MARKED_COMPLETE_TITLE" = "Сделка отмечена как завершенная";
+"TRADE_CANCELLED_TITLE" = "Сделка отменена";
+"TRADE_DISPUTED_TITLE" = "Сделка оспорена";
+"TRADE_REQUEST" = "Вам пришло новое предложение о сделке %@ от %@";
+"TRADE_COMPLETE" = "Завершилась сделка %@ с %@";
+"TRADE_PAYMENT_MARKED_COMPLETE" = "%@ оплатил сделку %@";
+"TRADE_CANCELLED" = "%@ отменил сделку %@";
+"TRADE_DISPUTED" = "%@ оспорил сделку %@";
+"MESSAGE" = "%@";

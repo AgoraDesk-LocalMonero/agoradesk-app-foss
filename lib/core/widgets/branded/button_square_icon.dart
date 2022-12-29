@@ -23,27 +23,31 @@ class ButtonSquareIcon extends StatelessWidget {
       button: true,
       enabled: true,
       label: label,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        clipBehavior: Clip.none,
-        style: ElevatedButton.styleFrom(
-          minimumSize: size,
-          maximumSize: size,
-          fixedSize: size,
-          primary: context.colS3,
-          padding: const EdgeInsets.all(0),
-          elevation: 0,
-          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(4),
-          ),
-        ),
-        child: Center(
-          child: Icon(
-            iconData,
-            semanticLabel: label,
-            color: iconColor ?? context.colP90,
-            size: 18,
+      child: MergeSemantics(
+        child: Semantics(
+          excludeSemantics: true,
+          child: ElevatedButton(
+            onPressed: onPressed,
+            clipBehavior: Clip.none,
+            style: ElevatedButton.styleFrom(
+              minimumSize: size,
+              maximumSize: size,
+              fixedSize: size,
+              primary: context.colS3,
+              padding: const EdgeInsets.all(0),
+              elevation: 0,
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            child: Center(
+              child: Icon(
+                iconData,
+                color: iconColor ?? context.colP90,
+                size: 18,
+              ),
+            ),
           ),
         ),
       ),

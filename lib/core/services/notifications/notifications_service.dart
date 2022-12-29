@@ -14,6 +14,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 
@@ -45,7 +46,6 @@ class NotificationsService with ForegroundMessagesMixin {
   final bool includeFcm;
 
   Future init() async {
-    // startListenAwesomeNotificationsPressed();
     Future.delayed(const Duration(seconds: 12)).then((value) => {getNotifications()});
 
     ///
@@ -88,28 +88,10 @@ class NotificationsService with ForegroundMessagesMixin {
         appState.notifications.addAll(editedNotifications);
         await Future.delayed(const Duration(seconds: 1));
         // badges (red circle counter on the app icon)
-        // final int badgesCounter = await AwesomeNotifications().getGlobalBadgeCounter();
-        // final int setCounter = badgesCounter >= markedAsReadCounter ? badgesCounter - markedAsReadCounter : 0;
-        // await AwesomeNotifications().setGlobalBadgeCounter(setCounter);
+        FlutterAppBadger.removeBadge();
         // remove red dot in case all notifiations are read
         appState.hasUnread =
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
-        // dismiss notifications on the phone events bar (not inside the app)
-        String barMessagesString = await secureStorage.read(SecureStorageKey.pushAndObjectIds) ?? '';
-        if (barMessagesString.isNotEmpty) {
-          final List<String> barMessages = barMessagesString.split(';');
-          final List<String> barMessagesNew = barMessagesString.split(';');
-          for (final m in barMessages) {
-            if (m.contains(tradeId)) {
-              final messageId = int.tryParse(m.split(':')[0]);
-              if (messageId != null) {
-                // await AwesomeNotifications().dismiss(messageId);
-              }
-              barMessagesNew.remove(m);
-            }
-          }
-          await secureStorage.write(SecureStorageKey.pushAndObjectIds, barMessagesNew.join(';'));
-        }
       }
     } catch (e) {
       debugPrint('++++markTradeNotificationsAsRead exception - $e');

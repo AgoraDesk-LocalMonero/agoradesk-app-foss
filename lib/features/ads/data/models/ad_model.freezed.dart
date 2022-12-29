@@ -615,7 +615,7 @@ class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AdModel implements _AdModel {
+class _$_AdModel extends _AdModel {
   const _$_AdModel(
       {this.asset,
       @JsonKey(name: 'ad_id', includeIfNull: false)
@@ -677,7 +677,8 @@ class _$_AdModel implements _AdModel {
           this.buyerSettlementFeeLevel,
       @JsonKey(name: 'location_string', includeIfNull: false)
           this.locationString,
-      this.profile});
+      this.profile})
+      : super._();
 
   factory _$_AdModel.fromJson(Map<String, dynamic> json) =>
       _$$_AdModelFromJson(json);
@@ -907,7 +908,7 @@ class _$_AdModel implements _AdModel {
   }
 }
 
-abstract class _AdModel implements AdModel {
+abstract class _AdModel extends AdModel {
   const factory _AdModel(
       {final Asset? asset,
       @JsonKey(name: 'ad_id', includeIfNull: false)
@@ -970,6 +971,7 @@ abstract class _AdModel implements AdModel {
       @JsonKey(name: 'location_string', includeIfNull: false)
           final String? locationString,
       final AccountInfoModel? profile}) = _$_AdModel;
+  const _AdModel._() : super._();
 
   factory _AdModel.fromJson(Map<String, dynamic> json) = _$_AdModel.fromJson;
 
