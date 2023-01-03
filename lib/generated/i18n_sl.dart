@@ -9267,4 +9267,22 @@ class I18nSl extends I18n {
   String app_503_title(Object val) {
     return '$val Vzdrževanje aplikacije';
   }
+
+  @override
+  String get app_push_new_message => 'V trgovini imate novo sporočilo';
+
+  @override
+  String get app_push_new_offer => 'Imate novo ponudbo';
+
+  @override
+  String get app_p => 'Posel označen kot opravljen';
+
+  @override
+  String get app_push_trade_marked_completed => 'Posel označen kot opravljen';
+
+  @override
+  String get app_push_trade_cancelled => 'Trgovanje preklicano';
+
+  @override
+  String get app_push_trade_disputed => 'Trgovina sporna';
 }

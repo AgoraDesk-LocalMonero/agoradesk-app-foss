@@ -9267,4 +9267,22 @@ class I18nEl extends I18n {
   String app_503_title(Object val) {
     return '$val Συντήρηση εφαρμογών';
   }
+
+  @override
+  String get app_push_new_message => 'Έχετε ένα νέο μήνυμα σε μια συναλλαγή';
+
+  @override
+  String get app_push_new_offer => 'Έχετε μια νέα προσφορά';
+
+  @override
+  String get app_p => 'Εμπορική σήμανση ως ολοκληρωμένη';
+
+  @override
+  String get app_push_trade_marked_completed => 'Εμπορική σήμανση ως ολοκληρωμένη';
+
+  @override
+  String get app_push_trade_cancelled => 'Το εμπόριο ακυρώθηκε';
+
+  @override
+  String get app_push_trade_disputed => 'Το εμπόριο αμφισβητείται';
 }

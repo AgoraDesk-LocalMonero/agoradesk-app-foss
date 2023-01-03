@@ -9267,4 +9267,22 @@ class I18nPl extends I18n {
   String app_503_title(Object val) {
     return '$val Konserwacja aplikacji';
   }
+
+  @override
+  String get app_push_new_message => 'Masz nową wiadomość w handlu';
+
+  @override
+  String get app_push_new_offer => 'Masz nową ofertę';
+
+  @override
+  String get app_p => 'Transakcja oznaczona jako zakończona';
+
+  @override
+  String get app_push_trade_marked_completed => 'Transakcja oznaczona jako zakończona';
+
+  @override
+  String get app_push_trade_cancelled => 'Transakcja anulowana';
+
+  @override
+  String get app_push_trade_disputed => 'Handel sporny';
 }

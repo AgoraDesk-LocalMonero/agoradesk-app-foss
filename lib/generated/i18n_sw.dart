@@ -9267,4 +9267,22 @@ class I18nSw extends I18n {
   String app_503_title(Object val) {
     return '$val Matengenezo ya Programu';
   }
+
+  @override
+  String get app_push_new_message => 'Una ujumbe mpya katika biashara';
+
+  @override
+  String get app_push_new_offer => 'Una ofa mpya';
+
+  @override
+  String get app_p => 'Biashara imetiwa alama kuwa imekamilika';
+
+  @override
+  String get app_push_trade_marked_completed => 'Biashara imetiwa alama kuwa imekamilika';
+
+  @override
+  String get app_push_trade_cancelled => 'Biashara imeghairiwa';
+
+  @override
+  String get app_push_trade_disputed => 'Biashara imebishaniwa';
 }

@@ -9267,4 +9267,22 @@ class I18nFi extends I18n {
   String app_503_title(Object val) {
     return '$val Sovellusten ylläpito';
   }
+
+  @override
+  String get app_push_new_message => 'Sinulla on uusi viesti kaupassa';
+
+  @override
+  String get app_push_new_offer => 'Sinulla on uusi tarjous';
+
+  @override
+  String get app_p => 'Kauppa merkitty suoritetuksi';
+
+  @override
+  String get app_push_trade_marked_completed => 'Kauppa merkitty suoritetuksi';
+
+  @override
+  String get app_push_trade_cancelled => 'Kaupat peruttu';
+
+  @override
+  String get app_push_trade_disputed => 'Kauppa kiistanalainen';
 }

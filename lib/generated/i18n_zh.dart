@@ -9267,6 +9267,24 @@ class I18nZh extends I18n {
   String app_503_title(Object val) {
     return '$val App Maintenance';
   }
+
+  @override
+  String get app_push_new_message => 'You have a new message in a trade';
+
+  @override
+  String get app_push_new_offer => 'You have a new offer';
+
+  @override
+  String get app_p => 'Trade marked as completed';
+
+  @override
+  String get app_push_trade_marked_completed => 'Trade marked as completed';
+
+  @override
+  String get app_push_trade_cancelled => 'Trade cancelled';
+
+  @override
+  String get app_push_trade_disputed => 'Trade disputed';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -25975,4 +25993,22 @@ class I18nZhTw extends I18nZh {
   String app_503_title(Object val) {
     return '$val 應用維護';
   }
+
+  @override
+  String get app_push_new_message => '您在交易中收到新消息';
+
+  @override
+  String get app_push_new_offer => '你有一個新的報價';
+
+  @override
+  String get app_p => '交易標記為已完成';
+
+  @override
+  String get app_push_trade_marked_completed => '交易標記為已完成';
+
+  @override
+  String get app_push_trade_cancelled => '交易取消';
+
+  @override
+  String get app_push_trade_disputed => '貿易有爭議';
 }

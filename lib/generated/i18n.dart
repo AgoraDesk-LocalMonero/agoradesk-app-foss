@@ -137,7 +137,6 @@ abstract class I18n {
     Locale('nb'),
     Locale('nl'),
     Locale('pl'),
-    Locale('pt', 'BR'),
     Locale('pt'),
     Locale('ro'),
     Locale('ru'),
@@ -16651,6 +16650,42 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'{val} App Maintenance'**
   String app_503_title(Object val);
+
+  /// No description provided for @app_push_new_message.
+  ///
+  /// In en, this message translates to:
+  /// **'You have a new message in a trade'**
+  String get app_push_new_message;
+
+  /// No description provided for @app_push_new_offer.
+  ///
+  /// In en, this message translates to:
+  /// **'You have a new offer'**
+  String get app_push_new_offer;
+
+  /// No description provided for @app_p.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade marked as completed'**
+  String get app_p;
+
+  /// No description provided for @app_push_trade_marked_completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade marked as completed'**
+  String get app_push_trade_marked_completed;
+
+  /// No description provided for @app_push_trade_cancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade cancelled'**
+  String get app_push_trade_cancelled;
+
+  /// No description provided for @app_push_trade_disputed.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade disputed'**
+  String get app_push_trade_disputed;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
@@ -16672,12 +16707,6 @@ I18n lookupI18n(Locale locale) {
 
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
-    case 'pt': {
-  switch (locale.countryCode) {
-    case 'BR': return I18nPtBr();
-   }
-  break;
-   }
     case 'zh': {
   switch (locale.countryCode) {
     case 'CN': return I18nZhCn();

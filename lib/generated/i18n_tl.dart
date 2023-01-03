@@ -9267,4 +9267,22 @@ class I18nTl extends I18n {
   String app_503_title(Object val) {
     return '$val Pagpapanatili ng App';
   }
+
+  @override
+  String get app_push_new_message => 'Mayroon kang bagong mensahe sa isang kalakalan';
+
+  @override
+  String get app_push_new_offer => 'May bago kang offer';
+
+  @override
+  String get app_p => 'Trade marked bilang nakumpleto';
+
+  @override
+  String get app_push_trade_marked_completed => 'Trade marked bilang nakumpleto';
+
+  @override
+  String get app_push_trade_cancelled => 'Kinansela ang kalakalan';
+
+  @override
+  String get app_push_trade_disputed => 'Pinagtatalunan ang kalakalan';
 }

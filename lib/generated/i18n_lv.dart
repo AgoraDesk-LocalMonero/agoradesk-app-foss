@@ -9267,4 +9267,22 @@ class I18nLv extends I18n {
   String app_503_title(Object val) {
     return '$val Lietotņu uzturēšana';
   }
+
+  @override
+  String get app_push_new_message => 'Jums ir jauns ziņojums tirdzniecībā';
+
+  @override
+  String get app_push_new_offer => 'Jums ir jauns piedāvājums';
+
+  @override
+  String get app_p => 'Darījums atzīmēts kā pabeigts';
+
+  @override
+  String get app_push_trade_marked_completed => 'Darījums atzīmēts kā pabeigts';
+
+  @override
+  String get app_push_trade_cancelled => 'Tirdzniecība atcelta';
+
+  @override
+  String get app_push_trade_disputed => 'Tirdzniecība apstrīdēta';
 }

@@ -9267,4 +9267,22 @@ class I18nUr extends I18n {
   String app_503_title(Object val) {
     return '$val ایپ کی دیکھ بھال';
   }
+
+  @override
+  String get app_push_new_message => 'آپ کے پاس تجارت میں ایک نیا پیغام ہے۔';
+
+  @override
+  String get app_push_new_offer => 'آپ کے پاس ایک نئی پیشکش ہے۔';
+
+  @override
+  String get app_p => 'تجارت کو مکمل کے طور پر نشان زد کیا گیا ہے۔';
+
+  @override
+  String get app_push_trade_marked_completed => 'تجارت کو مکمل کے طور پر نشان زد کیا گیا ہے۔';
+
+  @override
+  String get app_push_trade_cancelled => 'تجارت منسوخ کر دی گئی۔';
+
+  @override
+  String get app_push_trade_disputed => 'تجارت میں اختلاف';
 }

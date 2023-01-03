@@ -9267,4 +9267,22 @@ class I18nTr extends I18n {
   String app_503_title(Object val) {
     return '$val Uygulama Bakımı';
   }
+
+  @override
+  String get app_push_new_message => 'Bir işlemde yeni bir mesajınız var';
+
+  @override
+  String get app_push_new_offer => 'yeni bir teklifin var';
+
+  @override
+  String get app_p => 'İşlem tamamlandı olarak işaretlendi';
+
+  @override
+  String get app_push_trade_marked_completed => 'İşlem tamamlandı olarak işaretlendi';
+
+  @override
+  String get app_push_trade_cancelled => 'İşlem iptal edildi';
+
+  @override
+  String get app_push_trade_disputed => 'Ticaret ihtilaflı';
 }

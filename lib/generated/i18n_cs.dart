@@ -9267,4 +9267,22 @@ class I18nCs extends I18n {
   String app_503_title(Object val) {
     return '$val Údržba aplikací';
   }
+
+  @override
+  String get app_push_new_message => 'Máte novou zprávu v obchodu';
+
+  @override
+  String get app_push_new_offer => 'Máte novou nabídku';
+
+  @override
+  String get app_p => 'Obchod označen jako dokončený';
+
+  @override
+  String get app_push_trade_marked_completed => 'Obchod označen jako dokončený';
+
+  @override
+  String get app_push_trade_cancelled => 'Obchod zrušen';
+
+  @override
+  String get app_push_trade_disputed => 'Obchod sporný';
 }

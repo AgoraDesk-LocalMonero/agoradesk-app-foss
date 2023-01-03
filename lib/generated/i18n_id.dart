@@ -9267,4 +9267,22 @@ class I18nId extends I18n {
   String app_503_title(Object val) {
     return '$val Pemeliharaan Aplikasi';
   }
+
+  @override
+  String get app_push_new_message => 'Anda memiliki pesan baru dalam perdagangan';
+
+  @override
+  String get app_push_new_offer => 'Anda memiliki penawaran baru';
+
+  @override
+  String get app_p => 'Perdagangan ditandai sebagai selesai';
+
+  @override
+  String get app_push_trade_marked_completed => 'Perdagangan ditandai sebagai selesai';
+
+  @override
+  String get app_push_trade_cancelled => 'Perdagangan dibatalkan';
+
+  @override
+  String get app_push_trade_disputed => 'Perdagangan disengketakan';
 }

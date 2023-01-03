@@ -9267,4 +9267,22 @@ class I18nRu extends I18n {
   String app_503_title(Object val) {
     return '$val Обслуживание приложения';
   }
+
+  @override
+  String get app_push_new_message => 'У вас есть новое сообщение в сделке';
+
+  @override
+  String get app_push_new_offer => 'У вас есть новое предложение';
+
+  @override
+  String get app_p => 'Сделка отмечена как завершенная';
+
+  @override
+  String get app_push_trade_marked_completed => 'Сделка отмечена как завершенная';
+
+  @override
+  String get app_push_trade_cancelled => 'Сделка отменена';
+
+  @override
+  String get app_push_trade_disputed => 'Торговля оспаривается';
 }

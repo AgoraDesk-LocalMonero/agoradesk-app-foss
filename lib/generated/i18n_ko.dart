@@ -9267,4 +9267,22 @@ class I18nKo extends I18n {
   String app_503_title(Object val) {
     return '$val 앱 유지보수';
   }
+
+  @override
+  String get app_push_new_message => '거래에 새 메시지가 있습니다.';
+
+  @override
+  String get app_push_new_offer => '새로운 제안이 있습니다.';
+
+  @override
+  String get app_p => '완료된 것으로 표시된 거래';
+
+  @override
+  String get app_push_trade_marked_completed => '완료된 것으로 표시된 거래';
+
+  @override
+  String get app_push_trade_cancelled => '거래 취소';
+
+  @override
+  String get app_push_trade_disputed => '무역 분쟁';
 }

@@ -9267,4 +9267,22 @@ class I18nHi extends I18n {
   String app_503_title(Object val) {
     return '$val ऐप का रखरखाव';
   }
+
+  @override
+  String get app_push_new_message => 'आपके पास व्यापार में एक नया संदेश है';
+
+  @override
+  String get app_push_new_offer => 'आपके पास एक नया प्रस्ताव है';
+
+  @override
+  String get app_p => 'व्यापार को पूर्ण के रूप में चिह्नित किया गया';
+
+  @override
+  String get app_push_trade_marked_completed => 'व्यापार को पूर्ण के रूप में चिह्नित किया गया';
+
+  @override
+  String get app_push_trade_cancelled => 'व्यापार रद्द';
+
+  @override
+  String get app_push_trade_disputed => 'व्यापार विवादित';
 }

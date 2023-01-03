@@ -9267,4 +9267,22 @@ class I18nRo extends I18n {
   String app_503_title(Object val) {
     return '$val Întreținere aplicație';
   }
+
+  @override
+  String get app_push_new_message => 'Ai un mesaj nou într-o tranzacție';
+
+  @override
+  String get app_push_new_offer => 'Ai o noua oferta';
+
+  @override
+  String get app_p => 'Marca comercială ca finalizată';
+
+  @override
+  String get app_push_trade_marked_completed => 'Marca comercială ca finalizată';
+
+  @override
+  String get app_push_trade_cancelled => 'Comerț anulat';
+
+  @override
+  String get app_push_trade_disputed => 'Comerț disputat';
 }

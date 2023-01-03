@@ -8015,10 +8015,10 @@ class I18nNl extends I18n {
   String get api_error_86 => 'Poging om land of betalingsmethode of valuta in te stellen die niet geldig is bij het maken/bijwerken van advertentie';
 
   @override
-  String get api_error_87 => 'Proberen een betaalmethode in te stellen die ongeldig is voor dat land bij het maken/bijwerken van de advertentie';
+  String get api_error_87 => 'Poging om een betaalmethode in te stellen die ongeldig is voor dat land bij het maken/bijwerken van de advertentie';
 
   @override
-  String get api_error_88 => 'Proberen een valuta in te stellen die ongeldig is voor die betaalmethode bij het maken/bijwerken van de advertentie';
+  String get api_error_88 => 'Poging om een valuta in te stellen die ongeldig is voor die betaalmethode bij het maken/bijwerken van de advertentie';
 
   @override
   String get api_error_89 => 'Er wordt geprobeerd een LOCAL_*-advertentie te maken zonder lon/lat in te stellen';
@@ -8180,10 +8180,10 @@ class I18nNl extends I18n {
   String get api_error_149 => 'Prioriteit niet gespecificeerd voor externe opname';
 
   @override
-  String get api_error_150 => 'Proberen om een ruil te starten op een advertentie waarbij de aanvragende gebruiker wordt geblokkeerd door de adverteerder';
+  String get api_error_150 => 'Poging om een transactie te starten op een advertentie waarbij de aanvragende gebruiker wordt geblokkeerd door de adverteerder';
 
   @override
-  String get api_error_151 => 'Proberen een ruil te starten voor een advertentie waarbij de gebruiker die de aanvraag indient niet wordt vertrouwd door de adverteerder';
+  String get api_error_151 => 'Poging om een transactie te starten voor een advertentie waarbij de gebruiker die de aanvraag indient niet wordt vertrouwd door de adverteerder';
 
   @override
   String get api_error_152 => 'Proberen een transactie te annuleren die al gesloten is';
@@ -8369,7 +8369,7 @@ class I18nNl extends I18n {
   String get api_error_231 => 'Proberen een sanctie te verwijderen van een gebruiker die geen sancties op zich heeft';
 
   @override
-  String get api_error_232 => 'Proberen een transactie te openen met een gebruiker die momenteel niet mag handelen vanwege een sanctie';
+  String get api_error_232 => 'Poging om een transactie te openen met een gebruiker die momenteel niet mag handelen vanwege een sanctie';
 
   @override
   String get api_error_233 => 'Poging om feedback te verwijderen met ID die niet bestaat';
@@ -8402,13 +8402,13 @@ class I18nNl extends I18n {
   String get api_error_245 => 'Koper probeert een intern adres op te geven bij het updaten van een KOOP-advertentie (interne adressen zijn niet toegestaan voor een handelsafwikkeling)';
 
   @override
-  String get api_error_246 => 'Proberen een transactie te starten vanuit een advertentie van het type KOOP waarin het adres voor de afwikkeling van de koper niet wordt gespecificeerd';
+  String get api_error_246 => 'Poging om een transactie te starten vanuit een BUY advertentie waarin het adres voor de afwikkeling van de koper niet wordt gespecificeerd';
 
   @override
   String get api_error_247 => 'Proberen een transactie vrij te geven van een account dat vanwege sancties niet mag worden opgenomen';
 
   @override
-  String get api_error_248 => 'Proberen een transactie vrij te geven wanneer het bedrag van de transactie niet voldoende is om de afwikkelingsgerelateerde kosten te dekken';
+  String get api_error_248 => 'Poging om een transactie vrij te geven wanneer het bedrag van de transactie niet voldoende is om de afwikkelingsgerelateerde kosten te dekken';
 
   @override
   String get api_error_249 => 'Poging om een advertentie van het type BUY bij te werken waarvoor buyerSettlementAddress niet is ingesteld zonder de parameter buyerSettlementAddress in te stellen in het updateverzoek';
@@ -8423,7 +8423,7 @@ class I18nNl extends I18n {
   String get api_error_252 => 'Vergoedingsniveau niet opgegeven bij het maken van een advertentie van het type BTC BUY';
 
   @override
-  String get api_error_253 => 'Vergoedingsniveau niet opgegeven bij het bijwerken van een advertentie van het type BTC BUY waarvoor geen vergoedingsniveau is ingesteld';
+  String get api_error_253 => 'Vergoedingsniveau niet opgegeven bij het bijwerken van een BTC BUY advertentie waarvoor geen vergoedingsniveau is ingesteld';
 
   @override
   String get api_error_255 => 'Poging om meldingen te ontvangen met een \'na\'-tijdstempel die buiten het toegestane bereik valt';
@@ -8871,7 +8871,7 @@ class I18nNl extends I18n {
 
   @override
   String reputation_import__step__code__message(Object platform) {
-    return 'Voeg deze code ergens toe aan je openbare $platform profiel. Nadat we de code hebben geverifieerd, kunt u deze verwijderen.';
+    return 'Voeg deze code ergens toe aan uw openbare $platform profiel. Nadat we de code hebben geverifieerd, kunt u deze verwijderen.';
   }
 
   @override
@@ -8889,7 +8889,7 @@ class I18nNl extends I18n {
   String get coupons__coupon__type_here => 'Typ hier uw coupon';
 
   @override
-  String get trade__mark_pay_according => ' Betaal volgens onderstaande betaalgegevens. Als je vragen hebt, stel ze dan aan de verkoper in de chat.';
+  String get trade__mark_pay_according => ' Betaal volgens de onderstaande betaalgegevens. Als u vragen heeft, stel ze dan aan de verkoper in de chat.';
 
   @override
   String get dashboard__trade__status__open => 'Open';
@@ -9267,4 +9267,22 @@ class I18nNl extends I18n {
   String app_503_title(Object val) {
     return '$val App-onderhoud';
   }
+
+  @override
+  String get app_push_new_message => 'Je hebt een nieuw bericht in een transactie';
+
+  @override
+  String get app_push_new_offer => 'Je hebt een nieuw aanbod';
+
+  @override
+  String get app_p => 'Handel gemarkeerd als voltooid';
+
+  @override
+  String get app_push_trade_marked_completed => 'Handel gemarkeerd als voltooid';
+
+  @override
+  String get app_push_trade_cancelled => 'Handel geannuleerd';
+
+  @override
+  String get app_push_trade_disputed => 'Handel betwist';
 }

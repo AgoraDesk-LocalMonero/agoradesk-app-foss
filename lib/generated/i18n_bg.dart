@@ -9267,4 +9267,22 @@ class I18nBg extends I18n {
   String app_503_title(Object val) {
     return '$val Поддръжка на приложението';
   }
+
+  @override
+  String get app_push_new_message => 'Имате ново съобщение в сделка';
+
+  @override
+  String get app_push_new_offer => 'Имате нова оферта';
+
+  @override
+  String get app_p => 'Сделката е отбелязана като завършена';
+
+  @override
+  String get app_push_trade_marked_completed => 'Сделката е отбелязана като завършена';
+
+  @override
+  String get app_push_trade_cancelled => 'Търговията е отменена';
+
+  @override
+  String get app_push_trade_disputed => 'Търговията е спорна';
 }

@@ -9267,4 +9267,22 @@ class I18nAr extends I18n {
   String app_503_title(Object val) {
     return '$val صيانة التطبيق';
   }
+
+  @override
+  String get app_push_new_message => 'لديك رسالة جديدة في التجارة';
+
+  @override
+  String get app_push_new_offer => 'لديك عرض جديد';
+
+  @override
+  String get app_p => 'تم وضع علامة على التجارة كمكتملة';
+
+  @override
+  String get app_push_trade_marked_completed => 'تم وضع علامة على التجارة كمكتملة';
+
+  @override
+  String get app_push_trade_cancelled => 'تم إلغاء التجارة';
+
+  @override
+  String get app_push_trade_disputed => 'التجارة المتنازع عليها';
 }

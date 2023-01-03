@@ -585,16 +585,16 @@
     "app_select_buyer_seller",
     "app_default_tab",
     "app_your_ads",
-    "app_503_title"
+    "app_503_title",
+    "app_push_new_message",
+    "app_push_new_offer",
+    "app_p",
+    "app_push_trade_marked_completed",
+    "app_push_trade_cancelled",
+    "app_push_trade_disputed"
   ],
 
   "pt": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_your_ads",
-    "app_503_title"
-  ],
-
-  "pt_BR": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
   ],
 
@@ -1191,7 +1191,13 @@
     "app_select_buyer_seller",
     "app_default_tab",
     "app_your_ads",
-    "app_503_title"
+    "app_503_title",
+    "app_push_new_message",
+    "app_push_new_offer",
+    "app_p",
+    "app_push_trade_marked_completed",
+    "app_push_trade_cancelled",
+    "app_push_trade_disputed"
   ],
 
   "zh_CN": [
@@ -1772,6 +1778,12 @@
     "app_select_buyer_seller",
     "app_default_tab",
     "app_your_ads",
-    "app_503_title"
+    "app_503_title",
+    "app_push_new_message",
+    "app_push_new_offer",
+    "app_p",
+    "app_push_trade_marked_completed",
+    "app_push_trade_cancelled",
+    "app_push_trade_disputed"
   ]
 }

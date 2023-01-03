@@ -9267,4 +9267,22 @@ class I18nEs extends I18n {
   String app_503_title(Object val) {
     return '$val Mantenimiento de la aplicación';
   }
+
+  @override
+  String get app_push_new_message => 'Tienes un nuevo mensaje en un comercio';
+
+  @override
+  String get app_push_new_offer => 'Tienes una nueva oferta';
+
+  @override
+  String get app_p => 'Comercial marcado como completado';
+
+  @override
+  String get app_push_trade_marked_completed => 'Comercial marcado como completado';
+
+  @override
+  String get app_push_trade_cancelled => 'Comercio cancelado';
+
+  @override
+  String get app_push_trade_disputed => 'Comercio disputado';
 }

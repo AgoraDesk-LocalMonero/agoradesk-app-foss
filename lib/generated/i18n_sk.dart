@@ -9267,4 +9267,22 @@ class I18nSk extends I18n {
   String app_503_title(Object val) {
     return '$val Údržba aplikácie';
   }
+
+  @override
+  String get app_push_new_message => 'Máte novú správu v obchode';
+
+  @override
+  String get app_push_new_offer => 'Máte novú ponuku';
+
+  @override
+  String get app_p => 'Obchod označený ako ukončený';
+
+  @override
+  String get app_push_trade_marked_completed => 'Obchod označený ako ukončený';
+
+  @override
+  String get app_push_trade_cancelled => 'Obchod zrušený';
+
+  @override
+  String get app_push_trade_disputed => 'Obchod sporný';
 }

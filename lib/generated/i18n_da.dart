@@ -9267,4 +9267,22 @@ class I18nDa extends I18n {
   String app_503_title(Object val) {
     return '$val Appvedligeholdelse';
   }
+
+  @override
+  String get app_push_new_message => 'Du har en ny besked i en handel';
+
+  @override
+  String get app_push_new_offer => 'Du har et nyt tilbud';
+
+  @override
+  String get app_p => 'Handel markeret som afsluttet';
+
+  @override
+  String get app_push_trade_marked_completed => 'Handel markeret som afsluttet';
+
+  @override
+  String get app_push_trade_cancelled => 'Handel annulleret';
+
+  @override
+  String get app_push_trade_disputed => 'Handel omstridt';
 }

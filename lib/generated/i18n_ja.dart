@@ -9267,4 +9267,22 @@ class I18nJa extends I18n {
   String app_503_title(Object val) {
     return '$val アプリのメンテナンス';
   }
+
+  @override
+  String get app_push_new_message => '取引に新しいメッセージがあります';
+
+  @override
+  String get app_push_new_offer => '新しいオファーがあります';
+
+  @override
+  String get app_p => '完了済みとしてマークされたトレード';
+
+  @override
+  String get app_push_trade_marked_completed => '完了済みとしてマークされたトレード';
+
+  @override
+  String get app_push_trade_cancelled => 'トレードキャンセル';
+
+  @override
+  String get app_push_trade_disputed => '貿易係争中';
 }
