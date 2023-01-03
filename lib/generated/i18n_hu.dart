@@ -1338,7 +1338,7 @@ class I18nHu extends I18n {
 
   @override
   String description250Sbguide250Sblocal57Sbagoradesk(Object appName) {
-    return 'Ez az útmutató segít megérteni, hogyan lehet névtelenül vásárolni vagy eladni kriptovalutákat készpénzért személyes találkozókon keresztül. Az ${appName}nél azonosítóellenőrzés nélkül is kereskedhet kriptovalutákkal. ';
+    return 'Ez az útmutató segít megérteni, hogyan lehet névtelenül vásárolni vagy eladni kriptovalutákat készpénzért személyes találkozókon keresztül. Az $appName nél azonosítóellenőrzés nélkül is kereskedhet kriptovalutákkal. ';
   }
 
   @override
@@ -1857,12 +1857,12 @@ class I18nHu extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return 'A $appName egy peer-to-peer Monero tőzsde. Mi egy piactér vagyunk, ahol a felhasználók Monerot vásárolhatnak és adhatnak el egymásnak. A kereskedőknek nevezett felhasználók hirdetéseket adnak fel az általuk kívánt árral és fizetési móddal. Hirdetéseket böngészhet weboldalunkon, megkeresheti a kívánt fizetési módot. Több mint 60 különböző fizetési móddal találhat kereskedőket, akik online vásárolnak és adnak el Monerot. Ha még nem ismeri a $appNamet, és Monerot szeretne vásárolni, kérjük, tekintse meg a vásárlási útmutatónkat.';
+    return 'A $appName egy peer-to-peer Monero tőzsde. Mi egy piactér vagyunk, ahol a felhasználók Monerot vásárolhatnak és adhatnak el egymásnak. A kereskedőknek nevezett felhasználók hirdetéseket adnak fel az általuk kívánt árral és fizetési móddal. Hirdetéseket böngészhet weboldalunkon, megkeresheti a kívánt fizetési módot. Több mint 60 különböző fizetési móddal találhat kereskedőket, akik online vásárolnak és adnak el Monerot. Ha még nem ismeri a $appName t, és Monerot szeretne vásárolni, kérjük, tekintse meg a vásárlási útmutatónkat.';
   }
 
   @override
   String faq250Sbanswer8722Sb057Sbagoradesk(Object appName) {
-    return 'Az $appName egy peer-to-peer kriptovaluta OTC tőzsde. Mi egy piactér vagyunk, ahol a felhasználók kriptovalutákat vásárolhatnak és adhatnak el egymásnak.A kereskedőknek nevezett felhasználók hirdetéseket adnak fel az általuk kívánt árral és fizetési móddal. Hirdetéseket böngészhet weboldalunkon, megkeresheti a kívánt fizetési módot. Több mint 60 különböző fizetési móddal találhat kereskedőket, akik online vásárolnak és adnak el kriptovalutákat. Ha még nem ismeri az $appNameet, és kriptovalutákat szeretne vásárolni, kérjük, tekintse meg útmutatóinkat.';
+    return 'Az $appName egy peer-to-peer kriptovaluta OTC tőzsde. Mi egy piactér vagyunk, ahol a felhasználók kriptovalutákat vásárolhatnak és adhatnak el egymásnak.A kereskedőknek nevezett felhasználók hirdetéseket adnak fel az általuk kívánt árral és fizetési móddal. Hirdetéseket böngészhet weboldalunkon, megkeresheti a kívánt fizetési módot. Több mint 60 különböző fizetési móddal találhat kereskedőket, akik online vásárolnak és adnak el kriptovalutákat. Ha még nem ismeri az $appName et, és kriptovalutákat szeretne vásárolni, kérjük, tekintse meg útmutatóinkat.';
   }
 
   @override
@@ -1896,12 +1896,12 @@ class I18nHu extends I18n {
 
   @override
   String faq250Sbanswer8722Sb11(Object appName, Object walletPage) {
-    return 'Ahhoz, hogy Monerot adhasson el $appNamen, először küldenie kell egy kevés Monerot a vitarendezési letéthez $appName pénztárcába. Ehhez szüksége lesz egy $appName fiókra, hozzáférésre egy másik Monero pénztárcában lévő Monerohoz, és ismernie kell $appName fogadó címét. $appName fogadócímének megtalálásához keresse fel a $walletPage oldalt. Az oldal teteje három részre van osztva, így egyszerre küldhet, fogadhat Monerot és megtekintheti tranzakcióit. A \"Fogadás\" lapon találja a fogadó címét. Amint megtudta a $appName fogadási címét, a másik pénztárcájából Monerot küldhet $appName címére.';
+    return 'Ahhoz, hogy Monerot adhasson el $appName n, először küldenie kell egy kevés Monerot a vitarendezési letéthez $appName pénztárcába. Ehhez szüksége lesz egy $appName fiókra, hozzáférésre egy másik Monero pénztárcában lévő Monerohoz, és ismernie kell $appName fogadó címét. $appName fogadócímének megtalálásához keresse fel a $walletPage oldalt. Az oldal teteje három részre van osztva, így egyszerre küldhet, fogadhat Monerot és megtekintheti tranzakcióit. A \"Fogadás\" lapon találja a fogadó címét. Amint megtudta a $appName fogadási címét, a másik pénztárcájából Monerot küldhet $appName címére.';
   }
 
   @override
   String faq250Sbanswer8722Sb1157Sbagoradesk(Object appName, Object walletPage) {
-    return 'Ahhoz, hogy kriptovalutákat adhasson el $appNameen, először küldenie kell valamennyit a vitarendezési letéthez $appName pénztárcájába. Ehhez szüksége lesz egy $appName fiókra, hozzáférésre egy másik pénztárcában lévő valutához , és ismernie kell $appName fogadási címét. $appName fogadócímének megtalálásához látogassa meg a $walletPage oldalt. Válassza ki a megfelelő kriptovalutát; a pénztárca oldal teteje három részre van osztva, így egyszerre küldhet, fogadhat kriptovalutát és megtekintheti tranzakcióit. A „Fogadás” lapon találja a fogadó címét. Amint megtudta a $appName fogadási címét, a másik pénztárcájából pénzt küldhet $appName címére.';
+    return 'Ahhoz, hogy kriptovalutákat adhasson el $appName en, először küldenie kell valamennyit a vitarendezési letéthez $appName pénztárcájába. Ehhez szüksége lesz egy $appName fiókra, hozzáférésre egy másik pénztárcában lévő valutához , és ismernie kell $appName fogadási címét. $appName fogadócímének megtalálásához látogassa meg a $walletPage oldalt. Válassza ki a megfelelő kriptovalutát; a pénztárca oldal teteje három részre van osztva, így egyszerre küldhet, fogadhat kriptovalutát és megtekintheti tranzakcióit. A „Fogadás” lapon találja a fogadó címét. Amint megtudta a $appName fogadási címét, a másik pénztárcájából pénzt küldhet $appName címére.';
   }
 
   @override
@@ -2467,7 +2467,7 @@ class I18nHu extends I18n {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbfour8722Sb3(Object torBrowser, Object appName, Object torLink) {
-    return 'A használatához töltse le és telepítse a ${torBrowser}t a hivatalos weboldalról. Az elindítást követően az ${appName}et speciális Tor portálunkon keresztül érheti el: $torLink';
+    return 'A használatához töltse le és telepítse a ${torBrowser}t a hivatalos weboldalról. Az elindítást követően az $appName et speciális Tor portálunkon keresztül érheti el: $torLink';
   }
 
   @override
@@ -2596,7 +2596,7 @@ class I18nHu extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount ${appName}n. Ingyenes és biztonságos online Monero pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
+    return '$registerAnaccount $appName n. Ingyenes és biztonságos online Monero pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
   }
 
   @override
@@ -2604,7 +2604,7 @@ class I18nHu extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount ${appName}en. Ingyenes és biztonságos online kriptovaluta pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
+    return '$registerAnaccount $appName en. Ingyenes és biztonságos online kriptovaluta pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
   }
 
   @override
