@@ -1726,7 +1726,7 @@ class I18nIt extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Il valore del prezzo non è stato impostato correttamente';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Combinazioni sbagliate tra paese, metodo di pagamento e valuta';
+  String get error250Sbpost8722Sbad250Sb86 => 'Combinazioni non valide di paese, metodo di pagamento e valuta';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Questo metodo di pagamento non è valido per il Paese selezionato';
@@ -3251,7 +3251,7 @@ class I18nIt extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Come funzioneranno gli Atomic Swap in Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Nota:</b> si consiglia vivamente al lettore di leggere i nostri articoli <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Why Monero Has A Tail Emission\"</a> e <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Monero Mining: What Makes RandomX così speciale \"</a>. Questo articolo si basa sui concetti presentati qui.</i></p>\n<p>Ogni volta che le persone discutono dei problemi con la blockchain, una delle prime parole che apparirà sarà \"ridimensionamento\". Non è un segreto che le blockchain non scalino bene, ma la maggior parte delle persone non sa perché.</p>\n<p>La verità è che il ridimensionamento è in realtà un termine generico che copre due diverse categorie: supporto del protocollo e supporto tecnologico in un dato momento. In questo articolo, concentreremo la nostra attenzione su uno, il supporto del protocollo è fondamentalmente una misura di quante transazioni il protocollo può gestire in un dato momento.</p>\n<p>Bitcoin ha un limite di dimensione del blocco, il che significa che una volta che un numero sufficiente di transazioni è incluso in un blocco, eventuali transazioni aggiuntive dovranno attendere in linea per il blocco successivo. Un\'analogia utile sarebbe pensare a un treno. Un treno si ferma alla stazione e quelli in fila entrano in fila. Una volta che il treno è pieno, chiunque sia rimasto fuori dovrà aspettare il prossimo.</p>\n<p>Bitcoin utilizza le commissioni per determinare chi entra o meno nel blocco. Tornando all\'analogia del treno, si può immaginare che un potenziale passeggero, che sta per essere lasciato indietro, offre all\'ingegnere del treno cinque dollari per dargli un posto a sedere. Altri passeggeri seguono l\'esempio e alla fine c\'è una guerra di offerte per vedere chi ottiene quali posti. Spetta al conducente decidere se vuole onorare la politica del primo arrivato, primo servito, ma è nel suo miglior interesse finanziario massimizzare il suo reddito prendendo a bordo i migliori offerenti.</p>\n<p>In questa analogia, i minatori sono i macchinisti. Possono includere tutte le transazioni che desiderano nel blocco, ma generalmente sceglieranno quelle con le commissioni più pagate.</p>\n<p>In alternativa, se i blocchi non sono molto pieni, le persone non sono incentivate a pagare tariffe elevate perché ci sono molti posti liberi da risparmiare.</p>\n<p>Nel pieno del boom delle criptovalute del 2017, Bitcoin è stato inondato di transazioni e le commissioni sono salite alle stelle per coloro che volevano essere inclusi nel blocco successivo, o in qualsiasi blocco del prossimo futuro per quella materia. Coloro che non erano disposti a pagare commissioni elevate hanno visto le loro transazioni respinte per ore, giorni o addirittura abbandonare del tutto la coda.</p>\n<p>Questa è stata una visione straziante di come se la sarebbe cavata Bitcoin se si parlasse spesso di \"adozione di massa\". Se Bitcoin dovesse essere utilizzato dalle masse, le cose andrebbero anche peggio che nel 2017, e Bitcoin sarebbe inaccessibile a tutti tranne che ai ricchi, semplicemente perché il throughput è piccolo a causa di una dimensione del blocco fissa, causando la presa del mercato delle commissioni .</p>\n<p>Monero lo aveva previsto e voleva fare qualcosa di diverso. Quindi gli sviluppatori di Monero hanno implementato un blocco dinamico.</p>\n<p>Fondamentalmente, Monero ha anche un limite di dimensione del blocco, ma è un limite morbido. Quando la linea di transazioni in attesa diventa troppo lunga, i minatori possono aumentare la dimensione dei blocchi. Con la nostra analogia con il treno, puoi immaginare di aggiungere più vagoni per adattarsi ai passeggeri extra. Dopo che la coda è vuota, i blocchi tornano alla loro dimensione originale andando avanti.</p>\n<p>Se questa sembra un\'idea chiara, sembra ragionevole chiedersi perché Monero è l\'unica criptovaluta che l\'ha implementata. Perché non aggiungerlo su Bitcoin in modo da porre fine ai problemi di throughput?</p>\n<p>Sfortunatamente, questo non è possibile. Ci sono diversi motivi e faremo del nostro meglio per spiegarli.</p>\n<p> È sempre nell\'interesse di un minatore avere blocchi di grandi dimensioni. Con blocchi di grandi dimensioni possono adattarsi a più transazioni e guadagnare di più dalle commissioni, nonché dai premi del blocco. Questo ha il potenziale per portare ad attacchi di spam, in cui qualcuno invia molte piccole transazioni, con piccole commissioni, per gonfiare la catena. Il minatore aumenterebbe semplicemente la dimensione del blocco includendoli tutti perché il denaro è denaro, non importa quanto piccolo. Ciò porterebbe a blocchi costantemente grandi con pochi vantaggi economici. Bitcoin risolve questo problema limitando artificialmente la dimensione del blocco, generando così un mercato delle commissioni. Gli aggressori di spam dovrebbero pagare più delle tariffe degli altri utenti e non è più economico. Ma questo significa che i blocchi si riempiono lasciando alcune transazioni in attesa come menzionato sopra.</p>\n<p>Quindi, come può Monero avere blocchi dinamici ma evitare attacchi di spam? La risposta è semplice, ma intelligente. Una penalità sulla ricompensa del blocco viene introdotta quando un blocco è più grande del normale. Se un minatore vuole aumentare la dimensione del blocco, la ricompensa che otterrà trovando quel blocco sarà inferiore a quella che altrimenti riceverebbe. Quindi aumenteranno la dimensione del blocco solo quando le commissioni di transazione pagate degli utenti supereranno la parte persa della ricompensa del blocco. Ad esempio, se il minatore perdesse 0,5 XMR aumentando la ricompensa del blocco e la somma delle commissioni di transazione pagate sarebbe 0,4 XMR, allora ci sarebbe una perdita netta di 0,1 XMR se aumentasse la dimensione, quindi non lo farebbero fallo. Al contrario, se le commissioni di transazione totali si sommassero a 0,7 XMR, ci sarebbe un guadagno netto di 0,2 XMR, anche se perdono 0,5 XMR dalla penalità di ricompensa del blocco, quindi il minatore aumenterà le dimensioni.</p>\n<p>Questi blocchi dinamici consentono alla rete di crescere in modo organico, senza limitare in modo aritico la dimensione del blocco per creare un mercato a pagamento forzato, evitando comunque gli attacchi di spam. Ci sono molti altri punti di vista da cui possiamo vedere questa idea e più motivi per cui non sarebbe possibile aggiungere a Bitcoin, ma per ora, speriamo che il lettore abbia una comprensione di come Monero elude molti dei problemi in Bitcoin e i suoi derivati e come prevede di ridimensionare il suo rendimento in futuro.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Nota:</b> Si consiglia vivamente al lettore di leggere i nostri articoli <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Perché Monero ha un\'emissione di coda\"</a> e <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“Monero Mining: What Makes RandomX così speciale”</a>. Questo articolo si basa sui concetti qui presentati.</i></p>\n\n<p>Ogni volta che le persone discutono dei problemi con la blockchain, una delle prime parole a comparire sarà \"ridimensionamento\". Non è un segreto che le blockchain non scalano bene, ma la maggior parte delle persone non sa perché.</p>\n\n<p>La verità è che il ridimensionamento è in realtà un termine generico che copre due diverse categorie: supporto del protocollo e supporto tecnologico in un determinato momento. In questo articolo, focalizzeremo la nostra attenzione su uno, il supporto del protocollo è fondamentalmente una misura di quante transazioni il protocollo può gestire in un dato momento.</p>\n\n<p>Bitcoin ha un limite di dimensione del blocco, il che significa che una volta che un numero sufficiente di transazioni è stato incluso in un blocco, eventuali transazioni aggiuntive dovranno attendere in fila per il blocco successivo. Un\'analogia utile sarebbe pensare a un treno. Un treno si ferma alla stazione e quelli in fila entrano. Una volta che il treno è pieno, chiunque sia rimasto fuori dovrà aspettare il prossimo.</p>\n\n<p>Bitcoin utilizza le commissioni per determinare chi entra o meno nel blocco. Tornando all\'analogia del treno, si può immaginare che un potenziale passeggero, che sta per essere lasciato indietro, offra cinque dollari al macchinista per dargli un posto. Altri passeggeri seguono l\'esempio e alla fine c\'è una guerra di offerte per vedere chi ottiene quali posti. Spetta all\'autista decidere se vuole onorare la politica del primo arrivato, primo servito, ma è nel suo migliore interesse finanziario massimizzare le sue entrate prendendo a bordo i migliori offerenti.</p>\n\n<p>In questa analogia, i minatori sono i macchinisti. Possono includere qualsiasi transazione desiderino nel blocco, ma in genere sceglieranno quelle con le commissioni più alte.</p>\n\n<p>In alternativa, se i blocchi non sono molto pieni, le persone non hanno alcun incentivo a pagare tariffe elevate perché ci sono molti posti liberi da risparmiare.</p>\n\n<p>Al culmine del boom delle criptovalute del 2017, Bitcoin è stato inondato di transazioni e le commissioni sono salite alle stelle per coloro che volevano essere inclusi nel blocco successivo o in qualsiasi blocco del prossimo futuro. Coloro che non erano disposti a pagare commissioni elevate hanno visto le loro transazioni rimandare per ore, giorni o addirittura abbandonare del tutto la coda.</p>\n\n<p>Questa è stata una visione straziante di come se la sarebbe cavata Bitcoin se si fosse verificata la tanto discussa \"adozione di massa\". Se Bitcoin dovesse essere utilizzato dalle masse, le cose andrebbero anche peggio che nel 2017, e Bitcoin sarebbe inaccessibile a chiunque tranne che ai ricchi, semplicemente perché il throughput è ridotto a causa di una dimensione del blocco fissa, facendo sì che il mercato delle commissioni prenda il sopravvento .</p>\n\n<p>Monero lo aveva previsto e voleva fare qualcosa di diverso. Quindi gli sviluppatori di Monero hanno implementato un blocco dinamico.</p>\n\n<p>Fondamentalmente, Monero ha anche un limite di dimensione del blocco, ma è un limite morbido. Quando la fila delle transazioni in attesa diventa troppo lunga, i minatori possono aumentare la dimensione dei blocchi. Con la nostra analogia con il treno, puoi immaginare di aggiungere più vagoni per adattarsi ai passeggeri in più. Dopo che la coda è vuota, i blocchi tornano alla loro dimensione originale andando avanti.</p>\n\n<p>Se questa sembra un\'idea chiara, sembra ragionevole chiedersi perché Monero sia l\'unica criptovaluta che lo ha implementato. Perché non aggiungerlo su Bitcoin in modo da porre fine ai problemi di throughput?</p>\n\n<p>Sfortunatamente, questo non è possibile. I motivi sono diversi e faremo del nostro meglio per spiegarli.</p>\n\n<p> È sempre nell\'interesse di un minatore avere blocchi di grandi dimensioni. Con blocchi di grandi dimensioni possono inserirsi in più transazioni e guadagnare di più dalle commissioni, oltre che dalle ricompense del blocco. Questo ha il potenziale per portare ad attacchi di spam, in cui qualcuno invia molte piccole transazioni, con piccole commissioni, per gonfiare la catena. I minatori aumenterebbero semplicemente la dimensione del blocco includendoli tutti perché il denaro è denaro, non importa quanto piccolo. Ciò porterebbe a blocchi costantemente grandi con scarsi vantaggi economici. Bitcoin risolve questo problema limitando artificialmente la dimensione del blocco, generando così un mercato a pagamento. Gli aggressori di spam dovrebbero pagare più degli altri utenti in tasse, e non è più economico. Ma questo significa che i blocchi si riempiono lasciando alcune transazioni in attesa come menzionato sopra.</p>\n\n<p>Quindi, come può Monero avere blocchi dinamici ma evitare attacchi di spam? La risposta è semplice, ma intelligente. Viene introdotta una penalità sulla ricompensa del blocco quando un blocco è più grande del normale. Se un minatore desidera aumentare la dimensione del blocco, la ricompensa che otterrà trovando quel blocco sarà inferiore a quella che riceverebbe altrimenti. Quindi aumenteranno la dimensione del blocco solo quando le commissioni di transazione pagate dagli utenti superano la parte persa della ricompensa del blocco. Ad esempio, se il minatore perdesse 0,5 XMR aumentando la dimensione del blocco e la somma delle commissioni di transazione pagate fosse 0,4 XMR, allora ci sarebbe una perdita netta di 0,1 XMR se aumentassero la dimensione, quindi lo farebbero non farlo. Al contrario, se le commissioni di transazione totali si sommassero a 0,7 XMR, allora ci sarebbe un guadagno netto di 0,2 XMR, anche se perdono lo 0,5 XMR dalla penalità della ricompensa del blocco, quindi il minatore aumenterà la dimensione.</p>\n\n<p>Questi blocchi dinamici consentono alla rete di crescere in modo organico, senza limitare in modo aritificativo la dimensione del blocco per creare un mercato a pagamento forzato, evitando comunque gli attacchi di spam. Ci sono molte altre angolazioni da cui possiamo vedere questa idea e più motivi per cui non sarebbe possibile aggiungere a Bitcoin, ma per ora, speriamo che il lettore abbia una comprensione di come Monero eluda molti dei problemi in Bitcoin e i suoi derivati e come intende scalare il suo throughput nel futuro.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Ogni volta che le persone discutono dei problemi con la blockchain, una delle prime parole che apparirà sarà \"ridimensionamento\". Monero si distingue per risolvere questo problema.';
@@ -3551,7 +3551,7 @@ class I18nIt extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Scopo';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Per il contesto, parliamo un po \'dell\'hardware di mining. I minatori usano i computer per fare il lavoro, ma sappiamo tutti che non tutti i computer sono fatti allo stesso modo. Alcuni computer sono abbastanza potenti da gestire reti di intelligenza artificiale o giochi intensi, mentre altri hanno difficoltà anche con compiti semplici. Queste differenze nella potenza di calcolo influiscono anche sulla velocità di hash rate o sulla velocità con cui cercano soluzioni a blocchi. <br/><br/>Ma anche queste differenze tra i computer impallidiscono rispetto ai tassi di hash di hardware specializzato, altrimenti noto come ASIC (Application Specific Integrated Circuits), che supera i computer normali di diversi ordini di grandezza.<br/><br/>Dedichiamo un po \'di tempo a esplorare ciò che rende gli ASIC così potenti. Immagina che tutti i computer cadano da qualche parte in uno spettro, che spazia dall\'essere in grado di fare molte cose, ma niente di buono, a fare solo una cosa, ma farlo molto bene. CPU e ASIC sono alle estremità opposte di questo spettro.<br/><br/>Le CPU che si trovano in tutti i computer standard sono alla prima estremità. Possono fare molte cose, come navigare sul Web, giocare o riprodurre video, ma non farlo particolarmente bene. Ma questa flessibilità ha un costo in termini di efficienza.<br/><br/>Gli ASIC sono dall\'altra parte, dove possono solo una cosa, ma farlo a un ritmo incredibile. Possono svolgere solo una funzione matematica, ma poiché possono ignorare tutto il resto, i guadagni in termini di prestazioni sono astronomici. Questa efficienza, tuttavia, viene a scapito della flessibilità, quindi se la funzione cambia anche leggermente - un esempio è x + y = z cambia in 2x + y = z - allora l\'ASIC smetterà di funzionare del tutto. <br/><br/>Non tutti possiedono un ASIC, ma tutti possiedono i computer. Questo può portare a un vantaggio ingiusto.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Per il contesto, parliamo un po\' dell\'hardware di mining. I minatori usano i computer per fare il lavoro, ma sappiamo tutti che non tutti i computer sono fatti allo stesso modo. Alcuni computer sono abbastanza potenti da eseguire reti di intelligenza artificiale o giochi intensi, mentre altri hanno difficoltà anche con compiti semplici. Queste differenze nella potenza di calcolo influenzano anche l\'hash rate, ovvero la velocità con cui cercano soluzioni a blocchi. <br/><br/>\nMa anche queste differenze tra i computer impallidiscono rispetto ai tassi di hash dell\'hardware specializzato, altrimenti noto come ASIC (Application Specific Integrated Circuits), che superano i normali computer di diversi ordini di grandezza.<br/><br/>\nPrendiamoci del tempo per esplorare cosa rende gli ASIC così potenti. Immagina che tutti i computer cadano da qualche parte in uno spettro, che va dall\'essere in grado di fare molte cose, ma niente bene, al fare solo una cosa, ma farla molto bene. CPU e ASIC si trovano agli estremi opposti di questo spettro.<br/><br/>\nLe CPU che si trovano in tutti i computer standard sono alla prima estremità. Possono fare molte cose, come navigare sul Web, giocare o eseguire il rendering di video, ma non ne fanno nessuna particolarmente bene. Ma questa flessibilità va a discapito dell\'efficienza.<br/><br/>\nGli ASIC sono dall\'altra parte, dove possono fare solo una cosa, ma farlo a un ritmo incredibile. Possono eseguire solo una funzione matematica, ma poiché possono ignorare tutto il resto, i guadagni in termini di prestazioni sono astronomici. Questa efficienza, tuttavia, va a scapito della flessibilità, quindi se la funzione cambia anche leggermente - un esempio è x + y = z cambia in 2x + y = z - allora l\'ASIC cesserà di funzionare del tutto. <br/><br/>\nNon tutti possiedono un ASIC, ma tutti possiedono computer. Questo può portare a un vantaggio sleale.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'sfondo';
@@ -7666,7 +7666,7 @@ class I18nIt extends I18n {
   String get you_sell => 'Vendete';
 
   @override
-  String get you_buy => 'Tu compri';
+  String get you_buy => 'Voi comprate';
 
   @override
   String get you_receive => 'Si riceve';
@@ -7790,10 +7790,10 @@ class I18nIt extends I18n {
   String get api_error_77 => 'Fondi insufficienti per effettuare il trasferimento interno per l\'importo richiesto';
 
   @override
-  String get api_error_103 => 'Richiesta di scambio per l\'annuncio il cui poster sta vendendo vacanze';
+  String get api_error_103 => 'Richiesta di scambio per l\'annuncio il cui poster è in vendita per le vacanze';
 
   @override
-  String get api_error_105 => 'Il poster dell\'annuncio per il quale viene richiesta la transazione non ha abbastanza saldo per finanziare l\'escrow';
+  String get api_error_105 => 'Il poster dell\'annuncio per il quale viene richiesto lo scambio non ha un saldo sufficiente per finanziare l\'escrow';
 
   @override
   String get api_error_107 => 'Cercare di tracciare la liquidità senza impostare il maxAmount';
@@ -7805,7 +7805,7 @@ class I18nIt extends I18n {
   String get api_error_138 => 'Tentativo di convalidare 2FA fornendo un OTP errato';
 
   @override
-  String get api_error_139 => 'Password o OTP errati quando si tenta di disabilitare 2FA';
+  String get api_error_139 => 'Password o OTP non corretti durante il tentativo di disabilitare 2FA';
 
   @override
   String get api_error_140 => 'OTP non corretto quando si tenta di prelevare monete dal portafoglio';
@@ -7874,13 +7874,13 @@ class I18nIt extends I18n {
   String get api_error_238 => 'Livello di commissione non specificato per il prelievo esterno di Bitcoin';
 
   @override
-  String get api_error_239 => 'Password errata quando si tenta di rilasciare uno scambio';
+  String get api_error_239 => 'Password errata durante il tentativo di rilasciare uno scambio';
 
   @override
-  String get api_error_243 => 'L\'indirizzo interno di AgoraDesk non può essere utilizzato per il regolamento commerciale. Inserisci un indirizzo XMR esterno, non AgoraDesk per continuare.';
+  String get api_error_243 => 'L\'indirizzo interno dell\'AgoraDesk non può essere utilizzato per il regolamento degli scambi. Inserisci un indirizzo XMR esterno, non AgoraDesk per continuare.';
 
   @override
-  String get api_error_254 => 'Tentativo di inviare un prelievo a un indirizzo e un importo identici negli ultimi 10 minuti';
+  String get api_error_254 => 'Tentativo di inviare un prelievo a un indirizzo e importo identici negli ultimi 10 minuti';
 
   @override
   String get api_error_260 => 'Tentativo di pubblicare una nota su un utente che non esiste';
@@ -7892,13 +7892,13 @@ class I18nIt extends I18n {
   String get api_error_262 => 'Tentativo di ottenere una nota su un utente che non esiste';
 
   @override
-  String get api_error_263 => 'Tentativo di ottenere una nota per conto proprio';
+  String get api_error_263 => 'Tentativo di ottenere una nota sul proprio account';
 
   @override
   String get api_error_264 => 'Tentativo di eliminare una nota su un utente che non esiste';
 
   @override
-  String get api_error_265 => 'Tentativo di eliminare una nota sul proprio account';
+  String get api_error_265 => 'Tentativo di eliminare una nota sul tuo account';
 
   @override
   String get api_error_267 => 'Tentativo di eliminare una nota utente che non esiste';
@@ -7916,22 +7916,22 @@ class I18nIt extends I18n {
   String get api_error_45 => 'Non puoi avere sia \"first_time_limit_asset\" che \"first_time_limit_TICKER\" nella tua richiesta. Rimuovere uno di loro (sono intercambiabili).';
 
   @override
-  String get api_error_46 => 'La richiesta deve contenere O un corpo di richiesta applicazione/json con un parametro \"msg\" OPPURE un corpo di richiesta multipart/form-data con il file immagine elencato sotto il parametro \"documento\"';
+  String get api_error_46 => 'La richiesta deve contenere O un corpo della richiesta application/json con un parametro \"msg\" OPPURE un corpo della richiesta multipart/form-data con il file immagine elencato sotto il parametro \"document\"';
 
   @override
   String get api_error_47 => 'L\'utente con quel nome utente esiste già';
 
   @override
-  String get api_error_48 => 'L\'utente con quell\'e-mail esiste già';
+  String get api_error_48 => 'L\'utente con quell\'indirizzo email esiste già';
 
   @override
-  String get api_error_50 => 'Tentativo di inviare un\'e-mail a un utente senza un set di e-mail';
+  String get api_error_50 => 'Tentativo di inviare un\'e-mail a un utente senza un\'e-mail impostata';
 
   @override
   String get api_error_51 => 'Il token fornito per la verifica dell\'e-mail viene fornito a un utente che non esiste';
 
   @override
-  String get api_error_52 => 'Il token fornito per la verifica dell\'e-mail non è valido';
+  String get api_error_52 => 'Il token fornito per la verifica dell\'email non è valido';
 
   @override
   String get api_error_53 => 'L\'e-mail nel token non corrisponde all\'e-mail corrente nel database';
@@ -7943,7 +7943,7 @@ class I18nIt extends I18n {
   String get api_error_55 => 'Il token fornito per la reimpostazione della password non è valido';
 
   @override
-  String get api_error_56 => 'Tentativo di inviare un\'e-mail di reimpostazione della password a un\'e-mail che non è nel database';
+  String get api_error_56 => 'Tentativo di inviare un\'e-mail di reimpostazione della password a un\'e-mail che non è presente nel database';
 
   @override
   String get api_error_57 => 'Il token fornito per la reimpostazione della password non è un token di reimpostazione';
@@ -7952,88 +7952,88 @@ class I18nIt extends I18n {
   String get api_error_58 => 'Tentativo di inviare un\'e-mail di reimpostazione della password a un utente con un\'e-mail non verificata';
 
   @override
-  String get api_error_59 => 'Tentativo di reimpostare una password per un utente con un\'e-mail non verificata';
+  String get api_error_59 => 'Tentativo di reimpostare una password per un utente con un indirizzo email non verificato';
 
   @override
   String get api_error_62 => 'Non esiste alcun account con il nome utente fornito per la richiesta di dati pubblici dell\'account';
 
   @override
-  String get api_error_63 => 'Tentativo di caricare un file di un tipo non consentito';
+  String get api_error_63 => 'Tentativo di caricare file di un tipo proibito';
 
   @override
-  String get api_error_64 => 'Tentativo di contrassegnare una notifica inesistente come letta';
+  String get api_error_64 => 'Tentativo di contrassegnare come letta una notifica inesistente';
 
   @override
-  String get api_error_65 => 'Tentativo di contrassegnare una notifica già letta come letta';
+  String get api_error_65 => 'Tentativo di contrassegnare come letta una notifica già letta';
 
   @override
-  String get api_error_66 => 'Tentativo di caricare l\'allegato della chat per fare trading che non esiste';
+  String get api_error_66 => 'Tentativo di caricare un allegato di chat per fare trading che non esiste';
 
   @override
-  String get api_error_67 => 'Tentativo di inviare un messaggio di chat per fare trading che non esiste';
+  String get api_error_67 => 'Tentativo di inviare un messaggio di chat a uno scambio che non esiste';
 
   @override
-  String get api_error_68 => 'Tentativo di ottenere un elenco di messaggi di chat di scambio che non esiste';
+  String get api_error_68 => 'Tentativo di ottenere un elenco di scambi di messaggi di chat che non esiste';
 
   @override
-  String get api_error_69 => 'Tentativo di ottenere un messaggio di chat che non esiste';
+  String get api_error_69 => 'Tentativo di ricevere un messaggio di chat che non esiste';
 
   @override
   String get api_error_70 => 'Tentativo di ottenere l\'indirizzo del portafoglio dell\'account che non esiste';
 
   @override
-  String get api_error_71 => 'Tentativo di ottenere transazioni di un account che non esiste';
+  String get api_error_71 => 'Tentativo di ottenere transazioni da un conto che non esiste';
 
   @override
   String get api_error_72 => 'Tentativo di prelevare fondi da un conto che non esiste';
 
   @override
-  String get api_error_78 => 'Tentativo di ottenere annunci con una combinazione illegale di parametri';
+  String get api_error_78 => 'Tentativo di ottenere annunci con una combinazione di parametri non valida';
 
   @override
   String get api_error_79 => 'L\'ID annuncio richiesto non esiste';
 
   @override
-  String get api_error_80 => 'Non sono stati impostati sia lat che lon nella richiesta di aggiornamento/creazione dell\'annuncio';
+  String get api_error_80 => 'Non sono state impostate sia lat che lon nella richiesta di aggiornamento/creazione dell\'annuncio';
 
   @override
-  String get api_error_81 => 'Non è stata impostata la formula del prezzo durante la pubblicazione dell\'annuncio';
+  String get api_error_81 => 'Non ho impostato la formula del prezzo durante la pubblicazione dell\'annuncio';
 
   @override
-  String get api_error_82 => 'Tentativo di impostare lat e lon per un annuncio online';
+  String get api_error_82 => 'Tentativo di impostare latitudine e longitudine per un annuncio online';
 
   @override
-  String get api_error_83 => 'Tentativo di impostare proprietà specifiche per ONLINE_SELL/CALL_SELL/PUT_BUY su un diverso tipo di annuncio';
+  String get api_error_83 => 'Tentativo di impostare proprietà specifiche di ONLINE_SELL/CALL_SELL/PUT_BUY su un diverso tipo di annuncio';
 
   @override
-  String get api_error_84 => 'Tentativo di impostare proprietà specifiche per ONLINE_BUY/CALL_BUY/PUT_SELL su un diverso tipo di annuncio';
+  String get api_error_84 => 'Tentativo di impostare proprietà specifiche di ONLINE_BUY/CALL_BUY/PUT_SELL su un diverso tipo di annuncio';
 
   @override
   String get api_error_85 => 'Tentativo di impostare proprietà specifiche di LOCAL_SELL su un diverso tipo di annuncio';
 
   @override
-  String get api_error_86 => 'Tentativo di impostare un paese o un metodo di pagamento o una valuta non validi durante la creazione/l\'aggiornamento dell\'annuncio';
+  String get api_error_86 => 'Tentativo di impostare un paese o un metodo di pagamento o una valuta non validi durante la creazione/aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_87 => 'Tentativo di impostare un metodo di pagamento non valido per quel Paese durante la creazione/l\'aggiornamento dell\'annuncio';
+  String get api_error_87 => 'Tentativo di impostare un metodo di pagamento non valido per quel paese durante la creazione/aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_88 => 'Tentativo di impostare una valuta non valida per quel metodo di pagamento durante la creazione/l\'aggiornamento dell\'annuncio';
+  String get api_error_88 => 'Tentativo di impostare una valuta non valida per quel metodo di pagamento durante la creazione/aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_89 => 'Tentativo di creare un annuncio LOCAL_* senza impostare lon/lat';
+  String get api_error_89 => 'Tentativo di creare un annuncio LOCAL_* senza impostare long/lat';
 
   @override
-  String get api_error_90 => 'Tentativo di accesso alle operazioni di un utente che non esiste.';
+  String get api_error_90 => 'Tentativo di accedere alle negoziazioni di un utente che non esiste.';
 
   @override
-  String get api_error_91 => 'Tentativo di accesso ai dati pubblici dell\'account utilizzando un token di un utente che non esiste';
+  String get api_error_91 => 'Tentativo di accedere ai dati pubblici dell\'account utilizzando un token di un utente che non esiste';
 
   @override
-  String get api_error_92 => 'Tentativo di ricevere notifiche per utenti che non esistono';
+  String get api_error_92 => 'Tentativo di ricevere notifiche per un utente che non esiste';
 
   @override
-  String get api_error_93 => 'Cercando di ottenere depositi in sospeso per un utente che non esiste';
+  String get api_error_93 => 'Tentativo di ottenere depositi in sospeso per un utente che non esiste';
 
   @override
   String get api_error_94 => 'Cercando di ottenere un punteggio di feedback per l\'utente che non esiste';
@@ -8042,46 +8042,46 @@ class I18nIt extends I18n {
   String get api_error_95 => 'Cercando di ottenere annunci per utenti che non esistono';
 
   @override
-  String get api_error_96 => 'Utente inesistente che tenta di creare uno scambio';
+  String get api_error_96 => 'Utente inesistente che cerca di creare uno scambio';
 
   @override
   String get api_error_97 => 'Cercando di creare uno scambio per un annuncio che non esiste';
 
   @override
-  String get api_error_98 => 'Cercare di creare uno scambio per un annuncio che è un poster non esiste';
+  String get api_error_98 => 'Cercando di creare uno scambio per un annuncio il cui poster non esiste';
 
   @override
   String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito da first_time_limit_asset durante la creazione di una prima operazione';
 
   @override
-  String get api_error_100 => 'Non è possibile richiedere meno di 0,0000000001 XMR per la creazione di scambi';
+  String get api_error_100 => 'Non è possibile richiedere meno di 0,0000000001 XMR per la creazione dell\'operazione';
 
   @override
   String get api_error_101 => 'L\'importo richiesto è inferiore all\'importo minimo dell\'annuncio durante la creazione dell\'operazione';
 
   @override
-  String get api_error_102 => 'L\'importo richiesto è superiore al max_amount_disponibile dell\'annuncio durante la creazione dello scambio';
+  String get api_error_102 => 'L\'importo richiesto è superiore al max_amount_available dell\'annuncio durante la creazione dello scambio';
 
   @override
-  String get api_error_104 => 'Richiesta di scambio per l\'annuncio il cui poster sta acquistando una vacanza';
+  String get api_error_104 => 'Richiesta di scambio per annuncio il cui inserzionista sta acquistando una vacanza';
 
   @override
-  String get api_error_106 => 'Il richiedente dell\'operazione non ha abbastanza saldo per finanziare la richiesta dell\'operazione';
+  String get api_error_106 => 'Il richiedente dello scambio non ha un saldo sufficiente per finanziare la richiesta di scambio';
 
   @override
   String get api_error_108 => 'minAmount non può essere uguale o maggiore di maxAmount';
 
   @override
-  String get api_error_109 => 'L\'importo richiesto è superiore all\'importo massimo dell\'annuncio durante la creazione del commercio';
+  String get api_error_109 => 'L\'importo richiesto è superiore al maxAmount dell\'annuncio durante la creazione dello scambio';
 
   @override
-  String get api_error_110 => 'Il richiedente dell\'operazione ha un punteggio di feedback inferiore a quello richiesto dal poster';
+  String get api_error_110 => 'Il richiedente commerciale ha un punteggio di feedback inferiore a quello richiesto dal poster';
 
   @override
-  String get api_error_111 => 'L\'importo richiesto non è uno degli importi accettati, vedere limit_to_fiat_amounts';
+  String get api_error_111 => 'L\'importo richiesto non è uno degli importi accettati, vedi limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => 'Impossibile richiedere uno scambio per un annuncio che hai pubblicato tu stesso';
+  String get api_error_112 => 'Non puoi richiedere uno scambio per un annuncio che hai pubblicato tu stesso';
 
   @override
   String get api_error_113 => 'Impossibile impostare paymentWindowMinutes su <15 o >90 durante l\'aggiornamento dell\'annuncio';
@@ -8102,13 +8102,13 @@ class I18nIt extends I18n {
   String get api_error_118 => 'L\'utente che richiede il finanziamento del commercio non esiste';
 
   @override
-  String get api_error_119 => 'Tentare di finanziare un\'operazione che non esiste';
+  String get api_error_119 => 'Tentare di finanziare uno scambio che non esiste';
 
   @override
   String get api_error_120 => 'L\'utente che richiede l\'escrow of trade non esiste';
 
   @override
-  String get api_error_121 => 'Tentare di mettere in garanzia un commercio che non esiste';
+  String get api_error_121 => 'Tentativo di depositare in garanzia un commercio che non esiste';
 
   @override
   String get api_error_122 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL fluttuante';
@@ -8129,31 +8129,31 @@ class I18nIt extends I18n {
   String get api_error_127 => 'L\'utente che richiede il pagamento dell\'operazione non esiste';
 
   @override
-  String get api_error_128 => 'Tentare di contrassegnare uno scambio che non esiste pagato';
+  String get api_error_128 => 'Il tentativo di contrassegnare un\'operazione che non esiste è stato pagato';
 
   @override
-  String get api_error_129 => 'L\'utente che richiede il rilascio dell\'operazione non esiste';
+  String get api_error_129 => 'L\'utente che richiede l\'autorizzazione allo scambio non esiste';
 
   @override
-  String get api_error_130 => 'Tentare di rilasciare uno scambio che non esiste';
+  String get api_error_130 => 'Tentativo di rilasciare uno scambio che non esiste';
 
   @override
-  String get api_error_131 => 'L\'utente che richiede una controversia commerciale non esiste';
+  String get api_error_131 => 'L\'utente che richiede la contestazione commerciale non esiste';
 
   @override
-  String get api_error_132 => 'Tentare di contestare uno scambio che non esiste';
+  String get api_error_132 => 'Tentare di contestare un commercio che non esiste';
 
   @override
   String get api_error_133 => 'Tentativo di ottenere feedback da un utente che non esiste';
 
   @override
-  String get api_error_134 => 'Tentativo di creare un annuncio quando l\'utente ha già il numero massimo consentito di annunci';
+  String get api_error_134 => 'Tentativo di creare un annuncio quando l\'utente dispone già del numero massimo consentito di annunci';
 
   @override
   String get api_error_135 => 'In qualche modo maxAmount è impostato su null mentre trackingMaxAmount è impostato su true';
 
   @override
-  String get api_error_136 => 'Tentativo di pubblicare un annuncio con un saldo inferiore al saldo minimo richiesto.';
+  String get api_error_136 => 'Tentativo di pubblicare un annuncio con saldo inferiore al saldo minimo richiesto.';
 
   @override
   String get api_error_141 => 'Tentativo di creare uno scambio per un importo inferiore all\'importo minimo consentito';
@@ -8171,46 +8171,46 @@ class I18nIt extends I18n {
   String get api_error_145 => 'Tentativo di impostare un limite fiat superiore a maxAmount durante l\'aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_147 => 'Tentativo di ottenere i dati di affiliazione per l\'utente che non ha abilitato il programma di affiliazione';
+  String get api_error_147 => 'Tentativo di ottenere dati di affiliazione per utenti che non hanno il programma di affiliazione abilitato';
 
   @override
   String get api_error_148 => 'Tentativo di impostare un ID telegramma già impostato';
 
   @override
-  String get api_error_149 => 'Priorità non specificata per il ritiro esterno';
+  String get api_error_149 => 'Priorità non specificata per ritiro esterno';
 
   @override
-  String get api_error_150 => 'Tentativo di avviare un\'operazione su un annuncio in cui l\'utente richiedente è bloccato dall\'inserzionista';
+  String get api_error_150 => 'Tentativo di avviare uno scambio su un annuncio in cui l\'utente richiedente è bloccato dall\'inserzionista';
 
   @override
-  String get api_error_151 => 'Tentativo di avviare un\'operazione su un annuncio in cui l\'utente richiedente non è considerato attendibile dall\'inserzionista';
+  String get api_error_151 => 'Tentativo di avviare uno scambio su un annuncio in cui l\'utente richiedente non è considerato attendibile dall\'inserzionista';
 
   @override
   String get api_error_152 => 'Tentativo di annullare un\'operazione già chiusa';
 
   @override
-  String get api_error_153 => 'Tentativo di rilasciare un\'operazione che è già chiusa';
+  String get api_error_153 => 'Tentativo di rilasciare uno scambio che è già chiuso';
 
   @override
-  String get api_error_154 => 'Tentativo di richiedere operazioni per un account che non esiste';
+  String get api_error_154 => 'Tentativo di richiedere scambi per un account che non esiste';
 
   @override
-  String get api_error_155 => 'Tentativo di ottenere un elenco di utenti attendibili per un utente che non esiste';
+  String get api_error_155 => 'Tentativo di ottenere un elenco di utenti fidati per un utente che non esiste';
 
   @override
   String get api_error_156 => 'Tentativo di ottenere l\'elenco degli utenti bloccati per un utente che non esiste';
 
   @override
-  String get api_error_157 => 'Tentativo di impostare proprietà specifiche per un\'opzione per un annuncio non per opzioni';
+  String get api_error_157 => 'Tentativo di impostare proprietà specifiche dell\'opzione per un annuncio non opzionale';
 
   @override
-  String get api_error_158 => 'Tentativo di creare un annuncio con opzione senza impostare proprietà specifiche per l\'opzione';
+  String get api_error_158 => 'Tentativo di creare un annuncio opzionale senza impostare proprietà specifiche dell\'opzione';
 
   @override
   String get api_error_159 => 'L\'utente che richiede di contrassegnare il pagamento premium del commercio non esiste';
 
   @override
-  String get api_error_160 => 'Tentare di contrassegnare il premio pagato per un\'operazione che non esiste';
+  String get api_error_160 => 'Tentativo di contrassegnare il premio pagato per uno scambio che non esiste';
 
   @override
   String get api_error_161 => 'L\'utente che richiede di esercitare l\'opzione non esiste';
@@ -8219,34 +8219,34 @@ class I18nIt extends I18n {
   String get api_error_162 => 'Tentativo di esercitare un\'opzione per uno scambio che non esiste';
 
   @override
-  String get api_error_163 => 'L\'utente che richiede di confermare il pagamento del premio dell\'operazione non esiste';
+  String get api_error_163 => 'L\'utente che richiede di confermare il pagamento premium dell\'operazione non esiste';
 
   @override
-  String get api_error_164 => 'Tentativo di confermare il premio pagato per un\'operazione che non esiste';
+  String get api_error_164 => 'Tentativo di confermare il premio pagato per uno scambio che non esiste';
 
   @override
-  String get api_error_165 => 'L\'utente che richiede di esercitare il commercio con regolamento netto non esiste';
+  String get api_error_165 => 'L\'utente che richiede di esercitare il commercio con liquidazione netta non esiste';
 
   @override
-  String get api_error_166 => 'Tentare di esercitare con regolamento netto un\'operazione che non esiste';
+  String get api_error_166 => 'Tentare di esercitare con regolamento netto un commercio che non esiste';
 
   @override
-  String get api_error_167 => 'Il prezzo di mercato corrente è inferiore o uguale al prezzo di esercizio quando si compensa un\'operazione CALL. Il commercio è out-of-the-money per gli standard di mercato, quindi non può essere compensato. Utilizzare la normale liquidazione, se necessario.';
+  String get api_error_167 => 'Il prezzo di mercato corrente è inferiore o uguale al prezzo di esercizio durante la compensazione di una transazione CALL. L\'operazione è out-of-the-money per gli standard di mercato, pertanto non può essere compensata. Utilizzare la liquidazione normale se necessario.';
 
   @override
   String get api_error_168 => 'L\'utente che richiede di confermare il pagamento della copertura dell\'operazione non esiste';
 
   @override
-  String get api_error_169 => 'Tentativo di confermare la copertura pagata per un\'operazione che non esiste';
+  String get api_error_169 => 'Tentativo di confermare la copertura pagata per uno scambio che non esiste';
 
   @override
-  String get api_error_172 => 'Tentativo di pubblicare un annuncio in cui l\'asset è uguale alla valuta dell\'annuncio';
+  String get api_error_172 => 'Tentativo di pubblicare un annuncio in cui la risorsa è la stessa della valuta dell\'annuncio';
 
   @override
-  String get api_error_174 => 'Tentativo di esercitare un\'operazione PUT out-of-the-money';
+  String get api_error_174 => 'Tentativo di esercitare operazioni PUT out-of-the-money';
 
   @override
-  String get api_error_175 => 'Tentativo di riscattare coupon che non esiste durante la registrazione';
+  String get api_error_175 => 'Tentativo di riscattare un coupon che non esiste durante la registrazione';
 
   @override
   String get api_error_176 => 'Tentativo di riscattare un coupon scaduto durante la registrazione';
@@ -8261,46 +8261,46 @@ class I18nIt extends I18n {
   String get api_error_186 => 'Tentativo di ottenere più di 50 annunci quando si ottengono annunci per ID';
 
   @override
-  String get api_error_187 => 'Tentativo di fornire un elenco vuoto di ID quando si ottengono annunci per ID';
+  String get api_error_187 => 'Tentativo di fornire un elenco vuoto di ID durante la ricezione di annunci in base all\'ID';
 
   @override
-  String get api_error_188 => 'Nessuno degli ID annuncio richiesti è un ID valido quando si ottengono annunci per ID';
+  String get api_error_188 => 'Nessuno degli ID annuncio richiesti è un ID valido quando si ottengono annunci in base all\'ID';
 
   @override
   String get api_error_189 => 'Non esiste uno solo degli annunci richiesti quando si ottengono annunci per ID';
 
   @override
-  String get api_error_190 => 'Tentativo di fornire un elenco vuoto di ID quando si ottengono scambi per ID';
+  String get api_error_190 => 'Tentativo di fornire un elenco vuoto di ID quando si ottengono operazioni per ID';
 
   @override
   String get api_error_191 => 'Tentativo di ottenere più di 50 annunci quando si ottengono scambi per ID';
 
   @override
-  String get api_error_192 => 'Nessuno degli ID commerciali richiesti è un ID valido quando si ottengono scambi per ID';
+  String get api_error_192 => 'Nessuno degli ID operazione richiesti è un ID valido quando si ottengono operazioni tramite ID';
 
   @override
-  String get api_error_193 => 'Non esiste una sola delle operazioni richieste quando si ottengono operazioni per ID';
+  String get api_error_193 => 'Non esiste una sola delle negoziazioni richieste quando si ottengono negoziazioni per ID';
 
   @override
-  String get api_error_194 => 'Tentativo di generare un token API pubblico per l\'utente che non esiste';
+  String get api_error_194 => 'Tentativo di generare un token API pubblico per un utente che non esiste';
 
   @override
   String get api_error_195 => 'Password errata durante il tentativo di ottenere il token API pubblico';
 
   @override
-  String get api_error_196 => 'Tentativo di ricevere messaggi recenti per utenti che non esistono';
+  String get api_error_196 => 'Tentativo di ottenere messaggi recenti per un utente che non esiste';
 
   @override
-  String get api_error_197 => 'Tentativo di ottenere messaggi di chat commerciali con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
+  String get api_error_197 => 'Tentativo di scambiare messaggi di chat con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
 
   @override
-  String get api_error_198 => 'Tentativo di ricevere messaggi di chat recenti dell\'account con timestamp \"dopo\" che non rientra nell\'intervallo consentito';
+  String get api_error_198 => 'Tentativo di ottenere messaggi di chat recenti dell\'account con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
 
   @override
   String get api_error_199 => 'Tentativo di ottenere un token API pubblico per un utente che non esiste';
 
   @override
-  String get api_error_200 => 'Tentativo di scadenza ed eliminazione del token API pubblico per l\'utente senza un token API pubblico';
+  String get api_error_200 => 'Tentativo di far scadere ed eliminare il token API pubblico per l\'utente senza un token API pubblico';
 
   @override
   String get api_error_201 => 'Tentativo di aggiornare la formula del prezzo per un annuncio che non esiste';
@@ -8309,52 +8309,52 @@ class I18nIt extends I18n {
   String get api_error_202 => 'Tentativo di ottenere transazioni dell\'account con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
 
   @override
-  String get api_error_203 => 'Tentativo di ottenere dati di importazione della reputazione per account che non esistono';
+  String get api_error_203 => 'Tentativo di ottenere i dati di importazione della reputazione per un account che non esiste';
 
   @override
-  String get api_error_211 => 'Tentativo di approvazione dell\'importazione della reputazione per un utente che non esiste';
+  String get api_error_211 => 'Tentativo di approvare l\'importazione della reputazione per un utente che non esiste';
 
   @override
-  String get api_error_212 => 'Tentativo di approvazione dell\'importazione della reputazione per un utente che non è nel passaggio 2 del flusso di importazione della reputazione';
+  String get api_error_212 => 'Tentativo di approvare l\'importazione della reputazione per l\'utente che non si trova nel passaggio 2 del flusso di importazione della reputazione';
 
   @override
   String get api_error_213 => 'Tentativo di negare l\'importazione della reputazione per un utente che non esiste';
 
   @override
-  String get api_error_214 => 'Tentativo di negare l\'importazione della reputazione per un utente che non è nel passaggio 2 del flusso di importazione della reputazione';
+  String get api_error_214 => 'Tentativo di negare l\'importazione della reputazione per l\'utente che non si trova nel passaggio 2 del flusso di importazione della reputazione';
 
   @override
   String get api_error_215 => 'Tentativo di specificare sia country_code che currency_code quando si richiedono i metodi di pagamento più diffusi';
 
   @override
-  String get api_error_216 => 'Tentativo di richiedere i metodi di pagamento più diffusi per un country_code che non esiste';
+  String get api_error_216 => 'Tentativo di richiedere i metodi di pagamento più popolari per un country_code che non esiste';
 
   @override
   String get api_error_217 => 'Tentativo di richiedere i metodi di pagamento più diffusi per un codice_valuta che non esiste';
 
   @override
-  String get api_error_218 => 'Tentativo di aprire un\'operazione su un annuncio che richiede un\'e-mail verificata quando l\'utente richiedente non dispone di un\'e-mail verificata';
+  String get api_error_218 => 'Tentativo di aprire uno scambio su un annuncio che richiede un\'e-mail verificata quando l\'utente richiedente non dispone di un\'e-mail verificata';
 
   @override
   String get api_error_219 => 'Tentativo di registrazione con un\'e-mail proveniente da un provider di posta elettronica usa e getta';
 
   @override
-  String get api_error_220 => 'Tentativo di cambiare l\'e-mail dell\'account in un\'e-mail di un provider di posta elettronica usa e getta';
+  String get api_error_220 => 'Tentativo di modificare l\'e-mail dell\'account con un\'e-mail da un provider di posta elettronica usa e getta';
 
   @override
-  String get api_error_221 => 'Tentativo di contrassegnare tutte le notifiche lette per un utente che non esiste';
+  String get api_error_221 => 'Tentativo di contrassegnare tutte le notifiche come lette per un utente che non esiste';
 
   @override
-  String get api_error_222 => 'Tentativo di richiedere il codice di reputazione per un account della piattaforma esterna che è già stato importato';
+  String get api_error_222 => 'Tentativo di richiedere il codice di reputazione per un account di una piattaforma esterna che è già stato importato';
 
   @override
-  String get api_error_223 => 'Tentativo di aggiornamento dell\'annuncio specificando la verifica Obbligatoria come true mentre il messaggio di verifica è nullo';
+  String get api_error_223 => 'Tentativo di aggiornare l\'annuncio specificando la verificaObbligatorio come vero mentre il messaggio di verifica è nullo';
 
   @override
-  String get api_error_224 => 'Tentativo di aggiornare l\'annuncio specificando il messaggio di verifica ma l\'annuncio non richiede la verifica e anche la richiesta di aggiornamento dell\'annuncio non imposta la verifica richiesta come true';
+  String get api_error_224 => 'Tentativo di aggiornare l\'annuncio specificando il messaggio di verifica ma l\'annuncio non richiede la verifica e anche la richiesta di aggiornamento dell\'annuncio non imposta la verificaRichiesto come vero';
 
   @override
-  String get api_error_227 => 'Tentare di sanzionare un utente che non esiste';
+  String get api_error_227 => 'Tentativo di sanzionare un utente che non esiste';
 
   @override
   String get api_error_228 => 'Tentativo di sanzionare l\'utente con un account amministratore che non esiste';
@@ -8366,31 +8366,31 @@ class I18nIt extends I18n {
   String get api_error_230 => 'Tentativo di rimuovere una sanzione da un utente con un account amministratore che non esiste';
 
   @override
-  String get api_error_231 => 'Tentare di rimuovere una sanzione da un utente che non ha alcuna sanzione nei suoi confronti';
+  String get api_error_231 => 'Tentativo di rimuovere una sanzione da un utente che non ha sanzioni su di lui';
 
   @override
   String get api_error_232 => 'Tentativo di aprire uno scambio con un utente a cui è attualmente vietato fare trading a causa di una sanzione';
 
   @override
-  String get api_error_233 => 'Tentativo di rimuovere feedback con ID che non esiste';
+  String get api_error_233 => 'Tentativo di rimuovere il feedback con un ID che non esiste';
 
   @override
-  String get api_error_234 => 'Tentativo di rimuovere il feedback che è già stato rimosso';
+  String get api_error_234 => 'Tentativo di rimuovere il feedback già rimosso';
 
   @override
-  String get api_error_235 => 'Tentativo di rimuovere lo stato di controversia da uno scambio che non esiste';
+  String get api_error_235 => 'Tentativo di rimuovere lo stato di contestazione da una transazione che non esiste';
 
   @override
-  String get api_error_236 => 'Tentativo di rimuovere lo stato di controversia da un\'operazione non contestata';
+  String get api_error_236 => 'Tentativo di rimuovere lo stato di contestazione da una transazione che non è contestata';
 
   @override
-  String get api_error_237 => 'Tentativo di aprire un\'operazione come utente che non esiste quando si chiama l\'endpoint di apertura dell\'operazione come amministratore e si specifica il parametro openAsUsername';
+  String get api_error_237 => 'Tentativo di aprire una negoziazione come utente che non esiste quando si chiama l\'endpoint di apertura della negoziazione come amministratore e si specifica il parametro openAsUsername';
 
   @override
-  String get api_error_240 => 'Indirizzo non valido fornito dall\'acquirente quando risponde a un annuncio di tipo VENDITA';
+  String get api_error_240 => 'Indirizzo non valido fornito dall\'acquirente durante la risposta a un annuncio di tipo VENDITA';
 
   @override
-  String get api_error_241 => 'Acquirente che tenta di fornire un indirizzo interno quando risponde a un annuncio di tipo VENDITA (gli indirizzi interni non sono consentiti ai fini della transazione commerciale)';
+  String get api_error_241 => 'L\'acquirente tenta di fornire un indirizzo interno quando risponde a un annuncio di tipo VENDITA (gli indirizzi interni non sono consentiti ai fini della liquidazione della transazione)';
 
   @override
   String get api_error_242 => 'Indirizzo non valido fornito dall\'acquirente durante la creazione di un annuncio di tipo ACQUISTA';
@@ -8399,25 +8399,25 @@ class I18nIt extends I18n {
   String get api_error_244 => 'Indirizzo non valido fornito dall\'acquirente durante l\'aggiornamento di un annuncio di tipo ACQUISTA';
 
   @override
-  String get api_error_245 => 'Acquirente che tenta di fornire un indirizzo interno durante l\'aggiornamento di un annuncio di tipo ACQUISTA (gli indirizzi interni non sono consentiti ai fini del regolamento commerciale)';
+  String get api_error_245 => 'L\'acquirente tenta di fornire un indirizzo interno durante l\'aggiornamento di un annuncio di tipo ACQUISTA (gli indirizzi interni non sono consentiti ai fini della liquidazione dell\'operazione)';
 
   @override
-  String get api_error_246 => 'Tentativo di avviare un\'operazione da un annuncio di tipo ACQUISTA che non specifica l\'indirizzo di liquidazione dell\'acquirente';
+  String get api_error_246 => 'Tentativo di avviare un\'operazione da un annuncio di tipo ACQUISTA che non specifica l\'indirizzo di transazione dell\'acquirente';
 
   @override
-  String get api_error_247 => 'Tentativo di rilasciare un\'operazione da un account a cui è vietato ritirare a causa di sanzioni';
+  String get api_error_247 => 'Tentativo di sbloccare un\'operazione da un conto il cui prelievo è proibito a causa di sanzioni';
 
   @override
-  String get api_error_248 => 'Tentare di rilasciare un\'operazione quando l\'importo dell\'operazione non è sufficiente per coprire le commissioni relative al regolamento';
+  String get api_error_248 => 'Tentare di rilasciare un\'operazione quando l\'importo dell\'operazione non è sufficiente a coprire le commissioni relative alla liquidazione';
 
   @override
-  String get api_error_249 => 'Tentativo di aggiornare un annuncio di tipo ACQUISTA per cui non è impostato buyerSettlementAddress senza impostare il parametro buyerSettlementAddress nella richiesta di aggiornamento';
+  String get api_error_249 => 'Tentativo di aggiornare un annuncio di tipo ACQUISTA in cui non è impostato buyerSettlementAddress senza impostare il parametro buyerSettlementAddress nella richiesta di aggiornamento';
 
   @override
-  String get api_error_250 => 'Indirizzo non valido fornito quando si richiede la commissione di prelievo per BTC';
+  String get api_error_250 => 'Indirizzo non valido fornito al momento della richiesta della commissione di prelievo per BTC';
 
   @override
-  String get api_error_251 => 'Livello di commissione non fornito quando si apre un\'operazione rispondendo a un annuncio di tipo VENDITA BTC';
+  String get api_error_251 => 'Livello di commissione non fornito quando si apre uno scambio rispondendo a un annuncio di tipo BTC SELL';
 
   @override
   String get api_error_252 => 'Livello di commissione non fornito durante la creazione di un annuncio di tipo BTC BUY';
@@ -8429,16 +8429,16 @@ class I18nIt extends I18n {
   String get api_error_255 => 'Tentativo di ricevere notifiche con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
 
   @override
-  String get api_error_256 => 'Tentativo di registrazione di un token di notifica push già esistente';
+  String get api_error_256 => 'Tentativo di registrare un token di notifica push già esistente';
 
   @override
-  String get api_error_257 => 'Tentativo di registrazione di un token di notifica push non valido';
+  String get api_error_257 => 'Tentativo di registrare un token di notifica push non valido';
 
   @override
-  String get api_error_258 => 'Tentando di registrare un token di notifica push per un account che ha già 500 token di dispositivo, elimina uno dei token esistenti prima di riprovare';
+  String get api_error_258 => 'Tentativo di registrare un token di notifica push per un account che dispone già di 500 token dispositivo, eliminare uno dei token esistenti prima di riprovare';
 
   @override
-  String get api_error_259 => 'Tentativo di eliminare un token che non esiste o non appartiene a questo utente';
+  String get api_error_259 => 'Tentativo di eliminare un token che non esiste o che non appartiene a questo utente';
 
   @override
   String get account => 'conto';
@@ -8537,7 +8537,7 @@ class I18nIt extends I18n {
   String get email_verified => 'L\'e-mail è verificata.';
 
   @override
-  String get email_verification_error => 'Errore di verifica dell\'e-mail.';
+  String get email_verification_error => 'Errore di verifica e-mail.';
 
   @override
   String get email_token_error => 'Il token o l\'e-mail sono sbagliati. L\'e-mail non è stata verificata.';
@@ -8904,7 +8904,7 @@ class I18nIt extends I18n {
   String get dont_have_an_account_yet => 'Non hai ancora un conto?';
 
   @override
-  String get app_trades => 'Commerci';
+  String get app_trades => 'Mestieri';
 
   @override
   String get app_unlimited => 'Illimitato';
@@ -8916,10 +8916,10 @@ class I18nIt extends I18n {
   String get app_edit_this_ad => 'Modifica questo annuncio';
 
   @override
-  String get app_you_can_use_markdown => 'Puoi utilizzare il markdown per definire lo stile dei termini del tuo annuncio (immagini non consentite).';
+  String get app_you_can_use_markdown => 'Puoi utilizzare il markdown per dare uno stile ai termini del tuo annuncio (immagini non consentite).';
 
   @override
-  String get app_no_trades_to_export => 'Nessun commercio da esportare.';
+  String get app_no_trades_to_export => 'No scambi da esportare.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
@@ -8927,7 +8927,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => 'Prima di creare un annuncio si prega di leggere il ns ';
+  String get ad_post_ad_rules_text_0 => 'Prima di creare un annuncio, leggere attentamente il nostro ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
@@ -8991,10 +8991,10 @@ class I18nIt extends I18n {
   String get app_sell_crypto => 'Vendi criptovalute a';
 
   @override
-  String get app_intall_trade_title => 'Si prega di installare AgoraDesk per visualizzare questo scambio';
+  String get app_intall_trade_title => 'Si prega di installare AgoraDesk per visualizzare questo trade';
 
   @override
-  String get app_intall_ad_title => 'Si prega di installare AgoraDesk per visualizzare questo annuncio';
+  String get app_intall_ad_title => 'Installa AgoraDesk per visualizzare questo annuncio';
 
   @override
   String get app_intall_trade_body => 'Questo è uno scambio basato su Bitcoin, richiede la nostra app AgoraDesk per essere visualizzato.';
@@ -9003,10 +9003,10 @@ class I18nIt extends I18n {
   String get app_intall_ad_body => 'Questo è un annuncio basato su Bitcoin, richiede la nostra app AgoraDesk per essere visualizzato.';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => 'Non finalizzare mai uno scambio finché non sei sicuro al 100% di aver ricevuto il denaro. I truffatori cercheranno di indurti a finalizzare in anticipo.';
+  String get app_trade_option_payment_receiver_cancel_notice => 'Non finalizzare mai un\'operazione finché non sei sicuro al 100% di aver ricevuto il denaro. I truffatori cercheranno di indurti a finalizzare in anticipo.';
 
   @override
-  String get app_cancel_trade_message => 'Hai sbagliato o vuoi provare un altro trader? Se hai già trasferito i fondi e desideri annullare ora, devi negoziare da solo la restituzione del pagamento con il tuo partner commerciale. Non annullare mai a meno che tu non sia sicuro di aver ricevuto indietro i tuoi soldi.';
+  String get app_cancel_trade_message => 'Hai commesso un errore o vuoi provare un altro trader? Se hai già trasferito i fondi e desideri annullare ora, devi negoziare tu stesso la restituzione del pagamento con il tuo partner commerciale. Non cancellare mai a meno che tu non sia sicuro di aver ricevuto indietro i tuoi soldi.';
 
   @override
   String get app_all_feedback => 'Tutti i feedback';
@@ -9021,7 +9021,7 @@ class I18nIt extends I18n {
   String get app_ad_deleted => 'Annuncio eliminato';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'Questo è il tuo codice di verifica. Puoi comunicarlo all\'acquirente in modo che l\'acquirente possa verificare di aver finalizzato lo scambio senza che sia necessario utilizzare il dispositivo.';
+  String get app_verifiacetion_code_to_seller => 'Questo è il tuo codice di verifica. Puoi dirlo all\'acquirente in modo che l\'acquirente possa verificare che hai finalizzato lo scambio senza che sia necessario utilizzare il dispositivo.';
 
   @override
   String get app_verification_code => 'Codice di verifica';
@@ -9030,7 +9030,7 @@ class I18nIt extends I18n {
   String get app_ad => 'Anno Domini';
 
   @override
-  String get app_with => 'insieme a';
+  String get app_with => 'con';
 
   @override
   String get app_edited => 'Modificato';
@@ -9045,7 +9045,7 @@ class I18nIt extends I18n {
   String get app_manage_ads => 'Gestisci gli annunci';
 
   @override
-  String get app_vacation_enabled => 'Vacanza abilitata';
+  String get app_vacation_enabled => 'Vacanze abilitate';
 
   @override
   String get app_trade_created => 'Commercio creato';
@@ -9054,31 +9054,31 @@ class I18nIt extends I18n {
   String get app_session_expired => 'Sessione scaduta';
 
   @override
-  String get app_anonymous_crash_diagnostics => 'Diagnostica anonimo degli arresti anomali';
+  String get app_anonymous_crash_diagnostics => 'Diagnostica anonima degli arresti anomali';
 
   @override
   String get app_restart_now => 'Riavvia ora';
 
   @override
-  String get app_postpone => 'Rimandare';
+  String get app_postpone => 'Rinviare';
 
   @override
   String get app_biometric_authentication => 'Autenticazione biometrica';
 
   @override
-  String get app_biometric_authentication_message => 'Si prega di impostare un codice PIN per abilitare l\'autenticazione biometrica.';
+  String get app_biometric_authentication_message => 'Imposta un codice PIN per abilitare l\'autenticazione biometrica.';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => 'La diagnostica degli arresti anomali anonimi è stata disabilitata e non verrà inviata dopo il riavvio dell\'app.';
+  String get app_anonymous_crash_diagnostics_restart => 'La diagnostica anonima degli arresti anomali è stata disabilitata e non verrà inviata dopo il riavvio dell\'app.';
 
   @override
   String get app_trading_partners => 'Soci in affari';
 
   @override
-  String get app_trade_status_settlement_processing_description => 'La transazione è in corso di elaborazione. Per favore aspetta, non c\'è niente che devi fare.';
+  String get app_trade_status_settlement_processing_description => 'L\'accordo è in fase di elaborazione. Per favore aspetta, non c\'è niente che devi fare.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => 'Scegli un livello di commissione da utilizzare durante la transazione commerciale. I valori qui riportati sono le stime dei tassi attuali e possono differire da quelli applicati durante la transazione commerciale. Se l\'importo dell\'operazione è troppo basso per saldare l\'operazione con il livello di commissione selezionato, durante il regolamento verrà selezionato automaticamente un livello di commissione inferiore.';
+  String get app_buyer_settlement_fee_level_description => 'Scegli un livello di commissione da utilizzare durante il regolamento della transazione. I valori mostrati qui sono le stime del tasso corrente e possono differire da quelli applicati durante il regolamento della transazione. Se l\'importo dell\'operazione è troppo basso per regolare l\'operazione con il livello di commissione selezionato, durante il regolamento verrà selezionato automaticamente un livello di commissione inferiore.';
 
   @override
   String get app_change_vacation_settings => 'Modifica le impostazioni delle vacanze.';
@@ -9120,7 +9120,7 @@ class I18nIt extends I18n {
   String get app_update_ignore_always => 'Ignora sempre';
 
   @override
-  String get app_tooltip_visibility => 'Tocca per attivare la visibilità';
+  String get app_tooltip_visibility => 'Tocca per attivare/disattivare la visibilità';
 
   @override
   String get app_tooltip_long_press_ad => 'Premi a lungo sull\'annuncio per abilitare la modifica del gruppo';
@@ -9152,10 +9152,10 @@ class I18nIt extends I18n {
   String get app_select_asset => 'Seleziona risorsa';
 
   @override
-  String get app_select_trade_type => 'Seleziona il tipo di scambio';
+  String get app_select_trade_type => 'Seleziona il tipo di operazione';
 
   @override
-  String get app_paste => 'Incolla';
+  String get app_paste => 'Impasto';
 
   @override
   String get app_scan_qr_code => 'Scansiona il codice QR';
@@ -9197,7 +9197,7 @@ class I18nIt extends I18n {
   String get app_open_dropdown => 'Apri il menu a discesa';
 
   @override
-  String get error250Sbsignup250Sb175 => 'Tentativo di riscattare coupon che non esiste durante la registrazione';
+  String get error250Sbsignup250Sb175 => 'Tentativo di riscattare un coupon che non esiste durante la registrazione';
 
   @override
   String get error250Sbsignup250Sb176 => 'Tentativo di riscattare un coupon scaduto durante la registrazione';
@@ -9229,39 +9229,42 @@ class I18nIt extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vendita di opzioni call';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: acquista XMR in modo anonimo';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Modifica la password della casella, tocca due volte per modificare';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Conferma la casella di modifica della password, tocca due volte per modificare';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'Annuncio creato';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val tornerà presto!\\nCi scusiamo per l\'inconveniente, ma al momento stiamo eseguendo una manutenzione programmata.\\nProbabilmente torneremo presto online. Rimani aggiornato nei gruppi della nostra community:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Seleziona il tipo di annuncio';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Tocca qui per lasciare una recensione!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Hai già lasciato una recensione a questo utente. Vuoi aggiornare ora la tua recensione?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Seleziona acquirente o venditore';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Imposta una scheda predefinita';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'I tuoi annunci';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Manutenzione dell\'app';
+  }
 }

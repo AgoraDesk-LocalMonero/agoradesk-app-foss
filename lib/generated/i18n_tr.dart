@@ -1726,7 +1726,7 @@ class I18nTr extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Fiyat değeri doğru ayarlanmadı';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Yasa dışı ülke, ödeme yöntemi ve para birimi kombinasyonları';
+  String get error250Sbpost8722Sbad250Sb86 => 'Geçersiz ülke, ödeme yöntemi ve para birimi kombinasyonları';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Bu ödeme yöntemi seçilen ülke için geçerli değil';
@@ -3251,7 +3251,7 @@ class I18nTr extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Monero\'da Atom Takasları Nasıl Çalışacak?';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Not:</b> Okuyucunun <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Monero Has A Tail Emission\"</a> ve <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Monero Madenciliği: RandomX\'i Ne Yapar makalelerimizi okuması önemle tavsiye edilir. çok Özel”</a>. Bu makale, orada sunulan kavramlardan yola çıkarak oluşturulmuştur.</i></p>\n\n<p>Bireyler ne zaman blockchain ile ilgili sorunları tartışsa, akla gelen ilk kelimelerden biri \'ölçeklendirme\' olacaktır. Blok zincirlerinin iyi ölçeklenmediği bir sır değil ama çoğu insan bunun nedenini bilmiyor.</p>\n\n<p>Gerçek şu ki, ölçeklendirme aslında iki farklı kategoriyi kapsayan bir şemsiye terimdir: Protokol desteği ve belirli bir zamanda teknolojik destek. Bu makalede, dikkatimizi birine odaklayacağız, Protokol desteği temel olarak protokolün belirli bir zamanda kaç işlemi işleyebileceğinin bir ölçüsüdür.</p>\n\n<p>Bitcoin\'in bir blok boyutu sınırı vardır, bu da bir bloğa yeterli sayıda işlem dahil edildiğinde, ek işlemlerin bir sonraki blok için sırada beklemesi gerekeceği anlamına gelir. Yararlı bir benzetme, bir tren hakkında düşünmek olacaktır. Bir tren istasyona yanaşır ve sıradakiler sıraya dizilir. Tren dolduğunda, dışarıda kalan herkes bir sonraki treni beklemek zorunda kalır.</p>\n\n<p>Bitcoin, bloğa kimin girip girmeyeceğini belirlemek için ücretleri kullanır. Tren benzetmesine geri dönersek, geride bırakılmak üzere olan potansiyel bir yolcunun tren makinistine oturması için beş dolar teklif ettiğini hayal edebiliriz. Diğer yolcular da aynı şeyi yapar ve sonunda kimin hangi koltukları alacağını görmek için bir teklif savaşı çıkar. İlk gelen ilk hizmet alır politikasına uymak isteyip istemediğine karar vermek sürücüye kalmıştır, ancak en yüksek teklifi verenleri alarak gelirini en üst düzeye çıkarmak onun mali çıkarına olacaktır.</p>\n\n<p>Bu benzetmede madenciler tren sürücüleridir. İstedikleri işlemleri bloğa dahil edebilirler, ancak genellikle en yüksek ücretli işlemleri seçeceklerdir.</p>\n\n<p>Alternatif olarak, bloklar çok dolu değilse, insanların yüksek ücretler ödemeye teşviki yoktur, çünkü boş yer çoktur.</p>\n\n<p>2017 kripto para birimi patlamasının zirvesinde, Bitcoin işlemlerle dolup taştı ve bir sonraki bloğa veya bu konuda yakın gelecekteki herhangi bir bloğa dahil olmak isteyenler için ücretler fırladı. Yüksek ücretler ödemek istemeyenler, işlemlerinin saatlerce, günlerce ertelendiğini ve hatta kuyruktan tamamen çıktığını gördü.</p>\n\n<p>Bu, sık sık konuşulan \"kitlesel benimseme\" gerçekleşirse Bitcoin\'in nasıl ilerleyeceğine dair üzücü bir içgörüydü. Bitcoin kitleler tarafından kullanılacak olsaydı, işler 2017\'dekinden daha kötü olurdu ve Bitcoin\'e zenginler dışında kimse erişemezdi, çünkü sabit bir blok boyutu nedeniyle iş hacmi küçüktür ve bu da ücret piyasasının ele geçirmesine neden olur. .</p>\n\n<p>Monero bunu öngördü ve farklı bir şey yapmak istedi. Böylece Monero geliştiricileri dinamik bir blok boyutu uyguladı.</p>\n\n<p>Temel olarak, Monero\'nun da bir blok boyutu sınırı vardır, ancak bu yumuşak bir sınırdır. Bekleyen işlem sırası çok uzadığında, madenciler blokların boyutunu artırabilir. Tren benzetmemizle, fazladan yolcu sığdırmak için daha fazla tren vagonu eklemeyi hayal edebilirsiniz. Kuyruk boşaldıktan sonra bloklar ileriye doğru orijinal boyutlarına geri döner.</p>\n\n<p>Bu harika bir fikir gibi görünüyorsa, bunu uygulayan tek kripto para biriminin neden Monero olduğunu sormak mantıklı görünüyor. Verim sorunlarına bir son vermek için neden Bitcoin\'e eklemiyorsunuz?</p>\n\n<p>Maalesef bu mümkün değil. Bunun birkaç nedeni var ve açıklamak için elimizden gelenin en iyisini yapacağız.</p>\n\n<p> Büyük bloklara sahip olmak her zaman bir madencinin çıkarınadır. Büyük bloklarla daha fazla işlem yapabilir ve blok ödüllerinin yanı sıra ücretlerden daha fazla para kazanabilirler. Bu, birisinin zinciri şişirmek için küçük ücretlerle çok sayıda küçük işlem gönderdiği spam saldırılarına yol açma potansiyeline sahiptir. Madenci, blok boyutunu yükseltir ve hepsini içerir çünkü ne kadar küçük olursa olsun para paradır. Bu, çok az ekonomik fayda sağlayan sürekli olarak büyük bloklara yol açacaktır. Bitcoin, blok boyutunu yapay olarak kısıtlayarak ve böylece bir ücret piyasası oluşturarak bunu çözer. İstenmeyen e-posta saldırganları, diğer kullanıcılara ücret olarak daha fazla ödeme yapmak zorunda kalacak ve bu artık ucuz değil. Ancak bu, yukarıda belirtildiği gibi blokların dolması ve bazı işlemlerin beklemede kalması anlamına gelir.</p>\n\n<p>Peki, Monero dinamik blok boyutlarına sahipken spam saldırılarından nasıl kaçınabilir? Cevap basit ama zekice. Bir blok normalden daha büyük olduğunda, blok ödülüne bir ceza verilir. Bir madenci blok boyutunu artırmak isterse, o bloğu bularak alacağı ödül, normalde alacaklarından daha az olacaktır. Bu nedenle, yalnızca kullanıcıların ödediği işlem ücretleri, blok ödülünün kaybedilen kısmından daha ağır bastığında blok boyutunu artıracaklardır. Örneğin, madenci blok ödülünü yükselterek 0,5 XMR kaybederse ve ödenen işlem ücretlerinin toplamı 0,4 XMR olursa, o zaman boyutu yükseltirlerse 0,1 XMR net kayıp olur. yapma Tersine, toplam işlem ücretleri 0,7 XMR\'ye kadar eklenirse, blok ödül cezasından 0,5 XMR\'yi kaybetseler bile 0,2 XMR net kazanç olur, bu nedenle madenci boyutu büyütür.</p>\n\n<p>Bu dinamik bloklar, spam saldırılarından kaçınmaya devam ederken zorunlu bir ücret piyasası oluşturmak için blok boyutunu yapay olarak kısıtlamadan ağın organik olarak büyümesini sağlar. Bu fikre bakabileceğimiz birkaç açı daha ve Bitcoin\'e eklenmesinin neden mümkün olmayacağına dair daha fazla neden var, ancak şimdilik, okuyucunun Monero\'nun Bitcoin\'deki birçok sorunu nasıl atlattığını anladığını umuyoruz. türevleri ve verimini geleceğe nasıl ölçeklendirmeyi planladığı.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Not:</b> Okuyucunun <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Monero Has A Tail Emission\"</a> ve <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Monero Madenciliği: RandomX\'i Ne Yapar makalelerimizi okuması önemle tavsiye edilir. çok Özel”</a>. Bu makale, orada sunulan kavramlardan yola çıkarak oluşturulmuştur.</i></p>\n\n<p>Bireyler ne zaman blockchain ile ilgili sorunları tartışsa, akla gelen ilk kelimelerden biri \'ölçeklendirme\' olacaktır. Blok zincirlerinin iyi ölçeklenmediği bir sır değil ama çoğu insan bunun nedenini bilmiyor.</p>\n\n<p>Gerçek şu ki, ölçeklendirme aslında iki farklı kategoriyi kapsayan bir şemsiye terimdir: Protokol desteği ve belirli bir zamanda teknolojik destek. Bu makalede, dikkatimizi birine odaklayacağız, Protokol desteği temel olarak protokolün belirli bir zamanda kaç işlemi işleyebileceğinin bir ölçüsüdür.</p>\n\n<p>Bitcoin\'in bir blok boyutu sınırı vardır, bu da bir bloğa yeterli sayıda işlem dahil edildiğinde, ek işlemlerin bir sonraki blok için sırada beklemesi gerekeceği anlamına gelir. Yararlı bir benzetme, bir tren hakkında düşünmek olacaktır. Bir tren istasyona yanaşır ve sıradakiler sıraya dizilir. Tren dolduğunda, dışarıda kalan herkes bir sonraki treni beklemek zorunda kalır.</p>\n\n<p>Bitcoin, bloğa kimin girip girmeyeceğini belirlemek için ücretleri kullanır. Tren benzetmesine geri dönersek, geride bırakılmak üzere olan potansiyel bir yolcunun tren makinistine oturması için beş dolar teklif ettiğini hayal edebiliriz. Diğer yolcular da aynı şeyi yapar ve sonunda kimin hangi koltukları alacağını görmek için bir teklif savaşı çıkar. İlk gelen ilk hizmet alır politikasına uymak isteyip istemediğine karar vermek sürücüye kalmıştır, ancak en yüksek teklifi verenleri alarak gelirini en üst düzeye çıkarmak onun mali çıkarına olacaktır.</p>\n\n<p>Bu benzetmede madenciler tren sürücüleridir. İstedikleri işlemleri bloğa dahil edebilirler, ancak genellikle en yüksek ücretli işlemleri seçeceklerdir.</p>\n\n<p>Alternatif olarak, bloklar çok dolu değilse, insanların yüksek ücretler ödemeye teşviki yoktur, çünkü boş yer çoktur.</p>\n\n<p>2017 kripto para birimi patlamasının zirvesinde, Bitcoin işlemlerle dolup taştı ve bir sonraki bloğa veya bu konuda yakın gelecekteki herhangi bir bloğa dahil olmak isteyenler için ücretler fırladı. Yüksek ücretler ödemek istemeyenler, işlemlerinin saatlerce, günlerce ertelendiğini ve hatta kuyruktan tamamen çıktığını gördü.</p>\n\n<p>Bu, sık sık konuşulan \"kitlesel benimseme\" gerçekleşirse Bitcoin\'in nasıl ilerleyeceğine dair üzücü bir içgörüydü. Bitcoin kitleler tarafından kullanılacak olsaydı, işler 2017\'dekinden daha kötü olurdu ve Bitcoin\'e zenginler dışında kimse erişemezdi, çünkü sabit bir blok boyutu nedeniyle iş hacmi küçüktür ve bu da ücret piyasasının ele geçirmesine neden olur. .</p>\n\n<p>Monero bunu öngördü ve farklı bir şey yapmak istedi. Böylece Monero geliştiricileri dinamik bir blok boyutu uyguladı.</p>\n\n<p>Temel olarak, Monero\'nun da bir blok boyutu sınırı vardır, ancak bu yumuşak bir sınırdır. Bekleyen işlem sırası çok uzadığında, madenciler blokların boyutunu artırabilir. Tren benzetmemizle, fazladan yolcu sığdırmak için daha fazla tren vagonu eklemeyi hayal edebilirsiniz. Kuyruk boşaldıktan sonra bloklar ileriye doğru orijinal boyutlarına geri döner.</p>\n\n<p>Bu harika bir fikir gibi görünüyorsa, bunu uygulayan tek kripto para biriminin neden Monero olduğunu sormak mantıklı görünüyor. Verim sorunlarına bir son vermek için neden Bitcoin\'e eklemiyorsunuz?</p>\n\n<p>Maalesef bu mümkün değil. Bunun birkaç nedeni var ve açıklamak için elimizden gelenin en iyisini yapacağız.</p>\n\n<p> Büyük bloklara sahip olmak her zaman bir madencinin çıkarınadır. Büyük bloklarla daha fazla işlem yapabilir ve blok ödüllerinin yanı sıra ücretlerden daha fazla para kazanabilirler. Bu, birisinin zinciri şişirmek için küçük ücretlerle çok sayıda küçük işlem gönderdiği spam saldırılarına yol açma potansiyeline sahiptir. Madenci, blok boyutunu yükseltir ve hepsini içerir çünkü ne kadar küçük olursa olsun para paradır. Bu, çok az ekonomik fayda sağlayan sürekli olarak büyük bloklara yol açacaktır. Bitcoin, blok boyutunu yapay olarak kısıtlayarak ve böylece bir ücret piyasası oluşturarak bunu çözer. İstenmeyen e-posta saldırganları, diğer kullanıcılara ücret olarak daha fazla ödeme yapmak zorunda kalacak ve bu artık ucuz değil. Ancak bu, yukarıda belirtildiği gibi blokların dolması ve bazı işlemlerin beklemede kalması anlamına gelir.</p>\n\n<p>Peki, Monero dinamik blok boyutlarına sahipken spam saldırılarından nasıl kaçınabilir? Cevap basit ama zekice. Bir blok normalden daha büyük olduğunda, blok ödülüne bir ceza verilir. Bir madenci blok boyutunu artırmak isterse, o bloğu bularak alacağı ödül, normalde alacaklarından daha az olacaktır. Bu nedenle, yalnızca kullanıcıların ödediği işlem ücretleri, blok ödülünün kaybedilen kısmından daha ağır bastığında blok boyutunu artıracaklardır. Örneğin, madenci blok boyutunu yükselterek 0,5 XMR kaybederse ve ödenen işlem ücretlerinin toplamı 0,4 XMR olursa, o zaman boyutu yükseltirlerse 0,1 XMR net kayıp olur, yani yapma Tersine, toplam işlem ücretleri 0,7 XMR\'ye kadar eklenirse, blok ödül cezasından 0,5 XMR\'yi kaybetseler bile 0,2 XMR net kazanç olur, bu nedenle madenci boyutu artırır.</p>\n\n<p>Bu dinamik bloklar, spam saldırılarından kaçınmaya devam ederken zorunlu bir ücret piyasası oluşturmak için blok boyutunu yapay olarak kısıtlamadan ağın organik olarak büyümesini sağlar. Bu fikre bakabileceğimiz birkaç açı daha ve Bitcoin\'e eklenmesinin neden mümkün olmayacağına dair daha fazla neden var, ancak şimdilik, okuyucunun Monero\'nun Bitcoin\'deki birçok sorunu nasıl atlattığını anladığını umuyoruz. türevleri ve verimini geleceğe nasıl ölçeklendirmeyi planladığı.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Bireyler blockchain ile ilgili sorunları tartıştığında, ortaya çıkacak ilk kelimelerden biri \'ölçeklendirme\' olacaktır. Monero, bu sorunu çözmede kendisini diğerlerinden ayırır.';
@@ -3551,7 +3551,7 @@ class I18nTr extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Amaç';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Bağlam için, madencilik donanımı hakkında biraz konuşalım. Madenciler işi yapmak için bilgisayarları kullanır, ancak hepimiz biliyoruz ki her bilgisayar eşit şekilde yapılmamıştır. Bazı bilgisayarlar AI ağlarını veya yoğun oyunları çalıştıracak kadar güçlüyken, diğerleri basit görevlerle bile mücadele eder. Bilgi işlem gücündeki bu farklılıklar, hash oranını veya blok çözümleri aradıkları hızı da etkiler. <br/><br/>\nAncak bilgisayarlar arasındaki bu farklar bile, normal bilgisayarları birkaç büyüklük sırasına göre geride bırakan, Uygulamaya Özel Tümleşik Devreler (ASIC\'ler) olarak da bilinen özel donanımların hash oranlarıyla karşılaştırıldığında sönük kalır.<br/><br/>\nASIC\'leri neyin bu kadar güçlü kıldığını keşfetmek için biraz zaman ayıralım. Tüm bilgisayarların, pek çok şeyi yapıp hiçbir şeyi iyi yapamamaktan tek bir şeyi yapıp onu çok iyi yapmaya kadar değişen bir yelpazede bir yere düştüğünü hayal edin. CPU\'lar ve ASIC\'ler bu yelpazenin zıt uçlarındadır.<br/><br/>\nTüm standart bilgisayarlarda bulunan CPU\'lar ilk uçtadır. Web\'de gezinmek, oyun oynamak veya video işlemek gibi pek çok şeyi yapabilirler, ancak hiçbirini özellikle iyi yapamazlar. Ancak bu esneklik, verimlilik pahasına gelir.<br/><br/>\nASIC\'ler diğer uçta, tek bir şeyi yapabildikleri, ancak bunu inanılmaz bir hızla yaptıkları yer. Yalnızca bir matematiksel işlevi yerine getirebilirler, ancak diğer her şeyi göz ardı edebildikleri için performans kazanımları astronomiktir. Bununla birlikte, bu verimlilik esneklik pahasına gelir, bu nedenle işlev biraz değişirse - bir örnek x + y = z, 2x + y = z olarak değişir - o zaman ASIC tamamen çalışmayı durduracaktır. <br/><br/>\nHerkesin bir ASIC\'si yoktur, ancak herkesin bilgisayarı vardır. Bu haksız bir avantaja yol açabilir.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Bağlam için, madencilik donanımı hakkında biraz konuşalım. Madenciler işi yapmak için bilgisayarları kullanır, ancak hepimiz biliyoruz ki her bilgisayar eşit şekilde yapılmamıştır. Bazı bilgisayarlar AI ağlarını veya yoğun oyunları çalıştıracak kadar güçlüyken, diğerleri basit görevlerle bile mücadele eder. Bilgi işlem gücündeki bu farklılıklar, hash oranını veya blok çözümlerini arama hızını da etkiler. <br/><br/>\nAncak bilgisayarlar arasındaki bu farklar bile, normal bilgisayarları birkaç büyüklük sırasına göre geride bırakan, Uygulamaya Özel Tümleşik Devreler (ASIC\'ler) olarak da bilinen özel donanımların hash oranlarıyla karşılaştırıldığında sönük kalır.<br/><br/>\nASIC\'leri neyin bu kadar güçlü kıldığını keşfetmek için biraz zaman ayıralım. Tüm bilgisayarların, pek çok şeyi yapıp hiçbir şeyi iyi yapamamaktan tek bir şeyi yapıp onu çok iyi yapmaya kadar değişen bir yelpazede bir yere düştüğünü hayal edin. CPU\'lar ve ASIC\'ler bu yelpazenin zıt uçlarındadır.<br/><br/>\nTüm standart bilgisayarlarda bulunan CPU\'lar ilk uçtadır. Web\'de gezinmek, oyun oynamak veya video işlemek gibi pek çok şeyi yapabilirler, ancak hiçbirini özellikle iyi yapamazlar. Ancak bu esneklik, verimlilik pahasına gelir.<br/><br/>\nASIC\'ler diğer uçta, tek bir şeyi yapabildikleri, ancak bunu inanılmaz bir hızla yaptıkları yer. Yalnızca bir matematiksel işlevi yerine getirebilirler, ancak diğer her şeyi göz ardı edebildikleri için performans kazanımları astronomiktir. Bununla birlikte, bu verimlilik, esneklik pahasına gelir, bu nedenle işlev biraz değişirse - bir örnek x + y = z, 2x + y = z olarak değişir - o zaman ASIC tamamen çalışmayı durduracaktır. <br/><br/>\nHerkesin bir ASIC\'si yoktur, ancak herkesin bilgisayarı vardır. Bu haksız bir avantaja yol açabilir.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Arka fon';
@@ -7493,11 +7493,11 @@ class I18nTr extends I18n {
   String get restrict_limit_amounts => 'Limit miktarlarını kısıtla';
 
   @override
-  String get what_does_it_mean => 'Bunun anlamı ne?';
+  String get what_does_it_mean => 'Bu ne demek?';
 
   @override
   String ads_enter_amount(Object currency) {
-    return 'Tutarı girin $currency';
+    return 'Miktarı girin $currency';
   }
 
   @override
@@ -7541,7 +7541,7 @@ class I18nTr extends I18n {
   String get enter_number_15_90 => '15-90 arasında bir sayı girin';
 
   @override
-  String get enter_amount_min_0 => 'Miktarı girin (en az 0)';
+  String get enter_amount_min_0 => 'Tutarı girin (en az 0)';
 
   @override
   String get currency => 'Para birimi:';
@@ -7570,7 +7570,7 @@ class I18nTr extends I18n {
   }
 
   @override
-  String get what_is_settlement_fee_level => 'Uzlaşma ücreti düzeyi nedir?';
+  String get what_is_settlement_fee_level => 'Uzlaşma ücreti seviyesi nedir?';
 
   @override
   String get settlement_fee_level_selector_explanation => 'Bu seçici, işlemi cüzdanınıza gönderirken hangi ağ ücreti seviyesinin kullanılacağını seçmenize olanak tanır. Hangi ücret düzeyini istediğinizden emin değilseniz orta ücreti seçin.';
@@ -7669,7 +7669,7 @@ class I18nTr extends I18n {
   String get you_buy => 'sen satın al';
 
   @override
-  String get you_receive => 'Aldığınız';
+  String get you_receive => 'Aldığın';
 
   @override
   String get you_pay => 'Öde';
@@ -7678,7 +7678,7 @@ class I18nTr extends I18n {
   String get export_csv => 'CSV\'yi dışa aktar';
 
   @override
-  String get copy => 'Kopyala';
+  String get copy => 'kopyala';
 
   @override
   String sell_via(Object asset, Object provider) {
@@ -7742,7 +7742,7 @@ class I18nTr extends I18n {
   String get good_seller => 'İyi satıcı';
 
   @override
-  String get cancel => 'İptal';
+  String get cancel => 'İptal etmek';
 
   @override
   String get delete => 'Silmek';
@@ -7949,10 +7949,10 @@ class I18nTr extends I18n {
   String get api_error_57 => 'Parola sıfırlama için sağlanan belirteç, sıfırlama belirteci değil';
 
   @override
-  String get api_error_58 => 'Doğrulanmamış bir e-postaya sahip bir kullanıcıya parola sıfırlama e-postası göndermeye çalışmak';
+  String get api_error_58 => 'Doğrulanmamış bir e-postaya sahip bir kullanıcıya şifre sıfırlama e-postası göndermeye çalışmak';
 
   @override
-  String get api_error_59 => 'Doğrulanmamış bir e-postaya sahip bir kullanıcı için parola sıfırlamaya çalışılıyor';
+  String get api_error_59 => 'Doğrulanmamış bir e-postaya sahip bir kullanıcı için parola sıfırlama deneniyor';
 
   @override
   String get api_error_62 => 'Hesap genel veri talebi için sağlanan kullanıcı adına sahip bir hesap yok';
@@ -7988,7 +7988,7 @@ class I18nTr extends I18n {
   String get api_error_72 => 'Var olmayan bir hesabın parasını çekmeye çalışmak';
 
   @override
-  String get api_error_78 => 'Geçersiz bir parametre kombinasyonuyla get reklamları oluşturmaya çalışmak';
+  String get api_error_78 => 'Geçersiz bir parametre kombinasyonuna sahip get reklamları oluşturulmaya çalışılıyor';
 
   @override
   String get api_error_79 => 'İstenen reklam kimliği mevcut değil';
@@ -8144,7 +8144,7 @@ class I18nTr extends I18n {
   String get api_error_132 => 'Var olmayan bir ticarete itiraz etmeye çalışmak';
 
   @override
-  String get api_error_133 => 'Var olmayan bir kullanıcıdan geri bildirim almaya çalışmak';
+  String get api_error_133 => 'Var olmayan bir kullanıcının geri bildirimini almaya çalışmak';
 
   @override
   String get api_error_134 => 'Kullanıcı zaten izin verilen maksimum sayıda reklama sahipken bir reklam oluşturmaya çalışmak';
@@ -8183,7 +8183,7 @@ class I18nTr extends I18n {
   String get api_error_150 => 'İstekte bulunan kullanıcının reklam afişi tarafından engellendiği bir reklamda ticaret başlatmaya çalışmak';
 
   @override
-  String get api_error_151 => 'Talepte bulunan kullanıcının reklam afişi tarafından güvenilmediği bir reklamda ticaret başlatmaya çalışmak';
+  String get api_error_151 => 'Talepte bulunan kullanıcının reklamı gönderen tarafından güvenilmediği bir reklamda ticaret başlatmaya çalışmak';
 
   @override
   String get api_error_152 => 'Zaten kapalı olan bir işlemi iptal etmeye çalışmak';
@@ -8228,7 +8228,7 @@ class I18nTr extends I18n {
   String get api_error_165 => 'Net takas ile ticaret yapmak isteyen kullanıcı mevcut değil';
 
   @override
-  String get api_error_166 => 'Var olmayan bir ticareti net takasla uygulamaya çalışmak';
+  String get api_error_166 => 'Var olmayan bir ticareti net ödeme ile uygulamaya çalışmak';
 
   @override
   String get api_error_167 => 'Mevcut piyasa fiyatı, bir CALL ticaretini netleştirirken uygulama fiyatından küçük veya ona eşittir. Ticaret, piyasa standartlarına göre kârsızdır, bu nedenle netleştirilemez. Gerekirse normal yerleşimi kullanın.';
@@ -8285,7 +8285,7 @@ class I18nTr extends I18n {
   String get api_error_194 => 'Mevcut olmayan kullanıcı için genel API belirteci oluşturulmaya çalışılıyor';
 
   @override
-  String get api_error_195 => 'Genel API jetonunu almaya çalışırken yanlış şifre';
+  String get api_error_195 => 'Genel API belirtecini almaya çalışırken yanlış parola';
 
   @override
   String get api_error_196 => 'Var olmayan bir kullanıcı için son mesajları almaya çalışılıyor';
@@ -8327,7 +8327,7 @@ class I18nTr extends I18n {
   String get api_error_215 => 'En popüler ödeme yöntemlerini isterken hem ülke_kodu hem de para birimi_kodu belirtilmeye çalışılıyor';
 
   @override
-  String get api_error_216 => 'Var olmayan bir ülke kodu için en popüler ödeme yöntemleri talep edilmeye çalışılıyor';
+  String get api_error_216 => 'Var olmayan bir ülke_kodu için en popüler ödeme yöntemleri talep edilmeye çalışılıyor';
 
   @override
   String get api_error_217 => 'Mevcut olmayan bir para birimi_kodu için en popüler ödeme yöntemleri talep edilmeye çalışılıyor';
@@ -8510,7 +8510,7 @@ class I18nTr extends I18n {
   String get error_password_reset_token_invalid => 'Parola sıfırlama için sağlanan belirteç geçersiz';
 
   @override
-  String get error_password_reset_unverified_email => 'Doğrulanmamış bir e-postaya sahip bir kullanıcı için parola sıfırlamaya çalışılıyor';
+  String get error_password_reset_unverified_email => 'Doğrulanmamış bir e-postaya sahip bir kullanıcı için parola sıfırlama deneniyor';
 
   @override
   String get i_want_to_buy_new => 'satın almak istiyorum';
@@ -8598,7 +8598,7 @@ class I18nTr extends I18n {
   String get preview => 'Ön izleme';
 
   @override
-  String get close => 'Kapat';
+  String get close => 'Kapalı';
 
   @override
   String get deposit => 'Depozito';
@@ -8861,7 +8861,7 @@ class I18nTr extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Ortaklık programınız etkinleştirildi ve {refCode} ortaklık etiketinizi herhangi bir $appName URL\'sine ekleyerek komisyon kazanabilirsiniz.';
+    return 'Ortaklık programınız etkinleştirildi ve $ref_code ortaklık etiketinizi herhangi bir $appName URL\'sine ekleyerek komisyon kazanabilirsiniz.';
   }
 
   @override
@@ -8936,7 +8936,7 @@ class I18nTr extends I18n {
 
   @override
   String app_buy_sell(Object val) {
-    return '{buyOrsell} için ne kadar diliyorsun?';
+    return '$val için ne kadar diliyorsun?';
   }
 
   @override
@@ -9087,7 +9087,7 @@ class I18nTr extends I18n {
   String get app_gallery => 'Galeri';
 
   @override
-  String get app_via => 'aracılığıyla';
+  String get app_via => 'yolu ile';
 
   @override
   String get app_one_percent => '%1 ücret';
@@ -9097,12 +9097,12 @@ class I18nTr extends I18n {
 
   @override
   String app_note_label(Object val) {
-    return '{username} ile ilgili notunuz (sadece siz görebilirsiniz)';
+    return '$val ile ilgili notunuz (sadece siz görebilirsiniz)';
   }
 
   @override
   String app_note_add(Object val) {
-    return '{username} üzerine bir not ekleyin';
+    return '$val üzerine bir not ekleyin';
   }
 
   @override
@@ -9182,7 +9182,7 @@ class I18nTr extends I18n {
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: Anonim olarak BTC satın alın';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.\n\nBitcoin\'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk\'te bitcoin satın almak hiç bu kadar kolay olmamıştı - en sevdiğiniz çevrimiçi ödeme yöntemini kullanarak bir kişiden anında BTC satın alın: PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya diğerleri. Yakınınızdaki bitcoinleri nakit olarak satın almak istiyorsanız, yerel olarak bitcoin satmak isteyen birini bulabilirsiniz - ticaret platformu, BTC\'nin nakit olarak alınmasını ve satılmasını destekler. Posta yoluyla nakit kullanarak bitcoin bile satın alabilirsiniz.\n\n- Güvenli ve Sorunsuz Ticaret\nTıpkı LocalBitcoins gibi, herhangi bir yerde, herhangi bir ödeme yöntemini, herhangi bir para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins\'in aksine yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması yok\nAgoraDesk, orijinal LocalBitcoins\'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.\n\n- Topluluk tarafından güvenilir\nPlatformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı\nUygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google\'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support\n\n- Adil Ücretler\nTahkim tahvili cüzdanımıza/cüzdanımıza Bitcoin yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.\n\nBitcoin\'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk\'te bitcoin satın almak hiç bu kadar kolay olmamıştı - favori çevrimiçi ödeme yönteminizi kullanarak bir kişiden anında BTC satın alın: PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya diğerleri. Yakınınızdaki bitcoinleri nakit olarak satın almak istiyorsanız, yerel olarak bitcoin satmak isteyen birini bulabilirsiniz - ticaret platformu, BTC\'nin nakit olarak alınmasını ve satılmasını destekler. Posta yoluyla nakit kullanarak bitcoin bile satın alabilirsiniz.\n\n- Güvenli ve Sorunsuz Ticaret\nTıpkı LocalBitcoins gibi, herhangi bir yerde, herhangi bir ödeme yöntemini, herhangi bir para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins\'in aksine yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması yok\nAgoraDesk, orijinal LocalBitcoins\'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.\n\n- Topluluk tarafından güvenilir\nPlatformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı\nUygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google\'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support\n\n- Adil Ücretler\nTahkim tahvili cüzdanımıza/cüzdanımıza Bitcoin yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'kripto para,anonim,özel,monero,xmr,p2p';
@@ -9229,39 +9229,42 @@ class I18nTr extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'çağrı seçeneği satış';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR\'yi anonim olarak satın alın';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Düzenleme kutusu parolası, düzenlemek için iki kez dokunun';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Parola düzenleme kutusunu onaylayın, düzenlemek için iki kez dokunun';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'reklam oluşturuldu';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val yakında geri dönecek!\\nRahatsızlık verdiğimiz için özür dileriz, şu anda planlanmış bazı bakımlar yapıyoruz.\\nMuhtemelen yakında tekrar çevrimiçi olacağız. Topluluk gruplarımızda güncel kalın:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'reklam türü seçin';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Yorum bırakmak için buraya dokunun!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Bu kullanıcıya zaten bir inceleme bıraktınız. Yorumunuzu şimdi güncellemek ister misiniz?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Alıcı veya satıcı seçin';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Varsayılan bir sekme ayarla';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'reklamlarınız';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Uygulama Bakımı';
+  }
 }

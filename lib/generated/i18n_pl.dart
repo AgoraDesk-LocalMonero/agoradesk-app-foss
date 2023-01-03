@@ -1726,7 +1726,7 @@ class I18nPl extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Cena nie została odpowiednio ustawiona';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Nielegalna kombinacja kraju, metody płatności i waluty';
+  String get error250Sbpost8722Sbad250Sb86 => 'Nieprawidłowe kombinacje kraju, metody płatności i waluty';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Ta metoda płatności nie jest dostępna dla wybranego kraju';
@@ -3251,7 +3251,7 @@ class I18nPl extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Jak wymiany atomiczne będą działały w Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Uwaga:</b> Zalecamy, aby czytelnik przeczytał nasze artykuły<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Dlaczego Monero Ma Tail Emissions\"</a> i <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Kopanie Monero: Co Sprawia, Że RandomX Tak Wyjątkowy”</a>. Ten artykuł opiera się na przedstawionych tam koncepcjach.</i></p>\n\n<p>W dyskusjach na temat problemów związanych z blockchainem, jednym z pierwszych słów, które się pojawią, jest „skalowanie”. Nie jest tajemnicą, że blockchainy nie skalują się dobrze, ale większość ludzi nie wie dlaczego.</p>\n\n<p>Prawda jest taka, że skalowanie jest tak naprawdę terminem zbiorczym, który obejmuje dwie różne kategorie: możliwości protokołu i możliwości technologiczne w danym momencie. W tym artykule skupimy naszą uwagę na jednym, obsługa protokołu jest w zasadzie miarą tego, ile transakcji protokół może obsłużyć w danym czasie.</p>\n\n<p>Bitcoin ma ograniczony maksymalny rozmiar bloku, co oznacza, że gdy wystarczająca liczba transakcji zostanie uwzględniona w bloku, wszelkie dodatkowe transakcje będą musiały czekać w kolejce na następny. Pomocne jest wyobrażenie sobie pociągu. Na stację podjeżdża pociąg, a ci w kolejce wchodzą. Gdy pociąg będzie pełny, każdy, kto zostanie na zewnątrz, będzie musiał poczekać na następny.</p>\n\n<p>Bitcoin wykorzystuje opłaty, aby określić, kto wchodzi do bloku, a kto nie. Wracając do analogii z pociągiem, można sobie wyobrazić, że jeden potencjalny pasażer, który ma pozostać w tyle, oferuje maszyniście pięć dolarów za miejsce. Inni pasażerowie idą w jego ślady i ostatecznie dochodzi do wojny licytacyjnej, o to kto dostanie miejsce. Do maszynisty należy decyzja, czy chce przestrzegać zasady „kto pierwszy, ten lepszy”, ale w jego najlepszym interesie finansowym jest maksymalizacja dochodów poprzez przyjmowanie na pokład osób, które zaoferują najwyższą cenę.</p>\n\n<p>W tej analogii minersi są maszynistami. Mogą uwzględnić w bloku dowolne transakcje, ale zazwyczaj wybierają te, które mają najwyższe opłaty.</p>\n\n<p>Alternatywnie, jeśli bloki nie są zbyt pełne, ludzie nie mają motywacji do płacenia wysokich opłat, ponieważ jest dużo wolnych miejsc.</p>\n\n<p>W szczytowym momencie boomu kryptowalutowego w 2017 r. Bitcoin został zalany transakcjami, a opłaty gwałtownie wzrosły w przypadku tych, którzy chcieli zostać uwzględnieni w następnym bloku, lub w jakimkolwiek bloku w najbliższej przyszłości. Ci, którzy nie chcieli płacić wysokich opłat, widzieli, że ich transakcje są odkładane na wiele godzin, dni, a nawet całkowicie znikają z kolejki.</p>\n\n<p>To był wstrząsający wgląd w to, jak Bitcoin by sobie radził, w przypadku tak często wspominanej „masowej adopcji”. Gdyby Bitcoin miał być używany przez masy, sytuacja byłaby jeszcze gorsza niż w 2017 roku, a Bitcoin byłby niedostępny dla każdego poza bogaczami, po prostu dlatego, że przepustowość jest niewielka ze względu na stały maksymalny rozmiar bloku, powodując walkę na rynku opłat.</p>\n\n<p>Monero przewidziało to i chciało zrobić coś innego. Dlatego programiści Monero zaimplementowali dynamiczny maksymalny rozmiar bloków.</p>\n\n<p>Zasadniczo Monero ma również limit rozmiaru bloku, ale jest to miękki limit. Gdy kolejka oczekujących transakcji staje się zbyt długa, minersi mogą zwiększyć rozmiar bloków. W naszej analogii z pociągiem możesz wyobrazić sobie dodanie większej liczby wagonów, aby pomieścić dodatkowych pasażerów. Po opróżnieniu kolejki bloki zmniejszają się z powrotem do swojego pierwotnego rozmiaru.</p>\n\n<p>Jeśli wydaje się to fajnym pomysłem, rozsądne mogłoby być pytanie, dlaczego Monero jest jedyną kryptowalutą, która to zaimplementowała. Dlaczego nie dodać tego do Bitcoina, aby położyć kres problemom z przepustowością?</p>\n\n<p>Niestety nie jest to możliwe. Jest kilka powodów, a my postaramy się je wyjaśnić.</p>\n\n<p> W najlepszym interesie minera zawsze jest kopanie dużych bloków. Dzięki dużym blokom mogą zmieścić więcej transakcji i zarabiać więcej na opłatach, a także na nagrodach blokowych. Może to prowadzić do ataków spamowych, w których ktoś wysyła wiele małych transakcji z niewielkimi opłatami, aby zapchać blockchain. Miner po prostu zwiększyłby rozmiar bloku, uwzględniając je wszystkie, ponieważ pieniądze to pieniądze, bez względu na to, jak małe. Prowadziłoby to do konsekwentnie dużych bloków przy niewielkich korzyściach ekonomicznych. Bitcoin rozwiązuje ten problem, sztucznie ograniczając rozmiar bloku, tworząc w ten sposób rynek opłat. Osoby atakujące spamem musiałyby zapłacić innym użytkownikom opłaty, a to nie jest już tanie. Ale oznacza to, że bloki są pełne, pozostawiając niektóre transakcje w oczekiwaniu, jak wspomniano powyżej.</p>\n\n<p>Jak więc Monero może mieć dynamiczne rozmiary bloków, ale unikać ataków spamowych? Odpowiedź jest prosta, ale sprytna. Kara od nagrody za blok jest wprowadzana, gdy blok jest większy niż normalnie. Jeśli miner chce zwiększyć rozmiar bloku, nagroda, jaką otrzyma za znalezienie tego bloku, będzie mniejsza niż w innym przypadku. Tak więc zwiększą rozmiar bloku tylko wtedy, gdy opłacone opłaty transakcyjne użytkowników przewyższą utraconą część nagrody za blok. Na przykład, jeśli miner straciłby 0,5 XMR, podnosząc nagrodę blokową i suma opłaconej transakcji opłaty wyniosłaby 0,4 XMR, to wtedy nastąpiłaby strata netto w wysokości 0,1 XMR gdyby podnieśli rozmiar, więc nie zrobiliby tego. I odwrotnie, jeśli łączne opłaty transakcyjne dodałyby 0,7 XMR, zysk netto wyniósłby 0,2 XMR, nawet jeśli straciliby 0,5 XMR z kary za blok, więc miner zwiększyłby rozmiar.</p>\n\n<p>Te dynamiczne bloki pozwalają sieci rozwijać się organicznie, bez znacznego ograniczania rozmiaru bloku w celu wprowadzenia wymuszonego rynku opłat, przy jednoczesnym unikaniu ataków spamowych. Jest jeszcze kilka punktów widzenia, z których możemy spojrzeć na ten pomysł, i więcej powodów, dla których nie byłoby możliwe dodanie go do Bitcoina, ale na razie mamy nadzieję, że czytelnik rozumie, jak Monero omija kilka problemów związanych z Bitcoinem i jego pochodne oraz jak planuje zwiększyć przepustowość w przyszłości.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Uwaga:</b> Zdecydowanie zalecamy czytelnikowi przeczytanie naszych artykułów <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Why Monero Has A Tail Emission\"</a> i <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Monero Mining: What Makes RandomX tak wyjątkowy” </a>. Ten artykuł opiera się na koncepcjach tam przedstawionych.</i></p>\n\n<p> Ilekroć ludzie dyskutują o problemach z blockchainem, jednym z pierwszych słów, które się pojawią, będzie „skalowanie”. Nie jest tajemnicą, że łańcuchy bloków nie skalują się dobrze, ale większość ludzi nie wie dlaczego.</p>\n\n<p>Prawda jest taka, że skalowanie to właściwie ogólny termin, który obejmuje dwie różne kategorie: wsparcie protokołów i wsparcie technologiczne w danym momencie. W tym artykule skupimy naszą uwagę na jednym, obsługa protokołów jest zasadniczo miarą liczby transakcji, które protokół może obsłużyć w danym momencie.</p>\n\n<p>Bitcoin ma limit rozmiaru bloku, co oznacza, że po uwzględnieniu wystarczającej liczby transakcji w bloku wszelkie dodatkowe transakcje będą musiały czekać w kolejce na następny blok. Pomocną analogią byłoby myślenie o pociągu. Pociąg podjeżdża na stację, a ci, którzy stoją w kolejce, wchodzą. Gdy pociąg jest pełny, każdy, kto zostanie na zewnątrz, będzie musiał czekać na następny. </p>\n\n<p>Bitcoin wykorzystuje opłaty, aby określić, kto dostanie się do bloku, a kto nie. Wracając do analogii z pociągiem, można sobie wyobrazić, że jeden potencjalny pasażer, który ma zostać w tyle, oferuje maszyniście pięć dolarów za ustąpienie mu miejsca. Inni pasażerowie idą w ich ślady i ostatecznie dochodzi do wojny licytacyjnej, aby zobaczyć, kto dostanie które miejsca. Do kierowcy należy decyzja, czy chce przestrzegać zasady „kto pierwszy, ten lepszy”, ale w jego najlepszym interesie finansowym leży maksymalizacja dochodów poprzez przyjmowanie na pokład oferentów, którzy zaoferują najwyższą cenę.</p>\n\n<p> W tej analogii górnicy są maszynistami. Mogą zawierać dowolne transakcje w bloku, ale generalnie wybiorą te, które mają najwyższe opłaty.</p>\n\n<p>Alternatywnie, jeśli bloki nie są bardzo pełne, ludzie nie mają motywacji do płacenia wysokich opłat, ponieważ jest mnóstwo wolnych miejsc.</p>\n\n<p> W szczytowym okresie boomu na kryptowaluty w 2017 r. Bitcoin został zalany transakcjami, a opłaty gwałtownie wzrosły dla tych, którzy chcieli zostać włączeni do następnego bloku lub dowolnego bloku w bliskiej przyszłości. Ci, którzy nie chcieli płacić wysokich opłat, widzieli, jak ich transakcje były opóźniane o godziny, dni, a nawet całkowicie wypadały z kolejki.</p>\n\n<p> To był wstrząsający wgląd w to, jak Bitcoin by sobie radził, gdyby często mówiono o „masowej adopcji”. Gdyby Bitcoin miał być używany przez masy, sytuacja byłaby jeszcze gorsza niż w 2017 r., a Bitcoin byłby niedostępny dla nikogo poza bogatymi, po prostu dlatego, że przepustowość jest niewielka ze względu na stały rozmiar bloku, powodując przejęcie rynku opłat .</p>\n\n<p> Monero przewidział to i chciał zrobić coś innego. Dlatego programiści Monero wdrożyli dynamiczny rozmiar bloku.</p>\n\n<p> Zasadniczo Monero ma również czapkę wielkości bloku, ale jest to miękka czapka. Gdy kolejka oczekujących transakcji staje się zbyt długa, górnicy mogą zwiększyć rozmiar bloków. Korzystając z naszej analogii do pociągu, możesz sobie wyobrazić dodanie większej liczby wagonów, aby pomieścić dodatkowych pasażerów. Gdy kolejka jest pusta, bloki zmniejszają się do pierwotnego rozmiaru. </p>\n\n<p> Jeśli wydaje się to fajnym pomysłem, rozsądne wydaje się pytanie, dlaczego Monero jest jedyną kryptowalutą, która to zaimplementowała. Dlaczego nie dodać go do Bitcoin, aby położyć kres problemom z przepustowością?</p>\n\n<p>Niestety nie jest to możliwe. Jest kilka powodów i postaramy się je wyjaśnić.</p>\n\n<p> Posiadanie dużych bloków zawsze leży w najlepszym interesie górnika. Dzięki dużym blokom mogą zmieścić się w większej liczbie transakcji i zarobić więcej pieniędzy na opłatach, a także na nagrodach blokowych. Może to prowadzić do ataków spamowych, w których ktoś wysyła wiele małych transakcji z niewielkimi opłatami, aby rozdęć łańcuch. Górnicy po prostu zwiększyliby rozmiar bloku, obejmując je wszystkie, ponieważ pieniądze to pieniądze, bez względu na to, jak małe. Prowadziłoby to do konsekwentnie dużych bloków z niewielkimi korzyściami ekonomicznymi. Bitcoin rozwiązuje ten problem, sztucznie ograniczając rozmiar bloku, generując w ten sposób rynek opłat. Osoby atakujące spam musiałyby przepłacić innych użytkowników opłatami, a to już nie jest tanie. Ale to oznacza, że bloki się zapełniają, pozostawiając niektóre transakcje oczekujące, jak wspomniano powyżej. </p>\n\n<p>W jaki sposób Monero może mieć dynamiczne rozmiary bloków, ale unikać ataków spamowych? Odpowiedź jest prosta, ale sprytna. Kara za nagrodę za blok jest wprowadzana, gdy blok jest większy niż normalnie. Jeśli górnik chce zwiększyć rozmiar bloku, nagroda, jaką otrzyma za znalezienie tego bloku, będzie mniejsza niż w innym przypadku. Zwiększą więc rozmiar bloku tylko wtedy, gdy opłaty transakcyjne uiszczane przez użytkowników przewyższą utraconą część nagrody za blok. Na przykład, jeśli górnik straciłby 0,5 XMR poprzez zwiększenie rozmiaru bloku, a suma zapłaconych opłat transakcyjnych wyniosłaby 0,4 XMR, to gdyby zwiększył rozmiar bloku, poniósłby stratę netto w wysokości 0,1 XMR, więc nie rób tego. I odwrotnie, jeśli suma opłat transakcyjnych wyniosłaby 0,7 XMR, zysk netto wyniósłby 0,2 XMR, mimo że stracą 0,5 XMR z kary za blok, więc górnik zwiększy rozmiar.</p>\n\n<p> Te dynamiczne bloki pozwalają sieci rozwijać się organicznie, bez sztucznego ograniczania rozmiaru bloków w celu wymuszenia rynku opłat, przy jednoczesnym unikaniu ataków spamowych. Jest jeszcze kilka punktów widzenia, z których możemy spojrzeć na ten pomysł, i więcej powodów, dla których dodanie go do Bitcoin nie byłoby możliwe, ale na razie mamy nadzieję, że czytelnik rozumie, w jaki sposób Monero omija kilka problemów w Bitcoin i jego pochodne i jak planuje skalować swoją przepustowość w przyszłości.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Ilekroć ludzie omawiają problemy z blockchainem, jednym z pierwszych słów, które zostanie wspomniane, będzie „skalowanie”. Monero wyróżnia się w swoim rozwiązaniu tego problemu.';
@@ -3551,7 +3551,7 @@ class I18nPl extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Powód';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Wspomnijmy o sprzęcie używanym przez minerów do kopania. Minerzy wykorzystują komputery do pracy, ale wszyscy wiemy, że komputery nie są sobie równe. Niektóre są na tyle potężne, że można dzięki nim szkolić sztuczną inteligencję, bądź grać w intensywne gry, podczas gdy inne ledwo sobie radzą z codziennymi zadaniami. Te różnice w mocy obliczeniowej wpływają również na hash rate, czyli prędkość kopania bloków.<br/><br/>\nAle te różnice między komputerami są niczym w porównaniu do przewagi oferowanej przez wyspecjalizowany sprzęt znany jako Application Specific Integrated Circuits (ASICs), który pod względem hash rate, jest szybszy od zwykłego komputera o kilka rzędów wielkości.<br/><br/>\nZastanówmy się, co sprawia, że ASICs są aż tak potężne. Wyobraź sobie wszystkie komputery na spektrum, od wszechstronnego, po taki co robi tylko jedną rzecz, ale za to bardzo szybko. Procesory i ASICs są na przeciwnych końcach tego spektrum.<br/><br/>\nStandardowe procesory są na pierwszym końcu. Można dzięki nim robić wiele rzeczy, jak chociażby przeglądać internet, grać w gry, renderować filmy, ale nie są one wyspecjalizowane pod żadną z nich. Wszechstronność odbywa się kosztem efektywności.<br/><br/>\nASICs z kolei są na drugim końcu spektrum, potrafią tylko jedną rzecz, ale robią ją w niesamowitym tempie. Mogą wykonywać tylko jedną funkcję matematyczną, ale ponieważ potrafią ignorować wszystko inne, prędkość wykonywania tej jednej jest astronomiczna. Ta efektywność odbywa się kosztem wszechstronności, więc jeśli funkcja zmieni się choć odrobinę, np. zamiast x + y = z, będą musiały rozwiązać 2x + y = z, wówczas ASICs nie będzie w stanie nawet funkcjonować.<br/><br/>\nNie każdy posiada ASICs ale każdy posiada komputer. To może prowadzić do niesprawiedliwej przewagi.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Dla kontekstu porozmawiajmy trochę o sprzęcie górniczym. Górnicy używają komputerów do wykonywania pracy, ale wszyscy wiemy, że nie każdy komputer jest wykonany tak samo. Niektóre komputery są wystarczająco wydajne, aby obsługiwać sieci AI lub intensywne gry, podczas gdy inne mają problemy nawet z prostymi zadaniami. Te różnice w mocy obliczeniowej wpływają również na szybkość mieszania, czyli szybkość, z jaką szukają rozwiązań blokowych. <br/><br/>\nAle nawet te różnice między komputerami bledną w porównaniu z szybkością mieszania wyspecjalizowanego sprzętu, znanego również jako układy scalone specyficzne dla aplikacji (ASIC), które przewyższają zwykłe komputery o kilka rzędów wielkości.<br/><br/>\nPoświęćmy trochę czasu na zbadanie, co sprawia, że układy ASIC są tak potężne. Wyobraź sobie, że wszystkie komputery mieszczą się gdzieś w spektrum, które waha się od możliwości robienia wielu rzeczy, ale nic dobrze, do robienia tylko jednej rzeczy, ale robienia jej bardzo dobrze. Procesory i układy ASIC znajdują się na przeciwległych krańcach tego spektrum.<br/><br/>\nProcesory, które są we wszystkich standardowych komputerach, znajdują się na pierwszym końcu. Mogą robić wiele rzeczy, takich jak przeglądanie sieci, grać w gry lub renderować wideo, ale żadnej z nich nie wykonują szczególnie dobrze. Jednak ta elastyczność odbywa się kosztem wydajności.<br/><br/>\nASIC są na drugim końcu, gdzie mogą tylko jedną rzecz, ale robią to w niewiarygodnym tempie. Mogą wykonywać tylko jedną funkcję matematyczną, ale ponieważ mogą ignorować wszystko inne, wzrost wydajności jest astronomiczny. Ta wydajność odbywa się jednak kosztem elastyczności, więc jeśli funkcja zmieni się nawet nieznacznie - na przykład x + y = z zmienia się na 2x + y = z - wtedy ASIC całkowicie przestanie działać. <br/><br/>\nNie każdy posiada układ ASIC, ale każdy ma komputery. Może to prowadzić do nieuczciwej przewagi.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Kontekst';
@@ -7988,7 +7988,7 @@ class I18nPl extends I18n {
   String get api_error_72 => 'Próba wypłaty środków z konta, które nie istnieje';
 
   @override
-  String get api_error_78 => 'Próba uzyskania reklam z niedozwoloną kombinacją parametrów';
+  String get api_error_78 => 'Próba wyświetlenia reklam z nieprawidłową kombinacją parametrów';
 
   @override
   String get api_error_79 => 'Żądany identyfikator ogłoszenia nie istnieje';
@@ -9197,16 +9197,16 @@ class I18nPl extends I18n {
   String get app_open_dropdown => 'Otwórz listę rozwijaną';
 
   @override
-  String get error250Sbsignup250Sb175 => 'Próba zrealizowania kuponu, który nie istnieje podczas rejestracji';
+  String get error250Sbsignup250Sb175 => 'Próba wykorzystania kuponu, który nie istnieje podczas rejestracji';
 
   @override
   String get error250Sbsignup250Sb176 => 'Próba zrealizowania wygasłego kuponu podczas rejestracji';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Próba zrealizowania kuponu, którego nie ma w magazynie podczas rejestracji';
+  String get error250Sbsignup250Sb177 => 'Próba wykorzystania kuponu, którego nie ma w magazynie podczas rejestracji';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Wysłano list do zresetowania hasła! Sprawdź swoją skrzynkę odbiorczą.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'List dotyczący resetowania hasła został wysłany! Sprawdź swoją skrzynkę odbiorczą.';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Zaakceptuj warunki i kontynuuj';
@@ -9229,39 +9229,42 @@ class I18nPl extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'sprzedaż opcji kupna';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: kup XMR anonimowo';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Edytuj hasło skrzynki, kliknij dwukrotnie, aby edytować';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Potwierdź pole edycji hasła, dotknij dwukrotnie, aby edytować';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'Reklama utworzona';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val wkrótce wróci!\\nPrzepraszamy za niedogodności, ale w tej chwili przeprowadzamy zaplanowaną konserwację.\\nPrawdopodobnie wkrótce wrócimy do trybu online. Bądź na bieżąco w naszych grupach społecznościowych:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Wybierz typ reklamy';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Stuknij tutaj, aby zostawić opinię!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Już zostawiłeś temu użytkownikowi opinię. Czy chcesz teraz zaktualizować swoją opinię?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Wybierz kupującego lub sprzedającego';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Ustaw domyślną kartę';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'Twoje reklamy';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Konserwacja aplikacji';
+  }
 }
