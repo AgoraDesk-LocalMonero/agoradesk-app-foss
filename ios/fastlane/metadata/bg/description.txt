@@ -1,6 +1,5 @@
-WARNING: THIS APP IS CURRENTLY IN OPEN BETA! EXPECT BUGS
+Buy or sell Bitcoin anonymously, without ID verification. Cash or online. Safe, fast, easy.
 
-Buy or sell Bitcoin without ID verification. Cash or online.
 
 Wondering how to invest in Bitcoin? On AgoraDesk, purchasing bitcoins has never been easier - instantly buy BTC from a person using your favorite online payment method: PayPal, credit/debit card or bank transfer, gift cards, Venmo or any other. If you want to buy bitcoins near you with cash, you can find someone willing to sell bitcoins locally - the trading platform supports buying and selling BTC with cash. You can even buy bitcoins using cash by mail.
 
@@ -26,3 +25,4 @@ You can reach our support at: https://agoradesk.com/support
 
 - Fair Fees
 We do not charge exorbitant fees when you deposit or withdraw Bitcoins to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.
+

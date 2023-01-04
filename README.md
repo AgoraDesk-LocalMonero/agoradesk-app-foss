@@ -75,10 +75,17 @@ https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
 ## Flavors
 
 ### How to build iOS with run parameters
-- https://stackoverflow.com/a/65315937/7198006
+- https://docs.flutter.dev/deployment/cd
 
 ### Fastlane
 - https://roszkowski.dev/2019/flutter-flavors/
+
+#### iOS
+- Metadata files https://docs.fastlane.tools/actions/deliver/
+- iOS lang codes https://gist.github.com/awaik/9f58ebc0c5c2af865e7233ff2e8c7fe3
+
+#### Android
+- Metadata management action `fastlane supply init`
 
 ### Initial settings
 - https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b

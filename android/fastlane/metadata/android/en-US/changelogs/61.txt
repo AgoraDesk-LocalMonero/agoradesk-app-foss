@@ -1,8 +1,0 @@
-1. Feat: improved translations.
-2. Fix: assessibility buttons.
-3. Feat: added brute-force attack captcha
-4. Feat: open a trade screen after the trade initiated.
-5. Fix: changed dispute label color.
-6. Fix: FOSS version can't logout.
-7. HotFix: translated strings bug.
-8. Fix: ad edit BTC fee settlement bug.
