@@ -1,4 +1,4 @@
-app_identifier("co.localmonero.app") # The bundle identifier of your app
+app_identifier("com.agoradesk.app") # The bundle identifier of your app
 apple_id("awaiking44@gmail.com") # Your Apple Developer Portal username
 
 itc_team_id("124033163") # App Store Connect Team ID
