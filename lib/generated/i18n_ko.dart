@@ -9275,9 +9275,6 @@ class I18nKo extends I18n {
   String get app_push_new_offer => '새로운 제안이 있습니다.';
 
   @override
-  String get app_p => '완료된 것으로 표시된 거래';
-
-  @override
   String get app_push_trade_marked_completed => '완료된 것으로 표시된 거래';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nKo extends I18n {
 
   @override
   String get app_push_trade_disputed => '무역 분쟁';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => '익명으로 모네로 구매/판매';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => '익명으로 비트코인 구매/판매';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => '신분증 인증 없이 모네로를 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => '신원 확인 없이 비트코인을 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.';
+
+  @override
+  String get app_ask_community_chats => '질문이 있으신가요? 커뮤니티 채팅에서 물어보세요';
 }

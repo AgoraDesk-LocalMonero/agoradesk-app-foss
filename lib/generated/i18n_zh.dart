@@ -9275,9 +9275,6 @@ class I18nZh extends I18n {
   String get app_push_new_offer => 'You have a new offer';
 
   @override
-  String get app_p => 'Trade marked as completed';
-
-  @override
   String get app_push_trade_marked_completed => 'Trade marked as completed';
 
   @override
@@ -9285,6 +9282,21 @@ class I18nZh extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Trade disputed';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Buy/Sell Monero Anonymously';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Have questions? Ask in the community chats';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -24519,7 +24531,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_103 => '請求交易發帖人正在銷售假期的廣告';
 
   @override
-  String get api_error_105 => '請求交易的廣告海報沒有足夠的餘額來為託管提供資金';
+  String get api_error_105 => '請求交易的廣告海報沒有足夠的餘額來支付託管費用';
 
   @override
   String get api_error_107 => '嘗試在不設置 maxAmount 的情況下跟踪流動性';
@@ -24615,7 +24627,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_261 => '嘗試在您自己的帳戶上發布註釋';
 
   @override
-  String get api_error_262 => '試圖獲得關於不存在的用戶的註釋';
+  String get api_error_262 => '試圖獲取關於不存在的用戶的註釋';
 
   @override
   String get api_error_263 => '試圖在您自己的帳戶上獲取註釋';
@@ -24723,7 +24735,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_80 => '沒有在廣告更新/創建請求中同時設置緯度和經度';
 
   @override
-  String get api_error_81 => '發布廣告時未設置價格公式';
+  String get api_error_81 => '發布廣告時沒有設置價格公式';
 
   @override
   String get api_error_82 => '嘗試為在線廣告設置緯度和經度';
@@ -24843,7 +24855,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_123 => '資金不足以為非浮動 LOCAL_SELL 交易提供資金';
 
   @override
-  String get api_error_124 => '為 LOCAL_SELL 提供資金時出錯';
+  String get api_error_124 => '為 LOCAL_SELL 融資時出錯';
 
   @override
   String get api_error_125 => '請求取消交易的用戶不存在';
@@ -24921,7 +24933,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_154 => '嘗試為不存在的賬戶請求交易';
 
   @override
-  String get api_error_155 => '試圖獲取不存在的用戶的可信用戶列表';
+  String get api_error_155 => '嘗試獲取不存在的用戶的可信用戶列表';
 
   @override
   String get api_error_156 => '試圖獲取不存在的用戶的被阻止用戶列表';
@@ -25711,10 +25723,10 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String get app_buy_crypto => '從購買加密貨幣';
+  String get app_buy_crypto => '購買加密貨幣';
 
   @override
-  String get app_sell_crypto => '賣加密貨幣給';
+  String get app_sell_crypto => '將加密貨幣賣給';
 
   @override
   String get app_intall_trade_title => '請安裝 AgoraDesk 查看此交易';
@@ -26001,9 +26013,6 @@ class I18nZhTw extends I18nZh {
   String get app_push_new_offer => '你有一個新的報價';
 
   @override
-  String get app_p => '交易標記為已完成';
-
-  @override
   String get app_push_trade_marked_completed => '交易標記為已完成';
 
   @override
@@ -26011,4 +26020,19 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get app_push_trade_disputed => '貿易有爭議';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => '匿名購買/出售門羅幣';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => '匿名購買/出售比特幣';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => '無需身份驗證即可買賣比特幣。現金或在線。安全、快速、簡單。';
+
+  @override
+  String get app_ask_community_chats => '有問題嗎？在社區聊天中提問';
 }

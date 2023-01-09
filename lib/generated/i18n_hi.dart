@@ -9238,11 +9238,11 @@ class I18nHi extends I18n {
   String get app_accessibility_edit_box_confirm_password => 'पासवर्ड संपादन बॉक्स की पुष्टि करें, संपादित करने के लिए डबल टैप करें';
 
   @override
-  String get app_ad_created => 'विज्ञापन बनाया गया';
+  String get app_ad_created => 'विज्ञापन बनाया गया है';
 
   @override
   String app_503_body(Object val) {
-    return '$val जल्द ही वापस आएगा!\\nअसुविधा के लिए खेद है, लेकिन हम इस समय कुछ निर्धारित रखरखाव कर रहे हैं।\\nहम जल्द ही ऑनलाइन वापस आएंगे। हमारे सामुदायिक समूहों में अपडेट रहें:';
+    return '$val जल्द ही वापस आयेंगे!\\nअसुविधा के लिए माफी चाहते है, लेकिन हम इस समय कुछ निर्धारित रखरखाव कर रहे हैं।\\nहम जल्द ही ऑनलाइन वापस आएंगे। हमारे सामुदायिक समूहों में अपडेट रहें:';
   }
 
   @override
@@ -9275,14 +9275,26 @@ class I18nHi extends I18n {
   String get app_push_new_offer => 'आपके पास एक नया प्रस्ताव है';
 
   @override
-  String get app_p => 'व्यापार को पूर्ण के रूप में चिह्नित किया गया';
-
-  @override
-  String get app_push_trade_marked_completed => 'व्यापार को पूर्ण के रूप में चिह्नित किया गया';
+  String get app_push_trade_marked_completed => 'व्यापार को पूर्ण के रूप में चिह्नित किया गया है';
 
   @override
   String get app_push_trade_cancelled => 'व्यापार रद्द';
 
   @override
   String get app_push_trade_disputed => 'व्यापार विवादित';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'गुमनामी से Monero खरीदें/बेचें';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'गुप्ततः Bitcoin खरीदें/बेचें';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'ID सत्यापन के बिना Monero खरीदें या बेचें। नकद या ऑनलाइन। सुरक्षित, तेज़, आसान।';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'ID सत्यापन के बिना Bitcoin खरीदें या बेचें। नकद या ऑनलाइन। सुरक्षित, तेज़, आसान।';
+
+  @override
+  String get app_ask_community_chats => 'कोई सवाल? समुदाय चैट में पूछें';
 }

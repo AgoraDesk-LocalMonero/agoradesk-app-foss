@@ -9275,9 +9275,6 @@ class I18nRo extends I18n {
   String get app_push_new_offer => 'Ai o noua oferta';
 
   @override
-  String get app_p => 'Marca comercială ca finalizată';
-
-  @override
   String get app_push_trade_marked_completed => 'Marca comercială ca finalizată';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nRo extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Comerț disputat';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Cumpărați/vindeți Monero anonim';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Cumpărați/vindeți Bitcoin anonim';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Ai întrebări? Întrebați în chat-urile comunității';
 }

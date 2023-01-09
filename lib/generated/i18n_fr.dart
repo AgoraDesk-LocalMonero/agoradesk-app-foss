@@ -7439,22 +7439,22 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get ads => 'Les publicités';
+  String get ads => 'Annonces';
 
   @override
   String get unknown_error => 'Erreur inconnue';
 
   @override
-  String get ads_choose_ad_type => 'Choisissez le type d\'annonce';
+  String get ads_choose_ad_type => 'Choisir le type d\'annonce';
 
   @override
   String get ads_ad_type => 'Type d\'annonce';
 
   @override
-  String get ads_choose_ad_cryptocurrency => 'Choisissez la crypto-monnaie';
+  String get ads_choose_ad_cryptocurrency => 'Choisir la crypto-monnaie';
 
   @override
-  String get ads_choose_price_type => 'Choisissez le type de prix';
+  String get ads_choose_price_type => 'Choisir le type de prix';
 
   @override
   String get ads_which_type_to_choose => 'Quel genre choisir ?';
@@ -7472,19 +7472,19 @@ class I18nFr extends I18n {
   String get see_examples => 'Voir des exemples';
 
   @override
-  String get see_example => 'Voir exemple';
+  String get see_example => 'Voir l\'exemple';
 
   @override
   String get final_price_in => 'Prix définitif en';
 
   @override
-  String get show_formula_controls => 'Afficher les commandes de formule';
+  String get show_formula_controls => 'Afficher les contrôles de formule';
 
   @override
   String get market_rates => 'Taux du marché';
 
   @override
-  String get set_trade_limits => 'Définissez des limites commerciales (facultatif) :';
+  String get set_trade_limits => 'Définir des limites d\'échange (facultatif) :';
 
   @override
   String get restrict_limit_amounts_to => 'Restreindre les montants limites à';
@@ -7493,11 +7493,11 @@ class I18nFr extends I18n {
   String get restrict_limit_amounts => 'Restreindre les montants limites';
 
   @override
-  String get what_does_it_mean => 'Qu\'est-ce que ça veut dire?';
+  String get what_does_it_mean => 'Qu\'est-ce que ça veut dire ?';
 
   @override
   String ads_enter_amount(Object currency) {
-    return 'Entrez le montant $currency';
+    return 'Entrer le montant $currency';
   }
 
   @override
@@ -7511,7 +7511,7 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get ads_specify_trade_details => 'Spécifiez les détails du commerce (facultatif) :';
+  String get ads_specify_trade_details => 'Spécifier les détails de l\'échange (facultatif) :';
 
   @override
   String get ads_payment_method_details => 'Détails du mode de paiement';
@@ -7526,28 +7526,28 @@ class I18nFr extends I18n {
   String get ads_payment_method_info_trade => 'Informations sur le mode de paiement';
 
   @override
-  String get ads_payment_method_info_trade_4096 => 'Montré pendant le commerce. Maximum 4096 caractères.';
+  String get ads_payment_method_info_trade_4096 => 'Montrées pendant l\'échange. Maximum 4096 caractères.';
 
   @override
-  String get ads_specify_restrictions => 'Spécifiez les restrictions (facultatif) :';
+  String get ads_specify_restrictions => 'Spécifier les restrictions (facultatif) :';
 
   @override
   String get maximum_4096 => '4096 caractères maximum';
 
   @override
-  String get enter_number_0_100 => 'Entrez un nombre de 0 à 100';
+  String get enter_number_0_100 => 'Entrer un nombre de 0 à 100';
 
   @override
-  String get enter_number_15_90 => 'Entrez un nombre entre 15 et 90';
+  String get enter_number_15_90 => 'Entrer un nombre entre 15 et 90';
 
   @override
-  String get enter_amount_min_0 => 'Entrez le montant (min 0)';
+  String get enter_amount_min_0 => 'Entrer le montant (min 0)';
 
   @override
-  String get currency => 'Devise:';
+  String get currency => 'Devise :';
 
   @override
-  String get payment_method => 'Mode de paiement:';
+  String get payment_method => 'Mode de paiement :';
 
   @override
   String get restrict_amounts_to => 'Limiter les montants à :';
@@ -7562,11 +7562,11 @@ class I18nFr extends I18n {
   String get publish => 'Publier';
 
   @override
-  String get enter_your_settlement_wallet_address => 'Saisissez l\'adresse de votre portefeuille de règlement :';
+  String get enter_your_settlement_wallet_address => 'Saisir l\'adresse de votre portefeuille de règlement :';
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Entrez et vérifiez votre adresse à laquelle les pièces seront envoyées. Ne peut pas être une adresse $appName interne.';
+    return 'Entrer et vérifier votre adresse à laquelle les jetons seront envoyés. Ne peut pas être une adresse $appName interne.';
   }
 
   @override
@@ -7585,16 +7585,16 @@ class I18nFr extends I18n {
   String get ads_havent_posted => 'Vous n\'avez pas encore publié d\'annonces.';
 
   @override
-  String get no_trades => 'Vous n\'avez pas encore d\'échange.';
+  String get no_trades => 'Vous n\'avez pas encore de transactions.';
 
   @override
-  String get no_feedbacks => 'Pas de retours.';
+  String get no_feedbacks => 'Pas d\'évaluations.';
 
   @override
   String get ad_settings => 'Paramètres des annonces';
 
   @override
-  String get settings_saved => 'Paramètres sauvegardés';
+  String get settings_saved => 'Paramètres enregistrés';
 
   @override
   String get preferences => 'Préférences';
@@ -7609,32 +7609,32 @@ class I18nFr extends I18n {
   String get activity => 'Activité';
 
   @override
-  String get chat => 'Discuter';
+  String get chat => 'Discussion';
 
   @override
   String get market => 'Marché';
 
   @override
-  String get help => 'Aider';
+  String get help => 'Aide';
 
   @override
   String sell_asset(Object asset) {
-    return 'Vendre $asset';
+    return 'Vendre du $asset';
   }
 
   @override
   String buy_asset(Object asset) {
-    return 'Acheter $asset';
+    return 'Acheter du $asset';
   }
 
   @override
-  String get trader_profile => 'Profil du commerçant';
+  String get trader_profile => 'Profil du trader';
 
   @override
-  String get trader_info => 'Infos commerçant';
+  String get trader_info => 'Infos sur le trader';
 
   @override
-  String get trading_tips => 'Conseils commerciaux';
+  String get trading_tips => 'Conseils sur les transactions';
 
   @override
   String get clear_all => 'Tout effacer';
@@ -7649,14 +7649,14 @@ class I18nFr extends I18n {
   String get any_payment_method => 'N\'importe quel mode de paiement';
 
   @override
-  String get see_more_feedback => 'Voir plus de commentaires';
+  String get see_more_feedback => 'Voir plus d\'évaluations';
 
   @override
   String get see_more_ads => 'Voir plus d\'annonces';
 
   @override
   String feedback_title(Object user) {
-    return 'Commentaires sur $user';
+    return 'Évaluations de $user';
   }
 
   @override
@@ -7666,28 +7666,28 @@ class I18nFr extends I18n {
   String get you_sell => 'Vous vendez';
 
   @override
-  String get you_buy => 'Tu achètes';
+  String get you_buy => 'Vous achetez';
 
   @override
   String get you_receive => 'Vous recevez';
 
   @override
-  String get you_pay => 'Tu payes';
+  String get you_pay => 'Vous payez';
 
   @override
-  String get export_csv => 'Exporter CSV';
+  String get export_csv => 'Exporter en CSV';
 
   @override
-  String get copy => 'Copie';
+  String get copy => 'Copier';
 
   @override
   String sell_via(Object asset, Object provider) {
-    return 'Vendre $asset via $provider';
+    return 'Vendre du $asset via $provider';
   }
 
   @override
   String buy_via(Object asset, Object provider) {
-    return 'Achetez $asset via $provider';
+    return 'Achetez du $asset via $provider';
   }
 
   @override
@@ -7697,7 +7697,7 @@ class I18nFr extends I18n {
 
   @override
   String buy_from(Object user) {
-    return 'Acheter sur $user';
+    return 'Acheter à $user';
   }
 
   @override
@@ -7712,7 +7712,7 @@ class I18nFr extends I18n {
 
   @override
   String send_all(Object asset) {
-    return 'Envoyer tout $asset';
+    return 'Envoyer tout le $asset';
   }
 
   @override
@@ -7721,13 +7721,13 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get trade_id => 'Identifiant commercial';
+  String get trade_id => 'Identifiant de transaction';
 
   @override
-  String get view_trade => 'Voir le commerce';
+  String get view_trade => 'Voir la transaction';
 
   @override
-  String get receiving => 'Recevoir';
+  String get receiving => 'Recevant';
 
   @override
   String get paying => 'Payant';
@@ -7736,7 +7736,7 @@ class I18nFr extends I18n {
   String get rate => 'Fréquence';
 
   @override
-  String get enter_your_password => 'Tapez votre mot de passe';
+  String get enter_your_password => 'Entrer votre mot de passe';
 
   @override
   String get good_seller => 'Bon vendeur';
@@ -7751,7 +7751,7 @@ class I18nFr extends I18n {
   String get important => 'Important';
 
   @override
-  String get feedback_updated_successfully => 'Commentaires mis à jour avec succès.';
+  String get feedback_updated_successfully => 'Évaluation mise à jour avec succès.';
 
   @override
   String get pay => 'Payer';
@@ -7760,7 +7760,7 @@ class I18nFr extends I18n {
   String get send_trade_request => 'Envoyer une demande d\'échange';
 
   @override
-  String get start_trading => 'Commencer à négocier';
+  String get start_trading => 'Commencer à échanger';
 
   @override
   String get api_error_13 => 'Une erreur s\'est produite lors de la demande. Il s\'agit probablement d\'un problème de validation. Vérifiez les paramètres de votre demande, et si cela ne semble toujours pas correct, veuillez contacter notre support.';
@@ -7790,25 +7790,25 @@ class I18nFr extends I18n {
   String get api_error_77 => 'Fonds insuffisants pour effectuer un transfert interne pour le montant demandé';
 
   @override
-  String get api_error_103 => 'Demande d\'échange pour une annonce dont l\'affiche vend des vacances';
+  String get api_error_103 => 'Demande d\'échange pour une annonce dont l\'auteur est en pause de vente';
 
   @override
-  String get api_error_105 => 'L\'affiche de l\'annonce pour laquelle l\'échange est demandé n\'a pas assez de solde pour financer le dépôt fiduciaire';
+  String get api_error_105 => 'L\'auteur de l\'annonce pour laquelle l\'échange est demandé n\'a pas assez de solde pour financer le dépôt fiduciaire';
 
   @override
   String get api_error_107 => 'Essayer de suivre la liquidité sans définir maxAmount';
 
   @override
-  String get api_error_137 => 'Tentative d\'enregistrement 2FA tout en fournissant un mot de passe incorrect';
+  String get api_error_137 => 'Tentative d\'enregistrement 2FA avec un mot de passe incorrect';
 
   @override
-  String get api_error_138 => 'Tentative de validation de 2FA tout en fournissant un OTP incorrect';
+  String get api_error_138 => 'Tentative de validation de 2FA avec un OTP incorrect';
 
   @override
-  String get api_error_139 => 'Mot de passe ou OTP incorrect lors de la tentative de désactivation de 2FA';
+  String get api_error_139 => 'Mot de passe ou OTP incorrect lors de la tentative de désactivation de l\'authentification 2FA';
 
   @override
-  String get api_error_140 => 'OTP incorrect lors de la tentative de retrait de pièces du portefeuille';
+  String get api_error_140 => 'OTP incorrect lors de la tentative de retrait des jetons du portefeuille';
 
   @override
   String get api_error_146 => 'Tentative d\'activation du programme d\'affiliation pour un compte qui l\'a déjà activé';
@@ -7820,7 +7820,7 @@ class I18nFr extends I18n {
   String get api_error_171 => 'Adresse invalide fournie lors de la demande de retrait';
 
   @override
-  String get api_error_173 => 'Tenter d\'ouvrir trop de transactions à la fois pour un nouveau compte';
+  String get api_error_173 => 'Tentative d\'ouvrir trop de transactions à la fois pour un nouveau compte';
 
   @override
   String get api_error_178 => 'Tentative d\'utilisation du coupon pour un utilisateur qui n\'existe pas';
@@ -7847,10 +7847,10 @@ class I18nFr extends I18n {
   String get api_error_204 => 'Tentative de demande de code d\'importation de réputation pour un compte qui n\'existe pas';
 
   @override
-  String get api_error_205 => 'Tentative de génération d\'un code de vérification pour l\'importation de réputation pour une plate-forme pour laquelle un code de vérification a déjà été généré';
+  String get api_error_205 => 'Tentative de génération d\'un code de vérification pour l\'importation de réputation pour une plateforme pour laquelle un code de vérification a déjà été généré';
 
   @override
-  String get api_error_206 => 'Tentative de génération d\'un code de vérification pour l\'importation de réputation pour une plate-forme à partir de laquelle la réputation a déjà été importée';
+  String get api_error_206 => 'Tentative de génération d\'un code de vérification pour l\'importation de réputation pour une plateforme à partir de laquelle la réputation a déjà été importée';
 
   @override
   String get api_error_207 => 'Tentative de confirmation du placement du code de vérification d\'importation de réputation pour un utilisateur qui n\'existe pas';
@@ -7865,7 +7865,7 @@ class I18nFr extends I18n {
   String get api_error_210 => 'Erreur Paxful lors de la tentative de confirmation du placement du code de vérification de l\'importation de la réputation Peut-être que le nom d\'utilisateur est erroné ou que le profil n\'est pas visible';
 
   @override
-  String get api_error_225 => 'L\'API LocalBitcoins renvoie \"Utilisateur non valide\" comme erreur lors de la tentative de confirmation du placement du code de réputation';
+  String get api_error_225 => 'L\'API LocalBitcoins renvoie « Utilisateur non valide » comme erreur lors de la tentative de confirmation du placement du code de réputation';
 
   @override
   String get api_error_226 => 'Mot de passe incorrect lors de la tentative de suppression du compte';
@@ -7874,7 +7874,7 @@ class I18nFr extends I18n {
   String get api_error_238 => 'Niveau de frais non spécifié pour le retrait externe de Bitcoin';
 
   @override
-  String get api_error_239 => 'Mot de passe incorrect lors de la tentative de libération d\'un échange';
+  String get api_error_239 => 'Mot de passe incorrect lors de la tentative de libération d\'une transaction';
 
   @override
   String get api_error_243 => 'L\'adresse AgoraDesk interne ne peut pas être utilisée pour le règlement des transactions. Veuillez saisir une adresse XMR extérieure et non AgoraDesk pour continuer.';
@@ -7892,7 +7892,7 @@ class I18nFr extends I18n {
   String get api_error_262 => 'Tentative d\'obtention d\'une note sur un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_263 => 'Tenter d\'obtenir une note sur votre propre compte';
+  String get api_error_263 => 'Tentative d\'obtenir une note sur votre propre compte';
 
   @override
   String get api_error_264 => 'Tentative de suppression d\'une note sur un utilisateur qui n\'existe pas';
@@ -7913,16 +7913,16 @@ class I18nFr extends I18n {
   String get api_error_4001 => 'Délai de connexion dépassé, veuillez vérifier la connexion Internet.';
 
   @override
-  String get api_error_45 => 'Vous ne pouvez pas avoir à la fois \'first_time_limit_asset\' et \'first_time_limit_TICKER\' dans votre demande. Retirez l\'un d\'eux (ils sont interchangeables).';
+  String get api_error_45 => 'Vous ne pouvez pas avoir à la fois « first_time_limit_asset » et « first_time_limit_TICKER » dans votre demande. Retirez l\'un d\'eux (ils sont interchangeables).';
 
   @override
-  String get api_error_46 => 'La requête doit contenir SOIT un corps de requête application/json avec un paramètre \"msg\" OU un corps de requête multipart/form-data avec le fichier image répertorié sous le paramètre \"document\"';
+  String get api_error_46 => 'La requête doit contenir SOIT un corps de requête application/json avec un paramètre « msg » OU un corps de requête multipart/form-data avec le fichier image répertorié sous le paramètre « document »';
 
   @override
-  String get api_error_47 => 'L\'utilisateur avec ce nom d\'utilisateur existe déjà';
+  String get api_error_47 => 'Un utilisateur avec ce nom existe déjà';
 
   @override
-  String get api_error_48 => 'L\'utilisateur avec cet e-mail existe déjà';
+  String get api_error_48 => 'Un utilisateur avec cet e-mail existe déjà';
 
   @override
   String get api_error_50 => 'Tentative d\'envoi d\'un e-mail à un utilisateur sans e-mail défini';
@@ -7967,16 +7967,16 @@ class I18nFr extends I18n {
   String get api_error_65 => 'Tentative de marquer une notification déjà lue comme lue';
 
   @override
-  String get api_error_66 => 'Tentative de téléchargement d\'une pièce jointe de chat pour un échange qui n\'existe pas';
+  String get api_error_66 => 'Tentative de téléchargement d\'une pièce jointe de tchat pour un échange qui n\'existe pas';
 
   @override
-  String get api_error_67 => 'Tentative d\'envoi d\'un message de chat à un commerce qui n\'existe pas';
+  String get api_error_67 => 'Tentative d\'envoi d\'un message de tchat à une transaction qui n\'existe pas';
 
   @override
-  String get api_error_68 => 'Tentative d\'obtention d\'une liste de messages de chat d\'échanges qui n\'existent pas';
+  String get api_error_68 => 'Tentative d\'obtention d\'une liste de messages de tchat d\'une transaction qui n\'existe pas';
 
   @override
-  String get api_error_69 => 'Tentative de réception d\'un message de chat qui n\'existe pas';
+  String get api_error_69 => 'Tentative de réception d\'un message de tchat qui n\'existe pas';
 
   @override
   String get api_error_70 => 'Tentative d\'obtention de l\'adresse de portefeuille d\'un compte qui n\'existe pas';
@@ -7985,22 +7985,22 @@ class I18nFr extends I18n {
   String get api_error_71 => 'Tentative d\'obtention des transactions d\'un compte qui n\'existe pas';
 
   @override
-  String get api_error_72 => 'Tentative de retrait de fonds d\'un compte qui n\'existe pas';
+  String get api_error_72 => 'Tentative de retrait des fonds d\'un compte qui n\'existe pas';
 
   @override
-  String get api_error_78 => 'Tentative de création d\'annonces Get avec une combinaison de paramètres non valide';
+  String get api_error_78 => 'Tentative de récupération d\'annonces avec une combinaison de paramètres non valide';
 
   @override
   String get api_error_79 => 'L\'identifiant d\'annonce demandé n\'existe pas';
 
   @override
-  String get api_error_80 => 'N\'a pas défini à la fois lat et lon dans la demande de mise à jour/création de l\'annonce';
+  String get api_error_80 => 'Les paramètres « lat » et « lon » ne sont pas tous les deux définis dans la demande de mise à jour/création de l\'annonce';
 
   @override
-  String get api_error_81 => 'N\'a pas défini de formule de prix lors de la publication de l\'annonce';
+  String get api_error_81 => 'Aucune formule de prix définie lors de la publication de l\'annonce';
 
   @override
-  String get api_error_82 => 'Essayer de définir la latitude et la longitude d\'une annonce en ligne';
+  String get api_error_82 => 'Tentative de définir la latitude et la longitude d\'une annonce en ligne';
 
   @override
   String get api_error_83 => 'Tentative de définition de propriétés spécifiques à ONLINE_SELL/CALL_SELL/PUT_BUY sur un autre type d\'annonce';
@@ -8021,76 +8021,76 @@ class I18nFr extends I18n {
   String get api_error_88 => 'Tentative de définition d\'une devise non valide pour ce mode de paiement lors de la création/mise à jour de l\'annonce';
 
   @override
-  String get api_error_89 => 'Tentative de création d\'une annonce LOCAL_* sans définir de lon/lat';
+  String get api_error_89 => 'Tentative de création d\'une annonce LOCAL_* sans définir les paramètres « lon » et « lat »';
 
   @override
-  String get api_error_90 => 'Essayer d\'accéder aux métiers d\'un utilisateur qui n\'existe pas.';
+  String get api_error_90 => 'Tentative d\'accéder aux transactions d\'un utilisateur qui n\'existe pas.';
 
   @override
   String get api_error_91 => 'Tentative d\'accès aux données publiques du compte à l\'aide du jeton d\'un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_92 => 'Essayer d\'obtenir des notifications pour un utilisateur qui n\'existe pas';
+  String get api_error_92 => 'Tentative d\'obtenir des notifications pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_93 => 'Essayer d\'obtenir des dépôts en attente pour un utilisateur qui n\'existe pas';
+  String get api_error_93 => 'Tentative d\'obtenir des dépôts en attente pour un utilisateur qui n\'existe pas';
 
   @override
   String get api_error_94 => 'Tentative d\'obtention d\'un score d\'évaluation pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_95 => 'Essayer d\'obtenir des annonces pour un utilisateur qui n\'existe pas';
+  String get api_error_95 => 'Tentative d\'obtenir des annonces pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_96 => 'Utilisateur inexistant essayant de créer un échange';
+  String get api_error_96 => 'Utilisateur inexistant essayant de créer une transaction';
 
   @override
-  String get api_error_97 => 'Essayer de créer un échange pour une annonce qui n\'existe pas';
+  String get api_error_97 => 'Tentative de créer une transaction pour une annonce qui n\'existe pas';
 
   @override
-  String get api_error_98 => 'Essayer de créer un échange pour une annonce dont l\'affiche n\'existe pas';
+  String get api_error_98 => 'Tentative de créer une transaction pour une annonce dont l\'auteur n\'existe pas';
 
   @override
-  String get api_error_99 => 'Essayer de demander un montant supérieur à celui autorisé par first_time_limit_asset lors de la création d\'un premier échange';
+  String get api_error_99 => 'Tentative de demander un montant supérieur à celui autorisé par « first_time_limit_asset » lors de la création d\'un premier échange';
 
   @override
-  String get api_error_100 => 'Impossible de demander moins de 0,0000000001 XMR pour la création de commerce';
+  String get api_error_100 => 'Impossible de demander moins de 0,0000000001 XMR pour la création d\'une transaction';
 
   @override
-  String get api_error_101 => 'Le montant demandé est inférieur au min_amount de l\'annonce lors de la création de l\'échange';
+  String get api_error_101 => 'Le montant demandé est inférieur au « min_amount » de l\'annonce lors de la création de la transaction';
 
   @override
-  String get api_error_102 => 'Le montant demandé est supérieur au max_amount_available de l\'annonce lors de la création de l\'échange';
+  String get api_error_102 => 'Le montant demandé est supérieur au « max_amount_available » de l\'annonce lors de la création de la transaction';
 
   @override
-  String get api_error_104 => 'Demande d\'échange pour l\'annonce dont l\'affiche est en train d\'acheter des vacances';
+  String get api_error_104 => 'Demande d\'échange pour l\'annonce dont l\'auteur est en pause d\'achat';
 
   @override
   String get api_error_106 => 'Le demandeur de l\'échange n\'a pas assez de solde pour financer la demande d\'échange';
 
   @override
-  String get api_error_108 => 'minAmount ne peut pas être égal ou supérieur à maxAmount';
+  String get api_error_108 => '« minAmount » ne peut pas être égal ou supérieur à « maxAmount »';
 
   @override
-  String get api_error_109 => 'Le montant demandé est supérieur au montant maximal de l\'annonce lors de la création de l\'échange';
+  String get api_error_109 => 'Le montant demandé est supérieur au montant maximal de l\'annonce lors de la création de la transaction';
 
   @override
-  String get api_error_110 => 'Le demandeur d\'échange a un score de rétroaction inférieur à ce qui est requis par l\'affiche';
+  String get api_error_110 => 'Le demandeur d\'échange a un score d\'évaluation inférieur à ce qui est requis par l\'annonceur';
 
   @override
-  String get api_error_111 => 'Le montant demandé ne fait pas partie des montants acceptés, voir limit_to_fiat_amounts';
+  String get api_error_111 => 'Le montant demandé ne fait pas partie des montants acceptés, voir « limit_to_fiat_amounts »';
 
   @override
   String get api_error_112 => 'Impossible de demander un échange pour une annonce que vous avez vous-même publiée';
 
   @override
-  String get api_error_113 => 'Impossible de définir paymentWindowMinutes sur <15 ou >90 lors de la mise à jour de l\'annonce';
+  String get api_error_113 => 'Impossible de définir « paymentWindowMinutes » sur <15 ou >90 lors de la mise à jour de l\'annonce';
 
   @override
-  String get api_error_114 => 'Impossible de définir paymentWindowMinutes sur <15 ou >90 lors de la création d\'une annonce';
+  String get api_error_114 => 'Impossible de définir « paymentWindowMinutes » sur <15 ou >90 lors de la création d\'une annonce';
 
   @override
-  String get api_error_115 => 'L\'échange par ID demandé n\'existe pas';
+  String get api_error_115 => 'La transaction demandée par son identifiant n\'existe pas';
 
   @override
   String get api_error_116 => 'L\'utilisateur qui demande l\'échange n\'existe pas';
@@ -8099,16 +8099,16 @@ class I18nFr extends I18n {
   String get api_error_117 => 'La devise pour laquelle le taux de change a été demandé n\'existe pas';
 
   @override
-  String get api_error_118 => 'L\'utilisateur demandant le financement du commerce n\'existe pas';
+  String get api_error_118 => 'L\'utilisateur demandant le financement de la transaction n\'existe pas';
 
   @override
-  String get api_error_119 => 'Tenter de financer un métier qui n\'existe pas';
+  String get api_error_119 => 'Tentative de financer une transaction qui n\'existe pas';
 
   @override
-  String get api_error_120 => 'L\'utilisateur demandant l\'entiercement du commerce n\'existe pas';
+  String get api_error_120 => 'L\'utilisateur demandant l\'utilisation d\'un dépôt fiduciaire pour la transaction n\'existe pas';
 
   @override
-  String get api_error_121 => 'Tentative d\'entiercement d\'un commerce qui n\'existe pas';
+  String get api_error_121 => 'Tentative de mise en place d\'un dépôt fiduciaire pour une transaction qui n\'existe pas';
 
   @override
   String get api_error_122 => 'Fonds insuffisants pour financer une transaction LOCAL_SELL flottante';
@@ -8117,40 +8117,40 @@ class I18nFr extends I18n {
   String get api_error_123 => 'Fonds insuffisants pour financer une transaction LOCAL_SELL non flottante';
 
   @override
-  String get api_error_124 => 'Erreur lors du financement d\'un LOCAL_SELL';
+  String get api_error_124 => 'Erreur lors du financement d\'une transaction LOCAL_SELL';
 
   @override
-  String get api_error_125 => 'L\'utilisateur demandant l\'annulation de l\'échange n\'existe pas';
+  String get api_error_125 => 'L\'utilisateur demandant l\'annulation de la transaction n\'existe pas';
 
   @override
   String get api_error_126 => 'Tentative d\'annulation d\'une transaction qui n\'existe pas';
 
   @override
-  String get api_error_127 => 'L\'utilisateur demandant le paiement de l\'échange n\'existe pas';
+  String get api_error_127 => 'L\'utilisateur demandant le paiement de la transaction n\'existe pas';
 
   @override
-  String get api_error_128 => 'Tenter de marquer un échange qui n\'existe pas payé';
+  String get api_error_128 => 'Tentative de marquer une transaction qui n\'existe pas comme payée';
 
   @override
   String get api_error_129 => 'L\'utilisateur demandant la libération de la transaction n\'existe pas';
 
   @override
-  String get api_error_130 => 'Tenter de libérer un échange qui n\'existe pas';
+  String get api_error_130 => 'Tenter de libérer une transaction qui n\'existe pas';
 
   @override
-  String get api_error_131 => 'L\'utilisateur demandant une contestation commerciale n\'existe pas';
+  String get api_error_131 => 'L\'utilisateur demandant une contestation n\'existe pas';
 
   @override
-  String get api_error_132 => 'Tenter de contester un métier qui n\'existe pas';
+  String get api_error_132 => 'Tentative de contester une transaction qui n\'existe pas';
 
   @override
-  String get api_error_133 => 'Tentative d\'obtenir les commentaires d\'un utilisateur qui n\'existe pas';
+  String get api_error_133 => 'Tentative d\'obtenir l\'évaluation d\'un utilisateur qui n\'existe pas';
 
   @override
   String get api_error_134 => 'Tentative de création d\'une annonce alors que l\'utilisateur dispose déjà du nombre maximal autorisé d\'annonces';
 
   @override
-  String get api_error_135 => 'D\'une manière ou d\'une autre, maxAmount est défini sur null tandis que trackingMaxAmount est défini sur true';
+  String get api_error_135 => 'D\'une manière ou d\'une autre, « maxAmount » est défini sur « null » tandis que « trackingMaxAmount»  est défini sur « true »';
 
   @override
   String get api_error_136 => 'Tentative de publication d\'une annonce avec un solde inférieur au solde minimum requis.';
@@ -8159,22 +8159,22 @@ class I18nFr extends I18n {
   String get api_error_141 => 'Tenter de créer une transaction pour un montant inférieur au montant minimum autorisé';
 
   @override
-  String get api_error_142 => 'Tentative de définition d\'une limite fiat inférieure à minAmount lors de la création d\'une annonce';
+  String get api_error_142 => 'Tentative de définition d\'une limite en monnaie fiat inférieure à « minAmount » lors de la création d\'une annonce';
 
   @override
-  String get api_error_143 => 'Tentative de définition d\'une limite fiat supérieure à maxAmount lors de la création d\'une annonce';
+  String get api_error_143 => 'Tentative de définition d\'une limite en monnaie fiat supérieure à « maxAmount » lors de la création d\'une annonce';
 
   @override
-  String get api_error_144 => 'Tentative de définition d\'une limite fiat inférieure à minAmount lors de la mise à jour de l\'annonce';
+  String get api_error_144 => 'Tentative de définition d\'une limite une monnaie fiat inférieure à « minAmount » lors de la mise à jour de l\'annonce';
 
   @override
-  String get api_error_145 => 'Tentative de définition d\'une limite fiat supérieure à maxAmount lors de la mise à jour de l\'annonce';
+  String get api_error_145 => 'Tentative de définition d\'une limite en monnaie fiat supérieure à « maxAmount » lors de la mise à jour de l\'annonce';
 
   @override
   String get api_error_147 => 'Tentative d\'obtention de données d\'affiliation pour un utilisateur dont le programme d\'affiliation n\'est pas activé';
 
   @override
-  String get api_error_148 => 'Tentative de définition d\'un ID de télégramme déjà défini';
+  String get api_error_148 => 'Tentative de définition d\'un identifiant Telegram déjà défini';
 
   @override
   String get api_error_149 => 'Priorité non spécifiée pour le retrait externe';
@@ -8189,10 +8189,10 @@ class I18nFr extends I18n {
   String get api_error_152 => 'Tentative d\'annulation d\'une transaction déjà fermée';
 
   @override
-  String get api_error_153 => 'Tenter de libérer une transaction déjà fermée';
+  String get api_error_153 => 'Tentative de libérer une transaction déjà fermée';
 
   @override
-  String get api_error_154 => 'Tentative de demande de transactions pour un compte qui n\'existe pas';
+  String get api_error_154 => 'Tentative de demande des transactions pour un compte qui n\'existe pas';
 
   @override
   String get api_error_155 => 'Tentative d\'obtention de la liste des utilisateurs de confiance pour un utilisateur qui n\'existe pas';
@@ -8201,16 +8201,16 @@ class I18nFr extends I18n {
   String get api_error_156 => 'Tentative d\'obtention de la liste des utilisateurs bloqués pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_157 => 'Tentative de définition de propriétés spécifiques à une option pour une annonce sans option';
+  String get api_error_157 => 'Tentative de définition de propriétés spécifiques à une option pour une annonce non option';
 
   @override
-  String get api_error_158 => 'Tentative de création d\'une annonce optionnelle sans définir les propriétés spécifiques à l\'option';
+  String get api_error_158 => 'Tentative de création d\'une annonce à option sans définir les propriétés spécifiques à l\'option';
 
   @override
-  String get api_error_159 => 'L\'utilisateur demandant à marquer le paiement de la prime du commerce n\'existe pas';
+  String get api_error_159 => 'L\'utilisateur demandant à marquer le paiement de la prime de la transaction n\'existe pas';
 
   @override
-  String get api_error_160 => 'Tenter de marquer la prime payée pour un commerce qui n\'existe pas';
+  String get api_error_160 => 'Tenter de marquer la prime payée pour une transaction qui n\'existe pas';
 
   @override
   String get api_error_161 => 'L\'utilisateur demandant à exercer l\'option n\'existe pas';
@@ -8219,67 +8219,67 @@ class I18nFr extends I18n {
   String get api_error_162 => 'Tentative d\'exercice d\'une option pour une transaction qui n\'existe pas';
 
   @override
-  String get api_error_163 => 'L\'utilisateur demandant à confirmer le paiement de la prime de l\'échange n\'existe pas';
+  String get api_error_163 => 'L\'utilisateur demandant à confirmer le paiement de la prime de la transaction n\'existe pas';
 
   @override
-  String get api_error_164 => 'Tentative de confirmation de la prime payée pour une transaction qui n\'existe pas';
+  String get api_error_164 => 'Tentative de confirmation de paiement de la prime pour une transaction qui n\'existe pas';
 
   @override
   String get api_error_165 => 'L\'utilisateur demandant à exercer une transaction avec règlement net n\'existe pas';
 
   @override
-  String get api_error_166 => 'Tenter d\'exercer avec un règlement net un métier qui n\'existe pas';
+  String get api_error_166 => 'Tentative d\'exercer avec un règlement net une transaction qui n\'existe pas';
 
   @override
-  String get api_error_167 => 'Le prix actuel du marché est inférieur ou égal au prix d\'exercice lors de la compensation d\'une transaction CALL. La transaction est hors du cours selon les normes du marché et ne peut donc pas être compensée. Utilisez un tassement normal si nécessaire.';
+  String get api_error_167 => 'Le prix actuel du marché est inférieur ou égal au prix d\'exercice lors de la compensation d\'une transaction CALL. La transaction est hors du cours selon les normes du marché et ne peut donc pas être compensée. Utilisez un règlement normal si nécessaire.';
 
   @override
-  String get api_error_168 => 'L\'utilisateur demandant la confirmation du paiement de la couverture de l\'échange n\'existe pas';
+  String get api_error_168 => 'L\'utilisateur demandant la confirmation du paiement de la couverture de la transaction n\'existe pas';
 
   @override
-  String get api_error_169 => 'Tentative de confirmation de la couverture payée pour une transaction qui n\'existe pas';
+  String get api_error_169 => 'Tentative de confirmation de paiement de la couverture pour une transaction qui n\'existe pas';
 
   @override
-  String get api_error_172 => 'Tentative de publication d\'une annonce dans laquelle l\'élément est identique à la devise de l\'annonce';
+  String get api_error_172 => 'Tentative de publication d\'une annonce dans laquelle l\'actif est identique à la devise de l\'annonce';
 
   @override
-  String get api_error_174 => 'Tenter d\'exercer une transaction PUT hors de la monnaie';
+  String get api_error_174 => 'Tentative d\'exercer une transaction PUT hors de la monnaie';
 
   @override
   String get api_error_175 => 'Tentative d\'utilisation d\'un coupon qui n\'existe pas lors de l\'inscription';
 
   @override
-  String get api_error_176 => 'Tentative d\'échange d\'un coupon expiré lors de l\'inscription';
+  String get api_error_176 => 'Tentative d\'utilisation d\'un coupon expiré lors de l\'inscription';
 
   @override
-  String get api_error_177 => 'Tentative d\'échange d\'un coupon en rupture de stock lors de l\'inscription';
+  String get api_error_177 => 'Tentative d\'utilisation d\'un coupon en rupture de stock lors de l\'inscription';
 
   @override
-  String get api_error_185 => 'Tentative d\'obtention de coupons pour un utilisateur qui n\'existe pas';
+  String get api_error_185 => 'Tentative d\'obtention des coupons pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_186 => 'Tentative d\'obtenir plus de 50 annonces lors de l\'obtention d\'annonces par ID';
+  String get api_error_186 => 'Tentative d\'obtenir plus de 50 annonces lors de la recherche d\'annonces par identifiant';
 
   @override
-  String get api_error_187 => 'Tentative de donner une liste vide d\'ID lors de l\'obtention d\'annonces par ID';
+  String get api_error_187 => 'Tentative de donner une liste vide lors de la recherche d\'annonces par identifiant';
 
   @override
-  String get api_error_188 => 'Aucun des identifiants d\'annonce demandés n\'est un identifiant valide lors de l\'obtention d\'annonces par identifiant';
+  String get api_error_188 => 'Aucun des identifiants d\'annonce demandés n\'est un identifiant valide pour la recherche d\'annonces par identifiant';
 
   @override
-  String get api_error_189 => 'Pas une seule des annonces demandées n\'existe lors de l\'obtention d\'annonces par ID';
+  String get api_error_189 => 'Pas une seule des annonces demandées n\'existe pour la recherche d\'annonces par identifiant';
 
   @override
-  String get api_error_190 => 'Tentative de donner une liste vide d\'ID lors de l\'obtention de transactions par ID';
+  String get api_error_190 => 'Tentative de donner une liste vide pour la recherche de transactions par identifiant';
 
   @override
-  String get api_error_191 => 'Tenter d\'obtenir plus de 50 annonces lors de l\'obtention de transactions par ID';
+  String get api_error_191 => 'Tenter d\'obtenir plus de 50 annonces pour la recherche de transactions par identifiant';
 
   @override
-  String get api_error_192 => 'Pas un seul des identifiants de transaction demandés n\'est un identifiant valide lors de l\'obtention de transactions par ID';
+  String get api_error_192 => 'Pas un seul des identifiants de transaction demandés n\'est un identifiant valide lors de la recherche de transactions par identifiant';
 
   @override
-  String get api_error_193 => 'Pas un seul des échanges demandés n\'existe lors de l\'obtention d\'échanges par ID';
+  String get api_error_193 => 'Pas une seule des transactions demandées n\'existe lors de la recherche de transactions par identifiant';
 
   @override
   String get api_error_194 => 'Tentative de génération d\'un jeton d\'API public pour un utilisateur qui n\'existe pas';
@@ -8291,10 +8291,10 @@ class I18nFr extends I18n {
   String get api_error_196 => 'Tentative d\'obtention de messages récents pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_197 => 'Tentative d\'obtenir des messages de chat commerciaux avec un horodatage \"après\" qui est en dehors de la plage autorisée';
+  String get api_error_197 => 'Tentative d\'obtenir des messages de tchat de transaction avec un horodatage « après » qui est en dehors de la plage autorisée';
 
   @override
-  String get api_error_198 => 'Tentative d\'obtenir des messages de chat récents du compte avec un horodatage \"après\" qui est en dehors de la plage autorisée';
+  String get api_error_198 => 'Tentative d\'obtenir des messages de tchat récents du compte avec un horodatage « après » qui est en dehors de la plage autorisée';
 
   @override
   String get api_error_199 => 'Tentative d\'obtention d\'un jeton d\'API public pour un utilisateur qui n\'existe pas';
@@ -8306,7 +8306,7 @@ class I18nFr extends I18n {
   String get api_error_201 => 'Tentative de mise à jour de la formule de prix pour une annonce qui n\'existe pas';
 
   @override
-  String get api_error_202 => 'Tentative d\'obtenir des transactions de compte avec un horodatage \"après\" qui est en dehors de la plage autorisée';
+  String get api_error_202 => 'Tentative d\'obtenir des transactions de compte avec un horodatage « après » qui est en dehors de la plage autorisée';
 
   @override
   String get api_error_203 => 'Tentative d\'obtention de données d\'importation de réputation pour un compte qui n\'existe pas';
@@ -8324,19 +8324,19 @@ class I18nFr extends I18n {
   String get api_error_214 => 'Tentative de refus d\'importation de réputation pour un utilisateur qui n\'est pas à l\'étape 2 du flux d\'importation de réputation';
 
   @override
-  String get api_error_215 => 'Tentative de spécifier à la fois country_code et currency_code lors de la demande des méthodes de paiement les plus populaires';
+  String get api_error_215 => 'Tentative de spécifier à la fois « country_code » et « currency_code » lors de la demande des méthodes de paiement les plus populaires';
 
   @override
-  String get api_error_216 => 'Tentative de demande des méthodes de paiement les plus populaires pour un country_code qui n\'existe pas';
+  String get api_error_216 => 'Tentative de demande des méthodes de paiement les plus populaires pour un « country_code » qui n\'existe pas';
 
   @override
-  String get api_error_217 => 'Tentative de demande des méthodes de paiement les plus populaires pour un currency_code qui n\'existe pas';
+  String get api_error_217 => 'Tentative de demande des méthodes de paiement les plus populaires pour un « currency_code » qui n\'existe pas';
 
   @override
-  String get api_error_218 => 'Tentative d\'ouverture d\'une transaction sur une annonce nécessitant une adresse e-mail vérifiée alors que l\'utilisateur demandeur n\'a pas d\'e-mail vérifié';
+  String get api_error_218 => 'Tentative d\'ouverture d\'une transaction sur une annonce nécessitant une adresse e-mail vérifiée alors que l\'utilisateur demandeur n\'a pas d\'adresse e-mail vérifiée';
 
   @override
-  String get api_error_219 => 'Tentative d\'inscription avec un e-mail provenant d\'un fournisseur de messagerie jetable';
+  String get api_error_219 => 'Tentative d\'inscription avec une adresse e-mail provenant d\'un fournisseur de messagerie jetable';
 
   @override
   String get api_error_220 => 'Tentative de modification de l\'adresse e-mail du compte par une adresse e-mail d\'un fournisseur de messagerie jetable';
@@ -8345,13 +8345,13 @@ class I18nFr extends I18n {
   String get api_error_221 => 'Tentative de marquer toutes les notifications comme lues pour un utilisateur qui n\'existe pas';
 
   @override
-  String get api_error_222 => 'Tentative de demande de code de réputation pour un compte de plate-forme externe qui a déjà été importé';
+  String get api_error_222 => 'Tentative de demande de code de réputation pour un compte de plateforme externe qui a déjà été importé';
 
   @override
-  String get api_error_223 => 'Tentative de mise à jour de l\'annonce en spécifiant verificationRequired comme true alors que verificationMsg est null';
+  String get api_error_223 => 'Tentative de mise à jour de l\'annonce en spécifiant « verificationRequired » comme « true » alors que « verificationMsg » est « null »';
 
   @override
-  String get api_error_224 => 'Tentative de mise à jour de l\'annonce en spécifiant verificationMsg mais l\'annonce ne nécessitant pas de vérification et la demande de mise à jour de l\'annonce ne définit pas non plus verificationRequired sur true';
+  String get api_error_224 => 'Tentative de mise à jour de l\'annonce en spécifiant « verificationMsg » mais l\'annonce ne nécessitant pas de vérification et la demande de mise à jour de l\'annonce ne définit pas non plus « verificationRequired » sur « true »';
 
   @override
   String get api_error_227 => 'Tentative de sanction d\'un utilisateur qui n\'existe pas';
@@ -8369,73 +8369,73 @@ class I18nFr extends I18n {
   String get api_error_231 => 'Tentative de suppression d\'une sanction d\'un utilisateur qui n\'a aucune sanction à son encontre';
 
   @override
-  String get api_error_232 => 'Tenter d\'ouvrir une transaction avec un utilisateur actuellement interdit de négociation en raison d\'une sanction';
+  String get api_error_232 => 'Tentative d\'ouvrir une transaction avec un utilisateur actuellement interdit d\'échange en raison d\'une sanction';
 
   @override
-  String get api_error_233 => 'Tentative de suppression d\'un commentaire avec un ID qui n\'existe pas';
+  String get api_error_233 => 'Tentative de suppression d\'une évaluation avec un identifiant qui n\'existe pas';
 
   @override
-  String get api_error_234 => 'Tentative de suppression d\'un commentaire déjà supprimé';
+  String get api_error_234 => 'Tentative de suppression d\'une évaluation déjà supprimée';
 
   @override
   String get api_error_235 => 'Tentative de suppression du statut de litige d\'une transaction qui n\'existe pas';
 
   @override
-  String get api_error_236 => 'Tenter de supprimer le statut de litige d\'un échange qui n\'est pas contesté';
+  String get api_error_236 => 'Tentative de suppression du statut de litige d\'une transaction qui n\'est pas contestée';
 
   @override
-  String get api_error_237 => 'Tentative d\'ouverture d\'une transaction en tant qu\'utilisateur qui n\'existe pas lors de l\'appel du point de terminaison d\'ouverture de la transaction en tant qu\'administrateur et en spécifiant le paramètre openAsUsername';
+  String get api_error_237 => 'Tentative d\'ouverture d\'une transaction en tant qu\'utilisateur qui n\'existe pas lors de l\'appel du point de terminaison d\'ouverture de transaction en tant qu\'administrateur et en spécifiant le paramètre « openAsUsername »';
 
   @override
   String get api_error_240 => 'Adresse invalide fournie par l\'acheteur lorsqu\'il répond à une annonce de type VENTE';
 
   @override
-  String get api_error_241 => 'L\'acheteur tente de fournir une adresse interne lorsqu\'il répond à une annonce de type VENTE (les adresses internes ne sont pas autorisées à des fins de règlement commercial)';
+  String get api_error_241 => 'L\'acheteur tente de fournir une adresse interne lorsqu\'il répond à une annonce de type VENTE (les adresses internes ne sont pas autorisées à des fins de règlement de transaction)';
 
   @override
-  String get api_error_242 => 'Adresse invalide fournie par l\'acheteur lors de la création d\'une annonce de type ACHETER';
+  String get api_error_242 => 'Adresse invalide fournie par l\'acheteur lors de la création d\'une annonce de type ACHAT';
 
   @override
-  String get api_error_244 => 'Adresse invalide fournie par l\'acheteur lors de la mise à jour d\'une annonce de type ACHETER';
+  String get api_error_244 => 'Adresse invalide fournie par l\'acheteur lors de la mise à jour d\'une annonce de type ACHAT';
 
   @override
-  String get api_error_245 => 'Acheteur tentant de fournir une adresse interne lors de la mise à jour d\'une annonce de type ACHETER (les adresses internes ne sont pas autorisées à des fins de règlement commercial)';
+  String get api_error_245 => 'Acheteur tentant de fournir une adresse interne lors de la mise à jour d\'une annonce de type ACHAT (les adresses internes ne sont pas autorisées à des fins de règlement de transaction)';
 
   @override
-  String get api_error_246 => 'Tentative de démarrage d\'une transaction à partir d\'une annonce de type ACHAT qui ne spécifie pas l\'adresse de règlement de l\'acheteur';
+  String get api_error_246 => 'Tentative d\'ouverture d\'une transaction à partir d\'une annonce de type ACHAT qui ne spécifie pas l\'adresse de règlement de l\'acheteur';
 
   @override
   String get api_error_247 => 'Tentative de libération d\'une transaction à partir d\'un compte dont le retrait est interdit en raison de sanctions';
 
   @override
-  String get api_error_248 => 'Tenter de libérer une transaction lorsque le montant de la transaction n\'est pas suffisant pour couvrir les frais liés au règlement';
+  String get api_error_248 => 'Tentative de libération d\'une transaction lorsque le montant de la transaction n\'est pas suffisant pour couvrir les frais liés au règlement';
 
   @override
-  String get api_error_249 => 'Tentative de mise à jour d\'une annonce de type BUY pour laquelle buyerSettlementAddress n\'est pas défini sans définir le paramètre buyerSettlementAddress dans la demande de mise à jour';
+  String get api_error_249 => 'Tentative de mise à jour d\'une annonce de type ACHAT pour laquelle « buyerSettlementAddress » n\'est pas défini, sans définir le paramètre « buyerSettlementAddress » dans la demande de mise à jour';
 
   @override
   String get api_error_250 => 'Adresse invalide fournie lors de la demande de frais de retrait pour BTC';
 
   @override
-  String get api_error_251 => 'Niveau de frais non fourni lors de l\'ouverture d\'un trade en répondant à une annonce de type BTC SELL';
+  String get api_error_251 => 'Niveau de frais non fourni lors de l\'ouverture d\'une transaction en répondant à une annonce de type VENTE BTC';
 
   @override
-  String get api_error_252 => 'Niveau de frais non fourni lors de la création d\'une annonce de type BTC BUY';
+  String get api_error_252 => 'Niveau de frais non fourni lors de la création d\'une annonce de type ACHAT BTC';
 
   @override
-  String get api_error_253 => 'Niveau de frais non fourni lors de la mise à jour d\'une annonce de type BTC BUY qui n\'a pas de niveau de frais défini';
+  String get api_error_253 => 'Niveau de frais non fourni lors de la mise à jour d\'une annonce de type ACAHT BTC qui n\'a pas de niveau de frais défini';
 
   @override
-  String get api_error_255 => 'Tentative de recevoir des notifications avec un horodatage \"après\" qui est en dehors de la plage autorisée';
+  String get api_error_255 => 'Tentative de réception des notifications avec un horodatage « après » qui est en dehors de la plage autorisée';
 
   @override
-  String get api_error_256 => 'Tentative d\'enregistrement d\'un jeton de notification push qui existe déjà';
+  String get api_error_256 => 'Tentative d\'enregistrement d\'un jeton de notification « push » qui existe déjà';
 
   @override
-  String get api_error_257 => 'Tentative d\'enregistrement d\'un jeton de notification push qui n\'est pas valide';
+  String get api_error_257 => 'Tentative d\'enregistrement d\'un jeton de notification « push » qui n\'est pas valide';
 
   @override
-  String get api_error_258 => 'Tentative d\'enregistrement d\'un jeton de notification push pour un compte qui possède déjà 500 jetons d\'appareil, supprimez l\'un des jetons existants avant de réessayer';
+  String get api_error_258 => 'Tentative d\'enregistrement d\'un jeton de notification « push » pour un compte qui possède déjà 500 jetons de connexion, supprimez l\'un des jetons existants avant de réessayer';
 
   @override
   String get api_error_259 => 'Tentative de suppression d\'un jeton qui n\'existe pas ou n\'appartient pas à cet utilisateur';
@@ -8447,22 +8447,22 @@ class I18nFr extends I18n {
   String get login => 'Connexion';
 
   @override
-  String get skip => 'Sauter';
+  String get skip => 'Passer';
 
   @override
   String get pin_setup => 'Configurer le NIP';
 
   @override
-  String get pin_enter_continue => 'Entrez le code PIN pour continuer';
+  String get pin_enter_continue => 'Entrer le code NIP pour continuer';
 
   @override
-  String get pin_enter => 'Entrez le NIP';
+  String get pin_enter => 'Entrer le NIP';
 
   @override
-  String get pin_enter_to_confirm_transaction => 'Entrez le code PIN pour confirmer la transaction';
+  String get pin_enter_to_confirm_transaction => 'Entrer le code NIP pour confirmer la transaction';
 
   @override
-  String get pin_you_can_use => 'Vous pouvez utiliser ce code PIN pour déverrouiller l\'application.';
+  String get pin_you_can_use => 'Vous pouvez utiliser ce code NIP pour déverrouiller l\'application.';
 
   @override
   String get pin_confirm => 'Confirmer le NIP';
@@ -8471,22 +8471,22 @@ class I18nFr extends I18n {
   String get pin_current => 'NIP actuel';
 
   @override
-  String get pin_set => 'Définir le code PIN';
+  String get pin_set => 'Définir le code NIP';
 
   @override
-  String get pin_do_not_match => 'Les codes PIN ne correspondent pas';
+  String get pin_do_not_match => 'Les codes NIP ne correspondent pas';
 
   @override
-  String get pin_second_as_first => 'Le code PIN que vous avez entré la deuxième fois ne correspond pas au premier.';
+  String get pin_second_as_first => 'Le code NIP que vous avez entré la deuxième fois ne correspond pas au premier.';
 
   @override
-  String get pin_wrong_current => 'Mauvais code PIN actuel';
+  String get pin_wrong_current => 'Code NIP actuel invalide';
 
   @override
-  String get pin_please_input_correct => 'Veuillez saisir le code PIN actuel correct.';
+  String get pin_please_input_correct => 'Veuillez saisir le bon code NIP actuel.';
 
   @override
-  String get enter_email => 'Entrez l\'e-mail';
+  String get enter_email => 'Entrer l\'adresse e-mail';
 
   @override
   String get convert => 'Convertir';
@@ -8498,13 +8498,13 @@ class I18nFr extends I18n {
   String get transactions_30_days => 'Transactions des 30 derniers jours';
 
   @override
-  String get forgot_password => 'Mot de passe oublié?';
+  String get forgot_password => 'Mot de passe oublié ?';
 
   @override
-  String get password_have_changed => 'Le mot de passe a changé.';
+  String get password_have_changed => 'Le mot de passe a été modifié.';
 
   @override
-  String get i_want_to_buy => 'je veux acheter';
+  String get i_want_to_buy => 'Je veux acheter';
 
   @override
   String get error_password_reset_token_invalid => 'Le jeton fourni pour la réinitialisation du mot de passe n\'est pas valide';
@@ -8513,37 +8513,37 @@ class I18nFr extends I18n {
   String get error_password_reset_unverified_email => 'Tentative de réinitialisation du mot de passe d\'un utilisateur avec une adresse e-mail non vérifiée';
 
   @override
-  String get i_want_to_buy_new => 'je veux acheter';
+  String get i_want_to_buy_new => 'Je veux acheter';
 
   @override
   String get new_password => 'Nouveau mot de passe (8-72 caractères)';
 
   @override
-  String get i_want_to_sell => 'je veux vendre';
+  String get i_want_to_sell => 'Je veux vendre';
 
   @override
-  String get log_in_to_start_trading => 'Connectez-vous pour commencer à trader';
+  String get log_in_to_start_trading => 'Connectez-vous pour commencer à échanger';
 
   @override
-  String get why_do_you_need_my_email => 'Pourquoi avez-vous besoin de mon e-mail ?';
+  String get why_do_you_need_my_email => 'Pourquoi avez-vous besoin de mon adresse e-mail ?';
 
   @override
-  String get view_all_transactions => 'Voir toutes les opérations';
+  String get view_all_transactions => 'Voir toutes les transactions';
 
   @override
-  String get email_is_used_to => 'Le courrier électronique est utilisé pour récupérer votre mot de passe ou vous envoyer des notifications par courrier électronique. Votre e-mail sera vérifié par rapport à une base de données tierce de fournisseurs de messagerie jetables.';
+  String get email_is_used_to => 'L\'adresse e-mail est utilisée pour récupérer votre mot de passe ou vous envoyer des notifications par courrier électronique. Votre adresse e-mail sera vérifiée par rapport à une base de données tierce de fournisseurs de messagerie jetables.';
 
   @override
-  String get email_verified => 'L\'e-mail est vérifié.';
+  String get email_verified => 'L\'adresse e-mail est vérifiée.';
 
   @override
-  String get email_verification_error => 'Erreur de vérification de l\'e-mail.';
+  String get email_verification_error => 'Erreur de vérification de l\'adresse e-mail.';
 
   @override
-  String get email_token_error => 'Le jeton ou l\'e-mail sont erronés. L\'e-mail n\'a pas été vérifié.';
+  String get email_token_error => 'Le jeton ou l\'adresse e-mail sont erronés. L\'adresse e-mail n\'a pas été vérifiée.';
 
   @override
-  String get welcome_screen_about => 'Plateforme de personne à personne sûre et facile à utiliser pour échanger la monnaie locale contre Bitcoin et Monero.';
+  String get welcome_screen_about => 'Plateforme de personne à personne sûre et facile à utiliser pour échanger de la monnaie locale contre du Bitcoin et du Monero.';
 
   @override
   String get view_in_block_explorer => 'Afficher dans l\'explorateur de blocs';
@@ -8552,19 +8552,19 @@ class I18nFr extends I18n {
   String get welcome_pick_a_payment_method => 'Choisissez un mode de paiement ou choisissez parmi toutes les offres disponibles.';
 
   @override
-  String get welcome_buy_press_buy => 'Appuyez sur ACHETER pour démarrer la transaction.';
+  String get welcome_buy_press_buy => 'Appuyez sur ACHETER pour démarrer l\'échange.';
 
   @override
-  String get welcome_buy_follow_the_sellers => 'Suivez les instructions du vendeur dans le chat commercial !';
+  String get welcome_buy_follow_the_sellers => 'Suivez les instructions du vendeur dans le tchat de transaction !';
 
   @override
-  String get welcome_sell_go_to_wallet => 'Allez dans votre portefeuille et déposez vos pièces.';
+  String get welcome_sell_go_to_wallet => 'Allez dans votre portefeuille et déposez vos jetons.';
 
   @override
   String get welcome_sell_press_sell => 'Appuyez sur VENDRE pour démarrer la transaction.';
 
   @override
-  String get welcome_sell_follow_the_buyer => 'Suivez les instructions de l\'acheteur dans le chat commercial !';
+  String get welcome_sell_follow_the_buyer => 'Suivez les instructions de l\'acheteur dans le tchat de transaction !';
 
   @override
   String get get_started => 'Commencer';
@@ -8573,7 +8573,7 @@ class I18nFr extends I18n {
   String get send_to => 'Envoyer à';
 
   @override
-  String get error_only_numbers_are_possible => 'Seuls les nombres sont possibles.';
+  String get error_only_numbers_are_possible => 'Seuls des nombres sont possibles.';
 
   @override
   String get error_entered_greater_than_balance => 'La valeur saisie est supérieure au solde.';
@@ -8598,7 +8598,7 @@ class I18nFr extends I18n {
   String get preview => 'Aperçu';
 
   @override
-  String get close => 'proche';
+  String get close => 'Fermer';
 
   @override
   String get deposit => 'Dépôt';
@@ -8616,7 +8616,7 @@ class I18nFr extends I18n {
   String get transaction_fee => 'Frais de transaction';
 
   @override
-  String get show_qr_code => 'Afficher le code QR';
+  String get show_qr_code => 'Afficher le QR code';
 
   @override
   String get security => 'Sécurité';
@@ -8643,10 +8643,10 @@ class I18nFr extends I18n {
   String get total_amount_to_send => 'Montant total à envoyer';
 
   @override
-  String get enter_amount_to_receive_without_fee => 'Entrez le montant à recevoir (sans frais)';
+  String get enter_amount_to_receive_without_fee => 'Entrer le montant à recevoir (sans frais)';
 
   @override
-  String get enter_amount_to_receive_with_fee => 'Entrez le montant à déduire (avec frais)';
+  String get enter_amount_to_receive_with_fee => 'Entrer le montant à déduire (avec frais)';
 
   @override
   String get return_reserve_from_trade => 'Réserve de retour du commerce';
@@ -8655,10 +8655,10 @@ class I18nFr extends I18n {
   String get user_profile => 'Profil de l\'utilisateur';
 
   @override
-  String get personal_introduction => 'Introduction personnelle';
+  String get personal_introduction => 'Présentation personnalisée';
 
   @override
-  String get trading_reputation_on_other_platforms => 'Réputation commerciale sur d\'autres plateformes';
+  String get trading_reputation_on_other_platforms => 'Réputation de transaction sur d\'autres plateformes';
 
   @override
   String get how_to_link_my_account => 'Comment lier mon compte ?';
@@ -8674,10 +8674,10 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get enter_username => 'Saisissez votre nom d\'utilisateur';
+  String get enter_username => 'Saisir votre nom d\'utilisateur';
 
   @override
-  String get edit_personal_introduction => 'Modifier l\'introduction personnelle';
+  String get edit_personal_introduction => 'Modifier la présentation personnalisée';
 
   @override
   String get your_info => 'Vos informations';
@@ -8686,7 +8686,7 @@ class I18nFr extends I18n {
   String get website => 'Site Internet';
 
   @override
-  String get are_you_sure => 'Es-tu sûr?';
+  String get are_you_sure => 'Êtes-vous sûr?';
 
   @override
   String get no_trusted_users_yet => 'Aucun utilisateur de confiance pour le moment.';
@@ -8698,7 +8698,7 @@ class I18nFr extends I18n {
   String get no_transactions_yet => 'Aucune transaction pour le moment.';
 
   @override
-  String get web_links => 'liens web';
+  String get web_links => 'Liens Web';
 
   @override
   String get tor_links => 'Liens Tor';
@@ -8707,7 +8707,7 @@ class I18nFr extends I18n {
   String get i2p_links => 'Liens I2P';
 
   @override
-  String get active_coupons => 'Bons de réduction actifs';
+  String get active_coupons => 'Coupons actifs';
 
   @override
   String get expired_coupons => 'Coupons expirés';
@@ -8719,47 +8719,47 @@ class I18nFr extends I18n {
   String get show_expired_coupons => 'Afficher les coupons expirés';
 
   @override
-  String get terms_and_conditions => 'Termes et conditions';
+  String get terms_and_conditions => 'Conditions d\'utilisation';
 
   @override
-  String get current_email => 'Email actuel';
+  String get current_email => 'Adresse e-mail actuelle';
 
   @override
-  String get remove_email => 'Supprimer le courriel';
+  String get remove_email => 'Supprimer l\'adresse e-mail';
 
   @override
-  String get email_not_received_content => 'Si vous n\'avez pas reçu l\'e-mail de vérification, veuillez vérifier votre dossier \"Spam\" ou';
+  String get email_not_received_content => 'Si vous n\'avez pas reçu l\'e-mail de vérification, veuillez vérifier votre dossier « Spam »';
 
   @override
   String get email_not_received_link => 'cliquez ici pour renvoyer l\'e-mail.';
 
   @override
-  String get email_confirm_delete => 'Confirmer la suppression de l\'e-mail';
+  String get email_confirm_delete => 'Confirmer la suppression de l\'adresse e-mail';
 
   @override
-  String get email_deleted => 'E-mail supprimé.';
+  String get email_deleted => 'Adresse e-mail supprimée.';
 
   @override
   String email_confirmation_we_ve_sent_an_email(Object email) {
-    return 'Nous avons envoyé un e-mail à $email. Cliquez sur le lien dans l\'e-mail pour vérifier votre adresse e-mail.';
+    return 'Nous avons envoyé un e-mail à l\'adresse $email. Cliquez sur le lien dans l\'e-mail pour vérifier votre adresse e-mail.';
   }
 
   @override
   String app_staff(Object appName) {
-    return '$appName personnel';
+    return 'L\'équipe $appName';
   }
 
   @override
   String get current_password => 'Mot de passe actuel';
 
   @override
-  String get save_your_backup_code => 'Enregistrez votre code de secours';
+  String get save_your_backup_code => 'Enregistrer votre code de secours';
 
   @override
   String get your_backup_code => 'Votre code de secours';
 
   @override
-  String get set_up_2fa => 'Configurer 2FA';
+  String get set_up_2fa => 'Configurer l\'authentification 2FA';
 
   @override
   String get download_2fa => 'Téléchargez une application 2FA. Copiez le code ci-dessous et collez-le dans votre application 2FA.';
@@ -8771,7 +8771,7 @@ class I18nFr extends I18n {
   String get code_valid => 'Code valide';
 
   @override
-  String get verifying_the_code => 'Vérification du code...';
+  String get verifying_the_code => 'Vérification du code …';
 
   @override
   String get language => 'Langue';
@@ -8795,10 +8795,10 @@ class I18nFr extends I18n {
   String get dispute_started => 'Le litige a commencé';
 
   @override
-  String get payment_info => 'information de paiement';
+  String get payment_info => 'Informations de paiement';
 
   @override
-  String get trade_ad => 'Annonce commerciale';
+  String get trade_ad => 'Annonce d\'échange';
 
   @override
   String get ask_delete_ad => 'Voulez-vous vraiment supprimer cette annonce ?';
@@ -8810,19 +8810,19 @@ class I18nFr extends I18n {
   String get final_price => 'Prix final';
 
   @override
-  String get use_price_formula_to_calculate => 'Utiliser la formule de prix pour calculer';
+  String get use_price_formula_to_calculate => 'Utiliser une formule de prix pour calculer';
 
   @override
-  String get enter_price_formula => 'Entrez la formule de prix';
+  String get enter_price_formula => 'Entrer la formule de prix';
 
   @override
-  String get trade_limits => 'Limites commerciales (facultatif)';
+  String get trade_limits => 'Limites de transaction (facultatif)';
 
   @override
-  String get trade_details => 'Détails commerciaux (facultatif)';
+  String get trade_details => 'Détails de transaction (facultatif)';
 
   @override
-  String get reply => 'Répondez';
+  String get reply => 'Répondre';
 
   @override
   String get trade_loading_failed => 'Échec du chargement de la transaction, veuillez vérifier la connexion.';
@@ -8832,28 +8832,28 @@ class I18nFr extends I18n {
 
   @override
   String search__no_results(Object country) {
-    return 'Aucun résultat dans $country avec les critères sélectionnés... pour le moment. ';
+    return 'Aucun résultat en $country avec les critères sélectionnés … pour le moment. ';
   }
 
   @override
-  String get affiliate__explain_is_reg => 'L\'affiliation est enregistrée lorsqu\'un utilisateur s\'inscrit après avoir atterri sur le site à partir d\'un lien avec votre code de parrainage.';
+  String get affiliate__explain_is_reg => 'L\'affiliation est enregistrée lorsqu\'un utilisateur s\'inscrit après avoir visité le site à partir d\'un lien contenant votre code de parrainage.';
 
   @override
   String get affiliate__ref_code_title => 'Votre code de parrainage';
 
   @override
   String affiliate__users__text(Object number) {
-    return 'Vous êtes actuellement enregistré en tant qu\'affilié pour les utilisateurs $number et gagnerez des commissions sur toutes les transactions effectuées par ceux-ci.';
+    return 'Vous êtes actuellement enregistré en tant que parrain/marraine pour $number utilisateurs et gagnerez des commissions sur toutes les transactions effectuées par ceux-ci.';
   }
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• Vous pouvez créer un lien vers n\'importe quelle page individuelle, telle qu\'une liste de pays ou une liste de méthodes de paiement, ou toute autre page sur $appName.\n• Vous gagnerez de la crypto-monnaie auprès des utilisateurs qui arrivent sur le site via votre lien d\'affiliation, enregistrez-vous et effectuez des transactions.\n• Les paiements seront effectués quotidiennement sur votre portefeuille $appName dans les crypto-monnaies concernées.\n• Les commissions seront versées pendant un an à compter de l\'inscription de l\'utilisateur. La commission est basée sur le revenu que le nouvel utilisateur apporte pour $appName (frais de négociation).\n• Tout jeu déloyal, tel que la publicité mensongère, est interdit.\n• Le spam est interdit. Le spam comprend l\'envoi de messages privés ou publics désabonnés sur des forums/reddit, des e-mails de masse désabonnés, etc.\n• L\'ajout d\'iframes cachés sur un site Web afin de capturer des affiliés est interdit. Seuls les iframes affiliés ou les liens directs vers la page Web sont autorisés.\n• $appName a le droit de désactiver tout utilisateur affilié à tout moment. Si vous enfreignez les conditions, votre programme d\'affiliation sera résilié.';
+    return '• Vous pouvez créer un lien vers n\'importe quelle page, telle qu\'une liste de pays ou une liste de méthodes de paiement, ou toute autre page sur $appName.\n• Vous gagnerez de la crypto-monnaie auprès des utilisateurs qui arrivent sur le site via votre lien d\'affiliation, s\'enregistrent et effectuent des transactions.\n• Les paiements seront effectués quotidiennement sur votre portefeuille $appName dans les crypto-monnaies concernées.\n• Les commissions seront versées pendant un an à compter de l\'inscription de l\'utilisateur. La commission est basée sur le revenu que le nouvel utilisateur apporte pour $appName (frais de transaction).\n• Tout abus et malveillance, telle que la publicité mensongère, sont interdits.\n• Le spam est interdit. Le spam comprend l\'envoi de messages privés ou publics non sollicités sur des forums/reddit, des e-mails de masse non sollicités, etc.\n• L\'ajout d\'iframes cachées sur un site Web afin de capturer des affiliés est interdit. Seuls les iframes affiliées ou les liens directs vers la page Web sont autorisés.\n• $appName a le droit de désactiver tout utilisateur affilié à tout moment. Si vous enfreignez les conditions, votre programme d\'affiliation sera résilié.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object appName, Object assetSymbol) {
-    return 'Vous obtenez deux utilisateurs, acheteur et vendeur du $assetName enregistrés sur $appName, et ils effectuent une transaction d\'une valeur de 100 $assetSymbol. Vous gagnez une commission de 20 % sur les frais de négociation $appName des deux participants, au total 40 % des frais $appName.\n\nVotre somme gagnée est de 0,4 $assetSymbol. Seules les ventes finalisées qui passent par notre processus de transaction comptent. Les paiements sont effectués quotidiennement.\n\nL\'assistance $appName est plus que disposée à vous aider pour toute question.';
+    return 'Vous obtenez deux utilisateurs, acheteur et vendeur de $assetName enregistrés sur $appName, et ils effectuent une transaction d\'une valeur de 100 $assetSymbol. Vous gagnez une commission de 20% sur les frais de transaction $appName des deux participants, soit au total 40% des frais $appName.\n\nVotre somme gagnée est de 0,4 $assetSymbol. Seules les ventes finalisées qui passent par notre processus de transaction comptent. Les paiements sont effectués quotidiennement.\n\nLe support $appName est plus que disposé à vous aider pour toute question.';
   }
 
   @override
@@ -8861,12 +8861,12 @@ class I18nFr extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Votre programme d\'affiliation est activé et vous pouvez gagner des commissions en ajoutant votre balise d\'affiliation $ref_code à n\'importe quelle URL $appName.';
+    return 'Votre programme d\'affiliation est activé et vous pouvez gagner des commissions en ajoutant votre code d\'affiliation $ref_code à n\'importe quelle URL $appName.';
   }
 
   @override
   String reputation_import__step__username__input__label(Object platform) {
-    return 'Votre nom d\'utilisateur $platform';
+    return 'Votre nom d\'utilisateur sur $platform';
   }
 
   @override
@@ -8876,38 +8876,38 @@ class I18nFr extends I18n {
 
   @override
   String settings__homepage_tip(Object example_url) {
-    return 'Affiché sur votre profil public. Seule une URL valide est acceptée (par exemple, https://$example_url)';
+    return 'Affichée sur votre profil public. Seule une URL valide est acceptée (par exemple, https://$example_url)';
   }
 
   @override
-  String get settings__personal_info_tip => 'Affiché sur votre profil public. Maximum 65536 caractères. Peut utiliser le démarquage pour le style.';
+  String get settings__personal_info_tip => 'Affichée sur votre profil public. Maximum 65536 caractères. Peut utiliser le formatage « markdown » pour le style.';
 
   @override
-  String get settings__personal_info_tip_1 => 'Affiché sur votre profil public. Maximum 65536 caractères.';
+  String get settings__personal_info_tip_1 => 'Affichée sur votre profil public. Maximum 65536 caractères.';
 
   @override
-  String get coupons__coupon__type_here => 'Tapez votre coupon ici';
+  String get coupons__coupon__type_here => 'Entrer votre coupon ici';
 
   @override
-  String get trade__mark_pay_according => ' Payez selon les détails de paiement indiqués ci-dessous. Si vous avez des questions, posez-les au vendeur dans le chat.';
+  String get trade__mark_pay_according => ' Payez selon les détails de paiement indiqués ci-dessous. Si vous avez des questions, posez-les au vendeur dans le tchat.';
 
   @override
-  String get dashboard__trade__status__open => 'Ouvrir';
+  String get dashboard__trade__status__open => 'Ouvertes';
 
   @override
   String get wallet__available_balance => 'Solde disponible';
 
   @override
-  String get trade__dialog__confirm_release_monero_text_password => 'Ce mot de passe est utilisé comme compensation pour générer le portefeuille de règlement non dépositaire et signer la transaction. LocalMonero n\'aura aucun moyen de récupérer le portefeuille si vous perdez ce mot de passe.';
+  String get trade__dialog__confirm_release_monero_text_password => 'Ce mot de passe est utilisé comme graine pour générer le portefeuille de règlement non hébergé et signer la transaction. LocalMonero n\'aura aucun moyen de récupérer le portefeuille si vous perdez ce mot de passe.';
 
   @override
-  String get dont_have_an_account_yet => 'Vous n\'avez pas encore de compte?';
+  String get dont_have_an_account_yet => 'Vous n\'avez pas encore de compte ?';
 
   @override
-  String get app_trades => 'Métiers';
+  String get app_trades => 'Transactions';
 
   @override
-  String get app_unlimited => 'Illimité';
+  String get app_unlimited => 'Illimitée';
 
   @override
   String get app_guides => 'Guides';
@@ -8916,14 +8916,14 @@ class I18nFr extends I18n {
   String get app_edit_this_ad => 'Modifier cette annonce';
 
   @override
-  String get app_you_can_use_markdown => 'Vous pouvez utiliser le démarquage pour styliser les termes de votre annonce (les images ne sont pas autorisées).';
+  String get app_you_can_use_markdown => 'Vous pouvez utiliser le formatage « markdown » pour styliser les termes de votre annonce (les images ne sont pas autorisées).';
 
   @override
-  String get app_no_trades_to_export => 'Aucun commerce à exporter.';
+  String get app_no_trades_to_export => 'Aucune transaction à exporter.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Notez votre code de secours (ci-dessus en vert) sur une feuille de papier et conservez-le en lieu sûr. Vous en aurez besoin si vous perdez votre téléphone, ou vous serez bloqué sur votre compte. $appName ne pourra pas vous aider si vous perdez ce code.';
+    return 'Notez votre code de secours (ci-dessus en vert) sur une feuille de papier et conservez-le en lieu sûr. Vous en aurez besoin si vous perdez votre téléphone, ou alors vous serez bloqué hors de votre compte. $appName ne pourra pas vous aider si vous perdez ce code.';
   }
 
   @override
@@ -8931,7 +8931,7 @@ class I18nFr extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Méfiez-vous des escrocs qui tentent de se faire passer pour le personnel !\nLes administrateurs $appName ne vous diront jamais de finaliser une transaction.\nLes messages du personnel ont un fond rouge.';
+    return 'Méfiez-vous des escrocs qui tentent de se faire passer pour une personne de notre équipe !\nLes administrateurs $appName ne vous diront jamais de finaliser une transaction.\nLes messages des membres de notre équipe ont un fond rouge.';
   }
 
   @override
@@ -8946,17 +8946,17 @@ class I18nFr extends I18n {
 
   @override
   String app_buy_crypto_from(Object val) {
-    return 'Acheter des cryptos sur $val';
+    return 'Acheter des crypto-monnaies à $val';
   }
 
   @override
   String app_sell_crypto_to(Object val) {
-    return 'Vendre des cryptos à $val';
+    return 'Vendre des crypto-monnaies à $val';
   }
 
   @override
   String app_trades_with(Object val) {
-    return 'Voir les échanges avec $val';
+    return 'Voir les transactions avec $val';
   }
 
   @override
@@ -8966,17 +8966,17 @@ class I18nFr extends I18n {
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val peut désormais annuler à moins que vous ne marquiez comme payé)';
+    return '($val peut désormais annuler à moins que vous ne marquiez comme payée)';
   }
 
   @override
   String app_buying_from(Object asset, Object amount, Object username) {
-    return 'Acheter $asset $amount auprès de $username';
+    return 'Acheter $amount $asset à $username';
   }
 
   @override
   String app_selling_to(Object asset, Object amount, Object username) {
-    return 'Vendre $asset $amount à $username';
+    return 'Vendre $amount $asset à $username';
   }
 
   @override
@@ -8985,94 +8985,94 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get app_buy_crypto => 'Acheter des cryptos sur';
+  String get app_buy_crypto => 'Acheter des crypto-monnaies à';
 
   @override
-  String get app_sell_crypto => 'Vendre des cryptos à';
+  String get app_sell_crypto => 'Vendre des crypto-monnaies à';
 
   @override
-  String get app_intall_trade_title => 'Veuillez installer AgoraDesk pour voir cet échange';
+  String get app_intall_trade_title => 'Veuillez installer AgoraDesk pour voir cette transaction';
 
   @override
   String get app_intall_ad_title => 'Veuillez installer AgoraDesk pour voir cette annonce';
 
   @override
-  String get app_intall_trade_body => 'Il s\'agit d\'un commerce basé sur Bitcoin, il nécessite notre application AgoraDesk pour être visualisé.';
+  String get app_intall_trade_body => 'Il s\'agit d\'une transaction basée sur Bitcoin, elle nécessite notre application AgoraDesk pour être visualisée.';
 
   @override
   String get app_intall_ad_body => 'Il s\'agit d\'une annonce basée sur Bitcoin, elle nécessite notre application AgoraDesk pour être visualisée.';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => 'Ne finalisez jamais une transaction tant que vous n\'êtes pas sûr à 100 % d\'avoir reçu l\'argent. Les escrocs essaieront de vous inciter à finaliser plus tôt.';
+  String get app_trade_option_payment_receiver_cancel_notice => 'Ne finalisez jamais une transaction tant que vous n\'êtes pas sûr à 100% d\'avoir reçu l\'argent. Les escrocs essaieront de vous inciter à finaliser plus tôt.';
 
   @override
-  String get app_cancel_trade_message => 'Vous avez fait une erreur ou vous voulez essayer un autre commerçant ? Si vous avez déjà transféré les fonds et souhaitez annuler maintenant, vous devez négocier vous-même le retour de votre paiement avec votre partenaire commercial. N\'annulez jamais à moins d\'être sûr d\'avoir récupéré votre argent.';
+  String get app_cancel_trade_message => 'Vous avez fait une erreur ou vous voulez essayer un autre trader ? Si vous avez déjà transféré les fonds et souhaitez annuler maintenant, vous devez négocier vous-même le retour de votre paiement avec votre partenaire de transaction. N\'annulez jamais à moins d\'être sûr d\'avoir récupéré votre argent.';
 
   @override
-  String get app_all_feedback => 'Tous les commentaires';
+  String get app_all_feedback => 'Toutes les évaluations';
 
   @override
-  String get app_camera => 'Caméra';
+  String get app_camera => 'Appareil photo';
 
   @override
-  String get app_clear => 'Dégager';
+  String get app_clear => 'Effacer';
 
   @override
   String get app_ad_deleted => 'Annonce supprimée';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'Ceci est votre code de vérification. Vous pouvez le dire à l\'acheteur afin qu\'il puisse vérifier que vous avez finalisé l\'échange sans qu\'il ait besoin d\'utiliser l\'appareil.';
+  String get app_verifiacetion_code_to_seller => 'Ceci est votre code de vérification. Vous pouvez le transmettre à l\'acheteur afin qu\'il puisse vérifier que vous avez finalisé la transaction sans qu\'il ait besoin d\'utiliser l\'appareil.';
 
   @override
-  String get app_verification_code => 'Le code de vérification';
+  String get app_verification_code => 'Code de vérification';
 
   @override
-  String get app_ad => 'Un d';
+  String get app_ad => 'Annonce';
 
   @override
   String get app_with => 'avec';
 
   @override
-  String get app_edited => 'Édité';
+  String get app_edited => 'Éditée';
 
   @override
-  String get app_permanent => 'Permanent';
+  String get app_permanent => 'Permanente';
 
   @override
   String get app_error_saving => 'Erreur lors de l\'enregistrement. Les modifications n\'ont pas été enregistrées.';
 
   @override
-  String get app_manage_ads => 'Gerer annonces';
+  String get app_manage_ads => 'Gérer les annonces';
 
   @override
-  String get app_vacation_enabled => 'Vacances activées';
+  String get app_vacation_enabled => 'Pauses activées';
 
   @override
-  String get app_trade_created => 'Commerce créé';
+  String get app_trade_created => 'Transaction créée';
 
   @override
   String get app_session_expired => 'La session a expiré';
 
   @override
-  String get app_anonymous_crash_diagnostics => 'Diagnostic de crash anonyme';
+  String get app_anonymous_crash_diagnostics => 'Diagnostic de plantage anonyme';
 
   @override
   String get app_restart_now => 'Redémarrer maintenant';
 
   @override
-  String get app_postpone => 'Remettre à plus tard';
+  String get app_postpone => 'Reporter';
 
   @override
   String get app_biometric_authentication => 'Authentification biométrique';
 
   @override
-  String get app_biometric_authentication_message => 'Veuillez définir un code PIN pour activer l\'authentification biométrique.';
+  String get app_biometric_authentication_message => 'Veuillez définir un code NIP pour activer l\'authentification biométrique.';
 
   @override
   String get app_anonymous_crash_diagnostics_restart => 'Les diagnostics de plantage anonymes ont été désactivés et ne seront pas envoyés après le redémarrage de l\'application.';
 
   @override
-  String get app_trading_partners => 'Partenaires commerciaux';
+  String get app_trading_partners => 'Partenaires d\'échanges';
 
   @override
   String get app_trade_status_settlement_processing_description => 'Le règlement est en cours de traitement. Veuillez patienter, vous n\'avez rien à faire.';
@@ -9081,7 +9081,7 @@ class I18nFr extends I18n {
   String get app_buyer_settlement_fee_level_description => 'Choisissez un niveau de frais à utiliser lors du règlement de la transaction. Les valeurs indiquées ici sont les estimations de taux actuelles et peuvent différer de celles appliquées lors du règlement de la transaction. Si le montant de la transaction est trop faible pour régler la transaction avec le niveau de frais sélectionné, un niveau de frais inférieur sera automatiquement sélectionné lors du règlement.';
 
   @override
-  String get app_change_vacation_settings => 'Modifier les paramètres de vacances.';
+  String get app_change_vacation_settings => 'Modifier les paramètres de pauses.';
 
   @override
   String get app_gallery => 'Galerie';
@@ -9093,7 +9093,7 @@ class I18nFr extends I18n {
   String get app_one_percent => '1% de frais';
 
   @override
-  String get app_final_amount => 'Le montant final';
+  String get app_final_amount => 'Montant final';
 
   @override
   String app_note_label(Object val) {
@@ -9107,11 +9107,11 @@ class I18nFr extends I18n {
 
   @override
   String app_update_new_version_available(Object val) {
-    return 'La nouvelle version $val est disponible.';
+    return 'Nouvelle version $val disponible.';
   }
 
   @override
-  String get app_update_now => 'Mettez à jour maintenant';
+  String get app_update_now => 'Mettre à jour maintenant';
 
   @override
   String get app_update_ingnor_until_next => 'Ignorer jusqu\'à la prochaine mise à jour';
@@ -9123,7 +9123,7 @@ class I18nFr extends I18n {
   String get app_tooltip_visibility => 'Appuyez pour basculer la visibilité';
 
   @override
-  String get app_tooltip_long_press_ad => 'Appuyez longuement sur l\'annonce pour activer l\'édition de groupe';
+  String get app_tooltip_long_press_ad => 'Appuyez longuement sur l\'annonce pour activer l\'édition groupée';
 
   @override
   String get app_join_telegram => 'Rejoindre le groupe Telegram';
@@ -9138,57 +9138,57 @@ class I18nFr extends I18n {
   String get app_hide_password => 'Masquer le mot de passe';
 
   @override
-  String get app_trade_has_been_cancelled => 'Le commerce a été annulé.';
+  String get app_trade_has_been_cancelled => 'La transaction a été annulée.';
 
   @override
   String app_last_seen(Object val) {
-    return 'Vu pour la dernière fois $val';
+    return '$val vu pour la dernière fois';
   }
 
   @override
-  String get app_open_additional_filters => 'Ouvrir des filtres supplémentaires';
+  String get app_open_additional_filters => 'Ouvrir les filtres supplémentaires';
 
   @override
-  String get app_select_asset => 'Sélectionnez l\'actif';
+  String get app_select_asset => 'Sélectionner l\'actif';
 
   @override
-  String get app_select_trade_type => 'Sélectionnez le type de commerce';
+  String get app_select_trade_type => 'Sélectionner le type de transaction';
 
   @override
-  String get app_paste => 'Pâte';
+  String get app_paste => 'Coller';
 
   @override
-  String get app_scan_qr_code => 'Scannez le code QR';
+  String get app_scan_qr_code => 'Scanner un QR code';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Achetez ou vendez des Bitcoins de manière anonyme, sans vérification d\'identité. Espèces ou en ligne. Sûr, rapide, facile.\n\nVous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des bitcoins n\'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, carte de crédit/débit ou virement bancaire, cartes-cadeaux, Venmo ou tout autre. Si vous souhaitez acheter des bitcoins près de chez vous avec de l\'argent, vous pouvez trouver quelqu\'un prêt à vendre des bitcoins localement - la plateforme de trading prend en charge l\'achat et la vente de BTC avec de l\'argent. Vous pouvez même acheter des bitcoins en espèces par courrier.\n\n- Commerce sûr et fluide\nTout comme LocalBitcoins, nous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, n\'importe où. Nous ne supprimons pas les méthodes de paiement et, contrairement à LocalBitcoins, nous prenons pleinement en charge les transactions en espèces en face à face. Tous nos métiers sont protégés par un cautionnement d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nAgoraDesk s\'engage à maintenir la simplicité et la simplicité qui ont rendu les LocalBitcoins originaux si populaires. Nous n\'utilisons pas KYC/AML, et nous ne prévoyons jamais de le faire.\n\n- Approuvé par la communauté\nNotre plate-forme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique des crypto-monnaies.\n\n- Sécurisé, Open Source, centré sur la confidentialité, résistant à la censure\nNotre application est gratuite et open source, ce qui garantit que de nombreux yeux regardent le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. L\'open source de notre application permet également à quiconque d\'avoir accès à notre application même si un certain référentiel d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous apprécions tellement votre vie privée que nous ne vous demandons même pas de fournir un e-mail lors de votre inscription.\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance stellaire\nNotre équipe d\'assistance est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à: https://agoradesk.com/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez des Bitcoins vers/depuis notre portefeuille d\'obligations d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Achetez ou vendez des Bitcoins de manière anonyme, sans vérification d\'identité. Avec des espèces ou en ligne. Sûr, rapide, facile.\n\nVous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des bitcoins n\'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, carte de crédit/débit ou virement bancaire, cartes-cadeaux, Venmo ou tout autre. Si vous souhaitez acheter des Bitcoins près de chez vous avec de l\'argent liquide, vous pouvez trouver quelqu\'un prêt à vendre des Bitcoins localement - la plateforme d\'échange prend en charge l\'achat et la vente de BTC avec de l\'argent liquide. Vous pouvez même acheter des Bitcoins en espèces par courrier.\n\n- Transaction sûre et fluide\nTout comme LocalBitcoins, nous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, de n\'importe où. Nous ne supprimons pas les méthodes de paiement et, contrairement à LocalBitcoins, nous prenons pleinement en charge les transactions en espèces en face à face. Toutes nos transactions sont protégées par une caution d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nAgoraDesk s\'engage à maintenir la simplicité et la facilité qui ont rendu la version originale de LocalBitcoins si populaire. Nous n\'utilisons pas de KYC/AML, et nous prévoyons de ne jamais le faire.\n\n- Approuvée par la communauté\nNotre plateforme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique des crypto-monnaies.\n\n- Sécurisée, Open Source, centrée sur la confidentialité, résistante à la censure\nNotre application est gratuite et Open Source, ce qui garantit que de nombreux yeux peuvent regarder le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. Le fait que notre application soit Open Source permet également à quiconque d\'avoir accès à notre application même si un certain dépôt d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous accordons tellement d\'importance à votre vie privée que nous ne vous demandons même pas de fournir une adresse e-mail lors de votre inscription.\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance exceptionnelle\nNotre équipe de support est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket de demande d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à l\'adresse suivante : https://agoradesk.com/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez des Bitcoins vers/depuis notre portefeuille de caution d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk : achetez du Bitcoin facilement';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk : achat BTC facile';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero : achetez XMR facilement';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero : achat XMR privé';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Achetez ou vendez Monero sans vérification d\'identité. Espèces ou en ligne. Sûr, rapide, facile.\n\nLocalMonero est la plateforme de trading P2P la plus grande, la plus fiable et la mieux établie de la communauté XMR. Nous n\'avons pas de vérifications KYC - vous pouvez simplement acheter Monero de manière anonyme sans vérification d\'identité avec PayPal, carte de crédit, carte-cadeau, espèces par courrier ou convertir Bitcoin, Ether, USDT ou toute autre crypto-monnaie en Monero - notre plateforme prend en charge tout mode de paiement.\n\n- Commerce sûr et fluide\nNous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, n\'importe où. Nous ne supprimons pas les méthodes de paiement et nous soutenons pleinement les transactions en espèces en face à face. Tous nos métiers sont protégés par un cautionnement d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nLocalMonero s\'engage à maintenir la simplicité et la simplicité de votre expérience de trading. Nous n\'utilisons pas KYC/AML, et nous ne prévoyons jamais de le faire.\n\n- Approuvé par la communauté\nNotre plate-forme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique de Monero.\n\n- Sécurisé, Open Source, centré sur la confidentialité, résistant à la censure\nNotre application est gratuite et open source, ce qui garantit que de nombreux yeux regardent le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. L\'open source de notre application permet également à quiconque d\'avoir accès à notre application même si un certain référentiel d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous apprécions tellement votre vie privée que nous ne vous demandons même pas de fournir un e-mail lors de votre inscription.\nAchetez ou vendez Monero sans vérification d\'identité. ATTENTION : CETTE APPLICATION EST ACTUELLEMENT EN BÊTA OUVERTE !\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance stellaire\nNotre équipe d\'assistance est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à: https://localmonero.co/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez Monero vers/depuis notre portefeuille d\'obligations d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Achetez ou vendez du Monero sans vérification d\'identité. En espèces ou en ligne. Sûr, rapide, facile.\n\nLocalMonero est la plateforme d\'échange pair-à-pair P2P la plus grande, la plus fiable et la mieux établie de la communauté XMR. Nous n\'avons pas de vérifications KYC - vous pouvez simplement acheter du Monero de manière anonyme sans vérification d\'identité avec PayPal, une carte de crédit, une carte-cadeau, des espèces par courrier ou convertir du Bitcoin, de l\'Ether, de l\'USDT ou toute autre crypto-monnaie en Monero - notre plateforme prend en charge tout mode de paiement.\n\n- Transaction sûre et fluide\nNous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, de n\'importe où. Nous ne supprimons pas les méthodes de paiement et nous soutenons pleinement les transactions en espèces en face à face. Toutes nos transactions sont protégées par une caution d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nLocalMonero s\'engage à maintenir la simplicité et la facilité de votre expérience d\'échange. Nous n\'utilisons pas de KYC/AML, et nous prévoyons de ne jamais le faire.\n\n- Approuvée par la communauté\nNotre plateforme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique de Monero.\n\n- Sécurisée, Open Source, centrée sur la confidentialité, résistante à la censure\nNotre application est gratuite et Open Source, ce qui garantit que de nombreux yeux peuvent regarder le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. Le fait que notre application soit Open Source permet également à quiconque d\'avoir accès à notre application même si un certain dépôt d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous accordons tellement d\'importance à votre vie privée que nous ne vous demandons même pas de fournir une adresse e-mail lors de votre inscription.\nAchetez ou vendez du Monero sans vérification d\'identité. ATTENTION : CETTE APPLICATION EST ACTUELLEMENT EN BÊTA OUVERTE !\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance exceptionnelle\nNotre équipe de support est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket de demande d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à l\'adresse suivante : https://localmonero.co/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez du Monero vers/depuis notre portefeuille de caution d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR privately';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero : achat XMR privé';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Achetez ou vendez Monero sans vérification d\'identité. Espèces ou en ligne. Sûr, rapide, facile.\n\nLocalMonero est la plateforme de trading P2P la plus grande, la plus fiable et la mieux établie de la communauté XMR. Nous n\'avons pas de vérifications KYC - vous pouvez simplement acheter Monero de manière anonyme sans vérification d\'identité avec PayPal, carte de crédit, carte-cadeau, espèces par courrier ou convertir Bitcoin, Ether, USDT ou toute autre crypto-monnaie en Monero - notre plateforme prend en charge tout mode de paiement.\n\n- Commerce sûr et fluide\nNous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, n\'importe où. Nous ne supprimons pas les méthodes de paiement et nous soutenons pleinement les transactions en espèces en face à face. Tous nos métiers sont protégés par un cautionnement d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nLocalMonero s\'engage à maintenir la simplicité et la simplicité de votre expérience de trading. Nous n\'utilisons pas KYC/AML, et nous ne prévoyons jamais de le faire.\n\n- Approuvé par la communauté\nNotre plate-forme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique de Monero.\n\n- Sécurisé, Open Source, centré sur la confidentialité, résistant à la censure\nNotre application est gratuite et open source, ce qui garantit que de nombreux yeux regardent le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. L\'open source de notre application permet également à quiconque d\'avoir accès à notre application même si un certain référentiel d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous apprécions tellement votre vie privée que nous ne vous demandons même pas de fournir un e-mail lors de votre inscription.\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance stellaire\nNotre équipe d\'assistance est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à: https://localmonero.co/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez Monero vers/depuis notre portefeuille d\'obligations d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Achetez ou vendez du Monero sans vérification d\'identité. En espèces ou en ligne. Sûr, rapide, facile.\n\nLocalMonero est la plateforme d\'échange P2P la plus grande, la plus fiable et la mieux établie de la communauté XMR. Nous n\'avons pas de vérifications KYC - vous pouvez simplement acheter du Monero de manière anonyme sans vérification d\'identité avec PayPal, une carte de crédit, une carte-cadeau, en espèces par courrier ou convertir du Bitcoin, de l\'Ether, de l\'USDT ou toute autre crypto-monnaie en Monero - notre plateforme prend en charge tout mode de paiement.\n\n- Transaction sûr et fluide\nNous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, de n\'importe où. Nous ne supprimons pas les méthodes de paiement et nous soutenons pleinement les transactions en espèces en face à face. Toutes nos transactions sont protégées par une caution d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nLocalMonero s\'engage à maintenir la simplicité et la facilité de votre expérience d\'échange. Nous n\'utilisons pas de KYC/AML, et nous prévoyons de ne jamais le faire.\n\n- Approuvée par la communauté\nNotre plateforme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique de Monero.\n\n- Sécurisée, Open Source, centrée sur la confidentialité, résistante à la censure\nNotre application est gratuite et Open Source, ce qui garantit que de nombreux yeux peuvent regarder le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. Le fait que notre application soit Open Source permet également à quiconque d\'avoir accès à notre application même si un certain dépôt d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous accordons tellement d\'importance à votre vie privée que nous ne vous demandons même pas de fournir une adresse e-mail lors de votre inscription.\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance exceptionnelle\nNotre équipe de support est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket de demande d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à l\'adresse suivante : https://localmonero.co/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez duMonero vers/depuis notre portefeuille de caution d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk : acheter des BTC de manière anonyme';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk : achat BTC anonyme';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Achetez ou vendez des Bitcoins sans vérification d\'identité. Espèces ou en ligne.\n\nVous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des bitcoins n\'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, carte de crédit/débit ou virement bancaire, cartes-cadeaux, Venmo ou tout autre. Si vous souhaitez acheter des bitcoins près de chez vous avec de l\'argent, vous pouvez trouver quelqu\'un prêt à vendre des bitcoins localement - la plateforme de trading prend en charge l\'achat et la vente de BTC avec de l\'argent. Vous pouvez même acheter des bitcoins en espèces par courrier.\n\n- Commerce sûr et fluide\nTout comme LocalBitcoins, nous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, n\'importe où. Nous ne supprimons pas les méthodes de paiement et, contrairement à LocalBitcoins, nous prenons pleinement en charge les transactions en espèces en face à face. Tous nos métiers sont protégés par un cautionnement d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nAgoraDesk s\'engage à maintenir la simplicité et la simplicité qui ont rendu les LocalBitcoins originaux si populaires. Nous n\'utilisons pas KYC/AML, et nous ne prévoyons jamais de le faire.\n\n- Approuvé par la communauté\nNotre plate-forme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique des crypto-monnaies.\n\n- Sécurisé, Open Source, centré sur la confidentialité, résistant à la censure\nNotre application est gratuite et open source, ce qui garantit que de nombreux yeux regardent le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. L\'open source de notre application permet également à quiconque d\'avoir accès à notre application même si un certain référentiel d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous apprécions tellement votre vie privée que nous ne vous demandons même pas de fournir un e-mail lors de votre inscription.\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance stellaire\nNotre équipe d\'assistance est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à: https://agoradesk.com/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez des Bitcoins vers/depuis notre portefeuille d\'obligations d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Achetez ou vendez des Bitcoins sans vérification d\'identité. En espèces ou en ligne.\n\nVous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des Bitcoins n\'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, une carte de crédit/débit ou un virement bancaire, des cartes-cadeaux, Venmo ou tout autre moyen de paiement. Si vous souhaitez acheter des Bitcoins près de chez vous avec de l\'argent liquide, vous pouvez trouver quelqu\'un prêt à vendre des Bitcoins localement - la plateforme d\'échange prend en charge l\'achat et la vente de BTC avec de l\'argent liquide. Vous pouvez même acheter des Bitcoins en espèces par courrier.\n\n- Transaction sûr et fluide\nTout comme LocalBitcoins, nous prenons en charge n\'importe quel mode de paiement, n\'importe quelle devise, de n\'importe où. Nous ne supprimons pas les méthodes de paiement et, contrairement à LocalBitcoins, nous prenons pleinement en charge les transactions en espèces en face à face. Toutes nos transactions sont protégées par une caution d\'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d\'arbitrage avant qu\'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l\'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.\n\n- Pas de KYC/AML ou de vérification d\'identité\nAgoraDesk s\'engage à maintenir la simplicité et la facilité qui ont rendu la version originelle de LocalBitcoins si populaire. Nous n\'utilisons pas de KYC/AML, et nous prévoyons de ne jamais le faire.\n\n- Approuvée par la communauté\nNotre plateforme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l\'un des noms les plus fiables de la communauté extrêmement sceptique des crypto-monnaies.\n\n- Sécurisée, Open Source, centrée sur la confidentialité, résistante à la censure\nNotre application est gratuite et Open Source, ce qui garantit que de nombreux yeux peuvent regarder le code de l\'application pour s\'assurer qu\'il n\'y a pas de failles de sécurité ou de fuites de confidentialité. Le fait que notre application soit Open Source permet également à quiconque d\'avoir accès à notre application même si un certain dépôt d\'applications censure l\'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous accordons tellement d\'importance à votre vie privée que nous ne vous demandons même pas de fournir une adresse e-mail lors de votre inscription.\n\nCode source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSuivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Assistance exceptionnelle\nNotre équipe de support est rapide, réactive et toujours prête à vous satisfaire. Nous n\'avons jamais eu de ticket de demande d\'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.\n\nVous pouvez joindre notre support à l\'adresse suivante : https://agoradesk.com/support\n\n- Frais équitables\nNous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez des Bitcoins vers/depuis notre portefeuille de caution d\'arbitrage. Il n\'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'crypto-monnaie, anonyme, privé, monero, xmr, p2p';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'crypto-monnaie, bitcoin, monero, BTC, XMR, anonyme, privé';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'crypto-monnaie, Bitcoin, Monero, BTC, XMR, anonyme, privé';
 
   @override
   String get app_report_this_user => 'Signaler cet utilisateur';
@@ -9200,13 +9200,13 @@ class I18nFr extends I18n {
   String get error250Sbsignup250Sb175 => 'Tentative d\'utilisation d\'un coupon qui n\'existe pas lors de l\'inscription';
 
   @override
-  String get error250Sbsignup250Sb176 => 'Tentative d\'échange d\'un coupon expiré lors de l\'inscription';
+  String get error250Sbsignup250Sb176 => 'Tentative d\'utilisation d\'un coupon expiré lors de l\'inscription';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Tentative d\'échange d\'un coupon en rupture de stock lors de l\'inscription';
+  String get error250Sbsignup250Sb177 => 'Tentative d\'utilisation d\'un coupon en rupture de stock lors de l\'inscription';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Lettre de réinitialisation du mot de passe envoyée ! Vérifiez votre boîte de réception.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'E-mail de réinitialisation du mot de passe envoyé ! Vérifiez votre boîte de réception.';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Accepter les conditions et continuer';
@@ -9215,21 +9215,21 @@ class I18nFr extends I18n {
   String get logout250Sbtitle => 'Se déconnecter';
 
   @override
-  String get coupons250Sbcode8722Sbapply => 'Appliquer un code promo';
+  String get coupons250Sbcode8722Sbapply => 'Appliquer un coupon';
 
   @override
   String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
-    return 'Acheter $assetName en ligne';
+    return 'Acheter du $assetName en ligne';
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'acheter une option d\'achat';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'Acheter une option d\'achat';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vente d\'options d\'achat';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'Vente d\'options d\'achat';
 
   @override
-  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero : achetez XMR de manière anonyme';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero : achetez du XMR de manière anonyme';
 
   @override
   String get app_accessibility_edit_box_password => 'Modifier le mot de passe de la boîte, appuyez deux fois pour modifier';
@@ -9246,7 +9246,7 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get app_select_ad_type => 'Sélectionnez le type d\'annonce';
+  String get app_select_ad_type => 'Sélectionner le type d\'annonce';
 
   @override
   String get app_chat_leave_review => 'Appuyez ici pour laisser un avis !';
@@ -9255,7 +9255,7 @@ class I18nFr extends I18n {
   String get app_chat_update_review => 'Vous avez déjà laissé un avis à cet utilisateur. Souhaitez-vous mettre à jour votre avis maintenant ?';
 
   @override
-  String get app_select_buyer_seller => 'Sélectionnez l\'acheteur ou le vendeur';
+  String get app_select_buyer_seller => 'Sélectionner acheteur ou vendeur';
 
   @override
   String get app_default_tab => 'Définir un onglet par défaut';
@@ -9269,20 +9269,32 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get app_push_new_message => 'Vous avez un nouveau message dans un échange';
+  String get app_push_new_message => 'Vous avez un nouveau message dans une transaction';
 
   @override
   String get app_push_new_offer => 'Vous avez une nouvelle offre';
 
   @override
-  String get app_p => 'Échange marqué comme terminé';
+  String get app_push_trade_marked_completed => 'Transaction marquée comme terminée';
 
   @override
-  String get app_push_trade_marked_completed => 'Échange marqué comme terminé';
+  String get app_push_trade_cancelled => 'Transaction annulée';
 
   @override
-  String get app_push_trade_cancelled => 'Échange annulé';
+  String get app_push_trade_disputed => 'Transaction contestée';
 
   @override
-  String get app_push_trade_disputed => 'Commerce contesté';
+  String get app_apple_app_store_subtitle_localmonero => 'Acheter/Vendre du Monero de manière anonyme';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Acheter/Vendre des Bitcoins de manière anonyme';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Avoir des questions? Demandez dans les chats de la communauté';
 }

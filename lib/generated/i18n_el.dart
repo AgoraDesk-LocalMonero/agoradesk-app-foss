@@ -9275,9 +9275,6 @@ class I18nEl extends I18n {
   String get app_push_new_offer => 'Έχετε μια νέα προσφορά';
 
   @override
-  String get app_p => 'Εμπορική σήμανση ως ολοκληρωμένη';
-
-  @override
   String get app_push_trade_marked_completed => 'Εμπορική σήμανση ως ολοκληρωμένη';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nEl extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Το εμπόριο αμφισβητείται';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Αγορά/Πώληση Monero Ανώνυμα';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Αγορά/πώληση Bitcoin ανώνυμα';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Έχετε ερωτήσεις; Ρωτήστε στις συζητήσεις της κοινότητας';
 }

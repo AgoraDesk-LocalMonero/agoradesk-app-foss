@@ -9275,9 +9275,6 @@ class I18nUr extends I18n {
   String get app_push_new_offer => 'آپ کے پاس ایک نئی پیشکش ہے۔';
 
   @override
-  String get app_p => 'تجارت کو مکمل کے طور پر نشان زد کیا گیا ہے۔';
-
-  @override
   String get app_push_trade_marked_completed => 'تجارت کو مکمل کے طور پر نشان زد کیا گیا ہے۔';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nUr extends I18n {
 
   @override
   String get app_push_trade_disputed => 'تجارت میں اختلاف';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'مونیرو کو گمنام طور پر خریدیں/بیچیں۔';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'سوالات ہیں؟ کمیونٹی چیٹس میں پوچھیں۔';
 }

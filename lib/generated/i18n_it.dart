@@ -9275,9 +9275,6 @@ class I18nIt extends I18n {
   String get app_push_new_offer => 'Hai una nuova offerta';
 
   @override
-  String get app_p => 'Commercio contrassegnato come completato';
-
-  @override
   String get app_push_trade_marked_completed => 'Commercio contrassegnato come completato';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nIt extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Commercio contestato';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Acquista/Vendi Monero in modo anonimo';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Compra/Vendi Bitcoin in modo anonimo';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Acquista o vendi Bitcoin senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.';
+
+  @override
+  String get app_ask_community_chats => 'Hai domande? Chiedi nelle chat della community';
 }

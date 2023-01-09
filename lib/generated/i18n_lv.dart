@@ -9275,9 +9275,6 @@ class I18nLv extends I18n {
   String get app_push_new_offer => 'Jums ir jauns piedāvājums';
 
   @override
-  String get app_p => 'Darījums atzīmēts kā pabeigts';
-
-  @override
   String get app_push_trade_marked_completed => 'Darījums atzīmēts kā pabeigts';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nLv extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Tirdzniecība apstrīdēta';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Pērciet/pārdodiet Monero anonīmi';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Pērciet/pārdodiet Bitcoin anonīmi';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Vai jums ir jautājumi? Jautājiet kopienas tērzēšanā';
 }

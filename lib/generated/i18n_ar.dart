@@ -9275,9 +9275,6 @@ class I18nAr extends I18n {
   String get app_push_new_offer => 'لديك عرض جديد';
 
   @override
-  String get app_p => 'تم وضع علامة على التجارة كمكتملة';
-
-  @override
   String get app_push_trade_marked_completed => 'تم وضع علامة على التجارة كمكتملة';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nAr extends I18n {
 
   @override
   String get app_push_trade_disputed => 'التجارة المتنازع عليها';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'شراء / بيع Monero مجهول';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'شراء / بيع البيتكوين بشكل مجهول';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'شراء أو بيع Monero بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'شراء أو بيع Bitcoin بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.';
+
+  @override
+  String get app_ask_community_chats => 'هل لديك أسئلة؟ اسأل في دردشات المجتمع';
 }

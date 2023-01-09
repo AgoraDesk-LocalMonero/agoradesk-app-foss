@@ -1,10 +1,64 @@
 {
+  "bg": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "cs": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "da": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "de": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "el": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
   "es": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_google_play_store_short_description_localmonero"
+  ],
+
+  "fi": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
   ],
 
   "fr": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "hu": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "id": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "it": [
+    "app_google_play_store_short_description_localmonero"
+  ],
+
+  "lv": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
   ],
 
   "nb": [
@@ -588,18 +642,43 @@
     "app_503_title",
     "app_push_new_message",
     "app_push_new_offer",
-    "app_p",
     "app_push_trade_marked_completed",
     "app_push_trade_cancelled",
-    "app_push_trade_disputed"
+    "app_push_trade_disputed",
+    "app_apple_app_store_subtitle_localmonero",
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk",
+    "app_ask_community_chats"
+  ],
+
+  "nl": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "pl": [
+    "app_google_play_store_short_description_localmonero"
   ],
 
   "pt": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_google_play_store_short_description_localmonero"
+  ],
+
+  "ro": [
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
   ],
 
   "ru": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+  ],
+
+  "sk": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
   ],
 
   "sl": [
@@ -609,8 +688,28 @@
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
   ],
 
+  "sw": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "tl": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
   "tr": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
+  ],
+
+  "ur": [
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk"
   ],
 
   "zh": [
@@ -1194,10 +1293,14 @@
     "app_503_title",
     "app_push_new_message",
     "app_push_new_offer",
-    "app_p",
     "app_push_trade_marked_completed",
     "app_push_trade_cancelled",
-    "app_push_trade_disputed"
+    "app_push_trade_disputed",
+    "app_apple_app_store_subtitle_localmonero",
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk",
+    "app_ask_community_chats"
   ],
 
   "zh_CN": [
@@ -1781,9 +1884,13 @@
     "app_503_title",
     "app_push_new_message",
     "app_push_new_offer",
-    "app_p",
     "app_push_trade_marked_completed",
     "app_push_trade_cancelled",
-    "app_push_trade_disputed"
+    "app_push_trade_disputed",
+    "app_apple_app_store_subtitle_localmonero",
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk",
+    "app_ask_community_chats"
   ]
 }

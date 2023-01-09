@@ -8171,13 +8171,13 @@ class I18nSl extends I18n {
   String get api_error_145 => 'Pri posodabljanju oglasa poskušate nastaviti omejitev fiat, ki je večja od maxAmount';
 
   @override
-  String get api_error_147 => 'Poskus pridobivanja pridruženih podatkov za uporabnika, ki nima omogočenega pridruženega programa';
+  String get api_error_147 => 'Poskus pridobivanja affiliate podatkov za uporabnika, ki nima omogočenega partnerskega programa';
 
   @override
   String get api_error_148 => 'Poskus nastavitve ID-ja telegrama, ki je že nastavljen';
 
   @override
-  String get api_error_149 => 'Prednost ni določena za zunanji umik';
+  String get api_error_149 => 'Prednost ni določena za zunanji dvig';
 
   @override
   String get api_error_150 => 'Poskus začeti trgovati z oglasom, kjer uporabnika, ki je zahteval, blokira oglasni plakat';
@@ -9275,9 +9275,6 @@ class I18nSl extends I18n {
   String get app_push_new_offer => 'Imate novo ponudbo';
 
   @override
-  String get app_p => 'Posel označen kot opravljen';
-
-  @override
   String get app_push_trade_marked_completed => 'Posel označen kot opravljen';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nSl extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Trgovina sporna';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Kupite/prodajte Monero anonimno';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Kupite/prodajte Bitcoin anonimno';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Kupite ali prodajte Monero brez preverjanja osebnega dokumenta. Gotovina ali na spletu. Varno, hitro, enostavno.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Kupujte ali prodajajte Bitcoin brez preverjanja osebne izkaznice. Gotovina ali na spletu. Varno, hitro, enostavno.';
+
+  @override
+  String get app_ask_community_chats => 'Imate vprašanja? Vprašajte v klepetih skupnosti';
 }

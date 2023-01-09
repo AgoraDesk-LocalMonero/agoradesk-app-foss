@@ -9275,9 +9275,6 @@ class I18nFi extends I18n {
   String get app_push_new_offer => 'Sinulla on uusi tarjous';
 
   @override
-  String get app_p => 'Kauppa merkitty suoritetuksi';
-
-  @override
   String get app_push_trade_marked_completed => 'Kauppa merkitty suoritetuksi';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nFi extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Kauppa kiistanalainen';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Osta/myy Monero nimettömästi';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Onko sinulla kysyttävää? Kysy yhteisön chateissa';
 }

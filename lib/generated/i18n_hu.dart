@@ -9275,9 +9275,6 @@ class I18nHu extends I18n {
   String get app_push_new_offer => 'Új ajánlatod van';
 
   @override
-  String get app_p => 'Az üzlet befejezettként megjelölve';
-
-  @override
   String get app_push_trade_marked_completed => 'Az üzlet befejezettként megjelölve';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nHu extends I18n {
 
   @override
   String get app_push_trade_disputed => 'A kereskedés vitatott';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Vásároljon/eladjon Monero névtelenül';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Bitcoin vásárlás/eladás névtelenül';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Kérdései vannak? Kérdezz a közösségi chaten';
 }

@@ -9275,9 +9275,6 @@ class I18nTr extends I18n {
   String get app_push_new_offer => 'yeni bir teklifin var';
 
   @override
-  String get app_p => 'İşlem tamamlandı olarak işaretlendi';
-
-  @override
   String get app_push_trade_marked_completed => 'İşlem tamamlandı olarak işaretlendi';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nTr extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Ticaret ihtilaflı';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Anonim Olarak Monero Al/Sat';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Anonim Olarak Bitcoin Al/Sat';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Sorularım var? Topluluk sohbetlerinde sorun';
 }

@@ -9275,9 +9275,6 @@ class I18nJa extends I18n {
   String get app_push_new_offer => '新しいオファーがあります';
 
   @override
-  String get app_p => '完了済みとしてマークされたトレード';
-
-  @override
   String get app_push_trade_marked_completed => '完了済みとしてマークされたトレード';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nJa extends I18n {
 
   @override
   String get app_push_trade_disputed => '貿易係争中';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'モネロを匿名で売買する';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'ビットコインを匿名で売買する';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => '本人確認なしでモネロを売買する。現金またはオンライン。安全、迅速、簡単。';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => '本人確認なしでビットコインを売買します。現金またはオンライン。安全、迅速、簡単。';
+
+  @override
+  String get app_ask_community_chats => '質問がありますか？コミュニティ チャットで質問する';
 }

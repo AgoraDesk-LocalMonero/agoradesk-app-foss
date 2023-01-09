@@ -9275,9 +9275,6 @@ class I18nTl extends I18n {
   String get app_push_new_offer => 'May bago kang offer';
 
   @override
-  String get app_p => 'Trade marked bilang nakumpleto';
-
-  @override
   String get app_push_trade_marked_completed => 'Trade marked bilang nakumpleto';
 
   @override
@@ -9285,4 +9282,19 @@ class I18nTl extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Pinagtatalunan ang kalakalan';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Bilhin/Ibenta ang Monero nang Hindi nagpapakilala';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'May mga katanungan? Magtanong sa mga chat sa komunidad';
 }

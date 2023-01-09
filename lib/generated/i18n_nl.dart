@@ -7949,10 +7949,10 @@ class I18nNl extends I18n {
   String get api_error_57 => 'Het token dat is verstrekt voor het opnieuw instellen van het wachtwoord is geen resettoken';
 
   @override
-  String get api_error_58 => 'Er wordt geprobeerd een e-mail voor het opnieuw instellen van het wachtwoord te verzenden naar een gebruiker met een niet-geverifieerd e-mailadres';
+  String get api_error_58 => 'Poging om een e-mail voor het opnieuw instellen van het wachtwoord te verzenden naar een gebruiker met een niet-geverifieerd e-mailadres';
 
   @override
-  String get api_error_59 => 'Probeer een wachtwoord opnieuw in te stellen voor een gebruiker met een niet-geverifieerd e-mailadres';
+  String get api_error_59 => 'Poging om een wachtwoord opnieuw in te stellen voor een gebruiker met een niet-geverifieerd e-mailadres';
 
   @override
   String get api_error_62 => 'Er bestaat geen account met de gebruikersnaam die is opgegeven voor het openbare gegevensverzoek van het account';
@@ -7967,22 +7967,22 @@ class I18nNl extends I18n {
   String get api_error_65 => 'Poging om een reeds gelezen melding als gelezen te markeren';
 
   @override
-  String get api_error_66 => 'Poging om chatbijlage te uploaden naar handel die niet bestaat';
+  String get api_error_66 => 'Poging om chatbijlage te uploaden naar een transactie die niet bestaat';
 
   @override
-  String get api_error_67 => 'Poging om chatbericht te sturen naar handel die niet bestaat';
+  String get api_error_67 => 'Poging om chatbericht te sturen naar een transactie die niet bestaat';
 
   @override
-  String get api_error_68 => 'Poging om lijst met chatberichten op te halen van handel die niet bestaat';
+  String get api_error_68 => 'Poging om lijst met chatberichten op te halen van een transactie die niet bestaat';
 
   @override
   String get api_error_69 => 'Poging om een chatbericht te ontvangen dat niet bestaat';
 
   @override
-  String get api_error_70 => 'Poging om portemonnee-adres van account te krijgen dat niet bestaat';
+  String get api_error_70 => 'Poging om portefeuille adres van account te krijgen dat niet bestaat';
 
   @override
-  String get api_error_71 => 'Poging om transacties te krijgen van een account dat niet bestaat';
+  String get api_error_71 => 'Poging om transacties te ontvangen van een account dat niet bestaat';
 
   @override
   String get api_error_72 => 'Poging om geld op te nemen van een account dat niet bestaat';
@@ -8000,16 +8000,16 @@ class I18nNl extends I18n {
   String get api_error_81 => 'Prijsformule niet ingesteld bij het plaatsen van de advertentie';
 
   @override
-  String get api_error_82 => 'Proberen lat en lon in te stellen voor een online advertentie';
+  String get api_error_82 => 'Poging om lat en lon in te stellen voor een online advertentie';
 
   @override
-  String get api_error_83 => 'Probeer ONLINE_SELL/CALL_SELL/PUT_BUY-specifieke eigenschappen in te stellen op een ander type advertentie';
+  String get api_error_83 => 'Poging om ONLINE_SELL/CALL_SELL/PUT_BUY-specifieke eigenschappen in te stellen op een ander type advertentie';
 
   @override
-  String get api_error_84 => 'Probeer ONLINE_BUY/CALL_BUY/PUT_SELL-specifieke eigenschappen in te stellen op een ander type advertentie';
+  String get api_error_84 => 'Poging om ONLINE_BUY/CALL_BUY/PUT_SELL-specifieke eigenschappen in te stellen op een ander type advertentie';
 
   @override
-  String get api_error_85 => 'Proberen LOCAL_SELL-specifieke eigenschappen in te stellen voor een ander type advertentie';
+  String get api_error_85 => 'Poging om LOCAL_SELL-specifieke eigenschappen in te stellen voor een ander type advertentie';
 
   @override
   String get api_error_86 => 'Poging om land of betalingsmethode of valuta in te stellen die niet geldig is bij het maken/bijwerken van advertentie';
@@ -8021,37 +8021,37 @@ class I18nNl extends I18n {
   String get api_error_88 => 'Poging om een valuta in te stellen die ongeldig is voor die betaalmethode bij het maken/bijwerken van de advertentie';
 
   @override
-  String get api_error_89 => 'Er wordt geprobeerd een LOCAL_*-advertentie te maken zonder lon/lat in te stellen';
+  String get api_error_89 => 'Poging om een LOCAL_*-advertentie te maken zonder lon/lat in te stellen';
 
   @override
-  String get api_error_90 => 'Proberen toegang te krijgen tot transacties van een gebruiker die niet bestaat.';
+  String get api_error_90 => 'Poging om toegang te krijgen tot transacties van een gebruiker die niet bestaat.';
 
   @override
-  String get api_error_91 => 'Proberen toegang te krijgen tot openbare accountgegevens met behulp van een token van een gebruiker die niet bestaat';
+  String get api_error_91 => 'Poging om toegang te krijgen tot openbare accountgegevens met behulp van een token van een gebruiker die niet bestaat';
 
   @override
-  String get api_error_92 => 'Proberen meldingen te ontvangen voor een gebruiker die niet bestaat';
+  String get api_error_92 => 'Poging om meldingen te ontvangen voor een gebruiker die niet bestaat';
 
   @override
-  String get api_error_93 => 'Proberen stortingen in behandeling te krijgen voor een gebruiker die niet bestaat';
+  String get api_error_93 => 'Poging om stortingen in behandeling te krijgen voor een gebruiker die niet bestaat';
 
   @override
-  String get api_error_94 => 'Proberen feedbackscore te krijgen voor gebruiker die niet bestaat';
+  String get api_error_94 => 'Poging om feedbackscore te krijgen voor gebruiker die niet bestaat';
 
   @override
-  String get api_error_95 => 'Proberen advertenties te krijgen voor een gebruiker die niet bestaat';
+  String get api_error_95 => 'Poging om advertenties te krijgen voor een gebruiker die niet bestaat';
 
   @override
   String get api_error_96 => 'Niet-bestaande gebruiker probeert een transactie aan te maken';
 
   @override
-  String get api_error_97 => 'Proberen een ruil te maken voor een advertentie die niet bestaat';
+  String get api_error_97 => 'Poging om een transactie uit te voeren voor een advertentie die niet bestaat';
 
   @override
-  String get api_error_98 => 'Proberen een ruil te maken voor een advertentie waarvan de poster niet bestaat';
+  String get api_error_98 => 'Poging om een transactie uit te voeren voor een advertentie waarvan de plaatser niet bestaat';
 
   @override
-  String get api_error_99 => 'Proberen een hoger bedrag aan te vragen dan toegestaan door first_time_limit_asset bij het maken van een eerste transactie';
+  String get api_error_99 => 'Poging om een hoger bedrag aan te vragen dan toegestaan door first_time_limit_asset bij het maken van een eerste transactie';
 
   @override
   String get api_error_100 => 'Kan niet minder dan 0,0000000001 XMR aanvragen voor het maken van transacties';
@@ -8063,25 +8063,25 @@ class I18nNl extends I18n {
   String get api_error_102 => 'Het aangevraagde bedrag is meer dan het max_amount_available van de advertentie bij het maken van een transactie';
 
   @override
-  String get api_error_104 => 'Verzoek om ruil voor advertentie wiens poster op het kopen van vakantie staat';
+  String get api_error_104 => 'Verzoek voor transactie van advertentie wiens poster op het kopen van vakantie staat';
 
   @override
-  String get api_error_106 => 'Aanvrager van de ruil heeft onvoldoende saldo om het ruilverzoek te financieren';
+  String get api_error_106 => 'Aanvrager van de transactie heeft onvoldoende saldo om het handelsverzoek te financieren';
 
   @override
   String get api_error_108 => 'minAmount kan niet gelijk zijn aan of groter zijn dan maxAmount';
 
   @override
-  String get api_error_109 => 'Het gevraagde bedrag is meer dan het maxAmount van de advertentie bij het maken van een transactie';
+  String get api_error_109 => 'Het aangevraagde bedrag is meer dan de maxAmount van de advertentie bij het maken van een transactie';
 
   @override
-  String get api_error_110 => 'Handelsaanvrager heeft een lagere feedbackscore dan vereist door de poster';
+  String get api_error_110 => 'Handelsaanvrager heeft een lagere feedbackscore dan vereist door de plaatser';
 
   @override
-  String get api_error_111 => 'Gevraagd bedrag is niet een van de geaccepteerde bedragen, zie limit_to_fiat_amounts';
+  String get api_error_111 => 'Aangevraagd bedrag is niet een van de geaccepteerde bedragen, zie limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => 'Kan geen ruil aanvragen voor een advertentie die u zelf heeft geplaatst';
+  String get api_error_112 => 'Kan geen transactie aanvragen voor een advertentie die u zelf heeft geplaatst';
 
   @override
   String get api_error_113 => 'Kan paymentWindowMinutes niet instellen op <15 of >90 bij het updaten van de advertentie';
@@ -8102,13 +8102,13 @@ class I18nNl extends I18n {
   String get api_error_118 => 'Gebruiker die financiering van handel aanvraagt, bestaat niet';
 
   @override
-  String get api_error_119 => 'Proberen een transactie te financieren die niet bestaat';
+  String get api_error_119 => 'Poging om een transactie te financieren die niet bestaat';
 
   @override
   String get api_error_120 => 'Gebruiker die escrow van handel aanvraagt, bestaat niet';
 
   @override
-  String get api_error_121 => 'Proberen een transactie te escrowen die niet bestaat';
+  String get api_error_121 => 'Poging om een transactie te escrowen die niet bestaat';
 
   @override
   String get api_error_122 => 'Onvoldoende saldo om een zwevende LOCAL_SELL-transactie te financieren';
@@ -8123,25 +8123,25 @@ class I18nNl extends I18n {
   String get api_error_125 => 'Gebruiker die annulering van transactie aanvraagt, bestaat niet';
 
   @override
-  String get api_error_126 => 'Proberen een transactie te annuleren die niet bestaat';
+  String get api_error_126 => 'Poging om een transactie te annuleren die niet bestaat';
 
   @override
   String get api_error_127 => 'Gebruiker die betaling van transactie aanvraagt, bestaat niet';
 
   @override
-  String get api_error_128 => 'Proberen een transactie te markeren die niet betaald is';
+  String get api_error_128 => 'Poging om een transactie te markeren die niet betaald is';
 
   @override
-  String get api_error_129 => 'Gebruiker die vrijgave van ruil aanvraagt, bestaat niet';
+  String get api_error_129 => 'Gebruiker die vrijgave van transactie aanvraagt, bestaat niet';
 
   @override
-  String get api_error_130 => 'Proberen een transactie vrij te geven die niet bestaat';
+  String get api_error_130 => 'Poging om een transactie vrij te geven die niet bestaat';
 
   @override
   String get api_error_131 => 'Gebruiker die een handelsgeschil aanvraagt, bestaat niet';
 
   @override
-  String get api_error_132 => 'Proberen een ruil te betwisten die niet bestaat';
+  String get api_error_132 => 'Poging om een transactie te betwisten die niet bestaat';
 
   @override
   String get api_error_133 => 'Poging om feedback te krijgen van een gebruiker die niet bestaat';
@@ -8150,13 +8150,13 @@ class I18nNl extends I18n {
   String get api_error_134 => 'Poging om een advertentie te maken terwijl de gebruiker al het maximaal toegestane aantal advertenties heeft';
 
   @override
-  String get api_error_135 => 'Op de een of andere manier is maxAmount ingesteld op null terwijl trackingMaxAmount is ingesteld op true';
+  String get api_error_135 => 'Om een of andere reden is maxAmount ingesteld op null terwijl trackingMaxAmount is ingesteld op true';
 
   @override
   String get api_error_136 => 'Poging om een advertentie te plaatsen met een saldo dat lager is dan het minimaal vereiste saldo.';
 
   @override
-  String get api_error_141 => 'Proberen een transactie te creëren voor een bedrag dat lager is dan het minimaal toegestane bedrag';
+  String get api_error_141 => 'Poging om een transactie te creëren voor een bedrag dat lager is dan het minimaal toegestane bedrag';
 
   @override
   String get api_error_142 => 'Poging om een fiat-limiet in te stellen die lager is dan minAmount bij het maken van een advertentie';
@@ -8165,13 +8165,13 @@ class I18nNl extends I18n {
   String get api_error_143 => 'Poging om een fiat-limiet in te stellen die hoger is dan maxAmount bij het maken van een advertentie';
 
   @override
-  String get api_error_144 => 'Poging om een fiat-limiet in te stellen die lager is dan minAmount bij het updaten van de advertentie';
+  String get api_error_144 => 'Poging om een fiat-limiet in te stellen die lager is dan het minAmount bij het updaten van de advertentie';
 
   @override
-  String get api_error_145 => 'Poging om een fiat-limiet in te stellen die hoger is dan maxAmount bij het updaten van de advertentie';
+  String get api_error_145 => 'Poging om een fiat-limiet in te stellen die hoger is dan het maxAmount bij het updaten van de advertentie';
 
   @override
-  String get api_error_147 => 'Poging om partnergegevens te verkrijgen voor een gebruiker die het partnerprogramma niet heeft ingeschakeld';
+  String get api_error_147 => 'Poging om partnergegevens te krijgen voor een gebruiker die het partnerprogramma niet heeft ingeschakeld';
 
   @override
   String get api_error_148 => 'Poging om een telegram-ID in te stellen dat al is ingesteld';
@@ -8186,19 +8186,19 @@ class I18nNl extends I18n {
   String get api_error_151 => 'Poging om een transactie te starten voor een advertentie waarbij de gebruiker die de aanvraag indient niet wordt vertrouwd door de adverteerder';
 
   @override
-  String get api_error_152 => 'Proberen een transactie te annuleren die al gesloten is';
+  String get api_error_152 => 'Poging om een transactie te annuleren die al gesloten is';
 
   @override
-  String get api_error_153 => 'Proberen een transactie vrij te geven die al gesloten is';
+  String get api_error_153 => 'Poging om een transactie vrij te geven die al gesloten is';
 
   @override
-  String get api_error_154 => 'Proberen transacties aan te vragen voor een account dat niet bestaat';
+  String get api_error_154 => 'Poging om transacties aan te vragen voor een account dat niet bestaat';
 
   @override
-  String get api_error_155 => 'Er wordt geprobeerd een lijst met vertrouwde gebruikers op te halen voor een gebruiker die niet bestaat';
+  String get api_error_155 => 'Poging om een lijst met vertrouwde gebruikers op te halen voor een gebruiker die niet bestaat';
 
   @override
-  String get api_error_156 => 'Er wordt geprobeerd een lijst met geblokkeerde gebruikers op te halen voor een gebruiker die niet bestaat';
+  String get api_error_156 => 'Poging om een lijst met geblokkeerde gebruikers op te halen voor een gebruiker die niet bestaat';
 
   @override
   String get api_error_157 => 'Poging om optiespecifieke eigenschappen in te stellen voor een niet-optieadvertentie';
@@ -8210,37 +8210,37 @@ class I18nNl extends I18n {
   String get api_error_159 => 'Gebruiker die verzoekt om premiebetaling van handel te markeren, bestaat niet';
 
   @override
-  String get api_error_160 => 'Poging om premium betaald te markeren voor een transactie die niet bestaat';
+  String get api_error_160 => 'Poging om premium als betaald te markeren voor een transactie die niet bestaat';
 
   @override
   String get api_error_161 => 'Gebruiker die verzoekt om optie uit te oefenen bestaat niet';
 
   @override
-  String get api_error_162 => 'Poging om optie uit te oefenen voor een handel die niet bestaat';
+  String get api_error_162 => 'Poging om optie uit te oefenen voor een transactie die niet bestaat';
 
   @override
-  String get api_error_163 => 'Gebruiker die vraagt om bevestiging van premiebetaling van handel bestaat niet';
+  String get api_error_163 => 'Gebruiker die bevestiging van premiebetaling van de transactie verzoekt, bestaat niet';
 
   @override
   String get api_error_164 => 'Poging om betaalde premie te bevestigen voor een transactie die niet bestaat';
 
   @override
-  String get api_error_165 => 'Gebruiker die verzoekt om handel uit te oefenen met netto-afwikkeling bestaat niet';
+  String get api_error_165 => 'Gebruiker die verzoekt om handel uit te oefenen met netto-afwikkeling, bestaat niet';
 
   @override
-  String get api_error_166 => 'Proberen om met netto-afwikkeling een transactie uit te oefenen die niet bestaat';
+  String get api_error_166 => 'Poging om met netto-afwikkeling een transactie uit te oefenen die niet bestaat';
 
   @override
   String get api_error_167 => 'De huidige marktprijs is lager dan of gelijk aan de uitoefenprijs bij verrekening van een CALL-transactie. De transactie is naar marktstandaarden out-of-the-money en kan daarom niet worden gesaldeerd. Gebruik indien nodig de normale afwikkeling.';
 
   @override
-  String get api_error_168 => 'Gebruiker die vraagt om dekkingsbetaling van handel te bevestigen bestaat niet';
+  String get api_error_168 => 'Gebruiker die verzoekt de dekkingsbetaling van de transactie te bevestigen, bestaat niet';
 
   @override
   String get api_error_169 => 'Poging om te bevestigen dat dekking is betaald voor een transactie die niet bestaat';
 
   @override
-  String get api_error_172 => 'Proberen een advertentie te plaatsen waarbij het activum hetzelfde is als de advertentievaluta';
+  String get api_error_172 => 'Poging om een advertentie te plaatsen waarbij het activum hetzelfde is als de advertentievaluta';
 
   @override
   String get api_error_174 => 'Poging om out-of-the-money PUT-handel uit te oefenen';
@@ -8252,10 +8252,10 @@ class I18nNl extends I18n {
   String get api_error_176 => 'Poging om een verlopen coupon in te wisselen tijdens de registratie';
 
   @override
-  String get api_error_177 => 'Poging om een kortingsbon in te wisselen die niet op voorraad is tijdens de registratie';
+  String get api_error_177 => 'Poging om een coupon in te wisselen die niet op voorraad is tijdens de registratie';
 
   @override
-  String get api_error_185 => 'Poging om kortingsbonnen te krijgen voor een gebruiker die niet bestaat';
+  String get api_error_185 => 'Poging om coupons te krijgen voor een gebruiker die niet bestaat';
 
   @override
   String get api_error_186 => 'Poging om meer dan 50 advertenties te krijgen bij het ontvangen van advertenties op ID';
@@ -8267,7 +8267,7 @@ class I18nNl extends I18n {
   String get api_error_188 => 'Geen enkele van de aangevraagde advertentie-ID\'s is een geldig ID bij het ontvangen van advertenties op ID';
 
   @override
-  String get api_error_189 => 'Geen enkele van de gevraagde advertenties bestaat bij het ontvangen van advertenties op ID';
+  String get api_error_189 => 'Geen enkele van de aangevraagde advertenties bestaat bij het ontvangen van advertenties op ID';
 
   @override
   String get api_error_190 => 'Poging om een lege lijst met ID\'s te geven bij het ophalen van transacties op ID';
@@ -8279,7 +8279,7 @@ class I18nNl extends I18n {
   String get api_error_192 => 'Geen enkele van de gevraagde transactie-ID\'s is een geldige ID bij het verkrijgen van transacties op ID';
 
   @override
-  String get api_error_193 => 'Geen enkele van de gevraagde transacties bestaat bij het verkrijgen van transacties op ID';
+  String get api_error_193 => 'Geen enkele van de aangevraagde transacties bestaat bij het verkrijgen van transacties op ID';
 
   @override
   String get api_error_194 => 'Poging om openbaar API-token te genereren voor gebruiker die niet bestaat';
@@ -8291,7 +8291,7 @@ class I18nNl extends I18n {
   String get api_error_196 => 'Poging om recente berichten op te halen voor gebruiker die niet bestaat';
 
   @override
-  String get api_error_197 => 'Proberen om handelschatberichten te ontvangen met een tijdstempel \'na\' die buiten het toegestane bereik valt';
+  String get api_error_197 => 'Poging om handelschatberichten te ontvangen met een \'na\' tijdstempel die buiten het toegestane bereik valt';
 
   @override
   String get api_error_198 => 'Poging om recente chatberichten van het account te ontvangen met een tijdstempel \'na\' die buiten het toegestane bereik valt';
@@ -8306,13 +8306,13 @@ class I18nNl extends I18n {
   String get api_error_201 => 'Poging om prijsformule bij te werken voor advertentie die niet bestaat';
 
   @override
-  String get api_error_202 => 'Proberen om accounttransacties te krijgen met een tijdstempel \'na\' die buiten het toegestane bereik valt';
+  String get api_error_202 => 'Poging om accounttransacties te krijgen met een tijdstempel \'na\' die buiten het toegestane bereik valt';
 
   @override
   String get api_error_203 => 'Poging om reputatie-importgegevens op te halen voor een account dat niet bestaat';
 
   @override
-  String get api_error_211 => 'Proberen om reputatie-import goed te keuren voor gebruiker die niet bestaat';
+  String get api_error_211 => 'Poging om reputatie-import goed te keuren voor gebruiker die niet bestaat';
 
   @override
   String get api_error_212 => 'Poging om reputatie-import goed te keuren voor gebruiker die zich niet in stap 2 van de reputatie-importstroom bevindt';
@@ -8336,7 +8336,7 @@ class I18nNl extends I18n {
   String get api_error_218 => 'Poging om een transactie te openen voor een advertentie waarvoor een geverifieerd e-mailadres nodig is, terwijl de aanvragende gebruiker geen geverifieerd e-mailadres heeft';
 
   @override
-  String get api_error_219 => 'Proberen zich te registreren met een e-mailadres dat afkomstig is van een wegwerp-e-mailprovider';
+  String get api_error_219 => 'Poging om zich te registreren met een e-mailadres dat afkomstig is van een wegwerp-e-mailprovider';
 
   @override
   String get api_error_220 => 'Poging om het e-mailadres van het account te wijzigen in een e-mailadres van een wegwerp-e-mailprovider';
@@ -8354,31 +8354,31 @@ class I18nNl extends I18n {
   String get api_error_224 => 'Poging om de advertentie bij te werken met verificatiebericht, maar de advertentie vereist geen verificatie en het advertentie-updateverzoek stelt verificatieRequired ook niet in als waar';
 
   @override
-  String get api_error_227 => 'Proberen een gebruiker te bestraffen die niet bestaat';
+  String get api_error_227 => 'Poging om een gebruiker te bestraffen die niet bestaat';
 
   @override
   String get api_error_228 => 'Poging om gebruiker te bestraffen met een beheerdersaccount dat niet bestaat';
 
   @override
-  String get api_error_229 => 'Proberen een sanctie te verwijderen van een gebruiker die niet bestaat';
+  String get api_error_229 => 'Poging om een sanctie te verwijderen van een gebruiker die niet bestaat';
 
   @override
   String get api_error_230 => 'Poging om een sanctie te verwijderen van een gebruiker met een beheerdersaccount dat niet bestaat';
 
   @override
-  String get api_error_231 => 'Proberen een sanctie te verwijderen van een gebruiker die geen sancties op zich heeft';
+  String get api_error_231 => 'Poging om een sanctie te verwijderen van een gebruiker die geen sancties op zich heeft';
 
   @override
   String get api_error_232 => 'Poging om een transactie te openen met een gebruiker die momenteel niet mag handelen vanwege een sanctie';
 
   @override
-  String get api_error_233 => 'Poging om feedback te verwijderen met ID die niet bestaat';
+  String get api_error_233 => 'Poging om feedback te verwijderen met ID dat niet bestaat';
 
   @override
   String get api_error_234 => 'Proberen feedback te verwijderen die al is verwijderd';
 
   @override
-  String get api_error_235 => 'Proberen de geschilstatus te verwijderen van een transactie die niet bestaat';
+  String get api_error_235 => 'Poging om de geschilstatus te verwijderen van een transactie die niet bestaat';
 
   @override
   String get api_error_236 => 'Poging om de betwistingsstatus te verwijderen van een transactie die niet betwist wordt';
@@ -8405,7 +8405,7 @@ class I18nNl extends I18n {
   String get api_error_246 => 'Poging om een transactie te starten vanuit een BUY advertentie waarin het adres voor de afwikkeling van de koper niet wordt gespecificeerd';
 
   @override
-  String get api_error_247 => 'Proberen een transactie vrij te geven van een account dat vanwege sancties niet mag worden opgenomen';
+  String get api_error_247 => 'Poging om een transactie vrij te geven van een account dat vanwege sancties niet mag worden opgenomen';
 
   @override
   String get api_error_248 => 'Poging om een transactie vrij te geven wanneer het bedrag van de transactie niet voldoende is om de afwikkelingsgerelateerde kosten te dekken';
@@ -8462,7 +8462,7 @@ class I18nNl extends I18n {
   String get pin_enter_to_confirm_transaction => 'Voer de pincode in om de transactie te bevestigen';
 
   @override
-  String get pin_you_can_use => 'Met deze pincode kun je de app ontgrendelen.';
+  String get pin_you_can_use => 'Met deze pincode kunt u de app ontgrendelen.';
 
   @override
   String get pin_confirm => 'Bevestig pincode';
@@ -8477,7 +8477,7 @@ class I18nNl extends I18n {
   String get pin_do_not_match => 'Pincodes komen niet overeen';
 
   @override
-  String get pin_second_as_first => 'De pincode die u de tweede keer hebt ingevoerd, komt niet overeen met de eerste pincode.';
+  String get pin_second_as_first => 'De pincode die u de tweede keer heeft ingevoerd, komt niet overeen met de eerste pincode.';
 
   @override
   String get pin_wrong_current => 'Verkeerde huidige pincode';
@@ -8510,7 +8510,7 @@ class I18nNl extends I18n {
   String get error_password_reset_token_invalid => 'Het verstrekte token voor het opnieuw instellen van het wachtwoord is ongeldig';
 
   @override
-  String get error_password_reset_unverified_email => 'Probeer een wachtwoord opnieuw in te stellen voor een gebruiker met een niet-geverifieerd e-mailadres';
+  String get error_password_reset_unverified_email => 'Poging om een wachtwoord opnieuw in te stellen voor een gebruiker met een niet-geverifieerd e-mailadres';
 
   @override
   String get i_want_to_buy_new => 'Ik wil kopen';
@@ -8555,16 +8555,16 @@ class I18nNl extends I18n {
   String get welcome_buy_press_buy => 'Druk op KOPEN om de transactie te starten.';
 
   @override
-  String get welcome_buy_follow_the_sellers => 'Volg de instructies van de verkoper in de ruilchat!';
+  String get welcome_buy_follow_the_sellers => 'Volg de instructies van de verkoper in de handelschat!';
 
   @override
-  String get welcome_sell_go_to_wallet => 'Ga naar je portemonnee en stort je munten.';
+  String get welcome_sell_go_to_wallet => 'Ga naar uw portefeuille en stort uw munten.';
 
   @override
   String get welcome_sell_press_sell => 'Druk op VERKOPEN om de transactie te starten.';
 
   @override
-  String get welcome_sell_follow_the_buyer => 'Volg de instructies van de koper in de ruilchat!';
+  String get welcome_sell_follow_the_buyer => 'Volg de instructies van de koper in de handelschat!';
 
   @override
   String get get_started => 'Begin';
@@ -8649,7 +8649,7 @@ class I18nNl extends I18n {
   String get enter_amount_to_receive_with_fee => 'Vul het af te trekken bedrag in (met toeslag)';
 
   @override
-  String get return_reserve_from_trade => 'Retourreserve uit handel';
+  String get return_reserve_from_trade => 'Retourreserve van transactie';
 
   @override
   String get user_profile => 'Gebruikersprofiel';
@@ -8783,7 +8783,7 @@ class I18nNl extends I18n {
   String get choose_ad_default_region => 'Kies de standaardregio voor advertenties';
 
   @override
-  String get knowledge_base => 'Kennis basis';
+  String get knowledge_base => 'Kennisbasis';
 
   @override
   String get report_this_ad => 'Rapporteer deze advertentie';
@@ -8832,7 +8832,7 @@ class I18nNl extends I18n {
 
   @override
   String search__no_results(Object country) {
-    return 'Geen resultaten in $country met de geselecteerde criteria... nog niet. ';
+    return '(Nog) geen resultaten in $country met de geselecteerde criteria... ';
   }
 
   @override
@@ -8876,14 +8876,14 @@ class I18nNl extends I18n {
 
   @override
   String settings__homepage_tip(Object example_url) {
-    return 'Weergegeven op je openbare profiel. Alleen geldige URL geaccepteerd (bijv. https://$example_url)';
+    return 'Weergegeven op uw openbare profiel. Alleen geldige URL geaccepteerd (bijv. https://$example_url)';
   }
 
   @override
-  String get settings__personal_info_tip => 'Weergegeven op je openbare profiel. Maximaal 65536 tekens. Kan markdown gebruiken voor styling.';
+  String get settings__personal_info_tip => 'Weergegeven op uw openbare profiel. Maximaal 65536 tekens. Kan markdown gebruiken voor styling.';
 
   @override
-  String get settings__personal_info_tip_1 => 'Weergegeven op je openbare profiel. Maximaal 65536 tekens.';
+  String get settings__personal_info_tip_1 => 'Weergegeven op uw openbare profiel. Maximaal 65536 tekens.';
 
   @override
   String get coupons__coupon__type_here => 'Typ hier uw coupon';
@@ -8961,12 +8961,12 @@ class I18nNl extends I18n {
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '($val1 kan annuleren over $val2 min, tenzij u als betaald markeert)';
+    return '($val1 kan annuleren over $val2 min, tenzij u het als betaald markeert)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val kan nu annuleren, tenzij u als betaald markeert)';
+    return '($val kan nu annuleren, tenzij u het als betaald markeert)';
   }
 
   @override
@@ -8997,7 +8997,7 @@ class I18nNl extends I18n {
   String get app_intall_ad_title => 'Installeer AgoraDesk om deze advertentie te bekijken';
 
   @override
-  String get app_intall_trade_body => 'Dit is een op Bitcoin gebaseerde handel, het vereist onze AgoraDesk-app om te bekijken.';
+  String get app_intall_trade_body => 'Dit is een op Bitcoin gebaseerde transactie, het vereist onze AgoraDesk-app om deze te bekijken.';
 
   @override
   String get app_intall_ad_body => 'Dit is een op Bitcoin gebaseerde advertentie, het vereist onze AgoraDesk-app om deze te bekijken.';
@@ -9069,7 +9069,7 @@ class I18nNl extends I18n {
   String get app_biometric_authentication_message => 'Stel een pincode in om biometrische authenticatie in te schakelen.';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => 'Anonieme crashdiagnose is uitgeschakeld en wordt niet verzonden nadat je de app opnieuw hebt opgestart.';
+  String get app_anonymous_crash_diagnostics_restart => 'Anonieme crashdiagnose is uitgeschakeld en wordt niet verzonden nadat u de app opnieuw heeft opgestart.';
 
   @override
   String get app_trading_partners => 'Handelspartners';
@@ -9164,10 +9164,10 @@ class I18nNl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Koop of verkoop Bitcoin anoniem, zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nVraagt u zich af hoe u kunt investeren in Bitcoin? Op AgoraDesk is het kopen van bitcoins nog nooit zo eenvoudig geweest - koop direct BTC van een persoon met behulp van uw favoriete online betaalmethode: PayPal, creditcard/bankpas of bankoverschrijving, cadeaubonnen, Venmo of overigen. Als u bitcoins bij u in de buurt met contant geld wilt kopen, kunt u iemand vinden die lokaal bitcoins wil verkopen - het handelsplatform ondersteunt het kopen en verkopen van BTC met contant geld. Je kunt zelfs bitcoins kopen met contant geld per post.\n\n- Veilige en vlotte handel\nNet als LocalBitcoins ondersteunen we elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en, in tegenstelling tot LocalBitcoins, ondersteunen we face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in de arbitragebond worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML of ID-verificatie\nAgoraDesk zet zich in voor het behoud van de eenvoud en rechtlijnigheid die de originele LocalBitcoins zo populair hebben gemaakt. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische cryptocurrency-gemeenschap.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we u niet eens vragen om een e-mailadres op te geven bij het registreren.\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via social media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.\n\nU kunt onze ondersteuning bereiken op: https://agoradesk.com/support\n\n- Eerlijke vergoedingen\nWe brengen geen exorbitante kosten in rekening wanneer u Bitcoins stort of opneemt in/uit onze arbitrage-obligatieportefeuille. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: eenvoudig Bitcoin kopen';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: Eenvoudig Bitcoin kopen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: simpel XMR kopen';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: Eenvoudig XMR kopen';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaubon, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt omzetten naar Monero - ons platform ondersteunt elke betaalmethode.\n\n- Veilige en vlotte handel\nWe ondersteunen elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en we ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in de arbitragebond worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML of ID-verificatie\nLocalMonero doet er alles aan om de eenvoud en rechtlijnigheid van uw handelservaring te behouden. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we u niet eens vragen om een e-mailadres op te geven bij het registreren.\nKoop of verkoop Monero zonder ID-verificatie. WAARSCHUWING: DEZE APP IS MOMENTEEL IN OPEN BETA!\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via social media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWe brengen geen exorbitante kosten in rekening wanneer u Monero stort of opneemt in/uit onze arbitrage-obligatieportefeuille. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.';
@@ -9203,10 +9203,10 @@ class I18nNl extends I18n {
   String get error250Sbsignup250Sb176 => 'Poging om een verlopen coupon in te wisselen tijdens de registratie';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Poging om een kortingsbon in te wisselen die niet op voorraad is tijdens de registratie';
+  String get error250Sbsignup250Sb177 => 'Poging om een coupon in te wisselen die niet op voorraad is tijdens de registratie';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Wachtwoord reset brief verzonden! Controleer je inbox.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Wachtwoord reset brief verzonden! Controleer uw inbox.';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Ga akkoord met de voorwaarden en ga verder';
@@ -9223,10 +9223,10 @@ class I18nNl extends I18n {
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'calloptie kopen';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'call-optie kopen';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'calloptie verkopen';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'call-optie verkopen';
 
   @override
   String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: anoniem XMR kopen';
@@ -9252,7 +9252,7 @@ class I18nNl extends I18n {
   String get app_chat_leave_review => 'Tik hier om een review achter te laten!';
 
   @override
-  String get app_chat_update_review => 'Je hebt deze gebruiker al een beoordeling gegeven. Wilt u uw beoordeling nu bijwerken?';
+  String get app_chat_update_review => 'U heeft deze gebruiker al een beoordeling gegeven. Wilt u uw beoordeling nu bijwerken?';
 
   @override
   String get app_select_buyer_seller => 'Selecteer koper of verkoper';
@@ -9269,20 +9269,32 @@ class I18nNl extends I18n {
   }
 
   @override
-  String get app_push_new_message => 'Je hebt een nieuw bericht in een transactie';
+  String get app_push_new_message => 'U heeft een nieuw bericht in een transactie';
 
   @override
-  String get app_push_new_offer => 'Je hebt een nieuw aanbod';
+  String get app_push_new_offer => 'U heeft een nieuw aanbod';
 
   @override
-  String get app_p => 'Handel gemarkeerd als voltooid';
+  String get app_push_trade_marked_completed => 'Transactie gemarkeerd als voltooid';
 
   @override
-  String get app_push_trade_marked_completed => 'Handel gemarkeerd als voltooid';
+  String get app_push_trade_cancelled => 'Transactie geannuleerd';
 
   @override
-  String get app_push_trade_cancelled => 'Handel geannuleerd';
+  String get app_push_trade_disputed => 'Transactie betwist';
 
   @override
-  String get app_push_trade_disputed => 'Handel betwist';
+  String get app_apple_app_store_subtitle_localmonero => 'Monero anoniem kopen/verkopen';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Anoniem Bitcoin kopen/verkopen';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Vragen hebben? Vraag het in de communitychats';
 }

@@ -16663,12 +16663,6 @@ abstract class I18n {
   /// **'You have a new offer'**
   String get app_push_new_offer;
 
-  /// No description provided for @app_p.
-  ///
-  /// In en, this message translates to:
-  /// **'Trade marked as completed'**
-  String get app_p;
-
   /// No description provided for @app_push_trade_marked_completed.
   ///
   /// In en, this message translates to:
@@ -16686,6 +16680,36 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Trade disputed'**
   String get app_push_trade_disputed;
+
+  /// No description provided for @app_apple_app_store_subtitle_localmonero.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy/Sell Monero Anonymously'**
+  String get app_apple_app_store_subtitle_localmonero;
+
+  /// No description provided for @app_apple_app_store_subtitle_agoradesk.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy/Sell Bitcoin Anonymously'**
+  String get app_apple_app_store_subtitle_agoradesk;
+
+  /// No description provided for @app_google_play_store_short_description_localmonero.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.'**
+  String get app_google_play_store_short_description_localmonero;
+
+  /// No description provided for @app_google_play_store_short_description_agoradesk.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.'**
+  String get app_google_play_store_short_description_agoradesk;
+
+  /// No description provided for @app_ask_community_chats.
+  ///
+  /// In en, this message translates to:
+  /// **'Have questions? Ask in the community chats'**
+  String get app_ask_community_chats;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

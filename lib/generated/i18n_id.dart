@@ -9232,17 +9232,17 @@ class I18nId extends I18n {
   String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: beli XMR secara anonim';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit kata sandi kotak, ketuk dua kali untuk mengedit';
+  String get app_accessibility_edit_box_password => 'Sunting kotak kata sandi, ketuk dua kali untuk menyunting';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Konfirmasi kotak edit kata sandi, ketuk dua kali untuk mengedit';
+  String get app_accessibility_edit_box_confirm_password => 'Konfirmasi kotak sunting kata sandi, ketuk dua kali untuk menyunting';
 
   @override
   String get app_ad_created => 'Iklan dibuat';
 
   @override
   String app_503_body(Object val) {
-    return '$val akan segera kembali!\\nMaaf atas ketidaknyamanan ini, tetapi kami sedang melakukan beberapa pemeliharaan terjadwal saat ini.\\nKami mungkin akan segera kembali online. Tetap perbarui di grup komunitas kami:';
+    return '$val akan segera kembali!\\nMohon maaf atas ketidaknyamanan ini, tetapi kami sedang melakukan beberapa pemeliharaan terjadwal saat ini.\\nKami mungkin akan segera kembali online. Tetap up to date di grup komunitas kami:';
   }
 
   @override
@@ -9265,17 +9265,14 @@ class I18nId extends I18n {
 
   @override
   String app_503_title(Object val) {
-    return '$val Pemeliharaan Aplikasi';
+    return 'Pemeliharaan Aplikasi $val';
   }
 
   @override
-  String get app_push_new_message => 'Anda memiliki pesan baru dalam perdagangan';
+  String get app_push_new_message => 'Anda memiliki pesan baru di sebuah perdagangan';
 
   @override
   String get app_push_new_offer => 'Anda memiliki penawaran baru';
-
-  @override
-  String get app_p => 'Perdagangan ditandai sebagai selesai';
 
   @override
   String get app_push_trade_marked_completed => 'Perdagangan ditandai sebagai selesai';
@@ -9285,4 +9282,19 @@ class I18nId extends I18n {
 
   @override
   String get app_push_trade_disputed => 'Perdagangan disengketakan';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Beli/Jual Monero Secara Anonim';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Beli/Jual Bitcoin Secara Anonim';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Ada pertanyaan? Tanyakan di obrolan komunitas';
 }
