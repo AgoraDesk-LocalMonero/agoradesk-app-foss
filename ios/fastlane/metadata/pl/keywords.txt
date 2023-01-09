@@ -1,0 +1,1 @@
+kryptowaluty,bitcoin,monero,BTC,XMR,anonimowo,prywatnie

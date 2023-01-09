@@ -1,1 +1,1 @@
-cryptocurrency,bitcoin,monero,BTC,XMR,anonymous,private
+kryptoměna,bitcoin,monero,BTC,XMR,anonymní,soukromé
