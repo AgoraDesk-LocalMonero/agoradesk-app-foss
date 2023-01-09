@@ -1,26 +1,26 @@
-Vásároljon vagy adjon el Bitcoint személyi igazolvány ellenőrzése nélkül. Készpénzben vagy online.
+Vásároljon vagy adjon el Bitcoint névtelenül, személyi igazolvány ellenőrzése nélkül. Készpénzben vagy online. Biztonságos, gyors, egyszerű.
 
-Kíváncsi vagy, hogyan fektess be Bitcoinba? Az AgoraDesken a bitcoinok vásárlása még soha nem volt ilyen egyszerű – azonnal vásároljon BTC-t egy személytől kedvenc online fizetési módjával: PayPal, hitelkártya/bankkártya vagy banki átutalás, ajándékkártyák, Venmo vagy bármilyen más. Ha készpénzzel szeretne bitcoinokat vásárolni a közelben, találhat valakit, aki hajlandó bitcoint eladni helyben – a kereskedési platform támogatja a BTC készpénzes vásárlását és eladását. Akár levélben is vásárolhat bitcoint készpénzzel.
+Kíváncsi, hogyan fektessen Bitcoinba? Az AgoraDesken a Bitcoin vásárlása még soha nem volt ilyen egyszerű – azonnali BTC vásárlás a kedvenc online fizetési megoldásával: PayPal, hitelkártya/bankkártya vagy banki átutalás, ajándékkártyák, Venmo vagy bármi más. Ha készpénzzel szeretne bitcoint vásárolni a közelben, találhat valakit, aki hajlandó bitcoint eladni helyben – a platform támogatja a BTC készpénzes vásárlását és eladását. Akár levélben küldött készpénzzel is vásárolhat bitcoint.
 
 - Biztonságos és zökkenőmentes kereskedés
-Csakúgy, mint a LocalBitcoins, mi is támogatunk minden fizetési módot, bármilyen pénznemet, bárhol. Nem távolítjuk el a fizetési módokat, és a LocalBitcoinnal ellentétben teljes mértékben támogatjuk a személyes készpénzes kereskedést. Minden kereskedésünket választottbírósági kötvény védi. Köszönhetően annak, hogy a kereskedés megkezdése előtt választottbírósági kötvényben kell tartani a pénzeszközöket, zökkenőmentes és biztonságos élményt biztosítunk a vevő számára, ami elengedhetetlen a platform népszerűségéhez és az eladók visszatérő vásárlóihoz.
+A LocalBitcoinhoz hasonlóan mi is támogatunk minden fizetési módot, bármilyen pénznemet, bárhol. Nem távolítunk el fizetési módokat, és a LocalBitcoins-szal ellentétben teljes mértékben támogatjuk a személyes készpénzes kereskedést. Minden ügylet vitarendezési letéttel védett. Ennek köszönhetően zökkenőmentes és biztonságos élményt biztosítunk a vevő számára, ami elengedhetetlen a platform népszerűségéhez és a rendszeres vásárlók megtartásához.
 
-- Nincs KYC/AML vagy azonosító ellenőrzés
-Az AgoraDesk elkötelezett amellett, hogy megőrizze azt az egyszerűséget és közvetlenséget, amely az eredeti LocalBitcoinokat olyan népszerűvé tette. Nem alkalmazunk KYC/AML-t, és nem is tervezünk ilyet.
+- Nincs KYC/AML vagy igazolvány-ellenőrzés
+Az AgoraDesk elkötelezett amellett, hogy megőrizze azt az egyszerűséget és közvetlenséget, ami a LocalBitcoins-t eredetileg népszerűvé tette. Nem alkalmazunk KYC/AML ellenőrzéseket, és nem is tervezünk ilyet.
 
-- A közösség megbízásából
-Platformunk több mint négy éve működik, túlélte a 2018-as nagy kriptovaluta-piaci összeomlást, és közösségorientált szorgalmas szolgáltatása révén a rendkívül szkeptikus kriptovaluta közösség egyik legmegbízhatóbb névévé vált.
+- A közösség bizalmát élvezzük
+Platformunk több mint négy éve működik, túlélte a 2018-as Nagy Kriptovaluta Összeomlást, és gondos közösségorientált szolgáltatása révén az egyik legmegbízhatóbb névvé nőtte ki magát a rendkívül körültekintő kriptovaluta közösségben.
 
-- Biztonságos, nyílt forráskódú, adatvédelmi központú, cenzúraálló
-Alkalmazásunk ingyenes és nyílt forráskódú, ami biztosítja, hogy sok szem nézze az alkalmazás kódját, hogy ne legyenek biztonsági rések vagy adatvédelmi szivárgások. Alkalmazásunk nyílt forráskódja azt is lehetővé teszi, hogy bárki hozzáférjen az alkalmazásunkhoz, még akkor is, ha egy adott alkalmazástár cenzúrázza az alkalmazást. Alkalmazásunk olyan telefonokon is működik, amelyeken a Google teljesen le van tiltva. Nagyon fontosnak tartjuk a magánéletét, még csak nem is kérünk e-mailt a regisztráció során.
+- Biztonságos, nyílt forráskódú, adatvédelem-központú, cenzúraálló
+Alkalmazásunk ingyenes és nyílt forráskódú, ami lehetővé teszi, hogy sok szem ellenőrizze az alkalmazás kódját, elkerülve a biztonsági rések vagy adatszivárgások létrejöttét. A nyílt forráskód azt is lehetővé teszi, hogy az alkalmazás elérhető maradjon akkor is, ha egyes központi tárhelyek cenzúráznák. Olyan telefonokon is működik, amelyeken a Google szolgáltatásai mindenestül le vannak tiltva. A magánéletet annyira fontosnak tartjuk, hogy még e-mail címet sem kérünk a regisztráció során.
 
 Forráskód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
-Problémakövető: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+Hibabejelentés: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
 
-- Csillagok támogatása
-Ügyfélszolgálati csapatunk gyors, készséges, és mindig szívesen tesznek eleget. Soha nem kaptunk olyan támogatási jegyet, amelyre 24 órán belül ne válaszoltak volna. A közösségi médián keresztül mindig könnyen elérhetőek vagyunk, figyelmesen hallgatjuk kritikáit, és mindig rekordidő alatt megvalósítjuk a jó felhasználói javaslatokat.
+- Kiváló támogatás
+Ügyfélszolgálati csapatunk gyors, készséges, és mindig az ügyfél elégedettségére törekszik. Soha nem kaptunk olyan támogatási jegyet, amelyre 24 órán belül ne válaszoltunk volna. A közösségi médián keresztül mindig könnyen elérhetőek vagyunk, figyelmesen hallgatjuk kritikáit, és rekordidő alatt megvalósítjuk a jó felhasználói javaslatokat.
 
 Ügyfélszolgálatunkat a következő címen érheti el: https://agoradesk.com/support
 
 - Tisztességes díjak
-Nem számítunk fel túlzott díjat, ha Bitcoinokat helyez be vagy von ki választottbírósági kötvénytárcánkba, illetve onnan. Nincs befizetési díj, és a kifizetési díj nagyon közel áll ahhoz a díjhoz, amelyet egy normál tranzakció esetén fizetne.
+Nem számítunk fel eltúlzott díjakat, amikor Bitcoint helyez vitarendezési letétbe vagy von ki onnan. A befizetés díjmentes, a kifizetés díja pedig alig magasabb, mint amit egy normál tranzakció esetén fizetne.

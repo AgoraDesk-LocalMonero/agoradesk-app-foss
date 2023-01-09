@@ -1,26 +1,26 @@
-Achetez ou vendez des Bitcoins sans vérification d'identité. Espèces ou en ligne.
+Achetez ou vendez des Bitcoins sans vérification d'identité. En espèces ou en ligne.
 
-Vous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des bitcoins n'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, carte de crédit/débit ou virement bancaire, cartes-cadeaux, Venmo ou tout autre. Si vous souhaitez acheter des bitcoins près de chez vous avec de l'argent, vous pouvez trouver quelqu'un prêt à vendre des bitcoins localement - la plateforme de trading prend en charge l'achat et la vente de BTC avec de l'argent. Vous pouvez même acheter des bitcoins en espèces par courrier.
+Vous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des Bitcoins n'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, une carte de crédit/débit ou un virement bancaire, des cartes-cadeaux, Venmo ou tout autre moyen de paiement. Si vous souhaitez acheter des Bitcoins près de chez vous avec de l'argent liquide, vous pouvez trouver quelqu'un prêt à vendre des Bitcoins localement - la plateforme d'échange prend en charge l'achat et la vente de BTC avec de l'argent liquide. Vous pouvez même acheter des Bitcoins en espèces par courrier.
 
-- Commerce sûr et fluide
-Tout comme LocalBitcoins, nous prenons en charge n'importe quel mode de paiement, n'importe quelle devise, n'importe où. Nous ne supprimons pas les méthodes de paiement et, contrairement à LocalBitcoins, nous prenons pleinement en charge les transactions en espèces en face à face. Tous nos métiers sont protégés par un cautionnement d'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d'arbitrage avant qu'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.
+- Transaction sûr et fluide
+Tout comme LocalBitcoins, nous prenons en charge n'importe quel mode de paiement, n'importe quelle devise, de n'importe où. Nous ne supprimons pas les méthodes de paiement et, contrairement à LocalBitcoins, nous prenons pleinement en charge les transactions en espèces en face à face. Toutes nos transactions sont protégées par une caution d'arbitrage. Grâce au fait que nous exigeons que les fonds soient détenus en caution d'arbitrage avant qu'une transaction puisse commencer, nous assurons une expérience fluide et sûre pour l'acheteur, ce qui est essentiel pour la popularité de la plateforme et des clients réguliers pour les vendeurs.
 
 - Pas de KYC/AML ou de vérification d'identité
-AgoraDesk s'engage à maintenir la simplicité et la simplicité qui ont rendu les LocalBitcoins originaux si populaires. Nous n'utilisons pas KYC/AML, et nous ne prévoyons jamais de le faire.
+AgoraDesk s'engage à maintenir la simplicité et la facilité qui ont rendu la version originelle de LocalBitcoins si populaire. Nous n'utilisons pas de KYC/AML, et nous prévoyons de ne jamais le faire.
 
-- Approuvé par la communauté
-Notre plate-forme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l'un des noms les plus fiables de la communauté extrêmement sceptique des crypto-monnaies.
+- Approuvée par la communauté
+Notre plateforme fonctionne depuis plus de quatre ans, a survécu au grand crash du marché des crypto-monnaies de 2018 et, grâce à son service diligent axé sur la communauté, est devenue l'un des noms les plus fiables de la communauté extrêmement sceptique des crypto-monnaies.
 
-- Sécurisé, Open Source, centré sur la confidentialité, résistant à la censure
-Notre application est gratuite et open source, ce qui garantit que de nombreux yeux regardent le code de l'application pour s'assurer qu'il n'y a pas de failles de sécurité ou de fuites de confidentialité. L'open source de notre application permet également à quiconque d'avoir accès à notre application même si un certain référentiel d'applications censure l'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous apprécions tellement votre vie privée que nous ne vous demandons même pas de fournir un e-mail lors de votre inscription.
+- Sécurisée, Open Source, centrée sur la confidentialité, résistante à la censure
+Notre application est gratuite et Open Source, ce qui garantit que de nombreux yeux peuvent regarder le code de l'application pour s'assurer qu'il n'y a pas de failles de sécurité ou de fuites de confidentialité. Le fait que notre application soit Open Source permet également à quiconque d'avoir accès à notre application même si un certain dépôt d'applications censure l'application. Notre application fonctionne même sur les téléphones sur lesquels Google est complètement bloqué. Nous accordons tellement d'importance à votre vie privée que nous ne vous demandons même pas de fournir une adresse e-mail lors de votre inscription.
 
 Code source : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
 Suivi des problèmes : https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
 
-- Assistance stellaire
-Notre équipe d'assistance est rapide, réactive et toujours prête à vous satisfaire. Nous n'avons jamais eu de ticket d'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.
+- Assistance exceptionnelle
+Notre équipe de support est rapide, réactive et toujours prête à vous satisfaire. Nous n'avons jamais eu de ticket de demande d'assistance sans réponse dans les 24 heures. Nous sommes toujours facilement joignables via les médias sociaux, nous écoutons attentivement vos critiques et nous mettons toujours en œuvre les bonnes suggestions des utilisateurs en un temps record.
 
-Vous pouvez joindre notre support à: https://agoradesk.com/support
+Vous pouvez joindre notre support à l'adresse suivante : https://agoradesk.com/support
 
 - Frais équitables
-Nous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez des Bitcoins vers/depuis notre portefeuille d'obligations d'arbitrage. Il n'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.
+Nous ne facturons pas de frais exorbitants lorsque vous déposez ou retirez des Bitcoins vers/depuis notre portefeuille de caution d'arbitrage. Il n'y a pas de frais de dépôt et les frais de retrait sont très proches des frais que vous paieriez pour une transaction normale.
