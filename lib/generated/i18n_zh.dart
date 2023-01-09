@@ -78,7 +78,7 @@ class I18nZh extends I18n {
 
   @override
   String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return '所有在{country-or-currency}';
+    return '所有在$countryOrcurrency';
   }
 
   @override
@@ -102,7 +102,7 @@ class I18nZh extends I18n {
 
   @override
   String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return '注： 您目前最多只能购买{first-time-limit-xmr}。当您进行了更多交易获得了更多信誉后，您将可以购买更多的币。这个限制是由卖家指定的。';
+    return '注： 您目前最多只能购买$firstTimelimitxmr。当您进行了更多交易获得了更多信誉后，您将可以购买更多的币。这个限制是由卖家指定的。';
   }
 
   @override
@@ -127,17 +127,17 @@ class I18nZh extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$detail使用$currency使用{payment-method}出售$assetName';
+    return '$detail使用$currency使用$paymentMethod出售$assetName';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$detail使用$currency使用{payment-method}购买$assetName';
+    return '$detail使用$currency使用$paymentMethod购买$assetName';
   }
 
   @override
   String ad8722Sbpage250Sbhidden8722Sbwarning8722Sb0(Object editAd) {
-    return '本广告是隐藏的。你可以在{edit-ad}页更改它的状态。';
+    return '本广告是隐藏的。你可以在$editAd页更改它的状态。';
   }
 
   @override
@@ -151,7 +151,7 @@ class I18nZh extends I18n {
 
   @override
   String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '你要{buy-or-sell}多少？';
+    return '你要$buyOrsell多少？';
   }
 
   @override
@@ -173,12 +173,12 @@ class I18nZh extends I18n {
 
   @override
   String ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(Object minimumAmount) {
-    return '您可以从此广告中购买的最小金额为{minimum-amount}。';
+    return '您可以从此广告中购买的最小金额为$minimumAmount。';
   }
 
   @override
   String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return '本用户要求你的最低评价得分为{minimum-feedback-score}。';
+    return '本用户要求你的最低评价得分为$minimumFeedbackscore。';
   }
 
   @override
@@ -311,11 +311,11 @@ class I18nZh extends I18n {
 
   @override
   String ad250Sbnotice250Sbprotected(Object link) {
-    return 'This trade is protected by an $link';
+    return '该交易受$link保护';
   }
 
   @override
-  String get ad250Sbnotice250Sbprotected250Sblink => 'arbitration bond';
+  String get ad250Sbnotice250Sbprotected250Sblink => '仲裁保证金';
 
   @override
   String get ad250Sbself8722Sbvacation8722Sbnotice => '由于您当前正在休假，因此该广告对公众不可见。您可以在设置中或在仪表板上进行更改。';
@@ -333,7 +333,7 @@ class I18nZh extends I18n {
 
   @override
   String affiliate250Sbbanner250Sbtext(Object appName, Object linebreak, Object iframe) {
-    return ' 获取横幅示例来推销您在$appName的联盟计划。您可以在您的博客和网站安装HTML横幅。$linebreak $iframe 您广告的横幅 (尺寸 234 x 60 像素，半个横幅单位): ';
+    return ' 获取横幅示例来推销您在$appName的联盟计划。您可以在您的博客和网站安装HTML横幅。$linebreak  $iframe 您广告的横幅 (尺寸 234 x 60 像素，半个横幅单位): ';
   }
 
   @override
@@ -344,12 +344,12 @@ class I18nZh extends I18n {
 
   @override
   String affiliate250Sbenabled(Object refCode, Object appName) {
-    return '您的加盟计划已经启用。可以通过添加您的代销商标签{ref-code}到任何$appName的URL赚取佣金。';
+    return '您的加盟计划已经启用。可以通过添加您的代销商标签$refCode到任何$appName的URL赚取佣金。';
   }
 
   @override
   String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
-    return '您带来两个在 $appName 注册的用户（$assetName的买家和卖家），如果他们做一个价值 100 $assetSymbol 的交易，您可以分别从每个交易者在 $appName 的交易费中赚取 20%，总计 40% 的 $appName 佣金。您挣得的总数是 0.4 $assetSymbol。$linebreak $appName${support}非常乐意解决您的任何问题。';
+    return '您带来两个在 $appName 注册的用户（$assetName的买家和卖家），如果他们做一个价值 100 $assetSymbol 的交易，您可以分别从每个交易者在 $appName 的交易费中赚取 20%，总计 40% 的 $appName 佣金。您挣得的总数是 0.4 $assetSymbol。$linebreak  $appName${support}非常乐意解决您的任何问题。';
   }
 
   @override
@@ -374,7 +374,7 @@ class I18nZh extends I18n {
 
   @override
   String affiliate250Sblogged8722Sbout(Object signUp, Object logIn) {
-    return '{sign-up}或{log-in}后，您可以启用我们的分销联盟计划。';
+    return '$signUp或$logIn后，您可以启用我们的分销联盟计划。';
   }
 
   @override
@@ -403,7 +403,7 @@ class I18nZh extends I18n {
 
   @override
   String affiliate250Sbref8722Sbcode(Object refCode) {
-    return '你的代销商标签： {ref-code}';
+    return '你的代销商标签： $refCode';
   }
 
   @override
@@ -465,7 +465,7 @@ class I18nZh extends I18n {
 
   @override
   String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return '';
+    return '要开始交易，输入你想要多少 $asset 到 $buy_or_sell ，然后点击\'发送交易请求\'按钮，开始交易。';
   }
 
   @override
@@ -830,7 +830,7 @@ class I18nZh extends I18n {
   String get chat250Sbbtn => '发送';
 
   @override
-  String get chat250Sbcash8722Sbdeposit8722Sbseller8722Sbwarning => '<strong>Warning:</strong> there have been cases of sellers getting a check deposited that was later reversed. Make sure to verify (e.g. by calling the bank) any deposit that you get!';
+  String get chat250Sbcash8722Sbdeposit8722Sbseller8722Sbwarning => '<strong>警告：</strong> 有些情况下，卖家收到支票后被撤销。确保核实（例如通过致电银行）您收到的任何存款！';
 
   @override
   String get chat250Sbeu8722Sbfraud8722Sbwarning => ' <br />目前我们欧洲地区的银行账户欺诈似乎激增。<br />我们建议欧洲地区的所有交易员在采取行动时要格外小心谨慎。与新的贸易伙伴打交道，例如要求自己持有身份证的照片和一张带有交易信息（如交易ID，金额，用户名和日期）的纸张。请记住，欺诈者可能拥有泄露的或被盗的KYC文件。<br />';
@@ -852,10 +852,10 @@ class I18nZh extends I18n {
   String get chat250Sbmitm8722Sbcryptocurency8722Sbwarning => '警告：仅在此交易聊天中或从此交易页面的付款详细信息部分获取卖家地址，请勿在此交易聊天之外发送付款交易 ID！我们还建议您保留此交易聊天中的所有通信。';
 
   @override
-  String get chat250Sbmitm8722Sbwarning250Sb0 => '⚠️ PSA: there is a new scammer active that acts as a man in the middle. The scammer contacts you off-platform pretending to be a seller on the platform offering you to buy XMR from them in exchange for BTC at a reduced price (e.g. pay 8 XMR worth of BTC to buy 10 XMR). At the same time they open a trade with the seller that they\'re impersonating on the platform for the reduced amount.';
+  String get chat250Sbmitm8722Sbwarning250Sb0 => '⚠️ PSA：有一个新的骗子活跃，充当中间人。骗子在平台外与您联系，假装是平台上的卖家，让您从他们那里购买 XMR 以换取 BTC 以较低的价格（例如，支付 8 XMR 的 BTC 以购买 10 XMR）。同时，他们与在平台上冒充的卖家进行交易，以减少金额。';
 
   @override
-  String get chat250Sbmitm8722Sbwarning250Sb1 => '<p>The scammer then tells the buyer to start the trade for the full amount and pay the reduced amount, while at the same time monitoring the seller\'s receiving address on the blockchain and watching for the legitimate buyer\'s reduced amount transaction. The scammer then takes the legitimate buyer\'s txid and provides it to the seller as proof of payment. The seller releases the coins to the scammer since they have two trades open, one for the full amount from the legitimate buyer and one for the reduced amount from the scammer, thinking that it was the scammer who paid because the amount matches their trade amount.</p>\n\n<p> <strong> DO NOT CONDUCT TRADES OFF-PLATFORM. IF SOMEONE APPROACHES YOU OFF-PLATFORM OPEN A TRADE WITH THEM ON THE PLATFORM AND VERIFY THAT THEY ARE WHO THEY SAY THEY ARE AND MAINTAIN ALL COMMUNICATIONS THERE. </strong> </p>\n\n<p> <strong> SELLERS WHO ACCEPT PAYMENTS ON TRANSPARENT CRYPTO CHAINS: MAKE SURE YOU DO ADEQUATE PAYMENT DIFFERENTIATION BETWEEN YOUR CLIENTS AND TRADES TO AVOID FALLING VICTIM TO THIS. </strong> </p>\n\n<p> Always use different addresses for each trade on a publicly searchable crypto like BTC. </p>';
+  String get chat250Sbmitm8722Sbwarning250Sb1 => '<p>然后骗子告诉买家以全额开始交易并支付减少的金额，同时在区块链上监控卖家的收货地址并注意合法买家的减少金额交易。然后诈骗者获取合法买家的 txid 并将其提供给卖家作为付款证明。卖家将硬币释放给诈骗者，因为他们有两笔交易，一笔是来自合法买家的全额，另一笔是来自诈骗者的减少金额，认为是诈骗者付款，因为金额与他们的交易金额相符。</p>\n<p> <strong> 请勿在平台外进行交易。如果有人在平台外接近您，请在平台上与他们进行交易并验证他们是否是他们所说的人，并在那里保持所有通信。 </strong> </p>\n<p> <strong> 接受透明加密链付款的卖家：确保您在您的客户和交易之间进行充分的付款差异化，以避免成为受害者。 </strong> </p>\n<p> 在 BTC 等可公开搜索的加密货币上，始终为每笔交易使用不同的地址。 </p>';
 
   @override
   String get chat250Sbno8722Sbmessages => '没有留言';
@@ -902,7 +902,7 @@ class I18nZh extends I18n {
 
   @override
   String contact250Sble(Object lawEnforcementinquiries) {
-    return '对于执法部门的查询，请阅读 {law-enforcement-inquiries}。';
+    return '对于执法部门的查询，请阅读 $lawEnforcementinquiries。';
   }
 
   @override
@@ -910,7 +910,7 @@ class I18nZh extends I18n {
 
   @override
   String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return '为了联系我们客服你可以{open-a-ticket}或发电子邮件给$email';
+    return '为了联系我们客服你可以$openAticket或发电子邮件给$email';
   }
 
   @override
@@ -1386,7 +1386,7 @@ class I18nZh extends I18n {
   String get description250Sbnew => '创建一个新的广告,在当地或在线购买或出售门罗币。';
 
   @override
-  String get description250Sbnew57Sbagoradesk => '创建一个新广告来购买或出售加密货币或加密货币认购并认沽期权。';
+  String get description250Sbnew57Sbagoradesk => '创建一个新的广告来购买或出售加密货币。';
 
   @override
   String description250Sbsignup(Object appName) {
@@ -1405,7 +1405,7 @@ class I18nZh extends I18n {
 
   @override
   String description250Sbstart57Sbagoradesk(Object appName) {
-    return '$appName指南可帮助您了解购买或销售Bitcon，Monero及其期权的基本和高级原则。';
+    return '$appName指南可帮助您了解购买或销售Bitcon，Monero的基本和高级原则。';
   }
 
   @override
@@ -1571,7 +1571,7 @@ class I18nZh extends I18n {
 
   @override
   String document8722Sbtitle250Sbstart57Sbagoradesk(Object appName) {
-    return '$appName指南：如何购买或出售加密货币和期权';
+    return '$appName指南：如何购买或出售加密货币';
   }
 
   @override
@@ -1619,7 +1619,7 @@ class I18nZh extends I18n {
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return '这是{created-at}{time-of-creation}创建的{ad-type}广告。如果你想要更改本广告交易类型请{create-a-new-ad}';
+    return '这是$createdAt${timeOfcreation}创建的$adType广告。如果你想要更改本广告交易类型请$createAnewad';
   }
 
   @override
@@ -1726,7 +1726,7 @@ class I18nZh extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => '未正确设定价格';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => '无可的国家，付款方式和货币组合';
+  String get error250Sbpost8722Sbad250Sb86 => '国家、支付方式和货币的无效组合';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => '此付款方式对选定的国家无效';
@@ -1805,7 +1805,7 @@ class I18nZh extends I18n {
   String get error250Sbtrade8722Sbrequest250Sb232 => '由于帐户限制，目前禁止该用户进行交易';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb237 => '该用户不存在';
+  String get error250Sbtrade8722Sbrequest250Sb237 => '这个用户不存在';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb240 => '提供的结算钱包地址是无效的';
@@ -1896,12 +1896,12 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb11(Object appName, Object walletPage) {
-    return '为了在 $appName 上出售门罗币，您首先需要将一些用于仲裁保证金的门罗币发送到您的 $appName 仲裁保证金钱包。为此，您需要一个 $appName 帐户，访问另一个 Monero 钱包中的 Monero，并且您需要知道您的 $appName 接收地址。要查找您的 $appName 接收地址，您需要访问 {wallet-page}。页面顶部分为三个部分，允许您发送、接收门罗币仲裁保证金并查看您的交易。在“接收”选项卡上，您会找到您的接收地址。一旦您知道您的 $appName 接收地址，您就可以前往您的另一个 Monero 钱包并使用该地址将 Monero 发送到您的 $appName 地址。';
+    return '为了在 $appName 上出售门罗币，您首先需要将一些用于仲裁保证金的门罗币发送到您的 $appName 仲裁保证金钱包。为此，您需要一个 $appName 帐户，访问另一个 Monero 钱包中的 Monero，并且您需要知道您的 $appName 接收地址。要查找您的 $appName 接收地址，您需要访问 $walletPage。页面顶部分为三个部分，允许您发送、接收门罗币仲裁保证金并查看您的交易。在“接收”选项卡上，您会找到您的接收地址。一旦您知道您的 $appName 接收地址，您就可以前往您的另一个 Monero 钱包并使用该地址将 Monero 发送到您的 $appName 地址。';
   }
 
   @override
   String faq250Sbanswer8722Sb1157Sbagoradesk(Object appName, Object walletPage) {
-    return '为了在 $appName 上出售加密货币，您首先需要向您的 $appName 仲裁保证金钱包发送一些用于仲裁保证金的硬币。为此，您需要一个 $appName 帐户，访问另一个钱包中的硬币，并且您需要知道您的 $appName 接收地址。要查找您的 $appName 接收地址，您需要访问 {wallet-page}。选择相关的加密货币，钱包页面的顶部分为三个部分，您可以发送、接收仲裁保证金并查看您的交易。在“接收”选项卡上，您会找到您的接收地址。一旦你知道你的 $appName 接收地址，你就可以去你的另一个钱包并使用这个地址将硬币发送到你的 $appName 地址。';
+    return '为了在 $appName 上出售加密货币，您首先需要向您的 $appName 仲裁保证金钱包发送一些用于仲裁保证金的硬币。为此，您需要一个 $appName 帐户，访问另一个钱包中的硬币，并且您需要知道您的 $appName 接收地址。要查找您的 $appName 接收地址，您需要访问 $walletPage。选择相关的加密货币，钱包页面的顶部分为三个部分，您可以发送、接收仲裁保证金并查看您的交易。在“接收”选项卡上，您会找到您的接收地址。一旦你知道你的 $appName 接收地址，你就可以去你的另一个钱包并使用这个地址将硬币发送到你的 $appName 地址。';
   }
 
   @override
@@ -1937,7 +1937,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return '您在 $appName 上获得新通知时，Web 通知允许您通过浏览器接收弹出通知。如果您正在进行门罗币交易并想在发生新事件时立即知道，{enable-web-notifications-from-your-profile}勾选显示启用Web通知的框，在您的浏览器询问是否允许显示 Web 通知时，按接受。您现在已经完成所有设置，可以开始接收 Web 通知。';
+    return '您在 $appName 上获得新通知时，Web 通知允许您通过浏览器接收弹出通知。如果您正在进行门罗币交易并想在发生新事件时立即知道，$enableWebnotificationsfromyourprofile勾选显示启用Web通知的框，在您的浏览器询问是否允许显示 Web 通知时，按接受。您现在已经完成所有设置，可以开始接收 Web 通知。';
   }
 
   @override
@@ -1972,7 +1972,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return '此答案与您在线购买 Monero 时的情况有关。在您向 Monero 卖家发送交易请求后，您有一个时间窗口来完成付款，然后卖家才能取消交易（付款窗口因交易的付款方式而异）。在此期间，您需要完成付款并按我已付款按钮。卖家会收到您已付款的通知，并且门罗币将被保留在仲裁保证金中，直到卖家在他/她的账户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易联系卖家。您可以通过 $appName 用户资料中的 $dashboard 联系卖家和其他现有交易联系人。给卖家发消息，解释一下情况，以及为什么你不能在时间窗口内完成付款。如果卖家未响应此请求，请使用 {support-request-form} 联系 $appName 支持并提及您的交易 ID。';
+    return '此答案与您在线购买 Monero 时的情况有关。在您向 Monero 卖家发送交易请求后，您有一个时间窗口来完成付款，然后卖家才能取消交易（付款窗口因交易的付款方式而异）。在此期间，您需要完成付款并按我已付款按钮。卖家会收到您已付款的通知，并且门罗币将被保留在仲裁保证金中，直到卖家在他/她的账户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易联系卖家。您可以通过 $appName 用户资料中的 $dashboard 联系卖家和其他现有交易联系人。给卖家发消息，解释一下情况，以及为什么你不能在时间窗口内完成付款。如果卖家未响应此请求，请使用 $supportRequestform 联系 $appName 支持并提及您的交易 ID。';
   }
 
   @override
@@ -1983,7 +1983,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return '在您发送交易请求后，您有一个时间窗口来完成付款，然后另一方才能取消交易。在此期间，您需要完成付款并按“我已付款”按钮。另一方会收到您已付款的通知，并且硬币将保留在仲裁保证金中，直到另一方在其帐户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易聊天联系对方。您可以从 $dashboard联系对方和您现有的其他贸易联系人。给对方发消息，请说明情况，以及为什么您无法在时间窗口内完成付款。如果对方不响应此请求，请使用 {support-request-form} 联系 $appName 工作人员并提及您的交易 ID。';
+    return '在您发送交易请求后，您有一个时间窗口来完成付款，然后另一方才能取消交易。在此期间，您需要完成付款并按“我已付款”按钮。另一方会收到您已付款的通知，并且硬币将保留在仲裁保证金中，直到另一方在其帐户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易聊天联系对方。您可以从 $dashboard联系对方和您现有的其他贸易联系人。给对方发消息，请说明情况，以及为什么您无法在时间窗口内完成付款。如果对方不响应此请求，请使用 $supportRequestform 联系 $appName 工作人员并提及您的交易 ID。';
   }
 
   @override
@@ -2017,7 +2017,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb29(Object feesPage) {
-    return '请查看我们{fees-page}。';
+    return '请查看我们$feesPage。';
   }
 
   @override
@@ -2025,7 +2025,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return '我们目前没有自己的APP。不过，你可以通过$telegram接收移动通知！你可以参考{this-guide}来启用Telegram通知（好容易呀）。我们的机器人会发你的$appName事件的通知。';
+    return '我们目前没有自己的APP。不过，你可以通过$telegram接收移动通知！你可以参考$thisGuide来启用Telegram通知（好容易呀）。我们的机器人会发你的$appName事件的通知。';
   }
 
   @override
@@ -2047,7 +2047,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb4(Object value) {
-    return '如果您有备份代码，请使用QR生成服务（如{this}）从您的备份代码生成QR。然后扫描您的手机2FA应用程序生成的QR。如果您没有备份代码，则你无法登录您的帐户。 不幸的是，我们不可能区分一个伪装成你的黑客和实际的你。';
+    return '如果您有备份代码，请使用QR生成服务（如$value）从您的备份代码生成QR。然后扫描您的手机2FA应用程序生成的QR。如果您没有备份代码，则你无法登录您的帐户。 不幸的是，我们不可能区分一个伪装成你的黑客和实际的你。';
   }
 
   @override
@@ -2055,12 +2055,12 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb5(Object onionUrl, Object tor) {
-    return '有的！链接：{onion-url}（你需要$tor来打开这个链接）。您现在需要启用JavaScript。{appName}免JavaScript版本即将推出！ {linebreak}如果您在加载网站时遇到问题，并且您的Tor安全级别设置为“高”,请尝试将其设置为“中”。';
+    return '有的！链接：$onionUrl（你需要$tor来打开这个链接）。您现在需要启用JavaScript。{appName}免JavaScript版本即将推出！ {linebreak} 如果您在加载网站时遇到问题，并且您的Tor安全级别设置为“高”,请尝试将其设置为“中”。';
   }
 
   @override
   String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return '有的！链接: {b32-i2p-url} 或 {i2p-url}（你需要$i2p来打开这些链接）。';
+    return '有的！链接: $b32I2purl 或 $i2pUrl（你需要$i2p来打开这些链接）。';
   }
 
   @override
@@ -2265,7 +2265,7 @@ class I18nZh extends I18n {
 
   @override
   String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '与其他$appName用户的钱包进行交易$free. $linebreak 与其他门罗币钱包进行交易需要缴纳门罗币网络转账费。在{wallet-page}的标题为{outgoing-monero-fees}下能看到当前的费用。 您发送交易后，交易费将从您的 $appName 钱包中扣除。';
+    return '与其他$appName用户的钱包进行交易$free. $linebreak  与其他门罗币钱包进行交易需要缴纳门罗币网络转账费。在$walletPage的标题为$outgoingMonerofees下能看到当前的费用。 您发送交易后，交易费将从您的 $appName 钱包中扣除。';
   }
 
   @override
@@ -2276,7 +2276,7 @@ class I18nZh extends I18n {
 
   @override
   String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '其他$appName用户的钱包交易为 $free。 $linebreak 对外部加密货币钱包的交易受相关加密货币网络交易费的约束。当前费用在标题 {outgoing-monero-fees}下的 {wallet-page} 处可见。当您发送交易时，交易费用从您的$appName钱包中支付。';
+    return '其他$appName用户的钱包交易为 $free。 $linebreak  对外部加密货币钱包的交易受相关加密货币网络交易费的约束。当前费用在标题 $outgoingMonerofees下的 $walletPage 处可见。当您发送交易时，交易费用从您的$appName钱包中支付。';
   }
 
   @override
@@ -2371,7 +2371,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return '在您的手机上安装身份验证应用。在手机上安装身份验证应用程序。 您可以{choose-any-app}支持TOTP的应用程序。例如，$andotp是免费和开源的.';
+    return '在您的手机上安装身份验证应用。在手机上安装身份验证应用程序。 您可以$chooseAnyapp支持TOTP的应用程序。例如，$andotp是免费和开源的.';
   }
 
   @override
@@ -2384,7 +2384,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName 提供 $totp 2FA。启用 2FA 后， {auth-mobile-app} 将与 $appName 同步并生成 6 位一次性密码。此密码每分钟更改一次。要登录或提取仲裁保证金，除了您的密码外，您还需要在密码到期前输入此一次性密码。';
+    return '$appName 提供 $totp 2FA。启用 2FA 后， $authMobileapp 将与 $appName 同步并生成 6 位一次性密码。此密码每分钟更改一次。要登录或提取仲裁保证金，除了您的密码外，您还需要在密码到期前输入此一次性密码。';
   }
 
   @override
@@ -2395,7 +2395,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb2(Object settingsPage) {
-    return '要开始激活双重身份验证，请访问{settings-page}并选择“双重身份验证”选项卡。';
+    return '要开始激活双重身份验证，请访问$settingsPage并选择“双重身份验证”选项卡。';
   }
 
   @override
@@ -2467,7 +2467,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbfour8722Sb3(Object torBrowser, Object appName, Object torLink) {
-    return '要使用它，只需从他们的官方网站下载并安装{tor-browser}。启动后，您可以通过我们特殊的Tor门户访问$appName：{tor-link}';
+    return '要使用它，只需从他们的官方网站下载并安装$torBrowser。启动后，您可以通过我们特殊的Tor门户访问$appName：$torLink';
   }
 
   @override
@@ -2567,7 +2567,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return '随着时间的推移，似乎大多数（如果不是所有）获取比特币的传统方法都开始需要进行身份验证，这使得大多数指南今天都可以在线获取，例如{ninety-nine-bitcoins}或$coincentral已过时。$linebreak $gutter购买没有ID的比特币的传统方式主要是通过P2P比特币交换平台$localbitcoins，这个地方特别受欢迎，因为匿名购买比特币$paypal。';
+    return '随着时间的推移，似乎大多数（如果不是所有）获取比特币的传统方法都开始需要进行身份验证，这使得大多数指南今天都可以在线获取，例如$ninetyNinebitcoins或$coincentral已过时。$linebreak  $gutter购买没有ID的比特币的传统方式主要是通过P2P比特币交换平台$localbitcoins，这个地方特别受欢迎，因为匿名购买比特币$paypal。';
   }
 
   @override
@@ -2596,7 +2596,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '在$appName上{register-an-account}。您将获得一个免费的网上门罗币钱包。不需要安装任何应用即可使用。如果您已经拥有帐户，请跳到下一步。';
+    return '在$appName上$registerAnaccount。您将获得一个免费的网上门罗币钱包。不需要安装任何应用即可使用。如果您已经拥有帐户，请跳到下一步。';
   }
 
   @override
@@ -2604,7 +2604,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return ' $appName为{register-an-account} 。您将获得一个免费且安全的在线加密货币钱包。无需其他应用。如果您已有帐户，请跳至下一步。';
+    return ' $appName为$registerAnaccount 。您将获得一个免费且安全的在线加密货币钱包。无需其他应用。如果您已有帐户，请跳至下一步。';
   }
 
   @override
@@ -2612,7 +2612,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbtwo8722Sbtext(Object mainPage, Object assetName) {
-    return '转到{main-page}，在表格的搜索框中填写想要用您的币种购买的金额、您的地点，然后选择支付方式。如果您不确定要如何付款，可以选择“所有在线报价”作为支付方式。网站将列出您所在区域的$assetName交易者。';
+    return '转到$mainPage，在表格的搜索框中填写想要用您的币种购买的金额、您的地点，然后选择支付方式。如果您不确定要如何付款，可以选择“所有在线报价”作为支付方式。网站将列出您所在区域的$assetName交易者。';
   }
 
   @override
@@ -2755,7 +2755,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sbstep8722Sbone(Object signUp) {
-    return '如果您尚未注册，请{sign-up}';
+    return '如果您尚未注册，请$signUp';
   }
 
   @override
@@ -2763,7 +2763,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sbstep8722Sbthree(Object loadMonero) {
-    return '如果您想要卖币，先{load-monero}';
+    return '如果您想要卖币，先$loadMonero';
   }
 
   @override
@@ -2963,7 +2963,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb0(Object mainPage, Object assetName) {
-    return '转到{main-page}，在搜索框中选择选项出售。在表格中填写想要用您的币种出售的金额，然后选择支付方式。如果您不确定要如何付款，可以选择所有网上报价作为支付方式。网站将列出您所在区域的所有$assetName报价。';
+    return '转到$mainPage，在搜索框中选择选项出售。在表格中填写想要用您的币种出售的金额，然后选择支付方式。如果您不确定要如何付款，可以选择所有网上报价作为支付方式。网站将列出您所在区域的所有$assetName报价。';
   }
 
   @override
@@ -2989,7 +2989,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtelegram250Sbdisable8722Sbtext(Object accountSettings) {
-    return '要禁用我们机器人通知的话就要在你的{account-settings}打开\'通知\'标签并按红色的\'禁用Telegram通知\'按钮。';
+    return '要禁用我们机器人通知的话就要在你的$accountSettings打开\'通知\'标签并按红色的\'禁用Telegram通知\'按钮。';
   }
 
   @override
@@ -3005,7 +3005,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb1(Object officialFaq) {
-    return 'Telegram是一个移动APP，像微信似的。你可以在{official-faq}阅读更多关于Telegram的描述。';
+    return 'Telegram是一个移动APP，像微信似的。你可以在$officialFaq阅读更多关于Telegram的描述。';
   }
 
   @override
@@ -3021,7 +3021,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb0(Object pressThis, Object appName) {
-    return '{press-this}或在Telegram搜索\'$appName Notification Bot\'并选择$appName Notification Bot。';
+    return '$pressThis或在Telegram搜索\'$appName Notification Bot\'并选择$appName Notification Bot。';
   }
 
   @override
@@ -3038,7 +3038,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb0(Object accountSettings) {
-    return '打开你的{account-settings}并选择\'通知\'标签。';
+    return '打开你的$accountSettings并选择\'通知\'标签。';
   }
 
   @override
@@ -3055,7 +3055,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return '$appName上的普通交易就是这样运作的，示例为您将$assetName出售给买家的网上出售交易。流程与网上购买$assetName的流程相似，但此示例重点在于出售$assetName，因为出售是最普遍的交易类型。$linebreak  首先，您需要$create{a-sell-monero-ad}（称为网上出售广告）。创建广告时，您应选择付款方式、设置价格和限制，并以自由格式消息形式写下交易条款。$linebreak 然后，您需要用$assetName为您的{localmonero-wallet}{fund}。';
+    return '$appName上的普通交易就是这样运作的，示例为您将$assetName出售给买家的网上出售交易。流程与网上购买$assetName的流程相似，但此示例重点在于出售$assetName，因为出售是最普遍的交易类型。$linebreak   首先，您需要$create${aSellmoneroad}（称为网上出售广告）。创建广告时，您应选择付款方式、设置价格和限制，并以自由格式消息形式写下交易条款。$linebreak  然后，您需要用$assetName为您的$localmoneroWallet{fund}。';
   }
 
   @override
@@ -3092,7 +3092,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '{advertisement-creation-page}是创建新广告的位置。 $linebreak 您也可以在菜单栏的发布交易链接中找到这个页面。这里有一些创建广告所需的选项，以及推荐您设置的许多可选的额外选项。使用这些额外选项，您可以调整广告以符合自己的交易策略。$linebreak 您可以通过$dashboard找到创建的所有广告，也可以通过菜单栏中的控制面板链接找到广告。在控制面板中，您也可以看到自己的所有交易，开放的交易和关闭的交易。 $linebreak {required-options} $linebreak $location 输入您想要广告显示的国家/地区。$linebreak {payment-method}  选择您想要在下拉菜单中提供的付款方式。$linebreak $currency 选择您要以哪个币种出售门罗币。例如，如果想要在法国出售，您应该选择 EUR。您可以使用{this-list}查找币种缩写。';
+    return '$advertisementCreationpage是创建新广告的位置。 $linebreak  您也可以在菜单栏的发布交易链接中找到这个页面。这里有一些创建广告所需的选项，以及推荐您设置的许多可选的额外选项。使用这些额外选项，您可以调整广告以符合自己的交易策略。$linebreak  您可以通过$dashboard找到创建的所有广告，也可以通过菜单栏中的控制面板链接找到广告。在控制面板中，您也可以看到自己的所有交易，开放的交易和关闭的交易。 $linebreak  $requiredOptions $linebreak  $location 输入您想要广告显示的国家/地区。$linebreak  $paymentMethod  选择您想要在下拉菜单中提供的付款方式。$linebreak  $currency 选择您要以哪个币种出售门罗币。例如，如果想要在法国出售，您应该选择 EUR。您可以使用$thisList查找币种缩写。';
   }
 
   @override
@@ -3123,7 +3123,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb2(Object contactSupport) {
-    return '如果您无法确认用户的身份，可以随时{contact-support}获取帮助。';
+    return '如果您无法确认用户的身份，可以随时$contactSupport获取帮助。';
   }
 
   @override
@@ -3134,7 +3134,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return '另请阅读我们的{terms-of-service}。';
+    return '另请阅读我们的$termsOfservice。';
   }
 
   @override
@@ -3251,7 +3251,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbatomic250Sbtitle => '原子互换技术将如何在门罗币上实现';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Note:</b> 强烈推荐读者阅读我们另外两篇相关文章 <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"为什么门罗币有尾部增发\"</a> 和 <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“门罗币挖矿: 什么使RandomX算法如此特别”</a>. 本文的核心概念基于这两篇文章.</i></p>\n\n<p>每当有人讨论区块链的缺点和不足之处时，能听到最高频的词汇就是可扩展性.区块链可扩展性的缺点并不是什么秘密，但是大多数人其实根本不知道什么是可扩展性和为什么有这个问题.</p>\n\n<p>事实是，可扩展性是一个笼统的术语，涵盖两个不同的类别：分别是单位时间内，协议层内部可扩展性和技术层外部可扩展性. 在本文中，我们将注意力集中在协议层内部可扩展性，总的来说是协议层设计的规则里，在单位时间里，整个系统可以处理多少笔交易的程度.</p>\n\n<p>比特币有一个区块大小限制,也就是每个区块1兆大小，在不计算隔离见证的情况下，比特币系统每秒只能处理7笔交易，计算隔离见证每秒可以处理也不过10笔交易左右，这意味着一旦一个区块中包含足够的交易，换句话说，每秒想转账的人数超过7到10个人，其他人交易将不得不排队等待下一个区块，也就是大概十分钟以后再转账，而VISA卡，支付宝和银行系统，每秒能处理几万到几十万笔交易. 比特币大约十分钟打包一个区块，打个比方就像每十分钟一班的火车. 当火车到了车站后，人们开始上车.一旦车厢满了，外面的任何人都必须等待下一辆火车.</p>\n\n<p>比特币是通过用矿工费多少来确定交易写进区块的优先顺序. 回到火车的比喻，可以想象每一个乘客，并不是按照先来后到排队上车，而是看谁出的钱多，有人愿意给火车司机五美元买一个座位. 其他乘客为了上车也纷纷效仿，最终展开了一场价格争夺战，为了争夺优先转账的权力. 当然了，驾驶员也可以决定是否要按照出价高低上车，或者仍旧遵守先到先得的政策，但事实上这是他赚钱的最佳机会，现实里的驾驶员，也就是矿工，往往会选择出价最高的人们来最大化自己的收入.</p>\n\n<p>总的来说，矿工们无论是单独挖矿，还是加入矿池，总之他们之间的算力互相竞争，结果是大约每十分钟会从全体矿工里，抽取一个幸运儿来扮演火车司机的角色来车站接乘客. 他们这时可以在区块中打包任何他们想要打包的交易，但通常会选择支付最高矿工费的那些.</p>\n\n<p>反之，如果车上有足够的空位，那么人们就没有动力去支付高额的费用给司机，因为有大量的座位可供使用.</p>\n\n<p>在2017年加密货币繁荣的鼎盛时期，比特币充斥着交易拥堵，而那些想要尽快转账和到账的人们，互相竞价，导致矿工费直线上升.而那些不愿支付高额矿工费的人，或者支付不起每笔转账几十元人民币的人们，他们的交易会被推迟数小时，数天，甚至完全退出了等待转账的队列.</p>\n\n<p>比特币的易用性会让每一个使用者痛苦不堪，假如真的像比特粉幻想中那样，有一天比特币被大规模采用了. 那情况将比2017年更糟，除了富人之外，其他任何人都将无法使用比特币，由于固定的区块大小导致主链吞吐量很小，转账权就被高额的费用接管了，更致命的一个问题是，火车司机们可以安排他们的托儿混在排队的人群里，就像黄牛囤积火车票一样，人为造成拥堵，例如垃圾交易，粉尘攻击，还有另一种情况，被称作挖空块，也就是火车司机并不拉人，直接空车驶过，为了更快的获取爆块奖励，这将在下面的例子中具体说明，因为矿工费中，爆块的奖励比手续费还要高，这会进一步造成转账排队和拥堵.</p>\n\n<p>门罗币设计时预见到这一点，为了不重蹈覆辙. 门罗币实施了动态区块大小.</p>\n\n<p>简单来说，门罗币也有一个区块大小上限，但这是一个软性上限. 当人们等待交易的时间太长时，矿工可以增加区块的大小. 如果还用火车类比的话，这意味着火车可以随着等待人数的增加而增加额外的车厢，比如本来一列火车有5节车厢，希望坐车的人多了，就把车厢增加到6节，10节，甚至几十节.而当排队的人减少后，仍旧恢复5节车厢，也就是区块将缩小到其原始大小.</p>\n\n<p>这似乎是一个好主意，那么为什么门罗币是唯一的一个实现此机制的加密货币呢. 为什么不将这种机制添加到比特币上以阻止区块拥堵的问题?</p>\n\n<p>不幸的是，这在比特币上是不可能的. 这涉及的知识有点偏技术性，但是我们会尽力在这里通俗易懂的解释.</p>\n\n<p> 矿工总是追求利益最大化，所以会做到尽可能打包最大块. 因为越大的块意味着里面转账的矿工费就越多.回到火车的例子，如果车厢没有限制的情况下，火车司机会尽可能的加车厢把所有乘客都拉走，哪怕客人只支付很少的车费，那也是额外的收入，就像矿工费很少，可积累起来也很可观.在这种情况下，如果有人恶意发起垃圾转账，比如用接近为0的手续费进行转账，那么整个区块账本数据会迅速增加.从而导致全节点数据膨胀，最终会导致全账本数量减少，危害整个系统安全. 还是用火车做例子，如果有很多无聊的人，本来并不想出行，可一毛钱就可以坐火者出去玩，就会有很多人没事也去坐车，结果是每列车厢都特别长，几百节，甚至几千节，而每次出车的记录要每一个运行全节点人记录下来，这才能保证不可篡改，这样的垃圾数据会变得异常大，目前比特币全账本300多G，很多人电脑硬盘已经装不下了，比特币全节点目前不到1万个，如果区块增加十倍，那么很快帮比特币记录的电脑硬盘就需要几T，当数据变成几十T,几百T的时候，普通人的设备就没有办法再记账，账本中心化的问题就会显现，假如全节点账本只剩下几十个，也就是说拥有账本的这少数人可以进行串通欺骗和作恶.比特币为了防止这一点的发生，限制了区块的大小，也就是车厢的数量，每次出火车，每秒就拉6个人，多了就要等十分钟以后，这样的好处确实是排除了那种占便宜的大爷大妈没事坐车，可这样做的坏处，就是想坐车的人之间要互相竞价，一旦每秒坐车的人超过6个，那就要等至少十分钟以后，甚至几十分钟，几小时才能转账和到账.</p>\n\n<p>那么，门罗币如何具有动态块大小又避免垃圾交易攻击呢,对此门罗币解决的答案虽然简单，却很巧妙. 当门罗币的矿工打包的一个区块大于正常区块时，会引入对区块爆块奖励的惩罚. 举例来说，如果，矿工想要增加区块的大小，那么爆块所获得的奖励将少于他们原本会获得的回报. 因此，只有在用户支付的矿工费超过爆块奖励损失的部分时，它们才会增加块大小.\n\n回到火车的例子，如果火车司机开一节火车去接客人，那么他的工资是800块固定工资加30个乘客的车费，如果他开两节车箱，他的工资会被惩罚减少到400，只有第二节车箱多拉的客人带来的收入大于400元，司机才会开两节车箱，也就是说打包一个更大的块.\n\n让我们先重温一下，加密货币的基本概念，关于矿工的奖励分成两部分，一个是爆块奖励，也是新币发行的过程，另一部分是人们转账时支付给矿工的手续费，举一个例子，2020年8月某个比特币区块的奖励由两部分组成，矿工总收入是6.25+0.8016 BTC，前面的6.25就是爆块奖励，2009年是每十分钟爆块奖励是50个BTC，第一次减半后为25，第二次减半后12.5，目前第三次减半已经完成，目前是6.25个比特币，所谓的减半就是指这部分新发行的币.\n\n\n这在火车例子里，相当于每次火车司机出发，不论有没有拉到乘客都会获取固定的工资，也就是爆块费，而排队的人额外收取的高额车票加起来就是0.8016Btc，就是转账费，也叫矿工费. \n\n在门罗币的世界里，同样是这个司机，假设本来正常情况下是每个区块获得1.7个门罗币的奖励＋30个人的手续费，现在矿工希望打包一个大区块包含60个人的转账，那么他的区块奖励，会从1.7个门罗币降到1.2个门罗币，通过打包大区块奖励将损失0.5 XMR，而多打包的30笔交易的矿工费之和为0.4 XMR，那么如果他真打包了一个大块，则将有0.1 XMR的净亏损，因此矿工不会这么做.相反，如果所有人的总交易费用加起来为0.7 XMR，那么即使他们从大块奖励罚款中损失了0.5 XMR，也将获得0.2 XMR的净收益，因此矿工将增大区块大小.\n\n以上门罗币奖励和惩罚的数字只是为了好举例子而进行的假设，实际上门罗币没有减半，爆块奖励也是曲线发行的，并且门罗币矿工如果打包的区块大小，超过前一百个区块平均大小一倍，爆块奖励就会为零，矿工只有转账手续费作为收入，也就是门罗币事实上在那个区块没有增发，而是只有现货循环，因此一旦有人恶意制造垃圾交易和试图拥堵门罗币，那么会被矿工自然打包解决.</p>\n\n<p>目前的网络情况下门罗币每秒处理转账的能力为1700笔每秒，并且这些动态块可以随着互联网迭代而自然增长，无需对块大小进行过分的限制，就可以避免垃圾交易攻击，同时还能避免拥堵和高额手续费.其实我们还可以从更多角度来讨论这个问题，以及比特币为什么不能学习门罗币的更多原因，文章到此，我们希望读者能至少了解门罗币是如何避免比特币和比特币衍生品，比如莱特币，以太坊等币的一些问题， 以及它们计划未来扩展其吞吐量的一些不切实际的地方，就像现实里Btc Core的软升级和矿霸的大区块为什么都说服不了对方,并且互相指责，因为从本质上比特币总量固定和固定区块大小，造成了一个顾此失彼的局面，而门罗币由于尾部增发机制，从而可以运行动态区块，于是产生了完全不同的另一种变革.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>强烈建议读者阅读我们的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《为什么门罗有尾部发射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《门罗挖矿：什么造就了RandomX》如此特别”</a>。本文基于其中介绍的概念。</i></p>\n\n<p>每当人们讨论区块链问题时，第一个跳出的词就是“扩展”。区块链不能很好地扩展已经不是什么秘密，但大多数人不知道为什么。</p>\n\n<p>事实是，扩展实际上是一个涵盖两个不同类别的总称：给定时间点的协议支持和技术支持。在本文中，我们将重点关注一个，协议支持基本上是衡量协议在给定时间可以处理多少事务的量度。</p>\n\n<p>比特币有区块大小限制，这意味着一旦足够多的交易被包含在一个区块中，任何额外的交易都必须排队等候下一个区块。一个有用的类比是考虑火车。一列火车停靠在车站，排队的人鱼贯而入。一旦火车满员，留在外面的任何人都必须等待下一班。</p>\n\n<p>比特币使用费用来确定谁进入区块。回到火车的类比，可以想象一位即将被落在后面的潜在乘客向火车工程师提供五美元让他坐下。其他乘客也纷纷效仿，最终发生了一场竞价战，看谁能坐到哪个座位。由司机决定他是否要遵守先到先得的政策，但通过接受出价最高的人来最大化他的收入符合他的最佳经济利益。</p>\n\n<p>在这个比喻中，矿工就是火车司机。他们可以在区块中包含他们想要的任何交易，但他们通常会选择支付费用最高的交易。</p>\n\n<p>或者，如果街区不是很满，人们就没有动力支付高额费用，因为有很多免费座位可供使用。</p>\n\n<p> 在 2017 年加密货币繁荣的鼎盛时期，比特币充斥着大量交易，那些想要包含在下一个区块或任何近期区块中的交易费用飙升。不愿支付高额手续费的交易延迟数小时、数天，甚至完全退出队列。</p>\n\n<p>如果人们经常谈论“大规模采用”，比特币将如何发展，这是一个令人痛心的见解。如果比特币被大众使用，情况会比 2017 年更糟，除了富人之外，任何人都无法访问比特币，仅仅是因为区块大小固定导致吞吐量很小，导致费用市场接管.</p>\n\n<p>Monero 预见到了这一点，并想做一些不同的事情。所以 Monero 开发人员实现了动态块大小。</p>\n\n<p>基本上，Monero 也有块大小上限，但它是软上限。当等待交易的队列太长时，矿工可以增加区块的大小。用我们的火车类比，你可以想象增加更多的火车车厢来容纳额外的乘客。队列为空后，块会收缩回原来的大小。</p>\n\n<p>如果这看起来是个不错的主意，那么问为什么门罗币是唯一实现了这个的加密货币似乎是合理的。为什么不将其添加到比特币上以解决吞吐量问题？</p>\n\n<p>不幸的是，这是不可能的。有几个原因，我们会尽力解释。</p>\n\n<p> 拥有大区块始终符合矿工的最大利益。有了大区块，他们可以进行更多交易，并从费用和区块奖励中赚取更多的钱。这有可能导致垃圾邮件攻击，即有人发送许多小额交易，收取少量费用，从而使链条膨胀。矿工只会增加区块大小，因为钱就是钱，不管多小。这将导致始终如一的大区块，而经济效益很小。比特币通过人为限制区块大小来解决这个问题，从而产生一个费用市场。垃圾邮件攻击者必须支付超过其他用户的费用，而且它不再便宜。但这意味着块已满，留下一些交易等待如上所述。</p>\n\n<p>那么门罗币如何在拥有动态块大小的同时避免垃圾邮件攻击呢？答案很简单，但很聪明。当区块大于正常值时，会引入对区块奖励的惩罚。如果矿工想要增加区块大小，他们从发现该区块中获得的奖励将少于他们在其他情况下获得的奖励。因此，只有当用户支付的交易费用超过区块奖励的损失部分时，他们才会增加区块大小。例如，如果矿工通过提高区块大小将损失 0.5 XMR，而支付的交易费用总和为 0.4 XMR，那么如果他们提高区块大小，将净损失 0.1 XMR，因此他们不会去做吧。相反，如果总交易费用加起来达到 0.7 XMR，那么将获得 0.2 XMR 的净收益，即使他们从区块奖励惩罚中损失了 0.5 XMR，因此矿工将增加规模。</p>\n\n<p>这些动态块允许网络有机增长，而无需人为地限制块大小来建立强制收费市场，同时仍然避免垃圾邮件攻击。我们可以从更多的角度来看待这个想法，以及为什么不可能添加到比特币的更多原因，但现在，我们希望读者了解门罗币如何回避比特币中的几个问题，它的衍生品，以及它计划如何将其吞吐量扩展到未来。</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => '每当人们讨论区块链的缺点不足时，能听到最高频的词汇就是可扩展性. 而门罗币在解决该问题上独树一帜，与其它加密货币截然不同.';
@@ -3551,7 +3551,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => '目标';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => '为了承上启下，我们来探讨一下挖矿的硬件设备.矿工们用他们的电脑来进行挖矿，但是并不是每台电脑的性能都是相同的.有些电脑足够强大到运行人工智能网络和大型游戏，但是有的电脑进行简单的任务都会卡顿.电脑性能的差距当然也会造成电脑之间的哈希计算能力，或者说挖矿效率的差距.<br/><br/>\n但是计算机之间的这些差异几乎可以忽略不计，因为与专用硬件（也称为专用集成电路（ASIC））哈希值计算能力相比，电脑是那么微不足道，ASIC比常规计算机的性能高出几个数量级.<br/><br/>\n让我们花一些时间来探索使ASIC如此强大的原因.想象一下所有设备都按照性能分布在某个坐标轴范围内，一端是，它可以做很多种不同的工作，但是每种工作效率都不太高.另一端只专注于一种工作，但极其高效的进行.CPUs和ASICs在这个光谱中完全不同的两端.<br/><br/>\n家用电脑中的CPU是第一种情况.它们可以做多种工作.例如浏览网络，玩游戏或渲染视频，但其中的任何一项都做的不是特别好.这种灵活性是以效率为代价的.<br/><br/>\n ASIC矿机在另一端，它们只能做一件事，但是以惊人的速度做到这一点.它们只能执行一个数学函数，但是由于可以忽略其他所有内容，因此运算性能提升到了天文数字级别.但是，这种效率的却是以牺牲灵活性为代价的，因此，哪怕任务发生很细微的改变（例如从计算x + y = z变为计算2x + y = z），则ASIC将完全停止运行. <br/><br/>\n每个人都拥有家庭计算机，但并非每个人都拥有ASIC矿机.这会导致部分人获得不公平的优势.';
+  String get knowledge250Sbmining250Sb2250Sbtext => '对于上下文，让我们谈谈挖矿硬件。矿工使用计算机来完成工作，但我们都知道并非每台计算机都是一样的。有些计算机功能强大，足以运行 AI 网络或激烈的游戏，而另一些计算机甚至难以完成简单的任务。这些计算能力的差异也会影响哈希率，或者他们寻找块解决方案的速率。 <br/><br/>\n但是，与专用硬件（也称为专用集成电路 (ASIC)）的哈希率相比，即使是计算机之间的这些差异也显得微不足道，它比普通计算机高出几个数量级。<br/><br/>\n让我们花些时间来探索是什么让 ASIC 如此强大。想象一下，所有的计算机都处于一个范围内的某个位置，范围从能够做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 处于这个范围的两端。<br/><br/>\n所有标准计算机中的 CPU 都位于第一端。他们可以做很多事情，例如浏览网页、玩游戏或渲染视频，但没有一项做得特别好。但这种灵活性是以效率为代价的。<br/><br/>\nASIC 在另一端，它们只能做一件事，但速度惊人。它们只能执行一个数学函数，但因为它们可以忽略其他所有内容，所以性能提升是天文数字。然而，这种效率确实是以灵活性为代价的，因此即使功能发生轻微变化——例如 x + y = z 变为 2x + y = z——那么 ASIC 将完全停止运行。 <br/><br/>\n不是每个人都拥有 ASIC，但每个人都拥有计算机。这可能导致不公平的优势。';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => '背景';
@@ -3740,7 +3740,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbnodes250Sbtitle => '远程节点如何影响门罗币的隐私';
 
   @override
-  String get knowledge250Sboutputs250Sb0250Sbtext => '<p>像其它加密货币一样，门罗币使用output作为资金核算的手段,中文中output经常被直译为输出，本文中输出就是output，output就是输出.很多精通加密货币的用户可能已经听说过这个术语，但是并不一定明白它的意思和工作方式. 正如我们在另一篇关于<a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">环形签名的文章</a>中所探讨的那样，output是区块链上交易双方实际交换的单位. 类似于美元的钞票，但是金额不是固定的面额,可以把output理解成不同面额的钞票.</p>\n\n<p>让我们举几个现实生活的例子帮助大家理解区块链的output和转账逻辑，假设你工作的薪水为每小时16美元，你工作一小时后，老板给你支付这16美元的报酬，分别由一张一美元的钞票，一张五美元的钞票和一张十美元的钞票, 你收到了16美元，但钱包里有3张不同的钞票组成.如果你想向某人支付6美元，则可以使用5美元和1美元，或者钱包里的10美元，让对方找零4美元，但是如果你想向某人支付8美元，则只能使用10美元，然后获得2美元的找零. 最后一种情况，如果你想付给某人14美元，则必须使用这三张钞票，并且会收到2美元的找零，但是这个过程中，当你交出这三张钞票，并且对方还没有给你找零时，钱包那时候没有钱，直到把找零放回钱包，钱包里才会显示2美元.</p>\n\n<p>门罗币的工作与此类似. 假设你经营一家商店，销售了三个不同的商品. 假设销售收入分别为1.5 XMR，2.25 XMR和5.25 XMR，总计9 XMR，但是你的钱包中的9xmr,其实是这三个面额不用的门罗币组成的. 这时候再假设一种情况，你现在要向某人支付3 XMR. 那么你有两种方法，一个是可以把钱包里面额为5.25 XMR的门罗币给他，然后他给你找零1.75 XMR，也可以将钱包里的1.5XMR和2.25 XMR的output合并给他，然后他找给你的0.75 XMR.</p>\n\n<p>但是，一旦你发送交易，你所使用的那个output将被置于锁定状态，这意味着在你收回找零前它们是不可使用的，这时候你钱包里的余额也是显示不准确的.门罗币主网协议层会在10次确认后，也就是现实生活里大约20分钟后解锁资金，也就是退还你的找零. 就像一旦您将百元大钞票从钱包中递给收银员一样，你将无法再次使用这张钞票，直到你从收银员那里收到他找给你的零钱，你钱包的余额才会正常，你也才能再次支付下一单.</p>\n\n<p>让我们回到向某人发送3 XMR的例子，假如你给了对方5.25 XMR输出. 现在要等20分钟等他给你找零回来1.75xmr，在主网确认前，你都无法使用它，钱包余额这时候也是不准的. 但是等待找零的这个过程中，你仍然可以使用1.5 XMR和2.25 XMR的输出，因为这些输出还在你的钱包里. 再用美元的例子重复一遍这个故事，你钱包里有三张钞票，面额1元，5元，10元，也就是说你一共有16元，如果你像上文举例中那样向某人支付了8元，理论上16元减去8元，还剩8元可以继续买东西，可在支付的过程里，你只能把你的10元钞票给对方，假设店员找零钱的时间要等20分钟，那么这20分钟里，你的钱包余额只有1元和5元可以用，也就是6元，而不是8元，直到找零结束后，钱包才能恢复正常余额，但在等待找零的过程里，你仍可以用钱包里没花的1元和5元钞票买东西. 门罗币和其它加密货币的output，和上面的纸币同样的原理.</p>\n\n<p>对于新的门罗币用户而言，这点通常让人困惑. 假设某个用户可能在钱包中只有一个来自交易所或朋友的输出. 假设此输出金额为20 XMR.他们的钱包里没有其他输出.他们现在想向他们最喜欢的两个慈善机构捐款.当他们将5 XMR发送给第一个慈善机构，然后发现钱包余额不正确，虽然理论上他们手里还剩15个 XMR，但他们无法立即转账另一笔捐赠给第二个慈善机构. 读者到这里可能已经猜到了，这是因为他的15 XMR被锁定了,换句话说，他钱包里的20元花了5元，可剩下的15元找零要20分钟以后才到账，除非找零被退回，否则无法使用. 反之，他们才能够发送第二笔转账.</p>\n\n<p>这里再罗嗦一遍，假如他钱包里的20xmr不是由一个输出组成的，而是多个output，例如两个面额10 XMR输出，他就不会有这个问题. 他将能够捐了5个XMR后，无需等待，马上捐第二个，即便第一次捐赠的找零要20分钟以后才能解锁，但是钱包里的第二次捐赠可以使用另一个10个XMR 的output完成.这里译者额外举一个例子，想象一下，你有20元去买早点，你花了5元买包子，理论上你有15元可以继续去买煎饼果子，可你的20元是一张面额为20元的纸币组成的，包子店老板太忙要20分钟之后给你找钱，这个过程里，你就不能去买煎饼果子，可如果你钱包里的20元，是由两个10元组成的，那么你花5元买包子，即便老板找钱很慢，可你钱包里还有另一张10元，可以去买煎饼果子无需等待.所以output，中文里面的输出，不应该理解成金额，而是这里有不同面额的纸币.</p>\n\n<p>一些加密货币钱包具有被称为output管理的功能，该功能不光向用户显示其当前拥有的余额，还展示了这些余额是由哪些输出组成的，该钱包还允许他们选择在支付的时候，选择使用钱包里的哪些输出.</p>\n\n<p>到目前为止，门罗币的 GUI钱包会自动为用户选择输出，因为用户自己选择的输出通常会引起混乱，或者在某些情况下会损害隐私. 但是，正在开发中的钱包，例如新的Feather钱包项目，将包含这些输出管理功能.</p>\n\n<p>说了好半天发送方的那部分了，其实在接收端也发生了一些令人着迷的事情. 回到之前的例子，我们向某人发送3 XMR并在交易中使用1.5 XMR和2.25 XMR的输出.接收方并不会接收到1.5 XMR和2.25 XMR的两个输出, 而是他们会直接收到一个3 XMR输出.</p>\n\n<p>在后台，门罗币协议层将用于支付的所有输出合并，只向接收方提供付款额的一个输出，然后将另一个零钱输出发送回发送方. 因此，无论发送人是否使用两个，三个或十个输出来发送转账，收款人都是收到一个output,同时发送者也将收到一个作为找零的一个输出.</p>\n\n<p>我们希望这篇文章可以消除一些有关输出概念的混乱 概述协议层内部会计的工作方式，以及澄清普通用户在遇到锁定资金时面临的疑惑.在另一篇文章中，我们将探讨如何管理你的输出，以最大程度地减少在发送另一笔交易之前必须等待解锁资金的时间.</p>';
+  String get knowledge250Sboutputs250Sb0250Sbtext => '<p>像其它加密货币一样，门罗币使用output作为资金核算的手段,中文中output经常被直译为输出，本文中输出就是output，output就是输出.很多精通加密货币的用户可能已经听说过这个术语，但是并不一定明白它的意思和工作方式. 正如我们在另一篇关于<a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">环形签名的文章</a>中所探讨的那样，output是区块链上交易双方实际交换的单位. 类似于美元的钞票，但是金额不是固定的面额,可以把output理解成不同面额的钞票.</p>\n\n<p>让我们举几个现实生活的例子帮助大家理解区块链的output和转账逻辑，假设你工作的薪水为每小时16美元，你工作一小时后，老板给你支付这16美元的报酬，分别由一张一美元的钞票，一张五美元的钞票和一张十美元的钞票, 你收到了16美元，但钱包里有3张不同的钞票组成.如果你想向某人支付6美元，则可以使用5美元和1美元，或者钱包里的10美元，让对方找零4美元，但是如果你想向某人支付8美元，则只能使用10美元，然后获得2美元的找零. 最后一种情况，如果你想付给某人14美元，则必须使用这三张钞票，并且会收到2美元的找零，但是这个过程中，当你交出这三张钞票，并且对方还没有给你找零时，钱包那时候没有钱，直到把找零放回钱包，钱包里才会显示2美元.</p>\n\n<p>门罗币的工作与此类似. 假设你经营一家商店，销售了三个不同的商品. 假设销售收入分别为1.5 XMR，2.25 XMR和5.25 XMR，总计9 XMR，但是你的钱包中的9xmr,其实是这三个面额不用的门罗币组成的. 这时候再假设一种情况，你现在要向某人支付3 XMR. 那么你有两种方法，一个是可以把钱包里面额为5.25 XMR的门罗币给他，然后他给你找零1.75 XMR，也可以将钱包里的1.5XMR和2.25 XMR的output合并给他，然后他找给你的0.75 XMR.</p>\n\n<p>但是，一旦你发送交易，你所使用的那个output将被置于锁定状态，这意味着在你收回找零前它们是不可使用的，这时候你钱包里的余额也是显示不准确的.门罗币主网协议层会在10次确认后，也就是现实生活里大约20分钟后解锁资金，也就是退还你的找零. 就像一旦您将百元大钞票从钱包中递给收银员一样，你将无法再次使用这张钞票，直到你从收银员那里收到他找给你的零钱，你钱包的余额才会正常，你也才能再次支付下一单.</p>\n\n<p>让我们回到向某人发送3 XMR的例子，假如你给了对方5.25 XMR输出. 现在要等20分钟等他给你找零回来2.25xmr，在主网确认前，你都无法使用它，钱包余额这时候也是不准的. 但是等待找零的这个过程中，你仍然可以使用1.5 XMR和2.25 XMR的输出，因为这些输出还在你的钱包里. 再用美元的例子重复一遍这个故事，你钱包里有三张钞票，面额1元，5元，10元，也就是说你一共有16元，如果你像上文举例中那样向某人支付了8元，理论上16元减去8元，还剩8元可以继续买东西，可在支付的过程里，你只能把你的10元钞票给对方，假设店员找零钱的时间要等20分钟，那么这20分钟里，你的钱包余额只有1元和5元可以用，也就是6元，而不是8元，直到找零结束后，钱包才能恢复正常余额，但在等待找零的过程里，你仍可以用钱包里没花的1元和5元钞票买东西. 门罗币和其它加密货币的output，和上面的纸币同样的原理.</p>\n\n<p>对于新的门罗币用户而言，这点通常让人困惑. 假设某个用户可能在钱包中只有一个来自交易所或朋友的输出. 假设此输出金额为20 XMR.他们的钱包里没有其他输出.他们现在想向他们最喜欢的两个慈善机构捐款.当他们将5 XMR发送给第一个慈善机构，然后发现钱包余额不正确，虽然理论上他们手里还剩15个 XMR，但他们无法立即转账另一笔捐赠给第二个慈善机构. 读者到这里可能已经猜到了，这是因为他的15 XMR被锁定了,换句话说，他钱包里的20元花了5元，可剩下的15元找零要20分钟以后才到账，除非找零被退回，否则无法使用. 反之，他们才能够发送第二笔转账.</p>\n\n<p>这里再罗嗦一遍，假如他钱包里的20xmr不是由一个输出组成的，而是多个output，例如两个面额10 XMR输出，他就不会有这个问题. 他将能够捐了5个XMR后，无需等待，马上捐第二个，即便第一次捐赠的找零要20分钟以后才能解锁，但是钱包里的第二次捐赠可以使用另一个10个XMR 的output完成.这里译者额外举一个例子，想象一下，你有20元去买早点，你花了5元买包子，理论上你有15元可以继续去买煎饼果子，可你的20元是一张面额为20元的纸币组成的，包子店老板太忙要20分钟之后给你找钱，这个过程里，你就不能去买煎饼果子，可如果你钱包里的20元，是由两个10元组成的，那么你花5元买包子，即便老板找钱很慢，可你钱包里还有另一张10元，可以去买煎饼果子无需等待.所以output，中文里面的输出，不应该理解成金额，而是这里有不同面额的纸币.</p>\n\n<p>一些加密货币钱包具有被称为output管理的功能，该功能不光向用户显示其当前拥有的余额，还展示了这些余额是由哪些输出组成的，该钱包还允许他们选择在支付的时候，选择使用钱包里的哪些输出.</p>\n\n<p>到目前为止，门罗币的 GUI钱包会自动为用户选择输出，因为用户自己选择的输出通常会引起混乱，或者在某些情况下会损害隐私. 但是，正在开发中的钱包，例如新的Feather钱包项目，将包含这些输出管理功能.</p>\n\n<p>说了好半天发送方的那部分了，其实在接收端也发生了一些令人着迷的事情. 回到之前的例子，我们向某人发送3 XMR并在交易中使用1.5 XMR和2.25 XMR的输出.接收方并不会接收到1.5 XMR和2.25 XMR的两个输出, 而是他们会直接收到一个3 XMR输出.</p>\n\n<p>在后台，门罗币协议层将用于支付的所有输出合并，只向接收方提供付款额的一个输出，然后将另一个零钱输出发送回发送方. 因此，无论发送人是否使用两个，三个或十个输出来发送转账，收款人都是收到一个output,同时发送者也将收到一个作为找零的一个输出.</p>\n\n<p>我们希望这篇文章可以消除一些有关输出概念的混乱 概述协议层内部会计的工作方式，以及澄清普通用户在遇到锁定资金时面临的疑惑.在另一篇文章中，我们将探讨如何管理你的输出，以最大程度地减少在发送另一笔交易之前必须等待解锁资金的时间.</p>';
 
   @override
   String get knowledge250Sboutputs250Sbdescription => '许多精通加密的用户以前可能已经听说过output一词，中文译作输出，但并不是每个人都明白output的含义和工作方式.';
@@ -4307,7 +4307,7 @@ class I18nZh extends I18n {
 
   @override
   String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return '您可以使用 {{appName}_url} 凭据登录。';
+    return '您可以使用 $front_type_url 凭据登录。';
   }
 
   @override
@@ -4346,7 +4346,7 @@ class I18nZh extends I18n {
   String get method250Sbcash8722Sbdeposit => '现金存款';
 
   @override
-  String get method250Sbcash8722Sbon8722Sbdelivery => 'Cash on delivery';
+  String get method250Sbcash8722Sbon8722Sbdelivery => '货到付款';
 
   @override
   String get method250Sbcashiers8722Sbcheck => '收银员的支票';
@@ -4428,12 +4428,12 @@ class I18nZh extends I18n {
 
   @override
   String morph250Sbdeposit250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return '退款{cryptocurrency-name}地址';
+    return '退款$cryptocurrencyName地址';
   }
 
   @override
   String morph250Sbdeposit250Sbbutton(Object cryptocurencyName) {
-    return '显示存款{cryptocurency-name}地址！';
+    return '显示存款$cryptocurencyName地址！';
   }
 
   @override
@@ -4444,7 +4444,7 @@ class I18nZh extends I18n {
 
   @override
   String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return '接收{cryptocurrency-name}地址';
+    return '接收$cryptocurrencyName地址';
   }
 
   @override
@@ -4562,7 +4562,7 @@ class I18nZh extends I18n {
 
   @override
   String nojs250Sbmorph8722Sbwithdrawal(Object cryptocurrencyName) {
-    return '我想将仲裁保证金提取到 {cryptocurrency-name} 钱包';
+    return '我想将仲裁保证金提取到 $cryptocurrencyName 钱包';
   }
 
   @override
@@ -4570,12 +4570,12 @@ class I18nZh extends I18n {
 
   @override
   String nojs250Sbmorph8722Sbwithdrawal250Sbnotice(Object assetSymbol, Object cryptocurrencyName) {
-    return '将 $assetSymbol 仲裁保证金提取到 {cryptocurrency-name} 钱包';
+    return '将 $assetSymbol 仲裁保证金提取到 $cryptocurrencyName 钱包';
   }
 
   @override
   String nojs250Sbno8722Sbgoogle8722Sbtext(Object value) {
-    return '您可以使用{this}服务获取您所在位置的坐标';
+    return '您可以使用$value服务获取您所在位置的坐标';
   }
 
   @override
@@ -4586,25 +4586,25 @@ class I18nZh extends I18n {
 
   @override
   String note250Sbbutton(Object username) {
-    return 'Add a note on $username';
+    return '在 $username上添加注释';
   }
 
   @override
   String note250Sbcreated(Object at) {
-    return 'Created $at';
+    return '已创建 $at';
   }
 
   @override
-  String get note250Sbinput250Sbplaceholder => 'This is a private note for your own reference, it will not be visible to this user or any other user.';
+  String get note250Sbinput250Sbplaceholder => '这是供您自己参考的私人笔记，此用户或任何其他用户都看不到它。';
 
   @override
   String note250Sbtitle(Object username) {
-    return 'Your note on $username (only seen by you)';
+    return '您在 $username 上的注释（只有您自己可以看到）';
   }
 
   @override
   String note250Sbupdated(Object at) {
-    return 'edited $at';
+    return '已编辑 $at';
   }
 
   @override
@@ -4744,7 +4744,7 @@ class I18nZh extends I18n {
   String get post8722Sbad250Sberror250Sblimit8722Sbrequests8722Sbtitle => '太多请求';
 
   @override
-  String get post8722Sbad250Sberror250Sbmargin8722Sbnot8722Sbvalid => '请输正确入权利金率。 只允许在-100和1000之间的数。';
+  String get post8722Sbad250Sberror250Sbmargin8722Sbnot8722Sbvalid => '请输正确入差价率。 只允许在-100和1000之间的数。';
 
   @override
   String get post8722Sbad250Sberror250Sbmax8722Sbamount8722Sbnot8722Sbvalid => '请输入正确的最大金额值。 只允许在0.000000000001和10000000000000之间的数字。';
@@ -4797,7 +4797,7 @@ class I18nZh extends I18n {
 
   @override
   String post8722Sbad250Sblogged8722Sbout8722Sbnotice(Object logIn, Object signUp) {
-    return '在创建广告前，请{log-in}或{sign-up}。';
+    return '在创建广告前，请$logIn或$signUp。';
   }
 
   @override
@@ -4873,10 +4873,10 @@ class I18nZh extends I18n {
   String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip250Sbnojs => '在交易开放时使汇率随市场浮动。交易价格在交易完成时确定。请注意，预留给仲裁债券的选定加密货币资产金额将额外增加 15% 的准备金。交易完成后，多余的金额将被退回。';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin => '权利金';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin => '差价率';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin250Sbtip => '如果您想要门罗币市场价格的权利金，您可以以高于市场价买入或低于市场价卖出的方式来并吸引更多的交易者。对于更复杂的定价机制请直接编辑定价公式。';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin250Sbtip => '如果您想要门罗币市场价格的差价率，您可以以高于市场价买入或低于市场价卖出的方式来并吸引更多的交易者。对于更复杂的定价机制请直接编辑定价公式。';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbmarket => '市场价格';
@@ -4906,7 +4906,7 @@ class I18nZh extends I18n {
   String get post8722Sbad250Sbreview250Sbad8722Sbtype => '交易类型';
 
   @override
-  String get post8722Sbad250Sbreview250Sbmargin => '权利金';
+  String get post8722Sbad250Sbreview250Sbmargin => '差价率';
 
   @override
   String get post8722Sbad250Sbreview250Sbminutes => '分钟';
@@ -4919,7 +4919,7 @@ class I18nZh extends I18n {
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return '在创建交易广告前，请阅读我们的{terms-of-service}和交易$guides';
+    return '在创建交易广告前，请阅读我们的$termsOfservice和交易$guides';
   }
 
   @override
@@ -4955,7 +4955,7 @@ class I18nZh extends I18n {
   }
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb4250Sbnojs => '您不得代表其他人（经纪人）购买或出售加密货币或加密货币期权。';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb4250Sbnojs => '您不得代表他人（经纪）买卖加密货币。';
 
   @override
   String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb5 => '您仅可以使用以自己名字注册的付款帐户（非第三方付款！）。';
@@ -5055,7 +5055,7 @@ class I18nZh extends I18n {
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs57Sbagoradesk(Object appName) {
-    return '您想制作什么样的贸易广告？如果您想出售加密货币、出售加密货币看涨期权或购买加密货币看跌期权，请确保您的 $appName 仲裁债券钱包中有相关的加密货币。';
+    return '您想制作什么样的贸易广告？如果您想出售加密货币，请确保您的 $appName 仲裁债券钱包中有相关的加密货币。';
   }
 
   @override
@@ -5070,7 +5070,7 @@ class I18nZh extends I18n {
   String get price8722Sbformula8722Sbinterface250Sbtickers250Sbasset8722Sbpairs250Sbother8722Sbasset => '其他';
 
   @override
-  String get read8722Sbmore => 'Read more';
+  String get read8722Sbmore => '阅读更多';
 
   @override
   String get recaptcha250Sbno8722Sbgoogle8722Sbmessage => '我们注意到Google服务在您的浏览器中被阻止。 由于我们使用Google的reCAPTCHA进行某些网站操作，因此您需要找到下载Google服务的方式（例如，VPN，代理或使用Tor浏览器）。';
@@ -5279,12 +5279,12 @@ class I18nZh extends I18n {
 
   @override
   String search250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object country, Object usingMethod) {
-    return '{using-method}在$country网上出售$assetName';
+    return '$usingMethod在$country网上出售$assetName';
   }
 
   @override
   String search250Sbheading8722Sbonline8722Sbsell(Object assetName, Object country, Object usingMethod) {
-    return '{using-method}在$country网上购买$assetName';
+    return '$usingMethod在$country网上购买$assetName';
   }
 
   @override
@@ -5297,7 +5297,7 @@ class I18nZh extends I18n {
 
   @override
   String search250Sbno8722Sbgoogle8722Sbtext(Object value) {
-    return '在您的浏览器谷歌服务中被阻止。 没关系，不过我们正在使用它们来寻找附近的交易。 你将不得不手动地输入你的位置。 您可以使用{this}等服务来查询你的纬度和经度。';
+    return '在您的浏览器谷歌服务中被阻止。 没关系，不过我们正在使用它们来寻找附近的交易。 你将不得不手动地输入你的位置。 您可以使用$value等服务来查询你的纬度和经度。';
   }
 
   @override
@@ -5313,7 +5313,7 @@ class I18nZh extends I18n {
 
   @override
   String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return '或者{post-an-ad}在这里！';
+    return '或者$postAnad在这里！';
   }
 
   @override
@@ -5401,7 +5401,7 @@ class I18nZh extends I18n {
 
   @override
   String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '{download-a-2fa-app}比如$andotp或{any-other-2fa-app}支持$totp的2FA应用程序。';
+    return '$downloadA2faapp比如$andotp或$anyOther2faapp支持$totp的2FA应用程序。';
   }
 
   @override
@@ -5437,10 +5437,10 @@ class I18nZh extends I18n {
   String get settings250Sb2fa250Sbverify8722Sbbtn => '验证2FA';
 
   @override
-  String get settings250Sb2fa250Sbwarning => '<strong>请注意：</strong> 如果您丢失2FA凭据（丢失或中断手机，删除您的2FA应用并丢失备份代码），<strong>你将无法再次登录您的帐户</strong>。 {appName}将无法为您提供帮助。 <strong>请自担风险</strong>。';
+  String get settings250Sb2fa250Sbwarning => '我们强烈建议您在帐户上启用 2FA 以提高安全性。';
 
   @override
-  String get settings250Sb2fa250Sbwarning250Sbenable => 'Enable';
+  String get settings250Sb2fa250Sbwarning250Sbenable => '启用';
 
   @override
   String get settings250Sb2fa250Sbwrong8722Sbotp => '错的一次性密码。';
@@ -5465,7 +5465,7 @@ class I18nZh extends I18n {
 
   @override
   String settings250Sbapi8722Sbkey250Sblabel250Sbcaption(Object apiDocs) {
-    return '为了能够使用私有API端点，您必须将API密钥设置为“Authorization”标头。密钥将在5年后过期。在{api-docs}中找到更多详细信息。';
+    return '为了能够使用私有API端点，您必须将API密钥设置为“Authorization”标头。密钥将在5年后过期。在$apiDocs中找到更多详细信息。';
   }
 
   @override
@@ -5833,7 +5833,7 @@ class I18nZh extends I18n {
 
   @override
   String sso250Sbunverified8722Sbemail8722Sbtext(Object settingsPage) {
-    return 'You您需要验证您的电子邮件以继续，您可以在{settings-page}上进行。';
+    return 'You您需要验证您的电子邮件以继续，您可以在$settingsPage上进行。';
   }
 
   @override
@@ -6286,7 +6286,7 @@ class I18nZh extends I18n {
 
   @override
   String trade250Sbstatus250Sbcancelled8722Sbtext(Object linebreak, Object time) {
-    return '本交易已取消 $linebreak 在$time.';
+    return '本交易已取消 $linebreak  在$time.';
   }
 
   @override
@@ -6294,7 +6294,7 @@ class I18nZh extends I18n {
 
   @override
   String trade250Sbstatus250Sbclosed8722Sbtext8722Sb0(Object linebreak, Object time) {
-    return '本交易被管理员关闭 $linebreak 在$time.';
+    return '本交易被管理员关闭 $linebreak  在$time.';
   }
 
   @override
@@ -6305,7 +6305,7 @@ class I18nZh extends I18n {
 
   @override
   String trade250Sbstatus250Sbcompleted8722Sbtext(Object linebreak, Object time) {
-    return '本交易完成 $linebreak 在$time.';
+    return '本交易完成 $linebreak  在$time.';
   }
 
   @override
@@ -6313,7 +6313,7 @@ class I18nZh extends I18n {
 
   @override
   String trade250Sbstatus250Sbdisputed8722Sbtext8722Sb0(Object linebreak, Object time) {
-    return '本交易被申诉 $linebreak 在$time.';
+    return '本交易被申诉 $linebreak  在$time.';
   }
 
   @override
@@ -6401,13 +6401,13 @@ class I18nZh extends I18n {
   }
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbproof => 'Settlement proof';
+  String get trade250Sbstatus250Sbsettlement250Sbproof => '结算证明';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbseller8722Sbtx250Sbtitle => '转让给卖方的非监护人钱包';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbshow8722Sbproof => 'Show payment proof';
+  String get trade250Sbstatus250Sbsettlement250Sbshow8722Sbproof => '出示付款证明';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbtx8722Sbkey => '交易钥匙';
@@ -6710,7 +6710,7 @@ class I18nZh extends I18n {
 
   @override
   String wallet250Sbfunds8722Sbunlock8722Sbtime8722Sbblock(Object blockHeight) {
-    return '资金在{block-height}区块将被解锁';
+    return '资金在$blockHeight区块将被解锁';
   }
 
   @override
@@ -7187,55 +7187,55 @@ class I18nZh extends I18n {
   String get wallet250Sbtxs250Sbdetails8722Sbdialog250Sbtitle => '交易细节';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbdetails => 'Details';
+  String get wallet250Sbtxs250Sbfilter250Sbdetails => '细节';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'Tx ID, address, trade ID, username etc.';
+  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'Tx ID、地址、交易 ID、用户名等。';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbfrom => 'From';
+  String get wallet250Sbtxs250Sbfilter250Sbfrom => '从';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtitle => 'Filter transactions';
+  String get wallet250Sbtxs250Sbfilter250Sbtitle => '过滤交易';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbto => 'To';
+  String get wallet250Sbtxs250Sbfilter250Sbto => '至';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype => 'Type';
+  String get wallet250Sbtxs250Sbfilter250Sbtype => '类型';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => 'Affiliate commission';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => '加盟佣金';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sball => 'All types';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sball => '所有类型';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbcoupon => 'Coupon rebate';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbcoupon => '优惠券回扣';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbfee => 'Network fee';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbfee => '网络费用';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbreceive => 'Internal receive';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbreceive => '内部接收';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbsend => 'Internal send';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbsend => '内部发送';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbpending => 'Pending send';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbpending => '待发送';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreceive => 'Receive';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreceive => '接收';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => 'Trade reserve';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => '贸易储备';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => 'Trade reserve return';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => '贸易准备金回报';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbsend => 'Send';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbsend => '发送';
 
   @override
   String wallet250Sbtxs250Sbtable250Sbamount(Object assetSymbol) {
@@ -7260,7 +7260,7 @@ class I18nZh extends I18n {
 
   @override
   String wallet250Sbtxs250Sbtip8722Sbtext(Object latestVersion, Object assetName) {
-    return '你如果在说明中能看到交易ID并块浏览器链接那么你的交易已成功播出。请确保你的$assetName钱包{latest-version}并已完全同步';
+    return '你如果在说明中能看到交易ID并块浏览器链接那么你的交易已成功播出。请确保你的$assetName钱包$latestVersion并已完全同步';
   }
 
   @override
@@ -7375,7 +7375,7 @@ class I18nZh extends I18n {
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return '即使你做了尽职调查，只与有信誉的买家进行交易，也不能保证你不会遇到$method申诉的情况。 您可以做以下事情来增加您的安全度：$linebreak 1.请求买方的2张照片ID扫描（即护照和驾驶执照），确保$method帐户名称与ID相符。 $linebreak 2.告诉买家从$method的电邮帐户发送一封电子邮件（甚至可以告诉他们把交易ID和一些关于{appName}的消息放到电子邮件里）$linebreak 3.收取$method交易的时设直很高的权利金。 例如，25％或更高。 这样，如果您的$method交易中有五分之一是诈骗（设交易金额相等），那么您将被覆盖。 $linebreak 4.谨防高额交易。 尝试先与交易者进行少量交易。 $linebreak';
+    return '即使你做了尽职调查，只与有信誉的买家进行交易，也不能保证你不会遇到$method申诉的情况。 您可以做以下事情来增加您的安全度：$linebreak  1.请求买方的2张照片ID扫描（即护照和驾驶执照），确保$method帐户名称与ID相符。 $linebreak  2.告诉买家从$method的电邮帐户发送一封电子邮件（甚至可以告诉他们把交易ID和一些关于的消息放到电子邮件里）$linebreak  3.收取$method交易的时设直很高的差价率。 例如，25％或更高。 这样，如果您的$method交易中有五分之一是诈骗（设交易金额相等），那么您将被覆盖。 $linebreak  4.谨防高额交易。 尝试先与交易者进行少量交易。 $linebreak ';
   }
 
   @override
@@ -7388,7 +7388,7 @@ class I18nZh extends I18n {
 
   @override
   String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return '由于您的仲裁保证金钱包余额低于 {min-required-balance}，您的所有销售 $asset 广告都已被公开搜索隐藏。为了让您的销售广告可见，请至少存入 {amount-xmr} 到您的仲裁保证金 {localmonero-wallet}.';
+    return '由于您的仲裁保证金钱包余额低于 $minRequiredbalance，您的所有销售 $asset 广告都已被公开搜索隐藏。为了让您的销售广告可见，请至少存入 $amountXmr 到您的仲裁保证金 $localmoneroWallet.';
   }
 
   @override
@@ -7439,1726 +7439,1726 @@ class I18nZh extends I18n {
   }
 
   @override
-  String get ads => '广告';
+  String get ads => 'Ads';
 
   @override
-  String get unknown_error => '未知错误';
+  String get unknown_error => 'Unknown error';
 
   @override
-  String get ads_choose_ad_type => '选择广告类型';
+  String get ads_choose_ad_type => 'Choose ad type';
 
   @override
-  String get ads_ad_type => '广告类型';
+  String get ads_ad_type => 'Ad type';
 
   @override
-  String get ads_choose_ad_cryptocurrency => '选择加密货币';
+  String get ads_choose_ad_cryptocurrency => 'Choose cryptocurrency';
 
   @override
-  String get ads_choose_price_type => '选择价格类型';
+  String get ads_choose_price_type => 'Choose price type';
 
   @override
-  String get ads_which_type_to_choose => '选择哪种类型？';
+  String get ads_which_type_to_choose => 'Which type to choose?';
 
   @override
-  String get enter_margin => '输入边距';
+  String get enter_margin => 'Enter margin';
 
   @override
-  String get what_is_margin => '什么是保证金？';
+  String get what_is_margin => 'What\'s a margin?';
 
   @override
-  String get price_formula_examples => '价格公式示例';
+  String get price_formula_examples => 'Price formula examples';
 
   @override
-  String get see_examples => '查看示例';
+  String get see_examples => 'See examples';
 
   @override
-  String get see_example => '查看示例';
+  String get see_example => 'See example';
 
   @override
-  String get final_price_in => '最终价格';
+  String get final_price_in => 'Final price in';
 
   @override
-  String get show_formula_controls => '显示公式控件';
+  String get show_formula_controls => 'Show formula controls';
 
   @override
-  String get market_rates => '市场价格';
+  String get market_rates => 'Market Rates';
 
   @override
-  String get set_trade_limits => '设置交易限制（可选）：';
+  String get set_trade_limits => 'Set trade limits (optional):';
 
   @override
-  String get restrict_limit_amounts_to => '限制限额为';
+  String get restrict_limit_amounts_to => 'Restrict limit amounts to';
 
   @override
-  String get restrict_limit_amounts => '限制限额';
+  String get restrict_limit_amounts => 'Restrict limit amounts';
 
   @override
-  String get what_does_it_mean => '这是什么意思？';
+  String get what_does_it_mean => 'What does it mean?';
 
   @override
   String ads_enter_amount(Object currency) {
-    return '输入金额 $currency';
+    return 'Enter amount $currency';
   }
 
   @override
   String ads_enter_comma_sep_amounts(Object currency) {
-    return '输入逗号分隔的金额 $currency';
+    return 'Enter comma-separated amounts $currency';
   }
 
   @override
   String ads_first_trade_max_limit(Object currency) {
-    return '首笔交易最高限额 $currency';
+    return 'First trade maximum limit $currency';
   }
 
   @override
-  String get ads_specify_trade_details => '指定交易详情（可选）：';
+  String get ads_specify_trade_details => 'Specify trade details (optional):';
 
   @override
-  String get ads_payment_method_details => '付款方式详情';
+  String get ads_payment_method_details => 'Payment method details';
 
   @override
-  String get ads_payment_method_details_64 => '显示在广告列表中。最多 64 个字符。';
+  String get ads_payment_method_details_64 => 'Shown in the ad list. Maximum 64 characters.';
 
   @override
-  String get ads_maximum_64 => '最多 64 个字符';
+  String get ads_maximum_64 => 'Maximum 64 characters';
 
   @override
-  String get ads_payment_method_info_trade => '付款方式信息';
+  String get ads_payment_method_info_trade => 'Payment method info';
 
   @override
-  String get ads_payment_method_info_trade_4096 => '在交易期间显示。最多 4096 个字符。';
+  String get ads_payment_method_info_trade_4096 => 'Shown during trade. Maximum 4096 characters.';
 
   @override
-  String get ads_specify_restrictions => '指定限制（可选）：';
+  String get ads_specify_restrictions => 'Specify restrictions (optional):';
 
   @override
-  String get maximum_4096 => '最多 4096 个字符';
+  String get maximum_4096 => 'Maximum 4096 characters';
 
   @override
-  String get enter_number_0_100 => '输入从 0 到 100 的数字';
+  String get enter_number_0_100 => 'Enter number from 0 to 100';
 
   @override
-  String get enter_number_15_90 => '输入 15-90 之间的数字';
+  String get enter_number_15_90 => 'Enter number between 15-90';
 
   @override
-  String get enter_amount_min_0 => '输入金额（最少 0）';
+  String get enter_amount_min_0 => 'Enter amount (min 0)';
 
   @override
-  String get currency => '货币：';
+  String get currency => 'Currency:';
 
   @override
-  String get payment_method => '付款方式：';
+  String get payment_method => 'Payment method:';
 
   @override
-  String get restrict_amounts_to => '将金额限制为：';
+  String get restrict_amounts_to => 'Restrict amounts to:';
 
   @override
-  String get payment_method_details => '付款方式详情：';
+  String get payment_method_details => 'Payment method details:';
 
   @override
-  String get review => '评论';
+  String get review => 'Review';
 
   @override
-  String get publish => '发布';
+  String get publish => 'Publish';
 
   @override
-  String get enter_your_settlement_wallet_address => '输入您的结算钱包地址：';
+  String get enter_your_settlement_wallet_address => 'Enter your settlement wallet address:';
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return '输入并验证您的硬币将被发送到的地址。不能是内部 $appName 地址。';
+    return 'Enter and verify your address to which the coins will be sent to. Cannot be an internal $appName address.';
   }
 
   @override
-  String get what_is_settlement_fee_level => '什么是结算费用水平？';
+  String get what_is_settlement_fee_level => 'What is settlement fee level?';
 
   @override
-  String get settlement_fee_level_selector_explanation => '此选择器允许您选择在将交易发送到您的钱包时使用的网络费用水平。如果您不确定所需的费用水平，请选择中等费用。';
+  String get settlement_fee_level_selector_explanation => 'This selector allows you to choose which network fee level to use when sending the transaction to your wallet. If you\'re not sure what fee level you want, select the medium fee.';
 
   @override
-  String get ads_payment_window => '支付窗口时间（分钟）';
+  String get ads_payment_window => 'Payment window time (minutes)';
 
   @override
-  String get ads_payment_window_short => '付款窗口';
+  String get ads_payment_window_short => 'Payment window';
 
   @override
-  String get ads_havent_posted => '您还没有发布任何广告。';
+  String get ads_havent_posted => 'You haven’t posted any ads yet.';
 
   @override
-  String get no_trades => '你还没有交易。';
+  String get no_trades => 'You have no trades, yet.';
 
   @override
-  String get no_feedbacks => '没有反馈。';
+  String get no_feedbacks => 'No feedbacks.';
 
   @override
-  String get ad_settings => '广告设置';
+  String get ad_settings => 'Ad settings';
 
   @override
-  String get settings_saved => '设置已保存';
+  String get settings_saved => 'Settings saved';
 
   @override
-  String get preferences => '喜好';
+  String get preferences => 'Preferences';
 
   @override
-  String get about_this_ad => '关于此广告';
+  String get about_this_ad => 'About this ad';
 
   @override
-  String get price => '价钱';
+  String get price => 'Price';
 
   @override
-  String get activity => '活动';
+  String get activity => 'Activity';
 
   @override
-  String get chat => '聊天';
+  String get chat => 'Chat';
 
   @override
-  String get market => '市场';
+  String get market => 'Market';
 
   @override
-  String get help => '救命';
+  String get help => 'Help';
 
   @override
   String sell_asset(Object asset) {
-    return '卖 $asset';
+    return 'Sell $asset';
   }
 
   @override
   String buy_asset(Object asset) {
-    return '购买 $asset';
+    return 'Buy $asset';
   }
 
   @override
-  String get trader_profile => '交易员简介';
+  String get trader_profile => 'Trader\'s profile';
 
   @override
-  String get trader_info => '交易者信息';
+  String get trader_info => 'Trader\'s info';
 
   @override
-  String get trading_tips => '交易技巧';
+  String get trading_tips => 'Trading Tips';
 
   @override
-  String get clear_all => '全部清除';
+  String get clear_all => 'Clear all';
 
   @override
-  String get apply => '应用';
+  String get apply => 'Apply';
 
   @override
-  String get enter_amount => '输入金额';
+  String get enter_amount => 'Enter amount';
 
   @override
-  String get any_payment_method => '任何付款方式';
+  String get any_payment_method => 'Any Payment Method';
 
   @override
-  String get see_more_feedback => '查看更多反馈';
+  String get see_more_feedback => 'See more feedback';
 
   @override
-  String get see_more_ads => '查看更多广告';
+  String get see_more_ads => 'See more ads';
 
   @override
   String feedback_title(Object user) {
-    return '对 $user的反馈';
+    return 'Feedback on $user';
   }
 
   @override
-  String get active_ads => '活动广告';
+  String get active_ads => 'Active ads';
 
   @override
-  String get you_sell => '你卖';
+  String get you_sell => 'You sell';
 
   @override
-  String get you_buy => '你买';
+  String get you_buy => 'You buy';
 
   @override
-  String get you_receive => '你收到';
+  String get you_receive => 'You receive';
 
   @override
-  String get you_pay => '你付钱';
+  String get you_pay => 'You pay';
 
   @override
-  String get export_csv => '导出CSV';
+  String get export_csv => 'Export CSV';
 
   @override
-  String get copy => '复制';
+  String get copy => 'Copy';
 
   @override
   String sell_via(Object asset, Object provider) {
-    return '通过 $provider销售 $asset';
+    return 'Sell $asset via $provider';
   }
 
   @override
   String buy_via(Object asset, Object provider) {
-    return '通过 $provider 购买 $asset';
+    return 'Buy $asset via $provider';
   }
 
   @override
   String sell_to(Object user) {
-    return '卖给 $user';
+    return 'Sell to $user';
   }
 
   @override
   String buy_from(Object user) {
-    return '从 $user购买';
+    return 'Buy from $user';
   }
 
   @override
   String must_be_at_least(Object num, Object currency) {
-    return '必须至少为 $num $currency';
+    return 'Must be at least $num $currency';
   }
 
   @override
   String must_be_less(Object num, Object currency) {
-    return '必须小于 $num $currency';
+    return 'Must be less $num $currency';
   }
 
   @override
   String send_all(Object asset) {
-    return '发送所有 $asset';
+    return 'Send all $asset';
   }
 
   @override
   String about_transactions(Object asset) {
-    return '关于 $asset 笔交易';
+    return 'About $asset transactions';
   }
 
   @override
-  String get trade_id => '贸易编号';
+  String get trade_id => 'Trade ID';
 
   @override
-  String get view_trade => '查看交易';
+  String get view_trade => 'View trade';
 
   @override
-  String get receiving => '接收';
+  String get receiving => 'Receiving';
 
   @override
-  String get paying => '付款';
+  String get paying => 'Paying';
 
   @override
-  String get rate => '率';
+  String get rate => 'Rate';
 
   @override
-  String get enter_your_password => '输入您的密码';
+  String get enter_your_password => 'Enter your password';
 
   @override
-  String get good_seller => '好卖家';
+  String get good_seller => 'Good seller';
 
   @override
-  String get cancel => '取消';
+  String get cancel => 'Cancel';
 
   @override
-  String get delete => '删除';
+  String get delete => 'Delete';
 
   @override
-  String get important => '重要';
+  String get important => 'Important';
 
   @override
-  String get feedback_updated_successfully => '反馈已成功更新。';
+  String get feedback_updated_successfully => 'Feedback updated successfully.';
 
   @override
-  String get pay => '工资';
+  String get pay => 'Pay';
 
   @override
-  String get send_trade_request => '发送交易请求';
+  String get send_trade_request => 'Send a trade request';
 
   @override
-  String get start_trading => '开始交易';
+  String get start_trading => 'Start trading';
 
   @override
-  String get api_error_13 => '请求出了点问题。这很可能是验证问题。检查您的请求参数，如果这仍然不正确，请联系我们的支持。';
+  String get api_error_13 => 'Something went wrong on the request. It\'s most likely a validation issue. Check your request parameters, and if this still doesn\'t seem right, please contact our support.';
 
   @override
-  String get api_error_49 => '密码更改请求中提供的旧密码与当前密码不匹配';
+  String get api_error_49 => 'The old password provided in the password change request doesn’t match the current password';
 
   @override
-  String get api_error_60 => '提供的更改邮箱密码不正确';
+  String get api_error_60 => 'The password provided for changing the email is incorrect';
 
   @override
-  String get api_error_61 => '此电子邮件已关联到另一个帐户';
+  String get api_error_61 => 'This email is already linked to another account';
 
   @override
-  String get api_error_73 => '提款申请时提供的密码不正确';
+  String get api_error_73 => 'The password provided during withdrawal request is incorrect';
 
   @override
-  String get api_error_74 => '资金不足，无法提取所需金额';
+  String get api_error_74 => 'Insufficient funds to conduct withdrawal for the requested amount';
 
   @override
-  String get api_error_75 => '试图将资金提取到不存在的内部地址';
+  String get api_error_75 => 'Attempting to withdraw funds to an internal address that doesn’t exist';
 
   @override
-  String get api_error_76 => '尝试将资金提取到与请求提款的账户相同的账户';
+  String get api_error_76 => 'Attempting to withdraw funds to the same account as the account that’s requesting the withdrawal';
 
   @override
-  String get api_error_77 => '资金不足，无法对请求的金额进行内部转账';
+  String get api_error_77 => 'Insufficient funds to conduct internal transfer for the requested amount';
 
   @override
-  String get api_error_103 => '请求交易海报正在出售假期的广告';
+  String get api_error_103 => 'Requesting trade for ad who’s poster is on selling vacation';
 
   @override
-  String get api_error_105 => '请求交易的广告海报没有足够的余额来为托管提供资金';
+  String get api_error_105 => 'Poster of the ad for which the trade is being requested doesn’t have enough balance to fund the escrow';
 
   @override
-  String get api_error_107 => '尝试在不设置 maxAmount 的情况下跟踪流动性';
+  String get api_error_107 => 'Trying to track liquidity without setting maxAmount';
 
   @override
-  String get api_error_137 => '在提供错误密码时尝试注册 2FA';
+  String get api_error_137 => 'Attempting to register 2FA while providing incorrect password';
 
   @override
-  String get api_error_138 => '在提供不正确的 OTP 时尝试验证 2FA';
+  String get api_error_138 => 'Attempting to validate 2FA while providing incorrect OTP';
 
   @override
-  String get api_error_139 => '尝试禁用 2FA 时密码或 OTP 不正确';
+  String get api_error_139 => 'Either password or OTP incorrect when attempting to disable 2FA';
 
   @override
-  String get api_error_140 => '尝试从钱包中提取硬币时 OTP 不正确';
+  String get api_error_140 => 'OTP incorrect when attempting to withdraw coins from wallet';
 
   @override
-  String get api_error_146 => '尝试为已启用的帐户启用联属网络营销计划';
+  String get api_error_146 => 'Attempting to enable affiliate program for account that already has it enabled';
 
   @override
-  String get api_error_170 => '要求提款的金额小于给定加密货币的最低可能金额';
+  String get api_error_170 => 'Amount that has been requested for withdrawal is less than the minimum possible amount for the given cryptocurrency';
 
   @override
-  String get api_error_171 => '请求提款时提供的地址无效';
+  String get api_error_171 => 'Invalid address provided when requesting withdrawal';
 
   @override
-  String get api_error_173 => '试图一次为新账户开立太多交易';
+  String get api_error_173 => 'Attempting to open too many trades at once for a new account';
 
   @override
-  String get api_error_178 => '尝试为不存在的用户兑换优惠券';
+  String get api_error_178 => 'Attempting to redeem coupon for user that doesn’t exist';
 
   @override
-  String get api_error_179 => '尝试兑换不存在的优惠券';
+  String get api_error_179 => 'Attempting to redeem coupon that doesn’t exist';
 
   @override
-  String get api_error_180 => '尝试兑换过期的优惠券';
+  String get api_error_180 => 'Attempting to redeem coupon that’s expired';
 
   @override
-  String get api_error_181 => '尝试兑换只能在注册期间兑换的优惠券';
+  String get api_error_181 => 'Attempting to redeem coupon that’s only allowed to be redeemed during registration';
 
   @override
-  String get api_error_182 => '正在尝试兑换该用户已兑换的优惠券';
+  String get api_error_182 => 'Attempting to redeem coupon that’s already been redeemed by this user';
 
   @override
-  String get api_error_183 => '尝试兑换缺货的优惠券';
+  String get api_error_183 => 'Attempting to redeem coupon that’s out of stock';
 
   @override
-  String get api_error_184 => '当有当前有效的优惠券时尝试兑换优惠券';
+  String get api_error_184 => 'Attempting to redeem coupon when there’s a currently active coupon';
 
   @override
-  String get api_error_204 => '尝试为不存在的帐户请求信誉导入代码';
+  String get api_error_204 => 'Attempting to request reputation import code for account that doesn’t exist';
 
   @override
-  String get api_error_205 => '尝试为已生成验证码的平台生成用于信誉导入的验证码';
+  String get api_error_205 => 'Attempting to generate verification code for reputation import for a platform that already has a verification code generated for it';
 
   @override
-  String get api_error_206 => '尝试为已导入信誉的平台生成信誉导入验证码';
+  String get api_error_206 => 'Attempting to generate verification code for reputation import for a platform from which reputation was already imported';
 
   @override
-  String get api_error_207 => '尝试为不存在的用户确认信誉导入验证码放置';
+  String get api_error_207 => 'Attempting to confirm reputation import verification code placement for user that doesn’t exist';
 
   @override
-  String get api_error_208 => '尝试为不在信誉导入流程的步骤 1 中的用户确认信誉导入验证码放置';
+  String get api_error_208 => 'Attempting to confirm reputation import verification code placement for user that isn’t in step 1 of the reputation import flow';
 
   @override
-  String get api_error_209 => '尝试确认信誉导入验证码放置时出现 LocalBitcoins 错误。可能是用户名错误或配置文件不可见';
+  String get api_error_209 => 'LocalBitcoins error when attempting to confirm reputation import verification code placement. Perhaps the username is wrong or the profile is not visible';
 
   @override
-  String get api_error_210 => '尝试确认信誉导入验证码放置时出现 Paxful 错误可能是用户名错误或配置文件不可见';
+  String get api_error_210 => 'Paxful error when attempting to confirm reputation import verification code placement Perhaps the username is wrong or the profile is not visible';
 
   @override
-  String get api_error_225 => '尝试确认信誉代码放置时，LocalBitcoins API 返回“无效用户”作为错误';
+  String get api_error_225 => 'LocalBitcoins API returning “Invalid user” as error when attempting to confirm reputation code placement';
 
   @override
-  String get api_error_226 => '尝试删除帐户时密码错误';
+  String get api_error_226 => 'Incorrect password when attempting to delete account';
 
   @override
-  String get api_error_238 => '未为外部比特币提款指定费用水平';
+  String get api_error_238 => 'Fee level not specified for external Bitcoin withdrawal';
 
   @override
-  String get api_error_239 => '尝试发布交易时密码错误';
+  String get api_error_239 => 'Incorrect password when trying to release a trade';
 
   @override
-  String get api_error_243 => 'AgoraDesk 内部地址不能用于交易结算。请输入外部的非 AgoraDesk XMR 地址以继续。';
+  String get api_error_243 => 'Internal AgoraDesk address can\'t be used for trade settlement. Please input an outside, non-AgoraDesk XMR address to continue.';
 
   @override
-  String get api_error_254 => '尝试在过去 10 分钟内将提款过帐到相同的地址和金额';
+  String get api_error_254 => 'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes';
 
   @override
-  String get api_error_260 => '尝试在不存在的用户上发布注释';
+  String get api_error_260 => 'Attempting to post a note on a user that doesn’t exist';
 
   @override
-  String get api_error_261 => '尝试在您自己的帐户上发布便条';
+  String get api_error_261 => 'Attempting to post a note on your own account';
 
   @override
-  String get api_error_262 => '尝试获取不存在的用户的注释';
+  String get api_error_262 => 'Attempting to get a note on a user that doesn’t exist';
 
   @override
-  String get api_error_263 => '尝试在您自己的帐户上获取注释';
+  String get api_error_263 => 'Attempting to get a note on your own account';
 
   @override
-  String get api_error_264 => '尝试删除不存在的用户的注释';
+  String get api_error_264 => 'Attempting to delete a note on a user that doesn’t exist';
 
   @override
-  String get api_error_265 => '尝试删除您自己帐户上的注释';
+  String get api_error_265 => 'Attempting to delete a note on your own account';
 
   @override
-  String get api_error_267 => '尝试删除不存在的用户备注';
+  String get api_error_267 => 'Attempting to delete a user note that doesn’t exist';
 
   @override
-  String get api_error_403 => '您无权执行此操作';
+  String get api_error_403 => 'You are not authorized to perform this action';
 
   @override
-  String get api_error_4000 => '没有网络连接。';
+  String get api_error_4000 => 'No internet connection.';
 
   @override
-  String get api_error_4001 => '连接超时，请检查网络连接。';
+  String get api_error_4001 => 'Connection timeout, please check internet connection.';
 
   @override
-  String get api_error_45 => '你不能同时拥有 \'first_time_limit_asset\' 和 \'first_time_limit_{btc | xmr}\' 在您的请求中。删除其中一个（它们是可互换的）。';
+  String get api_error_45 => 'You can\'t have both \'first_time_limit_asset\' and \'first_time_limit_TICKER\' in your request. Remove one of them (they are interchangeable).';
 
   @override
-  String get api_error_46 => '请求必须包含带有“msg”参数的 application/json 请求正文或带有参数“document”下列出的图像文件的 multipart/form-data 请求正文';
+  String get api_error_46 => 'Request must contain EITHER an application/json request body with a “msg” parameter OR a multipart/form-data request body with the image file listed under the parameter “document”';
 
   @override
-  String get api_error_47 => '具有该用户名的用户已存在';
+  String get api_error_47 => 'User with that username already exists';
 
   @override
-  String get api_error_48 => '使用该电子邮件的用户已存在';
+  String get api_error_48 => 'User with that email already exists';
 
   @override
-  String get api_error_50 => '尝试向未设置电子邮件的用户发送电子邮件';
+  String get api_error_50 => 'Attempting to send an email to a user without an email set';
 
   @override
-  String get api_error_51 => '为电子邮件验证提供的令牌提供给不存在的用户';
+  String get api_error_51 => 'Token provided for email verification is given to a user who does not exist';
 
   @override
-  String get api_error_52 => '为电子邮件验证提供的令牌无效';
+  String get api_error_52 => 'Token provided for email verification is invalid';
 
   @override
-  String get api_error_53 => '令牌中的电子邮件与数据库中的当前电子邮件不匹配';
+  String get api_error_53 => 'The email in the token doesn’t match the current email in the database';
 
   @override
-  String get api_error_54 => '为密码重置提供的令牌提供给数据库中不存在的电子邮件';
+  String get api_error_54 => 'Token provided for password reset is given to a email that does not exist in the database';
 
   @override
-  String get api_error_55 => '为密码重置提供的令牌无效';
+  String get api_error_55 => 'Token provided for password reset is invalid';
 
   @override
-  String get api_error_56 => '尝试向不在数据库中的电子邮件发送密码重置电子邮件';
+  String get api_error_56 => 'Attempting to send a password reset email to an email that isn’t in the database';
 
   @override
-  String get api_error_57 => '为密码重置提供的令牌不是重置令牌';
+  String get api_error_57 => 'Token provided for password reset is not a reset token';
 
   @override
-  String get api_error_58 => '尝试使用未经验证的电子邮件向用户发送密码重置电子邮件';
+  String get api_error_58 => 'Trying to send a password-reset email to a user with an unverified email';
 
   @override
-  String get api_error_59 => '尝试使用未经验证的电子邮件为用户重置密码';
+  String get api_error_59 => 'Trying reset a password for a user with an unverified email';
 
   @override
-  String get api_error_62 => '不存在为帐户公共数据请求提供的用户名的帐户';
+  String get api_error_62 => 'No account exists with the username provided for the account public data request';
 
   @override
-  String get api_error_63 => '尝试上传禁止类型的文件';
+  String get api_error_63 => 'Attempting to upload file of a forbidden type';
 
   @override
-  String get api_error_64 => '试图将不存在的通知标记为已读';
+  String get api_error_64 => 'Attempting to mark a non-existent notification as read';
 
   @override
-  String get api_error_65 => '试图将已读通知标记为已读';
+  String get api_error_65 => 'Attempting to mark an already read notification as read';
 
   @override
-  String get api_error_66 => '尝试将聊天附件上传到不存在的交易';
+  String get api_error_66 => 'Attempting to upload chat attachment to trade that doesn’t exist';
 
   @override
-  String get api_error_67 => '尝试向不存在的交易发送聊天消息';
+  String get api_error_67 => 'Attempting to send chat message to trade that doesn’t exist';
 
   @override
-  String get api_error_68 => '试图获取不存在的交易的聊天消息列表';
+  String get api_error_68 => 'Attempting to get chat message list of trade that doesn’t exist';
 
   @override
-  String get api_error_69 => '尝试获取不存在的聊天消息';
+  String get api_error_69 => 'Attempting to get chat message that doesn’t exist';
 
   @override
-  String get api_error_70 => '试图获取不存在账户的钱包地址';
+  String get api_error_70 => 'Attempting to get wallet address of account that doesn’t exist';
 
   @override
-  String get api_error_71 => '尝试获取不存在的帐户的交易';
+  String get api_error_71 => 'Attempting to get transactions of an account that doesn’t exist';
 
   @override
-  String get api_error_72 => '试图从不存在的账户中提取资金';
+  String get api_error_72 => 'Attempting to withdraw funds of an account that doesn’t exist';
 
   @override
-  String get api_error_78 => '尝试使用非法的参数组合制作获取广告';
+  String get api_error_78 => 'Attempting to make get ads with an invalid combination of parameters';
 
   @override
-  String get api_error_79 => '请求的广告 ID 不存在';
+  String get api_error_79 => 'The requested ad ID doesn’t exist';
 
   @override
-  String get api_error_80 => '未在广告更新/创建请求中同时设置 lat 和 lon';
+  String get api_error_80 => 'Didn’t set both lat and lon in the ad update/create request';
 
   @override
-  String get api_error_81 => '发布广告时未设置价格公式';
+  String get api_error_81 => 'Didn’t set price formula when posting ad';
 
   @override
-  String get api_error_82 => '尝试为在线广告设置纬度和经度';
+  String get api_error_82 => 'Trying to set lat and lon for an online ad';
 
   @override
-  String get api_error_83 => '尝试将 ONLINE_SELL/CALL_SELL/PUT_BUY 特定属性设置为不同类型的广告';
+  String get api_error_83 => 'Trying to set ONLINE_SELL/CALL_SELL/PUT_BUY-specific properties to a different type of ad';
 
   @override
-  String get api_error_84 => '尝试将 ONLINE_BUY/CALL_BUY/PUT_SELL 特定属性设置为不同类型的广告';
+  String get api_error_84 => 'Trying to set ONLINE_BUY/CALL_BUY/PUT_SELL-specific properties to a different type of ad';
 
   @override
-  String get api_error_85 => '尝试将 LOCAL_SELL 特定属性设置为不同类型的广告';
+  String get api_error_85 => 'Trying to set LOCAL_SELL-specific properties to a different type of ad';
 
   @override
-  String get api_error_86 => '在创建/更新广告时尝试设置无效的国家/地区或付款方式或货币';
+  String get api_error_86 => 'Attempting to set country or payment method or currency that isn’t valid when creating/updating ad';
 
   @override
-  String get api_error_87 => '在创建/更新广告时尝试设置对该国家/地区无效的付款方式';
+  String get api_error_87 => 'Trying to set a payment method that is invalid to that country when creating/updating ad';
 
   @override
-  String get api_error_88 => '在创建/更新广告时尝试设置对该付款方式无效的货币';
+  String get api_error_88 => 'Trying to set a currency that is invalid to that payment method when creating/updating ad';
 
   @override
-  String get api_error_89 => '尝试在不设置 lon/lat 的情况下创建 LOCAL_* 广告';
+  String get api_error_89 => 'Trying to create a LOCAL_* ad without setting lon/lat';
 
   @override
-  String get api_error_90 => '试图访问不存在的用户的交易。';
+  String get api_error_90 => 'Trying to access trades of a user that doesn’t exist.';
 
   @override
-  String get api_error_91 => '尝试使用不存在的用户令牌访问帐户公共数据';
+  String get api_error_91 => 'Trying to access account public data using a token of a user that doesn’t exist';
 
   @override
-  String get api_error_92 => '试图为不存在的用户获取通知';
+  String get api_error_92 => 'Trying to get notifications for user that doesn’t exist';
 
   @override
-  String get api_error_93 => '尝试为不存在的用户获取待定存款';
+  String get api_error_93 => 'Trying to get pending deposits for a user that doesn’t exist';
 
   @override
-  String get api_error_94 => '试图为不存在的用户获取反馈分数';
+  String get api_error_94 => 'Trying to get feedback score for user that doesn’t exist';
 
   @override
-  String get api_error_95 => '试图为不存在的用户获取广告';
+  String get api_error_95 => 'Trying to get ads for user that doesn’t exist';
 
   @override
-  String get api_error_96 => '试图创建交易的不存在的用户';
+  String get api_error_96 => 'Non-existent user trying to create a trade';
 
   @override
-  String get api_error_97 => '试图为不存在的广告创建交易';
+  String get api_error_97 => 'Trying to create a trade for ad that doesn’t exist';
 
   @override
-  String get api_error_98 => '试图为不存在海报的广告创建交易';
+  String get api_error_98 => 'Trying to create a trade for an ad who’s poster doesn’t exist';
 
   @override
-  String get api_error_99 => '在创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
+  String get api_error_99 => 'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade';
 
   @override
-  String get api_error_100 => '不能为创建交易请求少于 0.0000000001 XMR';
+  String get api_error_100 => 'Cannot request less than 0.0000000001 XMR for trade creation';
 
   @override
-  String get api_error_101 => '创建交易时请求的金额小于广告的 min_amount';
+  String get api_error_101 => 'Requested amount is less than ad’s min_amount when creating trade';
 
   @override
-  String get api_error_102 => '创建交易时请求的金额超过广告的 max_amount_available';
+  String get api_error_102 => 'Requested amount is more than ad’s max_amount_available when creating trade';
 
   @override
-  String get api_error_104 => '请求交易海报上正在购买假期的广告';
+  String get api_error_104 => 'Requesting trade for ad who’s poster is on buying vacation';
 
   @override
-  String get api_error_106 => '交易请求者没有足够的余额来为交易请求提供资金';
+  String get api_error_106 => 'Requester of the trade doesn’t have enough balance to fund the trade request';
 
   @override
-  String get api_error_108 => 'minAmount 不能等于或大于 maxAmount';
+  String get api_error_108 => 'minAmount cannot be equal to or larger than maxAmount';
 
   @override
-  String get api_error_109 => '创建交易时请求的金额超过广告的maxAmount';
+  String get api_error_109 => 'Requested amount is more than ad’s maxAmount when creating trade';
 
   @override
-  String get api_error_110 => '交易请求者的反馈分数低于发布者要求的分数';
+  String get api_error_110 => 'Trade requester has lower feedback score than what is required by the poster';
 
   @override
-  String get api_error_111 => '请求的金额不是可接受的金额之一，请参阅limit_to_fiat_amounts';
+  String get api_error_111 => 'Requested amount is not one of the accepted amounts, see limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => '无法为您自己发布的广告请求交易';
+  String get api_error_112 => 'Can’t request a trade for an ad you posted yourself';
 
   @override
-  String get api_error_113 => '更新广告时无法将 paymentWindowMinutes 设置为 <15 或 >90';
+  String get api_error_113 => 'Can’t set paymentWindowMinutes to <15 or >90 when updating ad';
 
   @override
-  String get api_error_114 => '创建广告时无法将 paymentWindowMinutes 设置为 <15 或 >90';
+  String get api_error_114 => 'Can’t set paymentWindowMinutes to <15 or >90 when creating ad';
 
   @override
-  String get api_error_115 => '按请求的 ID 进行的交易不存在';
+  String get api_error_115 => 'Trade by requested ID doesn’t exist';
 
   @override
-  String get api_error_116 => '请求交易的用户不存在';
+  String get api_error_116 => 'User requesting trade doesn’t exist';
 
   @override
-  String get api_error_117 => '请求汇率的货币不存在';
+  String get api_error_117 => 'The currency for which the exchange rate has been requested does not exist';
 
   @override
-  String get api_error_118 => '请求交易资金的用户不存在';
+  String get api_error_118 => 'User requesting funding of trade doesn’t exist';
 
   @override
-  String get api_error_119 => '试图为不存在的交易提供资金';
+  String get api_error_119 => 'Attempting to fund a trade that doesn’t exist';
 
   @override
-  String get api_error_120 => '请求交易托管的用户不存在';
+  String get api_error_120 => 'User requesting escrow of trade doesn’t exist';
 
   @override
-  String get api_error_121 => '试图托管不存在的交易';
+  String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
 
   @override
-  String get api_error_122 => '资金不足，无法为浮动 LOCAL_SELL 交易提供资金';
+  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
 
   @override
-  String get api_error_123 => '资金不足，无法为非浮动 LOCAL_SELL 交易提供资金';
+  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
 
   @override
-  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
+  String get api_error_124 => 'Error when funding a LOCAL_SELL';
 
   @override
-  String get api_error_125 => '请求取消交易的用户不存在';
+  String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
 
   @override
-  String get api_error_126 => '试图取消不存在的交易';
+  String get api_error_126 => 'Attempting to cancel a trade that doesn’t exist';
 
   @override
-  String get api_error_127 => '请求交易付款的用户不存在';
+  String get api_error_127 => 'User requesting payment of trade doesn’t exist';
 
   @override
-  String get api_error_128 => '尝试标记不存在的交易已付费';
+  String get api_error_128 => 'Attempting to mark a trade that doesn’t exist paid';
 
   @override
-  String get api_error_129 => '请求解除交易的用户不存在';
+  String get api_error_129 => 'User requesting release of trade doesn’t exist';
 
   @override
-  String get api_error_130 => '尝试释放不存在的交易';
+  String get api_error_130 => 'Attempting to release a trade that doesn’t exist';
 
   @override
-  String get api_error_131 => '请求贸易纠纷的用户不存在';
+  String get api_error_131 => 'User requesting dispute of trade doesn’t exist';
 
   @override
-  String get api_error_132 => '试图对不存在的交易提出争议';
+  String get api_error_132 => 'Attempting to dispute a trade that doesn’t exist';
 
   @override
-  String get api_error_133 => '尝试获取不存在的用户的反馈';
+  String get api_error_133 => 'Attempting to get feedback of a user that doesn’t exist';
 
   @override
-  String get api_error_134 => '当用户已经拥有允许的最大广告数量时尝试创建广告';
+  String get api_error_134 => 'Attempting to create an ad when user already has the maximum allowed number of ads';
 
   @override
-  String get api_error_135 => '不知何故，maxAmount 设置为 null，而 trackingMaxAmount 设置为 true';
+  String get api_error_135 => 'Somehow the maxAmount is set to null while trackingMaxAmount is set to true';
 
   @override
-  String get api_error_136 => '尝试发布余额低于最低要求余额的广告。';
+  String get api_error_136 => 'Attempting to post a ad with balance less than minimum required balance.';
 
   @override
-  String get api_error_141 => '试图以低于最低允许金额的金额创建交易';
+  String get api_error_141 => 'Attempting to create a trade for an amount that’s less than the minimum allowed amount';
 
   @override
-  String get api_error_142 => '在创建广告时尝试设置小于 minAmount 的法定限制';
+  String get api_error_142 => 'Attempting to set a fiat limit that is less than minAmount when creating ad';
 
   @override
-  String get api_error_143 => '在创建广告时尝试设置大于 maxAmount 的法定限制';
+  String get api_error_143 => 'Attempting to set a fiat limit that is more than maxAmount when creating ad';
 
   @override
-  String get api_error_144 => '尝试在更新广告时设置小于 minAmount 的法定限制';
+  String get api_error_144 => 'Attempting to set a fiat limit that is less than minAmount when updating ad';
 
   @override
-  String get api_error_145 => '尝试在更新广告时设置大于 maxAmount 的法定限制';
+  String get api_error_145 => 'Attempting to set a fiat limit that is more than maxAmount when updating ad';
 
   @override
-  String get api_error_147 => '尝试获取未启用会员计划的用户的会员数据';
+  String get api_error_147 => 'Attempting to get affiliate data for user that doesn’t have the affiliate program enabled';
 
   @override
-  String get api_error_148 => '尝试设置已设置的电报 ID';
+  String get api_error_148 => 'Attempting to set a telegram ID that’s already set';
 
   @override
-  String get api_error_149 => '未指定外部取款的优先级';
+  String get api_error_149 => 'Priority not specified for external withdrawal';
 
   @override
-  String get api_error_150 => '尝试在请求用户被广告发布者阻止的广告上开始交易';
+  String get api_error_150 => 'Attempting to start a trade on an ad where the requesting user is blocked by the ad poster';
 
   @override
-  String get api_error_151 => '尝试在广告发布者不信任请求用户的广告上开始交易';
+  String get api_error_151 => 'Attempting to start a trade on an ad where the requesting user is not trusted by the ad poster';
 
   @override
-  String get api_error_152 => '试图取消已经关闭的交易';
+  String get api_error_152 => 'Attempting to cancel a trade that’s already closed';
 
   @override
-  String get api_error_153 => '试图释放已经关闭的交易';
+  String get api_error_153 => 'Attempting to release a trade that’s already closed';
 
   @override
-  String get api_error_154 => '尝试为不存在的账户请求交易';
+  String get api_error_154 => 'Attempting to request trades for an account that doesn’t exist';
 
   @override
-  String get api_error_155 => '尝试获取不存在的用户的受信任用户列表';
+  String get api_error_155 => 'Attempting to get list of trusted users for a user that doesn’t exist';
 
   @override
-  String get api_error_156 => '尝试获取不存在的用户的被阻止用户列表';
+  String get api_error_156 => 'Attempting to get list of blocked users for a user that doesn’t exist';
 
   @override
-  String get api_error_157 => '尝试为非选项广告设置选项特定属性';
+  String get api_error_157 => 'Attempting to set option-specific properties for a non-option ad';
 
   @override
-  String get api_error_158 => '尝试在不设置选项特定属性的情况下创建选项广告';
+  String get api_error_158 => 'Attempting to create an option ad without setting option-specific properties';
 
   @override
-  String get api_error_159 => '请求标记交易溢价的用户不存在';
+  String get api_error_159 => 'User requesting to mark premium payment of trade doesn’t exist';
 
   @override
-  String get api_error_160 => '试图标记为不存在的交易支付的溢价';
+  String get api_error_160 => 'Attempting to mark premium paid for a trade that doesn’t exist';
 
   @override
-  String get api_error_161 => '请求行使期权的用户不存在';
+  String get api_error_161 => 'User requesting to exercise option doesn’t exist';
 
   @override
-  String get api_error_162 => '尝试为不存在的交易行使期权';
+  String get api_error_162 => 'Attempting to exercise option for a trade that doesn’t exist';
 
   @override
-  String get api_error_163 => '请求确认交易溢价支付的用户不存在';
+  String get api_error_163 => 'User requesting to confirm premium payment of trade doesn’t exist';
 
   @override
-  String get api_error_164 => '试图确认为不存在的交易支付的溢价';
+  String get api_error_164 => 'Attempting to confirm premium paid for a trade that doesn’t exist';
 
   @override
-  String get api_error_165 => '请求以净额结算进行交易的用户不存在';
+  String get api_error_165 => 'User requesting to exercise trade with net settlement doesn’t exist';
 
   @override
-  String get api_error_166 => '尝试以净额结算方式执行一项不存在的交易';
+  String get api_error_166 => 'Attempting to exercise with net settlement a trade that doesn’t exist';
 
   @override
-  String get api_error_167 => '当前市场价格低于或等于净 CALL 交易时的行使价。按照市场标准，该交易是价外交易，因此无法进行净额结算。如果需要，使用正常结算。';
+  String get api_error_167 => 'The current market price is less than or equal to the exercise price when netting a CALL trade. The trade is out-of-the-money by market standards, therefore cannot be netted. Use normal settlement if needed.';
 
   @override
-  String get api_error_168 => '请求确认交易保险支付的用户不存在';
+  String get api_error_168 => 'User requesting to confirm cover payment of trade doesn’t exist';
 
   @override
-  String get api_error_169 => '试图确认为不存在的交易支付的保险';
+  String get api_error_169 => 'Attempting to confirm cover paid for a trade that doesn’t exist';
 
   @override
-  String get api_error_172 => '尝试发布资产与广告货币相同的广告';
+  String get api_error_172 => 'Attempting to post an ad where the asset is the same as the ad currency';
 
   @override
-  String get api_error_174 => '尝试进行价外 PUT 交易';
+  String get api_error_174 => 'Attempting to exercise out-of-the-money PUT trade';
 
   @override
-  String get api_error_175 => '尝试兑换注册期间不存在的优惠券';
+  String get api_error_175 => 'Attempting to redeem coupon that doesn’t exist during registration';
 
   @override
-  String get api_error_176 => '尝试在注册期间兑换过期的优惠券';
+  String get api_error_176 => 'Attempting to redeem an expired coupon during registration';
 
   @override
-  String get api_error_177 => '尝试兑换在注册期间缺货的优惠券';
+  String get api_error_177 => 'Attempting to redeem a coupon that’s out of stock during registration';
 
   @override
-  String get api_error_185 => '尝试为不存在的用户获取优惠券';
+  String get api_error_185 => 'Attempting to get coupons for user that doesn’t exist';
 
   @override
-  String get api_error_186 => '通过 ID 获取广告时尝试获取超过 50 个广告';
+  String get api_error_186 => 'Attempting to get more than 50 ads when getting ads by ID';
 
   @override
-  String get api_error_187 => '按 ID 获取广告时尝试提供空的 ID 列表';
+  String get api_error_187 => 'Attempting to give an empty list of IDs when getting ads by ID';
 
   @override
-  String get api_error_188 => '按 ID 获取广告时，没有一个请求的广告 ID 是有效 ID';
+  String get api_error_188 => 'Not a single of the requested ad IDs is a valid ID when getting ads by ID';
 
   @override
-  String get api_error_189 => '通过 ID 获取广告时，没有一个请求的广告存在';
+  String get api_error_189 => 'Not a single of the requested ads exist when getting ads by ID';
 
   @override
-  String get api_error_190 => '通过 ID 获取交易时尝试给出一个空的 ID 列表';
+  String get api_error_190 => 'Attempting to give an empty list of IDs when getting trades by ID';
 
   @override
-  String get api_error_191 => '通过 ID 获取交易时尝试获取超过 50 个广告';
+  String get api_error_191 => 'Attempting to get more than 50 ads when getting trades by ID';
 
   @override
-  String get api_error_192 => '通过 ID 获取交易时，没有一个请求的交易 ID 是有效 ID';
+  String get api_error_192 => 'Not a single of the requested trade IDs is a valid ID when getting trades by ID';
 
   @override
-  String get api_error_193 => '通过 ID 获取交易时，没有一个请求的交易存在';
+  String get api_error_193 => 'Not a single of the requested trades exist when getting trades by ID';
 
   @override
-  String get api_error_194 => '尝试为不存在的用户生成公共 API 令牌';
+  String get api_error_194 => 'Attempting to generate public API token for user that doesn’t exist';
 
   @override
-  String get api_error_195 => '尝试获取公共 API 令牌时密码不正确';
+  String get api_error_195 => 'Incorrect password when attempting to get public API token';
 
   @override
-  String get api_error_196 => '尝试获取不存在的用户的最新消息';
+  String get api_error_196 => 'Attempting to get recent messages for user that doesn’t exist';
 
   @override
-  String get api_error_197 => '尝试使用超出允许范围的“之后”时间戳获取交易聊天消息';
+  String get api_error_197 => 'Attempting to get trade chat messages with “after” timestamp that’s outside of the allowed range';
 
   @override
-  String get api_error_198 => '尝试使用超出允许范围的“之后”时间戳获取帐户最近的聊天消息';
+  String get api_error_198 => 'Attempting to get account recent chat messages with “after” timestamp that’s outside of the allowed range';
 
   @override
-  String get api_error_199 => '尝试为不存在的用户获取公共 API 令牌';
+  String get api_error_199 => 'Attempting to get public API token for user that doesn’t exist';
 
   @override
-  String get api_error_200 => '尝试为没有公共 API 令牌的用户过期并删除公共 API 令牌';
+  String get api_error_200 => 'Attempting to expire and delete public API token for user without a public API token';
 
   @override
-  String get api_error_201 => '尝试为不存在的广告更新价格公式';
+  String get api_error_201 => 'Attempting to update price formula for ad that doesn’t exist';
 
   @override
-  String get api_error_202 => '尝试使用超出允许范围的“之后”时间戳获取帐户交易';
+  String get api_error_202 => 'Attempting to get account transactions with “after” timestamp that’s outside of the allowed range';
 
   @override
-  String get api_error_203 => '尝试获取不存在的帐户的信誉导入数据';
+  String get api_error_203 => 'Attempting to get reputation import data for account that doesn’t exist';
 
   @override
-  String get api_error_211 => '尝试为不存在的用户批准信誉导入';
+  String get api_error_211 => 'Attempting to approve reputation import for user that doesn’t exist';
 
   @override
-  String get api_error_212 => '尝试为不在信誉导入流程第 2 步中的用户批准信誉导入';
+  String get api_error_212 => 'Attempting to approve reputation import for user that isn’t in step 2 of the reputation import flow';
 
   @override
-  String get api_error_213 => '试图拒绝为不存在的用户导入信誉';
+  String get api_error_213 => 'Attempting to deny reputation import for user that doesn’t exist';
 
   @override
-  String get api_error_214 => '试图拒绝不在信誉导入流程第 2 步中的用户的信誉导入';
+  String get api_error_214 => 'Attempting to deny reputation import for user that isn’t in step 2 of the reputation import flow';
 
   @override
-  String get api_error_215 => '在请求最流行的付款方式时尝试同时指定 country_code 和 currency_code';
+  String get api_error_215 => 'Attempting to specify both country_code and currency_code when requesting most popular payment methods';
 
   @override
-  String get api_error_216 => '尝试为不存在的 country_code 请求最流行的付款方式';
+  String get api_error_216 => 'Attempting to request most popular payment methods for a country_code that doesn’t exist';
 
   @override
-  String get api_error_217 => '尝试为不存在的货币代码请求最流行的付款方式';
+  String get api_error_217 => 'Attempting to request most popular payment methods for a currency_code that doesn’t exist';
 
   @override
-  String get api_error_218 => '当请求用户没有经过验证的电子邮件时，尝试在需要经过验证的电子邮件的广告上进行交易';
+  String get api_error_218 => 'Attempting to open a trade on an ad that requires a verified email when the requesting user doesn’t have a verified email';
 
   @override
-  String get api_error_219 => '尝试使用来自一次性电子邮件提供商的电子邮件进行注册';
+  String get api_error_219 => 'Attempting to register with an email that’s from a disposable email provider';
 
   @override
-  String get api_error_220 => '尝试将帐户电子邮件更改为来自一次性电子邮件提供商的电子邮件';
+  String get api_error_220 => 'Attempting to change account email to an email from a disposable email provider';
 
   @override
-  String get api_error_221 => '试图为不存在的用户标记所有已读通知';
+  String get api_error_221 => 'Attempting to mark all notifications read for a user that doesn’t exist';
 
   @override
-  String get api_error_222 => '尝试为已导入的外部平台帐户请求信誉代码';
+  String get api_error_222 => 'Attempting to request reputation code for a outside platform account that has already been imported';
 
   @override
-  String get api_error_223 => '尝试在verificationMsg 为空时将verificationRequired 指定为true 来更新广告';
+  String get api_error_223 => 'Attempting to update ad with specifying verificationRequired as true while verificationMsg is null';
 
   @override
-  String get api_error_224 => '尝试使用指定 verifyMsg 更新广告，但广告不需要验证且广告更新请求也未将 verifyRequired 设置为 true';
+  String get api_error_224 => 'Attempting to update ad with specifying verificationMsg but the ad not requiring verification and the ad update request also not setting verificationRequired as true';
 
   @override
-  String get api_error_227 => '试图制裁不存在的用户';
+  String get api_error_227 => 'Attempting to sanction a user that doesn’t exist';
 
   @override
-  String get api_error_228 => '尝试使用不存在的管理员帐户制裁用户';
+  String get api_error_228 => 'Attempting to sanction user with an admin account that doesn’t exist';
 
   @override
-  String get api_error_229 => '尝试删除不存在的用户的制裁';
+  String get api_error_229 => 'Attempting to remove a sanction from a user that doesn’t exist';
 
   @override
-  String get api_error_230 => '尝试从具有不存在的管理员帐户的用户中删除制裁';
+  String get api_error_230 => 'Attempting to remove a sanction from a user with an admin account that doesn’t exist';
 
   @override
-  String get api_error_231 => '试图取消对没有任何制裁的用户的制裁';
+  String get api_error_231 => 'Attempting to remove a sanction from a user that doesn’t have any sanctions on them';
 
   @override
-  String get api_error_232 => '试图与因制裁而被禁止交易的用户进行交易';
+  String get api_error_232 => 'Attempting to open a trade with a user that’s currently prohibited from trading due to a sanction';
 
   @override
-  String get api_error_233 => '尝试删除 ID 不存在的反馈';
+  String get api_error_233 => 'Attempting to remove feedback with ID that doesn’t exist';
 
   @override
-  String get api_error_234 => '尝试删除已删除的反馈';
+  String get api_error_234 => 'Attempting to remove feedback that’s already removed';
 
   @override
-  String get api_error_235 => '试图从不存在的交易中删除争议状态';
+  String get api_error_235 => 'Attempting to remove dispute status from a trade that doesn’t exist';
 
   @override
-  String get api_error_236 => '试图从没有争议的交易中删除争议状态';
+  String get api_error_236 => 'Attempting to remove dispute status from a trade that isn’t disputed';
 
   @override
-  String get api_error_237 => '尝试以管理员身份调用交易开仓端点并指定 openAsUsername 参数时以不存在的用户身份开仓';
+  String get api_error_237 => 'Attempting to open a trade as a user that doesn’t exist when calling the trade opening endpoint as an admin and specifying the openAsUsername parameter';
 
   @override
-  String get api_error_240 => '买家在回复 SELL 类广告时提供的地址无效';
+  String get api_error_240 => 'Invalid address provided by the buyer when responding to a SELL-type ad';
 
   @override
-  String get api_error_241 => '买家在回复 SELL 类广告时试图提供内部地址（内部地址不允许用于交易结算）';
+  String get api_error_241 => 'Buyer attempting to provide an internal address when responding to a SELL-type ad (internal addresses are not allowed for the purpose of trade settlement)';
 
   @override
-  String get api_error_242 => '买家在制作 BUY 类型的广告时提供的地址无效';
+  String get api_error_242 => 'Invalid address provided by the buyer when creating a BUY-type ad';
 
   @override
-  String get api_error_244 => '买家在更新 BUY 类型的广告时提供的地址无效';
+  String get api_error_244 => 'Invalid address provided by the buyer when updating a BUY-type ad';
 
   @override
-  String get api_error_245 => '买家在更新 BUY 类广告时尝试提供内部地址（内部地址不允许用于交易结算）';
+  String get api_error_245 => 'Buyer attempting to provide an internal address when updating a BUY-type ad (internal addresses are not allowed for the purpose of trade settlement)';
 
   @override
-  String get api_error_246 => '尝试从未指定买方结算地址的 BUY 类型广告开始交易';
+  String get api_error_246 => 'Attempting to start a trade from a BUY-type ad that doesn’t specify the buyer settlement address';
 
   @override
-  String get api_error_247 => '试图从因制裁而被禁止提款的账户释放交易';
+  String get api_error_247 => 'Attempting to release a trade from an account that’s prohibited from withdrawing due to sanctions';
 
   @override
-  String get api_error_248 => '当交易金额不足以支付结算相关费用时尝试释放交易';
+  String get api_error_248 => 'Attempting to release a trade when the amount of the trade isn’t enough to cover the settlement-related fees';
 
   @override
-  String get api_error_249 => '尝试更新未设置buyerSettlementAddress 且未在更新请求中设置buyerSettlementAddress 参数的BUY 类型广告';
+  String get api_error_249 => 'Attempting to update a BUY-type ad that doesn’t have buyerSettlementAddress set without setting the buyerSettlementAddress parameter in the update request';
 
   @override
-  String get api_error_250 => '申请 BTC 提款费时提供的地址无效';
+  String get api_error_250 => 'Invalid address provided when requesting withdrawal fee for BTC';
 
   @override
-  String get api_error_251 => '通过响应 BTC SELL 类型的广告开仓时未提供费用水平';
+  String get api_error_251 => 'Fee level not provided when opening a trade by responding to a BTC SELL-type ad';
 
   @override
-  String get api_error_252 => '创建 BTC BUY 类型的广告时未提供费用水平';
+  String get api_error_252 => 'Fee level not provided when creating a BTC BUY-type ad';
 
   @override
-  String get api_error_253 => '更新未设置费用水平的 BTC BUY 类型广告时未提供费用水平';
+  String get api_error_253 => 'Fee level not provided when updating a BTC BUY-type ad that doesn’t have a fee level set';
 
   @override
-  String get api_error_255 => '尝试使用超出允许范围的“之后”时间戳获取通知';
+  String get api_error_255 => 'Attempting to get notifications with “after” timestamp that’s outside of the allowed range';
 
   @override
-  String get api_error_256 => '尝试注册已存在的推送通知令牌';
+  String get api_error_256 => 'Attempting to register a push notification token that already exists';
 
   @override
-  String get api_error_257 => '尝试注册无效的推送通知令牌';
+  String get api_error_257 => 'Attempting to register a push notification token that isn’t valid';
 
   @override
-  String get api_error_258 => '尝试为已拥有 500 个设备令牌的帐户注册推送通知令牌，删除现有令牌之一，然后重试';
+  String get api_error_258 => 'Attempting to register a push notification token for an account that already has 500 device tokens, delete one of the existing tokens before trying this again';
 
   @override
-  String get api_error_259 => '尝试删除不存在或不属于该用户的令牌';
+  String get api_error_259 => 'Attempting to delete a token that doesn’t exist or doesn’t belong to this user';
 
   @override
-  String get account => '帐户';
+  String get account => 'Account';
 
   @override
-  String get login => '登录';
+  String get login => 'Login';
 
   @override
-  String get skip => '跳跃';
+  String get skip => 'Skip';
 
   @override
-  String get pin_setup => '设置 PIN';
+  String get pin_setup => 'Set up PIN';
 
   @override
-  String get pin_enter_continue => '输入 PIN 以继续';
+  String get pin_enter_continue => 'Enter PIN to continue';
 
   @override
-  String get pin_enter => '输入Pin';
+  String get pin_enter => 'Enter PIN';
 
   @override
-  String get pin_enter_to_confirm_transaction => '输入 PIN 以确认交易';
+  String get pin_enter_to_confirm_transaction => 'Enter PIN to confirm transaction';
 
   @override
-  String get pin_you_can_use => '您可以使用此 PIN 解锁应用程序。';
+  String get pin_you_can_use => 'You can use this PIN to unlock the app.';
 
   @override
-  String get pin_confirm => '确认PIN码';
+  String get pin_confirm => 'Confirm PIN';
 
   @override
-  String get pin_current => '当前密码';
+  String get pin_current => 'Current PIN';
 
   @override
-  String get pin_set => '设置 PIN 码';
+  String get pin_set => 'Set PIN code';
 
   @override
-  String get pin_do_not_match => '引脚不匹配';
+  String get pin_do_not_match => 'PINs don\'t match';
 
   @override
-  String get pin_second_as_first => '第一个引脚必须与第二个引脚相同。';
+  String get pin_second_as_first => 'The PIN you entered the second time doesn\'t match the first one.';
 
   @override
-  String get pin_wrong_current => '当前 PIN 码错误';
+  String get pin_wrong_current => 'Wrong current PIN';
 
   @override
-  String get pin_please_input_correct => '请输入正确的当前 PIN。';
+  String get pin_please_input_correct => 'Please input correct current PIN.';
 
   @override
-  String get enter_email => '输入邮箱';
+  String get enter_email => 'Enter email';
 
   @override
-  String get convert => '兑换';
+  String get convert => 'Convert';
 
   @override
-  String get recent_transactions => '最近的交易';
+  String get recent_transactions => 'Recent transactions';
 
   @override
-  String get transactions_30_days => '过去 30 天的交易';
+  String get transactions_30_days => 'Transactions for the last 30 days';
 
   @override
-  String get forgot_password => '忘记密码？';
+  String get forgot_password => 'Forgot password?';
 
   @override
-  String get password_have_changed => '密码已更改。';
+  String get password_have_changed => 'Password have changed.';
 
   @override
-  String get i_want_to_buy => '我想买';
+  String get i_want_to_buy => 'I want to buy';
 
   @override
-  String get error_password_reset_token_invalid => '为密码重置提供的令牌无效';
+  String get error_password_reset_token_invalid => 'Token provided for password reset is invalid';
 
   @override
-  String get error_password_reset_unverified_email => '尝试使用未经验证的电子邮件为用户重置密码';
+  String get error_password_reset_unverified_email => 'Trying reset a password for a user with an unverified email';
 
   @override
-  String get i_want_to_buy_new => '我想买';
+  String get i_want_to_buy_new => 'I want to buy';
 
   @override
-  String get new_password => '新密码（8-72 个字符）';
+  String get new_password => 'New password (8-72 characters)';
 
   @override
-  String get i_want_to_sell => '我想卖';
+  String get i_want_to_sell => 'I want to sell';
 
   @override
-  String get log_in_to_start_trading => '登录开始交易';
+  String get log_in_to_start_trading => 'Log in to start trading';
 
   @override
-  String get why_do_you_need_my_email => '为什么需要我的电子邮件？';
+  String get why_do_you_need_my_email => 'Why do you need my email?';
 
   @override
-  String get view_all_transactions => '查看所有交易';
+  String get view_all_transactions => 'View all transactions';
 
   @override
-  String get email_is_used_to => '电子邮件用于恢复您的密码或向您发送电子邮件通知。您的电子邮件将根据一次性电子邮件提供商的第三方数据库进行检查。';
+  String get email_is_used_to => 'Email is used to recover your password or send you email notifications. Your email will be checked against a third-party database of disposable email providers.';
 
   @override
-  String get email_verified => '电子邮件已验证。';
+  String get email_verified => 'Email is verified.';
 
   @override
-  String get email_verification_error => '电子邮件验证错误。';
+  String get email_verification_error => 'Email verification error.';
 
   @override
-  String get email_token_error => '令牌或电子邮件错误。电子邮件未验证。';
+  String get email_token_error => 'Token or email are wrong. Email was not verified.';
 
   @override
-  String get welcome_screen_about => '安全且易于使用的个人对个人平台，用于交易比特币和门罗币的当地货币。';
+  String get welcome_screen_about => 'Safe and easy-to-use person-to-person platform for trading local currency for Bitcoin and Monero.';
 
   @override
-  String get view_in_block_explorer => '在区块浏览器中查看';
+  String get view_in_block_explorer => 'View in block explorer';
 
   @override
-  String get welcome_pick_a_payment_method => '选择一种付款方式或从所有可用的优惠中进行选择。';
+  String get welcome_pick_a_payment_method => 'Pick a payment method or choose from all the available offers.';
 
   @override
-  String get welcome_buy_press_buy => '按购买开始交易。';
+  String get welcome_buy_press_buy => 'Press BUY to start the trade.';
 
   @override
-  String get welcome_buy_follow_the_sellers => '在交易聊天中遵循卖家的指示！';
+  String get welcome_buy_follow_the_sellers => 'Follow the seller\'s instructions in the trade chat!';
 
   @override
-  String get welcome_sell_go_to_wallet => '转到您的钱包并存入您的硬币。';
+  String get welcome_sell_go_to_wallet => 'Go to your wallet and deposit your coins.';
 
   @override
-  String get welcome_sell_press_sell => '按卖出开始交易。';
+  String get welcome_sell_press_sell => 'Press SELL to start the trade.';
 
   @override
-  String get welcome_sell_follow_the_buyer => '在交易聊天中遵循买家的指示！';
+  String get welcome_sell_follow_the_buyer => 'Follow the buyer\'s instructions in the trade chat!';
 
   @override
-  String get get_started => '开始吧';
+  String get get_started => 'Get started';
 
   @override
-  String get send_to => '发送至';
+  String get send_to => 'Send to';
 
   @override
-  String get error_only_numbers_are_possible => '只有数字是可能的。';
+  String get error_only_numbers_are_possible => 'Only numbers are possible.';
 
   @override
-  String get error_entered_greater_than_balance => '输入的值大于余额。';
+  String get error_entered_greater_than_balance => 'The entered value is greater than the balance.';
 
   @override
-  String get amount_to_receive => '收款金额';
+  String get amount_to_receive => 'Amount to receive';
 
   @override
-  String get amount_to_send => '发送金额';
+  String get amount_to_send => 'Amount to send';
 
   @override
   String your_deposit_address(Object asset) {
-    return '您的 $asset 存款地址';
+    return 'Your $asset deposit address';
   }
 
   @override
   String pending(Object num1, Object num2) {
-    return '待处理（$num1/$num2）';
+    return 'Pending ($num1/$num2)';
   }
 
   @override
-  String get preview => '预习';
+  String get preview => 'Preview';
 
   @override
-  String get close => '关';
+  String get close => 'Close';
 
   @override
-  String get deposit => '存款';
+  String get deposit => 'Deposit';
 
   @override
-  String get share => '分享';
+  String get share => 'Share';
 
   @override
-  String get edit => '编辑';
+  String get edit => 'Edit';
 
   @override
-  String get confirm_transaction => '确认交易';
+  String get confirm_transaction => 'Confirm transaction';
 
   @override
-  String get transaction_fee => '手续费';
+  String get transaction_fee => 'Transaction fee';
 
   @override
-  String get show_qr_code => '显示二维码';
+  String get show_qr_code => 'Show QR code';
 
   @override
-  String get security => '安全';
+  String get security => 'Security';
 
   @override
-  String get no_pending_deposits => '没有待定存款';
+  String get no_pending_deposits => 'No pending deposits';
 
   @override
-  String get create_pin => '创建 PIN';
+  String get create_pin => 'Create PIN';
 
   @override
-  String get change_pin => '更改密码';
+  String get change_pin => 'Change PIN';
 
   @override
-  String get remove_pin => '删除 PIN';
+  String get remove_pin => 'Remove PIN';
 
   @override
-  String get remove_pin_message_success => 'PIN 已移除';
+  String get remove_pin_message_success => 'PIN removed';
 
   @override
-  String get you_will_receive => '您将收到';
+  String get you_will_receive => 'You will receive';
 
   @override
-  String get total_amount_to_send => '发送总金额';
+  String get total_amount_to_send => 'Total amount to send';
 
   @override
-  String get enter_amount_to_receive_without_fee => '输入要收到的金额（不含费用）';
+  String get enter_amount_to_receive_without_fee => 'Enter amount to be received (w/o fee)';
 
   @override
-  String get enter_amount_to_receive_with_fee => '输入要扣除的金额（收费）';
+  String get enter_amount_to_receive_with_fee => 'Enter amount to be deducted (with fee)';
 
   @override
-  String get return_reserve_from_trade => '交易收益准备金';
+  String get return_reserve_from_trade => 'Return reserve from trade';
 
   @override
-  String get user_profile => '用户资料';
+  String get user_profile => 'User profile';
 
   @override
-  String get personal_introduction => '个人介绍';
+  String get personal_introduction => 'Personal introduction';
 
   @override
-  String get trading_reputation_on_other_platforms => '在其他平台上交易声誉';
+  String get trading_reputation_on_other_platforms => 'Trading reputation on other platforms';
 
   @override
-  String get how_to_link_my_account => '如何关联我的帐户？';
+  String get how_to_link_my_account => 'How to link my account?';
 
   @override
   String link_account(Object platform) {
-    return '关联 $platform 帐户';
+    return 'Link $platform account';
   }
 
   @override
   String what_is_your_username(Object platform) {
-    return '您在 $platform上的用户名是什么？';
+    return 'What is your username on $platform?';
   }
 
   @override
-  String get enter_username => '输入用户名';
+  String get enter_username => 'Enter username';
 
   @override
-  String get edit_personal_introduction => '编辑个人介绍';
+  String get edit_personal_introduction => 'Edit personal introduction';
 
   @override
-  String get your_info => '您的信息';
+  String get your_info => 'Your info';
 
   @override
-  String get website => '网站';
+  String get website => 'Website';
 
   @override
-  String get are_you_sure => '你确定吗？';
+  String get are_you_sure => 'Are you sure?';
 
   @override
-  String get no_trusted_users_yet => '还没有受信任的用户。';
+  String get no_trusted_users_yet => 'No trusted users yet.';
 
   @override
-  String get no_blocked_users_yet => '还没有被屏蔽的用户。';
+  String get no_blocked_users_yet => 'No blocked users yet.';
 
   @override
-  String get no_transactions_yet => '还没有交易。';
+  String get no_transactions_yet => 'No transactions yet.';
 
   @override
-  String get web_links => '网页链接';
+  String get web_links => 'Web links';
 
   @override
-  String get tor_links => 'Tor 链接';
+  String get tor_links => 'Tor links';
 
   @override
-  String get i2p_links => 'I2P 链接';
+  String get i2p_links => 'I2P links';
 
   @override
-  String get active_coupons => '有效优惠券';
+  String get active_coupons => 'Active coupons';
 
   @override
-  String get expired_coupons => '过期优惠券';
+  String get expired_coupons => 'Expired coupons';
 
   @override
-  String get hide_expired_coupons => '隐藏过期的优惠券';
+  String get hide_expired_coupons => 'Hide expired coupons';
 
   @override
-  String get show_expired_coupons => '显示过期优惠券';
+  String get show_expired_coupons => 'Show expired coupons';
 
   @override
-  String get terms_and_conditions => '条款和条件';
+  String get terms_and_conditions => 'Terms and conditions';
 
   @override
-  String get current_email => '当前的电子邮件';
+  String get current_email => 'Current email';
 
   @override
-  String get remove_email => '删除电子邮件';
+  String get remove_email => 'Remove email';
 
   @override
-  String get email_not_received_content => '如果您没有收到验证邮件，请检查您的“垃圾邮件”文件夹或';
+  String get email_not_received_content => 'If you have not received the verification email, please check your “Spam” folder or';
 
   @override
-  String get email_not_received_link => '单击此处重新发送电子邮件。';
+  String get email_not_received_link => 'click here to resend the email.';
 
   @override
-  String get email_confirm_delete => '确认电子邮件删除';
+  String get email_confirm_delete => 'Confirm email delete';
 
   @override
-  String get email_deleted => '电子邮件已删除。';
+  String get email_deleted => 'Email deleted.';
 
   @override
   String email_confirmation_we_ve_sent_an_email(Object email) {
-    return '我们已向 $email发送了一封电子邮件。单击电子邮件中的链接以验证您的电子邮件地址。';
+    return 'We’ve sent an email to $email. Click the link in the email to verify your email address.';
   }
 
   @override
   String app_staff(Object appName) {
-    return '$appName 员工';
+    return '$appName staff';
   }
 
   @override
-  String get current_password => '当前密码';
+  String get current_password => 'Current password';
 
   @override
-  String get save_your_backup_code => '保存备用代码';
+  String get save_your_backup_code => 'Save your backup code';
 
   @override
-  String get your_backup_code => '您的备用代码';
+  String get your_backup_code => 'Your backup code';
 
   @override
-  String get set_up_2fa => '设置 2FA';
+  String get set_up_2fa => 'Set up 2FA';
 
   @override
-  String get download_2fa => '下载 2FA 应用程序。复制下面的代码并将其粘贴到您的 2FA 应用程序中。';
+  String get download_2fa => 'Download a 2FA app. Copy the code below and paste it into your 2FA app.';
 
   @override
-  String get paste_code => '粘贴代码';
+  String get paste_code => 'Paste code';
 
   @override
-  String get code_valid => '代码有效';
+  String get code_valid => 'Code valid';
 
   @override
-  String get verifying_the_code => '验证代码...';
+  String get verifying_the_code => 'Verifying the code...';
 
   @override
-  String get language => '语言';
+  String get language => 'Language';
 
   @override
-  String get my_profile => '我的简历';
+  String get my_profile => 'My profile';
 
   @override
-  String get choose_ad_default_region => '选择广告默认区域';
+  String get choose_ad_default_region => 'Choose ad default region';
 
   @override
-  String get knowledge_base => '知识库';
+  String get knowledge_base => 'Knowledge base';
 
   @override
-  String get report_this_ad => '举报此广告';
+  String get report_this_ad => 'Report this ad';
 
   @override
-  String get cash_only => '现金支付';
+  String get cash_only => 'Cash only';
 
   @override
-  String get dispute_started => '争议开始';
+  String get dispute_started => 'Dispute started';
 
   @override
-  String get payment_info => '付款信息';
+  String get payment_info => 'Payment info';
 
   @override
-  String get trade_ad => '贸易广告';
+  String get trade_ad => 'Trade ad';
 
   @override
-  String get ask_delete_ad => '你确定要删除该广告？';
+  String get ask_delete_ad => 'Are you sure you want to delete this ad?';
 
   @override
-  String get general => '一般';
+  String get general => 'General';
 
   @override
-  String get final_price => '最终价格';
+  String get final_price => 'Final price';
 
   @override
-  String get use_price_formula_to_calculate => '使用价格公式计算';
+  String get use_price_formula_to_calculate => 'Use price formula to calculate';
 
   @override
-  String get enter_price_formula => '输入价格公式';
+  String get enter_price_formula => 'Enter price formula';
 
   @override
-  String get trade_limits => '交易限制（可选）';
+  String get trade_limits => 'Trade limits (optional)';
 
   @override
-  String get trade_details => '交易详情（可选）';
+  String get trade_details => 'Trade details (optional)';
 
   @override
-  String get reply => '答复';
+  String get reply => 'Reply';
 
   @override
-  String get trade_loading_failed => '交易加载失败，请检查连接。';
+  String get trade_loading_failed => 'Trade loading failed, please check connection.';
 
   @override
-  String get dark_theme => '黑暗主题';
+  String get dark_theme => 'Dark theme';
 
   @override
   String search__no_results(Object country) {
-    return '$country 中没有符合所选条件的结果...目前还没有。 ';
+    return 'No results in $country with the selected criteria... yet. ';
   }
 
   @override
-  String get affiliate__explain_is_reg => '当任何用户通过您的推荐代码链接登陆网站后注册时，就注册了从属关系。';
+  String get affiliate__explain_is_reg => 'Affiliation is registered when any user signs up after landing on the site from a link with your referral code.';
 
   @override
-  String get affiliate__ref_code_title => '您的推荐码';
+  String get affiliate__ref_code_title => 'Your referral code';
 
   @override
   String affiliate__users__text(Object number) {
-    return '您目前已注册为 $number 用户的附属机构，并将从这些用户完成的所有交易中赚取佣金。';
+    return 'You are currently registered as an affiliate for $number users and will earn commissions from all trades done by these.';
   }
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• 您可以链接到任何单独的页面，例如国家/地区列表或付款方式列表，或 $appName 上的任何其他内容。\n• 您将从通过您的会员链接注册并进行交易的用户那里获得加密货币。\n• 每天都会以相关加密货币向您的 $appName 钱包付款。\n• 佣金将在用户注册后一年内支付。佣金基于新用户为 $appName（交易费用）带来的收入。\n• 禁止任何犯规行为，例如误导性广告。\n• 禁止发送垃圾邮件。垃圾邮件包括在论坛/reddit 上发送未订阅的私人或公共消息、未订阅的群发邮件等。\n• 禁止在网站上添加隐藏的 iframe 以捕获关联公司。只允许使用附属 iframe 或直接链接到该网页。\n• $appName 有权在任何给定时间禁用任何附属用户。如果您违反条款，您的联盟计划将被终止。';
+    return '• You can link to any individual page, such as country listing or payment method listing, or anything else on $appName. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your $appName wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for $appName (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• $appName has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object appName, Object assetSymbol) {
-    return '您有两个用户，即在 $appName 上注册的 $assetName 的买方和卖方，他们进行了一笔价值为 100 $assetSymbol的交易。您从两个参与者那里获得 $appName 交易费用的 20% 佣金，总计 $appName 费用的 40%。\n\n您的收入为 0.4 $assetSymbol。只有通过我们的交易流程完成的销售才重要。每天进行支付。\n\n$appName 支持非常愿意帮助您解决任何问题。';
+    return 'You get two users, buyer and seller of the $assetName registered on $appName, and they do one trade valued 100 $assetSymbol. You earn 20% commission on the $appName trading fees from both participants, in total 40% of the $appName fee.\n\nYour earned sum is 0.4 $assetSymbol. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\n$appName support is more than willing to help you with any questions.';
   }
 
   @override
-  String get affiliate__enable_btn => '启用会员计划';
+  String get affiliate__enable_btn => 'Enable affiliate program';
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return '您的联属网络营销计划已启用，您可以通过将联属网络营销标签 $ref_code 添加到任何 $appName URL 来赚取佣金。';
+    return 'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag $ref_code to any $appName URL.';
   }
 
   @override
   String reputation_import__step__username__input__label(Object platform) {
-    return '您的 $platform 用户名';
+    return 'Your $platform username';
   }
 
   @override
   String reputation_import__step__code__message(Object platform) {
-    return '将此代码添加到您的公开 $platform 个人资料中的某个位置。验证代码后，您可以将其删除。';
+    return 'Add this code somewhere on your public $platform profile. Once we\'ve verified the code, you can remove it.';
   }
 
   @override
   String settings__homepage_tip(Object example_url) {
-    return '显示在您的公开个人资料上。只接受有效的 URL（例如 https://$example_url）';
+    return 'Shown on your public profile. Only valid URL accepted (e.g. https://$example_url)';
   }
 
   @override
-  String get settings__personal_info_tip => '显示在您的公开个人资料上。最多 65536 个字符。可以使用 Markdown 进行样式设置。';
+  String get settings__personal_info_tip => 'Shown on your public profile. Maximum 65536 characters. Can use markdown for styling.';
 
   @override
-  String get settings__personal_info_tip_1 => '显示在您的公开个人资料上。最多 65536 个字符。';
+  String get settings__personal_info_tip_1 => 'Shown on your public profile. Maximum 65536 characters.';
 
   @override
-  String get coupons__coupon__type_here => '在此处输入您的优惠券';
+  String get coupons__coupon__type_here => 'Type your coupon here';
 
   @override
-  String get trade__mark_pay_according => ' 根据如下所示的付款明细付款。如果您有任何问题，请在聊天中询问卖家。';
+  String get trade__mark_pay_according => ' Pay according to the payment details shown below. If you have any questions, ask the seller in the chat.';
 
   @override
-  String get dashboard__trade__status__open => '打开';
+  String get dashboard__trade__status__open => 'Open';
 
   @override
-  String get wallet__available_balance => '可用余额';
+  String get wallet__available_balance => 'Available Balance';
 
   @override
-  String get trade__dialog__confirm_release_monero_text_password => '此密码用作生成非托管结算钱包并签署交易的偏移量。如果您丢失此密码，LocalMonero 将无法恢复钱包。';
+  String get trade__dialog__confirm_release_monero_text_password => 'This password is used as the offset to generate the non-custodial settlement wallet and sign the transaction. LocalMonero will have no way of recovering the wallet if you lose this password.';
 
   @override
-  String get dont_have_an_account_yet => '还没有帐户？';
+  String get dont_have_an_account_yet => 'Don\'t have an account yet?';
 
   @override
-  String get app_trades => '交易';
+  String get app_trades => 'Trades';
 
   @override
-  String get app_unlimited => '无限';
+  String get app_unlimited => 'Unlimited';
 
   @override
-  String get app_guides => '指南';
+  String get app_guides => 'Guides';
 
   @override
-  String get app_edit_this_ad => '修改此广告';
+  String get app_edit_this_ad => 'Edit this ad';
 
   @override
-  String get app_you_can_use_markdown => '您可以使用降价来设置广告字词的样式（不允许使用图片）。';
+  String get app_you_can_use_markdown => 'You can use markdown to style your ad\'s terms (images not allowed).';
 
   @override
-  String get app_no_trades_to_export => '没有贸易可出口。';
+  String get app_no_trades_to_export => 'No trades to export.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return '在一张纸上写下您的备份代码（上方为绿色）并将其存放在安全的地方。如果您丢失了手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失此代码，$appName 将无法帮助您。';
+    return 'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. $appName will not be able to help you should you lose this code.';
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => '在制作广告之前，请阅读我们的 ';
+  String get ad_post_ad_rules_text_0 => 'Before creating an advertisement please read through our ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '谨防试图冒充员工的骗子！\n${appName} 管理员永远不会告诉您完成交易。\n员工消息的背景为红色。';
+    return 'Beware of scammers trying to impersonate staff! \n${appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
   }
 
   @override
   String app_buy_sell(Object val) {
-    return '您希望 $val 多少？';
+    return 'How much do you wish to $val?';
   }
 
   @override
   String app_buyer_marked_as_paid(Object val) {
-    return '$val 已将交易标记为已付款';
+    return '$val has marked the trade as paid';
   }
 
   @override
   String app_buy_crypto_from(Object val) {
-    return '从 $val 购买加密货币';
+    return 'Buy crypto from $val';
   }
 
   @override
   String app_sell_crypto_to(Object val) {
-    return '将加密货币卖给 $val';
+    return 'Sell crypto to $val';
   }
 
   @override
   String app_trades_with(Object val) {
-    return '查看与 $val 的交易';
+    return 'See trades with $val';
   }
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '（$val1 可以在 $val2 分钟内取消，除非您标记为已付款）';
+    return '($val1 will be able to cancel in $val2 min unless you mark paid)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '（$val 现在可以取消，除非您标记为已付款）';
+    return '($val is now able to cancel unless you mark paid)';
   }
 
   @override
   String app_buying_from(Object asset, Object amount, Object username) {
-    return '从 $username 购买 $asset $amount';
+    return 'Buying $asset $amount from $username';
   }
 
   @override
   String app_selling_to(Object asset, Object amount, Object username) {
-    return '将 $asset $amount 出售给 $username';
+    return 'Selling $asset $amount to $username';
   }
 
   @override
   String app_for_sum(Object val) {
-    return '$val';
+    return 'for $val';
   }
 
   @override
-  String get app_buy_crypto => '购买加密货币';
+  String get app_buy_crypto => 'Buy crypto from';
 
   @override
-  String get app_sell_crypto => '将加密货币出售给';
+  String get app_sell_crypto => 'Sell crypto to';
 
   @override
-  String get app_intall_trade_title => '请安装 AgoraDesk 以查看此交易';
+  String get app_intall_trade_title => 'Please install AgoraDesk to view this trade';
 
   @override
-  String get app_intall_ad_title => '请安装 AgoraDesk 以查看此广告';
+  String get app_intall_ad_title => 'Please install AgoraDesk to view this ad';
 
   @override
-  String get app_intall_trade_body => '这是一个基于比特币的交易，它需要我们的 AgoraDesk 应用程序才能查看。';
+  String get app_intall_trade_body => 'This is a Bitcoin-based trade, it requires our AgoraDesk app to view.';
 
   @override
-  String get app_intall_ad_body => '这是一个基于比特币的广告，需要我们的 AgoraDesk 应用才能查看。';
+  String get app_intall_ad_body => 'This is a Bitcoin-based ad, it requires our AgoraDesk app to view.';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => '在您 100% 确定您已收到资金之前，切勿完成交易。诈骗者会试图诱骗您提前完成。';
+  String get app_trade_option_payment_receiver_cancel_notice => 'Never finalize a trade until you are 100% sure you have received the money. Scammers will try to trick you into finalizing early.';
 
   @override
-  String get app_cancel_trade_message => '犯了错误或想尝试其他交易者？如果您已经转移资金并想立即取消，您需要自行与您的贸易伙伴协商退还款项。除非您确定已收到退款，否则切勿取消。';
+  String get app_cancel_trade_message => 'Made a mistake or want to try another trader? If you have transferred the funds already and want to cancel now, you need to negotiate the return of your payment with your trading partner by yourself. Never cancel unless you are sure you have received your money back.';
 
   @override
-  String get app_all_feedback => '所有反馈';
+  String get app_all_feedback => 'All feedback';
 
   @override
-  String get app_camera => '相机';
+  String get app_camera => 'Camera';
 
   @override
-  String get app_clear => '清除';
+  String get app_clear => 'Clear';
 
   @override
-  String get app_ad_deleted => '广告已删除';
+  String get app_ad_deleted => 'Ad deleted';
 
   @override
-  String get app_verifiacetion_code_to_seller => '这是您的验证码。您可以将其告知买家，以便买家无需使用设备即可验证您已完成交易。';
+  String get app_verifiacetion_code_to_seller => 'This is your verification code. You can tell it to the buyer so that the buyer can verify you’ve finalized the trade without them needing to use the device.';
 
   @override
-  String get app_verification_code => '验证码';
+  String get app_verification_code => 'Verification code';
 
   @override
-  String get app_ad => '广告';
+  String get app_ad => 'Ad';
 
   @override
-  String get app_with => '和';
+  String get app_with => 'with';
 
   @override
-  String get app_edited => '已编辑';
+  String get app_edited => 'Edited';
 
   @override
-  String get app_permanent => '永恒的';
+  String get app_permanent => 'Permanent';
 
   @override
-  String get app_error_saving => '保存时出错。更改未保存。';
+  String get app_error_saving => 'Error during saving. Changes weren\'t saved.';
 
   @override
-  String get app_manage_ads => '管理广告';
+  String get app_manage_ads => 'Manage ads';
 
   @override
-  String get app_vacation_enabled => '启用假期';
+  String get app_vacation_enabled => 'Vacation enabled';
 
   @override
-  String get app_trade_created => '贸易创造';
+  String get app_trade_created => 'Trade created';
 
   @override
-  String get app_session_expired => '会话已过期';
+  String get app_session_expired => 'Session expired';
 
   @override
-  String get app_anonymous_crash_diagnostics => '匿名崩溃诊断';
+  String get app_anonymous_crash_diagnostics => 'Anonymous crash diagnostics';
 
   @override
-  String get app_restart_now => '现在重启';
+  String get app_restart_now => 'Restart now';
 
   @override
-  String get app_postpone => '推迟';
+  String get app_postpone => 'Postpone';
 
   @override
-  String get app_biometric_authentication => '生物特征认证';
+  String get app_biometric_authentication => 'Biometric authentication';
 
   @override
-  String get app_biometric_authentication_message => '请设置 PIN 码以启用生物特征认证。';
+  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => '匿名崩溃诊断已被禁用，并且不会在您重新启动应用程序后发送。';
+  String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
 
   @override
-  String get app_trading_partners => '贸易伙伴';
+  String get app_trading_partners => 'Trading partners';
 
   @override
-  String get app_trade_status_settlement_processing_description => '正在处理和解。请稍等，您无需执行任何操作。';
+  String get app_trade_status_settlement_processing_description => 'The settlement is being processed. Please wait, there\'s nothing that you need to do.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => '选择在交易结算期间使用的费用水平。此处显示的值是当前汇率估计值，可能与贸易结算期间应用的值不同。如果交易金额太低而无法以所选费用水平结算交易，结算期间将自动选择较低的费用水平。';
+  String get app_buyer_settlement_fee_level_description => 'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.';
 
   @override
-  String get app_change_vacation_settings => '更改假期设置。';
+  String get app_change_vacation_settings => 'Change vacation settings.';
 
   @override
-  String get app_gallery => '画廊';
+  String get app_gallery => 'Gallery';
 
   @override
-  String get app_via => '通过';
+  String get app_via => 'via';
 
   @override
-  String get app_one_percent => '1% 费用';
+  String get app_one_percent => '1% fee';
 
   @override
-  String get app_final_amount => '最终金额';
+  String get app_final_amount => 'Final amount';
 
   @override
   String app_note_label(Object val) {
-    return '您在 $val 上的注释（只有您可以看到）';
+    return 'Your note on $val (only seen by you)';
   }
 
   @override
   String app_note_add(Object val) {
-    return '在 $val 上添加注释';
+    return 'Add a note on $val';
   }
 
   @override
   String app_update_new_version_available(Object val) {
-    return '新版本 $val 可用。';
+    return 'New version $val is available.';
   }
 
   @override
-  String get app_update_now => '现在更新';
+  String get app_update_now => 'Update now';
 
   @override
-  String get app_update_ingnor_until_next => '下次更新前忽略';
+  String get app_update_ingnor_until_next => 'Ignore until next update';
 
   @override
-  String get app_update_ignore_always => '总是忽略';
+  String get app_update_ignore_always => 'Always ignore';
 
   @override
-  String get app_tooltip_visibility => '点击以切换可见性';
+  String get app_tooltip_visibility => 'Tap to toggle visibility';
 
   @override
-  String get app_tooltip_long_press_ad => '长按广告以启用群组编辑';
+  String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
 
   @override
-  String get app_join_telegram => '加入电报群';
+  String get app_join_telegram => 'Join Telegram group';
 
   @override
-  String get app_join_matrix => '加入矩阵组';
+  String get app_join_matrix => 'Join Matrix group';
 
   @override
-  String get app_display_password => '显示密码';
+  String get app_display_password => 'Display password';
 
   @override
-  String get app_hide_password => '隐藏密码';
+  String get app_hide_password => 'Hide password';
 
   @override
-  String get app_trade_has_been_cancelled => '交易已取消。';
+  String get app_trade_has_been_cancelled => 'The trade has been cancelled.';
 
   @override
   String app_last_seen(Object val) {
-    return '最后一次看到$val';
+    return 'Last seen $val';
   }
 
   @override
-  String get app_open_additional_filters => '打开其他过滤器';
+  String get app_open_additional_filters => 'Open additional filters';
 
   @override
-  String get app_select_asset => '选择资产';
+  String get app_select_asset => 'Select asset';
 
   @override
-  String get app_select_trade_type => '选择交易类型';
+  String get app_select_trade_type => 'Select trade type';
 
   @override
-  String get app_paste => '粘贴';
+  String get app_paste => 'Paste';
 
   @override
-  String get app_scan_qr_code => '扫描二维码';
+  String get app_scan_qr_code => 'Scan QR code';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Buy or sell Bitcoin anonymously, without ID verification. Cash or online. Safe, fast, easy.\n\nWondering how to invest in Bitcoin? On AgoraDesk, purchasing bitcoins has never been easier - instantly buy BTC from a person using your favorite online payment method: PayPal, credit/debit card or bank transfer, gift cards, Venmo or any other. If you want to buy bitcoins near you with cash, you can find someone willing to sell bitcoins locally - the trading platform supports buying and selling BTC with cash. You can even buy bitcoins using cash by mail.\n\n- Safe and Smooth Trading\nJust like LocalBitcoins, we support any payment method, any currency, anywhere. We do not remove payment methods, and, unlike LocalBitcoins, we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nAgoraDesk is committed to maintaining the simplicity and straight-forwardness that made the original LocalBitcoins so popular. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical cryptocurrency community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://agoradesk.com/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Bitcoins to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
@@ -9197,36 +9197,39 @@ class I18nZh extends I18n {
   String get app_open_dropdown => 'Open dropdown';
 
   @override
-  String get error250Sbsignup250Sb175 => '尝试兑换注册期间不存在的优惠券';
+  String get error250Sbsignup250Sb175 => 'Attempting to redeem coupon that doesn’t exist during registration';
 
   @override
-  String get error250Sbsignup250Sb176 => '在注册期间尝试兑换过期的优惠券';
+  String get error250Sbsignup250Sb176 => 'Attempting to redeem an expired coupon during registration';
 
   @override
-  String get error250Sbsignup250Sb177 => '尝试兑换在注册期间缺货的优惠券';
+  String get error250Sbsignup250Sb177 => 'Attempting to redeem a coupon that’s out of stock during registration';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => '密码重置信已发送！检查你的收件箱。';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Password reset letter sent! Check your inbox.';
 
   @override
-  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => '同意条款并继续';
+  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Agree to terms and continue';
 
   @override
-  String get logout250Sbtitle => '登出';
+  String get logout250Sbtitle => 'Log out';
 
   @override
-  String get coupons250Sbcode8722Sbapply => '申请优惠券代码';
+  String get coupons250Sbcode8722Sbapply => 'Apply a coupon code';
 
   @override
   String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
-    return '在线购买 $assetName ';
+    return 'Buy $assetName online';
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => '看涨期权购买';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'call option buy';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => '看涨期权卖出';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'call option sell';
+
+  @override
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR anonymously';
 
   @override
   String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
@@ -9238,13 +9241,8 @@ class I18nZh extends I18n {
   String get app_ad_created => 'Ad created';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
-
-  @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val will be back soon!\\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\\nWe\'ll probably be back online soon. Stay updated in our community groups:';
   }
 
   @override
@@ -9264,6 +9262,41 @@ class I18nZh extends I18n {
 
   @override
   String get app_your_ads => 'Your ads';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val App Maintenance';
+  }
+
+  @override
+  String get app_push_new_message => 'You have a new message in a trade';
+
+  @override
+  String get app_push_new_offer => 'You have a new offer';
+
+  @override
+  String get app_push_trade_marked_completed => 'Trade marked as completed';
+
+  @override
+  String get app_push_trade_cancelled => 'Trade cancelled';
+
+  @override
+  String get app_push_trade_disputed => 'Trade disputed';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Buy/Sell Monero Anonymously';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Have questions? Ask in the community chats';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -10992,7 +11025,7 @@ class I18nZhCn extends I18nZh {
   String get error250Sbpost8722Sbad250Sb81 => '未正确设定价格';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => '无可的国家，付款方式和货币组合';
+  String get error250Sbpost8722Sbad250Sb86 => '国家、支付方式和货币的无效组合';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => '此付款方式对选定的国家无效';
@@ -12517,7 +12550,7 @@ class I18nZhCn extends I18nZh {
   String get knowledge250Sbatomic250Sbtitle => '原子互换技术将如何在门罗币上实现';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Note:</b> 强烈推荐读者阅读我们另外两篇相关文章 <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"为什么门罗币有尾部增发\"</a> 和 <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“门罗币挖矿: 什么使RandomX算法如此特别”</a>. 本文的核心概念基于这两篇文章.</i></p>\n\n<p>每当有人讨论区块链的缺点和不足之处时，能听到最高频的词汇就是可扩展性.区块链可扩展性的缺点并不是什么秘密，但是大多数人其实根本不知道什么是可扩展性和为什么有这个问题.</p>\n\n<p>事实是，可扩展性是一个笼统的术语，涵盖两个不同的类别：分别是单位时间内，协议层内部可扩展性和技术层外部可扩展性. 在本文中，我们将注意力集中在协议层内部可扩展性，总的来说是协议层设计的规则里，在单位时间里，整个系统可以处理多少笔交易的程度.</p>\n\n<p>比特币有一个区块大小限制,也就是每个区块1兆大小，在不计算隔离见证的情况下，比特币系统每秒只能处理7笔交易，计算隔离见证每秒可以处理也不过10笔交易左右，这意味着一旦一个区块中包含足够的交易，换句话说，每秒想转账的人数超过7到10个人，其他人交易将不得不排队等待下一个区块，也就是大概十分钟以后再转账，而VISA卡，支付宝和银行系统，每秒能处理几万到几十万笔交易. 比特币大约十分钟打包一个区块，打个比方就像每十分钟一班的火车. 当火车到了车站后，人们开始上车.一旦车厢满了，外面的任何人都必须等待下一辆火车.</p>\n\n<p>比特币是通过用矿工费多少来确定交易写进区块的优先顺序. 回到火车的比喻，可以想象每一个乘客，并不是按照先来后到排队上车，而是看谁出的钱多，有人愿意给火车司机五美元买一个座位. 其他乘客为了上车也纷纷效仿，最终展开了一场价格争夺战，为了争夺优先转账的权力. 当然了，驾驶员也可以决定是否要按照出价高低上车，或者仍旧遵守先到先得的政策，但事实上这是他赚钱的最佳机会，现实里的驾驶员，也就是矿工，往往会选择出价最高的人们来最大化自己的收入.</p>\n\n<p>总的来说，矿工们无论是单独挖矿，还是加入矿池，总之他们之间的算力互相竞争，结果是大约每十分钟会从全体矿工里，抽取一个幸运儿来扮演火车司机的角色来车站接乘客. 他们这时可以在区块中打包任何他们想要打包的交易，但通常会选择支付最高矿工费的那些.</p>\n\n<p>反之，如果车上有足够的空位，那么人们就没有动力去支付高额的费用给司机，因为有大量的座位可供使用.</p>\n\n<p>在2017年加密货币繁荣的鼎盛时期，比特币充斥着交易拥堵，而那些想要尽快转账和到账的人们，互相竞价，导致矿工费直线上升.而那些不愿支付高额矿工费的人，或者支付不起每笔转账几十元人民币的人们，他们的交易会被推迟数小时，数天，甚至完全退出了等待转账的队列.</p>\n\n<p>比特币的易用性会让每一个使用者痛苦不堪，假如真的像比特粉幻想中那样，有一天比特币被大规模采用了. 那情况将比2017年更糟，除了富人之外，其他任何人都将无法使用比特币，由于固定的区块大小导致主链吞吐量很小，转账权就被高额的费用接管了，更致命的一个问题是，火车司机们可以安排他们的托儿混在排队的人群里，就像黄牛囤积火车票一样，人为造成拥堵，例如垃圾交易，粉尘攻击，还有另一种情况，被称作挖空块，也就是火车司机并不拉人，直接空车驶过，为了更快的获取爆块奖励，这将在下面的例子中具体说明，因为矿工费中，爆块的奖励比手续费还要高，这会进一步造成转账排队和拥堵.</p>\n\n<p>门罗币设计时预见到这一点，为了不重蹈覆辙. 门罗币实施了动态区块大小.</p>\n\n<p>简单来说，门罗币也有一个区块大小上限，但这是一个软性上限. 当人们等待交易的时间太长时，矿工可以增加区块的大小. 如果还用火车类比的话，这意味着火车可以随着等待人数的增加而增加额外的车厢，比如本来一列火车有5节车厢，希望坐车的人多了，就把车厢增加到6节，10节，甚至几十节.而当排队的人减少后，仍旧恢复5节车厢，也就是区块将缩小到其原始大小.</p>\n\n<p>这似乎是一个好主意，那么为什么门罗币是唯一的一个实现此机制的加密货币呢. 为什么不将这种机制添加到比特币上以阻止区块拥堵的问题?</p>\n\n<p>不幸的是，这在比特币上是不可能的. 这涉及的知识有点偏技术性，但是我们会尽力在这里通俗易懂的解释.</p>\n\n<p> 矿工总是追求利益最大化，所以会做到尽可能打包最大块. 因为越大的块意味着里面转账的矿工费就越多.回到火车的例子，如果车厢没有限制的情况下，火车司机会尽可能的加车厢把所有乘客都拉走，哪怕客人只支付很少的车费，那也是额外的收入，就像矿工费很少，可积累起来也很可观.在这种情况下，如果有人恶意发起垃圾转账，比如用接近为0的手续费进行转账，那么整个区块账本数据会迅速增加.从而导致全节点数据膨胀，最终会导致全账本数量减少，危害整个系统安全. 还是用火车做例子，如果有很多无聊的人，本来并不想出行，可一毛钱就可以坐火者出去玩，就会有很多人没事也去坐车，结果是每列车厢都特别长，几百节，甚至几千节，而每次出车的记录要每一个运行全节点人记录下来，这才能保证不可篡改，这样的垃圾数据会变得异常大，目前比特币全账本300多G，很多人电脑硬盘已经装不下了，比特币全节点目前不到1万个，如果区块增加十倍，那么很快帮比特币记录的电脑硬盘就需要几T，当数据变成几十T,几百T的时候，普通人的设备就没有办法再记账，账本中心化的问题就会显现，假如全节点账本只剩下几十个，也就是说拥有账本的这少数人可以进行串通欺骗和作恶.比特币为了防止这一点的发生，限制了区块的大小，也就是车厢的数量，每次出火车，每秒就拉6个人，多了就要等十分钟以后，这样的好处确实是排除了那种占便宜的大爷大妈没事坐车，可这样做的坏处，就是想坐车的人之间要互相竞价，一旦每秒坐车的人超过6个，那就要等至少十分钟以后，甚至几十分钟，几小时才能转账和到账.</p>\n\n<p>那么，门罗币如何具有动态块大小又避免垃圾交易攻击呢,对此门罗币解决的答案虽然简单，却很巧妙. 当门罗币的矿工打包的一个区块大于正常区块时，会引入对区块爆块奖励的惩罚. 举例来说，如果，矿工想要增加区块的大小，那么爆块所获得的奖励将少于他们原本会获得的回报. 因此，只有在用户支付的矿工费超过爆块奖励损失的部分时，它们才会增加块大小.\n\n回到火车的例子，如果火车司机开一节火车去接客人，那么他的工资是800块固定工资加30个乘客的车费，如果他开两节车箱，他的工资会被惩罚减少到400，只有第二节车箱多拉的客人带来的收入大于400元，司机才会开两节车箱，也就是说打包一个更大的块.\n\n让我们先重温一下，加密货币的基本概念，关于矿工的奖励分成两部分，一个是爆块奖励，也是新币发行的过程，另一部分是人们转账时支付给矿工的手续费，举一个例子，2020年8月某个比特币区块的奖励由两部分组成，矿工总收入是6.25+0.8016 BTC，前面的6.25就是爆块奖励，2009年是每十分钟爆块奖励是50个BTC，第一次减半后为25，第二次减半后12.5，目前第三次减半已经完成，目前是6.25个比特币，所谓的减半就是指这部分新发行的币.\n\n\n这在火车例子里，相当于每次火车司机出发，不论有没有拉到乘客都会获取固定的工资，也就是爆块费，而排队的人额外收取的高额车票加起来就是0.8016Btc，就是转账费，也叫矿工费. \n\n在门罗币的世界里，同样是这个司机，假设本来正常情况下是每个区块获得1.7个门罗币的奖励＋30个人的手续费，现在矿工希望打包一个大区块包含60个人的转账，那么他的区块奖励，会从1.7个门罗币降到1.2个门罗币，通过打包大区块奖励将损失0.5 XMR，而多打包的30笔交易的矿工费之和为0.4 XMR，那么如果他真打包了一个大块，则将有0.1 XMR的净亏损，因此矿工不会这么做.相反，如果所有人的总交易费用加起来为0.7 XMR，那么即使他们从大块奖励罚款中损失了0.5 XMR，也将获得0.2 XMR的净收益，因此矿工将增大区块大小.\n\n以上门罗币奖励和惩罚的数字只是为了好举例子而进行的假设，实际上门罗币没有减半，爆块奖励也是曲线发行的，并且门罗币矿工如果打包的区块大小，超过前一百个区块平均大小一倍，爆块奖励就会为零，矿工只有转账手续费作为收入，也就是门罗币事实上在那个区块没有增发，而是只有现货循环，因此一旦有人恶意制造垃圾交易和试图拥堵门罗币，那么会被矿工自然打包解决.</p>\n\n<p>目前的网络情况下门罗币每秒处理转账的能力为1700笔每秒，并且这些动态块可以随着互联网迭代而自然增长，无需对块大小进行过分的限制，就可以避免垃圾交易攻击，同时还能避免拥堵和高额手续费.其实我们还可以从更多角度来讨论这个问题，以及比特币为什么不能学习门罗币的更多原因，文章到此，我们希望读者能至少了解门罗币是如何避免比特币和比特币衍生品，比如莱特币，以太坊等币的一些问题， 以及它们计划未来扩展其吞吐量的一些不切实际的地方，就像现实里Btc Core的软升级和矿霸的大区块为什么都说服不了对方,并且互相指责，因为从本质上比特币总量固定和固定区块大小，造成了一个顾此失彼的局面，而门罗币由于尾部增发机制，从而可以运行动态区块，于是产生了完全不同的另一种变革.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>强烈建议读者阅读我们的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《为什么门罗有尾部发射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《门罗挖矿：什么造就了RandomX》如此特别”</a>。本文基于其中介绍的概念。</i></p>\n\n<p>每当人们讨论区块链问题时，第一个跳出的词就是“扩展”。区块链不能很好地扩展已经不是什么秘密，但大多数人不知道为什么。</p>\n\n<p>事实是，扩展实际上是一个涵盖两个不同类别的总称：给定时间点的协议支持和技术支持。在本文中，我们将重点关注一个，协议支持基本上是衡量协议在给定时间可以处理多少事务的量度。</p>\n\n<p>比特币有区块大小限制，这意味着一旦足够多的交易被包含在一个区块中，任何额外的交易都必须排队等候下一个区块。一个有用的类比是考虑火车。一列火车停靠在车站，排队的人鱼贯而入。一旦火车满员，留在外面的任何人都必须等待下一班。</p>\n\n<p>比特币使用费用来确定谁进入区块。回到火车的类比，可以想象一位即将被落在后面的潜在乘客向火车工程师提供五美元让他坐下。其他乘客也纷纷效仿，最终发生了一场竞价战，看谁能坐到哪个座位。由司机决定他是否要遵守先到先得的政策，但通过接受出价最高的人来最大化他的收入符合他的最佳经济利益。</p>\n\n<p>在这个比喻中，矿工就是火车司机。他们可以在区块中包含他们想要的任何交易，但他们通常会选择支付费用最高的交易。</p>\n\n<p>或者，如果街区不是很满，人们就没有动力支付高额费用，因为有很多免费座位可供使用。</p>\n\n<p> 在 2017 年加密货币繁荣的鼎盛时期，比特币充斥着大量交易，那些想要包含在下一个区块或任何近期区块中的交易费用飙升。不愿支付高额手续费的交易延迟数小时、数天，甚至完全退出队列。</p>\n\n<p>如果人们经常谈论“大规模采用”，比特币将如何发展，这是一个令人痛心的见解。如果比特币被大众使用，情况会比 2017 年更糟，除了富人之外，任何人都无法访问比特币，仅仅是因为区块大小固定导致吞吐量很小，导致费用市场接管.</p>\n\n<p>Monero 预见到了这一点，并想做一些不同的事情。所以 Monero 开发人员实现了动态块大小。</p>\n\n<p>基本上，Monero 也有块大小上限，但它是软上限。当等待交易的队列太长时，矿工可以增加区块的大小。用我们的火车类比，你可以想象增加更多的火车车厢来容纳额外的乘客。队列为空后，块会收缩回原来的大小。</p>\n\n<p>如果这看起来是个不错的主意，那么问为什么门罗币是唯一实现了这个的加密货币似乎是合理的。为什么不将其添加到比特币上以解决吞吐量问题？</p>\n\n<p>不幸的是，这是不可能的。有几个原因，我们会尽力解释。</p>\n\n<p> 拥有大区块始终符合矿工的最大利益。有了大区块，他们可以进行更多交易，并从费用和区块奖励中赚取更多的钱。这有可能导致垃圾邮件攻击，即有人发送许多小额交易，收取少量费用，从而使链条膨胀。矿工只会增加区块大小，因为钱就是钱，不管多小。这将导致始终如一的大区块，而经济效益很小。比特币通过人为限制区块大小来解决这个问题，从而产生一个费用市场。垃圾邮件攻击者必须支付超过其他用户的费用，而且它不再便宜。但这意味着块已满，留下一些交易等待如上所述。</p>\n\n<p>那么门罗币如何在拥有动态块大小的同时避免垃圾邮件攻击呢？答案很简单，但很聪明。当区块大于正常值时，会引入对区块奖励的惩罚。如果矿工想要增加区块大小，他们从发现该区块中获得的奖励将少于他们在其他情况下获得的奖励。因此，只有当用户支付的交易费用超过区块奖励的损失部分时，他们才会增加区块大小。例如，如果矿工通过提高区块大小将损失 0.5 XMR，而支付的交易费用总和为 0.4 XMR，那么如果他们提高区块大小，将净损失 0.1 XMR，因此他们不会去做吧。相反，如果总交易费用加起来达到 0.7 XMR，那么将获得 0.2 XMR 的净收益，即使他们从区块奖励惩罚中损失了 0.5 XMR，因此矿工将增加规模。</p>\n\n<p>这些动态块允许网络有机增长，而无需人为地限制块大小来建立强制收费市场，同时仍然避免垃圾邮件攻击。我们可以从更多的角度来看待这个想法，以及为什么不可能添加到比特币的更多原因，但现在，我们希望读者了解门罗币如何回避比特币中的几个问题，它的衍生品，以及它计划如何将其吞吐量扩展到未来。</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => '每当人们讨论区块链的缺点不足时，能听到最高频的词汇就是可扩展性. 而门罗币在解决该问题上独树一帜，与其它加密货币截然不同.';
@@ -12817,7 +12850,7 @@ class I18nZhCn extends I18nZh {
   String get knowledge250Sbmining250Sb1250Sbtitle => '目标';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => '为了承上启下，我们来探讨一下挖矿的硬件设备.矿工们用他们的电脑来进行挖矿，但是并不是每台电脑的性能都是相同的.有些电脑足够强大到运行人工智能网络和大型游戏，但是有的电脑进行简单的任务都会卡顿.电脑性能的差距当然也会造成电脑之间的哈希计算能力，或者说挖矿效率的差距.<br/><br/>\n但是计算机之间的这些差异几乎可以忽略不计，因为与专用硬件（也称为专用集成电路（ASIC））哈希值计算能力相比，电脑是那么微不足道，ASIC比常规计算机的性能高出几个数量级.<br/><br/>\n让我们花一些时间来探索使ASIC如此强大的原因.想象一下所有设备都按照性能分布在某个坐标轴范围内，一端是，它可以做很多种不同的工作，但是每种工作效率都不太高.另一端只专注于一种工作，但极其高效的进行.CPUs和ASICs在这个光谱中完全不同的两端.<br/><br/>\n家用电脑中的CPU是第一种情况.它们可以做多种工作.例如浏览网络，玩游戏或渲染视频，但其中的任何一项都做的不是特别好.这种灵活性是以效率为代价的.<br/><br/>\n ASIC矿机在另一端，它们只能做一件事，但是以惊人的速度做到这一点.它们只能执行一个数学函数，但是由于可以忽略其他所有内容，因此运算性能提升到了天文数字级别.但是，这种效率的却是以牺牲灵活性为代价的，因此，哪怕任务发生很细微的改变（例如从计算x + y = z变为计算2x + y = z），则ASIC将完全停止运行. <br/><br/>\n每个人都拥有家庭计算机，但并非每个人都拥有ASIC矿机.这会导致部分人获得不公平的优势.';
+  String get knowledge250Sbmining250Sb2250Sbtext => '对于上下文，让我们谈谈挖矿硬件。矿工使用计算机来完成工作，但我们都知道并非每台计算机都是一样的。有些计算机功能强大，足以运行 AI 网络或激烈的游戏，而另一些计算机甚至难以完成简单的任务。这些计算能力的差异也会影响哈希率，或者他们寻找块解决方案的速率。 <br/><br/>\n但是，与专用硬件（也称为专用集成电路 (ASIC)）的哈希率相比，即使是计算机之间的这些差异也显得微不足道，它比普通计算机高出几个数量级。<br/><br/>\n让我们花些时间来探索是什么让 ASIC 如此强大。想象一下，所有的计算机都处于一个范围内的某个位置，范围从能够做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 处于这个范围的两端。<br/><br/>\n所有标准计算机中的 CPU 都位于第一端。他们可以做很多事情，例如浏览网页、玩游戏或渲染视频，但没有一项做得特别好。但这种灵活性是以效率为代价的。<br/><br/>\nASIC 在另一端，它们只能做一件事，但速度惊人。它们只能执行一个数学函数，但因为它们可以忽略其他所有内容，所以性能提升是天文数字。然而，这种效率确实是以灵活性为代价的，因此即使功能发生轻微变化——例如 x + y = z 变为 2x + y = z——那么 ASIC 将完全停止运行。 <br/><br/>\n不是每个人都拥有 ASIC，但每个人都拥有计算机。这可能导致不公平的优势。';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => '背景';
@@ -18431,7 +18464,7 @@ class I18nZhTw extends I18nZh {
   String get error250Sbpost8722Sbad250Sb81 => '未正確設定價格';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => '無可的國家，付款方式和貨幣組合';
+  String get error250Sbpost8722Sbad250Sb86 => '國家、支付方式和貨幣的無效組合';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => '此付款方式對選定的國家無效';
@@ -19956,7 +19989,7 @@ class I18nZhTw extends I18nZh {
   String get knowledge250Sbatomic250Sbtitle => '原子互換技術將如何在門羅幣上實現';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Note:</b> 強烈推薦讀者閱讀我們另外兩篇相關文章 <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"為什麼門羅幣有尾部增發\"</a> 和 <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“門羅幣挖礦: 什麼使RandomX演算法如此特別”</a>. 本文的核心概念基於這兩篇文章.</i></p>\n\n<p>每當有人討論區塊鏈的缺點和不足之處時，能聽到最高頻的詞彙就是可擴展性.區塊鏈可擴展性的缺點並不是什麼秘密，但是大多數人其實根本不知道什麼是可擴展性和為什麼有這個問題.</p>\n\n<p>事實是，可擴展性是一個籠統的術語，涵蓋兩個不同的類別：分別是單位時間內，協定層內部可擴展性和技術層外部可擴展性. 在本文中，我們將注意力集中在協議層內部可擴展性，總的來說是協定層設計的規則裡，在單位時間裡，整個系統可以處理多少筆交易的程度.</p>\n\n<p>比特幣有一個區塊大小限制,也就是每個區塊1兆大小，在不計算隔離見證的情況下，比特幣系統每秒只能處理7筆交易，計算隔離見證每秒可以處理也不過10筆交易左右，這意味著一旦一個區塊中包含足夠的交易，換句話說，每秒想轉帳的人數超過7到10個人，其他人交易將不得不排隊等待下一個區塊，也就是大概十分鐘以後再轉帳，而VISA卡，支付寶和銀行系統，每秒能處理幾萬到幾十萬筆交易. 比特幣大約十分鐘打包一個區塊，打個比方就像每十分鐘一班的火車. 當火車到了車站後，人們開始上車.一旦車廂滿了，外面的任何人都必須等待下一輛火車.</p>\n\n<p>比特幣是通過用礦工費多少來確定交易寫進區塊的優先順序. 回到火車的比喻，可以想像每一個乘客，並不是按照先來後到排隊上車，而是看誰出的錢多，有人願意給火車司機五美元買一個座位. 其他乘客為了上車也紛紛效仿，最終展開了一場價格爭奪戰，為了爭奪優先轉帳的權力. 當然了，駕駛員也可以決定是否要按照出價高低上車，或者仍舊遵守先到先得的政策，但事實上這是他賺錢的最佳機會，現實裡的駕駛員，也就是礦工，往往會選擇出價最高的人們來最大化自己的收入.</p>\n\n<p>總的來說，礦工們無論是單獨挖礦，還是加入礦池，總之他們之間的算力互相競爭，結果是大約每十分鐘會從全體礦工裡，抽取一個幸運兒來扮演火車司機的角色來車站接乘客. 他們這時可以在區塊中打包任何他們想要打包的交易，但通常會選擇支付最高礦工費的那些.</p>\n\n<p>反之，如果車上有足夠的空位，那麼人們就沒有動力去支付高額的費用給司機，因為有大量的座位可供使用.</p>\n\n<p>在2017年加密貨幣繁榮的鼎盛時期，比特幣充斥著交易擁堵，而那些想要儘快轉帳和到賬的人們，互相競價，導致礦工費直線上升.而那些不願支付高額礦工費的人，或者支付不起每筆轉帳幾十元人民幣的人們，他們的交易會被推遲數小時，數天，甚至完全退出了等待轉帳的佇列.</p>\n\n<p>比特幣的易用性會讓每一個使用者痛苦不堪，假如真的像比特粉幻想中那樣，有一天比特幣被大規模採用了. 那情況將比2017年更糟，除了富人之外，其他任何人都將無法使用比特幣，由於固定的區塊大小導致主鏈輸送量很小，轉帳權就被高額的費用接管了，更致命的一個問題是，火車司機們可以安排他們的托兒混在排隊的人群裡，就像黃牛囤積火車票一樣，人為造成擁堵，例如垃圾交易，粉塵攻擊，還有另一種情況，被稱作挖空塊，也就是火車司機並不拉人，直接空車駛過，為了更快的獲取爆塊獎勵，這將在下面的例子中具體說明，因為礦工費中，爆塊的獎勵比手續費還要高，這會進一步造成轉帳排隊和擁堵.</p>\n\n<p>門羅幣設計時預見到這一點，為了不重蹈覆轍. 門羅幣實施了動態區塊大小.</p>\n\n<p>簡單來說，門羅幣也有一個區塊大小上限，但這是一個軟性上限. 當人們等待交易的時間太長時，礦工可以增加區塊的大小. 如果還用火車類比的話，這意味著火車可以隨著等待人數的增加而增加額外的車廂，比如本來一列火車有5節車廂，希望坐車的人多了，就把車廂增加到6節，10節，甚至幾十節.而當排隊的人減少後，仍舊恢復5節車廂，也就是區塊將縮小到其原始大小.</p>\n\n<p>這似乎是一個好主意，那麼為什麼門羅幣是唯一的一個實現此機制的加密貨幣呢. 為什麼不將這種機制添加到比特幣上以阻止區塊擁堵的問題?</p>\n\n<p>不幸的是，這在比特幣上是不可能的. 這涉及的知識有點偏技術性，但是我們會盡力在這裡通俗易懂的解釋.</p>\n\n<p> 礦工總是追求利益最大化，所以會做到盡可能打包最大塊. 因為越大的塊意味著裡面轉帳的礦工費就越多.回到火車的例子，如果車廂沒有限制的情況下，火車司機會盡可能的加車廂把所有乘客都拉走，哪怕客人只支付很少的車費，那也是額外的收入，就像礦工費很少，可積累起來也很可觀.在這種情況下，如果有人惡意發起垃圾轉帳，比如用接近為0的手續費進行轉帳，那麼整個區塊帳本資料會迅速增加.從而導致全節點資料膨脹，最終會導致全帳本數量減少，危害整個系統安全. 還是用火車做例子，如果有很多無聊的人，本來並不想出行，可一毛錢就可以坐火者出去玩，就會有很多人沒事也去坐車，結果是每列車廂都特別長，幾百節，甚至幾千節，而每次出車的記錄要每一個運行全節點人記錄下來，這才能保證不可篡改，這樣的垃圾資料會變得異常大，目前比特幣全帳本300多G，很多人電腦硬碟已經裝不下了，比特幣全節點目前不到1萬個，如果區塊增加十倍，那麼很快幫比特幣記錄的電腦硬碟就需要幾T，當資料變成幾十T,幾百T的時候，普通人的設備就沒有辦法再記帳，帳本中心化的問題就會顯現，假如全節點帳本只剩下幾十個，也就是說擁有帳本的這少數人可以進行串通欺騙和作惡.比特幣為了防止這一點的發生，限制了區塊的大小，也就是車廂的數量，每次出火車，每秒就拉6個人，多了就要等十分鐘以後，這樣的好處確實是排除了那種佔便宜的大爺大媽沒事坐車，可這樣做的壞處，就是想坐車的人之間要互相競價，一旦每秒坐車的人超過6個，那就要等至少十分鐘以後，甚至幾十分鐘，幾小時才能轉帳和到賬.</p>\n';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>強烈建議讀者閱讀我們的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《為什麼門羅有尾部發射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《門羅挖礦：什麼造就了RandomX》如此特別”</a>。本文基於其中介紹的概念。</i></p>\n\n<p>每當人們討論區塊鏈問題時，第一個跳出的詞就是“擴展”。區塊鏈不能很好地擴展已經不是什麼秘密，但大多數人不知道為什麼。</p>\n\n<p>事實是，擴展實際上是一個涵蓋兩個不同類別的總稱：給定時間點的協議支持和技術支持。在本文中，我們將重點關註一個，協議支持基本上是衡量協議在給定時間可以處理多少事務的量度。</p>\n\n<p>比特幣有區塊大小限制，這意味著一旦足夠多的交易被包含在一個區塊中，任何額外的交易都必須排隊等候下一個區塊。一個有用的類比是考慮火車。一列火車停靠在車站，排隊的人魚貫而入。一旦火車滿員，留在外面的任何人都必須等待下一班。</p>\n\n<p>比特幣使用費用來確定誰進入區塊。回到火車的類比，可以想像一位即將被落在後面的潛在乘客向火車工程師提供五美元讓他坐下。其他乘客也紛紛效仿，最終發生了一場競價戰，看誰能坐到哪個座位。由司機決定他是否要遵守先到先得的政策，但通過接受出價最高的人來最大化他的收入符合他的最佳經濟利益。 </p>\n\n<p>在這個比喻中，礦工就是火車司機。他們可以在區塊中包含他們想要的任何交易，但他們通常會選擇支付費用最高的交易。</p>\n\n<p>或者，如果街區不是很滿，人們就沒有動力支付高額費用，因為有很多免費座位可供使用。</p>\n\n<p> 在 2017 年加密貨幣繁榮的鼎盛時期，比特幣充斥著大量交易，那些想要包含在下一個區塊或任何近期區塊中的交易費用飆升。不願支付高額手續費的交易延遲數小時、數天，甚至完全退出隊列。</p>\n\n<p>如果人們經常談論“大規模採用”，比特幣將如何發展，這是一個令人痛心的見解。如果比特幣被大眾使用，情況會比 2017 年更糟，除了富人之外，任何人都無法訪問比特幣，僅僅是因為區塊大小固定導致吞吐量很小，導致費用市場接管.</p>\n\n<p>Monero 預見到了這一點，並想做一些不同的事情。所以 Monero 開發人員實現了動態塊大小。</p>\n\n<p>基本上，Monero 也有塊大小上限，但它是軟上限。當等待交易的隊列太長時，礦工可以增加區塊的大小。用我們的火車類比，你可以想像增加更多的火車車廂來容納額外的乘客。隊列為空後，塊會收縮回原來的大小。</p>\n\n<p>如果這看起來是個不錯的主意，那麼問為什麼門羅幣是唯一實現了這個的加密貨幣似乎是合理的。為什麼不將其添加到比特幣上以解決吞吐量問題？</p>\n\n<p>不幸的是，這是不可能的。有幾個原因，我們會盡力解釋。</p>\n\n<p> 擁有大區塊始終符合礦工的最大利益。有了大區塊，他們可以進行更多交易，並從費用和區塊獎勵中賺取更多的錢。這有可能導致垃圾郵件攻擊，即有人發送許多小額交易，收取少量費用，從而使鏈條膨脹。礦工只會增加區塊大小，因為錢就是錢，不管多小。這將導致始終如一的大區塊，而經濟效益很小。比特幣通過人為限制區塊大小來解決這個問題，從而產生一個費用市場。垃圾郵件攻擊者必須支付超過其他用戶的費用，而且它不再便宜。但這意味著塊已滿，留下一些交易等待如上所述。</p>\n\n<p>那麼門羅幣如何在擁有動態塊大小的同時避免垃圾郵件攻擊呢？答案很簡單，但很聰明。當區塊大於正常值時，會引入對區塊獎勵的懲罰。如果礦工想要增加區塊大小，他們從發現該區塊中獲得的獎勵將少於他們在其他情況下獲得的獎勵。因此，只有當用戶支付的交易費用超過區塊獎勵的損失部分時，他們才會增加區塊大小。例如，如果礦工通過提高區塊大小將損失 0.5 XMR，而支付的交易費用總和為 0.4 XMR，那麼如果他們提高區塊大小，將淨損失 0.1 XMR，因此他們不會去做吧。相反，如果總交易費用加起來達到 0.7 XMR，那麼將獲得 0.2 XMR 的淨收益，即使他們從區塊獎勵懲罰中損失了 0.5 XMR，因此礦工將增加規模。</p>\n\n<p>這些動態塊允許網絡有機增長，而無需人為地限制塊大小來建立強制收費市場，同時仍然避免垃圾郵件攻擊。我們可以從更多的角度來看待這個想法，以及為什麼不可能添加到比特幣的更多原因，但現在，我們希望讀者了解門羅幣如何迴避比特幣中的幾個問題，它的衍生品，以及它計劃如何將其吞吐量擴展到未來。</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => '每當人們討論區塊鏈的缺點不足時，能聽到最高頻的詞彙就是可擴展性. 而門羅幣在解決該問題上獨樹一幟，與其它加密貨幣截然不同.';
@@ -20256,7 +20289,7 @@ class I18nZhTw extends I18nZh {
   String get knowledge250Sbmining250Sb1250Sbtitle => '目標';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => '為了承上啟下，我們來探討一下挖礦的硬件設備.礦工們用他們的電腦來進行挖礦，但是並不是每台電腦的性能都是相同的.有些電腦足夠強大到運行人工智能網絡和大型遊戲，但是有的電腦進行簡單的任務都會卡頓.電腦性能的差距當然也會造成電腦之間的哈希計算能力，或者說挖礦效率的差距.<br /><br/>\n但是計算機之間的這些差異幾乎可以忽略不計，因為與專用硬件（也稱為專用集成電路（ASIC））哈希值計算能力相比，電腦是那麼微不足道，ASIC比常規計算機的性能高出幾個數量級.<br/><br/>\n讓我們花一些時間來探索使ASIC如此強大的原因.想像一下所有設備都按照性能分佈在某個坐標軸範圍內，一端是，它可以做很多種不同的工作，但是每種工作效率都不太高.另一端只專注於一種工作，但極其高效的進行.CPUs和ASICs在這個光譜中完不同的兩端.<br/><br/>\n家用電腦中的CPU是第一種情況.它們可以做多種工作.例如瀏覽網絡，玩遊戲或渲染視頻，但其中的任何一項都做的不是特別好.這種靈活性是以效率為代價的.<br/><br/>\n ASIC礦機在另一端，它們只能做一件事，但是以驚人的速度做到這一點.它們只能執行一個數學函數，但是由於可以忽略其他所有內容，因此運算性能提升到了天文數字級別.但是，這種效率的卻是以犧牲靈活性為代價的，因此，哪怕任務發生很細微的改變（例如從計算x + y = z變為計算2x + y = z），則ASIC將完全停止運行. <br/><br/>\n每個人都擁有家庭計算機，但並非每個人都擁有ASIC礦機.這會導致部分人獲得不公平的優勢.';
+  String get knowledge250Sbmining250Sb2250Sbtext => '對於上下文，讓我們談談挖礦硬件。礦工使用計算機來完成工作，但我們都知道並非每台計算機都是一樣的。有些計算機功能強大，足以運行 AI 網絡或激烈的遊戲，而另一些計算機甚至難以完成簡單的任務。這些計算能力的差異也會影響哈希率，或者他們尋找塊解決方案的速率。 <br/><br/>\n但是，與專用硬件（也稱為專用集成電路 (ASIC)）的哈希率相比，即使是計算機之間的這些差異也顯得微不足道，它比普通計算機高出幾個數量級。<br/><br/>\n讓我們花些時間來探索是什麼讓 ASIC 如此強大。想像一下，所有的計算機都處於一個範圍內的某個位置，範圍從能夠做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 處於這個範圍的兩端。<br/><br/>\n所有標準計算機中的 CPU 都位於第一端。他們可以做很多事情，例如瀏覽網頁、玩遊戲或渲染視頻，但沒有一項做得特別好。但這種靈活性是以效率為代價的。<br/><br/>\nASIC 在另一端，它們只能做一件事，但速度驚人。它們只能執行一個數學函數，但因為它們可以忽略其他所有內容，所以性能提升是天文數字。然而，這種效率確實是以靈活性為代價的，因此即使功能發生輕微變化——例如 x + y = z 變為 2x + y = z——那麼 ASIC 將完全停止運行。 <br/><br/>\n不是每個人都擁有 ASIC，但每個人都擁有計算機。這可能導致不公平的優勢。';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => '背景';
@@ -24435,7 +24468,7 @@ class I18nZhTw extends I18nZh {
   String get receiving => '接收';
 
   @override
-  String get paying => '付款';
+  String get paying => '支付中';
 
   @override
   String get rate => '率';
@@ -24495,10 +24528,10 @@ class I18nZhTw extends I18nZh {
   String get api_error_77 => '資金不足，無法對請求的金額進行內部轉賬';
 
   @override
-  String get api_error_103 => '請求交易海報正在出售假期的廣告';
+  String get api_error_103 => '請求交易發帖人正在銷售假期的廣告';
 
   @override
-  String get api_error_105 => '請求交易的廣告海報沒有足夠的餘額來為託管提供資金';
+  String get api_error_105 => '請求交易的廣告海報沒有足夠的餘額來支付託管費用';
 
   @override
   String get api_error_107 => '嘗試在不設置 maxAmount 的情況下跟踪流動性';
@@ -24582,31 +24615,31 @@ class I18nZhTw extends I18nZh {
   String get api_error_239 => '嘗試發布交易時密碼錯誤';
 
   @override
-  String get api_error_243 => 'AgoraDesk 內部地址不能用於交易結算。請輸入外部的非 AgoraDesk XMR 地址以繼續。';
+  String get api_error_243 => '內部 AgoraDesk 地址不能用於交易結算。請輸入外部非 AgoraDesk XMR 地址以繼續。';
 
   @override
-  String get api_error_254 => '嘗試在過去 10 分鐘內將提款過帳到相同的地址和金額';
+  String get api_error_254 => '在過去 10 分鐘內嘗試將提款發送到相同的地址和金額';
 
   @override
-  String get api_error_260 => '嘗試在不存在的用戶上發布註釋';
+  String get api_error_260 => '試圖對不存在的用戶發表評論';
 
   @override
-  String get api_error_261 => '嘗試在您自己的帳戶上發布便條';
+  String get api_error_261 => '嘗試在您自己的帳戶上發布註釋';
 
   @override
-  String get api_error_262 => '嘗試獲取不存在的用戶的註釋';
+  String get api_error_262 => '試圖獲取關於不存在的用戶的註釋';
 
   @override
-  String get api_error_263 => '嘗試在您自己的帳戶上獲取註釋';
+  String get api_error_263 => '試圖在您自己的帳戶上獲取註釋';
 
   @override
-  String get api_error_264 => '嘗試刪除不存在的用戶的註釋';
+  String get api_error_264 => '試圖刪除不存在的用戶的註釋';
 
   @override
-  String get api_error_265 => '嘗試刪除您自己帳戶上的註釋';
+  String get api_error_265 => '試圖刪除您自己帳戶上的註釋';
 
   @override
-  String get api_error_267 => '嘗試刪除不存在的用戶備註';
+  String get api_error_267 => '試圖刪除不存在的用戶註釋';
 
   @override
   String get api_error_403 => '您無權執行此操作';
@@ -24624,7 +24657,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_46 => '請求必須包含帶有“msg”參數的 application/json 請求正文或帶有參數“document”下列出的圖像文件的 multipart/form-data 請求正文';
 
   @override
-  String get api_error_47 => '具有該用戶名的用戶已存在';
+  String get api_error_47 => '使用該用戶名的用戶已存在';
 
   @override
   String get api_error_48 => '使用該電子郵件的用戶已存在';
@@ -24633,7 +24666,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_50 => '嘗試向未設置電子郵件的用戶發送電子郵件';
 
   @override
-  String get api_error_51 => '為電子郵件驗證提供的令牌提供給不存在的用戶';
+  String get api_error_51 => '為電子郵件驗證提供的令牌被提供給不存在的用戶';
 
   @override
   String get api_error_52 => '為電子郵件驗證提供的令牌無效';
@@ -24642,13 +24675,13 @@ class I18nZhTw extends I18nZh {
   String get api_error_53 => '令牌中的電子郵件與數據庫中的當前電子郵件不匹配';
 
   @override
-  String get api_error_54 => '為密碼重置提供的令牌提供給數據庫中不存在的電子郵件';
+  String get api_error_54 => '為密碼重置提供的令牌被提供給數據庫中不存在的電子郵件';
 
   @override
   String get api_error_55 => '為密碼重置提供的令牌無效';
 
   @override
-  String get api_error_56 => '嘗試向不在數據庫中的電子郵件發送密碼重置電子郵件';
+  String get api_error_56 => '嘗試將密碼重置電子郵件發送到不在數據庫中的電子郵件';
 
   @override
   String get api_error_57 => '為密碼重置提供的令牌不是重置令牌';
@@ -24660,49 +24693,49 @@ class I18nZhTw extends I18nZh {
   String get api_error_59 => '嘗試使用未經驗證的電子郵件為用戶重置密碼';
 
   @override
-  String get api_error_62 => '不存在為帳戶公共數據請求提供的用戶名的帳戶';
+  String get api_error_62 => '不存在具有為帳戶公共數據請求提供的用戶名的帳戶';
 
   @override
-  String get api_error_63 => '嘗試上傳禁止類型的文件';
+  String get api_error_63 => '試圖上傳禁止類型的文件';
 
   @override
-  String get api_error_64 => '嘗試將不存在的通知標記為已讀';
+  String get api_error_64 => '試圖將不存在的通知標記為已讀';
 
   @override
-  String get api_error_65 => '試圖將已讀通知標記為已讀';
+  String get api_error_65 => '嘗試將已讀通知標記為已讀';
 
   @override
-  String get api_error_66 => '嘗試將聊天附件上傳到不存在的交易';
+  String get api_error_66 => '試圖上傳聊天附件到不存在的交易';
 
   @override
-  String get api_error_67 => '嘗試向不存在的交易發送聊天消息';
+  String get api_error_67 => '試圖向不存在的交易發送聊天消息';
 
   @override
   String get api_error_68 => '試圖獲取不存在的交易的聊天消息列表';
 
   @override
-  String get api_error_69 => '嘗試獲取不存在的聊天消息';
+  String get api_error_69 => '試圖獲取不存在的聊天消息';
 
   @override
   String get api_error_70 => '試圖獲取不存在賬戶的錢包地址';
 
   @override
-  String get api_error_71 => '嘗試獲取不存在的帳戶的交易';
+  String get api_error_71 => '試圖獲取一個不存在的賬戶的交易';
 
   @override
   String get api_error_72 => '試圖從不存在的賬戶中提取資金';
 
   @override
-  String get api_error_78 => '嘗試使用非法的參數組合製作獲取廣告';
+  String get api_error_78 => '嘗試使用無效的參數組合製作獲取廣告';
 
   @override
   String get api_error_79 => '請求的廣告 ID 不存在';
 
   @override
-  String get api_error_80 => '未在廣告更新/創建請求中同時設置 lat 和 lon';
+  String get api_error_80 => '沒有在廣告更新/創建請求中同時設置緯度和經度';
 
   @override
-  String get api_error_81 => '發布廣告時未設置價格公式';
+  String get api_error_81 => '發布廣告時沒有設置價格公式';
 
   @override
   String get api_error_82 => '嘗試為在線廣告設置緯度和經度';
@@ -24711,22 +24744,22 @@ class I18nZhTw extends I18nZh {
   String get api_error_83 => '嘗試將 ONLINE_SELL/CALL_SELL/PUT_BUY 特定屬性設置為不同類型的廣告';
 
   @override
-  String get api_error_84 => '嘗試將 ONLINE_BUY/CALL_BUY/PUT_SELL 特定屬性設置為不同類型的廣告';
+  String get api_error_84 => '嘗試將特定於 ONLINE_BUY/CALL_BUY/PUT_SELL 的屬性設置為不同類型的廣告';
 
   @override
   String get api_error_85 => '嘗試將 LOCAL_SELL 特定屬性設置為不同類型的廣告';
 
   @override
-  String get api_error_86 => '在創建/更新廣告時嘗試設置無效的國家/地區或付款方式或貨幣';
+  String get api_error_86 => '嘗試設置在創建/更新廣告時無效的國家/地區或付款方式或貨幣';
 
   @override
-  String get api_error_87 => '在創建/更新廣告時嘗試設置對該國家/地區無效的付款方式';
+  String get api_error_87 => '創建/更新廣告時嘗試設置對該國家/地區無效的付款方式';
 
   @override
-  String get api_error_88 => '在創建/更新廣告時嘗試設置對該付款方式無效的貨幣';
+  String get api_error_88 => '在創建/更新廣告時嘗試設置對該支付方式無效的貨幣';
 
   @override
-  String get api_error_89 => '嘗試在不設置 lon/lat 的情況下創建 LOCAL_* 廣告';
+  String get api_error_89 => '嘗試在不設置經/緯度的情況下創建 LOCAL_* 廣告';
 
   @override
   String get api_error_90 => '試圖訪問不存在的用戶的交易。';
@@ -24735,10 +24768,10 @@ class I18nZhTw extends I18nZh {
   String get api_error_91 => '嘗試使用不存在的用戶令牌訪問帳戶公共數據';
 
   @override
-  String get api_error_92 => '嘗試為不存在的用戶獲取通知';
+  String get api_error_92 => '試圖為不存在的用戶獲取通知';
 
   @override
-  String get api_error_93 => '嘗試為不存在的用戶獲取待定存款';
+  String get api_error_93 => '試圖為不存在的用戶獲取待處理的存款';
 
   @override
   String get api_error_94 => '試圖為不存在的用戶獲取反饋分數';
@@ -24747,19 +24780,19 @@ class I18nZhTw extends I18nZh {
   String get api_error_95 => '試圖為不存在的用戶獲取廣告';
 
   @override
-  String get api_error_96 => '試圖創建交易的不存在的用戶';
+  String get api_error_96 => '不存在的用戶試圖創建交易';
 
   @override
-  String get api_error_97 => '試圖為不存在的廣告創建交易';
+  String get api_error_97 => '嘗試為不存在的廣告創建交易';
 
   @override
-  String get api_error_98 => '試圖為不存在海報的廣告創建交易';
+  String get api_error_98 => '試圖為海報不存在的廣告創建交易';
 
   @override
-  String get api_error_99 => '在創建第一筆交易時嘗試請求高於 first_time_limit_asset 允許的金額';
+  String get api_error_99 => '創建第一筆交易時嘗試請求高於 first_time_limit_asset 允許的金額';
 
   @override
-  String get api_error_100 => '不能為創建交易請求少於 0.0000000001 XMR';
+  String get api_error_100 => '不能要求少於 0.0000000001 XMR 來創建交易';
 
   @override
   String get api_error_101 => '創建交易時請求的金額小於廣告的 min_amount';
@@ -24768,7 +24801,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_102 => '創建交易時請求的金額超過廣告的 max_amount_available';
 
   @override
-  String get api_error_104 => '請求交易海報上正在購買假期的廣告';
+  String get api_error_104 => '請求交易發帖人正在購買假期的廣告';
 
   @override
   String get api_error_106 => '交易請求者沒有足夠的餘額來為交易請求提供資金';
@@ -24777,13 +24810,13 @@ class I18nZhTw extends I18nZh {
   String get api_error_108 => 'minAmount 不能等於或大於 maxAmount';
 
   @override
-  String get api_error_109 => '創建交易時請求的金額超過廣告的maxAmount';
+  String get api_error_109 => '創建交易時請求的金額超過廣告的 maxAmount';
 
   @override
-  String get api_error_110 => '交易請求者的反饋分數低於發布者要求的分數';
+  String get api_error_110 => '貿易請求者的反饋分數低於發布者要求的分數';
 
   @override
-  String get api_error_111 => '請求的金額不是可接受的金額之一，請參閱limit_to_fiat_amounts';
+  String get api_error_111 => '請求的金額不是接受的金額之一，請參閱 limit_to_fiat_amounts';
 
   @override
   String get api_error_112 => '無法為您自己發布的廣告請求交易';
@@ -24795,7 +24828,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_114 => '創建廣告時無法將 paymentWindowMinutes 設置為 <15 或 >90';
 
   @override
-  String get api_error_115 => '按請求的 ID 進行的交易不存在';
+  String get api_error_115 => '按請求 ID 進行的交易不存在';
 
   @override
   String get api_error_116 => '請求交易的用戶不存在';
@@ -24816,13 +24849,13 @@ class I18nZhTw extends I18nZh {
   String get api_error_121 => '試圖託管不存在的交易';
 
   @override
-  String get api_error_122 => '資金不足，無法為浮動 LOCAL_SELL 交易提供資金';
+  String get api_error_122 => '資金不足以為浮動 LOCAL_SELL 交易提供資金';
 
   @override
-  String get api_error_123 => '資金不足，無法為非浮動 LOCAL_SELL 交易提供資金';
+  String get api_error_123 => '資金不足以為非浮動 LOCAL_SELL 交易提供資金';
 
   @override
-  String get api_error_124 => '為 LOCAL_SELL 提供資金時出錯';
+  String get api_error_124 => '為 LOCAL_SELL 融資時出錯';
 
   @override
   String get api_error_125 => '請求取消交易的用戶不存在';
@@ -24831,52 +24864,52 @@ class I18nZhTw extends I18nZh {
   String get api_error_126 => '試圖取消不存在的交易';
 
   @override
-  String get api_error_127 => '請求交易付款的用戶不存在';
+  String get api_error_127 => '請求支付交易的用戶不存在';
 
   @override
-  String get api_error_128 => '嘗試標記不存在的交易已付費';
+  String get api_error_128 => '試圖將不存在的交易標記為已支付';
 
   @override
-  String get api_error_129 => '請求解除交易的用戶不存在';
+  String get api_error_129 => '請求釋放交易的用戶不存在';
 
   @override
-  String get api_error_130 => '嘗試釋放不存在的交易';
+  String get api_error_130 => '試圖釋放不存在的交易';
 
   @override
-  String get api_error_131 => '不存在請求貿易糾紛的用戶';
+  String get api_error_131 => '用戶請求交易糾紛不存在';
 
   @override
-  String get api_error_132 => '試圖對不存在的交易提出爭議';
+  String get api_error_132 => '試圖對不存在的交易提出異議';
 
   @override
-  String get api_error_133 => '嘗試獲取不存在的用戶的反饋';
+  String get api_error_133 => '試圖獲得不存在的用戶的反饋';
 
   @override
-  String get api_error_134 => '當用戶已經擁有最大允許數量的廣告時嘗試創建廣告';
+  String get api_error_134 => '當用戶已經擁有允許的最大廣告數量時嘗試創建廣告';
 
   @override
-  String get api_error_135 => '不知何故，maxAmount 設置為 null，而 trackingMaxAmount 設置為 true';
+  String get api_error_135 => '以某種方式將 maxAmount 設置為 null 而將 trackingMaxAmount 設置為 true';
 
   @override
-  String get api_error_136 => '嘗試發布餘額低於最低要求餘額的廣告。';
+  String get api_error_136 => '試圖發布餘額低於最低要求餘額的廣告。';
 
   @override
-  String get api_error_141 => '試圖以低於最低允許金額的金額創建交易';
+  String get api_error_141 => '嘗試以低於最低允許金額的金額創建交易';
 
   @override
-  String get api_error_142 => '在創建廣告時嘗試設置小於 minAmount 的法定限制';
+  String get api_error_142 => '創建廣告時嘗試設置小於 minAmount 的法定限額';
 
   @override
-  String get api_error_143 => '在創建廣告時嘗試設置大於 maxAmount 的法定限制';
+  String get api_error_143 => '創建廣告時嘗試設置超過 maxAmount 的法定限額';
 
   @override
-  String get api_error_144 => '嘗試在更新廣告時設置小於 minAmount 的法定限制';
+  String get api_error_144 => '嘗試在更新廣告時設置小於 minAmount 的法定限額';
 
   @override
-  String get api_error_145 => '嘗試在更新廣告時設置大於 maxAmount 的法定限制';
+  String get api_error_145 => '嘗試在更新廣告時設置超過 maxAmount 的法定限額';
 
   @override
-  String get api_error_147 => '嘗試獲取未啟用會員計劃的用戶的會員數據';
+  String get api_error_147 => '嘗試獲取未啟用聯屬網絡營銷計劃的用戶的聯屬網絡營銷數據';
 
   @override
   String get api_error_148 => '嘗試設置已設置的電報 ID';
@@ -24885,10 +24918,10 @@ class I18nZhTw extends I18nZh {
   String get api_error_149 => '未指定外部取款的優先級';
 
   @override
-  String get api_error_150 => '嘗試在請求用戶被廣告發布者阻止的廣告上開始交易';
+  String get api_error_150 => '嘗試在請求用戶被廣告張貼者屏蔽的廣告上開始交易';
 
   @override
-  String get api_error_151 => '嘗試在廣告發布者不信任請求用戶的廣告上開始交易';
+  String get api_error_151 => '嘗試在請求用戶不受廣告發布者信任的情況下開始廣告交易';
 
   @override
   String get api_error_152 => '試圖取消已經關閉的交易';
@@ -24900,70 +24933,70 @@ class I18nZhTw extends I18nZh {
   String get api_error_154 => '嘗試為不存在的賬戶請求交易';
 
   @override
-  String get api_error_155 => '嘗試獲取不存在的用戶的受信任用戶列表';
+  String get api_error_155 => '嘗試獲取不存在的用戶的可信用戶列表';
 
   @override
-  String get api_error_156 => '嘗試獲取不存在的用戶的被阻止用戶列表';
+  String get api_error_156 => '試圖獲取不存在的用戶的被阻止用戶列表';
 
   @override
-  String get api_error_157 => '嘗試為非選項廣告設置選項特定屬性';
+  String get api_error_157 => '嘗試為非選項廣告設置特定於選項的屬性';
 
   @override
   String get api_error_158 => '嘗試在不設置選項特定屬性的情況下創建選項廣告';
 
   @override
-  String get api_error_159 => '請求標記交易溢價的用戶不存在';
+  String get api_error_159 => '要求標記交易溢價支付的用戶不存在';
 
   @override
   String get api_error_160 => '試圖標記為不存在的交易支付的溢價';
 
   @override
-  String get api_error_161 => '請求行使期權的用戶不存在';
+  String get api_error_161 => '要求行使期權的用戶不存在';
 
   @override
   String get api_error_162 => '嘗試為不存在的交易行使期權';
 
   @override
-  String get api_error_163 => '請求確認交易溢價支付的用戶不存在';
+  String get api_error_163 => '要求確認交易溢價支付的用戶不存在';
 
   @override
   String get api_error_164 => '試圖確認為不存在的交易支付的溢價';
 
   @override
-  String get api_error_165 => '請求以淨額結算進行交易的用戶不存在';
+  String get api_error_165 => '要求以淨額結算進行交易的用戶不存在';
 
   @override
-  String get api_error_166 => '嘗試以淨額結算方式執行一項不存在的交易';
+  String get api_error_166 => '嘗試使用不存在的交易進行淨結算';
 
   @override
-  String get api_error_167 => '當前市價低於或等於淨看漲交易時的行使價。按照市場標準，該交易是價外交易，因此無法進行淨額結算。如果需要，使用正常結算。';
+  String get api_error_167 => '當前市場價格小於或等於淨看漲交易時的行使價。按照市場標準，該交易是價外交易，因此不能進行淨額交易。如果需要，使用正常結算。';
 
   @override
-  String get api_error_168 => '請求確認交易保險支付的用戶不存在';
+  String get api_error_168 => '用戶請求確認交易的掩護付款不存在';
 
   @override
-  String get api_error_169 => '試圖確認為不存在的交易支付的保險';
+  String get api_error_169 => '試圖確認為不存在的交易支付的保障';
 
   @override
   String get api_error_172 => '嘗試發布資產與廣告貨幣相同的廣告';
 
   @override
-  String get api_error_174 => '嘗試進行價外 PUT 交易';
+  String get api_error_174 => '嘗試執行價外 PUT 交易';
 
   @override
-  String get api_error_175 => '嘗試兌換註冊期間不存在的優惠券';
+  String get api_error_175 => '嘗試兌換註冊時不存在的優惠券';
 
   @override
-  String get api_error_176 => '在註冊期間嘗試兌換過期的優惠券';
+  String get api_error_176 => '嘗試在註冊期間兌換過期的優惠券';
 
   @override
-  String get api_error_177 => '嘗試兌換在註冊期間缺貨的優惠券';
+  String get api_error_177 => '嘗試兌換註冊時缺貨的優惠券';
 
   @override
-  String get api_error_185 => '嘗試為不存在的用戶獲取優惠券';
+  String get api_error_185 => '試圖為不存在的用戶獲取優惠券';
 
   @override
-  String get api_error_186 => '通過 ID 獲取廣告時嘗試獲取超過 50 個廣告';
+  String get api_error_186 => '按ID獲取廣告時嘗試獲取超過50個廣告';
 
   @override
   String get api_error_187 => '按 ID 獲取廣告時嘗試提供空的 ID 列表';
@@ -24972,19 +25005,19 @@ class I18nZhTw extends I18nZh {
   String get api_error_188 => '按 ID 獲取廣告時，沒有一個請求的廣告 ID 是有效 ID';
 
   @override
-  String get api_error_189 => '通過 ID 獲取廣告時，沒有一個請求的廣告存在';
+  String get api_error_189 => '按 ID 獲取廣告時請求的廣告不存在';
 
   @override
-  String get api_error_190 => '通過 ID 獲取交易時嘗試給出一個空的 ID 列表';
+  String get api_error_190 => '按 ID 獲取交易時嘗試提供一個空的 ID 列表';
 
   @override
-  String get api_error_191 => '通過 ID 獲取交易時嘗試獲取超過 50 個廣告';
+  String get api_error_191 => '按 ID 獲取交易時嘗試獲取超過 50 個廣告';
 
   @override
-  String get api_error_192 => '通過 ID 獲取交易時，沒有一個請求的交易 ID 是有效 ID';
+  String get api_error_192 => '按 ID 獲取交易時，沒有一個請求的交易 ID 是有效 ID';
 
   @override
-  String get api_error_193 => '通過 ID 獲取交易時，沒有一個請求的交易存在';
+  String get api_error_193 => '通過 ID 獲取交易時，不存在任何請求的交易';
 
   @override
   String get api_error_194 => '嘗試為不存在的用戶生成公共 API 令牌';
@@ -24996,7 +25029,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_196 => '嘗試獲取不存在的用戶的最新消息';
 
   @override
-  String get api_error_197 => '嘗試使用超出允許範圍的“之後”時間戳獲取交易聊天消息';
+  String get api_error_197 => '試圖獲取帶有超出允許範圍的“之後”時間戳的交易聊天消息';
 
   @override
   String get api_error_198 => '嘗試使用超出允許範圍的“之後”時間戳獲取帳戶最近的聊天消息';
@@ -25008,13 +25041,13 @@ class I18nZhTw extends I18nZh {
   String get api_error_200 => '嘗試為沒有公共 API 令牌的用戶過期並刪除公共 API 令牌';
 
   @override
-  String get api_error_201 => '嘗試為不存在的廣告更新價格公式';
+  String get api_error_201 => '嘗試更新不存在的廣告的價格公式';
 
   @override
-  String get api_error_202 => '嘗試使用超出允許範圍的“之後”時間戳獲取帳戶交易';
+  String get api_error_202 => '嘗試獲取具有超出允許範圍的“之後”時間戳的帳戶交易';
 
   @override
-  String get api_error_203 => '嘗試獲取不存在的帳戶的信譽導入數據';
+  String get api_error_203 => '嘗試為不存在的帳戶獲取聲譽導入數據';
 
   @override
   String get api_error_211 => '嘗試為不存在的用戶批准信譽導入';
@@ -25023,19 +25056,19 @@ class I18nZhTw extends I18nZh {
   String get api_error_212 => '嘗試為不在信譽導入流程第 2 步中的用戶批准信譽導入';
 
   @override
-  String get api_error_213 => '試圖拒絕為不存在的用戶導入信譽';
+  String get api_error_213 => '嘗試拒絕不存在的用戶的信譽導入';
 
   @override
-  String get api_error_214 => '試圖拒絕不在信譽導入流程第 2 步中的用戶的信譽導入';
+  String get api_error_214 => '嘗試拒絕不在信譽導入流程第 2 步中的用戶的信譽導入';
 
   @override
-  String get api_error_215 => '在請求最流行的付款方式時嘗試同時指定 country_code 和 currency_code';
+  String get api_error_215 => '在請求最流行的付款方式時嘗試指定國家代碼和貨幣代碼';
 
   @override
-  String get api_error_216 => '嘗試為不存在的 country_code 請求最流行的付款方式';
+  String get api_error_216 => '嘗試為不存在的國家/地區代碼請求最流行的付款方式';
 
   @override
-  String get api_error_217 => '嘗試為不存在的貨幣代碼請求最流行的付款方式';
+  String get api_error_217 => '嘗試為不存在的 currency_code 請求最流行的支付方式';
 
   @override
   String get api_error_218 => '當請求用戶沒有經過驗證的電子郵件時，嘗試在需要經過驗證的電子郵件的廣告上進行交易';
@@ -25047,16 +25080,16 @@ class I18nZhTw extends I18nZh {
   String get api_error_220 => '嘗試將帳戶電子郵件更改為來自一次性電子郵件提供商的電子郵件';
 
   @override
-  String get api_error_221 => '試圖為不存在的用戶標記所有已讀通知';
+  String get api_error_221 => '嘗試為不存在的用戶標記所有已讀通知';
 
   @override
   String get api_error_222 => '嘗試為已導入的外部平台帳戶請求信譽代碼';
 
   @override
-  String get api_error_223 => '嘗試在verificationMsg 為空時將verificationRequired 指定為true 來更新廣告';
+  String get api_error_223 => '嘗試通過將 verificationRequired 指定為 true 而 verificationMsg 為 null 來更新廣告';
 
   @override
-  String get api_error_224 => '嘗試使用指定 verifyMsg 更新廣告，但廣告不需要驗證且廣告更新請求也未將 verifyRequired 設置為 true';
+  String get api_error_224 => '嘗試使用指定的 verificationMsg 更新廣告，但廣告不需要驗證並且廣告更新請求也沒有將 verificationRequired 設置為 true';
 
   @override
   String get api_error_227 => '試圖制裁不存在的用戶';
@@ -25065,22 +25098,22 @@ class I18nZhTw extends I18nZh {
   String get api_error_228 => '嘗試使用不存在的管理員帳戶制裁用戶';
 
   @override
-  String get api_error_229 => '嘗試刪除不存在的用戶的製裁';
+  String get api_error_229 => '試圖從不存在的用戶中刪除制裁';
 
   @override
-  String get api_error_230 => '嘗試從具有不存在的管理員帳戶的用戶中刪除制裁';
+  String get api_error_230 => '試圖從一個不存在的管理員帳戶的用戶中刪除制裁';
 
   @override
   String get api_error_231 => '試圖取消對沒有任何制裁的用戶的製裁';
 
   @override
-  String get api_error_232 => '試圖與因制裁而被禁止交易的用戶進行交易';
+  String get api_error_232 => '嘗試與當前因制裁而被禁止交易的用戶建立交易';
 
   @override
   String get api_error_233 => '嘗試刪除 ID 不存在的反饋';
 
   @override
-  String get api_error_234 => '嘗試刪除已刪除的反饋';
+  String get api_error_234 => '試圖刪除已經刪除的反饋';
 
   @override
   String get api_error_235 => '試圖從不存在的交易中刪除爭議狀態';
@@ -25089,49 +25122,49 @@ class I18nZhTw extends I18nZh {
   String get api_error_236 => '試圖從沒有爭議的交易中刪除爭議狀態';
 
   @override
-  String get api_error_237 => '嘗試以管理員身份調用交易開倉端點並指定 openAsUsername 參數時以不存在的用戶身份開倉';
+  String get api_error_237 => '當以管理員身份調用交易開倉端點並指定 openAsUsername 參數時，嘗試以不存在的用戶身份開倉';
 
   @override
   String get api_error_240 => '買家在回复 SELL 類型的廣告時提供的地址無效';
 
   @override
-  String get api_error_241 => '買家在回复 SELL 類廣告時試圖提供內部地址（內部地址不允許用於交易結算）';
+  String get api_error_241 => '買家在回复 SELL 類型的廣告時試圖提供內部地址（內部地址不允許用於交易結算）';
 
   @override
-  String get api_error_242 => '買家在製作 BUY 類型的廣告時提供的地址無效';
+  String get api_error_242 => '買方在創建 BUY 類型廣告時提供的地址無效';
 
   @override
-  String get api_error_244 => '買家在更新 BUY 類廣告時提供的地址無效';
+  String get api_error_244 => '買方在更新 BUY 類型廣告時提供的地址無效';
 
   @override
-  String get api_error_245 => '買家在更新 BUY 類廣告時嘗試提供內部地址（內部地址不允許用於交易結算）';
+  String get api_error_245 => '買家在更新 BUY 類廣告時試圖提供內部地址（內部地址不允許用於交易結算）';
 
   @override
-  String get api_error_246 => '嘗試從未指定買方結算地址的 BUY 類型廣告開始交易';
+  String get api_error_246 => '嘗試從未指定買家結算地址的 BUY 類型廣告開始交易';
 
   @override
-  String get api_error_247 => '試圖從因制裁而被禁止提款的賬戶釋放交易';
+  String get api_error_247 => '試圖從因制裁而被禁止提款的賬戶中解除交易';
 
   @override
   String get api_error_248 => '當交易金額不足以支付結算相關費用時嘗試釋放交易';
 
   @override
-  String get api_error_249 => '嘗試更新未設置buyerSettlementAddress 且未在更新請求中設置buyerSettlementAddress 參數的BUY 類型廣告';
+  String get api_error_249 => '嘗試更新未設置 buyerSettlementAddress 的 BUY 類型廣告，但未在更新請求中設置 buyerSettlementAddress 參數';
 
   @override
-  String get api_error_250 => '申請 BTC 提款費時提供的地址無效';
+  String get api_error_250 => '請求 BTC 提款費時提供的地址無效';
 
   @override
-  String get api_error_251 => '通過響應 BTC SELL 類型的廣告開倉時未提供費用水平';
+  String get api_error_251 => '通過響應 BTC SELL 類型的廣告開始交易時未提供費用水平';
 
   @override
-  String get api_error_252 => '創建 BTC BUY 類型的廣告時未提供費用水平';
+  String get api_error_252 => '創建 BTC 購買類型的廣告時未提供費用水平';
 
   @override
-  String get api_error_253 => '更新未設置費用水平的 BTC BUY 類型廣告時未提供費用水平';
+  String get api_error_253 => '更新未設置費用水平的 BTC 購買類型廣告時未提供費用水平';
 
   @override
-  String get api_error_255 => '嘗試使用超出允許範圍的“之後”時間戳獲取通知';
+  String get api_error_255 => '嘗試獲取具有超出允許範圍的“之後”時間戳的通知';
 
   @override
   String get api_error_256 => '嘗試註冊已存在的推送通知令牌';
@@ -25140,10 +25173,10 @@ class I18nZhTw extends I18nZh {
   String get api_error_257 => '嘗試註冊無效的推送通知令牌';
 
   @override
-  String get api_error_258 => '嘗試為已擁有 500 個設備令牌的帳戶註冊推送通知令牌，刪除現有令牌之一，然後重試';
+  String get api_error_258 => '嘗試為已擁有 500 個設備令牌的帳戶註冊推送通知令牌，在再次嘗試之前刪除現有令牌之一';
 
   @override
-  String get api_error_259 => '嘗試刪除不存在或不屬於該用戶的令牌';
+  String get api_error_259 => '試圖刪除不存在或不屬於該用戶的令牌';
 
   @override
   String get account => '帳戶';
@@ -25176,7 +25209,7 @@ class I18nZhTw extends I18nZh {
   String get pin_current => '當前密碼';
 
   @override
-  String get pin_set => '設置 PIN 碼';
+  String get pin_set => '設置密碼';
 
   @override
   String get pin_do_not_match => '引腳不匹配';
@@ -25260,16 +25293,16 @@ class I18nZhTw extends I18nZh {
   String get welcome_buy_press_buy => '按購買開始交易。';
 
   @override
-  String get welcome_buy_follow_the_sellers => '在交易聊天中遵循賣家的指示！';
+  String get welcome_buy_follow_the_sellers => '按照賣家在交易聊天中的說明進行操作！';
 
   @override
-  String get welcome_sell_go_to_wallet => '轉到您的錢包並存入您的硬幣。';
+  String get welcome_sell_go_to_wallet => '轉到你的錢包並存入你的硬幣。';
 
   @override
   String get welcome_sell_press_sell => '按賣出開始交易。';
 
   @override
-  String get welcome_sell_follow_the_buyer => '在交易聊天中遵循買家的指示！';
+  String get welcome_sell_follow_the_buyer => '按照買家在交易聊天中的說明進行操作！';
 
   @override
   String get get_started => '開始吧';
@@ -25330,16 +25363,16 @@ class I18nZhTw extends I18nZh {
   String get no_pending_deposits => '沒有待定存款';
 
   @override
-  String get create_pin => '創建 PIN';
+  String get create_pin => '創建密碼';
 
   @override
   String get change_pin => '更改密碼';
 
   @override
-  String get remove_pin => '刪除 PIN';
+  String get remove_pin => '刪除密碼';
 
   @override
-  String get remove_pin_message_success => 'PIN 已移除';
+  String get remove_pin_message_success => 'PIN 已刪除';
 
   @override
   String get you_will_receive => '您將收到';
@@ -25553,7 +25586,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• 您可以鏈接到任何單獨的頁面，例如國家/地區列表或付款方式列表，或 $appName 上的任何其他內容。\n• 您將從通過您的附屬鏈接註冊並進行交易的用戶那裡獲得加密貨幣。\n• 每天將以相關加密貨幣向您的$appName 錢包支付款項。\n• 佣金將在用戶註冊後的一年內支付。佣金是根據新用戶帶來的收入$appName（交易手續費）計算的。\n• 禁止任何不正當行為，例如誤導性廣告。\n• 禁止發送垃圾郵件。垃圾郵件包括在論壇/reddit 上發送未訂閱的私人或公共消息、未訂閱的群發郵件等。\n• 禁止在網站上添加隱藏的 iframe 以獲取附屬機構。僅允許附屬 iframe 或網頁的直接鏈接。\n• $appName 有權在任何給定時間禁用任何關聯用戶。如果您違反條款，您的聯盟計劃將被終止。';
+    return '• 您可以鏈接到任何單獨的頁面，例如國家/地區列表或付款方式列表，或 $appName 上的任何其他內容。\n• 您將從通過您的附屬鏈接註冊並進行交易的用戶那裡獲得加密貨幣。\n• 每天將以相關加密貨幣向您的$appName 錢包支付款項。\n• 佣金將在用戶註冊後的一年內支付。佣金是根據新用戶帶來的收入$appName（交易手續費）計算的。\n• 禁止任何不正當行為，例如誤導性廣告。\n• 禁止發送垃圾郵件。垃圾郵件包括在論壇/reddit 上發送未訂閱的私人或公共消息、未訂閱的群發郵件等。\n• 禁止在網站上添加隱藏的 iframe 以獲取附屬機構。僅允許附屬 iframe 或網頁的直接鏈接。\n• $appName 有權在任何給定時間禁用任何附屬用戶。如果您違反條款，您的聯盟計劃將被終止。';
   }
 
   @override
@@ -25609,22 +25642,22 @@ class I18nZhTw extends I18nZh {
   String get dont_have_an_account_yet => '還沒有帳戶？';
 
   @override
-  String get app_trades => '交易';
+  String get app_trades => '行業';
 
   @override
   String get app_unlimited => '無限';
 
   @override
-  String get app_guides => '指南';
+  String get app_guides => '導遊';
 
   @override
-  String get app_edit_this_ad => '修改此廣告';
+  String get app_edit_this_ad => '編輯此廣告';
 
   @override
-  String get app_you_can_use_markdown => '您可以使用降價來設置廣告字詞的樣式（不允許使用圖片）。';
+  String get app_you_can_use_markdown => '您可以使用降價來設計廣告條款的樣式（不允許使用圖片）。';
 
   @override
-  String get app_no_trades_to_export => '沒有貿易可出口。';
+  String get app_no_trades_to_export => '沒有要出口的交易。';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
@@ -25632,7 +25665,7 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => '在製作廣告之前，請閱讀我們的 ';
+  String get ad_post_ad_rules_text_0 => '在創建廣告之前，請閱讀我們的 ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
@@ -25693,10 +25726,10 @@ class I18nZhTw extends I18nZh {
   String get app_buy_crypto => '購買加密貨幣';
 
   @override
-  String get app_sell_crypto => '將加密貨幣出售給';
+  String get app_sell_crypto => '將加密貨幣賣給';
 
   @override
-  String get app_intall_trade_title => '請安裝 AgoraDesk 以查看此交易';
+  String get app_intall_trade_title => '請安裝 AgoraDesk 查看此交易';
 
   @override
   String get app_intall_ad_title => '請安裝 AgoraDesk 以查看此廣告';
@@ -25705,13 +25738,13 @@ class I18nZhTw extends I18nZh {
   String get app_intall_trade_body => '這是一個基於比特幣的交易，它需要我們的 AgoraDesk 應用程序才能查看。';
 
   @override
-  String get app_intall_ad_body => '這是一個基於比特幣的廣告，需要我們的 AgoraDesk 應用才能查看。';
+  String get app_intall_ad_body => '這是一個基於比特幣的廣告，需要我們的 AgoraDesk 應用程序才能查看。';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => '在您 100% 確定您已收到資金之前，切勿完成交易。詐騙者會試圖誘騙您提前完成。';
+  String get app_trade_option_payment_receiver_cancel_notice => '在您 100% 確定您已經收到錢之前，切勿完成交易。詐騙者會試圖誘騙您提前完成。';
 
   @override
-  String get app_cancel_trade_message => '犯了錯誤或想嘗試其他交易者？如果您已經轉移資金並想立即取消，您需要自行與您的貿易夥伴協商退還款項。除非您確定已收到退款，否則切勿取消。';
+  String get app_cancel_trade_message => '犯了錯誤或想嘗試其他交易者？如果您已經轉賬，現在想取消，您需要自行與您的交易夥伴協商退還您的款項。除非您確定已收到退款，否則切勿取消。';
 
   @override
   String get app_all_feedback => '所有反饋';
@@ -25750,13 +25783,13 @@ class I18nZhTw extends I18nZh {
   String get app_manage_ads => '管理廣告';
 
   @override
-  String get app_vacation_enabled => '啟用假期';
+  String get app_vacation_enabled => '休假啟用';
 
   @override
-  String get app_trade_created => '貿易創造';
+  String get app_trade_created => '貿易創建';
 
   @override
-  String get app_session_expired => '會話已過期';
+  String get app_session_expired => '會話過期';
 
   @override
   String get app_anonymous_crash_diagnostics => '匿名崩潰診斷';
@@ -25768,22 +25801,22 @@ class I18nZhTw extends I18nZh {
   String get app_postpone => '推遲';
 
   @override
-  String get app_biometric_authentication => '生物特徵認證';
+  String get app_biometric_authentication => '生物認證';
 
   @override
-  String get app_biometric_authentication_message => '請設置 PIN 碼以啟用生物特徵認證。';
+  String get app_biometric_authentication_message => '請設置 PIN 碼以啟用生物認證。';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => '匿名崩潰診斷已被禁用，並且不會在您重新啟動應用程序後發送。';
+  String get app_anonymous_crash_diagnostics_restart => '匿名崩潰診斷已被禁用，並且在您重新啟動應用程序後不會發送。';
 
   @override
   String get app_trading_partners => '貿易夥伴';
 
   @override
-  String get app_trade_status_settlement_processing_description => '正在處理和解。請稍等，您無需執行任何操作。';
+  String get app_trade_status_settlement_processing_description => '結算正在處理中。請稍候，您無需執行任何操作。';
 
   @override
-  String get app_buyer_settlement_fee_level_description => '選擇在交易結算期間使用的費用水平。此處顯示的值是當前匯率估計值，可能與貿易結算期間應用的值不同。如果交易金額太低而無法以所選費用水平結算交易，結算期間將自動選擇較低的費用水平。';
+  String get app_buyer_settlement_fee_level_description => '選擇交易結算期間要使用的費用水平。此處顯示的值是當前匯率估計值，可能與貿易結算期間應用的匯率不同。如果交易金額太低而無法以所選費用水平結算交易，則在結算過程中將自動選擇較低的費用水平。';
 
   @override
   String get app_change_vacation_settings => '更改假期設置。';
@@ -25795,7 +25828,7 @@ class I18nZhTw extends I18nZh {
   String get app_via => '通過';
 
   @override
-  String get app_one_percent => '1% 費用';
+  String get app_one_percent => '1% 手續費';
 
   @override
   String get app_final_amount => '最終金額';
@@ -25819,16 +25852,16 @@ class I18nZhTw extends I18nZh {
   String get app_update_now => '現在更新';
 
   @override
-  String get app_update_ingnor_until_next => '下次更新前忽略';
+  String get app_update_ingnor_until_next => '忽略直到下次更新';
 
   @override
   String get app_update_ignore_always => '總是忽略';
 
   @override
-  String get app_tooltip_visibility => '點擊以切換可見性';
+  String get app_tooltip_visibility => '點擊切換可見性';
 
   @override
-  String get app_tooltip_long_press_ad => '長按廣告以啟用群組編輯';
+  String get app_tooltip_long_press_ad => '長按廣告啟用組編輯';
 
   @override
   String get app_join_telegram => '加入電報群';
@@ -25843,7 +25876,7 @@ class I18nZhTw extends I18nZh {
   String get app_hide_password => '隱藏密碼';
 
   @override
-  String get app_trade_has_been_cancelled => '交易已取消。';
+  String get app_trade_has_been_cancelled => '交易已被取消。';
 
   @override
   String app_last_seen(Object val) {
@@ -25851,7 +25884,7 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String get app_open_additional_filters => '打開其他過濾器';
+  String get app_open_additional_filters => '打開額外的過濾器';
 
   @override
   String get app_select_asset => '選擇資產';
@@ -25866,7 +25899,7 @@ class I18nZhTw extends I18nZh {
   String get app_scan_qr_code => '掃描二維碼';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => '匿名買賣比特幣，無需身份驗證。現金或在線。安全、快速、簡單。\n\n想知道如何投資比特幣？在 AgoraDesk 上，購買比特幣從未如此簡單 - 使用您最喜歡的在線支付方式立即從某人那裡購買比特幣：PayPal、信用卡/借記卡或銀行轉賬、禮品卡、Venmo 或任何其他方式。如果你想用現金在你附近購買比特幣，你可以在當地找到願意出售比特幣的人——交易平台支持用現金買賣比特幣。您甚至可以通過郵寄使用現金購買比特幣。\n\n- 安全順暢的交易\n就像 LocalBitcoins 一樣，我們支持任何支付方式、任何貨幣、任何地方。我們不會刪除支付方式，而且與 LocalBitcoins 不同，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nAgoraDesk 致力於保持使原始 LocalBitcoins 如此受歡迎的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的加密貨幣社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://agoradesk.com/support\n\n- 公平費用\n當您向我們的仲裁保證金錢包存入或提取比特幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => '匿名買賣比特幣，無需身份驗證。現金或在線。安全、快速、簡單。\n\n想知道如何投資比特幣？在 AgoraDesk 上，購買比特幣從未如此簡單 - 使用您最喜歡的在線支付方式立即從某人那裡購買比特幣：PayPal、信用卡/借記卡或銀行轉賬、禮品卡、Venmo 或任何其他方式。如果您想用現金在您附近購買比特幣，您可以在當地找到願意出售比特幣的人——交易平台支持用現金買賣比特幣。您甚至可以通過郵寄使用現金購買比特幣。\n\n- 安全順暢的交易\n就像 LocalBitcoins 一樣，我們支持任何支付方式、任何貨幣、任何地方。我們不會刪除支付方式，而且與 LocalBitcoins 不同，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nAgoraDesk 致力於保持使原始 LocalBitcoins 如此受歡迎的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的加密貨幣社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://agoradesk.com/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取比特幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk：輕鬆購買比特幣';
@@ -25887,7 +25920,7 @@ class I18nZhTw extends I18nZh {
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk：匿名購買比特幣';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => '無需身份驗證即可買賣比特幣。現金或在線。\n\n想知道如何投資比特幣？在 AgoraDesk 上，購買比特幣從未如此簡單 - 使用您最喜歡的在線支付方式立即從某人那裡購買比特幣：PayPal、信用卡/借記卡或銀行轉賬、禮品卡、Venmo 或任何其他方式。如果你想用現金在你附近購買比特幣，你可以在當地找到願意出售比特幣的人——交易平台支持用現金買賣比特幣。您甚至可以通過郵寄使用現金購買比特幣。\n\n- 安全順暢的交易\n就像 LocalBitcoins 一樣，我們支持任何支付方式、任何貨幣、任何地方。我們不會刪除支付方式，而且與 LocalBitcoins 不同，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nAgoraDesk 致力於保持使原始 LocalBitcoins 如此受歡迎的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的加密貨幣社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://agoradesk.com/support\n\n- 公平費用\n當您向我們的仲裁保證金錢包存入或提取比特幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => '無需身份驗證即可買賣比特幣。現金或在線。\n\n想知道如何投資比特幣？在 AgoraDesk 上，購買比特幣從未如此簡單 - 使用您最喜歡的在線支付方式立即從某人那裡購買比特幣：PayPal、信用卡/借記卡或銀行轉賬、禮品卡、Venmo 或任何其他方式。如果您想用現金在您附近購買比特幣，您可以在當地找到願意出售比特幣的人——交易平台支持用現金買賣比特幣。您甚至可以通過郵寄使用現金購買比特幣。\n\n- 安全順暢的交易\n就像 LocalBitcoins 一樣，我們支持任何支付方式、任何貨幣、任何地方。我們不會刪除支付方式，而且與 LocalBitcoins 不同，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nAgoraDesk 致力於保持使原始 LocalBitcoins 如此受歡迎的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的加密貨幣社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://agoradesk.com/support\n\n- 公平費用\n當您向我們的仲裁保證金錢包存入或提取比特幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => '加密貨幣，匿名，私有，monero，xmr，p2p';
@@ -25902,13 +25935,13 @@ class I18nZhTw extends I18nZh {
   String get app_open_dropdown => '打開下拉菜單';
 
   @override
-  String get error250Sbsignup250Sb175 => '嘗試兌換註冊期間不存在的優惠券';
+  String get error250Sbsignup250Sb175 => '嘗試兌換註冊時不存在的優惠券';
 
   @override
-  String get error250Sbsignup250Sb176 => '在註冊期間嘗試兌換過期的優惠券';
+  String get error250Sbsignup250Sb176 => '嘗試在註冊期間兌換過期的優惠券';
 
   @override
-  String get error250Sbsignup250Sb177 => '嘗試兌換在註冊期間缺貨的優惠券';
+  String get error250Sbsignup250Sb177 => '嘗試兌換註冊時缺貨的優惠券';
 
   @override
   String get nojs250Sbpassword8722Sbreset250Sbsuccess => '密碼重置信已發送！檢查你的收件箱。';
@@ -25932,4 +25965,74 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => '看漲期權賣出';
+
+  @override
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero：匿名購買 XMR';
+
+  @override
+  String get app_accessibility_edit_box_password => '編輯框密碼，雙擊編輯';
+
+  @override
+  String get app_accessibility_edit_box_confirm_password => '確認密碼編輯框，雙擊編輯';
+
+  @override
+  String get app_ad_created => '廣告已製作';
+
+  @override
+  String app_503_body(Object val) {
+    return '$val 很快就會回來！\\n對於給您帶來的不便，我們深表歉意，但我們目前正在進行一些定期維護。\\n我們可能很快就會恢復在線。在我們的社區群組中保持更新：';
+  }
+
+  @override
+  String get app_select_ad_type => '選擇廣告類型';
+
+  @override
+  String get app_chat_leave_review => '點擊此處發表評論！';
+
+  @override
+  String get app_chat_update_review => '您已經給該用戶留下了評論。您想現在更新您的評論嗎？';
+
+  @override
+  String get app_select_buyer_seller => '選擇買家或賣家';
+
+  @override
+  String get app_default_tab => '設置默認選項卡';
+
+  @override
+  String get app_your_ads => '您的廣告';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val 應用維護';
+  }
+
+  @override
+  String get app_push_new_message => '您在交易中收到新消息';
+
+  @override
+  String get app_push_new_offer => '你有一個新的報價';
+
+  @override
+  String get app_push_trade_marked_completed => '交易標記為已完成';
+
+  @override
+  String get app_push_trade_cancelled => '交易取消';
+
+  @override
+  String get app_push_trade_disputed => '貿易有爭議';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => '匿名購買/出售門羅幣';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => '匿名購買/出售比特幣';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => '無需身份驗證即可買賣比特幣。現金或在線。安全、快速、簡單。';
+
+  @override
+  String get app_ask_community_chats => '有問題嗎？在社區聊天中提問';
 }

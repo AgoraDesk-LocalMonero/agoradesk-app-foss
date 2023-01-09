@@ -1726,7 +1726,7 @@ class I18nEn extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Price value wasn\'t properly set';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Illegal combinations of country, payment method, and currency';
+  String get error250Sbpost8722Sbad250Sb86 => 'Invalid combinations of country, payment method, and currency';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'This payment method isn\'t valid for selected country';
@@ -3251,7 +3251,7 @@ class I18nEn extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'How Atomic Swaps Will Work in Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Note:</b> It is highly recommended that the reader have read our articles <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Why Monero Has A Tail Emission\"</a> and <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“Monero Mining: What Makes RandomX so Special”</a>. This article builds off of the concepts presented in there.</i></p>\n\n<p>Whenever individuals discuss the problems with blockchain, one of the first words to pop up will be \'scaling\'. It\'s not a secret that blockchains don\'t scale well, but most people don\'t know why.</p>\n\n<p>The truth is, scaling is actually an umbrella term that covers two different categories: Protocol support and technological support at a given point in time. In this article, we\'re going to focus our attention on one, Protocol support is basically a measure of how many transactions the protocol can handle at a given time.</p>\n\n<p>Bitcoin has a block size limit, which means once enough transactions are included in a block, any additional transactions will have to wait in line for the next block. A helpful analogy would be thinking about a train. A train pulls up to the station, and those in line file in. Once the train is full, anyone left outside will have to wait for the next one.</p>\n\n<p>Bitcoin uses fees to determine who gets into the block or not. Jumping back to the train analogy, one can imagine one potential passenger, that is about to be left behind, offers the train engineer five dollars to give him a seat. Other passengers follow suit, and eventually there is a bidding war to see who gets which seats. It\'s up to the driver to decide if he wants to honor the first-come-first-serve policy, but it\'s in his best financial interest to maximize his income by taking the highest bidders on board.</p>\n\n<p>In this analogy, miners are the train drivers. They can include whatever transactions they want in the block, but they will generally choose the ones that have the highest paid fees.</p>\n\n<p>Alternatively, if blocks are not very full, people have no incentive to pay high fees because there are plenty of free seats to spare.</p>\n\n<p>In the height of the 2017 cryptocurrency boom, Bitcoin was flooded with transactions, and the fees skyrocketed for those that wanted to be included in the next block, or any near-future block for that matter. Those who were unwilling to pay high fees saw their transactions pushed back for hours, days, or even drop out of the queue altogether.</p>\n\n<p>This was a harrowing insight into how Bitcoin would fare if the oft talked about ‘mass adoption’ were to occur. If Bitcoin was to be used by the masses, things would be even worse than in 2017, and Bitcoin would be inaccessible to anyone but the wealthy, simply because the throughput is small due to a fixed block size, causing the fee market to take over.</p>\n\n<p>Monero foresaw this and wanted to do something different. So the Monero developers implemented a dynamic blocksize.</p>\n\n<p>Basically, Monero also has a block size cap, but it’s a soft cap. When the line of waiting transactions gets too long, the miners can increase the size of the blocks. With our train analogy, you can imagine adding more train cars to fit the extra passengers. After the queue is empty the blocks shrink back to their original size going forward.</p>\n\n<p>If this seems like a neat idea, it seems reasonable to ask why Monero is the only cryptocurrency that has implemented this. Why not add it on Bitcoin so as to put a stop to the throughput issues?</p>\n\n<p>Unfortunately, this is not possible. There are several reasons why, and we’ll do our best to explain.</p>\n\n<p> It\'s always in a miner\'s best interest to have large blocks. With large blocks they can fit in more transactions, and make more money off of the fees, as well as the block rewards. This has the potential to lead to spam attacks, where someone sends many small transactions, with small fees, to bloat the chain. Miner\'s would just raise the block size include them all because money is money, no matter how small. This would lead to consistently large blocks with little economic benefit. Bitcoin solves this by artificially restricting the block size, thereby generating a fee market. Spam attackers would have to outpay the other users in fees, and it is no longer cheap. But this means blocks get full leaving some transactions waiting as mentioned above.</p>\n\n<p>So how can Monero have dynamic blocksizes but avoid spam attacks? The answer is simple, but clever. A penalty on the block reward is introduced when a block is bigger than normal. If a miner wants to increase the blocksize, the reward they get from finding that block will be less than they would otherwise receive. So they will only increase the blocksize when the paid transaction fees of the users outweigh the lost portion of the block reward. For example, if the miner would lose 0.5 XMR by raising the block reward, and the sum of the paid transaction fees would be 0.4 XMR, then there would be a net loss of 0.1 XMR if they were to raise the size, so they wouldn’t do it. Conversely, if the total transaction fees added up to 0.7 XMR, then there would be a net gain of 0.2 XMR, even though they lose the 0.5 XMR from the block reward penalty, so the miner will increase the size.</p>\n\n<p>These dynamic blocks, allow the network to grow organically, without aritifically restricting the blocksize to make a forced fee market, while still avoiding spam attacks. There are several more angles we can view this idea from, and more reasons why it wouldn\'t be possible to add to Bitcoin, but for now, we hope that the reader has an understanding of how Monero sidesteps several of the problems in Bitcoin and its derivatives, and how it plans to scale its throughput into the future.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Note:</b> It is highly recommended that the reader have read our articles <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Why Monero Has A Tail Emission\"</a> and <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“Monero Mining: What Makes RandomX so Special”</a>. This article builds off of the concepts presented in there.</i></p>\n\n<p>Whenever individuals discuss the problems with blockchain, one of the first words to pop up will be \'scaling\'. It\'s not a secret that blockchains don\'t scale well, but most people don\'t know why.</p>\n\n<p>The truth is, scaling is actually an umbrella term that covers two different categories: Protocol support and technological support at a given point in time. In this article, we\'re going to focus our attention on one, Protocol support is basically a measure of how many transactions the protocol can handle at a given time.</p>\n\n<p>Bitcoin has a block size limit, which means once enough transactions are included in a block, any additional transactions will have to wait in line for the next block. A helpful analogy would be thinking about a train. A train pulls up to the station, and those in line file in. Once the train is full, anyone left outside will have to wait for the next one.</p>\n\n<p>Bitcoin uses fees to determine who gets into the block or not. Jumping back to the train analogy, one can imagine one potential passenger, that is about to be left behind, offers the train engineer five dollars to give him a seat. Other passengers follow suit, and eventually there is a bidding war to see who gets which seats. It\'s up to the driver to decide if he wants to honor the first-come-first-serve policy, but it\'s in his best financial interest to maximize his income by taking the highest bidders on board.</p>\n\n<p>In this analogy, miners are the train drivers. They can include whatever transactions they want in the block, but they will generally choose the ones that have the highest paid fees.</p>\n\n<p>Alternatively, if blocks are not very full, people have no incentive to pay high fees because there are plenty of free seats to spare.</p>\n\n<p>In the height of the 2017 cryptocurrency boom, Bitcoin was flooded with transactions, and the fees skyrocketed for those that wanted to be included in the next block, or any near-future block for that matter. Those who were unwilling to pay high fees saw their transactions pushed back for hours, days, or even drop out of the queue altogether.</p>\n\n<p>This was a harrowing insight into how Bitcoin would fare if the oft talked about ‘mass adoption’ were to occur. If Bitcoin was to be used by the masses, things would be even worse than in 2017, and Bitcoin would be inaccessible to anyone but the wealthy, simply because the throughput is small due to a fixed block size, causing the fee market to take over.</p>\n\n<p>Monero foresaw this and wanted to do something different. So the Monero developers implemented a dynamic blocksize.</p>\n\n<p>Basically, Monero also has a block size cap, but it’s a soft cap. When the line of waiting transactions gets too long, the miners can increase the size of the blocks. With our train analogy, you can imagine adding more train cars to fit the extra passengers. After the queue is empty the blocks shrink back to their original size going forward.</p>\n\n<p>If this seems like a neat idea, it seems reasonable to ask why Monero is the only cryptocurrency that has implemented this. Why not add it on Bitcoin so as to put a stop to the throughput issues?</p>\n\n<p>Unfortunately, this is not possible. There are several reasons why, and we’ll do our best to explain.</p>\n\n<p> It\'s always in a miner\'s best interest to have large blocks. With large blocks they can fit in more transactions, and make more money off of the fees, as well as the block rewards. This has the potential to lead to spam attacks, where someone sends many small transactions, with small fees, to bloat the chain. Miner\'s would just raise the block size include them all because money is money, no matter how small. This would lead to consistently large blocks with little economic benefit. Bitcoin solves this by artificially restricting the block size, thereby generating a fee market. Spam attackers would have to outpay the other users in fees, and it is no longer cheap. But this means blocks get full leaving some transactions waiting as mentioned above.</p>\n\n<p>So how can Monero have dynamic blocksizes but avoid spam attacks? The answer is simple, but clever. A penalty on the block reward is introduced when a block is bigger than normal. If a miner wants to increase the blocksize, the reward they get from finding that block will be less than they would otherwise receive. So they will only increase the blocksize when the paid transaction fees of the users outweigh the lost portion of the block reward. For example, if the miner would lose 0.5 XMR by raising the block size, and the sum of the paid transaction fees would be 0.4 XMR, then there would be a net loss of 0.1 XMR if they were to raise the size, so they wouldn’t do it. Conversely, if the total transaction fees added up to 0.7 XMR, then there would be a net gain of 0.2 XMR, even though they lose the 0.5 XMR from the block reward penalty, so the miner will increase the size.</p>\n\n<p>These dynamic blocks, allow the network to grow organically, without aritifically restricting the blocksize to make a forced fee market, while still avoiding spam attacks. There are several more angles we can view this idea from, and more reasons why it wouldn\'t be possible to add to Bitcoin, but for now, we hope that the reader has an understanding of how Monero sidesteps several of the problems in Bitcoin and its derivatives, and how it plans to scale its throughput into the future.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Whenever individuals discuss the problems with blockchain, one of the first words to pop up will be \'scaling\'. Monero sets itself apart in solving that issue.';
@@ -3551,7 +3551,7 @@ class I18nEn extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Purpose';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'For context, let’s talk a bit about mining hardware. Miners use computers to do the work, but we all know that not every computer is made equally. Some computers are powerful enough to run AI networks or intense games, while others struggle with even simple tasks. These differences in computing power also affect the rate hash rate, or the rate at which they look for block solutions. <br/><br/>\nBut even these differences between computers pale in comparison to the hash rates of specialized hardware, otherwise known as Application Specific Integrated Circuits (ASICs), which outclass regular computers by several order of magnitude.<br/><br/>\nLet’s take some time to explore what makes ASICs so powerful. Imagine all computers as falling somewhere on a spectrum, which ranges from being able to do many things, but nothing well, to doing only one thing, but doing it very well. CPUs and ASICs are on opposite ends of this spectrum.<br/><br/>\nCPUs that are in all standard computers are on the first end. They can do many things, like browse the web, play games, or render video, but not do any of them particularly well. But this flexibility comes at the cost of efficiency.<br/><br/>\nASICs are on the other end, where they can just one thing, but do it at an incredible rate. They can only perform one mathematical function, but because they can ignore everything else, the performance gains are astronomical. This efficiency however, does come at the cost of flexibility, so if the function changes even slightly – an example is x + y = z changes to 2x + y = z – then the ASIC will cease to function altogether. <br/><br/>\nNot everyone owns an ASIC, but everyone does own computers. This can lead to an unfair advantage.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'For context, let’s talk a bit about mining hardware. Miners use computers to do the work, but we all know that not every computer is made equally. Some computers are powerful enough to run AI networks or intense games, while others struggle with even simple tasks. These differences in computing power also affect the hash rate, or the rate at which they look for block solutions. <br/><br/>\nBut even these differences between computers pale in comparison to the hash rates of specialized hardware, otherwise known as Application Specific Integrated Circuits (ASICs), which outclass regular computers by several orders of magnitude.<br/><br/>\nLet’s take some time to explore what makes ASICs so powerful. Imagine all computers as falling somewhere on a spectrum, which ranges from being able to do many things, but nothing well, to doing only one thing, but doing it very well. CPUs and ASICs are on opposite ends of this spectrum.<br/><br/>\nCPUs that are in all standard computers are on the first end. They can do many things, like browse the web, play games, or render video, but not do any of them particularly well. But this flexibility comes at the cost of efficiency.<br/><br/>\nASICs are on the other end, where they can just one thing, but do it at an incredible rate. They can only perform one mathematical function, but because they can ignore everything else, the performance gains are astronomical. This efficiency however, does come at the cost of flexibility, so if the function changes even slightly – an example is x + y = z changes to 2x + y = z – then the ASIC will cease to function altogether. <br/><br/>\nNot everyone owns an ASIC, but everyone does own computers. This can lead to an unfair advantage.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Background';
@@ -7988,7 +7988,7 @@ class I18nEn extends I18n {
   String get api_error_72 => 'Attempting to withdraw funds of an account that doesn’t exist';
 
   @override
-  String get api_error_78 => 'Attempting to make get ads with an illegal combination of parameters';
+  String get api_error_78 => 'Attempting to make get ads with an invalid combination of parameters';
 
   @override
   String get api_error_79 => 'The requested ad ID doesn’t exist';
@@ -9229,6 +9229,9 @@ class I18nEn extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'call option sell';
 
   @override
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR anonymously';
+
+  @override
   String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
 
   @override
@@ -9238,13 +9241,8 @@ class I18nEn extends I18n {
   String get app_ad_created => 'Ad created';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
-
-  @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val will be back soon!\\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\\nWe\'ll probably be back online soon. Stay updated in our community groups:';
   }
 
   @override
@@ -9264,4 +9262,39 @@ class I18nEn extends I18n {
 
   @override
   String get app_your_ads => 'Your ads';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val App Maintenance';
+  }
+
+  @override
+  String get app_push_new_message => 'You have a new message in a trade';
+
+  @override
+  String get app_push_new_offer => 'You have a new offer';
+
+  @override
+  String get app_push_trade_marked_completed => 'Trade marked as completed';
+
+  @override
+  String get app_push_trade_cancelled => 'Trade cancelled';
+
+  @override
+  String get app_push_trade_disputed => 'Trade disputed';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Buy/Sell Monero Anonymously';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'Have questions? Ask in the community chats';
 }

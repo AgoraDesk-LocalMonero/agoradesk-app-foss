@@ -22,7 +22,7 @@ class I18nTl extends I18n {
 
   @override
   String about250Sbblock8722Sb28722Sbtext(Object appName) {
-    return 'itSa $appName nakikipag-ugnayan ka sa mga tao. Hindi tulad ng mga sentralisadong palitan ng cryptocurrency, direktang nakikipagkalakalan ka sa ibang tao. Ginagawa nitong sandalan at mabilis ang proseso, dahil walang corporate overhead. Makukuha mo agad ang iyong Monero. Gayundin, masusuportahan ng $appName ang bawat paraan ng pagbabayad na sinusuportahan ng komunidad ng user nito, na ginagawang posible para sa mga user na walang access sa tradisyonal na pagbabangko na makabili o makabenta rin ng Monero. Para sa bawat transaksyon, hinihiling ng $appName sa nagbebenta na mag-post ng arbitration bond upang protektahan ang bumibili ng Monero.';
+    return 'Sa $appName nakikipag-ugnayan ka sa mga tao. Hindi tulad ng mga sentralisadong palitan ng cryptocurrency, direktang nakikipagkalakalan ka sa ibang tao. Ginagawa nitong sandalan at mabilis ang proseso, dahil walang corporate overhead. Makukuha mo agad ang iyong Monero. Gayundin, masusuportahan ng $appName ang bawat paraan ng pagbabayad na sinusuportahan ng komunidad ng user nito, na ginagawang posible para sa mga user na walang access sa tradisyonal na pagbabangko na makabili o makabenta rin ng Monero. Para sa bawat transaksyon, hinihiling ng $appName sa nagbebenta na mag-post ng arbitration bond upang protektahan ang bumibili ng Monero.';
   }
 
   @override
@@ -1726,7 +1726,7 @@ class I18nTl extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Ang halaga ng presyo ay hindi naitakda nang maayos';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Mga iligal na kumbinasyon ng bansa, paraan ng pagbabayad, at pera';
+  String get error250Sbpost8722Sbad250Sb86 => 'Mga di-wastong kumbinasyon ng bansa, paraan ng pagbabayad, at pera';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Ang paraan ng pagbabayad na ito ay hindi wasto para sa napiling bansa';
@@ -3251,7 +3251,7 @@ class I18nTl extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Paano Gumagana ang Atomic Swaps sa Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Tandaan:</b> Lubos na inirerekomenda na basahin ng mambabasa ang aming mga artikulo <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Bakit May Tail Emission ang Monero\"</a> at <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“Monero Mining: What Makes RandomX napaka Espesyal”</a>. Binubuo ng artikulong ito ang mga konseptong ipinakita doon.</i></p>\n\n<p>Sa tuwing tinatalakay ng mga indibidwal ang mga problema sa blockchain, ang isa sa mga unang salitang lalabas ay ang \'scaling\'. Hindi lihim na ang mga blockchain ay hindi maganda ang sukat, ngunit karamihan sa mga tao ay hindi alam kung bakit.</p>\n\n<p>Ang totoo, ang pag-scale ay talagang isang umbrella term na sumasaklaw sa dalawang magkaibang kategorya: Protocol support at technological support sa isang partikular na punto ng oras. Sa artikulong ito, itutuon namin ang aming pansin sa isa, ang suporta sa Protocol ay karaniwang sukatan kung gaano karaming mga transaksyon ang maaaring pangasiwaan ng protocol sa isang partikular na oras.</p>\n\n<p>Ang Bitcoin ay may limitasyon sa laki ng block, na nangangahulugang kapag sapat na ang mga transaksyon na naisama sa isang bloke, anumang karagdagang transaksyon ay kailangang maghintay sa linya para sa susunod na block. Ang isang kapaki-pakinabang na pagkakatulad ay pag-iisip tungkol sa isang tren. Isang tren ang humihinto sa istasyon, at ang mga nasa linya ay pumasok. Kapag puno na ang tren, sinumang maiiwan sa labas ay kailangang maghintay para sa susunod.</p>\n\n<p>Gumagamit ang Bitcoin ng mga bayarin upang matukoy kung sino ang papasok sa block o hindi. Sa pagbabalik sa analogy ng tren, maiisip ng isang tao ang isang potensyal na pasahero, na malapit nang maiwan, ay nag-aalok sa engineer ng tren ng limang dolyar upang bigyan siya ng upuan. Sumunod din ang ibang mga pasahero, at kalaunan ay may bidding war upang makita kung sino ang makakakuha ng mga upuan. Nasa driver ang pagpapasya kung gusto niyang igalang ang patakarang first-come-first-serve, ngunit nasa kanyang pinakamahusay na pinansiyal na interes na i-maximize ang kanyang kita sa pamamagitan ng pagkuha ng pinakamataas na bidder.</p>\n\n<p>Sa pagkakatulad na ito, ang mga minero ay ang mga tsuper ng tren. Maaari nilang isama ang anumang mga transaksyon na gusto nila sa block, ngunit karaniwang pipiliin nila ang mga may pinakamataas na bayad na bayarin.</p>\n\n<p>O kaya, kung hindi masyadong puno ang mga bloke, walang insentibo ang mga tao na magbayad ng mataas na bayarin dahil maraming libreng upuan na matitira.</p>\n\n<p>Sa kasagsagan ng 2017 cryptocurrency boom, binaha ang Bitcoin ng mga transaksyon, at ang mga bayarin ay tumaas para sa mga gustong mapabilang sa susunod na block, o anumang malapit na hinaharap na block sa bagay na iyon. Nakita ng mga ayaw magbayad ng mataas na bayarin ang kanilang mga transaksyon na itinulak pabalik sa loob ng maraming oras, araw, o kahit na tuluyang umalis sa pila.</p>\n\n<p>Ito ay isang nakakatakot na insight sa kung ano ang mangyayari sa Bitcoin kung ang madalas na pinag-uusapan tungkol sa \'mass adoption\' ay mangyayari. Kung ang Bitcoin ay gagamitin ng masa, ang mga bagay ay magiging mas masahol pa kaysa sa 2017, at ang Bitcoin ay hindi naa-access ng sinuman maliban sa mga mayayaman, dahil lamang sa maliit na throughput dahil sa isang nakapirming laki ng bloke, na nagiging sanhi ng pagsakop sa merkado ng bayad. .</p>\n\n<p>Nakita ito ni Monero at gustong gumawa ng kakaiba. Kaya nagpatupad ang mga developer ng Monero ng dynamic na blocksize.</p>\n\n<p>Sa pangkalahatan, mayroon ding block size na takip ang Monero, ngunit ito ay malambot na takip. Kapag ang linya ng naghihintay na mga transaksyon ay masyadong mahaba, maaaring dagdagan ng mga minero ang laki ng mga bloke. Sa aming pagkakatulad ng tren, maaari mong isipin na magdagdag ng higit pang mga kotse ng tren upang magkasya sa mga dagdag na pasahero. Matapos mawalan ng laman ang pila, ang mga bloke ay lumiliit pabalik sa kanilang orihinal na laki pasulong.</p>\n\n<p>Kung ito ay tila isang maayos na ideya, tila makatwirang itanong kung bakit ang Monero ang tanging cryptocurrency na nagpatupad nito. Bakit hindi ito idagdag sa Bitcoin para matigil ang mga isyu sa throughput?</p>\n\n<p>Sa kasamaang palad, hindi ito posible. Mayroong ilang mga dahilan kung bakit, at gagawin namin ang aming makakaya upang ipaliwanag.</p>\n\n<p> Palaging nasa pinakamahusay na interes ng isang minero ang magkaroon ng malalaking bloke. Sa malalaking bloke maaari silang magkasya sa mas maraming transaksyon, at kumita ng mas maraming pera mula sa mga bayarin, pati na rin ang mga reward sa block. Ito ay may potensyal na humantong sa mga pag-atake ng spam, kung saan ang isang tao ay nagpapadala ng maraming maliliit na transaksyon, na may maliliit na bayad, upang palakihin ang kadena. Itataas lang ng Miner ang block size isama silang lahat dahil pera ay pera, gaano man kaliit. Ito ay hahantong sa tuluy-tuloy na malalaking bloke na may kaunting pakinabang sa ekonomiya. Niresolba ito ng Bitcoin sa pamamagitan ng artipisyal na paghihigpit sa laki ng block, sa gayon ay bumubuo ng isang market ng bayad. Kailangang bayaran ng mga spam attacker ang iba pang mga user sa mga bayarin, at hindi na ito mura. Ngunit ito ay nangangahulugan na ang mga bloke ay napuno na iniiwan ang ilang mga transaksyon na naghihintay tulad ng nabanggit sa itaas.</p>\n\n<p>Kaya paano magkakaroon ng mga dynamic na blocksize ang Monero ngunit maiiwasan ang mga pag-atake ng spam? Ang sagot ay simple, ngunit matalino. Ang isang parusa sa block reward ay ipinakilala kapag ang isang block ay mas malaki kaysa sa normal. Kung gusto ng isang minero na pataasin ang blocksize, ang reward na makukuha nila sa paghahanap sa block na iyon ay magiging mas mababa kaysa sa kung hindi man ay matatanggap nila. Kaya\'t tataas lamang nila ang blocksize kapag ang mga binayarang bayarin sa transaksyon ng mga user ay lumampas sa nawalang bahagi ng block reward. Halimbawa, kung ang minero ay mawawalan ng 0.5 XMR sa pamamagitan ng pagtataas ng block reward, at ang kabuuan ng mga bayad na bayarin sa transaksyon ay magiging 0.4 XMR, magkakaroon ng netong pagkawala na 0.1 XMR kung sila ay magtataas ng laki, kaya sila ay huwag gawin ito. Sa kabaligtaran, kung ang kabuuang mga bayarin sa transaksyon ay nagdagdag ng hanggang 0.7 XMR, magkakaroon ng netong pakinabang na 0.2 XMR, kahit na mawala sa kanila ang 0.5 XMR mula sa parusa sa block reward, kaya tataas ang laki ng minero.</p>\n\n<p>Ang mga dynamic na bloke na ito, ay nagbibigay-daan sa network na lumago nang organiko, nang hindi pinaghihigpitan ang laki ng block upang makagawa ng market ng sapilitang bayad, habang iniiwasan pa rin ang mga pag-atake ng spam. Mayroong ilang higit pang mga anggulo na maaari naming tingnan ang ideyang ito, at higit pang mga dahilan kung bakit hindi ito posibleng idagdag sa Bitcoin, ngunit sa ngayon, umaasa kami na ang mambabasa ay may pag-unawa kung paano iniiwasan ni Monero ang ilang mga problema sa Bitcoin at ang mga derivative nito, at kung paano nito pinaplano na sukatin ang throughput nito sa hinaharap.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Tandaan:</b> Lubos na inirerekomenda na basahin ng mambabasa ang aming mga artikulo <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Bakit May Tail Emission ang Monero\"</a> at <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“Monero Mining: What Makes RandomX napaka Espesyal”</a>. Binubuo ng artikulong ito ang mga konseptong ipinakita doon.</i></p>\n\n<p>Sa tuwing tinatalakay ng mga indibidwal ang mga problema sa blockchain, ang isa sa mga unang salitang lalabas ay ang \'scaling\'. Hindi lihim na ang mga blockchain ay hindi maganda ang sukat, ngunit karamihan sa mga tao ay hindi alam kung bakit.</p>\n\n<p>Ang totoo, ang pag-scale ay talagang isang umbrella term na sumasaklaw sa dalawang magkaibang kategorya: Protocol support at technological support sa isang partikular na punto ng oras. Sa artikulong ito, itutuon namin ang aming pansin sa isa, ang suporta sa Protocol ay karaniwang sukatan kung gaano karaming mga transaksyon ang maaaring pangasiwaan ng protocol sa isang partikular na oras.</p>\n\n<p>Ang Bitcoin ay may limitasyon sa laki ng block, na nangangahulugang kapag sapat na ang mga transaksyon na naisama sa isang bloke, anumang karagdagang transaksyon ay kailangang maghintay sa linya para sa susunod na block. Ang isang kapaki-pakinabang na pagkakatulad ay pag-iisip tungkol sa isang tren. Isang tren ang humihinto sa istasyon, at ang mga nasa linya ay pumasok. Kapag puno na ang tren, sinumang maiiwan sa labas ay kailangang maghintay para sa susunod.</p>\n\n<p>Gumagamit ang Bitcoin ng mga bayarin upang matukoy kung sino ang papasok sa block o hindi. Sa pagbabalik sa analogy ng tren, maiisip ng isang tao ang isang potensyal na pasahero, na malapit nang maiwan, ay nag-aalok sa engineer ng tren ng limang dolyar upang bigyan siya ng upuan. Sumunod din ang ibang mga pasahero, at kalaunan ay may bidding war upang makita kung sino ang makakakuha ng mga upuan. Nasa driver ang pagpapasya kung gusto niyang igalang ang patakarang first-come-first-serve, ngunit nasa kanyang pinakamahusay na pinansiyal na interes na i-maximize ang kanyang kita sa pamamagitan ng pagkuha ng pinakamataas na bidder.</p>\n\n<p>Sa pagkakatulad na ito, ang mga minero ay ang mga tsuper ng tren. Maaari nilang isama ang anumang mga transaksyon na gusto nila sa block, ngunit karaniwang pipiliin nila ang mga may pinakamataas na bayad na bayarin.</p>\n\n<p>O kaya, kung hindi masyadong puno ang mga bloke, walang insentibo ang mga tao na magbayad ng mataas na bayarin dahil maraming libreng upuan na matitira.</p>\n\n<p>Sa kasagsagan ng 2017 cryptocurrency boom, binaha ang Bitcoin ng mga transaksyon, at ang mga bayarin ay tumaas para sa mga gustong mapabilang sa susunod na block, o anumang malapit na hinaharap na block sa bagay na iyon. Nakita ng mga ayaw magbayad ng mataas na bayarin ang kanilang mga transaksyon na itinulak pabalik sa loob ng maraming oras, araw, o kahit na tuluyang umalis sa pila.</p>\n\n<p>Ito ay isang nakakatakot na insight sa kung ano ang mangyayari sa Bitcoin kung ang madalas na pinag-uusapan tungkol sa \'mass adoption\' ay mangyayari. Kung ang Bitcoin ay gagamitin ng masa, ang mga bagay ay magiging mas masahol pa kaysa sa 2017, at ang Bitcoin ay hindi naa-access ng sinuman maliban sa mga mayayaman, dahil lamang sa maliit na throughput dahil sa isang nakapirming laki ng bloke, na nagiging sanhi ng pagsakop sa merkado ng bayad. .</p>\n\n<p>Nakita ito ni Monero at gustong gumawa ng kakaiba. Kaya nagpatupad ang mga developer ng Monero ng dynamic na blocksize.</p>\n\n<p>Sa pangkalahatan, mayroon ding block size na takip ang Monero, ngunit ito ay malambot na takip. Kapag ang linya ng naghihintay na mga transaksyon ay masyadong mahaba, maaaring dagdagan ng mga minero ang laki ng mga bloke. Sa aming pagkakatulad ng tren, maaari mong isipin na magdagdag ng higit pang mga kotse ng tren upang magkasya sa mga dagdag na pasahero. Matapos mawalan ng laman ang pila, ang mga bloke ay lumiliit pabalik sa kanilang orihinal na laki pasulong.</p>\n\n<p>Kung ito ay tila isang maayos na ideya, tila makatwirang itanong kung bakit ang Monero ang tanging cryptocurrency na nagpatupad nito. Bakit hindi ito idagdag sa Bitcoin para matigil ang mga isyu sa throughput?</p>\n\n<p>Sa kasamaang palad, hindi ito posible. Mayroong ilang mga dahilan kung bakit, at gagawin namin ang aming makakaya upang ipaliwanag.</p>\n\n<p> Palaging nasa pinakamahusay na interes ng isang minero ang magkaroon ng malalaking bloke. Sa malalaking bloke maaari silang magkasya sa mas maraming transaksyon, at kumita ng mas maraming pera mula sa mga bayarin, pati na rin ang mga reward sa block. Ito ay may potensyal na humantong sa mga pag-atake ng spam, kung saan ang isang tao ay nagpapadala ng maraming maliliit na transaksyon, na may maliliit na bayad, upang palakihin ang kadena. Itataas lang ng Miner ang block size isama silang lahat dahil pera ay pera, gaano man kaliit. Ito ay hahantong sa tuluy-tuloy na malalaking bloke na may kaunting pakinabang sa ekonomiya. Niresolba ito ng Bitcoin sa pamamagitan ng artipisyal na paghihigpit sa laki ng block, sa gayon ay bumubuo ng isang market ng bayad. Kailangang bayaran ng mga spam attacker ang iba pang mga user sa mga bayarin, at hindi na ito mura. Ngunit ito ay nangangahulugan na ang mga bloke ay napuno na iniiwan ang ilang mga transaksyon na naghihintay tulad ng nabanggit sa itaas.</p>\n\n<p>Kaya paano magkakaroon ng mga dynamic na blocksize ang Monero ngunit maiiwasan ang mga pag-atake ng spam? Ang sagot ay simple, ngunit matalino. Ang isang parusa sa block reward ay ipinakilala kapag ang isang block ay mas malaki kaysa sa normal. Kung gusto ng isang minero na pataasin ang blocksize, ang reward na makukuha nila sa paghahanap sa block na iyon ay magiging mas mababa kaysa sa kung hindi man ay matatanggap nila. Kaya\'t tataas lamang nila ang blocksize kapag ang mga binayarang bayarin sa transaksyon ng mga user ay lumampas sa nawalang bahagi ng block reward. Halimbawa, kung mawawalan ng 0.5 XMR ang minero sa pamamagitan ng pagpapataas sa laki ng block, at ang kabuuan ng mga binabayarang bayarin sa transaksyon ay magiging 0.4 XMR, magkakaroon ng netong pagkawala ng 0.1 XMR kung tataasan nila ang laki, kaya tataas sila. huwag gawin ito. Sa kabaligtaran, kung ang kabuuang bayarin sa transaksyon ay idinagdag ng hanggang 0.7 XMR, magkakaroon ng netong pakinabang na 0.2 XMR, kahit na mawala sa kanila ang 0.5 XMR mula sa parusa sa block reward, kaya tataas ang laki ng minero.</p>\n\n<p>Ang mga dynamic na bloke na ito, ay nagbibigay-daan sa network na lumago nang organiko, nang hindi pinaghihigpitan ang laki ng block upang makagawa ng market ng sapilitang bayad, habang iniiwasan pa rin ang mga pag-atake ng spam. Mayroong ilang higit pang mga anggulo na maaari naming tingnan ang ideyang ito, at higit pang mga dahilan kung bakit hindi ito posibleng idagdag sa Bitcoin, ngunit sa ngayon, umaasa kami na ang mambabasa ay may pag-unawa kung paano iniiwasan ni Monero ang ilang mga problema sa Bitcoin at ang mga derivative nito, at kung paano nito pinaplano na sukatin ang throughput nito sa hinaharap.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Sa tuwing tinatalakay ng mga indibidwal ang mga problema sa blockchain, ang isa sa mga unang salitang lalabas ay ang \'scaling\'. Monero ay nagtatakda ng sarili sa paglutas ng isyung iyon.';
@@ -3551,7 +3551,7 @@ class I18nTl extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Layunin';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Para sa konteksto, pag-usapan natin ang tungkol sa pagmimina ng hardware. Gumagamit ang mga minero ng mga computer para gawin ang trabaho, ngunit alam nating lahat na hindi lahat ng computer ay ginawang pantay. Ang ilang mga computer ay sapat na makapangyarihan upang magpatakbo ng mga network ng AI o matinding laro, habang ang iba ay nahihirapan kahit na sa mga simpleng gawain. Ang mga pagkakaibang ito sa computing power ay nakakaapekto rin sa rate ng hash rate, o ang rate kung saan sila naghahanap ng mga block solution. <br/><br/>\nNgunit kahit na ang mga pagkakaibang ito sa pagitan ng mga computer ay namumutla kung ihahambing sa mga hash rate ng espesyal na hardware, kung hindi man ay kilala bilang Application Specific Integrated Circuits (ASICs), na mas mataas kaysa sa mga regular na computer sa ilang pagkakasunud-sunod ng magnitude.<br/><br/>\nMaglaan tayo ng ilang oras upang tuklasin kung bakit napakalakas ng ASIC. Isipin na ang lahat ng mga computer ay nahuhulog sa isang lugar sa isang spectrum, na mula sa kakayahang gumawa ng maraming bagay, ngunit walang maayos, hanggang sa paggawa lamang ng isang bagay, ngunit ginagawa ito nang napakahusay. Ang mga CPU at ASIC ay nasa magkabilang dulo ng spectrum na ito.<br/><br/>\nAng mga CPU na nasa lahat ng karaniwang computer ay nasa unang dulo. Maaari silang gumawa ng maraming bagay, tulad ng pag-browse sa web, paglalaro, o pag-render ng video, ngunit hindi nila magawa ang alinman sa mga ito nang mahusay. Ngunit ang kakayahang umangkop na ito ay dumating sa halaga ng kahusayan.<br/><br/>\nAng mga ASIC ay nasa kabilang dulo, kung saan maaari lamang nilang gawin ang isang bagay, ngunit gawin ito sa isang hindi kapani-paniwalang bilis. Maaari lamang silang magsagawa ng isang mathematical function, ngunit dahil maaari nilang balewalain ang lahat ng iba pa, ang mga nadagdag sa pagganap ay astronomical. Gayunpaman, ang kahusayan na ito ay dumating sa halaga ng kakayahang umangkop, kaya kung ang function ay nagbabago kahit na bahagyang - isang halimbawa ay ang x + y = z ay nagbabago sa 2x + y = z - kung gayon ang ASIC ay titigil sa paggana nang buo. <br/><br/>\nHindi lahat ay nagmamay-ari ng ASIC, ngunit lahat ay nagmamay-ari ng mga computer. Ito ay maaaring humantong sa isang hindi patas na kalamangan.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Para sa konteksto, pag-usapan natin ang tungkol sa pagmimina ng hardware. Gumagamit ang mga minero ng mga computer para gawin ang trabaho, ngunit alam nating lahat na hindi lahat ng computer ay ginawang pantay. Ang ilang mga computer ay sapat na makapangyarihan upang magpatakbo ng mga network ng AI o matinding laro, habang ang iba ay nahihirapan kahit na sa mga simpleng gawain. Ang mga pagkakaibang ito sa computing power ay nakakaapekto rin sa hash rate, o ang rate kung saan sila naghahanap ng mga block solution. <br/><br/>\nNgunit kahit na ang mga pagkakaibang ito sa pagitan ng mga computer ay namumutla kung ihahambing sa mga hash rate ng espesyal na hardware, kung hindi man ay kilala bilang Application Specific Integrated Circuits (ASICs), na mas mataas kaysa sa mga regular na computer sa ilang mga order ng magnitude.<br/><br/>\nMaglaan tayo ng ilang oras upang tuklasin kung bakit napakalakas ng ASIC. Isipin na ang lahat ng mga computer ay nahuhulog sa isang lugar sa isang spectrum, na mula sa kakayahang gumawa ng maraming bagay, ngunit walang maayos, hanggang sa paggawa lamang ng isang bagay, ngunit ginagawa ito nang napakahusay. Ang mga CPU at ASIC ay nasa magkabilang dulo ng spectrum na ito.<br/><br/>\nAng mga CPU na nasa lahat ng karaniwang computer ay nasa unang dulo. Maaari silang gumawa ng maraming bagay, tulad ng pag-browse sa web, paglalaro, o pag-render ng video, ngunit hindi nila magawa ang alinman sa mga ito nang mahusay. Ngunit ang kakayahang umangkop na ito ay dumating sa halaga ng kahusayan.<br/><br/>\nAng mga ASIC ay nasa kabilang dulo, kung saan maaari lamang nilang gawin ang isang bagay, ngunit gawin ito sa isang hindi kapani-paniwalang bilis. Maaari lamang silang magsagawa ng isang mathematical function, ngunit dahil maaari nilang balewalain ang lahat ng iba pa, ang mga nadagdag sa pagganap ay astronomical. Gayunpaman, ang kahusayan na ito ay dumating sa halaga ng kakayahang umangkop, kaya kung ang function ay nagbabago kahit na bahagyang - isang halimbawa ay ang x + y = z ay nagbabago sa 2x + y = z - kung gayon ang ASIC ay titigil sa paggana nang buo. <br/><br/>\nHindi lahat ay nagmamay-ari ng ASIC, ngunit lahat ay nagmamay-ari ng mga computer. Ito ay maaaring humantong sa isang hindi patas na kalamangan.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Background';
@@ -7988,7 +7988,7 @@ class I18nTl extends I18n {
   String get api_error_72 => 'Pagtatangkang mag-withdraw ng mga pondo ng isang account na wala';
 
   @override
-  String get api_error_78 => 'Pagtatangkang gumawa ng mga ad na may ilegal na kumbinasyon ng mga parameter';
+  String get api_error_78 => 'Pagtatangkang gumawa ng mga ad na may di-wastong kumbinasyon ng mga parameter';
 
   @override
   String get api_error_79 => 'Ang hiniling na ad ID ay wala';
@@ -8168,7 +8168,7 @@ class I18nTl extends I18n {
   String get api_error_144 => 'Sinusubukang magtakda ng limitasyon sa fiat na mas mababa sa minAmount kapag nag-a-update ng ad';
 
   @override
-  String get api_error_145 => 'Sinusubukang magtakda ng limitasyon ng fiat na higit sa maxAmount kapag nag-a-update ng ad';
+  String get api_error_145 => 'Sinusubukang magtakda ng limitasyon sa fiat na higit sa maxAmount kapag nag-a-update ng ad';
 
   @override
   String get api_error_147 => 'Pagtatangkang kumuha ng data ng kaakibat para sa user na hindi pinagana ang programang kaakibat';
@@ -8180,7 +8180,7 @@ class I18nTl extends I18n {
   String get api_error_149 => 'Hindi tinukoy ang priyoridad para sa panlabas na pag-withdraw';
 
   @override
-  String get api_error_150 => 'Pagtatangkang magsimula ng kalakalan sa isang ad kung saan ang humihiling na user ay hinarangan ng ad poster';
+  String get api_error_150 => 'Pagtatangkang magsimula ng trade sa isang ad kung saan ang humihiling na user ay hinarangan ng ad poster';
 
   @override
   String get api_error_151 => 'Pagtatangkang magsimula ng trade sa isang ad kung saan ang humihiling na user ay hindi pinagkakatiwalaan ng ad poster';
@@ -8210,7 +8210,7 @@ class I18nTl extends I18n {
   String get api_error_159 => 'Ang user na humihiling na markahan ang premium na pagbabayad ng kalakalan ay hindi umiiral';
 
   @override
-  String get api_error_160 => 'Pagtatangkang markahan ang premium na binayaran para sa isang trade na hindi umiiral';
+  String get api_error_160 => 'Sinusubukang markahan ang premium na binayaran para sa isang trade na hindi umiiral';
 
   @override
   String get api_error_161 => 'Ang user na humihiling na mag-ehersisyo ang opsyon ay hindi umiiral';
@@ -8237,7 +8237,7 @@ class I18nTl extends I18n {
   String get api_error_168 => 'Ang user na humihiling na kumpirmahin ang pagbabayad ng saklaw ng kalakalan ay hindi umiiral';
 
   @override
-  String get api_error_169 => 'Sinusubukang kumpirmahin ang bayad na bayad para sa isang kalakalan na hindi umiiral';
+  String get api_error_169 => 'Sinusubukang kumpirmahin ang bayad na bayad para sa isang trade na hindi umiiral';
 
   @override
   String get api_error_172 => 'Pagtatangkang mag-post ng ad kung saan ang asset ay kapareho ng currency ng ad';
@@ -8396,7 +8396,7 @@ class I18nTl extends I18n {
   String get api_error_242 => 'Di-wastong address na ibinigay ng mamimili kapag gumagawa ng isang uri ng ad na BUY';
 
   @override
-  String get api_error_244 => 'Di-wastong address na ibinigay ng mamimili kapag nag-a-update ng BUY-type na ad';
+  String get api_error_244 => 'Di-wastong address na ibinigay ng mamimili kapag nag-a-update ng isang uri ng ad na BUY';
 
   @override
   String get api_error_245 => 'Sinusubukan ng mamimili na magbigay ng panloob na address kapag nag-a-update ng uri ng ad na BUY (hindi pinapayagan ang mga panloob na address para sa layunin ng pag-aayos ng kalakalan)';
@@ -8843,7 +8843,7 @@ class I18nTl extends I18n {
 
   @override
   String affiliate__users__text(Object number) {
-    return 'Kasalukuyan kang nakarehistro bilang isang kaakibat para sa $number mga gumagamit at makakakuha ng mga komisyon mula sa lahat ng mga trade na ginawa ng mga ito.';
+    return 'Kasalukuyan kang nakarehistro bilang isang affiliate para sa $number mga user at makakakuha ng mga komisyon mula sa lahat ng mga trade na ginawa ng mga ito.';
   }
 
   @override
@@ -8861,7 +8861,7 @@ class I18nTl extends I18n {
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Ang iyong affiliate program ay pinagana, at maaari kang makakuha ng mga komisyon sa pamamagitan ng pagdaragdag ng iyong affiliate tag {refCode} sa anumang $appName URL.';
+    return 'Ang iyong affiliate program ay pinagana, at maaari kang makakuha ng mga komisyon sa pamamagitan ng pagdaragdag ng iyong affiliate tag $ref_code sa anumang $appName URL.';
   }
 
   @override
@@ -8936,7 +8936,7 @@ class I18nTl extends I18n {
 
   @override
   String app_buy_sell(Object val) {
-    return 'Magkano ang gusto mong {buyOrsell}?';
+    return 'Magkano ang gusto mong $val?';
   }
 
   @override
@@ -9093,16 +9093,16 @@ class I18nTl extends I18n {
   String get app_one_percent => '1% bayad';
 
   @override
-  String get app_final_amount => 'Panghuling halaga';
+  String get app_final_amount => 'Huling halaga';
 
   @override
   String app_note_label(Object val) {
-    return 'Ang iyong tala sa {username} (ikaw lang ang nakakita)';
+    return 'Ang iyong tala sa $val (ikaw lang ang nakakita)';
   }
 
   @override
   String app_note_add(Object val) {
-    return 'Magdagdag ng tala sa {username}';
+    return 'Magdagdag ng tala sa $val';
   }
 
   @override
@@ -9164,22 +9164,22 @@ class I18nTl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang hindi nagpapakilala, nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy Bitcoin easily';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: madaling bumili ng Bitcoin';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR easily';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero:  bumily ng XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Bumili o magbenta ng Monero nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nAng LocalMonero ay ang pinakamalaking, pinakapinagkakatiwalaan at mahusay na itinatag na platform ng kalakalan ng P2P sa komunidad ng XMR. Wala kaming KYC checks - maaari kang bumili ng Monero nang hindi nagpapakilala nang walang pag-verify ng ID gamit ang PayPal, credit card, gift card, cash sa pamamagitan ng koreo o i-convert ang Bitcoin, Ether, USDT, o anumang iba pang crypto coin sa Monero - sinusuportahan ng aming platform ang anumang paraan ng pagbabayad.\n\n- Ligtas at Makinis na Pakikipagkalakalan\nSinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at buong-buo naming sinusuportahan ang mga face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng LocalMonero ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso ng iyong karanasan sa pangangalakal. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash noong 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang nag-aalinlangan na komunidad ng Monero.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\nBumili o magbenta ng Monero nang walang pag-verify ng ID. BABALA: ANG APP NA ITO AY KASALUKUYANG NASA OPEN BETA!\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://localmonero.co/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Monero sa/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Bumili o magbenta ng Monero nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nAng LocalMonero ay ang pinakamalaking, pinakapinagkakatiwalaan at mahusay na itinatag na platform ng kalakalan ng P2P sa komunidad ng XMR. Wala kaming KYC checks - maaari kang bumili ng Monero nang hindi nagpapakilala nang walang pag-verify ng ID gamit ang PayPal, credit card, gift card, cash sa pamamagitan ng koreo o i-convert ang Bitcoin, Ether, USDT, o anumang iba pang crypto coin sa Monero - sinusuportahan ng aming platform ang anumang paraan ng pagbabayad.\n\n- Ligtas at Smooth Trading\nSinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at buong-buo naming sinusuportahan ang mga face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng LocalMonero ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso ng iyong karanasan sa pangangalakal. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash noong 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang nag-aalinlangan na komunidad ng Monero.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\nBumili o magbenta ng Monero nang walang pag-verify ng ID. BABALA: ANG APP NA ITO AY KASALUKUYANG NASA OPEN BETA!\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://localmonero.co/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Monero sa/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR privately';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: bumili ng XMR ng pribado';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Bumili o magbenta ng Monero nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nAng LocalMonero ay ang pinakamalaking, pinakapinagkakatiwalaan at mahusay na itinatag na platform ng kalakalan ng P2P sa komunidad ng XMR. Wala kaming KYC checks - maaari kang bumili ng Monero nang hindi nagpapakilala nang walang pag-verify ng ID gamit ang PayPal, credit card, gift card, cash sa pamamagitan ng koreo o i-convert ang Bitcoin, Ether, USDT, o anumang iba pang crypto coin sa Monero - sinusuportahan ng aming platform ang anumang paraan ng pagbabayad.\n\n- Ligtas at Smooth Trading\nSinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at buong-buo naming sinusuportahan ang mga face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng LocalMonero ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso ng iyong karanasan sa pangangalakal. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash noong 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang nag-aalinlangan na komunidad ng Monero.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://localmonero.co/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Monero sa/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy BTC anonymously';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy BTC ng di makikilala';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang walang pag-verify ng ID. Cash o online.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
@@ -9229,39 +9229,72 @@ class I18nTl extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'pagbebenta ng opsyon sa tawag';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: bumili ng XMR nang hindi nagpapakilala';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'I-edit ang password ng kahon, i-double tap para mag-edit';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Kumpirmahin ang kahon sa pag-edit ng password, i-double tap para mag-edit';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'Nagawa ang ad';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val ay babalik sa lalong madaling panahon!\\nPaumanhin sa abala ngunit nagsasagawa kami ng ilang nakaiskedyul na pagpapanatili sa ngayon.\\nMarahil ay bumalik kami online sa lalong madaling panahon. Manatiling updated sa aming mga grupo ng komunidad:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Pumili ng uri ng ad';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Mag-tap dito para mag-iwan ng review!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Nag-iwan ka na ng review sa user na ito. Gusto mo bang i-update ang iyong review ngayon?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Pumili ng mamimili o nagbebenta';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Magtakda ng default na tab';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'Ang iyong mga ad';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Pagpapanatili ng App';
+  }
+
+  @override
+  String get app_push_new_message => 'Mayroon kang bagong mensahe sa isang kalakalan';
+
+  @override
+  String get app_push_new_offer => 'May bago kang offer';
+
+  @override
+  String get app_push_trade_marked_completed => 'Trade marked bilang nakumpleto';
+
+  @override
+  String get app_push_trade_cancelled => 'Kinansela ang kalakalan';
+
+  @override
+  String get app_push_trade_disputed => 'Pinagtatalunan ang kalakalan';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Bilhin/Ibenta ang Monero nang Hindi nagpapakilala';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_ask_community_chats => 'May mga katanungan? Magtanong sa mga chat sa komunidad';
 }
