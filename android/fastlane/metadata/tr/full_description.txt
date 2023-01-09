@@ -1,0 +1,26 @@
+Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.
+
+Bitcoin'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk'te bitcoin satın almak hiç bu kadar kolay olmamıştı - en sevdiğiniz çevrimiçi ödeme yöntemini kullanarak bir kişiden anında BTC satın alın: PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya diğerleri. Yakınınızdaki bitcoinleri nakit olarak satın almak istiyorsanız, yerel olarak bitcoin satmak isteyen birini bulabilirsiniz - ticaret platformu, BTC'nin nakit olarak alınmasını ve satılmasını destekler. Posta yoluyla nakit kullanarak bitcoin bile satın alabilirsiniz.
+
+- Güvenli ve Sorunsuz Ticaret
+Tıpkı LocalBitcoins gibi, herhangi bir yerde, herhangi bir ödeme yöntemini, herhangi bir para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins'in aksine yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.
+
+- KYC/AML veya Kimlik Doğrulaması yok
+AgoraDesk, orijinal LocalBitcoins'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.
+
+- Topluluk tarafından güvenilir
+Platformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.
+
+- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı
+Uygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.
+
+Kaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Sorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+
+- Yıldız Desteği
+Destek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.
+
+Desteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support
+
+- Adil Ücretler
+Tahkim tahvili cüzdanımıza/cüzdanımıza Bitcoin yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.

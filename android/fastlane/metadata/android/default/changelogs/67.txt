@@ -4,3 +4,4 @@
 4. Feat: adding a review widget to the chat and activity tab when the trade is completed.
 5. Fix: ads are loading on the ads screen.
 6. Fix: grey screen on the trade tab.
+7. Fix: notification icons on Android.

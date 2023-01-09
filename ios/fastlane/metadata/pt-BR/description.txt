@@ -1,0 +1,26 @@
+Compre ou venda Bitcoin anonimamente, sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.
+
+Quer saber como investir em Bitcoin? Na AgoraDesk, comprar bitcoins nunca foi tão fácil - compre instantaneamente BTC de uma pessoa usando seu método de pagamento online favorito: PayPal, cartão de crédito/débito ou transferência bancária, vales-presente, Venmo ou qualquer outro. Se você deseja comprar bitcoins perto de você com dinheiro, pode encontrar alguém disposto a vender bitcoins localmente - a plataforma de negociação oferece suporte à compra e venda de BTC com dinheiro. Você pode até comprar bitcoins usando dinheiro pelo correio.
+
+- Negociação segura e tranquila
+Assim como a LocalBitcoins, aceitamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e, ao contrário do LocalBitcoins, apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.
+
+- Sem KYC/AML ou verificação de identidade
+A AgoraDesk está empenhada em manter a simplicidade e a franqueza que tornaram as LocalBitcoins originais tão populares. Não empregamos KYC/AML, nem planejamos fazê-lo.
+
+- Confiado pela comunidade
+Nossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na comunidade extremamente cética de criptomoedas.
+
+- Seguro, código aberto, centrado na privacidade, resistente à censura
+Nosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.
+
+Código-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Rastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+
+- Suporte Estelar
+Nossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.
+
+Você pode entrar em contato com nosso suporte em: https://agoradesk.com/support
+
+- Taxas justas
+Não cobramos taxas exorbitantes quando você deposita ou retira Bitcoins de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.

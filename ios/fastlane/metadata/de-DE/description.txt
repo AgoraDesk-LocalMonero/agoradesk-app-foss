@@ -1,28 +1,26 @@
-Buy or sell Bitcoin anonymously, without ID verification. Cash or online. Safe, fast, easy.
+Kaufen oder verkaufen Sie Bitcoin anonym, ohne Identitätsprüfung. Bargeld oder online. Sicher, schnell, einfach.
 
+Sie fragen sich, wie Sie in Bitcoin investieren können? Auf AgoraDesk war der Kauf von Bitcoins noch nie so einfach - kaufen Sie BTC sofort von einer Person mit Ihrer bevorzugten Online-Zahlungsmethode: PayPal, Kredit-/Debitkarte oder Banküberweisung, Geschenkkarten, Venmo oder jede andere Zahlungsmethode. Wenn Sie Bitcoins in Ihrer Nähe mit Bargeld kaufen möchten, können Sie jemanden finden, der bereit ist, Bitcoins vor Ort zu verkaufen – die Handelsplattform unterstützt den Kauf und Verkauf von BTC mit Bargeld. Sie können Bitcoins sogar mit Bargeld per Post kaufen.
 
-Wondering how to invest in Bitcoin? On AgoraDesk, purchasing bitcoins has never been easier - instantly buy BTC from a person using your favorite online payment method: PayPal, credit/debit card or bank transfer, gift cards, Venmo or any other. If you want to buy bitcoins near you with cash, you can find someone willing to sell bitcoins locally - the trading platform supports buying and selling BTC with cash. You can even buy bitcoins using cash by mail.
+- Sicherer und reibungsloser Handel
+Genau wie LocalBitcoins unterstützen wir jede Zahlungsmethode, jede Währung und das überall. Wir entfernen keine Zahlungsmethoden und unterstützen im Gegensatz zu LocalBitcoins den persönlichen Bargeldhandel vollständig. Alle unsere Trades sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Popularität der Plattform und Stammkunden, sowie für die Verkäufer unerlässlich ist.
 
-- Safe and Smooth Trading
-Just like LocalBitcoins, we support any payment method, any currency, anywhere. We do not remove payment methods, and, unlike LocalBitcoins, we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.
+- Keine KYC/AML- oder ID-Verifizierung
+AgoraDesk ist bestrebt, die Einfachheit und Geradlinigkeit beizubehalten, die die ursprüngliche LocalBitcoins so beliebt gemacht hat. Wir setzen KYC/AML nicht ein und planen dies auch nie.
 
-- No KYC/AML or ID Verification
-AgoraDesk is committed to maintaining the simplicity and straight-forwardness that made the original LocalBitcoins so popular. We do not employ KYC/AML, nor do we ever plan on doing so.
+- Von der Community vertraut
+Unsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Zusammenbruch des Kryptowährungsmarktes von 2018 überstanden und wurde durch ihren gemeinschaftsorientierten, sorgfältigen Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Kryptowährungsgemeinschaft.
 
-- Trusted by the Community
-Our platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical cryptocurrency community.
+- Sicher, Open Source, datenschutzzentriert, zensurresistent
+Unsere App ist kostenlos und Open Source, was sicherstellt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Open Source unserer App ermöglicht es auch jedem, auf unsere App zuzugreifen, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, die Google vollständig blockiert hat. Wir schätzen Ihre Privatsphäre so sehr, dass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.
 
-- Secure, Open Source, Privacy-Centric, Censorship-Resistant
-Our app is free and open source, which ensures that many eyes are looking at the app's code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.
+Quellcode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Problemverfolgung: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
 
-Source code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
-Issue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+- Hervorragende Unterstützung
+Unser Support-Team ist schnell, reaktionsschnell und immer bemüht, Ihnen zu gefallen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Wir sind über Social Media immer gut erreichbar, hören uns Ihre Kritik aufmerksam an und setzen gute User-Vorschläge immer in Rekordzeit um.
 
-- Stellar Support
-Our support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.
+Sie erreichen unseren Support unter: https://agoradesk.com/support
 
-You can reach our support at: https://agoradesk.com/support
-
-- Fair Fees
-We do not charge exorbitant fees when you deposit or withdraw Bitcoins to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.
-
+- Faire Gebühren
+Wir erheben keine exorbitanten Gebühren, wenn Sie Bitcoins in/aus unserer Wallet für Schiedsbürgschaften einzahlen oder abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.

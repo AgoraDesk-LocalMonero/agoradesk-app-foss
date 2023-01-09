@@ -1,28 +1,26 @@
-Buy or sell Bitcoin anonymously, without ID verification. Cash or online. Safe, fast, easy.
+Nakupujte nebo prodávejte bitcoiny anonymně, bez ověření ID. Hotově nebo online. Bezpečné, rychlé, snadné.
 
+Zajímá vás, jak investovat do bitcoinů? Na AgoraDesk nebyl nákup bitcoinů nikdy snazší – nakupujte BTC okamžitě od osoby pomocí Vaší oblíbené online platební metody: PayPal, kreditní/debetní kartou nebo bankovním převodem, dárkové karty, Venmo nebo jakoukoli jinou. Pokud chcete koupit bitcoiny ve Vašem okolí za hotovost, můžete najít někoho, kdo je ochotný prodávat bitcoiny lokálně – obchodní platforma podporuje nákup a prodej BTC za hotovost. Můžete dokonce nakupovat bitcoiny za hotovost poštou.
 
-Wondering how to invest in Bitcoin? On AgoraDesk, purchasing bitcoins has never been easier - instantly buy BTC from a person using your favorite online payment method: PayPal, credit/debit card or bank transfer, gift cards, Venmo or any other. If you want to buy bitcoins near you with cash, you can find someone willing to sell bitcoins locally - the trading platform supports buying and selling BTC with cash. You can even buy bitcoins using cash by mail.
+- Bezpečné a plynulé obchodování
+Stejně jako LocalBitcoins podporujeme jakoukoli platební metodu, jakoukoli měnu a kdekoli. Neodstraňujeme platební metody a na rozdíl od LocalBitcoins plně podporujeme hotovostní obchody tváří v tvář. Všechny naše obchody jsou chráněny arbitrážním dluhopisem. Díky tomu, že požadujeme, aby byly prostředky před zahájením obchodu drženy v rozhodčím dluhopisu, zajišťujeme bezproblémový a bezpečný zážitek pro kupujícího, který je nezbytný pro popularitu platformy a opakované zákazníky pro prodejce.
 
-- Safe and Smooth Trading
-Just like LocalBitcoins, we support any payment method, any currency, anywhere. We do not remove payment methods, and, unlike LocalBitcoins, we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.
+- Žádné ověření KYC/AML nebo ID
+Společnost AgoraDesk se zavázala udržovat jednoduchost a přímočarost, díky které byly původní LocalBitcoiny tak populární. Nezavádíme KYC/AML a ani to nikdy neplánujeme.
 
-- No KYC/AML or ID Verification
-AgoraDesk is committed to maintaining the simplicity and straight-forwardness that made the original LocalBitcoins so popular. We do not employ KYC/AML, nor do we ever plan on doing so.
+- Důvěřováno komunitou
+Naše platforma funguje více než čtyři roky, přežila velký krach kryptoměnového trhu v roce 2018 a díky své komunitně orientované pečlivé službě se stala jedním z nejdůvěryhodnějších jmen v extrémně skeptické komunitě kryptoměn.
 
-- Trusted by the Community
-Our platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical cryptocurrency community.
+- Bezpečné, Open Source, Ochrana soukromí, Odolné vůči cenzuře
+Naše aplikace je zdarma a s otevřeným zdrojovým kódem, což zajišťuje, že mnoho očí se dívá na kód aplikace, aby se zajistilo, že neexistují žádné bezpečnostní díry nebo úniky privátních dat. Otevřený zdroj naší aplikace také umožňuje komukoli mít přístup k naší aplikaci, i když určité typy úložiští aplikací, tuto aplikaci cenzuruji. Naše aplikace funguje i na telefonech, které mají Google zcela zablokovaný. Velmi si vážíme Vašeho soukromí, takže ani nepožadujeme, abyste při registraci uváděli e-mail.
 
-- Secure, Open Source, Privacy-Centric, Censorship-Resistant
-Our app is free and open source, which ensures that many eyes are looking at the app's code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.
+Zdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Sledování problémů: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
 
-Source code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
-Issue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+- Hvězdná podpora
+Náš tým podpory je rychlý, pohotový a vždy se snaží vyhovět. Nikdy jsme neměli lístek podpory, který by nebyl zodpovězen do 24 hodin. Jsme vždy snadno dosažitelní prostřednictvím sociálních médií, pozorně nasloucháme Vaší kritice a vždy implementujeme dobré uživatelské návrhy v rekordním čase.
 
-- Stellar Support
-Our support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.
+Naši podporu můžete kontaktovat na: https://agoradesk.com/support
 
-You can reach our support at: https://agoradesk.com/support
-
-- Fair Fees
-We do not charge exorbitant fees when you deposit or withdraw Bitcoins to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.
-
+- Spravedlivé poplatky
+Neúčtujeme přemrštěné poplatky, když vkládáte nebo vybíráte bitcoiny do/z naší peněženky arbitrážních dluhopisů. Neexistuje žádný poplatek za vklad a poplatek za výběr se velmi blíží poplatku, který byste platili za normální transakci.
