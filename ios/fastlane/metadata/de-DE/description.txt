@@ -1,18 +1,19 @@
-Kaufen oder verkaufen Sie Bitcoin anonym, ohne Identitätsprüfung. Bargeld oder online. Sicher, schnell, einfach.
+Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bargeld oder online. Sicher, schnell, einfach.
 
-Sie fragen sich, wie Sie in Bitcoin investieren können? Auf AgoraDesk war der Kauf von Bitcoins noch nie so einfach - kaufen Sie BTC sofort von einer Person mit Ihrer bevorzugten Online-Zahlungsmethode: PayPal, Kredit-/Debitkarte oder Banküberweisung, Geschenkkarten, Venmo oder jede andere Zahlungsmethode. Wenn Sie Bitcoins in Ihrer Nähe mit Bargeld kaufen möchten, können Sie jemanden finden, der bereit ist, Bitcoins vor Ort zu verkaufen – die Handelsplattform unterstützt den Kauf und Verkauf von BTC mit Bargeld. Sie können Bitcoins sogar mit Bargeld per Post kaufen.
+LocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Bei uns gibt es keine KYC-Prüfungen – Sie können Monero einfach anonym ohne ID-Verifizierung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Krypto-Münze in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.
 
 - Sicherer und reibungsloser Handel
-Genau wie LocalBitcoins unterstützen wir jede Zahlungsmethode, jede Währung und das überall. Wir entfernen keine Zahlungsmethoden und unterstützen im Gegensatz zu LocalBitcoins den persönlichen Bargeldhandel vollständig. Alle unsere Trades sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Popularität der Plattform und Stammkunden, sowie für die Verkäufer unerlässlich ist.
+Wir unterstützen jede Zahlungsmethode, jede Währung und das überall. Wir entfernen keine Zahlungsmethoden und unterstützen den Barhandel von Angesicht zu Angesicht. Alle unsere Trades sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Popularität der Plattform und Stammkunden, als auch für die Verkäufer unerlässlich ist.
 
 - Keine KYC/AML- oder ID-Verifizierung
-AgoraDesk ist bestrebt, die Einfachheit und Geradlinigkeit beizubehalten, die die ursprüngliche LocalBitcoins so beliebt gemacht hat. Wir setzen KYC/AML nicht ein und planen dies auch nie.
+LocalMonero ist bestrebt, die Einfachheit und Geradlinigkeit Ihrer Handelserfahrung beizubehalten. Wir setzen KYC/AML nicht ein und planen dies auch nie.
 
 - Von der Community vertraut
-Unsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Zusammenbruch des Kryptowährungsmarktes von 2018 überstanden und wurde durch ihren gemeinschaftsorientierten, sorgfältigen Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Kryptowährungsgemeinschaft.
+Unsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Crash des Kryptowährungsmarktes von 2018 überstanden und wurde durch ihren gemeinschaftsorientierten, gewissenhaften Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community.
 
 - Sicher, Open Source, datenschutzzentriert, zensurresistent
 Unsere App ist kostenlos und Open Source, was sicherstellt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Open Source unserer App ermöglicht es auch jedem, auf unsere App zuzugreifen, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, die Google vollständig blockiert hat. Wir schätzen Ihre Privatsphäre so sehr, dass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.
+Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. ACHTUNG: DIESE APP IST DERZEIT IN DER OFFENEN BETA!
 
 Quellcode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
 Problemverfolgung: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
@@ -20,7 +21,7 @@ Problemverfolgung: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/i
 - Hervorragende Unterstützung
 Unser Support-Team ist schnell, reaktionsschnell und immer bemüht, Ihnen zu gefallen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Wir sind über Social Media immer gut erreichbar, hören uns Ihre Kritik aufmerksam an und setzen gute User-Vorschläge immer in Rekordzeit um.
 
-Sie erreichen unseren Support unter: https://agoradesk.com/support
+Sie erreichen unseren Support unter: https://localmonero.co/support
 
 - Faire Gebühren
-Wir erheben keine exorbitanten Gebühren, wenn Sie Bitcoins in/aus unserer Wallet für Schiedsbürgschaften einzahlen oder abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.
+Wir erheben keine exorbitanten Gebühren, wenn Sie Monero in/aus unserer Wallet für Schiedsbürgschaften einzahlen oder abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.
