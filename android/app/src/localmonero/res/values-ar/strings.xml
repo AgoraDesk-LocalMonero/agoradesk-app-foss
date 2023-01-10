@@ -1,0 +1,14 @@
+<resources>
+    <string name="MESSAGE_TITLE">You have a new message in a trade</string>
+    <string name="TRADE_REQUEST_TITLE">You have a new offer</string>
+    <string name="TRADE_COMPLETE_TITLE">اكتملت الصفقة</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE_TITLE">Trade marked as completed</string>
+    <string name="TRADE_CANCELLED_TITLE">Trade cancelled</string>
+    <string name="TRADE_DISPUTED_TITLE">Trade disputed</string>
+    <string name="TRADE_REQUEST">لديك عرض جديد %2$s من المستخدم %1$s</string>
+    <string name="TRADE_COMPLETE">تم إكمال تداولك %2$s مع %1$s</string>
+    <string name="TRADE_PAYMENT_MARKED_COMPLETE">أكمل %2$s الدفع في الصفقة %1$s</string>
+    <string name="TRADE_CANCELLED">تم إلغاء الصفقة %2$s بواسطة %1$s</string>
+    <string name="TRADE_DISPUTED">"تم التنازع على الصفقة %2$s بواسطة %1$s</string>
+    <string name="MESSAGE">%1$s</string>
+</resources>

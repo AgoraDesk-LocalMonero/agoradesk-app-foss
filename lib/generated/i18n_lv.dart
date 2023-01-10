@@ -276,22 +276,22 @@ class I18nLv extends I18n {
 
   @override
   String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
-    return 'Pērciet $assetName ar skaidru naudu $country';
+    return 'Pirkt $assetName ar skaidru naudu $country';
   }
 
   @override
   String ad250Sbhomepage8722Sblisting250Sbonline8722Sbbuy8722Sbheading(Object assetName, Object country) {
-    return 'Pārdod $assetName tiešsaistē $country';
+    return 'Pārdot $assetName tiešsaistē $country';
   }
 
   @override
   String ad250Sbhomepage8722Sblisting250Sbonline8722Sbsell8722Sbheading(Object assetName, Object country) {
-    return 'Iegādājieties $assetName tiešsaistē $country';
+    return 'Pirkt $assetName tiešsaistē $country';
   }
 
   @override
   String ad250Sblinks250Sbsubtitle(Object appName, Object assetName) {
-    return 'Vai neatradāt meklēto darījumu? Šajos $appName sarakstos ir vairāk $assetName tirdzniecības darījumu, kas ir līdzīgi šim:';
+    return 'Vai neatradāt meklēto piedāvājumu? Šajos $appName sarakstos ir vairāk $assetName tirdzniecības piedāvājumu, kas ir līdzīgi šim:';
   }
 
   @override
@@ -301,7 +301,7 @@ class I18nLv extends I18n {
   String get ad250Sblisting250Sbinsufficient8722Sbbalance => 'Tirgotājam ir nepietiekams atlikums';
 
   @override
-  String get ad250Sbno8722Sbmax8722Sbamount => 'jebkura summa ';
+  String get ad250Sbno8722Sbmax8722Sbamount => 'jebkāda summa ';
 
   @override
   String get ad250Sbno8722Sbmin8722Sbamount => 'Līdz ';
@@ -311,14 +311,14 @@ class I18nLv extends I18n {
 
   @override
   String ad250Sbnotice250Sbprotected(Object link) {
-    return 'Šo tirdzniecību aizsargā $link';
+    return 'Šo darījumu aizsargā $link';
   }
 
   @override
   String get ad250Sbnotice250Sbprotected250Sblink => 'šķīrējtiesas obligācija';
 
   @override
-  String get ad250Sbself8722Sbvacation8722Sbnotice => 'Šī reklāma nav publiski redzama, jo jūs pašlaik esat atvaļinājumā. Varat to mainīt iestatījumos vai informācijas panelī.';
+  String get ad250Sbself8722Sbvacation8722Sbnotice => 'Šis sludinājums nav publiski redzams, jo jūs pašlaik esat atvaļinājumā. Varat to mainīt iestatījumos vai panelī.';
 
   @override
   String get ad250Sbverified8722Sbemail => 'Jūsu e-pasts ir jāapstiprina, lai atvērtu darījumu ar šo sludinājumu';
@@ -329,27 +329,27 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get affiliate250Sbbanner250Sbcode => 'Reklāmkaroga kods:';
+  String get affiliate250Sbbanner250Sbcode => 'Izkārtnes kods:';
 
   @override
   String affiliate250Sbbanner250Sbtext(Object appName, Object linebreak, Object iframe) {
-    return 'Reklāmkarogi reklamē $appName ar jūsu filiāli. Jūs varat pievienot HTML reklāmkarogus saviem emuāriem un vietnēm. $linebreak  $iframe reklāmkarogs jūsu reklāmai (izmērs 234 x 60 pikseļi, pusreklāmkaroga vienība):';
+    return 'Izkārtnes reklamē $appName ar jūsu saistību. Jūs varat pievienot HTML reklāmkarogus saviem blogiem un vietnēm. $linebreak  $iframe izkārtne jūsu sludinājumam (izmērs 234 x 60 pikseļi, pusizkārtnes vienība):';
   }
 
   @override
-  String get affiliate250Sbbanner250Sbtitle => 'Reklāmkarogs';
+  String get affiliate250Sbbanner250Sbtitle => 'Izkārtne';
 
   @override
   String get affiliate250Sbenable8722Sbbtn => 'Iespējot saistīto programmu';
 
   @override
   String affiliate250Sbenabled(Object refCode, Object appName) {
-    return 'Jūsu saistītā programma ir iespējota, un jūs varat nopelnīt komisijas naudu, pievienojot savu filiāles tagu $refCode jebkuram $appName URL.';
+    return 'Jūsu saistītā programma ir iespējota, un jūs varat nopelnīt komisijas naudu, pievienojot savu saistīto kodu $refCode jebkuram $appName URL.';
   }
 
   @override
   String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
-    return 'Jūs saņemat divus lietotājus — $assetName pircēju un pārdevēju, kas reģistrēti $appName, un viņi veic vienu darījumu, kura vērtība ir 100 $assetSymbol. Jūs nopelnāt 20% komisijas maksu par $appName tirdzniecības maksām no abiem dalībniekiem, kopā 40% no $appName maksas. Jūsu nopelnītā summa ir 0,4 $assetSymbol. Svarīga ir tikai pabeigta pārdošana, kas notiek mūsu darījuma procesā. Izmaksas tiek veiktas katru dienu. $linebreak  $appName $support ir vairāk nekā gatavs jums palīdzēt ar visiem jautājumiem.';
+    return 'Jūs piesaistat divus lietotājus — $assetName pircēju un pārdevēju, kas reģistrēti $appName, un viņi veic vienu darījumu, kura vērtība ir 100 $assetSymbol. Jūs nopelnāt 20% komisijas maksu no $appName tirdzniecības maksām no abiem dalībniekiem, kopā 40% no $appName maksas. Jūsu nopelnītā summa ir 0,4 $assetSymbol. Vērā tiek ņemti tikai pabeigti darījumi, kas notiek mūsu darījumu procesā. Izmaksas tiek veiktas katru dienu. $linebreak  $appName $support priecāsies jums palīdzēt ar visiem jautājumiem.';
   }
 
   @override
@@ -359,10 +359,10 @@ class I18nLv extends I18n {
   String get affiliate250Sbexample250Sbtitle => 'Komisijas piemērs';
 
   @override
-  String get affiliate250Sbinstructions8722Sb0 => 'Piederība tiek reģistrēta, kad jebkurš lietotājs reģistrējas pēc nokļūšanas vietnē, izmantojot saiti ar jūsu novirzīšanas kodu.';
+  String get affiliate250Sbinstructions8722Sb0 => 'Saistība tiek reģistrēta, kad kāds lietotājs reģistrējas pēc nokļūšanas vietnē no saites ar jūsu saistīto kodu.';
 
   @override
-  String get affiliate250Sbinstructions8722Sblink8722Sbtype8722Sbregular8722Sbsubtitle => 'Regulāri:';
+  String get affiliate250Sbinstructions8722Sblink8722Sbtype8722Sbregular8722Sbsubtitle => 'Parasti:';
 
   @override
   String affiliate250Sbinstructions8722Sbtext(Object appName) {
@@ -370,7 +370,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get affiliate250Sbinstructions8722Sbtitle => 'Piemēri saites';
+  String get affiliate250Sbinstructions8722Sbtitle => 'Piemēru saites';
 
   @override
   String affiliate250Sblogged8722Sbout(Object signUp, Object logIn) {
@@ -381,7 +381,7 @@ class I18nLv extends I18n {
   String get affiliate250Sblogged8722Sbout8722Sblog8722Sbin => 'Pieslēgties';
 
   @override
-  String get affiliate250Sblogged8722Sbout8722Sbsign8722Sbup => 'Pierakstīties';
+  String get affiliate250Sblogged8722Sbout8722Sbsign8722Sbup => 'Reģistrēties';
 
   @override
   String get affiliate250Sbpayouts250Sbnone => 'Vēl nav nekādu izmaksu';
@@ -403,17 +403,17 @@ class I18nLv extends I18n {
 
   @override
   String affiliate250Sbref8722Sbcode(Object refCode) {
-    return 'Jūsu ieteikuma kods ir: $refCode';
+    return 'Jūsu saistītais kods ir: $refCode';
   }
 
   @override
   String affiliate250Sbterms250Sbtext(Object appName, Object assetName) {
-    return '• Varat izveidot saiti uz jebkuru atsevišķu lapu, piemēram, valsts sarakstu vai maksājuma veidu sarakstu, vai jebko citu $appName. <br/>• Jūs nopelnīsiet $assetName no lietotājiem, kuri ieradīsies vietnē, izmantojot jūsu saistīto saišu reģistru un veiks darījumus. <br/>• Izmaksas katru dienu tiks veiktas jūsu $appName makā kā $assetName. <br/>• Komisijas maksa tiks maksāta vienu gadu no lietotāja reģistrācijas. Komisija ir balstīta uz ienākumiem, ko jaunais lietotājs gūst par $appName (tirdzniecības maksa). <br/>• Ja jums ir aktīvi kuponi, jūsu kopējās kuponu atlaides konkrētajā periodā tiks atņemtas no jūsu saistītā uzņēmuma ieņēmumiem tajā pašā periodā. Ja jūsu kopējā atlaides summa konkrētajā periodā ir lielāka vai vienāda ar saistītā uzņēmuma ieņēmumiem tajā pašā konkrētajā periodā, jūs nesaņemsiet nekādus partneruzņēmuma ieņēmumus šajā periodā. <br/>• Jebkura nediena spēle, piemēram, maldinoša reklāma, ir aizliegta. <br/>• Surogātpasta sūtīšana ir aizliegta. Surogātpasta sūtīšana ietver neabonētu privātu vai publisku ziņojumu sūtīšanu forumos/reddit, anulētus masu sūtījumus utt. <br/>• Slēptu iframe pievienošana vietnei, lai tvertu saistītos uzņēmumus, ir aizliegta. Ir atļauti tikai saistītie iframe vai tiešas saites uz tīmekļa lapu. <br/>• $appName ir tiesības jebkurā laikā atspējot jebkuru saistīto lietotāju. Ja pārkāpsiet noteikumus, jūsu saistītā programma tiks pārtraukta.';
+    return '• Varat izveidot saiti uz jebkuru atsevišķu lapu, piemēram, valstu sarakstu vai maksājuma veidu sarakstu, vai jebko citu $appName. <br/>• Jūs nopelnīsiet $assetName no lietotājiem, kuri ieradīsies vietnē, izmantojot jūsu saites un veiks darījumus. <br/>• Izmaksas katru dienu tiks veiktas jūsu $appName makā kā $assetName. <br/>• Komisija tiks maksāta vienu gadu no lietotāja reģistrācijas. Komisija ir balstīta uz ienākumiem, ko jaunais lietotājs ienes $appName (tirdzniecības maksa). <br/>• Ja jums ir aktīvi kuponi, jūsu kopējās kuponu atlaides konkrētajā periodā tiks atņemtas no jūsu saistītās programmas ieņēmumiem tajā pašā periodā. Ja jūsu kopējā atlaides summa konkrētajā periodā ir lielāka vai vienāda ar saistītās programmas ieņēmumiem tajā pašā periodā, jūs nesaņemsiet nekādus saistītās programmas ieņēmumus šajā periodā. <br/>• Jebkuras netīras darbības, kā maldinoša reklāma, ir aizliegtas. <br/>• Surogātpasta sūtīšana ir aizliegta. Surogātpasta sūtīšana ietver neabonētu privātu vai publisku ziņojumu sūtīšanu forumos/reddit, neabonētus masu sūtījumus utt. <br/>• Slēptu iframe pievienošana vietnei, lai tvertu saistītos lietotājus, ir aizliegta. Ir atļauti tikai saistītie iframe vai tiešas saites uz mājaslapu. <br/>• $appName ir tiesības jebkurā laikā atspējot jebkuru saistīto. Ja pārkāpsiet noteikumus, jūsu saistītā programma tiks pārtraukta.';
   }
 
   @override
   String affiliate250Sbterms250Sbtext57Sbagoradesk(Object appName) {
-    return '• Varat izveidot saiti uz jebkuru atsevišķu lapu, piemēram, valsts sarakstu vai maksājuma veidu sarakstu, vai jebko citu $appName. <br/>• Jūs nopelnīsiet kriptovalūtu no lietotājiem, kuri ieradīsies vietnē, izmantojot jūsu saistīto saišu reģistru un veiks darījumus. <br/>• Izmaksas tiks veiktas katru dienu jūsu $appName makā attiecīgajās kriptovalūtās. <br/>• Komisijas maksa tiks maksāta vienu gadu no lietotāja reģistrācijas. Komisija ir balstīta uz ienākumiem, ko jaunais lietotājs gūst par $appName (tirdzniecības maksa). <br/>• Jebkura nediena spēle, piemēram, maldinoša reklāma, ir aizliegta. <br/>• Surogātpasta sūtīšana ir aizliegta. Surogātpasta sūtīšana ietver neabonētu privātu vai publisku ziņojumu sūtīšanu forumos/reddit, anulētus masu sūtījumus utt. <br/>• Slēptu iframe pievienošana vietnei, lai tvertu saistītos uzņēmumus, ir aizliegta. Ir atļauti tikai saistītie iframe vai tiešas saites uz tīmekļa lapu. <br/>• $appName ir tiesības jebkurā laikā atspējot jebkuru saistīto lietotāju. Ja pārkāpsiet noteikumus, jūsu saistītā programma tiks pārtraukta.';
+    return '• Varat izveidot saiti uz jebkuru atsevišķu lapu, piemēram, valstu sarakstu vai maksājuma veidu sarakstu, vai jebko citu $appName. <br/>• Jūs nopelnīsiet kriptovalūtu no lietotājiem, kuri ieradīsies vietnē, izmantojot jūsu saiti un veiks darījumus. <br/>• Izmaksas tiks veiktas katru dienu jūsu $appName makā attiecīgajās kriptovalūtās. <br/>• Komisija tiks maksāta vienu gadu no lietotāja reģistrācijas. Komisija ir balstīta uz ienākumiem, ko jaunais lietotājs ienes $appName (tirdzniecības maksa). <br/>• Jebkādas netīras darbības, kā maldinoša reklāma, ir aizliegtas. <br/>• Surogātpasta sūtīšana ir aizliegta. Surogātpasta sūtīšana ietver neabonētu privātu vai publisku ziņojumu sūtīšanu forumos/reddit, neabonētus masu sūtījumus utt. <br/>• Slēptu iframe pievienošana vietnei, lai tvertu saistītos lietotājus, ir aizliegta. Ir atļauti tikai saistītie iframe vai tiešas saites uz mājaslapu. <br/>• $appName ir tiesības jebkurā laikā atspējot jebkuru saistīto. Ja pārkāpsiet noteikumus, jūsu saistītā programma tiks pārtraukta.';
   }
 
   @override
@@ -424,7 +424,7 @@ class I18nLv extends I18n {
 
   @override
   String affiliate250Sbusers250Sbtext(Object number) {
-    return 'Jūs pašlaik esat reģistrēts kā $number lietotāju saistītais uzņēmums un nopelnīsiet komisijas naudu no visiem viņu veiktajiem darījumiem.';
+    return 'Jūs pašlaik esat reģistrēts kā $number lietotāju saistītais un nopelnīsiet komisijas naudu no visiem viņu veiktajiem darījumiem.';
   }
 
   @override
@@ -434,11 +434,11 @@ class I18nLv extends I18n {
   String get agoradesk250Sbad8722Sbpage250Sbhow8722Sbmuch8722Sbnotional8722Sbamount250Sbor => 'vai';
 
   @override
-  String get agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbads250Sball => 'RĀDĪT VISAS REKLĀMAS';
+  String get agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbads250Sball => 'RĀDĪT VISUS SLUDINĀJUMUS';
 
   @override
   String agoradesk250Sbasset8722Sbfilter8722Sbtoggle250Sbads250Sbcoin(Object assetSymbol) {
-    return '$assetSymbol TIKAI REKLĀMAS';
+    return 'TIKAI $assetSymbol SLUDINĀJUMI';
   }
 
   @override
@@ -460,12 +460,12 @@ class I18nLv extends I18n {
 
   @override
   String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Pēc pogas \'$buy_or_sell_button_name\' nospiešanas redzēsit vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms tirdzniecības pieprasījuma iesniegšanas, ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu.';
+    return 'Pēc pogas \'$buy_or_sell_button_name\' nospiešanas redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas. Ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu.';
   }
 
   @override
   String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Lai sāktu tirdzniecību, ierakstiet, cik daudz $asset vēlaties $buy_or_sell, un noklikšķiniet uz pogas \"Sūtīt tirdzniecības pieprasījumu\", lai sāktu tirdzniecību.';
+    return 'Lai sāktu darījumu, ierakstiet, cik daudz $asset vēlaties $buy_or_sell, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\", lai sāktu darījumu.';
   }
 
   @override
@@ -475,7 +475,7 @@ class I18nLv extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbseller => 'pārdevējs';
 
   @override
-  String get agoradesk250Sbguide250Sbbtc8722Sbas8722Sban8722Sbexample => 'Šajā rokasgrāmatā mēs izmantosim BTC kā bāzes valūtu, taču tie paši noteikumi attiecas uz XMR.';
+  String get agoradesk250Sbguide250Sbbtc8722Sbas8722Sban8722Sbexample => 'Šajā rokasgrāmatā mēs izmantosim BTC kā bāzes valūtu, taču tie paši noteikumi attiecas arī uz XMR.';
 
   @override
   String get agoradesk250Sbguide250Sbsearch250Sball8722Sbmethods8722Sbbuyer => 'Ja neesat pārliecināts, kā vēlaties maksāt, kā maksājuma veidu izvēlieties \"Visi tiešsaistes piedāvājumi\".';
@@ -492,7 +492,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbasset => 'Pēc tam atlasiet kriptovalūtu, ar kuru vēlaties tirgoties, nospiežot atbilstošo cilni rindā virs reklāmu tabulas. Šajā piemērā mēs izvēlēsimies BTC.';
+  String get agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbasset => 'Pēc tam atlasiet kriptovalūtu, kuru vēlaties tirgot, nospiežot atbilstošo cilni rindā virs sludinājumu tabulas. Šajā piemērā mēs izvēlēsimies BTC.';
 
   @override
   String get agoradesk250Sbguide250Sbsearch250Sbmain8722Sbpage => 'Dodieties uz galveno lapu.';
@@ -501,7 +501,7 @@ class I18nLv extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbsearch8722Sbresults => 'Vietnē būs norādīti jūsu reģionā pieejamie tirgotāji.';
 
   @override
-  String get agoradesk250Sbguide250Sbsearch250Sbsell8722Sbtab8722Sbname => 'Pārdod';
+  String get agoradesk250Sbguide250Sbsearch250Sbsell8722Sbtab8722Sbname => 'Pārdot';
 
   @override
   String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbbuy => 'Pirkt';
@@ -510,7 +510,7 @@ class I18nLv extends I18n {
   String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbcoins => 'Tirgot monētas';
 
   @override
-  String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbsell => 'Pārdod';
+  String get agoradesk250Sbindex250Sbad8722Sbselectors250Sbsell => 'Pārdot';
 
   @override
   String get agoradesk250Sbindex250Sbads8722Sbtable250Sbitm8722Sbotm8722Sbseparator250Sbcurrent8722Sbmarket8722Sbprice => 'Tirgus cena';
@@ -525,10 +525,10 @@ class I18nLv extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbcta => 'Reģistrējieties bez maksas, lai sāktu tirgot Bitcoin tūlīt';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbdisputes250Sbcontent => 'Mūsu šķīrējtiesas standarti ir ļoti augsti, jo <strong> mēs nepieņemam ekrānuzņēmumus vai citus viegli viltojamus dokumentus kā pierādījumu strīdos</strong>. Šī iemesla dēļ mēs spējam atturēt lielu skaitu krāpnieku no mēģinājumiem iztīrīt mūsu platformu. Mēs ātri reaģējam uz lietotāju ziņojumiem un izdodam brīdinājumus reģionos, kur ir pēkšņas krāpnieku aktivitātes.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbdisputes250Sbcontent => 'Mūsu šķīrējtiesas standarti ir ļoti augsti, jo <strong> mēs nepieņemam ekrānuzņēmumus vai citus viegli viltojamus dokumentus kā pierādījumu strīdos</strong>. Šī iemesla dēļ mēs spējam atturēt lielu skaitu krāpnieku no mēģinājumiem uzdarboties mūsu platformā. Mēs ātri reaģējam uz lietotāju ziņojumiem un izdodam brīdinājumus reģionos, kur parādās pēkšņas krāpnieku aktivitātes.';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbdisputes250Sbtitle => 'Krāpšanas novēršana';
+  String get agoradesk250Sblbc8722Sbalternative250Sbdisputes250Sbtitle => 'Krāpniecības novēršana';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb0 => 'Nav KYC/AML vai verifikācijas';
@@ -549,7 +549,7 @@ class I18nLv extends I18n {
 
   @override
   String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb12(Object affiliate) {
-    return '$affiliate - nopelniet komisiju par tirdzniecības lietotāju uzaicināšanu';
+    return '$affiliate - pelniet komisiju par jaunu lietotāju piesaisti';
   }
 
   @override
@@ -564,7 +564,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb15 => 'Skaistas reklāmas, izmantojot Markdown';
+  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb15 => 'Skaisti sludinājumi, pateicoties Markdown';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb16 => '2FA (ar TOTP lietotnēm, piemēram, Google Authenticator vai andOTP)';
@@ -590,13 +590,13 @@ class I18nLv extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb208722Sb1 => 'API';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb3 => 'Bezsaistes skaidras naudas tirdzniecība Bitcoin aci pret aci';
+  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb3 => 'Bezsaistes skaidras naudas Bitcoin tirdzniecība klātienē';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb4 => 'Pilnīga šķīrējtiesas obligāciju aizsardzība visos tiešsaistes darījumos';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb5 => 'Bez depozīta maksas, godīgas izņemšanas maksas';
+  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb5 => 'Bez depozīta maksām, godīgas izņemšanas maksas';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb6 => 'Ātrs un atsaucīgs atbalsts';
@@ -605,7 +605,7 @@ class I18nLv extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb7 => 'Reģistrācijas laikā nav e-pasta';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb8 => 'Sīpolu portāls';
+  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb8 => 'Onion portāls';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb9 => 'I2P portāls';
@@ -614,24 +614,24 @@ class I18nLv extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures250Sbtitle => 'AgoraDesk funkcijas ietver:';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfees250Sbcontent => '<i>Atšķirībā no </i> LocalBitcoins, mēs neiekasējam pārmērīgas maksas, kad iemaksājat vai izņemat Bitcoins mūsu šķīrējtiesas obligāciju makā/no tā. Nav <strong> depozīta maksas, un maksa par izņemšanu ir ļoti tuva maksai, ko jūs maksātu par parastu darījumu</strong>. Par pārskaitījumiem uz citu AgoraDesk lietotāju makiem nav nekādas maksas.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbfees250Sbcontent => '<i>Atšķirībā no </i> LocalBitcoins, mēs neiekasējam pārmērīgas maksas, kad iemaksājat vai izņemat Bitcoin mūsu šķīrējtiesas obligāciju makā/no tā. <strong> Nav depozīta maksas, un maksa par izņemšanu ir ļoti tuva tai, ko jūs maksātu par parastu darījumu</strong>. Par pārskaitījumiem uz citu AgoraDesk lietotāju makiem nav nekādas maksas.';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbfees250Sbtitle => 'Godīgas maksas';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbhtml8722Sbdescription => 'Vai meklējat LocalBitcoins analogu, lai tirgotu Bitcoins vienādrangā bez KYC/AML vai verifikācijas? AgoraDesk ir jauna P2P platforma Bitcoin tirdzniecībai, ko izveidoja komanda aiz LocalMonero, kas ir Monero līdzvērtīgs LocalBitcoins. Mēs piedāvājam to pašu ātru un vienkāršu Bitcoin tirdzniecības pieredzi, ko izmantoja LocalBitcoins, un daudz ko citu.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbhtml8722Sbdescription => 'Vai meklējat LocalBitcoins analogu, lai tirgotu Bitcoin no lietotāja uz lietotāju bez KYC/AML vai verifikācijas? AgoraDesk ir jauna P2P platforma Bitcoin tirdzniecībai, ko izveidoja LocalMonero komanda, kas ir Monero analogs LocalBitcoins. Mēs piedāvājam tādu pašu ātru un vienkāršu Bitcoin tirdzniecības procesu, ko reiz nodrošināja LocalBitcoins, un vairāk.';
 
   @override
   String agoradesk250Sblbc8722Sbalternative250Sbintroduction(Object lbc, Object lm) {
-    return 'Vai meklējat $lbc analogu Bitcoin vienādranga tirdzniecībai bez KYC/AML vai verifikācijas? AgoraDesk ir jauna P2P platforma Bitcoin tirdzniecībai, ko izveidoja komanda aiz $lm, Monero līdzvērtīga LocalBitcoins.';
+    return 'Vai meklējat $lbc analogu Bitcoin tirdzniecībai no lietotāja uz lietotāju bez KYC/AML vai verifikācijas? AgoraDesk ir jauna P2P platforma Bitcoin tirdzniecībai, ko izveidoja $lm komanda, Monero analogs LocalBitcoins.';
   }
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbno8722Sbkyc250Sbcontent => 'AgoraDesk ir apņēmies saglabāt vienkāršību un tiešumu, kas padarīja sākotnējos LocalBitcoins tik populārus. <strong> Mēs neizmantojam KYC/AML, kā arī nekad neplānojam to darīt</strong>. Mēs esam stingri pārliecināti, ka pati KYC/AML koncepcija ir pilnīgi pretēja idejai par peer-to-peer bezrecepšu apmaiņu, piemēram, mūsu pašu, un līdz brīdim, kad uz <i> planētas Zeme vairs nebūs likumīgu ceļu. </i>, lai izvairītos no KYC/AML ieviešanas, mēs darīsim visu iespējamo, lai nodrošinātu jums bezrūpīgu pieredzi.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbno8722Sbkyc250Sbcontent => 'AgoraDesk ir apņēmies saglabāt vienkāršību un tiešumu, kas padarīja sākotnējo LocalBitcoins tik populāru. <strong> Mēs neizmantojam KYC/AML, kā arī nekad neplānojam to darīt</strong>. Mēs esam stingri pārliecināti, ka pati KYC/AML koncepcija ir pilnīgi pretēja idejai par tiešu peer-to-peer maiņu kā mūsu pašu, un līdz brīdim, kad uz <i> planētas Zeme </i> vairs nebūs likumīgu ceļu, lai izvairītos no KYC/AML ieviešanas, mēs darīsim visu iespējamo, lai nodrošinātu jums gludu procesu.';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbno8722Sbkyc250Sbtitle => 'Nav KYC/AML';
+  String get agoradesk250Sblbc8722Sbalternative250Sbno8722Sbkyc250Sbtitle => 'Bez KYC/AML';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbcontent => ' Tā kā AgoraDesk ir izveidojusi komanda, kurai ir pieredze uz privātumu orientētā Monero kopienā, AgoraDesk manto to pašu uz privātumu orientēto pieeju, kas ir LocalMonero. Lietotājs, kurš pilnībā bloķē Google pakalpojumus, bez problēmām varēs izmantot mūsu platformu. <strong> Mūsu platforma ir pat pilnībā funkcionāla bez JavaScript</strong>, kas nodrošina tādu drošības un privātuma līmeni, kāds <i>nekad</i> nebūs sasniedzams citās platformās, kuru darbībai nepieciešams JavaScript.';
@@ -641,17 +641,17 @@ class I18nLv extends I18n {
 
   @override
   String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Mūsu vietne ir viegli pieejama, izmantojot $tor_link (kas ir pielāgota maksimālai veiktspējai jūsu komfortam, izmantojot $advanced_routing) un pat ar $i2p_link. Tas nodrošina ne tikai to, ka varēsit no mums slēpt savu patieso IP (ko mēs tik un tā nekad nesaistām ar jūsu kontu), bet arī to, ka, ja kāda iemesla dēļ mūsu parastais domēns jums kļūs nepieejams, jums būs citi veidi, kā piekļūt. mūsu pakalpojums. Mēs ļoti novērtējam jūsu privātumu, $dont_ask_email.';
+    return 'Mūsu vietne ir viegli pieejama, izmantojot $tor_link (kas ir pielāgota maksimālai veiktspējai jūsu komfortam, izmantojot $advanced_routing) un pat ar $i2p_link. Tas nodrošina ne tikai to, ka varēsiet no mums slēpt savu patieso IP (ko mēs tik un tā nekad nesaistām ar jūsu kontu), bet arī, ka, ja kāda iemesla dēļ mūsu parastais domēns jums kļūs nepieejams, jums būs citi veidi, kā piekļūt mūsu pakalpojumiem. Mēs ļoti novērtējam jūsu privātumu, $dont_ask_email.';
   }
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbadvanced8722Sbrouting => 'uzlabotas sīpolu maršrutēšanas funkcijas';
+  String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbadvanced8722Sbrouting => 'uzlabotas onion maršrutēšanas funkcijas';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbi2p8722Sblink => 'I2P portāls';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbno8722Sbemail => 'mēs pat nepieprasām, lai reģistrējoties norādītu e-pastu';
+  String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbno8722Sbemail => 'mēs pat neprasām reģistrējoties norādīt e-pastu';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbtor8722Sblink => 'Tor portāls';
@@ -660,40 +660,40 @@ class I18nLv extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbtitle => 'Uz privātumu orientēts, izturīgs pret cenzūru';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbsubtitle => 'Mēs piedāvājam to pašu ātru un vienkāršu Bitcoin tirdzniecības pieredzi, ko izmantoja LocalBitcoins, un daudz ko citu.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbsubtitle => 'Mēs piedāvājam to pašu ātro un vienkāršo Bitcoin tirdzniecības pieredzi, ko reiz nodrošināja LocalBitcoins, un vēl vairāk.';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbsupport250Sbcontent => 'Mūsu atbalsta komanda ir ātra, atsaucīga un vienmēr vēlas iepriecināt. <strong> Mēs nekad neesam saņēmuši atbalsta biļeti, uz kuru nebūtu atbildēts 24 stundu laikā</strong>. Mēs vienmēr esam viegli sasniedzami, izmantojot sociālos medijus, mēs uzmanīgi uzklausām jūsu kritiku un vienmēr rekordīsā laikā īstenojam labus lietotāju ieteikumus.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbsupport250Sbcontent => 'Mūsu atbalsta komanda ir ātra, atsaucīga un vienmēr vēlas iepriecināt. <strong> Mums nekad nav ibjis atbalsta biļetes, uz kuru nebūtu atbildēts 24 stundu laikā</strong>. Mēs vienmēr esam viegli sasniedzami sociālajos tīklos, uzmanīgi uzklausām jūsu kritiku un vienmēr īsā laikā īstenojam labus lietotāju ieteikumus.';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbsupport250Sbtitle => 'Zvaigžņu atbalsts';
+  String get agoradesk250Sblbc8722Sbalternative250Sbsupport250Sbtitle => 'Spēcīgs atbalsts';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbtitle => 'LocalBitcoins alternatīva';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbtrading250Sbcontent => 'Tāpat kā LocalBitcoins, mēs atbalstām <strong> jebkuru maksājuma veidu, jebkuru valūtu, jebkurā vietā</strong>. Mēs nenoņemam maksājuma veidus, un <i>atšķirībā no</i> LocalBitcoins, mēs <strong> pilnībā atbalstām tiešus skaidras naudas darījumus</strong>. Visi mūsu darījumi ir aizsargāti ar šķīrējtiesas obligāciju. Pateicoties tam, ka mēs pieprasām, lai līdzekļi tiktu turēti šķīrējtiesas obligācijā pirms tirdzniecības uzsākšanas, mēs pircējam nodrošinām vienmērīgu un ātru pieredzi, kas ir būtiska platformas popularitātei un atkārtotiem klientiem pārdevējiem.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbtrading250Sbcontent => 'Tāpat kā LocalBitcoins, mēs atbalstām <strong> jebkuru maksājuma veidu, jebkuru valūtu, jebkurā vietā</strong>. Mēs nenoņemam maksājuma veidus, un <i>atšķirībā no</i> LocalBitcoins, mēs <strong> pilnībā atbalstām tiešus skaidras naudas darījumus</strong>. Visi mūsu darījumi ir aizsargāti ar šķīrējtiesas obligāciju. Pateicoties tam, ka mēs pieprasām, lai līdzekļi tiktu turēti šķīrējtiesas obligācijā pirms darījuma uzsākšanas, mēs pircējam nodrošinām vienmērīgu un ātru procesu. Tas ir būtiski platformas popularitātei un nodrošina pārdevējiem regulārus klientus.';
 
   @override
   String get agoradesk250Sblbc8722Sbalternative250Sbtrading250Sbtitle => 'Droša un raita tirdzniecība';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbtrust250Sbcontent => 'LocalMonero ir darbojies vairāk nekā divus gadus, pārdzīvojis 2018. gada lielo kriptovalūtu tirgus sabrukumu un, pateicoties <strong>kopienu orientētam rūpīgajam pakalpojumam</strong>, kļuva par vienu no <strong>uzticamākajiem</strong> nosaukumiem <i>. skeptiska</i> Monero kopiena.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbtrust250Sbcontent => 'LocalMonero ir darbojies vairāk nekā divus gadus, pārdzīvojis 2018. gada lielo kriptovalūtu tirgus sabrukumu un, pateicoties <strong> uz sabiedrību orientētajiem rūpīgajiem pakalpojumiem</strong>, kļuva par vienu no <strong>uzticamākajiem</strong> zīmoliem <i>izteikti skeptiskajā</i> Monero telpā.';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbtrust250Sbtitle => 'Sabiedrībai uzticas';
+  String get agoradesk250Sblbc8722Sbalternative250Sbtrust250Sbtitle => 'Sabiedrības uzticība';
 
   @override
   String get agoradesk250Sbleft8722Sbmenu250Sbtrade => 'Tirdzniecība';
 
   @override
-  String get agoradesk250Sblink8722Sbfrom8722Sblocalmonero => 'Tirdzniecība BTC';
+  String get agoradesk250Sblink8722Sbfrom8722Sblocalmonero => 'Tirgot BTC';
 
   @override
   String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sblocal8722Sbbuy => 'Pērciet monētas par skaidru naudu (lokāli)';
 
   @override
-  String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sblocal8722Sbsell => 'Monētu pārdošana skaidrā naudā (lokāli)';
+  String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sblocal8722Sbsell => 'Pārdodiet monētas par skaidru naudu (lokāli)';
 
   @override
   String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sbonline8722Sbbuy => 'Pērciet monētas tiešsaistē';
@@ -711,11 +711,11 @@ class I18nLv extends I18n {
 
   @override
   String agoradesk250Sbtrade250Sboption250Sbcall250Sbseller250Sbconfirm8722Sbpayment8722Sband8722Sbrelease(Object date) {
-    return 'Pircējs ir atzīmējis maksājumu par pabeigtu uz $date. Pārliecinieties, vai esat saņēmis naudu, un pabeidziet darījumu.';
+    return 'Pircējs ir atzīmējis maksājumu kā pabeigtu $date. Pārliecinieties, vai esat saņēmis naudu, un pabeidziet darījumu.';
   }
 
   @override
-  String get agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbbuyer250Sbtitle => 'Maksājiet pārdevējam';
+  String get agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbbuyer250Sbtitle => 'Maksāt pārdevējam';
 
   @override
   String get agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbseller250Sbtitle => 'Gaida, kad pircējs samaksās';
@@ -724,13 +724,13 @@ class I18nLv extends I18n {
   String get agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbsix250Sbseller250Sbtitle => 'Apstipriniet maksājumu';
 
   @override
-  String get agoradesk250Sbtrade250Sboption250Sblast8722Sbstep250Sbtitle => 'Tirdzniecība pabeigta';
+  String get agoradesk250Sbtrade250Sboption250Sblast8722Sbstep250Sbtitle => 'Darījums pabeigts';
 
   @override
-  String get agoradesk250Sbtrade250Sboption250Sbpayer8722Sbcancel8722Sbnotice => 'Vai esat kļūdījies vai vēlaties izmēģināt citu tirgotāju? Ja esat jau pārskaitījis līdzekļus un vēlaties atcelt tūlīt, jums pašam ar tirdzniecības partneri ir jāvienojas par maksājuma atgriešanu. <strong> Nekad neatceliet abonementu, ja neesat pārliecināts, ka esat saņēmis naudu atpakaļ. </strong>';
+  String get agoradesk250Sbtrade250Sboption250Sbpayer8722Sbcancel8722Sbnotice => 'Esat kļūdījies vai vēlaties izmēģināt citu tirgotāju? Ja esat jau pārskaitījis līdzekļus un vēlaties atcelt tūlīt, jums pašam ar darījuma partneri ir jāvienojas par maksājuma atgriešanu. <strong> Nekad neatceliet, ja vien neesat pārliecināts, ka esat saņēmis naudu atpakaļ. </strong>';
 
   @override
-  String get agoradesk250Sbtrade250Sboption250Sbpayment8722Sbreceiver8722Sbcancel8722Sbnotice => 'Nekad nepabeidziet darījumu, kamēr neesat 100% pārliecināts, ka esat saņēmis naudu. Krāpnieki mēģinās <strong> piemānīt jūs, lai jūs savlaicīgi pabeigtu</strong>.';
+  String get agoradesk250Sbtrade250Sboption250Sbpayment8722Sbreceiver8722Sbcancel8722Sbnotice => 'Nekad nepabeidziet darījumu, kamēr neesat 100% pārliecināts, ka esat saņēmis naudu. Krāpnieki mēģinās <strong>pierunāt jūs pabeigt priekšlaicīgi</strong>.';
 
   @override
   String get agoradesk250Sbtrade250Sbstatus250Sbexercised250Sbcontent8722Sbbuyer => 'pircējs';
@@ -740,7 +740,7 @@ class I18nLv extends I18n {
 
   @override
   String agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(Object assetName) {
-    return 'Šī adrese tiks automātiski mainīta pēc tās izmantošanas. Neskatoties uz to, ja nosūtīsit savu $assetName uz lietotu depozīta adresi, tas tiks ieskaitīts jūsu kontā. Mēs nerādam izmantotās depozīta adreses privātuma apsvērumu dēļ. Jūs varat sūtīt monētas uz šo adresi tikai no maka, kuru jūs personīgi kontrolējat.';
+    return 'Šī adrese tiks automātiski nomainīta pēc tās izmantošanas. Neskatoties uz to, ja nosūtīsit savu $assetName uz lietotu depozīta adresi, tas tiks ieskaitīts jūsu kontā. Mēs nerādam izmantotās depozīta adreses privātuma apsvērumu dēļ. Jūs varat sūtīt monētas uz šo adresi tikai no maka, kuru jūs personīgi kontrolējat.';
   }
 
   @override
@@ -778,22 +778,22 @@ class I18nLv extends I18n {
 
   @override
   String breadcrumbs250Sblocal8722Sbbuy(Object asset, Object currencyCode) {
-    return 'Pārdod $asset par $currencyCode';
+    return 'Pārdot $asset par $currencyCode';
   }
 
   @override
   String breadcrumbs250Sblocal8722Sbsell(Object asset, Object currencyCode) {
-    return 'Pērciet $asset par $currencyCode';
+    return 'Pirkt $asset par $currencyCode';
   }
 
   @override
   String breadcrumbs250Sbonline8722Sbbuy(Object asset, Object currencyCode) {
-    return 'Pārdod $asset par $currencyCode';
+    return 'Pārdot $asset par $currencyCode';
   }
 
   @override
   String breadcrumbs250Sbonline8722Sbsell(Object asset, Object currencyCode) {
-    return 'Pērciet $asset par $currencyCode';
+    return 'Pirkt $asset par $currencyCode';
   }
 
   @override
@@ -806,7 +806,7 @@ class I18nLv extends I18n {
   String get buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbcurrently => 'pašlaik';
 
   @override
-  String get buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbdescription => '<strong> Izvēlieties maksas līmeni, ko izmantot tirdzniecības norēķinu laikā. </strong> Šeit redzamās vērtības ir pašreizējās likmes aplēses, un tās var atšķirties no tām, kas tika piemērotas darījuma norēķinu laikā. Ja darījuma summa būs pārāk zema, lai norēķinātos par darījumu ar izvēlēto maksas līmeni, norēķinu laikā automātiski tiks izvēlēts zemāks komisijas maksas līmenis.';
+  String get buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbdescription => '<strong> Izvēlieties maksas līmeni, ko izmantot darījuma norēķinu laikā. </strong> Šeit redzamās vērtības ir pašreizējās likmes aplēses, un tās var atšķirties no tām, kas tiks piemērotas darījuma norēķinu laikā. Ja darījuma summa būs pārāk zema, lai norēķinātos par darījumu ar izvēlēto maksas līmeni, norēķinu laikā automātiski tiks izvēlēts zemāks maksas līmenis.';
 
   @override
   String get buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbtitle => 'Norēķinu maksas līmenis';
@@ -818,10 +818,10 @@ class I18nLv extends I18n {
   String get cancelled250Sbtitle => 'Jūsu atceltie darījumi';
 
   @override
-  String get captcha250Sbhelper8722Sbtext => 'Ievadiet tekstu augstāk esošajā attēlā';
+  String get captcha250Sbhelper8722Sbtext => 'Ievadiet augstāk esošajā attēlā redzamo tekstu';
 
   @override
-  String get chat250Sbattach => 'Pievienojiet failu';
+  String get chat250Sbattach => 'Pievienot failu';
 
   @override
   String get chat250Sbattachment => 'Pielikums';
@@ -833,40 +833,40 @@ class I18nLv extends I18n {
   String get chat250Sbcash8722Sbdeposit8722Sbseller8722Sbwarning => '<strong>Brīdinājums:</strong> ir bijuši gadījumi, kad pārdevēji saņēma čeku, kas vēlāk tika atsaukts. Noteikti pārbaudiet (piem., zvanot bankai) visus saņemtos depozītus!';
 
   @override
-  String get chat250Sbeu8722Sbfraud8722Sbwarning => 'Šķiet, ka šobrīd mūsu Eiropas reģionā ir pieaudzis krāpšanas gadījumu skaits banku kontos. <br /> Mēs iesakām visiem mūsu tirgotājiem Eiropas reģionā ievērot īpašu piesardzību, strādājot ar jauniem tirdzniecības partneriem, piemēram, pieprasot fotogrāfiju, kurā ir redzams personas apliecība un papīra lapa ar tirdzniecības informāciju (piemēram, tirdzniecības ID, summa, lietotājvārds un datums). Ņemiet vērā, ka krāpnieku rīcībā var būt nopludināti vai nozagti KYC dokumenti. <br />';
+  String get chat250Sbeu8722Sbfraud8722Sbwarning => 'Šķiet, ka šobrīd mūsu Eiropas reģionā ir pieaudzis bankas kontu krāpšanas gadījumu skaits. <br /> Mēs iesakām visiem mūsu tirgotājiem Eiropas reģionā ievērot īpašu piesardzību, strādājot ar jauniem darījumu partneriem, piemēram, pieprasot fotogrāfiju, kurā ir redzama personas apliecība un papīra lapa ar darījuma informāciju (piemēram, darījuma ID, summa, lietotājvārds un datums). Ņemiet vērā, ka krāpnieku rīcībā var būt nopludināti vai nozagti KYC dokumenti. <br />';
 
   @override
   String chat250Sbinput8722Sbtip(Object appName) {
-    return '<strong>Enter</strong>, lai sāktu jaunu rindiņu, <strong>Alt+Enter</strong>, lai nosūtītu ziņojumu. Maksimāli 65536 rakstzīmes. $appName šifrē un saglabā tērzēšanas ziņojumus 180 dienas strīdu starpniecības nolūkos.';
+    return '<strong>Enter</strong>, lai sāktu jaunu rindu, <strong>Alt+Enter</strong>, lai nosūtītu ziņojumu. Maksimāli 65536 rakstzīmes. $appName šifrē un saglabā sarakstes ziņas 180 dienas strīdu starpniecības nolūkos.';
   }
 
   @override
   String chat250Sbinput8722Sbtip8722Sbshort(Object appName) {
-    return '$appName šifrē un saglabā tērzēšanas ziņojumus 180 dienas strīdu starpniecības nolūkos.';
+    return '$appName šifrē un saglabā sarakstes ziņas 180 dienas strīdu starpniecības nolūkos.';
   }
 
   @override
-  String get chat250Sbinput8722Sbtitle => 'Raksti ziņu...';
+  String get chat250Sbinput8722Sbtitle => 'Rakstiet ziņu...';
 
   @override
-  String get chat250Sbmitm8722Sbcryptocurency8722Sbwarning => 'Brīdinājums: saņemiet pārdevēja adresi tikai šajā tirdzniecības tērzēšanā vai no maksājumu informācijas sadaļas šajā tirdzniecības lapā un nesūtiet maksājumu darījumu ID ārpus šīs tirdzniecības tērzēšanas! Mēs arī iesakām saglabāt visu saziņu šajā tirdzniecības tērzēšanā.';
+  String get chat250Sbmitm8722Sbcryptocurency8722Sbwarning => 'Brīdinājums: saņemiet pārdevēja adresi tikai šajā darījuma sarakstē vai no maksājumu informācijas sadaļas šajā darījuma lapā, un nesūtiet maksājuma ID ārpus šīs darījuma sarakstes! Mēs arī iesakām saglabāt visu saziņu šajā darījuma sarakstē.';
 
   @override
-  String get chat250Sbmitm8722Sbwarning250Sb0 => '⚠️ PSA: ir aktīvs jauns krāpnieks, kas darbojas kā vīrietis pa vidu. Krāpnieks sazinās ar jums ārpus platformas, izliekoties par platformas pārdevēju, piedāvājot jums no viņiem iegādāties XMR apmaiņā pret BTC par pazeminātu cenu (piemēram, samaksājiet 8 XMR vērtu BTC, lai iegādātos 10 XMR). Tajā pašā laikā viņi atver darījumu ar pārdevēju, par kuru viņi uzdodas platformā par samazinātu summu.';
+  String get chat250Sbmitm8722Sbwarning250Sb0 => '⚠️ PSA: ir aktīvs jauns krāpnieks, kas darbojas kā starpnieks. Krāpnieks sazinās ar jums ārpus platformas, izliekoties par platformas pārdevēju, piedāvājot jums no viņiem iegādāties XMR apmaiņā pret BTC par pazeminātu cenu (piemēram, samaksājiet 8 XMR vērtu BTC summu, lai iegādātos 10 XMR). Tajā pašā laikā viņi atver darījumu platformā ar pārdevēju, par kuru viņi uzdodas, par šo samazināto summu.';
 
   @override
-  String get chat250Sbmitm8722Sbwarning250Sb1 => '<p>Pēc tam krāpnieks liek pircējam sākt tirdzniecību par pilnu summu un samaksāt samazināto summu, tajā pašā laikā uzraugot pārdevēja saņemšanas adresi blokķēdē un vērojot likumīgā pircēja samazinātās summas darījumu. Pēc tam krāpnieks paņem likumīgā pircēja txid un iesniedz to pārdevējam kā maksājuma pierādījumu. Pārdevējs izlaiž monētas krāpniekam, jo viņam ir atvērti divi darījumi, viens par pilnu summu no likumīgā pircēja un otrs par samazināto summu no krāpnieka, domājot, ka maksāja krāpnieks, jo summa atbilst viņu darījuma summai. </p>\n\n<p> <strong> NEVEICIET DARBĪBU ĀRPUS PLATFORMAS. JA KĀDS JUMS VIENAS ĀRPUSPLATFORMĀ, ATVER TIRDZNIECĪBU AR VIŅU PLATFORMĀ UN PĀRBAUDI, VAI VIŅI IR KAS SASKATAS, UN UZTUR TUR VISAS KOMUNIKĀCIJAS. </strong> </p>\n\n<p> <strong> PĀRDEVĒJI, KAS PIEŅEM MAKSĀJUMUS PAR caurspīdīgām kriptogrāfijas ķēdēm: PĀRLIECINĀJIETIES, LAI IZVĒROJATIES KLIENTIEM UN TIRDZNIECĪBĀM ATTIECĪBĀM MAKSĀJUMU DIFERENCIJAS. </strong> </p>\n\n<p> Publiski meklējamā kriptovalūtā, piemēram, BTC, katram darījumam vienmēr izmantojiet dažādas adreses. </p>';
+  String get chat250Sbmitm8722Sbwarning250Sb1 => '<p>Pēc tam krāpnieks liek pircējam sākt darījumu par pilnu summu un samaksāt samazināto summu, tajā pašā laikā uzraugot pārdevēja saņemšanas adresi blokķēdē un vērojot likumīgā pircēja samazinātās summas darījumu. Pēc tam krāpnieks paņem likumīgā pircēja txid un iesniedz to pārdevējam kā maksājuma pierādījumu. Pārdevējs izdod monētas krāpniekam, jo viņam ir atvērti divi darījumi, viens par pilnu summu no likumīgā pircēja un otrs par samazināto summu no krāpnieka, domājot, ka krāpnieks ir tas, kurš ir samaksājis, jo summa atbilst viņu darījuma summai. </p>\n\n<p> <strong> NEVEICIET DARBĪBU ĀRPUS PLATFORMAS. JA KĀDS AR JUMS SAZINĀS ĀRPUS PLATFORMAS, ATVERIET DARĪJUMU AR VIŅU PLATFORMĀ, PĀRBAUDIET, VAI VIŅŠ IR TAS, PAR KO UZDODAS, UN VEICIET VISU KOMUNIKĀCIJU TUR. </strong> </p>\n\n<p> <strong> PĀRDEVĒJI, KAS PIEŅEM MAKSĀJUMUS UZ CAURREDZAMĀM KRIPTOVALŪTU ĶĒDĒM: PĀRLIECINIETIES, KA SPĒJAT IZSEKOT DAŽĀDU KLIENTU DARĪJUMIEM UN MAKSĀJUMIEM, LAI IZVAIRĪTOS NO IEKRIŠANAS ŠĀDĀ SITUĀCIJĀ.</strong> </p>\n\n<p> Vienmēr izmantojiet jaunu adresi katram darījumam, ja lietojat publiski caurredzamu kriptovalūtu kā BTC. </p>';
 
   @override
-  String get chat250Sbno8722Sbmessages => 'Vēl nav ziņojumu';
+  String get chat250Sbno8722Sbmessages => 'Vēl nav ziņu';
 
   @override
   String chat250Sbsecurity8722Sbwarning(Object appName) {
-    return 'Neatveriet ārējās saites, ko saņemat tērzēšanā, un nelejupielādējiet no citiem lietotājiem ārēji saņemtus failus. Visām $appName darbībām vislabāk ir izmantot atsevišķu pārlūkprogrammu.';
+    return 'Neatveriet ārējās saites, ko saņemat sarakstē, un nelejupielādējiet no citiem lietotājiem ārēji saņemtus failus. Vislabāk ir izmantot atsevišķu pārlūkprogrammu visām $appName darbībām.';
   }
 
   @override
-  String get chat250Sbselect8722Sbfile => 'Atlasiet failu...';
+  String get chat250Sbselect8722Sbfile => 'Izvēlieties failu...';
 
   @override
   String get chat250Sbsend => 'Sūtīt';
@@ -876,7 +876,7 @@ class I18nLv extends I18n {
 
   @override
   String chat250Sbtitle(Object user) {
-    return 'Sūtīt ziņojumu uz $user';
+    return 'Sūtīt ziņu $user';
   }
 
   @override
@@ -886,13 +886,13 @@ class I18nLv extends I18n {
   String get chat250Sbupload8722Sberror8722Sbdialog8722Sbtitle => 'Augšupielādes kļūda';
 
   @override
-  String get chat250Sbupload8722Sbfile => 'Augšupielādēt';
+  String get chat250Sbupload8722Sbfile => 'Augšuplādēt';
 
   @override
   String get chat250Sbupload8722Sbtip => 'Pieņemamie failu tipi: .jpg, .png. ne vairāk kā 5 MB.';
 
   @override
-  String get chat250Sbzoom8722Sbtip => 'Padoms: nospiediet ziņojumu trīs reizes, lai tuvinātu';
+  String get chat250Sbzoom8722Sbtip => 'Padoms: nospiediet ziņu trīs reizes, lai pietuvinātu';
 
   @override
   String get completed250Sbno8722Sbtrades => 'Jūs vēl neesat pabeidzis nevienu darījumu';
@@ -902,7 +902,7 @@ class I18nLv extends I18n {
 
   @override
   String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Tiesībaizsardzības iestāžu jautājumiem, lūdzu, izlasiet $lawEnforcementinquiries.';
+    return 'Varas iestāžu jautājumiem, lūdzu, izlasiet $lawEnforcementinquiries.';
   }
 
   @override
@@ -914,7 +914,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get contact250Sbtext8722Sb08722Sbopen8722Sba8722Sbticket => 'atver biļeti';
+  String get contact250Sbtext8722Sb08722Sbopen8722Sba8722Sbticket => 'atvērt ziņojumu';
 
   @override
   String contact250Sbtext8722Sb1(Object email) {
@@ -930,13 +930,13 @@ class I18nLv extends I18n {
   String get contact250Sbtext8722Sb28722Sbhere => 'šeit';
 
   @override
-  String get contact250Sbtitle => 'Sazinies ar mums';
+  String get contact250Sbtitle => 'Sazināties ar mums';
 
   @override
   String get coupons250Sbcode8722Sbinput250Sbplaceholder => 'Ievadiet savu kodu šeit...';
 
   @override
-  String get coupons250Sbcoupon250Sbbutton250Sblabel => 'Izpirkt';
+  String get coupons250Sbcoupon250Sbbutton250Sblabel => 'Izlietot';
 
   @override
   String coupons250Sbcoupon250Sbdescription(Object percent, Object assets, Object types) {
@@ -950,16 +950,16 @@ class I18nLv extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sblocal_sell => 'vietējā pārdošana';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy => 'pirkt tiešsaistē';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_buy => 'tiešsaistes pirkums';
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbonline_sell => 'tiešsaistes pārdošana';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbput_buy => 'pārdošanas opciju pirkt';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbput_buy => 'put opciju pirkšana';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbput_sell => 'pārdošanas iespēju pārdot';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbput_sell => 'put opciju pārdošana';
 
   @override
   String get coupons250Sbcoupon250Sbexpired => 'Beidzies derīguma termiņš';
@@ -974,7 +974,7 @@ class I18nLv extends I18n {
   String get coupons250Sbcoupon250Sbtitle250Sbexpired => 'Kuponam beidzies derīguma termiņš';
 
   @override
-  String get coupons250Sbcoupon250Sbtitle250Sbredeem => 'Izpirkt kuponu';
+  String get coupons250Sbcoupon250Sbtitle250Sbredeem => 'Izlietot kuponu';
 
   @override
   String get coupons250Sberror250Sb175 => 'Nederīgs kupona kods';
@@ -983,7 +983,7 @@ class I18nLv extends I18n {
   String get coupons250Sberror250Sb176 => 'Kupona derīguma termiņš jau ir beidzies';
 
   @override
-  String get coupons250Sberror250Sb177 => 'Šis kupons nav noliktavā';
+  String get coupons250Sberror250Sb177 => 'Šis kupons nav pieejams';
 
   @override
   String get coupons250Sberror250Sb179 => 'Nederīgs kupona kods';
@@ -998,48 +998,48 @@ class I18nLv extends I18n {
   String get coupons250Sberror250Sb182 => 'Jūs jau esat izmantojis šo kuponu';
 
   @override
-  String get coupons250Sberror250Sb183 => 'Šis kupons nav noliktavā';
+  String get coupons250Sberror250Sb183 => 'Šis kupons nav pieejams';
 
   @override
   String get coupons250Sberror250Sb184 => 'Jums vienlaikus var būt tikai viens aktīvs kupons';
 
   @override
-  String get coupons250Sberror250Sbdialog250Sbtitle => 'Kupona izpirkšanas kļūda';
+  String get coupons250Sberror250Sbdialog250Sbtitle => 'Kupona izlietošanas kļūda';
 
   @override
   String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Izpērkot kuponu, radās problēma. Ja tas nešķiet pareizi, lūdzu, sazinieties ar atbalsta dienestu. Kļūdas kods: $error_code.';
+    return 'Izlietojot kuponu, radās problēma. Ja tas nešķiet pareizi, lūdzu, sazinieties ar atbalsta dienestu. Kļūdas kods: $error_code.';
   }
 
   @override
-  String get coupons250Sbshow8722Sbexpired8722Sbbtn250Sbhide => 'Paslēpiet kuponus, kuriem beidzies derīguma termiņš';
+  String get coupons250Sbshow8722Sbexpired8722Sbbtn250Sbhide => 'Paslēpt kuponus, kuriem beidzies derīguma termiņš';
 
   @override
-  String get coupons250Sbshow8722Sbexpired8722Sbbtn250Sbshow => 'Parādiet savus kuponus, kuriem beidzies derīguma termiņš';
+  String get coupons250Sbshow8722Sbexpired8722Sbbtn250Sbshow => 'Parādīt kuponus, kuriem beidzies derīguma termiņš';
 
   @override
   String get coupons250Sbsignup250Sbshow8722Sbcoupon8722Sbinput8722Sbbtn => 'Man ir kupona kods';
 
   @override
-  String get coupons250Sbsubtitle => 'Šeit tiks parādīti jūsu aktīvie kuponi, kuriem beidzies derīguma termiņš. Ja jums ir kupona kods, varat to izmantot šeit.';
+  String get coupons250Sbsubtitle => 'Šeit tiks parādīti jūsu aktīvie kuponi un arī tie, kuriem beidzies derīguma termiņš. Ja jums ir kupona kods, varat to izmantot šeit.';
 
   @override
   String get coupons250Sbterms8722Sb0 => 'Vienlaicīgi var būt aktīvs tikai viens kupons.';
 
   @override
-  String get coupons250Sbterms8722Sb1 => 'Jūs nevarat deaktivizēt kuponu pēc tā izpirkšanas.';
+  String get coupons250Sbterms8722Sb1 => 'Jūs nevarat deaktivizēt kuponu pēc tā izlietošanas.';
 
   @override
-  String get coupons250Sbterms8722Sb2 => 'Katrs kupons ir izpērkams tikai vienu reizi vienā kontā.';
+  String get coupons250Sbterms8722Sb2 => 'Katrs kupons ir izlietojams tikai vienu reizi vienā kontā.';
 
   @override
   String get coupons250Sbterms8722Sb3 => 'Maksa tiek atdota tikai tai pusei, kura sākotnēji maksā šķīrējtiesas aizsardzības maksu par darījumu.';
 
   @override
-  String get coupons250Sbterms8722Sb4 => 'Maksas atlaide tiks veikta, kad tirdzniecība tiks slēgta.';
+  String get coupons250Sbterms8722Sb4 => 'Maksas atlaide tiks atgriezta, kad darījums tiks slēgts.';
 
   @override
-  String get coupons250Sbterms8722Sb5 => 'Ja nopelnāt saistītās komisijas, jūsu kopējās kupona atlaides par noteiktu periodu tiks atņemtas no jūsu partnera ieņēmumiem tajā pašā periodā. Ja jūsu kopējā atlaides summa konkrētajā periodā ir lielāka vai vienāda ar saistītā uzņēmuma ieņēmumiem tajā pašā konkrētajā periodā, jūs nesaņemsiet nekādus partneruzņēmuma ieņēmumus šajā periodā.';
+  String get coupons250Sbterms8722Sb5 => 'Ja nopelnāt saistītās komisijas, jūsu kopējās kuponu atlaides par noteiktu periodu tiks atņemtas no jūsu saistītā ieņēmumiem tajā pašā periodā. Ja jūsu kopējā atlaides summa konkrētajā periodā ir lielāka vai vienāda ar saistītās programmas ieņēmumiem tajā pašā periodā, jūs nesaņemsiet nekādus saistītā ieņēmumus šajā periodā.';
 
   @override
   String coupons250Sbterms8722Sb6(Object appName) {
@@ -1056,13 +1056,13 @@ class I18nLv extends I18n {
   String get dashboard250Sbad250Sbdelete8722Sbbtn => 'Dzēst sludinājumu';
 
   @override
-  String get dashboard250Sbad250Sbdelete8722Sbdialog8722Sbtext => 'Tādējādi reklāma tiks neatgriezeniski izdzēsta. Apsveriet iespēju slēpt reklāmu, iestatot redzamību uz nepatiesu.';
+  String get dashboard250Sbad250Sbdelete8722Sbdialog8722Sbtext => 'Sludinājums tiks neatgriezeniski izdzēsts. Apsveriet iespēju slēpt sludinājumu, iestatot redzamību uz atspējotu.';
 
   @override
-  String get dashboard250Sbad250Sbdelete8722Sbdialog8722Sbtitle => 'Apstipriniet dzēšanu';
+  String get dashboard250Sbad250Sbdelete8722Sbdialog8722Sbtitle => 'Apstiprināt dzēšanu';
 
   @override
-  String get dashboard250Sbad250Sbemail8722Sbverified => 'Šī reklāma ir paredzēta tikai lietotājiem ar verificētu e-pastu';
+  String get dashboard250Sbad250Sbemail8722Sbverified => 'Šis sludinājums ir paredzēts tikai lietotājiem ar apstiprinātu e-pastu';
 
   @override
   String get dashboard250Sbad250Sbfor8722Sbtrusted => 'Tikai uzticamiem lietotājiem';
@@ -1093,55 +1093,55 @@ class I18nLv extends I18n {
   String get dashboard250Sbad250Sbtable8722Sbprice => 'Cena';
 
   @override
-  String get dashboard250Sbad250Sbtable8722Sbtype => 'Tips';
+  String get dashboard250Sbad250Sbtable8722Sbtype => 'Veids';
 
   @override
   String get dashboard250Sbad250Sbtable8722Sbvisible => 'Redzams';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbdelete8722Sbwarning => 'Tādējādi atlasītās reklāmas tiks neatgriezeniski izdzēstas. Apsveriet iespēju tos slēpt, iestatot redzamību uz nepatiesu.';
+  String get dashboard250Sbads250Sbbulk8722Sbdelete8722Sbwarning => 'Atlasītie sludinājumi tiks neatgriezeniski izdzēsti. Apsveriet iespēju tos slēpt, iestatot redzamību uz atspējotu.';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbapply => 'Lietot atlasītajiem';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbapply => 'Pielietot atlasītajiem';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbboolean250Sbfalse => 'Nepatiesi';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbboolean250Sbfalse => 'Atspējots';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbboolean250Sbtrue => 'Taisnība';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbboolean250Sbtrue => 'Iespējots';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sberror => 'Atjauninot vairākas reklāmas, radās problēma. Dažas vai visas reklāmas, iespējams, nav atjauninātas. Jūs, iespējams, esat atlasījis pārāk daudz reklāmu vienlaikus. Lūdzu, atsvaidziniet lapu un mēģiniet vēlreiz.';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sberror => 'Atjauninot vairākus sludinājumus, radās problēma. Daži vai visi sludinājumi, iespējams, nav atjaunināti. Jūs visticamāk esat atlasījis pārāk daudz sludinājumu vienlaikus. Lūdzu, atsvaidziniet lapu un mēģiniet vēlreiz.';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbany => 'Jebkuras reklāmas';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbany => 'Jebkādi sludinājumi';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbbuys => 'Tikai to pašu līdzekļu iegādes reklāmas';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbbuys => 'Tikai to pašu aktīvu iegādes sludinājumi';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbcurrency => 'Tikai tās pašas valūtas reklāmas';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbcurrency => 'Tikai tās pašas valūtas sludinājumi';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsells => 'Pārdod tikai sludinājumus';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsells => 'Tikai pārdošanas sludinājumi';
 
   @override
   String get dashboard250Sbads250Sbbulk8722Sbedit250Sbsetting8722Sbselect250Sblabel => 'Izvēlieties iestatījumu';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbtitle => 'Pārvaldiet vairākas reklāmas';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbtitle => 'Pārvaldīt vairākus sludinājumus';
 
   @override
-  String get dashboard250Sbads250Sbfilter250Sbapply8722Sbbtn => 'Lietot filtrus';
+  String get dashboard250Sbads250Sbfilter250Sbapply8722Sbbtn => 'Pielietot filtrus';
 
   @override
   String get dashboard250Sbads250Sbfilter250Sbasset => 'Aktīvs';
 
   @override
-  String get dashboard250Sbads250Sbfilter250Sbdelete8722Sbselected => 'Dzēst atlasīto';
+  String get dashboard250Sbads250Sbfilter250Sbdelete8722Sbselected => 'Dzēst izvēlēto';
 
   @override
-  String get dashboard250Sbads250Sbfilter250Sbno8722Sbads => 'Šeit nav reklāmu';
+  String get dashboard250Sbads250Sbfilter250Sbno8722Sbads => 'Šeit nav sludinājumu';
 
   @override
   String get dashboard250Sbads250Sbfilter250Sbreset8722Sbbtn => 'Atiestatīt filtrus';
@@ -1150,16 +1150,16 @@ class I18nLv extends I18n {
   String get dashboard250Sbads250Sbfilter250Sbsort => 'Kārtot pēc';
 
   @override
-  String get dashboard250Sbads250Sbfilter250Sbtype => 'Tips';
+  String get dashboard250Sbads250Sbfilter250Sbtype => 'Veids';
 
   @override
   String get dashboard250Sbads250Sbfilter250Sbvisibility => 'Redzamība';
 
   @override
-  String get dashboard250Sbads250Sbload8722Sball => 'Ielādēt visas reklāmas';
+  String get dashboard250Sbads250Sbload8722Sball => 'Ielādēt visus sludinājumus';
 
   @override
-  String get dashboard250Sbads250Sbshowing8722Sball => 'Tiek rādītas visas reklāmas';
+  String get dashboard250Sbads250Sbshowing8722Sball => 'Tiek rādīti visi sludinājumi';
 
   @override
   String get dashboard250Sbblocked => 'Bloķēts';
@@ -1168,13 +1168,13 @@ class I18nLv extends I18n {
   String get dashboard250Sbfilter250Sball => 'Visi';
 
   @override
-  String get dashboard250Sbfilter250Sbrole250Sbboth => 'Pirkšana/pārdošana';
+  String get dashboard250Sbfilter250Sbrole250Sbboth => 'Pērk/Pārdod';
 
   @override
-  String get dashboard250Sbfilter250Sbrole250Sbbuying => 'Pirkšana';
+  String get dashboard250Sbfilter250Sbrole250Sbbuying => 'Pērk';
 
   @override
-  String get dashboard250Sbfilter250Sbrole250Sbselling => 'Pārdodu';
+  String get dashboard250Sbfilter250Sbrole250Sbselling => 'Pārdod';
 
   @override
   String get dashboard250Sbfilter250Sbvisibility250Sbhidden => 'Slēpts';
@@ -1183,10 +1183,10 @@ class I18nLv extends I18n {
   String get dashboard250Sbfilter250Sbvisibility250Sbvisible => 'Redzams';
 
   @override
-  String get dashboard250Sbopen8722Sbads8722Sbno8722Sbads => 'Pašlaik jums nav reklāmu';
+  String get dashboard250Sbopen8722Sbads8722Sbno8722Sbads => 'Pašlaik jums nav sludinājumu';
 
   @override
-  String get dashboard250Sbopen8722Sbads8722Sbtitle => 'Jūsu reklāmas';
+  String get dashboard250Sbopen8722Sbads8722Sbtitle => 'Jūsu sludinājumi';
 
   @override
   String get dashboard250Sbopen8722Sbtrades8722Sbno8722Sbtrades => 'Jums pašlaik nav atvērtu darījumu';
@@ -1198,7 +1198,7 @@ class I18nLv extends I18n {
   String get dashboard250Sbpost8722Sbad8722Sbbtn => 'Izveidot jaunu sludinājumu';
 
   @override
-  String get dashboard250Sbtitle => 'Mērinstrumentu panelis';
+  String get dashboard250Sbtitle => 'Panelis';
 
   @override
   String get dashboard250Sbtrade250Sbcancelled8722Sbat => 'Atcelts plkst';
@@ -1207,7 +1207,7 @@ class I18nLv extends I18n {
   String get dashboard250Sbtrade250Sbcompleted8722Sbat => 'Pabeigts plkst';
 
   @override
-  String get dashboard250Sbtrade250Sbcreated8722Sbat => 'Radīšanas laiks';
+  String get dashboard250Sbtrade250Sbcreated8722Sbat => 'Izveides laiks';
 
   @override
   String get dashboard250Sbtrade250Sbstatus250Sbcancelled => 'Atcelts';
@@ -1231,11 +1231,11 @@ class I18nLv extends I18n {
   String get dashboard250Sbtrade250Sbstatus250Sbunfunded => 'Nefinansēts';
 
   @override
-  String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Summa (valūtā)';
+  String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Summa (valūta)';
 
   @override
   String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
-    return 'Summa ({asset})';
+    return 'Summa ($assetSymbol)';
   }
 
   @override
@@ -1245,13 +1245,13 @@ class I18nLv extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbmethod58Sb => 'Metode';
 
   @override
-  String get dashboard250Sbtrade250Sbtable8722Sbpartner58Sb => 'Tirdzniecības partneris';
+  String get dashboard250Sbtrade250Sbtable8722Sbpartner58Sb => 'Darījumu partneris';
 
   @override
   String get dashboard250Sbtrade250Sbtable8722Sbstatus58Sb => 'Statuss';
 
   @override
-  String get dashboard250Sbtrade250Sbtable8722Sbtype58Sb => 'Tips';
+  String get dashboard250Sbtrade250Sbtable8722Sbtype58Sb => 'Veids';
 
   @override
   String get dashboard250Sbtrade250Sbtable8722Sbview8722Sbbtn58Sb => 'Skatīt';
@@ -1263,7 +1263,7 @@ class I18nLv extends I18n {
   String get dashboard250Sbtrades250Sbfilter250Sbno8722Sbtrades => 'Šeit nav darījumu';
 
   @override
-  String get dashboard250Sbtrades250Sbfilter250Sbrole => 'ES esmu...';
+  String get dashboard250Sbtrades250Sbfilter250Sbrole => 'Esmu...';
 
   @override
   String get dashboard250Sbtrusted => 'Uzticams';
@@ -1272,25 +1272,25 @@ class I18nLv extends I18n {
   String get dashboard250Sbtrusted8722Sbusers => 'Jūsu uzticamie/bloķētie lietotāji';
 
   @override
-  String get dashboard250Sbwarning250Sbno8722Sbbuyer8722Sbsettlement8722Sbaddress => 'NEPIECIEŠAMS STEIDZAMI RĪCĪBA: vienai vai vairākām jūsu pirkšanas reklāmām nav iestatīta norēķinu maka adrese. Nodrošiniet to pēc iespējas ātrāk, lai šīs reklāmas netiktu paslēptas. Varat izmantot filtrus un masveida reklāmu rediģēšanas funkciju, lai iestatītu to visām attiecīgajām reklāmām vienlaikus.';
+  String get dashboard250Sbwarning250Sbno8722Sbbuyer8722Sbsettlement8722Sbaddress => 'NEPIECIEŠAMA STEIDZAMA RĪCĪBA: vienam vai vairākiem jūsu pirkšanas sludinājumiem nav iestatīta norēķinu maka adrese. Nodrošiniet to pēc iespējas ātrāk, lai šie sludinājumi netiktu paslēpti. Varat izmantot filtrus un masveida sludinājumu rediģēšanas funkciju, lai iestatītu to visiem attiecīgajiem sludinājumiem vienlaikus.';
 
   @override
-  String get dashboards250Sbads250Sbfilter250Sbtitle => 'Filtrēt reklāmas';
+  String get dashboards250Sbads250Sbfilter250Sbtitle => 'Atlasīt sludinājumus';
 
   @override
-  String get dashboards250Sbtrades250Sbfilter250Sbtitle => 'Filtrēt darījumus';
+  String get dashboards250Sbtrades250Sbfilter250Sbtitle => 'Atlasīt darījumus';
 
   @override
-  String get description => 'Iegūstiet Monero. Ātri, viegli un droši. Pie jums.';
+  String get description => 'Iegūstiet Monero. Ātri, viegli un droši. Netālu no jums.';
 
   @override
   String description250Sbaffiliate(Object appName) {
-    return 'Jūs nopelnāt 20% no jūsu norādīto lietotāju radītajām tirdzniecības maksām. Šīs izmaksas katru dienu tiks veiktas kā Monero jūsu $appName makā. Jūsu norādītie lietotāji iegūs jums komisijas naudu 1 gadu no reģistrācijas datuma.';
+    return 'Jūs nopelnāt 20% no jūsu saistīto lietotāju radītajām tirdzniecības maksām. Šīs izmaksas katru dienu tiks veiktas kā Monero jūsu $appName makā. Jūsu saistītie lietotāji ienesīs jums komisijas naudu 1 gadu no reģistrācijas datuma.';
   }
 
   @override
   String description250Sbaffiliate57Sbagoradesk(Object appName) {
-    return 'Jūs nopelnāt 20% no jūsu norādīto lietotāju radītajām tirdzniecības maksām. Šīs izmaksas tiks veiktas katru dienu kā atbilstošas kriptovalūtas jūsu $appName makā. Jūsu norādītie lietotāji iegūs jums komisijas naudu 1 gadu no reģistrācijas datuma.';
+    return 'Jūs nopelnāt 20% no jūsu saistīto lietotāju radītajām tirdzniecības maksām. Šīs izmaksas tiks veiktas katru dienu kā atbilstošas kriptovalūtas jūsu $appName makā. Jūsu saistītie lietotāji ienesīs jums komisijas naudu 1 gadu no reģistrācijas datuma.';
   }
 
   @override
@@ -1305,12 +1305,12 @@ class I18nLv extends I18n {
 
   @override
   String description250Sbfee(Object appName) {
-    return 'Monero reģistrācija, pirkšana un pārdošana ir pilnīgi bez maksas. $appName lietotājiem, kuri veido sludinājumus, tiek iekasēta šķīrējtiesas aizsardzības maksa 1% apmērā par katru pabeigto darījumu.';
+    return 'Reģistrācija, Monero pirkšana un pārdošana ir pilnīgi bez maksas. $appName lietotājiem, kuri veido sludinājumus, tiek iekasēta šķīrējtiesas aizsardzības maksa 1% apmērā par katru pabeigto darījumu.';
   }
 
   @override
   String description250Sbfee57Sbagoradesk(Object appName) {
-    return 'Kriptovalūtu reģistrācija, pirkšana un pārdošana ir pilnīgi bez maksas. $appName lietotājiem, kuri veido sludinājumus, tiek iekasēta 1% arbitrāžas aizsardzības maksa par katru pabeigto darījumu.';
+    return 'Reģistrācija, kriptovalūtu pirkšana un pārdošana ir pilnīgi bez maksas. $appName lietotājiem, kuri veido sludinājumus, tiek iekasēta 1% šķīrējtiesas aizsardzības maksa par katru pabeigto darījumu.';
   }
 
   @override
@@ -1319,7 +1319,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get description250Sbguide250Sbbtc => 'Vai tie laiki, kad ar kredītkarti varēja iegādāties bitkoinus uzreiz un bez pārbaudes, ir aiz muguras? Ne īsti. Šeit mēs piedāvājam vienkāršu, anonīmu, privātu un ātru veidu, kā iegūt bitkoīnus ar skaidru naudu, veicot tikai dažas darbības.';
+  String get description250Sbguide250Sbbtc => 'Vai tie laiki, kad ar kredītkarti varēja iegādāties Bitcoin uzreiz un bez pārbaudes, ir aiz muguras? Ne gluži. Šeit mēs piedāvājam vienkāršu, anonīmu, privātu un ātru veidu, kā iegūt Bitcoin ar naudu, veicot tikai dažas darbības.';
 
   @override
   String description250Sbguide250Sbbuy(Object appName) {
@@ -1333,12 +1333,12 @@ class I18nLv extends I18n {
 
   @override
   String description250Sbguide250Sblocal(Object appName) {
-    return 'Šī rokasgrāmata palīdzēs jums saprast, kā anonīmi pirkt vai pārdot Monero par skaidru naudu, izmantojot vietējo tikšanos. $appName ir drošs, ātrs un vienkāršs veids, kā tirgot XMR bez ID verifikācijas. ';
+    return 'Šī rokasgrāmata palīdzēs jums saprast, kā anonīmi pirkt vai pārdot Monero par skaidru naudu, izmantojot tikšanos klātienē. $appName ir drošs, ātrs un vienkāršs veids, kā tirgot XMR bez ID verifikācijas. ';
   }
 
   @override
   String description250Sbguide250Sblocal57Sbagoradesk(Object appName) {
-    return 'Šī rokasgrāmata palīdzēs jums saprast, kā anonīmi pirkt vai pārdot kriptovalūtas par skaidru naudu, izmantojot vietējo tikšanos. Vietnē $appName varat tirgoties ar kriptovalūtām bez ID verifikācijas. ';
+    return 'Šī rokasgrāmata palīdzēs jums saprast, kā anonīmi pirkt vai pārdot kriptovalūtas par skaidru naudu, izmantojot tikšanos klātienē. Vietnē $appName varat tirgot kriptovalūtas bez ID verifikācijas. ';
   }
 
   @override
@@ -1353,7 +1353,7 @@ class I18nLv extends I18n {
 
   @override
   String description250Sbguide250Sbtelegram(Object appName) {
-    return 'Šī rokasgrāmata palīdzēs konfigurēt telegrammas paziņojumus $appName. ';
+    return 'Šī rokasgrāmata palīdzēs konfigurēt Telegram paziņojumus $appName. ';
   }
 
   @override
@@ -1379,7 +1379,7 @@ class I18nLv extends I18n {
 
   @override
   String description250Sblogin(Object appName) {
-    return 'Piesakieties savā $appName kontā, lai sāktu tirdzniecību tūlīt.';
+    return 'Pieslēdzieties savam $appName kontam, lai sāktu tirdzniecību tūlīt.';
   }
 
   @override
@@ -1395,22 +1395,22 @@ class I18nLv extends I18n {
 
   @override
   String description250Sbsignup57Sbagoradesk(Object appName) {
-    return 'Izveidojiet $appName kontu — tas ir pilnīgi bez maksas — un sāciet tirgoties ar kriptovalūtām!';
+    return 'Izveidojiet $appName kontu — tas ir pilnīgi bez maksas — un sāciet tirgot kriptovalūtas!';
   }
 
   @override
   String description250Sbstart(Object appName) {
-    return '$appName rokasgrāmatas, kas palīdzēs izprast Monero pirkšanas vai pārdošanas pamatprincipus un papildu principus.';
+    return '$appName rokasgrāmatas, kas palīdzēs izprast Monero pirkšanas un pārdošanas pamatprincipus un nianses.';
   }
 
   @override
   String description250Sbstart57Sbagoradesk(Object appName) {
-    return '$appName rokasgrāmatas, kas palīdzēs izprast Bitcoin un Monero pirkšanas vai pārdošanas pamatprincipus un uzlabotos principus.';
+    return '$appName rokasgrāmatas, kas palīdzēs izprast Bitcoin un Monero pirkšanas un pārdošanas pamatprincipus un nianses.';
   }
 
   @override
   String description250Sbstatistics(Object appName) {
-    return 'Iegūstiet vidējo $appName cenu, pamatojoties uz visiem darījumiem pēdējo 1, 6, 12 vai 24 stundu laikā.';
+    return 'Skatīt vidējo $appName cenu, pamatojoties uz visiem darījumiem pēdējo 1, 6, 12 vai 24 stundu laikā.';
   }
 
   @override
@@ -1420,7 +1420,7 @@ class I18nLv extends I18n {
 
   @override
   String description250Sbuser8722Sbads(Object user, Object appName) {
-    return '$user $appName reklāmas';
+    return '$user $appName sludinājumi';
   }
 
   @override
@@ -1442,16 +1442,16 @@ class I18nLv extends I18n {
   String get document8722Sbtitle250Sbaffiliate => 'Saistītā programma';
 
   @override
-  String get document8722Sbtitle250Sbcancelled => 'Anulēti darījumi';
+  String get document8722Sbtitle250Sbcancelled => 'Atceltie darījumi';
 
   @override
-  String get document8722Sbtitle250Sbcompleted => 'Pabeigti darījumi';
+  String get document8722Sbtitle250Sbcompleted => 'Pabeigtie darījumi';
 
   @override
-  String get document8722Sbtitle250Sbcontact => 'Sazinies ar mums';
+  String get document8722Sbtitle250Sbcontact => 'Sazināties ar mums';
 
   @override
-  String get document8722Sbtitle250Sbdashboard => 'Mērinstrumentu panelis';
+  String get document8722Sbtitle250Sbdashboard => 'Panelis';
 
   @override
   String get document8722Sbtitle250Sbedit => 'Rediģēt sludinājumu';
@@ -1460,7 +1460,7 @@ class I18nLv extends I18n {
   String get document8722Sbtitle250Sberror => 'Kļūda';
 
   @override
-  String get document8722Sbtitle250Sbfaq => 'FAQ';
+  String get document8722Sbtitle250Sbfaq => 'BUJ';
 
   @override
   String get document8722Sbtitle250Sbfee => 'Maksas';
@@ -1475,7 +1475,7 @@ class I18nLv extends I18n {
 
   @override
   String document8722Sbtitle250Sbguide250Sbbtc(Object year) {
-    return 'Kā anonīmi iegādāties Bitcoins (bez ID) rokasgrāmata — privātākais veids $year';
+    return 'Kā Anonīmi Iegādāties Bitcoin (Bez ID) — Visanonīmākais Veids $year. Gadā';
   }
 
   @override
@@ -1492,96 +1492,96 @@ class I18nLv extends I18n {
 
   @override
   String document8722Sbtitle250Sbguide250Sbxmr(Object year) {
-    return 'Kā anonīmi (bez ID) iegādāties Monero (XMR) rokasgrāmata — privātākais veids $year';
+    return 'Kā Anonīmi (Bez ID) Iegādāties Monero (XMR) — Visanonīmākais Veids $year. Gadā';
   }
 
   @override
-  String get document8722Sbtitle250Sbindex => 'Pērciet vai pārdodiet Monero anonīmi, ātri un vienkārši';
+  String get document8722Sbtitle250Sbindex => 'Pērciet un pārdodiet Monero anonīmi, ātri un vienkārši';
 
   @override
-  String get document8722Sbtitle250Sbindex57Sbagoradesk => 'Pērciet vai pārdodiet Bitcoins anonīmi, ātri un vienkārši';
+  String get document8722Sbtitle250Sbindex57Sbagoradesk => 'Pērciet un pārdodiet Bitcoin anonīmi, ātri un vienkārši';
 
   @override
   String get document8722Sbtitle250Sblogin => 'Pieslēgties';
 
   @override
-  String get document8722Sbtitle250Sbpost8722Sbad => 'Ievietojiet sludinājumu';
+  String get document8722Sbtitle250Sbpost8722Sbad => 'Ievietot sludinājumu';
 
   @override
   String get document8722Sbtitle250Sbreset8722Sbpassword => 'Atiestatīt paroli';
 
   @override
   String document8722Sbtitle250Sbsearch250Sbbuy250Sbcountry(Object assetName, Object country) {
-    return 'Pērciet $assetName ar $country';
+    return 'Pirkt $assetName ar $country';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbbuy250Sbcountry8722Sbmethod(Object assetName, Object country, Object method) {
-    return 'Iegādājieties $assetName ar $country ar $method';
+    return 'Pirkt $assetName $country ar $method';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbbuy250Sbcurrency(Object assetName, Object currency) {
-    return 'Pērciet $assetName par $currency';
+    return 'Pirkt $assetName par $currency';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbbuy250Sbmethod(Object assetName, Object method) {
-    return 'Pērciet $assetName ar $method';
+    return 'Pirkt $assetName ar $method';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell(Object assetName, Object country) {
-    return 'Pārdod $assetName ar $country';
+    return 'Pārdot $assetName $country';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbcountry(Object assetName, Object country) {
-    return 'Pārdod $assetName ar $country';
+    return 'Pārdot $assetName $country';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbcountry8722Sbmethod(Object assetName, Object country, Object method) {
-    return 'Pārdod $assetName ar $country ar $method';
+    return 'Pārdot $assetName $country ar $method';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbcurrency(Object assetName, Object currency) {
-    return 'Pārdod $assetName par $currency';
+    return 'Pārdot $assetName par $currency';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbmethod(Object assetName, Object method) {
-    return 'Pārdod $assetName ar $method';
+    return 'Pārdot $assetName ar $method';
   }
 
   @override
   String get document8722Sbtitle250Sbsettings => 'Iestatījumi';
 
   @override
-  String get document8722Sbtitle250Sbsignup => 'Pierakstīties';
+  String get document8722Sbtitle250Sbsignup => 'Reģistrēties';
 
   @override
-  String get document8722Sbtitle250Sbsignup8722Sbsuccess => 'Pieteikšanās veiksme';
+  String get document8722Sbtitle250Sbsignup8722Sbsuccess => 'Reģistrācija veiksmīga';
 
   @override
   String document8722Sbtitle250Sbstart(Object appName) {
-    return '$appName rokasgrāmatas: kā pirkt vai pārdot Monero';
+    return '$appName rokasgrāmatas: kā pirkt un pārdot Monero';
   }
 
   @override
   String document8722Sbtitle250Sbstart57Sbagoradesk(Object appName) {
-    return '$appName rokasgrāmatas: kā pirkt vai pārdot kriptovalūtas';
+    return '$appName rokasgrāmatas: kā pirkt un pārdot kriptovalūtas';
   }
 
   @override
   String document8722Sbtitle250Sbtrade(Object id) {
-    return 'Tirdzniecība {assetName}';
+    return 'Darījums $id';
   }
 
   @override
   String document8722Sbtitle250Sbuser8722Sbads(Object user) {
-    return '$user reklāmas';
+    return '$user sludinājumi';
   }
 
   @override
@@ -1609,37 +1609,37 @@ class I18nLv extends I18n {
   String get edit8722Sbad250Sbdelete8722Sbbtn => 'Dzēst sludinājumu';
 
   @override
-  String get edit8722Sbad250Sbdelete8722Sbdialog250Sbtext => 'Tādējādi reklāma tiks neatgriezeniski izdzēsta. Apsveriet iespēju slēpt reklāmu, iestatot redzamību uz nepatiesu.';
+  String get edit8722Sbad250Sbdelete8722Sbdialog250Sbtext => 'Sludinājums tiks neatgriezeniski izdzēsts. Apsveriet iespēju slēpt sludinājumu, iestatot redzamību uz atspējotu.';
 
   @override
-  String get edit8722Sbad250Sbdelete8722Sbdialog250Sbtitle => 'Apstipriniet reklāmas dzēšanu';
+  String get edit8722Sbad250Sbdelete8722Sbdialog250Sbtitle => 'Apstiprināt sludinājuma dzēšanu';
 
   @override
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Saglabāt izmaiņas';
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Šī reklāma ir paredzēta $adType $createdAt $timeOfcreation. Lai mainītu reklāmas veidu, lūdzu $createAnewad';
+    return 'Šis sludinājums ir $adType $createdAt $timeOfcreation. Lai mainītu sludinājuma veidu, lūdzu $createAnewad';
   }
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbbuy(Object assetName) {
-    return 'pirkt $assetName par skaidru naudu (lokāli)';
+    return 'pirkt $assetName par skaidru naudu (vietēji)';
   }
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbsell(Object assetName) {
-    return 'pārdot $assetName par skaidru naudu (uz vietas)';
+    return 'pārdot $assetName par skaidru naudu (vietēji)';
   }
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbbuy(Object assetName) {
-    return 'iegādājieties $assetName tiešsaistē';
+    return 'pirkt $assetName tiešsaistē';
   }
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbsell(Object assetName) {
-    return 'pārdod $assetName tiešsaistē';
+    return 'pārdot $assetName tiešsaistē';
   }
 
   @override
@@ -1658,7 +1658,7 @@ class I18nLv extends I18n {
   String get edit8722Sbad250Sbvisible => 'Redzams';
 
   @override
-  String get edit8722Sbad250Sbwarning250Sbno8722Sbbuyer8722Sbsettlement8722Sbaddress => 'NEPIECIEŠAMS STEIDZAMS RĪCĪBA: šai reklāmai nav iestatīta norēķinu maka adrese. Norādiet to pēc iespējas ātrāk, lai reklāma netiktu paslēpta.';
+  String get edit8722Sbad250Sbwarning250Sbno8722Sbbuyer8722Sbsettlement8722Sbaddress => 'NEPIECIEŠAMA STEIDZAMA RĪCĪBA: šim sludinājumam nav iestatīta norēķinu maka adrese. Norādiet to pēc iespējas ātrāk, lai sludinājums netiktu paslēpts.';
 
   @override
   String get edit250Sberror250Sbinvalid8722Sbsettlement8722Sbaddress => 'Lūdzu, ievadiet derīgu norēķinu maka adresi';
@@ -1667,7 +1667,7 @@ class I18nLv extends I18n {
   String get error => 'Kļūda';
 
   @override
-  String get error8722Sbpage => 'Hmm! Kaut kas nogāja greizi. Lūdzu, drīzumā mēģiniet vēlreiz. Noklikšķiniet jebkurā lapas vietā, lai atkārtoti ielādētu.';
+  String get error8722Sbpage => 'Opā! Kaut kas nogāja greizi. Lūdzu, drīzumā mēģiniet vēlreiz. Noklikšķiniet jebkurā lapas vietā, lai atkārtoti ielādētu.';
 
   @override
   String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
@@ -1675,7 +1675,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get error8722Sbpage250Sbsubtext250Sbticket => 'atveriet atbalsta biļeti.';
+  String get error8722Sbpage250Sbsubtext250Sbticket => 'atveriet atbalsta ziņojumu.';
 
   @override
   String get error250Sbcaptcha => 'Captcha neizdevās. Lūdzu, mēģiniet vēlreiz';
@@ -1685,12 +1685,12 @@ class I18nLv extends I18n {
 
   @override
   String error250Sbedit250Sb245(Object appName, Object asset) {
-    return 'Iekšējo $appName adresi nevar izmantot tirdzniecības norēķiniem. Lai turpinātu, ievadiet ārējo adresi, kas nav $appName $asset.';
+    return 'Iekšējo $appName adresi nevar izmantot darījumu norēķiniem. Lai turpinātu, ievadiet ārējo adresi, kas nav $appName $asset.';
   }
 
   @override
   String error250Sbedit250Sb245250Sbnojs(Object appName) {
-    return 'Iekšējo $appName adresi nevar izmantot tirdzniecības norēķiniem. Lai turpinātu, lūdzu, ievadiet ārējo adresi, kas nav $appName.';
+    return 'Iekšējo $appName adresi nevar izmantot darījumu norēķiniem. Lai turpinātu, lūdzu, ievadiet ārējo adresi, kas nav $appName.';
   }
 
   @override
@@ -1703,11 +1703,11 @@ class I18nLv extends I18n {
   String get error250Sbpost8722Sbad250Sb108 => 'Minimālā darījuma summa nevar būt vienāda ar maksimālo darījuma summu vai lielāka par to';
 
   @override
-  String get error250Sbpost8722Sbad250Sb114 => 'Maksājuma periodam ir jābūt 15-90 minūtēm';
+  String get error250Sbpost8722Sbad250Sb114 => 'Maksājuma periodam ir jābūt no 15 līdz 90 minūtēm';
 
   @override
   String error250Sbpost8722Sbad250Sb132(Object maximumNumberOfAds) {
-    return 'Nevar izveidot vairāk par $maximumNumberOfAds reklāmām. Lūdzu, izdzēsiet kādu no savām vecajām reklāmām, lai izveidotu šo.';
+    return 'Nevar izveidot vairāk par $maximumNumberOfAds sludinājumiem. Lūdzu, izdzēsiet kādu no saviem vecajiem sludinājumiem, lai izveidotu šo.';
   }
 
   @override
@@ -1717,7 +1717,7 @@ class I18nLv extends I18n {
   String get error250Sbpost8722Sbad250Sb143 => 'Nevar iestatīt Fiat ierobežojumu, kas ir lielāks par maksimālo summu.';
 
   @override
-  String get error250Sbpost8722Sbad250Sb173 => 'Jūsu reklāmas valūta nevar būt tāda pati kā jūsu reklāmas līdzekļa valūta';
+  String get error250Sbpost8722Sbad250Sb173 => 'Jūsu sludinājuma valūta nevar būt tāda pati kā jūsu sludinājuma aktīvs';
 
   @override
   String get error250Sbpost8722Sbad250Sb80 => 'Platums vai garums netika iestatīts';
@@ -1726,13 +1726,13 @@ class I18nLv extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Cenas vērtība nebija pareizi iestatīta';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Nelegālas valsts, maksājuma veida un valūtas kombinācijas';
+  String get error250Sbpost8722Sbad250Sb86 => 'Nederīgas valsts, maksājuma veida un valūtas kombinācijas';
 
   @override
-  String get error250Sbpost8722Sbad250Sb87 => 'Šis maksājuma veids nav derīgs atlasītajai valstij';
+  String get error250Sbpost8722Sbad250Sb87 => 'Šis maksājuma veids nav derīgs izvēlētajai valstij';
 
   @override
-  String get error250Sbpost8722Sbad250Sb88 => 'Šī valūta nav derīga atlasītajam maksājuma veidam';
+  String get error250Sbpost8722Sbad250Sb88 => 'Šī valūta nav derīga izvēlētajam maksājuma veidam';
 
   @override
   String get error250Sbpost8722Sbad250Sb89 => 'Atrašanās vieta nebija pareizi iestatīta';
@@ -1754,14 +1754,14 @@ class I18nLv extends I18n {
 
   @override
   String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Tirdzniecības izveidei nevar pieprasīt mazāku par $min_asset_amount $assetSymbol.';
+    return 'Darījuma izveidei nevar pieprasīt mazāk par $min_asset_amount $assetSymbol.';
   }
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb101 => 'Pieprasītā summa ir mazāka par reklāmā norādīto minimālo darījuma summu';
+  String get error250Sbtrade8722Sbrequest250Sb101 => 'Pieprasītā summa ir mazāka par sludinājuma minimālo darījuma summu';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb102 => 'Pieprasītā summa ir lielāka nekā tirgotājam ir pieejama šai reklāmai';
+  String get error250Sbtrade8722Sbrequest250Sb102 => 'Pieprasītā summa ir lielāka nekā tirgotājam ir pieejama šim sludinājumam';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb103 => 'Šis tirgotājs pašlaik netirgojas. Lūdzu, pārbaudiet citus sludinājumus vai atgriezieties vēlāk.';
@@ -1775,16 +1775,16 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb109 => 'Pieprasītā summa ir lielāka nekā tirgotājam ir pieejama šai reklāmai';
+  String get error250Sbtrade8722Sbrequest250Sb109 => 'Pieprasītā summa ir lielāka nekā tirgotājam ir pieejama šim sludinājumam';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb110 => 'Šim tirgotājam ir nepieciešams augstāks atgriezeniskās saites rādītājs, lai veiktu tirdzniecību, nekā jums ir šobrīd. Jūs varat palielināt savu atsauksmju rezultātu, veicot darījumus ar tirgotājiem, kuriem šādas prasības nav.';
+  String get error250Sbtrade8722Sbrequest250Sb110 => 'Šim tirgotājam ir nepieciešams augstāks atsauksmju reitings, lai veiktu darījumu, nekā jums ir šobrīd. Jūs varat palielināt savu reitingu, veicot darījumus ar tirgotājiem, kuriem šādas prasības nav.';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb111 => 'Pieprasītā summa nav viena no šī tirgotāja pieņemtajām summām';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb112 => 'Nevar pieprasīt apmaiņu sludinājumam, ko ievietojāt pats';
+  String get error250Sbtrade8722Sbrequest250Sb112 => 'Nevar pieprasīt darījumu sludinājumam, ko ievietojāt pats';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb141 => 'Nevar izveidot darījumu par summu, kas ir mazāka par minimālo atļauto summu';
@@ -1793,13 +1793,13 @@ class I18nLv extends I18n {
   String get error250Sbtrade8722Sbrequest250Sb150 => 'Jūs nevarat sākt darījumu, jo šis tirgotājs jūs ir bloķējis. Mēģiniet meklēt citus tirgotājus.';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb151 => 'Šī reklāma ir paredzēta tikai lietotājiem, kuriem reklāmas izvietotājs uzticas. Mēģiniet meklēt citus sludinājumus.';
+  String get error250Sbtrade8722Sbrequest250Sb151 => 'Šis sludinājums ir paredzēts tikai lietotājiem, kuriem sludinājuma izvietotājs uzticas. Mēģiniet meklēt citus sludinājumus.';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb173 => 'Jums nav atļauts atvērt vairāk darījumu';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb218 => 'Šī reklāma ir paredzēta tikai lietotājiem ar verificētu e-pastu. Dodieties uz sava konta iestatījumiem, iestatiet savu e-pastu (ja vēl neesat to izdarījis) un apstipriniet to.';
+  String get error250Sbtrade8722Sbrequest250Sb218 => 'Šis sludinājums ir paredzēts tikai lietotājiem ar apstiprinātu e-pastu. Dodieties uz sava konta iestatījumiem, iestatiet savu e-pastu (ja vēl neesat to izdarījis) un apstipriniet to.';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb232 => 'Šim lietotājam pašlaik ir aizliegts tirgoties viņa konta ierobežojuma dēļ';
@@ -1812,11 +1812,11 @@ class I18nLv extends I18n {
 
   @override
   String error250Sbtrade8722Sbrequest250Sb241(Object appName, Object asset) {
-    return 'Iekšējo $appName adresi nevar izmantot tirdzniecības norēķiniem. Lai turpinātu, ievadiet ārējo adresi, kas nav $appName $asset.';
+    return 'Iekšējo $appName adresi nevar izmantot darījumu norēķiniem. Lai turpinātu, ievadiet ārējo $asset adresi, kas nav $appName.';
   }
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb246 => 'Nevar atvērt darījumu: šis tirgotājs vēl nav norādījis norēķinu adresi šai reklāmai. Sazinieties ar pārdevēju, ja varat, vai vēlāk mēģiniet vēlreiz, vai meklējiet citu piedāvājumu.';
+  String get error250Sbtrade8722Sbrequest250Sb246 => 'Nevar atvērt darījumu: šis tirgotājs vēl nav norādījis norēķinu adresi šim sludinājumam. Sazinieties ar pārdevēju, ja varat, vai vēlāk mēģiniet vēlreiz, vai meklējiet citu piedāvājumu.';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb99 => 'Šim tirgotājam pirmajā darījumā ar viņu ir nepieciešama mazāka darījuma summa. Lūdzu, pārbaudiet tālāk norādīto tirdzniecības informāciju.';
@@ -1831,7 +1831,7 @@ class I18nLv extends I18n {
   String get error250Sbwithdraw250Sb254 => 'Jūs jau esat nosūtījis šo summu uz šo adresi pēdējo 10 minūšu laikā. Pārbaudiet savus darījumus un, ja tā nebija kļūda, mēģiniet atkārtot izņemšanu vēlāk.';
 
   @override
-  String get error250Sbwithdraw250Sb7338Sb140 => 'Nepareiza parole/vienreizēja parole';
+  String get error250Sbwithdraw250Sb7338Sb140 => 'Nepareiza parole/vienreizējā parole';
 
   @override
   String get error250Sbwithdraw250Sb7438Sb77 => 'Nepietiek līdzekļu';
@@ -1842,14 +1842,14 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get error250Sbwithdraw250Sb76 => 'Mēģinājums izņemt šķīrējtiesas obligāciju uz to pašu adresi, kurā norādīts konts, kas pieprasa atsaukšanu';
+  String get error250Sbwithdraw250Sb76 => 'Mēģinājums izņemt šķīrējtiesas obligāciju uz to pašu adresi, kura norādīta kontam, kas pieprasa izņemšanu';
 
   @override
-  String get error250Sbwithdraw250Sbclosed8722Sbconnection => 'Pieprasījumā radās problēma, taču darījums, iespējams, jau ir nosūtīts. Lūdzu, atkārtoti ielādējiet lapu, pārbaudiet, vai darījums ir nosūtīts, un atkārtojiet to, ja nepieciešams. Ja kļūda joprojām pastāv, lūdzu, sazinieties ar mūsu atbalsta dienestu.';
+  String get error250Sbwithdraw250Sbclosed8722Sbconnection => 'Pieprasījumā radās problēma, taču pārskaitījums, iespējams, jau ir nosūtīts. Lūdzu, atkārtoti ielādējiet lapu, pārbaudiet, vai pārskaitījums ir nosūtīts, un atkārtojiet to, ja nepieciešams. Ja kļūda joprojām pastāv, lūdzu, sazinieties ar mūsu atbalsta dienestu.';
 
   @override
   String error250Sbwithdraw250Sbgeneric(Object assetName) {
-    return 'Radās problēma. Lūdzu, pārbaudiet saņemšanas $assetName adresi.';
+    return 'Radās problēma. Lūdzu, pārbaudiet $assetName saņemšanas adresi.';
   }
 
   @override
@@ -1857,33 +1857,33 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ir vienādranga Monero apmaiņa. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
+    return '$appName ir no lietotāja uz lietotāju Monero apmaiņa. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē ar vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
   }
 
   @override
   String faq250Sbanswer8722Sb057Sbagoradesk(Object appName) {
-    return '$appName ir vienādranga kriptovalūtu ārpusbiržas birojs. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot kriptovalūtas viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas tiešsaistē pērk un pārdod kriptovalūtas vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties kriptovalūtas, lūdzu, apskatiet mūsu ceļvežus.';
+    return '$appName ir no lietotāja uz lietotāju kriptovalūtu ārpusbiržas apmaiņa. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot kriptovalūtas viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas tiešsaistē pērk un pārdod kriptovalūtas ar vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties kriptovalūtas, lūdzu, apskatiet mūsu ceļvežus.';
   }
 
   @override
   String faq250Sbanswer8722Sb1(Object buying, Object selling) {
-    return 'Varat pārbaudīt mūsu $buying un $selling rokasgrāmatas, lai sāktu ar Monero tirdzniecību.';
+    return 'Varat apskatīt mūsu $buying un $selling rokasgrāmatas, lai sāktu ar Monero tirdzniecību.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb18722Sbbuying => 'pērkot';
+  String get faq250Sbanswer8722Sb18722Sbbuying => 'pērk';
 
   @override
-  String get faq250Sbanswer8722Sb18722Sbselling => 'pārdošana';
+  String get faq250Sbanswer8722Sb18722Sbselling => 'pārdod';
 
   @override
   String faq250Sbanswer8722Sb157Sbagoradesk(Object buying, Object selling) {
-    return 'Varat skatīt mūsu $buying un $selling rokasgrāmatas, lai sāktu tirdzniecību ar kriptovalūtām.';
+    return 'Varat apskatīt mūsu $buying un $selling rokasgrāmatas, lai sāktu tirdzniecību ar kriptovalūtām.';
   }
 
   @override
   String faq250Sbanswer8722Sb10(Object appName) {
-    return 'Ja iegādājaties Monero, izmantojot $appName, Monero tiks nosūtīts uz jūsu nodrošināto Monero norēķinu maku. No turienes jūs varat to nosūtīt, kur vien vēlaties. Ja vēlaties pārdot Monero, vispirms ir jāiemaksā XMR savā $appName Monero makā.';
+    return 'Ja iegādājaties Monero, izmantojot $appName, Monero tiks nosūtīts uz jūsu norādīto Monero norēķinu maku. No turienes jūs varat to nosūtīt, kur vien vēlaties. Ja vēlaties pārdot Monero, vispirms ir jāiemaksā XMR savā $appName Monero makā.';
   }
 
   @override
@@ -1896,48 +1896,48 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb11(Object appName, Object walletPage) {
-    return 'Lai pārdotu Monero uz $appName, vispirms uz savu $appName maku ir jānosūta Monero šķīrējtiesas obligācijai. Lai to izdarītu, jums ir nepieciešams $appName konts, piekļuve Monero citā Monero makā un jāzina sava $appName saņēmēja adrese. Lai atrastu savu $appName saņemšanas adresi, jums jāapmeklē $walletPage. Lapas augšdaļa ir sadalīta trīs daļās, kas ļauj gan nosūtīt, gan saņemt Monero, gan skatīt savus darījumus. Cilnē \"Saņemt\" jūs atradīsiet savu saņēmēja adresi. Kad zināt savu $appName saņemšanas adresi, varat doties uz savu citu Monero maku un izmantot šo adresi, lai nosūtītu Monero uz savu $appName adresi.';
+    return 'Lai pārdotu Monero $appName, vispirms uz savu $appName maku ir jānosūta Monero šķīrējtiesas obligācijai. Lai to izdarītu, jums ir nepieciešams $appName konts, piekļuve Monero citā Monero makā un jāzina sava $appName saņēmēja adrese. Lai atrastu savu $appName saņemšanas adresi, jums jāapmeklē $walletPage. Lapas augšdaļa ir sadalīta trīs daļās, kas ļauj gan nosūtīt, gan saņemt Monero, gan skatīt savus darījumus. Cilnē \"Saņemt\" jūs atradīsiet savu saņemšanas adresi. Kad zināt savu $appName saņemšanas adresi, varat doties uz savu citu Monero maku un izmantot šo adresi, lai nosūtītu Monero uz savu $appName adresi.';
   }
 
   @override
   String faq250Sbanswer8722Sb1157Sbagoradesk(Object appName, Object walletPage) {
-    return 'Lai pārdotu kriptovalūtas vietnē $appName, vispirms uz savu $appName maku ir jānosūta dažas monētas šķīrējtiesas obligācijai. Lai to izdarītu, jums ir nepieciešams $appName konts, piekļuve monētām citā makā un jāzina sava $appName saņēmēja adrese. Lai atrastu savu $appName saņemšanas adresi, jums jāapmeklē $walletPage. Izvēlieties atbilstošo kriptovalūtu, maka lapas augšdaļa ir sadalīta trīs daļās, ļaujot gan nosūtīt, gan saņemt kriptovalūtu, gan apskatīt savus darījumus. Cilnē \"Saņemt\" jūs atradīsiet savu saņēmēja adresi. Kad zināt savu $appName saņēmēja adresi, varat pāriet uz savu citu maku un izmantot šo adresi, lai nosūtītu monētas uz savu $appName adresi.';
+    return 'Lai pārdotu kriptovalūtas vietnē $appName, vispirms uz savu $appName maku ir jānosūta dažas monētas šķīrējtiesas obligācijai. Lai to izdarītu, jums ir nepieciešams $appName konts, piekļuve monētām citā makā un jāzina sava $appName saņēmēja adrese. Lai atrastu savu $appName saņemšanas adresi, jums jāapmeklē $walletPage. Izvēlieties atbilstošo kriptovalūtu. Maka lapas augšdaļa ir sadalīta trīs daļās, ļaujot gan nosūtīt, gan saņemt kriptovalūtu, gan apskatīt savus darījumus. Cilnē \"Saņemt\" jūs atradīsiet savu saņemšanas adresi. Kad zināt savu $appName saņēmēja adresi, varat doties uz savu citu maku un izmantot šo adresi, lai nosūtītu monētas uz savu $appName adresi.';
   }
 
   @override
   String faq250Sbanswer8722Sb12(Object appName) {
-    return 'Darījumi ilgst 10–60 minūtes, kad nosūtāt Monero uz savu $appName maku vai nosūtāt Monero no sava $appName maka.';
+    return 'Pārskaitījumi ilgst 10 līdz 60 minūtes, kad nosūtāt Monero uz savu $appName maku vai kad nosūtāt Monero no sava $appName maka.';
   }
 
   @override
   String faq250Sbanswer8722Sb1257Sbagoradesk(Object appName) {
-    return 'Sūtot monētas uz savu $appName maku vai sūtot monētas no sava $appName maka, darījumi ilgst 10–60 minūtes.';
+    return 'Sūtot monētas uz savu $appName maku vai sūtot monētas no sava $appName maka, pārskaitījumi ilgst 10–60 minūtes.';
   }
 
   @override
   String faq250Sbanswer8722Sb13(Object wallet) {
-    return 'Iespējams, Monero tīklā ir sastrēgumi, šajā gadījumā darījumu veikšana prasīs daudz ilgāku laiku. Monero darījumi ir jāapstiprina Monero tīklam. Kad tiek veikts darījums, tas tiek nosūtīts darījumu pūlam, no kura tas tiek apvienots blokos, kurus Monero kalnrači apstiprina, veicot ieguvi. Blokus iegūst vidēji ik pēc divām minūtēm. Kad darījums ir iekļauts blokā un ir iegūts, tas ir apstiprināts vienu reizi. Kad darījuma apstiprinājumu skaits sasniedz noteiktu slieksni, šobrīd 10 apstiprinājumi, darījums parādās saņēmēju makos. Jūs varat lasīt vairāk par apstiprinājumiem Monero wikipedia, un jūs varat redzēt pašreizējo neapstiprināto darījumu skaitu Monero tīklā savā $wallet.';
+    return 'Iespējams, Monero tīklā ir sastrēgumi. Šajā gadījumā pārskaitījumu veikšana prasīs daudz ilgāku laiku. Monero pārskaitījumi ir jāapstiprina Monero tīklam. Kad tiek veikts pārskaitījums, tas tiek nosūtīts pārskaitījumu katlam, no kura tas tiek apvienots blokos, kurus Monero maineri mainojot apstiprina. Blokus iegūst vidēji ik pēc divām minūtēm. Kad pārskaitījums ir iekļauts blokā un ir mainots, tas ir apstiprināts vienu reizi. Kad pārskaitījuma apstiprinājumu skaits sasniedz noteiktu slieksni, šobrīd 10 apstiprinājumi, pārskaitījums parādās saņēmēju makos. Jūs varat lasīt vairāk par apstiprinājumiem Monero wikipedia, un jūs varat redzēt pašreizējo neapstiprināto pārskaitījumu skaitu Monero tīklā savā $wallet.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb138722Sbwallet => 'maku';
+  String get faq250Sbanswer8722Sb138722Sbwallet => 'maks';
 
   @override
   String faq250Sbanswer8722Sb1357Sbagoradesk(Object wallet) {
-    return 'Attiecīgajā kriptovalūtu tīklā var rasties pārslodze, šajā gadījumā darījumu veikšana prasīs daudz ilgāku laiku. Kriptovalūtu darījumi ir jāapstiprina kriptovalūtu tīklam. Kad tiek veikts darījums, tas tiek nosūtīts darījumu pūlam, no kura tas tiek apvienots blokos, ko kalnrači apstiprina, veicot ieguvi. Kad darījums ir iekļauts blokā un ir iegūts, tas ir apstiprināts vienu reizi. Kad darījuma apstiprinājumu skaits sasniedz noteiktu slieksni, darījums parādās saņēmēja makā. Pašreizējo neapstiprināto darījumu skaitu tīklā varat skatīt ierīcē $wallet.';
+    return 'Attiecīgajā kriptovalūtu tīklā var rasties pārslodze. Šajā gadījumā pārskaitījumu veikšana prasīs daudz ilgāku laiku. Kriptovalūtas pārskaitījumi ir jāapstiprina kriptovalūtas tīklam. Kad tiek veikts pārskaitījums, tas tiek nosūtīts pārskaitījumu katlam, no kura tas tiek apvienots blokos, ko maineri mainojot apstiprina. Kad pārskaitījums ir iekļauts blokā un ir mainots, tas ir apstiprināts vienu reizi. Kad pārskaitījuma apstiprinājumu skaits sasniedz noteiktu slieksni, pārskaitījums parādās saņēmēja makā. Pašreizējo neapstiprināto pārskaitījumu skaitu tīklā varat skatīt savā $wallet.';
   }
 
   @override
   String faq250Sbanswer8722Sb17(Object appName) {
-    return '$appName izmanto atsauksmju sistēmu, kas parāda rezultātu jūsu publiskajā profilā. Šis rādītājs (procentos) parāda, cik daudz pozitīvu atsauksmju ir lietotājam. Lietotājam varat sniegt tikai vienu atsauksmi. Atsauksmes var būt trīs veidu: pozitīvas, neitrālas un negatīvas. Tiklīdz atsauksme ir sniegta, tā būs redzama lietotāja publiskajā profilā, ja tiks izpildīti noteikti nosacījumi, pretējā gadījumā atsauksmes paliks neapstiprinātas un neietekmēs atsauksmes rezultātu.';
+    return '$appName izmanto atsauksmju sistēmu, kas parāda rangu jūsu publiskajā profilā. Šis rangs procentos parāda, cik daudz pozitīvu atsauksmju ir lietotājam. Lietotājam varat sniegt tikai vienu atsauksmi. Atsauksmes var būt trīs veidu: pozitīvas, neitrālas un negatīvas. Tiklīdz atsauksme ir sniegta, tā būs redzama lietotāja publiskajā profilā, ja tiks izpildīti noteikti nosacījumi, pretējā gadījumā atsauksmes paliks neapstiprinātas un neietekmēs atsauksmju rangu.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => 'Sniegtās atsauksmes var būt apstiprinātas vai neapstiprinātas. Apstiprinātās atsauksmes tiek rādītas lietotāja publiskajā profilā un ietekmē lietotāja atsauksmju rezultātu. Lai neapstiprināta atsauksme tiktu apstiprināta, kopējam tirdzniecības apjomam starp lietotāju, kurš sniedz un saņem atsauksmes, ir jābūt lielākam par 100 USD ekvivalentu.';
+  String get faq250Sbanswer8722Sb18 => 'Sniegtās atsauksmes var būt apstiprinātas vai neapstiprinātas. Apstiprinātās atsauksmes tiek rādītas lietotāja publiskajā profilā un ietekmē lietotāja atsauksmju rangu. Lai neapstiprināta atsauksme tiktu apstiprināta, kopējam tirdzniecības apjomam starp lietotāju, kurš sniedz un kurš saņem atsauksmes, ir jābūt lielākam par 100 USD ekvivalentu.';
 
   @override
   String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Tīmekļa paziņojumi ļauj pārlūkprogrammā saņemt uznirstošos paziņojumus ikreiz, kad saņemat jaunu paziņojumu $appName. Ja tirgojaties un vēlaties nekavējoties uzzināt, kad kaut kas notiek, $enableWebnotificationsfromyourprofile. Pārvelciet slēdzi, kas saka Iespējot tīmekļa paziņojumus, un, kad pārlūkprogramma pieprasa atļauju rādīt tīmekļa paziņojumus, nospiediet akceptēt. Tagad esat gatavs un sāksit saņemt tīmekļa paziņojumus.';
+    return 'Tīmekļa paziņojumi ļauj pārlūkprogrammā saņemt uznirstošos paziņojumus ikreiz, kad saņemat jaunu paziņojumu $appName. Ja tirgojaties un vēlaties nekavējoties uzzināt, kad kaut kas notiek, $enableWebnotificationsfromyourprofile. Pārvelciet slēdzi, kas saka Iespējot tīmekļa paziņojumus, un, kad pārlūkprogramma pieprasa atļauju rādīt tīmekļa paziņojumus, nospiediet atļaut. Tagad esat gatavs un sāksiet saņemt tīmekļa paziņojumus.';
   }
 
   @override
@@ -1952,80 +1952,80 @@ class I18nLv extends I18n {
   String get faq250Sbanswer8722Sb28722Sbguide => 'divu faktoru autentifikācijas rokasgrāmata';
 
   @override
-  String get faq250Sbanswer8722Sb20 => 'Dažreiz tirgotājs var lūgt jūsu ID. Ja pirmo reizi tirgojaties ar tirgotāju, viņš var lūgt jūs identificēt. Tas ir tāpēc, ka dažās valstīs saskaņā ar vietējiem tiesību aktiem tirgotājiem ir jāzina, kas ir viņu klienti. Lielākā daļa tirgotāju darījuma noteikumos paskaidro, vai viņiem ir nepieciešama ID pārbaude. Ja nevēlaties tirgotājam izsniegt savu ID, jūs vienmēr varat atcelt darījumu un meklēt tirgotāju ar mazāk stingrām prasībām. Vienmēr nosūtiet savu ID pārdevējam, izmantojot tirdzniecības tērzēšanu, mūsu tirdzniecības tērzēšanas ziņojumi tiek šifrēti mūsu serveros un tiek izdzēsti pēc 180 dienām. Visas fotogrāfijas, kas nosūtītas tirdzniecības tērzēšanai, ir arī marķētas ar ūdenszīmi, lai novērstu attēlu ļaunprātīgu izmantošanu.';
+  String get faq250Sbanswer8722Sb20 => 'Dažreiz tirgotājs var lūgt jūsu ID. Ja pirmo reizi veicat darījumu ar tirgotāju, viņš var lūgt jūs identificēt. Tas ir tāpēc, ka dažās valstīs saskaņā ar vietējiem tiesību aktiem tirgotājiem ir jāzina, kas ir viņu klienti. Lielākā daļa tirgotāju darījuma noteikumos paskaidro, vai viņiem ir nepieciešama ID pārbaude. Ja nevēlaties tirgotājam sniegt savu ID, jūs vienmēr varat atcelt darījumu un meklēt tirgotāju ar mazāk stingrām prasībām. Vienmēr nosūtiet savu ID pārdevējam, izmantojot darījuma saraksti. Mūsu darījumu sarakstes ziņojumi tiek šifrēti mūsu serveros un tiek izdzēsti pēc 180 dienām. Visas fotogrāfijas, kas nosūtītas darījumu sarakstēs, ir marķētas ar ūdenszīmi, lai novērstu attēlu ļaunprātīgu izmantošanu.';
 
   @override
   String faq250Sbanswer8722Sb21(Object appName) {
-    return 'Pārdevēji parasti pabeidz darījumu, tiklīdz viņi redz jūsu maksājumu, kas dažkārt var ilgt stundu vai divas. Ja esat samaksājis, bet joprojām gaidāt, nav par ko uztraukties, jo visus tiešsaistes darījumus aizsargā šķīrējtiesas obligācija, un pārdevējs nevar aizbēgt, nezaudējot obligāciju. Ja ar tirdzniecību rodas problēmas un pārdevējs to nepabeigs, varat apstrīdēt darījumu, lai $appName atbalsts to atrisinātu. Ja jūs pērkat vai pārdodat Monero tiešsaistē, jūs varat apstrīdēt darījumu pēc tam, kad esat atzīmējis maksājumu par pabeigtu. Strīdu vairs nevar sākt, ja darījums ir pabeigts vai ja tas ir vietējais darījums, kurā nav iespējota šķīrējtiesas obligāciju aizsardzība. Kad darījums, kurā esat iesaistīts, tiks apstrīdēts, jūs saņemsit e-pasta ziņojumu. Strīdīgs darījums parasti tiek atrisināts 24–48 stundu laikā.';
+    return 'Pārdevēji parasti pabeidz darījumu, tiklīdz viņi redz jūsu maksājumu, kas dažkārt var ilgt stundu vai divas. Ja esat samaksājis, bet joprojām gaidāt, nav par ko uztraukties, jo visus tiešsaistes darījumus aizsargā šķīrējtiesas obligācija, un pārdevējs nevar aizbēgt, nezaudējot obligāciju. Ja ar darījumu rodas problēmas un pārdevējs to nepabeigs, varat apstrīdēt darījumu, lai $appName atbalsts to atrisinātu. Ja jūs pērkat vai pārdodat Monero tiešsaistē, jūs varat apstrīdēt darījumu pēc tam, kad esat atzīmējis maksājumu par pabeigtu. Strīdu vairs nevar sākt, ja darījums ir pabeigts vai ja tas ir vietējais darījums, kurā nav iespējota šķīrējtiesas obligāciju aizsardzība. Kad darījums, kurā esat iesaistīts, tiks apstrīdēts, jūs saņemsiet e-pasta ziņojumu. Strīdīgs darījums parasti tiek atrisināts 24–48 stundu laikā.';
   }
 
   @override
   String faq250Sbanswer8722Sb2157Sbagoradesk(Object appName) {
-    return 'Pārdevēji parasti pabeidz darījumu, tiklīdz viņi redz jūsu maksājumu, kas dažkārt var ilgt stundu vai divas. Ja esat samaksājis, bet joprojām gaidāt, nav par ko uztraukties, jo visus tiešsaistes darījumus aizsargā šķīrējtiesas obligācija, un pārdevējs nevar aizbēgt, nezaudējot obligāciju. Ja ar tirdzniecību rodas problēmas un pārdevējs to nepabeigs, varat apstrīdēt darījumu, lai $appName atbalsts to atrisinātu. Ja jūs pērkat vai pārdodat kriptovalūtu tiešsaistē, jūs varat apstrīdēt darījumu pēc tam, kad esat atzīmējis maksājumu par pabeigtu. Strīdu vairs nevar sākt, ja darījums ir pabeigts vai ja tas ir vietējais darījums, kurā nav iespējota šķīrējtiesas obligāciju aizsardzība. Kad darījums, kurā esat iesaistīts, tiks apstrīdēts, jūs saņemsit e-pasta ziņojumu. Strīdīgs darījums parasti tiek atrisināts 24–48 stundu laikā.';
+    return 'Pārdevēji parasti pabeidz darījumu, tiklīdz viņi redz jūsu maksājumu, kas dažkārt var ilgt stundu vai divas. Ja esat samaksājis, bet joprojām gaidāt, nav par ko uztraukties, jo visus tiešsaistes darījumus aizsargā šķīrējtiesas obligācija, un pārdevējs nevar aizbēgt, nezaudējot obligāciju. Ja ar darījumu rodas problēmas un pārdevējs to nepabeigs, varat apstrīdēt darījumu, lai $appName atbalsts to atrisinātu. Ja jūs pērkat vai pārdodat kriptovalūtu tiešsaistē, jūs varat apstrīdēt darījumu pēc tam, kad esat atzīmējis maksājumu par pabeigtu. Strīdu vairs nevar sākt, ja darījums ir pabeigts vai ja tas ir vietējais darījums, kurā nav iespējota šķīrējtiesas obligāciju aizsardzība. Kad darījums, kurā esat iesaistīts, tiks apstrīdēts, jūs saņemsiet e-pasta ziņojumu. Strīdīgs darījums parasti tiek atrisināts 24–48 stundu laikā.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb22 => 'Mēs rezervējam nelielu Monero summu no jūsu maka atlikuma, lai samaksātu Monero transakcijas maksu Monero tīklā. Par katru Monero darījumu ir jāmaksā neliela maksa tīklā, lai tas tiktu apstiprināts neatkarīgi no tā, no kurienes tas tiek nosūtīts. Mēs rezervējam šo maksu iepriekš, lai jūsu maka atlikums nekļūtu negatīvs.';
+  String get faq250Sbanswer8722Sb22 => 'Mēs rezervējam nelielu Monero summu no jūsu maka bilances, lai samaksātu Monero pārskaitījuma maksu Monero tīklā. Par katru Monero pārskaitījumu ir jāmaksā neliela maksa tīklā, lai tas tiktu apstiprināts neatkarīgi no tā, no kurienes tas tiek nosūtīts. Mēs rezervējam šo maksu iepriekš, lai jūsu maka bilance nekļūtu negatīva.';
 
   @override
-  String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Mēs rezervējam nelielu summu no jūsu maka atlikuma, lai samaksātu tīkla transakcijas maksu. Par katru kriptovalūtas darījumu ir jāmaksā neliela maksa tīklā, lai tas tiktu apstiprināts neatkarīgi no tā, no kurienes tas tiek nosūtīts.';
+  String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Mēs rezervējam nelielu summu no jūsu maka atlikuma, lai samaksātu tīkla pārskaitījuma maksu. Par katru kriptovalūtas pārskaitījumu ir jāmaksā neliela maksa tīklā, lai tas tiktu apstiprināts neatkarīgi no tā, no kurienes tas tiek nosūtīts.';
 
   @override
   String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Šī atbilde attiecas uz gadījumu, kad pērkat Monero tiešsaistē. Kad esat nosūtījis tirdzniecības pieprasījumu Monero pārdevējam, jums ir laika periods maksājuma pabeigšanai, pirms pārdevējs var atcelt darījumu (maksājuma logs mainās atkarībā no darījuma maksājuma veida). Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga Esmu samaksājis. Pārdevējam tiek paziņots, ka esat veicis maksājumu, un Monero tiks turēts obligācijā, līdz pārdevējs pabeigs darījumu jūsu vietā, redzot maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika loga beigām, lūdzu, sazinieties ar pārdevēju ar tirdzniecības starpniecību. Varat sazināties ar pārdevēju un citiem esošajiem tirdzniecības kontaktiem no $dashboard savā $appName lietotāja profilā. Nosūtiet ziņu pārdevējam un lūdzu izskaidrojiet situāciju un to, kāpēc nevarējāt veikt maksājumu noteiktajā laika logā. Ja pārdevējs neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName atbalsta dienestu, izmantojot $supportRequestform, un norādiet savu tirdzniecības ID.';
+    return 'Šis attiecas uz gadījumu, kad pērkat Monero tiešsaistē. Kad esat nosūtījis darījuma pieprasījumu Monero pārdevējam, jums ir laika periods maksājuma veikšanai, pēc kura pārdevējs var atcelt darījumu (periods mainās atkarībā no darījuma maksājuma veida). Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga Esmu samaksājis. Pārdevējam tiek paziņots, ka esat veicis maksājumu, un Monero tiek turēts obligācijā, līdz pārdevējs pabeidz darījumu, redzot maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika beigām, lūdzu, sazinieties ar pārdevēju darījuma sarakstē. Varat sazināties ar pārdevēju un citiem esošajiem darījumu kontaktiem no $dashboard savā $appName lietotāja profilā. Nosūtiet ziņu pārdevējam, izskaidrojiet radušos situāciju un kāpēc nevarējāt veikt maksājumu noteiktajā laika periodā. Ja pārdevējs neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName atbalsta dienestu, izmantojot $supportRequestform, un norādiet savu darījuma ID.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb248722Sbdashboard => 'Mērinstrumentu panelis';
+  String get faq250Sbanswer8722Sb248722Sbdashboard => 'Panelis';
 
   @override
-  String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'atbalsta pieprasījuma veidlapa';
+  String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'atbalsta pieteikuma veidlapa';
 
   @override
   String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Pēc darījuma pieprasījuma nosūtīšanas jums ir laiks, lai pabeigtu maksājumu, pirms otra puse var atcelt darījumu. Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga “Esmu samaksājis”. Otra puse tiek informēta, ka esat veicis maksājumu, un monētas tiks turētas obligācijā, līdz otra puse pabeigs darījumu jūsu vietā pēc tam, kad būs redzējis maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika perioda beigām, lūdzu, sazinieties ar otru pusi, izmantojot tirdzniecības tērzēšanu. Varat sazināties ar otru pusi un citiem esošajiem tirdzniecības kontaktiem no $dashboard. Nosūtiet ziņu otrai pusei un laipni izskaidrojiet situāciju un to, kāpēc nevarējāt veikt maksājumu noteiktajā laika logā. Ja otra puse neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName darbiniekiem, izmantojot $supportRequestform, un norādiet savu tirdzniecības ID.';
+    return 'Pēc darījuma pieprasījuma nosūtīšanas jums ir laiks, lai pabeigtu maksājumu, pirms otra puse var atcelt darījumu. Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga “Esmu samaksājis”. Otra puse tiek informēta, ka esat veicis maksājumu, un monētas tiks turētas obligācijā, līdz otra puse pabeigs darījumu pēc tam, kad būs redzējusi maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika perioda beigām, lūdzu, sazinieties ar otru pusi, izmantojot darījuma saraksti. Varat sazināties ar otru pusi un citiem esošajiem darījumu kontaktiem no $dashboard. Nosūtiet ziņu otrai pusei, izskaidrojiet radušos situāciju un kāpēc nevarējāt veikt maksājumu noteiktajā laikā. Ja otra puse neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName darbiniekiem, izmantojot $supportRequestform, un norādiet savu darījuma ID.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb25 => 'Kad pircējs vai pārdevējs ierosina strīdu, administrators iesaistās tirdzniecības tērzēšanā un pieprasa abām pusēm pierādījumus un ņem vērā tērzēšanas vēsturi un reputāciju, lai pieņemtu pēc iespējas godīgāku lēmumu.';
+  String get faq250Sbanswer8722Sb25 => 'Kad pircējs vai pārdevējs ierosina strīdu, administrators iesaistās darījuma sarakstē, pieprasa abām pusēm pierādījumus un ņem vērā sarakstes vēsturi un reputāciju, lai pieņemtu pēc iespējas godīgāku lēmumu.';
 
   @override
   String faq250Sbanswer8722Sb26(Object appName) {
-    return 'Monero darījumi ir neatgriezeniski, ja esat nosūtījis naudu uz citu Monero adresi, jūs vai $appName to nevarēsit atsaukt.';
+    return 'Monero darījumi ir neatgriezeniski. Ja esat nosūtījis naudu uz citu Monero adresi, ne jūs, ne $appName to nevarēs atgriezt.';
   }
 
   @override
   String faq250Sbanswer8722Sb2657Sbagoradesk(Object appName) {
-    return 'Kriptovalūtas darījumi ir neatgriezeniski, ja esat nosūtījis monētas uz citu adresi, jūs vai $appName to nevarēsit reversēt.';
+    return 'Kriptovalūtas darījumi ir neatgriezeniski. Ja esat nosūtījis monētas uz citu adresi, ne jūs, ne $appName to nevarēs atgriezt.';
   }
 
   @override
   String faq250Sbanswer8722Sb27(Object appName) {
-    return 'Sludinājumu cenas noteiktas pēc Monero valūtas maiņas kursiem. Monero valūtas kurss ir nepastāvīgs un var strauji mainīties. $appName atjaunina valūtas maiņas kursus un sludinājumu cenas ik pēc desmit minūtēm. Cenas, kas norādītas sarakstos un pirmajā lapā, tiek saglabātas kešatmiņā un tiek atjauninātas nedaudz lēnāk. Dažreiz, kad Monero cena strauji svārstās, reklāmās ar vienu un to pašu cenu vienādojumu var tikt parādīta cita cena. Dažkārt nav pieejami tirgus dati par atsevišķām valūtām, kas izraisa sludinājumu cenu atjaunināšanas aizkavēšanos. Taču, atverot pašu sludinājumu lapu, cena būs aktuālāka. Pirkuma cena tiek noteikta brīdī, kad Monero pircējs nosūta tirdzniecības pieprasījumu.';
+    return 'Sludinājumu cenas noteiktas pēc Monero maiņas kursiem. Monero maiņas kurss ir nepastāvīgs un var strauji mainīties. $appName atjaunina maiņas kursus un sludinājumu cenas ik pēc desmit minūtēm. Cenas, kas norādītas sarakstos un pirmajā lapā, tiek saglabātas kešatmiņā un tiek atjauninātas nedaudz lēnāk. Dažreiz, kad Monero cena strauji svārstās, sludinājumos ar vienu un to pašu cenu aprēķinu var tikt parādīta cita cena. Dažkārt nav pieejami tirgus dati par atsevišķām valūtām, kas izraisa sludinājumu cenu atjaunināšanas aizkavēšanos. Taču, atverot pašu sludinājuma lapu, cena būs aktuālāka. Pirkuma cena tiek noteikta brīdī, kad Monero pircējs nosūta darījuma pieprasījumu.';
   }
 
   @override
   String faq250Sbanswer8722Sb2757Sbagoradesk(Object appName) {
-    return 'Reklāmu cenas ir balstītas uz kriptovalūtas maiņas kursiem. Valūtas kursi ir nepastāvīgi un var strauji mainīties. $appName ik pēc divpadsmit minūtēm atjaunina valūtas maiņas kursus un sludinājumu cenas. Cenas, kas norādītas sarakstos un pirmajā lapā, tiek saglabātas kešatmiņā un tiek atjauninātas nedaudz lēnāk. Dažreiz, kad cena strauji svārstās, reklāmās ar vienādu cenu formulu var tikt rādītas dažādas cenas. Dažkārt tirgus dati par atsevišķām valūtām nav pieejami, kas noved pie sludinājumu cenu atjaunināšanas aizkavēšanās. Taču, atverot pašu sludinājumu lapu, cena būs aktuālāka. Cena tiek noteikta, kad tiek nosūtīts tirdzniecības pieprasījums.';
+    return 'Sludinājumu cenas ir balstītas uz kriptovalūtas maiņas kursiem. Kursi ir nepastāvīgi un var strauji mainīties. $appName ik pēc divpadsmit minūtēm atjaunina maiņas kursus un sludinājumu cenas. Cenas, kas norādītas sarakstos un pirmajā lapā, tiek saglabātas kešatmiņā un tiek atjauninātas nedaudz lēnāk. Dažreiz, kad cena strauji svārstās, sludinājumos ar vienādu cenu formulu var tikt rādītas dažādas cenas. Dažkārt tirgus dati par atsevišķām valūtām nav pieejami, kas noved pie sludinājumu cenu atjaunināšanas aizkavēšanās. Taču, atverot pašu sludinājumu lapu, cena būs aktuālāka. Cena tiek noteikta, kad tiek nosūtīts darījuma pieprasījums.';
   }
 
   @override
-  String get faq250Sbanswer8722Sb28 => 'Kad cena ir mainīga, iegādātā Monero summa svārstās ar Monero valūtas kursu. Tirgotā Monero summa tiek noteikta, kad darījums tiek slēgts, nevis tad, kad tiek atvērts. Tas samazina tirgus likmju riskus vietējās skaidras naudas darījumos, kur laiks no darījuma atvēršanas līdz darījuma slēgšanai var būt vairākas dienas.';
+  String get faq250Sbanswer8722Sb28 => 'Kad cena ir mainīga, iegādātā Monero summa svārstās līdz ar Monero valūtas kursu. Galējā Monero summa tiek noteikta, kad darījums tiek slēgts, nevis tad, kad tiek atvērts. Tas samazina tirgus likmju riskus vietējās skaidras naudas darījumos, kur laiks no darījuma atvēršanas līdz darījuma slēgšanai var būt vairākas dienas.';
 
   @override
-  String get faq250Sbanswer8722Sb2857Sbagoradesk => 'Kad cena ir mainīga, iegādātās kriptovalūtas summa svārstās atkarībā no valūtas kursa. Tirgotā summa tiek noteikta, kad darījums tiek slēgts, nevis tad, kad tiek atvērts. Tas samazina tirgus likmju riskus vietējās skaidras naudas darījumos, kur laiks no darījuma atvēršanas līdz darījuma slēgšanai var būt vairākas dienas.';
+  String get faq250Sbanswer8722Sb2857Sbagoradesk => 'Kad cena ir mainīga, iegādātās kriptovalūtas summa svārstās atkarībā no valūtas kursa. Galējā summa tiek noteikta, kad darījums tiek slēgts, nevis tad, kad tiek atvērts. Tas samazina tirgus likmju riskus vietējās skaidras naudas darījumos, kur laiks no darījuma atvēršanas līdz darījuma slēgšanai var būt vairākas dienas.';
 
   @override
   String faq250Sbanswer8722Sb29(Object feesPage) {
-    return 'Visu informāciju par pašreizējām maksām varat pārbaudīt mūsu $feesPage';
+    return 'Visu informāciju par pašreizējām maksām varat redzēt mūsu $feesPage';
   }
 
   @override
-  String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'maksas lapa';
+  String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'izmaksu lapa';
 
   @override
   String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Pašlaik mums nav atsevišķas mobilās lietotnes. Taču mobilos paziņojumus varat saņemt pakalpojumā $telegram! $thisGuide ļaus jums veikt Telegram paziņojumu aktivizēšanas procesu (tas ir vienkārši). Pēc tam mūsu robots nosūtīs jums paziņojumus par jūsu $appName notikumiem.';
+    return 'Pašlaik mums nav atsevišķas mobilās lietotnes. Taču mobilos paziņojumus varat saņemt $telegram! $thisGuide ļaus jums veikt Telegram paziņojumu aktivizēšanas procesu (tas ir vienkārši). Pēc tam mūsu bots sūtīs jums paziņojumus par jūsu $appName notikumiem.';
   }
 
   @override
@@ -2035,19 +2035,19 @@ class I18nLv extends I18n {
   String get faq250Sbanswer8722Sb32 => 'Darījuma prioritāte ir iestatījums, ko Monero izmanto, lai jūsu maksājumu atšķirtu no citiem Monero tīkla maksājumiem (ja pastāv konkurence). Zemas prioritātes darījumu pabeigšana var aizņemt ilgāku laiku.';
 
   @override
-  String get faq250Sbanswer8722Sb32250Sb1 => 'Bitcoin maksas līmeņi ietekmē jūsu darījuma apstiprināšanas ātrumu, motivējot kalnračus noteikt jūsu darījuma prioritāti par lielāku maksu. Tiek lēsts, ka augstas maksas darījums tiks apstiprināts dažu bloku laikā; Vidējas maksas darījums tiek lēsts apstiprināts vienas dienas laikā; Tiek lēsts, ka zemas maksas darījums tiks apstiprināts nedēļas laikā.';
+  String get faq250Sbanswer8722Sb32250Sb1 => 'Bitcoin maksas līmeņi ietekmē jūsu darījuma apstiprināšanas ātrumu, motivējot mainerus noteikt jūsu darījuma prioritāti par lielāku maksu. Paredzams, ka augstas maksas darījums tiks apstiprināts dažu bloku laikā; vidējas maksas darījums tiks apstiprināts vienas dienas laikā; zemas maksas darījums tiks apstiprināts nedēļas laikā.';
 
   @override
   String faq250Sbanswer8722Sb33(Object appName) {
-    return 'Jūs varat izņemt monētas no $appName maka uz savu personīgo maku ar kriptovalūtu, kas atšķiras no valūtas $appName. Lai to izdarītu, vispirms ir jāatzīmē izvēles rūtiņa \"Es vēlos saņemt citu valūtu\". Pēc tam izvēlieties vēlamo saņemšanas kriptovalūtu un ierakstiet adresi, uz kuru jāsūta monētas. Pēc tam izvēlieties, vai vēlaties norādīt summu monētās, kas nosūtītas no jūsu maka, vai konvertētajās monētās, kas saņemtas jūsu mērķa makā, un ierakstiet daudzumu. Nospiediet \"Turpināt\", un jums tiks parādīti atbilstoši jūsu prasībām atbilstoši piedāvājumi. Ja saraksts ir tukšs, mēģiniet pielāgot summu. Konvertācijas kurss tiks parādīts katram piedāvājumam, un, ja tas ir pieņemams, jums tikai jānospiež \"Tirgot\", jāpiekrīt noteikumiem, un jums tiks automātiski izveidots darījums par attiecīgo summu. Galamērķa adrese pircējam tiks automātiski sniegta, izmantojot tirdzniecības tērzēšanu. Pārējais tiek apstrādāts tāpat kā jebkurš cits $appName darījums — pircējs nosūtīs vēlamo valūtu uz jūsu norādīto adresi, un, saņemot monētas, jums ir jāpabeidz darījums. Tieši tā!';
+    return 'Jūs varat izņemt monētas no $appName maka uz savu personīgo maku ar kriptovalūtu, kas atšķiras no valūtas $appName. Lai to izdarītu, vispirms ir jāatzīmē izvēles rūtiņa \"Es vēlos saņemt citu valūtu\". Pēc tam izvēlieties vēlamo saņemšanas kriptovalūtu un ievadiet adresi, uz kuru sūtīt monētas. Pēc tam izvēlieties, vai vēlaties norādīt summu monētās, kas nosūtītas no jūsu maka, vai konvertētajās monētās, kas saņemtas jūsu mērķa makā, un ierakstiet daudzumu. Nospiediet \"Turpināt\", un jums tiks parādīti jūsu prasībām atbilstoši piedāvājumi. Ja saraksts ir tukšs, mēģiniet pielāgot summu. Konvertācijas kurss tiks parādīts katram piedāvājumam, un, ja tas ir pieņemams, jums tikai jānospiež \"Tirgot\", jāpiekrīt noteikumiem, un jums tiks automātiski izveidots darījums par attiecīgo summu. Galamērķa adrese pircējam tiks automātiski sniegta, izmantojot darījuma saraksti. Tālākais process notiek tāpat kā jebkurš cits $appName darījums — pircējs nosūtīs vēlamo valūtu uz jūsu norādīto adresi, un, saņemot monētas, jums ir jāpabeidz darījums. Tas arī viss!';
   }
 
   @override
-  String get faq250Sbanswer8722Sb338722Sbmorphtoken8722Sbfaq8722Sblink => 'Šeit varat lasīt vairāk par ChangeNow darbību, pakalpojumu un tīkla maksām';
+  String get faq250Sbanswer8722Sb338722Sbmorphtoken8722Sbfaq8722Sblink => 'Šeit varat lasīt vairāk par ChangeNow darbību, pakalpojumiem un tīkla maksām';
 
   @override
   String faq250Sbanswer8722Sb4(Object value) {
-    return 'Ja jums ir rezerves kods, izmantojiet QR ģenerēšanas pakalpojumu, piemēram, $value, lai ģenerētu QR no rezerves koda. Pēc tam skenējiet ģenerēto QR, izmantojot mobilo 2FA lietotni. Ja jums nav rezerves koda, tas nozīmē, ka esat zaudējis piekļuvi savam kontam. Diemžēl mums nav iespējams atšķirt hakeri, kas izliekas par jums, un to, ka jūs patiesībā esat jūs.';
+    return 'Ja jums ir rezerves kods, izmantojiet QR ģenerēšanas pakalpojumu, piemēram, $value, lai ģenerētu QR no rezerves koda. Pēc tam skenējiet ģenerēto QR, izmantojot mobilo 2FA lietotni. Ja jums nav rezerves koda, tas nozīmē, ka esat zaudējis piekļuvi savam kontam. Diemžēl mums nav iespējams atšķirt hakeri, kas izliekas par jums, un jūs, kas patiesībā arī esat jūs.';
   }
 
   @override
@@ -2055,7 +2055,7 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb5(Object onionUrl, Object tor) {
-    return 'Jā, mēs to darām! Šeit tas ir: $onionUrl (lai atvērtu šo saiti, nepieciešams $tor).';
+    return 'Jā! Šeit tas ir: $onionUrl (lai atvērtu šo saiti, nepieciešams $tor).';
   }
 
   @override
@@ -2065,7 +2065,7 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb7(Object here) {
-    return 'Jā! Pārbaudiet to $here.';
+    return 'Jā! Apskatiet to $here.';
   }
 
   @override
@@ -2083,17 +2083,17 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb9(Object appName) {
-    return 'Mums ir divi dažādi darījumu veidi vietnē $appName: vietējie darījumi un tiešsaistes darījumi. Tiešsaistes darījumi notiek tiešsaistē, pilnībā izmantojot mūsu tirdzniecības platformu, jums nekad netiekoties ar savu tirdzniecības partneri. Šķīrējtiesas obligāciju aizsardzība tiek automātiski iespējota un finansēta tiešsaistes darījumiem, kas nozīmē, ka jūs kā pircēju automātiski aizsargā mūsu šķīrējtiesas obligāciju aizsardzības sistēma. Lielākā daļa $appName darījumu ir tiešsaistes darījumi. Vietējie darījumi ir paredzēti aci pret aci, un šķīrējtiesas obligāciju aizsardzība netiek automātiski iespējota. Šī iemesla dēļ vietējā tirdzniecībā nav droši maksāt pārdevējam, izmantojot tiešsaistes maksājuma veidu. Tiešsaistes maksājumu veidi ir, piemēram, bankas pārskaitījumi; PayPal; Dāvanu karšu kodi utt.';
+    return 'Mums ir divi dažādi darījumu veidi vietnē $appName: vietējie darījumi un tiešsaistes darījumi. Tiešsaistes darījumi notiek tiešsaistē, pilnībā izmantojot mūsu tirdzniecības platformu, jums nekad netiekoties ar savu darījuma partneri. Šķīrējtiesas obligāciju aizsardzība tiek automātiski iespējota un finansēta tiešsaistes darījumiem, kas nozīmē, ka jūs kā pircēju automātiski aizsargā mūsu šķīrējtiesas obligāciju aizsardzības sistēma. Lielākā daļa $appName darījumu ir tiešsaistes darījumi. Vietējos darījumus paredzēts veikt, tiekoties klātienē, un šķīrējtiesas obligāciju aizsardzība netiek automātiski iespējota. Šī iemesla dēļ vietējā darījumā nav droši maksāt pārdevējam, izmantojot tiešsaistes maksājuma veidu. Tiešsaistes maksājumu veidi ir, piemēram, bankas pārskaitījumi; PayPal; Dāvanu karšu kodi utt.';
   }
 
   @override
   String faq250Sbmorph8722Sbdeposit250Sbcontent(Object appName) {
-    return 'Ja vēlaties iemaksāt monētas $appName makā no citas kriptovalūtas maka, maka lapas cilnē Saņemt ir jāatzīmē lodziņš “Es vēlos iemaksāt citu valūtu”. Parādītajā sadaļā izvēlieties vēlamo depozīta valūtu, depozīta summu (pievērsiet uzmanību parādītajiem limitiem) un ievadiet attiecīgo atmaksas adresi, kas tiks izmantota, ja darījumā kaut kas noiet greizi. Kad tas ir izdarīts, noklikšķiniet uz \"Parādīt man depozīta adresi!\" pogu, kas atvērs logu, kurā redzēsit depozīta adresi. Nosūtiet monētas no sava maka uz norādīto ChangeNow depozīta adresi. Šajā brīdī ChangeNow konvertēs jūsu monētas un pārsūtīs tās uz jūsu $appName maku.';
+    return 'Ja vēlaties ieskaitīt monētas $appName makā no citas kriptovalūtas maka, lapas cilnē Saņemt ir jāatzīmē lodziņš “Es vēlos iemaksāt citu valūtu”. Parādītajā sadaļā izvēlieties vēlamo depozīta valūtu, depozīta summu (pievērsiet uzmanību parādītajiem limitiem) un ievadiet attiecīgo atmaksas adresi, kas tiks izmantota, ja darījumā kaut kas noiet greizi. Kad tas ir izdarīts, noklikšķiniet uz \"Parādīt man depozīta adresi!\" pogas, kas atvērs logu, kurā redzēsiet depozīta adresi. Nosūtiet monētas no sava maka uz norādīto ChangeNow depozīta adresi. Šajā brīdī ChangeNow konvertēs jūsu monētas un pārsūtīs tās uz jūsu $appName maku.';
   }
 
   @override
   String faq250Sbmorph8722Sbdeposit250Sbcontent57Sbagoradesk(Object appName) {
-    return 'Ja vēlaties iemaksāt monētas $appName makā no citas kriptovalūtas maka, maka lapas cilnē Saņemt ir jāatzīmē lodziņš “Es vēlos iemaksāt citu valūtu”. Parādītajā sadaļā izvēlieties vēlamo depozīta valūtu, depozīta summu (pievērsiet uzmanību parādītajiem limitiem) un ievadiet attiecīgo atmaksas adresi, kas tiks izmantota, ja darījumā kaut kas noiet greizi. Kad tas ir izdarīts, noklikšķiniet uz \"Parādīt man depozīta adresi!\" pogu, kas atvērs logu, kurā redzēsit depozīta adresi. Nosūtiet monētas no sava maka uz norādīto ChangeNow depozīta adresi. Šajā brīdī ChangeNow konvertēs jūsu monētas un pārsūtīs tās uz jūsu $appName maku.';
+    return 'Ja vēlaties ieskaitīt monētas $appName makā no citas kriptovalūtas maka, lapas cilnē Saņemt ir jāatzīmē lodziņš “Es vēlos iemaksāt citu valūtu”. Parādītajā sadaļā izvēlieties vēlamo depozīta valūtu, depozīta summu (pievērsiet uzmanību parādītajiem limitiem) un ievadiet attiecīgo atmaksas adresi, kas tiks izmantota, ja darījumā kaut kas noiet greizi. Kad tas ir izdarīts, noklikšķiniet uz \"Parādīt man depozīta adresi!\" pogas, kas atvērs logu, kurā redzēsiet depozīta adresi. Nosūtiet monētas no sava maka uz norādīto ChangeNow depozīta adresi. Šajā brīdī ChangeNow konvertēs jūsu monētas un pārsūtīs tās uz jūsu $appName maku.';
   }
 
   @override
@@ -2107,25 +2107,25 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get faq250Sbquestion8722Sb1 => 'Kā es varu pirkt vai pārdot Monero?';
+  String get faq250Sbquestion8722Sb1 => 'Kā pirkt un pārdot Monero?';
 
   @override
-  String get faq250Sbquestion8722Sb157Sbagoradesk => 'Kā pirkt vai pārdot kriptovalūtas?';
+  String get faq250Sbquestion8722Sb157Sbagoradesk => 'Kā pirkt un pārdot kriptovalūtas?';
 
   @override
-  String get faq250Sbquestion8722Sb10 => 'Kā es varu nosūtīt Monero un kā es varu norēķināties ar Monero pēc to iegādes?';
+  String get faq250Sbquestion8722Sb10 => 'Kā nosūtīt Monero un kā norēķināties ar Monero pēc to iegādes?';
 
   @override
-  String get faq250Sbquestion8722Sb1057Sbagoradesk => 'Kā es varu nosūtīt kriptovalūtas un kā es varu norēķināties ar kriptovalūtām pēc to iegādes?';
+  String get faq250Sbquestion8722Sb1057Sbagoradesk => 'Kā nosūtīt kriptovalūtas un kā norēķināties ar kriptovalūtām pēc to iegādes?';
 
   @override
   String faq250Sbquestion8722Sb11(Object appName) {
-    return 'Kā es varu saņemt Monero savā $appName makā?';
+    return 'Kā saņemt Monero savā $appName makā?';
   }
 
   @override
   String faq250Sbquestion8722Sb1157Sbagoradesk(Object appName) {
-    return 'Kā es varu saņemt kriptovalūtu savā $appName makā?';
+    return 'Kā saņemt kriptovalūtu savā $appName makā?';
   }
 
   @override
@@ -2139,10 +2139,10 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get faq250Sbquestion8722Sb13 => 'Esmu gaidījis 60 minūtes, un mans darījums joprojām tiek gaidīts. Ko darīt?';
+  String get faq250Sbquestion8722Sb13 => 'Esmu gaidījis 60 minūtes, un mans darījums joprojām tiek apstrādāts. Ko darīt?';
 
   @override
-  String get faq250Sbquestion8722Sb17 => 'Kā darbojas atgriezeniskās saites sistēma?';
+  String get faq250Sbquestion8722Sb17 => 'Kā darbojas atsauksmju sistēma?';
 
   @override
   String get faq250Sbquestion8722Sb18 => 'Kāda ir atšķirība starp apstiprinātām un neapstiprinātām atsauksmēm?';
@@ -2163,14 +2163,14 @@ class I18nLv extends I18n {
   String get faq250Sbquestion8722Sb2157Sbagoradesk => 'Esmu samaksājis, bet vēl neesmu saņēmis savas monētas.';
 
   @override
-  String get faq250Sbquestion8722Sb22 => 'Kāpēc es nevaru nosūtīt visus Monero, kas ir manā makā?';
+  String get faq250Sbquestion8722Sb22 => 'Kāpēc es nevaru nosūtīt visu Monero, kas ir manā makā?';
 
   @override
   String get faq250Sbquestion8722Sb2257Sbagoradesk => 'Kāpēc es nevaru nosūtīt visas monētas, kas ir manā makā?';
 
   @override
   String faq250Sbquestion8722Sb23(Object appName) {
-    return 'Es veicu darījumu no $appName, un tas netiek rādīts saņēmēja pusē!';
+    return 'Es veicu pārskaitījumu no $appName, un tas neparādās saņēmēja pusē!';
   }
 
   @override
@@ -2201,35 +2201,35 @@ class I18nLv extends I18n {
   String get faq250Sbquestion8722Sb30 => 'Vai jums ir mobilā lietotne? / Kā es varu saņemt mobilos paziņojumus?';
 
   @override
-  String get faq250Sbquestion8722Sb32 => 'Kas ir darījuma prioritāte?';
+  String get faq250Sbquestion8722Sb32 => 'Kas ir pārskaitījuma prioritāte?';
 
   @override
   String get faq250Sbquestion8722Sb32250Sb1 => 'Kas ir maksas līmenis?';
 
   @override
   String faq250Sbquestion8722Sb33(Object appName) {
-    return 'Kā es varu izņemt Monero uz citu kriptovalūtas maku no sava $appName maka?';
+    return 'Kā izņemt Monero uz citu kriptovalūtas maku no sava $appName maka?';
   }
 
   @override
   String faq250Sbquestion8722Sb3357Sbagoradesk(Object appName) {
-    return 'Kā es varu izņemt citas kriptovalūtas no sava $appName maka?';
+    return 'Kā izņemt citas kriptovalūtas no sava $appName maka?';
   }
 
   @override
   String get faq250Sbquestion8722Sb5 => 'Esmu pazaudējis savu otro autentifikācijas faktoru. Kas man jādara?';
 
   @override
-  String get faq250Sbquestion8722Sb6 => 'Vai jums, puiši, ir .onion vietne / Tor slēptais pakalpojums?';
+  String get faq250Sbquestion8722Sb6 => 'Vai jums ir .onion vietne / Tor slēptais pakalpojums?';
 
   @override
   String get faq250Sbquestion8722Sb7 => 'Vai jums ir I2P vietne?';
 
   @override
-  String get faq250Sbquestion8722Sb8 => 'Vai jums ir saistīta programma?';
+  String get faq250Sbquestion8722Sb8 => 'Vai jums ir saistītā programma?';
 
   @override
-  String get faq250Sbquestion8722Sb9 => 'Kāda ir atšķirība starp tiešsaistes tirdzniecību un vietējo tirdzniecību?';
+  String get faq250Sbquestion8722Sb9 => 'Kāda ir atšķirība starp tiešsaistes darījumu un vietējo darījumu?';
 
   @override
   String get faq250Sbtitle => 'Bieži uzdotie jautājumi';
@@ -2249,12 +2249,12 @@ class I18nLv extends I18n {
 
   @override
   String fees250Sbtrading250Sbtext(Object appName) {
-    return 'Monero reģistrācija, pirkšana un pārdošana ir pilnībā <strong>bezmaksas</strong>. <br/> $appName lietotājiem, kuri veido sludinājumus, tiek iekasēta <strong> 1% arbitrāžas aizsardzības maksa </strong> par katru pabeigto darījumu.';
+    return 'Reģistrācija, Monero pirkšana un pārdošana ir pilnībā <strong>bezmaksas</strong>. <br/> $appName lietotājiem, kuri izvieto sludinājumus, tiek iekasēta <strong> 1% arbitrāžas aizsardzības maksa </strong> par katru pabeigto darījumu.';
   }
 
   @override
   String fees250Sbtrading250Sbtext57Sbagoradesk(Object appName) {
-    return 'Kriptovalūtu reģistrācija, pirkšana un pārdošana ir pilnībā <strong>bezmaksas</strong>. <br/> $appName lietotājiem, kuri veido sludinājumus, tiek iekasēta <strong> 1% arbitrāžas aizsardzības maksa </strong> par katru pabeigto darījumu.';
+    return 'Reģistrācija, Kriptovalūtu pirkšana un pārdošana ir pilnībā <strong>bezmaksas</strong>. <br/> $appName lietotājiem, kuri izvieto sludinājumus, tiek iekasēta <strong> 1% arbitrāžas aizsardzības maksa </strong> par katru pabeigto darījumu.';
   }
 
   @override
@@ -2265,7 +2265,7 @@ class I18nLv extends I18n {
 
   @override
   String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Darījumi ar citu $appName lietotāju makiem ir $free. $linebreak  Darījumiem ar citiem Monero makiem tiek piemērota Monero tīkla transakciju maksa. Pašreizējā maksa ir redzama uz $walletPage zem virsraksta $outgoingMonerofees. Darījuma maksa tiek maksāta no jūsu $appName maka, kad nosūtāt darījumu.';
+    return 'Pārskaitījumi uz citu $appName lietotāju makiem ir $free. $linebreak  Pārskaitījumiem uz citiem Monero makiem tiek piemērota Monero tīkla pārskaitījumu maksa. Pašreizējā maksa ir redzama $walletPage zem virsraksta $outgoingMonerofees. Pārskaitījuma maksa tiek segta no jūsu $appName maka, kad nosūtāt pārskaitījumu.';
   }
 
   @override
@@ -2276,14 +2276,14 @@ class I18nLv extends I18n {
 
   @override
   String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Darījumi ar citu $appName lietotāju makiem ir $free. $linebreak  Darījumiem uz ārējiem kriptovalūtu makiem tiek piemērota attiecīgā kriptovalūtu tīkla transakciju maksa. Pašreizējā maksa ir redzama uz $walletPage zem virsraksta $outgoingMonerofees. Darījuma maksa tiek maksāta no jūsu $appName maka, kad nosūtāt darījumu.';
+    return 'Pārskaitījumi uz citu $appName lietotāju makiem ir $free. $linebreak  Pārskaitījumiem uz ārējiem kriptovalūtu makiem tiek piemērota attiecīgā kriptovalūtu tīkla pārskaitījumu maksa. Pašreizējā maksa ir redzama $walletPage zem virsraksta $outgoingMonerofees. Pārskaitījuma maksa tiek segta no jūsu $appName maka, kad nosūtāt pārskaitījumu.';
   }
 
   @override
-  String get fees250Sbtx250Sbtitle => 'Monero darījumu maksas';
+  String get fees250Sbtx250Sbtitle => 'Monero pārskaitījumu maksas';
 
   @override
-  String get fees250Sbtx250Sbtitle57Sbagoradesk => 'Kriptovalūtas darījumu maksas';
+  String get fees250Sbtx250Sbtitle57Sbagoradesk => 'Kriptovalūtas pārskaitījumu maksas';
 
   @override
   String get finish => 'Pabeigt';
@@ -2292,25 +2292,25 @@ class I18nLv extends I18n {
   String get footer250Sbabout => 'Par';
 
   @override
-  String get footer250Sbaffiliate => 'Filiāle';
+  String get footer250Sbaffiliate => 'Saistītais';
 
   @override
-  String get footer250Sbblocks => 'Monero Block Explorer';
+  String get footer250Sbblocks => 'Monero bloku pārlūks';
 
   @override
-  String get footer250Sbbounty => 'Drošības balva';
+  String get footer250Sbbounty => 'Drošības atlīdzība';
 
   @override
   String get footer250Sbcanary => 'Kanārijs';
 
   @override
-  String get footer250Sbcontact => 'Sazinies ar mums';
+  String get footer250Sbcontact => 'Sazināties ar mums';
 
   @override
   String get footer250Sbfees => 'Maksas';
 
   @override
-  String get footer250Sble => 'Tiesībaizsardzības izmeklēšanas';
+  String get footer250Sble => 'Varas iestāžu jautājumi';
 
   @override
   String get footer250Sbpgp => 'PGP atslēgas';
@@ -2325,13 +2325,13 @@ class I18nLv extends I18n {
   String get formula250Sbexamples8722Sbtitle => 'Piemēri';
 
   @override
-  String get formula250Sbexamples250Sbbtc => '5% virs vidējās BTC/EUR tirgus cenas: <strong>coingeckobtcusd*usdeur*1,05</strong>\n<br/> BTC/XMR tirgus cena: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5% virs Kraken BTC/EUR pēdējās cenas, kas konvertēta GBP: <strong> krakenbtceurlast/usdeur*usdgbp*1,05 </strong>\n<br/> 5% zem augstākās cenas starp BTC/USD Bitfinex zemo cenu un BTC/USD Kraken pēdējo cenu: <strong>max(bitfinexbtcusdlow,krakenbtcusdlast)*0,95</strong>\n<br/> 0,1 LTC salīdzinājumā ar tirgus BTC/LTC cenu: <strong>coingeckobtcltc+0,1</strong>';
+  String get formula250Sbexamples250Sbbtc => '5% virs vidējās BTC/EUR tirgus cenas: <strong>coingeckobtcusd*usdeur*1.05</strong>\n<br/> BTC/XMR tirgus cena: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5% virs Kraken BTC/EUR pēdējās cenas, kas konvertēta GBP: <strong> krakenbtceurlast/usdeur*usdgbp*1.05 </strong>\n<br/> 5% zem augstākās cenas starp BTC/USD Bitfinex zemāko cenu un BTC/USD Kraken pēdējo cenu: <strong>max(bitfinexbtcusdlow,krakenbtcusdlast)*0.95</strong>\n<br/> 0.1 LTC virs tirgus BTC/LTC cenas: <strong>coingeckobtcltc+0.1</strong>';
 
   @override
-  String get formula250Sbexamples250Sbxmr => '5% virs vidējās XMR/EUR tirgus cenas: <strong>coingeckoxmrusd*usdeur*1,05</strong>\n<br/> ETH/XMR tirgus cena: <strong>coingeckoethbtc/coingeckoxmrbtc</strong>\n<br/> BTC/XMR tirgus cena: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5% virs Kraken XMR/EUR pēdējo cenu, kas konvertēta GBP: <strong> krakenxmreurlast/usdeur*usdgbp*1,05 </strong>\n<br/> 5% zem augstākās cenas starp XMR/USD Bitfinex zemo cenu un XMR/USD Kraken pēdējo cenu: <strong>max(bitfinexxmrusdlow,krakenxmrusdlast)*0,95</strong>\n<br/> 0,001 BTC salīdzinājumā ar tirgus XMR/BTC cenu: <strong>coingeckoxmrbtc+0,001</strong>';
+  String get formula250Sbexamples250Sbxmr => '5% virs vidējās XMR/EUR tirgus cenas: <strong>coingeckoxmrusd*usdeur*1.05</strong>\n<br/> ETH/XMR tirgus cena: <strong>coingeckoethbtc/coingeckoxmrbtc</strong>\n<br/> BTC/XMR tirgus cena: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5% virs Kraken XMR/EUR pēdējās cenas, kas konvertēta GBP: <strong> krakenxmreurlast/usdeur*usdgbp*1.05 </strong>\n<br/> 5% zem augstākās cenas starp XMR/USD Bitfinex zemāko cenu un XMR/USD Kraken pēdējo cenu: <strong>max(bitfinexxmrusdlow,krakenxmrusdlast)*0.95</strong>\n<br/> 0.001 BTC virs tirgus XMR/BTC cenas: <strong>coingeckoxmrbtc+0.001</strong>';
 
   @override
-  String get formula250Sbfiat8722Sbrates => 'Fiat valūtas maiņas kursi';
+  String get formula250Sbfiat8722Sbrates => 'Fiat valūtu maiņas kursi';
 
   @override
   String get formula250Sbfiat8722Sbrates8722Sbtab => 'Fiat maiņas kursi';
@@ -2375,16 +2375,16 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbfour8722Sbtext8722Sbchoose8722Sbany8722Sbapp => 'izvēlieties jebkuru lietotni';
+  String get guide250Sb2fa250Sbstep8722Sbfour8722Sbtext8722Sbchoose8722Sbany8722Sbapp => 'izvēlēties jebkuru lietotni';
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb0(Object appName) {
-    return 'Divu faktoru autentifikācija (2FA) ir iespējota iestatījumu lapas cilnē Divfaktoru autentifikācija. Aktivizējot divu faktoru autentifikāciju, ir ļoti svarīgi, lai jūs <strong> pierakstītu rezerves kodu </strong> un glabātu to drošā vietā, vēlams uz papīra. Ja zaudēsiet piekļuvi saviem divu faktoru kodiem, jūs nevarēsit pieteikties savā kontā un $appName nevarēs jums palīdzēt. Tāda ir 2FA būtība. <strong> Izmantojiet uz savu risku. </strong>';
+    return 'Divu faktoru autentifikācija (2FA) ir iespējota iestatījumu lapas cilnē \"Divu faktoru autentifikācija\". Aktivizējot divu faktoru autentifikāciju, ir ļoti svarīgi, lai jūs <strong> pierakstītu rezerves kodu </strong> un glabātu to drošā vietā, vēlams uz papīra. Ja zaudēsiet piekļuvi saviem divu faktoru kodiem, jūs nevarēsiet pieteikties savā kontā un $appName nevarēs jums palīdzēt. Tāda ir 2FA būtība. <strong> Izmantojiet uz savu atbildību. </strong>';
   }
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName piedāvā $totp 2FA. Kad 2FA ir iespējots, $authMobileapp tiks sinhronizēts ar $appName un izveidos 6 ciparu vienreizējas paroles. Šī parole tiek mainīta katru minūti. Lai pieteiktos vai izņemtu šķīrējtiesas obligāciju, papildus savai parolei ir jāievada arī šī vienreizējā parole, pirms tā beidzas.';
+    return '$appName piedāvā $totp 2FA. Kad 2FA ir iespējots, $authMobileapp tiks sinhronizēts ar $appName un veidos 6 ciparu vienreizējas paroles. Šī parole tiek mainīta katru minūti. Lai pieteiktos vai izņemtu šķīrējtiesas obligāciju, papildus savai parolei ir jāievada arī šī vienreizējā parole, pirms tā nomainās.';
   }
 
   @override
@@ -2395,29 +2395,29 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb2(Object settingsPage) {
-    return 'Lai sāktu aktivizēt divu faktoru autentifikāciju, apmeklējiet $settingsPage un izvēlieties cilni Divfaktoru autentifikācija.';
+    return 'Lai uzsāktu aktivizēt divu faktoru autentifikāciju, apmeklējiet $settingsPage un izvēlieties cilni Divfaktoru autentifikācija.';
   }
 
   @override
   String get guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb28722Sbsettings8722Sbpage => 'iestatījumu lapa';
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbsix8722Sbtext => 'Lai pabeigtu iestatīšanu, lodziņā zem QR koda ievadiet mobilās lietotnes sniegto kodu un nospiediet pogu Verify 2FA. <br/><br/> Apsveicam! Jūsu kontam ir iespējota divu faktoru autentifikācija. Izmantojiet lietotnes piešķirtos kodus kopā ar paroli, lai pieteiktos un izņemtu šķīrējtiesas obligāciju.';
+  String get guide250Sb2fa250Sbstep8722Sbsix8722Sbtext => 'Lai pabeigtu iestatīšanu, lodziņā zem QR koda ievadiet mobilās lietotnes sniegto kodu un nospiediet pogu \"Apstiprināt 2FA\". <br/><br/> Apsveicam! Jūsu kontam ir iespējota divu faktoru autentifikācija. Izmantojiet lietotnes piešķirtos kodus kopā ar paroli, lai pieslēgtos un izņemtu šķīrējtiesas obligāciju.';
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbthree8722Sbtext => '<strong>SVARĪGI! Pierakstiet savu rezerves kodu. </strong> Maksimālai drošībai iesakām to izdrukāt vai uzrakstīt uz papīra. Saglabājiet to droši. Šis kods ir jūsu vienīgā iespēja atgūt piekļuvi savam kontam, ja pazaudējat tālruni vai izdzēsīsiet autentifikācijas lietotni.';
+  String get guide250Sb2fa250Sbstep8722Sbthree8722Sbtext => '<strong>SVARĪGI! Pierakstiet savu rezerves kodu. </strong> Maksimālai drošībai iesakām to izdrukāt vai uzrakstīt uz papīra. Glabājiet to droši. Šis kods ir vienīgais veids, kā piekļūt savam kontam, ja pazaudējat tālruni vai izdzēšat autentifikācijas lietotni.';
 
   @override
-  String get guide250Sb2fa250Sbstep8722Sbtwo8722Sbtext => 'Ievadiet savu paroli un nospiediet pogu Iespējot 2FA.';
+  String get guide250Sb2fa250Sbstep8722Sbtwo8722Sbtext => 'Ievadiet savu paroli un nospiediet pogu \"Iespējot 2FA\".';
 
   @override
   String get guide250Sb2fa250Sbtitle => 'Kā iespējot divu faktoru autentifikāciju';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb1 => 'Diemžēl <strong> monētām, piemēram, bitkoiniem, protokolā nav iestrādāta konfidencialitāte. </strong> Visi darījumi un summas, kas tiek tirgotas starp visām pusēm, ir publiski redzamas. Tas neļauj bitkoinam būt aizstājamam un rada būtiskas problēmas ar bitkoīna kā globālās monetārās bāzes dzīvotspēju.';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb1 => 'Diemžēl <strong> monētām kā Bitcoin protokolā nav iestrādāta konfidencialitāte. </strong> Visi darījumi un summas, kas tiek tirgotas starp visām pusēm, ir publiski redzamas. Tas neļauj vienai Bitcoin monētai būt aizstājamai ar citu un rada būtiskas problēmas. lai Bitcoin būtu izmantojams kā globāla monetāra bāze.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb2 => 'Iedomājieties šādu scenāriju: bitkoīns ir kļuvis par vienīgo izmantoto valūtu pasaulē. Kādas būtu privātuma trūkuma sekas?';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb2 => 'Iedomājieties šādu scenāriju: Bitcoin ir kļuvis par vienīgo izmantoto valūtu pasaulē. Kādas būtu privātuma trūkuma sekas?';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb3 => 'Jūs ceļojat pa valsts daļām ar vidēju vai augstu vardarbīgas noziedzības līmeni. Lai samaksātu par kaut ko, jums ir jāizmanto daļa no jūsu Bitcoin.<strong> Ja katra persona, ar kuru veicat darījumus, precīzi zina, cik daudz naudas jums ir, tas apdraud jūsu personīgo fizisko drošību. </strong>';
@@ -2426,22 +2426,22 @@ class I18nLv extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb3250Sbtitle => '1. Fiziskā drošība';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb4 => 'Jūs esat uzņēmums, kas veic maksājumu piegādātājam. Šis piegādātājs varēs redzēt, cik daudz naudas ir jūsu uzņēmumam, un tāpēc turpmākajās sarunās varēs uzminēt, cik jutīgs pret cenu jūs esat. Viņi var redzēt katru citu maksājumu, ko esat saņēmis uz šo Bitcoin adresi, un tādējādi noteikt, ar kādiem citiem piegādātājiem jums ir darīšana un cik daudz jūs maksājat šiem piegādātājiem. Viņi var aptuveni noteikt, cik daudz klientu jums ir un cik lielu maksu jūs iekasējat no klientiem. <strong> Šī ir komerciāli sensitīva informācija, kas pietiekami sabojā jūsu sarunu pozīciju, lai radītu relatīvus finansiālus zaudējumus. </strong>';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb4 => 'Jūs esat uzņēmums, kas veic maksājumu piegādātājam. Šis piegādātājs varēs redzēt, cik daudz naudas ir jūsu uzņēmumam, un tāpēc turpmākajās sarunās varēs uzminēt, cik jutīgs pret cenu jūs esat. Viņi var redzēt katru citu maksājumu, ko esat saņēmis uz šo Bitcoin adresi, un tādējādi noteikt, ar kādiem citiem piegādātājiem jums ir darījumi un cik daudz jūs maksājat šiem piegādātājiem. Viņi var aptuveni noteikt, cik daudz klientu jums ir un cik lielu maksu jūs iekasējat no klientiem. <strong> Šī ir komerciāli sensitīva informācija, kas sabojā jūsu darījumu pozīciju pietiekami, lai radītu relatīvus finansiālus zaudējumus. </strong>';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb4250Sbtitle => '2. Komercnoslēpums';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb5 => 'Jūs esat privātpersona, kas maksā par tiešsaistes precēm un pakalpojumiem. Jūs zināt, ka uzņēmumi parasti mēģina izmantot <strong> “cenu diskriminācijas”</strong> algoritmus, lai mēģinātu noteikt augstākās cenas, par kurām tie var piedāvāt jums turpmākos pakalpojumus, un jūs vēlētos, lai tie nedarītu [X307X ] ir informācijas priekšrocība, jo jūs zināt, cik daudz un kur to tērējat.</strong>';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb5 => 'Jūs esat privātpersona, kas maksā tiešsaistē par precēm un pakalpojumiem. Jūs zināt, ka tā ir ierasta prakse izmantot <strong> “cenu diskriminācijas”</strong> algoritmus, lai mēģinātu noteikt augstākās cenas, par kurām tie var piedāvāt jums pakalpojumus nākotnē, un jūs vēlētos, lai to nedarītu <strong> informētība - jūs zināt, cik daudz un kur tērējat.</strong>';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb5250Sbtitle => '3. Cenu diskriminācija';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6 => 'Jūs pārdodat cupcakes un saņemat bitcoin kā maksājumu. Izrādās, ka <strong> kāds, kuram šis bitcoin piederēja pirms jums, bija iesaistīts noziedzīgā darbībā</strong>. Tagad jūs uztraucaties, ka esat kļuvis par <strong> aizdomās turamo krimināllietā</strong>, jo naudas līdzekļu kustība pie jums ir publiska reģistra jautājums. Jūs arī uztraucaties, ka daži bitkoini, kas, jūsuprāt, pieder jums, tiks uzskatīti par “satraipīti” un <strong> citi atteiksies tos pieņemt kā maksājumu.</strong>';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6 => 'Jūs pārdodat kēksiņus un saņemat Bitcoin kā maksājumu. Izrādās, ka <strong> kāds, kuram šis Bitcoin piederēja pirms jums, bija iesaistīts noziedzīgā darbībā</strong>. Tagad jūs uztraucaties, ka esat kļuvis par <strong> aizdomās turamo krimināllietā</strong>, jo naudas līdzekļu kustība pie jums ir publiska reģistra jautājums. Jūs arī uztraucaties, ka daži Bitcoin, kas, jūsuprāt, pieder jums, tiks uzskatīti par “sasmērētiem” un <strong> citi atteiksies tos pieņemt kā maksājumu.</strong>';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6250Sbtitle => '4. Sabojāti līdzekļi';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6250Sbtitle => '4. Sasmērēti līdzekļi';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb7 => '<strong> Monero atrisina šīs privātuma problēmas, automātiski piemērojot privātuma paņēmienus katram veiktajam darījumam.</strong>';
@@ -2451,7 +2451,7 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbfive8722Sb8(Object fungibility) {
-    return 'Jūs varat būt pārliecināts, ka nav iespējams iegūt “satraipītu” Monero. Šis ir ekonomikas jēdziens, kas pazīstams kā $fungibility, un vēsturiski tiek uzskatīts par svarīgu jebkuras valūtas īpašību.';
+    return 'Jūs varat būt pārliecināts, ka nav iespējams iegūt “sasmērētu” Monero. Šis ir ekonomikas jēdziens, kas pazīstams kā $fungibility, un vēsturiski tiek uzskatīts par svarīgu jebkuras valūtas īpašību.';
   }
 
   @override
@@ -2462,12 +2462,12 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbfour8722Sb2(Object tor) {
-    return 'Saskaņā ar $tor Tor ir bezmaksas programmatūra un atvērts tīkls, kas palīdz aizsargāties pret trafika analīzi, tīkla uzraudzības veidu, kas apdraud personas brīvību un privātumu, konfidenciālas biznesa aktivitātes un attiecības, kā arī valsts drošību.';
+    return 'Saskaņā ar $tor, Tor ir bezmaksas programmatūra un atvērts tīkls, kas palīdz aizsargāties pret datu plūsmas analīzi, tīkla uzraudzības veidu, kas apdraud personas brīvību un privātumu, konfidenciālas biznesa aktivitātes un attiecības, kā arī valsts drošību.';
   }
 
   @override
   String guide250Sbbtc250Sbcard8722Sbfour8722Sb3(Object torBrowser, Object appName, Object torLink) {
-    return 'Lai to izmantotu, vienkārši lejupielādējiet un instalējiet $torBrowser no viņu oficiālās vietnes. Pēc tā palaišanas varat piekļūt $appName, izmantojot mūsu īpašo Tor portālu: $torLink';
+    return 'Lai to izmantotu, vienkārši lejupielādējiet un instalējiet $torBrowser no tā oficiālās vietnes. Pēc tā palaišanas varat piekļūt $appName, izmantojot mūsu īpašo Tor portālu: $torLink';
   }
 
   @override
@@ -2482,7 +2482,7 @@ class I18nLv extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbfour8722Sb6 => 'Izmantojiet tādas metodes kā skaidra nauda pa pastu, skaidras naudas iemaksa bankomātos, klātienes tikšanās vai dāvanu kartes, kas iegādātas skaidrā naudā. ';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfour250Sbtitle => 'Uzlabotas metodes, kā palikt anonīmam, izmantojot šo Bitcoin iegādes metodi';
+  String get guide250Sbbtc250Sbcard8722Sbfour250Sbtitle => 'Niansētas metodes, kā palikt anonīmam, izmantojot šo Bitcoin iegādes metodi';
 
   @override
   String guide250Sbbtc250Sbcard8722Sbone8722Sb1(Object wikipedia) {
@@ -2490,66 +2490,66 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbone8722Sb2 => 'Monero (XMR) ir atvērtā pirmkoda kriptovalūta, kas izveidota 2014. gada aprīlī, un tā koncentrējas uz <strong> aizstājamību, privātumu un decentralizāciju.</strong> Monero izmanto neskaidru publisko virsgrāmatu, kas nozīmē, ka ikviens var pārraidīt vai nosūtīt darījumus, bet neviens no ārēja novērotāja nevar pateikt. avots, summa vai galamērķis. Monero izmanto darba apliecinājuma mehānismu, lai izdotu jaunas monētas un stimulētu kalnračus aizsargāt tīklu un apstiprināt darījumus.';
+  String get guide250Sbbtc250Sbcard8722Sbone8722Sb2 => 'Monero (XMR) ir atvērtā pirmkoda kriptovalūta, kas izveidota 2014. gada aprīlī, un tā koncentrējas uz <strong> aizstājamību, privātumu un decentralizāciju.</strong> Monero izmanto slēptu publisko virsgrāmatu, kas nozīmē, ka ikviens var pārraidīt vai nosūtīt darījumus, bet neviens kā ārējs novērotājs nevar noteikt izcelsmi, summu vai galamērķi. Monero izmanto \"Proof of Work\" mehānismu, lai izdotu jaunas monētas un stimulētu mainerus aizsargāt tīklu un apstiprināt darījumus.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbone8722Sb3 => 'Monero tiek aktīvi mudināts tiem, kas meklē finanšu privātumu, jo <strong> maksājumi un kontu atlikumi paliek pilnībā slēpti</strong>, kas nav standarts lielākajai daļai kriptovalūtu.';
+  String get guide250Sbbtc250Sbcard8722Sbone8722Sb3 => 'Monero ir īpaši ieteicams tiem, kas meklē finanšu privātumu, jo <strong> maksājumi un kontu atlikumi paliek pilnībā slēpti</strong>, kas nav standarts lielākajai daļai kriptovalūtu.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbone250Sbtitle => '1. Kas ir Monero?';
 
   @override
   String guide250Sbbtc250Sbcard8722Sbthree8722Sb1(Object appName) {
-    return '6. darbība: Bitcoins izņemšana no $appName';
+    return '6. Bitcoin izņemšana no $appName';
   }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb2 => 'Tagad dodieties uz maka lapu un atzīmējiet izvēles rūtiņu “Es vēlos izņemt naudu no BTC, XMR, ETH, LTC, BCH vai DASH maka” maka lapas cilnē “Sūtīt Monero”. Parādītajā sadaļā atlasiet BTC un ievadiet attiecīgo saņēmēja BTC adresi. Pēc tam ievadiet summu XMR, atlasiet prioritāti un noklikšķiniet uz \"Turpināt\". Lūdzu, ņemiet vērā, ka saņemtajai summai XMR ir jāatbilst norādītajiem ChangeNow ierobežojumiem.';
+  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb2 => 'Tagad dodieties uz maka lapu un maka lapas cilnē “Sūtīt Monero” atzīmējiet izvēles rūtiņu “Es vēlos izņemt naudu uz BTC, XMR, ETH, LTC, BCH vai DASH maku”. Parādītajā sadaļā atlasiet BTC un ievadiet attiecīgo BTC saņemšanas adresi. Pēc tam ievadiet summu XMR, atlasiet prioritāti un noklikšķiniet uz \"Turpināt\". Lūdzu, ņemiet vērā, ka saņemtajai summai XMR ir jāatbilst norādītajiem ChangeNow ierobežojumiem.';
 
   @override
   String guide250Sbbtc250Sbcard8722Sbthree8722Sb3(Object appName, Object morphtoken) {
-    return 'Pēc tam, kad būsit ievadījis savu paroli un (ja ir iespējots) vienreizējo paroli, $appName nosūtīs jūsu monētas uz $morphtoken konvertēšanai.';
+    return 'Pēc tam, kad būsiet ievadījis savu paroli un (ja iespējota) vienreizējo paroli, $appName nosūtīs jūsu monētas uz $morphtoken konvertēšanai.';
   }
 
   @override
   String guide250Sbbtc250Sbcard8722Sbthree8722Sb4(Object appName) {
-    return 'Šajā brīdī jums nekas nav jādara, un jūsu pārlūkprogrammā tiks atvērts jauns logs, kurā varat pārraudzīt darījuma statusu (ja tas nav atvērts, lūdzu, noklikšķiniet uz norādītās saites un noteikti saglabājiet to, lai jūs var redzēt darījuma plūsmu). Ja darījumā kaut kas noiet greizi, monētas tiks atmaksātas jūsu $appName makā.';
+    return 'Šajā brīdī jums nekas nav jādara, un jūsu pārlūkprogrammā tiks atvērts jauns logs, kurā varat pārraudzīt pārskaitījuma statusu (ja tas nav atvērts, lūdzu, noklikšķiniet uz norādītās saites un noteikti saglabājiet to, lai jūs varētu redzēt pārskaitījuma statusu). Ja pārskaitījumā kaut kas noiet greizi, monētas tiks atgrieztas jūsu $appName makā.';
   }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb5 => '7. darbība';
+  String get guide250Sbbtc250Sbcard8722Sbthree8722Sb5 => '7. solis';
 
   @override
   String guide250Sbbtc250Sbcard8722Sbthree8722Sb6(Object morphtoken) {
-    return 'Pēc tam vienkārši pagaidiet, līdz darījums tiks pabeigts (apmēram 15 minūtes), un $morphtoken nosūtīs bitkoīnus uz jūsu norādīto adresi. Gatavs!';
+    return 'Pēc tam vienkārši pagaidiet, līdz pārskaitījums tiks pabeigts (apmēram 15 minūtes), un $morphtoken nosūtīs Bitcoin uz jūsu norādīto adresi. Gatavs!';
   }
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbthree250Sbtitle => 'Bitcoin pirkšana anonīmi ar skaidru naudu';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb1 => '<strong> Monero ir vadošā kriptovalūta, kas koncentrējas uz privātiem un pret cenzūru izturīgiem darījumiem</strong>. Lielākajai daļai esošo kriptovalūtu, tostarp Bitcoin un Ethereum, ir caurspīdīgas blokķēdes, kas nozīmē, ka darījumi ir atklāti pārbaudāmi un izsekojami ikvienam pasaulē. Turklāt šo darījumu nosūtīšanas un saņemšanas adreses var būt saistītas ar personas reālo identitāti.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb1 => '<strong> Monero ir vadošā kriptovalūta, kas koncentrējas uz privātiem un pret cenzūru izturīgiem pārskaitījumiem</strong>. Lielākajai daļai esošo kriptovalūtu, tostarp Bitcoin un Ethereum, ir caurredzamas blokķēdes, kas nozīmē, ka pārskaitījumi ir brīvi pārbaudāmi un izsekojami ikvienam pasaulē. Turklāt šo pārskaitījumu nosūtīšanas un saņemšanas adreses var būt saistītas ar personas reālo identitāti.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb2 => 'Monero izmanto kriptogrāfiju, lai aizsargātu nosūtīšanas un saņemšanas adreses, kā arī darījumu summas.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb2 => 'Monero izmanto kriptogrāfiju, lai apslēptu nosūtīšanas un saņemšanas adreses, kā arī darījumu summas.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb3 => 'Monero darījumi ir konfidenciāli un neizsekojami.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb3 => 'Monero pārskaitījumi ir konfidenciāli un neizsekojami.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb4 => 'Katrs Monero darījums pēc noklusējuma aptumšo nosūtīšanas un saņemšanas adreses, kā arī darījumu summas. Šī vienmēr ieslēgtā konfidencialitāte nozīmē, ka katra Monero lietotāja darbība uzlabo visu pārējo lietotāju privātumu, atšķirībā no selektīvi caurspīdīgām kriptovalūtām (piemēram, Z-Cash). Monero ir aizstājams. Apmulsināšanas dēļ Monero nevar tikt sabojāts, piedaloties iepriekšējos darījumos. Tas nozīmē, ka Monero vienmēr tiks pieņemts bez cenzūras riska. Dandelion++ ļauj izplatīt darījumus, nepārliecinoties par izcelsmi. Tas aizsegs darījuma veicēja IP adresi un nodrošinās turpmāku aizsardzību pret tīkla uzraudzību.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb4 => 'Katrs Monero pārskaitījums pēc noklusējuma apslēpj nosūtīšanas un saņemšanas adreses, kā arī darījumu summas. Šī vienmēr ieslēgtā konfidencialitāte nozīmē, ka katra Monero lietotāja darbība uzlabo visu pārējo lietotāju privātumu, atšķirībā no selektīvi caurspīdīgām kriptovalūtām (piemēram, Z-Cash). Monero ir aizstājams. Apslēpšanas dēļ Monero nevar tikt sasmērēts, piedaloties iepriekšējos pārskaitījumos. Tas nozīmē, ka Monero vienmēr tiks pieņemts bez cenzūras riska. Dandelion++ ļauj izsūtīt pārskaitījumus, nepārliecinoties par izcelsmi. Tas aizsegs nosūtītāja IP adresi un nodrošinās turpmāku aizsardzību pret tīkla uzraudzību.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero ir vietējā kopiena, kas piesaista pasaules labākos kriptovalūtas pētniekus un inženieru talantus.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero ir spēcīga kopiena, kas piesaista pasaules labākos kriptovalūtas pētniekus un inženieru talantus.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Vairāk nekā 420 izstrādātāju ir piedalījušies Monero projektā, tostarp 30 galvenie izstrādātāji. Forumi un tērzēšanas kanāli ir pretimnākoši un aktīvi.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Vairāk nekā 420 izstrādātāju ir piedalījušies Monero projektā, ieskaitot 30 galvenos izstrādātājus. Forumi un sarakstes kanāli ir pretimnākoši un aktīvi.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero pētniecības laboratorija, galvenā izstrādes komanda un kopienas izstrādātāji pastāvīgi virza uz priekšu, kas ir iespējams ar kriptovalūtas privātumu un drošību.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero pētniecības laboratorija, galvenā izstrādes komanda un kopienas izstrādātāji pastāvīgi tiecas uz labāko, kas iespējams kriptovalūtu privātuma un drošības jomās.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb8 => '<strong> Monero ir elektroniskā skaidrā nauda, kas ļauj veikt ātrus, lētus maksājumus uz un no jebkuras vietas pasaulē. </strong> Nav vairāku dienu aizturēšanas periodu un nepastāv krāpniecisku maksājumu atdošanas risks. Tas ir drošs no “kapitāla kontroles” — tie ir pasākumi, kas ierobežo tradicionālo valūtu plūsmu, dažkārt ārkārtīgi lielā mērā, valstīs, kurās ir ekonomiskā nestabilitāte.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb8 => '<strong> Monero ir elektroniska nauda, kas ļauj veikt ātrus, lētus maksājumus uz un no jebkuras vietas pasaulē. </strong> Nav vairāku dienu aiztures periodu un krāpnieciskas maksājumu atgriešanas. Tas ir drošs pret “kapitāla kontroli” — tie ir pasākumi, kas ierobežo tradicionālo valūtu plūsmu, dažkārt ārkārtīgi lielā mērā valstīs, kurās ir ekonomiska nestabilitāte.';
 
   @override
   String guide250Sbbtc250Sbcard8722Sbtwo250Sbtitle(Object getmonero) {
@@ -2557,27 +2557,27 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get guide250Sbbtc250Sbconclusion8722Sb1 => 'Laikam ejot, tas kļūst arvien grūtāk, taču joprojām ir iespējams panākt anonīmu bitcoīna iegādi, ja vien vēlaties veikt papildu <strong> pārveidošanu no Monero. </strong> Par laimi, Monero tikai palīdz palielināt jūsu privātumu un anonimitāti vēl vairāk. Lai gan lielākajā daļā citu tiešsaistē pieejamu rokasgrāmatu ir ieteiktas metodes, kas ietver darbības, kas rada turpmākas privātuma noplūdes, šajā rokasgrāmatā ir sniegts veids, kā ne tikai samazināt privātuma noplūdes, bet pat uzlabot jūsu privātuma līmeni, salīdzinot ar bitcoin iegādi tieši ar skaidru naudu, jo <strong> jūs pasargās Monero privātuma funkcijas. </strong>';
+  String get guide250Sbbtc250Sbconclusion8722Sb1 => 'Laikam ejot, tas kļūst arvien grūtāk, taču joprojām ir iespējams panākt anonīmu Bitcoin iegādi, kamēr vien esat ar mieru veikt papildu soļus, <strong> konvertējot no Monero. </strong> Par laimi, Monero tikai palīdz palielināt jūsu privātumu un anonimitāti vēl vairāk. Lai gan lielākajā daļā citu tiešsaistē pieejamu rokasgrāmatu ir ieteiktas metodes, kas ietver darbības, kas rada turpmākas privātuma noplūdes, šajā rokasgrāmatā ir sniegts veids, kā ne tikai samazināt privātuma noplūdes, bet pat uzlabot jūsu privātuma līmeni, salīdzinot ar Bitcoin iegādi tieši ar skaidru naudu, jo <strong> jūs pasargās Monero privātuma funkcijas. </strong>';
 
   @override
   String get guide250Sbbtc250Sbconclusion250Sbtitle => 'Secinājums';
 
   @override
-  String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Bitkoinu iegāde anonīmi ir kļuvusi par arvien grūtāku uzdevumu.</strong>';
+  String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Bitcoin iegāde anonīmi kļūst par arvien grūtāku uzdevumu.</strong>';
 
   @override
   String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Ar katru dienu šķiet, ka lielākajai daļai, ja ne visām tradicionālajām bitcoin iegūšanas metodēm, ir sākusi pieprasīt ID verifikāciju, tāpēc lielākā daļa ceļvežu, piemēram, $ninetyNinebitcoins vai $coincentral, ir novecojuši. $linebreak  $gutter Tradicionālais veids, kā iegādāties bitkoīnus bez ID, galvenokārt ir bijis P2P Bitcoin apmaiņas platforma $localbitcoins, kas bija īpaši populāra, lai anonīmi iegādātos bitkoīnus ar $paypal.';
+    return 'Ar katru dienu šķiet, ka lielākajai daļai, ja ne visām tradicionālajām Bitcoin iegūšanas metodēm, tiekpieprasīta ID verifikācija, tāpēc lielākā daļa ceļvežu, piemēram, $ninetyNinebitcoins vai $coincentral, ir novecojuši. $linebreak  $gutter Tradicionālais veids, kā iegādāties Bitcoin bez ID, galvenokārt ir bijis P2P Bitcoin apmaiņas platforma $localbitcoins, kas bija īpaši populāra, lai anonīmi iegādātos Bitcoin ar $paypal.';
   }
 
   @override
   String get guide250Sbbtc250Sbintro8722Sb3 => 'Bet diemžēl pat <strong>LocalBitcoins ir sākuši pieprasīt ID verifikāciju no visiem saviem tirgotājiem.</strong>';
 
   @override
-  String get guide250Sbbtc250Sbintro8722Sb4 => 'Vai tie ir laiki, kad ar kredītkarti varēja iegādāties bitkoīnus uzreiz un bez pārbaudes? Ne īsti. Šeit mēs piedāvājam vienkāršu, anonīmu, privātu un ātru veidu, kā iegūt bitkoīnus ar skaidru naudu, veicot tikai dažas darbības… ';
+  String get guide250Sbbtc250Sbintro8722Sb4 => 'Vai tie laiki, kad ar kredītkarti varēja iegādāties Bicoin uzreiz un bez pārbaudes, ir pagājuši? Ne gluži. Šeit mēs piedāvājam vienkāršu, anonīmu, privātu un ātru veidu, kā iegūt Bitcoin ar skaidru naudu, veicot tikai dažas darbības… ';
 
   @override
-  String get guide250Sbbtc250Sbtitle => 'Kā anonīmi iegādāties Bitcoins';
+  String get guide250Sbbtc250Sbtitle => 'Kā anonīmi iegādāties Bitcoin';
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfive8722Sbtext(Object assetName) {
@@ -2586,12 +2586,12 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfive8722Sbtext8722Sblocalmonero8722Sbwallet(Object appName) {
-    return '$appName maku';
+    return '$appName maks';
   }
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfour8722Sbtext(Object assetName) {
-    return 'Pēc pogas \'Pirkt\' nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, ieskaitot tirdzniecības noteikumus. Izlasiet tos pirms tirdzniecības pieprasījuma iesniegšanas, ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu tirdzniecību, ierakstiet, cik daudz $assetName vēlaties iegādāties, un noklikšķiniet uz pogas \"Sūtīt tirdzniecības pieprasījumu\", lai sāktu tirdzniecību. Pārliecinieties, ka esat gatavs maksāt, noklikšķinot uz pogas. Ja nemaksāsiet pirms maksājuma perioda beigām, pārdevējs varēs atcelt darījumu.';
+    return 'Pēc pogas \'Pirkt\' nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, ieskaitot darījuma noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas,. Ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu darījumu, ierakstiet, cik daudz $assetName vēlaties iegādāties, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\", lai sāktu darījumu. Pārliecinieties, ka esat gatavs maksāt, noklikšķinot uz pogas. Ja neapmaksāsiet pirms maksājuma perioda beigām, pārdevējs varēs atcelt darījumu.';
   }
 
   @override
@@ -2608,11 +2608,11 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get guide250Sbbuy250Sbstep8722Sbthree8722Sbtext => 'No sludinājumu saraksta izvēlieties vienu no tirgotāja ar labu reputācijas rādītāju un lielu darījumu skaitu. Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē, dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni, un pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pirkt\", lai skatītu vairāk informācijas par sludinājumu.';
+  String get guide250Sbbuy250Sbstep8722Sbthree8722Sbtext => 'No sludinājumu saraksta izvēlieties kādu no tirgotāja ar labu reputācijas rādītāju un lielu darījumu skaitu. Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē, dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni, un pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pirkt\", lai skatītu vairāk informācijas par sludinājumu.';
 
   @override
   String guide250Sbbuy250Sbstep8722Sbtwo8722Sbtext(Object mainPage, Object assetName) {
-    return 'Dodieties uz $mainPage un meklēšanas lodziņā aizpildiet veidlapu, norādot summu, kuru vēlaties iegādāties savā valūtā, atrašanās vietu un maksājuma veidu. Ja neesat pārliecināts, kā vēlaties maksāt, kā maksājuma veidu izvēlieties \"Visi tiešsaistes piedāvājumi\". Vietnē būs norādīti $assetName tirgotāji, kas pieejami jūsu reģionā.';
+    return 'Dodieties uz $mainPage un aizpildiet veidlapu, norādot summu savā valūtā, kuru vēlaties iegādāties, atrašanās vietu un maksājuma veidu. Ja neesat pārliecināts, kā vēlaties maksāt, kā maksājuma veidu izvēlieties \"Visi tiešsaistes piedāvājumi\". Vietnē būs norādīti $assetName tirgotāji jūsu reģionā.';
   }
 
   @override
@@ -2625,43 +2625,43 @@ class I18nLv extends I18n {
   String get guide250Sbbuy250Sbtitle57Sbagoradesk => 'Kā iegādāties kriptovalūtu tiešsaistē';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtext => 'Jūs varat ievietot skaidru naudu aploksnē mājās vai automašīnā, kā arī varat ievietot tālruni ar ieslēgtu video krekla priekšējā kabatā, un tas ierakstīs visu procesu bez īpašas papildu darbības, izņemot to, ka jūs darāt visu kameras virzienā. Ja jums ir kaut kas līdzīgs GoPro vai jaunākajam iPhone, kuram ir kamera ar plašāku skata leņķi, tas būs vēl vienkāršāk.\n\nStrīda gadījumā glabājiet videomateriālu 180 dienas.';
+  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtext => 'Jūs varat ievietot skaidru naudu aploksnē mājās vai automašīnā, kā arī varat ievietot tālruni ar ieslēgtu video krekla priekšējā kabatā, un tas ierakstīs visu procesu bez īpašas papildu darbības, kamēr vien darāt visu kameras laukā. Ja jums ir kaut kas līdzīgs GoPro vai jaunākajam iPhone, kuram ir kamera ar plašāku skata leņķi, tas būs vēl vienkāršāk.\n\nStrīda gadījumā glabājiet videomateriālu 180 dienas.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtitle => 'Videoklips ir jāuzņem vienā uzņemšanā, bez izgriezumiem';
+  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtitle => 'Videoklipu vēlams nofilmēt vienā uzņēmumā, bez izgriezumiem';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb1250Sbtext => 'Izmantojiet kādu pielāgotu karbonādi/zīmogu/zīmogu vai parakstu, vai vienkārši nejaušas kustības ar asumiņu iekšpusē aploksnē, nosedzot visas virsmas. Tas palīdzēs noteikt, vai pārdevējs patiešām atver jūsu nosūtīto aploksni vai viltotu. Pārliecinieties, vai videoklipā ir redzama atzīme.';
+  String get guide250Sbcbm250Sbbuyer250Sb1250Sbtext => 'Izmantojiet kādu unikālu izgriezumu/zīmogu/aizdari vai parakstu, vai vienkārši nejaušas kustības ar marķieri aploksnes iekšpusē, nosedzot visas virsmas. Tas palīdzēs noteikt, vai pārdevējs patiešām atver jūsu nosūtīto aploksni, vai viltotu. Pārliecinieties, ka iezīme videoklipā ir redzama.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb1250Sbtitle => 'Ievietojiet pielāgotus marķējumus aploksnes iekšpusē';
+  String get guide250Sbcbm250Sbbuyer250Sb1250Sbtitle => 'Ievietojiet unikālus marķējumus aploksnes iekšpusē';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb2250Sbtext => 'Lai mazinātu (iespējamu, bet ļoti retu) pasta zādzības gadījumu ceļā, mēģiniet noslēpt faktu, ka pakā ir skaidra nauda. Jūs varat ievietot skaidru naudu žurnālā, mylar somā vai citā konteinerā. Darbojas arī skaidras naudas aizzīmogošana ar vakuumu.';
+  String get guide250Sbcbm250Sbbuyer250Sb2250Sbtext => 'Lai mazinātu (iespējamu, bet ļoti retu) pasta zādzības gadījumu, mēģiniet noslēpt faktu, ka pakā ir skaidra nauda. Jūs varat ievietot skaidru naudu žurnālā, metāliskā maisiņā vai citā iepakojumā. Darbojas arī skaidras naudas noslēgšana vakuumā.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb2250Sbtitle => 'Mēģiniet maskēt skaidru naudu';
+  String get guide250Sbcbm250Sbbuyer250Sb2250Sbtitle => 'Mēģiniet nomaskēt skaidru naudu';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb3250Sbtext => 'Tā vietā, lai vienkārši ievietotu skaidru naudu aploksnē, izmantojiet vairākas ligzdotas aploksnes savai pakai. Ievietojiet skaidru naudu mazākajā aploksnē (vai vienkārši salokiet lielāku aploksni, ja nepieciešams), aizzīmogojiet to un ievietojiet citā aploksnē. Atkārtojiet šo procesu, līdz ir vismaz 3 ligzdotas aploksnes. Tas palīdz nodrošināt, ka, ja saņēmēja puse mēģinās iejaukt jūsu paku, tai būs daudz grūtāk to visu aizzīmogot tā, lai strīda starpnieks to pārbaudītu nevarētu.';
+  String get guide250Sbcbm250Sbbuyer250Sb3250Sbtext => 'Tā vietā, lai vienkārši ievietotu skaidru naudu aploksnē, izmantojiet vairākas aploksnes savai pakai. Ievietojiet skaidru naudu mazākajā aploksnē (vai vienkārši salokiet lielāku aploksni, ja nepieciešams), aizzīmogojiet to un ievietojiet citā aploksnē. Atkārtojiet šo procesu, līdz ir vismaz 3 aploksnes viena otrā. Tas palīdz nodrošināt, ka, ja saņēmēja puse mēģinās iejaukties jūsu pakā, tai būs daudz grūtāk to visu aizzīmogot tā, lai strīda starpnieks to pārbaudot nevarētu konstatēt.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb3250Sbtitle => 'Ievietojiet aploksnes aplokšņu iekšpusē';
+  String get guide250Sbcbm250Sbbuyer250Sb3250Sbtitle => 'Ievietojiet aploksnes aploksnēs';
 
   @override
   String get guide250Sbcbm250Sbbuyer250Sb4250Sbtext => 'Pakas, kas nosūtītas bez izsekošanas, var pazust, un bez izsekošanas var būt neiespējami to atrast. Izsekošana arī ļauj saņēmējam būt mierīgam, ka paka ir ceļā, ja tas aizņem ilgāku laiku, nekā paredzēts.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb4250Sbtitle => 'Sūtīt ar izsekošanu';
+  String get guide250Sbcbm250Sbbuyer250Sb4250Sbtitle => 'Sūtiet ar izsekošanu';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb5250Sbtext => 'Kā jau minējām iepriekš, pastāvīgu tirgotāju risks pircējam ir ļoti zems. Tomēr ļoti zems rādītājs nenozīmē nulli, tāpēc noteikti ievērojiet šos noteikumus, lai būtu gatavs strīda situācijai.';
+  String get guide250Sbcbm250Sbbuyer250Sb5250Sbtext => 'Kā jau minējām iepriekš, ar pieredzējušiem tirgotājiem risks pircējam ir ļoti zems. Tomēr ļoti zems nenozīmē nekāds, tāpēc noteikti ievērojiet šos noteikumus, lai būtu gatavs strīda situācijai.';
 
   @override
   String get guide250Sbcbm250Sbbuyer250Sb5250Sbtitle => 'Secinājums';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sbintro => 'Ja pieturaties pie pārdevējiem ar labu reputāciju, ir maz ticams, ka, iepērkoties pa pastu skaidrā naudā, radīsies problēmas, tomēr tālāk sniegtie padomi palīdzēs pierādīt maksājumu strīda gadījumā. Vissvarīgākais, kas jādara, ir veikt maksājuma videoierakstu. Tālāk ir sniegtas vadlīnijas.';
+  String get guide250Sbcbm250Sbbuyer250Sbintro => 'Ja pieturaties pie pārdevējiem ar labu reputāciju, ir maz ticams, ka, iepērkoties pa pastu skaidrā naudā, radīsies problēmas, tomēr tālāk sniegtie padomi palīdzēs pierādīt maksājumu strīda gadījumā. Vissvarīgāk ir veikt maksājuma videoierakstu. Šādas ir vadlīnijas:';
 
   @override
   String get guide250Sbcbm250Sbbuyer250Sbtitle => 'Ja jūs pērkat...';
@@ -2670,35 +2670,35 @@ class I18nLv extends I18n {
   String get guide250Sbcbm250Sbdescription => 'Lielākā daļa Cash by Mail darījumu norit bez aizķeršanās, taču jums joprojām ir jāievēro šīs vadlīnijas, lai sagatavotos strīdam.';
 
   @override
-  String get guide250Sbcbm250Sbinfocard => 'Noteikti izlasiet mūsu ceļvedi par drošu skaidras naudas lietošanu pa pastu!';
+  String get guide250Sbcbm250Sbinfocard => 'Noteikti izlasiet mūsu ceļvedi par drošu skaidras naudas sūtīšanu pa pastu!';
 
   @override
-  String get guide250Sbcbm250Sbseller250Sb0250Sbtext => 'Ierakstiet sevi, saņemot sūtījumu no pasta darbinieka, pasta darbinieks to sver, pierakstiet etiķeti, visas pakas ārējās malas; filmēšanas laikā atveriet iepakojumu ar kameru tajā, izlaidiet skaidru naudu caur leti un viltojumu skeneri. Pārliecinieties, ka viss ir nofilmēts vienā kadrā. Vienmēr turiet iepakojumu kameras redzeslokā. Strīda gadījumā glabājiet videomateriālu 180 dienas.';
+  String get guide250Sbcbm250Sbseller250Sb0250Sbtext => 'Nofilmējiet sevi, saņemot sūtījumu no pasta darbinieka, kā pasta darbinieks to sver, nofilmējiet arī etiķeti, visas pakas ārējās malas; filmēšanas laikā atveriet iepakojumu, tēmējot kameru tajā, izlaidiet skaidru naudu caur leti un viltojumu skeneri. Pārliecinieties, ka viss ir nofilmēts vienā kadrā. Vienmēr turiet iepakojumu kameras redzeslokā. Strīda gadījumā glabājiet videomateriālu 180 dienas.';
 
   @override
-  String get guide250Sbcbm250Sbseller250Sb0250Sbtitle => 'Izveidojiet video par iepakojuma saņemšanu un atvēršanu';
+  String get guide250Sbcbm250Sbseller250Sb0250Sbtitle => 'Uzņemiet video ar iepakojuma saņemšanu un atvēršanu';
 
   @override
-  String get guide250Sbcbm250Sbseller250Sb1250Sbtext => 'Galvenais, kas jāatceras (un mēs ik uz soļa par to ievietojam atrunas), ir NEKAD nepabeigt darījumu, KAMĒR jums nav naudas un esat pilnīgi pārliecināts, ka viss ir kārtībā. Likumīgs pircējs nespiedīs jūs veikt priekšlaicīgu pabeigšanu.';
+  String get guide250Sbcbm250Sbseller250Sb1250Sbtext => 'Galvenais, kas jāatceras (un mēs ik uz soļa par to ievietojam atrunas), ir NEKAD nepabeigt darījumu, LĪDZ saņemat naudu un esat pilnīgi pārliecināts, ka viss ir kārtībā. Godīgs pircējs nemudinās jūs priekšlaicīgi pabeigt.';
 
   @override
   String get guide250Sbcbm250Sbseller250Sb1250Sbtitle => 'Nekādā gadījumā nepabeidziet darījumu priekšlaicīgi';
 
   @override
-  String get guide250Sbcbm250Sbseller250Sb2250Sbtext => 'Tas palīdzēs jums atšķirt iepakojumus no dažādiem pircējiem un izvairīties no neskaidrībām. Tas arī palīdzēs novērst “cilvēka vidū” uzbrukumus, kad krāpnieks iejaucas starp pircēju un pārdevēju, izliekoties par pārdevēju, kad runā ar pircēju, un izliekoties par pircēju, kad runā ar pārdevēju. .';
+  String get guide250Sbcbm250Sbseller250Sb2250Sbtext => 'Tas palīdzēs jums atšķirt iepakojumus no dažādiem pircējiem un izvairīties no neskaidrībām. Tas arī palīdzēs novērst starpnieku uzbrukumus, kad krāpnieks iejaucas starp pircēju un pārdevēju, izliekoties par pārdevēju, kad runā ar pircēju, un izliekoties par pircēju, kad runā ar pārdevēju. .';
 
   @override
-  String get guide250Sbcbm250Sbseller250Sb2250Sbtitle => 'Lūdziet pircējam ievietot piezīmi ar savu lietotājvārdu un tirdzniecības ID';
+  String get guide250Sbcbm250Sbseller250Sb2250Sbtitle => 'Lūdziet pircējam ievietot zīmīti ar savu lietotājvārdu un darījuma ID';
 
   @override
   String get guide250Sbcbm250Sbseller250Sbtitle => 'Ja jūs pārdodat...';
 
   @override
-  String get guide250Sbcbm250Sbtitle => 'Palieciet drošībā ar skaidru naudu pa pastu';
+  String get guide250Sbcbm250Sbtitle => 'Drošība ar skaidru naudu pa pastu';
 
   @override
   String guide250Sblocal250Sbtext8722Sb0(Object appName, Object online) {
-    return '$appName piedāvā divus galvenos reklāmu veidus — $online un vietējās reklāmas. Izmantojot vietējos sludinājumus, jūs fiziski tiekaties ar savu tirdzniecības partneri un veicat tirdzniecību aci pret aci. Šajā rokasgrāmatā ir sniegta informācija par vietējo reklāmu iestatīšanu un vietējo tirdzniecību.';
+    return '$appName piedāvā divus galvenos sludinājumu veidus — $online un vietējos sludinājumus. Izmantojot vietējos sludinājumus, jūs fiziski tiekaties ar savu darījuma partneri un veicat darījumu aci pret aci. Šajā rokasgrāmatā ir sniegta informācija par vietējo sludinājumu iestatīšanu un vietējo tirdzniecību.';
   }
 
   @override
@@ -2709,28 +2709,28 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sb2(Object assetName) {
-    return 'Tas ir atkarīgs no jūsu dzīvesvietas, jo lielākās pilsētās jūs atradīsit vairāk cilvēku, kas interesējas par $assetName iegādi, nekā laukos. Tā kā $assetName darījumi ir neatgriezeniski, bet lielākā daļa tradicionālo tiešsaistes maksājumu veidu ir atgriezeniski, $assetName pārdošana vietējā tirgū par skaidru naudu padara maksājumu pieņemšanu daudz drošāku, jo skaidra nauda ir tikpat neatgriezeniska kā $assetName. Daži cilvēki novērtē privātumu, ko piedāvā skaidras naudas darījumi. Neliela $assetName daudzuma iegāde skaidrā naudā arī ir lielisks veids, kā bez liekas apgrūtināšanas sākt darbu ar $assetName.';
+    return 'Tas ir atkarīgs no jūsu dzīvesvietas. Lielākās pilsētās atradīsiet vairāk cilvēku, kas interesējas par $assetName iegādi, nekā laukos. Tā kā $assetName darījumi ir neatgriezeniski, bet lielākā daļa tradicionālo tiešsaistes maksājumu veidu ir atgriezeniski, $assetName pārdošana vietējā tirgū par skaidru naudu padara maksājumu pieņemšanu daudz drošāku, jo skaidra nauda ir tikpat neatgriezeniska kā $assetName. Daži cilvēki novērtē privātumu, ko piedāvā skaidras naudas darījumi. Neliela $assetName daudzuma iegāde skaidrā naudā arī ir lielisks veids, kā bez liekiem apgrūtinājumiem sākt darbību ar $assetName.';
   }
 
   @override
   String guide250Sblocal250Sbtext8722Sb3(Object assetName) {
-    return 'Ko darīt, ja man beigsies $assetName?';
+    return 'Ko darīt, ja man beidzas $assetName?';
   }
 
   @override
   String guide250Sblocal250Sbtext8722Sb4(Object assetName) {
-    return 'Ja jums beigsies $assetName, varat ātrāk iepirkties tradicionālajā $assetName biržā, lai gan parasti tas aizņem dažas dienas, jo jums būs jāiegādājas, izmantojot bankas pārskaitījumu.';
+    return 'Ja jums beidzas $assetName, varat ātrāk iepirkties tradicionālajā $assetName biržā, lai gan parasti tas aizņem dažas dienas, jo jums būs jāiegādājas, izmantojot bankas pārskaitījumu.';
   }
 
   @override
   String get guide250Sblocal250Sbtext8722Sb5 => 'Pārliecinieties, ka esat viegli sasniedzams! Sludinājumā norādiet savu iecienītāko tikšanās vietu un laiku. Sludinājumā varat norādīt savu mobilā tālruņa numuru.';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb58722Sbtitle => 'Reklāma';
+  String get guide250Sblocal250Sbtext8722Sb58722Sbtitle => 'Sludinājumi';
 
   @override
   String guide250Sblocal250Sbtext8722Sb6(Object assetName) {
-    return 'Visi tradicionālie riski, kas regulē naudas apmaiņu, attiecas arī uz $assetName tirdzniecību. Lūdzu, rūpīgi apsveriet riskus un izmantojiet atgriezeniskās saites sistēmu un citus pasākumus, lai nodrošinātu savu drošību.';
+    return 'Visi tradicionālie riski, kas regulē naudas apmaiņu, attiecas arī uz $assetName tirdzniecību. Lūdzu, rūpīgi apsveriet riskus un izmantojiet atsauksmju sistēmu un citus pasākumus, lai nodrošinātu savu drošību.';
   }
 
   @override
@@ -2738,20 +2738,20 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sb7(Object assetName) {
-    return 'Var būt gadījumi, kad viltota nauda tiek nodota $assetName pārdevējam. Veicot darījumus, lūdzu, apsveriet iespēju izmantot viltojumu detektoru.';
+    return 'Var būt gadījumi, kad $assetName pārdevējam tiek nodota viltota nauda. Veicot darījumus, lūdzu, apsveriet iespēju izmantot viltojumu detektoru.';
   }
 
   @override
   String get guide250Sblocal250Sbtext8722Sb78722Sbtitle => 'Viltota nauda';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb8 => '<strong> Lūdzu, ņemiet vērā: </strong>Pirms sākat tirdzniecību kā uzņēmējdarbību, izpētiet savas valsts tiesību aktus, lai noskaidrotu, vai jums ir jāpiesakās licencēm vai ir kādas citas juridiskas prasības.';
+  String get guide250Sblocal250Sbtext8722Sb8 => '<strong> Lūdzu, ņemiet vērā: </strong>Pirms sākat tirdzniecību kā uzņēmējdarbību, izpētiet savas valsts tiesību aktus, lai noskaidrotu, vai jums ir jāpiesakās licencēm, vai ir kādas citas juridiskas prasības.';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sb9 => 'Laimīgu tirdzniecību!';
+  String get guide250Sblocal250Sbtext8722Sb9 => 'Veiksmīgu tirdzniecību!';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbfour => 'Nosūtiet saites saviem draugiem, reklamējieties sociālajos medijos un lokāli, gaidiet, līdz tiks izpildīti pasūtījumi';
+  String get guide250Sblocal250Sbtext8722Sbfour => 'Nosūtiet saites saviem draugiem, reklamējieties sociālajos medijos un vietēji, gaidiet, līdz pienāks pasūtījumi';
 
   @override
   String guide250Sblocal250Sbtext8722Sbstep8722Sbone(Object signUp) {
@@ -2759,7 +2759,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbstep8722Sbone8722Sbsign8722Sbup => 'Pierakstīties';
+  String get guide250Sblocal250Sbtext8722Sbstep8722Sbone8722Sbsign8722Sbup => 'Reģistrēties';
 
   @override
   String guide250Sblocal250Sbtext8722Sbstep8722Sbthree(Object loadMonero) {
@@ -2768,24 +2768,24 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sbstep8722Sbthree8722Sbload8722Sbmonero(Object assetName) {
-    return 'Ievietojiet $assetName savā makā';
+    return 'Ieskaitiet $assetName savā makā';
   }
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbstep8722Sbtwo => 'Ievietojiet tirdzniecības sludinājumu';
+  String get guide250Sblocal250Sbtext8722Sbstep8722Sbtwo => 'Izvietojiet tirdzniecības sludinājumu';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbsteps8722Sbtitle => 'Labi, kādi ir pirmie soļi?';
+  String get guide250Sblocal250Sbtext8722Sbsteps8722Sbtitle => 'Labi, tad kādi ir pirmie soļi?';
 
   @override
   String get guide250Sblocal250Sbtitle => 'Kā pirkt vai pārdot Monero par skaidru naudu';
 
   @override
-  String get guide250Sblocal250Sbtitle57Sbagoradesk => 'Kā pirkt vai pārdot kriptovalūtu skaidrā naudā';
+  String get guide250Sblocal250Sbtitle57Sbagoradesk => 'Kā pirkt vai pārdot kriptovalūtu par skaidru naudu';
 
   @override
   String guide250Sbmnemonic250Sbbtc250Sbdescription(Object appName) {
-    return 'Šajā rokasgrāmatā jūs uzzināsit, kā atjaunot savu ar brīvības atņemšanu nesaistīto $appName norēķinu maku, izmantojot tirdzniecības lapā parādīto mnemonisko sēklu.';
+    return 'Šajā rokasgrāmatā jūs uzzināsiet, kā atjaunot savu neatkarīgo $appName norēķinu maku, izmantojot tirdzniecības lapā parādīto mnemonisko sēklu.';
   }
 
   @override
@@ -2801,26 +2801,26 @@ class I18nLv extends I18n {
   String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb4 => 'Izvēlieties \"Man jau ir sēkla\" un nospiediet \"Tālāk\".';
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb5 => 'Ielīmējiet mnemonisko sēklu no tirdzniecības lapas ievadē. Pēc tam zem mnemoniskā sēklu ievades lauka nospiediet \"Opcijas\" un atzīmējiet \"Paplašināt šo sēklu ar pielāgotiem vārdiem\" un \"BIP39 sēklas\", nospiediet \"OK\" un pēc tam \"Nākamais\".';
+  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb5 => 'Ielīmējiet mnemonisko sēklu no tirdzniecības lapas ievades laukā. Pēc tam zem mnemoniskā sēklu ievades lauka nospiediet \"Opcijas\" un atzīmējiet gan \"Paplašināt šo sēklu ar pielāgotiem vārdiem\", gan \"BIP39 sēklas\", nospiediet \"OK\" un pēc tam \"Nākamais\".';
 
   @override
   String guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb6(Object appName) {
-    return 'Ievadē \"Sēklas paplašinājums\" ierakstiet $appName paroli, ko izmantojāt, pabeidzot darījumu, un nospiediet \"Tālāk\".';
+    return 'Laukā \"Sēklas paplašinājums\" ierakstiet $appName paroli, ko izmantojāt, pabeidzot darījumu, un nospiediet \"Tālāk\".';
   }
 
   @override
   String guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb7(Object formattedDerivationPath) {
-    return 'Atlasiet “native segwit (p2wpkh)” un tālāk esošajā atvasināšanas ceļa ievadē ierakstiet $formattedDerivationPath. Nospiediet \"Tālāk\".';
+    return 'Izvēlieties “native segwit (p2wpkh)” un tālāk esošajā atvasināšanas ceļa laukā ierakstiet $formattedDerivationPath. Nospiediet \"Tālāk\".';
   }
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb8 => 'Izvēlieties, kuru paroli vēlaties savam makam, un nospiediet \"Tālāk\".';
+  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb8 => 'Izvēlieties, kādu paroli vēlaties savam makam, un nospiediet \"Tālāk\".';
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb9 => 'Tieši tā! Jūs redzēsit visus darījumus cilnē \"Vēsture\".';
+  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbcontent250Sb9 => 'Tas arī viss! Visus pārskaitījumus redzēsiet cilnē \"Vēsture\".';
 
   @override
-  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbtitle => 'Izmantojot Electrum';
+  String get guide250Sbmnemonic250Sbbtc250Sbelectrum250Sbtitle => 'Electrum lietošana';
 
   @override
   String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb1 => 'Lejupielādējiet jaunāko Monero CLI maka versiju savai operētājsistēmai no vietnes <a target=\"_blank\" href=\"https://getmonero.org/downloads\" class=\"next-link\">getmonero.org</a>.';
@@ -2831,22 +2831,22 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb3 => 'Ievadiet jebkuru sava maka nosaukumu, kuru vēlaties.';
+  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb3 => 'Ievadiet maka nosaukumu, kādu vēlaties.';
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb4 => 'Kad tiek prasīts <strong>\"Norādīt Electrum seed\"</strong>, ielīmējiet mnemonisko sēklu no tirdzniecības lapas.';
+  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb4 => 'Kad tiek prasīts <strong>\"Norādīt Electrum sēklu\"</strong>, ielīmējiet mnemonisko sēklu no darījuma lapas.';
 
   @override
   String guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb5(Object appName) {
-    return 'Kad tiek prasīts <strong>\"Ievadiet sākuma nobīdes ieejas frāzi\",</strong> ievadiet $appName paroli, ko izmantojāt, pabeidzot darījumu.';
+    return 'Kad tiek prasīts <strong>\"Ievadiet sēklas nobīdes frāzi\",</strong> ievadiet $appName paroli, ko izmantojāt, pabeidzot darījumu.';
   }
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb6 => 'Atbildiet uz nākamajiem jautājumiem pēc jūsu izvēles.';
+  String get guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb6 => 'Atbildiet uz nākamajiem jautājumiem pēc jūsu vēlmēm.';
 
   @override
   String guide250Sbmnemonic250Sbmonero250Sbcli250Sbcontent250Sb7(Object formattedCommand) {
-    return 'Tieši tā! Kad seifs ir sinhronizēts, jūs redzēsit visus darījumus, izmantojot komandu $formattedCommand.';
+    return 'Tas arī viss! Kad maks ir sinhronizēts, jūs redzēsiet visus pārskaitījumus, izmantojot komandu $formattedCommand.';
   }
 
   @override
@@ -2856,53 +2856,53 @@ class I18nLv extends I18n {
   String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb1 => 'Lejupielādējiet jaunāko Monero GUI maka versiju savai operētājsistēmai no vietnes <a target=\"_blank\" href=\"https://getmonero.org/downloads\" class=\"next-link\">getmonero.org</a> un palaidiet to.';
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb2 => 'Izvēlieties sev vēlamo seifa režīmu un pēc tam atlasiet “Atjaunot maku no atslēgām vai mnemoniskā sēkla”.';
+  String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb2 => 'Izvēlieties sev vēlamo maka režīmu un pēc tam atlasiet “Atjaunot maku no atslēgām vai mnemoniskās sēklas”.';
 
   @override
   String guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb3(Object appName) {
-    return 'Izvēlieties \"Atjaunot no sēklām\" (atlasīts pēc noklusējuma) un ielīmējiet mnemonisko sēklu no tirdzniecības lapas zemāk esošajā ievadē. Pēc tam atlasiet \"Sēklas nobīdes ieejas frāze\" un ierakstiet $appName paroli, ko izmantojāt, pabeidzot darījumu. Nospiediet \"Tālāk\". ';
+    return 'Izvēlieties \"Atjaunot no sēklas\" (atlasīts pēc noklusējuma) un ielīmējiet mnemonisko sēklu no darījuma lapas zemāk esošajā laukā. Pēc tam izvēlieties \"Sēklas nobīdes frāze\" un ierakstiet $appName paroli, ko izmantojāt, pabeidzot darījumu. Nospiediet \"Tālāk\". ';
   }
 
   @override
-  String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb4 => 'Tieši tā! Pēc seifa sinhronizācijas cilnē Darījumi tiks parādīti visi darījumi.';
+  String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbcontent250Sb4 => 'Tas arī viss! Pēc maka sinhronizācijas cilnē \"Pārskaitījumi\" tiks parādīti visi pārskaitījumi.';
 
   @override
   String get guide250Sbmnemonic250Sbmonero250Sbgui250Sbtitle => 'Izmantojot oficiālo GUI maku';
 
   @override
-  String get guide250Sbmnemonic250Sbtitle => 'Kā atjaunot manu ar brīvības atņemšanu nesaistītu norēķinu maku no mnemoniskas sēklas?';
+  String get guide250Sbmnemonic250Sbtitle => 'Kā atjaunot neatkarīgo norēķinu maku no mnemoniskas sēklas?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> — jūs redzēsit populārākos piedāvājumus savam noklusējuma reģionam. Rezultātus varat precizēt, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\") un nospiežot \"Meklēt\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> — jūs redzēsiet populārākos piedāvājumus savam noklusējuma reģionam. Rezultātus varat precizēt, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, izvēlieties \"Visi tiešsaistes piedāvājumi\"), un nospiežot \"Meklēt\".';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'No sludinājumu saraksta izvēlieties vienu no tirgotāja ar lielu darījumu skaitu un labu reputācijas rādītāju (attiecīgi parādīts iekavās blakus lietotājvārdam). Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē; dzeltens aplis nozīmē, ka viņi šonedēļ ir apmeklējuši vietni; un pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pirkt\", lai skatītu vairāk informācijas par sludinājumu.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'No sludinājumu saraksta izvēlieties kādu no tirgotāja ar lielu darījumu skaitu un labu reputācijas rādītāju (parādīts iekavās blakus lietotājvārdam). Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē; dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni; pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pirkt\", lai skatītu vairāk informācijas par sludinājumu.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb157Sbagoradesk => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> — jūs redzēsit populārākos piedāvājumus savam noklusējuma reģionam. Pēc tam atlasiet kriptovalūtu, ar kuru vēlaties tirgoties, nospiežot atbilstošo cilni rindā virs reklāmu tabulas. Šajā piemērā mēs izvēlēsimies BTC. Pēc tam kreisajā kolonnā atlasiet cilni \"Pirkt\". Varat precizēt rezultātus, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\") un nospiežot zilo pogu ar ikona \"Meklēt\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb157Sbagoradesk => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> — jūs redzēsiet populārākos piedāvājumus savam noklusējuma reģionam. Pēc tam izvēlieties kriptovalūtu, ar kuru vēlaties tirgoties, nospiežot atbilstošo cilni rindā virs sludinājumu tabulas. Šajā piemērā mēs izvēlēsimies BTC. Pēc tam kreisajā kolonnā izvēlieties cilni \"Pirkt\". Varat precizēt rezultātus, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\",) un nospiežot zilo pogu ar meklēšanas ikonu.';
 
   @override
   String guide250Sbnon8722Sbcustodial250Sbbuy250Sb2(Object assetName) {
-    return 'Pēc pogas \"Pirkt\" nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms tirdzniecības pieprasījuma iesniegšanas, ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu tirdzniecību, ierakstiet, cik daudz $assetName vēlaties iegādāties, un noklikšķiniet uz pogas \"Sūtīt tirdzniecības pieprasījumu\". Jums atkal tiks parādīti tirdzniecības noteikumi, vēlreiz rūpīgi izlasiet tos un pārliecinieties, ka piekrītat, pēc tam nospiediet \"Pieņemt noteikumus\".';
+    return 'Pēc pogas \"Pirkt\" nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas. Ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu darījumu, ierakstiet, cik daudz $assetName vēlaties iegādāties, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\". Jums atkal tiks parādīti darījuma noteikumi. Vēlreiz rūpīgi izlasiet tos un pārliecinieties, ka piekrītat, un nospiediet \"Pieņemt noteikumus\".';
   }
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb3 => 'Pēc tam jums tiks piedāvāts ievadīt norēķinu maka adresi. Šī ir adrese, uz kuru tiks nosūtītas jūsu iegādātās monētas. Ja jums nav personīgā XMR maka, varat izmantot <a target=\"_blank\" href=\"https://www.getmonero.org/downloads/\" class=\"next-link\">oficiālo Monero GUI vai CLI maku</a> vai <a target=\"_blank\" href=\"https://featherwallet.org/\" class=\"next-link\">Feather maku</a>. Nokopējiet savu adresi no maka un ielīmējiet to ievadē \"Receiving Monero address\" (pārliecinieties, ka ielīmētā adrese ir tāda pati kā nokopētā adrese, lai nepazaudētu monētas). Lūdzu, ņemiet vērā, ka makam, ko izmantojat tirdzniecības norēķiniem, ir jābūt jūsu pašam, trešo pušu mitinātie maki nav atļauti. Kad tas ir izdarīts, nospiediet \"Sākt tirdzniecību\", lai sāktu tirdzniecību.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb3 => 'Pēc tam jums tiks piedāvāts ievadīt norēķinu maka adresi. Šī ir adrese, uz kuru tiks nosūtītas jūsu iegādātās monētas. Ja jums nav personīgā XMR maka, varat izmantot <a target=\"_blank\" href=\"https://www.getmonero.org/downloads/\" class=\"next-link\">oficiālo Monero GUI vai CLI maku</a> vai <a target=\"_blank\" href=\"https://featherwallet.org/\" class=\"next-link\">Feather maku</a>. Nokopējiet savu adresi no maka un ielīmējiet to laukā \"Receiving Monero address\" (pārliecinieties, ka ielīmētā adrese ir tāda pati kā nokopētā adrese, lai nepazaudētu monētas). Lūdzu, ņemiet vērā, ka makam, ko izmantojat darījumu norēķiniem, ir jābūt jūsu paša. Trešo pušu mitinātie maki nav atļauti. Kad tas ir izdarīts, nospiediet \"Sākt darījumu\", lai sāktu darījumu.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb357Sbagoradesk => 'Pēc tam jums tiks piedāvāts ievadīt norēķinu maka adresi. Šī ir adrese, uz kuru tiks nosūtītas jūsu iegādātās monētas. Ja jums nav personīgā BTC maka, varat izmantot <a target=\"_blank\" href=\"https://electrum.org/#home\" class=\"next-link\">Electrum maku</a>. Nokopējiet savu adresi no maka un ielīmējiet to ievadē \"Receiving Bitcoin address\" (pārliecinieties, ka ielīmētā adrese ir tāda pati kā kopētā adrese, lai nepazaudētu monētas). Lūdzu, ņemiet vērā, ka makam, ko izmantojat tirdzniecības norēķiniem, ir jābūt jūsu pašam, trešo pušu mitinātie maki nav atļauti. Kad tas ir izdarīts, nospiediet \"Sākt tirdzniecību\", lai sāktu tirdzniecību.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb357Sbagoradesk => 'Pēc tam jums tiks piedāvāts ievadīt norēķinu maka adresi. Šī ir adrese, uz kuru tiks nosūtītas jūsu iegādātās monētas. Ja jums nav personīgā BTC maka, varat izmantot <a target=\"_blank\" href=\"https://electrum.org/#home\" class=\"next-link\">Electrum maku</a>. Nokopējiet savu adresi no maka un ielīmējiet to laukā \"Receiving Bitcoin address\" (pārliecinieties, ka ielīmētā adrese ir tāda pati kā kopētā adrese, lai nepazaudētu monētas). Lūdzu, ņemiet vērā, ka makam, ko izmantojat darījumu norēķiniem, ir jābūt jūsu paša. Trešo pušu mitinātie maki nav atļauti. Kad tas ir izdarīts, nospiediet \"Sākt darījumu\", lai sāktu darījumu.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb4 => 'Jūsu pārlūkprogrammā tiks atvērta tirdzniecības lapa. Sazinieties ar pārdevēju, izmantojot tirdzniecības tērzēšanu, lai pārliecinātos, ka pārdevējs ir gatavs saņemt jūsu maksājumu, un lai noskaidrotu visus jautājumus, kas jums rodas par maksājuma veikšanu.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb4 => 'Jūsu pārlūkprogrammā tiks atvērta darījuma lapa. Sazinieties ar pārdevēju, izmantojot darījuma saraksti, lai pārliecinātos, ka pārdevējs ir gatavs saņemt jūsu maksājumu, un lai noskaidrotu jautājumus, kas jums rodas par maksājuma veikšanu.';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb5 => 'Veiciet apmaksu saskaņā ar pārdevēja norādījumiem un nekavējoties nospiediet \"Esmu samaksājis\" - tas paziņos pārdevējam, ka maksājums ir pabeigts, un neļaus pārdevējam atcelt darījumu.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb7 => 'Kad pārdevējs būs apstiprinājis jūsu maksājuma saņemšanu, viņš sāks darījumu norēķinus. Jūs redzēsit, ka tirdzniecības statuss būs mainīts uz \"Notiek apstrāde\". Šobrīd nekas cits jums nav jādara — monētas tiks automātiski pārsūtītas uz jūsu norādīto norēķinu maka adresi. Tas prasīs kādu laiku (parasti aptuveni 10–60 minūtes), tāpēc vienkārši atpūtieties un gaidiet, līdz ienākošais darījums parādīsies jūsu personīgajā makā. Lūdzu, ņemiet vērā, ka ar tirdzniecības norēķiniem saistītās tīkla darījumu maksas tiks atskaitītas no tirdzniecības summas, kas nozīmē, ka jūs saņemsiet nedaudz mazāk, nekā tiek parādīts tirdzniecības lapā.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb7 => 'Kad pārdevējs būs apstiprinājis jūsu maksājuma saņemšanu, viņš sāks darījuma norēķinus. Jūs redzēsiet, ka darījuma statuss būs mainīts uz \"Notiek apstrāde\". Šobrīd nekas cits jums nav jādara — monētas tiks automātiski pārsūtītas uz jūsu norādīto norēķinu maka adresi. Tas prasīs kādu laiku (parasti aptuveni 10–60 minūtes), tāpēc vienkārši uzgaidiet, līdz ienākošais pārskaitījums parādīsies jūsu personīgajā makā. Lūdzu, ņemiet vērā, ka ar darījuma norēķiniem saistītās tīkla pārskaitījumu maksas tiks atskaitītas no darījuma summas, kas nozīmē, ka jūs saņemsiet nedaudz mazāk, nekā tiek parādīts darījuma lapā.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb8 => 'Tieši tā! Kad tirdzniecības norēķins būs pabeigts un būsiet saņēmis savas monētas, varēsiet skatīt norēķinu informāciju, tirdzniecības lapā izvēršot sadaļu \"Darījuma informācija\". Neaizmirstiet atstāt atsauksmes par savu pieredzi ar šo pārdevēju!';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb8 => 'Tas arī viss! Kad darījuma norēķins būs pabeigts un būsiet saņēmis savas monētas, varēsiet skatīt norēķinu informāciju, darījuma lapā izvēršot sadaļu \"Darījuma informācija\". Neaizmirstiet atstāt atsauksmes par savu pieredzi ar šo pārdevēju!';
 
   @override
   String guide250Sbnon8722Sbcustodial250Sbregister(Object appName) {
@@ -2911,69 +2911,69 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbnon8722Sbcustodial250Sbsell250Sb1(Object appName) {
-    return 'Noguldiet monētas savā <a target=\"_blank\" href=\"/account/wallet\" class=\"next-link\">$appName šķīrējtiesas obligāciju makā</a>. Savu $appName depozīta adresi redzēsit cilnē “Saņemt”.';
+    return 'Ieskaitiet monētas savā <a target=\"_blank\" href=\"/account/wallet\" class=\"next-link\">$appName šķīrējtiesas obligāciju makā</a>. Savu $appName depozīta adresi redzēsiet cilnē “Saņemt”.';
   }
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2 => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> un meklēšanas lodziņā atlasiet “Pārdot”. Varat vēl vairāk uzlabot rezultātus, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\". Nospiediet \"Meklēt\".';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2 => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> un meklēšanas lodziņā izvēlieties “Pārdot”. Varat vēl uzlabot rezultātus, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\". Nospiediet \"Meklēt\".';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb1 => 'Daži maksājumu veidi tiek uzskatīti par <a target=\"_blank\" href=\"/faq#high-risk-methods\" class=\"next-link\">augsta riska</a>. Kriptovalūtu darījumi ir pilnīgi neatgriezeniski. Ja pircēja maksājums tiek atgriezts, tad, kad pārdosit savu kriptovalūtu, to vairs nevarēsit atgūt. Tāpēc mēs iesakām pārdot ar zema riska maksājuma veidu pieredzējušiem lietotājiem ar lielu iepriekšējo darījumu skaitu un augstu reputācijas rādītāju.';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb1 => 'Daži maksājumu veidi tiek uzskatīti par <a target=\"_blank\" href=\"/faq#high-risk-methods\" class=\"next-link\">augsta riska</a>. Kriptovalūtu darījumi ir pilnīgi neatgriezeniski. Ja pircēja maksājums tiek atgriezts, tad līdz ko pārdosiet savu kriptovalūtu, to vairs nevarēsiet atgūt. Tāpēc mēs iesakām pārdot ar zema riska maksājuma veidu pieredzējušiem lietotājiem ar lielu iepriekšējo darījumu skaitu un augstu reputācijas rādītāju.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb2 => 'No sludinājumu saraksta izvēlieties vienu no tirgotāja ar lielu darījumu skaitu un labu reputācijas rādītāju (attiecīgi parādīts iekavās blakus lietotājvārdam). Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē; dzeltens aplis nozīmē, ka viņi šonedēļ ir apmeklējuši vietni; un pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pārdot\", lai skatītu vairāk informācijas par sludinājumu.';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb2 => 'No sludinājumu saraksta izvēlieties kādu no tirgotāja ar lielu darījumu skaitu un labu reputācijas rādītāju (parādīts iekavās blakus lietotājvārdam). Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē; dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni; pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pārdot\", lai skatītu vairāk informācijas par sludinājumu.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb257Sbagoradesk => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> un kreisajā kolonnā atlasiet cilni \"Pārdot\". Pēc tam atlasiet kriptovalūtu, ar kuru vēlaties tirgoties, nospiežot atbilstošo cilni rindā virs reklāmu tabulas. Šajā piemērā mēs izvēlēsimies BTC. Varat vēl vairāk uzlabot rezultātus, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\". Nospiediet zilo pogu ar ikonu \"Meklēt\".';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb257Sbagoradesk => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> un kreisajā kolonnā izvēlieties cilni \"Pārdot\". Pēc tam atlasiet kriptovalūtu, kuru vēlaties tirgot, nospiežot atbilstošo cilni rindā virs sludinājumu tabulas. Šajā piemērā mēs izvēlēsimies BTC. Varat vēl uzlabot rezultātus, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, atlasiet \"Visi tiešsaistes piedāvājumi\". Nospiediet zilo pogu ar meklēšanas ikonu.';
 
   @override
   String guide250Sbnon8722Sbcustodial250Sbsell250Sb3(Object assetName) {
-    return 'Pēc pogas \"Pārdot\" nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms tirdzniecības pieprasījuma iesniegšanas, ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu tirdzniecību, ierakstiet, cik daudz $assetName vēlaties pārdot, un noklikšķiniet uz pogas \"Sūtīt tirdzniecības pieprasījumu\". Jums vēlreiz tiks parādīti tirdzniecības noteikumi, vēlreiz rūpīgi izlasiet tos un pārliecinieties, ka piekrītat, pēc tam nospiediet \"Piekrītu noteikumiem un sāciet tirdzniecību\".';
+    return 'Pēc pogas \"Pārdot\" nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, tostarp daŗījuma noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas, ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu darījumu, ierakstiet, cik daudz $assetName vēlaties pārdot, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\". Jums vēlreiz tiks parādīti darījuma noteikumi. Vēlreiz rūpīgi izlasiet tos un pārliecinieties, ka piekrītat. Nospiediet \"Piekrist noteikumiem un sākt tirdzniecību\".';
   }
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb4 => 'Jūsu pārlūkprogrammā tiks atvērta tirdzniecības lapa. Sazinieties ar pircēju, izmantojot tirdzniecības tērzēšanu, un sniedziet viņam informāciju par maksājumu.';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb4 => 'Jūsu pārlūkprogrammā tiks atvērta darījuma lapa. Sazinieties ar pircēju, izmantojot darījuma saraksti, un sniedziet viņam informāciju par maksājumu.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb5 => 'Jūs saņemsit paziņojumu, kad pircējs būs veicis maksājumu. Pārliecinieties, vai esat saņēmis maksājumu un vai tā ir pareizā summa. Kad esat pārliecinājies, ka maksājums ir 100% pareizs, nospiediet \"Pabeigt\".';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb5 => 'Jūs saņemsiet paziņojumu, kad pircējs būs veicis maksājumu. Pārliecinieties, vai esat saņēmis maksājumu un vai tā ir pareizā summa. Kad esat pārliecinājies, ka maksājums ir 100% pareizs, nospiediet \"Pabeigt\".';
 
   @override
   String guide250Sbnon8722Sbcustodial250Sbsell250Sb6(Object appName) {
-    return 'Šajā brīdī jums tiks piedāvāts ievadīt pašreizējo $appName paroli. Ievadiet to un nospiediet apstiprinājumu. Ievadot savu paroli, jūs ģenerējat norēķinu maku un parakstāt kriptovalūtas darījumu, tāpēc pārliecinieties, ka neaizmirstiet vai nepazaudējat paroli vismaz līdz darījuma nokārtošanai.';
+    return 'Šajā brīdī jums tiks piedāvāts ievadīt pašreizējo $appName paroli. Ievadiet to un nospiediet apstiprinājumu. Ievadot savu paroli, jūs ģenerējat norēķinu maku un parakstāt kriptovalūtas pārskaitījumu, tāpēc pārliecinieties, ka neaizmirsīsiet vai nepazaudēsiet paroli vismaz līdz darījuma nokārtošanai.';
   }
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb7 => 'Jūs redzēsit, ka tirdzniecības statuss būs mainīts uz \"Notiek apstrāde\". Šobrīd nekas cits nav jādara — monētas automātiski tiks pārsūtītas uz pircēja norēķinu maka adresi.';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb7 => 'Jūs redzēsiet, ka darījuma statuss būs mainīts uz \"Notiek apstrāde\". Šobrīd nekas cits nav jādara — monētas automātiski tiks pārsūtītas uz pircēja norēķinu maka adresi.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb8 => 'Tieši tā! Kad tirdzniecības norēķins būs pabeigts, jūs varēsiet skatīt norēķinu informāciju, tirdzniecības lapā izvēršot sadaļu \"Darījuma informācija\". Neaizmirstiet atstāt atsauksmes par savu pieredzi ar šo pircēju!';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb8 => 'Tas arī viss! Kad darījuma norēķins būs pabeigts, jūs varēsiet skatīt norēķinu informāciju, darījuma lapā izvēršot sadaļu \"Darījuma informācija\". Neaizmirstiet atstāt atsauksmes par savu pieredzi ar šo pircēju!';
 
   @override
   String guide250Sbsell250Sbstep8722Sbfive8722Sbtext(Object assetName) {
-    return 'Pēc tirdzniecības pieprasījuma nosūtīšanas pircējs pieprasīs jūsu maksājuma informāciju (piem., ja vēlaties pārdot par bankas pārskaitījumu, pircējs pieprasīs jūsu bankas konta informāciju). Kad pircējam būs sniegta maksājuma informācija, viņš samaksās par $assetName un apstiprinās to jums. Pirms darījuma pabeigšanas, lūdzu, pārliecinieties, vai esat saņēmis naudu savā kontā. NEKAD nepabeidziet darījumu, pirms neesat saņēmis maksājumu. $assetName darījumi ir neatgriezeniski. Kad $assetName nosūtāt pircējam, tos vairs nevarēs atgūt, pat ja pircēja maksājums netiek parādīts. Kad esat apstiprinājis, ka maksājums ir veikts, varat ritināt lapu uz leju un atlasīt \"Pabeigt\". Tas nosūtīs $assetName uz pircēja norēķinu maku un pabeigs darījumu.';
+    return 'Pēc darījuma pieprasījuma nosūtīšanas pircējs pieprasīs jūsu maksājuma informāciju (piem., ja vēlaties pārdot ar bankas pārskaitījumu, pircējs pieprasīs jūsu bankas konta informāciju). Kad pircējam būs sniegta maksājuma informācija, viņš samaksās par $assetName un apstiprinās to jums. Pirms darījuma pabeigšanas, lūdzu, pārliecinieties, vai esat saņēmis naudu savā kontā. NEKAD nepabeidziet darījumu, pirms neesat saņēmis maksājumu. $assetName darījumi ir neatgriezeniski. Kad $assetName nosūtāt pircējam, tos vairs nevarēs atgūt, pat ja pircēja maksājums netiek parādīts. Kad esat apstiprinājis, ka maksājums ir veikts, varat ritināt lapu uz leju un izvēlēties \"Pabeigt\". Tas nosūtīs $assetName uz pircēja norēķinu maku un pabeigs darījumu.';
   }
 
   @override
   String guide250Sbsell250Sbstep8722Sbfour8722Sbtext(Object assetName) {
-    return 'Pēc pogas \"Pārdot\" nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms tirdzniecības pieprasījuma iesniegšanas, ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu tirdzniecību, ierakstiet, cik daudz $assetName vēlaties pārdot, un noklikšķiniet uz pogas \"Sūtīt tirdzniecības pieprasījumu\", lai sāktu tirdzniecību. Kad sāksiet tirdzniecību, jūsu $assetName tiks pārvietots no jūsu maka uz šķīrējtiesas obligāciju tirdzniecības aizsardzībai.';
+    return 'Pēc pogas \"Pārdot\" nospiešanas jūs redzēsiet vairāk informācijas par sludinājumu, tostarp darījuma noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas. Ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu. Lai sāktu darījumu, ierakstiet, cik daudz $assetName vēlaties pārdot, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\", lai sāktu darījumu. Kad sāksiet darījumu, jūsu $assetName tiks pārvietots no jūsu maka uz šķīrējtiesas obligāciju tirdzniecības aizsardzībai.';
   }
 
   @override
-  String get guide250Sbsell250Sbstep8722Sbthree8722Sbtext => 'No sludinājumu saraksta izvēlieties vienu no tirgotāja ar labu reputācijas rādītāju un lielu darījumu skaitu. Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē, dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni, un pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas Pārdot, lai skatītu vairāk informācijas par sludinājumu.';
+  String get guide250Sbsell250Sbstep8722Sbthree8722Sbtext => 'No sludinājumu saraksta izvēlieties kādu no tirgotāja ar labu reputācijas rādītāju un lielu darījumu skaitu. Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē, dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni, un pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas Pārdot, lai skatītu vairāk informācijas par sludinājumu.';
 
   @override
   String guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb0(Object mainPage, Object assetName) {
-    return 'Dodieties uz $mainPage un meklēšanas lodziņā atlasiet cilni \"Pārdot\", aizpildiet veidlapu ar summu, kuru vēlaties pārdot savā valūtā, savu atrašanās vietu un izvēlieties maksājuma veidu. Ja neesat pārliecināts, kā vēlaties saņemt samaksu, kā maksājuma veidu izvēlieties \"Visi tiešsaistes piedāvājumi\". Vietnē būs norādīti $assetName tirgotāji, kas pieejami jūsu reģionā.';
+    return 'Dodieties uz $mainPage un meklēšanas lodziņā izvēlieties cilni \"Pārdot\", aizpildiet veidlapu ar summu savā valūtā, kuru vēlaties pārdot, savu atrašanās vietu, un izvēlieties maksājuma veidu. Ja neesat pārliecināts, kā vēlaties saņemt samaksu, kā maksājuma veidu izvēlieties \"Visi tiešsaistes piedāvājumi\". Vietnē būs norādīti $assetName tirgotāji, kas pieejami jūsu reģionā.';
   }
 
   @override
   String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb08722Sbmain8722Sbpage => 'galvenā lapa';
 
   @override
-  String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb1 => 'Dažas maksājumu metodes tiek uzskatītas par augsta riska. Monero darījumi ir pilnīgi neatgriezeniski. Kad esat pārdevis savu Monero, jūs nevarat tos atgūt, pat ja maksājums tiek atcelts. Tāpēc mēs iesakām pārdot ar zema riska maksājuma veidu pieredzējušiem lietotājiem ar lielu iepriekšējo darījumu skaitu un 100% atsauksmēm.';
+  String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb1 => 'Dažas maksājumu metodes tiek uzskatītas par augsta riska. Monero darījumi ir pilnīgi neatgriezeniski. Kad esat pārdevis savu Monero, jūs nevarat tos atgūt, pat ja maksājums tiek atcelts. Tāpēc mēs iesakām pārdot ar zema riska maksājuma veidu un pieredzējušiem lietotājiem ar lielu iepriekšējo darījumu skaitu un 100% atsauksmēm.';
 
   @override
-  String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb157Sbagoradesk => 'Dažas maksājumu metodes tiek uzskatītas par augsta riska. Kriptovalūtu darījumi ir pilnīgi neatgriezeniski. Kad esat pārdevis savu kriptovalūtu, jūs nevarat to atgūt, pat ja maksājums tiek atcelts. Tāpēc mēs iesakām pārdot ar zema riska maksājuma veidu pieredzējušiem lietotājiem ar lielu iepriekšējo darījumu skaitu un 100% atsauksmēm.';
+  String get guide250Sbsell250Sbstep8722Sbtwo8722Sbtext8722Sb157Sbagoradesk => 'Dažas maksājumu metodes tiek uzskatītas par augsta riska. Kriptovalūtu darījumi ir pilnīgi neatgriezeniski. Kad esat pārdevis savu kriptovalūtu, jūs nevarat to atgūt, pat ja maksājums tiek atcelts. Tāpēc mēs iesakām pārdot ar zema riska maksājuma veidu un pieredzējušiem lietotājiem ar lielu iepriekšējo darījumu skaitu un 100% atsauksmēm.';
 
   @override
   String get guide250Sbsell250Sbtitle => 'Kā pārdot Monero tiešsaistē';
@@ -2982,14 +2982,14 @@ class I18nLv extends I18n {
   String get guide250Sbsell250Sbtitle57Sbagoradesk => 'Kā pārdot kriptovalūtu tiešsaistē';
 
   @override
-  String get guide250Sbtelegram250Sbcard8722Sbtitle => 'Telegram mobilo sakaru paziņojumi';
+  String get guide250Sbtelegram250Sbcard8722Sbtitle => 'Telegram mobilie paziņojumi';
 
   @override
-  String get guide250Sbtelegram250Sbconclusion => 'Apsveicam! Tagad jūs varat nekavējoties atbildēt saviem klientiem!';
+  String get guide250Sbtelegram250Sbconclusion => 'Apsveicam! Tagad jūs varat atbildēt saviem klientiem bez kavēšanās!';
 
   @override
   String guide250Sbtelegram250Sbdisable8722Sbtext(Object accountSettings) {
-    return 'Ja vēlaties atspējot paziņojumus no mūsu robotprogrammatūras, dodieties atpakaļ uz cilni “Paziņojumi” savā $accountSettings un noklikšķiniet uz sarkanās pogas “Atspējot telegrammas paziņojumus”.';
+    return 'Ja vēlaties atspējot paziņojumus no mūsu bota, dodieties atpakaļ uz cilni “Paziņojumi” savā $accountSettings un noklikšķiniet uz sarkanās pogas “Atspējot Telegram paziņojumus”.';
   }
 
   @override
@@ -3000,16 +3000,16 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb0(Object telegram, Object appName) {
-    return '$telegram ļauj saņemt $appName paziņojumus (piemēram, jaunu darījumu, jaunu maksājumu, tirdzniecības pabeigšanas vai jaunu tērzēšanas ziņojumu paziņojumus) telegrammas ziņojumu veidā no mūsu paziņojumu robota.';
+    return '$telegram ļauj saņemt $appName paziņojumus (par jaunu darījumu, jaunu maksājumu, darījuma pabeigšanu vai jaunu sarakstes ziņu) Telegram ziņu veidā no mūsu paziņojumu bota.';
   }
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb1(Object officialFaq) {
-    return 'Telegram ir mobilā ziņojumapmaiņas lietotne. Jūs varat lasīt vairāk par to, kas ir Telegram $officialFaq.';
+    return 'Telegram ir mobilās saziņas lietotne. Jūs varat lasīt vairāk par to, kas ir Telegram $officialFaq.';
   }
 
   @override
-  String get guide250Sbtelegram250Sbprologue8722Sb18722Sbofficial8722Sbfaq => 'oficiālais FAQ';
+  String get guide250Sbtelegram250Sbprologue8722Sb18722Sbofficial8722Sbfaq => 'oficiālie BUJ';
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb2(Object installed) {
@@ -3021,41 +3021,41 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb0(Object pressThis, Object appName) {
-    return '$pressThis vai Telegram meklēšanas laukā meklējiet “$appName Notification Bot” un atlasiet $appName Notification Bot.';
+    return '$pressThis vai meklējiet “$appName Notification Bot” Telegram meklēšanas laukā un izvēlieties $appName Notification Bot.';
   }
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb08722Sbpress8722Sbthis => 'Spied uz šīs saites';
+  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb08722Sbpress8722Sbthis => 'Spiediet uz šīs saites';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb1 => 'Pēc tērzēšanas loga atvēršanas nospiediet pogu Sākt ekrāna apakšā vai manuāli nosūtiet ziņojumu \'/sākt\' (bez pēdiņām).';
+  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb1 => 'Pēc sarakstes loga atvēršanas nospiediet pogu \"Sākt\" ekrāna apakšā vai manuāli nosūtiet ziņu \'/sākt\' (bez pēdiņām).';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb2 => 'Mūsu robots jums piešķirs jūsu telegrammas paziņojumu ID.';
+  String get guide250Sbtelegram250Sbstep8722Sbone8722Sbtext8722Sb2 => 'Mūsu bots jums piešķirs jūsu Telegram paziņojumu ID.';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbthree8722Sbtext => 'Tieši tā! Tagad jūs saņemsit paziņojumus no mūsu robota.';
+  String get guide250Sbtelegram250Sbstep8722Sbthree8722Sbtext => 'Tas arī viss! Tagad jūs saņemsiet paziņojumus no mūsu bota.';
 
   @override
   String guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb0(Object accountSettings) {
-    return 'Dodieties uz savu $accountSettings un atlasiet cilni “Paziņojumi”.';
+    return 'Dodieties uz saviem $accountSettings un izvēlieties cilni “Paziņojumi”.';
   }
 
   @override
   String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb08722Sbsettings => 'konta iestatījumi';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb1 => 'Sadaļas \"Telegrammas paziņojumi\" attiecīgajā laukā ierakstiet savu telegrammas paziņojumu ID.';
+  String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb1 => 'Sadaļas \"Telegram paziņojumi\" attiecīgajā laukā ierakstiet savu Telegram paziņojumu ID.';
 
   @override
-  String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb2 => 'Noklikšķiniet uz saglabāšanas ikonas, lai saglabātu savu telegrammas paziņojumu ID.';
+  String get guide250Sbtelegram250Sbstep8722Sbtwo8722Sbtext8722Sb2 => 'Noklikšķiniet uz saglabāšanas ikonas, lai saglabātu savu Telegram paziņojumu ID.';
 
   @override
   String get guide250Sbtelegram250Sbtitle => 'Kā ieslēgt Telegram mobilos paziņojumus';
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Tipiska tirdzniecība ar $appName darbojas šādi, piemērs ir tiešsaistes pārdošanas darījums, kurā jūs pārdodat $assetName pircējam. Process ir līdzīgs, pērkot $assetName tiešsaistē, taču šajā piemērā mēs koncentrējamies uz $assetName pārdošanu, jo tas ir visizplatītākais tirdzniecības veids. $linebreak  Vispirms jums ir jāiemaksā $assetName savā $localmoneroWallet. $linebreak  Pēc tam jums ir nepieciešams $create $aSellmoneroad (to sauc par tiešsaistes pārdošanas sludinājumu). Veidojot sludinājumu Jūs izvēlaties apmaksas veidu, iestatāt cenas, limitus un rakstāt savus darījuma noteikumus kā brīvas formas ziņojumu. ';
+    return 'Tipisks darījums ar $appName darbojas šādi. Piemērs ir tiešsaistes pārdošanas darījums, kurā jūs pārdodat $assetName pircējam. Process ir līdzīgs, pērkot $assetName tiešsaistē, taču šajā piemērā mēs koncentrējamies uz $assetName pārdošanu, jo tas ir visizplatītākais tirdzniecības veids. $linebreak  Vispirms jums ir jāiemaksā $assetName savā $localmoneroWallet. $linebreak  Pēc tam jums ir nepieciešams $create $aSellmoneroad (saukts par tiešsaistes pārdošanas sludinājumu). Veidojot sludinājumu, Jūs izvēlaties apmaksas veidu, iestatāt cenas, limitus un sastādat savus darījuma noteikumus brīvā tekstā. ';
   }
 
   @override
@@ -3067,16 +3067,16 @@ class I18nLv extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sbcreate => 'izveidot';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sbfund => 'fonds';
+  String get guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sbfund => 'finansēt';
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sblocalmonero8722Sbwallet(Object appName) {
-    return '$appName maku';
+    return '$appName maks';
   }
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb1(Object assetName, Object appName) {
-    return 'Lai klienti varētu atvērt tirdzniecības pieprasījumus no jūsu reklāmām, jūsu $appName šķīrējtiesas obligāciju makā ir jābūt $assetName. <br/><br/>Kad <strong>pircējs atver darījumu ar jums</strong>, $assetName par visu darījuma summu tiek automātiski rezervēts no jūsu maka. Sniedziet pircējam maksājuma norādījumus un palīdziet pircējam norēķināties par tirdzniecību. Jūs saņemsiet e-pasta paziņojumus, kad kāds atbildēs uz jūsu sludinājumu. <br/><br/> Kad pircējs ir samaksājis un nospiedis pogu <strong> Esmu samaksājis</strong>, jūs saņemsiet paziņojumu pa e-pastu un vietnē, ka darījums ir apmaksāts. <br/><br/> Kad esat apstiprinājis, ka esat saņēmis maksājumu, ir pienācis laiks pabeigt darījumu. Pēc darījuma pabeigšanas un norēķināšanās pircēja norēķinu makā būs XMR. <br/><br/> Pēdējais solis ir <strong>atstāt atsauksmes</strong> pircējam un mudināt pircēju darīt to pašu jūsu vietā. Atsauksmes ir svarīgas, lai iegūtu reputāciju un veiktu vairāk darījumu.';
+    return 'Lai klienti varētu atvērt darījumu pieprasījumus no jūsu sludinājumiem, jūsu $appName šķīrējtiesas obligāciju makā ir jābūt $assetName. <br/><br/>Kad <strong>pircējs atver darījumu ar jums</strong>, $assetName par visu darījuma summu tiek automātiski rezervēts no jūsu maka. Sniedziet pircējam maksājuma norādījumus un palīdziet pircējam norēķināties par pirkumu. Jūs saņemsiet e-pasta paziņojumus, kad kāds atsauksies uz jūsu sludinājumu. <br/><br/> Kad pircējs būs samaksājis un nospiedis pogu <strong> Esmu samaksājis</strong>, jūs saņemsiet paziņojumu e-pastā un vietnē, ka pirkums ir apmaksāts. <br/><br/> Kad esat apstiprinājis, ka esat saņēmis maksājumu, ir pienācis laiks pabeigt darījumu. Pēc darījuma pabeigšanas un norēķināšanās pircēja norēķinu makā ienāks XMR. <br/><br/> Pēdējais solis ir <strong>atstāt atsauksmes</strong> par pircēju un mudināt pircēju darīt to pašu par jums. Atsauksmes ir svarīgas, lai iegūtu reputāciju un veiktu vairāk darījumu.';
   }
 
   @override
@@ -3084,15 +3084,15 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb28722Sbtext(Object assetName) {
-    return 'Pirms sākat tirdzniecību, jums jāapsver, kādus maksājuma veidus jūs gatavojaties nodrošināt, un jāizpēta maksājuma veids, lai zinātu, kā tas darbojas. Pirmo reizi uzsākot tirdzniecību, mēs iesakām neizvēlēties augsta riska maksājuma veidu. Pārskaitījums ar konkrētu banku var būt labs sākuma maksāšanas veids, īpaši, ja jūsu valstī ir maz aktīvu tirgotāju. <br/><br/> <strong>Pirms sākat tirdzniecību</strong> <br/><br/> Pirms sākat tirdzniecību, pārliecinieties, ka<strong> esat iepazinies ar vietējiem tiesību aktiem </strong> un vai ievērojat visus attiecīgos likumiem un ka jums ir nepieciešamās uzņēmējdarbības licences jurisdikcijai, kurā veicat tirdzniecību. <br/><br/> Tiesību akti dažādās valstīs un neatkarīgi no tā, vai tirgojaties kā privātpersona vai kā uzņēmums, ir ļoti atšķirīgi. <br/><br/><strong>Izpētiet piedāvāto maksājuma veidu</strong>. Izlasiet citu tirgotāju sludinājumus par to pašu maksājuma veidu un veiciet dažus darījumus ar tiem. Pirms tirdzniecības uzsākšanas mēģiniet noteikt iespējamās problēmas. <br/><br/><strong>Izmantojiet maksājumu kontus tikai $assetName tirdzniecībai.</strong> Daži maksājumu pakalpojumu sniedzēji īslaicīgi vai neatgriezeniski slēgs jūsu kontu, ja saņemsiet neautorizētus maksājumus, kas saistīti ar krāpšanu. Kontu izmantošana tikai $assetName tirdzniecībai aizsargā jūsu personīgās finanses.';
+    return 'Pirms sākat tirdzniecību, jums jāapsver, kādus maksājuma veidus jūs gatavojaties nodrošināt, un jāizpēta maksājuma veids, lai zinātu, kā tas darbojas. Pirmo reizi uzsākot tirdzniecību, mēs iesakām neizvēlēties augsta riska maksājuma veidu. Pārskaitījums ar konkrētu banku var būt labs sākuma maksāšanas veids, īpaši, ja jūsu valstī ir maz aktīvu tirgotāju. <br/><br/> <strong>Pirms sākat tirdzniecību</strong> <br/><br/> Pirms sākat tirdzniecību, pārliecinieties, ka<strong> esat iepazinies ar vietējiem tiesību aktiem </strong>, vai ievērojat visus attiecīgos likumus un ka jums ir nepieciešamās uzņēmējdarbības licences jurisdikcijai, kurā veicat tirdzniecību. <br/><br/> Tiesību akti dažādās valstīs un neatkarīgi no tā, vai tirgojaties kā privātpersona vai kā uzņēmums, ir ļoti atšķirīgi. <br/><br/><strong>Izpētiet piedāvāto maksājuma veidu</strong>. Izlasiet citu tirgotāju sludinājumus par to pašu maksājuma veidu un veiciet dažus darījumus ar tiem. Pirms tirdzniecības uzsākšanas mēģiniet noteikt iespējamās problēmas. <br/><br/><strong>Izmantojiet maksājumu kontus tikai $assetName tirdzniecībai.</strong> Daži maksājumu pakalpojumu sniedzēji īslaicīgi vai neatgriezeniski slēgs jūsu kontu, ja saņemsiet neautorizētus maksājumus, kas saistīti ar krāpšanu. Kontu izmantošana tikai $assetName tirdzniecībai aizsargā jūsu personīgos līdzekļus.';
   }
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Darba sākšana';
+  String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Uzsākšana';
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage ir vieta, kur varat izveidot jaunas reklāmas. $linebreak  Ir dažas opcijas, kas ir obligātas, veidojot reklāmu, un daudzas papildu opcijas, kuras nav obligātas, taču ieteicams iestatīt. Izmantojot papildu opcijas, varat pielāgot reklāmu atbilstoši jūsu tirdzniecības stratēģijai. $linebreak  Jūs varat atrast visas reklāmas, kuras esat izveidojis no sava $dashboard. Informācijas panelī varat atrast arī savus atvērtos darījumus. $linebreak  $requiredOptions $linebreak  $location Ievadiet valsti, kurā vēlaties rādīt savu reklāmu. $linebreak  $paymentMethod Nolaižamajā izvēlnē atlasiet maksājuma veidu, kuru vēlaties piedāvāt. $linebreak  $currency Izvēlieties valūtu, par kuru pārdodat. Piemēram, ja pārdodat Francijā, izvēlieties EUR. Varat izmantot $thisList, lai uzzinātu, kāds ir jūsu valūtas akronīms.';
+    return '$advertisementCreationpage ir vieta, kur varat izveidot jaunus sludinājumus. $linebreak  Ir dažas opcijas, kas ir obligātas, veidojot sludinājumu, un daudzas papildu opcijas, kuras nav obligātas, taču ieteicams iestatīt. Izmantojot papildu opcijas, varat pielāgot sludinājumu atbilstoši jūsu tirdzniecības stratēģijai. $linebreak  Jūs varat atrast visus sludinājumus, kurus esat izveidojis, no sava $dashboard. Panelī varat atrast arī savus atvērtos darījumus. $linebreak  $requiredOptions $linebreak  $location Ievadiet valsti, kurā vēlaties rādīt savu sludinājumu. $linebreak  $paymentMethod Nolaižamajā izvēlnē atlasiet maksājuma veidu, kuru vēlaties piedāvāt. $linebreak  $currency Izvēlieties valūtu, par kuru pārdodat. Piemēram, ja pārdodat Francijā, ieteicams izvēlēties EUR. Varat izmantot $thisList, lai uzzinātu, kāds ir jūsu valūtas akronīms.';
   }
 
   @override
@@ -3102,7 +3102,7 @@ class I18nLv extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbcurrency => 'Valūta';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbdashboard => 'mērinstrumentu panelis';
+  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbdashboard => 'panelis';
 
   @override
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sblocation => 'Atrašanās vieta';
@@ -3114,23 +3114,23 @@ class I18nLv extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbrequired8722Sboptions => 'Nepieciešamās opcijas';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbthis8722Sblist => 'šo sarakstu';
+  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbthis8722Sblist => 'šis saraksts';
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> Tirgus vai fiksētā cena </strong><br/> Lai noteiktu reklāmas cenu, varat ievadīt vēlamo rezervi virs $assetName tirgus cenas. Lai to izdarītu, pēc opcijas “Tirgus cena” izvēles maržas laukā ievadiet procentuālo vērtību. Varat arī norādīt fiksētu cenu, kas nemainīsies, kamēr to manuāli nemainīsit. Lai to izdarītu, jums jāizvēlas opcija “Fiksētā cena” un jāievada cenas vērtība. <br/><br/> <strong> Min. / Maks. darījumu ierobežojums </strong><br/> Minimālais darījumu ierobežojums nosaka mazāko summu, ko kāds var iegādāties. Ja jūs to iestatāt uz pieci, bet jūsu valūta ir EUR, tas nozīmē, ka mazākā tirdzniecības summa, par kuru kāds var atvērt darījumu ar jums, būs 5 eiro. Maksimālais darījuma limits nosaka, kāda ir lielākā tirdzniecības summa, kuru vēlaties pieņemt. <br/><br/> <strong> Tirdzniecības noteikumi </strong><br/> Šis ir teksts, ko pircējs redz, pirms viņš uzsāk darījumu ar jums. Ieteicams uzrakstīt pircējam norādījumus par to, kā vēlaties turpināt tirdzniecību, un vai jums ir kādi īpaši norādījumi. Ja vēlaties, piemēram, pircējam iesniegt kvīti kā maksājuma pierādījumu pirms darījuma pabeigšanas vai ja pircējam ir jāiesniedz ID, šī ir vieta, kur to pieminēt. Varat apskatīt citu tirgotāju sludinājumus par to, kādu maksājuma veidu vēlaties izmantot, lai gūtu priekšstatu par to, ko satur labi tirdzniecības noteikumi. <br/><br/> <strong> Papildu iespējas </strong><br/><br/> <strong> Ierobežojuma summas līdz </strong><br/> Varat ierobežot reklāmu, lai varētu atvērt darījumus tikai par noteiktām summām. Ievadot ailē 20,30,60, potenciālais tirdzniecības partneris varētu atvērt darījumu tikai par 20, 30 vai 60 EUR. <br/><br/> <strong> Maksājuma informācija </strong><br/> Šeit ievadiet konkrētu informāciju par to, kā pircējam būtu jāmaksā, tas var būt jūsu bankas konta numurs vai e-pasta adrese (piemēram, PayPal). <br/><br/> <strong> Nepieciešamais minimālais atgriezeniskās saites rādītājs </strong><br/> Atsauksmes minimums ļauj iestatīt minimālo nepieciešamo atgriezeniskās saites punktu skaitu, lai atvērtu darījumu, izmantojot savu sludinājumu. <br/><br/> <strong> Pirmais laika ierobežojums ($assetSymbol) </strong><br/> Šis ir īpašs maksimālais darījumu ierobežojums jauniem lietotājiem. Ja pircējs, kuram nav iepriekšējas tirdzniecības vēstures ar jums, vēlas atvērt darījumu ar jums, šī ir lielākā summa, par kuru viņš var atvērt darījumu. <br/><br/> <strong> Maksājuma logs </strong><br/> Summa, kas pircējam jāpabeidz, lai veiktu maksājumu, pirms pārdevējs var atcelt darījumu. \$ <br/><br/> <strong> Īsi padomi krāpnieku identificēšanai </strong> <br/><br/><strong>Krāpnieciski pircēji bieži steidzas.</strong> Jo vairāk klients lūdz jūs steigties/steidzoties, jo aizdomīgāks. jums vajadzētu būt, patiesiem klientiem vienmēr ir pacietība. <br/><br/> Krāpnieciski pircēji bieži <strong> iesaka veikt visu darījumu vai tā daļu ārpus šķīrējtiesas obligāciju aizsardzības sistēmas </strong> un pēc tam nepabeidz savu darījuma daļu. <br/><br/> Esiet piesardzīgs attiecībā uz <strong>Photošopētu maksājuma pierādījumu</strong>, nepabeidziet darījumu, kamēr neesat apstiprinājis, ka esat saņēmis naudu. Jums nav pienākuma pabeigt darījumu, kamēr nevarat pārbaudīt, vai esat saņēmis pircēja maksājumu. <br/><br/><strong>Neatveriet nekādas saites, kuras jums sūta jūsu tirdzniecības partneris</strong>. Ja nepieciešams, izmantojiet citu pārlūkprogrammu, nevis to, kuru izmantojat. <br/><br/>Neapmeklējiet citas vietnes, izņemot $appName, izmantojot pārlūkprogrammu, kuru izmantojat tirdzniecībai. <strong>Izmantojiet citu pārlūkprogrammu citām vietnēm.</strong> <br/><br/> Atzīmējiet $appName savā pārlūkprogrammā un vienmēr izmantojiet grāmatzīmi, kad apmeklējat vietni. Tas palīdz izvairīties no nejaušas pikšķerēšanas vietņu apmeklēšanas, tās pastāv un var būt ļoti pārliecinošas.';
+    return '<strong> Tirgus vai fiksētā cena </strong><br/> Lai noteiktu sludinājuma cenu, varat ievadīt vēlamo robežu virs $assetName tirgus cenas. Lai to izdarītu, pēc opcijas “Tirgus cena” izvēles robežas laukā ievadiet procentuālo vērtību. Varat arī norādīt fiksētu cenu, kas nemainīsies, kamēr to manuāli nemainīsiet. Lai to izdarītu, jums jāizvēlas opcija “Fiksēta cena” un jāievada cena. <br/><br/> <strong> Min. / Maks. darījuma ierobežojums </strong><br/> Minimālais darījumu ierobežojums nosaka mazāko summu, ko kāds var iegādāties. Ja jūs to iestatāt uz pieci, bet jūsu valūta ir EUR, tas nozīmē, ka mazākā darījuma summa, par kuru kāds var atvērt darījumu ar jums, būs 5 eiro. Maksimālais darījuma limits nosaka, kāda ir lielākā darījuma summa, kuru vēlaties pieņemt. <br/><br/> <strong> Tirdzniecības noteikumi </strong><br/> Šis ir teksts, ko pircējs redz, pirms viņš uzsāk darījumu ar jums. Ieteicams uzrakstīt pircējam norādījumus par to, kā vēlaties turpināt darījumu, un vai jums ir kādi īpaši norādījumi. Ja vēlaties, piemēram, lai pircējs iesniegtu kvīti kā maksājuma pierādījumu pirms darījuma pabeigšanas, vai ja pircējam ir jāiesniedz ID, šī ir vieta, kur to pieminēt. Varat apskatīt citu tirgotāju sludinājumus ar to maksājuma veidu, kādu vēlaties izmantot, lai gūtu priekšstatu par to, ko satur labi tirdzniecības noteikumi. <br/><br/> <strong> Papildu iespējas </strong><br/><br/> <strong> Ierobežot summas līdz </strong><br/> Varat sludinājumā noteikt, lai būtu iespējams atvērt darījumus tikai par noteiktām summām. Ievadot ailē 20,30,60, potenciālais darījuma partneris varētu atvērt darījumu tikai par 20, 30 vai 60 EUR. <br/><br/> <strong> Maksājuma informācija </strong><br/> Šeit ievadiet konkrētu informāciju par to, kā pircējam būtu jāmaksā, tas var būt jūsu bankas konta numurs vai e-pasta adrese (piemēram, PayPal). <br/><br/> <strong> Nepieciešamais minimālais atsauksmju reitings </strong><br/> Atsauksmju minimums ļauj iestatīt minimālo nepieciešamo atsauksmju reitingu, lai atvērtu darījumu, izmantojot jūsu sludinājumu. <br/><br/> <strong> Pirmās reizes ierobežojums ($assetSymbol) </strong><br/> Šis ir maksimālā darījuma ierobežojums jauniem lietotājiem. Ja pircējs, kuram nav iepriekšējas tirdzniecības vēstures ar jums, vēlas atvērt darījumu ar jums, šī ir lielākā summa, par kuru viņš var atvērt darījumu. <br/><br/> <strong> Maksājuma logs </strong><br/> Laika periods, kas dots pircējam maksājuma veikšanai, pirms pārdevējs var atcelt darījumu. <br/><br/> <strong> Sekot maksimālās summas likviditātei </strong><br/> Iespējojot likviditātes sekošanu, sludinājuma maksimālais limits tiek pazemināts par summu, kas dotajā brīdī ir rezervēta atvērtos darījumos. <br/><br/> <strong> Īsi padomi krāpnieku identificēšanai </strong> <br/><br/><strong>Krāpnieciski pircēji bieži steidzas.</strong> Jo vairāk klients lūdz jūs steigties, jo aizdomīgākam jums vajadzētu būt. Īstiem klientiem vienmēr ir pacietība. <br/><br/> Krāpnieciski pircēji bieži <strong> iesaka veikt visu darījumu vai tā daļu ārpus šķīrējtiesas obligāciju aizsardzības sistēmas </strong> un pēc tam nepabeidz savu darījuma daļu. <br/><br/> Esiet piesardzīgs attiecībā uz <strong>Photošopētiem maksājumu pierādījumiem</strong>, nepabeidziet darījumu, kamēr neesat apstiprinājis, ka esat saņēmis naudu. Jums nav pienākuma pabeigt darījumu, kamēr nevarat pārbaudīt, vai esat saņēmis pircēja maksājumu. <br/><br/><strong>Neatveriet nekādas saites, kuras jums sūta jūsu tirdzniecības partneris</strong>. Ja tomēr nepieciešams, izmantojiet tam citu pārlūkprogrammu, nevis to, kuru lietojat. <br/><br/>Neapmeklējiet citas vietnes, izņemot $appName, izmantojot pārlūkprogrammu, kuru izmantojat tirdzniecībai. <strong>Izmantojiet citu pārlūkprogrammu citām vietnēm.</strong> <br/><br/> Saglabājiet $appName savā pārlūkprogrammā un vienmēr izmantojiet grāmatzīmi, kad apmeklējat vietni. Tas palīdz izvairīties no nejaušas pikšķerēšanas vietņu apmeklēšanas. Tās pastāv un var būt ļoti pārliecinošas.';
   }
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb2(Object contactSupport) {
-    return 'Ja neesat pārliecināts par kādu lietotāju, vienmēr varat saņemt palīdzību $contactSupport.';
+    return 'Ja neesat pārliecināts par kādu lietotāju, vienmēr varat $contactSupport.';
   }
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb28722Sbcontact8722Sbsupport => 'Sazinieties ar atbalsta dienestu';
+  String get guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb28722Sbcontact8722Sbsupport => 'sazināties ar atbalsta dienestu';
 
   @override
-  String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Reklāmas iestatīšana';
+  String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Sludinājuma iestatīšana';
 
   @override
   String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
@@ -3142,7 +3142,7 @@ class I18nLv extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb1(Object appName, Object assetName) {
-    return 'Atbalsts <br/><br/>$appName izskata strīdus, pamatojoties uz tirdzniecības dalībnieku sniegtajiem pierādījumiem un viņu reputāciju. <br/><br/>Strīdus var sākt pēc tam, kad maksājums ir atzīmēts kā pabeigts. <br/><br/>Pēc darījuma pabeigšanas $appName darījumu uzskata par pabeigtu, un to nevar apstrīdēt. <br/><br/> Ja $assetName pārdevējs neatbild, $appName pabeigs darījumu, ja pircējs var iesniegt derīgu maksājuma apliecinājumu. <br/><br/>Ja pircējs pēc darījuma uzsākšanas nereaģē, $appName atbalsts šķīrējtiesas obligāciju atdos pārdevējam.';
+    return '<br/><br/>$appName atbalsts izskata strīdus, pamatojoties uz darījuma dalībnieku sniegtajiem pierādījumiem un viņu reputāciju. <br/><br/>Strīdus var uzsākt pēc tam, kad maksājums ir atzīmēts kā pabeigts. <br/><br/>Pēc darījuma pabeigšanas $appName darījumu uzskata par galēju, un to nevar apstrīdēt. <br/><br/> Ja $assetName pārdevējs neatbild, $appName pabeigs darījumu, ja pircējs var iesniegt derīgu maksājuma apliecinājumu. <br/><br/>Ja pircējs pēc darījuma uzsākšanas nereaģē, $appName atbalsts šķīrējtiesas obligāciju atgriezīs pārdevējam.';
   }
 
   @override
@@ -3160,7 +3160,7 @@ class I18nLv extends I18n {
   String get guide250Sbtrade250Sbtitle57Sbagoradesk => 'Ievads par kriptovalūtas tirdzniecību';
 
   @override
-  String get guide250Sbxmr250Sbcard8722Sbfour250Sbtitle => '4. Uzlabotas metodes, kā palikt anonīmam, izmantojot šo Monero iegādes metodi';
+  String get guide250Sbxmr250Sbcard8722Sbfour250Sbtitle => '4. Niansētas metodes, kā palikt anonīmam, izmantojot šo Monero iegādes metodi';
 
   @override
   String get guide250Sbxmr250Sbcard8722Sbthree250Sbtitle => '3. Monero pirkšana anonīmi ar skaidru naudu';
@@ -3169,7 +3169,7 @@ class I18nLv extends I18n {
   String get guide250Sbxmr250Sbtitle => 'Kā anonīmi iegādāties Monero';
 
   @override
-  String get guides250Sbread8722Sbmore => 'Tālāka lasīšana';
+  String get guides250Sbread8722Sbmore => 'Lasīt tālāk';
 
   @override
   String get home250Sbgreeting250Sbanywhere => 'Jebkur.';
@@ -3184,11 +3184,11 @@ class I18nLv extends I18n {
 
   @override
   String home250Sbgreeting250Sbsell8722Sbmonero(Object assetName) {
-    return 'Pārdodu $assetName.';
+    return 'Pārdodiet $assetName.';
   }
 
   @override
-  String get home250Sbgreeting250Sbsignup8722Sbbtn => 'Reģistrēties bez maksas';
+  String get home250Sbgreeting250Sbsignup8722Sbbtn => 'Reģistrējieties bez maksas';
 
   @override
   String get home250Sbnewsfeed250Sbtitle => 'Jaunākās ziņas';
@@ -3204,273 +3204,273 @@ class I18nLv extends I18n {
 
   @override
   String homepage8722Sblocation250Sbtitle(Object location) {
-    return 'Rāda reklāmas formātā $location';
+    return 'Rāda sludinājumus $location';
   }
 
   @override
-  String get homepage250Sbagora250Sbcoin8722Sbtrading8722Sbtitle => 'Tirgojiet Bitcoins';
+  String get homepage250Sbagora250Sbcoin8722Sbtrading8722Sbtitle => 'Tirgojiet Bitcoin';
 
   @override
   String homepage250Sbno8722Sbresults8722Sb0(Object asset, Object country) {
-    return 'Vietnē $country vēl nav aktīvu $asset reklāmu...';
+    return '$country nav aktīvu $asset sludinājumu... pagaidām.';
   }
 
   @override
   String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Jūs varat būt pirmais $post_an_ad šādās kategorijās:';
+    return 'Jūs varat būt pirmais, kas $post_an_ad šādās kategorijās:';
   }
 
   @override
-  String get homepage250Sbno8722Sbresults8722Sb18722Sbpost8722Sban8722Sbad => 'ievietot sludinājumu';
+  String get homepage250Sbno8722Sbresults8722Sb18722Sbpost8722Sban8722Sbad => 'ievieto sludinājumu';
 
   @override
-  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb0 => 'Ja darījums ir redzams bloku pārlūkā, tas nozīmē, ka darījums ir veiksmīgi nosūtīts. Ja jūs to neredzat saņēmējā pusē, problēma ir jūsu pusē. Iespējams, problēma ir sinhronizācijā vai arī izmantojat novecojušu maka programmatūru.';
+  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb0 => 'Ja pārskaitījums ir redzams bloku pārlūkā, tas nozīmē, ka pārskaitījums ir veiksmīgi nosūtīts. Ja jūs to neredzat saņēmējā pusē, problēma ir jūsu pusē. Iespējams, problēma ir sinhronizācijā vai arī izmantojat novecojušu maka programmatūru.';
 
   @override
-  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb1 => 'Izmēģiniet šos ieteikumus, lai atceltu sinhronizāciju:';
+  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb1 => 'Izmēģiniet šos ieteikumus, lai iekustinātu sinhronizāciju:';
 
   @override
-  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb2 => 'Vai arī mēģiniet izmantot citu maka lietotni vai citu interneta savienojumu.';
+  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb2 => 'Varat arī mēģināt izmantot citu maka lietotni vai citu interneta savienojumu.';
 
   @override
   String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtitle => 'Kāpēc es neredzu XMR savā makā?';
 
   @override
-  String get keywords => 'pirkt monero xmr skaidras naudas kredītkarti usd eiro mārciņa vietējais bankas pārskaitījums pārdot anonīmi kriptovalūtu';
+  String get keywords => 'pirkt monero xmr skaidra nauda kredītkarte usd eiro mārciņa vietējais bankas pārskaitījums pārdot anonīmi kriptovalūta';
 
   @override
-  String get keywords57Sbagoradesk => 'pirkt bitcoin btc monero xmr skaidras naudas kredītkarte usd eiro mārciņa vietējais bankas pārskaitījums pārdot anonīmi kriptovalūtu';
+  String get keywords57Sbagoradesk => 'pirkt bitcoin btc monero xmr skaidra nauda kredītkarte usd euro mārciņa vietējais bankas pārskaitījums pārdot anonīmi kriptovalūta';
 
   @override
-  String get knowledge250Sbatomic250Sb0250Sbtext => '<p>Dzenoties pēc decentralizācijas un patiesi bezatļautas sistēmas, dažas lietas kriptovalūtu telpā ir tik iekārotas kā decentralizētas biržas un atomu mijmaiņas darījumi. Kopš darbības sākuma Monero ir cīnījies, lai īstenotu atomu mijmaiņas darījumus, jo privātuma līdzekļi rada unikālas problēmas, mēģinot izstrādāt protokolu.</p>\n\n<p>Bet vispirms dublēsim. Kas ir atomu mijmaiņas darījumi? Atomu mijmaiņas darījums ir protokols, ar kuru dažādās blokķēdēs var apmainīties ar divām dažādām kriptovalūtām neuzticamā veidā bez starpniekiem. Tas nozīmē, ka, ja kāds vēlētos apmainīt kriptovalūtu A pret kriptovalūtu B, viņš to varētu izdarīt bez centralizētas vai decentralizētas maiņas. Kā varētu iedomāties, tas prasa ievērojamu izpēti, un visas tehniskās detaļas, kas to padara iespējamu, kļūst diezgan sarežģītas. Atkal LocalMonero ir šeit, lai palīdzētu un sniegtu vienkāršu skaidrojumu parastajam cilvēkam.</p>\n\n<p>Lai sāktu, apskatīsim vienkāršāko atomu mijmaiņas veidu, ko ieviesis Bitcoin. Ja kāds vēlas apmainīt Bitcoin pret citu monētu, kas izmanto to pašu hash time lock kontrakta tehnoloģiju, viņš to var izdarīt šādā veidā. Alisei ir Bitcoin (BTC), bet viņš vēlas Litecoin (LTC), un Bobs ir LTC, bet vēlas BTC. Viņi nolemj veikt atomu apmaiņu, lai katrs saņemtu monētu, kuru vēlas. Alise nosūta savu BTC uz īpašu adresi, izmantojot skriptus, kas bloķē līdzekļus, lai pat viņa nevarētu tai piekļūt. Jūs varat to iedomāties tāpat kā Alise ieliek savu BTC slēdzenes kastē. Kad slēdzenes kaste ir izgatavota, viņa saņem atslēgu un nosūta šīs atslēgas jauktu Bobam. Tagad Bobam nav pašas atslēgas, tikai hash, tāpēc viņš vēl nevar piekļūt līdzekļiem.</p>\n\n<p>Bobs izmanto šo hash kā sēklu, no kuras viņš ģenerē savu bloķēšanas kastīti, un nosūta savu LTC tur, kur tas arī tiek bloķēts. Tā kā Alises atslēgas sajaukums tika izmantots kā sēkla, no kuras tika izgatavota Boba slēdzenes kaste, viņa var izmantot savu atslēgu, lai pieprasītu LTC Boba slēdzenes kastē. Viņas atslēga der! Bet, izmantojot matemātikas voodoo maģiju, kad viņa izmanto savu atslēgu, lai atvērtu LTC slēdzeni, viņa atklāj atslēgu Bobam, kurš pēc tam var to izmantot, lai pieprasītu BTC, ko viņa ievietoja savā slēdzenes kastē. Tādā veidā, bez starpnieka, Alise un Bobs ir veiksmīgi apmainījuši savus īpašumus.</p>\n\n<p>Taču ir neliela problēma. Ko darīt, ja Alise nosūta uz savu slēdzenes kasti, un Bobs nolemj, ka vairs nevēlas tirgoties. Tagad, tā kā Alise nevar piekļūt savam BTC, ko viņa bloķēja, un Bobs nepabeigs savu darījuma daļu, Alise vienkārši zaudē savu naudu uz visiem laikiem. Par laimi, Bitcoin ir neliela tehnoloģija, ko sauc par atmaksas darījumiem, un tāpēc pēc kāda laika, ja Bobs nav pieprasījis BTC, skriptos ir iebūvēts atteices drošinātājs, kurā BTC automātiski atgriezīsies Alisei. Tas bija galvenais Monero atomu mijmaiņas darījumu ieviešanas ātruma palielinājums. Monero <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">zvana parakstu privātuma tehnoloģijas </a> dēļ darījuma sūtītājs vienmēr nav skaidrs. Kā protokols var veikt atmaksas darījumu, ja pat tas nezina, no kurienes tika veikts darījums?</p>\n\n<p>2017. gadā neliela pētnieku grupa izklāstīja atšķirīgu metodi, ar kuras palīdzību atomu mijmaiņas darījumi darbotos Monero. Pēc vairāku gadu pilnveidošanas pētnieki pabeidza procesu, kurā Monero varētu veikt atomu mijmaiņas darījumus ar Bitcoin, pat bez atmaksas darījumiem.</p>\n\n<p>Tāpat kā ar daudzām šāda līmeņa tehniskās sarežģītības lietām, mūsu skaidrojums pārlieku vienkāršos dažas lietas, lai nodotu ideju, taču tas joprojām sniegs stabilu priekšstatu par mehānismiem, ar kuriem šis process darbosies.</p>\n\n<p>Gan Alisei (kurai ir XMR un vēlas BTC), gan Bobam (kuram ir BTC un kurš vēlas XMR) ir jālejupielādē un jāpalaiž programma, kas atbalsta atomu mijmaiņas darījumu. To var ieviest makos, decentralizētās apmaiņās vai īpašās, īpašās programmās, taču programmatūrai ir jādarbojas atomu mijmaiņas protokolam. Pirmajā solī Alises un Boba klienti izveido savienojumu viens ar otru un izveido vairākus kopīgus noslēpumus un atslēgas. Šajā darbībā tiek izveidota jauna Monero adrese, kurā Alisei ir viena atslēgas puse, bet Bobam - otra. Tomēr Monero vēl nav, tāpēc nav ko tērēt. Pēdējā lieta, kas jāatzīmē saistībā ar šo adresi, ir tāda, ka viņiem abiem ir šī maka skata atslēga, lai viņi abi varētu ieskatīties iekšā, lai redzētu, vai Monero ierodas un kad tas ierodas.</p>\n\n<p>Otrajā darbībā Bobs nosūta savu BTC uz īpašu adresi, kas ir līdzīga Bitcoin atomu mijmaiņas protokolam, par kuru mēs jau runājām. Kad Alise redz, ka BTC ierodas šajā blokķēdē, viņa nosūta savu Monero uz Monero adresi, uz kuru viņai un Bobam ir viena atslēgas puse. Bobs var pārbaudīt, vai Monero ir ieradies, jo viņam ir arī skata atslēga, un, tiklīdz viņš redz, ka Monero ir droši ievietots makā, viņš nosūta Alisei atslēgas gabalu, kas ļaus viņai izņemt Bitcoin. Līdzīgi kā citā protokolā, Bitcoin pieprasīšanas process atklāj Bobam pusi no Monero atslēgas. Tagad Bobam ir abas puses, tāpēc viņš var pieprasīt Monero, savukārt Alisei ir tikai viņas puse, tāpēc viņa nevar mēģināt to paņemt pirms viņa.</p>\n\n<p> Tātad, ja aplūkojat visu šo informāciju un joprojām esat mazliet neizpratnē par to, kā Monero varēja apiet atmaksas darījumu problēmu, atbilde ir pavisam vienkārša. Tā kā Monero pašam nav atmaksas darījumu, lasītājam vajadzētu pamanīt, ka vispirms tiek nosūtīts Bitcoin (kuram ir atmaksas darījumi), un tikai pēc tam, kad ir pārbaudīts, ka tas ir blokķēdē, tiek nosūtīts Monero. Tas ļauj Monero izmantot Bitcoin spēju skriptēt atmaksas darījumos un izmantot to priekšrocības, pašam neizmantojot šīs iespējas.</p>\n\n<p>Atomu maiņa tagad ir pabeigta, taču no šejienes Bobam ir dažas iespējas savam nesen pieprasītajam XMR. Viņš var izmantot šo Monero maku tādu, kāds tas ir, vai pārvietot XMR uz citu maku, kas viņam jau pieder. Bobs, visticamāk, pārvietos Monero uz citu maku, jo Alisei joprojām ir apskates atslēga un tā var redzēt iekšā.</p>\n\n<p>Šī protokola skaistums ir tāds, ka tas joprojām ir diezgan jauns, un tajā ir daudz vietas optimizācijai. Tas ir arī diezgan elastīgs savā arhitektūrā, tāpēc ieviešanai citos makos vai decentralizētajās apmaiņās ir jābūt vienkāršai un precīzi jāatbilst to esošajai arhitektūrai.</p>';
+  String get knowledge250Sbatomic250Sb0250Sbtext => '<p>Tiecoties pēc decentralizācijas un pilnīgas bezatļauju sistēmas, ne daudzas lietas kriptovalūtu telpā ir tik iekārotas kā decentralizētas biržas un atomiskās apmaiņas. Kopš darbības sākuma Monero ir cīnījies, lai īstenotu atomisko apmaiņu, jo privātuma funkcijas rada specifiskas problēmas, mēģinot izstrādāt protokolu.</p>\n\n<p>Bet vispirms atkāpsimies. Kas ir atomiskā apmaiņa? Atomiskā apmaiņa ir protokols, ar kuru dažādās blokķēdēs var apmainīties ar divām dažādām kriptovalūtām bezuzticības veidā bez starpniekiem. Tas nozīmē, ka, ja kāds vēlētos apmainīt kriptovalūtu A pret kriptovalūtu B, viņš to varētu izdarīt bez centralizētas vai decentralizētas biržas. Kā varētu iedomāties, tas prasa ievērojamu izpēti, un visas tehniskās detaļas, kas to padara iespējamu, kļūst diezgan sarežģītas. Atkal LocalMonero ir šeit, lai palīdzētu un sniegtu vienkāršu skaidrojumu parastajam cilvēkam.</p>\n\n<p>Lai sāktu, apskatīsim vienkāršāko atomiskās apmaiņas veidu, ko ieviesis Bitcoin. Ja kāds vēlas apmainīt Bitcoin pret citu monētu, kas izmanto to pašu hash time lock kontrakta tehnoloģiju, viņš to var izdarīt šādā veidā. Alisei ir Bitcoin (BTC), bet viņa vēlas Litecoin (LTC); Bobam ir LTC, bet viņš vēlas BTC. Viņi nolemj veikt atomisko apmaiņu, lai katrs saņemtu monētu, kuru vēlas. Alise nosūta savu BTC uz īpašu adresi, izmantojot skriptus, kas bloķē līdzekļus, lai pat viņa nevarētu tiem piekļūt. Jūs varat to iedomāties šādi: Alise ieliek savu BTC slēdzamā kastē. Kad kaste ir izgatavota, viņa saņem atslēgu un nosūta šīs atslēgas hash Bobam. Tagad Bobam nav pašas atslēgas, tikai hash, tāpēc viņš vēl nevar piekļūt līdzekļiem.</p>\n\n<p>Bobs izmanto šo hash kā sēklu, no kuras viņš ģenerē savu bloķēšanas kastīti, un nosūta savu LTC uz to, kur tas arī tiek bloķēts. Tā kā Alises atslēgas hash tika izmantots kā sēkla, no kuras tika izgatavota Boba slēdzamā kaste, viņa var izmantot savu atslēgu, lai pieprasītu LTC Boba kastē. Viņas atslēga der! Bet, izmantojot matemātikas voodoo maģiju, kad viņa izmanto savu atslēgu, lai atvērtu LTC slēdzeni, viņa atklāj atslēgu Bobam, kurš pēc tam var to izmantot, lai pieprasītu BTC, ko viņa ievietoja savā kastē. Tādā veidā, bez starpnieka, Alise un Bobs ir veiksmīgi apmainījuši savus līdzekļus.</p>\n\n<p>Taču ir neliela problēma. Ko darīt, ja Alise nosūta uz savu kasti, un Bobs nolemj, ka vairs nevēlas tirgoties? Tagad, tā kā Alise nevar piekļūt savam BTC, ko viņa bloķēja, un Bobs nepabeigs savu darījuma daļu, Alise vienkārši zaudē savu naudu uz visiem laikiem. Par laimi, Bitcoin ir neliela tehnoloģija, ko sauc par atmaksas pārskaitījumiem, un tāpēc pēc kāda laika, ja Bobs nav pieprasījis BTC, skriptos ir iebūvēts atteices drošinātājs, kurā BTC automātiski tiks atgriezts Alisei. Tas bija galvenais Monero atomiskās apmaiņas ieviešanas kavēklis. Monero <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">gredzenveida parakstu privātuma tehnoloģijas </a> dēļ pārskaitījuma sūtītājs nav zināms. Kā protokols var veikt atmaksas pārskaitījumu, ja pat tas nezina, no kurienes tika veikts pārskaitījums?</p>\n\n<p>2017. gadā neliela pētnieku grupa izklāstīja atšķirīgu metodi, ar kuras palīdzību atomiskās apmaiņas darījumi darbotos Monero. Pēc vairāku gadu pilnveidošanas pētnieki pabeidza procesu, kurā Monero varētu veikt atomiskās apmaiņas darījumus ar Bitcoin, pat bez atmaksas pārskaitījumiem.</p>\n\n<p>Tāpat kā ar daudzām šāda līmeņa tehniskās sarežģītības lietām, mūsu skaidrojums pārlieku vienkāršo dažas lietas, taču tas joprojām sniegs stabilu priekšstatu par mehānismiem, uz kuriem šis process balstīts.</p>\n\n<p>Gan Alisei (kurai ir XMR un vēlas BTC), gan Bobam (kuram ir BTC un kurš vēlas XMR) ir jālejupielādē un jāpalaiž programma, kas atbalsta atomiskās apmaiņas darījumu. To var ieviest makos, decentralizētās apmaiņās vai īpašās programmās, taču programmatūrā ir jādarbojas atomiskās apmaiņas protokolam. Pirmajā solī Alises un Boba programmatūras izveido savienojumu viena ar otru un izveido vairākus kopīgus noslēpumus un atslēgas. Šajā darbībā tiek izveidota jauna Monero adrese, kurā Alisei ir viena atslēgas puse, bet Bobam - otra. Tomēr Monero vēl nav un arī nav, ko tērēt. Pēdējā lieta, kas jāatzīmē saistībā ar šo adresi, ir tāda, ka viņiem abiem ir šī maka skata atslēga, lai viņi abi varētu ieskatīties iekšā un redzēt, vai Monero pienāk un kad tas pienāk.</p>\n\n<p>Otrajā darbībā Bobs nosūta savu BTC uz īpašu adresi, kas ir līdzīga Bitcoin atomiskās apmaiņas protokolam, par kuru mēs jau runājām. Kad Alise redz, ka BTC ierodas šajā blokķēdē, viņa nosūta savu Monero uz Monero adresi, uz kuru viņai un Bobam ir viena atslēgas puse. Bobs var pārbaudīt, vai Monero ir pienācis, jo viņam ir arī skata atslēga, un, tiklīdz viņš redz, ka Monero ir droši ievietots makā, viņš nosūta Alisei atslēgas gabalu, kas ļaus viņai izņemt Bitcoin. Līdzīgi kā citā protokolā, Bitcoin pieprasīšanas process atklāj Bobam pusi no Monero atslēgas. Tagad Bobam ir abas puses, tāpēc viņš var pieprasīt Monero, savukārt Alisei ir tikai viņas puse, tāpēc viņa nevar mēģināt to paņemt pirms viņa.</p>\n\n<p> Tātad, ja aplūkojat visu šo informāciju un joprojām esat mazliet neizpratnē par to, kā Monero varēja apiet atmaksas pārskaitījumu problēmu, atbilde ir pavisam vienkārša. Tā kā Monero pašam nav atmaksas pārskaitījumu, lasītājam vajadzētu pamanīt, ka vispirms tiek nosūtīts Bitcoin (kuram ir atmaksas pārskaitījumi), un tikai pēc tam, kad ir pārbaudīts, ka tas ir blokķēdē, tiek nosūtīts Monero. Tas ļauj Monero izmantot Bitcoin spēju programmēt atmaksas darījumus un izmantot to priekšrocības, pašam neizmantojot šīs iespējas.</p>\n\n<p>Atomiskā apmaiņa tagad ir pabeigta, taču no šejienes Bobam ir dažas iespējas savam nesen pieprasītajam XMR. Viņš var izmantot šo Monero maku tādu, kāds tas ir, vai pārvietot XMR uz citu maku, kas viņam jau pieder. Bobs, visticamāk, pārvietos Monero uz citu maku, jo Alisei joprojām ir apskates atslēga un viņa var ieskatīties.</p>\n\n<p>Šī protokola skaistums ir tajā, ka tas joprojām ir diezgan jauns, un tajā ir daudz vietas uzlabojumiem. Tas ir arī diezgan elastīgs savā uzbūvē, tāpēc ieviešana citos makos vai decentralizētajās apmaiņās būtu vienkārša un saderīga ar to esošo uzbūvi.</p>';
 
   @override
-  String get knowledge250Sbatomic250Sbdescription => 'Dažas lietas ir tik iekārotas kriptovaldē kā atomu mijmaiņas darījumi. Nesen pētnieki ir pabeiguši veidu, kā XMR varētu veikt atomu mijmaiņas darījumus ar BTC.';
+  String get knowledge250Sbatomic250Sbdescription => 'Ne daudzas lietas ir tik iekārotas kriptovalūtu telpā kā atomiskās apmaiņas. Nesen pētnieki ir izstrādājuši veidu, kā XMR var veikt atomiskās apmaiņas darījumus ar BTC.';
 
   @override
-  String get knowledge250Sbatomic250Sbtitle => 'Kā Monero darbosies atomu mijmaiņas darījumi';
+  String get knowledge250Sbatomic250Sbtitle => 'Kā Monero darbosies atomiskā apmaiņa';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Piezīme:</b> Ir ļoti ieteicams lasītājam izlasīt mūsu rakstus <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\"> \"Kāpēc Monero ir astes emisija\"</a> un <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\"> \"Monero ieguve: kas padara nejaušu X tik īpašs”</a>. Šis raksts ir balstīts uz tajā ietvertajiem jēdzieniem.</i></p>\n\n<p>Kad cilvēki apspriež problēmas ar blokķēdi, viens no pirmajiem uznirstošajiem vārdiem būs “mērogošana”. Nav noslēpums, ka blokķēdes nav labi mērogotas, taču lielākā daļa cilvēku nezina, kāpēc.</p>\n\n<p>Patiesība ir tāda, ka mērogošana patiesībā ir vispārīgs termins, kas aptver divas dažādas kategorijas: protokola atbalsts un tehnoloģiskais atbalsts noteiktā laika brīdī. Šajā rakstā mēs koncentrēsimies uz vienu — protokola atbalsts būtībā ir mērs, cik transakciju protokols var apstrādāt noteiktā laikā.</p>\n\n<p>Bitcoin ir bloka lieluma ierobežojums, kas nozīmē, ka, tiklīdz blokā ir iekļauts pietiekami daudz darījumu, visiem papildu darījumiem būs jāgaida rindā uz nākamo bloku. Noderīga līdzība būtu domāšana par vilcienu. Vilciens piestāj pie stacijas, un rindā esošie iestājas. Kad vilciens ir pilns, ikvienam, kas paliks ārpusē, būs jāgaida nākamais.</p>\n\n<p>Bitcoin izmanto maksas, lai noteiktu, kurš iekļūst blokā vai nē. Atgriežoties pie vilciena analoģijas, var iedomāties, ka viens potenciālais pasažieris, kurš drīz tiks atstāts, piedāvā vilciena inženierim piecus dolārus, lai iedotu viņam vietu. Citi pasažieri seko šim piemēram, un galu galā notiek solīšanas karš, lai noskaidrotu, kurš saņems kuras vietas. Vadītāja ziņā ir izlemt, vai viņš vēlas ievērot rindas kārtības politiku, taču viņa finansiālajās interesēs ir maksimāli palielināt savus ienākumus, piesaistot visaugstākās cenas solītājus.</p>\n\n<p>Šajā analoģijā kalnrači ir vilcienu vadītāji. Viņi blokā var iekļaut jebkurus darījumus, kurus viņi vēlas, taču parasti viņi izvēlas tos, kuriem ir visaugstākās maksas.</p>\n\n<p>Alternatīvi, ja bloki nav ļoti pilni, cilvēkiem nav stimula maksāt lielas maksas, jo ir daudz brīvu sēdvietu.</p>\n\n<p> 2017. gada kriptovalūtas uzplaukuma laikā Bitcoin tika pārpludināts ar darījumiem, un maksas pieauga tiem, kas vēlējās tikt iekļauti nākamajā blokā vai jebkurā tuvākajā nākotnē. Tie, kuri nevēlējās maksāt augstas nodevas, redzēja, ka viņu darījumi tika atbīdīti uz stundām, dienām vai pat vispār izkrita no rindas.</p>\n\n<p> Šis bija satraucošs ieskats par to, kā Bitcoin veiksies, ja notiktu bieži runātais par “masveida adopciju”. Ja Bitcoin izmantotu masu, viss būtu vēl sliktāk nekā 2017. gadā, un Bitcoin būtu nepieejams nevienam, izņemot turīgos, vienkārši tāpēc, ka caurlaidspēja ir maza fiksēta bloka izmēra dēļ, izraisot maksas tirgus pārņemšanu. </p>\n\n<p> Monero to paredzēja un vēlējās darīt kaut ko citu. Tātad Monero izstrādātāji ieviesa dinamisku bloka izmēru.</p>\n\n<p> Būtībā Monero ir arī bloka izmēra vāciņš, taču tas ir mīksts vāciņš. Kad gaidīšanas darījumu rinda kļūst pārāk gara, kalnrači var palielināt bloku izmēru. Izmantojot mūsu vilciena analoģiju, varat iedomāties vairāk vilcienu vagonu pievienošanu, lai tie ietilptu papildu pasažieriem. Kad rinda ir iztukšota, turpmāk bloki samazinās līdz sākotnējam izmēram.</p>\n\n<p>Ja šī ideja šķiet gudra, šķiet pamatoti jautāt, kāpēc Monero ir vienīgā kriptovalūta, kas to ir ieviesusi. Kāpēc gan to nepievienot Bitcoin, lai apturētu caurlaidspējas problēmas?</p>\n\n<p>Diemžēl tas nav iespējams. Tam ir vairāki iemesli, un mēs darīsim visu iespējamo, lai izskaidrotu.</p>\n\n<p> Kalnraču interesēs vienmēr ir lieli bloki. Izmantojot lielus blokus, viņi var iekļauties vairāk darījumu un nopelnīt vairāk naudas no maksām, kā arī no bloka atlīdzības. Tas var izraisīt surogātpasta uzbrukumus, kad kāds nosūta daudz mazu darījumu par nelielu samaksu, lai uzpūstu ķēdi. Miner\'s vienkārši palielinātu bloka izmēru, iekļaujot tos visus, jo nauda ir nauda, neatkarīgi no tā, cik maza. Tas radītu nemainīgi lielus blokus ar nelielu ekonomisku labumu. Bitcoin to atrisina, mākslīgi ierobežojot bloka lielumu, tādējādi radot maksas tirgu. Surogātpasta uzbrucējiem būtu jāmaksā citiem lietotājiem maksas, un tas vairs nav lēts. Taču tas nozīmē, ka bloki kļūst pilni, atstājot dažus darījumus gaidīšanas režīmā, kā minēts iepriekš.</p>\n\n<p>Kā Monero var nodrošināt dinamiskus bloku izmērus, bet izvairīties no surogātpasta uzbrukumiem? Atbilde ir vienkārša, bet gudra. Ja bloks ir lielāks nekā parasti, tiek piemērots sods par atlīdzību par bloku. Ja kalnracis vēlas palielināt bloka izmēru, atlīdzība, ko viņš saņem par šī bloka atrašanu, būs mazāka nekā citādi. Tātad tie palielinās bloka izmēru tikai tad, kad lietotāju samaksātās darījumu maksas pārsniegs zaudēto bloka atlīdzības daļu. Piemēram, ja kalnracis zaudētu 0,5 XMR, palielinot bloka atlīdzību, un samaksāto darījumu maksu summa būtu 0,4 XMR, tad, palielinot izmēru, būtu tīrie zaudējumi 0,1 XMR apmērā. nedari to. Un otrādi, ja kopējās darījumu maksas saskaitītu līdz 0,7 XMR, tīrā peļņa būtu 0,2 XMR, lai gan viņi zaudēs 0,5 XMR no bloka atlīdzības soda, tāpēc kalnracis palielinās izmēru.</p>\n\n<p>Šie dinamiskie bloki ļauj tīklam organiski augt, mākslīgi neierobežojot bloka izmēru, lai izveidotu piespiedu maksas tirgu, vienlaikus izvairoties no surogātpasta uzbrukumiem. Ir vēl vairāki leņķi, no kuriem mēs varam aplūkot šo ideju, un vairāk iemeslu, kāpēc to nebūtu iespējams pievienot Bitcoin, taču pagaidām mēs ceram, ka lasītājam ir izpratne par to, kā Monero apiet vairākas no Bitcoin problēmām un tā atvasinājumi un to, kā tas plāno palielināt savu caurlaidspēju nākotnē.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Piezīme:</b> Iepriekš ieteicams izlasīt mūsu rakstus <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\"> \"Kāpēc Monero ir astes emisija\"</a> un <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\"> \"Monero mainošana: ar ko RanomX ir tik īpašs”</a>. Šis raksts ir balstīts uz tajos ietvertajiem jēdzieniem.</i></p>\n\n<p>Kad cilvēki apspriež problēmas ar blokķēdi, viens no pirmajiem uznirstošajiem vārdiem būs “paplašināšana”. Nav noslēpums, ka blokķēdes nav viegli paplašināmas, taču lielākā daļa cilvēku nezina, kāpēc.</p>\n\n<p>Paplašināšana patiesībā ir vispārīgs termins, kas aptver divas dažādas kategorijas: protokola atbalsts un tehnoloģiskais atbalsts noteiktā laika brīdī. Šajā rakstā mēs koncentrēsimies uz vienu — protokola atbalsts būtībā ir mērs, cik pārskaitījumu protokols var apstrādāt noteiktā laikā.</p>\n\n<p>Bitcoin ir bloka lieluma ierobežojums, kas nozīmē, ka, tiklīdz blokā ir iekļauts pietiekami daudz pārskaitījumu, visiem papildu pārskaitījumiem būs jāgaida rindā uz nākamo bloku. Noderīga līdzība būtu domāšana par vilcienu. Vilciens piestāj pie stacijas, un rindā esošie iestājas. Kad vilciens ir pilns, ikvienam, kas paliks ārpusē, būs jāgaida nākamais.</p>\n\n<p>Bitcoin izmanto maksas, lai noteiktu, kurš iekļūst blokā vai nē. Atgriežoties pie vilciena analoģijas, var iedomāties, ka viens potenciālais pasažieris, kurš drīz tiks atstāts, piedāvā vilciena vadītājam piecus dolārus, lai iedotu viņam vietu. Citi pasažieri seko šim piemēram, un galu galā notiek solīšanas karš, lai noskaidrotu, kurš saņems kuras vietas. Vadītāja ziņā ir izlemt, vai viņš vēlas ievērot rindas kārtības politiku, taču viņa finansiālajās interesēs ir maksimāli palielināt savus ienākumus, piesaistot visaugstākās cenas solītājus.</p>\n\n<p>Šajā analoģijā maineri ir vilcienu vadītāji. Viņi blokā var iekļaut jebkurus pārskaitījumus, kurus viņi vēlas, un parasti viņi izvēlas tos, kuriem ir visaugstākās maksas.</p>\n\n<p>Savukārt, ja bloki nav pilni, cilvēkiem nav stimula maksāt lielas maksas, jo ir daudz brīvu sēdvietu.</p>\n\n<p> 2017. gada kriptovalūtas uzplaukuma laikā Bitcoin tika pārpludināts ar pārskaitījumiem, un maksas pieauga tiem, kas vēlējās tikt iekļauti nākamajā blokā vai jebkurā tuvākajā nākotnē. Tie, kuri nevēlējās maksāt augstas maksas, redzēja, ka viņu pārskaitījumi tika atbīdīti pa stundām, dienām vai pat vispār izkrita no rindas.</p>\n\n<p> Šis bija satraucošs ieskats par to, kā Bitcoin veiktos, ja notiktu bieži runātais par “masveida ieviešanu”. Ja Bitcoin izmantotu masveidā, viss būtu vēl sliktāk nekā 2017. gadā, un Bitcoin nebūtu pieejams nevienam, izņemot turīgos, vienkārši tāpēc, ka caurlaides spēja ir maza fiksēta bloka izmēra dēļ, izraisot maksu tirgus pārņemšanu. </p>\n\n<p> Monero to paredzēja un vēlējās darīt kaut ko citu. Tādēļ Monero izstrādātāji ieviesa dinamisku bloka izmēru.</p>\n\n<p> Būtībā Monero ir arī bloka izmēra ierobežojums, taču tas ir elastīgs. Kad pārskaitījumu gaidīšanas rinda kļūst pārāk gara, maineri var palielināt bloku izmēru. Izmantojot mūsu vilciena analoģiju, varat iedomāties vairāk vilcienu vagonu pievienošanu, lai ietilptu papildu pasažieri. Kad rinda ir iztukšota, bloki samazinās līdz sākotnējam izmēram.</p>\n\n<p>Ja šī ideja šķiet gudra, ir pamatoti jautāt, kāpēc Monero ir vienīgā kriptovalūta, kas to ir ieviesusi. Kāpēc gan to neieviest Bitcoin, lai apturētu caurlaides spējas problēmas?</p>\n\n<p>Diemžēl tas nav iespējams. Tam ir vairāki iemesli un tālāk centīsimies tos izskaidrot.</p>\n\n<p> Maineru interesēs vienmēr ir lieli bloki. Izmantojot lielus blokus, viņi var iekļaut vairāk darījumu un nopelnīt vairāk naudas no maksām, kā arī no bloka atlīdzības. Tas var izraisīt spamošanas uzbrukumus, kad kāds nosūta daudz mazu darījumu par nelielu samaksu, lai uzpūstu ķēdi. Maineri vienkārši palielinātu bloka izmēru, iekļaujot tos visus, jo nauda ir nauda, neatkarīgi no tā, cik maza. Tas radītu nemainīgi lielus blokus ar nelielu ekonomisku labumu. Bitcoin to atrisina, mākslīgi ierobežojot bloka lielumu, tādējādi radot maksas tirgu. Spamošanas uzbrucējiem būtu jāmaksā citiem lietotājiem maksas, un tas vairs nav lēti. Taču tas nozīmē, ka bloki kļūst pilni, atstājot dažus pārskaitījumus gaidīšanas režīmā, kā minēts iepriekš.</p>\n\n<p>Kā Monero var nodrošināt dinamiskus bloku izmērus, bet izvairīties no spamošanas uzbrukumiem? Atbilde ir vienkārša, bet gudra. Ja bloks ir lielāks nekā parasti, tiek samazināta atlīdzība par bloku. Ja maineris vēlas palielināt bloka izmēru, atlīdzība, ko viņš saņem par šī bloka atrašanu, būs mazāka nekā parasti. Tātad maineri palielinās bloka izmēru tikai tad, kad lietotāju samaksātās pārskaitījumu maksas pārsniegs zaudēto bloka atlīdzības daļu. Piemēram, ja maineris zaudētu 0,5 XMR, palielinot bloka izmēru, un saņemto darījumu maksu summa būtu 0,4 XMR, tad, palielinot izmēru, būtu tīrie zaudējumi 0,1 XMR apmērā, un viņš to nedarītu. Un otrādi - ja kopējās darījumu maksas sastādītu 0,7 XMR, tīrā peļņa būtu 0,2 XMR, lai gan viņš zaudēs 0,5 XMR no bloka atlīdzības samazināšanas, tāpēc maineris palielinās izmēru.</p>\n\n<p>Šie dinamiskie bloki ļauj tīklam organiski augt, mākslīgi neierobežojot bloka izmēru, lai izveidotu piespiedu maksas tirgu, vienlaikus izvairoties no spamošanas uzbrukumiem. Ir vēl vairāki aspekti, no kuriem mēs varam aplūkot šo ideju, un vairāki iemesli, kāpēc to nebūtu iespējams pievienot Bitcoin. Taču pagaidām mēs ceram, ka lasītājam ir izpratne par to, kā Monero apiet vairākas no problēmām, kas raksturīgas Bitcoin un tā atvasinājumiem, un to, kā tas plāno palielināt savu caurlaides spēju nākotnē.</p>';
 
   @override
-  String get knowledge250Sbblocks250Sbdescription => 'Ikreiz, kad cilvēki apspriež problēmas ar blokķēdi, viens no pirmajiem uznirstošajiem vārdiem būs “mērogošana”. Monero izceļas šīs problēmas risināšanā.';
+  String get knowledge250Sbblocks250Sbdescription => 'Ikreiz, kad cilvēki apspriež problēmas ar blokķēdi, viens no pirmajiem uznirstošajiem vārdiem būs “paplašināšana”. Monero izceļas šīs problēmas risināšanā.';
 
   @override
-  String get knowledge250Sbblocks250Sbtitle => 'Kā Monero atrisināja bloka izmēra problēmu, kas nomoka Bitcoin';
+  String get knowledge250Sbblocks250Sbtitle => 'Kā Monero atrisināja bloka izmēra problēmu, kas vajā Bitcoin';
 
   @override
-  String get knowledge250Sbbtc250Sb0250Sbtext => '<p>Monero ir kriptovalūta, kas augstāk par visu vērtē privātumu, taču lielākā daļa cilvēku nesaprot, ka privātums, kas tiek nodrošināts, izmantojot to, nav ne ložu necaurlaidīgs, ne absolūts noteiktās situācijās. Nekļūdieties — Monero ir tikpat privāts, cik tas kļūst neuzticams, taču ir daži apsvērumi, kas lietotājiem ir jāņem vērā, lai nodrošinātu, ka viņu privātums joprojām ir spēcīgs.</p>\n\n<p>Tas pats attiecas arī uz citām dzīves jomām. Piemēram, varat izvairīties no visiem sociālajiem medijiem, cenšoties saglabāt savu dzīvi privātu, taču, ja pastāvīgi atrodaties kopā ar draugiem, kuri uzņem pašbildes ar jums, subtitros sakiet, ka viņi ir kopā ar jums, un atzīmējiet savu atrašanās vietu, liela daļa jūsu pūļu var būt veltīga. Sociālo mediju konglomerāts joprojām var izveidot jūsu profilu, neskatoties uz to, ka jūs personīgi neesat viņu platformā.</p>\n\n<p>Viena no bieži runātajām situācijām, kad cilvēki neņem vērā visas sekas un potenciāli nopludinātos metadatus, ir jautājums par Bitcoin tirdzniecību ar Monero. Sabiedrībā parasti tiek uzskatīts, ka Monero iegāde ar Bitcoin būs pilnīga tīrīšana un lietotājs saglabā visas privātuma priekšrocības, tiklīdz viņš nonāk Monero, neskatoties uz to, ka tas nāk no caurspīdīgas ķēdes.</p>\n\n<p>Līdzīgā veidā daži uzskata, ka Monero iegūšana no avotiem, kas nav KYC, un KYC, ir tikpat privāti. Domājams, ka tas ir līdzīgi skaidras naudas saņemšanai bankā. Šādā gadījumā banka pati zina jūsu seju un vārdu, kā arī zina, cik daudz jums ir jūsu kontā kopumā un cik daudz jūs izņēmāt skaidru naudu, bet nezina, ko jūs darāt ar skaidru naudu pēc tam. Izmantojot Monero privātuma garantijas, tam vajadzētu būt tieši tā, iegūstot Monero no KYC/AML avota, vai ne?</p>\n\n<p>Nu, ne gluži.</p>\n\n<p>Vispirms spersim ātru soli atpakaļ un definēsim, ko mēs saprotam ar KYC/AML. Šis saīsinājums apzīmē “Pazīsti savu klientu” (KYC)/Pret-Money Laundering (AML) likumus, kas pieprasa biržām un uzņēmumiem apkopot identificējošu informāciju par saviem klientiem. Jo lielāka ir apmainītā naudas summa, jo vairāk informācijas ir nepieciešama. Kā norāda nosaukums, tas viss tiek darīts, lai samazinātu risku, ka cilvēki varētu legalizēt naudu.</p>\n\n<p>Atpakaļ uz Monero. Protams, naudas pārvietošana uz Monero no KYC avota ir astronomiski labāka privātuma nodrošināšanai nekā KYC avota izmantošana, lai iegādātos kaut ko līdzīgu BTC vai jebkurai citai caurspīdīgai monētai, taču joprojām ir jāapsver, kas tiek atklāts un kas tas ir. atklātā informācija var ietekmēt jūsu privātumu un drošību.</p>\n\n<p>Pat pieturoties pie skaidras naudas un bankas scenārija, ja izņemat no bankas lielu summu, jo bankai ir zināmi jūsu dati (tostarp jūsu mājas adrese), kasieris var redzēt, cik daudz ir jūsu kontā, un, iespējams, var padarīt ļaunu. plāni atkarībā no jūsu bagātības. Tas notiek reti, un, tā kā nauda atrodas bankā, nevis jūsu mājā, tas, ko viņi var paveikt šajā scenārijā, ir salīdzinoši mazs. Tas pats neattiecas uz Monero, kuru nenodrošina trešā puse, bet gan jūs pats. Būt savai bankai ne vienmēr ir viegli.</p>\n\n<p> Līdzīgi, pārejot no BTC uz XMR, neatkarīgi no tā, kā tas tiek darīts, paliek pēdas Bitcoin blokķēdē. Lai gan tas patiešām ir mazāk kaitīgs nekā BTC pāriešana uz BTC, jo apmaiņas otrā pusē ir Monero obligātais privātums, ir jāņem vērā sekas, ko var atstāt pēdas. Šīs pēdas savienojas ar vēl lielāku efektu, ja jebkurā procesā būtu iesaistīts KYC.</p>\n\n<p>Iedomājieties scenāriju, kurā par preci vai pakalpojumu tika saņemti netīri Bitcoini, kas ir iespējams tikai Bitcoin radikālās caurspīdīguma dēļ. Jūs nezināt, ka šie Bitcoini ir netīri, jo jums nav tehnikas, lai pārbaudītu katru Bitcoin, tāpēc jūs, būdams kriptogrāfijas lietpratējs, šis fakts nav apmierināts un jums nav naudas. lai samaksātu ķēdes analīzes uzņēmumam, lai tas pārbaudītu jūsu vietā. Tātad, jūs nolemjat apmainīt pret Monero, lai būtu drošībā.</p>\n\n<p>Jūs noguldāt savu Bitcoin biržā un samaināt tos pret Monero, ko pēc tam izņemat savā vietējā makā. Šis scenārijs jau ir nedaudz sarežģīts, jo apmaiņa var atzīmēt jūsu netīros Bitcoins un bloķēt jūsu kontu, un jūs varat tos atgūt vai neatgūt, taču šī piemēra labad mēs pieņemsim, ka tie ļauj notiek maiņa.</p>\n\n<p>Šobrīd, ja valdība sāks interesēties sekot šo Bitcoin pēdām, tā sekos tiem uz biržu, izsauks KYC informāciju par noguldītāju, redzēs, ka tie ir nomainīti pret Monero (aizdomīgi), un klauvēs. pie jūsu durvīm.</p>\n\n<p>Lūdzu, saprotiet, tas nenozīmē, ka jums vajadzētu izvairīties no Bitcoin maiņas uz Monero, lai neizskatītos aizdomīgi. Jūs jau bijāt aizdomīgs, jo pieņēmāt netīro Bitcoin, un, ja jūs to nemainītu, viņi joprojām izmantotu blokķēdes analīzi un joprojām pieklauvētu. Drīzāk šis piemērs tikai uzsver, ka, izmantojot caurspīdīgās monētas, pastāv ievērojams risks, un, mainot to uz privātu, aizstājamu monētu, piemēram, Monero, netiek izdzēstas caurspīdīgajā blokķēdē atstātās pēdas.</p>\n\n<p> Personām, kuras interesējas par savu privātumu, caurspīdīgu blokķēžu izmantošana ir jāsamazina minimāli un jāievēro īpaši piesardzīgi. Kad vien iespējams, ir jāizvairās no KYC, jo šos metadatus joprojām var izmantot, lai izveidotu lietu un uzdotu jautājumus, un, nedod Dievs, šī KYC informācija (kopā ar tirdzniecības informāciju) tiek nopludināta no biržām nekompetences dēļ. Pat ja jūs tikai iegādātos Monero un izņemtu to no biržas, šī nopludinātā informācija joprojām atklātu, cik Monero jums bija un kur jūs atrodaties. Visa informācija, par kuru mēs visi varam piekrist, neviens negribētu vienkārši peldēt kibertelpā.</p>\n\n<p>Rezumējot, lai gan Monero lietošana patiešām novērš daudzus, daudzus uzbrukumus un pēc noklusējuma samazina metadatu noplūdi, lietotājs pats var darīt daudzas lietas, lai galu galā iznīcinātu savu privātumu. Viens no vismazāk apsvērtajiem ir caurspīdīguma ķēdes izmantošanas kā ceļš uz Monero vai KYC avota izmantošana, lai to iegūtu, nemaz nerunājot par abu izmantošanu vienlaikus.</p>\n\n<p>Šis raksts nav domāts, lai radītu bailes, bet gan mudinātu lietotājus kritiski padomāt par saviem lēmumiem un atgādināt viņiem, ka pat vislabākā konfidencialitāte noteiktos apstākļos var būt trausla. Lietotājiem ir jābūt modriem, lai aizsargātu savu privātumu, pieņemot pārdomātus lēmumus par to, ko, kur un no kā iegādāties.</p>';
+  String get knowledge250Sbbtc250Sb0250Sbtext => '<p>Monero ir kriptovalūta, kas augstāk par visu vērtē privātumu, taču lielākā daļa cilvēku nesaprot, ka privātums, kas tiek nodrošināts, izmantojot to, nav ne ložu necaurlaidīgs, ne absolūts noteiktās situācijās. Nekļūdieties — Monero ir tikpat privāts, cik iespējams bezuzticības vidē, taču ir daži apsvērumi, kas lietotājiem ir jāņem vērā, lai nodrošinātu, ka viņu privātums patiešām ir spēcīgs.</p>\n\n<p>Tas pats attiecas arī uz citām dzīves jomām. Piemēram, varat izvairīties no visiem sociālajiem medijiem, cenšoties saglabāt savu dzīvi privātu, taču, ja pastāvīgi atrodaties kopā ar draugiem, kuri uzņem selfijus ar jums, subtitros saka, ka viņi ir kopā ar jums, un atzīmē savu atrašanās vietu, liela daļa jūsu pūļu var būt veltīga. Sociālo mediju konglomerāts joprojām var izveidot jūsu profilu, neskatoties uz to, ka jūs personīgi neesat viņu platformā.</p>\n\n<p>Viena no bieži apspriestajām situācijām, kad cilvēki neņem vērā visas sekas un potenciāli nopludinātos metadatus, ir jautājums par Bitcoin tirdzniecību ar Monero. Sabiedrībā parasti tiek uzskatīts, ka Monero iegāde ar Bitcoin būs pilnīga tīrīšana un lietotājs saglabā visas privātuma priekšrocības, tiklīdz viņš nonāk Monero, neskatoties uz to, ka sāk no caurredzamas ķēdes.</p>\n\n<p>Līdzīgā veidā daži uzskata, ka Monero iegūšana no avotiem, kas nav KYC, un kas ir KYC, ir tikpat privāti. Domājams, ka tas ir līdzīgi skaidras naudas saņemšanai bankā. Šādā gadījumā banka pati zina jūsu seju un vārdu, kā arī zina, cik daudz jums ir jūsu kontā kopumā un cik daudz jūs izņēmāt skaidru naudu, bet nezina, ko jūs darāt ar skaidru naudu pēc tam. Izmantojot Monero privātuma garantijas, tam vajadzētu būt tieši tā, iegūstot Monero no KYC/AML avota, vai ne?</p>\n\n<p>Nu, ne gluži.</p>\n\n<p>Vispirms spersim ātru soli atpakaļ un definēsim, ko mēs saprotam ar KYC/AML. Šis saīsinājums apzīmē “Pazīsti savu klientu” (KYC)/\"Pret naudas atmazgāšanu\" (AML) likumus, kas pieprasa biržām un uzņēmumiem apkopot identificējošu informāciju par saviem klientiem. Jo lielāka ir apmainītā naudas summa, jo vairāk informācijas tiek prasīts. Kā norāda nosaukums, tas viss tiek darīts, lai samazinātu risku, ka cilvēki varētu legalizēt naudu.</p>\n\n<p>Atpakaļ uz Monero. Protams, naudas pārvietošana uz Monero no KYC avota ir astronomiski labāka privātuma nodrošināšanai nekā KYC avota izmantošana, lai iegādātos kaut ko līdzīgu BTC vai jebkurai citai caurspīdīgai monētai, taču joprojām ir jāapsver, kas tiek atklāts un kas tas ir. Atklātā informācija var ietekmēt jūsu privātumu un drošību.</p>\n\n<p>Pat pieturoties pie skaidras naudas un bankas scenārija, ja izņemat no bankas lielu summu, tā kā bankai ir zināmi jūsu dati (tostarp jūsu mājas adrese), kasieris var redzēt, cik naudas ir jūsu kontā, un, iespējams, var perināt ļaunus plānus atkarībā no jūsu bagātības. Tas notiek reti, un, tā kā nauda atrodas bankā, nevis jūsu mājā, tas, ko viņi var paveikt šajā scenārijā, ir salīdzinoši maz. Tas pats neattiecas uz Monero, kuru nenodrošina trešā puse, bet gan jūs pats. Būt savai bankai ne vienmēr ir viegli.</p>\n\n<p> Līdzīgi, pārejot no BTC uz XMR, neatkarīgi no tā, kā tas tiek darīts, paliek pēdas Bitcoin blokķēdē. Lai gan tas patiešām ir mazāk kaitīgi nekā pāriešana no BTC uz BTC, jo apmaiņas otrā pusē ir Monero obligātais privātums, ir jāņem vērā sekas, ko var radīt atstātās pēdas. Šīs pēdas savienojas ar vēl lielāku efektu, ja jebkurā procesā būtu iesaistīts KYC.</p>\n\n<p>Iedomājieties scenāriju, kurā par godīgu preci vai pakalpojumu tika saņemts netīrs Bitcoin, kas ir iespējams tikai Bitcoin radikālās caurredzamības dēļ. Jūs nezināt, ka šis Bitcoin ir netīrs, jo jums nav tehnikas, lai pārbaudītu katru Bitcoin. Jūs, būdams kriptogrāfijas lietpratējs, neesat apmierināts ar šo faktu. Jums nav naudas, lai samaksātu ķēdes analīzes uzņēmumam, lai tas pārbaudītu jūsu vietā. Tātad, jūs nolemjat apmainīt Bitcoin pret Monero, lai būtu drošībā.</p>\n\n<p>Jūs noguldāt savu Bitcoin biržā un samaināt tos pret Monero, ko pēc tam izņemat savā makā. Šis scenārijs jau ir nedaudz sarežģīts, jo apmaiņa var atzīmēt jūsu netīros Bitcoins un bloķēt jūsu kontu, un jūs varat tos atgūt vai neatgūt, taču šī piemēra labad mēs pieņemsim, ka tie ļauj veikt apmaiņu.</p>\n\n<p>Šobrīd, ja valdība sāks sekot šo Bitcoin pēdām, tā sekos tiem uz biržu, izsauks KYC informāciju par noguldītāju, redzēs, ka tie ir nomainīti pret Monero (aizdomīgi), un klauvēs pie jūsu durvīm.</p>\n\n<p>Nepārprotiet - tas nenozīmē, ka jums vajadzētu izvairīties no Bitcoin maiņas uz Monero, lai neizskatītos aizdomīgi. Jūs jau bijāt aizdomīgs, jo pieņēmāt netīro Bitcoin, un, ja jūs to nemainītu, viņi joprojām izmantotu blokķēdes analīzi un joprojām pieklauvētu. Drīzāk šis piemērs tikai uzsver, ka, izmantojot caurredzamas monētas, pastāv ievērojams risks, un, mainot to uz privātu, aizstājamu monētu, piemēram, Monero, netiek izdzēstas caurredzamajā blokķēdē atstātās pēdas.</p>\n\n<p> Personām, kuras rūpējas par savu privātumu, caurredzamu blokķēžu izmantošana ir jāsamazina minimāli un jāievēro īpaša piesardzība. Kad vien iespējams, ir jāizvairās no KYC, jo šos metadatus joprojām var izmantot, lai izveidotu lietu un uzdotu jautājumus, un, nedod Dievs, šī KYC informācija (kopā ar tirdzniecības informāciju) tiek nopludināta no biržām nekompetences dēļ. Pat ja jūs tikai iegādātos Monero un izņemtu to no biržas, šī nopludinātā informācija joprojām atklātu, cik Monero jums bija un kur jūs atrodaties. Informācija, kurai, mēs visi varam piekrist, neviens negribētu ļaut vienkārši peldēt kibertelpā.</p>\n\n<p>Rezumējot, lai gan Monero lietošana patiešām novērš daudzus, daudzus uzbrukumus un pēc noklusējuma samazina metadatu noplūdi, lietotājs pats var darīt daudzas lietas, lai galu galā iznīcinātu savu privātumu. Viens no vismazāk apsvērtajiem ir caurredzamas ķēdes izmantošanas kā ceļš uz Monero vai KYC avota izmantošana, lai to iegūtu, nemaz nerunājot par abu izmantošanu vienlaikus.</p>\n\n<p>Šis raksts nav domāts, lai radītu bailes, bet gan mudinātu lietotājus kritiski padomāt par saviem lēmumiem un atgādināt viņiem, ka pat vislabākā konfidencialitāte noteiktos apstākļos var būt trausla. Lietotājiem ir jābūt modriem, lai aizsargātu savu privātumu, pieņemot pārdomātus lēmumus par to, ko, kur un no kā iegādāties.</p>';
 
   @override
-  String get knowledge250Sbbtc250Sbdescription => 'Daudzi uzskata, ka XMR iegāde ar BTC ir pilnīga tīrīšana un lietotājs saglabā visu privātumu, neskatoties uz to, ka tas nāk no caurspīdīgas ķēdes. Bet vai tas tā ir?';
+  String get knowledge250Sbbtc250Sbdescription => 'Daudzi uzskata, ka XMR iegāde ar BTC ir pilnīga tīrīšana un lietotājs saglabā visu privātumu, neskatoties uz to, ka sāk no caurredzamas ķēdes. Bet vai tas tā ir?';
 
   @override
   String get knowledge250Sbbtc250Sbtitle => 'Vai Bitcoin konvertēšana uz Monero ir tikpat privāta kā Monero pirkšana tieši?';
 
   @override
-  String get knowledge250Sbclsag250Sb0250Sbtext => '<p>Kā protokols, Monero pašlaik ir pastāvīgā inovācijas stāvoklī. Izmantojot pētījumus gan ķēdē, gan ārpus ķēdes risinājumos, Monero kopiena meklē jomas, kuras jāuzlabo, lai padarītu Monero privātāku, mērogojamāku un pieejamāku visiem. Viens no jaunākajiem jauninājumiem ir saistāmās zvana parakstu shēmas MLSAG aizstāšana ar nomaiņu CLSAG, kas nozīmē Concise Linkable Spontaneous Anonymous Group.</p>\n\n<p>Virsmas līmenī CLSAG ieviešana par 25% samazinās izplatītākos 2 ievades, 2 izvades darījumus. Mēs arī redzēsim par 10% mazāku verifikācijas laiku.</p>\n\n<p>Bet kas īsti ir CLSAG? Ko tas dara un kā tas atšķiras no vecās versijas MLSAG? Atvēlēsim minūti, lai atgādinātu sev par to, kāpēc un kā tiek izmantoti gredzenu paraksti, lai mēs varētu labāk izprast šo jēdzienu. Zvana paraksti ļauj veikt neinteraktīvus ievades datus, kas nav atšķirami, izmantojot parakstītāja atlasītās iepriekšējo izvadu anonimitātes kopas. Nespeciālisti runājot, tas ļauj lietotājam slēpt savus darījumā izmantotos rezultātus līdzās nesaistītiem rezultātiem, un viņi to visu var izdarīt, nevienam citam nepiedaloties. Viss, kas jums nepieciešams, ir blokķēdes kopija. Šķiet, ka katrai no šīm izvadēm ir vienlīdz liela varbūtība, ka tā ir patiesā nosūtītā, tādējādi slēpjot metadatus par sūtītāju.</p>\n\n<p>Tomēr tas rada nelielas problēmas. Kā būtu, ja lietotājs izveidotu gredzena parakstu ar visiem mānekļa izvadiem? Kā lai kāds zinātu, ka nezināmajam sūtītājam nav tiesību nosūtīt kādu no tiem? Vai šis lietotājs varētu tērēt viltotu naudu? Atbilde ir nē. Zvana paraksts ietver metodi, lai pierādītu, ka vismaz viens no izvadiem pieder nezināmam sūtītājam, neatklājot, kurš tas ir. Faktiski gan CLSAG, gan MLSAG (turpmāk pazīstami kā SAG) ir daļa no gredzena paraksta, kas to pierāda. Interesanti, ka tajā pašā laikā tas pierāda, ka darījuma summa, kaut arī slēpjas aiz konfidenciāliem darījumiem (RingCT), līdzsvaro. Svarīgi ir tas, ka SAG pierāda divas lietas, ka viena produkcija pieder kādam ringa dalībniekam un ka darījums ir līdzsvarots, un patiesībā ir apmēra un pārbaudes ietaupījumi. Ja tas kļūst mulsinoši, neuztraucieties, mēs drīzumā nonāksim pie jautras un viegli saprotamas analoģijas.</p>\n\n<p>Vecā parakstu shēma MLSAG (multilayed Linkable Spontaneous Anonymous Group) pierāda iepriekš minētās divas lietas gredzena parakstā, taču tā dara katru atsevišķi. Atsevišķu aprēķinu izmantošana parakstīšanas un saistību atslēgām nozīmē lēnākas darbības. Mūsdienīgs dators var veikt šos aprēķinus dažu milisekundēs, kas nešķiet daudz, un vienai transakcijai tā arī nav. Bet, ja ņemam vērā Monero blokķēdē veikto darījumu skaitu un to, ka mezglam, kas sinhronizējas no nulles, būs jālejupielādē un jāpārbauda katrs no tiem, baiti un milisekundes sāk ātri uzkrāties.</p>\n\n<p>CLSAG apvieno matemātiku, kas nepieciešama, lai pierādītu abus vienā, kā arī aprēķina abus vienlaikus, turklāt tas tiek darīts drošā veidā. Ko tas nozīmē drošā veidā? Lai to noskaidrotu un, cerams, padarītu visu jēgu, izpētīsim šo solīto jautro analoģiju.</p>\n\n<p>Pieņemsim, ka jums ir jāiet gan uz pārtikas preču veikalu, gan datortehnikas veikalu, lai paņemtu divas dažādas lietas: pārtiku un toksiskas tīrīšanas ķimikālijas. Jūs nevēlaties, lai tie sajaucas, it kā notiek nelaimes gadījums, ķīmiskās vielas izlīs uz pārtikas, padarot to neēdamu. Jūs nolemjat būt īpaši drošs un braukt no savas mājas uz pārtikas veikalu, nopirkt pārtiku un pēc tam doties atpakaļ uz savu māju. Tikai pēc pārtikas izkraušanas jūs atkal iekāpjat automašīnā, braucat uz datortehnikas veikalu un atpakaļ uz māju ar ķimikālijām. Jūs esat veicis divus atsevišķus braucienus, lai nodrošinātu visu pirkumu drošību. Lai gan tas patiešām ir drošs, tas ir neefektīvs. Tas atspoguļo MLSAG, kur tiek glabātas divas dažādas matemātikas kopas un tiek veiktas divas dažādas “izbraucienus”, lai tās aprēķinātu.</p>\n\n<p>Tomēr jūs nolemjat, ka vēlaties to izdarīt ātrāk. Tas ir pārāk daudz izniekota laika. Protams, to darot vienu vai divas reizes, jūs nenozagsit savu dzīvību, taču, to darot atkal un atkal, stundas sāk pievienoties. Jūs sākat domāt, vai tā vietā varat veikt vienu braucienu. No jūsu mājas, uz pārtikas veikalu, uz datortehnikas veikalu un atpakaļ uz mājām. Jūs nevarat vienkārši iet un iemest visu savā automašīnā. Tas nav droši. Tā vietā jūs savā automašīnā iezīmējat dažādas vietas dažādām lietām un pārliecinieties, ka viss kārtīgi atrodas savās vietās. To darot, jūs varat droši doties vienā braucienā uz abiem veikaliem un turēt lietas tālāk viena no otras. Tas apzīmē CLSAG. Tagad šajā darījumā ir saglabāta tikai viena matemātikas kopa, lai pierādītu šīs divas lietas, un tas tiek darīts, lai tie netraucētu viens otram. Brauciens joprojām ir jāveic, taču jūs esat diezgan krasi samazinājis to skaitu.</p>\n\n<p>Tas viss izklausās diezgan aizraujoši. Vai ir iespējams atrast citus īsceļus vai citus veidus, kā ietaupīt laiku un vietu? Atbilde ir jā un nē. Saskaņā ar pašreizējiem MRL pētniekiem, visticamāk, nav iespējams turpināt modificēt SAG tipa konstrukcijas, lai nodrošinātu labāku izmēru vai ātrumu; tomēr citas konstrukcijas, piemēram, Arcturus, Omniring, RCT3 vai Triptych, rada daudz labākas izmēra mērogošanas un pārbaudes priekšrocības, izmantojot dažādas matemātiskās metodes. Tomēr katrai no šīm \"nākamās paaudzes\" pieejām parakstītāju neskaidrajiem protokoliem ir savi kompromisi ieviešanas detaļās, un tiek veikta aktīva izpēte un izmeklēšana.</p>\n\n<p>Galu galā Monero vienmēr rada jauninājumus.</p>';
+  String get knowledge250Sbclsag250Sb0250Sbtext => '<p>Kā protokols, Monero pašlaik ir pastāvīgas inovācijas stāvoklī. Izmantojot pētījumus gan ķēdē, gan ārpus ķēdes risinājumos, Monero kopiena meklē jomas, kuras jāuzlabo, lai padarītu Monero privātāku, vieglāk paplašināmu un pieejamu visiem. Viens no pēdējiem jauninājumiem ir saistāmās gredzenveida parakstu shēmas MLSAG aizstāšana ar ievietošanas nomaiņu CLSAG, kas nozīmē Concise Linkable Spontaneous Anonymous Group.</p>\n\n<p>Virspusējā līmenī CLSAG ieviešana par 25% samazinās izplatītākos 2 ievades, 2 izvades darījumus. Mēs arī redzēsim par 10% mazāku apstiprināšanas laiku.</p>\n\n<p>Bet kas īsti ir CLSAG? Ko tas dara un kā tas atšķiras no vecās versijas MLSAG? Atvēlēsim minūti, lai atgādinātu sev par to, kāpēc un kā tiek izmantoti gredzenveida paraksti, lai mēs varētu labāk izprast šo jēdzienu. Gredzenveida paraksti nodrošina neinteraktīvus, neatšķiramus ievades datus, izmantojot parakstītāja atlasītas iepriekšējo izvadu anonimitātes grupas. Īsāk sakot, tas ļauj lietotājam slēpt savus pārskaitījumā izmantotos rezultātus starp nesaistītiem rezultātiem, un viņi to visu var izdarīt, nevienam citam nepiedaloties. Viss, kas jums nepieciešams, ir blokķēdes kopija. Katra no šīm izvadēm var būt īstā nosūtītā ar vienlīdz lielu varbūtību, tādējādi slēpjot metadatus par sūtītāju.</p>\n\n<p>Tomēr tas rada nelielas problēmas. Kā būtu, ja lietotājs izveidotu gredzena parakstu tikai ar mānekļa izvadiem? Kā lai kāds zinātu, ka nezināmajam sūtītājam nav tiesību nosūtīt kādu no tiem? Vai šis lietotājs varētu tērēt viltotu naudu? Atbilde ir nē. Gredzenveida paraksts ietver metodi, lai pierādītu, ka vismaz viens no izvadiem pieder nezināmam sūtītājam, neatklājot, kurš tas ir. Faktiski gan CLSAG, gan MLSAG (turpmāk SAG) ir daļa no gredzena paraksta, kas to pierāda. Interesanti, ka tajā pašā laikā tas pierāda, ka darījuma summa, kaut arī slēpjas aiz konfidenciāliem pārskaitījumiem (RingCT), ir līdzsvarā. Tas, ka SAG pierāda divas lietas - ka viena izvade pieder kādam gredzena dalībniekam un ka darījums ir līdzsvarots - arī ir izmēra un pārbaudes ietaupījumu pamatā. Ja tas kļūst mulsinoši, neuztraucieties, mēs drīzumā nonāksim pie jautras un viegli saprotamas analoģijas.</p>\n\n<p>Vecā parakstu shēma MLSAG (multilayed Linkable Spontaneous Anonymous Group) pierāda iepriekš minētās divas lietas gredzenveida parakstā, taču tā dara katru atsevišķi. Atsevišķu aprēķinu izmantošana parakstīšanas un saistību atslēgām nozīmē lēnākas darbības. Mūsdienīgs dators var veikt šos aprēķinus dažās milisekundēs, kas nešķiet daudz, un vienam pārskaitījumam tā arī nav. Bet, ja ņemam vērā Monero blokķēdē veikto pārskaitījumu skaitu un to, ka makam, kas sinhronizējas no nulles, būs jālejupielādē un jāpārbauda katrs no tiem, baiti un milisekundes ātri sakrājas.</p>\n\n<p>CLSAG apvieno matemātiku, kas nepieciešama, lai pierādītu abus vienā, kā arī aprēķina abus vienlaikus, turklāt tas tiek darīts drošā veidā. Ko nozīmē drošā veidā? Lai to noskaidrotu un, cerams, padarītu visu saprotamu, aplūkosim šo solīto jautro analoģiju.</p>\n\n<p>Pieņemsim, ka jums ir jāiet gan uz pārtikas preču veikalu, gan datortehnikas veikalu, lai paņemtu divas dažādas lietas: pārtiku un toksiskas tīrīšanas ķimikālijas. Jūs nevēlaties, lai tie sajaucas, jo, ja ķīmiskās vielas izlīs uz pārtikas, tā kļūs neēdama. Jūs nolemjat būt īpaši drošs un braukt no savas mājas uz pārtikas veikalu, nopirkt pārtiku un pēc tam doties atpakaļ uz savu māju. Tikai pēc pārtikas izkraušanas jūs atkal iekāpjat automašīnā, braucat uz datortehnikas veikalu un atpakaļ uz māju ar ķimikālijām. Jūs esat veicis divus atsevišķus braucienus, lai nodrošinātu visu pirkumu drošību. Lai gan tas patiešām ir droši, tas ir neefektīvi. Tas atspoguļo MLSAG, kur tiek glabātas divas dažādas matemātiskas kopas un veikti divi dažādi “izbraucieni”, lai tās aprēķinātu.</p>\n\n<p>Tomēr jūs nolemjat, ka vēlaties to izdarīt ātrāk. Šādi tiek izniekots pārāk daudz laika. Protams, to darot vienu vai divas reizes, jūs nepalaidīsiet garām visu dzīvi, taču, darot to atkal un atkal, stundas sakrājas. Jūs sākat domāt, vai tā vietā varat veikt vienu braucienu. No jūsu mājas uz pārtikas veikalu, tad uz datortehnikas veikalu un atpakaļ uz mājām. Jūs nevarat vienkārši iemest visu savā automašīnā. Tas nav droši. Tā vietā jūs savā automašīnā iezīmējat dažādas vietas dažādām lietām un pārliecināties, ka viss stabili atrodas savās vietās. To darot, jūs varat droši doties vienā braucienā uz abiem veikaliem un turēt lietas tālāk viena no otras. Tas apzīmē CLSAG. Tagad pārskaitījumā ir saglabāta tikai viena matemātikas kopa, lai pierādītu šīs divas lietas, un tas tiek darīts tā, ka tā netraucē viena otrai. Braucieni joprojām ir jāveic, taču jūs esat diezgan krasi samazinājis to skaitu.</p>\n\n<p>Tas viss izklausās diezgan aizraujoši. Vai ir iespējams atrast citus īsceļus vai citus veidus, kā ietaupīt laiku un vietu? Atbilde ir jā un nē. Saskaņā ar pašreizējiem MRL pētniekiem, visticamāk, nav iespējams turpināt modificēt SAG tipa konstrukcijas, lai nodrošinātu labāku izmēru vai ātrumu; tomēr citas konstrukcijas, piemēram, Arcturus, Omniring, RCT3 vai Triptych, rada daudz labākas izmēra paplašināšanas un pārbaudes priekšrocības, izmantojot dažādas matemātiskās metodes. Tomēr katrai no šīm \"nākamās paaudzes\" pieejām neskaidra parakstītāja protokoliem ir savi kompromisi ieviešanas detaļās, un tiek veikta aktīva izpēte un izmeklēšana.</p>\n\n<p>Galu galā, Monero vienmēr rada jauninājumus.</p>';
 
   @override
-  String get knowledge250Sbclsag250Sbdescription => 'Apskatīsim vienu no jaunākajiem Monero protokola jauninājumiem: saistāmās zvana paraksta shēmas MLSAG aizstāšanu ar CLSAG aizstājēju.';
+  String get knowledge250Sbclsag250Sbdescription => 'Apskatīsim vienu no jaunākajiem Monero protokola jauninājumiem: saistāmās gredzenveida paraksta shēmas MLSAG aizstāšanu ar CLSAG.';
 
   @override
   String get knowledge250Sbclsag250Sbtitle => 'Kā CLSAG uzlabos Monero efektivitāti';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb0250Sbtext => '<p>Tā kā Bitcoin privātuma rīki ir ieguvuši lielāku uzmanību un tiek izmantoti, tie ir pakļauti stingrākai regulējuma kontrolei. Šīs rūpīgās pārbaudes rezultātā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://twitter.com/wasabiwallet/status/1503091503207432193\"> nesen tika paziņots</a> no Bitcoin privātuma rīka Wasabi Wallet, ka viņi sāks cenzēt un noraidīt ienākošos ievades maisījumos, kurus viņi uzskata par nelikumīgiem vai pretrunā viņu pakalpojumu sniegšanas noteikumiem, un maksās ķēdes analīzi. uzņēmums “veterinārārst” ienākošos mix dalībniekus.</p>\n<p> CoinJoin darījumu izmantošana, lai aptumšotu Bitcoin līdzekļu avotu, jau daudzus gadus ir bijusi Bitcoin privātuma pamatā, un tās izmantošanai raksturīgās problēmas un riski ir dažas no galvenajām problēmām, ko Monero gredzena paraksti izlabo un novērš. </p>\n<p>Šajā emuāra ziņojumā mēs īsumā aplūkosim CoinJoin un gredzenu parakstu salīdzinājumu, kā arī to, kāpēc Monero izmantotā pieeja nodrošina lielāku pretestību cenzūrai, lielāku privātumu un mazāk problēmu lietotājiem.</p>';
+  String get knowledge250Sbcoinjoin250Sb0250Sbtext => '<p>Bitcoin privātuma rīkiem gūstot lielāku uzmanību un pielietojumu, tie ir pakļauti stingrākai kontrolei. Šīs kontroles rezultātā Bitcoin privātuma rīks Wasabi Wallet <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://twitter.com/wasabiwallet/status/1503091503207432193\">nesen paziņoja</a>, ka viņi sāks cenzēt un noraidīt maisījumos ienākošās ievades, kuras viņi uzskata par nelikumīgām vai pretrunā viņu pakalpojumu sniegšanas noteikumiem, un maksās ķēdes analīzes uzņēmumam, lai tas “izvērtē” ienākošos maisījuma dalībniekus.</p>\n<p> CoinJoin darījumu izmantošana, lai apslēptu Bitcoin līdzekļu avotu, jau daudzus gadus ir bijusi Bitcoin privātuma pamatā, un tās izmantošanai raksturīgās problēmas un riski ir dažas no galvenajām problēmām, ko Monero gredzena paraksti izlabo un novērš. </p>\n<p>Šajā blogā mēs īsumā aplūkosim CoinJoin un gredzenveida parakstu salīdzinājumu, kā arī to, kāpēc Monero izmantotā pieeja nodrošina lielāku pretestību cenzūrai, lielāku privātumu un mazāk problēmu lietotājiem.</p>';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb1250Sbtext => '<p>Tā kā visi darījumi Bitcoin sistēmā ir pilnīgi caurspīdīgi — tiek atklāts sūtītājs, saņēmējs un summas, lietotājiem ir jāveic papildu darbības, lai aizsargātu savu privātumu no iepriekšējiem sūtītājiem un turpmākajiem līdzekļu saņēmējiem vai riskētu ar cenzūru, uzraudzību vai līdzekļu zādzību, izmantojot fiziska vardarbība.</p>\n<p>Mūsdienās labākais risinājums Bitcoin privātumam ir rīks ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://bitcoiner.guide/qna/coinjoin/\">“CoinJoin”</a>, kurā 2 vai vairāk lietotāji strādā kopā (parasti izmantojot centralizētu koordinatoru), lai izveidotu īpašu darījumu, kas apgrūtina ārēju darbību. novērotājus, lai savienotu ieejas ar izejām. Katrs dalībnieks sazinās, lai kopīgi izveidotu darījumu, nenododot savu līdzekļu glabāšanu, un beigās saņem rezultātu, kura iepriekšējā vēsture tagad ir neskaidra (vai neskaidra) ārējiem novērotājiem.</p>\n<p>Tādējādi tiek pārtraukta konkrētu UTXO vēsture, ļaujot Bitcoin lietotājiem, veicot darījumus, iegūt zināmu slepenību. Tomēr CoinJoin (kā ieviests Wasabi Wallet un Samourai Wallet, divos visbiežāk izmantotajos Bitcoin CoinJoin rīkos) ir daži būtiski trūkumi: </p>\n<ul>\n<li>Tā kā CoinJoin darījumi ir pilnībā izvēlēti un tiem ir nepieciešama aktīva līdzdalība, jebkurš dalībnieks noteikti parāda, ka vēlas lielāku privātumu nekā “parastie” Bitcoin lietotāji, iespējams, izceļot tos un radot problēmas ar līdzekļu izlietošanu daudzās regulētās biržās vai struktūrās. Katrs lietotājs nevar noliegt, ka ir piedalījies CoinJoin darījumā.</li>\n<li>Lai atrastu citus CoinJoin, lielākajā daļā CoinJoin pieeju (tostarp Wasabi Wallet) tiek izmantots centralizēts koordinators, kas savieno dalībniekus un palīdz viņiem sazināties un izveidot pareizu CoinJoin darījumu. Šis centralizētais koordinators nekad nepārvalda lietotāju līdzekļus, taču tas gūst plašu ieskatu darījumos, ko tie koordinē, var cenzēt ienākošos datus (kā Wasabi Wallet gadījumā) un var tikt piespiests vākt vai koplietot informāciju par CoinJoin dalībniekiem.[X2068X ]\n<li>Lietotājiem, kuriem ir lielas līdzekļu summas CoinJoin, bieži vien var būt jāgaida stundas (vai pat dienas!), lai atrastu pietiekami daudz dalībnieku, ar kuriem varētu pievienoties CoinJoin, tādējādi radot lielu aizkavi no brīža, kad lietotājs saņem līdzekļus, līdz brīdim, kad viņš var tos iztērēt privāti. </li>\n<li>CoinJoin darījuma nodrošinātā konfidencialitāte laika gaitā pasliktinās, jo citi dalībnieki tērē līdzekļus vai saista savus rezultātus ar savu identitāti, izmantojot KYC apmaiņu, tirgotājus, kuriem nepieciešams ID, u.c. Tas nozīmē, ka lietotāji ideālā gadījumā CoinJoin darījumos saglabā savus līdzekļus nepārtraukti. viņu anonimitāte ir iestatīta pēc iespējas svaigāk (“pūlis, kurā paslēpties”).</li>\n<li>Lielākajā daļā CoinJoin pieeju dalībniekiem ir jāizmanto fiksēta izmēra UTXO (t.i., 0,1 BTC), lai būtu grūtāk savienot CoinJoin darījumu ieejas un izejas. Tas rada augstākas maksas (nepieciešams vairāk atsevišķu darījumu uz lielu ievadi), vairāk \"toksisku izmaiņu\" (līdzekļi, kurus nevar iztērēt, neradot nopietnus draudus privātumam), un var liegt mazākiem lietotājiem vispār apvienoties, ja viņiem nav minimālais nepieciešamais atlikums.</li>\n</ul>';
+  String get knowledge250Sbcoinjoin250Sb1250Sbtext => '<p>Tā kā visi darījumi Bitcoin sistēmā ir pilnīgi caurredzami - tiek atklāts sūtītājs, saņēmējs un summas - lietotājiem ir jāveic papildu darbības, lai aizsargātu savu privātumu no iepriekšējiem sūtītājiem un turpmākajiem līdzekļu saņēmējiem vai riskētu ar cenzūru, uzraudzību vai līdzekļu zādzību, izmantojot fizisku vardarbību.</p>\n<p>Mūsdienās labākais risinājums Bitcoin privātumam ir rīks ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://bitcoiner.guide/qna/coinjoin/\">“CoinJoin”</a>, kurā 2 vai vairāk lietotāji strādā kopā (parasti izmantojot centralizētu koordinatoru), lai izveidotu īpašu darījumu, kas apgrūtina ārējam novērotājam savienot ieejas ar izejām. Katrs dalībnieks sazinās, lai kopīgi izveidotu darījumu, nenododot savu līdzekļu glabāšanu, un beigās saņem izvadi, kuras iepriekšējā vēsture tagad ir neskaidra (vai apslēpta) ārējiem novērotājiem.</p>\n<p>Tādējādi tiek pārtraukta konkrētu UTXO vēsture, ļaujot Bitcoin lietotājiem, veicot darījumus, iegūt zināmu slepenību. Tomēr CoinJoin (kā ieviests Wasabi Wallet un Samourai Wallet, divos visbiežāk izmantotajos Bitcoin CoinJoin rīkos) ir daži būtiski trūkumi: </p>\n<ul>\n<li>Tā kā CoinJoin darījumi ir pilnībā izvēlēti un tiem ir nepieciešama aktīva līdzdalība, jebkurš dalībnieks noteikti parāda, ka vēlas lielāku privātumu nekā “parastie” Bitcoin lietotāji, iespējams, izceļot tos un radot problēmas ar līdzekļu izlietošanu daudzās regulētās biržās vai struktūrās. Lietotājs nevar noliegt, ka ir piedalījies CoinJoin darījumā.</li>\n<li>Lai atrastu citus CoinJoin, lielākajā daļā CoinJoin pieeju (tostarp Wasabi Wallet) tiek izmantots centralizēts koordinators, kas savieno dalībniekus un palīdz viņiem sazināties un izveidot pareizu CoinJoin darījumu. Šis centralizētais koordinators nekad nepārvalda lietotāju līdzekļus, taču tas gūst plašu ieskatu darījumos, ko koordinē, var cenzēt ienākošos datus (kā Wasabi Wallet gadījumā) un var tikt piespiests vākt vai koplietot informāciju par CoinJoin dalībniekiem.</li>\n<li>Lietotājiem, kuriem ir lielas līdzekļu summas CoinJoin, bieži vien var būt jāgaida stundas (vai pat dienas!), lai atrastu pietiekami daudz dalībnieku, ar kuriem varētu veikt CoinJoin, tādējādi radot lielu aizturi no brīža, kad lietotājs saņem līdzekļus, līdz brīdim, kad viņš var tos iztērēt privāti. </li>\n<li>CoinJoin darījuma nodrošinātā konfidencialitāte laika gaitā pasliktinās, jo citi dalībnieki tērē līdzekļus vai saista savus rezultātus ar savu identitāti, izmantojot KYC apmaiņu, tirgotājus, kuriem nepieciešams ID, u.c. Tas nozīmē, ka lietotāji ideālā gadījumā CoinJoin darījumos saglabā savus līdzekļus nepārtraukti, lai viņu anonimitātes grupa (“pūlis, kurā paslēpties”) būtu pēc iespējas svaigāka.</li>\n<li>Lielākajā daļā CoinJoin pieeju dalībniekiem ir jāizmanto fiksēta izmēra UTXO (t.i., 0,1 BTC), lai būtu grūtāk savienot CoinJoin darījumu ieejas un izejas. Tas rada augstākas maksas (nepieciešams vairāk atsevišķu pārskaitījumu uz lielu ievadi), vairāk \"toksiskas maiņas\" (līdzekļi, kurus nevar iztērēt, neradot nopietnus draudus privātumam), un var liegt mazākiem lietotājiem piedalīties vispār, ja viņiem nav minimālais nepieciešamais atlikums.</li>\n</ul>';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb1250Sbtitle => 'Kas ir CoinJoin darījums?';
+  String get knowledge250Sbcoinjoin250Sb1250Sbtitle => 'Kas ir CoinJoin pārskaitījums?';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb2250Sbtext => '<p>Tā kā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\"> esam padziļināti izpētījuši, kas ir zvana paraksti pagātnē</a>, šajā emuāra ziņojumā es nerunāšu par to darbības tehniskajiem aspektiem. Tā vietā mēs apskatīsim, kā Monero izmantotās pieejas atrisina problēmas ar CoinJoin, kas apspriests iepriekš.</p>\n<blockquote>\n<p> CoinJoin ir jāpiesakās, un ir nepieciešama dalība</p>\n</blockquote>\n<p>Monero zvana paraksti ir privātuma protokola galvenā funkcija, un tie tiek izmantoti <em> katrā </em> darījumā tīklā. Tas nozīmē, ka neviena lietotāja darījumi neizceļas ar lielāku privātuma meklēšanu nekā “parastie” Monero lietotāji, un visi lietotāji var ticami apšaubīt, ka viņi ir iztērējuši līdzekļus kādā konkrētā darījumā. Tā kā lietotājs, kurš tērē līdzekļus, darījumā nekoordinē un nepiedalās mānekļu ievadīšanā, tie lietotāji, kuriem pieder ievades dati, kas ir izvēlēti kā mānekļi, var godīgi apgalvot, ka nepiedalījās šajā darījumā, tādējādi stiprinot viņu privātumu.</p>\n<blockquote>\n<p>Centralizēta koordinatora izmantošana</p>\n</blockquote>\n<p>Tā kā Monero gredzena paraksti ir pilnībā nesaskaņoti un darījuma izveidošanai ir nepieciešams tikai patiesais līdzekļu iztērētājs, Monero nav nepieciešams centralizēts koordinators. Tas nodrošina, ka <em>neviens</em> nevar liegt jums piekļuvi Monero privātumam, un nav nevienas centralizētas vienības, uz kuru var izdarīt spiedienu, nav vienkāršu Sybil uzbrukumu likviditātei utt. Kamēr jūsu darījums maksā atbilstošu maksu, jūs iegūstat necenzētu piekļuvi Monero privātumam, drošībai un anonimitātei.</p>\n<blockquote>\n<p>CoinJoin nepieciešama likviditāte</p>\n</blockquote>\n<p> \"Likviditāte\", kas pieejama ikvienam, kas tērē Monero, lai to izmantotu kā mānekļus, vienmēr ir kopējais izvadu komplekts ķēdē, lai nekad netrūktu mānekļu, kuros paslēpties kopā ar Monero. Persona, kas vēlas iztērēt Monero, var to izdarīt aptuveni 20 min pēc līdzekļu saņemšanas, un viņam nav jāveic nekādas papildu darbības, lai iegūtu spēcīgu Monero konfidencialitāti.</p>\n<blockquote>\n<p>CoinJoin konfidencialitāte laika gaitā pasliktinās</p>\n</blockquote>\n<p>Tā kā Monero izvadi nekad netiek iztērēti tīklā, zvana parakstu nodrošinātais privātums laika gaitā ir daudz mazāk pakļauts degradācijai. Lietotājam nav nepārtraukti jāmaina izvades Monero, un ārpus ārkārtīgi retiem apstākļiem laika gaitā tas nezaudē nekādu privātumu.</p>\n<p>Ja lietotājs tomēr vēlas “atsvaidzināt” ar izvadi izmantotos mānekļus, viņš var vienkārši nosūtīt līdzekļus sev atpakaļ un var tos iztērēt apmēram 20 min vēlāk kā parasti.</p>\n<blockquote>\n<p> CoinJoin parasti ir nepieciešamas fiksēta izmēra ievades</p>\n</blockquote>\n<p>Tā kā summas tiek paslēptas katrā darījumā, izmantojot <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/monero-ringct\">“Konfidenciālos darījumus”</a> (daļa no “RingCT”), jebkurā konkrētajā darījumā izmantotie mānekļi var būt jebkura izmēra. Nav iemesla uztraukties par Monero heiristiku, kas balstīta uz summām, tāpēc darījumus ir daudz vienkāršāk izveidot, un tie var izmantot mānekļus jebkurā laikā un jebkurā daudzumā Monero blokķēdē.</p>';
+  String get knowledge250Sbcoinjoin250Sb2250Sbtext => '<p>Tā kā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\"> jau esam padziļināti izpētījuši, kas ir gredzenveida paraksti</a>, šajā blogā nerunāsim par to darbības tehniskajiem aspektiem. Tā vietā mēs apskatīsim, kā Monero izmantotās pieejas atrisina problēmas ar CoinJoin, kas apspriestas iepriekš.</p>\n<blockquote>\n<p> CoinJoin ir jāpiesakās, un ir nepieciešama līdzdalība</p>\n</blockquote>\n<p>Monero gredzenveida paraksti ir privātuma protokola galvenā funkcija, un tie tiek izmantoti <em> katrā </em> darījumā tīklā. Tas nozīmē, ka neviena lietotāja pārskaitījumi neizceļas ar lielāka privātuma meklēšanu nekā “parastie” Monero pārskaitījumi, un visi lietotāji var ticami apšaubīt, ka viņi ir iztērējuši līdzekļus kādā konkrētā pārskaitījumā. Tā kā lietotājs, kurš tērē līdzekļus, pārskaitījumu nekoordinē un nepiedalās mānekļu ievadīšanā, tie lietotāji, kuriem pieder ievades dati, kas ir izvēlēti kā mānekļi, var godīgi apgalvot, ka nepiedalījās šajā darījumā, tādējādi stiprinot viņu privātumu.</p>\n<blockquote>\n<p>Centralizēta koordinatora izmantošana</p>\n</blockquote>\n<p>Tā kā Monero gredzenveida paraksti ir pilnībā nesaskaņoti un pārskaitījuma izveidošanai ir nepieciešams tikai patiesais līdzekļu iztērētājs, Monero nav nepieciešams centralizēts koordinators. Tas nodrošina, ka <em>neviens</em> nevar liegt jums piekļuvi Monero privātumam, un nav nevienas centralizētas vienības, uz kuru var izdarīt spiedienu, nav vienkāršu Sybil uzbrukumu likviditātei utt. Kamēr jūsu darījums maksā atbilstošu maksu, jūs iegūstat necenzētu piekļuvi Monero privātumam, drošībai un anonimitātei.</p>\n<blockquote>\n<p>CoinJoin nepieciešama likviditāte</p>\n</blockquote>\n<p> \"Likviditāte\", kas pieejama ikvienam, kas tērē Monero, lai to izmantotu kā mānekļus, vienmēr ir kopējais izvadu komplekts ķēdē, lai nekad netrūktu mānekļu, kuros paslēpties ar Monero. Persona, kas vēlas iztērēt Monero, var to izdarīt aptuveni 20 min pēc līdzekļu saņemšanas, un nav jāveic nekādas papildu darbības, lai iegūtu spēcīgu Monero konfidencialitāti.</p>\n<blockquote>\n<p>CoinJoin konfidencialitāte laika gaitā pasliktinās</p>\n</blockquote>\n<p>Tā kā Monero izvadi nekad netiek iztērēti tīklā, gredzenveida parakstu nodrošinātais privātums laika gaitā ir daudz mazāk pakļauts degradācijai. Lietotājam nav nepārtraukti jāmaina izvades, un ārpus ārkārtīgi retiem apstākļiem laika gaitā tas nezaudē nekādu privātumu.</p>\n<p>Ja lietotājs tomēr vēlas “atsvaidzināt” ar izvadi izmantotos mānekļus, viņš var vienkārši nosūtīt līdzekļus sev atpakaļ un var tos iztērēt apmēram 20 min vēlāk kā parasti.</p>\n<blockquote>\n<p> CoinJoin parasti ir nepieciešamas fiksēta izmēra ievades</p>\n</blockquote>\n<p>Tā kā summas tiek paslēptas katrā darījumā, izmantojot <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/monero-ringct\">“Konfidenciālos pārskaitījumus”</a> (daļa no “RingCT”), jebkurā konkrētajā pārskaitījumā izmantotie mānekļi var būt jebkura izmēra. Nav iemesla uztraukties par Monero heiristiku, kas balstīta uz summām, tāpēc darījumus ir daudz vienkāršāk izveidot, un tie var izmantot mānekļus jebkurā laikā un jebkurā daudzumā Monero blokķēdē.</p>';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb2250Sbtitle => 'Kā zvana paraksti atrisina šīs problēmas?';
+  String get knowledge250Sbcoinjoin250Sb2250Sbtitle => 'Kā gredzenveida paraksti atrisina šīs problēmas?';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb3250Sbtext => '<p>Ja jūs interesē un vēlaties labāk izprast zvana parakstus vai CoinJoin darījumus, skatiet tālāk esošās saites, lai atrastu lieliskas vietas, kur sākt:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\">Kā zvana paraksti aizsedz Monero izvadi</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://www.getmonero.org/resources/moneropedia/ringsignatures.html\">Gredzena paraksts — Moneropēdija</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://bitcoiner.guide/qna/coinjoin/\">Coinjoin Q+A</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://6102bitcoin.com/coinjoin-overview/\">CoinJoin pārskats</a></li>\n</ul>';
+  String get knowledge250Sbcoinjoin250Sb3250Sbtext => '<p>Ja jūs interesē un vēlaties labāk izprast gredzenveida parakstus vai CoinJoin pārskaitījumus, skatiet tālāk esošās saites, lai atrastu lieliskas vietas, kur sākt:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\">Kā gredzenveida paraksti aizsedz Monero izvadi</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://www.getmonero.org/resources/moneropedia/ringsignatures.html\">Gredzenveida paraksts — Moneropēdija</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://bitcoiner.guide/qna/coinjoin/\">Coinjoin Q+A</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://6102bitcoin.com/coinjoin-overview/\">CoinJoin pārskats</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbcoinjoin250Sb3250Sbtitle => 'Kā es varu uzzināt vairāk?';
 
   @override
-  String get knowledge250Sbcoinjoin250Sbdescription => 'CoinJoin ir BTC privātuma kodols, un ar to saistītās problēmas ir dažas no tām, kuras atrisina Monero gredzena paraksti.';
+  String get knowledge250Sbcoinjoin250Sbdescription => 'CoinJoin ir BTC privātuma kodols, un ar to saistītās problēmas ir dažas no tām, kuras atrisina Monero gredzenveida paraksti.';
 
   @override
-  String get knowledge250Sbcoinjoin250Sbtitle => 'Monero gredzenu paraksti pret CoinJoin tāpat kā Wasabi';
+  String get knowledge250Sbcoinjoin250Sbtitle => 'Monero gredzenveida paraksti salīdzinājumā ar CoinJoin kā Wasabi';
 
   @override
-  String get knowledge250Sbcontributing250Sb0250Sbtext => '<p>Monero projektam (tāpat kā daudziem citiem atvērtā pirmkoda projektiem) nav centrālā uzņēmuma, struktūras vai finansējuma, un tas viss ir nepieciešams decentralizācijai un noturībai. Tomēr tas nozīmē, ka projekta panākumi pilnībā ir atkarīgi no kaislīgu cilvēku ieguldījuma kopienā, lai finansētu, attīstītu un sniegtu informāciju, tāpat kā jūs.</p>\n<p>Lielākā daļa Monero kopienas cilvēku noteikti nebūs izstrādātāji, tāpēc mēs koncentrēsimies uz daudzajiem veidiem, kā mēs, kas nav izstrādātāji, varam palīdzēt šādam neticamam projektam.</p>';
+  String get knowledge250Sbcontributing250Sb0250Sbtext => '<p>Monero projektam (tāpat kā daudziem citiem atvērtā pirmkoda projektiem) nav centrāla uzņēmuma, struktūras vai finansējuma, un tas viss ir nepieciešams decentralizācijai un noturībai. Tomēr tas nozīmē, ka projekta panākumi, lai finansētu, attīstītu un informētu, pilnībā ir atkarīgi no entuziastu (kā jūs) ieguldījuma kopienā.</p>\n<p>Lielākā daļa Monero kopienas cilvēku ne obligāti būs izstrādātāji, tāpēc mēs koncentrēsimies uz daudzajiem veidiem, kā mēs, nebūdami izstrādātāji, varam palīdzēt šīm apbrīnojamajam projektam.</p>';
 
   @override
-  String get knowledge250Sbcontributing250Sb1250Sbtext => '<p>Monero izmanto unikālu sistēmu darba finansēšanai, ko sauc par <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/\">Community Crowdfunding System</a> (vai “CCS”), kas ļauj ikvienam kopienā iesniegt ideju par finansējumu. Ja kopiena apstiprina, šie priekšlikumi tiek atvērti finansējumam no kopienas.</p>\n<p>Sistēmai ir divi posmi, un katrs no tiem gūst labumu, ja iesaistās cilvēki no dažādām vidēm.</p>\n<h6 id=\"participating-in-ideas\">Piedalīšanās programmā “Idejas”</h6>\n<p>Visi CCS priekšlikumi sākas kā “Idejas”, kuras var komentēt kopiena un bieži tiek apspriestas arī kopienas sanāksmēs. Tā ir iespēja ikvienam kopienā izlasīt priekšlikumu un komentēt, ko, viņuprāt, varētu mainīt vai uzlabot, vai arī priekšlikums vispār būtu jāapstiprina finansējuma saņemšanai. Tas ļauj ne tikai sekot līdzi citu kopienas dalībnieku pastāvīgajiem centieniem, bet arī aktīvi runāt par to, kas un ko finansē kopiena, uzlabot priekšlikumus pirms finansējuma piešķiršanas un nodrošināt pārraudzību pēc finansējuma saņemšanas.</p>\n<p><em>Jūs varat skatīt visus priekšlikumus, kas atrodas “Idejas” stadijā, vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/ideas/\">CCS Ideas</a>.</em></p>\n<h6 id=\"funding-proposals-in-funding-required\">Finansējuma priekšlikumi sadaļā “Nepieciešams finansējums”</h6>\n<p>Otrais apstiprinātā priekšlikuma posms ir posms “Nepieciešams finansējums”. Šeit ikviens kopienas dalībnieks, kuram patīk priekšlikums un redz tā vērtību, var viegli, ātri un privāti ziedot savu Monero konkrētajam priekšlikumam.</p>\n<p>Lai ziedotu priekšlikumam, vienkārši atveriet sadaļu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Nepieciešams CCS finansējums</a>, noklikšķiniet uz priekšlikuma, kuram vēlaties ziedot, un skenējiet QR kodu vai nokopējiet adresi un nosūtiet, cik daudz (vai maz!) jūs vēlētos sniegt savu ieguldījumu. Katrs sīkums palīdz neatkarīgi no tā, cik mazs!</p>\n<p>Kad piedāvājums ir pilnībā finansēts, varat sekot līdzi, kamēr tas tiek <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/work-in-progress/\">notiek</a>, vai skatīt <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/completed-proposals/\">pabeigto priekšlikumu</a> rezultātus.</p>\n<p><em>Visus priekšlikumus, kas atrodas posmā “Nepieciešams finansējums”, varat skatīt vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">CCS Nepieciešamais finansējums</a>.</em></p>';
+  String get knowledge250Sbcontributing250Sb1250Sbtext => '<p>Monero izmanto unikālu sistēmu darba finansēšanai, ko sauc par <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/\">Community Crowdfunding System</a> (vai “CCS”), kas ļauj ikvienam kopienā iesniegt ideju par finansējumu. Ja kopiena apstiprina, šie priekšlikumi tiek atvērti finansējumam no kopienas.</p>\n<p>Sistēmai ir divi posmi, un katrs no tiem gūst labumu, ja iesaistās cilvēki no dažādām vidēm.</p>\n<h6 id=\"participating-in-ideas\">Piedalīšanās “Idejās”</h6>\n<p>Visi CCS priekšlikumi sākas kā “Idejas”, kuras var komentēt kopiena un kuras bieži tiek apspriestas arī kopienas sanāksmēs. Tā ir iespēja ikvienam kopienā izlasīt priekšlikumu un komentēt, ko, viņuprāt, varētu mainīt vai uzlabot, un vai priekšlikums vispār būtu jāapstiprina finansējuma saņemšanai. Tas ļauj ne tikai sekot līdzi citu kopienas dalībnieku pastāvīgajiem centieniem, bet arī aktīvi runāt par to, kuru un ko finansē kopiena, uzlabot priekšlikumus pirms finansējuma piešķiršanas un nodrošināt pārraudzību pēc finansējuma saņemšanas.</p>\n<p><em>Jūs varat skatīt visus priekšlikumus, kas atrodas “Idejas” stadijā, vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/ideas/\">CCS Idejas</a>.</em></p>\n<h6 id=\"funding-proposals-in-funding-required\">Finansējuma priekšlikumi sadaļā “Nepieciešams finansējums”</h6>\n<p>Otrais apstiprinātā priekšlikuma posms ir posms “Nepieciešams finansējums”. Šeit ikviens kopienas dalībnieks, kuram patīk priekšlikums un kurš redz tā vērtību, var viegli, ātri un privāti ziedot savu Monero konkrētajam priekšlikumam.</p>\n<p>Lai ziedotu priekšlikumam, vienkārši atveriet sadaļu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Nepieciešams CCS finansējums</a>, noklikšķiniet uz priekšlikuma, kuram vēlaties ziedot, noskenējiet QR kodu vai nokopējiet adresi un nosūtiet, cik daudz (vai nedaudz!) jūs vēlētos ieguldīt. Katrs sīkums palīdz neatkarīgi no tā, cik mazs!</p>\n<p>Kad piedāvājums ir pilnībā finansēts, varat sekot līdzi, kā tas <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/work-in-progress/\">tiek izpildīts</a>, vai skatīt rezultātus sadaļā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/completed-proposals/\">pabeigtie priekšlikumi</a> .</p>\n<p><em>Visus priekšlikumus, kas atrodas posmā “Nepieciešams finansējums”, varat skatīt vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">CCS Nepieciešams finansējums</a>.</em></p>';
 
   @override
-  String get knowledge250Sbcontributing250Sb1250Sbtitle => 'Monero kopienas kopfinansēšanas sistēma';
+  String get knowledge250Sbcontributing250Sb1250Sbtitle => 'Monero Kopienas Finansēšanas Sistēma';
 
   @override
-  String get knowledge250Sbcontributing250Sb2250Sbtext => '<p>Vēl viens lielisks veids, kā jūs varat iesaistīties Monero projektā, ir palīdzēt izglītot un dot iespēju jauniem un esošajiem kopienas locekļiem. Tas var izpausties dažādos veidos, taču tas var būt tikpat vienkāršs, kā kopīgot informāciju par Monero sociālajos saziņas līdzekļos, emuārā utt.</p>\n<p>Šeit ir daži konkrēti veidi, kā jūs varat palīdzēt izglītībā:</p>\n<ul>\n<li>Izveidojiet savu emuāru</li>\n<li>Uzrakstiet pavedienus pakalpojumā Twitter vai Reddit par lietām, par kurām esat uzzinājis vai iemācījies darīt, izmantojot Monero</li>\n<li>Izveidojiet videoklipus par ikdienas darbībām, ko darāt ar Monero, piemēram, Monero nosūtīšanu, aparatūras seifa izmantošanu, Monero pirkšanu un pārdošanu vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://localmonero.co\">LocalMonero.co</a> utt.</li>\n</ul>';
+  String get knowledge250Sbcontributing250Sb2250Sbtext => '<p>Vēl viens lielisks veids, kā jūs varat iesaistīties Monero projektā, ir palīdzēt izglītot un dot iespēju jauniem un esošiem kopienas locekļiem. Tas var izpausties dažādos veidos, taču tas var būt tik vienkārši kā dalīties ar informāciju par Monero sociālajos tīklos, blogos utt.</p>\n<p>Šeit ir daži konkrēti veidi, kā jūs varat palīdzēt izglītībai:</p>\n<ul>\n<li>Uzsāciet savu blogu</li>\n<li>Rakstiet pakalpojumā Twitter vai Reddit par lietām, kuras esat atklājis vai iemācījies darīt ar Monero</li>\n<li>Izveidojiet videoklipus par ikdienas lietām, ko darāt ar Monero, piemēram, Monero nosūtīšanu, hardware maka izmantošanu, Monero pirkšanu un pārdošanu vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://localmonero.co\">LocalMonero.co</a>, utt.</li>\n</ul>';
 
   @override
   String get knowledge250Sbcontributing250Sb2250Sbtitle => 'Izglītība';
 
   @override
-  String get knowledge250Sbcontributing250Sb3250Sbtext => '<p>Vienkāršs veids, kā palīdzēt, ir būt aktīvam parastajos sociālo mediju veidos un runāt par, izglītot un kopīgot lielisku Monero saturu.</p>\n<p>Jo vairāk no mums dalās ar to, kā Monero mums ir palīdzējis, kas mums tajā patīk, kas ir jāuzlabo un kāpēc mēs izvēlamies sniegt ieguldījumu, jo vairāk cilvēku varēs saskatīt spēcīgas darbības vērtību. rīks, piemēram, Monero.</p>\n<h6 id=\"twitter\"> Twitter</h6>\n<p>Twitter ir izplatīta vieta kriptovalūtas lietotājiem (cita starpā), un tā ir vieta, kas man šķiet vērtīga gan mācībām, gan saziņai ar Monero kopienu. Lai gan reizēm tā var būt toksiska un skarba vieta, daži lieliski cilvēki regulāri publicē lielisku saturu.</p>\n<p>Jūtieties brīvi pievienoties un sākt kopīgot informāciju par Monero un sazināties ar citiem tur esošajiem!</p>\n<p><em>Jūs varat atrast LocalMonero pakalpojumā Twitter <span class=\"citation\" data-cites=\"LocalMoneroCo\"> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://twitter.com/LocalMoneroCo\">@LocalMoneroCo</a></span>.</em></p>\n<h6 id=\"reddit\">Reddit</h6>\n<p>Reddit ir populārs veids, kā sadarboties ar Monero (un plašāku kriptovalūtu/privātuma) auditoriju, un tā ir lieliska vieta, kur kopīgot garākas formas saturu, multividi, ziņas utt.</p>\n<p>Tur ir ārkārtīgi aktīva Monero kopiena, un daži no populārākajiem apakšreditiem ir:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/Monero/\">r/Monero</a>\n<ul>\n<li>Mājas lielākajai daļai Monero diskusiju, ziņu un mediju</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a>\n<ul>\n<li>Lieliska vieta, kur saņemt atbalstu un palīdzēt tiem, kam nepieciešams atbalsts saistībā ar Monero problēmām</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroCommunity/\">r/MoneroCommunity</a>\n<ul>\n<li>Vispārīga vieta uz sabiedrību vērstām diskusijām</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroMining/\">r/MoneroMining</a>\n<ul>\n<li>Visas jūsu ieguves vajadzības un diskusijas</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/xmrtrader/\">r/xmrtrader</a>\n<ul>\n<li> Mājas vieta visām diskusijām, kas saistītas ar cenu/tirgu/spekulācijām par Monero. Ar cenu/tirgu saistītas tēmas parasti ir aizliegtas visos citos Monero apakšreklāmās, lai kopiena būtu koncentrēta.</li>\n</ul></li>\n</ul>\n<p>Noteikti pievienojieties un piedalieties diskusijās, kopīgojiet interesantas ziņas un ziņas un sniedziet savu ieguldījumu, kur uzskatāt par piemērotu!</p>\n<p><em>Jūs varat atrast LocalMonero kopienu Reddit vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/LocalMonero/\">r/LocalMonero</a>.</em></p>\n<h6 id=\"matrixirc\">Matrix/IRC</h6>\n<p>Lielākā daļa Monero “iekšējo darbību” notiek Matrix un IRC — divos tērzēšanas tīklos, kas ir savienoti viens ar otru. Ja vēlaties turpināt iesaistīties ikdienas diskusijās, piedalīties sapulcēs vai vienkārši tērzēt ar citiem Monero lietotājiem, jūs vēlaties pāriet uz Matrix vai IRC.</p>\n<p>Visizplatītāko Matrix/IRC kanālu saraksts ir pieejams vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/community/hangouts/\">getmonero.org</a>.</p>\n<p><em>Jūs varat atrast LocalMonero kopienu Matrix telpā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://matrix.to/#/#localmonero:agoradesk.com\">#localmonero:agoradesk.com</a>.</em></p>\n<h6 id=\"offline\">Bezsaistē</h6>\n<p>Neaizmirstiet iepazīstināt savus draugus, ģimeni un citus ar Monero arī bezsaistē! Lielisks veids ir likt personai lejupielādēt mobilo maku, piemēram, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cakewallet.com/\">Cake Wallet (iOS/Android)</a>, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.monerujo.io/\">Monerujo (Android)</a> vai <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://mymonero.com/\">MyMonero (iOS)</a>, nosūtiet viņiem mazliet Monero un lūdziet tos nosūtīt atpakaļ.</p>\n<p>Var būt noderīgi arī salīdzināt darījumus starp Bitcoin un Monero, izmantojot tādu pētnieku kā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.exploremonero.com/\">ExploreMonero</a>, lai ļautu viņiem redzēt, cik maz informācijas tiek publiski atklāta, veicot darījumus, izmantojot Monero, salīdzinot ar citām caurspīdīgām blokķēdēm. X4596X]';
+  String get knowledge250Sbcontributing250Sb3250Sbtext => '<p>Vienkāršs veids, kā palīdzēt, ir būt aktīvam parastajās sociālo tīklu vietnēs un apspriest, izglītot un dalīties ar kvalitatīvu Monero saturu.</p>\n<p>Jo vairāk dalāmies ar to, kā Monero mums ir palīdzējis, kas mums tajā patīk, kas ir jāuzlabo un kāpēc mēs izvēlamies sniegt ieguldījumu, jo vairāk cilvēku varēs saskatīt vērtību spēcīgam rīkam kā Monero.</p>\n<h6 id=\"twitter\"> Twitter</h6>\n<p>Twitter ir ierastā vieta kriptovalūtas lietotājiem (starp citām), un tā ir vieta, kas mums šķiet vērtīga gan mācībām, gan saziņai ar Monero kopienu. Lai gan reizēm tā var būt toksiska un skarba vieta, daži lieliski cilvēki regulāri publicē kvalitatīvu saturu.</p>\n<p>Esat aicināti pievienoties un sākt dalīties ar informāciju par Monero un sazināties ar citiem tur esošajiem!</p>\n<p><em>Jūs varat atrast LocalMonero pakalpojumā Twitter <span class=\"citation\" data-cites=\"LocalMoneroCo\"> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://twitter.com/LocalMoneroCo\">@LocalMoneroCo</a></span>.</em></p>\n<h6 id=\"reddit\">Reddit</h6>\n<p>Reddit ir populārs veids, kā sadarboties ar Monero (un plašāku kriptovalūtu/privātuma) auditoriju, un tā ir lieliska vieta, kur dalīties ar garākas formas saturu, multividi, ziņām utt.</p>\n<p>Šeit ir izteikti aktīva Monero kopiena, un daži no populārākajiem subreddit ir:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/Monero/\">r/Monero</a>\n<ul>\n<li>Mājas lielākajai daļai Monero diskusiju, ziņu un mediju</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a>\n<ul>\n<li>Lieliska vieta, kur saņemt atbalstu un palīdzēt tiem, kam nepieciešams atbalsts saistībā ar Monero problēmām</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroCommunity/\">r/MoneroCommunity</a>\n<ul>\n<li>Vispārīga vieta uz sabiedrību vērstām diskusijām</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroMining/\">r/MoneroMining</a>\n<ul>\n<li>Visas jūsu mainošanas vajadzības un diskusijas</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/xmrtrader/\">r/xmrtrader</a>\n<ul>\n<li> Vieta visām diskusijām, kas saistītas ar cenu/tirgu/spekulācijām par Monero. Ar cenu/tirgu saistītas tēmas parasti ir aizliegtas visos citos Monero subreddit, lai kopiena būtu koncentrēta.</li>\n</ul></li>\n</ul>\n<p>Noteikti pievienojieties un piedalieties diskusijās, dalieties ar interesantām ziņām un sniedziet savu ieguldījumu, kur uzskatāt to par piemērotu!</p>\n<p><em>Jūs varat atrast LocalMonero kopienu Reddit vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/LocalMonero/\">r/LocalMonero</a>.</em></p>\n<h6 id=\"matrixirc\">Matrix/IRC</h6>\n<p>Lielākā daļa Monero “iekšējo darbību” notiek Matrix un IRC — divos tērzēšanas tīklos, kas ir savienoti viens ar otru. Ja vēlaties iesaistīties ikdienas diskusijās, piedalīties sapulcēs vai vienkārši tērzēt ar citiem Monero lietotājiem, varat doties uz Matrix vai IRC.</p>\n<p>Visizplatītāko Matrix/IRC kanālu saraksts ir pieejams vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/community/hangouts/\">getmonero.org</a>.</p>\n<p><em>Jūs varat atrast LocalMonero kopienu Matrix telpā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://matrix.to/#/#localmonero:agoradesk.com\">#localmonero:agoradesk.com</a>.</em></p>\n<h6 id=\"offline\">Bezsaistē</h6>\n<p>Neaizmirstiet iepazīstināt savus draugus, ģimeni un citus ar Monero arī bezsaistē! Lielisks veids ir ieteikt personai lejupielādēt mobilo maku, piemēram, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cakewallet.com/\">Cake Wallet (iOS/Android)</a>, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.monerujo.io/\">Monerujo (Android)</a> vai <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://mymonero.com/\">MyMonero (iOS)</a>, nosūtīt viņiem mazliet Monero un palūgt tos nosūtīt atpakaļ.</p>\n<p>Var būt noderīgi arī salīdzināt darījumus starp Bitcoin un Monero, izmantojot tādu pārūku kā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.exploremonero.com/\">ExploreMonero</a>, lai ļautu viņiem redzēt, cik maz informācijas tiek publiski atklāta Monero pārskaitījumos , salīdzinot ar caurredzamām blokķēdēm. </p>';
 
   @override
-  String get knowledge250Sbcontributing250Sb3250Sbtitle => 'Apziņa un iesaistīšanās';
+  String get knowledge250Sbcontributing250Sb3250Sbtitle => 'Apziņa un iesaiste';
 
   @override
-  String get knowledge250Sbcontributing250Sb4250Sbtext => '<p>Ja jau kādu laiku atrodaties Monero tuvumā vai labi saprotat, kā to lietot un novērst problēmas, lielisks veids, kā iesaistīties, būtu pāriet uz <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a> subreddit un sniegt atbalstu lietotājiem, kuri tur izliek ziņas.</p>\n<p> Pastāvīgi ir lietotāji, kuriem nepieciešama palīdzība (parasti) pamata problēmu risināšanā, un ir tikai daži no mums, kas aktīvi darbojas subreddit, lai viņiem palīdzētu. Būtu lieliski, ja vairāk cilvēku ienirt un sniegtu savu ieguldījumu, lai palīdzētu jauniem un esošajiem lietotājiem tikt galā ar savām problēmām!</p>';
+  String get knowledge250Sbcontributing250Sb4250Sbtext => '<p>Ja jau kādu laiku darbojaties ap Monero vai labi izprotat, kā to lietot un novērst problēmas, lielisks veids, kā iesaistīties, būtu doties uz <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a> subreddit un sniegt atbalstu lietotājiem, kuri tur izvieto ziņas.</p>\n<p> Pastāvīgi ir lietotāji, kuriem nepieciešama palīdzība (parasti) pamata problēmu risināšanā, un ir tikai daži no mums, kas aktīvi darbojas subreddit, lai viņiem palīdzētu. Būtu lieliski, ja vairāk cilvēku iesaistītos un sniegtu savu ieguldījumu, lai palīdzētu jauniem un esošiem lietotājiem tikt galā ar savām problēmām!</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb4250Sbtitle => 'r/monerosupport';
 
   @override
-  String get knowledge250Sbcontributing250Sb5250Sbtext => '<p>Gandrīz visas kopienas diskusijas par konkrētām tēmām notiek Matrix vai IRC, tāpēc, ja vēlaties tikai mācīties no sapulcēm/sekot sapulcēm vai vēlaties aktīvi piedalīties, varat iestatīt <a class=\"next-link\" href=\"#matrixirc\"> kādu no šīm tērzēšanas sarunām. tīkli</a>.</p>\n<p>Kad tas ir izdarīts, sekojiet līdzi tēmai, kas iestatīta katrai telpai, kurā atrodaties, vai <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues\">Monero metakrātuvē</a> ieplānotajām sapulcēm.</p>\n<p>Ja izvēlaties ierasties un piedalīties, lūdzu, ievērojiet tēmu secību, palieciet pie tēmas un mēģiniet runāt tikai tad, kad tas ir nepieciešams/zvanīts.</p>';
+  String get knowledge250Sbcontributing250Sb5250Sbtext => '<p>Gandrīz visas kopienas diskusijas par konkrētām tēmām notiek Matrix vai IRC, tāpēc, ja vēlaties tikai mācīties no sapulcēm/sekot sapulcēm vai vēlaties aktīvi piedalīties, varat iestatīt <a class=\"next-link\" href=\"#matrixirc\"> kādu no šiem sarakstes tīkliem</a>.</p>\n<p>Kad tas ir izdarīts, sekojiet līdzi tēmai, kas iestatīta katrai telpai, kurā atrodaties, vai <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues\">Monero metakrātuvē</a> ieplānotajām sapulcēm.</p>\n<p>Ja izvēlaties ierasties un piedalīties, lūdzu, ievērojiet tēmu secību, palieciet pie tēmas un mēģiniet runāt tikai tad, kad tas ir nepieciešams/vaicāts.</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb5250Sbtitle => 'Kopienas sanāksmes';
 
   @override
-  String get knowledge250Sbcontributing250Sb6250Sbtext => '<p>Tiem, kas pārvalda divas vai vairāk valodu, ļoti svarīgs veids, kā palīdzēt, ir palīdzēt ar tulkojumiem no angļu valodas citās valodās. Vienmēr ir jātulko jaunas valodas un jāatjaunina esošās valodas visā ekosistēmā, un jo vairāk valodu mēs aktīvi atbalstīsim, jo iekļaujošāks un pieejamāks kļūs Monero.</p>\n<p>Tulkošanas vajadzības un informāciju varat atrast vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://translate.getmonero.org/\">translate.getmonero.org</a> vai <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-ecosystem/monero-translations\"> vietnē Github</a>.</p>';
+  String get knowledge250Sbcontributing250Sb6250Sbtext => '<p>Tiem, kas pārvalda divas vai vairāk valodu, ļoti svarīgs veids, kā iesaistīties, ir palīdzēt ar tulkojumiem no angļu valodas citās valodās. Vienmēr ir jātulko jaunas valodas un jāatjaunina esošās valodas visā ekosistēmā, un jo vairāk valodu mēs aktīvi atbalstīsim, jo iekļaujošāks un pieejamāks kļūs Monero.</p>\n<p>Tulkošanas vajadzības un informāciju varat atrast vietnē <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://translate.getmonero.org/\">translate.getmonero.org</a> vai <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-ecosystem/monero-translations\"> Github</a>.</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb6250Sbtitle => 'Tulkojumi';
 
   @override
-  String get knowledge250Sbcontributing250Sb7250Sbtext => '<p>Pēdējais veids, kā izstrādātāji, kas nav izstrādātāji, var sniegt ieguldījumu Monero, ir noteikti reģistrēt <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/issues\">problēmas Github</a>, ja rodas problēma, kuru nevar atrisināt <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a> vai programmā. <a class=\"next-link\" href=\"#matrixirc\">Matrix/IRC</a> vai skatiet programmatūras uzlabojumu jomu.</p>\n<p>Kad atverat problēmu:</p>\n<ul>\n<li>Pārliecinieties, ka ar jūsu problēmu nav saistīta esoša problēma\n<ul>\n<li>Meklējiet <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/issues\">atvērtās problēmas pakalpojumā Github</a>, lai atrastu atslēgvārdus, kas saistīti ar jūsu</li>\n</ul></li>\n<li>Sniedziet pēc iespējas vairāk informācijas\n<ul>\n<li>Ja rodas problēma, kuru nevarēja atrisināt, veicot parasto problēmu novēršanu, veiciet tālāk norādītās darbības.\n<ul>\n<li>Apkopojiet visus atbilstošos žurnālus, kad rodas problēma</li>\n<li>Apkopojiet Monero programmatūras versiju, kuru izmantojat<br />\n</li>\n<li>Sistēmas OS un versijas apkopošana</li>\n<li>Saite uz visām atbilstošām esošām problēmām, Reddit pavedieniem utt.</li>\n</ul></li>\n</ul></li>\n<li>Sekojiet līdzi atbildēm un paziņojumiem par jūsu problēmas atjauninājumiem\n<ul>\n<li>Bieži vien ir nepieciešama plašāka informācija vai skaidrojumi, tāpēc noteikti sekojiet līdzi jūsu problēmas atjauninājumiem un komentāriem, kuriem var būt nepieciešama jūsu ievade</li>\n</ul></li>\n</ul>\n<p>Jo vairāk informācijas varat sniegt šajā jautājumā, jo labāk!</p>';
+  String get knowledge250Sbcontributing250Sb7250Sbtext => '<p>Pēdējais veids, kā tie, kas nav izstrādātāji, var sniegt ieguldījumu Monero, ir noteikti reģistrēt <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/issues\">problēmas Github</a>, ja rodas problēma, kuru nevar atrisināt <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a> vai <a class=\"next-link\" href=\"#matrixirc\">Matrix/IRC</a> vai pamanāt programmatūrā iespēju uzlabojumiem.</p>\n<p>Kad atverat problēmu:</p>\n<ul>\n<li>Pārliecinieties, ka ar jūsu problēmu nav saistīta jau atvērta problēma\n<ul>\n<li>Meklējiet <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/issues\">atvērtās problēmas Github</a>, lai atrastu atslēgvārdus, kas saistīti ar jūsu</li>\n</ul></li>\n<li>Sniedziet pēc iespējas vairāk informācijas\n<ul>\n<li>Ja rodas problēma, kuru ierastā veidā nevarēja atrisināt, veiciet tālāk norādītās darbības:\n<ul>\n<li>Apkopojiet visus atbilstošos logus, kad rodas problēma</li>\n<li>Apkopojiet Monero programmatūras versiju, kuru izmantojat<br />\n</li>\n<li>Apkopojiet sistēmas OS un versiju</li>\n<li>Pievienojiet saites uz visām saistītām esošām problēmām, Reddit pavedieniem utt.</li>\n</ul></li>\n</ul></li>\n<li>Sekojiet līdzi atbildēm un paziņojumiem par jūsu problēmas atjauninājumiem\n<ul>\n<li>Bieži vien ir nepieciešama plašāka informācija vai skaidrojumi, tāpēc noteikti sekojiet līdzi jūsu problēmas atjauninājumiem un komentāriem, kuriem var būt nepieciešama jūsu iesaiste</li>\n</ul></li>\n</ul>\n<p>Jo vairāk informācijas varat sniegt par problēmu, jo labāk!</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb7250Sbtitle => 'Iesniegšanas problēmas';
 
   @override
-  String get knowledge250Sbcontributing250Sb8250Sbtext => '<p>Cerams, ka šī rokasgrāmata ir radījusi dažas idejas par to, kā jūs varat atdot Monero, izmantojot savu unikālo prasmju kopumu, pieredzi un pieredzi. Jo vairāk kopienas atdos šādos veidos, jo lielāks un nobriedušāks būs Monero, un jo vieglāk mēs varēsim īstenot privātas, aizstājamas, pašsuverēnas un cenzūrai izturīgas naudas mērķus.</p>';
+  String get knowledge250Sbcontributing250Sb8250Sbtext => '<p>Cerams, ka šī rokasgrāmata ir radījusi dažas idejas par to, kā jūs varat iesaistīties Monero, izmantojot savu unikālo prasmju kopumu, zināšanas un pieredzi. Jo vairāk ļaužu iesaistīsies šādos veidos, jo lielāks un nobriedušāks būs Monero, un jo vieglāk mēs varēsim īstenot privātas, aizstājamas, suverēnas un pret cenzūru izturīgas naudas mērķus.</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb8250Sbtitle => 'Secinājums';
 
   @override
-  String get knowledge250Sbcontributing250Sbdescription => 'Monero panākumi ir atkarīgi no kopienas ieguldījuma — šodien mēs izpētīsim dažus veidus, kā mēs, kas nav izstrādātāji, varam palīdzēt.';
+  String get knowledge250Sbcontributing250Sbdescription => 'Monero panākumi ir atkarīgi no kopienas ieguldījuma — šodien mēs apskatīsim dažus veidus, kā mēs, nebūdami izstrādātāji, varam palīdzēt.';
 
   @override
-  String get knowledge250Sbcontributing250Sbtitle => 'Piedalās Monero';
+  String get knowledge250Sbcontributing250Sbtitle => 'Iesaiste Monero';
 
   @override
-  String get knowledge250Sbcritical250Sb0250Sbtext => '<p>Katram indivīdam ir savs stāsts par ceļošanu pa mežonīgajiem rietumiem, kas ir kriptovalūta. Daži atrod vietu, kur spekulēt, citi atrod draugus, bet citi atrod tehnoloģiju, kurai tic. Neskatoties uz atšķirībām, parasti ir daudz līdzību pat dažādās kriptovalūtās un kopienās. Viens no tiem ir satraucošā līdzība kultivētai uzvedībai daudzās kriptovalstu kopienās.</p>\n\n<p>Šīs darbības nav grūti pamanīt. Nespēja pieņemt jebkādu kritiku un apzināta nezināšana par trūkumiem, pat ņemot vērā pierādījumus, ir tikai daži piemēri. Dažās vietās karsējmeitenes kļūst tik acīmredzamas, ka jebkurš negatīvisms kļūst par pamatu disciplinārai rīcībai.</p>\n\n<p>Kā kriptovalūtas ceļotājs cenšas atbalstīt labus projektus un <a target=\"_blank\" href=\"/knowledge/monero-scams\" class=\"next-link\">nezaudēt visu savu naudu</a>, visi kriptovalūtas entuziasti tiek mudināti domāt kritiski un izvērtēt projektus, pamatojoties uz viņu reālo vērtību, bet kā būtu ar pieeju tai. no otra virziena? Vai pašiem projektiem ir jābūt paškritiskiem un apzinīgiem?</p>\n\n<p> Mēs strīdamies, ka jā. Pati kopiena ir projekta un tā vadītāju atspulgs. Turklāt gudra kopiena sagaida vairāk no saviem izstrādātājiem un varēs kritizēt piedāvātos risinājumus, nevis akli uzticēties un pieņemt, ka izstrādātāji strādā lietotāju labā, nevis savās vai ārējās interesēs.</p>\n\n<p> Un otrādi, kopiena, kas rūpējas tikai par cenu un nespēj vai nevēlas kritiski novērtēt sevi (vai ļaut citiem novērtēt), ir lemta gremdēties viduvējībā.</p>\n\n<p>Kā projekts, Monero cenšas noturēt savus izstrādātājus, pētniekus, vadītājus un pašu sabiedrību atbilstoši augstākajiem standartiem un samazināt pieaugošas pašapmierinātības un destruktīvas apātijas risku.</p>\n\n<p>Viens no veidiem, kā Monero to dara, ir rīkot iknedēļas Skepticisma svētdienu kopienas subredditā. Šī ir vieta, kur cilvēki var paust savas bažas par Monero, protokolu, vadību vai jebkādām citām bažām. Tā ir vieta, kur tiek tieši mudināti jautājumi un pat neuzticēšanās, un tā tiek uzskatīta par nepieciešamu mūsu ekosistēmas veselībai.</p>\n\n<p>Tas ir krasā pretstatā daudzām citām kopienām, kuras ne tikai izvairās no kritikas, bet arī bieži veicina apātiju un atstumtu prātu no savas kopienas. Tas var šķist skarbi teikt, taču nav iespējams aplūkot ekosistēmu aptverošo nelabvēļu aizliegšanu, sarunu pārtraukšanu un karsējmeiteņu mudināšanu, kas tiek novērota citu monētu tikšanās vietās un nenonāk pie šāda secinājuma.</p>\n\n<p> Tas nenozīmē, ka Monero pašam nav karsējmeiteņu, jo tā ir. Tomēr interesanti ir tas, ka daudzi kopienas locekļi izsauks šīs karsējmeitenes un aicinās viņus uz augstāku uzvedības standartu. Faktiski Monero iet tik tālu, ka nevajadzīgi pārmērīgu karsējmeiteņu saturu uzskata par nevēlamu un mēģinās to novirzīt uz piemērotākām vietām vai pilnībā noņemt.</p>\n\n<p>Apdraudētu prātu draudi ir jāuztver nopietni. Privātums ir bruņošanās sacensība, kurā visiem ir jābūt uz pirkstgaliem un kliedz “Monero ir labākais!” un “Nekas nevar pārspēt Monero! Tas ir nesalaužams! ” tikai mazina kaujas steidzamību. Raugoties no šīs perspektīvas, kritiskās domāšanas un veselīgas skepses trūkums sabiedrībā nav tikai kaitinošs vai kulturāls, tas var novest pie paša protokola krišanas.</p>\n\n<p>Daudzos veidos mēs varam meklēt Bitcoin piemērus, kā tas notiek reālajā dzīvē. Bitcoin maksimālisti bieži vien runās un tikumības signalizēs viens otram par Bitcoin priekšrocībām, un ikreiz, kad rodas jautājumi par privātumu, aizstājamību vai mērogošanu, jautājumi tiek atmesti ar roku un likumpārkāpēji tiek izstumti no kopienas. Pārāk bieži cilvēkiem, kuriem ir pamatoti jautājumi, ir aizliegts, bloķēts vai kā citādi izstumts no dalības Bitcoin kopienās tikai tāpēc, ka viņi neatbilst saskaņotajai retorikai un uzdrošinājās uzdot jautājumus.</p>\n\n<p>Ir un atkal šie nogurušie ceļotāji atrod ceļu uz Monero un, kādu laiku pavadījuši sabiedrībā, ir slavējuši projektu par tā līdzvērtīgajām diskusijām un baiļu trūkumu no neērtiem jautājumiem. Nav nekas neparasts, ka šie ceļotāji pat vēlas apspriest citas monētas, nevis tāpēc, ka viņi vēlas maksāt, bet tāpēc, ka viņi sāk uzticēties kopienas prātam un loģikai un vēlas godīgu viedokli par citu monētu, ko viņi nevar iegūt. pati monētu kopiena.</p>\n\n<p>Pat fakts, ka Monero pagātnē un tagadnē ir nepārtraukti griezies, ir parādījis projekta pazemību un spēku. Lai gan daži var nosodīt hard forks kā <a target=\"_blank\" href=\"/knowledge/why-monero-is-open-source-and-decentralized\" class=\"next-link\">centralizāciju uz izstrādātājiem</a>, kas zināmā mērā ir taisnība, tas parāda, ka izstrādātāji saprata, ka izredzes, ka viņiem viss 100% tiks pareizi pirmajā reizē, ir nelielas. Lietas būs jāuzlabo un, iespējams, pat pilnībā jāaizstāj, ja Monero vēlas saglabāt konkurētspēju gan privātuma, gan kriptovalūtas jomā.</p>\n\n<p> Bieži vien šīs izmaiņas izjauc atpakaļejošu saderību, kas ir liels nē Bitcoin protokolā, kur visam ir jābūt mīkstam un atpakaļ saderīgam. Bet tas nozīmē, ka katrai atsevišķai Bitcoin veiktajai izmaiņai ir ļoti ierobežota darbības joma. Viņus nomāc viņu pagātne, un uzlabojumiem tā ir jāciena, bieži vien bezjēdzīgi. Tā kā Monero izmaiņas var būt plašas un bieži vien uzlabo protokolu un privātumu par vairākām kārtām.</p>\n\n<p>To var viegli redzēt, iekļaujot <a target=\"_blank\" href=\"/knowledge/monero-ringct\" class=\"next-link\">RingCT</a>. Iepriekš Monero iekļāva tikai <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">slēptās adreses</a> un <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">zvana parakstus </a>, un summas bija redzamas. Šens Noeters, MRL pētnieks, mainīja esošo protokolu, kas slēpj Monero summas, taču tā iekļaušana traucētu saderību, kas nozīmē, ka vecā tipa darījumi ar caurspīdīgām summām vairs nebūtu atļauti.</p>\n\n<p> Monero uzņēmās šo risku, un gala rezultāts bija daudz uzlabots privātums, kas nostiprināja Monero kā privātuma monētu karaļa pozīciju. Bet tas vēl nav viss, ko tas parādīja. Šī dakša, kā arī vairāki pēc tam, kā arī visi turpmākie pamudinājumi uz skepsi, pazemību un apšaubīšanu sabiedrībā, arī nostiprināja Monero kā vienu no asākajiem un kritiskākajiem prātu krājumiem kriptotelpā.</p>';
+  String get knowledge250Sbcritical250Sb0250Sbtext => '<p>Katram indivīdam ir savs stāsts par ceļošanu pa mežonīgajiem rietumiem, kas ir kriptovalūta. Daži atrod vietu, kur spekulēt, citi atrod draugus, bet citi atrod tehnoloģiju, kurai uzticas. Neskatoties uz atšķirībām, parasti ir daudz līdzību pat dažādās kriptovalūtās un kopienās. Viens no tiem ir satraucošā kulta uzvedība daudzās kriptovalūtu kopienās.</p>\n\n<p>Šīs darbības nav grūti pamanīt. Nespēja pieņemt jebkādu kritiku un apzināta nezināšana par trūkumiem, pat ņemot vērā pierādījumus, ir tikai daži piemēri. Dažās vietās propaganda kļūst tik acīmredzama, ka jebkura kritika kļūst par pamatu disciplinārai rīcībai.</p>\n\n<p>Cenšoties atbalstīt labus projektus un <a target=\"_blank\" href=\"/knowledge/monero-scams\" class=\"next-link\">nezaudēt visu savu naudu</a>, visi kriptovalūtas entuziasti tiek mudināti domāt kritiski un izvērtēt projektus, pamatojoties uz to reālo vērtību, bet kā būtu ar pieeju no otra virziena? Vai pašiem projektiem ir jābūt paškritiskiem un apzinīgiem?</p>\n\n<p> Mēs uzskatām, ka jā. Pati kopiena ir projekta un tā vadītāju atspulgs. Turklāt gudra kopiena sagaida vairāk no saviem izstrādātājiem un varēs kritizēt piedāvātos risinājumus, nevis akli uzticēties un pieņemt, ka izstrādātāji darbojas lietotāju labā, nevis savās vai ārējās interesēs.</p>\n\n<p> Un otrādi, kopiena, kas rūpējas tikai par cenu un nespēj vai nevēlas kritiski novērtēt sevi (vai ļaut citiem novērtēt), ir lemta gremdēties viduvējībā.</p>\n\n<p>Kā projekts, Monero cenšas noturēt savus izstrādātājus, pētniekus, vadītājus un pašu sabiedrību atbilstošu augstākajiem standartiem un samazināt pieaugošas pašapmierinātības un destruktīvas apātijas risku.</p>\n\n<p>Viens no veidiem, kā Monero to dara, ir rīkojot iknedēļas Skepticisma svētdienas kopienas subreddit. Šī ir vieta, kur cilvēki var paust savas bažas par Monero protokolu, vadību vai jebkādām citām jomām. Tā ir vieta, kur tiek tieši mudināta jautājumu uzdošana un pat neuzticēšanās, un tā tiek uzskatīta par nepieciešamu mūsu ekosistēmas veselībai.</p>\n\n<p>Tas ir krasā pretstatā daudzām citām kopienām, kuras ne tikai izvairās no kritikas, bet arī bieži veicina apātiju un aptumšotu prātu savā kopienā. Tas var šķist skarbi teikts, taču nav iespējams noskatīties uz kritikas aizliegšanu ekosistēmā, sarunu pārtraukšanu un propagandas mudināšanu, kas tiek novērota citu valūtu kopienās, un nenonākt pie šāda secinājuma.</p>\n\n<p> Tas nenozīmē, ka Monero pašam nav propagandas, jo tā ir. Tomēr interesanti ir tas, ka daudzi kopienas locekļi uzrunās šos indivīdus un aicinās viņus uz augstāku uzvedības standartu. Faktiski Monero iet tik tālu, ka nevajadzīgi pārmērīgu propagandas saturu uzskata par nevēlamu un mēģinās to novirzīt uz piemērotākām vietām vai pilnībā noņemt.</p>\n\n<p>Aptumšotu prātu riski ir jāuztver nopietni. Privātums ir bruņošanās sacensība, un ja visi izstiepjas uz pirkstgaliem un kliedz “Monero ir labākais!” un “Nekas nevar pārspēt Monero! Tas ir nesalaužams!”, tas tikai mazina kaujas gatavību. Raugoties no šīs perspektīvas, kritiskās domāšanas un veselīgas skepses trūkums sabiedrībā nav tikai kaitinošs vai kulturāls, tas var novest pie paša protokola krišanas.</p>\n\n<p>Daudzos veidos varam redzēt piemērus Bitcoin, kā tas notiek reālajā dzīvē. Bitcoin maksimālisti bieži vien runās un tikumīgi kladzinās viens otram par Bitcoin priekšrocībām, un ikreiz, kad rodas jautājumi par privātumu, aizstājamību vai paplašināšanu, tiem tiek atmests ar roku un kritiķi tiek izstumti no kopienas. Pārāk bieži cilvēki, kuriem ir pamatoti jautājumi, ir aizliegti, bloķēti vai kā citādi izstumti no dalības Bitcoin kopienās tikai tāpēc, ka viņi neatbilst saskaņotajai retorikai un uzdrošinājās uzdot jautājumus.</p>\n\n<p>Atkal un atkal šie nogurušie ceļotāji atrod ceļu uz Monero, un, kādu laiku pavadījuši kopienā, slavē projektu par tā līdzvērtīgajām diskusijām un baiļu trūkumu no neērtiem jautājumiem. Nav nekas neparasts, ka šie ceļotāji pat vēlas apspriest citas valūtas, nevis tāpēc, ka vēlas tās slavināt, bet tāpēc, ka viņi sāk uzticēties kopienas prātam un loģikai un vēlas godīgu viedokli par citu valūtu, ko viņi nevar iegūt savas valūtas kopienā.</p>\n\n<p>Pat fakts, ka Monero pagātnē un tagadnē ir nepārtraukti dalījies, ir parādījis projekta pieticību un spēku. Lai gan daži var nosodīt hard forks kā <a target=\"_blank\" href=\"/knowledge/why-monero-is-open-source-and-decentralized\" class=\"next-link\">centralizāciju uz izstrādātājiem</a>, kas zināmā mērā ir taisnība. Tas parāda, ka izstrādātāji saprot, cik nelielas ir izredzes, ka viņiem viss 100% sanāks pareizi pirmajā reizē. Lietas būs jāuzlabo un, iespējams, pat pilnībā jāaizstāj, ja Monero vēlas saglabāt konkurētspēju gan privātuma, gan kriptovalūtas jomā.</p>\n\n<p> Bieži vien šīs izmaiņas nepieļauj atpakaļejošu saderību, kas ir liels nē Bitcoin protokolā, kur visam ir jābūt mīkstam un atpakaļejoši saderīgam. Bet tas nozīmē, ka katrai atsevišķai Bitcoin veiktajai izmaiņai ir ļoti ierobežota darbības joma. Viņus nomāc viņu pagātne, un uzlabojumiem tā ir jāciena, bieži vien nemanāmi. Turpretī Monero izmaiņas var būt plašas un bieži vien uzlabo protokolu un privātumu vairākkārt.</p>\n\n<p>To var viegli redzēt, iekļaujot <a target=\"_blank\" href=\"/knowledge/monero-ringct\" class=\"next-link\">RingCT</a>. Iepriekš Monero iekļāva tikai <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">slēptās adreses</a> un <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">gredzenveida parakstus </a>, un summas bija redzamas. Šens Noeters, MRL pētnieks, to piedāvāja mainīt uz esošo protokolu, kas slēpj Monero summas, taču tā iekļaušana traucētu saderību, kas nozīmē, ka vecā tipa darījumi ar caurspīdīgām summām vairs nebūtu atļauti.</p>\n\n<p> Monero uzņēmās šo risku, un gala rezultāts bija daudz uzlabots privātums, kas nostiprināja Monero kā privātuma monētu karaļa pozīciju. Bet tas vēl nav viss, ko tas parādīja. Šī sadalīšanās, kā arī vairākas pēc tam, kā arī visi turpmākie pamudinājumi uz skepsi, pieticību un apšaubīšanu sabiedrībā, arī nostiprināja Monero kā vienu no asākajiem un kritiskākajiem prātu krājumiem kriptotelpā.</p>';
 
   @override
-  String get knowledge250Sbcritical250Sbdescription => 'Kripto entuziasti tiek mudināti domāt kritiski un novērtēt projektus, pamatojoties uz viņu reālās pasaules vērtību, bet vai pašiem projektiem ir jābūt paškritiskiem un apzinīgiem?';
+  String get knowledge250Sbcritical250Sbdescription => 'Kripto entuziasti tiek mudināti domāt kritiski un izvērtēt projektus, pamatojoties uz to vērtību reālajā dzīvē, bet vai pašiem projektiem arī būtu jābūt paškritiskiem un apzinīgiem?';
 
   @override
-  String get knowledge250Sbcritical250Sbtitle => 'Kāpēc Monero ir viskritiskākā domāšanas kopiena?';
+  String get knowledge250Sbcritical250Sbtitle => 'Kāpēc Monero ir viskritiskāk domājošā kopiena';
 
   @override
-  String get knowledge250Sbdandelion250Sb0250Sbtext => '<p>Kā kriptovalūta, Monero ar neapbruņotu aci varētu šķist ļoti garlaicīga. Tam nav lielas pretenzijas uz slavu, piemēram, \"pasaules datoru\" vai \"revolucionāru xyz nozari\". Tas ir tikai mēģinājums būt privāta, digitāla, aizstājama nauda, un katrs jauninājums un jaunā tehnoloģija tikai veicina šo mērķi. </p>\n<p>\nTie, kas šo mērķi uzskata par pārāk šauru vai neinteresantu, parasti nesaprot, cik grūti ir panākt jēgpilnu privātumu, it īpaši pastāvīgā, atvērtā virsgrāmatā, piemēram, blokķēdē. Jebkurš metadatu noplūdes veids var apdraudēt privātumu.</p>\n<p>\nMonero veic piesardzības pasākumus, lai aizsegtu ķēdes datus, piemēram, saņēmēju, sūtītāju un summas, izmantojot attiecīgi slepenas adreses, zvana parakstus un Pedersena saistības. Tas samazina iespēju, ka nejaušs novērotājs varēs izsecināt svarīgu informāciju pēc tam, kad darījumi jau ir nosūtīti un tagad ir tikai daļa no ierakstītās vēstures. Tomēr ir daži uzbrukumi, kurus var veikt brīdī, kad notiek darījums un kurus nevar veikt vēlāk.</p>';
+  String get knowledge250Sbdandelion250Sb0250Sbtext => '<p>Kā kriptovalūta, Monero ar neapbruņotu aci varētu šķist ļoti garlaicīga. Tam nav skaļu, slavinošu saukļu kā \"pasaules dators\" vai \"revolucionārs xyz nozarē\". Tas tikai mēģina būt privāta, digitāla, aizstājama nauda, un katrs jauninājums un jaunā tehnoloģija tikai veicina šo mērķi. </p>\n<p>\nTie, kas šo mērķi uzskata par pārāk šauru vai neinteresantu, parasti nesaprot, cik grūti ir panākt jēgpilnu privātumu, it īpaši pastāvīgā, atvērtā virsgrāmatā, piemēram, blokķēdē. Jebkurš metadatu noplūdes veids var apdraudēt privātumu.</p>\n<p>\nMonero veic piesardzības pasākumus, lai aizsegtu ķēdes datus, piemēram, saņēmēju, sūtītāju un summas, izmantojot attiecīgi slepenas adreses, gredzenveida parakstus un Pedersena saistības. Tas samazina iespēju, ka ārējs novērotājs varēs izsecināt svarīgu informāciju pēc tam, kad pārskaitījumi jau ir nosūtīti un tagad ir tikai daļa no ierakstītās vēstures. Tomēr ir daži uzbrukumi, kurus var veikt brīdī, kad notiek pārskaitījums un kurus nevar veikt vēlāk.</p>';
 
   @override
   String get knowledge250Sbdandelion250Sb0250Sbtitle => 'Privātums kā prioritāte';
 
   @override
-  String get knowledge250Sbdandelion250Sb1250Sbtext => 'Šie uzbrukumi ir saistīti ar identificēšanu, no kuras IP adreses tika veikts darījums. Ja šī informācija tiks iegūta, tā varētu atklāt, ka kāda persona ir nosūtījusi Monero darījumu. Tas nevar parādīt, kam un cik daudz, taču ir daži gadījumi, kad ar Monero lietotāja zināšanām pietiek, lai nodarītu kaitējumu.\n<br/><br/>\nLabā ziņa ir tā, ka, ja šī informācija netiek savākta darījuma veikšanas brīdī, tad to nevar uzzināt vēlāk, jo IP adreses blokķēdē netiek glabātas. Mierina arī apziņa, ka šāds uzbrukums, visticamāk, nebūs redzams savvaļā, jo, lai to pārvarētu, uzbrucējam būtu nepieciešams liels vairums tīkla mezglu. Ja cilvēks tomēr spētu vadīt šo lielo vairākumu, viņš spētu noteikt darījuma “virzienu”.\n<br/><br/>\nTas var būt mulsinoši, tāpēc mēs šeit izskaidrosim pamatinformāciju. Katrs mezgls savienojas ar citiem tīkla mezgliem, lai tie varētu atjaunināt savu blokķēdi, kā arī dalīties tajā ar citiem, ko viņi zina. Šie savienojumi ļauj viņiem uzzināt par jauniem darījumiem, izplatīt tos un nosūtīt savus. Tā kā mezgls var pastāstīt saviem vienaudžiem tikai par darījumiem, par kuriem viņi zina, ir pašsaprotami, ka pats pirmais mezgls, kas izplata darījumu, ir mezgls, kas faktiski sūta Monero.\n<br/><br/>\nJa uzbrucējam tīklā pieder lielākā daļa mezglu, katrs mezgls dzirdēs par darījumu no viena no saviem līdziniekiem, un, pamatojoties uz laiku, kurā katrs mezgls saņem šo informāciju, viņi var secināt, iespējams, kur darījums sākās.\n<br/><br/>\nJa tas joprojām mulsina, mēs piedāvājam šo piemēru. Pieņemsim, ka mums abiem ir kopīgs draugs, kas slēpjas no mūsu redzējuma. Šis draugs skaļi sauc. Es vispirms dzirdu viņa zvanu un dzirdu to skaļāk nekā jūs. No šīs informācijas mēs varam zināt, ka es, visticamāk, esmu tuvāk mūsu draugam nekā jūs. Tas, ka skaņu dzirdat vēlāk (pat tikai par sekundes daļu) un skaņa ir vājāka, nozīmē, ka mums ir jāsāk meklēt manā, nevis jūsu reģionā.\n<br/><br/>\nJa uzbrucējs spēj veiksmīgi uzminēt, kurš no viņu līdziniekiem ir nosūtījis darījumu, jo viņam ir IP adrese, kas ir savienota ar viņu mezglu un pārsūtīja to viņam, viņš var būt pārliecināts par IP adresi, kas to nosūtīja. Šī ir spēcīga informācija, jo IP adreses satur informāciju par lietotāja valsti un interneta pakalpojumu sniedzēju (ISP), un paši interneta pakalpojumu sniedzēji zina, kurš lietotājs ar kuru precīzu IP adresi ir piesaistīts, tādējādi efektīvi deanonimējot Monero lietotāju.';
+  String get knowledge250Sbdandelion250Sb1250Sbtext => 'Šie uzbrukumi ir saistīti ar identificēšanu, no kuras IP adreses tika veikts pārskaitījums. Ja šī informācija tiek iegūta, tā var atklāt, kāda persona ir nosūtījusi Monero pārskaitījumu. Tas nevar parādīt, kam un cik daudz, taču ir daži gadījumi, kad pietiek zināt, ka kāds lieto Monero, lai nodarītu kaitējumu.\n<br/><br/>\nLabā ziņa ir tā, ka, ja šī informācija netiek savākta pārskaitījuma veikšanas brīdī, tad to nevar uzzināt vēlāk, jo IP adreses blokķēdē netiek glabātas. Mierina arī apziņa, ka šāds uzbrukums, visticamāk, nebūs redzams dabā, jo, lai to veiktu, uzbrucējam būtu nepieciešams liels vairums tīkla mezglu. Ja cilvēks tomēr spētu vadīt šo lielo vairākumu, viņš spētu noteikt pārskaitījuma “virzienu”.\n<br/><br/>\nTas var būt mulsinoši, tāpēc mēs šeit izskaidrosim pamatus. Katrs mezgls savienojas ar citiem tīkla mezgliem, lai tie varētu atjaunināt savu blokķēdi, kā arī dalīties tajā ar citiem, ko viņi zina. Šie savienojumi ļauj viņiem uzzināt par jauniem pārskaitījumiem, izplatīt tos un nosūtīt savus. Tā kā mezgls var pastāstīt citiem tikai par pārskaitījumiem, par kuriem pats zina, ir pašsaprotami, ka pats pirmais mezgls, kas izplata darījumu, ir mezgls, kas faktiski sūta Monero.\n<br/><br/>\nJa uzbrucējam tīklā pieder lielākā daļa mezglu, katrs mezgls dzirdēs par pārskaitījumu no viena no saviem līdziniekiem, un, pamatojoties uz laiku, kurā katrs mezgls saņem šo informāciju, iespējams, var secināt, kur pārskaitījums sākās.\n<br/><br/>\nJa tas joprojām mulsina, mēs piedāvājam šo piemēru. Pieņemsim, ka mums abiem ir kopīgs draugs, kas slēpjas no mūsu redzējuma. Šis draugs skaļi sauc. Es vispirms dzirdu viņa saucienu un dzirdu to skaļāk nekā jūs. No šīs informācijas mēs varam zināt, ka es, visticamāk, esmu tuvāk mūsu draugam nekā jūs. Tas, ka skaņu dzirdat vēlāk (pat tikai par sekundes daļu) un skaņa ir vājāka, nozīmē, ka mums ir jāsāk meklēt manā, nevis jūsu reģionā.\n<br/><br/>\nJa uzbrucējs spēj veiksmīgi uzminēt, kurš no viņu līdziniekiem ir nosūtījis darījumu, jo viņam ir IP adrese, kas ir savienota ar viņu mezglu un pārsūtīja to viņam, viņš var būt pārliecināts par IP adresi, kas to nosūtīja. Šī ir spēcīga informācija, jo IP adreses satur informāciju par lietotāja valsti un interneta pakalpojumu sniedzēju (ISP), un interneta pakalpojumu sniedzēji zina, kurš lietotājs piesaistīts precīzi kādai IP adresei, tādējādi būtībā atklājot Monero lietotāju.';
 
   @override
   String get knowledge250Sbdandelion250Sb1250Sbtitle => 'Uzbrukums, lai atklātu IP adresi';
 
   @override
-  String get knowledge250Sbdandelion250Sb2250Sbtext => 'Viens no iespējamiem šī uzbrukuma mazināšanas veidiem ir pārklājuma tīkla, piemēram, Tor vai I2P, izmantošana. Tas padara to tā, ka pat tad, ja uzbrucējs var izsecināt avota IP adresi, iespējams, tā nav tā, kas veica darījumu, bet gan pārklājuma tīkla starpniekserveris (I2P) vai izejas mezgls (Tor). Tomēr šis nav visaptverošs risinājums, jo pārklājošie tīkli, VPN un līdzīga programmatūra daudzās valstīs ir aizliegta, un ir nereāli sagaidīt, ka ikviens izmantos, sinhronizēs un izplatīs šos tīklus. Ir nepieciešams risinājums, kas neprasa ārējas programmatūras un tīklu izmantošanu; tāds, kas ir pieejams parastam cilvēkam.\n<br/><br/>\nŠis risinājums ir Dandelion++ (DPP), kas ir jaunināts protokols sākotnējam Dandelion priekšlikumam Bitcoin. Šajā protokolā ir divas fāzes — stumbra fāze un pūkainības fāze; abiem kopā ir jāatspoguļo pienenes forma.\n<br/><br/>\nCilmes fāzē ik pēc dažām minūtēm nosūtošais mezgls nejauši izvēlas divus līdzīgus no visiem mezgliem, ar kuriem tas ir savienots. Kad nosūtīšanas mezgls nosūta transakciju vai nu savā vārdā, vai vienkārši pārsūtot darījumu no cita mezgla cilmes fāzē, tas nejauši izvēlas vienu no šiem diviem atlasītajiem vienaudžiem un nosūta tam darījumu.\n<br/><br/>\nPlūkšanas fāze ir tad, kad mezgls saņem darījumu un pārraida to katram izejošajam savienojumam, nevis tikai vienam nejauši izvēlētam, tas nodrošina patiesu transakcijas izplatību. Ik pēc dažām minūtēm mezgls sevi definē kā tādu, kas pēc nejaušības principa izplatīsies, izmantojot stumbra vai pūkas, tāpēc cilmes fāze var būt diezgan ilga, ja katrs savienojošais mezgls ir definējis sevi kā cilmes mezglu, bet, tiklīdz darījums sasniedz pūka fāzi, tas tur paliek.\n<br/><br/>\nTas nozīmē, ka uzbrucējs vairs nevarēs vienkārši noklausīties darījuma virzienu, jo pirms tas tika izplatīts visiem, tam tika veikta cilmes fāze, un pūka fāzes sākuma mezgls nav mezgls, no kura darījums tika veikts. , un nav zināms, cik apiņu gar kātu darījums tika veikts.\n<br/><br/>\nProtams, iepriekš minēto risinājumu apvienošana (DPP plus pārklājuma tīkls) nodrošinās vēl spēcīgākas privātuma garantijas un aizsardzību pret IP izsekošanu. Jāņem vērā arī tas, ka DPP neaizsargā pret cita veida tīkla izsekošanas uzbrukumu, ko var veikt ar interneta pakalpojumu sniedzējiem, taču tas ir ārpus šī raksta darbības jomas.\n<br/><br/>\nLaidienā 0.16, Dandelion++ ir iestatīts tiešraidē Monero tīklā un pēc noklusējuma tiek izmantots atsauces klientā. Šīs nelielās izmaiņas vēl vairāk mazinās iespējamos uzbrukumus Monero tīklam un parāda, kāpēc Monero ir vadošā pakotne praktisko, lietoto privātuma tehnoloģiju jomā.';
+  String get knowledge250Sbdandelion250Sb2250Sbtext => 'Viens no iespējamiem šī uzbrukuma mazināšanas veidiem ir pārklājuma tīkla, piemēram, Tor vai I2P, izmantošana. Tas nodrošina, ka pat tad, ja uzbrucējs var izsecināt avota IP adresi, iespējams, tā nav tā, kas veica darījumu, bet gan pārklājuma tīkla starpniekserveris (I2P) vai izejas mezgls (Tor). Tomēr šis nav visaptverošs risinājums, jo pārklājošie tīkli, VPN un līdzīga programmatūra daudzās valstīs ir aizliegta, un ir nereāli sagaidīt, ka ikviens izmantos, sinhronizēs un izplatīs šos tīklus. Ir nepieciešams risinājums, kas neprasa ārējas programmatūras un tīklu izmantošanu; tāds, kas ir pieejams parastam cilvēkam.\n<br/><br/>\nŠis risinājums ir Dandelion++ (DPP), kas ir atjaunināts protokols sākotnējam Dandelion priekšlikumam Bitcoin. Šajā protokolā ir divas fāzes — stumbra fāze un zieda fāze; abi kopā ir atspoguļo pienenes formu.\n<br/><br/>\nStumbra fāzē ik pēc dažām minūtēm nosūtošais mezgls nejauši izvēlas divus no visiem mezgliem, ar kuriem tas ir savienots. Kad nosūtīšanas mezgls nosūta pārskaitījumu vai nu savā vārdā, vai vienkārši pārsūta no cita mezgla, kurš arī ir stumbra fāzē, tas nejauši izvēlas vienu no šiem diviem atlasītajiem mezgliem un nosūta tam pārskaitījumu.\n<br/><br/>\nZieda fāzē mezgls saņem pārskaitījumu un pārraida to katram izejošajam savienojumam, nevis tikai vienam nejauši izvēlētam, kas nodrošina patieso pārskaitījuma izplatību. Ik pēc dažām minūtēm mezgls pēc nejaušības principa definē, vai izplatīs pārskaitījumus, izmantojot stumbra vai zieda fāzi. Tāpēc stumbra fāze var būt diezgan ilga, ja katrs savienojošais mezgls ir definējis sevi kā stumbra mezglu. Tiklīdz pārskaitījums sasniedz zieda fāzi, tas tur paliek.\n<br/><br/>\nTas nozīmē, ka uzbrucējs vairs nevarēs vienkārši noklausīties darījuma virzienu, jo pirms tas tika izplatīts visiem, tam tika veikta stumbra fāze, un zieda fāzes sākuma mezgls nav mezgls, no kura pārskaitījums tika veikts. Nav arī zināms, pirms cik lēcieniem stumbra fāzē pārskaitījums tika izsūtīts.\n<br/><br/>\nProtams, iepriekš minēto risinājumu apvienošana (DPP plus pārklājuma tīkls) nodrošinās vēl spēcīgākas privātuma garantijas un aizsardzību pret IP izsekošanu. Jāņem vērā arī tas, ka DPP neaizsargā pret cita veida tīkla izsekošanas uzbrukumu, ko var veikt ar interneta pakalpojumu sniedzējiem, taču tas ir ārpus šajā rakstā apskatītā.\n<br/><br/>\nVersijā 0.16, Dandelion++ ir iestatīts Monero tīklā un pēc noklusējuma tiek izmantots programmatūrā. Šīs nelielās izmaiņas vēl vairāk mazina iespējamos uzbrukumus Monero tīklam un parāda, kāpēc Monero ir vadošā valūta praktisko, pielietoto privātuma tehnoloģiju jomā.';
 
   @override
-  String get knowledge250Sbdandelion250Sb2250Sbtitle => 'Seku mazināšana(-i)';
+  String get knowledge250Sbdandelion250Sb2250Sbtitle => 'Seku mazināšana';
 
   @override
-  String get knowledge250Sbdandelion250Sbdescription => 'Monero veic piesardzības pasākumus, lai aptumšotu ķēdes datus, tomēr ir daži uzbrukumi, kurus var veikt darījuma brīdī un kurus nevar veikt vēlāk.';
+  String get knowledge250Sbdandelion250Sbdescription => 'Monero veic piesardzības pasākumus, lai apslēptu ķēdes datus, tomēr ir daži uzbrukumi, kurus var veikt pārskaitījuma brīdī un nevar veikt vēlāk.';
 
   @override
-  String get knowledge250Sbdandelion250Sbtitle => 'Kā Dandelion++ saglabā Monero darījumu izcelsmi privātu';
+  String get knowledge250Sbdandelion250Sbtitle => 'Kā Dandelion++ saglabā Monero pārskaitījumu izcelsmi privātu';
 
   @override
   String get knowledge250Sbdescription => 'Ar ko Monero ir īpašs? Uzziniet, izlasot rakstus un rokasgrāmatas mūsu zināšanu lapā.';
 
   @override
-  String get knowledge250Sbeconomy250Sb0250Sbtext => '<p>Viens no svarīgākajiem aspektiem kriptovalūtu izdzīvošanā un izaugsmē un to lietojamībā ir aprites ekonomikas veidošanās. Mēs esam redzējuši, ka tie parādās nelielā mērogā Bitcoin un citās kriptovalūtās, taču Monero ir vairāki atribūti, kas unikāli ļauj mums veidot aprites ekonomiku un piedalīties tajā.</p>';
+  String get knowledge250Sbeconomy250Sb0250Sbtext => '<p>Viens no svarīgākajiem aspektiem kriptovalūtu pastāvēšanā, izaugsmē un lietojamībā ir aprites ekonomikas veidošanās. Esam redzējuši, kā tie parādās nelielā mērogā Bitcoin un citās kriptovalūtās, taču Monero ir vairāki atribūti, kas unikāli ļauj mums veidot aprites ekonomiku un piedalīties tajā.</p>';
 
   @override
-  String get knowledge250Sbeconomy250Sb1250Sbtext => '<p>Lai gan es esmu pārliecināts, ka jūs visi brīvi pārzināt ekonomiku kā plašu tēmu, ideja par “aprites ekonomiku” tiek reti apspriesta ārpus kriptovalūtu pasaules. Aprites ekonomikas padara tik svarīgas un īpašas, ka tās rada patiesi brīvus tirgus, kas ļauj tirgot pakalpojumus, produktus un preces <em> tieši Monero</em>.</p>\n<p>Dalībniekiem nav nepārtraukti jāiekļaujas un jāizkāpj no fiat, taču viņi var paturēt savu Monero sistēmā, pelnot, ietaupot un tērējot tieši Monero bez berzes, uzraudzības vai parastas ekonomikas ierobežojumiem. X606X]\n<p>Aprites ekonomika parasti ir pilnīgi \"pārspējama\" un likumīga, taču tā darbojas vairāk kā \"pelēkie tirgi\", salīdzinot ar parastajiem \"baltajiem tirgiem\" fiat pasaulē.</p>';
+  String get knowledge250Sbeconomy250Sb1250Sbtext => '<p>Lai gan esmu pārliecināts, ka jūs visi brīvi pārzināt ekonomiku kā plašu tēmu, ideja par “aprites ekonomiku” tiek reti apspriesta ārpus kriptovalūtu pasaules. Kas aprites ekonomikas padara tik svarīgas un īpašas, ir tas, ka tās rada patiesi brīvus tirgus, kas ļauj tirgot pakalpojumus, produktus un preces <em> tieši par Monero</em>.</p>\n<p>Dalībniekiem nav nepārtraukti jāpērk un jāpārdod fiat, bet viņi var paturēt savu Monero sistēmā, pelnot, ietaupot un tērējot tieši Monero bez neērtībām, uzraudzības vai parastas ekonomikas ierobežojumiem. </p>\n<p>Aprites ekonomika parasti ir pilnīgi godīga un likumīga, taču tā darbojas vairāk kā \"pelēkie tirgi\", salīdzinot ar parastajiem \"baltajiem tirgiem\" fiat pasaulē.</p>';
 
   @override
   String get knowledge250Sbeconomy250Sb1250Sbtitle => 'Kas ir aprites ekonomika?';
 
   @override
-  String get knowledge250Sbeconomy250Sb2250Sbtext => '<h6 id=\"remove-the-reliance-on-the-states-approval-and-id-system\">1. Noņemiet paļaušanos uz valsts apstiprinājumu un ID sistēmu</h6>\n<p>Vairums rietumu iedzīvotāju vai cilvēku, kuri ir dzīvojuši ar ID sistēmu stabilā valstī, var nepamanīt šo punktu, taču mūsu paļaušanās uz valsts izdotiem ID un apstiprinājumiem, lai veiktu uzņēmējdarbību, nopelnītu iztiku un iegādātos to, ko mēs nepieciešamība izdzīvot ļauj valstij viegli nogriezt tos, kurus tā uzskata par “neatbilstošiem”.</p>\n<p>Tie nav <em></em> tikai noziedznieki, un tie var būt politiski disidenti, reliģiskās minoritātes, rasu minoritātes utt. Šī kontrole ļauj valstij noteikt, kurš drīkst un kurš nedrīkst iesaistīties tirdzniecībā, ar ko katrs no mums var veikt darījumus. , un ko mēs varam pirkt/pārdot — būtībā izvēloties dzīvību vai nāvi katram pilsonim, pamatojoties uz atbilstību.</p>\n<p> Šīs atkarības likvidēšana, veidojot aprites ekonomiku, atņem valstu varu pār mūsu spēju iesaistīties ekonomikā, ļaujot mums izdzīvot un attīstīties neatkarīgi no tā, ko valsts par mums domā.</p>\n<h6 id=\"reduce-the-governments-control-of-monero-and-monero-users-via-fiat-onoff-ramps\">2. Samaziniet valdības kontroli pār Monero un Monero lietotājiem, izmantojot fiat ieslēgšanas/izslēgšanas rampas</h6>\n<p>Neticami spēcīgās Monero privātuma garantijas un decentralizācija padara to ārkārtīgi sarežģītu (vai pat neiespējamu) neļaut cilvēkiem to izmantot tā, kā viņi uzskata par piemērotu. Tā kā Monero varai kā brīvības instrumentam ir spēcīgā tehniskā bāze, valdības strauji apzinās, ka labākā iespēja kontrolēt Monero lietotājus vai samazināt tīkla efektivitāti ir kontrolēt, kas var piekļūt Monero, vienlaikus sastādot jauku un sakārtotu sarakstu Monero lietotāji, izmantojot apmaiņu Know-Your-Customer (KYC).</p>\n<p>Kad mēs veidojam aprites ekonomiku, mums nav tik bieži (vai pat vispār!) jāizmanto fiat ieslēgšanas/izslēgšanas rampas, un tādējādi mēs varam noņemt šo valdības kontroles punktu pār mūsu darbībām.</p>\n<p>To varam izdarīt arī, atsakoties izmantot centralizētas KYC apmaiņas un tirgoties vienādrangā šeit, vietnē LocalMonero.</p>';
+  String get knowledge250Sbeconomy250Sb2250Sbtext => '<h6 id=\"remove-the-reliance-on-the-states-approval-and-id-system\">1. Pārtrauc paļaušanos uz valsts apstiprinājumu un ID sistēmu</h6>\n<p>Vairums rietumu pasaules iedzīvotāju vai cilvēku, kuri ir dzīvojuši ar ID sistēmu stabilā valstī, var nepamanīt šo punktu, taču mūsu paļaušanās uz valsts izdotiem ID un apstiprinājumiem, lai veiktu uzņēmējdarbību, nopelnītu iztiku un iegādātos to, kas mums nepieciešams izdzīvošanai, ļauj valstij viegli nogriezt tos, kurus tā uzskata par “neatbilstošiem”.</p>\n<p>Tie nav <em></em> tikai noziedznieki. Tie var būt politiski disidenti, reliģiskās minoritātes, rasu minoritātes utt. Šī kontrole ļauj valstij noteikt, kurš drīkst un kurš nedrīkst iesaistīties tirdzniecībā, ar ko katrs no mums var veikt darījumus, un ko mēs varam pirkt/pārdot — būtībā izvēloties dzīvību vai nāvi katram pilsonim, pamatojoties uz pakļaušanos.</p>\n<p> Šīs atkarības likvidēšana, veidojot aprites ekonomiku, atņem valstu varu pār mūsu spēju iesaistīties ekonomikā, ļaujot mums izdzīvot un attīstīties neatkarīgi no tā, ko valsts par mums domā.</p>\n<h6 id=\"reduce-the-governments-control-of-monero-and-monero-users-via-fiat-onoff-ramps\">2. Samazina valdības kontroli pār Monero un Monero lietotājiem, izmantojot fiat pirkšanas/pārdošanas platformas</h6>\n<p>Neticami spēcīgās Monero privātuma garantijas un decentralizācija padara par ārkārtīgi sarežģītu (vai pat neiespējamu) neļaut cilvēkiem to izmantot tā, kā viņi uzskata par piemērotu. Tā kā Monero varai kā brīvības instrumentam ir spēcīgā tehniskā bāze, valdības strauji apzinās, ka labākā iespēja kontrolēt Monero lietotājus vai samazināt tīkla efektivitāti ir kontrolēt, kas var piekļūt Monero, vienlaikus sastādot jauku un sakārtotu sarakstu ar Monero lietotājiem, izmantojot Know-Your-Customer (KYC) biržas.</p>\n<p>Kad mēs veidojam aprites ekonomiku, mums nav tik bieži (vai pat vispār!) jāizmanto fiat pirkšanas/pārdošanas platformas, un tādējādi mēs varam noņemt šo valdības kontroles punktu pār mūsu darbībām.</p>\n<p>To varam izdarīt arī, atsakoties izmantot centralizētas KYC biržas un tirgojoties starp lietotājiem šeit, vietnē LocalMonero.</p>';
 
   @override
   String get knowledge250Sbeconomy250Sb2250Sbtitle => 'Kāpēc mums ir jāveido aprites ekonomika?';
 
   @override
-  String get knowledge250Sbeconomy250Sb3250Sbtext => '<p> Lai gan Monero izmanto dažus Bitcoin galvenos atribūtus, kas nodrošina aprites ekonomiku jaunā veidā (pret cenzūru izturīgi maksājumi, P2P darījumi utt.), tas sniedz absolūti unikālu iespēju tiem, kas vēlas veidot aprites ekonomiku un tajā iesaistīties. </p>\n<h6 id=\"monero-enables-global-p2p-transactions-without-fear-of-surveillance-or-censorship\">1. Monero nodrošina globālus p2p darījumus, nebaidoties no uzraudzības vai cenzūras</h6>\n<p>Monero lietotājiem nav jāuztraucas par masveida uzraudzību vai pat mērķtiecīgu savu darījumu cenzūru, nodrošinot unikālu sirdsmieru un novēršot jebkādu slogu tirdzniecībai. Jūs varat veikt darījumus ar jebkuru cilvēku pasaulē jebkurā laikā un bez uzraudzības, izmantojot jūsu izvēlēto Monero maku.</p>\n<h6 id=\"fungibility-removes-the-risk-of-tainted-coins-and-ensures-trust\">2. Aizvietojamība novērš monētu sabojāšanas risku un nodrošina uzticību</h6>\n<p>Tā kā Monero ir aizstājams (1 XMR ir vienāds ar 1 XMR, neatkarīgi no tā, kas notiek), aprites ekonomikas dalībniekiem nav jāuztraucas par līdzekļiem, ko viņi nosūta vai saņem. Jebkurš Monero, ko viņi sūta, nevar tikt izsekots līdz citiem viņu darījumiem, un tam nav vēstures, un tāpēc to nevar cenzēt, pamatojoties uz vēsturi, un saņemto Monero vienmēr varēs brīvi iztērēt par pilnu tirgus vērtību. Šī aizstājamība palielina dalībnieku sirdsmieru, nodrošina to, ka ķēdes analīzes uzņēmumi nevar piespiest savu ceļu uz aprites ekonomiku, un novērš uzticības sabrukumu Monero kā apmaiņas metodei.</p>\n<p>Pašreizējais uzticības sabrukums Bitcoin kā apmaiņas metodei noved pie tā, ka tā strauji zaudē vilci aprites ekonomikā, kur darbojas Monero. Cilvēki nevēlas pārbaudīt, vai līdzekļi nav bojāti, uztraukties par to, vai viņi tos varēs brīvi tērēt, un nejūt nepieciešamību izmantot jebkādus ķēdes analīzes rīkus, lai pasargātu sevi no juridiskām vai regulējošām problēmām.</p>\n<h6 id=\"moneros-low-fees-ensure-a-free-flow-of-commerce\">3. Monero zemās maksas nodrošina brīvu tirdzniecības plūsmu</h6>\n<p>Viens no vienkāršākajiem punktiem, kas jāsaprot par Monero darījumiem, ir tas, ka darījumu maksas ir neticami zemas un ilgtermiņā saglabāsies saprātīgas, pateicoties <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"   href=\"https://localmonero.co/knowledge/monero-tail-emission\">astes emisijai</a> un <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"   href=\"https://localmonero.co/knowledge/dynamic-block-size\">dinamiskajam bloka izmēram</a>. </p>\n<p>Šīs zemās maksas nodrošina, ka tirdzniecība var brīvi plūst neatkarīgi no blokķēdes pārslodzes, vēl vairāk samazinot dalībnieku garīgo slogu un stresu, cenšoties noteikt laiku saviem darījumiem vai gaidīt stundas/dienas, lai apstiprinātu zemas maksas darījumus. Tā kā šodien maksa ir aptuveni 1 c, jūs varat brīvi veikt darījumus ar jebkura lieluma darījumu, neuztraucoties par maksām.</p>';
+  String get knowledge250Sbeconomy250Sb3250Sbtext => '<p> Lai gan Monero izmanto dažus Bitcoin galvenos atribūtus, kas nodrošina aprites ekonomiku jaunā veidā (pret cenzūru izturīgi maksājumi, p2p darījumi utt.), tas sniedz absolūti unikālu iespēju tiem, kas vēlas veidot aprites ekonomiku un tajā iesaistīties. </p>\n<h6 id=\"monero-enables-global-p2p-transactions-without-fear-of-surveillance-or-censorship\">1. Monero nodrošina globālus p2p darījumus, nebaidoties no uzraudzības vai cenzūras</h6>\n<p>Monero lietotājiem nav jāuztraucas par masveida uzraudzību vai pat mērķtiecīgu savu pārskaitījumu cenzūru, nodrošinot unikālu sirdsmieru un novēršot jebkādu slogu tirdzniecībai. Jūs varat veikt darījumus ar jebkuru cilvēku pasaulē jebkurā laikā un bez uzraudzības, izmantojot jūsu izvēlēto Monero maku.</p>\n<h6 id=\"fungibility-removes-the-risk-of-tainted-coins-and-ensures-trust\">2. Aizvietojamība novērš monētu sabojāšanas risku un nodrošina uzticību</h6>\n<p>Tā kā Monero ir aizstājams (1 XMR ir vienāds ar 1 XMR, neatkarīgi no visa), aprites ekonomikas dalībniekiem nav jāuztraucas par līdzekļiem, ko viņi nosūta vai saņem. Jebkurš Monero, ko viņi sūta, nevar tikt izsekots līdz citiem viņu darījumiem, tam nav vēstures un tāpēc to nevar cenzēt, pamatojoties uz vēsturi. Saņemto Monero vienmēr varēs brīvi iztērēt par pilnu tirgus vērtību. Šī aizstājamība palielina dalībnieku sirdsmieru, nodrošina to, ka ķēdes analīzes uzņēmumi nevar ielauzt savu ceļu aprites ekonomikā, un nepieļauj uzticības sabrukumu Monero kā apmaiņas metodei.</p>\n<p>Pašreizējais uzticības sabrukums Bitcoin kā apmaiņas metodei noved pie tā, ka tā strauji zaudē popularitāti aprites ekonomikā, kur aktīvi darbojas Monero. Cilvēki nevēlas pārbaudīt, vai līdzekļi nav bojāti, uztraukties par to, vai viņi tos varēs brīvi tērēt, un nevēlas izmantot nekādus ķēdes analīzes rīkus, lai pasargātu sevi no juridiskām vai regulatorām problēmām.</p>\n<h6 id=\"moneros-low-fees-ensure-a-free-flow-of-commerce\">3. Monero zemās maksas nodrošina brīvu tirdzniecības plūsmu</h6>\n<p>Viens no vienkāršākajiem punktiem, kas jāsaprot par Monero pārskaitījumiem, ir tas, ka pārskaitījumu maksas ir neticami zemas un ilgtermiņā saglabāsies saprātīgas, pateicoties <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"   href=\"https://localmonero.co/knowledge/monero-tail-emission\">astes emisijai</a> un <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"   href=\"https://localmonero.co/knowledge/dynamic-block-size\">dinamiskajam bloka izmēram</a>. </p>\n<p>Šīs zemās maksas nodrošina, ka tirdzniecība var brīvi plūst neatkarīgi no blokķēdes noslodzes, vēl vairāk samazinot dalībnieku mentālo slogu un stresu, cenšoties noteikt laiku saviem pārskaitījumiem vai gaidīt stundas/dienas, lai apstiprinātu zemas maksas pārskaitījumus. Tā kā pašlaik maksa ir aptuveni 1 c, jūs varat brīvi veikt darījumus ar jebkura lieluma pārskaitījumiem, neuztraucoties par maksām.</p>';
 
   @override
   String get knowledge250Sbeconomy250Sb3250Sbtitle => 'Kā Monero unikāli nodrošina šīs aprites ekonomikas?';
 
   @override
-  String get knowledge250Sbeconomy250Sb4250Sbtext => '<p> Galu galā Monero ir digitālā nauda, kā tam vajadzētu būt. Sirdsmiers, aizvietojamība un privātums, veicot skaidras naudas darījumus, taču visas digitālo, globālo un p2p darījumu priekšrocības ir atdalītas no valsts kontroles vai uzraudzības. Šī spēja darboties kā digitālajai skaidrai naudai mūsdienās unikāli nodrošina aprites ekonomiku un palīdz tai laika gaitā augt un plaukt tādā veidā, kā citas kriptovalūtas, piemēram, Bitcoin, vienkārši nespēj.</p>';
+  String get knowledge250Sbeconomy250Sb4250Sbtext => '<p> Galu galā Monero ir digitālā nauda, kā tam vajadzētu būt. Sirdsmiers, aizvietojamība un privātums kā skaidras naudas darījumos, bet ar visām digitālo, globālo un p2p darījumu priekšrocībām, kas ir atdalītas no valsts kontroles vai uzraudzības. Šī spēja darboties kā digitālai skaidrai naudai mūsdienās unikāli nodrošina aprites ekonomiku un palīdz tai laika gaitā augt un plaukt tādā veidā, kā citas kriptovalūtas, piemēram, Bitcoin, vienkārši nespēj.</p>';
 
   @override
   String get knowledge250Sbeconomy250Sb4250Sbtitle => 'Secinājums';
 
   @override
-  String get knowledge250Sbeconomy250Sb5250Sbtext => '<p>Ja jūs interesē un vēlaties labāk izprast aprites ekonomiku vai sākt tajā piedalīties jau šodien, skatiet tālāk esošās saites, lai atrastu lieliskas vietas, kur sākt darbu.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bitcoinmagazine.com/business/kyc-free-bitcoin-circular-economies\">“KYC- bezmaksas Bitcoin aprites ekonomika: atbrīvojiet tirgus, atbrīvojiet pasauli” - Anarkio</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bitcoinmagazine.com/business/its-time-to-join-the-bitcoin-circular- ekonomika/\">“Ir pienācis laiks pievienoties Bitcoin aprites ekonomikai” - Ragnars Liftrasirs</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://monerica.com/\">“Monerica.com — Monero aprites ekonomikas direktorijs”< /a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cryptwerk.com/pay-with/xmr/\">Monero tirgotāji — Cryptwerk</a> </li>';
+  String get knowledge250Sbeconomy250Sb5250Sbtext => '<p>Ja jums interesē un vēlaties labāk izprast aprites ekonomiku vai sākt tajā piedalīties jau šodien, skatiet tālāk esošās saites, lai atrastu lieliskas vietas, kur uzsākt:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bitcoinmagazine.com/business/kyc-free-bitcoin-circular-economies\">“Bez-KYC Bitcoin aprites ekonomika: atbrīvojiet tirgus, atbrīvojiet pasauli” - Anarkio</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bitcoinmagazine.com/business/its-time-to-join-the-bitcoin-circular- ekonomika/\">“Ir pienācis laiks pievienoties Bitcoin aprites ekonomikai” - Ragnars Liftrasirs</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://monerica.com/\">“Monerica.com — Monero aprites ekonomikas krātuve”< /a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cryptwerk.com/pay-with/xmr/\">Monero tirgotāji — Cryptwerk</a> </li>';
 
   @override
   String get knowledge250Sbeconomy250Sb5250Sbtitle => 'Kā es varu uzzināt vairāk?';
 
   @override
-  String get knowledge250Sbeconomy250Sbdescription => 'Šodien mēs apsveram, kā Monero spēja darboties kā digitālajai naudai unikāli veicina aprites ekonomikas attīstību.';
+  String get knowledge250Sbeconomy250Sbdescription => 'Šodien mēs apskatām, kā Monero spēja darboties kā digitālajai naudai unikāli veicina aprites ekonomikas attīstību.';
 
   @override
   String get knowledge250Sbeconomy250Sbtitle => 'Kā Monero unikāli nodrošina aprites ekonomiku';
 
   @override
-  String get knowledge250Sbemission250Sb0250Sbtext => '<p>Kad lielākā daļa cilvēku domā par to, kas atšķir Monero, viņi domā par Monero privātuma tehnoloģiju. Patiešām, lielākā daļa uzskatītu, ka privātums un tā atbloķējamība ir Monero raksturīgā iezīme un galvenais ierocis, ko tas ienes ringā, salīdzinot ar citām monētām. Lielākā daļa cilvēku var nezināt, ka Monero satur citas protokolu atšķirības no Bitcoin un tā atvasinājumiem, par kurām daži varētu apgalvot, ka tās ir tikpat svarīgas kā Monero privātuma tehnoloģijas. Šajā rakstā mēs apskatīsim vienu no tiem: astes emisiju.</p>\n\n<p>Vispirms definēsim, ko nozīmē šis termins. Astes emisija ir nemitīga bloka atlīdzības subsīdija pat pēc “pēdējā” Monero izkalšanas. Citiem vārdiem sakot, Monero bloka atlīdzība nekad nesamazināsies līdz nullei, bet drīzāk samazināsies, līdz tā sasniegs 0,6 XMR blokā, un tad paliks tur uz visiem laikiem. Kalnračiem vienmēr tiks maksāts, lai viņi raktu Monero, un viņiem nekad nebūs jāpaļaujas tikai uz maksas tirgu.</p>\n\n<p>Taču spersim soli atpakaļ un aplūkosim ieguvi ļoti augstā līmenī. Monero kalnrači tiek mudināti nodrošināt tīklu, iegūstot jaucējvārdus. Stimuls ir iespēja izveidot Monero, ja viņi atrod jaunu bloku. Šis Monero tiek piešķirts divos veidos. Pirmkārt, kalnračs saņem katra lietotāja, kurš samaksājis par sava darījuma iekļaušanu blokā, samaksātās maksas. Šīs ir darījumu maksas, ko maksājat, nosūtot darījumu. Otrkārt, kalnracis saņem iepriekš noteiktu Monero daudzumu no paša protokola. Vairumā gadījumu šī “bloka atlīdzība” ir ievērojami augstāka par lietotāja transakciju maksu, un šajā vietā kalnrači pelna visvairāk. Šī bloka atlīdzība kalpo, lai ogļrači ieguldītu finansiāli ķēdes drošībā, kā arī lai laistu apgrozībā jaunas monētas.</p>\n\n<p>Lielākajā daļā kriptovalūtu protokolu šī bloka atlīdzība laika gaitā ir iestatīta uz samazināšanos. Lielākajai daļai Bitcoin atvasinājumu ir tā sauktā sadalīšana uz pusēm, iepriekš noteikti laika punkti, kuros bloka atlīdzība samazinās uz pusēm (piemēram, no 20 BTC līdz 10 BTC). Šie samazinājumi notiek ik pēc dažiem gadiem, un katru reizi, kad tas notiek, tīkla drošība samazinās. Kāpēc? Mēs mudinām lasītāju izlasīt mūsu <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">rakstu par ieguvi un RandomX</a>, un, to darot, viņi uzzinās, ka ieguve ir sacensības. Bloku balvas tiek piešķirtas tikai tiem, kas atrod bloku, un par to konkurē daudzas vienības. Kad atlīdzība ir lielāka, vairāk cilvēku ir ieinteresēti spēlēt šo spēli, turpretim, ja atlīdzība ir zema, mazāk cilvēku, pat tie, kuriem ir tam nepieciešamais aprīkojums, būs gatavi izmantot savu laiku un resursus, lai gūtu nelielu laimestu. balva.</p>\n\n<p> Mēs jau sākam saskrāpēt Monero astes emisijas iemeslu. Arī Monero bloka atlīdzība samazinās, lai gan atšķirībā no Bitcoin nav sadalīšanas uz pusēm. Tā vietā katra bloka atlīdzība ir par nelielu summu mazāka nekā iepriekšējā, tāpēc samazinājums ir daudz vienmērīgāks. Bet jautājums par visām kriptovalūtām ir šāds: \"Kas notiek, kad bloka atlīdzība sasniedz nulli?\" Šī ir dīvaina situācija, kurā mēs gan zinām, gan nezinām atbildi. Daļa, ko mēs zinām, ir tāda, ka vairs nebūs bloka atlīdzības subsīdijas, kas nozīmē, ka kalnračiem būs jāstimulē tikai lietotāju darījumu maksa. Mēs nezinām, vai šīs summas būs pietiekamas, lai kalnrači noturētu ķēdi.</p>\n\n<p>Kā jau minēts iepriekš, šobrīd bloka atlīdzība par ievērojamu summu pārsniedz darījumu maksas, tāpēc ir cerība, ka, jo vairāk lietotāju izmantos ķēdi, maksas palielināsies, un, palielinoties maksai, kalnrači to uzskatīs par vērtīgu. viņu laiks turpināt ieguvi. Tomēr šim scenārijam ir arī otra puse, lietotāju puse. Ja maksas palielināsies, darījumu veikšana ar kriptovalūtu ikvienam kļūs daudz dārgāka, iespējams, atdalīs to no tiem, kuriem nav pietiekami daudz naudas. Bet, no otras puses, ja maksas paliek zemas un bloka atlīdzība samazināsies līdz nullei, ļoti maz kalnraču nodrošinās tīklu, atstājot to neaizsargātu pret 51% uzbrukumiem un apgrieztiem darījumiem.</p>\n\n<p>Nevienam nav labas atbildes uz šo scenāriju, un neviena nozīmīga monēta vēl nav nonākusi šajā savas kriptovalūtas dzīves fāzē, tāpēc arī mums nav reālās pieredzes ar to. Tās visas ir spekulācijas. Azartspēle. Bitcoin liek likmi, ka maksas būs pietiekami, lai uzturētu kalnračus, pat ja tas nozīmē nabadzīgo izslēgšanu. Monero izdara citu likmi. Monero der, ka ar nodevām vien nepietiktu ķēdes drošībai, tāpēc protokolā ir iekļauta astes emisija.</p>\n\n<p>Atgādinām lasītājam, ka bloka atlīdzība nekad nesamazināsies zem 0,6 XMR blokā. Vai ar to pietiks, lai stimulētu kalnračus? Mēs nezinām, bet tas noteikti ir labāks par 0, kas ir gandrīz visu citu valūtu protokolā iekļautais rādītājs.</p>\n\n<p>Galvenā kritika pret šo pieeju ir tāda, ka tas nozīmē, ka Monero piedāvājums teorētiski ir bezgalīgs, laika gaitā izraisot inflāciju, savukārt monētām, kas ierobežo bloka atlīdzību, ir ierobežots piedāvājums, un to trūkums laika gaitā palielina vērtību. Mēs uzskatām, ka šis arguments ir nepietiekams vairāku iemeslu dēļ.</p>\n\n<p>Pirmkārt, kāds labums no trūcīgas, augstvērtīgas monētas, kurai zemās drošības dēļ ir viegli uzbrūk, kuru var cenzēt un sagraut? Ja kas, tad zemā drošība samazinātu vērtību, vairāk nekā kompensētu deficīta pieaugumu. Otrkārt, lai gan Monero piedāvājums teorētiski ir bezgalīgs, inflācija ir lineāra un ik gadu tuvojas nullei, atšķirībā no fiat, kas ir eksponenciāls.</p>\n\n<p>Monero inflācija ir precīzi zināma pirms laika, un to var precīzi prognozēt, atšķirībā no fiat, kas noteiktā gadā var palielināties par vairāk vai mazāk, pamatojoties uz esošo spēku kaprīzēm. Tas joprojām saglabā cypherpunk garu, novēršot cilvēku korupcijas iespējamību, izmantojot protokolu nodrošinātas tehnoloģijas. Ar papildu priekšrocībām, ko sniedz sirdsmiers, Monero blokķēdes drošība, izmantojot ieguvi, būs pieejama tik ilgi, kamēr pasaulei tas būs vajadzīgs.</p>\n\n<p>Pēdējais jautājums, kam vēlamies pieskarties, ir godīgums. Naudu izmanto vairākos veidos: kā vērtības glabātāju, kā apmaiņas līdzekli un kā norēķinu vienību. Sistēmā, kurā piedāvājums ir ierobežots, inflācija apstāsies, kas nozīmē, ka tie, kas to izmanto kā vērtības krātuvi, izmanto sistēmu bez maksas. Viņi gūst labumu no ogļraču nepārtrauktās drošības, par to neko nemaksājot, jo bez inflācijas viņu nauda laika gaitā lēnām nezaudē vērtību. Un otrādi, ikviens, kurš izmanto valūtu kā maiņas līdzekli, tiek sodīts (izmantojot potenciāli augstu darījumu maksu). Tas mudinās cilvēkus turēt, bet netērēt, un sagroza sistēmas godīgumu, dodot priekšroku turētājiem. Ja ir astes emisija, tas izlīdzina vienādojumu. Tagad īpašnieki maksā arī nelielu nodokli, izmantojot inflāciju, lai nodrošinātu sistēmas drošību. Astes emisija padara to godīgāku visiem.</p>';
+  String get knowledge250Sbemission250Sb0250Sbtext => '<p>Kad lielākā daļa cilvēku domā par to, kas atšķir Monero, viņi domā par Monero privātuma tehnoloģiju. Patiešām, lielākā daļa uzskatītu, ka privātums un tā sniegtā aizvietojamība ir Monero raksturīgā iezīme un galvenais ierocis, ko tas ienes ringā, salīdzinot ar citām monētām. Lielākā daļa cilvēku var nezināt, ka Monero satur citas protokolu atšķirības no Bitcoin un tā atvasinājumiem, par kurām daži varētu apgalvot, ka tās ir tikpat svarīgas kā Monero privātuma tehnoloģijas. Šajā rakstā mēs apskatīsim vienu no tiem: astes emisiju.</p>\n\n<p>Vispirms definēsim, ko nozīmē šis termins. Astes emisija ir nemitīga bloka atlīdzības subsīdija pat pēc “pēdējā” Monero mainošanas. Citiem vārdiem sakot, Monero bloka atlīdzība nekad nesamazināsies līdz nullei, bet tiks nofiksēta, kad tā sasniegs 0,6 XMR par bloku, un tad paliks tur uz visiem laikiem. Maineriem vienmēr tiks maksāts, lai viņi mainotu Monero, un viņiem nekad nebūs jāpaļaujas tikai uz maksām.</p>\n\n<p>Taču spersim soli atpakaļ un aplūkosim mainošanu ļoti augstā līmenī. Monero maineri tiek stimulēti stiprināt tīklu, mainojot hashes. Stimuls ir iespēja izveidot Monero, ja viņi atrod jaunu bloku. Šis Monero tiek piešķirts divos veidos. Pirmkārt, maineris saņem katra lietotāja, kurš samaksājis par sava pārskaitījuma iekļaušanu blokā, samaksātās maksas. Šīs ir pārskaitījumu maksas, ko maksājat, nosūtot pārskaitījumu. Otrkārt, maineris saņem iepriekš noteiktu Monero daudzumu no paša protokola. Vairumā gadījumu šī “bloka atlīdzība” ir ievērojami augstāka par lietotāju pārskaitījumu maksām, un šeit maineri pelna visvairāk. Šī bloka atlīdzība kalpo, lai maineri finansiāli ieguldītu ķēdes drošībā, kā arī, lai laistu apgrozībā jaunas monētas.</p>\n\n<p>Lielākajā daļā kriptovalūtu protokolu šī bloka atlīdzība laika gaitā ir iestatīta uz samazināšanos. Lielākajai daļai Bitcoin atvasinājumu ir tā sauktā sadalīšana uz pusēm, iepriekš noteikti laika punkti, kuros bloka atlīdzība samazinās uz pusi (piemēram, no 20 BTC līdz 10 BTC). Šie samazinājumi notiek ik pēc dažiem gadiem, un katru reizi, kad tas notiek, tīkla drošība samazinās. Kāpēc? Mēs mudinām lasītāju izlasīt mūsu <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">rakstu par ieguvi un RandomX</a>, un, to lasot, uzzināsiet, ka ieguve ir sacensības. Bloku atlīdzības tiek piešķirtas tikai tiem, kas atrod bloku, un par to konkurē daudzas personas. Kad atlīdzība ir lielāka, vairāk cilvēku ir ieinteresēti spēlēt šo spēli, turpretim, ja atlīdzība ir zema, mazāk cilvēku, pat tie, kuriem ir tam nepieciešamais aprīkojums, būs gatavi izmantot savu laiku un resursus, lai gūtu nelielu atlīdzību.</p>\n\n<p> Mēs jau sākam aplūkot Monero astes emisijas iemeslu. Arī Monero bloka atlīdzība samazinās, lai gan atšķirībā no Bitcoin nav sadalīšanas uz pusēm. Tā vietā katra bloka atlīdzība ir par nelielu summu mazāka nekā iepriekšējā, tāpēc samazinājums ir daudz vienmērīgāks. Bet jautājums par visām kriptovalūtām ir šāds: \"Kas notiek, kad bloka atlīdzība sasniedz nulli?\" Šī ir dīvaina situācija, kurā mēs gan zinām, gan nezinām atbildi. Daļa, ko mēs zinām, ir tāda, ka vairs nebūs bloka atlīdzības subsīdijas, kas nozīmē, ka mainerus stimulēs tikai lietotāju pārskaitījumu maksas. Mēs nezinām, vai šīs summas būs pietiekamas, lai maineri noturētu ķēdi darbībā.</p>\n\n<p>Kā jau minēts iepriekš, šobrīd bloka atlīdzība par ievērojamu summu pārsniedz pārskaitījumu maksas, tāpēc ir cerība, ka, jo vairāk lietotāju izmantos ķēdi, jo maksas palielināsies, un, palielinoties maksai, maineri uzskatīs par izdevīgu turpināt ieguvi. Tomēr šim scenārijam ir arī otra puse, lietotāju puse. Ja maksas palielināsies, pārskaitījumu veikšana ar kriptovalūtu ikvienam kļūs daudz dārgāka,  un, iespējams, atdalīs tos, kuriem nav pietiekami daudz naudas. Bet, no otras puses, ja maksas paliek zemas un bloka atlīdzība samazinās līdz nullei, ļoti maz maineru nodrošinās tīklu, atstājot to neaizsargātu pret 51% uzbrukumiem un atgrieztiem pārskaitījumiem.</p>\n\n<p>Nevienam nav labas atbildes uz šo scenāriju, un neviena nozīmīga monēta vēl nav nonākusi šajā savas kriptovalūtas dzīves fāzē, tāpēc arī mums nav reālas pieredzes ar to. Tās visas ir spekulācijas. Azartspēle. Bitcoin liek likmi, ka maksas būs pietiekamas, lai uzturētu mainerus, pat ja tas nozīmē nabadzīgo izslēgšanu. Monero izdara citu likmi. Monero liek, ka ar maksām vien nepietiktu ķēdes drošībai, tāpēc protokolā ir iekļauta astes emisija.</p>\n\n<p>Atgādinām lasītājam, ka bloka atlīdzība nekad nesamazināsies zem 0,6 XMR par bloku. Vai ar to pietiks, lai stimulētu mainerus? Mēs nezinām, bet tas noteikti ir labāk par 0, kā tas ir gandrīz visu citu valūtu protokolos.</p>\n\n<p>Galvenā kritika pret šo pieeju ir tāda, ka tas nozīmē, ka Monero piedāvājums teorētiski ir bezgalīgs, laika gaitā izraisot inflāciju, savukārt monētām, kas ierobežo bloka atlīdzību, ir ierobežots piedāvājums, un to trūkums laika gaitā palielina vērtību. Mēs uzskatām, ka šis arguments ir nepilnīgs vairāku iemeslu dēļ.</p>\n\n<p>Pirmkārt, kāds labums no maz pieejamas, augstvērtīgas monētas, kurai zemās drošības dēļ ir viegli uzbrukt, kuru var cenzēt un sagraut? Ja kas, tad zemā drošība samazinātu vērtību vairāk nekā kompensētu deficīta pieaugums. Otrkārt, lai gan Monero piedāvājums teorētiski ir bezgalīgs, inflācija ir lineāra un ik gadu tuvojas nullei, atšķirībā no fiat, kas ir eksponenciāls.</p>\n\n<p>Monero inflācija ir precīzi zināma iepriekš, un to var precīzi prognozēt, atšķirībā no fiat, kur piedāvājums noteiktā gadā var palielināties vairāk vai mazāk, pamatojoties uz esošo spēku kaprīzēm. Tas joprojām saglabā cypherpunk garu, novēršot korupcijas iespējamību, izmantojot protokolu nodrošinātās tehnoloģijas. Ar papildu priekšrocībām, ko sniedz sirdsmiers, Monero blokķēdes drošība, izmantojot mainošanu, būs pieejama tik ilgi, kamēr pasaulei tas būs vajadzīgs.</p>\n\n<p>Pēdējais jautājums, kam vēlamies pieskarties, ir godīgums. Naudu izmanto vairākos veidos: kā vērtības glabātāju, kā apmaiņas līdzekli un kā norēķinu vienību. Sistēmā, kurā piedāvājums ir ierobežots, inflācija apstāsies, kas nozīmē, ka tie, kas to izmanto kā vērtības krātuvi, izmanto sistēmu bez maksas. Viņi gūst labumu no maineru nepārtrauktās drošības, par to neko nemaksājot, jo bez inflācijas viņu nauda laika gaitā nezaudē vērtību. Un otrādi, ikviens, kurš izmanto valūtu kā maiņas līdzekli, tiek sodīts (izmantojot potenciāli augstu pārskaitījuma maksu). Tas mudinās cilvēkus turēt, bet netērēt, un sagroza sistēmas godīgumu, dodot priekšroku turētājiem. Astes emisijas gadījumā tas tiek izlīdzināts. Tagad turētāji maksā arī nelielu nodokli caur inflāciju, lai nodrošinātu sistēmas drošību. Astes emisija padara to godīgāku visiem.</p>';
 
   @override
-  String get knowledge250Sbemission250Sbdescription => 'Monero privātuma tehnoloģija nav vienīgā atšķirība, kas to atšķir no BTC un tā atvasinājumiem. Šajā rakstā mēs aplūkosim citu - astes emisiju.';
+  String get knowledge250Sbemission250Sbdescription => 'Monero privātuma tehnoloģija nav vienīgā īpašība, kas to atšķir no BTC un tā atvasinājumiem. Šajā rakstā mēs aplūkosim citu - astes emisiju.';
 
   @override
   String get knowledge250Sbemission250Sbtitle => 'Kāpēc Monero ir astes emisija';
 
   @override
-  String get knowledge250Sbfoss250Sb0250Sbtext => 'Viens no bieži dziedātajiem blokķēdes mērķiem ir varas atgriešana cilvēku rokās. Kāda veida jauda un cik daudz atšķiras atkarībā no tā, kam jūs uzdodat, un pats blokķēdes dizains noteiks, kā šī pārdalīšana notiks. Ir daudzi rīki, kas palīdz novērst atšķirības, un mēs vēlamies apspriest vienu, kam ir liela ietekme uz projekta vadīšanu un faktisko enerģijas pārdales potenciālu: atvērtais avots.';
+  String get knowledge250Sbfoss250Sb0250Sbtext => 'Viens no bieži izskanējušiem blokķēdes mērķiem ir varas atgriešana cilvēku rokās. Kāda veida varas, un cik daudz, atšķiras atkarībā no tā, kam jūs vaicājat, un pats blokķēdes dizains noteiks, kā šī pārdalīšana notiks. Ir daudzi rīki, kas palīdz novērst nevienlīdzību, un mēs vēlamies apspriest vienu, kam ir liela ietekme uz projekta vadīšanu un faktisko varas pārdales potenciālu: atvērtais pirmkods.';
 
   @override
-  String get knowledge250Sbfoss250Sb0250Sbtitle => 'Spēku tautai';
+  String get knowledge250Sbfoss250Sb0250Sbtitle => 'Vara tautai';
 
   @override
-  String get knowledge250Sbfoss250Sb1250Sbtext => 'Bezmaksas atvērtā pirmkoda programmatūras (FOSS) projekts ir projekts, kurā kods ir licencēts tā, lai ikviens un ikviens to varētu skatīt, mainīt, pārbaudīt un kopēt. Turpretim patentētās programmatūras kods ir paslēpts un tiek glabāts kā biznesa noslēpums, kas netiek dalīts, baidoties no konkurences, kas kopē smago darbu, par ko maksā vai veicis radītājs. Publiski tiek izlaista tikai beigās izveidotā programma, nevis kods.\n<br/><br/>\nFOSS programmatūrai ir daudz priekšrocību salīdzinājumā ar tās patentētajiem līdziniekiem, piemēram, potenciāli mazāk kļūdu (jo ikviens var brīvi pārbaudīt kodu), jauninājumi (jo ieguldījumi var nākt no jebkuras vietas jebkurā laikā) un to cilvēku pilnvarošana, kuri, iespējams, nevar atļauties. vai citādi izmantot patentētos piedāvājumus.\n<br/><br/>\nTas attiecas uz standarta FOSS projektiem, un blokķēde nav izņēmums. Vieta ir pārņemta ar sarunām par atvērtā pirmkoda programmatūru, un patentētu maku piedāvājumi tiek uztverti ar aizdomām un kriptovalūtu veterānu kritiku. Neraugoties uz to, ka lielākā daļa lielāko blokķēžu atsauces variantu ir atvērtā koda versija, daži, piemēram, Monero, pārsniedz un atšķiras no pūļa.';
+  String get knowledge250Sbfoss250Sb1250Sbtext => 'Bezmaksas, atvērtā pirmkoda programmatūras (FOSS) projekts ir projekts, kurā kods ir licencēts tā, lai ikviens to varētu skatīt, mainīt, pārbaudīt un kopēt. Turpretim patentētās programmatūras kods ir paslēpts un tiek glabāts kā biznesa noslēpums, kas netiek publiskots, baidoties no konkurences, kas nokopētu smago darbu, par ko maksā vai veicis autors. Publiski tiek izlaista tikai beigās izveidotā programma, nevis kods.\n<br/><br/>\nFOSS programmatūrai ir daudz priekšrocību salīdzinājumā ar tās patentētajiem analogiem, piemēram, potenciāli mazāk kļūdu (jo ikviens var brīvi pārbaudīt kodu), jauninājumi (jo ieguldījumi var nākt no jebkuras vietas jebkurā laikā) un to cilvēku atbalstīšana, kuri, iespējams, nevar atļauties vai cita iemesla dēļ izmantot patentētos piedāvājumus.\n<br/><br/>\nTas attiecas uz standarta FOSS projektiem, un blokķēde nav izņēmums. Vide ir pilna ar sarunām par atvērtā pirmkoda programmatūru, un patentētu maku piedāvājumi tiek uztverti ar aizdomām un kritiku no kriptovalūtu veterāniem. Neraugoties uz to, ka vairums galveno blokķēžu atsauces versiju ir atvērtā koda, daži, tai skaitā Monero, iet vēl tālāk un atšķiras no pūļa.';
 
   @override
   String get knowledge250Sbfoss250Sb1250Sbtitle => 'Atvērtā pirmkoda programmatūra';
 
   @override
-  String get knowledge250Sbfoss250Sb2250Sbtext => 'Lai gan ir taisnība, ka lielākajai daļai projektu ir atvērtā pirmkoda kods, tas būtu lāča pakalpojums koncepcijas garam, ja neiedziļinātos, lai noskaidrotu patiesos iemeslus, kāpēc atvērtais pirmkods ir tik spēcīgs. Realitāte ir tāda, ka atvērtā pirmkoda licencēšana veicina atklātu sadarbību starp cilvēkiem no dažādām jomām un dzīves posmiem, lai radītu cilvēcei nepieciešamos, noderīgos un izdevīgos rīkus.\n<br/><br/>\nDažas kriptovalūtas, kamēr kods beidzot tiek izlaists, ir izstrādātas slepeni, lai apsteigtu konkurējošos projektus. Lai gan šie projekti tiek kvalificēti kā “atvērtā pirmkoda projekti”, jo to kods galu galā tiek izlaists sabiedrībai, sākotnējo izstrādi joprojām veic daži atlasītie, kā rezultātā tiek zaudētas daudzas priekšrocības, kuras citādi varētu sniegt atvērtā pirmkoda izmantošana.\n<br/><br/>\nAtvērtā pirmkoda projekta gars ir atklāta sadarbība, lai gūtu labumu visiem, nevis tikai dažiem, un tādējādi Monero pārspēj lielāko daļu savu vienaudžu. Monero izstrāde notiek ne tikai atklātā veidā, ar biežām sanāksmēm, kurās ikviens var apmeklēt un uzstāties, bet arī tās izpēte un ieviešana. Patiešām, daudzi no Monero lielākajiem sasniegumiem ir nākuši no ārējiem avotiem, sadarbojoties vai no šķietami nejaušas personas, kas iesaistījusies pētniecības platformās ar jaunu ideju, piemēram, ložu necaurlaidību un privātuma optimizāciju.';
+  String get knowledge250Sbfoss250Sb2250Sbtext => 'Lai gan ir taisnība, ka lielākajai daļai projektu ir atvērtais pirmkods, tas kaitētu koncepcijas garam, ja neiedziļinātos, lai noskaidrotu patiesos iemeslus, kāpēc atvērtais pirmkods ir tik spēcīgs. Realitāte ir tāda, ka atvērtā pirmkoda licencēšana veicina atklātu sadarbību starp cilvēkiem no dažādām jomām un dzīves posmiem, lai radītu cilvēcei nepieciešamos, noderīgos un izdevīgos rīkus.\n<br/><br/>\nDažas kriptovalūtas, kamēr kods beidzot tiek izlaists, ir izstrādātas slepeni, lai apsteigtu konkurējošos projektus. Lai gan šie projekti tiek kvalificēti kā “atvērtā pirmkoda projekti”, jo to kods galu galā tiek izlaists sabiedrībai, sākotnējo izstrādi joprojām veic daži atlasītie, kā rezultātā tiek zaudētas daudzas priekšrocības, kuras citādi varētu sniegt atvērtā pirmkoda izmantošana.\n<br/><br/>\nAtvērtā pirmkoda projekta gars ir atklāta sadarbība, lai gūtu labumu visiem, nevis tikai dažiem, un tādējādi Monero pārspēj lielāko daļu. Monero izstrāde notiek ne tikai atklātā veidā, ar biežām sanāksmēm, kurās ikviens var apmeklēt un izteikties, bet arī tā izpēte un ieviešana. Patiešām, daudzi no Monero lielākajiem sasniegumiem ir nākuši no ārējiem avotiem sadarbojoties, vai no šķietami nejaušas personas, kas iesaistījusies pētniecības platformās ar jaunu ideju, piemēram, bulletproofs un privātuma optimizāciju.';
 
   @override
   String get knowledge250Sbfoss250Sb2250Sbtitle => 'Blokķēdes savienojums';
 
   @override
-  String get knowledge250Sbfoss250Sb3250Sbtext => 'Novērtējot blokķēdes projektu, lietotājam ir ieteicams ne tikai skatīties, vai kods ir pieejams apskatei, bet arī vai citi projekta aspekti tiek veikti atklāti, pārskatāmi. Jo slēgtākas durvis ir sabiedrības iesaistīšanai, jo nemierīgākam vajadzētu justies. Tomēr šeit daudziem ir klupšanas akmens, jo daudzi no mums nāk no patentētās pasaules, kur caurspīdīgums nav izplatīts, un mums nav atskaites punkta tam, kas ir “pietiekami atvērts”, ne tikai kodā, bet projekta garu un citas jomas.\n<br/><br/>\nPatiešām, vairums projektu atklāj savu atvērtību sociālajos medijos, taču, aplūkojot to, cik cilvēku faktiski piedalās programmatūras izstrādē vai izpētē, izņemot tos, kuri par to ir nodarbināti vai saņēmuši citu atlīdzību, realitāte var būt pārsteidzoši atšķirīga no pašreizējās. apgalvoja. Pie varas esošie (formāli vai neoficiāli) var būt noraidoši vai tieši naidīgi, kad runa ir par citu cilvēku idejām.\n<br/><br/>\nMonero cenšas pilnībā apiet šo problēmu, jo tam nav formālu lomu projektā, un pat Monero galvenā komanda galvenokārt pārvalda infrastruktūru un tai ir maz sakara ar projekta faktisko attīstību vai izpēti. Tomēr neformālas varas struktūras veidojas visās sociālajās aprindās, un Monero nav izņēmums, tāpēc ar tām ir jārēķinās.';
+  String get knowledge250Sbfoss250Sb3250Sbtext => 'Novērtējot blokķēdes projektu, lietotājam ir ieteicams ne tikai skatīties, vai kods ir pieejams apskatei, bet arī vai citi projekta aspekti tiek veikti atklāti, pārskatāmi. Jo slēgtākas durvis ir sabiedrības iesaistei, jo skeptiskākam vajadzētu justies. Tomēr šeit daudziem ir klupšanas akmens, jo daudzi no mums nāk no patentētās pasaules, kur caurspīdīgums nav izplatīts, un mums nav atskaites punkta tam, kas ir “pietiekami atvērts”, ne tikai kodā, bet projekta garā un citās projekta jomās.\n<br/><br/>\nPatiešām, vairums projektu deklamē savu atvērtību sociālajos tīklos, taču, aplūkojot to, cik cilvēku faktiski piedalās programmatūras izstrādē vai izpētē, izņemot tos, kuri ir nodarbināti vai saņēmuši citu atlīdzību, realitāte var būt pārsteidzoši atšķirīga no parādītās. Pie varas esošie (formāli vai neoficiāli) var būt noraidoši vai burtiski naidīgi, kad runa ir par citu cilvēku idejām.\n<br/><br/>\nMonero cenšas pilnībā apiet šo problēmu, jo tam nav formālu lomu projektā. Pat Monero centrālā komanda galvenokārt pārvalda infrastruktūru un tai ir maz sakara ar projekta faktisko attīstību vai izpēti. Tomēr neformālas varas struktūras veidojas visās sociālajās kopienās, un Monero nav izņēmums, tāpēc ar tām ir jārēķinās.';
 
   @override
   String get knowledge250Sbfoss250Sb3250Sbtitle => 'Ārpus koda';
 
   @override
-  String get knowledge250Sbfoss250Sb4250Sbtext => 'Lai gan šīs atvērtā pirmkoda programmatūras sociālās daļas ir vērtīgas, lai izpētītu un apspriestu, un tā trūkums patiešām ir novedis pie daudzu projektu sabrukuma, saruna var kļūt diezgan sarežģīta un parasti neietilpst šī raksta darbības jomā. lai gan lasītājs tiek mudināts turpināt mācīties par šo kritisko FOSS pārvaldības daļu.\n<br/><br/>\nMonero projekts nepārtraukti cenšas atrast veidus, kā veicināt atvērto sadarbību, kas ir tik būtiska atvērtā pirmkoda garam. Ja daži cilvēki dod priekšroku vienai tērzēšanas platformai, nevis citai, tad, lai palielinātu saziņu, tiek izvietoti tilti ar esošajām platformām. Ja cilvēku grupai šķiet, ka viņiem nav rīku vai infrastruktūras, lai īstenotu savas idejas, lai uzlabotu Monero, sabiedrība redz, kādi (FOSS) rīki ir pieejami.\n<br/><br/>\nTas nozīmē, ka vairāk uzmanības tiek pievērsts ne tikai kodam, kas ir tikai viens projekta aspekts, bet arī dizainiem, pētījumiem, digitālajai infrastruktūrai un sarunām.\n<br/><br/>\nAtvērtā pirmkoda programmatūras būtība ir ne tikai atvērtā koda izmantošana, bet arī cilvēku pilnvarošana, balss izteikšana un pasaules maiņa, izmantojot globālu sadarbību. Lasītājs tiek mudināts redzēt, vai kāds viņu interesējošs projekts atbilst šīm pamatvērtībām vai tikai apstājas pie koda licencēšanas.\n<br/><br/>\nMēs arī aicinām viņus palaist to pašu rubriku Monero. Mēs zinām, ka jūs tikai atklāsit iemeslu, kāpēc Monero ir viena no drošākajām un uz sadarbību vērstākajām kopienām kriptovalūtu pasaulē.';
+  String get knowledge250Sbfoss250Sb4250Sbtext => 'Lai gan šīs atvērtā pirmkoda programmatūras sociālās daļas ir vērtīgas, lai izpētītu un apspriestu, un tā trūkums patiešām ir novedis pie daudzu projektu sabrukuma, saruna var kļūt diezgan sarežģīta un parasti neietilpst šeit apspriestajā, lai gan lasītājs tiek mudināts turpināt mācīties par šo kritisko FOSS pārvaldības daļu.\n<br/><br/>\nMonero projekts nepārtraukti cenšas atrast veidus, kā veicināt atvērto sadarbību, kas ir tik būtiska atvērtā pirmkoda garam. Ja daži cilvēki dod priekšroku vienai tērzēšanas platformai, nevis citai, tad, lai palielinātu saziņu, tiek izvietoti tilti starp esošajām platformām. Ja cilvēku grupai šķiet, ka viņiem nav rīku vai infrastruktūras, lai īstenotu savas idejas, lai uzlabotu Monero, sabiedrība redz, kādi (FOSS) rīki ir pieejami.\n<br/><br/>\nTas nozīmē, ka vairāk uzmanības tiek pievērsts ne tikai kodam, kas ir viens projekta aspekts, bet arī dizainiem, pētījumiem, digitālajai infrastruktūrai un sarunām.\n<br/><br/>\nAtvērtā pirmkoda programmatūras būtība ir ne tikai izmantot atvērto kodu, bet arī iedrošināt cilvēkus, dot vārdu un mainīt pasauli caur globālu sadarbību. Lasītājs tiek mudināts redzēt, vai kāds viņu interesējošs projekts atbilst šīm pamatvērtībām, vai tikai apstājas pie koda licencēšanas.\n<br/><br/>\nMēs arī aicinām lasītāju pacelt šo tēmu Monero. Mēs zinām, ka jūs tikai atklāsiet iemeslu, kāpēc Monero ir viena no drošākajām un uz sadarbību vērstākajām kopienām kriptovalūtu pasaulē.';
 
   @override
   String get knowledge250Sbfoss250Sb4250Sbtitle => 'Līdzeklis vai mērķis?';
@@ -3479,214 +3479,214 @@ class I18nLv extends I18n {
   String get knowledge250Sbfoss250Sbdescription => 'Uzziniet, kāpēc atvērtā pirmkoda un decentralizācijas dēļ Monero ir milzīgas priekšrocības salīdzinājumā ar konkurējošām kriptovalūtām.';
 
   @override
-  String get knowledge250Sbfoss250Sbtitle => 'Kāpēc Monero ir atvērtā pirmkoda un decentralizēta';
+  String get knowledge250Sbfoss250Sbtitle => 'Kāpēc Monero ir atvērtā pirmkoda un decentralizēts';
 
   @override
-  String get knowledge250Sbhistory250Sb0250Sbtext => '<p>Dažu kriptovalūtu projektu izcelsme ir noslēpumā tīta. Lielākajai daļai no tiem ir identificējams dibinātājs, un daudzi pirms to palaišanas izvērsa savus projektus, lai palielinātu peļņu no ICO. Šķita, ka Bitcoin ir viens pats par to, ka kriptogrāfijas kopienā no nekurienes tika izmests balts papīrs, un to dibinātājs Satoši Nakamoto pazuda.</p>\n\n<p>Līdz Monero.</p>\n\n<p>Bet, pirms mēs sākam runāt par Monero palaišanu 2014. gadā, mums ir jāatgriežas vēl tālāk.</p>';
+  String get knowledge250Sbhistory250Sb0250Sbtext => '<p>Dažu kriptovalūtu projektu izcelsme ir noslēpumā tīta. Lielākajai daļai no tiem ir identificējams dibinātājs, un daudzi pirms palaišanas promotēja savus projektus, lai palielinātu peļņu no ICO. Šķita, ka Bitcoin ir atšķirīgs kriptogrāfijas kopienā, jo tam bija no nekurienes radies whitepaper, un tā dibinātājs Satoši Nakamoto pazuda.</p>\n\n<p>Līdz Monero.</p>\n\n<p>Bet, pirms mēs sākam runāt par Monero palaišanu 2014. gadā, mums ir jādodas vēl tālāk atpakaļ.</p>';
 
   @override
-  String get knowledge250Sbhistory250Sb1250Sbtext => '<p> 2013. gada septembrī iepriekš nedzirdēta grupa Cryptonote izdeva balto grāmatu par jaunu protokolu ar tādu pašu nosaukumu. Šis protokols mēģināja izveidot Bitcoin līdzīgu kriptovalūtu, lai gan privātuma stiprināšanai tika izmantoti papildu zvana paraksti un slepenas adreses. Neilgi pēc tam, 2013. gada novembrī, sākotnējais kods tika nosūtīts uz GitHub jaunai monētai ar nosaukumu Bytecoin. Šī monēta ieviesa dokumentā aprakstīto protokolu pavisam jaunā kodu bāzē (t.i., tā nav atdalīta no Bitcoin, kā tolaik vairums citu monētu).</p>\n\n<p>Bytecoin komanda veltīja laiku, ievietojot atlikušo kodu savā krātuvē, taču šķita, ka tas tika paveikts līdz 2014. gada martam, kad projektu pēc tam \"atklāja\" nejauša persona BitcoinTalk forumos, lai gan tagad tiek plaši uzskatīts, ka tas bija augs, lai radītu interesi. Pēc tam, kad lellei izdevās iegūt acu ābolus, jaunie interesenti atklāja ko dīvainu: vairāk nekā 80% monētu jau bija iegūti.</p>\n\n<p>Tā bija astronomiska summa, un daudzi bija gatavi to norakstīt kā krāpniecību un turpināt darbu; tas ir līdz brīdim, kad parādījās Bytecoin komanda. Viņi apgalvoja, ka iemesls, kāpēc tik liela daļa monētas tika iegūta līdz šim brīdim, bija tāpēc, ka Bytecoin patiesībā nebija jauna monēta ar milzīgu premīnu, bet tā faktiski pastāvēja dziļajā tīmeklī divus gadus kopš 2012. gada.</p>\n\n<p>Īsāk sakot, šie apgalvojumi netika labi uztverti, jo neviens iepriekš nebija dzirdējis par Bytecoin, un nepagāja ilgs laiks, līdz cilvēki zaudēja interesi. Tomēr ne visi bija gatavi pilnībā padoties. Daži sāka aplūkot Cryptonote protokolu, uz kura balstījās Bytecoin, un secināja, ka pats protokols šķita stabils un novatorisks, pat ja tā nebija pirmā ieviešana. </p>\n\n<p>Tajā brīdī norisinājās sacensība, lai noskaidrotu, kurš varētu izveidot Bytecoin, iztīrīt kodu un kļūt par pirmo “ne-krāpniecisko” versiju tirgū, lai iegūtu pirmā virzītāja priekšrocības.</p>';
+  String get knowledge250Sbhistory250Sb1250Sbtext => '<p> 2013. gada septembrī iepriekš nedzirdēta grupa Cryptonote izdeva whitepaper par jaunu protokolu ar tādu pašu nosaukumu. Šis protokols tiecās izveidot Bitcoin līdzīgu kriptovalūtu, lai gan privātuma stiprināšanai tika izmantoti gredzenveida paraksti un slepenās adreses. Neilgi pēc tam, 2013. gada novembrī, sākotnējais kods GitHub tika novirzīts jaunai monētai ar nosaukumu Bytecoin. Šī monēta ieviesa dokumentā aprakstīto protokolu pavisam jaunā kodu bāzē (t.i., tā nav atdalīta no Bitcoin, kā vairums citu monētu tolaik).</p>\n\n<p>Bytecoin komanda veltīja laiku, ievietojot atlikušo kodu savā krātuvē, taču šķita, ka tas tika paveikts līdz 2014. gada martam. Tad projektu \"atklāja\" nejauša persona BitcoinTalk forumos, lai gan tagad tiek plaši uzskatīts, ka tas tika darīts tīši, lai radītu interesi. Pēc tam, kad marionetei izdevās iegūt plašāku uzmanību, jaunie interesenti atklāja ko dīvainu: vairāk nekā 80% monētu jau bija mainotas.</p>\n\n<p>Tā bija astronomiska summa, un daudzi bija gatavi to norakstīt kā krāpniecību un turpināt darbu; tas ir līdz brīdim, kad parādījās Bytecoin komanda. Viņi apgalvoja, ka iemesls, kāpēc tik liela daļa monētu bija iegūta līdz šim brīdim, bija tāpēc, ka Bytecoin patiesībā nebija jauna monēta ar milzīgu premine (iepriekšēju mainošanu), bet tā faktiski pastāvēja dziļajā tīmeklī divus gadus kopš 2012. gada.</p>\n\n<p>Īsumā, šie apgalvojumi netika labi uztverti, jo neviens iepriekš nebija dzirdējis par Bytecoin, un nepagāja ilgs laiks, līdz cilvēki zaudēja interesi. Tomēr ne visi bija gatavi pilnībā padoties. Daži sāka aplūkot Cryptonote protokolu, uz kura balstījās Bytecoin, un secināja, ka pats protokols šķita stabils un novatorisks, pat ja pirmais ieviešanas mēģinājums tāds nebija. </p>\n\n<p>Tajā brīdī norisinājās sacensība par to, kurš varētu atdalīt Bytecoin, iztīrīt kodu un kļūt par pirmo “ne-krāpniecisko” versiju tirgū, lai iegūtu pirmā virzītāja priekšrocības.</p>';
 
   @override
   String get knowledge250Sbhistory250Sb1250Sbtitle => 'Bytecoin';
 
   @override
-  String get knowledge250Sbhistory250Sb2250Sbtext => '<p> 2014. gada 9. aprīlī BitcoinTalk forumos tika publicēta cita iepriekš nedzirdēta vienība ar nosaukumu thankful_for_today, paziņojot par pirmās Bytecoin dakšas ar nosaukumu Bitmonero izlaišanu. Tā kā tā bija pirmā dakša, Bitmonero ātri ieguva uzmanību, un, kad tas tika palaists 18. aprīlī, ap to izveidojās neliela kopiena, kas vēlējās turpināt tur, kur Bytecoin bija pārtraucis, taču nepagāja ilgs laiks, kad arī Bitmonero kaut kas smaržoja neticami. </p>\n\n<p>Izrādījās, ka ar dibinātāju, pateicīgs_for_today, ir grūti strādāt. Bieži vien pazūd vairākas dienas pēc kārtas (ļoti dīvaini pavisam jaunai monētai pirmajās izstrādes dienās) un bieži vien ir pretrunā ar sabiedrību, mēģinot apvienot Monero raktuves ar Bytecoin, pielāgot emisijas grafiku un kopumā atsakoties sadarboties ar konsekventā galvenā grupa, kas bija izveidojusi ap monētu, ejot tik tālu, ka tai bija sava vietne, BitcoinTalk ziņa un krātuves.</p>\n\n<p>Drīz kļuva skaidrs, ka galvenā grupa, kas bija izveidojusies ap Monero, ir daudz aktīvāka un kompetentāka nekā pateicīgs_par_šodien, un, neskatoties uz to, ka viņš vairākas reizes tika aicināts piedalīties, viņš galu galā pazuda un kļuva par zemsvītras piezīmi Monero vēsturē. Daudzus gadus vēlāk ir aizdomas, ka viņš arī slepeni bija daļa no Bytecoin komandas. Kāpēc? Tā visa laikā paši Bytecoin nebija sēdējuši dīkā.</p>';
+  String get knowledge250Sbhistory250Sb2250Sbtext => '<p> 2014. gada 9. aprīlī BitcoinTalk forumos cita iepriekš nedzirdēta vienība ar nosaukumu thankful_for_today paziņoja par pirmā Bytecoin atzara ar nosaukumu Bitmonero izlaišanu. Tā kā tas bija pirmais atzars, Bitmonero ātri ieguva uzmanību, un, kad tas tika palaists 18. aprīlī, ap to izveidojās neliela kopiena, kas vēlējās turpināt tur, kur Bytecoin bija pārtraucis. Taču nepagāja ilgs laiks, kad arī Bitmonero kaut kas nelikās pareizi. </p>\n\n<p>Izrādījās, ka ar thankful_for_today dibinātāju ir grūti strādāt. Dibinātājs bieži vien pazuda vairākas dienas pēc kārtas (ļoti dīvaini pavisam jaunai monētai pirmajās izstrādes dienās) un bieži vien bija pretrunā ar kopienu, mēģinot apvienot Monero mainošanu ar Bytecoin un pielāgot emisijas grafiku, un kopumā atteicās sadarboties ar stabilo grupu, kas bija izveidojusies ap monētu, ejot tik tālu, ka grupai bija sava vietne, BitcoinTalk vietne un krātuves.</p>\n\n<p>Drīz kļuva skaidrs, ka galvenā grupa, kas bija izveidojusies ap Monero, ir daudz aktīvāka un kompetentāka nekā thankful_for_today, un, neskatoties uz to, ka viņš vairākas reizes tika aicināts piedalīties, viņš galu galā pazuda un kļuva par nelielu Monero vēsturē. Daudzus gadus vēlāk ir aizdomas, ka viņš arī slepeni bija daļa no Bytecoin komandas. Kāpēc? Tā visa laikā paši Bytecoin nebija sēdējuši dīkā.</p>';
 
   @override
   String get knowledge250Sbhistory250Sb2250Sbtitle => 'Bitmonero';
 
   @override
-  String get knowledge250Sbhistory250Sb3250Sbtext => '<p>Bytecoin komanda nebija apmierināta. Viņu plāns kļūt bagātam, izmantojot melus no masveidā izgatavotās monētas, bija izgāzies. Viņi bija ieguldījuši visu darbu protokola izstrādē (ir pārliecinoši pierādījumi tam, ka CryptoNote izstrādātāji un Bytecoin izstrādātāji bija ļoti cieši saistīti), un viņiem nebija ko parādīt.</p>\n\n<p>Bet tie vēl nebija pabeigti. Viņi laida klajā jaunu monētu Bitmonero ar jaunu pseidonīmu, thankful_for_today. Patiesībā, kāpēc apstāties pie tā? Tā kā viņi bija vislabāk pazīstami ar kodu, viņi varēja laist klajā vairākas jaunas monētas ar nedaudz atšķirīgiem emisiju grafikiem un nosaukumiem, ar jauniem kontiem, un neviens nebūtu gudrāks, ka tas visu laiku bija viņi. Tā viņi darīja. Fantomcoin, Monte Verde, Dashcoin (nejaukt ar Dash) un citas dakšas parādījās neilgi pēc Bitmonero palaišanas un mēģināja iegūt daļu no tirgus daļas.</p>\n\n<p>Šie mēģinājumi galu galā cieta neveiksmi, jo Monero ātri pārspēja viņu konkurenci un neradīja šaubas par CryptoNote monētu ieguvēju.</p>\n\n<p> Tomēr krāpniecība ar to neapstājās. Bytecoin bija vēl viens pēdējais triks viņu piedurknē. Kad thankful_for_today izlaida Bitmonero, viņš līdzās tam atbrīvoja apzināti deoptimizētu kalnraču. Viņš saglabāja optimizēto versiju un cerēja uzkrāt sev lielu atlicinājumu, taču šīs deoptimizācijas ātri vien pamanīja galvenā komanda, kā arī citas neatkarīgas grupas, un pat tas tika ātri novērsts. Ar šo, viņu pēdējo krāpniecību, kas tika uzvarēta, Bytecoin atkāpās tumsā, tikai 2017. gada kriptovalūtu tirgus uzplaukuma pašā laikā iznāca viltus zīmolu maiņas un paziņojumi, lai mēģinātu izspiest jebkādu pēdējo peļņu no krāpniecības uz savas mazās naudas rēķina. , nenojaušot kopienu.</p>';
+  String get knowledge250Sbhistory250Sb3250Sbtext => '<p>Bytecoin komanda nebija apmierināta. Viņu plāns kļūt bagātiem, izmantojot melus no masveidā iepriekš mainotās monētas, bija izgāzies. Viņi bija ieguldījuši visu darbu protokola izstrādē (ir pārliecinoši pierādījumi tam, ka CryptoNote izstrādātāji un Bytecoin izstrādātāji bija ļoti cieši saistīti), un viņiem nebija, ko parādīt.</p>\n\n<p>Bet viņi vēl nebija beiguši. Viņi laida klajā jaunu monētu Bitmonero ar jaunu pseidonīmu, thankful_for_today. Patiesībā, kāpēc apstāties pie tā? Tā kā viņi bija vislabāk pazīstami ar kodu, viņi varēja laist klajā vairākas jaunas monētas ar nedaudz atšķirīgiem emisiju grafikiem un nosaukumiem, ar jauniem kontiem, un neviens neapjaustu, ka tie visu laiku bija viņi. Tā viņi darīja. Fantomcoin, Monte Verde, Dashcoin (nejaukt ar Dash) un citi atzari parādījās neilgi pēc Bitmonero palaišanas un mēģināja iegūt daļu no tirgus.</p>\n\n<p>Šie mēģinājumi galu galā cieta neveiksmi, jo Monero ātri pārspēja viņus un neradīja šaubas par vislabāko CryptoNote monētu.</p>\n\n<p> Tomēr krāpniecība ar to neapstājās. Bytecoin bija vēl viens pēdējais triks viņu krājumā. Kad thankful_for_today izlaida Bitmonero, viņš līdzās tam izlaida apzināti deoptimizētu maineri. Viņš saglabāja optimizēto versiju un cerēja uzkrāt sev lielu bagātību, taču šīs deoptimizācijas ātri vien pamanīja galvenā komanda, kā arī citas neatkarīgas grupas, un pat tas tika ātri novērsts. Ar šo, viņu pēdējo krāpniecību, kas tika uzvarēta, Bytecoin atkāpās tumsā. Tikai 2017. gada kriptovalūtu tirgus uzplaukuma laikā iznāca viltus zīmolu maiņas un paziņojumi, lai mēģinātu izspiest jebkādu pēdējo peļņu no krāpniecības uz savas mazās kopienas rēķina.</p>';
 
   @override
-  String get knowledge250Sbhistory250Sb3250Sbtitle => 'Izdegusi Zeme';
+  String get knowledge250Sbhistory250Sb3250Sbtitle => 'Izdegusī Zeme';
 
   @override
-  String get knowledge250Sbhistory250Sb4250Sbtext => '<p>Ne daudzas monētas var lepoties ar dibinātāju, kura vairs nav ar tām. Patiešām, Bitcoin un Monero, iespējams, ir divi lielākie piemēri. Lai gan salīdzinājums var parādīt Bitcoin labdarīgākā gaismā, ir jāgūst mācības arī no Monero viltus pirmsākumiem.</p>\n\n<p>Bitcoin parādīja, kas var notikt, ja viens cilvēks ir noguris no pašreizējās sistēmas un uzdrošinās ieviest jauninājumus, lai apstrīdētu status quo. Monero parāda tādas kopienas spēku, kura atsakās tikt barota ar meliem, pati atrod patiesību un atkal izmanto instrumentus, ar kuriem viņi var veidot savu brīvību. Iespējams, Monero sākās kā krāpniecība, taču tā patiešām ir kļuvusi par spēcīgu ieroci, lai atgūtu mūsu finansiālo privātumu.</p>';
+  String get knowledge250Sbhistory250Sb4250Sbtext => '<p>Ne daudzas monētas var lepoties ar dibinātāju, kura vairs nav ar tām. Patiešām, Bitcoin un Monero, iespējams, ir divi lielākie piemēri. Lai gan salīdzinājums var parādīt Bitcoin labdarīgākā gaismā, ir mācības, ko gūt arī no Monero blēdīgajiem pirmsākumiem.</p>\n\n<p>Bitcoin parādīja, kas var notikt, ja viens cilvēks ir noguris no pašreizējās sistēmas un uzdrošinās ieviest jauninājumus, lai apstrīdētu status quo. Monero parāda tādas kopienas spēku, kura atsakās tikt barota ar meliem, pati atrod patiesību un izmanto instrumentus, ar kuriem viņi var veidot savu brīvību. Iespējams, Monero sākās kā krāpniecība, taču tas patiešām ir kļuvis par spēcīgu ieroci, lai atgūtu mūsu finansiālo privātumu.</p>';
 
   @override
   String get knowledge250Sbhistory250Sb4250Sbtitle => 'Secinājums';
 
   @override
-  String get knowledge250Sbhistory250Sbdescription => 'Šķita, ka Bitcoin ir viens pats, jo viņam ir baltā grāmata, kas tika izlaista no nekurienes un kuru dibinātājs pazuda. Līdz Monero.';
+  String get knowledge250Sbhistory250Sbdescription => 'Šķita, ka Bitcoin ir vienīgais, kam ir whitepaper, kas tika izlaists no nekurienes un kura dibinātājs pazuda. Līdz Monero.';
 
   @override
   String get knowledge250Sbhistory250Sbtitle => 'Īsa Monero vēsture';
 
   @override
-  String get knowledge250Sbkeys250Sb0250Sbtext => '<p>Vai esat iepriekš dzirdējuši frāzi “nevis tavas atslēgas, nevis tavas monētas”?\nŠī ir kļuvusi par visuresošu frāzi kriptovalūtu sabiedrībā, bet\nneskatoties uz to, ka lielākā daļa cilvēku to ir dzirdējuši lielāko daļu kriptovalūtu\nlietotāji netur savas atslēgas.</p>\n<p>Kriptovalūtas priekšrocības, kas to patiesi atšķir no\ntradicionālā finanšu sistēma tiek realizēta tikai tad, kad esat pabeidzis\njūsu līdzekļu glabāšana — jūsu monētu privātās atslēgas.</p>\n<p>Šajā īsajā ziņojumā mēs apskatīsim, kāpēc jums vajadzētu turēt savas atslēgas\nun sniedziet dažus vienkāršus veidus, kā pats pārvaldīt savu Monero <em> jau šodien</em>.</p>';
+  String get knowledge250Sbkeys250Sb0250Sbtext => '<p>Vai esat iepriekš dzirdējuši frāzi “nav tavas atslēgas, nav tavas monētas”?\nŠī ir kļuvusi par populāru frāzi kriptovalūtu telpā, bet\nneskatoties uz to, ka lielākā daļa cilvēku to ir dzirdējuši, lielākā daļā kriptovalūtu\nlietotāju netur savas atslēgas.</p>\n<p>Kriptovalūtas priekšrocības, kas to patiesi atšķir no\ntradicionālās finanšu sistēmas, tiek realizētas tikai tad, kad pilnībā glabājat savus līdzekļus \n— jūsu monētu privātās atslēgas.</p>\n<p>Šajā īsajā rakstā mēs apskatīsim, kāpēc jums vajadzētu turēt savas atslēgas,\nun sniegsim dažus vienkāršus veidus, kā pašam pārvaldīt savu Monero <em> jau šodien</em>.</p>';
 
   @override
-  String get knowledge250Sbkeys250Sb1250Sbtext => '<h6 id=\"it-preserves-the-privacy-that-monero-affords-users\">Tas saglabā\nkonfidencialitāte, ko Monero sniedz lietotājiem</h6>\n<p>Viens no visbiežāk pārprastajiem pašaizsardzības aspektiem\nMonero ir tas, ka, ja jūs neturat savas atslēgas, jūs iegūstat maz vai nē\ngūt labumu no Monero piedāvātajiem privātuma piedāvājumiem. Kā darījuma sūtītājs\nir pilnīga pārskatāmība par patiesajiem izdevumiem, summu un saņēmēja adresi,\nja neesat tas, kurš nosūta darījumu, un tā vietā atstājiet to\nbiržas vai turētājbankas, viņiem ir <em>pilna</em> redzamība\nveidi, kā jūs tērējat savu Monero.</p>\n<p>Par laimi, pēc līdzekļu nosūtīšanas Monero garantē privātumu\niedarboties un nodrošināt spēcīgu \"uz priekšu slepenību\", bet tas būs skaidrs\nbirža vai glabātājs, kur nosūtījāt līdzekļus un cik daudz nosūtījāt\nsākotnēji.</p>\n<h6 id=\"it-enables-the-incredible-censorship-resistance-of-monero\">Tā\nnodrošina Monero </h6> neticamo pretestību cenzūrai\n<p>Viens no Monero pamataspektiem ir iespējošana\ncenzūrai izturīgi darījumi – ļauj veikt darījumus\nko viņi var vai nevar apstiprināt, neatkarīgi no tā, ko viņi cenšas\ndarīt, lai jūs apturētu. Kaut arī vajadzība pēc cenzūras pretestības var būt nedaudz\nzaudēja tiem no mums, kas atrodas “brīvās” valstīs, strauji slīdot uz priekšu\nautoritārisms un politiskā pagrimums daudzās pasaules daļās ir\nar katru dienu padarot skaidrāku, ka mums ir nepieciešams veids, kā veikt darījumus\nvai bez valdības apstiprinājuma.</p>\n<p>Tomēr, ja jums nav savas atslēgas, valdība vai regulators\nvar viegli piespiest biržu vai turētājbanku iekļaut jūsu līdzekļus melnajā sarakstā, konfiscēt\nvai cenzēt darījumus uz konkrētām adresēm. Šis jau ir\nšodien notiek galvenokārt valsts līmeņa sankciju dēļ, un tā būs\npieaug tēma, jo valdības un regulatori to saprot\nun aizbildņi ir vieglākais ceļš uz kontroli pār Monero\nlietojums.</p>\n<p>Var pienākt arī diena, kad valdība aizliedz pašpārvaldību\nMonero, un, ja vēl neesat izņēmis savu Monero no apmaiņas\nvai aizbildnis, kuru, iespējams, nekad nevarēsit izdarīt.</p>\n<h6 id=\"it-prevents-simple-theft-or-confiscation-of-your-monero\">Tā\nnovērš vienkāršu Monero</h6> zādzību vai konfiskāciju\n<p>Hipotētisks, bet iespējams scenārijs varētu būt sliktākais gadījums\ntie, kas izvēlas neturēt savas atslēgas – viņu Monero saņemšana\nhakeris nozadzis vai valdība konfiscējusi ar <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://en.wikipedia.org/wiki/Executive_Order_6102\">6102 līdzīgu ierīci\npasūtījums</a>.</p>\n<p><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://blog.chainalysis.com/reports/2022-crypto-crime-report-introduction/\"> Gandrīz\nNo centralizētajām biržām tika nozagti kriptovalūta 500 miljoni USD </a>\n2021. gadā, un lietotājiem, kuri atteicās no aizbildnības, kopumā nozagti 3,2 miljardi dolāru\nlīdzekļus viena vai otra iemesla dēļ. Tas ir viens no lielākajiem riskiem\nkriptovalūtas lietotāju, un turpina pieaugt gan gadījumu skaita, gan\napjoms, jo kriptovalūta kļūst arvien populārāka. Ja biržā ir atslēgas\njūsu līdzekļiem, šos līdzekļus var nozagt hakeris (vai birža\npaši!) jebkurā laikā.</p>\n<p>Ja jums ir savas atslēgas, vienīgais reālais zādzības risks vai\nkonfiskācija ir izkrāpšana un fiziski uzbrukumi, kas ir daudz mazāk\niespējams, un parasti tas notiek tikai ar augsta līmeņa personām vai tiem\nnodarīts kaitējums “pazīsti savu klientu” (KYC) datu zādzības vai zaudēšanas dēļ\ncentralizētas apmaiņas, kas saista viņu ID un adresi ar\nkriptovalūtas īpašumtiesības.</p>\n<h6\nid=\"it-prevents-exchanges-leveraging-fractional-reserve-lending-and-trading\">Tā\nnovērš biržas, izmantojot daļēju rezervju aizdevumu un\ntirdzniecība</h6>\n<p>Cits svarīgs aspekts, kas saistīts ar atslēgu turēšanu, ir tas, kas ir mazāks\npersoniskāka un komunālāka. Kad lielākā daļa lietotāju Monero\nturēt savas atslēgas, apmaiņas mazāk spēj melot par summu\nMonero viņi glabā un tirgo \"papīru Monero\", jo lietotāji to neglabā\nviņu Monero apmaiņā.</p>\n<p>Lai gan šāda veida aktivitātes netiek bieži apstiprinātas publiski, tur\nsabiedrībā daudzi ir nobažījušies par tādiem apmaiņām kā Binance\ntirdzniecībai izmanto Monero, ko tā lietotāji tur biržā\npret Monero, uzpūšot Monero šortu daudzumu un izraisot cenu\nslāpēšana laika gaitā.</p>\n<p>Šī rīcība var izraisīt arī likviditātes krīzi, ja lietotāji, kuri\n<em>do</em>, kas vēlas turēt savas atslēgas, nevar izņemt no\napmaiņu, jo birža saviem lietotājiem ir solījusi vairāk Monero nekā tā\nfaktiski ir pieejams. Jo vairāk Monero lietotāju tur savas atslēgas un\nsaglabāt savu Monero off apmaiņu, veselīgāku un dabiskāku\ntirgus teorētiski būs ļaunprātīgs vai mantkārīgs, un jo mazāks risks\napmaiņa var radīt Monero cenas stabilitāti.</p>';
+  String get knowledge250Sbkeys250Sb1250Sbtext => '<h6 id=\"it-preserves-the-privacy-that-monero-affords-users\">Tas saglabā\nkonfidencialitāti, ko Monero sniedz lietotājiem</h6>\n<p>Viens no visbiežāk pārprastajiem pašaizsardzības aspektiem\nMonero ir tas, ka, ja jūs neturat savas atslēgas, jūs iegūstat maz vai nemaz\nlabuma no Monero piedāvāta privātuma. Tā kā pārskaitījuma sūtītājam\nir pilnīga pārskatāmība par izdevumiem, summu un saņēmēja adresi,\nja neesat tas, kurš nosūta darījumu, un tā vietā atstājat to\nbiržas vai turētājbankas ziņā, viņiem ir <em>pilnībā</em> redzami\nveidi, kā jūs tērējat savu Monero.</p>\n<p>Par laimi, pēc līdzekļu nosūtīšanas Monero garantētais privātums\nsāk darboties un nodrošina spēcīgu \"turpmāko slepenību\", bet\nbirža vai glabātājs zinās, kur sākotnēji nosūtījāt līdzekļus un cik daudz nosūtījāt.\n</p>\n<h6 id=\"it-enables-the-incredible-censorship-resistance-of-monero\">Tas\nnodrošina Monero </h6> neticamo pretestību cenzūrai\n<p>Viens no Monero pamataspektiem ir\ncenzūras izturīgi pārskaitījumi – tas ļauj veikt pārskaitījumus,\nko \"viņi\" var atļaut vai nē, neatkarīgi no tā, ko \"viņi\" cenšas\ndarīt, lai jūs apturētu. Kaut arī vajadzība pēc cenzūras pretestības var būt neliela\ntiem, kas atrodas “brīvās” valstīs, strauji virzoties uz priekšu\nautoritārismam un politiskajam pagrimumam daudzās pasaules daļās, \nar katru dienu kļūst skaidrāks, ka mums ir nepieciešams veids, kā veikt pārskaitījumus\nvai bez valdības apstiprinājuma.</p>\n<p>Tomēr, ja jums nav savas atslēgas, valdība vai regulators\nvar viegli piespiest biržu vai turētājbanku iekļaut jūsu līdzekļus melnajā sarakstā, konfiscēt\nvai cenzēt pārskaitījumus uz konkrētām adresēm. Tas jau\ntagad notiek galvenokārt valsts līmeņa sankciju dēļ, un tā būs\narvien aktuālāka tēma. Valdības un regulatori to saprot\nun atslēgu turētāji ir vieglākais ceļš uz kontroli pār Monero\nlietošanu.</p>\n<p>Var pienākt arī diena, kad valdība aizliedz paša pārvaldītu\nMonero, un, ja vēl neesat izņēmis savu Monero no apmaiņas\nvai turētāja, iespējams, nekad nevarēsiet to izdarīt.</p>\n<h6 id=\"it-prevents-simple-theft-or-confiscation-of-your-monero\">Tas\nnovērš vienkāršu Monero</h6> zādzību vai konfiskāciju\n<p>Hipotētisks, bet iespējams scenārijs varētu būt sliktākais gadījums\ntiem, kas izvēlas neturēt savas atslēgas – viņu Monero nozozg\nhakeris vai konfiscē valdība ar <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://en.wikipedia.org/wiki/Executive_Order_6102\">6102 līdzīgu rīkojumu\n</a>.</p>\n<p><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://blog.chainalysis.com/reports/2022-crypto-crime-report-introduction/\"> Gandrīz\n500 miljoni USD </a> kriptovalūtās tika nozagti no biržām\n2021. gadā, un lietotājiem, kuri neturēja savas atslēgas, kopumā nozagti\nlīdzekļi 3,2 miljardi dolāru vērtībā. Tas ir viens no lielākajiem\nkriptovalūtas lietotāju riskiem, un turpina pieaugt gan šādu gadījumu skaits, gan\napjoms, jo kriptovalūta kļūst arvien populārāka. Ja biržai ir atslēgas\njūsu līdzekļiem, šos līdzekļus var nozagt hakeris (vai birža\npati!) jebkurā laikā.</p>\n<p>Ja jums ir savas atslēgas, vienīgais reālais zādzības risks vai\nkonfiskācija ir izkrāpšana un fiziski uzbrukumi, kas ir daudz mazāk\niespējams, un parasti tas notiek tikai ar augsta ranga personām, vai arī tiek\nnodarīts kaitējums “pazīsti savu klientu” (KYC) datu zādzības vai nozaudēšanas dēļ no\ncentralizētas biržas, kas saista viņu ID un adresi ar viņiem piederošo\nkriptovalūtu..</p>\n<h6\nid=\"it-prevents-exchanges-leveraging-fractional-reserve-lending-and-trading\">Tas\nnovērš biržu praktizēto daļēju rezervju aizdevumu un\ntirdzniecību</h6>\n<p>Cits svarīgs aspekts, kas saistīts ar atslēgu turēšanu, ir mazāk\npersonisks un sabiedriskāks. Kad lielākā daļa Monero lietotāju\ntur savas atslēgas, biržas mazāk spēj melot par Monero \nsummu, ko viņi glabā, un tirgot \"papīra Monero\", jo lietotāji to neglabā\nviņu Monero apmaiņā.</p>\n<p>Lai gan šāda veida aktivitātes netiek bieži apstiprinātas publiski,\nsabiedrībā daudzi ir nobažījušies, ka biržas, kā piemēram Binance,\ntirgo Monero, ko tā lietotāji tur biržā,\nuzpūšot Monero \"short\" daudzumu un laika gaitā izraisot cenas\napslāpēšanu.</p>\n<p>Šī rīcība var izraisīt arī likviditātes krīzi, kad lietotāji, kuri\n<em>vēlas</em> turēt savas atslēgas, nevar izņemt Monero no\nbiržas, jo birža saviem lietotājiem ir solījusi vairāk Monero nekā tai\nfaktiski ir pieejams. Jo vairāk Monero lietotāju turēs savas atslēgas un\nglabās savu Monero ārpus biržām, jo veselīgāks un dabiskāks\ntirgus teorētiski būs, un jo mazāk ļaunprātīgas vai mantkārīgas biržas\nvar apdraudēt Monero cenas stabilitāti.</p>';
 
   @override
   String get knowledge250Sbkeys250Sb1250Sbtitle => 'Kāpēc ir svarīgi turēt savas atslēgas?';
 
   @override
-  String get knowledge250Sbkeys250Sb2250Sbtext => '<p>Kad sākat turēt savas atslēgas, vissvarīgākais ir\natcerieties, ka ir <em>saglabāt un drošībā saglabāt savu sākotnējo frāzi</em>! Tas ir\n14 vai 25 nejaušu vārdu komplekts, ko jums dos jebkurš Monero maciņš\njūs izveidojat maku, un tas ir viss, kas jums būs nepieciešams, lai atgūtu savus līdzekļus, ja\njūs pazaudējat tālruni, galddatoru, klēpjdatoru vai aizmirstat a\nparoli.</p>\n<p>Izturieties pret šo iesākto frāzi tā, it kā tā būtu visa jūsu Monero vērta\nmaku, jo ikvienam, kurš to iegūs, būs pilnīga piekļuve esošajiem līdzekļiem\nsavu maku. Ideāli ir glabāt to drošā vai slepenā vietā,\nsaglabājiet vairākas kopijas ugunsgrēka vai dabas katastrofas gadījumā un nekad\nparādīt to ikvienam.</p>\n<p>Papildinformāciju par sākuma frāzēm skatiet sadaļā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://web.getmonero.org/resources/moneropedia/mnemonicseed.html\">Mnemonic\nSēklas | Moneropēdija</a>.</p>\n<h6 id=\"using-free-and-open-source-wallets\">Bezmaksas un atvērtā pirmkoda izmantošana\nmaki</h6>\n<h5 id=\"for-desktop\">Datoriem</h4>\n<p>Ja galvenokārt izmantojat galddatoru un netērējat/saņemat Monero\nļoti bieži, atrodoties ceļā, ir dažas labas izvēles, kā rīkoties\natslēgas, nepaļaujoties uz trešajām pusēm.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://getmonero.org/downloads\">Oficiālais Monero\nmaku</a>\n<ul>\n<li>Šī ir oficiālā Monero maka programmatūra, un tā ir bijusi nemainīga\nuzlabojumi un papildinājumi. Tas ietver integrētu Monero dēmonu (ja\nvēlaties), ir ļoti lietotājam draudzīgs un drīzumā atbalstīs <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://localmonero.co/knowledge/p2pool-decentralizing-monero-mining\">ieguves rūpniecība\nizmantojot p2pool tieši no sava maka</a>.</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://featherwallet.org/\">Spalvu maks</a>\n<ul>\n<li>Šis ir lielisks maks, kas atbilst <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://electrum.org/\">Electrum for Bitcoin</a>, un nodrošina abus\nvienkārša lietojamība un ārkārtīgi jaudīgas funkcijas vienā\nmaku.</li>\n</ul></li>\n</ul>\n<h5 id=\"for-mobile\">Mobilajam tālrunim</h4>\n<p>Tiem no mums, kam patīk izmantot Monero, atrodoties ceļā vai\ntērējiet bieži, izmantojot stabilu mobilo Monero maku, kas joprojām glabājas\nmūsu atslēgas mūsu pašu rokās ir ārkārtīgi svarīgas.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cakewallet.com/\">Cake Wallet</a>\n<ul>\n<li>Cake Wallet ir bezmaksas un atvērtā koda (FOSS) maciņš Android ierīcēm un\niOS, kas sākotnēji atbalsta Monero, Bitcoin un Litecoin.</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.monerujo.io/\">Monerujo</a>\n<ul>\n<li>Monerujo ir FOSS maciņš operētājsistēmai Android, kam ir pievienotas dažas lieliskas iespējas\nfunkcijas un grafikas, vietējā Tor mezgla atbalsts un daudz kas cits.</li>\n</ul></li>\n</ul>';
+  String get knowledge250Sbkeys250Sb2250Sbtext => '<p>Kad sākat turēt savas atslēgas, vissvarīgākais ir\natcerēties <em>glabāt drošībā savu sēklas frāzi</em>! Tas ir\n14 vai 25 nejaušu vārdu komplekts, ko jums dod jebkurš Monero maks, kad\nto izveidojat. Tas ir viss, kas jums būs nepieciešams, lai atgūtu savus līdzekļus, ja\njūs pazaudējat tālruni, galddatoru, klēpjdatoru vai aizmirstat\nparoli.</p>\n<p>Izturieties pret šo sēklas frāzi tā, it kā tā būtu visa jūsu Monero vērta, \njo ikvienam, kurš to iegūs, būs pilnīga piekļuve makā esošajiem līdzekļiem. \nIdeāli ir glabāt to drošā un slepenā vietā,\nsaglabāt vairākas kopijas ugunsgrēka vai dabas katastrofas gadījumam un nekad\nnerādīt to nevienam.</p>\n<p>Papildinformāciju par sēklas frāzēm skatiet sadaļā <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://web.getmonero.org/resources/moneropedia/mnemonicseed.html\">Mnemoniskā\nSēkla | Moneropēdija</a>.</p>\n<h6 id=\"using-free-and-open-source-wallets\">Bezmaksas un atvērtā pirmkoda maku izmantošana\n</h6>\n<h5 id=\"for-desktop\">Datoriem</h4>\n<p>Ja galvenokārt izmantojat galddatoru un netērējat/nesaņemat Monero\nbieži, atrodoties ceļā, ir dažas labas opcijas, kā turēt\natslēgas, nepaļaujoties uz trešajām pusēm.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://getmonero.org/downloads\">Oficiālais Monero\nmaks</a>\n<ul>\n<li>Šī ir oficiālā Monero maka programmatūra, un tai ir bijuši pastāvīgi\nuzlabojumi un papildinājumi. Tā ietver integrētu Monero daemon (ja\nvēlaties), ir lietotājam draudzīga un drīzumā atbalstīs <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://localmonero.co/knowledge/p2pool-decentralizing-monero-mining\">mainošanu\nizmantojot p2pool tieši no sava maka</a>.</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://featherwallet.org/\">Feather Wallet</a>\n<ul>\n<li>Šis ir lielisks maks, kas ir analogs <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://electrum.org/\">Electrum for Bitcoin</a>, un nodrošina\nvienkāršu lietojamību un lieliskas funkcijas.\n</li>\n</ul></li>\n</ul>\n<h5 id=\"for-mobile\">Mobilajam tālrunim</h4>\n<p>Tiem no mums, kam patīk izmantot Monero, atrodoties ceļā, ir tikpat svarīgi\nizmantot stabilu mobilo Monero maku, kas joprojām glabās\nmūsu atslēgas mūsu pašu rokās.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cakewallet.com/\">Cake Wallet</a>\n<ul>\n<li>Cake Wallet ir bezmaksas un atvērtā koda (FOSS) maks Android ierīcēm un\niOS, kas pašlaik atbalsta Monero, Bitcoin un Litecoin.</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.monerujo.io/\">Monerujo</a>\n<ul>\n<li>Monerujo ir FOSS maciņš operētājsistēmai Android, kam ir pievienotas dažas lieliskas\nfunkcijas kā vietējā Tor mezgla atbalsts un daudz kas cits.</li>\n</ul></li>\n</ul>';
 
   @override
-  String get knowledge250Sbkeys250Sb2250Sbtitle => 'Kā es varu turēt savas atslēgas ar Monero?';
+  String get knowledge250Sbkeys250Sb2250Sbtitle => 'Kā glabāt pašam savas Monero atslēgas?';
 
   @override
-  String get knowledge250Sbkeys250Sb3250Sbtext => '<p>Cerams, ka šī ziņa ir palīdzējusi nostiprināt vajadzību turēt rokās\nsavas atslēgas, kā arī norādīja uz dažiem lieliskajiem makiem\natstarpe.</p>\n<p>Jo vairāk jūs ņemat Monero savās rokās un faktiski to izmantojat, jo vairāk\nvairāk priekšrocību, ko varat iegūt gan tagad, gan nākotnē. Monero nav tikai\nspekulatīvs aktīvs — tas ir spēcīgs brīvības un finanšu instruments\nprivātums, kas ir ļoti nepieciešams mūsdienu pasaulē un nākotnē\nno mums.</p>\n<p>Tagad ņemiet šīs monētas no biržas un iedziļinieties tajā, kas bija Monero\nparedzēts </p>';
+  String get knowledge250Sbkeys250Sb3250Sbtext => '<p>Cerams, ka šis raksts ir palīdzējis nostiprināt vajadzību glabāt pašam\nsavas atslēgas, kā arī norādījis uz dažiem lieliskiem makiem.\n</p>\n<p>Jo vairāk jūs saņemat Monero savās rokās un to reāli arī izmantojat, jo\nvairāk varat iegūt gan tagad, gan nākotnē. Monero nav tikai\nspekulatīvs aktīvs — tas ir spēcīgs brīvības un finanšu\nprivātuma instruments, kas ir ļoti nepieciešams pasaulē tagad un nākotnē.\n</p>\n<p>Tagad izņemiet šīs monētas no biržas un izpaudieties tajā, kam Monero ir\nparedzēts.</p>';
 
   @override
   String get knowledge250Sbkeys250Sb3250Sbtitle => 'Secinājums';
 
   @override
-  String get knowledge250Sbkeys250Sbdescription => '\"Nevis jūsu atslēgas, ne jūsu monētas\" — tā ir visuresoša frāze, tomēr lielākajai daļai kriptovalūtu lietotāju joprojām nav savas atslēgas.';
+  String get knowledge250Sbkeys250Sbdescription => '\"Nav jūsu atslēgas, nav jūsu monētas\" — tā ir populāra frāze, tomēr lielākā daļa kriptovalūtu lietotāju joprojām netur savas atslēgas.';
 
   @override
   String get knowledge250Sbkeys250Sbtitle => 'Kāpēc (un kā!) jums vajadzētu turēt savas atslēgas';
 
   @override
-  String get knowledge250Sbmining250Sb0250Sbtext => '2019. gada 30. novembrī Monero piedzīvoja pusgadu, un gaidītākās izmaiņas bija pāreja no vecā PoW algoritma cryptonight uz pilnīgi jauno, iekšēji izstrādāto RandomX. Monero kopiena uzskata, ka RandomX ir liels solis ceļā uz egalitāru ieguvi, taču padziļināsimies, lai noskaidrotu, vai tas tā ir.';
+  String get knowledge250Sbmining250Sb0250Sbtext => '2019. gada 30. novembrī Monero tika veikts pusgada atzarojums (hard fork), un gaidītākās izmaiņas bija pāreja no vecā PoW algoritma Cryptonight uz pilnīgi jauno, iekšēji izstrādāto RandomX. Monero kopiena uzskata, ka RandomX ir liels solis ceļā uz vienlīdzīgāku ieguvi, taču paskatīsimies dziļāk, lai saprastu, vai tas tā ir.';
 
   @override
-  String get knowledge250Sbmining250Sb1250Sbtext => 'Lai spriestu, vai RandomX ir uzlabojums, mums vispirms ir jāsaprot, kāds ir ieguves mērķis. Mining nodrošina blokķēdi no dubultiem tēriņiem, izmantojot Nakamoto Consensus. Šī raksta darbības joma nav precīza, taču to var uzzināt no daudziem dažādiem avotiem visā internetā. Svarīgi ir tas, ka drošību nodrošina datoru (kalnraču) ģenerētie jaucējfaili, konkurējot savā starpā, lai atrastu matemātisko risinājumu, kas nepieciešams cita bloka izveidošanai. To darot, viņi blokķēdē pievieno jaunus darījumus. Apmaiņā par darbu (jašiem) viņiem tiek kompensētas no jauna kaltas monētas.\n<br/><br/>\nAr šo iestatījumu var rasties vairākas problēmas, un, lai tās pareizi darbotos, ir nepieciešami atbilstoši stimuli, taču mēs pievērsīsimies vienai konkrētai problēmai, kas varētu rasties. Ja kalnrūpniecībai vajadzētu būt sacensībām, kas notiek, ja viens kalnracis iegūst priekšrocības?';
+  String get knowledge250Sbmining250Sb1250Sbtext => 'Lai spriestu, vai RandomX ir uzlabojums, mums vispirms ir jāsaprot, kāds ir mainošanas mērķis. Mainošana nodrošina blokķēdi pret dubultiem tēriņiem, izmantojot Nakamoto Consensus. Šajā rakstā neiedziļināsimies, kā tieši tas darbojas, taču to var uzzināt no daudz un dažādiem avotiem internetā. Svarīgi ir tas, ka drošību nodrošina datoru (maineru) ģenerētie hash, konkurējot savā starpā, lai atrastu matemātisko risinājumu, kas nepieciešams nākamā bloka izveidošanai. To darot, viņi blokķēdē pievieno jaunus pārskaitījumus. Apmaiņā pret darbu (pareizi iegūts hash) viņi saņem no jauna emitētās monētas.\n<br/><br/>\nAr šo iestatījumu var rasties vairākas problēmas. Lai tas pareizi darbotos, ir nepieciešami atbilstoši stimuli, taču mēs pievērsīsimies vienai konkrētai iespējamai problēmai. Ja mainošanai vajadzētu būt sacensībām, kas notiek, ja viens maineris iegūst priekšrocības?';
 
   @override
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Mērķis';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Kontekstam parunāsim mazliet par ieguves aparatūru. Kalnrači darba veikšanai izmanto datorus, taču mēs visi zinām, ka ne katrs dators ir izgatavots vienādi. Daži datori ir pietiekami jaudīgi, lai palaistu AI tīklus vai intensīvas spēles, savukārt citi cīnās ar pat vienkāršiem uzdevumiem. Šīs skaitļošanas jaudas atšķirības ietekmē arī ātruma jaukšanas ātrumu vai ātrumu, kādā viņi meklē bloku risinājumus. <br/><br/>\nTaču pat šīs atšķirības starp datoriem nobāl, salīdzinot ar specializētās aparatūras, ko citādi dēvē par lietojumprogrammām specifiskajām integrālajām shēmām (ASIC), jaucējkrājumu, kas par vairākām kārtām pārspēj parastos datorus.<br/><br/>\nVeltīsim kādu laiku, lai izpētītu, kas padara ASIC tik spēcīgus. Iedomājieties, ka visi datori atrodas kaut kur spektrā, kas svārstās no spējas izdarīt daudzas lietas, bet neko labi, līdz tikai vienas lietas veikšanai, bet ļoti labi. CPU un ASIC atrodas šī spektra pretējos galos.<br/><br/>\nCPU, kas ir visos standarta datoros, atrodas pirmajā galā. Viņi var veikt daudzas darbības, piemēram, pārlūkot tīmekli, spēlēt spēles vai renderēt video, taču nevienu no tiem nedara īpaši labi. Taču šī elastība nāk uz efektivitātes rēķina.<br/><br/>\nASIC ir otrā galā, kur tie var tikai vienu lietu, bet darīt to ar neticamu ātrumu. Viņi var veikt tikai vienu matemātisko funkciju, bet, tā kā viņi var ignorēt visu pārējo, veiktspējas pieaugums ir astronomisks. Tomēr šī efektivitāte maksā elastību, tāpēc, ja funkcija mainās pat nedaudz (piemēram, x + y = z mainās uz 2x + y = z), ASIC pārstās darboties. <br/><br/>\nNe visiem pieder ASIC, bet katram ir savs dators. Tas var radīt negodīgu priekšrocību.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Kontekstam parunāsim mazliet par mainošanas aparatūru. Maineri darba veikšanai izmanto datorus, taču mēs visi zinām, ka ne visi datori ir izgatavoti vienādi. Daži datori ir pietiekami jaudīgi, lai palaistu AI tīklus vai intensīvas spēles, savukārt citi cīnās ar pat vienkāršiem uzdevumiem. Šīs skaitļošanas jaudas atšķirības ietekmē arī hash rate jeb ātrumu, ar kādu tie meklē bloku risinājumus. <br/><br/>\nTaču pat šīs atšķirības starp datoriem nobāl, salīdzinot ar specializētās aparatūras, ko citādi dēvē par specifiska pielietojuma integrētajām shēmām (ASIC), hash rate, kas vairākkārt pārspēj parastos datorus.<br/><br/>\nVeltīsim kādu laiku, lai izpētītu, kas padara ASIC tik spēcīgus. Iedomājieties, ka visi datori atrodas kaut kur spektrā, kas svārstās no spējas izdarīt daudzas lietas, bet neko labi, līdz tikai vienas lietas veikšanai, bet ļoti labi. CPU un ASIC atrodas šī spektra pretējos galos.<br/><br/>\nCPU, kas ir visos standarta datoros, atrodas pirmajā galā. Tie var veikt daudzas darbības, piemēram, pārlūkot tīmekli, spēlēt spēles vai renderēt video, taču nevienu no tām nedara īpaši labi. Šī elastība nāk uz efektivitātes rēķina.<br/><br/>\nASIC ir otrā galā, kur tie var darīt tikai vienu lietu, bet ar neticamu ātrumu. Viņi var veikt tikai vienu matemātisko funkciju, bet, tā kā viņi var ignorēt visu pārējo, veiktspējas pieaugums ir astronomisks. Tomēr šī efektivitāte maksā elastību, tāpēc, ja funkcija mainās pat nedaudz (piemēram, x + y = z mainās uz 2x + y = z), ASIC pārstās darboties pavisam. <br/><br/>\nNe visiem pieder ASIC, bet katram ir savs dators. Tas var radīt negodīgu priekšrocību.';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtitle => 'Fons';
+  String get knowledge250Sbmining250Sb2250Sbtitle => 'Atskats';
 
   @override
-  String get knowledge250Sbmining250Sb3250Sbtext => 'Ja tas joprojām mulsina, iespējams, palīdzēs tālāk sniegtā līdzība. Iedomājieties loteriju, kurā katru stundu tiek piešķirts tūkstotis dolāru, un šī loterija ļauj jums izdrukāt biļetes! Jūs sākat drukāt tik daudz biļešu, cik vien iespējams, izmantojot mājas printeri, kas var izdrukāt vienu biļeti sekundē. Atņemot elektrības un tintes izmaksas, jūs redzat, ka joprojām varat gūt peļņu, pat ja laimējat loterijā tikai reizi dažās nedēļās.<br/><br/>\nLaika gaitā jūs paplašināt savu darbību, līdz jums ir visa telpa, kas veltīta printeriem. 20 kopā. Viss ir kārtībā...līdz vienai liktenīgai dienai.<br/><br/>\nIr lielas ziņas. Kāds ir izgudrojis jauna veida printeri. Tas var izdrukāt tikai loterijas biļetes. Tas nevar drukāt attēlus vai biroja dokumentus vai veikt abpusējo drukāšanu. Tikai loterijas biļetes. Bet tas var tos izdrukāt ar ātrumu 1000 biļetes sekundē. Jūs skatāties savā mazajā printeru istabā. 20 printeri. Jums ir nepieciešami vēl 980 printeri, lai neatpaliktu no VIENA no šiem monsterprinteriem, un, ja kādam ir divi…?<br/><br/>\nJūs diemžēl izejat no loterijas, jo vairs nevarat attaisnot elektrības un tintes izmaksas.<br/><br/>\nBet pagaidi! Pēc pāris nedēļām ir vairāk ziņu! Biļetes dizains ir mainījies. Tagad cipari, kas agrāk bija augšā, tagad ir apakšā. Jaunie monstru printeri ir tik neelastīgi, ka to nevar izdarīt. Viņi varēja izgatavot tikai iepriekšējo dizainu. Nepagāja ilgs laiks, kad jūs atkal laimīgi drukājat. Vismaz līdz brīdim, kad kāds uztaisīs jaunu monstru printeri jaunajam dizainam.';
+  String get knowledge250Sbmining250Sb3250Sbtext => 'Ja tas joprojām mulsina, iespējams, palīdzēs tālāk sniegtā līdzība. Iedomājieties loteriju, kurā katru stundu tiek piešķirts tūkstotis dolāru, un šī loterija ļauj jums izdrukāt biļetes pašam! Jūs sākat drukāt tik daudz biļešu, cik vien iespējams, izmantojot mājas printeri, kas var izdrukāt vienu biļeti sekundē. Atņemot elektrības un tintes izmaksas, jūs redzat, ka joprojām varat gūt peļņu, pat ja laimējat loterijā tikai reizi dažās nedēļās.<br/><br/>\nLaika gaitā jūs paplašināt savu darbību, līdz jums ir visa telpa, kas veltīta printeriem. 20 kopā. Viss ir kārtībā...līdz vienai liktenīgai dienai.<br/><br/>\nIr lielas ziņas. Kāds ir izgudrojis jauna veida printeri. Tas var izdrukāt tikai loterijas biļetes. Tas nevar drukāt attēlus vai biroja dokumentus vai veikt abpusējo drukāšanu. Tikai loterijas biļetes. Bet tas var tās izdrukāt ar ātrumu 1000 biļetes sekundē. Jūs skatāties savā mazajā printeru istabā. 20 printeri. Jums ir nepieciešami vēl 980 printeri, lai neatpaliktu no VIENA no šiem monsterprinteriem, un, ja kādam ir divi…?<br/><br/>\nJūs diemžēl izstājaties no loterijas, jo vairs nevarat attaisnot elektrības un tintes izmaksas.<br/><br/>\nBet paga! Pēc pāris nedēļām ir jaunas ziņas! Biļetes dizains ir mainījies. Cipari, kas agrāk bija augšā, tagad ir apakšā. Jaunie monstru printeri ir tik neelastīgi, ka to nevar izdarīt. Viņi varēja izgatavot tikai iepriekšējo dizainu. Nepagāja ilgs laiks, kad jūs atkal laimīgi drukājat. Vismaz līdz brīdim, kad kāds uztaisīs jaunu monstru printeri jaunajam dizainam.';
 
   @override
   String get knowledge250Sbmining250Sb3250Sbtitle => 'Jautra analoģija';
 
   @override
-  String get knowledge250Sbmining250Sb4250Sbtext => 'Kur RandomX iekļaujas tajā visā? Tas cenšas izlīdzināt ASIC priekšrocības, padarot ASIC ļoti sarežģītu. Tas tiek darīts, pieprasot kalnračiem izveidot un izpildīt nejaušu kodu jaukšanas vietā, pamatojoties uz algoritmu.<br/><br/>\nVar būt mulsinoši, kā tas patiesībā kaut ko palīdz, tāpēc atgriezīsimies pie mūsu printera analoģijas. Atcerieties, kas notika, kad dizains mainījās? Vecie monstru printeri katru nakti noveco, un bija jāizstrādā jauni, ņemot vērā jauno dizainu. Kas notiktu, ja katrai jaunai loterijas balvas biļetei būtu jāatbilst jaunam dizaina standartam katram jaunam džekpotam? <br/><br/>\nIzveidot jaunu monstru printeri kļūtu neticami grūti. Jūs vairs nevarat plānot tikai vienu biļetes dizainu. Tā kā dizains ir nejaušs, monstru printeru ražotājiem būtu jāpievieno krāsu iespējas, veidi, kā drukāt dažādus burtus, apmales un formas un daudz ko citu. Īsāk sakot, mašīna, kuru viņi izgudroja, būtu standarta, parasts printeris. Tāpat kā visiem citiem.<br/><br/>\nVienkārši ieviešot šo nejaušību biļešu dizainā, mēs būtiski samazinājām lielo priekšrocību, ko guvām no specializētās aparatūras. RandomX dara to pašu, bet ar ieguvi.<br/><br/>\nTādā veidā tiek samazinātas priekšrocības, ko iegūst daži atlasīti pārtikuši cilvēki, jo, ja viņi iegulda “ASIC” izveidē RandomX ieguvei, viņi faktiski tikai izgudros spēcīgākus, labākus CPU, kas sniedz labumu visai pasaulei.<br/>[ X1455X]\nTas nozīmē, ka mazais puisis ar saviem 20 biļešu printeriem ir atgriezies spēlē. Viņam joprojām var būt grūtāk, jo šīs bagātās personas joprojām var iegādāties vairāk printeru nekā viņš, taču vismaz tagad viņš nav pārspēts par lieluma kārtām tikai no vienas iekārtas. Viņš ir konkurētspējīgs savā mazajā veidā.<br/><br/>\nZinot, ka pat mazais puisis var būt konkurētspējīgs Monero ieguvē, mēs aicinām ikvienu to izmēģināt vai nu Monero GUI makā, kas atbalsta solo ieguvi, vai arī lejupielādējot kopienas uzturētu programmatūru. Tas ir vienkāršs, konkurētspējīgs un pieejams visiem.';
+  String get knowledge250Sbmining250Sb4250Sbtext => 'Kāda ir RandomX loma tajā visā? Tas cenšas izlīdzināt ASIC priekšrocības, padarot ASIC izveidi ļoti sarežģītu. Tas tiek darīts, pieprasot maineriem izveidot un izpildīt nejaušu kodu hashing vietā, pamatojoties uz algoritmu.<br/><br/>\nVar būt mulsinoši, kā tas vispār kaut ko palīdz, tāpēc atgriezīsimies pie mūsu printera analoģijas. Atcerieties, kas notika, kad dizains mainījās? Vecie monstru printeri katru nakti novecoja, un bija jāizstrādā jauni, ņemot vērā jauno dizainu. Kas notiktu, ja katrai jaunai loterijas balvas biļetei būtu jāatbilst jaunam dizaina standartam katram jaunam džekpotam? <br/><br/>\nIzveidot jaunu monstru printeri kļūtu neiedomājami grūti. Jūs vairs nevarat plānot tikai vienu biļetes dizainu. Tā kā dizains ir nejaušs, monstru printeru ražotājiem būtu jāpievieno krāsu iespējas, veidi, kā drukāt dažādus burtus, apmales un formas un daudz ko citu. Īsāk sakot, mašīna, kuru viņi izgudrotu, būtu standarta, parasts printeris. Tāpat kā visiem citiem.<br/><br/>\nVienkārši ieviešot šo nejaušību biļešu dizainā, mēs būtiski samazinājām lielo priekšrocību, ko guvām no specializētās aparatūras. RandomX dara to pašu, bet ar mainošanu.<br/><br/>\nTādā veidā tiek samazinātas priekšrocības, ko iegūst daži atlasīti turīgi cilvēki, jo, ja viņi iegulda “ASIC” izveidē RandomX ieguvei, viņi faktiski tikai izgudros spēcīgākus, labākus CPU, kas sniedz labumu visai pasaulei.<br/><br/>\nTas nozīmē, ka mazais puika ar saviem 20 biļešu printeriem ir atgriezies spēlē. Viņam joprojām var būt grūtāk, jo šīs bagātās personas joprojām var iegādāties vairāk printeru nekā viņš, taču vismaz tagad viņš nav pārspēts vairākkārt tikai no vienas iekārtas. Viņš ir konkurētspējīgs savā mazajā veidā.<br/><br/>\nZinot, ka pat mazais puika var būt konkurētspējīgs Monero mainošanā, mēs aicinām ikvienu to izmēģināt vai nu Monero GUI makā, kas atbalsta solo mainošanu, vai arī lejupielādējot kopienas uzturētu programmatūru. Tā ir vienkārša, konkurētspējīga un pieejama visiem.';
 
   @override
   String get knowledge250Sbmining250Sb4250Sbtitle => 'RandomX';
 
   @override
-  String get knowledge250Sbmining250Sbdescription => '2019. gada 30. novembrī Monero piedzīvoja pusgadu, un gaidītākās izmaiņas bija pāreja no vecā PoW algoritma cryptonight uz pilnīgi jauno, iekšēji izstrādāto RandomX. Monero kopiena uzskata, ka RandomX ir liels solis ceļā uz egalitāru ieguvi, taču padziļināsimies, lai noskaidrotu, vai tas tā ir.';
+  String get knowledge250Sbmining250Sbdescription => '2019. gada 30. novembrī Monero tika veikts pusgada atzars (hard fork), un gaidītākās izmaiņas bija pāreja no vecā PoW algoritma Cryptonight uz pilnīgi jauno, iekšēji izstrādāto RandomX. Monero kopiena uzskata, ka RandomX ir liels solis ceļā uz vienlīdzīgu ieguvi, taču paskatīsimies dziļāk, lai saprastu, vai tas tā ir.';
 
   @override
-  String get knowledge250Sbmining250Sbtitle => 'Monero ieguve: kas padara RandomX tik īpašu';
+  String get knowledge250Sbmining250Sbtitle => 'Monero mainošana: ar ko RandomX ir tik īpašs';
 
   @override
-  String get knowledge250Sbmyths250Sb0250Sbtext => '<p>Neviena kriptovalūta nav bez trūkumiem, un Monero nav izņēmums. Faktiski kopiena ir <a class=\"next-link\" href=\"https://www.youtube.com/playlist?list=PLsSYUeVwrHBnAUre2G_LYDsdo-tD0ov-y\" target=\"_blank\">izveidojusi YouTube sēriju</a>, kas aptver Monero privātuma trūkumus no tehnoloģiskā viedokļa.</p>\n\n<p> Tomēr pret Monero ir izplatīta kritika, kas ir vai nu novecojusi, vai nepareiza, savukārt citi sniedz ļoti šauru skatījumu uz attiecīgo problēmu. Šajā rakstā mēs ceram noteikt šīs kritikas rekordu.</p>';
+  String get knowledge250Sbmyths250Sb0250Sbtext => '<p>Neviena kriptovalūta nav bez trūkumiem, un Monero nav izņēmums. Kopiena pat ir <a class=\"next-link\" href=\"https://www.youtube.com/playlist?list=PLsSYUeVwrHBnAUre2G_LYDsdo-tD0ov-y\" target=\"_blank\">izveidojuši YouTube sēriju</a>, kas aptver Monero privātuma trūkumus no tehnoloģiskā viedokļa.</p>\n\n<p> Tomēr pret Monero ir izplatīta arī kritika, kas ir vai nu novecojusi, vai nepareiza, savukārt citi sniedz ļoti šauru skatījumu uz attiecīgo problēmu. Šajā rakstā mēs ceram noskaidrot patiesību par izteikto kritiku.</p>';
 
   @override
   String get knowledge250Sbmyths250Sb0250Sbtitle => 'Ievads';
 
   @override
-  String get knowledge250Sbmyths250Sb1250Sbtext => '<p>Tā ir izplatīta kritika par Monero, kas liek daudziem tai piešķirt plašu piestātni, un tā ir tā, kur sabiedrības reakcija nav tik niecīga, kā tikai nepareiza pieņēmuma labošana. X217X]\n\n<p> Realitāte ir tāda, ka mēs kā kopiena vēl nezinām, kāda būs regulatīvā reakcija uz kaut ko līdzīgu Monero. Mēs zinām, ka kriptovalūtas kopumā ir daudzu valsts aģentūru radars, un mums ir pamats uzskatīt, ka Monero ir vairāk nekā citas iepriekš minēto iemeslu dēļ, taču līdz šim nevienas valdības ir veikušas tikai dažas darbības. valsts saistībā ar Monero tiešu aizliegšanu.</p>\n\n<p> Pat ja tā ir, Monero kopiena ir apņēmusies cīnīties par labu. Mēs uzskatām, ka finanšu privātums ir kaut kas būtisks brīvībai, un ikvienam ir jābūt iespējai veikt darījumus privāti bez valdībām, korporācijām vai kāda cita jūs izspiegojot.</p>\n\n<p> Tomēr mēs varam pārliecināties, ka vienā brīdī Bitcoin bija tieši tāda pati reputācija kā Monero tagad. Tika uzskatīts, ka tā ir noziedznieka monēta, un tā ir pilnīgi privāta un anonīma, taču lēnām, laika gaitā sabiedrība sāka pieņemt Bitcoin neatkarīgi no tā. </p>\n\n<p>Tagad varētu iebilst, ka Bitcoin reputācija mainījās, jo cilvēki saprata, ka tas tiešām nav privāts vai anonīms, taču tā nav taisnība, jo uzskats, ka Bitcoin ir pilnībā privāts un to nevar izsekot, joprojām ir izplatīts ne tikai plašākā sabiedrībā, bet starp tiem, kas regulē nozari. Šie cilvēki joprojām uzskata, ka tas ir privāts, tāpēc viņi būtībā uzskata, ka tas ir tas, kas patiesībā ir Monero, un tomēr mēs ātri virzāmies uz pasauli, kurā sabiedrība, uzņēmumi un pārvaldes iestādes to pieņem. Tas liecina, ka, ņemot vērā pietiekami daudz laika, Monero varētu redzēt to pašu pieņemšanu.</p>';
+  String get knowledge250Sbmyths250Sb1250Sbtext => '<p>Tā ir izplatīta kritika par Monero, kas liek daudziem tai iet ar plašu līkumu, un šī ir tā, kur sabiedrības reakcija nav tik niecīga, kā tikai nepareiza pieņēmuma labošana.</p>\n\n<p> Realitāte ir tāda, ka mēs kā kopiena vēl nezinām, kāda būs regulatīvā reakcija uz kaut ko līdzīgu Monero. Mēs zinām, ka kriptovalūtas kopumā ir daudzu valsts aģentūru radaros, un mums ir pamats uzskatīt, ka ar Monero tas ir īpaši izteikti iepriekš minēto iemeslu dēļ, taču līdz šim atsevišķas valdības ir veikušas tikai dažas darbības saistībā ar Monero tiešu aizliegšanu.</p>\n\n<p> Pat ja tā ir, Monero kopiena ir apņēmusies cīnīties par labu. Mēs uzskatām, ka finanšu privātums ir būtisks brīvībai, un ikvienam ir jābūt iespējai veikt darījumus privāti bez valdībām, korporācijām vai kāda cita jūs izspiegojot.</p>\n\n<p> Tomēr varam būt droši, ka savulaik Bitcoin bija tieši tāda pati reputācija kā Monero tagad. Tika uzskatīts, ka tā ir noziedzīga valūta, un tā ir pilnīgi privāta un anonīma, taču lēnām, laika gaitā sabiedrība sāka pieņemt Bitcoin neatkarīgi no tā. </p>\n\n<p>Tagad varētu iebilst, ka Bitcoin reputācija mainījās, jo cilvēki saprata, ka tas tiešām nav privāts vai anonīms, taču tā nav taisnība. Uzskats, ka Bitcoin ir pilnībā privāts un to nevar izsekot, joprojām ir izplatīts ne tikai plašākā sabiedrībā, bet arī starp tiem, kas regulē nozari. Šie cilvēki joprojām uzskata, ka tas ir privāts, tāpēc viņi būtībā uzskata, ka tas ir tas, kas patiesībā ir Monero. Un tomēr mēs ātri virzāmies uz pasauli, kurā sabiedrība, uzņēmumi un pārvaldes iestādes to pieņem. Tas liecina, ka, dodot pietiekami daudz laika, Monero varētu redzēt to pašu pieņemšanu.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb1250Sbtitle => 'Monero saskarsies ar regulatīvo pārbaudi, kas ir daudz plašāka par citām kriptovalūtām, jo tā apņemas ievērot privātumu un anonimitāti savos darījumos.';
+  String get knowledge250Sbmyths250Sb1250Sbtitle => 'Monero saskarsies ar regulatīvo pārbaudi, kas ir daudz plašāka kā citām kriptovalūtām, jo tas apņemas ievērot privātumu un anonimitāti savos pārskaitījumos.';
 
   @override
-  String get knowledge250Sbmyths250Sb10250Sbtext => '<p>Viena izplatīta sūdzība par lielāko daļu monētu, kas ir mazākas par Bitcoin, ir tas, ka teorētiski ir viegli tām uzbrukt 51%. Patiešām, vairākas mazas monētas, piemēram, Vertcoin, vairākas reizes tika veiksmīgi uzbruktas 51% apmērā.</p>\n\n<p>Lielākā daļa no šīm bažām rodas vietnē https://www.crypto51.app/, kurā norādīts, cik izmaksātu hasrata noma no NiceHash — platformas, kas iznomā ieguves aparatūru mākoņu ieguvei. Vienā brīdī šajā vietnē tika uzskaitīts uzbrukums Monero, kas maksāja aptuveni 6300 USD par vienu stundu. Lai gan šī cena daudziem no mums var likt uztraukties, turīgs uzņēmums vai privātpersona var veikt ilgstošu uzbrukumu tīklam.</p>\n\n<p>Par laimi, tā vairs nav. Dedzīgs lasītājs redzēs, ka vietne ir faktiski izņēmusi Monero no viņu lietojumprogrammas RandomX iekļaušanas dēļ. Lasītājs vēlreiz tiek mudināts izlasīt <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">mūsu rakstu par RandomX, lai iegūtu sīkāku informāciju</a>, taču tā kā algoritms ir draudzīgs centrālajam procesoram, uzņēmumi, piemēram, NiceHash, vairs nevar vienkārši iegādāties ASIC, lai Monero to iznomātu ikvienam. ir gatavs tos īrēt. Tagad tiem ir jākonkurē ar CPU, kas ir daudz izplatītāki un vieglāk iegūstami.</p>\n\n<p>Nav aprēķinātas precīzas aparatūras izmaksas līdz 51% uzbrukuma Monero tīklam, un tās nav tik viegli aprēķināt kā citas monētas ar ASIC periodu.</p>';
+  String get knowledge250Sbmyths250Sb10250Sbtext => '<p>Viena izplatīta sūdzība par lielāko daļu kriptovalūtu, kas ir mazākas par Bitcoin, ir tas, ka teorētiski ir viegli tām uzbrukt 51%. Patiešām, vairākām mazām monētām, piemēram, Vertcoin, vairākas reizes tika veiksmīgi uzbrukts ar 51% paņēmienu.</p>\n\n<p>Lielākā daļa no šīm bažām rodas vietnē https://www.crypto51.app/, kurā norādīts, cik izmaksātu hashrate noma no NiceHash — platformas, kas iznomā mainošanas aparatūru mākoņu ieguvei. Savulaik šajā vietnē tika uzskaitīts uzbrukums Monero, kas izmaksāja aptuveni 6300 USD par vienu stundu. Lai gan šī cena daudziem no mums var likt vīpsnāt, turīgs uzņēmums vai privātpersona var veikt ilgstošu uzbrukumu tīklam.</p>\n\n<p>Par laimi, tā vairs nav. Cītīgs lasītājs redzēs, ka vietne ir izņēmusi Monero no viņu lietojumprogrammas RandomX iekļaušanas dēļ. Lasītājs vēlreiz tiek mudināts izlasīt <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">mūsu rakstu par RandomX, lai iegūtu sīkāku informāciju</a>, taču tā kā algoritms ir draudzīgs CPU, uzņēmumi kā NiceHash vairs nevar vienkārši iegādāties Monero paredzētus ASIC, lai tos iznomātu ikvienam, kas ir gatavs tos īrēt. Tagad tiem ir jākonkurē ar CPU, kas ir daudz izplatītāki un vieglāk iegūstami.</p>\n\n<p>Nav aprēķinātas precīzas aparatūras izmaksas 51% uzbrukumam Monero tīklam, un tās nav tik viegli aprēķināt kā citās monētās ar ASIC.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb10250Sbtitle => 'Vai Monero nav viegli 51% uzbrukts?';
+  String get knowledge250Sbmyths250Sb10250Sbtitle => 'Vai Monero nav viegli veikt 51% uzbrukumu?';
 
   @override
-  String get knowledge250Sbmyths250Sb11250Sbtext => '<p>Divi ieguves telpas lielie cilvēki ir ASIC un robottīkli, un attālināšanās no viena noteikti nozīmē tuvināšanos citam. Ja Monero ieguvei ir nepieciešams centrālais procesors, hakeri teorētiski var pārņemt kontroli pār daudziem simtiem, ja ne tūkstošiem ievainojamu datoru un piespiest tos iegūt Monero savā vārdā, neko nemaksājot un izkonkurējot tos, kuru mājsaimniecībās ir tikai pāris datoru. </p>\n\n<p>Pirmais atspēkojums šim argumentam ir par pašiem robottīklu īpašniekiem. Lai gan mēs neatbalstām citu datoru uzlaušanu, šķēršļi piekļuvei robottīkla iegūšanai un darbībai ir daudz zemāki nekā ASIC. Nepieciešama programmatūra — bieži vien diezgan brīvi pieejama un atvērtā koda —, kā arī laiks un gudrība, lai izjauktu neaizsargātus datorus. Otram ir nepieciešams neticami liels kapitāls un piekļuve ražošanai. Vienu var izdarīt kazlēns pagrabā, bet otru tikai ārkārtīgi turīgie. Tas liek mums secināt, ka, ja piepildīsies ogļraču ļaunākās bailes, paši robottīkli būtu decentralizētāki nekā ASIC.</p>\n\n<p>Tomēr Monero kopiena ir pārliecināta, ka šī problēma ir pārspīlēta. RandomX inženieri apzināti izstrādāja protokolu tā, lai darbam būtu nepieciešama 2 GB RAM atmiņa. Citiem vārdiem sakot, daudziem maziem, ievainojamiem virtuālajiem privātajiem serveriem (VPS) vienkārši nebūs ietilpības, un, ja tā būtu, izmantoto resursu pieaugums būtu ļoti pamanāms sistēmas administratoram, kas novedīs pie tūlītējas izmeklēšanas. Citiem vārdiem sakot, tas nevar darboties klusi fonā, piemēram, kompromitēti datori, kas piedalās DDOS uzbrukumā, vai klusi smeļas paroles. Kad kalnracis ir ieslēgts, visi to zina.</p>\n\n<p>Tas samazina to datoru skaitu, kurus robottīkls varētu veiksmīgi kompromitēt, salīdzinot ar tiem, kas ir ļoti tehnoloģiski nespējīgi vai nekad netiek pārbaudīti, nevis pārpilnība neaizsargāto datoru, kurus šī argumenta atbalstītāji uzskata, ka tie ir apdraudēti. </p>';
+  String get knowledge250Sbmyths250Sb11250Sbtext => '<p>Divi mainošanas nozares lielākie biedi ir ASIC un bottīkli, un attālināšanās no viena noteikti nozīmē tuvināšanos otram. Ja Monero ieguvei ir nepieciešams CPU, hakeri teorētiski var pārņemt kontroli pār daudziem simtiem, ja ne tūkstošiem ievainojamu datoru un piespiest tos iegūt Monero savā vārdā, neko nemaksājot un izkonkurējot tos, kuru mājsaimniecībās ir tikai pāris datoru. </p>\n\n<p>Pirmais atspēkojums šim argumentam ir par pašiem bottīklu īpašniekiem. Lai gan mēs neatbalstām citu datoru uzlaušanu, šķēršļi piekļuvei bottīkla iegūšanai un darbībai ir daudz zemāki nekā ASIC. Nepieciešama programmatūra — bieži vien diezgan brīvi pieejama un atvērtā koda —, kā arī laiks un gudrība, lai atklātu neaizsargātus datorus. Otram ir nepieciešams neticami liels kapitāls un piekļuve ražošanai. Vienu var izdarīt puika mājas pagrabā, bet otru tikai ārkārtīgi turīgie. Tas liek mums secināt, ka, ja piepildīsies maineru ļaunākās bailes, paši bottīkli būtu decentralizētāki nekā ASIC.</p>\n\n<p>Tomēr Monero kopiena ir pārliecināta, ka šī problēma ir pārspīlēta. RandomX inženieri apzināti izstrādāja protokolu tā, lai darbam būtu nepieciešama 2 GB RAM atmiņa. Citiem vārdiem sakot, daudziem maziem, ievainojamiem virtuālajiem privātajiem serveriem (VPS) vienkārši nebūs ietilpības, un, ja tā būtu, izmantoto resursu pieaugums būtu ļoti pamanāms sistēmas administratoram, kas novedīs pie tūlītējas izmeklēšanas. Citiem vārdiem sakot, tas nevar darboties klusi fonā kā kompromitēti datori, kas piedalās DDOS uzbrukumā, vai klusi smeļas paroles. Kad maineris ir ieslēgts, visi to zina.</p>\n\n<p>Tas samazina to datoru skaitu, kurus bottīkls varētu veiksmīgi kompromitēt, līdz tiem, kas ir ļoti tehnoloģiski nespējīgi vai nekad netiek pārbaudīti. Tā nav pārpilnība neaizsargātu datoru, kā šī argumenta atbalstītāji uzskata. </p>';
 
   @override
-  String get knowledge250Sbmyths250Sb11250Sbtitle => 'CPU draudzīgs algoritms? Vai Monero ieguvi nepārņems robottīkli?';
+  String get knowledge250Sbmyths250Sb11250Sbtitle => 'CPU draudzīgs algoritms? Vai Monero ieguvi nepārņems bottīkli?';
 
   @override
-  String get knowledge250Sbmyths250Sb12250Sbtext => '<p>Šī kritika nāk no reālās pasaules. Personu grupa, kas sabiedrībai nav zināma, izveidoja Monero un izveidoja savu monētu: MoneroV. Tā kā tā bija ķēdes dakša, personas varēja pieprasīt līdzvērtīgu MoneroV summu, kāda tām bija Monero, t.i., ja jums bija 100 Monero, jūs varētu izmantot to pašu sēklu MoneroV makā, lai iegūtu 100 MoneroV.</p>\n\n<p>Tas izraisīja pārsteidzošas un negaidītas sekas: privātuma zaudēšanu. Lai to izskaidrotu, mēs sniegsim piemēru. Ja es izdomāju skaitli, kas tev ir jāuzmin, bet es tev dodu trīs skaitļus, no kuriem tikai viens ir pareizs, tu nezināsi, kura ir pareizā atbilde. Pieņemsim, ka es jums saku skaitļus 88, 25 un 19. Tomēr jūs esat gudrs un palūdziet man vēl vienu trīs skaitļu kopu, taču vienam no tiem joprojām ir jābūt pareizajam skaitlim. Es dodu jums 54, 88 un 92. Jūs redzat, ka skaitlis 88 parādās abās kopās, tāpēc tam ir jābūt pareizam skaitlim, un jums būtu taisnība.</p>\n\n<p>Uzbrukums Monero privātumam darbojas tāpat. Monero paļaujas uz zvana parakstiem, kas tiek apkopoti vietējā makā, lai aptumšotu darījumu rezultātus. Ja es iztērētu Monero ķēdes izvadi ar vienu saliktu gredzenu un to pašu izvadi MoneroV ķēdei, uz citu saliktu gredzenu, nepārliecinoties, ka gredzens sastāv no tiem pašiem mānekļiem, tad patiesā izlaide kļūst acīmredzams, līdzīgi kā skaitlis 88 kļuva skaidrs kā pareizais skaitlis.</p>\n\n<p>Tika piedāvāti vairāki risinājumi, tostarp rīku izveide, lai cilvēki varētu atbildīgi izmantot Monero, Blackball datubāze ar bojātiem rezultātiem un gredzena izmēra palielināšana, taču galu galā neviens no tiem nebija vajadzīgs. MoneroV nekad neieguva nekādu vilci, un to cilvēku skaits, kuri pieprasīja savas monētas un apdraudēja savu privātumu, bija ļoti maz.</p>\n\n<p>Jāatzīmē, ka šīs briesmas privātumam NAV no Monero koda dakšas, bet gan no ķēdes dakšas. Tas nozīmē, ka jebkura monēta, kas izmanto Monero kodu un sākas no nulles ar savu ģenēzes bloku, nepakļaus nevienai ķēdei briesmas. Tikai tad, ja monēta atdalītu faktisko blokķēdi no pašreizējās Monero blokķēdes domstarpību dēļ, kas ir līdzīga Bitcoin/Bitcoin Cash sabrukumam, ķēdes būtu apdraudētas. Tas nozīmētu, ka dakša cīnīsies pret iedibināto kopienu, un tie, kas izvēlēsies nepiedalīties un pieprasīt savas monētas no otras ķēdes, netiktu apdraudēti.</p>\n\n<p>Tomēr mēs uzskatām, ka ir naivi domāt, ka Monero nekad netiks uzbrukts šādā veidā, tāpēc tiek izstrādāti citi risinājumi, lai vai nu palielinātu gredzena izmēru, vai arī pārietu uz citu pierādīšanas shēmu. daudzi no tiem tika minēti sadaļā “augstas darījumu maksas”.</p>';
+  String get knowledge250Sbmyths250Sb12250Sbtext => '<p>Šī kritika nāk no reālās pasaules. Personu grupa, kas sabiedrībai nav zināma, atzaroja Monero un izveidoja savu monētu: MoneroV. Tā kā tas bija ķēdes atzars, personas varēja pieprasīt līdzvērtīgu MoneroV summu, kāda tām bija Monero, t.i., ja jums bija 100 Monero, jūs varētu izmantot to pašu sēklu MoneroV makā, lai iegūtu 100 MoneroV.</p>\n\n<p>Tas izraisīja pārsteidzošas un negaidītas sekas: privātuma zaudēšanu. Lai to izskaidrotu, mēs sniegsim piemēru. Ja es izdomāju skaitli, kas tev ir jāuzmin, bet es tev dodu trīs skaitļus, no kuriem tikai viens ir pareizs, tu nezināsi, kura ir pareizā atbilde. Pieņemsim, ka es jums saku skaitļus 88, 25 un 19. Tomēr jūs esat gudrs un palūdzat man vēl vienu trīs skaitļu kopu, taču vienam no tiem joprojām ir jābūt pareizajam skaitlim. Es dodu jums 54, 88 un 92. Jūs redzat, ka skaitlis 88 parādās abās kopās, tāpēc tam ir jābūt pareizam skaitlim, un jums būtu taisnība.</p>\n\n<p>Uzbrukums Monero privātumam darbojas tāpat. Monero paļaujas uz gredzenveida parakstiem, kas tiek apkopoti vietējā makā, lai apslēptu pārskaitījumu izvades. Ja es iztērētu izvadi uz Monero ķēdes ar vienu saliktu gredzenu un to pašu izvadi uz MoneroV ķēdes ar citu saliktu gredzenu, nepārliecinoties, ka gredzens sastāv no tiem pašiem mānekļiem, tad patiesā izvade kļūst acīmredzama, līdzīgi kā skaitlis 88 kļuva skaidrs kā pareizais skaitlis.</p>\n\n<p>Tika piedāvāti vairāki risinājumi, tostarp rīku izveide, lai cilvēki varētu atbildīgi izmantot Monero, Blackball datubāze ar bojātiem rezultātiem un gredzena izmēra palielināšana, taču galu galā neviens no tiem nebija vajadzīgs. MoneroV nekad neguva nekādu atbalstu, un to cilvēku skaits, kuri pieprasīja savas monētas un apdraudēja savu privātumu, bija ļoti neliels.</p>\n\n<p>Jāatzīmē, ka šīs briesmas privātumam NAV no Monero koda atzara, bet gan no ķēdes atzara. Tas nozīmē, ka jebkura monēta, kas izmanto Monero kodu un sākas no nulles ar savu ģenēzes bloku, nepakļaus citu monētu briesmām. Tikai tad, ja monēta atzarotu faktisko blokķēdi no pašreizējās Monero blokķēdes domstarpību dēļ, kas ir līdzīgi Bitcoin/Bitcoin Cash sabrukumam, ķēdes būtu apdraudētas. Tas nozīmētu, ka atzars cīnīsies pret iedibināto kopienu, un tie, kas izvēlēsies nepiedalīties un pieprasīt savas monētas no otras ķēdes, netiktu apdraudēti.</p>\n\n<p>Tomēr mēs uzskatām, ka ir naivi domāt, ka Monero nekad netiks uzbrukts šādā veidā, tāpēc tiek izstrādāti citi risinājumi, lai vai nu palielinātu gredzena izmēru, vai arī pārietu uz citu pierādīšanas shēmu. Daudzi no tiem tika minēti sadaļā “augstas darījumu maksas”.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb12250Sbtitle => 'Monero dakšas kaitē ne tikai Monero ekonomiskajai dzīvotspējai, bet arī tās privātumam!';
+  String get knowledge250Sbmyths250Sb12250Sbtitle => 'Monero atzari kaitē ne tikai Monero ekonomiskajai dzīvotspējai, bet arī privātumam!';
 
   @override
-  String get knowledge250Sbmyths250Sb13250Sbtext => '<p>Monero vēsture ir interesanta, un daudzi var pārsteigt, uzzinot, ka tā patiešām sākās kā krāpniecība. Autors, pateicīgs_for_today, visticamāk, bija sadarbojies ar kriptovalūtu grupu, kas izveidoja CryptoNote protokolu, taču viņam bija viltīgi nodomi izkrāpt cilvēkiem naudu, izmantojot to.</p>\n\n<p>Viņu sākotnējie mēģinājumi ar monētām neizdevās, tāpēc viņi izveidoja Monero, lai mēģinātu vēlreiz. Tas atkal neizdevās, jo sabiedrība ātri saprata, ka kaut kas nav kārtībā, un satvēra monētu. Tomēr viltīgajiem radītājiem bija vēl viens pēdējais triks. Viņi izlaida sabiedrībai apzināti deoptimizētu ieguves programmatūru, paturot optimizēto versiju sev, lai pārspētu citus un nopelnītu daudz naudas no bloka atlīdzības.</p>\n\n<p>Tas kādu laiku izdevās, taču Monero kopiena to ātri noķēra, salaboja, un optimizētais kalnracis tika izlaists visiem. Sabiedrība, apzinoties notikušo, izvēlējās monētu neizlaist no jauna, jo bija grūti novērtēt gan to, cik daudz krāpnieki ir iztērējuši, gan to, cik daudz laika un pūļu prasīs, lai atjaunotu no nulles. Neskatoties uz grūtībām noskaidrot, cik monētu krāpnieki saņēma, ir zināms arī tas, ka šajā periodā daudzi labticīgi kalnrači paši neatkarīgi no jauna optimizēja kodu un pārdeva savu peļņu, nodrošinot godīgāku sadali, un ka krāpnieki nebija vienīgie, kas šajā laikā ieguva lielu skaitu monētu. <a class=\"next-link\" href=\"https://da-data.blogspot.com/2014/08/minting-money-with-monero-and-cpu.html\" target=\"_blank\">Viena šāda kontu var lasīt šeit</a>.\n\n<p>Paskatoties atpakaļ, daži varētu kritizēt lēmumu neizlaist monētu no jauna, un, ja ar šo krāpniecisko izcelsmi pietiek, lai atstumtu cilvēku no labā darba, ko paveicis Monero, tad nav nekādu argumentu, kas viņus ietekmētu. Neatkarīgi no sākotnējās neapmierinātības, ko izraisīja krāpnieku radītāji, Monero ir attīstījies un izmantojis savu kopienas intelektu un aizraušanos, lai izveidotu spēcīgu tehnoloģiju. Mūsu pašreizējā galvenā komanda, kā arī iepriekšējie dalībnieki netika bagātināti ar invalīdu raktuvēm, un, cik mums zināms, neviens, kas bija iesaistīts sākotnējā krāpniecībā, Monero kopienā ilga ilgāk par dažām monētas pastāvēšanas pirmajām nedēļām.</p >';
+  String get knowledge250Sbmyths250Sb13250Sbtext => '<p>Monero vēsture ir interesanta, un daudzi var būt pārsteigti, uzzinot, ka tā patiešām sākās kā krāpniecība. Autors, thankful_for_today, visticamāk, bija sadarbojies ar kriptovalūtu grupu, kas izveidoja CryptoNote protokolu, taču viņam bija viltīgi nodomi izkrāpt cilvēkiem naudu, izmantojot to.</p>\n\n<p>Viņu sākotnējie mēģinājumi ar monētām neizdevās, tāpēc viņi izveidoja Monero, lai mēģinātu vēlreiz. Tas atkal neizdevās, jo sabiedrība ātri saprata, ka kaut kas nav kārtībā, un pārņēma monētu. Tomēr viltīgajiem radītājiem bija vēl viens pēdējais triks. Viņi izlaida sabiedrībai apzināti deoptimizētu ieguves programmatūru, paturot optimizēto versiju sev, lai pārspētu citus un nopelnītu daudz naudas no bloka atlīdzības.</p>\n\n<p>Tas kādu laiku izdevās, taču Monero kopiena to ātri noķēra, salaboja, un optimizētais maineris tika atklāts visiem. Kopiena, apzinoties notikušo, izvēlējās monētu neizlaist no jauna, jo bija grūti novērtēt gan to, cik daudz krāpnieki ir iztērējuši, gan to, cik daudz laika un pūļu prasīs atjaunot no nulles. Neskatoties uz grūtībām noskaidrot, cik monētu krāpnieki saņēma, ir zināms arī tas, ka šajā periodā daudzi labticīgi maineri paši neatkarīgi no jauna optimizēja kodu un pārdeva savu peļņu, nodrošinot godīgāku sadali, un ka krāpnieki nebija vienīgie, kas šajā laikā ieguva lielu skaitu monētu. <a class=\"next-link\" href=\"https://da-data.blogspot.com/2014/08/minting-money-with-monero-and-cpu.html\" target=\"_blank\">Par vienu šādu gadījumu varat lasīt šeit</a>.\n\n<p>Paskatoties atpakaļ, daži varētu kritizēt lēmumu neizlaist monētu no jauna, un, ja ar šo krāpniecisko izcelsmi pietiek, lai atstumtu no labā darba, ko paveicis Monero, tad nav nekādu argumentu, kas kritiķus ietekmētu. Neatkarīgi no sākotnējās neapmierinātības, ko izraisīja krāpnieciskie radītāji, Monero ir attīstījies un izmantojis savu kopienas intelektu un aizraušanos, lai izveidotu spēcīgu tehnoloģiju. Mūsu pašreizējā galvenā komanda, kā arī iepriekšējie dalībnieki nekļuva bagāti ar negodīgu mainošanu, un, cik mums zināms, neviens, kas bija iesaistīts sākotnējā krāpniecībā, Monero kopienā nav noturējies ilgāk par dažām monētas pastāvēšanas pirmajām nedēļām.</p >';
 
   @override
-  String get knowledge250Sbmyths250Sb13250Sbtitle => 'Vai Monero sākumā nebija kroplu kalnraču, kas tika izmantots, lai bagātinātu dibinātājus?';
+  String get knowledge250Sbmyths250Sb13250Sbtitle => 'Vai Monero sākumā nebija sagrozīta mainošana, ko dibinātāji izmantoja, lai kļūtu bagāti?';
 
   @override
-  String get knowledge250Sbmyths250Sb14250Sbtext => '<p> Uz šo jautājumu ir grūti atbildēt. Viena no visbiežāk sniegtajām atbildēm ir tāda, ka mēs varam saskaitīt monētu bāzes darījumus (kad jaunais Monero tiek apbalvots kalnračiem par bloka atrisināšanu). Šie darījumi ir caurspīdīgi, un, tos saskaitot, mums vajadzētu iegūt kopējo apgrozībā esošo Monero skaitu.</p>\n\n<p>Tomēr ir svarīgi atzīmēt, ka, ja notiktu neveiksmes, kas palielina Monero daudzumu, pārsniedzot to, ko mēs sagaidām no monētu bāzes darījumiem, tie notiktu nevis pašu monētu bāzes darījumos, bet gan parastā darījumā starp makiem. Tas notiktu tikai vienā no trim veidiem.</p>\n\n<p> Viens, ja kriptogrāfija, kas pierāda, ka darījumā nav izveidota vai iznīcināta Monero, ir fundamentāli kļūdaina. Otrkārt, ja cietās kriptogrāfijas ieviešana (kods) ir kļūdaina. Treškārt, ja neviena no tām nav kļūdaina, bet datori kļūst pietiekami jaudīgi, lai caurstrāvotu mūsu pašreizējās kriptogrāfijas shēmas un radītu viltus pierādījumus.</p>';
+  String get knowledge250Sbmyths250Sb14250Sbtext => '<p> Uz šo jautājumu ir grūti atbildēt. Viena no visbiežāk sniegtajām atbildēm ir tāda, ka mēs varam saskaitīt monētu bāzes pārskaitījumus (kad jaunais Monero tiek piešķirts maineriem par bloka atrisināšanu). Šie pārskaitījumi ir caurspīdīgi, un, tos saskaitot, mums vajadzētu iegūt kopējo apgrozībā esošo Monero skaitu.</p>\n\n<p>Tomēr ir svarīgi atzīmēt, ka, ja notiktu kļūdas, kas palielina Monero daudzumu, pārsniedzot to, ko mēs sagaidām no monētu bāzes pārskaitījumiem, tie notiktu nevis pašu monētu bāzes pārskaitījumos, bet gan parastā pārskaitījumā starp makiem. Tas notiktu tikai vienā no trim veidiem.</p>\n\n<p> Viens - ja kriptogrāfija, kas pierāda, ka pārskaitījumā nav izveidots vai iznīcināts Monero, ir fundamentāli kļūdaina. Otrs - ja stabilās kriptogrāfijas izpildījums (kods) ir kļūdains. Trešais - kļūdu nav, bet datori kļūst pietiekami jaudīgi, lai caursistu mūsu pašreizējās kriptogrāfijas shēmas un radītu viltus pierādījumus.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb14250Sbtitle => 'Ja Monero ir tik privāts, kā mēs varam pārbaudīt piegādi, lai nodrošinātu, ka neviens mums zem deguna nedrukā bezmaksas Monero?';
+  String get knowledge250Sbmyths250Sb14250Sbtitle => 'Ja Monero ir tik privāts, kā mēs varam pārbaudīt kopējo daudzumu, lai nodrošinātu, ka neviens mums zem deguna nedrukā bezmaksas Monero?';
 
   @override
-  String get knowledge250Sbmyths250Sb15250Sbtext => '<p>Šo jautājumu ir visgrūtāk atbildēt, jo kalnrūpniecībā kopumā pastāv pastāvīgās svārstības. Faktiski var gadīties, ka pēc šī raksta publicēšanas tas vairs tā var nebūt, un nākamajā dienā tas var atkal kļūt par to. Par tehnoloģijām kopumā ir grūti precīzi rakstīt, jo nozare strauji attīstās, un tas jo īpaši attiecas uz ieguvi un hasratu.</p>\n\n<p>Mēs neizvairāmies no bažām, neuztraucieties. Atrisināsim to, aplūkojot atšķirību starp aparatūras centralizāciju un pūla centralizāciju.</p>\n\n<p>Fakts, ka Bitcoin ieguvi var veikt tikai ar ļoti specifisku aparatūru, kas nav viegli pieejama, nozīmē, ka labākā aparatūra ir centralizēta ap ražotājiem. Tā kā ieguves kopfonda izveide ir mazsvarīga, mēs sagaidām, ka šie ražotāji izvietos paši savus ieguves baseinus, kuros tiek iegūti viņu ASIC, un mēs patiešām redzam, ka tas tā ir ar lielākajiem ASIC ražošanas uzņēmumiem šodien.<p>\n\n<p>Šī problēma nav atrisināma. Centralizētajiem kalnrūpniecības baseiniem pieder aparatūra, baseins un jaucējfaili, un neviens nevar to darīt.</p>\n\n<p>Lai gan gala rezultāts ir līdzīgs, baseina centralizācijai ir ļoti atšķirīgi un daudz maināmāki pamati. Tā kā Monero ir egalitāra ieguve, katrs kalnracis var izvēlēties, kur norādīt jaucējvērtības. Cilvēki bieži izvēlas norādīt uz lielāku baseinu, jo tas nozīmē, ka viņi biežāk redzēs atrastus blokus nekā mazāku baseinu. </p>\n\n<p>Lai gan ir jāņem vērā, ka viņu individuālais atlīdzības apjoms būs mazāks, jo viņi to kopīgo ar daudz vairāk cilvēku. Mazākos baseinos blokus atrod retāk, taču katrs kalnracis saņem lielāku daļu no bloka atlīdzības, un gala rezultāts ir tāds, ka kalnrači faktiski nopelna līdzvērtīgu naudas summu neatkarīgi no tā, vai viņi atrodas mazākā vai lielākā baseinā, tāpēc mēs mudinām kalnračus norādīt to jaukšana uz mazākiem baseiniem, lai tālāk decentralizētu ieguvi.</p>\n\n<p>Taču mēs novirzāmies.</p>\n\n<p>Iepriekš sniegtajā decentralizācijas ieteikumā pamanīsit faktu, ka kalnračiem ir tiesības mainīt baseinus. Jebkurā brīdī, neatkarīgi no tā, vai tas ir labākas izglītības, decentralizācijas aicinājuma vai pieaugošas konkurences dēļ, jaucējkoda sadalījums var mainīties atkarībā no tā, vai atsevišķi kalnrači maina, kur viņi norāda savus jaucējus. To pašu nevar teikt par ieguvi, kas ir centralizēta aparatūras līmenī, jo ASIC ražotājiem nav motivācijas norādīt uz kādu citu pūlu, izņemot viņu pašu, un viņi to nedarīs.</p>\n\n<p>Tātad fakts, ka lielākā daļa Monero hasrata ir koncentrēta pāris baseinos, nav kaut kas tāds, ar ko mēs esam iestrēguši, un tas var būt saistīts ar izglītības trūkumu par kalnrūpniecību kopumā. To var novērst, jo problēma nav saknes līmenī, atšķirībā no Bitcoin aparatūras centralizācijas.</p>';
+  String get knowledge250Sbmyths250Sb15250Sbtext => '<p>Šo jautājumu ir visgrūtāk atbildēt, jo mainošanā kopumā ir pastāvīgās svārstības. Faktiski var gadīties, ka pēc šī raksta publicēšanas tas vairs tā var nebūt, un nākamajā dienā tā var atkal būt. Par tehnoloģijām kopumā ir grūti precīzi rakstīt, jo nozare strauji attīstās, un tas jo īpaši attiecas uz mainošanu un hash rate.</p>\n\n<p>Mēs neizvairāmies no jautājuma, neuztraucieties. Atrisināsim to, aplūkojot atšķirību starp aparatūras centralizāciju un baseina centralizāciju.</p>\n\n<p>Fakts, ka Bitcoin mainošanu var veikt tikai ar ļoti specifisku aparatūru, kas nav viegli pieejama, nozīmē, ka labākā aparatūra ir centralizēta ap ražotājiem. Tā kā mainošanas baseina izveide ir mazsvarīga, mēs sagaidām, ka šie ražotāji veidos paši savus mainošanas baseinus, kuros darbojas viņu ASIC, un mēs patiešām redzam, ka tas tā ir ar lielākajiem ASIC ražošanas uzņēmumiem šodien.<p>\n\n<p>Šī problēma nav atrisināma. Centralizētajiem mainošanas baseiniem pieder aparatūra, baseins un hashi, un neviens nevar to mainīt.</p>\n\n<p>Lai gan gala rezultāts ir līdzīgs, baseina centralizācijai ir ļoti atšķirīgi un daudz maināmāki pamati. Tā kā Monero ir vienlīdzīga ieguve, katrs maineris var izvēlēties, uz kurieni virzīt hashus. Bieži izvēlas virzīt uz lielāku baseinu, jo tas nozīmē, ka biežāk būs atrasti bloki nekā mazākā baseinā. </p>\n\n<p>Lai gan ir jāņem vērā, ka tādā gadījumā individuālais atlīdzības apjoms būs mazāks, jo ieguvums tiek dalīts starp daudz vairāk cilvēkiem. Mazākos baseinos blokus atrod retāk, taču katrs maineris saņem lielāku daļu no bloka atlīdzības, un gala rezultāts ir tāds, ka maineri faktiski nopelna līdzvērtīgu naudas summu neatkarīgi no tā, vai viņi atrodas mazākā vai lielākā baseinā, tāpēc mēs mudinām mainerus virzīt hashus uz mazākiem baseiniem, lai vairāk decentralizētu ieguvi.</p>\n\n<p>Taču mēs novirzāmies no tēmas.</p>\n\n<p>Iepriekš sniegtajā decentralizācijas ieteikumā pamanīsit faktu, ka maineriem ir tiesības mainīt baseinus. Jebkurā brīdī, neatkarīgi no tā, vai tas ir labākas izglītības, decentralizācijas aicinājuma vai pieaugošas konkurences dēļ, hashu sadalījums var mainīties atkarībā no tā, vai atsevišķi maineri maina, kur viņi virza savus hashus. To pašu nevar teikt par mainošanu, kas ir centralizēta aparatūras līmenī, jo ASIC ražotājiem nav motivācijas norādīt uz kādu citu baseinu, izņemot viņu pašu, un viņi to nedarīs.</p>\n\n<p>Tātad fakts, ka lielākā daļa Monero hash rate ir koncentrēts pāris baseinos, nav kaut kas tāds, ar ko mēs esam iestrēguši, un tas var būt saistīts ar izglītības trūkumu par mainošanu kopumā. To var novērst, jo problēma nav saknes līmenī, atšķirībā no Bitcoin aparatūras centralizācijas.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb15250Sbtitle => 'Lielākā daļa Monero pašreizējā hasrata nāk tikai no diviem baseiniem.';
+  String get knowledge250Sbmyths250Sb15250Sbtitle => 'Lielākā daļa Monero pašreizējā hashrate nāk tikai no diviem baseiniem.';
 
   @override
-  String get knowledge250Sbmyths250Sb2250Sbtext => '<p>Monero patiešām ir mazāk maka iespēju nekā daudzām esošajām monētām. Tas ir tāpēc, ka Monero tika izstrādāts no paša sākuma. Tas atrodas pavisam citā kodu bāzē nekā Bitcoin. Tas nozīmē, ka Monero nevar vienkārši izmantot Bitcoin pamata maku vai citus Bitcoin makus, kā to dara lielākā daļa monētu, un izmantot esošās infrastruktūras priekšrocības. Kā arī tas nozīmē, ka Monero nav tik vienkārši pievienojams trešo pušu makiem, piemēram, Exodus.</p>\n\n<p> Un tomēr lēnām, bet noteikti Monero sāk parādīties visu veidu maki. Daudzus gadus bija mēms, ka Monero nebija GUI un mobilā maka atbalsta, taču tagad nekas nevar būt tālāk no patiesības. Ir maki, kas īpaši paredzēti Monero, piemēram, Monerujo operētājsistēmai Android un Cake Wallet gan iOS, gan Android, kā arī jauni maki, piemēram, Wookey, Exa Wallet un citi. Turklāt trešo pušu maki sāk pievienot Monero, lai gan lēnāk, tostarp Exodus un Guarda, un mēs sagaidām, ka šī tendence turpināsies, laikam ejot un Monero kodu bāzei nobriest.</p>';
+  String get knowledge250Sbmyths250Sb2250Sbtext => '<p>Monero patiešām ir mazāk maka iespēju nekā daudzām citām monētām. Tas ir tāpēc, ka Monero tika izstrādāts no paša sākuma. Tas atrodas pavisam citā kodu bāzē nekā Bitcoin. Tas nozīmē, ka Monero nevar vienkārši izmantot Bitcoin pamata maku vai citus Bitcoin makus, kā to dara lielākā daļa monētu, un izmantot esošās infrastruktūras priekšrocības. Kā arī tas nozīmē, ka Monero nav tik vienkārši pievienojams trešo pušu makiem, piemēram, Exodus.</p>\n\n<p> Un tomēr lēnām, bet noteikti Monero sāk parādīties visu veidu maki. Daudzus gadus bija meme, ka Monero nav GUI un mobilā maka atbalsta, taču tagad nekas nevar būt tālāk no patiesības. Ir maki, kas īpaši paredzēti Monero, piemēram, Monerujo operētājsistēmai Android un Cake Wallet gan iOS, gan Android, kā arī jauni maki, piemēram, Wookey, Exa Wallet un citi. Turklāt trešo pušu maki sāk pievienot Monero, lai gan lēnāk, tostarp Exodus un Guarda, un mēs sagaidām, ka šī tendence turpināsies, laikam ejot un Monero kodu bāzei nobriestot.</p>';
 
   @override
   String get knowledge250Sbmyths250Sb2250Sbtitle => 'Monero ir mazāk maka iespēju.';
 
   @override
-  String get knowledge250Sbmyths250Sb3250Sbtext => '<p>Šī kritika ir arī nedaudz sarežģīta. Jāatzīst, ka dažās jomās Monero patiešām ir grūtāk lietojams nekā Bitcoin. Piemēri tam ir garākā adresē, un sinhronizācija aizņem ilgu laiku, pat izmantojot vieglu maku, jo maks nevar vienkārši pārbaudīt blokķēdi, neskenējot katru izvadi, lai noskaidrotu, vai tā pieder attiecīgajam kontam. </p>\n\n<p>Tas nozīmē, ka Monero daudzos veidos balstās uz kriptovalūtas lietošanas pieredzi, ja ne tieši uzlabo to, jo īpaši attiecībā uz privātumu.</p>\n\n<p>Mēs aicinām lasītāju lasīt rakstus par darbībām, ko Bitcoiners iesaka privātuma saglabāšanai. Saraksts ir garš, mulsinošs, un to ir grūti iegūt perfekti, un bieži vien kļūdas sekas ir privātuma apdraudējums. Viens piemērs tam ir ieteikums izgāzt vai sajaukt savu Bitcoin, taču pēc sajaukšanas procesa, ja iegūtie rezultāti tiek apvienoti vai kā citādi pārvietoti vienā makā, sajaukšana varēja būt veltīga, jo izvadu izsekošana nodrošina augstu savienojamību. Vēl viens piemērs ir fakts, ka daudzi iesaka iegūt savu Bitcoin, ja vēlaties, lai tas paliktu pilnīgi neskaidrs par to, kā iegūti Bitcoin rezultāti, un tas ir smieklīgi pašreizējā kalnrūpniecības ekosistēmā.</p>\n\n<p>Izmantojot Monero, šis detalizētais detaļu saraksts ir pilnībā izzudis. Katrs Monero darījums katru reizi saglabā augstu privātuma līmeni, lietotājam neko nedarot vai neizmantojot ārēju programmatūru. Lai gan Bitcoin apgrūtina privātuma nodrošināšanu visiem, izņemot vispieredzējušāko lietotāju, Monero apgrūtina to nepareizu ikvienu visu laiku. Runājot par kompromisiem, mēs domājam, ka garākas adreses un sinhronizācijas laiks ir vairāk nekā tā vērts.</p>\n\n<p>Un pat pēc tam, kad tika apspriests viss iepriekš, fakts paliek fakts, ka lietotāja pieredze laika gaitā bieži kļūst labāka, un Monero nav izņēmums. Monētas UX pēc dažiem gadiem var ievērojami uzlaboties, taču tās pamatus ir daudz grūtāk mainīt.</p>';
+  String get knowledge250Sbmyths250Sb3250Sbtext => '<p>Šī kritika arī ir nedaudz sarežģīta. Jāatzīst, ka dažās jomās Monero patiešām ir grūtāk lietojams nekā Bitcoin. Piemēri tam ir garākā adrese, un sinhronizācija aizņem ilgāku laiku, pat izmantojot light maku, jo maks nevar vienkārši pārbaudīt blokķēdi, neskenējot katru izvadi, lai noskaidrotu, vai tā pieder attiecīgajam kontam. </p>\n\n<p>Tas nozīmē, ka Monero daudzos veidos balstās uz kriptovalūtas lietošanas pieredzi, ja ne tieši uzlabo to, jo īpaši attiecībā uz privātumu.</p>\n\n<p>Mēs aicinām lasīt rakstus par darbībām, ko Bitcoineri iesaka privātuma saglabāšanai. Saraksts ir garš, mulsinošs, to ir grūti izpildīt perfekti, un bieži vien kļūdas sekas ir privātuma zaudēšana. Viens piemērs tam ir ieteikums sajaukt savu Bitcoin, taču pēc sajaukšanas procesa, ja iegūtie rezultāti tiek apvienoti vai kā citādi pārvietoti vienā makā, sajaukšana varēja būt veltīga, jo izvadu izsekošana nodrošina augstu savienojamību. Vēl viens piemērs ir fakts, ka daudzi iesaka iegūt savu Bitcoin, ja vēlaties, lai izvades izcelsme paliktu pilnīgi neskaidra. Tas ir smieklīgi pašreizējā mainošanas ekosistēmā.</p>\n\n<p>Izmantojot Monero, šis detalizētais saraksts ir pilnībā izzudis. Katrs Monero pārskaitījums katru reizi saglabā augstu privātuma līmeni, lietotājam neko nedarot un arī neizmantojot ārēju programmatūru. Kamēr Bitcoin apgrūtina privātuma nodrošināšanu visiem, izņemot vispieredzējušāko lietotāju, Monero apgrūtina tā nenodrošināšanu ikvienam un vienmēr. Runājot par kompromisiem, mēs domājam, ka garākas adreses un sinhronizācijas laiks ir vairāk nekā tā vērts.</p>\n\n<p>Un pat pēc tam, kad apspriests viss iepriekš minētais, fakts paliek fakts, ka lietotāja pieredze laika gaitā bieži kļūst labāka, un Monero nav izņēmums. Valūtas UX pēc dažiem gadiem var ievērojami uzlaboties, taču tās pamatus ir daudz grūtāk mainīt.</p>';
 
   @override
   String get knowledge250Sbmyths250Sb3250Sbtitle => 'Monero ir slikta lietotāja pieredze.';
 
   @override
-  String get knowledge250Sbmyths250Sb4250Sbtext => '<p>Šī kritika visbiežāk tiek izteikta, ņemot vērā Bitcoin. Ko darīt, ja Bitcoin pieņems privātuma tehnoloģijas, kas nodrošina atbilstošu privātumu. Kāda būtu Monero izmantošana?</p>\n\n<p> Realitāte ir tāda, ka mēs neredzam, ka Bitcoin nekad pirmajā kārtā liktu privātumu. Labākajā gadījumā tas būtu otrajā kārtā vai caur noteiktiem makiem, piemēram, samuraju un vasabi. Tas nozīmē, ka privātums ir izvēlēts, un pētījumi liecina, ka tas vienmēr ir zemāks par privātumu, kas ir ieslēgts pēc noklusējuma. Pat ja šo tehnoloģiju pieņemtu pieklājīgs Bitcoin lietotāju procents (kas pats par sevi ir iztēles posms), privātums būtu zemāks.</p>\n\n<p>Lai gan izvēles privātuma nepietiekamības iemesli būtu pietiekami lieli, lai izveidotu savu rakstu, mēs šeit vēlamies sniegt rupju piemēru. No tehnoloģiskā viedokļa privātums ir slēpšanās pūlī. Jo lielāks un viendabīgāks pūlis, jo labāka ir indivīda privātums. Un otrādi, ja pulks ir mazs vai liels, bet katrs valkā atšķirīgu, unikālu apģērbu, būtu vieglāk identificēt personu.</p>\n\n<p>Tas nozīmē, ka, tā kā Bitcoin liek cilvēkiem veikt papildu pasākumus, lai būtu daļa no šī pūļa, daudzi to nedarīs, un tie, kas to dara, var to darīt slikti. Gala rezultāts ir neliels pūlis, un ir daudz vieglāk identificēt atsevišķus rezultātus. Bet kļūst sliktāk. Papildus tam, ka pūlis ir mazs, katrs indivīds ir vairāk vai mazāk unikāls viens no otra atkarībā no izvēlētā privātuma protokola. Daži varētu izvēlēties Samourai, kam ir viens sajaukšanas veids, savukārt citi var izvēlēties Wasabi, kuram ir cits, un saraksts turpināsies. Tas galu galā noved pie katra darījuma unikālajām īpašībām. Kopā ar mazo pūli privātums ir diezgan vājš.</p>\n\n<p>Mēs salīdzinām iepriekš minēto ar Monero, kas nodrošina privātumu protokola līmenī. Tas nozīmē, ka visi pēc noklusējuma ir daļa no pūļa un visi izmanto vienu un to pašu privātumu (to, ko nosaka protokols). Pūlis ir gan liels, gan viendabīgs, tādējādi nodrošinot daudz spēcīgāku privātumu.</p>\n\n<p> Bet spersim soli atpakaļ un sekosim hipotēzei, kur Bitcoin kaut kādā veidā patiešām piešķir privātumu pamata slānim. Tas ir stabils, ieslēgts pēc noklusējuma un obligāts. Kam būtu vajadzīgs Monero?</p>\n\n<p> Dažiem tāda nebūtu, un tas varētu būt pārsteidzoši dzirdēt, taču daudziem no mums, Monero cilvēkiem, tas būtu vienalga. Viss, ko mēs vēlamies, ir privātumu saglabājošs, aizstājams veids, kā indivīdiem visā pasaulē veikt darījumus savā starpā, un, ja Bitcoin brīnumainā kārtā dara to tādā veidā, kas faktiski aizsargā privātumu, izmantojot obligātu bāzes slāņa tehnoloģiju, tad daudzi no mums labprāt pārslēgtos. Veiksmi, lai tas notiktu.</p>\n\n<p> Tomēr Monero piedāvā daudzas funkcijas, kas pārsniedz privātumu, ko Bitcoin nepiedāvā. Dinamiskais bloka izmērs, ko nodrošina astes emisija, atšķirīga kodu bāze, zemu maksu politika, atšķirīga eliptiskā līkne un daudz kas cits. Jo īpaši šeit ir jāizceļ dinamiskais bloka lielums, jo tas nodrošina teorētiski neierobežotu transakciju caurlaidspēju, tikai krātuvei un joslas platumam esot aizrīšanās punktiem. Īsāk sakot, teorētiskais Bitcoin ar privātumu vienkārši nepiedāvā visu, ko dara Monero.</p>\n\n<p>Pēdējo reizi pārslēdzot pārnesumus šim jautājumam, retāk šis arguments attiecas uz tehnoloģijām, piemēram, viedo līgumu ethereum, izmantojot zk-SNARKS, kam galvenās ķēdes pamata slānī atkal nav noteikts obligāts privātums, tāpēc anonimitātes kopas būs diezgan mazas un ar apšaubāmu spēju adekvāti aizsargāt privātumu. Lai iegūtu citus salīdzinājumus, lūdzu, skatiet mūsu <a target=\"_blank\" href=\"/knowledge/why-monero-is-better\" class=\"next-link\"> rakstu, kurā Monero tiek salīdzināts ar citām galvenajām privātuma monētām</a>.</p>';
+  String get knowledge250Sbmyths250Sb4250Sbtext => '<p>Šī ir visbiežāk izteiktā kritika saistībā ar Bitcoin. Ko darīt, ja Bitcoin pieņems privātuma tehnoloģijas, kas nodrošina atbilstošu privātumu? Kāds būtu Monero pielietojums?</p>\n\n<p> Realitāte ir tāda, ka mēs neredzam, ka Bitcoin jebkad pirmajā slānī veidotu privātumu. Labākajā gadījumā tas būtu otrajā slānī vai caur noteiktiem makiem, piemēram, Samourai un Wasabi. Tas nozīmē, ka privātums ir izvēles kārtā, un pētījumi liecina, ka tas vienmēr ir zemāks par privātumu, kas ir ieslēgts pēc noklusējuma. Pat ja šo tehnoloģiju pieņemtu būtiska Bitcoin lietotāju daļa (ko jau ir grūti iztēloties), privātums būtu zemāks.</p>\n\n<p>Lai gan izvēles privātuma trūkumi būtu pietiekami lieli, lai izveidotu savu rakstu, mēs šeit vēlamies sniegt vienkāršu piemēru. No tehnoloģiskā viedokļa privātums ir slēpšanās pūlī. Jo lielāks un viendabīgāks pūlis, jo labāks ir indivīda privātums. Un otrādi, ja pulks ir mazs vai liels, bet katrs valkā atšķirīgu, unikālu apģērbu, būtu vieglāk identificēt personu.</p>\n\n<p>Tas nozīmē, ka, tā kā Bitcoin liek cilvēkiem veikt papildu pasākumus, lai būtu daļa no šī pūļa, daudzi to nedarīs, un tie, kas to dara, var to darīt slikti. Gala rezultāts ir neliels pūlis, un ir daudz vieglāk identificēt atsevišķas izvades. Bet kļūst sliktāk. Papildus tam, ka pūlis ir mazs, katrs indivīds ir vairāk vai mazāk unikāls atkarībā no izvēlētā privātuma protokola. Daži varētu izvēlēties Samourai, kam ir viens sajaukšanas veids, savukārt citi var izvēlēties Wasabi, kuram ir cits, un saraksts turpināsies. Tas galu galā noved pie katra pārskaitījuma unikālajām īpašībām. Kopā ar mazo pūli privātums ir diezgan vājš.</p>\n\n<p>Salīdzināsim iepriekš minēto ar Monero, kas nodrošina privātumu protokola līmenī. Tas nozīmē, ka visi pēc noklusējuma ir daļa no pūļa un visi izmanto vienu un to pašu privātumu (to, ko nosaka protokols). Pūlis ir gan liels, gan viendabīgs, tādējādi nodrošinot daudz spēcīgāku privātumu.</p>\n\n<p> Bet spersim soli atpakaļ un sekosim hipotēzei, kur Bitcoin kaut kādā veidā patiešām piešķir privātumu pamata slānim. Tas ir stabils, ieslēgts pēc noklusējuma un obligāts. Kāda būtu vajadzība pēc Monero?</p>\n\n<p> Dažiem tādas nebūtu, un to varētu būt pārsteidzoši dzirdēt, taču daudziem no mums, Monero cilvēkiem, tas būtu vienalga. Viss, ko mēs vēlamies, ir privātumu saglabājošs, aizstājams veids, kā indivīdiem visā pasaulē veikt darījumus savā starpā, un, ja Bitcoin brīnumainā kārtā dara to tādā veidā, kas faktiski aizsargā privātumu, izmantojot obligātu bāzes slāņa tehnoloģiju, tad daudzi no mums labprāt pārslēgtos. Veiksmi, lai tas notiktu.</p>\n\n<p> Tomēr Monero piedāvā daudzas funkcijas, kas pārsniedz privātumu, ko Bitcoin nepiedāvā. Dinamiskais bloka izmērs, ko nodrošina astes emisija, atšķirīga kodu bāze, zemu maksu politika, atšķirīga eliptiskā līkne un daudz kas cits. Jo īpaši šeit ir jāizceļ dinamiskais bloka lielums, jo tas nodrošina teorētiski neierobežotu pārskaitījumu caurlaidspēju, tikai krātuvei un joslas platumam esot sastrēgumu punktiem. Īsāk sakot, teorētiskais Bitcoin ar privātumu vienkārši nepiedāvā visu, ko dara Monero.</p>\n\n<p>Pēdējo reizi pārslēdzot pārnesumus šim jautājumam, retāk šis arguments tiek attiecināts uz tehnoloģijām, piemēram, Ethereum, kam gudrajā līgumā izveidots zk-SNARKS. Tomēr te galvenās ķēdes pamata slānī atkal nav noteikts obligāts privātums, tāpēc anonimitātes kopas būs diezgan mazas un ar apšaubāmu spēju adekvāti aizsargāt privātumu. Lai iegūtu citus salīdzinājumus, lūdzu, skatiet mūsu <a target=\"_blank\" href=\"/knowledge/why-monero-is-better\" class=\"next-link\"> rakstu, kurā Monero tiek salīdzināts ar citām galvenajām privātuma monētām</a>.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb4250Sbtitle => 'Monero kļūs novecojis, ja populārākā blokķēde izmantos spēcīgu privātuma tehnoloģiju.';
+  String get knowledge250Sbmyths250Sb4250Sbtitle => 'Monero kļūs lieks, ja populārāka blokķēde izmantos spēcīgu privātuma tehnoloģiju.';
 
   @override
-  String get knowledge250Sbmyths250Sb5250Sbtext => '<p>Vairs ne! Pateicoties brīnišķīgajai ložu necaurlaidības tehnoloģijai, kas tika pievienota 2018. gada oktobrī, darījumu apmēri ir krasi samazināti (par vairāk nekā 80%), kas izraisa līdzīgu darījumu maksu samazināšanos. Faktiski, rakstīšanas laikā, Monero ir lētāks par vienu baitu nekā Bitcoin, un turpmāka tehnoloģijas optimizācija tos vēl vairāk samazina.</p>\n\n<p>Šīs optimizācijas ir dažādas un biežas. Viens piemērs ir gudra optimizācija pašās ložu necaurlaidīgajās sistēmās, samazinot gan aprēķiniem, gan verifikācijai nepieciešamo matemātiku, dažkārt pat par 25%.</p>\n\n<p>Turklāt tiek izstrādātas jaunas, aizraujošas gredzenu parakstu shēmas, piemēram, CLSAG, kas aizstās pašreizējo MLSAG shēmu un vēl vairāk samazinās visa darījuma apjomu par 25-35%. Papildus tam ir vēl jaunākas, progresīvākas tehnoloģijas ar pilnīgi atšķirīgām pierādīšanas sistēmām, kurām ir potenciāls saglabāt pašreizējos darījumu izmērus, bet kuru gredzenu izmērs pārsniedz simtu, piemēram, Triptihs, Arcturus un Lelantus, kas visi ir mazāki un efektīvākas par pašreizējām shēmām.</p>';
+  String get knowledge250Sbmyths250Sb5250Sbtext => '<p>Vairs ne! Pateicoties brīnišķīgajai Bulletproofs tehnoloģijai, kas tika pievienota 2018. gada oktobrī, pārskaitījumu apmēri ir krasi samazināti (par vairāk nekā 80%), kas izraisa pārskaitījumu maksu samazināšanos līdzīgā apmērā. Raksta tapšanas laikā Monero apstrādes izmaksas par vienu baitu ir zemākas nekā Bitcoin, un turpmāka tehnoloģijas optimizācija tās vēl vairāk samazina.</p>\n\n<p>Šīs optimizācijas ir dažādas un biežas. Viens piemērs ir gudra optimizācija pašās Bulletproofs sistēmās, samazinot gan aprēķiniem, gan verifikācijai nepieciešamo matemātiku, dažkārt pat par 25%.</p>\n\n<p>Turklāt tiek izstrādātas jaunas, aizraujošas gredzenveida parakstu shēmas, piemēram, CLSAG, kas aizstās pašreizējo MLSAG shēmu un vēl vairāk samazinās visa darījuma apjomu par 25-35%. Papildus tam ir vēl jaunākas, progresīvākas tehnoloģijas ar pilnīgi atšķirīgām pierādīšanas sistēmām, kurām ir potenciāls saglabāt pašreizējos pārskaitījumu izmērus, bet kur gredzenu izmērs pārsniedz simtu. Piemēri ir Triptich, Arcturus un Lelantus, kas visas ir mazākas un efektīvākas par pašreizējām shēmām.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb5250Sbtitle => 'Vai Monero nav ļoti augstas darījumu maksas?';
+  String get knowledge250Sbmyths250Sb5250Sbtitle => 'Vai Monero nav ļoti augstas pārskaitījumu maksas?';
 
   @override
-  String get knowledge250Sbmyths250Sb6250Sbtext => 'Atkal. Ložu necaurlaidība to krasi samazināja. Monero darījumi joprojām ir lielāki nekā Bitcoin darījumi, taču tagad tikai aptuveni astoņas reizes, nevis aptuveni piecdesmit reizes, nekā tas bija iepriekš. Bet ir arī cits veids, kā to aplūkot. Bitcoin ir daži līdzekļi privātuma sasniegšanai, parasti izmantojot maisītājus un specializētus makus, piemēram, Wasabi, Samourai un citas ar CoinJoin saistītas shēmas. Salīdzinot sajaukšanas izmaksas ar citiem Bitcoin izvadiem, adrešu lēcienu un pareiza izvades sadales uzturēšanu, kopējās izmaksas gan lieluma, gan maksas ziņā ir lielākas nekā tad, ja lietotājs vienkārši izmantotu Monero. Tātad, jā, neapbruņoti Bitcoin darījumi ir mazāki, taču, lai sasniegtu jebkāda veida privātumu (kas ir daudz vājāks nekā Monero), Bitcoin būtu nepieciešams vairāk vietas nekā Monero.';
+  String get knowledge250Sbmyths250Sb6250Sbtext => 'Atkal. Bulletproofs to krasi samazināja. Monero pārskaitījumi joprojām ir lielāki nekā Bitcoin, taču tagad tikai aptuveni astoņas reizes, nevis piecdesmit, kā tas bija iepriekš. Bet ir arī cits veids, kā to aplūkot. Bitcoin ir daži līdzekļi privātuma sasniegšanai, parasti izmantojot maisītājus un specializētus makus, piemēram, Wasabi, Samourai un citas ar CoinJoin saistītas shēmas. Salīdzinot sajaukšanas izmaksas ar citiem Bitcoin izvadiem, adrešu lēcienu un pareizas izvadu sadales uzturēšanu, kopējās izmaksas gan lieluma, gan maksas ziņā ir lielākas nekā tad, ja lietotājs vienkārši izmantotu Monero. Tātad, jā, neapbruņoti Bitcoin pārskaitījumi ir mazāki, taču, lai sasniegtu jebkāda veida privātumu (kas ir daudz vājāks nekā Monero), Bitcoin būtu nepieciešams vairāk atmiņas nekā Monero.';
 
   @override
-  String get knowledge250Sbmyths250Sb6250Sbtitle => 'Monero darījums ir daudzkārt lielāks nekā Bitcoin darījums.';
+  String get knowledge250Sbmyths250Sb6250Sbtitle => 'Monero pārskaitījums ir daudzkārt lielāks nekā Bitcoin pārskaitījums.';
 
   @override
-  String get knowledge250Sbmyths250Sb7250Sbtext => '<p>2017.–2018. gada laikmetā Monero kopiena apņēmās nepieļaut ASIC no tīkla. Tas tika darīts, nepārtraukti ik pēc sešiem mēnešiem pārejot uz jaunu darba pierādīšanas algoritmu, kas neļautu ASIC pārņemt tīklu. Printera analoģijā mūsu <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">rakstā par ieguvi Monero</a> ir izskaidrots, kā tas darbojas.</p>\n\n<p>Vairums cilvēku nezina, ka Monero cietās dakšas nesākās tāpēc, ka tika mainīts tā darba apliecinājums. Monero arī pirms tam ik pēc sešiem mēnešiem ir bijis grūti dakšas, atgriežoties līdz pat 2015. gadam. Kāpēc vispār tiek izmantotas šīs cietās dakšas? Pajautājiet jebkurai personai, kas strādā ar privātumu, un viņi jums pateiks, ka privātums ir bruņošanās sacensības. Viena puse nodrošina labu privātumu, otra izstrādā rīkus, kas var izjaukt minēto privātumu, liekot pirmajai pusei izstrādāt spēcīgāku tehnoloģiju, un cikls turpinās un turpinās.</p>\n\n<p>Svarīgs piemērs pirms-PoW maiņas cietajām dakšām ir RingCT iekļaušana 2017. gadā, neapšaubāmi lielākās Monero izmaiņas, kas jebkad ir palielinājušas Monero privātumu par daudzām kārtām. Mēs vienkārši domājam, ka ir pāragri pārkaulolēt protokolu, jo īpaši, ja tiek izstrādātas aizraujošas jaunas privātuma tehnoloģijas, piemēram, Triptych un Lelantus. Tomēr mēs smagi strādājam, lai nodrošinātu, ka mūsu attīstība, pētniecība un citas darbības ir pēc iespējas decentralizētas. Mums ir <a class=\"next-link\" href=\"/knowledge/why-monero-is-open-source-and-decentralized\" target=\"_blank\">raksts, kas aptver arī šo tēmu</a>, tāpēc noteikti pārbaudiet to.</p>\n\n<p>To visu sakot, decentralizētajai izstrādes komandai ir pārāk grūti un nogurdinoši, lai ievērotu šo grafiku, un tā vēlas pāriet uz cieto dakšu ik pēc deviņiem mēnešiem vai pat katru gadu. Tas ir tāpēc, ka sabiedrība uzskata, ka ar tādiem sasniegumiem kā Triptihs un Arcturus mēs tuvojamies tam, ko mēs ceram būt patiesi stabilai privātumam ar dažiem vājiem punktiem, kā rezultātā trūkst nepieciešamības pēc ilgstošas, protokolu mainošas attīstības. Un, lai pierādītu darbu, vairāki kopienas locekļi izveidoja RandomX kā pēdējo iespēju, lai ASIC nebūtu pieejams tīklā. Rakstīšanas laikā mēs joprojām esam šī eksperimenta vidū un vēl nav jāredz, vai tas būs veiksmīgs ilgtermiņā, taču ir sasniegts viens no vēlamajiem rezultātiem, cits iemesls ātrai dakšai ir noņemts, ļaujot lēnāks sazarošanas grafiks.</p>';
+  String get knowledge250Sbmyths250Sb7250Sbtext => '<p>2017.–2018. gada laikmetā Monero kopiena apņēmās nepieļaut ASIC. Tas tika darīts, nepārtraukti ik pēc sešiem mēnešiem pārejot uz jaunu Proof of Work algoritmu, kas neļautu ASIC pārņemt tīklu. Printera analoģijā mūsu <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">rakstā par Monero mainošanu</a> ir izskaidrots, kā tas darbojas.</p>\n\n<p>Vairums cilvēku nezina, ka Monero atzari nesākās tāpēc, ka tika mainīts Proof of Work. Monero arī pirms tam ik pēc sešiem mēnešiem ir bijuši atzarojumi, atskatoties līdz pat 2015. gadam. Kāpēc vispār tiek veidoti atzari? Pajautājiet jebkurai personai, kas strādā ar privātumu, un viņi jums pateiks, ka privātums ir bruņošanās sacensības. Viena puse nodrošina labu privātumu, otra izstrādā rīkus, kas var izjaukt minēto privātumu, liekot pirmajai pusei izstrādāt spēcīgāku tehnoloģiju, un cikls turpinās un turpinās.</p>\n\n<p>Svarīgs piemērs pirms-PoW maiņas atzariem ir RingCT iekļaušana 2017. gadā, neapšaubāmi lielākās Monero izmaiņas, kas jebkad ir palielinājušas Monero privātumu daudzkārt. Mēs vienkārši domājam, ka ir pāragri akmenī iekalt protokolu, jo īpaši, ja tiek izstrādātas aizraujošas jaunas privātuma tehnoloģijas, piemēram, Triptych un Lelantus. Tomēr mēs smagi strādājam, lai nodrošinātu, ka mūsu attīstība, pētniecība un citas darbības ir pēc iespējas decentralizētas. Mums ir <a class=\"next-link\" href=\"/knowledge/why-monero-is-open-source-and-decentralized\" target=\"_blank\">raksts, kas aptver arī šo tēmu</a>, tāpēc noteikti apskatiet to.</p>\n\n<p>Īsumā, decentralizētajai izstrādes komandai ir pārāk grūti un nogurdinoši ievērotu šo grafiku, un tā vēlas pāriet uz atzaru ik pēc deviņiem mēnešiem vai pat ik gadu. Kopiena uzskata, ka ar tādiem sasniegumiem kā Triptych un Arcturus mēs tuvojamies tam, kas būtu patiesi stabils privātums ar dažiem vājiem punktiem, kā rezultātā nebūs nepieciešamības pēc aktīvas, protokolu mainošas attīstības. Un Proof of Work ziņā vairāki kopienas locekļi izveidoja RandomX kā pēdējo gājienu, lai ASIC nebūtu iespējams tīklā. Rakstīšanas laikā mēs joprojām esam šī eksperimenta vidū un vēl nav redzams, vai tas būs veiksmīgs ilgtermiņā, taču ir sasniegts viens no vēlamajiem rezultātiem un vēl viens iemesls atzarojumam ir noņemts, ļaujot lēnāku sazarošanas grafiku.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb7250Sbtitle => 'Monero diezgan bieži ir cietās dakšas. Vai tas nenozīmē, ka tas ir centralizēts?';
+  String get knowledge250Sbmyths250Sb7250Sbtitle => 'Monero diezgan bieži ir atzarojumi. Vai tas nenozīmē, ka tas ir centralizēts?';
 
   @override
-  String get knowledge250Sbmyths250Sb8250Sbtext => '<p>Šī nav un nekad nav bijusi Rikardo “fluffypony” Spagni monēta. Viņam pat neizdevās. To sāka pseidonīms, kas pazīstams kā pateicīgs_par_šodien, un par to ir ļoti interesants stāsts citai reizei. Fluffypony ieguva bēdīgu slavu gan kā galvenā komandas loceklis/vadošais uzturētājs, jo viņš veltīja daudz laika un resursu, lai palīdzētu monētai augt, gan ceļojot un uzstājoties konferencēs. Apvienojot šīs divas lietas, viņš kļuva par sava veida neoficiālu Monero seju un parasti bija vārti, caur kuriem cilvēki mūs atrada. Sakarā ar šausmīgo izpilddirektora kultūru, kas bija plaši izplatīta kriptovalūtu jomā, viņi pieņēma, ka viņš ir Monero dibinātājs un vadītājs, un tie abi nav patiesi.</p>\n\n<p>Mūsdienās fluffypony joprojām ir galvenās komandas daļa, taču vairs nav galvenais kodu bāzes uzturētājs un ir atsācis strādāt pie saviem personīgajiem projektiem. Monero turpina labi.</p>';
+  String get knowledge250Sbmyths250Sb8250Sbtext => '<p>Šī nav un nekad nav bijusi Riccardo “fluffypony” Spagni monēta. Viņam pat neizdevās. To sāka pseidonīms, kas pazīstams kā thankful_for_today, un par to ir ļoti interesants stāsts citai reizei. Fluffypony ieguva atpazīstamību gan kā galvenās komandas loceklis/vadošais uzturētājs, jo viņš veltīja daudz laika un resursu, lai palīdzētu monētai augt, gan ceļojot un uzstājoties konferencēs. Apvienojot šīs divas lietas, viņš kļuva par sava veida neoficiālu Monero seju un parasti bija vārti, caur kuriem cilvēki mūs atrada. Sakarā ar šausmīgo CEO kultūru, kas bija plaši izplatīta kriptovalūtu jomā, viņi pieņēma, ka viņš ir Monero dibinātājs un vadītājs, un nekas no tā nav patiesi.</p>\n\n<p>Mūsdienās fluffypony joprojām ir galvenās komandas daļa, taču vairs nav galvenais kodu bāzes uzturētājs un ir atsācis strādāt pie saviem personīgajiem projektiem. Monero turpina attīstīties bez problēmām.</p>';
 
   @override
   String get knowledge250Sbmyths250Sb8250Sbtitle => 'Šī ir fluffypony personīgā monēta!';
 
   @override
-  String get knowledge250Sbmyths250Sb9250Sbtext => '<p>Tas ir neapstrīdams fakts, un par to nevar strīdēties. moneromooo ir labi zināms Monero kopienas loceklis. Tik daudz, ka kopiena piesaistīja līdzekļus, izmantojot mūsu kopfinansēšanas platformu — Kopienas kopfinansēšanas sistēmu (CCS), lai viņi varētu pilnu slodzi strādāt Monero. Jauni darba priekšlikumi tiek iesniegti katru ceturksni, tāpēc, ja sabiedrība kādreiz nav apmierināta ar paveikto darbu, tai vienkārši nav jāfinansē viņa nākamais priekšlikums. </p>\n\n<p>Kā var iedomāties, strādājot Monero pilnas slodzes, nevis brīvprātīgā darba rezultātā, tiks uzkrāts liels darba apjoms. Tā kā Monero nebija priekštelpas, ICO, un tas nesaņem dibinātāja atlīdzību, pretējā gadījumā mums nav pilnas slodzes inženieru, kas strādātu pie projekta, un cilvēki dod savu ieguldījumu, kad vien var, un vienkārši nav iespējams sagaidīt, ka šis ieguldījums atsver pilna laika strādnieku.</p>\n\n<p> Tomēr joprojām ir jāpieliek lielas pūles, lai nodrošinātu pārbaudes un līdzsvaru. Galvenās komandas loceklis joprojām apvieno kodu pēc pārskatīšanas, tāpēc tas nav gadījums, kad persona gan izveido, gan integrē kodu, tādējādi apejot jebkādu pārraudzību, kas nepieciešama, lai konstatētu rupju kļūdu vai ļaunprātīgu nolūku.</p>';
+  String get knowledge250Sbmyths250Sb9250Sbtext => '<p>Tas ir neapstrīdams fakts, un par to nevar diskutēt. moneromooo ir labi zināms Monero kopienas loceklis. Tik daudz, ka kopiena piesaistīja līdzekļus, izmantojot mūsu kopfinansēšanas platformu — Kopienas Kopfinansēšanas Sistēmu (CCS), lai viņš varētu pilnu slodzi strādāt Monero. Jauni darba priekšlikumi tiek iesniegti katru ceturksni, tāpēc, ja kopiena kādreiz nav apmierināta ar paveikto darbu, tai vienkārši nav jāfinansē viņa nākamais priekšlikums. </p>\n\n<p>Kā var iedomāties, strādājot Monero pilnā slodzē, nevis brīvprātīgā darba rezultātā, tiks uzkrāts liels darba apjoms. Tā kā Monero nebija iepriekšējas mainošanas, ICO, un tas nesaņem dibinātāja atlīdzību, mums nav pilnas slodzes inženieru, kas strādātu pie projekta. Cilvēki dod savu ieguldījumu, kad vien var, un vienkārši nav iespējams sagaidīt, ka šis ieguldījums atsver pilna laika strādnieku.</p>\n\n<p> Tomēr joprojām ir jāpieliek lielas pūles, lai nodrošinātu pārbaudes un līdzsvaru. Galvenās komandas loceklis joprojām apvieno kodu pēc pārskatīšanas, tāpēc tas nav gadījums, kad persona gan izveido, gan integrē kodu, tādējādi apejot jebkādu pārraudzību, kas nepieciešama, lai konstatētu rupju kļūdu vai ļaunprātīgu nolūku.</p>';
 
   @override
-  String get knowledge250Sbmyths250Sb9250Sbtitle => 'Lielāko daļu saistību kopš 2017. gada ir veikusi persona, kas pazīstama kā moneromooo-monero';
+  String get knowledge250Sbmyths250Sb9250Sbtitle => 'Lielāko daļu ieguldījuma kopš 2017. gada ir veikusi persona, kas pazīstama kā moneromooo-monero';
 
   @override
-  String get knowledge250Sbmyths250Sbdescription => 'Daudzas pret Monero vērstas kritikas, kas ir vai nu novecojušas, vai nepareizas, savukārt citi sniedz ļoti šauru skatījumu uz attiecīgo problēmu. Šajā rakstā mēs ceram labot šo kritiku.';
+  String get knowledge250Sbmyths250Sbdescription => 'Daudzas pret Monero vērstas kritikas ir vai nu novecojušas, vai nepareizas, savukārt citas sniedz ļoti šauru skatījumu uz attiecīgo problēmu. Šajā rakstā mēs ceram izskaidrot šīs problēmas.';
 
   @override
-  String get knowledge250Sbmyths250Sbtitle => '15 populārākie Monero mīti un bažas, kas atmaskotas';
+  String get knowledge250Sbmyths250Sbtitle => '15 populārākie Monero mīti un bažas atspēkotas';
 
   @override
-  String get knowledge250SbnetworkEffect250Sb0250Sbtext => '<p>Blockchain ir neskaitāmas disciplīnas, kas visas ir saspiestas vienā. Tā savos drošības modeļos iekļauj tehnoloģiju, ekonomikas un spēļu teorijas elementus. Tas nozīmē, ka tā ir viena no līdz šim visvairāk iesaistītajām un sarežģītākajām tehnoloģijām, taču nozīmē arī to, ka dziļa un rūpīga izpratne nav iespējama, neapgūstot katras puzles daļas pamatus, kas to veido.</p>\n\n<p>Viena blokķēdes daļa, par kuru bieži netiek runāts, ir konkurence. Katra kriptovalūta bieži tiek novērtēta pēc tās būtības un pat attiecībā pret kriptovalūtām, kas tai visvairāk patīk, taču dažas tiek novērtētas, pamatojoties uz to, ko tā piedāvā tirgum kopumā un cik cilvēku to izmanto. Runājot tālāk, kriptovalūtai ir jāanalizē, cik daudzi to izmanto, zina par to vai kā citādi jebkādā veidā saskaras ar to. Šī koncepcija ir pazīstama kā tīkla efekts.</p>\n\n<p>Tīkla efekta piemērs, kas nav blokķēde, ir sociālie mediji. Ja visi jūsu draugi izmanto Facebook, tad, izvēloties, kurā sociālajā medijā vēlaties būt aktīvi iesaistīts, jūsu draugu izvēle arī ņem vērā šo lēmumu. Fakts, ka lielākā daļa no viņiem atrodas Facebook, var ietekmēt arī jūs pievienoties tam. Un, kad jūs izlemjat, vai vēlaties pamest platformu, tas, ka varat zaudēt kontaktus ar dažiem no šiem draugiem, arī ietekmēs šo lēmumu. Šis ir tīkla efekts darbībā. Kad adopcija sasniedz kritisko masu, turpmākā pieņemšana kļūst vienkāršāka, un to bieži veicina pašreizējie tīkla dalībnieki.</p>\n\n<p>Kad mēs to aplūkojam blokķēdes kontekstā un arī komercijā kopumā, tīkla efektu spēks ātri kļūst acīmredzams. Ja Bitcoin ir kriptovalūta, par kuru zina lielākā daļa cilvēku, un tas ir tas, ko lielākā daļa cilvēku pērk, tad vairāk tirgotāju to pieņems. Ja vairāk tirgotāju to pieņems, būs vairāk vietu, kur to izmantot, tāpēc vairāk cilvēku to iegādāsies un vairāk cilvēku par to uzzinās. Tas kļūst par lielu pozitīvu atgriezenisko saiti, kas rada sniega bumbiņas. Šajā brīdī tirgotājs var tikt uzrunāts par citas kriptovalūtas izmantošanu, taču viņš apšaubīs, kāpēc tas ir vajadzīgs, jo viņi jau pieņem Bitcoin, un to izmanto un pieņem visi. </p>\n\n<p>Lai gan nav šaubu, ka Bitcoin ir vislielākā kriptovalūta, ir arī citas, kas tiek uzskatītas par labāko savā nišā. Monero ir viena no šādām monētām, ko daudzi uzskata par pirmizrādes privātuma monētu, lai gan dažādiem cilvēkiem ir dažādi viedokļi par to, vai Monero pat konkurē tajā pašā vietā, kur Bitcoin. Tas ir tāpēc, ka Bitcoin ir ievietojis visas savas kartes savā caurspīdīgumā, lai pārbaudītu kopējo summu (lai gan tas ir iespējams arī Monero, lai gan daudz apļveida veidā).</p>\n\n<p>Kur Monero šobrīd atrodas šajā tīkla efektu spēlē? Kur mēs sākām? Kāda ir nākotne? Nu, sāksim ar sākumu.</p>\n\n<p>Interesanti atzīmēt, ka <a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">Monero pirmsākumos</a> tas bija viens no trim veidiem, kā nodrošināt privātumu. Coinjoin, CryptoNote un Dash masternode/coinjoin hibrīds. Iespējas bija ierobežotas, un tās noteikti nebija salīdzinošās pārskatīšanas, taču tas netraucēja cilvēkiem izvēlēties pusi. Šajā vecākajā laikmetā tā bija jebkura spēle, un daži nolēma apsēsties un ļaut krēmam pacelties uz augšu. Galu galā laiks izrādījās <a target=\"_blank\" href=\"/knowledge/why-monero-is-better\" class=\"next-link\">Monero pusē</a>, jo citas privātuma kriptovalūtas nāca un aizgāja.</p>\n\n<p>Tas izveidoja Monero tīkla efektu kā monētu, kas paver ceļu citiem privātuma jomā. Pat tad, kad parādījās jaunākas tehnoloģijas, piemēram, Zcash\'s zk-SNARKs un MimbleWimble, liela daļa meklēja Monero vadību un saprātīgu diskusiju par šiem jaunajiem protokoliem.</p>\n\n<p>Pašlaik Monero ir viens no nedaudzajiem vispāratzītajiem projektiem kosmosā. Sākot no kriptovalūtas un beidzot ar Bitcoin maksimālistiem, viņi visi raugās uz Monero ar vismaz nežēlīgu cieņu, lai gan biežāk tas ir ar augstāku atzinību. Kad kosmosa veterāni runā par monētām, kurām ir vislielākā iespēja kaut ko mainīt pasaulē un kuras ilgs pārbaudījumos un bēdās, Monero nekad neizpaliek. </p>\n\n<p>Šīs pēdējās rindkopas ir ne tikai apsveikums ar sevi, bet arī godīgs skatījums uz to, kāda ir kriptogrāfijas ainava rakstīšanas laikā. Monero tīkla efekti katru dienu kļūst arvien pamanāmāki un parādās neparedzētās vietās.</p>\n\n<p>Cilvēki ir diezgan atšķirīgi, runājot par Monero nākotni, taču visi viedokļi liecina, ka Monero savu darbu veic labi. Lielākais piemērs tam ir regulatīvās bažas. Daži baidās, ka Monero ir pārāk privāts, kas izraisīs neizbēgamu sadursmi ar pasaules valdībām, savukārt citi ir satraukti par to, kā šī privātums atgriež brīvību parastajam cilvēkam. Abu šo uzskatu pamatā ir ideja, ka Monero pilnībā pilda savus solījumus attiecībā uz privātumu un aizstājamību, un bieži vien tā ir vienīgā monēta šādās sarunās, kā vairums citu “privātuma monētu” nav.</p>\n\n<p>Tā kā Monero kopiena ļoti cenšas būt <a target=\"_blank\" href=\"/knowledge/critical-thinking\" class=\"next-link\">racionāla un skeptiska</a>, tā nebaidās no jaunām tehnoloģijām. Citas monētas, kurām vairāk rūp konkurences puse, nepārtraukti runā par Monero “notriekšanu” un to, ka Monero jābaidās no viņu jaunās tehnoloģijas, kas pārņems privātuma pasauli. Citiem vārdiem sakot, viņi domā, ka viņu jaunā tehnoloģija pārvarēs Monero izveidotos tīkla efektus privātuma aprindās.</p>\n\n<p>Atšķirībā no Bitcoin, kas galvenokārt paļaujas uz tīkla efektiem, lai saglabātu savu aktualitāti bez īpašiem jauninājumiem, Monero ir nolēmis izmantot abus. Ir pievienota jauna, pārbaudīta tehnoloģija, lai padarītu Monero privātāku un drošāku, nodrošinot, ka Monero tīkla efekti nekad nav vienīgais tās statusa mērķis, bet gan inovāciju un smaga darba rezultāts.</p>\n\n<p>Šajā ziņā ir jābrīnās, cik ilgi tāda tehnoloģija kā Bitcoin var paļauties tikai uz tās esošajiem tīkla efektiem, lai saglabātu atbilstību. Patlaban situācija ir spēcīga, un neviena monēta ne tuvu neatbilst Bitcoin zīmola atpazīstamībai un kolektīvajai smadzeņu telpai, taču jāatceras, ka daudzi citi juggernauts citās nozarēs uzskatīja sevi par neaizskaramiem, lai tikai saskartos ar savu sabrukumu inovāciju trūkuma dēļ. X6322X]';
+  String get knowledge250SbnetworkEffect250Sb0250Sbtext => '<p>Blockchain ir lērums disciplīnu, kas saspiestas vienā. Tā savos drošības modeļos iekļauj tehnoloģiju, ekonomikas un spēļu teorijas elementus. Tas nozīmē, ka tā ir viena no līdz šim visvairāk iesaistītajām un sarežģītākajām tehnoloģijām, taču nozīmē arī to, ka dziļa un rūpīga izpratne nav iespējama, neapgūstot katras puzles daļas pamatus.</p>\n\n<p>Viena blokķēdes daļa, par kuru bieži netiek runāts, ir konkurence. Katra kriptovalūta bieži tiek novērtēta pēc tās būtības un pat attiecībā pret kriptovalūtām, kas tai visvairāk līdzinās, taču dažas tiek novērtētas, pamatojoties uz to, ko tā piedāvā tirgum kopumā un cik cilvēku to izmanto. Skatoties tālāk, kriptovalūtai ir jāanalizē, cik daudzi to izmanto, zina par to vai kā citādi jebkādā veidā saskaras ar to. Šī koncepcija ir pazīstama kā tīkla efekts.</p>\n\n<p>Tīkla efekta piemērs, kas nav blokķēde, ir sociālie tīkli. Ja visi jūsu draugi izmanto Facebook, tad, izvēloties, kurā sociālajā tīklā vēlaties būt aktīvi iesaistīts, jūsu draugu izvēle arī ietekmē šo lēmumu. Fakts, ka lielākā daļa no viņiem atrodas Facebook, var ietekmēt arī jūs pievienoties tam. Un, kad jūs izlemjat, vai vēlaties pamest platformu, tas, ka varat zaudēt kontaktus ar dažiem no šiem draugiem, arī ietekmēs šo lēmumu. Šis ir tīkla efekts darbībā. Kad adopcija sasniedz kritisko masu, turpmākā pieņemšana kļūst vienkāršāka, un to bieži veicina pašreizējie tīkla dalībnieki.</p>\n\n<p>Kad mēs to aplūkojam blokķēdes kontekstā un arī komercijā kopumā, tīkla efekta spēks ātri kļūst acīmredzams. Ja Bitcoin ir kriptovalūta, par kuru zina lielākā daļa cilvēku, un tas ir tas, ko lielākā daļa cilvēku pērk, tad vairāk tirgotāju to pieņems. Ja vairāk tirgotāju to pieņems, būs vairāk vietu, kur to izmantot, tāpēc vairāk cilvēku to iegādāsies un vairāk cilvēku par to uzzinās. Tas kļūst par lielu pozitīvu atgriezenisko saiti, kas rada sniega bumbas efektu. Šajā brīdī tirgotājs var tikt uzrunāts par citas kriptovalūtas izmantošanu, taču viņš apšaubīs, kāpēc tas ir vajadzīgs, jo viņš jau pieņem Bitcoin, un to izmanto un pieņem visi. </p>\n\n<p>Lai gan nav šaubu, ka Bitcoin ir vislielākā kriptovalūta, ir arī citas, kas tiek uzskatītas par labāko savā nišā. Monero ir viena no šādām monētām, ko daudzi uzskata par pirmklasīgu privātuma monētu, lai gan dažādiem cilvēkiem ir dažādi viedokļi par to, vai Monero pat konkurē tajā pašā vidē, kur Bitcoin. Tas ir tāpēc, ka Bitcoin ir licis savu kārti uz caurspīdīgumu, lai pārbaudītu kopējo summu (tas ir iespējams arī Monero, lai gan daudz sarežģītākā veidā).</p>\n\n<p>Kur Monero šobrīd atrodas šajā tīkla efektu spēlē? Kur mēs sākām? Kāda ir nākotne? Nu, sāksim ar sākumu.</p>\n\n<p>Interesanti atzīmēt, ka <a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">Monero pirmsākumos</a> tas bija viens no trim veidiem, kā nodrošināt privātumu. Coinjoin, CryptoNote un Dash masternode/coinjoin hibrīds. Iespējas bija ierobežotas, un tās noteikti nebija pārbaudītas, taču tas netraucēja cilvēkiem izvēlēties, kurā pusē būt. Šajā agrīnajā laikmetā tā visiem bija spēle, un daži nolēma apsēsties un ļaut krējumam nostāties augšā. Galu galā laiks izrādījās <a target=\"_blank\" href=\"/knowledge/why-monero-is-better\" class=\"next-link\">Monero pusē</a>, jo citas privātuma kriptovalūtas nāca un aizgāja.</p>\n\n<p>Tas izveidoja Monero tīkla efektu kā monētu, kas paver ceļu citiem privātuma jomā. Pat tad, kad parādījās jaunākas tehnoloģijas, piemēram, Zcash zk-SNARKs un MimbleWimble, liela daļa pie Monero meklēja atbalstu un saprātīgu diskusiju par šiem jaunajiem protokoliem.</p>\n\n<p>Pašlaik Monero ir viens no nedaudzajiem vispāratzītajiem projektiem vidē. Sākot no kriptovalūtas un beidzot ar Bitcoin maksimālistiem, viņi visi raugās uz Monero ar vismaz skaudīgu cieņu, lai gan biežāk tas ir ar augstāku atzinību. Kad šīs vides veterāni runā par monētām, kurām ir vislielākā iespēja kaut ko mainīt pasaulē un kuras pastāvēs pārbaudījumos un grūtībās, Monero nekad neizpaliek. </p>\n\n<p>Šīs pēdējās rindkopas ir ne tikai apsveikums ar sevi, bet arī godīgs skatījums uz to, kāda ir kriptogrāfijas aina rakstīšanas laikā. Monero tīkla efekti katru dienu kļūst arvien pamanāmāki un parādās neparedzētās vietās.</p>\n\n<p>Cilvēki ir diezgan atšķirīgi, runājot par Monero nākotni, taču visi viedokļi liecina, ka Monero savu darbu veic labi. Lielākais piemērs tam ir regulatīvās bažas. Daži baidās, ka Monero ir pārāk privāts, kas izraisīs neizbēgamu sadursmi ar pasaules valdībām, savukārt citi ir satraukti par to, kā šī privātums atgriež brīvību parastajam cilvēkam. Abu šo uzskatu pamatā ir ideja, ka Monero pilnībā pilda savus solījumus attiecībā uz privātumu un aizstājamību, un bieži vien tā ir vienīgā monēta šādās sarunās, kas vairums citu “privātuma monētu” nav.</p>\n\n<p>Tā kā Monero kopiena ļoti cenšas būt <a target=\"_blank\" href=\"/knowledge/critical-thinking\" class=\"next-link\">racionāla un skeptiska</a>, tā nebaidās no jaunām tehnoloģijām. Citas monētas, kurām vairāk rūp konkurences puse, nepārtraukti runā par Monero “gāšanu” un to, ka Monero jābaidās no viņu jaunās tehnoloģijas, kas pārņems privātuma pasauli. Citiem vārdiem sakot, viņi domā, ka viņu jaunā tehnoloģija pārvarēs Monero izveidotos tīkla efektus privātuma aprindās.</p>\n\n<p>Atšķirībā no Bitcoin, kas galvenokārt paļaujas uz tīkla efektiem, lai saglabātu savu aktualitāti bez īpašiem jauninājumiem, Monero ir nolēmis izmantot abus. Ir pievienota jauna, pārbaudīta tehnoloģija, lai padarītu Monero privātāku un drošāku, nodrošinot, ka Monero tīkla efekti nekad nav vienīgais tās statusa mērķis, bet gan inovāciju un smaga darba rezultāts.</p>\n\n<p>Šajā ziņā ir jābrīnās, cik ilgi tāda tehnoloģija kā Bitcoin var paļauties tikai uz tās esošajiem tīkla efektiem, lai saglabātu atbilstību. Patlaban situācija ir spēcīga, un neviena monēta ne tuvu neatbilst Bitcoin zīmola atpazīstamībai un kolektīvajai smadzeņu telpai, taču jāatceras, ka daudzi citi spēki citās nozarēs uzskatīja sevi par neaizskaramiem, lai tikai saskartos ar savu sabrukumu inovāciju trūkuma dēļ.</p>';
 
   @override
-  String get knowledge250SbnetworkEffect250Sbdescription => 'Lai gan nav apstrīdams, ka Bitcoin ir līdz šim lielākā kriptovalūta, mēs jautājam, vai tā var paļauties tikai uz esošajiem tīkla efektiem, lai saglabātu savu nozīmi.';
+  String get knowledge250SbnetworkEffect250Sbdescription => 'Lai gan nav apstrīdams, ka Bitcoin ir neapšaubāmi lielākā kriptovalūta, mēs jautājam, vai tā var paļauties tikai uz esošajiem tīkla efektiem, lai saglabātu savu nozīmi.';
 
   @override
   String get knowledge250SbnetworkEffect250Sbtitle => 'Kā Monero var pārvarēt Bitcoin tīkla efektus';
 
   @override
-  String get knowledge250Sbnetworking250Sb0250Sbtext => '<p>Nevienam nevajadzētu būt par pārsteigumu, ka Monero un pat visa kriptovalūta darbojas internetā. Un tomēr, lai gan šis apgalvojums šķiet vienkāršs un acīmredzams, daudzi neņem vērā, ko tas nozīmē attiecībā uz viņu privātumu. Citiem vārdiem sakot, ir dažas lietas, no kurām Monero var un nevar aizsargāties, tikai pēc darbības veida internetā. Daži no šiem apsvērumiem ir tikai neērtības, savukārt citi ir daudz nopietnāki situācijā, kad ir nepieciešama absolūta privātuma aizsardzība. Atvēlēsim laiku, lai iepazītos ar to, kā Monero lietotāji mijiedarbojas viens ar otru tīklā un ko tas nozīmē viņu privātumam.</p>\n\n<p> Sākot ar lietu triviālo pusi, ja lietotājam nav piekļuves internetam, viņš nevar lejupielādēt jaunus blokus, izplatīt darījumus citu vārdā vai nosūtīt savus darījumus. Interesanti atzīmēt, ka lietotājs ar pilnu mezglu bez piekļuves internetam var izveidot darījumu bezsaistē, ko var nosūtīt vēlāk. Tas ir tāpēc, ka zvana parakstam ir nepieciešami tikai blokķēdes izvadi, ar kuriem paslēpties. Īss atgādinājums par <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">, kā darbojas zvana paraksti</a>, tas slēpj patieso izvadi, ko lietotājs sūta starp nesaistītu izvadu kolekciju, kas izvēlēta no pagātnes. Ja lietotājam ir piekļuve šīm izejām pilnībā lejupielādētas blokķēdes (pilna mezgla) veidā, viņš var izveidot zvana parakstu no iepriekšējiem izvadiem un, tiklīdz interneta savienojums tiek atjaunots, transakciju izplatīt tīklā.</p>\n\n<p>Lietotājs, kurš izmanto attālo mezglu, to nevar izdarīt, jo, veidojot savu zvana parakstu, viņš sazinās ar attālo pilno mezglu, lai izvadi iekļautu gredzena parakstā. Ja nav interneta, viņi nevar sasniegt šo mezglu, tāpēc viņiem nav bezsaistes darījumu izveides iespēju.</p>\n\n<p>Pirms mēs turpinām izskatīt dažus privātuma apsvērumus, īsi apskatīsim, kā internets darbojas kopumā. Viss internets ir nekas cits kā datori, kas savienojas ar citiem datoriem. Tieši tā. Emuārs, kuru tev patīk lasīt? Tikai daži faili, kas mitināti kāda cita datorā. Šī vietne, kurā lasāt šo rakstu (LocalMonero)? Faili un kods, kas kaut kur mitināts datorā. Pat lielas trakas vietnes darbojas šādā veidā. Ņemiet, piemēram, YouTube. Vienkārši video faili, kas tiek mitināti Google gigantiskajās datorsistēmās, un jūs izveidojat savienojumu ar tiem, lai lejupielādētu videoklipu savā datorā un varētu to skatīties.</p>\n\n<p>Šie datori var atšķirt viens otru, jo katram datoram, kas ir savienots ar internetu, tiek piešķirts unikāls identifikācijas numurs, ko sauc par IP adresi. Parasti tās ir četras skaitļu kopas, kas atdalītas ar punktiem, piemēram: 172.66.35.7. Ir svarīgi to paturēt prātā, apsverot, kā Monero informācija tiek pārvietota internetā. Monero ir peer-to-peer tīkls (P2P), kas nozīmē, ka datori savienojas tieši viens ar otru, nevis izmanto starpnieku. Tātad, kad lietotāja pilnais mezgls lejupielādē jaunatklāto bloku, viņš to lejupielādē nevis no centrālā servera, bet gan no saviem vienaudžiem. Negatīvā puse ir tāda, ka lietotāji savā starpā savieno tieši, tāpēc viņi zina viens otra IP adreses.</p>\n\n<p>Nu? Kas tas par lielu? Tas ir tikai cipars, vai ne? Ne gluži. Pašas IP adreses satur informāciju par lietotāju, piemēram, izcelsmes valsti un tīkla pakalpojumu sniedzēju, bet, vēl ļaunāk, interneta pakalpojumu sniedzēji (ISP) zina katras personas, kas izmanto viņu pakalpojumus, IP adresi. Tas nozīmē, ka šie interneta pakalpojumu sniedzēji un tie, ar kuriem viņi strādā, var vērot lietotāja interneta trafiku un, izmantojot kādu gudru taktiku, atklāt, ka viņi izmanto Monero. Tagad, pirms jūs baidāties, ievērojiet tur esošo formulējumu. Viss, ko šie snoopers var darīt, ir redzēt, ka persona izveido savienojumu ar citiem Monero tīkla mezgliem. Monero privātuma tehnoloģijas dēļ nekas cits par personu netiek nopludināts. Nevis par to, vai viņi palaiž mezglu vai ja/kad viņi nosūta transakcijas, un, ja darījums tiek nosūtīts, nav zināma nekāda informācija par to. Šie interneta pakalpojumu sniedzēji var redzēt tikai to, ka viens no viņu lietotājiem veido savienojumu ar Monero tīklu.</p>\n\n<p>Tagad dažiem cilvēkiem dažās vietās ar šo informāciju vien var pietikt, lai kaitētu reputācijai vai brīvībai. Vai varbūt doma par to, ka kāds jebkāda iemesla dēļ pārkāpj jūsu privātumu un to, ko jūs darāt internetā, jums nav pieņemams. Šīs personas tiek mudinātas izveidot savienojumu ar Monero tīklu, tikai izmantojot VPN, Tor vai I2P, kas visi ir pakalpojumi, kas slēpj lietotāja IP adresi no citiem, kā arī slēpj to, ko lietotājs dara no sava ISP. Atšķirības starp šiem pakalpojumiem ir ārpus šī raksta darbības jomas, taču par šo tēmu ir rakstīts daudz augstas kvalitātes rakstu, tāpēc norūpējušies lietotāji tiek aicināti izpētīt tālāk!</p>\n\n<p> Pārējiem no mums var šķist, ka tas, ka citi zina, ka esam pieslēgti Monero tīklam, nav tik liels darījums. Galu galā mūsu darījumu faktiskais saturs vai, ja mēs tos vispār sūtām, ir publiski paslēpts, un kāds ir kaitējums? Lai gan tā var būt taisnība, lietotāji tiek mudināti ņemt vērā faktu, ka galvenā kriptovalūtu piesaiste ir viņu pašu banka. Ja jums ir privātā atslēga un ar to kaut kas notiek, neviens nevar palīdzēt atgūt zaudētos līdzekļus.</p>\n\n<p> Būt pašam bankai nozīmē ņemt vērā ne tikai savu digitālo drošību, bet arī fizisko drošību. Ļoti iespējams, ka indivīda zināšanas, kas pieslēdzas Monero tīklam, var piesaistīt nevēlamu uzmanību ne vienmēr no liela mēroga dalībniekiem, piemēram, nacionālajām valstīm, bet gan no mazākiem, ar savtīgām interesēm, piemēram, hakeriem, kas vēlas viegli nopelnīt. Visā šifrēšanas telpā patiešām ir neskaitāmi stāsti par šādiem scenārijiem, kas faktiski notiek.</p>\n\n<p>Šis raksts nav paredzēts, lai radītu bailes vai iebiedētu, bet gan mudinātu lietotājus veikt kādu pētījumu par to, kādas tīmekļa sērfošanas aizsardzības metodes viņiem ir piemērotas. Labā ziņa ir tā, ka šīs prasmes tiks nodotas arī vispārējai interneta lietošanai, ne tikai Monero lietojumam, un tādējādi mūsu pasaulē, kurā arvien vairāk tiek savienots internets, gudrs lietotājs nevar kļūdīties, uzkrājot atbilstošas zināšanas un prasmes, lai saglabātu drošību. un patiesi būt viņu pašu bankai.</p>';
+  String get knowledge250Sbnetworking250Sb0250Sbtext => '<p>Nevienam nevajadzētu būt par pārsteigumu, ka Monero un pat visa kriptovalūta darbojas internetā. Un tomēr, lai gan šis apgalvojums šķiet vienkāršs un acīmredzams, daudzi neņem vērā, ko tas nozīmē attiecībā uz viņu privātumu. Citiem vārdiem sakot, ir dažas lietas, no kurām Monero var un nevar aizsargāties, tikai tāpēc, ka darbība notiek internetā. Daži no šiem apsvērumiem ir tikai neērtības, savukārt citi ir daudz nopietnāki situācijā, kad ir nepieciešama absolūta privātuma aizsardzība. Atvēlēsim laiku, lai iepazītos ar to, kā Monero lietotāji mijiedarbojas viens ar otru tīklā un ko tas nozīmē viņu privātumam.</p>\n\n<p> Sākot ar lietu triviālo pusi, ja lietotājam nav piekļuves internetam, viņš nevar lejupielādēt jaunus blokus, izplatīt pārskaitījumus citu vārdā vai nosūtīt savus pārskaitījumus. Interesanti atzīmēt, ka lietotājs ar pilnu mezglu bez piekļuves internetam var izveidot pārskaitījumu bezsaistē, ko var nosūtīt vēlāk. Tas ir tāpēc, ka gredzenveida parakstam ir nepieciešami tikai blokķēdes izvadi, ar kuriem paslēpties. Īss atgādinājums par <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">, kā darbojas gredzenveida paraksti</a>, tas slēpj patieso izvadi, ko lietotājs sūta starp nesaistītu izvadu kolekciju, kas izvēlēta no pagātnes. Ja lietotājam ir piekļuve šīm izejām pilnībā lejupielādētas blokķēdes (pilna mezgla) veidā, viņš var izveidot gredzenveida parakstu no iepriekšējiem izvadiem un, tiklīdz interneta savienojums tiek atjaunots, pārskaitījumu izplatīt tīklā.</p>\n\n<p>Lietotājs, kurš izmanto attālo mezglu, to nevar izdarīt, jo, veidojot savu gredzenveida parakstu, viņš sazinās ar attālo pilno mezglu, lai izvadi iekļautu gredzena parakstā. Ja nav interneta, viņš nevar sasniegt šo mezglu, tāpēc arī nav bezsaistes pārskaitījuma izveides iespēju.</p>\n\n<p>Pirms mēs turpinām izskatīt dažus privātuma apsvērumus, īsi apskatīsim, kā internets darbojas kopumā. Viss internets ir nekas cits kā datori, kas savienojas ar citiem datoriem. Tieši tā. Blogs, kuru tev patīk lasīt? Tikai daži faili, kas mitināti kāda cita datorā. Šī vietne, kurā lasāt šo rakstu (LocalMonero)? Faili un kods, kas kaut kur mitināts datorā. Pat lielas trakas vietnes darbojas šādā veidā. Ņemiet, piemēram, YouTube. Vienkārši video faili, kas tiek mitināti Google gigantiskajās datorsistēmās, un jūs izveidojat savienojumu ar tiem, lai lejupielādētu videoklipu savā datorā un varētu to skatīties.</p>\n\n<p>Šie datori var atšķirt viens otru, jo katram datoram, kas ir savienots ar internetu, tiek piešķirts unikāls identifikācijas numurs, ko sauc par IP adresi. Parasti tās ir četras skaitļu kopas, kas atdalītas ar punktiem, piemēram: 172.66.35.7. Ir svarīgi to paturēt prātā, apsverot, kā Monero informācija tiek pārvietota internetā. Monero ir peer-to-peer tīkls (P2P), kas nozīmē, ka datori savienojas tieši viens ar otru, nevis izmanto starpnieku. Tātad, kad lietotāja pilnais mezgls lejupielādē jaunatklāto bloku, viņš to lejupielādē nevis no centrālā servera, bet gan no sev līdzīgiem. Negatīvā puse ir tāda, ka lietotāji savā starpā savienojas tieši, tāpēc viņi zina viens otra IP adreses.</p>\n\n<p>Nu un tad? Tas ir tikai cipars, vai ne? Ne gluži. Pašas IP adreses satur informāciju par lietotāju, piemēram, izcelsmes valsti un tīkla pakalpojumu sniedzēju, bet, vēl ļaunāk, interneta pakalpojumu sniedzēji (ISP) zina katras personas, kas izmanto viņu pakalpojumus, IP adresi. Tas nozīmē, ka šie interneta pakalpojumu sniedzēji un tie, ar kuriem viņi strādā, var vērot lietotāja datu plūsmu un, izmantojot kādu gudru taktiku, atklāt, ka viņi izmanto Monero. Pirms jūs baidāties, ievērojiet tur esošo formulējumu. Viss, ko šie okšķeri var darīt, ir redzēt, ka persona izveido savienojumu ar citiem Monero tīkla mezgliem. Monero privātuma tehnoloģijas dēļ nekas cits par personu netiek nopludināts. Nevis par to, vai viņi palaiž mezglu vai ja/kad viņi nosūta pārskaitījumus, un, ja pārskaitījums tiek nosūtīts, nav zināma nekāda informācija par to. Šie interneta pakalpojumu sniedzēji var redzēt tikai to, ka viens no viņu lietotājiem veido savienojumu ar Monero tīklu.</p>\n\n<p>Tagad dažiem cilvēkiem dažās vietās ar šo informāciju vien var pietikt, lai kaitētu reputācijai vai brīvībai. Vai varbūt doma par to, ka kāds jebkāda iemesla dēļ pārkāpj jūsu privātumu un redz, ko jūs darāt internetā, jums nav pieņemama. Šīs personas tiek mudinātas izveidot savienojumu ar Monero tīklu, tikai izmantojot VPN, Tor vai I2P, kas visi ir pakalpojumi, kas slēpj lietotāja IP adresi no citiem, kā arī slēpj to, ko lietotājs dara no sava ISP. Atšķirības starp šiem pakalpojumiem ir ārpus šī raksta jomas, taču par šo tēmu ir sarakstīts daudz augstas kvalitātes rakstu, tāpēc norūpējušies lietotāji tiek aicināti izpētīt tālāk!</p>\n\n<p> Pārējiem no mums var šķist, ka tas, ka citi zina, ka esam pieslēgti Monero tīklam, nav liela muiža. Galu galā mūsu pārskaitījumu faktiskais saturs vai, ja mēs tos vispār sūtām, ir publiski paslēpts, un kāds ir kaitējums? Lai gan tā var būt taisnība, lietotāji tiek mudināti ņemt vērā faktu, ka galvenā kriptovalūtu ideja ir būt pašam savai bankai. Ja jums ir privātā atslēga un ar to kaut kas notiek, neviens nevar palīdzēt atgūt zaudētos līdzekļus.</p>\n\n<p> Būt paša bankai nozīmē ņemt vērā ne tikai savu digitālo drošību, bet arī fizisko drošību. Ļoti iespējams, ka fakts, kad kāds pieslēdzas Monero tīklam, var piesaistīt nevēlamu uzmanību ne tikai no liela mēroga dalībniekiem kā valstu organizācijām, bet arī no mazākiem, ar savtīgām interesēm, piemēram, hakeriem, kas vēlas viegli nopelnīt. Visā šifrēšanas telpā patiešām ir neskaitāmi stāsti par šādiem scenārijiem, kas faktiski notiek.</p>\n\n<p>Šis raksts nav paredzēts, lai iebiedētu, bet gan mudinātu lietotājus veikt kādu pētījumu par to, kādas tīmekļa sērfošanas aizsardzības metodes viņiem ir piemērotas. Labā ziņa ir tā, ka šīs prasmes ir pielietojamas arī vispārējai interneta lietošanai, ne tikai Monero lietojumam. Tādējādi mūsu pasaulē, kurā arvien vairāk kas tiek pieslēgts internetam, gudrs lietotājs nevar kļūdīties, uzkrājot atbilstošas zināšanas un prasmes, lai saglabātu drošību un patiesi būtu pats sava banka.</p>';
 
   @override
   String get knowledge250Sbnetworking250Sbdescription => 'Atvēlēsim laiku, lai iepazītos ar to, kā Monero lietotāji mijiedarbojas viens ar otru tīklā un ko tas nozīmē viņu privātumam.';
@@ -3695,265 +3695,265 @@ class I18nLv extends I18n {
   String get knowledge250Sbnetworking250Sbtitle => 'Kas jāzina ikvienam Monero lietotājam, kad runa ir par tīklu veidošanu';
 
   @override
-  String get knowledge250Sbnodes250Sb0250Sbtext => '<p>Viena no lielākajām Monero priekšrocībām salīdzinājumā ar citām kriptovalūtām ir tās privātums ķēdē, taču vai esat kādreiz domājis, kā Monero privātums saglabājas, izmantojot attālo mezglu? Kā būtu, ja izmantotu “viegla maka” serveri, piemēram, MyMonero?</p>\n<p>Šajā ziņojumā mēs iedziļināsimies dažās detaļās par to, kā Monero nodrošina izcilu ķēdes privātumu pat tad, ja tiek izmantots attālais mezgls, kā arī tam, kam jāpievērš uzmanība, izmantojot attālos mezglus.</p>';
+  String get knowledge250Sbnodes250Sb0250Sbtext => '<p>Viena no lielākajām Monero priekšrocībām salīdzinājumā ar citām kriptovalūtām ir tās privātums ķēdē, taču vai esat kādreiz domājis, kā Monero privātums saglabājas, izmantojot attālo mezglu? Kā būtu, ja izmantotu “vieglā maka” serveri, piemēram, MyMonero?</p>\n<p>Šajā rakstā mēs iedziļināsimies dažās detaļās par to, kā Monero nodrošina izcilu ķēdes privātumu pat tad, ja tiek izmantots attālais mezgls, kā arī tam, kam jāpievērš uzmanība, izmantojot attālos mezglus.</p>';
 
   @override
-  String get knowledge250Sbnodes250Sb1250Sbtext => '<p>Tiem, kas mazāk pārzina Monero darbību, Monero tīkla mezglus (vai serverus) var darbināt ikviens un ļaut mezgla īpašniekam vai citiem, ar kuriem viņi izvēlas to koplietot! – lai sinhronizētu blokķēdes kopiju un nodrošinātu šo kopiju citiem tīklā. Šie mezgli arī pārbauda visus tīklā notiekošos darījumus, kā arī visus publicētos blokus un nodrošina, ka tie visi atbilst vienprātīgi noteiktajiem noteikumiem.</p>\n<p>Otra funkcija, ko mezgli apkalpo Monero, ir veids, kā nodrošināt visus datus, kas jūsu iecienītākajam Monero makam ir nepieciešami, lai pareizi pārbaudītu jums piederošos darījumus un veiktu jaunus darījumus. Šos datus mezgli nodrošina divos veidos: </p>\n<ul>\n<li>Maks pieprasa datus no katra blokķēdes bloka, skenē jums piederošus darījumus un pēc tam izmet, tiklīdz seifs tos ir pārbaudījis.\n<ul>\n<li>Šī darbība drīzumā tiks ievērojami uzlabota, pateicoties <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/view-tags-reduce-monero-sync-time\">skatīšanas tagiem</a>.</li>\n</ul></li>\n<li>Sūtot transakcijas, jūsu izmantotais mezgls nodrošina iespējamo mānekļu (vai viltus ievades) sarakstu, ko izmantot darījuma veidošanā, nodrošinot, ka jums ir daudz cilvēku, kuros paslēpties katru reizi, kad iztērējat Monero.\n<ul>\n<li>Šie mānekļi ir daļa no <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/ring-signatures\">zvana parakstiem</a>, kas ir svarīgs Monero pieejas privātumam ķēdē.</li>\n</ul></li>\n</ul>';
+  String get knowledge250Sbnodes250Sb1250Sbtext => '<p>Tiem, kas mazāk pārzina Monero darbību, Monero tīkla mezglus (vai serverus) var darbināt ikviens un ļaut mezgla īpašniekam vai citiem, ar kuriem viņi izvēlas, to koplietot! – lai sinhronizētu blokķēdes kopiju un nodrošinātu šo kopiju citiem tīklā. Šie mezgli arī pārbauda visus tīklā notiekošos pārskaitījumus, kā arī visus publicētos blokus un nodrošina, ka tie visi atbilst vienprātīgi noteiktajiem noteikumiem.</p>\n<p>Otra funkcija, ko mezgli apkalpo Monero, ir veids, kā nodrošināt visus datus, kas jūsu iecienītākajam Monero makam ir nepieciešami, lai pareizi pārbaudītu jums piederošos pārskaitījumus un veiktu jaunus. Šos datus mezgli nodrošina divos veidos: </p>\n<ul>\n<li>Maks pieprasa datus no katra blokķēdes bloka, skenē jums piederošus pārskaitījumus un pēc tam izmet, tiklīdz maks tos ir pārbaudījis.\n<ul>\n<li>Šī darbība drīzumā tiks ievērojami uzlabota, pateicoties <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/view-tags-reduce-monero-sync-time\">skatīšanas tagiem</a>.</li>\n</ul></li>\n<li>Sūtot pārskaitījumus, jūsu izmantotais mezgls nodrošina iespējamo mānekļu (vai viltus ievades) sarakstu, ko izmantot pārskaitījuma veidošanā, nodrošinot, ka jums ir daudz cilvēku, kuros paslēpties katru reizi, kad tērējat Monero.\n<ul>\n<li>Šie mānekļi ir daļa no <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/ring-signatures\">gredenveida parakstiem</a>, kas ir svarīga daļa Monero pieejai privātumam ķēdē.</li>\n</ul></li>\n</ul>';
 
   @override
   String get knowledge250Sbnodes250Sb1250Sbtitle => 'Kādas funkcijas veic mezgli Monero?';
 
   @override
-  String get knowledge250Sbnodes250Sb2250Sbtext => '<p>Labākais, ko darīt, pat ar spēcīgo ķēdes privātumu, ko nodrošina Monero, izmantojot attālos mezglus, ir palaist savu Monero mezglu, lai nodrošinātu, ka jums ir pieejama neskarta Monero blokķēdes kopija un jūsu IP adrese. ir labi aizsargāts. Vēl viens ieguvums, darbinot savu mezglu, ir tas, ka varat pievienoties tīklam, ļaujot citiem mezgliem sinhronizēt no jūsu mezgla vai pat ļaujot citiem lietotājiem izveidot savienojumu ar jūsu mezglu, izmantojot savus makus.</p>\n<p>Tomēr Monero joprojām nodrošina izcilu privātumu, izmantojot attālo mezglu. Ja vēlaties palaist savu Monero mezglu, šeit ir viegli izpildāms ceļvedis, kā to izdarīt: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://sethforprivacy.com/guides/run-a-monero-node/\">Palaidiet Monero Node</a></li>\n</ul>';
+  String get knowledge250Sbnodes250Sb2250Sbtext => '<p>Labākais, ko darīt, pat ar spēcīgo ķēdes privātumu, ko nodrošina Monero ar attālajiem mezgliem, ir tomēr palaist savu Monero mezglu, lai nodrošinātu, ka jums ir pieejama neskarta Monero blokķēdes kopija un jūsu IP adrese ir labi aizsargāta. Vēl viens ieguvums, darbinot savu mezglu, ir tas, ka varat pievienoties tīklam, ļaujot citiem mezgliem sinhronizēt no jūsu mezgla vai pat ļaujot citiem lietotājiem izveidot savienojumu ar jūsu mezglu, izmantojot savus makus.</p>\n<p>Jāpiemin, ka Monero joprojām nodrošina izcilu privātumu, izmantojot attālo mezglu. Ja vēlaties palaist savu Monero mezglu, šeit ir viegli izpildāms ceļvedis, kā to izdarīt: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://sethforprivacy.com/guides/run-a-monero-node/\">Palaidiet Monero Node</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbnodes250Sb2250Sbtitle => 'Kāds ir privātākais un drošākais Monero lietošanas veids?';
 
   @override
-  String get knowledge250Sbnodes250Sb3250Sbtext => '<p>Izmantojot attālo mezglu, ir dažas galvenās informācijas daļas, kas tiek pakļautas attālajam mezglam, un daži galvenie veidi, kā mezgls var jums uzbrukt, neļaut jums veikt darījumus un daudz ko citu.</p>\n<p>Pirmais, ko attālais mezgls var uzzināt par jums, ir jūsu publiskā IP adrese. Lai gan tas, cerams, tiks slēpts, izmantojot VPN vai Tor, attālais mezgls varētu saistīt jūsu publisko IP adresi ar darījumu, palīdzot viņiem sašaurināt, no kurienes veicat darījumus. Attālais mezgls var arī uzzināt pēdējo sinhronizēto maka bloku un izmantot to, lai mēģinātu izdarīt pamatotus minējumus par jums, piemēram, kad parasti lietojat Monero un kad pēdējo reizi iztērējāt Monero. Tas jo īpaši attiecas uz gadījumiem, kad vienmēr nākat no vienas IP adreses (piemēram, no mājām). Pēdējā galvenā lieta, ko attālais mezgls var uzzināt par jums, ir pamatinformācija par darījumiem, ko sūtāt, izmantojot to. Lai gan šie var būt visredzamākie dati, ko attālā mezgla operators iegūst par jums, ir svarīgi saprast, ka tos var izmantot, lai palīdzētu izsekot darījuma sūtītājam, apvienojot šo informāciju ar citiem ārpus ķēdes datiem. Tas var būt īpaši bīstami, ja attālo mezglu vada ļaunprātīga struktūra, blokķēdes analīzes uzņēmums vai nomācoša nacionālā valsts.</p>\n<p>Attālais mezgls var arī mēģināt radīt jums problēmas, slēpjot no jums blokus, liekot jūsu makam domāt, ka tas ir sinhronizēts, kad tā nebija. Tas var likt jums domāt, ka līdzekļi ir pazaudēti vai neļaut jums tērēt līdzekļus, līdz izveidojat savienojumu ar citu mezglu. Pēdējā galvenā lieta, ko attālais mezgls varētu darīt, ir nodrošināt jūsu maku ar manipulētu mānekļu sarakstu. Tas var izraisīt to, ka jūsu maciņam var neizdoties pilnībā izveidot darījumus (tā rezultātā jūs nevarēsit tērēt līdzekļus), vai arī attālais mezgls var mēģināt nodrošināt mānekļus, par kuriem tas zina, ka tiek iztērēti, lai samazinātu anonimitāti, ko saņemat katrā darījumā.</p>';
+  String get knowledge250Sbnodes250Sb3250Sbtext => '<p>Izmantojot attālo mezglu, ir dažas galvenās informācijas daļas, kas tiek pakļautas attālajam mezglam, un daži galvenie veidi, kā mezgls var jums uzbrukt, neļaut jums veikt pārskaitījumus un ne tikai.</p>\n<p>Pirmais, ko attālais mezgls var uzzināt par jums, ir jūsu publiskā IP adrese. Lai gan tas, cerams, tiks slēpts, izmantojot VPN vai Tor, attālais mezgls varētu saistīt jūsu publisko IP adresi ar pārskaitījumu, palīdzot viņiem sašaurināt, no kurienes veicat pārskaitījumus. Attālais mezgls var arī uzzināt pēdējo sinhronizēto maka bloku un izmantot to, lai mēģinātu izdarīt pamatotus minējumus par jums, piemēram, kad parasti lietojat Monero un kad pēdējo reizi iztērējāt Monero. Tas jo īpaši attiecas uz gadījumiem, kad vienmēr nākat no vienas IP adreses (piemēram, no mājām). Pēdējā galvenā lieta, ko attālais mezgls var uzzināt par jums, ir pamatinformācija par pārskaitījumiem, ko sūtāt, izmantojot to. Lai gan šie var būt visredzamākie dati, ko attālā mezgla operators iegūst par jums, ir svarīgi saprast, ka tos var izmantot, lai palīdzētu izsekot pārskaitījuma sūtītājam, apvienojot šo informāciju ar citiem ārpus ķēdes datiem. Tas var būt īpaši bīstami, ja attālo mezglu vada ļaunprātīga struktūra, blokķēdes analīzes uzņēmums vai nomācoša valsts.</p>\n<p>Attālais mezgls var arī mēģināt radīt jums problēmas, slēpjot no jums blokus, liekot jūsu makam domāt, ka tas ir sinhronizēts, kad tā patiesībā nav. Tas var likt jums domāt, ka līdzekļi ir pazaudēti vai neļaut jums tērēt līdzekļus, līdz izveidojat savienojumu ar citu mezglu. Pēdējā galvenā lieta, ko attālais mezgls varētu darīt, ir nodrošināt jūsu maku ar manipulētu mānekļu sarakstu. Tas var izraisīt to, ka jūsu maciņam var neizdoties pilnībā izveidot pārskaitījumus (tā rezultātā jūs nevarēsiet tērēt līdzekļus), vai arī attālais mezgls var mēģināt nodrošināt mānekļus, par kuriem tas zina, ka tie ir iztērēti, lai samazinātu jūsu anonimitāti katrā pārskaitījumā.</p>';
 
   @override
   String get knowledge250Sbnodes250Sb3250Sbtitle => 'Ko attālais mezgls var uzzināt par mani?';
 
   @override
-  String get knowledge250Sbnodes250Sb4250Sbtext => '<p>Lai gan šis raksts jūs, iespējams, ir nedaudz nobiedējis, ir svarīgi saprast, ka Monero nodrošinātā konfidencialitāte ir lieliska pat tad, ja tiek izmantots attālais mezgls, un ievērojami pārspēj jebkuru citu kriptovalūtu, ja to lieto šādā veidā. Jūs joprojām iegūstat Monero nodrošināto spēcīgo privātumu ķēdē, jo attālais mezgls nekad nezina patieso ievadi (kādas monētas jūs tērējat), darījumā iztērēto Monero summu vai darījuma saņēmēja adresi. Arī ārējie novērotāji nevar redzēt patieso ievadīto informāciju, summu vai adreses (neatkarīgi no tā, kāda veida mezglu izvēlaties izmantot!), nodrošinot, ka ārpus attālā mezgla pat jūsu IP adresei, maka sinhronizācijas informācijai un darījumiem ir spēcīgas privātuma garantijas. </p>\n<p>Attālais mezgls arī nekad nevar piekļūt iepriekšējiem darījumiem, ko esat nosūtījis vai saņēmis, vai Monero summai, kas pašlaik atrodas jūsu makā, un zaudē visu jūsu darījumu redzamību brīdī, kad sākat izmantot citu mezglu. Attālajam mezglam nekad netiek nodrošinātas privātās atslēgas (ne tērēšanas, ne skatīšanas atslēgas), tāpēc jūsu maks paliek privāts, drošs un lietojams. Neatkarīgi no attālā mezgla jūs arī nekad neapdraudat Monero pazaudēšanu vai nozagšanu, jo mezgls nevar rediģēt adresāta adresi, nekad nevar piekļūt jūsu maka privātajām atslēgām un nekādā veidā nevar konfiscēt jūsu Monero.</p>';
+  String get knowledge250Sbnodes250Sb4250Sbtext => '<p>Lai gan šis raksts jūs, iespējams, ir nedaudz nobiedējis, ir svarīgi saprast, ka Monero nodrošinātā konfidencialitāte ir lieliska pat tad, ja tiek izmantots attālais mezgls, un ievērojami pārspēj jebkuru citu kriptovalūtu, ja to lieto šādā veidā. Jūs joprojām iegūstat Monero nodrošināto spēcīgo privātumu ķēdē, jo attālais mezgls nekad nezina patieso ievadi (kādas monētas jūs tērējat), pārskaitījumā iztērēto Monero summu vai pārskaitījuma saņēmēja adresi. Arī ārējie novērotāji nevar redzēt patieso ievadīto informāciju, summu vai adreses (neatkarīgi no tā, kāda veida mezglu izvēlaties izmantot!), nodrošinot, ka ārpus attālā mezgla pat jūsu IP adresei, maka sinhronizācijas informācijai un pārskaitījumiem ir spēcīgas privātuma garantijas. </p>\n<p>Attālais mezgls arī nekad nevar piekļūt iepriekšējiem pārskaitījumiem, ko esat nosūtījis vai saņēmis, vai Monero summai, kas pašlaik atrodas jūsu makā, un zaudē visu jūsu pārskaitījumu redzamību brīdī, kad sākat izmantot citu mezglu. Attālajam mezglam nekad netiek nodrošinātas privātās atslēgas (ne tērēšanas, ne skatīšanas atslēgas), tāpēc jūsu maks paliek privāts, drošs un lietojams. Neatkarīgi no attālā mezgla jums arī nekad nedraud Monero pazaudēšana vai nozagšana, jo mezgls nevar rediģēt saņēmēja adresi, nekad nevar piekļūt jūsu maka privātajām atslēgām un nekādā veidā nevar konfiscēt jūsu Monero.</p>';
 
   @override
   String get knowledge250Sbnodes250Sb4250Sbtitle => 'Kādas privātuma garantijas joprojām pastāv, izmantojot attālo mezglu?';
 
   @override
-  String get knowledge250Sbnodes250Sb5250Sbtext => '<p>Lai gan tēma ir nedaudz ārpus šī raksta darbības jomas, es tomēr vēlējos pievērsties unikālam Monero maka veidam — viegliem makiem. Nosaukums viegls maciņš cēlies no tā, ka maciņam (tālrunī vai datorā) nav jāveic neviena blokķēdes sinhronizācija, padarot pieredzi ātrāku un plūstošāku.</p>\n<p>Tomēr šādi maki pašlaik ir saistīti ar nopietnu privātuma kompromisu — jūsu seifs nosūta privātā skata atslēgu uz jūsu izmantoto attālo serveri (piemēram, noklusējuma MyMonero), nodrošinot attālajam serverim pilnīgu redzamību par saņemtajiem līdzekļiem. kopš sava maka izveides (un līdz brīdim, kad pārtraucat lietot šo maku vai sēklu). Tas krasi samazina konfidencialitāti, ko saņemat no mezgla operatora, un tas ir jārīkojas piesardzīgi.</p>\n<p>Par laimi, Monero kopiena strādā, lai uzlabotu programmatūru, kuru varat izmantot sava vieglā maka servera (LWS) mitināšanai, kas ļaus jums veikt ātru sinhronizāciju, neuzticoties trešajai pusei ar savām privātajām skata atslēgām. darbosies programmatūra, kurā jūsu maciņš nosūta privātā skata atslēgas!</p>\n<p>Plašāku informāciju par pielāgoto vieglā maka serveri skatiet tālāk esošajā Github repozitorijā:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/vtnerd/monero-lws\">monero-lws</a></li>\n</ul>';
+  String get knowledge250Sbnodes250Sb5250Sbtext => '<p>Lai gan tēma ir nedaudz ārpus šī raksta darbības jomas, es tomēr vēlējos pievērsties unikālam Monero maka veidam — vieglajiem makiem. Nosaukums \"vieglais maks\" cēlies no tā, ka makam (tālrunī vai datorā) nav jāveic neviena blokķēdes sinhronizācija, padarot pieredzi ātrāku un plūstošāku.</p>\n<p>Tomēr šādi maki pašlaik ir saistīti ar nopietnu privātuma kompromisu — jūsu maks nosūta privātā skata atslēgu uz jūsu izmantoto attālo serveri (piemēram, noklusējuma MyMonero), nodrošinot attālajam serverim pilnīgu redzamību par saņemtajiem līdzekļiem kopš maka izveides (un līdz brīdim, kad pārtraucat lietot šo maku vai sēklu). Tas krasi samazina konfidencialitāti, ko saņemat no mezgla operatora, un prasa atbilstošu piesardzību.</p>\n<p>Par laimi, Monero kopiena strādā, lai uzlabotu programmatūru, kuru varat izmantot, lai palaistu pats savu vieglā maka serveri (LWS). Tas ļaus jums veikt ātru sinhronizāciju, neuzticoties trešajai pusei ar savām privātajām skata atslēgām, jo programmatūra, kurai jūsu maks nosūta privātā skata atslēgas, būs jūsu!</p>\n<p>Plašāku informāciju par pielāgoto vieglā maka serveri skatiet tālāk esošajā Github repozitorijā:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/vtnerd/monero-lws\">monero-lws</a></li>\n</ul>';
 
   @override
-  String get knowledge250Sbnodes250Sb5250Sbtitle => 'Kā būtu ar \"viegliem makiem\", piemēram, MyMonero?';
+  String get knowledge250Sbnodes250Sb5250Sbtitle => 'Kā ar \"vieglajiem makiem\", piemēram, MyMonero?';
 
   @override
-  String get knowledge250Sbnodes250Sb6250Sbtext => '<p>Ja jūs interesē un vēlaties labāk izprast Monero mezglus un izpētīt attālā mezgla izmantošanu vai savu darbību, skatiet tālāk esošās saites, lai atrastu lieliskas vietas, kur sākt darbu.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://moneroworld.com/#nodes\">Monero World — saraksts ar kopienas pārvaldītiem attāliem mezgliem, kas var izmantot</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://sethforprivacy.com/about/#high-performance-monero-nodes\">Monero mezgli, kurus vada Seth For Privacy, šī raksta autors</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://monero.fail/\">monero.fail — attālo mezglu saraksts ar bieži pārbaudītu statusu< /a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/resources/user-guides/remote_node_gui.html\">Kā izveidot savienojumu uz attālo mezglu GUI makā</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/resources/moneropedia/remote-node.html\">Moneropedia — Remote Mezgls</a></li>';
+  String get knowledge250Sbnodes250Sb6250Sbtext => '<p>Ja jūs interesē un vēlaties labāk izprast Monero mezglus un izpētīt attālā mezgla izmantošanu vai sava palaišanu, skatiet tālāk esošās saites, lai atrastu lieliskas vietas, kur sākt.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://moneroworld.com/#nodes\">Monero World — saraksts ar kopienas pārvaldītiem attāliem mezgliem, ko var izmantot</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://sethforprivacy.com/about/#high-performance-monero-nodes\">Monero mezgli, kurus vada Seth For Privacy, šī raksta autors</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://monero.fail/\">monero.fail — attālo mezglu saraksts ar bieži pārbaudītu statusu< /a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/resources/user-guides/remote_node_gui.html\">Kā izveidot savienojumu uz attālo mezglu GUI makā</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/resources/moneropedia/remote-node.html\">Moneropedia — Attālais Mezgls</a></li>';
 
   @override
   String get knowledge250Sbnodes250Sb6250Sbtitle => 'Kā es varu uzzināt vairāk?';
 
   @override
-  String get knowledge250Sbnodes250Sbdescription => 'Šodien mēs aplūkojam, kā Monero nodrošina ķēdes privātumu pat tad, ja tiek izmantots attālais mezgls, kā arī brīdinājumus.';
+  String get knowledge250Sbnodes250Sbdescription => 'Šodien mēs aplūkojam, kā Monero nodrošina ķēdes privātumu pat tad, ja tiek izmantots attālais mezgls, un kas jāņem vērā šajā gadījumā.';
 
   @override
   String get knowledge250Sbnodes250Sbtitle => 'Kā attālie mezgli ietekmē Monero privātumu';
 
   @override
-  String get knowledge250Sboutputs250Sb0250Sbtext => '<p>Monero, tāpat kā citas kriptovalūtas, izmanto izvadi kā līdzekļu uzskaites līdzekli. Iespējams, ka daudzi kriptogrāfiju gudri lietotāji jau ir dzirdējuši šo terminu, taču ne visi saprot, ko tas nozīmē un kā tas darbojas. Kā aprakstīts mūsu <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">zvana parakstu rakstā</a>, izvadi ir faktiskā vienība, ar kuru blokķēdē apmainās starp darījuma pusēm. Līdzīgi kā dolāra banknotei, taču summa nav fiksētā nominālvērtībā.</p>\n\n<p>Ja par darbu saņemat 16 ASV dolārus, iespējams, saņemsiet viena dolāra banknoti, piecu dolāru banknoti un desmit dolāru banknoti. Jums ir 16 \$, taču makā ir arī trīs dažādi rēķini. Ja vēlaties kādam samaksāt 6 dolārus, varat izmantot 5 un 1 rēķinu, bet, ja vēlaties kādam samaksāt 8 ASV dolārus, varat izmantot tikai 10 ASV dolārus un saņemt atpakaļ 2 ASV dolārus. Visbeidzot, ja vēlaties kādam samaksāt 14 ASV dolārus, jums būs jāizmanto visi trīs rēķini un 2 ASV dolāri saņemtu atpakaļ maiņā, taču uz brīdi, kad nododat visus trīs rēķinus, jūsu makā nav naudas, līdz nesaņemat mainīt atpakaļ.</p>\n\n<p>Monero darbojas līdzīgi. Pieņemsim, ka jūs vadāt veikalu un trīs reizes pārdodat trīs dažādas preces. Jūs varat saņemt 1,5 XMR, 2,25 XMR un 5,25 XMR kopā par 9 XMR, taču jūsu makā ir arī trīs dažādas iepriekš norādītās nominālvērtības. Tāpat kā ar dolāriem, iespējams, vēlēsities kādam maksāt 3 XMR. Varat izmantot tikai 5,25 XMR izvadi un saņemt atpakaļ 2,25 XMR izvadi, vai arī varat apvienot 1,5 un 2,25 XMR izvadi un iegūt atpakaļ 0,75 XMR izmaiņās.</p>\n\n<p>Taču, tiklīdz nosūtāt transakciju, jūsu izmantotās izvades tiek iestatītas \"bloķētā\" stāvoklī, kas nozīmē, ka tās nav pieejamas, kamēr nesaņemat atpakaļ izmaiņas. Protokols atbloķē līdzekļus (t.i., atdod jums izmaiņas) pēc 10 apstiprinājumiem jeb aptuveni 20 minūtēm. Tāpat kā pēc tam, kad izsniedzat dolāru banknotes no sava maka, jūs nevarat atkārtoti izmantot naudu, kamēr nesaņemat atpakaļ no kases, jūsu Monero nav pieejams, kamēr nesaņemat atpakaļ naudu.</p>\n\n<p>Atgriezīsimies pie 3 XMR nosūtīšanas piemēra, un jūs izmantojat 5,25 XMR izvadi. Tagad, kamēr jūs gaidāt 1,75 XMR izmaiņas, jūs nevarat to izmantot. Šis 1,75 XMR jums nav pieejams. Bet jūs joprojām varat izmantot 1,5 XMR un 2,25 XMR izejas, jo tās netika iztērētas. Atgriežoties pie dolāra piemēra, ja jūs kādam maksājāt 8 ASV dolārus, kā tas bija piemērā iepriekš, jūs nevarēsit izmantot 2 ASV dolārus, ko sagaidāt atpakaļ maiņā, līdz tie jums tiks piešķirti, taču šajā piemērā jums joprojām ir 10 \$ banknots, kas nav izmantots jūsu makā. To joprojām var izmantot, lai iegādātos visu, ko vēlaties, kamēr gaidāt izmaiņas. Tas pats ar Monero.</p>\n\n<p>Tas bieži rada neskaidrības jauniem Monero lietotājiem. Bieži vien lietotāja makā var būt tikai viena izvade, kas saņemta no biržas vai drauga. Pieņemsim, ka šī izeja ir 20 XMR. Viņiem nav citu izeju savā makā. Tagad viņi vēlas ziedot divām savām iecienītākajām labdarības organizācijām. Viņi nosūta 5 XMR pirmajai labdarības organizācijai un pēc tam ir apmulsuši, jo, lai gan viņiem vajadzētu atstāt 15 XMR, viņi nevar uzreiz nosūtīt nākamo ziedojumu otrajai labdarības organizācijai. Kā jūs varētu uzminēt, tas ir tāpēc, ka 15 XMR ir bloķēts. To nevar iztērēt, kamēr tas nav atgriezts kā maiņa (10 apstiprinājumi vai aptuveni 20 minūtes). Kad viņu līdzekļi tiks atbloķēti, viņi varēs nosūtīt savu otro ziedojumu.</p>\n\n<p>Lai vēlreiz atgādinātu, viņiem šīs problēmas nebūtu, ja tās vietā būtu bijušas vairākas izejas, piemēram, divas 10 XMR izejas vai līdzīgas. Viņi varētu nosūtīt abus ziedojumus vienu pēc otra, jo pirmajā ziedojumā tiktu izmantota viena no 10 XMR izvadēm (un gaidītu 10 apstiprinājumus, lai saņemtu atpakaļ 5 XMR), bet otrajā ziedojumā tiktu izmantoti pārējie 10 XMR. izvade.</p>\n\n<p>Dažiem kriptovalūtas makiem ir funkcija, ko sauc par “izejas pārvaldību”, kas vienkārši parāda lietotājam, kuras izejas viņam pašlaik ir (papildus kopējai summai), kā arī ļauj izvēlēties, kuras no tām izmantot, kad tērē. viņu kriptovalūta.</p>\n\n<p>Pašlaik Monero GUI izvades atlasi lietotājiem veic automātiski, jo lietotāji, izvēloties paši savus izvadus, bieži rada neskaidrības vai dažos gadījumos tiek apdraudēta privātuma. Tomēr tiek izstrādāti maki, piemēram, jaunais Feather maka projekts, kas ietvers šīs izvades pārvaldības funkcijas.</p>\n\n<p> Mēs esam daudz runājuši par nosūtīšanas daļu, taču saņemšanas pusē notiek kaut kas aizraujošs. Atgriežoties pie mūsu piemēra par 3 XMR nosūtīšanu kādam un jūsu 1,5 XMR un 2,25 XMR izvadu izmantošanu darījumā (gaidot 0,75 XMR izmaiņas), uztvērējs NESAŅEM divus 1,5 XMR un 2,25 XMR izvadus. Tā vietā tie saņem VIENU 3 XMR izvadi.</p>\n\n<p>Fonā protokols apvieno visas izvades, kas tiek izmantotas tēriņiem, un dod saņēmējam vienu izvadi no samaksātās summas un nosūta vienu izmaiņu izvadi atpakaļ sūtītājam. Tādējādi sūtītājs saņems arī vienu izvadi atpakaļ kā izmaiņas neatkarīgi no tā, vai darījuma nosūtīšanai izmantoja divus, trīs vai desmit izvadus.</p>\n\n<p>Mēs ceram, ka tas ir novērsis neskaidrības par izvadiem un to, kā darbojas protokola iekšējā uzskaite, kā arī parasto lietotāju apjukuma problēmu, saskaroties ar bloķētiem līdzekļiem. Citā rakstā mēs izpētīsim jūsu rezultātu pārvaldību, lai pēc iespējas samazinātu iespēju, ka pirms turpmāko darījumu nosūtīšanas būs jāgaida atbloķēti līdzekļi.</p>';
+  String get knowledge250Sboutputs250Sb0250Sbtext => '<p>Monero, tāpat kā citas kriptovalūtas, izmanto izvades kā uzskaites līdzekli. Iespējams, ka daudzi kriptogrāfijā gudri lietotāji jau ir dzirdējuši šo terminu, taču ne visi saprot, ko tas nozīmē un kā tas darbojas. Kā aprakstīts mūsu <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">gredzenveida parakstu rakstā</a>, izvades ir faktiskā vienība, ar kuru blokķēdē apmainās starp pārskaitījuma pusēm. Līdzīgi kā dolāra banknotei, taču summa nav fiksētā nominālvērtībā.</p>\n\n<p>Ja par darbu saņemat 16 dolārus, iespējams, saņemsiet viena dolāra banknoti, piecu dolāru banknoti un desmit dolāru banknoti. Jums ir 16 \$, taču makā ir arī trīs dažādas banknotes. Ja vēlaties kādam samaksāt 6 dolārus, varat izmantot 5 un 1 banknotes, bet, ja vēlaties kādam samaksāt 8 ASV dolārus, varat izmantot tikai 10 dolārus un saņemt atpakaļ 2 dolārus. Visbeidzot, ja vēlaties kādam samaksāt 14 dolārus, jums būs jāizmanto visas trīs banknotes un 2 dolārus saņemtu atpakaļ maiņā, taču uz brīdi, kad nododat visas trīš banknotes, jūsu makā nav naudas, līdz nesaņemat maiņu.</p>\n\n<p>Monero darbojas līdzīgi. Pieņemsim, ka jūs vadāt veikalu un trīs reizes pārdodat trīs dažādas preces. Jūs varat saņemt 1,5 XMR, 2,25 XMR un 5,25 XMR kopā par 9 XMR, taču jūsu makā ir arī trīs dažādas iepriekš norādītās nominālvērtības. Tāpat kā ar dolāriem, iespējams, vēlēsieties kādam maksāt 3 XMR. Varat izmantot tikai 5,25 XMR izvadi un saņemt atpakaļ 2,25 XMR izvadi, vai arī varat apvienot 1,5 un 2,25 XMR izvadi un iegūt atpakaļ 0,75 XMR maiņā.</p>\n\n<p>Taču, tiklīdz nosūtāt pārskaitījumu, jūsu izmantotās izvades tiek iestatītas \"bloķētā\" stāvoklī, kas nozīmē, ka tās nav pieejamas, kamēr nesaņemat atpakaļ maiņu. Protokols atbloķē līdzekļus (t.i., atdod jums maiņu) pēc 10 apstiprinājumiem jeb aptuveni 20 minūtēm. Tāpat kā pēc tam, kad izsniedzat dolāru banknotes no sava maka, jūs nevarat atkārtoti izmantot naudu, kamēr nesaņemat atpakaļ no kases, jūsu Monero nav pieejams, kamēr nesaņemat atpakaļ naudu.</p>\n\n<p>Atgriezīsimies pie 3 XMR nosūtīšanas piemēra, un jūs izmantojat 5,25 XMR izvadi. Tagad, kamēr jūs gaidāt 1,75 XMR maiņu, jūs nevarat to izmantot. Šis 1,75 XMR jums nav pieejams. Bet jūs joprojām varat izmantot 1,5 XMR un 2,25 XMR izejas, jo tās netika iztērētas. Atgriežoties pie dolāra piemēra, ja jūs kādam maksājāt 8 dolārus, kā tas bija piemērā iepriekš, jūs nevarēsiet izmantot 2 dolārus, ko sagaidāt atpakaļ maiņā, līdz tie jums tiks piešķirti, taču šajā piemērā jums joprojām ir 10 \$ banknote, kas stāv neizmantota jūsu makā. To joprojām var izmantot, lai iegādātos visu, ko vēlaties, kamēr gaidāt maiņu. Tas pats ar Monero.</p>\n\n<p>Tas bieži rada neskaidrības jauniem Monero lietotājiem. Bieži vien lietotāja makā var būt tikai viena izvade, kas saņemta no biržas vai drauga. Pieņemsim, ka šī izvade ir 20 XMR. Viņiem nav citu izeju savā makā. Tagad viņi vēlas ziedot divām savām iecienītākajām labdarības organizācijām. Viņi nosūta 5 XMR pirmajai labdarības organizācijai un pēc tam ir apmulsuši, jo, lai gan viņiem vajadzēja palikt 15 XMR, viņi nevar uzreiz nosūtīt nākamo ziedojumu otrajai labdarības organizācijai. Kā jūs varētu uzminēt, tas ir tāpēc, ka 15 XMR ir bloķēts. To nevar iztērēt, kamēr tas nav atgriezts kā maiņa (10 apstiprinājumi vai aptuveni 20 minūtes). Kad viņu līdzekļi tiks atbloķēti, viņi varēs nosūtīt savu otro ziedojumu.</p>\n\n<p>Lai vēlreiz atgādinātu, viņiem šīs problēmas nebūtu, ja tās vietā būtu bijušas vairākas izvades, piemēram, divas 10 XMR izejas vai līdzīgas. Viņi varētu nosūtīt abus ziedojumus vienu pēc otra, jo pirmajā ziedojumā tiktu izmantota viena no 10 XMR izvadēm (un gaidītu 10 apstiprinājumus, lai saņemtu atpakaļ 5 XMR), bet otrajā ziedojumā tiktu izmantota otra 10 XMR izvade.</p>\n\n<p>Dažiem kriptovalūtas makiem ir funkcija, ko sauc par “izvadu pārvaldību”, kas vienkārši parāda lietotājam, kuras izvades viņam pašlaik ir (papildus kopējai summai), kā arī ļauj izvēlēties, kuras no tām izmantot, kad tiek tērēta kriptovalūta.</p>\n\n<p>Pašlaik Monero GUI izvades atlasi lietotājiem veic automātiski, jo lietotāji, izvēloties paši savas izvades, bieži rada neskaidrības vai dažos gadījumos tiek apdraudēts privātums. Tomēr tiek izstrādāti maki, piemēram, jaunais Feather maka projekts, kas ietvers šīs izvades pārvaldības funkcijas.</p>\n\n<p> Mēs esam daudz runājuši par nosūtīšanas daļu, taču saņemšanas pusē notiek kaut kas aizraujošs. Atgriežoties pie mūsu piemēra par 3 XMR nosūtīšanu kādam un jūsu 1,5 XMR un 2,25 XMR izvadu izmantošanu pārskaitījumā (gaidot 0,75 XMR maiņu), saņēmējs NESAŅEM divas izvades 1,5 XMR un 2,25 XMR. Tā vietā tie saņem VIENU 3 XMR izvadi.</p>\n\n<p>Fonā protokols apvieno visas izvades, kas tiek izmantotas tēriņiem, un dod saņēmējam vienu izvadi no samaksātās summas un nosūta vienu maiņas izvadi atpakaļ sūtītājam. Tādējādi sūtītājs saņems arī vienu izvadi atpakaļ kā maiņu neatkarīgi no tā, vai darījuma nosūtīšanai izmantoja divas, trīs vai desmit izvades.</p>\n\n<p>Mēs ceram, ka izdevās kliedēt neskaidrības par izvadēm un to, kā darbojas protokola iekšējā uzskaite, kā arī parasto lietotāju apjukuma problēmu, saskaroties ar bloķētiem līdzekļiem. Citā rakstā mēs izpētīsim izvadu pārvaldību, lai samazinātu iespēju, ka pirms turpmāko pārskaitījumu nosūtīšanas būs jāgaida atbloķēti līdzekļi.</p>';
 
   @override
-  String get knowledge250Sboutputs250Sbdescription => 'Daudzi kriptovalodu gudri lietotāji, iespējams, jau iepriekš ir dzirdējuši terminu \"izejas\", taču ne visi saprot, ko tas nozīmē un kā tie darbojas.';
+  String get knowledge250Sboutputs250Sbdescription => 'Daudzi kriptovalodās gudri lietotāji, iespējams, jau iepriekš ir dzirdējuši terminu \"izvades\", taču ne visi saprot, ko tas nozīmē un kā tās darbojas.';
 
   @override
-  String get knowledge250Sboutputs250Sbtitle => 'Monero izvades skaidrojums';
+  String get knowledge250Sboutputs250Sbtitle => 'Monero izvades tuvplānā';
 
   @override
-  String get knowledge250Sbp2pool250Sb0250Sbtext => '<p>Viens no Monero projekta galvenajiem mērķiem ir nodrošināt godīgu, decentralizētu un drošu tīklu, izmantojot jaunas un novatoriskas pieejas pierādījuma (PoW) ieguvei, kas ir galvenais veids, kā mūsdienās tiek nodrošināti kriptovalūtu tīkli. X230X]\n\n<p>Lai gan unikāls ieguves algoritms <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/monero-mining-randomx\">, piemēram, RandomX</a>, ir ārkārtīgi svarīgs šī mērķa sasniegšanai, jo tas palīdz nodrošināt, ka ikviens, kam ir dators, var sniegt pienācīgu ieguldījumu tīkla drošībā, RandomX neatrisina problēmas. kas var rasties baseinu ieguves dēļ. Baseina ieguve mūsdienās ir visizplatītākais kriptovalūtu ieguves veids, tostarp Monero, taču, par laimi, p2pool ieguves parādīšanās to strauji maina.</p>';
+  String get knowledge250Sbp2pool250Sb0250Sbtext => '<p>Viens no Monero projekta galvenajiem mērķiem ir nodrošināt godīgu, decentralizētu un drošu tīklu, izmantojot jaunas un novatoriskas pieejas proof-of-work (PoW) mainošanai, kas ir galvenais veids, kā mūsdienās tiek nodrošināti kriptovalūtu tīkli. </p>\n\n<p>Lai gan unikāls mainošanas algoritms <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/monero-mining-randomx\">, piemēram, RandomX</a>, ir ārkārtīgi svarīgs šī mērķa sasniegšanai, jo tas palīdz nodrošināt, ka ikviens, kam ir dators, var sniegt pienācīgu ieguldījumu tīkla drošībā, RandomX neatrisina problēmas, kas var rasties baseinu dēļ. Baseinu mainošana mūsdienās ir visizplatītākais kriptovalūtu mainošanas veids, tostarp Monero, taču, par laimi, p2pool mainošanas parādīšanās to strauji maina.</p>';
 
   @override
-  String get knowledge250Sbp2pool250Sb1250Sbtext => '<p>Pool ieguve ir veids, kā kalnrači var kopīgi mēģināt atrisināt bloku tīklā un pēc tam vienmērīgi sadalīt atlīdzību par visiem blokiem, ko kopums atrod. Lai gan tas ļoti palīdz izlīdzināt ogļraču darba samaksas biežumu salīdzinājumā ar Monero ieguvi, tas nav bez nopietnām centralizācijas problēmām.</p>\n\n<p>Tā kā katrs kalnraču ieguvējs iegulda darbu baseinā, viņi atsakās no kontroles pār jebkuru darbu, ko viņi dara, un bloķē atrasto pašu baseinu, paļaujoties, ka baseins godīgi un godīgi sadalīs atlīdzību starp visiem kalnračiem, pamatojoties uz darbu apjomu. katrs paveicis darbu. Ja viss norit labi, baseina operators savāc darbu no visiem kalnračiem, iesniedz to tīklam un vienādi sadala atlīdzību.</p>';
+  String get knowledge250Sbp2pool250Sb1250Sbtext => '<p>Baseinu mainošana ir veids, kā maineri var kopīgi mēģināt atrisināt bloku tīklā un pēc tam vienmērīgi sadalīt atlīdzību par visiem blokiem, ko kopums atrod. Lai gan tas ļoti palīdz izlīdzināt maineru darba samaksas biežumu salīdzinājumā ar Monero mainošnu vienatnē, tas nav bez nopietnām centralizācijas problēmām.</p>\n\n<p>Tā kā katrs maineris iegulda darbu baseinā, viņi nodod baseinam kontroli pār jebkuru darbu, ko viņi dara, un blokiem, ko atrod, paļaujoties, ka baseins godīgi sadalīs atlīdzību starp visiem maineriem, pamatojoties uz darba apjomu, ko katrs paveicis. Ja viss norit labi, baseina operators savāc darbu no visiem maineriem, iesniedz to tīklam un vienādi sadala atlīdzību.</p>';
 
   @override
-  String get knowledge250Sbp2pool250Sb1250Sbtitle => 'Kas ir baseinu ieguve?';
+  String get knowledge250Sbp2pool250Sb1250Sbtitle => 'Kas ir baseinu mainošana?';
 
   @override
-  String get knowledge250Sbp2pool250Sb2250Sbtext => '<p>Diemžēl tas pilnībā balstās uz uzticēšanos un ļauj baseina operatoram veikt nelāgas lietas ar kalnraču veikto darbu. Baseina operators varētu izmantot paveikto darbu, lai uzbruktu tīklam, mēģinātu divreiz tērēt līdzekļus (ja kopums ir pietiekami liels) vai vienkārši izmantot kalnraču paveikto darbu, lai samaksātu sev un nekad pienācīgi atalgotu kalnračus par viņu darbu. </p>\n\n<p>Lielākais risks tīklam ir tas, ka pūls (vai vairāki pūli, kas strādā kopā), kuru kontrolē ir vairāk nekā 51% tīklu, jo viņi to var izmantot, lai krāptos un iztērētu līdzekļus divreiz (dubults tēriņš). uzbrukums) vai mēģināt mainīt tīkla noteikumus.</p>';
+  String get knowledge250Sbp2pool250Sb2250Sbtext => '<p>Diemžēl tas pilnībā balstās uz uzticēšanos un ļauj baseina operatoram veikt nelāgas lietas ar maineru veikto darbu. Baseina operators varētu izmantot paveikto darbu, lai uzbruktu tīklam, mēģinātu divreiz tērēt līdzekļus (ja kopums ir pietiekami liels) vai vienkārši izmantot maineru paveikto darbu, lai samaksātu sev un nekad pienācīgi neatalgotu mainerus par viņu darbu. </p>\n\n<p>Lielākais risks tīklam ir tas, ka baseins (vai vairāki baseini, kas strādā kopā), kas kontrolē ir vairāk nekā 51% tīkla, to var izmantot, lai krāptos un iztērētu līdzekļus divreiz (dubultā tēriņa uzbrukums) vai mēģināt mainīt tīkla noteikumus.</p>';
 
   @override
-  String get knowledge250Sbp2pool250Sb2250Sbtitle => 'Kāda ir problēma ar baseinu ieguvi?';
+  String get knowledge250Sbp2pool250Sb2250Sbtitle => 'Kāda ir problēma ar baseinu mainošanu?';
 
   @override
-  String get knowledge250Sbp2pool250Sb3250Sbtext => '<p>p2pool ir jēdziens, kas sākotnēji tika izveidots Bitcoin ieguvei 2011. gadā, taču tas nekad netika plaši izmantots un paliek praktiski neizmantots Bitcoin. Par laimi, viens no galvenajiem RandomX izstrādātājiem, SCHernykh, pavadīja savu atvaļinājumu, izstrādājot risinājumus dažām problēmām, kas saistītas ar Bitcoin ieviešanu p2pool un pārrakstot visu programmatūru no nulles.</p>\n\n<p>p2pool Monero ļauj ogļračiem pilnīgi bez uzticības sadarboties, lai atrisinātu blokus un nodrošinātu Monero tīklu, izmantojot īpašu p2pool mezgla programmatūru, lai koplietotu darbu.</p>\n\n<p>Tas tiek darīts, izmantojot jaunu blokķēdi (“sānu ķēdi”), kas reģistrē katra kalnrača paveikto darbu, savu maka adresi un nopelnīto Monero, un pēc tam izmaksā atlīdzību trastā. - mazāk un decentralizēts veids. Tā kā šajā sānu ķēdē ir daudz mazāk kalnraču, tajā ir daudz vieglāk atrast un iesniegt blokus nekā galvenajā Monero tīklā, tādējādi kalnračiem ir vieglāk iegūt konsekventus maksājumus, salīdzinot ar tikai Monero ieguvi.</p>';
+  String get knowledge250Sbp2pool250Sb3250Sbtext => '<p>p2pool ir koncepts, kas sākotnēji tika izveidots Bitcoin mainošanai 2011. gadā, taču tas nekad netika plaši pielietots un paliek praktiski neizmantots Bitcoin. Par laimi, viens no galvenajiem RandomX izstrādātājiem, SCHernykh, pavadīja savu atvaļinājumu, izstrādājot risinājumus dažām problēmām, kas saistītas ar p2pool ieviešanu Bitcoin un pārrakstot visu programmatūru no nulles.</p>\n\n<p>p2pool Monero ļauj maineriem pilnīgi bez uzticības sadarboties, lai atrisinātu blokus un nodrošinātu Monero tīklu, izmantojot īpašu p2pool mezgla programmatūru, lai koplietotu darbu.</p>\n\n<p>Tas tiek darīts, izmantojot jaunu blokķēdi (“sānu ķēdi”), kas reģistrē katra mainera paveikto darbu, savu maka adresi un nopelnīto Monero, un pēc tam izmaksā atlīdzību bezuzticības un decentralizētā veidā. Tā kā šajā sānu ķēdē ir daudz mazāk maineru, tajā ir daudz vieglāk atrast un iesniegt blokus nekā galvenajā Monero tīklā, tādējādi maineriem ir vieglāk iegūt konsekventus maksājumus, salīdzinot ar Monero ieguvi vienatnē.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb3250Sbtitle => 'Kas ir p2pool?';
 
   @override
-  String get knowledge250Sbp2pool250Sb4250Sbtext => '<p>Pakalpojumā p2pool nav centralizēta kopfonda, centralizēta kopfonda operatora vai vienas personas, kas glabā līdzekļus un sadala izmaksas. Visu darbu, ko kolektīvi veic tie ieguvēji, izmantojot p2pool, pārbauda p2pool blokķēde un citi mezglu operatori, lai pārliecinātos, ka tas ir likumīgs, un visiem kalnračiem tiek izmaksāta saskaņā ar darbu, ko viņi ir paveikuši nekavējoties, kad bloks tiek atrasts tieši no atlīdzības šajā atrastajā blokā.</p>\n\n<p>Kad kalnrači izvēlas izmantot p2pool, nevis centralizētu pūlu, viņi atņem visas pūles operatoru pilnvaras un uzticību un nodrošina, ka viņu darbs veicina tīkla labumu un viņu pašu atlīdzību, samazina tīkla uzbrukumu un ļaunprātīgas izmantošanas risku. par viņu darbu vai atlīdzības zādzību, kas viņiem pienākas.</p>\n\n<p>Tas ne tikai palīdz viņiem aizsargāt savas intereses, bet arī samazina risku, ko centralizētie pūli var radīt Monero tīklam kopumā. p2pool izmantošana arī palīdz ievērojami samazināt risku, ko nacionālās valstis vai regulatori var radīt tīkla veselībai, jo nav centralizētu baseinu operatoru, kas pakļautu spiedienam, nav baseinu ģeogrāfiskas koncentrācijas, uz kuriem balstīties, vai citu vieglu spiediena punktu. lai viņi varētu izmantot pret Monero.</p>';
+  String get knowledge250Sbp2pool250Sb4250Sbtext => '<p>p2pool nav centralizēta baseina, centralizēta operatora vai vienas personas, kas glabā līdzekļus un sadala izmaksas. Visu darbu, ko kolektīvi veic tie, kas izmanto p2pool, pārbauda p2pool blokķēde un citi mezglu operatori, lai pārliecinātos, ka tas ir likumīgs. Visiem maineriem tiek izmaksāta atlīdzība saskaņā ar paveikto darbu, līdz ko bloks tiek atrasts - tieši no atlīdzības šajā atrastajā blokā.</p>\n\n<p>Kad maineri izvēlas izmantot p2pool, nevis centralizētu baseinu, viņi ņem atpakaļ visas operatoru pilnvaras un uzticību un nodrošina, ka viņu darbs dod tīklam labumu un pelna pašiem atlīdzību. Tas arī samazina riskus kā tīkla uzbrukums, ļaunprātīga izmantošana, atlīdzības zādzība.</p>\n\n<p>Tas ne tikai palīdz viņiem aizsargāt savas intereses, bet arī samazina risku, ko centralizētie baseini var radīt Monero tīklam kopumā. p2pool izmantošana arī palīdz ievērojami samazināt risku, ko valstis vai regulatori var radīt tīkla veselībai, jo nav centralizētu baseinu operatoru, ko pakļaut spiedienam, nav baseinu ģeogrāfiskas koncentrācijas, uz ko balstīties, vai citu vieglu spiediena punktu, ko varētu izmantot pret Monero.</p>';
 
   @override
-  String get knowledge250Sbp2pool250Sb4250Sbtitle => 'Kā p2pool atrisina baseinu ieguves problēmas?';
+  String get knowledge250Sbp2pool250Sb4250Sbtitle => 'Kā p2pool atrisina baseinu mainošanas problēmas?';
 
   @override
-  String get knowledge250Sbp2pool250Sb5250Sbtext => '<p>Par laimi p2pool Monero ir labi izstrādāts un labi uzbūvēts, un tas darbojas ļoti labi! Tomēr galvenais p2pool ieguves trūkums ir tas, ka katram kalnračim, kurš vēlas izmantot p2pool, ir jāvada savs Monero mezgls, tādējādi darba sākšanas process ir nedaudz vairāk iesaistīts. Tomēr šis mezgls pēc tam tiek izmantots, lai aprēķinātu visu informāciju, kas nepieciešama bloku veidošanai un pārbaudei, un nodrošina, ka kalnracis pilnībā kontrolē savu darbu. Mezgls var darboties arī kā attāls mezgls kalnraču maciņam, dot ieguldījumu tīklā un daudz ko citu.</p>\n\n<p>Otra galvenā atšķirība no centralizētās ieguves ir tā, ka mazajiem kalnračiem, kas izmanto p2pool, būs nedaudz lielāka &quot;variance&quot; jeb laiks starp izmaksām nekā lielam centralizētam kopumam, taču tas &#39; ir <em> ļoti</em> ir svarīgi atzīmēt, ka tas laika gaitā neradīs mazākus Monero ienākumus! p2pool laika gaitā būs tikpat izdevīgs pat maziem kalnračiem kā centralizētie baseini. Daļu no šīs novirzes kompensē arī tas, ka p2pool sākotnējā maksa ir 0%, jo nav centralizēta kopfonda operatora, kas maksātu par saviem pakalpojumiem!</p>';
+  String get knowledge250Sbp2pool250Sb5250Sbtext => '<p>Par laimi, p2pool Monero ir rūpīgi izstrādāts un uzbūvēts, un tas darbojas ļoti labi! Tomēr galvenais p2pool ieguves trūkums ir tas, ka katram mainerim, kurš vēlas izmantot p2pool, ir vajadzīgs savs Monero mezgls, tādējādi darba sākšanas process ir nedaudz laikietilpīgāks. Tomēr šis mezgls pēc tam tiek izmantots, lai aprēķinātu visu informāciju, kas nepieciešama bloku veidošanai un pārbaudei, un nodrošina, ka maineris pilnībā kontrolē savu darbu. Mezgls var darboties arī kā attālais mezgls mainera maciņam, dot ieguldījumu tīklā un daudz ko citu.</p>\n\n<p>Otra galvenā atšķirība no centralizētās ieguves ir tā, ka mazajiem maineriem, kas izmanto p2pool, būs nedaudz lielāka &quot;variance&quot; jeb laiks starp izmaksām nekā lielam centralizētam kopumam, taču &#39; ir <em> ļoti</em> ir svarīgi atzīmēt, ka tas laika gaitā neradīs mazākus Monero ienākumus! p2pool laika gaitā būs tikpat izdevīgs pat maziem maineriem kā centralizētie baseini. Daļu no šīs novirzes kompensē arī tas, ka p2pool sākotnējā maksa ir 0%, jo nav centralizēta operatora, kam būtu jāmaksā par pakalpojumiem!</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb5250Sbtitle => 'Kādi ir trūkumi?';
 
   @override
-  String get knowledge250Sbp2pool250Sb6250Sbtext => '<p>Par laimi, pateicoties lieliskajam Monero&#39; p2pool ieviešanas dizainam un daudzajiem cilvēkiem sabiedrībā, kuri ir veltījuši laiku, lai palīdzētu vienkāršot ieguves procesu, izmantojot p2pool, laika gaitā darba sākšana kļūst vienkāršāka. Ir vairāki veidi, kā sākt ieguvi, izmantojot p2pool, taču, tā kā tehniskā informācija ir ārpus šī raksta darbības jomas, varat atvērt tālāk norādīto saiti atkarībā no jūsu operētājsistēmas: </p>\n<ul>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://www.youtube.com/watch?v=yfbvTksF9ic\">Windows</a></li>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://sethforprivacy.com/guides/run-a-p2pool-node/\">Linux</a></li>\n</ul>';
+  String get knowledge250Sbp2pool250Sb6250Sbtext => '<p>Par laimi, pateicoties lieliskajam Monero&#39; p2pool izveidojumam un daudzajiem cilvēkiem kopienā, kuri ir veltījuši laiku, lai palīdzētu vienkāršot mainošanas procesu, izmantojot p2pool, laika gaitā darba sākšana kļūst vienkāršāka. Ir vairāki veidi, kā sākt mainošanu, izmantojot p2pool, taču, tā kā tehniskā informācija ir ārpus šī raksta jomas, varat atvērt tālāk norādīto saiti atkarībā no jūsu operētājsistēmas: </p>\n<ul>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://www.youtube.com/watch?v=yfbvTksF9ic\">Windows</a></li>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://sethforprivacy.com/guides/run-a-p2pool-node/\">Linux</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbp2pool250Sb6250Sbtitle => 'Kā es varu sākt?';
 
   @override
-  String get knowledge250Sbp2pool250Sb7250Sbtext => '<p>Ja tas ir izraisījis jūsu interesi par p2pool ieguvi, tālāk skatiet dažas papildu saites un skaidrojumus par p2pool, kā tas darbojas un ko tas nozīmē Monero:</p>\n<ul>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool\">Oficiālais Github vietnei p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool#how-to-mine-on-p2pool\">Oficiālie dokumenti par p2pool izmantošanu</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.getmonero.org/2021/10/05/p2pool-released.html\">Monero P2Pool tagad ir tiešraidē</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://p2pool.observer/\">p2pool.observer, sava veida &quot;bloku pārlūks&quot; priekš p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/WeebDataHoarder/p2pool-compose\">Monero p2pool docker-compose</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.monerotalk.live/sergei-chernykh-on-his-development-of-p2pool-a-decentralized-xmr-mining-pool\"> Sergejs Černihs: par viņa izstrādāto P2Pool decentralizēto XMR ieguves baseinu</a></li>\n</ul>';
+  String get knowledge250Sbp2pool250Sb7250Sbtext => '<p>Ja tas ir izraisījis jūsu interesi par p2pool ieguvi, tālāk skatiet dažas papildu saites un skaidrojumus par p2pool, kā tas darbojas un ko tas nozīmē Monero:</p>\n<ul>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool\">Oficiālā Github vietne p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool#how-to-mine-on-p2pool\">Oficiālie dokumenti par p2pool izmantošanu</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.getmonero.org/2021/10/05/p2pool-released.html\">Monero P2Pool tagad ir tiešraidē</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://p2pool.observer/\">p2pool.observer, sava veida &quot;bloku pārlūks&quot; p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/WeebDataHoarder/p2pool-compose\">Monero p2pool docker-compose</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.monerotalk.live/sergei-chernykh-on-his-development-of-p2pool-a-decentralized-xmr-mining-pool\"> Sergejs Černihs: par viņa izstrādāto P2Pool - decentralizētu XMR mainošanas baseinu</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbp2pool250Sb7250Sbtitle => 'Kā es varu uzzināt vairāk?';
 
   @override
-  String get knowledge250Sbp2pool250Sbdescription => 'Baseina ieguve mūsdienās ir visizplatītākais Monero ieguves veids, taču, par laimi, p2pool ieguves parādīšanās to strauji maina.';
+  String get knowledge250Sbp2pool250Sbdescription => 'Baseina mainošana mūsdienās ir visizplatītākais Monero mainošanas veids, taču, par laimi, p2pool parādīšanās to strauji maina.';
 
   @override
-  String get knowledge250Sbp2pool250Sbtitle => 'P2Pool un tā loma Monero ieguves decentralizācijā';
+  String get knowledge250Sbp2pool250Sbtitle => 'P2Pool un tā loma Monero mainošanas decentralizācijā';
 
   @override
-  String get knowledge250Sbpractices250Sb0250Sbtext => '<p>Daudzi lietotāji varētu būt šokēti, uzzinot, ka eksperti uzskata, ka kriptovalūtu ir iespējams izmantot nepareizi. Atkarībā no tā, pret ko lietotājs aizsargājas, ir jāveic noteiktas darbības un piesardzības pasākumi, lai saglabātu privātumu, izvairītos no krāpniecības un nodrošinātu pareizu un savlaicīgu darījumu piegādi. Par laimi, Monero izstrādātāji ir darījuši visu iespējamo, lai šajās jomās iestatītu saprātīgus noklusējuma iestatījumus, tāpēc lietotāji, kuri izmanto seifa programmatūru tādu, kāda tā ir, lielāko daļu laika būs drošībā. Tomēr mēs vēlētos veltīt laiku, lai izskatītu dažus gadījumus, kad varētu būt noderīgi tērēt nedaudz pārdomātāk.</p>';
+  String get knowledge250Sbpractices250Sb0250Sbtext => '<p>Daudzi lietotāji varētu būt šokēti, uzzinot, ka eksperti uzskata, ka kriptovalūtu ir iespējams izmantot nepareizi. Atkarībā no tā, pret ko lietotājs aizsargājas, ir jāveic noteiktas darbības un piesardzības pasākumi, lai saglabātu privātumu, izvairītos no krāpniecības un nodrošinātu pareizu un savlaicīgu pārskaitījumu piegādi. Par laimi, Monero izstrādātāji ir darījuši visu iespējamo, lai šajās jomās iestatītu saprātīgus noklusējuma iestatījumus, tāpēc lietotāji, kuri izmanto maka programmatūru tādu, kāda tā ir, lielāko daļu laika būs drošībā. Tomēr mēs vēlētos veltīt laiku, lai izskatītu dažus gadījumus, kad varētu būt noderīgi darboties nedaudz pārdomātāk.</p>';
 
   @override
-  String get knowledge250Sbpractices250Sb1250Sbtext => '<p>Pirmais un lielākais veids, kā aizsargāt savu kriptovalūtu, ir pierakstīt Monero mnemonisko sēklu, kas ir īss vārdu saraksts, kas tiek parādīts, kad pirmo reizi izveidojat savu maku. Ja jums ir šī sēkla, bet jūsu dators/tālrunis nomirst, varat atgūt savu Monero. Ja jums nav šīs sēklas un jūs pazaudējat savu maku, jūsu Monero ir pazaudēts un neviens nevar jums palīdzēt to atgūt. Tādā pašā veidā nedalieties ar šo sēklu nevienam. Ja viņiem ir šis vārdu saraksts, viņiem ir pilna piekļuve un tiesības tērēt jūsu Monero. Daudzi ir bijuši neuzmanīgi ar savu sēklu nodrošināšanu un nonāk pie biedējošās zaudētās naudas realitātes, jo kāds tos ir paņēmis. Mēs iesakām to pierakstīt. Fiziski. Neglabāt to digitāli un nodrošinot, ka jums ir vairākas kopijas dažādās vietās. Šī ir pirmā lieta, ko varat darīt, lai aizsargātu savu Monero. UZRAKSTIET SAVU SĒKU!</p>';
+  String get knowledge250Sbpractices250Sb1250Sbtext => '<p>Pirmais un lielākais veids, kā aizsargāt savu kriptovalūtu, ir pierakstīt Monero mnemonisko sēklu Tas ir īss vārdu saraksts, kas tiek parādīts, kad pirmo reizi izveidojat savu maku. Ja jums ir šī sēkla, bet jūsu dators/tālrunis nomirst, varat atgūt savu Monero. Ja jums nav šīs sēklas un jūs pazaudējat savu maku, jūsu Monero ir pazaudēts un neviens nevar jums palīdzēt to atgūt. Tikpat svarīgi ir nenodot šo sēklu nevienam. Ja kādam ir šis vārdu saraksts, viņiem ir pilna piekļuve un tiesības tērēt jūsu Monero. Daudzi ir bijuši neuzmanīgi ar savu sēklu nodrošināšanu un nonāk pie biedējošās zaudētās naudas realitātes, jo kāds to ir paņēmis. Mēs iesakām to pierakstīt. Fiziski. Neglabāt to digitāli un nodrošināt, ka jums ir vairākas kopijas dažādās vietās. Šī ir pirmā lieta, ko varat darīt, lai aizsargātu savu Monero. PIERAKSTIET SAVU SĒKLU!</p>';
 
   @override
-  String get knowledge250Sbpractices250Sb1250Sbtitle => 'UZRAKSTI SAVU SĒKU!';
+  String get knowledge250Sbpractices250Sb1250Sbtitle => 'PIERAKSTIET SAVU SĒKLU!';
 
   @override
-  String get knowledge250Sbpractices250Sb2250Sbtext => '<p>Dažās krāpniecībās jūsu datorā tiek izmantota ļaunprātīga programmatūra, kas maina kopēšanas/ielīmēšanas funkcionalitāti, lai paredzētā adresāta vietā ievietotu ļaunprātīgas programmatūras veidotāja adresi. Tā kā Monero adreses ir garas un smagnējas, var būt vilinoši pārbaudīt pirmos dažus ciparus un burtus un nosaukt to par labu vai varbūt nepārbaudīt adresi vispār. Lai gan, iespējams, nav nepieciešams pārbaudīt visu adresi, vairumam gadījumu pietiks ar adreses pirmo un pēdējo desmitu rakstzīmju pārbaudi. Adresēm, uz kurām sūtāt bieži, daudziem makiem ir adrešu grāmatas funkcija, kas automātiski ievadīs izvēlēto saglabāto adresi. Tomēr vislabāk ir veikt ātru pārbaudi.</p>';
+  String get knowledge250Sbpractices250Sb2250Sbtext => '<p>Ir krāpniecīgas programmas, kas datorā maina kopēšanas/ielīmēšanas funkcionalitāti, lai paredzētā adresāta vietā ievietotu ļaunprātīgās programmatūras veidotāja adresi. Tā kā Monero adreses ir garas un smagnējas, var būt vilinoši pārbaudīt pirmos dažus ciparus un burtus un nosaukt to par labu vai varbūt nepārbaudīt adresi vispār. Lai gan, iespējams, nav nepieciešams pārbaudīt visu adresi, vairumam gadījumu pietiks ar adreses pirmo un pēdējo desmitu rakstzīmju pārbaudi. Adresēm, uz kurām sūtāt bieži, daudziem makiem ir adrešu grāmatas funkcija, kas automātiski ievadīs izvēlēto saglabāto adresi. Tomēr vislabāk ir veikt ātru pārbaudi.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb2250Sbtitle => 'Vēlreiz pārbaudiet savas adreses';
 
   @override
-  String get knowledge250Sbpractices250Sb3250Sbtext => '<p>Karstie un aukstie maki ir izplatīta terminoloģija kriptovalūtu jomā, un koncepcija patiešām ir diezgan vienkārša. Karstais maks ir tāds, ko bieži izņemat un lietojat. Tas ir \"karsts\" no atrašanās jūsu aizmugurējā kabatā. Aukstie maki ir tādi, kurus neaiztiek ļoti bieži, līdzīgi kā nauda bankā. Tāpat kā nav ieteicams nēsāt simtiem dolāru savā fiziskajā makā, bet parasti ir pieņemami to darīt bankas kontā, lietotājiem ir jāapsver, cik daudz Monero ir saprātīgi nēsāt savā mobilajā makā un cik daudz labāk atstāt. mājās otrā, aukstā. Tādā veidā tālruņa pazaudēšana, zādzība vai citi negadījumi neradīs pilnīgu līdzekļu zudumu.</p>';
+  String get knowledge250Sbpractices250Sb3250Sbtext => '<p>Karstie un aukstie maki ir izplatīta terminoloģija kriptovalūtu jomā, un koncepcija patiešām ir diezgan vienkārša. Karstais maks ir tāds, ko bieži izņemat un lietojat. Tas ir \"karsts\" no atrašanās jūsu aizmugurējā kabatā. Aukstie maki ir tādi, kurus neaiztiek ļoti bieži, līdzīgi kā nauda bankā. Tāpat kā nav ieteicams nēsāt simtiem dolāru savā fiziskajā makā, bet parasti ir pieņemami to turēt bankas kontā, lietotājiem ir jāapsver, cik daudz Monero ir saprātīgi nēsāt savā mobilajā makā un cik daudz labāk atstāt mājās otrā, aukstā. Tādā veidā tālruņa pazaudēšana, zādzība vai citi negadījumi neradīs pilnīgu līdzekļu zudumu.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb3250Sbtitle => 'Uzziniet atšķirību starp karstajiem un aukstajiem makiem';
 
   @override
-  String get knowledge250Sbpractices250Sb4250Sbtext => '<p>Ja doma aizsargāt savu digitālo vidi no vīrusiem un ļaunprātīgas programmatūras, lai aizsargātu Monero, jums ir biedējoša, varat apsvērt aparatūras maku. Pamatā aparatūras maciņš saglabā jūsu privātās atslēgas ierīcē, prom no datora. Tātad, pat ja jūsu dators tiek apdraudēts, hakeriem nebūs piekļuves jūsu sākumam. Līdzekļus varēsiet iztērēt tikai tad, ja aparatūras maciņš būs savienots ar datoru un parakstīs darījumu. Tādējādi atslēgu drošība tiek pārvietota no datora, kas tiek izmantots daudzām lietām un kuram ir liela uzbrukuma virsma, uz aparatūras maku, kas tiek izmantots tikai vienai lietai un kuram ir daudz mazāka uzbrukuma virsma. Vienkāršam cilvēkam, kurš nepārzina datoru drošības smalkumus, tā ir reāla iespēja nodrošināt savu līdzekļu drošību.</p>';
+  String get knowledge250Sbpractices250Sb4250Sbtext => '<p>Ja doma uzturēt savu digitālo vidi tīru no vīrusiem un ļaunprātīgas programmatūras, lai aizsargātu Monero, jums ir biedējoša, varat apsvērt aparatūras maku. Pamatā aparatūras maciņš saglabā jūsu privātās atslēgas ierīcē, prom no datora. Tātad, pat ja jūsu dators tiek apdraudēts, hakeriem nebūs piekļuves jūsu sēklai. Līdzekļus varēsiet iztērēt tikai tad, ja aparatūras maciņš būs savienots ar datoru un parakstīs pārskaitījumu. Tādējādi atslēgu drošība tiek pārvietota no datora, kas tiek izmantots daudzām lietām un kuram ir plašs uzbrukumu spektrs, uz aparatūras maku, kas tiek izmantots tikai vienai lietai un kuram ir daudz mazāks uzbrukumu spektrs. Vienkāršam cilvēkam, kurš nepārzina datoru drošības smalkumus, tā ir reāla iespēja nodrošināt savu līdzekļu drošību.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb4250Sbtitle => 'Vai aparatūras maki ir piemēroti jums?';
 
   @override
-  String get knowledge250Sbpractices250Sb5250Sbtext => '<p>Privātuma jomā bieži vien ir pārāk viegli nejauši nopludināt vai atklāt datus par sevi, ko var izmantot, lai jūs identificētu. Vecs piemērs, kas vairs neattiecas uz Monero, ir pielāgoti gredzenu izmēri. Ja noklusējuma vērtība ir 11 un visi izmanto 11, bet jūs pastāvīgi lietojat 54, jā, šis skaitlis ir lielāks, tāpēc jūsu anonimitāte ir augstāka, taču tagad jūs atšķiraties no pūļa un jūsu darījumus ir vieglāk identificēt. Kopš tā laika Monero ir veicis atjauninājumu, lai noteiktu gredzena izmēru 11, tāpēc tagad visi izskatās vienādi.</p>\n\n<p>Ir vairākas lietas, ko var darīt, lai nejauši kaitētu viņu privātumam citās kriptovalūtās, piemēram, Bitcoin. Cienījama miksera izvēle, monētu, kas nav KYC/AML, iegūšana, adrešu atkārtota neizmantošana un pareiza monētu izvades pārvaldība ir viss, kas indivīdam ir jāņem vērā, cenšoties samazināt metadatu noplūdi. Monero apiet daudzas no šīm problēmām, padarot privātuma funkcijas obligātas un iestatot labus noklusējuma iestatījumus vidusmēra lietotājam. Iepriekš minētais fiksēta gredzena lieluma izmantošanas piemērs nozīmē, ka galalietotājiem nav jāizdomā, kā šajā sakarā panākt vislabāko iespējamo privātumu. Maks to dara viņu vietā automātiski.</p>\n\n<p>Var šķist, ka par to runāt ir dīvaini. Lielākajai daļai lietotāju var piedot, ka viņi domā, ka visa programmatūra automātiski darbojas viņu labā, nevis pret viņiem. Diemžēl nekas nevar būt tālāk no patiesības, un, runājot par privātumu, gandrīz visām kriptovalūtām ļoti trūkst. Piepūle, kas jāpieliek, lai sasniegtu jebkādu privātuma līmeni, vidusmēra lietotājam parasti ir pārāk liela un pārāk sarežģīta. Tas bieži notiek pat ar citām kriptovalūtām, kas koncentrējas uz privātumu! Monero rūpējas par to, lai konfidencialitāte notiktu automātiski, lietotājiem nedomājot, protokola līmenī, kad iespējams, un ar saprātīgiem noklusējuma iestatījumiem makiem, kad tas tā nav. Ja rodas šaubas, vienkārši izmantojiet maka noklusējuma iestatījumus un nebaidieties uzdot jautājumus.</p>';
+  String get knowledge250Sbpractices250Sb5250Sbtext => '<p>Privātuma jomā bieži vien ir pārāk viegli nejauši nopludināt vai atklāt datus par sevi, ko var izmantot, lai jūs identificētu. Vecs piemērs, kas vairs neattiecas uz Monero, ir pielāgoti gredzenu izmēri. Ja noklusējuma vērtība ir 11 un visi izmanto 11, bet jūs pastāvīgi lietojat 54, jā, šis skaitlis ir lielāks, tāpēc jūsu anonimitāte ir augstāka, taču tagad jūs atšķiraties no pūļa un jūsu pārskaitījumus ir vieglāk identificēt. Kopš tā laika Monero ir veicis atjauninājumu, lai noteiktu gredzena izmēru 11, tāpēc tagad visi izskatās vienādi.</p>\n\n<p>Ir vairākas lietas, ko kāds var darīt, lai nejauši kaitētu viņu privātumam citās kriptovalūtās, piemēram, Bitcoin. Cienījama miksera izvēle, monētu, kas nav KYC/AML, iegūšana, adrešu atkārtota neizmantošana un pareiza monētu izvadu pārvaldība ir viss, kas indivīdam ir jāņem vērā, cenšoties samazināt metadatu noplūdi. Monero apiet daudzas no šīm problēmām, padarot privātuma funkcijas obligātas un iestatot labus noklusējuma iestatījumus vidusmēra lietotājam. Iepriekš minētais fiksēta gredzena lieluma izmantošanas piemērs nozīmē, ka galalietotājiem nav jāizdomā, kā šajā sakarā panākt vislabāko iespējamo privātumu. Maks to dara viņu vietā automātiski.</p>\n\n<p>Var šķist, ka par to runāt ir dīvaini. Lielākajai daļai lietotāju var piedot, ka viņi domā, ka visa programmatūra automātiski darbojas viņu labā, nevis pret viņiem. Diemžēl nekas nevar būt tālāk no patiesības, un, runājot par privātumu, gandrīz visām kriptovalūtām tā ļoti trūkst. Piepūle, kas jāpieliek, lai sasniegtu jebkādu privātuma līmeni, vidusmēra lietotājam parasti ir pārāk liela un pārāk sarežģīta. Tas bieži notiek pat ar citām kriptovalūtām, kas koncentrējas uz privātumu! Monero rūpējas par to, lai konfidencialitāte notiktu automātiski, lietotājiem nedomājot, protokola līmenī, kad iespējams, un ar saprātīgiem noklusējuma iestatījumiem makiem, kad tas tā nav. Ja rodas šaubas, vienkārši izmantojiet maka noklusējuma iestatījumus un nebaidieties uzdot jautājumus.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb5250Sbtitle => 'Ja rodas šaubas, izmantojiet noklusējuma iestatījumus (ar Monero)';
 
   @override
-  String get knowledge250Sbpractices250Sbdescription => 'Apskatīsim darbības un piesardzības pasākumus, kas jāveic, lai saglabātu privātumu, izvairītos no krāpniecības un nodrošinātu pareizu darījumu piegādi Monero lietošanas laikā.';
+  String get knowledge250Sbpractices250Sbdescription => 'Apskatīsim darbības un piesardzības pasākumus, kas jāveic, lai saglabātu privātumu, izvairītos no krāpniecības un nodrošinātu pareizu pārskaitījumu piegādi Monero lietošanas laikā.';
 
   @override
   String get knowledge250Sbpractices250Sbtitle => 'Monero labākā prakse iesācējiem';
 
   @override
-  String get knowledge250Sbringct250Sb0250Sbtext => '<p>Monero privātums nav atkarīgs no viena atsevišķa mehānisma, kas, ja tas tiek sabojāts, atklātu visu darījumu kopumu, bet gan trīs dažādas tehnoloģijas, kas darbojas kopā, lai nodrošinātu holistisku privātumu, vienlaikus kompensējot citu daļu vājās vietas. Šī trīs daļu pieeja sastāv no <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">zvana parakstiem</a>, RingCT un <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">slēptajām adresēm</a>. Šīs trīs tehnoloģijas attiecīgi slēpj reālo izvadi (sūtītāju), apjomu un saņēmēju. Šodien mēs runāsim par RingCT.</p>\n\n<p>RingCT ir neapšaubāmi vistehniskākais no trim, un to var būt grūti saprast, tāpēc mēs neapspriedīsim, kā tas precīzi darbojas, bet gan parādīsim, kā ir iespējams nezināt summu un tomēr apstiprināt lietas par to. . Un neuztraucieties, mēs kā vienmēr izmantosim daudz piemēru.</p>\n\n<p>Vispirms izpētīsim, kāpēc ir svarīgi kaut ko pārbaudīt par summām. Kāpēc mēs nevaram tos turēt pilnībā noslēpumā? Atbilde ir tāda, ka ir gudri veidi, kā cilvēki var radīt naudu no gaisa, ja viņiem tiek dota iespēja. Kā kaut kas līdzīgs varētu darboties? Apskatīsim piemēru.</p>\n\n<p>Ja vēlaties iegādāties preci no sava drauga un viņš par to vēlas desmit dolārus, tad jūs sāciet ar desmit dolāriem, bet viņš sākas ar nulli. Pēc tam, kad tu viņam iedosi desmit dolārus, viņam būs desmit dolāri, bet tev nulle. Jūs sākāt ar desmit, un tagad viņam ir desmit. Šajā darījumā nauda netika izveidota vai iznīcināta.</p>\n\n<p>Izmantojot kriptovalūtas, gudrs indivīds var atdot desmit dolārus par preci, un tā vietā, lai saņemtu nulles dolāru maiņās, viņi var saņemt divus dolārus atpakaļ. 0 un 10 vietā, kas rada 10 un 0 (vai 10=10), tagad 0 un 10 noved pie 10 un 2 (vai 10=12). Divi Monero tikko tika izveidoti no zila gaisa. Varat iedomāties, ka, ja indivīds to darītu ar sevi vairākas reizes, viņš īsā laikā varētu uzkrāt milzīgu bagātību.</p>\n\n<p> Izmantojot Bitcoin un citus, to būtu viegli redzēt. Apskatāt darījumos ievadītos datus un izejošos rezultātus un pārliecinieties, ka nosūtītais ir vienāds ar saņemto. Ja šīs summas ir šifrētas un nav redzamas, lietotājs nevar pārbaudīt, vai nosūtītais un saņemtais ir vienāds.</p>\n\n<p>Mēģinot palielināt Bitcoin privātumu, Gregorijs Maksvels izveidoja konfidenciālus darījumus (CT), jaunu tehnoloģiju, kas ļautu šifrēt summas, vienlaikus pierādot, ka šajā procesā nekas netika izveidots vai iznīcināts. Tāpat kā lielākā daļa privātuma tehnoloģiju, tā neiekļuva Bitcoin, bet Monero ļoti vēlējās to pieņemt. Bija tikai viena problēma. Jau ieviestā gredzenu parakstu tehnoloģija nebija savienojama ar piedāvāto ideju. Tātad viens no toreizējiem MRL pētniekiem Shen Noether pārveidoja CT par RingCT — CT versiju, kas bija saderīga ar zvana parakstiem.</p>\n\n<p> Vēlreiz jāatzīmē, ka tas darbojas diezgan tehniski, un to būtu grūti izskaidrot ievadrakstā. Kriptogrāfijas entuziastam, kuram tas vienkārši ir jāzina, internetā ir daudz padziļinātu rakstu par CT iekšējo darbību. Mums pārējiem šis raksts parādīs, kā varētu slēpt summas, bet tomēr pierādīt, ka nekas netika izveidots vai iznīcināts.</p>\n\n<p>Pieņemsim, ka Alise gribēja nosūtīt Bobam naudu. Alise nosūtīs 10 XMR Bobam, kurš saņems 10 XMR. 10=10 tātad nekas nav kārtībā. Bet Alise nevēlas, lai kāds zinātu, cik daudz viņa sūta. Tāpēc viņa un Bobs izveido kopīgu noslēpumu. Būtībā skaitlis, ko zina tikai viņi abi. Pieņemsim, ka šis skaitlis ir 22. Tagad Alise reizina 10 (to, ko viņa patiešām sūta) ar 22, lai iegūtu 220. Šis ir skaitlis, ko viņa kopīgo ar tīklu.</p>\n\n<p>Paši kalnrači nezina slepeno numuru. Ja viņi to darītu, viņi varētu dalīt parādīto numuru ar slepeno numuru un saņemt reālo nosūtīto summu. Bet, tā kā viņi to nedara, viņi nevar. Viņi tomēr redz, ka Bobs saņems 220. 220 nosūtīti. 220 saņemti. 220 = 220. Tādā veidā tīkls var pārbaudīt, vai Monero nav izveidots vai iznīcināts, nezinot patieso summu, ko Alise nosūtīja Bobam.</p>\n\n<p>Tā kā Bobs zina koplietoto slepeno numuru, kad viņš saņem naudu, viņš vienkārši dala ar 22, lai iegūtu patieso summu, ko Alise nosūtīja, — 10. Alise un Bobs zina, cik daudz tika nosūtīts un cik saņemts. visiem pārējiem tiek piešķirts nepatiess numurs.</p>\n\n<p> Vēlreiz atkārtoju, ka tas nav īstais veids, kā CT darbojas, taču tas sniedz priekšstatu par to, kā kaut kas līdzīgs varētu būt iespējams. Patiesais veids ietver tādas lietas kā Pedersena saistības, divas nosūtītās summas (viena šifrēta summa saņēmējam un viena saistību summa tīklam) un… jā, jau tagad ir viegli saprast, kā tajā visā var pazust.</p>\n\n<p>Tomēr viena lieta, kas jāņem vērā, ir tāda, ka, lai gan RingCT slēpj summu, ko darījumā veic divas puses, tas neslēpj divas citas skaitļu kopas.</p>\n\n<p>Pirmais ir monētu bāzes darījumi. Ja šis termins jums nav pazīstams, tas būtībā nozīmē atlīdzību, ko kalnrači saņem par nākamā bloka atrašanu. Šis numurs nav slēpts. Ikviens var redzēt, cik daudz protokols ir piešķīris kalnraču par viņu pakalpojumu. Tādā veidā pašreizējo Monero daudzumu var uzzināt, saskaitot visus monētu bāzes darījumus. To summa būs vienāda ar pašreizējo Monero apgrozībā.</p>\n\n<p>Otrais skaitlis, kas nav slēpts, ir maksa, ko maksā kalnračiem, kad lietotājs nosūta darījumu. Maksai ir jābūt skaidrai, lai kalnrači varētu zināt, kam piešķirt prioritāti. Tomēr tas ir veids, kā lietotāji var kaitēt viņu privātumam, jo, ja kāds izmanto unikālu kalnraču maksu katru reizi, kad nosūta darījumu (piemēram, 0,12345), viņu darījumus var saistīt.</p>\n\n<p>Izņemot šos gadījumus, RingCT ir slēpis Monero summas kopš 2017. gada, un mūsu kolektīvā privātuma aizsardzība ir vēl spēcīgāka.</p>';
+  String get knowledge250Sbringct250Sb0250Sbtext => '<p>Monero privātums nav atkarīgs no viena atsevišķa mehānisma, kas kļūdas gadījumā atklātu visu darījumu kopumu, bet gan trīs dažādām tehnoloģijām, kas darbojas kopā, lai nodrošinātu visaptverošu privātumu, vienlaikus kompensējot citu daļu vājās vietas. Šī trīs daļu pieeja sastāv no <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">gredzenveida parakstiem</a>, RingCT un <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">slēptajām adresēm</a>. Šīs trīs tehnoloģijas attiecīgi slēpj reālo izvadi (sūtītāju), daudzumu un saņēmēju. Šeit runāsim par RingCT.</p>\n\n<p>RingCT ir neapšaubāmi vistehniskākais no trim, un to var būt grūti saprast. Tāpēc mēs neapspriedīsim, kā tas precīzi darbojas, bet gan parādīsim, kā ir iespējams nezināt summu un tomēr apstiprināt lietas par to. Un neuztraucieties, mēs kā vienmēr izmantosim daudz piemēru.</p>\n\n<p>Vispirms izpētīsim, kāpēc ir svarīgi kaut ko pārbaudīt par summām. Kāpēc mēs nevaram tās turēt pilnībā noslēpumā? Atbilde ir tāda, ka ir gudri veidi, kā cilvēki var radīt naudu no gaisa, ja viņiem tiek dota iespēja. Kā kaut kas līdzīgs varētu darboties? Apskatīsim piemēru.</p>\n\n<p>Ja vēlaties iegādāties preci no sava drauga un viņš par to vēlas desmit dolārus, tad jūs sāksiet ar desmit dolāriem, bet viņš sāks ar nulli. Pēc tam, kad viņam iedosiet desmit dolārus, viņam būs desmit dolāri, bet jums nulle. Jūs sākāt ar desmit, un tagad viņam ir desmit. Šajā darījumā nauda netika izveidota vai iznīcināta.</p>\n\n<p>Izmantojot kriptovalūtas, gudrs indivīds var atdot desmit dolārus par preci, un tā vietā, lai saņemtu nulles dolāru maiņās, viņi var saņemt divus dolārus atpakaļ. 0 un 10 vietā, kas rada 10 un 0 (vai 10=10), tagad 0 un 10 noved pie 10 un 2 (vai 10=12). Divi Monero tikko tika izveidoti no zila gaisa. Varat iedomāties, ka, ja indivīds to darītu ar sevi vairākas reizes, viņš īsā laikā varētu uzkrāt milzīgu bagātību.</p>\n\n<p> Izmantojot Bitcoin un citus, to būtu viegli redzēt. Apskatiet darījumos ievadītos datus un izejošos rezultātus un pārliecinieties, ka nosūtītais ir vienāds ar saņemto. Ja šīs summas ir šifrētas un nav redzamas, lietotājs nevar pārbaudīt, vai nosūtītais un saņemtais ir vienāds.</p>\n\n<p>Mēģinot palielināt Bitcoin privātumu, Gregorijs Maksvels izveidoja Konfidenciālus pārskaitījumus (CT) - jaunu tehnoloģiju, kas ļautu šifrēt summas, vienlaikus pierādot, ka šajā procesā nekas netika izveidots vai iznīcināts. Tāpat kā lielākā daļa privātuma tehnoloģiju, tā neiekļuva Bitcoin, bet Monero priecājās to pieņemt. Bija tikai viena problēma. Jau ieviestā gredzenveida parakstu tehnoloģija nebija savienojama ar piedāvāto ideju. Tad viens no toreizējiem MRL pētniekiem Shen Noether pārveidoja CT par RingCT — CT versiju, kas bija saderīga ar gredzenveida parakstiem.</p>\n\n<p> Vēlreiz jāatzīmē, ka tas ir tehniski niansēti, un to būtu grūti izskaidrot ievadrakstā. Kriptogrāfijas entuziastam, kuram tas vienkārši ir jāzina, internetā ir daudz padziļinātu rakstu par CT iekšējo darbību. Mums pārējiem šis raksts parādīs, kā varētu slēpt summas, bet tomēr pierādīt, ka nekas netika izveidots vai iznīcināts.</p>\n\n<p>Pieņemsim, ka Alise grib nosūtīt Bobam naudu. Alise nosūtīs 10 XMR Bobam, kurš saņems 10 XMR. 10=10, tātad viss ir pareizi. Bet Alise nevēlas, lai kāds zinātu, cik daudz viņa sūta. Tāpēc viņa un Bobs izveido kopīgu noslēpumu. Būtībā tas ir skaitlis, ko zina tikai viņi abi. Pieņemsim, ka šis skaitlis ir 22. Tagad Alise reizina 10 (to, ko viņa patiešām sūta) ar 22, lai iegūtu 220. Šis ir skaitlis, ko viņa kopīgo ar tīklu.</p>\n\n<p>Maineri nezina slepeno skaitli. Ja viņi to zinātu, viņi varētu dalīt parādīto skaitli ar slepeno skaitli un saņemt reālo nosūtīto summu. Bet, tā kā viņi to nezina, viņi nevar. Viņi redz, ka Bobs saņems 220. 220 nosūtīti. 220 saņemti. 220 = 220. Tādā veidā tīkls var pārbaudīt, vai Monero nav izveidots vai iznīcināts, nezinot patieso summu, ko Alise nosūtīja Bobam.</p>\n\n<p>Tā kā Bobs zina koplietoto slepeno skaitli, kad viņš saņem naudu, viņš vienkārši dala ar 22, lai iegūtu patieso summu, ko Alise nosūtīja, — 10. Alise un Bobs zina, cik daudz tika nosūtīts un cik saņemts. visiem pārējiem tiek atklāts nepatiess skaitlis.</p>\n\n<p> Vēlreiz atkārtoju, ka tas nav īstais veids, kā CT darbojas, taču tas sniedz priekšstatu par to, kā kaut kas līdzīgs varētu būt iespējams. Patiesais veids ietver tādas lietas kā Pedersena saistības, divas nosūtītās summas (viena šifrēta summa saņēmējam un viena saistību summa tīklam) un… jā, jau tagad ir viegli saprast, kā tajā visā var pazust.</p>\n\n<p>Tomēr viena lieta, kas jāņem vērā, ir tāda, ka, lai gan RingCT slēpj summu, ko darījumā veic divas puses, tas neslēpj divas citas skaitļu kopas.</p>\n\n<p>Pirmais ir monētu bāzes pārskaitījumi. Ja šis termins jums nav pazīstams, tas būtībā nozīmē atlīdzību, ko maineri saņem par nākamā bloka atrašanu. Šis skaitlis nav slēpts. Ikviens var redzēt, cik daudz protokols ir piešķīris maineriem par viņu pakalpojumu. Tādā veidā pašreizējo Monero daudzumu var uzzināt, saskaitot visus monētu bāzes pārskaitījumus. To summa būs vienāda ar pašreizējo Monero apgrozībā.</p>\n\n<p>Otrais skaitlis, kas nav slēpts, ir maksa, ko maksā maineriem, kad lietotājs nosūta pārskaitījumu. Maksai ir jābūt skaidrai, lai maineri varētu zināt, kam piešķirt prioritāti. Tomēr tas ir veids, kā lietotāji var kaitēt viņu pašu privātumam, jo, ja kāds izmanto unikālu mainera maksu katru reizi, kad nosūta pārskaitījumu (piemēram, 0,12345), viņa pārskaitījumus var saistīt.</p>\n\n<p>Izņemot šos gadījumus, RingCT ir slēpis Monero summas kopš 2017. gada, un mūsu kopīgā privātuma aizsardzība tā dēļ ir vēl spēcīgāka.</p>';
 
   @override
-  String get knowledge250Sbringct250Sbdescription => 'RingCT ir slēpis Monero summas kopš 2017. gada, un mūsu kolektīvā privātuma aizsardzība ir vēl spēcīgāka. Bet kā tas tiek panākts?';
+  String get knowledge250Sbringct250Sbdescription => 'RingCT ir slēpis Monero summas kopš 2017. gada, un mūsu kolektīvā privātuma aizsardzība tā dēļ ir vēl spēcīgāka. Bet kā tas tiek panākts?';
 
   @override
-  String get knowledge250Sbringct250Sbtitle => 'Kā RingCT slēpj Monero darījumu summas';
+  String get knowledge250Sbringct250Sbtitle => 'Kā RingCT slēpj Monero pārskaitījumu summas';
 
   @override
-  String get knowledge250Sbrings250Sb0250Sbtext => '<p>Monero ir plaši pazīstams visā kriptovalūtā kā privātuma monētu karalis. Lai gan visi zina, ka Monero piedāvā labu privātumu, ne tik daudzi saprot, kā privātums darbojas.</p>\n\n<p>Daudzās citās privātuma monētās tiek publicētas salīdzināšanas diagrammas infografikas, kurās ir norādīti katras monētas konfidencialitātes tehnoloģijas nosaukumi, un vairumā gadījumu Monero tehnoloģija tiek apzīmēta kā RingCT, taču tā ir tikai daļēji taisnība. Monero faktiski ir trīs veidu pieeja privātumam. Viena tehnoloģija, lai paslēptu darījuma saņēmēju, viena, lai paslēptu nosūtīto summu, un viena, lai paslēptu izmantoto izvadi. Tās ir attiecīgi slepenas adreses, RingCT un zvana paraksti.</p>\n\n<p>Šī trīsvirzienu pieeja nozīmē, ka, ja viena no tehnoloģijām tiek sabojāta, pārējām ne vienmēr ir tāds pats liktenis. Zvana paraksti ir vājākais posms privātuma shēmā; vārds vājš šeit nozīmē visjutīgāko pret heiristiskiem uzbrukumiem. Atvēlēsim kādu laiku, lai tos izpētītu, vai ne?</p>\n\n<p>Kā minēts iepriekš, zvana parakstu mērķis ir aizēnot darījumā izmantoto izvadi. Ja kriptovalūtas “ievades/izvades” terminoloģija jūs mulsina, neuztraucieties. Patiesībā tas nav tik sarežģīti. Kad dzirdat vārdu \"izeja\", vienkārši padomājiet par pārbaudi. Viena no tām lietām, kas vairs nav tik izplatīta un ar ko cilvēki mēdz norēķināties. Tāpat kā čeku, to var apzīmēt jebkurā summā — USD 10, USD 32,50 utt., un to var apmainīt starp darījuma pusēm. Kriptovalūtām izejas kalpo šīm funkcijām.</p>\n\n<p>Kad kāds jums maksā 10 Monero, jūs saņemat 10 XMR izvadi. Šai izvadei ir vērtība (10), un tā tiek ņemta no sūtītāja maka, tāpat, kad maksājat par pakalpojumu, rēķins atstāj jūsu fizisko maku un tiek nodots personai, no kuras iepērkaties.</p >\n\n<p>Izvade tiek paslēpta, izveidojot mānekļu izvadu gredzenu (tātad arī nosaukumu). Taču šie mānekļi nav “viltus” izvadi. Tie ir reāli pagātnes blokķēdes izvadi, kuriem nav nekāda sakara ar pašreizējo darījumu, taču ārējam novērotājam katra no šīm izvadēm var izskatīties tikpat ticama kā reālā. Mānekļu izvadu komplekta lielums, pieskaitot īsto, tiek saukts par gredzena izmēru, un pašlaik Monero ir vienpadsmit. Tātad ir desmit mānekļu izvadi un viens īsts.</p>\n\n<p>Kāpēc mēs vienkārši nepalielinām šo skaitu līdz 100 vai pat 1000? Jo vairāk, jo labāk, vai ne? No privātuma viedokļa jā, taču ir jāņem vērā arī citas lietas. Atgriezīsimies pie fiziska piemēra, lai redzētu, ko es domāju. Ja vēlaties paslēpt vienu no savām dolāra banknotēm starp desmit mānekļiem, jums makā vajadzētu nēsāt apmēram vienpadsmit dolārus par katru dolāru, ko vēlaties tērēt. Viens īsts dolārs un desmit viltoti. Tas jau kļūst diezgan apgrūtinoši, ja vēlaties iztērēt pat dažus dolārus. Tagad iedomājieties, ka mēs palielinājām mānekļa summu līdz 1000. Par katru vienu dolāru, kuru vēlaties tērēt, jums līdzi jāņem aptuveni 1001 dolārs. Lai iegādātos vienu konfekšu batoniņu, jums būs jānēsā līdzi portfelis! Ir svarīgi atzīmēt, ka gredzenu paraksti nedarbojas gluži šādā veidā, piemēram, paši mānekļi nav paraksta sastāvdaļa, ir tikai atsauces uz tiem, taču mēs ceram, ka šī līdzība var nedaudz noderēt, lai attēlotu pamatjēdzienus.< /p>\n\n<p>Mānekļi blokķēdē darbojas līdzīgi. Katrs pievienotais māneklis palielina darījuma laiku un verifikācijas izmaksas. Katram mezglam ir jālejupielādē viss gredzena paraksts katram darījumam, un katrs gredzena paraksts satur reālo izvadi, kā arī mānekļus. Ne tikai tas, bet arī matemātiski jāpārbauda, vai vismaz viens no šiem rezultātiem ir reāls, un arī matemātiskās pārbaudes laiks palielinās ar katru mānekli. Tas nozīmē, ka mums ir jāatrod laimīgs vidusceļš, kur gredzena izmērs ir pietiekami liels, lai pietiekami aizēnotu reālo rezultātu, pat pret daudziem heiristiskiem uzbrukumiem, bet pietiekami mazs, lai neizraisītu masveida blokķēdes palielināšanos. Nepietiek ar patvaļīga skaitļa izvēli vai vienkārši palielināt gredzena izmēru, kad parakstu samazina (piemēram, izmantojot CLSAG). Monero kopiena vēlas konkrētus, matemātiskus pierādījumus par to, kurš gredzena izmērs piedāvā vislabākos kompromisus. Skaitlis ir pārāk mazs, un privātums nebūs pietiekami spēcīgs pret heiristiskiem uzbrukumiem. Pārāk liels, un mēs, iespējams, gūstam tikai nelielu labumu no privātuma puses un nevajadzīgi ciešam saistībā ar mērogošanu.</p>\n\n<p>Pēdējais, kas jāpiemin. Dažā Monero literatūrā ir vienkāršots un teikts, ka zvana paraksti slēpj sūtītāju, taču tā nav pilnīgi taisnība, un atšķirība nav tikai pedantiska. Atšķirība starp sūtītāju (cilvēku) un izvadi (rēķinu) ir liela, ja runa ir par privātuma saglabāšanu. Lai gan izvade var būt saistīta ar sūtītāju, pati izvade nav vienāda ar sūtītāju. Tāpēc pat tad, ja gredzena paraksts tika salauzts, tas ne vienmēr ir saistīts ar personas identitāti, un gan summa, gan saņēmējs joprojām tiek slēpti, tādējādi samazinot visu pušu privātumam nodarīto kaitējumu.</p>\n\n<p>Tas nenozīmē, ka bojāts gredzena paraksts ir nenozīmīgs. Jebkuri nopludinātie metadati ir slikti, un tie var atklāt vairāk informācijas, nekā mēs domājam, it īpaši, ja tos izmanto kopā ar citiem metadatiem. Tāpēc mēs darām visu iespējamo, lai nodrošinātu, ka izvēlētais gredzena lielums ir akadēmiski stingrs, pieņemot lēmumu, līdz minimumam tiek samazināta citu metadatu noplūde un lietotāja pieredzes noklusējuma darbības tiek veiktas pēc iespējas labāk.</p>\n\n<p>Bet, ja jūs joprojām uztraucat salauzta paraksta iespējamība, tad pie apvāršņa ir dažas neticamas ziņas. Nākamās paaudzes privātuma protokoliem, pie kuriem tiek strādāts, piemēram, Triptych, Arcturus un Lelantus, ir patiešām glītas iespējas. Šajos protokolos, palielinoties gredzena izmēram, izmērs mainās logaritmiski, nevis lineāri. Tas nozīmē, ka mēs varam ievietot 100 mānekļus, bet izmantotā vieta ir tuvāk 10 gredzena izmēram vecajā tehnoloģijā. Tā ir liela atšķirība, un tā ievērojami uzlabos privātumu visapkārt.</p>\n\n<p>Kaķa un peles spēlē, kas ir privātums, Monero nepārtraukti ievieš jauninājumus, lai paliktu priekšā un nodrošinātu vislabāko praktisko privātumu visiem.<p>';
+  String get knowledge250Sbrings250Sb0250Sbtext => '<p>Monero ir plaši pazīstams visā kriptovalūtā kā privātuma monētu karalis. Lai gan visi zina, ka Monero piedāvā labu privātumu, ne tik daudzi saprot, kā privātums darbojas.</p>\n\n<p>Daudzās citās privātuma monētās tiek publicētas salīdzināšanas diagrammu infografikas, kurās ir norādīti katras monētas konfidencialitātes tehnoloģijas nosaukumi, un vairumā gadījumu Monero tehnoloģija tiek apzīmēta kā RingCT, taču tā ir tikai daļēji taisnība. Monero faktiski ir trīs veidu pieeja privātumam. Viena tehnoloģija, lai paslēptu pārskaitījuma saņēmēju, viena, lai paslēptu nosūtīto summu, un viena, lai paslēptu izmantoto izvadi. Tās ir attiecīgi slepenās adreses, RingCT un gredzenveida paraksti.</p>\n\n<p>Šī trīsvirzienu pieeja nozīmē, ka, ja viena no tehnoloģijām tiek sabojāta, pārējām ne vienmēr ir tāds pats liktenis. Gredzenveida paraksti ir vājākais posms privātuma shēmā; vārds vājš šeit nozīmē visjutīgāko pret heiristiskiem uzbrukumiem. Atvēlēsim kādu laiku, lai tos izpētītu, vai ne?</p>\n\n<p>Kā minēts iepriekš, gredzenveida parakstu mērķis ir aizēnot pārskaitījumā izmantoto izvadi. Ja kriptovalūtas “ievades/izvades” terminoloģija jūs mulsina, neuztraucieties. Patiesībā tas nav tik sarežģīti. Kad dzirdat vārdu \"izvade\", vienkārši domājiet - čeks. Viena no tām lietām, kas vairs nav tik izplatīta un ar ko cilvēki mēdz norēķināties. Tāpat kā čeku, to var izrakstīt jebkurā summā — USD 10, USD 32,50 utt., un to var apmainīt starp darījuma pusēm. Kriptovalūtām šīs funkcijas pilda izvades.</p>\n\n<p>Kad kāds jums maksā 10 Monero, jūs saņemat 10 XMR izvadi. Šai izvadei ir vērtība (10), un tā tiek ņemta no sūtītāja maka, tāpat, kad maksājat par pakalpojumu, banknote atstāj jūsu fizisko maku un tiek nodota personai, no kuras iepērkaties.</p >\n\n<p>Izvade tiek paslēpta, izveidojot mānekļu izvadu gredzenu (no turienes arī nosaukums). Taču šie mānekļi nav “viltus” izvades. Tās ir reālas pagātnes blokķēdes izvades, kurām nav nekāda sakara ar pašreizējo pārskaitījumu, taču ārējam novērotājam katra no šīm izvadēm var izskatīties tikpat ticama kā reālā. Mānekļu izvadu komplekta lielums, pieskaitot īsto, tiek saukts par gredzena izmēru, un pašlaik Monero tas ir vienpadsmit. Tātad ir desmit mānekļu izvadi un viens īsts.</p>\n\n<p>Kāpēc mēs vienkārši nepalielinām šo skaitu līdz 100 vai pat 1000? Jo vairāk, jo labāk, vai ne? No privātuma viedokļa jā, taču ir jāņem vērā arī citas lietas. Atgriezīsimies pie fiziska piemēra, lai redzētu, ko es domāju. Ja vēlaties paslēpt vienu no savām dolāra banknotēm starp desmit mānekļiem, jums makā vajadzētu nēsāt apmēram vienpadsmit dolārus par katru dolāru, ko vēlaties tērēt. Viens īsts dolārs un desmit viltoti. Tas jau kļūst diezgan apgrūtinoši, ja vēlaties iztērēt pat dažus dolārus. Tagad iedomājieties, ka mēs palielinām mānekļa summu līdz 1000. Par katru vienu dolāru, kuru vēlaties tērēt, jums līdzi jāņem aptuveni 1001 dolārs. Lai iegādātos vienu šokolādes batoniņu, jums būs jānēsā līdzi portfelis! Ir svarīgi atzīmēt, ka gredzenveida paraksti nedarbojas gluži šādā veidā, piemēram, paši mānekļi nav paraksta sastāvdaļa, bet tikai atsauces uz tiem. Taču mēs ceram, ka šī līdzība var nedaudz noderēt, lai attēlotu pamatjēdzienus.< /p>\n\n<p>Mānekļi blokķēdē darbojas līdzīgi. Katrs pievienotais māneklis palielina pārskaitījuma laiku un apstiprināšanas izmaksas. Katram mezglam ir jālejupielādē viss gredzenveida paraksts katram pārskaitījumam, un katrs paraksts satur reālo izvadi, kā arī mānekļus. Ne tikai tas, bet arī matemātiski jāpārbauda, vai vismaz viens no šiem rezultātiem ir reāls, un arī matemātiskās pārbaudes laiks palielinās ar katru mānekli. Tas nozīmē, ka mums ir jāatrod laimīgs vidusceļš, kur gredzena izmērs ir pietiekami liels, lai pietiekami aizēnotu reālo rezultātu, pat pret daudziem heiristiskiem uzbrukumiem, bet pietiekami mazs, lai neizraisītu masveida blokķēdes palielināšanos. Nepietiek ar patvaļīga skaitļa izvēli vai vienkārši palielināt gredzena izmēru, kad parakstu samazina (piemēram, izmantojot CLSAG). Monero kopiena vēlas konkrētus, matemātiskus pierādījumus par to, kurš gredzena izmērs piedāvā vislabākos kompromisus. Ja skaitlis ir pārāk mazs, privātums nebūs pietiekami spēcīgs pret heiristiskiem uzbrukumiem. Pārāk liels, un mēs, iespējams, gūstam tikai nelielu labumu no privātuma puses un nevajadzīgi ciešam saistībā ar paplašināšanu.</p>\n\n<p>Pēdējais, kas jāpiemin. Dažā Monero literatūrā ir vienkāršots un teikts, ka gredzenveida paraksti slēpj sūtītāju, taču tā nav pilnīgi taisnība, un atšķirība nav tikai pedantiska. Atšķirība starp sūtītāju (cilvēku) un izvadi (čeku) ir liela, ja runa ir par privātuma saglabāšanu. Lai gan izvade var būt saistīta ar sūtītāju, pati izvade nav vienāda ar sūtītāju. Tāpēc pat tad, ja gredzenveida paraksts tiktu salauzts, tas ne vienmēr ir saistīts ar personas identitāti, un gan summa, gan saņēmējs joprojām tiek slēpti, tādējādi samazinot visu pušu privātumam nodarīto kaitējumu.</p>\n\n<p>Tas nenozīmē, ka bojāts gredzenveida paraksts ir nenozīmīgs. Jebkuri nopludinātie metadati ir slikti, un tie var atklāt vairāk informācijas, nekā mēs domājam, it īpaši, ja tos izmanto kopā ar citiem metadatiem. Tāpēc mēs darām visu iespējamo, lai nodrošinātu, ka izvēlētais gredzena lielums ir akadēmiski pamatots, līdz minimumam tiek samazināta citu metadatu noplūde un lietotāja pieredzes noklusējuma darbības tiek veiktas pēc iespējas labāk.</p>\n\n<p>Bet, ja jūs joprojām uztrauc salauzta paraksta iespējamība, tad pie apvāršņa ir dažas neticamas ziņas. Nākamās paaudzes privātuma protokoliem, pie kuriem tiek strādāts, piemēram, Triptych, Arcturus un Lelantus, ir patiešām glītas iespējas. Šajos protokolos, palielinoties gredzena izmēram, izmērs mainās logaritmiski, nevis lineāri. Tas nozīmē, ka mēs varam ievietot 100 mānekļus, bet izmantotā vieta ir tuvāk gredzena izmēram 10 vecajā tehnoloģijā. Tā ir liela atšķirība, un tā ievērojami uzlabos privātumu kopumā.</p>\n\n<p>Kaķa un peles spēlē, kas ir privātums, Monero nepārtraukti ievieš jauninājumus, lai paliktu priekšā un nodrošinātu vislabāko praktisko privātumu visiem.<p>';
 
   @override
-  String get knowledge250Sbrings250Sbdescription => 'Zvana paraksti ir vājākais posms privātuma shēmā; vārds vājš šeit nozīmē visjutīgāko pret heiristiskiem uzbrukumiem. Izpētīsim tos, vai ne?';
+  String get knowledge250Sbrings250Sbdescription => 'Gredzenveida paraksti ir vājākais posms privātuma shēmā; vārds vājš šeit nozīmē visjutīgāko pret heiristiskiem uzbrukumiem. Izpētīsim tos?';
 
   @override
-  String get knowledge250Sbrings250Sbtitle => 'Kā zvana paraksti aizsedz Monero izvadi';
+  String get knowledge250Sbrings250Sbtitle => 'Kā gredzenveida paraksti apslēpj Monero izvadi';
 
   @override
-  String get knowledge250Sbscams250Sb0250Sbtext => '<p>Kamēr ir bijusi nauda, ir bijušas krāpniecības, lai panāktu, ka cilvēki no tās šķiras, un kriptovalūtas telpa neatšķiras. Faktiski kriptovalūtas darījumu galīgums kopā ar to, ka nav nevienas centrālās organizācijas, kas palīdzētu tos atgūt, ir radījis jaunus un novatoriskus veidus, kā krāpnieki var nozagt nenojaušus lietotājus un ar saviem līdzekļiem pazust digitālajā tukšumā. Šajā rakstā mēs veltīsim laiku, lai informētu jaunos lietotājus par dažām no izplatītākajām krāpniecībām šajā telpā, taču šis saraksts nekādā ziņā nav visaptverošs, un lietotāji tiek mudināti gan būt informētiem par jaunākajām krāpniecības tendencēm, gan pastāvīgi sekot līdzi. apzinās un skeptiski uztver savu digitālo vidi.</p>';
+  String get knowledge250Sbscams250Sb0250Sbtext => '<p>Kamēr ir bijusi nauda, ir bijušas krāpniecības, lai panāktu, ka cilvēki no tās šķiras, un kriptovalūtu telpā ir tāpat. Faktiski kriptovalūtas pārskaitījumu galīgums kopā ar to, ka nav nevienas centrālas organizācijas, kas palīdzētu tos atgūt, ir radījis jaunus un novatoriskus veidus, kā krāpnieki var nozagt no neuzmanīgiem lietotājiem un ar saviem līdzekļiem pazust digitālajā tukšumā. Šajā rakstā mēs veltīsim laiku, lai informētu jaunos lietotājus par dažām no izplatītākajām krāpniecībām šajā telpā, taču šis saraksts nekādā ziņā nav visaptverošs. Lietotāji tiek mudināti gan būt informēti par jaunākajām krāpniecības tendencēm, gan pastāvīgi sekot līdzi un skeptiski uztvert savu digitālo vidi.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb1250Sbtext => '<p>Viena no vecākajām krāpniecībām grāmatā, un tā var notikt jebkurā diskusiju platformā. Šajā krāpniecībā krāpnieks uzdosies par uzticamu kopienas personu vai augsta ranga amatpersonu saistītā uzņēmumā. Kad upura uzticība ir nopelnīta ar šo iedibināto reputāciju, krāpnieks var nosūtīt lietotāju uz ļaunprātīgu vietni, likt viņam lejupielādēt programmu, kas izstrādāta, lai nozagtu viņu līdzekļus, vai pat vienkārši likt lietotājam tieši nosūtīt viņiem līdzekļus. Vienmēr trīs reizes pārbaudiet, vai persona, ar kuru runājat, patiešām ir īstā persona. Uzņēmumiem būs e-pasta adreses, ar kurām sazināties, lai pārbaudītu identitāti (t.i., \"Vai jūsu uzņēmuma izpilddirektors tikko sazinājās ar mani telegrammā?\"), un ar citiem kopienas vadītājiem parasti varēs sazināties, izmantojot citus līdzekļus. Pirms jebkādu darbību veikšanas pārbaudiet. ĪPAŠI, ja viņi uzsāka sarunu ar jums, nevis jūs ar viņiem.</p>';
+  String get knowledge250Sbscams250Sb1250Sbtext => '<p>Viens no vecākajiem trikiem, un tā var notikt jebkurā diskusiju platformā. Šeit krāpnieks uzdosies par uzticamu kopienas personu vai augsta ranga amatpersonu saistītā uzņēmumā. Kad upura uzticība ir nopelnīta ar šo iedibināto reputāciju, krāpnieks var nosūtīt lietotāju uz ļaunprātīgu vietni, likt viņam lejupielādēt programmu, kas izstrādāta, lai nozagtu viņu līdzekļus, vai pat vienkārši likt lietotājam tieši nosūtīt viņiem līdzekļus. Vienmēr trīs reizes pārbaudiet, vai persona, ar kuru runājat, patiešām ir īstā persona. Uzņēmumiem būs e-pasta adreses, ar kurām sazināties, lai pārbaudītu identitāti (t.i., \"Vai jūsu uzņēmuma izpilddirektors tikko sazinājās ar mani Telegram?\"), un ar citiem kopienas vadītājiem parasti varēs sazināties, izmantojot citus līdzekļus. Pirms jebkādu darbību veikšanas pārbaudiet to! ĪPAŠI, ja viņi uzsāka sarunu ar jums, nevis jūs ar viņiem.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb1250Sbtitle => 'Krāpnieku viltība';
+  String get knowledge250Sbscams250Sb1250Sbtitle => 'Viltvārža triks';
 
   @override
-  String get knowledge250Sbscams250Sb2250Sbtext => '<p>Līdzīgi kā krāpnieku krāpniecība, šeit krāpnieki mēģinās izveidot vietni vai lietotni, kas pēc izskata ir identiska esošajiem un uzticamiem uzņēmumiem, bet ar kodu un infrastruktūru, kas ir paredzēta jūsu Monero nozagšanai. Bieži vien ļaunprātīgai vietnei ir gandrīz identisks domēna nosaukums kā oriģinālajai vietnei, un ir pat zināms, ka tā, iegādājoties reklāmas laukumu, iegūs labākos vietnes meklēšanas rezultātus internetā. Ja uzticamas vietnes piemērs ir themonerowallet.com, krāpnieku vietne varētu būt the-monero-wallet.com vai, vēl ļaunāk, themonerȯwallet.com. Vai jūs sapratāt problēmu ar pēdējo? O virs tā ir punkts. Apskatiet: ȯ. Taču no pirmā acu uzmetiena tas var nebūt redzams, un, ja domēna nosaukums izskatās pareizs un vietne šķiet identiska tai, kādu to varētu gaidīt, ir pārāk viegli iekrist slazdā un atdot savu Monero sēklu, lai atrodiet savu Monero pazudušo, pirms zināt, kas jūs piemeklē.</p>\n\n<p>Taču, kā teikts šīs sadaļas sākumā, tas attiecas ne tikai uz vietnēm. Ir bijuši gadījumi, kad krāpnieki Google Play veikalā vai App Store var iezagt ļaunprātīgu lietotni, kas izskatās identiska esošajiem makiem, kur tā netiek atklāta, līdz tiek ziņots (kas var aizņemt diezgan ilgu laiku). Šajā laikā lietotāji domā, ka lejupielādē pareizo lietotni, taču patiešām zaudē savus līdzekļus krāpniekiem.</p>\n\n<p> Šāda veida krāpniecības risinājums ir modrība. Pirms jebkuras vietnes vai lietotnes pakalpojumu izmantošanas vienmēr pārbaudiet vēlreiz. Kad vien iespējams, ievadiet zināmas vietnes nosaukumu tieši URL joslā, nevis izmantojiet meklētājprogrammas, un esiet īpaši rūpīgi, kad kaut kas tiks lejupielādēts vai jūsu sēkla tiks jebkādā veidā izmantota.</p>';
+  String get knowledge250Sbscams250Sb2250Sbtext => '<p>Līdzīgi kā viltvārža trikā, šeit krāpnieki mēģinās izveidot vietni vai lietotni, kas pēc izskata ir identiska esošiem un uzticamiem uzņēmumiem, bet ar kodu un infrastruktūru, kas ir paredzēta jūsu Monero nozagšanai. Bieži vien ļaunprātīgai vietnei ir gandrīz identisks domēna nosaukums kā oriģinālajai vietnei, un ir pat zināms, ka tā, iegādājoties reklāmas laukumu, iegūs labākos vietnes meklēšanas rezultātus internetā. Ja uzticamas vietnes piemērs ir themonerowallet.com, krāpnieku vietne varētu būt the-monero-wallet.com vai, vēl ļaunāk, themonerȯwallet.com. Vai jūs sapratāt problēmu ar pēdējo? O virs tā ir punkts. Apskatiet: ȯ. Taču no pirmā acu uzmetiena tas var nebūt redzams, un, ja domēna nosaukums izskatās pareizs un vietne šķiet identiska tai, kādu to varētu gaidīt, ir pārāk viegli iekrist slazdā un atdot savu Monero sēklu, kur nauda pazudīs, pirms zināt, kas jūs piemeklē.</p>\n\n<p>Taču, kā teikts šīs sadaļas sākumā, tas attiecas ne tikai uz vietnēm. Ir bijuši gadījumi, kad krāpnieki Google Play veikalā vai App Store var ievietot ļaunprātīgu lietotni, kas izskatās identiska esošajiem makiem, kur tā netiek atklāta, līdz par to tiek ziņots (kas var aizņemt diezgan ilgu laiku). Šajā laikā lietotāji domā, ka lejupielādē pareizo lietotni, taču patiesībā atdod savus līdzekļus krāpniekiem.</p>\n\n<p> Šāda veida krāpniecības risinājums ir modrība. Pirms jebkuras vietnes vai lietotnes pakalpojumu izmantošanas vienmēr pārbaudiet vēlreiz. Kad vien iespējams, ievadiet zināmas vietnes nosaukumu tieši URL joslā, nevis izmantojat meklētājprogrammas, un esiet īpaši rūpīgi, kad kaut kas tiks lejupielādēts vai jūsu sēkla tiks jebkādā veidā izmantota.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb2250Sbtitle => 'Biznesa izskata līdzīgi krāpniecība';
+  String get knowledge250Sbscams250Sb2250Sbtitle => 'Biznesa līdzinieka triks';
 
   @override
-  String get knowledge250Sbscams250Sb3250Sbtext => '<p>Dažreiz krāpnieki pat nemēģina būt smalki. Viņi izsaka milzīgas, grandiozas prasības un zina, ka vienmēr būs muļķi, kas viņiem noticēs izmisuma, alkatības vai neziņas dēļ. Šai krāpniecībai ir dažādi veidi, sākot no monētu projektiem, kas sola smieklīgu atdevi no ieguldījumiem, kad jūs vispirms iedodat naudu (piemēram, Bitconnect), līdz īpašām, slepenām grupām, kas sola jums iepriekš pastāstīt par visām tirgus kustībām, lai jūs varētu pelnīt naudu. .par maksu. Atcerieties. Ja kaut kas izklausās pārāk labi, lai būtu patiesība, iespējams, tā arī ir. Šis padoms ir īpaši aktuāls kriptovalūtas jomā, jo mūsdienās monētas vai viedā līguma izvietošana ir mazsvarīga, un savu šaubīgo prasību publicēšana tiešsaistē ir bez maksas. Atcerieties, ja kāds patiešām atrada veidu, kā noteikt tirgus laiku vai atklāt veidu, kā nopelnīt bezgalīgas naudas tonnas, tad kāpēc viņš jums to teiktu? Viņi paši to vienkārši izmantotu, lai kļūtu bagāti. Kāpēc viņi ar to dalītos? Esi gudrs. Izmanto savas smadzenes. Neuzticieties nevienam.</p>';
+  String get knowledge250Sbscams250Sb3250Sbtext => '<p>Dažreiz krāpnieki pat nemēģina būt smalki. Viņi izsaka milzīgas, grandiozas prasības un zina, ka vienmēr būs muļķi, kas viņiem noticēs izmisuma, alkatības vai neziņas dēļ. Šai krāpniecībai ir dažādi veidi, sākot no monētu projektiem, kas sola smieklīgu atdevi no ieguldījumiem, kad jūs vispirms iedodat naudu (piemēram, Bitconnect), līdz īpašām, slepenām grupām, kas sola jums pastāstīt par visām tirgus kustībām, lai jūs varētu pelnīt naudu...par maksu. Atcerieties. Ja kaut kas izklausās pārāk labi, lai būtu patiesība, tā visdrīzāk arī ir. Šis padoms ir īpaši aktuāls kriptovalūtas jomā, jo mūsdienās monētas vai viedā līguma izvietošana ir ikdienišķa, un savu šaubīgo apgalvojumu publicēšana tiešsaistē ir bez maksas. Atcerieties, ja kāds patiešām atrada veidu, kā paredzēt tirgu vai nopelnīt bezgalīgas naudas tonnas, tad kāpēc viņš jums to teiktu? Viņi paši to vienkārši izmantotu, lai kļūtu bagāti. Kāpēc viņi ar to dalītos? Esi gudrs. Izmanto savas smadzenes. Neuzticieties nevienam.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb3250Sbtitle => 'Tiešā krāpniecība';
+  String get knowledge250Sbscams250Sb3250Sbtitle => 'Tieša krāpniecība';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Jūsu Monero sēkla IR jūsu Monero. Jums tas ir jāpieraksta, kad pirmo reizi veidojat maku, jo, ja pazaudējat savu sēklu, esat pazaudējis savu Monero un neviens jums nevar palīdzēt. BET ARĪ jums ir jāsargā šī sēkla no citiem. Ja kāds nozog jūsu sēklu, viņš var izsūtīt Monero no maka it kā jūs, un atkal neviens nevarēs atgūt šo naudu jūsu vietā. Tā vairs nav.</p>\n\n<p> Pārāk bieži kāda persona ir glabājusi aukstu Monero maku, interesējusies par saviem līdzekļiem un vēlējusies to pārbaudīt. Taču tā vietā, lai veiktu problēmas vai atkārtoti instalētu visu maka lietojumprogrammu, viņi vienkārši nolemj izmantot tīmekļa maku, lai ātri atjaunotu sēklu un apskatītu savu naudu. Ja viņi kļūst par upuriem krāpniecībai Business Look Alike, tad pati savu sēklu ievadīšana dod to krāpniekiem, kuri pēc tam var pārvietot naudu uz citu seifu, kuru viņi kontrolē sev ērtā laikā.</p>\n\n<p>JEBKURĀ KAD vietnei, lietojumprogrammai vai makam ir opcija “Atjaunot ar sēklu”, esiet ļoti uzmanīgs, lai jūsu izmantotā lietojumprogramma būtu likumīga. Pārbaudiet programmas jaucējus (Monero tīmekļa vietnē ir norādījumi par to, kā to izdarīt), lai pārliecinātos, ka programmu nav iejaukuši ārēji spēki, un pastāvīgi apzinieties, kur un kā jūs atklājat savu sēklu. Divkāršā pārbaude var būt kaitinoša, taču līdzekļu zaudēšana neuzmanības dēļ būtu vēl lielāka.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Jūsu Monero sēkla IR jūsu Monero. Jums tas ir jāpieraksta, kad pirmo reizi veidojat maku, jo, ja pazaudējat savu sēklu, esat pazaudējis savu Monero un neviens jums nevar palīdzēt. BET ARĪ jums ir jāsargā šī sēkla no citiem. Ja kāds nozog jūsu sēklu, viņš var izsūtīt Monero no maka it kā jūs, un atkal neviens nevarēs atgūt šo naudu jūsu vietā. Tā vairs nav.</p>\n\n<p> Pārāk bieži kāda persona ir glabājusi aukstu Monero maku, interesējusies par saviem līdzekļiem un vēlējusies to pārbaudīt. Taču tā vietā, lai pārinstalētu visu maka lietojumprogrammu, viņi vienkārši nolemj izmantot tīmekļa maku, lai ātri atjaunotu sēklu un apskatītu savu naudu. Ja viņi kļūst par upuriem krāpniecībai Business Look Alike, tad pati savu sēklu ievadīšana dod to krāpniekiem, kuri pēc tam var pārvietot naudu uz citu seifu, kuru viņi kontrolē sev ērtā laikā.</p>\n\n<p>JEBKURĀ KAD vietnei, lietojumprogrammai vai makam ir opcija “Atjaunot ar sēklu”, esiet ļoti uzmanīgs, lai jūsu izmantotā lietojumprogramma būtu likumīga. Pārbaudiet programmas jaucējus (Monero tīmekļa vietnē ir norādījumi par to, kā to izdarīt), lai pārliecinātos, ka programmu nav iejaukuši ārēji spēki, un pastāvīgi apzinieties, kur un kā jūs atklājat savu sēklu. Divkāršā pārbaude var būt kaitinoša, taču līdzekļu zaudēšana neuzmanības dēļ būtu vēl lielāka.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Jūsu Monero sēklas loma krāpniecībā';
 
   @override
-  String get knowledge250Sbscams250Sbdescription => 'Tik ilgi, kamēr ir bijusi nauda, ir bijušas krāpniecības, lai panāktu, ka cilvēki no tās šķiras — atvēlēsim laiku, lai apskatītu dažas no izplatītākajām krāpniecībām šajā telpā.';
+  String get knowledge250Sbscams250Sbdescription => 'Tik ilgi, kamēr ir bijusi nauda, ir bijusi krāpniecība, lai panāktu, ka cilvēki no tās šķiras — atvēlēsim laiku, lai apskatītu dažus no izplatītākajiem trikiem šajā telpā.';
 
   @override
   String get knowledge250Sbscams250Sbtitle => 'Krāpniecība, kam jāpievērš uzmanība, lietojot Monero';
 
   @override
-  String get knowledge250Sbseraphis250Sb0250Sbtext => '<p>Šajā ziņojumā ir aprakstīts <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/Seraphis\">Seraphis</a> — darījumu protokolu struktūru un abstrakciju kopums, ko Monero ekosistēmai izstrādājis pseidonīms pētniecības līdzstrādnieks <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB\"><code>koe</code></a>, un ar nepārtrauktu drošības analīzi. pseidonīms līdzautors <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/coinstudent2048\"><code>coinstudent2048</code></a>.<br/>\nMēs veicam dažus vienkāršojumus un izlaižam noteiktas tehniskas detaļas skaidrības labad; šī iemesla dēļ un tāpēc, ka Seraphis dizains joprojām tiek izstrādāts, ieinteresētajiem lasītājiem ir jāmeklē Seraphis dokumentācija, lai iegūtu jaunāko informāciju.</p>';
+  String get knowledge250Sbseraphis250Sb0250Sbtext => '<p>Šajā rakstā ir aprakstīts <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/Seraphis\">Seraphis</a> — pārskaitījumu protokolu struktūru un abstrakciju kopums, ko Monero ekosistēmai izstrādājis pseidonīms pētniecības līdzstrādnieks <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB\"><code>koe</code></a>, un ar nepārtrauktu drošības analīzi pseidonīms līdzautors <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/coinstudent2048\"><code>coinstudent2048</code></a>.<br/>\nMēs veicam dažus vienkāršojumus un izlaižam noteiktas tehniskas detaļas skaidrības labad; šī iemesla dēļ un tāpēc, ka Seraphis dizains joprojām tiek izstrādāts, ieinteresētiem lasītājiem ir jāmeklē Seraphis dokumentācija, lai iegūtu jaunāko informāciju.</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb0250Sbtitle => 'Seraphis: moduļu dizaina jauninājums Monero darījumiem';
+  String get knowledge250Sbseraphis250Sb0250Sbtitle => 'Seraphis: modulāra dizaina jauninājums Monero pārskaitījumiem';
 
   @override
-  String get knowledge250Sbseraphis250Sb1250Sbtext => '<p>Protokoli, piemēram, Bitcoin un Monero un citi, balstās uz tā saukto darbības \"izejas modeli\", kur <em>izvade</em> ir vērtības, ko var pārsūtīt, attēlojums.<br/>\nDarījumos tiek patērēts viens vai vairāki izvadi, kurus kontrolē sūtītājs, un tiek ģenerēti jauni izvadi, kas vērsti uz adresātiem (vai atpakaļ sūtītājam kā izmaiņas); darījumam ir jābūt līdzsvarotam ar to, ka patērētajiem izvadiem ir jāietver kopējā vērtība, kas ir tieši vienāda ar jauno izvadu vērtību (plus tīkla noteiktā maksa).<br/>\nDaudzos protokolos, piemēram, Bitcoin, izvadā esošā vērtība ir rakstīta skaidri, tāpat kā adresāts.<br/>\nTurklāt, aplūkojot blokķēdi, ir triviāli redzēt, vai un kad izvade ir iztērēta (tas ir, vai tā ir iztērēta vēlākā darījumā un kurā darījumā to iztērēja).</p>\n<p>Turpretim protokoli, piemēram, Monero, ievieš atšķirīgu dizainu:</p>\n\n<ul>\n<li>Izvades vērtības ir paslēptas un nav redzamas blokķēdē</li>\n<li>Adresātu adreses tiek paslēptas, izmantojot vienreizēju adresācijas protokolu</li>\n<li> Neatkarīgi no tā, vai izvade ir iztērēta, tiek aizēnota neskaidru parakstu izmantošana</li>\n</ul>\n\n<p>Rezultāts ir tāds, ka, ja nav ārējas informācijas, ir grūti noteikt, vai dotā produkcija ir iztērēta, kāda ir tās vērtība un kas ir tās saņēmējs.</p>\n\n<p>Pašreizējais Monero transakciju protokols tiek saukts par <em>RingCT</em>, un, lai sasniegtu šos dizaina mērķus, tiek izmantoti vairāki kriptogrāfijas bloki.</p>\n\n<ul>\n<li><em>Saistības</em> slēpj summas matemātiski noderīgā veidā</li>\n<li><em>Diapazona pierādījumi</em> novērš pārplūdi, kas varētu palielināt padevi</li>\n<li><em>Saistāmie zvana paraksti</em> nodrošina parakstītāju neskaidrību un novērš dubultas tērēšanas mēģinājumus</li>\n<li><em>Saistību kompensācijas</em> apliecina, ka darījumu atlikums</li>\n</ul>\n\n<p>Šie bloki ir rūpīgi savstarpēji saistīti, lai izveidotu RingCT protokolu.</p>\n\n<p>Noderīga RingCT protokola īpašība ir tāda, ka dažus blokus var mainīt vai uzlabot tā, lai kopējais dizains un īpašības tiktu saglabātas neskartas, taču tas var nodrošināt efektivitātes vai drošības uzlabojumus.\nFaktiski šāda veida jauninājumi ir notikuši (vai tiek plānoti) vairākas reizes Monero vēsturē.\nDiapazona pierādījumi sākotnējā RingCT protokolā bija apjomīgi un lēni; vēlāk tie tika atjaunināti uz konstrukciju ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2017/1066\">Bulletproofs</a>, kas padarīja darījumus mazākus un ātrākus ar labāku drošības analīzi, un ir plānots tos atjaunināt uz jaunāku konstrukciju ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/735\">Bulletproofs+</a>, lai nodrošinātu vēl lielākus efektivitātes ieguvumus. </p>\n\n<p>Līdzīgs process tika veikts ar savienojamā gredzena paraksta veidošanas bloku.\nSākotnējā protokolā tika izmantota konstrukcija ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ledger.pitt.edu/ojs/ledger/article/view/34\">MLSAG</a>.\nVēlāk tas tika atjaunināts uz jaunāku konstrukciju ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/654\">CLSAG</a>, kas ir ātrāka, nodrošina mazākus darījumus un labāku drošības analīzi.\nTika ierosināta vēl jaunāka savienojama gredzena paraksta konstrukcija, kuras pamatā ir <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/018\">Triptych</a>, taču tā netika izvēlēta izvietošanai, jo tā ietekmēja vairāku parakstu darbības.</p>';
+  String get knowledge250Sbseraphis250Sb1250Sbtext => '<p>Protokoli kā Bitcoin, Monero un citi, balstās uz tā saukto \"izvades modeli\", kur <em>izvade</em> ir vērtības, ko var pārsūtīt, attēlojums.<br/>\nPārskaitījumos tiek patērēta viena vai vairākas izvades, kuras kontrolē sūtītājs, un tiek ģenerētas jaunas izvades, kas vērstas uz adresātiem (vai atpakaļ sūtītājam kā maiņa); pārskaitījumam ir jābūt līdzsvarotam ar to, ka patērētajām izvadēm ir jāietver kopējā vērtība, kas ir tieši vienāda ar jauno izvadu vērtību (plus tīkla noteiktā maksa).<br/>\nDaudzos protokolos, piemēram, Bitcoin, izvadē esošā vērtība ir rakstīta skaidri, tāpat kā adresāts.<br/>\nTurklāt, aplūkojot blokķēdi, ir viegli redzēt, vai un kad izvade ir iztērēta (tas ir, vai tā ir iztērēta vēlākā pārskaitījumā un kurā pārskaitījumā to iztērēja).</p>\n<p>Turpretim protokoli, piemēram, Monero, ievieš atšķirīgu dizainu:</p>\n\n<ul>\n<li>Izvades vērtības ir paslēptas un nav redzamas blokķēdē</li>\n<li>Adresātu adreses tiek paslēptas, izmantojot vienreizēju adresācijas protokolu</li>\n<li> Tas, vai izvade ir iztērēta, tiek apslēpts ar neskaidru parakstu izmantošanu</li>\n</ul>\n\n<p>Rezultāts ir tāds, ka, ja nav ārējas informācijas, ir grūti noteikt, vai dotā izvade ir iztērēta, kāda ir tās vērtība un kas ir tās saņēmējs.</p>\n\n<p>Pašreizējais Monero pārskaitījumu protokols tiek saukts par <em>RingCT</em>, un, lai sasniegtu šos mērķus, tiek izmantoti vairāki kriptogrāfiskas uzbūves bloki.</p>\n\n<ul>\n<li><em>Saistības</em> slēpj summas matemātiski saderīgā veidā</li>\n<li><em>Diapazona pierādījumi</em> novērš pārplūdi, kas varētu radīt inflāciju</li>\n<li><em>Saistāmie gredzenveida paraksti</em> nodrošina parakstītāju neskaidrību un novērš dubultas tērēšanas mēģinājumus</li>\n<li><em>Saistību kompensācijas</em> apliecina, ka pārskaitījumi līdzsvarojas</li>\n</ul>\n\n<p>Šie bloki ir rūpīgi savīti, lai izveidotu RingCT protokolu.</p>\n\n<p>Noderīga RingCT protokola īpašība ir tāda, ka dažus blokus var mainīt vai uzlabot tā, lai kopējais dizains un īpašības tiktu saglabātas neskartas, taču tas var nodrošināt efektivitātes vai drošības uzlabojumus.\nFaktiski šāda veida jauninājumi ir notikuši (vai tiek plānoti) vairākas reizes Monero vēsturē.\nDiapazona pierādījumi sākotnējā RingCT protokolā bija apjomīgi un lēni; vēlāk tie tika atjaunināti uz konstrukciju ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2017/1066\">Bulletproofs</a>, kas padarīja pārskaitījumus mazākus un ātrākus ar labāku drošības analīzi, un ir plānots tos atjaunināt uz jaunāku konstrukciju ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/735\">Bulletproofs+</a>, lai nodrošinātu vēl lielākus efektivitātes ieguvumus. </p>\n\n<p>Līdzīgs process tika veikts ar saistāmo gredzenveida parakstu daļu.\nSākotnējā protokolā tika izmantota konstrukcija ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ledger.pitt.edu/ojs/ledger/article/view/34\">MLSAG</a>.\nVēlāk tas tika atjaunināts uz jaunāku konstrukciju ar nosaukumu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/654\">CLSAG</a>, kas ir ātrāka, nodrošina mazākus pārskaitījumus un labāku drošības analīzi.\nTika ierosināta vēl jaunāka saistāmo gredzenveida parakstu konstrukcija, kuras pamatā ir <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/018\">Triptych</a>, taču tā netika izvēlēta ieviešanai, jo tā ietekmēja multiparakstu darbības.</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb1250Sbtitle => 'Darījumi Monero';
+  String get knowledge250Sbseraphis250Sb1250Sbtitle => 'Pārskaitījumi Monero';
 
   @override
-  String get knowledge250Sbseraphis250Sb2250Sbtext => '<p>Seraphis paver šo ideju soli tālāk.<br/>\nTā vietā, lai atjauninātu atsevišķus esošā RingCT transakciju protokola blokus, tiek ieviests cits protokols, kas var izmantot dažādu elementu priekšrocības un piedāvāt uzlabotu funkcionalitāti.</p>';
+  String get knowledge250Sbseraphis250Sb2250Sbtext => '<p>Seraphis ved šo ideju soli tālāk.<br/>\nTā vietā, lai atjauninātu atsevišķus esošā RingCT protokola blokus, tiek ieviests cits protokols, kas var izmantot dažādu elementu priekšrocības un piedāvāt uzlabotu funkcionalitāti.</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb2250Sbtitle => 'Serafiss';
+  String get knowledge250Sbseraphis250Sb2250Sbtitle => 'Seraphis';
 
   @override
-  String get knowledge250Sbseraphis250Sb3250Sbtext => '<p>Seraphis izmanto citu kriptogrāfijas bloku komplektu, lai sasniegtu savus dizaina mērķus.</p>\n\n<ul>\n<li><em>Saistības</em> joprojām slēpj summas</li>\n<li><em>Diapazona pierādījumi</em> joprojām novērš pārplūdi un padeves palielināšanos</li>\n<li><em>Dalības pierādījumi</em> nodrošina parakstītāju neskaidrību</li>\n<li><em>Saistību kompensācijas</em> joprojām apstiprina līdzsvaru</li>\n<li><em>Pierādījumu autorizācija</em> novērš dubultas tērēšanas mēģinājumus</li>\n</ul>\n\n<p>Ņemiet vērā izmaiņas šeit: saistāmie gredzenu paraksti tiek aizstāti ar dalības apliecinājumu un pilnvarojošo pierādījumu kombināciju.\nAptuveni runājot, dalības pierādījumi liecina, ka patērētā produkcija ir daļa no lielākas kopas, līdzīgi kā tas notiek RingCT.\nBet atšķirībā no RingCT dalības pierādījumos vispār nav ietverts saistīšanas tags!\nAutorizācijas pierādījumi liecina, ka saistīšanas tags ir derīgs un tiek izmantots galīgā darījuma parakstīšanai.</p>\n\n<p>Tā kā RingCT pievieno saistīšanas tagu neskaidrā parakstā, parakstīšanas (un vairāku parakstu) darbības ir daudz skaitļošanas ziņā ietilpīgākas, un kļūst grūtāk izveidot citu ar tagu saistītu funkcionalitāti.\nTaču Seraphis dalības apliecinājumu izveidi var droši deleģēt no ļoti uzticamām ierīcēm (kurām var būt ierobežota skaitļošanas jauda, piemēram, aparatūras maciņam) uz mazāk uzticamu ierīci, un parakstīšanas (un vairāku parakstu) darbības ir daudz vienkāršākas, izmantojot daudz vienkāršāku autorizācijas pierādījumu. </p>\n\n<p>Par laimi, daži Seraphis nepieciešamie elementi jau pastāv citur, un tie nav jāprojektē no nulles.\nGan Bulletproofs, gan Bulletproofs+ konstrukcijas var izmantot kā attāluma necaurlaidības.\nPierādījumu autorizācijai var izmantot modifikācijas Schnorr tipa pierādīšanas sistēmās.\nUn efektīvu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2015/643\">pierādīšanas sistēmu</a>, kas jau tika izmantota kā pamats Triptych, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/373\">Lelantus</a> un <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2021/1173\">Spark</a><sup>*</sup>, var modificēt dalības pierādījumiem. X2127X]\n\n<p><sup>*</sup> Cypher Stack saņem finansējumu Spark izstrādei.</p>';
+  String get knowledge250Sbseraphis250Sb3250Sbtext => '<p>Seraphis izmanto citu kriptogrāfijas bloku komplektu, lai sasniegtu savus paredzētos mērķus.</p>\n\n<ul>\n<li><em>Saistības</em> joprojām slēpj summas</li>\n<li><em>Diapazona pierādījumi</em> joprojām novērš pārplūdi un inflāciju</li>\n<li><em>Dalības pierādījumi</em> nodrošina parakstītāju neskaidrību</li>\n<li><em>Saistību kompensācijas</em> joprojām apstiprina līdzsvaru</li>\n<li><em>Pierādījumu autorizācija</em> novērš dubultas tērēšanas mēģinājumus</li>\n</ul>\n\n<p>Ņemiet vērā izmaiņas šeit: saistāmie gredzenveida paraksti tiek aizstāti ar dalības apliecinājumu un pilnvarojošo pierādījumu kombināciju.\nAptuveni runājot, dalības pierādījumi apliecina, ka iztērētā izvade ir daļa no lielākas kopas, līdzīgi kā tas notiek RingCT.\nBet atšķirībā no RingCT dalības pierādījumos vispār nav ietverts saistīšanas tags!\nAutorizācijas pierādījumi apliecina, ka saistīšanas tags ir derīgs un tiek izmantoti galīgā pārskaitījuma parakstīšanai.</p>\n\n<p>Tā kā RingCT pievieno saistīšanas tagu neskaidrā parakstā, parakstīšanas (un vairāku parakstu) darbības ir daudz skaitļošanas ziņā ietilpīgākas, un kļūst grūtāk izveidot citu ar tagu saistītu funkcionalitāti.\nTaču Seraphis dalības apliecinājumu izveidi var droši deleģēt no ļoti uzticamām ierīcēm (kurām var būt ierobežota skaitļošanas jauda, piemēram, aparatūras makam) uz mazāk uzticamu ierīci, un parakstīšanas (un vairāku parakstu) darbības ir daudz vienkāršākas, izmantojot daudz vienkāršāku autorizācijas pierādījumu. </p>\n\n<p>Par laimi, daži Seraphis nepieciešamie elementi jau pastāv citur, un tie nav jāprojektē no nulles.\nGan Bulletproofs, gan Bulletproofs+ konstrukcijas var izmantot kā diapazona pierādījumus.\nPierādījumu autorizācijai var izmantot modifikācijas Schnorr tipa pierādīšanas sistēmās.\nUn efektīvu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2015/643\">pierādīšanas sistēmu</a>, kas jau tika izmantota kā pamats Triptych, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/373\">Lelantus</a> un <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2021/1173\">Spark</a><sup>*</sup>, var modificēt dalības pierādījumiem. </p>\n\n<p><sup>*</sup> Cypher Stack saņem finansējumu Spark izstrādei.</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb3250Sbtitle => 'Celtniecības klucīši';
+  String get knowledge250Sbseraphis250Sb3250Sbtitle => 'Būvēšanas bloki';
 
   @override
-  String get knowledge250Sbseraphis250Sb4250Sbtext => '<p>Diemžēl pašlaik izmantotās Monero adreses nav saderīgas ar Seraphis.\nJa Seraphis tiktu ieviests, lietotājiem būs jāģenerē jaunas adreses no sava maka atslēgām, lai saņemtu Monero.\nTomēr šīs ekosistēmas izmaksas ir saistītas ar daudzām priekšrocībām.</p>\n\n<p> Papildus iepriekš apspriestajām strukturālajām priekšrocībām Seraphis dizains ir piemērots daudzām dažādām adreses konstruēšanas iespējām, no kurām katra ir saistīta ar kompromisiem.\nLai gan Seraphis izmantojamā galīgā adreses konstrukcija <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/92\"> vēl tiek izlemta</a> (vienu shēmu, kurai tiek pievērsta liela uzmanība, sauc par <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024\">JAMTIS</a>), mēs varam aprakstīt dažas kopīgas un noderīgas funkcijas.</p> ]\n\n<p>Iespējams, jūs zināt, ka Monero adreses piedāvā <em>skata taustiņa</em> funkcionalitāti, kur ierīcei vai trešajai pusei varat nodrošināt skata taustiņu un ļaut tai jūsu vārdā skatīties ienākošos izvadus, taču neatsakoties no tēriņiem. iestāde.\nTas ir noderīgi makiem, kas var tikt atjaunināti, vienlaikus saglabājot tēriņu atslēgu droši aizslēgtu.\nTas ir noderīgi arī gadījumos, kad vēlaties piekļūt ārējiem skatiem, piemēram, publiskai labdarības organizācijai, kas piedāvā caurspīdīgumu, vai uzņēmumam ar grāmatvedības nodaļu.</p>\n\n<p>Monero skata taustiņu negatīvie aspekti ir tādi, ka tie nenodrošina pilnīgu vai smalku piekļuvi skatam.\nNav iespējams droši noteikt, kad maciņš tērē līdzekļus, tāpēc ir grūti pareizi aprēķināt maka atlikumu, ja nav pieejama tēriņu atslēga.\nPašlaik nav arī iespējams noteikt ienākošos izvadus, neapgūstot arī šajos izvados ietvertās vērtības (tas nozīmē, ka jebkura trešā puse, kas ir atbildīga par ienākošo izvadu atrašanu, uzzinās, cik daudz Monero jūs iegūstat).</p>\n\n<p>Seraphis adresācijas konstrukcijas var to atrisināt.\nIzmantojot Seraphis, jūsu adrese ir aprīkota ar dažādiem taustiņiem, ar kuriem var veikt dažādas darbības: </p>\n\n<ul>\n<li>Sekojiet ienākošajiem izvadiem, bet paslēpiet to vērtību</li>\n<li> Skatieties ienākošos izvadus, bet parādiet to vērtību</li>\n<li>Skatieties izejošos izvadus</li>\n<li>Palīdzēs ģenerēt darījumus, bet neparakstīt tos</li>\n<li>Jaunu adrešu ģenerēšana (noder mazumtirgotājiem vai apmaiņai ar daudziem klientiem)</li>\n</ul>\n\n<p>Kā adreses īpašnieks jūs varat izlemt, cik pilnvaras deleģējat citām ierīcēm vai trešajām pusēm.</p>';
+  String get knowledge250Sbseraphis250Sb4250Sbtext => '<p>Diemžēl pašlaik izmantotās Monero adreses nav saderīgas ar Seraphis.\nJa Seraphis tiktu ieviests, lietotājiem būs jāģenerē jaunas adreses no sava maka atslēgām, lai saņemtu Monero.\nTomēr šīs ekosistēmas izmaksas ir saistītas ar daudzām priekšrocībām.</p>\n\n<p> Papildus iepriekš apspriestajām strukturālajām priekšrocībām Seraphis dizains ir piemērots daudzām dažādām adreses konstruēšanas iespējām, no kurām katra ir saistīta ar kompromisiem.\nLai gan Seraphis izmantojamā galīgā adreses konstrukcija <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/92\"> vēl tiek izlemta</a> (vienu shēmu, kurai tiek pievērsta liela uzmanība, sauc par <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024\">JAMTIS</a>), mēs varam aprakstīt dažas kopīgas un noderīgas funkcijas.</p> ]\n\n<p>Iespējams, jūs zināt, ka Monero adreses piedāvā <em>skata atslēgas</em> funkcionalitāti, kur ierīcei vai trešajai pusei varat nodrošināt skata atslēgu un ļaut tai jūsu vārdā skatīties ienākošos izvadus, nenododot tēriņu atslēgu.\nTas ir noderīgi makiem, kas var tikt atjaunināti, vienlaikus saglabājot tēriņu atslēgu droši noglabātu.\nTas ir noderīgi arī gadījumos, kad vēlaties saņemt ārēja novērotāja piekļuvi, piemēram, publiskai labdarības organizācijai, kas piedāvā caurspīdīgumu, vai uzņēmumam ar grāmatvedības nodaļu.</p>\n\n<p>Monero skata atslēgu negatīvie aspekti ir tādi, ka tās nenodrošina pilnīgu vai smalku piekļuvi skatam.\nNav iespējams droši noteikt, kad maks tērē līdzekļus, tāpēc ir grūti pareizi aprēķināt maka atlikumu, ja nav pieejama tēriņu atslēga.\nPašlaik nav arī iespējams noteikt ienākošās izvades, neapgūstot arī šajās izvadēs ietvertās vērtības (tas nozīmē, ka jebkura trešā puse, kas ir atbildīga par ienākošo izvadu atrašanu, uzzinās, cik daudz Monero jūs iegūstat).</p>\n\n<p>Seraphis adresācijas konstrukcijas var to atrisināt.\nIzmantojot Seraphis, jūsu adrese ir aprīkota ar dažādām atslēgām, kuras var veikt dažādas darbības: </p>\n\n<ul>\n<li>Sekot ienākošajām izvadēm, bet paslēpt to vērtību</li>\n<li> Skatīties ienākošās izvades, bet parādīt to vērtību</li>\n<li>Skatīties izejošās izvades</li>\n<li>Palīdzēt ģenerēt pārskaitījumus, bet neparakstīt tos</li>\n<li>Ģenerēt jaunas adreses (noder mazumtirgotājiem vai apmaiņai ar daudziem klientiem)</li>\n</ul>\n\n<p>Kā adreses īpašnieks jūs varat izlemt, cik un kādas pilnvaras deleģējat citām ierīcēm vai trešajām pusēm.</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb4250Sbtitle => 'Uzrunāšana';
+  String get knowledge250Sbseraphis250Sb4250Sbtitle => 'Adresēšana';
 
   @override
-  String get knowledge250Sbseraphis250Sb5250Sbtext => '<p>Seraphis ir būtiskas izmaiņas Monero ekosistēmā.\nLai gan tas ietver adrešu un darījumu veidošanas bloku modifikācijas, tā dizains piedāvā elastību un noderīgu funkcionalitāti, kas nav iespējama ar mūsdienu RingCT protokolu.\nLai gan liela daļa dizaina ir pabeigta un tiek izstrādāta <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/monero/tree/seraphis_lib\">ieviešanā</a>, adreses izstrāde un drošības analīze turpinās.\nSeraphis piedāvā lielisku iespēju virzīt Monero ekosistēmu uz priekšu!</p>';
+  String get knowledge250Sbseraphis250Sb5250Sbtext => '<p>Seraphis ir būtiskas izmaiņas Monero ekosistēmā.\nLai gan tas ietver adrešu un pārskaitījumu veidošanas bloku modifikācijas, tā dizains piedāvā elastību un noderīgu funkcionalitāti, kas nav iespējama ar mūsdienu RingCT protokolu.\nLai gan liela daļa dizaina ir pabeigta un tiek izstrādāta <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/monero/tree/seraphis_lib\">ieviešanā</a>, adresu izveidojums un drošības analīze turpinās.\nSeraphis piedāvā lielisku iespēju virzīt Monero ekosistēmu uz priekšu!</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb5250Sbtitle => 'Lielais attēls';
+  String get knowledge250Sbseraphis250Sb5250Sbtitle => 'Kopskats';
 
   @override
-  String get knowledge250Sbseraphis250Sbdescription => 'Šodien mēs runājam par Seraphis — gaidāmo darījumu protokolu struktūru un abstrakciju kopumu Monero ekosistēmai.';
+  String get knowledge250Sbseraphis250Sbdescription => 'Šodien mēs runājam par Seraphis — gaidāmo pārskaitījumu protokolu struktūru un abstrakciju kopumu Monero ekosistēmai.';
 
   @override
-  String get knowledge250Sbseraphis250Sbtitle => 'Serafiss: ko tas darīs Monero';
+  String get knowledge250Sbseraphis250Sbtitle => 'Seraphis: ko tas darīs Monero';
 
   @override
-  String get knowledge250Sbsov250Sb0250Sbtext => '<p>Tā ir izplatīta runa (un mēs pilnībā ticam), ka Monero ir labāks apmaiņas līdzeklis nekā caurspīdīgās monētas, tostarp Bitcoin. Tas ir tāpēc, ka Monero raksturīgā privātuma dēļ nav iespējams izsekot, izvairoties no daudzām briesmām, kas rodas, ja jūsu naudas plūsma ir pieejama visām ieinteresētajām pusēm. Turklāt privātums atbloķē aizstājamību, lai lietotāji varētu justies pārliecināti, ka katrs Monero, kas apmainīts pret preci vai pakalpojumu, ir līdzvērtīgs jebkuram citam, jo nav saistītas pagātnes.</p>\n\n<p>Lai arī cik izplatīts ir šis sarunu punkts, ir arī cits, kas parasti tiek parādīts blakus tam; ka, lai gan Monero var būt labāks apmaiņas līdzeklis, Bitcoin ir labāks vērtības glabātājs. Tas nav nekas neparasts dzirdēt pat Monero kopienā. Izmantojiet Monero kā izdevumu kontu un izmantojiet Bitcoin kā krājkontu. Kad tiek spiesti argumentēt, šie lietotāji pat nedomā, ka tas noteikti ir tāpēc, ka Bitcoin cena pieaug ātrāk nekā Monero, bet gan tāpēc, ka Bitcoin ir “īpašības”, kas padara to par digitālo zeltu.</p>\n\n<p>Mēs pilnībā nepiekrītam šai idejai un šajā rakstā vēlamies paskaidrot, kāpēc. Bitcoin radikālā caurspīdīgums vairāk mazina tā īpašības kā vērtības krātuvei, nekā cilvēki saprot. Pirmais un visredzamākais piemērs tam ir iztēloties citu vispārpieņemtu vērtību krātuvi, zeltu, ar Bitcoin caurspīdīgumu.</p>\n\n<p>Kas notiktu ar uzticību zeltam, ja būtu iespējams (triviāli daudzas reizes) saistīt zelta daudzumu ar personu vai grupu? Vai tas joprojām tiktu izmantots tā, kā tas ir, ja katru reizi, kad tiek pārsūtīts zelts, ir zināms, ka ir notikusi pārsūtīšana, kas bija sūtītājs un saņēmējs un kāds zelta daudzums tika pārsūtīts? Mēs domājam, ka nē.</p>\n\n<p>Viena no zelta īpašībām, kas ir raksturīga tam, ka tas ir reālās pasaules objekts, ir tas, ka tas ir dabiski privāts. Tam var mākslīgi piešķirt vēsturi, iepriekšējos īpašniekus apzīmējot ar zelta stieni, taču tos var viegli noņemt, izkausējot stieni un pārtaisot to, kas nav pieejama Bitcoin.</p>\n\n<p>Šī kustības caurspīdība, lai arī pati par sevi ir pietiekami destruktīva, nav vienīgais zelta trūkums, ja visa informācija par tās kustību būtu pieejama ikvienam. Zinot zelta plūsmu, mēs varētu noteikt, kurām reālās pasaules vienībām ir lieli zelta krājumi. Dažas no tām var nebūt iestādes, bet personas bez liela mēroga drošības sistēmām. Nav nekas neparasts, ka parasts cilvēks iegādājas zeltu, lai aizsargātu pret katastrofām, un tagad mēs zinām, ka Džo Šmēm uz ielas ir 10 000 dolāru, kas ir vērti sēdēt kaut kur savā mājā. Tā nav informācija, ko Džo, iespējams, vēlas, lai pasaule zinātu.</p>\n\n<p> Laba vērtības glabāšana nenozīmē tikai to, ka cena ir stabila vai, iespējams, pieaugs, tas nozīmē, ka īpašnieks jūtas ērti un pārliecināts par drošību, kur viņš ir izvēlējies likt savu naudu. Tādējādi ar radikālu caurspīdīgumu zelts kļūst neērts kustībā un potenciāli bīstams miera stāvoklī. Ir labi zināt, ka tas bija tikai domu eksperiments un zeltam nav šo īpašību. Zelta investori var atviegloti nopūsties.</p>\n\n<p>Bet to pašu nevar teikt par Bitcoin.</p>\n\n<p>Monero privātums patiešām nodrošina daudz labāku drošību gan kustībā, gan miera stāvoklī ikvienam, kas vēlas to izmantot kā norēķinu kontu vai krājkontu.</p>\n\n<p>Bitcoin atbalstītāji tomēr iebildīs, ka Bitcoin ir drošāks kā vērtības glabātājs, jo aiz tā ir lielāks hasrats, tāpēc ir daudz mazāka iespēja, ka ķēde tiks pārrakstīta (t.i., jūsu krātuvē esošās monētas var tikt paņemtas). , un, lai gan pašlaik tā ir taisnība, tā ir sociāla problēma, ko var mainīt ar laiku, nevis pamata tehnoloģiska problēma, kuru, visticamāk, nekad neizdosies novērst.</p>\n\n<p>Otrs arguments Bitcoin ir tas, ka tam ir fiksēta piegāde, savukārt Monero ir astes emisija. Tas tiek ekstrapolēts, lai nozīmētu, ka Monero ir bezgalīgs piedāvājums, tāpēc tas ir tikpat nederīgs kā fiat vērtības krātuve. Skatoties virspusē, šis noteikti ir pārliecinošākais arguments no abiem, tāpēc mēs vēlētos pievērsties šim argumentam sīkāk.</p>\n\n<p> Lai gan Monero ir astes emisija, tas ir paredzēts, lai nodrošinātu Monero ilgtermiņa drošību. Kad būs izkalts pēdējais Bitcoin, bloka atlīdzības vairs nebūs, atstājot tikai maksu tirgu, lai stimulētu kalnračus nostiprināt ķēdi. Jau ir provizoriski pētījumi, kas liecina, ka ar to nepietiks, un ķēdes drošība krasi samazināsies, atstājot ķēdi neaizsargātu pret 51% uzbrukumiem.</p>\n\n<p>Galu galā tas nozīmē, ka esat uzkrājis vērtību, ko nekad nevarat pārvietot, baidoties no uzbrukuma. Atgriežoties pie zelta, vai zelts vispār būtu noderīgs kā vērtības glabātājs, ja nav iespējams vai pārmērīgi bīstami pārvietoties, pārdot vai apmainīt? Kas labs ir nepieejama vērtība? Kāds gan labums no miljoniem dolāru uzkrātās vērtības, ja tā var uz visiem laikiem atrasties bedrē bez dibena?</p>\n\n<p> Pievērsīsimies otrai šīs kritikas daļai, nevis atmetīsim Monero problēmas daļu. Astes emisija. Lai gan tā ir taisnība, tam ir mērķis, daži varētu uzskatīt, ka astes emisijas esamība vien ir pierādījums tam, ka Monero nevar būt maz un darbojas tāpat kā fiat. Tā arī nav taisnība. Fiat inflācijas modelis ir balstīts uz procentiem, un pat tas nav cirsts akmenī, bet gan ir pakļauts necaurredzamam samaitātu cilvēku ķermenim. Tas ir pretstatā Monero, kas uzpūš lineāri, kas nozīmē, ka laika gaitā inflācija virzās uz nulli. Tas arī nozīmē, ka atšķirībā no fiat inflāciju var viegli aprēķināt un droši plānot.</p>';
+  String get knowledge250Sbsov250Sb0250Sbtext => '<p>Tas ir izplatīts arguments (un mēs pilnībā piekrītam), ka Monero ir labāks apmaiņas līdzeklis nekā caurredzamas monētas, tostarp Bitcoin. Tas ir tāpēc, ka Monero raksturīgā privātuma dēļ nav iespējams izsekot, izvairoties no daudzām briesmām, kas rodas, ja jūsu naudas plūsma ir redzama visām ieinteresētajām pusēm. Turklāt privātums rada aizstājamību, lai lietotāji varētu justies pārliecināti, ka katrs Monero, kas apmainīts pret preci vai pakalpojumu, ir līdzvērtīgs jebkuram citam, jo nav saistītas pagātnes.</p>\n\n<p>Lai arī cik izplatīts ir šis punkts, ir arī cits, kas parasti tiek pieminēts blakus tam; ka, lai gan Monero var būt labāks apmaiņas līdzeklis, Bitcoin ir labāks vērtības glabātājs.Nav nekas neparasts to dzirdēt pat Monero kopienā. Izmantojiet Monero kā norēķinu kontu un izmantojiet Bitcoin kā krājkontu. Kad aicināti argumentēt, šie lietotāji pat nedomā, ka tas noteikti ir tāpēc, ka Bitcoin cena pieaug ātrāk nekā Monero, bet gan tāpēc, ka Bitcoin ir “īpašības”, kas padara to par digitālo zeltu.</p>\n\n<p>Mēs pilnībā nepiekrītam šai idejai un šajā rakstā vēlamies paskaidrot, kāpēc. Bitcoin radikālā caurredzamība mazina tā īpašības kā vērtības krātuvei vairāk, nekā cilvēki saprot. Pirmais un visredzamākais piemērs tam ir iztēloties citu vispārpieņemtu vērtības krātuvi, zeltu, ar Bitcoin caurredzamību.</p>\n\n<p>Kas notiktu ar uzticību zeltam, ja būtu iespējams (triviāli daudzas reizes) saistīt zelta daudzumu ar personu vai grupu? Vai tas joprojām tiktu izmantots tā, kā tagad, ja katru reizi, kad tiek pārsūtīts zelts, ir zināms, ka ir notikusi pārsūtīšana, kas bija sūtītājs un saņēmējs un kāds zelta daudzums tika pārsūtīts? Mēs domājam, ka nē.</p>\n\n<p>Viena no zelta īpašībām, kas tam raksturīga kā reālās pasaules objektam, ir tas, ka tas ir dabiski privāts. Tam var mākslīgi piešķirt vēsturi, iepriekšējos īpašniekus atzīmējot uz zelta stieņa, taču tos var viegli noņemt, izkausējot stieni un pārtaisot to, kas nav iespējams Bitcoin.</p>\n\n<p>Šī kustības caurredzamība, lai arī pati par sevi ir pietiekami destruktīva, nav vienīgais zelta trūkums, ja visa informācija par tā kustību būtu pieejama ikvienam. Zinot zelta plūsmu, mēs varētu noteikt, kurām reālās pasaules vienībām ir lieli zelta krājumi. Dažas no tām var nebūt iestādes, bet personas bez liela mēroga drošības sistēmām. Nav nekas neparasts, ka parasts cilvēks iegādājas zeltu, lai aizsargātos pret katastrofām, un tagad mēs zinām, ka Džo uz ielas ir 10 000 dolāru, kas ir novietoti kaut kur viņa mājā. Tā visdrīzāk nav informācija, ko Džo vēlas, lai pasaule zinātu.</p>\n\n<p> Laba vērtības glabāšana nenozīmē tikai to, ka cena ir stabila vai, iespējams, pieaugs. Tas nozīmē, ka īpašnieks jūtas ērti un pārliecināts un drošs par to, kur viņš ir izvēlējies ielikt savu naudu. Tādējādi ar radikālu caurredzamību zelts kļūst neērts kustībā un potenciāli bīstams miera stāvoklī. Ir labi zināt, ka tas bija tikai domu eksperiments un zeltam nav šo īpašību. Zelta investori var atviegloti nopūsties.</p>\n\n<p>Bet to pašu nevar teikt par Bitcoin.</p>\n\n<p>Monero privātums patiešām nodrošina daudz labāku drošību gan kustībā, gan miera stāvoklī ikvienam, kas vēlas to izmantot kā norēķinu kontu vai krājkontu.</p>\n\n<p>Bitcoin atbalstītāji tomēr iebildīs, ka Bitcoin ir drošāks kā vērtības glabātājs, jo aiz tā ir lielāks hashrate, tāpēc ir daudz mazāka iespēja, ka ķēde tiks pārrakstīta (t.i., jūsu krātuvē esošās monētas var tikt paņemtas). Un, lai gan pašlaik tā ir taisnība, tā ir sociāla problēma, ko var mainīt ar laiku, nevis pamata tehnoloģiska problēma, kuru, visticamāk, nekad neizdosies novērst.</p>\n\n<p>Otrs arguments Bitcoin ir tas, ka tam ir fiksēts piedāvājums, savukārt Monero ir astes emisija. Tas tiek ekstrapolēts, lai deklamētu, ka Monero ir bezgalīgs piedāvājums, tāpēc tas ir tikpat nederīgs kā fiat vērtības krātuve. Skatoties virspusēji, šis noteikti ir pārliecinošākais arguments no abiem, tāpēc mēs vēlētos pievērsties tam sīkāk.</p>\n\n<p> Lai gan Monero ir astes emisija, tas ir paredzēts, lai nodrošinātu Monero ilgtermiņa drošību. Kad būs izkalts pēdējais Bitcoin, bloka atlīdzības vairs nebūs, atstājot tikai maksu tirgu, lai stimulētu mainerus nostiprināt ķēdi. Jau ir provizoriski pētījumi, kas liecina, ka ar to nepietiks, un ķēdes drošība krasi samazināsies, atstājot ķēdi neaizsargātu pret 51% uzbrukumiem.</p>\n\n<p>Galu galā tas nozīmē, ka esat uzkrājis vērtību, ko nekad nevarat pārvietot, baidoties no uzbrukuma. Atgriežoties pie zelta, vai zelts vispār būtu noderīgs kā vērtības glabātājs, ja nav iespējams vai ir pārmērīgi bīstami ar to pārvietoties, pārdot vai apmainīt? Ko dod nepieejama vērtība? Kāds gan labums no miljoniem dolāru uzkrātās vērtības, ja tā var tikai uz visiem laikiem atrasties bedrē bez dibena?</p>\n\n<p> Pievērsīsimies otrai šīs kritikas daļai, nevis atmetīsim Monero problēmas daļu. Astes emisija. Lai gan tā ir taisnība, tam ir mērķis, daži varētu uzskatīt, ka astes emisijas esamība vien ir pierādījums tam, ka Monero nevar būt ekskluzīvs un darbojas tāpat kā fiat. Tā arī nav taisnība. Fiat inflācijas modelis ir balstīts uz procentiem, un pat tas nav cirsts akmenī, bet gan pakļauts necaurredzamai korumpētu cilvēku grupai. Tas ir pretstatā Monero, kas aug lineāri, kas nozīmē, ka laika gaitā inflācija tiecas uz nulli. Tas arī nozīmē, ka atšķirībā no fiat inflāciju var viegli aprēķināt un droši paredzēt.</p>';
 
   @override
-  String get knowledge250Sbsov250Sbdescription => 'XMR ir labāks apmaiņas līdzeklis, bet BTC ir labāks vērtības glabātājs? Mēs nepiekrītam. BTC caurspīdīgums vairāk mazina tās īpašības kā vērtības krātuvi, nekā cilvēki saprot.';
+  String get knowledge250Sbsov250Sbdescription => 'XMR ir labāks apmaiņas līdzeklis, bet BTC ir labāks vērtības glabātājs? Mēs nepiekrītam. BTC caurredzamība mazina tā īpašības kā vērtības krātuvei vairāk, nekā cilvēki apzinās.';
 
   @override
-  String get knowledge250Sbsov250Sbtitle => 'Kāpēc Monero ir labāks vērtības veikals nekā Bitcoin';
+  String get knowledge250Sbsov250Sbtitle => 'Kāpēc Monero ir labāks vērtības glabātājs nekā Bitcoin';
 
   @override
-  String get knowledge250Sbstealth250Sb0250Sbtext => '<p>Monero ir ieviesis trīs veidu pieeju privātumam. Šīs tehnoloģijas ir <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">zvana paraksti</a>, kas slēpj patieso izvadi (sūtītāju), RingCT, kas slēpj summas, un slepenās adreses, kas slēpj uztvērēju. Šodien mēs apspriedīsim pēdējo no minētajām tehnoloģijām: slepenās adreses.</p>\n\n<p>Ir daudz iemeslu, kāpēc persona varētu vēlēties slēpt, kam viņi sūta. Mēs nekad nedrīkstam ļaut nevienam mēģināt mūs pārliecināt, ka visi piemēri ir nepatīkama uzvedība. Tādas lietas kā sūtīšana nepopulārai politiskai partijai, ziedošana labdarības organizācijām vai tādu, ko kultūra uzskata par “atceltām”, ir piemēri, kur var vēlēties slēpt savu tēriņu uzvedību, baidoties no sekām, taču tās pēc būtības ir pilnīgi likumīgas.[X840X ]\n\n<p> Caurspīdīgā blokķēdē adreses, uz kurām tiek nosūtīti darījumi, ir redzamas visiem. Ir svarīgi ņemt vērā, ka, ja kalnrači paši nepiekrīt, kur nauda nonāk, viņi var izvēlēties to neiegūt blokā, efektīvi cenzējot šo darījumu uz šķietami cenzūras izturīgas platformas. Vienīgais veids, kā šo, protams, maz ticamo cenzūru padarīt neiespējamu, ir tad, ja kalnrači nevar atšķirt darījumus, jo visi ķēdes metadati tiek aizēnoti ar dažādiem līdzekļiem. Kaut kas ar ko Monero ir pazīstams.</p>\n\n<p>Monero atrisina šo caurspīdīgo adrešu problēmu, ieviešot slepenās adreses — tehnoloģiju, kuru Bitcoin Talk foruma lietotājs ByteCoin 2011. gadā sākotnēji izveidoja Bitcoin (saistība ar Bytecoin, kas vēlāk integrētu slepenās adreses, nav zināma). Tomēr pašreizējai slepeno adrešu formai ir vairāki uzlabojumi salīdzinājumā ar sākotnējo ideju. Bet vispirms, lai redzētu, kā tie darbojas, parunāsim par taustiņiem.</p>\n\n<p>Ir grūti atrasties kriptovalūtas telpā un nedzirdēt par atslēgām. Frāzes, piemēram, “dublēt savu privāto atslēgu”, ir izplatītas, taču vidusmēra Džo dzird vārdus “publiskā atslēga” un “privātā atslēga”, viņš nobīstas un domā, ka tas būs pārāk tehniski un mulsinoši, lai tos saprastu. Bet neuztraucieties. Mēs to darīsim lēni un izmantosim daudz piemēru.</p>\n\n<p>Kriptovalūtās izmantotās divu veidu atslēgas, kā tikko minēts, ir publiskās un privātās. Šīs divas atslēgas parasti ir pārī, kas nozīmē, ka noteikta publiskā un privātā atslēga ir savstarpēji saistītas. Faktiski parasti publiskā atslēga tiek atvasināta no privātās atslēgas, kas nozīmē, ka, ja zināt privāto atslēgu, jūsu maciņš var veikt gudrus aprēķinus un katru reizi izdomāt pareizo publisko atslēgu.</p>\n\n<p>Tagad, kā norāda nosaukumi, publiskā atslēga var būt publiska bez sekām. Parasti tā ir daļa no adreses, kuru kopīgojat, lai saņemtu naudu savā kriptovalūtas makā. Arī pēc vārda vārda privātā atslēga ir tāda, kuru nevajadzētu kopīgot. Tā ir lieta, kas ļauj parakstīt un iztērēt darījumu, tādēļ, ja tas tiek nozagts vai tiek koplietots, nekaunīgā trešā puse var tērēt jūsu naudu, parasti sev.</p>\n\n<p> Vienkārša līdzība tam būtu piekaramā atslēga un atslēga, kas nepieciešama tās atbloķēšanai. Atvērto piekaramo atslēgu var brīvi koplietot, un ar šo piekaramo atslēgu var aizslēgt jebko, taču tikai tas, kuram ir atslēga, var atvērt jebko, kam piekaramā atslēga ir aizvērta. Piekaramo atslēgu var kopēt un koplietot, atslēga nedrīkst būt.</p>\n\n<p>Šīs atslēgas parasti tiek abstrahētas no lietotāja, tāpēc jūs tās nekad neredzat. Monero tie nemaz neparādās kā biedējoša burtu un ciparu virkne. Monero parastais lietotājs privāto atslēgu zina kā savu sēklu. Sēkla (kas jums vajadzētu pierakstīt, ja neesat to izdarījis) patiesībā ir tikai cilvēka lasāma privātā atslēga. </p>\n\n<p>Redzi? Galu galā nav tik biedējoši. Atpakaļ uz slepenajām adresēm.</p>\n\n<p>Kā minēts iepriekš, slepenās adreses sākotnēji netika izveidotas Monero, bet gan Bitcoin. Tomēr, tāpat kā lielākajā daļā jauno ideju, arī šajā pirmajā atkārtojumā bija problēmas. Nākamais mēģinājums notika, kad Nikolass van Saberhāgans CryptoNote izveidoja Bytecoin, Monero priekštecim (<a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">skatiet mūsu Monero un Bytecoin vēsturi šeit</a>), un, lai gan tas bija nepārprotams uzlabojums salīdzinājumā ar oriģinālu, pat tas bija. daži smalki trūkumi.</p>\n\n<p> Galu galā, izstrādātājs izveidoja vienu pēdējo iterāciju citai, privātuma kriptovalūtai, kura vairs nav pieejama, un ar šo ideju tika novērstas neatrisinātās privātuma un drošības problēmas. Tas galu galā nokļuva Monero, un tas tiek izmantots mūsdienās.</p>\n\n<p>Lai gan šīs privātuma un drošības problēmas tika atrisinātas, pašas slepenās adreses pievienoja blokķēdes tehnoloģijām atšķirīgu dīvainību, kas iepriekš nepastāvēja. Nepieciešamība skenēt. Tā kā saņemšanas adreses blokķēdē netiek publiski parādītas, saņēmējs nekad nezina, vai kāds konkrētais darījums pieder viņam, tāpēc viņam ir jāskenē visi ienākošie darījumi ar savu privāto atslēgu, lai noskaidrotu, vai tā ir viņa.</p>\n\n<p>Izmantojot caurspīdīgās monētas, viņiem atliek tikai pārbaudīt, vai uz jūsu adresi tiek nosūtīts darījums. Vienkāršs jā vai nē jautājums. Taču, izmantojot slepenas adreses, katrs darījums var būt tāds, kas jums tiek nosūtīts, tāpēc jums ir jāmēģina katru atbloķēt ar savu privāto atslēgu, lai redzētu, vai tā tiek atvērta.</p>\n\n<p>Šis ir papildu solis, kas nav Bitcoin un tā atvasinājumi, un veic sākotnējo maka iestatīšanu, kā arī sinhronizē maku, ja neesat to atvēris kādu laiku, daudz ilgāk nekā Bitcoin. Tomēr kompromiss ir nepieciešams, lai atbloķētu tai sniegtās privātuma garantijas. Jāatzīmē, ka atšķirībā no privātuma trifecta vājākā punkta, zvana paraksti, slepenās adreses nav pakļautas heiristikai. Tā balstās uz pārbaudītu un patiesu eliptiskās līknes kriptogrāfiju, uz kuru paļaujas viss internets, tāpēc tās pārkāpšana nozīmētu datoru drošības izbeigšanu kopumā, ne tikai Monero.</p> ';
+  String get knowledge250Sbstealth250Sb0250Sbtext => '<p>Monero ir ieviesis trīs veidu pieeju privātumam. Šīs tehnoloģijas ir <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">gredzenveida paraksti</a>, kas slēpj patieso izvadi (sūtītāju), RingCT, kas slēpj summas, un slepenās adreses, kas slēpj saņēmēju. Šodien mēs apspriedīsim pēdējo no minētajām tehnoloģijām: slepenās adreses.</p>\n\n<p>Ir daudz iemeslu, kāpēc persona varētu vēlēties slēpt, kam viņi sūta. Mēs nekad nedrīkstam ļaut nevienam mēģināt mūs pārliecināt, ka visi piemēri ir nepatīkama uzvedība. Tādas lietas kā sūtīšana nepopulārai politiskai partijai, ziedošana labdarības organizācijām vai kādam, ko kultūra uzskata par “atceltu”, ir piemēri, kur var vēlēties slēpt savu tēriņu mērķi, baidoties no sekām, taču tie pēc būtības ir pilnīgi likumīgi.</p>\n\n<p>Caurredzamā blokķēdē adreses, uz kurām tiek nosūtīti pārskaitījumi, ir redzamas visiem. Ir svarīgi ņemt vērā, ka, ja maineri paši nepiekrīt, kur nauda nonāk, viņi var izvēlēties to neiekļaut blokā, efektīvi cenzējot šo pārskaitījumu uz šķietami cenzūras izturīgas platformas. Vienīgais veids, kā šo, protams, maz ticamo cenzūru padarīt neiespējamu, ir tad, ja maineri nevar atšķirt pārskaitījumus, jo visi ķēdes metadati tiek aizēnoti ar dažādiem līdzekļiem. Kaut kas, ar ko Monero ir pazīstams.</p>\n\n<p>Monero atrisina šo caurredzamo adrešu problēmu, ieviešot slepenās adreses — tehnoloģiju, kuru Bitcoin Talk foruma lietotājs ByteCoin 2011. gadā sākotnēji izveidoja Bitcoin (saistība ar Bytecoin, kas vēlāk integrētu slepenās adreses, nav zināma). Tomēr pašreizējai slepeno adrešu formai ir vairāki uzlabojumi salīdzinājumā ar sākotnējo ideju. Bet vispirms, lai redzētu, kā tie darbojas, parunāsim par taustiņiem.</p>\n\n<p>Ir grūti atrasties kriptovalūtas telpā un nedzirdēt par atslēgām. Frāzes, piemēram, “dublēt savu privāto atslēgu”, ir izplatītas, taču, kad vidusmēra Džo dzird vārdus “publiskā atslēga” un “privātā atslēga”, viņš nobīstas un domā, ka tas būs pārāk tehniski un mulsinoši, lai to saprastu. Bet neuztraucieties. Mēs to darīsim lēni un izmantosim daudz piemēru.</p>\n\n<p>Kriptovalūtās izmantotās divu veidu atslēgas, kā tikko minēts, ir publiskās un privātās. Šīs divas atslēgas parasti ir pārī, kas nozīmē, ka noteikta publiskā un privātā atslēga ir savstarpēji saistītas. Faktiski parasti publiskā atslēga tiek atvasināta no privātās atslēgas, kas nozīmē, ka, ja zināt privāto atslēgu, jūsu maciņš var veikt gudrus aprēķinus un katru reizi izdomāt pareizo publisko atslēgu.</p>\n\n<p>Kā norāda nosaukumi, publiskā atslēga var būt publiska bez sekām. Parasti tā ir daļa no adreses, kuru kopīgojat, lai saņemtu naudu savā kriptovalūtas makā. Savukārt privātā atslēga ir tāda, kuru nevajadzētu kopīgot. Tā ir lieta, kas ļauj parakstīt un veikt pārskaitījumu, tādēļ, ja tā tiek nozagta vai tiek koplietota, nelietīga trešā puse var tērēt jūsu naudu.</p>\n\n<p> Vienkārša līdzība tam būtu piekaramā slēdzene un atslēga, kas nepieciešama tās atbloķēšanai. Atvērto piekaramo slēdzeni var brīvi koplietot, un ar šo piekaramo slēdzeni var aizslēgt jebko, taču tikai tas, kuram ir atslēga, var atvērt jebko, kam piekārtā slēdzene ir aizvērta. Piekaramo slēdzeni var kopēt un koplietot, bet ar atslēgu tā nedrīkst notikt.</p>\n\n<p>Šīs atslēgas parasti tiek abstrahētas no lietotāja, tāpēc jūs tās nekad neredzat. Monero tie nemaz neparādās kā biedējoša burtu un ciparu virkne. Monero parastais lietotājs privāto atslēgu zina kā savu sēklu. Sēkla (kas jums vajadzētu pierakstīt, ja neesat to izdarījis) patiesībā ir tikai cilvēkam lasāma privātā atslēga. </p>\n\n<p>Redzat? Galu galā nav tik biedējoši. Atpakaļ uz slepenajām adresēm.</p>\n\n<p>Kā minēts iepriekš, slepenās adreses sākotnēji netika izveidotas Monero, bet gan Bitcoin. Tomēr, tāpat kā lielākajā daļā jauno ideju, arī te pirmajā mēģinājumā bija problēmas. Nākamais mēģinājums notika, kad Nikolass van Saberhāgans CryptoNote izveidoja Bytecoin, Monero priekštecim (<a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">skatiet mūsu Monero un Bytecoin vēsturi šeit</a>), un, lai gan tas bija nepārprotams uzlabojums salīdzinājumā ar oriģinālu, pat tam bija daži niansēti trūkumi.</p>\n\n<p> Galu galā, izstrādātājs izveidoja vienu pēdējo iterāciju citai, privātuma kriptovalūtai, kura vairs nav pieejama, un ar šo ideju tika novērstas neatrisinātās privātuma un drošības problēmas. Tas galu galā nokļuva Monero, un tas tiek izmantots mūsdienās.</p>\n\n<p>Lai gan šīs privātuma un drošības problēmas tika atrisinātas, pašas slepenās adreses pievienoja blokķēdes tehnoloģijām atšķirīgu dīvainību, kas iepriekš nepastāvēja. Nepieciešamība skenēt. Tā kā saņemšanas adreses blokķēdē netiek publiski parādītas, saņēmējs nekad nezina, vai kāds konkrētais pārskaitījums pieder viņam, tāpēc viņam ir jāskenē visi ienākošie pārskaitījumi ar savu privāto atslēgu, lai noskaidrotu, vai tie ir viņa.</p>\n\n<p>Izmantojot caurredzamas monētas, viņiem atliek tikai pārbaudīt, vai uz jūsu adresi tiek nosūtīts pārskaitījums. Vienkāršs jā vai nē jautājums. Taču, izmantojot slepenas adreses, katrs pārskaitījums var būt tāds, kas jums tiek nosūtīts, tāpēc jums ir jāmēģina katru atbloķēt ar savu privāto atslēgu, lai redzētu, vai tā tiek atvērta.</p>\n\n<p>Šis ir papildu solis, kas nav Bitcoin un tā atvasinājumos, un padara sākotnējo maka iestatīšanu, kā arī sinhronizāciju daudz ilgāku nekā Bitcoin, ja neesat to atvēris kādu laiku. Tomēr kompromiss ir nepieciešams, lai būtu iespējamas šīs privātuma garantijas. Jāatzīmē, ka atšķirībā no privātuma trijzara vājākā punkta, gredzenveida parakstiem, slepenās adreses nav pakļautas heiristikai. Tās balstās uz pārbaudītu un stabilu eliptiskās līknes kriptogrāfiju, uz kuru paļaujas viss internets un kuras salaušana nozīmētu datoru drošības izbeigšanu kopumā, ne tikai Monero.</p> ';
 
   @override
-  String get knowledge250Sbstealth250Sbdescription => 'Caurspīdīgā blokķēdē adreses, uz kurām tiek sūtīti darījumi, ir redzamas visiem. Monero atrisina šo problēmu, ieviešot slepenas adreses.';
+  String get knowledge250Sbstealth250Sbdescription => 'Caurredzamā blokķēdē adreses, uz kurām tiek sūtīti pārskaitījumi, ir redzamas visiem. Monero atrisina šo problēmu, ieviešot slepenās adreses.';
 
   @override
-  String get knowledge250Sbstealth250Sbtitle => 'Kā Monero Stealth adreses aizsargā jūsu identitāti';
+  String get knowledge250Sbstealth250Sbtitle => 'Kā Monero slepenās adreses aizsargā jūsu identitāti';
 
   @override
-  String get knowledge250Sbsubaddresses250Sb0250Sbtext => '<p>Monero vienmēr ir atradis novatoriskus veidus, kā atrisināt sarežģītas privātuma problēmas. Bieži vien šīs inovācijas noved pie citiem jauninājumiem, un dažreiz šīs radītās tehnoloģijas var izmantot pat gadījumos, kas iepriekš nav izskatīti. Nekur tas nav vairāk parādīts kā Monero apakšadreses tehnoloģijas gadījumā.</p>\n\n<p>Apsveriet hipotētisku privātuma problēmu, kurā vienas adreses izmantošana vairākās platformās no šķietami nesaistītām tautām var izraisīt minēto tautu sasaisti un deanonimizāciju. Vienkārši sakot, ja jūs būtu persona vārdā Billijs Džo Bobs un pārdevāt ābolus par Bitcoin, jūs varētu publicēt savu Bitcoin adresi publiskā vietā, lai klienti varētu jums samaksāt. Pieņemsim, ka adrese sākas ar burtu un ciparu virkni 7XybV3... Bet, atmetot malā acīmredzamo privātuma risku, ka ikviens varēs pārbaudīt jūsu Bitcoin bilanci un redzēt, cik daudz esat pārdevis, ir otrs, par kuru netiek bieži runāts par privātuma risku. Pieņemsim, ka jūs arī bijāt pagrīdes hakeris ar vārdu l33tz0r. Jūs veicat trauksmes celšanas darbu, stāstot nenojaušai sabiedrībai par valdības korupciju, un jums ir obligāti jāglabā sava identitāte noslēpumā. Jūs pieņemat Bitcoin ziedojumus par savu darbu un ievietojat adresi publiskā forumā. Tā ir tā pati adrese, kurā jūs pieņemat naudu no saviem Apple klientiem. 7XybV3... viens.</p>\n\n<p> Vienkāršs, bet postošs deanonimizācijas uzbrukums būtu izmantot interneta meklētājprogrammu, lai meklētu savu Bitcoin adresi. Ievietojot dzinējā adresi 7XybV3..., tiek parādīti divi dažādi rezultāti. Ābolu bizness un l33tz0r. Tas ir pietiekami, lai saistītu abas identitātes un deanonimizētu l33tz0r, kas var radīt biedējošas sekas no esošajām spējām.</p>\n\n<p>Ir svarīgi atzīmēt, ka šis uzbrukums ir iespējams ARĪ ar Monero. Lai gan Monero slēpj lielāko daļu ķēdes datu, šis uzbrukums neizmanto nevienu. Tas izmanto tikai adresi, kas ir jākopīgo, lai saņemtu maksājumu. Publiski anonīmu ziedojumu gadījumā. Šis ir viens no iespējamiem veidiem, kā Monero lietotāji var netīši aizskart savu privātumu, un tas ir arī piemērs tam, ka, lai gan Monero ir visaugstākā līmeņa privātuma saglabāšanas ziņā, tas nav ložu necaurlaidīgs.</p>\n\n<p>Parastais veids, kā apiet šo problēmu, bija vairāki maki. Ja katrai identitātei (vai lietošanas gadījumam) ir publicētas dažādas adreses, tās nevar saistīt. Taču šī konfidencialitāte ir spēkā tikai tad, ja lietotājs tos nekad nesajauc. Nejauši ievietojot nepareizu adresi, būtu tādas pašas saites sekas. Tāpat arī katras adreses sēkla ir jāglabā drošībā, palielinot infosec darbu, kas nepieciešams ar katru jaunu maciņu.</p>\n\n<p>Monero risinājums bija apakšadreses. Iespēja zem galvenās adreses izveidot absolūti milzīgu skaitu adrešu, izmantojot to kā sava veida sēklu. Katra ģenerētā apakšadrese var pieņemt Monero, un tā visa nonāk vienā makā. Izmantojot šo metodi, vienā adresē darbināmo identitāšu skaits ir milzīgs, vienlaikus samazinot infosec darbu līdz minimumam. Šīs adreses arī nav matemātiski savienojamas, tāpēc, ja vien lietotājs neizkliedz savu saistību ar pasauli, ārējam novērotājam būs lielas grūtības tās saistīt.</p>\n\n<p>Bet no apakšadresēm parādījās vēl viens interesants lietojums; kā universāli nīsto maksājumu ID aizstājēju.</p>\n\n<p>Maksājumu ID bija veids, kā tirgotāji varēja noteikt, kurš klients kādu maksājumu nosūtījis. Tā kā Monero informācija ķēdē ir aizklāta, darījuma saņēmējs nevar redzēt, kura adrese to nosūtīja. Tas nozīmē, ka, ja ir līdzīgas cenas preces un vairāki pasūtījumi, var kļūt neiespējami noteikt, kurš ko nosūtījis. Maksājumu ID ir unikāla, nejauša virkne, ko ģenerē tirgotājs un piešķir klientam. Klients to pievieno kā atsevišķu lauku, nosūtot darījumu. Šī nejaušā virkne tiek ievietota blokķēdē kā daļa no darījuma, un šādā veidā tirgotājs var identificēt un kārtot ienākošos darījumus.</p>\n\n<p>Šī metode bija kļūdaina vairākos veidos. Pirmkārt, tas mazina ķēdē esošo datu vienveidību. Papildu, unikāli metadati var padarīt dažus darījumus atšķirīgus no pūļa, tādējādi ļaujot veikt heiristisko analīzi. Tas jo īpaši attiecas uz gadījumiem, kad šie metadati nav ieviesti kā obligāti visiem. Tomēr, ja tas būtu obligāts visiem, blokķēdei tiktu pievienota nevajadzīga vieta, un tas netika īstenots. Tāpat, ja maksājuma ID kādreiz tiktu izmantots atkārtoti kāda iemesla dēļ, būtu triviāli saistīt divus darījumus kā savienotus. Tas parasti notika ar maiņas noguldījumiem, un ikviens varēja viegli saistīt darījumus gan kā depozītu biržā, gan no vienas konkrētas personas.</p>\n\n<p> Otrkārt, no UX perspektīvas maksājumu ID veido otru soli, pie kura kriptovalūtas lietotāji, kas nāk no citām monētām, nav pieraduši, un, ja tie tiek aizmirsti, tas rada lielas galvassāpes tirgotājam, kuram šie darījumi ir jāidentificē ar citiem līdzekļiem. . Parasti tas tika darīts, tieši sarunājoties ar katru klientu, kurš aizmirsa ievadīt maksājuma ID, un apstiprinot citu identificējošu informāciju, ko varēja zināt tikai viņi, piemēram, summas, nosūtīšanas datuma un darījuma ID kombināciju.</p>\n\n<p>Šo papildu darbību daudzi palaida garām, un tas nonāca tiktāl, ka dažas biržas sāka iekasēt naudu no klientiem, ja viņu nauda bija manuāli jāizgūst, jo tika aizmirsts maksājuma ID. Citi sakoda zobus un ēda papildu atbalsta izmaksas, bet neviens par to nebija priecīgs.</p>\n\n<p>Tam bija viens risinājums, integrētas adreses, kas apvienoja adresi un maksājuma ID vienā virknē, tāpēc to nevarēja aizmirst, taču adopcija bija diezgan vāja, neskatoties uz ieguvumiem, ko tirgotāji būtu guvuši no tā iekļaušanas. </p>\n\n<p>Interesantā notikumu pavērsienā tika izmantotas apakšadreses, lai glābtu situāciju. Iespēja ģenerēt lielu daudzumu apakšadreses katrai galvenajai adresei un noteikt, kuri darījumi kādās apakšadresēs tika veikti, ļāva tirgotājiem elegantā veidā atbrīvoties no maksājumu ID, vienlaikus pieņemot nākamās paaudzes Monero tehnoloģiju. Kopš tā laika lielākā daļa biržu un tirgotāju rīku ir pārgājuši uz apakšadresēm kā primāro darījumu identifikācijas veidu.</p>\n\n<p>Tas, kas sākās kā privātuma problēmas risinājums, kļuva par kaut ko daudz vairāk, kas atrisināja būtisku UX problēmu gan tirgotājiem, gan klientiem. Inovācijas rada vairāk jauninājumu, kas bieži vien var radīt negaidītas uzvaras ikvienam. Monero to ir redzējis atkal un atkal un pieliek lielas pūles, lai ieviestu jauninājumus, kas ir iespējams blokķēdē. Kurš zina, kādas citas lietas mēs varam atbloķēt kopā?</p>';
+  String get knowledge250Sbsubaddresses250Sb0250Sbtext => '<p>Monero vienmēr ir atradis novatoriskus veidus, kā atrisināt sarežģītas privātuma problēmas. Bieži vien šīs inovācijas noved pie citiem jauninājumiem, un dažreiz šīs radītās tehnoloģijas var izmantot pat gadījumos, kas iepriekš nav izskatīti. Nekur tas nav vairāk parādīts kā Monero apakšadrešu tehnoloģijas gadījumā.</p>\n\n<p>Apsveriet hipotētisku privātuma problēmu, kurā vienas adreses izmantošana vairākās platformās no šķietami nesaistītiem cilvēkiem var izraisīt minēto cilvēku sasaisti un deanonimizāciju. Vienkārši sakot, ja jūs būtu persona vārdā Billijs Džo Bobs un pārdotu ābolus par Bitcoin, jūs varētu publicēt savu Bitcoin adresi publiskā vietā, lai klienti varētu jums samaksāt. Pieņemsim, ka adrese sākas ar burtu un ciparu virkni 7XybV3... Bet, atmetot malā acīmredzamo privātuma risku, ka ikviens varēs pārbaudīt jūsu Bitcoin bilanci un redzēt, cik daudz esat pārdevis, ir otrs, par kuru netiek bieži runāts. Pieņemsim, ka jūs esat arī pagrīdes hakeris ar vārdu l33tz0r. Jūs veicat trauksmes celšanas darbu, stāstot sabiedrībai par valdības korupciju, un jums ir obligāti jāglabā sava identitāte noslēpumā. Jūs pieņemat Bitcoin ziedojumus par savu darbu un ievietojat adresi publiskā forumā. Tā ir tā pati adrese, kurā jūs pieņemat naudu no saviem Apple klientiem. 7XybV3....</p>\n\n<p> Vienkāršs, bet postošs deanonimizācijas uzbrukums būtu izmantot interneta meklētājprogrammu, lai meklētu savu Bitcoin adresi. Ievietojot meklētājā adresi 7XybV3..., tiek parādīti divi dažādi rezultāti. Ābolu bizness un l33tz0r. Tas ir pietiekami, lai saistītu abas identitātes un deanonimizētu l33tz0r, kas var radīt biedējošas sekas no esošajiem spēkiem.</p>\n\n<p>Ir svarīgi atzīmēt, ka šis uzbrukums ir iespējams ARĪ ar Monero. Lai gan Monero slēpj lielāko daļu ķēdes datu, šis uzbrukums neizmanto neko no tā. Tas izmanto tikai adresi, kas ir jāpublicē, lai saņemtu maksājumu. Publiski anonīmu ziedojumu gadījumā. Šis ir viens no iespējamiem veidiem, kā Monero lietotāji var netīši aizskart savu privātumu, un tas ir arī piemērs tam, ka, lai gan Monero ir visaugstākā līmeņa privātuma saglabāšanas ziņā, tas nav ložu necaurlaidīgs.</p>\n\n<p>Parastais veids, kā apiet šo problēmu, bija vairāki maki. Ja katrai identitātei (vai lietošanas gadījumam) ir publicētas dažādas adreses, tās nevar saistīt. Taču šī konfidencialitāte ir spēkā tikai tad, ja lietotājs tās nekad nesajauc. Nejauši ievietojot nepareizu adresi, būtu tādas pašas sekas. Tāpat arī katras adreses sēkla ir jāglabā drošībā, palielinot drošības darbu, kas nepieciešams, ar katru jaunu maciņu.</p>\n\n<p>Monero risinājums bija apakšadreses. Iespēja zem galvenās adreses izveidot absolūti milzīgu skaitu adrešu, izmantojot to kā sava veida sēklu. Katra ģenerētā apakšadrese var pieņemt Monero, un tā visa nonāk vienā makā. Izmantojot šo metodi, vienā adresē darbināmo identitāšu skaits ir milzīgs, vienlaikus samazinot drošības darbu līdz minimumam. Šīs adreses arī nav matemātiski savienojamas, tāpēc, ja vien lietotājs neizkliedz savu saistību pa pasauli, ārējam novērotājam būs lielas grūtības tās saistīt.</p>\n\n<p>Bet no apakšadresēm parādījās vēl viens interesants lietojums - nīsto maksājumu ID aizstājējs.</p>\n\n<p>Maksājumu ID bija veids, kā tirgotāji varēja noteikt, kurš klients kādu maksājumu nosūtījis. Tā kā Monero informācija ķēdē ir aizklāta, pārskaitījuma saņēmējs nevar redzēt, kura adrese to nosūtīja. Tas nozīmē, ka, ja ir līdzīgas cenas preces un vairāki pasūtījumi, var kļūt neiespējami noteikt, kurš ko nosūtījis. Maksājumu ID ir unikāla, nejauša virkne, ko ģenerē tirgotājs un piešķir klientam. Klients to pievieno kā atsevišķu lauku, nosūtot pārskaitījumu. Šī nejaušā virkne tiek ievietota blokķēdē kā daļa no pārskaitījuma, un šādā veidā tirgotājs var identificēt un kārtot ienākošos pārskaitījumus.</p>\n\n<p>Šī metode bija kļūdaina vairākos veidos. Pirmkārt, tas mazina ķēdē esošo datu vienveidību. Papildu, unikāli metadati var padarīt dažus pārskaitījumus atšķirīgus no pūļa, tādējādi ļaujot veikt heiristisko analīzi. Tas jo īpaši attiecas uz gadījumiem, kad šie metadati nav ieviesti kā obligāti visiem. Tomēr, ja tas būtu obligāti visiem, blokķēdei tiktu pievienota nevajadzīga vieta, un tas netika īstenots. Tāpat, ja maksājuma ID kādreiz tiktu izmantots atkārtoti kāda iemesla dēļ, būtu elementāri saistīt divus pārskaitījumus. Tas parasti tika darīts ar maiņas noguldījumiem, un ikviens varēja viegli saistīt pārskaitījumus gan kā depozītu biržā, gan no vienas konkrētas personas.</p>\n\n<p> Otrkārt, no UX perspektīvas maksājumu ID veido vēl vienu soli, pie kura kriptovalūtas lietotāji, kas nāk no citām monētām, nav pieraduši, un, ja tie tiek aizmirsti, tas rada lielas galvassāpes tirgotājam, kuram šie pārskaitījumi ir jāidentificē ar citiem līdzekļiem. . Parasti tas tika darīts, tieši sarunājoties ar katru klientu, kurš aizmirsa ievadīt maksājuma ID, un apstiprinot citu identificējošu informāciju, ko varēja zināt tikai viņi, piemēram, summas, nosūtīšanas datuma un pārskaitījuma ID kombināciju.</p>\n\n<p>Šo papildu darbību daudzi palaida garām, un tas nonāca tiktāl, ka dažas biržas sāka iekasēt naudu no klientiem, ja viņu nauda bija manuāli jāidentificē, jo tika aizmirsts maksājuma ID. Citi sakoda zobus un pieņēma papildu atbalsta izmaksas, bet neviens par to nebija priecīgs.</p>\n\n<p>Tam bija viens risinājums - integrētas adreses, kas apvienoja adresi un maksājuma ID vienā virknē, tāpēc to nevarēja aizmirst, taču adopcija bija diezgan vāja, neskatoties uz ieguvumiem, ko tirgotāji būtu guvuši no tā iekļaušanas. </p>\n\n<p>Interesantā notikumu pavērsienā tika izmantotas apakšadreses, lai glābtu situāciju. Iespēja ģenerēt lielu daudzumu apakšadrešu katrai galvenajai adresei un noteikt, kuri pārskaitījumi kādās apakšadresēs tika veikti, ļāva tirgotājiem elegantā veidā atbrīvoties no maksājumu ID, vienlaikus pieņemot nākamās paaudzes Monero tehnoloģiju. Kopš tā laika lielākā daļa biržu un tirgotāju rīku ir pārgājuši uz apakšadresēm kā primāro pārskaitījumu identifikācijas veidu.</p>\n\n<p>Tas, kas sākās kā privātuma problēmas risinājums, kļuva par kaut ko daudz vairāk, kas atrisināja būtisku UX problēmu gan tirgotājiem, gan klientiem. Inovācijas rada vairāk jauninājumu, kas bieži vien var radīt negaidītas uzvaras ikvienam. Monero to ir redzējis atkal un atkal un pieliek lielas pūles, lai ieviestu jauninājumus, kas ir iespējams blokķēdē. Kurš zina, kādas citas lietas mēs varam atklāt kopā?</p>';
 
   @override
-  String get knowledge250Sbsubaddresses250Sbdescription => 'Monero vienmēr ir atradis novatoriskus veidus, kā atrisināt sarežģītas privātuma problēmas. Nekur tas nav vairāk parādīts kā Monero apakšadreses tehnoloģijas gadījumā.';
+  String get knowledge250Sbsubaddresses250Sbdescription => 'Monero vienmēr ir atradis novatoriskus veidus, kā atrisināt sarežģītas privātuma problēmas. Nekur tas nav vairāk parādīts kā Monero apakšadrešu tehnoloģijas gadījumā.';
 
   @override
   String get knowledge250Sbsubaddresses250Sbtitle => 'Kā Monero apakšadreses novērš identitātes saistīšanu';
@@ -3962,169 +3962,169 @@ class I18nLv extends I18n {
   String get knowledge250Sbtitle => 'Zināšanas';
 
   @override
-  String get knowledge250Sbtrust250Sb0250Sbtext => '<p>Tas idejas kriptovalūtas telpā saņem tikpat lielu uzmanību un diskusiju kā uzticības jēdziens, un ne bez pamata. Galu galā viss blokķēdes mērķis ir novērst uzticēšanos trešajām pusēm.</p>\n\n<p>Tiem, kas pilnībā nesaprot ideju, šeit ir viegls gruntējums. Tradicionālajā finanšu sistēmā dažādu uzdevumu veikšanai parasti tiek izmantotas trešās puses. Bankas tiek izmantotas, lai jūsu vārdā nodrošinātu naudu no zādzībām, šķīrējtiesnešiem. Darījumus izmanto, lai biznesa darījumi varētu notikt starp divām pusēm, kuras neuzticas viena otrai. Kredītkaršu kompānijas izmaksā naudu par precēm un pakalpojumiem jūsu vārdā, uzņemoties risku, ka jūs varētu tos neatmaksāt.</p>\n\n<p>Katram no šiem gadījumiem ir nepieciešama uzticēšanās. Attiecībā uz bankām un darījuma aģentiem jūs uzticaties, ka viņi paši neiztērēs jūsu naudu, un kredītkaršu uzņēmumiem jūs uzticaties, ka viņi neizmaksās naudu uz jūsu vārda bez jūsu piekrišanas, un tas viss ir ļoti iespējams. Mēs darām visu iespējamo, lai šādas lietas nenotiktu. Mēs sadarbojamies tikai ar uzticamiem uzņēmumiem un privātpersonām, un mēs izstrādājam tiesību aktus, lai padarītu iepriekš minētos scenārijus par nelikumīgiem un cenšamies nodrošināt sekas likumpārkāpējiem, taču tas ne vienmēr liedz tām notikt.</p>\n\n<p>Turklāt šie pakalpojumi nav pieejami bez maksas. Darījuma aģenti un bankas var iekasēt maksu par saviem pakalpojumiem, un kredītkartes iekasē procentus par aizdoto naudu.</p>\n\n<p>Blockchain tika izveidots, lai likvidētu šos vidējos cilvēkus, kā arī uzticību un ar tiem saistītās maksas. Izmantojot vienprātības spēku, lietotāji var paši ieviest virsgrāmatas stāvokli, neuzticoties nevienam, kas pateiks viņiem, cik daudz naudas viņiem ir, un bez uzticamām trešajām pusēm, kas varētu izmantot jūsu līdzekļus.</p>\n\n<p>Tik liels uzsvars tiek likts uz šo neuzticību, ka jebkuras izmaiņas vai tehnoloģisks papildinājums, kas pievieno uzticības elementu atpakaļ blokķēdē, tiek uztverts ar lielu skepsi un kritiku, un daži projekti pilnībā noraida visus šādus priekšstatus. Interesanti, ka privātums netiek ņemts vērā.</p>\n\n<p>Atkal mēs skatāmies uz pārējo pasauli un redzam, ka pārāk bieži mūsu privātums ir “uzticamu” trešo pušu žēlastībā. Kad mēs norādām savas fiziskās adreses precei, kuru vēlamies mums nosūtīt, mēs ticam, ka attiecīgais veikals neizmantos šo informāciju nelietīgiem mērķiem un nepārdos to citiem. Tas pats attiecas uz mūsu personīgajām domām vai fotoattēliem, ko ievietojam sociālajos medijos. Tas attiecas pat uz mūsu finansēm, jo vairāki uzlauzumi grāmatvedības nozarē vai finanšu lietotnes, kas iekšējai publiskai padomei paziņo par to, kam cilvēki tērē naudu (t.i., Venmo).</p>\n\n<p>Monero saskata šo apņemšanos nodrošināt neuzticību blokķēdē un piemēro līdzīgu standartu mūsu pieejai privātumam. Mūsu privātumam nevajadzētu būt atkarīgam no trešās puses, kas sola to nodrošināt drošībā, kā arī no mūsu finansēm, kas mums sola, ka viņi ar viņiem neaizbēgs. Šim nolūkam Monero nodrošina, ka visas ieviestās privātuma tehnoloģijas ir neuzticamas.</p>\n\n<p>Pastāv citas privātuma tehnoloģijas. Uzticamie, un, jāatzīst, tie nav bez stiprajām pusēm. Zcash izmanto noteikta veida pierādīšanas sistēmas kā pamatelementus savā konfidenciālajā transakciju protokolā, kam ir ļoti stingras privātuma garantijas, lielas anonimitātes kopas un, ja to izmanto pareizi, tas varētu būt spēcīgs veids, kā nodrošināt jūsu privātumu. Tomēr šīs pieejas trūkums ir tas, ka šīs tehnoloģijas sākotnējās iestatīšanas ietvaros ir jābūt parametru kopai, kas jāizvēlas un pēc tam jāaizmirst. Ja kāds paturēs šo parametru, viņam būs iespēja izveidot viltus SNARK pierādījumus, efektīvi izdrukājot naudu, nevienam neliekoties gudrākam, jo tā ir paslēpta. Bet vai tas ietekmē privātumu? Daži teorētiski apgalvo, ka jā, bet citi nē, un galu galā ir jāveic vairāk pētījumu, lai iegūtu galīgu atbildi.</p>\n\n<p> Tomēr šis uzticības samazināšanas process izklausās tāpat kā scenāriji, par kuriem mēs runājām šī raksta sākumā. Tradicionālā pasaule. Tas, no kura mēs cenšamies attālināties. Blockchain pati par sevi nesamazina uzticību trešajām personām, bet gan novērš to. Monero kopiena uzskata, ka tas pats likvidēšanas, nevis samazināšanas standarts būtu jāpiemēro arī mūsu privātuma tehnoloģijām. Tas, ka nav galīgi pierādīts, ka uzticami iestatījumi var vai nevar apdraudēt privātumu, nenozīmē, ka šajā ziņā mums vajadzētu būt vaļīgiem attiecībā uz uzticības atgriešanu sistēmā.</p>\n\n<p>Protams, jebkura privātuma telpas attīstība ir uzlabojums, un uzticama privātums bieži vien ir tikai atspēriena punkts uz neuzticamu privātumu, un šādos gadījumos mēs priecājamies, ka šī telpa virzās uz priekšu. Un tomēr tajā pašā laikā Monero kopiena vienkārši nevar pēc labākās sirdsapziņas mūsu blokķēdē izvietot privātuma tehnoloģiju, kas vājinātu mūsu revolūcijas mērķi.</p>\n\n<p>Mums bieži tiek uzdots jautājums par to, kad Monero gatavojas ieviest šo vai citu jauno privātuma tehnoloģiju. Šos jautājumus bieži uzdod neinformēti cilvēki, kuri nesaprot kompromisus un tikai atspēko jaunos mūsdienu privātuma modes vārdus. Atbilde uz šiem jautājumiem ir vienkārša. Monero nepārtraukti meklē, pārskata un pēta jaunus privātuma protokolus, kas stiprinātu Monero ķēdes privātuma garantijas, taču mēs nevēlamies iedziļināties uzticamas privātuma pasaulē, lai sasniegtu šo mērķi, pat ja garantijas teorētiski ir spēcīgākas. X5461X]\n\n<p>Daži saka, ka šī pieeja izrādīsies novecojusi, taču mēs domājam, ka šādi cilvēki ir pazaudējuši stāstu par to, kāpēc mēs esam šeit, sākot ar.</p>';
+  String get knowledge250Sbtrust250Sb0250Sbtext => '<p>Reti kuras idejas kriptovalūtu telpā saņem tik lielu uzmanību un diskusiju kā uzticības jēdziens, un ne bez pamata. Galu galā viss blokķēdes mērķis ir novērst uzticēšanos trešajām pusēm.</p>\n\n<p>Tiem, kas pilnībā nesaprot ideju, šeit ir īss skaidrojums. Tradicionālajā finanšu sistēmā dažādu uzdevumu veikšanai parasti tiek izmantotas trešās puses. Bankas tiek izmantotas, lai jūsu vārdā nodrošinātu naudu pret zādzībām. Starpniekus izmanto, lai biznesa darījumi varētu notikt starp divām pusēm, kuras neuzticas viena otrai. Kredītkaršu kompānijas izmaksā naudu par precēm un pakalpojumiem jūsu vārdā, uzņemoties risku, ka jūs varētu tos neapmaksāt.</p>\n\n<p>Katram no šiem gadījumiem ir nepieciešama uzticēšanās. Attiecībā uz bankām un darījumu aģentiem jūs uzticaties, ka viņi paši neiztērēs jūsu naudu, un kredītkaršu uzņēmumiem jūs uzticaties, ka viņi neizmaksās naudu uz jūsu vārda bez jūsu piekrišanas, un tas viss ir ļoti iespējams. Mēs darām visu iespējamo, lai šādas lietas nenotiktu. Mēs sadarbojamies tikai ar uzticamiem uzņēmumiem un privātpersonām, un mēs izstrādājam tiesību aktus, lai padarītu iepriekš minētos scenārijus par nelikumīgiem un cenšamies nodrošināt sekas likumpārkāpējiem, taču tas ne vienmēr liedz tā notikt.</p>\n\n<p>Turklāt šie pakalpojumi nav pieejami bez maksas. Darījumu aģenti un bankas var iekasēt maksu par saviem pakalpojumiem, un kredītkartes iekasē procentus par aizdoto naudu.</p>\n\n<p>Blockchain tika izveidots, lai likvidētu šos vidus cilvēkus, kā arī uzticību un ar to saistītās maksas. Izmantojot vienprātības spēku, lietotāji var paši ieviest virsgrāmatas likumu, neuzticoties nevienam, kas pateiks viņiem, cik daudz naudas viņiem ir, un bez uzticēšanās trešajām pusēm, kas varētu izmantot jūsu līdzekļus.</p>\n\n<p>Tik liels uzsvars tiek likts uz šo bezuzticību, ka jebkuras izmaiņas vai tehnoloģisks papildinājums, kas pievieno uzticības elementu atpakaļ blokķēdē, tiek uztverts ar lielu skepsi un kritiku, un daži projekti pilnībā noraida visus šādus priekšlikumus. Interesanti, ka privātums netiek ņemts vērā.</p>\n\n<p>Atkal mēs skatāmies uz pārējo pasauli un redzam, ka pārāk bieži mūsu privātums ir “uzticamu” trešo pušu varā. Kad mēs norādām savu fizisko adresi precei, kuru vēlamies pasūtīt, mēs ticam, ka attiecīgais veikals neizmantos šo informāciju nelietīgiem mērķiem un nepārdos to citiem. Tas pats attiecas uz mūsu personīgajām domām vai fotoattēliem, ko ievietojam sociālajos tīklos. Tas attiecas pat uz mūsu finansēm, jo ir bijuši vairāki uzlauzumi grāmatvedības nozarē vai finanšu lietotnes, kas iekšējai publiskai padomei paziņo par to, kam cilvēki tērē naudu (t.i., Venmo).</p>\n\n<p>Monero apņemas nodrošināt bezuzticību blokķēdē un piemēro līdzīgu standartu mūsu pieejai privātumam. Mūsu privātumam nevajadzētu būt atkarīgam no trešās puses, kas sola to nodrošināt, kā arī no mūsu finanšu partneriem, kas mums sola, ka viņi ar to neaizbēgs. Šim nolūkam Monero nodrošina, ka visas ieviestās privātuma tehnoloģijas ir bezuzticības.</p>\n\n<p>Pastāv citas privātuma tehnoloģijas. Uzticamas, un, jāatzīst, tās nav bez stiprajām pusēm. Zcash izmanto noteikta veida pierādīšanas sistēmas kā pamatelementus savā konfidenciālajā transakciju protokolā, kam ir ļoti stingras privātuma garantijas, lielas anonimitātes kopas un, ja to izmanto pareizi, tas varētu būt spēcīgs veids, kā nodrošināt privātumu. Tomēr šīs pieejas trūkums ir tas, ka šīs tehnoloģijas sākotnējās iestatīšanas ietvaros ir jābūt parametru kopai, kas jāizvēlas un pēc tam jāaizmirst. Ja kāds paturēs šo parametru, viņam būs iespēja izveidot viltus SNARK pierādījumus, būtībā izdrukājot naudu, par ko neviens neuzzinās, jo tā ir paslēpta. Bet vai tas ietekmē privātumu? Daži teorētiski apgalvo, ka jā, bet citi nē, un galu galā ir jāveic vairāk pētījumu, lai iegūtu galīgu atbildi.</p>\n\n<p> Tomēr šis uzticības samazināšanas process izklausās tāpat kā scenāriji, par kuriem mēs runājām šī raksta sākumā. Tradicionālā pasaule. Tas, no kura mēs cenšamies attālināties. Blockchain pati par sevi nesamazina uzticību trešajām personām, bet gan novērš to. Monero kopiena uzskata, ka tas pats likvidēšanas, nevis samazināšanas standarts būtu jāpiemēro arī mūsu privātuma tehnoloģijām. Tas, ka nav galīgi pierādīts, ka uzticami iestatījumi var vai nevar apdraudēt privātumu, nenozīmē, ka šajā ziņā mums vajadzētu būt vaļīgiem attiecībā uz uzticības atgriešanu sistēmā.</p>\n\n<p>Protams, jebkura privātuma telpas attīstība ir uzlabojums, un uzticības privātums bieži vien ir tikai atspēriena punkts uz bezuzticības privātumu. Šādos gadījumos mēs priecājamies, ka šī telpa virzās uz priekšu. Un tomēr tajā pašā laikā Monero kopiena vienkārši nevar pēc labākās sirdsapziņas mūsu blokķēdē izvietot privātuma tehnoloģiju, kas vājinātu mūsu revolūcijas mērķi.</p>\n\n<p>Mums bieži tiek uzdots jautājums par to, kad Monero gatavojas ieviest šo vai citu jauno privātuma tehnoloģiju. Šos jautājumus bieži uzdod neinformēti cilvēki, kuri nesaprot kompromisus un tikai atspēko jaunos mūsdienu privātuma modes vārdus. Atbilde uz šiem jautājumiem ir vienkārša. Monero nepārtraukti meklē, pārskata un pēta jaunus privātuma protokolus, kas stiprinātu Monero ķēdes privātuma garantijas, taču mēs nevēlamies iedziļināties uzticības privātuma pasaulē, lai sasniegtu šo mērķi, pat ja garantijas teorētiski ir spēcīgākas.</p>\n\n<p>Daži saka, ka šī pieeja izrādīsies novecojusi, taču mēs domājam, ka šādi cilvēki ir aizmirsuši stāstu par to, kāpēc mēs esam šeit.</p>';
 
   @override
-  String get knowledge250Sbtrust250Sbdescription => 'Uzticības jēdziens ir viens no visvairāk apspriestajiem kriptovalūtas telpā. Galu galā viss blokķēdes mērķis ir novērst uzticēšanos trešajām personām.';
+  String get knowledge250Sbtrust250Sbdescription => 'Uzticības jēdziens ir viens no visvairāk apspriestajiem kriptovalūtu telpā. Galu galā viss blokķēdes mērķis ir novērst uzticēšanos trešajām personām.';
 
   @override
-  String get knowledge250Sbtrust250Sbtitle => 'Kāpēc Monero atšķirībā no Zcash izmanto neuzticamu iestatījumu';
+  String get knowledge250Sbtrust250Sbtitle => 'Kāpēc Monero atšķirībā no Zcash izmanto bezuzticības iestatījumu';
 
   @override
-  String get knowledge250Sbupgrades250Sb0250Sbtext => '<p>Viena no visbiežāk pārprastajām daļām Monero pieejā decentralizētas, privātumu saglabājošas un drošas kriptovalūtas izveidei ir loma, ko spēlē hard forks (vai tīkla jauninājumi).</p>\n<p>Šajā ziņojumā mēs apskatīsim, kas ir cietās dakšas, kāpēc tās ir svarīgas Monero un kādu lomu jūs tajās varat spēlēt nākotnē.</p>';
+  String get knowledge250Sbupgrades250Sb0250Sbtext => '<p>Viena no visbiežāk pārprastajām daļām Monero pieejā decentralizētas, privātumu saglabājošas un drošas kriptovalūtas izveidei ir loma, ko spēlē atzarojumi (vai tīkla jauninājumi).</p>\n<p>Šajā rakstā mēs apskatīsim, kas ir atzarojumi, kāpēc tie ir svarīgi Monero un kādu lomu jūs tajos varat spēlēt nākotnē.</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb1250Sbtext => '<p> Monero kopiena ir apņēmusies atkārtot un uzlabot projektu laika gaitā, un šķiet, ka apņemšanās ir saistīta ar diviem galvenajiem kopienas ētikas aspektiem: </p>\n<ol type=\"1\">\n<li><p> Monero projekts galu galā ir programmatūra — kods —, ko rakstījuši cilvēki. Tas var novest pie nepieciešamības labot kļūdas, pievienot laika gaitā atklātus vai izgudrotus uzlabojumus, ieviest protokola modernizāciju vai vienkārši uzturēt projektu. Tas daudzējādā ziņā ir līdzīgs citām jūsu izmantotajām programmatūras daļām (piemēram, pārlūkprogrammai, kurā to lasāt!), kas ir pastāvīgi jāatjaunina, lai pievienotu jaunas funkcijas un labotu kļūdas.</p></li>\n<li><p>Monero projekts ir privātuma rīks, un privātums ir arvien progresējoša bruņošanās sacensība. Cilvēki un grupas, kas nevēlas neko vairāk kā atņemt privātuma pasauli (gan finansiālu, gan personisku), pastāvīgi uzlabo, attīstās un izgudro jaunus veidus, kā uzbrukt modernām pieejām privātuma saglabāšanai, piemēram, Monero izmantotajām pieejām. Tā kā privātuma ienaidnieki atrod šīs jaunās pieejas, Monero tīklam ir jāspēj pielāgoties un uzlabot, lai cīnītos pret un aizstāvētu mūsu tiesības uz finansiālo privātumu.</p></li>\n</ol>';
+  String get knowledge250Sbupgrades250Sb1250Sbtext => '<p> Monero kopiena ir apņēmusies pārskatīt un uzlabot projektu laika gaitā, un šķiet, ka apņemšanās ir saistīta ar diviem galvenajiem kopienas ētikas aspektiem: </p>\n<ol type=\"1\">\n<li><p> Monero projekts galu galā ir programmatūra — kods, ko rakstījuši cilvēki. Tas var novest pie nepieciešamības labot kļūdas, pievienot laika gaitā atklātus vai izgudrotus uzlabojumus, ieviest protokola modernizāciju vai vienkārši uzturēt projektu. Tas daudzējādā ziņā ir līdzīgs citām jūsu izmantotajām programmatūras daļām (piemēram, pārlūkprogrammai, kurā to lasāt!), kas ir pastāvīgi jāatjaunina, lai pievienotu jaunas funkcijas un labotu kļūdas.</p></li>\n<li><p>Monero projekts ir privātuma rīks, un privātums ir arvien progresējoša bruņošanās sacensība. Cilvēki un grupas, kas nevēlas neko vairāk kā atņemt privātuma pasauli (gan finansiālu, gan personisku), pastāvīgi uzlabo, attīstās un izgudro jaunus veidus, kā uzbrukt modernām pieejām privātuma saglabāšanai, piemēram, Monero izmantotajām pieejām. Tā kā privātuma ienaidnieki atrod šīs jaunās pieejas, Monero tīklam ir jāspēj pielāgoties un uzlabot, lai cīnītos un aizstāvētu mūsu tiesības uz finansiālo privātumu.</p></li>\n</ol>';
 
   @override
-  String get knowledge250Sbupgrades250Sb1250Sbtitle => 'Kāpēc Monero ir jāturpina tīkla jaunināšana?';
+  String get knowledge250Sbupgrades250Sb1250Sbtitle => 'Kāpēc Monero ir jāturpina tīkla uzlabošana?';
 
   @override
-  String get knowledge250Sbupgrades250Sb2250Sbtext => '<p>Monero jaunināšanas sarežģītība stājas spēkā, kad saprotat, cik atšķirīga ir kriptovalūtas jaunināšana salīdzinājumā ar vienkāršu programmatūras atjauninājuma nosūtīšanu, piemēram, pārlūkprogrammai.</p>\n<p>Kriptovalūtās tīkla noteikumiem (piemēram, kā transakcijām vajadzētu izskatīties, kā notiek ieguve un kā pārbaudīt katru bloku) ir jāvienojas tīklam, ko sauc par “vienprātību”. Ja kāds no šiem noteikumiem ir jāmaina vai jāuzlabo, tīklam ir jāvienojas par jaunajiem noteikumiem, izraisot “hard-fork” – situāciju, kad tīkls faktiski sadalās divās bloku ķēdēs – vienā pēc vecajiem noteikumiem, un viens par jaunajiem noteikumiem.</p>\n<p>Kad visi kopienas locekļi piekrīt noteikumu izmaiņām, to sauc par “nestrīdīgu cieto dakšu”, un ķēde, kurai joprojām ir spēkā vecie noteikumi, nomirst un netiek mīnēta pēc “hard-fork”. Tas ir noticis gandrīz ar katru Monero cieto dakšu, un vienīgais veco noteikumu turpinājums bija projekti, kas mēģināja gūt peļņu no hard-fork.</p>\n<p>Lai gan bezstrīdus hard-forks ir vienīgais veids, kā pareizi jaunināt svarīgus Monero tīkla aspektus, tiem ir arī kaitinoša blakusparādība — vecā programmatūra, kas tika izdota pirms hard-fork plānošanas, nevar saprast jauno. tīkla noteikumiem un tāpēc nedarbojas pēc hard-fork! Tas var novest pie tā, ka lietotāji domā, ka līdzekļi ir pazaudēti, Monero blokķēde ir apstājusies un nevar pārvietot līdzekļus, kamēr nav uzlabojis savu maku.</p>';
+  String get knowledge250Sbupgrades250Sb2250Sbtext => '<p>Monero uzlabošanas sarežģītība stājas spēkā, kad saprotat, cik atšķirīga ir kriptovalūtas uzlabošana salīdzinājumā ar vienkāršu programmatūras atjauninājuma nosūtīšanu, piemēram, pārlūkprogrammai.</p>\n<p>Kriptovalūtās par tīkla noteikumiem (piemēram, kā pārskaitījumiem vajadzētu izskatīties, kā notiek mainošana un kā pārbaudīt katru bloku) ir jāvienojas tīklam, un to sauc par “vienprātību”. Ja kāds no šiem noteikumiem ir jāmaina vai jāuzlabo, tīklam ir jāvienojas par jaunajiem noteikumiem, izraisot “hard-fork” jeb atzarojumu – situāciju, kad tīkls faktiski sadalās divās bloku ķēdēs – viena dzīvo pēc vecajiem noteikumiem, un viena pēc jaunajiem.</p>\n<p>Kad visi kopienas locekļi piekrīt noteikumu izmaiņām, to sauc par “nestrīdīgu hard-fork”, un ķēde, kurai joprojām ir spēkā vecie noteikumi, nomirst un netiek mainota pēc “hard-fork”. Tas ir noticis gandrīz ar katru Monero atzarojumu, un vienīgais veco noteikumu turpinājums bija projekti, kas mēģināja gūt peļņu no hard-fork.</p>\n<p>Lai gan nestrīdīgi hard-forks ir vienīgais veids, kā pareizi uzlabot svarīgus Monero tīkla aspektus, tiem ir arī kaitinoša blakusparādība — vecā programmatūra, kas tika izdota pirms hard-fork plānošanas, nevar saprast jaunos tīkla noteikumus un tāpēc nedarbojas pēc hard-fork! Tas var novest pie tā, ka lietotāji domā, ka līdzekļi ir pazaudēti un Monero blokķēde ir apstājusies, un viņi nevar pārvietot līdzekļus, kamēr nav atjauninājuši savus makus.</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb2250Sbtitle => 'Kas ir cietā dakša?';
+  String get knowledge250Sbupgrades250Sb2250Sbtitle => 'Kas ir hard-fork?';
 
   @override
-  String get knowledge250Sbupgrades250Sb3250Sbtext => '<p>Tā kā Monero nav centrālās iestādes, izpilddirektora vai prezidenta, darbs pie lēmuma pieņemšanas, kad jaunināt tīklu, ko iekļaut un kā to darīt, ir <em> mums</em>, tiem cilvēkiem Monero kopiena, kas izvēlas iesaistīties un mijiedarboties! Šī ir gan ārkārtīgi svarīga decentralizēta projekta daļa, jo projekta plānošana un lēmumu pieņemšana galu galā ir decentralizēta, un to nodrošina kopiena.</p>\n<p>Katrā Monero tīkla jauninājumā iekļauto laiku un funkciju plānošana notiek divās galvenajās vietās:</p>\n<ol type=\"1\">\n<li><p>IRC un Matrix, Monero kopienas visbiežāk izmantotās tērzēšanas platformas (kas ir savienotas kopā). Šīs platformas nodrošina lielu grupu tērzēšanu, un tajās notiek visas ieplānotās Monero kopienas sanāksmes, izstrādātāju sanāksmes un pētniecības laboratorijas sanāksmes. Šīs sanāksmes ir labākais veids, kā klausīties (vai dot ieguldījumu!) plānošanā un diskusijās par tīkla jauninājumiem Monero.</p></li>\n<li><p>Github — galvenajā saziņas platformā ilgstošām Monero diskusijām, plānošanai un organizēšanai. Monero kopiena izmanto Github, lai organizētu sanāksmes, apspriestu jaunas funkcijas un idejas un koordinētu tīkla jauninājumu plānošanu papildus Monero projekta koda saglabāšanai.</p></li>\n</ol>\n<p>Ja jums ir svarīga ideja par tīkla jaunināšanu, jums nepatīk kāda pieeja vai ja jums ir bažas par jaunināšanas laiku, ir svarīgi, lai jūs izteiktos un skaidri izklāstītu savu situāciju sabiedrībai![X1521X ]';
+  String get knowledge250Sbupgrades250Sb3250Sbtext => '<p>Tā kā Monero nav centrālās iestādes, izpilddirektora vai prezidenta, darbs pie lēmuma pieņemšanas, kad atjaunināt tīklu, ko iekļaut un kā to darīt, ir <em> mums</em>, tiem cilvēkiem Monero kopienā, kas izvēlas iesaistīties un mijiedarboties! Šī ir ārkārtīgi svarīga decentralizēta projekta daļa, jo projekta plānošana un lēmumu pieņemšana galu galā ir decentralizēta, un to nodrošina kopiena.</p>\n<p>Katrā Monero tīkla jauninājumā iekļauto laiku un funkciju plānošana notiek divās galvenajās vietās:</p>\n<ol type=\"1\">\n<li><p>IRC un Matrix, Monero kopienas visbiežāk izmantotās tērzēšanas platformas (kas ir savienotas kopā). Šīs platformas nodrošina lielu grupu tērzēšanu, un tajās notiek visas ieplānotās Monero kopienas sanāksmes, izstrādātāju sanāksmes un pētniecības laboratorijas sanāksmes. Šīs sanāksmes ir labākais veids, kā klausīties (vai dot ieguldījumu!) plānošanā un diskusijās par Monero tīkla jauninājumiem.</p></li>\n<li><p>Github — galvenajā saziņas platformā ilgstošām Monero diskusijām, plānošanai un organizēšanai. Monero kopiena izmanto Github, lai organizētu sanāksmes, apspriestu jaunas funkcijas un idejas un koordinētu tīkla jauninājumu plānošanu papildus Monero projekta koda glabāšanai.</p></li>\n</ol>\n<p>Ja jums ir svarīga ideja par tīkla jaunināšanu, jums nepatīk kāda pieeja vai ja jums ir bažas par jaunināšanas laiku, ir svarīgi, lai jūs izteiktos un skaidri izklāstītu savu viedokli kopienai!</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb3250Sbtitle => 'Kurš izlemj, kad Monero tīkls tiks jaunināts un kas ir iekļauts?';
+  String get knowledge250Sbupgrades250Sb3250Sbtitle => 'Kurš izlemj, kad Monero tīkls tiks uzlabots un kas tiks iekļauts?';
 
   @override
-  String get knowledge250Sbupgrades250Sb4250Sbtext => '<p>Tā kā Monero tīkla jauninājumiem ir nepieciešama kopienas koordinācija un apstiprināšana, kā arī programmatūras atjauninājumi, ir ārkārtīgi svarīgi, lai tīkla jauninājumu plānošanā, testēšanā un saziņas procesā iesaistītos pēc iespējas vairāk cilvēku.</p>\n<p>Šeit ir daži vienkārši veidi, kā palīdzēt atrisināt problēmas saistībā ar tīkla jaunināšanu:</p>\n<ol type=\"1\">\n<li>Pievienojieties plānošanas sapulcēm <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues\">, kas izliktas vietnē Github</a>, klausieties un sniedziet ieguldījumu, ja jums ir kas aktuāls.</li>\n<li>Sazinieties ar informāciju par tīkla jaunināšanas laiku (kad tas ir izlemts!) ar savu iecienītāko biržu, maku vai ieguves fondu. Var būt sarežģīti pareizi informēt visus Monero lietotājus par jaunināšanu, tāpēc ir svarīgi, lai mēs visi palīdzētu, kur varam darīt zināmu informāciju.</li>\n<li>Pārbaudiet programmatūru pirms tīkla jaunināšanas. Pirms tīkla jaunināšanas tiks aicināts testētājiem gan testnet, gan stagenet, lai nodrošinātu, ka visi jaunināšanas aspekti ir pareizi plānoti un ieviesti programmatūrā. Jo vairāk cilvēku iesaistīsies un rūpīgi izmēģinās jaunās versijas, jo lielāka iespēja, ka tīkla jaunināšana noritēs raiti!</li>\n<li>Kad ir publicēti laidieni, kas ir saderīgi ar tīkla jaunināšanu, noteikti veiciet jaunināšanu nekavējoties! Jo vairāk cilvēku ir jaunināti un gatavi tīkla jaunināšanai, jo raitāk tīkls ar to tiks galā un lietotājiem būs mazāk galvassāpju.</li>\n</ol>';
+  String get knowledge250Sbupgrades250Sb4250Sbtext => '<p>Tā kā Monero tīkla uzlabojumiem ir nepieciešama kopienas koordinācija un apstiprināšana, kā arī programmatūras atjauninājumi, ir ārkārtīgi svarīgi, lai tīkla uzlabojumu plānošanā, testēšanā un saziņas procesā iesaistītos pēc iespējas vairāk cilvēku.</p>\n<p>Šeit ir daži vienkārši veidi, kā palīdzēt atrisināt problēmas saistībā ar tīkla uzlabošanu:</p>\n<ol type=\"1\">\n<li>Pievienojieties plānošanas sapulcēm <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues\">, kas publicētas vietnē Github</a>, ieklausieties un sniedziet ieguldījumu, ja jums ir kas aktuāls.</li>\n<li>Sazinieties ar informāciju par tīkla atjaunināšanas laiku (kad tas ir izlemts!) ar savu iecienītāko biržu, maku vai mainošanas baseinu. Var būt sarežģīti pareizi informēt visus Monero lietotājus par atjaunināšanu, tāpēc ir svarīgi, lai mēs visi palīdzētu izplatīt šādu informāciju, kur vien varam.</li>\n<li>Pārbaudiet programmatūru pirms tīkla uzlabojumiem. Pirms tīkla atjaunināšanas tiks aicināts testēt gan testnet, gan stagenet, lai nodrošinātu, ka visi uzlabojuma aspekti ir pareizi plānoti un ieviesti programmatūrā. Jo vairāk cilvēku iesaistīsies un rūpīgi izmēģinās jaunās versijas, jo lielāka iespēja, ka tīkla atjaunināšana noritēs raiti!</li>\n<li>Kad ir publicēti izdevumi, kas ir saderīgi ar tīkla atjauninājumu, noteikti veiciet atjaunināšanu nekavējoties! Jo vairāk cilvēku ir atjauninājuši un gatavi tīkla atjaunināšanai, jo raitāk tīkls ar to tiks galā un lietotājiem būs mazāk galvassāpju.</li>\n</ol>';
 
   @override
-  String get knowledge250Sbupgrades250Sb4250Sbtitle => 'Kā es varu palīdzēt ar tīkla jauninājumiem?';
+  String get knowledge250Sbupgrades250Sb4250Sbtitle => 'Kā es varu palīdzēt ar tīkla uzlabojumiem?';
 
   @override
-  String get knowledge250Sbupgrades250Sb5250Sbtext => '<p>Lai gan datums vēl nav iekalts, drīzumā tiks veikts tīkla jauninājums, lai ieviestu dažus svarīgus Monero jauninājumus un funkcijas:</p>\n<ol type=\"1\">\n<li>Gredzena izmēra palielināšana no 11 uz 16, palielinot pamata anonimitātes kopu (lasiet: ticamu noliedzamību vai pamata konfidencialitāti) katram tīklam</li>\n<li><a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/view-tags-reduce-monero-sync-time\">Skatīt atzīmes — lielisks veids, kā samazināt maka sinhronizācijas laiku par 30–40%</a></li>\n<li>Maksas izmaiņas, uzlabojot tīkla drošību un noturību pret straujām izmaiņām maksas tirgū vai ļaunprātīgu subjektu uzbrukumiem</li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/2020/12/24/Bulletproofs+-in-Monero.html\">Bulletproofs+ — turpmāks Monero darījumu efektivitātes uzlabojums</a></li>\n</ol>\n<p>Šīs izmaiņas ievērojami uzlabos tīkla privātumu, efektivitāti un drošību, vienlaikus paverot ceļu <a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/seraphis-for-monero\">Seraphis</a>, nākamās paaudzes darījumu protokolam Monero.</p>';
+  String get knowledge250Sbupgrades250Sb5250Sbtext => '<p>Lai gan datums vēl nav akmenī kalts, drīzumā tiks veikts tīkla atjauninājums, lai ieviestu dažus svarīgus Monero uzlabojumus un funkcijas:</p>\n<ol type=\"1\">\n<li>Gredzena izmēra palielināšana no 11 uz 16, palielinot pamata anonimitātes kopu (lasiet: ticamu noliedzamību vai pamata konfidencialitāti) katram pārskaitījumam tīklā</li>\n<li><a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/view-tags-reduce-monero-sync-time\">Skata atzīmes — lielisks veids, kā samazināt maka sinhronizācijas laiku par 30–40%</a></li>\n<li>Maksas izmaiņas, uzlabojot tīkla drošību un noturību pret straujām izmaiņām maksas tirgū vai ļaunprātīgu subjektu uzbrukumiem</li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/2020/12/24/Bulletproofs+-in-Monero.html\">Bulletproofs+ — turpmāks Monero pārskaitījumu efektivitātes uzlabojums</a></li>\n</ol>\n<p>Šīs izmaiņas ievērojami uzlabos tīkla privātumu, efektivitāti un drošību, vienlaikus paverot ceļu <a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/seraphis-for-monero\">Seraphis</a>, nākamās paaudzes pārskaitījumu protokolam Monero.</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb5250Sbtitle => 'Ko es varu sagaidīt nākamajā Monero tīkla jauninājumā?';
+  String get knowledge250Sbupgrades250Sb5250Sbtitle => 'Ko varam sagaidīt nākamajā Monero tīkla atjauninājumā?';
 
   @override
-  String get knowledge250Sbupgrades250Sb6250Sbtext => '<p>Tēma par sarežģītām dakšām un tīkla jauninājumiem ir plaša, un Monero tiem ir gara un vēsturiska vēsture, tāpēc noteikti iedziļinieties dažās no tālāk norādītajām saitēm, ja vēlaties uzzināt vairāk par vēsture, process vai plānošana, kas notiek gaidāmajai tīkla jaunināšanai!</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">Monero v15 cietās dakšas plānošana</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero#scheduled-software-upgrades\">Plānotie programmatūras jauninājumi (Monero valodā)</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://web.getmonero.org/2020/09/01/note-scheduled-upgrades.html\">Piezīme par plānotajiem protokola jauninājumiem</a></li>\n</ul>';
+  String get knowledge250Sbupgrades250Sb6250Sbtext => '<p>Tēma par atzarojumiem un tīkla uzlabojumiem ir plaša, un Monero tiem ir gara un vēsturiska vēsture. Tāpēc noteikti iedziļinieties dažās no tālāk norādītajām saitēm, ja vēlaties uzzināt vairāk par vēsturi, procesu vai plānošanu, kas notiek gaidāmajai tīkla atjaunināšanai!</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">Monero v15 hard-fork plānošana</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero#scheduled-software-upgrades\">Plānotie programmatūras atjauninājumi (Monero)</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://web.getmonero.org/2020/09/01/note-scheduled-upgrades.html\">Piezīme par plānotajiem protokola atjauninājumiem</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbupgrades250Sb6250Sbtitle => 'Kā es varu uzzināt vairāk?';
 
   @override
-  String get knowledge250Sbupgrades250Sbdescription => 'XMR cieto dakšu loma bieži tiek pārprasta — šodien mēs apskatīsim, kas tie ir un kāpēc tie ir svarīgi.';
+  String get knowledge250Sbupgrades250Sbdescription => 'XMR atzarojumu loma bieži tiek pārprasta — šodien mēs apskatīsim, kas tie ir un kāpēc tie ir svarīgi.';
 
   @override
-  String get knowledge250Sbupgrades250Sbtitle => 'Kā Monero izmanto hard-forks tīkla jaunināšanai';
+  String get knowledge250Sbupgrades250Sbtitle => 'Kā Monero izmanto hard-forks tīkla uzlabošanai';
 
   @override
-  String get knowledge250SbviewTags250Sb0250Sbtext => '<p>Viena no visbiežāk sastopamajām sūdzībām par Monero lietošanu ikdienā ir laiks, kas var būt nepieciešams, lai sinhronizētu maku, pirms var nosūtīt Monero. Par laimi, Monero kopienas izstrādātāji un pētnieki ir atraduši lielisku veidu, kā par 40%+ samazināt laiku, kas nepieciešams, lai sinhronizētu savu maku bez papildu blokķēdes uzpūšanās, maksām utt.</p>\n\n<p>Ievadiet “view tags”, kas ir viena baita papildinājums katra darījuma datiem — nākamajā tīkla jauninājumā tas būs pieejams Monero!</p>';
+  String get knowledge250SbviewTags250Sb0250Sbtext => '<p>Viena no visbiežāk sastopamajām sūdzībām par Monero lietošanu ikdienā ir laiks, kas var būt nepieciešams, lai sinhronizētu maku, pirms var nosūtīt Monero. Par laimi, Monero kopienas izstrādātāji un pētnieki ir atraduši lielisku veidu, kā par 40%+ samazināt laiku, kas nepieciešams, lai sinhronizētu savu maku bez papildu blokķēdes uzpūšanās, maksām utt.</p>\n\n<p>Ievadiet “view tags”, kas ir viena baita papildinājums katra pārskaitījuma datiem — nākamajā tīkla atjauninājumā tas būs pieejams Monero!</p>';
 
   @override
-  String get knowledge250SbviewTags250Sb1250Sbtext => '<p>Viens no pirmajiem jautājumiem, uz kuru mums ir jāatbild, lai labāk izprastu vajadzību pēc tāda risinājuma kā skata tagi, ir iemesls, kāpēc Monero maka sinhronizācija ir lēnāka nekā kriptovalūtas, piemēram, Bitcoin.</p>\n<p>Tā kā Bitcoin visi darījumi nav privāti un atklāj iztērētās monētas, summas un ķēdē iesaistītās adreses, Bitcoin maki var vienkārši meklēt visus neiztērētos darījumu rezultātus (UTXO) vai izmantotās adreses konkrētajam makam. , ātri skenējot blokķēdi, meklējot tikai UTXO, kas pieder šīm adresēm, lai noskaidrotu, kuras monētas pieder jūsu makam un kuras var iztērēt.</p>\n<p>Tomēr Monero visi darījumi saglabā lietotāja privātumu, slēpjot sūtītāju, saņēmēju un katrā darījumā iesaistītās summas. Šis privātums, lai gan ir ļoti svarīgs tīkla lietotāju aizsardzībai, arī ievieš lēnāku maka sinhronizāciju. Monero jūsu makam ir jāsalīdzina katra tīklā esošā transakciju izvade (TXO) ar jūsu maka privātajām atslēgām.</p>\n<p>Šis salīdzinājums ietver daudzas sarežģītas matemātikas un kriptogrāfijas, lai apstiprinātu, ka izvade patiešām ir jūsu, jo visas summas, adreses un zināmie iztērētie izvadi (vai monētas) ir paslēpti Monero ķēdē.</p>';
+  String get knowledge250SbviewTags250Sb1250Sbtext => '<p>Viens no pirmajiem jautājumiem, uz kuru mums ir jāatbild, lai labāk izprastu vajadzību pēc tāda risinājuma kā skata tagi, ir iemesls, kāpēc Monero maka sinhronizācija ir lēnāka nekā kriptovalūtām kā Bitcoin.</p>\n<p>Tā kā Bitcoin visi pārskaitījumi nav privāti un atklāj iztērētās monētas, summas un ķēdē iesaistītās adreses, Bitcoin maki var vienkārši meklēt visus neiztērēto pārskaitījumu rezultātus (UTXO) vai izmantotās adreses konkrētajam makam, ātri skenējot blokķēdi un meklējot tikai UTXO, kas pieder šīm adresēm, lai noskaidrotu, kuras monētas pieder jūsu makam un kuras var iztērēt.</p>\n<p>Tomēr Monero visi pārskaitījumi saglabā lietotāja privātumu, slēpjot sūtītāju, saņēmēju un katrā pārskaitījumā iesaistītās summas. Šis privātums, lai gan ir ļoti svarīgs tīkla lietotāju aizsardzībai, arī rada lēnāku maka sinhronizāciju. Monero jūsu makam ir jāsalīdzina katra tīklā esošā pārskaitījumu izvade (TXO) ar jūsu maka privātajām atslēgām.</p>\n<p>Šis salīdzinājums ietver daudzas sarežģītas matemātiskas un kriptogrāfiskas darbības, lai apstiprinātu, ka izvade patiešām ir jūsu, jo visas summas, adreses un zināmās iztērētās izvades (vai monētas) ir paslēptas Monero ķēdē.</p>';
 
   @override
   String get knowledge250SbviewTags250Sb1250Sbtitle => 'Kāpēc Monero maka sinhronizācija ir lēnāka nekā Bitcoin?';
 
   @override
-  String get knowledge250SbviewTags250Sb2250Sbtext => '<p>Lai palīdzētu samazināt Monero maku sinhronizācijas laiku, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">pētnieks UkoeHB nāca klajā ar jaunu pieeju</a> — pievienojiet 1 baita “birku” katram darījumam, izmantojot tikai zināmu kopīgo noslēpumu. šī darījuma sūtītājam un saņēmējam.</p>\n<p>Šo kopīgoto noslēpumu ģenerē sūtītājs, izmantojot adresi, ko viņam norādījis adresāts, un tai nav nepieciešama aktīva sūtītāja un saņēmēja sadarbība. Pēc tam šī koplietotā noslēpuma pirmais baits (vai rakstzīme) tiek pievienots darījuma datiem, publicējot to Monero tīklā.</p>\n<p>Kad kāds no šī darījuma dalībniekiem pēc tam vēlas sinhronizēt savu maku ar Monero blokķēdi, tā vietā, lai veiktu visu sarežģīto matemātiku un kriptogrāfiju katram tīkla TXO, maciņš tagad var vienkārši pārbaudīt, vai nav šo 1 baita lauku katrā transakcijā un tikai pēc tam veiciet laikietilpīgo verifikāciju darījumiem, kuriem ir šis tags — 1/256 TXO tīklā, precīzāk!</p>\n<p>Šis tags ārējiem skatītājiem neatklāj nekādu informāciju par darījumu, tikai pievieno 1 baitu (niecīga summa) darījumu lielumam, tomēr ļauj mums samazināt sinhronizācijas laiku par 40%+, samazinot sarežģītās pārbaudes. nepieciešams!</p>';
+  String get knowledge250SbviewTags250Sb2250Sbtext => '<p>Lai palīdzētu samazināt Monero maku sinhronizācijas laiku, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">pētnieks UkoeHB nāca klajā ar jaunu pieeju</a> — pievienot 1 baita “birku” katram pārskaitījumam, izmantojot kopīgo noslēpumu, zināmu šī pārskaitījuma sūtītājam un saņēmējam.</p>\n<p>Šo kopīgo noslēpumu ģenerē sūtītājs, izmantojot adresi, ko viņam norādījis adresāts, un tai nav nepieciešama aktīva sūtītāja un saņēmēja sadarbība. Pēc tam šī kopīgā noslēpuma pirmais baits (vai rakstzīme) tiek pievienots pārskaitījuma datiem, publicējot to Monero tīklā.</p>\n<p>Kad kāds no šī pārskaitījuma dalībniekiem pēc tam vēlas sinhronizēt savu maku ar Monero blokķēdi, tā vietā, lai veiktu visu sarežģīto matemātiku un kriptogrāfiju katram tīkla pārskaitījumam, maks tagad var vienkārši meklēt šo 1 baita lauku katrā pārskaitījumā un tikai pēc tam veikt laikietilpīgo verifikāciju pārskaitījumiem, kuriem ir šis tags — 1/256 no visiem pārskaitījumiem tīklā!</p>\n<p>Šis tags ārējiem skatītājiem neatklāj nekādu informāciju par pārskaitījumu, tikai pievieno 1 baitu (niecīgs apjoms) pārskaitījuma izmēram, tomēr ļauj mums samazināt sinhronizācijas laiku par 40%+, samazinot sarežģītās pārbaudes!</p>';
 
   @override
   String get knowledge250SbviewTags250Sb2250Sbtitle => 'Kas ir skata tagi?';
 
   @override
-  String get knowledge250SbviewTags250Sb3250Sbtext => '<p>Iedomājieties, ka jums istabā ir 4096 kastes, no kurām tikai 5 kastes pieder jums. Visas kastes ir pilnīgi neatšķiramas no ārpuses, un vienīgais veids, kā noteikt, vai kaste ir paredzēta jums, ir to atvērt un atrisināt iekšā ierakstītu laikietilpīgu matemātikas uzdevumu, lai pārliecinātos, ka tā pieder jums.</p>\n<p>Tagad iedomājieties, ka nolemjat likt personai, kas jums nosūtīja šīs 5 kastes, ģenerēt īpašu kodu, izmantojot jūsu adresi, un pēc tam katras jums nosūtītās kastes ārpusē ievietot tikai šī ģenerētā koda pirmo rakstzīmi. Visi pārējie dara to pašu ar savām kastēm (lai nodrošinātu, ka visas kastes joprojām nav atšķiramas), taču tagad varat vienkārši apskatīt vienas rakstzīmes kodu kastes ārpusē un atvērt tikai tās kastes, kurās ir šī rakstzīme. X753X]\n<p>Lai gan citi lodziņi atbildīs jūsu kodam, pat daži, kas jums nepieder, to lodziņu skaits, kas jums ir jāatver un jāatrisina matemātikas uzdevums, tagad ir tikai 16 (1/256 lodziņi!) visu 4096 vietā. </p>\n<p>Tagad jūs atverat šos 16 lodziņus, atrisiniet matemātikas uzdevumus un paturiet 5 kastes, kas faktiski pieder jums no šīs grupas!</p>';
+  String get knowledge250SbviewTags250Sb3250Sbtext => '<p>Iedomājieties, ka jums istabā ir 4096 kastes, no kurām tikai 5 kastes pieder jums. Visas kastes ir pilnīgi neatšķiramas no ārpuses, un vienīgais veids, kā noteikt, vai kaste ir paredzēta jums, ir to atvērt un atrisināt iekšā ierakstītu laikietilpīgu matemātikas uzdevumu, lai pārliecinātos, ka tā pieder jums.</p>\n<p>Tagad iedomājieties, ka nolemjat likt personai, kas jums nosūtīja šīs 5 kastes, ģenerēt īpašu kodu, izmantojot jūsu adresi, un pēc tam katras jums nosūtītās kastes ārpusē ievietot tikai šī ģenerētā koda pirmo rakstzīmi. Visi pārējie dara to pašu ar savām kastēm (lai nodrošinātu, ka visas kastes joprojām nav atšķiramas), taču tagad varat vienkārši apskatīt vienas rakstzīmes kodu kastes ārpusē un atvērt tikai tās kastes, uz kurām ir šī rakstzīme.</p>\n<p>Lai gan citi lodziņi arī atbildīs jūsu kodam, tai skaitā daži, kas jums nepieder, to lodziņu skaits, kas jums ir jāatver un jāatrisina matemātikas uzdevums, tagad ir tikai 16 (1/256 lodziņi!) visu 4096 vietā. </p>\n<p>Tagad jūs atverat šos 16 lodziņus, atrisināt matemātikas uzdevumus un paturat 5 kastes no šīs grupas, kas patiešām pieder jums!</p>';
 
   @override
-  String get knowledge250SbviewTags250Sb3250Sbtitle => 'Skatīt tagus: vienkāršots piemērs';
+  String get knowledge250SbviewTags250Sb3250Sbtitle => 'Skata tagi: vienkāršots piemērs';
 
   @override
-  String get knowledge250SbviewTags250Sb4250Sbtext => '<p>Skatīšanas atzīmes ir viena no funkcijām, ko pašlaik plānots iekļaut <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">gaidāmajā tīkla jauninājumā</a>, un tos vajadzētu izlaist kādu laiku šajā pavasarī. Kopiena <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bounties.monero.social/posts/28/implement-view-tags-to-decrease-wallet-sync-times-in-monero\"> izvirzīja 23.3XMR</a> (rakstīšanas laikā), lai stimulētu skatu tagu izstrādi un ieviešanu, un rezultātā lielākā daļa darba, lai iekļautu skata tagus Monero koda bāzē, jau ir paveikts. pabeidza j-berman sadarbībā ar recenzentiem un pētniekiem.</p>\n<p>Kad tīkls ir ieviesis skata atzīmes, visas transakcijas, kas nosūtītas pēc tīkla jaunināšanas, gūs labumu no krasi uzlabotā maka sinhronizācijas laika. Jums nav jādara nekas īpašs, lai sāktu lietot skata tagus, jūsu iecienītākais Monero maciņš vienkārši sāks tos lietot pēc tīkla jaunināšanas!</p>';
+  String get knowledge250SbviewTags250Sb4250Sbtext => '<p>Skata tagi ir viena no funkcijām, ko pašlaik plānots iekļaut <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">gaidāmajā tīkla uzlabojumā</a>, un tos paredzēts izlaist šajā pavasarī. Kopiena <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bounties.monero.social/posts/28/implement-view-tags-to-decrease-wallet-sync-times-in-monero\"> savāca 23.3XMR</a> (rakstīšanas laikā), lai stimulētu skatu tagu izstrādi un ieviešanu, un rezultātā lielākā daļa darba, lai iekļautu skata tagus Monero koda bāzē, jau ir paveikts. To paveica j-berman sadarbībā ar recenzentiem un pētniekiem.</p>\n<p>Kad tīkls ir ieviesis skata tagus, visi pārskaitījumi, kas nosūtīti pēc tīkla atjaunināšanas, gūs labumu no krasi uzlabotā maka sinhronizācijas laika. Jums nav jādara nekas īpašs, lai sāktu lietot skata tagus, jūsu iecienītākais Monero maks vienkārši sāks tos lietot pēc tīkla atjaunināšanas!</p>';
 
   @override
-  String get knowledge250SbviewTags250Sb4250Sbtitle => 'Kad skata atzīmes būs pieejamas Monero?';
+  String get knowledge250SbviewTags250Sb4250Sbtitle => 'Kad skata tagi būs pieejami Monero?';
 
   @override
-  String get knowledge250SbviewTags250Sb5250Sbtext => '<p>Ja tas ir izraisījis jūsu interesi par skatīšanas tagiem, tālāk skatiet dažas papildu saites, kas sniedz padziļinātu tēmu:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">Samaziniet skenēšanas laiku, izmantojot 1 baitu uz izvadi “skata tagu”</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/pull/8061\">Pievienojiet skata atzīmes izvadēm, lai samazinātu maka skenēšanas laiku</a></li>\n</ul>';
+  String get knowledge250SbviewTags250Sb5250Sbtext => '<p>Ja tas ir izraisījis jūsu interesi par skata tagiem, tālāk ir dažas papildu saites, kas sniedz padziļinātu ieskatu tēmā:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">Samaziniet skenēšanas laiku, izmantojot 1 baita uz izvadi “skata tagu”</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/pull/8061\">Pievienojiet skata tagus izvadēm, lai samazinātu maka skenēšanas laiku</a></li>\n</ul>';
 
   @override
   String get knowledge250SbviewTags250Sb5250Sbtitle => 'Kā es varu uzzināt vairāk?';
 
   @override
-  String get knowledge250SbviewTags250Sbdescription => 'Viena no visbiežāk sastopamajām sūdzībām par Monero ir maka sinhronizācijas laiki — šodien mēs runājam par izcilu veidu, kā izstrādātāji to ir atraduši, lai to samazinātu.';
+  String get knowledge250SbviewTags250Sbdescription => 'Viena no visbiežāk sastopamajām sūdzībām par Monero ir maka sinhronizācijas laiki — šodien mēs runājam par izcilu veidu, ko izstrādātāji ir atraduši, lai to samazinātu.';
 
   @override
-  String get knowledge250SbviewTags250Sbtitle => 'Skatīt tagus: kā viens baits samazinās Monero maka sinhronizācijas laiku par 40%+';
+  String get knowledge250SbviewTags250Sbtitle => 'Skata tagi: kā viens baits samazinās Monero maka sinhronizācijas laiku par 40%+';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbdecentralized250Sbtext => 'Pats Bitcoin ir decentralizēts, taču lielākā daļa sajaukšanas pakalpojumu ir centralizēti. Tas nozīmē, ka jums viņiem ir jāuzticas. Tomēr daži jaunāki, piemēram, Wasabi seifi, nav.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbdecentralized250Sbtext => 'Pats Bitcoin ir decentralizēts, taču lielākā daļa jaukšanas pakalpojumu ir centralizēti. Tas nozīmē, ka jums viņiem ir jāuzticas. Tomēr daži jaunāki, piemēram, Wasabi maki, nav.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbfungibility250Sbtext => '<p>\n                          Ne visi Bitcoin ir vienādi un tiem ir vienāda vērtība. Dažus Bitcoinus ir iekļāvušas melnajā sarakstā un bloķējušas vairākas vienības, padarot šīs monētas mazāk vērtīgas nekā pārējās. Ja saņemat Bitcoins, kas agrāk tika izmantoti nelikumīgiem mērķiem, tad jūsu Bitcoins var tikt iekļauts melnajā sarakstā, lai gan jums nebija nekāda sakara ar nelegālo darbību. Vai, piemēram, valdība, darba devējs vai kāda cita iestāde nolemj nākotnē iekļaut jūsu Bitcoins melnajā sarakstā, līdzīgi kā tas notiek ar līdzekļu iesaldēšanu vai konfiskāciju. Jūs neko nevarētu darīt. Tā kā mikseris tikai apgrūtina jūsu Bitcoin izsekošanu, šī kategorija ir atzīmēta kā &quot;nav aizstājama.&quot;\n                        </p>\n\n                        <ul class=\"disks\">\n                          <li>\n                            Andreass Antonopuls, bijušais Bitcoin Core izstrādātājs, kurš ir labi cienīts Bitcoin un citās kriptovalūtu kopienās, atzīst Bitcoin aizstājamības problēmu rakstā <a href=\"https://www.youtube.com/watch?v=ak1iojpiHpM&feature=youtu .be&t=33m9s\"> YouTube videoklips</a>.\n                          </li>\n                          <li>\n                            Diskusija par Bitcoin aizstājamības problēmu vietnē <a href=\"https://bitcointalk.org/index.php?topic=1190707.0\"> Bitcointalk.org\n                            </a>\n                          </li>\n                        </ul>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbfungibility250Sbtext => '<p>\n                          Ne visi Bitcoin ir vienādi un tiem ir vienāda vērtība. Dažus Bitcoinus ir iekļauti melnajā sarakstā un tos ir bloķējušas vairākas organizācijas, padarot šīs monētas mazāk vērtīgas nekā pārējās. Ja saņemat Bitcoin, kas agrāk tika izmantots nelikumīgiem mērķiem, tas var būt iekļauts melnajā sarakstā, lai gan jums nebija nekāda sakara ar nelegālo darbību. Vai, piemēram, valdība, darba devējs vai kāda cita iestāde nolemj nākotnē iekļaut jūsu Bitcoin melnajā sarakstā, līdzīgi kā tas notiek ar līdzekļu iesaldēšanu vai konfiskāciju. Jūs neko nevarētu darīt. Tā kā mikseris tikai apgrūtina jūsu Bitcoin izsekošanu, šī kategorija ir atzīmēta kā &quot;neaizstājama.&quot;\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            Andreas Antonopulous, bijušais Bitcoin Core izstrādātājs, kurš ir cienīts Bitcoin un citās kriptovalūtu kopienās, atzīst Bitcoin aizstājamības problēmu <a href=\"https://www.youtube.com/watch?v=ak1iojpiHpM&feature=youtu .be&t=33m9s\"> YouTube videoklipā</a>.\n                          </li>\n                          <li>\n                            Diskusija par Bitcoin aizstājamības problēmu vietnē <a href=\"https://bitcointalk.org/index.php?topic=1190707.0\"> Bitcointalk.org\n                            </a>\n                          </li>\n                        </ul>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbprivate250Sbtext => '<p>\n                          Visi Bitcoin darījumi ir redzami blokķēdē, un ir <a href=\"http://www.bitcoinrichlist.com/top100\"> Bitcoin bagāto saraksts</a>, tāpēc Bitcoin nav privāts. Bitcoin ir <a href=\"https://bitcoin.org/en/you-need-to-know\"> pseidonīms</a>, nevis anonīms.\n                        </p>\n\n                        <p>\n                          Attiecībā uz <b>Bitcoin mikseriem</b> jums ir jāuzticas, ka tie var glabāt savus datus drošībā un ka tie nepieder valdībai, hakeriem vai citām struktūrām vai nesadarbojas ar tām.\n                        </p>\n\n                        <p>\n                          2017. gada jūlijā lielākā Bitcoin sajaukšanas pakalpojuma BITMIXER.IO dibinātājs paziņoja, ka tas tiek slēgts, un kā iemeslu minēja šo:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              &hellip; Tagad es sapratu, ka Bitcoin ir caurspīdīga, neanonīma sistēma <b> pēc dizaina </b>. Blockchain ir lieliska atvērta grāmata&hellip;\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, paziņojumā par vietnes <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg20357093#msg20357093\"> Bitcointalk.org </a> slēgšanu (uzsvars oriģinālā).\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Dažas nedēļas vēlāk, apsverot dažādas uz privātumu orientētas monētas, viņš teica:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Pēc dziļas izmeklēšanas es apstiprinu, ka MONERO ir labākā privātuma valūta. Tāpēc es ļoti iesaku MONERO visiem cilvēkiem, kuriem nepieciešama papildu privātums.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg21113378#msg21113378\"> papildu ziņojumā</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbprivate250Sbtext => '<p>\n                          Visi Bitcoin pārskaitījumi ir redzami blokķēdē, un ir <a href=\"http://www.bitcoinrichlist.com/top100\"> Bitcoin bagāto saraksts</a>, tāpēc Bitcoin nav privāts. Bitcoin ir <a href=\"https://bitcoin.org/en/you-need-to-know\"> pseidonīms</a>, nevis anonīms.\n                        </p>\n\n                        <p>\n                          Attiecībā uz <b>Bitcoin mikseriem</b> jums ir jāuzticas, ka tie var glabāt savus datus drošībā un ka tie nepieder valdībai, hakeriem vai citām struktūrām vai nesadarbojas ar tām.\n                        </p>\n\n                        <p>\n                          2017. gada jūlijā lielākā Bitcoin jaukšanas pakalpojuma BITMIXER.IO dibinātājs paziņoja, ka tas tiek slēgts, un kā iemeslu minēja šo:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              &hellip; Esmu sapratis, ka Bitcoin ir caurspīdīga, neanonīma sistēma <b> pēc dizaina </b>. Blockchain ir lieliska atvērta grāmata&hellip;\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO paziņojums par slēgšanu vietnē <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg20357093#msg20357093\"> Bitcointalk.org </a> (uzsvars oriģinālā).\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Dažas nedēļas vēlāk, apsverot dažādas uz privātumu orientētas monētas, viņš teica:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Pēc dziļas izmeklēšanas es apstiprinu, ka MONERO ir labākā privātuma valūta. Tāpēc es ļoti iesaku MONERO visiem cilvēkiem, kuriem nepieciešams spēcīgāks privātums.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg21113378#msg21113378\"> sekojošais raksts</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbuntraceable250Sbtext => ' <p>\n                          Tā kā visi Bitcoin darījumi ir redzami blokķēdē, VISUS Bitcoin darījumus var izsekot. Bitcoin mikseris var ļoti aptumšot darījumus, padarot kādam daudz grūtāk izsekot Bitcoins, taču ne neiespējami. Tā kā tehnoloģija attīstās un uzņēmumi, kas specializējas Bitcoin darījumu izsekošanā, kļūst arvien izplatītāki, tiklīdz ļoti neskaidri darījumi kļūs salīdzinoši viegli izsekojami:\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            <a href=\"https://news.bitcoin.com/law-enforcement-continues-invest-bitcoin-tracking-services/\"> Tiesībaizsardzības iestādes turpina ieguldīt Bitcoin izsekošanas pakalpojumos\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"http://time.com/3689359/bitcoins-track-anonymous/\"> Time.com: Bitcoins ir vieglāk izsekot, nekā jūs domājat\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"https://www.elliptic.co/\">\n                              Eliptisks: uzņēmums, kas specializējas Bitcoin izsekošanā tiesībaizsardzības vajadzībām\n                            </a>\n                          </li>\n                        </ul>\n\n                        <p>\n                          Google meklēšana atklās desmitiem tādu rakstu kā iepriekš minētie. Un atcerieties, ka jebkurš darījums, kas noticis jebkurā laikā pagātnē, atrodas blokķēdē, un to var izsekot, pat ja tika izmantots sajaukšanas pakalpojums. Faktiski sajaukšanas pakalpojuma izmantošana, visticamāk, pievērsīs uzmanību šiem darījumiem.\n                        </p>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbuntraceable250Sbtext => ' <p>\n                          Tā kā visi Bitcoin pārskaitījumi ir redzami blokķēdē, VISUS Bitcoin pārskaitījumus var izsekot. Bitcoin mikseris var ļoti aptumšot pārskaitījumus, padarot kādam daudz grūtāk izsekot Bitcoin, taču ne neiespējami. Tā kā tehnoloģija attīstās un uzņēmumi, kas specializējas Bitcoin pārskaitījumu izsekošanā, kļūst arvien izplatītāki, tiklīdz ļoti neskaidri pārskaitījumi kļūs salīdzinoši viegli izsekojami:\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            <a href=\"https://news.bitcoin.com/law-enforcement-continues-invest-bitcoin-tracking-services/\"> Varas iestādes turpina ieguldīt Bitcoin izsekošanas pakalpojumos\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"http://time.com/3689359/bitcoins-track-anonymous/\"> Time.com: Bitcoin ir vieglāk izsekot, nekā jūs domājat\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"https://www.elliptic.co/\">\n                              Eliptisks: uzņēmums, kas specializējas Bitcoin izsekošanā varas iestāžu vajadzībām\n                            </a>\n                          </li>\n                        </ul>\n\n                        <p>\n                          Google meklēšana atklās desmitiem tādu rakstu kā iepriekš minētie. Un atcerieties, ka jebkurš pārskaitījums, kas noticis jebkurā laikā pagātnē, atrodas blokķēdē, un to var izsekot, pat ja tika izmantots jaukšanas pakalpojums. Pie tam, jaukšanas pakalpojuma izmantošana visticamāk tieši pievērsīs uzmanību šiem pārskaitījumiem.\n                        </p>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbdecentralized250Sbtext => 'Ne visi DASH mezgli ir vienādi. Ir mezglu virsklase, ko sauc par <i>Masternodes</i>, kuru īpašniekiem ir lielāka ietekme uz sistēmu nekā parastajiem mezglu operatoriem. Tas padara DASH daļēji centralizētu, nevis ideālo 100% decentralizēto sistēmu.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbdecentralized250Sbtext => 'Ne visi DASH mezgli ir vienādi. Ir mezglu virsklase, ko sauc par <i>Masternodes</i>, kuru īpašniekiem ir lielāka ietekme uz sistēmu nekā parastajiem mezglu operatoriem. Līdz ar to DASH ir daļēji centralizēts, nevis ideāla 100% decentralizēta sistēma.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbfungible250Sbtext => 'Tā kā darījumi nav privāti, uzņēmumam ir iespēja bloķēt vai melnajā sarakstā iekļaut noteiktas monētas, padarot tās mazāk vērtīgas nekā pārējās. Skatiet piezīmi par Bitcoin aizstājamības trūkumu zemāk, jo tas pats princips attiecas uz DASH.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbfungible250Sbtext => 'Tā kā pārskaitījumi nav privāti, organizācijai ir iespēja bloķēt vai melnajā sarakstā iekļaut noteiktas monētas, padarot tās mazāk vērtīgas nekā pārējās. Skatiet piezīmi par Bitcoin aizstājamības trūkumu zemāk, jo tas pats princips attiecas uz DASH.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate => 'DASH ir <a href=\"https://bitinfocharts.com/top-100-richest-darkcoin-addresses.html\"> bagātināts saraksts</a>, tāpēc šī nav privāta monēta. Monētu adrešu finanšu informācija ir redzama ikvienam, kas pārbauda blokķēdi.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate => 'DASH ir <a href=\"https://bitinfocharts.com/top-100-richest-darkcoin-addresses.html\"> bagāto saraksts</a>, līdz ar to šī nav privāta monēta. Monētu adrešu finansiālā informācija ir redzama ikvienam, kas apskata blokķēdi.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbanother8722Sbquote => ' <b> Pīters Tods</b>, cits Bitcoin Core izstrādātājs un kriptogrāfs, ir izteicis <a href=\"https://twitter.com/petertoddbtc/status/622022840330682368\"> līdzīgu paziņojumu</a>.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbanother8722Sbquote => ' <b> Peter Todd</b>, cits Bitcoin Core izstrādātājs un kriptogrāfs, ir izteicis <a href=\"https://twitter.com/petertoddbtc/status/622022840330682368\"> līdzīgu apgalvojumu</a>.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              DASH vispār nav kriptogrāfiski privāts. Patiesībā man bija slaids klājā, kas bija kā \"DASH, LOL\" un kā nekas cits... tā ir snakeoil, un es personīgi par to vienkārši nedomāju.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Gregorijs Maksvels</b>, Bitcoin Core izstrādātājs un kriptogrāfs, <a href=\"https://archive.21mil.com/blockstream-cto-greg-maxwell-discusses-monero-zcash-privacy-focused-altcoins/\"> prezentācijā Coinbase\n                             </a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              DASH vispār nav kriptogrāfiski privāts. Patiesībā man bija slaids, kur bija teikts \"DASH, LOL\" un nekas cits... tā ir blēdība, un es personīgi par to vienkārši nedomāju.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Gregory Maxwell</b>, Bitcoin Core izstrādātājs un kriptogrāfs, <a href=\"https://archive.21mil.com/blockstream-cto-greg-maxwell-discusses-monero-zcash-privacy-focused-altcoins/\"> prezentācijā Coinbase\n                             </a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbuntraceable250Sbtext => 'Darījumi tiek maršrutēti caur virkni <a href=\"https://www.dash.org/masternodes/\"> Masternode </a>, lai padarītu tos neizsekojamus. Šī prakse varētu darboties, ja visiem masternode operatoriem būtu tikai tīri motīvi. Tomēr, ja valdība, hakeru grupa, cita organizācija vai pat fiziska persona iegādājās daudzus galveno mezglus (nevarētu zināt, vai tas notika) un ja darījums tika veikts maršrutā, kurā visi masternodi piederēja šai organizācijai. , tad šī vienība varētu izsekot darījumu. Ņemot vērā salīdzinoši zemās masternode izmaksas un valdību un dažu organizāciju milzīgo budžetu, iespēja, ka monētas var izsekot, ir reāla.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbuntraceable250Sbtext => 'Pārskaitījumi tiek maršrutēti caur virkni <a href=\"https://www.dash.org/masternodes/\"> Masternode </a>, lai padarītu tos neizsekojamus. Šī prakse varētu darboties, ja visiem masternode operatoriem būtu tikai tīri motīvi. Tomēr, ja valdība, hakeru grupa, cita organizācija vai pat fiziska persona iegādājās daudzus galvenos mezglus (nav iespējams konstatēt, vai tā ir noticis) un ja pārskaitījums tika veikts maršrutā, kurā visi masternode piederēja šai organizācijai, tad šī vienība varētu izsekot pārskaitījumu. Ņemot vērā salīdzinoši zemās masternode izmaksas un valdību un dažu organizāciju milzīgo budžetu, iespēja, ka monētas var izsekot, ir reāla.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdisclaimer => 'Šo vietni izveidoja Monero lietotāji. Bija laiks, kad mēs nebijām Monero lietotāji, bet bijām noraizējušies par finanšu privātumu. Mēs izpētījām monētas, kas apgalvoja, ka tās ir privātas, un šī lapa ir mūsu pētījuma rezultāts. Tāpēc mēs izvēlējāmies Monero, nevis pārējo. Tātad, ja šķiet, ka esam neobjektīvi, mēs tādi esam, taču uzskatām, ka neobjektivitāte ir balstīta uz faktiem, kurus varat izlasīt tālāk un pārbaudīt pats.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdisclaimer => 'Šo vietni izveidoja Monero lietotāji. Bija laiks, kad mēs nebijām Monero lietotāji, bet bijām noraizējušies par finanšu privātumu. Mēs izpētījām monētas, kas apgalvoja, ka tās ir privātas, un šī lapa ir mūsu pētījuma rezultāts. Tāpēc mēs izvēlējāmies Monero pāri citiem. Tātad, ja šķiet, ka esam neobjektīvi, mēs tādi esam, taču uzskatām, ka neobjektivitāte ir balstīta uz faktiem, kurus varat izlasīt tālāk un pārbaudīt pats.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbdecentralized250Sbtext => 'Grinam nav priekšrocību, dibinātāja atlīdzības, masternodes vai kases. Viņiem nebija ICO, un tie tiek vadīti decentralizētai kopienai piemērotā veidā. Grin ir decentralizēts.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbdecentralized250Sbtext => 'Grin nav iepriekšējas mainošanas, dibinātāja atlīdzības, masternode vai kases. Viņiem nebija ICO, un tas tiek vadīts veidā, kas piemērots decentralizētai kopienai. Grin ir decentralizēts.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbfungiblity250Sbtext => 'Tā kā visi darījumi ir apšaubāmi privāti un potenciāli izsekojami, pastāv iespēja izveidot darījumu grafiku, no kura var iegūt vērtīgu informāciju, ko var izmantot pret indivīdu attiecībā uz viņu tērēšanas paradumiem. Pēc tam rezultātus var saistīt ar identitātēm, un, pat ja summas nav redzamas, fakts, ka izlaidi var saistīt ar identitāti, nozīmē, ka izlaide var tikt sabojāta, tieši pretēji tam, kurš to ir turējis. Mēs domājam, ka tas nozīmē, ka Grin nav aizstājams, jo daži rezultāti var būt bojāti, bet citi nebūs.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbfungiblity250Sbtext => 'Tā kā visi pārskaitījumi ir apšaubāmi privāti un potenciāli izsekojami, pastāv iespēja izveidot pārskaitījumu grafiku, no kura var iegūt vērtīgu informāciju, ko var izmantot pret indivīdu attiecībā uz viņa tērēšanas paradumiem. Pēc tam rezultātus var saistīt ar identitātēm, un, pat ja summas nav redzamas, fakts, ka izvadi var saistīt ar identitāti, nozīmē, ka izvade var tikt sabojāta, tikai pamatojoties uz to, kurš to ir turējis. Mēs domājam, ka līdz ar to Grin nav aizstājams, jo daži rezultāti var būt bojāti, bet citi nebūs.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbprivate250Sbtext => 'Grinam nav bagātīga saraksta, kas norādītu uz kādu privātuma veidu. Patiešām, pasīvie uzbrucēji, kas skenē ķēdi, nevar redzēt, kurā adresē ir daudz naudas, daļēji tāpēc, ka summas tiek aizsegtas, izmantojot konfidenciālus darījumus, daļēji tāpēc, ka adrešu dati netiek glabāti ķēdē, un daļēji tāpēc, ka Mimblewimble ir caurlaidīga tehnoloģija, kurā tiek veikti starpposma darījumi. var noņemt no ķēdes, atstājot maz metadatu no iepriekšējiem darījumiem.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbprivate250Sbtext => 'Grin nav bagāto saraksta, kas norādītu uz kādu privātuma veidu. Patiešām, pasīvie uzbrucēji, kas skenē ķēdi, nevar redzēt, kurā adresē ir daudz naudas, daļēji tāpēc, ka summas tiek aizsegtas, izmantojot konfidenciālos pārskaitījumus, daļēji tāpēc, ka adrešu dati netiek glabāti ķēdē, un daļēji pateicoties Mimblewimble tehnoloģijai, kurā starpposma pārskaitījumi var tikt noņemti no ķēdes, atstājot maz metadatu no iepriekšējiem pārskaitījumiem.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbuntraceablity250Sbtext => 'Grins neaizsargājas pret aktīvu uzbrucēju, kas veido darījumu grafiku. Gan kalnračiem, gan nedaudz modificētam mezglam ir iespējams vērot katru darījumu, saglabāt to, pirms tiek iedarbināta jaunākā tehnoloģija, un no šejienes izveidot pilnīgu darījumu grafiku, kā arī saglabāt visus “izgrieztos” datus. Viņi nevarētu saskatīt nekādu informāciju pirms to sākuma, taču viss pēc to sākuma būs vērtīgi metadati, ar kuriem viņi varētu saistīt darījumus.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbuntraceablity250Sbtext => 'Grin neaizsargājas pret aktīvu uzbrucēju, kas veido pārskaitījumu grafiku. Gan maineriem, gan nedaudz modificētam mezglam ir iespējams vērot katru pārskaitījumu, saglabāt to, pirms tiek iedarbināta šī tehnoloģija, un no šejienes izveidot pilnīgu pārskaitījumu grafiku, kā arī saglabāt visus “izgrieztos” datus. Viņi nevarētu saskatīt nekādu informāciju, kas radusies, pirms viņi sāka saglabāt, taču viss pēc tā būs vērtīgi metadati, ar kuriem viņi varētu saistīt pārskaitījumus.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbintro => 'Šeit ir analīze par labi zināmām kriptovalūtām, kuru galvenā atšķirība ir anonimitāte un/vai neizsekojamība. Pats Bitcoin neietilpst šīs analīzes ietvaros, jo tas nekad nav apgalvots, ka tas ir anonīms.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbintro => 'Šeit ir analīze par labi zināmām kriptovalūtām, kuras sola anonimitāti un/vai neizsekojamību kā savu galveno īpašību. Pats Bitcoin neietilpst šīs analīzes ietvaros, jo tas nekad nav apgalvojis, ka ir anonīms.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb0 => 'Monero jau kopš pirmsākumiem ir bijis 100% atvērts avots, kas nozīmē, ka ikviens var skatīt programmatūras <a href=\"https://github.com/monero-project/bitmonero\"> pirmkodu </a>, lai pārbaudītu, vai nepastāv aizmugures durvis un vai programmatūra ir droša.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb0 => 'Monero jau kopš pirmsākumiem ir bijis 100% atvērta koda, kas nozīmē, ka ikviens var skatīt programmatūras <a href=\"https://github.com/monero-project/bitmonero\"> pirmkodu </a>, lai pārbaudītu, vai nepastāv aizmugures durvis un vai programmatūra ir droša.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb1 => 'Monero ir arī <a href=\"https://lab.getmonero.org/\"> recenzēti pētniecības darbi </a>, kas matemātiski un sistemātiski pārbauda visas iepriekš minētās īpašības.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbdecentralized => 'Visi Monero mezgli ir vienādi. Nav tādu mezglu virsklases, kam būtu lielāka ietekme vai kontrole pār darījumiem nekā citiem mezgliem. Neviena persona vai vienība nevar izsekot darījumiem, ja viņiem pieder vairāki mezgli. Turklāt nav uzticamas iestatīšanas. Tas nozīmē, ka nepieciešamība uzticēties personai vai organizācijai nav faktors. Vienīgās lietas, kurām jāuzticas, ir pirmkods (ko var pārbaudīt ikviens) un matemātika.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbdecentralized => 'Visi Monero mezgli ir vienādi. Nav tādas mezglu virsklases, kam būtu lielāka ietekme vai kontrole pār pārskaitījumiem nekā citiem mezgliem. Neviena persona vai vienība nevar izsekot pārskaitījumiem, ja viņiem pieder vairāki mezgli. Turklāt, nav uzticības iestatījuma. Tas nozīmē, ka nav nepieciešamības uzticēties personai vai organizācijai. Vienīgās lietas, kurām jāuzticas, ir pirmkods (ko var pārbaudīt ikviens) un matemātika.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbfungible => 'Visas monētas ir vienādas un tām ir vienāda vērtība. Lietotājs, pārdevējs vai jebkura cita persona nevar bloķēt vai iekļaut melnajā sarakstā noteiktas Monero monētas, jo Monero monētu darījumu vēsture ir neskaidra.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbfungible => 'Visas monētas ir vienādas un tām ir vienāda vērtība. Lietotājs, pārdevējs vai jebkura cita persona nevar bloķēt vai iekļaut melnajā sarakstā noteiktas Monero monētas, jo Monero monētu pārskaitījumu vēsture ir neskaidra.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbprivate => 'Monero izmanto kriptogrāfiski drošu sistēmu, kas ļauj sūtīt un saņemt līdzekļus, lai jūsu darījumi nebūtu publiski redzami blokķēdē (izplatītajā darījumu virsgrāmatā). Tas nodrošina, ka jūsu pirkumi, kvītis un citi pārskaitījumi paliek <b>privāti pēc noklusējuma</b>. Sūtītājs, saņēmējs un darījuma summa ir privāti. Dažām monētām ir \"bagātīgs saraksts\", kas ļauj ikvienam redzēt, kurā kontā ir visvairāk monētu. Tā kā Monero ir privāts, <a href=\"http://moneroblocks.info/richlist\"> Monero bagātinātais saraksts </a> nevar pastāvēt.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbprivate => 'Monero izmanto kriptogrāfiski drošu sistēmu, kas ļauj sūtīt un saņemt līdzekļus, lai jūsu pārskaitījumi nebūtu publiski redzami blokķēdē (pārskaitījumu virsgrāmatā). Tas nodrošina, ka jūsu pirkumi, kvītis un citi pārskaitījumi paliek <b>privāti pēc noklusējuma</b>. Sūtītājs, saņēmējs un pārskaitījuma summa ir privāti. Dažām monētām ir \"bagāto saraksts\", kas ļauj ikvienam redzēt, kurā kontā ir visvairāk monētu. Tā kā Monero ir privāts, <a href=\"http://moneroblocks.info/richlist\"> Monero bagāto saraksts </a> nevar pastāvēt.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbsecure => 'Izmantojot izplatītu peer-to-peer konsensa tīklu, katrs darījums ir kriptogrāfiski aizsargāts. Individuālajos kontos izveidošanas laikā tiek parādīta 25 vārdu mnemoniskā sēkla, ko var pierakstīt, lai izveidotu konta dublējumkopiju. Parole ir obligāta, veidojot maku, un konta faili tiek šifrēti ar ieejas frāzi, lai nodrošinātu, ka tie ir nevērtīgi, ja tie tiek nozagti.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbsecure => 'Izmantojot izplatītu peer-to-peer vienošanās tīklu, katrs pārskaitījums ir kriptogrāfiski aizsargāts. Individuālajos kontos izveidošanas laikā tiek parādīta 25 vārdu mnemoniskā sēkla, ko var pierakstīt, lai droši saglabātu kontu. Parole ir obligāta, veidojot maku, un konta faili tiek šifrēti ar ieejas frāzi, lai nodrošinātu, ka zādzības gadījumā tie ir bezvērtīgi.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbuntraceable => 'Izmantojot zvana parakstus (noteiktu kriptogrāfijas veidu īpašu īpašību), Monero nodrošina neizsekojamus darījumus. Tas nozīmē, ka nav skaidrs, kuri līdzekļi ir iztērēti, un tāpēc ir ļoti maz ticams, ka darījums varētu būt saistīts ar konkrētu lietotāju.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbuntraceable => 'Izmantojot gredzenveida parakstus (noteikta kriptogrāfijas veida īpašību), Monero nodrošina neizsekojamus pārskaitījumus. Tas nozīmē, ka nav skaidrs, kuri līdzekļi ir iztērēti, un tāpēc ir ļoti maz ticams, ka pārskaitījums varētu būt saistīts ar konkrētu lietotāju.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbsubtitle => 'Atlasiet logotipu, lai pārietu uz šīs monētas analīzi.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbsubtitle => 'Izvēlieties logotipu, lai pārietu uz šīs monētas analīzi.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbno => 'Nē';
@@ -4148,40 +4148,40 @@ class I18nLv extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbtitle => 'Monētu analīze';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbtxs8722Sbare8722Sbsecure => 'Darījumi ir kriptogrāfiski droši.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbtxs8722Sbare8722Sbsecure => 'Pārskaitījumi ir kriptogrāfiski droši.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbdecentralized250Sbtext => '<p>\n                          Zcash ir uzņēmums, un pašlaik tas <a href=\"https://z.cash/blog/funding.html\"> ņem 20% no visa iegūtā ZEC kā dibinātāja atlīdzību</a>.\n                        </p>\n\n                        <p>\n                          Zcash bija nepieciešama <b>Uzticama iestatīšana</b>. Tas nozīmē, ka jums ir jāuzticas, ka sistēma ir izveidota godīgi. Ja tas nebūtu iestatīts godīgi, <a href=\"https://blog.okturtles.com/2016/03/the-zcash-catch/\"> varētu izveidot neierobežotu daudzumu ZEC, nevienam nezinot </a>. Tas padarītu hakeru bagātu un devalvētu ZEC. Nav iespējams uzzināt, vai uzticamā iestatīšana tika veikta godīgi. Mums ir jāpieņem viņu vārds. Tas sistēmā ievieš cilvēka kļūmes punktu, kas ir pretrunā gandrīz visām citām kriptovalūtām. Jums vajadzētu uzticēties tikai matemātikai un pārbaudāmam avota kodam kriptovalūtās, nevis cilvēkiem. Kā mēs esam redzējuši praktiski visos lielajos programmatūras uzņēmumos, piemēram, <a href=\"https://www.gnu.org/proprietary/proprietary-back-doors.en.html\"> Microsoft</a>, <a href=\"http://www.digitaltrends.com/computing/apple-vs-fbi-backdoor-to-data-already-exists/\"> Apple</a> un pat valdībās, tiem nevajadzētu uzticēties.\n                        </p>\n\n                        <p>\n                          Pīters Tods, Bitcoin Core izstrādātājs, kurš <a href=\"https://github.com/zcash/mpc/blob/master/README.md\"> piedalījās </a> Zcash Trusted Setup, to ir nosaucis par &quot; <a href=\"https://twitter.com/petertoddbtc/status/793584540891643906\"> aizmugures durvīm </a> &quot;.\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Zcash nav bez nosacījumiem drošs, to nevar izmantot ar pašreizējām tehnoloģijām... nepieciešama uzticama iestatīšana&hellip;, būs jāatkārto procedūra [Trusted Setup], lai laika gaitā atjauninātu kriptovalūtu, tāpēc tā ir ievainojamība.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              Gregorijs Maksvels, Bitcoin Core izstrādātājs un kriptogrāfs, <a href=\"https://youtu.be/LHPYNZ8i1cU#t=29m30s\"> prezentācijā Coinbase</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbdecentralized250Sbtext => '<p>\n                          Zcash ir uzņēmums, un pašlaik tas <a href=\"https://z.cash/blog/funding.html\"> ņem 20% no visa iegūtā ZEC kā dibinātāja atlīdzību</a>.\n                        </p>\n\n                        <p>\n                          Zcash bija nepieciešams <b>uzticības iestatījums</b>. Tas nozīmē, ka jums ir jāuzticas, ka sistēma ir izveidota godīgi. Ja tas nebūtu iestatīts godīgi, <a href=\"https://blog.okturtles.com/2016/03/the-zcash-catch/\"> varētu izveidot neierobežotu daudzumu ZEC, nevienam nezinot </a>. Tas padarītu hakeri bagātu un devalvētu ZEC. Nav iespējams uzzināt, vai uzticamā iestatīšana tika veikta godīgi. Mums ir jāpieņem viņu vārds. Tas sistēmā ievieš cilvēka kļūmes punktu, kas ir pretrunā gandrīz visām citām kriptovalūtām. Jums vajadzētu uzticēties tikai matemātikai un pārbaudāmam pirmkodam kriptovalūtās, nevis cilvēkiem. Kā mēs esam redzējuši praktiski visos lielajos programmatūras uzņēmumos, piemēram, <a href=\"https://www.gnu.org/proprietary/proprietary-back-doors.en.html\"> Microsoft</a>, <a href=\"http://www.digitaltrends.com/computing/apple-vs-fbi-backdoor-to-data-already-exists/\"> Apple</a> un pat valdībās, tiem nevajadzētu uzticēties.\n                        </p>\n\n                        <p>\n                          Peter Todd, Bitcoin Core izstrādātājs, kurš <a href=\"https://github.com/zcash/mpc/blob/master/README.md\"> piedalījās </a> Zcash Trusted Setup, to ir nosaucis par &quot; <a href=\"https://twitter.com/petertoddbtc/status/793584540891643906\"> aizmugures durvīm </a> &quot;.\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Zcash nav bez nosacījumiem drošs, to nevar izmantot ar pašreizējām tehnoloģijām... nepieciešama uzticama iestatīšana&hellip;, būs jāatkārto procedūra [Trusted Setup], lai laika gaitā atjauninātu kriptovalūtu, tāpēc tā ir ievainojamība.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              Gregory Maxwell, Bitcoin Core izstrādātājs un kriptogrāfs, <a href=\"https://youtu.be/LHPYNZ8i1cU#t=29m30s\"> prezentācijā Coinbase</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbfungible => 'Tā kā visi darījumi nav privāti, organizācijai ir iespēja bloķēt vai melnajā sarakstā iekļaut noteiktas monētas, padarot tās mazāk vērtīgas nekā pārējās. Skatiet piezīmi par Bitcoin aizstājamības trūkumu zemāk, jo tas pats princips attiecas uz Zcash.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbfungible => 'Tā kā visi pārskaitījumi nav privāti, organizācijai ir iespēja bloķēt vai melnajā sarakstā iekļaut noteiktas monētas, padarot tās mazāk vērtīgas nekā pārējās. Skatiet piezīmi par Bitcoin aizstājamības trūkumu zemāk, jo tas pats princips attiecas uz Zcash.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Un, starp citu, es domāju, ka mēs varam veiksmīgi padarīt Zcash pārāk izsekojamu tādiem noziedzniekiem kā WannaCry, bet tomēr pilnībā privātu &amp; aizstājamu.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Zooko Wilcox</b>, Zcash izpilddirektors, <a href=\"https://twitter.com/zooko/status/863202798883577856\"> tvītā\n                              </a>\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Ja Zcash var būt \"pārāk izsekojams\", tad tas nevar būt pilnīgi privāts vai aizstājams.\n                        </p>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Un, starp citu, es domāju, ka mēs varam veiksmīgi padarīt Zcash pārāk izsekojamu tādiem noziedzniekiem kā WannaCry, bet tomēr pilnībā privātu &amp; aizstājamu.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Zooko Wilcox</b>, Zcash CEO, <a href=\"https://twitter.com/zooko/status/863202798883577856\"> tvītā\n                              </a>\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Ja Zcash var būt \"pārāk izsekojams\", tad tas nevar būt pilnīgi privāts vai aizstājams.\n                        </p>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbtext => 'Zcash darījumi ir redzami viņu blokķēdē. Tie nodrošina slēptos darījumus, taču <a href=\"http://stat.bloxy.info/superset/dashboard/zcash/\"> mazāk nekā 1% darījumu ir pilnībā aizsargāti </a>. Tā kā slēptās transakcijas nav obligātas un nav noklusējuma (nemaz nerunājot par to, ka tiek izmantotas reti), slēptās transakcijas <a href=\"http://weuse.cash/2016/06/09/btc-xmr-zcash/\"> izceļas savā blokķēdē</a>, pievēršot sev uzmanību.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbtext => 'Zcash pārskaitījumi ir redzami viņu blokķēdē. Tie nodrošina slēptos pārskaitījumus, taču <a href=\"http://stat.bloxy.info/superset/dashboard/zcash/\"> mazāk nekā 1% pārskaitījumu ir pilnībā apslēpti </a>. Tā kā slēptie pārskaitījumi ir izvēles un ne pēc noklusējuma (nemaz nerunājot par to, ka tiek izmantotas reti), slēptie pārskaitījumi <a href=\"http://weuse.cash/2016/06/09/btc-xmr-zcash/\"> izceļas blokķēdē</a>, pievēršot sev uzmanību.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbuntraceable250Sbtext => 'Regulāri darījumi ir caurspīdīgi. Slēptos darījumos tiek izmantots zk-SNARKS, kam noteikti ir noteiktas stabilas privātuma garantijas. Jautājums ir par to, vai šie nosacījumi ir izpildīti, un, redzot nelielo cilvēku skaitu, kas izmanto aizsargātās iespējas, tas paliek apšaubāms.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbuntraceable250Sbtext => 'Parastie pārskaitījumi ir caurspīdīgi. Slēptos pārskaitījumos tiek izmantots zk-SNARKS, kam patiešām ir stabilas privātuma garantijas, ja tiek izpildīti zināmi nosacījumi. Jautājums ir par to, vai šie nosacījumi ir izpildīti, un, redzot nelielo cilvēku skaitu, kas izmanto apslēpšanas iespējas, tas paliek jautājums.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbdecentralized250Sbtext => 'Zcoin ir ieviesis Znodes, kas darbojas līdzīgi Dash masternodes, un tiem ir lielāka jauda nekā citiem tīkla mezgliem. Tā kā visi mezgli nav izveidoti vienādi un atšķirības faktors starp tiem ir naudas summa, kas ir indivīdam (Znodes maksā 1000 XZC), tīkls ir daļēji centralizēts.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbdecentralized250Sbtext => 'Zcoin ir ieviesis Znodes, kas darbojas līdzīgi Dash masternodes, un tiem ir lielākas spējas nekā citiem tīkla mezgliem. Tā kā visi mezgli nav izveidoti vienādi un atšķirības faktors starp tiem ir naudas summa, kas ir indivīdam (Znodes maksā 1000 XZC), tīkls ir daļēji centralizēts.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbfungiblity250Sbtext => 'Pēc Lelantus pēdējā posma sākšanas 2021. gadā tiek pieņemts, ka Zcoin būs aizstājams obligātās privātuma izpildes dēļ. Šajā ziņā tas būs īsts Monero konkurents. Tomēr...';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbfungiblity250Sbtext => 'Pēc Lelantus pēdējā posma palaišanas 2021. gadā tiek pieņemts, ka Zcoin būs aizstājams obligātā privātuma dēļ. Šajā ziņā tas būs īsts Monero konkurents. Tomēr...';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbnote => '<p><strong>Piezīme:</strong> Zcoin pāriet no pašreizējās Sigma shēmas uz jaunu protokolu, kas balstās uz tā jauno darbu Lelantus. Lelantus tiks ieviests pa posmiem, un šajā rakstā tiks pieņemts, ka visi posmi ir pabeigti un ieviesti, lai veiktu pareizus salīdzinājumus un paredzētos ieviešanas laikus.</p>\n<p>Iemesls, kādēļ Zcoin tika dota šī greznība, lai viņu vērtētu pēc tā nākotnes protokola, nevis Zcash, ir tāpēc, ka uzņēmumam Zcoin ir ceļvedis ar vispārīgiem aktivizēšanas laikiem, savukārt Zcash “privātuma pēc noklusējuma” plāni ir un joprojām ir neskaidri. X563X]';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbnote => '<p><strong>Piezīme:</strong> Zcoin pāriet no pašreizējās Sigma shēmas uz jaunu protokolu, kas balstās uz tā jauno darbu Lelantus. Lelantus tiks ieviests pa posmiem, un šajā rakstā tiks pieņemts, ka visi posmi ir pabeigti un ieviesti, lai veiktu pareizus salīdzinājumus un paredzētos ieviešanas laikus.</p>\n<p>Iemesls, kādēļ Zcoin tika dota šī greznība tikt vērtētam pēc tā nākotnes protokola, nevis Zcash, ir tāpēc, ka uzņēmumam Zcoin ir ceļvedis ar vispārīgiem aktivizēšanas laikiem, savukārt Zcash “privātuma pēc noklusējuma” plāni ir un turpina būt neskaidri.</p>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbprivate250Sbtext => '<p>Zcoin (XZC) nebūs bagātināta saraksta, tāpēc tas būs privāts. Paredzams, ka pēc noklusējuma obligātā konfidencialitāte tiks ieviesta 2021. gadā. Pēc ieviešanas nebūs iespējams izveidot bagātīgu sarakstu (lai gan pašlaik <a href=\"https://www.coinexplorer.net/XZC/richlist\">viņiem tāds ir</a>).</p> ';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbprivate250Sbtext => '<p>Zcoin (XZC) nebūs bagāto saraksta, tāpēc tas būs privāts. Paredzams, ka pēc noklusējuma obligātā konfidencialitāte tiks ieviesta 2021. gadā. Pēc ieviešanas nebūs iespējams izveidot bagāto sarakstu (lai gan pašlaik <a href=\"https://www.coinexplorer.net/XZC/richlist\">viņiem tāds ir</a>).</p> ';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbuntraceablity250Sbtext => 'Līdz ar Lelantus pēdējo posmu, kas tika ieviests 2021. gadā, Zcoin nevajadzētu būt izsekojamam, lai gan teorētiskie uzbrukumi vēl nav izpētīti, jo tas vēl nav izlaists vai nav bijis savvaļā. Pašlaik Zcoin ir izsekojams, ja blokķēdes pārlūkā ievieto <a href=\"https://explorer.zcoin.io/\">Zcoin adresi</a> un varat redzēt tā atlikumu un saistītos darījumus.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbuntraceablity250Sbtext => 'Līdz ar Lelantus pēdējo posmu, kas tika ieviests 2021. gadā, Zcoin nevajadzētu būt izsekojamam, lai gan teorētiskie uzbrukumi vēl nav izpētīti, jo tas vēl nav izlaists vai bijis darbībā. Pašlaik Zcoin ir izsekojams, ja blokķēdes pārlūkā ievada <a href=\"https://explorer.zcoin.io/\">Zcoin adresi</a>, un var redzēt tās atlikumu un saistītos pārskaitījumus.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbdecentraized250Sbtext => 'Visi tīkla mezgli (mezgls ir monētas blokķēdes darbības gadījums) ir vienādi. Nav tādu mezglu virsklases, kuriem būtu lielāka ietekme vai kontrole pār darījumiem vai sistēmu nekā citiem mezgliem.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbdecentraized250Sbtext => 'Visi tīkla mezgli (mezgls ir strādājošs monētas blokķēdes eksemplārs) ir vienādi. Nav tādas mezglu virsklases, kuriem būtu lielāka ietekme vai kontrole pār pārskaitījumiem vai sistēmu nekā citiem mezgliem.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbdecentralized250Sbtitle => 'Decentralizēts';
@@ -4190,7 +4190,7 @@ class I18nLv extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbdescription => 'Kāpēc Monero ir labākā privātuma monēta? Ne visas uz privātumu orientētās monētas var nodrošināt 100% privātumu, neizsekojamību, drošību un aizstājamību. Uzziniet, kā Monero atrisina visas šīs problēmas salīdzinājumā ar citām \"privātuma\" monētām.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro8722Sb0 => 'Ne visas uz privātumu orientētās monētas var nodrošināt 100% privātumu, neizsekojamību, drošību un aizstājamību 100% decentralizētā monētā ar neuzticamu iestatījumu. Lūk, kādi ir šie atribūti un kāpēc tie ir svarīgi.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro8722Sb0 => 'Ne visas uz privātumu orientētās monētas var nodrošināt 100% privātumu, neizsekojamību, drošību un aizstājamību 100% decentralizētā valūtā ar bezuzticības izveidojumu. Kas ir šīs īpašības un kāpēc tās ir svarīgas:';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbfungible250Sbtext => 'Visas monētas ir vienādas un tām ir vienāda vērtība.';
@@ -4205,43 +4205,43 @@ class I18nLv extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbprivate250Sbtitle => 'Privāts';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbsecure250Sbtext => 'Visi darījumi ir šifrēti, un seifs, kurā ir jūsu līdzekļi, ir šifrēts.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbsecure250Sbtext => 'Visi pārskaitījumi ir šifrēti, un maks, kurā ir jūsu līdzekļi, ir šifrēts.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbsecure250Sbtitle => 'Droši';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbsecure250Sbtitle => 'Drošs';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceability250Sbtext => 'Monētas nevar izsekot, izmantojot blokķēdes analīzi vai blokķēdes uzraudzību.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceable250Sbtitle => 'Neizsekojami';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceable250Sbtitle => 'Neizsekojams';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Kopsavilkums</h2>\n <p> Mūsuprāt, Monero ir skaidra izvēle, ja meklējat privātu, drošu, neizsekojamu, aizstājamu, decentralizētu kriptovalūtu, kurai nav nepieciešama uzticama iestatīšana. Jebkas cits apdraud jūsu privātumu un drošību. Bet neņemiet tikai mūsu viedokli. Veiciet savu izpēti un pārbaudiet pats. Apsveriet, ka Monero atbalsta un izmanto subjekti, kas ir atkarīgi no privātuma un neizsekojamības, piemēram:\n                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purism </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      AlphaBay Market (AB) tika slēgts 2017. gada jūlijā. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> federālā sūdzība par konfiskāciju </a> pret AB liecina, ka:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero ir vienīgā privātā un neizsekojamā kriptovalūta:\n                          </b>\n                          <br />\n                          &quot;Kopumā no CAZES makiem un datoru aģenti pārņēma kontroli pār aptuveni USD 8 800 000 Bitcoin, Ethereum, Moreno [sic] un Zcash, kas sadalīti šādi: 1 605 050 3851 Bitcoin, 8 309 271 639 Ethere, 8 309 271 639 Ethere, 8 X, 1, 6, 1, 8, 1, 6, 1, 8, 1, 8, 1, 6, 6, 1, 8, 6, 6, 6 un 10. nezināms Monero daudzums.</em>&quot; (20. lpp. apakšā un 21. lpp. augšā, izcēlums pievienots) </li>\n                        <li>\n                          <b>\n                            Bitcoin darījumi nav privāti, un tos var izsekot:\n                          </b>\n                          <br />\n                          &quot;Federālie aģenti ieguva orderus pēc tam, kad bija izsekojuši vairākus Bitcoin darījumus, kuru izcelsme bija AlphaBay, līdz digitālo valūtu kontiem un galu galā bankas kontiem un citiem materiāliem aktīviem, kas pieder CAZES un viņa sievai.&quot; (17. lpp., 24. rindiņa- 26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                      LocalMonero neatbalsta un nemudina nekādas nelikumīgas darbības.\n                    </p>\n                  </div>  ';
+  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Kopsavilkums</h2>\n <p> Mūsuprāt, Monero ir skaidra izvēle, ja meklējat privātu, drošu, neizsekojamu, aizstājamu, decentralizētu kriptovalūtu, kurai nav nepieciešams uzticības iestatījums. Jebkas cits apdraud jūsu privātumu un drošību. Bet neņemiet tikai mūsu viedokli. Veiciet savu izpēti un pārbaudiet pats! Apsveriet, ka Monero atbalsta un izmanto subjekti, kas ir atkarīgi no privātuma un neizsekojamības, piemēram:\n                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purism </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      AlphaBay Market (AB) tika slēgts 2017. gada jūlijā. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Federālā sūdzība par konfiskāciju </a> pret AB liecina, ka:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero ir vienīgā privātā un neizsekojamā kriptovalūta:\n                          </b>\n                          <br />\n                          &quot;Kopumā no CAZES makiem datoru aģenti pārņēma kontroli pār aptuveni USD 8 800 000 vērtām kriptovalūtām, tai skaitā Bitcoin, Ethereum, Moreno [sic] un Zcash, šādā sadalījumā: 1,605.0503851 Bitcoin, 8,309.271639 Ethereum, 3,691.98 Zcash, <em>un nezināms Monero daudzums.</em>&quot; (20. lpp. apakšā un 21. lpp. augšā, izcēlums pievienots) </li>\n                        <li>\n                          <b>\n                            Bitcoin pārskaitījumi nav privāti, un tos var izsekot:\n                          </b>\n                          <br />\n                          &quot;Federālie aģenti ieguva orderus pēc tam, kad bija izsekojuši vairākus Bitcoin pārskaitījumus, kuru izcelsme bija AlphaBay, līdz digitālo valūtu kontiem un galu galā bankas kontiem un citiem materiāliem aktīviem, kas pieder CAZES un viņa sievai.&quot; (17. lpp., 24. rindiņa- 26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                      LocalMonero neatbalsta un nemudina nekādas nelikumīgas darbības.\n                    </p>\n                  </div>  ';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbtitle => 'Kāpēc Monero ir labāks par Dash, Zcash, Zcoin (pat ar Lelantus), Grin un Bitcoin mikseriem, piemēram, Wasabi (atjaunināts 2020. gada maijā)';
 
   @override
-  String get knowledge250Sbwired250Sb0250Sbtext => '<p>Gan privātuma, gan kriptovalūtas jomā bieži tiek izplatīta dezinformācija. Mums ir <a target=\"_blank\" href=\"/knowledge/monero-myths-debunked\" class=\"next-link\">raksts, kurā izklāstīti piecpadsmit izplatīti nepareizi vai novecojuši pieņēmumi par Monero</a>, taču mēs vēlamies veltīt laiku vienam konkrētam rakstam, ko bieži citē un izplata Monero skeptiķi.</p>\n\n<p>Izdevums Wired 2018. gada 27. martā publicēja <a target=\"_blank\" href=\"https://www.wired.com/story/monero-privacy/\" class=\"next-link\">rakstu</a>, kas pats tika uzrakstīts, reaģējot uz citu nesen publicētu dažādu akadēmisko aprindu aprindu rakstu ar nosaukumu “Empīriskā analīze par izsekojamību Monero blokķēdē”.</p>\n\n<p>Lai gan rakstu līdzautorēja personas, kurām ir skaidrs interešu konflikts (lasi: viņi ir Zcash padomdevēji un ir līdzdalība tajā), Monero kopiena šo rakstu uztvēra vidēji atzinīgi, jo tas apstiprina lietas, ko kopiena jau ir zinājusi. un par tiem ir rakstīts viņu pašu Monero Research Lab dokumentos (<a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0001.pdf\" class=\"next-link\">MRL-0001</a> un <a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0004.pdf\" class=\"next-link\">MRL-0004</a>), no kuriem agrākais tika publicēts pirms četriem gadiem. Tomēr ar to bija arī vairākas neapmierinātības, galvenokārt interešu konflikts, fakts, ka jautājumi jau bija zināmi, apspriesti un dažos gadījumos arī novērsti, un Monero privātuma garantiju rupja nepareiza raksturošana tajā laikā. Sabiedrība komentēja darba priekšdruku, un daudzi no ieteikumiem tika sagatavoti galīgajā dokumentā.</p>\n\n<p>Bet kas tieši tika nepareizi raksturots? Fakts, ka Monero vairāk nekā gadu nebija pieļāvuši avīzē apspriestos trūkumus. Darījumi, kas veikti pirms 2017. gada, patiešām bija neaizsargāti pret privātuma noplūdi, taču publicēšanas laikā Monero bija risinājusi lielāko daļu problēmu. Lai būtu godīgi pret autoriem, viņi nelielā mērā apspriež Monero līdzekļus, taču ne pietiekami, lai ietekmētu to ietekmi uz kriptovalūtas mediju ciklu tajā laikā. Līdz ar to Wired raksts.</p>\n\n<p>Lai gan mēs varam aplūkot attiecīgo Wired rakstu kā periodu un to, cik patiess vai nepatiess tas tajā laikā bija, fakts, ka tas joprojām tiek izplatīts šodien, lai pamatotu, kāpēc Monero privātuma garantijas ir vājas, patiesībā liek analizēt. par to, kā gabals turas tagadnē. Mēs ar prieku pieņemam šo ielūgumu.</p>\n\n<p> Ātri izlasot rakstu, redzamas vairākas sensacionālas rindiņas, piemēram, “[Atklājumiem] nevajadzētu tikai uztraukties ikvienam, kurš šodien mēģina zagšus tērēt Monero”, un viss raksta tonis, kurā pētījums tiek postulēts kā “jauns”. lielā mērā balstās uz publikāciju. Pašā akadēmiskajā darbā ir ieteikumi, piemēram, brīdinājums Monero lietotājiem par iespējamu viņu anonimitātes kompromisu, neskatoties uz to, ka šīs diskusijas ne tikai notika kopš 2014. gada, bet arī sabiedrības aicinājums bija, lai cilvēki neiegādātos Monero un ka bija ļoti eksperimentāls.</p>\n\n<p>Bet kā ar pašu kritiku? Realitāte ir tāda, ka daudzas problēmas ar Monero kā privātuma monētu vai nu vairs neattiecas uz Monero, vai arī ir kopīgas bažas par privātuma monētām kā uz blokķēdes balstītu kriptovalūtu kategoriju. Sāksim risināt šos jautājumus.</p>\n\n<p>Viena no visbiežāk citētajām Monero kritikām ir tāda, ka blokķēdes pastāvības un nemainīguma dēļ, ja nākotnes tehnoloģija varētu pārkāpt privātumu, visi Monero iepriekšējie darījumi tiktu atklāti. Citiem vārdiem sakot, jūsu privātumam ir tikšķīgs pulkstenis.</p>\n\n<p>Mēs nevaram to pietiekami uzsvērt. Burtiski katrai privātuma monētai, kurā tiek izmantotas ķēdes metodes neskaidrības un privātuma nodrošināšanai, ir šis trūkums, un tomēr tā bieži tiek izmantota pret Monero (ironiskā kārtā daudzas reizes konkurē privātuma monētas ar tādu pašu problēmu), un tā tiek izmantota arī šajā rakstā. Reakcija uz šo kritiku dažiem varētu būt pārsteidzoša, taču Monero patiesībā var būt mazāk ievainojams nekā citas privātuma monētas, jo tam ir daudzpusīga pieeja privātumam.</p>\n\n<p> Monero slēpj izvades (sūtītājus), summas un uztvērējus, izmantojot attiecīgi trīs dažādas tehnoloģijas, zvana parakstus, RingCT un slepenās adreses. No tiem zvana paraksti ir vājākie un visvairāk pakļauti gan mūsdienu heiristikai, gan teorētiskām nākotnes tehnoloģijām, kas pārkāpj privātumu. Monero kopiena to zina jau gadiem ilgi, un tiek veikti aktīvi pētījumi, lai pilnībā uzlabotu vai aizstātu zvana parakstu shēmu.</p>\n\n<p>Tomēr, pat ja zvana signāls būtu pilnībā bojāts, tiktu atklāta tikai patiesā izvade. NEVIS sūtītājs (kā individuāli), bet izvade. Izvades savienošana ar identitāti nav neiespējama, taču tam būtu nepieciešams vairāk metadatu un resursu. Kopā ar faktu, ka RingCT un slepenā adrese NETIKS atklāta, ietekme vēl vairāk samazinās.</p>\n\n<p>Jāatzīmē, ka Wired raksta daļā, kurā viņi sazinājās ar Rikardo \'fluffypony\' Spagni, lai saņemtu komentāru, ir viegli apskatīta iepriekš minētā informācija, taču tam atvēlētais laiks ir īss, un šķiet, ka tas aiziet ar roku. šo svarīgo informāciju. Izpratnes trūkums ir īpaši acīmredzams, mēģinot apspriest šīs lietas ar cilvēkiem, kuri mūsdienās, negribot, dalās ar šo rakstu.</p>\n\n<p>Vēl viena kritika, ko ir daudz grūtāk risināt, ir par to, kā ārpasaule uztver Monero un kā tas ir saistīts ar to, kā Monero apkārtējā sabiedrība uztver monētu. Lai iegūtu piemēru, lasītājiem nav jāmeklē tālāk par paša raksta nosaukumu: “Tumšā tīmekļa iecienītākā valūta ir mazāk neizsekojama, nekā šķiet”.</p>\n\n<p>Ikviena persona, kas pavada ievērojamu laiku Monero kopienā, var apliecināt, ka Monero kopiena dara visu iespējamo, lai parādītu, cik grūti ir panākt īstu privātumu, pat kaitējot mārketinga vai adopcijas centieniem. Ja kopiena nodrošina pietiekami daudz resursu, lai precīzi apspriestu monētu un tās trūkumus, kādā brīdī nezināšana kļūst par lietotāja vainu, kurš uzskata, ka monēta ir viss, kas viņam nepieciešams, lai būtu 100% privāts.</p>\n\n<p>Šobrīd ir skaidrs, ka Monero kopiena nopietni uztver gan savu privātumu, gan godīgumu attiecībā uz tās trūkumiem un turpmākajiem uzlabojumiem. Rakstiem, tāpat kā attiecīgajam rakstam, pilnīgi trūkst šī Monero inovācijas gara. Tas salīdzina Monero ar citu kriptovalūtu bariem, kas izvirza grandiozas prasības, domājot tikai par peļņu un neizglītotiem investoriem-gribētājiem.</p>\n\n<p> Realitāte nevar būt savādāka. Monero ļoti labi apzinās savas vājās puses, cenšas turpināt celtniecību, lai tās uzlabotu, savilktu vaļīgās locītavas un sasniegtu ļoti reālo, bet ļoti grūto mērķi – dot pasaulei privātu, aizstājamu kriptovalūtu, ko var izmantot visi, un dariet to visu godīgā, decentralizētā un sabiedrības virzītā veidā. Varbūt ir pienācis laiks atmest sensacionalizāciju un rakstu kopīgošanu kā līdzekli, lai samazinātu somas un reklamētu konkurentus. Varbūt ir pienācis laiks pastāstīt citu stāstu.</p>';
+  String get knowledge250Sbwired250Sb0250Sbtext => '<p>Gan privātuma, gan kriptovalūtas jomā bieži tiek izplatīta dezinformācija. Mums ir <a target=\"_blank\" href=\"/knowledge/monero-myths-debunked\" class=\"next-link\">raksts, kurā izklāstīti piecpadsmit plaši izplatīti nepareizi vai novecojuši pieņēmumi par Monero</a>, taču mēs vēlamies veltīt laiku vienam konkrētam rakstam, ko bieži citē un izplata Monero skeptiķi.</p>\n\n<p>Izdevums Wired 2018. gada 27. martā publicēja <a target=\"_blank\" href=\"https://www.wired.com/story/monero-privacy/\" class=\"next-link\">rakstu</a>, kas pats tika uzrakstīts, reaģējot uz citu nesen publicētu dažādu akadēmisko aprindu rakstu ar nosaukumu “Empīriskā analīze par izsekojamību Monero blokķēdē”.</p>\n\n<p>Lai gan rakstu līdzautorēja personas, kurām ir skaidrs interešu konflikts (viņi ir Zcash padomdevēji un ir līdzdalība tajā), Monero kopiena šo rakstu uztvēra vidēji atzinīgi, jo tas apstiprina lietas, ko kopiena jau ir zinājusi un par ko ir rakstīts viņu pašu Monero Research Lab dokumentos (<a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0001.pdf\" class=\"next-link\">MRL-0001</a> un <a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0004.pdf\" class=\"next-link\">MRL-0004</a>), no kuriem pirmais tika publicēts pirms četriem gadiem. Tomēr ar to bija arī vairākas pretrunas, galvenokārt interešu konflikts, fakts, ka jautājumi jau bija zināmi, apspriesti un dažos gadījumos arī novērsti, un Monero privātuma garantiju rupja nepareiza raksturošana tajā laikā. Kopiena komentēja darba priekšdruku, un daudzi no ieteikumiem tika iekļauti galīgajā dokumentā.</p>\n\n<p>Bet kas tieši tika nepareizi raksturots? Fakts, ka Monero vairāk nekā gadu nebija pieļāvuši rakstā apspriestos trūkumus. Pārskaitījumi, kas veikti pirms 2017. gada, patiešām bija neaizsargāti pret privātuma noplūdi, taču publicēšanas laikā Monero bija atrisināta lielākā daļa problēmu. Lai būtu godīgi pret autoriem, viņi nelielā mērā apspriež Monero risinājumus, taču ne pietiekami, lai paskaidrotu to ietekmi uz kriptovalūtu mediju ciklu tajā laikā. Līdz ar to Wired raksts.</p>\n\n<p>Lai gan mēs varam aplūkot attiecīgo Wired rakstu kā attiecīgā laika liecību un to, cik patiess vai nepatiess tas tajā laikā bija, fakts, ka tas joprojām tiek izplatīts šodien, lai pamatotu, kāpēc Monero privātuma garantijas ir vājas, patiesībā liek analizēt, kā raksts noturas tagadnē. Mēs ar prieku pieņemam šo ielūgumu.</p>\n\n<p> Ātri izlasot rakstu, redzamas vairākas sensacionālas rindiņas, piemēram, “[Atklājumiem] nevajadzētu tikai uztraukties ikvienam, kurš šodien mēģina zagšus tērēt Monero”, un viss raksta tonis, kurā pētījums tiek postulēts kā “jauns”, lielā mērā balstās uz publikāciju. Pašā akadēmiskajā darbā ir ieteikumi, piemēram, brīdinājums Monero lietotājiem par iespējamu viņu anonimitātes kompromisu, neskatoties uz to, ka šīs diskusijas ne tikai notika kopš 2014. gada, bet arī kopienas aicinājums bija, lai cilvēki neiegādātos Monero un ka tas bija ļoti eksperimentāls.</p>\n\n<p>Bet kā ar pašu kritiku? Realitāte ir tāda, ka daudzas problēmas ar Monero kā privātuma monētu vai nu vairs neattiecas uz Monero, vai arī ir kopīgas bažas par privātuma monētām kā uz blokķēdes balstītu kriptovalūtu kategoriju. Sāksim risināt šos jautājumus.</p>\n\n<p>Viena no visbiežāk citētajām Monero kritikām ir tāda, ka blokķēdes pastāvības un nemainīguma dēļ, ja nākotnes tehnoloģija varētu uzlauzt privātumu, visi Monero iepriekšējie pārskaitījumi tiktu atklāti. Citiem vārdiem sakot, jūsu privātumam ir tikšķošs pulkstenis.</p>\n\n<p>Mēs nevaram to pietiekami uzsvērt. Burtiski katrai privātuma monētai, kurā tiek izmantotas ķēdes metodes neskaidrības un privātuma nodrošināšanai, ir šis trūkums, un tomēr tā bieži tiek izmantota pret Monero (ironiskā kārtā daudzas reizes no konkurējošām privātuma monētām ar tādu pašu problēmu), un tā tiek darīts arī šajā rakstā. Reakcija uz šo kritiku dažiem varētu būt pārsteidzoša, taču Monero patiesībā var būt mazāk ievainojams nekā citas privātuma monētas, jo tam ir daudzpusīga pieeja privātumam.</p>\n\n<p> Monero slēpj izvades (sūtītājus), summas un saņēmējus, izmantojot attiecīgi trīs dažādas tehnoloģijas - gredzenveida parakstus, RingCT un slepenās adreses. No tiem gredzenveida paraksti ir vājākie un visvairāk pakļauti gan mūsdienu heiristikai, gan teorētiskām nākotnes tehnoloģijām, kas uzlauž privātumu. Monero kopiena to zina jau gadiem ilgi, un tiek veikti aktīvi pētījumi, lai pilnībā uzlabotu vai aizstātu gredzenveida parakstu shēmu.</p>\n\n<p>Tomēr, pat ja gredzenveida paraksts būtu pilnībā bojāts, tiktu atklāta tikai patiesā izvade. NEVIS sūtītājs (kā indivīds), bet izvade. Izvades savienošana ar identitāti nav neiespējama, taču tam būtu nepieciešams vairāk metadatu un resursu. Kopā ar faktu, ka RingCT un slepenā adrese NETIKS atklāta, ietekme vēl vairāk samazinās.</p>\n\n<p>Jāatzīmē, ka Wired raksta daļā, kurā viņi sazinājās ar Rikccrdo \'fluffypony\' Spagni, lai saņemtu komentāru, ir viegli apskatīta iepriekš minētā informācija, taču tam atvēlētais laiks ir īss, un šķiet, ka tam pārskriets pāri. Izpratnes trūkums ir īpaši acīmredzams, mēģinot apspriest šīs lietas ar cilvēkiem, kuri mūsdienās dalās ar šo rakstu.</p>\n\n<p>Vēl viena kritika, ko ir daudz grūtāk risināt, ir par to, kā ārpasaule uztver Monero un kā tas ir saistīts ar to, kā Monero apkārtējā sabiedrība uztver monētu. Lai iegūtu piemēru, lasītājiem nav jāmeklē tālāk par paša raksta nosaukumu: “Tumšā tīmekļa iecienītākā valūta ir mazāk neizsekojama, nekā šķiet”.</p>\n\n<p>Ikviena persona, kas pavada ievērojamu laiku Monero kopienā, var apliecināt, ka Monero kopiena dara visu iespējamo, lai parādītu, cik grūti ir panākt īstu privātumu, pat kaitējot mārketinga vai adopcijas centieniem. Ja kopiena nodrošina pietiekami daudz resursu, lai precīzi apspriestu monētu un tās trūkumus, kādā brīdī nezināšana kļūst par lietotāja vainu, kurš uzskata, ka monēta ir viss, kas viņam nepieciešams, lai būtu 100% privāts.</p>\n\n<p>Šobrīd ir skaidrs, ka Monero kopiena nopietni uztver gan savu privātumu, gan godīgumu attiecībā uz tā trūkumiem un turpmākajiem uzlabojumiem. Rakstiem, tāpat kā attiecīgajam rakstam, pilnīgi trūkst šī Monero inovācijas gara. Tas salīdzina Monero ar citu kriptovalūtu bariem, kas izvirza grandiozus solījumus, domājot tikai par peļņu un neizglītotiem investoriem.</p>\n\n<p> Realitāte nevar būt savādāka. Monero ļoti labi apzinās savas vājās puses, tiecas turpināt izstrādi, lai tās uzlabotu, savilktu vājās vietas un sasniegtu ļoti reālo, bet ļoti grūto mērķi – dot pasaulei privātu, aizstājamu kriptovalūtu, ko var izmantot visi, un darīt to visu godīgā, decentralizētā un uz sabiedrību virzītā veidā. Varbūt ir pienācis laiks atmest sensacionalizāciju un rakstu kopīgošanu kā līdzekli, lai promotētu aktīvus un reklamētu konkurentus. Varbūt ir pienācis laiks pastāstīt citu stāstu.</p>';
 
   @override
   String get knowledge250Sbwired250Sbdescription => 'Gan privātuma, gan kriptovalūtas jomā bieži tiek izplatīta dezinformācija. Šeit mēs aplūkojam Wired rakstu, kuru bieži citē un izplata Monero skeptiķi.';
 
   @override
-  String get knowledge250Sbwired250Sbtitle => 'Žurnāls Wired ir nepareizi par Monero, lūk, kāpēc';
+  String get knowledge250Sbwired250Sbtitle => 'Žurnāls Wired kļūdās par Monero. Lūk, kāpēc';
 
   @override
   String get left8722Sbdrawer250Sbabout => 'Par';
 
   @override
-  String get left8722Sbdrawer250Sbbuy8722Sbmonero => 'Pērciet Monero';
+  String get left8722Sbdrawer250Sbbuy8722Sbmonero => 'Pirkt Monero';
 
   @override
-  String get left8722Sbdrawer250Sbdashboard => 'Mērinstrumentu panelis';
+  String get left8722Sbdrawer250Sbdashboard => 'Panelis';
 
   @override
-  String get left8722Sbdrawer250Sbfaq => 'FAQ';
+  String get left8722Sbdrawer250Sbfaq => 'BUJ';
 
   @override
   String get left8722Sbdrawer250Sbforums => 'Forumi';
@@ -4250,13 +4250,13 @@ class I18nLv extends I18n {
   String get left8722Sbdrawer250Sbgetting8722Sbstarted => 'Darba sākšana';
 
   @override
-  String get left8722Sbdrawer250Sbpost8722Sbnew8722Sbad => 'Ievietojiet sludinājumu';
+  String get left8722Sbdrawer250Sbpost8722Sbnew8722Sbad => 'Ievietot sludinājumu';
 
   @override
   String get left8722Sbdrawer250Sbrevuo250Sblabel => 'Monero standarts: Monero ziņas';
 
   @override
-  String get left8722Sbdrawer250Sbsell8722Sbmonero => 'Pārdodu Monero';
+  String get left8722Sbdrawer250Sbsell8722Sbmonero => 'Pārdot Monero';
 
   @override
   String get left8722Sbdrawer250Sbsupport => 'Atbalsts';
@@ -4268,7 +4268,7 @@ class I18nLv extends I18n {
   String get login250Sberror8722Sb1 => 'Lietotājvārdā un parolē ir aizliegtas rakstzīmes vai nederīgs garums';
 
   @override
-  String get login250Sberror8722Sb10 => 'Pieteikšanās kļūda';
+  String get login250Sberror8722Sb10 => 'Pieslēgšānās kļūda';
 
   @override
   String get login250Sberror8722Sb2 => 'Lietotājvārdā ir neatļautas rakstzīmes vai nederīgs garums';
@@ -4286,20 +4286,20 @@ class I18nLv extends I18n {
   String get login250Sberror8722Sb8 => 'Neatļautas vērtības';
 
   @override
-  String get login250Sberror8722Sb98722Sbtext => 'Pārāk daudz pieteikšanās mēģinājumu! Lūdzu, uzgaidiet kādu laiku.';
+  String get login250Sberror8722Sb98722Sbtext => 'Pārāk daudz pieslēgšānās mēģinājumu! Lūdzu, uzgaidiet kādu laiku.';
 
   @override
-  String get login250Sberror8722Sb98722Sbtitle => 'Pieteikšanās mēģinājumi pārsniegti';
+  String get login250Sberror8722Sb98722Sbtitle => 'Pieslēgšanās mēģinājumi pārsniegti';
 
   @override
   String get login250Sberror8722Sbgeneric => 'Kļūda!';
 
   @override
-  String get login250Sbremember8722Sbme => 'Atceries mani';
+  String get login250Sbremember8722Sbme => 'Atcerēties mani';
 
   @override
   String login250Sbreset(Object link) {
-    return 'Aizmirsi savu paroli? $link';
+    return 'Aizmirsāt savu paroli? $link';
   }
 
   @override
@@ -4307,7 +4307,7 @@ class I18nLv extends I18n {
 
   @override
   String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Lai pieteiktos, varat izmantot savus $front_type_url akreditācijas datus.';
+    return 'Lai pieteiktos, varat izmantot savus $front_type_url datus.';
   }
 
   @override
@@ -4316,7 +4316,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get login250Sbsignup8722Sblink => 'Pierakstīties';
+  String get login250Sbsignup8722Sblink => 'Reģistrēties';
 
   @override
   String get login250Sbtitle => 'Pieslēgties';
@@ -4340,13 +4340,13 @@ class I18nLv extends I18n {
   String get method250Sbcash8722Sbat8722Sbatm => 'Skaidra nauda bankomātā';
 
   @override
-  String get method250Sbcash8722Sbby8722Sbmail => 'Skaidrā naudā pa pastu';
+  String get method250Sbcash8722Sbby8722Sbmail => 'Skaidra nauda pa pastu';
 
   @override
   String get method250Sbcash8722Sbdeposit => 'Skaidras naudas iemaksa';
 
   @override
-  String get method250Sbcash8722Sbon8722Sbdelivery => 'Ar pēcmaksu';
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Skaidra nauda piegādes brīdī';
 
   @override
   String get method250Sbcashiers8722Sbcheck => 'Kases čeks';
@@ -4391,7 +4391,7 @@ class I18nLv extends I18n {
   String get method250Sbmobile8722Sbtop8722Sbup => 'Mobilā tālruņa papildināšana';
 
   @override
-  String get method250Sbnational8722Sbbank => 'Nacionālais bankas pārvedums';
+  String get method250Sbnational8722Sbbank => 'Iekšzemes bankas pārvedums';
 
   @override
   String get method250Sbother => 'Cits tiešsaistes maksājums';
@@ -4424,7 +4424,7 @@ class I18nLv extends I18n {
   String get morph250Sbcheckbox250Sbfaq8722Sblink => 'Kā tas darbojas?';
 
   @override
-  String get morph250Sbdeposit250Sbaddress8722Sbinput250Sbhelper => 'Šī adrese tiks izmantota naudas atmaksai, ja ChangeNow tirdzniecības laikā kaut kas noiet greizi';
+  String get morph250Sbdeposit250Sbaddress8722Sbinput250Sbhelper => 'Šī adrese tiks izmantota naudas atmaksai, ja ChangeNow darījuma laikā kaut kas noiet greizi';
 
   @override
   String morph250Sbdeposit250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
@@ -4440,11 +4440,11 @@ class I18nLv extends I18n {
   String get morph250Sberror250Sbtitle => 'Veidojot ChangeNow darījumu, radās kļūda!';
 
   @override
-  String get morph250Sbservice8722Sbdown => 'ChangeNow XMR pakalpojums īslaicīgi nav pieejams. Pamēģini vēlreiz vēlāk.';
+  String get morph250Sbservice8722Sbdown => 'ChangeNow XMR pakalpojums īslaicīgi nav pieejams. Pamēģiniet vēlreiz vēlāk.';
 
   @override
   String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return 'Notiek $cryptocurrencyName adreses saņemšana';
+    return '$cryptocurrencyName saņemšanas adrese';
   }
 
   @override
@@ -4454,32 +4454,32 @@ class I18nLv extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbmin => 'Minimums';
 
   @override
-  String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Ierobežojumi šai ChangeNow tirdzniecībai:';
+  String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Ierobežojumi šim ChangeNow darījumam:';
 
   @override
   String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Nepietiekams līdzsvars. Nepieciešams: $amount_required.';
+    return 'Nepietiekams atlikums. Nepieciešams: $amount_required.';
   }
 
   @override
-  String get new8722Sbad250Sbemail8722Sbverified250Sblabel => 'Tikai lietotājiem ar verificētu e-pastu';
+  String get new8722Sbad250Sbemail8722Sbverified250Sblabel => 'Tikai lietotājiem ar apstiprinātu e-pastu';
 
   @override
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Noderīgi, ja rodas problēmas ar \"coinlockers\"';
 
   @override
   String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
-    return 'Tirdzniecība $assetName';
+    return 'Tirgot $assetName';
   }
 
   @override
-  String get new8722Sbad250Sbreview250Sbemail8722Sbverified => 'Tikai lietotājiem ar verificētu e-pastu';
+  String get new8722Sbad250Sbreview250Sbemail8722Sbverified => 'Tikai lietotājiem ar apstiprinātu e-pastu';
 
   @override
-  String get nojs250Sbdashboard250Sbsave8722Sbvacations8722Sbbtn => 'Ietaupiet brīvdienas';
+  String get nojs250Sbdashboard250Sbsave8722Sbvacations8722Sbbtn => 'Saglabāt atvaļinājumus';
 
   @override
-  String get nojs250Sberror250Sblogin250Sbunauthorized => 'Nepareizs lietotājvārds/parole/vienreizēja parole!';
+  String get nojs250Sberror250Sblogin250Sbunauthorized => 'Nepareizs lietotājvārds/parole/vienreizējā parole!';
 
   @override
   String get nojs250Sberror250Sbserver => 'Ar pieprasījumu radās problēma. Lūdzu, atsvaidziniet lapu un mēģiniet vēlreiz. Ja problēma joprojām pastāv, lūdzu, sazinieties ar mūsu atbalsta dienestu.';
@@ -4505,10 +4505,10 @@ class I18nLv extends I18n {
   String get nojs250Sberror250Sbvalidation250SbfeedbackMsg => 'Atsauksmes ziņojumam jābūt ne vairāk kā 256 rakstzīmēm.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250SbfeedbackType => 'Lūdzu, atlasiet vienu no atļautajiem atsauksmju veidiem: “uzticamība”, “pozitīva”, “neitrāla”, “negatīva” vai “bloķēta”.';
+  String get nojs250Sberror250Sbvalidation250SbfeedbackType => 'Lūdzu, atlasiet vienu no atļautajiem atsauksmju veidiem: “uzticēties”, “pozitīva”, “neitrāla”, “negatīva” vai “bloķēt”.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbgeneric8722Sbstring => 'Lūdzu, mainiet tekstu tā, lai tas būtu noteiktajās robežās.';
+  String get nojs250Sberror250Sbvalidation250Sbgeneric8722Sbstring => 'Lūdzu, izmainiet tekstu tā, lai tas būtu noteiktajās robežās.';
 
   @override
   String get nojs250Sberror250Sbvalidation250Sbhomepage => 'Jābūt pilnam derīgam URL (t.i., iekļaujot “https://” utt.)';
@@ -4540,7 +4540,7 @@ class I18nLv extends I18n {
   String get nojs250Sbfilter250Sbonline8722Sblabel => 'ONLINE';
 
   @override
-  String get nojs250Sbformula250Sbinstructions250Sbfunctions => 'Varat izmantot šādas funkcijas (var būt ligzdotas): <strong>min(), max(), floor(), griesti(), avg()</strong>';
+  String get nojs250Sbformula250Sbinstructions250Sbfunctions => 'Varat izmantot šādas funkcijas (var būt ligzdotas): <strong>min(), max(), floor(), ceiling(), avg()</strong>';
 
   @override
   String get nojs250Sbformula250Sbinstructions250Sboperators => 'Varat izmantot šādus operatorus: <strong>+ - * /</strong>';
@@ -4549,28 +4549,28 @@ class I18nLv extends I18n {
   String get nojs250Sbformula250Sbinstructions250Sbpunctuation => 'Varat izmantot šādus pieturzīmju simbolus: <strong>( ) . ,</strong>';
 
   @override
-  String get nojs250Sbformula250Sbtickers250Sblabel => 'Visi pieejamie tirgus rādītāji';
+  String get nojs250Sbformula250Sbtickers250Sblabel => 'Visi pieejamie tirgus simboli';
 
   @override
   String get nojs250Sbformula250Sbvalidator250Sbbtn => 'Pārbaudiet formulu';
 
   @override
-  String get nojs250Sbformula250Sbvalidator250Sbinstruction => 'Izmantojiet šo rīku, lai pārbaudītu cenas formulu. <br /> PIEZĪME. Kad esat apstiprinājis, ka formula darbojas, kā paredzēts, jums tā ir jāpārkopē faktiskajā iepriekš minētajā veidlapā. Šis rīks ir paredzēts tikai formulas derīguma pārbaudei.';
+  String get nojs250Sbformula250Sbvalidator250Sbinstruction => 'Izmantojiet šo rīku, lai pārbaudītu cenas formulu. <br /> PIEZĪME. Kad esat apstiprinājis, ka formula darbojas, kā paredzēts, jums tā ir jāiekopē veidlapā augstāk. Šis rīks ir paredzēts tikai formulas derīguma pārbaudei.';
 
   @override
-  String get nojs250Sbformula250Sbvalidator250Sblabel => 'Formulas apstiprināšanas rīks';
+  String get nojs250Sbformula250Sbvalidator250Sblabel => 'Formulas pārbaudes rīks';
 
   @override
   String nojs250Sbmorph8722Sbwithdrawal(Object cryptocurrencyName) {
-    return 'Es vēlos izņemt šķīrējtiesas ķīlu uz $cryptocurrencyName maku';
+    return 'Es vēlos izņemt šķīrējtiesas obligāciju uz $cryptocurrencyName maku';
   }
 
   @override
-  String get nojs250Sbmorph8722Sbwithdrawal250Sbbutton8722Sblabel => 'Sāciet';
+  String get nojs250Sbmorph8722Sbwithdrawal250Sbbutton8722Sblabel => 'Sākt';
 
   @override
   String nojs250Sbmorph8722Sbwithdrawal250Sbnotice(Object assetSymbol, Object cryptocurrencyName) {
-    return 'Šķīrējtiesas obligācijas $assetSymbol atsaukšana uz $cryptocurrencyName maku';
+    return 'Šķīrējtiesas obligācija $assetSymbol tiek izņemta uz $cryptocurrencyName maku';
   }
 
   @override
@@ -4579,14 +4579,14 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get nojs250Sbsettings250Sbsave8722Sbtelegram8722Sbid250Sbbutton8722Sblabel => 'Saglabājiet telegrammas ID';
+  String get nojs250Sbsettings250Sbsave8722Sbtelegram8722Sbid250Sbbutton8722Sblabel => 'Saglabāt Telegram ID';
 
   @override
-  String get nojs250Sbtrade250Sbchat250Sbrefresh => 'atjaunot';
+  String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Atjaunot';
 
   @override
   String note250Sbbutton(Object username) {
-    return 'Pievienojiet piezīmi par $username';
+    return 'Pievienot piezīmi par $username';
   }
 
   @override
@@ -4609,15 +4609,15 @@ class I18nLv extends I18n {
 
   @override
   String notice250Sbnon8722Sbcustodial(Object appName) {
-    return 'Pilnībā ar aizbildnību nesaistīti tirdzniecības norēķini tagad ir aktīvi! <a href=\"https://t.me/$appName\" target=\"_blank\" class=\"next-link\">Ja jums ir kādi jautājumi vai rodas problēmas, informējiet mūs</a>. Ja esat to palaidis garām, <a href=\"/blog/announcements/fully-non-custodial-trade-settlements\" target=\"_blank\" class=\"next-link\"> par atjauninājumu varat izlasīt šeit.</a>';
+    return 'Tirdzniecības norēķini pilnībā bez starpniecības tagad ir aktīvi! <a href=\"https://t.me/$appName\" target=\"_blank\" class=\"next-link\">Ja jums ir kādi jautājumi vai rodas problēmas, informējiet mūs</a>. Ja esat to palaidis garām, <a href=\"/blog/announcements/fully-non-custodial-trade-settlements\" target=\"_blank\" class=\"next-link\"> vairāk par atjauninājumu varat izlasīt šeit.</a>';
   }
 
   @override
-  String get notification250Sbmarked8722Sball8722Sbread => 'Atzīmējiet visus paziņojumus kā izlasītus';
+  String get notification250Sbmarked8722Sball8722Sbread => 'Atzīmēt visus paziņojumus kā izlasītus';
 
   @override
   String notification250Sbmessage(Object tradeId, Object username) {
-    return 'Jums ir jauns ziņojums tirdzniecībā $tradeId no $username';
+    return 'Jums ir jauna ziņa darījumā $tradeId no $username';
   }
 
   @override
@@ -4633,17 +4633,17 @@ class I18nLv extends I18n {
 
   @override
   String notification250Sbtrade8722Sbcomplete(Object tradeId, Object username) {
-    return 'Jūsu tirdzniecība $tradeId ar $username ir pabeigta';
+    return 'Jūsu darījums $tradeId ar $username ir pabeigts';
   }
 
   @override
   String notification250Sbtrade8722Sbdisputed(Object tradeId, Object username) {
-    return 'Tirdzniecību $tradeId ir apstrīdējis $username';
+    return 'Darījumu $tradeId ir apstrīdējis $username';
   }
 
   @override
   String notification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete(Object username, Object tradeId) {
-    return '$username ir pabeidzis maksājumu tirdzniecībā $tradeId';
+    return '$username ir pabeidzis maksājumu darījumā $tradeId';
   }
 
   @override
@@ -4664,16 +4664,16 @@ class I18nLv extends I18n {
   String get otp8722Sbtip8722Sb1 => 'Šeit ievadiet savu 6 ciparu vienreizējo paroli no 2FA mobilās lietotnes.';
 
   @override
-  String get otp8722Sbtitle8722Sb0 => 'Vienreizēja parole (ja iespējota)';
+  String get otp8722Sbtitle8722Sb0 => 'Vienreizējā parole (ja iespējota)';
 
   @override
-  String get otp8722Sbtitle8722Sb1 => 'Vienreizēja parole';
+  String get otp8722Sbtitle8722Sb1 => 'Vienreizējā parole';
 
   @override
   String get password => 'Parole';
 
   @override
-  String get password8722Sbreset250Sbbtn => 'Mainiet paroli';
+  String get password8722Sbreset250Sbbtn => 'Mainīt paroli';
 
   @override
   String get password8722Sbreset250Sbconfirm8722Sbnew8722Sbpassword => 'Apstipriniet jauno paroli';
@@ -4688,16 +4688,16 @@ class I18nLv extends I18n {
   String get password8722Sbreset250Sbnew8722Sbpassword => 'Jauna parole';
 
   @override
-  String get password8722Sbreset250Sbsubtitle => 'Pēc paroles nomaiņas jums būs jāpiesakās vēlreiz, izmantojot jauno paroli';
+  String get password8722Sbreset250Sbsubtitle => 'Pēc paroles nomaiņas jums būs jāpieslēdzas vēlreiz, izmantojot jauno paroli';
 
   @override
-  String get password8722Sbreset250Sbsuccess => 'Veiksmi!';
+  String get password8722Sbreset250Sbsuccess => 'Veiksmīgi!';
 
   @override
-  String get password8722Sbreset250Sbsuccess8722Sbtip => 'Tagad jūs tiksit novirzīts uz pieteikšanās lapu.';
+  String get password8722Sbreset250Sbsuccess8722Sbtip => 'Tagad jūs tiksiet novirzīts uz pieslēgšanās lapu.';
 
   @override
-  String get password8722Sbreset250Sbtitle => 'Mainiet paroli';
+  String get password8722Sbreset250Sbtitle => 'Mainīt paroli';
 
   @override
   String get password8722Sbtip => '8-72 rakstzīmes.';
@@ -4727,31 +4727,31 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle => 'Veidlapas kļūda';
 
   @override
-  String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Pārāk daudz reklāmu';
+  String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Pārāk daudz sludinājumu';
 
   @override
   String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Lūdzu, ievadiet derīgu pirmo reizi $assetSymbol robežvērtību. Ir atļauti tikai skaitļi no $min_asset_amount līdz $max_asset_amount.';
+    return 'Lūdzu, ievadiet derīgu pirmās reizes $assetSymbol robežvērtību. Ir atļauti tikai skaitļi no $min_asset_amount līdz $max_asset_amount.';
   }
 
   @override
-  String get post8722Sbad250Sberror250Sblimit8722Sbamounts8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu summu vērtības ierobežojumu. Ir atļauti tikai veseli skaitļi no 1 līdz 1000000000000.';
+  String get post8722Sbad250Sberror250Sblimit8722Sbamounts8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu summas vērtības ierobežojumu. Ir atļauti tikai veseli skaitļi no 1 līdz 1000000000000.';
 
   @override
-  String get post8722Sbad250Sberror250Sblimit8722Sbrequests8722Sbcontent => 'Jūs mēģināt izveidot pārāk daudz reklāmu';
+  String get post8722Sbad250Sberror250Sblimit8722Sbrequests8722Sbcontent => 'Jūs mēģināt izveidot pārāk daudz sludinājumu';
 
   @override
   String get post8722Sbad250Sberror250Sblimit8722Sbrequests8722Sbtitle => 'Pārāk daudz pieprasījumu';
 
   @override
-  String get post8722Sbad250Sberror250Sbmargin8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu maržas vērtību. Ir atļauti tikai skaitļi no -100 līdz 1000.';
+  String get post8722Sbad250Sberror250Sbmargin8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu robežas vērtību. Ir atļauti tikai skaitļi no -100 līdz 1000.';
 
   @override
   String get post8722Sbad250Sberror250Sbmax8722Sbamount8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu maksimālās summas vērtību. Ir atļauti tikai skaitļi no 0,000000000001 līdz 10000000000000.';
 
   @override
   String post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance(Object appName) {
-    return 'Minimālā darījuma summa nevar būt mazāka par jūsu pašreizējo bilanci. Mēģiniet samazināt minimālo summu vai iemaksāt līdzekļus savā $appName makā.';
+    return 'Minimālā pārskaitījuma summa nevar būt mazāka par jūsu pašreizējo atlikumu. Mēģiniet samazināt minimālo summu vai iemaksāt līdzekļus savā $appName makā.';
   }
 
   @override
@@ -4761,36 +4761,36 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sberror250Sbnetwork => 'Tīkla kļūda';
 
   @override
-  String get post8722Sbad250Sberror250Sbpayment8722Sbwindow8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu maksājuma loga vērtību. Ir atļauti tikai veseli skaitļi no 15 līdz 90.';
+  String get post8722Sbad250Sberror250Sbpayment8722Sbwindow8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu maksājuma perioda vērtību. Ir atļauti tikai veseli skaitļi no 15 līdz 90.';
 
   @override
   String get post8722Sbad250Sberror250Sbprice8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu cenas vērtību. Ir atļauti tikai skaitļi no 0,000000000001 līdz 10000000000000.';
 
   @override
-  String get post8722Sbad250Sberror250Sbrequire8722Sbfeedback8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu ierobežojumu, lai pieprasītu atsauksmes rezultāta vērtību. Ir atļauti tikai veseli skaitļi no 0 līdz 100.';
+  String get post8722Sbad250Sberror250Sbrequire8722Sbfeedback8722Sbnot8722Sbvalid => 'Lūdzu, ievadiet derīgu ierobežojumu, lai pieprasītu atsauksmju reitinga vērtību. Ir atļauti tikai veseli skaitļi no 0 līdz 100.';
 
   @override
-  String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Maka atlikums ir mazāks par šim reklāmas veidam nepieciešamo minimumu';
+  String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Maka atlikums ir mazāks par šim sludinājuma veidam nepieciešamo minimumu';
 
   @override
   String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Pirmais laika ierobežojums ($assetSymbol)';
+    return 'Pirmās reizes ierobežojums ($assetSymbol)';
   }
 
   @override
-  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Neobligāti. Ierobežojiet maksimālo darījuma summu lietotājiem, ar kuriem jums nav iepriekšējo darījumu. Vismaz 0.';
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Neobligāti. Ierobežojiet maksimālo darījuma summu lietotājiem, ar kuriem jums nav iepriekšēju darījumu. Minimums 0.';
 
   @override
-  String get post8722Sbad250Sbfor8722Sbtrusted8722Sbswitch8722Sbdescription => 'Padara šo reklāmu pieejamu tikai tiem lietotājiem, kurus esat atzīmējis kā uzticamus';
+  String get post8722Sbad250Sbfor8722Sbtrusted8722Sbswitch8722Sbdescription => 'Padara šo sludinājumu pieejamu tikai tiem lietotājiem, kurus esat atzīmējis kā uzticamus';
 
   @override
   String get post8722Sbad250Sbfor8722Sbtrusted8722Sbswitch8722Sblabel => 'Tikai uzticamiem lietotājiem';
 
   @override
-  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts => 'Limit summas līdz';
+  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts => 'Ierobežot summas līdz';
 
   @override
-  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts8722Sbtip => 'Neobligāti. Ierobežojiet tirdzniecības apjomus līdz konkrētiem ar komatiem atdalītiem veseliem skaitļiem, piemēram, 20,50,100. Fiat valūtā (USD/EUR/uc). Ērts kuponiem, dāvanu kartēm utt.';
+  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts8722Sbtip => 'Neobligāti. Ierobežojiet tirdzniecības apjomus uz konkrētiem ar komatiem atdalītiem veseliem skaitļiem, piemēram, 20,50,100. Fiat valūtā (USD/EUR/uc). Ērti kuponiem, dāvanu kartēm utt.';
 
   @override
   String get post8722Sbad250Sblocation250Sbtitle => 'Atrašanās vieta';
@@ -4804,25 +4804,25 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sblog8722Sbin => 'Pieslēgties';
 
   @override
-  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sbsign8722Sbup => 'Pierakstīties';
+  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sbsign8722Sbup => 'Reģistrēties';
 
   @override
   String get post8722Sbad250Sbmax8722Sbamount => 'Maksimālā summa';
 
   @override
-  String get post8722Sbad250Sbmax8722Sbamount8722Sbtip => 'Neobligāti. Maksimālais darījumu limits vienā darījumā.';
+  String get post8722Sbad250Sbmax8722Sbamount8722Sbtip => 'Neobligāti. Maksimālais pārskaitījuma limits vienā darījumā.';
 
   @override
   String get post8722Sbad250Sbmin8722Sbamount => 'Minimālā summa';
 
   @override
-  String get post8722Sbad250Sbmin8722Sbamount8722Sbtip => 'Neobligāti. Minimālais darījuma limits vienā darījumā';
+  String get post8722Sbad250Sbmin8722Sbamount8722Sbtip => 'Neobligāti. Minimālais pārskaitījuma limits vienā darījumā';
 
   @override
-  String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore => 'Minimālais atsauksmju rezultāts';
+  String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore => 'Minimālais atsauksmju reitings';
 
   @override
-  String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore8722Sbtip => 'Neobligāti. Minimālais lietotāju atsauksmju rezultāts, kas nepieciešams, lai pieprasītu darījumu no 0 līdz 100.';
+  String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore8722Sbtip => 'Neobligāti. Minimālais atsauksmju reitings, kas lietotājam nepieciešams, lai pieprasītu darījumu, no 0 līdz 100.';
 
   @override
   String get post8722Sbad250Sbpayment8722Sbmethod8722Sbdetail => 'Sīkāka informācija par maksājuma veidu';
@@ -4834,19 +4834,19 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbpayment8722Sbmethod8722Sbinfo => 'Informācija par maksājuma veidu';
 
   @override
-  String get post8722Sbad250Sbpayment8722Sbmethod8722Sbinfo8722Sbtip8722Sb0 => 'Norādiet maksājuma veida informāciju, kas jāparāda tirdzniecības laikā. Ne vairāk kā 4096 rakstzīmes. Varat izmantot atzīmes, lai pielāgotu maksājuma veida informāciju (attēli nav atļauti).';
+  String get post8722Sbad250Sbpayment8722Sbmethod8722Sbinfo8722Sbtip8722Sb0 => 'Norādiet maksājuma veida informāciju, kas tiks rādīta darījuma laikā. Ne vairāk kā 4096 rakstzīmes. Varat izmantot atzīmes, lai pielāgotu maksājuma veida informāciju (attēli nav atļauti).';
 
   @override
   String get post8722Sbad250Sbpayment8722Sbmethod250Sbtitle => 'Apmaksas veids';
 
   @override
-  String get post8722Sbad250Sbpayment8722Sbwindow => 'Maksājumu periods (minūtes)';
+  String get post8722Sbad250Sbpayment8722Sbwindow => 'Maksājuma periods (minūtes)';
 
   @override
-  String get post8722Sbad250Sbpayment8722Sbwindow8722Sbtip => 'Maksājumu perioda laiks minūtēs. Minimums 15. Maksimums 90. Ja neviens nav norādīts, noklusējuma vērtība tiek iestatīta uz 90.';
+  String get post8722Sbad250Sbpayment8722Sbwindow8722Sbtip => 'Maksājuma perioda laiks minūtēs. Minimums 15. Maksimums 90. Ja neviens nav norādīts, noklusējuma vērtība tiek iestatīta uz 90.';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfixed => 'Fiksētā cena';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbfixed => 'Fiksēta cena';
 
   @override
   String post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbin(Object currency) {
@@ -4855,28 +4855,28 @@ class I18nLv extends I18n {
 
   @override
   String post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbtip(Object assetSymbol, Object currency) {
-    return 'Cena par 1 $assetSymbol in $currency. Šī cena nemainīsies, ja vien to nemainīsit manuāli.';
+    return '$currency cena par 1 $assetSymbol. Šī cena nemainīsies, ja vien to nemainīsiet manuāli.';
   }
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbtip250Sbnojs => 'Cena par 1 monētu izvēlētajā sludinājuma valūtā. Šī cena nemainīsies, ja vien to nemainīsit manuāli.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbtip250Sbnojs => 'Cena par 1 monētu izvēlētajā sludinājuma valūtā. Šī cena nemainīsies, ja vien to nemainīsiet manuāli.';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating => 'Peldoša cena';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating => 'Peldošā cena';
 
   @override
   String post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip(Object assetName) {
-    return 'Lieciet valūtas kursam peldēt ar tirgu, kamēr tirdzniecība ir atvērta. Tirdzniecības cena tiek noteikta noslēgšanas brīdī. Ņemiet vērā, ka $assetName summai, kas rezervēta šķīrējtiesas obligācijā, tiek pievienota papildu 15% rezerve. Pārsniegtā summa tiks atgriezta pēc darījuma pabeigšanas.';
+    return 'Lieciet maiņas kursam peldēt līdz ar tirgu, kamēr darījums ir atvērts. Darījuma cena tiek noteikta noslēgšanas brīdī. Ņemiet vērā, ka $assetName summai, kas rezervēta šķīrējtiesas obligācijā, tiek pievienota papildu 15% rezerve. Pārsniegtā summa tiks atgriezta pēc darījuma pabeigšanas.';
   }
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip250Sbnojs => 'Lieciet valūtas kursam peldēt ar tirgu, kamēr tirdzniecība ir atvērta. Tirdzniecības cena tiek noteikta darījuma noslēgšanas brīdī. Ņemiet vērā, ka izvēlētajai kriptovalūtas aktīva summai, kas rezervēta šķīrējtiesas obligācijai, tiek pievienota papildu 15% rezerve. Pārsniegtā summa tiks atgriezta pēc darījuma pabeigšanas.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip250Sbnojs => 'Lieciet valūtas kursam peldēt ar tirgu, kamēr darījums ir atvērts. Tirdzniecības cena tiek noteikta darījuma noslēgšanas brīdī. Ņemiet vērā, ka izvēlētajai kriptovalūtas aktīva summai, kas rezervēta šķīrējtiesas obligācijai, tiek pievienota papildu 15% rezerve. Pārsniegtā summa tiks atgriezta pēc darījuma pabeigšanas.';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin => 'peļņa %';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin => 'Uzcenojums %';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin250Sbtip => 'Marža ir starpība starp jūsu cenu un tirgus cenu. 0% ir tirgus cena. Izmantojiet pozitīvo vērtību, lai pārsniegtu tirgus cenu, un negatīvo vērtību, lai pazeminātu zem tirgus cenas.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin250Sbtip => 'Uzcenojums ir starpība starp jūsu cenu un tirgus cenu. 0% ir tirgus cena. Izmantojiet pozitīvu vērtību, lai pārsniegtu tirgus cenu, un negatīvu vērtību, lai būtu zem tirgus cenas.';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbmarket => 'Tirgus cena';
@@ -4885,7 +4885,7 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbprice8722Sbtype250Sbradio250Sbformula => 'Cenas formula (papildu)';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbtip => 'Tirgus cena nozīmē, ka cena jūsu reklāmā mainīsies, mainoties tirgus cenai. Fiksētā cena nozīmē, ka, neskatoties uz tirgus svārstībām, jūsu cena paliks nemainīga, līdz to manuāli mainīsit. Izmantojiet cenu formulu (papildu), lai izveidotu sarežģītākus cenu noteikšanas mehānismus.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbtip => 'Tirgus cena nozīmē, ka cena jūsu sludinājumā mainīsies, mainoties tirgus cenai. Fiksētā cena nozīmē, ka, neskatoties uz tirgus svārstībām, jūsu cena paliks nemainīga, līdz to manuāli mainīsiet. Izmantojiet cenu formulu (papildu), lai izveidotu sarežģītākus cenu noteikšanas mehānismus.';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbtitle => 'Cenas ievades veids';
@@ -4903,23 +4903,23 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbreview => 'Pārskatiet savu sludinājumu';
 
   @override
-  String get post8722Sbad250Sbreview250Sbad8722Sbtype => 'Reklāmas veids';
+  String get post8722Sbad250Sbreview250Sbad8722Sbtype => 'Sludinājuma veids';
 
   @override
-  String get post8722Sbad250Sbreview250Sbmargin => 'Marža';
+  String get post8722Sbad250Sbreview250Sbmargin => 'Uzcenojums';
 
   @override
   String get post8722Sbad250Sbreview250Sbminutes => 'minūtes';
 
   @override
-  String get post8722Sbad250Sbreview250Sbno => 'Nē';
+  String get post8722Sbad250Sbreview250Sbno => 'nē';
 
   @override
-  String get post8722Sbad250Sbreview250Sbyes => 'Jā';
+  String get post8722Sbad250Sbreview250Sbyes => 'jā';
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Pirms reklāmas izveides, lūdzu, izlasiet mūsu $termsOfservice un $guides';
+    return 'Pirms sludinājuma izveides, lūdzu, izlasiet mūsu $termsOfservice un $guides';
   }
 
   @override
@@ -4929,21 +4929,21 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice => 'Pakalpojuma noteikumi';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb0 => 'Katrs noslēgtais darījums maksā reklāmdevējiem 1% no kopējās darījuma summas (šķīrējtiesas aizsardzības maksa).';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb0 => 'Katrs pabeigts darījums sludinājuma ievietotājam maksā 1% no kopējās darījuma summas (šķīrējtiesas aizsardzības maksa).';
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1(Object minimumXmrAmount, Object assetSymbol, Object appName) {
-    return 'Lai publicētā $assetSymbol pārdošanas reklāma būtu redzama, jūsu $appName šķīrējtiesas obligāciju makā ir jābūt vismaz $minimumXmrAmount $assetSymbol.';
+    return 'Lai publicētais $assetSymbol pārdošanas sludinājums būtu redzams, jūsu $appName šķīrējtiesas obligāciju makā ir jābūt vismaz $minimumXmrAmount $assetSymbol.';
   }
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1250Sbagoradesk8722Sbnojs(Object minimumXmrAmount, Object assetSymbol, Object appName) {
-    return 'Jūsu $appName makā ir jābūt vismaz $minimumXmrAmount $assetSymbol, lai publicētu $assetSymbol pārdošanas vai $assetSymbol zvanu pārdošanas vai $assetSymbol ievietošanas pirkšanas sludinājumu būtu redzams.';
+    return 'Jūsu $appName makā ir jābūt vismaz $minimumXmrAmount $assetSymbol, lai publicētais $assetSymbol pārdošanas vai $assetSymbol call pārdošanas vai $assetSymbol put pirkšanas sludinājums būtu redzams.';
   }
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb2(Object maximumNumberOfAds) {
-    return 'Katrs lietotājs var izveidot līdz $maximumNumberOfAds reklāmām.';
+    return 'Katrs lietotājs var izveidot līdz $maximumNumberOfAds sludinājumiem.';
   }
 
   @override
@@ -4961,7 +4961,7 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb5 => 'Jūs varat izmantot tikai tos maksājumu kontus, kas ir reģistrēti uz jūsu vārda (bez trešo pušu maksājumiem!).';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb6 => 'Sludinājumā vai tirdzniecības tērzēšanā jums ir jānorāda sava maksājuma informācija.';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb6 => 'Sludinājumā vai darījuma sarakstē jums ir jānorāda sava maksājuma informācija.';
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb7(Object appName) {
@@ -4969,7 +4969,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtitle => 'Reklāmas noteikumi un prasības';
+  String get post8722Sbad250Sbrules8722Sbtitle => 'Sludinājuma noteikumi un prasības';
 
   @override
   String post8722Sbad250Sbsettlement8722Sbaddress250Sbtip(Object appName) {
@@ -4982,19 +4982,19 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get post8722Sbad250Sbstep8722Sb2 => '2. darbība';
+  String get post8722Sbad250Sbstep8722Sb2 => 'Solis 2';
 
   @override
-  String get post8722Sbad250Sbstep8722Sb3 => '3. darbība';
+  String get post8722Sbad250Sbstep8722Sb3 => 'Solis 3';
 
   @override
-  String get post8722Sbad250Sbstep8722Sb4 => '4. darbība';
+  String get post8722Sbad250Sbstep8722Sb4 => 'Solis 4';
 
   @override
-  String get post8722Sbad250Sbstep8722Sb5 => '5. darbība';
+  String get post8722Sbad250Sbstep8722Sb5 => 'Solis 5';
 
   @override
-  String get post8722Sbad250Sbstep8722Sb6 => '6. darbība';
+  String get post8722Sbad250Sbstep8722Sb6 => 'Solis 6';
 
   @override
   String get post8722Sbad250Sbswitch8722Sbform8722Sbtoggle250Sbshow8722Sbfull => 'Rādīt pilnu formu';
@@ -5006,42 +5006,42 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbterms => 'Tirdzniecības noteikumi';
 
   @override
-  String get post8722Sbad250Sbterms8722Sbtip8722Sb0 => 'Sludinājuma tirdzniecības noteikumi, maksimums 4096 rakstzīmes. Varat izmantot atzīmes, lai pielāgotu reklāmas vārdu stilu (attēli nav atļauti).';
+  String get post8722Sbad250Sbterms8722Sbtip8722Sb0 => 'Sludinājuma tirdzniecības noteikumi, maksimums 4096 rakstzīmes. Varat izmantot markdown, lai stilizētu sludinājumu (attēli nav atļauti).';
 
   @override
-  String get post8722Sbad250Sbterms8722Sbtip8722Sb1 => 'Kā lietot uzcenojumu?';
+  String get post8722Sbad250Sbterms8722Sbtip8722Sb1 => 'Kā lietot markdown?';
 
   @override
-  String get post8722Sbad250Sbtitle => 'Izveidojiet sludinājumu';
+  String get post8722Sbad250Sbtitle => 'Izveidot sludinājumu';
 
   @override
-  String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity => 'Izsekojiet maksimālo likviditātes summu';
+  String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity => 'Sekot maksimālajai likviditātes summai';
 
   @override
-  String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity8722Sbtip => 'Šī opcija ierobežo šīs reklāmas likviditāti līdz maks. darījumu limits. Pircēji nevar atvērt un pabeigt darījumus, kas pārsniedz šo summu. Piemērs: ar ieslēgtu trases likviditāti un maks. darījuma limits ir iestatīts uz 100 USD, kad pircējs atver darījumu par 20 USD, maksimālais. darījumu limits tiek automātiski samazināts līdz 80 USD. Tas atgriežas pie 100 USD, ja pircējs atceļ darījumu, un paliek 80 USD, ja darījums ir pabeigts.';
+  String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity8722Sbtip => 'Šī opcija ierobežo šī sludinājuma likviditāti līdz maks. darījuma limitam. Pircēji nevar atvērt un pabeigt darījumus, kas pārsniedz šo summu. Piemērs: ar ieslēgtu likviditātes sekošanu un maks. darījuma limitu iestatītu uz 100 USD, kad pircējs atver darījumu par 20 USD, maksimālais darījumu limits tiek automātiski samazināts līdz 80 USD. Tas atgriežas pie 100 USD, ja pircējs atceļ darījumu, un paliek 80 USD, ja darījums ir pabeigts.';
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbbuy(Object assetName) {
-    return 'Pērciet $assetName par skaidru naudu (lokāli)';
+    return 'Pirkt $assetName par skaidru naudu (lokāli)';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbsell(Object assetName) {
-    return 'Pārdod $assetName par skaidru naudu (uz vietas)';
+    return 'Pārdot $assetName par skaidru naudu (lokāli)';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbbuy(Object assetName) {
-    return 'Pērciet $assetName tiešsaistē';
+    return 'Pirkt $assetName tiešsaistē';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbsell(Object assetName) {
-    return 'Pārdod $assetName tiešsaistē';
+    return 'Pārdot $assetName tiešsaistē';
   }
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbsubtitle => 'ES gribu...';
+  String get post8722Sbad250Sbtrade8722Sbtype250Sbsubtitle => 'Es gribu...';
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbtip(Object assetName, Object appName) {
@@ -5059,7 +5059,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbtitle => 'Tirdzniecības veids';
+  String get post8722Sbad250Sbtrade8722Sbtype250Sbtitle => 'Darījuma veids';
 
   @override
   String price8722Sbformula8722Sbinterface250Sbtickers250Sbasset8722Sbpairs(Object asset) {
@@ -5073,13 +5073,13 @@ class I18nLv extends I18n {
   String get read8722Sbmore => 'Lasīt vairāk';
 
   @override
-  String get recaptcha250Sbno8722Sbgoogle8722Sbmessage => 'Esam ievērojuši, ka jūsu pārlūkprogrammā ir bloķēti Google pakalpojumi. Tā kā dažām vietnes darbībām mēs izmantojam Google reCAPTCHA, jums būs jāatrod veids, kā sasniegt Google pakalpojumus (piemēram, VPN, starpniekserveri vai Tor pārlūkprogrammas izmantošanu).';
+  String get recaptcha250Sbno8722Sbgoogle8722Sbmessage => 'Esam ievērojuši, ka jūsu pārlūkprogrammā ir bloķēti Google pakalpojumi. Tā kā dažām vietnes darbībām mēs izmantojam Google reCAPTCHA, jums būs jāatrod veids, kā sasniegt Google pakalpojumus (piemēram, VPN, starpniekserveri vai Tor pārlūkprogramma).';
 
   @override
   String get receipt250Sbchat8722Sbmessages => 'Ziņapmaiņa';
 
   @override
-  String get receipt250Sbchat8722Sbmessages8722Sbnone => 'Nav ziņojumu';
+  String get receipt250Sbchat8722Sbmessages8722Sbnone => 'Nav ziņu';
 
   @override
   String get receipt250Sbdetails250Sbopened => 'Atvērts';
@@ -5096,7 +5096,7 @@ class I18nLv extends I18n {
   String get reputation8722Sbimport250Sbdenied250Sbtip => 'Varat mēģināt vēlreiz ar citu lietotājvārdu';
 
   @override
-  String get reputation8722Sbimport250Sbdenied250Sbtitle => 'Noliegts';
+  String get reputation8722Sbimport250Sbdenied250Sbtitle => 'Liegts';
 
   @override
   String get reputation8722Sbimport250Sbinitial250Sbtitle => 'Nav sākts';
@@ -5116,24 +5116,24 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get reputation8722Sbimport250Sbstats250Sbtrades => 'tirgojas';
+  String get reputation8722Sbimport250Sbstats250Sbtrades => 'darījumi';
 
   @override
   String get reputation8722Sbimport250Sbstats250Sbvolume => 'apjoms';
 
   @override
   String reputation8722Sbimport250Sbstep250Sbcode250Sbmessage(Object platform) {
-    return 'Pievienojiet šo kodu kaut kur savā publiskajā $platform profilā. Kad esam verificējuši kodu, varēsiet to noņemt.';
+    return 'Pievienojiet šo kodu kaut kur savā publiskajā $platform profilā. Kad būsim verificējuši kodu, varēsiet to noņemt.';
   }
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Pievienojiet šo kodu savam LocalBitcoins profilam kā savai personīgajai tīmekļa lapai, beigās pievienojot \".com\". Kad esam verificējuši kodu, varēsiet to noņemt.';
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Pievienojiet šo kodu savam LocalBitcoins profilam kā savai personīgajai tīmekļa lapai, beigās pievienojot \".com\". Kad būsim verificējuši kodu, varēsiet to noņemt.';
 
   @override
   String get reputation8722Sbimport250Sbstep250Sbcode250Sbtitle => 'Pievienojiet kodu';
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbfinal250Sbtitle => 'Gaidiet verifikāciju';
+  String get reputation8722Sbimport250Sbstep250Sbfinal250Sbtitle => 'Gaida verifikāciju';
 
   @override
   String reputation8722Sbimport250Sbstep250Sbusername250Sbinput250Sblabel(Object platform) {
@@ -5152,34 +5152,34 @@ class I18nLv extends I18n {
   String get reputation8722Sbimport250Sbstepper250Sbfinal250Sbmessage => 'Pagaidiet mazliet, līdz mēs verificēsim jūsu profilu.';
 
   @override
-  String get reputation8722Sbimport250Sbstepper250Sbfinal250Sbtitle => 'Gandrīz klāt!';
+  String get reputation8722Sbimport250Sbstepper250Sbfinal250Sbtitle => 'Gandrīz gatavs!';
 
   @override
   String get reputation8722Sbimport250Sbunconfirmed250Sbtitle => 'Neapstiprināts';
 
   @override
-  String get reputation8722Sbimport250Sbverified250Sbtitle => 'Pārbaudīts';
+  String get reputation8722Sbimport250Sbverified250Sbtitle => 'Apstiprināts';
 
   @override
   String get reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbedit => 'Rediģēt importēšanas informāciju';
 
   @override
-  String get reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbinitial => 'Saistiet kontu';
+  String get reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbinitial => 'Saistīt kontu';
 
   @override
-  String get request8722Sbpassword8722Sbreset250Sbbtn => 'Nosūtiet atiestatīšanas vēstuli';
+  String get request8722Sbpassword8722Sbreset250Sbbtn => 'Nosūtīt atiestatīšanas vēstuli';
 
   @override
-  String get request8722Sbpassword8722Sbreset250Sbemail => 'Tavs e-pasts';
+  String get request8722Sbpassword8722Sbreset250Sbemail => 'Jūsu e-pasts';
 
   @override
-  String get request8722Sbpassword8722Sbreset250Sbemail8722Sbtip => 'Ievadiet verificētu e-pastu, kas ir saistīts ar jūsu kontu. Mēs nosūtīsim vēstuli ar paroles atiestatīšanas instrukcijām';
+  String get request8722Sbpassword8722Sbreset250Sbemail8722Sbtip => 'Ievadiet apstiprinātu e-pastu, kas ir saistīts ar jūsu kontu. Mēs nosūtīsim vēstuli ar paroles atiestatīšanas instrukcijām';
 
   @override
   String get request8722Sbpassword8722Sbreset250Sberror8722Sb1 => 'Mums nav ar šo e-pastu saistīta konta.';
 
   @override
-  String get request8722Sbpassword8722Sbreset250Sberror8722Sb2 => 'Šis e-pasts nav verificēts';
+  String get request8722Sbpassword8722Sbreset250Sberror8722Sb2 => 'Šis e-pasts nav apstiprināts';
 
   @override
   String get request8722Sbpassword8722Sbreset250Sberror8722Sb3 => 'Kļūda';
@@ -5194,7 +5194,7 @@ class I18nLv extends I18n {
   String get request8722Sbpassword8722Sbreset250Sberror8722Sb6 => 'Paroles atiestatīšanas kļūda';
 
   @override
-  String get request8722Sbpassword8722Sbreset250Sbletter8722Sbsent => 'Ja šī e-pasta adrese ir verificēta ar kontu, jūs saņemsit vēstuli.';
+  String get request8722Sbpassword8722Sbreset250Sbletter8722Sbsent => 'Ja šī e-pasta adrese ir verificēta ar kontu, jūs saņemsiet vēstuli.';
 
   @override
   String get request8722Sbpassword8722Sbreset250Sbtitle => 'Atiestatīt paroli';
@@ -5203,16 +5203,16 @@ class I18nLv extends I18n {
   String get right8722Sbdrawer250Sbaffiliate => 'Saistītā programma';
 
   @override
-  String get right8722Sbdrawer250Sbcancelled => 'Anulēti darījumi';
+  String get right8722Sbdrawer250Sbcancelled => 'Atceltie darījumi';
 
   @override
-  String get right8722Sbdrawer250Sbcompleted => 'Pabeigti darījumi';
+  String get right8722Sbdrawer250Sbcompleted => 'Pabeigtie darījumi';
 
   @override
-  String get right8722Sbdrawer250Sbdashboard => 'Atvērtie darījumi un reklāmas';
+  String get right8722Sbdrawer250Sbdashboard => 'Atvērtie darījumi un sludinājumi';
 
   @override
-  String get right8722Sbdrawer250Sblogout => 'Izlogoties';
+  String get right8722Sbdrawer250Sblogout => 'Atslēgties';
 
   @override
   String get right8722Sbdrawer250Sbprofile => 'Profils';
@@ -5227,7 +5227,7 @@ class I18nLv extends I18n {
   String get sanction250Sbaction8722Sbnotice => 'Jums ir aizliegts veikt šo darbību šāda jūsu konta ierobežojuma dēļ:';
 
   @override
-  String get sanction250Sbban250Sblabel => 'Aizliegts';
+  String get sanction250Sbban250Sblabel => 'Izslēgts';
 
   @override
   String get sanction250Sbexpires => 'Beidzas';
@@ -5269,12 +5269,12 @@ class I18nLv extends I18n {
 
   @override
   String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
-    return 'Pārdod $assetName par skaidru naudu {country}';
+    return 'Pārdot $assetName par skaidru naudu $location';
   }
 
   @override
   String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
-    return 'Pērciet $assetName ar skaidru naudu {country}';
+    return 'Pirkt $assetName ar skaidru naudu $location';
   }
 
   @override
@@ -5284,7 +5284,7 @@ class I18nLv extends I18n {
 
   @override
   String search250Sbheading8722Sbonline8722Sbsell(Object assetName, Object country, Object usingMethod) {
-    return 'Iegādājieties $assetName tiešsaistē $country $usingMethod';
+    return 'Pērk $assetName tiešsaistē $country $usingMethod';
   }
 
   @override
@@ -5305,15 +5305,15 @@ class I18nLv extends I18n {
 
   @override
   String search250Sbno8722Sbresults(Object country) {
-    return 'Vēl nav rezultātu $country ar atlasītajiem kritērijiem... vēl. ';
+    return 'Nav rezultātu $country ar atlasītajiem kritērijiem... pagaidām. ';
   }
 
   @override
-  String get search250Sbno8722Sbresults8722Sb1 => 'Mēģiniet izmantot citu maksājuma veidu, citu summu vai bez tās. ';
+  String get search250Sbno8722Sbresults8722Sb1 => 'Mēģiniet izmantot citu maksājuma veidu, citu summu vai bez nekādas summas. ';
 
   @override
   String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Alternatīvi, esiet pirmais $postAnad šeit!';
+    return 'Vai arī, esiet pirmais, kas $postAnad šeit!';
   }
 
   @override
@@ -5325,7 +5325,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get search250Sbsell8722Sbtab => 'Pārdod';
+  String get search250Sbsell8722Sbtab => 'Pārdot';
 
   @override
   String get seo250Sbheadline8722Sb1 => 'Aizsargājiet savas tiesības uz privātumu — iegādājieties Monero.';
@@ -5334,22 +5334,22 @@ class I18nLv extends I18n {
   String get seo250Sbheadline8722Sb157Sbagoradesk => 'Labākā kriptovalūtas birža, lai tiešsaistē pirktu un pārdotu Bitcoin bez ID verifikācijas.';
 
   @override
-  String get seo250Sbheadline8722Sb2 => 'Pārdodiet Monero cilvēkiem visā pasaulē vai vietējā līmenī - atbalstiet kopienu un pelniet naudu ar kriptovalūtu.';
+  String get seo250Sbheadline8722Sb2 => 'Pārdodiet Monero cilvēkiem visā pasaulē vai savā apvidū - atbalstiet kopienu un pelniet naudu ar kriptovalūtu.';
 
   @override
-  String get seo250Sbheadline8722Sb257Sbagoradesk => 'Īsta LocalBitcoins un Paxful alternatīva.';
+  String get seo250Sbheadline8722Sb257Sbagoradesk => 'Reāla LocalBitcoins un Paxful alternatīva.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Ja esat noraizējies par privātuma aizskaršanu - labākā kriptovalūta, kurā ieguldīt, ir XMR. Monero ir neizsekojama monēta, kas izstrādāta, domājot par privātumu.\n<br/>\nKur nopirkt Monero? LocalMonero ir lielākā, uzticamākā un labi izveidotā P2P Monero birža XMR kopienā. Mums nav KYC čeku — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt bitcoin uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.';
+  String get seo250Sbtext8722Sb1 => 'Ja esat noraizējies par privātuma aizskaršanu - labākā kriptovalūta, kurā ieguldīt, ir XMR. Monero ir neizsekojama monēta, kas izstrādāta, domājot par privātumu.\n<br/>\nKur nopirkt Monero? LocalMonero ir lielākā, uzticamākā un spēcīgākā P2P Monero birža XMR kopienā. Mums nav KYC pārbaužu — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt bitcoin uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.';
 
   @override
-  String get seo250Sbtext8722Sb157Sbagoradesk => 'Vai domājat, kā ieguldīt Bitcoin? Vietnē AgoraDesk bitkoinu iegāde nekad nav bijusi tik vienkārša – uzreiz iegādājieties BTC no personas, izmantojot savu iecienītāko tiešsaistes maksājuma veidu: PayPal, kredītkarti/debetkarti vai bankas pārskaitījumu, dāvanu kartes, Venmo vai jebkuru citu.\n<br/>\nJa vēlaties iegādāties bitkoinus pie jums ar skaidru naudu, varat atrast kādu, kas vēlas pārdot bitkoinus uz vietas - tirdzniecības platforma atbalsta BTC pirkšanu un pārdošanu ar skaidru naudu. Jūs pat varat iegādāties bitkoīnus, izmantojot skaidru naudu pa pastu.';
+  String get seo250Sbtext8722Sb157Sbagoradesk => 'Vai domājat, kā ieguldīt Bitcoin? Vietnē AgoraDesk Bitcoin iegāde nekad nav bijusi tik vienkārša – uzreiz iegādājieties BTC no personas, izmantojot savu iecienītāko tiešsaistes maksājuma veidu: PayPal, kredītkarti/debetkarti vai bankas pārskaitījumu, dāvanu kartes, Venmo vai jebkuru citu.\n<br/>\nJa vēlaties iegādāties Bitcoin netālu no jums ar skaidru naudu, varat atrast kādu, kas vēlas pārdot Bitcoin uz vietas - tirdzniecības platforma atbalsta BTC pirkšanu un pārdošanu ar skaidru naudu. Jūs pat varat iegādāties Bitcoin, izmantojot skaidru naudu pa pastu.';
 
   @override
-  String get seo250Sbtext8722Sb2 => 'LocalMonero ir labākā vieta, kur pārdot XMR — neatkarīgi no tā, vai tas ir jūsu ieguves ieguvums,\nMonero cenu arbitrāža, vai arī jūs vienkārši redzat vērtību kopienas apkalpošanā. Šķīrējtiesas obligāciju aizsardzības sistēma un mūsu drošais Monero šķīrējtiesas obligāciju maciņš sniedz jums spēcīgu XMR tirdzniecības pieredzi, lai jūs varētu mierīgi konvertēt XMR uz USD, EUR, AUD, GBP vai jebkuru citu vietējo valūtu.';
+  String get seo250Sbtext8722Sb2 => 'LocalMonero ir labākā vieta, kur pārdot XMR — neatkarīgi no tā, vai tas ir jūsu mainošanas guvums,\nMonero cenu arbitrāža, vai arī jūs vienkārši redzat vērtību kopienas apkalpošanā. Šķīrējtiesas obligāciju aizsardzības sistēma un mūsu drošais Monero šķīrējtiesas obligāciju maciņš sniedz jums spēcīgu XMR tirdzniecības vidi, lai jūs mierīgu prātu varētu konvertēt XMR uz USD, EUR, AUD, GBP vai jebkuru citu vietējo valūtu.';
 
   @override
-  String get seo250Sbtext8722Sb257Sbagoradesk => 'Vai esat bitcoin tirgotājs, kurš vēlas pelnīt naudu ar kriptovalūtu arbitrāžu? Kalnracis, kurš vēlas izņemt BTC naudu USD vai citā vietējā valūtā?\n<br/>\nAgoraDesk ir <a href=\"/localbitcoins-alternative\" style=\"color: #0b4f6c\"> LocalBitcoins alternatīva </a>, kas respektē jūsu privātumu un drošību, vienlaikus nodrošinot vienmērīgu un ātru bitkoinu iekasēšanas pieredzi.';
+  String get seo250Sbtext8722Sb257Sbagoradesk => 'Vai esat bitcoin tirgotājs, kurš vēlas pelnīt naudu ar kriptovalūtu arbitrāžu? Maineris, kurš vēlas izņemt BTC peļņu USD vai citā vietējā valūtā?\n<br/>\nAgoraDesk ir <a href=\"/localbitcoins-alternative\" style=\"color: #0b4f6c\"> LocalBitcoins alternatīva </a>, kas respektē jūsu privātumu un drošību, vienlaikus nodrošinot vienmērīgu un ātru Bitcoin realizācijas pieredzi.';
 
   @override
   String get settings250Sb2fa250Sbbackup8722Sbcode => 'Jūsu rezerves kods ir:';
@@ -5358,13 +5358,13 @@ class I18nLv extends I18n {
   String get settings250Sb2fa250Sbdisable8722Sbbtn => 'Atspējot 2FA';
 
   @override
-  String get settings250Sb2fa250Sbdisable8722Sberror => 'Nepareiza parole vai vienreizēja parole.';
+  String get settings250Sb2fa250Sbdisable8722Sberror => 'Nepareiza parole vai vienreizējā parole.';
 
   @override
   String get settings250Sb2fa250Sbdisable8722Sbsubtitle => 'Lai atspējotu 2FA, ievadiet savu paroli un vienreizējo paroli.';
 
   @override
-  String get settings250Sb2fa250Sbdisable8722Sbsuccess => 'Veiksmi! 2FA ir atspējota.';
+  String get settings250Sb2fa250Sbdisable8722Sbsuccess => 'Veiksmi! 2FA ir atspējots.';
 
   @override
   String get settings250Sb2fa250Sbdisable8722Sbtitle => 'Atspējot divu faktoru autentifikāciju';
@@ -5391,13 +5391,13 @@ class I18nLv extends I18n {
   String get settings250Sb2fa250Sbstatus => 'Jūsu 2FA statuss:';
 
   @override
-  String get settings250Sb2fa250Sbstatus8722Sbdisabled => 'ATSPĒJĪTS';
+  String get settings250Sb2fa250Sbstatus8722Sbdisabled => 'ATSPĒJOTS';
 
   @override
   String get settings250Sb2fa250Sbstatus8722Sbenabled => 'IESPĒJOTS';
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Ievadiet kodu</strong>, ko sniedz jūsu 2FA mobilā lietotne lodziņā zem QR koda un <strong> nospiediet pogu Verify 2FA </strong>.';
+  String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Ievadiet kodu</strong>, ko rāda jūsu 2FA mobilā lietotne, lodziņā zem QR koda un <strong> nospiediet pogu \"Apstiprināt 2FA\" </strong>.';
 
   @override
   String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
@@ -5408,21 +5408,21 @@ class I18nLv extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbone8722Sbany8722Sbother8722Sb2fa8722Sbapp => 'jebkura cita 2FA lietotne';
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbone8722Sbdownload8722Sba8722Sb2fa8722Sbapp => 'Lejupielādējiet 2FA lietotni';
+  String get settings250Sb2fa250Sbstep8722Sbone8722Sbdownload8722Sba8722Sb2fa8722Sbapp => 'Lejuplādējiet 2FA lietotni';
 
   @override
   String get settings250Sb2fa250Sbstep8722Sbthree => 'Palaidiet 2FA lietotni savā mobilajā ierīcē. Atrodiet lietotnē svītrkoda skenēšanas funkciju un <strong> skenējiet šajā lapā redzamo QR kodu </strong>.';
 
   @override
   String settings250Sb2fa250Sbstep8722Sbtwo(Object appName) {
-    return '<strong> Pierakstiet rezerves kodu </strong> (augšpusē zaļā krāsā) uz papīra un glabājiet to drošā vietā. Tas būs nepieciešams, ja pazaudēsit tālruni vai tiks bloķēta piekļuve kontam. $appName nevarēs jums palīdzēt, ja pazaudēsit šo kodu.';
+    return '<strong> Pierakstiet rezerves kodu </strong> (augstāk zaļā krāsā) uz papīra un glabājiet to drošā vietā. Tas būs nepieciešams, ja pazaudēsiet tālruni vai tiks bloķēta piekļuve kontam. $appName nevarēs jums palīdzēt, ja pazaudēsiet šo kodu.';
   }
 
   @override
-  String get settings250Sb2fa250Sbsubtitle => 'Ja ir aktīva divu faktoru autentifikācija, jums jāievada vienreizējs kods katru reizi, kad piesakāties vai izņemat līdzekļus.';
+  String get settings250Sb2fa250Sbsubtitle => 'Ja ir aktīva divu faktoru autentifikācija, jums jāievada vienreizējais kods katru reizi, kad pieslēdzaties vai izņemat līdzekļus.';
 
   @override
-  String get settings250Sb2fa250Sbsuccess => 'Veiksmi!';
+  String get settings250Sb2fa250Sbsuccess => 'Veiksmīgi!';
 
   @override
   String get settings250Sb2fa250Sbsuccess8722Sbtext => 'Jūsu kontā ir iestatīta divu faktoru autentifikācija.';
@@ -5434,7 +5434,7 @@ class I18nLv extends I18n {
   String get settings250Sb2fa250Sbtitle => 'Divu faktoru autentifikācija (2FA)';
 
   @override
-  String get settings250Sb2fa250Sbverify8722Sbbtn => 'Pārbaudiet 2FA';
+  String get settings250Sb2fa250Sbverify8722Sbbtn => 'Apstiprināt 2FA';
 
   @override
   String get settings250Sb2fa250Sbwarning => 'Mēs ļoti iesakām savā kontā iespējot 2FA, lai uzlabotu drošību.';
@@ -5443,7 +5443,7 @@ class I18nLv extends I18n {
   String get settings250Sb2fa250Sbwarning250Sbenable => 'Iespējot';
 
   @override
-  String get settings250Sb2fa250Sbwrong8722Sbotp => 'Nepareiza vienreizēja parole.';
+  String get settings250Sb2fa250Sbwrong8722Sbotp => 'Nepareiza vienreizējā parole.';
 
   @override
   String get settings250Sbapi8722Sbkey250Sbcopy8722Sbtooltip => 'Kopēt starpliktuvē';
@@ -5455,10 +5455,10 @@ class I18nLv extends I18n {
   String get settings250Sbapi8722Sbkey250Sbgenerate250Sbbutton => 'Ģenerēt';
 
   @override
-  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbcaption => 'Ģenerējot atslēgu, arī iepriekš ģenerētā API atslēga kļūs nederīga';
+  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbcaption => 'Ģenerējot atslēgu, iepriekš ģenerētā API atslēga kļūs nederīga';
 
   @override
-  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbtitle => 'Ģenerējiet jaunu API atslēgu';
+  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbtitle => 'Ģenerēt jaunu API atslēgu';
 
   @override
   String get settings250Sbapi8722Sbkey250Sblabel => 'API atslēga';
@@ -5475,10 +5475,10 @@ class I18nLv extends I18n {
   String get settings250Sbbasic8722Sbinfo8722Sbtitle => 'Pamatinformācija par lietotāju';
 
   @override
-  String get settings250Sbbuying8722Sbvacation8722Sbtip => 'Neviens, kurš vēlas jums pārdot monētas, neredzēs jūsu reklāmas vai neatvērs darījumus ar tām';
+  String get settings250Sbbuying8722Sbvacation8722Sbtip => 'Neviens, kurš vēlas jums pārdot monētas, neredzēs jūsu sludinājumus vai neatvērs darījumus ar tiem';
 
   @override
-  String get settings250Sbbuying8722Sbvacation8722Sbtitle => 'Pērkot atvaļinājumu';
+  String get settings250Sbbuying8722Sbvacation8722Sbtitle => 'Pirkšanas atvaļinājums';
 
   @override
   String get settings250Sbchange8722Sbemail250Sbbtn => 'Mainīt e-pastu';
@@ -5498,19 +5498,19 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get settings250Sbchange8722Sbemail250Sbtitle => 'Mainīt/pārbaudīt e-pastu';
+  String get settings250Sbchange8722Sbemail250Sbtitle => 'Mainīt/apstiprināt e-pastu';
 
   @override
-  String get settings250Sbchange8722Sbemail250Sbunverified => 'Nepārbaudīts';
+  String get settings250Sbchange8722Sbemail250Sbunverified => 'Neapstiprināts';
 
   @override
-  String get settings250Sbchange8722Sbemail250Sbverified => 'Pārbaudīts';
+  String get settings250Sbchange8722Sbemail250Sbverified => 'Apstiprināts';
 
   @override
   String get settings250Sbchange8722Sbpassword8722Sbwrong => 'Nepareiza pašreizējā parole';
 
   @override
-  String get settings250Sbchange8722Sbpassword250Sbbtn => 'Mainiet paroli';
+  String get settings250Sbchange8722Sbpassword250Sbbtn => 'Mainīt paroli';
 
   @override
   String get settings250Sbchange8722Sbpassword250Sbconfirm => 'Apstipriniet jauno paroli';
@@ -5528,16 +5528,16 @@ class I18nLv extends I18n {
   String get settings250Sbchange8722Sbpassword250Sbold8722Sbtip => 'Lūdzu, ievadiet savu pašreizējo paroli, lai turpinātu';
 
   @override
-  String get settings250Sbchange8722Sbpassword250Sbsubtitle => 'Pēc paroles nomaiņas jums būs jāpiesakās vēlreiz, izmantojot jauno paroli';
+  String get settings250Sbchange8722Sbpassword250Sbsubtitle => 'Pēc paroles nomaiņas jums būs jāpieslēdzas vēlreiz, izmantojot jauno paroli';
 
   @override
-  String get settings250Sbchange8722Sbpassword250Sbtitle => 'Mainiet paroli';
+  String get settings250Sbchange8722Sbpassword250Sbtitle => 'Mainīt paroli';
 
   @override
   String get settings250Sbdelete8722Sbaccount250Sbbutton => 'Dzēst kontu';
 
   @override
-  String get settings250Sbdelete8722Sbaccount250Sbdescription => 'Tādējādi tiks dzēsti un anonimizēti visi jūsu konta dati. Jūsu konts tiks pilnībā dzēsts — šo darbību nevar atsaukt.';
+  String get settings250Sbdelete8722Sbaccount250Sbdescription => 'Ar šo tiks dzēsti un anonimizēti visi jūsu konta dati. Jūsu konts tiks pilnībā dzēsts — šo darbību nevar atsaukt.';
 
   @override
   String get settings250Sbdelete8722Sbaccount250Sbdialog250Sbwarning => 'Jūsu konts tiks pilnībā dzēsts — vai tiešām vēlaties turpināt? To nevar atsaukt.';
@@ -5567,62 +5567,62 @@ class I18nLv extends I18n {
 
   @override
   String settings250Sbno8722Sbemail8722Sbwarn(Object appName) {
-    return 'Jūsu kontā nav iestatīta verificēta e-pasta adrese. Ja pazaudēsit savu paroli, $appName nevarēs palīdzēt to atiestatīt.';
+    return 'Jūsu kontā nav iestatīta apstiprināta e-pasta adrese. Ja pazaudēsiet savu paroli, $appName nevarēs palīdzēt to atiestatīt.';
   }
 
   @override
-  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sblong => 'Sūtīt e-pasta paziņojumus, kad tiek saņemts jauns tirdzniecības ziņojums (reizi stundā)';
+  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sblong => 'Sūtīt e-pasta paziņojumus, kad saņemta jauna darījuma ziņa (reizi stundā)';
 
   @override
-  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sbshort => 'Jauns tirdzniecības ziņojums (reizi stundā)';
+  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sbshort => 'Jauna darījuma ziņa (reizi stundā)';
 
   @override
   String get settings250Sbnotifications250Sbemail250Sbtitle => 'E-pasta paziņojumi';
 
   @override
-  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sblong => 'Nosūtiet e-pasta paziņojumus, kad darījums ir pabeigts';
+  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sblong => 'Nosūtīt e-pasta paziņojumus, kad darījums ir pabeigts';
 
   @override
-  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort => 'Tirdzniecība pabeigta';
+  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort => 'Darījums pabeigts';
 
   @override
-  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbtip => 'Nosūtiet e-pasta paziņojumus, kad darījums ir pabeigts';
+  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbtip => 'Nosūtīt e-pasta paziņojumus, kad darījums ir pabeigts';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sblong => 'Nosūtiet e-pasta paziņojumus par jauniem tirdzniecības kontaktiem';
+  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sblong => 'Nosūtīt e-pasta paziņojumus par jauniem tirdzniecības kontaktiem';
 
   @override
   String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbshort => 'Jauni tirdzniecības kontakti';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbtip => 'Sūtiet e-pasta paziņojumus par jauniem kontaktu pieprasījumiem';
+  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbtip => 'Sūtīt e-pasta paziņojumus par jauniem kontaktu pieprasījumiem';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sblong => 'Sūtiet e-pasta paziņojumus par jauniem tiešsaistes maksājumiem';
+  String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sblong => 'Sūtīt e-pasta paziņojumus par jauniem tiešsaistes maksājumiem';
 
   @override
   String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sbshort => 'Jauni tiešsaistes maksājumi';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sbtip => 'Sūtiet e-pasta paziņojumus par jauniem tiešsaistes maksājumiem jūsu darījumos';
+  String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sbtip => 'Sūtīt e-pasta paziņojumus par jauniem tiešsaistes maksājumiem jūsu darījumos';
 
   @override
-  String get settings250Sbnotifications250Sbsensitive8722Sblong => 'Atspējojiet sensitīvu informāciju no e-pasta paziņojumiem';
+  String get settings250Sbnotifications250Sbsensitive8722Sblong => 'Atspējot sensitīvu informāciju e-pasta paziņojumos';
 
   @override
   String get settings250Sbnotifications250Sbsensitive8722Sbshort => 'Atspējot sensitīvu informāciju';
 
   @override
-  String get settings250Sbnotifications250Sbsensitive8722Sbtip => 'E-pastā tiks tikai lūgts pieteikties vietnē, kur būs faktiskie paziņojumi';
+  String get settings250Sbnotifications250Sbsensitive8722Sbtip => 'E-pastā tiks tikai lūgts pieslēgties vietnei, kur būs faktiskie paziņojumi';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbdialog8722Sbtitle => 'Mobilās telegrammas paziņojumi';
+  String get settings250Sbnotifications250Sbtelegram250Sbdialog8722Sbtitle => 'Mobilie Telegram paziņojumi';
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbbtn => 'Atspējot Telegram paziņojumus';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbtext => 'Tas atspējos paziņojumus telegrammā. Varat atkal iespējot Telegram paziņojumus, ievadot savu Telegram paziņojuma ID.';
+  String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbtext => 'Tas atspējos paziņojumus Telegram. Varat atkal iespējot Telegram paziņojumus, ievadot savu Telegram paziņojumu ID.';
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sberror250Sbgeneric => 'Kaut kas nogāja greizi. Lūdzu, mēģiniet atsvaidzināt lapu un atkārtojiet pieprasījumu.';
@@ -5631,10 +5631,10 @@ class I18nLv extends I18n {
   String get settings250Sbnotifications250Sbtelegram250Sberror250Sbid8722Sbalready8722Sblinked => 'Šis Telegram ID ir saistīts ar citu lietotāju';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sblong => 'Nosūtiet Telegram paziņojumus, kad darījums ir pabeigts';
+  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sblong => 'Nosūtīt Telegram paziņojumus, kad darījums ir pabeigts';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sbshort => 'Tirdzniecība pabeigta';
+  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sbshort => 'Darījums pabeigts';
 
   @override
   String settings250Sbnotifications250Sbtelegram250Sbhow8722Sbto(Object appName) {
@@ -5642,36 +5642,36 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbid => 'Telegrammas paziņojumu ID';
+  String get settings250Sbnotifications250Sbtelegram250Sbid => 'Telegram paziņojumu ID';
 
   @override
   String settings250Sbnotifications250Sbtelegram250Sbid8722Sbtip(Object appName) {
-    return 'Telegrammas paziņojumu ID, ko jums piešķīris $appName paziņojumu robots';
+    return 'Telegram paziņojumu ID, ko jums piešķīris $appName paziņojumu bots';
   }
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong => 'Nosūtiet Telegram paziņojumus par jauniem tērzēšanas ziņojumiem darījumos';
+  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong => 'Nosūtīt Telegram paziņojumus par jaunām sarakstes ziņām darījumos';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sbshort => 'Tērzēšanas ziņas tirdzniecībā';
+  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sbshort => 'Sarakstes ziņas darījumā';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sblong => 'Sūtiet Telegram paziņojumus par jauniem tiešsaistes maksājumiem';
+  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sblong => 'Sūtīt Telegram paziņojumus par jauniem tiešsaistes maksājumiem';
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbshort => 'Jauni tiešsaistes maksājumi';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbtip => 'Nosūtiet Telegram paziņojumus par jauniem tiešsaistes maksājumiem savos darījumos';
+  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbtip => 'Nosūtīt Telegram paziņojumus par jauniem tiešsaistes maksājumiem darījumos';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbtitle => 'Telegrammas paziņojumi';
+  String get settings250Sbnotifications250Sbtelegram250Sbtitle => 'Telegram paziņojumi';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sblong => 'Nosūtiet Telegram paziņojumus par jauniem tirdzniecības pieprasījumiem';
+  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sblong => 'Nosūtīt Telegram paziņojumus par jauniem darījumu pieprasījumiem';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sbshort => 'Jauni tirdzniecības pieprasījumi';
+  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sbshort => 'Jauni darījumu pieprasījumi';
 
   @override
   String get settings250Sbnotifications250Sbtitle => 'Paziņojumi';
@@ -5680,19 +5680,19 @@ class I18nLv extends I18n {
   String get settings250Sbnotifications250Sbweb8722Sbnotifications => 'Iespējot tīmekļa paziņojumus';
 
   @override
-  String get settings250Sbnotifications250Sbweb8722Sbnotifications8722Sbtip => 'Ārpus pārlūkprogrammas loga jūs saņemsit ārējos paziņojumus';
+  String get settings250Sbnotifications250Sbweb8722Sbnotifications8722Sbtip => 'Jūs saņemsiet ārējos paziņojumus ārpus pārlūkprogrammas loga';
 
   @override
-  String get settings250Sbpersonal8722Sbinfo => 'Personīga iepazīstināšana';
+  String get settings250Sbpersonal8722Sbinfo => 'Personīgais ievads';
 
   @override
-  String get settings250Sbpersonal8722Sbinfo8722Sbtip => 'Parādīts jūsu publiskajā profilā. Ne vairāk kā 65536 rakstzīmes. Var izmantot atzīmes veidošanai.';
+  String get settings250Sbpersonal8722Sbinfo8722Sbtip => 'Parādīts jūsu publiskajā profilā. Ne vairāk kā 65536 rakstzīmes. Varat izmantot markdown stilizēšanai.';
 
   @override
   String get settings250Sbpersonal8722Sbinfo8722Sbtitle => 'Personīgā informācija';
 
   @override
-  String get settings250Sbreputation8722Sbimport250Sberror250Sbimported8722Sbby8722Sbother8722Sbuser => 'Cits lietotājs jau ir importējis šī konta reputāciju. Varbūt esat pieļāvis drukas kļūdu lietotājvārdā vai varbūt izvēlējāties nepareizu platformu?';
+  String get settings250Sbreputation8722Sbimport250Sberror250Sbimported8722Sbby8722Sbother8722Sbuser => 'Cits lietotājs jau ir importējis šī konta reputāciju. Varbūt esat pieļāvis drukas kļūdu lietotājvārdā, vai varbūt izvēlējāties nepareizu platformu?';
 
   @override
   String settings250Sbreputation8722Sbimport250Sberror250Sblbc8722Sbinvalid8722Sbusername(Object link) {
@@ -5712,10 +5712,10 @@ class I18nLv extends I18n {
   String get settings250Sbsaved => 'Saglabāts!';
 
   @override
-  String get settings250Sbselling8722Sbvacation8722Sbtip => 'Neviens, kurš vēlas iegādāties jūsu monētas, neredzēs jūsu reklāmas vai neatvērs darījumus ar tām';
+  String get settings250Sbselling8722Sbvacation8722Sbtip => 'Neviens, kurš vēlas iegādāties jūsu monētas, neredzēs jūsu sludinājumus vai neatvērs darījumus ar tiem';
 
   @override
-  String get settings250Sbselling8722Sbvacation8722Sbtitle => 'Pārdodu atvaļinājumu';
+  String get settings250Sbselling8722Sbvacation8722Sbtitle => 'Pārdošanas atvaļinājums';
 
   @override
   String get settings250Sbtab250Sb2fa8722Sblong => '2FA';
@@ -5730,7 +5730,7 @@ class I18nLv extends I18n {
   String get settings250Sbtab250Sbchange8722Sbpassword8722Sblong => 'Parole';
 
   @override
-  String get settings250Sbtab250Sbimport8722Sbreputation => 'Importa reputācija';
+  String get settings250Sbtab250Sbimport8722Sbreputation => 'Importēt reputāciju';
 
   @override
   String settings250Sbtab250Sbimport8722Sbreputation250Sbdescription(Object appName) {
@@ -5741,7 +5741,7 @@ class I18nLv extends I18n {
   String get settings250Sbtab250Sbnotifications250Sblong => 'Paziņojumi';
 
   @override
-  String get settings250Sbtab250Sbuser8722Sbsettings8722Sblong => 'Personīga';
+  String get settings250Sbtab250Sbuser8722Sbsettings8722Sblong => 'Personīgi';
 
   @override
   String get settings250Sbtitle => 'Konta iestatījumi';
@@ -5759,7 +5759,7 @@ class I18nLv extends I18n {
   String get signup8722Sbsuccess250Sbletter8722Sbsent => 'Uz jūsu e-pastu ir nosūtīta verifikācijas vēstule.';
 
   @override
-  String get signup8722Sbsuccess250Sblogin => 'Tagad jūs tiksit novirzīts uz sākumlapu.';
+  String get signup8722Sbsuccess250Sblogin => 'Tagad jūs tiksiet novirzīts uz sākumlapu.';
 
   @override
   String get signup8722Sbsuccess250Sbtitle => 'Reģistrācija izdevusies!';
@@ -5807,7 +5807,7 @@ class I18nLv extends I18n {
   String get signup250Sblogin8722Sblink => 'Pieslēgties.';
 
   @override
-  String get signup250Sbtitle => 'Pierakstīties';
+  String get signup250Sbtitle => 'Reģistrēties';
 
   @override
   String signup250Sbtos8722Sbdialog8722Sbtext(Object terms) {
@@ -5818,7 +5818,7 @@ class I18nLv extends I18n {
   String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbagree => 'Piekrītu';
 
   @override
-  String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbdisagree => 'nepiekrītu';
+  String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbdisagree => 'Nepiekrītu';
 
   @override
   String signup250Sbtos8722Sbdialog8722Sbtext8722Sbterms(Object appName) {
@@ -5829,18 +5829,18 @@ class I18nLv extends I18n {
   String get signup250Sbtos8722Sbdialog8722Sbtitle => 'Pakalpojuma noteikumi';
 
   @override
-  String get sso250Sblogout8722Sbportal => 'Jūs tiekat izrakstīts...';
+  String get sso250Sblogout8722Sbportal => 'Jūs tiekat atslēgts...';
 
   @override
   String sso250Sbunverified8722Sbemail8722Sbtext(Object settingsPage) {
-    return 'Lai turpinātu, jums ir jāverificē savs e-pasts. To var izdarīt ar $settingsPage.';
+    return 'Lai turpinātu, jums ir jāapstiprina savs e-pasts. To var izdarīt $settingsPage.';
   }
 
   @override
   String get sso250Sbunverified8722Sbemail8722Sbtext8722Sbsettings8722Sbpage => 'iestatījumu lapa';
 
   @override
-  String get sso250Sbunverified8722Sbemail8722Sbtitle => 'Nepārbaudīts e-pasts';
+  String get sso250Sbunverified8722Sbemail8722Sbtitle => 'Neapstiprināts e-pasts';
 
   @override
   String get start250Sb2fa => 'Divu faktoru autentifikācija';
@@ -5876,7 +5876,7 @@ class I18nLv extends I18n {
 
   @override
   String start250Sbtrade(Object assetName) {
-    return 'Ievads par tirdzniecību $assetName';
+    return 'Ievads par $assetName tirdzniecību';
   }
 
   @override
@@ -5899,7 +5899,7 @@ class I18nLv extends I18n {
 
   @override
   String statistics250Sbticker8722Sbapi8722Sbtitle(Object appName) {
-    return '$appName Average Price Ticker API';
+    return '$appName Vidējās cenas marķiera API';
   }
 
   @override
@@ -5919,7 +5919,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbnone => 'Rādīt ziņojumu “Nav datu”.';
+  String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbnone => 'Rādīt ziņojumu “Nav datu”';
 
   @override
   String statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbtitle(Object currencyCode) {
@@ -5936,10 +5936,10 @@ class I18nLv extends I18n {
   String get stepper250Sbnext8722Sbbtn => 'Nākamais';
 
   @override
-  String get support250Sbdescription => 'Jūs varat saņemt atbalstu, atverot biļeti, nosūtot e-pastu vai sazinoties ar telegrammu.';
+  String get support250Sbdescription => 'Jūs varat saņemt atbalstu, atverot biļeti, nosūtot e-pastu vai sazinoties Telegram.';
 
   @override
-  String get support250Sbemail250Sbbutton => 'Nosūti e-pastu';
+  String get support250Sbemail250Sbbutton => 'Nosūtīt e-pastu';
 
   @override
   String support250Sbemail250Sbdescription(Object email) {
@@ -5953,28 +5953,28 @@ class I18nLv extends I18n {
   String get support250Sbmatrix250Sbbutton => 'Ziņa Matrix';
 
   @override
-  String get support250Sbmatrix250Sbdescription => 'Jūs varat nosūtīt mums ziņojumu Matrix';
+  String get support250Sbmatrix250Sbdescription => 'Jūs varat sazināties ar mums Matrix';
 
   @override
   String get support250Sbsubtitle => 'Sazinieties ar mums — mums patīk palīdzēt saviem lietotājiem! Mūsu atbildes laiks parasti ir ātrs, jūs varat saņemt atbalstu, izmantojot šādas metodes:    ';
 
   @override
-  String get support250Sbtelegram250Sbbutton => 'Ziņojums telegrammā';
+  String get support250Sbtelegram250Sbbutton => 'Sazināties Telegram';
 
   @override
-  String get support250Sbtelegram250Sbdescription => 'Jūs varat nosūtīt mums ziņojumu telegrammā';
+  String get support250Sbtelegram250Sbdescription => 'Jūs varat sazināties ar mums Telegram';
 
   @override
-  String get support250Sbticket250Sbbutton => 'Atveriet biļeti';
+  String get support250Sbticket250Sbbutton => 'Atvērt biļeti';
 
   @override
-  String get support250Sbticket250Sbdescription => 'Jūs varat palielināt biļeti mūsu atbalsta portālā';
+  String get support250Sbticket250Sbdescription => 'Jūs varat pacelt biļeti mūsu atbalsta portālā';
 
   @override
   String get support250Sbticket250Sbtitle => 'Biļete';
 
   @override
-  String get support250Sbtitle => 'Saņemiet atbalstu';
+  String get support250Sbtitle => 'Sazināties ar atbalstu';
 
   @override
   String get trade8722Sbnoun => 'Tirdzniecība';
@@ -5997,7 +5997,7 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbbuyer8722Sbhasnt8722Sbcompleted8722Sbpayment8722Sbtext(Object minutes) {
-    return 'Pircējs vēl nav atzīmējis maksājumu par pabeigtu, un viņam ir $minutes minūtes, lai veiktu maksājumu, pirms varat atcelt darījumu. Kad saņemat maksājumu, pabeidziet darījumu.';
+    return 'Pircējs vēl nav atzīmējis maksājumu kā pabeigtu, un viņam ir $minutes minūtes, lai veiktu maksājumu, pirms varat atcelt darījumu. Kad saņemat maksājumu, pabeidziet darījumu.';
   }
 
   @override
@@ -6009,14 +6009,14 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb2 => 'Pēc apmaksas jums ir jāatzīmē <strong> maksājums pabeigts </strong>, nospiežot pogu \'Esmu samaksājis\', pretējā gadījumā pārdevējs varēs atcelt darījumu, tiklīdz būs beidzies maksājuma perioda laiks.';
+  String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb2 => 'Pēc apmaksas jums ir jāatzīmē <strong> maksājums kā pabeigts </strong>, nospiežot pogu \'Esmu samaksājis\'. Pretējā gadījumā pārdevējs varēs atcelt darījumu, tiklīdz būs beidzies maksājuma periods.';
 
   @override
   String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb3 => 'Gaida, kamēr pārdevējs apstiprinās jūsu maksājumu';
 
   @override
   String trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb4(Object time) {
-    return 'Jūs esat atzīmējis maksājumu par pabeigtu uz $time.';
+    return 'Jūs esat atzīmējis maksājumu kā pabeigtu $time.';
   }
 
   @override
@@ -6028,13 +6028,13 @@ class I18nLv extends I18n {
   String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning => 'Ja, atverot darījumu, norādītā adrese ir nepareiza, darījums ir jāatver ar pareizo adresi, pretējā gadījumā monētas var tikt neatgriezeniski pazaudētas.';
 
   @override
-  String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle => 'Parādiet adresi';
+  String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle => 'Parādīt adresi';
 
   @override
   String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle8722Sbsettlement => 'Rādīt galamērķa adresi';
 
   @override
-  String get trade250Sbcancel8722Sbtrade8722Sbbtn => 'Atcelt tirdzniecību';
+  String get trade250Sbcancel8722Sbtrade8722Sbbtn => 'Atcelt darījumu';
 
   @override
   String get trade250Sbdialog8722Sbconfirm8722Sbdispute8722Sbtext => 'Lūdzu, apstipriniet, ka vēlaties sākt strīdu.';
@@ -6048,7 +6048,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtitle => 'Apstipriniet maksājumu';
+  String get trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtitle => 'Apstiprināt maksājumu';
 
   @override
   String get trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn => 'Apstiprināt';
@@ -6072,16 +6072,16 @@ class I18nLv extends I18n {
   String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext => 'Lūdzu, apstipriniet, ka esat saņēmis maksājumu un vēlaties pabeigt darījumu';
 
   @override
-  String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext8722Sbwarning => 'Esi uzmanīgs! Pabeidziet darījumu tikai tad, kad esat pārliecināts, ka esat saņēmis maksājumu. Ir bijuši krāpnieki, kuri mēģina apmānīt pārdevējus, lai tie priekšlaicīgi noslēgtu darījumu.';
+  String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext8722Sbwarning => 'Esiet uzmanīgs! Pabeidziet darījumu tikai tad, kad esat pārliecināts, ka esat saņēmis maksājumu. Ir bijuši krāpnieki, kuri mēģina apmānīt pārdevējus, lai tie priekšlaicīgi noslēgtu darījumu.';
 
   @override
   String trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbtitle(Object amount, Object username) {
-    return 'Darījuma $amount pabeigšana ar $username';
+    return 'Pabeidz $amount darījumu ar $username';
   }
 
   @override
   String trade250Sbdialog250Sbconfirm8722Sbrelease250Sboffset8722Sbnotice(Object appName) {
-    return 'Šī parole tiek izmantota kā kompensācija, lai ģenerētu ar brīvības atņemšanu nesaistītu norēķinu maku un parakstītu darījumu. $appName nevarēs atgūt maku, ja pazaudēsit šo paroli.';
+    return 'Šī parole tiek izmantota kā novirze, lai ģenerētu neatkarīgu norēķinu maku un parakstītu darījumu. $appName nevarēs atgūt maku, ja pazaudēsiet šo paroli.';
   }
 
   @override
@@ -6090,39 +6090,39 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle => 'Apstipriniet finansējumu';
+  String get trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle => 'Apstipriniet apmaksu';
 
   @override
   String get trade250Sbdialog250Sbfunding8722Sberror8722Sbtext => 'Nepietiekams atlikums, lai finansētu darījumu';
 
   @override
-  String get trade250Sbdialog250Sbfunding8722Sberror8722Sbtitle => 'Finansējuma kļūda!';
+  String get trade250Sbdialog250Sbfunding8722Sberror8722Sbtitle => 'Apmaksas kļūda!';
 
   @override
-  String get trade250Sbdispute8722Sbbtn => 'Sāciet strīdu';
+  String get trade250Sbdispute8722Sbbtn => 'Sākt strīdu';
 
   @override
   String trade250Sbdispute8722Sbtext(Object appName) {
-    return 'Ja rodas domstarpības par tirdzniecību, varat sākt strīdu. Pēc tam $appName atbalsta dienests ar jums sazināsies, izmantojot šī darījuma tērzēšanu.';
+    return 'Ja rodas domstarpības par darījumu, varat sākt strīdu. Pēc tam $appName atbalsta dienests ar jums sazināsies, izmantojot šī darījuma saraksti.';
   }
 
   @override
   String get trade250Sbenable8722Sbescrow8722Sbbtn => 'Iespējot šķīrējtiesas obligāciju';
 
   @override
-  String get trade250Sberror250Sb247 => 'Jūsu konta izņemšana ir aizliegta sankciju dēļ';
+  String get trade250Sberror250Sb247 => 'Jūsu kontam līdzekļu izņemšana ir aizliegta sankciju dēļ';
 
   @override
   String get trade250Sberror250Sb248 => 'Darījuma summa nav pietiekama, lai segtu ar norēķiniem saistītās maksas. Lūdzu, vēlāk mēģiniet vēlreiz, kad maksa būs zemāka, vai atveriet darījumu par lielāku summu un atceliet šo darījumu.';
 
   @override
   String trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0(Object appName) {
-    return '$appName var piedāvāt aizsardzību tikai tad, ja ir iespējota šķīrējtiesas obligāciju aizsardzība tirdzniecībai';
+    return '$appName var piedāvāt aizsardzību tikai tad, ja darījumam bija iespējota šķīrējtiesas obligāciju aizsardzība';
   }
 
   @override
   String trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb1(Object appName) {
-    return 'Ja tas ir iespējots, tikai pircējs un $appName darbinieki var atcelt darījumu';
+    return 'Ja iespējots, tikai pircējs un $appName darbinieki var atcelt darījumu';
   }
 
   @override
@@ -6135,7 +6135,7 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbfeedback250Sbleave8722Sbfeedback8722Sbon(Object username) {
-    return 'Sniedziet atsauksmes par $username';
+    return 'Sniegt atsauksmes par $username';
   }
 
   @override
@@ -6145,7 +6145,7 @@ class I18nLv extends I18n {
   String get trade250Sbfeedback250Sbneutral => 'Neitrāls';
 
   @override
-  String get trade250Sbfeedback250Sbpositive => 'Pozitīvi';
+  String get trade250Sbfeedback250Sbpositive => 'Pozitīvs';
 
   @override
   String get trade250Sbfeedback250Sbtip => 'Atsauksmes būs redzamas tikai tad, ja kopējais tirdzniecības apjoms starp jums un jūsu tirdzniecības partneri pārsniedz 100 USD ekvivalentu.';
@@ -6160,7 +6160,7 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip(Object username) {
-    return 'Neobligāti. Atstājiet ziņojumu par $username, lai tas tiktu parādīts kopā ar atsauksmēm uztvērēja profila lapā. Ne vairāk kā 256 rakstzīmes.';
+    return 'Neobligāti. Atstājiet ziņojumu par $username, lai tas tiktu parādīts kopā ar atsauksmēm saņēmēja profila lapā. Ne vairāk kā 256 rakstzīmes.';
   }
 
   @override
@@ -6168,14 +6168,14 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbfloating8722Sbprice8722Sbtext(Object assetName, Object floating) {
-    return 'Summa $assetName ir $floating ar tirgus cenu.';
+    return '$assetName summa ir $floating ar tirgus cenu.';
   }
 
   @override
-  String get trade250Sbfloating8722Sbprice8722Sbtext8722Sbfloating => 'peldošs';
+  String get trade250Sbfloating8722Sbprice8722Sbtext8722Sbfloating => 'peldoša';
 
   @override
-  String get trade250Sbfund8722Sbtrade8722Sbbtn => 'Finansējiet šo tirdzniecību';
+  String get trade250Sbfund8722Sbtrade8722Sbbtn => 'Apmaksāt šo darījumu';
 
   @override
   String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => 'Esmu samaksājis';
@@ -6187,73 +6187,73 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Tirdzniecības reklāma ($ad_type)';
+    return 'Darījuma sludinājums ($ad_type)';
   }
 
   @override
-  String get trade250Sbleave8722Sbfeedback8722Sbbtn => 'Atstāj atsauksmi';
+  String get trade250Sbleave8722Sbfeedback8722Sbbtn => 'Atstāt atsauksmi';
 
   @override
   String get trade250Sblocal250Sbbuyer250Sbescrowed => 'Pārdevējs ir iespējojis šķīrējtiesas obligāciju aizsardzību šim darījumam, kas nozīmē, ka pārdevējs nevar atcelt šo darījumu.';
 
   @override
-  String get trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed => 'Pārdevējs šim darījumam nav iespējojis šķīrējtiesas obligāciju aizsardzību, kas nozīmē, ka pārdevējs var atcelt darījumu jebkurā brīdī. Jūs varat pieprasīt šķīrējtiesas obligāciju aizsardzību, izmantojot tērzēšanu.';
+  String get trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed => 'Pārdevējs šim darījumam nav iespējojis šķīrējtiesas obligāciju aizsardzību, kas nozīmē, ka pārdevējs var atcelt darījumu jebkurā brīdī. Jūs varat pieprasīt šķīrējtiesas obligāciju aizsardzību, izmantojot saraksti.';
 
   @override
   String trade250Sblocal250Sbbuyer250Sbverification8722Sbcode(Object verificationCode) {
-    return '$verificationCode ir jūsu verifikācijas kods. Pārdevējs to uzzinās tikai pēc tam, kad būs pabeidzis darījumu. Varat to pierakstīt un izmantot, lai pārbaudītu, vai pārdevējs patiešām ir nosūtījis monētas pēc maksājuma saņemšanas, kad tiekat, bez nepieciešamības izmantot ierīci.';
+    return '$verificationCode ir jūsu verifikācijas kods. Pārdevējs to uzzinās tikai pēc tam, kad būs pabeidzis darījumu. Varat to pierakstīt un izmantot, lai pārbaudītu, vai pārdevējs patiešām ir nosūtījis monētas pēc maksājuma saņemšanas, kad tiekaties, bez nepieciešamības izmantot ierīci.';
   }
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle => 'Gaida, kad pārdevējs finansēs tirdzniecību';
+  String get trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle => 'Gaida, kad pārdevējs apmaksās darījumu';
 
   @override
   String trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(Object appName) {
-    return 'Pagaidiet, līdz pārdevējs savā $appName makā iemaksā vairāk monētu, lai segtu šīs darījuma summu.';
+    return 'Pagaidiet, līdz pārdevējs savā $appName makā iemaksā vairāk monētu, lai segtu šī darījuma summu.';
   }
 
   @override
   String trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbfund8722Sbthe8722Sbtrade(Object amount, Object appName) {
-    return 'Lai finansētu šo darījumu, jūsu $appName makā ir jābūt vismaz $amount.';
+    return 'Lai apmaksātu šo darījumu, jūsu $appName makā ir jābūt vismaz $amount.';
   }
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn => 'Pēc nepieciešamās summas noguldīšanas nospiediet pogu, lai finansētu darījumu.';
+  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn => 'Pēc nepieciešamās summas noguldīšanas nospiediet pogu, lai apmaksātu darījumu.';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle => 'Finansējiet tirdzniecību';
+  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle => 'Apmaksāt darījumu';
 
   @override
   String get trade250Sblocal250Sbstep8722Sb1250Sbbuyer250Sbtitle => 'Sarunājiet tikšanos un veiciet maksājumu';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbrelease8722Sbafter8722Sbpayment => 'Pēc maksājuma saņemšanas pabeidziet darījumu. Pirms tās pieņemšanas un darījuma pabeigšanas noteikti pārbaudiet skaidras naudas autentiskumu. Pabeidziet tikai pēc tam, kad esat pārliecinājies, ka maksājums ir stingri jūsu rokās.';
+  String get trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbrelease8722Sbafter8722Sbpayment => 'Pēc maksājuma saņemšanas pabeidziet darījumu. Pārbaudiet skaidras naudas autentiskumu pirms tās pieņemšanas un darījuma pabeigšanas. Pabeidziet tikai pēc tam, kad esat pārliecinājies, ka maksājums ir stingri jūsu rokās.';
 
   @override
   String get trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbtitle => 'Sarunājiet tikšanos un saņemiet samaksu';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb2250Sbbuyer250Sbcompleted => 'Tirdzniecība tagad ir pabeigta, monētas ir jūsu makā!';
+  String get trade250Sblocal250Sbstep8722Sb2250Sbbuyer250Sbcompleted => 'Darījums tagad ir pabeigts, monētas ir jūsu makā!';
 
   @override
   String trade250Sblocal250Sbstep8722Sb2250Sbseller250Sbverification8722Sbcode(Object verificationCode) {
-    return '$verificationCode ir verifikācijas kods. Varat to pastāstīt pircējam, lai pircējs varētu pārbaudīt, vai esat pabeidzis darījumu, neizmantojot ierīci.';
+    return '$verificationCode ir verifikācijas kods. Varat to nodot pircējam, lai pircējs varētu pārbaudīt, vai esat pabeidzis darījumu, neizmantojot ierīci.';
   }
 
   @override
-  String get trade250Sbmark8722Sbpaid => 'Kad esat samaksājis, nospiediet pogu \"Esmu samaksājis\". Tas neļaus pārdevējam atcelt darījumu. Nespiediet šo pogu, ja vien neesat faktiski samaksājis.';
+  String get trade250Sbmark8722Sbpaid => 'Kad esat samaksājis, nospiediet pogu \"Esmu samaksājis\". Tas neļaus pārdevējam atcelt darījumu. Nespiediet šo pogu, ja neesat patiešām samaksājis.';
 
   @override
-  String get trade250Sbno8722Sbpayment8722Sbdetails => 'Nav norādīta maksājuma informācija. Apspriediet tos tērzēšanā.';
+  String get trade250Sbno8722Sbpayment8722Sbdetails => 'Nav norādīta maksājuma informācija. Apspriediet to sarakstē.';
 
   @override
-  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbpaying8722Sbparty => 'Pajautājiet savam tirdzniecības partnerim par viņa maksājuma informāciju tērzēšanā un veiciet maksājumu. <strong>Ja esat veicis tirdzniecību iepriekš, nesūtiet maksājumu uz kontu, kuru pārdevējs jums piešķīra iepriekšējā darījumā, iepriekš neapstiprinot ar pārdevēju šajā tirdzniecības tērzēšanā.</strong>';
+  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbpaying8722Sbparty => 'Pajautājiet savam darījuma partnerim par viņa maksājuma informāciju sarakstē un veiciet maksājumu. <strong>Ja esat veikuši tirdzniecību iepriekš, nesūtiet maksājumu uz kontu, kuru pārdevējs jums piešķīra iepriekšējā darījumā, iepriekš neapstiprinot to ar pārdevēju šajā darījuma sarakstē.</strong>';
 
   @override
-  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbreceiving8722Sbparty => 'Pastāstiet savam tirdzniecības partnerim par savu maksājumu informāciju tērzēšanā.';
+  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbreceiving8722Sbparty => 'Pastāstiet savam darījuma partnerim par savu maksājumu informāciju sarakstē.';
 
   @override
-  String get trade250Sbpay => 'Maksājiet saskaņā ar zemāk norādīto maksājuma informāciju. Ja jums ir kādi jautājumi, jautājiet pārdevējam tērzēšanā.';
+  String get trade250Sbpay => 'Maksājiet saskaņā ar zemāk norādīto maksājuma informāciju. Ja jums ir kādi jautājumi, jautājiet pārdevējam sarakstē.';
 
   @override
   String get trade250Sbpayment8722Sbdetails => 'Maksājumu informācija';
@@ -6267,10 +6267,10 @@ class I18nLv extends I18n {
   String get trade250Sbreceipt250Sbbtn => 'Skatīt kvīti';
 
   @override
-  String get trade250Sbreceipt250Sbinclude8722Sbchat => 'Iekļaut tērzēšanas ziņas';
+  String get trade250Sbreceipt250Sbinclude8722Sbchat => 'Iekļaut sarakstes ziņas';
 
   @override
-  String get trade250Sbreceipt250Sbinclude8722Sbinfo => 'Iekļaujiet informāciju par maksājuma veidu';
+  String get trade250Sbreceipt250Sbinclude8722Sbinfo => 'Iekļaut informāciju par maksājuma veidu';
 
   @override
   String get trade250Sbreceipt250Sbtitle => 'Skatīt izdrukājamu kvīti';
@@ -6279,10 +6279,10 @@ class I18nLv extends I18n {
   String get trade250Sbrelease8722Sbmonero8722Sbbtn => 'Pabeigt';
 
   @override
-  String get trade250Sbseller8722Sbcan8722Sbcancel => 'Tagad jūs varat <strong> atcelt darījumu</strong>, jo pircējs nav pabeidzis maksājumu maksājuma logā.';
+  String get trade250Sbseller8722Sbcan8722Sbcancel => 'Tagad jūs varat <strong> atcelt darījumu</strong>, jo pircējs nav pabeidzis maksājumu paredzētajā laikā.';
 
   @override
-  String get trade250Sbsettlement8722Sbfees8722Sbnotice => 'Tīkla darījumu maksas, kas saistītas ar darījuma nokārtošanu, tiks atskaitītas no darījuma summas, kas nozīmē, ka jūs saņemsiet nedaudz mazāku summu par norādīto.';
+  String get trade250Sbsettlement8722Sbfees8722Sbnotice => 'Tīkla pārskaitījuma izmaksas, kas saistītas ar darījuma veikšanu, tiks atskaitītas no darījuma summas, kas nozīmē, ka jūs saņemsiet nedaudz mazāku summu par norādīto.';
 
   @override
   String trade250Sbstatus250Sbcancelled8722Sbtext(Object linebreak, Object time) {
@@ -6305,7 +6305,7 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbstatus250Sbcompleted8722Sbtext(Object linebreak, Object time) {
-    return 'Šis darījums ir pabeigts $linebreak  pie $time.';
+    return 'Šis darījums ir pabeigts $linebreak  pl. $time.';
   }
 
   @override
@@ -6313,12 +6313,12 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbstatus250Sbdisputed8722Sbtext8722Sb0(Object linebreak, Object time) {
-    return 'Šis darījums ir apstrīdēts $linebreak  pie $time.';
+    return 'Šis darījums ir apstrīdēts $linebreak  pl. $time.';
   }
 
   @override
   String trade250Sbstatus250Sbdisputed8722Sbtext8722Sb1(Object appName) {
-    return 'Lūdzu, uzgaidiet, līdz $appName administrators pievienosies tērzēšanai un izlems darījuma iznākumu.';
+    return 'Lūdzu, uzgaidiet, līdz $appName administrators pievienosies sarakstei un izlems darījuma iznākumu.';
   }
 
   @override
@@ -6339,61 +6339,61 @@ class I18nLv extends I18n {
   String get trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb2 => 'Pārdevējs var atcelt darījumu, tiklīdz ir beidzies maksājuma perioda laiks';
 
   @override
-  String get trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtitle => 'Finansēts, aizsargāts ar šķīrējtiesas obligāciju';
+  String get trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtitle => 'Apmaksāts, aizsargāts ar šķīrējtiesas obligāciju';
 
   @override
-  String get trade250Sbstatus250Sbfunded8722Sbnot8722Sbescrowed8722Sbtitle => 'Finansēts, nav aizsargāts ar šķīrējtiesas obligāciju';
+  String get trade250Sbstatus250Sbfunded8722Sbnot8722Sbescrowed8722Sbtitle => 'Apmaksāts, nav aizsargāts ar šķīrējtiesas obligāciju';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbaccordion8722Sbsummary => 'Darījuma informācija';
+  String get trade250Sbstatus250Sbsettlement250Sbaccordion8722Sbsummary => 'Pārskaitījuma informācija';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbaddress => 'Adrese';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbarbitrated => 'Šķīrējtiesā administrators';
+  String get trade250Sbstatus250Sbsettlement250Sbarbitrated => 'Šķīrējtiesu veic administrators';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbbuyer8722Sbtx250Sbtitle => 'Pārskaitījums uz pircēja norēķinu maku';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbcheck8722Sbyour8722Sbwallet => 'Pārbaudiet savu saņemšanas maku, un jūs redzēsiet darījumu!';
+  String get trade250Sbstatus250Sbsettlement250Sbcheck8722Sbyour8722Sbwallet => 'Pārbaudiet savu saņemšanas maku, un jūs redzēsiet pārskaitījumu!';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbmnemonic8722Sbguide8722Sblink => 'Kā es varu atjaunot savu maku no sēklām?';
+  String get trade250Sbstatus250Sbsettlement250Sbmnemonic8722Sbguide8722Sblink => 'Kā es varu atjaunot savu maku no sēklas?';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbmnemonic8722Sbseed => 'Jūsu ar brīvības atņemšanu nesaistītā maka mnemoniskā sēkla';
+  String get trade250Sbstatus250Sbsettlement250Sbmnemonic8722Sbseed => 'Jūsu ar neatkarīgā maka mnemoniskā sēkla';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbprocessing => 'Apstrāde';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprocessing250Sbdescription => 'Izlīgums tiek apstrādāts. <br /> Lūdzu, uzgaidiet, jums nekas nav jādara.';
+  String get trade250Sbstatus250Sbsettlement250Sbprocessing250Sbdescription => 'Norēķins tiek apstrādāts. <br /> Lūdzu, uzgaidiet, jums nekas nav jādara.';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbprocessing250Sbtime8722Sbestimation => 'Tas var ilgt 10–60 minūtes.';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbbuyer => 'Gaida pārskaitījumu pircēja norēķinu makā...';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbbuyer => 'Gaida pārskaitījumu uz pircēja norēķinu maku...';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbseller => 'Gaida pārskaitījumu pārdevēja makā, kas nav saistīts ar brīvības atņemšanu...';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbseller => 'Gaida pārskaitījumu uz pārdevēja neatkarīgo maku...';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbconfirming8722Sbto8722Sbseller => 'Notiek pārsūtīšanas apstiprināšana uz pārdevēja maku, kas nav saistīts ar brīvības atņemšanu...';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbconfirming8722Sbto8722Sbseller => 'Apstiprina pārskaitījumu uz pārdevēja neatkarīgo maku...';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbdone250Sbbuyer => 'Gatavs! Pārbaudiet savu saņemšanas maku, un jūs redzēsiet darījumu!';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbdone250Sbbuyer => 'Gatavs! Pārbaudiet savu saņemšanas maku, un jūs redzēsiet pārskaitījumu!';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbdone250Sbseller => 'Gatavs! Pircējam tagad vajadzētu redzēt darījumu saņēmēja makā.';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbdone250Sbseller => 'Gatavs! Pircējam tagad vajadzētu redzēt pārskaitījumu saņemšanas makā.';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes => 'min';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbexplorer8722Sbbtn => 'Atveriet pētnieku';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbexplorer8722Sbbtn => 'Atvērt pārlūku';
 
   @override
   String trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbtotal8722Sbeta(Object eta) {
@@ -6401,56 +6401,56 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbproof => 'Norēķinu pierādījums';
+  String get trade250Sbstatus250Sbsettlement250Sbproof => 'Norēķina pierādījums';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbseller8722Sbtx250Sbtitle => 'Pārskaitījums uz pārdevēja maku, kas nav saistīts ar brīvības atņemšanu';
+  String get trade250Sbstatus250Sbsettlement250Sbseller8722Sbtx250Sbtitle => 'Pārskaitījums uz pārdevēja neatkarīgo maku';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbshow8722Sbproof => 'Parādiet maksājuma apliecinājumu';
+  String get trade250Sbstatus250Sbsettlement250Sbshow8722Sbproof => 'Parādīt maksājuma apliecinājumu';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbtx8722Sbkey => 'Darījuma atslēga';
+  String get trade250Sbstatus250Sbsettlement250Sbtx8722Sbkey => 'Pārskaitījuma atslēga';
 
   @override
-  String get trade250Sbstatus250Sbunfunded8722Sbescrowed => 'Nefinansēts, aizsargāts ar šķīrējtiesas obligāciju';
+  String get trade250Sbstatus250Sbunfunded8722Sbescrowed => 'Neapmaksāts, aizsargāts ar šķīrējtiesas obligāciju';
 
   @override
-  String get trade250Sbstatus250Sbunfunded8722Sbnot8722Sbescrowed => 'Nefinansēts, nav aizsargāts ar šķīrējtiesas obligāciju';
+  String get trade250Sbstatus250Sbunfunded8722Sbnot8722Sbescrowed => 'Neapmaksāts, nav aizsargāts ar šķīrējtiesas obligāciju';
 
   @override
   String get trade250Sbstep250Sbprocessing8722Sbsettlement => 'Norēķins tiek apstrādāts, monētas tiek ieskaitītas jūsu makā. Lūdzu, uzgaidiet, jums nekas nav jādara.';
 
   @override
   String trade250Sbsubtitle8722Sblocal8722Sbbuy(Object username, Object ad, Object time) {
-    return '$username ir atbildējis uz jūsu $ad uz $time';
+    return '$username ir atbildējis uz jūsu $ad pl. $time';
   }
 
   @override
-  String get trade250Sbsubtitle8722Sblocal8722Sbbuy8722Sbad => 'vietējā pirkuma sludinājums';
+  String get trade250Sbsubtitle8722Sblocal8722Sbbuy8722Sbad => 'vietējais pirkšanas sludinājums';
 
   @override
   String trade250Sbsubtitle8722Sblocal8722Sbbuy8722Sbseller(Object username, Object ad, Object time) {
-    return 'Jūs esat atbildējis uz $username $ad vietnē $time';
+    return 'Jūs esat atbildējis uz $username $ad pl. $time';
   }
 
   @override
   String get trade250Sbsubtitle8722Sblocal8722Sbsell8722Sbbuyer => 'vietējais pārdošanas sludinājums';
 
   @override
-  String get trade250Sbsubtitle8722Sbonline8722Sbbuy8722Sbadvertisement => 'tiešsaistes pirkuma sludinājums';
+  String get trade250Sbsubtitle8722Sbonline8722Sbbuy8722Sbadvertisement => 'tiešsaistes pirkšanas sludinājums';
 
   @override
   String get trade250Sbsubtitle8722Sbonline8722Sbsell8722Sbadvertisement => 'tiešsaistes pārdošanas sludinājums';
 
   @override
-  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0 => 'Pircējam ierīce nemaz nav nepieciešama – apstipriniet veiksmīgu darījumu ar verifikācijas kodu';
+  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0 => 'Pircējam ierīce nemaz nav nepieciešama – apstipriniet veiksmīgu pārskaitījumu ar verifikācijas kodu';
 
   @override
-  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb1 => 'Pārdevējs var pabeigt darījumu, izmantojot viedtālruni vai klēpjdatoru';
+  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb1 => 'Pārdevējs var pabeigt pārskaitījumu, izmantojot viedtālruni vai klēpjdatoru';
 
   @override
-  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb2 => 'Pabeigtais darījums ir neatgriezenisks';
+  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb2 => 'Pabeigts pārskaitījums ir neatgriezenisks';
 
   @override
   String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb5 => 'Lūdzu, neizmantojiet tiešsaistes maksājumu metodes! Šim nolūkam izmantojiet tiešsaistes darījumus';
@@ -6467,76 +6467,76 @@ class I18nLv extends I18n {
 
   @override
   String trade250Sbtitle8722Sbid(Object id) {
-    return 'Tirdzniecības ID: $id';
+    return 'Darījuma ID: $id';
   }
 
   @override
   String trade250Sbtitle8722Sblocal8722Sbbuy(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency) {
-    return 'Pērkot $amountXmr $assetSymbol par $amountFiat $currency ar skaidru naudu';
+    return 'Pērk $amountXmr $assetSymbol par $amountFiat $currency ar skaidru naudu';
   }
 
   @override
   String trade250Sbtitle8722Sblocal8722Sbsell(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency) {
-    return 'Pārdodu $amountXmr $assetSymbol par $amountFiat $currency par skaidru naudu';
+    return 'Pārdod $amountXmr $assetSymbol par $amountFiat $currency par skaidru naudu';
   }
 
   @override
   String trade250Sbtitle8722Sbonline8722Sbbuy(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency, Object method) {
-    return 'Iegādājoties $amountXmr $assetSymbol par $amountFiat $currency, izmantojot $method';
+    return 'Pērk $amountXmr $assetSymbol par $amountFiat $currency, izmantojot $method';
   }
 
   @override
   String trade250Sbtitle8722Sbonline8722Sbsell(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency, Object method) {
-    return 'Pārdodu $amountXmr $assetSymbol priekš $amountFiat $currency, izmantojot $method';
+    return 'Pārdod $amountXmr $assetSymbol par $amountFiat $currency, izmantojot $method';
   }
 
   @override
-  String get trade250Sbtitle250Sbbuying => 'Pirkšana';
+  String get trade250Sbtitle250Sbbuying => 'Pērk';
 
   @override
   String get trade250Sbtitle250Sbexpiry => 'Līguma ilgums:';
 
   @override
-  String get trade250Sbtitle250Sbselling => 'Pārdodu';
+  String get trade250Sbtitle250Sbselling => 'Pārdod';
 
   @override
-  String get trade250Sbupdate8722Sbfeedback8722Sbbtn => 'Atjauniniet atsauksmes';
+  String get trade250Sbupdate8722Sbfeedback8722Sbbtn => 'Atjaunināt atsauksmes';
 
   @override
   String trade250Sbwarning250Sbimpersonation(Object appName) {
-    return 'Uzmanieties no krāpniekiem, kas mēģina uzdoties par darbiniekiem! <br /> $appName administratori nekad neteiks jums pabeigt darījumu. <br /> Darbinieku ziņojumiem ir sarkans fons.';
+    return 'Uzmanieties no krāpniekiem, kas mēģina uzdoties par darbiniekiem! <br /> $appName administratori nekad neprasīs jums pabeigt darījumu. <br /> Darbinieku ziņām ir sarkans fons.';
   }
 
   @override
-  String get trades8722Sbtable250Sbstatus250Sbnot8722Sbpaid => 'Nav samaksāts';
+  String get trades8722Sbtable250Sbstatus250Sbnot8722Sbpaid => 'Nav apmaksāts';
 
   @override
   String get trades8722Sbtable250Sbstatus250Sbpaid => 'Apmaksāts';
 
   @override
-  String get try8722Sbagain => 'Mēģini vēlreiz';
+  String get try8722Sbagain => 'Mēģiniet vēlreiz';
 
   @override
   String get user250Sbaccount8722Sbcreated => 'Izveidots konts:';
 
   @override
   String user250Sbads250Sblocal8722Sbbuy8722Sbtitle(Object assetName, Object user) {
-    return 'Pārdod $assetName par skaidru naudu uz $user';
+    return 'Pārdot $assetName par skaidru naudu $user';
   }
 
   @override
   String user250Sbads250Sblocal8722Sbsell8722Sbtitle(Object assetName, Object user) {
-    return 'Pērciet $assetName ar skaidru naudu no $user';
+    return 'Pirkt $assetName ar skaidru naudu no $user';
   }
 
   @override
   String user250Sbads250Sbonline8722Sbbuy8722Sbtitle(Object assetName, Object user) {
-    return 'Pārdod $assetName tiešsaistē uz $user';
+    return 'Pārdot $assetName tiešsaistē $user';
   }
 
   @override
   String user250Sbads250Sbonline8722Sbsell8722Sbtitle(Object assetName, Object user) {
-    return 'Iegādājieties $assetName tiešsaistē no $user';
+    return 'Pirkt $assetName tiešsaistē no $user';
   }
 
   @override
@@ -6550,13 +6550,13 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get user250Sbblock8722Sbstatus8722Sbdescription => 'Viņi nevarēs atbildēt uz jūsu reklāmām. Viņu reklāmas ir paslēptas jūsu meklēšanas rezultātos.';
+  String get user250Sbblock8722Sbstatus8722Sbdescription => 'Viņi nevarēs atsaukties uz jūsu sludinājumiem. Viņu sludinājumi ir paslēpti jūsu meklēšanas rezultātos.';
 
   @override
-  String get user250Sbblock250Sbwill8722Sbhide8722Sbads => 'Bloķējot lietotāju, viņa reklāmas tiks paslēptas jūsu meklēšanas rezultātos';
+  String get user250Sbblock250Sbwill8722Sbhide8722Sbads => 'Bloķējot lietotāju, viņa sludinājumi tiks paslēpti jūsu meklēšanas rezultātos';
 
   @override
-  String get user250Sbcache8722Sbdisclaimer => 'Atjaunina reizi stundā';
+  String get user250Sbcache8722Sbdisclaimer => 'Atjaunināts reizi stundā';
 
   @override
   String user250Sbfeedback8722Sbmore(Object user) {
@@ -6564,7 +6564,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get user250Sbfeedback8722Sbscore => 'Atsauksmju rezultāts:';
+  String get user250Sbfeedback8722Sbscore => 'Atsauksmju reitings:';
 
   @override
   String get user250Sbfeedback8722Sbtitle => 'Atsauksmes';
@@ -6594,13 +6594,13 @@ class I18nLv extends I18n {
   String get user250Sbmedian8722Sbminutes => 'minūtes';
 
   @override
-  String get user250Sbmedian8722Sbnot8722Sbknown => 'Nezinams';
+  String get user250Sbmedian8722Sbnot8722Sbknown => 'Nezināms';
 
   @override
   String get user250Sbmedian8722Sbseconds => 'sekundes';
 
   @override
-  String get user250Sbmedian8722Sbtitle => 'Tipisks tirdzniecības pabeigšanas laiks:';
+  String get user250Sbmedian8722Sbtitle => 'Parastais darījuma pabeigšanas laiks:';
 
   @override
   String get user250Sbno8722Sbfeedback250Sbwhy250Sb1 => 'Atsauksmes atspoguļošana aizņem līdz pat stundu.';
@@ -6618,7 +6618,7 @@ class I18nLv extends I18n {
   String get user250Sbnumber8722Sbof8722Sbtrades => 'Darījumi:';
 
   @override
-  String get user250Sbthis8722Sbis8722Sbyou => 'Tas esi tu';
+  String get user250Sbthis8722Sbis8722Sbyou => 'Tas esat jūs';
 
   @override
   String user250Sbtrust8722Sbbtn(Object username) {
@@ -6631,7 +6631,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get user250Sbtrust8722Sbstatus8722Sbdescription => 'Viņi varēs atbildēt uz reklāmām, kuras esat izveidojis tikai uzticamiem lietotājiem';
+  String get user250Sbtrust8722Sbstatus8722Sbdescription => 'Viņi varēs atsaukties uz sludinājumiem, kurus esat izveidojis tikai uzticamiem lietotājiem';
 
   @override
   String user250Sbunblock8722Sbbtn(Object username) {
@@ -6640,7 +6640,7 @@ class I18nLv extends I18n {
 
   @override
   String user250Sbuntrust8722Sbbtn(Object username) {
-    return 'Neuzticība $username';
+    return 'Neuzticēties $username';
   }
 
   @override
@@ -6667,16 +6667,16 @@ class I18nLv extends I18n {
   String get validation250Sberror250Sbpage => 'Lapai ir jābūt skaitlim';
 
   @override
-  String get validation250Sberror250Sbtrade8722Sbid => 'Nederīgs tirdzniecības ID';
+  String get validation250Sberror250Sbtrade8722Sbid => 'Nederīgs darījuma ID';
 
   @override
   String get verify8722Sbemail250Sberror => 'Ar e-pasta verifikāciju radās kļūda';
 
   @override
-  String get verify8722Sbemail250Sbsuccess => 'E-pasts veiksmīgi pārbaudīts!';
+  String get verify8722Sbemail250Sbsuccess => 'E-pasts veiksmīgi apstiprināts!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Pārliecinieties, vai ielīmētā adrese ir tāda pati kā nokopētā adrese! </strong> Dažiem lietotājiem ir nozagta ļaunprogrammatūra <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">, starpliktuvē iekopēto adresi aizstājot ar uzbrucēja adresi</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Pārliecinieties, vai ielīmētā adrese ir tāda pati kā nokopētā adrese! </strong> Dažiem lietotājiem ir nozagti līdzekļi <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">, ļaunprātīgai programmatūrai starpliktuvē iekopēto adresi aizstājot ar uzbrucēja adresi</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Lejupielādēt CSV';
@@ -6685,25 +6685,25 @@ class I18nLv extends I18n {
   String get wallet250Sbfee250Sbbtc250Sbhigh => 'Augsts';
 
   @override
-  String get wallet250Sbfee250Sbbtc250Sbhigh250Sblabel => 'Augsta maksa, tiek lēsts, ka tiks apstiprināts dažu kvartālu laikā';
+  String get wallet250Sbfee250Sbbtc250Sbhigh250Sblabel => 'Augsta maksa. Paredzams, ka tiks apstiprināts dažu bloku laikā';
 
   @override
-  String get wallet250Sbfee250Sbbtc250Sblow => 'Zems';
+  String get wallet250Sbfee250Sbbtc250Sblow => 'Zema';
 
   @override
-  String get wallet250Sbfee250Sbbtc250Sblow250Sblabel => 'Zema maksa, tiek lēsts, ka tiks apstiprināts nedēļas laikā';
+  String get wallet250Sbfee250Sbbtc250Sblow250Sblabel => 'Zema maksa. Paredzams, ka tiks apstiprināts nedēļas laikā';
 
   @override
   String get wallet250Sbfee250Sbbtc250Sbmedium => 'Vidēja';
 
   @override
-  String get wallet250Sbfee250Sbbtc250Sbmedium250Sblabel => 'Vidēja maksa, tiek lēsts, ka tiks apstiprināts vienas dienas laikā';
+  String get wallet250Sbfee250Sbbtc250Sbmedium250Sblabel => 'Vidēja maksa. Paredzams, ka tiks apstiprināts vienas dienas laikā';
 
   @override
   String get wallet250Sbfee250Sbbtc250Sbradio8722Sbtitle => 'Izvēlieties maksas līmeni';
 
   @override
-  String get wallet250Sbfee250Sbxmr250Sblow => 'Zems';
+  String get wallet250Sbfee250Sbxmr250Sblow => 'Zema';
 
   @override
   String get wallet250Sbfee250Sbxmr250Sbstandard => 'Standarta';
@@ -6722,10 +6722,10 @@ class I18nLv extends I18n {
   String get wallet250Sbfunds8722Sbunlocked => 'Atbloķēts';
 
   @override
-  String get wallet250Sbinternal8722Sbtransfer => 'Iekšējā pārsūtīšana';
+  String get wallet250Sbinternal8722Sbtransfer => 'Iekšējais pārskaitījums';
 
   @override
-  String get wallet250Sbnojs250Sbsend250Sbsend8722Sbbalance8722Sbbtn => 'Nosūtiet visu atlikumu';
+  String get wallet250Sbnojs250Sbsend250Sbsend8722Sbbalance8722Sbbtn => 'Nosūtīt visu atlikumu';
 
   @override
   String get wallet250Sbpassword8722Sbtip => 'Lūdzu, ievadiet savu pašreizējo paroli, lai turpinātu. 8-72 rakstzīmes.';
@@ -6736,14 +6736,14 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get wallet250Sbpriority250Sblow => 'Zems';
+  String get wallet250Sbpriority250Sblow => 'Zema';
 
   @override
   String get wallet250Sbpriority250Sbstandard => 'Standarta';
 
   @override
   String wallet250Sbreceive250Sbaddress(Object assetName) {
-    return 'Jūsu depozīta $assetName adrese:';
+    return 'Jūsu $assetName depozīta adrese:';
   }
 
   @override
@@ -6759,7 +6759,7 @@ class I18nLv extends I18n {
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbdate => 'Datums:';
 
   @override
-  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid => 'Darījuma ID:';
+  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid => 'Pārskaitījuma ID:';
 
   @override
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sblocked8722Sbstatus => 'Bloķēts statuss:';
@@ -6788,7 +6788,7 @@ class I18nLv extends I18n {
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sblong => 'Apstiprinājumi';
 
   @override
-  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sbshort => 'Konf.';
+  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sbshort => 'Apst.';
 
   @override
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbdate => 'Datums';
@@ -6800,14 +6800,14 @@ class I18nLv extends I18n {
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbstatus => 'Statuss';
 
   @override
-  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle => 'Ienākošie noguldījumi';
+  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle => 'Ienākošie depozīti';
 
   @override
   String get wallet250Sbreceive250Sbno8722Sbincoming => 'Šeit tiks parādīti jūsu neapstiprinātie depozīti';
 
   @override
   String wallet250Sbreceive250Sbqr(Object appName, Object assetSymbol) {
-    return 'Jūsu $appName $assetSymbol adreses QR attēlojums';
+    return 'Jūsu $appName $assetSymbol adreses QR kods';
   }
 
   @override
@@ -6820,16 +6820,16 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived(Object assetName) {
-    return 'Saņemt summu $assetName';
+    return 'Saņemamā summa $assetName';
   }
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip(Object assetName) {
-    return 'Šī ir $assetName summa, kas jāsaņem uz saņemšanas $assetName adresi.';
+    return 'Šī ir $assetName summa, kas tiks saņemta uz $assetName saņemšanas adresi.';
   }
 
   @override
-  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip250Sbfee8722Sbon8722Sbtop => 'Šai summai tiks pievienota tīkla transakcijas maksa.';
+  String get wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip250Sbfee8722Sbon8722Sbtop => 'Šai summai tiks pievienota tīkla pārskaitījuma maksa.';
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn(Object assetName) {
@@ -6838,12 +6838,12 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip(Object assetSymbol, Object appName, Object assetName) {
-    return 'Šī ir aptuvenā summa $assetSymbol, kas tiks atskaitīta no jūsu $appName $assetName maka, ieskaitot $assetName darījuma tīkla maksu.';
+    return 'Šī ir aptuvenā $assetSymbol summa, kas tiks atskaitīta no jūsu $appName $assetName maka, ieskaitot $assetName pārskaitījuma tīkla maksu.';
   }
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip250Sbonly8722Sbfor8722Sbexternal(Object assetName, Object appName) {
-    return 'Attiecas tikai uz darījumiem, kas nosūtīti uz ārējo $assetName maku. Iekšējie darījumi starp $appName makiem ir pilnīgi bez maksas.';
+    return 'Attiecas tikai uz pārskaitījumiem, kas nosūtīti uz ārējo $assetName maku. Iekšējie pārskaitījumi starp $appName makiem ir pilnīgi bez maksas.';
   }
 
   @override
@@ -6855,7 +6855,7 @@ class I18nLv extends I18n {
   String get wallet250Sbsend250Sbcontinue8722Sbbtn => 'Turpināt';
 
   @override
-  String get wallet250Sbsend250Sbdialog250Sbconfirm8722Sbtitle => 'Apstipriniet šķīrējtiesas obligācijas atsaukšanu';
+  String get wallet250Sbsend250Sbdialog250Sbconfirm8722Sbtitle => 'Apstiprināt šķīrējtiesas obligācijas atsaukšanu';
 
   @override
   String wallet250Sbsend250Sblocal8722Sbwallet(Object appName) {
@@ -6866,11 +6866,11 @@ class I18nLv extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbfaq8722Sblink => 'Kas tas?';
 
   @override
-  String get wallet250Sbsend250Sbpriority250Sbtitle => 'Izvēlieties darījuma prioritāti';
+  String get wallet250Sbsend250Sbpriority250Sbtitle => 'Izvēlieties pārskaitījuma prioritāti';
 
   @override
   String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
-    return 'Notiek {cryptocurrencyName} adreses saņemšana';
+    return '$assetName saņemšanas adrese';
   }
 
   @override
@@ -6884,26 +6884,26 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get wallet250Sbsend250Sbsuccess => 'Veiksmi!';
+  String get wallet250Sbsend250Sbsuccess => 'Veiksmīgi!';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb0 => 'Monero darījumu nosūtīšana parasti aizņem apmēram 30 līdz 60 minūtes, dažkārt var paiet dažas stundas, ja tīkls ir lēns.';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb0 => 'Monero pārskaitījumu nosūtīšana parasti aizņem 30 līdz 60 minūtes. Dažkārt var paiet dažas stundas, ja tīkls ir lēns.';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb057Sbagoradesk => 'Kriptovalūtas darījumu nosūtīšana parasti aizņem apmēram 30 līdz 60 minūtes, dažkārt var paiet dažas stundas, ja tīkls ir lēns.';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb057Sbagoradesk => 'Kriptovalūtas pārskaitījumu nosūtīšana parasti aizņem 30 līdz 60 minūtes. Dažkārt var paiet dažas stundas, ja tīkls ir lēns.';
 
   @override
   String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb1 => 'Skatiet, kāpēc dažreiz tas prasa ilgāku laiku';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle => 'Cik ilgi notiek Monero darījums?';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle => 'Cik ilgā laikā tiek veikts Monero pārskaitījums?';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle57Sbagoradesk => 'Cik ilgi aizņem kriptovalūtas darījums?';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle57Sbagoradesk => 'Cik ilgu laiku aizņem kriptovalūtas pārskaitījums?';
 
   @override
   String wallet250Sbsend250Sbtip8722Sb18722Sbtext(Object appName) {
-    return '$appName maks ir tīmekļa maks — izejošās Monero adreses nav savienotas ar jūsu kontu. Ja pieprasāt atmaksu no tirgotāja, lūdziet viņam nosūtīt atmaksu uz jūsu saņēmēja adresi.';
+    return '$appName maks ir tīmekļa maks — izejošās Monero adreses nav savienotas ar jūsu kontu. Ja pieprasāt atmaksu no tirgotāja, lūdziet viņam nosūtīt atmaksu uz jūsu saņemšanas adresi.';
   }
 
   @override
@@ -6915,16 +6915,16 @@ class I18nLv extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle => 'Monero atmaksas un izmaksas';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle57Sbagoradesk => 'Kriptovalūtas atmaksa un izmaksas';
+  String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle57Sbagoradesk => 'Kriptovalūtas atmaksas un izmaksas';
 
   @override
   String wallet250Sbsend250Sbtip8722Sb28722Sbtext(Object appName) {
-    return 'Sūtot no $appName maka, tiek rezervēta Monero tīkla maksa, kas tiek ieturēta no jūsu atlikuma. Darījumi ar citu $appName lietotāju makiem ir bezmaksas.';
+    return 'Sūtot no $appName maka, tiek rezervēta Monero tīkla maksa, kas tiek ieturēta no jūsu atlikuma. Pārskaitījumi uz citu $appName lietotāju makiem ir bezmaksas.';
   }
 
   @override
   String wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee(Object assetName) {
-    return 'Pašreizējās izejošo $assetName tīkla maksas';
+    return 'Pašreizējās izejošās $assetName tīkla maksas';
   }
 
   @override
@@ -6934,7 +6934,7 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbsend250Sbtip8722Sb28722Sbtext57Sbagoradesk(Object appName) {
-    return 'Sūtot no $appName maka, tīkla maksa tiek rezervēta un tiek ieturēta no jūsu atlikuma. Darījumi ar citu $appName lietotāju makiem ir bezmaksas.';
+    return 'Sūtot no $appName maka, tīkla maksa tiek rezervēta un ieturēta no jūsu atlikuma. Pārskaitījumi uz citu $appName lietotāju makiem ir bezmaksas.';
   }
 
   @override
@@ -6949,14 +6949,14 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get wallet250Sbswap250Sbcheckbox250Sbdeposit => 'Es vēlos noguldīt citu valūtu';
+  String get wallet250Sbswap250Sbcheckbox250Sbdeposit => 'Es vēlos ieskaitīt citu valūtu';
 
   @override
   String get wallet250Sbswap250Sbcheckbox250Sbwithdraw => 'Vēlos saņemt citu valūtu';
 
   @override
   String wallet250Sbswap250Sbconfirmation250Sbtitle(Object partner) {
-    return 'Jūsu $partner tirdzniecība';
+    return 'Jūsu $partner darījums';
   }
 
   @override
@@ -6966,7 +6966,7 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbcontinue8722Sbon(Object partner) {
-    return 'Turpināt uz $partner';
+    return 'Turpināt $partner';
   }
 
   @override
@@ -6980,7 +6980,7 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress250Sbhelper(Object partner, Object asset, Object appName) {
-    return 'Pēc darījuma saņemšanas $partner nosūtīs $asset uz jūsu $appName maku';
+    return 'Pēc pārskaitījuma saņemšanas $partner nosūtīs $asset uz jūsu $appName maku';
   }
 
   @override
@@ -6991,7 +6991,7 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbdeposits250Sbhelper(Object asset) {
-    return 'Darījums tiks parādīts saņēmēja makā pēc tam, kad to būs apstiprinājis $asset tīkls (apmēram 10–60 min).';
+    return 'Pārskaitījums tiks parādīts saņēmēja makā pēc tam, kad to būs apstiprinājis $asset tīkls (≈ 10–60 min)';
   }
 
   @override
@@ -7002,27 +7002,27 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbnojs8722Sbdescription(Object asset, Object currencyCode) {
-    return 'Izvēlieties, vai vēlaties aprēķināt apmaiņu, pamatojoties uz to, cik $asset vēlaties nosūtīt vai cik $currencyCode vēlaties saņemt. Mēs to izmantosim, lai atrastu jums labākos piedāvājumus.';
+    return 'Izvēlieties, vai vēlaties aprēķināt apmaiņu pēc tā, cik $asset vēlaties nosūtīt vai cik $currencyCode vēlaties saņemt. Mēs to izmantosim, lai atrastu jums labākos piedāvājumus.';
   }
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
-    return 'Saņemt {assetName}';
+    return 'Saņemt $currencyCode';
   }
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
-    return 'Sūtīt {assetName}';
+    return 'Sūtīt $asset';
   }
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount250Sbdescription250Sbamount8722Sbtype8722Sbreceive(Object currencyCode) {
-    return 'Summa $currencyCode, kuru vēlaties saņemt';
+    return '$currencyCode summa, kuru vēlaties saņemt';
   }
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount250Sbdescription250Sbamount8722Sbtype8722Sbsend(Object asset) {
-    return '$asset apjoms, ko vēlaties nosūtīt';
+    return '$asset summa, ko vēlaties nosūtīt';
   }
 
   @override
@@ -7038,7 +7038,7 @@ class I18nLv extends I18n {
   String get wallet250Sbswap250Sbnative250Sboffers250Sbview8722Sbad8722Sbbutton => 'Skatīt sludinājumu';
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbtrade8722Sbbutton => 'Tirdzniecība';
+  String get wallet250Sbswap250Sbnative250Sbtrade8722Sbbutton => 'Mainīt';
 
   @override
   String wallet250Sbswap250Sbpowered8722Sbby(Object partner) {
@@ -7047,11 +7047,11 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbprovide8722Sbemail(Object partner) {
-    return 'Sniedziet $partner manu saziņas e-pasta adresi';
+    return 'Nodot $partner manu e-pasta adresi';
   }
 
   @override
-  String get wallet250Sbswap250Sbsave8722Sblink => 'Noteikti saglabājiet šo saiti, jo tas ir jūsu vienīgais veids, kā izsekot tirdzniecībai!';
+  String get wallet250Sbswap250Sbsave8722Sblink => 'Noteikti saglabājiet šo saiti, jo tas ir jūsu vienīgais veids, kā izsekot darījumam!';
 
   @override
   String get wallet250Sbswap250Sbsend8722Sbbtn => 'Nosūtiet monētas!';
@@ -7061,12 +7061,12 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbswap8722Sbasset8722Sbinput250Sbwithdrawal(Object asset) {
-    return 'Aptuvenais nosūtīšanas laiks $asset';
+    return 'Aptuveni nosūtīts $asset';
   }
 
   @override
   String wallet250Sbswap250Sbswap8722Sbasset8722Sbinput250Sbwithdrawal250Sbhelper(Object asset, Object appName, Object assetName, Object currency) {
-    return 'Aptuvenā summa $asset, kas tiks atskaitīta no jūsu $appName $assetName maka, lai saņemtu iepriekš minēto $currency summu, ieskaitot $assetName darījuma tīkla maksu. Var nedaudz mainīties tīkla maksas svārstību dēļ.';
+    return 'Aptuvenā $asset summa, kas tiks atskaitīta no jūsu $appName $assetName maka, lai saņemtu iepriekš minēto $currency summu, ieskaitot $assetName pārskaitījuma tīkla maksu. Var nedaudz mainīties tīkla maksas svārstību dēļ.';
   }
 
   @override
@@ -7081,22 +7081,22 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbswap250Sbswap8722Sbcurrency8722Sbinput250Sbwithdrawal250Sbhelper(Object currency, Object partner) {
-    return 'Aptuvenā summa $currency, ko jūs saņemsiet. Izmantojiet tālāk norādīto ievadi, lai to mainītu. Var nedaudz mainīties $partner valūtas kursa svārstību dēļ.';
+    return 'Aptuvenā summa $currency, ko jūs saņemsiet. Izmantojiet lauku zemāk, lai to mainītu. Var nedaudz mainīties $partner valūtas kursa svārstību dēļ.';
   }
 
   @override
   String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbhelper(Object time, Object partner, Object currency) {
-    return 'Vienkārši atpūtieties, pagaidiet $time minūtes, un $partner nosūtīs jums $currency';
+    return 'Atslābinieties, pagaidiet $time minūtes, un $partner nosūtīs jums $currency';
   }
 
   @override
   String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle(Object asset, Object partner) {
-    return ' Mēs esam nosūtījuši $asset uz $partner';
+    return ' Mēs esam nosūtījuši $asset $partner';
   }
 
   @override
   String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle250Sball8722Sbset(Object partner) {
-    return 'Viss sagatavots $partner tirdzniecībai!';
+    return 'Viss sagatavots $partner darījumam!';
   }
 
   @override
@@ -7116,10 +7116,10 @@ class I18nLv extends I18n {
   String get wallet250Sbtab250Sbsend8722Sbshort => 'Sūtīt';
 
   @override
-  String get wallet250Sbtab250Sbtx8722Sblong => 'Darījumi';
+  String get wallet250Sbtab250Sbtx8722Sblong => 'Pārskaitījumi';
 
   @override
-  String get wallet250Sbtab250Sbtx8722Sbshort => 'Txs';
+  String get wallet250Sbtab250Sbtx8722Sbshort => 'Pārskaitījumi';
 
   @override
   String get wallet250Sbtitle => 'Maks';
@@ -7129,12 +7129,12 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbtx250Sbfee(Object assetName) {
-    return '$assetName tīkla transakcijas maksa.';
+    return '$assetName tīkla pārskaitījuma maksa.';
   }
 
   @override
   String wallet250Sbtx250Sbinternal8722Sbreceive8722Sbtrade(Object id) {
-    return 'Saņemts no tirdzniecības $id';
+    return 'Saņemts no darījuma $id';
   }
 
   @override
@@ -7144,7 +7144,7 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbtx250Sbinternal8722Sbsend8722Sbtrade(Object id) {
-    return 'Nosūtīts tirdzniecībai $id';
+    return 'Nosūtīts darījumam $id';
   }
 
   @override
@@ -7162,17 +7162,17 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbtx250Sbreceive(Object assetName) {
-    return 'Saņemts. $assetName tīkla darījuma ID:';
+    return 'Saņemts. $assetName tīkla pārskaitījuma ID:';
   }
 
   @override
   String wallet250Sbtx250Sbreserve(Object assetName, Object id) {
-    return '$assetName rezerve tirdzniecībai $id';
+    return '$assetName rezerve darījumam $id';
   }
 
   @override
   String wallet250Sbtx250Sbreserve8722Sbreturn(Object assetName, Object id) {
-    return '$assetName rezerves atgriešana no tirdzniecības $id';
+    return '$assetName rezerves atgriešana no darījuma $id';
   }
 
   @override
@@ -7180,23 +7180,23 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbtx250Sbsend8722Sbid(Object assetName) {
-    return '$assetName tīkla darījuma ID:';
+    return '$assetName tīkla pārskaitījuma ID:';
   }
 
   @override
-  String get wallet250Sbtxs250Sbdetails8722Sbdialog250Sbtitle => 'Darījuma informācija';
+  String get wallet250Sbtxs250Sbdetails8722Sbdialog250Sbtitle => 'Pārskaitījuma informācija';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbdetails => 'Sīkāka informācija';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'Tx ID, adrese, tirdzniecības ID, lietotājvārds utt.';
+  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'Tx ID, adrese, darījuma ID, lietotājvārds utt.';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbfrom => 'No';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtitle => 'Filtrēt darījumus';
+  String get wallet250Sbtxs250Sbfilter250Sbtitle => 'Filtrēt pārskaitījumus';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbto => 'Uz';
@@ -7205,7 +7205,7 @@ class I18nLv extends I18n {
   String get wallet250Sbtxs250Sbfilter250Sbtype => 'Tips';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => 'Filiāles komisija';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => 'Saistītā komisija';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sball => 'Visi veidi';
@@ -7214,7 +7214,7 @@ class I18nLv extends I18n {
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbcoupon => 'Kupona atlaide';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbfee => 'Maksa par tīklu';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbfee => 'Tīkla maksa';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbreceive => 'Iekšējā saņemšana';
@@ -7229,17 +7229,17 @@ class I18nLv extends I18n {
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreceive => 'Saņemt';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => 'Tirdzniecības rezerve';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => 'Darījuma rezerve';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => 'Tirdzniecības rezerves atdeve';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => 'Darījuma rezerves atgriešana';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbsend => 'Sūtīt';
 
   @override
   String wallet250Sbtxs250Sbtable250Sbamount(Object assetSymbol) {
-    return 'Summa $assetSymbol';
+    return '$assetSymbol summa';
   }
 
   @override
@@ -7260,7 +7260,7 @@ class I18nLv extends I18n {
 
   @override
   String wallet250Sbtxs250Sbtip8722Sbtext(Object latestVersion, Object assetName) {
-    return 'Ja aprakstā varat redzēt darījuma ID ar saiti uz blokķēdes pārlūku, tas nozīmē, ka jūsu darījums ir veiksmīgi pārraidīts. Lūdzu, pārliecinieties, vai jūsu maks ir pilnībā sinhronizēts un vai izmantojat maka $assetName $latestVersion.';
+    return 'Ja aprakstā varat redzēt pārskaitījuma ID ar saiti uz blokķēdes pārlūku, tas nozīmē, ka jūsu darījums ir veiksmīgi pārraidīts. Lūdzu, pārliecinieties, ka jūsu maks ir pilnībā sinhronizēts un ka izmantojat $assetName maka versiju $latestVersion';
   }
 
   @override
@@ -7272,21 +7272,21 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get wallet250Sbtxs250Sbtitle => 'Maka darījumi';
+  String get wallet250Sbtxs250Sbtitle => 'Maka pārskaitījumi';
 
   @override
   String wallet250Sbupdate8722Sbsoft8722Sbwarn(Object update) {
-    return 'Ir iznākusi jauna Monero programmatūras versija! Neaizmirstiet $update sava maka programmatūru, pretējā gadījumā nevarēsit nosūtīt un saņemt darījumus.';
+    return 'Ir iznākusi jauna Monero programmatūras versija! Neaizmirstiet $update sava maka programmatūru, pretējā gadījumā nevarēsiet nosūtīt un saņemt pārskaitījumus.';
   }
 
   @override
-  String get wallet250Sbupdate8722Sbsoft8722Sbwarn8722Sbupdate => 'Atjaunināt';
+  String get wallet250Sbupdate8722Sbsoft8722Sbwarn8722Sbupdate => 'atjaunināt';
 
   @override
-  String get wallet250Sbwithdraw250Sbamount8722Sband8722Sbfee8722Sbnext => 'Nākamajā solī jūs atlasīsiet summu un maksas līmeni';
+  String get wallet250Sbwithdraw250Sbamount8722Sband8722Sbfee8722Sbnext => 'Nākamajā solī jūs izvēlēsieties summu un maksas līmeni';
 
   @override
-  String get wallet250Sbwithdraw250Sbamount8722Sbnext => 'Summu atlasīsiet nākamajā darbībā';
+  String get wallet250Sbwithdraw250Sbamount8722Sbnext => 'Summu izvēlēsieties nākamajā solī';
 
   @override
   String get wallet250Sbwithdraw250Sbamount8722Sbtype250Sbreceive250Sblabel => 'Saņemt';
@@ -7301,10 +7301,10 @@ class I18nLv extends I18n {
   String get wallet250Sbwithdraw250Sbamount8722Sbtype250Sbsend250Sbsecondary8722Sblabel => 'Ievadiet atskaitāmo summu (ar maksu)';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sblabel => 'Bezmaksas jauninājums';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sblabel => 'Bezmaksas uzlabojums';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sbtooltip => 'Tā kā mēs veicam izņemšanu pa partijām, faktiski ir lētāk nosūtīt izņemšanu ar augstāku maksas likmi. Izbaudi!';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sbtooltip => 'Tā kā mēs veicam izņemšanu grupās, faktiski ir lētāk nosūtīt izņemšanu ar augstāku maksas likmi. Izbaudiet!';
 
   @override
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees => 'Tīkla maksas';
@@ -7313,13 +7313,13 @@ class I18nLv extends I18n {
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sbhigh => 'Ātri';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sblow => 'Lēns';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sblow => 'Lēni';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sbmedium => 'Vidēja';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sbmedium => 'Vidēji';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbsend8722Sbmax => 'Sūtīt maks';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbsend8722Sbmax => 'Sūtīt maksimums';
 
   @override
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbstepper250Sbamount => 'Summa';
@@ -7331,7 +7331,7 @@ class I18nLv extends I18n {
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbstepper250Sbsummary => 'Kopsavilkums';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation250Sbwallet8722Sbowner => 'Apstiprinot naudas izņemšanu, jūs arī apstiprināt, ka maks, no kura izņemat naudu, pieder jums.';
+  String get wallet250Sbwithdraw250Sbconfirmation250Sbwallet8722Sbowner => 'Apstiprinot naudas izņemšanu, jūs arī apstiprināt, ka maks, uz kuru izņemat naudu, pieder jums.';
 
   @override
   String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbnew8722Sbfee => 'Jauna izņemšanas maksa';
@@ -7340,10 +7340,10 @@ class I18nLv extends I18n {
   String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbold8722Sbfee => 'Vecā izņemšanas maksa';
 
   @override
-  String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbreceive8722Sbamount => 'Saņemt summu';
+  String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbreceive8722Sbamount => 'Saņemamā summa';
 
   @override
-  String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbsend8722Sbamount => 'Summa, kas jāatskaita';
+  String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbsend8722Sbamount => 'Atskaitāmā summa';
 
   @override
   String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbtitle8722Sbdecreased => 'Izņemšanas maksa ir samazinājusies';
@@ -7368,18 +7368,18 @@ class I18nLv extends I18n {
   String get wallet250Sbwithdrawal250Sberror250Sbtoo8722Sbsmall => 'Summa, kas ir pieprasīta izņemšanai, ir mazāka par minimālo iespējamo summu';
 
   @override
-  String get wallet250Sbwithdrawal250Sbnetwork8722Sbfee => 'Maksa par tīklu';
+  String get wallet250Sbwithdrawal250Sbnetwork8722Sbfee => 'Tīkla maksa';
 
   @override
-  String get warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb0 => '<strong>PIEZĪME.</strong> Šis maksājuma veids ir <strong>augsta riska</strong>, jo tas ir <strong>atgriezenisks</strong> un šī iemesla dēļ to bieži izmanto krāpnieki.';
+  String get warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb0 => '<strong>PIEZĪME.</strong> Šis maksājuma veids ir <strong>augsta riska</strong>, jo tas ir <strong>atgriežams</strong> un šī iemesla dēļ to bieži izmanto krāpnieki.';
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return 'Pat ja jūs veicat pienācīgu rūpību un tirgojaties tikai ar cienījamiem lietotājiem, nav garantijas, ka nenokļūsiet $method strīda situācijā. Lai palielinātu savas iespējas, varat rīkoties šādi: $linebreak  1. Pieprasiet 2 lietotāja identifikācijas dokumentu ar fotoattēlu (t.i., pases un autovadītāja apliecības skenēšanu), pārbaudiet, vai $method konta nosaukums atbilst ID. $linebreak  2. Pastāstiet lietotājam, lai viņš nosūta jums e-pasta ziņojumu no $method e-pasta konta (varbūt pat pasakiet viņam e-pastā ievietot darījuma ID un kaut ko par tirdzniecību).$linebreak  3. Iekasēt ļoti augstu maksu par $method tirgojas. Piemēram, 25% un vairāk. Tādā veidā jūs saņemat segumu, ja 1 no 5 jūsu $method darījumiem ir krāpniecība (ņemot vērā vienādas darījumu summas). $linebreak  4. Esiet piesardzīgs no lielām tirdzniecības summām. Vispirms mēģiniet veikt dažus mazākas summas darījumus ar tirgotāju. $linebreak ';
+    return 'Pat ja jūs veicat pienācīgu izpēti un tirgojaties tikai ar cienījamiem lietotājiem, nav garantijas, ka nenokļūsiet $method strīda situācijā. Lai palielinātu savas iespējas, varat rīkoties šādi: $linebreak  1. Pieprasiet 2 lietotāja identifikācijas dokumentu skenējumus ar fotoattēlu (t.i., pases un autovadītāja apliecības), pārbaudiet, vai $method konta nosaukums atbilst ID. $linebreak  2. Pieprasiet lietotājam, lai viņš nosūta jums e-pasta ziņojumu no $method e-pasta konta (varbūt pat vaicājiet viņam e-pastā ievietot darījuma ID un kaut ko par tirdzniecību).$linebreak  3. Iekasēt ļoti augstu maksu par $method darījumiem. Piemēram, 25% un vairāk. Tādā veidā jūs joprojām iegūstat, pat ja 1 no 5 jūsu $method darījumiem ir krāpniecība (ņemot vērā vienādas darījumu summas). $linebreak  4. Esiet piesardzīgs ar lielām tirdzniecības summām. Vispirms mēģiniet veikt dažus mazākas summas darījumus ar tirgotāju. $linebreak ';
   }
 
   @override
-  String get warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0 => 'Šī reklāma ir paslēpta, jo jūsu norādītā minimālā summa ir mazāka par maksimālo pieejamo summu';
+  String get warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0 => 'Sis sludinājums ir paslēpts, jo jūsu norādītā minimālā summa ir mazāka par jūsu maksimālo pieejamo summu';
 
   @override
   String warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb1(Object assetName) {
@@ -7388,55 +7388,118 @@ class I18nLv extends I18n {
 
   @override
   String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Visas jūsu pārdošanas $asset reklāmas ir paslēptas no publiskās meklēšanas, jo jūsu šķīrējtiesas obligācijas maka atlikums ir mazāks par $minRequiredbalance. Lai jūsu pārdošanas reklāmas būtu redzamas, lūdzu, iemaksājiet vismaz $amountXmr savā šķīrējtiesas obligācijā $localmoneroWallet.';
+    return 'Visi jūsu $asset pārdošanas sludinājumi ir paslēpti no publiskās meklēšanas, jo jūsu šķīrējtiesas obligācijas maka atlikums ir mazāks par $minRequiredbalance. Lai jūsu pārdošanas sludinājumi būtu redzami, lūdzu, iemaksājiet vismaz $amountXmr savā šķīrējtiesas obligācijā $localmoneroWallet.';
   }
 
   @override
   String warning250Sbnot8722Sbenough8722Sbbalance8722Sblocalmonero8722Sbwallet(Object appName) {
-    return '$appName maku';
+    return '$appName maks';
   }
 
   @override
   String get web8722Sbnotification250Sbmessage => 'Jums ir jauna ziņa.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbcancelled => 'Tirdzniecība ir atcelta.';
+  String get web8722Sbnotification250Sbtrade8722Sbcancelled => 'Darījums ir atcelts.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbcomplete => 'Tika pabeigta tirdzniecība.';
+  String get web8722Sbnotification250Sbtrade8722Sbcomplete => 'Darījums tika pabeigts.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbdisputed => 'Viens no jūsu darījumiem ir apstrīdēts.';
+  String get web8722Sbnotification250Sbtrade8722Sbdisputed => 'Kāds no jūsu darījumiem ir apstrīdēts.';
 
   @override
   String get web8722Sbnotification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete => 'Maksājums atzīmēts kā pabeigts.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbrequest => 'Jums ir jauns tirdzniecības piedāvājums.';
+  String get web8722Sbnotification250Sbtrade8722Sbrequest => 'Jums ir jauns darījuma piedāvājums.';
 
   @override
-  String get widget8722Sbinstructions250Sbaffiliate8722Sbattach8722Sbcode8722Sbcheckbox => 'Pievienojiet logrīkam manu filiāles novirzīšanas kodu';
+  String get widget8722Sbinstructions250Sbaffiliate8722Sbattach8722Sbcode8722Sbcheckbox => 'Pievienot logrīkam manu saistīto kodu';
 
   @override
-  String get widget8722Sbinstructions250Sbaffiliate8722Sblogged8722Sbout => 'Piesakieties, lai logrīkam pievienotu saistītā uzņēmuma novirzīšanas kodu';
+  String get widget8722Sbinstructions250Sbaffiliate8722Sblogged8722Sbout => 'Pieslēdzieties, lai logrīkam pievienotu saistīto kodu';
 
   @override
-  String get widget8722Sbinstructions250Sbaffiliate8722Sbnot8722Sbenabled => 'Iespējot saistīto programmu, lai logrīkam pievienotu novirzīšanas kodu';
+  String get widget8722Sbinstructions250Sbaffiliate8722Sbnot8722Sbenabled => 'Iespējot saistīto programmu, lai logrīkam pievienotu saistīto kodu';
 
   @override
   String widget8722Sbinstructions250Sbinstructions(Object assetName) {
-    return 'Lai savai vietnei iegūtu $assetName ielas cenas logrīku, tālāk atlasiet vajadzīgo valūtu un vienkārši ielīmējiet šo kodu savā tīmekļa lapā:';
+    return 'Lai savai vietnei iegūtu $assetName ielas cenas logrīku, zemāk atlasiet vajadzīgo valūtu un vienkārši ielīmējiet šo kodu savā tīmekļa lapā:';
   }
 
   @override
   String widget8722Sbinstructions250Sbtitle8722Sbaffiliate(Object assetName) {
-    return '$assetName Ielas cenu logrīks (ar jūsu partnera kodu)';
+    return '$assetName Ielas cenu logrīks (ar jūsu saistīto kodu)';
   }
 
   @override
   String widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate(Object assetName) {
     return '$assetName Ielas cenu logrīks';
   }
+
+  @override
+  String get devblog250Sbdescription => 'Šajā emuārā mūsu komanda dalās ar dažiem mūsu attīstības ieskatiem ar tiem, kurus interesē lietu tehniskā puse.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid ir instalējams FOSS (bezmaksas un atvērtā pirmkoda programmatūras) lietojumprogrammu katalogs Android platformai. Klients ļauj ērti pārlūkot, instalēt un sekot līdzi atjauninājumiem jūsu ierīcē.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid vietne</a></p>\n</blockquote>\n\n<p>Visas šīs apmācības darbības būs piemērotas arī lietotnei bez garšas.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Lietotni var iekļaut F-Droid tikai tad, ja tā ir pilnībā atvērtā pirmkoda, tostarp visas izmantotās bibliotēkas un atkarības. Uzziniet vairāk par iekļaušanas politiku <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">šeit</a>.</p>\n<p>Piemēram, ja savā lietotnē izmantojat ObjectBox datu bāzi, to nevar&#39; iekļaut F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">diskusija</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Kuras lietotnes var iekļaut F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repozitorijs</a> vietnē Gitlab.</li>\n<li>Klonējiet repozitoriju savā ierīcē.</li>\n<li>Izveidojiet filiāli ar lietotnes komplekta ID, piemēram, <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => '1. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Pārbaudiet, vai <code>fdroid</code> darbojas pareizi. Palaidiet šādas komandas mapē <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => '2. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Pievienojiet savu projektu:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Tas izveidos failu metadatu direktorijā, piemēram, <code>metadata/co.localmonero.app.yml</code>.\nŠo failu var izveidot arī manuāli.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => '3. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Atveriet failu un rediģējiet to. Šis ir piemērs: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Piemērā var redzēt:</p>\n<ol>\n<li>Flutter tiek izmantots kā apakšmodulis — tā ir F-Droid komandas prasība.</li>\n<li>Katrai garšai esam izmantojuši atsevišķu atzaru (komanda <code>AutoUpdateMode: versija %v-fdroid-lm</code>). Tas ir tāpēc, ka Fastlane &#39; neatbalsta garšas ar Flutter.</li>\n<li>Pirmo reizi būvējuma informāciju pievienojam manuāli. Turpmāk to automātiski pievienos robots, kad būsim nospieduši jaunu tagu.</li>\n</ol>\n<p>Pārbaudiet, vai failam ir pareiza sintakse: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '4. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Tagad pievienosim datus par F-Droid tirgu. Šim nolūkam mēs izveidojam atsevišķu atzaru katrai garšai:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Pēc tam mēs izveidojam Fastlane mapi:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Pievienojiet nepieciešamos datus un nospiediet to.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => '5. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Ir pienācis laiks pievienot lietotni F-Droid.</p>\n<ol>\n<li>Izveidojiet tagu savā lietotņu krātuvē.</li>\n<li>Nospiediet izmaiņas F-Droid repozitorijā vietnē Gitlab.</li>\n<li>Izveidojiet sapludināšanas pieprasījumu Gitlab repo. Nosaukumā izmantojiet savas lietotnes ID.</li>\n<li>Pagaidiet atsauksmi no F-Droid komandas.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => '6. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Process ir nedaudz sarežģīts, un ceļā var rasties dažādas problēmas. Taču, kad būsit iestatījis CI, tālāk norādītie atjauninājumi tiks apstrādāti automātiski.</p>\n<p>Ja jums ir jautājumi, uzdodiet tos mūsu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> vietnē.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Secinājums';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid ir lielisks FOSS lietotņu katalogs Android ierīcēm, taču lietotnes pievienošana var būt nedaudz sarežģīta...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Kā F-Droid publicēt savu lietotni Flutter ar garšām?';
+
+  @override
+  String get devblog250Sbtitle => 'Attīstības emuārs';
 
   @override
   String get ads => 'Sludinājumi';
@@ -7988,7 +8051,7 @@ class I18nLv extends I18n {
   String get api_error_72 => 'Mēģinājums izņemt līdzekļus no neesoša konta';
 
   @override
-  String get api_error_78 => 'Mēģinājums iegūt sludinājumus ar neatļautu parametru kombināciju';
+  String get api_error_78 => 'Mēģinājums iegūt sludinājumus ar nederīgu parametru kombināciju';
 
   @override
   String get api_error_79 => 'Pieprasītais sludinājuma ID nepastāv';
@@ -9170,7 +9233,7 @@ class I18nLv extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: pērc XMR ērti';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Pērciet vai pārdodiet Monero bez ID pārbaudes. Skaidrā naudā vai tiešsaistē. Droši, ātri, viegli.\n\nLocalMonero ir lielākā, uzticamākā un vislabāk izveidotā P2P tirdzniecības platforma XMR telpā. Mums nav KYC pārbaužu — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt Bitcoin, Ether, USDT vai jebkuru citu kriptovalūtu uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.\n\n- Droša un vienmērīga tirdzniecība\nMēs atbalstām jebkuru maksājuma veidu, jebkuru valūtu un jebkurā vietā. Mēs nenoņemam maksājuma veidus un pilnībā atbalstām tiešus skaidras naudas darījumus. Visi mūsu darījumi ir aizsargāti ar šķīrējtiesas obligāciju. Tā kā mēs pieprasām, lai līdzekļi tiktu turēti šķīrējtiesas obligācijās pirms darījuma uzsākšanas, mēs pircējam nodrošinām gludu un drošu procesu. Tas ir būtiski platformas popularitātei un nodrošina pārdevējiem regulārus klientus.\n\n- Nav KYC/AML vai ID verifikācijas\nLocalMonero ir apņēmies saglabāt jūsu tirdzniecības pieredzes vienkāršību un tiešumu. Mēs neizmantojam KYC/AML un nekad neplānojam to darīt.\n\n- Kopiena uzticas\nMūsu platforma ir darbojusies vairāk nekā četrus gadus, pārdzīvojusi 2018. gada Lielo kriptovalūtu tirgus sabrukumu un, pateicoties uz sabiedrību orientētai rūpīgai apkalpošanai, kļuva par vienu no uzticamākajiem zīmoliem izteikti skeptiskajā Monero telpā.\n\n- Drošs, atvērtā pirmkoda, uz privātumu orientēts, izturīgs pret cenzūru\nMūsu lietotne ir bezmaksas un atvērtā koda, kas nodrošina, ka daudzas acis skatās uz lietotnes kodu, lai pārliecinātos, ka nav drošības caurumu vai privātuma noplūdes. Mūsu lietotnes atvērtā koda izmantošana arī ļauj ikvienam piekļūt mūsu lietotnei, pat ja noteikta lietotņu krātuve cenzē lietotni. Mūsu lietotne darbojas pat tālruņos, kuros Google ir pilnībā bloķēts. Mēs ļoti augstu vērtējam jūsu privātumu. Mēs pat neprasām reģistrējoties norādīt e-pastu.\nPērciet vai pārdodiet Monero bez ID pārbaudes. BRĪDINĀJUMS: ŠĪ LIETOTNE PAŠREIZ IR ATVĒRTĀ BETA VERSIJĀ!\n\nPirmkods: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblēmu izsekotājs: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Spēcīgs atbalsts\nMūsu atbalsta komanda ir ātra, atsaucīga un vienmēr vēlas iepriecināt. Mums nekad nav bijis atbalsta ziņas, uz kuru nebūtu atbildēts 24 stundu laikā. Mēs vienmēr esam viegli sasniedzami sociālajos tīklos, uzmanīgi uzklausām jūsu kritiku un vienmēr rekordīsā laikā īstenojam labus lietotāju ieteikumus.\n\nJūs varat sazināties ar mūsu atbalstu vietnē https://localmonero.co/support\n\n- Godīgas maksas\nMēs neiekasējam pārmērīgas maksas, kad noguldāt vai izņemat Monero mūsu šķīrējtiesas obligāciju makā/no tā. Nav depozīta maksas, un maksa par izņemšanu ir ļoti tuva tai, ko jūs maksātu par parastu pārskaitījumu.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Pērciet vai pārdodiet Monero bez ID pārbaudes. Skaidrā naudā vai tiešsaistē. Droši, ātri, viegli.\n\nLocalMonero ir lielākā, uzticamākā un labi izveidotā P2P tirdzniecības platforma XMR kopienā. Mums nav KYC čeku — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt Bitcoin, Ether, USDT vai jebkuru citu kriptonauda monētu uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.\n\n- Droša un vienmērīga tirdzniecība\nMēs atbalstām jebkuru maksājuma veidu, jebkuru valūtu un jebkurā vietā. Mēs nenoņemam maksājuma veidus un pilnībā atbalstām tiešus skaidras naudas darījumus. Visi mūsu darījumi ir aizsargāti ar šķīrējtiesas obligāciju. Pateicoties tam, ka mēs pieprasām, lai līdzekļi tiktu turēti šķīrējtiesas obligācijās pirms tirdzniecības uzsākšanas, mēs pircējam nodrošinām vienmērīgu un drošu pieredzi, kas ir būtiska platformas popularitātei un pārdevējiem atkārtotiem klientiem.\n\n- Nav KYC/AML vai ID verifikācijas\nLocalMonero ir apņēmies saglabāt jūsu tirdzniecības pieredzes vienkāršību un tiešumu. Mēs neizmantojam KYC/AML un nekad neplānojam to darīt.\n\n- Kopiena uzticas\nMūsu platforma ir darbojusies vairāk nekā četrus gadus, pārdzīvojusi 2018. gada Lielo kriptovalūtu tirgus sabrukumu un, pateicoties uz sabiedrību orientētai rūpīgai apkalpošanai, kļuva par vienu no uzticamākajiem vārdiem ārkārtīgi skeptiskajā Monero kopienā.\n\n- Drošs, atvērtā pirmkoda, uz privātumu orientēts, izturīgs pret cenzūru\nMūsu lietotne ir bezmaksas un atvērtā koda, kas nodrošina, ka daudzas acis skatās uz lietotnes kodu, lai pārliecinātos, ka nav drošības caurumu vai privātuma noplūdes. Mūsu lietotnes atklātā avota izmantošana arī ļauj ikvienam piekļūt mūsu lietotnei, pat ja noteikta lietotņu krātuve cenzē lietotni. Mūsu lietotne darbojas pat tālruņos, kuros Google ir pilnībā bloķēts. Mēs ļoti augstu vērtējam jūsu privātumu, mēs pat nepieprasām, lai reģistrējoties norādiet e-pastu.\n\nAvota kods: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblēmu izsekotājs: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Zvaigžņu atbalsts\nMūsu atbalsta komanda ir ātra, atsaucīga un vienmēr vēlas iepriecināt. Mēs nekad neesam saņēmuši atbalsta biļeti, uz kuru nebūtu atbildēts 24 stundu laikā. Mēs vienmēr esam viegli sasniedzami, izmantojot sociālos medijus, mēs uzmanīgi uzklausām jūsu kritiku un vienmēr rekordīsā laikā īstenojam labus lietotāju ieteikumus.\n\nJūs varat sazināties ar mūsu atbalstu vietnē https://localmonero.co/support\n\n- Godīgas maksas\nMēs neiekasējam pārmērīgas maksas, kad jūs noguldāt vai izņemat Monero mūsu šķīrējtiesas obligāciju makā/no tā. Nav depozīta maksas, un maksa par izņemšanu ir ļoti tuva maksai, ko jūs maksājat par parastu darījumu.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: pērc XMR anonīmi';
@@ -9197,71 +9260,113 @@ class I18nLv extends I18n {
   String get app_open_dropdown => 'Atvērt izvēlni';
 
   @override
-  String get error250Sbsignup250Sb175 => 'Tiek mēģināts izpirkt kuponu, kas reģistrācijas laikā nepastāv';
+  String get error250Sbsignup250Sb175 => 'Mēģinājums izlietot kuponu, kas reģistrācijas laikā nepastāv';
 
   @override
-  String get error250Sbsignup250Sb176 => 'Reģistrācijas laikā mēģināts izpirkt kuponu, kuram beidzies derīguma termiņš';
+  String get error250Sbsignup250Sb176 => 'Mēģinājums reģistrācijas laikā izlietot kuponu, kuram beidzies derīguma termiņš';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Mēģina izpirkt kuponu, kas reģistrācijas laikā nav pieejams';
+  String get error250Sbsignup250Sb177 => 'Mēģinājums izlietot kuponu, kas reģistrācijas laikā nav pieejams';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Paroles atiestatīšanas vēstule nosūtīta! Pārbaudiet iesūtni.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Paroles atiestatīšanas e-pasts nosūtīts! Pārbaudiet iesūtni.';
 
   @override
-  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Piekrītiet noteikumiem un turpiniet';
+  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Piekrist noteikumiem un turpināt';
 
   @override
-  String get logout250Sbtitle => 'Izlogoties';
+  String get logout250Sbtitle => 'Izrakstīties';
 
   @override
-  String get coupons250Sbcode8722Sbapply => 'Izmantojiet kupona kodu';
+  String get coupons250Sbcode8722Sbapply => 'Izmantot kupona kodu';
 
   @override
   String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
-    return 'Pērciet $assetName tiešsaistē';
+    return 'Pirkt $assetName tiešsaistē';
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'pirkšanas iespēja pirkt';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'call opcijas pirkšana';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'pirkšanas iespēju pārdot';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'call opcijas pārdošana';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: iegādājieties XMR anonīmi';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Rediģēt lodziņa paroli, veiciet dubultskārienu, lai rediģētu';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Apstipriniet paroles rediģēšanas lodziņu, veiciet dubultskārienu, lai rediģētu';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'Reklāma izveidota';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val drīzumā atgriezīsies!\\nAtvainojiet par sagādātajām neērtībām, taču mēs pašlaik veicam plānotos apkopes darbus.\\nDrīzumā mēs droši vien atkal būsim tiešsaistē. Esiet informēts par mūsu kopienas grupām:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Izvēlieties reklāmas veidu';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Pieskarieties šeit, lai atstātu atsauksmi!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Jūs jau esat atstājis šim lietotājam atsauksmi. Vai vēlaties atjaunināt savu atsauksmi tūlīt?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Izvēlieties pircēju vai pārdevēju';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Iestatiet noklusējuma cilni';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'Jūsu reklāmas';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Lietotņu uzturēšana';
+  }
+
+  @override
+  String get app_push_new_message => 'Jums ir jauns ziņojums tirdzniecībā';
+
+  @override
+  String get app_push_new_offer => 'Jums ir jauns piedāvājums';
+
+  @override
+  String get app_push_trade_marked_completed => 'Darījums atzīmēts kā pabeigts';
+
+  @override
+  String get app_push_trade_cancelled => 'Tirdzniecība atcelta';
+
+  @override
+  String get app_push_trade_disputed => 'Tirdzniecība apstrīdēta';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Pērciet/pārdodiet Monero anonīmi';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Pērciet/pārdodiet Bitcoin anonīmi';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Pērciet vai pārdodiet Bitcoin bez ID pārbaudes. Skaidrā naudā vai tiešsaistē.';
+
+  @override
+  String get app_ask_community_chats => 'Vai jums ir jautājumi? Jautājiet kopienas tērzēšanā';
+
+  @override
+  String get app_select_currency => 'Izvēlieties valūtu';
+
+  @override
+  String get app_select_country => 'Izvēlies valsti';
+
+  @override
+  String get app_select_payment_method => 'Izvēlieties maksājuma veidu';
 }
