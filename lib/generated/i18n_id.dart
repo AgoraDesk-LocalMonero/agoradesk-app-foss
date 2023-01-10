@@ -3878,7 +3878,7 @@ class I18nId extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Penipuan secara Langsung';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Seed Monero Anda ADALAH Monero Anda. Anda harus menuliskannya saat pertama kali membuat dompet, karena jika Anda kehilangan seed, Anda kehilangan Monero dan tidak ada yang bisa membantu Anda. TETAPI JUGA Anda harus menjaga seed ini aman dari orang lain. Jika seseorang mencuri seed Anda, mereka dapat mengeluarkan Monero dari dompet seolah-olah mereka adalah Anda, dan, sekali lagi, tidak ada yang dapat memulihkan uang ini untuk Anda. Iu semua hilang.</p>\n\n<p> Terlalu sering seseorang menyimpan cold wallet Monero, ingin tahu tentang dana mereka, dan ingin memeriksanya. Namun alih-alih melalui kerumitan atau menginstal ulang seluruh aplikasi dompet, mereka hanya memutuskan untuk menggunakan dompet web untuk memulihkan seed mereka dengan cepat dan melihat uang mereka. Jika mereka menjadi korban penipuan Business Look Alike, maka tindakan memasukkan seed mereka akan memberikannya kepada penipu, yang kemudian dapat memindahkan uang ke dompet lain yang mereka kendalikan sesuai keinginan mereka.</p>\n\n<p> KAPANPUN situs, aplikasi, atau dompet memiliki opsi \'pulihkan dengan seed\', berhati-hatilah karena aplikasi yang Anda gunakan adalah aplikasi yang sah. Periksa hash program (situs web Monero memiliki instruksi tentang cara melakukan ini) untuk memastikan program tidak dirusak oleh kekuatan luar, dan selalu waspada di mana dan bagaimana Anda mengekspos seed Anda. Pemeriksaan ganda mungkin mengganggu, tetapi kehilangan dana karena kecerobohan akan lebih buruk lagi.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Benih Monero Anda ADALAH Monero Anda. Anda harus menuliskannya saat pertama kali membuat dompet, karena jika Anda kehilangan benih, Anda kehilangan Monero dan tidak ada yang bisa membantu Anda. TETAPI JUGA Anda harus menjaga benih ini aman dari orang lain. Jika seseorang mencuri benih Anda, mereka dapat mengeluarkan Monero dari dompet seolah-olah mereka adalah Anda, dan, sekali lagi, tidak ada yang dapat memulihkan uang ini untuk Anda. Hilang.</p>\n\n<p> Terlalu sering seseorang menyimpan cold wallet Monero, ingin tahu tentang dana mereka, dan ingin memeriksanya. Namun daripada melalui kerumitan menginstal ulang seluruh aplikasi dompet, mereka hanya memutuskan untuk menggunakan dompet web untuk memulihkan benih mereka dengan cepat dan melihat uang mereka. Jika mereka menjadi korban penipuan Business Look Alike, maka tindakan memasukkan benih mereka akan memberikannya kepada penipu, yang kemudian dapat memindahkan uang ke dompet lain yang mereka kendalikan sesuai keinginan mereka.</p>\n\n<p> KAPANPUN situs, aplikasi, atau dompet memiliki opsi \'pulihkan dengan benih\', berhati-hatilah karena aplikasi yang Anda gunakan adalah aplikasi yang sah. Periksa hash program (situs web Monero memiliki instruksi tentang cara melakukan ini) untuk memastikan program tidak dirusak oleh kekuatan luar, dan selalu waspada di mana dan bagaimana Anda mengekspos seed Anda. Pemeriksaan ganda mungkin mengganggu, tetapi kehilangan dana karena kecerobohan akan lebih buruk lagi.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Peran Benih EúAnda dalam Penipuan';
@@ -7439,6 +7439,69 @@ class I18nId extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'Di blog ini tim kami berbagi beberapa wawasan pengembangan kami dengan mereka yang tertarik pada sisi teknis.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid adalah katalog aplikasi FOSS (Perangkat Lunak Gratis dan Open Source) yang dapat dipasang untuk platform Android. Klien memudahkan untuk menelusuri, menginstal, dan melacak pembaruan di perangkat Anda.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Situs web F-Droid</a></p>\n</blockquote>\n\n<p>Semua langkah dari tutorial ini juga akan berfungsi untuk aplikasi tanpa ragam.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplikasi ini dapat dimasukkan dalam F-Droid hanya jika aplikasi tersebut benar-benar open-source - termasuk semua pustaka dan dependensi yang digunakan. Pelajari lebih lanjut tentang kebijakan penyertaan <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">di sini</a>.</p>\n<p>Misalnya, jika Anda menggunakan database ObjectBox di aplikasi Anda, maka hal itu &#39;tidak dapat dimasukkan dalam F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">diskusi</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Aplikasi mana yang dapat dimasukkan ke F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repositori </a> di Gitlab.</li>\n<li>Kloning repositori ke perangkat Anda.</li>\n<li>Buat cabang dengan ID paket aplikasi, misalnya <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Langkah 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Periksa apakah <code>fdroid</code> berfungsi dengan benar. Jalankan perintah berikut di folder <code>fdroid</code> Anda:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Langkah 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Tambahkan proyek Anda:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Ini akan membuat file di direktori metadata, misalnya <code>metadata/co.localmonero.app.yml</code>.\nAnda juga dapat membuat file ini secara manual.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Langkah 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Buka filenya dan sunting. Berikut contohnya: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Pada contoh Anda dapat melihat:</p>\n<ol>\n<li>Flutter digunakan sebagai submodul - ini adalah persyaratan dari tim F-Droid.</li>\n<li>Untuk setiap flavors kami telah menggunakan cabang terpisah (perintah <code>AutoUpdateMode: Versi %v-fdroid-lm</code>). Itu karena Fastlane tidak&#39; mendukung flavors dengan Flutter.</li>\n<li>Pertama kali kami menambahkan info build secara manual, di masa mendatang akan ditambahkan secara otomatis oleh bot, setelah kami mendorong tag baru.</li>\n</ol>\n<p>Periksa apakah file memiliki sintaksis yang benar: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Langkah 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Sekarang, mari tambahkan data untuk pasar F-Droid. Untuk itu kami membuat cabang terpisah untuk setiap flavors:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Setelah itu kita buat folder untuk Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Tambahkan data yang diperlukan dan Dorong.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Langkah 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Saatnya menambahkan aplikasi ke F-Droid.</p>\n<ol>\n<li>Buat tag di repositori aplikasi Anda.</li>\n<li>Dorong perubahan ke repositori F-Droid di Gitlab.</li>\n<li>Buat permintaan penggabungan di repo Gitlab. Gunakan id aplikasi Anda di judul.</li>\n<li>Tunggu review dari tim F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Langkah 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Prosesnya sedikit rumit dan berbagai masalah mungkin muncul di sepanjang jalan. Namun setelah Anda menyiapkan CI, pembaruan berikut akan ditangani secara otomatis.</p>\n<p>Jika Anda memiliki pertanyaan, jangan ragu untuk menanyakannya di <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> kami.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Kesimpulan';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid adalah katalog aplikasi FOSS yang bagus untuk Android, tetapi menambahkan aplikasi Anda mungkin sedikit rumit...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Bagaimana cara mempublikasikan aplikasi Flutter Anda dengan flavors di F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blog Pengembangan';
+
+  @override
   String get ads => 'Iklan';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nId extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: mudah beli XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Beli atau jual Bitcoin secara anonim, tanpa verifikasi ID. Tunai atau daring. Aman, cepat, mudah.\n\nLocalMonero adalah platform perdagangan P2P terbesar, paling tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki pemeriksaan KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui surat atau mengonversi Bitcoin, Ether, USDT, atau koin kripto lainnya ke Monero - platform kami mendukung metode pembayaran apa pun.\n\n- Perdagangan Aman dan Lancar\nKami mendukung metode pembayaran apa pun, mata uang apa pun, di mana saja Anda berada. Kami tidak menghapus metode pembayaran, dan kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh jaminan arbitrase. Berkat fakta bahwa kami mengharuskan dana untuk disimpan dalam jaminan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nLocalMonero berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan tekun yang berorientasi komunitas menjadi salah satu nama paling terpercaya dalam komunitas Monero yang sangat skeptis.\n\n- Aman, Open Source, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Open sourcing aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada ponsel yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\nBeli atau jual Monero tanpa verifikasi ID. PERINGATAN: APLIKASI SAAT INI SEDANG DALAM TAHAP OPEN BETA!\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://agoradesk.com/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Bitcoin ke/dari dompet jaminan arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Beli atau jual Monero tanpa verifikasi ID. Tunai atau online. Aman, cepat, mudah.\n\nLocalMonero adalah platform perdagangan P2P terbesar, tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki cek KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui pos, atau mengonversi Bitcoin, Ether, USDT, atau koin kripto lainnya ke Monero - platform kami mendukung metode pembayaran apa pun.\n\n- Perdagangan Aman dan Lancar\nKami mendukung metode pembayaran apa pun, mata uang apa pun, di mana saja. Kami tidak menghapus metode pembayaran, dan kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh ikatan arbitrase. Berkat fakta bahwa kami memerlukan dana untuk disimpan dalam ikatan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nLocalMonero berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan pengalaman trading Anda. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan rajin yang berorientasi komunitas menjadi salah satu nama paling tepercaya di komunitas Monero yang sangat skeptis.\n\n- Aman, Sumber Terbuka, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Buka sumber aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada ponsel yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\n\nKode sumber: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nPelacak masalah: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Dukungan Bintang\nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://localmonero.co/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Monero ke/dari dompet obligasi arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: beli XMR privat';
@@ -9293,8 +9356,17 @@ class I18nId extends I18n {
   String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Beli atau jual Bitcoin tanpa verifikasi ID. Tunai atau online.';
 
   @override
   String get app_ask_community_chats => 'Ada pertanyaan? Tanyakan di obrolan komunitas';
+
+  @override
+  String get app_select_currency => 'Pilih Mata Uang';
+
+  @override
+  String get app_select_country => 'Pilih negara';
+
+  @override
+  String get app_select_payment_method => 'Pilih metode pembayaran';
 }

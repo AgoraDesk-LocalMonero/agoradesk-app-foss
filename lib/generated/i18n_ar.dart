@@ -3878,7 +3878,7 @@ class I18nAr extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'الغش الواضح';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p> بذرة مونيرو الخاصة بك هي مونيرو الخاص بك. يجب عليك كتابتها عند إنشاء محفظتك لأول مرة ، لأنك إذا فقدت بذرتك ، فقد فقدت مونيرو ولا يمكن لأحد مساعدتك. ولكن يجب أيضًا أن تحافظ على هذه البذرة في مأمن من الآخرين. إذا قام شخص ما بسرقة بذرك ، فيمكنه إرسال مونيرو من المحفظة كما لو كنت أنت ، ومرة أخرى ، لا يمكن لأي شخص استرداد هذه الأموال نيابة عنك. ذهب. </p>\n\n<p> في كثير من الأحيان كان الفرد يحتفظ بمحفظة باردة من مونيرو ، وكان لديه فضول بشأن أمواله ، ويريد التحقق من ذلك. ولكن بدلاً من الخوض في المتاعب أو إعادة تثبيت تطبيق المحفظة بالكامل ، قرروا فقط استخدام محفظة الويب لاستعادة البذور بسرعة وإلقاء نظرة على أموالهم. إذا وقعوا ضحية عملية احتيال Business Look Alike ، فإن عملية إدخال بذرتهم تعطيها للمحتالين ، الذين يمكنهم بعد ذلك نقل الأموال إلى محفظة مختلفة يتحكمون فيها في الوقت الذي يناسبهم. </p>\n\n<p> في أي وقت يحتوي أي موقع أو تطبيق أو محفظة على خيار \"استعادة مع البذور\" ، كن حذرًا جدًا من أن التطبيق الذي تستخدمه هو تطبيق شرعي. تحقق من تجزئات البرنامج (يحتوي موقع مونيرو على إرشادات حول كيفية القيام بذلك) للتأكد من أن البرنامج لم يتم العبث به من قبل قوى خارجية ، وكن دائمًا على دراية بمكان وكيفية كشف بذرتك. قد يكون الفحص المزدوج مزعجًا ، لكن فقدان الأموال بسبب الإهمال سيكون أسوأ. </p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p> بذرة Monero الخاصة بك هي Monero الخاص بك. يجب عليك كتابتها عند إنشاء محفظتك لأول مرة ، لأنك إذا فقدت بذرتك ، فقد فقدت Monero ولا يمكن لأحد مساعدتك. ولكن يجب أيضًا أن تحافظ على هذه البذرة في مأمن من الآخرين. إذا قام شخص ما بسرقة بذرك ، فيمكنه إرسال Monero من المحفظة كما لو كنت أنت ، ومرة أخرى ، لا يمكن لأي شخص استرداد هذه الأموال نيابة عنك. ذهب. </p>\n\n<p> في كثير من الأحيان كان الفرد يحتفظ بمحفظة باردة من Monero ، وكان لديه فضول بشأن أمواله ، ويريد التحقق من ذلك. ولكن بدلاً من الخوض في متاعب إعادة تثبيت تطبيق المحفظة بالكامل ، قرروا فقط استخدام محفظة الويب لاستعادة البذور بسرعة وإلقاء نظرة على أموالهم. إذا وقعوا ضحية عملية احتيال Business Look Alike ، فإن عملية إدخال بذرتهم تعطيها للمحتالين ، الذين يمكنهم بعد ذلك نقل الأموال إلى محفظة مختلفة يتحكمون فيها في الوقت الذي يناسبهم. </p>\n\n<p> في أي وقت يحتوي أي موقع أو تطبيق أو محفظة على خيار \"استعادة مع البذور\" ، كن حذرًا جدًا من أن التطبيق الذي تستخدمه هو تطبيق شرعي. تحقق من تجزئات البرنامج (يحتوي موقع Monero على إرشادات حول كيفية القيام بذلك) للتأكد من أن البرنامج لم يتم العبث به من قبل قوى خارجية ، وكن دائمًا على دراية بمكان وكيفية كشف بذرتك. قد يكون الفحص المزدوج مزعجًا ، لكن فقدان الأموال بسبب الإهمال سيكون أسوأ. </p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'دور بذرة مونيرو في عمليات الاحتيال';
@@ -7439,6 +7439,69 @@ class I18nAr extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'في هذه المدونة ، يشارك فريقنا بعض رؤى التطوير الخاصة بنا مع أولئك المهتمين بالجانب التقني للأشياء.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p> F-Droid عبارة عن كتالوج قابل للتثبيت لتطبيقات FOSS (البرامج المجانية والمفتوحة المصدر) لمنصة Android. يسهل العميل تصفح التحديثات وتثبيتها وتتبعها على جهازك.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\"> موقع ويب F-Droid </a> </p>\n</blockquote>\n\n<p> ستعمل جميع خطوات هذا البرنامج التعليمي مع تطبيق بدون نكهات أيضًا. </p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p> يمكن تضمين التطبيق في F-Droid فقط إذا كان مفتوح المصدر تمامًا - بما في ذلك جميع المكتبات والاعتمادات المستخدمة. تعرف على المزيد حول سياسة التضمين <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\"> هنا </a>. </p>\n<p> على سبيل المثال ، إذا كنت تستخدم قاعدة بيانات ObjectBox في تطبيقك ، فيمكن تضمينها &#39; في مناقشة F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\"> </a>). </p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'ما التطبيقات التي يمكن تضمينها في F-Droid؟';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li> Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\"> مستودع fdroiddata </a> على Gitlab. </li>\n<li> استنساخ المستودع إلى جهازك. </li>\n<li> أنشئ فرعًا بمعرف الحزمة للتطبيق ، على سبيل المثال <code> co.localmonero.app </code> </li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'الخطوة 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p> تأكد من أن <code> fdroid </code> يعمل بشكل صحيح. قم بتشغيل الأوامر التالية في مجلد <code> fdroid </code>: </p>\n<pre> <code class=\"lang-sh\"> fdroid init\nقراءة fdroid\n</code> </pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'الخطوة 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p> أضف مشروعك: </p>\n<pre> <code> استيراد fdroid - عنوان URL https://github.com/YOUR_REPO - تطبيق subdir\n</code> </pre>\n<p> سيتم إنشاء ملف في دليل البيانات الوصفية ، على سبيل المثال <code> metadata / co.localmonero.app.yml </code>.\nيمكنك أيضًا إنشاء هذا الملف يدويًا. </p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'الخطوه 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p> افتح الملف وحرره. في ما يلي مثال: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\"> https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml </a>. </p>\n<p> في المثال يمكنك مشاهدة: </p>\n<ol>\n<li> يتم استخدام Flutter كوحدة فرعية - وهذا مطلب من فريق F-Droid. </li>\n<li> لكل نكهة استخدمنا فرعًا منفصلاً (الأمر <code> AutoUpdateMode: الإصدار٪ v-fdroid-lm </code>). هذا لأن Fastlane لا يدعم &#39; النكهات مع Flutter. </li>\n<li> في المرة الأولى التي نضيف فيها معلومات البناء يدويًا ، في المستقبل ستتم إضافتها تلقائيًا بواسطة الروبوت ، بعد أن ندفع علامة جديدة. </li>\n</ol>\n<p> تحقق من أن الملف يحتوي على بناء الجملة الصحيح: <code> fdroid readmeta </code>. </p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'الخطوة 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p> الآن ، دعنا نضيف بيانات لسوق F-Droid. لذلك قمنا بإنشاء فرع منفصل لكل نكهة: </p>\n<ul>\n<li> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad </a> </li>\n<li> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm </a> </li>\n</ul>\n<p> بعد ذلك ، نقوم بإنشاء مجلد لـ Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US </a>. </p>\n<p> أضف البيانات المطلوبة وادفعها. </p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'الخطوة الخامسة';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p> حان الوقت لإضافة التطبيق إلى F-Droid. </p>\n<ol>\n<li> أنشئ علامة في مستودع تطبيقاتك. </li>\n<li> ادفع التغييرات إلى مستودع F-Droid على Gitlab. </li>\n<li> تقديم طلب دمج في Gitlab repo. استخدم معرف التطبيق الخاص بك في العنوان. </li>\n<li> انتظر المراجعة من فريق F-Droid. </li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'الخطوة 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p> العملية معقدة بعض الشيء وقد تظهر مشكلات مختلفة على طول الطريق. ولكن بمجرد إعداد CI ، سيتم التعامل مع التحديثات التالية تلقائيًا. </p>\n<p> إذا كانت لديك أسئلة ، فلا تتردد في طرحها على <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\"> GitHub </a>. </p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'استنتاج';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'يعد F-Droid كتالوجًا رائعًا لتطبيقات FOSS لنظام Android ، ولكن إضافة تطبيقك قد يكون أمرًا معقدًا بعض الشيء ...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'كيف تنشر تطبيق Flutter مع النكهات على F-Droid؟';
+
+  @override
+  String get devblog250Sbtitle => 'مدونة التنمية';
+
+  @override
   String get ads => 'إعلانات';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nAr extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: اشترِ XMR بسهولة';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'شراء أو بيع Monero بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.\n\nLocalMonero هي أكبر منصة تداول P2P وأكثرها ثقة وراسخة في مجتمع XMR. ليس لدينا شيكات KYC - يمكنك ببساطة شراء Monero بشكل مجهول دون التحقق من الهوية باستخدام PayPal أو بطاقة الائتمان أو بطاقة الهدايا أو النقد عن طريق البريد أو تحويل Bitcoin أو Ether أو USDT أو أي عملة مشفرة أخرى إلى Monero - يدعم نظامنا الأساسي أي طريقة دفع.\n\n- تداول آمن وسلس\nنحن ندعم أي طريقة دفع ، أي عملة ، في أي مكان. نحن لا نزيل طرق الدفع ، وندعم تمامًا عمليات التداول النقدي وجهًا لوجه. جميع تداولاتنا محمية بسند تحكيم. نظرًا لحقيقة أننا نطلب الأموال ليتم الاحتفاظ بها في سند تحكيم قبل بدء التجارة ، فإننا نضمن تجربة سلسة وآمنة للمشتري ، وهو أمر ضروري لشعبية المنصة وتكرار العملاء للبائعين.\n\n- لا يوجد التحقق من الهوية KYC / AML أو الهوية\nتلتزم LocalMonero بالحفاظ على البساطة والاستقامة في تجربة التداول الخاصة بك. نحن لا نستخدم KYC / AML ، ولا نخطط للقيام بذلك على الإطلاق.\n\n- موثوق به من قبل المجتمع\nتعمل منصتنا لأكثر من أربع سنوات ، ونجت من الانهيار الكبير لسوق العملات المشفرة لعام 2018 ، ومن خلال خدمتها الدؤوبة الموجهة نحو المجتمع أصبحت واحدة من أكثر الأسماء الموثوقة في مجتمع Monero المتشكك للغاية.\n\n- آمن ومفتوح المصدر ومرتكز على الخصوصية ومقاوم للرقابة\nتطبيقنا مجاني ومفتوح المصدر ، مما يضمن أن العديد من العيون تطلع على كود التطبيق للتأكد من عدم وجود ثغرات أمنية أو تسريبات للخصوصية. فتح المصادر يسمح تطبيقنا أيضًا لأي شخص بالوصول إلى تطبيقنا حتى إذا كان مستودع تطبيقات معين يراقب التطبيق. يعمل تطبيقنا أيضًا على الهواتف التي تم حظر Google تمامًا. نحن نقدر خصوصيتك كثيرًا ، ولا نطلب منك حتى تقديم بريد إلكتروني عند التسجيل.\nشراء أو بيع Monero بدون التحقق من الهوية. تحذير: هذا التطبيق قيد الإصدار التجريبي المفتوح حاليًا!\n\nكود المصدر: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nأداة تعقب المشكلات: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- دعم ممتاز\nفريق الدعم لدينا سريع وسريع الاستجابة ومتشوق دائمًا للإرضاء. لم يكن لدينا أبدًا تذكرة دعم لم يتم الرد عليها في غضون 24 ساعة. يسهل الوصول إلينا دائمًا من خلال وسائل التواصل الاجتماعي ، ونستمع باهتمام إلى انتقاداتك وننفذ دائمًا اقتراحات المستخدمين الجيدة في وقت قياسي.\n\nيمكنك الوصول إلى دعمنا على: https://localmonero.co/support\n\n- رسوم عادلة\nنحن لا نفرض رسومًا باهظة عند إيداع أو سحب Monero إلى / من محفظة سندات التحكيم الخاصة بنا. لا توجد رسوم إيداع ، ورسوم السحب قريبة جدًا من الرسوم التي ستدفعها في معاملة عادية.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'شراء أو بيع Monero بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.\n\nLocalMonero هي أكبر منصة تداول P2P وأكثرها ثقة وراسخة في مجتمع XMR. ليس لدينا شيكات KYC - يمكنك ببساطة شراء Monero بشكل مجهول دون التحقق من الهوية باستخدام PayPal أو بطاقة الائتمان أو بطاقة الهدايا أو النقد عن طريق البريد أو تحويل Bitcoin أو Ether أو USDT أو أي عملة مشفرة أخرى إلى Monero - يدعم نظامنا الأساسي أي طريقة دفع.\n\n- تداول آمن وسلس\nنحن ندعم أي طريقة دفع ، أي عملة ، في أي مكان. نحن لا نزيل طرق الدفع ، وندعم تمامًا عمليات التداول النقدي وجهًا لوجه. جميع تداولاتنا محمية بسند تحكيم. نظرًا لحقيقة أننا نطلب الأموال ليتم الاحتفاظ بها في سند تحكيم قبل بدء التجارة ، فإننا نضمن تجربة سلسة وآمنة للمشتري ، وهو أمر ضروري لشعبية المنصة وتكرار العملاء للبائعين.\n\n- لا يوجد التحقق من الهوية KYC / AML أو الهوية\nتلتزم LocalMonero بالحفاظ على البساطة والاستقامة في تجربة التداول الخاصة بك. نحن لا نستخدم KYC / AML ، ولا نخطط للقيام بذلك على الإطلاق.\n\n- موثوق به من قبل المجتمع\nتعمل منصتنا لأكثر من أربع سنوات ، ونجت من الانهيار الكبير لسوق العملات المشفرة لعام 2018 ، ومن خلال خدمتها الدؤوبة الموجهة نحو المجتمع أصبحت واحدة من أكثر الأسماء الموثوقة في مجتمع Monero المتشكك للغاية.\n\n- آمن ومفتوح المصدر ومرتكز على الخصوصية ومقاوم للرقابة\nتطبيقنا مجاني ومفتوح المصدر ، مما يضمن أن العديد من العيون تطلع على كود التطبيق للتأكد من عدم وجود ثغرات أمنية أو تسريبات للخصوصية. فتح المصادر يسمح تطبيقنا أيضًا لأي شخص بالوصول إلى تطبيقنا حتى إذا كان مستودع تطبيقات معين يراقب التطبيق. يعمل تطبيقنا أيضًا على الهواتف التي تم حظر Google تمامًا. نحن نقدر خصوصيتك كثيرًا ، ولا نطلب منك حتى تقديم بريد إلكتروني عند التسجيل.\n\nكود المصدر: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nأداة تعقب المشكلات: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- دعم ممتاز\nفريق الدعم لدينا سريع وسريع الاستجابة ومتشوق دائمًا للإرضاء. لم يكن لدينا أبدًا تذكرة دعم لم يتم الرد عليها في غضون 24 ساعة. يسهل الوصول إلينا دائمًا من خلال وسائل التواصل الاجتماعي ، ونستمع باهتمام إلى انتقاداتك وننفذ دائمًا اقتراحات المستخدمين الجيدة في وقت قياسي.\n\nيمكنك الوصول إلى دعمنا على: https://localmonero.co/support\n\n- رسوم عادلة\nنحن لا نفرض رسومًا باهظة عند إيداع أو سحب Monero إلى / من محفظة سندات التحكيم الخاصة بنا. لا توجد رسوم إيداع ، ورسوم السحب قريبة جدًا من الرسوم التي ستدفعها في معاملة عادية.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: اشترِ XMR بخصوصيه';
@@ -9293,8 +9356,17 @@ class I18nAr extends I18n {
   String get app_google_play_store_short_description_localmonero => 'شراء أو بيع Monero بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'شراء أو بيع Bitcoin بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.';
+  String get app_google_play_store_short_description_agoradesk => 'شراء أو بيع Bitcoin بدون التحقق من الهوية. نقدًا أو عبر الإنترنت.';
 
   @override
   String get app_ask_community_chats => 'هل لديك أسئلة؟ اسأل في دردشات المجتمع';
+
+  @override
+  String get app_select_currency => 'اختر العملة';
+
+  @override
+  String get app_select_country => 'حدد الدولة';
+
+  @override
+  String get app_select_payment_method => 'اختار طريقة الدفع';
 }

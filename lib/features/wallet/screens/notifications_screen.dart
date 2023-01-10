@@ -34,6 +34,7 @@ class NotificationsScreen extends StatelessWidget {
                 leftAction: _PopupMenu(model: model),
                 rightAction: IconButton(
                   icon: const Icon(AgoraFont.x),
+                  tooltip: context.intl.close,
                   onPressed: () => context.popRoute(),
                 ),
               ),
@@ -95,6 +96,7 @@ class _PopupMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      tooltip: context.intl.notification250Sbmarked8722Sball8722Sbread,
       icon: Icon(
         AgoraFont.check_circle,
         color: context.n80N30,

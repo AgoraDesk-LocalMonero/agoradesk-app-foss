@@ -3878,7 +3878,7 @@ class I18nNl extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'De Regelrechte Zwendel';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Uw Monero seed IS uw Monero. U moet het opschrijven als u voor het eerst een portefeuille maakt, want als u uw seed verliest, bent u uw Monero kwijt en kan niemand u helpen. MAAR OOK moet u deze seed veilig houden voor anderen. Als iemand uw seed steelt, kunnen ze de Monero uit de portefeuille sturen alsof ze u zijn, en nogmaals, kan niemand dit geld voor u terugkrijgen. Het is weg.</p>\n\n<p>Veel te vaak heeft iemand een \'cold\' portefeuille van Monero bewaard, was hij nieuwsgierig naar zijn geld en wilde hij het controleren. Maar in plaats van het gedoe te doorlopen of de hele portefeuille-applicatie opnieuw te installeren, besluiten ze gewoon een webportefeuille te gebruiken om snel hun seed te herstellen en naar hun geld te kijken. Als ze het slachtoffer worden van de Business Look Alike-zwendel, geeft het invoeren van hun zaad het aan de oplichters, die het geld vervolgens naar een andere portemonnee kunnen verplaatsen die ze naar eigen goeddunken beheren. </p>\n\n<p>ALS een site, applicatie of portefeuille een \'restore with seed\'-optie heeft, moet u er goed op letten dat de applicatie die u gebruikt een legitieme applicatie is. Controleer de hashes van het programma (op de Monero-website staan instructies hoe u dit moet doen) om er zeker van te zijn dat er niet met het programma is geknoeid, en wees u er constant van bewust waar en hoe u uw seed blootlegt. De dubbele controle kan vervelend zijn, maar het verlies van geld door onzorgvuldigheid zou nog erger zijn.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Uw Monero seed IS uw Monero. U moet het opschrijven als u voor het eerst een portefeuille maakt, want als u uw seed verliest, bent u uw Monero kwijt en kan niemand u helpen. MAAR OOK moet u deze seed veilig houden voor anderen. Als iemand uw seed steelt, kunnen ze de Monero uit de portefeuille sturen alsof ze u zijn, en nogmaals, kan niemand dit geld voor u terugkrijgen. Het is weg.</p>\n\n<p>Veel te vaak heeft iemand een \'cold\' portefeuille van Monero bewaard, was hij nieuwsgierig naar zijn geld en wilde hij het controleren. Maar in plaats van het gedoe te doorlopen om de hele portefeuille-applicatie opnieuw te installeren, besluiten ze gewoon een webportefeuille te gebruiken om snel hun seed te herstellen en naar hun geld te kijken. Als ze het slachtoffer worden van de Business Look Alike-zwendel, geeft het invoeren van hun zaad het aan de oplichters, die het geld vervolgens naar een andere portemonnee kunnen verplaatsen die ze naar eigen goeddunken beheren. </p>\n\n<p>ALS een site, applicatie of portefeuille een \'restore with seed\'-optie heeft, moet u er goed op letten dat de applicatie die u gebruikt een legitieme applicatie is. Controleer de hashes van het programma (op de Monero-website staan instructies hoe u dit moet doen) om er zeker van te zijn dat er niet met het programma is geknoeid, en wees u er constant van bewust waar en hoe u uw seed blootlegt. De dubbele controle kan vervelend zijn, maar het verlies van geld door onzorgvuldigheid zou nog erger zijn.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'De Rol van Uw Monero Seed bij Oplichting';
@@ -7439,6 +7439,69 @@ class I18nNl extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'In dit blog deelt ons team enkele van onze ontwikkelingsinzichten met degenen die geïnteresseerd zijn in de technische kant van de zaak.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid is een installeerbare catalogus van FOSS-applicaties (Free and Open Source Software) voor het Android-platform. De klant maakt het gemakkelijk om updates op uw apparaat te doorbladeren, te installeren en bij te houden.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid-website</a></p>\n</blockquote>\n\n<p>Alle stappen uit deze tutorial werken ook voor een app zonder smaken.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>De app kan alleen in F-Droid worden opgenomen als deze volledig open-source is, inclusief alle gebruikte bibliotheken en afhankelijkheden. Meer informatie over het opnamebeleid <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">hier</a>.</p>\n<p>Als u bijvoorbeeld de ObjectBox-database in uw app gebruikt, kan deze&#39;niet worden opgenomen in F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discussie</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Welke apps kunnen worden toegevoegd aan F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata-repository</a> op Gitlab.</li>\n<li>Kloon de opslagplaats naar uw apparaat.</li>\n<li>Maak een filiaal met de bundel-ID van de app, bijvoorbeeld <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Stap 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Controleer of <code>fdroid</code> correct werkt. Voer de volgende opdrachten uit in uw map <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Stap 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Voeg uw project toe:</p>\n<pre><code>fdroid importeren --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Er wordt een bestand gemaakt in de metadatadirectory, bijvoorbeeld <code>metadata/co.localmonero.app.yml</code>.\nU kunt dit bestand ook handmatig aanmaken.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Stap 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Open het bestand en bewerk het. Hier is een voorbeeld: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>In het voorbeeld ziet u:</p>\n<ol>\n<li>Flutter wordt gebruikt als submodule - dit is een voorwaarde van het F-Droid-team.</li>\n<li>Voor elke smaak hebben we een aparte branch gebruikt (commando <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Dat komt omdat Fastlane &#39; geen ondersteuning biedt voor smaken met Flutter. </li>\n<li>De eerste keer dat we build-informatie handmatig toevoegen, wordt deze in de toekomst automatisch toegevoegd door een bot, nadat we een nieuwe tag hebben gepusht.</li>\n</ol>\n<p>Controleer of het bestand de juiste syntaxis heeft: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Stap 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Laten we nu gegevens toevoegen voor de F-Droid-markt. Daarvoor maken we voor elke smaak een aparte tak:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Daarna maken we een map voor Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Voeg de vereiste gegevens toe en push deze.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Stap 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Het is tijd om de app toe te voegen aan F-Droid.</p>\n<ol>\n<li>Maak een tag in uw app-repository.</li>\n<li>Push wijzigingen naar de F-Droid-repository op Gitlab.</li>\n<li>Maak een samenvoegverzoek in de Gitlab-repo. Gebruik de id van uw app in de titel.</li>\n<li>Wacht op een beoordeling van het F-Droid-team.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Stap 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Het proces is een beetje ingewikkeld en er kunnen zich onderweg verschillende problemen voordoen. Maar zodra u de CI hebt ingesteld, worden de volgende updates automatisch afgehandeld.</p>\n<p>Als u vragen heeft, stel ze gerust op onze <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Conclusie';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid is een geweldige catalogus met FOSS-apps voor Android, maar het toevoegen van uw app kan een beetje ingewikkeld zijn...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Hoe publiceer ik de Flutter-app met smaken op F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Ontwikkelingsblog';
+
+  @override
   String get ads => 'Advertenties';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nNl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: Eenvoudig XMR kopen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaubon, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt omzetten naar Monero - ons platform ondersteunt elke betaalmethode.\n\n- Veilige en vlotte handel\nWe ondersteunen elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en we ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in de arbitragebond worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML of ID-verificatie\nLocalMonero doet er alles aan om de eenvoud en rechtlijnigheid van uw handelservaring te behouden. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we u niet eens vragen om een e-mailadres op te geven bij het registreren.\nKoop of verkoop Monero zonder ID-verificatie. WAARSCHUWING: DEZE APP IS MOMENTEEL IN OPEN BETA!\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via social media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWe brengen geen exorbitante kosten in rekening wanneer u Monero stort of opneemt in/uit onze arbitrage-obligatieportefeuille. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaukaart, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt converteren naar Monero - ons platform ondersteunt elke betaalmethode.\n\n- Veilige en vlotte handel\nWe ondersteunen elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en we ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in arbitrage-obligatie worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML of ID-verificatie\nLocalMonero doet er alles aan om de eenvoud en rechtlijnigheid van uw handelservaring te behouden. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we u niet eens vragen om een e-mailadres op te geven bij het registreren.\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via sociale media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWe brengen geen exorbitante kosten in rekening wanneer u Monero stort of opneemt in/uit onze arbitrage-obligatieportemonnee. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: koop XMR privé';
@@ -9293,8 +9356,17 @@ class I18nNl extends I18n {
   String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Koop of verkoop Bitcoin zonder ID-verificatie. Contant of online.';
 
   @override
   String get app_ask_community_chats => 'Vragen hebben? Vraag het in de communitychats';
+
+  @override
+  String get app_select_currency => 'Selecteer valuta';
+
+  @override
+  String get app_select_country => 'Selecteer land';
+
+  @override
+  String get app_select_payment_method => 'Selecteer betaalmethode';
 }
