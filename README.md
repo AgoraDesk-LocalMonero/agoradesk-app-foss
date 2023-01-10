@@ -31,20 +31,20 @@ There are two apps under one code base in this repository.
 ## App Features 🔥
 
 1. Within one code base there are 2 apps: AgoraDesk, LocalMonero.
-Each app can be built as Android and iOS native app.
-Design and logic separation made with flavors (more info further in this doc).
+   Each app can be built as Android and iOS native app.
+   Design and logic separation made with flavors (more info further in this doc).
 
 2. Universal Links work for Android and iOS. In case the app is installed on the device,
-the regular links will run apps instead of browsers.
-In case of two apps installed on one device the AgoraDesk app is prioritized (it means in case of link
-localmonero/something AgoraDesk app will be opened).
+   the regular links will run apps instead of browsers.
+   In case of two apps installed on one device the AgoraDesk app is prioritized (it means in case of link
+   localmonero/something AgoraDesk app will be opened).
 
 3. Push notifications to work on iOS & Android. In case the user's device
-(for example in China or with GrapheneOS) can't receive pushes, the app detects it and start
-polling in the background mode. [More info](Notifications.md)
+   (for example in China or with GrapheneOS) can't receive pushes, the app detects it and start
+   polling in the background mode. [More info](Notifications.md)
 
 4. For anonymization reasons all notifications are sent without translations and are translated on the client's side.
-So, we use data messages to display them with the app code (not with the FCM).
+   So, we use data messages to display them with the app code (not with the FCM).
 
 5. Made with Dart & Flutter ❤️
 
@@ -75,17 +75,17 @@ https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
 ## Flavors
 
 ### How to build iOS with run parameters
-- https://docs.flutter.dev/deployment/cd
+- https://stackoverflow.com/a/65315937/7198006
 
 ### Fastlane
-- https://roszkowski.dev/2019/flutter-flavors/
 
-#### iOS
-- Metadata files https://docs.fastlane.tools/actions/deliver/
-- iOS lang codes https://gist.github.com/awaik/9f58ebc0c5c2af865e7233ff2e8c7fe3
+iOS https://docs.fastlane.tools/actions/deliver/
 
-#### Android
-- Metadata management action `fastlane supply init`
+`fastlane deliver`
+
+Android https://docs.fastlane.tools/actions/supply/
+
+`fastlane supply --skip_upload_changelogs=true --track=internal --skip_upload_screenshots=true`
 
 ### Initial settings
 - https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b
@@ -109,15 +109,9 @@ ios/Runner/Runner-localmonero.entitlements
 
 ### Push notifications
 
-The backend sends data messages. We get them in the app, translate and display them.
-So, when the app is terminated, we should run the app, handle the message and display it.
-
-#### iOS issues
-
-1. As we use data messages, when the app is killed (terminated, swipe up), iOS terminate all app activities and 
-the app can't display messages.
-https://developer.apple.com/forums/thread/132191
-
+For the privacy reaso, the backend sends push and data messages without translations.
+We get them in the app, translate and display them.
+So, our backend doesn't have info about user's locale.
 
 ## Contribution
 
