@@ -125,7 +125,7 @@ class NotificationsService with ForegroundMessagesMixin {
 
   Future _displayLocalNotification(RemoteMessage message) async {
     ///
-    /// get trade it in case it's screen is opened in the app
+    /// get trade id in case it's screen is opened in the app
     ///
     final PushModel push = PushModel.fromJson(message.data);
     final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
