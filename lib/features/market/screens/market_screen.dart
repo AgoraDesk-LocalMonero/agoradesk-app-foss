@@ -211,7 +211,8 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                             isLocalTrade
                                 ? const CashTextField()
                                 : DropdownSearch<OnlineProvider?>(
-                                    dropdownButtonProps: context.dropdownButtonProps(),
+                                    dropdownButtonProps:
+                                        context.dropdownButtonProps(label: context.intl.app_select_payment_method),
                                     dropdownDecoratorProps: context.dropdownDecoration,
                                     popupProps: PopupProps.dialog(
                                       dialogProps: context.dropdownDialogProps,
@@ -245,20 +246,24 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                   ),
                                   SizedBox(
                                     width: widthHalf - 4,
-                                    child: DropdownSearch<CurrencyModel?>(
-                                      key: model.currencyDropdownKey,
-                                      dropdownButtonProps: context.dropdownButtonProps(),
-                                      dropdownDecoratorProps: context.dropdownDecoration,
-                                      popupProps: PopupProps.dialog(
-                                        dialogProps: context.dropdownDialogProps,
-                                        showSearchBox: true,
+                                    child: Semantics(
+                                      label: context.intl.app_select_currency,
+                                      child: DropdownSearch<CurrencyModel?>(
+                                        key: model.currencyDropdownKey,
+                                        dropdownButtonProps:
+                                            context.dropdownButtonProps(label: context.intl.app_select_currency),
+                                        dropdownDecoratorProps: context.dropdownDecoration,
+                                        popupProps: PopupProps.dialog(
+                                          dialogProps: context.dropdownDialogProps,
+                                          showSearchBox: true,
+                                        ),
+                                        // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
+                                        itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
+                                        asyncItems: (String? filter) => model.getCurrenciesFromPaymentMethod(),
+                                        // showSearchBox: true,
+                                        selectedItem: model.selectedCurrency,
+                                        onChanged: (val) => model.changeSelectedCurrency(val),
                                       ),
-                                      // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
-                                      itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
-                                      asyncItems: (String? filter) => model.getCurrenciesFromPaymentMethod(),
-                                      // showSearchBox: true,
-                                      selectedItem: model.selectedCurrency,
-                                      onChanged: (val) => model.changeSelectedCurrency(val),
                                     ),
                                   ),
                                 ],
@@ -268,19 +273,23 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                 ? const SizedBox()
                                 : Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-                                    child: DropdownSearch<String>(
-                                      key: model.countryDropdownKey,
-                                      dropdownButtonProps: context.dropdownButtonProps(),
-                                      dropdownDecoratorProps: context.dropdownDecoration,
-                                      popupProps: PopupProps.dialog(
-                                        dialogProps: context.dropdownDialogProps,
-                                        showSearchBox: true,
+                                    child: Semantics(
+                                      label: context.intl.app_select_country,
+                                      child: DropdownSearch<String>(
+                                        key: model.countryDropdownKey,
+                                        dropdownButtonProps:
+                                            context.dropdownButtonProps(label: context.intl.app_select_country),
+                                        dropdownDecoratorProps: context.dropdownDecoration,
+                                        popupProps: PopupProps.dialog(
+                                          dialogProps: context.dropdownDialogProps,
+                                          showSearchBox: true,
+                                        ),
+                                        itemAsString: (String? code) => getCountryName(code ?? ''),
+                                        asyncItems: (String? filter) => model.getCountryCodes(),
+                                        // showSearchBox: true,
+                                        selectedItem: model.selectedCountryCode,
+                                        onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val),
                                       ),
-                                      itemAsString: (String? code) => getCountryName(code ?? ''),
-                                      asyncItems: (String? filter) => model.getCountryCodes(),
-                                      // showSearchBox: true,
-                                      selectedItem: model.selectedCountryCode,
-                                      onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val),
                                     ),
                                   ),
                             Padding(

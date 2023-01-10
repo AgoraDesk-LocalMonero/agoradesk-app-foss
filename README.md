@@ -78,7 +78,14 @@ https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
 - https://stackoverflow.com/a/65315937/7198006
 
 ### Fastlane
-- https://roszkowski.dev/2019/flutter-flavors/
+
+iOS https://docs.fastlane.tools/actions/deliver/
+
+`fastlane deliver` 
+
+Android https://docs.fastlane.tools/actions/supply/
+
+`fastlane supply --skip_upload_changelogs=true --track=internal --skip_upload_screenshots=true` 
 
 ### Initial settings
 - https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b
@@ -102,15 +109,9 @@ ios/Runner/Runner-localmonero.entitlements
 
 ### Push notifications
 
-The backend sends data messages. We get them in the app, translate and display them.
-So, when the app is terminated, we should run the app, handle the message and display it.
-
-#### iOS issues
-
-1. As we use data messages, when the app is killed (terminated, swipe up), iOS terminate all app activities and 
-the app can't display messages.
-https://developer.apple.com/forums/thread/132191
-
+For the privacy reaso, the backend sends push and data messages without translations. 
+We get them in the app, translate and display them.
+So, our backend doesn't have info about user's locale.
 
 ## Contribution
 

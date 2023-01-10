@@ -96,9 +96,17 @@ class AppParameters {
       'name': 'Czech',
       'origName': 'čeština, český jazyk',
     },
+    'da': {
+      'name': 'Danish',
+      'origName': 'Danmark',
+    },
     'de': {
       'name': 'German',
       'origName': 'Deutsch',
+    },
+    'el': {
+      'name': 'Greek',
+      'origName': 'Ελλάδα',
     },
     'en': {
       'name': 'English',
@@ -108,13 +116,25 @@ class AppParameters {
       'name': 'Spanish',
       'origName': 'Español',
     },
+    'fi': {
+      'name': 'Finnish',
+      'origName': 'Suomi',
+    },
     'fr': {
       'name': 'French',
       'origName': 'français, langue française',
     },
+    'hi': {
+      'name': 'Hindi',
+      'origName': 'हिन्दी',
+    },
     'hu': {
       'name': 'Hungarian',
       'origName': 'magyar',
+    },
+    'id': {
+      'name': 'Indonesian',
+      'origName': 'Bahasa Indonesia',
     },
     'it': {
       'name': 'Italian',
@@ -131,6 +151,10 @@ class AppParameters {
     'lv': {
       'name': 'Latvian',
       'origName': 'latviešu valoda',
+    },
+    'nb': {
+      'name': 'Norwegian',
+      'origName': 'Norwegian Bokmål',
     },
     'nl': {
       'name': 'Dutch',
@@ -158,7 +182,11 @@ class AppParameters {
     },
     'sk': {
       'name': 'Slovak',
-      'origName': 'slovenčina, slovenský jazyk',
+      'origName': 'Slovenčina',
+    },
+    'sl': {
+      'name': 'Slovenian',
+      'origName': 'Slovenščina',
     },
     'sw': {
       'name': 'Swahili',

@@ -1726,7 +1726,7 @@ class I18nRo extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Valoarea prețului nu a fost setată corect';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Combinații interzise de țară, metodă de plată și monedă';
+  String get error250Sbpost8722Sbad250Sb86 => 'Combinații nevalide de țară, metodă de plată și monedă';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Această metodă de plată nu este valabilă pentru țara selectată';
@@ -3251,7 +3251,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Cum vor funcționa schimburile atomice în Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Notă:</b> Este foarte recomandat ca cititorul să citească articolele noastre <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">„De ce Monero are o emisie de coadă”</a> și <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">„Monero Mining: What Makes RandomX atât de special”</a>. Acest articol se bazează pe conceptele prezentate acolo.</i></p>\n\n<p>Când se discută despre problemele legate de blockchain, unul dintre primele cuvinte care vor apărea va fi \"scalare\". Nu este un secret faptul că blockchains nu se scalează bine, dar majoritatea oamenilor nu știu de ce.</p>\n\n<p>Adevărul este că scalarea este de fapt un termen umbrelă care acoperă două categorii diferite: Suportul de protocol și suportul tehnologic la un moment dat. În acest articol, ne vom concentra atenția asupra uneia dintre ele, Suportul de protocol este practic o măsură a numărului de tranzacții pe care protocolul le poate gestiona la un moment dat.</p>\n\n<p>Bitcoin are o limită de dimensiune a blocului, ceea ce înseamnă că, odată ce suficiente tranzacții sunt incluse într-un bloc, orice tranzacții suplimentare vor trebui să aștepte la rând pentru următorul bloc. O analogie utilă ar fi să ne gândim la un tren. Un tren se oprește în stație, iar cei care stau la coadă se aliniază. Odată ce trenul este plin, cei rămași afară vor trebui să aștepte următorul tren.</p>\n\n<p>Bitcoin folosește taxe pentru a determina cine intră sau nu în bloc. Revenind la analogia cu trenul, ne putem imagina că un potențial pasager, care este pe cale să rămână în urmă, îi oferă mecanicului de tren cinci dolari pentru a-i oferi un loc. Alți pasageri îi urmează exemplul și, în cele din urmă, se declanșează un război al ofertelor pentru a vedea cine primește ce locuri. Depinde de mecanic să decidă dacă vrea să onoreze politica primului venit-primul servit, dar este în interesul său financiar să își maximizeze venitul prin acceptarea la bord a celor mai mari ofertanți.</p>\n\n<p>În această analogie, minerii sunt mecanicii de tren. Ei pot include orice tranzacții doresc în bloc, dar, în general, le vor alege pe cele care au cele mai mari taxe plătite.</p>\n\n<p>Alternativ, dacă blocurile nu sunt foarte pline, oamenii nu au niciun stimulent pentru a plăti taxe mari, deoarece există o mulțime de locuri libere disponibile.</p>\n\n<p>În plin boom al criptomonedelor din 2017, Bitcoin a fost inundat de tranzacții, iar taxele au explodat pentru cei care doreau să fie incluși în blocul următor sau în orice bloc din viitorul apropiat, de altfel. Cei care nu au fost dispuși să plătească taxe mari și-au văzut tranzacțiile amânate cu ore, zile sau chiar au ieșit din coadă cu totul.</p>\n\n<p>Aceasta a fost o perspectivă chinuitoare asupra modului în care Bitcoin s-ar descurca dacă s-ar produce \"adoptarea în masă\" despre care se vorbește adesea. Dacă Bitcoin ar urma să fie folosit de mase, lucrurile ar sta chiar mai rău decât în 2017, iar Bitcoin ar fi inaccesibil pentru oricine, cu excepția celor bogați, din simplul motiv că debitul este mic din cauza dimensiunii fixe a blocurilor, ceea ce ar face ca piața comisioanelor să preia controlul.</p>\n\n<p>Monero a prevăzut acest lucru și a vrut să facă ceva diferit. Așa că dezvoltatorii Monero au implementat o dimensiune dinamică a blocurilor.</p>\n\n<p>În principiu, Monero are, de asemenea, un plafon de dimensiune a blocurilor, dar este un plafon flexibil. Atunci când coada de tranzacții în așteptare devine prea mare, minerii pot mări dimensiunea blocurilor. Cu analogia noastră cu trenul, vă puteți imagina adăugarea mai multor vagoane de tren pentru a se potrivi pasagerilor suplimentari. După ce coada este goală, blocurile se micșorează înapoi la dimensiunea lor inițială, mergând mai departe.</p>\n\n<p>Dacă pare o idee bună, pare rezonabil să ne întrebăm de ce Monero este singura criptomonedă care a implementat acest lucru. De ce să nu o adăugăm și pe Bitcoin, astfel încât să punem capăt problemelor de debit?</p>\n\n<p>Din păcate, acest lucru nu este posibil. Există mai multe motive pentru care, iar noi vom face tot posibilul să explicăm.</p>\n\n<p> Întotdeauna este în interesul minerului să aibă blocuri mari. Cu blocuri mari, aceștia pot încadra mai multe tranzacții și pot face mai mulți bani din comisioane, precum și din recompensele de bloc. Acest lucru are potențialul de a duce la atacuri spam, în care cineva trimite multe tranzacții mici, cu taxe mici, pentru a umfla lanțul. Minerii ar crește dimensiunea blocului și le-ar include pe toate, deoarece banii sunt bani, indiferent cât de mici sunt. Acest lucru ar duce la blocuri de dimensiuni mari în mod constant, cu beneficii economice reduse. Bitcoin rezolvă această problemă prin restricționarea artificială a dimensiunii blocurilor, generând astfel o piață a taxelor. Atacatorii de spam ar trebui să plătească mai mult decât ceilalți utilizatori în taxe, iar acest lucru nu mai este ieftin. Dar acest lucru înseamnă că blocurile sunt umplute, lăsând unele tranzacții în așteptare, așa cum s-a menționat mai sus.</p>\n\n<p>Atunci cum poate Monero să aibă dimensiuni dinamice ale blocurilor, dar să evite atacurile spam? Răspunsul este simplu, dar inteligent. Se introduce o penalizare asupra recompensei blocului atunci când un bloc este mai mare decât în mod normal. Dacă un miner dorește să mărească dimensiunea blocului, recompensa pe care o primește pentru găsirea acelui bloc va fi mai mică decât cea pe care ar primi-o în mod normal. Prin urmare, aceștia vor mări dimensiunea blocului doar atunci când taxele de tranzacție plătite de utilizatori depășesc partea pierdută din recompensa blocului. De exemplu, dacă minerul ar pierde 0,5 XMR prin creșterea recompensei blocului, iar suma taxelor de tranzacție plătite ar fi de 0,4 XMR, atunci ar exista o pierdere netă de 0,1 XMR dacă ar crește dimensiunea blocului, așa că nu ar face acest lucru. În schimb, dacă totalul comisioanelor de tranzacție s-ar ridica la 0,7 XMR, atunci ar exista un câștig net de 0,2 XMR, chiar dacă ar pierde 0,5 XMR din penalizarea recompenselor de bloc, astfel încât minerul va mări dimensiunea.</p>\n\n<p>Aceste blocuri dinamice permit rețelei să se dezvolte organic, fără a restricționa în mod artificial dimensiunea blocurilor pentru a crea o piață cu taxe forțate, evitând în același timp atacurile spam. Există mai multe unghiuri din care putem privi această idee și mai multe motive pentru care nu ar fi posibil să o adăugăm la Bitcoin, dar, deocamdată, sperăm că cititorul a înțeles cum Monero ocolește mai multe dintre problemele din Bitcoin și din derivatele sale și cum plănuiește să își extindă debitul în viitor.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Notă:</b> Este foarte recomandat ca cititorul să citească articolele noastre <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">„De ce Monero are o emisie de coadă”</a> și <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">„Monero Mining: What Makes RandomX atât de special”</a>. Acest articol se bazează pe conceptele prezentate acolo.</i></p>\n\n<p>De câte ori indivizii discută despre problemele legate de blockchain, unul dintre primele cuvinte care vor apărea va fi „scalarea”. Nu este un secret faptul că blockchain-urile nu se scalează bine, dar majoritatea oamenilor nu știu de ce.</p>\n\n<p>Adevărul este că scalarea este de fapt un termen umbrelă care acoperă două categorii diferite: suport pentru protocol și suport tehnologic la un moment dat. În acest articol, ne vom concentra atenția asupra unuia, suportul pentru protocol este practic o măsură a câte tranzacții poate gestiona protocolul la un moment dat.</p>\n\n<p>Bitcoin are o limită de dimensiune a blocurilor, ceea ce înseamnă că, odată ce sunt incluse suficiente tranzacții într-un bloc, orice tranzacție suplimentară va trebui să aștepte la rând pentru următorul bloc. O analogie utilă ar fi să te gândești la un tren. Un tren oprește până la gară, iar cei din coadă trec. Odată ce trenul este plin, oricine rămâne afară va trebui să aștepte pe următorul.</p>\n\n<p>Bitcoin folosește taxe pentru a determina cine intră sau nu în bloc. Revenind la analogia cu trenul, ne putem imagina că un potențial pasager, care este pe cale să rămână în urmă, îi oferă mecanicului de tren cinci dolari pentru a-i oferi un loc. Alți pasageri urmează exemplul și, în cele din urmă, există un război al licitațiilor pentru a vedea cine primește ce locuri. Rămâne la latitudinea șoferului să decidă dacă dorește să respecte politica primul venit, primul servit, dar este în interesul său financiar să-și maximizeze veniturile luând la bord cei mai mari ofertanți.</p>\n\n<p>În această analogie, minerii sunt mecanicii de tren. Ei pot include orice tranzacții doresc în bloc, dar în general le vor alege pe cele care au cele mai mari taxe plătite.</p>\n\n<p>În mod alternativ, dacă blocurile nu sunt foarte pline, oamenii nu au niciun stimulent să plătească taxe mari, deoarece există o mulțime de locuri libere de rezervat.</p>\n\n<p>În apogeul boom-ului criptomonedelor din 2017, Bitcoin a fost inundat de tranzacții, iar taxele au crescut vertiginos pentru cei care doreau să fie incluși în următorul bloc sau, de altfel, în orice bloc în viitorul apropiat. Cei care nu au fost dispuși să plătească taxe mari și-au văzut tranzacțiile amânate cu ore, zile sau chiar au renunțat cu totul la coadă.</p>\n\n<p>Aceasta a fost o perspectivă îngrozitoare asupra modului în care s-ar descurca Bitcoin dacă ar avea loc des vorbita despre „adopție în masă”. Dacă Bitcoin ar fi folosit de către mase, lucrurile ar fi chiar mai rău decât în 2017, iar Bitcoin ar fi inaccesibil oricui, în afară de cei bogați, pur și simplu pentru că debitul este mic din cauza unei dimensiuni fixe a blocului, ceea ce face ca piața de taxe să preia controlul. .</p>\n\n<p>Monero a prevăzut acest lucru și a vrut să facă ceva diferit. Deci, dezvoltatorii Monero au implementat o dimensiune bloc dinamică.</p>\n\n<p>Practic, Monero are și un capac de dimensiune bloc, dar este un capac moale. Când linia tranzacțiilor de așteptare devine prea lungă, minerii pot crește dimensiunea blocurilor. Cu analogia noastră cu trenul, vă puteți imagina să adăugați mai multe vagoane pentru a se potrivi cu pasagerii suplimentari. După ce coada este goală, blocurile se micșorează înapoi la dimensiunea inițială de acum înainte.</p>\n\n<p>Dacă aceasta pare a fi o idee bună, pare rezonabil să ne întrebăm de ce Monero este singura criptomonedă care a implementat acest lucru. De ce să nu îl adăugați pe Bitcoin pentru a pune capăt problemelor de debit?</p>\n\n<p>Din păcate, acest lucru nu este posibil. Există mai multe motive și vom face tot posibilul să explicăm.</p>\n\n<p> Este întotdeauna în interesul unui miner să aibă blocuri mari. Cu blocuri mari se pot încadra în mai multe tranzacții și pot câștiga mai mulți bani din comisioane, precum și din recompensele blocului. Acest lucru are potențialul de a duce la atacuri de spam, în care cineva trimite multe tranzacții mici, cu comisioane mici, pentru a umfla lanțul. Miner\'s ar ridica dimensiunea blocului și le-ar include pe toate pentru că banii sunt bani, indiferent cât de mici. Acest lucru ar duce la blocuri consistente mari, cu beneficii economice reduse. Bitcoin rezolvă acest lucru prin restricționarea artificială a dimensiunii blocului, generând astfel o piață de taxe. Atacatorii de spam ar trebui să plătească taxe pe ceilalți utilizatori și nu mai este ieftin. Dar asta înseamnă că blocurile sunt pline, lăsând unele tranzacții în așteptare, așa cum s-a menționat mai sus.</p>\n\n<p>Deci cum poate Monero să aibă dimensiuni de bloc dinamice, dar să evite atacurile de spam? Răspunsul este simplu, dar inteligent. O penalizare pentru recompensa de bloc este introdusă atunci când un bloc este mai mare decât în mod normal. Dacă un miner dorește să mărească dimensiunea blocului, recompensa pe care o primește din găsirea acelui bloc va fi mai mică decât ar primi-o altfel. Deci, vor crește dimensiunea blocului doar atunci când taxele de tranzacție plătite ale utilizatorilor depășesc partea pierdută a recompensei blocului. De exemplu, dacă minerul ar pierde 0,5 XMR prin creșterea dimensiunii blocului, iar suma taxelor de tranzacție plătite ar fi de 0,4 XMR, atunci ar exista o pierdere netă de 0,1 XMR dacă ar crește dimensiunea, așa că ar nu o face. În schimb, dacă taxele totale de tranzacție s-au adăugat până la 0,7 XMR, atunci ar exista un câștig net de 0,2 XMR, chiar dacă ei pierd 0,5 XMR din penalitatea de recompensă bloc, astfel încât minerul va crește dimensiunea.</p>\n\n<p>Aceste blocuri dinamice permit rețelei să se dezvolte organic, fără a restricționa în mod aritif dimensiunea blocului pentru a face o piață cu taxe forțate, evitând în același timp atacurile de spam. Există mai multe unghiuri din care putem vedea această idee și mai multe motive pentru care nu ar fi posibil să o adăugați la Bitcoin, dar pentru moment, sperăm că cititorul are o înțelegere a modului în care Monero ocolește câteva dintre problemele din Bitcoin și derivatele sale și modul în care intenționează să-și extindă debitul în viitor.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Ori de câte ori se discută despre problemele legate de blockchain, unul dintre primele cuvinte care apar este „scalare”. Monero se diferențiază prin faptul că rezolvă această problemă.';
@@ -3551,7 +3551,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Scop';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Pentru context, haideți să vorbim puțin despre hardware-ul de minerit. Minerii folosesc computere pentru a lucra, dar știm cu toții că nu toate computerele sunt făcute la fel. Unele computere sunt suficient de puternice pentru a rula rețele de inteligență artificială sau jocuri intense, în timp ce altele se luptă chiar și cu sarcini simple. Aceste diferențe în ceea ce privește puterea de calcul afectează, de asemenea, rata de hash rate, sau rata la care aceștia caută soluții de blocuri. <br/><br/>\nDar chiar și aceste diferențe dintre calculatoare pălesc în comparație cu ratele de hash ale hardware-ului specializat, cunoscut și sub numele de circuite integrate cu aplicații specifice (ASIC), care depășesc calculatoarele obișnuite cu câteva ordine de mărime.<br/><br/>\nHaideți să ne oprim puțin pentru a explora ceea ce face ca ASIC-urile să fie atât de puternice. Imaginați-vă că toate computerele se încadrează undeva pe un spectru, care variază de la a fi capabile să facă multe lucruri, dar nimic bine, până la a face un singur lucru, dar foarte bine. Unitățile centrale de procesare și ASIC-urile se află la capetele opuse ale acestui spectru.<br/><br/>\nUnitățile centrale de procesare care se află în toate computerele standard se află la primul capăt. Acestea pot face multe lucruri, cum ar fi navigarea pe internet, jocurile sau redarea de clipuri video, dar nu pot face niciuna dintre ele foarte bine. Dar această flexibilitate vine cu prețul eficienței.<br/><br/>\nASIC-urile se află la celălalt capăt, unde pot face un singur lucru, dar la o viteză incredibilă. Ele pot efectua o singură funcție matematică, dar pentru că pot ignora orice altceva, câștigurile de performanță sunt astronomice. Totuși, această eficiență vine cu prețul flexibilității, astfel încât, dacă funcția se schimbă chiar și puțin - un exemplu este x + y = z se schimbă în 2x + y = z - atunci ASIC-ul va înceta să mai funcționeze cu totul. <br/><br/>\nNu toată lumea deține un ASIC, dar toată lumea deține calculatoare. Acest lucru poate duce la un avantaj nedrept.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Pentru context, să vorbim puțin despre hardware-ul de minerit. Minerii folosesc computere pentru a face treaba, dar știm cu toții că nu fiecare computer este fabricat în mod egal. Unele computere sunt suficient de puternice pentru a rula rețele AI sau jocuri intense, în timp ce altele se luptă chiar și cu sarcini simple. Aceste diferențe de putere de calcul afectează, de asemenea, rata de hash sau rata la care caută soluții bloc. <br/><br/>\nDar chiar și aceste diferențe între computere palid în comparație cu ratele de hash ale hardware-ului specializat, altfel cunoscut sub numele de circuite integrate specifice aplicației (ASIC), care depășesc computerele obișnuite cu mai multe ordine de mărime.<br/><br/>\nSă luăm ceva timp pentru a explora ceea ce face ca ASIC-urile să fie atât de puternice. Imaginați-vă că toate computerele se încadrează undeva pe un spectru, care variază de la a putea face multe lucruri, dar nimic bine, până la a face un singur lucru, dar făcându-l foarte bine. CPU-urile și ASIC-urile sunt la capetele opuse ale acestui spectru.<br/><br/>\nCPU-urile care sunt în toate computerele standard sunt la primul capăt. Ei pot face multe lucruri, cum ar fi să navigheze pe web, să joace jocuri sau să redă videoclipuri, dar nu pot face niciunul dintre ele deosebit de bine. Dar această flexibilitate vine cu prețul eficienței.<br/><br/>\nASIC-urile sunt la celălalt capăt, unde pot doar un singur lucru, dar o fac într-un ritm incredibil. Ei pot îndeplini doar o funcție matematică, dar pentru că pot ignora orice altceva, câștigurile de performanță sunt astronomice. Cu toate acestea, această eficiență vine cu prețul flexibilității, așa că dacă funcția se schimbă chiar și ușor - un exemplu este x + y = z se schimbă la 2x + y = z - atunci ASIC-ul va înceta să mai funcționeze. <br/><br/>\nNu toată lumea deține un ASIC, dar toată lumea are computere proprii. Acest lucru poate duce la un avantaj nedrept.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Fundal';
@@ -3878,7 +3878,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Înșelătoria absolută';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Semințele tale Monero sunt Monero. Trebuie să o notezi atunci când îți faci un portofel, deoarece dacă îți pierzi sămânța, ai pierdut Monero și nimeni nu te poate ajuta. DAR, DE ASEMENEA, trebuie să păstrați această sămânță în siguranță față de alții. Dacă cineva îți fură sămânța, poate trimite Monero din portofel ca și cum ar fi în locul tău și, din nou, nimeni nu poate recupera acești bani pentru tine. Au dispărut.</p>\n\n<p>De prea multe ori o persoană a păstrat un portofel rece de Monero, a fost curioasă în legătură cu fondurile sale și a vrut să le verifice. Dar, în loc să treacă prin complicații sau să reinstaleze întreaga aplicație a portofelului, ei decid pur și simplu să folosească un portofel web pentru a-și restabili rapid sămânța și a se uita la banii lor. În cazul în care cad victime ale înșelăciunii de tipul \"Business Look Alike\", atunci simplul fapt de a introduce datele de bază le oferă escrocilor, care pot muta apoi banii într-un alt portofel pe care îl controlează după bunul lor plac.</p>\n\n<p>Ori de câte ori un site, o aplicație sau un portofel are o opțiune de \"restaurare cu semințe\", fiți foarte atenți ca aplicația pe care o utilizați să fie una legitimă. Verificați hash-urile programului (site-ul Monero conține instrucțiuni despre cum să faceți acest lucru) pentru a vă asigura că programul nu a fost modificat de forțe externe și fiți în permanență atenți la locul și modul în care vă expuneți sămânța. Dubla verificare poate fi enervantă, dar pierderea de fonduri din cauza neglijenței ar fi și mai gravă.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sămânța ta Monero ESTE Monero-ul tău. Trebuie să-l notezi când îți faci pentru prima dată un portofel, pentru că dacă îți pierzi sămânța, ți-ai pierdut Monero-ul și nimeni nu te poate ajuta. DAR, DE ASEMENEA, trebuie să păstrați această sămânță în siguranță de ceilalți. Dacă cineva îți fură sămânța, poate trimite Monero-ul din portofel ca și cum ai fi tu și, din nou, nimeni nu poate recupera acești bani pentru tine. A dispărut.</p>\n\n<p>De prea multe ori o persoană a păstrat un portofel rece de Monero, a fost curios de fondurile sale și a vrut să verifice. Dar, în loc să treacă prin bătaia de cap de a reinstala întreaga aplicație de portofel, ei decid doar să folosească un portofel web pentru a-și restaura rapid semințele și a-și privi banii. Dacă devin victime ale înșelătoriei Business Look Alike, atunci însuși actul de a introduce semințele lor le dă escrocilor, care pot muta apoi banii într-un alt portofel pe care îl controlează la convenție.</p>\n\n<p>Oricand un site, o aplicație sau un portofel are o opțiune „restaurare cu semințe”, fiți foarte atenți că aplicația pe care o utilizați este una legitimă. Verificați hash-urile programului (site-ul web Monero are instrucțiuni despre cum să faceți acest lucru) pentru a vă asigura că programul nu a fost alterat de forțele externe și fiți constant conștienți de unde și cum vă expuneți semințele. Verificarea dublă poate fi enervantă, dar pierderea de fonduri din neatenție ar fi și mai gravă.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Rolul semințelor tale Monero în escrocherii';
@@ -7439,6 +7439,69 @@ class I18nRo extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'În acest blog, echipa noastră împărtășește unele dintre perspectivele noastre de dezvoltare celor care sunt interesați de partea tehnică a lucrurilor.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid este un catalog instalabil de aplicații FOSS (Free and Open Source Software) pentru platforma Android. Clientul facilitează navigarea, instalarea și urmărirea actualizărilor de pe dispozitiv.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Site web F-Droid</a></p>\n</blockquote>\n\n<p>Toți pașii din acest tutorial vor funcționa și pentru o aplicație fără arome.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplicația poate fi inclusă în F-Droid numai dacă este complet open-source - inclusiv toate bibliotecile și dependențele utilizate. Aflați mai multe despre politica de includere <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">aici</a>.</p>\n<p>De exemplu, dacă utilizați baza de date ObjectBox în aplicația dvs., aceasta nu poate fi inclusă în F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discuție</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Ce aplicații pot fi incluse în F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata depozit</a> pe Gitlab.</li>\n<li>Clonează depozitul pe dispozitivul tău.</li>\n<li>Creează o ramură cu ID-ul pachetului al aplicației, de exemplu <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Pasul 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verificați dacă <code>fdroid</code> funcționează corect. Rulați următoarele comenzi în folderul <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Pasul 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Adăugați proiectul dvs.:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Va crea un fișier în directorul de metadate, de exemplu <code>metadata/co.localmonero.app.yml</code>.\nDe asemenea, puteți crea acest fișier manual.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Pasul 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Deschideți fișierul și editați-l. Iată un exemplu: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>În exemplu puteți vedea:</p>\n<ol>\n<li>Flutter este folosit ca submodul - aceasta este o cerință din partea echipei F-Droid.</li>\n<li>Pentru fiecare aromă am folosit o ramură separată (comanda <code>AutoUpdateMode: Versiunea %v-fdroid-lm</code>). Asta pentru că Fastlane&#39;nu acceptă arome cu Flutter.</li>\n<li>Prima dată când adăugăm manual informații de construcție, în viitor acestea vor fi adăugate automat de un bot, după ce vom împinge o nouă etichetă.</li>\n</ol>\n<p>Verificați dacă fișierul are sintaxa corectă: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Pasul 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Acum, să adăugăm date pentru piața F-Droid. Pentru asta creăm o ramură separată pentru fiecare aromă:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>După aceea, creăm un folder pentru Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Adăugați datele necesare și împingeți-le.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Pasul 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Este timpul să adăugați aplicația la F-Droid.</p>\n<ol>\n<li>Creați o etichetă în depozitul de aplicații.</li>\n<li>Aplicați modificări în depozitul F-Droid de pe Gitlab.</li>\n<li>Efectuați o solicitare de îmbinare în depozitul Gitlab. Utilizați id-ul aplicației dvs. în titlu.</li>\n<li>Așteptați o recenzie din partea echipei F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Pasul 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le adresați pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Concluzie';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid este un catalog grozav de aplicații FOSS pentru Android, dar adăugarea aplicației dvs. poate fi puțin complicată...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Cum să-ți publici aplicația Flutter cu arome pe F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blog de dezvoltare';
+
+  @override
   String get ads => 'Reclame';
 
   @override
@@ -7988,7 +8051,7 @@ class I18nRo extends I18n {
   String get api_error_72 => 'Încercare de a retrage fonduri dintr-un cont care nu există.';
 
   @override
-  String get api_error_78 => 'Încercare de a face anunțuri get cu o combinație ilegală de parametri';
+  String get api_error_78 => 'Încercarea de a obține anunțuri cu o combinație nevalidă de parametri';
 
   @override
   String get api_error_79 => 'ID-ul anunțului solicitat nu există';
@@ -9170,7 +9233,7 @@ class I18nRo extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpărați XMR cu ușurință';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID-ului. Numerar sau online. Sigur, rapid și ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem verificări KYC - puteți pur și simplu să cumpărați Monero în mod anonim, fără verificare a identității, cu PayPal, card de credit, card cadou, numerar prin poștă sau să convertiți Bitcoin, Ether, USDT sau orice altă criptomonedă în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice valută, oriunde. Nu eliminăm metodele de plată și susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență sigură și fără probleme pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți repetați pentru vânzători.\n\n- Fără KYC/AML sau verificare a identității\nLocalMonero se angajează să mențină simplitatea și directețea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm să facem vreodată acest lucru.\n\n- Încredere din partea comunității\nPlatforma noastră funcționează de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea Monero, extrem de sceptică.\n\n- Sigur, sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. De asemenea, sursa deschisă permite oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au Google complet blocat. Ținem atât de mult la confidențialitatea dvs. încât nici măcar nu vă cerem să furnizați un e-mail la înregistrare.\nCumpărați sau vindeți Monero fără verificarea ID-ului. AVERTISMENT: ACEASTĂ APLICAȚIE ESTE ÎN PREZENT ÎN VERSIUNE BETA DESCHISĂ!\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nUrmăritor de probleme: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Asistență Stellar\nEchipa noastră de asistență este rapidă, receptivă și întotdeauna dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență la care să nu ni se răspundă în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor de socializare, vă ascultăm cu atenție criticile și implementăm întotdeauna sugestiile bune ale utilizatorilor în timp record.\n\nPuteți ajunge la serviciul nostru de asistență la: https://localmonero.co/support\n\n- Tarife corecte\nNu percepem taxe exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID. Cash sau online. Sigur, rapid, ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și mai bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem cecuri KYC - puteți pur și simplu cumpăra Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, numerar prin poștă sau puteți converti Bitcoin, Ether, USDT sau orice altă monedă cripto în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și sprijinim pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o obligațiune de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în obligațiune de arbitraj înainte de a începe tranzacția, asigurăm o experiență fluidă și sigură pentru cumpărător, care este esențială pentru popularitatea platformei și clienții repetați pentru vânzători.\n\n- Fără verificare KYC/AML sau ID\nLocalMonero se angajează să mențină simplitatea și claritatea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm vreodată să facem acest lucru.\n\n- De încredere de către Comunitate\nPlatforma noastră a funcționat de peste patru ani, a supraviețuit Marelui Prăbuș al pieței de criptomonede din 2018 și, prin serviciul său diligent orientat către comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea extrem de sceptică Monero.\n\n- Securizat, cu sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. Deschiderea aplicației noastre permite, de asemenea, oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoanele care au Google complet blocat. Apreciem atât de mult confidențialitatea dvs., încât nici măcar nu vă cerem să furnizați un e-mail atunci când vă înregistrați.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nInstrument de urmărire a problemelor: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport stelar\nEchipa noastră de asistență este rapidă, receptivă și mereu dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență care să nu primească răspuns în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor sociale, ascultăm cu atenție criticile voastre și punem întotdeauna în aplicare sugestii bune ale utilizatorilor în timp record.\n\nPuteți ajunge la asistența noastră la: https://localmonero.co/support\n\n- Taxe corecte\nNu percepem comisioane exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există nicio taxă de depunere, iar taxa de retragere este foarte apropiată de taxa pe care ați fi plătit-o pentru o tranzacție normală.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR în mod privat';
@@ -9229,39 +9292,81 @@ class I18nRo extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vânzare opțiune de apel';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpărați XMR anonim';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Editați parola casetei, atingeți de două ori pentru a edita';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Confirmați caseta de editare a parolei, atingeți de două ori pentru a edita';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'Anunț creat';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val se va întoarce în curând!\\nNe pare rău pentru inconvenient, dar efectuăm o întreținere programată în acest moment.\\nProbabil că vom reveni online în curând. Rămâneți la curent în grupurile comunității noastre:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Selectați tipul de anunț';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Atingeți aici pentru a lăsa o recenzie!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Ați lăsat deja o recenzie acestui utilizator. Doriți să vă actualizați recenzia acum?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Selectați cumpărătorul sau vânzătorul';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Setați o filă implicită';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'Reclamele dvs';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Întreținere aplicație';
+  }
+
+  @override
+  String get app_push_new_message => 'Ai un mesaj nou într-o tranzacție';
+
+  @override
+  String get app_push_new_offer => 'Ai o noua oferta';
+
+  @override
+  String get app_push_trade_marked_completed => 'Marca comercială ca finalizată';
+
+  @override
+  String get app_push_trade_cancelled => 'Comerț anulat';
+
+  @override
+  String get app_push_trade_disputed => 'Comerț disputat';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Cumpărați/vindeți Monero anonim';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Cumpărați/vindeți Bitcoin anonim';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Cumpărați sau vindeți Bitcoin fără verificarea ID. Cash sau online.';
+
+  @override
+  String get app_ask_community_chats => 'Ai întrebări? Întrebați în chat-urile comunității';
+
+  @override
+  String get app_select_currency => 'Selectați moneda';
+
+  @override
+  String get app_select_country => 'Selecteaza tara';
+
+  @override
+  String get app_select_payment_method => 'Selecteaza metoda de plata';
 }

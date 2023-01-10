@@ -688,21 +688,21 @@ class TradeViewModel extends ViewModel
   }
 
   String fromToStr() {
-    if (tradeForScreen.isSelling!) {
+    if (tradeForScreen.isSelling == true) {
       return context.intl.dashboard250Sbfilter250Sbrole250Sbselling;
     }
     return context.intl.dashboard250Sbfilter250Sbrole250Sbbuying;
   }
 
   String usernameStr() {
-    if (tradeForScreen.isSelling!) {
+    if (tradeForScreen.isSelling == true) {
       return tradeForScreen.buyer.username ?? kDeletedUserName;
     }
     return tradeForScreen.seller.username ?? kDeletedUserName;
   }
 
   AccountInfoModel userForTrade() {
-    if (tradeForScreen.isSelling!) {
+    if (tradeForScreen.isSelling == true) {
       return tradeForScreen.buyer;
     }
     return tradeForScreen.seller;

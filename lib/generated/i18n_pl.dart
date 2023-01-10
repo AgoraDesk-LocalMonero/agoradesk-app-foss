@@ -1726,7 +1726,7 @@ class I18nPl extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Cena nie została odpowiednio ustawiona';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Nielegalna kombinacja kraju, metody płatności i waluty';
+  String get error250Sbpost8722Sbad250Sb86 => 'Nieprawidłowe kombinacje kraju, metody płatności i waluty';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Ta metoda płatności nie jest dostępna dla wybranego kraju';
@@ -3251,7 +3251,7 @@ class I18nPl extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Jak wymiany atomiczne będą działały w Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Uwaga:</b> Zalecamy, aby czytelnik przeczytał nasze artykuły<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Dlaczego Monero Ma Tail Emissions\"</a> i <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Kopanie Monero: Co Sprawia, Że RandomX Tak Wyjątkowy”</a>. Ten artykuł opiera się na przedstawionych tam koncepcjach.</i></p>\n\n<p>W dyskusjach na temat problemów związanych z blockchainem, jednym z pierwszych słów, które się pojawią, jest „skalowanie”. Nie jest tajemnicą, że blockchainy nie skalują się dobrze, ale większość ludzi nie wie dlaczego.</p>\n\n<p>Prawda jest taka, że skalowanie jest tak naprawdę terminem zbiorczym, który obejmuje dwie różne kategorie: możliwości protokołu i możliwości technologiczne w danym momencie. W tym artykule skupimy naszą uwagę na jednym, obsługa protokołu jest w zasadzie miarą tego, ile transakcji protokół może obsłużyć w danym czasie.</p>\n\n<p>Bitcoin ma ograniczony maksymalny rozmiar bloku, co oznacza, że gdy wystarczająca liczba transakcji zostanie uwzględniona w bloku, wszelkie dodatkowe transakcje będą musiały czekać w kolejce na następny. Pomocne jest wyobrażenie sobie pociągu. Na stację podjeżdża pociąg, a ci w kolejce wchodzą. Gdy pociąg będzie pełny, każdy, kto zostanie na zewnątrz, będzie musiał poczekać na następny.</p>\n\n<p>Bitcoin wykorzystuje opłaty, aby określić, kto wchodzi do bloku, a kto nie. Wracając do analogii z pociągiem, można sobie wyobrazić, że jeden potencjalny pasażer, który ma pozostać w tyle, oferuje maszyniście pięć dolarów za miejsce. Inni pasażerowie idą w jego ślady i ostatecznie dochodzi do wojny licytacyjnej, o to kto dostanie miejsce. Do maszynisty należy decyzja, czy chce przestrzegać zasady „kto pierwszy, ten lepszy”, ale w jego najlepszym interesie finansowym jest maksymalizacja dochodów poprzez przyjmowanie na pokład osób, które zaoferują najwyższą cenę.</p>\n\n<p>W tej analogii minersi są maszynistami. Mogą uwzględnić w bloku dowolne transakcje, ale zazwyczaj wybierają te, które mają najwyższe opłaty.</p>\n\n<p>Alternatywnie, jeśli bloki nie są zbyt pełne, ludzie nie mają motywacji do płacenia wysokich opłat, ponieważ jest dużo wolnych miejsc.</p>\n\n<p>W szczytowym momencie boomu kryptowalutowego w 2017 r. Bitcoin został zalany transakcjami, a opłaty gwałtownie wzrosły w przypadku tych, którzy chcieli zostać uwzględnieni w następnym bloku, lub w jakimkolwiek bloku w najbliższej przyszłości. Ci, którzy nie chcieli płacić wysokich opłat, widzieli, że ich transakcje są odkładane na wiele godzin, dni, a nawet całkowicie znikają z kolejki.</p>\n\n<p>To był wstrząsający wgląd w to, jak Bitcoin by sobie radził, w przypadku tak często wspominanej „masowej adopcji”. Gdyby Bitcoin miał być używany przez masy, sytuacja byłaby jeszcze gorsza niż w 2017 roku, a Bitcoin byłby niedostępny dla każdego poza bogaczami, po prostu dlatego, że przepustowość jest niewielka ze względu na stały maksymalny rozmiar bloku, powodując walkę na rynku opłat.</p>\n\n<p>Monero przewidziało to i chciało zrobić coś innego. Dlatego programiści Monero zaimplementowali dynamiczny maksymalny rozmiar bloków.</p>\n\n<p>Zasadniczo Monero ma również limit rozmiaru bloku, ale jest to miękki limit. Gdy kolejka oczekujących transakcji staje się zbyt długa, minersi mogą zwiększyć rozmiar bloków. W naszej analogii z pociągiem możesz wyobrazić sobie dodanie większej liczby wagonów, aby pomieścić dodatkowych pasażerów. Po opróżnieniu kolejki bloki zmniejszają się z powrotem do swojego pierwotnego rozmiaru.</p>\n\n<p>Jeśli wydaje się to fajnym pomysłem, rozsądne mogłoby być pytanie, dlaczego Monero jest jedyną kryptowalutą, która to zaimplementowała. Dlaczego nie dodać tego do Bitcoina, aby położyć kres problemom z przepustowością?</p>\n\n<p>Niestety nie jest to możliwe. Jest kilka powodów, a my postaramy się je wyjaśnić.</p>\n\n<p> W najlepszym interesie minera zawsze jest kopanie dużych bloków. Dzięki dużym blokom mogą zmieścić więcej transakcji i zarabiać więcej na opłatach, a także na nagrodach blokowych. Może to prowadzić do ataków spamowych, w których ktoś wysyła wiele małych transakcji z niewielkimi opłatami, aby zapchać blockchain. Miner po prostu zwiększyłby rozmiar bloku, uwzględniając je wszystkie, ponieważ pieniądze to pieniądze, bez względu na to, jak małe. Prowadziłoby to do konsekwentnie dużych bloków przy niewielkich korzyściach ekonomicznych. Bitcoin rozwiązuje ten problem, sztucznie ograniczając rozmiar bloku, tworząc w ten sposób rynek opłat. Osoby atakujące spamem musiałyby zapłacić innym użytkownikom opłaty, a to nie jest już tanie. Ale oznacza to, że bloki są pełne, pozostawiając niektóre transakcje w oczekiwaniu, jak wspomniano powyżej.</p>\n\n<p>Jak więc Monero może mieć dynamiczne rozmiary bloków, ale unikać ataków spamowych? Odpowiedź jest prosta, ale sprytna. Kara od nagrody za blok jest wprowadzana, gdy blok jest większy niż normalnie. Jeśli miner chce zwiększyć rozmiar bloku, nagroda, jaką otrzyma za znalezienie tego bloku, będzie mniejsza niż w innym przypadku. Tak więc zwiększą rozmiar bloku tylko wtedy, gdy opłacone opłaty transakcyjne użytkowników przewyższą utraconą część nagrody za blok. Na przykład, jeśli miner straciłby 0,5 XMR, podnosząc nagrodę blokową i suma opłaconej transakcji opłaty wyniosłaby 0,4 XMR, to wtedy nastąpiłaby strata netto w wysokości 0,1 XMR gdyby podnieśli rozmiar, więc nie zrobiliby tego. I odwrotnie, jeśli łączne opłaty transakcyjne dodałyby 0,7 XMR, zysk netto wyniósłby 0,2 XMR, nawet jeśli straciliby 0,5 XMR z kary za blok, więc miner zwiększyłby rozmiar.</p>\n\n<p>Te dynamiczne bloki pozwalają sieci rozwijać się organicznie, bez znacznego ograniczania rozmiaru bloku w celu wprowadzenia wymuszonego rynku opłat, przy jednoczesnym unikaniu ataków spamowych. Jest jeszcze kilka punktów widzenia, z których możemy spojrzeć na ten pomysł, i więcej powodów, dla których nie byłoby możliwe dodanie go do Bitcoina, ale na razie mamy nadzieję, że czytelnik rozumie, jak Monero omija kilka problemów związanych z Bitcoinem i jego pochodne oraz jak planuje zwiększyć przepustowość w przyszłości.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Uwaga:</b> Zdecydowanie zalecamy czytelnikowi przeczytanie naszych artykułów <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Czemu Monero ma Tail Emissions\"</a> i <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Kopanie Monero: Co czyni RandomX tak wyjątkowym” </a>. Ten artykuł opiera się na koncepcjach tam przedstawionych.</i></p> \n\n<p> Ilekroć ludzie dyskutują o problemach z blockchainem, jednym z pierwszych tematów, które poruszą, będzie „skalowanie”. Nie jest tajemnicą, że blockchainy nie skalują się dobrze, ale większość ludzi nie wie dlaczego.</p> \n\n<p>Prawda jest taka, że skalowanie to właściwie ogólny termin, który obejmuje dwie różne kwestie: możliwości protokołów i możliwości technologiczne w danej chwili. W tym artykule skupimy naszą uwagę na pierwszej kwestii. Możliwości protokołów są zasadniczo miarą liczby transakcji, które protokół może obsłużyć w danym momencie.</p>\n\n <p>Bitcoin ma limit rozmiaru bloku, co oznacza, że po uwzględnieniu wystarczającej liczby transakcji w bloku wszelkie dodatkowe transakcje będą musiały czekać w kolejce na następny blok. Pomocną analogią byłoby wyobrażenie sobie pociągu. Pociąg podjeżdża na stację, a ci, którzy stoją w kolejce, wchodzą. Gdy pociąg jest pełny, każdy, kto zostanie na peronie, będzie musiał czekać na następny pociąg. </p>\n\n <p>Bitcoin wykorzystuje opłaty, aby określić, kto dostanie się do bloku, a kto nie. Wracając do analogii z pociągiem, można sobie wyobrazić, że jeden potencjalny pasażer, który ma zostać w tyle, oferuje maszyniście pięć dolarów za ustąpienie mu miejsca. Inni pasażerowie idą jego śladem i ostatecznie dochodzi do licytacji, aby ustalić, kto dostanie które miejsca. Do maszynisty należy decyzja, czy chce przestrzegać zasady „kto pierwszy, ten lepszy”, ale w jego najlepszym interesie finansowym leży maksymalizacja dochodów poprzez przyjmowanie na pokład pasażerów, którzy zaoferują najwyższą cenę.</p> \n\n<p> W tej analogii minersi są maszynistami. Mogą zawierać dowolne transakcje w bloku, ale przeważnie wybiorą te, które mają najwyższe opłaty.</p> \n\n<p>Alternatywnie, jeśli bloki nie są bardzo pełne, ludzie nie mają powodów do płacenia wysokich opłat, ponieważ jest mnóstwo wolnych miejsc.</p> \n\n<p> W szczytowym okresie boomu kryptowalut w 2017 r. Bitcoin został zalany transakcjami, a opłaty gwałtownie wzrosły dla tych użytkowników, którzy chcieli zostać włączeni do następnego bloku lub dowolnego bloku w najbliższym czasie. Ci, którzy nie chcieli płacić wysokich opłat, widzieli, jak ich transakcje były opóźniane o godziny, dni, a nawet całkowicie wypadały z kolejki.</p> \n\n<p> To był wstrząsający wgląd w to, jak Bitcoin może sobie radzić, gdyby doszło do często wspominanej „masowej adopcji”. Gdyby Bitcoin miał być używany przez masę ludzi, sytuacja byłaby jeszcze gorsza niż w 2017 r., a Bitcoin byłby niedostępny dla nikogo poza bogatymi, po prostu dlatego, że przepustowość jest niewielka ze względu na stały rozmiar bloku, wymuszając aukcje opłat.</p> \n\n<p> Monero przewidziało tą sytuację i postanowiło zrobić coś innego. Dlatego programiści Monero wdrożyli dynamiczny rozmiar bloku.</p> \n\n<p> Zasadniczo Monero również ma limit wielkości bloku, ale jest to miękki limit. Gdy kolejka oczekujących transakcji staje się zbyt długa, minersi mogą zwiększyć rozmiar bloków. Korzystając z naszej analogii pociągu, możesz sobie wyobrazić dodanie większej liczby wagonów, aby pomieścić dodatkowych pasażerów. Gdy kolejka jest pusta, bloki zmniejszają się do pierwotnego rozmiaru. </p> \n\n<p> Jeśli wydaje się to fajnym pomysłem, nasuwa się pytanie, dlaczego Monero jest jedyną kryptowalutą, która coś takiego zaimplementowała. Dlaczego nie dodać tego rozwiązania do Bitcoina celem położenia kresu problemom z przepustowością?</p> \n\n<p>Niestety nie jest to możliwe. Jest kilka powodów, które postaramy się wyjaśnić.</p> \n\n<p> Duże bloki zawsze leży w najlepszym interesie minera. Dzięki dużym blokom mogą zmieścić większą ilość transakcji i zarobić więcej pieniędzy na opłatach, a także na nagrodach blokowych. Może to prowadzić do ataków spamowych, w których ktoś wysyła wiele małych transakcji z niewielkimi opłatami, aby zapchać blockchain. Minersi po prostu zwiększyliby rozmiar bloku, przyjmując je wszystkie, ponieważ im się to opłaca, bez względu na to, jak niskie są opłaty tych kolejnych transakcji. Prowadziłoby to do coraz większych bloków. Bitcoin rozwiązuje ten problem, sztucznie ograniczając rozmiar bloku, wymuszając w ten sposób licytację opłat. Osoby spamujące musiałyby zapłacić więcej niż inni użytkownicy, a to nie jest takie tanie. Ale to oznacza, że bloki się zapełniają, pozostawiając niektóre transakcje oczekujące, jak wspomnieliśmy wcześniej. </p> \n\n<p>W jaki sposób Monero może mieć dynamiczne rozmiary bloków unikając ataków spamu? Odpowiedź jest prosta, ale sprytna. Kara za nagrodę za blok jest wprowadzana, gdy blok jest większy niż normalnie. Jeśli miner chce zwiększyć rozmiar bloku, nagroda, jaką otrzyma za znalezienie tego bloku, będzie mniejsza niż w innym przypadku. Zwiększa więc rozmiar bloku tylko wtedy, gdy opłaty transakcyjne uiszczane przez użytkowników przewyższą utraconą część nagrody za blok. Na przykład, jeśli miner straciłby 0,5 XMR poprzez zwiększenie rozmiaru bloku, a suma zapłaconych opłat transakcyjnych wyniosłaby 0,4 XMR, to gdyby zwiększył rozmiar bloku, poniósłby stratę w wysokości 0,1 XMR, więc tego nie zrobi. I odwrotnie, jeśli suma opłat transakcyjnych wyniosłaby 0,7 XMR, zysk netto wyniósłby 0,2 XMR, mimo że straci 0,5 XMR kary za blok, więc miner zwiększy rozmiar.</p> \n\n<p> Te dynamiczne bloki pozwalają sieci rozwijać się organicznie, bez sztucznego ograniczania rozmiaru bloków w celu wymuszenia licytacji opłat transakcyjnych, przy jednoczesnym zapobieganiu spamowi. Jest jeszcze inny punkt widzenia, z którego możemy spojrzeć na tą ideę, i więcej powodów, dla których dodanie jej do Bitcoina nie byłoby możliwe, ale na razie mamy nadzieję, że czytelnik rozumie, w jaki sposób Monero omija kilka problemów występujących w Bitcoinie, i jego pochodnych, i jak Monero planuje skalować swoją przepustowość w przyszłości.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Ilekroć ludzie omawiają problemy z blockchainem, jednym z pierwszych słów, które zostanie wspomniane, będzie „skalowanie”. Monero wyróżnia się w swoim rozwiązaniu tego problemu.';
@@ -3551,7 +3551,7 @@ class I18nPl extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Powód';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Wspomnijmy o sprzęcie używanym przez minerów do kopania. Minerzy wykorzystują komputery do pracy, ale wszyscy wiemy, że komputery nie są sobie równe. Niektóre są na tyle potężne, że można dzięki nim szkolić sztuczną inteligencję, bądź grać w intensywne gry, podczas gdy inne ledwo sobie radzą z codziennymi zadaniami. Te różnice w mocy obliczeniowej wpływają również na hash rate, czyli prędkość kopania bloków.<br/><br/>\nAle te różnice między komputerami są niczym w porównaniu do przewagi oferowanej przez wyspecjalizowany sprzęt znany jako Application Specific Integrated Circuits (ASICs), który pod względem hash rate, jest szybszy od zwykłego komputera o kilka rzędów wielkości.<br/><br/>\nZastanówmy się, co sprawia, że ASICs są aż tak potężne. Wyobraź sobie wszystkie komputery na spektrum, od wszechstronnego, po taki co robi tylko jedną rzecz, ale za to bardzo szybko. Procesory i ASICs są na przeciwnych końcach tego spektrum.<br/><br/>\nStandardowe procesory są na pierwszym końcu. Można dzięki nim robić wiele rzeczy, jak chociażby przeglądać internet, grać w gry, renderować filmy, ale nie są one wyspecjalizowane pod żadną z nich. Wszechstronność odbywa się kosztem efektywności.<br/><br/>\nASICs z kolei są na drugim końcu spektrum, potrafią tylko jedną rzecz, ale robią ją w niesamowitym tempie. Mogą wykonywać tylko jedną funkcję matematyczną, ale ponieważ potrafią ignorować wszystko inne, prędkość wykonywania tej jednej jest astronomiczna. Ta efektywność odbywa się kosztem wszechstronności, więc jeśli funkcja zmieni się choć odrobinę, np. zamiast x + y = z, będą musiały rozwiązać 2x + y = z, wówczas ASICs nie będzie w stanie nawet funkcjonować.<br/><br/>\nNie każdy posiada ASICs ale każdy posiada komputer. To może prowadzić do niesprawiedliwej przewagi.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Omówmy trochę sprzęt minerów. Minerzy używają komputerów do wykonywania pracy, ale wszyscy wiemy, że nie każdy komputer jest taki sam. Niektóre komputery są wystarczająco wydajne, aby obsługiwać sieci AI lub intensywne gry, podczas gdy inne mają problemy nawet z prostymi zadaniami. Te różnice w mocy obliczeniowej wpływają również na hashrate, czyli szybkość, z jaką szukają nowych bloków. <br/><br/>\nAle nawet te różnice między komputerami bledną w porównaniu z hashrate wyspecjalizowanego sprzętu, znanego również jako specjalizowane układy scalone (ASIC), które osiągają hashrate kilka rzędów wielkości większy niż zwykłe komputery.<br/><br/>\nPoświęćmy trochę czasu na zbadanie, co sprawia, że układy ASIC są tak potężne. Wyobraź sobie, że moc wszystkich komputerów mieści się gdzieś na spektrum, które waha się od możliwości robienia wielu rzeczy, ale żadnej specjalnie szybko, do robienia tylko jednej rzeczy, ale robienia jej bardzo szybko. Procesory i układy ASIC znajdują się na przeciwległych krańcach tego spektrum.<br/><br/>\nProcesory, które są we wszystkich standardowych komputerach, znajdują się na początku spektrum. Mogą robić wiele rzeczy, takich jak przeglądanie sieci, gra w gry lub renderować wideo, ale żadnej z nich nie wykonują szczególnie szybko. Elastyczność odbywa się kosztem wydajności.<br/><br/>\nASIC są na drugim końcu spektrum, mogą tylko jedną rzecz, ale robią ją w niewiarygodnym tempie. Mogą wykonywać tylko jedną funkcję matematyczną, ale ponieważ mogą ignorować wszystko inne, wzrost wydajności jest astronomiczny. Ta wydajność odbywa się jednak kosztem elastyczności, więc jeśli funkcja zmieni się nawet nieznacznie - na przykład x + y = z zmienia się na 2x + y = z - wtedy ASIC całkowicie przestanie działać. <br/><br/>\nNie każdy posiada układ ASIC, ale każdy ma komputer ze standardowym procesorem. Wymaganie układów ASIC może prowadzić do nieuczciwej przewagi dla osób, które mają możliwość w nie zainwestować.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Kontekst';
@@ -3878,7 +3878,7 @@ class I18nPl extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Zwyczajne oszustwo';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p> Twój seed Monero to Twoje Monero. Musisz je zapisać, gdy tworzysz nowy portfel, ponieważ jeśli stracisz seeda, stracisz Monero i nikt nie da rady Ci pomóc. MUSISZ TEŻ zabezpieczyć seed przed innymi osobami. Jeśli ktoś ukradnie Twój seed, to może też wysłać Monero z portfela jakby był Tobą i nikt nie mógłby odzyskać tych pieniędzy. Zniknęłyby. </p>\n\n<p> Zbyt często ludzie mają cold wallet Monero, są ciekawi swoich oszczędności i chcą je sprawdzać. Ale zamiast przejść przez trud ponownej instalacji całej aplikacji portfela, po prostu postanawiają użyć portfela internetowego, aby szybko przywrócić portfel z seedem i spojrzeć na swoje pieniądze. Jeśli padną ofiarą oszustwa udającego autentyczną stronę, wówczas sam akt wprowadzenia seeda daje je oszustom, którzy mogą następnie przenieść pieniądze do innego portfela, który kontrolują. </p>\n\n<p> ZA KAŻDYM razem gdy strona, aplikacja lub portfel mają opcję „Przywróć z seedem”, bądź czujny, czy aby zastosowana aplikacja była poprawna. Sprawdź hashe programu (strona internetowa Monero ma instrukcje, jak to zrobić), aby upewnić się, że program nie został zmodyfikowany przez siły zewnętrzne i stale zdawaj sobie sprawę z tego, gdzie i jak ujawniasz swój seed. Podwójne sprawdzanie może być denerwujące, ale utrata pieniędzy za sprawą nieostrożności byłaby jeszcze gorsza. </p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p> Twój seed Monero JEST Twoim Monero. Musisz je zapisać, gdy tworzysz nowy portfel, ponieważ jeśli stracisz seeda, stracisz Monero i nikt nie da rady Ci pomóc. MUSISZ TEŻ zabezpieczyć seed przed innymi osobami. Jeśli ktoś ukradnie Twój seed, to może też wysłać Monero z portfela jakby był Tobą i nikt nie będzie mógł odzyskać tych pieniędzy. Znikną na zawsze. </p>\n\n<p> Często ludzie mają cold wallet Monero, są ciekawi swoich oszczędności i chcą je sprawdzić. Ale zamiast przejść przez trud ponownej instalacji całej aplikacji portfela, po prostu postanawiają użyć portfela internetowego, aby szybko przywrócić portfel z seeda i spojrzeć na swoje pieniądze. Jeśli padną ofiarą oszustwa udającego autentyczną stronę, wówczas sam akt wprowadzenia seeda przekaże go oszustom, którzy mogą następnie przenieść pieniądze do innego portfela, który kontrolują. </p>\n\n<p> ZA KAŻDYM razem gdy strona, aplikacja lub portfel mają opcję „Przywróć z seeda”, bądź czujny i upewnij się, że zastosowana aplikacja jest wiarygodna. Sprawdź skóry programu (strona internetowa Monero ma instrukcje, jak to zrobić), aby upewnić się, że program nie został zmodyfikowany przez stronę trzecią i stale zdawaj sobie sprawę z tego, gdzie i jak ujawniasz swój seed. Podwójne sprawdzanie wszystkiego może być denerwujące, ale utrata pieniędzy za sprawą nieostrożności byłaby jeszcze gorsza. </p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Rola Twojego seeda Monero w oszustwach';
@@ -7439,6 +7439,69 @@ class I18nPl extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'W tym blogu nasz zespół dzieli się spostrzeżeniami naszych programistów dla zainteresowanych aspektem technicznym.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid to instalowalny katalog aplikacji FOSS (Free and Open Source Software) dla systemu Android. Ten program ułatwia przeglądanie, instalowanie i śledzenie aktualizacji aplikacji na Twoim urządzeniu.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Strona F-Droid</a></p>\n</blockquote>\n\n<p>Wszystkie kroki opisane w tym przewodniku będą działać również w przypadku aplikacji bez flavors.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplikacja może być dodana do F-Droida tylko wtedy, gdy jest całkowicie open-source - w tym wszystkie używane biblioteki i zależności. Dowiedz się więcej o zasadach importowania <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">tutaj</a>.</p>\n<p>Na przykład, jeśli używasz bazy danych ObjectBox w swojej aplikacji, nie może ona zostać dołączona do F-Droida (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">dyskusja</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Jakie aplikacje można umieścić w F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repozytorium fdroiddata</a> na Gitlab.</li>\n<li>Sklonuj repozytorium na swoje urządzenie.</li>\n<li>Utwórz gałąź z ID pakietu aplikacji, na przykład <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Krok 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Sprawdź, czy <code>fdroid</code> działa poprawnie. Uruchom następujące polecenia w folderze <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Krok 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Dodaj swój projekt:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p> Spowoduje to utworzenie pliku w katalogu metadata, na przykład <code>metadata/co.localmonero.app.yml</code>.\nMożesz również utworzyć ten plik ręcznie.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Krok 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Otwórz plik i go edytuj. Oto przykładowa wersja: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>W przykładzie możesz zobaczyć:</p>\n<ol>\n<li>Flutter jest używany jako submodule - jest to wymóg zespołu F-Droid.</li>\n<li> Dla każdego flavor użyliśmy oddzielnej gałęzi (komenda <code>AutoUpdateMode: Version %v-fdroid-lm</code>). To dlatego, że Fastlane nie obsługuje flavor z Flutterem.</li>\n<li>Za pierwszym razem ręcznie dodajemy informacje o kompilacji, w przyszłości będą one dodawane automatycznie przez bota po pchnięciu nowego tagu.</li>\n</ol>\n<p>Sprawdź, czy plik ma poprawną składnię: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Krok 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p> Teraz dodajmy dane do F-Droida. W tym celu tworzymy oddzielną gałąź dla każdego flavor:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Następnie tworzymy folder dla Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Dodaj wymagane dane i pchnij repozytorium.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Krok 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Czas dodać aplikację do F-Droid.</p>\n<ol>\n<li>Utwórz tag w repozytorium aplikacji.</li>\n<li>Pchnij zmiany do repozytorium F-Droid na Gitlabie.</li>\n<li>Zób merge requesta w repozytorium Gitlab. Użyj identyfikatora swojej aplikacji w tytule.</li>\n<li>Poczekaj na recenzję zespołu F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Krok 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Proces ten jest nieco skomplikowany i po drodze mogą pojawić się różne problemy. Jednak po skonfigurowaniu CI następujące aktualizacje będą obsługiwane automatycznie.</p>\n<p>Jeśli masz pytania, możesz je zadać na naszym <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHubie</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Wnioski';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid to świetny katalog aplikacji FOSS dla systemu Android, ale dodanie aplikacji może być nieco skomplikowane...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Jak opublikować swoją aplikację Flutter z flavors na F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blog deweloperski';
+
+  @override
   String get ads => 'Ogłoszenia';
 
   @override
@@ -7988,7 +8051,7 @@ class I18nPl extends I18n {
   String get api_error_72 => 'Próba wypłaty środków z konta, które nie istnieje';
 
   @override
-  String get api_error_78 => 'Próba uzyskania reklam z niedozwoloną kombinacją parametrów';
+  String get api_error_78 => 'Próba wyświetlenia reklam z nieprawidłową kombinacją parametrów';
 
   @override
   String get api_error_79 => 'Żądany identyfikator ogłoszenia nie istnieje';
@@ -9170,7 +9233,7 @@ class I18nPl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: łatwo kup XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kupuj lub sprzedawaj Monero anonimowo, bez weryfikacji tożsamości. Gotówką lub online. Bezpiecznie, szybko, łatwo.\n\nLocalMonero to największa, najbardziej zaufana i ugruntowana platforma handlowa P2P w społeczności XMR. Nie wykonujemy weryfikacji KYC - możesz po prostu kupić Monero anonimowo za pomocą PayPal, karty kredytowej, karty podarunkowej, gotówki pocztą lub przekonwertować Bitcoina, Ether, USDT lub jakąkolwiek inną kryptowalutę na Monero - nasza platforma obsługuje dowolną metodę płatności.\n\n- Bezpieczny i płynny handel\nObsługujemy każdą metodę płatności, dowolną walutę, w dowolnym miejscu. Nie usuwamy metod płatności i w pełni obsługujemy bezpośrednie transakcje gotówkowe. Wszystkie nasze transakcje są chronione gwarancją arbitrażową. Dzięki temu, że przed rozpoczęciem transakcji wymagamy oddania środków pod zastaw, zapewniamy kupującemu płynny i bezpieczny handel, dzięki czemu jesteśmy tak popularną platformą.\n\n- Brak KYC/AML lub weryfikacji tożsamości\nLocalMonero dokłada wszelkich starań, aby zachować prostotę i bezpośredniość. Nie stosujemy KYC/AML ani nigdy nie planujemy tego robić.\n\n- Zaufani przez społeczność\nNasza platforma działa od ponad czterech lat, przetrwała Wielki Krach na Rynku Kryptowalut w 2018 roku, a dzięki zorientowanej na społeczność sumiennej służbie stała się jedną z najbardziej zaufanych marek w niezwykle sceptycznej społeczności Monero.\n\n- Bezpieczni, open source, zorientowani na prywatność, odporni na cenzurę\nNasza aplikacja jest bezpłatna i ma otwarte oprogramowanie, co sprawia, że wiele osób widziało kod źródłowy aplikacji i upewniło się, że nie ma on usterek w zabezpieczeniach ani wycieków prywatności. Open sourcing naszej aplikacji umożliwia też każdemu dostęp do naszej platformy, nawet jeśli jakieś repozytorium cenzuruje naszą aplikację. Nasza aplikacja działa nawet na telefonach, które mają całkowicie zablokowanego Google\'a. Cenimy Twoją prywatność tak bardzo, że nie wymagamy nawet podania adresu e-mail podczas rejestracji.\nKupuj lub sprzedawaj Monero bez weryfikacji tożsamości. UWAGA: TA APLIKACJA JEST OBECNIE W STANIE BETA!\n\nKod źródłowy: https://github.com/AgoraDesk-LocalMonero/agoradsk-app-foss\nNarzędzie do śledzenia usterek: https://github.com/AgoraDesk-LocalMonero/agoradsk-app-foss/issues\n\n- Nieziemskie wsparcie\nNasz zespół wsparcia jest szybki, elastyczny i zawsze chętny do pomocy. Nigdy nie otrzymaliśmy zgłoszenia do obsługi klienta, na które nie udzieliliśmy odpowiedzi w ciągu 24 godzin. Jesteśmy zawsze łatwo osiągalni za pośrednictwem mediów społecznościowych, uważnie słuchamy Twojej krytyki i zawsze wdrażamy dobre sugestie użytkowników w rekordowym czasie.\n\nMożesz skontaktować się z naszym wsparciem pod adresem: https://localmonero.co/support\n\n- Uczciwe opłaty\nNie pobieramy wygórowanych opłat, gdy wpłacasz lub wypłacasz Bitcoiny do/z naszego portfela ochrony arbitrażowej. Nie mamy opłaty za wpłaty, a opłata za wypłatę jest bardzo zbliżona do opłaty, którą zapłaciłbyś za normalną transakcję.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kupuj lub sprzedawaj Monero bez weryfikacji tożsamości. Gotówką lub online. Bezpiecznie, szybko, łatwo.\n\nLocalMonero to największa, najbardziej zaufana i ugruntowana platforma handlowa P2P w społeczności XMR. Nie mamy czeków KYC - możesz po prostu kupić Monero anonimowo bez weryfikacji tożsamości za pomocą PayPal, karty kredytowej, karty podarunkowej, gotówki pocztą lub przekonwertować Bitcoin, Ether, USDT lub jakąkolwiek inną monetę kryptograficzną na Monero - nasza platforma obsługuje dowolną metodę płatności.\n\n- Bezpieczny i płynny handel\nObsługujemy każdą metodę płatności, dowolną walutę, w dowolnym miejscu. Nie usuwamy metod płatności i w pełni obsługujemy bezpośrednie transakcje gotówkowe. Wszystkie nasze transakcje są chronione klauzulą arbitrażową. Dzięki temu, że przed rozpoczęciem transakcji wymagamy przechowania środków na rachunku arbitrażowym, zapewniamy kupującemu płynne i bezpieczne doświadczenie, co jest niezbędne dla popularności platformy i stałych klientów dla sprzedawców.\n\n- Brak KYC/AML lub weryfikacji tożsamości\nLocalMonero dokłada wszelkich starań, aby zachować prostotę i przejrzystość Twojego doświadczenia handlowego. Nie stosujemy KYC/AML ani nigdy nie planujemy tego robić.\n\n- Zaufany przez społeczność\nNasza platforma działa od ponad czterech lat, przetrwała Wielki Krach na Rynku Kryptowalut w 2018 roku, a dzięki zorientowanej na społeczność sumiennej obsłudze stała się jedną z najbardziej zaufanych marek w niezwykle sceptycznej społeczności Monero.\n\n- Bezpieczne, otwarte źródło, zorientowane na prywatność, odporne na cenzurę\nNasza aplikacja jest bezpłatna i ma otwarte oprogramowanie, co zapewnia, że wiele osób patrzy na kod aplikacji, aby upewnić się, że nie ma luk w zabezpieczeniach ani wycieków prywatności. Open sourcing naszej aplikacji umożliwia również każdemu dostęp do naszej aplikacji, nawet jeśli określone repozytorium aplikacji cenzuruje aplikację. Nasza aplikacja działa nawet na telefonach, które mają całkowicie zablokowane Google. Cenimy Twoją prywatność tak bardzo, że nie wymagamy nawet podania adresu e-mail podczas rejestracji.\n\nKod źródłowy: https://github.com/AgoraDesk-LocalMonero/agoradsk-app-foss\nNarzędzie do śledzenia problemów: https://github.com/AgoraDesk-LocalMonero/agoradsk-app-foss/issues\n\n- Wsparcie gwiazd\nNasz zespół wsparcia jest szybki, elastyczny i zawsze chętny do pomocy. Nigdy nie otrzymaliśmy zgłoszenia do pomocy technicznej, na które nie udzielono odpowiedzi w ciągu 24 godzin. Jesteśmy zawsze łatwo osiągalni za pośrednictwem mediów społecznościowych, uważnie słuchamy Twojej krytyki i zawsze wdrażamy dobre sugestie użytkowników w rekordowym czasie.\n\nMożesz skontaktować się z naszym wsparciem pod adresem: https://localmonero.co/support\n\n- Uczciwe opłaty\nNie pobieramy wygórowanych opłat za wpłatę lub wypłatę Monero do/z naszego portfela obligacji arbitrażowych. Nie ma opłaty za depozyt, a opłata za wypłatę jest bardzo zbliżona do opłaty, którą zapłaciłbyś za normalną transakcję.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kup XMR prywatnie';
@@ -9197,16 +9260,16 @@ class I18nPl extends I18n {
   String get app_open_dropdown => 'Otwórz listę rozwijaną';
 
   @override
-  String get error250Sbsignup250Sb175 => 'Próba zrealizowania kuponu, który nie istnieje podczas rejestracji';
+  String get error250Sbsignup250Sb175 => 'Próba wykorzystania kuponu, który nie istnieje podczas rejestracji';
 
   @override
   String get error250Sbsignup250Sb176 => 'Próba zrealizowania wygasłego kuponu podczas rejestracji';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Próba zrealizowania kuponu, którego nie ma w magazynie podczas rejestracji';
+  String get error250Sbsignup250Sb177 => 'Próba wykorzystania kuponu, którego nie ma w magazynie podczas rejestracji';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Wysłano list do zresetowania hasła! Sprawdź swoją skrzynkę odbiorczą.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'List dotyczący resetowania hasła został wysłany! Sprawdź swoją skrzynkę odbiorczą.';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Zaakceptuj warunki i kontynuuj';
@@ -9229,39 +9292,81 @@ class I18nPl extends I18n {
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'sprzedaż opcji kupna';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: kup XMR anonimowo';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Edytuj hasło skrzynki, kliknij dwukrotnie, aby edytować';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_accessibility_edit_box_confirm_password => 'Potwierdź pole edycji hasła, dotknij dwukrotnie, aby edytować';
 
   @override
-  String app_503_title(Object val) {
-    return '$val App Maintenance';
-  }
+  String get app_ad_created => 'Reklama utworzona';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val wkrótce wróci!\\nPrzepraszamy za niedogodności, ale w tej chwili przeprowadzamy zaplanowaną konserwację.\\nPrawdopodobnie wkrótce wrócimy do trybu online. Bądź na bieżąco w naszych grupach społecznościowych:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Wybierz typ reklamy';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Stuknij tutaj, aby zostawić opinię!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Już zostawiłeś temu użytkownikowi opinię. Czy chcesz teraz zaktualizować swoją opinię?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Wybierz kupującego lub sprzedającego';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Ustaw domyślną kartę';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'Twoje reklamy';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Konserwacja aplikacji';
+  }
+
+  @override
+  String get app_push_new_message => 'Masz nową wiadomość w handlu';
+
+  @override
+  String get app_push_new_offer => 'Masz nową ofertę';
+
+  @override
+  String get app_push_trade_marked_completed => 'Transakcja oznaczona jako zakończona';
+
+  @override
+  String get app_push_trade_cancelled => 'Transakcja anulowana';
+
+  @override
+  String get app_push_trade_disputed => 'Handel sporny';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Kupuj/sprzedawaj Monero anonimowo';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Kupuj/sprzedawaj Bitcoin anonimowo';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Kupuj lub sprzedawaj Bitcoin bez weryfikacji tożsamości. Gotówką lub online.';
+
+  @override
+  String get app_ask_community_chats => 'Mieć pytania? Zapytaj na czacie społeczności';
+
+  @override
+  String get app_select_currency => 'Wybierz walutę';
+
+  @override
+  String get app_select_country => 'Wybierz kraj';
+
+  @override
+  String get app_select_payment_method => 'Wybierz Metodę Płatności';
 }

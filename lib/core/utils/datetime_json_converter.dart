@@ -11,7 +11,7 @@ class DatetimeJsonConverter extends JsonConverter<DateTime, String> {
 }
 
 String? toJsonDateOrNull(DateTime? date) {
-  return date == null ? null : date.toUtc().toIso8601String();
+  return date?.toUtc().toIso8601String();
 }
 
 DateTime? fromJsonDateOrNull(String? str) {
