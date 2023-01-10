@@ -1,5 +1,3 @@
-WARNING: THIS APP IS CURRENTLY IN OPEN BETA! EXPECT BUGS
-
 Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.
 
 LocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.
