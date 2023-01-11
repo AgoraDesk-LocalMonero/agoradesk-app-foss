@@ -9369,4 +9369,10 @@ class I18nTr extends I18n {
 
   @override
   String get app_select_payment_method => 'Ödeme türünü seçin';
+
+  @override
+  String get app_enable_ad => 'Reklamı etkinleştir';
+
+  @override
+  String get app_disable_ad => 'reklamı devre dışı bırak';
 }

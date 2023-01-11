@@ -9369,6 +9369,12 @@ class I18nZh extends I18n {
 
   @override
   String get app_select_payment_method => 'Select payment method';
+
+  @override
+  String get app_enable_ad => 'Enable ad';
+
+  @override
+  String get app_disable_ad => 'Disable ad';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -26242,4 +26248,10 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get app_select_payment_method => '選擇付款方式';
+
+  @override
+  String get app_enable_ad => '啟用廣告';
+
+  @override
+  String get app_disable_ad => '停用廣告';
 }

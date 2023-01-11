@@ -9369,4 +9369,10 @@ class I18nEl extends I18n {
 
   @override
   String get app_select_payment_method => 'Επιλέξτε τρόπο πληρωμής';
+
+  @override
+  String get app_enable_ad => 'Ενεργοποίηση διαφήμισης';
+
+  @override
+  String get app_disable_ad => 'Απενεργοποίηση διαφήμισης';
 }

@@ -9369,4 +9369,10 @@ class I18nCs extends I18n {
 
   @override
   String get app_select_payment_method => 'Vyberte způsob platby';
+
+  @override
+  String get app_enable_ad => 'Povolit reklamu';
+
+  @override
+  String get app_disable_ad => 'Zakázat reklamu';
 }

@@ -9369,6 +9369,12 @@ class I18nPt extends I18n {
 
   @override
   String get app_select_payment_method => 'Selecione o método de pagamento';
+
+  @override
+  String get app_enable_ad => 'Enable ad';
+
+  @override
+  String get app_disable_ad => 'Disable ad';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -18734,4 +18740,10 @@ class I18nPtBr extends I18nPt {
 
   @override
   String get app_select_payment_method => 'Selecione o método de pagamento';
+
+  @override
+  String get app_enable_ad => 'Ativar anúncio';
+
+  @override
+  String get app_disable_ad => 'Desativar anúncio';
 }

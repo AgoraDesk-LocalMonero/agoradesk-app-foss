@@ -9369,4 +9369,10 @@ class I18nKo extends I18n {
 
   @override
   String get app_select_payment_method => '결제 수단 선택';
+
+  @override
+  String get app_enable_ad => '광고 활성화';
+
+  @override
+  String get app_disable_ad => '광고 비활성화';
 }

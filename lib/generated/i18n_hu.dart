@@ -9369,4 +9369,10 @@ class I18nHu extends I18n {
 
   @override
   String get app_select_payment_method => 'Válassza ki a fizetési módot';
+
+  @override
+  String get app_enable_ad => 'Hirdetés engedélyezése';
+
+  @override
+  String get app_disable_ad => 'Hirdetés letiltása';
 }

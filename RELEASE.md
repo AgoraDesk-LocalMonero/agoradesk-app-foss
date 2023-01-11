@@ -1,7 +1,7 @@
 ### Updates
-1. Links for help in the chat.
-2. Fixed the Cancel button in the trade.
-3. Added new languages.
+1. When app terminated and pusn notification pressed - redirect to the trade screen.
+2. Imroved accessibility.
+3. Improved tooltips.
 
 
 ### About the attached app's

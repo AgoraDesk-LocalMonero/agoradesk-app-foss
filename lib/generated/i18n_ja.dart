@@ -9369,4 +9369,10 @@ class I18nJa extends I18n {
 
   @override
   String get app_select_payment_method => 'お支払い方法を選択';
+
+  @override
+  String get app_enable_ad => '広告を有効にする';
+
+  @override
+  String get app_disable_ad => '広告を無効にする';
 }

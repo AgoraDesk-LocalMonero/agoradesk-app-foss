@@ -34,10 +34,6 @@
     "app_google_play_store_short_description_localmonero"
   ],
 
-  "id": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
   "it": [
     "app_google_play_store_short_description_localmonero"
   ],
@@ -637,7 +633,9 @@
     "app_ask_community_chats",
     "app_select_currency",
     "app_select_country",
-    "app_select_payment_method"
+    "app_select_payment_method",
+    "app_enable_ad",
+    "app_disable_ad"
   ],
 
   "nb_NO": [
@@ -1231,7 +1229,9 @@
     "app_ask_community_chats",
     "app_select_currency",
     "app_select_country",
-    "app_select_payment_method"
+    "app_select_payment_method",
+    "app_enable_ad",
+    "app_disable_ad"
   ],
 
   "nl": [
@@ -1244,7 +1244,9 @@
 
   "pt": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_enable_ad",
+    "app_disable_ad"
   ],
 
   "pt_BR": [
@@ -1883,7 +1885,9 @@
     "app_ask_community_chats",
     "app_select_currency",
     "app_select_country",
-    "app_select_payment_method"
+    "app_select_payment_method",
+    "app_enable_ad",
+    "app_disable_ad"
   ],
 
   "zh_CN": [
@@ -2477,6 +2481,8 @@
     "app_ask_community_chats",
     "app_select_currency",
     "app_select_country",
-    "app_select_payment_method"
+    "app_select_payment_method",
+    "app_enable_ad",
+    "app_disable_ad"
   ]
 }

@@ -9369,4 +9369,10 @@ class I18nRu extends I18n {
 
   @override
   String get app_select_payment_method => 'Выберите способ оплаты';
+
+  @override
+  String get app_enable_ad => 'Включить рекламу';
+
+  @override
+  String get app_disable_ad => 'Отключить рекламу';
 }

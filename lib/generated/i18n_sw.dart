@@ -9369,4 +9369,10 @@ class I18nSw extends I18n {
 
   @override
   String get app_select_payment_method => 'Chagua njia ya malipo';
+
+  @override
+  String get app_enable_ad => 'Washa tangazo';
+
+  @override
+  String get app_disable_ad => 'Zima tangazo';
 }

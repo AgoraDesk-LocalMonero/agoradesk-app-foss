@@ -214,17 +214,25 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
 
                       if (index < model.ads.length) {
                         final ad = model.ads[index];
-                        return AdTile(
-                          ad: ad,
-                          index: index,
-                          changingIndex: model.changingAdIndex,
-                          changingVisibility: model.changingVisibility,
-                          isSelected: model.isAdSelected(ad),
-                          onPressed: () => model.managePressToAd(ad, context),
-                          onLongPress: () => model.handleLongPressToAd(ad),
-                          onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                          tooltipController: index == 0 ? model.tooltipEyeController : null,
-                          tooltipPressController: index == 1 ? model.tooltipPressController : null,
+                        return VisibilityDetector(
+                          key: UniqueKey(),
+                          onVisibilityChanged: (VisibilityInfo info) {
+                            if (index == 1) {
+                              model.manageTooltipReady(info);
+                            }
+                          },
+                          child: AdTile(
+                            ad: ad,
+                            index: index,
+                            changingIndex: model.changingAdIndex,
+                            changingVisibility: model.changingVisibility,
+                            isSelected: model.isAdSelected(ad),
+                            onPressed: () => model.managePressToAd(ad, context),
+                            onLongPress: () => model.handleLongPressToAd(ad),
+                            onVisiblePressed: () => model.changeAdVisibility(ad, index),
+                            tooltipController: index == 0 ? model.tooltipEyeController : null,
+                            tooltipPressController: index == 1 ? model.tooltipPressController : null,
+                          ),
                         );
                       } else {
                         return model.hasMorePages

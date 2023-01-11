@@ -9369,4 +9369,10 @@ class I18nBg extends I18n {
 
   @override
   String get app_select_payment_method => 'Изберете метод на плащане';
+
+  @override
+  String get app_enable_ad => 'Активиране на рекламата';
+
+  @override
+  String get app_disable_ad => 'Деактивиране на рекламата';
 }

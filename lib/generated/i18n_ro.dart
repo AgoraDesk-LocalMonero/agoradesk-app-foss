@@ -9369,4 +9369,10 @@ class I18nRo extends I18n {
 
   @override
   String get app_select_payment_method => 'Selecteaza metoda de plata';
+
+  @override
+  String get app_enable_ad => 'Activați anunțul';
+
+  @override
+  String get app_disable_ad => 'Dezactivați anunțul';
 }
