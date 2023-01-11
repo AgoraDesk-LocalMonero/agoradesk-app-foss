@@ -1,6 +1,6 @@
 ### Updates
-1. When app terminated and pusn notification pressed - redirect to the trade screen.
-2. Imroved accessibility.
+1. When the app is terminated and a push notification is pressed - redirect to the trade screen.
+2. Improved accessibility.
 3. Improved tooltips.
 
 
