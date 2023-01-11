@@ -9369,4 +9369,10 @@ class I18nHi extends I18n {
 
   @override
   String get app_select_payment_method => 'भुगतान का तरीका चुनें';
+
+  @override
+  String get app_enable_ad => 'विज्ञापन सक्षम करें';
+
+  @override
+  String get app_disable_ad => 'विज्ञापन अक्षम करें';
 }

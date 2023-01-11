@@ -9369,4 +9369,10 @@ class I18nUr extends I18n {
 
   @override
   String get app_select_payment_method => 'ادائیگی کا طریقہ منتخب کریں۔';
+
+  @override
+  String get app_enable_ad => 'اشتہار کو فعال کریں۔';
+
+  @override
+  String get app_disable_ad => 'اشتہار کو غیر فعال کریں۔';
 }

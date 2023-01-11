@@ -9369,4 +9369,10 @@ class I18nTl extends I18n {
 
   @override
   String get app_select_payment_method => 'Pumili ng paraan ng pagbabayad';
+
+  @override
+  String get app_enable_ad => 'Paganahin ang ad';
+
+  @override
+  String get app_disable_ad => 'Huwag paganahin ang ad';
 }

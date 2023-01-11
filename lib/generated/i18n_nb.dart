@@ -9369,6 +9369,12 @@ class I18nNb extends I18n {
 
   @override
   String get app_select_payment_method => 'Select payment method';
+
+  @override
+  String get app_enable_ad => 'Enable ad';
+
+  @override
+  String get app_disable_ad => 'Disable ad';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).

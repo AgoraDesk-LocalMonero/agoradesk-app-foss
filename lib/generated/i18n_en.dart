@@ -9369,4 +9369,10 @@ class I18nEn extends I18n {
 
   @override
   String get app_select_payment_method => 'Select payment method';
+
+  @override
+  String get app_enable_ad => 'Enable ad';
+
+  @override
+  String get app_disable_ad => 'Disable ad';
 }

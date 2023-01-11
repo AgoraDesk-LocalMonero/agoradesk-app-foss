@@ -9369,4 +9369,10 @@ class I18nFi extends I18n {
 
   @override
   String get app_select_payment_method => 'Valitse maksutapa';
+
+  @override
+  String get app_enable_ad => 'Ota mainos käyttöön';
+
+  @override
+  String get app_disable_ad => 'Poista mainos käytöstä';
 }

@@ -9369,4 +9369,10 @@ class I18nAr extends I18n {
 
   @override
   String get app_select_payment_method => 'اختار طريقة الدفع';
+
+  @override
+  String get app_enable_ad => 'تمكين الإعلان';
+
+  @override
+  String get app_disable_ad => 'تعطيل الإعلان';
 }

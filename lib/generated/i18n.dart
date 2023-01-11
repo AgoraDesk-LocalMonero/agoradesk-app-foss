@@ -16856,6 +16856,18 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Select payment method'**
   String get app_select_payment_method;
+
+  /// No description provided for @app_enable_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable ad'**
+  String get app_enable_ad;
+
+  /// No description provided for @app_disable_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable ad'**
+  String get app_disable_ad;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

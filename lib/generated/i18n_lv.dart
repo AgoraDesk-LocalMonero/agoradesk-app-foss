@@ -9369,4 +9369,10 @@ class I18nLv extends I18n {
 
   @override
   String get app_select_payment_method => 'Izvēlieties maksājuma veidu';
+
+  @override
+  String get app_enable_ad => 'Iespējot reklāmu';
+
+  @override
+  String get app_disable_ad => 'Atspējot reklāmu';
 }

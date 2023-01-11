@@ -9369,4 +9369,10 @@ class I18nSl extends I18n {
 
   @override
   String get app_select_payment_method => 'Izberite način plačila';
+
+  @override
+  String get app_enable_ad => 'Omogoči oglas';
+
+  @override
+  String get app_disable_ad => 'Onemogoči oglas';
 }
