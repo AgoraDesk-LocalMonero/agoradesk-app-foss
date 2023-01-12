@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:isolate';
 
@@ -5,6 +6,7 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/foreground/foreground_handler.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -34,6 +36,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     _initForeground();
+    getPublicIP();
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
     super.initState();
   }
@@ -115,6 +118,24 @@ class _MainScreenState extends State<MainScreen> {
         );
       },
     );
+  }
+
+  Future getPublicIP() async {
+    final httpProxy = createProxyHttpClient()..findProxy = (url) => 'SOCKS5 69.194.181.6:7497';
+    const url = 'https://api.ipify.org';
+    await httpProxy
+        .getUrl(Uri.parse(url))
+        .then((value) {
+          return value.close();
+        })
+        .then((value) {
+          return value.transform(utf8.decoder);
+        })
+        .then((value) {
+          return value.fold('', (dynamic previous, element) => previous + element);
+        })
+        .then((value) => print('+++++++++++++++++++++++++++++++++++++555555 $value'))
+        .catchError((e) => print(e));
   }
 
   ///
