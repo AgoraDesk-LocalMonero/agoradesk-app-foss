@@ -4,6 +4,7 @@ import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
@@ -144,6 +145,42 @@ class ApiClient {
         },
       ),
     );
+  }
+
+  Future<Response<dynamic>> get(
+    String path, {
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    if (GetIt.I<AppParameters>().proxy == false) {
+      return _dio.get(
+        path,
+        queryParameters: queryParameters,
+        options: options,
+        cancelToken: cancelToken,
+        onReceiveProgress: onReceiveProgress,
+      );
+    } else {
+      late final Response<dynamic> resp;
+      final httpProxy = createProxyHttpClient()..findProxy = (url) => 'SOCKS5 69.194.181.6:7497';
+      await httpProxy.getUrl(Uri.parse(GetIt.I<AppParameters>().urlApiBase + path)).then((value) {
+        value.headers.add('Authorization', accessToken ?? '');
+        return value.close();
+      }).then((value) {
+        return value.transform(utf8.decoder);
+      }).then((value) {
+        return value.fold('', (dynamic previous, element) => previous + element);
+      }).then((value) {
+        resp = Response(
+          statusCode: 200,
+          data: jsonDecode(value),
+          requestOptions: RequestOptions(path: path),
+        );
+      }).catchError((e) => print(e));
+      return resp;
+    }
   }
 
   // Future<bool> _checkCaptchaInHeadlessWebView() async {

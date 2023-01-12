@@ -223,4 +223,5 @@ class AppParameters {
   bool isGoogleAvailable = true;
   String? tradeId;
   bool appRanFromPush = false;
+  bool proxy = true;
 }

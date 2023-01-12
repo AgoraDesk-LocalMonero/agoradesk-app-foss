@@ -78,9 +78,9 @@ class WalletService {
   Future<Either<ApiError, WalletBalanceModel>> getWalletTransactions(Asset asset) async {
     String requestOption = asset == Asset.BTC ? '' : '/${asset.key()}';
     try {
-      final resp = await _api.client.get('/wallet$requestOption');
-      log('++++ ${resp.data}');
+      final resp = await _api.get('/wallet$requestOption');
       if (resp.statusCode == 200) {
+        print('+++++++++++++++++++++++++++++++++++++99999999 ${resp.data}');
         final wallet = WalletBalanceModel.fromJson(resp.data['data']);
         return Either.right(wallet);
       } else {
