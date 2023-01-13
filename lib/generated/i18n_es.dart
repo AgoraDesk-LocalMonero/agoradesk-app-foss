@@ -9375,4 +9375,16 @@ class I18nEs extends I18n {
 
   @override
   String get app_disable_ad => 'Deshabilitar anuncio';
+
+  @override
+  String get app_proxy => 'SOCKS5 Proxy';
+
+  @override
+  String get app_proxy_details => 'SOCKS5 Proxy details';
+
+  @override
+  String get app_proxy_use => 'Use proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes';
 }

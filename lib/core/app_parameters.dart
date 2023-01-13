@@ -66,6 +66,10 @@ class AppParameters {
   final String xmrChainUrl = 'https://xmrchain.net/search?value=';
   final String btcChainUrl = 'https://www.blockchain.com/btc/tx/';
 
+  /// Channels for bugs
+  final String telegramDev = 'https://t.me/+Hvf6nSq9ImBkMDhl';
+  final String matrixDev = 'https://matrix.to/#/#app-beta-testers:agoradesk.com';
+
   /// passwords
   final int minPasswordLength = 8;
   final int maxPasswordLength = 72;

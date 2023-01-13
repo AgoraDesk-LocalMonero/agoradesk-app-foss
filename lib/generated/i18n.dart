@@ -16868,6 +16868,30 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Disable ad'**
   String get app_disable_ad;
+
+  /// No description provided for @app_proxy.
+  ///
+  /// In en, this message translates to:
+  /// **'SOCKS5 Proxy'**
+  String get app_proxy;
+
+  /// No description provided for @app_proxy_details.
+  ///
+  /// In en, this message translates to:
+  /// **'SOCKS5 Proxy details'**
+  String get app_proxy_details;
+
+  /// No description provided for @app_proxy_use.
+  ///
+  /// In en, this message translates to:
+  /// **'Use proxy'**
+  String get app_proxy_use;
+
+  /// No description provided for @app_proxy_bugs_expected.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes'**
+  String get app_proxy_bugs_expected;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

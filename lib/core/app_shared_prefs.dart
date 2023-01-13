@@ -19,6 +19,11 @@ enum AppSharedPrefsKey {
   cachedCurrencySavedDate,
   tooltipShownNames,
   defaultTab,
+  proxyEnabled,
+  proxyServer,
+  proxyPort,
+  proxyUsername,
+  proxyPassword,
 }
 
 class AppSharedPrefs with DateMixin {

@@ -1,45 +1,127 @@
 {
+  "ar": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
   "bg": [
-    "app_apple_app_store_subtitle_agoradesk"
+    "app_apple_app_store_subtitle_agoradesk",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "cs": [
     "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "da": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "de": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "el": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "es": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "fi": [
     "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
+  "fr": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
+  "hi": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "hu": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
+  "id": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "it": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
+  "ja": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
+  "ko": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "lv": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "nb": [
@@ -635,7 +717,11 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "nb_NO": [
@@ -1231,67 +1317,119 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "nl": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "pl": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "pt": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_google_play_store_short_description_localmonero",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "pt_BR": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "ro": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "ru": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "sk": [
     "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "sl": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "sw": [
     "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "tl": [
     "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "tr": [
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "ur": [
     "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "zh": [
@@ -1887,7 +2025,11 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ],
 
   "zh_CN": [
@@ -2483,6 +2625,17 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
+  ],
+
+  "zh_TW": [
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected"
   ]
 }
