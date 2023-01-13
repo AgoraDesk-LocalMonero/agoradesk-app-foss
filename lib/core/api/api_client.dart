@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
@@ -46,7 +47,6 @@ class ApiClient {
 
   ApiClient({
     BaseOptions? options,
-    String? proxy,
     bool debug = false,
     bool useMocks = false,
   })  : _dio = Dio(options ?? _defaultOptions),
@@ -164,21 +164,43 @@ class ApiClient {
       );
     } else {
       late final Response<dynamic> resp;
-      final httpProxy = createProxyHttpClient()..findProxy = (url) => 'SOCKS5 69.194.181.6:7497';
-      await httpProxy.getUrl(Uri.parse(GetIt.I<AppParameters>().urlApiBase + path)).then((value) {
-        value.headers.add('Authorization', accessToken ?? '');
-        return value.close();
-      }).then((value) {
-        return value.transform(utf8.decoder);
-      }).then((value) {
-        return value.fold('', (dynamic previous, element) => previous + element);
-      }).then((value) {
+      try {
+        final HttpClient httpProxy = createProxyHttpClient()..findProxy = (url) => 'SOCKS5 69.194.181.6:7497';
+        final HttpClientResponse response =
+            await httpProxy.getUrl(Uri.parse(GetIt.I<AppParameters>().urlApiBase + path)).then((value) {
+          value.headers.add('Authorization', accessToken ?? '');
+          return value.close();
+        });
+        final Stream<String> streamString = response.transform(utf8.decoder);
+        final dynamic res = await streamString.fold('', (dynamic previous, element) => previous + element);
+        try {
+          if (res.toString().contains('error')) {
+            resp = Response(
+              statusCode: 500,
+              data: jsonDecode(res),
+              requestOptions: RequestOptions(path: path),
+            );
+          } else {
+            resp = Response(
+              statusCode: 200,
+              data: jsonDecode(res),
+              requestOptions: RequestOptions(path: path),
+            );
+          }
+        } catch (e) {
+          resp = Response(
+            statusCode: 500,
+            data: jsonDecode(e.toString()),
+            requestOptions: RequestOptions(path: path),
+          );
+        }
+      } catch (e) {
         resp = Response(
-          statusCode: 200,
-          data: jsonDecode(value),
+          statusCode: 500,
+          data: jsonDecode(e.toString()),
           requestOptions: RequestOptions(path: path),
         );
-      }).catchError((e) => print(e));
+      }
       return resp;
     }
   }

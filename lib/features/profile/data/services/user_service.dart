@@ -130,7 +130,7 @@ class UserService {
   ///
   Future<Either<ApiError, UserSettingsModel>> getSettings() async {
     try {
-      final resp = await _api.client.get('/settings');
+      final resp = await _api.get('/settings');
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
         return Either.right(UserSettingsModel.fromJson(respMap));
@@ -194,7 +194,7 @@ class UserService {
   ///
   Future<Either<ApiError, List<CouponModel>>> getCoupons() async {
     try {
-      final resp = await _api.client.get('/coupon');
+      final resp = await _api.get('/coupon');
       if (resp.statusCode == 200) {
         List<dynamic> respDecoded = jsonDecode(jsonEncode(resp.data['data']));
         final List<CouponModel> resList = respDecoded.map((e) => CouponModel.fromJson(e)).toList();
@@ -214,7 +214,7 @@ class UserService {
   ///
   Future<Either<ApiError, Pagination<AccountInfoModel>>> getTrusted({int page = 0}) async {
     try {
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/trusted',
         queryParameters: {
           'page': page,
@@ -244,7 +244,7 @@ class UserService {
   ///
   Future<Either<ApiError, Pagination<AccountInfoModel>>> getBlocked({int page = 0}) async {
     try {
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/blocked',
         queryParameters: {
           'page': page,
@@ -294,7 +294,7 @@ class UserService {
   ///
   Future<Either<ApiError, AffiliateModel>> getAffiliate() async {
     try {
-      final resp = await _api.client.get('/affiliate');
+      final resp = await _api.get('/affiliate');
       if (resp.statusCode == 200) {
         return Either.right(AffiliateModel.fromJson(resp.data['data']).copyWith(enabled: true));
       } else {
@@ -314,7 +314,7 @@ class UserService {
   ///
   Future<Either<ApiError, List<ReputationModel>>> getReputationImport() async {
     try {
-      final resp = await _api.client.get('/reputation_import');
+      final resp = await _api.get('/reputation_import');
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
         final ReputationModel localbitcoins = ReputationModel.fromJson(respMap['localbitcoins']);

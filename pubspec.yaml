@@ -65,6 +65,7 @@ dependencies:
   firebase_core: ^2.1.1
   firebase_messaging: ^14.0.3
   get_it: ^7.2.0
+  injectable: ^2.1.0
   flutter_local_notifications: ^13.0.0
   flutter_foreground_task: ^3.8.2
   google_api_availability: ^3.0.1
@@ -103,6 +104,7 @@ dev_dependencies:
   hive_generator: any
   freezed: ^2.1.0
   mocktail: any
+  injectable_generator: any
 
 
 flutter:

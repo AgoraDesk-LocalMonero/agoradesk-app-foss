@@ -25,7 +25,7 @@ class WalletService {
   Future<Either<ApiError, WalletBalanceModel>> getBalance(Asset asset) async {
     String requestOption = asset == Asset.BTC ? '' : '/${asset.key()}';
     try {
-      final resp = await _api.client.get('/wallet-balance$requestOption');
+      final resp = await _api.get('/wallet-balance$requestOption');
       if (resp.statusCode == 200) {
         final wallet = WalletBalanceModel.fromJson(resp.data['data']);
         return Either.right(wallet);
@@ -48,7 +48,7 @@ class WalletService {
     required TransactionsRequestModel request,
   }) async {
     try {
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/wallet/transactions',
         queryParameters: request.toJson(),
       );
@@ -80,7 +80,6 @@ class WalletService {
     try {
       final resp = await _api.get('/wallet$requestOption');
       if (resp.statusCode == 200) {
-        print('+++++++++++++++++++++++++++++++++++++99999999 ${resp.data}');
         final wallet = WalletBalanceModel.fromJson(resp.data['data']);
         return Either.right(wallet);
       } else {
@@ -101,9 +100,9 @@ class WalletService {
     try {
       late final Response<dynamic> resp;
       if (address != null && address.isNotEmpty) {
-        resp = await _api.client.get('/fees?address=$address');
+        resp = await _api.get('/fees?address=$address');
       } else {
-        resp = await _api.client.get('/fees');
+        resp = await _api.get('/fees');
       }
       if (resp.statusCode == 200) {
         final fees = BtcFeesModel.fromJson(resp.data['data']);
@@ -124,7 +123,7 @@ class WalletService {
   ///
   Future<Either<ApiError, List<IncomingDepositModel>>> getIncomingDeposits(Asset asset) async {
     try {
-      final resp = await _api.client.get('/deposits/${asset.name}');
+      final resp = await _api.get('/deposits/${asset.name}');
       log(resp.data.toString());
       if (resp.statusCode == 200) {
         final List<IncomingDepositModel> res = [];
@@ -152,7 +151,7 @@ class WalletService {
   ///
   Future<Either<ApiError, double>> getXmrFees() async {
     try {
-      final Response<dynamic> resp = await _api.client.get('/fees/XMR');
+      final Response<dynamic> resp = await _api.get('/fees/XMR');
       if (resp.statusCode == 200) {
         final fees = double.parse(resp.data['data']['outgoing_fee']);
         return Either.right(fees);

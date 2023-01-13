@@ -26,7 +26,7 @@ class AccountService {
   ///
   Future<Either<ApiError, AccountInfoModel>> getAccountInfo(String username) async {
     try {
-      final resp = await _api.client.get('/account_info/$username');
+      final resp = await _api.get('/account_info/$username');
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
         return Either.right(AccountInfoModel.fromJson(respMap));
@@ -45,7 +45,7 @@ class AccountService {
   ///
   Future<Either<ApiError, AccountInfoModel>> getMyself() async {
     try {
-      final resp = await _api.client.get('/myself');
+      final resp = await _api.get('/myself');
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
         return Either.right(AccountInfoModel.fromJson(respMap));
@@ -65,7 +65,7 @@ class AccountService {
   Future<Either<ApiError, Pagination<TradeModel>>> getTradesWithUser(
       {required String username, required TradeRequestType type}) async {
     try {
-      final resp = await _api.client.get('/account_info/$username/trades/${type.name}');
+      final resp = await _api.get('/account_info/$username/trades/${type.name}');
       if (resp.statusCode == 200) {
         final List<dynamic> respList = jsonDecode(jsonEncode(resp.data['data']['contact_list']));
         PaginationMeta pagination = PaginationMeta.zero();
@@ -90,7 +90,7 @@ class AccountService {
   Future<Either<ApiError, List<ActivityNotificationModel>>> getNotifications({DateTime? after}) async {
     try {
       final Map<String, int> queryParameters = after == null ? {} : {'after': after.toUtc().millisecondsSinceEpoch};
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/notifications',
         queryParameters: queryParameters,
       );
@@ -205,7 +205,7 @@ class AccountService {
     }
     queryParameters['page'] = page;
     try {
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/feedback/$username',
         queryParameters: queryParameters,
       );
@@ -261,7 +261,7 @@ class AccountService {
   ///
   Future<Either<ApiError, NoteModel>> getNote(String username) async {
     try {
-      final resp = await _api.client.get('/note/$username');
+      final resp = await _api.get('/note/$username');
       if (resp.statusCode == 200) {
         return Either.right(NoteModel.fromJson(resp.data['data']));
       } else {

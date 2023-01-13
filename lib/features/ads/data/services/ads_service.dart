@@ -24,7 +24,7 @@ class AdsService {
   ///
   Future<Either<ApiError, List<CurrencyModel>>> getCurrencies() async {
     try {
-      final resp = await _api.client.get('/currencies');
+      final resp = await _api.get('/currencies');
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['currencies']));
         List<CurrencyModel> result = [];
@@ -47,7 +47,7 @@ class AdsService {
   ///
   Future<Either<ApiError, CountryCodeModel>> getCountryCodes() async {
     try {
-      final resp = await _api.client.get('/countrycodes');
+      final resp = await _api.get('/countrycodes');
       if (resp.statusCode == 200) {
         CountryCodeModel countryCode = CountryCodeModel.fromJson(resp.data['data']);
         return Either.right(countryCode);
@@ -70,7 +70,7 @@ class AdsService {
       if (country != kAnyCountryCode) {
         request += '/$country';
       }
-      final resp = await _api.client.get(request);
+      final resp = await _api.get(request);
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['methods']));
         List<OnlineProvider> result = [];
@@ -125,7 +125,7 @@ class AdsService {
           url += '/$paymentMethod';
         }
       }
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '$url$urlParameter',
         queryParameters: parameters,
       );
@@ -159,7 +159,7 @@ class AdsService {
     required AdsRequestParameterModel requestParameter,
   }) async {
     try {
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/ads',
         queryParameters: requestParameter.toJson(),
       );
@@ -201,7 +201,7 @@ class AdsService {
       if (tradeType != null) {
         parameters['trade_type'] = tradeType.name;
       }
-      final resp = await _api.client.get(
+      final resp = await _api.get(
         '/user-ads/$username$urlParameter',
         queryParameters: parameters,
       );
@@ -234,7 +234,7 @@ class AdsService {
   ///
   Future<Either<ApiError, AdModel>> getAd(String id) async {
     try {
-      final resp = await _api.client.get('/ad-get/$id');
+      final resp = await _api.get('/ad-get/$id');
       if (resp.statusCode == 200) {
         final respMap = jsonDecode(jsonEncode(resp.data['data']['ad_list'][0]['data']));
         AdModel result = AdModel.fromJson(respMap);
