@@ -1,0 +1,27 @@
+Koupit nebo prodat Monero bez ověření ID. Hotově nebo online. Bezpečné, rychlé, snadné.
+
+LocalMonero je největší, nejdůvěryhodnější a dobře zavedená obchodní platforma P2P v komunitě XMR. Nemáme žádné KYC prověřování – Monero si můžete jednoduše anonymně nakoupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést bitcoiny, ethery, USDT nebo jakékoli jiné krypto mince na Monero – naše platforma podporuje jakoukoli platební metodu.
+
+- Bezpečné a hladké obchodování
+Podporujeme jakoukoli platební metodu, jakoukoli měnu a kdekoli. Neodstraňujeme platební metody a plně podporujeme hotovostní obchody tváří v tvář. Všechny naše obchody jsou chráněny arbitrážním dluhopisem. Díky tomu, že požadujeme, aby byly prostředky před zahájením obchodu drženy v rozhodčím dluhopisu, zajišťujeme bezproblémový a bezpečný zážitek pro kupujícího, který je nezbytný pro popularitu platformy a opakované zákazníky pro prodejce.
+
+- Žádné ověření KYC/AML nebo ID
+LocalMonero se zavazuje udržovat jednoduchost a přímočarost vašich obchodních zkušeností. Nezavádíme KYC/AML a ani to nikdy neplánujeme.
+
+- Důvěryhodný komunitou
+Naše platforma funguje více než čtyři roky, přežila velký krach kryptoměnového trhu v roce 2018 a díky své komunitně orientované pečlivé službě se stala jedním z nejdůvěryhodnějších jmen v extrémně skeptické komunitě Monero.
+
+- Bezpečné, Open Source, Ochrana soukromí, Odolné vůči cenzuře
+Naše aplikace je zdarma a s otevřeným zdrojovým kódem, což zajišťuje, že mnoho očí se dívá na kód aplikace, aby se zajistilo, že neexistují žádné bezpečnostní díry nebo úniky privátních dat. Otevřený zdroj naší aplikace také umožňuje komukoli mít přístup k naší aplikaci, i když určité typy úložišti aplikací, aplikace cenzurují. Naše aplikace funguje i na telefonech, které mají Google zcela zablokovaný. Velmi si vážíme Vašeho soukromí, takže ani nepožadujeme, abyste při registraci uváděli e-mail.
+Koupit nebo prodat Monero bez ověření ID. VAROVÁNÍ: TATO APLIKACE JE MOMENTÁLNĚ V OTEVŘENÉ BETA!
+
+Zdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Sledování problémů: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+
+- Hvězdná podpora
+Náš tým podpory je rychlý, pohotový a vždy se snaží vyhovět. Nikdy jsme neměli lístek podpory, který by nebyl zodpovězen do 24 hodin. Jsme vždy snadno dosažitelní prostřednictvím sociálních médií, pozorně nasloucháme Vaší kritice a vždy implementujeme dobré uživatelské návrhy v rekordním čase.
+
+Naši podporu můžete kontaktovat na: https://localmonero.co/support
+
+- Spravedlivé poplatky
+Neúčtujeme přemrštěné poplatky, když vkládáte nebo vybíráte Monero do/z naší peněženky arbitrážních dluhopisů. Neexistuje žádný poplatek za vklad a poplatek za výběr se velmi blíží poplatku, který byste platili za normální transakci.

@@ -1,0 +1,1 @@
+kryptoměna,anonymní,soukromá,monero,xmr,p2p

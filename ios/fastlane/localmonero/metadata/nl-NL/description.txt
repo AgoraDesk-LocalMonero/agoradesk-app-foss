@@ -1,0 +1,27 @@
+Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.
+
+LocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaubon, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt omzetten naar Monero - ons platform ondersteunt elke betaalmethode.
+
+- Veilige en vlotte handel
+We ondersteunen elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en we ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in de arbitragebond worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.
+
+- Geen KYC/AML of ID-verificatie
+LocalMonero doet er alles aan om de eenvoud en rechtlijnigheid van uw handelservaring te behouden. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.
+
+- Vertrouwd door de gemeenschap
+Ons platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap.
+
+- Veilig, open source, privacygericht, censuurbestendig
+Onze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we u niet eens vragen om een e-mailadres op te geven bij het registreren.
+Koop of verkoop Monero zonder ID-verificatie. WAARSCHUWING: DEZE APP IS MOMENTEEL IN OPEN BETA!
+
+Broncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Probleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+
+- Stellaire ondersteuning
+Ons ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via social media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.
+
+U kunt onze ondersteuning bereiken op: https://localmonero.co/support
+
+- Eerlijke vergoedingen
+We brengen geen exorbitante kosten in rekening wanneer u Monero stort of opneemt in/uit onze arbitrage-obligatieportefeuille. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.
