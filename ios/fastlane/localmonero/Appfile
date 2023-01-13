@@ -1,8 +1,0 @@
-app_identifier("co.localmonero.app") # The bundle identifier of your app
-apple_id("awaiking44@gmail.com") # Your Apple Developer Portal username
-
-itc_team_id("124033163") # App Store Connect Team ID
-team_id("G8RXR25D89") # Developer Portal Team ID
-
-# For more information about the Appfile, see:
-#     https://docs.fastlane.tools/advanced/#appfile

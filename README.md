@@ -73,7 +73,7 @@ Push notifications will be received with polling with foreground service (if the
 
 iOS https://docs.fastlane.tools/actions/deliver/
 
-`fastlane deliver` 
+`fastlane deliver --metadata_path="/fastlane/localmonero"` 
 
 Android https://docs.fastlane.tools/actions/supply/
 
