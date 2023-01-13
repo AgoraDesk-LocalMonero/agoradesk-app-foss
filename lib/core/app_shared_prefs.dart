@@ -53,6 +53,8 @@ class AppSharedPrefs with DateMixin {
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
+  bool? get proxyEnabled => getBool(AppSharedPrefsKey.proxyEnabled);
+
   bool? get biometricAuthIsOn => getBool(AppSharedPrefsKey.biometricAuthIsOn);
 
   bool? get sentryIsOn => getBool(AppSharedPrefsKey.sentryIsOn);
@@ -62,6 +64,14 @@ class AppSharedPrefs with DateMixin {
   bool? get pushFcmTokenSavedToApi => getBool(AppSharedPrefsKey.pushFcmTokenSavedToApi);
 
   String? get username => getString(AppSharedPrefsKey.username);
+
+  String? get proxyServer => getString(AppSharedPrefsKey.proxyServer);
+
+  String? get proxyPort => getString(AppSharedPrefsKey.proxyPort);
+
+  String? get proxyUsername => getString(AppSharedPrefsKey.proxyUsername);
+
+  String? get proxyPassword => getString(AppSharedPrefsKey.proxyPassword);
 
   bool? get ignoreAllUpdates => getBool(AppSharedPrefsKey.ignoreAllUpdates);
 
