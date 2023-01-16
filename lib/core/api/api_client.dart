@@ -174,10 +174,11 @@ class ApiClient {
         final Stream<String> streamString = response.transform(utf8.decoder);
         final dynamic res = await streamString.fold('', (dynamic previous, element) => previous + element);
         try {
-          if (res.toString().contains('error')) {
+          if (res.toString().contains('error') && res.toString().contains('error_code')) {
+            final Map<String, dynamic> respMap = jsonDecode(res);
             resp = Response(
-              statusCode: 500,
-              data: jsonDecode(res),
+              statusCode: respMap['error']['error_code'],
+              data: respMap,
               requestOptions: RequestOptions(path: path),
             );
           } else {
@@ -189,8 +190,8 @@ class ApiClient {
           }
         } catch (e) {
           resp = Response(
-            statusCode: 500,
-            data: jsonDecode(e.toString()),
+            statusCode: 520,
+            data: {'error': 'Proxy error, please check connection or submit a bug.'},
             requestOptions: RequestOptions(path: path),
           );
         }
