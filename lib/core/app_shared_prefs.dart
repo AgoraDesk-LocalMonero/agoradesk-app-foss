@@ -65,13 +65,13 @@ class AppSharedPrefs with DateMixin {
 
   String? get username => getString(AppSharedPrefsKey.username);
 
-  String? get proxyServer => getString(AppSharedPrefsKey.proxyServer);
+  String get proxyServer => getString(AppSharedPrefsKey.proxyServer) ?? '';
 
-  String? get proxyPort => getString(AppSharedPrefsKey.proxyPort);
+  String get proxyPort => getString(AppSharedPrefsKey.proxyPort) ?? '';
 
-  String? get proxyUsername => getString(AppSharedPrefsKey.proxyUsername);
+  String get proxyUsername => getString(AppSharedPrefsKey.proxyUsername) ?? '';
 
-  String? get proxyPassword => getString(AppSharedPrefsKey.proxyPassword);
+  String get proxyPassword => getString(AppSharedPrefsKey.proxyPassword) ?? '';
 
   bool? get ignoreAllUpdates => getBool(AppSharedPrefsKey.ignoreAllUpdates);
 

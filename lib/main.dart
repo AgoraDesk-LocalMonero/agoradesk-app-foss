@@ -7,8 +7,10 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
+import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
+import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -27,7 +29,6 @@ import 'firebase_options_localmonero.dart' as localmonero_options;
 
 const kNotificationsChannel = 'trades_channel';
 const kNotificationIcon = '@mipmap/ic_icon_black';
-// const kNotificationIcon = '@drawable/launch_push';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -105,6 +106,16 @@ void main() async {
   );
 
   final bool sentryIsOn = AppSharedPrefs().sentryIsOn != false;
+
+  // Get info about proxy on or off
+  final bool proxyEnabled = AppSharedPrefs().proxyEnabled == true;
+  GetIt.I<AppParameters>().proxy = proxyEnabled;
+  if (proxyEnabled) {
+    final proxyAddress = getProxyAddress();
+    SocksProxy.initProxy(proxy: 'SOCKS5 $proxyAddress');
+  } else {
+    SocksProxy.initProxy(proxy: 'DIRECT');
+  }
 
   if (kDebugMode || includeFcm == false || sentryIsOn == false) {
     runApp(const App());

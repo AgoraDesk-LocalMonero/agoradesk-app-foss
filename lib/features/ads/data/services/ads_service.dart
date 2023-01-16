@@ -141,11 +141,9 @@ class AdsService {
         for (var e in respMap) {
           result.add(AdModel.fromJson(e['data']));
         }
-        print('+++++++++++++++++++++++++++++++++++++11');
         return Either.right(Pagination(result, pagination: pagination));
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
-        print('+++++++++++++++++++++++++++++++++++++22');
         return Either.left(apiError);
       }
     } catch (e) {

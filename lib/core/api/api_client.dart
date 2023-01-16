@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
-import 'dart:io';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
-import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
@@ -31,7 +30,7 @@ BaseOptions _defaultOptions = BaseOptions(
   },
 );
 
-class ApiClient {
+class ApiClient with UrlMixin {
   /// Api access token
   String? accessToken;
 
@@ -154,56 +153,16 @@ class ApiClient {
     CancelToken? cancelToken,
     ProgressCallback? onReceiveProgress,
   }) async {
-    if (GetIt.I<AppParameters>().proxy == false) {
-      return _dio.get(
-        path,
-        queryParameters: queryParameters,
-        options: options,
-        cancelToken: cancelToken,
-        onReceiveProgress: onReceiveProgress,
-      );
-    } else {
-      late final Response<dynamic> resp;
-      try {
-        final HttpClient httpProxy = createProxyHttpClient()..findProxy = (url) => 'SOCKS5 69.194.181.6:7497';
-        final HttpClientResponse response =
-            await httpProxy.getUrl(Uri.parse(GetIt.I<AppParameters>().urlApiBase + path)).then((value) {
-          value.headers.add('Authorization', accessToken ?? '');
-          return value.close();
-        });
-        final Stream<String> streamString = response.transform(utf8.decoder);
-        final dynamic res = await streamString.fold('', (dynamic previous, element) => previous + element);
-        try {
-          if (res.toString().contains('error') && res.toString().contains('error_code')) {
-            final Map<String, dynamic> respMap = jsonDecode(res);
-            resp = Response(
-              statusCode: respMap['error']['error_code'],
-              data: respMap,
-              requestOptions: RequestOptions(path: path),
-            );
-          } else {
-            resp = Response(
-              statusCode: 200,
-              data: jsonDecode(res),
-              requestOptions: RequestOptions(path: path),
-            );
-          }
-        } catch (e) {
-          resp = Response(
-            statusCode: 520,
-            data: {'error': 'Proxy error, please check connection or submit a bug.'},
-            requestOptions: RequestOptions(path: path),
-          );
-        }
-      } catch (e) {
-        resp = Response(
-          statusCode: 500,
-          data: jsonDecode(e.toString()),
-          requestOptions: RequestOptions(path: path),
-        );
-      }
-      return resp;
-    }
+    // const url = 'https://api.ipify.org';
+    // final aa = await _dio.get(url);
+    // print('+++++++++++++++++++++++++++++++++++++44444 - $aa');
+    return _dio.get(
+      path,
+      queryParameters: queryParameters,
+      options: options,
+      cancelToken: cancelToken,
+      onReceiveProgress: onReceiveProgress,
+    );
   }
 
   // Future<bool> _checkCaptchaInHeadlessWebView() async {
