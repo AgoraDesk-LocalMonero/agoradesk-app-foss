@@ -460,6 +460,7 @@ extension ThemeShorcuts on BuildContext {
   Color get colN50 => Theme.of(this).colorScheme.neutral50;
 
   Color get colN60 => Theme.of(this).colorScheme.neutral60;
+  Color get n60N50 => Theme.of(this).colorScheme.n60N50;
 
   Color get colN70 => Theme.of(this).colorScheme.neutral70;
 
