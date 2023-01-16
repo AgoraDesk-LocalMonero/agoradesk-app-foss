@@ -666,6 +666,11 @@
     "app_google_play_store_short_description_localmonero"
   ],
 
+  "pt_BR": [
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_google_play_store_short_description_localmonero"
+  ],
+
   "ro": [
     "app_google_play_store_short_description_localmonero",
     "app_google_play_store_short_description_agoradesk"

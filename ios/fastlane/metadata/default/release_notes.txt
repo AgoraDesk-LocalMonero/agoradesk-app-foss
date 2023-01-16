@@ -1,6 +1,3 @@
-1. Design: light theme shadows.
-2. Feat: choose default tab sections that open when we launch the app.
-3. Feat: improve accessibility.
-4. Feat: adding a review widget to the chat and activity tab when the trade is completed.
-5. Fix: ads are loading on the ads screen.
-6. Fix: grey screen on the trade tab.
+1. When the app is terminated and a push notification is pressed - redirect to the trade screen.
+2. Improved accessibility.
+3. Improved tooltips.

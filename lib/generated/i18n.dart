@@ -137,6 +137,7 @@ abstract class I18n {
     Locale('nb'),
     Locale('nl'),
     Locale('pl'),
+    Locale('pt', 'BR'),
     Locale('pt'),
     Locale('ro'),
     Locale('ru'),
@@ -16731,6 +16732,12 @@ I18n lookupI18n(Locale locale) {
 
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
+    case 'pt': {
+  switch (locale.countryCode) {
+    case 'BR': return I18nPtBr();
+   }
+  break;
+   }
     case 'zh': {
   switch (locale.countryCode) {
     case 'CN': return I18nZhCn();
