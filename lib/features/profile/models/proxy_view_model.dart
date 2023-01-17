@@ -13,6 +13,10 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
+///
+/// Proxy example 69.194.181.6:7497
+///
+
 class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   ProxyViewModel({
     required AccountService accountService,
