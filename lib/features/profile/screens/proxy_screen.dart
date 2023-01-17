@@ -4,8 +4,7 @@ import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
-import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/features/profile/data/services/user_service.dart';
+import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/profile/models/proxy_view_model.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -23,8 +22,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
   Widget build(BuildContext context) {
     return ViewModelBuilder<ProxyViewModel>(
         model: ProxyViewModel(
-          userService: context.read<UserService>(),
-          authService: context.read<AuthService>(),
+          accountService: context.read<AccountService>(),
         ),
         builder: (context, model, _) {
           return KeyboardDismissOnTap(
@@ -130,7 +128,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                           title: context.intl.edit8722Sbad250Sbsave8722Sbbtn,
                           active: model.readyToSwitchOnProxy,
                           loading: model.loading,
-                          onPressed: () => model.saveProxy(),
+                          onPressed: () => model.saveProxy(context),
                         ),
                       ],
                     ),
