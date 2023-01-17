@@ -9387,6 +9387,9 @@ class I18nPt extends I18n {
 
   @override
   String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes';
+
+  @override
+  String get app_proxy_select_type => 'Select proxy type';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

@@ -8,6 +8,7 @@ import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_close.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
+import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -36,6 +37,12 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   bool _loading = false;
   bool _readyToSwitchOnProxy = false;
   bool _proxyAvailable = false;
+
+  ProxyType _proxyType = ProxyType.socks5;
+
+  ProxyType get proxyType => _proxyType;
+
+  set proxyType(ProxyType? v) => updateWith(proxyType: v);
 
   bool get proxyAvailable => _proxyAvailable;
 
@@ -110,7 +117,7 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   Future _setProxyData({bool? fromSave}) async {
     final proxyAddress = getProxyAddress();
     if (isProxyOn || fromSave == true) {
-      SocksProxy.setProxy('SOCKS5 $proxyAddress');
+      SocksProxy.setProxy('${proxyType.title()} $proxyAddress');
       await Future.delayed(const Duration(seconds: 1));
       final res = await _accountService.checkProxyAvailable();
       if (res.isRight) {
@@ -159,11 +166,13 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     bool? isProxyOn,
     bool? proxyAvailable,
     bool? readyToSwitchOnProxy,
+    ProxyType? proxyType,
   }) {
     _loading = loading ?? _loading;
     _isProxyOn = isProxyOn ?? _isProxyOn;
     _proxyAvailable = proxyAvailable ?? _proxyAvailable;
     _readyToSwitchOnProxy = readyToSwitchOnProxy ?? _readyToSwitchOnProxy;
+    _proxyType = proxyType ?? _proxyType;
     notifyListeners();
   }
 

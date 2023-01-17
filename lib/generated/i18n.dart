@@ -16892,6 +16892,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes'**
   String get app_proxy_bugs_expected;
+
+  /// No description provided for @app_proxy_select_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Select proxy type'**
+  String get app_proxy_select_type;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

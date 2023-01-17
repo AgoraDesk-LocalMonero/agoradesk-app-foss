@@ -2,6 +2,6 @@
 "app_proxy":"SOCKS5 Proxy",
 "app_proxy_details":"SOCKS5 Proxy details",
 "app_proxy_use":"Use proxy",
-"app_proxy_bugs_expected":"Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes"
-
+"app_proxy_bugs_expected":"Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes",
+"app_proxy_select_type":"Select proxy type"
 }

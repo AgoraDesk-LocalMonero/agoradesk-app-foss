@@ -5,7 +5,9 @@ import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
+import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/proxy_view_model.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
@@ -94,6 +96,23 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                               ],
                             ),
                             const SizedBox(height: 22),
+                            Semantics(
+                              label: context.intl.app_proxy_select_type,
+                              child: DropdownSearch<ProxyType>(
+                                dropdownButtonProps:
+                                    context.dropdownButtonProps(label: context.intl.app_proxy_select_type),
+                                dropdownDecoratorProps: context.dropdownDecoration,
+                                popupProps: PopupProps.menu(
+                                  menuProps: context.dropdownMenuProps,
+                                  fit: FlexFit.loose,
+                                ),
+                                items: ProxyType.values,
+                                itemAsString: (ProxyType? a) => a?.title() ?? '',
+                                onChanged: (ProxyType? data) => model.proxyType = data,
+                                selectedItem: model.proxyType,
+                              ),
+                            ),
+                            const SizedBox(height: 8),
                             TextField(
                               controller: model.ctrlServer,
                               decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
