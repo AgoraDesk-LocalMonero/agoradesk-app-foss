@@ -88,7 +88,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                                   child: Switch(
                                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                     value: model.isProxyOn,
-                                    onChanged: (_) => model.switchProxy(),
+                                    onChanged: (val) => model.switchProxy(context, val),
                                   ),
                                 ),
                               ],
@@ -124,6 +124,15 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                             const SizedBox(height: 8),
                           ],
                         ),
+                        model.loading
+                            ? Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                                child: Text(
+                                  'Checking connection ...',
+                                  style: context.txtLabelLargeN70N50,
+                                ),
+                              )
+                            : const SizedBox(),
                         ButtonFilledP80(
                           title: context.intl.edit8722Sbad250Sbsave8722Sbbtn,
                           active: model.readyToSwitchOnProxy,

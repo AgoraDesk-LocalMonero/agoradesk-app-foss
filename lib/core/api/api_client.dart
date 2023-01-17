@@ -16,7 +16,7 @@ import 'mock_interceptor.dart';
 /// Default options for [ApiClient]
 ///
 
-const kTimeout = 60000;
+const kTimeout = 10000;
 
 BaseOptions _defaultOptions = BaseOptions(
   baseUrl: 'http://localhost/api',
@@ -118,7 +118,6 @@ class ApiClient with UrlMixin {
             final message = ApiHelper.parseErrorToString(error);
             if (message != null) {
               log('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
-
               finalError = DioError(
                 error: jsonEncode(message),
                 requestOptions: error.requestOptions,
@@ -126,15 +125,15 @@ class ApiClient with UrlMixin {
               );
             }
           } else if (statusCode == 500) {
-            if (kDebugMode) {
-              eventBus.fire(FlashEvent.error('Internal Server Error'));
-            }
+            // if (kDebugMode) {
+            //   eventBus.fire(FlashEvent.error('Internal Server Error'));
+            // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
             debugPrint('++++[api_client ERROR message] statusCode == null, $message');
-            if (kDebugMode) {
-              eventBus.fire(FlashEvent.error(message));
-            }
+            // if (kDebugMode) {
+            //   eventBus.fire(FlashEvent.error(message));
+            // }
           } else if (statusCode == 503) {
             eventBus.fire(
               const Display503Event(),
@@ -143,25 +142,6 @@ class ApiClient with UrlMixin {
           return handler.next(finalError ?? error);
         },
       ),
-    );
-  }
-
-  Future<Response<dynamic>> get(
-    String path, {
-    Map<String, dynamic>? queryParameters,
-    Options? options,
-    CancelToken? cancelToken,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    // const url = 'https://api.ipify.org';
-    // final aa = await _dio.get(url);
-    // print('+++++++++++++++++++++++++++++++++++++44444 - $aa');
-    return _dio.get(
-      path,
-      queryParameters: queryParameters,
-      options: options,
-      cancelToken: cancelToken,
-      onReceiveProgress: onReceiveProgress,
     );
   }
 

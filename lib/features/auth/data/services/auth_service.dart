@@ -121,7 +121,7 @@ class AuthService with FileUtilsMixin {
   ///
   Future<Either<ApiError, bool>> confirmEmail({required String token}) async {
     try {
-      await _api.get(
+      await _api.client.get(
         '/email_confirmation',
         queryParameters: {
           'token': token,

@@ -16,6 +16,9 @@ import 'package:vm/vm.dart';
 ///
 /// Proxy example 69.194.181.6:7497
 ///
+/// const url = 'https://api.ipify.org';
+/// final aa = await _dio.get(url);
+///
 
 class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   ProxyViewModel({
@@ -78,25 +81,66 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     }
   }
 
-  Future switchProxy() async {
+  Future switchProxy(BuildContext context, bool val) async {
     loading = true;
     isProxyOn = !isProxyOn;
     await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: isProxyOn);
     GetIt.I<AppParameters>().proxy = isProxyOn;
     await _setProxyData();
     loading = false;
+    if (val) {
+      _displayMessage(context);
+    }
   }
 
   Future saveProxy(BuildContext context) async {
+    loading = true;
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyServer, ctrlServer.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyPort, ctrlPort.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyUsername, ctrlUsername.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyPassword, ctrlPassword.text);
-    await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: true);
-    GetIt.I<AppParameters>().proxy = true;
-    await _setProxyData();
+    // await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: true);
+    // GetIt.I<AppParameters>().proxy = true;
+    // isProxyOn = true;
+    await _setProxyData(fromSave: true);
+    loading = false;
+    _displayMessage(context);
+  }
+
+  Future _setProxyData({bool? fromSave}) async {
+    final proxyAddress = getProxyAddress();
+    if (isProxyOn || fromSave == true) {
+      SocksProxy.setProxy('SOCKS5 $proxyAddress');
+      await Future.delayed(const Duration(seconds: 1));
+      final res = await _accountService.checkProxyAvailable();
+      if (res.isRight) {
+        proxyAvailable = true;
+        await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: true);
+        GetIt.I<AppParameters>().proxy = true;
+      } else {
+        proxyAvailable = false;
+        await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: false);
+        GetIt.I<AppParameters>().proxy = false;
+        SocksProxy.setProxy('DIRECT');
+      }
+    } else {
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: false);
+      GetIt.I<AppParameters>().proxy = false;
+      SocksProxy.setProxy('DIRECT');
+    }
+  }
+
+  void _displayMessage(BuildContext context) {
     if (proxyAvailable) {
       isProxyOn = true;
+      showDialog(
+        barrierDismissible: true,
+        context: context,
+        builder: (_) => const AgoraDialogClose(
+          title: 'Proxy is on',
+          text: 'Now app make requests with the proxy',
+        ),
+      );
     } else {
       isProxyOn = false;
       showDialog(
@@ -104,28 +148,9 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
         context: context,
         builder: (_) => const AgoraDialogClose(
           title: 'Proxy unavailable',
-          text: 'Please checkl the proxy data or use another proxy.',
+          text: 'Please check the proxy data or use another proxy.',
         ),
       );
-    }
-  }
-
-  Future _setProxyData() async {
-    final proxyAddress = getProxyAddress();
-    if (isProxyOn) {
-      SocksProxy.setProxy('SOCKS5 $proxyAddress');
-
-      /// check connection
-      //TODO AWAIK
-      await Future.delayed(const Duration(seconds: 1));
-      final res = await _accountService.getNotifications(after: DateTime.now());
-      if (res.isRight) {
-        proxyAvailable = true;
-      } else {
-        proxyAvailable = false;
-      }
-    } else {
-      SocksProxy.setProxy('DIRECT');
     }
   }
 

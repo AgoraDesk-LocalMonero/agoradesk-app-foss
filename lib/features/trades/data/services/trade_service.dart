@@ -36,7 +36,7 @@ class TradeService {
     required TradeRequestParameterModel requestParameter,
   }) async {
     try {
-      final resp = await _api.get(
+      final resp = await _api.client.get(
         '/dashboard${type.apiUrl()}${tradeType?.apiUrl() ?? ''}',
         queryParameters: requestParameter.toJson(),
       );
@@ -64,7 +64,7 @@ class TradeService {
   ///
   Future<Either<ApiError, TradeModel>> getTrade({required String id}) async {
     try {
-      final resp = await _api.get('/contact_info/$id');
+      final resp = await _api.client.get('/contact_info/$id');
       if (resp.statusCode == 200) {
         final TradeModel trade = TradeModel.fromJson(resp.data['data']['data']);
         return Either.right(trade);
@@ -84,7 +84,7 @@ class TradeService {
   Future<Either<ApiError, Pagination<MessageModel>>> getMessages(String tradeId, DateTime? after) async {
     try {
       final Map<String, DateTime> queryParameters = after == null ? {} : {'after': after};
-      final resp = await _api.get(
+      final resp = await _api.client.get(
         '/contact_messages/$tradeId',
         queryParameters: queryParameters,
       );
