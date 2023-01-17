@@ -9377,10 +9377,10 @@ class I18nZh extends I18n {
   String get app_disable_ad => 'Disable ad';
 
   @override
-  String get app_proxy => 'SOCKS5 Proxy';
+  String get app_proxy => 'Proxy';
 
   @override
-  String get app_proxy_details => 'SOCKS5 Proxy details';
+  String get app_proxy_details => 'Proxy details';
 
   @override
   String get app_proxy_use => 'Use proxy';
@@ -9390,6 +9390,18 @@ class I18nZh extends I18n {
 
   @override
   String get app_proxy_select_type => 'Select proxy type';
+
+  @override
+  String get app_proxy_on => 'Proxy is on';
+
+  @override
+  String get app_proxy_on_descr => 'Now app make requests with the proxy';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy unavailable';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Please check the proxy data or use another proxy.';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

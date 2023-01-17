@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -143,9 +144,9 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       showDialog(
         barrierDismissible: true,
         context: context,
-        builder: (_) => const AgoraDialogClose(
-          title: 'Proxy is on',
-          text: 'Now app make requests with the proxy',
+        builder: (_) => AgoraDialogClose(
+          title: context.intl.app_proxy_on,
+          text: context.intl.app_proxy_on_descr,
         ),
       );
     } else {
@@ -153,9 +154,9 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       showDialog(
         barrierDismissible: true,
         context: context,
-        builder: (_) => const AgoraDialogClose(
-          title: 'Proxy unavailable',
-          text: 'Please check the proxy data or use another proxy.',
+        builder: (_) => AgoraDialogClose(
+          title: context.intl.app_proxy_unavailable,
+          text: context.intl.app_proxy_unavailable_decr,
         ),
       );
     }

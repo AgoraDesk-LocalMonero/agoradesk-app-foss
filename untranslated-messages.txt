@@ -4,7 +4,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "bg": [
@@ -13,7 +17,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "cs": [
@@ -23,7 +31,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "da": [
@@ -32,7 +44,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "de": [
@@ -41,7 +57,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "el": [
@@ -50,7 +70,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "es": [
@@ -60,7 +84,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "fi": [
@@ -70,7 +98,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "fr": [
@@ -78,7 +110,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "hi": [
@@ -86,7 +122,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "hu": [
@@ -95,7 +135,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "id": [
@@ -103,7 +147,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "it": [
@@ -112,7 +160,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "ja": [
@@ -120,7 +172,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "ko": [
@@ -128,7 +184,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "lv": [
@@ -137,7 +197,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "nb": [
@@ -738,7 +802,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "nb_NO": [
@@ -1339,7 +1407,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "nl": [
@@ -1348,7 +1420,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "pl": [
@@ -1357,7 +1433,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "pt": [
@@ -1369,7 +1449,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "pt_BR": [
@@ -1379,7 +1463,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "ro": [
@@ -1388,7 +1476,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "ru": [
@@ -1397,7 +1489,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "sk": [
@@ -1407,7 +1503,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "sl": [
@@ -1419,7 +1519,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "sw": [
@@ -1429,7 +1533,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "tl": [
@@ -1439,7 +1547,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "tr": [
@@ -1449,7 +1561,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "ur": [
@@ -1459,7 +1575,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "zh": [
@@ -2060,7 +2180,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "zh_CN": [
@@ -2661,7 +2785,11 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "zh_TW": [
@@ -2669,6 +2797,10 @@
     "app_proxy_details",
     "app_proxy_use",
     "app_proxy_bugs_expected",
-    "app_proxy_select_type"
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ]
 }

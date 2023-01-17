@@ -16872,13 +16872,13 @@ abstract class I18n {
   /// No description provided for @app_proxy.
   ///
   /// In en, this message translates to:
-  /// **'SOCKS5 Proxy'**
+  /// **'Proxy'**
   String get app_proxy;
 
   /// No description provided for @app_proxy_details.
   ///
   /// In en, this message translates to:
-  /// **'SOCKS5 Proxy details'**
+  /// **'Proxy details'**
   String get app_proxy_details;
 
   /// No description provided for @app_proxy_use.
@@ -16898,6 +16898,30 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Select proxy type'**
   String get app_proxy_select_type;
+
+  /// No description provided for @app_proxy_on.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy is on'**
+  String get app_proxy_on;
+
+  /// No description provided for @app_proxy_on_descr.
+  ///
+  /// In en, this message translates to:
+  /// **'Now app make requests with the proxy'**
+  String get app_proxy_on_descr;
+
+  /// No description provided for @app_proxy_unavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy unavailable'**
+  String get app_proxy_unavailable;
+
+  /// No description provided for @app_proxy_unavailable_decr.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check the proxy data or use another proxy.'**
+  String get app_proxy_unavailable_decr;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
