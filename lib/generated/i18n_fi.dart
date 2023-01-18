@@ -7502,6 +7502,33 @@ class I18nFi extends I18n {
   String get devblog250Sbtitle => 'Kehitysblogi';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Lisää osoite';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Peruuttaa';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Haluatko poistaa tämän osoitteen?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Aina kun sinun on annettava osoite, voit valita nopeasti tänne tallennetun osoitteen';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Tunniste (valinnainen)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Tallentaa';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Tallenna tämä osoite tulevaa käyttöä varten';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Tämä osoite on jo osoitekirjassasi.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Tämä osoite on jo poistettu osoitekirjastasi.';
+
+  @override
   String get ads => 'Ilmoitukset';
 
   @override
@@ -9350,10 +9377,10 @@ class I18nFi extends I18n {
   String get app_apple_app_store_subtitle_localmonero => 'Osta/myy Monero nimettömästi';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Osta/myy Bitcoin nimettömästi';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Osta tai myy XMR ilman henkilöllisyyden tarkistamista. Käteisellä tai verkossa.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Osta tai myy Bitcoinia ilman henkilöllisyystodistusta. Käteisellä tai netissä.';
@@ -9375,4 +9402,31 @@ class I18nFi extends I18n {
 
   @override
   String get app_disable_ad => 'Poista mainos käytöstä';
+
+  @override
+  String get app_proxy => 'Välityspalvelin';
+
+  @override
+  String get app_proxy_details => 'Välityspalvelimen tiedot';
+
+  @override
+  String get app_proxy_use => 'Käytä välityspalvelinta';
+
+  @override
+  String get app_proxy_bugs_expected => 'Varoitus! Välityspalvelintoiminto on beta-vaiheessa, virheitä odotetaan. Ilmoita virheistä kehityskanaviimme nopeaa korjausta varten';
+
+  @override
+  String get app_proxy_select_type => 'Valitse välityspalvelimen tyyppi';
+
+  @override
+  String get app_proxy_on => 'Välityspalvelin käytössä';
+
+  @override
+  String get app_proxy_on_descr => 'Sovellus muodostaa nyt yhteyden alustaan välityspalvelimen kautta.';
+
+  @override
+  String get app_proxy_unavailable => 'Välityspalvelin ei ole käytettävissä';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Tarkista, ovatko yhteysasetukset oikein, tai käytä toista välityspalvelinta.';
 }

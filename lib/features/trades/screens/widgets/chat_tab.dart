@@ -265,7 +265,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
                   context.intl.app_trade_warning_impersonation(GetIt.I<AppParameters>().appName),
                   style: context.txtBodyXSmallN80,
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 RichText(
                   textAlign: TextAlign.start,
                   text: TextSpan(

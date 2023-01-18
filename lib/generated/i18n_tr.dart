@@ -7502,6 +7502,33 @@ class I18nTr extends I18n {
   String get devblog250Sbtitle => 'Geliştirme Blogu';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adres Ekle';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'İptal etmek';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Bu adresi silmek istiyor musunuz?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Bir adres vermeniz gerektiğinde, burada kayıtlı olanı hızlıca seçebileceksiniz.';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiket (isteğe bağlı)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Kayıt etmek';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Bu adresi ileride kullanmak üzere kaydedin';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Bu adres, adres defterinizde zaten var.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Bu adres zaten adres defterinizden silinmiş.';
+
+  @override
   String get ads => 'reklamlar';
 
   @override
@@ -9227,22 +9254,22 @@ class I18nTr extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Kimlik doğrulaması olmadan anonim olarak Bitcoin satın alın veya satın. Nakit veya çevrimiçi. Güvenli, hızlı, kolay.\n\nBitcoin\'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk\'te bitcoin satın almak hiç bu kadar kolay olmamıştı - en sevdiğiniz çevrimiçi ödeme yöntemini kullanarak bir kişiden anında BTC satın alın: PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya diğerleri. Yakınınızdaki bitcoinleri nakit olarak satın almak istiyorsanız, yerel olarak bitcoin satmak isteyen birini bulabilirsiniz - ticaret platformu, BTC\'nin nakit olarak alınmasını ve satılmasını destekler. Posta yoluyla nakit kullanarak bitcoin bile satın alabilirsiniz.\n\n- Güvenli ve Sorunsuz Ticaret\nTıpkı LocalBitcoins gibi, herhangi bir yerde, herhangi bir ödeme yöntemini, herhangi bir para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins\'in aksine yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması yok\nAgoraDesk, orijinal LocalBitcoins\'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.\n\n- Topluluk tarafından güvenilir\nPlatformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı\nUygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google\'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support\n\n- Adil Ücretler\nTahkim tahvili cüzdanımıza/cüzdanımıza Bitcoin yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kolayca Bitcoin satın alın';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kolayca BTC alın';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kolayca XMR satın alın';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kolayca XMR alın';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kimlik doğrulaması olmadan Monero satın alın veya satın. Nakit veya çevrimiçi. Güvenli, hızlı, kolay.\n\nLocalMonero, XMR topluluğundaki en büyük, en güvenilir ve köklü P2P ticaret platformudur. KYC kontrolümüz yok - PayPal, kredi kartı, hediye kartı, posta yoluyla nakit ile kimlik doğrulaması olmadan anonim olarak Monero satın alabilir veya Bitcoin, Ether, USDT veya başka herhangi bir kripto parayı Monero\'ya dönüştürebilirsiniz - platformumuz her türlü ödeme yöntemini destekler.\n\n- Güvenli ve Sorunsuz Ticaret\nHerhangi bir ödeme yöntemini, herhangi bir para birimini, her yerde destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması yok\nLocalMonero, ticaret deneyiminizin basitliğini ve anlaşılırlığını korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.\n\n- Topluluk tarafından güvenilir\nPlatformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci Monero topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı\nUygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google\'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://localmonero.co/support\n\n- Adil Ücretler\nTahkim tahvili cüzdanımıza/cüzdanımıza Monero yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR privately';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kolayca XMR alın';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Kimlik doğrulaması olmadan Monero satın alın veya satın. Nakit veya çevrimiçi. Güvenli, hızlı, kolay.\n\nLocalMonero, XMR topluluğundaki en büyük, en güvenilir ve köklü P2P ticaret platformudur. KYC kontrolümüz yok - PayPal, kredi kartı, hediye kartı, posta yoluyla nakit ile kimlik doğrulaması olmadan anonim olarak Monero satın alabilir veya Bitcoin, Ether, USDT veya başka herhangi bir kripto parayı Monero\'ya dönüştürebilirsiniz - platformumuz her türlü ödeme yöntemini destekler.\n\n- Güvenli ve Sorunsuz Ticaret\nHerhangi bir ödeme yöntemini, herhangi bir para birimini, her yerde destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması yok\nLocalMonero, ticaret deneyiminizin basitliğini ve anlaşılırlığını korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.\n\n- Topluluk tarafından güvenilir\nPlatformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci Monero topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı\nUygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google\'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://localmonero.co/support\n\n- Adil Ücretler\nTahkim tahvili cüzdanımıza/cüzdanımıza Monero yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: Anonim olarak BTC satın alın';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kolayca BTC alın';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.\n\nBitcoin\'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk\'te bitcoin satın almak hiç bu kadar kolay olmamıştı - favori çevrimiçi ödeme yönteminizi kullanarak bir kişiden anında BTC satın alın: PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya diğerleri. Yakınınızdaki bitcoinleri nakit olarak satın almak istiyorsanız, yerel olarak bitcoin satmak isteyen birini bulabilirsiniz - ticaret platformu, BTC\'nin nakit olarak alınmasını ve satılmasını destekler. Posta yoluyla nakit kullanarak bitcoin bile satın alabilirsiniz.\n\n- Güvenli ve Sorunsuz Ticaret\nTıpkı LocalBitcoins gibi, herhangi bir yerde, herhangi bir ödeme yöntemini, herhangi bir para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins\'in aksine yüz yüze nakit alım satımlarını tamamen destekliyoruz. Tüm işlemlerimiz bir tahkim bonosu ile korunmaktadır. Alım satım başlamadan önce fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, platformun popülerliği ve satıcılar için tekrar müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması yok\nAgoraDesk, orijinal LocalBitcoins\'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da düşünmüyoruz.\n\n- Topluluk tarafından güvenilir\nPlatformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı\nUygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google\'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye hevesli. 24 saat içinde yanıtlanmayan bir destek biletimiz hiç olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support\n\n- Adil Ücretler\nTahkim tahvili cüzdanımıza/cüzdanımıza Bitcoin yatırdığınızda veya çekerken fahiş ücretler almıyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
@@ -9353,7 +9380,7 @@ class I18nTr extends I18n {
   String get app_apple_app_store_subtitle_agoradesk => 'Anonim Olarak Bitcoin Al/Sat';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Kimlik doğrulaması olmadan Monero satın alın veya satın. Nakit veya çevrimiçi.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.';
@@ -9375,4 +9402,31 @@ class I18nTr extends I18n {
 
   @override
   String get app_disable_ad => 'reklamı devre dışı bırak';
+
+  @override
+  String get app_proxy => 'vekil';
+
+  @override
+  String get app_proxy_details => 'proxy ayrıntıları';
+
+  @override
+  String get app_proxy_use => 'Proxy kullan';
+
+  @override
+  String get app_proxy_bugs_expected => 'Uyarı! Proxy işlevselliği beta aşamasındadır, hatalar beklenmektedir. Hızlı düzeltmeler için lütfen hataları geliştirme kanallarımıza bildirin';
+
+  @override
+  String get app_proxy_select_type => 'proxy türünü seçin';
+
+  @override
+  String get app_proxy_on => 'proxy etkin';
+
+  @override
+  String get app_proxy_on_descr => 'Uygulama şimdi platforma proxy aracılığıyla bağlanacak.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy kullanılamıyor';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Lütfen bağlantı ayarlarının doğru olup olmadığını kontrol edin veya başka bir proxy kullanın.';
 }

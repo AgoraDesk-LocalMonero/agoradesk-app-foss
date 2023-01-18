@@ -7502,6 +7502,33 @@ class I18nTl extends I18n {
   String get devblog250Sbtitle => 'Blog ng Pag-unlad';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Magdagdag ng address';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Kanselahin';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Gusto mo bang tanggalin ang address na ito?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Sa tuwing kailangan mong magbigay ng address, mabilis kang makakapili ng isang naka-save dito';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Label (opsyonal)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'I-save';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'I-save ang address na ito para magamit sa hinaharap';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Ang address na ito ay mayroon na sa iyong address book.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Ang address na ito ay tinanggal na mula sa iyong address book.';
+
+  @override
   String get ads => 'Mga ad';
 
   @override
@@ -9227,22 +9254,22 @@ class I18nTl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang hindi nagpapakilala, nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: madaling bumili ng Bitcoin';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: bumily ng BTC';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero:  bumily ng XMR';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: bumily ng XMR';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Bumili o magbenta ng Monero nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nAng LocalMonero ay ang pinakamalaking, pinakapinagkakatiwalaan at mahusay na itinatag na platform ng kalakalan ng P2P sa komunidad ng XMR. Wala kaming KYC checks - maaari kang bumili ng Monero nang hindi nagpapakilala nang walang pag-verify ng ID gamit ang PayPal, credit card, gift card, cash sa pamamagitan ng koreo o i-convert ang Bitcoin, Ether, USDT, o anumang iba pang crypto coin sa Monero - sinusuportahan ng aming platform ang anumang paraan ng pagbabayad.\n\n- Ligtas at Smooth Trading\nSinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at buong-buo naming sinusuportahan ang mga face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng LocalMonero ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso ng iyong karanasan sa pangangalakal. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash noong 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang nag-aalinlangan na komunidad ng Monero.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://localmonero.co/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Monero sa/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: bumili ng XMR ng pribado';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: bumily ng XMR';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Bumili o magbenta ng Monero nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nAng LocalMonero ay ang pinakamalaking, pinakapinagkakatiwalaan at mahusay na itinatag na platform ng kalakalan ng P2P sa komunidad ng XMR. Wala kaming KYC checks - maaari kang bumili ng Monero nang hindi nagpapakilala nang walang pag-verify ng ID gamit ang PayPal, credit card, gift card, cash sa pamamagitan ng koreo o i-convert ang Bitcoin, Ether, USDT, o anumang iba pang crypto coin sa Monero - sinusuportahan ng aming platform ang anumang paraan ng pagbabayad.\n\n- Ligtas at Smooth Trading\nSinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at buong-buo naming sinusuportahan ang mga face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng LocalMonero ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso ng iyong karanasan sa pangangalakal. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash noong 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang nag-aalinlangan na komunidad ng Monero.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://localmonero.co/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Monero sa/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy BTC ng di makikilala';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: bumily ng BTC';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang walang pag-verify ng ID. Cash o online.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa bumibili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Ang open sourcing sa aming app ay nagbibigay-daan din sa sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
@@ -9347,13 +9374,13 @@ class I18nTl extends I18n {
   String get app_push_trade_disputed => 'Pinagtatalunan ang kalakalan';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Bilhin/Ibenta ang Monero nang Hindi nagpapakilala';
+  String get app_apple_app_store_subtitle_localmonero => 'Pribado ang Trade Monero';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Pribado ang Trade Bitcoin';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Bumili o magbenta ng Monero nang walang pag-verify ng ID. Cash o online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Bumili o magbenta ng Bitcoin nang walang pag-verify ng ID. Cash o online.';
@@ -9375,4 +9402,31 @@ class I18nTl extends I18n {
 
   @override
   String get app_disable_ad => 'Huwag paganahin ang ad';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Mga detalye ng proxy';
+
+  @override
+  String get app_proxy_use => 'Gumamit ka ng kinatawan';
+
+  @override
+  String get app_proxy_bugs_expected => 'Babala! Nasa beta ang pag-andar ng proxy, inaasahan ang mga bug. Mangyaring iulat ang mga bug sa aming mga channel sa pag-unlad para sa mabilis na pag-aayos';
+
+  @override
+  String get app_proxy_select_type => 'Pumili ng uri ng proxy';
+
+  @override
+  String get app_proxy_on => 'Pinagana ang proxy';
+
+  @override
+  String get app_proxy_on_descr => 'Kokonekta na ngayon ang app sa platform sa pamamagitan ng proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Hindi available ang proxy';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Pakisuri kung tama ang mga setting ng koneksyon o gumamit ng ibang proxy.';
 }

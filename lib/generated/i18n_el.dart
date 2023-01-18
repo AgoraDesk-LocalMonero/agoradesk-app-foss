@@ -7502,6 +7502,33 @@ class I18nEl extends I18n {
   String get devblog250Sbtitle => 'Ιστολόγιο ανάπτυξης';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Προσθήκη διεύθυνσης';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Ματαίωση';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Θέλετε να διαγράψετε αυτήν τη διεύθυνση;';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Όποτε χρειάζεται να δώσετε μια διεύθυνση, θα μπορείτε να επιλέξετε γρήγορα μια αποθηκευμένη εδώ';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Ετικέτα (προαιρετικό)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Σώσει';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Αποθηκεύστε αυτήν τη διεύθυνση για μελλοντική χρήση';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Αυτή η διεύθυνση υπάρχει ήδη στο βιβλίο διευθύνσεών σας.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Αυτή η διεύθυνση έχει ήδη διαγραφεί από το βιβλίο διευθύνσεών σας.';
+
+  @override
   String get ads => 'Διαφημίσεις';
 
   @override
@@ -9353,7 +9380,7 @@ class I18nEl extends I18n {
   String get app_apple_app_store_subtitle_agoradesk => 'Αγορά/πώληση Bitcoin ανώνυμα';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Αγοράστε ή πουλήστε Monero χωρίς επαλήθευση ταυτότητας. Μετρητά ή online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Αγορά ή πώληση Bitcoin χωρίς επαλήθευση ταυτότητας. Μετρητά ή διαδικτυακά.';
@@ -9375,4 +9402,31 @@ class I18nEl extends I18n {
 
   @override
   String get app_disable_ad => 'Απενεργοποίηση διαφήμισης';
+
+  @override
+  String get app_proxy => 'Πληρεξούσιο';
+
+  @override
+  String get app_proxy_details => 'Στοιχεία διακομιστή μεσολάβησης';
+
+  @override
+  String get app_proxy_use => 'Χρήση διακομιστή μεσολάβησης';
+
+  @override
+  String get app_proxy_bugs_expected => 'Προειδοποίηση! Η λειτουργικότητα του διακομιστή μεσολάβησης είναι σε έκδοση beta, αναμένονται σφάλματα. Αναφέρετε τα σφάλματα στα κανάλια ανάπτυξής μας για γρήγορες επιδιορθώσεις';
+
+  @override
+  String get app_proxy_select_type => 'Επιλέξτε τύπο διακομιστή μεσολάβησης';
+
+  @override
+  String get app_proxy_on => 'Ο διακομιστής μεσολάβησης ενεργοποιήθηκε';
+
+  @override
+  String get app_proxy_on_descr => 'Η εφαρμογή θα συνδεθεί τώρα στην πλατφόρμα μέσω του διακομιστή μεσολάβησης.';
+
+  @override
+  String get app_proxy_unavailable => 'Ο διακομιστής μεσολάβησης δεν είναι διαθέσιμος';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Ελέγξτε εάν οι ρυθμίσεις σύνδεσης είναι σωστές ή χρησιμοποιήστε άλλο διακομιστή μεσολάβησης.';
 }

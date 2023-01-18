@@ -1,45 +1,6 @@
 {
-  "bg": [
-    "app_apple_app_store_subtitle_agoradesk"
-  ],
-
-  "cs": [
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "da": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "de": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "el": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "es": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "fi": [
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "hu": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "it": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "lv": [
-    "app_google_play_store_short_description_localmonero"
+  "hi": [
+    "app_proxy_unavailable_decr"
   ],
 
   "nb": [
@@ -635,7 +596,16 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected",
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "nb_NO": [
@@ -1231,67 +1201,20 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
-  ],
-
-  "nl": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "pl": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "pt": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_google_play_store_short_description_localmonero",
-    "app_enable_ad",
-    "app_disable_ad"
-  ],
-
-  "pt_BR": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected",
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "ro": [
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "ru": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero"
-  ],
-
-  "sk": [
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "sl": [
-    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk"
-  ],
-
-  "sw": [
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "tl": [
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "tr": [
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app_google_play_store_short_description_localmonero"
-  ],
-
-  "ur": [
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero"
+    "app_proxy_unavailable_decr"
   ],
 
   "zh": [
@@ -1887,7 +1810,16 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected",
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
   ],
 
   "zh_CN": [
@@ -2483,6 +2415,19 @@
     "app_select_country",
     "app_select_payment_method",
     "app_enable_ad",
-    "app_disable_ad"
+    "app_disable_ad",
+    "app_proxy",
+    "app_proxy_details",
+    "app_proxy_use",
+    "app_proxy_bugs_expected",
+    "app_proxy_select_type",
+    "app_proxy_on",
+    "app_proxy_on_descr",
+    "app_proxy_unavailable",
+    "app_proxy_unavailable_decr"
+  ],
+
+  "zh_TW": [
+    "app_proxy_unavailable_decr"
   ]
 }

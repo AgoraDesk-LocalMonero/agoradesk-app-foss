@@ -7502,6 +7502,33 @@ class I18nRo extends I18n {
   String get devblog250Sbtitle => 'Blog de dezvoltare';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adaugă adresă';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Anulare';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Doriți să ștergeți această adresă?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Ori de câte ori trebuie să furnizați o adresă, veți putea selecta rapid una salvată aici';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etichetă (opțional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'salva';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salvați această adresă pentru utilizare ulterioară';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Această adresă există deja în agenda dvs. de adrese.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Această adresă a fost deja ștearsă din agenda dvs. de adrese.';
+
+  @override
   String get ads => 'Reclame';
 
   @override
@@ -9227,10 +9254,10 @@ class I18nRo extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Cumpărați sau vindeți Bitcoin în mod anonim, fără verificarea identității. În numerar sau online. Sigur, rapid și ușor.\n\nVă întrebați cum să investiți în Bitcoin? Pe AgoraDesk, cumpărarea de Bitcoin nu a fost niciodată mai ușoară - cumpărați instantaneu BTC de la o persoană folosind metoda dvs. preferată de plată online: PayPal, card de credit/debit sau transfer bancar, carduri cadou, Venmo sau oricare alta. Dacă doriți să cumpărați bitcoini în apropierea dumneavoastră cu bani cash, puteți găsi o persoană dispusă să vândă bitcoini la nivel local - platforma de tranzacționare acceptă cumpărarea și vânzarea de BTC cu bani cash. Puteți chiar să cumpărați bitcoini folosind numerar prin poștă.\n\n- Tranzacționare sigură și fără probleme\nLa fel ca LocalBitcoins, susținem orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și, spre deosebire de LocalBitcoins, susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență ușoară și sigură pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți recurenți pentru vânzători.\n\n- Fără KYC/AML sau verificare a identității\nAgoraDesk se dedică să mențină simplitatea și directețea care au făcut ca LocalBitcoins original să fie atât de popular. Nu folosim KYC/AML și nici nu plănuim să facem vreodată acest lucru.\n\n- Încredere din partea comunității\nPlatforma noastră a funcționat timp de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea criptomonedelor extrem de sceptică.\n\n- Securizată, cu sursă deschisă, axată pe confidențialitate, rezistentă la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. De asemenea, sursa deschisă permite oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au Google complet blocat. Ținem atât de mult la confidențialitatea dvs. încât nici măcar nu vă cerem să furnizați un e-mail la înregistrare.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nUrmăritor de probleme: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport Stellar\nEchipa noastră de asistență este rapidă, receptivă și întotdeauna dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență la care să nu ni se răspundă în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor de socializare, vă ascultăm cu atenție criticile și implementăm întotdeauna sugestiile bune ale utilizatorilor în timp record.\n\nPuteți ajunge la serviciul nostru de asistență la: https://agoradesk.com/support\n\n- Tarife corecte\nNu percepem taxe exorbitante atunci când depuneți sau retrageți Bitcoins în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: cumpărați Bitcoin cu ușurință';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: cumpăra BTC anonim';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpărați XMR cu ușurință';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpăra XMR ușor';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID. Cash sau online. Sigur, rapid, ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și mai bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem cecuri KYC - puteți pur și simplu cumpăra Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, numerar prin poștă sau puteți converti Bitcoin, Ether, USDT sau orice altă monedă cripto în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și sprijinim pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o obligațiune de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în obligațiune de arbitraj înainte de a începe tranzacția, asigurăm o experiență fluidă și sigură pentru cumpărător, care este esențială pentru popularitatea platformei și clienții repetați pentru vânzători.\n\n- Fără verificare KYC/AML sau ID\nLocalMonero se angajează să mențină simplitatea și claritatea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm vreodată să facem acest lucru.\n\n- De încredere de către Comunitate\nPlatforma noastră a funcționat de peste patru ani, a supraviețuit Marelui Prăbuș al pieței de criptomonede din 2018 și, prin serviciul său diligent orientat către comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea extrem de sceptică Monero.\n\n- Securizat, cu sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. Deschiderea aplicației noastre permite, de asemenea, oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoanele care au Google complet blocat. Apreciem atât de mult confidențialitatea dvs., încât nici măcar nu vă cerem să furnizați un e-mail atunci când vă înregistrați.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nInstrument de urmărire a problemelor: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport stelar\nEchipa noastră de asistență este rapidă, receptivă și mereu dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență care să nu primească răspuns în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor sociale, ascultăm cu atenție criticile voastre și punem întotdeauna în aplicare sugestii bune ale utilizatorilor în timp record.\n\nPuteți ajunge la asistența noastră la: https://localmonero.co/support\n\n- Taxe corecte\nNu percepem comisioane exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există nicio taxă de depunere, iar taxa de retragere este foarte apropiată de taxa pe care ați fi plătit-o pentru o tranzacție normală.';
@@ -9347,13 +9374,13 @@ class I18nRo extends I18n {
   String get app_push_trade_disputed => 'Comerț disputat';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Cumpărați/vindeți Monero anonim';
+  String get app_apple_app_store_subtitle_localmonero => 'Cumpărați/vindeți XMR anonim';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Cumpărați/vindeți Bitcoin anonim';
+  String get app_apple_app_store_subtitle_agoradesk => 'Cumpărați/vindeți BTC anonim';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Cumpărați sau vindeți Monero fără verificarea ID-ului. Numerar sau online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Cumpărați sau vindeți Bitcoin fără verificarea ID. Cash sau online.';
@@ -9375,4 +9402,31 @@ class I18nRo extends I18n {
 
   @override
   String get app_disable_ad => 'Dezactivați anunțul';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Detalii proxy';
+
+  @override
+  String get app_proxy_use => 'Utilizarea proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Avertizare! Funcționalitatea proxy este în versiune beta, sunt așteptate erori. Vă rugăm să raportați erorile către canalele noastre de dezvoltare pentru remedieri rapide';
+
+  @override
+  String get app_proxy_select_type => 'Selectați tipul de proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy activat';
+
+  @override
+  String get app_proxy_on_descr => 'Aplicația se va conecta acum la platformă prin proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy indisponibil';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
 }

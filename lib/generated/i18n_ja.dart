@@ -7502,6 +7502,33 @@ class I18nJa extends I18n {
   String get devblog250Sbtitle => '開発ブログ';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '住所を追加';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'キャンセル';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'このアドレスを削除しますか?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '住所を入力する必要があるときはいつでも、ここに保存されている住所をすばやく選択できます';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'ラベル (オプション)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'セーブ';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '将来の使用のためにこのアドレスを保存します';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'このアドレスはアドレス帳に既に存在します。';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'このアドレスはアドレス帳から既に削除されています。';
+
+  @override
   String get ads => '広告';
 
   @override
@@ -9375,4 +9402,31 @@ class I18nJa extends I18n {
 
   @override
   String get app_disable_ad => '広告を無効にする';
+
+  @override
+  String get app_proxy => 'プロキシー';
+
+  @override
+  String get app_proxy_details => 'プロキシの詳細';
+
+  @override
+  String get app_proxy_use => 'プロキシを使う';
+
+  @override
+  String get app_proxy_bugs_expected => '警告！プロキシ機能はベータ版であり、バグが予想されます。迅速な修正のためにバグを開発チャネルに報告してください';
+
+  @override
+  String get app_proxy_select_type => 'プロキシの種類を選択';
+
+  @override
+  String get app_proxy_on => 'プロキシが有効';
+
+  @override
+  String get app_proxy_on_descr => 'アプリはプロキシ経由でプラットフォームに接続します。';
+
+  @override
+  String get app_proxy_unavailable => 'プロキシを利用できません';
+
+  @override
+  String get app_proxy_unavailable_decr => '接続設定が正しいかどうかを確認するか、別のプロキシを使用してください。';
 }

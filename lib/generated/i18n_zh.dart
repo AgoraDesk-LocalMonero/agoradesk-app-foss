@@ -7502,6 +7502,33 @@ class I18nZh extends I18n {
   String get devblog250Sbtitle => '开发博客';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '添加地址';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => '取消';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => '你想删除这个地址吗？';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '每当您需要提供地址时，您都可以快速选择此处保存的地址';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '标签（可选）';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => '救';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '保存此地址以备将来使用';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => '该地址已存在于您的地址簿中。';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => '该地址已从您的地址簿中删除。';
+
+  @override
   String get ads => 'Ads';
 
   @override
@@ -9375,6 +9402,33 @@ class I18nZh extends I18n {
 
   @override
   String get app_disable_ad => 'Disable ad';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Proxy details';
+
+  @override
+  String get app_proxy_use => 'Use proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+
+  @override
+  String get app_proxy_select_type => 'Select proxy type';
+
+  @override
+  String get app_proxy_on => 'Proxy enabled';
+
+  @override
+  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy unavailable';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -16877,6 +16931,33 @@ class I18nZhCn extends I18nZh {
 
   @override
   String get devblog250Sbtitle => '开发博客';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '添加地址';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => '取消';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => '你想删除这个地址吗？';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '每当您需要提供地址时，您都可以快速选择此处保存的地址';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '标签（可选）';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => '救';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '保存此地址以备将来使用';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => '该地址已存在于您的地址簿中。';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => '该地址已从您的地址簿中删除。';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -24381,6 +24462,33 @@ class I18nZhTw extends I18nZh {
   String get devblog250Sbtitle => '開發博客';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '添加地址';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => '取消';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => '你想刪除這個地址嗎？';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '每當您需要提供地址時，您都可以快速選擇此處保存的地址';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '標籤（可選）';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => '救';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '保存此地址以備將來使用';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => '該地址已存在於您的地址簿中。';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => '該地址已從您的地址簿中刪除。';
+
+  @override
   String get ads => '廣告';
 
   @override
@@ -26254,4 +26362,28 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get app_disable_ad => '停用廣告';
+
+  @override
+  String get app_proxy => '代理人';
+
+  @override
+  String get app_proxy_details => '代理詳情';
+
+  @override
+  String get app_proxy_use => '使用代理服務器';
+
+  @override
+  String get app_proxy_bugs_expected => '警告！代理功能處於測試階段，預計會出現錯誤。請將錯誤報告給我們的開發渠道以進行快速修復';
+
+  @override
+  String get app_proxy_select_type => '選擇代理類型';
+
+  @override
+  String get app_proxy_on => '啟用代理';
+
+  @override
+  String get app_proxy_on_descr => '該應用程序現在將通過代理連接到平台。';
+
+  @override
+  String get app_proxy_unavailable => '代理不可用';
 }

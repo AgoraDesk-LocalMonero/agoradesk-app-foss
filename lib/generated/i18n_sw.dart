@@ -7502,6 +7502,33 @@ class I18nSw extends I18n {
   String get devblog250Sbtitle => 'Blogu ya Maendeleo';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Ongeza anwani';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Ghairi';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Je, ungependa kufuta anwani hii?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Wakati wowote unapohitaji kutoa anwani, utaweza kuchagua kwa haraka moja iliyohifadhiwa hapa';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Lebo (ya hiari)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Hifadhi';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Hifadhi anwani hii kwa matumizi ya baadaye';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Anwani hii tayari ipo kwenye kitabu chako cha anwani.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Anwani hii tayari imefutwa kutoka kwa kitabu chako cha anwani.';
+
+  @override
   String get ads => 'Matangazo';
 
   @override
@@ -9347,13 +9374,13 @@ class I18nSw extends I18n {
   String get app_push_trade_disputed => 'Biashara imebishaniwa';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Nunua/Uza Monero Bila Kujulikana';
+  String get app_apple_app_store_subtitle_localmonero => 'Biashara XMR Bila Kujulikana';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Biashara BTC Bila Kujulikana';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Nunua au uuze Bitcoin bila uthibitishaji wa kitambulisho. Pesa au mtandaoni.';
@@ -9375,4 +9402,31 @@ class I18nSw extends I18n {
 
   @override
   String get app_disable_ad => 'Zima tangazo';
+
+  @override
+  String get app_proxy => 'Wakala';
+
+  @override
+  String get app_proxy_details => 'Maelezo ya wakala';
+
+  @override
+  String get app_proxy_use => 'Tumia proksi';
+
+  @override
+  String get app_proxy_bugs_expected => 'Onyo! Utendaji wa seva mbadala uko kwenye beta, hitilafu zinatarajiwa. Tafadhali ripoti hitilafu kwenye vituo vyetu vya ukuzaji ili upate marekebisho ya haraka';
+
+  @override
+  String get app_proxy_select_type => 'Chagua aina ya proksi';
+
+  @override
+  String get app_proxy_on => 'Proksi imewashwa';
+
+  @override
+  String get app_proxy_on_descr => 'Programu sasa itaunganishwa kwenye jukwaa kupitia seva mbadala.';
+
+  @override
+  String get app_proxy_unavailable => 'Seva mbadala haipatikani';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Tafadhali angalia ikiwa mipangilio ya muunganisho ni sahihi au tumia seva mbadala.';
 }
