@@ -73,7 +73,7 @@ Push notifications will be received with polling with foreground service (if the
 
 iOS https://docs.fastlane.tools/actions/deliver/
 
-`fastlane deliver --skip_upload_screenshots=true` 
+`fastlane deliver --skip-screenshots=true` 
 
 Android https://docs.fastlane.tools/actions/supply/
 
