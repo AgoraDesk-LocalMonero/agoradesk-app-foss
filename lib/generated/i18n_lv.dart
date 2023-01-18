@@ -687,7 +687,7 @@ class I18nLv extends I18n {
   String get agoradesk250Sbleft8722Sbmenu250Sbtrade => 'Tirdzniecība';
 
   @override
-  String get agoradesk250Sblink8722Sbfrom8722Sblocalmonero => 'Tirgo BTC';
+  String get agoradesk250Sblink8722Sbfrom8722Sblocalmonero => 'Tirgot BTC';
 
   @override
   String get agoradesk250Sbpost8722Sbad250Sbtrade8722Sbtype250Sbnojs250Sblocal8722Sbbuy => 'Pērciet monētas par skaidru naudu (lokāli)';
@@ -3878,7 +3878,7 @@ class I18nLv extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Tieša krāpniecība';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Jūsu Monero sēkla IR jūsu Monero. Jums tas ir jāpieraksta, kad pirmo reizi veidojat maku, jo, ja pazaudējat savu sēklu, esat pazaudējis savu Monero un neviens jums nevar palīdzēt. BET ARĪ jums ir jāsargā šī sēkla no citiem. Ja kāds nozog jūsu sēklu, viņš var izsūtīt Monero no maka kā jūs, un atkal neviens nevarēs atgūt šo naudu. Tā ir prom.</p>\n\n<p> Pārāk bieži kāda persona ir glabājusi aukstu Monero maku, interesējusies par saviem līdzekļiem un vēlējusies to pārbaudīt. Taču tā vietā, lai pacenstos un atkārtoti instalētu visu maka lietojumprogrammu, viņi vienkārši nolemj izmantot tīmekļa maku, lai ātri atjaunotu sēklu un apskatītu savu naudu. Ja viņi kļūst par upuriem krāpniecībai Business Look Alike, tad pati savu sēklu ievadīšana dod to krāpniekiem, kuri pēc tam var pārvietot naudu uz citu maku, kuru viņi kontrolē sev ērtā laikā.</p>\n\n<p>JEBKAD, kad vietnei, lietojumprogrammai vai makam ir opcija “Atjaunot ar sēklu”, esiet ļoti uzmanīgs, lai jūsu izmantotā lietojumprogramma būtu īstā. Pārbaudiet programmas hashus (Monero tīmekļa vietnē ir norādījumi par to, kā to izdarīt), lai pārliecinātos, ka programmā nav iejaukušies ārēji spēki, un pastāvīgi apzinieties, kur un kā jūs atklājat savu sēklu. Divkāršā pārbaude var būt kaitinoša, taču zaudēt līdzekļus neuzmanības dēļ būtu vēl sliktāk.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Jūsu Monero sēkla IR jūsu Monero. Jums tas ir jāpieraksta, kad pirmo reizi veidojat maku, jo, ja pazaudējat savu sēklu, esat pazaudējis savu Monero un neviens jums nevar palīdzēt. BET ARĪ jums ir jāsargā šī sēkla no citiem. Ja kāds nozog jūsu sēklu, viņš var izsūtīt Monero no maka it kā jūs, un atkal neviens nevarēs atgūt šo naudu jūsu vietā. Tā vairs nav.</p>\n\n<p> Pārāk bieži kāda persona ir glabājusi aukstu Monero maku, interesējusies par saviem līdzekļiem un vēlējusies to pārbaudīt. Taču tā vietā, lai pārinstalētu visu maka lietojumprogrammu, viņi vienkārši nolemj izmantot tīmekļa maku, lai ātri atjaunotu sēklu un apskatītu savu naudu. Ja viņi kļūst par upuriem krāpniecībai Business Look Alike, tad pati savu sēklu ievadīšana dod to krāpniekiem, kuri pēc tam var pārvietot naudu uz citu seifu, kuru viņi kontrolē sev ērtā laikā.</p>\n\n<p>JEBKURĀ KAD vietnei, lietojumprogrammai vai makam ir opcija “Atjaunot ar sēklu”, esiet ļoti uzmanīgs, lai jūsu izmantotā lietojumprogramma būtu likumīga. Pārbaudiet programmas jaucējus (Monero tīmekļa vietnē ir norādījumi par to, kā to izdarīt), lai pārliecinātos, ka programmu nav iejaukuši ārēji spēki, un pastāvīgi apzinieties, kur un kā jūs atklājat savu sēklu. Divkāršā pārbaude var būt kaitinoša, taču līdzekļu zaudēšana neuzmanības dēļ būtu vēl lielāka.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Jūsu Monero sēklas loma krāpniecībā';
@@ -7439,6 +7439,69 @@ class I18nLv extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'Šajā emuārā mūsu komanda dalās ar dažiem mūsu attīstības ieskatiem ar tiem, kurus interesē lietu tehniskā puse.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid ir instalējams FOSS (bezmaksas un atvērtā pirmkoda programmatūras) lietojumprogrammu katalogs Android platformai. Klients ļauj ērti pārlūkot, instalēt un sekot līdzi atjauninājumiem jūsu ierīcē.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid vietne</a></p>\n</blockquote>\n\n<p>Visas šīs apmācības darbības būs piemērotas arī lietotnei bez garšas.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Lietotni var iekļaut F-Droid tikai tad, ja tā ir pilnībā atvērtā pirmkoda, tostarp visas izmantotās bibliotēkas un atkarības. Uzziniet vairāk par iekļaušanas politiku <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">šeit</a>.</p>\n<p>Piemēram, ja savā lietotnē izmantojat ObjectBox datu bāzi, to nevar&#39; iekļaut F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">diskusija</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Kuras lietotnes var iekļaut F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repozitorijs</a> vietnē Gitlab.</li>\n<li>Klonējiet repozitoriju savā ierīcē.</li>\n<li>Izveidojiet filiāli ar lietotnes komplekta ID, piemēram, <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => '1. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Pārbaudiet, vai <code>fdroid</code> darbojas pareizi. Palaidiet šādas komandas mapē <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => '2. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Pievienojiet savu projektu:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Tas izveidos failu metadatu direktorijā, piemēram, <code>metadata/co.localmonero.app.yml</code>.\nŠo failu var izveidot arī manuāli.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => '3. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Atveriet failu un rediģējiet to. Šis ir piemērs: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Piemērā var redzēt:</p>\n<ol>\n<li>Flutter tiek izmantots kā apakšmodulis — tā ir F-Droid komandas prasība.</li>\n<li>Katrai garšai esam izmantojuši atsevišķu atzaru (komanda <code>AutoUpdateMode: versija %v-fdroid-lm</code>). Tas ir tāpēc, ka Fastlane &#39; neatbalsta garšas ar Flutter.</li>\n<li>Pirmo reizi būvējuma informāciju pievienojam manuāli. Turpmāk to automātiski pievienos robots, kad būsim nospieduši jaunu tagu.</li>\n</ol>\n<p>Pārbaudiet, vai failam ir pareiza sintakse: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '4. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Tagad pievienosim datus par F-Droid tirgu. Šim nolūkam mēs izveidojam atsevišķu atzaru katrai garšai:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Pēc tam mēs izveidojam Fastlane mapi:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Pievienojiet nepieciešamos datus un nospiediet to.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => '5. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Ir pienācis laiks pievienot lietotni F-Droid.</p>\n<ol>\n<li>Izveidojiet tagu savā lietotņu krātuvē.</li>\n<li>Nospiediet izmaiņas F-Droid repozitorijā vietnē Gitlab.</li>\n<li>Izveidojiet sapludināšanas pieprasījumu Gitlab repo. Nosaukumā izmantojiet savas lietotnes ID.</li>\n<li>Pagaidiet atsauksmi no F-Droid komandas.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => '6. darbība';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Process ir nedaudz sarežģīts, un ceļā var rasties dažādas problēmas. Taču, kad būsit iestatījis CI, tālāk norādītie atjauninājumi tiks apstrādāti automātiski.</p>\n<p>Ja jums ir jautājumi, uzdodiet tos mūsu <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> vietnē.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Secinājums';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid ir lielisks FOSS lietotņu katalogs Android ierīcēm, taču lietotnes pievienošana var būt nedaudz sarežģīta...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Kā F-Droid publicēt savu lietotni Flutter ar garšām?';
+
+  @override
+  String get devblog250Sbtitle => 'Attīstības emuārs';
+
+  @override
   String get ads => 'Sludinājumi';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nLv extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: pērc XMR ērti';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Pērciet vai pārdodiet Monero bez ID pārbaudes. Skaidrā naudā vai tiešsaistē. Droši, ātri, viegli.\n\nLocalMonero ir lielākā, uzticamākā un vislabāk izveidotā P2P tirdzniecības platforma XMR telpā. Mums nav KYC pārbaužu — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt Bitcoin, Ether, USDT vai jebkuru citu kriptovalūtu uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.\n\n- Droša un vienmērīga tirdzniecība\nMēs atbalstām jebkuru maksājuma veidu, jebkuru valūtu un jebkurā vietā. Mēs nenoņemam maksājuma veidus un pilnībā atbalstām tiešus skaidras naudas darījumus. Visi mūsu darījumi ir aizsargāti ar šķīrējtiesas obligāciju. Tā kā mēs pieprasām, lai līdzekļi tiktu turēti šķīrējtiesas obligācijās pirms darījuma uzsākšanas, mēs pircējam nodrošinām gludu un drošu procesu. Tas ir būtiski platformas popularitātei un nodrošina pārdevējiem regulārus klientus.\n\n- Nav KYC/AML vai ID verifikācijas\nLocalMonero ir apņēmies saglabāt jūsu tirdzniecības pieredzes vienkāršību un tiešumu. Mēs neizmantojam KYC/AML un nekad neplānojam to darīt.\n\n- Kopiena uzticas\nMūsu platforma ir darbojusies vairāk nekā četrus gadus, pārdzīvojusi 2018. gada Lielo kriptovalūtu tirgus sabrukumu un, pateicoties uz sabiedrību orientētai rūpīgai apkalpošanai, kļuva par vienu no uzticamākajiem zīmoliem izteikti skeptiskajā Monero telpā.\n\n- Drošs, atvērtā pirmkoda, uz privātumu orientēts, izturīgs pret cenzūru\nMūsu lietotne ir bezmaksas un atvērtā koda, kas nodrošina, ka daudzas acis skatās uz lietotnes kodu, lai pārliecinātos, ka nav drošības caurumu vai privātuma noplūdes. Mūsu lietotnes atvērtā koda izmantošana arī ļauj ikvienam piekļūt mūsu lietotnei, pat ja noteikta lietotņu krātuve cenzē lietotni. Mūsu lietotne darbojas pat tālruņos, kuros Google ir pilnībā bloķēts. Mēs ļoti augstu vērtējam jūsu privātumu. Mēs pat neprasām reģistrējoties norādīt e-pastu.\nPērciet vai pārdodiet Monero bez ID pārbaudes. BRĪDINĀJUMS: ŠĪ LIETOTNE PAŠREIZ IR ATVĒRTĀ BETA VERSIJĀ!\n\nPirmkods: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblēmu izsekotājs: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Spēcīgs atbalsts\nMūsu atbalsta komanda ir ātra, atsaucīga un vienmēr vēlas iepriecināt. Mums nekad nav bijis atbalsta ziņas, uz kuru nebūtu atbildēts 24 stundu laikā. Mēs vienmēr esam viegli sasniedzami sociālajos tīklos, uzmanīgi uzklausām jūsu kritiku un vienmēr rekordīsā laikā īstenojam labus lietotāju ieteikumus.\n\nJūs varat sazināties ar mūsu atbalstu vietnē https://localmonero.co/support\n\n- Godīgas maksas\nMēs neiekasējam pārmērīgas maksas, kad noguldāt vai izņemat Monero mūsu šķīrējtiesas obligāciju makā/no tā. Nav depozīta maksas, un maksa par izņemšanu ir ļoti tuva tai, ko jūs maksātu par parastu pārskaitījumu.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Pērciet vai pārdodiet Monero bez ID pārbaudes. Skaidrā naudā vai tiešsaistē. Droši, ātri, viegli.\n\nLocalMonero ir lielākā, uzticamākā un labi izveidotā P2P tirdzniecības platforma XMR kopienā. Mums nav KYC čeku — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt Bitcoin, Ether, USDT vai jebkuru citu kriptonauda monētu uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.\n\n- Droša un vienmērīga tirdzniecība\nMēs atbalstām jebkuru maksājuma veidu, jebkuru valūtu un jebkurā vietā. Mēs nenoņemam maksājuma veidus un pilnībā atbalstām tiešus skaidras naudas darījumus. Visi mūsu darījumi ir aizsargāti ar šķīrējtiesas obligāciju. Pateicoties tam, ka mēs pieprasām, lai līdzekļi tiktu turēti šķīrējtiesas obligācijās pirms tirdzniecības uzsākšanas, mēs pircējam nodrošinām vienmērīgu un drošu pieredzi, kas ir būtiska platformas popularitātei un pārdevējiem atkārtotiem klientiem.\n\n- Nav KYC/AML vai ID verifikācijas\nLocalMonero ir apņēmies saglabāt jūsu tirdzniecības pieredzes vienkāršību un tiešumu. Mēs neizmantojam KYC/AML un nekad neplānojam to darīt.\n\n- Kopiena uzticas\nMūsu platforma ir darbojusies vairāk nekā četrus gadus, pārdzīvojusi 2018. gada Lielo kriptovalūtu tirgus sabrukumu un, pateicoties uz sabiedrību orientētai rūpīgai apkalpošanai, kļuva par vienu no uzticamākajiem vārdiem ārkārtīgi skeptiskajā Monero kopienā.\n\n- Drošs, atvērtā pirmkoda, uz privātumu orientēts, izturīgs pret cenzūru\nMūsu lietotne ir bezmaksas un atvērtā koda, kas nodrošina, ka daudzas acis skatās uz lietotnes kodu, lai pārliecinātos, ka nav drošības caurumu vai privātuma noplūdes. Mūsu lietotnes atklātā avota izmantošana arī ļauj ikvienam piekļūt mūsu lietotnei, pat ja noteikta lietotņu krātuve cenzē lietotni. Mūsu lietotne darbojas pat tālruņos, kuros Google ir pilnībā bloķēts. Mēs ļoti augstu vērtējam jūsu privātumu, mēs pat nepieprasām, lai reģistrējoties norādiet e-pastu.\n\nAvota kods: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblēmu izsekotājs: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Zvaigžņu atbalsts\nMūsu atbalsta komanda ir ātra, atsaucīga un vienmēr vēlas iepriecināt. Mēs nekad neesam saņēmuši atbalsta biļeti, uz kuru nebūtu atbildēts 24 stundu laikā. Mēs vienmēr esam viegli sasniedzami, izmantojot sociālos medijus, mēs uzmanīgi uzklausām jūsu kritiku un vienmēr rekordīsā laikā īstenojam labus lietotāju ieteikumus.\n\nJūs varat sazināties ar mūsu atbalstu vietnē https://localmonero.co/support\n\n- Godīgas maksas\nMēs neiekasējam pārmērīgas maksas, kad jūs noguldāt vai izņemat Monero mūsu šķīrējtiesas obligāciju makā/no tā. Nav depozīta maksas, un maksa par izņemšanu ir ļoti tuva maksai, ko jūs maksājat par parastu darījumu.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: pērc XMR anonīmi';
@@ -9293,8 +9356,23 @@ class I18nLv extends I18n {
   String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Pērciet vai pārdodiet Bitcoin bez ID pārbaudes. Skaidrā naudā vai tiešsaistē.';
 
   @override
   String get app_ask_community_chats => 'Vai jums ir jautājumi? Jautājiet kopienas tērzēšanā';
+
+  @override
+  String get app_select_currency => 'Izvēlieties valūtu';
+
+  @override
+  String get app_select_country => 'Izvēlies valsti';
+
+  @override
+  String get app_select_payment_method => 'Izvēlieties maksājuma veidu';
+
+  @override
+  String get app_enable_ad => 'Iespējot reklāmu';
+
+  @override
+  String get app_disable_ad => 'Atspējot reklāmu';
 }

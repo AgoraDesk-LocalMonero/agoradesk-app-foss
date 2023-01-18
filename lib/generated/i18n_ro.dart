@@ -3878,7 +3878,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Înșelătoria absolută';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Semințele tale Monero sunt Monero. Trebuie să o notezi atunci când îți faci un portofel, deoarece dacă îți pierzi sămânța, ai pierdut Monero și nimeni nu te poate ajuta. DAR, DE ASEMENEA, trebuie să păstrați această sămânță în siguranță față de alții. Dacă cineva îți fură sămânța, poate trimite Monero din portofel ca și cum ar fi în locul tău și, din nou, nimeni nu poate recupera acești bani pentru tine. Au dispărut.</p>\n\n<p>De prea multe ori o persoană a păstrat un portofel rece de Monero, a fost curioasă în legătură cu fondurile sale și a vrut să le verifice. Dar, în loc să treacă prin complicații sau să reinstaleze întreaga aplicație a portofelului, ei decid pur și simplu să folosească un portofel web pentru a-și restabili rapid sămânța și a se uita la banii lor. În cazul în care cad victime ale înșelăciunii de tipul \"Business Look Alike\", atunci simplul fapt de a introduce datele de bază le oferă escrocilor, care pot muta apoi banii într-un alt portofel pe care îl controlează după bunul lor plac.</p>\n\n<p>Ori de câte ori un site, o aplicație sau un portofel are o opțiune de \"restaurare cu semințe\", fiți foarte atenți ca aplicația pe care o utilizați să fie una legitimă. Verificați hash-urile programului (site-ul Monero conține instrucțiuni despre cum să faceți acest lucru) pentru a vă asigura că programul nu a fost modificat de forțe externe și fiți în permanență atenți la locul și modul în care vă expuneți sămânța. Dubla verificare poate fi enervantă, dar pierderea de fonduri din cauza neglijenței ar fi și mai gravă.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sămânța ta Monero ESTE Monero-ul tău. Trebuie să-l notezi când îți faci pentru prima dată un portofel, pentru că dacă îți pierzi sămânța, ți-ai pierdut Monero-ul și nimeni nu te poate ajuta. DAR, DE ASEMENEA, trebuie să păstrați această sămânță în siguranță de ceilalți. Dacă cineva îți fură sămânța, poate trimite Monero-ul din portofel ca și cum ai fi tu și, din nou, nimeni nu poate recupera acești bani pentru tine. A dispărut.</p>\n\n<p>De prea multe ori o persoană a păstrat un portofel rece de Monero, a fost curios de fondurile sale și a vrut să verifice. Dar, în loc să treacă prin bătaia de cap de a reinstala întreaga aplicație de portofel, ei decid doar să folosească un portofel web pentru a-și restaura rapid semințele și a-și privi banii. Dacă devin victime ale înșelătoriei Business Look Alike, atunci însuși actul de a introduce semințele lor le dă escrocilor, care pot muta apoi banii într-un alt portofel pe care îl controlează la convenție.</p>\n\n<p>Oricand un site, o aplicație sau un portofel are o opțiune „restaurare cu semințe”, fiți foarte atenți că aplicația pe care o utilizați este una legitimă. Verificați hash-urile programului (site-ul web Monero are instrucțiuni despre cum să faceți acest lucru) pentru a vă asigura că programul nu a fost alterat de forțele externe și fiți constant conștienți de unde și cum vă expuneți semințele. Verificarea dublă poate fi enervantă, dar pierderea de fonduri din neatenție ar fi și mai gravă.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Rolul semințelor tale Monero în escrocherii';
@@ -7439,6 +7439,69 @@ class I18nRo extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'În acest blog, echipa noastră împărtășește unele dintre perspectivele noastre de dezvoltare celor care sunt interesați de partea tehnică a lucrurilor.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid este un catalog instalabil de aplicații FOSS (Free and Open Source Software) pentru platforma Android. Clientul facilitează navigarea, instalarea și urmărirea actualizărilor de pe dispozitiv.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Site web F-Droid</a></p>\n</blockquote>\n\n<p>Toți pașii din acest tutorial vor funcționa și pentru o aplicație fără arome.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplicația poate fi inclusă în F-Droid numai dacă este complet open-source - inclusiv toate bibliotecile și dependențele utilizate. Aflați mai multe despre politica de includere <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">aici</a>.</p>\n<p>De exemplu, dacă utilizați baza de date ObjectBox în aplicația dvs., aceasta nu poate fi inclusă în F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discuție</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Ce aplicații pot fi incluse în F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata depozit</a> pe Gitlab.</li>\n<li>Clonează depozitul pe dispozitivul tău.</li>\n<li>Creează o ramură cu ID-ul pachetului al aplicației, de exemplu <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Pasul 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verificați dacă <code>fdroid</code> funcționează corect. Rulați următoarele comenzi în folderul <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Pasul 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Adăugați proiectul dvs.:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Va crea un fișier în directorul de metadate, de exemplu <code>metadata/co.localmonero.app.yml</code>.\nDe asemenea, puteți crea acest fișier manual.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Pasul 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Deschideți fișierul și editați-l. Iată un exemplu: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>În exemplu puteți vedea:</p>\n<ol>\n<li>Flutter este folosit ca submodul - aceasta este o cerință din partea echipei F-Droid.</li>\n<li>Pentru fiecare aromă am folosit o ramură separată (comanda <code>AutoUpdateMode: Versiunea %v-fdroid-lm</code>). Asta pentru că Fastlane&#39;nu acceptă arome cu Flutter.</li>\n<li>Prima dată când adăugăm manual informații de construcție, în viitor acestea vor fi adăugate automat de un bot, după ce vom împinge o nouă etichetă.</li>\n</ol>\n<p>Verificați dacă fișierul are sintaxa corectă: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Pasul 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Acum, să adăugăm date pentru piața F-Droid. Pentru asta creăm o ramură separată pentru fiecare aromă:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>După aceea, creăm un folder pentru Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Adăugați datele necesare și împingeți-le.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Pasul 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Este timpul să adăugați aplicația la F-Droid.</p>\n<ol>\n<li>Creați o etichetă în depozitul de aplicații.</li>\n<li>Aplicați modificări în depozitul F-Droid de pe Gitlab.</li>\n<li>Efectuați o solicitare de îmbinare în depozitul Gitlab. Utilizați id-ul aplicației dvs. în titlu.</li>\n<li>Așteptați o recenzie din partea echipei F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Pasul 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le adresați pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Concluzie';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid este un catalog grozav de aplicații FOSS pentru Android, dar adăugarea aplicației dvs. poate fi puțin complicată...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Cum să-ți publici aplicația Flutter cu arome pe F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blog de dezvoltare';
+
+  @override
   String get ads => 'Reclame';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nRo extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpărați XMR cu ușurință';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID-ului. Numerar sau online. Sigur, rapid și ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem verificări KYC - puteți pur și simplu să cumpărați Monero în mod anonim, fără verificare a identității, cu PayPal, card de credit, card cadou, numerar prin poștă sau să convertiți Bitcoin, Ether, USDT sau orice altă criptomonedă în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice valută, oriunde. Nu eliminăm metodele de plată și susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență sigură și fără probleme pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți repetați pentru vânzători.\n\n- Fără KYC/AML sau verificare a identității\nLocalMonero se angajează să mențină simplitatea și directețea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm să facem vreodată acest lucru.\n\n- Încredere din partea comunității\nPlatforma noastră funcționează de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea Monero, extrem de sceptică.\n\n- Sigur, sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. De asemenea, sursa deschisă permite oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au Google complet blocat. Ținem atât de mult la confidențialitatea dvs. încât nici măcar nu vă cerem să furnizați un e-mail la înregistrare.\nCumpărați sau vindeți Monero fără verificarea ID-ului. AVERTISMENT: ACEASTĂ APLICAȚIE ESTE ÎN PREZENT ÎN VERSIUNE BETA DESCHISĂ!\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nUrmăritor de probleme: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Asistență Stellar\nEchipa noastră de asistență este rapidă, receptivă și întotdeauna dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență la care să nu ni se răspundă în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor de socializare, vă ascultăm cu atenție criticile și implementăm întotdeauna sugestiile bune ale utilizatorilor în timp record.\n\nPuteți ajunge la serviciul nostru de asistență la: https://localmonero.co/support\n\n- Tarife corecte\nNu percepem taxe exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID. Cash sau online. Sigur, rapid, ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și mai bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem cecuri KYC - puteți pur și simplu cumpăra Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, numerar prin poștă sau puteți converti Bitcoin, Ether, USDT sau orice altă monedă cripto în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și sprijinim pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o obligațiune de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în obligațiune de arbitraj înainte de a începe tranzacția, asigurăm o experiență fluidă și sigură pentru cumpărător, care este esențială pentru popularitatea platformei și clienții repetați pentru vânzători.\n\n- Fără verificare KYC/AML sau ID\nLocalMonero se angajează să mențină simplitatea și claritatea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm vreodată să facem acest lucru.\n\n- De încredere de către Comunitate\nPlatforma noastră a funcționat de peste patru ani, a supraviețuit Marelui Prăbuș al pieței de criptomonede din 2018 și, prin serviciul său diligent orientat către comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea extrem de sceptică Monero.\n\n- Securizat, cu sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. Deschiderea aplicației noastre permite, de asemenea, oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoanele care au Google complet blocat. Apreciem atât de mult confidențialitatea dvs., încât nici măcar nu vă cerem să furnizați un e-mail atunci când vă înregistrați.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nInstrument de urmărire a problemelor: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport stelar\nEchipa noastră de asistență este rapidă, receptivă și mereu dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență care să nu primească răspuns în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor sociale, ascultăm cu atenție criticile voastre și punem întotdeauna în aplicare sugestii bune ale utilizatorilor în timp record.\n\nPuteți ajunge la asistența noastră la: https://localmonero.co/support\n\n- Taxe corecte\nNu percepem comisioane exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există nicio taxă de depunere, iar taxa de retragere este foarte apropiată de taxa pe care ați fi plătit-o pentru o tranzacție normală.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR în mod privat';
@@ -9293,8 +9356,23 @@ class I18nRo extends I18n {
   String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Cumpărați sau vindeți Bitcoin fără verificarea ID. Cash sau online.';
 
   @override
   String get app_ask_community_chats => 'Ai întrebări? Întrebați în chat-urile comunității';
+
+  @override
+  String get app_select_currency => 'Selectați moneda';
+
+  @override
+  String get app_select_country => 'Selecteaza tara';
+
+  @override
+  String get app_select_payment_method => 'Selecteaza metoda de plata';
+
+  @override
+  String get app_enable_ad => 'Activați anunțul';
+
+  @override
+  String get app_disable_ad => 'Dezactivați anunțul';
 }

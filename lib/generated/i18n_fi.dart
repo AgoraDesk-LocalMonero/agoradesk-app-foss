@@ -3878,7 +3878,7 @@ class I18nFi extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Suoranainen huijaus';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Monero seedisi ON sinun Monerosi. Sinun on kirjoitettava se muistiin, kun teet ensimmäisen lompakon, koska jos menetät siemenesi, olet menettänyt Monerosi, eikä kukaan voi auttaa sinua. MUTTA MYÖS sinun on pidettävä tämä seed turvassa muilta. Jos joku varastaa seedisi, hän voi lähettää Moneron lompakosta kuin olisit sinä, eikä kukaan voi periä näitä rahoja puolestasi. Ne ovat poissa.</p>\n\n<p>Liian usein henkilö on pitänyt Monero-lompakkoa kylmänä, ollut utelias varoistaan ja halunnut tarkistaa sen. Mutta sen sijaan, että he kävisivät läpi hässäkkää tai asentaisivat koko lompakkosovelluksen uudelleen, he vain päättävät käyttää verkkolompakkoa palauttaakseen nopeasti seedinsä ja tarkastellakseen rahojaan. Jos he joutuvat Business Look Alike -huijauksen uhriksi, jo seedin syöttäminen antaa sen huijareille, jotka voivat siirtää rahat toiseen lompakkoon, jota he hallitsevat haluamallaan tavalla.</p>\n\n<p> AINA sivustossa, sovelluksessa tai lompakossa on \"palautus seedillä\" -vaihtoehto, ole erittäin varovainen ja tarkista, että käyttämäsi sovellus on aito. Tarkista ohjelman hashit (Moneron verkkosivuilla on ohjeet tämän tekemiseen) varmistaaksesi, etteivät ulkopuoliset voimat ole peukaloineet ohjelmaa ja ole jatkuvasti tietoinen siitä, missä ja miten paljastat seedisi. Kaksoistarkastus voi olla ärsyttävää, mutta huolimattomuudesta johtuva varojen menetys olisi vielä ärsyttävämpää.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Monero-siemenesi ON sinun Monerosi. Sinun on kirjoitettava se muistiin, kun teet ensimmäisen lompakon, koska jos menetät siemenesi, olet menettänyt Monerosi, eikä kukaan voi auttaa sinua. MUTTA MYÖS sinun on pidettävä tämä siemen turvassa muilta. Jos joku varastaa siemenesi, hän voi lähettää Moneron lompakosta kuin olisit sinä, eikä kukaan voi periä näitä rahoja puolestasi. Se on poissa.</p>\n\n<p>Liian usein henkilö on pitänyt Monero-lompakkoa kylmänä, ollut utelias varoistaan ja halunnut tarkistaa sen. Mutta koko lompakkosovelluksen uudelleenasentamisen sijaan he päättävät käyttää verkkolompakkoa palauttaakseen nopeasti siemenensä ja tarkastellakseen rahojaan. Jos he joutuvat Business Look Alike -huijauksen uhriksi, jo siemenensä syöttäminen antaa sen huijareille, jotka voivat siirtää rahat toiseen lompakkoon, jota he hallitsevat haluamallaan tavalla.</p>\n\n<p> AINA sivustossa, sovelluksessa tai lompakossa on \"palautus siemenellä\" -vaihtoehto, ole erittäin varovainen, että käyttämäsi sovellus on aito. Tarkista ohjelman tiivisteet (Moneron verkkosivuilla on ohjeet tämän tekemiseen) varmistaaksesi, etteivät ulkopuoliset voimat ole peukaloitu ohjelmaa, ja ole jatkuvasti tietoinen siitä, missä ja miten paljastat siemenesi. Kaksoistarkastus voi olla ärsyttävää, mutta huolimattomuudesta johtuva varojen menetys olisi vielä pahempaa.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Monero-seedisi rooli huijauksissa';
@@ -7439,6 +7439,69 @@ class I18nFi extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'Tässä blogissa tiimimme jakaa kehitysnäkemyksiämme asioiden teknisestä puolesta kiinnostuneiden kanssa.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid on asennettava luettelo FOSS-sovelluksista (Free and Open Source Software) Android-alustalle. Asiakkaan avulla on helppoa selata, asentaa ja seurata laitteesi päivityksiä.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid-verkkosivusto</a></p>\n</blockquote>\n\n<p>Kaikki tämän opetusohjelman vaiheet toimivat myös sovelluksessa, jossa ei ole makuja.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Sovellus voidaan sisällyttää F-Droidiin vain, jos se on täysin avoimen lähdekoodin - mukaan lukien kaikki käytetyt kirjastot ja riippuvuudet. Lue lisää sisällyttämistä koskevasta käytännöstä <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">täällä</a>.</p>\n<p>Jos esimerkiksi käytät ObjectBox-tietokantaa sovelluksessasi, sitä ei voida&#39; sisällyttää F-Droidiin (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">keskustelu</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Mitä sovelluksia voidaan sisällyttää F-Droidiin?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a> Gitlabissa.</li>\n<li>Kloonaa arkisto laitteellesi.</li>\n<li>Luo haara sovelluksen nipputunnuksella, esimerkiksi <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Vaihe 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Tarkista, että <code>fdroid</code> toimii oikein. Suorita seuraavat komennot <code>fdroid</code>-kansiossasi:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Vaihe 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Lisää projektisi:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Se luo tiedoston metatietohakemistoon, esimerkiksi <code>metadata/co.localmonero.app.yml</code>.\nVoit myös luoda tämän tiedoston manuaalisesti.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Vaihe 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Avaa tiedosto ja muokkaa sitä. Tässä on esimerkki: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Esimerkissä näet:</p>\n<ol>\n<li>Flutteria käytetään alimoduulina – tämä on F-Droid-tiimin vaatimus.</li>\n<li>Olemme käyttäneet jokaiselle maulle erillistä haaraa (komento <code>AutoUpdateMode: versio %v-fdroid-lm</code>). Tämä johtuu siitä, että Fastlane&#39; ei tue makuja Flutterilla.</li>\n<li>Ensimmäisen kerran lisäämme koontiversion tiedot manuaalisesti. Jatkossa robotti lisää ne automaattisesti, kun olemme painaneet uuden tagin.</li>\n</ol>\n<p>Tarkista, että tiedoston syntaksi on oikea: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Vaihe 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Lisätään nyt tietoja F-Droid-markkinoita varten. Tätä varten luomme jokaiselle maulle erillisen haaran:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Sen jälkeen luomme kansion Fastlanelle:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Lisää tarvittavat tiedot ja paina se.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Vaihe 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>On aika lisätä sovellus F-Droidiin.</p>\n<ol>\n<li>Luo tagi sovellusvarastoon.</li>\n<li>Työnnä muutokset F-Droid-tietovarastoon Gitlabissa.</li>\n<li>Tee yhdistämispyyntö Gitlabin repossa. Käytä nimessä sovelluksesi tunnusta.</li>\n<li>Odota F-Droid-tiimin arvostelua.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Vaihe 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Prosessi on hieman monimutkainen, ja matkan varrella saattaa ilmetä erilaisia ongelmia. Mutta kun olet määrittänyt CI:n, seuraavat päivitykset käsitellään automaattisesti.</p>\n<p>Jos sinulla on kysyttävää, kysy ne <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHubissa</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Johtopäätös';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid on loistava valikoima FOSS-sovelluksia Androidille, mutta sovelluksen lisääminen voi olla hieman monimutkaista...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Kuinka julkaista Flutter-sovelluksesi makuineen F-Droidissa?';
+
+  @override
+  String get devblog250Sbtitle => 'Kehitysblogi';
+
+  @override
   String get ads => 'Ilmoitukset';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nFi extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: osta XMR helposti';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Osta tai myy Moneroa ilman henkilöllisyystodistusta. Käteisellä tai netissä. Turvallista, nopeaa, helppoa.\n\nLocalMonero on XMR-yhteisön suurin, luotettavin ja vakiintunein P2P-kaupankäyntialusta. Meillä ei ole KYC-tarkistuksia – voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa Bitcoinin, Ethereumin, USDT:n tai minkä tahansa muun kryptovaluutan Moneroksi – alustamme tukee mitä tahansa maksutapaa.\n\n- Turvallista ja sujuvaa kaupankäyntiä\nTuemme mitä tahansa maksutapaa, mitä tahansa valuuttaa, missä tahansa. Emme poista maksutapoja ja tuemme täysin kasvokkain tapahtuvaa käteiskauppaa. Kaikki kauppamme on suojattu välimiesmaksulla. Sen tosiasian ansiosta, että vaadimme välimiesmaksua ennen kaupan alkamista, varmistamme sujuvan ja turvallisen kokemuksen ostajalle, mikä on olennaista alustan suosion ja myyjien toistuvien asiakkaiden kannalta.\n\n- Ei KYC/AML tai henkilöllisyystodistusta\nLocalMonero on sitoutunut säilyttämään kaupankäyntikokemuksesi yksinkertaisuuden ja suoraviivaisuuden. Emme käytä KYC:tä/AML:ää, emmekä koskaan aio tehdä niin.\n\n- Yhteisön luottama\nAlustamme on toiminut yli neljä vuotta, selvinnyt vuoden 2018 suuresta kryptovaluuttamarkkinoiden romahduksesta, ja yhteisölähtöisen ahkeran palvelunsa ansiosta siitä tuli yksi luotetuimmista nimistä erittäin skeptisessä Monero-yhteisössä.\n\n- Suojattu, yksityisyyskeskeinen, sensuurin kestävä\nsovelluksemme on ilmainen ja avoimen lähdekoodin, mikä varmistaa että monet silmät katsovat sovelluksen koodia varmistaakseen, ettei tietoturva-aukkoja tai tietosuojavuotoja ole. Sovelluksemme avoimen lähdekoodin avulla kuka tahansa voi päästä sovellukseemme, vaikka tietty sovelluskauppa sensuroisi sovelluksen. Sovelluksemme toimii jopa puhelimissa, joissa Google on kokonaan estetty. Arvostamme yksityisyyttäsi niin paljon, että emme edes vaadi sinua antamaan sähköpostiosoitetta rekisteröityessäsi.\nOsta tai myy Moneroa ilman henkilöllisyystodistusta. VAROITUS: TÄMÄ SOVELLUS ON AVOIMESSA BETASSA!\n\nLähdekoodi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nOngelman seuranta: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar tuki\nTukitiimimme on nopea, reagoiva ja aina innokas miellyttämään. Meillä ei ole koskaan ollut tukipyyntöä, johon ei ole vastattu 24 tunnin sisällä. Olemme aina helposti tavoitettavissa sosiaalisen median kautta, kuuntelemme tarkasti kritiikkiäsi ja toteutamme aina hyvät käyttäjäehdotukset ennätysajassa.\n\nVoit ottaa yhteyttä tukeemme osoitteessa: https://localmonero.co/support\n\n- Kohtuulliset kulut\nEmme veloita kohtuuttomia maksuja, kun talletat tai nostat Moneroa välimiesmaksulompakkoon tai sieltä pois. Talletusmaksua ei peritä, ja nostomaksu on hyvin lähellä palkkiota jonka maksat normaalista tapahtumasta.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Osta tai myy Monero ilman henkilöllisyystodistusta. Käteisellä tai netissä. Turvallista, nopeaa, helppoa.\n\nLocalMonero on XMR-yhteisön suurin, luotettavin ja vakiintunein P2P-kaupankäyntialusta. Meillä ei ole KYC-sekkejä – voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa Bitcoinin, Etherin, USDT:n tai minkä tahansa muun kryptokolikon Moneroksi – alustamme tukee mitä tahansa maksutapaa.\n\n- Turvallista ja sujuvaa kaupankäyntiä\nTuemme mitä tahansa maksutapaa, mitä tahansa valuuttaa, missä tahansa. Emme poista maksutapoja, ja tuemme täysin kasvokkain tapahtuvaa käteiskauppaa. Kaikki kauppamme on suojattu välimieslainalla. Sen tosiasian ansiosta, että vaadimme välimieslainaa ennen kaupan alkamista, varmistamme sujuvan ja turvallisen kokemuksen ostajalle, mikä on olennaista alustan suosion ja myyjien toistuvien asiakkaiden kannalta.\n\n- Ei KYC/AML- tai henkilöllisyystodistusta\nLocalMonero on sitoutunut säilyttämään kaupankäyntikokemuksesi yksinkertaisuuden ja suoraviivaisuuden. Emme käytä KYC/AML:ää, emmekä koskaan aio tehdä niin.\n\n- Yhteisö luottaa\nAlustamme on toiminut yli neljä vuotta, selvinnyt vuoden 2018 suuresta kryptovaluuttamarkkinoiden romahduksesta, ja yhteisölähtöisen ahkeran palvelunsa ansiosta siitä tuli yksi luotetuimmista nimistä erittäin skeptisessä Monero-yhteisössä.\n\n- Suojattu, avoimen lähdekoodin, yksityisyyskeskeinen, sensuurin kestävä\nSovelluksemme on ilmainen ja avoimen lähdekoodin, mikä varmistaa, että monet silmät katsovat sovelluksen koodia varmistaakseen, ettei tietoturva-aukkoja tai tietosuojavuotoja ole. Sovelluksemme avoimen lähdekoodin avulla kuka tahansa voi päästä sovellukseemme, vaikka tietty sovellusvarasto sensoisi sovelluksen. Sovelluksemme toimii jopa puhelimissa, joissa Google on kokonaan estetty. Arvostamme yksityisyyttäsi niin paljon, emme edes vaadi sinua antamaan sähköpostiosoitetta rekisteröityessämme.\n\nLähdekoodi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nOngelman seuranta: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Tähtien tuki\nTukitiimimme on nopea, reagoiva ja aina innokas miellyttämään. Meillä ei ole koskaan ollut tukipyyntöä, johon ei vastattu 24 tunnin sisällä. Olemme aina helposti tavoitettavissa sosiaalisen median kautta, kuuntelemme tarkasti kritiikkiäsi ja toteutamme aina hyvät käyttäjäehdotukset ennätysajassa.\n\nVoit ottaa yhteyttä tukeemme osoitteessa: https://localmonero.co/support\n\n- Kohtuulliset maksut\nEmme veloita kohtuuttomia maksuja, kun talletat tai nostat Moneroa välimieslain lompakkoon tai sieltä. Talletusmaksua ei peritä, ja nostomaksu on hyvin lähellä palkkiota, jonka maksat normaalista tapahtumasta.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: Osta XMR vaivatta';
@@ -9293,8 +9356,23 @@ class I18nFi extends I18n {
   String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Osta tai myy Bitcoinia ilman henkilöllisyystodistusta. Käteisellä tai netissä.';
 
   @override
   String get app_ask_community_chats => 'Onko sinulla kysyttävää? Kysy yhteisön chateissa';
+
+  @override
+  String get app_select_currency => 'Valitse valuutta';
+
+  @override
+  String get app_select_country => 'Valitse maa';
+
+  @override
+  String get app_select_payment_method => 'Valitse maksutapa';
+
+  @override
+  String get app_enable_ad => 'Ota mainos käyttöön';
+
+  @override
+  String get app_disable_ad => 'Poista mainos käytöstä';
 }

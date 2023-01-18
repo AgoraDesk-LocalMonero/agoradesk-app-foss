@@ -134,9 +134,11 @@ abstract class I18n {
     Locale('ja'),
     Locale('ko'),
     Locale('lv'),
+    Locale('nb', 'NO'),
     Locale('nb'),
     Locale('nl'),
     Locale('pl'),
+    Locale('pt', 'BR'),
     Locale('pt'),
     Locale('ro'),
     Locale('ru'),
@@ -6916,7 +6918,7 @@ abstract class I18n {
   /// No description provided for @knowledge250Sbscams250Sb4250Sbtext.
   ///
   /// In en, this message translates to:
-  /// **'<p>Your Monero seed IS your Monero. You must write it down when you first make a wallet, because if you lose your seed, you\'ve lost your Monero and nobody can help you. BUT ALSO you must keep this seed safe from others. If someone steals your seed, they can send the Monero out of the wallet as if they were you, and, again, nobody can recover this money for you. It\'s gone.</p>\n\n<p>Far too often has an individual kept a cold wallet of Monero, been curious about their funds, and wanted to check on it. But rather than going through the hassle or reinstalling the entire wallet application, they just decide to use a web wallet to quickly restore their seed and look at their money. If they fall victim to the Business Look Alike scam, then the very act of inputting their seed gives it to the scammers, who can then move the money to a different wallet that they control at their convenience.</p>\n\n<p>ANYTIME a site, application, or wallet has a \'restore with seed\' option, be very careful that the application you are using is a legitimate one. Check the hashes of the program (the Monero website has instructions on how to do this) to ensure the program has not been tampered with by outside forces, and be constantly aware of where and how you expose your seed. The double check may be annoying, but the loss of funds from carelessness would be even worse.</p>'**
+  /// **'<p>Your Monero seed IS your Monero. You must write it down when you first make a wallet, because if you lose your seed, you\'ve lost your Monero and nobody can help you. BUT ALSO you must keep this seed safe from others. If someone steals your seed, they can send the Monero out of the wallet as if they were you, and, again, nobody can recover this money for you. It\'s gone.</p>\n\n<p>Far too often has an individual kept a cold wallet of Monero, been curious about their funds, and wanted to check on it. But rather than going through the hassle of reinstalling the entire wallet application, they just decide to use a web wallet to quickly restore their seed and look at their money. If they fall victim to the Business Look Alike scam, then the very act of inputting their seed gives it to the scammers, who can then move the money to a different wallet that they control at their convenience.</p>\n\n<p>ANYTIME a site, application, or wallet has a \'restore with seed\' option, be very careful that the application you are using is a legitimate one. Check the hashes of the program (the Monero website has instructions on how to do this) to ensure the program has not been tampered with by outside forces, and be constantly aware of where and how you expose your seed. The double check may be annoying, but the loss of funds from carelessness would be even worse.</p>'**
   String get knowledge250Sbscams250Sb4250Sbtext;
 
   /// No description provided for @knowledge250Sbscams250Sb4250Sbtitle.
@@ -13183,6 +13185,132 @@ abstract class I18n {
   /// **'{assetName} Street Price Widget'**
   String widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate(Object assetName);
 
+  /// No description provided for @devblog250Sbdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'In this blog our team shares some of our development insights with those who are interested in the technical side of things.'**
+  String get devblog250Sbdescription;
+
+  /// No description provided for @devblog250Sbfdroid250Sb0250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<blockquote>\n<p>F-Droid is an installable catalog of FOSS (Free and Open Source Software) applications for the Android platform. The client makes it easy to browse, install, and keep track of updates on your device.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid website</a></p>\n</blockquote>\n\n<p>All the steps from this tutorial will work for an app without flavors as well.</p>'**
+  String get devblog250Sbfdroid250Sb0250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb1250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>The app can be included in F-Droid only if it is completely open-source - including all libraries and dependencies used. Learn more about the inclusion policy <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">here</a>.</p>\n<p>For example, if you use ObjectBox database in your app, it can&#39;t be included in F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discussion</a>).</p>'**
+  String get devblog250Sbfdroid250Sb1250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb1250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Which apps can be included to F-Droid?'**
+  String get devblog250Sbfdroid250Sb1250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb2250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a> on Gitlab.</li>\n<li>Clone the repository to your device.</li>\n<li>Create a branch with the bundle ID of the app, for example <code>co.localmonero.app</code></li>\n</ul>'**
+  String get devblog250Sbfdroid250Sb2250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb2250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Step 1'**
+  String get devblog250Sbfdroid250Sb2250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb3250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>Check that <code>fdroid</code> works correctly. Run the following commands in your <code>fdroid</code> folder:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>'**
+  String get devblog250Sbfdroid250Sb3250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb3250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Step 2'**
+  String get devblog250Sbfdroid250Sb3250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb4250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>Add your project:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>It will create a file in the metadata directory, for example <code>metadata/co.localmonero.app.yml</code>.\nYou can also create this file manually.</p>'**
+  String get devblog250Sbfdroid250Sb4250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb4250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Step 3'**
+  String get devblog250Sbfdroid250Sb4250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb5250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>Open the file and edit it. Here\'s an example: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>In the example you can see:</p>\n<ol>\n<li>Flutter is used as a submodule - this is a requirement from the F-Droid team.</li>\n<li>For every flavor we\'ve used a separate branch (command <code>AutoUpdateMode: Version %v-fdroid-lm</code>). That\'s because Fastlane doesn&#39;t support flavors with Flutter.</li>\n<li>First time we add build info manually, in the future it will be added automatically by a bot, after we push a new tag.</li>\n</ol>\n<p>Check that the file has correct syntax: <code>fdroid readmeta</code>.</p>'**
+  String get devblog250Sbfdroid250Sb5250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb5250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Step 4'**
+  String get devblog250Sbfdroid250Sb5250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb6250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>Now, let\'s add data for the F-Droid market. For that we create a separate branch for each flavor:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>After that, we create a folder for Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Add the required data and push it.</p>'**
+  String get devblog250Sbfdroid250Sb6250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb6250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Step 5'**
+  String get devblog250Sbfdroid250Sb6250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb7250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>It is time to add the app to F-Droid.</p>\n<ol>\n<li>Create a tag in your app repository.</li>\n<li>Push changes to the F-Droid repository on Gitlab.</li>\n<li>Make a merge request in the Gitlab repo. Use id of your app in the title.</li>\n<li>Wait for a review from the F-Droid team.</li>\n</ol>'**
+  String get devblog250Sbfdroid250Sb7250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb7250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Step 6'**
+  String get devblog250Sbfdroid250Sb7250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sb8250Sbtext.
+  ///
+  /// In en, this message translates to:
+  /// **'<p>The process is a little bit complicated and different issues may arise along the way. But once you set up the CI, the following updates will be handled automatically.</p>\n<p>In case you have questions, feel free to ask them on our <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>'**
+  String get devblog250Sbfdroid250Sb8250Sbtext;
+
+  /// No description provided for @devblog250Sbfdroid250Sb8250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Conclusion'**
+  String get devblog250Sbfdroid250Sb8250Sbtitle;
+
+  /// No description provided for @devblog250Sbfdroid250Sbdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'F-Droid is a great catalog of FOSS apps for Android, but adding your app may be a little bit complicated...'**
+  String get devblog250Sbfdroid250Sbdescription;
+
+  /// No description provided for @devblog250Sbfdroid250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'How to publish your Flutter app with flavors on F-Droid?'**
+  String get devblog250Sbfdroid250Sbtitle;
+
+  /// No description provided for @devblog250Sbtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Development Blog'**
+  String get devblog250Sbtitle;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:
@@ -16468,7 +16596,7 @@ abstract class I18n {
   /// No description provided for @app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero.
   ///
   /// In en, this message translates to:
-  /// **'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.\n\nLocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.\n\n- Safe and Smooth Trading\nWe support any payment method, any currency, anywhere. We do not remove payment methods, and we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nLocalMonero is committed to maintaining the simplicity and straight-forwardness of your trading experience. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical Monero community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\nBuy or sell Monero without ID verification. WARNING: THIS APP IS CURRENTLY IN OPEN BETA!\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://localmonero.co/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Monero to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.'**
+  /// **'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.\n\nLocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.\n\n- Safe and Smooth Trading\nWe support any payment method, any currency, anywhere. We do not remove payment methods, and we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nLocalMonero is committed to maintaining the simplicity and straight-forwardness of your trading experience. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical Monero community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://localmonero.co/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Monero to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.'**
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero;
 
   /// No description provided for @app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero.
@@ -16710,6 +16838,36 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Have questions? Ask in the community chats'**
   String get app_ask_community_chats;
+
+  /// No description provided for @app_select_currency.
+  ///
+  /// In en, this message translates to:
+  /// **'Select currency'**
+  String get app_select_currency;
+
+  /// No description provided for @app_select_country.
+  ///
+  /// In en, this message translates to:
+  /// **'Select country'**
+  String get app_select_country;
+
+  /// No description provided for @app_select_payment_method.
+  ///
+  /// In en, this message translates to:
+  /// **'Select payment method'**
+  String get app_select_payment_method;
+
+  /// No description provided for @app_enable_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable ad'**
+  String get app_enable_ad;
+
+  /// No description provided for @app_disable_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable ad'**
+  String get app_disable_ad;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
@@ -16731,6 +16889,18 @@ I18n lookupI18n(Locale locale) {
 
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
+    case 'nb': {
+  switch (locale.countryCode) {
+    case 'NO': return I18nNbNo();
+   }
+  break;
+   }
+    case 'pt': {
+  switch (locale.countryCode) {
+    case 'BR': return I18nPtBr();
+   }
+  break;
+   }
     case 'zh': {
   switch (locale.countryCode) {
     case 'CN': return I18nZhCn();

@@ -31,6 +31,7 @@ import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:overlay_support/overlay_support.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
 
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
@@ -86,6 +87,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool connection = true;
 
   bool _changingVisibility = false;
+  bool visibleForTooltip = false;
 
   Asset? _asset;
   SortingDirectionType _sortingDirectionType = SortingDirectionType.asc;
@@ -244,21 +246,31 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   }
 
   Future displayTooltips(int length) async {
-    if (!_displayingTooltip) {
+    if (!_displayingTooltip && visibleForTooltip) {
       _displayingTooltip = true;
       if (length > 1) {
         await Future.delayed(const Duration(seconds: 3));
         if (!_checkTooltipWasDisplayed(TooltipType.adEye)) {
           _displayEyeTooltip();
-          HapticFeedback.heavyImpact();
+          await HapticFeedback.heavyImpact();
+          await HapticFeedback.heavyImpact();
           _markTooltipAsShown(TooltipType.adEye);
         } else if (!_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
           _displayPressTooltip();
-          HapticFeedback.heavyImpact();
+          await HapticFeedback.heavyImpact();
+          await HapticFeedback.heavyImpact();
           _markTooltipAsShown(TooltipType.adLongPress);
         }
       }
       _displayingTooltip = false;
+    }
+  }
+
+  void manageTooltipReady(VisibilityInfo info) {
+    if (info.visibleFraction > 0.95) {
+      visibleForTooltip = true;
+    } else {
+      visibleForTooltip = false;
     }
   }
 

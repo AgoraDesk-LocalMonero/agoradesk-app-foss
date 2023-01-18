@@ -3878,7 +3878,7 @@ class I18nDe extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Der glatte Betrug';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Seed IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Wallet erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Seed vor anderen sicher aufbewahren. Wenn jemand Ihren Seed stiehlt, kann er die Monero aus der Wallet schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft haben Leute eine Cold Wallet von Monero aufbewahrt, waren neugierig auf ihr Geld und wollten es überprüfen. Aber anstatt sich die Mühe zu machen oder die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Wallet verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Wallet eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Brieftasche erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Samen vor anderen sicher aufbewahren. Wenn jemand Ihren Seed stiehlt, kann er den Monero aus der Brieftasche schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft hat eine Person eine Cold Wallet von Monero aufbewahrt, war neugierig auf ihr Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Brieftasche verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Brieftasche eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Die Rolle Ihres Monero-Seeds bei Betrug';
@@ -7439,6 +7439,69 @@ class I18nDe extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'In diesem Blog teilt unser Team einige unserer Erkenntnisse aus der Entwicklung mit denen, die sich für die technische Seite der Dinge interessieren.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid ist ein installierbarer Katalog von FOSS-Anwendungen (Free and Open Source Software) für die Android-Plattform. Der Client macht es einfach, Updates auf Ihrem Gerät zu durchsuchen, zu installieren und zu verfolgen.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid-Website</a></p>\n</blockquote>\n\n<p>Alle Schritte aus diesem Tutorial funktionieren auch für eine App ohne Flavors.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Die App kann nur dann in F-Droid eingebunden werden, wenn sie vollständig Open Source ist – einschließlich aller verwendeten Bibliotheken und Abhängigkeiten. Erfahren Sie <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">hier</a> mehr über die Inklusionsrichtlinie.</p>\n<p>Wenn Sie beispielsweise die ObjectBox-Datenbank in Ihrer App verwenden, kann sie&#39;nicht in F-Droid aufgenommen werden (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">Diskussion</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Welche Apps können zu F-Droid hinzugefügt werden?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a> auf Gitlab.</li>\n<li>Klonen Sie das Repository auf Ihr Gerät.</li>\n<li>Erstelle einen Branch mit der Bundle-ID der App, zum Beispiel <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Schritt 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Überprüfen Sie, ob <code>fdroid</code> ordnungsgemäß funktioniert. Führen Sie die folgenden Befehle in Ihrem <code>fdroid</code>-Ordner aus:</p>\n<pre><code class=\"lang-sh\">fdroid-Init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Schritt 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Fügen Sie Ihr Projekt hinzu:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Es wird eine Datei im Metadatenverzeichnis erstellt, zum Beispiel <code>metadata/co.localmonero.app.yml</code>.\nSie können diese Datei auch manuell erstellen.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Schritt 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Öffne die Datei und bearbeite sie. Hier ist ein Beispiel: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Im Beispiel sehen Sie:</p>\n<ol>\n<li>Flutter wird als Submodul verwendet - dies ist eine Anforderung des F-Droid-Teams.</li>\n<li>Für jeden Flavor haben wir einen eigenen Branch verwendet (Befehl <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Das liegt daran, dass Fastlane&#39;keine Flavors mit Flutter unterstützt.</li>\n<li>Das erste Mal, wenn wir Build-Informationen manuell hinzufügen, werden sie in Zukunft automatisch von einem Bot hinzugefügt, nachdem wir ein neues Tag übertragen haben.</li>\n</ol>\n<p>Überprüfen Sie, ob die Datei die richtige Syntax hat: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Schritt 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Jetzt fügen wir Daten für den F-Droid-Markt hinzu. Dafür erstellen wir für jeden Flavor einen eigenen Branch:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Danach erstellen wir einen Ordner für Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Fügen Sie die erforderlichen Daten hinzu und übertragen Sie sie.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Schritt 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Es ist an der Zeit, die App zu F-Droid hinzuzufügen.</p>\n<ol>\n<li>Erstellen Sie ein Tag in Ihrem App-Repository.</li>\n<li>Push-Änderungen an das F-Droid-Repository auf Gitlab.</li>\n<li>Stellen Sie eine Merge-Anfrage im Gitlab-Repo. Verwenden Sie die ID Ihrer App im Titel.</li>\n<li>Warte auf eine Bewertung vom F-Droid-Team.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Schritt 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Der Prozess ist etwas kompliziert und verschiedene Probleme können dabei auftreten. Aber sobald Sie das CI eingerichtet haben, werden die folgenden Updates automatisch gehandhabt.</p>\n<p>Falls Sie Fragen haben, können Sie diese gerne auf unserem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> stellen.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Fazit';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid ist ein großartiger Katalog von FOSS-Apps für Android, aber das Hinzufügen Ihrer App kann etwas kompliziert sein ...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Wie veröffentliche ich meine Flutter-App mit Flavors auf F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Entwicklungsblog';
+
+  @override
   String get ads => 'Anzeigen';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nDe extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR anonym kaufen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bargeld oder online. Sicher, schnell, einfach.\n\nLocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Bei uns gibt es keine KYC-Prüfungen – Sie können Monero einfach anonym ohne ID-Verifizierung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Krypto-Münze in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.\n\n- Sicherer und reibungsloser Handel\nWir unterstützen jede Zahlungsmethode, jede Währung und das überall. Wir entfernen keine Zahlungsmethoden und unterstützen den Barhandel von Angesicht zu Angesicht. Alle unsere Trades sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Popularität der Plattform und Stammkunden, als auch für die Verkäufer unerlässlich ist.\n\n- Keine KYC/AML- oder ID-Verifizierung\nLocalMonero ist bestrebt, die Einfachheit und Geradlinigkeit Ihrer Handelserfahrung beizubehalten. Wir setzen KYC/AML nicht ein und planen dies auch nie.\n\n- Von der Community vertraut\nUnsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Crash des Kryptowährungsmarktes von 2018 überstanden und wurde durch ihren gemeinschaftsorientierten, gewissenhaften Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community.\n\n- Sicher, Open Source, datenschutzzentriert, zensurresistent\nUnsere App ist kostenlos und Open Source, was sicherstellt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Open Source unserer App ermöglicht es auch jedem, auf unsere App zuzugreifen, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, die Google vollständig blockiert hat. Wir schätzen Ihre Privatsphäre so sehr, dass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.\nKaufen oder verkaufen Sie Monero ohne ID-Verifizierung. ACHTUNG: DIESE APP IST DERZEIT IN DER OFFENEN BETA!\n\nQuellcode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemverfolgung: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hervorragende Unterstützung\nUnser Support-Team ist schnell, reaktionsschnell und immer bemüht, Ihnen zu gefallen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Wir sind über Social Media immer gut erreichbar, hören uns Ihre Kritik aufmerksam an und setzen gute User-Vorschläge immer in Rekordzeit um.\n\nSie erreichen unseren Support unter: https://localmonero.co/support\n\n- Faire Gebühren\nWir erheben keine exorbitanten Gebühren, wenn Sie Monero in/aus unserer Wallet für Schiedsbürgschaften einzahlen oder abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bargeld oder online. Sicher, schnell, einfach.\n\nLocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Bei uns gibt es keine KYC-Prüfungen – Sie können Monero einfach anonym ohne ID-Verifizierung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Krypto-Münze in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.\n\n- Sicherer und reibungsloser Handel\nWir unterstützen jede Zahlungsmethode, jede Währung und überall. Wir entfernen keine Zahlungsmethoden und unterstützen den Barhandel von Angesicht zu Angesicht. Alle unsere Trades sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Beliebtheit der Plattform und Stammkunden für die Verkäufer unerlässlich ist.\n\n- Keine KYC/AML- oder ID-Verifizierung\nLocalMonero ist bestrebt, die Einfachheit und Geradlinigkeit Ihrer Handelserfahrung beizubehalten. Wir setzen KYC/AML nicht ein und planen dies auch nie.\n\n- Von der Community vertraut\nUnsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Crash des Kryptowährungsmarktes von 2018 überstanden und wurde durch ihren gemeinschaftsorientierten, gewissenhaften Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community.\n\n- Sicher, Open Source, datenschutzzentriert, zensurresistent\nUnsere App ist kostenlos und Open Source, was sicherstellt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Open Source unserer App ermöglicht es auch jedem, auf unsere App zuzugreifen, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, die Google vollständig blockiert hat. Wir schätzen Ihre Privatsphäre so sehr, dass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.\n\nQuellcode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemverfolgung: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellare Unterstützung\nUnser Support-Team ist schnell, reaktionsschnell und immer bemüht, Ihnen zu gefallen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Wir sind über Social Media immer gut erreichbar, hören uns Ihre Kritik aufmerksam an und setzen gute User-Vorschläge immer in Rekordzeit um.\n\nSie erreichen unseren Support unter: https://localmonero.co/support\n\n- Faire Gebühren\nWir erheben keine exorbitanten Gebühren, wenn Sie Monero in/aus unserer Wallet für Schiedsbürgschaften einzahlen oder abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR privat kaufen';
@@ -9293,8 +9356,23 @@ class I18nDe extends I18n {
   String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Kaufen oder verkaufen Sie Bitcoin ohne ID-Verifizierung. Bargeld oder online.';
 
   @override
   String get app_ask_community_chats => 'Habe Fragen? Fragen Sie in den Community-Chats';
+
+  @override
+  String get app_select_currency => 'Währung wählen';
+
+  @override
+  String get app_select_country => 'Land auswählen';
+
+  @override
+  String get app_select_payment_method => 'Wählen Sie die Zahlungsmethode';
+
+  @override
+  String get app_enable_ad => 'Anzeige aktivieren';
+
+  @override
+  String get app_disable_ad => 'Anzeige deaktivieren';
 }

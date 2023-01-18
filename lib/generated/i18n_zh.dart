@@ -3878,7 +3878,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打钱';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>千万记得门罗币种子就是你的门罗币.首次创造钱包时，必须将其写下来，因为如果你丢失了种子，就等于失去了门罗币，没有人可以帮助你找回. 另外你还必须避免种子泄露给他人.如果有人知道了你的种子，他们可以将门罗币像你一样从钱包中取走，花掉，并且再也没有人可以为你讨回这笔钱.</p>\n\n<p>有些人虽然把门罗存到了冷钱里，但又总是忍不住想看看资金余额，希望时不时检查一下. 但是，他们又不愿意使用相对稳妥的办法或重新安装整个钱包应用程序，而是图省事，决定使用网络钱包来快速恢复其种子并查看其资金. 但如果他们选择网页钱包和轻钱包不慎，就可能成为钓鱼骗局的受害者，输入种子就等于把币交给骗子，而骗子可以随时将资金转移到其他钱包中.</p>\n\n<p>网页钱包，轻钱包或其它钱包，都可以利用种子恢复整个钱包，这里请务必小心，确保你使用的应用程序是没有被篡改的，记得检查程序的哈希值，详情请到门罗社区网站上查看有关说明，用户只有检查了哈希值和签名才可以确保程序没受外界篡改，每次钱包更新都记得检查才能确保安心使用种子恢复钱包. 双重检查可能很烦人，但因为粗心而造成的资金损失将更加严重.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要记下来，因为如果你丢了种子，你就丢了你的门罗币，没人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想对其进行检查。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你在哪里以及如何暴露你的种子。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丢失了种子和助记词，就失去了全部';
@@ -7439,6 +7439,69 @@ class I18nZh extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => '在这个博客中，我们的团队与那些对技术方面的事物感兴趣的人分享了我们的一些开发见解。';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是适用于 Android 平台的 FOSS（免费和开源软件）应用程序的可安装目录。客户端使您可以轻松浏览、安装和跟踪设备上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid网站</a></p>\n</blockquote>\n\n<p>本教程中的所有步骤也适用于没有风味的应用程序。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些应用程序？';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上分叉 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存储库</a>。</li>\n<li>将存储库克隆到您的设备。</li>\n<li>使用应用程序的 bundle ID 创建一个分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => '步骤1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>检查 <code>fdroid</code> 是否正常工作。在 <code>fdroid</code> 文件夹中运行以下命令：</p>\n<pre><code class=\"lang-sh\">fdroid 初始化\nfdroid 读取元\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => '第2步';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>添加你的项目：</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>它将在元数据目录中创建一个文件，例如<code>metadata/co.localmonero.app.yml</code>。\n您也可以手动创建此文件。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => '步骤 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打开文件并编辑它。这是一个示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模块 - 这是 F-Droid 团队的要求。</li>\n<li> 对于每种风格，我们都使用了一个单独的分支（命令 <code>AutoUpdateMode：版本 %v-fdroid-lm</code>）。那是因为 Fastlane 不&#39;不支持 Flutter 的风格。</li>\n<li>我们第一次手动添加构建信息，将来它会在我们推送新标签后由机器人自动添加。</li>\n</ol>\n<p>检查文件语法是否正确：<code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '第4步';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>现在，让我们为 F-Droid 市场添加数据。为此，我们为每种口味创建一个单独的分支：</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>之后，我们为Fastlane创建一个文件夹：\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>添加需要的数据并推送。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => '步骤 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>是时候将应用程序添加到 F-Droid 了。</p>\n<ol>\n<li>在您的应用存储库中创建一个标签。</li>\n<li>将更改推送到 Gitlab 上的 F-Droid 存储库。</li>\n<li>在 Gitlab 存储库中提出合并请求。在标题中使用您应用的 ID。</li>\n<li>等待F-Droid团队的评论。</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => '步骤 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p> 上提问';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => '结论';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid 是适用于 Android 的 FOSS 应用程序的一个很好的目录，但是添加您的应用程序可能有点复杂......';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => '如何在 F-Droid 上发布带有风格的 Flutter 应用程序？';
+
+  @override
+  String get devblog250Sbtitle => '开发博客';
+
+  @override
   String get ads => 'Ads';
 
   @override
@@ -9170,7 +9233,7 @@ class I18nZh extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR easily';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.\n\nLocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.\n\n- Safe and Smooth Trading\nWe support any payment method, any currency, anywhere. We do not remove payment methods, and we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nLocalMonero is committed to maintaining the simplicity and straight-forwardness of your trading experience. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical Monero community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\nBuy or sell Monero without ID verification. WARNING: THIS APP IS CURRENTLY IN OPEN BETA!\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://localmonero.co/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Monero to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.\n\nLocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.\n\n- Safe and Smooth Trading\nWe support any payment method, any currency, anywhere. We do not remove payment methods, and we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nLocalMonero is committed to maintaining the simplicity and straight-forwardness of your trading experience. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical Monero community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://localmonero.co/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Monero to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR privately';
@@ -9297,6 +9360,21 @@ class I18nZh extends I18n {
 
   @override
   String get app_ask_community_chats => 'Have questions? Ask in the community chats';
+
+  @override
+  String get app_select_currency => 'Select currency';
+
+  @override
+  String get app_select_country => 'Select country';
+
+  @override
+  String get app_select_payment_method => 'Select payment method';
+
+  @override
+  String get app_enable_ad => 'Enable ad';
+
+  @override
+  String get app_disable_ad => 'Disable ad';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -13177,7 +13255,7 @@ class I18nZhCn extends I18nZh {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打钱';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>千万记得门罗币种子就是你的门罗币.首次创造钱包时，必须将其写下来，因为如果你丢失了种子，就等于失去了门罗币，没有人可以帮助你找回. 另外你还必须避免种子泄露给他人.如果有人知道了你的种子，他们可以将门罗币像你一样从钱包中取走，花掉，并且再也没有人可以为你讨回这笔钱.</p>\n\n<p>有些人虽然把门罗存到了冷钱里，但又总是忍不住想看看资金余额，希望时不时检查一下. 但是，他们又不愿意使用相对稳妥的办法或重新安装整个钱包应用程序，而是图省事，决定使用网络钱包来快速恢复其种子并查看其资金. 但如果他们选择网页钱包和轻钱包不慎，就可能成为钓鱼骗局的受害者，输入种子就等于把币交给骗子，而骗子可以随时将资金转移到其他钱包中.</p>\n\n<p>网页钱包，轻钱包或其它钱包，都可以利用种子恢复整个钱包，这里请务必小心，确保你使用的应用程序是没有被篡改的，记得检查程序的哈希值，详情请到门罗社区网站上查看有关说明，用户只有检查了哈希值和签名才可以确保程序没受外界篡改，每次钱包更新都记得检查才能确保安心使用种子恢复钱包. 双重检查可能很烦人，但因为粗心而造成的资金损失将更加严重.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要记下来，因为如果你丢了种子，你就丢了你的门罗币，没人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想对其进行检查。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你在哪里以及如何暴露你的种子。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丢失了种子和助记词，就失去了全部';
@@ -16736,6 +16814,69 @@ class I18nZhCn extends I18nZh {
   String widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate(Object assetName) {
     return '$assetName街头价小部件';
   }
+
+  @override
+  String get devblog250Sbdescription => '在这个博客中，我们的团队与那些对技术方面的事物感兴趣的人分享了我们的一些开发见解。';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是适用于 Android 平台的 FOSS（免费和开源软件）应用程序的可安装目录。客户端使您可以轻松浏览、安装和跟踪设备上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid网站</a></p>\n</blockquote>\n\n<p>本教程中的所有步骤也适用于没有风味的应用程序。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些应用程序？';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上分叉 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存储库</a>。</li>\n<li>将存储库克隆到您的设备。</li>\n<li>使用应用程序的 bundle ID 创建一个分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => '步骤1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>检查 <code>fdroid</code> 是否正常工作。在 <code>fdroid</code> 文件夹中运行以下命令：</p>\n<pre><code class=\"lang-sh\">fdroid 初始化\nfdroid 读取元\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => '第2步';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>添加你的项目：</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>它将在元数据目录中创建一个文件，例如<code>metadata/co.localmonero.app.yml</code>。\n您也可以手动创建此文件。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => '步骤 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打开文件并编辑它。这是一个示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模块 - 这是 F-Droid 团队的要求。</li>\n<li> 对于每种风格，我们都使用了一个单独的分支（命令 <code>AutoUpdateMode：版本 %v-fdroid-lm</code>）。那是因为 Fastlane 不&#39;不支持 Flutter 的风格。</li>\n<li>我们第一次手动添加构建信息，将来它会在我们推送新标签后由机器人自动添加。</li>\n</ol>\n<p>检查文件语法是否正确：<code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '第4步';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>现在，让我们为 F-Droid 市场添加数据。为此，我们为每种口味创建一个单独的分支：</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>之后，我们为Fastlane创建一个文件夹：\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>添加需要的数据并推送。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => '步骤 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>是时候将应用程序添加到 F-Droid 了。</p>\n<ol>\n<li>在您的应用存储库中创建一个标签。</li>\n<li>将更改推送到 Gitlab 上的 F-Droid 存储库。</li>\n<li>在 Gitlab 存储库中提出合并请求。在标题中使用您应用的 ID。</li>\n<li>等待F-Droid团队的评论。</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => '步骤 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p> 上提问';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => '结论';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid 是适用于 Android 的 FOSS 应用程序的一个很好的目录，但是添加您的应用程序可能有点复杂......';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => '如何在 F-Droid 上发布带有风格的 Flutter 应用程序？';
+
+  @override
+  String get devblog250Sbtitle => '开发博客';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -19856,7 +19997,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> 市場價或固定價格 </strong><br/> 要為您的廣告定價，您可以輸入高於 $assetName 市場價的保證金。為此，請在選擇“市場價格”選項後在保證金字段中輸入一個百分比。您可能還想指定一個固定價格，該價格在您手動更改之前不會更改。為此，您需要選擇“固定價格”選項並輸入價格值。 <br/><br/> <strong> 最小值/ 最大限度。交易限額 </strong><br/> 最低交易限額設置了某人可以購買的最小金額。如果您將其設置為 5，並且您的貨幣設置為 EUR，這意味著某人可以與您進行交易的最小交易金額為 5 歐元。最大交易限額設置您要接受的最大交易金額。 <br/><br/> <strong> 貿易條款 </strong><br/> 這是買家在與您開始交易之前看到的文本。最好為買家寫下您希望交易如何進行以及您是否有任何具體說明的說明。例如，如果您要求買家在您完成交易之前提交收據作為付款證明，或者如果您需要買家提供身份證件，則可以在此處提及。您可以查看其他交易商的廣告以了解您想要使用的付款方式，以了解良好的貿易條款包含哪些內容。 <br/><br/> <strong> 額外選項 </strong><br/><br/> <strong> 限額為 </strong><br/> 您可以將廣告限制為只能開立特定金額的交易。如果您在方框中輸入 20、30、60，則潛在貿易夥伴只能以 20、30 或 60 歐元開單。 <br/><br/> <strong> 付款詳情 </strong><br/> 在此輸入有關買家應如何付款的具體信息，這可以是您的銀行帳號或電子郵件地址（例如 PayPal）。 <br/><br/> <strong> 所需的最低反饋分數 </strong><br/> 反饋最低值允許您設置所需的最低反饋分數，以便使用您的廣告進行交易。 <br/><br/> <strong> 首次限額($assetSymbol) </strong><br/> 這是新用戶特定的最大交易限額。如果之前沒有與您的交易歷史的買家想要與您進行交易，這是他們可以進行交易的最大金額。 <br/><br/> <strong> 付款窗口 </strong><br/> 在賣方能夠取消交易之前買方必須完成付款的時間。 <br/><br/> <strong> 跟踪最大流動性 </strong><br/> 啟用跟踪流動性會將廣告的最大限制降低當前在未平倉交易中持有的金額。 <br/><br/> <strong> 識別騙子的快速提示 </strong> <br/> <br/> <strong>欺詐買家往往很匆忙。你應該是，真正的客戶總是有耐心的。 <br/><br/>欺詐買家經常<strong>建議在仲裁保證金保護系統</strong>之外進行全部或部分交易，然後不完成他們的部分交易。 <br/><br/>小心<strong>photoshopped付款證據</strong>，在確認收到錢之前不要完成交易。在您確認已收到買家付款之前，您沒有義務完成交易。 <br/><br/><strong>不要打開您的貿易夥伴發送給您的任何鏈接</strong>。如果必須，請使用與您正在使用的瀏覽器不同的瀏覽器。 <br/><br/>請勿使用您用於交易的瀏覽器訪問 $appName 以外的網站。 <strong> 對其他網站使用不同的瀏覽器。</strong> <br/> <br/> 在您的瀏覽器中添加書籤 $appName，並在訪問該網站時始終使用該書籤。這有助於您避免意外訪問釣魚網站，它們存在並且非常有說服力。';
+    return '<strong> 市場價或固定價格 </strong><br/> 要為您的廣告定價，您可以輸入高於 $assetName 市場價的保證金。為此，請在選擇“市場價格”選項後在保證金字段中輸入一個百分比。您可能還想指定一個固定價格，該價格在您手動更改之前不會更改。為此，您需要選擇“固定價格”選項並輸入價格值。 <br/><br/> <strong> 最小值/ 最大限度。交易限額 </strong><br/> 最低交易限額設置了某人可以購買的最小金額。如果您將其設置為 5，並且您的貨幣設置為 EUR，這意味著某人可以與您進行交易的最小交易金額為 5 歐元。最大交易限額設置您要接受的最大交易金額。 <br/><br/> <strong> 貿易條款 </strong><br/> 這是買家在與您開始交易之前看到的文本。最好為買家寫下您希望交易如何進行以及您是否有任何具體說明的說明。例如，如果您要求買家在您完成交易之前提交收據作為付款證明，或者如果您需要買家提供身份證件，則可以在此處提及。您可以查看其他交易商的廣告以了解您想要使用的付款方式，以了解良好的貿易條款包含哪些內容。 <br/><br/> <strong> 額外選項 </strong><br/><br/> <strong> 限額為 </strong><br/> 您可以將廣告限制為只能開立特定金額的交易。如果您在方框中輸入 20、30、60，則潛在貿易夥伴只能以 20、30 或 60 歐元開單。 <br/><br/> <strong> 付款詳情 </strong><br/> 在此輸入有關買家應如何付款的具體信息，這可以是您的銀行帳號或電子郵件地址（例如 PayPal）。 <br/><br/> <strong> 所需的最低反饋分數 </strong><br/> 反饋最低值允許您設置所需的最低反饋分數，以便使用您的廣告進行交易。 <br/><br/> <strong> 首次限額($assetSymbol) </strong><br/> 這是新用戶特定的最大交易限額。如果之前沒有與您的交易歷史的買家想要與您進行交易，這是他們可以進行交易的最大金額。 <br/><br/> <strong> 付款窗口 </strong><br/> 在賣方能夠取消交易之前買方必須完成付款的時間。 <br/><br/> <strong> 跟踪最大流動性 </strong><br/> 啟用跟踪流動性會將廣告的最大限制降低當前在未平倉交易中持有的金額。 <br/><br/> <strong> 識別騙子的快速提示 </strong> <br/> <br/> <strong>欺詐買家往往很匆忙。你應該是，真正的客戶總是有耐心的。 <br/><br/>欺詐買家經常<strong>建議在仲裁保證金保護系統</strong>之外進行全部或部分交易，然後不完成他們的部分交易。 <br/><br/>小心<strong>photoshopped付款證據</strong>，在確認收到錢之前不要完成交易。在您確認收到買家付款之前，您沒有義務完成交易。 <br/><br/><strong>不要打開您的貿易夥伴發送給您的任何鏈接</strong>。如果必須，請使用與您正在使用的瀏覽器不同的瀏覽器。 <br/><br/>請勿使用您用於交易的瀏覽器訪問 $appName 以外的網站。 <strong> 對其他網站使用不同的瀏覽器。</strong> <br/> <br/> 在您的瀏覽器中添加書籤 $appName，並在訪問該網站時始終使用該書籤。這有助於您避免意外訪問釣魚網站，它們存在並且非常有說服力。';
   }
 
   @override
@@ -19989,7 +20130,7 @@ class I18nZhTw extends I18nZh {
   String get knowledge250Sbatomic250Sbtitle => '原子互換技術將如何在門羅幣上實現';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>強烈建議讀者閱讀我們的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《為什麼門羅有尾部發射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《門羅挖礦：什麼造就了RandomX》如此特別”</a>。本文基於其中介紹的概念。</i></p>\n\n<p>每當人們討論區塊鏈問題時，第一個跳出的詞就是“擴展”。區塊鏈不能很好地擴展已經不是什麼秘密，但大多數人不知道為什麼。</p>\n\n<p>事實是，擴展實際上是一個涵蓋兩個不同類別的總稱：給定時間點的協議支持和技術支持。在本文中，我們將重點關註一個，協議支持基本上是衡量協議在給定時間可以處理多少事務的量度。</p>\n\n<p>比特幣有區塊大小限制，這意味著一旦足夠多的交易被包含在一個區塊中，任何額外的交易都必須排隊等候下一個區塊。一個有用的類比是考慮火車。一列火車停靠在車站，排隊的人魚貫而入。一旦火車滿員，留在外面的任何人都必須等待下一班。</p>\n\n<p>比特幣使用費用來確定誰進入區塊。回到火車的類比，可以想像一位即將被落在後面的潛在乘客向火車工程師提供五美元讓他坐下。其他乘客也紛紛效仿，最終發生了一場競價戰，看誰能坐到哪個座位。由司機決定他是否要遵守先到先得的政策，但通過接受出價最高的人來最大化他的收入符合他的最佳經濟利益。 </p>\n\n<p>在這個比喻中，礦工就是火車司機。他們可以在區塊中包含他們想要的任何交易，但他們通常會選擇支付費用最高的交易。</p>\n\n<p>或者，如果街區不是很滿，人們就沒有動力支付高額費用，因為有很多免費座位可供使用。</p>\n\n<p> 在 2017 年加密貨幣繁榮的鼎盛時期，比特幣充斥著大量交易，那些想要包含在下一個區塊或任何近期區塊中的交易費用飆升。不願支付高額手續費的交易延遲數小時、數天，甚至完全退出隊列。</p>\n\n<p>如果人們經常談論“大規模採用”，比特幣將如何發展，這是一個令人痛心的見解。如果比特幣被大眾使用，情況會比 2017 年更糟，除了富人之外，任何人都無法訪問比特幣，僅僅是因為區塊大小固定導致吞吐量很小，導致費用市場接管.</p>\n\n<p>Monero 預見到了這一點，並想做一些不同的事情。所以 Monero 開發人員實現了動態塊大小。</p>\n\n<p>基本上，Monero 也有塊大小上限，但它是軟上限。當等待交易的隊列太長時，礦工可以增加區塊的大小。用我們的火車類比，你可以想像增加更多的火車車廂來容納額外的乘客。隊列為空後，塊會收縮回原來的大小。</p>\n\n<p>如果這看起來是個不錯的主意，那麼問為什麼門羅幣是唯一實現了這個的加密貨幣似乎是合理的。為什麼不將其添加到比特幣上以解決吞吐量問題？</p>\n\n<p>不幸的是，這是不可能的。有幾個原因，我們會盡力解釋。</p>\n\n<p> 擁有大區塊始終符合礦工的最大利益。有了大區塊，他們可以進行更多交易，並從費用和區塊獎勵中賺取更多的錢。這有可能導致垃圾郵件攻擊，即有人發送許多小額交易，收取少量費用，從而使鏈條膨脹。礦工只會增加區塊大小，因為錢就是錢，不管多小。這將導致始終如一的大區塊，而經濟效益很小。比特幣通過人為限制區塊大小來解決這個問題，從而產生一個費用市場。垃圾郵件攻擊者必須支付超過其他用戶的費用，而且它不再便宜。但這意味著塊已滿，留下一些交易等待如上所述。</p>\n\n<p>那麼門羅幣如何在擁有動態塊大小的同時避免垃圾郵件攻擊呢？答案很簡單，但很聰明。當區塊大於正常值時，會引入對區塊獎勵的懲罰。如果礦工想要增加區塊大小，他們從發現該區塊中獲得的獎勵將少於他們在其他情況下獲得的獎勵。因此，只有當用戶支付的交易費用超過區塊獎勵的損失部分時，他們才會增加區塊大小。例如，如果礦工通過提高區塊大小將損失 0.5 XMR，而支付的交易費用總和為 0.4 XMR，那麼如果他們提高區塊大小，將淨損失 0.1 XMR，因此他們不會去做吧。相反，如果總交易費用加起來達到 0.7 XMR，那麼將獲得 0.2 XMR 的淨收益，即使他們從區塊獎勵懲罰中損失了 0.5 XMR，因此礦工將增加規模。</p>\n\n<p>這些動態塊允許網絡有機增長，而無需人為地限制塊大小來建立強制收費市場，同時仍然避免垃圾郵件攻擊。我們可以從更多的角度來看待這個想法，以及為什麼不可能添加到比特幣的更多原因，但現在，我們希望讀者了解門羅幣如何迴避比特幣中的幾個問題，它的衍生品，以及它計劃如何將其吞吐量擴展到未來。</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>強烈建議讀者閱讀我們的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《為什麼門羅有尾部發射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《門羅挖礦：什麼造就了RandomX》如此特別”</a>。本文基於其中介紹的概念。</i></p>\n\n<p>每當人們討論區塊鏈問題時，第一個跳出的詞就是“擴展”。區塊鏈不能很好地擴展已經不是什麼秘密，但大多數人不知道為什麼。</p>\n\n<p>事實是，擴展實際上是一個涵蓋兩個不同類別的總稱：給定時間點的協議支持和技術支持。在本文中，我們將重點關註一個，協議支持基本上是衡量協議在給定時間可以處理多少事務的量度。</p>\n\n<p>比特幣有區塊大小限制，這意味著一旦足夠多的交易被包含在一個區塊中，任何額外的交易都必須排隊等候下一個區塊。一個有用的類比是考慮火車。一列火車停靠在車站，排隊的人魚貫而入。一旦火車滿員，留在外面的任何人都必須等待下一班。</p>\n\n<p>比特幣使用費用來確定誰進入區塊。回到火車的類比，可以想像一位即將被落在後面的潛在乘客向火車工程師提供五美元讓他坐下。其他乘客也紛紛效仿，最終發生了一場競價戰，看誰能坐到哪個座位。由司機決定他是否要遵守先到先得的政策，但通過接受出價最高的人來最大化他的收入符合他的最佳經濟利益。</p>\n\n<p>在這個比喻中，礦工就是火車司機。他們可以在區塊中包含他們想要的任何交易，但他們通常會選擇支付費用最高的交易。</p>\n\n<p>或者，如果街區不是很滿，人們就沒有動力支付高額費用，因為有很多免費座位可供使用。</p>\n\n<p> 在 2017 年加密貨幣繁榮的鼎盛時期，比特幣充斥著大量交易，那些想要包含在下一個區塊或任何近期區塊中的交易費用飆升。不願支付高額手續費的交易延遲數小時、數天，甚至完全退出隊列。</p>\n\n<p>如果人們經常談論“大規模採用”，比特幣將如何發展，這是一個令人痛心的見解。如果比特幣被大眾使用，情況會比 2017 年更糟，除了富人之外，任何人都無法訪問比特幣，僅僅是因為區塊大小固定導致吞吐量很小，導致費用市場接管.</p>\n\n<p>Monero 預見到了這一點，並想做一些不同的事情。所以 Monero 開發人員實現了動態塊大小。</p>\n\n<p>基本上，Monero 也有塊大小上限，但它是軟上限。當等待交易的隊列太長時，礦工可以增加區塊的大小。用我們的火車類比，你可以想像增加更多的火車車廂來容納額外的乘客。隊列為空後，塊會收縮回原來的大小。</p>\n\n<p>如果這看起來是個不錯的主意，那麼問為什麼門羅幣是唯一實現了這個的加密貨幣似乎是合理的。為什麼不將其添加到比特幣上以解決吞吐量問題？</p>\n\n<p>不幸的是，這是不可能的。有幾個原因，我們會盡力解釋。</p>\n\n<p> 擁有大區塊始終符合礦工的最大利益。有了大區塊，他們可以進行更多交易，並從費用和區塊獎勵中賺取更多的錢。這有可能導致垃圾郵件攻擊，即有人發送許多小額交易，收取少量費用，從而使鏈條膨脹。礦工只會增加區塊大小，因為錢就是錢，不管多小。這將導致始終如一的大區塊，而經濟效益很小。比特幣通過人為限制區塊大小來解決這個問題，從而產生一個費用市場。垃圾郵件攻擊者必須支付超過其他用戶的費用，而且它不再便宜。但這意味著塊已滿，留下一些交易等待如上所述。</p>\n\n<p>那麼門羅幣如何在擁有動態塊大小的同時避免垃圾郵件攻擊呢？答案很簡單，但很聰明。當區塊大於正常值時，會引入對區塊獎勵的懲罰。如果礦工想要增加區塊大小，他們從發現該區塊中獲得的獎勵將少於他們在其他情況下獲得的獎勵。因此，只有當用戶支付的交易費用超過區塊獎勵的損失部分時，他們才會增加區塊大小。例如，如果礦工通過提高區塊大小將損失 0.5 XMR，而支付的交易費用總和為 0.4 XMR，那麼如果他們提高區塊大小，將淨損失 0.1 XMR，因此他們不會去做吧。相反，如果總交易費用加起來達到 0.7 XMR，那麼將獲得 0.2 XMR 的淨收益，即使他們從區塊獎勵懲罰中損失了 0.5 XMR，因此礦工將增加規模。</p>\n\n<p>這些動態塊允許網絡有機增長，而無需人為地限制塊大小來建立強制收費市場，同時仍然避免垃圾郵件攻擊。我們可以從更多的角度來看待這個想法，以及為什麼不可能添加到比特幣的更多原因，但現在，我們希望讀者了解門羅幣如何迴避比特幣中的幾個問題，它的衍生品，以及它計劃如何將其吞吐量擴展到未來。</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => '每當人們討論區塊鏈的缺點不足時，能聽到最高頻的詞彙就是可擴展性. 而門羅幣在解決該問題上獨樹一幟，與其它加密貨幣截然不同.';
@@ -20616,7 +20757,7 @@ class I18nZhTw extends I18nZh {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打錢';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>千萬記得門羅幣種子就是你的門羅幣.首次創造錢包時，必須將其寫下來，因為如果你丟失了種子，就等於失去了門羅幣，沒有人可以幫助你找回. 另外你還必須避免種子洩露給他人.如果有人知道了你的種子，他們可以將門羅幣像你一樣從錢包中取走，花掉，並且再也沒有人可以為你討回這筆錢.</p>\n\n<p>有些人雖然把門羅存到了冷錢裡，但又總是忍不住想看看資金餘額，希望時不時檢查一下. 但是，他們又不願意使用相對穩妥的辦法或重新安裝整個錢包應用程式，而是圖省事，決定使用網路錢包來快速恢復其種子並查看其資金. 但如果他們選擇網頁錢包和輕錢包不慎，就可能成為釣魚騙局的受害者，輸入種子就等於把幣交給騙子，而騙子可以隨時將資金轉移到其他錢包中.</p>\n\n<p>網頁錢包，輕錢包或其它錢包，都可以利用種子恢復整個錢包，這裡請務必小心，確保你使用的應用程式是沒有被篡改的，記得檢查程式的雜湊值，詳情請到門羅社區網站上查看有關說明，用戶只有檢查了雜湊值和簽名才可以確保程式沒受外界篡改，每次錢包更新都記得檢查才能確保安心使用種子恢復錢包. 雙重檢查可能很煩人，但因為粗心而造成的資金損失將更加嚴重.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的門羅幣種子就是你的門羅幣。第一次做錢包的時候一定要記下來，因為如果你丟了種子，你就丟了你的門羅幣，沒人能幫你。但你也必須保護這顆種子免受他人傷害。如果有人偷了你的種子，他們可以把門羅幣從錢包裡拿出來，就好像他們是你一樣，同樣，沒有人能為你找回這筆錢。沒了</p>\n\n<p> 很多時候，個人會保留一個 Monero 的冷錢包，對他們的資金感到好奇，並想對其進行檢查。但與其經歷重新安裝整個錢包應用程序的麻煩，他們只是決定使用網絡錢包來快速恢復他們的種子並查看他們的錢。如果他們成為 Business Look Alike 騙局的受害者，那麼輸入他們的種子的行為就會把種子交給騙子，然後他們可以將錢轉移到他們方便時控制的另一個錢包。</p>\n\n<p> 任何時候網站、應用程序或錢包都有“使用種子恢復”選項，請務必小心確保您使用的應用程序是合法的。檢查程序的哈希值（Monero 網站上有關於如何執行此操作的說明）以確保程序沒有被外部力量篡改，並時刻注意你在哪里以及如何暴露你的種子。雙重檢查可能很煩人，但粗心造成的資金損失會更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丟失了種子和助記詞，就失去了全部';
@@ -24177,6 +24318,69 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
+  String get devblog250Sbdescription => '在這個博客中，我們的團隊與那些對技術方面的事物感興趣的人分享了我們的一些開發見解。';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是適用於 Android 平台的 FOSS（免費和開源軟件）應用程序的可安裝目錄。客戶端使您可以輕鬆瀏覽、安裝和跟踪設備上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid網站</a></p>\n</blockquote>\n\n<p>本教程中的所有步驟也適用於沒有風味的應用程序。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全開源的應用程序才能包含在 F-Droid 中——包括使用的所有庫和依賴項。在這裡</a>.</p>了解更多關於包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在應用程序中使用 ObjectBox 數據庫，則它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">討論</a>）。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些應用程序？';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上分叉 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存儲庫</a>。</li>\n<li>將存儲庫克隆到您的設備。</li>\n<li>使用應用程序的 bundle ID 創建一個分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => '步驟1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>檢查 <code>fdroid</code> 是否正常工作。在 <code>fdroid</code> 文件夾中運行以下命令：</p>\n<pre><code class=\"lang-sh\">fdroid 初始化\nfdroid 讀取元\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => '第2步';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>添加你的項目：</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>它將在元數據目錄中創建一個文件，例如<code>metadata/co.localmonero.app.yml</code>。\n您也可以手動創建此文件。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => '步驟 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打開文件並編輯它。這是一個示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模塊 - 這是 F-Droid 團隊的要求。</li>\n<li> 對於每種風格，我們都使用了一個單獨的分支（命令 <code>AutoUpdateMode：Version %v-fdroid-lm</code>）。那是因為 Fastlane 不&#39;不支持 Flutter 的風格。</li>\n<li>我們第一次手動添加構建信息，將來它會在我們推送新標籤後由機器人自動添加。</li>\n</ol>\n<p>檢查文件語法是否正確：<code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '第4步';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>現在，讓我們為 F-Droid 市場添加數據。為此，我們為每種口味創建一個單獨的分支：</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>之後，我們為Fastlane創建一個文件夾：\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>添加需要的數據並推送。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => '步驟 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>是時候將應用程序添加到 F-Droid 了。</p>\n<ol>\n<li>在您的應用存儲庫中創建一個標籤。</li>\n<li>將更改推送到 Gitlab 上的 F-Droid 存儲庫。</li>\n<li>在 Gitlab 存儲庫中提出合併請求。在標題中使用您應用的 ID。</li>\n<li>等待F-Droid團隊的評論。</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => '步驟 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>這個過程有點複雜，過程中可能會出現不同的問題。但是一旦你設置了 CI，下面的更新就會自動處理。</p>\n<p>如果您有任何疑問，請隨時在我們的<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>上提問。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => '結論';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid 是適用於 Android 的 FOSS 應用程序的一個很好的目錄，但是添加您的應用程序可能有點複雜......';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => '如何在 F-Droid 上發布帶有風格的 Flutter 應用程序？';
+
+  @override
+  String get devblog250Sbtitle => '開發博客';
+
+  @override
   String get ads => '廣告';
 
   @override
@@ -25908,7 +26112,7 @@ class I18nZhTw extends I18nZh {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero：輕鬆購買 XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。\n\nLocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P 交易平台。我們沒有 KYC 檢查——您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金進行身份驗證，或將比特幣、以太幣、USDT 或任何其他加密硬幣轉換為 Monero——我們的平台支持任何支付方式。\n\n- 安全順暢的交易\n我們支持任何支付方式、任何貨幣、任何地方。我們不取消支付方式，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nLocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的 Monero 社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n無需身份驗證即可買賣門羅幣。警告：此應用程序目前處於公開測試階段！\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://localmonero.co/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取門羅幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。\n\nLocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P 交易平台。我們沒有 KYC 檢查——您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金進行身份驗證，或將比特幣、以太幣、USDT 或任何其他加密硬幣轉換為 Monero——我們的平台支持任何支付方式。\n\n- 安全順暢的交易\n我們支持任何支付方式、任何貨幣、任何地方。我們不取消支付方式，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nLocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的 Monero 社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://localmonero.co/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取門羅幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero：私下購買 XMR';
@@ -26035,4 +26239,19 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get app_ask_community_chats => '有問題嗎？在社區聊天中提問';
+
+  @override
+  String get app_select_currency => '選擇貨幣';
+
+  @override
+  String get app_select_country => '選擇國家';
+
+  @override
+  String get app_select_payment_method => '選擇付款方式';
+
+  @override
+  String get app_enable_ad => '啟用廣告';
+
+  @override
+  String get app_disable_ad => '停用廣告';
 }
