@@ -13,7 +13,6 @@ LocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不�
 
 - 安全、開源、以隱私為中心、抗審查
 我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。
-無需身份驗證即可買賣門羅幣。警告：此應用程序目前處於公開測試階段！
 
 源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
 問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues

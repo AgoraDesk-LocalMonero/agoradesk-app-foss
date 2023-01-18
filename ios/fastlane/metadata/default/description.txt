@@ -13,7 +13,6 @@ Our platform has operated for over four years, survived the Great Cryptocurrency
 
 - Secure, Open Source, Privacy-Centric, Censorship-Resistant
 Our app is free and open source, which ensures that many eyes are looking at the app's code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.
-Buy or sell Monero without ID verification. WARNING: THIS APP IS CURRENTLY IN OPEN BETA!
 
 Source code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
 Issue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues

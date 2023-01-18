@@ -13,7 +13,6 @@ Nossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do me
 
 - Seguro, código aberto, centrado na privacidade, resistente à censura
 Nosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.
-Compre ou venda Monero sem verificação de identidade. AVISO: ESTE APLICATIVO ESTÁ EM BETA ABERTO!
 
 Código-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
 Rastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues

@@ -13,7 +13,6 @@ Platformumuz dört yılı aşkın bir süredir faaliyet gösteriyor, 2018'deki B
 
 - Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dayanıklı
 Uygulamamız ücretsiz ve açık kaynaklıdır, bu da hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak olması, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine izin verir. Uygulamamız, Google'ın tamamen engellendiği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki, kayıt olurken bir e-posta vermenizi bile istemiyoruz.
-Kimlik doğrulaması olmadan Monero satın alın veya satın. UYARI: BU UYGULAMA ŞU ANDA AÇIK BETA'DA!
 
 Kaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
 Sorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues

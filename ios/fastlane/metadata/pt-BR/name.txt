@@ -1,1 +1,1 @@
-LocalMonero: compre XMR
+LocalMonero: troca XMR sem ID
