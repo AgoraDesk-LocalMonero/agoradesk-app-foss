@@ -1,1 +1,2 @@
 json_key_file "/Users/mavbook/projects/agoradesk-files/play_service_account_fastlane.json"
+package_name("co.localmonero.app")
