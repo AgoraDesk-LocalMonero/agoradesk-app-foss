@@ -289,7 +289,6 @@ class _AppState extends State<App>
       try {
         _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
       } catch (e, stackTrace) {
-        debugPrint('[$runtimeType] Mixpanel Error: $e');
         Sentry.captureException(e, stackTrace: stackTrace);
       }
     }
