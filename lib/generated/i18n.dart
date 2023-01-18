@@ -16890,7 +16890,7 @@ abstract class I18n {
   /// No description provided for @app_proxy_bugs_expected.
   ///
   /// In en, this message translates to:
-  /// **'Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes'**
+  /// **'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes'**
   String get app_proxy_bugs_expected;
 
   /// No description provided for @app_proxy_select_type.
@@ -16902,13 +16902,13 @@ abstract class I18n {
   /// No description provided for @app_proxy_on.
   ///
   /// In en, this message translates to:
-  /// **'Proxy is on'**
+  /// **'Proxy enabled'**
   String get app_proxy_on;
 
   /// No description provided for @app_proxy_on_descr.
   ///
   /// In en, this message translates to:
-  /// **'Now app make requests with the proxy'**
+  /// **'The app will now connect to the platform via the proxy.'**
   String get app_proxy_on_descr;
 
   /// No description provided for @app_proxy_unavailable.
@@ -16920,7 +16920,7 @@ abstract class I18n {
   /// No description provided for @app_proxy_unavailable_decr.
   ///
   /// In en, this message translates to:
-  /// **'Please check the proxy data or use another proxy.'**
+  /// **'Please check if the connection settings are correct or use another proxy.'**
   String get app_proxy_unavailable_decr;
 }
 

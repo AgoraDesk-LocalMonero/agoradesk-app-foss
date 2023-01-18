@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -25,9 +26,12 @@ import 'package:vm/vm.dart';
 class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   ProxyViewModel({
     required AccountService accountService,
-  }) : _accountService = accountService;
+    required AppState appState,
+  })  : _accountService = accountService,
+        _appState = appState;
 
   final AccountService _accountService;
+  final AppState _appState;
 
   final ctrlServer = TextEditingController();
   final ctrlPort = TextEditingController();
@@ -69,6 +73,7 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     ctrlPort.text = AppSharedPrefs().proxyPort;
     ctrlUsername.text = AppSharedPrefs().proxyUsername;
     ctrlPassword.text = AppSharedPrefs().proxyPassword;
+    proxyType = AppSharedPrefs().proxyType;
 
     ctrlServer.addListener(_checkIsReadyToSetProxy);
     ctrlPort.addListener(_checkIsReadyToSetProxy);
@@ -107,9 +112,8 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyPort, ctrlPort.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyUsername, ctrlUsername.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyPassword, ctrlPassword.text);
-    // await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: true);
-    // GetIt.I<AppParameters>().proxy = true;
-    // isProxyOn = true;
+    await AppSharedPrefs().setString(AppSharedPrefsKey.proxyType, proxyType.title());
+
     await _setProxyData(fromSave: true);
     loading = false;
     _displayMessage(context);
@@ -118,22 +122,25 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   Future _setProxyData({bool? fromSave}) async {
     final proxyAddress = getProxyAddress();
     if (isProxyOn || fromSave == true) {
-      SocksProxy.setProxy('${proxyType.title()} $proxyAddress');
+      SocksProxy.setProxy(proxyAddress);
       await Future.delayed(const Duration(seconds: 1));
       final res = await _accountService.checkProxyAvailable();
       if (res.isRight) {
         proxyAvailable = true;
         await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: true);
         GetIt.I<AppParameters>().proxy = true;
+        _appState.proxyStatus = true;
       } else {
         proxyAvailable = false;
         await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: false);
         GetIt.I<AppParameters>().proxy = false;
+        _appState.proxyStatus = false;
         SocksProxy.setProxy('DIRECT');
       }
     } else {
       await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: false);
       GetIt.I<AppParameters>().proxy = false;
+      _appState.proxyStatus = false;
       SocksProxy.setProxy('DIRECT');
     }
   }
@@ -141,14 +148,14 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   void _displayMessage(BuildContext context) {
     if (proxyAvailable) {
       isProxyOn = true;
-      showDialog(
-        barrierDismissible: true,
-        context: context,
-        builder: (_) => AgoraDialogClose(
-          title: context.intl.app_proxy_on,
-          text: context.intl.app_proxy_on_descr,
-        ),
-      );
+      // showDialog(
+      //   barrierDismissible: true,
+      //   context: context,
+      //   builder: (_) => AgoraDialogClose(
+      //     title: context.intl.app_proxy_on,
+      //     text: context.intl.app_proxy_on_descr,
+      //   ),
+      // );
     } else {
       isProxyOn = false;
       showDialog(

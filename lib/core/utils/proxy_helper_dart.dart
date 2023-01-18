@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/app_shared_prefs.dart';
+import 'package:agoradesk/features/profile/models/proxy_type.dart';
 
 ///
 /// Create a string with proxy data
@@ -8,9 +9,10 @@ String getProxyAddress() {
   final String port = AppSharedPrefs().proxyPort;
   final String password = AppSharedPrefs().proxyUsername;
   final String username = AppSharedPrefs().proxyPassword;
+  final ProxyType proxyType = AppSharedPrefs().proxyType;
   if (username.isEmpty) {
-    return '$server:$port';
+    return '${proxyType.value()} $server:$port';
   } else {
-    return '$username:$password@$server:$port';
+    return '${proxyType.value()} $username:$password@$server:$port';
   }
 }

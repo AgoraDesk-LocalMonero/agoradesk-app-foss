@@ -2,10 +2,10 @@
 "app_proxy":"Proxy",
 "app_proxy_details":"Proxy details",
 "app_proxy_use":"Use proxy",
-"app_proxy_bugs_expected":"Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes",
+"app_proxy_bugs_expected":"Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes",
 "app_proxy_select_type":"Select proxy type",
-"app_proxy_on":"Proxy is on",
-"app_proxy_on_descr":"Now app make requests with the proxy",
+"app_proxy_on":"Proxy enabled",
+"app_proxy_on_descr":"The app will now connect to the platform via the proxy.",
 "app_proxy_unavailable":"Proxy unavailable",
-"app_proxy_unavailable_decr":"Please check the proxy data or use another proxy."
+"app_proxy_unavailable_decr":"Please check if the connection settings are correct or use another proxy."
 }

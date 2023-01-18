@@ -112,7 +112,8 @@ void main() async {
   GetIt.I<AppParameters>().proxy = proxyEnabled;
   if (proxyEnabled) {
     final proxyAddress = getProxyAddress();
-    SocksProxy.initProxy(proxy: 'SOCKS5 $proxyAddress');
+    print('+++++++++++++++++++++++++++++++++++++000000 - ${proxyAddress}');
+    SocksProxy.initProxy(proxy: proxyAddress);
   } else {
     SocksProxy.initProxy(proxy: 'DIRECT');
   }

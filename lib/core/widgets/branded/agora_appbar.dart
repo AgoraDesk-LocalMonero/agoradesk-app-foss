@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_auto_back_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 
 const kBrandBackAppBarHeight = 55.0;
 
@@ -89,21 +89,25 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget _displayProxy(BuildContext context) {
-    if (GetIt.I<AppParameters>().proxy == false) {
-      return const SizedBox();
-    } else {
-      return Align(
-        alignment: Alignment.centerRight,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
-          child: Icon(
-            CupertinoIcons.checkmark_shield,
-            size: 20,
-            color: context.colN80N30,
-          ),
-        ),
-      );
-    }
+    return StreamBuilder<bool>(
+        stream: context.read<AppState>().proxyStatus$,
+        builder: (context, snapshot) {
+          if (snapshot.data == true) {
+            return Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
+                child: Icon(
+                  CupertinoIcons.checkmark_shield,
+                  size: 20,
+                  color: context.colN80N30,
+                ),
+              ),
+            );
+          } else {
+            return const SizedBox();
+          }
+        });
   }
 
   @override

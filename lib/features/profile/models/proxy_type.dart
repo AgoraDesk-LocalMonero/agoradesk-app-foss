@@ -1,4 +1,4 @@
-enum ProxyType { socks5, socks4, http }
+enum ProxyType { socks5, socks4, http, https }
 
 extension ProxyTypeExt on ProxyType {
   String title() {
@@ -8,7 +8,9 @@ extension ProxyTypeExt on ProxyType {
       case ProxyType.socks4:
         return 'SOCKS4';
       case ProxyType.http:
-        return 'http, https';
+        return 'HTTP';
+      case ProxyType.https:
+        return 'HTTPS';
     }
   }
 
@@ -19,6 +21,8 @@ extension ProxyTypeExt on ProxyType {
       case ProxyType.socks4:
         return 'SOCKS4';
       case ProxyType.http:
+        return 'PROXY';
+      case ProxyType.https:
         return 'PROXY';
     }
   }

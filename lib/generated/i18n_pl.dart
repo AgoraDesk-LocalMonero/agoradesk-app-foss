@@ -9386,20 +9386,20 @@ class I18nPl extends I18n {
   String get app_proxy_use => 'Use proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please send the bugs to our development channels for the quick fixes';
+  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
 
   @override
   String get app_proxy_select_type => 'Select proxy type';
 
   @override
-  String get app_proxy_on => 'Proxy is on';
+  String get app_proxy_on => 'Proxy enabled';
 
   @override
-  String get app_proxy_on_descr => 'Now app make requests with the proxy';
+  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
 
   @override
   String get app_proxy_unavailable => 'Proxy unavailable';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check the proxy data or use another proxy.';
+  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
 }

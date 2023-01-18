@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/utils/date_mixin.dart';
+import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -24,6 +25,7 @@ enum AppSharedPrefsKey {
   proxyPort,
   proxyUsername,
   proxyPassword,
+  proxyType,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -48,6 +50,8 @@ class AppSharedPrefs with DateMixin {
   ThemeMode get themeMode => _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
 
   Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
+
+  ProxyType get proxyType => _parseProxyType(getString(AppSharedPrefsKey.proxyType));
 
   TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
@@ -170,6 +174,21 @@ class AppSharedPrefs with DateMixin {
       }
     }
     return null;
+  }
+
+  ///
+  /// Parse proxy tupe
+  ///
+  ProxyType _parseProxyType(String? proxyStr) {
+    if (proxyStr != null) {
+      try {
+        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name == proxyStr.toLowerCase());
+        return proxy;
+      } catch (e) {
+        return ProxyType.socks5;
+      }
+    }
+    return ProxyType.socks5;
   }
 
   ///
