@@ -16868,6 +16868,60 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Disable ad'**
   String get app_disable_ad;
+
+  /// No description provided for @app_proxy.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy'**
+  String get app_proxy;
+
+  /// No description provided for @app_proxy_details.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy details'**
+  String get app_proxy_details;
+
+  /// No description provided for @app_proxy_use.
+  ///
+  /// In en, this message translates to:
+  /// **'Use proxy'**
+  String get app_proxy_use;
+
+  /// No description provided for @app_proxy_bugs_expected.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes'**
+  String get app_proxy_bugs_expected;
+
+  /// No description provided for @app_proxy_select_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Select proxy type'**
+  String get app_proxy_select_type;
+
+  /// No description provided for @app_proxy_on.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy enabled'**
+  String get app_proxy_on;
+
+  /// No description provided for @app_proxy_on_descr.
+  ///
+  /// In en, this message translates to:
+  /// **'The app will now connect to the platform via the proxy.'**
+  String get app_proxy_on_descr;
+
+  /// No description provided for @app_proxy_unavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy unavailable'**
+  String get app_proxy_unavailable;
+
+  /// No description provided for @app_proxy_unavailable_decr.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check if the connection settings are correct or use another proxy.'**
+  String get app_proxy_unavailable_decr;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

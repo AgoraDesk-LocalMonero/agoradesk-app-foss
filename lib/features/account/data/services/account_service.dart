@@ -112,6 +112,26 @@ class AccountService {
   }
 
   ///
+  /// Get recent 20 notifications
+  ///
+  Future<Either<bool, bool>> checkProxyAvailable() async {
+    try {
+      final Map<String, int> queryParameters = {'after': DateTime.now().toUtc().millisecondsSinceEpoch};
+      final resp = await _api.client.get(
+        '/notifications',
+        queryParameters: queryParameters,
+      );
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        return const Either.left(false);
+      }
+    } catch (e) {
+      return const Either.left(false);
+    }
+  }
+
+  ///
   /// Mark ALL notifications as read
   ///
   Future<Either<ApiError, bool>> markAllRead() async {
