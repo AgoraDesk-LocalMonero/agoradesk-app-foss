@@ -3878,7 +3878,7 @@ class I18nCs extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Přímý podvod';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Váš seed Monero JE vaše Monero. Musíte si ho zapsat, když si poprvé vytvoříte peněženku, protože pokud ztratíte svůj seed, ztratili jste své Monero a nikdo vám nemůže pomoci. ALE TAKÉ musíte tento seed udržovat v bezpečí před ostatními. Pokud někdo ukradne váš seed, může poslat Monero z peněženky, jako by byl vámi, a opět, nikdo pro vás nemůže tyto peníze získat zpět. Jsou pryč.</p>\n\n<p>Příliš často se stává, že si někdo ponechá studenou peněženku s Monerem, zajímá se o své prostředky a chce je zkontrolovat. Ale než aby se trápil nebo znovu instaloval celou aplikaci peněženky, rozhodl se prostě použít webovou peněženku, aby rychle obnovil svůj seed a podíval se na své peníze. Pokud se stanou obětí podvodu typu Business Look Alike, pak už samotné zadání jejich seedu je předá podvodníkům, kteří pak mohou peníze přesunout do jiné peněženky, kterou mají pod kontrolou, jak se jim to hodí.</p>\n\n<p>POKUD má nějaká stránka, aplikace nebo peněženka možnost \"obnovit pomocí seedu\", buďte velmi opatrní, zda je aplikace, kterou používáte, legitimní. Zkontrolujte hashe programu (na webu Monero najdete návod, jak to udělat), abyste se ujistili, že program nebyl zmanipulován vnějšími silami, a neustále si dávejte pozor na to, kde a jak vystavujete svůj seed. Dvojitá kontrola může být nepříjemná, ale ztráta prostředků z nedbalosti by byla ještě horší.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Vaše Monero je vaše Monero. Musíte si to zapsat, když si poprvé vytvoříte peněženku, protože pokud ztratíte své semeno, ztratili jste své Monero a nikdo vám nemůže pomoci. ALE TAKÉ musíte toto semínko chránit před ostatními. Pokud vám někdo ukradne semeno, může poslat Monero z peněženky, jako byste to byli vy, a opět za vás nikdo nemůže získat zpět tyto peníze. Je to pryč.</p>\n\n<p>Příliš často si jednotlivec držel peněženku Monero, byl zvědavý na své finanční prostředky a chtěl si je zkontrolovat. Ale místo toho, aby se museli trápit s přeinstalováním celé aplikace peněženky, rozhodnou se použít webovou peněženku, aby rychle obnovili své semeno a podívali se na své peníze. Pokud se stanou obětí podvodu Business Look Alike, pak samotný akt vložení jejich semene jej dá podvodníkům, kteří pak mohou přesunout peníze do jiné peněženky, kterou ovládají podle svého pohodlí.</p>\n\n<p>KDYKOLI má web, aplikace nebo peněženka možnost „obnovit pomocí seed“, buďte velmi opatrní, aby aplikace, kterou používáte, byla legitimní. Zkontrolujte hashe programu (web Monero obsahuje pokyny, jak to udělat), abyste se ujistili, že s programem nebylo manipulováno vnějšími silami, a buďte neustále informováni o tom, kde a jak své semeno vystavujete. Dvojitá kontrola může být otravná, ale ztráta finančních prostředků z neopatrnosti by byla ještě horší.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Úloha vašeho seedu Monero v podvodech';
@@ -7439,6 +7439,96 @@ class I18nCs extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'V tomto blogu náš tým sdílí některé z našich vývojových postřehů s těmi, kteří se zajímají o technickou stránku věci.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid je instalovatelný katalog aplikací FOSS (Free and Open Source Software) pro platformu Android. Klient usnadňuje procházení, instalaci a sledování aktualizací na vašem zařízení.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Web F-Droid</a></p>\n</blockquote>\n\n<p>Všechny kroky z tohoto tutoriálu budou fungovat i pro aplikaci bez příchutí.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplikaci lze do F-Droid zahrnout pouze v případě, že je zcela open-source – včetně všech použitých knihoven a závislostí. Další informace o zásadách zahrnutí <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">zde</a>.</p>\n<p>Pokud například ve své aplikaci používáte databázi ObjectBox, nelze ji&#39;zahrnout do F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">diskuze</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Které aplikace lze zahrnout do F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">úložiště fdroiddata</a> na Gitlabu.</li>\n<li>Klonujte úložiště do svého zařízení.</li>\n<li>Vytvořte větev s ID balíčku aplikace, například <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Krok 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Zkontrolujte, zda <code>fdroid</code> funguje správně. Spusťte následující příkazy ve složce <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Krok 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Přidejte svůj projekt:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Vytvoří soubor v adresáři metadat, například <code>metadata/co.localmonero.app.yml</code>.\nTento soubor můžete také vytvořit ručně.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Krok 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Otevřete soubor a upravte jej. Zde je příklad: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>V příkladu můžete vidět:</p>\n<ol>\n<li>Flutter se používá jako submodul – to je požadavek týmu F-Droid.</li>\n<li>Pro každou variantu jsme použili samostatnou větev (příkaz <code>AutoUpdateMode: Verze %v-fdroid-lm</code>). To proto, že Fastlane&#39;nepodporuje příchutě s Flutter.</li>\n<li>Poprvé přidáváme informace o sestavení ručně, v budoucnu je automaticky přidá robot, jakmile vložíme nový tag.</li>\n</ol>\n<p>Zkontrolujte, zda má soubor správnou syntaxi: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Krok 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Nyní přidáme data pro trh F-Droidů. Za tímto účelem vytvoříme samostatnou větev pro každou příchuť:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Poté vytvoříme složku pro Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Přidejte požadovaná data a odešlete je.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Krok 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Je čas přidat aplikaci do F-Droid.</p>\n<ol>\n<li>Vytvořte značku v úložišti aplikace.</li>\n<li>Posílejte změny do úložiště F-Droid na Gitlabu.</li>\n<li>Požádejte o sloučení v repozitáři Gitlab. V názvu použijte ID vaší aplikace.</li>\n<li>Počkejte na recenzi od týmu F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Krok 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Tento proces je trochu komplikovaný a během něj mohou nastat různé problémy. Jakmile však CI nastavíte, budou následující aktualizace zpracovány automaticky.</p>\n<p>V případě dotazů se je neváhejte zeptat na našem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHubu</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Závěr';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid je skvělý katalog aplikací FOSS pro Android, ale přidání vaší aplikace může být trochu komplikované...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Jak publikovat aplikaci Flutter s příchutěmi na F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Vývojový blog';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Přidat adresu';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'zrušení';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Chcete tuto adresu smazat?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Kdykoli budete potřebovat zadat adresu, budete moci rychle vybrat tu uloženou';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Štítek (volitelné)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Uložit';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Uložte si tuto adresu pro budoucí použití';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Tato adresa již ve vašem adresáři existuje.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Tato adresa již byla smazána z vašeho adresáře.';
+
+  @override
   String get ads => 'Reklamy';
 
   @override
@@ -9170,7 +9260,7 @@ class I18nCs extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: snadná koupě XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koupit nebo prodat Monero bez ověření ID. Hotově nebo online. Bezpečné, rychlé, snadné.\n\nLocalMonero je největší, nejdůvěryhodnější a dobře zavedená obchodní platforma P2P v komunitě XMR. Nemáme žádné KYC prověřování – Monero si můžete jednoduše anonymně nakoupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést bitcoiny, ethery, USDT nebo jakékoli jiné krypto mince na Monero – naše platforma podporuje jakoukoli platební metodu.\n\n- Bezpečné a hladké obchodování\nPodporujeme jakoukoli platební metodu, jakoukoli měnu a kdekoli. Neodstraňujeme platební metody a plně podporujeme hotovostní obchody tváří v tvář. Všechny naše obchody jsou chráněny arbitrážním dluhopisem. Díky tomu, že požadujeme, aby byly prostředky před zahájením obchodu drženy v rozhodčím dluhopisu, zajišťujeme bezproblémový a bezpečný zážitek pro kupujícího, který je nezbytný pro popularitu platformy a opakované zákazníky pro prodejce.\n\n- Žádné ověření KYC/AML nebo ID\nLocalMonero se zavazuje udržovat jednoduchost a přímočarost vašich obchodních zkušeností. Nezavádíme KYC/AML a ani to nikdy neplánujeme.\n\n- Důvěryhodný komunitou\nNaše platforma funguje více než čtyři roky, přežila velký krach kryptoměnového trhu v roce 2018 a díky své komunitně orientované pečlivé službě se stala jedním z nejdůvěryhodnějších jmen v extrémně skeptické komunitě Monero.\n\n- Bezpečné, Open Source, Ochrana soukromí, Odolné vůči cenzuře\nNaše aplikace je zdarma a s otevřeným zdrojovým kódem, což zajišťuje, že mnoho očí se dívá na kód aplikace, aby se zajistilo, že neexistují žádné bezpečnostní díry nebo úniky privátních dat. Otevřený zdroj naší aplikace také umožňuje komukoli mít přístup k naší aplikaci, i když určité typy úložišti aplikací, aplikace cenzurují. Naše aplikace funguje i na telefonech, které mají Google zcela zablokovaný. Velmi si vážíme Vašeho soukromí, takže ani nepožadujeme, abyste při registraci uváděli e-mail.\nKoupit nebo prodat Monero bez ověření ID. VAROVÁNÍ: TATO APLIKACE JE MOMENTÁLNĚ V OTEVŘENÉ BETA!\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSledování problémů: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hvězdná podpora\nNáš tým podpory je rychlý, pohotový a vždy se snaží vyhovět. Nikdy jsme neměli lístek podpory, který by nebyl zodpovězen do 24 hodin. Jsme vždy snadno dosažitelní prostřednictvím sociálních médií, pozorně nasloucháme Vaší kritice a vždy implementujeme dobré uživatelské návrhy v rekordním čase.\n\nNaši podporu můžete kontaktovat na: https://localmonero.co/support\n\n- Spravedlivé poplatky\nNeúčtujeme přemrštěné poplatky, když vkládáte nebo vybíráte Monero do/z naší peněženky arbitrážních dluhopisů. Neexistuje žádný poplatek za vklad a poplatek za výběr se velmi blíží poplatku, který byste platili za normální transakci.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koupit nebo prodat Monero bez ověření ID. Hotově nebo online. Bezpečné, rychlé, snadné.\n\nLocalMonero je největší, nejdůvěryhodnější a dobře zavedená obchodní platforma P2P v komunitě XMR. Nemáme žádné šeky KYC – Monero si můžete jednoduše anonymně koupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést bitcoiny, ethery, USDT nebo jakékoli jiné krypto mince na Monero – naše platforma podporuje jakoukoli platební metodu.\n\n- Bezpečné a hladké obchodování\nPodporujeme jakoukoli platební metodu, jakoukoli měnu a kdekoli. Neodstraňujeme platební metody a plně podporujeme hotovostní obchody tváří v tvář. Všechny naše obchody jsou chráněny arbitrážním dluhopisem. Díky tomu, že požadujeme, aby byly prostředky před zahájením obchodu drženy v rozhodčím dluhopisu, zajišťujeme bezproblémový a bezpečný zážitek pro kupujícího, který je nezbytný pro popularitu platformy a opakované zákazníky pro prodejce.\n\n- Žádné ověření KYC/AML nebo ID\nLocalMonero se zavazuje udržovat jednoduchost a přímočarost vašich obchodních zkušeností. Nezaměstnáváme KYC/AML a ani to nikdy neplánujeme.\n\n- Důvěryhodný komunitou\nNaše platforma funguje více než čtyři roky, přežila velký krach kryptoměnového trhu v roce 2018 a díky své komunitně orientované pečlivé službě se stala jedním z nejdůvěryhodnějších jmen v extrémně skeptické komunitě Monero.\n\n- Bezpečné, Open Source, Ochrana soukromí, Odolné vůči cenzuře\nNaše aplikace je zdarma a s otevřeným zdrojovým kódem, což zajišťuje, že mnoho očí se dívá na kód aplikace, aby se zajistilo, že neexistují žádné bezpečnostní díry nebo úniky soukromí. Otevřený zdroj naší aplikace také umožňuje komukoli mít přístup k naší aplikaci, i když určité úložiště aplikací aplikaci cenzuruje. Naše aplikace funguje i na telefonech, které mají Google zcela zablokovaný. Velmi si vážíme vašeho soukromí, takže ani nepožadujeme, abyste při registraci uváděli e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSledování problémů: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hvězdná podpora\nNáš tým podpory je rychlý, pohotový a vždy se snaží vyhovět. Nikdy jsme neměli lístek podpory, který by nebyl zodpovězen do 24 hodin. Jsme vždy snadno dosažitelní prostřednictvím sociálních médií, pozorně nasloucháme vaší kritice a vždy implementujeme dobré uživatelské návrhy v rekordním čase.\n\nNaši podporu můžete kontaktovat na: https://localmonero.co/support\n\n- Spravedlivé poplatky\nNeúčtujeme přemrštěné poplatky, když vkládáte nebo vybíráte Monero do/z naší peněženky arbitrážních dluhopisů. Neexistuje žádný poplatek za vklad a poplatek za výběr se velmi blíží poplatku, který byste platili za normální transakci.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kup XMR privátně';
@@ -9287,14 +9377,56 @@ class I18nCs extends I18n {
   String get app_apple_app_store_subtitle_localmonero => 'Koupit/prodat Monero anonymně';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Koupit/prodat Bitcoin anonymně';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Koupit nebo prodat Monero bez ověření ID. Hotově nebo online.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Nakupujte nebo prodávejte bitcoiny bez ověření ID. Hotově nebo online.';
 
   @override
   String get app_ask_community_chats => 'Máte otázky? Zeptejte se v komunitních chatech';
+
+  @override
+  String get app_select_currency => 'Vyberte měnu';
+
+  @override
+  String get app_select_country => 'Vyberte zemi';
+
+  @override
+  String get app_select_payment_method => 'Vyberte způsob platby';
+
+  @override
+  String get app_enable_ad => 'Povolit reklamu';
+
+  @override
+  String get app_disable_ad => 'Zakázat reklamu';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Podrobnosti o proxy';
+
+  @override
+  String get app_proxy_use => 'Použij proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Varování! Funkce proxy je v beta verzi, očekávají se chyby. Nahlaste prosím chyby našim vývojovým kanálům pro rychlé opravy';
+
+  @override
+  String get app_proxy_select_type => 'Vyberte typ proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy povoleno';
+
+  @override
+  String get app_proxy_on_descr => 'Aplikace se nyní připojí k platformě přes proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy není k dispozici';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Zkontrolujte, zda je nastavení připojení správné, nebo použijte jiný proxy.';
 }

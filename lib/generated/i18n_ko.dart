@@ -3878,7 +3878,7 @@ class I18nKo extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => '노골적인 사기';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p> 모네로 씨앗이 바로 모네로입니다. 처음 지갑을 만들 때 적어 두어야합니다. 시드를 잃으면 모네로를 잃어 버리고 아무도 도와 줄 수 없기 때문입니다. 그러나 또한이 씨앗을 다른 사람으로부터 안전하게 유지해야합니다. 누군가가 당신의 씨앗을 훔치면 그들은 마치 당신처럼 지갑에서 Monero를 보낼 수 있으며, 다시 말하지만 아무도 당신을 위해이 돈을 되 찾을 수 없습니다. 사라졌습니다. </p>\n\n<p> 개인이 Monero의 콜드 월렛을 가지고 있고 자금에 대해 궁금해하고 확인하고 싶어하는 경우가 너무 많습니다. 그러나 번거 로움을 겪거나 전체 지갑 응용 프로그램을 다시 설치하는 대신 웹 지갑을 사용하여 신속하게 시드를 복원하고 돈을보기로 결정합니다. Business Look Alike 사기의 희생양이되면 시드를 입력하는 바로 그 행위가 사기꾼에게 제공되며, 사기꾼은 자신의 편의에 따라 관리하는 다른 지갑으로 돈을 옮길 수 있습니다. </p>\n\n<p> 사이트, 애플리케이션 또는 지갑에 \'시드로 복원\'옵션이있는 경우 언제든지 사용중인 애플리케이션이 합법적 인 애플리케이션인지 매우주의하십시오. 프로그램의 해시 (모네로 웹 사이트에는이를 수행하는 방법에 대한 지침이 있음)를 확인하여 프로그램이 외부의 힘에 의해 변조되지 않았는지 확인하고 시드를 노출하는 위치와 방법을 지속적으로 파악하십시오. 이중 확인은 성 가실 수 있지만 부주의로 인한 자금 손실은 더 심할 것입니다. </p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>당신의 모네로 씨앗이 당신의 모네로입니다. 시드를 잃으면 모네로를 잃고 아무도 도와줄 수 없기 때문에 처음 지갑을 만들 때 적어 두어야 합니다. 그러나 또한 이 씨앗을 다른 사람들로부터 안전하게 보호해야 합니다. 누군가가 당신의 씨앗을 훔치면 마치 당신인 것처럼 지갑에서 Monero를 보낼 수 있으며, 다시 말하지만 아무도 당신을 위해 이 돈을 회수할 수 없습니다. 사라졌습니다.</p>\n\n<p> 개인이 Monero의 콜드 월렛을 보관하고 자금에 대해 궁금해하고 확인하고 싶어하는 경우가 너무 많습니다. 하지만 지갑 애플리케이션 전체를 다시 설치하는 번거로움을 겪지 않고 웹 지갑을 사용하여 신속하게 시드를 복원하고 돈을 보기로 결정합니다. 그들이 Business Look Alike 사기의 피해자가 되면, 시드를 입력하는 행위 자체가 사기꾼에게 정보를 제공하고, 사기꾼은 편리하게 제어할 수 있는 다른 지갑으로 돈을 옮길 수 있습니다.</p>\n\n<p>사이트, 응용 프로그램 또는 지갑에 \'시드 복원\' 옵션이 있을 때마다 사용 중인 응용 프로그램이 합법적인지 매우 주의하십시오. 프로그램의 해시를 확인하여(Monero 웹사이트에 방법에 대한 지침이 있음) 프로그램이 외부 세력에 의해 변조되지 않았는지 확인하고 시드를 노출하는 위치와 방법을 지속적으로 파악하십시오. 이중 확인은 귀찮을 수 있지만 부주의로 인한 자금 손실은 더욱 심각합니다.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '사기에서 Monero Seed의 역할';
@@ -7439,6 +7439,96 @@ class I18nKo extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => '이 블로그에서 우리 팀은 기술적 측면에 관심이 있는 사람들과 개발 통찰력 중 일부를 공유합니다.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid는 Android 플랫폼용 설치 가능한 FOSS(무료 오픈 소스 소프트웨어) 애플리케이션 카탈로그입니다. 클라이언트를 사용하면 장치에서 업데이트를 쉽게 찾아보고 설치하고 추적할 수 있습니다.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid 웹사이트</a></p>\n</blockquote>\n\n<p>이 자습서의 모든 단계는 플레이버가 없는 앱에서도 작동합니다.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>사용된 모든 라이브러리와 종속 항목을 포함하여 완전히 오픈 소스인 경우에만 앱이 F-Droid에 포함될 수 있습니다. 포함 정책에 대해 자세히 알아보려면 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">여기</a>.</p>\n<p>예를 들어, 앱에서 ObjectBox 데이터베이스를 사용하는 경우 &#39;F-Droid에 포함될 수 없습니다(<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">토론</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => '어떤 앱을 F-Droid에 포함할 수 있습니까?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Gitlab에서 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 저장소</a>를 포크합니다.</li>\n<li>장치에 저장소를 복제합니다.</li>\n<li><code>co.localmonero.app</code></li>와 같이 앱의 번들 ID로 분기를 생성합니다.\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => '1 단계';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p><code>fdroid</code>가 올바르게 작동하는지 확인하십시오. <code>fdroid</code> 폴더에서 다음 명령을 실행합니다.</p>\n<pre><code class=\"lang-sh\">fdroid 초기화\nfdroid 읽기 메타\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => '2 단계';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>프로젝트 추가:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir 앱\n</code></pre>\n<p>메타데이터 디렉토리에 파일을 생성합니다(예: <code>metadata/co.localmonero.app.yml</code>).\n이 파일을 수동으로 생성할 수도 있습니다.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => '3단계';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>파일을 열고 편집합니다. 예는 다음과 같습니다. <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>예제에서 다음을 볼 수 있습니다.</p>\n<ol>\n<li>Flutter는 하위 모듈로 사용됩니다. 이것은 F-Droid 팀의 요구 사항입니다.</li>\n<li>모든 플레이버에 대해 별도의 분기를 사용했습니다(<code>AutoUpdateMode: 버전 %v-fdroid-lm</code> 명령). 이는 Fastlane이 Flutter에서 &#39; 플레이버를 지원하지 않기 때문입니다.</li>\n<li>빌드 정보를 수동으로 처음 추가하면 앞으로 새 태그를 푸시한 후 봇에 의해 자동으로 추가됩니다.</li>\n</ol>\n<p>파일의 구문이 올바른지 확인하십시오: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '4단계';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '이제 F-Droid 시장에 대한 데이터를 추가해 보겠습니다. 이를 위해 각 플레이버에 대해 별도의 브랜치를 생성합니다.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p> 그런 다음 Fastlane용 폴더를 만듭니다.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>필요한 데이터를 추가하고 푸시합니다.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => '5단계';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>F-Droid에 앱을 추가할 시간입니다.</p>\n<ol>\n<li>앱 저장소에 태그를 생성합니다.</li>\n<li>Gitlab의 F-Droid 저장소에 변경 사항을 푸시합니다.</li>\n<li>Gitlab 저장소에서 병합 요청을 합니다. 제목에 앱의 ID를 사용하세요.</li>\n<li>F-Droid 팀의 리뷰를 기다리세요.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => '6단계';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>프로세스는 약간 복잡하며 도중에 다른 문제가 발생할 수 있습니다. 그러나 CI를 설정하면 다음 업데이트가 자동으로 처리됩니다.</p>\n<p>질문이 있는 경우 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>에서 질문하십시오.';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => '결론';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid는 Android용 FOSS 앱의 훌륭한 카탈로그이지만 앱을 추가하는 것은 약간 복잡할 수 있습니다...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'F-Droid에서 Flutter 앱을 플레이버로 게시하는 방법은 무엇입니까?';
+
+  @override
+  String get devblog250Sbtitle => '개발 블로그';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '주소 추가';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => '취소';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => '이 주소를 삭제하시겠습니까?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '주소를 제공해야 할 때마다 여기에 저장된 주소를 빠르게 선택할 수 있습니다.';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '라벨(선택사항)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => '구하다';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '나중에 사용할 수 있도록 이 주소를 저장하십시오.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => '이 주소는 이미 주소록에 있습니다.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => '이 주소는 주소록에서 이미 삭제되었습니다.';
+
+  @override
   String get ads => '광고';
 
   @override
@@ -9170,7 +9260,7 @@ class I18nKo extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: 쉽게 XMR 구매';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '신분증 인증 없이 모네로를 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.\n\nLocalMonero는 XMR 커뮤니티에서 가장 크고 신뢰할 수 있으며 잘 구축된 P2P 거래 플랫폼입니다. KYC 확인이 없습니다. PayPal, 신용 카드, 기프트 카드, 우편으로 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매하거나 Bitcoin, Ether, USDT 또는 기타 암호 화폐를 Monero로 전환할 수 있습니다. 당사 플랫폼은 모든 결제 방법을 지원합니다.\n\n- 안전하고 원활한 거래\n우리는 어디서나 모든 지불 방법, 모든 통화를 지원합니다. 결제 수단을 제거하지 않으며, 대면 현금 거래를 전면 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 자금이 중재 채권에 보관되어야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기에 필수적이며 판매자에게는 반복 고객입니다.\n\n- KYC/AML 또는 ID 확인 없음\nLocalMonero는 거래 경험의 단순성과 직진성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 사용하지 않으며 그렇게 할 계획도 없습니다.\n\n- 지역 사회의 신뢰\n우리 플랫폼은 4년 이상 운영되어 2018년 크립토통화 시장 붕괴에서 살아남았으며 커뮤니티 중심의 근면한 서비스를 통해 매우 회의적인 Monero 커뮤니티에서 가장 신뢰할 수 있는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 프라이버시 중심, 검열 방지\n우리의 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인정보 유출이 없는지 확인하기 위해 많은 사람들이 앱의 코드를 주시하고 있습니다. 우리 앱을 오픈 소싱하면 특정 앱 저장소에서 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 저희 앱은 Google이 완전히 차단된 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 소중히 여기며 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n신분증 인증 없이 모네로를 사고 팔 수 있습니다. 경고: 이 앱은 현재 공개 베타 버전입니다!\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 트래커: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 별의 지원\n우리의 지원팀은 빠르고 응답이 빠르며 항상 기쁘게 생각합니다. 24시간 이내에 답변을 받지 못한 지원 티켓은 한 번도 없었습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://localmonero.co/support에서 지원을 받을 수 있습니다.\n\n- 공정 수수료\n중재 채권 지갑에 모네로를 입금하거나 인출할 때 과도한 수수료를 부과하지 않습니다. 입금 수수료가 없으며 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 비슷합니다.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '신분증 인증 없이 모네로를 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.\n\nLocalMonero는 XMR 커뮤니티에서 가장 크고 신뢰할 수 있으며 잘 구축된 P2P 거래 플랫폼입니다. KYC 확인이 없습니다. PayPal, 신용 카드, 기프트 카드, 우편으로 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매하거나 Bitcoin, Ether, USDT 또는 기타 암호 화폐를 Monero로 전환할 수 있습니다. 당사 플랫폼은 모든 결제 방법을 지원합니다.\n\n- 안전하고 원활한 거래\n우리는 어디서나 모든 지불 방법, 모든 통화를 지원합니다. 결제 수단을 제거하지 않으며, 대면 현금 거래를 전면 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 자금이 중재 채권에 보관되어야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기에 필수적이며 판매자에게는 반복 고객입니다.\n\n- KYC/AML 또는 ID 확인 없음\nLocalMonero는 거래 경험의 단순성과 직진성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 사용하지 않으며 그렇게 할 계획도 없습니다.\n\n- 지역 사회의 신뢰\n우리 플랫폼은 4년 이상 운영되어 2018년 크립토통화 시장 붕괴에서 살아남았으며 커뮤니티 중심의 근면한 서비스를 통해 매우 회의적인 Monero 커뮤니티에서 가장 신뢰할 수 있는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 프라이버시 중심, 검열 방지\n우리의 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인정보 유출이 없는지 확인하기 위해 많은 사람들이 앱의 코드를 주시하고 있습니다. 우리 앱을 오픈 소싱하면 특정 앱 저장소에서 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 저희 앱은 Google이 완전히 차단된 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 소중히 여기며 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 트래커: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 별의 지원\n우리의 지원팀은 빠르고 응답이 빠르며 항상 기쁘게 생각합니다. 24시간 이내에 답변을 받지 못한 지원 티켓은 한 번도 없었습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://localmonero.co/support에서 지원을 받을 수 있습니다.\n\n- 공정 수수료\n중재 채권 지갑에서 모네로를 입출금할 때 과도한 수수료를 부과하지 않습니다. 입금 수수료가 없으며 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 비슷합니다.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: 비공개로 XMR 구매';
@@ -9297,4 +9387,46 @@ class I18nKo extends I18n {
 
   @override
   String get app_ask_community_chats => '질문이 있으신가요? 커뮤니티 채팅에서 물어보세요';
+
+  @override
+  String get app_select_currency => '통화 선택';
+
+  @override
+  String get app_select_country => '국가 선택';
+
+  @override
+  String get app_select_payment_method => '결제 수단 선택';
+
+  @override
+  String get app_enable_ad => '광고 활성화';
+
+  @override
+  String get app_disable_ad => '광고 비활성화';
+
+  @override
+  String get app_proxy => '대리';
+
+  @override
+  String get app_proxy_details => '프록시 세부정보';
+
+  @override
+  String get app_proxy_use => '프록시 사용';
+
+  @override
+  String get app_proxy_bugs_expected => '경고! 프록시 기능은 베타 버전이며 버그가 있을 수 있습니다. 빠른 수정을 위해 개발 채널에 버그를 보고하십시오.';
+
+  @override
+  String get app_proxy_select_type => '프록시 유형 선택';
+
+  @override
+  String get app_proxy_on => '프록시 사용';
+
+  @override
+  String get app_proxy_on_descr => '이제 앱이 프록시를 통해 플랫폼에 연결됩니다.';
+
+  @override
+  String get app_proxy_unavailable => '프록시를 사용할 수 없음';
+
+  @override
+  String get app_proxy_unavailable_decr => '연결 설정이 올바른지 확인하거나 다른 프록시를 사용하십시오.';
 }

@@ -15,6 +15,7 @@ mixin PaymentMethodsMixin {
     "ADVCASH",
     "PAYEER",
     "PERFECT_MONEY",
+    "SEPA",
   ];
 
   Widget getPaymentMethodIcon(BuildContext context, String code, {double size = 14}) {

@@ -3878,7 +3878,7 @@ class I18nJa extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'あからさまな詐欺';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>あなたのモネロシードはあなたのモネロです。最初にウォレットを作成するときは、それを書き留めておく必要があります。なぜなら、シードを失うとモネロを失い、誰もあなたを助けることができないからです。しかし、あなたはこのシードを他人から守らなければなりません。誰かがあなたのシードを盗んだ場合、彼らはあなたであるかのようにモネロをウォレットから送り出すことができます。なくなってしまいます。</p>\n\n<p> 個人が Monero のコールド ウォレットを保管していて、自分の資金に興味があり、それを確認したいと思っていることがあまりにも多くあります。しかし、手間をかけたり、ウォレット アプリケーション全体を再インストールしたりするのではなく、Web ウォレットを使用してシードをすばやく復元し、お金を確認することにしました。彼らがBusiness Look Alike詐欺の犠牲になった場合、シードを入力するという行為自体が詐欺師にそれを与え、詐欺師は都合の良いときに管理している別のウォレットにお金を移すことができます。</p>\n\n<p>サイト、アプリケーション、またはウォレットに「シードを使用して復元」オプションがある場合はいつでも、使用しているアプリケーションが正当なものであることを十分に注意してください。プログラムのハッシュをチェックして (Monero の Web サイトにこれを行う方法の説明があります)、プログラムが外部の力によって改ざんされていないことを確認し、シードを公開する場所と方法を常に認識してください。ダブルチェックは煩わしいかもしれませんが、不注意による資金の損失はさらに悪いことです。</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>あなたのモネロシードはあなたのモネロです。最初にウォレットを作成するときは、それを書き留めておく必要があります。なぜなら、シードを失うとモネロを失い、誰もあなたを助けることができないからです。しかし、あなたはこの種を他人から守らなければなりません。誰かがあなたのシードを盗んだ場合、彼らはあなたであるかのようにモネロをウォレットから送り出すことができます。なくなった。</p>\n\n<p> 個人が Monero のコールド ウォレットを保管していて、自分の資金に興味があり、それを確認したいと思っていることがあまりにも多くあります。しかし、ウォレット アプリケーション全体を再インストールするという面倒な作業を行うのではなく、Web ウォレットを使用してシードをすばやく復元し、お金を確認することにしました。彼らがBusiness Look Alike詐欺の犠牲になった場合、シードを入力するという行為自体が詐欺師にそれを与え、詐欺師は都合の良いときに管理している別のウォレットにお金を移すことができます.</p>\n\n<p>サイト、アプリケーション、またはウォレットに「シードを使用して復元」オプションがある場合はいつでも、使用しているアプリケーションが正当なものであることを十分に注意してください。プログラムのハッシュをチェックして (Monero の Web サイトにこれを行う方法の説明があります)、プログラムが外部の力によって改ざんされていないことを確認し、シードを公開する場所と方法を常に認識してください。ダブルチェックは煩わしいかもしれませんが、不注意による資金の損失はさらに悪いことです.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '詐欺におけるモネロシードの役割';
@@ -7439,6 +7439,96 @@ class I18nJa extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'このブログでは、私たちのチームが開発に関する洞察の一部を、技術的な側面に関心のある人々と共有しています。';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid は、Android プラットフォーム用のインストール可能な FOSS (フリーおよびオープン ソース ソフトウェア) アプリケーションのカタログです。クライアントを使用すると、デバイスでの更新の参照、インストール、および追跡が簡単になります。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid ウェブサイト</a></p>\n【X330X】\n\n<p> このチュートリアルのすべての手順は、フレーバーのないアプリでも機能します。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p> アプリが完全にオープンソースである場合にのみ、アプリを F-Droid に含めることができます。これには、使用されるすべてのライブラリと依存関係が含まれます。包含ポリシーの詳細については、<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">こちら</a>.</p>をご覧ください。\n<p>たとえば、アプリで ObjectBox データベースを使用する場合、&#39;F-Droid に含めることはできません (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">ディスカッション</a>)。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid にはどのアプリを含めることができますか?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Gitlab で <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata リポジトリ </a> をフォークします。</li>\n<li> リポジトリをデバイスにクローンします。</li>\n<li> <code>co.localmonero.app</code></li> など、アプリのバンドル ID を使用してブランチを作成します。\n【X307X】';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'ステップ1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p><code>fdroid</code>が正常に動作することを確認してください。 <code>fdroid</code> フォルダで次のコマンドを実行します:</p>\n<pre><code class=\"lang-sh\">fdroid 初期化\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'ステップ2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>プロジェクトを追加:</p>\n<pre><code>fdroid インポート --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p><code>metadata/co.localmonero.app.yml</code> などのメタデータ ディレクトリにファイルを作成します。\nこのファイルを手動で作成することもできます。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'ステップ 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>ファイルを開いて編集します。以下に例を示します: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>あなたが見ることができる例では：</p>\n<ol>\n<li>Flutter はサブモジュールとして使用されます - これは F-Droid チームからの要件です。</li>\n<li>フレーバーごとに別のブランチを使用しました (コマンド <code>AutoUpdateMode: Version %v-fdroid-lm</code>)。これは、Fastlane が &#39;Flutter のフレーバーをサポートしていないためです。</li>\n<li> 初めてビルド情報を手動で追加しますが、今後は新しいタグをプッシュした後、ボットによって自動的に追加されます。</li>\n</ol>\n<p>ファイルの構文が正しいことを確認します: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'ステップ 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>F-Droid マーケットのデータを追加しましょう。そのために、フレーバーごとに別のブランチを作成します: </p>\n【X105X】\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n【X572X】\n<p>その後、Fastlane 用のフォルダーを作成します。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>必要なデータを追加してプッシュします。</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'ステップ 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>アプリを F-Droid に追加します。</p>\n<ol>\n<li> アプリ リポジトリにタグを作成します。</li>\n<li> Gitlab の F-Droid リポジトリに変更をプッシュします。</li>\n<li> Gitlab リポジトリでマージ リクエストを作成します。アプリの ID をタイトルに使用します。</li>\n<li>F-Droid チームからのレビューを待ちます。</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'ステップ 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p> プロセスは少し複雑で、途中でさまざまな問題が発生する可能性があります。ただし、CI を設定すると、次の更新は自動的に処理されます。</p>\n<p>ご不明な点がございましたら、<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>でお気軽にお問い合わせください。';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => '結論';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid は Android 用の FOSS アプリの優れたカタログですが、アプリを追加するのは少し複雑かもしれません...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'F-Droid でフレーバーを使用して Flutter アプリを公開するにはどうすればよいですか?';
+
+  @override
+  String get devblog250Sbtitle => '開発ブログ';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '住所を追加';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'キャンセル';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'このアドレスを削除しますか?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '住所を入力する必要があるときはいつでも、ここに保存されている住所をすばやく選択できます';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'ラベル (オプション)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'セーブ';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '将来の使用のためにこのアドレスを保存します';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'このアドレスはアドレス帳に既に存在します。';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'このアドレスはアドレス帳から既に削除されています。';
+
+  @override
   String get ads => '広告';
 
   @override
@@ -9170,7 +9260,7 @@ class I18nJa extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を簡単に購入';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'ID認証なしでMoneroを売買。現金でもオンラインでも。安全、迅速、簡単。\n\nLocalMoneroは、XMRコミュニティで最大、最も信頼され、確立されたP2P取引プラットフォームです。KYCチェックはありません。PayPal、クレジットカード、ギフトカード、郵送による現金で、ID認証なしに匿名でモネロを購入したり、ビットコイン、イーサ、USDT、または他の暗号コインをモネロに変換したりすることができます - 当社のプラットフォームはあらゆる支払い方法をサポートしています。\n\n- 安全でスムーズな取引\n私たちは、あらゆる支払い方法、あらゆる通貨、あらゆる場所に対応しています。私たちは支払い方法を排除せず、対面での現金取引を完全にサポートしています。全ての取引は仲裁保証で保護されています。取引開始前にアービトレーション・ボンドに資金を預ける必要があるため、買い手にとってスムーズで安全な体験が保証され、プラットフォームの人気と売り手にとってのリピーター獲得に不可欠なものとなっています。\n\n- KYC/AMLまたはID検証なし\nLocalMoneroは、お客様の取引体験のシンプルさと率直さを維持することをお約束します。私たちはKYC/AMLを採用していませんし、今後も採用する予定がありません。\n\n- コミュニティからの信頼\n当社のプラットフォームは4年以上運営され、2018年の暗号通貨市場の大暴落を乗り越え、コミュニティ指向の勤勉なサービスを通じて、極めて懐疑的なMoneroコミュニティで最も信頼できる名前の1つとなりました。\n\n- セキュア、オープンソース、プライバシー重視、検閲に強い\n私たちのアプリは無料でオープンソースであるため、多くの人がアプリのコードを見て、脆弱性やプライバシー漏洩がないことを保証しています。\nアプリをオープンソース化することで、特定のアプリのリポジトリがアプリを検閲した場合でも、誰でも私たちのアプリにアクセスすることができます。私たちのアプリは、Googleが完全にブロックされている携帯電話でも動作します。私たちはあなたのプライバシーを非常に大切にしており、登録時に電子メールを提供する必要さえありません。\n\nID認証なしでMoneroを売買する。警告: このアプリは現在オープンベータ版です！\n\n\nソースコード: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題トラッカー: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- ステラサポート\n\n私たちのサポートチームは、迅速に対応し、常に喜んでいただけるように努めています。24時間以内に回答されなかったサポートチケットは一度もありません。私たちは、ソーシャルメディアを通じていつでも簡単に連絡を取ることができ、あなたの批判に熱心に耳を傾け、いつも記録的な速さでユーザーからの優れた提案を実装しています。\n\nサポートは https://localmonero.co/support からご利用いただけます。\n\n- 適正な料金\n当社の仲裁債ウォレットにモネロを入出金する際に法外な手数料を請求することはありません。入金手数料は無料、出金手数料は通常の取引で支払う手数料に非常に近いものです。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '本人確認なしでモネロを売買する。現金またはオンライン。安全、迅速、簡単。\n\nLocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P 取引プラットフォームです。 KYCチェックはありません - PayPal、クレジットカード、ギフトカード、郵送による現金での身元確認なしで匿名でモネロを購入するか、ビットコイン、イーサ、USDT、またはその他の暗号コインをモネロに変換することができます - 私たちのプラットフォームはあらゆる支払い方法をサポートしています.\n\n- 安全でスムーズな取引\nあらゆる支払い方法、通貨、場所をサポートしています。支払い方法を排除せず、対面での現金取引を完全にサポートします。私たちの取引はすべて仲裁保証によって保護されています。取引を開始する前に資金を仲裁保証金に保持する必要があるという事実のおかげで、購入者にとってスムーズで安全な体験が保証されます。これは、プラットフォームの人気と売り手のリピート顧客にとって不可欠です.\n\n- KYC/AML または ID 検証なし\nLocalMonero は、取引体験のシンプルさと率直さを維持することをお約束します。私たちはKYC / AMLを採用しておらず、そうする予定もありません.\n\n- コミュニティからの信頼\n当社のプラットフォームは 4 年以上運営されており、2018 年の暗号通貨市場の大暴落を乗り切り、そのコミュニティ指向の勤勉なサービスを通じて、非常に懐疑的な Monero コミュニティで最も信頼される名前の 1 つになりました。\n\n- 安全、オープンソース、プライバシー中心、検閲耐性\n私たちのアプリは無料でオープンソースであるため、多くの人がアプリのコードを見て、セキュリティ ホールやプライバシー リークがないことを確認しています。アプリをオープンソース化することで、特定のアプリ リポジトリがアプリを検閲している場合でも、誰でもアプリにアクセスできるようになります。私たちのアプリは、Google が完全にブロックされている電話でも動作します。私たちはあなたのプライバシーをとても大切にしています。登録時に電子メールを提供する必要さえありません.\n\nソースコード: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題トラッカー: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- ステラサポート\n私たちのサポートチームは、迅速で反応がよく、常に喜んでいます. 24 時間以内に回答されなかったサポート チケットはありません。私たちはソーシャルメディアを通じていつでも簡単にアクセスでき、あなたの批判に熱心に耳を傾け、常に記録的な速さでユーザーからの優れた提案を実装しています.\n\nサポートは https://localmonero.co/support からご利用いただけます。\n\n- フェア料金\n当社の仲裁債券ウォレットにモネロを入金または出金する際に法外な手数料を請求することはありません。入金手数料はなく、出金手数料は通常の取引で支払う手数料に非常に近いものです。';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を非公開で購入する';
@@ -9297,4 +9387,46 @@ class I18nJa extends I18n {
 
   @override
   String get app_ask_community_chats => '質問がありますか？コミュニティ チャットで質問する';
+
+  @override
+  String get app_select_currency => '通貨を選択';
+
+  @override
+  String get app_select_country => '国を選択';
+
+  @override
+  String get app_select_payment_method => 'お支払い方法を選択';
+
+  @override
+  String get app_enable_ad => '広告を有効にする';
+
+  @override
+  String get app_disable_ad => '広告を無効にする';
+
+  @override
+  String get app_proxy => 'プロキシー';
+
+  @override
+  String get app_proxy_details => 'プロキシの詳細';
+
+  @override
+  String get app_proxy_use => 'プロキシを使う';
+
+  @override
+  String get app_proxy_bugs_expected => '警告！プロキシ機能はベータ版であり、バグが予想されます。迅速な修正のためにバグを開発チャネルに報告してください';
+
+  @override
+  String get app_proxy_select_type => 'プロキシの種類を選択';
+
+  @override
+  String get app_proxy_on => 'プロキシが有効';
+
+  @override
+  String get app_proxy_on_descr => 'アプリはプロキシ経由でプラットフォームに接続します。';
+
+  @override
+  String get app_proxy_unavailable => 'プロキシを利用できません';
+
+  @override
+  String get app_proxy_unavailable_decr => '接続設定が正しいかどうかを確認するか、別のプロキシを使用してください。';
 }

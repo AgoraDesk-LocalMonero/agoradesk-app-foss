@@ -3878,7 +3878,7 @@ class I18nId extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Penipuan secara Langsung';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Seed Monero Anda ADALAH Monero Anda. Anda harus menuliskannya saat pertama kali membuat dompet, karena jika Anda kehilangan seed, Anda kehilangan Monero dan tidak ada yang bisa membantu Anda. TETAPI JUGA Anda harus menjaga seed ini aman dari orang lain. Jika seseorang mencuri seed Anda, mereka dapat mengeluarkan Monero dari dompet seolah-olah mereka adalah Anda, dan, sekali lagi, tidak ada yang dapat memulihkan uang ini untuk Anda. Iu semua hilang.</p>\n\n<p> Terlalu sering seseorang menyimpan cold wallet Monero, ingin tahu tentang dana mereka, dan ingin memeriksanya. Namun alih-alih melalui kerumitan atau menginstal ulang seluruh aplikasi dompet, mereka hanya memutuskan untuk menggunakan dompet web untuk memulihkan seed mereka dengan cepat dan melihat uang mereka. Jika mereka menjadi korban penipuan Business Look Alike, maka tindakan memasukkan seed mereka akan memberikannya kepada penipu, yang kemudian dapat memindahkan uang ke dompet lain yang mereka kendalikan sesuai keinginan mereka.</p>\n\n<p> KAPANPUN situs, aplikasi, atau dompet memiliki opsi \'pulihkan dengan seed\', berhati-hatilah karena aplikasi yang Anda gunakan adalah aplikasi yang sah. Periksa hash program (situs web Monero memiliki instruksi tentang cara melakukan ini) untuk memastikan program tidak dirusak oleh kekuatan luar, dan selalu waspada di mana dan bagaimana Anda mengekspos seed Anda. Pemeriksaan ganda mungkin mengganggu, tetapi kehilangan dana karena kecerobohan akan lebih buruk lagi.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Seed Monero Anda ADALAH Monero Anda. Anda harus menuliskannya saat pertama kali membuat dompet, karena jika Anda kehilangan seednya, Anda akan kehilangan Monero dan tidak ada yang bisa membantu Anda. TETAPI JUGA Anda harus menjaga seed ini aman dari orang lain. Jika seseorang mencuri seed Anda, mereka dapat mengeluarkan Monero dari dompet seolah-olah mereka adalah Anda, dan, sekali lagi, tidak ada yang dapat memulihkan uang ini untuk Anda. Hilang.</p>\n\n<p> Terlalu sering seseorang menyimpan cold wallet Monero, ingin tahu tentang dana mereka, dan ingin memeriksanya. Namun daripada melalui kerumitan menginstal ulang seluruh aplikasi dompet, mereka hanya memutuskan untuk menggunakan dompet web untuk memulihkan seed mereka dengan cepat dan melihat uang mereka. Jika mereka menjadi korban penipuan Business Look Alike, maka tindakan memasukkan seed mereka itu sendiri akan memberikannya kepada penipu, yang kemudian dapat memindahkan uang ke dompet lain yang mereka kendalikan sesuai keinginan mereka.</p>\n\n<p> KAPANPUN situs, aplikasi, atau dompet memiliki opsi \'pulihkan dengan seed\', berhati-hatilah karena aplikasi yang Anda gunakan adalah aplikasi yang sah. Periksa hash program (situs web Monero memiliki instruksi tentang cara melakukan ini) untuk memastikan program tidak dirusak oleh kekuatan luar, dan selalu waspada di mana dan bagaimana Anda mengekspos seed Anda. Pemeriksaan ganda mungkin mengganggu, tetapi kehilangan dana karena kecerobohan akan lebih buruk lagi.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Peran Benih EúAnda dalam Penipuan';
@@ -4217,7 +4217,7 @@ class I18nId extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceable250Sbtitle => 'Tidak dapat terlacak';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Ringkasan</h2>\n <p> Menurut pendapat kami, Monero adalah pilihan yang jelas jika Anda mencari mata uang kripto yang pribadi, aman, tidak dapat dilacak, fungible, dan terdesentralisasi tanpa memerlukan setup tepercaya. Ada hal lain yang membahayakan privasi dan keamanan Anda. Tapi jangan hanya mengambil pendapat kami. Lakukan penelitian Anda sendiri dan lihat sendiri. Pertimbangkan bahwa Monero didukung dan digunakan oleh entitas yang bergantung pada privasi dan tidak dapat dilacak, seperti:\n                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purisme </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      AlphaBay Market (AB) ditutup pada Juli 2017. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Federal Forfeiture Complaint </a> terhadap AB menunjukkan bahwa:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero adalah satu-satunya mata uang kripto pribadi dan tidak dapat dilacak:\n                          </b>\n                          <br />\n                          &quot;Secara total, dari dompet CAZES dan agen komputer menguasai sekitar \$8.800.000 dalam Bitcoin, Ethereum, Moreno [sic], dan Zcash, yang diuraikan sebagai berikut: 1.605,0503851 Bitcoin, 8.309,271639 Ethereum, 3.691,98 Zcash, <em>dan jumlah Monero yang tidak diketahui.\n                        <li>\n                          <b>\n                            Transaksi Bitcoin tidak bersifat pribadi dan dapat dilacak:\n                          </b>\n                          <br />\n                          &quot;Agen federal memperoleh surat perintah setelah melacak sejumlah transaksi Bitcoin yang berasal dari AlphaBay ke rekening mata uang digital, dan akhirnya rekening bank dan aset berwujud lainnya, yang dipegang oleh CAZES dan istrinya.&quot; (p. 17, baris 24- 26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                      LocalMonero tidak menganjurkan atau mendorong aktivitas ilegal apa pun.\n                    </p>\n                  </div>  ';
+  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Ringkasan</h2>\n <p> Menurut pendapat kami, Monero adalah pilihan yang jelas jika Anda mencari mata uang kripto yang pribadi, aman, tidak dapat dilacak, fungible, dan terdesentralisasi tanpa memerlukan setup tepercaya. Ada hal lain yang membahayakan privasi dan keamanan Anda. Tapi jangan hanya mengambil pendapat kami. Lakukan penelitian Anda sendiri dan lihat sendiri. Pertimbangkan bahwa Monero didukung dan digunakan oleh entitas yang bergantung pada privasi dan tidak dapat dilacak, seperti:\n                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purisme </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      AlphaBay Market (AB) ditutup pada Juli 2017. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Federal Forfeiture Complaint </a> terhadap AB menunjukkan bahwa:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero adalah satu-satunya mata uang kripto pribadi dan tidak dapat dilacak:\n                          </b>\n                          <br />\n                          &quot;Secara total, dari dompet CAZES dan agen komputer menguasai sekitar \$8.800.000 dalam Bitcoin, Ethereum, Moreno [sic], dan Zcash, yang diuraikan sebagai berikut: 1.605,0503851 Bitcoin, 8.309,271639 Ethereum, 3.691,98 Zcash, <em>dan jumlah Monero yang tidak diketahui.</em> &quot;(bagian bawah dari hal.20 dan bagian atas dari hal.21, penekanan ditambahkan)</li>\n                        <li>\n                          <b>\n                            Transaksi Bitcoin tidak bersifat pribadi dan dapat dilacak:\n                          </b>\n                          <br />\n                          &quot;Agen federal memperoleh surat perintah setelah melacak sejumlah transaksi Bitcoin yang berasal dari AlphaBay ke rekening mata uang digital, dan akhirnya rekening bank dan aset berwujud lainnya, yang dipegang oleh CAZES dan istrinya.&quot; (hal. 17, baris 24- 26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                      LocalMonero tidak menganjurkan atau mendorong aktivitas ilegal apa pun.\n                    </p>\n                  </div>  ';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbtitle => 'Mengapa Monero Lebih Baik dari Dash, Zcash, Zcoin (Bahkan dengan Lelantus), Grin dan Bitcoin Mixer Seperti Wasabi (Diperbarui Mei 2020)';
@@ -7439,6 +7439,96 @@ class I18nId extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'Di blog ini tim kami berbagi beberapa wawasan pengembangan kami dengan mereka yang tertarik pada sisi teknis.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid adalah katalog aplikasi FOSS (Perangkat Lunak Gratis dan Open Source) yang dapat dipasang untuk platform Android. Klien memudahkan untuk menelusuri, menginstal, dan melacak pembaruan di perangkat Anda.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Situs web F-Droid</a></p>\n</blockquote>\n\n<p>Semua langkah dari tutorial ini juga akan berfungsi untuk aplikasi tanpa ragam.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplikasi ini dapat dimasukkan dalam F-Droid hanya jika aplikasi tersebut benar-benar open-source - termasuk semua pustaka dan dependensi yang digunakan. Pelajari lebih lanjut tentang kebijakan penyertaan <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">di sini</a>.</p>\n<p>Misalnya, jika Anda menggunakan database ObjectBox di aplikasi Anda, maka hal itu &#39;tidak dapat dimasukkan dalam F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">diskusi</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Aplikasi mana yang dapat dimasukkan ke F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repositori </a> di Gitlab.</li>\n<li>Kloning repositori ke perangkat Anda.</li>\n<li>Buat cabang dengan ID paket aplikasi, misalnya <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Langkah 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Periksa apakah <code>fdroid</code> berfungsi dengan benar. Jalankan perintah berikut di folder <code>fdroid</code> Anda:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Langkah 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Tambahkan proyek Anda:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Ini akan membuat file di direktori metadata, misalnya <code>metadata/co.localmonero.app.yml</code>.\nAnda juga dapat membuat file ini secara manual.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'Langkah 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Buka filenya dan sunting. Berikut contohnya: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Pada contoh Anda dapat melihat:</p>\n<ol>\n<li>Flutter digunakan sebagai submodul - ini adalah persyaratan dari tim F-Droid.</li>\n<li>Untuk setiap flavors kami telah menggunakan cabang terpisah (perintah <code>AutoUpdateMode: Versi %v-fdroid-lm</code>). Itu karena Fastlane tidak&#39; mendukung flavors dengan Flutter.</li>\n<li>Pertama kali kami menambahkan info build secara manual, di masa mendatang akan ditambahkan secara otomatis oleh bot, setelah kami mendorong tag baru.</li>\n</ol>\n<p>Periksa apakah file memiliki sintaksis yang benar: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Langkah 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Sekarang, mari tambahkan data untuk pasar F-Droid. Untuk itu kami membuat cabang terpisah untuk setiap flavors:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Setelah itu kita buat folder untuk Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Tambahkan data yang diperlukan dan Dorong.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Langkah 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Saatnya menambahkan aplikasi ke F-Droid.</p>\n<ol>\n<li>Buat tag di repositori aplikasi Anda.</li>\n<li>Dorong perubahan ke repositori F-Droid di Gitlab.</li>\n<li>Buat permintaan penggabungan di repo Gitlab. Gunakan id aplikasi Anda di judul.</li>\n<li>Tunggu review dari tim F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Langkah 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Prosesnya sedikit rumit dan berbagai masalah mungkin muncul di sepanjang jalan. Namun setelah Anda menyiapkan CI, pembaruan berikut akan ditangani secara otomatis.</p>\n<p>Jika Anda memiliki pertanyaan, jangan ragu untuk menanyakannya di <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> kami.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Kesimpulan';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid adalah katalog aplikasi FOSS yang bagus untuk Android, tetapi menambahkan aplikasi Anda mungkin sedikit rumit...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Bagaimana cara mempublikasikan aplikasi Flutter Anda dengan flavors di F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blog Pengembangan';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Tambahkan alamat';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Batalkan';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Apakah Anda ingin menghapus alamat ini?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Kapan pun Anda perlu memberikan alamat, Anda dapat dengan cepat memilih salah satu yang disimpan di sini';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Label (opsional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Simpan';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Simpan alamat ini untuk digunakan di masa mendatang';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Alamat ini sudah ada di buku alamat Anda.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Alamat ini telah dihapus dari buku alamat Anda.';
+
+  @override
   String get ads => 'Iklan';
 
   @override
@@ -9164,22 +9254,22 @@ class I18nId extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Beli atau jual Bitcoin secara anonim, tanpa verifikasi ID. Tunai atau daring. Aman, cepat, mudah.\n\nIngin tahu bagaimana cara berinvestasi di Bitcoin? Di AgoraDesk, membeli bitcoin tidak pernah semudah ini - beli BTC secara instan dari seseorang menggunakan metode pembayaran daring favorit Anda: PayPal, kartu kredit/debit atau transfer bank, kartu hadiah, Venmo, atau lainnya. Jika Anda ingin membeli bitcoin di dekat lokasi Anda dengan uang tunai, Anda dapat menemukan seseorang yang bersedia menjual bitcoin secara lokal - platform perdagangan mendukung perdagangan BTC dengan uang tunai. Anda bahkan dapat membeli bitcoin menggunakan uang tunai melalui surat.\n\n- Perdagangan Aman dan Lancar\nSama seperti LocalBitcoins, kami mendukung metode pembayaran apa pun, mata uang apa pun, di mana saja Anda berada. Kami tidak menghapus metode pembayaran, dan, tidak seperti LocalBitcoins, kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh jaminan arbitrase. Berkat fakta bahwa kami mengharuskan dana untuk disimpan dalam jaminan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nAgoraDesk berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan yang membuat LocalBitcoins asli begitu populer. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan tekun yang berorientasi komunitas menjadi salah satu nama paling tepercaya dalam komunitas mata uang kripto yang sangat skeptis.\n\n- Aman, Open Source, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Open sourcing aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada ponsel yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://agoradesk.com/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Bitcoin ke/dari dompet jaminan arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: mudah beli Bitcoin';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: beli BTC anonim';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: mudah beli XMR';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: beli XMR anonim';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Beli atau jual Bitcoin secara anonim, tanpa verifikasi ID. Tunai atau daring. Aman, cepat, mudah.\n\nLocalMonero adalah platform perdagangan P2P terbesar, paling tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki pemeriksaan KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui surat atau mengonversi Bitcoin, Ether, USDT, atau koin kripto lainnya ke Monero - platform kami mendukung metode pembayaran apa pun.\n\n- Perdagangan Aman dan Lancar\nKami mendukung metode pembayaran apa pun, mata uang apa pun, di mana saja Anda berada. Kami tidak menghapus metode pembayaran, dan kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh jaminan arbitrase. Berkat fakta bahwa kami mengharuskan dana untuk disimpan dalam jaminan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nLocalMonero berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan tekun yang berorientasi komunitas menjadi salah satu nama paling terpercaya dalam komunitas Monero yang sangat skeptis.\n\n- Aman, Open Source, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Open sourcing aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada ponsel yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\nBeli atau jual Monero tanpa verifikasi ID. PERINGATAN: APLIKASI SAAT INI SEDANG DALAM TAHAP OPEN BETA!\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://agoradesk.com/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Bitcoin ke/dari dompet jaminan arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Beli atau jual Monero tanpa verifikasi ID. Tunai atau secara daring. Aman, cepat, mudah.\n\nLocalMonero adalah platform perdagangan P2P terbesar, tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki cek KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui pos, atau mengonversi Bitcoin, Ether, USDT, atau koin kripto lainnya ke Monero - platform kami mendukung metode pembayaran apa pun.\n\n- Perdagangan Aman dan Lancar\nKami mendukung metode pembayaran apa saja, mata uang apa saja, di mana saja anda berada. Kami tidak menghapus metode pembayaran, dan kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh jaminan arbitrase. Berkat fakta bahwa kami memerlukan dana untuk disimpan dalam jaminan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nLocalMonero berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan dalam pengalaman trading Anda. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan tekun yang berorientasi komunitas menjadi salah satu nama paling tepercaya di komunitas Monero yang sangat skeptis.\n\n- Aman, Open Source, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Open sourcing aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada gawai yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar support\nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://localmonero.co/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Monero ke/dari dompet jaminan arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: beli XMR privat';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: beli XMR anonim';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Beli atau jual Monero tanpa verifikasi ID. Tunai atau daring. Aman, cepat, mudah.\n\nLocalMonero adalah platform perdagangan P2P terbesar, tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki pemeriksaan KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui pos, atau mengonversi Bitcoin, Ether, USDT, atau koin kripto lainnya ke Monero - platform kami mendukung metode pembayaran apa pun.\n\n- Perdagangan Aman dan Lancar\nKami mendukung metode pembayaran apa pun, mata uang apa pun, di mana saja. Kami tidak menghapus metode pembayaran, dan kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh jaminan arbitrase. Berkat fakta bahwa kami mengharuskan dana untuk disimpan dalam jaminan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nLocalMonero berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan pengalaman trading Anda. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan tekun yang berorientasi komunitas menjadi salah satu nama paling terpercaya di komunitas Monero yang sangat skeptis.\n\n- Aman, Sumber Terbuka, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Open sourcing aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada ponsel yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://localmonero.co/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Monero ke/dari dompet jaminan arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: beli BTC scr anonim';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: beli BTC anonim';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Beli atau jual Bitcoin tanpa verifikasi ID. Tunai atau daring.\n\nIngin tahu bagaimana cara berinvestasi di Bitcoin? Di AgoraDesk, membeli bitcoin tidak pernah semudah ini - beli BTC secara instan dari seseorang menggunakan metode pembayaran daring favorit Anda: PayPal, kartu kredit/debit atau transfer bank, kartu hadiah, Venmo, atau lainnya. Jika Anda ingin membeli bitcoin di dekat lokasi Anda dengan uang tunai, Anda dapat menemukan seseorang yang bersedia menjual bitcoin secara lokal - platform perdagangan mendukung pembelian dan penjualan BTC dengan uang tunai. Anda bahkan dapat membeli bitcoin menggunakan uang tunai melalui surat.\n\n- Perdagangan Aman dan Lancar\nSama seperti LocalBitcoins, kami mendukung metode pembayaran apa pun, mata uang apa pun, di mana saja. Kami tidak menghapus metode pembayaran, dan, tidak seperti LocalBitcoins, kami sepenuhnya mendukung perdagangan tunai tatap muka. Semua perdagangan kami dilindungi oleh jaminan arbitrase. Berkat fakta bahwa kami mengharuskan dana untuk disimpan dalam jaminan arbitrase sebelum perdagangan dapat dimulai, kami memastikan pengalaman yang lancar dan aman bagi pembeli, yang penting untuk popularitas platform dan pelanggan berulang untuk penjual.\n\n- Tidak ada KYC/AML atau Verifikasi ID\nAgoraDesk berkomitmen untuk mempertahankan kesederhanaan dan keterusterangan yang membuat LocalBitcoins asli begitu populer. Kami tidak mempekerjakan KYC/AML, kami juga tidak pernah berencana untuk melakukannya.\n\n- Dipercaya oleh Komunitas\nPlatform kami telah beroperasi selama lebih dari empat tahun, selamat dari Great Cryptocurrency Market Crash tahun 2018, dan melalui layanan tekun yang berorientasi komunitas menjadi salah satu nama paling terpercaya dalam komunitas mata uang kripto yang sangat skeptis.\n\n- Aman, Sumber Terbuka, Berpusat pada Privasi, Tahan Sensor\nAplikasi kami gratis dan open source, yang memastikan banyak mata melihat kode aplikasi untuk memastikan tidak ada lubang keamanan atau kebocoran privasi. Open sourcing aplikasi kami juga memungkinkan siapa saja untuk memiliki akses ke aplikasi kami meskipun repositori aplikasi tertentu menyensor aplikasi tersebut. Aplikasi kami bahkan bekerja pada ponsel yang telah diblokir sepenuhnya oleh Google. Kami sangat menghargai privasi Anda, kami bahkan tidak meminta Anda untuk memberikan email saat mendaftar.\n\nKode sumber: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nPelacak masalah: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support \nTim dukungan kami cepat, tanggap, dan selalu bersemangat untuk menyenangkan. Kami tidak pernah memiliki tiket dukungan yang tidak dijawab dalam waktu 24 jam. Kami selalu mudah dijangkau melalui media sosial, kami mendengarkan kritik Anda dengan saksama dan kami selalu menerapkan saran pengguna yang baik dalam waktu singkat.\n\nAnda dapat menghubungi dukungan kami di: https://agoradesk.com/support\n\n- Biaya yang Adil\nKami tidak membebankan biaya selangit saat Anda menyetor atau menarik Bitcoin ke/dari dompet jaminan arbitrase kami. Tidak ada biaya setoran, dan biaya penarikan sangat dekat dengan biaya yang akan Anda bayarkan untuk transaksi normal.';
@@ -9287,14 +9377,56 @@ class I18nId extends I18n {
   String get app_apple_app_store_subtitle_localmonero => 'Beli/Jual Monero Secara Anonim';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Beli/Jual Bitcoin Secara Anonim';
+  String get app_apple_app_store_subtitle_agoradesk => 'Beli/Jual BTC Secara Anonim';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Beli atau jual Monero tanpa verifikasi ID. Tunai atau daring.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Beli atau jual Bitcoin tanpa verifikasi ID. Tunai atau daring.';
 
   @override
-  String get app_ask_community_chats => 'Ada pertanyaan? Tanyakan di obrolan komunitas';
+  String get app_ask_community_chats => 'Ada pertanyaan? Tanyakan di percakapan komunitas';
+
+  @override
+  String get app_select_currency => 'Pilih mata uang';
+
+  @override
+  String get app_select_country => 'Pilih negara';
+
+  @override
+  String get app_select_payment_method => 'Pilih metode pembayaran';
+
+  @override
+  String get app_enable_ad => 'Aktifkan iklan';
+
+  @override
+  String get app_disable_ad => 'Nonaktifkan iklan';
+
+  @override
+  String get app_proxy => 'Proksi';
+
+  @override
+  String get app_proxy_details => 'Detail proxy';
+
+  @override
+  String get app_proxy_use => 'Gunakan proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Peringatan! Fungsionalitas proxy dalam versi beta, bug diharapkan. Silakan laporkan bug ke saluran pengembangan kami untuk perbaikan cepat';
+
+  @override
+  String get app_proxy_select_type => 'Pilih jenis proxy';
+
+  @override
+  String get app_proxy_on => 'Proksi diaktifkan';
+
+  @override
+  String get app_proxy_on_descr => 'Aplikasi sekarang akan terhubung ke platform melalui proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proksi tidak tersedia';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Silakan periksa apakah pengaturan koneksi sudah benar atau gunakan proxy lain.';
 }

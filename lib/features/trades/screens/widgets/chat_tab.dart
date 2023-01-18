@@ -2,6 +2,7 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_loading_indicator.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/close_icon_box.dart';
@@ -11,13 +12,14 @@ import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_bubble.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_bubble_sticky.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_step_one_for_chat.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 import 'package:vm/vm.dart';
 
-class ChatTab extends StatelessWidget with PaymentMethodsMixin {
+class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
   ChatTab({
     Key? key,
     required this.model,
@@ -256,9 +258,46 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin {
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
           child: BoxInfoWithLabel(
             label: context.intl.important,
-            child: Text(
-              context.intl.app_trade_warning_impersonation(GetIt.I<AppParameters>().appName),
-              style: context.txtBodyXSmallN80,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  context.intl.app_trade_warning_impersonation(GetIt.I<AppParameters>().appName),
+                  style: context.txtBodyXSmallN80,
+                ),
+                const SizedBox(height: 4),
+                RichText(
+                  textAlign: TextAlign.start,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: context.intl.app_ask_community_chats + ' ',
+                        style: context.txtBodyXSmallN80,
+                      ),
+                      TextSpan(
+                        text: 'Telegram',
+                        style: context.txtBodyXSmallP70P40,
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            openLink(GetIt.I<AppParameters>().telegramChannel);
+                          },
+                      ),
+                      TextSpan(
+                        text: ', ',
+                        style: context.txtBodyXSmallN80,
+                      ),
+                      TextSpan(
+                        text: 'Matrix',
+                        style: context.txtBodyXSmallP70P40,
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            openLink(GetIt.I<AppParameters>().matrixChannel);
+                          },
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ),

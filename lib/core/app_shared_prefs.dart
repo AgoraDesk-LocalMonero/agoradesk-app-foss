@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/utils/date_mixin.dart';
+import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -19,6 +20,12 @@ enum AppSharedPrefsKey {
   cachedCurrencySavedDate,
   tooltipShownNames,
   defaultTab,
+  proxyEnabled,
+  proxyServer,
+  proxyPort,
+  proxyUsername,
+  proxyPassword,
+  proxyType,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -44,9 +51,13 @@ class AppSharedPrefs with DateMixin {
 
   Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
 
+  ProxyType get proxyType => _parseProxyType(getString(AppSharedPrefsKey.proxyType));
+
   TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
+
+  bool? get proxyEnabled => getBool(AppSharedPrefsKey.proxyEnabled);
 
   bool? get biometricAuthIsOn => getBool(AppSharedPrefsKey.biometricAuthIsOn);
 
@@ -57,6 +68,14 @@ class AppSharedPrefs with DateMixin {
   bool? get pushFcmTokenSavedToApi => getBool(AppSharedPrefsKey.pushFcmTokenSavedToApi);
 
   String? get username => getString(AppSharedPrefsKey.username);
+
+  String get proxyServer => getString(AppSharedPrefsKey.proxyServer) ?? '';
+
+  String get proxyPort => getString(AppSharedPrefsKey.proxyPort) ?? '';
+
+  String get proxyUsername => getString(AppSharedPrefsKey.proxyUsername) ?? '';
+
+  String get proxyPassword => getString(AppSharedPrefsKey.proxyPassword) ?? '';
 
   bool? get ignoreAllUpdates => getBool(AppSharedPrefsKey.ignoreAllUpdates);
 
@@ -155,6 +174,21 @@ class AppSharedPrefs with DateMixin {
       }
     }
     return null;
+  }
+
+  ///
+  /// Parse proxy tupe
+  ///
+  ProxyType _parseProxyType(String? proxyStr) {
+    if (proxyStr != null) {
+      try {
+        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name == proxyStr.toLowerCase());
+        return proxy;
+      } catch (e) {
+        return ProxyType.socks5;
+      }
+    }
+    return ProxyType.socks5;
   }
 
   ///

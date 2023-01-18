@@ -12,6 +12,7 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -95,9 +96,11 @@ class _AppState extends State<App>
   DateTime _lastUsedErrorMessage = DateTime.now().subtract(const Duration(hours: 1));
   bool _activatePin = false;
   bool _dialogOpened = false;
+  late RemoteMessage? _initialMessage;
 
   @override
   void initState() {
+    _getInitialFcmMessage();
     _secureStorage = SecureStorage();
     appState = AppState(
       secureStorage: _secureStorage,
@@ -286,7 +289,6 @@ class _AppState extends State<App>
       try {
         _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
       } catch (e, stackTrace) {
-        debugPrint('[$runtimeType] Mixpanel Error: $e');
         Sentry.captureException(e, stackTrace: stackTrace);
       }
     }
@@ -684,6 +686,18 @@ class _AppState extends State<App>
         Provider.value(value: _notificationsService),
         ChangeNotifierProvider.value(value: appState),
       ];
+
+  Future _getInitialFcmMessage() async {
+    _initialMessage = await FirebaseMessaging.instance.getInitialMessage();
+    if (_initialMessage != null) {
+      final Map<String, dynamic> payload = _initialMessage!.data;
+      final PushModel push = PushModel.fromJson(payload);
+      if (push.objectId != null && push.objectId!.isNotEmpty) {
+        final tradeId = push.objectId;
+        eventBus.fire(NoificationClickedEvent(tradeId));
+      }
+    }
+  }
 
   @override
   void dispose() {

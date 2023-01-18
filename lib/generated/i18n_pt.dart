@@ -3118,7 +3118,7 @@ class I18nPt extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> Preço de mercado ou fixo </strong><br/> Para precificar seu anúncio, você pode inserir uma margem que desejar acima do preço de mercado $assetName. Para isso, insira uma porcentagem no campo margem após escolher a opção “Preço de mercado”. Você também pode especificar um preço fixo que não será alterado até que você o altere manualmente. Para isso você precisa escolher a opção “Preço Fixo” e inserir o valor do preço. <br/><br/> <strong> Min. / máx. limite de transação </strong><br/> O limite mínimo de transação define o menor valor que alguém pode comprar. Se você defini-lo como cinco e tiver sua moeda definida como EUR, isso significa que o menor valor comercial que alguém pode abrir uma negociação com você será de 5 euros. O limite máximo de transação define qual é o maior valor de negociação que você deseja aceitar. <br/><br/> <strong> Termos de troca </strong><br/> Este é o texto que o comprador vê antes de abrir uma negociação com você. É uma boa ideia escrever instruções para o comprador sobre como você deseja que a negociação prossiga e se você tiver alguma instrução específica. Se você exigir, por exemplo, que o comprador envie um recibo como comprovante de pagamento antes de finalizar uma negociação ou se precisar que o comprador forneça um ID, este é o local para mencioná-lo. Você pode dar uma olhada nos anúncios de outros comerciantes para o método de pagamento que deseja usar para ter uma ideia do que os bons termos de troca contêm. <br/><br/> <strong> Opções extras </strong><br/><br/> <strong> Limite de valores para </strong><br/> Você pode restringir o anúncio para abrir negociações apenas para valores específicos. Se você inserir 20,30,60 na caixa, um potencial parceiro comercial só poderá abrir uma negociação de 20, 30 ou 60 euros. <br/><br/> <strong> Dados de pagamento </strong><br/> Insira aqui informações específicas sobre como o comprador deve pagar, pode ser o número da sua conta bancária ou endereço de e-mail (por exemplo, para PayPal). <br/><br/> <strong> Pontuação mínima de feedback necessária </strong><br/> O feedback mínimo permite que você defina uma pontuação mínima de feedback necessária para abrir uma negociação usando seu anúncio. <br/><br/> <strong> Primeiro limite de tempo ($assetSymbol) </strong><br/> Este é um limite máximo específico de transação para novos usuários. Se um comprador sem histórico anterior de negociação com você quiser abrir uma negociação com você, esse é o maior valor pelo qual ele pode abrir uma negociação. <br/><br/> <strong> Janela de pagamento </strong><br/> A quantidade de tempo que o comprador tem para concluir o pagamento antes que o vendedor possa cancelar a negociação. <br/><br/> <strong> Rastrear o valor máximo de liquidez </strong><br/> Habilitar o rastreamento de liquidez reduz o limite máximo do anúncio pelo valor atualmente retido em negociações abertas. <br/><br/> <strong> Dicas rápidas para identificar golpistas </strong> <br/><br/><strong>Compradores fraudulentos geralmente estão com pressa.</strong> Quanto mais um cliente pede para você se apressar, mais suspeitos você deveria ser, clientes reais sempre têm paciência. <br/><br/>Compradores fraudulentos muitas vezes <strong>sugerem fazer toda ou parte da transação fora do sistema de proteção de títulos de arbitragem </strong>e depois não concluem sua parte da transação. <br/><br/> Tenha cuidado com <strong>provas de pagamento com photoshop</strong>, não finalize uma negociação até confirmar que recebeu o dinheiro. Você não é obrigado a finalizar uma negociação até que possa verificar se recebeu o pagamento do comprador. <br/><br/><strong>Não abra nenhum link que seu parceiro comercial esteja enviando para você</strong>. Se necessário, use um navegador diferente daquele que você está usando. <br/><br/>Não visite sites que não sejam $appName com o navegador que você está usando para negociar. <strong>Use um navegador diferente para outros sites.</strong> <br/><br/> Marque $appName em seu navegador e sempre use o marcador ao visitar o site. Isso ajuda você a evitar visitar acidentalmente sites de phishing, eles existem e podem ser muito convincentes.';
+    return '<strong> Preço de mercado ou fixo </strong><br/> Para precificar seu anúncio, você pode inserir uma margem que desejar acima do preço de mercado $assetName. Para isso, insira uma porcentagem no campo margem após escolher a opção “Preço de mercado”. Você também pode especificar um preço fixo que não será alterado até que você o altere manualmente. Para isso você precisa escolher a opção “Preço Fixo” e inserir o valor do preço. <br/><br/> <strong> Min. / máx. limite de transação </strong><br/> O limite mínimo de transação define o menor valor que alguém pode comprar. Se você defini-lo como cinco e tiver sua moeda definida como EUR, isso significa que o menor valor comercial que alguém pode abrir uma negociação com você será de 5 euros. O limite máximo de transação define qual é o maior valor de negociação que você deseja aceitar. <br/><br/> <strong> Termos de troca </strong><br/> Este é o texto que o comprador vê antes de abrir uma negociação com você. É uma boa ideia escrever instruções para o comprador sobre como você deseja que a negociação prossiga e se você tiver alguma instrução específica. Se você exigir, por exemplo, que o comprador envie um recibo como comprovante de pagamento antes de finalizar uma negociação ou se precisar que o comprador forneça um ID, este é o local para mencioná-lo. Você pode dar uma olhada nos anúncios de outros comerciantes para o método de pagamento que deseja usar para ter uma ideia do que os bons termos de troca contêm. <br/><br/> <strong> Opções extras </strong><br/><br/> <strong> Limite de valores para </strong><br/> Você pode restringir o anúncio para abrir negociações apenas para valores específicos. Se você inserir 20,30,60 na caixa, um potencial parceiro comercial só poderá abrir uma negociação de 20, 30 ou 60 euros. <br/><br/> <strong> Dados de pagamento </strong><br/> Insira aqui informações específicas sobre como o comprador deve pagar, pode ser o número da sua conta bancária ou endereço de e-mail (por exemplo, para PayPal). <br/><br/> <strong> Pontuação mínima de feedback necessária </strong><br/> O feedback mínimo permite que você defina uma pontuação mínima de feedback necessária para abrir uma negociação usando seu anúncio. <br/><br/> <strong> Primeiro limite de tempo ($assetSymbol) </strong><br/> Este é um limite máximo específico de transação para novos usuários. Se um comprador sem histórico anterior de negociação com você quiser abrir uma negociação com você, esse é o maior valor pelo qual ele pode abrir uma negociação. <br/><br/> <strong> Janela de pagamento </strong><br/> A quantidade de tempo que o comprador tem para concluir o pagamento antes que o vendedor possa cancelar a negociação. <br/><br/> <strong> Rastrear o valor máximo de liquidez </strong><br/> Habilitar o rastreamento de liquidez reduz o limite máximo do anúncio pelo valor atualmente retido em negociações abertas. <br/><br/> <strong> Dicas rápidas para identificar golpistas </strong> <br/><br/><strong>Compradores fraudulentos geralmente estão com pressa.</strong> Quanto mais um cliente pede para você se apressar, mais suspeitos você deveria ser, clientes reais sempre têm paciência. <br/><br/>Compradores fraudulentos muitas vezes <strong>sugerem fazer toda ou parte da transação fora do sistema de proteção de títulos de arbitragem </strong>e depois não concluem sua parte da transação. <br/><br/> Tenha cuidado com <strong>provas de pagamento com photoshop</strong>, não finalize uma negociação até confirmar que recebeu o dinheiro. Você não é obrigado a finalizar uma negociação até que possa verificar se recebeu o pagamento do comprador. <br/><br/><strong>Não abra nenhum link que seu parceiro comercial esteja enviando para você</strong>. Se for necessário, use um navegador diferente daquele que você está usando. <br/><br/>Não visite sites que não sejam $appName com o navegador que você está usando para negociar. <strong>Use um navegador diferente para outros sites.</strong> <br/><br/> Marque $appName em seu navegador e sempre use o marcador ao visitar o site. Isso ajuda você a evitar visitar acidentalmente sites de phishing, eles existem e podem ser muito convincentes.';
   }
 
   @override
@@ -3878,7 +3878,7 @@ class I18nPt extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'The Outright Scam';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente Monero É seu Monero. Você deve anotar quando fizer uma carteira pela primeira vez, porque se você perder sua semente, você perdeu seu Monero e ninguém pode ajudá-lo. MAS TAMBÉM você deve manter esta semente protegida de outras pessoas. Se alguém roubar sua semente, ele pode tirar o Monero da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Foi-se.</p>\n<p>Com muita frequência, um indivíduo guarda uma carteira de Monero frio, fica curioso sobre seus fundos e deseja verificar. Mas, em vez de passar pelo aborrecimento ou reinstalar todo o aplicativo de carteira, eles apenas decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do esquema de negócios semelhantes, o próprio ato de inserir suas sementes as transfere para os fraudadores, que podem transferir o dinheiro para uma carteira diferente que controlam conforme sua conveniência.</p>\n<p>A QUALQUER MOMENTO em que um site, aplicativo ou carteira tiver uma opção \'restaurar com semente\', tome muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site da Monero tem instruções sobre como fazer isso) para garantir que o programa não foi adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. A verificação dupla pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente do Monero É o seu Monero. Você deve anotá-lo quando fizer uma carteira pela primeira vez, porque se você perder sua semente, perderá seu Monero e ninguém poderá ajudá-lo. MAS TAMBÉM você deve manter esta semente segura de outras pessoas. Se alguém roubar sua semente, pode enviar o Monero para fora da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Acabou.</p>\n\n<p> Com muita frequência, um indivíduo mantém uma carteira fria de Monero, fica curioso sobre seus fundos e deseja verificá-los. Mas, em vez de passar pelo incômodo de reinstalar todo o aplicativo de carteira, eles simplesmente decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do golpe Business Look Alike, então o próprio ato de inserir sua semente dá para os golpistas, que podem então mover o dinheiro para uma carteira diferente que eles controlam conforme sua conveniência.</p>\n\n<p> SEMPRE que um site, aplicativo ou carteira tiver uma opção de \'restaurar com seed\', tenha muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site do Monero tem instruções sobre como fazer isso) para garantir que o programa não tenha sido adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. O cheque duplo pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'O papel da sua semente Monero em golpes';
@@ -7439,6 +7439,96 @@ class I18nPt extends I18n {
   }
 
   @override
+  String get devblog250Sbdescription => 'Neste blog, nossa equipe compartilha alguns de nossos insights de desenvolvimento com aqueles interessados no lado técnico das coisas.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid é um catálogo instalável de aplicativos FOSS (Free and Open Source Software) para a plataforma Android. O cliente facilita a navegação, a instalação e o acompanhamento das atualizações em seu dispositivo.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Site F-Droid</a></p>\n</blockquote>\n\n<p>Todas as etapas deste tutorial também funcionarão para um aplicativo sem variações.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>O aplicativo pode ser incluído no F-Droid apenas se for totalmente de código aberto - incluindo todas as bibliotecas e dependências usadas. Saiba mais sobre a política de inclusão <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">aqui</a>.</p>\n<p>Por exemplo, se você usar o banco de dados ObjectBox em seu aplicativo, ele não pode&#39;ser incluído no F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discussão</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Quais aplicativos podem ser incluídos no F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repositório fdroiddata</a> no Gitlab.</li>\n<li>Clone o repositório para o seu dispositivo.</li>\n<li>Crie uma ramificação com o ID do pacote do aplicativo, por exemplo <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Passo 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verifique se o <code>fdroid</code> funciona corretamente. Execute os seguintes comandos na pasta <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">inicialização fdroid\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Passo 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Adicione seu projeto:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Irá criar um arquivo no diretório de metadados, por exemplo <code>metadata/co.localmonero.app.yml</code>.\nVocê também pode criar este arquivo manualmente.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'etapa 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Abra o arquivo e edite-o. Aqui está um exemplo: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>No exemplo você pode ver:</p>\n<ol>\n<li>Flutter é usado como um submódulo - este é um requisito da equipe F-Droid.</li>\n<li>Para cada variação, usamos uma ramificação separada (comando <code>AutoUpdateMode: Versão %v-fdroid-lm</code>). Isso ocorre porque Fastlane &#39; não oferece suporte a variações com Flutter.</li>\n<li>A primeira vez que adicionamos informações de compilação manualmente, no futuro elas serão adicionadas automaticamente por um bot, depois que enviarmos uma nova tag.</li>\n</ol>\n<p>Verifique se o arquivo está com a sintaxe correta: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Passo 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Agora, vamos adicionar dados para o mercado F-Droid. Para isso criamos um branch separado para cada sabor:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Depois disso, criamos uma pasta para Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Adicione os dados necessários e envie-os.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Passo 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>É hora de adicionar o aplicativo ao F-Droid.</p>\n<ol>\n<li>Crie uma tag no repositório do seu app.</li>\n<li>Envie as alterações para o repositório F-Droid no Gitlab.</li>\n<li>Faça uma solicitação de mesclagem no repositório do Gitlab. Use o id do seu app no título.</li>\n<li>Aguarde uma revisão da equipe F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Passo 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>O processo é um pouco complicado e diferentes problemas podem surgir ao longo do caminho. Mas depois de configurar o IC, as atualizações a seguir serão tratadas automaticamente.</p>\n<p>Caso tenha dúvidas, sinta-se à vontade para perguntar em nosso <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Conclusão';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid é um ótimo catálogo de apps FOSS para Android, mas adicionar seu app pode ser um pouco complicado...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Como publicar seu aplicativo Flutter com sabores no F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blogue de desenvolvimento';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adicionar endereço';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Cancelar';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Deseja excluir este endereço?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Sempre que precisar fornecer um endereço, você poderá selecionar rapidamente um salvo aqui';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Rótulo (opcional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Salve ';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salve este endereço para uso futuro';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Este endereço já existe em seu catálogo de endereços.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Este endereço já foi excluído do seu catálogo de endereços.';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -9164,22 +9254,22 @@ class I18nPt extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre ou venda Bitcoin anonimamente, sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nQuer saber como investir em Bitcoin? Na AgoraDesk, comprar bitcoins nunca foi tão fácil - compre instantaneamente BTC de uma pessoa usando seu método de pagamento online favorito: PayPal, cartão de crédito/débito ou transferência bancária, vales-presente, Venmo ou qualquer outro. Se você deseja comprar bitcoins perto de você com dinheiro, pode encontrar alguém disposto a vender bitcoins localmente - a plataforma de negociação oferece suporte à compra e venda de BTC com dinheiro. Você pode até comprar bitcoins usando dinheiro pelo correio.\n\n- Negociação segura e tranquila\nAssim como a LocalBitcoins, aceitamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e, ao contrário do LocalBitcoins, apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA AgoraDesk está empenhada em manter a simplicidade e a franqueza que tornaram as LocalBitcoins originais tão populares. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na comunidade extremamente cética de criptomoedas.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://agoradesk.com/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Bitcoins de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compre Bitcoin facilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: comprar BTC sem ID';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compre XMR facilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: troca XMR sem ID';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Compre ou venda Monero sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nLocalMonero é a maior, mais confiável e bem estabelecida plataforma de negociação P2P na comunidade XMR. Não temos cheques KYC - você pode simplesmente comprar Monero anonimamente sem verificação de identidade com PayPal, cartão de crédito, vale-presente, dinheiro por correio ou converter Bitcoin, Ether, USDT ou qualquer outra moeda criptográfica para Monero - nossa plataforma suporta qualquer método de pagamento.\n\n- Negociação segura e tranquila\nApoiamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA LocalMonero está empenhada em manter a simplicidade e a franqueza de sua experiência de negociação. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na extremamente cética comunidade Monero.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\nCompre ou venda Monero sem verificação de identidade. AVISO: ESTE APLICATIVO ESTÁ EM BETA ABERTO!\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://localmonero.co/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Monero de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Compre ou venda Monero sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nLocalMonero é a maior, mais confiável e bem estabelecida plataforma de negociação P2P na comunidade XMR. Não temos cheques KYC - você pode simplesmente comprar Monero anonimamente sem verificação de identidade com PayPal, cartão de crédito, vale-presente, dinheiro por correio ou converter Bitcoin, Ether, USDT ou qualquer outra moeda criptográfica para Monero - nossa plataforma suporta qualquer método de pagamento.\n\n- Negociação segura e tranquila\nApoiamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA LocalMonero está empenhada em manter a simplicidade e a franqueza de sua experiência de negociação. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na extremamente cética comunidade Monero.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://localmonero.co/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Monero de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compre XMR em particular';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: troca XMR sem ID';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Compre ou venda Monero sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nLocalMonero é a maior, mais confiável e bem estabelecida plataforma de negociação P2P na comunidade XMR. Não temos cheques KYC - você pode simplesmente comprar Monero anonimamente sem verificação de identidade com PayPal, cartão de crédito, vale-presente, dinheiro por correio ou converter Bitcoin, Ether, USDT ou qualquer outra moeda criptográfica para Monero - nossa plataforma suporta qualquer método de pagamento.\n\n- Negociação segura e tranquila\nApoiamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA LocalMonero está empenhada em manter a simplicidade e a franqueza de sua experiência de negociação. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na extremamente cética comunidade Monero.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://localmonero.co/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Monero de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy BTC anonymously';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: comprar BTC sem ID';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre ou venda Bitcoin sem verificação de identidade. Dinheiro ou online.\n\nQuer saber como investir em Bitcoin? Na AgoraDesk, comprar bitcoins nunca foi tão fácil - compre instantaneamente BTC de uma pessoa usando seu método de pagamento online favorito: PayPal, cartão de crédito/débito ou transferência bancária, vales-presente, Venmo ou qualquer outro. Se você deseja comprar bitcoins perto de você com dinheiro, pode encontrar alguém disposto a vender bitcoins localmente - a plataforma de negociação oferece suporte à compra e venda de BTC com dinheiro. Você pode até comprar bitcoins usando dinheiro pelo correio.\n\n- Negociação segura e tranquila\nAssim como a LocalBitcoins, aceitamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e, ao contrário do LocalBitcoins, apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA AgoraDesk está empenhada em manter a simplicidade e a franqueza que tornaram as LocalBitcoins originais tão populares. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na comunidade extremamente cética de criptomoedas.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://agoradesk.com/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Bitcoins de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
@@ -9284,19 +9374,61 @@ class I18nPt extends I18n {
   String get app_push_trade_disputed => 'Comércio disputado';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Comprar/Vender Monero Anonimamente';
+  String get app_apple_app_store_subtitle_localmonero => 'Compre/Venda XMR Anonimamente';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Compre/Venda Bitcoin Anonimamente';
+  String get app_apple_app_store_subtitle_agoradesk => 'Compre/Venda BTC Anonimamente';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Comprar ou vender Monero sem verificação de identidade. Em dinheiro ou on-line.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Compre ou venda Bitcoin sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.';
+  String get app_google_play_store_short_description_agoradesk => 'Compre ou venda Bitcoin sem verificação de identidade. Dinheiro ou online.';
 
   @override
   String get app_ask_community_chats => 'Tem perguntas? Pergunte nos chats da comunidade';
+
+  @override
+  String get app_select_currency => 'Escolha a moeda';
+
+  @override
+  String get app_select_country => 'Selecione o pais';
+
+  @override
+  String get app_select_payment_method => 'Selecione o método de pagamento';
+
+  @override
+  String get app_enable_ad => 'Ativar anúncio';
+
+  @override
+  String get app_disable_ad => 'Desativar anúncio';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Detalhes do proxy';
+
+  @override
+  String get app_proxy_use => 'Usar proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Aviso! A funcionalidade de proxy está em versão beta, erros são esperados. Relate os bugs aos nossos canais de desenvolvimento para correções rápidas';
+
+  @override
+  String get app_proxy_select_type => 'Selecione o tipo de proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy ativado';
+
+  @override
+  String get app_proxy_on_descr => 'O aplicativo agora se conectará à plataforma por meio do proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy indisponível';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Verifique se as configurações de conexão estão corretas ou use outro proxy.';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -12417,7 +12549,7 @@ class I18nPtBr extends I18nPt {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> Preço de mercado ou fixo </strong><br/> Para precificar seu anúncio, você pode inserir uma margem que desejar acima do preço de mercado $assetName. Para isso, insira uma porcentagem no campo margem após escolher a opção “Preço de mercado”. Você também pode especificar um preço fixo que não será alterado até que você o altere manualmente. Para isso você precisa escolher a opção “Preço Fixo” e inserir o valor do preço. <br/><br/> <strong> Min. / máx. limite de transação </strong><br/> O limite mínimo de transação define o menor valor que alguém pode comprar. Se você defini-lo como cinco e tiver sua moeda definida como EUR, isso significa que o menor valor comercial que alguém pode abrir uma negociação com você será de 5 euros. O limite máximo de transação define qual é o maior valor de negociação que você deseja aceitar. <br/><br/> <strong> Termos de troca </strong><br/> Este é o texto que o comprador vê antes de abrir uma negociação com você. É uma boa ideia escrever instruções para o comprador sobre como você deseja que a negociação prossiga e se você tiver alguma instrução específica. Se você exigir, por exemplo, que o comprador envie um recibo como comprovante de pagamento antes de finalizar uma negociação ou se precisar que o comprador forneça um ID, este é o local para mencioná-lo. Você pode dar uma olhada nos anúncios de outros comerciantes para o método de pagamento que deseja usar para ter uma ideia do que os bons termos de troca contêm. <br/><br/> <strong> Opções extras </strong><br/><br/> <strong> Limite de valores para </strong><br/> Você pode restringir o anúncio para abrir negociações apenas para valores específicos. Se você inserir 20,30,60 na caixa, um potencial parceiro comercial só poderá abrir uma negociação de 20, 30 ou 60 euros. <br/><br/> <strong> Dados de pagamento </strong><br/> Insira aqui informações específicas sobre como o comprador deve pagar, pode ser o número da sua conta bancária ou endereço de e-mail (por exemplo, para PayPal). <br/><br/> <strong> Pontuação mínima de feedback necessária </strong><br/> O feedback mínimo permite que você defina uma pontuação mínima de feedback necessária para abrir uma negociação usando seu anúncio. <br/><br/> <strong> Primeiro limite de tempo ($assetSymbol) </strong><br/> Este é um limite máximo específico de transação para novos usuários. Se um comprador sem histórico anterior de negociação com você quiser abrir uma negociação com você, esse é o maior valor pelo qual ele pode abrir uma negociação. <br/><br/> <strong> Janela de pagamento </strong><br/> A quantidade de tempo que o comprador tem para concluir o pagamento antes que o vendedor possa cancelar a negociação. <br/><br/> <strong> Rastrear o valor máximo de liquidez </strong><br/> Habilitar o rastreamento de liquidez reduz o limite máximo do anúncio pelo valor atualmente retido em negociações abertas. <br/><br/> <strong> Dicas rápidas para identificar golpistas </strong> <br/><br/><strong>Compradores fraudulentos geralmente estão com pressa.</strong> Quanto mais um cliente pede para você se apressar, mais suspeitos você deveria ser, clientes reais sempre têm paciência. <br/><br/>Compradores fraudulentos muitas vezes <strong>sugerem fazer toda ou parte da transação fora do sistema de proteção de títulos de arbitragem </strong>e depois não concluem sua parte da transação. <br/><br/> Tenha cuidado com <strong>provas de pagamento com photoshop</strong>, não finalize uma negociação até confirmar que recebeu o dinheiro. Você não é obrigado a finalizar uma negociação até que possa verificar se recebeu o pagamento do comprador. <br/><br/><strong>Não abra nenhum link que seu parceiro comercial esteja enviando para você</strong>. Se necessário, use um navegador diferente daquele que você está usando. <br/><br/>Não visite sites que não sejam $appName com o navegador que você está usando para negociar. <strong>Use um navegador diferente para outros sites.</strong> <br/><br/> Marque $appName em seu navegador e sempre use o marcador ao visitar o site. Isso ajuda você a evitar visitar acidentalmente sites de phishing, eles existem e podem ser muito convincentes.';
+    return '<strong> Preço de mercado ou fixo </strong><br/> Para precificar seu anúncio, você pode inserir uma margem que desejar acima do preço de mercado $assetName. Para isso, insira uma porcentagem no campo margem após escolher a opção “Preço de mercado”. Você também pode especificar um preço fixo que não será alterado até que você o altere manualmente. Para isso você precisa escolher a opção “Preço Fixo” e inserir o valor do preço. <br/><br/> <strong> Min. / máx. limite de transação </strong><br/> O limite mínimo de transação define o menor valor que alguém pode comprar. Se você defini-lo como cinco e tiver sua moeda definida como EUR, isso significa que o menor valor comercial que alguém pode abrir uma negociação com você será de 5 euros. O limite máximo de transação define qual é o maior valor de negociação que você deseja aceitar. <br/><br/> <strong> Termos de troca </strong><br/> Este é o texto que o comprador vê antes de abrir uma negociação com você. É uma boa ideia escrever instruções para o comprador sobre como você deseja que a negociação prossiga e se você tiver alguma instrução específica. Se você exigir, por exemplo, que o comprador envie um recibo como comprovante de pagamento antes de finalizar uma negociação ou se precisar que o comprador forneça um ID, este é o local para mencioná-lo. Você pode dar uma olhada nos anúncios de outros comerciantes para o método de pagamento que deseja usar para ter uma ideia do que os bons termos de troca contêm. <br/><br/> <strong> Opções extras </strong><br/><br/> <strong> Limite de valores para </strong><br/> Você pode restringir o anúncio para abrir negociações apenas para valores específicos. Se você inserir 20,30,60 na caixa, um potencial parceiro comercial só poderá abrir uma negociação de 20, 30 ou 60 euros. <br/><br/> <strong> Dados de pagamento </strong><br/> Insira aqui informações específicas sobre como o comprador deve pagar, pode ser o número da sua conta bancária ou endereço de e-mail (por exemplo, para PayPal). <br/><br/> <strong> Pontuação mínima de feedback necessária </strong><br/> O feedback mínimo permite que você defina uma pontuação mínima de feedback necessária para abrir uma negociação usando seu anúncio. <br/><br/> <strong> Primeiro limite de tempo ($assetSymbol) </strong><br/> Este é um limite máximo específico de transação para novos usuários. Se um comprador sem histórico anterior de negociação com você quiser abrir uma negociação com você, esse é o maior valor pelo qual ele pode abrir uma negociação. <br/><br/> <strong> Janela de pagamento </strong><br/> A quantidade de tempo que o comprador tem para concluir o pagamento antes que o vendedor possa cancelar a negociação. <br/><br/> <strong> Rastrear o valor máximo de liquidez </strong><br/> Habilitar o rastreamento de liquidez reduz o limite máximo do anúncio pelo valor atualmente retido em negociações abertas. <br/><br/> <strong> Dicas rápidas para identificar golpistas </strong> <br/><br/><strong>Compradores fraudulentos geralmente estão com pressa.</strong> Quanto mais um cliente pede para você se apressar, mais suspeitos você deveria ser, clientes reais sempre têm paciência. <br/><br/>Compradores fraudulentos muitas vezes <strong>sugerem fazer toda ou parte da transação fora do sistema de proteção de títulos de arbitragem </strong>e depois não concluem sua parte da transação. <br/><br/> Tenha cuidado com <strong>provas de pagamento com photoshop</strong>, não finalize uma negociação até confirmar que recebeu o dinheiro. Você não é obrigado a finalizar uma negociação até que possa verificar se recebeu o pagamento do comprador. <br/><br/><strong>Não abra nenhum link que seu parceiro comercial esteja enviando para você</strong>. Se for necessário, use um navegador diferente daquele que você está usando. <br/><br/>Não visite sites que não sejam $appName com o navegador que você está usando para negociar. <strong>Use um navegador diferente para outros sites.</strong> <br/><br/> Marque $appName em seu navegador e sempre use o marcador ao visitar o site. Isso ajuda você a evitar visitar acidentalmente sites de phishing, eles existem e podem ser muito convincentes.';
   }
 
   @override
@@ -13177,7 +13309,7 @@ class I18nPtBr extends I18nPt {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'The Outright Scam';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente Monero É seu Monero. Você deve anotar quando fizer uma carteira pela primeira vez, porque se você perder sua semente, você perdeu seu Monero e ninguém pode ajudá-lo. MAS TAMBÉM você deve manter esta semente protegida de outras pessoas. Se alguém roubar sua semente, ele pode tirar o Monero da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Foi-se.</p>\n<p>Com muita frequência, um indivíduo guarda uma carteira de Monero frio, fica curioso sobre seus fundos e deseja verificar. Mas, em vez de passar pelo aborrecimento ou reinstalar todo o aplicativo de carteira, eles apenas decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do esquema de negócios semelhantes, o próprio ato de inserir suas sementes as transfere para os fraudadores, que podem transferir o dinheiro para uma carteira diferente que controlam conforme sua conveniência.</p>\n<p>A QUALQUER MOMENTO em que um site, aplicativo ou carteira tiver uma opção \'restaurar com semente\', tome muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site da Monero tem instruções sobre como fazer isso) para garantir que o programa não foi adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. A verificação dupla pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente do Monero É o seu Monero. Você deve anotá-lo quando fizer uma carteira pela primeira vez, porque se você perder sua semente, perderá seu Monero e ninguém poderá ajudá-lo. MAS TAMBÉM você deve manter esta semente segura de outras pessoas. Se alguém roubar sua semente, pode enviar o Monero para fora da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Acabou.</p>\n\n<p> Com muita frequência, um indivíduo mantém uma carteira fria de Monero, fica curioso sobre seus fundos e deseja verificá-los. Mas, em vez de passar pelo incômodo de reinstalar todo o aplicativo de carteira, eles simplesmente decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do golpe Business Look Alike, então o próprio ato de inserir sua semente dá para os golpistas, que podem então mover o dinheiro para uma carteira diferente que eles controlam conforme sua conveniência.</p>\n\n<p> SEMPRE que um site, aplicativo ou carteira tiver uma opção de \'restaurar com seed\', tenha muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site do Monero tem instruções sobre como fazer isso) para garantir que o programa não tenha sido adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. O cheque duplo pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'O papel da sua semente Monero em golpes';
@@ -16738,6 +16870,96 @@ class I18nPtBr extends I18nPt {
   }
 
   @override
+  String get devblog250Sbdescription => 'Neste blog, nossa equipe compartilha alguns de nossos insights de desenvolvimento com aqueles interessados no lado técnico das coisas.';
+
+  @override
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid é um catálogo instalável de aplicativos FOSS (Free and Open Source Software) para a plataforma Android. O cliente facilita a navegação, a instalação e o acompanhamento das atualizações em seu dispositivo.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Site F-Droid</a></p>\n</blockquote>\n\n<p>Todas as etapas deste tutorial também funcionarão para um aplicativo sem variações.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>O aplicativo pode ser incluído no F-Droid apenas se for totalmente de código aberto - incluindo todas as bibliotecas e dependências usadas. Saiba mais sobre a política de inclusão <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">aqui</a>.</p>\n<p>Por exemplo, se você usar o banco de dados ObjectBox em seu aplicativo, ele não pode&#39;ser incluído no F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discussão</a>).</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Quais aplicativos podem ser incluídos no F-Droid?';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repositório fdroiddata</a> no Gitlab.</li>\n<li>Clone o repositório para o seu dispositivo.</li>\n<li>Crie uma ramificação com o ID do pacote do aplicativo, por exemplo <code>co.localmonero.app</code></li>\n</ul>';
+
+  @override
+  String get devblog250Sbfdroid250Sb2250Sbtitle => 'Passo 1';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verifique se o <code>fdroid</code> funciona corretamente. Execute os seguintes comandos na pasta <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">inicialização fdroid\nfdroid readmeta\n</code></pre>';
+
+  @override
+  String get devblog250Sbfdroid250Sb3250Sbtitle => 'Passo 2';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Adicione seu projeto:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Irá criar um arquivo no diretório de metadados, por exemplo <code>metadata/co.localmonero.app.yml</code>.\nVocê também pode criar este arquivo manualmente.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'etapa 3';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Abra o arquivo e edite-o. Aqui está um exemplo: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>No exemplo você pode ver:</p>\n<ol>\n<li>Flutter é usado como um submódulo - este é um requisito da equipe F-Droid.</li>\n<li>Para cada variação, usamos uma ramificação separada (comando <code>AutoUpdateMode: Versão %v-fdroid-lm</code>). Isso ocorre porque Fastlane &#39; não oferece suporte a variações com Flutter.</li>\n<li>A primeira vez que adicionamos informações de compilação manualmente, no futuro elas serão adicionadas automaticamente por um bot, depois que enviarmos uma nova tag.</li>\n</ol>\n<p>Verifique se o arquivo está com a sintaxe correta: <code>fdroid readmeta</code>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Passo 4';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Agora, vamos adicionar dados para o mercado F-Droid. Para isso criamos um branch separado para cada sabor:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Depois disso, criamos uma pasta para Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Adicione os dados necessários e envie-os.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'Passo 5';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>É hora de adicionar o aplicativo ao F-Droid.</p>\n<ol>\n<li>Crie uma tag no repositório do seu app.</li>\n<li>Envie as alterações para o repositório F-Droid no Gitlab.</li>\n<li>Faça uma solicitação de mesclagem no repositório do Gitlab. Use o id do seu app no título.</li>\n<li>Aguarde uma revisão da equipe F-Droid.</li>\n</ol>';
+
+  @override
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'Passo 6';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>O processo é um pouco complicado e diferentes problemas podem surgir ao longo do caminho. Mas depois de configurar o IC, as atualizações a seguir serão tratadas automaticamente.</p>\n<p>Caso tenha dúvidas, sinta-se à vontade para perguntar em nosso <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+
+  @override
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Conclusão';
+
+  @override
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid é um ótimo catálogo de apps FOSS para Android, mas adicionar seu app pode ser um pouco complicado...';
+
+  @override
+  String get devblog250Sbfdroid250Sbtitle => 'Como publicar seu aplicativo Flutter com sabores no F-Droid?';
+
+  @override
+  String get devblog250Sbtitle => 'Blogue de desenvolvimento';
+
+  @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adicionar endereço';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Cancelar';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Deseja excluir este endereço?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Sempre que precisar fornecer um endereço, você poderá selecionar rapidamente um salvo aqui';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Rótulo (opcional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Salve ';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salve este endereço para uso futuro';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Este endereço já existe em seu catálogo de endereços.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Este endereço já foi excluído do seu catálogo de endereços.';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -18463,19 +18685,22 @@ class I18nPtBr extends I18nPt {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre ou venda Bitcoin anonimamente, sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nQuer saber como investir em Bitcoin? Na AgoraDesk, comprar bitcoins nunca foi tão fácil - compre instantaneamente BTC de uma pessoa usando seu método de pagamento online favorito: PayPal, cartão de crédito/débito ou transferência bancária, vales-presente, Venmo ou qualquer outro. Se você deseja comprar bitcoins perto de você com dinheiro, pode encontrar alguém disposto a vender bitcoins localmente - a plataforma de negociação oferece suporte à compra e venda de BTC com dinheiro. Você pode até comprar bitcoins usando dinheiro pelo correio.\n\n- Negociação segura e tranquila\nAssim como a LocalBitcoins, aceitamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e, ao contrário do LocalBitcoins, apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA AgoraDesk está empenhada em manter a simplicidade e a franqueza que tornaram as LocalBitcoins originais tão populares. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na comunidade extremamente cética de criptomoedas.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://agoradesk.com/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Bitcoins de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compre Bitcoin facilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: comprar BTC sem ID';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compre XMR facilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: troca XMR sem ID';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Compre ou venda Monero sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nLocalMonero é a maior, mais confiável e bem estabelecida plataforma de negociação P2P na comunidade XMR. Não temos cheques KYC - você pode simplesmente comprar Monero anonimamente sem verificação de identidade com PayPal, cartão de crédito, vale-presente, dinheiro por correio ou converter Bitcoin, Ether, USDT ou qualquer outra moeda criptográfica para Monero - nossa plataforma suporta qualquer método de pagamento.\n\n- Negociação segura e tranquila\nApoiamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA LocalMonero está empenhada em manter a simplicidade e a franqueza de sua experiência de negociação. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na extremamente cética comunidade Monero.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\nCompre ou venda Monero sem verificação de identidade. AVISO: ESTE APLICATIVO ESTÁ EM BETA ABERTO!\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://localmonero.co/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Monero de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Compre ou venda Monero sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nLocalMonero é a maior, mais confiável e bem estabelecida plataforma de negociação P2P na comunidade XMR. Não temos cheques KYC - você pode simplesmente comprar Monero anonimamente sem verificação de identidade com PayPal, cartão de crédito, vale-presente, dinheiro por correio ou converter Bitcoin, Ether, USDT ou qualquer outra moeda criptográfica para Monero - nossa plataforma suporta qualquer método de pagamento.\n\n- Negociação segura e tranquila\nApoiamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA LocalMonero está empenhada em manter a simplicidade e a franqueza de sua experiência de negociação. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na extremamente cética comunidade Monero.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://localmonero.co/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Monero de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compre XMR em particular';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: troca XMR sem ID';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Compre ou venda Monero sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.\n\nLocalMonero é a maior, mais confiável e bem estabelecida plataforma de negociação P2P na comunidade XMR. Não temos cheques KYC - você pode simplesmente comprar Monero anonimamente sem verificação de identidade com PayPal, cartão de crédito, vale-presente, dinheiro por correio ou converter Bitcoin, Ether, USDT ou qualquer outra moeda criptográfica para Monero - nossa plataforma suporta qualquer método de pagamento.\n\n- Negociação segura e tranquila\nApoiamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA LocalMonero está empenhada em manter a simplicidade e a franqueza de sua experiência de negociação. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na extremamente cética comunidade Monero.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://localmonero.co/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Monero de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: comprar BTC sem ID';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre ou venda Bitcoin sem verificação de identidade. Dinheiro ou online.\n\nQuer saber como investir em Bitcoin? Na AgoraDesk, comprar bitcoins nunca foi tão fácil - compre instantaneamente BTC de uma pessoa usando seu método de pagamento online favorito: PayPal, cartão de crédito/débito ou transferência bancária, vales-presente, Venmo ou qualquer outro. Se você deseja comprar bitcoins perto de você com dinheiro, pode encontrar alguém disposto a vender bitcoins localmente - a plataforma de negociação oferece suporte à compra e venda de BTC com dinheiro. Você pode até comprar bitcoins usando dinheiro pelo correio.\n\n- Negociação segura e tranquila\nAssim como a LocalBitcoins, aceitamos qualquer método de pagamento, qualquer moeda, em qualquer lugar. Não removemos os métodos de pagamento e, ao contrário do LocalBitcoins, apoiamos totalmente as negociações em dinheiro face a face. Todas as nossas negociações são protegidas por um título de arbitragem. Graças ao fato de exigirmos que os fundos sejam mantidos em títulos de arbitragem antes do início de uma negociação, garantimos uma experiência tranquila e segura para o comprador, o que é essencial para a popularidade da plataforma e clientes recorrentes para os vendedores.\n\n- Sem KYC/AML ou verificação de identidade\nA AgoraDesk está empenhada em manter a simplicidade e a franqueza que tornaram as LocalBitcoins originais tão populares. Não empregamos KYC/AML, nem planejamos fazê-lo.\n\n- Confiado pela comunidade\nNossa plataforma opera há mais de quatro anos, sobreviveu ao grande crash do mercado de criptomoedas de 2018 e, por meio de seu serviço diligente orientado para a comunidade, tornou-se um dos nomes mais confiáveis na comunidade extremamente cética de criptomoedas.\n\n- Seguro, código aberto, centrado na privacidade, resistente à censura\nNosso aplicativo é gratuito e de código aberto, o que garante que muitos olhos estejam olhando para o código do aplicativo para garantir que não haja falhas de segurança ou vazamentos de privacidade. O código aberto do nosso aplicativo também permite que qualquer pessoa tenha acesso ao nosso aplicativo, mesmo que um determinado repositório de aplicativos o censure. Nosso aplicativo funciona até mesmo em telefones que têm o Google completamente bloqueado. Valorizamos tanto a sua privacidade que nem exigimos que você forneça um e-mail ao se registrar.\n\nCódigo-fonte: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suporte Estelar\nNossa equipe de suporte é rápida, receptiva e sempre pronta para agradar. Nunca tivemos um ticket de suporte que não foi respondido em 24 horas. Estamos sempre facilmente acessíveis através da mídia social, ouvimos atentamente suas críticas e sempre implementamos boas sugestões de usuários em tempo recorde.\n\nVocê pode entrar em contato com nosso suporte em: https://agoradesk.com/support\n\n- Taxas Justas\nNão cobramos taxas exorbitantes quando você deposita ou retira Bitcoins de/para nossa carteira de títulos de arbitragem. Não há taxa de depósito e a taxa de retirada é muito próxima da taxa que você pagaria em uma transação normal.';
@@ -18580,14 +18805,59 @@ class I18nPtBr extends I18nPt {
   String get app_push_trade_disputed => 'Comércio disputado';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Comprar/Vender Monero Anonimamente';
+  String get app_apple_app_store_subtitle_localmonero => 'Compre/Venda XMR Anonimamente';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Compre/Venda Bitcoin Anonimamente';
+  String get app_apple_app_store_subtitle_agoradesk => 'Compre/Venda BTC Anonimamente';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Compre ou venda Bitcoin sem verificação de identidade. Dinheiro ou online. Seguro, rápido, fácil.';
+  String get app_google_play_store_short_description_localmonero => 'Comprar ou vender Monero sem verificação de identidade. Em dinheiro ou on-line.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Compre ou venda Bitcoin sem verificação de identidade. Dinheiro ou online.';
 
   @override
   String get app_ask_community_chats => 'Tem perguntas? Pergunte nos chats da comunidade';
+
+  @override
+  String get app_select_currency => 'Escolha a moeda';
+
+  @override
+  String get app_select_country => 'Selecione o pais';
+
+  @override
+  String get app_select_payment_method => 'Selecione o método de pagamento';
+
+  @override
+  String get app_enable_ad => 'Ativar anúncio';
+
+  @override
+  String get app_disable_ad => 'Desativar anúncio';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Detalhes do proxy';
+
+  @override
+  String get app_proxy_use => 'Usar proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Aviso! A funcionalidade de proxy está em versão beta, erros são esperados. Relate os bugs aos nossos canais de desenvolvimento para correções rápidas';
+
+  @override
+  String get app_proxy_select_type => 'Selecione o tipo de proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy ativado';
+
+  @override
+  String get app_proxy_on_descr => 'O aplicativo agora se conectará à plataforma por meio do proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy indisponível';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Verifique se as configurações de conexão estão corretas ou use outro proxy.';
 }
