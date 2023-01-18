@@ -7502,6 +7502,33 @@ class I18nEn extends I18n {
   String get devblog250Sbtitle => 'Development Blog';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Add address';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Cancel';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Do you want to delete this address?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Whenever you need to provide an address, you\'ll be able to quickly select one saved here';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Label (optional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Save';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Save this address for future use';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'This address already exists in your address book.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'This address has already been deleted from your address book.';
+
+  @override
   String get ads => 'Ads';
 
   @override

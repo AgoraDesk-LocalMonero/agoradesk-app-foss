@@ -7502,6 +7502,33 @@ class I18nPl extends I18n {
   String get devblog250Sbtitle => 'Blog deweloperski';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Dodaj adres';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Anuluj';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Czy chcesz usunąć ten adres?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Zawsze, gdy będziesz musiał podać adres, będziesz mógł szybko wybrać jeden zapisany tutaj';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etykieta (opcjonalnie)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Ratować';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Zapisz ten adres do wykorzystania w przyszłości';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Ten adres już istnieje w Twojej książce adresowej.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Ten adres został już usunięty z Twojej książki adresowej.';
+
+  @override
   String get ads => 'Ogłoszenia';
 
   @override
@@ -9347,13 +9374,13 @@ class I18nPl extends I18n {
   String get app_push_trade_disputed => 'Handel sporny';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Kupuj/sprzedawaj Monero anonimowo';
+  String get app_apple_app_store_subtitle_localmonero => 'Handluj Monero anonimowo';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Kupuj/sprzedawaj Bitcoin anonimowo';
+  String get app_apple_app_store_subtitle_agoradesk => 'Handluj Bitcoin anonimowo';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Kupuj lub sprzedawaj Monero bez weryfikacji tożsamości. Za gotówkę lub online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Kupuj lub sprzedawaj Bitcoin bez weryfikacji tożsamości. Gotówką lub online.';
@@ -9377,29 +9404,29 @@ class I18nPl extends I18n {
   String get app_disable_ad => 'Wyłącz reklamę';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'Pełnomocnik';
 
   @override
-  String get app_proxy_details => 'Proxy details';
+  String get app_proxy_details => 'Dane pełnomocnika';
 
   @override
-  String get app_proxy_use => 'Use proxy';
+  String get app_proxy_use => 'Użyj proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+  String get app_proxy_bugs_expected => 'Ostrzeżenie! Funkcjonalność proxy jest w fazie beta, spodziewane są błędy. Prosimy o zgłaszanie błędów do naszych kanałów programistycznych w celu uzyskania szybkich poprawek';
 
   @override
-  String get app_proxy_select_type => 'Select proxy type';
+  String get app_proxy_select_type => 'Wybierz typ proxy';
 
   @override
-  String get app_proxy_on => 'Proxy enabled';
+  String get app_proxy_on => 'Proxy włączone';
 
   @override
-  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+  String get app_proxy_on_descr => 'Aplikacja połączy się teraz z platformą za pośrednictwem serwera proxy.';
 
   @override
-  String get app_proxy_unavailable => 'Proxy unavailable';
+  String get app_proxy_unavailable => 'Serwer proxy niedostępny';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'Sprawdź, czy ustawienia połączenia są prawidłowe lub użyj innego serwera proxy.';
 }

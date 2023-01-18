@@ -7502,6 +7502,33 @@ class I18nDa extends I18n {
   String get devblog250Sbtitle => 'Udviklingsblog';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Tilføj adresse';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Afbestille';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Vil du slette denne adresse?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Når du har brug for at angive en adresse, vil du hurtigt kunne vælge en, der er gemt her';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiket (valgfrit)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Gemme';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Gem denne adresse til fremtidig brug';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Denne adresse findes allerede i din adressebog.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Denne adresse er allerede blevet slettet fra din adressebog.';
+
+  @override
   String get ads => 'Annoncer';
 
   @override
@@ -9353,7 +9380,7 @@ class I18nDa extends I18n {
   String get app_apple_app_store_subtitle_agoradesk => 'Køb/Sælg Bitcoin anonymt';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Køb eller sælg Monero uden ID-verifikation. Kontant eller online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Køb eller sælg Bitcoin uden ID-bekræftelse. Kontant eller online.';
@@ -9377,29 +9404,29 @@ class I18nDa extends I18n {
   String get app_disable_ad => 'Deaktiver annonce';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'Fuldmagt';
 
   @override
-  String get app_proxy_details => 'Proxy details';
+  String get app_proxy_details => 'Proxy detaljer';
 
   @override
-  String get app_proxy_use => 'Use proxy';
+  String get app_proxy_use => 'Brug proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+  String get app_proxy_bugs_expected => 'Advarsel! Proxy-funktionalitet er i beta, der forventes fejl. Rapportér venligst fejlene til vores udviklingskanaler for hurtige rettelser';
 
   @override
-  String get app_proxy_select_type => 'Select proxy type';
+  String get app_proxy_select_type => 'Vælg proxy-type';
 
   @override
-  String get app_proxy_on => 'Proxy enabled';
+  String get app_proxy_on => 'Proxy aktiveret';
 
   @override
-  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+  String get app_proxy_on_descr => 'Appen vil nu oprette forbindelse til platformen via proxyen.';
 
   @override
-  String get app_proxy_unavailable => 'Proxy unavailable';
+  String get app_proxy_unavailable => 'Proxy utilgængelig';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'Kontroller, om forbindelsesindstillingerne er korrekte, eller brug en anden proxy.';
 }

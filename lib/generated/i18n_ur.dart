@@ -7502,6 +7502,33 @@ class I18nUr extends I18n {
   String get devblog250Sbtitle => 'ترقیاتی بلاگ';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'ایڈریس شامل کریں۔';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'منسوخ کریں۔';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'کیا آپ یہ پتہ حذف کرنا چاہتے ہیں؟';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'جب بھی آپ کو کوئی پتہ فراہم کرنے کی ضرورت ہو، آپ یہاں محفوظ کردہ ایک کو فوری طور پر منتخب کر سکیں گے۔';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'لیبل (اختیاری)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'محفوظ کریں۔';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'مستقبل کے استعمال کے لیے اس ایڈریس کو محفوظ کریں۔';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'یہ پتہ آپ کی ایڈریس بک میں پہلے سے موجود ہے۔';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'یہ پتہ آپ کی ایڈریس بک سے پہلے ہی حذف کر دیا گیا ہے۔';
+
+  @override
   String get ads => 'اشتہارات';
 
   @override
@@ -9347,13 +9374,13 @@ class I18nUr extends I18n {
   String get app_push_trade_disputed => 'تجارت میں اختلاف';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'مونیرو کو گمنام طور پر خریدیں/بیچیں۔';
+  String get app_apple_app_store_subtitle_localmonero => 'گمنام طور پر XMR تجارت کریں۔';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'گمنام طور پر BTC تجارت کریں۔';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'ID کی تصدیق کے بغیر XMR خریدیں یا فروخت کریں۔ نقد یا آن لائن۔ محفوظ، تیز، آسان۔';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'ID کی تصدیق کے بغیر بٹ کوائن خریدیں یا فروخت کریں۔ نقد یا آن لائن۔';
@@ -9377,29 +9404,29 @@ class I18nUr extends I18n {
   String get app_disable_ad => 'اشتہار کو غیر فعال کریں۔';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'پراکسی';
 
   @override
-  String get app_proxy_details => 'Proxy details';
+  String get app_proxy_details => 'پراکسی تفصیلات';
 
   @override
-  String get app_proxy_use => 'Use proxy';
+  String get app_proxy_use => 'پروکسی استعمال کرو';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+  String get app_proxy_bugs_expected => 'وارننگ! پراکسی فعالیت بیٹا میں ہے، کیڑے متوقع ہیں۔ براہ کرم فوری اصلاحات کے لیے ہمارے ڈیولپمنٹ چینلز کو بگ کی اطلاع دیں۔';
 
   @override
-  String get app_proxy_select_type => 'Select proxy type';
+  String get app_proxy_select_type => 'پراکسی قسم کا انتخاب کریں۔';
 
   @override
-  String get app_proxy_on => 'Proxy enabled';
+  String get app_proxy_on => 'پراکسی فعال ہے۔';
 
   @override
-  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+  String get app_proxy_on_descr => 'ایپ اب پراکسی کے ذریعے پلیٹ فارم سے جڑ جائے گی۔';
 
   @override
-  String get app_proxy_unavailable => 'Proxy unavailable';
+  String get app_proxy_unavailable => 'پراکسی دستیاب نہیں ہے۔';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'براہ کرم چیک کریں کہ کنکشن کی ترتیبات درست ہیں یا کوئی اور پراکسی استعمال کریں۔';
 }

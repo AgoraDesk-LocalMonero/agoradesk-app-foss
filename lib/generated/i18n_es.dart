@@ -7502,6 +7502,33 @@ class I18nEs extends I18n {
   String get devblog250Sbtitle => 'Blog de desarrollo';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Añadir dirección';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Cancelar';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => '¿Quieres eliminar esta dirección?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Siempre que necesite proporcionar una dirección, podrá seleccionar rápidamente una guardada aquí';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiqueta (opcional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Salvar';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Guarde esta dirección para uso futuro';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Esta dirección ya existe en su libreta de direcciones.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Esta dirección ya se ha eliminado de su libreta de direcciones.';
+
+  @override
   String get ads => 'Anuncios';
 
   @override
@@ -9227,22 +9254,22 @@ class I18nEs extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre o venda Bitcoin de forma anónima, sin verificación de identidad. Efectivo o en línea. Seguro, rápido, fácil.\n\n¿Se pregunta cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre instantáneamente BTC de una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito/débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro. Si desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma comercial admite la compra y venta de BTC con efectivo. Incluso puede comprar bitcoins usando efectivo por correo.\n\n- Comercio seguro y fluido\nAl igual que LocalBitcoins, admitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y, a diferencia de LocalBitcoins, admitimos completamente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nAgoraDesk se compromete a mantener la simplicidad y la franqueza que hicieron que los LocalBitcoins originales fueran tan populares. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió a la gran caída del mercado de criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la comunidad de criptomonedas extremadamente escéptica.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://agoradesk.com/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Bitcoins a/desde nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compra Bitcoin fácilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compra BTC anónima';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compre XMR fácilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compra XMR sin ID';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Compra o vende Monero sin verificación de identidad. Efectivo o en línea. Seguro, rápido, fácil.\n\nLocalMonero es la plataforma comercial P2P más grande, más confiable y mejor establecida en la comunidad XMR. No tenemos cheques KYC: simplemente puede comprar Monero de forma anónima sin verificación de identificación con PayPal, tarjeta de crédito, tarjeta de regalo, efectivo por correo o convertir Bitcoin, Ether, USDT o cualquier otra moneda criptográfica a Monero: nuestra plataforma admite cualquier método de pago.\n\n- Comercio seguro y fluido\nAdmitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y admitimos totalmente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nLocalMonero se compromete a mantener la simplicidad y la franqueza de su experiencia comercial. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió al Gran Caída del Mercado de Criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la extremadamente escéptica comunidad de Monero.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://localmonero.co/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Monero a/de nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR privately';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: compra XMR sin ID';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Compra o vende Monero sin verificación de identidad. Efectivo o en línea. Seguro, rápido, fácil.\n\nLocalMonero es la plataforma comercial P2P más grande, más confiable y mejor establecida en la comunidad XMR. No tenemos cheques KYC: simplemente puede comprar Monero de forma anónima sin verificación de identificación con PayPal, tarjeta de crédito, tarjeta de regalo, efectivo por correo o convertir Bitcoin, Ether, USDT o cualquier otra moneda criptográfica a Monero: nuestra plataforma admite cualquier método de pago.\n\n- Comercio seguro y fluido\nAdmitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y admitimos totalmente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nLocalMonero se compromete a mantener la simplicidad y la franqueza de su experiencia comercial. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió al Gran Caída del Mercado de Criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la extremadamente escéptica comunidad de Monero.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://localmonero.co/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Monero a/de nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compre BTC de forma anónima';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compra BTC anónima';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre o venda Bitcoin sin verificación de identidad. Efectivo o en línea.\n\n¿Se pregunta cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre instantáneamente BTC de una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito/débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro. Si desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma comercial admite la compra y venta de BTC con efectivo. Incluso puede comprar bitcoins usando efectivo por correo.\n\n- Comercio seguro y fluido\nAl igual que LocalBitcoins, admitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y, a diferencia de LocalBitcoins, admitimos completamente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nAgoraDesk se compromete a mantener la simplicidad y la franqueza que hicieron que los LocalBitcoins originales fueran tan populares. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió a la gran caída del mercado de criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la comunidad de criptomonedas extremadamente escéptica.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://agoradesk.com/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Bitcoins a/desde nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
@@ -9347,13 +9374,13 @@ class I18nEs extends I18n {
   String get app_push_trade_disputed => 'Comercio disputado';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Comprar/Vender Monero de forma anónima';
+  String get app_apple_app_store_subtitle_localmonero => 'Comercie XMR de forma anónima';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Comprar/Vender Bitcoin de forma anónima';
+  String get app_apple_app_store_subtitle_agoradesk => 'Comercie BTC de forma anónima';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Compre o venda Monero sin verificación de identidad. En efectivo o en línea.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Compre o venda Bitcoin sin verificación de identidad. Efectivo o en línea.';
@@ -9377,29 +9404,29 @@ class I18nEs extends I18n {
   String get app_disable_ad => 'Deshabilitar anuncio';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'Apoderado';
 
   @override
-  String get app_proxy_details => 'Proxy details';
+  String get app_proxy_details => 'Detalles del proxy';
 
   @override
-  String get app_proxy_use => 'Use proxy';
+  String get app_proxy_use => 'Usa proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+  String get app_proxy_bugs_expected => '¡Advertencia! La funcionalidad de proxy está en versión beta, se esperan errores. Informe los errores a nuestros canales de desarrollo para obtener soluciones rápidas.';
 
   @override
-  String get app_proxy_select_type => 'Select proxy type';
+  String get app_proxy_select_type => 'Seleccione el tipo de proxy';
 
   @override
-  String get app_proxy_on => 'Proxy enabled';
+  String get app_proxy_on => 'proxy habilitado';
 
   @override
-  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+  String get app_proxy_on_descr => 'La aplicación ahora se conectará a la plataforma a través del proxy.';
 
   @override
-  String get app_proxy_unavailable => 'Proxy unavailable';
+  String get app_proxy_unavailable => 'Proxy no disponible';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'Compruebe si la configuración de la conexión es correcta o utilice otro proxy.';
 }

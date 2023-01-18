@@ -13311,6 +13311,60 @@ abstract class I18n {
   /// **'Development Blog'**
   String get devblog250Sbtitle;
 
+  /// No description provided for @address8722Sbbook250Sbadd8722Sbnew8722Sbbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Add address'**
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn;
+
+  /// No description provided for @address8722Sbbook250Sbcancel8722Sbbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get address8722Sbbook250Sbcancel8722Sbbtn;
+
+  /// No description provided for @address8722Sbbook250Sbconfirm8722Sbdeletion.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to delete this address?'**
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion;
+
+  /// No description provided for @address8722Sbbook250Sbdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Whenever you need to provide an address, you\'ll be able to quickly select one saved here'**
+  String get address8722Sbbook250Sbdescription;
+
+  /// No description provided for @address8722Sbbook250Sblabel8722Sbinput250Sblabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Label (optional)'**
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel;
+
+  /// No description provided for @address8722Sbbook250Sbsave8722Sbbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get address8722Sbbook250Sbsave8722Sbbtn;
+
+  /// No description provided for @address8722Sbbook250Sbsave8722Sbfor8722Sbfuture.
+  ///
+  /// In en, this message translates to:
+  /// **'Save this address for future use'**
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture;
+
+  /// No description provided for @error250Sbaddress8722Sbbook250Sb270.
+  ///
+  /// In en, this message translates to:
+  /// **'This address already exists in your address book.'**
+  String get error250Sbaddress8722Sbbook250Sb270;
+
+  /// No description provided for @error250Sbaddress8722Sbbook250Sb273.
+  ///
+  /// In en, this message translates to:
+  /// **'This address has already been deleted from your address book.'**
+  String get error250Sbaddress8722Sbbook250Sb273;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:

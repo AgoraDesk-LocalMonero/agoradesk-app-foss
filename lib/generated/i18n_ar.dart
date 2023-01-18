@@ -7502,6 +7502,33 @@ class I18nAr extends I18n {
   String get devblog250Sbtitle => 'مدونة التنمية';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'اضف عنوان';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'يلغي';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'هل تريد حذف هذا العنوان؟';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'متى احتجت إلى تقديم عنوان ، ستتمكن من تحديد أحد العناوين المحفوظة هنا بسرعة';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'التسمية (اختياري)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'يحفظ';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'احفظ هذا العنوان لاستخدامه في المستقبل';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'هذا العنوان موجود بالفعل في دفتر العناوين الخاص بك.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'تم بالفعل حذف هذا العنوان من دفتر العناوين الخاص بك.';
+
+  @override
   String get ads => 'إعلانات';
 
   @override
@@ -9350,7 +9377,7 @@ class I18nAr extends I18n {
   String get app_apple_app_store_subtitle_localmonero => 'شراء / بيع Monero مجهول';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'شراء / بيع البيتكوين بشكل مجهول';
+  String get app_apple_app_store_subtitle_agoradesk => 'شراء / بيع BTC مجهول';
 
   @override
   String get app_google_play_store_short_description_localmonero => 'شراء أو بيع Monero بدون التحقق من الهوية. نقدًا أو عبر الإنترنت. آمن وسريع وسهل.';
@@ -9377,29 +9404,29 @@ class I18nAr extends I18n {
   String get app_disable_ad => 'تعطيل الإعلان';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'الوكيل';
 
   @override
-  String get app_proxy_details => 'Proxy details';
+  String get app_proxy_details => 'تفاصيل الوكيل';
 
   @override
-  String get app_proxy_use => 'Use proxy';
+  String get app_proxy_use => 'استخدام بروكسي';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+  String get app_proxy_bugs_expected => 'تحذير! وظيفة الوكيل في مرحلة تجريبية ، ومن المتوقع حدوث أخطاء. يرجى الإبلاغ عن الأخطاء إلى قنوات التطوير الخاصة بنا للحصول على إصلاحات سريعة';
 
   @override
-  String get app_proxy_select_type => 'Select proxy type';
+  String get app_proxy_select_type => 'حدد نوع الوكيل';
 
   @override
-  String get app_proxy_on => 'Proxy enabled';
+  String get app_proxy_on => 'تم تمكين الوكيل';
 
   @override
-  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+  String get app_proxy_on_descr => 'سيتصل التطبيق الآن بالمنصة عبر الوكيل.';
 
   @override
-  String get app_proxy_unavailable => 'Proxy unavailable';
+  String get app_proxy_unavailable => 'الوكيل غير متوفر';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'يرجى التحقق مما إذا كانت إعدادات الاتصال صحيحة أو استخدام وكيل آخر.';
 }
