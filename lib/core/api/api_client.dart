@@ -4,6 +4,7 @@ import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
@@ -29,7 +30,7 @@ BaseOptions _defaultOptions = BaseOptions(
   },
 );
 
-class ApiClient {
+class ApiClient with UrlMixin {
   /// Api access token
   String? accessToken;
 
@@ -45,7 +46,6 @@ class ApiClient {
 
   ApiClient({
     BaseOptions? options,
-    String? proxy,
     bool debug = false,
     bool useMocks = false,
   })  : _dio = Dio(options ?? _defaultOptions),
@@ -118,7 +118,6 @@ class ApiClient {
             final message = ApiHelper.parseErrorToString(error);
             if (message != null) {
               log('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
-
               finalError = DioError(
                 error: jsonEncode(message),
                 requestOptions: error.requestOptions,
@@ -126,15 +125,15 @@ class ApiClient {
               );
             }
           } else if (statusCode == 500) {
-            if (kDebugMode) {
-              eventBus.fire(FlashEvent.error('Internal Server Error'));
-            }
+            // if (kDebugMode) {
+            //   eventBus.fire(FlashEvent.error('Internal Server Error'));
+            // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
             debugPrint('++++[api_client ERROR message] statusCode == null, $message');
-            if (kDebugMode) {
-              eventBus.fire(FlashEvent.error(message));
-            }
+            // if (kDebugMode) {
+            //   eventBus.fire(FlashEvent.error(message));
+            // }
           } else if (statusCode == 503) {
             eventBus.fire(
               const Display503Event(),

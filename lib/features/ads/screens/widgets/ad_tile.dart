@@ -99,20 +99,23 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
             JustTheTooltip(
               key: UniqueKey(),
               controller: tooltipController,
-              child: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: onVisiblePressed,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
-                  child: changingVisibility && changingIndex == index
-                      ? const CupertinoActivityIndicator(
-                          radius: 8,
-                        )
-                      : Icon(
-                          ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
-                          color: context.colN80N30,
-                          size: 16,
-                        ),
+              child: Semantics(
+                tooltip: ad.visible == false ? context.intl.app_enable_ad : context.intl.app_disable_ad,
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: onVisiblePressed,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
+                    child: changingVisibility && changingIndex == index
+                        ? const CupertinoActivityIndicator(
+                            radius: 8,
+                          )
+                        : Icon(
+                            ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
+                            color: context.colN80N30,
+                            size: 16,
+                          ),
+                  ),
                 ),
               ),
               backgroundColor: context.colInfoOutlineSec90,

@@ -7502,6 +7502,33 @@ class I18nLv extends I18n {
   String get devblog250Sbtitle => 'Attīstības emuārs';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Pievienojiet adresi';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Atcelt';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Vai vēlaties dzēst šo adresi?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Ikreiz, kad būs jānorāda adrese, varēsiet ātri atlasīt šeit saglabāto adresi';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiķete (pēc izvēles)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Saglabāt';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Saglabājiet šo adresi turpmākai lietošanai';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Šī adrese jau ir jūsu adrešu grāmatā.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Šī adrese jau ir izdzēsta no jūsu adrešu grāmatas.';
+
+  @override
   String get ads => 'Sludinājumi';
 
   @override
@@ -9347,13 +9374,13 @@ class I18nLv extends I18n {
   String get app_push_trade_disputed => 'Tirdzniecība apstrīdēta';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Pērciet/pārdodiet Monero anonīmi';
+  String get app_apple_app_store_subtitle_localmonero => 'Anonīma Monero tirdzniecība';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Pērciet/pārdodiet Bitcoin anonīmi';
+  String get app_apple_app_store_subtitle_agoradesk => 'Anonīma Bitcoin tirdzniecība';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Pirkt vai pārdot Monero bez ID verifikācijas. Skaidrā naudā vai tiešsaistē.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Pērciet vai pārdodiet Bitcoin bez ID pārbaudes. Skaidrā naudā vai tiešsaistē.';
@@ -9369,4 +9396,37 @@ class I18nLv extends I18n {
 
   @override
   String get app_select_payment_method => 'Izvēlieties maksājuma veidu';
+
+  @override
+  String get app_enable_ad => 'Iespējot reklāmu';
+
+  @override
+  String get app_disable_ad => 'Atspējot reklāmu';
+
+  @override
+  String get app_proxy => 'Starpniekserveris';
+
+  @override
+  String get app_proxy_details => 'Starpniekservera informācija';
+
+  @override
+  String get app_proxy_use => 'Izmantojiet starpniekserveri';
+
+  @override
+  String get app_proxy_bugs_expected => 'Brīdinājums! Starpniekservera funkcionalitāte ir beta versijā, ir gaidāmas kļūdas. Lūdzu, ziņojiet par kļūdām mūsu izstrādes kanālos, lai tos ātri labotu';
+
+  @override
+  String get app_proxy_select_type => 'Izvēlieties starpniekservera veidu';
+
+  @override
+  String get app_proxy_on => 'Starpniekserveris ir iespējots';
+
+  @override
+  String get app_proxy_on_descr => 'Tagad lietotne izveidos savienojumu ar platformu, izmantojot starpniekserveri.';
+
+  @override
+  String get app_proxy_unavailable => 'Starpniekserveris nav pieejams';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Lūdzu, pārbaudiet, vai savienojuma iestatījumi ir pareizi, vai izmantojiet citu starpniekserveri.';
 }

@@ -7502,6 +7502,33 @@ class I18nFr extends I18n {
   String get devblog250Sbtitle => 'Blog sur le développement';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Ajoutez l\'adresse';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Annuler';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Voulez-vous supprimer cette adresse ?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Chaque fois que vous aurez besoin de fournir une adresse, vous pourrez en sélectionner rapidement une enregistrée ici';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Étiquette (facultatif)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Sauver';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Enregistrez cette adresse pour une utilisation future';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Cette adresse existe déjà dans votre carnet d\'adresses.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Cette adresse a déjà été supprimée de votre carnet d\'adresses.';
+
+  @override
   String get ads => 'Annonces';
 
   @override
@@ -9369,4 +9396,37 @@ class I18nFr extends I18n {
 
   @override
   String get app_select_payment_method => 'Sélectionnez le mode de paiement';
+
+  @override
+  String get app_enable_ad => 'Activer l\'annonce';
+
+  @override
+  String get app_disable_ad => 'Désactiver l\'annonce';
+
+  @override
+  String get app_proxy => 'Procuration';
+
+  @override
+  String get app_proxy_details => 'Détails du proxy';
+
+  @override
+  String get app_proxy_use => 'Utiliser un proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Avertissement! La fonctionnalité proxy est en version bêta, des bogues sont attendus. Veuillez signaler les bogues à nos canaux de développement pour des solutions rapides';
+
+  @override
+  String get app_proxy_select_type => 'Sélectionnez le type de proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy activé';
+
+  @override
+  String get app_proxy_on_descr => 'L\'application va maintenant se connecter à la plateforme via le proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy indisponible';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Veuillez vérifier si les paramètres de connexion sont corrects ou utilisez un autre proxy.';
 }

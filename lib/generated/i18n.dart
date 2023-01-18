@@ -13311,6 +13311,60 @@ abstract class I18n {
   /// **'Development Blog'**
   String get devblog250Sbtitle;
 
+  /// No description provided for @address8722Sbbook250Sbadd8722Sbnew8722Sbbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Add address'**
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn;
+
+  /// No description provided for @address8722Sbbook250Sbcancel8722Sbbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get address8722Sbbook250Sbcancel8722Sbbtn;
+
+  /// No description provided for @address8722Sbbook250Sbconfirm8722Sbdeletion.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to delete this address?'**
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion;
+
+  /// No description provided for @address8722Sbbook250Sbdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Whenever you need to provide an address, you\'ll be able to quickly select one saved here'**
+  String get address8722Sbbook250Sbdescription;
+
+  /// No description provided for @address8722Sbbook250Sblabel8722Sbinput250Sblabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Label (optional)'**
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel;
+
+  /// No description provided for @address8722Sbbook250Sbsave8722Sbbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get address8722Sbbook250Sbsave8722Sbbtn;
+
+  /// No description provided for @address8722Sbbook250Sbsave8722Sbfor8722Sbfuture.
+  ///
+  /// In en, this message translates to:
+  /// **'Save this address for future use'**
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture;
+
+  /// No description provided for @error250Sbaddress8722Sbbook250Sb270.
+  ///
+  /// In en, this message translates to:
+  /// **'This address already exists in your address book.'**
+  String get error250Sbaddress8722Sbbook250Sb270;
+
+  /// No description provided for @error250Sbaddress8722Sbbook250Sb273.
+  ///
+  /// In en, this message translates to:
+  /// **'This address has already been deleted from your address book.'**
+  String get error250Sbaddress8722Sbbook250Sb273;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:
@@ -16856,6 +16910,72 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Select payment method'**
   String get app_select_payment_method;
+
+  /// No description provided for @app_enable_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable ad'**
+  String get app_enable_ad;
+
+  /// No description provided for @app_disable_ad.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable ad'**
+  String get app_disable_ad;
+
+  /// No description provided for @app_proxy.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy'**
+  String get app_proxy;
+
+  /// No description provided for @app_proxy_details.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy details'**
+  String get app_proxy_details;
+
+  /// No description provided for @app_proxy_use.
+  ///
+  /// In en, this message translates to:
+  /// **'Use proxy'**
+  String get app_proxy_use;
+
+  /// No description provided for @app_proxy_bugs_expected.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes'**
+  String get app_proxy_bugs_expected;
+
+  /// No description provided for @app_proxy_select_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Select proxy type'**
+  String get app_proxy_select_type;
+
+  /// No description provided for @app_proxy_on.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy enabled'**
+  String get app_proxy_on;
+
+  /// No description provided for @app_proxy_on_descr.
+  ///
+  /// In en, this message translates to:
+  /// **'The app will now connect to the platform via the proxy.'**
+  String get app_proxy_on_descr;
+
+  /// No description provided for @app_proxy_unavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Proxy unavailable'**
+  String get app_proxy_unavailable;
+
+  /// No description provided for @app_proxy_unavailable_decr.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check if the connection settings are correct or use another proxy.'**
+  String get app_proxy_unavailable_decr;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

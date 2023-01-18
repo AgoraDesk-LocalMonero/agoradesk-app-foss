@@ -9,7 +9,7 @@ part of 'pagination.dart';
 PaginationMeta _$PaginationMetaFromJson(Map<String, dynamic> json) =>
     PaginationMeta(
       totalElements: json['total_elements'] as int,
-      elementsPerPage: json['elements_per_page'] as int? ?? 20,
+      elementsPerPage: json['elements_per_page'] as int? ?? 10,
       totalPages: json['total_pages'] as int,
       currentPage: json['current_page'] as int,
     );

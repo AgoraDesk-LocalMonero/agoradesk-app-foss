@@ -7502,6 +7502,33 @@ class I18nKo extends I18n {
   String get devblog250Sbtitle => '개발 블로그';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '주소 추가';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => '취소';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => '이 주소를 삭제하시겠습니까?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => '주소를 제공해야 할 때마다 여기에 저장된 주소를 빠르게 선택할 수 있습니다.';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '라벨(선택사항)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => '구하다';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '나중에 사용할 수 있도록 이 주소를 저장하십시오.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => '이 주소는 이미 주소록에 있습니다.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => '이 주소는 주소록에서 이미 삭제되었습니다.';
+
+  @override
   String get ads => '광고';
 
   @override
@@ -9369,4 +9396,37 @@ class I18nKo extends I18n {
 
   @override
   String get app_select_payment_method => '결제 수단 선택';
+
+  @override
+  String get app_enable_ad => '광고 활성화';
+
+  @override
+  String get app_disable_ad => '광고 비활성화';
+
+  @override
+  String get app_proxy => '대리';
+
+  @override
+  String get app_proxy_details => '프록시 세부정보';
+
+  @override
+  String get app_proxy_use => '프록시 사용';
+
+  @override
+  String get app_proxy_bugs_expected => '경고! 프록시 기능은 베타 버전이며 버그가 있을 수 있습니다. 빠른 수정을 위해 개발 채널에 버그를 보고하십시오.';
+
+  @override
+  String get app_proxy_select_type => '프록시 유형 선택';
+
+  @override
+  String get app_proxy_on => '프록시 사용';
+
+  @override
+  String get app_proxy_on_descr => '이제 앱이 프록시를 통해 플랫폼에 연결됩니다.';
+
+  @override
+  String get app_proxy_unavailable => '프록시를 사용할 수 없음';
+
+  @override
+  String get app_proxy_unavailable_decr => '연결 설정이 올바른지 확인하거나 다른 프록시를 사용하십시오.';
 }

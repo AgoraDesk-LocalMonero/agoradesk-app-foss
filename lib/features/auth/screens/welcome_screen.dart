@@ -138,7 +138,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                         label: context.intl.app_join_matrix,
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => openLinkExt('https://matrix.to/#/#app-beta-testers:agoradesk.com'),
+                          onTap: () => openLinkExt(GetIt.I<AppParameters>().matrixDev),
                           child: SvgPicture.asset(
                             'assets/images/matrix-logo.svg',
                             color: Colors.white,
@@ -151,7 +151,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                         label: context.intl.app_join_telegram,
                         child: GestureDetector(
                           behavior: HitTestBehavior.opaque,
-                          onTap: () => openLinkExt('https://t.me/+Hvf6nSq9ImBkMDhl'),
+                          onTap: () => openLinkExt(GetIt.I<AppParameters>().telegramDev),
                           child: Image.asset(
                             'assets/images/telegram-logo.png',
                             height: 70,

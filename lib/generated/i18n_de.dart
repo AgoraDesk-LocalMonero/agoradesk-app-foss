@@ -7502,6 +7502,33 @@ class I18nDe extends I18n {
   String get devblog250Sbtitle => 'Entwicklungsblog';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adresse hinzufügen';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Absagen';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Möchten Sie diese Adresse löschen?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Wann immer Sie eine Adresse angeben müssen, können Sie schnell eine hier gespeicherte auswählen';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etikett (optional)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Speichern';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Speichern Sie diese Adresse für die zukünftige Verwendung';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Diese Adresse existiert bereits in Ihrem Adressbuch.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Diese Adresse wurde bereits aus Ihrem Adressbuch gelöscht.';
+
+  @override
   String get ads => 'Anzeigen';
 
   @override
@@ -9350,10 +9377,10 @@ class I18nDe extends I18n {
   String get app_apple_app_store_subtitle_localmonero => 'Monero anonym kaufen/verkaufen';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Bitcoin anonym kaufen/verkaufen';
+  String get app_apple_app_store_subtitle_agoradesk => 'BTC anonym kaufen/verkaufen';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bar oder online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Kaufen oder verkaufen Sie Bitcoin ohne ID-Verifizierung. Bargeld oder online.';
@@ -9369,4 +9396,37 @@ class I18nDe extends I18n {
 
   @override
   String get app_select_payment_method => 'Wählen Sie die Zahlungsmethode';
+
+  @override
+  String get app_enable_ad => 'Anzeige aktivieren';
+
+  @override
+  String get app_disable_ad => 'Anzeige deaktivieren';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Proxy-Details';
+
+  @override
+  String get app_proxy_use => 'Proxy verwenden';
+
+  @override
+  String get app_proxy_bugs_expected => 'Warnung! Die Proxy-Funktionalität befindet sich in der Beta-Phase, Fehler werden erwartet. Bitte melden Sie die Fehler unseren Entwicklungskanälen, um schnelle Lösungen zu erhalten';
+
+  @override
+  String get app_proxy_select_type => 'Wählen Sie den Proxy-Typ aus';
+
+  @override
+  String get app_proxy_on => 'Proxy aktiviert';
+
+  @override
+  String get app_proxy_on_descr => 'Die App verbindet sich nun über den Proxy mit der Plattform.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy nicht verfügbar';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Bitte überprüfen Sie, ob die Verbindungseinstellungen korrekt sind oder verwenden Sie einen anderen Proxy.';
 }
