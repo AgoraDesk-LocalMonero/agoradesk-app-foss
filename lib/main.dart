@@ -24,7 +24,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
-  const String includeFcmString = String.fromEnvironment('app.includeFcm');
   const includeFcm = false;
   Permission.notification.request();
   const isCheckUpdates = false;

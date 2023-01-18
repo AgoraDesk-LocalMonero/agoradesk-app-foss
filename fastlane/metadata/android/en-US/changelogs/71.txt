@@ -1,0 +1,3 @@
+1. The connection with a proxy in the settings allows the user to input the proxy information for HTTP, HTTPS, SOCK4, or SOCKS5 protocols. This allows the user to route their internet connection through the proxy server, which can be useful for security and privacy.
+2. When the user selects SEPA as a payment method, the country field will automatically be filled in with any country.
+3. Trade chat - added links to channels.
