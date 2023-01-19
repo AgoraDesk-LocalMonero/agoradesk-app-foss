@@ -16,7 +16,7 @@ import 'mock_interceptor.dart';
 /// Default options for [ApiClient]
 ///
 
-const kTimeout = 60000;
+const kTimeout = kDebugMode ? 10000 : 60000;
 
 BaseOptions _defaultOptions = BaseOptions(
   baseUrl: 'http://localhost/api',

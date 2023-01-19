@@ -96,9 +96,18 @@ class WebViewExampleState extends State<WebviewScreen> {
         },
         onLoadStop: (controller, _) async {
           final title = await controller.getTitle() ?? '';
+          final metatags = await controller.getMetaTags() ?? '';
+          final pageBody = await controller.getHtml() ?? '';
+          print('+++++++++++++++++++++++++++++++++++++99991 - ${title}');
+          print('+++++++++++++++++++++++++++++++++++++99992 - ${metatags}');
+          print('+++++++++++++++++++++++++++++++++++++99993 - ${pageBody}');
+
           await _getCookies();
-          if (widget.isFromCaptchaEvent && (title.contains('LocalMonero') || title.contains('AgoraDesk'))) {
+          print('+++++++++++++++++++++++++++++++++++++0000');
+          if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
+            print('+++++++++++++++++++++++++++++++++++++11');
             context.read<AppState>().sinkReloadMarket.add(true);
+            print('+++++++++++++++++++++++++++++++++++++22');
             Navigator.of(context).pop();
           }
         },
