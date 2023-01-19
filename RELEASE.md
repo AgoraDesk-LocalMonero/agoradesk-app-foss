@@ -1,7 +1,7 @@
 ### Updates
-1. The connection with a proxy in the settings allows the user to input the proxy information for HTTP, HTTPS, SOCK4, or SOCKS5 protocols. This allows the user to route their internet connection through the proxy server, which can be useful for security and privacy.
-2. When the user selects SEPA as a payment method, the country field will automatically be filled in with any country.
-3. Trade chat - added links to channels.
+1. Hotfix: proxy wrong state on the appbar.
+2. Hotfix: Captcha on login process. 
+3. Hotfix: imperva captcha bug.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
