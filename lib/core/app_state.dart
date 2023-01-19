@@ -96,13 +96,13 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   ///
   /// Proxy is on/off controller
   ///
-  final BehaviorSubject<bool> _proxyStatusController = BehaviorSubject<bool>.seeded(true);
+  final BehaviorSubject<bool?> _proxyStatusController = BehaviorSubject<bool?>.seeded(null);
 
-  ValueStream<bool> get proxyStatus$ => _proxyStatusController.stream;
+  ValueStream<bool?> get proxyStatus$ => _proxyStatusController.stream;
 
-  set proxyStatus(bool v) => _proxyStatusController.add(v);
+  set proxyStatus(bool? v) => _proxyStatusController.add(v);
 
-  bool get proxyStatus => proxyStatus$.value;
+  bool? get proxyStatus => proxyStatus$.value;
 
   ///
   /// Reload market stream
