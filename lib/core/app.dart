@@ -514,6 +514,9 @@ class _AppState extends State<App>
           );
         }
       })
+      ..on<ReloadMarketScreenEvent>().listen((e) {
+        appState.sinkReloadMarket.add(true);
+      })
       ..on<FlashEvent>().listen((e) {
         if (e.message == null) {
           return;

@@ -51,8 +51,8 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    GetIt.I<AppParameters>().captchaCookie1 = widget.cookie1;
-    GetIt.I<AppParameters>().captchaCookie2 = widget.cookie2;
+    // GetIt.I<AppParameters>().captchaCookie1 = widget.cookie1;
+    // GetIt.I<AppParameters>().captchaCookie2 = widget.cookie2;
     return Scaffold(
       appBar: const AgoraAppBar(),
       body: InAppWebView(
@@ -95,19 +95,10 @@ class WebViewExampleState extends State<WebviewScreen> {
           }
         },
         onLoadStop: (controller, _) async {
-          final title = await controller.getTitle() ?? '';
-          final metatags = await controller.getMetaTags() ?? '';
           final pageBody = await controller.getHtml() ?? '';
-          print('+++++++++++++++++++++++++++++++++++++99991 - ${title}');
-          print('+++++++++++++++++++++++++++++++++++++99992 - ${metatags}');
-          print('+++++++++++++++++++++++++++++++++++++99993 - ${pageBody}');
-
           await _getCookies();
-          print('+++++++++++++++++++++++++++++++++++++0000');
           if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
-            print('+++++++++++++++++++++++++++++++++++++11');
             context.read<AppState>().sinkReloadMarket.add(true);
-            print('+++++++++++++++++++++++++++++++++++++22');
             Navigator.of(context).pop();
           }
         },
