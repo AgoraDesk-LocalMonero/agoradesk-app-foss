@@ -89,7 +89,7 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Widget _displayProxy(BuildContext context) {
-    return StreamBuilder<bool>(
+    return StreamBuilder<bool?>(
         stream: context.read<AppState>().proxyStatus$,
         builder: (context, snapshot) {
           if (snapshot.data == true) {

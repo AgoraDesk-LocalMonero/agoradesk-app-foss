@@ -271,6 +271,7 @@ class _AppState extends State<App>
 
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
+    appState.proxyStatus = GetIt.I<AppParameters>().proxy;
     await _afterConfigInit();
     await _authService.init();
     await _initLocalSettings();
