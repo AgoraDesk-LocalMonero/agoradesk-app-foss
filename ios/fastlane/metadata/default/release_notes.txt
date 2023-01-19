@@ -1,2 +1,2 @@
-1. When the user selects SEPA as a payment method, the country field will automatically be filled in with any country.
-2. Trade chat - added links to channels.
+1. Hotfix: Captcha on the login process.
+2. Hotfix: Imperva captcha bug.
