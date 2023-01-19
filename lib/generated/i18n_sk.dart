@@ -7502,6 +7502,33 @@ class I18nSk extends I18n {
   String get devblog250Sbtitle => 'Vývojový blog';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Pridať adresu';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Zrušiť';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Chcete odstrániť túto adresu?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Kedykoľvek budete potrebovať zadať adresu, budete si môcť rýchlo vybrať tú, ktorá je tu uložená';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Štítok (voliteľné)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Uložiť';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Uložte si túto adresu pre budúce použitie';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Táto adresa už existuje vo vašom adresári.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Táto adresa už bola vymazaná z vášho adresára.';
+
+  @override
   String get ads => 'Reklamy';
 
   @override
@@ -9350,10 +9377,10 @@ class I18nSk extends I18n {
   String get app_apple_app_store_subtitle_localmonero => 'Kúpiť/predať Monero anonymne';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Kúpiť/predať Bitcoin anonymne';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Nákup alebo predaj meny XMR bez overenia totožnosti. V hotovosti alebo online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Nakupujte alebo predávajte bitcoiny bez overenia ID. Hotovostne alebo online.';
@@ -9369,4 +9396,37 @@ class I18nSk extends I18n {
 
   @override
   String get app_select_payment_method => 'Vyberte spôsob platby';
+
+  @override
+  String get app_enable_ad => 'Povoliť reklamu';
+
+  @override
+  String get app_disable_ad => 'Zakázať reklamu';
+
+  @override
+  String get app_proxy => 'Proxy';
+
+  @override
+  String get app_proxy_details => 'Podrobnosti o proxy';
+
+  @override
+  String get app_proxy_use => 'Použi proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'POZOR! Funkcionalita proxy je v beta verzii, očakávajú sa chyby. Nahláste chyby našim vývojovým kanálom pre rýchle opravy';
+
+  @override
+  String get app_proxy_select_type => 'Vyberte typ proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy je povolený';
+
+  @override
+  String get app_proxy_on_descr => 'Aplikácia sa teraz pripojí k platforme cez proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Server proxy nie je k dispozícii';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Skontrolujte, či sú nastavenia pripojenia správne, alebo použite iný proxy server.';
 }

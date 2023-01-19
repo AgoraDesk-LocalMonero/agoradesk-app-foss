@@ -1,12 +1,7 @@
 ### Updates
-1. Design: light theme shadows.
-2. Feat: choose default tab sections that open when we launch the app.
-3. Feat: improve accessibility.
-4. Feat: adding a review widget to the chat and activity tab when the trade is completed.
-5. Fix: ads are loading on the ads screen.
-6. Fix: grey screen on the trade tab.
-7. Fix: notification icons on Android.
-
+1. Hotfix: proxy wrong state on the appbar.
+2. Hotfix: Captcha on login process. 
+3. Hotfix: imperva captcha bug.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

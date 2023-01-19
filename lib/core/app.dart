@@ -261,6 +261,7 @@ class _AppState extends State<App>
 
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
+    appState.proxyStatus = GetIt.I<AppParameters>().proxy;
     await _afterConfigInit();
     await _authService.init();
     await _initLocalSettings();
@@ -478,6 +479,9 @@ class _AppState extends State<App>
             ),
           );
         }
+      })
+      ..on<ReloadMarketScreenEvent>().listen((e) {
+        appState.sinkReloadMarket.add(true);
       })
       ..on<FlashEvent>().listen((e) {
         if (e.message == null) {

@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_auto_back_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 
 const kBrandBackAppBarHeight = 55.0;
 
@@ -50,10 +52,17 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    title,
-                    style:
-                        Theme.of(context).textTheme.headline2!.copyWith(color: Theme.of(context).colorScheme.neutral90),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        title,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Theme.of(context).colorScheme.neutral90),
+                      ),
+                    ],
                   ),
                   subTitle == null
                       ? const SizedBox()
@@ -73,9 +82,32 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: rightAction,
               ),
             ),
+          _displayProxy(context),
         ],
       ),
     );
+  }
+
+  Widget _displayProxy(BuildContext context) {
+    return StreamBuilder<bool?>(
+        stream: context.read<AppState>().proxyStatus$,
+        builder: (context, snapshot) {
+          if (snapshot.data == true) {
+            return Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
+                child: Icon(
+                  CupertinoIcons.checkmark_shield,
+                  size: 20,
+                  color: context.colN80N30,
+                ),
+              ),
+            );
+          } else {
+            return const SizedBox();
+          }
+        });
   }
 
   @override

@@ -218,6 +218,10 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.p80P70,
       );
 
+  TextStyle get txtLabelLargeN70N50 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
+        color: Theme.of(this).colorScheme.n70N50,
+      );
+
   TextStyle get txtLabelLargeP80P40 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.p80P40,
       );
@@ -460,6 +464,7 @@ extension ThemeShorcuts on BuildContext {
   Color get colN50 => Theme.of(this).colorScheme.neutral50;
 
   Color get colN60 => Theme.of(this).colorScheme.neutral60;
+  Color get n60N50 => Theme.of(this).colorScheme.n60N50;
 
   Color get colN70 => Theme.of(this).colorScheme.neutral70;
 

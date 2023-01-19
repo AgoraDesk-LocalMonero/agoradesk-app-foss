@@ -2476,7 +2476,7 @@ class I18nBg extends I18n {
   }
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfour8722Sb5 => 'Всеки път когато купувате чрез банков превод или PayPal, или други подобни методи за плащане, винаги ще има изтичане на поверителност поради записите съхранявани от компаниите които обработват вашето плащане. За да избегнете това изтичане на поверителност, придържайте се към методи които включват пари в брой.';
+  String get guide250Sbbtc250Sbcard8722Sbfour8722Sb5 => 'Всеки път когато купувате чрез банков превод или PayPal, или други подобни методи за плащане, винаги ще има изтичане на поверителност поради запазените данни съхранявани от компаниите които обработват вашето плащане. За да избегнете това изтичане на поверителност, придържайте се към методи които включват пари в брой.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfour8722Sb6 => 'Използвайте методи като пари в брой по пощата, депозити в брой на банкомат, срещи лице в лице или подаръчни карти закупени с пари в брой. ';
@@ -7502,6 +7502,33 @@ class I18nBg extends I18n {
   String get devblog250Sbtitle => 'Блог за развитие';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Добавете адрес';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Отказ';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Искате ли да изтриете този адрес?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Винаги, когато трябва да предоставите адрес, ще можете бързо да изберете такъв, записан тук';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Етикет (по избор)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Запазване';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Запазете този адрес за бъдеща употреба';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Този адрес вече съществува във вашата адресна книга.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Този адрес вече е изтрит от вашата адресна книга.';
+
+  @override
   String get ads => 'реклами';
 
   @override
@@ -9347,13 +9374,13 @@ class I18nBg extends I18n {
   String get app_push_trade_disputed => 'Търговията е спорна';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Купувайте/продавайте Monero анонимно';
+  String get app_apple_app_store_subtitle_localmonero => 'Търгувайте с Monero анонимно';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Търгувайте с Bitcoin анонимно';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Купувайте или продавайте Monero без удостоверяване на самоличност. В брой или онлайн. Безопасно, бързо, лесно.';
+  String get app_google_play_store_short_description_localmonero => 'Купувайте или продавайте Monero без удостоверяване на самоличност.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Купувайте или продавайте биткойни без удостоверяване на самоличност.';
@@ -9369,4 +9396,37 @@ class I18nBg extends I18n {
 
   @override
   String get app_select_payment_method => 'Изберете метод на плащане';
+
+  @override
+  String get app_enable_ad => 'Активиране на рекламата';
+
+  @override
+  String get app_disable_ad => 'Деактивиране на рекламата';
+
+  @override
+  String get app_proxy => 'Прокси';
+
+  @override
+  String get app_proxy_details => 'Подробности за прокси';
+
+  @override
+  String get app_proxy_use => 'Използвай прокси';
+
+  @override
+  String get app_proxy_bugs_expected => 'Внимание! Прокси функционалността е в бета версия, очакват се грешки. Моля, докладвайте грешките на нашите канали за разработка за бързи корекции';
+
+  @override
+  String get app_proxy_select_type => 'Изберете тип прокси';
+
+  @override
+  String get app_proxy_on => 'Проксито е активирано';
+
+  @override
+  String get app_proxy_on_descr => 'Приложението вече ще се свърже с платформата чрез прокси.';
+
+  @override
+  String get app_proxy_unavailable => 'Проксито е недостъпно';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Моля, проверете дали настройките за връзка са правилни или използвайте друг прокси.';
 }

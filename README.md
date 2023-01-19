@@ -64,14 +64,6 @@ After that, create the file `lib/keys/keys.dart` and add your key there: `key co
 You will get the app that works without [FCM](https://firebase.google.com/docs/cloud-messaging) services.
 Push notifications will be received with polling with foreground service (if the app is closed it still works).
 
-## Translation
-
-The source of truth for the translation files is .json language files for web-version.
-https://github.com/AgoraDesk-LocalMonero/translation
-
-In the flutter we use .arb files. For conversion to both directions use dart util
-https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
-
 ## Flavors
 
 ### How to build iOS with run parameters
@@ -81,7 +73,7 @@ https://github.com/AgoraDesk-LocalMonero/dart-json-arb-json-converter
 
 iOS https://docs.fastlane.tools/actions/deliver/
 
-`fastlane deliver` 
+`fastlane deliver --skip-screenshots=true` 
 
 Android https://docs.fastlane.tools/actions/supply/
 

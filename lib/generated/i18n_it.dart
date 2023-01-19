@@ -7502,6 +7502,33 @@ class I18nIt extends I18n {
   String get devblog250Sbtitle => 'Blog di sviluppo';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Aggiungi indirizzo';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Annulla';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Vuoi eliminare questo indirizzo?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Ogni volta che devi fornire un indirizzo, potrai selezionarne rapidamente uno salvato qui';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etichetta (opzionale)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Salva';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salva questo indirizzo per un uso futuro';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Questo indirizzo esiste già nella tua rubrica.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Questo indirizzo è già stato cancellato dalla tua rubrica.';
+
+  @override
   String get ads => 'Annunci';
 
   @override
@@ -9227,22 +9254,22 @@ class I18nIt extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin in modo anonimo, senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: acquista Bitcoin facilmente';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: BTC compra facile';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: acquista facilmente XMR';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR compra facile';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: acquista XMR privatamente';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR compra facile';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: acquista BTC in modo anonimo';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: BTC compra facile';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin senza verifica dell\'identità. Contanti o online.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
@@ -9347,13 +9374,13 @@ class I18nIt extends I18n {
   String get app_push_trade_disputed => 'Commercio contestato';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Acquista/Vendi Monero in modo anonimo';
+  String get app_apple_app_store_subtitle_localmonero => 'Scambiare XMR in modo anonimo';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Compra/Vendi Bitcoin in modo anonimo';
+  String get app_apple_app_store_subtitle_agoradesk => 'Scambiare BTC in modo anonimo';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Acquistare o vendere Monero senza verifica dell\'identità. In contanti o online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Acquista o vendi Bitcoin senza verifica dell\'identità. Contanti o online.';
@@ -9369,4 +9396,37 @@ class I18nIt extends I18n {
 
   @override
   String get app_select_payment_method => 'Scegli il metodo di pagamento';
+
+  @override
+  String get app_enable_ad => 'Attiva annuncio';
+
+  @override
+  String get app_disable_ad => 'Disattiva annuncio';
+
+  @override
+  String get app_proxy => 'Delega';
+
+  @override
+  String get app_proxy_details => 'Dettagli delegati';
+
+  @override
+  String get app_proxy_use => 'Usa un proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Avvertimento! La funzionalità proxy è in versione beta, sono previsti bug. Si prega di segnalare i bug ai nostri canali di sviluppo per correzioni rapide';
+
+  @override
+  String get app_proxy_select_type => 'Seleziona il tipo di proxy';
+
+  @override
+  String get app_proxy_on => 'Proxy abilitato';
+
+  @override
+  String get app_proxy_on_descr => 'L\'app si collegherà ora alla piattaforma tramite il proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy non disponibile';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Verifica se le impostazioni di connessione sono corrette o utilizza un altro proxy.';
 }

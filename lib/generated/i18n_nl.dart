@@ -7502,6 +7502,33 @@ class I18nNl extends I18n {
   String get devblog250Sbtitle => 'Ontwikkelingsblog';
 
   @override
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Voeg adres toe';
+
+  @override
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Annuleren';
+
+  @override
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Wilt u dit adres verwijderen?';
+
+  @override
+  String get address8722Sbbook250Sbdescription => 'Wanneer u een adres moet opgeven, kunt u snel een adres selecteren dat hier is opgeslagen';
+
+  @override
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiket (optioneel)';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Sparen';
+
+  @override
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Bewaar dit adres voor toekomstig gebruik';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Dit adres bestaat al in uw adresboek.';
+
+  @override
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Dit adres is al verwijderd uit uw adresboek.';
+
+  @override
   String get ads => 'Advertenties';
 
   @override
@@ -9353,7 +9380,7 @@ class I18nNl extends I18n {
   String get app_apple_app_store_subtitle_agoradesk => 'Anoniem Bitcoin kopen/verkopen';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Monero kopen of verkopen zonder ID-verificatie. Contant of online.';
 
   @override
   String get app_google_play_store_short_description_agoradesk => 'Koop of verkoop Bitcoin zonder ID-verificatie. Contant of online.';
@@ -9369,4 +9396,37 @@ class I18nNl extends I18n {
 
   @override
   String get app_select_payment_method => 'Selecteer betaalmethode';
+
+  @override
+  String get app_enable_ad => 'Advertentie inschakelen';
+
+  @override
+  String get app_disable_ad => 'Advertentie uitschakelen';
+
+  @override
+  String get app_proxy => 'Volmacht';
+
+  @override
+  String get app_proxy_details => 'Proxygegevens';
+
+  @override
+  String get app_proxy_use => 'Proxy gebruiken';
+
+  @override
+  String get app_proxy_bugs_expected => 'Waarschuwing! Proxy-functionaliteit is in bèta, bugs worden verwacht. Meld de bugs aan onze ontwikkelingskanalen voor snelle oplossingen';
+
+  @override
+  String get app_proxy_select_type => 'Selecteer proxytype';
+
+  @override
+  String get app_proxy_on => 'Proxy ingeschakeld';
+
+  @override
+  String get app_proxy_on_descr => 'De app maakt nu verbinding met het platform via de proxy.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy niet beschikbaar';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Controleer of de verbindingsinstellingen correct zijn of gebruik een andere proxy.';
 }

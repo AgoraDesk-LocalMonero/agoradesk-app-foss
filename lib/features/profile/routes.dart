@@ -10,6 +10,7 @@ import 'package:agoradesk/features/profile/screens/language_screen.dart';
 import 'package:agoradesk/features/profile/screens/link_account_screen.dart';
 import 'package:agoradesk/features/profile/screens/manage_two_factor_auth_screen.dart';
 import 'package:agoradesk/features/profile/screens/my_profile_screen.dart';
+import 'package:agoradesk/features/profile/screens/proxy_screen.dart';
 import 'package:agoradesk/features/profile/screens/trading_partners_screen.dart';
 import 'package:agoradesk/features/profile/screens/two_factor_auth_screen.dart';
 import 'package:auto_route/auto_route.dart';
@@ -96,6 +97,12 @@ const profileRoutes = <AutoRoute>[
   CustomRoute(
     path: 'profile/defaultTab',
     page: DefaultTabScreen,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+    durationInMilliseconds: 200,
+  ),
+  CustomRoute(
+    path: 'profile/proxy',
+    page: ProxyScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),

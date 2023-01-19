@@ -19,7 +19,6 @@ import 'package:permission_handler/permission_handler.dart';
 
 const kNotificationsChannel = 'trades_channel';
 const kNotificationIcon = '@mipmap/ic_icon_black';
-// const kNotificationIcon = '@drawable/launch_push';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

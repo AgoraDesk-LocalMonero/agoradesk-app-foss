@@ -4,6 +4,7 @@ import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
@@ -15,7 +16,7 @@ import 'mock_interceptor.dart';
 /// Default options for [ApiClient]
 ///
 
-const kTimeout = 60000;
+const kTimeout = kDebugMode ? 10000 : 60000;
 
 BaseOptions _defaultOptions = BaseOptions(
   baseUrl: 'http://localhost/api',
@@ -29,7 +30,7 @@ BaseOptions _defaultOptions = BaseOptions(
   },
 );
 
-class ApiClient {
+class ApiClient with UrlMixin {
   /// Api access token
   String? accessToken;
 
@@ -45,7 +46,6 @@ class ApiClient {
 
   ApiClient({
     BaseOptions? options,
-    String? proxy,
     bool debug = false,
     bool useMocks = false,
   })  : _dio = Dio(options ?? _defaultOptions),
@@ -90,9 +90,8 @@ class ApiClient {
           debugPrint(
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id')) {
-            // bool checkRes = await _checkCaptchaInHeadlessWebView();
-            // if (checkRes == false) {
             final cookiesLst = response.headers.map['set-cookie'] ?? [];
+
             eventBus.fire(DisplayCaptchaEvent(
               cookie1: cookiesLst.isNotEmpty ? response.headers.map['set-cookie']![0].split(';').first : '',
               cookie2: cookiesLst.length > 1 ? response.headers.map['set-cookie']![1].split(';').first : '',
@@ -118,7 +117,6 @@ class ApiClient {
             final message = ApiHelper.parseErrorToString(error);
             if (message != null) {
               log('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
-
               finalError = DioError(
                 error: jsonEncode(message),
                 requestOptions: error.requestOptions,
@@ -126,58 +124,23 @@ class ApiClient {
               );
             }
           } else if (statusCode == 500) {
-            if (kDebugMode) {
-              eventBus.fire(FlashEvent.error('Internal Server Error'));
-            }
+            // if (kDebugMode) {
+            //   eventBus.fire(FlashEvent.error('Internal Server Error'));
+            // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
             debugPrint('++++[api_client ERROR message] statusCode == null, $message');
-            if (kDebugMode) {
-              eventBus.fire(FlashEvent.error(message));
-            }
+            // if (kDebugMode) {
+            //   eventBus.fire(FlashEvent.error(message));
+            // }
           } else if (statusCode == 503) {
-            eventBus.fire(
-              const Display503Event(),
-            );
+            eventBus.fire(const Display503Event());
           }
           return handler.next(finalError ?? error);
         },
       ),
     );
   }
-
-  // Future<bool> _checkCaptchaInHeadlessWebView() async {
-  //   HeadlessInAppWebView? headlessWebView;
-  //
-  //   bool res = false;
-  //
-  //   headlessWebView = HeadlessInAppWebView(
-  //     initialUrlRequest: URLRequest(url: Uri.parse(GetIt.I<AppParameters>().urlBase)),
-  //     onWebViewCreated: (controller) {},
-  //     onConsoleMessage: (controller, consoleMessage) {},
-  //     onLoadStart: (controller, url) async {},
-  //     onLoadStop: (controller, url) async {
-  //       final title = await controller.getTitle() ?? '';
-  //       if (title.contains('Sell')) {
-  //         _getCookies(res);
-  //         res = true;
-  //       }
-  //     },
-  //   );
-  //
-  //   headlessWebView.run();
-  //   await Future.delayed(const Duration(seconds: 2));
-  //   headlessWebView.dispose();
-  //   return res;
-  // }
-  //
-  // Future _getCookies(bool isGetting) async {
-  //   if (!isGetting) {
-  //     CookieManager cookieManager = CookieManager.instance();
-  //     List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
-  //     GetIt.I<AppParameters>().cookies = cookies;
-  //   }
-  // }
 
   void setBaseUrl(String url) {
     _dio.options.baseUrl = url;

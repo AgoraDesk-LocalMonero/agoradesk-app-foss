@@ -79,7 +79,6 @@ class WalletService {
     String requestOption = asset == Asset.BTC ? '' : '/${asset.key()}';
     try {
       final resp = await _api.client.get('/wallet$requestOption');
-      log('++++ ${resp.data}');
       if (resp.statusCode == 200) {
         final wallet = WalletBalanceModel.fromJson(resp.data['data']);
         return Either.right(wallet);
