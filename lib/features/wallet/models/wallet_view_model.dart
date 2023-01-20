@@ -46,6 +46,7 @@ class WalletViewModel extends ViewModel {
   String _balanceXmr = '';
   String _addressXmr = '';
   bool _loadingBalance = false;
+  bool _afterBuildCalled = false;
   Asset _asset = Asset.BTC;
   late bool isGuestMode;
   final List<TransactionModel> transactions = [];
@@ -99,12 +100,15 @@ class WalletViewModel extends ViewModel {
 
   @override
   void onAfterBuild() {
-    _tabsRouter = context.tabsRouter;
-    _tabsRouter.addListener(_routerListener);
-    if (_authService.isAuthenticated) {
-      indicatorKey.currentState?.show();
+    if (!_afterBuildCalled) {
+      _afterBuildCalled = true;
+      _tabsRouter = context.tabsRouter;
+      _tabsRouter.addListener(_routerListener);
+      if (_authService.isAuthenticated) {
+        indicatorKey.currentState?.show();
+      }
+      super.onAfterBuild();
     }
-    super.onAfterBuild();
   }
 
   Future getInitalData() async {
