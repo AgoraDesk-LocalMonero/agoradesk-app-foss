@@ -24,6 +24,8 @@ class WalletAssetTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width - 60;
+
     return ViewModelBuilder<WalletViewModel>(
         model: model,
         disposable: false,
@@ -90,37 +92,46 @@ class WalletAssetTile extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        WalletBlueButton(
-                          title: context.intl.wallet250Sbtab250Sbsend8722Sbshort,
-                          iconData: AgoraFont.arrow_up_circle,
-                          onPressed: () => context.pushRoute(
-                            SendAssetFirstRoute(
-                              asset: asset,
-                              price: model.assetPrice(asset),
-                              balance: model.balance(asset),
+                    SizedBox(
+                      width: width,
+                      child: Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.end,
+                        children: [
+                          WalletBlueButton(
+                            title: context.intl.wallet250Sbtab250Sbsend8722Sbshort,
+                            iconData: AgoraFont.arrow_up_circle,
+                            onPressed: () => context.pushRoute(
+                              SendAssetFirstRoute(
+                                asset: asset,
+                                price: model.assetPrice(asset),
+                                balance: model.balance(asset),
+                              ),
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 12),
-                        WalletBlueButton(
-                          title: context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
-                          iconData: AgoraFont.arrow_down_circle,
-                          onPressed: () => context.pushRoute(
-                            ReceiveAssetRoute(
-                              address: model.receivingAddress(asset),
-                              asset: asset,
+                          const SizedBox(width: 4),
+                          WalletBlueButton(
+                            title: context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
+                            iconData: AgoraFont.arrow_down_circle,
+                            onPressed: () => context.pushRoute(
+                              ReceiveAssetRoute(
+                                address: model.receivingAddress(asset),
+                                asset: asset,
+                              ),
                             ),
                           ),
-                        ),
-                        // WalletBlueButton(
-                        //   title: context.intl.convert,
-                        //   iconData: AgoraFont.synchronize,
-                        //   onPressed: () {},
-                        // ),
-                      ],
+                          const SizedBox(width: 4),
+                          WalletBlueButton(
+                            title: 'Contacts',
+                            iconData: CupertinoIcons.book,
+                            onPressed: () => context.pushRoute(const AddressBookRoute()),
+                          ),
+                          // WalletBlueButton(
+                          //   title: context.intl.convert,
+                          //   iconData: AgoraFont.synchronize,
+                          //   onPressed: () {},
+                          // ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
