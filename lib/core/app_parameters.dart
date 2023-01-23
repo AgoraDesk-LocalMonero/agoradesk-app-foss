@@ -192,6 +192,10 @@ class AppParameters {
       'name': 'Slovenian',
       'origName': 'Slovenščina',
     },
+    'sv': {
+      'name': 'Swedish',
+      'origName': 'Svenska',
+    },
     'sw': {
       'name': 'Swahili',
       'origName': 'Kiswahili',
