@@ -7529,6 +7529,15 @@ class I18nSw extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Anwani hii tayari imefutwa kutoka kwa kitabu chako cha anwani.';
 
   @override
+  String get address8722Sbbook => 'Kitabu cha anwani';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Anwani';
+
+  @override
+  String get xx => 'Ulimwenguni';
+
+  @override
   String get ads => 'Matangazo';
 
   @override
@@ -9431,10 +9440,10 @@ class I18nSw extends I18n {
   String get app_proxy_unavailable_decr => 'Tafadhali angalia ikiwa mipangilio ya muunganisho ni sahihi au tumia seva mbadala.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Inajaribu kuongeza anwani batili kwenye kitabu cha anwani';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Inajaribu kuongeza nakala ya anwani kwenye kitabu cha anwani cha mtumiaji';
 
   @override
   String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';

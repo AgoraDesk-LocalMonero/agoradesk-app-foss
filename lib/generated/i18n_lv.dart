@@ -7529,6 +7529,15 @@ class I18nLv extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Šī adrese jau ir izdzēsta no jūsu adrešu grāmatas.';
 
   @override
+  String get address8722Sbbook => 'Adrešu grāmata';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adreses';
+
+  @override
+  String get xx => 'Globāli';
+
+  @override
   String get ads => 'Sludinājumi';
 
   @override
@@ -9431,10 +9440,10 @@ class I18nLv extends I18n {
   String get app_proxy_unavailable_decr => 'Lūdzu, pārbaudiet, vai savienojuma iestatījumi ir pareizi, vai izmantojiet citu starpniekserveri.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Mēģina adrešu grāmatai pievienot nederīgu adresi';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Mēģinājums lietotāja adrešu grāmatai pievienot dublikātu';
 
   @override
   String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';

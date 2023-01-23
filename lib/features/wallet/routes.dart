@@ -1,3 +1,4 @@
+import 'package:agoradesk/features/wallet/screens/add_address_screen.dart';
 import 'package:agoradesk/features/wallet/screens/address_book_screen.dart';
 import 'package:agoradesk/features/wallet/screens/incoming_deposit_screen.dart';
 import 'package:agoradesk/features/wallet/screens/notifications_screen.dart';
@@ -61,6 +62,12 @@ const walletRoutes = <AutoRoute>[
   CustomRoute(
     path: 'addressBookScreen',
     page: AddressBookScreen,
+    durationInMilliseconds: 250,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+  ),
+  CustomRoute(
+    path: 'addAddressScreen',
+    page: AddAddressScreen,
     durationInMilliseconds: 250,
     transitionsBuilder: TransitionsBuilders.slideLeft,
   ),

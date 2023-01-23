@@ -6,6 +6,8 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/market/screens/widgets/address_tile.dart';
 import 'package:agoradesk/features/wallet/models/address_book_view_model.dart';
+import 'package:agoradesk/router.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +32,7 @@ class AddressBookScreen extends StatelessWidget with QrScannerMixin {
           builder: (context, model, child) {
             return Scaffold(
               appBar: AgoraAppBar(
-                title: '${asset.name} Address book',
+                title: '${asset.name} ${context.intl.address8722Sbbook}',
               ),
               body: SafeArea(
                 child: Padding(
@@ -51,7 +53,7 @@ class AddressBookScreen extends StatelessWidget with QrScannerMixin {
                 ),
               ),
               floatingActionButton: FloatingActionButton(
-                tooltip: context.intl.document8722Sbtitle250Sbpost8722Sbad,
+                tooltip: context.intl.address8722Sbbook250Sbadd8722Sbnew8722Sbbtn,
                 backgroundColor: context.colP70,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                 child: Icon(
@@ -59,7 +61,10 @@ class AddressBookScreen extends StatelessWidget with QrScannerMixin {
                   size: 20,
                   color: context.colP20,
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  await context.pushRoute(AddAddressRoute(asset: asset));
+                  model.indicatorKey.currentState?.show();
+                },
               ),
             );
           }),
@@ -72,26 +77,20 @@ class AddressBookScreen extends StatelessWidget with QrScannerMixin {
         SizedBox(),
       ]);
     }
-    return AnimatedList(
-      key: model.messagesListKey,
-      controller: model.listController,
+    return ListView.separated(
       padding: EdgeInsets.zero,
-      // shrinkWrap: true,
-      initialItemCount: model.addresses.length,
-      itemBuilder: (context, index, animation) {
+      shrinkWrap: true,
+      itemCount: model.addresses.length,
+      itemBuilder: (context, index) {
         final a = model.addresses[index];
-        return SlideTransition(
-          key: UniqueKey(),
-          position: Tween<Offset>(
-            begin: const Offset(-1, -0),
-            end: const Offset(0, 0),
-          ).animate(animation),
-          child: AddressTile(
-            address: a,
-            delete: () => model.deleteAddress(index),
-            deleting: model.deletingList[index],
-          ),
+        return AddressTile(
+          addressModel: a,
+          delete: () => model.deleteAddress(index),
+          deleting: model.deletingList[index],
         );
+      },
+      separatorBuilder: (context, index) {
+        return const SizedBox(height: 8);
       },
     );
   }

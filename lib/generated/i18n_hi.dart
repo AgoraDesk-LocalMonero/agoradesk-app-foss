@@ -7529,6 +7529,15 @@ class I18nHi extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'यह पता आपकी पता पुस्तिका से पहले ही हटा दिया गया है।';
 
   @override
+  String get address8722Sbbook => 'पता पुस्तिका';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'पतों';
+
+  @override
+  String get xx => 'वैश्विक';
+
+  @override
   String get ads => 'विज्ञापन';
 
   @override
@@ -9428,10 +9437,10 @@ class I18nHi extends I18n {
   String get app_proxy_unavailable => 'प्रॉक्सी अनुपलब्ध';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'कृपया जांचें कि कनेक्शन सेटिंग्स सही हैं या किसी अन्य प्रॉक्सी का उपयोग करें।';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'पता पुस्तिका में अमान्य पता जोड़ने का प्रयास';
 
   @override
   String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';

@@ -7529,6 +7529,15 @@ class I18nEs extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Esta dirección ya se ha eliminado de su libreta de direcciones.';
 
   @override
+  String get address8722Sbbook => 'Directorio';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'direcciones';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Anuncios';
 
   @override
@@ -9431,7 +9440,7 @@ class I18nEs extends I18n {
   String get app_proxy_unavailable_decr => 'Compruebe si la configuración de la conexión es correcta o utilice otro proxy.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Intentar agregar una dirección no válida a una libreta de direcciones';
 
   @override
   String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';

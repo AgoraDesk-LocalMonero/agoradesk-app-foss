@@ -7529,6 +7529,15 @@ class I18nPt extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Este endereço já foi excluído do seu catálogo de endereços.';
 
   @override
+  String get address8722Sbbook => 'Livro de endereços';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Endereços';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -9431,10 +9440,10 @@ class I18nPt extends I18n {
   String get app_proxy_unavailable_decr => 'Verifique se as configurações de conexão estão corretas ou use outro proxy.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Tentativa de adicionar um endereço inválido a um catálogo de endereços';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Tentativa de adicionar um endereço duplicado ao catálogo de endereços de um usuário';
 
   @override
   String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
@@ -16969,6 +16978,15 @@ class I18nPtBr extends I18nPt {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Este endereço já foi excluído do seu catálogo de endereços.';
 
   @override
+  String get address8722Sbbook => 'Livro de endereços';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Endereços';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -18869,4 +18887,10 @@ class I18nPtBr extends I18nPt {
 
   @override
   String get app_proxy_unavailable_decr => 'Verifique se as configurações de conexão estão corretas ou use outro proxy.';
+
+  @override
+  String get api_error_269 => 'Tentativa de adicionar um endereço inválido a um catálogo de endereços';
+
+  @override
+  String get api_error_270 => 'Tentativa de adicionar um endereço duplicado ao catálogo de endereços de um usuário';
 }

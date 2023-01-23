@@ -7529,6 +7529,15 @@ class I18nJa extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'このアドレスはアドレス帳から既に削除されています。';
 
   @override
+  String get address8722Sbbook => '住所録';
+
+  @override
+  String get address8722Sbbook250Sbshort => '住所';
+
+  @override
+  String get xx => 'グローバル';
+
+  @override
   String get ads => '広告';
 
   @override
@@ -9431,7 +9440,7 @@ class I18nJa extends I18n {
   String get app_proxy_unavailable_decr => '接続設定が正しいかどうかを確認するか、別のプロキシを使用してください。';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'アドレス帳に無効なアドレスを追加しようとしています';
 
   @override
   String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';

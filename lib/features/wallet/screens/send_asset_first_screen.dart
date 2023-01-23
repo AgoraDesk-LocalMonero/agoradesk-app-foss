@@ -68,6 +68,7 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
                             hasValue: model.fieldHasValue,
                             clear: model.clear,
                             paste: model.paste,
+                            errorText: model.addressErrorText(),
                             qrPressed: () async {
                               final code = await presentQRScanner();
                               model.handleScannedCode(code);

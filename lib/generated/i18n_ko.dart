@@ -7529,6 +7529,15 @@ class I18nKo extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => '이 주소는 주소록에서 이미 삭제되었습니다.';
 
   @override
+  String get address8722Sbbook => '주소록';
+
+  @override
+  String get address8722Sbbook250Sbshort => '구애';
+
+  @override
+  String get xx => '글로벌';
+
+  @override
   String get ads => '광고';
 
   @override
@@ -9431,11 +9440,11 @@ class I18nKo extends I18n {
   String get app_proxy_unavailable_decr => '연결 설정이 올바른지 확인하거나 다른 프록시를 사용하십시오.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => '주소록에 유효하지 않은 주소 추가 시도';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => '사용자 주소록에 중복 주소 추가 시도';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => '사용자 주소록에 존재하지 않는 주소 삭제 시도';
 }

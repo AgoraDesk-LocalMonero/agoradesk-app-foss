@@ -6,6 +6,7 @@ import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/models/address_model.dart';
+import 'package:agoradesk/features/account/data/models/address_model_to_save.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_type.dart';
 import 'package:agoradesk/features/account/data/models/note_model.dart';
@@ -371,13 +372,36 @@ class AccountService {
   }
 
   ///
-  /// Delete addresses from user's address book
+  /// Delete address from user's address book
   ///
   Future<Either<ApiError, bool>> deleteAddress({
     required String id,
   }) async {
     try {
       final resp = await _api.client.post('/address_book/$id/delete');
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Save address to user's address book
+  ///
+  Future<Either<ApiError, bool>> saveAddress({
+    required AddressModelToSave addressModelToSave,
+  }) async {
+    try {
+      final resp = await _api.client.post(
+        '/address_book',
+        data: addressModelToSave.toJson(),
+      );
       if (resp.statusCode == 200) {
         return const Either.right(true);
       } else {

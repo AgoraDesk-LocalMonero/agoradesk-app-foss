@@ -7529,6 +7529,15 @@ class I18nEn extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'This address has already been deleted from your address book.';
 
   @override
+  String get address8722Sbbook => 'Address book';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Addresses';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Ads';
 
   @override

@@ -7529,6 +7529,15 @@ class I18nTr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Bu adres zaten adres defterinizden silinmiş.';
 
   @override
+  String get address8722Sbbook => 'Adres defteri';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'adresler';
+
+  @override
+  String get xx => 'küresel';
+
+  @override
   String get ads => 'reklamlar';
 
   @override
@@ -9431,7 +9440,7 @@ class I18nTr extends I18n {
   String get app_proxy_unavailable_decr => 'Lütfen bağlantı ayarlarının doğru olup olmadığını kontrol edin veya başka bir proxy kullanın.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Bir adres defterine geçersiz bir adres eklemeye çalışılıyor';
 
   @override
   String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';

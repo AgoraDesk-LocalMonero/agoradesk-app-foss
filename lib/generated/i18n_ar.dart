@@ -7529,6 +7529,15 @@ class I18nAr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'تم بالفعل حذف هذا العنوان من دفتر العناوين الخاص بك.';
 
   @override
+  String get address8722Sbbook => 'دليل العناوين';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'عناوين';
+
+  @override
+  String get xx => 'عالمي';
+
+  @override
   String get ads => 'إعلانات';
 
   @override
@@ -9431,11 +9440,11 @@ class I18nAr extends I18n {
   String get app_proxy_unavailable_decr => 'يرجى التحقق مما إذا كانت إعدادات الاتصال صحيحة أو استخدام وكيل آخر.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'محاولة إضافة عنوان غير صالح إلى دفتر العناوين';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'محاولة إضافة عنوان مكرر إلى دفتر عناوين المستخدم';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'محاولة حذف عنوان غير موجود في دفتر عناوين المستخدم';
 }

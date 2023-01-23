@@ -7529,6 +7529,15 @@ class I18nFr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Cette adresse a déjà été supprimée de votre carnet d\'adresses.';
 
   @override
+  String get address8722Sbbook => 'Carnet d\'adresses';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresses';
+
+  @override
+  String get xx => 'Mondial';
+
+  @override
   String get ads => 'Annonces';
 
   @override
@@ -9431,11 +9440,11 @@ class I18nFr extends I18n {
   String get app_proxy_unavailable_decr => 'Veuillez vérifier si les paramètres de connexion sont corrects ou utilisez un autre proxy.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Tentative d\'ajout d\'une adresse invalide à un carnet d\'adresses';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Tentative d\'ajout d\'une adresse en double au carnet d\'adresses d\'un utilisateur';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Tentative de suppression d\'une adresse qui n\'existe pas dans le carnet d\'adresses d\'un utilisateur';
 }

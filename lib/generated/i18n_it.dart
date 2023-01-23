@@ -7529,6 +7529,15 @@ class I18nIt extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Questo indirizzo è già stato cancellato dalla tua rubrica.';
 
   @override
+  String get address8722Sbbook => 'Rubrica';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Indirizzi';
+
+  @override
+  String get xx => 'Globale';
+
+  @override
   String get ads => 'Annunci';
 
   @override
@@ -9431,7 +9440,7 @@ class I18nIt extends I18n {
   String get app_proxy_unavailable_decr => 'Verifica se le impostazioni di connessione sono corrette o utilizza un altro proxy.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Tentativo di aggiungere un indirizzo non valido a una rubrica';
 
   @override
   String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';

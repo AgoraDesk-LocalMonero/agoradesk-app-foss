@@ -7529,6 +7529,15 @@ class I18nTl extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Ang address na ito ay tinanggal na mula sa iyong address book.';
 
   @override
+  String get address8722Sbbook => 'Address book';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Mga address';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Mga ad';
 
   @override
@@ -9431,11 +9440,11 @@ class I18nTl extends I18n {
   String get app_proxy_unavailable_decr => 'Pakisuri kung tama ang mga setting ng koneksyon o gumamit ng ibang proxy.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Sinusubukang magdagdag ng di-wastong address sa isang address book';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Sinusubukang magdagdag ng duplicate na address sa address book ng isang user';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Sinusubukang tanggalin ang isang address na wala sa address book ng isang user';
 }

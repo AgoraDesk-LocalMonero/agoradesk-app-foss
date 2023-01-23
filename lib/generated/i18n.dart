@@ -30,6 +30,7 @@ import 'i18n_ro.dart';
 import 'i18n_ru.dart';
 import 'i18n_sk.dart';
 import 'i18n_sl.dart';
+import 'i18n_sv.dart';
 import 'i18n_sw.dart';
 import 'i18n_tl.dart';
 import 'i18n_tr.dart';
@@ -144,6 +145,7 @@ abstract class I18n {
     Locale('ru'),
     Locale('sk'),
     Locale('sl'),
+    Locale('sv'),
     Locale('sw'),
     Locale('tl'),
     Locale('tr'),
@@ -13365,6 +13367,24 @@ abstract class I18n {
   /// **'This address has already been deleted from your address book.'**
   String get error250Sbaddress8722Sbbook250Sb273;
 
+  /// No description provided for @address8722Sbbook.
+  ///
+  /// In en, this message translates to:
+  /// **'Address book'**
+  String get address8722Sbbook;
+
+  /// No description provided for @address8722Sbbook250Sbshort.
+  ///
+  /// In en, this message translates to:
+  /// **'Addresses'**
+  String get address8722Sbbook250Sbshort;
+
+  /// No description provided for @xx.
+  ///
+  /// In en, this message translates to:
+  /// **'Global'**
+  String get xx;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:
@@ -17005,7 +17025,7 @@ class _I18nDelegate extends LocalizationsDelegate<I18n> {
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_I18nDelegate old) => false;
@@ -17063,6 +17083,7 @@ case 'TW': return I18nZhTw();
     case 'ru': return I18nRu();
     case 'sk': return I18nSk();
     case 'sl': return I18nSl();
+    case 'sv': return I18nSv();
     case 'sw': return I18nSw();
     case 'tl': return I18nTl();
     case 'tr': return I18nTr();

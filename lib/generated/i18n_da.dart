@@ -7529,6 +7529,15 @@ class I18nDa extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Denne adresse er allerede blevet slettet fra din adressebog.';
 
   @override
+  String get address8722Sbbook => 'Adressebog';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresser';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Annoncer';
 
   @override
@@ -9431,7 +9440,7 @@ class I18nDa extends I18n {
   String get app_proxy_unavailable_decr => 'Kontroller, om forbindelsesindstillingerne er korrekte, eller brug en anden proxy.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Forsøg på at tilføje en ugyldig adresse til en adressebog';
 
   @override
   String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';

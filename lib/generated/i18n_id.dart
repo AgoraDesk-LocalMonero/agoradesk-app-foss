@@ -7529,6 +7529,15 @@ class I18nId extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Alamat ini telah dihapus dari buku alamat Anda.';
 
   @override
+  String get address8722Sbbook => 'Buku alamat';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Alamat';
+
+  @override
+  String get xx => 'Global';
+
+  @override
   String get ads => 'Iklan';
 
   @override
@@ -9431,11 +9440,11 @@ class I18nId extends I18n {
   String get app_proxy_unavailable_decr => 'Silakan periksa apakah pengaturan koneksi sudah benar atau gunakan proxy lain.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Mencoba menambahkan alamat yang tidak valid ke buku alamat';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Mencoba menambahkan alamat duplikat ke buku alamat pengguna';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Mencoba menghapus alamat yang tidak ada di buku alamat pengguna';
 }

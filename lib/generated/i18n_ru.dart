@@ -7529,6 +7529,15 @@ class I18nRu extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Этот адрес уже удален из вашей адресной книги.';
 
   @override
+  String get address8722Sbbook => 'Адресная книга';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Адреса';
+
+  @override
+  String get xx => 'Глобальный';
+
+  @override
   String get ads => 'Объявления';
 
   @override
@@ -9431,10 +9440,10 @@ class I18nRu extends I18n {
   String get app_proxy_unavailable_decr => 'Пожалуйста, проверьте правильность настроек подключения или используйте другой прокси.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Попытка добавить недопустимый адрес в адресную книгу';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Попытка добавить повторяющийся адрес в адресную книгу пользователя';
 
   @override
   String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';

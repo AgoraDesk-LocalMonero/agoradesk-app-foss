@@ -14,6 +14,7 @@ class SendAssetTextField extends StatelessWidget {
     required this.paste,
     required this.qrPressed,
     required this.asset,
+    this.errorText,
   }) : super(key: key);
 
   final FocusNode focusNode;
@@ -23,6 +24,7 @@ class SendAssetTextField extends StatelessWidget {
   final VoidCallback paste;
   final VoidCallback qrPressed;
   final Asset asset;
+  final String? errorText;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class SendAssetTextField extends StatelessWidget {
       controller: textEditingController,
       decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
             labelText: context.intl.wallet250Sbsend250Sbreceiving8722Sbaddress(asset.name),
+            errorText: errorText,
             suffixIcon: SizedBox(
               width: hasValue ? 118 : 118 - 32,
               child: Row(

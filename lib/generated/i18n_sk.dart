@@ -7529,6 +7529,15 @@ class I18nSk extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Táto adresa už bola vymazaná z vášho adresára.';
 
   @override
+  String get address8722Sbbook => 'Adresár';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresy';
+
+  @override
+  String get xx => 'globálne';
+
+  @override
   String get ads => 'Reklamy';
 
   @override
@@ -9431,10 +9440,10 @@ class I18nSk extends I18n {
   String get app_proxy_unavailable_decr => 'Skontrolujte, či sú nastavenia pripojenia správne, alebo použite iný proxy server.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Pokus o pridanie neplatnej adresy do adresára';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Pokus o pridanie duplicitnej adresy do adresára používateľa';
 
   @override
   String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';

@@ -391,6 +391,16 @@ class SendAssetViewModel extends ViewModel
     }
   }
 
+  String? addressErrorText() {
+    if (ctrlAddress.text.isEmpty) {
+      return null;
+    }
+    if (isAddressCorrect) {
+      return null;
+    }
+    return ' ';
+  }
+
   void _checkPasswordAndOtp() {
     if (validatePassword(ctrlPassword.text)) {
       passwordAndOtpCorrect = true;

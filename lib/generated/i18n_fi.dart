@@ -7529,6 +7529,15 @@ class I18nFi extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Tämä osoite on jo poistettu osoitekirjastasi.';
 
   @override
+  String get address8722Sbbook => 'Osoitekirja';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Osoitteet';
+
+  @override
+  String get xx => 'Maailmanlaajuinen';
+
+  @override
   String get ads => 'Ilmoitukset';
 
   @override
@@ -9431,11 +9440,11 @@ class I18nFi extends I18n {
   String get app_proxy_unavailable_decr => 'Tarkista, ovatko yhteysasetukset oikein, tai käytä toista välityspalvelinta.';
 
   @override
-  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+  String get api_error_269 => 'Yritetään lisätä osoitekirjaan virheellinen osoite';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Yritetään lisätä päällekkäinen osoite käyttäjän osoitekirjaan';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Yritetään poistaa osoite, jota ei ole käyttäjän osoitekirjassa';
 }
