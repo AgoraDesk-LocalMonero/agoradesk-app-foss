@@ -1,11 +1,11 @@
 import 'dart:math';
 
+import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
-import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
-import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
+import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
@@ -45,7 +45,11 @@ class WalletScreen extends StatelessWidget {
             appBar: AgoraAppBar(
               title: context.intl.document8722Sbtitle250Sbwallet,
               leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
-              rightAction: model.isGuestMode ? const SizedBox() : const _PopupMenu(),
+              rightAction: AppBarButton(
+                iconData: AgoraFont.help_circle,
+                label: context.intl.help,
+                onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
+              ),
             ),
             body: SafeArea(
               child: Padding(
@@ -152,25 +156,5 @@ class WalletScreen extends StatelessWidget {
                 ],
               )
             : const NoDeposits();
-  }
-}
-
-class _PopupMenu extends StatelessWidget with UrlMixin {
-  const _PopupMenu({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AgoraPopupMenuButton(
-      itemBuilder: (context) => [
-        PopupMenuItem(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
-          onTap: () => openLink(GetIt.I<AppParameters>().urlGuides),
-          value: 1,
-        ),
-      ],
-    );
   }
 }

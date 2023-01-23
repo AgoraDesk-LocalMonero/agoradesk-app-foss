@@ -1,21 +1,25 @@
 import 'dart:io';
 
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_tonal.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/market/screens/widgets/line_icon_link.dart';
 import 'package:agoradesk/features/profile/models/account_view_model.dart';
 import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart';
 import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -35,6 +39,11 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
           return Scaffold(
             appBar: AgoraAppBar(
               title: model.userName ?? context.intl.account,
+              rightAction: AppBarButton(
+                iconData: AgoraFont.help_circle,
+                label: context.intl.help,
+                onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
+              ),
             ),
             body: model.isGuestMode
                 ? const LoginScreen(
@@ -46,6 +55,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          LineIconLink(
+                            title: context.intl.left8722Sbdrawer250Sbsupport,
+                            iconData: AgoraFont.support,
+                            link: GetIt.I<AppParameters>().urlSupport,
+                          ),
+                          const SizedBox(height: 8),
                           Text(
                             context.intl.user_profile,
                             style: context.txtBodySmallN60,

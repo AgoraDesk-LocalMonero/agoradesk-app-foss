@@ -158,7 +158,8 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                                 style: context.txtBodySmallP70P40,
                                                 recognizer: TapGestureRecognizer()
                                                   ..onTap = () {
-                                                    openLink(GetIt.I<AppParameters>().urlPrivacy);
+                                                    openLink(GetIt.I<AppParameters>().urlPrivacy,
+                                                        token: GetIt.I<AppParameters>().accessToken);
                                                   },
                                               ),
                                             ],

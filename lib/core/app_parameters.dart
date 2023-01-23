@@ -230,6 +230,7 @@ class AppParameters {
   String? openedTradeId;
   bool isGoogleAvailable = true;
   String? tradeId;
+  String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
 }

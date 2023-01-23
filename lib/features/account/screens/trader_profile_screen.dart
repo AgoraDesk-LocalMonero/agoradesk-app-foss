@@ -98,7 +98,10 @@ class TraderProfileScreen extends StatelessWidget with UrlMixin {
                             ButtonIconTextP70(
                               text: context.intl.app_report_this_user,
                               iconData: AgoraFont.alert_circle,
-                              onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
+                              onPressed: () => openLink(
+                                GetIt.I<AppParameters>().urlSupport,
+                                token: GetIt.I<AppParameters>().accessToken,
+                              ),
                             ),
                             const SizedBox(height: 6),
                             TraderWebsiteBox(

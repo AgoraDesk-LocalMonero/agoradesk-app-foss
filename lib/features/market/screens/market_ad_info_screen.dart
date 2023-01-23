@@ -91,7 +91,8 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
                                       child: ButtonIconTextP70(
                                         text: context.intl.report_this_ad,
                                         iconData: AgoraFont.alert_circle,
-                                        onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport),
+                                        onPressed: () => openLink(GetIt.I<AppParameters>().urlSupport,
+                                            token: GetIt.I<AppParameters>().accessToken),
                                       ),
                                     ),
                               model.actionButton(context),

@@ -265,6 +265,7 @@ class _AppState extends State<App>
 
     debugPrint('[init app, API token from secured storage] $token');
     _api.accessToken = token;
+    GetIt.I<AppParameters>().accessToken = token;
 
     /// Set pin code state
     final String? pin = await _secureStorage.read(SecureStorageKey.pin);

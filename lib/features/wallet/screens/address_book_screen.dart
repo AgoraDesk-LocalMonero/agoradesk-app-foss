@@ -73,8 +73,18 @@ class AddressBookScreen extends StatelessWidget with QrScannerMixin {
 
   Widget _buildAdresses(BuildContext context, AddressBookViewModel model) {
     if (model.addresses.isEmpty) {
-      return ListView(children: const [
-        SizedBox(),
+      return ListView(children: [
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          child: Text(
+            context.intl.address8722Sbbook250Sbdescription,
+            style: context.txtBodyXSmallN80,
+            textAlign: TextAlign.center,
+          ),
+        ),
       ]);
     }
     return ListView.separated(
