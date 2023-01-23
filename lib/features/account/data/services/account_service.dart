@@ -5,11 +5,13 @@ import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
+import 'package:agoradesk/features/account/data/models/address_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_type.dart';
 import 'package:agoradesk/features/account/data/models/note_model.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/models/feedback_view_type.dart';
+import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
@@ -326,6 +328,56 @@ class AccountService {
   Future<Either<ApiError, bool>> deleteNote(String username) async {
     try {
       final resp = await _api.client.post('/note/$username/delete');
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Get addresses from user's address book
+  ///
+  Future<Either<ApiError, List<AddressModel>>> getAddressBook({
+    required Asset asset,
+  }) async {
+    try {
+      final resp = await _api.client.get(
+        '/address_book',
+        queryParameters: {
+          'asset': asset.name,
+        },
+      );
+      if (resp.statusCode == 200) {
+        List<dynamic> respLst = jsonDecode(jsonEncode(resp.data['data']));
+        List<AddressModel> result = [];
+        for (var e in respLst) {
+          result.add(AddressModel.fromJson(e));
+        }
+        return Either.right(result);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
+  /// Delete addresses from user's address book
+  ///
+  Future<Either<ApiError, bool>> deleteAddress({
+    required String id,
+  }) async {
+    try {
+      final resp = await _api.client.post('/address_book/$id/delete');
       if (resp.statusCode == 200) {
         return const Either.right(true);
       } else {

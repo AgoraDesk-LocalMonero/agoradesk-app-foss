@@ -1,6 +1,99 @@
 {
+  "ar": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "bg": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "cs": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "da": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "de": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "el": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "es": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "fi": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "fr": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
   "hi": [
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "hu": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "id": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "it": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "ja": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "ko": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "lv": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ],
 
   "nb": [
@@ -605,7 +698,10 @@
     "app_proxy_on",
     "app_proxy_on_descr",
     "app_proxy_unavailable",
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ],
 
   "nb_NO": [
@@ -1210,11 +1306,83 @@
     "app_proxy_on",
     "app_proxy_on_descr",
     "app_proxy_unavailable",
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "nl": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "pl": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "pt": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "pt_BR": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ],
 
   "ro": [
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "ru": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "sk": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "sl": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "sw": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "tl": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "tr": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
+  ],
+
+  "ur": [
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ],
 
   "zh": [
@@ -1819,7 +1987,10 @@
     "app_proxy_on",
     "app_proxy_on_descr",
     "app_proxy_unavailable",
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ],
 
   "zh_CN": [
@@ -2424,10 +2595,16 @@
     "app_proxy_on",
     "app_proxy_on_descr",
     "app_proxy_unavailable",
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ],
 
   "zh_TW": [
-    "app_proxy_unavailable_decr"
+    "app_proxy_unavailable_decr",
+    "api_error_269",
+    "api_error_270",
+    "api_error_273"
   ]
 }

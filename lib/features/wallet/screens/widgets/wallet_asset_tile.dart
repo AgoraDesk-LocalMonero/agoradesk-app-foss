@@ -24,7 +24,7 @@ class WalletAssetTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width - 60;
+    final width = MediaQuery.of(context).size.width - 70;
 
     return ViewModelBuilder<WalletViewModel>(
         model: model,
@@ -36,6 +36,7 @@ class WalletAssetTile extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(12),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -93,13 +94,15 @@ class WalletAssetTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
                     SizedBox(
-                      width: width,
+                      width: width - 10,
                       child: Wrap(
-                        crossAxisAlignment: WrapCrossAlignment.end,
+                        spacing: 6,
+                        runSpacing: 10,
                         children: [
                           WalletBlueButton(
                             title: context.intl.wallet250Sbtab250Sbsend8722Sbshort,
                             iconData: AgoraFont.arrow_up_circle,
+                            shrinkWrap: true,
                             onPressed: () => context.pushRoute(
                               SendAssetFirstRoute(
                                 asset: asset,
@@ -108,10 +111,10 @@ class WalletAssetTile extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 4),
                           WalletBlueButton(
                             title: context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
                             iconData: AgoraFont.arrow_down_circle,
+                            shrinkWrap: true,
                             onPressed: () => context.pushRoute(
                               ReceiveAssetRoute(
                                 address: model.receivingAddress(asset),
@@ -119,11 +122,13 @@ class WalletAssetTile extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 4),
                           WalletBlueButton(
-                            title: 'Contacts',
+                            title: 'Address book',
                             iconData: CupertinoIcons.book,
-                            onPressed: () => context.pushRoute(const AddressBookRoute()),
+                            shrinkWrap: true,
+                            onPressed: () => context.pushRoute(
+                              AddressBookRoute(asset: Asset.XMR),
+                            ),
                           ),
                           // WalletBlueButton(
                           //   title: context.intl.convert,

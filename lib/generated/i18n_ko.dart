@@ -9429,4 +9429,13 @@ class I18nKo extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => '연결 설정이 올바른지 확인하거나 다른 프록시를 사용하십시오.';
+
+  @override
+  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+
+  @override
+  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+
+  @override
+  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
 }

@@ -416,9 +416,10 @@ class AppRouter extends _i52.RootStackRouter {
           barrierDismissible: false);
     },
     AddressBookRoute.name: (routeData) {
+      final args = routeData.argsAs<AddressBookRouteArgs>();
       return _i52.CustomPage<dynamic>(
           routeData: routeData,
-          child: const _i31.AddressBookScreen(),
+          child: _i31.AddressBookScreen(key: args.key, asset: args.asset),
           transitionsBuilder: _i52.TransitionsBuilders.slideLeft,
           durationInMilliseconds: 250,
           opaque: true,
@@ -1383,11 +1384,26 @@ class NotificationsRoute extends _i52.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i31.AddressBookScreen]
-class AddressBookRoute extends _i52.PageRouteInfo<void> {
-  const AddressBookRoute()
-      : super(AddressBookRoute.name, path: 'addressBookScreen');
+class AddressBookRoute extends _i52.PageRouteInfo<AddressBookRouteArgs> {
+  AddressBookRoute({_i55.Key? key, required _i64.Asset asset})
+      : super(AddressBookRoute.name,
+            path: 'addressBookScreen',
+            args: AddressBookRouteArgs(key: key, asset: asset));
 
   static const String name = 'AddressBookRoute';
+}
+
+class AddressBookRouteArgs {
+  const AddressBookRouteArgs({this.key, required this.asset});
+
+  final _i55.Key? key;
+
+  final _i64.Asset asset;
+
+  @override
+  String toString() {
+    return 'AddressBookRouteArgs{key: $key, asset: $asset}';
+  }
 }
 
 /// generated route for

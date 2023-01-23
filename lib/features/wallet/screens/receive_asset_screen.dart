@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -14,11 +13,11 @@ import 'package:agoradesk/features/wallet/screens/widgets/incoming_deposit_tile.
 import 'package:agoradesk/features/wallet/screens/widgets/loading_deposits.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/no_deposits.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/qr_code_dialog.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
   const ReceiveAssetScreen({
@@ -42,7 +41,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
           builder: (context, model, child) {
             return Scaffold(
               appBar: AgoraAppBar(
-                title: I18n.of(context)!.wallet250Sbreceive250Sbtitle(asset.title()),
+                title: context.intl.wallet250Sbreceive250Sbtitle(asset.title()),
               ),
               body: SafeArea(
                 child: Padding(
@@ -61,7 +60,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                               child: Padding(
                                 padding: const EdgeInsets.all(12),
                                 child: Text(
-                                  I18n.of(context)!
+                                  context.intl
                                       .agoradesk250Sbwallet250Sbbtc250Sbsingle8722Sbuse8722Sbnotice(model.asset.name),
                                   style: context.txtBodyXSmallN80,
                                 ),
@@ -69,7 +68,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                             ),
                             const SizedBox(height: 20),
                             Text(
-                              I18n.of(context)!.wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle,
+                              context.intl.wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle,
                               style: context.txtBodySmallN60,
                             ),
                             const SizedBox(height: 12),
@@ -79,7 +78,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                               child: Padding(
                                 padding: const EdgeInsets.all(12),
                                 child: Text(
-                                  I18n.of(context)!.wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb057Sbagoradesk,
+                                  context.intl.wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb057Sbagoradesk,
                                   style: context.txtBodyXSmallN80,
                                 ),
                               ),
@@ -105,7 +104,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              I18n.of(context)!.your_deposit_address(asset.title()),
+              context.intl.your_deposit_address(asset.title()),
               style: context.txtBodyMediumP90,
             ),
             const SizedBox(height: 12),
@@ -122,7 +121,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                   Row(
                     children: [
                       ButtonIconTextP70(
-                        text: I18n.of(context)!.show_qr_code,
+                        text: context.intl.show_qr_code,
                         iconData: AgoraFont.qrcode_scan,
                         marginBetween: 5,
                         onPressed: () {
@@ -130,7 +129,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                             context: context,
                             builder: (context) {
                               return QrCodeDialog(
-                                text: address ?? '',
+                                address: address ?? '',
                                 asset: asset,
                                 onPressed: () {},
                               );
@@ -140,13 +139,13 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
                       ),
                       const SizedBox(width: 16),
                       ButtonIconTextP70(
-                        text: I18n.of(context)!.copy,
+                        text: context.intl.copy,
                         iconData: AgoraFont.copy_alt,
                         marginBetween: 5,
                         onPressed: () => copyToClipboard(address ?? '', context),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ))

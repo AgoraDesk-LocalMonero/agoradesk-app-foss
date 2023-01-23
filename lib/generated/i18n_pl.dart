@@ -9429,4 +9429,13 @@ class I18nPl extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Sprawdź, czy ustawienia połączenia są prawidłowe lub użyj innego serwera proxy.';
+
+  @override
+  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+
+  @override
+  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+
+  @override
+  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
 }

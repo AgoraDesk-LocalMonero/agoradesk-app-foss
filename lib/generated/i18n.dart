@@ -16976,6 +16976,24 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Please check if the connection settings are correct or use another proxy.'**
   String get app_proxy_unavailable_decr;
+
+  /// No description provided for @api_error_269.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to add an invalid address to an address book'**
+  String get api_error_269;
+
+  /// No description provided for @api_error_270.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to add a duplicate address to a user’s address book'**
+  String get api_error_270;
+
+  /// No description provided for @api_error_273.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete an address that doesn’t exist in a user’s address book'**
+  String get api_error_273;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

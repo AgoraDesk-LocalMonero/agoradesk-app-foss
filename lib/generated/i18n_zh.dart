@@ -9429,6 +9429,15 @@ class I18nZh extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+
+  @override
+  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+
+  @override
+  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+
+  @override
+  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
