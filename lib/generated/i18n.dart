@@ -13385,6 +13385,18 @@ abstract class I18n {
   /// **'Global'**
   String get xx;
 
+  /// No description provided for @dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal.
+  ///
+  /// In en, this message translates to:
+  /// **'All cryptocurrency ads are now being moved to the new \"global (code XX)\" country category. All duplicate cryptocurrency ads that differ only by country will be deleted {time_remaining}. Please make sure you only have ONE cryptocurrency ad per currency, otherwise all but the most recently posted ad in that currency will be deleted, while the remaining ad will be moved into \"global\" country category.'**
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining);
+
+  /// No description provided for @edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad.
+  ///
+  /// In en, this message translates to:
+  /// **'When you press \"Save\", the ad\'s country will be updated to \"global\" automatically.'**
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:

@@ -7538,6 +7538,14 @@ class I18nId extends I18n {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Semua iklan mata uang kripto sekarang dipindahkan ke kategori negara \"global (kode XX)\" yang baru. Semua iklan mata uang kripto rangkap yang hanya berbeda menurut negara akan dihapus $time_remaining. Harap pastikan Anda hanya memiliki SATU iklan mata uang kripto per mata uang, jika tidak, semua kecuali iklan yang terakhir diposting dalam mata uang tersebut akan dihapus, sedangkan iklan lainnya akan dipindahkan ke kategori negara \"global\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Saat Anda menekan \"Simpan\", negara iklan akan diperbarui ke \"global\" secara otomatis.';
+
+  @override
   String get ads => 'Iklan';
 
   @override

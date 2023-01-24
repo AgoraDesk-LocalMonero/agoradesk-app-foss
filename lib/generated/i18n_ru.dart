@@ -7538,6 +7538,14 @@ class I18nRu extends I18n {
   String get xx => 'Глобальный';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Вся реклама криптовалют теперь перемещается в новую категорию стран «глобальная (код XX)». Все повторяющиеся объявления о криптовалюте, отличающиеся только страной, будут удалены $time_remaining. Пожалуйста, убедитесь, что у вас есть только ОДНО объявление о криптовалюте для каждой валюты, в противном случае все объявления, опубликованные в этой валюте, кроме самого последнего, будут удалены, а оставшееся объявление будет перемещено в «глобальную» категорию страны.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Когда вы нажмете «Сохранить», страна объявления будет автоматически обновлена до «глобальной».';
+
+  @override
   String get ads => 'Объявления';
 
   @override
@@ -9446,5 +9454,5 @@ class I18nRu extends I18n {
   String get api_error_270 => 'Попытка добавить повторяющийся адрес в адресную книгу пользователя';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Попытка удалить адрес, которого нет в адресной книге пользователя';
 }

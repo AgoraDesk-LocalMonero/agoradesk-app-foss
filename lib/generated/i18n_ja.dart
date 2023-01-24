@@ -7538,6 +7538,14 @@ class I18nJa extends I18n {
   String get xx => 'グローバル';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return '現在、すべての暗号通貨広告は、新しい「グローバル (コード XX)」の国カテゴリに移動されています。国のみが異なる重複する暗号通貨広告はすべて削除されます $time_remaining。通貨ごとに 1 つの暗号通貨の広告しかないことを確認してください。そうしないと、その通貨で最近投稿された広告以外はすべて削除され、残りの広告は「グローバル」国カテゴリに移動されます。';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '「保存」を押すと、広告の国は自動的に「グローバル」に更新されます。';
+
+  @override
   String get ads => '広告';
 
   @override
@@ -9443,8 +9451,8 @@ class I18nJa extends I18n {
   String get api_error_269 => 'アドレス帳に無効なアドレスを追加しようとしています';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'ユーザーのアドレス帳に重複したアドレスを追加しようとしています';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'ユーザーのアドレス帳に存在しないアドレスを削除しようとしています';
 }

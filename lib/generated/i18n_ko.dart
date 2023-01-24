@@ -7538,6 +7538,14 @@ class I18nKo extends I18n {
   String get xx => '글로벌';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return '이제 모든 암호화폐 광고가 새로운 \"글로벌(코드 XX)\" 국가 카테고리로 이동됩니다. 국가별로만 다른 중복 암호화폐 광고는 모두 삭제됩니다$time_remaining. 통화당 하나의 암호화폐 광고만 있는지 확인하십시오. 그렇지 않으면 해당 통화로 가장 최근에 게시된 광고를 제외한 모든 광고가 삭제되고 나머지 광고는 \"글로벌\" 국가 카테고리로 이동됩니다.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '\"저장\"을 누르면 광고의 국가가 자동으로 \"글로벌\"로 업데이트됩니다.';
+
+  @override
   String get ads => '광고';
 
   @override

@@ -7538,6 +7538,14 @@ class I18nCs extends I18n {
   String get xx => 'Globální';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Všechny reklamy na kryptoměny se nyní přesouvají do nové kategorie zemí „globální (kód XX)“. Všechny duplicitní reklamy na kryptoměny, které se liší pouze podle země, budou smazány $time_remaining. Ujistěte se prosím, že máte pouze JEDNU reklamu na kryptoměnu na měnu, jinak budou všechny reklamy v dané měně kromě naposledy zveřejněné smazány, zatímco zbývající reklama bude přesunuta do kategorie „globální“ země.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Když stisknete \"Uložit\", země reklamy se automaticky aktualizuje na \"globální\".';
+
+  @override
   String get ads => 'Reklamy';
 
   @override
@@ -9446,5 +9454,5 @@ class I18nCs extends I18n {
   String get api_error_270 => 'Pokus o přidání duplicitní adresy do adresáře uživatele';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Pokus o odstranění adresy, která neexistuje v adresáři uživatele';
 }

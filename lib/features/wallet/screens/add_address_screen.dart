@@ -36,7 +36,7 @@ class AddAddressScreen extends StatelessWidget with QrScannerMixin {
               ),
               body: SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -65,6 +65,8 @@ class AddAddressScreen extends StatelessWidget with QrScannerMixin {
                               final code = await presentQRScanner();
                               model.handleScannedCode(code);
                             },
+                            displayAddressBook: false,
+                            pasteAddressAction: (_) {},
                           ),
                         ],
                       ),

@@ -348,6 +348,7 @@ class AccountService {
     required Asset asset,
   }) async {
     try {
+      await Future.delayed(Duration(seconds: 2));
       final resp = await _api.client.get(
         '/address_book',
         queryParameters: {

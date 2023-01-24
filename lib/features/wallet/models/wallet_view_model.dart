@@ -47,6 +47,7 @@ class WalletViewModel extends ViewModel {
   String _addressXmr = '';
   bool _loadingBalance = false;
   bool _afterBuildCalled = false;
+  bool _loadingPrices = false;
   Asset _asset = Asset.BTC;
   late bool isGuestMode;
   final List<TransactionModel> transactions = [];
@@ -104,16 +105,17 @@ class WalletViewModel extends ViewModel {
       _afterBuildCalled = true;
       _tabsRouter = context.tabsRouter;
       _tabsRouter.addListener(_routerListener);
-      if (_authService.isAuthenticated) {
-        indicatorKey.currentState?.show();
-      }
+      // if (_authService.isAuthenticated) {
+      //   indicatorKey.currentState?.show();
+      // }
       super.onAfterBuild();
     }
   }
 
   Future getInitalData() async {
+    await calcAssetsPrices();
     await getBalances();
-    calcAssetsPrices();
+
     getIncomingDeposits();
   }
 
@@ -270,20 +272,26 @@ class WalletViewModel extends ViewModel {
     return '${(_xmrPrice! * (double.tryParse(_balanceXmr) ?? 0)).toStringAsFixed(2)} ${_appState.currencyCode}';
   }
 
-  void calcAssetsPrices() async {
-    for (final asset in Asset.values) {
-      String usdToCurrency = '';
-      if (_appState.currencyCode != 'USD') {
-        usdToCurrency = '*usd${_appState.currencyCode.toLowerCase()}';
-      }
+  Future calcAssetsPrices() async {
+    if (!_loadingPrices) {
+      _loadingPrices = true;
+      for (final asset in Asset.values) {
+        String usdToCurrency = '';
+        if (_appState.currencyCode != 'USD') {
+          usdToCurrency = '*usd${_appState.currencyCode.toLowerCase()}';
+        }
 
-      if (asset == Asset.BTC) {
-        btcPrice = await calcPrice(
-            priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency', currency: _appState.currencyCode);
-      } else {
-        xmrPrice = await calcPrice(
-            priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency', currency: _appState.currencyCode);
+        if (asset == Asset.BTC) {
+          btcPrice = await calcPrice(
+              priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
+              currency: _appState.currencyCode);
+        } else {
+          xmrPrice = await calcPrice(
+              priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
+              currency: _appState.currencyCode);
+        }
       }
+      _loadingPrices = false;
     }
   }
 

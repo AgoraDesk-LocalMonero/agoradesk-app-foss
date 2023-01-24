@@ -1275,8 +1275,8 @@ class IncomingDepositRouteArgs {
 class SendAssetFirstRoute extends _i53.PageRouteInfo<SendAssetFirstRouteArgs> {
   SendAssetFirstRoute(
       {_i56.Key? key,
-      required double? price,
-      required double? balance,
+      required double price,
+      required double balance,
       required _i65.Asset asset})
       : super(SendAssetFirstRoute.name,
             path: 'wallet/sendAssetOne',
@@ -1295,9 +1295,9 @@ class SendAssetFirstRouteArgs {
 
   final _i56.Key? key;
 
-  final double? price;
+  final double price;
 
-  final double? balance;
+  final double balance;
 
   final _i65.Asset asset;
 

@@ -7538,6 +7538,14 @@ class I18nFr extends I18n {
   String get xx => 'Mondial';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Toutes les annonces de crypto-monnaie sont désormais déplacées vers la nouvelle catégorie de pays \"global (code XX)\". Toutes les annonces de crypto-monnaie en double qui ne diffèrent que par pays seront supprimées $time_remaining. Veuillez vous assurer que vous n\'avez qu\'UNE seule annonce de crypto-monnaie par devise, sinon toutes les annonces publiées dans cette devise sauf la plus récente seront supprimées, tandis que l\'annonce restante sera déplacée dans la catégorie de pays \"globale\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Lorsque vous appuyez sur \"Enregistrer\", le pays de l\'annonce sera automatiquement mis à jour sur \"mondial\".';
+
+  @override
   String get ads => 'Annonces';
 
   @override

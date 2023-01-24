@@ -7538,6 +7538,14 @@ class I18nUr extends I18n {
   String get xx => 'عالمی';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'تمام کریپٹو کرنسی اشتہارات کو اب نئے \"عالمی (کوڈ XX)\" ملک کے زمرے میں منتقل کیا جا رہا ہے۔ تمام ڈپلیکیٹ کریپٹو کرنسی اشتہارات جو صرف ملک کے لحاظ سے مختلف ہوتے ہیں حذف کر دیے جائیں گے $time_remaining۔ براہ کرم یقینی بنائیں کہ آپ کے پاس فی کرنسی صرف ایک کریپٹو کرنسی کا اشتہار ہے، بصورت دیگر اس کرنسی میں حالیہ پوسٹ کیے گئے اشتہار کے علاوہ باقی سبھی کو حذف کر دیا جائے گا، جبکہ باقی اشتہار کو \"عالمی\" ملک کے زمرے میں منتقل کر دیا جائے گا۔';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'جب آپ \"محفوظ کریں\" کو دبائیں گے تو اشتہار کا ملک خود بخود \"عالمی\" میں اپ ڈیٹ ہو جائے گا۔';
+
+  @override
   String get ads => 'اشتہارات';
 
   @override
@@ -9446,5 +9454,5 @@ class I18nUr extends I18n {
   String get api_error_270 => 'صارف کی ایڈریس بک میں ڈپلیکیٹ ایڈریس شامل کرنے کی کوشش';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'ایک ایسے ایڈریس کو حذف کرنے کی کوشش کرنا جو صارف کی ایڈریس بک میں موجود نہیں ہے۔';
 }

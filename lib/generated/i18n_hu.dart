@@ -7538,6 +7538,14 @@ class I18nHu extends I18n {
   String get xx => 'Globális';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Az összes kriptovaluta hirdetés átkerül az új „globális (XX kód)” országkategóriába. Minden olyan duplikált kriptovaluta hirdetés, amely csak országonként különbözik, törlésre kerül $time_remaining. Kérjük, ügyeljen arra, hogy pénznemenként csak EGY kriptovaluta hirdetése legyen, különben a legutóbb közzétett hirdetése az adott pénznemben törlődik, a fennmaradó hirdetés pedig a \"globális\" országkategóriába kerül.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Ha megnyomja a „Mentés” gombot, a hirdetés országa automatikusan „globális”-ra frissül.';
+
+  @override
   String get ads => 'Hirdetések';
 
   @override
@@ -9443,8 +9451,8 @@ class I18nHu extends I18n {
   String get api_error_269 => 'Érvénytelen címet próbál hozzáadni egy címjegyzékhez';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Megpróbál ismétlődő címet hozzáadni a felhasználó címjegyzékéhez';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Olyan cím törlésének kísérlete, amely nem létezik a felhasználó címjegyzékében';
 }

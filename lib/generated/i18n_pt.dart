@@ -7538,6 +7538,14 @@ class I18nPt extends I18n {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Todos os anúncios de criptomoeda agora estão sendo movidos para a nova categoria de país \"global (código XX)\". Todos os anúncios de criptomoeda duplicados que diferem apenas por país serão excluídos $time_remaining. Certifique-se de ter apenas UM anúncio de criptomoeda por moeda, caso contrário, todos, exceto o anúncio publicado mais recentemente nessa moeda, serão excluídos, enquanto o anúncio restante será movido para a categoria de país \"global\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Ao pressionar \"Salvar\", o país do anúncio será atualizado para \"global\" automaticamente.';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -9446,7 +9454,7 @@ class I18nPt extends I18n {
   String get api_error_270 => 'Tentativa de adicionar um endereço duplicado ao catálogo de endereços de um usuário';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Tentativa de excluir um endereço que não existe no catálogo de endereços de um usuário';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -16987,6 +16995,14 @@ class I18nPtBr extends I18nPt {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Todos os anúncios de criptomoeda agora estão sendo movidos para a nova categoria de país \"global (código XX)\". Todos os anúncios de criptomoeda duplicados que diferem apenas por país serão excluídos $time_remaining. Certifique-se de ter apenas UM anúncio de criptomoeda por moeda, caso contrário, todos, exceto o anúncio publicado mais recentemente nessa moeda, serão excluídos, enquanto o anúncio restante será movido para a categoria de país \"global\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Ao pressionar \"Salvar\", o país do anúncio será atualizado para \"global\" automaticamente.';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -18893,4 +18909,7 @@ class I18nPtBr extends I18nPt {
 
   @override
   String get api_error_270 => 'Tentativa de adicionar um endereço duplicado ao catálogo de endereços de um usuário';
+
+  @override
+  String get api_error_273 => 'Tentativa de excluir um endereço que não existe no catálogo de endereços de um usuário';
 }

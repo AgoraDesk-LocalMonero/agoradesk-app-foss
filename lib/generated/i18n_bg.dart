@@ -7538,6 +7538,14 @@ class I18nBg extends I18n {
   String get xx => 'Глобален';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Всички реклами за криптовалута вече се преместват в новата категория на държавата „глобален (код XX)“. Всички дублиращи се реклами за криптовалута, които се различават само по държава, ще бъдат изтрити $time_remaining. Моля, уверете се, че имате само ЕДНА реклама за криптовалута на валута, в противен случай всички освен най-скоро публикуваната реклама в тази валута ще бъдат изтрити, докато останалата реклама ще бъде преместена в категорията на „глобалната“ държава.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Когато натиснете „Запазване“, държавата на рекламата автоматично ще се актуализира на „глобална“.';
+
+  @override
   String get ads => 'реклами';
 
   @override
@@ -9446,5 +9454,5 @@ class I18nBg extends I18n {
   String get api_error_270 => 'Опит за добавяне на дублиран адрес към адресната книга на потребителя';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Опит за изтриване на адрес, който не съществува в адресната книга на потребителя';
 }

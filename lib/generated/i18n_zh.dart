@@ -7538,6 +7538,14 @@ class I18nZh extends I18n {
   String get xx => '全球的';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $time_remaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '当您按下“保存”时，广告的国家/地区将自动更新为“全球”。';
+
+  @override
   String get ads => '广告';
 
   @override
@@ -9446,7 +9454,7 @@ class I18nZh extends I18n {
   String get api_error_270 => '试图将重复的地址添加到用户的地址簿';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => '试图删除用户地址簿中不存在的地址';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -16987,6 +16995,14 @@ class I18nZhCn extends I18nZh {
   String get xx => '全球的';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $time_remaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '当您按下“保存”时，广告的国家/地区将自动更新为“全球”。';
+
+  @override
   String get ads => '广告';
 
   @override
@@ -18893,6 +18909,9 @@ class I18nZhCn extends I18nZh {
 
   @override
   String get api_error_270 => '试图将重复的地址添加到用户的地址簿';
+
+  @override
+  String get api_error_273 => '试图删除用户地址簿中不存在的地址';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -26433,6 +26452,14 @@ class I18nZhTw extends I18nZh {
   String get xx => '全球的';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return '所有加密貨幣廣告現在都被移至新的“全球（代碼 XX）”國家類別。所有僅因國家/地區不同而重複的加密貨幣廣告都將被刪除 $time_remaining。請確保每種貨幣只有一個加密貨幣廣告，否則除最近以該貨幣發布的廣告外，其他所有廣告都將被刪除，而其餘廣告將移至“全球”國家/地區類別。';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '當您按下“保存”時，廣告的國家/地區將自動更新為“全球”。';
+
+  @override
   String get ads => '廣告';
 
   @override
@@ -28339,4 +28366,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get api_error_270 => '試圖將重複的地址添加到用戶的地址簿';
+
+  @override
+  String get api_error_273 => '試圖刪除用戶地址簿中不存在的地址';
 }

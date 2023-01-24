@@ -7538,6 +7538,14 @@ class I18nPl extends I18n {
   String get xx => 'Światowy';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Wszystkie reklamy kryptowalut są teraz przenoszone do nowej kategorii krajów „globalny (kod XX)”. Wszystkie zduplikowane reklamy kryptowalut, które różnią się tylko krajem, zostaną usunięte $time_remaining. Upewnij się, że masz tylko JEDNĄ reklamę kryptowaluty na walutę, w przeciwnym razie wszystkie oprócz ostatnio opublikowanej reklamy w tej walucie zostaną usunięte, a pozostałe reklamy zostaną przeniesione do kategorii kraju „globalny”.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Gdy klikniesz „Zapisz”, kraj reklamy zostanie automatycznie zaktualizowany na „globalny”.';
+
+  @override
   String get ads => 'Ogłoszenia';
 
   @override

@@ -7538,6 +7538,14 @@ class I18nNb extends I18n {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $time_remaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Når du trykker \"Lagre\", vil annonsens land automatisk bli oppdatert til \"globalt\".';
+
+  @override
   String get ads => 'Annonser';
 
   @override
@@ -16985,6 +16993,14 @@ class I18nNbNo extends I18nNb {
 
   @override
   String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $time_remaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Når du trykker \"Lagre\", vil annonsens land automatisk bli oppdatert til \"globalt\".';
 
   @override
   String get ads => 'Annonser';

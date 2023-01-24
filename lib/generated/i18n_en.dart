@@ -7538,6 +7538,14 @@ class I18nEn extends I18n {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'All cryptocurrency ads are now being moved to the new \"global (code XX)\" country category. All duplicate cryptocurrency ads that differ only by country will be deleted $time_remaining. Please make sure you only have ONE cryptocurrency ad per currency, otherwise all but the most recently posted ad in that currency will be deleted, while the remaining ad will be moved into \"global\" country category.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'When you press \"Save\", the ad\'s country will be updated to \"global\" automatically.';
+
+  @override
   String get ads => 'Ads';
 
   @override

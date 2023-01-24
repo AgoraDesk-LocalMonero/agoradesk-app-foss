@@ -30,7 +30,7 @@ class SendAssetViewModel extends ViewModel
 
   final WalletService _walletService;
   final AppState _appState;
-  final double? price;
+  final double price;
   final double? balance;
 
   final ctrlAddress = TextEditingController();
@@ -186,7 +186,7 @@ class SendAssetViewModel extends ViewModel
   }
 
   String xmrNetworkFeesStr() {
-    return '${xmrFees.toString()} XMR ~ ${(xmrFees * price!).toStringAsFixed(4)} ${_appState.currencyCode}';
+    return '${xmrFees.toString()} XMR ~ ${(xmrFees * price).toStringAsFixed(4)} ${_appState.currencyCode}';
   }
 
   void _manageAssetField() {
@@ -201,7 +201,7 @@ class SendAssetViewModel extends ViewModel
       try {
         if (assetAmount != double.parse(ctrlAsset.text)) {
           assetAmount = double.parse(ctrlAsset.text);
-          fiatAmount = (assetAmount * price!).bankerRound(2).toDouble();
+          fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
           ctrlFiat.text = fiatAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
@@ -234,7 +234,8 @@ class SendAssetViewModel extends ViewModel
         if (fiatAmount != double.parse(ctrlFiat.text)) {
           final int digitsToRound = getBankersDigits(asset.name);
           fiatAmount = double.parse(ctrlFiat.text);
-          assetAmount = (fiatAmount / price!).bankerRound(digitsToRound).toDouble();
+
+          assetAmount = (fiatAmount / price).bankerRound(digitsToRound).toDouble();
           ctrlAsset.text = assetAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
@@ -296,7 +297,7 @@ class SendAssetViewModel extends ViewModel
 
   void sendAllFill() {
     assetAmount = (balance ?? 0);
-    fiatAmount = assetAmount * price!;
+    fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
     _updateControllersValues();
     // _cursorToEnd();
   }

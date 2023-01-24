@@ -7538,6 +7538,14 @@ class I18nEs extends I18n {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Todos los anuncios de criptomonedas ahora se están moviendo a la nueva categoría de país \"global (código XX)\". Se eliminarán todos los anuncios de criptomonedas duplicados que difieran solo por país $time_remaining. Asegúrese de tener solo UN anuncio de criptomoneda por moneda; de lo contrario, se eliminarán todos los anuncios publicados en esa moneda excepto el más reciente, mientras que el anuncio restante se moverá a la categoría de país \"global\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Cuando presione \"Guardar\", el país del anuncio se actualizará a \"global\" automáticamente.';
+
+  @override
   String get ads => 'Anuncios';
 
   @override
@@ -9443,8 +9451,8 @@ class I18nEs extends I18n {
   String get api_error_269 => 'Intentar agregar una dirección no válida a una libreta de direcciones';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Intentar agregar una dirección duplicada a la libreta de direcciones de un usuario';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Intentar eliminar una dirección que no existe en la libreta de direcciones de un usuario';
 }

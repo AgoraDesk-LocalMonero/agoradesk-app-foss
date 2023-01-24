@@ -7538,6 +7538,14 @@ class I18nFi extends I18n {
   String get xx => 'Maailmanlaajuinen';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Kaikki kryptovaluuttamainokset siirretään nyt uuteen \"globaali (koodi XX)\" maaluokkaan. Kaikki päällekkäiset kryptovaluuttamainokset, jotka eroavat vain maittain, poistetaan $time_remaining. Varmista, että sinulla on vain YKSI kryptovaluuttamainos valuuttaa kohden, muuten kaikki paitsi viimeksi lähetetty mainos kyseisessä valuutassa poistetaan, ja loput mainokset siirretään \"globaaliin\" maaluokkaan.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Kun painat \"Tallenna\", mainoksen maaksi päivitetään automaattisesti \"maailmanlaajuinen\".';
+
+  @override
   String get ads => 'Ilmoitukset';
 
   @override

@@ -41,7 +41,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildSettlementLine(context),
+          _buildSettlementLine(context, widget.model),
           const SizedBox(height: 16),
           widget.model.asset == Asset.BTC ? _buildBtcFlow() : const SizedBox(),
           widget.displayNext
@@ -140,7 +140,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
         });
   }
 
-  Widget _buildSettlementLine(BuildContext context) {
+  Widget _buildSettlementLine(BuildContext context, AddEditAdViewModel model) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -160,6 +160,10 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
           qrPressed: () async {
             final code = await presentQRScanner();
             widget.model.handleScannedCode(code);
+          },
+          displayAddressBook: true,
+          pasteAddressAction: (val) {
+            model.ctrl32WalletAddress.text = val;
           },
         ),
         const SizedBox(height: 12),

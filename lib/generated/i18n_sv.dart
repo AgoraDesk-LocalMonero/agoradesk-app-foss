@@ -7538,6 +7538,14 @@ class I18nSv extends I18n {
   String get xx => 'Global';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alla annonser för kryptovaluta flyttas nu till den nya \"globala (kod XX)\" landskategorin. Alla dubbletter av kryptovalutaannonser som endast skiljer sig från land till land kommer att raderas $time_remaining. Se till att du bara har EN kryptovalutaannons per valuta, annars kommer alla utom den senast publicerade annonsen i den valutan att raderas, medan den återstående annonsen flyttas till \"global\" landskategori.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'När du trycker på \"Spara\" kommer annonsens land att uppdateras automatiskt till \"globalt\".';
+
+  @override
   String get ads => 'Annonser';
 
   @override

@@ -7538,6 +7538,14 @@ class I18nHi extends I18n {
   String get xx => 'वैश्विक';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'सभी क्रिप्टोक्यूरेंसी विज्ञापनों को अब नई \"वैश्विक (कोड XX)\" देश श्रेणी में ले जाया जा रहा है। सभी डुप्लीकेट क्रिप्टोक्यूरेंसी विज्ञापन जो केवल देश के अनुसार भिन्न हैं, हटा दिए जाएंगे $time_remaining। कृपया सुनिश्चित करें कि आपके पास प्रति मुद्रा केवल एक क्रिप्टोक्यूरेंसी विज्ञापन है, अन्यथा उस मुद्रा में सबसे हाल ही में पोस्ट किए गए विज्ञापन को छोड़कर सभी को हटा दिया जाएगा, जबकि शेष विज्ञापन को \"वैश्विक\" देश श्रेणी में ले जाया जाएगा।';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'जब आप \"सहेजें\" दबाते हैं, तो विज्ञापन का देश स्वचालित रूप से \"वैश्विक\" में अपडेट हो जाएगा।';
+
+  @override
   String get ads => 'विज्ञापन';
 
   @override
@@ -9443,8 +9451,8 @@ class I18nHi extends I18n {
   String get api_error_269 => 'पता पुस्तिका में अमान्य पता जोड़ने का प्रयास';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'उपयोगकर्ता की पता पुस्तिका में डुप्लिकेट पता जोड़ने का प्रयास किया जा रहा है';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'किसी ऐसे पते को हटाने का प्रयास करना जो उपयोगकर्ता की पता पुस्तिका में मौजूद नहीं है';
 }

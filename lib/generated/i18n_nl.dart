@@ -7538,6 +7538,14 @@ class I18nNl extends I18n {
   String get xx => 'Globaal';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle cryptocurrency-advertenties worden nu verplaatst naar de nieuwe landcategorie \"global (code XX)\". Alle dubbele cryptocurrency-advertenties die alleen per land verschillen, worden verwijderd $time_remaining. Zorg ervoor dat u slechts ÉÉN cryptocurrency-advertentie per valuta heeft, anders worden alle advertenties behalve de meest recent geplaatste advertentie in die valuta verwijderd, terwijl de resterende advertentie wordt verplaatst naar de categorie \"wereldwijd\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Wanneer u op \"Opslaan\" drukt, wordt het land van de advertentie automatisch bijgewerkt naar \"wereldwijd\".';
+
+  @override
   String get ads => 'Advertenties';
 
   @override

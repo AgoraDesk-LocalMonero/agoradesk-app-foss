@@ -23,8 +23,8 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
     required this.asset,
   }) : super(key: key);
 
-  final double? price;
-  final double? balance;
+  final double price;
+  final double balance;
   final Asset asset;
 
   @override
@@ -73,6 +73,10 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
                               final code = await presentQRScanner();
                               model.handleScannedCode(code);
                             },
+                            displayAddressBook: true,
+                            pasteAddressAction: (val) {
+                              model.ctrlAddress.text = val;
+                            },
                           ),
                         ],
                       ),
@@ -108,7 +112,7 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
               style: context.txtLabelMediumN80,
             ),
             Text(
-              (balance?.toString() ?? '') + ' ${asset.name}',
+              '$balance ${asset.name}',
               style: context.txtLabelMediumN80,
             ),
           ],

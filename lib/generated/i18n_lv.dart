@@ -7538,6 +7538,14 @@ class I18nLv extends I18n {
   String get xx => 'Globāli';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Visas kriptovalūtas reklāmas tagad tiek pārvietotas uz jauno valstu kategoriju \"globālā (kods XX)\". Visas dublētās kriptovalūtas reklāmas, kas atšķiras tikai atkarībā no valsts, tiks dzēstas $time_remaining. Lūdzu, pārliecinieties, ka katrai valūtai ir tikai VIENA kriptovalūtas reklāma, pretējā gadījumā tiks dzēsta visa reklāma, izņemot pēdējo šajā valūtā ievietoto reklāmu, bet pārējā reklāma tiks pārvietota uz \"globālo\" valstu kategoriju.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Nospiežot “Saglabāt”, reklāmas valsts tiks automātiski atjaunināta uz “globālā”.';
+
+  @override
   String get ads => 'Sludinājumi';
 
   @override
@@ -9446,5 +9454,5 @@ class I18nLv extends I18n {
   String get api_error_270 => 'Mēģinājums lietotāja adrešu grāmatai pievienot dublikātu';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Mēģinājums dzēst adresi, kas neeksistē lietotāja adrešu grāmatā';
 }

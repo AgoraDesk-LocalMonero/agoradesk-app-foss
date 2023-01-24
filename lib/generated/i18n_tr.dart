@@ -7538,6 +7538,14 @@ class I18nTr extends I18n {
   String get xx => 'küresel';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Tüm kripto para birimi reklamları artık yeni \"global (XX kodu)\" ülke kategorisine taşınıyor. Yalnızca ülkeye göre farklılık gösteren tüm yinelenen kripto para birimi reklamları silinecektir $time_remaining. Lütfen para birimi başına yalnızca BİR kripto para birimi reklamınız olduğundan emin olun, aksi takdirde söz konusu para biriminde yayınlanan en son reklam hariç tümü silinecek, geri kalan reklam ise \"küresel\" ülke kategorisine taşınacaktır.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '\"Kaydet\"e bastığınızda, reklamın bulunduğu ülke otomatik olarak \"global\" olarak güncellenecektir.';
+
+  @override
   String get ads => 'reklamlar';
 
   @override
@@ -9443,8 +9451,8 @@ class I18nTr extends I18n {
   String get api_error_269 => 'Bir adres defterine geçersiz bir adres eklemeye çalışılıyor';
 
   @override
-  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+  String get api_error_270 => 'Bir kullanıcının adres defterine yinelenen bir adres eklemeye çalışmak';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Bir kullanıcının adres defterinde olmayan bir adresi silmeye çalışmak';
 }

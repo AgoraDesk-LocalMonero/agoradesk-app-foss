@@ -7538,6 +7538,14 @@ class I18nSw extends I18n {
   String get xx => 'Ulimwenguni';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Matangazo yote ya sarafu ya crypto sasa yanahamishiwa kwenye kitengo kipya cha nchi \"kimataifa (msimbo wa XX)\". Matangazo yote ya rudufu ya sarafu ya crypto ambayo yanatofautiana kulingana na nchi pekee yatafutwa $time_remaining. Tafadhali hakikisha kuwa una tangazo MOJA tu la sarafu ya crypto kwa kila sarafu, vinginevyo matangazo yote isipokuwa tangazo lililochapishwa hivi majuzi zaidi katika sarafu hiyo yatafutwa, huku tangazo lililosalia litahamishiwa katika aina ya nchi \"ya kimataifa\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Unapobofya \"Hifadhi\", nchi ya tangazo itasasishwa kuwa \"kimataifa\" kiotomatiki.';
+
+  @override
   String get ads => 'Matangazo';
 
   @override
@@ -9446,5 +9454,5 @@ class I18nSw extends I18n {
   String get api_error_270 => 'Inajaribu kuongeza nakala ya anwani kwenye kitabu cha anwani cha mtumiaji';
 
   @override
-  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+  String get api_error_273 => 'Kujaribu kufuta anwani ambayo haipo kwenye kitabu cha anwani cha mtumiaji';
 }

@@ -106,8 +106,8 @@ class WalletAssetTile extends StatelessWidget {
                             onPressed: () => context.pushRoute(
                               SendAssetFirstRoute(
                                 asset: asset,
-                                price: model.assetPrice(asset),
-                                balance: model.balance(asset),
+                                price: model.assetPrice(asset) ?? 0,
+                                balance: model.balance(asset) ?? 0,
                               ),
                             ),
                           ),

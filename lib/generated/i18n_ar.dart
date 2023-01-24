@@ -7538,6 +7538,14 @@ class I18nAr extends I18n {
   String get xx => 'عالمي';
 
   @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'يتم الآن نقل جميع إعلانات العملة المشفرة إلى فئة البلدان الجديدة \"العالمية (الرمز XX)\". سيتم حذف جميع إعلانات العملات المشفرة المكررة التي تختلف حسب البلد فقط $time_remaining. يرجى التأكد من أن لديك إعلان عملة معماة واحد فقط لكل عملة ، وإلا فسيتم حذف جميع الإعلانات باستثناء أحدث إعلان تم نشره بهذه العملة ، بينما سيتم نقل الإعلان المتبقي إلى فئة البلد \"العالمية\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'عند الضغط على \"حفظ\" ، سيتم تحديث بلد الإعلان إلى \"عالمي\" تلقائيًا.';
+
+  @override
   String get ads => 'إعلانات';
 
   @override
