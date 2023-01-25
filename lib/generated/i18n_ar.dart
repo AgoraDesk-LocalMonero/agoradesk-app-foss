@@ -7529,6 +7529,23 @@ class I18nAr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'تم بالفعل حذف هذا العنوان من دفتر العناوين الخاص بك.';
 
   @override
+  String get address8722Sbbook => 'دليل العناوين';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'عناوين';
+
+  @override
+  String get xx => 'عالمي';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'يتم الآن نقل جميع إعلانات العملة المشفرة إلى فئة البلدان الجديدة \"العالمية (الرمز XX)\". سيتم حذف جميع إعلانات العملات المشفرة المكررة التي تختلف حسب البلد فقط $time_remaining. يرجى التأكد من أن لديك إعلان عملة معماة واحد فقط لكل عملة ، وإلا فسيتم حذف جميع الإعلانات باستثناء أحدث إعلان تم نشره بهذه العملة ، بينما سيتم نقل الإعلان المتبقي إلى فئة البلد \"العالمية\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'عند الضغط على \"حفظ\" ، سيتم تحديث بلد الإعلان إلى \"عالمي\" تلقائيًا.';
+
+  @override
   String get ads => 'إعلانات';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nAr extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'يرجى التحقق مما إذا كانت إعدادات الاتصال صحيحة أو استخدام وكيل آخر.';
+
+  @override
+  String get api_error_269 => 'محاولة إضافة عنوان غير صالح إلى دفتر العناوين';
+
+  @override
+  String get api_error_270 => 'محاولة إضافة عنوان مكرر إلى دفتر عناوين المستخدم';
+
+  @override
+  String get api_error_273 => 'محاولة حذف عنوان غير موجود في دفتر عناوين المستخدم';
 }

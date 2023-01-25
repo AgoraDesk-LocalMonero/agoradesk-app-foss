@@ -51,8 +51,8 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    GetIt.I<AppParameters>().captchaCookie1 = widget.cookie1;
-    GetIt.I<AppParameters>().captchaCookie2 = widget.cookie2;
+    // GetIt.I<AppParameters>().captchaCookie1 = widget.cookie1;
+    // GetIt.I<AppParameters>().captchaCookie2 = widget.cookie2;
     return Scaffold(
       appBar: const AgoraAppBar(),
       body: InAppWebView(
@@ -95,9 +95,9 @@ class WebViewExampleState extends State<WebviewScreen> {
           }
         },
         onLoadStop: (controller, _) async {
-          final title = await controller.getTitle() ?? '';
+          final pageBody = await controller.getHtml() ?? '';
           await _getCookies();
-          if (widget.isFromCaptchaEvent && (title.contains('LocalMonero') || title.contains('AgoraDesk'))) {
+          if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
             context.read<AppState>().sinkReloadMarket.add(true);
             Navigator.of(context).pop();
           }

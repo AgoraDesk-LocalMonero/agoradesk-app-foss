@@ -27,7 +27,7 @@ class AdsTerms extends StatelessWidget with UrlMixin {
                   style: context.txtBodyXSmallP70P40,
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
-                      openLink(GetIt.I<AppParameters>().urlPrivacy);
+                      openLink(GetIt.I<AppParameters>().urlPrivacy, token: GetIt.I<AppParameters>().accessToken);
                     },
                 ),
                 TextSpan(
@@ -39,7 +39,7 @@ class AdsTerms extends StatelessWidget with UrlMixin {
                   style: context.txtBodyXSmallP70P40,
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
-                      openLink(GetIt.I<AppParameters>().urlGuides);
+                      openLink(GetIt.I<AppParameters>().urlGuides, token: GetIt.I<AppParameters>().accessToken);
                     },
                 ),
               ],

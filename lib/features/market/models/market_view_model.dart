@@ -128,7 +128,7 @@ class MarketViewModel extends ViewModel
 
     subscriptionReload = _appState.reloadMarket.listen((bool val) {
       if (val) {
-        indicatorKey.currentState?.show();
+        _reloadScreenWithDelay();
       }
     });
     initMenus();
@@ -155,6 +155,11 @@ class MarketViewModel extends ViewModel
     if (!filterIsOpened) {
       indicatorKey.currentState?.show();
     }
+  }
+
+  Future _reloadScreenWithDelay() async {
+    await Future.delayed(const Duration(seconds: 1));
+    indicatorKey.currentState?.show();
   }
 
   void initMenus() {

@@ -7529,6 +7529,23 @@ class I18nDe extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Diese Adresse wurde bereits aus Ihrem Adressbuch gelöscht.';
 
   @override
+  String get address8722Sbbook => 'Adressbuch';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adressen';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle Kryptowährungsanzeigen werden jetzt in die neue Länderkategorie „global (Code XX)“ verschoben. Alle doppelten Kryptowährungsanzeigen, die sich nur nach Land unterscheiden, werden gelöscht $time_remaining. Bitte stellen Sie sicher, dass Sie nur EINE Kryptowährungsanzeige pro Währung haben, andernfalls werden alle bis auf die zuletzt gepostete Anzeige in dieser Währung gelöscht, während die verbleibende Anzeige in die Länderkategorie „global“ verschoben wird.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Wenn Sie auf „Speichern“ klicken, wird das Land der Anzeige automatisch auf „global“ aktualisiert.';
+
+  @override
   String get ads => 'Anzeigen';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nDe extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Bitte überprüfen Sie, ob die Verbindungseinstellungen korrekt sind oder verwenden Sie einen anderen Proxy.';
+
+  @override
+  String get api_error_269 => 'Versuch, einem Adressbuch eine ungültige Adresse hinzuzufügen';
+
+  @override
+  String get api_error_270 => 'Versuch, dem Adressbuch eines Benutzers eine doppelte Adresse hinzuzufügen';
+
+  @override
+  String get api_error_273 => 'Versuch, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
 }

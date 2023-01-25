@@ -15,6 +15,10 @@ class BeforeAppInitEvent {
   const BeforeAppInitEvent();
 }
 
+class ReloadMarketScreenEvent {
+  const ReloadMarketScreenEvent();
+}
+
 class AfterAppInitEvent {
   const AfterAppInitEvent();
 }

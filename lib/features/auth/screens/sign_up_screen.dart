@@ -86,6 +86,13 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                       model.username = input;
                                     },
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+                                    child: Text(
+                                      context.intl.login250Sbusername8722Sbtip,
+                                      style: context.txtBodySmallN70,
+                                    ),
+                                  ),
                                   const SizedBox(height: 16),
                                   TextField(
                                     decoration: context.decorationTxtFieldMain.copyWith(
@@ -110,6 +117,13 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(
                                     controller: model.ctrlPassword,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+                                    child: Text(
+                                      context.intl.password8722Sbtip,
+                                      style: context.txtBodySmallN70,
+                                    ),
                                   ),
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(
@@ -158,7 +172,8 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                                 style: context.txtBodySmallP70P40,
                                                 recognizer: TapGestureRecognizer()
                                                   ..onTap = () {
-                                                    openLink(GetIt.I<AppParameters>().urlPrivacy);
+                                                    openLink(GetIt.I<AppParameters>().urlPrivacy,
+                                                        token: GetIt.I<AppParameters>().accessToken);
                                                   },
                                               ),
                                             ],

@@ -13,12 +13,12 @@ import 'package:share_plus/share_plus.dart';
 class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
   const QrCodeDialog({
     Key? key,
-    required this.text,
+    required this.address,
     required this.asset,
     required this.onPressed,
   }) : super(key: key);
 
-  final String text;
+  final String address;
   final Asset asset;
   final VoidCallback onPressed;
 
@@ -34,7 +34,7 @@ class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
       ),
       backgroundColor: context.colSurf4SurfLight,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -42,13 +42,18 @@ class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
               context.intl.your_deposit_address(asset.title()),
               style: context.txtHead4N90,
             ),
-            const SizedBox(height: 22),
+            const SizedBox(height: 12),
+            Text(
+              address,
+              style: context.txtBodySmallN60N50,
+            ),
+            const SizedBox(height: 12),
             RepaintBoundary(
               key: _globalKey,
               child: QrImage(
                 backgroundColor: context.colSurf4SurfLight,
                 foregroundColor: context.colWhiteBlack,
-                data: text,
+                data: address,
                 embeddedImage: AssetImage(GetIt.I<AppParameters>().appLogo),
                 embeddedImageStyle: QrEmbeddedImageStyle(
                   size: const Size(60, 60),
@@ -58,7 +63,7 @@ class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
                 size: 260,
               ),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
               child: Row(
@@ -73,7 +78,7 @@ class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
                         await Share.shareFiles(
                           [res],
                           mimeTypes: ["image/png"],
-                          text: context.intl.your_deposit_address(asset.title()) + '   ' + text,
+                          text: context.intl.your_deposit_address(asset.title()) + '   ' + address,
                         );
                       }
                     },

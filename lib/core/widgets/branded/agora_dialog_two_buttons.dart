@@ -13,6 +13,7 @@ class AgoraDialogTwoButtons extends StatelessWidget {
     this.mainActionLoading = false,
     required this.secondAction,
     required this.secondActionText,
+    this.innerPadding = const EdgeInsets.all(24),
   }) : super(key: key);
 
   final String? title;
@@ -23,52 +24,55 @@ class AgoraDialogTwoButtons extends StatelessWidget {
   final bool mainActionLoading;
   final String secondActionText;
   final VoidCallback secondAction;
+  final EdgeInsets innerPadding;
 
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      insetPadding: const EdgeInsets.all(16),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(24),
+    return IntrinsicHeight(
+      child: Dialog(
+        insetPadding: const EdgeInsets.all(16),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(24),
+          ),
         ),
-      ),
-      backgroundColor: context.colS4,
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            title != null
-                ? Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-                    child: Text(
-                      title!,
-                      style: context.txtHead4N90,
-                    ),
-                  )
-                : const SizedBox(),
-            body,
-            const SizedBox(height: 22),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                ButtonLink(
-                  title: secondActionText,
-                  onPressed: secondAction,
-                ),
-                const SizedBox(width: 20),
-                ButtonLink(
-                  title: mainActionText,
-                  onPressed: mainAction,
-                  isActive: mainActionActive,
-                  loading: mainActionLoading,
-                ),
-              ],
-            )
-          ],
+        backgroundColor: context.colS4,
+        child: Padding(
+          padding: innerPadding,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              title != null
+                  ? Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                      child: Text(
+                        title!,
+                        style: context.txtHead4N90,
+                      ),
+                    )
+                  : const SizedBox(),
+              body,
+              const SizedBox(height: 22),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ButtonLink(
+                    title: secondActionText,
+                    onPressed: secondAction,
+                  ),
+                  const SizedBox(width: 20),
+                  ButtonLink(
+                    title: mainActionText,
+                    onPressed: mainAction,
+                    isActive: mainActionActive,
+                    loading: mainActionLoading,
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

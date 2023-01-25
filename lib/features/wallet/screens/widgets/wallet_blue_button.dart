@@ -9,21 +9,24 @@ class WalletBlueButton extends StatelessWidget {
     required this.onPressed,
     required this.iconData,
     this.loading = false,
+    this.shrinkWrap = false,
   }) : super(key: key);
 
   final IconData iconData;
   final String title;
   final VoidCallback onPressed;
   final bool loading;
+  final bool shrinkWrap;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        maximumSize: const Size(100, 30),
+        maximumSize: const Size(160, 30),
         minimumSize: const Size(100, 30),
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        tapTargetSize: shrinkWrap ? MaterialTapTargetSize.shrinkWrap : null,
         primary: Theme.of(context).colorScheme.tonalP90,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -32,7 +35,7 @@ class WalletBlueButton extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 7, 10, 7),
+        padding: const EdgeInsets.fromLTRB(14, 7, 14, 7),
         child: loading
             ? const Center(
                 child: CupertinoActivityIndicator(),

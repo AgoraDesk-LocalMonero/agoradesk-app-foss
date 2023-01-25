@@ -7529,6 +7529,23 @@ class I18nRo extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Această adresă a fost deja ștearsă din agenda dvs. de adrese.';
 
   @override
+  String get address8722Sbbook => 'Carte de adrese';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adrese';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Toate anunțurile pentru criptomonede sunt acum mutate în noua categorie de țară „global (cod XX)”. Toate anunțurile duplicate în criptomonede care diferă numai în funcție de țară vor fi șterse $time_remaining. Vă rugăm să asigurați-vă că aveți doar UN anunț de criptomonedă pentru fiecare monedă, altfel toate, cu excepția celui mai recent postat anunț în moneda respectivă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară „globală”.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Când apăsați „Salvați”, țara anunțului va fi actualizată automat la „global”.';
+
+  @override
   String get ads => 'Reclame';
 
   @override
@@ -9428,5 +9445,14 @@ class I18nRo extends I18n {
   String get app_proxy_unavailable => 'Proxy indisponibil';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'Verificați dacă setările de conexiune sunt corecte sau utilizați un alt proxy.';
+
+  @override
+  String get api_error_269 => 'Încercarea de a adăuga o adresă nevalidă într-o agendă de adrese';
+
+  @override
+  String get api_error_270 => 'Încercarea de a adăuga o adresă duplicată în agenda unui utilizator';
+
+  @override
+  String get api_error_273 => 'Încercarea de a șterge o adresă care nu există în agenda unui utilizator';
 }

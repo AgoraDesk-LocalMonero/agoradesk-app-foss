@@ -192,6 +192,10 @@ class AppParameters {
       'name': 'Slovenian',
       'origName': 'Slovenščina',
     },
+    'sv': {
+      'name': 'Swedish',
+      'origName': 'Svenska',
+    },
     'sw': {
       'name': 'Swahili',
       'origName': 'Kiswahili',
@@ -226,6 +230,7 @@ class AppParameters {
   String? openedTradeId;
   bool isGoogleAvailable = true;
   String? tradeId;
+  String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
 }
