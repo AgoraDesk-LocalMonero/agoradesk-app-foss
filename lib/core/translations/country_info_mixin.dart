@@ -1578,6 +1578,7 @@ mixin CountryInfoMixin {
       "MF": "Saint Martin",
       "RS": "Serbia",
       "SX": "Sint Maarten",
+      "XX": "Global",
       "SS": "South Sudan"
     },
     "es": {
@@ -1830,6 +1831,7 @@ mixin CountryInfoMixin {
       "MF": "Saint Martin (francesa)",
       "RS": "Serbia",
       "SX": "Sint Maarten (neerlandesa)",
+      "XX": "Global",
       "SS": "Sudán del Sur"
     },
     "it": {
@@ -2082,6 +2084,7 @@ mixin CountryInfoMixin {
       "YT": "Mayotte",
       "ZA": "Sudafrica",
       "ZM": "Zambia",
+      "XX": "Global",
       "ZW": "Zimbabwe"
     },
     "ko": {
@@ -2334,6 +2337,7 @@ mixin CountryInfoMixin {
       "PN": "\ud54f\ucf00\uc5b8 \uc12c",
       "HM": "\ud5c8\ub4dc \ub9e5\ub3c4\ub110\ub4dc \uc81c\ub3c4",
       "HU": "\ud5dd\uac00\ub9ac",
+      "XX": "Global",
       "HK": "\ud64d\ucf69(\uc911\uad6d \ud2b9\ubcc4\ud589\uc815\uad6c)"
     },
     "pt": {
@@ -2586,6 +2590,7 @@ mixin CountryInfoMixin {
       "VN": "Vietnã",
       "WF": "Wallis e Futuna",
       "ZM": "Zâmbia",
+      "XX": "Global",
       "ZW": "Zimbábue"
     },
     "ru": {
@@ -2838,6 +2843,7 @@ mixin CountryInfoMixin {
       "GS": "Южная Георгия и Южные Сандвичевы Острова",
       "SS": "Южный Судан",
       "JM": "Ямайка",
+      "XX": "Global",
       "JP": "Япония"
     },
     "zh": {
@@ -3090,6 +3096,7 @@ mixin CountryInfoMixin {
       "YT": "马约特",
       "ZA": "南非",
       "ZM": "尚比亚",
+      "XX": "Global",
       "ZW": "辛巴威"
     }
   };
