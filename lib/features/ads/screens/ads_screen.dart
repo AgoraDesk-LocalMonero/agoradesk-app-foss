@@ -214,11 +214,13 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
 
                       if (index < model.ads.length + 1) {
                         if (index == 0) {
-                          return GlobalWarningAds(
-                            padding: EdgeInsets.zero,
-                            text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
-                                'February 1, 2023 4PM UTC Timezone'),
-                          );
+                          return model.displayWarning
+                              ? GlobalWarningAds(
+                                  padding: EdgeInsets.zero,
+                                  text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
+                                      'February 1, 2023 4PM UTC Timezone'),
+                                )
+                              : const SizedBox();
                         }
                         final ad = model.ads[index - 1];
 
