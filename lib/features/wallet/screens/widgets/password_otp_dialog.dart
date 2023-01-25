@@ -71,6 +71,7 @@ class PasswordOtpDialog extends StatelessWidget {
                       decoration: context.decorationTxtFieldMain.copyWith(
                         hintText: context.intl.otp8722Sbtitle8722Sb0,
                       ),
+                      keyboardType: TextInputType.number,
                     ),
                     const SizedBox(height: 2),
                     Text(

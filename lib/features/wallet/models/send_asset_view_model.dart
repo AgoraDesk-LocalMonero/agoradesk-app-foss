@@ -283,23 +283,11 @@ class SendAssetViewModel extends ViewModel
     }
   }
 
-  // void makeTransfer() async {
-  //   final res = await context.pushRoute(PinCodeCheckRoute(onResult: (_) {}));
-  //
-  //   if (res == true) {}
-  // }
-
-  // Future _cursorToEnd() async {
-  //   await Future.delayed(const Duration(milliseconds: 0));
-  //   ctrlAsset.selection = TextSelection.fromPosition(TextPosition(offset: ctrlAsset.text.length));
-  //   ctrlFiat.selection = TextSelection.fromPosition(TextPosition(offset: ctrlFiat.text.length));
-  // }
-
   void sendAllFill() {
     assetAmount = (balance ?? 0);
     fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
     _updateControllersValues();
-    // _cursorToEnd();
+    readyToStep3 = true;
   }
 
   Future sendAsset() async {
@@ -339,6 +327,8 @@ class SendAssetViewModel extends ViewModel
           asset: asset,
           sendAssetModel: sendAssetModel,
         );
+
+        ctrlOtp.clear();
 
         sendingAsset = false;
         if (res.isRight) {
