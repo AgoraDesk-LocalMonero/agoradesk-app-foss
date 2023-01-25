@@ -332,7 +332,7 @@ class SendAssetViewModel extends ViewModel
           amount: assetAmountToReceive,
           password: ctrlPassword.text,
           feeLevel: btcFeesEnum,
-          otp: ctrlOtp.text.isEmpty ? null : int.tryParse(ctrlOtp.text),
+          otp: ctrlOtp.text.isEmpty ? null : ctrlOtp.text,
         );
 
         final res = await _walletService.walletSend(
