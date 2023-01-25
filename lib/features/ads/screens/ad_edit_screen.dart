@@ -162,23 +162,7 @@ class _AdEditScreenState extends State<AdEditScreen>
               value: model.adEdits!.visible ?? false,
               onChanged: model.updateVisible,
             ),
-            const SizedBox(height: 12),
-            Text(
-              context.intl.post8722Sbad250Sbcountry250Sbtitle,
-              style: context.txtBodySmallN60,
-            ),
-            const SizedBox(height: 8),
-            onlineTradeTypes.contains(model.tradeType)
-                ? DropdownSearch<String>(
-                    dropdownDecoratorProps: context.dropdownDecoration,
-                    popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
-                    itemAsString: (String? code) => getCountryName(code ?? ''),
-                    asyncItems: (String? filter) => model.getCountryCodes(),
-                    // showSearchBox: true,
-                    selectedItem: model.selectedCountryCode,
-                    onChanged: (val) => model.setSelectedCountryCode(val),
-                  )
-                : SearchLocation(model: model),
+            _buildCountrySelection(context, model),
             const SizedBox(height: 12),
             Text(
               context.intl.post8722Sbad250Sbcurrency250Sbtitle,
@@ -231,6 +215,34 @@ class _AdEditScreenState extends State<AdEditScreen>
                 selectedItem: model.selectedOnlineProvider,
                 onChanged: (val) => model.updateOnlineProvider(val),
               ),
+      ],
+    );
+  }
+
+  Widget _buildCountrySelection(BuildContext context, AddEditAdViewModel model) {
+    if (model.selectedCountryCode == 'XX') {
+      return const SizedBox();
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 12),
+        Text(
+          context.intl.post8722Sbad250Sbcountry250Sbtitle,
+          style: context.txtBodySmallN60,
+        ),
+        const SizedBox(height: 8),
+        onlineTradeTypes.contains(model.tradeType)
+            ? DropdownSearch<String>(
+                dropdownDecoratorProps: context.dropdownDecoration,
+                popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                itemAsString: (String? code) => getCountryName(code ?? ''),
+                asyncItems: (String? filter) => model.getCountryCodes(),
+                // showSearchBox: true,
+                selectedItem: model.selectedCountryCode,
+                onChanged: (val) => model.setSelectedCountryCode(val),
+              )
+            : SearchLocation(model: model),
       ],
     );
   }

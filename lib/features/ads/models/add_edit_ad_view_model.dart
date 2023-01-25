@@ -526,6 +526,12 @@ class AddEditAdViewModel extends ViewModel
 
   void updateOnlineProvider(OnlineProvider? val) {
     selectedOnlineProvider = val;
+    print('+++++++++++++++++++++++++++++++++++++11 - ${selectedOnlineProvider?.code}');
+    if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
+      selectedCountryCode = 'XX';
+    } else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
+      selectedCountryCode = 'ANY';
+    }
     notifyListeners();
   }
 

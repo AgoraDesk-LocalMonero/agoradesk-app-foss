@@ -17,6 +17,7 @@ import 'package:agoradesk/core/widgets/branded/button_text_primary70.dart';
 import 'package:agoradesk/core/widgets/branded/container_info_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/dropdown_button_sized.dart';
+import 'package:agoradesk/core/widgets/branded/global_warning_ads.dart';
 import 'package:agoradesk/core/widgets/branded/header_shadow.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
@@ -114,6 +115,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             padding: kScreenPadding,
                             child: _buildvacationWarning(context, model),
                           ),
+                          const GlobalWarningAds(),
                           model.isBulkActionsMode
                               ? _buildFilterBulkActions(context, model)
                               : _buildTopFilter(context, model),

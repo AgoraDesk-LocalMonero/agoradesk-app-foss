@@ -183,4 +183,17 @@ mixin DateMixin {
     }
     return date.toIso8601String();
   }
+
+  ///
+  /// Returns how many time left to the point in the future
+  ///
+  String? timeLeftFromNow({required int futureTimeStamp}) {
+    final nowTimeStamp = DateTime.now().millisecondsSinceEpoch;
+    final diff = futureTimeStamp - nowTimeStamp;
+    if (diff <= 0) {
+      return null;
+    } else {
+      return diff.toString();
+    }
+  }
 }
