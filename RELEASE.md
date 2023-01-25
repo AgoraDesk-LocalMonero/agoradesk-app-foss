@@ -1,7 +1,7 @@
 ### Updates
-1. Hotfix: proxy wrong state on the appbar.
-2. Hotfix: Captcha on login process. 
-3. Hotfix: imperva captcha bug.
+1. New feature: address book for wallets.
+2. Ads group selection in one click.
+3. Fixed Chinese translation.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
