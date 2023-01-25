@@ -94,7 +94,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final List<AdModel> ads = [];
   final List<String> selectedAdIds = [];
 
-  // final List<AdModel> filteredAds = [];
   bool _init = false;
 
   bool _loadingAds = false;
@@ -269,6 +268,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   void manageTooltipReady(VisibilityInfo info) {
     if (info.visibleFraction > 0.95) {
       visibleForTooltip = true;
+      displayTooltips(ads.length);
     } else {
       visibleForTooltip = false;
     }
@@ -500,7 +500,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
           // filteredAds.clear();
         }
         ads.addAll(res.right.data);
-        displayTooltips(ads.length);
+
         // filteredAds.addAll(res.right);
       } else {
         handleApiError(res.left, context);

@@ -221,12 +221,11 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                           );
                         }
                         final ad = model.ads[index - 1];
+
                         return VisibilityDetector(
                           key: UniqueKey(),
                           onVisibilityChanged: (VisibilityInfo info) {
-                            if (index == 1) {
-                              model.manageTooltipReady(info);
-                            }
+                            model.manageTooltipReady(info);
                           },
                           child: AdTile(
                             ad: ad,
@@ -239,8 +238,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                 : model.managePressToAd(ad, context),
                             onLongPress: () => model.handleLongPressToAd(ad),
                             onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                            tooltipController: index == 0 ? model.tooltipEyeController : null,
-                            tooltipPressController: index == 1 ? model.tooltipPressController : null,
+                            tooltipController: index == 1 ? model.tooltipEyeController : null,
+                            tooltipPressController: index == 2 ? model.tooltipPressController : null,
                           ),
                         );
                       } else {
