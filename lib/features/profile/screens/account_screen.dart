@@ -10,7 +10,6 @@ import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_tonal.dart';
-import 'package:agoradesk/core/widgets/branded/global_warning_ads.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
 import 'package:agoradesk/features/market/screens/widgets/line_icon_link.dart';
@@ -56,9 +55,11 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const GlobalWarningAds(
-                            padding: EdgeInsets.all(0),
-                          ),
+                          // GlobalWarningAds(
+                          //   padding: const EdgeInsets.all(0),
+                          //   text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
+                          //       'February 1, 2023 4PM UTC Timezone'),
+                          // ),
                           LineIconLink(
                             title: context.intl.left8722Sbdrawer250Sbsupport,
                             iconData: AgoraFont.support,

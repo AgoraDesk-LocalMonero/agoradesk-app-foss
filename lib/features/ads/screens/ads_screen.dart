@@ -115,7 +115,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             padding: kScreenPadding,
                             child: _buildvacationWarning(context, model),
                           ),
-                          const GlobalWarningAds(),
+                          GlobalWarningAds(
+                            text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
+                                'February 1, 2023 4PM UTC Timezone'),
+                          ),
                           model.isBulkActionsMode
                               ? _buildFilterBulkActions(context, model)
                               : _buildTopFilter(context, model),

@@ -16,6 +16,7 @@ import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
 import 'package:agoradesk/core/widgets/branded/cash_textfield.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
+import 'package:agoradesk/core/widgets/branded/global_warning_ads.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
@@ -122,6 +123,13 @@ class _AdEditScreenState extends State<AdEditScreen>
                           ],
                         ),
                         const SizedBox(height: 16),
+                        model.displayWarning()
+                            ? GlobalWarningAds(
+                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                text: context.intl
+                                    .edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad,
+                              )
+                            : const SizedBox(),
                         _buildFirstTile(context, model),
                         const SizedBox(height: 16),
                         _buildSecondTile(context, model),

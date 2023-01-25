@@ -7,9 +7,11 @@ class GlobalWarningAds extends StatelessWidget with DateMixin {
   const GlobalWarningAds({
     Key? key,
     this.padding = const EdgeInsets.fromLTRB(16, 8, 16, 0),
+    required this.text,
   }) : super(key: key);
 
   final EdgeInsets padding;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +31,7 @@ class GlobalWarningAds extends StatelessWidget with DateMixin {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
-                        'February 1, 2023 4PM UTC Timezone'),
+                    text,
                     style: context.txtBodyXSmallN80,
                   ),
                 ],
