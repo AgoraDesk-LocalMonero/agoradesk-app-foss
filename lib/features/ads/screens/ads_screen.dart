@@ -115,10 +115,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             padding: kScreenPadding,
                             child: _buildvacationWarning(context, model),
                           ),
-                          GlobalWarningAds(
-                            text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
-                                'February 1, 2023 4PM UTC Timezone'),
-                          ),
                           model.isBulkActionsMode
                               ? _buildFilterBulkActions(context, model)
                               : _buildTopFilter(context, model),
@@ -201,8 +197,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 return Padding(
                   padding: kScreenPadding,
                   child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: model.ads.isEmpty ? 1 : model.ads.length + 1,
+                    itemCount: model.ads.isEmpty ? 1 : model.ads.length + 2,
                     itemBuilder: (context, index) {
                       if (model.ads.isEmpty) {
                         if (model.loadingAds) {
@@ -217,8 +212,15 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                         );
                       }
 
-                      if (index < model.ads.length) {
-                        final ad = model.ads[index];
+                      if (index < model.ads.length + 1) {
+                        if (index == 0) {
+                          return GlobalWarningAds(
+                            padding: EdgeInsets.zero,
+                            text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
+                                'February 1, 2023 4PM UTC Timezone'),
+                          );
+                        }
+                        final ad = model.ads[index - 1];
                         return VisibilityDetector(
                           key: UniqueKey(),
                           onVisibilityChanged: (VisibilityInfo info) {
