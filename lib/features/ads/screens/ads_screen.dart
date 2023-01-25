@@ -234,7 +234,9 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             changingIndex: model.changingAdIndex,
                             changingVisibility: model.changingVisibility,
                             isSelected: model.isAdSelected(ad),
-                            onPressed: () => model.managePressToAd(ad, context),
+                            onPressed: () => model.isBulkActionsMode
+                                ? model.handleLongPressToAd(ad)
+                                : model.managePressToAd(ad, context),
                             onLongPress: () => model.handleLongPressToAd(ad),
                             onVisiblePressed: () => model.changeAdVisibility(ad, index),
                             tooltipController: index == 0 ? model.tooltipEyeController : null,
@@ -269,71 +271,74 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
   }
 
   Widget _buildFilterBulkActions(BuildContext context, AdsViewModel model) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          context.intl.dashboard250Sbads250Sbbulk8722Sbedit250Sbsetting8722Sbselect250Sblabel,
-          style: context.txtBodyXXSmallN60N50,
-        ),
-        const SizedBox(height: 8),
-        SizedBox(
-          width: double.infinity,
-          child: DropdownButtonSized(
-            child: DropdownButton<AgoraMenuItem>(
-              dropdownColor: context.colS3,
-              value: model.dropdownValue,
-              items: model.bulkMenu.map((value) {
-                return DropdownMenuItem<AgoraMenuItem>(
-                  enabled: model.bulkActionEnabled(value),
-                  value: value,
-                  child: value.code != 'separator'
-                      ? Text(
-                          value.name,
-                          style: model.bulkActionEnabled(value)
-                              ? context.txtBodyMediumN90N10
-                              : context.txtBodyMediumN30N80,
-                        )
-                      : _DropdownMenuItemSeparator(
-                          name: value.name,
-                          context: context,
-                        ),
-                );
-              }).toList(),
-              onChanged: (val) {
-                model.changeDropDownValue(val);
-              },
-            ),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            context.intl.dashboard250Sbads250Sbbulk8722Sbedit250Sbsetting8722Sbselect250Sblabel,
+            style: context.txtBodyXXSmallN60N50,
           ),
-        ),
-        const SizedBox(height: 8),
-        _buildBulkAction(context, model),
-        const SizedBox(height: 8),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: 160,
-              child: ButtonOutlinedP80(
-                title: context.intl.app_clear,
-                onPressed: model.bulkClear,
-              ),
-            ),
-            SizedBox(
-              width: 160,
-              child: ButtonFilledP80(
-                title: context.intl.apply,
-                loading: model.applyingChanges,
-                onPressed: () {
-                  model.applyBulkChanges();
-                  FocusScope.of(context).unfocus();
+          const SizedBox(height: 8),
+          SizedBox(
+            width: double.infinity,
+            child: DropdownButtonSized(
+              child: DropdownButton<AgoraMenuItem>(
+                dropdownColor: context.colS3,
+                value: model.dropdownValue,
+                items: model.bulkMenu.map((value) {
+                  return DropdownMenuItem<AgoraMenuItem>(
+                    enabled: model.bulkActionEnabled(value),
+                    value: value,
+                    child: value.code != 'separator'
+                        ? Text(
+                            value.name,
+                            style: model.bulkActionEnabled(value)
+                                ? context.txtBodyMediumN90N10
+                                : context.txtBodyMediumN30N80,
+                          )
+                        : _DropdownMenuItemSeparator(
+                            name: value.name,
+                            context: context,
+                          ),
+                  );
+                }).toList(),
+                onChanged: (val) {
+                  model.changeDropDownValue(val);
                 },
               ),
             ),
-          ],
-        ),
-        const SizedBox(height: 12),
-      ],
+          ),
+          const SizedBox(height: 8),
+          _buildBulkAction(context, model),
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                width: 160,
+                child: ButtonOutlinedP80(
+                  title: context.intl.app_clear,
+                  onPressed: model.bulkClear,
+                ),
+              ),
+              SizedBox(
+                width: 160,
+                child: ButtonFilledP80(
+                  title: context.intl.apply,
+                  loading: model.applyingChanges,
+                  onPressed: () {
+                    model.applyBulkChanges();
+                    FocusScope.of(context).unfocus();
+                  },
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+        ],
+      ),
     );
   }
 
