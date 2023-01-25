@@ -1,18 +1,10 @@
-import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
-import 'package:agoradesk/core/widgets/branded/agora_dialog_two_buttons.dart';
 import 'package:agoradesk/features/account/data/models/address_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
-import 'package:agoradesk/features/market/screens/widgets/address_to_paste_tile.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
-import 'package:agoradesk/router.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:vm/vm.dart';
 
 class SendAssetTextFieldViewModel extends ViewModel with StringMixin, ClipboardMixin, ErrorParseMixin {
@@ -51,78 +43,78 @@ class SendAssetTextFieldViewModel extends ViewModel with StringMixin, ClipboardM
     }
   }
 
-  void addressBookDisplay(BuildContext context) {
-    showDialog(
-      barrierDismissible: true,
-      context: context,
-      builder: (_) => ViewModelBuilder<SendAssetTextFieldViewModel>(
-          model: SendAssetTextFieldViewModel(
-            accountService: context.read<AccountService>(),
-            asset: asset,
-            pasteAddressAction: pasteAddressAction,
-          ),
-          disposable: false,
-          builder: (context, model, child) {
-            return AgoraDialogTwoButtons(
-              body: ConstrainedBox(
-                constraints: BoxConstraints(
-                  minHeight: 200,
-                  maxHeight: MediaQuery.of(context).size.height - 180,
-                ),
-                child: _buildAdresses(context),
-              ),
-              mainAction: () {
-                context.pushRoute(AddAddressRoute(asset: asset));
-                Navigator.of(context).pop();
-              },
-              mainActionText: context.intl.address8722Sbbook250Sbadd8722Sbnew8722Sbbtn,
-              secondAction: () => Navigator.of(context).pop(),
-              secondActionText: context.intl.cancel,
-              innerPadding: const EdgeInsets.fromLTRB(12, 24, 12, 18),
-            );
-          }),
-    );
-  }
+  // void addressBookDisplay(BuildContext context) {
+  //   showDialog(
+  //     barrierDismissible: true,
+  //     context: context,
+  //     builder: (_) => ViewModelBuilder<SendAssetTextFieldViewModel>(
+  //         model: SendAssetTextFieldViewModel(
+  //           accountService: context.read<AccountService>(),
+  //           asset: asset,
+  //           pasteAddressAction: pasteAddressAction,
+  //         ),
+  //         disposable: false,
+  //         builder: (context, model, child) {
+  //           return AgoraDialogTwoButtons(
+  //             body: ConstrainedBox(
+  //               constraints: BoxConstraints(
+  //                 minHeight: 200,
+  //                 maxHeight: MediaQuery.of(context).size.height - 180,
+  //               ),
+  //               child: _buildAdresses(context),
+  //             ),
+  //             mainAction: () {
+  //               context.pushRoute(AddAddressRoute(asset: asset));
+  //               Navigator.of(context).pop();
+  //             },
+  //             mainActionText: context.intl.address8722Sbbook250Sbadd8722Sbnew8722Sbbtn,
+  //             secondAction: () => Navigator.of(context).pop(),
+  //             secondActionText: context.intl.cancel,
+  //             innerPadding: const EdgeInsets.fromLTRB(12, 24, 12, 18),
+  //           );
+  //         }),
+  //   );
+  // }
 
-  Widget _buildAdresses(BuildContext context) {
-    if (loading) {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: const [
-          CupertinoActivityIndicator(),
-        ],
-      );
-    }
-    if (addresses.isEmpty) {
-      return Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-        child: Text(
-          context.intl.address8722Sbbook250Sbdescription,
-          style: context.txtBodyXSmallN80,
-          textAlign: TextAlign.center,
-        ),
-      );
-    }
-    return ListView.separated(
-      padding: EdgeInsets.zero,
-      shrinkWrap: true,
-      itemCount: addresses.length,
-      itemBuilder: (context, index) {
-        final a = addresses[index];
-        return AddressToPasteTile(
-          addressModel: a,
-          onPressedPaste: () {
-            pasteAddressAction(a.address);
-            Navigator.of(context).pop();
-          },
-        );
-      },
-      separatorBuilder: (context, index) {
-        return const SizedBox(height: 8);
-      },
-    );
-  }
+  // Widget _buildAdresses(BuildContext context) {
+  //   if (loading) {
+  //     return Row(
+  //       mainAxisAlignment: MainAxisAlignment.center,
+  //       mainAxisSize: MainAxisSize.max,
+  //       children: const [
+  //         CupertinoActivityIndicator(),
+  //       ],
+  //     );
+  //   }
+  //   if (addresses.isEmpty) {
+  //     return Padding(
+  //       padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+  //       child: Text(
+  //         context.intl.address8722Sbbook250Sbdescription,
+  //         style: context.txtBodyXSmallN80,
+  //         textAlign: TextAlign.center,
+  //       ),
+  //     );
+  //   }
+  //   return ListView.separated(
+  //     padding: EdgeInsets.zero,
+  //     shrinkWrap: true,
+  //     itemCount: addresses.length,
+  //     itemBuilder: (context, index) {
+  //       final a = addresses[index];
+  //       return AddressToPasteTile(
+  //         addressModel: a,
+  //         onPressedPaste: () {
+  //           pasteAddressAction(a.address);
+  //           Navigator.of(context).pop();
+  //         },
+  //       );
+  //     },
+  //     separatorBuilder: (context, index) {
+  //       return const SizedBox(height: 8);
+  //     },
+  //   );
+  // }
 
   void updateWith({
     bool? loading,

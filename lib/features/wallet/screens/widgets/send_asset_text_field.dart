@@ -4,6 +4,8 @@ import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/models/send_asset_text_field_view_model.dart';
+import 'package:agoradesk/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
@@ -97,7 +99,11 @@ class SendAssetTextField extends StatelessWidget {
                                 child: ButtonSquareIcon(
                                   iconData: CupertinoIcons.book,
                                   label: context.intl.address8722Sbbook,
-                                  onPressed: () => model.addressBookDisplay(context),
+                                  onPressed: () => context.pushRoute(
+                                    SendAssetAddressBookRoute(
+                                      model: model,
+                                    ),
+                                  ),
                                 ),
                               )
                             : const SizedBox(),

@@ -127,7 +127,7 @@ class WalletAssetTile extends StatelessWidget {
                             iconData: CupertinoIcons.book,
                             shrinkWrap: true,
                             onPressed: () => context.pushRoute(
-                              AddressBookRoute(asset: Asset.XMR),
+                              AddressBookRoute(asset: asset),
                             ),
                           ),
                           // WalletBlueButton(
