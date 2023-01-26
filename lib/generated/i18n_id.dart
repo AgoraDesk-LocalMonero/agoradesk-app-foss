@@ -7529,6 +7529,23 @@ class I18nId extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Alamat ini telah dihapus dari buku alamat Anda.';
 
   @override
+  String get address8722Sbbook => 'Buku alamat';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Alamat';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Semua iklan mata uang kripto sekarang dipindahkan ke kategori negara \"global (kode XX)\" yang baru. Semua iklan mata uang kripto rangkap yang hanya berbeda menurut negara akan dihapus $time_remaining. Harap pastikan Anda hanya memiliki SATU iklan mata uang kripto per mata uang, jika tidak, semua kecuali iklan yang terakhir diposting dalam mata uang tersebut akan dihapus, sedangkan iklan lainnya akan dipindahkan ke kategori negara \"global\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Saat Anda menekan \"Simpan\", negara iklan akan diperbarui ke \"global\" secara otomatis.';
+
+  @override
   String get ads => 'Iklan';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nId extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Silakan periksa apakah pengaturan koneksi sudah benar atau gunakan proxy lain.';
+
+  @override
+  String get api_error_269 => 'Mencoba menambahkan alamat yang tidak valid ke buku alamat';
+
+  @override
+  String get api_error_270 => 'Mencoba menambahkan alamat duplikat ke buku alamat pengguna';
+
+  @override
+  String get api_error_273 => 'Mencoba menghapus alamat yang tidak ada di buku alamat pengguna';
 }

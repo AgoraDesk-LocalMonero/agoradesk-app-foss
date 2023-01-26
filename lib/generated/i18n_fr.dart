@@ -7529,6 +7529,23 @@ class I18nFr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Cette adresse a déjà été supprimée de votre carnet d\'adresses.';
 
   @override
+  String get address8722Sbbook => 'Carnet d\'adresses';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresses';
+
+  @override
+  String get xx => 'Mondial';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Toutes les annonces de crypto-monnaie sont désormais déplacées vers la nouvelle catégorie de pays \"global (code XX)\". Toutes les annonces de crypto-monnaie en double qui ne diffèrent que par pays seront supprimées $time_remaining. Veuillez vous assurer que vous n\'avez qu\'UNE seule annonce de crypto-monnaie par devise, sinon toutes les annonces publiées dans cette devise sauf la plus récente seront supprimées, tandis que l\'annonce restante sera déplacée dans la catégorie de pays \"globale\".';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Lorsque vous appuyez sur \"Enregistrer\", le pays de l\'annonce sera automatiquement mis à jour sur \"mondial\".';
+
+  @override
   String get ads => 'Annonces';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nFr extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Veuillez vérifier si les paramètres de connexion sont corrects ou utilisez un autre proxy.';
+
+  @override
+  String get api_error_269 => 'Tentative d\'ajout d\'une adresse invalide à un carnet d\'adresses';
+
+  @override
+  String get api_error_270 => 'Tentative d\'ajout d\'une adresse en double au carnet d\'adresses d\'un utilisateur';
+
+  @override
+  String get api_error_273 => 'Tentative de suppression d\'une adresse qui n\'existe pas dans le carnet d\'adresses d\'un utilisateur';
 }

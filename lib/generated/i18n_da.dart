@@ -7529,6 +7529,23 @@ class I18nDa extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Denne adresse er allerede blevet slettet fra din adressebog.';
 
   @override
+  String get address8722Sbbook => 'Adressebog';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresser';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle cryptocurrency-annoncer bliver nu flyttet til den nye \"globale (kode XX)\" landekategori. Alle duplikerede cryptocurrency-annoncer, der kun adskiller sig fra land til land, slettes $time_remaining. Sørg for, at du kun har ÉN annonce for kryptovaluta pr. valuta, ellers vil alle undtagen den senest opslåede annonce i den valuta blive slettet, mens den resterende annonce flyttes til en \"global\" landekategori.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Når du trykker på \"Gem\", vil annoncens land automatisk blive opdateret til \"global\".';
+
+  @override
   String get ads => 'Annoncer';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nDa extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Kontroller, om forbindelsesindstillingerne er korrekte, eller brug en anden proxy.';
+
+  @override
+  String get api_error_269 => 'Forsøg på at tilføje en ugyldig adresse til en adressebog';
+
+  @override
+  String get api_error_270 => 'Forsøg på at tilføje en dubletadresse til en brugers adressebog';
+
+  @override
+  String get api_error_273 => 'Forsøg på at slette en adresse, der ikke findes i en brugers adressebog';
 }

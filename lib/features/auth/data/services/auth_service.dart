@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
@@ -14,6 +15,7 @@ import 'package:agoradesk/features/profile/data/models/confirmation_email_reques
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:get_it/get_it.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
@@ -54,6 +56,7 @@ class AuthService with FileUtilsMixin {
   /// TODO: check expires_in
   ///
   Future<void> init() async {
+    GetIt.I<AppParameters>().accessToken = _api.accessToken;
     if (_api.accessToken != null && _api.accessToken!.isNotEmpty) {
       authState = AuthState.loggedIn;
     }
@@ -313,6 +316,7 @@ class AuthService with FileUtilsMixin {
     await AppSharedPrefs().clear();
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
+    GetIt.I<AppParameters>().accessToken = null;
     _appState.hasPinCode = false;
     return true;
   }
@@ -347,6 +351,7 @@ class AuthService with FileUtilsMixin {
       // return;
     }
     _api.accessToken = token;
+    GetIt.I<AppParameters>().accessToken = token;
     if (token != null) {
       await _secureStorage.write(SecureStorageKey.token, token);
     }

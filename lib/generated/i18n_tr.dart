@@ -7529,6 +7529,23 @@ class I18nTr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Bu adres zaten adres defterinizden silinmiş.';
 
   @override
+  String get address8722Sbbook => 'Adres defteri';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'adresler';
+
+  @override
+  String get xx => 'küresel';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Tüm kripto para birimi reklamları artık yeni \"global (XX kodu)\" ülke kategorisine taşınıyor. Yalnızca ülkeye göre farklılık gösteren tüm yinelenen kripto para birimi reklamları silinecektir $time_remaining. Lütfen para birimi başına yalnızca BİR kripto para birimi reklamınız olduğundan emin olun, aksi takdirde söz konusu para biriminde yayınlanan en son reklam hariç tümü silinecek, geri kalan reklam ise \"küresel\" ülke kategorisine taşınacaktır.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '\"Kaydet\"e bastığınızda, reklamın bulunduğu ülke otomatik olarak \"global\" olarak güncellenecektir.';
+
+  @override
   String get ads => 'reklamlar';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nTr extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Lütfen bağlantı ayarlarının doğru olup olmadığını kontrol edin veya başka bir proxy kullanın.';
+
+  @override
+  String get api_error_269 => 'Bir adres defterine geçersiz bir adres eklemeye çalışılıyor';
+
+  @override
+  String get api_error_270 => 'Bir kullanıcının adres defterine yinelenen bir adres eklemeye çalışmak';
+
+  @override
+  String get api_error_273 => 'Bir kullanıcının adres defterinde olmayan bir adresi silmeye çalışmak';
 }

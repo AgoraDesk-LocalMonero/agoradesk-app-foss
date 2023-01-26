@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
@@ -21,6 +20,7 @@ import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:vm/vm.dart';
 
 class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixin {
   const Enable2faScreen({
@@ -151,8 +151,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
   }
 
   Widget _buildStep2(BuildContext context, Enable2faViewModel model, GlobalKey globalKey) {
-    return SizedBox(
-      height: model.stepContentHeight,
+    return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -222,6 +221,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
             title: context.intl.wallet250Sbsend250Sbcontinue8722Sbbtn,
             onPressed: () => model.activeStep = 2,
           ),
+          const SizedBox(height: 20),
         ],
       ),
     );

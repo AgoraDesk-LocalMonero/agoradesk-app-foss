@@ -34,6 +34,9 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
   }
 
   _buildDropdownCountry(BuildContext context) {
+    if (model.selectedCountryCode == 'XX') {
+      return const SizedBox();
+    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -55,6 +58,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
           // showSearchBox: true,
           selectedItem: model.selectedCountryCode,
           onChanged: (val) => model.setSelectedCountryCode(val),
+          enabled: model.selectedCountryCode != 'XX',
         ),
       ],
     );

@@ -7529,6 +7529,23 @@ class I18nTl extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Ang address na ito ay tinanggal na mula sa iyong address book.';
 
   @override
+  String get address8722Sbbook => 'Address book';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Mga address';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Ang lahat ng mga cryptocurrency ad ay inililipat na ngayon sa bagong kategorya ng bansang \"global (code XX)\". Ang lahat ng duplicate na cryptocurrency ad na naiiba lamang ayon sa bansa ay tatanggalin $time_remaining. Pakitiyak na mayroon ka lang ISANG cryptocurrency ad sa bawat currency, kung hindi, ang lahat maliban sa pinakakamakailang nai-post na ad sa currency na iyon ay tatanggalin, habang ang natitirang ad ay ililipat sa kategoryang \"global\" na bansa.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Kapag pinindot mo ang \"I-save\", awtomatikong maa-update sa \"global\" ang bansa ng ad.';
+
+  @override
   String get ads => 'Mga ad';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nTl extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Pakisuri kung tama ang mga setting ng koneksyon o gumamit ng ibang proxy.';
+
+  @override
+  String get api_error_269 => 'Sinusubukang magdagdag ng di-wastong address sa isang address book';
+
+  @override
+  String get api_error_270 => 'Sinusubukang magdagdag ng duplicate na address sa address book ng isang user';
+
+  @override
+  String get api_error_273 => 'Sinusubukang tanggalin ang isang address na wala sa address book ng isang user';
 }

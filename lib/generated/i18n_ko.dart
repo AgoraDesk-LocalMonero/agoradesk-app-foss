@@ -7529,6 +7529,23 @@ class I18nKo extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => '이 주소는 주소록에서 이미 삭제되었습니다.';
 
   @override
+  String get address8722Sbbook => '주소록';
+
+  @override
+  String get address8722Sbbook250Sbshort => '구애';
+
+  @override
+  String get xx => '글로벌';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return '이제 모든 암호화폐 광고가 새로운 \"글로벌(코드 XX)\" 국가 카테고리로 이동됩니다. 국가별로만 다른 중복 암호화폐 광고는 모두 삭제됩니다$time_remaining. 통화당 하나의 암호화폐 광고만 있는지 확인하십시오. 그렇지 않으면 해당 통화로 가장 최근에 게시된 광고를 제외한 모든 광고가 삭제되고 나머지 광고는 \"글로벌\" 국가 카테고리로 이동됩니다.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '\"저장\"을 누르면 광고의 국가가 자동으로 \"글로벌\"로 업데이트됩니다.';
+
+  @override
   String get ads => '광고';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nKo extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => '연결 설정이 올바른지 확인하거나 다른 프록시를 사용하십시오.';
+
+  @override
+  String get api_error_269 => '주소록에 유효하지 않은 주소 추가 시도';
+
+  @override
+  String get api_error_270 => '사용자 주소록에 중복 주소 추가 시도';
+
+  @override
+  String get api_error_273 => '사용자 주소록에 존재하지 않는 주소 삭제 시도';
 }
