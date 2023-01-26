@@ -1,0 +1,26 @@
+Nakupujte alebo predávajte bitcoiny bez overenia ID. Hotovostne alebo online.
+
+Zaujíma vás, ako investovať do bitcoinov? Na AgoraDesk nebolo nakupovanie bitcoinov nikdy jednoduchšie – okamžite nakupujte BTC od osoby pomocou vášho obľúbeného online spôsobu platby: PayPal, kreditná/debitná karta alebo bankový prevod, darčekové karty, Venmo alebo akýkoľvek iný. Ak chcete kúpiť bitcoiny vo vašom okolí za hotovosť, môžete nájsť niekoho, kto je ochotný predávať bitcoiny lokálne – obchodná platforma podporuje nákup a predaj BTC v hotovosti. Môžete dokonca kúpiť bitcoiny za hotovosť poštou.
+
+- Bezpečné a plynulé obchodovanie
+Rovnako ako LocalBitcoins podporujeme akýkoľvek spôsob platby, akúkoľvek menu a kdekoľvek. Neodstraňujeme platobné metódy a na rozdiel od LocalBitcoins plne podporujeme osobné hotovostné obchody. Všetky naše obchody sú chránené arbitrážnym dlhopisom. Vďaka tomu, že požadujeme, aby boli finančné prostriedky pred začatím obchodu držané v rozhodcovskom dlhopise, zabezpečujeme bezproblémový a bezpečný zážitok pre kupujúceho, čo je nevyhnutné pre popularitu platformy a opakovaných zákazníkov pre predajcov.
+
+- Žiadne overenie KYC/AML alebo ID
+AgoraDesk sa zaviazal zachovať jednoduchosť a priamočiarosť, vďaka ktorej boli pôvodné LocalBitcoins také populárne. Nezamestnávame KYC/AML a ani to nikdy neplánujeme.
+
+- Dôveryhodné spoločenstvom
+Naša platforma funguje už viac ako štyri roky, prežila veľký krach kryptomenového trhu v roku 2018 a vďaka svojej komunitne orientovanej dôslednej službe sa stala jedným z najdôveryhodnejších mien v extrémne skeptickej komunite kryptomien.
+
+- Bezpečné, Open Source, Súkromie, Odolné voči cenzúre
+Naša aplikácia je bezplatná a má otvorený zdroj, čo zaisťuje, že veľa očí sa pozerá na kód aplikácie, aby sa zaistilo, že neexistujú žiadne bezpečnostné diery alebo úniky súkromia. Otvorený zdroj našej aplikácie tiež umožňuje komukoľvek mať prístup k našej aplikácii, aj keď určité úložisko aplikácie cenzuruje aplikáciu. Naša aplikácia funguje dokonca aj na telefónoch, ktoré majú Google úplne zablokovaný. Veľmi si vážime vaše súkromie, preto od vás pri registrácii nevyžadujeme ani e-mail.
+
+Zdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Nástroj na sledovanie problémov: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+
+- Hviezdna podpora
+Náš tím podpory je rýchly, pohotový a vždy ochotný potešiť. Nikdy sme nemali lístok na podporu, ktorý by nebol zodpovedaný do 24 hodín. Sme vždy ľahko dosiahnuteľní prostredníctvom sociálnych médií, pozorne počúvame vašu kritiku a vždy implementujeme dobré návrhy používateľov v rekordnom čase.
+
+Našu podporu nájdete na: https://agoradesk.com/support
+
+- Spravodlivé poplatky
+Neúčtujeme prehnané poplatky, keď vložíte alebo vyberiete bitcoiny do/z našej peňaženky rozhodcovských dlhopisov. Neexistuje žiadny poplatok za vklad a poplatok za výber je veľmi blízko poplatku, ktorý by ste zaplatili pri bežnej transakcii.
