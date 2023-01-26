@@ -102,6 +102,8 @@ jobs:
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._1 }}.apk
           
           git fetch
+          git config --global user.email "amideus@gmail.com"
+          git config --global user.name "CI"
           git add --all
           git commit -m "generated files"
           git checkout fdroid_ad
