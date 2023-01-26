@@ -116,8 +116,7 @@ jobs:
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app_${{ steps.split.outputs._1 }}.apk
           
           git fetch
-          git add --all
-          git commit -m "generated files"
+          git stash
           git checkout fdroid_lm
           
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
