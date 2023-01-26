@@ -1,0 +1,1 @@
+kryptovaluta,anonym,privat,monero,xmr,p2p

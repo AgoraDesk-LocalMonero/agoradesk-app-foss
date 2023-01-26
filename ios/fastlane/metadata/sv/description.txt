@@ -1,0 +1,26 @@
+Köp eller sälj Monero utan ID-verifiering. Kontant eller online. Säkert, snabbt, enkelt.
+
+LocalMonero är den största, mest pålitliga och väletablerade P2P-handelsplattformen i XMR-communityt. Vi har inga KYC-checkar - du kan helt enkelt köpa Monero anonymt utan ID-verifiering med PayPal, kreditkort, presentkort, kontanter via post eller konvertera Bitcoin, Ether, USDT eller något annat kryptomynt till Monero - vår plattform stöder alla betalningsmetoder.
+
+- Säker och smidig handel
+Vi stöder alla betalningsmetoder, vilken valuta som helst, var som helst. Vi tar inte bort betalningsmetoder och vi stöder fullt ut kontantaffärer ansikte mot ansikte. Alla våra affärer är skyddade av en skiljedomsförbindelse. Tack vare det faktum att vi kräver att medel hålls i skiljedomstol innan en affär kan starta, säkerställer vi en smidig och säker upplevelse för köparen, vilket är avgörande för plattformens popularitet och återkommande kunder för säljarna.
+
+- Ingen KYC/AML eller ID-verifiering
+LocalMonero har åtagit sig att bibehålla enkelheten och rakheten i din handelsupplevelse. Vi använder inte KYC/AML och planerar heller aldrig att göra det.
+
+- Tillförlitlig av gemenskapen
+Vår plattform har fungerat i över fyra år, överlevt Great Cryptocurrency Market Crash 2018, och genom sin community-orienterade flitiga service blivit ett av de mest pålitliga namnen i det extremt skeptiska Monero-communityt.
+
+- Säker, öppen källkod, integritetscentrerad, censurbeständig
+Vår app är gratis och öppen källkod, vilket säkerställer att många ögon tittar på appens kod för att säkerställa att det inte finns några säkerhetshål eller sekretessläckor. Open sourcing vår app tillåter också vem som helst att ha tillgång till vår app även om ett visst applager censurerar appen. Vår app fungerar även på telefoner som har Google helt blockerat. Vi värdesätter din integritet så mycket, vi kräver inte ens att du uppger ett e-postmeddelande när du registrerar dig.
+
+Källkod: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+Issue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+
+- Stjärnstöd
+Vårt supportteam är snabbt, lyhört och alltid ivriga att behaga. Vi har aldrig haft ett supportärende som inte besvarats inom 24 timmar. Vi är alltid lätta att nå via sociala medier, vi lyssnar uppmärksamt på din kritik och vi implementerar alltid bra användarförslag på rekordtid.
+
+Du kan nå vår support på: https://localmonero.co/support
+
+- Rättvisa avgifter
+Vi tar inte ut orimliga avgifter när du sätter in eller tar ut Monero till/från vår skiljedomsplånbok. Det finns ingen insättningsavgift, och uttagsavgiften är mycket nära den avgift du skulle betala för en normal transaktion.
