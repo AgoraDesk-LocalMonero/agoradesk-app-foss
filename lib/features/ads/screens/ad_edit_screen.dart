@@ -16,6 +16,7 @@ import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
 import 'package:agoradesk/core/widgets/branded/cash_textfield.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
+import 'package:agoradesk/core/widgets/branded/global_warning_ads.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
@@ -122,6 +123,13 @@ class _AdEditScreenState extends State<AdEditScreen>
                           ],
                         ),
                         const SizedBox(height: 16),
+                        model.displayWarning()
+                            ? GlobalWarningAds(
+                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                text: context.intl
+                                    .edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad,
+                              )
+                            : const SizedBox(),
                         _buildFirstTile(context, model),
                         const SizedBox(height: 16),
                         _buildSecondTile(context, model),
@@ -162,23 +170,7 @@ class _AdEditScreenState extends State<AdEditScreen>
               value: model.adEdits!.visible ?? false,
               onChanged: model.updateVisible,
             ),
-            const SizedBox(height: 12),
-            Text(
-              context.intl.post8722Sbad250Sbcountry250Sbtitle,
-              style: context.txtBodySmallN60,
-            ),
-            const SizedBox(height: 8),
-            onlineTradeTypes.contains(model.tradeType)
-                ? DropdownSearch<String>(
-                    dropdownDecoratorProps: context.dropdownDecoration,
-                    popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
-                    itemAsString: (String? code) => getCountryName(code ?? ''),
-                    asyncItems: (String? filter) => model.getCountryCodes(),
-                    // showSearchBox: true,
-                    selectedItem: model.selectedCountryCode,
-                    onChanged: (val) => model.setSelectedCountryCode(val),
-                  )
-                : SearchLocation(model: model),
+            _buildCountrySelection(context, model),
             const SizedBox(height: 12),
             Text(
               context.intl.post8722Sbad250Sbcurrency250Sbtitle,
@@ -231,6 +223,34 @@ class _AdEditScreenState extends State<AdEditScreen>
                 selectedItem: model.selectedOnlineProvider,
                 onChanged: (val) => model.updateOnlineProvider(val),
               ),
+      ],
+    );
+  }
+
+  Widget _buildCountrySelection(BuildContext context, AddEditAdViewModel model) {
+    if (model.selectedCountryCode == 'XX') {
+      return const SizedBox();
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 12),
+        Text(
+          context.intl.post8722Sbad250Sbcountry250Sbtitle,
+          style: context.txtBodySmallN60,
+        ),
+        const SizedBox(height: 8),
+        onlineTradeTypes.contains(model.tradeType)
+            ? DropdownSearch<String>(
+                dropdownDecoratorProps: context.dropdownDecoration,
+                popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
+                itemAsString: (String? code) => getCountryName(code ?? ''),
+                asyncItems: (String? filter) => model.getCountryCodes(),
+                // showSearchBox: true,
+                selectedItem: model.selectedCountryCode,
+                onChanged: (val) => model.setSelectedCountryCode(val),
+              )
+            : SearchLocation(model: model),
       ],
     );
   }

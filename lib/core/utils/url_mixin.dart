@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
+import 'package:agoradesk/router.gr.dart';
 import 'package:get_it/get_it.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,15 +12,14 @@ mixin UrlMixin {
     if (url != null) {
       final uri = Uri.tryParse(url) ?? Uri();
       if (await canLaunchUrl(uri)) {
-        // Map<String, String> headers = {
-        //   'cookie': 'SameSite=Lax;Secure=true;HttpOnly=true;token=$token',
-        // };
-        await launchUrl(
-          uri,
-          mode: LaunchMode.inAppWebView,
-          // webViewConfiguration: WebViewConfiguration(
-          //   headers: headers,
-          // ),
+        Map<String, String> headers = {
+          'cookie': 'SameSite=Lax;Secure=true;HttpOnly=true;token=$token',
+        };
+        GetIt.I<AppRouter>().push(
+          WebviewRoute(
+            token: GetIt.I<AppParameters>().accessToken,
+            url: url,
+          ),
         );
       } else {
         throw Exception('Could not launch $url');

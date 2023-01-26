@@ -30,7 +30,7 @@ class SendAssetViewModel extends ViewModel
 
   final WalletService _walletService;
   final AppState _appState;
-  final double? price;
+  final double price;
   final double? balance;
 
   final ctrlAddress = TextEditingController();
@@ -186,7 +186,7 @@ class SendAssetViewModel extends ViewModel
   }
 
   String xmrNetworkFeesStr() {
-    return '${xmrFees.toString()} XMR ~ ${(xmrFees * price!).toStringAsFixed(4)} ${_appState.currencyCode}';
+    return '${xmrFees.toString()} XMR ~ ${(xmrFees * price).toStringAsFixed(4)} ${_appState.currencyCode}';
   }
 
   void _manageAssetField() {
@@ -201,7 +201,7 @@ class SendAssetViewModel extends ViewModel
       try {
         if (assetAmount != double.parse(ctrlAsset.text)) {
           assetAmount = double.parse(ctrlAsset.text);
-          fiatAmount = (assetAmount * price!).bankerRound(2).toDouble();
+          fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
           ctrlFiat.text = fiatAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
@@ -234,7 +234,8 @@ class SendAssetViewModel extends ViewModel
         if (fiatAmount != double.parse(ctrlFiat.text)) {
           final int digitsToRound = getBankersDigits(asset.name);
           fiatAmount = double.parse(ctrlFiat.text);
-          assetAmount = (fiatAmount / price!).bankerRound(digitsToRound).toDouble();
+
+          assetAmount = (fiatAmount / price).bankerRound(digitsToRound).toDouble();
           ctrlAsset.text = assetAmount.toString();
           if (assetAmount > balance!) {
             inputAssetError = context.intl.error_entered_greater_than_balance;
@@ -282,23 +283,11 @@ class SendAssetViewModel extends ViewModel
     }
   }
 
-  // void makeTransfer() async {
-  //   final res = await context.pushRoute(PinCodeCheckRoute(onResult: (_) {}));
-  //
-  //   if (res == true) {}
-  // }
-
-  // Future _cursorToEnd() async {
-  //   await Future.delayed(const Duration(milliseconds: 0));
-  //   ctrlAsset.selection = TextSelection.fromPosition(TextPosition(offset: ctrlAsset.text.length));
-  //   ctrlFiat.selection = TextSelection.fromPosition(TextPosition(offset: ctrlFiat.text.length));
-  // }
-
   void sendAllFill() {
     assetAmount = (balance ?? 0);
-    fiatAmount = assetAmount * price!;
+    fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
     _updateControllersValues();
-    // _cursorToEnd();
+    readyToStep3 = true;
   }
 
   Future sendAsset() async {
@@ -331,13 +320,15 @@ class SendAssetViewModel extends ViewModel
           amount: assetAmountToReceive,
           password: ctrlPassword.text,
           feeLevel: btcFeesEnum,
-          otp: ctrlOtp.text.isEmpty ? null : int.tryParse(ctrlOtp.text),
+          otp: ctrlOtp.text.isEmpty ? null : ctrlOtp.text,
         );
 
         final res = await _walletService.walletSend(
           asset: asset,
           sendAssetModel: sendAssetModel,
         );
+
+        ctrlOtp.clear();
 
         sendingAsset = false;
         if (res.isRight) {
@@ -389,6 +380,16 @@ class SendAssetViewModel extends ViewModel
       assetAmountToSend = assetAmount;
       assetAmountToReceive = max(assetAmount - fee, 0);
     }
+  }
+
+  String? addressErrorText() {
+    if (ctrlAddress.text.isEmpty) {
+      return null;
+    }
+    if (isAddressCorrect) {
+      return null;
+    }
+    return ' ';
   }
 
   void _checkPasswordAndOtp() {

@@ -2,6 +2,7 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
+import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_on_filled_button.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
@@ -16,13 +17,14 @@ import 'package:agoradesk/features/market/models/market_ad_info_view_model.dart'
 import 'package:agoradesk/features/market/screens/widgets/btc_fees_radio_buttons.dart';
 import 'package:agoradesk/features/market/screens/widgets/suffix_icon.dart';
 import 'package:agoradesk/features/market/screens/widgets/text_with_dot.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:vm/vm.dart';
 
-class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin {
+class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin, QrScannerMixin {
   InitiateTradeScreen({
     Key? key,
     required this.model,
@@ -284,19 +286,36 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                         style: context.txtBodySmallN80,
                       ),
                       const SizedBox(height: 12),
-                      TextField(
-                        controller: model.ctrlSettlementAddress,
-                        decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                              hintText: context.intl
-                                  .address8722Sbinput250Sbbuyer8722Sbsettlement8722Sbaddress250Sblabel(
-                                      model.asset!.name),
-                              labelText: context.intl
-                                      .address8722Sbinput250Sbbuyer8722Sbsettlement8722Sbaddress250Sblabel(
-                                          model.asset!.name) +
-                                  ' *',
-                              errorText: model.receiveError,
-                            ),
+                      SendAssetTextField(
+                        asset: model.asset!,
+                        focusNode: model.settlementFocus,
+                        textEditingController: model.ctrlSettlementAddress,
+                        hasValue: model.fieldHasValue,
+                        clear: model.clear,
+                        paste: model.paste,
+                        errorText: !model.isWalletValid && model.fieldHasValue ? ' ' : null,
+                        qrPressed: () async {
+                          final code = await presentQRScanner();
+                          model.handleScannedCode(code);
+                        },
+                        displayAddressBook: true,
+                        pasteAddressAction: (val) {
+                          model.ctrlSettlementAddress.text = val;
+                        },
                       ),
+                      // TextField(
+                      //   controller: model.ctrlSettlementAddress,
+                      //   decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
+                      //         hintText: context.intl
+                      //             .address8722Sbinput250Sbbuyer8722Sbsettlement8722Sbaddress250Sblabel(
+                      //                 model.asset!.name),
+                      //         labelText: context.intl
+                      //                 .address8722Sbinput250Sbbuyer8722Sbsettlement8722Sbaddress250Sblabel(
+                      //                     model.asset!.name) +
+                      //             ' *',
+                      //         errorText: model.receiveError,
+                      //       ),
+                      // ),
                       const SizedBox(height: 12),
                       Text(
                         context.intl.ad250Sbconfirmation250Sbprovide8722Sbaddress250Sbyou8722Sbown + '.',

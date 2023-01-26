@@ -9,3 +9,9 @@ const kForegroungPollingInterval = 60000;
 /// Padding on the screen across the app
 ///
 const kScreenPadding = EdgeInsets.fromLTRB(16, 0, 16, 0);
+
+///
+/// Animations in the list dureation
+///
+
+const kNewMessageDuration = Duration(milliseconds: 300);

@@ -63,11 +63,6 @@ class AddEditAdViewModel extends ViewModel
   final AdModel? ad;
   final bool isEditMode;
 
-  // final PlacesSearch _placesSearch = PlacesSearch(
-  //   apiKey: AppConst.mapboxToken,
-  //   limit: 20,
-  // );
-
   final FocusNode addressFocus = FocusNode();
 
   final pageController = PageController();
@@ -524,8 +519,17 @@ class AddEditAdViewModel extends ViewModel
     notifyListeners();
   }
 
+  bool displayWarning() {
+    return adEdits?.countryCode != 'XX' && adEdits?.onlineProvider == 'CRYPTOCURRENCY';
+  }
+
   void updateOnlineProvider(OnlineProvider? val) {
     selectedOnlineProvider = val;
+    if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
+      selectedCountryCode = 'XX';
+    } else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
+      selectedCountryCode = 'ANY';
+    }
     notifyListeners();
   }
 
