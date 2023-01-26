@@ -86,9 +86,11 @@ jobs:
           msg: ${{ steps.yaml-data.outputs.data }}
           separator: "+"
 
+      - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          flutter-version: '3.3.0'
+          channel: 'stable' # or: 'beta', 'dev' or 'master'
 
       - run: flutter pub get
 
