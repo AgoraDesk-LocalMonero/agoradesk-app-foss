@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
@@ -22,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/src/provider.dart';
+import 'package:vm/vm.dart';
 
 class PostAdScreen extends StatefulWidget {
   const PostAdScreen({Key? key}) : super(key: key);
@@ -146,12 +146,12 @@ class _PopupMenu extends StatelessWidget with UrlMixin {
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
           child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice),
-          onTap: () => openLink(GetIt.I<AppParameters>().urlPrivacy),
+          onTap: () => openLink(GetIt.I<AppParameters>().urlPrivacy, token: GetIt.I<AppParameters>().accessToken),
           value: 1,
         ),
         PopupMenuItem(
           child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
-          onTap: () => openLink(GetIt.I<AppParameters>().urlGuides),
+          onTap: () => openLink(GetIt.I<AppParameters>().urlGuides, token: GetIt.I<AppParameters>().accessToken),
           value: 2,
         )
       ],

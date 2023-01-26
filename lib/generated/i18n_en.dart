@@ -7529,6 +7529,23 @@ class I18nEn extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'This address has already been deleted from your address book.';
 
   @override
+  String get address8722Sbbook => 'Address book';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Addresses';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'All cryptocurrency ads are now being moved to the new \"global (code XX)\" country category. All duplicate cryptocurrency ads that differ only by country will be deleted $time_remaining. Please make sure you only have ONE cryptocurrency ad per currency, otherwise all but the most recently posted ad in that currency will be deleted, while the remaining ad will be moved into \"global\" country category.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'When you press \"Save\", the ad\'s country will be updated to \"global\" automatically.';
+
+  @override
   String get ads => 'Ads';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nEn extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+
+  @override
+  String get api_error_269 => 'Attempting to add an invalid address to an address book';
+
+  @override
+  String get api_error_270 => 'Attempting to add a duplicate address to a user’s address book';
+
+  @override
+  String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
 }

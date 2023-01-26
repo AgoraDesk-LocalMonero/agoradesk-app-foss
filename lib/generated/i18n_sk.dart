@@ -7529,6 +7529,23 @@ class I18nSk extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Táto adresa už bola vymazaná z vášho adresára.';
 
   @override
+  String get address8722Sbbook => 'Adresár';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresy';
+
+  @override
+  String get xx => 'globálne';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Všetky reklamy na kryptomeny sa teraz presúvajú do novej kategórie krajín „globálna (kód XX)“. Všetky duplicitné reklamy na kryptomeny, ktoré sa líšia iba podľa krajiny, budú odstránené $time_remaining. Uistite sa, že máte iba JEDNU reklamu na kryptomeny na menu, inak budú všetky reklamy okrem naposledy uverejnenej v danej mene vymazané, zatiaľ čo zvyšná reklama bude presunutá do kategórie „globálna“ krajina.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Keď stlačíte \"Uložiť\", krajina reklamy sa automaticky aktualizuje na \"globálnu\".';
+
+  @override
   String get ads => 'Reklamy';
 
   @override
@@ -9429,4 +9446,13 @@ class I18nSk extends I18n {
 
   @override
   String get app_proxy_unavailable_decr => 'Skontrolujte, či sú nastavenia pripojenia správne, alebo použite iný proxy server.';
+
+  @override
+  String get api_error_269 => 'Pokus o pridanie neplatnej adresy do adresára';
+
+  @override
+  String get api_error_270 => 'Pokus o pridanie duplicitnej adresy do adresára používateľa';
+
+  @override
+  String get api_error_273 => 'Pokus o odstránenie adresy, ktorá neexistuje v adresári používateľa';
 }

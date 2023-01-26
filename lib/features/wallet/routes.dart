@@ -1,6 +1,9 @@
+import 'package:agoradesk/features/wallet/screens/add_address_screen.dart';
+import 'package:agoradesk/features/wallet/screens/address_book_screen.dart';
 import 'package:agoradesk/features/wallet/screens/incoming_deposit_screen.dart';
 import 'package:agoradesk/features/wallet/screens/notifications_screen.dart';
 import 'package:agoradesk/features/wallet/screens/receive_asset_screen.dart';
+import 'package:agoradesk/features/wallet/screens/send_asset_address_book.dart';
 import 'package:agoradesk/features/wallet/screens/send_asset_first_screen.dart';
 import 'package:agoradesk/features/wallet/screens/send_asset_second_screen.dart';
 import 'package:agoradesk/features/wallet/screens/send_asset_third_screen.dart';
@@ -54,6 +57,24 @@ const walletRoutes = <AutoRoute>[
   CustomRoute(
     path: 'notificationsScreen',
     page: NotificationsScreen,
+    durationInMilliseconds: 250,
+    transitionsBuilder: TransitionsBuilders.slideBottom,
+  ),
+  CustomRoute(
+    path: 'addressBookScreen',
+    page: AddressBookScreen,
+    durationInMilliseconds: 250,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+  ),
+  CustomRoute(
+    path: 'addAddressScreen',
+    page: AddAddressScreen,
+    durationInMilliseconds: 250,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+  ),
+  CustomRoute(
+    path: 'sendAssetAddressBookScreen',
+    page: SendAssetAddressBookScreen,
     durationInMilliseconds: 250,
     transitionsBuilder: TransitionsBuilders.slideBottom,
   ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
@@ -43,7 +44,7 @@ import 'note_on_user_view_model.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
 const _kPollingSeconds = 30;
-const _kNewMessageDuration = Duration(milliseconds: 300);
+
 const kDeletedUserName = '[DELETED]';
 
 class TradeViewModel extends ViewModel
@@ -771,7 +772,7 @@ class TradeViewModel extends ViewModel
             if (_checkMessageUnique(message, i)) {
               messagesAfterSticky.insert(0, message);
               if (messagesListKey.currentState != null) {
-                messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
+                messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
               }
               await Future.delayed(const Duration(milliseconds: 500));
             } else {
@@ -831,7 +832,7 @@ class TradeViewModel extends ViewModel
       );
       ctrlMessage.clear();
       repliedText = '';
-      messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
+      messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
       final res = await _tradeRepository.sendImage(tradeForScreen.tradeId, _image!);
       _sendingImage = false;
       if (res.isRight) {
@@ -866,7 +867,7 @@ class TradeViewModel extends ViewModel
       );
       ctrlMessage.clear();
       repliedText = '';
-      messagesListKey.currentState!.insertItem(0, duration: _kNewMessageDuration);
+      messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
       final res = await _tradeRepository.sendMessage(tradeForScreen.tradeId, textToSend);
       if (res.isRight) {
         messagesAfterSticky[0].messageId = res.right;

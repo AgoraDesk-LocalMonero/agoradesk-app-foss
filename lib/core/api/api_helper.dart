@@ -43,15 +43,27 @@ mixin ApiHelper {
     try {
       final e = err as DioError;
       String message = '';
-      if (e.type == DioErrorType.connectTimeout) {
-        Map<String, dynamic> messageMap = {'message': 'Connection timeout'};
-
+      if (e.type == DioErrorType.other) {
+        final str1 = e.message.replaceAll('\\', '');
+        final str2 = str1.substring(1, str1.length - 1);
+        final Map<String, dynamic> messageMap = jsonDecode(str2);
         return ApiError(
           statusCode: 400,
           errorCode: 4001,
           message: messageMap,
           response: e.response,
-          captchaCookie: e.response?.headers['set-cookie']![0].split(';')[0],
+          captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
+        );
+      }
+      if (e.type == DioErrorType.connectTimeout) {
+        Map<String, dynamic> messageMap = {'message': 'Connection timeout'};
+
+        return ApiError(
+          statusCode: 520,
+          errorCode: 4001,
+          message: messageMap,
+          response: e.response,
+          captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
         );
       }
       if (e.error != null && e.error is String) {
@@ -73,7 +85,7 @@ mixin ApiHelper {
           errorCode: messageMap['error_code'],
           message: messageMap,
           response: e.response,
-          captchaCookie: e.response?.headers['set-cookie']![0].split(';')[0],
+          captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
         );
       }
 
@@ -105,7 +117,7 @@ mixin ApiHelper {
           errorCode: messageMap['error_code'],
           message: messageMap,
           response: e.response,
-          captchaCookie: e.response?.headers['set-cookie']![0].split(';')[0],
+          captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
         );
       }
 
@@ -118,7 +130,7 @@ mixin ApiHelper {
           errorCode: 7000,
           message: {'error_code': 4000},
           response: e.response,
-          captchaCookie: e.response?.headers['set-cookie']![0].split(';')[0],
+          captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
         );
       }
       return ApiError(statusCode: 520, message: {'message': 'Unknown error'});

@@ -265,12 +265,14 @@ class _AppState extends State<App>
 
     debugPrint('[init app, API token from secured storage] $token');
     _api.accessToken = token;
+    GetIt.I<AppParameters>().accessToken = token;
 
     /// Set pin code state
     final String? pin = await _secureStorage.read(SecureStorageKey.pin);
 
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
+    appState.proxyStatus = GetIt.I<AppParameters>().proxy;
     await _afterConfigInit();
     await _authService.init();
     await _initLocalSettings();
@@ -512,6 +514,9 @@ class _AppState extends State<App>
             ),
           );
         }
+      })
+      ..on<ReloadMarketScreenEvent>().listen((e) {
+        appState.sinkReloadMarket.add(true);
       })
       ..on<FlashEvent>().listen((e) {
         if (e.message == null) {

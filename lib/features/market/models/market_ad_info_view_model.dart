@@ -3,7 +3,9 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
+import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -24,7 +26,8 @@ import 'package:vm/vm.dart';
 
 const _kDebounceTag = '_kDebounceTag';
 
-class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, StringMixin {
+class MarketAdInfoViewModel extends ViewModel
+    with ValidatorMixin, ErrorParseMixin, StringMixin, ClipboardMixin, QrScannerMixin {
   MarketAdInfoViewModel({
     required TradeRepository tradeRepository,
     required WalletService walletService,
@@ -46,6 +49,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
 
   final ctrlReceive = TextEditingController();
   final ctrlSettlementAddress = TextEditingController();
+  final FocusNode settlementFocus = FocusNode();
   final ctrlPay = TextEditingController();
 
   late Asset _asset;
@@ -66,6 +70,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
   List<String> assetMenu = [];
 
   bool _loadingAds = true;
+
   // bool _initialized = false;
   bool _calculating = false;
   bool _startingTrade = false;
@@ -77,9 +82,14 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
   bool isWalletValid = false;
   BtcFeesModel? btcFees;
   String address = '';
+  bool _fieldHasValue = false;
 
   late final bool isSell;
   late final bool isAdOwner;
+
+  bool get fieldHasValue => _fieldHasValue;
+
+  set fieldHasValue(bool v) => updateWith(fieldHasValue: v);
 
   bool get isXmr => ad?.asset == Asset.XMR;
 
@@ -179,9 +189,15 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
 
   void handleWalletAddress() async {
     address = ctrlSettlementAddress.text;
-    isWalletValid = validateWalletAddress(asset!, address);
-    if (isWalletValid && asset == Asset.BTC) {
-      await getBtcFees(address: address);
+    if (address.isEmpty) {
+      fieldHasValue = false;
+      isWalletValid = false;
+    } else {
+      fieldHasValue = true;
+      isWalletValid = validateWalletAddress(asset!, address);
+      if (isWalletValid && asset == Asset.BTC) {
+        await getBtcFees(address: address);
+      }
     }
     notifyListeners();
   }
@@ -382,11 +398,31 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
     ctrlPay.text = isXmr ? _balanceXmr.toString() : _balanceBtc.toString();
   }
 
+  void paste() async {
+    ctrlSettlementAddress.text = await pasteFromClipboard();
+  }
+
+  void clear() async {
+    ctrlSettlementAddress.text = '';
+  }
+
+  void handleScannedCode(Object? code) async {
+    if (code is String && code.isNotEmpty) {
+      final address = getCoinAddressFromQr(code);
+      if (validateWalletAddress(asset!, address)) {
+        ctrlSettlementAddress.text = address;
+        await Future.delayed(const Duration(milliseconds: 100));
+        settlementFocus.unfocus();
+      }
+    }
+  }
+
   void updateWith({
     Asset? asset,
     TradeType? tradeType,
     BtcFeesEnum? btcFeesEnum,
     bool? loadingAds,
+    bool? fieldHasValue,
     bool? loadingBalance,
     bool? loadingSettings,
     bool? loadingFees,
@@ -394,6 +430,7 @@ class MarketAdInfoViewModel extends ViewModel with ValidatorMixin, ErrorParseMix
   }) async {
     bool reloadAds = false;
     _loadingAds = loadingAds ?? _loadingAds;
+    _fieldHasValue = fieldHasValue ?? _fieldHasValue;
     _loadingBalance = loadingBalance ?? _loadingBalance;
     _loadingFees = loadingFees ?? _loadingFees;
     _startingTrade = startingTrade ?? _startingTrade;

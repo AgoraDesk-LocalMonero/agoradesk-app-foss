@@ -49,6 +49,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                             padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
                             child: AutofillGroup(
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   widget.displaySkip
                                       ? Row(
@@ -84,9 +85,23 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                       model.username = input;
                                     },
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+                                    child: Text(
+                                      context.intl.login250Sbusername8722Sbtip,
+                                      style: context.txtBodySmallN70,
+                                    ),
+                                  ),
                                   const SizedBox(height: 16),
                                   AgoraPasswordField(
                                     controller: model.passwordController,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+                                    child: Text(
+                                      context.intl.password8722Sbtip,
+                                      style: context.txtBodySmallN70,
+                                    ),
                                   ),
                                   const SizedBox(height: 16),
                                   TextField(

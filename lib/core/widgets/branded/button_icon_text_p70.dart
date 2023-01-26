@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ButtonIconTextP70 extends StatelessWidget {
@@ -8,12 +9,14 @@ class ButtonIconTextP70 extends StatelessWidget {
     required this.iconData,
     required this.onPressed,
     this.marginBetween = 10,
+    this.loading = false,
   }) : super(key: key);
 
   final String text;
   final IconData iconData;
   final VoidCallback onPressed;
   final double marginBetween;
+  final bool loading;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +31,13 @@ class ButtonIconTextP70 extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            iconData,
-            color: context.colP70,
-            size: 16,
-          ),
+          loading
+              ? const CupertinoActivityIndicator()
+              : Icon(
+                  iconData,
+                  color: context.colP70,
+                  size: 16,
+                ),
           SizedBox(width: marginBetween),
           Text(
             text,

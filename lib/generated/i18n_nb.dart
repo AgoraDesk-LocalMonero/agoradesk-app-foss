@@ -7529,1544 +7529,1561 @@ class I18nNb extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Denne adressen er allerede slettet fra adresseboken din.';
 
   @override
-  String get ads => 'Ads';
+  String get address8722Sbbook => 'Adressebok';
 
   @override
-  String get unknown_error => 'Unknown error';
+  String get address8722Sbbook250Sbshort => 'Adresser';
 
   @override
-  String get ads_choose_ad_type => 'Choose ad type';
+  String get xx => 'Global';
 
   @override
-  String get ads_ad_type => 'Ad type';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $time_remaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
+  }
 
   @override
-  String get ads_choose_ad_cryptocurrency => 'Choose cryptocurrency';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Når du trykker \"Lagre\", vil annonsens land automatisk bli oppdatert til \"globalt\".';
 
   @override
-  String get ads_choose_price_type => 'Choose price type';
+  String get ads => 'Annonser';
 
   @override
-  String get ads_which_type_to_choose => 'Which type to choose?';
+  String get unknown_error => 'Ukjent feil';
 
   @override
-  String get enter_margin => 'Enter margin';
+  String get ads_choose_ad_type => 'Velg annonsetype';
 
   @override
-  String get what_is_margin => 'What\'s a margin?';
+  String get ads_ad_type => 'Annonsetype';
 
   @override
-  String get price_formula_examples => 'Price formula examples';
+  String get ads_choose_ad_cryptocurrency => 'Velg kryptovaluta';
 
   @override
-  String get see_examples => 'See examples';
+  String get ads_choose_price_type => 'Velg pristype';
 
   @override
-  String get see_example => 'See example';
+  String get ads_which_type_to_choose => 'Hvilken type å velge?';
 
   @override
-  String get final_price_in => 'Final price in';
+  String get enter_margin => 'Angi margin';
 
   @override
-  String get show_formula_controls => 'Show formula controls';
+  String get what_is_margin => 'Hva er en margin?';
 
   @override
-  String get market_rates => 'Market Rates';
+  String get price_formula_examples => 'Eksempler på prisformler';
 
   @override
-  String get set_trade_limits => 'Set trade limits (optional):';
+  String get see_examples => 'Se eksempler';
 
   @override
-  String get restrict_limit_amounts_to => 'Restrict limit amounts to';
+  String get see_example => 'Se eksempel';
 
   @override
-  String get restrict_limit_amounts => 'Restrict limit amounts';
+  String get final_price_in => 'Endelig pris inn';
 
   @override
-  String get what_does_it_mean => 'What does it mean?';
+  String get show_formula_controls => 'Vis formelkontroller';
+
+  @override
+  String get market_rates => 'Markedspriser';
+
+  @override
+  String get set_trade_limits => 'Angi handelsgrenser (valgfritt):';
+
+  @override
+  String get restrict_limit_amounts_to => 'Begrens grensebeløp til';
+
+  @override
+  String get restrict_limit_amounts => 'Begrens grensebeløp';
+
+  @override
+  String get what_does_it_mean => 'Hva betyr det?';
 
   @override
   String ads_enter_amount(Object currency) {
-    return 'Enter amount $currency';
+    return 'Angi beløp $currency';
   }
 
   @override
   String ads_enter_comma_sep_amounts(Object currency) {
-    return 'Enter comma-separated amounts $currency';
+    return 'Skriv inn kommadelte beløp $currency';
   }
 
   @override
   String ads_first_trade_max_limit(Object currency) {
-    return 'First trade maximum limit $currency';
+    return 'Første handelsgrense $currency';
   }
 
   @override
-  String get ads_specify_trade_details => 'Specify trade details (optional):';
+  String get ads_specify_trade_details => 'Spesifiser handelsdetaljer (valgfritt):';
 
   @override
-  String get ads_payment_method_details => 'Payment method details';
+  String get ads_payment_method_details => 'Detaljer om betalingsmåte';
 
   @override
-  String get ads_payment_method_details_64 => 'Shown in the ad list. Maximum 64 characters.';
+  String get ads_payment_method_details_64 => 'Vises i annonselisten. Maks 64 tegn.';
 
   @override
-  String get ads_maximum_64 => 'Maximum 64 characters';
+  String get ads_maximum_64 => 'Maks 64 tegn';
 
   @override
-  String get ads_payment_method_info_trade => 'Payment method info';
+  String get ads_payment_method_info_trade => 'Informasjon om betalingsmåte';
 
   @override
-  String get ads_payment_method_info_trade_4096 => 'Shown during trade. Maximum 4096 characters.';
+  String get ads_payment_method_info_trade_4096 => 'Vises under handel. Maksimalt 4096 tegn.';
 
   @override
-  String get ads_specify_restrictions => 'Specify restrictions (optional):';
+  String get ads_specify_restrictions => 'Spesifiser begrensninger (valgfritt):';
 
   @override
-  String get maximum_4096 => 'Maximum 4096 characters';
+  String get maximum_4096 => 'Maksimalt 4096 tegn';
 
   @override
-  String get enter_number_0_100 => 'Enter number from 0 to 100';
+  String get enter_number_0_100 => 'Skriv inn tall fra 0 til 100';
 
   @override
-  String get enter_number_15_90 => 'Enter number between 15-90';
+  String get enter_number_15_90 => 'Skriv inn nummer mellom 15-90';
 
   @override
-  String get enter_amount_min_0 => 'Enter amount (min 0)';
+  String get enter_amount_min_0 => 'Angi beløp (min 0)';
 
   @override
-  String get currency => 'Currency:';
+  String get currency => 'Valuta:';
 
   @override
-  String get payment_method => 'Payment method:';
+  String get payment_method => 'Betalingsmetode:';
 
   @override
-  String get restrict_amounts_to => 'Restrict amounts to:';
+  String get restrict_amounts_to => 'Begrens beløp til:';
 
   @override
-  String get payment_method_details => 'Payment method details:';
+  String get payment_method_details => 'Betalingsmåtedetaljer:';
 
   @override
-  String get review => 'Review';
+  String get review => 'Anmeldelse';
 
   @override
-  String get publish => 'Publish';
+  String get publish => 'publisere';
 
   @override
-  String get enter_your_settlement_wallet_address => 'Enter your settlement wallet address:';
+  String get enter_your_settlement_wallet_address => 'Skriv inn oppgjørslommebokadressen din:';
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Enter and verify your address to which the coins will be sent to. Cannot be an internal $appName address.';
+    return 'Skriv inn og bekreft adressen din som myntene skal sendes til. Kan ikke være en intern $appName-adresse.';
   }
 
   @override
-  String get what_is_settlement_fee_level => 'What is settlement fee level?';
+  String get what_is_settlement_fee_level => 'Hva er nivået på oppgjørsgebyr?';
 
   @override
-  String get settlement_fee_level_selector_explanation => 'This selector allows you to choose which network fee level to use when sending the transaction to your wallet. If you\'re not sure what fee level you want, select the medium fee.';
+  String get settlement_fee_level_selector_explanation => 'Denne velgeren lar deg velge hvilket nettverksavgiftsnivå du skal bruke når du sender transaksjonen til lommeboken din. Hvis du ikke er sikker på hvilket gebyrnivå du ønsker, velger du middels gebyr.';
 
   @override
-  String get ads_payment_window => 'Payment window time (minutes)';
+  String get ads_payment_window => 'Betalingsvindustid (minutter)';
 
   @override
-  String get ads_payment_window_short => 'Payment window';
+  String get ads_payment_window_short => 'Betalingsvindu';
 
   @override
-  String get ads_havent_posted => 'You haven’t posted any ads yet.';
+  String get ads_havent_posted => 'Du har ikke lagt ut noen annonser ennå.';
 
   @override
-  String get no_trades => 'You have no trades, yet.';
+  String get no_trades => 'Du har ingen handler ennå.';
 
   @override
-  String get no_feedbacks => 'No feedbacks.';
+  String get no_feedbacks => 'Ingen tilbakemeldinger.';
 
   @override
-  String get ad_settings => 'Ad settings';
+  String get ad_settings => 'Annonseinnstillinger';
 
   @override
-  String get settings_saved => 'Settings saved';
+  String get settings_saved => 'Instillinger lagret';
 
   @override
-  String get preferences => 'Preferences';
+  String get preferences => 'Preferanser';
 
   @override
-  String get about_this_ad => 'About this ad';
+  String get about_this_ad => 'Om denne annonsen';
 
   @override
-  String get price => 'Price';
+  String get price => 'Pris';
 
   @override
-  String get activity => 'Activity';
+  String get activity => 'Aktivitet';
 
   @override
   String get chat => 'Chat';
 
   @override
-  String get market => 'Market';
+  String get market => 'Marked';
 
   @override
-  String get help => 'Help';
+  String get help => 'Hjelp';
 
   @override
   String sell_asset(Object asset) {
-    return 'Sell $asset';
+    return 'Selg $asset';
   }
 
   @override
   String buy_asset(Object asset) {
-    return 'Buy $asset';
+    return 'Kjøp $asset';
   }
 
   @override
-  String get trader_profile => 'Trader\'s profile';
+  String get trader_profile => 'Trader sin profil';
 
   @override
-  String get trader_info => 'Trader\'s info';
+  String get trader_info => 'Traders info';
 
   @override
-  String get trading_tips => 'Trading Tips';
+  String get trading_tips => 'Handelstips';
 
   @override
-  String get clear_all => 'Clear all';
+  String get clear_all => 'Rydd alt';
 
   @override
-  String get apply => 'Apply';
+  String get apply => 'Søke om';
 
   @override
-  String get enter_amount => 'Enter amount';
+  String get enter_amount => 'Tast inn beløp';
 
   @override
-  String get any_payment_method => 'Any Payment Method';
+  String get any_payment_method => 'Enhver betalingsmåte';
 
   @override
-  String get see_more_feedback => 'See more feedback';
+  String get see_more_feedback => 'Se flere tilbakemeldinger';
 
   @override
-  String get see_more_ads => 'See more ads';
+  String get see_more_ads => 'Se flere annonser';
 
   @override
   String feedback_title(Object user) {
-    return 'Feedback on $user';
+    return 'Tilbakemelding på $user';
   }
 
   @override
-  String get active_ads => 'Active ads';
+  String get active_ads => 'Aktive annonser';
 
   @override
-  String get you_sell => 'You sell';
+  String get you_sell => 'Du selger';
 
   @override
-  String get you_buy => 'You buy';
+  String get you_buy => 'Du kjøper';
 
   @override
-  String get you_receive => 'You receive';
+  String get you_receive => 'Du mottar';
 
   @override
-  String get you_pay => 'You pay';
+  String get you_pay => 'Du betaler';
 
   @override
-  String get export_csv => 'Export CSV';
+  String get export_csv => 'Eksporter CSV';
 
   @override
-  String get copy => 'Copy';
+  String get copy => 'Kopiere';
 
   @override
   String sell_via(Object asset, Object provider) {
-    return 'Sell $asset via $provider';
+    return 'Selg $asset via $provider';
   }
 
   @override
   String buy_via(Object asset, Object provider) {
-    return 'Buy $asset via $provider';
+    return 'Kjøp $asset via $provider';
   }
 
   @override
   String sell_to(Object user) {
-    return 'Sell to $user';
+    return 'Selg til $user';
   }
 
   @override
   String buy_from(Object user) {
-    return 'Buy from $user';
+    return 'Kjøp fra $user';
   }
 
   @override
   String must_be_at_least(Object num, Object currency) {
-    return 'Must be at least $num $currency';
+    return 'Må være minst $num $currency';
   }
 
   @override
   String must_be_less(Object num, Object currency) {
-    return 'Must be less $num $currency';
+    return 'Må være mindre $num $currency';
   }
 
   @override
   String send_all(Object asset) {
-    return 'Send all $asset';
+    return 'Send alle $asset';
   }
 
   @override
   String about_transactions(Object asset) {
-    return 'About $asset transactions';
+    return 'Om $asset transaksjoner';
   }
 
   @override
-  String get trade_id => 'Trade ID';
+  String get trade_id => 'Handels-ID';
 
   @override
-  String get view_trade => 'View trade';
+  String get view_trade => 'Se handel';
 
   @override
-  String get receiving => 'Receiving';
+  String get receiving => 'Mottar';
 
   @override
-  String get paying => 'Paying';
+  String get paying => 'Betaler';
 
   @override
-  String get rate => 'Rate';
+  String get rate => 'Vurdere';
 
   @override
-  String get enter_your_password => 'Enter your password';
+  String get enter_your_password => 'Skriv inn passordet ditt';
 
   @override
-  String get good_seller => 'Good seller';
+  String get good_seller => 'God selger';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Avbryt';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Slett';
 
   @override
-  String get important => 'Important';
+  String get important => 'Viktig';
 
   @override
-  String get feedback_updated_successfully => 'Feedback updated successfully.';
+  String get feedback_updated_successfully => 'Tilbakemeldingen ble oppdatert.';
 
   @override
-  String get pay => 'Pay';
+  String get pay => 'Betale';
 
   @override
-  String get send_trade_request => 'Send a trade request';
+  String get send_trade_request => 'Send en handelsforespørsel';
 
   @override
-  String get start_trading => 'Start trading';
+  String get start_trading => 'Start handel';
 
   @override
-  String get api_error_13 => 'Something went wrong on the request. It\'s most likely a validation issue. Check your request parameters, and if this still doesn\'t seem right, please contact our support.';
+  String get api_error_13 => 'Noe gikk galt i forespørselen. Det er mest sannsynlig et valideringsproblem. Sjekk forespørselsparameterne dine, og hvis dette fortsatt ikke virker riktig, vennligst kontakt vår kundestøtte.';
 
   @override
-  String get api_error_49 => 'The old password provided in the password change request doesn’t match the current password';
+  String get api_error_49 => 'Det gamle passordet som ble oppgitt i forespørselen om endring av passord, samsvarer ikke med gjeldende passord';
 
   @override
-  String get api_error_60 => 'The password provided for changing the email is incorrect';
+  String get api_error_60 => 'Passordet som ble oppgitt for å endre e-posten er feil';
 
   @override
-  String get api_error_61 => 'This email is already linked to another account';
+  String get api_error_61 => 'Denne e-posten er allerede knyttet til en annen konto';
 
   @override
-  String get api_error_73 => 'The password provided during withdrawal request is incorrect';
+  String get api_error_73 => 'Passordet som ble oppgitt under uttaksforespørselen er feil';
 
   @override
-  String get api_error_74 => 'Insufficient funds to conduct withdrawal for the requested amount';
+  String get api_error_74 => 'Ikke nok midler til å gjennomføre uttak for det forespurte beløpet';
 
   @override
-  String get api_error_75 => 'Attempting to withdraw funds to an internal address that doesn’t exist';
+  String get api_error_75 => 'Forsøk på å ta ut penger til en intern adresse som ikke eksisterer';
 
   @override
-  String get api_error_76 => 'Attempting to withdraw funds to the same account as the account that’s requesting the withdrawal';
+  String get api_error_76 => 'Forsøk på å ta ut penger til samme konto som kontoen som ber om uttaket';
 
   @override
-  String get api_error_77 => 'Insufficient funds to conduct internal transfer for the requested amount';
+  String get api_error_77 => 'Ikke nok midler til å gjennomføre intern overføring for det forespurte beløpet';
 
   @override
-  String get api_error_103 => 'Requesting trade for ad who’s poster is on selling vacation';
+  String get api_error_103 => 'Be om bytte for annonse hvem sin plakat selger ferie';
 
   @override
-  String get api_error_105 => 'Poster of the ad for which the trade is being requested doesn’t have enough balance to fund the escrow';
+  String get api_error_105 => 'Plakaten for annonsen som handelen er forespurt for, har ikke nok saldo til å finansiere deponeringen';
 
   @override
-  String get api_error_107 => 'Trying to track liquidity without setting maxAmount';
+  String get api_error_107 => 'Prøver å spore likviditet uten å angi maxAmount';
 
   @override
-  String get api_error_137 => 'Attempting to register 2FA while providing incorrect password';
+  String get api_error_137 => 'Forsøker å registrere 2FA mens du oppgir feil passord';
 
   @override
-  String get api_error_138 => 'Attempting to validate 2FA while providing incorrect OTP';
+  String get api_error_138 => 'Forsøker å validere 2FA mens du oppgir feil OTP';
 
   @override
-  String get api_error_139 => 'Either password or OTP incorrect when attempting to disable 2FA';
+  String get api_error_139 => 'Enten passord eller OTP er feil ved forsøk på å deaktivere 2FA';
 
   @override
-  String get api_error_140 => 'OTP incorrect when attempting to withdraw coins from wallet';
+  String get api_error_140 => 'OTP feil ved forsøk på å ta ut mynter fra lommeboken';
 
   @override
-  String get api_error_146 => 'Attempting to enable affiliate program for account that already has it enabled';
+  String get api_error_146 => 'Forsøker å aktivere tilknyttede program for kontoer som allerede har det aktivert';
 
   @override
-  String get api_error_170 => 'Amount that has been requested for withdrawal is less than the minimum possible amount for the given cryptocurrency';
+  String get api_error_170 => 'Beløpet som har blitt bedt om for uttak er mindre enn det minste mulige beløpet for den gitte kryptovalutaen';
 
   @override
-  String get api_error_171 => 'Invalid address provided when requesting withdrawal';
+  String get api_error_171 => 'Ugyldig adresse oppgitt ved forespørsel om uttak';
 
   @override
-  String get api_error_173 => 'Attempting to open too many trades at once for a new account';
+  String get api_error_173 => 'Forsøk på å åpne for mange handler samtidig for en ny konto';
 
   @override
-  String get api_error_178 => 'Attempting to redeem coupon for user that doesn’t exist';
+  String get api_error_178 => 'Forsøker å løse inn kupong for bruker som ikke eksisterer';
 
   @override
-  String get api_error_179 => 'Attempting to redeem coupon that doesn’t exist';
+  String get api_error_179 => 'Forsøker å løse inn kuponger som ikke eksisterer';
 
   @override
-  String get api_error_180 => 'Attempting to redeem coupon that’s expired';
+  String get api_error_180 => 'Forsøker å løse inn kupong som er utløpt';
 
   @override
-  String get api_error_181 => 'Attempting to redeem coupon that’s only allowed to be redeemed during registration';
+  String get api_error_181 => 'Forsøk på å løse inn kupong som kun er tillatt å løse inn under registrering';
 
   @override
-  String get api_error_182 => 'Attempting to redeem coupon that’s already been redeemed by this user';
+  String get api_error_182 => 'Forsøker å løse inn kupong som allerede er innløst av denne brukeren';
 
   @override
-  String get api_error_183 => 'Attempting to redeem coupon that’s out of stock';
+  String get api_error_183 => 'Forsøker å løse inn kupong som ikke er på lager';
 
   @override
-  String get api_error_184 => 'Attempting to redeem coupon when there’s a currently active coupon';
+  String get api_error_184 => 'Forsøker å løse inn kupong når det er en aktiv kupong';
 
   @override
-  String get api_error_204 => 'Attempting to request reputation import code for account that doesn’t exist';
+  String get api_error_204 => 'Forsøker å be om omdømmeimportkode for en konto som ikke eksisterer';
 
   @override
-  String get api_error_205 => 'Attempting to generate verification code for reputation import for a platform that already has a verification code generated for it';
+  String get api_error_205 => 'Forsøk på å generere bekreftelseskode for omdømmeimport for en plattform som allerede har en bekreftelseskode generert for seg';
 
   @override
-  String get api_error_206 => 'Attempting to generate verification code for reputation import for a platform from which reputation was already imported';
+  String get api_error_206 => 'Forsøk på å generere bekreftelseskode for omdømmeimport for en plattform som omdømme allerede var importert fra';
 
   @override
-  String get api_error_207 => 'Attempting to confirm reputation import verification code placement for user that doesn’t exist';
+  String get api_error_207 => 'Forsøker å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke eksisterer';
 
   @override
-  String get api_error_208 => 'Attempting to confirm reputation import verification code placement for user that isn’t in step 1 of the reputation import flow';
+  String get api_error_208 => 'Forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke er i trinn 1 i flyten for omdømmeimport';
 
   @override
-  String get api_error_209 => 'LocalBitcoins error when attempting to confirm reputation import verification code placement. Perhaps the username is wrong or the profile is not visible';
+  String get api_error_209 => 'LocalBitcoins-feil ved forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport. Kanskje brukernavnet er feil eller profilen er ikke synlig';
 
   @override
-  String get api_error_210 => 'Paxful error when attempting to confirm reputation import verification code placement Perhaps the username is wrong or the profile is not visible';
+  String get api_error_210 => 'Paxful feil ved forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport. Kanskje brukernavnet er feil eller profilen er ikke synlig';
 
   @override
-  String get api_error_225 => 'LocalBitcoins API returning “Invalid user” as error when attempting to confirm reputation code placement';
+  String get api_error_225 => 'LocalBitcoins API returnerer \"Ugyldig bruker\" som feil ved forsøk på å bekrefte plassering av omdømmekode';
 
   @override
-  String get api_error_226 => 'Incorrect password when attempting to delete account';
+  String get api_error_226 => 'Feil passord ved forsøk på å slette kontoen';
 
   @override
-  String get api_error_238 => 'Fee level not specified for external Bitcoin withdrawal';
+  String get api_error_238 => 'Gebyrnivå er ikke spesifisert for eksternt Bitcoin-uttak';
 
   @override
-  String get api_error_239 => 'Incorrect password when trying to release a trade';
+  String get api_error_239 => 'Feil passord når du prøver å frigi en handel';
 
   @override
-  String get api_error_243 => 'Internal AgoraDesk address can\'t be used for trade settlement. Please input an outside, non-AgoraDesk XMR address to continue.';
+  String get api_error_243 => 'Intern AgoraDesk-adresse kan ikke brukes til handelsoppgjør. Skriv inn en ekstern, ikke-AgoraDesk XMR-adresse for å fortsette.';
 
   @override
-  String get api_error_254 => 'Attempting to post a withdrawal to an identical address and amount within the last 10 minutes';
+  String get api_error_254 => 'Forsøk på å legge ut et uttak til identisk adresse og beløp innen de siste 10 minuttene';
 
   @override
-  String get api_error_260 => 'Attempting to post a note on a user that doesn’t exist';
+  String get api_error_260 => 'Forsøk på å legge ut et notat om en bruker som ikke eksisterer';
 
   @override
-  String get api_error_261 => 'Attempting to post a note on your own account';
+  String get api_error_261 => 'Forsøk på å legge inn et notat på din egen konto';
 
   @override
-  String get api_error_262 => 'Attempting to get a note on a user that doesn’t exist';
+  String get api_error_262 => 'Forsøk på å få et notat om en bruker som ikke eksisterer';
 
   @override
-  String get api_error_263 => 'Attempting to get a note on your own account';
+  String get api_error_263 => 'Forsøk på å få en lapp på egen konto';
 
   @override
-  String get api_error_264 => 'Attempting to delete a note on a user that doesn’t exist';
+  String get api_error_264 => 'Forsøk på å slette et notat om en bruker som ikke eksisterer';
 
   @override
-  String get api_error_265 => 'Attempting to delete a note on your own account';
+  String get api_error_265 => 'Forsøk på å slette et notat på din egen konto';
 
   @override
-  String get api_error_267 => 'Attempting to delete a user note that doesn’t exist';
+  String get api_error_267 => 'Forsøker å slette en brukernotat som ikke eksisterer';
 
   @override
-  String get api_error_403 => 'You are not authorized to perform this action';
+  String get api_error_403 => 'Du er ikke autorisert til å utføre denne handlingen';
 
   @override
-  String get api_error_4000 => 'No internet connection.';
+  String get api_error_4000 => 'Ingen internettforbindelse.';
 
   @override
-  String get api_error_4001 => 'Connection timeout, please check internet connection.';
+  String get api_error_4001 => 'Tidsavbrudd for tilkobling, sjekk internettforbindelsen.';
 
   @override
-  String get api_error_45 => 'You can\'t have both \'first_time_limit_asset\' and \'first_time_limit_TICKER\' in your request. Remove one of them (they are interchangeable).';
+  String get api_error_45 => 'Du kan ikke ha både «first_time_limit_asset» og «first_time_limit_TICKER» i forespørselen din. Fjern en av dem (de er utskiftbare).';
 
   @override
-  String get api_error_46 => 'Request must contain EITHER an application/json request body with a “msg” parameter OR a multipart/form-data request body with the image file listed under the parameter “document”';
+  String get api_error_46 => 'Forespørselen må inneholde ENTEN en applikasjon/json-forespørselstekst med en «msg»-parameter ELLER en flerdelt/skjemadataforespørselstekst med bildefilen oppført under parameteren «document»';
 
   @override
-  String get api_error_47 => 'User with that username already exists';
+  String get api_error_47 => 'Bruker med det brukernavnet finnes allerede';
 
   @override
-  String get api_error_48 => 'User with that email already exists';
+  String get api_error_48 => 'Bruker med den e-postadressen eksisterer allerede';
 
   @override
-  String get api_error_50 => 'Attempting to send an email to a user without an email set';
+  String get api_error_50 => 'Forsøk på å sende en e-post til en bruker uten et e-postsett';
 
   @override
-  String get api_error_51 => 'Token provided for email verification is given to a user who does not exist';
+  String get api_error_51 => 'Token gitt for e-postbekreftelse gis til en bruker som ikke eksisterer';
 
   @override
-  String get api_error_52 => 'Token provided for email verification is invalid';
+  String get api_error_52 => 'Tokenet som er oppgitt for e-postbekreftelse er ugyldig';
 
   @override
-  String get api_error_53 => 'The email in the token doesn’t match the current email in the database';
+  String get api_error_53 => 'E-posten i tokenet samsvarer ikke med gjeldende e-post i databasen';
 
   @override
-  String get api_error_54 => 'Token provided for password reset is given to a email that does not exist in the database';
+  String get api_error_54 => 'Token for tilbakestilling av passord gis til en e-post som ikke finnes i databasen';
 
   @override
-  String get api_error_55 => 'Token provided for password reset is invalid';
+  String get api_error_55 => 'Token oppgitt for tilbakestilling av passord er ugyldig';
 
   @override
-  String get api_error_56 => 'Attempting to send a password reset email to an email that isn’t in the database';
+  String get api_error_56 => 'Forsøk på å sende en e-post for tilbakestilling av passord til en e-post som ikke er i databasen';
 
   @override
-  String get api_error_57 => 'Token provided for password reset is not a reset token';
+  String get api_error_57 => 'Token oppgitt for tilbakestilling av passord er ikke et tilbakestillingstoken';
 
   @override
-  String get api_error_58 => 'Trying to send a password-reset email to a user with an unverified email';
+  String get api_error_58 => 'Prøver å sende en e-post med tilbakestilling av passord til en bruker med en ubekreftet e-post';
 
   @override
-  String get api_error_59 => 'Trying reset a password for a user with an unverified email';
+  String get api_error_59 => 'Prøver å tilbakestille et passord for en bruker med en ubekreftet e-post';
 
   @override
-  String get api_error_62 => 'No account exists with the username provided for the account public data request';
+  String get api_error_62 => 'Det eksisterer ingen konto med brukernavnet som er oppgitt for forespørselen om offentlige data på kontoen';
 
   @override
-  String get api_error_63 => 'Attempting to upload file of a forbidden type';
+  String get api_error_63 => 'Forsøk på å laste opp fil av en forbudt type';
 
   @override
-  String get api_error_64 => 'Attempting to mark a non-existent notification as read';
+  String get api_error_64 => 'Forsøk på å merke et ikke-eksisterende varsel som lest';
 
   @override
-  String get api_error_65 => 'Attempting to mark an already read notification as read';
+  String get api_error_65 => 'Forsøker å merke et allerede lest varsel som lest';
 
   @override
-  String get api_error_66 => 'Attempting to upload chat attachment to trade that doesn’t exist';
+  String get api_error_66 => 'Forsøk på å laste opp chat-vedlegg til handel som ikke eksisterer';
 
   @override
-  String get api_error_67 => 'Attempting to send chat message to trade that doesn’t exist';
+  String get api_error_67 => 'Forsøk på å sende chatmelding til handel som ikke eksisterer';
 
   @override
-  String get api_error_68 => 'Attempting to get chat message list of trade that doesn’t exist';
+  String get api_error_68 => 'Forsøker å få chatmeldingsliste over handel som ikke eksisterer';
 
   @override
-  String get api_error_69 => 'Attempting to get chat message that doesn’t exist';
+  String get api_error_69 => 'Forsøker å få en chatmelding som ikke eksisterer';
 
   @override
-  String get api_error_70 => 'Attempting to get wallet address of account that doesn’t exist';
+  String get api_error_70 => 'Forsøker å få lommebokadressen til en konto som ikke eksisterer';
 
   @override
-  String get api_error_71 => 'Attempting to get transactions of an account that doesn’t exist';
+  String get api_error_71 => 'Forsøk på å få transaksjoner fra en konto som ikke eksisterer';
 
   @override
-  String get api_error_72 => 'Attempting to withdraw funds of an account that doesn’t exist';
+  String get api_error_72 => 'Forsøk på å ta ut penger fra en konto som ikke eksisterer';
 
   @override
-  String get api_error_78 => 'Attempting to make get ads with an invalid combination of parameters';
+  String get api_error_78 => 'Forsøk på å få annonser med en ugyldig kombinasjon av parametere';
 
   @override
-  String get api_error_79 => 'The requested ad ID doesn’t exist';
+  String get api_error_79 => 'Den forespurte annonse-ID-en finnes ikke';
 
   @override
-  String get api_error_80 => 'Didn’t set both lat and lon in the ad update/create request';
+  String get api_error_80 => 'Angav ikke både lat og lon i annonseoppdateringen/opprettingsforespørselen';
 
   @override
-  String get api_error_81 => 'Didn’t set price formula when posting ad';
+  String get api_error_81 => 'Har ikke angitt prisformel da annonsen ble lagt ut';
 
   @override
-  String get api_error_82 => 'Trying to set lat and lon for an online ad';
+  String get api_error_82 => 'Prøver å angi lat og lon for en nettannonse';
 
   @override
-  String get api_error_83 => 'Trying to set ONLINE_SELL/CALL_SELL/PUT_BUY-specific properties to a different type of ad';
+  String get api_error_83 => 'Prøver å angi ONLINE_SELL/CALL_SELL/PUT_BUY-spesifikke egenskaper til en annen type annonse';
 
   @override
-  String get api_error_84 => 'Trying to set ONLINE_BUY/CALL_BUY/PUT_SELL-specific properties to a different type of ad';
+  String get api_error_84 => 'Prøver å angi ONLINE_BUY/CALL_BUY/PUT_SELL-spesifikke egenskaper til en annen type annonse';
 
   @override
-  String get api_error_85 => 'Trying to set LOCAL_SELL-specific properties to a different type of ad';
+  String get api_error_85 => 'Prøver å angi LOCAL_SELL-spesifikke egenskaper til en annen type annonse';
 
   @override
-  String get api_error_86 => 'Attempting to set country or payment method or currency that isn’t valid when creating/updating ad';
+  String get api_error_86 => 'Forsøk på å angi land eller betalingsmåte eller valuta som ikke er gyldig når annonsen opprettes/oppdateres';
 
   @override
-  String get api_error_87 => 'Trying to set a payment method that is invalid to that country when creating/updating ad';
+  String get api_error_87 => 'Prøver å angi en betalingsmåte som er ugyldig for det landet når du oppretter/oppdaterer annonsen';
 
   @override
-  String get api_error_88 => 'Trying to set a currency that is invalid to that payment method when creating/updating ad';
+  String get api_error_88 => 'Prøver å angi en valuta som er ugyldig for den betalingsmåten når du oppretter/oppdaterer annonsen';
 
   @override
-  String get api_error_89 => 'Trying to create a LOCAL_* ad without setting lon/lat';
+  String get api_error_89 => 'Prøver å lage en LOCAL_* annonse uten å angi lon/lat';
 
   @override
-  String get api_error_90 => 'Trying to access trades of a user that doesn’t exist.';
+  String get api_error_90 => 'Prøver å få tilgang til handler fra en bruker som ikke eksisterer.';
 
   @override
-  String get api_error_91 => 'Trying to access account public data using a token of a user that doesn’t exist';
+  String get api_error_91 => 'Prøver å få tilgang til offentlige kontodata ved å bruke et token fra en bruker som ikke eksisterer';
 
   @override
-  String get api_error_92 => 'Trying to get notifications for user that doesn’t exist';
+  String get api_error_92 => 'Prøver å få varsler for brukere som ikke eksisterer';
 
   @override
-  String get api_error_93 => 'Trying to get pending deposits for a user that doesn’t exist';
+  String get api_error_93 => 'Prøver å få ventende innskudd for en bruker som ikke eksisterer';
 
   @override
-  String get api_error_94 => 'Trying to get feedback score for user that doesn’t exist';
+  String get api_error_94 => 'Prøver å få tilbakemeldingspoeng for bruker som ikke eksisterer';
 
   @override
-  String get api_error_95 => 'Trying to get ads for user that doesn’t exist';
+  String get api_error_95 => 'Prøver å få annonser for brukere som ikke eksisterer';
 
   @override
-  String get api_error_96 => 'Non-existent user trying to create a trade';
+  String get api_error_96 => 'Ikke-eksisterende bruker prøver å opprette en handel';
 
   @override
-  String get api_error_97 => 'Trying to create a trade for ad that doesn’t exist';
+  String get api_error_97 => 'Prøver å lage en handel for en annonse som ikke eksisterer';
 
   @override
-  String get api_error_98 => 'Trying to create a trade for an ad who’s poster doesn’t exist';
+  String get api_error_98 => 'Prøver å lage en handel for en annonse som ikke har en plakat';
 
   @override
-  String get api_error_99 => 'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade';
+  String get api_error_99 => 'Prøver å be om høyere beløp enn tillatt av first_time_limit_asset når du oppretter en første handel';
 
   @override
-  String get api_error_100 => 'Cannot request less than 0.0000000001 XMR for trade creation';
+  String get api_error_100 => 'Kan ikke be om mindre enn 0,0000000001 XMR for opprettelse av handel';
 
   @override
-  String get api_error_101 => 'Requested amount is less than ad’s min_amount when creating trade';
+  String get api_error_101 => 'Forespurt beløp er mindre enn annonsens min_amount når du oppretter handel';
 
   @override
-  String get api_error_102 => 'Requested amount is more than ad’s max_amount_available when creating trade';
+  String get api_error_102 => 'Forespurt beløp er mer enn annonsens max_amount_available når du oppretter handel';
 
   @override
-  String get api_error_104 => 'Requesting trade for ad who’s poster is on buying vacation';
+  String get api_error_104 => 'Be om bytte for annonse hvem sin plakat er på å kjøpe ferie';
 
   @override
-  String get api_error_106 => 'Requester of the trade doesn’t have enough balance to fund the trade request';
+  String get api_error_106 => 'Forespørselen av handelen har ikke nok saldo til å finansiere handelsforespørselen';
 
   @override
-  String get api_error_108 => 'minAmount cannot be equal to or larger than maxAmount';
+  String get api_error_108 => 'minAmount kan ikke være lik eller større enn maxAmount';
 
   @override
-  String get api_error_109 => 'Requested amount is more than ad’s maxAmount when creating trade';
+  String get api_error_109 => 'Forespurt beløp er mer enn annonsens maxAmount når du oppretter handel';
 
   @override
-  String get api_error_110 => 'Trade requester has lower feedback score than what is required by the poster';
+  String get api_error_110 => 'Handelsanmoder har lavere tilbakemeldingsscore enn det som kreves av plakaten';
 
   @override
-  String get api_error_111 => 'Requested amount is not one of the accepted amounts, see limit_to_fiat_amounts';
+  String get api_error_111 => 'Forespurt beløp er ikke et av de aksepterte beløpene, se limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => 'Can’t request a trade for an ad you posted yourself';
+  String get api_error_112 => 'Kan ikke be om bytte av en annonse du har lagt ut selv';
 
   @override
-  String get api_error_113 => 'Can’t set paymentWindowMinutes to <15 or >90 when updating ad';
+  String get api_error_113 => 'Kan ikke sette paymentWindowMinutes til <15 eller >90 når annonsen oppdateres';
 
   @override
-  String get api_error_114 => 'Can’t set paymentWindowMinutes to <15 or >90 when creating ad';
+  String get api_error_114 => 'Kan ikke sette paymentWindowMinutes til <15 eller >90 når du oppretter en annonse';
 
   @override
-  String get api_error_115 => 'Trade by requested ID doesn’t exist';
+  String get api_error_115 => 'Handel med forespurt ID finnes ikke';
 
   @override
-  String get api_error_116 => 'User requesting trade doesn’t exist';
+  String get api_error_116 => 'Bruker som ber om handel eksisterer ikke';
 
   @override
-  String get api_error_117 => 'The currency for which the exchange rate has been requested does not exist';
+  String get api_error_117 => 'Valutaen som valutakursen er forespurt for, eksisterer ikke';
 
   @override
-  String get api_error_118 => 'User requesting funding of trade doesn’t exist';
+  String get api_error_118 => 'Bruker som ber om finansiering av handel eksisterer ikke';
 
   @override
-  String get api_error_119 => 'Attempting to fund a trade that doesn’t exist';
+  String get api_error_119 => 'Forsøk på å finansiere en handel som ikke eksisterer';
 
   @override
-  String get api_error_120 => 'User requesting escrow of trade doesn’t exist';
+  String get api_error_120 => 'Bruker som ber om escrow of trade eksisterer ikke';
 
   @override
-  String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
+  String get api_error_121 => 'Forsøk på å deponere en handel som ikke eksisterer';
 
   @override
-  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
+  String get api_error_122 => 'Ikke nok midler til å finansiere en flytende LOCAL_SELL-handel';
 
   @override
-  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
+  String get api_error_123 => 'Ikke nok midler til å finansiere en ikke-flytende LOCAL_SELL-handel';
 
   @override
-  String get api_error_124 => 'Error when funding a LOCAL_SELL';
+  String get api_error_124 => 'Feil ved finansiering av en LOCAL_SELL';
 
   @override
-  String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
+  String get api_error_125 => 'Bruker som ber om kansellering av handel eksisterer ikke';
 
   @override
-  String get api_error_126 => 'Attempting to cancel a trade that doesn’t exist';
+  String get api_error_126 => 'Forsøk på å kansellere en handel som ikke eksisterer';
 
   @override
-  String get api_error_127 => 'User requesting payment of trade doesn’t exist';
+  String get api_error_127 => 'Bruker som ber om betaling av handel eksisterer ikke';
 
   @override
-  String get api_error_128 => 'Attempting to mark a trade that doesn’t exist paid';
+  String get api_error_128 => 'Forsøk på å merke en handel som ikke eksisterer betalt';
 
   @override
-  String get api_error_129 => 'User requesting release of trade doesn’t exist';
+  String get api_error_129 => 'Bruker som ber om frigivelse av handel eksisterer ikke';
 
   @override
-  String get api_error_130 => 'Attempting to release a trade that doesn’t exist';
+  String get api_error_130 => 'Forsøker å frigi en handel som ikke eksisterer';
 
   @override
-  String get api_error_131 => 'User requesting dispute of trade doesn’t exist';
+  String get api_error_131 => 'Bruker som ber om tvist om handel eksisterer ikke';
 
   @override
-  String get api_error_132 => 'Attempting to dispute a trade that doesn’t exist';
+  String get api_error_132 => 'Forsøk på å bestride en handel som ikke eksisterer';
 
   @override
-  String get api_error_133 => 'Attempting to get feedback of a user that doesn’t exist';
+  String get api_error_133 => 'Forsøk på å få tilbakemelding fra en bruker som ikke eksisterer';
 
   @override
-  String get api_error_134 => 'Attempting to create an ad when user already has the maximum allowed number of ads';
+  String get api_error_134 => 'Forsøk på å lage en annonse når brukeren allerede har det maksimalt tillatte antallet annonser';
 
   @override
-  String get api_error_135 => 'Somehow the maxAmount is set to null while trackingMaxAmount is set to true';
+  String get api_error_135 => 'På en eller annen måte er maxAmount satt til null mens trackingMaxAmount er satt til true';
 
   @override
-  String get api_error_136 => 'Attempting to post a ad with balance less than minimum required balance.';
+  String get api_error_136 => 'Forsøk på å legge ut en annonse med en saldo som er mindre enn minimumskravet.';
 
   @override
-  String get api_error_141 => 'Attempting to create a trade for an amount that’s less than the minimum allowed amount';
+  String get api_error_141 => 'Forsøk på å opprette en handel for et beløp som er mindre enn det minste tillatte beløpet';
 
   @override
-  String get api_error_142 => 'Attempting to set a fiat limit that is less than minAmount when creating ad';
+  String get api_error_142 => 'Forsøk på å angi en fiat-grense som er mindre enn minAmount når du oppretter en annonse';
 
   @override
-  String get api_error_143 => 'Attempting to set a fiat limit that is more than maxAmount when creating ad';
+  String get api_error_143 => 'Forsøk på å sette en fiat-grense som er mer enn maxAmount når du oppretter annonse';
 
   @override
-  String get api_error_144 => 'Attempting to set a fiat limit that is less than minAmount when updating ad';
+  String get api_error_144 => 'Forsøker å angi en fiat-grense som er mindre enn minAmount ved oppdatering av annonsen';
 
   @override
-  String get api_error_145 => 'Attempting to set a fiat limit that is more than maxAmount when updating ad';
+  String get api_error_145 => 'Forsøker å sette en fiat-grense som er mer enn maxAmount ved oppdatering av annonsen';
 
   @override
-  String get api_error_147 => 'Attempting to get affiliate data for user that doesn’t have the affiliate program enabled';
+  String get api_error_147 => 'Forsøk på å få tilknyttede data for brukere som ikke har tilknyttede programmet aktivert';
 
   @override
-  String get api_error_148 => 'Attempting to set a telegram ID that’s already set';
+  String get api_error_148 => 'Forsøker å angi en telegram-ID som allerede er angitt';
 
   @override
-  String get api_error_149 => 'Priority not specified for external withdrawal';
+  String get api_error_149 => 'Prioritet ikke spesifisert for eksternt uttak';
 
   @override
-  String get api_error_150 => 'Attempting to start a trade on an ad where the requesting user is blocked by the ad poster';
+  String get api_error_150 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren er blokkert av annonseplakaten';
 
   @override
-  String get api_error_151 => 'Attempting to start a trade on an ad where the requesting user is not trusted by the ad poster';
+  String get api_error_151 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren ikke er klarert av annonseplakaten';
 
   @override
-  String get api_error_152 => 'Attempting to cancel a trade that’s already closed';
+  String get api_error_152 => 'Forsøker å kansellere en handel som allerede er stengt';
 
   @override
-  String get api_error_153 => 'Attempting to release a trade that’s already closed';
+  String get api_error_153 => 'Forsøker å frigi en handel som allerede er stengt';
 
   @override
-  String get api_error_154 => 'Attempting to request trades for an account that doesn’t exist';
+  String get api_error_154 => 'Forsøk på å be om handler for en konto som ikke eksisterer';
 
   @override
-  String get api_error_155 => 'Attempting to get list of trusted users for a user that doesn’t exist';
+  String get api_error_155 => 'Forsøk på å få liste over pålitelige brukere for en bruker som ikke eksisterer';
 
   @override
-  String get api_error_156 => 'Attempting to get list of blocked users for a user that doesn’t exist';
+  String get api_error_156 => 'Forsøker å få liste over blokkerte brukere for en bruker som ikke eksisterer';
 
   @override
-  String get api_error_157 => 'Attempting to set option-specific properties for a non-option ad';
+  String get api_error_157 => 'Forsøk på å angi alternativspesifikke egenskaper for en ikke-alternativannonse';
 
   @override
-  String get api_error_158 => 'Attempting to create an option ad without setting option-specific properties';
+  String get api_error_158 => 'Forsøk på å lage en alternativannonse uten å angi alternativspesifikke egenskaper';
 
   @override
-  String get api_error_159 => 'User requesting to mark premium payment of trade doesn’t exist';
+  String get api_error_159 => 'Bruker som ber om å merke premiebetaling av handel eksisterer ikke';
 
   @override
-  String get api_error_160 => 'Attempting to mark premium paid for a trade that doesn’t exist';
+  String get api_error_160 => 'Forsøk på å merke premie betalt for en handel som ikke eksisterer';
 
   @override
-  String get api_error_161 => 'User requesting to exercise option doesn’t exist';
+  String get api_error_161 => 'Bruker som ber om å utøve opsjon eksisterer ikke';
 
   @override
-  String get api_error_162 => 'Attempting to exercise option for a trade that doesn’t exist';
+  String get api_error_162 => 'Forsøk på å utøve opsjon for en handel som ikke eksisterer';
 
   @override
-  String get api_error_163 => 'User requesting to confirm premium payment of trade doesn’t exist';
+  String get api_error_163 => 'Bruker som ber om å bekrefte premiebetaling av handel eksisterer ikke';
 
   @override
-  String get api_error_164 => 'Attempting to confirm premium paid for a trade that doesn’t exist';
+  String get api_error_164 => 'Forsøk på å bekrefte premie betalt for en handel som ikke eksisterer';
 
   @override
-  String get api_error_165 => 'User requesting to exercise trade with net settlement doesn’t exist';
+  String get api_error_165 => 'Bruker som ber om å utøve handel med nettooppgjør eksisterer ikke';
 
   @override
-  String get api_error_166 => 'Attempting to exercise with net settlement a trade that doesn’t exist';
+  String get api_error_166 => 'Forsøk på å utøve med netto oppgjør en handel som ikke eksisterer';
 
   @override
-  String get api_error_167 => 'The current market price is less than or equal to the exercise price when netting a CALL trade. The trade is out-of-the-money by market standards, therefore cannot be netted. Use normal settlement if needed.';
+  String get api_error_167 => 'Gjeldende markedspris er mindre enn eller lik utøvelsesprisen ved netting av en CALL-handel. Handelen er ute av pengene etter markedsstandarder, og kan derfor ikke nettes. Bruk vanlig oppgjør om nødvendig.';
 
   @override
-  String get api_error_168 => 'User requesting to confirm cover payment of trade doesn’t exist';
+  String get api_error_168 => 'Bruker som ber om å bekrefte dekningsbetaling for handel eksisterer ikke';
 
   @override
-  String get api_error_169 => 'Attempting to confirm cover paid for a trade that doesn’t exist';
+  String get api_error_169 => 'Forsøk på å bekrefte dekning betalt for en handel som ikke eksisterer';
 
   @override
-  String get api_error_172 => 'Attempting to post an ad where the asset is the same as the ad currency';
+  String get api_error_172 => 'Forsøk på å legge ut en annonse der ressursen er den samme som annonsevalutaen';
 
   @override
-  String get api_error_174 => 'Attempting to exercise out-of-the-money PUT trade';
+  String get api_error_174 => 'Forsøk på å utøve PUT-handel uten penger';
 
   @override
-  String get api_error_175 => 'Attempting to redeem coupon that doesn’t exist during registration';
+  String get api_error_175 => 'Forsøker å løse inn kuponger som ikke eksisterer under registrering';
 
   @override
-  String get api_error_176 => 'Attempting to redeem an expired coupon during registration';
+  String get api_error_176 => 'Forsøk på å løse inn en utløpt kupong under registrering';
 
   @override
-  String get api_error_177 => 'Attempting to redeem a coupon that’s out of stock during registration';
+  String get api_error_177 => 'Forsøker å løse inn en kupong som ikke er på lager under registreringen';
 
   @override
-  String get api_error_185 => 'Attempting to get coupons for user that doesn’t exist';
+  String get api_error_185 => 'Forsøker å få kuponger for brukere som ikke eksisterer';
 
   @override
-  String get api_error_186 => 'Attempting to get more than 50 ads when getting ads by ID';
+  String get api_error_186 => 'Forsøk på å få mer enn 50 annonser når du får annonser etter ID';
 
   @override
-  String get api_error_187 => 'Attempting to give an empty list of IDs when getting ads by ID';
+  String get api_error_187 => 'Forsøk på å gi en tom liste over IDer når du får annonser etter ID';
 
   @override
-  String get api_error_188 => 'Not a single of the requested ad IDs is a valid ID when getting ads by ID';
+  String get api_error_188 => 'Ikke en eneste av de forespurte annonse-ID-ene er en gyldig ID når du får annonser etter ID';
 
   @override
-  String get api_error_189 => 'Not a single of the requested ads exist when getting ads by ID';
+  String get api_error_189 => 'Ikke en eneste av de forespurte annonsene eksisterer når du får annonser etter ID';
 
   @override
-  String get api_error_190 => 'Attempting to give an empty list of IDs when getting trades by ID';
+  String get api_error_190 => 'Forsøker å gi en tom liste over IDer når du får handler med ID';
 
   @override
-  String get api_error_191 => 'Attempting to get more than 50 ads when getting trades by ID';
+  String get api_error_191 => 'Forsøk på å få mer enn 50 annonser når du får handler med ID';
 
   @override
-  String get api_error_192 => 'Not a single of the requested trade IDs is a valid ID when getting trades by ID';
+  String get api_error_192 => 'Ikke en eneste av de forespurte handels-ID-ene er en gyldig ID når du får handler med ID';
 
   @override
-  String get api_error_193 => 'Not a single of the requested trades exist when getting trades by ID';
+  String get api_error_193 => 'Ikke en eneste av de forespurte handlene eksisterer når du får handler med ID';
 
   @override
-  String get api_error_194 => 'Attempting to generate public API token for user that doesn’t exist';
+  String get api_error_194 => 'Forsøker å generere offentlig API-token for bruker som ikke eksisterer';
 
   @override
-  String get api_error_195 => 'Incorrect password when attempting to get public API token';
+  String get api_error_195 => 'Feil passord ved forsøk på å få offentlig API-token';
 
   @override
-  String get api_error_196 => 'Attempting to get recent messages for user that doesn’t exist';
+  String get api_error_196 => 'Forsøk på å få nylige meldinger for brukere som ikke eksisterer';
 
   @override
-  String get api_error_197 => 'Attempting to get trade chat messages with “after” timestamp that’s outside of the allowed range';
+  String get api_error_197 => 'Forsøk på å få handelschatmeldinger med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
-  String get api_error_198 => 'Attempting to get account recent chat messages with “after” timestamp that’s outside of the allowed range';
+  String get api_error_198 => 'Forsøk på å få nye chatmeldinger på kontoen med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
-  String get api_error_199 => 'Attempting to get public API token for user that doesn’t exist';
+  String get api_error_199 => 'Forsøker å få offentlig API-token for bruker som ikke eksisterer';
 
   @override
-  String get api_error_200 => 'Attempting to expire and delete public API token for user without a public API token';
+  String get api_error_200 => 'Forsøk på å utløpe og slette offentlig API-token for bruker uten et offentlig API-token';
 
   @override
-  String get api_error_201 => 'Attempting to update price formula for ad that doesn’t exist';
+  String get api_error_201 => 'Forsøker å oppdatere prisformelen for annonse som ikke eksisterer';
 
   @override
-  String get api_error_202 => 'Attempting to get account transactions with “after” timestamp that’s outside of the allowed range';
+  String get api_error_202 => 'Forsøk på å få kontotransaksjoner med «etter»-tidsstempel som er utenfor det tillatte området';
 
   @override
-  String get api_error_203 => 'Attempting to get reputation import data for account that doesn’t exist';
+  String get api_error_203 => 'Forsøk på å få omdømmeimportdata for en konto som ikke eksisterer';
 
   @override
-  String get api_error_211 => 'Attempting to approve reputation import for user that doesn’t exist';
+  String get api_error_211 => 'Forsøker å godkjenne omdømmeimport for bruker som ikke eksisterer';
 
   @override
-  String get api_error_212 => 'Attempting to approve reputation import for user that isn’t in step 2 of the reputation import flow';
+  String get api_error_212 => 'Forsøk på å godkjenne omdømmeimport for brukere som ikke er i trinn 2 av omdømmeimportflyten';
 
   @override
-  String get api_error_213 => 'Attempting to deny reputation import for user that doesn’t exist';
+  String get api_error_213 => 'Forsøk på å nekte omdømmeimport for bruker som ikke eksisterer';
 
   @override
-  String get api_error_214 => 'Attempting to deny reputation import for user that isn’t in step 2 of the reputation import flow';
+  String get api_error_214 => 'Forsøk på å nekte omdømmeimport for brukere som ikke er i trinn 2 av omdømmeimportflyten';
 
   @override
-  String get api_error_215 => 'Attempting to specify both country_code and currency_code when requesting most popular payment methods';
+  String get api_error_215 => 'Forsøker å spesifisere både country_code og currency_code når du ber om de mest populære betalingsmåtene';
 
   @override
-  String get api_error_216 => 'Attempting to request most popular payment methods for a country_code that doesn’t exist';
+  String get api_error_216 => 'Forsøker å be om de mest populære betalingsmåtene for en country_code som ikke eksisterer';
 
   @override
-  String get api_error_217 => 'Attempting to request most popular payment methods for a currency_code that doesn’t exist';
+  String get api_error_217 => 'Forsøker å be om de mest populære betalingsmåtene for en valutakode som ikke eksisterer';
 
   @override
-  String get api_error_218 => 'Attempting to open a trade on an ad that requires a verified email when the requesting user doesn’t have a verified email';
+  String get api_error_218 => 'Forsøk på å åpne en handel på en annonse som krever en bekreftet e-post når den spørrende brukeren ikke har en bekreftet e-post';
 
   @override
-  String get api_error_219 => 'Attempting to register with an email that’s from a disposable email provider';
+  String get api_error_219 => 'Forsøk på å registrere seg med en e-post som er fra en engangsleverandør av e-post';
 
   @override
-  String get api_error_220 => 'Attempting to change account email to an email from a disposable email provider';
+  String get api_error_220 => 'Forsøk på å endre konto-e-post til en e-post fra en engangs-e-postleverandør';
 
   @override
-  String get api_error_221 => 'Attempting to mark all notifications read for a user that doesn’t exist';
+  String get api_error_221 => 'Forsøker å merke alle varsler som lest for en bruker som ikke eksisterer';
 
   @override
-  String get api_error_222 => 'Attempting to request reputation code for a outside platform account that has already been imported';
+  String get api_error_222 => 'Forsøker å be om omdømmekode for en ekstern plattformkonto som allerede er importert';
 
   @override
-  String get api_error_223 => 'Attempting to update ad with specifying verificationRequired as true while verificationMsg is null';
+  String get api_error_223 => 'Forsøker å oppdatere annonsen med å spesifisere verificationRequired som true mens verificationMsg er null';
 
   @override
-  String get api_error_224 => 'Attempting to update ad with specifying verificationMsg but the ad not requiring verification and the ad update request also not setting verificationRequired as true';
+  String get api_error_224 => 'Forsøker på å oppdatere annonsen med spesifisert bekreftelsesmelding, men annonsen som ikke krever bekreftelse og annonseoppdateringsforespørselen angir heller ikke bekreftelseObligatorisk som sann';
 
   @override
-  String get api_error_227 => 'Attempting to sanction a user that doesn’t exist';
+  String get api_error_227 => 'Forsøk på å sanksjonere en bruker som ikke eksisterer';
 
   @override
-  String get api_error_228 => 'Attempting to sanction user with an admin account that doesn’t exist';
+  String get api_error_228 => 'Forsøker å sanksjonere bruker med en administratorkonto som ikke eksisterer';
 
   @override
-  String get api_error_229 => 'Attempting to remove a sanction from a user that doesn’t exist';
+  String get api_error_229 => 'Forsøk på å fjerne en sanksjon fra en bruker som ikke eksisterer';
 
   @override
-  String get api_error_230 => 'Attempting to remove a sanction from a user with an admin account that doesn’t exist';
+  String get api_error_230 => 'Forsøk på å fjerne en sanksjon fra en bruker med en administratorkonto som ikke eksisterer';
 
   @override
-  String get api_error_231 => 'Attempting to remove a sanction from a user that doesn’t have any sanctions on them';
+  String get api_error_231 => 'Forsøk på å fjerne en sanksjon fra en bruker som ikke har noen sanksjoner mot dem';
 
   @override
-  String get api_error_232 => 'Attempting to open a trade with a user that’s currently prohibited from trading due to a sanction';
+  String get api_error_232 => 'Forsøk på å åpne en handel med en bruker som for øyeblikket er forbudt å handle på grunn av en sanksjon';
 
   @override
-  String get api_error_233 => 'Attempting to remove feedback with ID that doesn’t exist';
+  String get api_error_233 => 'Forsøker å fjerne tilbakemelding med ID som ikke eksisterer';
 
   @override
-  String get api_error_234 => 'Attempting to remove feedback that’s already removed';
+  String get api_error_234 => 'Forsøker å fjerne tilbakemeldinger som allerede er fjernet';
 
   @override
-  String get api_error_235 => 'Attempting to remove dispute status from a trade that doesn’t exist';
+  String get api_error_235 => 'Forsøk på å fjerne tviststatus fra en handel som ikke eksisterer';
 
   @override
-  String get api_error_236 => 'Attempting to remove dispute status from a trade that isn’t disputed';
+  String get api_error_236 => 'Forsøk på å fjerne tviststatus fra en handel som ikke er bestridt';
 
   @override
-  String get api_error_237 => 'Attempting to open a trade as a user that doesn’t exist when calling the trade opening endpoint as an admin and specifying the openAsUsername parameter';
+  String get api_error_237 => 'Forsøk på å åpne en handel som en bruker som ikke eksisterer når du ringer endepunktet for handelsåpning som en admin og spesifiserer parameteren openAsUsername';
 
   @override
-  String get api_error_240 => 'Invalid address provided by the buyer when responding to a SELL-type ad';
+  String get api_error_240 => 'Ugyldig adresse oppgitt av kjøperen når han svarte på en annonse av typen SELL';
 
   @override
-  String get api_error_241 => 'Buyer attempting to provide an internal address when responding to a SELL-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+  String get api_error_241 => 'Kjøper som forsøker å oppgi en intern adresse når han svarer på en SELL-type annonse (interne adresser er ikke tillatt for handelsoppgjør)';
 
   @override
-  String get api_error_242 => 'Invalid address provided by the buyer when creating a BUY-type ad';
+  String get api_error_242 => 'Ugyldig adresse oppgitt av kjøperen ved opprettelse av en KJØP-annonse';
 
   @override
-  String get api_error_244 => 'Invalid address provided by the buyer when updating a BUY-type ad';
+  String get api_error_244 => 'Ugyldig adresse oppgitt av kjøperen ved oppdatering av en KJØP-annonse';
 
   @override
-  String get api_error_245 => 'Buyer attempting to provide an internal address when updating a BUY-type ad (internal addresses are not allowed for the purpose of trade settlement)';
+  String get api_error_245 => 'Kjøper som forsøker å oppgi en intern adresse ved oppdatering av en KJØP-annonse (interne adresser er ikke tillatt for handelsoppgjør)';
 
   @override
-  String get api_error_246 => 'Attempting to start a trade from a BUY-type ad that doesn’t specify the buyer settlement address';
+  String get api_error_246 => 'Forsøk på å starte en handel fra en KJØP-annonse som ikke spesifiserer kjøperoppgjørsadressen';
 
   @override
-  String get api_error_247 => 'Attempting to release a trade from an account that’s prohibited from withdrawing due to sanctions';
+  String get api_error_247 => 'Forsøk på å frigi en handel fra en konto som det er forbudt å trekke ut på grunn av sanksjoner';
 
   @override
-  String get api_error_248 => 'Attempting to release a trade when the amount of the trade isn’t enough to cover the settlement-related fees';
+  String get api_error_248 => 'Forsøk på å frigi en handel når handlebeløpet ikke er nok til å dekke oppgjørsrelaterte gebyrer';
 
   @override
-  String get api_error_249 => 'Attempting to update a BUY-type ad that doesn’t have buyerSettlementAddress set without setting the buyerSettlementAddress parameter in the update request';
+  String get api_error_249 => 'Forsøk på å oppdatere en annonse av typen BUY som ikke har buyerSettlementAddress angitt uten å angi parameteren buyerSettlementAddress i oppdateringsforespørselen';
 
   @override
-  String get api_error_250 => 'Invalid address provided when requesting withdrawal fee for BTC';
+  String get api_error_250 => 'Ugyldig adresse oppgitt ved forespørsel om uttaksgebyr for BTC';
 
   @override
-  String get api_error_251 => 'Fee level not provided when opening a trade by responding to a BTC SELL-type ad';
+  String get api_error_251 => 'Gebyrnivå oppgis ikke når du åpner en handel ved å svare på en annonse av typen BTC SELL';
 
   @override
-  String get api_error_252 => 'Fee level not provided when creating a BTC BUY-type ad';
+  String get api_error_252 => 'Gebyrnivå oppgis ikke når du oppretter en annonse av typen BTC KJØP';
 
   @override
-  String get api_error_253 => 'Fee level not provided when updating a BTC BUY-type ad that doesn’t have a fee level set';
+  String get api_error_253 => 'Gebyrnivå ikke oppgitt når du oppdaterer en annonse av typen BTC BUY som ikke har et gebyrnivå angitt';
 
   @override
-  String get api_error_255 => 'Attempting to get notifications with “after” timestamp that’s outside of the allowed range';
+  String get api_error_255 => 'Forsøk på å få varsler med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
-  String get api_error_256 => 'Attempting to register a push notification token that already exists';
+  String get api_error_256 => 'Forsøker å registrere et push-varslingstoken som allerede eksisterer';
 
   @override
-  String get api_error_257 => 'Attempting to register a push notification token that isn’t valid';
+  String get api_error_257 => 'Forsøker å registrere et pushvarslingstoken som ikke er gyldig';
 
   @override
-  String get api_error_258 => 'Attempting to register a push notification token for an account that already has 500 device tokens, delete one of the existing tokens before trying this again';
+  String get api_error_258 => 'Forsøk på å registrere et pushvarslingstoken for en konto som allerede har 500 enhetstokener, slett en av de eksisterende tokenene før du prøver dette igjen';
 
   @override
-  String get api_error_259 => 'Attempting to delete a token that doesn’t exist or doesn’t belong to this user';
+  String get api_error_259 => 'Forsøker å slette et token som ikke eksisterer eller som ikke tilhører denne brukeren';
 
   @override
-  String get account => 'Account';
+  String get account => 'Regnskap';
 
   @override
-  String get login => 'Login';
+  String get login => 'Logg Inn';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Hopp over';
 
   @override
-  String get pin_setup => 'Set up PIN';
+  String get pin_setup => 'Sett opp PIN-kode';
 
   @override
-  String get pin_enter_continue => 'Enter PIN to continue';
+  String get pin_enter_continue => 'Skriv inn PIN-koden for å fortsette';
 
   @override
-  String get pin_enter => 'Enter PIN';
+  String get pin_enter => 'Skriv inn PIN';
 
   @override
-  String get pin_enter_to_confirm_transaction => 'Enter PIN to confirm transaction';
+  String get pin_enter_to_confirm_transaction => 'Skriv inn PIN-koden for å bekrefte transaksjonen';
 
   @override
-  String get pin_you_can_use => 'You can use this PIN to unlock the app.';
+  String get pin_you_can_use => 'Du kan bruke denne PIN-koden til å låse opp appen.';
 
   @override
-  String get pin_confirm => 'Confirm PIN';
+  String get pin_confirm => 'Bekreft PIN';
 
   @override
-  String get pin_current => 'Current PIN';
+  String get pin_current => 'Gjeldende PIN-kode';
 
   @override
-  String get pin_set => 'Set PIN code';
+  String get pin_set => 'Angi PIN-kode';
 
   @override
-  String get pin_do_not_match => 'PINs don\'t match';
+  String get pin_do_not_match => 'PIN-kodene stemmer ikke overens';
 
   @override
-  String get pin_second_as_first => 'The PIN you entered the second time doesn\'t match the first one.';
+  String get pin_second_as_first => 'PIN-koden du skrev inn andre gang samsvarer ikke med den første.';
 
   @override
-  String get pin_wrong_current => 'Wrong current PIN';
+  String get pin_wrong_current => 'Feil gjeldende PIN-kode';
 
   @override
-  String get pin_please_input_correct => 'Please input correct current PIN.';
+  String get pin_please_input_correct => 'Vennligst skriv inn riktig gjeldende PIN-kode.';
 
   @override
-  String get enter_email => 'Enter email';
+  String get enter_email => 'Skriv inn e-post';
 
   @override
-  String get convert => 'Convert';
+  String get convert => 'Konvertere';
 
   @override
-  String get recent_transactions => 'Recent transactions';
+  String get recent_transactions => 'Nylige transaksjoner';
 
   @override
-  String get transactions_30_days => 'Transactions for the last 30 days';
+  String get transactions_30_days => 'Transaksjoner for de siste 30 dagene';
 
   @override
-  String get forgot_password => 'Forgot password?';
+  String get forgot_password => 'Glemt passord?';
 
   @override
-  String get password_have_changed => 'Password have changed.';
+  String get password_have_changed => 'Passordet er endret.';
 
   @override
-  String get i_want_to_buy => 'I want to buy';
+  String get i_want_to_buy => 'Jeg ønsker å kjøpe';
 
   @override
-  String get error_password_reset_token_invalid => 'Token provided for password reset is invalid';
+  String get error_password_reset_token_invalid => 'Token oppgitt for tilbakestilling av passord er ugyldig';
 
   @override
-  String get error_password_reset_unverified_email => 'Trying reset a password for a user with an unverified email';
+  String get error_password_reset_unverified_email => 'Prøver å tilbakestille et passord for en bruker med en ubekreftet e-post';
 
   @override
-  String get i_want_to_buy_new => 'I want to buy';
+  String get i_want_to_buy_new => 'Jeg ønsker å kjøpe';
 
   @override
-  String get new_password => 'New password (8-72 characters)';
+  String get new_password => 'Nytt passord (8-72 tegn)';
 
   @override
-  String get i_want_to_sell => 'I want to sell';
+  String get i_want_to_sell => 'Jeg vil selge';
 
   @override
-  String get log_in_to_start_trading => 'Log in to start trading';
+  String get log_in_to_start_trading => 'Logg inn for å starte handel';
 
   @override
-  String get why_do_you_need_my_email => 'Why do you need my email?';
+  String get why_do_you_need_my_email => 'Hvorfor trenger du e-posten min?';
 
   @override
-  String get view_all_transactions => 'View all transactions';
+  String get view_all_transactions => 'Se alle transaksjoner';
 
   @override
-  String get email_is_used_to => 'Email is used to recover your password or send you email notifications. Your email will be checked against a third-party database of disposable email providers.';
+  String get email_is_used_to => 'E-post brukes til å gjenopprette passordet ditt eller sende deg e-postvarsler. E-posten din vil bli sjekket mot en tredjeparts database med engangse-postleverandører.';
 
   @override
-  String get email_verified => 'Email is verified.';
+  String get email_verified => 'E-post er bekreftet.';
 
   @override
-  String get email_verification_error => 'Email verification error.';
+  String get email_verification_error => 'E-postbekreftelsesfeil.';
 
   @override
-  String get email_token_error => 'Token or email are wrong. Email was not verified.';
+  String get email_token_error => 'Token eller e-post er feil. E-posten ble ikke bekreftet.';
 
   @override
-  String get welcome_screen_about => 'Safe and easy-to-use person-to-person platform for trading local currency for Bitcoin and Monero.';
+  String get welcome_screen_about => 'Trygg og brukervennlig person-til-person-plattform for handel med lokal valuta for Bitcoin og Monero.';
 
   @override
-  String get view_in_block_explorer => 'View in block explorer';
+  String get view_in_block_explorer => 'Se i blokkutforsker';
 
   @override
-  String get welcome_pick_a_payment_method => 'Pick a payment method or choose from all the available offers.';
+  String get welcome_pick_a_payment_method => 'Velg en betalingsmetode eller velg blant alle tilgjengelige tilbud.';
 
   @override
-  String get welcome_buy_press_buy => 'Press BUY to start the trade.';
+  String get welcome_buy_press_buy => 'Trykk KJØP for å starte handelen.';
 
   @override
-  String get welcome_buy_follow_the_sellers => 'Follow the seller\'s instructions in the trade chat!';
+  String get welcome_buy_follow_the_sellers => 'Følg selgers instruksjoner i handelschatten!';
 
   @override
-  String get welcome_sell_go_to_wallet => 'Go to your wallet and deposit your coins.';
+  String get welcome_sell_go_to_wallet => 'Gå til lommeboken og sett inn myntene dine.';
 
   @override
-  String get welcome_sell_press_sell => 'Press SELL to start the trade.';
+  String get welcome_sell_press_sell => 'Trykk SELG for å starte handelen.';
 
   @override
-  String get welcome_sell_follow_the_buyer => 'Follow the buyer\'s instructions in the trade chat!';
+  String get welcome_sell_follow_the_buyer => 'Følg kjøpers anvisninger i handelschatten!';
 
   @override
-  String get get_started => 'Get started';
+  String get get_started => 'Kom i gang';
 
   @override
-  String get send_to => 'Send to';
+  String get send_to => 'Send til';
 
   @override
-  String get error_only_numbers_are_possible => 'Only numbers are possible.';
+  String get error_only_numbers_are_possible => 'Kun tall er mulig.';
 
   @override
-  String get error_entered_greater_than_balance => 'The entered value is greater than the balance.';
+  String get error_entered_greater_than_balance => 'Den angitte verdien er større enn saldoen.';
 
   @override
-  String get amount_to_receive => 'Amount to receive';
+  String get amount_to_receive => 'Beløp å motta';
 
   @override
-  String get amount_to_send => 'Amount to send';
+  String get amount_to_send => 'Beløp som skal sendes';
 
   @override
   String your_deposit_address(Object asset) {
-    return 'Your $asset deposit address';
+    return 'Din $asset innskuddsadresse';
   }
 
   @override
   String pending(Object num1, Object num2) {
-    return 'Pending ($num1/$num2)';
+    return 'Venter ($num1/$num2)';
   }
 
   @override
-  String get preview => 'Preview';
+  String get preview => 'Forhåndsvisning';
 
   @override
-  String get close => 'Close';
+  String get close => 'Lukk';
 
   @override
-  String get deposit => 'Deposit';
+  String get deposit => 'Innskudd';
 
   @override
-  String get share => 'Share';
+  String get share => 'Dele';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Redigere';
 
   @override
-  String get confirm_transaction => 'Confirm transaction';
+  String get confirm_transaction => 'Bekreft transaksjon';
 
   @override
-  String get transaction_fee => 'Transaction fee';
+  String get transaction_fee => 'Transaksjonsgebyr';
 
   @override
-  String get show_qr_code => 'Show QR code';
+  String get show_qr_code => 'Vis QR-kode';
 
   @override
-  String get security => 'Security';
+  String get security => 'Sikkerhet';
 
   @override
-  String get no_pending_deposits => 'No pending deposits';
+  String get no_pending_deposits => 'Ingen ventende innskudd';
 
   @override
-  String get create_pin => 'Create PIN';
+  String get create_pin => 'Opprett PIN-kode';
 
   @override
-  String get change_pin => 'Change PIN';
+  String get change_pin => 'Endre PIN';
 
   @override
-  String get remove_pin => 'Remove PIN';
+  String get remove_pin => 'Fjern PIN-koden';
 
   @override
-  String get remove_pin_message_success => 'PIN removed';
+  String get remove_pin_message_success => 'PIN-koden er fjernet';
 
   @override
-  String get you_will_receive => 'You will receive';
+  String get you_will_receive => 'Du vil motta';
 
   @override
-  String get total_amount_to_send => 'Total amount to send';
+  String get total_amount_to_send => 'Totalt beløp å sende';
 
   @override
-  String get enter_amount_to_receive_without_fee => 'Enter amount to be received (w/o fee)';
+  String get enter_amount_to_receive_without_fee => 'Angi beløp som skal mottas (uten gebyr)';
 
   @override
-  String get enter_amount_to_receive_with_fee => 'Enter amount to be deducted (with fee)';
+  String get enter_amount_to_receive_with_fee => 'Angi beløp som skal trekkes (med gebyr)';
 
   @override
-  String get return_reserve_from_trade => 'Return reserve from trade';
+  String get return_reserve_from_trade => 'Returreserve fra handel';
 
   @override
-  String get user_profile => 'User profile';
+  String get user_profile => 'Brukerprofil';
 
   @override
-  String get personal_introduction => 'Personal introduction';
+  String get personal_introduction => 'Personlig introduksjon';
 
   @override
-  String get trading_reputation_on_other_platforms => 'Trading reputation on other platforms';
+  String get trading_reputation_on_other_platforms => 'Handelsomdømme på andre plattformer';
 
   @override
-  String get how_to_link_my_account => 'How to link my account?';
+  String get how_to_link_my_account => 'Hvordan koble til kontoen min?';
 
   @override
   String link_account(Object platform) {
-    return 'Link $platform account';
+    return 'Koble til $platform-konto';
   }
 
   @override
   String what_is_your_username(Object platform) {
-    return 'What is your username on $platform?';
+    return 'Hva er brukernavnet ditt på $platform?';
   }
 
   @override
-  String get enter_username => 'Enter username';
+  String get enter_username => 'Skriv inn brukernavn';
 
   @override
-  String get edit_personal_introduction => 'Edit personal introduction';
+  String get edit_personal_introduction => 'Rediger personlig introduksjon';
 
   @override
-  String get your_info => 'Your info';
+  String get your_info => 'Din informasjon';
 
   @override
-  String get website => 'Website';
+  String get website => 'Nettsted';
 
   @override
-  String get are_you_sure => 'Are you sure?';
+  String get are_you_sure => 'Er du sikker?';
 
   @override
-  String get no_trusted_users_yet => 'No trusted users yet.';
+  String get no_trusted_users_yet => 'Ingen pålitelige brukere ennå.';
 
   @override
-  String get no_blocked_users_yet => 'No blocked users yet.';
+  String get no_blocked_users_yet => 'Ingen blokkerte brukere ennå.';
 
   @override
-  String get no_transactions_yet => 'No transactions yet.';
+  String get no_transactions_yet => 'Ingen transaksjoner ennå.';
 
   @override
-  String get web_links => 'Web links';
+  String get web_links => 'weblenker';
 
   @override
-  String get tor_links => 'Tor links';
+  String get tor_links => 'Tor-lenker';
 
   @override
-  String get i2p_links => 'I2P links';
+  String get i2p_links => 'I2P-lenker';
 
   @override
-  String get active_coupons => 'Active coupons';
+  String get active_coupons => 'Aktive kuponger';
 
   @override
-  String get expired_coupons => 'Expired coupons';
+  String get expired_coupons => 'Utløpte kuponger';
 
   @override
-  String get hide_expired_coupons => 'Hide expired coupons';
+  String get hide_expired_coupons => 'Skjul utløpte kuponger';
 
   @override
-  String get show_expired_coupons => 'Show expired coupons';
+  String get show_expired_coupons => 'Vis utløpte kuponger';
 
   @override
-  String get terms_and_conditions => 'Terms and conditions';
+  String get terms_and_conditions => 'Vilkår og betingelser';
 
   @override
-  String get current_email => 'Current email';
+  String get current_email => 'Nåværende epost';
 
   @override
-  String get remove_email => 'Remove email';
+  String get remove_email => 'Fjern e-post';
 
   @override
-  String get email_not_received_content => 'If you have not received the verification email, please check your “Spam” folder or';
+  String get email_not_received_content => 'Hvis du ikke har mottatt bekreftelses-e-posten, vennligst sjekk \"Spam\"-mappen eller';
 
   @override
-  String get email_not_received_link => 'click here to resend the email.';
+  String get email_not_received_link => 'klikk her for å sende e-posten på nytt.';
 
   @override
-  String get email_confirm_delete => 'Confirm email delete';
+  String get email_confirm_delete => 'Bekreft sletting av e-post';
 
   @override
-  String get email_deleted => 'Email deleted.';
+  String get email_deleted => 'E-post slettet.';
 
   @override
   String email_confirmation_we_ve_sent_an_email(Object email) {
-    return 'We’ve sent an email to $email. Click the link in the email to verify your email address.';
+    return 'Vi har sendt en e-post til $email. Klikk på koblingen i e-posten for å bekrefte e-postadressen din.';
   }
 
   @override
   String app_staff(Object appName) {
-    return '$appName staff';
+    return '$appName ansatte';
   }
 
   @override
-  String get current_password => 'Current password';
+  String get current_password => 'Nåværende passord';
 
   @override
-  String get save_your_backup_code => 'Save your backup code';
+  String get save_your_backup_code => 'Lagre reservekoden';
 
   @override
-  String get your_backup_code => 'Your backup code';
+  String get your_backup_code => 'Din reservekode';
 
   @override
-  String get set_up_2fa => 'Set up 2FA';
+  String get set_up_2fa => 'Sett opp 2FA';
 
   @override
-  String get download_2fa => 'Download a 2FA app. Copy the code below and paste it into your 2FA app.';
+  String get download_2fa => 'Last ned en 2FA-app. Kopier koden nedenfor og lim den inn i 2FA-appen din.';
 
   @override
-  String get paste_code => 'Paste code';
+  String get paste_code => 'Lim inn kode';
 
   @override
-  String get code_valid => 'Code valid';
+  String get code_valid => 'Koden er gyldig';
 
   @override
-  String get verifying_the_code => 'Verifying the code...';
+  String get verifying_the_code => 'Bekrefter koden ...';
 
   @override
-  String get language => 'Language';
+  String get language => 'Språk';
 
   @override
-  String get my_profile => 'My profile';
+  String get my_profile => 'Min profil';
 
   @override
-  String get choose_ad_default_region => 'Choose ad default region';
+  String get choose_ad_default_region => 'Velg annonsestandardregion';
 
   @override
-  String get knowledge_base => 'Knowledge base';
+  String get knowledge_base => 'Kunnskapsbase';
 
   @override
-  String get report_this_ad => 'Report this ad';
+  String get report_this_ad => 'Rapporter denne annonsen';
 
   @override
-  String get cash_only => 'Cash only';
+  String get cash_only => 'Kun kontanter';
 
   @override
-  String get dispute_started => 'Dispute started';
+  String get dispute_started => 'Tvisten startet';
 
   @override
-  String get payment_info => 'Payment info';
+  String get payment_info => 'betalingsinformasjon';
 
   @override
-  String get trade_ad => 'Trade ad';
+  String get trade_ad => 'Handelsannonse';
 
   @override
-  String get ask_delete_ad => 'Are you sure you want to delete this ad?';
+  String get ask_delete_ad => 'Er du sikker på at du vil slette denne annonsen?';
 
   @override
-  String get general => 'General';
+  String get general => 'Generell';
 
   @override
-  String get final_price => 'Final price';
+  String get final_price => 'Siste pris';
 
   @override
-  String get use_price_formula_to_calculate => 'Use price formula to calculate';
+  String get use_price_formula_to_calculate => 'Bruk prisformel for å beregne';
 
   @override
-  String get enter_price_formula => 'Enter price formula';
+  String get enter_price_formula => 'Skriv inn prisformel';
 
   @override
-  String get trade_limits => 'Trade limits (optional)';
+  String get trade_limits => 'Handelsgrenser (valgfritt)';
 
   @override
-  String get trade_details => 'Trade details (optional)';
+  String get trade_details => 'Handelsdetaljer (valgfritt)';
 
   @override
-  String get reply => 'Reply';
+  String get reply => 'Svare';
 
   @override
-  String get trade_loading_failed => 'Trade loading failed, please check connection.';
+  String get trade_loading_failed => 'Innlasting av handel mislyktes, sjekk tilkoblingen.';
 
   @override
-  String get dark_theme => 'Dark theme';
+  String get dark_theme => 'Mørkt tema';
 
   @override
   String search__no_results(Object country) {
-    return 'No results in $country with the selected criteria... yet. ';
+    return 'Ingen resultater i $country med de valgte kriteriene... ennå. ';
   }
 
   @override
-  String get affiliate__explain_is_reg => 'Affiliation is registered when any user signs up after landing on the site from a link with your referral code.';
+  String get affiliate__explain_is_reg => 'Tilknytning registreres når en bruker registrerer seg etter å ha landet på siden fra en lenke med henvisningskoden din.';
 
   @override
-  String get affiliate__ref_code_title => 'Your referral code';
+  String get affiliate__ref_code_title => 'Din henvisningskode';
 
   @override
   String affiliate__users__text(Object number) {
-    return 'You are currently registered as an affiliate for $number users and will earn commissions from all trades done by these.';
+    return 'Du er for øyeblikket registrert som en affiliate for $number-brukere og vil tjene provisjoner fra alle handler utført av disse.';
   }
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• You can link to any individual page, such as country listing or payment method listing, or anything else on $appName. \n• You will earn cryptocurrency from the users who arrive to the site through your affiliate link register and make trades. \n• Payouts will be made daily to your $appName wallet in the relevant cryptocurrencies. \n• Commissions will be paid for one year from the user\'s registration. Commission is based on the income the new user brings for $appName (trading fees). \n• Any foul play, such as misleading advertising, is forbidden. \n• Spamming is forbidden. Spamming includes sending unsubscribed private or public messages on forums/reddit, unsubscribed mass-mail, etc. \n• Adding hidden iframes on a website in order to capture affiliates is forbidden. Only affiliate iframes or direct links to the webpage are allowed. \n• $appName has the right to disable any affiliate user at any given time. If you breach the terms, your affiliate program will be terminated.';
+    return '• Du kan koble til en hvilken som helst individuell side, for eksempel landoppføring eller betalingsmåteoppføring, eller noe annet på $appName.\n• Du vil tjene kryptovaluta fra brukerne som kommer til nettstedet gjennom ditt tilknyttede lenkeregister og gjør handler.\n• Utbetalinger vil bli gjort daglig til din $appName lommebok i de relevante kryptovalutaene.\n• Provisjon vil bli betalt i ett år fra brukerens registrering. Provisjon er basert på inntekten den nye brukeren kommer med for $appName (handelsgebyrer).\n• Ethvert stygt spill, som villedende reklame, er forbudt.\n• Spamming er forbudt. Spamming inkluderer å sende private eller offentlige meldinger som ikke abonneres på forum/reddit, avmeldt massepost osv.\n• Det er forbudt å legge til skjulte iframes på et nettsted for å fange opp tilknyttede selskaper. Bare tilknyttede iframes eller direkte lenker til nettsiden er tillatt.\n• $appName har rett til å deaktivere enhver tilknyttet bruker til enhver tid. Hvis du bryter vilkårene, vil tilknytningsprogrammet ditt bli avsluttet.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object appName, Object assetSymbol) {
-    return 'You get two users, buyer and seller of the $assetName registered on $appName, and they do one trade valued 100 $assetSymbol. You earn 20% commission on the $appName trading fees from both participants, in total 40% of the $appName fee.\n\nYour earned sum is 0.4 $assetSymbol. Only finalized sales that go though our transaction process matter. Payouts are made daily. \n\n$appName support is more than willing to help you with any questions.';
+    return 'Du får to brukere, kjøper og selger av $assetName registrert på $appName, og de gjør en handel verdt 100 $assetSymbol. Du tjener 20 % provisjon på $appName handelsgebyrene fra begge deltakerne, totalt 40 % av $appName gebyret.\n\nDin opptjente sum er 0,4 $assetSymbol. Kun sluttførte salg som går gjennom transaksjonsprosessen vår betyr noe. Utbetalinger gjøres daglig.\n\n$appName-støtte er mer enn villig til å hjelpe deg med alle spørsmål.';
   }
 
   @override
-  String get affiliate__enable_btn => 'Enable affiliate program';
+  String get affiliate__enable_btn => 'Aktiver tilknyttede program';
 
   @override
   String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag $ref_code to any $appName URL.';
+    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $ref_code til en hvilken som helst $appName URL.';
   }
 
   @override
   String reputation_import__step__username__input__label(Object platform) {
-    return 'Your $platform username';
+    return 'Ditt $platform brukernavn';
   }
 
   @override
   String reputation_import__step__code__message(Object platform) {
-    return 'Add this code somewhere on your public $platform profile. Once we\'ve verified the code, you can remove it.';
+    return 'Legg til denne koden et sted på den offentlige $platform-profilen din. Når vi har bekreftet koden, kan du fjerne den.';
   }
 
   @override
   String settings__homepage_tip(Object example_url) {
-    return 'Shown on your public profile. Only valid URL accepted (e.g. https://$example_url)';
+    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$example_url)';
   }
 
   @override
-  String get settings__personal_info_tip => 'Shown on your public profile. Maximum 65536 characters. Can use markdown for styling.';
+  String get settings__personal_info_tip => 'Vises på den offentlige profilen din. Maksimalt 65536 tegn. Kan bruke markdown for styling.';
 
   @override
-  String get settings__personal_info_tip_1 => 'Shown on your public profile. Maximum 65536 characters.';
+  String get settings__personal_info_tip_1 => 'Vises på den offentlige profilen din. Maksimalt 65536 tegn.';
 
   @override
-  String get coupons__coupon__type_here => 'Type your coupon here';
+  String get coupons__coupon__type_here => 'Skriv inn kupongen din her';
 
   @override
-  String get trade__mark_pay_according => ' Pay according to the payment details shown below. If you have any questions, ask the seller in the chat.';
+  String get trade__mark_pay_according => ' Betal i henhold til betalingsdetaljene vist nedenfor. Hvis du har spørsmål, spør selgeren i chatten.';
 
   @override
-  String get dashboard__trade__status__open => 'Open';
+  String get dashboard__trade__status__open => 'Åpen';
 
   @override
-  String get wallet__available_balance => 'Available Balance';
+  String get wallet__available_balance => 'Tilgjengelig balanse';
 
   @override
-  String get trade__dialog__confirm_release_monero_text_password => 'This password is used as the offset to generate the non-custodial settlement wallet and sign the transaction. LocalMonero will have no way of recovering the wallet if you lose this password.';
+  String get trade__dialog__confirm_release_monero_text_password => 'Dette passordet brukes som forskyvning for å generere oppgjørslommeboken for ikke-depot og signere transaksjonen. LocalMonero har ingen mulighet til å gjenopprette lommeboken hvis du mister dette passordet.';
 
   @override
-  String get dont_have_an_account_yet => 'Don\'t have an account yet?';
+  String get dont_have_an_account_yet => 'Har du ikke en konto ennå?';
 
   @override
-  String get app_trades => 'Trades';
+  String get app_trades => 'Handler';
 
   @override
-  String get app_unlimited => 'Unlimited';
+  String get app_unlimited => 'Ubegrenset';
 
   @override
-  String get app_guides => 'Guides';
+  String get app_guides => 'Guider';
 
   @override
-  String get app_edit_this_ad => 'Edit this ad';
+  String get app_edit_this_ad => 'Rediger denne annonsen';
 
   @override
-  String get app_you_can_use_markdown => 'You can use markdown to style your ad\'s terms (images not allowed).';
+  String get app_you_can_use_markdown => 'Du kan bruke markdown for å style annonsens vilkår (bilder ikke tillatt).';
 
   @override
-  String get app_no_trades_to_export => 'No trades to export.';
+  String get app_no_trades_to_export => 'Ingen handler å eksportere.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Write down your backup code (above in green) on a piece of paper and store it in a safe place. You will need it if you lose your phone, or you will be locked out of your account. $appName will not be able to help you should you lose this code.';
+    return 'Skriv ned reservekoden (over i grønt) på et stykke papir og oppbevar den på et trygt sted. Du vil trenge det hvis du mister telefonen, eller du vil bli låst ute av kontoen din. $appName vil ikke kunne hjelpe deg hvis du mister denne koden.';
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => 'Before creating an advertisement please read through our ';
+  String get ad_post_ad_rules_text_0 => 'Før du oppretter en annonse, vennligst les gjennom vår ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Beware of scammers trying to impersonate staff! \n${appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
+    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n${appName}-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
   }
 
   @override
   String app_buy_sell(Object val) {
-    return 'How much do you wish to $val?';
+    return 'Hvor mye ønsker du å $val?';
   }
 
   @override
   String app_buyer_marked_as_paid(Object val) {
-    return '$val has marked the trade as paid';
+    return '$val har merket handelen som betalt';
   }
 
   @override
   String app_buy_crypto_from(Object val) {
-    return 'Buy crypto from $val';
+    return 'Kjøp krypto fra $val';
   }
 
   @override
   String app_sell_crypto_to(Object val) {
-    return 'Sell crypto to $val';
+    return 'Selg krypto til $val';
   }
 
   @override
   String app_trades_with(Object val) {
-    return 'See trades with $val';
+    return 'Se handler med $val';
   }
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '($val1 will be able to cancel in $val2 min unless you mark paid)';
+    return '($val1 vil kunne kansellere om $val2 min med mindre du merker som betalt)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val is now able to cancel unless you mark paid)';
+    return '($val kan nå kansellere med mindre du merker som betalt)';
   }
 
   @override
   String app_buying_from(Object asset, Object amount, Object username) {
-    return 'Buying $asset $amount from $username';
+    return 'Kjøper $asset $amount fra $username';
   }
 
   @override
   String app_selling_to(Object asset, Object amount, Object username) {
-    return 'Selling $asset $amount to $username';
+    return 'Selger $asset $amount til $username';
   }
 
   @override
@@ -9075,360 +9092,369 @@ class I18nNb extends I18n {
   }
 
   @override
-  String get app_buy_crypto => 'Buy crypto from';
+  String get app_buy_crypto => 'Kjøp krypto fra';
 
   @override
-  String get app_sell_crypto => 'Sell crypto to';
+  String get app_sell_crypto => 'Selg krypto til';
 
   @override
-  String get app_intall_trade_title => 'Please install AgoraDesk to view this trade';
+  String get app_intall_trade_title => 'Installer AgoraDesk for å se denne handelen';
 
   @override
-  String get app_intall_ad_title => 'Please install AgoraDesk to view this ad';
+  String get app_intall_ad_title => 'Installer AgoraDesk for å se denne annonsen';
 
   @override
-  String get app_intall_trade_body => 'This is a Bitcoin-based trade, it requires our AgoraDesk app to view.';
+  String get app_intall_trade_body => 'Dette er en Bitcoin-basert handel, den krever vår AgoraDesk-app for å se.';
 
   @override
-  String get app_intall_ad_body => 'This is a Bitcoin-based ad, it requires our AgoraDesk app to view.';
+  String get app_intall_ad_body => 'Dette er en Bitcoin-basert annonse, den krever vår AgoraDesk-app for å se.';
 
   @override
-  String get app_trade_option_payment_receiver_cancel_notice => 'Never finalize a trade until you are 100% sure you have received the money. Scammers will try to trick you into finalizing early.';
+  String get app_trade_option_payment_receiver_cancel_notice => 'Fullfør aldri en handel før du er 100% sikker på at du har mottatt pengene. Svindlere vil prøve å lure deg til å fullføre tidlig.';
 
   @override
-  String get app_cancel_trade_message => 'Made a mistake or want to try another trader? If you have transferred the funds already and want to cancel now, you need to negotiate the return of your payment with your trading partner by yourself. Never cancel unless you are sure you have received your money back.';
+  String get app_cancel_trade_message => 'Gjorde en feil eller ønsker å prøve en annen trader? Hvis du allerede har overført midlene og ønsker å kansellere nå, må du selv forhandle tilbake betalingen med handelspartneren din. Avbestill aldri med mindre du er sikker på at du har fått pengene tilbake.';
 
   @override
-  String get app_all_feedback => 'All feedback';
+  String get app_all_feedback => 'Alle tilbakemeldinger';
 
   @override
-  String get app_camera => 'Camera';
+  String get app_camera => 'Kamera';
 
   @override
-  String get app_clear => 'Clear';
+  String get app_clear => 'Klar';
 
   @override
-  String get app_ad_deleted => 'Ad deleted';
+  String get app_ad_deleted => 'Annonsen er slettet';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'This is your verification code. You can tell it to the buyer so that the buyer can verify you’ve finalized the trade without them needing to use the device.';
+  String get app_verifiacetion_code_to_seller => 'Dette er bekreftelseskoden din. Du kan fortelle det til kjøperen slik at kjøperen kan bekrefte at du har fullført handelen uten at de trenger å bruke enheten.';
 
   @override
-  String get app_verification_code => 'Verification code';
+  String get app_verification_code => 'Bekreftelseskode';
 
   @override
-  String get app_ad => 'Ad';
+  String get app_ad => 'Annonse';
 
   @override
-  String get app_with => 'with';
+  String get app_with => 'med';
 
   @override
-  String get app_edited => 'Edited';
+  String get app_edited => 'Redigert';
 
   @override
-  String get app_permanent => 'Permanent';
+  String get app_permanent => 'Fast';
 
   @override
-  String get app_error_saving => 'Error during saving. Changes weren\'t saved.';
+  String get app_error_saving => 'Feil under lagring. Endringene ble ikke lagret.';
 
   @override
-  String get app_manage_ads => 'Manage ads';
+  String get app_manage_ads => 'Administrer annonser';
 
   @override
-  String get app_vacation_enabled => 'Vacation enabled';
+  String get app_vacation_enabled => 'Ferie aktivert';
 
   @override
-  String get app_trade_created => 'Trade created';
+  String get app_trade_created => 'Handel opprettet';
 
   @override
-  String get app_session_expired => 'Session expired';
+  String get app_session_expired => 'Sesjon utløpt';
 
   @override
-  String get app_anonymous_crash_diagnostics => 'Anonymous crash diagnostics';
+  String get app_anonymous_crash_diagnostics => 'Anonym krasjdiagnostikk';
 
   @override
-  String get app_restart_now => 'Restart now';
+  String get app_restart_now => 'Start på nytt nå';
 
   @override
-  String get app_postpone => 'Postpone';
+  String get app_postpone => 'Utsette';
 
   @override
-  String get app_biometric_authentication => 'Biometric authentication';
+  String get app_biometric_authentication => 'Biometrisk autentisering';
 
   @override
-  String get app_biometric_authentication_message => 'Please set a PIN code to enable biometric authentication.';
+  String get app_biometric_authentication_message => 'Angi en PIN-kode for å aktivere biometrisk autentisering.';
 
   @override
-  String get app_anonymous_crash_diagnostics_restart => 'Anonymous crash diagnostics have been disabled and won\'t be sent after you restart the app.';
+  String get app_anonymous_crash_diagnostics_restart => 'Anonym krasjdiagnostikk er deaktivert og vil ikke bli sendt etter at du har startet appen på nytt.';
 
   @override
-  String get app_trading_partners => 'Trading partners';
+  String get app_trading_partners => 'Byttepartnere';
 
   @override
-  String get app_trade_status_settlement_processing_description => 'The settlement is being processed. Please wait, there\'s nothing that you need to do.';
+  String get app_trade_status_settlement_processing_description => 'Oppgjøret er under behandling. Vennligst vent, det er ingenting du trenger å gjøre.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => 'Choose a fee level to be used during the trade settlement. The values shown here are the current rate estimations and may differ from those applied during the trade settlement. Should the amount of the trade be too low to settle the trade with the selected fee level, a lower fee level will be automatically selected during the settlement.';
+  String get app_buyer_settlement_fee_level_description => 'Velg et gebyrnivå som skal brukes under handelsoppgjøret. Verdiene som vises her er gjeldende renteanslag og kan avvike fra de som ble brukt under handelsoppgjøret. Skulle handlebeløpet være for lavt til å gjøre opp handelen med det valgte gebyrnivået, vil et lavere gebyrnivå automatisk bli valgt under oppgjøret.';
 
   @override
-  String get app_change_vacation_settings => 'Change vacation settings.';
+  String get app_change_vacation_settings => 'Endre ferieinnstillinger.';
 
   @override
-  String get app_gallery => 'Gallery';
+  String get app_gallery => 'Galleri';
 
   @override
   String get app_via => 'via';
 
   @override
-  String get app_one_percent => '1% fee';
+  String get app_one_percent => '1 % gebyr';
 
   @override
-  String get app_final_amount => 'Final amount';
+  String get app_final_amount => 'Endelig beløp';
 
   @override
   String app_note_label(Object val) {
-    return 'Your note on $val (only seen by you)';
+    return 'Notatet ditt på $val (bare sett av deg)';
   }
 
   @override
   String app_note_add(Object val) {
-    return 'Add a note on $val';
+    return 'Legg til et notat om $val';
   }
 
   @override
   String app_update_new_version_available(Object val) {
-    return 'New version $val is available.';
+    return 'Ny versjon $val er tilgjengelig.';
   }
 
   @override
-  String get app_update_now => 'Update now';
+  String get app_update_now => 'Oppdater nå';
 
   @override
-  String get app_update_ingnor_until_next => 'Ignore until next update';
+  String get app_update_ingnor_until_next => 'Ignorer til neste oppdatering';
 
   @override
-  String get app_update_ignore_always => 'Always ignore';
+  String get app_update_ignore_always => 'Ignorer alltid';
 
   @override
-  String get app_tooltip_visibility => 'Tap to toggle visibility';
+  String get app_tooltip_visibility => 'Trykk for å bytte synlighet';
 
   @override
-  String get app_tooltip_long_press_ad => 'Long press on the ad to enable group editing';
+  String get app_tooltip_long_press_ad => 'Trykk lenge på annonsen for å aktivere grupperedigering';
 
   @override
-  String get app_join_telegram => 'Join Telegram group';
+  String get app_join_telegram => 'Bli med i Telegram-gruppen';
 
   @override
-  String get app_join_matrix => 'Join Matrix group';
+  String get app_join_matrix => 'Bli med i Matrix-gruppen';
 
   @override
-  String get app_display_password => 'Display password';
+  String get app_display_password => 'Vis passord';
 
   @override
-  String get app_hide_password => 'Hide password';
+  String get app_hide_password => 'Skjul passord';
 
   @override
-  String get app_trade_has_been_cancelled => 'The trade has been cancelled.';
+  String get app_trade_has_been_cancelled => 'Handelen er kansellert.';
 
   @override
   String app_last_seen(Object val) {
-    return 'Last seen $val';
+    return 'Sist sett $val';
   }
 
   @override
-  String get app_open_additional_filters => 'Open additional filters';
+  String get app_open_additional_filters => 'Åpne flere filtre';
 
   @override
-  String get app_select_asset => 'Select asset';
+  String get app_select_asset => 'Velg aktiva';
 
   @override
-  String get app_select_trade_type => 'Select trade type';
+  String get app_select_trade_type => 'Velg handelstype';
 
   @override
-  String get app_paste => 'Paste';
+  String get app_paste => 'Lim inn';
 
   @override
-  String get app_scan_qr_code => 'Scan QR code';
+  String get app_scan_qr_code => 'Skann QR kode';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Buy or sell Bitcoin anonymously, without ID verification. Cash or online. Safe, fast, easy.\n\nWondering how to invest in Bitcoin? On AgoraDesk, purchasing bitcoins has never been easier - instantly buy BTC from a person using your favorite online payment method: PayPal, credit/debit card or bank transfer, gift cards, Venmo or any other. If you want to buy bitcoins near you with cash, you can find someone willing to sell bitcoins locally - the trading platform supports buying and selling BTC with cash. You can even buy bitcoins using cash by mail.\n\n- Safe and Smooth Trading\nJust like LocalBitcoins, we support any payment method, any currency, anywhere. We do not remove payment methods, and, unlike LocalBitcoins, we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nAgoraDesk is committed to maintaining the simplicity and straight-forwardness that made the original LocalBitcoins so popular. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical cryptocurrency community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://agoradesk.com/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Bitcoins to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Kjøp eller selg Bitcoin anonymt, uten ID-verifisering. Kontanter eller online. Trygg, rask, enkel.\n\nLurer du på hvordan du investerer i Bitcoin? På AgoraDesk har det aldri vært enklere å kjøpe bitcoins – kjøp umiddelbart BTC fra en person som bruker din favoritt online betalingsmetode: PayPal, kreditt-/debetkort eller bankoverføring, gavekort, Venmo eller noe annet. Hvis du ønsker å kjøpe bitcoins nær deg med kontanter, kan du finne noen som er villige til å selge bitcoins lokalt – handelsplattformen støtter kjøp og salg av BTC med kontanter. Du kan til og med kjøpe bitcoins med kontanter via post.\n\n- Trygg og smidig handel\nAkkurat som LocalBitcoins støtter vi alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og i motsetning til LocalBitcoins støtter vi fullt ut ansikt-til-ansikt kontanthandler. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nAgoraDesk er forpliktet til å opprettholde enkelheten og rettframheten som gjorde de originale LocalBitcoins så populære. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske kryptovalutamiljøet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://agoradesk.com/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Bitcoins til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy Bitcoin easily';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kjøp Bitcoin enkelt';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR easily';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kjøp XMR enkelt';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.\n\nLocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.\n\n- Safe and Smooth Trading\nWe support any payment method, any currency, anywhere. We do not remove payment methods, and we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nLocalMonero is committed to maintaining the simplicity and straight-forwardness of your trading experience. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical Monero community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://localmonero.co/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Monero to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kjøp eller selg Monero uten ID-verifisering. Kontanter eller online. Trygg, rask, enkel.\n\nLocalMonero er den største, mest pålitelige og veletablerte P2P-handelsplattformen i XMR-fellesskapet. Vi har ingen KYC-sjekker – du kan ganske enkelt kjøpe Monero anonymt uten ID-verifisering med PayPal, kredittkort, gavekort, kontanter via post eller konvertere Bitcoin, Ether, USDT eller en hvilken som helst annen kryptomynt til Monero – plattformen vår støtter alle betalingsmåter.\n\n- Trygg og smidig handel\nVi støtter alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og vi støtter fullt ut kontanthandler ansikt til ansikt. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nLocalMonero er forpliktet til å opprettholde enkelheten og rett frem handelsopplevelsen din. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske Monero-samfunnet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://localmonero.co/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Monero til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR privately';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kjøp XMR privat';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.\n\nLocalMonero is the biggest, most trusted and well-established P2P trading platform in the XMR community. We have no KYC checks - you can simply buy Monero anonymously without ID verification with PayPal, credit card, gift card, cash by mail or convert Bitcoin, Ether, USDT, or any other crypto coin to Monero - our platform supports any payment method.\n\n- Safe and Smooth Trading\nWe support any payment method, any currency, anywhere. We do not remove payment methods, and we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nLocalMonero is committed to maintaining the simplicity and straight-forwardness of your trading experience. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical Monero community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://localmonero.co/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Monero to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Kjøp eller selg Monero uten ID-verifisering. Kontanter eller online. Trygg, rask, enkel.\n\nLocalMonero er den største, mest pålitelige og veletablerte P2P-handelsplattformen i XMR-fellesskapet. Vi har ingen KYC-sjekker – du kan ganske enkelt kjøpe Monero anonymt uten ID-verifisering med PayPal, kredittkort, gavekort, kontanter via post eller konvertere Bitcoin, Ether, USDT eller en hvilken som helst annen kryptomynt til Monero – plattformen vår støtter alle betalingsmåter.\n\n- Trygg og smidig handel\nVi støtter alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og vi støtter fullt ut kontanthandler ansikt til ansikt. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nLocalMonero er forpliktet til å opprettholde enkelheten og rett frem handelsopplevelsen din. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske Monero-samfunnet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://localmonero.co/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Monero til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: buy BTC anonymously';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kjøp BTC anonymt';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online.\n\nWondering how to invest in Bitcoin? On AgoraDesk, purchasing bitcoins has never been easier - instantly buy BTC from a person using your favorite online payment method: PayPal, credit/debit card or bank transfer, gift cards, Venmo or any other. If you want to buy bitcoins near you with cash, you can find someone willing to sell bitcoins locally - the trading platform supports buying and selling BTC with cash. You can even buy bitcoins using cash by mail.\n\n- Safe and Smooth Trading\nJust like LocalBitcoins, we support any payment method, any currency, anywhere. We do not remove payment methods, and, unlike LocalBitcoins, we fully support face-to-face cash trades. All of our trades are protected by an arbitration bond. Thanks to the fact that we require funds to be held in arbitration bond before a trade can start, we ensure a smooth and safe experience for the buyer, which is essential for the popularity of the platform and repeat customers for the sellers.\n\n- No KYC/AML or ID Verification\nAgoraDesk is committed to maintaining the simplicity and straight-forwardness that made the original LocalBitcoins so popular. We do not employ KYC/AML, nor do we ever plan on doing so.\n\n- Trusted by the Community\nOur platform has operated for over four years, survived the Great Cryptocurrency Market Crash of 2018, and through its community-oriented diligent service became one of the most trusted names in the extremely skeptical cryptocurrency community.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nOur app is free and open source, which ensures that many eyes are looking at the app\'s code to ensure that there are no security holes or privacy leaks. Open sourcing our app also allows anyone to have access to our app even if a certain app repository censors the app. Our app even works on phones that have Google completely blocked. We value your privacy so much, we don’t even require you to provide an email when registering.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nIssue tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nOur support team is fast, responsive and always eager to please. We’ve never had a support ticket that wasn’t answered within 24 hours. We are always easily reachable through social media, we listen intently to your criticisms and we always implement good user suggestions in record time.\n\nYou can reach our support at: https://agoradesk.com/support\n\n- Fair Fees\nWe do not charge exorbitant fees when you deposit or withdraw Bitcoins to/from our arbitration bond wallet. There is no deposit fee, and the withdrawal fee is very close to the fee you’d be paying on a normal transaction.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kjøp eller selg Bitcoin uten ID-verifisering. Kontanter eller online.\n\nLurer du på hvordan du investerer i Bitcoin? På AgoraDesk har det aldri vært enklere å kjøpe bitcoins – kjøp umiddelbart BTC fra en person som bruker din favoritt online betalingsmetode: PayPal, kreditt-/debetkort eller bankoverføring, gavekort, Venmo eller noe annet. Hvis du ønsker å kjøpe bitcoins nær deg med kontanter, kan du finne noen som er villige til å selge bitcoins lokalt – handelsplattformen støtter kjøp og salg av BTC med kontanter. Du kan til og med kjøpe bitcoins med kontanter via post.\n\n- Trygg og smidig handel\nAkkurat som LocalBitcoins støtter vi alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og i motsetning til LocalBitcoins støtter vi fullt ut ansikt-til-ansikt kontanthandler. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nAgoraDesk er forpliktet til å opprettholde enkelheten og rettframheten som gjorde de originale LocalBitcoins så populære. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske kryptovalutamiljøet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://agoradesk.com/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Bitcoins til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'cryptocurrency,anonymous,private,monero,xmr,p2p';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'kryptovaluta,anonym,privat,monero,xmr,p2p';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'cryptocurrency,bitcoin,monero,BTC,XMR,anonymous,private';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'kryptovaluta,bitcoin,monero,BTC,XMR,anonym,privat';
 
   @override
-  String get app_report_this_user => 'Report this user';
+  String get app_report_this_user => 'Rapporter denne brukeren';
 
   @override
-  String get app_open_dropdown => 'Open dropdown';
+  String get app_open_dropdown => 'Åpne rullegardinmenyen';
 
   @override
-  String get error250Sbsignup250Sb175 => 'Attempting to redeem coupon that doesn’t exist during registration';
+  String get error250Sbsignup250Sb175 => 'Forsøker å løse inn kuponger som ikke eksisterer under registrering';
 
   @override
-  String get error250Sbsignup250Sb176 => 'Attempting to redeem an expired coupon during registration';
+  String get error250Sbsignup250Sb176 => 'Forsøk på å løse inn en utløpt kupong under registrering';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Attempting to redeem a coupon that’s out of stock during registration';
+  String get error250Sbsignup250Sb177 => 'Forsøker å løse inn en kupong som ikke er på lager under registreringen';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Password reset letter sent! Check your inbox.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Brev for tilbakestilling av passord er sendt! Sjekk innboksen din.';
 
   @override
-  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Agree to terms and continue';
+  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Godta vilkårene og fortsett';
 
   @override
-  String get logout250Sbtitle => 'Log out';
+  String get logout250Sbtitle => 'Logg ut';
 
   @override
-  String get coupons250Sbcode8722Sbapply => 'Apply a coupon code';
+  String get coupons250Sbcode8722Sbapply => 'Bruk en kupongkode';
 
   @override
   String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
-    return 'Buy $assetName online';
+    return 'Kjøp $assetName online';
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'call option buy';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'kjøp av kjøpsopsjon';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'call option sell';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'kjøpsopsjon selge';
 
   @override
-  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: buy XMR anonymously';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: kjøp XMR anonymt';
 
   @override
-  String get app_accessibility_edit_box_password => 'Edit box password, double tap to edit';
+  String get app_accessibility_edit_box_password => 'Rediger bokspassord, dobbelttrykk for å redigere';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirm password edit box, double tap to edit';
+  String get app_accessibility_edit_box_confirm_password => 'Bekreft redigeringsboks for passord, dobbelttrykk for å redigere';
 
   @override
-  String get app_ad_created => 'Ad created';
+  String get app_ad_created => 'Annonse opprettet';
 
   @override
   String app_503_body(Object val) {
-    return '$val will be back soon!\\nSorry for the inconvenience but we\'re performing some scheduled maintenance at the moment.\\nWe\'ll probably be back online soon. Stay updated in our community groups:';
+    return '$val kommer snart tilbake!\\nBeklager bryet, men vi utfører noe planlagt vedlikehold for øyeblikket.\\nVi er sannsynligvis snart tilbake på nett. Hold deg oppdatert i våre fellesskapsgrupper:';
   }
 
   @override
-  String get app_select_ad_type => 'Select ad type';
+  String get app_select_ad_type => 'Velg annonsetype';
 
   @override
-  String get app_chat_leave_review => 'Tap here to leave a review!';
+  String get app_chat_leave_review => 'Trykk her for å legge igjen en anmeldelse!';
 
   @override
-  String get app_chat_update_review => 'You\'ve already left this user a review. Would you like to update your review now?';
+  String get app_chat_update_review => 'Du har allerede gitt denne brukeren en anmeldelse. Vil du oppdatere anmeldelsen din nå?';
 
   @override
-  String get app_select_buyer_seller => 'Select buyer or seller';
+  String get app_select_buyer_seller => 'Velg kjøper eller selger';
 
   @override
-  String get app_default_tab => 'Set a default tab';
+  String get app_default_tab => 'Angi en standardfane';
 
   @override
-  String get app_your_ads => 'Your ads';
+  String get app_your_ads => 'Annonsene dine';
 
   @override
   String app_503_title(Object val) {
-    return '$val App Maintenance';
+    return '$val Appvedlikehold';
   }
 
   @override
-  String get app_push_new_message => 'You have a new message in a trade';
+  String get app_push_new_message => 'Du har en ny melding i en handel';
 
   @override
-  String get app_push_new_offer => 'You have a new offer';
+  String get app_push_new_offer => 'Du har et nytt tilbud';
 
   @override
-  String get app_push_trade_marked_completed => 'Trade marked as completed';
+  String get app_push_trade_marked_completed => 'Handel merket som fullført';
 
   @override
-  String get app_push_trade_cancelled => 'Trade cancelled';
+  String get app_push_trade_cancelled => 'Handelen kansellert';
 
   @override
-  String get app_push_trade_disputed => 'Trade disputed';
+  String get app_push_trade_disputed => 'Handel omstridt';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Buy/Sell Monero Anonymously';
+  String get app_apple_app_store_subtitle_localmonero => 'Kjøp/selg Monero anonymt';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Buy/Sell Bitcoin Anonymously';
+  String get app_apple_app_store_subtitle_agoradesk => 'Kjøp/selg Bitcoin anonymt';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Buy or sell Monero without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_localmonero => 'Kjøp eller selg Monero uten ID-verifisering. Kontanter eller online.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Buy or sell Bitcoin without ID verification. Cash or online. Safe, fast, easy.';
+  String get app_google_play_store_short_description_agoradesk => 'Kjøp eller selg Bitcoin uten ID-verifisering. Kontanter eller online.';
 
   @override
-  String get app_ask_community_chats => 'Have questions? Ask in the community chats';
+  String get app_ask_community_chats => 'Har du spørsmål? Spør i felleschattene';
 
   @override
-  String get app_select_currency => 'Select currency';
+  String get app_select_currency => 'Velg valuta';
 
   @override
-  String get app_select_country => 'Select country';
+  String get app_select_country => 'Velg land';
 
   @override
-  String get app_select_payment_method => 'Select payment method';
+  String get app_select_payment_method => 'Velg betalingsmetode';
 
   @override
-  String get app_enable_ad => 'Enable ad';
+  String get app_enable_ad => 'Aktiver annonse';
 
   @override
-  String get app_disable_ad => 'Disable ad';
+  String get app_disable_ad => 'Deaktiver annonse';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'Fullmakt';
 
   @override
-  String get app_proxy_details => 'Proxy details';
+  String get app_proxy_details => 'Fullmaktsdetaljer';
 
   @override
-  String get app_proxy_use => 'Use proxy';
+  String get app_proxy_use => 'Bruk proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Warning! Proxy functionality is in beta, bugs are expected. Please report the bugs to our development channels for quick fixes';
+  String get app_proxy_bugs_expected => 'Advarsel! Proxy-funksjonalitet er i beta, det forventes feil. Vennligst rapporter feilene til våre utviklingskanaler for raske reparasjoner';
 
   @override
-  String get app_proxy_select_type => 'Select proxy type';
+  String get app_proxy_select_type => 'Velg proxy-type';
 
   @override
-  String get app_proxy_on => 'Proxy enabled';
+  String get app_proxy_on => 'Proxy aktivert';
 
   @override
-  String get app_proxy_on_descr => 'The app will now connect to the platform via the proxy.';
+  String get app_proxy_on_descr => 'Appen vil nå koble til plattformen via proxyen.';
 
   @override
-  String get app_proxy_unavailable => 'Proxy unavailable';
+  String get app_proxy_unavailable => 'Proxy utilgjengelig';
 
   @override
-  String get app_proxy_unavailable_decr => 'Please check if the connection settings are correct or use another proxy.';
+  String get app_proxy_unavailable_decr => 'Sjekk om tilkoblingsinnstillingene er riktige eller bruk en annen proxy.';
+
+  @override
+  String get api_error_269 => 'Forsøker å legge til en ugyldig adresse i en adressebok';
+
+  @override
+  String get api_error_270 => 'Forsøk på å legge til en duplikatadresse i en brukers adressebok';
+
+  @override
+  String get api_error_273 => 'Forsøk på å slette en adresse som ikke finnes i en brukers adressebok';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).
@@ -16958,4 +16984,1932 @@ class I18nNbNo extends I18nNb {
 
   @override
   String get error250Sbaddress8722Sbbook250Sb273 => 'Denne adressen er allerede slettet fra adresseboken din.';
+
+  @override
+  String get address8722Sbbook => 'Adressebok';
+
+  @override
+  String get address8722Sbbook250Sbshort => 'Adresser';
+
+  @override
+  String get xx => 'Global';
+
+  @override
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
+    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $time_remaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
+  }
+
+  @override
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Når du trykker \"Lagre\", vil annonsens land automatisk bli oppdatert til \"globalt\".';
+
+  @override
+  String get ads => 'Annonser';
+
+  @override
+  String get unknown_error => 'Ukjent feil';
+
+  @override
+  String get ads_choose_ad_type => 'Velg annonsetype';
+
+  @override
+  String get ads_ad_type => 'Annonsetype';
+
+  @override
+  String get ads_choose_ad_cryptocurrency => 'Velg kryptovaluta';
+
+  @override
+  String get ads_choose_price_type => 'Velg pristype';
+
+  @override
+  String get ads_which_type_to_choose => 'Hvilken type å velge?';
+
+  @override
+  String get enter_margin => 'Angi margin';
+
+  @override
+  String get what_is_margin => 'Hva er en margin?';
+
+  @override
+  String get price_formula_examples => 'Eksempler på prisformler';
+
+  @override
+  String get see_examples => 'Se eksempler';
+
+  @override
+  String get see_example => 'Se eksempel';
+
+  @override
+  String get final_price_in => 'Endelig pris inn';
+
+  @override
+  String get show_formula_controls => 'Vis formelkontroller';
+
+  @override
+  String get market_rates => 'Markedspriser';
+
+  @override
+  String get set_trade_limits => 'Angi handelsgrenser (valgfritt):';
+
+  @override
+  String get restrict_limit_amounts_to => 'Begrens grensebeløp til';
+
+  @override
+  String get restrict_limit_amounts => 'Begrens grensebeløp';
+
+  @override
+  String get what_does_it_mean => 'Hva betyr det?';
+
+  @override
+  String ads_enter_amount(Object currency) {
+    return 'Angi beløp $currency';
+  }
+
+  @override
+  String ads_enter_comma_sep_amounts(Object currency) {
+    return 'Skriv inn kommadelte beløp $currency';
+  }
+
+  @override
+  String ads_first_trade_max_limit(Object currency) {
+    return 'Første handelsgrense $currency';
+  }
+
+  @override
+  String get ads_specify_trade_details => 'Spesifiser handelsdetaljer (valgfritt):';
+
+  @override
+  String get ads_payment_method_details => 'Detaljer om betalingsmåte';
+
+  @override
+  String get ads_payment_method_details_64 => 'Vises i annonselisten. Maks 64 tegn.';
+
+  @override
+  String get ads_maximum_64 => 'Maks 64 tegn';
+
+  @override
+  String get ads_payment_method_info_trade => 'Informasjon om betalingsmåte';
+
+  @override
+  String get ads_payment_method_info_trade_4096 => 'Vises under handel. Maksimalt 4096 tegn.';
+
+  @override
+  String get ads_specify_restrictions => 'Spesifiser begrensninger (valgfritt):';
+
+  @override
+  String get maximum_4096 => 'Maksimalt 4096 tegn';
+
+  @override
+  String get enter_number_0_100 => 'Skriv inn tall fra 0 til 100';
+
+  @override
+  String get enter_number_15_90 => 'Skriv inn nummer mellom 15-90';
+
+  @override
+  String get enter_amount_min_0 => 'Angi beløp (min 0)';
+
+  @override
+  String get currency => 'Valuta:';
+
+  @override
+  String get payment_method => 'Betalingsmetode:';
+
+  @override
+  String get restrict_amounts_to => 'Begrens beløp til:';
+
+  @override
+  String get payment_method_details => 'Betalingsmåtedetaljer:';
+
+  @override
+  String get review => 'Anmeldelse';
+
+  @override
+  String get publish => 'publisere';
+
+  @override
+  String get enter_your_settlement_wallet_address => 'Skriv inn oppgjørslommebokadressen din:';
+
+  @override
+  String ads_enter_verify_address(Object appName) {
+    return 'Skriv inn og bekreft adressen din som myntene skal sendes til. Kan ikke være en intern $appName-adresse.';
+  }
+
+  @override
+  String get what_is_settlement_fee_level => 'Hva er nivået på oppgjørsgebyr?';
+
+  @override
+  String get settlement_fee_level_selector_explanation => 'Denne velgeren lar deg velge hvilket nettverksavgiftsnivå du skal bruke når du sender transaksjonen til lommeboken din. Hvis du ikke er sikker på hvilket gebyrnivå du ønsker, velger du middels gebyr.';
+
+  @override
+  String get ads_payment_window => 'Betalingsvindustid (minutter)';
+
+  @override
+  String get ads_payment_window_short => 'Betalingsvindu';
+
+  @override
+  String get ads_havent_posted => 'Du har ikke lagt ut noen annonser ennå.';
+
+  @override
+  String get no_trades => 'Du har ingen handler ennå.';
+
+  @override
+  String get no_feedbacks => 'Ingen tilbakemeldinger.';
+
+  @override
+  String get ad_settings => 'Annonseinnstillinger';
+
+  @override
+  String get settings_saved => 'Instillinger lagret';
+
+  @override
+  String get preferences => 'Preferanser';
+
+  @override
+  String get about_this_ad => 'Om denne annonsen';
+
+  @override
+  String get price => 'Pris';
+
+  @override
+  String get activity => 'Aktivitet';
+
+  @override
+  String get chat => 'Chat';
+
+  @override
+  String get market => 'Marked';
+
+  @override
+  String get help => 'Hjelp';
+
+  @override
+  String sell_asset(Object asset) {
+    return 'Selg $asset';
+  }
+
+  @override
+  String buy_asset(Object asset) {
+    return 'Kjøp $asset';
+  }
+
+  @override
+  String get trader_profile => 'Trader sin profil';
+
+  @override
+  String get trader_info => 'Traders info';
+
+  @override
+  String get trading_tips => 'Handelstips';
+
+  @override
+  String get clear_all => 'Rydd alt';
+
+  @override
+  String get apply => 'Søke om';
+
+  @override
+  String get enter_amount => 'Tast inn beløp';
+
+  @override
+  String get any_payment_method => 'Enhver betalingsmåte';
+
+  @override
+  String get see_more_feedback => 'Se flere tilbakemeldinger';
+
+  @override
+  String get see_more_ads => 'Se flere annonser';
+
+  @override
+  String feedback_title(Object user) {
+    return 'Tilbakemelding på $user';
+  }
+
+  @override
+  String get active_ads => 'Aktive annonser';
+
+  @override
+  String get you_sell => 'Du selger';
+
+  @override
+  String get you_buy => 'Du kjøper';
+
+  @override
+  String get you_receive => 'Du mottar';
+
+  @override
+  String get you_pay => 'Du betaler';
+
+  @override
+  String get export_csv => 'Eksporter CSV';
+
+  @override
+  String get copy => 'Kopiere';
+
+  @override
+  String sell_via(Object asset, Object provider) {
+    return 'Selg $asset via $provider';
+  }
+
+  @override
+  String buy_via(Object asset, Object provider) {
+    return 'Kjøp $asset via $provider';
+  }
+
+  @override
+  String sell_to(Object user) {
+    return 'Selg til $user';
+  }
+
+  @override
+  String buy_from(Object user) {
+    return 'Kjøp fra $user';
+  }
+
+  @override
+  String must_be_at_least(Object num, Object currency) {
+    return 'Må være minst $num $currency';
+  }
+
+  @override
+  String must_be_less(Object num, Object currency) {
+    return 'Må være mindre $num $currency';
+  }
+
+  @override
+  String send_all(Object asset) {
+    return 'Send alle $asset';
+  }
+
+  @override
+  String about_transactions(Object asset) {
+    return 'Om $asset transaksjoner';
+  }
+
+  @override
+  String get trade_id => 'Handels-ID';
+
+  @override
+  String get view_trade => 'Se handel';
+
+  @override
+  String get receiving => 'Mottar';
+
+  @override
+  String get paying => 'Betaler';
+
+  @override
+  String get rate => 'Vurdere';
+
+  @override
+  String get enter_your_password => 'Skriv inn passordet ditt';
+
+  @override
+  String get good_seller => 'God selger';
+
+  @override
+  String get cancel => 'Avbryt';
+
+  @override
+  String get delete => 'Slett';
+
+  @override
+  String get important => 'Viktig';
+
+  @override
+  String get feedback_updated_successfully => 'Tilbakemeldingen ble oppdatert.';
+
+  @override
+  String get pay => 'Betale';
+
+  @override
+  String get send_trade_request => 'Send en handelsforespørsel';
+
+  @override
+  String get start_trading => 'Start handel';
+
+  @override
+  String get api_error_13 => 'Noe gikk galt i forespørselen. Det er mest sannsynlig et valideringsproblem. Sjekk forespørselsparameterne dine, og hvis dette fortsatt ikke virker riktig, vennligst kontakt vår kundestøtte.';
+
+  @override
+  String get api_error_49 => 'Det gamle passordet som ble oppgitt i forespørselen om endring av passord, samsvarer ikke med gjeldende passord';
+
+  @override
+  String get api_error_60 => 'Passordet som ble oppgitt for å endre e-posten er feil';
+
+  @override
+  String get api_error_61 => 'Denne e-posten er allerede knyttet til en annen konto';
+
+  @override
+  String get api_error_73 => 'Passordet som ble oppgitt under uttaksforespørselen er feil';
+
+  @override
+  String get api_error_74 => 'Ikke nok midler til å gjennomføre uttak for det forespurte beløpet';
+
+  @override
+  String get api_error_75 => 'Forsøk på å ta ut penger til en intern adresse som ikke eksisterer';
+
+  @override
+  String get api_error_76 => 'Forsøk på å ta ut penger til samme konto som kontoen som ber om uttaket';
+
+  @override
+  String get api_error_77 => 'Ikke nok midler til å gjennomføre intern overføring for det forespurte beløpet';
+
+  @override
+  String get api_error_103 => 'Be om bytte for annonse hvem sin plakat selger ferie';
+
+  @override
+  String get api_error_105 => 'Plakaten for annonsen som handelen er forespurt for, har ikke nok saldo til å finansiere deponeringen';
+
+  @override
+  String get api_error_107 => 'Prøver å spore likviditet uten å angi maxAmount';
+
+  @override
+  String get api_error_137 => 'Forsøker å registrere 2FA mens du oppgir feil passord';
+
+  @override
+  String get api_error_138 => 'Forsøker å validere 2FA mens du oppgir feil OTP';
+
+  @override
+  String get api_error_139 => 'Enten passord eller OTP er feil ved forsøk på å deaktivere 2FA';
+
+  @override
+  String get api_error_140 => 'OTP feil ved forsøk på å ta ut mynter fra lommeboken';
+
+  @override
+  String get api_error_146 => 'Forsøker å aktivere tilknyttede program for kontoer som allerede har det aktivert';
+
+  @override
+  String get api_error_170 => 'Beløpet som har blitt bedt om for uttak er mindre enn det minste mulige beløpet for den gitte kryptovalutaen';
+
+  @override
+  String get api_error_171 => 'Ugyldig adresse oppgitt ved forespørsel om uttak';
+
+  @override
+  String get api_error_173 => 'Forsøk på å åpne for mange handler samtidig for en ny konto';
+
+  @override
+  String get api_error_178 => 'Forsøker å løse inn kupong for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_179 => 'Forsøker å løse inn kuponger som ikke eksisterer';
+
+  @override
+  String get api_error_180 => 'Forsøker å løse inn kupong som er utløpt';
+
+  @override
+  String get api_error_181 => 'Forsøk på å løse inn kupong som kun er tillatt å løse inn under registrering';
+
+  @override
+  String get api_error_182 => 'Forsøker å løse inn kupong som allerede er innløst av denne brukeren';
+
+  @override
+  String get api_error_183 => 'Forsøker å løse inn kupong som ikke er på lager';
+
+  @override
+  String get api_error_184 => 'Forsøker å løse inn kupong når det er en aktiv kupong';
+
+  @override
+  String get api_error_204 => 'Forsøker å be om omdømmeimportkode for en konto som ikke eksisterer';
+
+  @override
+  String get api_error_205 => 'Forsøk på å generere bekreftelseskode for omdømmeimport for en plattform som allerede har en bekreftelseskode generert for seg';
+
+  @override
+  String get api_error_206 => 'Forsøk på å generere bekreftelseskode for omdømmeimport for en plattform som omdømme allerede var importert fra';
+
+  @override
+  String get api_error_207 => 'Forsøker å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_208 => 'Forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke er i trinn 1 i flyten for omdømmeimport';
+
+  @override
+  String get api_error_209 => 'LocalBitcoins-feil ved forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport. Kanskje brukernavnet er feil eller profilen er ikke synlig';
+
+  @override
+  String get api_error_210 => 'Paxful feil ved forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport. Kanskje brukernavnet er feil eller profilen er ikke synlig';
+
+  @override
+  String get api_error_225 => 'LocalBitcoins API returnerer \"Ugyldig bruker\" som feil ved forsøk på å bekrefte plassering av omdømmekode';
+
+  @override
+  String get api_error_226 => 'Feil passord ved forsøk på å slette kontoen';
+
+  @override
+  String get api_error_238 => 'Gebyrnivå er ikke spesifisert for eksternt Bitcoin-uttak';
+
+  @override
+  String get api_error_239 => 'Feil passord når du prøver å frigi en handel';
+
+  @override
+  String get api_error_243 => 'Intern AgoraDesk-adresse kan ikke brukes til handelsoppgjør. Skriv inn en ekstern, ikke-AgoraDesk XMR-adresse for å fortsette.';
+
+  @override
+  String get api_error_254 => 'Forsøk på å legge ut et uttak til identisk adresse og beløp innen de siste 10 minuttene';
+
+  @override
+  String get api_error_260 => 'Forsøk på å legge ut et notat om en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_261 => 'Forsøk på å legge inn et notat på din egen konto';
+
+  @override
+  String get api_error_262 => 'Forsøk på å få et notat om en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_263 => 'Forsøk på å få en lapp på egen konto';
+
+  @override
+  String get api_error_264 => 'Forsøk på å slette et notat om en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_265 => 'Forsøk på å slette et notat på din egen konto';
+
+  @override
+  String get api_error_267 => 'Forsøker å slette en brukernotat som ikke eksisterer';
+
+  @override
+  String get api_error_403 => 'Du er ikke autorisert til å utføre denne handlingen';
+
+  @override
+  String get api_error_4000 => 'Ingen internettforbindelse.';
+
+  @override
+  String get api_error_4001 => 'Tidsavbrudd for tilkobling, sjekk internettforbindelsen.';
+
+  @override
+  String get api_error_45 => 'Du kan ikke ha både «first_time_limit_asset» og «first_time_limit_TICKER» i forespørselen din. Fjern en av dem (de er utskiftbare).';
+
+  @override
+  String get api_error_46 => 'Forespørselen må inneholde ENTEN en applikasjon/json-forespørselstekst med en «msg»-parameter ELLER en flerdelt/skjemadataforespørselstekst med bildefilen oppført under parameteren «document»';
+
+  @override
+  String get api_error_47 => 'Bruker med det brukernavnet finnes allerede';
+
+  @override
+  String get api_error_48 => 'Bruker med den e-postadressen eksisterer allerede';
+
+  @override
+  String get api_error_50 => 'Forsøk på å sende en e-post til en bruker uten et e-postsett';
+
+  @override
+  String get api_error_51 => 'Token gitt for e-postbekreftelse gis til en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_52 => 'Tokenet som er oppgitt for e-postbekreftelse er ugyldig';
+
+  @override
+  String get api_error_53 => 'E-posten i tokenet samsvarer ikke med gjeldende e-post i databasen';
+
+  @override
+  String get api_error_54 => 'Token for tilbakestilling av passord gis til en e-post som ikke finnes i databasen';
+
+  @override
+  String get api_error_55 => 'Token oppgitt for tilbakestilling av passord er ugyldig';
+
+  @override
+  String get api_error_56 => 'Forsøk på å sende en e-post for tilbakestilling av passord til en e-post som ikke er i databasen';
+
+  @override
+  String get api_error_57 => 'Token oppgitt for tilbakestilling av passord er ikke et tilbakestillingstoken';
+
+  @override
+  String get api_error_58 => 'Prøver å sende en e-post med tilbakestilling av passord til en bruker med en ubekreftet e-post';
+
+  @override
+  String get api_error_59 => 'Prøver å tilbakestille et passord for en bruker med en ubekreftet e-post';
+
+  @override
+  String get api_error_62 => 'Det eksisterer ingen konto med brukernavnet som er oppgitt for forespørselen om offentlige data på kontoen';
+
+  @override
+  String get api_error_63 => 'Forsøk på å laste opp fil av en forbudt type';
+
+  @override
+  String get api_error_64 => 'Forsøk på å merke et ikke-eksisterende varsel som lest';
+
+  @override
+  String get api_error_65 => 'Forsøker å merke et allerede lest varsel som lest';
+
+  @override
+  String get api_error_66 => 'Forsøk på å laste opp chat-vedlegg til handel som ikke eksisterer';
+
+  @override
+  String get api_error_67 => 'Forsøk på å sende chatmelding til handel som ikke eksisterer';
+
+  @override
+  String get api_error_68 => 'Forsøker å få chatmeldingsliste over handel som ikke eksisterer';
+
+  @override
+  String get api_error_69 => 'Forsøker å få en chatmelding som ikke eksisterer';
+
+  @override
+  String get api_error_70 => 'Forsøker å få lommebokadressen til en konto som ikke eksisterer';
+
+  @override
+  String get api_error_71 => 'Forsøk på å få transaksjoner fra en konto som ikke eksisterer';
+
+  @override
+  String get api_error_72 => 'Forsøk på å ta ut penger fra en konto som ikke eksisterer';
+
+  @override
+  String get api_error_78 => 'Forsøk på å få annonser med en ugyldig kombinasjon av parametere';
+
+  @override
+  String get api_error_79 => 'Den forespurte annonse-ID-en finnes ikke';
+
+  @override
+  String get api_error_80 => 'Angav ikke både lat og lon i annonseoppdateringen/opprettingsforespørselen';
+
+  @override
+  String get api_error_81 => 'Har ikke angitt prisformel da annonsen ble lagt ut';
+
+  @override
+  String get api_error_82 => 'Prøver å angi lat og lon for en nettannonse';
+
+  @override
+  String get api_error_83 => 'Prøver å angi ONLINE_SELL/CALL_SELL/PUT_BUY-spesifikke egenskaper til en annen type annonse';
+
+  @override
+  String get api_error_84 => 'Prøver å angi ONLINE_BUY/CALL_BUY/PUT_SELL-spesifikke egenskaper til en annen type annonse';
+
+  @override
+  String get api_error_85 => 'Prøver å angi LOCAL_SELL-spesifikke egenskaper til en annen type annonse';
+
+  @override
+  String get api_error_86 => 'Forsøk på å angi land eller betalingsmåte eller valuta som ikke er gyldig når annonsen opprettes/oppdateres';
+
+  @override
+  String get api_error_87 => 'Prøver å angi en betalingsmåte som er ugyldig for det landet når du oppretter/oppdaterer annonsen';
+
+  @override
+  String get api_error_88 => 'Prøver å angi en valuta som er ugyldig for den betalingsmåten når du oppretter/oppdaterer annonsen';
+
+  @override
+  String get api_error_89 => 'Prøver å lage en LOCAL_* annonse uten å angi lon/lat';
+
+  @override
+  String get api_error_90 => 'Prøver å få tilgang til handler fra en bruker som ikke eksisterer.';
+
+  @override
+  String get api_error_91 => 'Prøver å få tilgang til offentlige kontodata ved å bruke et token fra en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_92 => 'Prøver å få varsler for brukere som ikke eksisterer';
+
+  @override
+  String get api_error_93 => 'Prøver å få ventende innskudd for en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_94 => 'Prøver å få tilbakemeldingspoeng for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_95 => 'Prøver å få annonser for brukere som ikke eksisterer';
+
+  @override
+  String get api_error_96 => 'Ikke-eksisterende bruker prøver å opprette en handel';
+
+  @override
+  String get api_error_97 => 'Prøver å lage en handel for en annonse som ikke eksisterer';
+
+  @override
+  String get api_error_98 => 'Prøver å lage en handel for en annonse som ikke har en plakat';
+
+  @override
+  String get api_error_99 => 'Prøver å be om høyere beløp enn tillatt av first_time_limit_asset når du oppretter en første handel';
+
+  @override
+  String get api_error_100 => 'Kan ikke be om mindre enn 0,0000000001 XMR for opprettelse av handel';
+
+  @override
+  String get api_error_101 => 'Forespurt beløp er mindre enn annonsens min_amount når du oppretter handel';
+
+  @override
+  String get api_error_102 => 'Forespurt beløp er mer enn annonsens max_amount_available når du oppretter handel';
+
+  @override
+  String get api_error_104 => 'Be om bytte for annonse hvem sin plakat er på å kjøpe ferie';
+
+  @override
+  String get api_error_106 => 'Forespørselen av handelen har ikke nok saldo til å finansiere handelsforespørselen';
+
+  @override
+  String get api_error_108 => 'minAmount kan ikke være lik eller større enn maxAmount';
+
+  @override
+  String get api_error_109 => 'Forespurt beløp er mer enn annonsens maxAmount når du oppretter handel';
+
+  @override
+  String get api_error_110 => 'Handelsanmoder har lavere tilbakemeldingsscore enn det som kreves av plakaten';
+
+  @override
+  String get api_error_111 => 'Forespurt beløp er ikke et av de aksepterte beløpene, se limit_to_fiat_amounts';
+
+  @override
+  String get api_error_112 => 'Kan ikke be om bytte av en annonse du har lagt ut selv';
+
+  @override
+  String get api_error_113 => 'Kan ikke sette paymentWindowMinutes til <15 eller >90 når annonsen oppdateres';
+
+  @override
+  String get api_error_114 => 'Kan ikke sette paymentWindowMinutes til <15 eller >90 når du oppretter en annonse';
+
+  @override
+  String get api_error_115 => 'Handel med forespurt ID finnes ikke';
+
+  @override
+  String get api_error_116 => 'Bruker som ber om handel eksisterer ikke';
+
+  @override
+  String get api_error_117 => 'Valutaen som valutakursen er forespurt for, eksisterer ikke';
+
+  @override
+  String get api_error_118 => 'Bruker som ber om finansiering av handel eksisterer ikke';
+
+  @override
+  String get api_error_119 => 'Forsøk på å finansiere en handel som ikke eksisterer';
+
+  @override
+  String get api_error_120 => 'Bruker som ber om escrow of trade eksisterer ikke';
+
+  @override
+  String get api_error_121 => 'Forsøk på å deponere en handel som ikke eksisterer';
+
+  @override
+  String get api_error_122 => 'Ikke nok midler til å finansiere en flytende LOCAL_SELL-handel';
+
+  @override
+  String get api_error_123 => 'Ikke nok midler til å finansiere en ikke-flytende LOCAL_SELL-handel';
+
+  @override
+  String get api_error_124 => 'Feil ved finansiering av en LOCAL_SELL';
+
+  @override
+  String get api_error_125 => 'Bruker som ber om kansellering av handel eksisterer ikke';
+
+  @override
+  String get api_error_126 => 'Forsøk på å kansellere en handel som ikke eksisterer';
+
+  @override
+  String get api_error_127 => 'Bruker som ber om betaling av handel eksisterer ikke';
+
+  @override
+  String get api_error_128 => 'Forsøk på å merke en handel som ikke eksisterer betalt';
+
+  @override
+  String get api_error_129 => 'Bruker som ber om frigivelse av handel eksisterer ikke';
+
+  @override
+  String get api_error_130 => 'Forsøker å frigi en handel som ikke eksisterer';
+
+  @override
+  String get api_error_131 => 'Bruker som ber om tvist om handel eksisterer ikke';
+
+  @override
+  String get api_error_132 => 'Forsøk på å bestride en handel som ikke eksisterer';
+
+  @override
+  String get api_error_133 => 'Forsøk på å få tilbakemelding fra en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_134 => 'Forsøk på å lage en annonse når brukeren allerede har det maksimalt tillatte antallet annonser';
+
+  @override
+  String get api_error_135 => 'På en eller annen måte er maxAmount satt til null mens trackingMaxAmount er satt til true';
+
+  @override
+  String get api_error_136 => 'Forsøk på å legge ut en annonse med en saldo som er mindre enn minimumskravet.';
+
+  @override
+  String get api_error_141 => 'Forsøk på å opprette en handel for et beløp som er mindre enn det minste tillatte beløpet';
+
+  @override
+  String get api_error_142 => 'Forsøk på å angi en fiat-grense som er mindre enn minAmount når du oppretter en annonse';
+
+  @override
+  String get api_error_143 => 'Forsøk på å sette en fiat-grense som er mer enn maxAmount når du oppretter annonse';
+
+  @override
+  String get api_error_144 => 'Forsøker å angi en fiat-grense som er mindre enn minAmount ved oppdatering av annonsen';
+
+  @override
+  String get api_error_145 => 'Forsøker å sette en fiat-grense som er mer enn maxAmount ved oppdatering av annonsen';
+
+  @override
+  String get api_error_147 => 'Forsøk på å få tilknyttede data for brukere som ikke har tilknyttede programmet aktivert';
+
+  @override
+  String get api_error_148 => 'Forsøker å angi en telegram-ID som allerede er angitt';
+
+  @override
+  String get api_error_149 => 'Prioritet ikke spesifisert for eksternt uttak';
+
+  @override
+  String get api_error_150 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren er blokkert av annonseplakaten';
+
+  @override
+  String get api_error_151 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren ikke er klarert av annonseplakaten';
+
+  @override
+  String get api_error_152 => 'Forsøker å kansellere en handel som allerede er stengt';
+
+  @override
+  String get api_error_153 => 'Forsøker å frigi en handel som allerede er stengt';
+
+  @override
+  String get api_error_154 => 'Forsøk på å be om handler for en konto som ikke eksisterer';
+
+  @override
+  String get api_error_155 => 'Forsøk på å få liste over pålitelige brukere for en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_156 => 'Forsøker å få liste over blokkerte brukere for en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_157 => 'Forsøk på å angi alternativspesifikke egenskaper for en ikke-alternativannonse';
+
+  @override
+  String get api_error_158 => 'Forsøk på å lage en alternativannonse uten å angi alternativspesifikke egenskaper';
+
+  @override
+  String get api_error_159 => 'Bruker som ber om å merke premiebetaling av handel eksisterer ikke';
+
+  @override
+  String get api_error_160 => 'Forsøk på å merke premie betalt for en handel som ikke eksisterer';
+
+  @override
+  String get api_error_161 => 'Bruker som ber om å utøve opsjon eksisterer ikke';
+
+  @override
+  String get api_error_162 => 'Forsøk på å utøve opsjon for en handel som ikke eksisterer';
+
+  @override
+  String get api_error_163 => 'Bruker som ber om å bekrefte premiebetaling av handel eksisterer ikke';
+
+  @override
+  String get api_error_164 => 'Forsøk på å bekrefte premie betalt for en handel som ikke eksisterer';
+
+  @override
+  String get api_error_165 => 'Bruker som ber om å utøve handel med nettooppgjør eksisterer ikke';
+
+  @override
+  String get api_error_166 => 'Forsøk på å utøve med netto oppgjør en handel som ikke eksisterer';
+
+  @override
+  String get api_error_167 => 'Gjeldende markedspris er mindre enn eller lik utøvelsesprisen ved netting av en CALL-handel. Handelen er ute av pengene etter markedsstandarder, og kan derfor ikke nettes. Bruk vanlig oppgjør om nødvendig.';
+
+  @override
+  String get api_error_168 => 'Bruker som ber om å bekrefte dekningsbetaling for handel eksisterer ikke';
+
+  @override
+  String get api_error_169 => 'Forsøk på å bekrefte dekning betalt for en handel som ikke eksisterer';
+
+  @override
+  String get api_error_172 => 'Forsøk på å legge ut en annonse der ressursen er den samme som annonsevalutaen';
+
+  @override
+  String get api_error_174 => 'Forsøk på å utøve PUT-handel uten penger';
+
+  @override
+  String get api_error_175 => 'Forsøker å løse inn kuponger som ikke eksisterer under registrering';
+
+  @override
+  String get api_error_176 => 'Forsøk på å løse inn en utløpt kupong under registrering';
+
+  @override
+  String get api_error_177 => 'Forsøker å løse inn en kupong som ikke er på lager under registreringen';
+
+  @override
+  String get api_error_185 => 'Forsøker å få kuponger for brukere som ikke eksisterer';
+
+  @override
+  String get api_error_186 => 'Forsøk på å få mer enn 50 annonser når du får annonser etter ID';
+
+  @override
+  String get api_error_187 => 'Forsøk på å gi en tom liste over IDer når du får annonser etter ID';
+
+  @override
+  String get api_error_188 => 'Ikke en eneste av de forespurte annonse-ID-ene er en gyldig ID når du får annonser etter ID';
+
+  @override
+  String get api_error_189 => 'Ikke en eneste av de forespurte annonsene eksisterer når du får annonser etter ID';
+
+  @override
+  String get api_error_190 => 'Forsøker å gi en tom liste over IDer når du får handler med ID';
+
+  @override
+  String get api_error_191 => 'Forsøk på å få mer enn 50 annonser når du får handler med ID';
+
+  @override
+  String get api_error_192 => 'Ikke en eneste av de forespurte handels-ID-ene er en gyldig ID når du får handler med ID';
+
+  @override
+  String get api_error_193 => 'Ikke en eneste av de forespurte handlene eksisterer når du får handler med ID';
+
+  @override
+  String get api_error_194 => 'Forsøker å generere offentlig API-token for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_195 => 'Feil passord ved forsøk på å få offentlig API-token';
+
+  @override
+  String get api_error_196 => 'Forsøk på å få nylige meldinger for brukere som ikke eksisterer';
+
+  @override
+  String get api_error_197 => 'Forsøk på å få handelschatmeldinger med \"etter\" tidsstempel som er utenfor det tillatte området';
+
+  @override
+  String get api_error_198 => 'Forsøk på å få nye chatmeldinger på kontoen med \"etter\" tidsstempel som er utenfor det tillatte området';
+
+  @override
+  String get api_error_199 => 'Forsøker å få offentlig API-token for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_200 => 'Forsøk på å utløpe og slette offentlig API-token for bruker uten et offentlig API-token';
+
+  @override
+  String get api_error_201 => 'Forsøker å oppdatere prisformelen for annonse som ikke eksisterer';
+
+  @override
+  String get api_error_202 => 'Forsøk på å få kontotransaksjoner med «etter»-tidsstempel som er utenfor det tillatte området';
+
+  @override
+  String get api_error_203 => 'Forsøk på å få omdømmeimportdata for en konto som ikke eksisterer';
+
+  @override
+  String get api_error_211 => 'Forsøker å godkjenne omdømmeimport for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_212 => 'Forsøk på å godkjenne omdømmeimport for brukere som ikke er i trinn 2 av omdømmeimportflyten';
+
+  @override
+  String get api_error_213 => 'Forsøk på å nekte omdømmeimport for bruker som ikke eksisterer';
+
+  @override
+  String get api_error_214 => 'Forsøk på å nekte omdømmeimport for brukere som ikke er i trinn 2 av omdømmeimportflyten';
+
+  @override
+  String get api_error_215 => 'Forsøker å spesifisere både country_code og currency_code når du ber om de mest populære betalingsmåtene';
+
+  @override
+  String get api_error_216 => 'Forsøker å be om de mest populære betalingsmåtene for en country_code som ikke eksisterer';
+
+  @override
+  String get api_error_217 => 'Forsøker å be om de mest populære betalingsmåtene for en valutakode som ikke eksisterer';
+
+  @override
+  String get api_error_218 => 'Forsøk på å åpne en handel på en annonse som krever en bekreftet e-post når den spørrende brukeren ikke har en bekreftet e-post';
+
+  @override
+  String get api_error_219 => 'Forsøk på å registrere seg med en e-post som er fra en engangsleverandør av e-post';
+
+  @override
+  String get api_error_220 => 'Forsøk på å endre konto-e-post til en e-post fra en engangs-e-postleverandør';
+
+  @override
+  String get api_error_221 => 'Forsøker å merke alle varsler som lest for en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_222 => 'Forsøker å be om omdømmekode for en ekstern plattformkonto som allerede er importert';
+
+  @override
+  String get api_error_223 => 'Forsøker å oppdatere annonsen med å spesifisere verificationRequired som true mens verificationMsg er null';
+
+  @override
+  String get api_error_224 => 'Forsøker på å oppdatere annonsen med spesifisert bekreftelsesmelding, men annonsen som ikke krever bekreftelse og annonseoppdateringsforespørselen angir heller ikke bekreftelseObligatorisk som sann';
+
+  @override
+  String get api_error_227 => 'Forsøk på å sanksjonere en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_228 => 'Forsøker å sanksjonere bruker med en administratorkonto som ikke eksisterer';
+
+  @override
+  String get api_error_229 => 'Forsøk på å fjerne en sanksjon fra en bruker som ikke eksisterer';
+
+  @override
+  String get api_error_230 => 'Forsøk på å fjerne en sanksjon fra en bruker med en administratorkonto som ikke eksisterer';
+
+  @override
+  String get api_error_231 => 'Forsøk på å fjerne en sanksjon fra en bruker som ikke har noen sanksjoner mot dem';
+
+  @override
+  String get api_error_232 => 'Forsøk på å åpne en handel med en bruker som for øyeblikket er forbudt å handle på grunn av en sanksjon';
+
+  @override
+  String get api_error_233 => 'Forsøker å fjerne tilbakemelding med ID som ikke eksisterer';
+
+  @override
+  String get api_error_234 => 'Forsøker å fjerne tilbakemeldinger som allerede er fjernet';
+
+  @override
+  String get api_error_235 => 'Forsøk på å fjerne tviststatus fra en handel som ikke eksisterer';
+
+  @override
+  String get api_error_236 => 'Forsøk på å fjerne tviststatus fra en handel som ikke er bestridt';
+
+  @override
+  String get api_error_237 => 'Forsøk på å åpne en handel som en bruker som ikke eksisterer når du ringer endepunktet for handelsåpning som en admin og spesifiserer parameteren openAsUsername';
+
+  @override
+  String get api_error_240 => 'Ugyldig adresse oppgitt av kjøperen når han svarte på en annonse av typen SELL';
+
+  @override
+  String get api_error_241 => 'Kjøper som forsøker å oppgi en intern adresse når han svarer på en SELL-type annonse (interne adresser er ikke tillatt for handelsoppgjør)';
+
+  @override
+  String get api_error_242 => 'Ugyldig adresse oppgitt av kjøperen ved opprettelse av en KJØP-annonse';
+
+  @override
+  String get api_error_244 => 'Ugyldig adresse oppgitt av kjøperen ved oppdatering av en KJØP-annonse';
+
+  @override
+  String get api_error_245 => 'Kjøper som forsøker å oppgi en intern adresse ved oppdatering av en KJØP-annonse (interne adresser er ikke tillatt for handelsoppgjør)';
+
+  @override
+  String get api_error_246 => 'Forsøk på å starte en handel fra en KJØP-annonse som ikke spesifiserer kjøperoppgjørsadressen';
+
+  @override
+  String get api_error_247 => 'Forsøk på å frigi en handel fra en konto som det er forbudt å trekke ut på grunn av sanksjoner';
+
+  @override
+  String get api_error_248 => 'Forsøk på å frigi en handel når handlebeløpet ikke er nok til å dekke oppgjørsrelaterte gebyrer';
+
+  @override
+  String get api_error_249 => 'Forsøk på å oppdatere en annonse av typen BUY som ikke har buyerSettlementAddress angitt uten å angi parameteren buyerSettlementAddress i oppdateringsforespørselen';
+
+  @override
+  String get api_error_250 => 'Ugyldig adresse oppgitt ved forespørsel om uttaksgebyr for BTC';
+
+  @override
+  String get api_error_251 => 'Gebyrnivå oppgis ikke når du åpner en handel ved å svare på en annonse av typen BTC SELL';
+
+  @override
+  String get api_error_252 => 'Gebyrnivå oppgis ikke når du oppretter en annonse av typen BTC KJØP';
+
+  @override
+  String get api_error_253 => 'Gebyrnivå ikke oppgitt når du oppdaterer en annonse av typen BTC BUY som ikke har et gebyrnivå angitt';
+
+  @override
+  String get api_error_255 => 'Forsøk på å få varsler med \"etter\" tidsstempel som er utenfor det tillatte området';
+
+  @override
+  String get api_error_256 => 'Forsøker å registrere et push-varslingstoken som allerede eksisterer';
+
+  @override
+  String get api_error_257 => 'Forsøker å registrere et pushvarslingstoken som ikke er gyldig';
+
+  @override
+  String get api_error_258 => 'Forsøk på å registrere et pushvarslingstoken for en konto som allerede har 500 enhetstokener, slett en av de eksisterende tokenene før du prøver dette igjen';
+
+  @override
+  String get api_error_259 => 'Forsøker å slette et token som ikke eksisterer eller som ikke tilhører denne brukeren';
+
+  @override
+  String get account => 'Regnskap';
+
+  @override
+  String get login => 'Logg Inn';
+
+  @override
+  String get skip => 'Hopp over';
+
+  @override
+  String get pin_setup => 'Sett opp PIN-kode';
+
+  @override
+  String get pin_enter_continue => 'Skriv inn PIN-koden for å fortsette';
+
+  @override
+  String get pin_enter => 'Skriv inn PIN';
+
+  @override
+  String get pin_enter_to_confirm_transaction => 'Skriv inn PIN-koden for å bekrefte transaksjonen';
+
+  @override
+  String get pin_you_can_use => 'Du kan bruke denne PIN-koden til å låse opp appen.';
+
+  @override
+  String get pin_confirm => 'Bekreft PIN';
+
+  @override
+  String get pin_current => 'Gjeldende PIN-kode';
+
+  @override
+  String get pin_set => 'Angi PIN-kode';
+
+  @override
+  String get pin_do_not_match => 'PIN-kodene stemmer ikke overens';
+
+  @override
+  String get pin_second_as_first => 'PIN-koden du skrev inn andre gang samsvarer ikke med den første.';
+
+  @override
+  String get pin_wrong_current => 'Feil gjeldende PIN-kode';
+
+  @override
+  String get pin_please_input_correct => 'Vennligst skriv inn riktig gjeldende PIN-kode.';
+
+  @override
+  String get enter_email => 'Skriv inn e-post';
+
+  @override
+  String get convert => 'Konvertere';
+
+  @override
+  String get recent_transactions => 'Nylige transaksjoner';
+
+  @override
+  String get transactions_30_days => 'Transaksjoner for de siste 30 dagene';
+
+  @override
+  String get forgot_password => 'Glemt passord?';
+
+  @override
+  String get password_have_changed => 'Passordet er endret.';
+
+  @override
+  String get i_want_to_buy => 'Jeg ønsker å kjøpe';
+
+  @override
+  String get error_password_reset_token_invalid => 'Token oppgitt for tilbakestilling av passord er ugyldig';
+
+  @override
+  String get error_password_reset_unverified_email => 'Prøver å tilbakestille et passord for en bruker med en ubekreftet e-post';
+
+  @override
+  String get i_want_to_buy_new => 'Jeg ønsker å kjøpe';
+
+  @override
+  String get new_password => 'Nytt passord (8-72 tegn)';
+
+  @override
+  String get i_want_to_sell => 'Jeg vil selge';
+
+  @override
+  String get log_in_to_start_trading => 'Logg inn for å starte handel';
+
+  @override
+  String get why_do_you_need_my_email => 'Hvorfor trenger du e-posten min?';
+
+  @override
+  String get view_all_transactions => 'Se alle transaksjoner';
+
+  @override
+  String get email_is_used_to => 'E-post brukes til å gjenopprette passordet ditt eller sende deg e-postvarsler. E-posten din vil bli sjekket mot en tredjeparts database med engangse-postleverandører.';
+
+  @override
+  String get email_verified => 'E-post er bekreftet.';
+
+  @override
+  String get email_verification_error => 'E-postbekreftelsesfeil.';
+
+  @override
+  String get email_token_error => 'Token eller e-post er feil. E-posten ble ikke bekreftet.';
+
+  @override
+  String get welcome_screen_about => 'Trygg og brukervennlig person-til-person-plattform for handel med lokal valuta for Bitcoin og Monero.';
+
+  @override
+  String get view_in_block_explorer => 'Se i blokkutforsker';
+
+  @override
+  String get welcome_pick_a_payment_method => 'Velg en betalingsmetode eller velg blant alle tilgjengelige tilbud.';
+
+  @override
+  String get welcome_buy_press_buy => 'Trykk KJØP for å starte handelen.';
+
+  @override
+  String get welcome_buy_follow_the_sellers => 'Følg selgers instruksjoner i handelschatten!';
+
+  @override
+  String get welcome_sell_go_to_wallet => 'Gå til lommeboken og sett inn myntene dine.';
+
+  @override
+  String get welcome_sell_press_sell => 'Trykk SELG for å starte handelen.';
+
+  @override
+  String get welcome_sell_follow_the_buyer => 'Følg kjøpers anvisninger i handelschatten!';
+
+  @override
+  String get get_started => 'Kom i gang';
+
+  @override
+  String get send_to => 'Send til';
+
+  @override
+  String get error_only_numbers_are_possible => 'Kun tall er mulig.';
+
+  @override
+  String get error_entered_greater_than_balance => 'Den angitte verdien er større enn saldoen.';
+
+  @override
+  String get amount_to_receive => 'Beløp å motta';
+
+  @override
+  String get amount_to_send => 'Beløp som skal sendes';
+
+  @override
+  String your_deposit_address(Object asset) {
+    return 'Din $asset innskuddsadresse';
+  }
+
+  @override
+  String pending(Object num1, Object num2) {
+    return 'Venter ($num1/$num2)';
+  }
+
+  @override
+  String get preview => 'Forhåndsvisning';
+
+  @override
+  String get close => 'Lukk';
+
+  @override
+  String get deposit => 'Innskudd';
+
+  @override
+  String get share => 'Dele';
+
+  @override
+  String get edit => 'Redigere';
+
+  @override
+  String get confirm_transaction => 'Bekreft transaksjon';
+
+  @override
+  String get transaction_fee => 'Transaksjonsgebyr';
+
+  @override
+  String get show_qr_code => 'Vis QR-kode';
+
+  @override
+  String get security => 'Sikkerhet';
+
+  @override
+  String get no_pending_deposits => 'Ingen ventende innskudd';
+
+  @override
+  String get create_pin => 'Opprett PIN-kode';
+
+  @override
+  String get change_pin => 'Endre PIN';
+
+  @override
+  String get remove_pin => 'Fjern PIN-koden';
+
+  @override
+  String get remove_pin_message_success => 'PIN-koden er fjernet';
+
+  @override
+  String get you_will_receive => 'Du vil motta';
+
+  @override
+  String get total_amount_to_send => 'Totalt beløp å sende';
+
+  @override
+  String get enter_amount_to_receive_without_fee => 'Angi beløp som skal mottas (uten gebyr)';
+
+  @override
+  String get enter_amount_to_receive_with_fee => 'Angi beløp som skal trekkes (med gebyr)';
+
+  @override
+  String get return_reserve_from_trade => 'Returreserve fra handel';
+
+  @override
+  String get user_profile => 'Brukerprofil';
+
+  @override
+  String get personal_introduction => 'Personlig introduksjon';
+
+  @override
+  String get trading_reputation_on_other_platforms => 'Handelsomdømme på andre plattformer';
+
+  @override
+  String get how_to_link_my_account => 'Hvordan koble til kontoen min?';
+
+  @override
+  String link_account(Object platform) {
+    return 'Koble til $platform-konto';
+  }
+
+  @override
+  String what_is_your_username(Object platform) {
+    return 'Hva er brukernavnet ditt på $platform?';
+  }
+
+  @override
+  String get enter_username => 'Skriv inn brukernavn';
+
+  @override
+  String get edit_personal_introduction => 'Rediger personlig introduksjon';
+
+  @override
+  String get your_info => 'Din informasjon';
+
+  @override
+  String get website => 'Nettsted';
+
+  @override
+  String get are_you_sure => 'Er du sikker?';
+
+  @override
+  String get no_trusted_users_yet => 'Ingen pålitelige brukere ennå.';
+
+  @override
+  String get no_blocked_users_yet => 'Ingen blokkerte brukere ennå.';
+
+  @override
+  String get no_transactions_yet => 'Ingen transaksjoner ennå.';
+
+  @override
+  String get web_links => 'weblenker';
+
+  @override
+  String get tor_links => 'Tor-lenker';
+
+  @override
+  String get i2p_links => 'I2P-lenker';
+
+  @override
+  String get active_coupons => 'Aktive kuponger';
+
+  @override
+  String get expired_coupons => 'Utløpte kuponger';
+
+  @override
+  String get hide_expired_coupons => 'Skjul utløpte kuponger';
+
+  @override
+  String get show_expired_coupons => 'Vis utløpte kuponger';
+
+  @override
+  String get terms_and_conditions => 'Vilkår og betingelser';
+
+  @override
+  String get current_email => 'Nåværende epost';
+
+  @override
+  String get remove_email => 'Fjern e-post';
+
+  @override
+  String get email_not_received_content => 'Hvis du ikke har mottatt bekreftelses-e-posten, vennligst sjekk \"Spam\"-mappen eller';
+
+  @override
+  String get email_not_received_link => 'klikk her for å sende e-posten på nytt.';
+
+  @override
+  String get email_confirm_delete => 'Bekreft sletting av e-post';
+
+  @override
+  String get email_deleted => 'E-post slettet.';
+
+  @override
+  String email_confirmation_we_ve_sent_an_email(Object email) {
+    return 'Vi har sendt en e-post til $email. Klikk på koblingen i e-posten for å bekrefte e-postadressen din.';
+  }
+
+  @override
+  String app_staff(Object appName) {
+    return '$appName ansatte';
+  }
+
+  @override
+  String get current_password => 'Nåværende passord';
+
+  @override
+  String get save_your_backup_code => 'Lagre reservekoden';
+
+  @override
+  String get your_backup_code => 'Din reservekode';
+
+  @override
+  String get set_up_2fa => 'Sett opp 2FA';
+
+  @override
+  String get download_2fa => 'Last ned en 2FA-app. Kopier koden nedenfor og lim den inn i 2FA-appen din.';
+
+  @override
+  String get paste_code => 'Lim inn kode';
+
+  @override
+  String get code_valid => 'Koden er gyldig';
+
+  @override
+  String get verifying_the_code => 'Bekrefter koden ...';
+
+  @override
+  String get language => 'Språk';
+
+  @override
+  String get my_profile => 'Min profil';
+
+  @override
+  String get choose_ad_default_region => 'Velg annonsestandardregion';
+
+  @override
+  String get knowledge_base => 'Kunnskapsbase';
+
+  @override
+  String get report_this_ad => 'Rapporter denne annonsen';
+
+  @override
+  String get cash_only => 'Kun kontanter';
+
+  @override
+  String get dispute_started => 'Tvisten startet';
+
+  @override
+  String get payment_info => 'betalingsinformasjon';
+
+  @override
+  String get trade_ad => 'Handelsannonse';
+
+  @override
+  String get ask_delete_ad => 'Er du sikker på at du vil slette denne annonsen?';
+
+  @override
+  String get general => 'Generell';
+
+  @override
+  String get final_price => 'Siste pris';
+
+  @override
+  String get use_price_formula_to_calculate => 'Bruk prisformel for å beregne';
+
+  @override
+  String get enter_price_formula => 'Skriv inn prisformel';
+
+  @override
+  String get trade_limits => 'Handelsgrenser (valgfritt)';
+
+  @override
+  String get trade_details => 'Handelsdetaljer (valgfritt)';
+
+  @override
+  String get reply => 'Svare';
+
+  @override
+  String get trade_loading_failed => 'Innlasting av handel mislyktes, sjekk tilkoblingen.';
+
+  @override
+  String get dark_theme => 'Mørkt tema';
+
+  @override
+  String search__no_results(Object country) {
+    return 'Ingen resultater i $country med de valgte kriteriene... ennå. ';
+  }
+
+  @override
+  String get affiliate__explain_is_reg => 'Tilknytning registreres når en bruker registrerer seg etter å ha landet på siden fra en lenke med henvisningskoden din.';
+
+  @override
+  String get affiliate__ref_code_title => 'Din henvisningskode';
+
+  @override
+  String affiliate__users__text(Object number) {
+    return 'Du er for øyeblikket registrert som en affiliate for $number-brukere og vil tjene provisjoner fra alle handler utført av disse.';
+  }
+
+  @override
+  String affiliate__terms__text___agoradesk(Object appName) {
+    return '• Du kan koble til en hvilken som helst individuell side, for eksempel landoppføring eller betalingsmåteoppføring, eller noe annet på $appName.\n• Du vil tjene kryptovaluta fra brukerne som kommer til nettstedet gjennom ditt tilknyttede lenkeregister og gjør handler.\n• Utbetalinger vil bli gjort daglig til din $appName lommebok i de relevante kryptovalutaene.\n• Provisjon vil bli betalt i ett år fra brukerens registrering. Provisjon er basert på inntekten den nye brukeren kommer med for $appName (handelsgebyrer).\n• Ethvert stygt spill, som villedende reklame, er forbudt.\n• Spamming er forbudt. Spamming inkluderer å sende private eller offentlige meldinger som ikke abonneres på forum/reddit, avmeldt massepost osv.\n• Det er forbudt å legge til skjulte iframes på et nettsted for å fange opp tilknyttede selskaper. Bare tilknyttede iframes eller direkte lenker til nettsiden er tillatt.\n• $appName har rett til å deaktivere enhver tilknyttet bruker til enhver tid. Hvis du bryter vilkårene, vil tilknytningsprogrammet ditt bli avsluttet.';
+  }
+
+  @override
+  String affiliate__example__text(Object assetName, Object appName, Object assetSymbol) {
+    return 'Du får to brukere, kjøper og selger av $assetName registrert på $appName, og de gjør en handel verdt 100 $assetSymbol. Du tjener 20 % provisjon på $appName handelsgebyrene fra begge deltakerne, totalt 40 % av $appName gebyret.\n\nDin opptjente sum er 0,4 $assetSymbol. Kun sluttførte salg som går gjennom transaksjonsprosessen vår betyr noe. Utbetalinger gjøres daglig.\n\n$appName-støtte er mer enn villig til å hjelpe deg med alle spørsmål.';
+  }
+
+  @override
+  String get affiliate__enable_btn => 'Aktiver tilknyttede program';
+
+  @override
+  String affiliate__enabled(Object ref_code, Object appName) {
+    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $ref_code til en hvilken som helst $appName URL.';
+  }
+
+  @override
+  String reputation_import__step__username__input__label(Object platform) {
+    return 'Ditt $platform brukernavn';
+  }
+
+  @override
+  String reputation_import__step__code__message(Object platform) {
+    return 'Legg til denne koden et sted på den offentlige $platform-profilen din. Når vi har bekreftet koden, kan du fjerne den.';
+  }
+
+  @override
+  String settings__homepage_tip(Object example_url) {
+    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$example_url)';
+  }
+
+  @override
+  String get settings__personal_info_tip => 'Vises på den offentlige profilen din. Maksimalt 65536 tegn. Kan bruke markdown for styling.';
+
+  @override
+  String get settings__personal_info_tip_1 => 'Vises på den offentlige profilen din. Maksimalt 65536 tegn.';
+
+  @override
+  String get coupons__coupon__type_here => 'Skriv inn kupongen din her';
+
+  @override
+  String get trade__mark_pay_according => ' Betal i henhold til betalingsdetaljene vist nedenfor. Hvis du har spørsmål, spør selgeren i chatten.';
+
+  @override
+  String get dashboard__trade__status__open => 'Åpen';
+
+  @override
+  String get wallet__available_balance => 'Tilgjengelig balanse';
+
+  @override
+  String get trade__dialog__confirm_release_monero_text_password => 'Dette passordet brukes som forskyvning for å generere oppgjørslommeboken for ikke-depot og signere transaksjonen. LocalMonero har ingen mulighet til å gjenopprette lommeboken hvis du mister dette passordet.';
+
+  @override
+  String get dont_have_an_account_yet => 'Har du ikke en konto ennå?';
+
+  @override
+  String get app_trades => 'Handler';
+
+  @override
+  String get app_unlimited => 'Ubegrenset';
+
+  @override
+  String get app_guides => 'Guider';
+
+  @override
+  String get app_edit_this_ad => 'Rediger denne annonsen';
+
+  @override
+  String get app_you_can_use_markdown => 'Du kan bruke markdown for å style annonsens vilkår (bilder ikke tillatt).';
+
+  @override
+  String get app_no_trades_to_export => 'Ingen handler å eksportere.';
+
+  @override
+  String app_settings_2fa_step_two(Object appName) {
+    return 'Skriv ned reservekoden (over i grønt) på et stykke papir og oppbevar den på et trygt sted. Du vil trenge det hvis du mister telefonen, eller du vil bli låst ute av kontoen din. $appName vil ikke kunne hjelpe deg hvis du mister denne koden.';
+  }
+
+  @override
+  String get ad_post_ad_rules_text_0 => 'Før du oppretter en annonse, vennligst les gjennom vår ';
+
+  @override
+  String app_trade_warning_impersonation(Object appName) {
+    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n${appName}-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
+  }
+
+  @override
+  String app_buy_sell(Object val) {
+    return 'Hvor mye ønsker du å $val?';
+  }
+
+  @override
+  String app_buyer_marked_as_paid(Object val) {
+    return '$val har merket handelen som betalt';
+  }
+
+  @override
+  String app_buy_crypto_from(Object val) {
+    return 'Kjøp krypto fra $val';
+  }
+
+  @override
+  String app_sell_crypto_to(Object val) {
+    return 'Selg krypto til $val';
+  }
+
+  @override
+  String app_trades_with(Object val) {
+    return 'Se handler med $val';
+  }
+
+  @override
+  String app_able_to_cancel(Object val1, Object val2) {
+    return '($val1 vil kunne kansellere om $val2 min med mindre du merker som betalt)';
+  }
+
+  @override
+  String app_able_to_cancel_now(Object val) {
+    return '($val kan nå kansellere med mindre du merker som betalt)';
+  }
+
+  @override
+  String app_buying_from(Object asset, Object amount, Object username) {
+    return 'Kjøper $asset $amount fra $username';
+  }
+
+  @override
+  String app_selling_to(Object asset, Object amount, Object username) {
+    return 'Selger $asset $amount til $username';
+  }
+
+  @override
+  String app_for_sum(Object val) {
+    return 'for $val';
+  }
+
+  @override
+  String get app_buy_crypto => 'Kjøp krypto fra';
+
+  @override
+  String get app_sell_crypto => 'Selg krypto til';
+
+  @override
+  String get app_intall_trade_title => 'Installer AgoraDesk for å se denne handelen';
+
+  @override
+  String get app_intall_ad_title => 'Installer AgoraDesk for å se denne annonsen';
+
+  @override
+  String get app_intall_trade_body => 'Dette er en Bitcoin-basert handel, den krever vår AgoraDesk-app for å se.';
+
+  @override
+  String get app_intall_ad_body => 'Dette er en Bitcoin-basert annonse, den krever vår AgoraDesk-app for å se.';
+
+  @override
+  String get app_trade_option_payment_receiver_cancel_notice => 'Fullfør aldri en handel før du er 100% sikker på at du har mottatt pengene. Svindlere vil prøve å lure deg til å fullføre tidlig.';
+
+  @override
+  String get app_cancel_trade_message => 'Gjorde en feil eller ønsker å prøve en annen trader? Hvis du allerede har overført midlene og ønsker å kansellere nå, må du selv forhandle tilbake betalingen med handelspartneren din. Avbestill aldri med mindre du er sikker på at du har fått pengene tilbake.';
+
+  @override
+  String get app_all_feedback => 'Alle tilbakemeldinger';
+
+  @override
+  String get app_camera => 'Kamera';
+
+  @override
+  String get app_clear => 'Klar';
+
+  @override
+  String get app_ad_deleted => 'Annonsen er slettet';
+
+  @override
+  String get app_verifiacetion_code_to_seller => 'Dette er bekreftelseskoden din. Du kan fortelle det til kjøperen slik at kjøperen kan bekrefte at du har fullført handelen uten at de trenger å bruke enheten.';
+
+  @override
+  String get app_verification_code => 'Bekreftelseskode';
+
+  @override
+  String get app_ad => 'Annonse';
+
+  @override
+  String get app_with => 'med';
+
+  @override
+  String get app_edited => 'Redigert';
+
+  @override
+  String get app_permanent => 'Fast';
+
+  @override
+  String get app_error_saving => 'Feil under lagring. Endringene ble ikke lagret.';
+
+  @override
+  String get app_manage_ads => 'Administrer annonser';
+
+  @override
+  String get app_vacation_enabled => 'Ferie aktivert';
+
+  @override
+  String get app_trade_created => 'Handel opprettet';
+
+  @override
+  String get app_session_expired => 'Sesjon utløpt';
+
+  @override
+  String get app_anonymous_crash_diagnostics => 'Anonym krasjdiagnostikk';
+
+  @override
+  String get app_restart_now => 'Start på nytt nå';
+
+  @override
+  String get app_postpone => 'Utsette';
+
+  @override
+  String get app_biometric_authentication => 'Biometrisk autentisering';
+
+  @override
+  String get app_biometric_authentication_message => 'Angi en PIN-kode for å aktivere biometrisk autentisering.';
+
+  @override
+  String get app_anonymous_crash_diagnostics_restart => 'Anonym krasjdiagnostikk er deaktivert og vil ikke bli sendt etter at du har startet appen på nytt.';
+
+  @override
+  String get app_trading_partners => 'Byttepartnere';
+
+  @override
+  String get app_trade_status_settlement_processing_description => 'Oppgjøret er under behandling. Vennligst vent, det er ingenting du trenger å gjøre.';
+
+  @override
+  String get app_buyer_settlement_fee_level_description => 'Velg et gebyrnivå som skal brukes under handelsoppgjøret. Verdiene som vises her er gjeldende renteanslag og kan avvike fra de som ble brukt under handelsoppgjøret. Skulle handlebeløpet være for lavt til å gjøre opp handelen med det valgte gebyrnivået, vil et lavere gebyrnivå automatisk bli valgt under oppgjøret.';
+
+  @override
+  String get app_change_vacation_settings => 'Endre ferieinnstillinger.';
+
+  @override
+  String get app_gallery => 'Galleri';
+
+  @override
+  String get app_via => 'via';
+
+  @override
+  String get app_one_percent => '1 % gebyr';
+
+  @override
+  String get app_final_amount => 'Endelig beløp';
+
+  @override
+  String app_note_label(Object val) {
+    return 'Notatet ditt på $val (bare sett av deg)';
+  }
+
+  @override
+  String app_note_add(Object val) {
+    return 'Legg til et notat om $val';
+  }
+
+  @override
+  String app_update_new_version_available(Object val) {
+    return 'Ny versjon $val er tilgjengelig.';
+  }
+
+  @override
+  String get app_update_now => 'Oppdater nå';
+
+  @override
+  String get app_update_ingnor_until_next => 'Ignorer til neste oppdatering';
+
+  @override
+  String get app_update_ignore_always => 'Ignorer alltid';
+
+  @override
+  String get app_tooltip_visibility => 'Trykk for å bytte synlighet';
+
+  @override
+  String get app_tooltip_long_press_ad => 'Trykk lenge på annonsen for å aktivere grupperedigering';
+
+  @override
+  String get app_join_telegram => 'Bli med i Telegram-gruppen';
+
+  @override
+  String get app_join_matrix => 'Bli med i Matrix-gruppen';
+
+  @override
+  String get app_display_password => 'Vis passord';
+
+  @override
+  String get app_hide_password => 'Skjul passord';
+
+  @override
+  String get app_trade_has_been_cancelled => 'Handelen er kansellert.';
+
+  @override
+  String app_last_seen(Object val) {
+    return 'Sist sett $val';
+  }
+
+  @override
+  String get app_open_additional_filters => 'Åpne flere filtre';
+
+  @override
+  String get app_select_asset => 'Velg aktiva';
+
+  @override
+  String get app_select_trade_type => 'Velg handelstype';
+
+  @override
+  String get app_paste => 'Lim inn';
+
+  @override
+  String get app_scan_qr_code => 'Skann QR kode';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Kjøp eller selg Bitcoin anonymt, uten ID-verifisering. Kontanter eller online. Trygg, rask, enkel.\n\nLurer du på hvordan du investerer i Bitcoin? På AgoraDesk har det aldri vært enklere å kjøpe bitcoins – kjøp umiddelbart BTC fra en person som bruker din favoritt online betalingsmetode: PayPal, kreditt-/debetkort eller bankoverføring, gavekort, Venmo eller noe annet. Hvis du ønsker å kjøpe bitcoins nær deg med kontanter, kan du finne noen som er villige til å selge bitcoins lokalt – handelsplattformen støtter kjøp og salg av BTC med kontanter. Du kan til og med kjøpe bitcoins med kontanter via post.\n\n- Trygg og smidig handel\nAkkurat som LocalBitcoins støtter vi alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og i motsetning til LocalBitcoins støtter vi fullt ut ansikt-til-ansikt kontanthandler. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nAgoraDesk er forpliktet til å opprettholde enkelheten og rettframheten som gjorde de originale LocalBitcoins så populære. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske kryptovalutamiljøet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://agoradesk.com/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Bitcoins til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kjøp Bitcoin enkelt';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kjøp XMR enkelt';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kjøp eller selg Monero uten ID-verifisering. Kontanter eller online. Trygg, rask, enkel.\n\nLocalMonero er den største, mest pålitelige og veletablerte P2P-handelsplattformen i XMR-fellesskapet. Vi har ingen KYC-sjekker – du kan ganske enkelt kjøpe Monero anonymt uten ID-verifisering med PayPal, kredittkort, gavekort, kontanter via post eller konvertere Bitcoin, Ether, USDT eller en hvilken som helst annen kryptomynt til Monero – plattformen vår støtter alle betalingsmåter.\n\n- Trygg og smidig handel\nVi støtter alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og vi støtter fullt ut kontanthandler ansikt til ansikt. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nLocalMonero er forpliktet til å opprettholde enkelheten og rett frem handelsopplevelsen din. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske Monero-samfunnet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://localmonero.co/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Monero til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kjøp XMR privat';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Kjøp eller selg Monero uten ID-verifisering. Kontanter eller online. Trygg, rask, enkel.\n\nLocalMonero er den største, mest pålitelige og veletablerte P2P-handelsplattformen i XMR-fellesskapet. Vi har ingen KYC-sjekker – du kan ganske enkelt kjøpe Monero anonymt uten ID-verifisering med PayPal, kredittkort, gavekort, kontanter via post eller konvertere Bitcoin, Ether, USDT eller en hvilken som helst annen kryptomynt til Monero – plattformen vår støtter alle betalingsmåter.\n\n- Trygg og smidig handel\nVi støtter alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og vi støtter fullt ut kontanthandler ansikt til ansikt. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nLocalMonero er forpliktet til å opprettholde enkelheten og rett frem handelsopplevelsen din. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske Monero-samfunnet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://localmonero.co/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Monero til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kjøp BTC anonymt';
+
+  @override
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kjøp eller selg Bitcoin uten ID-verifisering. Kontanter eller online.\n\nLurer du på hvordan du investerer i Bitcoin? På AgoraDesk har det aldri vært enklere å kjøpe bitcoins – kjøp umiddelbart BTC fra en person som bruker din favoritt online betalingsmetode: PayPal, kreditt-/debetkort eller bankoverføring, gavekort, Venmo eller noe annet. Hvis du ønsker å kjøpe bitcoins nær deg med kontanter, kan du finne noen som er villige til å selge bitcoins lokalt – handelsplattformen støtter kjøp og salg av BTC med kontanter. Du kan til og med kjøpe bitcoins med kontanter via post.\n\n- Trygg og smidig handel\nAkkurat som LocalBitcoins støtter vi alle betalingsmåter, hvilken som helst valuta, hvor som helst. Vi fjerner ikke betalingsmåter, og i motsetning til LocalBitcoins støtter vi fullt ut ansikt-til-ansikt kontanthandler. Alle våre handler er beskyttet av en voldgiftsbinding. Takket være det faktum at vi krever at midler holdes i voldgiftsobligasjon før en handel kan starte, sikrer vi en jevn og trygg opplevelse for kjøperen, noe som er avgjørende for populariteten til plattformen og gjentakende kunder for selgerne.\n\n- Ingen KYC/AML eller ID-verifisering\nAgoraDesk er forpliktet til å opprettholde enkelheten og rettframheten som gjorde de originale LocalBitcoins så populære. Vi bruker ikke KYC/AML, og vi planlegger heller ikke å gjøre det.\n\n- Tillites av fellesskapet\nPlattformen vår har operert i over fire år, overlevd Great Cryptocurrency Market Crash i 2018, og ble gjennom sin fellesskapsorienterte flittige tjeneste et av de mest pålitelige navnene i det ekstremt skeptiske kryptovalutamiljøet.\n\n- Sikker, åpen kildekode, personvernsentrisk, sensurbestandig\nAppen vår er gratis og åpen kildekode, noe som sikrer at mange øyne ser på appens kode for å sikre at det ikke er sikkerhetshull eller personvernlekkasjer. Open sourcing appen vår lar også alle ha tilgang til appen vår selv om et bestemt applager sensurerer appen. Appen vår fungerer til og med på telefoner som har Google fullstendig blokkert. Vi verdsetter personvernet ditt så høyt, vi krever ikke engang at du oppgir en e-post når du registrerer deg.\n\nKildekode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemsporing: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stjernestøtte\nSupportteamet vårt er raskt, responsivt og alltid ivrig etter å tilfredsstille. Vi har aldri hatt en kundestøttebillett som ikke ble besvart innen 24 timer. Vi er alltid lett tilgjengelige gjennom sosiale medier, vi lytter nøye til din kritikk og implementerer alltid gode brukerforslag på rekordtid.\n\nDu kan nå vår støtte på: https://agoradesk.com/support\n\n- Rettferdige avgifter\nVi krever ikke ublu gebyrer når du setter inn eller tar ut Bitcoins til/fra vår voldgiftslommebok. Det er ingen innskuddsgebyr, og uttaksgebyret er veldig nær gebyret du betaler for en vanlig transaksjon.';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'kryptovaluta,anonym,privat,monero,xmr,p2p';
+
+  @override
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'kryptovaluta,bitcoin,monero,BTC,XMR,anonym,privat';
+
+  @override
+  String get app_report_this_user => 'Rapporter denne brukeren';
+
+  @override
+  String get app_open_dropdown => 'Åpne rullegardinmenyen';
+
+  @override
+  String get error250Sbsignup250Sb175 => 'Forsøker å løse inn kuponger som ikke eksisterer under registrering';
+
+  @override
+  String get error250Sbsignup250Sb176 => 'Forsøk på å løse inn en utløpt kupong under registrering';
+
+  @override
+  String get error250Sbsignup250Sb177 => 'Forsøker å løse inn en kupong som ikke er på lager under registreringen';
+
+  @override
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Brev for tilbakestilling av passord er sendt! Sjekk innboksen din.';
+
+  @override
+  String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Godta vilkårene og fortsett';
+
+  @override
+  String get logout250Sbtitle => 'Logg ut';
+
+  @override
+  String get coupons250Sbcode8722Sbapply => 'Bruk en kupongkode';
+
+  @override
+  String post8722Sbad250Sbtrade8722Stype250Sbonline8722Sbuy(Object assetName) {
+    return 'Kjøp $assetName online';
+  }
+
+  @override
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'kjøp av kjøpsopsjon';
+
+  @override
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'kjøpsopsjon selge';
+
+  @override
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: kjøp XMR anonymt';
+
+  @override
+  String get app_accessibility_edit_box_password => 'Rediger bokspassord, dobbelttrykk for å redigere';
+
+  @override
+  String get app_accessibility_edit_box_confirm_password => 'Bekreft redigeringsboks for passord, dobbelttrykk for å redigere';
+
+  @override
+  String get app_ad_created => 'Annonse opprettet';
+
+  @override
+  String app_503_body(Object val) {
+    return '$val kommer snart tilbake!\\nBeklager bryet, men vi utfører noe planlagt vedlikehold for øyeblikket.\\nVi er sannsynligvis snart tilbake på nett. Hold deg oppdatert i våre fellesskapsgrupper:';
+  }
+
+  @override
+  String get app_select_ad_type => 'Velg annonsetype';
+
+  @override
+  String get app_chat_leave_review => 'Trykk her for å legge igjen en anmeldelse!';
+
+  @override
+  String get app_chat_update_review => 'Du har allerede gitt denne brukeren en anmeldelse. Vil du oppdatere anmeldelsen din nå?';
+
+  @override
+  String get app_select_buyer_seller => 'Velg kjøper eller selger';
+
+  @override
+  String get app_default_tab => 'Angi en standardfane';
+
+  @override
+  String get app_your_ads => 'Annonsene dine';
+
+  @override
+  String app_503_title(Object val) {
+    return '$val Appvedlikehold';
+  }
+
+  @override
+  String get app_push_new_message => 'Du har en ny melding i en handel';
+
+  @override
+  String get app_push_new_offer => 'Du har et nytt tilbud';
+
+  @override
+  String get app_push_trade_marked_completed => 'Handel merket som fullført';
+
+  @override
+  String get app_push_trade_cancelled => 'Handelen kansellert';
+
+  @override
+  String get app_push_trade_disputed => 'Handel omstridt';
+
+  @override
+  String get app_apple_app_store_subtitle_localmonero => 'Kjøp/selg Monero anonymt';
+
+  @override
+  String get app_apple_app_store_subtitle_agoradesk => 'Kjøp/selg Bitcoin anonymt';
+
+  @override
+  String get app_google_play_store_short_description_localmonero => 'Kjøp eller selg Monero uten ID-verifisering. Kontanter eller online.';
+
+  @override
+  String get app_google_play_store_short_description_agoradesk => 'Kjøp eller selg Bitcoin uten ID-verifisering. Kontanter eller online.';
+
+  @override
+  String get app_ask_community_chats => 'Har du spørsmål? Spør i felleschattene';
+
+  @override
+  String get app_select_currency => 'Velg valuta';
+
+  @override
+  String get app_select_country => 'Velg land';
+
+  @override
+  String get app_select_payment_method => 'Velg betalingsmetode';
+
+  @override
+  String get app_enable_ad => 'Aktiver annonse';
+
+  @override
+  String get app_disable_ad => 'Deaktiver annonse';
+
+  @override
+  String get app_proxy => 'Fullmakt';
+
+  @override
+  String get app_proxy_details => 'Fullmaktsdetaljer';
+
+  @override
+  String get app_proxy_use => 'Bruk proxy';
+
+  @override
+  String get app_proxy_bugs_expected => 'Advarsel! Proxy-funksjonalitet er i beta, det forventes feil. Vennligst rapporter feilene til våre utviklingskanaler for raske reparasjoner';
+
+  @override
+  String get app_proxy_select_type => 'Velg proxy-type';
+
+  @override
+  String get app_proxy_on => 'Proxy aktivert';
+
+  @override
+  String get app_proxy_on_descr => 'Appen vil nå koble til plattformen via proxyen.';
+
+  @override
+  String get app_proxy_unavailable => 'Proxy utilgjengelig';
+
+  @override
+  String get app_proxy_unavailable_decr => 'Sjekk om tilkoblingsinnstillingene er riktige eller bruk en annen proxy.';
+
+  @override
+  String get api_error_269 => 'Forsøker å legge til en ugyldig adresse i en adressebok';
+
+  @override
+  String get api_error_270 => 'Forsøk på å legge til en duplikatadresse i en brukers adressebok';
+
+  @override
+  String get api_error_273 => 'Forsøk på å slette en adresse som ikke finnes i en brukers adressebok';
 }

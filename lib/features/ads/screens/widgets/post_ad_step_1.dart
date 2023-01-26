@@ -1,4 +1,6 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
+import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/ads_terms.dart';
@@ -6,6 +8,7 @@ import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
 import 'package:agoradesk/features/ads/screens/widgets/dialog_info_s4_with_close_child_continue.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class PostAdStep1 extends StatefulWidget {
   const PostAdStep1({
@@ -35,6 +38,7 @@ class _PostAdStep1State extends State<PostAdStep1> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildSelectAdType(context),
+            _buildSelectAsset(context),
             const SizedBox(height: 16),
           ],
         ),
@@ -67,41 +71,6 @@ class _PostAdStep1State extends State<PostAdStep1> {
     );
   }
 
-  // void _displayBottomSheet(_) async {
-  //   if (!widget.model.isRulesShown) {
-  //     Widget? widget;
-  //     showModalBottomSheet(
-  //         // backgroundColor: Colors.transparent,
-  //         enableDrag: true,
-  //         isScrollControlled: true,
-  //         context: context,
-  //         clipBehavior: Clip.antiAlias,
-  //         shape: const RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.only(
-  //             topLeft: Radius.circular(20),
-  //             topRight: Radius.circular(20),
-  //           ),
-  //         ),
-  //         builder: (BuildContext context) {
-  //           return DraggableScrollableSheet(
-  //             snap: true,
-  //             expand: false,
-  //             maxChildSize: 0.95,
-  //             minChildSize: 0.0,
-  //             initialChildSize: 0.8,
-  //             snapSizes: const [0.8, 0.95],
-  //             builder: (context, scrollController) {
-  //               return widget ??= const AdsTerms();
-  //             },
-  //           );
-  //         });
-  //   }
-  //   widget.model.isRulesShown = true;
-  // }
-
-  ///
-  /// AgoraDesk
-  ///
   Widget _buildSelectAdType(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,24 +93,37 @@ class _PostAdStep1State extends State<PostAdStep1> {
           selectedItem: widget.model.tradeType,
         ),
         const SizedBox(height: 12),
-        Text(
-          context.intl.ads_choose_ad_cryptocurrency,
-          style: context.txtBodySmallN60,
-        ),
-        const SizedBox(height: 8),
-        DropdownSearch<Asset>(
-          dropdownButtonProps: context.dropdownButtonProps(),
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.menu(
-            menuProps: context.dropdownMenuProps,
-            fit: FlexFit.loose,
-          ),
-          items: Asset.values,
-          itemAsString: (Asset? a) => a?.title() ?? '',
-          onChanged: (Asset? data) => widget.model.asset = data,
-          selectedItem: widget.model.asset,
-        ),
       ],
     );
+  }
+
+  ///
+  /// AgoraDesk
+  ///
+  Widget _buildSelectAsset(BuildContext context) {
+    return GetIt.I<AppParameters>().flavor == FlavorType.agoradesk
+        ? Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                context.intl.ads_choose_ad_cryptocurrency,
+                style: context.txtBodySmallN60,
+              ),
+              const SizedBox(height: 8),
+              DropdownSearch<Asset>(
+                dropdownButtonProps: context.dropdownButtonProps(),
+                dropdownDecoratorProps: context.dropdownDecoration,
+                popupProps: PopupProps.menu(
+                  menuProps: context.dropdownMenuProps,
+                  fit: FlexFit.loose,
+                ),
+                items: Asset.values,
+                itemAsString: (Asset? a) => a?.title() ?? '',
+                onChanged: (Asset? data) => widget.model.asset = data,
+                selectedItem: widget.model.asset,
+              ),
+            ],
+          )
+        : const SizedBox();
   }
 }

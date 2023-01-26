@@ -30,6 +30,7 @@ import 'i18n_ro.dart';
 import 'i18n_ru.dart';
 import 'i18n_sk.dart';
 import 'i18n_sl.dart';
+import 'i18n_sv.dart';
 import 'i18n_sw.dart';
 import 'i18n_tl.dart';
 import 'i18n_tr.dart';
@@ -144,6 +145,7 @@ abstract class I18n {
     Locale('ru'),
     Locale('sk'),
     Locale('sl'),
+    Locale('sv'),
     Locale('sw'),
     Locale('tl'),
     Locale('tr'),
@@ -13365,6 +13367,36 @@ abstract class I18n {
   /// **'This address has already been deleted from your address book.'**
   String get error250Sbaddress8722Sbbook250Sb273;
 
+  /// No description provided for @address8722Sbbook.
+  ///
+  /// In en, this message translates to:
+  /// **'Address book'**
+  String get address8722Sbbook;
+
+  /// No description provided for @address8722Sbbook250Sbshort.
+  ///
+  /// In en, this message translates to:
+  /// **'Addresses'**
+  String get address8722Sbbook250Sbshort;
+
+  /// No description provided for @xx.
+  ///
+  /// In en, this message translates to:
+  /// **'Global'**
+  String get xx;
+
+  /// No description provided for @dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal.
+  ///
+  /// In en, this message translates to:
+  /// **'All cryptocurrency ads are now being moved to the new \"global (code XX)\" country category. All duplicate cryptocurrency ads that differ only by country will be deleted {time_remaining}. Please make sure you only have ONE cryptocurrency ad per currency, otherwise all but the most recently posted ad in that currency will be deleted, while the remaining ad will be moved into \"global\" country category.'**
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining);
+
+  /// No description provided for @edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad.
+  ///
+  /// In en, this message translates to:
+  /// **'When you press \"Save\", the ad\'s country will be updated to \"global\" automatically.'**
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:
@@ -16976,6 +17008,24 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Please check if the connection settings are correct or use another proxy.'**
   String get app_proxy_unavailable_decr;
+
+  /// No description provided for @api_error_269.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to add an invalid address to an address book'**
+  String get api_error_269;
+
+  /// No description provided for @api_error_270.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to add a duplicate address to a user’s address book'**
+  String get api_error_270;
+
+  /// No description provided for @api_error_273.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempting to delete an address that doesn’t exist in a user’s address book'**
+  String get api_error_273;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
@@ -16987,7 +17037,7 @@ class _I18nDelegate extends LocalizationsDelegate<I18n> {
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_I18nDelegate old) => false;
@@ -17045,6 +17095,7 @@ case 'TW': return I18nZhTw();
     case 'ru': return I18nRu();
     case 'sk': return I18nSk();
     case 'sl': return I18nSl();
+    case 'sv': return I18nSv();
     case 'sw': return I18nSw();
     case 'tl': return I18nTl();
     case 'tr': return I18nTr();
