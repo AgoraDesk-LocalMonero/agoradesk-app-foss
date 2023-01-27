@@ -1,2 +1,2 @@
 1. HOTFIX: Login with Imperva captcha.
-2. Fix: translations minor bugs.
+2. Fix: translations' minor bugs.
