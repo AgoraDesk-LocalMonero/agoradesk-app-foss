@@ -77,8 +77,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Όλα σε $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Όλα σε $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nEl extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Σφάλμα αιτήματος συναλλαγών';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Αυτός ο έμπορος επιτρέπει το μέγιστο $firstTimelimitxmr για την πρώτη συναλλαγή μαζί του.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Αυτός ο έμπορος επιτρέπει το μέγιστο $firstTimeLimitXmr για την πρώτη συναλλαγή μαζί του.';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nEl extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Πουλήστε το $assetName χρησιμοποιώντας το $paymentMethod${detail} με το $currency';
+    return 'Πουλήστε το $assetName χρησιμοποιώντας το $paymentMethod$detail με το $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Αγοράστε $assetName χρησιμοποιώντας $paymentMethod${detail} με $currency';
+    return 'Αγοράστε $assetName χρησιμοποιώντας $paymentMethod$detail με $currency';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nEl extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'αγορά';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Πόσο επιθυμείτε να $buyOrsell;';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Πόσο επιθυμείτε να $buyOrSell;';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Αυτός ο έμπορος απαιτεί τουλάχιστον $minimumFeedbackscore βαθμολογία ανατροφοδότησης για να πραγματοποιήσει συναλλαγές.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Αυτός ο έμπορος απαιτεί τουλάχιστον $minimumFeedbackScore βαθμολογία ανατροφοδότησης για να πραγματοποιήσει συναλλαγές.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nEl extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'αγοραστής';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Αφού πατήσετε το κουμπί \'$buy_or_sell_button_name\' θα δείτε πιο πολλές πληροφορίες σχετικά με τη διαφήμιση, συμπεριλαμβανομένων των όρων της συναλλαγής. Διαβάστε τα πριν υποβάλετε το αίτημα συναλλαγής, εάν δεν συμφωνείτε μαζί τους, μπορείτε να επιστρέψετε στην προηγούμενη σελίδα και να επιλέξετε άλλη διαφήμιση.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Αφού πατήσετε το κουμπί \'$buyOrSellButtonName\' θα δείτε πιο πολλές πληροφορίες σχετικά με τη διαφήμιση, συμπεριλαμβανομένων των όρων της συναλλαγής. Διαβάστε τα πριν υποβάλετε το αίτημα συναλλαγής, εάν δεν συμφωνείτε μαζί τους, μπορείτε να επιστρέψετε στην προηγούμενη σελίδα και να επιλέξετε άλλη διαφήμιση.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Για να ξεκινήσετε τη συναλλαγή, πληκτρολογήστε πόσο $asset θέλετε να $buy_or_sell και κάντε ένα κλικ στο κουμπί \'Αποστολή αιτήματος συναλλαγών\' για να ξεκινήσει η συναλλαγή.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Για να ξεκινήσετε τη συναλλαγή, πληκτρολογήστε πόσο $asset θέλετε να $buyOrSell και κάντε ένα κλικ στο κουμπί \'Αποστολή αιτήματος συναλλαγών\' για να ξεκινήσει η συναλλαγή.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nEl extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Αγορά';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'Στην αριστερή στήλη θα πρέπει να επιλέξετε την καρτέλα \'$buy_or_sell_tab_name\'. Εάν θέλετε να αλλάξετε τη χώρα, το νόμισμα, τον τρόπο πληρωμής ή να καθορίσετε το απαιτούμενο ποσό, κάντε κλικ στο κουμπί \"Εμφάνιση μενού αναζήτησης\", επιλέξτε τις επιθυμητές παραμέτρους και πατήστε το κουμπί αναζήτησης.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'Στην αριστερή στήλη θα πρέπει να επιλέξετε την καρτέλα \'$buyOrSellTabName\'. Εάν θέλετε να αλλάξετε τη χώρα, το νόμισμα, τον τρόπο πληρωμής ή να καθορίσετε το απαιτούμενο ποσό, κάντε κλικ στο κουμπί \"Εμφάνιση μενού αναζήτησης\", επιλέξτε τις επιθυμητές παραμέτρους και πατήστε το κουμπί αναζήτησης.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nEl extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Λειτουργεί χωρίς JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Ο ιστότοπός μας είναι πολύ εύκολα προσβάσιμος μέσω του $tor_link μας (το οποίο έχει ρυθμιστεί για μέγιστη απόδοση για την άνεσή σας μέσω της χρήσης του $advanced_routing) και ακόμη και μέσω ενός $i2p_link. Αυτό διασφαλίζει όχι μόνο ότι θα μπορείτε να αποκρύψετε την αληθινή IP σας από εμάς (την οποία δεν συσχετίζουμε ποτέ με τον λογαριασμό σας ούτως ή άλλως), αλλά ότι εάν για οποιονδήποτε λόγο ο κανονικός τομέας μας γίνει απρόσιτος για εσάς, θα υπάρχουν άλλοι τρόποι πρόσβασης η υπηρεσία μας. Εκτιμούμε τόσο πολύ το απόρρητό σας, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Ο ιστότοπός μας είναι πολύ εύκολα προσβάσιμος μέσω του $torLink μας (το οποίο έχει ρυθμιστεί για μέγιστη απόδοση για την άνεσή σας μέσω της χρήσης του $advancedRouting) και ακόμη και μέσω ενός $i2pLink. Αυτό διασφαλίζει όχι μόνο ότι θα μπορείτε να αποκρύψετε την αληθινή IP σας από εμάς (την οποία δεν συσχετίζουμε ποτέ με τον λογαριασμό σας ούτως ή άλλως), αλλά ότι εάν για οποιονδήποτε λόγο ο κανονικός τομέας μας γίνει απρόσιτος για εσάς, θα υπάρχουν άλλοι τρόποι πρόσβασης η υπηρεσία μας. Εκτιμούμε τόσο πολύ το απόρρητό σας, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nEl extends I18n {
   String get completed250Sbtitle => 'Οι ολοκληρωμένες συναλλαγές σας';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Για έρευνες επιβολής του νόμου, διαβάστε το $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Για έρευνες επιβολής του νόμου, διαβάστε το $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'Η πολιτική μας';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Για να επικοινωνήσετε με το τμήμα υποστήριξης, μπορείτε να $openAticket ή να στείλετε ένα email στο $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Για να επικοινωνήσετε με το τμήμα υποστήριξης, μπορείτε να $openATicket ή να στείλετε ένα email στο $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nEl extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Σφάλμα εξαργύρωσης κουπονιού';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Κάτι πήγε στραβά κατά την εξαργύρωση ενός κουπονιού. Εάν αυτό δεν φαίνεται σωστό, επικοινωνήστε με την υποστήριξη. Κωδικός σφάλματος: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Κάτι πήγε στραβά κατά την εξαργύρωση ενός κουπονιού. Εάν αυτό δεν φαίνεται σωστό, επικοινωνήστε με την υποστήριξη. Κωδικός σφάλματος: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nEl extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Αποθήκευση αλλαγών';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Αυτή η διαφήμιση είναι για $adType $createdAt $timeOfcreation. Για να αλλάξετε τύπο διαφήμισης, παρακαλούμε $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Αυτή η διαφήμιση είναι για $adType $createdAt $timeOfCreation. Για να αλλάξετε τύπο διαφήμισης, παρακαλούμε $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nEl extends I18n {
   String get error8722Sbpage => 'Ουπς! Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε πάλι σύντομα. Κάντε κλικ οπουδήποτε στη σελίδα για να επαναφορτώσετε.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Αν αυτό δεν βοηθήσει, δοκιμάστε να καθαρίσετε τα cookies σας ή να χρησιμοποιήσετε ένα άλλο πρόγραμμα περιήγησης. Αν ούτε αυτό βοηθάει, παρακαλούμε $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Αν αυτό δεν βοηθήσει, δοκιμάστε να καθαρίσετε τα cookies σας ή να χρησιμοποιήσετε ένα άλλο πρόγραμμα περιήγησης. Αν ούτε αυτό βοηθάει, παρακαλούμε $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nEl extends I18n {
   String get error250Sbsignup250Sb48 => 'Ο χρήστης με αυτό το email υπάρχει ήδη';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Δεν μπορείτε να ζητήσετε λιγότερο από $min_asset_amount $assetSymbol για δημιουργία συναλλαγών.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Δεν μπορείτε να ζητήσετε λιγότερο από $minAssetAmount $assetSymbol για δημιουργία συναλλαγών.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nEl extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Τα σχόλια που έχουν δοθεί μπορούν να είναι είτε επιβεβαιωμένα είτε ανεπιβεβαίωτα. Τα επιβεβαιωμένα σχόλια εμφανίζονται στο δημόσιο προφίλ ενός χρήστη και επηρεάζουν τη βαθμολογία του χρήστη. Για να γίνει ένα μη επιβεβαιωμένο σχόλιο επιβεβαιωμένο, ο συνολικός όγκος συναλλαγών μεταξύ του χρήστη που δίνει και του χρήστη που λαμβάνει σχόλιο πρέπει να υπερβαίνει το ισοδύναμο των 100 USD.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Οι ειδοποιήσεις Ιστού επιτρέπουν να λαμβάνετε αναδυόμενες ειδοποιήσεις μέσω του προγράμματος περιήγησής σας κάθε φορά που λαμβάνετε μια νέα ειδοποίηση στο $appName. Εάν κάνετε συναλλαγές και θέλετε να μάθετε αμέσως πότε συμβαίνει κάτι, $enableWebnotificationsfromyourprofile. Γυρίστε το διακόπτη που λέει Ενεργοποίηση ειδοποιήσεων Ιστού και όταν το πρόγραμμα περιήγησής σας ζητήσει άδεια για εμφάνιση ειδοποιήσεων ιστού, πατήστε αποδοχή. Είστε πλέον έτοιμοι και θα αρχίσετε να λαμβάνετε ειδοποιήσεις ιστού.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Οι ειδοποιήσεις Ιστού επιτρέπουν να λαμβάνετε αναδυόμενες ειδοποιήσεις μέσω του προγράμματος περιήγησής σας κάθε φορά που λαμβάνετε μια νέα ειδοποίηση στο $appName. Εάν κάνετε συναλλαγές και θέλετε να μάθετε αμέσως πότε συμβαίνει κάτι, $enableWebNotificationsFromYourProfile. Γυρίστε το διακόπτη που λέει Ενεργοποίηση ειδοποιήσεων Ιστού και όταν το πρόγραμμα περιήγησής σας ζητήσει άδεια για εμφάνιση ειδοποιήσεων ιστού, πατήστε αποδοχή. Είστε πλέον έτοιμοι και θα αρχίσετε να λαμβάνετε ειδοποιήσεις ιστού.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nEl extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Κρατάμε ένα μικρό ποσό από το υπόλοιπο του πορτοφολιού σας για να πληρώσουμε το τέλος συναλλαγής δικτύου. Κάθε συναλλαγή κρυπτονομίσματος πρέπει να πληρώσει μια μικρή χρέωση στο δίκτυο για να επιβεβαιωθεί ανεξάρτητα από το πού αποστέλλεται.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Αυτή η απάντηση αφορά την περίπτωση που αγοράζετε Monero online. Αφού στείλετε ένα αίτημα συναλλαγής στον πωλητή του Monero, έχετε ένα χρονικό παράθυρο για να ολοκληρώσετε την πληρωμή πριν ο πωλητής μπορέσει να ακυρώσει τη συναλλαγή (το παράθυρο πληρωμής ποικίλλει ανάλογα με τον τρόπο πληρωμής της συναλλαγής). Σε αυτό το διάστημα πρέπει να ολοκληρώσετε την πληρωμή σας και να πατήσετε το κουμπί Έχω πληρώσει. Ο πωλητής ειδοποιείται ότι πραγματοποιήσατε την πληρωμή και το Monero θα παραμείνει στο ομόλογο μέχρι ο πωλητής να ολοκληρώσει τη συναλλαγή για εσάς όταν δει την πληρωμή στον λογαριασμό του/της. Εάν πληρώσατε για την αγορά, αλλά δεν επισημάνατε την πληρωμή ως ολοκληρωμένη πριν από τη λήξη του χρόνου πληρωμής, επικοινωνήστε με τον πωλητή μέσω της συναλλαγής. Μπορείτε να επικοινωνήσετε με τον πωλητή και τις άλλες υπάρχουσες εμπορικές επαφές σας από το $dashboard στο προφίλ χρήστη σας $appName. Στείλτε ένα μήνυμα στον πωλητή και εξηγήστε ευγενικά την κατάσταση και γιατί δεν μπορέσατε να ολοκληρώσετε την πληρωμή εντός του χρονικού παραθύρου. Εάν ο πωλητής δεν ανταποκριθεί σε αυτό το αίτημα, επικοινωνήστε με την υποστήριξη $appName χρησιμοποιώντας το $supportRequestform και αναφέρετε το εμπορικό αναγνωριστικό σας.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Αυτή η απάντηση αφορά την περίπτωση που αγοράζετε Monero online. Αφού στείλετε ένα αίτημα συναλλαγής στον πωλητή του Monero, έχετε ένα χρονικό παράθυρο για να ολοκληρώσετε την πληρωμή πριν ο πωλητής μπορέσει να ακυρώσει τη συναλλαγή (το παράθυρο πληρωμής ποικίλλει ανάλογα με τον τρόπο πληρωμής της συναλλαγής). Σε αυτό το διάστημα πρέπει να ολοκληρώσετε την πληρωμή σας και να πατήσετε το κουμπί Έχω πληρώσει. Ο πωλητής ειδοποιείται ότι πραγματοποιήσατε την πληρωμή και το Monero θα παραμείνει στο ομόλογο μέχρι ο πωλητής να ολοκληρώσει τη συναλλαγή για εσάς όταν δει την πληρωμή στον λογαριασμό του/της. Εάν πληρώσατε για την αγορά, αλλά δεν επισημάνατε την πληρωμή ως ολοκληρωμένη πριν από τη λήξη του χρόνου πληρωμής, επικοινωνήστε με τον πωλητή μέσω της συναλλαγής. Μπορείτε να επικοινωνήσετε με τον πωλητή και τις άλλες υπάρχουσες εμπορικές επαφές σας από το $dashboard στο προφίλ χρήστη σας $appName. Στείλτε ένα μήνυμα στον πωλητή και εξηγήστε ευγενικά την κατάσταση και γιατί δεν μπορέσατε να ολοκληρώσετε την πληρωμή εντός του χρονικού παραθύρου. Εάν ο πωλητής δεν ανταποκριθεί σε αυτό το αίτημα, επικοινωνήστε με την υποστήριξη $appName χρησιμοποιώντας το $supportRequestForm και αναφέρετε το εμπορικό αναγνωριστικό σας.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nEl extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'φόρμα αίτησης υποστήριξης';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Αφού στείλετε ένα αίτημα συναλλαγής, έχετε ένα παράθυρο χρόνου για να ολοκληρώσετε την πληρωμή προτού το άλλο μέρος μπορέσει να ακυρώσει τη συναλλαγή. Κατά τη διάρκεια αυτής της περιόδου θα πρέπει να ολοκληρώσετε την πληρωμή σας και να πατήσετε το κουμπί «Έχω πληρώσει». Το άλλο μέρος ειδοποιείται ότι πραγματοποιήσατε την πληρωμή και τα νομίσματα θα κρατηθούν στο ομόλογο μέχρι το άλλο μέρος να ολοκληρώσει τη συναλλαγή για εσάς αφού δει την πληρωμή στον λογαριασμό του. Εάν πληρώσατε για την αγορά, αλλά δεν επισημάνατε την πληρωμή ως ολοκληρωμένη πριν από τη λήξη του χρόνου πληρωμής, επικοινωνήστε με το άλλο μέρος μέσω της εμπορικής συνομιλίας. Μπορείτε να επικοινωνήσετε με το άλλο μέρος και τις άλλες υπάρχουσες εμπορικές επαφές σας από το $dashboard. Στείλτε ένα μήνυμα στο άλλο μέρος και εξηγήστε ευγενικά την κατάσταση και γιατί δεν μπορέσατε να ολοκληρώσετε την πληρωμή εντός του χρονικού παραθύρου. Εάν το άλλο μέρος δεν ανταποκριθεί σε αυτό το αίτημα, επικοινωνήστε με το προσωπικό του $appName χρησιμοποιώντας το $supportRequestform και αναφέρετε το εμπορικό σας αναγνωριστικό.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Αφού στείλετε ένα αίτημα συναλλαγής, έχετε ένα παράθυρο χρόνου για να ολοκληρώσετε την πληρωμή προτού το άλλο μέρος μπορέσει να ακυρώσει τη συναλλαγή. Κατά τη διάρκεια αυτής της περιόδου θα πρέπει να ολοκληρώσετε την πληρωμή σας και να πατήσετε το κουμπί «Έχω πληρώσει». Το άλλο μέρος ειδοποιείται ότι πραγματοποιήσατε την πληρωμή και τα νομίσματα θα κρατηθούν στο ομόλογο μέχρι το άλλο μέρος να ολοκληρώσει τη συναλλαγή για εσάς αφού δει την πληρωμή στον λογαριασμό του. Εάν πληρώσατε για την αγορά, αλλά δεν επισημάνατε την πληρωμή ως ολοκληρωμένη πριν από τη λήξη του χρόνου πληρωμής, επικοινωνήστε με το άλλο μέρος μέσω της εμπορικής συνομιλίας. Μπορείτε να επικοινωνήσετε με το άλλο μέρος και τις άλλες υπάρχουσες εμπορικές επαφές σας από το $dashboard. Στείλτε ένα μήνυμα στο άλλο μέρος και εξηγήστε ευγενικά την κατάσταση και γιατί δεν μπορέσατε να ολοκληρώσετε την πληρωμή εντός του χρονικού παραθύρου. Εάν το άλλο μέρος δεν ανταποκριθεί σε αυτό το αίτημα, επικοινωνήστε με το προσωπικό του $appName χρησιμοποιώντας το $supportRequestForm και αναφέρετε το εμπορικό σας αναγνωριστικό.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Ναι, στην πραγματικότητα έχουμε δύο! Εδώ είναι: $b32I2purl ή $i2pUrl (χρειάζεστε το $i2p για να ανοίξετε αυτούς τους συνδέσμους).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Ναι, στην πραγματικότητα έχουμε δύο! Εδώ είναι: $b32I2pUrl ή $i2pUrl (χρειάζεστε το $i2p για να ανοίξετε αυτούς τους συνδέσμους).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nEl extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Συναλλαγές κρυπτονομισμάτων';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Οι συναλλαγές σε πορτοφόλια άλλων χρηστών $appName είναι $free. $linebreak  Οι συναλλαγές προς άλλα πορτοφόλια Monero επιβαρύνονται με το τέλος συναλλαγών του δικτύου Monero. Η τρέχουσα χρέωση είναι ορατή στη σελίδα $walletPage κάτω από τον τίτλο $outgoingMonerofees. Το τέλος συναλλαγής πληρώνεται από το $appName πορτοφόλι σας όταν στέλνετε μια συναλλαγή.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Οι συναλλαγές σε πορτοφόλια άλλων χρηστών $appName είναι $free. $linebreak  Οι συναλλαγές προς άλλα πορτοφόλια Monero επιβαρύνονται με το τέλος συναλλαγών του δικτύου Monero. Η τρέχουσα χρέωση είναι ορατή στη σελίδα $walletPage κάτω από τον τίτλο $outgoingMoneroFees. Το τέλος συναλλαγής πληρώνεται από το $appName πορτοφόλι σας όταν στέλνετε μια συναλλαγή.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nEl extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'σελίδα πορτοφολιού';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Οι συναλλαγές σε πορτοφόλια άλλων χρηστών $appName είναι $free. $linebreak  Οι συναλλαγές σε εξωτερικά πορτοφόλια κρυπτονομισμάτων υπόκεινται στη σχετική χρέωση συναλλαγών του δικτύου κρυπτονομισμάτων. Η τρέχουσα χρέωση είναι ορατή στη σελίδα $walletPage κάτω από τον τίτλο $outgoingMonerofees. Το τέλος συναλλαγής καταβάλλεται από το $appName πορτοφόλι σας όταν στέλνετε μια συναλλαγή.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Οι συναλλαγές σε πορτοφόλια άλλων χρηστών $appName είναι $free. $linebreak  Οι συναλλαγές σε εξωτερικά πορτοφόλια κρυπτονομισμάτων υπόκεινται στη σχετική χρέωση συναλλαγών του δικτύου κρυπτονομισμάτων. Η τρέχουσα χρέωση είναι ορατή στη σελίδα $walletPage κάτω από τον τίτλο $outgoingMoneroFees. Το τέλος συναλλαγής καταβάλλεται από το $appName πορτοφόλι σας όταν στέλνετε μια συναλλαγή.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nEl extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Στην εφαρμογή ελέγχου ταυτότητας, σαρώστε τον κωδικό QR που εμφανίζεται στη σελίδα. Αφού το κάνετε αυτό, 6ψήφιοι κωδικοί πρόσβασης μιας χρήσης θα αρχίσουν να εμφανίζονται στην εφαρμογή.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Εγκαταστήστε την εφαρμογή ελέγχου ταυτότητας στο τηλέφωνό σας. Μπορείτε να $chooseAnyapp που υποστηρίζει TOTP. Για παράδειγμα, το $andotp είναι δωρεάν και ανοιχτού κώδικα.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Εγκαταστήστε την εφαρμογή ελέγχου ταυτότητας στο τηλέφωνό σας. Μπορείτε να $chooseAnyApp που υποστηρίζει TOTP. Για παράδειγμα, το $andotp είναι δωρεάν και ανοιχτού κώδικα.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return 'Το $appName προσφέρει το $totp 2FA. Μόλις ενεργοποιηθεί το 2FA, το $authMobileapp θα συγχρονιστεί με το $appName και θα παράγει 6-ψήφιους κωδικούς πρόσβασης μίας χρήσης. Αυτός ο κωδικός πρόσβασης αλλάζει κάθε λεπτό. Για να συνδεθείτε ή να αποσύρετε την εγγύηση διαιτησίας, εκτός από τον κωδικό πρόσβασής σας, πρέπει επίσης να εισαγάγετε αυτόν τον κωδικό πρόσβασης μίας χρήσης πριν λήξει.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return 'Το $appName προσφέρει το $totp 2FA. Μόλις ενεργοποιηθεί το 2FA, το $authMobileApp θα συγχρονιστεί με το $appName και θα παράγει 6-ψήφιους κωδικούς πρόσβασης μίας χρήσης. Αυτός ο κωδικός πρόσβασης αλλάζει κάθε λεπτό. Για να συνδεθείτε ή να αποσύρετε την εγγύηση διαιτησίας, εκτός από τον κωδικό πρόσβασής σας, πρέπει επίσης να εισαγάγετε αυτόν τον κωδικό πρόσβασης μίας χρήσης πριν λήξει.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nEl extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Αγοράζοντας bitcoin ανώνυμα έχει γίνει ολοένα και πιο δύσκολη υπόθεση.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Κάθε μέρα που περνά, φαίνεται ότι οι περισσότερες αν όχι όλες οι παραδοσιακές μέθοδοι απόκτησης bitcoin έχουν αρχίσει να απαιτούν επαλήθευση ταυτότητας, καθιστώντας τους περισσότερους οδηγούς διαθέσιμους στο διαδίκτυο σήμερα, όπως αυτός στο $ninetyNinebitcoins ή στο $coincentral, ξεπερασμένους. $linebreak  $gutter Ο παραδοσιακός τρόπος αγοράς bitcoin χωρίς αναγνωριστικό ήταν κυρίως μέσω της πλατφόρμας ανταλλαγής Bitcoin P2P $localbitcoins, ένα μέρος που ήταν ιδιαίτερα δημοφιλές για την ανώνυμη αγορά bitcoin με το $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Κάθε μέρα που περνά, φαίνεται ότι οι περισσότερες αν όχι όλες οι παραδοσιακές μέθοδοι απόκτησης bitcoin έχουν αρχίσει να απαιτούν επαλήθευση ταυτότητας, καθιστώντας τους περισσότερους οδηγούς διαθέσιμους στο διαδίκτυο σήμερα, όπως αυτός στο $ninetyNineBitcoins ή στο $coincentral, ξεπερασμένους. $linebreak  $gutter Ο παραδοσιακός τρόπος αγοράς bitcoin χωρίς αναγνωριστικό ήταν κυρίως μέσω της πλατφόρμας ανταλλαγής Bitcoin P2P $localbitcoins, ένα μέρος που ήταν ιδιαίτερα δημοφιλές για την ανώνυμη αγορά bitcoin με το $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nEl extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount με $appName. Παίρνετε ένα δωρεάν και ασφαλές διαδικτυακό πορτοφόλι Monero. Δεν χρειάζονται πρόσθετες εφαρμογές. Εάν έχετε ήδη λογαριασμό, μεταβείτε στο επόμενο βήμα.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount με $appName. Παίρνετε ένα δωρεάν και ασφαλές διαδικτυακό πορτοφόλι Monero. Δεν χρειάζονται πρόσθετες εφαρμογές. Εάν έχετε ήδη λογαριασμό, μεταβείτε στο επόμενο βήμα.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Δημιουργία λογαριασμού';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount με $appName. Παίρνετε ένα δωρεάν και ασφαλές διαδικτυακό πορτοφόλι κρυπτονομισμάτων. Δεν χρειάζονται πρόσθετες εφαρμογές. Εάν έχετε ήδη λογαριασμό, μεταβείτε στο επόμενο βήμα.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount με $appName. Παίρνετε ένα δωρεάν και ασφαλές διαδικτυακό πορτοφόλι κρυπτονομισμάτων. Δεν χρειάζονται πρόσθετες εφαρμογές. Εάν έχετε ήδη λογαριασμό, μεταβείτε στο επόμενο βήμα.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nEl extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Πώς να ενεργοποιήσετε τις ειδοποιήσεις για κινητά μέσω Telegram';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Μια τυπική συναλλαγή στο $appName λειτουργεί ως εξής, το παράδειγμα είναι μια διαδικτυακή συναλλαγή πώλησης όπου πουλάτε το $assetName σε έναν αγοραστή. Η διαδικασία είναι παρόμοια όταν αγοράζετε το $assetName στο διαδίκτυο, αλλά για αυτό το παράδειγμα εστιάζουμε στην πώληση του $assetName, καθώς αυτός είναι ο πιο συνηθισμένος τύπος συναλλαγών. $linebreak  Πρώτα πρέπει να καταθέσετε το $assetName στο $localmoneroWallet σας. $linebreak  Στη συνέχεια, πρέπει να $create $aSellmoneroad (ονομάζεται διαφήμιση online πώλησης). Όταν κάνετε τη διαφήμιση επιλέγετε έναν τρόπο πληρωμής, ορίζετε την τιμολόγηση, τα όριά σας και γράφετε τους όρους της συναλλαγής σας ως μήνυμα δωρεάν. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'Μια τυπική συναλλαγή στο $appName λειτουργεί ως εξής, το παράδειγμα είναι μια διαδικτυακή συναλλαγή πώλησης όπου πουλάτε το $assetName σε έναν αγοραστή. Η διαδικασία είναι παρόμοια όταν αγοράζετε το $assetName στο διαδίκτυο, αλλά για αυτό το παράδειγμα εστιάζουμε στην πώληση του $assetName, καθώς αυτός είναι ο πιο συνηθισμένος τύπος συναλλαγών. $linebreak  Πρώτα πρέπει να καταθέσετε το $assetName στο $localmoneroWallet σας. $linebreak  Στη συνέχεια, πρέπει να $create $aSellMoneroAd (ονομάζεται διαφήμιση online πώλησης). Όταν κάνετε τη διαφήμιση επιλέγετε έναν τρόπο πληρωμής, ορίζετε την τιμολόγηση, τα όριά σας και γράφετε τους όρους της συναλλαγής σας ως μήνυμα δωρεάν. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nEl extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Ξεκινώντας';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return 'Το $advertisementCreationpage είναι το μέρος όπου δημιουργείτε νέες διαφημίσεις. $linebreak  Υπάρχουν ορισμένες επιλογές κατά τη δημιουργία μιας διαφήμισης που είναι απαραίτητες και πολλές επιπλέον επιλογές που είναι προαιρετικές αλλά συνιστάται να τις ορίσετε. Η χρήση των επιπλέον επιλογών σάς επιτρέπει να ρυθμίσετε τη διαφήμισή σας ώστε να ταιριάζει με τη στρατηγική συναλλαγών σας. $linebreak  Μπορείτε να βρείτε όλες τις διαφημίσεις που έχετε δημιουργήσει από το $dashboard σας. Στον πίνακα ελέγχου μπορείτε επίσης να βρείτε τις ανοιχτές συναλλαγές σας. $linebreak  $requiredOptions $linebreak  $location Εισαγάγετε τη χώρα στην οποία θέλετε να εμφανίζεται η διαφήμισή σας. $linebreak  $paymentMethod Επιλέξτε τον τρόπο πληρωμής που θέλετε να προσφέρετε από το αναπτυσσόμενο μενού. $linebreak  $currency Επιλέξτε για ποιο νόμισμα πουλάτε. Για παράδειγμα, εάν πουλάτε στη Γαλλία, θα πρέπει να επιλέξετε EUR. Μπορείτε να χρησιμοποιήσετε το $thisList για να βρείτε το ακρωνύμιο του νομίσματός σας.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return 'Το $advertisementCreationPage είναι το μέρος όπου δημιουργείτε νέες διαφημίσεις. $linebreak  Υπάρχουν ορισμένες επιλογές κατά τη δημιουργία μιας διαφήμισης που είναι απαραίτητες και πολλές επιπλέον επιλογές που είναι προαιρετικές αλλά συνιστάται να τις ορίσετε. Η χρήση των επιπλέον επιλογών σάς επιτρέπει να ρυθμίσετε τη διαφήμισή σας ώστε να ταιριάζει με τη στρατηγική συναλλαγών σας. $linebreak  Μπορείτε να βρείτε όλες τις διαφημίσεις που έχετε δημιουργήσει από το $dashboard σας. Στον πίνακα ελέγχου μπορείτε επίσης να βρείτε τις ανοιχτές συναλλαγές σας. $linebreak  $requiredOptions $linebreak  $location Εισαγάγετε τη χώρα στην οποία θέλετε να εμφανίζεται η διαφήμισή σας. $linebreak  $paymentMethod Επιλέξτε τον τρόπο πληρωμής που θέλετε να προσφέρετε από το αναπτυσσόμενο μενού. $linebreak  $currency Επιλέξτε για ποιο νόμισμα πουλάτε. Για παράδειγμα, εάν πουλάτε στη Γαλλία, θα πρέπει να επιλέξετε EUR. Μπορείτε να χρησιμοποιήσετε το $thisList για να βρείτε το ακρωνύμιο του νομίσματός σας.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nEl extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Εγκατάσταση μιας διαφήμισης';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Παρακαλώ διαβάστε τους $termsOfservice μας.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Παρακαλώ διαβάστε τους $termsOfService μας.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Μπορείτε να είστε ο πρώτος που θα $post_an_ad στις ακόλουθες κατηγορίες:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Μπορείτε να είστε ο πρώτος που θα $postAnAd στις ακόλουθες κατηγορίες:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nEl extends I18n {
   String get login250Sbreset8722Sblink => 'Επαναφέρετε εδώ.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Μπορείτε να χρησιμοποιήσετε τα στοιχεία σας $front_type_url για να συνδεθείτε.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Μπορείτε να χρησιμοποιήσετε τα στοιχεία σας $frontTypeUrl για να συνδεθείτε.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nEl extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Όρια για αυτήν την συναλλαγή ChangeNow:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Ανεπαρκές υπόλοιπο. Απαιτείται: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Ανεπαρκές υπόλοιπο. Απαιτείται: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nEl extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Πάρα πολλές διαφημίσεις';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Παρακαλούμε εισάγετε έγκυρη τιμή ορίου για πρώτη φορά $assetSymbol. Επιτρέπονται μόνο αριθμοί μεταξύ $min_asset_amount και $max_asset_amount.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Παρακαλούμε εισάγετε έγκυρη τιμή ορίου για πρώτη φορά $assetSymbol. Επιτρέπονται μόνο αριθμοί μεταξύ $minAssetAmount και $maxAssetAmount.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nEl extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'Ναι';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Πριν δημιουργήσετε μια διαφήμιση, διαβάστε τα $termsOfservice και $guides μας';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Πριν δημιουργήσετε μια διαφήμιση, διαβάστε τα $termsOfService και $guides μας';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Βήμα $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Βήμα $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nEl extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Δοκιμάστε με διαφορετικό τρόπο πληρωμής, διαφορετικό ποσό ή καθόλου ποσό. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Εναλλακτικά, γίνετε ο πρώτος που θα $postAnad εδώ!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Εναλλακτικά, γίνετε ο πρώτος που θα $postAnAd εδώ!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nEl extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Εισάγετε τον κωδικό</strong> που δίνεται από την εφαρμογή σας για κινητά 2FA στο πλαίσιο κάτω από τον κωδικό QR και <strong> πατήστε το κουμπί \'Επαλήθευση 2FA\'</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp όπως $andotp ή $anyOther2faapp που υποστηρίζει $totp για τη συσκευή σας.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp όπως $andotp ή $anyOther2faApp που υποστηρίζει $totp για τη συσκευή σας.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nEl extends I18n {
   String get settings250Sbhomepage => 'Αρχική σελίδα';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Εμφανίζεται στο δημόσιο προφίλ σας. Αποδεκτή μόνο έγκυρη διεύθυνση URL (π.χ. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Εμφανίζεται στο δημόσιο προφίλ σας. Αποδεκτή μόνο έγκυρη διεύθυνση URL (π.χ. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Εμπορική διαφήμιση ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Εμπορική διαφήμιση ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Όλες οι διαφημίσεις πωλήσεών σας $asset είναι σε απόκρυψη από τη δημόσια αναζήτηση, επειδή το υπόλοιπο του πορτοφολιού ομολογιών διαιτησίας είναι χαμηλότερο από το $minRequiredbalance. Για να γίνουν ορατές οι διαφημίσεις πωλήσεών σας, καταθέστε τουλάχιστον $amountXmr στη διαιτησία σας $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Όλες οι διαφημίσεις πωλήσεών σας $asset είναι σε απόκρυψη από τη δημόσια αναζήτηση, επειδή το υπόλοιπο του πορτοφολιού ομολογιών διαιτησίας είναι χαμηλότερο από το $minRequiredBalance. Για να γίνουν ορατές οι διαφημίσεις πωλήσεών σας, καταθέστε τουλάχιστον $amountXmr στη διαιτησία σας $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nEl extends I18n {
   String get xx => 'Παγκόσμια';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Όλες οι διαφημίσεις κρυπτονομισμάτων μετακινούνται πλέον στη νέα κατηγορία χωρών \"παγκόσμια (κωδικός XX)\". Όλες οι διπλότυπες διαφημίσεις κρυπτονομισμάτων που διαφέρουν μόνο ανά χώρα θα διαγραφούν $time_remaining. Βεβαιωθείτε ότι έχετε μόνο ΜΙΑ διαφήμιση κρυπτονομίσματος ανά νόμισμα, διαφορετικά όλη εκτός από την πιο πρόσφατη δημοσιευμένη διαφήμιση σε αυτό το νόμισμα θα διαγραφεί, ενώ η υπόλοιπη διαφήμιση θα μετακινηθεί στην κατηγορία \"παγκόσμια\" χώρα.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Όλες οι διαφημίσεις κρυπτονομισμάτων μετακινούνται πλέον στη νέα κατηγορία χωρών \"παγκόσμια (κωδικός XX)\". Όλες οι διπλότυπες διαφημίσεις κρυπτονομισμάτων που διαφέρουν μόνο ανά χώρα θα διαγραφούν $timeRemaining. Βεβαιωθείτε ότι έχετε μόνο ΜΙΑ διαφήμιση κρυπτονομίσματος ανά νόμισμα, διαφορετικά όλη εκτός από την πιο πρόσφατη δημοσιευμένη διαφήμιση σε αυτό το νόμισμα θα διαγραφεί, ενώ η υπόλοιπη διαφήμιση θα μετακινηθεί στην κατηγορία \"παγκόσμια\" χώρα.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nEl extends I18n {
   String get affiliate__enable_btn => 'Ενεργοποίηση προγράμματος συνεργατών';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Το πρόγραμμα συνεργατών σας είναι ενεργοποιημένο και μπορείτε να κερδίζετε προμήθειες προσθέτοντας την ετικέτα συνεργατών $ref_code σε οποιαδήποτε διεύθυνση URL $appName.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Το πρόγραμμα συνεργατών σας είναι ενεργοποιημένο και μπορείτε να κερδίζετε προμήθειες προσθέτοντας την ετικέτα συνεργατών $refCode σε οποιαδήποτε διεύθυνση URL $appName.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nEl extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Εμφανίζεται στο δημόσιο προφίλ σας. Αποδεκτή μόνο έγκυρη διεύθυνση URL (π.χ. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Εμφανίζεται στο δημόσιο προφίλ σας. Αποδεκτή μόνο έγκυρη διεύθυνση URL (π.χ. https://$exampleUrl)';
   }
 
   @override

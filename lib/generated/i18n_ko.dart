@@ -77,8 +77,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return '$countryOrcurrency 계약만 보기';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return '$countryOrCurrency 계약만 보기';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nKo extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => '계약 불러오기 오류';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return '판매자가 설정한 첫 구매자 한도는 $firstTimelimitxmr입니다.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return '판매자가 설정한 첫 구매자 한도는 $firstTimeLimitXmr입니다.';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nKo extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$assetName을 $paymentMethod${detail}을 통해 $currency로 판매';
+    return '$assetName을 $paymentMethod$detail을 통해 $currency로 판매';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$assetName을 $paymentMethod${detail}을 통해 $currency로 구매';
+    return '$assetName을 $paymentMethod$detail을 통해 $currency로 구매';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nKo extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '구매';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '얼마나 $buyOrsell 하시겠습니까?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return '얼마나 $buyOrSell 하시겠습니까?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return '이 유저는 거래를 위해 $minimumFeedbackscore 이상의 후기를 요합니다.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return '이 유저는 거래를 위해 $minimumFeedbackScore 이상의 후기를 요합니다.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nKo extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => '구매자';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return '\'$buy_or_sell_button_name\'를 클릭하시면 계약에 대한 약관을 포함한 상세내용을 더 볼 수 있습니다. 거래요청 이전에 읽기를 권장하며 거래조건에 동의하지 않으시면 뒤로가기 후 다른 계약을 선택하셔도 됩니다.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return '\'$buyOrSellButtonName\'를 클릭하시면 계약에 대한 약관을 포함한 상세내용을 더 볼 수 있습니다. 거래요청 이전에 읽기를 권장하며 거래조건에 동의하지 않으시면 뒤로가기 후 다른 계약을 선택하셔도 됩니다.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return '거래하시기 바라면, 원하시는 $asset의 $buy_or_sell량을 입력하신 후 \'거래요청\'을 클릭하시면 됩니다.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return '거래하시기 바라면, 원하시는 $asset의 $buyOrSell량을 입력하신 후 \'거래요청\'을 클릭하시면 됩니다.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nKo extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => '구매';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return '좌측열의 \'$buy_or_sell_tab_name\'탭을 누르시면 됩니다. 거래 국가, 통화, 결제수단을 바꾸고 싶으시거나 거래액을 설정하고 싶으시면, \'메뉴검색보기\'를 누르시고 검색조건을 설정하신 후 검색하시면 됩니다.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return '좌측열의 \'$buyOrSellTabName\'탭을 누르시면 됩니다. 거래 국가, 통화, 결제수단을 바꾸고 싶으시거나 거래액을 설정하고 싶으시면, \'메뉴검색보기\'를 누르시고 검색조건을 설정하신 후 검색하시면 됩니다.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nKo extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => '자바스크립트 없이도 작동';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return '우리 사이트는 $tor_link과 $i2p_link를 통해 이용 가능합니다 ($advanced_routing를 사용한 최적의 이용환경을 제공). 이는 우리에게 IP를 제공하지 않아도 되게 하고 (우리는 애초에 IP와 유저를 연관짓지 않습니다), 어떠한 이유로든 일반 도메인이 접근 불가가 되면 다른 접근경로를 마련합니다. 우리는 개인정보보호을 가장 중시하기 때문에, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return '우리 사이트는 $torLink과 $i2pLink를 통해 이용 가능합니다 ($advancedRouting를 사용한 최적의 이용환경을 제공). 이는 우리에게 IP를 제공하지 않아도 되게 하고 (우리는 애초에 IP와 유저를 연관짓지 않습니다), 어떠한 이유로든 일반 도메인이 접근 불가가 되면 다른 접근경로를 마련합니다. 우리는 개인정보보호을 가장 중시하기 때문에, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nKo extends I18n {
   String get completed250Sbtitle => '완료된 거래';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return '법 집행 관련 문의는 $lawEnforcementinquiries을 참조하십시오.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return '법 집행 관련 문의는 $lawEnforcementInquiries을 참조하십시오.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => '우리의 정책';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return '고객지원 연락을 위해 $openAticket 하시거나 $email로 이메일해주시기 바랍니다';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return '고객지원 연락을 위해 $openATicket 하시거나 $email로 이메일해주시기 바랍니다';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nKo extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => '쿠폰 사용 에러';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return '쿠폰 사용 중 오류가 발생했습니다. 계속 오류가 발생한다면, 고객지원을 연락하시기 바랍니다. 에러코드: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return '쿠폰 사용 중 오류가 발생했습니다. 계속 오류가 발생한다면, 고객지원을 연락하시기 바랍니다. 에러코드: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nKo extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => '변경 저장';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return '이 계약은 $createdAt $timeOfcreation에 생성된 $adType 계약입니다. 계약 종류를 바꾸고 싶으시다면, $createAnewad하시기 바랍니다';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return '이 계약은 $createdAt $timeOfCreation에 생성된 $adType 계약입니다. 계약 종류를 바꾸고 싶으시다면, $createANewAd하시기 바랍니다';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nKo extends I18n {
   String get error8722Sbpage => '오류가 생겼습니다! 다시 시도해 보시기 바랍니다. 아무 곳이나 클릭하면 새로고침합니다.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return '같인 일이 발생한다면, 쿠키를 지우거나 다른 브라우저를 이용해보시기 바랍니다. 그래도 안된다면, $open_a_ticket하시기 바랍니다';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return '같인 일이 발생한다면, 쿠키를 지우거나 다른 브라우저를 이용해보시기 바랍니다. 그래도 안된다면, $openATicket하시기 바랍니다';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nKo extends I18n {
   String get error250Sbsignup250Sb48 => '이미 다른 유저가 사용하는 이메일입니다';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return '최소 $min_asset_amount $assetSymbol 이상 거래해야 합니다.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return '최소 $minAssetAmount $assetSymbol 이상 거래해야 합니다.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nKo extends I18n {
   String get faq250Sbanswer8722Sb18 => '후기는 검증될 수도 있고 검증되지 않을 수도 있습니다. 검증된 후기는 유저의 공개 프로필에 나타나게 되고 점수에 반영됩니다. 후기가 검증되기 위해서는 후기를 남긴 유저와 후기를 받은 유저 사이의 거래가 100 USD 이상이어야 합니다.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return '브라우저 알림은 $appName에서 새 알림이 있을 때 브라우저에 팝업 후기가 나타나게 합니다. 거래 중 일어나는 변화를 즉각 알고 싶다면 $enableWebnotificationsfromyourprofile를 하시기 바랍니다. 브라우저 알림을 활성화 를 누르시고 브라우저에서 팝업이 나타나면 승인을 누르시면 됩니다. 이제 브라우저 알림을 받으실 수 있습니다.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return '브라우저 알림은 $appName에서 새 알림이 있을 때 브라우저에 팝업 후기가 나타나게 합니다. 거래 중 일어나는 변화를 즉각 알고 싶다면 $enableWebNotificationsFromYourProfile를 하시기 바랍니다. 브라우저 알림을 활성화 를 누르시고 브라우저에서 팝업이 나타나면 승인을 누르시면 됩니다. 이제 브라우저 알림을 받으실 수 있습니다.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nKo extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => '네트워크 이용료를 지불하기 위해 지갑에는 항상 소량의 가상화폐가 보관됩니다. 모든 가상화폐 전송은 어디에서 이루어지든 소량의 네트워크 이용료가 필요합니다.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return '이 답변은 온라인에서 Monero를 구매하는 경우에 관한 것입니다. Monero 판매자에게 거래 요청을 보낸 후 판매자가 거래를 취소할 수 있기 전에 지불을 완료할 수 있는 시간 창이 있습니다(결제 창은 거래의 지불 방법에 따라 다름). 이 시간 동안 결제를 완료하고 결제 완료 버튼을 눌러야 합니다. 판매자는 귀하가 지불을 완료했다는 알림을 받고 판매자가 자신의 계정에서 지불을 볼 때 판매자가 귀하를 대신하여 거래를 완료할 때까지 중재 보증금으로 Monero가 보류됩니다. 구매 대금을 결제하셨으나 결제 기간이 만료되기 전에 결제 완료 표시를 하지 않으셨다면 거래를 통해 판매자에게 문의하시기 바랍니다. $appName 사용자 프로필의 $dashboard 에서 판매자 및 기타 기존 거래 연락처에 연락할 수 있습니다. 판매자에게 메시지를 보내 상황과 기간 내에 결제를 완료하지 못한 이유를 친절하게 설명하세요. 판매자가 이 요청에 응답하지 않으면 $supportRequestform 을(를) 사용하여 $appName 지원에 문의하고 거래 ID를 언급하십시오.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return '이 답변은 온라인에서 Monero를 구매하는 경우에 관한 것입니다. Monero 판매자에게 거래 요청을 보낸 후 판매자가 거래를 취소할 수 있기 전에 지불을 완료할 수 있는 시간 창이 있습니다(결제 창은 거래의 지불 방법에 따라 다름). 이 시간 동안 결제를 완료하고 결제 완료 버튼을 눌러야 합니다. 판매자는 귀하가 지불을 완료했다는 알림을 받고 판매자가 자신의 계정에서 지불을 볼 때 판매자가 귀하를 대신하여 거래를 완료할 때까지 중재 보증금으로 Monero가 보류됩니다. 구매 대금을 결제하셨으나 결제 기간이 만료되기 전에 결제 완료 표시를 하지 않으셨다면 거래를 통해 판매자에게 문의하시기 바랍니다. $appName 사용자 프로필의 $dashboard 에서 판매자 및 기타 기존 거래 연락처에 연락할 수 있습니다. 판매자에게 메시지를 보내 상황과 기간 내에 결제를 완료하지 못한 이유를 친절하게 설명하세요. 판매자가 이 요청에 응답하지 않으면 $supportRequestForm 을(를) 사용하여 $appName 지원에 문의하고 거래 ID를 언급하십시오.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nKo extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => '지원 요청서';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return '거래 요청을 보낸 후 상대방이 거래를 취소할 수 있기 전에 결제를 완료할 수 있는 시간이 있습니다. 이 시간 동안 결제를 완료하고 \'결제 완료 버튼\'을 눌러야 합니다. 상대방은 귀하가 지불을 완료했다는 알림을 받고 상대방이 자신의 계정에서 지불을 확인한 후 귀하를 위해 거래를 완료할 때까지 코인이 중재 보증금으로 유지됩니다. 구매 대금을 결제했지만 결제 기간이 만료되기 전에 결제 완료로 표시하지 않은 경우 거래 채팅을 통해 상대방에게 문의하시기 바랍니다. $dashboard에서 상대방 및 기존 거래 연락처에 연락할 수 있습니다. 상대방에게 메시지를 보내 상황과 기간 내에 결제를 완료하지 못한 이유를 친절하게 설명하십시오. 상대방이 이 요청에 응답하지 않으면 $supportRequestform 을(를) 사용하여 $appName 직원에게 연락하고 거래 ID를 언급하십시오.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return '거래 요청을 보낸 후 상대방이 거래를 취소할 수 있기 전에 결제를 완료할 수 있는 시간이 있습니다. 이 시간 동안 결제를 완료하고 \'결제 완료 버튼\'을 눌러야 합니다. 상대방은 귀하가 지불을 완료했다는 알림을 받고 상대방이 자신의 계정에서 지불을 확인한 후 귀하를 위해 거래를 완료할 때까지 코인이 중재 보증금으로 유지됩니다. 구매 대금을 결제했지만 결제 기간이 만료되기 전에 결제 완료로 표시하지 않은 경우 거래 채팅을 통해 상대방에게 문의하시기 바랍니다. $dashboard에서 상대방 및 기존 거래 연락처에 연락할 수 있습니다. 상대방에게 메시지를 보내 상황과 기간 내에 결제를 완료하지 못한 이유를 친절하게 설명하십시오. 상대방이 이 요청에 응답하지 않으면 $supportRequestForm 을(를) 사용하여 $appName 직원에게 연락하고 거래 ID를 언급하십시오.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return '2가지나 있습니다! 주소: $b32I2purl 또는 $i2pUrl ($i2p가 있어야 접속할 수 있습니다).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return '2가지나 있습니다! 주소: $b32I2pUrl 또는 $i2pUrl ($i2p가 있어야 접속할 수 있습니다).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nKo extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => '가상화폐 거래';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '다른 $appName 유저 지갑과의 입출금은 $free입니다. $linebreak  다른 모네로 지갑과의 거래는 모네로 네트워크 사용료가 붙습니다. 현재 사용료는 $walletPage에서 $outgoingMonerofees 밑에서 확인할 수 있습니다. 네트워크 사용료는 $appName 지갑에서 자동으로 사용됩니다.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '다른 $appName 유저 지갑과의 입출금은 $free입니다. $linebreak  다른 모네로 지갑과의 거래는 모네로 네트워크 사용료가 붙습니다. 현재 사용료는 $walletPage에서 $outgoingMoneroFees 밑에서 확인할 수 있습니다. 네트워크 사용료는 $appName 지갑에서 자동으로 사용됩니다.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nKo extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => '지갑 페이지';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '다른 $appName 유저 지갑과의 입출금은 $free입니다. $linebreak  외부 거래소 지갑과의 거래는 해당 가상화폐 네트워크 사용료가 붙을 수 있습니다. 현재 사용료는 $walletPage에서 $outgoingMonerofees 밑에서 확인할 수 있습니다. 네트워크 사용료는 $appName 지갑에서 자동으로 사용됩니다.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '다른 $appName 유저 지갑과의 입출금은 $free입니다. $linebreak  외부 거래소 지갑과의 거래는 해당 가상화폐 네트워크 사용료가 붙을 수 있습니다. 현재 사용료는 $walletPage에서 $outgoingMoneroFees 밑에서 확인할 수 있습니다. 네트워크 사용료는 $appName 지갑에서 자동으로 사용됩니다.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nKo extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => '인증어플로 QR코드를 인식해주시기 바랍니다. 인식이 되면 어플에 6자리 OPT가 나타납니다.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return '핸드폰에 인증어플을 설치하시기 바랍니다. TOTP를 지원하는 $chooseAnyapp합니다. 예시로 $andotp는 오픈소스 무료 어플입니다.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return '핸드폰에 인증어플을 설치하시기 바랍니다. TOTP를 지원하는 $chooseAnyApp합니다. 예시로 $andotp는 오픈소스 무료 어플입니다.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName은(는) $totp 2FA를 제공합니다. 2FA가 활성화되면 $authMobileapp 은(는) $appName과 동기화되고 6자리 일회용 비밀번호를 생성합니다. 이 비밀번호는 1분마다 변경됩니다. 중재 채권에 로그인하거나 철회하려면 비밀번호 외에 만료되기 전에 이 일회용 비밀번호도 입력해야 합니다.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName은(는) $totp 2FA를 제공합니다. 2FA가 활성화되면 $authMobileApp 은(는) $appName과 동기화되고 6자리 일회용 비밀번호를 생성합니다. 이 비밀번호는 1분마다 변경됩니다. 중재 채권에 로그인하거나 철회하려면 비밀번호 외에 만료되기 전에 이 일회용 비밀번호도 입력해야 합니다.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nKo extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>익명으로 비트코인을 구매하는 것이 점점 더 어려워지고 있습니다.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return '시간이 지나면서 지금까지 사용되어 온 비트코인 구매 방법들의 대부분이 본인인증을 요구하고 있어 $ninetyNinebitcoins나 $coincentral에 나와있는 구매법이 무효하게 되었습니다. $linebreak  $gutter 본인인증없이 비트코인을 구매하는 가장 인기있는 방법은 $paypal을 이용하는 P2P 비트코인 거래소인 $localbitcoins를 이용하는 것입니다.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return '시간이 지나면서 지금까지 사용되어 온 비트코인 구매 방법들의 대부분이 본인인증을 요구하고 있어 $ninetyNineBitcoins나 $coincentral에 나와있는 구매법이 무효하게 되었습니다. $linebreak  $gutter 본인인증없이 비트코인을 구매하는 가장 인기있는 방법은 $paypal을 이용하는 P2P 비트코인 거래소인 $localbitcoins를 이용하는 것입니다.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nKo extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$appName에 $registerAnaccount하시면 됩니다. 무료로 이용 가능한 안전한 모네로 지갑이 생성됩니다. 다른 어플을 설치하실 필요 없습니다. 이미 계정이 있다면, 다음 단계로 넘어가세요.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$appName에 $registerAnAccount하시면 됩니다. 무료로 이용 가능한 안전한 모네로 지갑이 생성됩니다. 다른 어플을 설치하실 필요 없습니다. 이미 계정이 있다면, 다음 단계로 넘어가세요.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => '가입';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$appName에 $registerAnaccount하시면 됩니다. 무료로 이용 가능한 안전한 가상화폐 지갑이 생성됩니다. 다른 어플을 설치하실 필요 없습니다. 이미 계정이 있다면, 다음 단계로 넘어가세요.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$appName에 $registerAnAccount하시면 됩니다. 무료로 이용 가능한 안전한 가상화폐 지갑이 생성됩니다. 다른 어플을 설치하실 필요 없습니다. 이미 계정이 있다면, 다음 단계로 넘어가세요.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nKo extends I18n {
   String get guide250Sbtelegram250Sbtitle => '텔레그램 알림을 활성화하는 방법';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return '$appName의 거래는 일반적으로 이렇게 이루어지며, 예시는 (당신이) 구매자에게 $assetName을 판매하는 온라인 거래입니다. 온라인으로 $assetName를 구매할 때도 비슷하지만 여기 예시에서는 가장 많은 거래인 $assetName 판매가 나와있습니다. $linebreak  우선 $localmoneroWallet에 $assetName을 {fund}해야합니다. $linebreak  이후 $aSellmoneroad를 $create해야합니다. 계약을 만들 때 결제수단, 가격, 결제한도 및 거래조건 등을 입력해야합니다.';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return '$appName의 일반적인 거래는 다음과 같이 작동합니다. 예를 들어 $assetName를 구매자에게 판매하는 온라인 판매 거래가 있습니다. 프로세스는 온라인에서 $assetName를 구매할 때와 비슷하지만 이 예에서는 가장 일반적인 거래 유형인 $assetName 판매에 중점을 둡니다. $linebreak  먼저 $assetName를 $localmoneroWallet에 입금해야 합니다. $linebreak  그러면 $create $aSellMoneroAd(온라인 판매 광고라고 함)가 필요합니다. 광고를 만들 때 지불 방법을 선택하고 가격, 한도를 설정하고 거래 조건을 자유 형식 메시지로 작성합니다. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nKo extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => '시작하기 전에';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage에서 새 계약을 만들 수 있습니다. $linebreak  계약을 만들 때 꼭 정해야 하는 옵션들이 있고 (필수는 아니지만 추천하는) 추가할 수 있는 부가적인 옵션도 많이 있습니다. 여러 부가옵션을 이용하면 거래를 좀 더 개인취향에 맞게 조정할 수 있습니다. $linebreak  $dashboard에서 지금까지 만든 모든 계약과 현재 이용 가능한 계약을 확인할 수 있습니다.$linebreak  $requiredOptions $linebreak  $location 계약을 진행하고 싶은 국가를 선택하세요. $linebreak  $paymentMethod 이용하고 싶은 결제수단을 선택하세요. $linebreak  $currency 결제에 이용할 화폐를 선택하세요. 예를 들언, 프랑스에서 거래하고 싶다면 EUR를 선택하세요. $thisList에서 화폐 약자를 찾을 수 있습니다.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage에서 새 계약을 만들 수 있습니다. $linebreak  계약을 만들 때 꼭 정해야 하는 옵션들이 있고 (필수는 아니지만 추천하는) 추가할 수 있는 부가적인 옵션도 많이 있습니다. 여러 부가옵션을 이용하면 거래를 좀 더 개인취향에 맞게 조정할 수 있습니다. $linebreak  $dashboard에서 지금까지 만든 모든 계약과 현재 이용 가능한 계약을 확인할 수 있습니다.$linebreak  $requiredOptions $linebreak  $location 계약을 진행하고 싶은 국가를 선택하세요. $linebreak  $paymentMethod 이용하고 싶은 결제수단을 선택하세요. $linebreak  $currency 결제에 이용할 화폐를 선택하세요. 예를 들언, 프랑스에서 거래하고 싶다면 EUR를 선택하세요. $thisList에서 화폐 약자를 찾을 수 있습니다.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nKo extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => '계약 설정';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return '저희 $termsOfservice을 꼭 읽으시기 바랍니다.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return '저희 $termsOfService을 꼭 읽으시기 바랍니다.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return '다음 분야에서 $post_an_ad하는 첫 유저가 되세요:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return '다음 분야에서 $postAnAd하는 첫 유저가 되세요:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nKo extends I18n {
   String get login250Sbreset8722Sblink => '여기서 재설정';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return '$front_type_url 설정을 이용해 로그인하세요.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return '$frontTypeUrl 설정을 이용해 로그인하세요.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nKo extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'ChangeNow 거래 한도:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return '잔액부족. 필요금액: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return '잔액부족. 필요금액: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nKo extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => '계약이 너무 많습니다';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return '첫 거래 $assetSymbol 허용량을 입력해 주세요. $min_asset_amount과 $max_asset_amount 사이의 정수만 사용 가능합니다.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return '첫 거래 $assetSymbol 허용량을 입력해 주세요. $minAssetAmount과 $maxAssetAmount 사이의 정수만 사용 가능합니다.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nKo extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => '예';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return '계약을 생성하기 전 $termsOfservice과 $guides를 읽어주세요';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return '계약을 생성하기 전 $termsOfService과 $guides를 읽어주세요';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Step $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Step $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nKo extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => '다른 결제수단이나 거래량을 이용해 보세요.';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return '아니면, 가장 먼저 $postAnad해 보세요!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return '아니면, 가장 먼저 $postAnAd해 보세요!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nKo extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '모바일 2중인증 어플의 QR코드 밑에 주어진<strong> 번호를 입력</strong>하고나서 <strong> \'2FA 확인\'을 눌러주세요</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '사용하는 모바일기기에 $totp를 지원하는 $andotp나 $anyOther2faapp을 $downloadA2faapp 받아주세요.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '사용하는 모바일기기에 $totp를 지원하는 $andotp나 $anyOther2faApp을 $downloadA2faApp 받아주세요.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nKo extends I18n {
   String get settings250Sbhomepage => '홈페이지';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return '당신 계정 공개정보에 표시됩니다. 사용 가능한 URL만 가능합니다 (예 https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return '당신 계정 공개정보에 표시됩니다. 사용 가능한 URL만 가능합니다 (예 https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return '($ad_type) 계약';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return '($adType) 계약';
   }
 
   @override
@@ -6838,7 +6838,7 @@ class I18nKo extends I18n {
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbwithdrawn8722Sbtip(Object assetSymbol, Object appName, Object assetName) {
-    return '당신의 $appName $assetName 지갑에서 $assetName 네트워크 사용료로 이용될 } 예상량입니다.';
+    return '이것은 $assetName 거래 네트워크 수수료를 포함하여 $appName $assetName 지갑에서 공제될 $assetSymbol의 예상 금액입니다.';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return '귀하의 중재 채권 지갑 잔액이 $minRequiredbalance미만이므로 판매 중인 모든 $asset 광고가 공개 검색에서 숨겨졌습니다. 판매 광고가 표시되게 하려면 중재 보증금 $localmoneroWallet에 최소 $amountXmr 를 예치하십시오.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return '귀하의 중재 채권 지갑 잔액이 $minRequiredBalance미만이므로 판매 중인 모든 $asset 광고가 공개 검색에서 숨겨졌습니다. 판매 광고가 표시되게 하려면 중재 보증금 $localmoneroWallet에 최소 $amountXmr 를 예치하십시오.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nKo extends I18n {
   String get xx => '글로벌';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return '이제 모든 암호화폐 광고가 새로운 \"글로벌(코드 XX)\" 국가 카테고리로 이동됩니다. 국가별로만 다른 중복 암호화폐 광고는 모두 삭제됩니다$time_remaining. 통화당 하나의 암호화폐 광고만 있는지 확인하십시오. 그렇지 않으면 해당 통화로 가장 최근에 게시된 광고를 제외한 모든 광고가 삭제되고 나머지 광고는 \"글로벌\" 국가 카테고리로 이동됩니다.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return '이제 모든 암호화폐 광고가 새로운 \"글로벌(코드 XX)\" 국가 카테고리로 이동됩니다. 국가별로만 다른 중복 암호화폐 광고는 모두 삭제됩니다$timeRemaining. 통화당 하나의 암호화폐 광고만 있는지 확인하십시오. 그렇지 않으면 해당 통화로 가장 최근에 게시된 광고를 제외한 모든 광고가 삭제되고 나머지 광고는 \"글로벌\" 국가 카테고리로 이동됩니다.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nKo extends I18n {
   String get affiliate__enable_btn => '제휴 프로그램 활성화';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return '귀하의 제휴 프로그램이 활성화되었으며 귀하의 제휴 태그 $ref_code를 $appName URL에 추가하여 커미션을 받을 수 있습니다.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return '귀하의 제휴 프로그램이 활성화되었으며 귀하의 제휴 태그 $refCode를 $appName URL에 추가하여 커미션을 받을 수 있습니다.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nKo extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return '공개 프로필에 표시됩니다. 유효한 URL만 허용됨(예: https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return '공개 프로필에 표시됩니다. 유효한 URL만 허용됨(예: https://$exampleUrl)';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nKo extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '직원을 사칭하려는 사기꾼을 조심하세요!\n${appName} 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지의 배경색은 빨간색입니다.';
+    return '직원을 사칭하려는 사기꾼을 조심하세요!\n$appName 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지의 배경색은 빨간색입니다.';
   }
 
   @override

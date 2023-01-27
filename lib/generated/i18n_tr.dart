@@ -77,8 +77,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Hepsi $countryOrcurrency içinde';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Hepsi $countryOrCurrency içinde';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nTr extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'ticaret isteği hatası';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Bu tüccar, onunla ilk ticaret için maksimum $firstTimelimitxmr izin verir.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Bu tüccar, onunla ilk ticaret için maksimum $firstTimeLimitXmr izin verir.';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nTr extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$currency ile $paymentMethod${detail} kullanarak $assetName sat';
+    return '$currency ile $paymentMethod$detail kullanarak $assetName sat';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$paymentMethod${detail} ile $currency kullanarak $assetName satın alın';
+    return '$paymentMethod$detail ile $currency kullanarak $assetName satın alın';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nTr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'satın almak';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '{val} için ne kadar diliyorsun?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return '$buyOrSell için ne kadar diliyorsun?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Bu tüccar, ticaret yapmak için en az $minimumFeedbackscore geri bildirim puanı gerektiriyor.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Bu tüccar, ticaret yapmak için en az $minimumFeedbackScore geri bildirim puanı gerektiriyor.';
   }
 
   @override
@@ -344,7 +344,7 @@ class I18nTr extends I18n {
 
   @override
   String affiliate250Sbenabled(Object refCode, Object appName) {
-    return 'Ortaklık programınız etkinleştirildi ve {ref_code} ortaklık etiketinizi herhangi bir $appName URL\'sine ekleyerek komisyon kazanabilirsiniz.';
+    return 'Ortaklık programınız etkinleştirildi ve $refCode ortaklık etiketinizi herhangi bir $appName URL\'sine ekleyerek komisyon kazanabilirsiniz.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nTr extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'alıcı';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return '\'$buy_or_sell_button_name\' düğmesine bastıktan sonra, ticaret şartları da dahil olmak üzere reklam hakkında daha fazla bilgi göreceksiniz. Takas talebini göndermeden önce bunları okuyun, onlarla aynı fikirde değilseniz bir önceki sayfaya dönebilir ve başka bir ilan seçebilirsiniz.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return '\'$buyOrSellButtonName\' düğmesine bastıktan sonra, ticaret şartları da dahil olmak üzere reklam hakkında daha fazla bilgi göreceksiniz. Takas talebini göndermeden önce bunları okuyun, onlarla aynı fikirde değilseniz bir önceki sayfaya dönebilir ve başka bir ilan seçebilirsiniz.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Ticareti başlatmak için, $buy_or_sell için ne kadar $asset istediğinizi yazın ve ticareti başlatmak için \'Ticaret talebi gönder\' düğmesine tıklayın.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Ticareti başlatmak için, $buyOrSell için ne kadar $asset istediğinizi yazın ve ticareti başlatmak için \'Ticaret talebi gönder\' düğmesine tıklayın.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nTr extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Satın almak';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'Sol sütunda \'$buy_or_sell_tab_name\' sekmesini seçmelisiniz. Ülkeyi, para birimini, ödeme yöntemini değiştirmek veya gerekli tutarı belirtmek isterseniz, \'Arama menüsünü göster\' düğmesine tıklayın, istediğiniz parametreleri seçin ve ara düğmesine basın.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'Sol sütunda \'$buyOrSellTabName\' sekmesini seçmelisiniz. Ülkeyi, para birimini, ödeme yöntemini değiştirmek veya gerekli tutarı belirtmek isterseniz, \'Arama menüsünü göster\' düğmesine tıklayın, istediğiniz parametreleri seçin ve ara düğmesine basın.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nTr extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'JavaScript olmadan çalışır';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Sitemize $tor_link (bizim $advanced_routing kullanımımız sayesinde maksimum performans için ayarlanmıştır) ve hatta bir $i2p_link aracılığıyla kolayca erişilebilir. Bu, yalnızca gerçek IP\'nizi bizden gizleyebilmenizi sağlamakla kalmaz (zaten hesabınızla asla ilişkilendirmiyoruz), aynı zamanda herhangi bir nedenle normal alan adımıza erişemezseniz, erişmeniz için başka yollar da olacaktır. servisimiz. Gizliliğinize çok değer veriyoruz $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Sitemize $torLink (bizim $advancedRouting kullanımımız sayesinde maksimum performans için ayarlanmıştır) ve hatta bir $i2pLink aracılığıyla kolayca erişilebilir. Bu, yalnızca gerçek IP\'nizi bizden gizleyebilmenizi sağlamakla kalmaz (zaten hesabınızla asla ilişkilendirmiyoruz), aynı zamanda herhangi bir nedenle normal alan adımıza erişemezseniz, erişmeniz için başka yollar da olacaktır. servisimiz. Gizliliğinize çok değer veriyoruz $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nTr extends I18n {
   String get completed250Sbtitle => 'Tamamlanan işlemleriniz';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Kolluk kuvvetleriyle ilgili sorular için lütfen $lawEnforcementinquiries bölümünü okuyun.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Kolluk kuvvetleriyle ilgili sorular için lütfen $lawEnforcementInquiries bölümünü okuyun.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'politikamız';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Desteğimizle iletişime geçmek için $openAticket veya $email adresine bir e-posta gönderebilirsiniz.';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Desteğimizle iletişime geçmek için $openATicket veya $email adresine bir e-posta gönderebilirsiniz.';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nTr extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Kupon kullanma hatası';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Kupon kullanılırken bir şeyler ters gitti. Bu doğru görünmüyorsa, lütfen destekle iletişime geçin. Hata kodu: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Kupon kullanılırken bir şeyler ters gitti. Bu doğru görünmüyorsa, lütfen destekle iletişime geçin. Hata kodu: $errorCode.';
   }
 
   @override
@@ -1235,7 +1235,7 @@ class I18nTr extends I18n {
 
   @override
   String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
-    return 'Miktar ({asset})';
+    return 'Miktar ($assetSymbol)';
   }
 
   @override
@@ -1576,7 +1576,7 @@ class I18nTr extends I18n {
 
   @override
   String document8722Sbtitle250Sbtrade(Object id) {
-    return 'Ticaret {assetName}';
+    return 'Ticaret $id';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nTr extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Değişiklikleri Kaydet';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Bu reklam $adType $createdAt $timeOfcreation içindir. Reklam türünü değiştirmek için lütfen $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Bu reklam $adType $createdAt $timeOfCreation içindir. Reklam türünü değiştirmek için lütfen $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nTr extends I18n {
   String get error8722Sbpage => 'Hata! Bir şeyler yanlış gitti. Lütfen kısa süre sonra tekrar deneyin. Yeniden yüklemek için sayfada herhangi bir yeri tıklayın.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Bu işe yaramazsa, çerezlerinizi temizlemeyi veya farklı bir tarayıcı kullanmayı deneyin. Bu da yardımcı olmazsa, lütfen $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Bu işe yaramazsa, çerezlerinizi temizlemeyi veya farklı bir tarayıcı kullanmayı deneyin. Bu da yardımcı olmazsa, lütfen $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nTr extends I18n {
   String get error250Sbsignup250Sb48 => 'Bu e-postaya sahip kullanıcı zaten var';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Ticaret oluşturma için $min_asset_amount $assetSymbol değerinden daha az talep edilemez.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Ticaret oluşturma için $minAssetAmount $assetSymbol değerinden daha az talep edilemez.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nTr extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Verilen geri bildirimler onaylanabilir veya onaylanmayabilir. Onaylanmış geri bildirim, kullanıcının genel profilinde gösterilir ve kullanıcının geri bildirim puanını etkiler. Teyit edilmemiş bir geri bildirimin onaylanması için, geri bildirim veren ve alan kullanıcı arasındaki toplam işlem hacminin 100 ABD Doları eşdeğerinden fazla olması gerekir.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Web bildirimleri, $appName üzerinde yeni bir bildirim aldığınızda tarayıcınız aracılığıyla açılır bildirimler almanızı sağlar. Ticaret yapıyorsanız ve bir şey olduğunda hemen bilmek istiyorsanız, $enableWebnotificationsfromyourprofile. Web bildirimlerini etkinleştir yazan anahtarı çevirin ve tarayıcınız sizden web bildirimlerini göstermek için izin istediğinde kabul et\'e basın. Artık tamamen hazırsınız ve web bildirimleri almaya başlayacaksınız.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Web bildirimleri, $appName üzerinde yeni bir bildirim aldığınızda tarayıcınız aracılığıyla açılır bildirimler almanızı sağlar. Ticaret yapıyorsanız ve bir şey olduğunda hemen bilmek istiyorsanız, $enableWebNotificationsFromYourProfile. Web bildirimlerini etkinleştir yazan anahtarı çevirin ve tarayıcınız sizden web bildirimlerini göstermek için izin istediğinde kabul et\'e basın. Artık tamamen hazırsınız ve web bildirimleri almaya başlayacaksınız.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nTr extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Ağ işlem ücretini ödemek için cüzdan bakiyenizden küçük bir miktar ayırıyoruz. Nereden gönderilirse gönderilsin, her kripto para birimi işleminin onaylanması için ağa küçük bir ücret ödemesi gerekir.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Bu cevap, çevrimiçi olarak Monero satın aldığınız durumla ilgilidir. Monero satıcısına bir ticaret talebi gönderdikten sonra, satıcı işlemi iptal etmeden önce ödemeyi tamamlamak için bir zaman pencereniz olur (ödeme penceresi, işlemin ödeme yöntemine göre değişir). Bu süre içerisinde ödemenizi tamamlamanız ve ödeme yaptım butonuna basmanız gerekmektedir. Satıcıya ödemeyi yaptığınız bildirilir ve satıcı ödemeyi hesabında görünce sizin için işlemi sonlandırana kadar Monero bonoda tutulur. Satın alma için ödeme yaptıysanız ancak ödemeyi ödeme süresi dolmadan tamamlandı olarak işaretlemediyseniz, lütfen ticaret yoluyla satıcıyla iletişime geçin. $appName Kullanıcı Profilinizdeki $dashboard\'ten satıcıyla ve diğer mevcut ticaret bağlantılarınızla iletişim kurabilirsiniz. Satıcıya bir mesaj gönderin ve durumu ve ödemeyi neden belirtilen süre içinde tamamlayamadığınızı nazikçe açıklayın. Satıcı bu talebe yanıt vermezse, lütfen $supportRequestform\'i kullanarak $appName desteğiyle iletişime geçin ve ticari kimliğinizi belirtin.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Bu cevap, çevrimiçi olarak Monero satın aldığınız durumla ilgilidir. Monero satıcısına bir ticaret talebi gönderdikten sonra, satıcı işlemi iptal etmeden önce ödemeyi tamamlamak için bir zaman pencereniz olur (ödeme penceresi, işlemin ödeme yöntemine göre değişir). Bu süre içerisinde ödemenizi tamamlamanız ve ödeme yaptım butonuna basmanız gerekmektedir. Satıcıya ödemeyi yaptığınız bildirilir ve satıcı ödemeyi hesabında görünce sizin için işlemi sonlandırana kadar Monero bonoda tutulur. Satın alma için ödeme yaptıysanız ancak ödemeyi ödeme süresi dolmadan tamamlandı olarak işaretlemediyseniz, lütfen ticaret yoluyla satıcıyla iletişime geçin. $appName Kullanıcı Profilinizdeki $dashboard\'ten satıcıyla ve diğer mevcut ticaret bağlantılarınızla iletişim kurabilirsiniz. Satıcıya bir mesaj gönderin ve durumu ve ödemeyi neden belirtilen süre içinde tamamlayamadığınızı nazikçe açıklayın. Satıcı bu talebe yanıt vermezse, lütfen $supportRequestForm\'i kullanarak $appName desteğiyle iletişime geçin ve ticari kimliğinizi belirtin.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nTr extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'destek talep formu';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Bir ticaret talebi gönderdikten sonra, diğer taraf ticareti iptal etmeden önce ödemeyi tamamlamak için bir zaman pencereniz olur. Bu süre içerisinde ödemenizi tamamlamanız ve \'Ödedim\' butonuna basmanız gerekmektedir. Karşı taraf ödemeyi yaptığınıza dair bilgilendirilir ve diğer taraf ödemeyi hesabında gördükten sonra sizin için işlemi sonlandırana kadar jetonlar bonoda tutulur. Satın alma için ödeme yaptıysanız ancak ödeme süresi dolmadan önce ödemeyi tamamlandı olarak işaretlemediyseniz, lütfen ticaret sohbeti aracılığıyla diğer tarafla iletişime geçin. $dashboard\'ten diğer tarafla ve diğer mevcut ticaret bağlantılarınızla iletişim kurabilirsiniz. Karşı tarafa bir mesaj göndererek durumu ve ödemeyi neden belirtilen süre içinde tamamlayamadığınızı nazikçe açıklayın. Karşı taraf bu talebe yanıt vermezse, lütfen $supportRequestform\'i kullanarak $appName personeliyle iletişime geçin ve ticari kimliğinizi belirtin.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Bir ticaret talebi gönderdikten sonra, diğer taraf ticareti iptal etmeden önce ödemeyi tamamlamak için bir zaman pencereniz olur. Bu süre içerisinde ödemenizi tamamlamanız ve \'Ödedim\' butonuna basmanız gerekmektedir. Karşı taraf ödemeyi yaptığınıza dair bilgilendirilir ve diğer taraf ödemeyi hesabında gördükten sonra sizin için işlemi sonlandırana kadar jetonlar bonoda tutulur. Satın alma için ödeme yaptıysanız ancak ödeme süresi dolmadan önce ödemeyi tamamlandı olarak işaretlemediyseniz, lütfen ticaret sohbeti aracılığıyla diğer tarafla iletişime geçin. $dashboard\'ten diğer tarafla ve diğer mevcut ticaret bağlantılarınızla iletişim kurabilirsiniz. Karşı tarafa bir mesaj göndererek durumu ve ödemeyi neden belirtilen süre içinde tamamlayamadığınızı nazikçe açıklayın. Karşı taraf bu talebe yanıt vermezse, lütfen $supportRequestForm\'i kullanarak $appName personeliyle iletişime geçin ve ticari kimliğinizi belirtin.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Evet, aslında ikimiz var! İşte bunlar: $b32I2purl veya $i2pUrl (bu bağlantıları açmak için $i2p\'e ihtiyacınız var).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Evet, aslında ikimiz var! İşte bunlar: $b32I2pUrl veya $i2pUrl (bu bağlantıları açmak için $i2p\'e ihtiyacınız var).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nTr extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'kripto para ticareti';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Diğer $appName kullanıcılarının cüzdanlarına yapılan işlemler $free. $linebreak  Diğer Monero cüzdanlarıyla yapılan işlemler, Monero ağ işlem ücretine tabidir. Geçerli ücret, $walletPage\'te $outgoingMonerofees başlığı altında görülebilir. Bir işlem gönderdiğinizde işlem ücreti $appName cüzdanınızdan ödenir.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Diğer $appName kullanıcılarının cüzdanlarına yapılan işlemler $free. $linebreak  Diğer Monero cüzdanlarıyla yapılan işlemler, Monero ağ işlem ücretine tabidir. Geçerli ücret, $walletPage\'te $outgoingMoneroFees başlığı altında görülebilir. Bir işlem gönderdiğinizde işlem ücreti $appName cüzdanınızdan ödenir.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nTr extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'cüzdan sayfası';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Diğer $appName kullanıcılarının cüzdanlarına yapılan işlemler $free. $linebreak  Dış kripto para cüzdanlarına yapılan işlemler, ilgili kripto para birimi ağ işlem ücretine tabidir. Geçerli ücret, $walletPage\'te $outgoingMonerofees başlığı altında görülebilir. Bir işlem gönderdiğinizde işlem ücreti $appName cüzdanınızdan ödenir.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Diğer $appName kullanıcılarının cüzdanlarına yapılan işlemler $free. $linebreak  Dış kripto para cüzdanlarına yapılan işlemler, ilgili kripto para birimi ağ işlem ücretine tabidir. Geçerli ücret, $walletPage\'te $outgoingMoneroFees başlığı altında görülebilir. Bir işlem gönderdiğinizde işlem ücreti $appName cüzdanınızdan ödenir.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nTr extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Doğrulayıcı uygulamanızda, sayfada gösterilen QR kodunu tarayın. Bunu yaptıktan sonra, uygulamada 6 haneli tek seferlik şifreler görünmeye başlayacak.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Kimlik doğrulama uygulamasını telefonunuza yükleyin. TOTP\'yi destekleyen $chooseAnyapp yapabilirsiniz. Örneğin, $andotp Ücretsiz ve Açık Kaynaklıdır.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Kimlik doğrulama uygulamasını telefonunuza yükleyin. TOTP\'yi destekleyen $chooseAnyApp yapabilirsiniz. Örneğin, $andotp Ücretsiz ve Açık Kaynaklıdır.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName, $totp 2FA sunar. 2FA etkinleştirildiğinde, $authMobileapp, $appName ile senkronize edilecek ve 6 basamaklı tek seferlik şifreler üretecektir. Bu şifre her dakika değiştirilir. Oturum açmak veya tahkim teminatını geri çekmek için, şifrenize ek olarak bu tek seferlik şifreyi de geçerlilik süresi dolmadan önce girmeniz gerekir.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName, $totp 2FA sunar. 2FA etkinleştirildiğinde, $authMobileApp, $appName ile senkronize edilecek ve 6 basamaklı tek seferlik şifreler üretecektir. Bu şifre her dakika değiştirilir. Oturum açmak veya tahkim teminatını geri çekmek için, şifrenize ek olarak bu tek seferlik şifreyi de geçerlilik süresi dolmadan önce girmeniz gerekir.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nTr extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Bitcoin\'leri anonim olarak satın almak giderek zorlaşan bir görev haline geldi.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Her geçen gün, geleneksel bitcoin elde etme yöntemlerinin tümü olmasa da çoğu, kimlik doğrulaması gerektirmeye başlamış gibi görünüyor; bu da, $ninetyNinebitcoins veya $coincentral üzerindekiler gibi çoğu kılavuzun günümüzde çevrimiçi olarak kullanılabilir hale gelmesine neden oluyor. $linebreak  $gutter ID olmadan bitcoin satın almanın geleneksel yolu, özellikle $paypal ile anonim olarak bitcoin satın almak için popüler olan P2P Bitcoin değişim platformu $localbitcoins aracılığıyla olmuştur.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Her geçen gün, geleneksel bitcoin elde etme yöntemlerinin tümü olmasa da çoğu, kimlik doğrulaması gerektirmeye başlamış gibi görünüyor; bu da, $ninetyNineBitcoins veya $coincentral üzerindekiler gibi çoğu kılavuzun günümüzde çevrimiçi olarak kullanılabilir hale gelmesine neden oluyor. $linebreak  $gutter ID olmadan bitcoin satın almanın geleneksel yolu, özellikle $paypal ile anonim olarak bitcoin satın almak için popüler olan P2P Bitcoin değişim platformu $localbitcoins aracılığıyla olmuştur.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nTr extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$appName ile $registerAnaccount Ücretsiz ve güvenli bir çevrimiçi Monero cüzdanına sahip olursunuz. Ek uygulamalara gerek yoktur. Zaten bir hesabınız varsa sonraki adıma geçin.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$appName ile $registerAnAccount Ücretsiz ve güvenli bir çevrimiçi Monero cüzdanına sahip olursunuz. Ek uygulamalara gerek yoktur. Zaten bir hesabınız varsa sonraki adıma geçin.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Bir hesap oluştur';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$appName ile $registerAnaccount Ücretsiz ve güvenli bir çevrimiçi kripto para birimi cüzdanına sahip olursunuz. Ek uygulamalara gerek yoktur. Zaten bir hesabınız varsa sonraki adıma geçin.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$appName ile $registerAnAccount Ücretsiz ve güvenli bir çevrimiçi kripto para birimi cüzdanına sahip olursunuz. Ek uygulamalara gerek yoktur. Zaten bir hesabınız varsa sonraki adıma geçin.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nTr extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Telegram mobil bildirimleri nasıl açılır';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return '$appName üzerindeki tipik bir ticaret şu şekilde çalışır; örnek, bir alıcıya $assetName sattığınız bir çevrimiçi satış ticaretidir. İşlem, çevrimiçi $assetName satın alırken benzerdir, ancak bu örnekte, en yaygın ticaret türü olduğu için $assetName satmaya odaklanıyoruz. $linebreak  Öncelikle $assetName\'i $localmoneroWallet\'inize yatırmanız gerekir. $linebreak  Ardından, $create $aSellmoneroad\'e (çevrimiçi satış reklamı denir) ihtiyacınız vardır. Reklamı yaparken bir ödeme yöntemi seçersiniz, fiyatlandırmanızı, limitlerinizi belirlersiniz ve ticaret koşullarınızı serbest biçimli bir mesaj olarak yazarsınız. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return '$appName üzerindeki tipik bir ticaret şu şekilde çalışır; örnek, bir alıcıya $assetName sattığınız bir çevrimiçi satış ticaretidir. İşlem, çevrimiçi $assetName satın alırken benzerdir, ancak bu örnekte, en yaygın ticaret türü olduğu için $assetName satmaya odaklanıyoruz. $linebreak  Öncelikle $assetName\'i $localmoneroWallet\'inize yatırmanız gerekir. $linebreak  Ardından, $create $aSellMoneroAd\'e (çevrimiçi satış reklamı denir) ihtiyacınız vardır. Reklamı yaparken bir ödeme yöntemi seçersiniz, fiyatlandırmanızı, limitlerinizi belirlersiniz ve ticaret koşullarınızı serbest biçimli bir mesaj olarak yazarsınız. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nTr extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Başlarken';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage, yeni reklamlar oluşturduğunuz yerdir. $linebreak  Bir reklam oluştururken gerekli olan bazı seçenekler ve isteğe bağlı olan ancak ayarlanması önerilen birçok ekstra seçenek vardır. Ekstra seçenekleri kullanmak, reklamınızı ticaret stratejinize uyacak şekilde ayarlamanıza olanak tanır. $linebreak  Oluşturduğunuz tüm reklamları $dashboard\'ten bulabilirsiniz. Kontrol panelinde açık işlemlerinizi de bulabilirsiniz. $linebreak  $requiredOptions $linebreak  $location Reklamınızın görünmesini istediğiniz ülkeyi girin. $linebreak  $paymentMethod Açılır menüden sunmak istediğiniz ödeme yöntemini seçin. $linebreak  $currency Hangi para birimi için satış yapacağınızı seçin. Örneğin, Fransa\'da satış yapıyorsanız EUR\'yu seçmelisiniz. Para birimi kısaltmanızın ne olduğunu bulmak için $thisList kullanabilirsiniz.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage, yeni reklamlar oluşturduğunuz yerdir. $linebreak  Bir reklam oluştururken gerekli olan bazı seçenekler ve isteğe bağlı olan ancak ayarlanması önerilen birçok ekstra seçenek vardır. Ekstra seçenekleri kullanmak, reklamınızı ticaret stratejinize uyacak şekilde ayarlamanıza olanak tanır. $linebreak  Oluşturduğunuz tüm reklamları $dashboard\'ten bulabilirsiniz. Kontrol panelinde açık işlemlerinizi de bulabilirsiniz. $linebreak  $requiredOptions $linebreak  $location Reklamınızın görünmesini istediğiniz ülkeyi girin. $linebreak  $paymentMethod Açılır menüden sunmak istediğiniz ödeme yöntemini seçin. $linebreak  $currency Hangi para birimi için satış yapacağınızı seçin. Örneğin, Fransa\'da satış yapıyorsanız EUR\'yu seçmelisiniz. Para birimi kısaltmanızın ne olduğunu bulmak için $thisList kullanabilirsiniz.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nTr extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'reklam ayarlama';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Lütfen $termsOfservice belgemizi okuyun.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Lütfen $termsOfService belgemizi okuyun.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Aşağıdaki kategorilerde $post_an_ad ilk siz olabilirsiniz:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Aşağıdaki kategorilerde $postAnAd ilk siz olabilirsiniz:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nTr extends I18n {
   String get login250Sbreset8722Sblink => 'Burada sıfırlayın.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Oturum açmak için $front_type_url kimlik bilgilerinizi kullanabilirsiniz.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Oturum açmak için $frontTypeUrl kimlik bilgilerinizi kullanabilirsiniz.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nTr extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Bu ChangeNow ticareti için limitler:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Yetersiz bakiye. Gerekli: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Yetersiz bakiye. Gerekli: $amountRequired.';
   }
 
   @override
@@ -4586,7 +4586,7 @@ class I18nTr extends I18n {
 
   @override
   String note250Sbbutton(Object username) {
-    return '{val} üzerine bir not ekleyin';
+    return '$username üzerine bir not ekleyin';
   }
 
   @override
@@ -4599,7 +4599,7 @@ class I18nTr extends I18n {
 
   @override
   String note250Sbtitle(Object username) {
-    return '{val} ile ilgili notunuz (sadece siz görebilirsiniz)';
+    return '$username ile ilgili notunuz (sadece siz görebilirsiniz)';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nTr extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'çok fazla reklam';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Lütfen ilk seferde geçerli $assetSymbol sınır değeri girin. Yalnızca $min_asset_amount ve $max_asset_amount arasındaki sayılara izin verilir.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Lütfen ilk seferde geçerli $assetSymbol sınır değeri girin. Yalnızca $minAssetAmount ve $maxAssetAmount arasındaki sayılara izin verilir.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nTr extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'evet';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Bir reklam oluşturmadan önce lütfen $termsOfservice ve $guides sayfalarımızı okuyun.';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Bir reklam oluşturmadan önce lütfen $termsOfService ve $guides sayfalarımızı okuyun.';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Adım $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Adım $stepNumber';
   }
 
   @override
@@ -5269,12 +5269,12 @@ class I18nTr extends I18n {
 
   @override
   String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
-    return '$assetName\'i {country} cinsinden nakit karşılığında satın';
+    return '$assetName\'i $location cinsinden nakit karşılığında satın';
   }
 
   @override
   String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
-    return '{country} ile $assetName satın alın';
+    return '$location ile $assetName satın alın';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nTr extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Farklı ödeme yöntemi, farklı tutar veya hiç ödeme yapmadan deneyin. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Alternatif olarak, burada $postAnad\'e ilk ulaşan siz olun!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Alternatif olarak, burada $postAnAd\'e ilk ulaşan siz olun!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nTr extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> QR kodunun altındaki kutuya 2FA mobil uygulamanız tarafından verilen </strong> kodunu girin ve <strong> \'2FA\'yı Doğrula\' düğmesine</strong> basın.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return 'Cihazınız için $totp\'i destekleyen $andotp veya $anyOther2faapp gibi $downloadA2faapp.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return 'Cihazınız için $totp\'i destekleyen $andotp veya $anyOther2faApp gibi $downloadA2faApp.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nTr extends I18n {
   String get settings250Sbhomepage => 'Anasayfa';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Herkese açık profilinizde gösterilir. Yalnızca geçerli URL kabul edilir (ör. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Herkese açık profilinizde gösterilir. Yalnızca geçerli URL kabul edilir (ör. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Ticari reklam ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Ticari reklam ($adType)';
   }
 
   @override
@@ -6870,7 +6870,7 @@ class I18nTr extends I18n {
 
   @override
   String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
-    return '{cryptocurrencyName} adresi alınıyor';
+    return '$assetName adresi alınıyor';
   }
 
   @override
@@ -6880,7 +6880,7 @@ class I18nTr extends I18n {
 
   @override
   String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
-    return '{asset} gönder';
+    return '$assetName gönder';
   }
 
   @override
@@ -6945,7 +6945,7 @@ class I18nTr extends I18n {
 
   @override
   String wallet250Sbsend250Sbtitle(Object assetName) {
-    return '{asset} gönder';
+    return '$assetName gönder';
   }
 
   @override
@@ -7007,7 +7007,7 @@ class I18nTr extends I18n {
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
-    return '{assetName} al';
+    return '$currencyCode al';
   }
 
   @override
@@ -7109,7 +7109,7 @@ class I18nTr extends I18n {
 
   @override
   String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
-    return '{asset} gönder';
+    return '$assetName gönder';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Tahkim bonosu cüzdan bakiyeniz $minRequiredbalance\'ten düşük olduğu için tüm satış $asset reklamlarınız genel aramadan gizlendi. Satış ilanlarınızın görünür hale gelmesi için lütfen tahkim teminatınıza $localmoneroWallet en az $amountXmr yatırın.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Tahkim bonosu cüzdan bakiyeniz $minRequiredBalance\'ten düşük olduğu için tüm satış $asset reklamlarınız genel aramadan gizlendi. Satış ilanlarınızın görünür hale gelmesi için lütfen tahkim teminatınıza $localmoneroWallet en az $amountXmr yatırın.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nTr extends I18n {
   String get xx => 'küresel';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Tüm kripto para birimi reklamları artık yeni \"global (XX kodu)\" ülke kategorisine taşınıyor. Yalnızca ülkeye göre farklılık gösteren tüm yinelenen kripto para birimi reklamları silinecektir $time_remaining. Lütfen para birimi başına yalnızca BİR kripto para birimi reklamınız olduğundan emin olun, aksi takdirde söz konusu para biriminde yayınlanan en son reklam hariç tümü silinecek, geri kalan reklam ise \"küresel\" ülke kategorisine taşınacaktır.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Tüm kripto para birimi reklamları artık yeni \"global (XX kodu)\" ülke kategorisine taşınıyor. Yalnızca ülkeye göre farklılık gösteren tüm yinelenen kripto para birimi reklamları silinecektir $timeRemaining. Lütfen para birimi başına yalnızca BİR kripto para birimi reklamınız olduğundan emin olun, aksi takdirde söz konusu para biriminde yayınlanan en son reklam hariç tümü silinecek, geri kalan reklam ise \"küresel\" ülke kategorisine taşınacaktır.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nTr extends I18n {
   String get affiliate__enable_btn => 'Bağlı kuruluş programını etkinleştir';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Ortaklık programınız etkinleştirildi ve $ref_code ortaklık etiketinizi herhangi bir $appName URL\'sine ekleyerek komisyon kazanabilirsiniz.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Ortaklık programınız etkinleştirildi ve $refCode ortaklık etiketinizi herhangi bir $appName URL\'sine ekleyerek komisyon kazanabilirsiniz.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nTr extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Herkese açık profilinizde gösterilir. Yalnızca geçerli URL kabul edilir (ör. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Herkese açık profilinizde gösterilir. Yalnızca geçerli URL kabul edilir (ör. https://$exampleUrl)';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nTr extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Personeli taklit etmeye çalışan dolandırıcılara dikkat edin!\n${appName} yöneticileri size asla bir işlemi tamamlamanızı söylemez.\nPersonel mesajlarının arka planı kırmızıdır.';
+    return 'Personeli taklit etmeye çalışan dolandırıcılara dikkat edin!\n$appName yöneticileri size asla bir işlemi tamamlamanızı söylemez.\nPersonel mesajlarının arka planı kırmızıdır.';
   }
 
   @override
