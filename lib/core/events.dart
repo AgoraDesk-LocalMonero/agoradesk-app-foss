@@ -11,6 +11,10 @@ class LogOutEvent {
   const LogOutEvent();
 }
 
+class WebViewFinishedEvent {
+  const WebViewFinishedEvent();
+}
+
 class BeforeAppInitEvent {
   const BeforeAppInitEvent();
 }

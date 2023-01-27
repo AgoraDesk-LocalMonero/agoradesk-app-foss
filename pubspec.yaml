@@ -81,6 +81,7 @@ dependencies:
   store_checker: ^1.1.0
   just_the_tooltip: ^0.0.12
   flutter_app_badger: ^1.5.0
+  flutter_stetho: ^0.5.2
 
 dependency_overrides:
   #  flutter_foreground_task:

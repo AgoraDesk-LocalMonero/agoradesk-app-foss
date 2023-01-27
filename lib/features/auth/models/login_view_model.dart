@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -29,6 +32,7 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   bool isFormReady = false;
   String errorMessage = '';
   bool displayError = false;
+  late StreamSubscription eventBusSubscription;
 
   ScrollController scrollController = ScrollController();
   final FocusNode captchaFocus = FocusNode();
@@ -66,6 +70,10 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   void init() {
     _updateFormReadyState();
     notifyListeners();
+
+    eventBusSubscription = eventBus.on<WebViewFinishedEvent>().listen((event) {
+      login();
+    });
 
     passwordController.addListener(() {
       password = passwordController.text;
@@ -162,6 +170,7 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     scrollController.dispose();
     captchaFocus.dispose();
     passwordController.dispose();
+    eventBusSubscription.cancel();
     super.dispose();
   }
 }
