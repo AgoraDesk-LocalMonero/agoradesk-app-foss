@@ -91,11 +91,9 @@ class ApiClient with UrlMixin {
           debugPrint(
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id')) {
-            final cookiesLst = response.headers.map['set-cookie'] ?? [];
-
+            final List<dynamic> cookiesLst = response.headers.map['set-cookie'] ?? [];
             eventBus.fire(DisplayCaptchaEvent(
-              cookie1: cookiesLst.isNotEmpty ? response.headers.map['set-cookie']![0].split(';').first : '',
-              cookie2: cookiesLst.length > 1 ? response.headers.map['set-cookie']![1].split(';').first : '',
+              cookies: cookiesLst,
               body: response.data,
             ));
             // }

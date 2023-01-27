@@ -322,8 +322,7 @@ class AppRouter extends _i54.RootStackRouter {
           child: _i22.WebviewScreen(
               key: args.key,
               token: args.token,
-              cookie1: args.cookie1,
-              cookie2: args.cookie2,
+              cookies: args.cookies,
               isFromCaptchaEvent: args.isFromCaptchaEvent,
               url: args.url),
           transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
@@ -1166,8 +1165,7 @@ class WebviewRoute extends _i54.PageRouteInfo<WebviewRouteArgs> {
   WebviewRoute(
       {_i57.Key? key,
       String? token,
-      String cookie1 = '',
-      String cookie2 = '',
+      required List<dynamic> cookies,
       bool isFromCaptchaEvent = false,
       required String url})
       : super(WebviewRoute.name,
@@ -1175,8 +1173,7 @@ class WebviewRoute extends _i54.PageRouteInfo<WebviewRouteArgs> {
             args: WebviewRouteArgs(
                 key: key,
                 token: token,
-                cookie1: cookie1,
-                cookie2: cookie2,
+                cookies: cookies,
                 isFromCaptchaEvent: isFromCaptchaEvent,
                 url: url));
 
@@ -1187,8 +1184,7 @@ class WebviewRouteArgs {
   const WebviewRouteArgs(
       {this.key,
       this.token,
-      this.cookie1 = '',
-      this.cookie2 = '',
+      required this.cookies,
       this.isFromCaptchaEvent = false,
       required this.url});
 
@@ -1196,9 +1192,7 @@ class WebviewRouteArgs {
 
   final String? token;
 
-  final String cookie1;
-
-  final String cookie2;
+  final List<dynamic> cookies;
 
   final bool isFromCaptchaEvent;
 
@@ -1206,7 +1200,7 @@ class WebviewRouteArgs {
 
   @override
   String toString() {
-    return 'WebviewRouteArgs{key: $key, token: $token, cookie1: $cookie1, cookie2: $cookie2, isFromCaptchaEvent: $isFromCaptchaEvent, url: $url}';
+    return 'WebviewRouteArgs{key: $key, token: $token, cookies: $cookies, isFromCaptchaEvent: $isFromCaptchaEvent, url: $url}';
   }
 }
 

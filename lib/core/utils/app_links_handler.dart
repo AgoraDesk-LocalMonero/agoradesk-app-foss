@@ -42,7 +42,7 @@ class AppLinksHandler with ErrorParseMixin {
       if (uri.pathSegments.length == 2 && uri.pathSegments[0] == 'user') {
         return TraderProfileRoute(username: uri.pathSegments.last);
       }
-      return WebviewRoute(url: uri.toString());
+      return WebviewRoute(url: uri.toString(), cookies: []);
     }
     return null;
   }

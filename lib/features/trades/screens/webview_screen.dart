@@ -13,15 +13,13 @@ class WebviewScreen extends StatefulWidget {
   const WebviewScreen({
     Key? key,
     this.token,
-    this.cookie1 = '',
-    this.cookie2 = '',
+    required this.cookies,
     this.isFromCaptchaEvent = false,
     required this.url,
   }) : super(key: key);
 
   final String? token;
-  final String cookie1;
-  final String cookie2;
+  final List<dynamic> cookies;
   final String url;
   final bool isFromCaptchaEvent;
 
@@ -52,8 +50,6 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // GetIt.I<AppParameters>().captchaCookie1 = widget.cookie1;
-    // GetIt.I<AppParameters>().captchaCookie2 = widget.cookie2;
     return Scaffold(
       appBar: const AgoraAppBar(),
       body: InAppWebView(
@@ -65,32 +61,28 @@ class WebViewExampleState extends State<WebviewScreen> {
           try {
             // get the CookieManager instance
             CookieManager cookieManager = CookieManager.instance();
-            if (widget.token != null && widget.token!.isNotEmpty) {
-              cookieManager.setCookie(
-                url: _uri,
-                name: "token",
-                value: widget.token!,
-                domain: "agoradesk.com",
-                isSecure: true,
-              );
+            cookieManager.setCookie(
+              url: _uri,
+              name: "token",
+              value: widget.token ?? '',
+              domain: "agoradesk.com",
+              isSecure: true,
+            );
+            if (widget.cookies.isNotEmpty) {
+              for (final c in widget.cookies) {
+                final cookieRaw = c.split(';').first;
+                final cookieName = cookieRaw.split('=').first;
+                final cookieValue = cookieRaw.substring(cookieName.length + 1);
+                print('+++++++++++++++++++++++++++++++++++++3333 - ${cookieName}=$cookieValue');
+                cookieManager.setCookie(
+                  url: _uri,
+                  name: cookieName,
+                  value: cookieValue,
+                  domain: ".agoradesk.com",
+                  isSecure: true,
+                );
+              }
             }
-            final cookie1Name = widget.cookie1.split('=').first;
-            cookieManager.setCookie(
-              url: _uri,
-              name: cookie1Name,
-              value: widget.cookie1.substring(cookie1Name.length + 1),
-              domain: ".agoradesk.com",
-              isSecure: true,
-            );
-            final cookie2Name = widget.cookie2.split('=').first;
-            cookieManager.setCookie(
-              url: _uri,
-              name: cookie2Name,
-              value: widget.cookie2.substring(cookie2Name.length + 1),
-              domain: ".agoradesk.com",
-              isSecure: true,
-            );
-
             // then load initial URL here
             await _webViewController!.loadUrl(urlRequest: URLRequest(url: _uri));
           } catch (e) {
