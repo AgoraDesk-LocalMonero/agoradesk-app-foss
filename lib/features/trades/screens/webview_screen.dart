@@ -99,8 +99,8 @@ class WebViewExampleState extends State<WebviewScreen> {
         },
         onLoadStop: (controller, _) async {
           final pageBody = await controller.getHtml() ?? '';
-          await _getCookies();
           if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
+            await _getCookies();
             context.read<AppState>().sinkReloadMarket.add(true);
             Navigator.of(context).pop();
             eventBus.fire(const WebViewFinishedEvent());
