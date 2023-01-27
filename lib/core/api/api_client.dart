@@ -80,7 +80,7 @@ class ApiClient with UrlMixin {
           } else {
             options.headers["cookie"] = cookiesLst.join(';');
           }
-          print('+++++++++++++++++++++++++++++++++++++112 - ${options.headers["cookie"]}');
+          debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }

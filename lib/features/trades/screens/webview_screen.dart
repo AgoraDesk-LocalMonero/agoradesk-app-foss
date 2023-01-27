@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -63,12 +64,11 @@ class WebViewExampleState extends State<WebviewScreen> {
           _webViewController = controller;
           try {
             CookieManager cookieManager = CookieManager.instance();
-            final token = widget.token ?? '';
-            if (token.isNotEmpty) {
+            if (widget.token != null && widget.token!.isNotEmpty) {
               cookieManager.setCookie(
                 url: _uri,
                 name: "token",
-                value: widget.token ?? '',
+                value: widget.token!,
                 domain: "agoradesk.com",
                 isSecure: true,
               );
@@ -107,6 +107,7 @@ class WebViewExampleState extends State<WebviewScreen> {
           if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
             context.read<AppState>().sinkReloadMarket.add(true);
             Navigator.of(context).pop();
+            eventBus.fire(const WebViewFinishedEvent());
           }
         },
         androidOnPermissionRequest: (controller, origin, resources) async {
@@ -121,7 +122,7 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   Future _getCookies() async {
     List<Cookie> cookies = await cookieManager.getCookies(url: _uri);
-    print('+++++++++++++++++++++++++++++++++++++11 - ${cookies}');
+    debugPrint('[++++ webview cookies] $cookies');
     GetIt.I<AppParameters>().cookies = cookies;
   }
 }
