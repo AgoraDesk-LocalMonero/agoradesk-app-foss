@@ -33,6 +33,7 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   String errorMessage = '';
   bool displayError = false;
   late StreamSubscription eventBusSubscription;
+  int _attemptsCounter = 0;
 
   ScrollController scrollController = ScrollController();
   final FocusNode captchaFocus = FocusNode();
@@ -54,6 +55,7 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   bool get passwordVisible => _passwordVisible;
 
   set passwordVisible(bool v) => updateWith(passwordVisible: v);
+
   bool get loading => _loading;
 
   set loading(bool v) => updateWith(loading: v);
@@ -72,7 +74,10 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     notifyListeners();
 
     eventBusSubscription = eventBus.on<WebViewFinishedEvent>().listen((event) {
-      login();
+      if (_attemptsCounter < 3) {
+        login();
+        _attemptsCounter++;
+      }
     });
 
     passwordController.addListener(() {

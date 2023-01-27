@@ -118,6 +118,7 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   Future _getCookies() async {
     List<Cookie> cookies = await cookieManager.getCookies(url: _uri);
+    debugPrint('[++++ webview cookies] $cookies');
     GetIt.I<AppParameters>().cookies = cookies;
   }
 }
