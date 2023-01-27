@@ -58,8 +58,6 @@ PODS:
     - Flutter
   - flutter_secure_storage (3.3.1):
     - Flutter
-  - flutter_stetho (0.0.1):
-    - Flutter
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -140,7 +138,6 @@ DEPENDENCIES:
   - flutter_keyboard_visibility (from `.symlinks/plugins/flutter_keyboard_visibility/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
-  - flutter_stetho (from `.symlinks/plugins/flutter_stetho/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - local_auth_ios (from `.symlinks/plugins/local_auth_ios/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
@@ -198,8 +195,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_secure_storage:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
-  flutter_stetho:
-    :path: ".symlinks/plugins/flutter_stetho/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   local_auth_ios:
@@ -245,7 +240,6 @@ SPEC CHECKSUMS:
   flutter_keyboard_visibility: 0339d06371254c3eb25eeb90ba8d17dca8f9c069
   flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
   flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
-  flutter_stetho: 0e844616b41b86d6429e86a518ae3a46e83af7cd
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
