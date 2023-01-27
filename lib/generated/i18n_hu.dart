@@ -77,8 +77,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Összes $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Összes $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nHu extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Kereskedési kérelem hiba';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Ez a kereskedő maximum $firstTimelimitxmr összeget engedélyez az első kereskedésnél.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Ez a kereskedő maximum $firstTimeLimitXmr összeget engedélyez az első kereskedésnél.';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nHu extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'vétel';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Mennyit szeretnél $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Mennyit szeretnél $buyOrSell?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Ennek a kereskedőnek legalább $minimumFeedbackscore pontszám szükséges a kereskedéshez.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Ennek a kereskedőnek legalább $minimumFeedbackScore pontszám szükséges a kereskedéshez.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nHu extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'vevő';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Miután megnyomta a \'$buy_or_sell_button_name\' gombot, további információkat láthat a hirdetésről, beleértve a kereskedelmi feltételeket is. A kereskedési kérelem benyújtása előtt olvassa el őket, ha nem ért egyet velük, akkor visszaléphet az előző oldalra és választhat másik hirdetést.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Miután megnyomta a \'$buyOrSellButtonName\' gombot, további információkat láthat a hirdetésről, beleértve a kereskedelmi feltételeket is. A kereskedési kérelem benyújtása előtt olvassa el őket, ha nem ért egyet velük, akkor visszaléphet az előző oldalra és választhat másik hirdetést.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'A kereskedés elindításához írja be, hogy mennyi $asset-t szeretne $buy_or_sell, majd kattintson a „Kereskedési kérelem elküldése” gombra.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'A kereskedés elindításához írja be, hogy mennyi $asset-t szeretne $buyOrSell, majd kattintson a „Kereskedési kérelem elküldése” gombra.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nHu extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Vétel';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'A bal oldali oszlopban válassza ki a „$buy_or_sell_tab_name” lapot. Ha módosítani szeretné az országot, a pénznemet, a fizetési módot vagy megadni a szükséges összeget, kattintson a \'Keresés menü megjelenítése\' gombra, válassza ki a kívánt paramétereket, majd nyomja meg a keresés gombot.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'A bal oldali oszlopban válassza ki a „$buyOrSellTabName” lapot. Ha módosítani szeretné az országot, a pénznemet, a fizetési módot vagy megadni a szükséges összeget, kattintson a \'Keresés menü megjelenítése\' gombra, válassza ki a kívánt paramétereket, majd nyomja meg a keresés gombot.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nHu extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'JavaScript nélkül is működik';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Weboldalunk könnyen elérhető a $tor_link-on keresztül (amely maximális teljesítményre van beállítva az Ön kényelmének érdekében az $advanced_routing használatával) vagy akár $i2p_link-n keresztül is. Ez nemcsak azt biztosítja, hogy eltitkolhassa előlünk valódi IP-címét (amit egyébként soha nem társítunk a fiókjához), hanem azt is, hogy ha a szokványos domainünk bármilyen okból elérhetetlenné válik az Ön számára, szolgáltatásunk más utakon elérhető marad. Annyira tiszteletben tartjuk a magánéletét, hogy $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Weboldalunk könnyen elérhető a $torLink-on keresztül (amely maximális teljesítményre van beállítva az Ön kényelmének érdekében az $advancedRouting használatával) vagy akár $i2pLink-n keresztül is. Ez nemcsak azt biztosítja, hogy eltitkolhassa előlünk valódi IP-címét (amit egyébként soha nem társítunk a fiókjához), hanem azt is, hogy ha a szokványos domainünk bármilyen okból elérhetetlenné válik az Ön számára, szolgáltatásunk más utakon elérhető marad. Annyira tiszteletben tartjuk a magánéletét, hogy $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nHu extends I18n {
   String get completed250Sbtitle => 'Befejezett kereskedései';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'A bűnüldöző szervek kéréseivel kapcsolatban olvassa el az $lawEnforcementinquiries részt.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'A bűnüldöző szervek kéréseivel kapcsolatban olvassa el az $lawEnforcementInquiries részt.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'irányelveinket';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Ha kapcsolatba szeretne lépni ügyfélszolgálatunkkal, akkor $openAticket vagy e-mailt küldhet a $email címre';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Ha kapcsolatba szeretne lépni ügyfélszolgálatunkkal, akkor $openATicket vagy e-mailt küldhet a $email címre';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nHu extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Hiba a kupon beváltása során';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Hiba történt a kupon beváltása közben. Ha ez nem tűnik helyesnek, forduljon az ügyfélszolgálathoz. Hibakód: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Hiba történt a kupon beváltása közben. Ha ez nem tűnik helyesnek, forduljon az ügyfélszolgálathoz. Hibakód: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nHu extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Változtatások mentése';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Ez a hirdetés a következőnek szól: $adType $createdAt $timeOfcreation. A hirdetés típusának megváltoztatásához kérjük, $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Ez a hirdetés a következőnek szól: $adType $createdAt $timeOfCreation. A hirdetés típusának megváltoztatásához kérjük, $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nHu extends I18n {
   String get error8722Sbpage => 'Hoppá! Valami elromlott. Kérjük, próbálja újra később. Kattintson bárhová az oldalon az újratöltéshez.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Ha ez nem segít, próbálja meg törölni a sütiket, vagy használjon másik böngészőt. Ha ez sem segít, kérjük, $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Ha ez nem segít, próbálja meg törölni a sütiket, vagy használjon másik böngészőt. Ha ez sem segít, kérjük, $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nHu extends I18n {
   String get error250Sbsignup250Sb48 => 'Már létezik felhasználó ezzel az e-mail címmel';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'A kereskedés létrehozásához nem kérhet kevesebbet, mint $min_asset_amount $assetSymbol.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'A kereskedés létrehozásához nem kérhet kevesebbet, mint $minAssetAmount $assetSymbol.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nHu extends I18n {
   String get faq250Sbanswer8722Sb18 => 'A kapott visszajelzés lehet megerősített vagy meg nem erősített. A megerősített visszajelzés megjelenik a felhasználó nyilvános profilján, és hatással van a felhasználó visszajelzési pontszámára. A meg nem erősített visszajelzés megerősítéséhez a visszajelzést adó és fogadó felhasználó közötti teljes kereskedési volumennek meg kell haladnia a 100 USD értéket.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'A webes értesítések lehetővé teszik, hogy felugró értesítéseket kapjon a böngészőn keresztül, amikor új $appName értesítést kap. Ha kereskedéssel foglalkozik, és azonnal tudni szeretné, ha valami történik, $enableWebnotificationsfromyourprofile. Kattintsa át a Webes értesítések engedélyezése feliratú kapcsolót, majd amikor a böngésző engedélyt kér a webes értesítések megjelenítéséhez, fogadja el. Ezután készen van, webes értesítéseket fog kapni.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'A webes értesítések lehetővé teszik, hogy felugró értesítéseket kapjon a böngészőn keresztül, amikor új $appName értesítést kap. Ha kereskedéssel foglalkozik, és azonnal tudni szeretné, ha valami történik, $enableWebNotificationsFromYourProfile. Kattintsa át a Webes értesítések engedélyezése feliratú kapcsolót, majd amikor a böngésző engedélyt kér a webes értesítések megjelenítéséhez, fogadja el. Ezután készen van, webes értesítéseket fog kapni.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nHu extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'A pénztárca egyenlegéből lekötünk egy kisebb összeget a hálózati tranzakciós díj kifizetésére. Minden egyes kriptovaluta-tranzakcióért díjat kell fizetni a hálózatnak a megerősítéshez, függetlenül attól, hogy honnan küldték.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Ez a válasz arra az esetre vonatkozik, amikor online vásárol Monerot. Miután elküldte a kereskedési kérelmet a Monero eladójának, véges időintervalluma van a fizetés teljesítésére, mielőtt az eladó lemondhatja a kereskedést (a fizetési időszak az ügylet fizetési módjától függően változik). Ez idő alatt be kell fejeznie a fizetést, és meg kell nyomnia a Fizettem gombot. Az eladó értesítést kap arról, hogy Ön teljesítette a fizetést, és a Monero a letétben marad mindaddig, amíg az eladó nem zárja le az ügyletet Önnel, amikor látja a befizetést a számláján. Ha kifizette a vásárlást, de a fizetési határidő lejárta előtt nem jelölte meg késznek a fizetést, kérjük, vegye fel a kapcsolatot az eladóval a kereskedésen keresztül. Az eladóval és más kereskedelmi partnereivel felveheti a kapcsolatot $appName felhasználói profiljában található ${dashboard}ról. Küldjön üzenetet az eladónak, magyarázza el a helyzetet, valamint azt, hogy miért nem tudta véglegesíteni a fizetést a határidőn belül. Ha az eladó nem válaszol, kérjük, lépjen kapcsolatba a $appName ügyfélszolgálatával a ${supportRequestform}on, és adja meg a kereskedés azonosítóját.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Ez a válasz arra az esetre vonatkozik, amikor online vásárol Monerot. Miután elküldte a kereskedési kérelmet a Monero eladójának, véges időintervalluma van a fizetés teljesítésére, mielőtt az eladó lemondhatja a kereskedést (a fizetési időszak az ügylet fizetési módjától függően változik). Ez idő alatt be kell fejeznie a fizetést, és meg kell nyomnia a Fizettem gombot. Az eladó értesítést kap arról, hogy Ön teljesítette a fizetést, és a Monero a letétben marad mindaddig, amíg az eladó nem zárja le az ügyletet Önnel, amikor látja a befizetést a számláján. Ha kifizette a vásárlást, de a fizetési határidő lejárta előtt nem jelölte meg késznek a fizetést, kérjük, vegye fel a kapcsolatot az eladóval a kereskedésen keresztül. Az eladóval és más kereskedelmi partnereivel felveheti a kapcsolatot $appName felhasználói profiljában található ${dashboard}ról. Küldjön üzenetet az eladónak, magyarázza el a helyzetet, valamint azt, hogy miért nem tudta véglegesíteni a fizetést a határidőn belül. Ha az eladó nem válaszol, kérjük, lépjen kapcsolatba a $appName ügyfélszolgálatával a ${supportRequestForm}on, és adja meg a kereskedés azonosítóját.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nHu extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'segítségkérés űrlap';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Miután elküldte a kereskedési kérelmet, van egy időintervalluma a fizetés befejezésére, mielőtt a másik fél törölheti a kereskedést. Ez idő alatt be kell fejeznie a fizetést, és meg kell nyomnia a „Fizettem” gombot. A másik fél értesítést kap arról, hogy Ön végrehajtotta a befizetést, és az érméket a kötvényben tartják mindaddig, amíg a másik fél nem zárja le a kereskedést az Ön helyett, miután látja a fizetést a számláján. Ha kifizette a vásárlást, de nem jelölte meg a fizetést befejezettnek a fizetési határidő lejárta előtt, kérjük, lépjen kapcsolatba a másik féllel a kereskedési chaten. Az eladóval és más kereskedelmi partnereivel felveheti a kapcsolatot $appName felhasználói profiljában található ${dashboard}ról. Küldjön üzenetet a másik félnek, magyarázza el a helyzetet, valamint azt, hogy miért nem tudta véglegesíteni a fizetést a határidőn belül. Ha a másik fél nem válaszol erre a kérésre, kérjük, lépjen kapcsolatba a $appName ügyfélszolgálatával a ${supportRequestform}on, és adja meg a kereskedés azonosítóját.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Miután elküldte a kereskedési kérelmet, van egy időintervalluma a fizetés befejezésére, mielőtt a másik fél törölheti a kereskedést. Ez idő alatt be kell fejeznie a fizetést, és meg kell nyomnia a „Fizettem” gombot. A másik fél értesítést kap arról, hogy Ön végrehajtotta a befizetést, és az érméket a kötvényben tartják mindaddig, amíg a másik fél nem zárja le a kereskedést az Ön helyett, miután látja a fizetést a számláján. Ha kifizette a vásárlást, de nem jelölte meg a fizetést befejezettnek a fizetési határidő lejárta előtt, kérjük, lépjen kapcsolatba a másik féllel a kereskedési chaten. Az eladóval és más kereskedelmi partnereivel felveheti a kapcsolatot $appName felhasználói profiljában található ${dashboard}ról. Küldjön üzenetet a másik félnek, magyarázza el a helyzetet, valamint azt, hogy miért nem tudta véglegesíteni a fizetést a határidőn belül. Ha a másik fél nem válaszol erre a kérésre, kérjük, lépjen kapcsolatba a $appName ügyfélszolgálatával a ${supportRequestForm}on, és adja meg a kereskedés azonosítóját.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Igen, kettő is van! Ezek azok: $b32I2purl vagy $i2pUrl (a hivatkozások megnyitásához $i2p szükséges).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Igen, kettő is van! Ezek azok: $b32I2pUrl vagy $i2pUrl (a hivatkozások megnyitásához $i2p szükséges).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nHu extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Kriptovaluta kereskedés';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'A többi $appName felhasználó pénztárcájára irányuló tranzakció $free. $linebreak  Külső Monero pénztárcákra irányuló tranzakciókra a Monero hálózati tranzakciós díj vonatkozik. Az aktuális díj a ${walletPage}on a $outgoingMonerofees címszó alatt látható. A tranzakciós díjat $appName pénztárcájából fizetjük, amikor tranzakciót küld.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'A többi $appName felhasználó pénztárcájára irányuló tranzakció $free. $linebreak  Külső Monero pénztárcákra irányuló tranzakciókra a Monero hálózati tranzakciós díj vonatkozik. Az aktuális díj a ${walletPage}on a $outgoingMoneroFees címszó alatt látható. A tranzakciós díjat $appName pénztárcájából fizetjük, amikor tranzakciót küld.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nHu extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'pénztárca oldal';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'A többi $appName felhasználó pénztárcájára irányuló tranzakció $free. $linebreak  Külső pénztárcákra irányuló tranzakciókra az adott hálózat tranzakciós díja vonatkozik. Az aktuális díj a ${walletPage}on a $outgoingMonerofees címszó alatt látható. A tranzakciós díjat $appName pénztárcájából fizetjük, amikor tranzakciót küld.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'A többi $appName felhasználó pénztárcájára irányuló tranzakció $free. $linebreak  Külső pénztárcákra irányuló tranzakciókra az adott hálózat tranzakciós díja vonatkozik. Az aktuális díj a ${walletPage}on a $outgoingMoneroFees címszó alatt látható. A tranzakciós díjat $appName pénztárcájából fizetjük, amikor tranzakciót küld.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nHu extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'A hitelesítő alkalmazásban olvassa be az oldalon látható QR-kódot. Miután ezt megtette, 6 számjegyű egyszeri jelszavak fognak megjelenni az alkalmazásban.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Telepítsen hitelesítő alkalmazást a telefonjára. $chooseAnyapp amelyik TOTP-t támogat. Például az $andotp ingyenes és nyílt forráskódú.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Telepítsen hitelesítő alkalmazást a telefonjára. $chooseAnyApp amelyik TOTP-t támogat. Például az $andotp ingyenes és nyílt forráskódú.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return 'A(z) $appName $totp 2FA-t kínál. Ha a 2FA engedélyezve van, az $authMobileapp és a(z) $appName szinkronban 6 számjegyű egyszeri jelszavakat állítanak elő. Ez a jelszó percenként megváltozik. A belépéshez vagy vitarendezési letét visszavonásához a jelszava mellett ezt az egyszeri jelszót is meg kell adnia, mielőtt lejár.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return 'A(z) $appName $totp 2FA-t kínál. Ha a 2FA engedélyezve van, az $authMobileApp és a(z) $appName szinkronban 6 számjegyű egyszeri jelszavakat állítanak elő. Ez a jelszó percenként megváltozik. A belépéshez vagy vitarendezési letét visszavonásához a jelszava mellett ezt az egyszeri jelszót is meg kell adnia, mielőtt lejár.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nHu extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>A bitcoin névtelen vásárlása egyre nehezebb feladattá vált.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Minden egyes nap úgy tűnik, hogy a legtöbb, ha nem az összes hagyományos bitcoinbeszerzési módszer megköveteli a személyazonosító ellenőrzését, így a legtöbb útmutató, például a $ninetyNinebitcoins-é vagy a $coincentralé elavulttá vált. $linebreak  $gutter A bitcoinok azonosító nélküli vásárlásának hagyományos módja elsősorban a $localbitcoins P2P Bitcoin tőzsdén keresztül történt, ami különösen népszerű volt névtelen Bitcoin vásárlásra $paypal fizetéssel.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Minden egyes nap úgy tűnik, hogy a legtöbb, ha nem az összes hagyományos bitcoinbeszerzési módszer megköveteli a személyazonosító ellenőrzését, így a legtöbb útmutató, például a $ninetyNineBitcoins-é vagy a $coincentralé elavulttá vált. $linebreak  $gutter A bitcoinok azonosító nélküli vásárlásának hagyományos módja elsősorban a $localbitcoins P2P Bitcoin tőzsdén keresztül történt, ami különösen népszerű volt névtelen Bitcoin vásárlásra $paypal fizetéssel.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nHu extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount $appName n. Ingyenes és biztonságos online Monero pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount $appName n. Ingyenes és biztonságos online Monero pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Regisztráljon egy fiókot';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount $appName en. Ingyenes és biztonságos online kriptovaluta pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount $appName en. Ingyenes és biztonságos online kriptovaluta pénztárcát biztosítunk. Nincs szükség további alkalmazásokra. Ha már van fiókja, ugorjon a következő lépésre.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nHu extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'A Telegram mobil értesítéseinek bekapcsolása';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Egy tipikus $appName kereskedés így működik, a példa egy online eladási ügylet, ahol $assetName-t ad el egy vevőnek. A folyamat hasonló az $assetName online vásárlásához, de ebben a példában az $assetName eladására összpontosítunk, mivel ez a kereskedések leggyakoribb típusa. $linebreak  Először $assetName-t kell befizetnie $localmoneroWallet címére. $linebreak  Ezután $create ${aSellmoneroad}t. A hirdetés elkészítésekor kiválasztja a fizetési módot, beállítja az árat, a limiteket és szabadszöveges üzenetként írja meg az üzletkötési feltételeit. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'Egy tipikus $appName kereskedés így működik, a példa egy online eladási ügylet, ahol $assetName-t ad el egy vevőnek. A folyamat hasonló az $assetName online vásárlásához, de ebben a példában az $assetName eladására összpontosítunk, mivel ez a kereskedések leggyakoribb típusa. $linebreak  Először $assetName-t kell befizetnie $localmoneroWallet címére. $linebreak  Ezután $create ${aSellMoneroAd}t. A hirdetés elkészítésekor kiválasztja a fizetési módot, beállítja az árat, a limiteket és szabadszöveges üzenetként írja meg az üzletkötési feltételeit. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nHu extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Kezdetek';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return 'Az $advertisementCreationpage segítségével új hirdetéseket hozhat létre. $linebreak A hirdetés létrehozásakor van néhány beállítás, ami kötelező, és sok másik, amely nem kötelező, de ajánlott. A további opciók használatával hirdetését kereskedési stratégiájának megfelelően finomhangolhatja. $linebreak Az összes hirdetést megtalálja, amelyet a ${dashboard}on hozott létre. A Vezérlőpulton a nyitott kereskedéseit is megtalálhatja. $linebreak  $requiredOptions $linebreak  $location Adja meg az országot, ahol meg szeretné jeleníteni hirdetését. $linebreak $paymentMethod Válassza ki a felajánlani kívánt fizetési módot a legördülő menüből. $linebreak $currency Válassza ki, hogy melyik pénznemben szeretne értékesíteni. Például, ha Franciaországban adna el, válassza ki az EUR-t. $thisList segítségével megtudhatja, mi a pénznem rövidítése.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return 'Az $advertisementCreationPage segítségével új hirdetéseket hozhat létre. $linebreak A hirdetés létrehozásakor van néhány beállítás, ami kötelező, és sok másik, amely nem kötelező, de ajánlott. A további opciók használatával hirdetését kereskedési stratégiájának megfelelően finomhangolhatja. $linebreak Az összes hirdetést megtalálja, amelyet a ${dashboard}on hozott létre. A Vezérlőpulton a nyitott kereskedéseit is megtalálhatja. $linebreak  $requiredOptions $linebreak  $location Adja meg az országot, ahol meg szeretné jeleníteni hirdetését. $linebreak $paymentMethod Válassza ki a felajánlani kívánt fizetési módot a legördülő menüből. $linebreak $currency Válassza ki, hogy melyik pénznemben szeretne értékesíteni. Például, ha Franciaországban adna el, válassza ki az EUR-t. $thisList segítségével megtudhatja, mi a pénznem rövidítése.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nHu extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Hirdetés beállítása';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Kérjük, olvassa el: $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Kérjük, olvassa el: $termsOfService.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Ön lehet az első aki $post_an_ad a következő kategóriákban:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Ön lehet az első aki $postAnAd a következő kategóriákban:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nHu extends I18n {
   String get login250Sbreset8722Sblink => 'Visszaállítás itt.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Használhatja $front_type_url hitelesítő adatait a bejelentkezéshez.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Használhatja $frontTypeUrl hitelesítő adatait a bejelentkezéshez.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nHu extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'A ChangeNow kereskedés korlátai:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Nincs elég fedezet. Szükséges: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Nincs elég fedezet. Szükséges: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nHu extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Túl sok hirdetés';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Kérjük, adjon meg érvényes első $assetSymbol határértéket. Csak $min_asset_amount és $max_asset_amount közötti szám megengedett.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Kérjük, adjon meg érvényes első $assetSymbol határértéket. Csak $minAssetAmount és $maxAssetAmount közötti szám megengedett.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nHu extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'igen';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Hirdetés létrehozása előtt olvassa el a $termsOfservice és $guides oldalunkat';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Hirdetés létrehozása előtt olvassa el a $termsOfService és $guides oldalunkat';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return '$step_number lépés';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return '$stepNumber lépés';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nHu extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Próbálkozzon más fizetési móddal, más összeggel vagy összeg nélkül. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Alternatív megoldásként Öné lehet az első $postAnad!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Alternatív megoldásként Öné lehet az első $postAnAd!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nHu extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong>Írja be a 2FA kódot</strong> amit a mobilalkalmazása generált a QR-kód alatti mezőbe, majd <strong> nyomja meg a „2FA megerősítés”</strong> gombot.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp, például $andotp vagy $anyOther2faapp, amely támogatja az $totp-t az eszközön.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp, például $andotp vagy $anyOther2faApp, amely támogatja az $totp-t az eszközön.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nHu extends I18n {
   String get settings250Sbhomepage => 'Kezdőlap';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Megjelenik nyilvános profilján. Csak érvényes URL elfogadható (pl. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Megjelenik nyilvános profilján. Csak érvényes URL elfogadható (pl. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Hirdetés ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Hirdetés ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Az összes eladási $asset hirdetését elrejtettük a nyilvános keresésekből, mert vitarendezési letéti egyenlege alacsonyabb, mint $minRequiredbalance. Annak érdekében, hogy eladási hirdetései újra láthatóvá váljanak, kérjük, helyezzen el legalább $amountXmr összeget $localmoneroWallet letétbe.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Az összes eladási $asset hirdetését elrejtettük a nyilvános keresésekből, mert vitarendezési letéti egyenlege alacsonyabb, mint $minRequiredBalance. Annak érdekében, hogy eladási hirdetései újra láthatóvá váljanak, kérjük, helyezzen el legalább $amountXmr összeget $localmoneroWallet letétbe.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nHu extends I18n {
   String get xx => 'Globális';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Az összes kriptovaluta hirdetés átkerül az új „globális (XX kód)” országkategóriába. Minden olyan duplikált kriptovaluta hirdetés, amely csak országonként különbözik, törlésre kerül $time_remaining. Kérjük, ügyeljen arra, hogy pénznemenként csak EGY kriptovaluta hirdetése legyen, különben a legutóbb közzétett hirdetése az adott pénznemben törlődik, a fennmaradó hirdetés pedig a \"globális\" országkategóriába kerül.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Az összes kriptovaluta hirdetés átkerül az új „globális (XX kód)” országkategóriába. Minden olyan duplikált kriptovaluta hirdetés, amely csak országonként különbözik, törlésre kerül $timeRemaining. Kérjük, ügyeljen arra, hogy pénznemenként csak EGY kriptovaluta hirdetése legyen, különben a legutóbb közzétett hirdetése az adott pénznemben törlődik, a fennmaradó hirdetés pedig a \"globális\" országkategóriába kerül.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nHu extends I18n {
   String get affiliate__enable_btn => 'Társprogram engedélyezése';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Társprogramja engedélyezve van, és jutalékot kaphat, ha hozzáadja az $ref_code kódot bármely $appName URL-hez.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Társprogramja engedélyezve van, és jutalékot kaphat, ha hozzáadja az $refCode kódot bármely $appName URL-hez.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nHu extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Megjelenik a nyilvános profilon. Csak érvényes URL fogadható el (pl. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Megjelenik a nyilvános profilon. Csak érvényes URL fogadható el (pl. https://$exampleUrl)';
   }
 
   @override

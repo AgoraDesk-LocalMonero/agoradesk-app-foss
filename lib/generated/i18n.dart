@@ -278,8 +278,8 @@ abstract class I18n {
   /// No description provided for @ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency.
   ///
   /// In en, this message translates to:
-  /// **'All in {countryOrcurrency}'**
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency);
+  /// **'All in {countryOrCurrency}'**
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency);
 
   /// No description provided for @ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbhide.
   ///
@@ -314,8 +314,8 @@ abstract class I18n {
   /// No description provided for @ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip.
   ///
   /// In en, this message translates to:
-  /// **'This trader allows maximum of {firstTimelimitxmr} for the first trade with him.'**
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr);
+  /// **'This trader allows maximum of {firstTimeLimitXmr} for the first trade with him.'**
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr);
 
   /// No description provided for @ad8722Sbpage250Sbfluctuations8722Sbtip.
   ///
@@ -380,8 +380,8 @@ abstract class I18n {
   /// No description provided for @ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell.
   ///
   /// In en, this message translates to:
-  /// **'How much do you wish to {buyOrsell}?'**
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell);
+  /// **'How much do you wish to {buyOrSell}?'**
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell);
 
   /// No description provided for @ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell.
   ///
@@ -422,8 +422,8 @@ abstract class I18n {
   /// No description provided for @ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip.
   ///
   /// In en, this message translates to:
-  /// **'This trader requires at least {minimumFeedbackscore} feedback score to trade.'**
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore);
+  /// **'This trader requires at least {minimumFeedbackScore} feedback score to trade.'**
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore);
 
   /// No description provided for @ad8722Sbpage250Sbreport8722Sbad.
   ///
@@ -890,14 +890,14 @@ abstract class I18n {
   /// No description provided for @agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral.
   ///
   /// In en, this message translates to:
-  /// **'After you press the \'{buy_or_sell_button_name}\' button you\'ll see more information about the advertisement, including the terms of the trade. Read through them before submitting the trade request, if you don\'t agree with them you can go back to the previous page and choose another advertisement.'**
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name);
+  /// **'After you press the \'{buyOrSellButtonName}\' button you\'ll see more information about the advertisement, including the terms of the trade. Read through them before submitting the trade request, if you don\'t agree with them you can go back to the previous page and choose another advertisement.'**
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName);
 
   /// No description provided for @agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart.
   ///
   /// In en, this message translates to:
-  /// **'To start the trade, type in how much {asset} you want to {buy_or_sell} and click the \'Send trade request\' button to the start the trade.'**
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell);
+  /// **'To start the trade, type in how much {asset} you want to {buyOrSell} and click the \'Send trade request\' button to the start the trade.'**
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell);
 
   /// No description provided for @agoradesk250Sbguide250Sbad8722Sbpage250Sbsell.
   ///
@@ -938,8 +938,8 @@ abstract class I18n {
   /// No description provided for @agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype.
   ///
   /// In en, this message translates to:
-  /// **'In the left column you should then select the \'{buy_or_sell_tab_name}\' tab. If you wish to change the country,currency, payment method or specify the needed amount, click on the \'Show search menu\' button, choose the desired parameters, and press the search button.'**
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name);
+  /// **'In the left column you should then select the \'{buyOrSellTabName}\' tab. If you wish to change the country,currency, payment method or specify the needed amount, click on the \'Show search menu\' button, choose the desired parameters, and press the search button.'**
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName);
 
   /// No description provided for @agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbasset.
   ///
@@ -1220,8 +1220,8 @@ abstract class I18n {
   /// No description provided for @agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent.
   ///
   /// In en, this message translates to:
-  /// **'Our site is easily accessible through our {tor_link} (which is tuned for maximum performance for your comfort through our use of {advanced_routing}) and even  through an {i2p_link}. This ensures not only that you will be able to conceal your true IP from us (which we never associate with your account anyway), but that if for whatever reason our normal domain becomes inaccessible to you, there will be other ways for you to access our service. We value your privacy so much, {dont_ask_email}.'**
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email);
+  /// **'Our site is easily accessible through our {torLink} (which is tuned for maximum performance for your comfort through our use of {advancedRouting}) and even  through an {i2pLink}. This ensures not only that you will be able to conceal your true IP from us (which we never associate with your account anyway), but that if for whatever reason our normal domain becomes inaccessible to you, there will be other ways for you to access our service. We value your privacy so much, {dontAskEmail}.'**
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail);
 
   /// No description provided for @agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent250Sbadvanced8722Sbrouting.
   ///
@@ -1694,8 +1694,8 @@ abstract class I18n {
   /// No description provided for @contact250Sble.
   ///
   /// In en, this message translates to:
-  /// **'For law enforcement inquires, please read {lawEnforcementinquiries}.'**
-  String contact250Sble(Object lawEnforcementinquiries);
+  /// **'For law enforcement inquires, please read {lawEnforcementInquiries}.'**
+  String contact250Sble(Object lawEnforcementInquiries);
 
   /// No description provided for @contact250Sble250Sbpolicy8722Sblink.
   ///
@@ -1706,8 +1706,8 @@ abstract class I18n {
   /// No description provided for @contact250Sbtext8722Sb0.
   ///
   /// In en, this message translates to:
-  /// **'To contact our support you can {openAticket} or send an email to {email}'**
-  String contact250Sbtext8722Sb0(Object openAticket, Object email);
+  /// **'To contact our support you can {openATicket} or send an email to {email}'**
+  String contact250Sbtext8722Sb0(Object openATicket, Object email);
 
   /// No description provided for @contact250Sbtext8722Sb08722Sbopen8722Sba8722Sbticket.
   ///
@@ -1886,8 +1886,8 @@ abstract class I18n {
   /// No description provided for @coupons250Sberror250Sbgeneric.
   ///
   /// In en, this message translates to:
-  /// **'Something went wrong while redeeming a coupon. If that doesn\'t seem right, please contact the support. Error code: {error_code}.'**
-  String coupons250Sberror250Sbgeneric(Object error_code);
+  /// **'Something went wrong while redeeming a coupon. If that doesn\'t seem right, please contact the support. Error code: {errorCode}.'**
+  String coupons250Sberror250Sbgeneric(Object errorCode);
 
   /// No description provided for @coupons250Sbshow8722Sbexpired8722Sbbtn250Sbhide.
   ///
@@ -2924,8 +2924,8 @@ abstract class I18n {
   /// No description provided for @edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto.
   ///
   /// In en, this message translates to:
-  /// **'This ad is to {adType} {createdAt} {timeOfcreation}. In order to change ad type, please {createAnewad}'**
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad);
+  /// **'This ad is to {adType} {createdAt} {timeOfCreation}. In order to change ad type, please {createANewAd}'**
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd);
 
   /// No description provided for @edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbbuy.
   ///
@@ -3008,8 +3008,8 @@ abstract class I18n {
   /// No description provided for @error8722Sbpage250Sbsubtext.
   ///
   /// In en, this message translates to:
-  /// **'If that doesn\'t help, try clearing your cookies or using a different browser. If that doesn\'t help either, please {open_a_ticket}'**
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket);
+  /// **'If that doesn\'t help, try clearing your cookies or using a different browser. If that doesn\'t help either, please {openATicket}'**
+  String error8722Sbpage250Sbsubtext(Object openATicket);
 
   /// No description provided for @error8722Sbpage250Sbsubtext250Sbticket.
   ///
@@ -3158,8 +3158,8 @@ abstract class I18n {
   /// No description provided for @error250Sbtrade8722Sbrequest250Sb100.
   ///
   /// In en, this message translates to:
-  /// **'Cannot request less than {min_asset_amount} {assetSymbol} for trade creation.'**
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol);
+  /// **'Cannot request less than {minAssetAmount} {assetSymbol} for trade creation.'**
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol);
 
   /// No description provided for @error250Sbtrade8722Sbrequest250Sb101.
   ///
@@ -3452,8 +3452,8 @@ abstract class I18n {
   /// No description provided for @faq250Sbanswer8722Sb19.
   ///
   /// In en, this message translates to:
-  /// **'Web notifications allow you to receive pop-up notifications through your browser whenever you get a new notification on {appName}. If you\'re trading and want to know immediately when something happens, {enableWebnotificationsfromyourprofile}. Flip the switch that says Enable Web notifications and when your browser asks you for permission to show web notifications, press accept. You\'re now all set and will start receiving web notifications.'**
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile);
+  /// **'Web notifications allow you to receive pop-up notifications through your browser whenever you get a new notification on {appName}. If you\'re trading and want to know immediately when something happens, {enableWebNotificationsFromYourProfile}. Flip the switch that says Enable Web notifications and when your browser asks you for permission to show web notifications, press accept. You\'re now all set and will start receiving web notifications.'**
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile);
 
   /// No description provided for @faq250Sbanswer8722Sb198722Sbenable8722Sbweb8722Sbnotifications8722Sbfrom8722Sbyour8722Sbprofile.
   ///
@@ -3506,8 +3506,8 @@ abstract class I18n {
   /// No description provided for @faq250Sbanswer8722Sb24.
   ///
   /// In en, this message translates to:
-  /// **'This answer concerns the case when you are buying Monero online. After you send in a trade request to the seller of Monero, you have a time window to complete the payment before the seller is able to cancel the trade (the payment window varies depending on the payment method of the trade). During this time you need to complete your payment and press the I have paid button. The seller is notified that you\'ve made the payment and the Monero will be held in the bond until the seller finalizes the trade for you when seeing the payment in his/her account. If you paid for the purchase, but did not mark the payment complete before the payment time window expired, please contact the seller through the trade. You can contact the seller and your other existing trade contacts from the {dashboard} in your {appName} User Profile. Send a message to the seller and kindly explain the situation and why you couldn\'t complete payment within the time window. If the seller does not respond to this request please contact {appName} support using the {supportRequestform} and mention your trade ID.'**
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform);
+  /// **'This answer concerns the case when you are buying Monero online. After you send in a trade request to the seller of Monero, you have a time window to complete the payment before the seller is able to cancel the trade (the payment window varies depending on the payment method of the trade). During this time you need to complete your payment and press the I have paid button. The seller is notified that you\'ve made the payment and the Monero will be held in the bond until the seller finalizes the trade for you when seeing the payment in his/her account. If you paid for the purchase, but did not mark the payment complete before the payment time window expired, please contact the seller through the trade. You can contact the seller and your other existing trade contacts from the {dashboard} in your {appName} User Profile. Send a message to the seller and kindly explain the situation and why you couldn\'t complete payment within the time window. If the seller does not respond to this request please contact {appName} support using the {supportRequestForm} and mention your trade ID.'**
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm);
 
   /// No description provided for @faq250Sbanswer8722Sb248722Sbdashboard.
   ///
@@ -3524,8 +3524,8 @@ abstract class I18n {
   /// No description provided for @faq250Sbanswer8722Sb2457Sbagoradesk.
   ///
   /// In en, this message translates to:
-  /// **'After you send a trade request, you have a time window to complete the payment before the other party is able to cancel the trade. During this time you need to complete your payment and press the \'I have paid button\'. The other party is notified that you\'ve made the payment and the coins will be held in the bond until the other party finalizes the trade for you after seeing the payment in their account. If you paid for the purchase, but didn\'t mark the payment complete before the payment time window expired, please contact the other party through the trade chat. You can contact the other party and your other existing trade contacts from the {dashboard}. Send a message to the other party and kindly explain the situation and why you couldn\'t complete payment within the time window. If the other party doesn\'t respond to this request please contact {appName} staff using the {supportRequestform} and mention your trade ID.'**
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform);
+  /// **'After you send a trade request, you have a time window to complete the payment before the other party is able to cancel the trade. During this time you need to complete your payment and press the \'I have paid button\'. The other party is notified that you\'ve made the payment and the coins will be held in the bond until the other party finalizes the trade for you after seeing the payment in their account. If you paid for the purchase, but didn\'t mark the payment complete before the payment time window expired, please contact the other party through the trade chat. You can contact the other party and your other existing trade contacts from the {dashboard}. Send a message to the other party and kindly explain the situation and why you couldn\'t complete payment within the time window. If the other party doesn\'t respond to this request please contact {appName} staff using the {supportRequestForm} and mention your trade ID.'**
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm);
 
   /// No description provided for @faq250Sbanswer8722Sb25.
   ///
@@ -3638,8 +3638,8 @@ abstract class I18n {
   /// No description provided for @faq250Sbanswer8722Sb6.
   ///
   /// In en, this message translates to:
-  /// **'Yes, we actually have two! Here they are: {b32I2purl} or {i2pUrl} (you need {i2p} to open these links).'**
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p);
+  /// **'Yes, we actually have two! Here they are: {b32I2pUrl} or {i2pUrl} (you need {i2p} to open these links).'**
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p);
 
   /// No description provided for @faq250Sbanswer8722Sb7.
   ///
@@ -3968,8 +3968,8 @@ abstract class I18n {
   /// No description provided for @fees250Sbtx250Sbtext.
   ///
   /// In en, this message translates to:
-  /// **'Transactions to wallets of other {appName} users are {free}. {linebreak}  Transactions to other Monero wallets are subject to the Monero network transaction fee. The current fee is visible on the {walletPage} under the heading {outgoingMonerofees}. The transaction fee is paid from your {appName} wallet when you send a transaction.'**
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees);
+  /// **'Transactions to wallets of other {appName} users are {free}. {linebreak}  Transactions to other Monero wallets are subject to the Monero network transaction fee. The current fee is visible on the {walletPage} under the heading {outgoingMoneroFees}. The transaction fee is paid from your {appName} wallet when you send a transaction.'**
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees);
 
   /// No description provided for @fees250Sbtx250Sbtext8722Sbfree.
   ///
@@ -3986,8 +3986,8 @@ abstract class I18n {
   /// No description provided for @fees250Sbtx250Sbtext57Sbagoradesk.
   ///
   /// In en, this message translates to:
-  /// **'Transactions to wallets of other {appName} users are {free}. {linebreak}  Transactions to outside cryptocurrency wallets are subject to the relevant cryptocurrency network transaction fee. The current fee is visible on the {walletPage} under the heading {outgoingMonerofees}. The transaction fee is paid from your {appName} wallet when you send a transaction.'**
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees);
+  /// **'Transactions to wallets of other {appName} users are {free}. {linebreak}  Transactions to outside cryptocurrency wallets are subject to the relevant cryptocurrency network transaction fee. The current fee is visible on the {walletPage} under the heading {outgoingMoneroFees}. The transaction fee is paid from your {appName} wallet when you send a transaction.'**
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees);
 
   /// No description provided for @fees250Sbtx250Sbtitle.
   ///
@@ -4172,8 +4172,8 @@ abstract class I18n {
   /// No description provided for @guide250Sb2fa250Sbstep8722Sbfour8722Sbtext.
   ///
   /// In en, this message translates to:
-  /// **'Install the authentication app on your phone. You can {chooseAnyapp} that supports TOTP. For example, {andotp} is Free and Open Source.'**
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp);
+  /// **'Install the authentication app on your phone. You can {chooseAnyApp} that supports TOTP. For example, {andotp} is Free and Open Source.'**
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp);
 
   /// No description provided for @guide250Sb2fa250Sbstep8722Sbfour8722Sbtext8722Sbchoose8722Sbany8722Sbapp.
   ///
@@ -4190,8 +4190,8 @@ abstract class I18n {
   /// No description provided for @guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1.
   ///
   /// In en, this message translates to:
-  /// **'{appName} offers {totp} 2FA. Once 2FA is enabled, {authMobileapp} will be synchronized with {appName} and will produce 6-digit one-time passwords. This password is changed every minute. To login or withdraw arbitration bond, in addition to your password you also need to enter this one-time password before it expires.'**
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp);
+  /// **'{appName} offers {totp} 2FA. Once 2FA is enabled, {authMobileApp} will be synchronized with {appName} and will produce 6-digit one-time passwords. This password is changed every minute. To login or withdraw arbitration bond, in addition to your password you also need to enter this one-time password before it expires.'**
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp);
 
   /// No description provided for @guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb18722Sbauth8722Sbmobile8722Sbapp.
   ///
@@ -4508,8 +4508,8 @@ abstract class I18n {
   /// No description provided for @guide250Sbbtc250Sbintro8722Sb2.
   ///
   /// In en, this message translates to:
-  /// **'With each passing day, it seems like most if not all of the traditional methods of acquiring bitcoin have begun to require ID verification, making most guides available online today such as the one on {ninetyNinebitcoins} or {coincentral} obsolete. {linebreak}  {gutter} The traditional way of buying bitcoins without ID has mainly been through the P2P Bitcoin exchange platform {localbitcoins}, a place that was especially popular for buying bitcoin anonymously with {paypal}.'**
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal);
+  /// **'With each passing day, it seems like most if not all of the traditional methods of acquiring bitcoin have begun to require ID verification, making most guides available online today such as the one on {ninetyNineBitcoins} or {coincentral} obsolete. {linebreak}  {gutter} The traditional way of buying bitcoins without ID has mainly been through the P2P Bitcoin exchange platform {localbitcoins}, a place that was especially popular for buying bitcoin anonymously with {paypal}.'**
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal);
 
   /// No description provided for @guide250Sbbtc250Sbintro8722Sb3.
   ///
@@ -4550,8 +4550,8 @@ abstract class I18n {
   /// No description provided for @guide250Sbbuy250Sbstep8722Sbone8722Sbtext.
   ///
   /// In en, this message translates to:
-  /// **'{registerAnaccount} with {appName}. You get a free and secure online Monero wallet. No additional apps are needed. If you already have an account, skip to the next step.'**
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName);
+  /// **'{registerAnAccount} with {appName}. You get a free and secure online Monero wallet. No additional apps are needed. If you already have an account, skip to the next step.'**
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName);
 
   /// No description provided for @guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount.
   ///
@@ -4562,8 +4562,8 @@ abstract class I18n {
   /// No description provided for @guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk.
   ///
   /// In en, this message translates to:
-  /// **'{registerAnaccount} with {appName}. You get a free and secure online cryptocurrency wallet. No additional apps are needed. If you already have an account, skip to the next step.'**
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName);
+  /// **'{registerAnAccount} with {appName}. You get a free and secure online cryptocurrency wallet. No additional apps are needed. If you already have an account, skip to the next step.'**
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName);
 
   /// No description provided for @guide250Sbbuy250Sbstep8722Sbthree8722Sbtext.
   ///
@@ -5336,8 +5336,8 @@ abstract class I18n {
   /// No description provided for @guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0.
   ///
   /// In en, this message translates to:
-  /// **'A typical trade on {appName} works like this, the example is an online sell trade where you\'re selling {assetName} to a buyer. The process is similar when you are buying {assetName} online, but for this example we\'re focusing on selling {assetName}, as that\'s the most common type of trade. {linebreak}  First you need to deposit {assetName} to your {localmoneroWallet}. {linebreak}  Then, you need to {create} {aSellmoneroad} (called an online sell advertisement). When making the advertisement you choose a payment method, set your pricing, your limits and write your terms of the trade as a free form message. '**
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad);
+  /// **'A typical trade on {appName} works like this, the example is an online sell trade where you\'re selling {assetName} to a buyer. The process is similar when you are buying {assetName} online, but for this example we\'re focusing on selling {assetName}, as that\'s the most common type of trade. {linebreak}  First you need to deposit {assetName} to your {localmoneroWallet}. {linebreak}  Then, you need to {create} {aSellMoneroAd} (called an online sell advertisement). When making the advertisement you choose a payment method, set your pricing, your limits and write your terms of the trade as a free form message. '**
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd);
 
   /// No description provided for @guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sba8722Sbsell8722Sbmonero8722Sbad.
   ///
@@ -5390,8 +5390,8 @@ abstract class I18n {
   /// No description provided for @guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0.
   ///
   /// In en, this message translates to:
-  /// **'The {advertisementCreationpage} is where you create new advertisements. {linebreak}  There are some options when creating an advertisement which are required, and a lot of extra options which are optional but recommended to set. Using the extra options allows you to tune your advertisement to suit your trading strategy. {linebreak}  You can find all of the advertisements that you have created from your {dashboard}. In the dashboard you can also find your open trades. {linebreak}  {requiredOptions} {linebreak}  {location} Enter the country where you want your advertisement to appear. {linebreak}  {paymentMethod} Select the payment method you want to offer from the dropdown menu. {linebreak}  {currency} Choose which currency you\'re selling for. For instance, if you\'re selling in France you should select EUR. You can use {thisList} to find what your currency acronym is.'**
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList);
+  /// **'The {advertisementCreationPage} is where you create new advertisements. {linebreak}  There are some options when creating an advertisement which are required, and a lot of extra options which are optional but recommended to set. Using the extra options allows you to tune your advertisement to suit your trading strategy. {linebreak}  You can find all of the advertisements that you have created from your {dashboard}. In the dashboard you can also find your open trades. {linebreak}  {requiredOptions} {linebreak}  {location} Enter the country where you want your advertisement to appear. {linebreak}  {paymentMethod} Select the payment method you want to offer from the dropdown menu. {linebreak}  {currency} Choose which currency you\'re selling for. For instance, if you\'re selling in France you should select EUR. You can use {thisList} to find what your currency acronym is.'**
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList);
 
   /// No description provided for @guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb08722Sbadvertisement8722Sbcreation8722Sbpage.
   ///
@@ -5462,8 +5462,8 @@ abstract class I18n {
   /// No description provided for @guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0.
   ///
   /// In en, this message translates to:
-  /// **'Please read our {termsOfservice}.'**
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice);
+  /// **'Please read our {termsOfService}.'**
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService);
 
   /// No description provided for @guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice.
   ///
@@ -5600,8 +5600,8 @@ abstract class I18n {
   /// No description provided for @homepage250Sbno8722Sbresults8722Sb1.
   ///
   /// In en, this message translates to:
-  /// **'You can be the first one to {post_an_ad} in the following categories:'**
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad);
+  /// **'You can be the first one to {postAnAd} in the following categories:'**
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd);
 
   /// No description provided for @homepage250Sbno8722Sbresults8722Sb18722Sbpost8722Sban8722Sbad.
   ///
@@ -7772,8 +7772,8 @@ abstract class I18n {
   /// No description provided for @login250Sbsame8722Sbcredentials8722Sbtip.
   ///
   /// In en, this message translates to:
-  /// **'You can use your {front_type_url} credentials to log in.'**
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url);
+  /// **'You can use your {frontTypeUrl} credentials to log in.'**
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl);
 
   /// No description provided for @login250Sbsignup.
   ///
@@ -8054,8 +8054,8 @@ abstract class I18n {
   /// No description provided for @new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice.
   ///
   /// In en, this message translates to:
-  /// **'Insufficient balance. Required: {amount_required}.'**
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required);
+  /// **'Insufficient balance. Required: {amountRequired}.'**
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired);
 
   /// No description provided for @new8722Sbad250Sbemail8722Sbverified250Sblabel.
   ///
@@ -8528,8 +8528,8 @@ abstract class I18n {
   /// No description provided for @post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid.
   ///
   /// In en, this message translates to:
-  /// **'Please enter valid first time {assetSymbol} limit value. Only numbers between{min_asset_amount} and {max_asset_amount} are allowed.'**
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount);
+  /// **'Please enter valid first time {assetSymbol} limit value. Only numbers between{minAssetAmount} and {maxAssetAmount} are allowed.'**
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount);
 
   /// No description provided for @post8722Sbad250Sberror250Sblimit8722Sbamounts8722Sbnot8722Sbvalid.
   ///
@@ -8876,8 +8876,8 @@ abstract class I18n {
   /// No description provided for @post8722Sbad250Sbrules8722Sbtext8722Sb0.
   ///
   /// In en, this message translates to:
-  /// **'Before creating an advertisement please read through our {termsOfservice} and {guides}'**
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides);
+  /// **'Before creating an advertisement please read through our {termsOfService} and {guides}'**
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides);
 
   /// No description provided for @post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides.
   ///
@@ -8966,8 +8966,8 @@ abstract class I18n {
   /// No description provided for @post8722Sbad250Sbstep8722Sb1.
   ///
   /// In en, this message translates to:
-  /// **'Step {step_number}'**
-  String post8722Sbad250Sbstep8722Sb1(Object step_number);
+  /// **'Step {stepNumber}'**
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber);
 
   /// No description provided for @post8722Sbad250Sbstep8722Sb2.
   ///
@@ -9548,8 +9548,8 @@ abstract class I18n {
   /// No description provided for @search250Sbno8722Sbresults8722Sb2.
   ///
   /// In en, this message translates to:
-  /// **'Alternatively, be the first one to {postAnad} here!'**
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad);
+  /// **'Alternatively, be the first one to {postAnAd} here!'**
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd);
 
   /// No description provided for @search250Sbno8722Sbresults8722Sbpost8722Sban8722Sbad.
   ///
@@ -9716,8 +9716,8 @@ abstract class I18n {
   /// No description provided for @settings250Sb2fa250Sbstep8722Sbone.
   ///
   /// In en, this message translates to:
-  /// **'{downloadA2faapp} such as {andotp} or {anyOther2faapp} that supports {totp} for your device.'**
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp);
+  /// **'{downloadA2faApp} such as {andotp} or {anyOther2faApp} that supports {totp} for your device.'**
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp);
 
   /// No description provided for @settings250Sb2fa250Sbstep8722Sbone8722Sbany8722Sbother8722Sb2fa8722Sbapp.
   ///
@@ -10022,8 +10022,8 @@ abstract class I18n {
   /// No description provided for @settings250Sbhomepage8722Sbtip.
   ///
   /// In en, this message translates to:
-  /// **'Shown on your public profile. Only valid URL accepted (e.g. https://{example_url})'**
-  String settings250Sbhomepage8722Sbtip(Object example_url);
+  /// **'Shown on your public profile. Only valid URL accepted (e.g. https://{exampleUrl})'**
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl);
 
   /// No description provided for @settings250Sbno8722Sbemail8722Sbwarn.
   ///
@@ -11108,8 +11108,8 @@ abstract class I18n {
   /// No description provided for @trade250Sbinfo250Sbtrade8722Sbad.
   ///
   /// In en, this message translates to:
-  /// **'Trade ad ({ad_type})'**
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type);
+  /// **'Trade ad ({adType})'**
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType);
 
   /// No description provided for @trade250Sbleave8722Sbfeedback8722Sbbtn.
   ///
@@ -13106,8 +13106,8 @@ abstract class I18n {
   /// No description provided for @warning250Sbnot8722Sbenough8722Sbbalance.
   ///
   /// In en, this message translates to:
-  /// **'All of your selling {asset} advertisements have been hidden from public search because your arbitration bond wallet balance is lower than {minRequiredbalance}. In order for your sell ads to become visible, please deposit at least {amountXmr} to your arbitration bond {localmoneroWallet}.'**
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet);
+  /// **'All of your selling {asset} advertisements have been hidden from public search because your arbitration bond wallet balance is lower than {minRequiredBalance}. In order for your sell ads to become visible, please deposit at least {amountXmr} to your arbitration bond {localmoneroWallet}.'**
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet);
 
   /// No description provided for @warning250Sbnot8722Sbenough8722Sbbalance8722Sblocalmonero8722Sbwallet.
   ///
@@ -13388,8 +13388,8 @@ abstract class I18n {
   /// No description provided for @dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal.
   ///
   /// In en, this message translates to:
-  /// **'All cryptocurrency ads are now being moved to the new \"global (code XX)\" country category. All duplicate cryptocurrency ads that differ only by country will be deleted {time_remaining}. Please make sure you only have ONE cryptocurrency ad per currency, otherwise all but the most recently posted ad in that currency will be deleted, while the remaining ad will be moved into \"global\" country category.'**
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining);
+  /// **'All cryptocurrency ads are now being moved to the new \"global (code XX)\" country category. All duplicate cryptocurrency ads that differ only by country will be deleted {timeRemaining}. Please make sure you only have ONE cryptocurrency ad per currency, otherwise all but the most recently posted ad in that currency will be deleted, while the remaining ad will be moved into \"global\" country category.'**
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining);
 
   /// No description provided for @edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad.
   ///
@@ -16142,8 +16142,8 @@ abstract class I18n {
   /// No description provided for @affiliate__enabled.
   ///
   /// In en, this message translates to:
-  /// **'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag {ref_code} to any {appName} URL.'**
-  String affiliate__enabled(Object ref_code, Object appName);
+  /// **'Your affiliate program is enabled, and you can earn commissions by adding your affiliate tag {refCode} to any {appName} URL.'**
+  String affiliate__enabled(Object refCode, Object appName);
 
   /// No description provided for @reputation_import__step__username__input__label.
   ///
@@ -16160,8 +16160,8 @@ abstract class I18n {
   /// No description provided for @settings__homepage_tip.
   ///
   /// In en, this message translates to:
-  /// **'Shown on your public profile. Only valid URL accepted (e.g. https://{example_url})'**
-  String settings__homepage_tip(Object example_url);
+  /// **'Shown on your public profile. Only valid URL accepted (e.g. https://{exampleUrl})'**
+  String settings__homepage_tip(Object exampleUrl);
 
   /// No description provided for @settings__personal_info_tip.
   ///

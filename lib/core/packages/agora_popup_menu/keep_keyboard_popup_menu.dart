@@ -243,8 +243,8 @@ class KeepKeyboardPopupMenuState extends State<KeepKeyboardPopupMenu> {
         );
       });
 
-      final overlay = Overlay.of(context)!;
-      overlay.insert(_entry!);
+      final overlay = Overlay.of(context);
+      overlay!.insert(_entry!);
 
       await openMenuCompleter.future;
       popupState = PopupMenuState.opened;

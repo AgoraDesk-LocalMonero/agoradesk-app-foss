@@ -102,18 +102,21 @@ jobs:
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app_${{ steps.split.outputs._1 }}.apk
           
           git fetch
+          git stash
           git checkout fdroid_ad
           
           flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
           mv build/app/outputs/flutter-apk/app-agoradesk-release.apk build/app/outputs/flutter-apk/com.agoradesk.app-foss_${{ steps.split.outputs._1 }}.apk
           
           git fetch
+          git stash
           git checkout main
           
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.checkUpdates=true
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app_${{ steps.split.outputs._1 }}.apk
           
           git fetch
+          git stash
           git checkout fdroid_lm
           
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true

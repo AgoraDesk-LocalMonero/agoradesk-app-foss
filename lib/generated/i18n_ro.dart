@@ -77,8 +77,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Toate în $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Toate în $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nRo extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Eroare cererea de tranzacționare';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Acest comerciant permite maximum $firstTimelimitxmr pentru prima tranzacție cu el.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Acest comerciant permite maximum $firstTimeLimitXmr pentru prima tranzacție cu el.';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nRo extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Cumpără';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Cât de mult doriți să $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Cât de mult doriți să $buyOrSell?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Acest comerciant necesită cel puțin $minimumFeedbackscore scor de feedback pentru a tranzacționa.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Acest comerciant necesită cel puțin $minimumFeedbackScore scor de feedback pentru a tranzacționa.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nRo extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'cumpărător';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'După ce apăsați butonul „$buy_or_sell_button_name”, veți vedea mai multe informații despre reclamă, inclusiv despre condițiile tranzacției. Citiți-le înainte de a depune cererea de tranzacționare, dacă nu sunteți de acord cu ele puteți reveni la pagina anterioară și alegeți o altă reclamă.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'După ce apăsați butonul „$buyOrSellButtonName”, veți vedea mai multe informații despre reclamă, inclusiv despre condițiile tranzacției. Citiți-le înainte de a depune cererea de tranzacționare, dacă nu sunteți de acord cu ele puteți reveni la pagina anterioară și alegeți o altă reclamă.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Pentru a începe tranzacția, introduceți cât de mult $asset doriți să $buy_or_sell și faceți clic pe butonul „Trimiteți cererea de tranzacționare” pentru a începe tranzacția.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Pentru a începe tranzacția, introduceți cât de mult $asset doriți să $buyOrSell și faceți clic pe butonul „Trimiteți cererea de tranzacționare” pentru a începe tranzacția.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nRo extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Cumpără';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'În coloana din stânga, ar trebui să selectați apoi fila „$buy_or_sell_tab_name”. Dacă doriți să schimbați țara, moneda, metoda de plată sau să specificați suma necesară, faceți clic pe butonul „Afișați meniul de căutare”, alegeți parametrii doriți și apăsați butonul de căutare.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'În coloana din stânga, ar trebui să selectați apoi fila „$buyOrSellTabName”. Dacă doriți să schimbați țara, moneda, metoda de plată sau să specificați suma necesară, faceți clic pe butonul „Afișați meniul de căutare”, alegeți parametrii doriți și apăsați butonul de căutare.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nRo extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Funcționează fără JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Site-ul nostru este ușor accesibil prin intermediul $tor_link (care este reglat pentru performanță maximă pentru confortul dvs. prin utilizarea $advanced_routing) și chiar printr-un $i2p_link. Acest lucru vă asigură nu numai că veți putea să ascundeți IP-ul dvs. adevărat (pe care oricum nu îl asociem niciodată cu contul dvs.), ci și, dacă, din orice motiv, domeniul nostru normal devine inaccesibil pentru dvs., vor exista și alte modalități de a accesa serviciul nostru. Apreciem atât de mult confidențialitatea ta, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Site-ul nostru este ușor accesibil prin intermediul $torLink (care este reglat pentru performanță maximă pentru confortul dvs. prin utilizarea $advancedRouting) și chiar printr-un $i2pLink. Acest lucru vă asigură nu numai că veți putea să ascundeți IP-ul dvs. adevărat (pe care oricum nu îl asociem niciodată cu contul dvs.), ci și, dacă, din orice motiv, domeniul nostru normal devine inaccesibil pentru dvs., vor exista și alte modalități de a accesa serviciul nostru. Apreciem atât de mult confidențialitatea ta, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nRo extends I18n {
   String get completed250Sbtitle => 'Tranzacțiile dvs. finalizate';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Pentru întrebări legate de aplicarea legii, vă rugăm să citiți $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Pentru întrebări legate de aplicarea legii, vă rugăm să citiți $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'politica noastră';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Pentru a contacta serviciul nostru de asistență puteți $openAticket sau trimite un e-mail la $email.';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Pentru a contacta serviciul nostru de asistență puteți $openATicket sau trimite un e-mail la $email.';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nRo extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Eroare de răscumpărare a cuponului';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Ceva nu a mers bine în timpul răscumpărării unui cupon. Dacă nu vi se pare în regulă, vă rugăm să contactați serviciul de asistență. Cod de eroare: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Ceva nu a mers bine în timpul răscumpărării unui cupon. Dacă nu vi se pare în regulă, vă rugăm să contactați serviciul de asistență. Cod de eroare: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nRo extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Salvează modificările';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Acest anunț este pentru $adType $createdAt $timeOfcreation. Pentru a schimba tipul de anunț, vă rugăm să $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Acest anunț este pentru $adType $createdAt $timeOfCreation. Pentru a schimba tipul de anunț, vă rugăm să $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nRo extends I18n {
   String get error8722Sbpage => 'Oops! Ceva a decurs greșit. Vă rugăm să încercați din nou în curând. Faceți clic oriunde pe pagină pentru a reîncărca.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Dacă acest lucru nu vă ajută, încercați să ștergeți cookie-urile sau să utilizați un alt browser. Dacă nici asta nu vă ajută, vă rugăm să $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Dacă acest lucru nu vă ajută, încercați să ștergeți cookie-urile sau să utilizați un alt browser. Dacă nici asta nu vă ajută, vă rugăm să $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nRo extends I18n {
   String get error250Sbsignup250Sb48 => 'Un utilizator cu acest e-mail există deja';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Nu se poate solicita mai puțin de $min_asset_amount $assetSymbol pentru crearea unei tranzacții.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Nu se poate solicita mai puțin de $minAssetAmount $assetSymbol pentru crearea unei tranzacții.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nRo extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Feedback-ul care a fost oferit poate fi confirmat sau neconfirmat. Feedback-ul confirmat este afișat pe profilul public al unui utilizator și afectează scorul de feedback al utilizatorului. Pentru ca un feedback neconfirmat să devină confirmat, volumul total al tranzacțiilor între utilizatorul care a dat și cel care a primit feedback-ul trebuie să fie mai mare de 100 USD echivalent.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Notificările web vă permit să primiți notificări pop-up prin intermediul browserului dumneavoastră ori de câte ori primiți o nouă notificare privind $appName. Dacă tranzacționați și doriți să știți imediat când se întâmplă ceva, $enableWebnotificationsfromyourprofile. Activați comutatorul pe care scrie Enable Web notifications (Activare notificări web) și, atunci când browserul vă cere permisiunea de a afișa notificări web, apăsați accept. Acum sunteți gata și veți începe să primiți notificări web.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Notificările web vă permit să primiți notificări pop-up prin intermediul browserului dumneavoastră ori de câte ori primiți o nouă notificare privind $appName. Dacă tranzacționați și doriți să știți imediat când se întâmplă ceva, $enableWebNotificationsFromYourProfile. Activați comutatorul pe care scrie Enable Web notifications (Activare notificări web) și, atunci când browserul vă cere permisiunea de a afișa notificări web, apăsați accept. Acum sunteți gata și veți începe să primiți notificări web.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nRo extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Rezervăm o mică sumă din soldul portofelului dvs. pentru a plăti taxa de tranzacție a rețelei. Fiecare tranzacție cu criptomonede trebuie să plătească o mică taxă pentru rețea pentru a fi confirmată, indiferent de unde este trimisă.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Acest răspuns se referă la cazul în care cumpărați Monero online. După ce trimiteți o cerere de tranzacționare către vânzătorul de Monero, aveți la dispoziție un interval de timp pentru a efectua plata înainte ca vânzătorul să poată anula tranzacția (intervalul de plată variază în funcție de metoda de plată a tranzacției). În acest interval de timp trebuie să finalizați plata și să apăsați butonul Am plătit. Vânzătorul este notificat că ați efectuat plata, iar Monero va fi reținut în obligațiune până când vânzătorul finalizează tranzacția pentru dumneavoastră atunci când vede plata în contul său. Dacă ați plătit pentru achiziție, dar nu ați marcat plata ca fiind completă înainte de expirarea termenului de plată, vă rugăm să contactați vânzătorul prin intermediul tranzacției. Puteți contacta vânzătorul și celelalte contacte comerciale existente din $dashboard din profilul dvs. de utilizator $appName. Trimiteți un mesaj vânzătorului și explicați-i cu amabilitate situația și motivul pentru care nu ați putut finaliza plata în intervalul de timp. Dacă vânzătorul nu răspunde la această solicitare, vă rugăm să contactați serviciul de asistență $appName folosind $supportRequestform și menționați identificatorul dvs. comercial.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Acest răspuns se referă la cazul în care cumpărați Monero online. După ce trimiteți o cerere de tranzacționare către vânzătorul de Monero, aveți la dispoziție un interval de timp pentru a efectua plata înainte ca vânzătorul să poată anula tranzacția (intervalul de plată variază în funcție de metoda de plată a tranzacției). În acest interval de timp trebuie să finalizați plata și să apăsați butonul Am plătit. Vânzătorul este notificat că ați efectuat plata, iar Monero va fi reținut în obligațiune până când vânzătorul finalizează tranzacția pentru dumneavoastră atunci când vede plata în contul său. Dacă ați plătit pentru achiziție, dar nu ați marcat plata ca fiind completă înainte de expirarea termenului de plată, vă rugăm să contactați vânzătorul prin intermediul tranzacției. Puteți contacta vânzătorul și celelalte contacte comerciale existente din $dashboard din profilul dvs. de utilizator $appName. Trimiteți un mesaj vânzătorului și explicați-i cu amabilitate situația și motivul pentru care nu ați putut finaliza plata în intervalul de timp. Dacă vânzătorul nu răspunde la această solicitare, vă rugăm să contactați serviciul de asistență $appName folosind $supportRequestForm și menționați identificatorul dvs. comercial.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nRo extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'formular de cerere de asistență';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'După ce trimiteți o cerere de tranzacție, aveți la dispoziție un interval de timp pentru a finaliza plata înainte ca cealaltă parte să poată anula tranzacția. În acest interval de timp trebuie să finalizați plata și să apăsați butonul \"Am plătit\". Cealaltă parte este notificată că ați efectuat plata, iar monedele vor fi păstrate în obligațiune până când cealaltă parte finalizează tranzacția pentru dumneavoastră după ce vede plata în contul său. Dacă ați plătit pentru achiziție, dar nu ați marcat plata ca fiind completă înainte de expirarea termenului de plată, vă rugăm să contactați cealaltă parte prin intermediul chat-ului comercial. Puteți contacta cealaltă parte și celelalte contacte comerciale existente din $dashboard. Trimiteți un mesaj celeilalte părți și explicați cu amabilitate situația și motivul pentru care nu ați putut finaliza plata în termenul stabilit. În cazul în care cealaltă parte nu răspunde la această solicitare, vă rugăm să contactați personalul $appName folosind $supportRequestform și menționați identificatorul dvs. comercial.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'După ce trimiteți o cerere de tranzacție, aveți la dispoziție un interval de timp pentru a finaliza plata înainte ca cealaltă parte să poată anula tranzacția. În acest interval de timp trebuie să finalizați plata și să apăsați butonul \"Am plătit\". Cealaltă parte este notificată că ați efectuat plata, iar monedele vor fi păstrate în obligațiune până când cealaltă parte finalizează tranzacția pentru dumneavoastră după ce vede plata în contul său. Dacă ați plătit pentru achiziție, dar nu ați marcat plata ca fiind completă înainte de expirarea termenului de plată, vă rugăm să contactați cealaltă parte prin intermediul chat-ului comercial. Puteți contacta cealaltă parte și celelalte contacte comerciale existente din $dashboard. Trimiteți un mesaj celeilalte părți și explicați cu amabilitate situația și motivul pentru care nu ați putut finaliza plata în termenul stabilit. În cazul în care cealaltă parte nu răspunde la această solicitare, vă rugăm să contactați personalul $appName folosind $supportRequestForm și menționați identificatorul dvs. comercial.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Da, de fapt avem două! Iată-le: $b32I2purl sau $i2pUrl (aveți nevoie de $i2p pentru a deschide aceste link-uri).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Da, de fapt avem două! Iată-le: $b32I2pUrl sau $i2pUrl (aveți nevoie de $i2p pentru a deschide aceste link-uri).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nRo extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Tranzacționare cu criptomonede';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Tranzacțiile către portofelele altor utilizatori $appName sunt $free. $linebreak  Tranzacțiile către alte portofele Monero sunt supuse taxei de tranzacție a rețelei Monero. Taxa curentă este vizibilă pe $walletPage la rubrica $outgoingMonerofees. Taxa de tranzacție este plătită din portofelul $appName atunci când trimiteți o tranzacție.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Tranzacțiile către portofelele altor utilizatori $appName sunt $free. $linebreak  Tranzacțiile către alte portofele Monero sunt supuse taxei de tranzacție a rețelei Monero. Taxa curentă este vizibilă pe $walletPage la rubrica $outgoingMoneroFees. Taxa de tranzacție este plătită din portofelul $appName atunci când trimiteți o tranzacție.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nRo extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'pagina portofel';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Tranzacțiile către portofelele altor utilizatori $appName sunt $free. $linebreak  Tranzacțiile către portofele de criptomonede din afara rețelei de criptomonede sunt supuse taxei de tranzacție a rețelei de criptomonede relevante. Taxa curentă este vizibilă pe $walletPage la rubrica $outgoingMonerofees. Taxa de tranzacție este plătită din portofelul $appName atunci când trimiteți o tranzacție.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Tranzacțiile către portofelele altor utilizatori $appName sunt $free. $linebreak  Tranzacțiile către portofele de criptomonede din afara rețelei de criptomonede sunt supuse taxei de tranzacție a rețelei de criptomonede relevante. Taxa curentă este vizibilă pe $walletPage la rubrica $outgoingMoneroFees. Taxa de tranzacție este plătită din portofelul $appName atunci când trimiteți o tranzacție.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nRo extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'În aplicația de autentificare, scanați codul QR afișat pe pagină. După ce ați făcut acest lucru, parolele unice de 6 cifre vor începe să apară în aplicație.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Instalați aplicația de autentificare pe telefon. Puteți $chooseAnyapp care acceptă TOTP. De exemplu, $andotp este gratuită și cu sursă deschisă.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Instalați aplicația de autentificare pe telefon. Puteți $chooseAnyApp care acceptă TOTP. De exemplu, $andotp este gratuită și cu sursă deschisă.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName oferă $totp 2FA. Odată ce 2FA este activat, $authMobileapp va fi sincronizat cu $appName și va produce parole unice de 6 cifre. Această parolă se schimbă la fiecare minut. Pentru a vă autentifica sau a retrage o obligațiune de arbitraj, pe lângă parola dvs. trebuie să introduceți și această parolă unică înainte de expirarea ei.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName oferă $totp 2FA. Odată ce 2FA este activat, $authMobileApp va fi sincronizat cu $appName și va produce parole unice de 6 cifre. Această parolă se schimbă la fiecare minut. Pentru a vă autentifica sau a retrage o obligațiune de arbitraj, pe lângă parola dvs. trebuie să introduceți și această parolă unică înainte de expirarea ei.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nRo extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Cumpărarea de bitcoini în mod anonim a devenit o sarcină din ce în ce mai dificilă.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Cu fiecare zi care trece, se pare că majoritatea, dacă nu chiar toate metodele tradiționale de achiziționare a bitcoin au început să necesite verificarea actelor de identitate, ceea ce face ca majoritatea ghidurilor disponibile online astăzi, cum ar fi cel de pe $ninetyNinebitcoins sau $coincentral să fie depășite. $linebreak  $gutter Modalitatea tradițională de a cumpăra bitcoini fără acte de identitate a fost, în principal, prin intermediul platformei de schimb Bitcoin P2P $localbitcoins, un loc care a fost deosebit de popular pentru cumpărarea de bitcoin în mod anonim cu $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Cu fiecare zi care trece, se pare că majoritatea, dacă nu chiar toate metodele tradiționale de achiziționare a bitcoin au început să necesite verificarea actelor de identitate, ceea ce face ca majoritatea ghidurilor disponibile online astăzi, cum ar fi cel de pe $ninetyNineBitcoins sau $coincentral să fie depășite. $linebreak  $gutter Modalitatea tradițională de a cumpăra bitcoini fără acte de identitate a fost, în principal, prin intermediul platformei de schimb Bitcoin P2P $localbitcoins, un loc care a fost deosebit de popular pentru cumpărarea de bitcoin în mod anonim cu $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nRo extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount cu $appName. Veți obține un portofel Monero online gratuit și sigur. Nu sunt necesare aplicații suplimentare. Dacă aveți deja un cont, treceți la pasul următor.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount cu $appName. Veți obține un portofel Monero online gratuit și sigur. Nu sunt necesare aplicații suplimentare. Dacă aveți deja un cont, treceți la pasul următor.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Înregistrați un cont';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount cu $appName. Obțineți un portofel online gratuit și sigur pentru criptomonede. Nu sunt necesare aplicații suplimentare. Dacă aveți deja un cont, treceți la pasul următor.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount cu $appName. Obțineți un portofel online gratuit și sigur pentru criptomonede. Nu sunt necesare aplicații suplimentare. Dacă aveți deja un cont, treceți la pasul următor.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nRo extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Cum să activați notificările Telegram pe mobil';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'O tranzacție tipică pe $appName funcționează în felul următor: exemplul este o tranzacție de vânzare online în care vindeți $assetName unui cumpărător. Procesul este similar atunci când cumpărați $assetName online, dar pentru acest exemplu ne concentrăm pe vânzarea $assetName, deoarece acesta este cel mai frecvent tip de tranzacție. $linebreak  Mai întâi trebuie să depuneți $assetName în $localmoneroWallet. $linebreak  Apoi, trebuie să $create $aSellmoneroad (numit anunț de vânzare online). Atunci când creați anunțul, alegeți o metodă de plată, stabiliți prețul, limitele și scrieți condițiile de vânzare sub forma unui mesaj liber. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'O tranzacție tipică pe $appName funcționează în felul următor: exemplul este o tranzacție de vânzare online în care vindeți $assetName unui cumpărător. Procesul este similar atunci când cumpărați $assetName online, dar pentru acest exemplu ne concentrăm pe vânzarea $assetName, deoarece acesta este cel mai frecvent tip de tranzacție. $linebreak  Mai întâi trebuie să depuneți $assetName în $localmoneroWallet. $linebreak  Apoi, trebuie să $create $aSellMoneroAd (numit anunț de vânzare online). Atunci când creați anunțul, alegeți o metodă de plată, stabiliți prețul, limitele și scrieți condițiile de vânzare sub forma unui mesaj liber. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nRo extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Noțiuni introductive';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return 'Pagina $advertisementCreationpage este cea în care creați noi reclame. $linebreak  La crearea unui anunț publicitar există câteva opțiuni obligatorii și o mulțime de opțiuni suplimentare care sunt opționale, dar a căror setare este recomandată. Folosirea opțiunilor suplimentare vă permite să vă adaptați reclama la strategia dvs. de tranzacționare. $linebreak  Puteți găsi toate reclamele pe care le-ați creat din $dashboard. În tabloul de bord puteți găsi, de asemenea, tranzacțiile dvs. deschise. $linebreak  $requiredOptions $linebreak  $location Introduceți țara în care doriți să apară anunțul dvs. $linebreak  $paymentMethod Selectați metoda de plată pe care doriți să o oferiți din meniul derulant. $linebreak  $currency Alegeți moneda în care doriți să vindeți. De exemplu, dacă vindeți în Franța, trebuie să selectați EUR. Puteți utiliza $thisList pentru a găsi acronimul monedei dumneavoastră.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return 'Pagina $advertisementCreationPage este cea în care creați noi reclame. $linebreak  La crearea unui anunț publicitar există câteva opțiuni obligatorii și o mulțime de opțiuni suplimentare care sunt opționale, dar a căror setare este recomandată. Folosirea opțiunilor suplimentare vă permite să vă adaptați reclama la strategia dvs. de tranzacționare. $linebreak  Puteți găsi toate reclamele pe care le-ați creat din $dashboard. În tabloul de bord puteți găsi, de asemenea, tranzacțiile dvs. deschise. $linebreak  $requiredOptions $linebreak  $location Introduceți țara în care doriți să apară anunțul dvs. $linebreak  $paymentMethod Selectați metoda de plată pe care doriți să o oferiți din meniul derulant. $linebreak  $currency Alegeți moneda în care doriți să vindeți. De exemplu, dacă vindeți în Franța, trebuie să selectați EUR. Puteți utiliza $thisList pentru a găsi acronimul monedei dumneavoastră.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nRo extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Configurarea unui anunț';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Vă rugăm să citiți $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Vă rugăm să citiți $termsOfService.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Puteți fi primul care $post_an_ad în următoarele categorii:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Puteți fi primul care $postAnAd în următoarele categorii:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nRo extends I18n {
   String get login250Sbreset8722Sblink => 'Resetați-l aici.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Puteți utiliza acreditările dvs. $front_type_url pentru a vă conecta.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Puteți utiliza acreditările dvs. $frontTypeUrl pentru a vă conecta.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nRo extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Limitele pentru această tranzacție ChangeNow:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Sold insuficient. Necesar: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Sold insuficient. Necesar: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nRo extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Prea multe anunțuri';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Vă rugăm să introduceți o valoare limită validă pentru prima dată pentru $assetSymbol. Sunt permise numai numere între $min_asset_amount și $max_asset_amount.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Vă rugăm să introduceți o valoare limită validă pentru prima dată pentru $assetSymbol. Sunt permise numai numere între $minAssetAmount și $maxAssetAmount.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nRo extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'da';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Înainte de a crea un anunț, vă rugăm să citiți $termsOfservice și $guides noastre.';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Înainte de a crea un anunț, vă rugăm să citiți $termsOfService și $guides noastre.';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Pasul $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Pasul $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nRo extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Încercați cu o metodă de plată diferită, cu o sumă diferită sau fără sumă. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Alternativ, fii primul care accesează $postAnad aici!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Alternativ, fii primul care accesează $postAnAd aici!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nRo extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Introduceți codul</strong> dat de aplicația mobilă 2FA în caseta de sub codul QR și <strong> apăsați butonul \"Verificare 2FA\".</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp, cum ar fi $andotp sau $anyOther2faapp care acceptă $totp pentru dispozitivul dvs.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp, cum ar fi $andotp sau $anyOther2faApp care acceptă $totp pentru dispozitivul dvs.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nRo extends I18n {
   String get settings250Sbhomepage => 'Pagina de start';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Afișat pe profilul dvs. public. Se acceptă numai URL-uri valide (de exemplu, https://$example_url).';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Afișat pe profilul dvs. public. Se acceptă numai URL-uri valide (de exemplu, https://$exampleUrl).';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Anunț comercial ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Anunț comercial ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Toate anunțurile dvs. de vânzare $asset au fost ascunse din căutare publică deoarece soldul portofelului dvs. de obligațiuni de arbitraj este mai mic decât $minRequiredbalance. Pentru ca anunțurile dvs. de vânzare să devină vizibile, vă rugăm să depuneți cel puțin $amountXmr în portofelul dvs. de obligațiuni de arbitraj $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Toate anunțurile dvs. de vânzare $asset au fost ascunse din căutare publică deoarece soldul portofelului dvs. de obligațiuni de arbitraj este mai mic decât $minRequiredBalance. Pentru ca anunțurile dvs. de vânzare să devină vizibile, vă rugăm să depuneți cel puțin $amountXmr în portofelul dvs. de obligațiuni de arbitraj $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nRo extends I18n {
   String get xx => 'Global';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Toate anunțurile pentru criptomonede sunt acum mutate în noua categorie de țară „global (cod XX)”. Toate anunțurile duplicate în criptomonede care diferă numai în funcție de țară vor fi șterse $time_remaining. Vă rugăm să asigurați-vă că aveți doar UN anunț de criptomonedă pentru fiecare monedă, altfel toate, cu excepția celui mai recent postat anunț în moneda respectivă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară „globală”.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Toate anunțurile pentru criptomonede sunt acum mutate în noua categorie de țară „global (cod XX)”. Toate anunțurile duplicate în criptomonede care diferă numai în funcție de țară vor fi șterse $timeRemaining. Vă rugăm să asigurați-vă că aveți doar UN anunț de criptomonedă pentru fiecare monedă, altfel toate, cu excepția celui mai recent postat anunț în moneda respectivă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară „globală”.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nRo extends I18n {
   String get affiliate__enable_btn => 'Activați programul de afiliere';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Programul dvs. de afiliere este activat și puteți câștiga comisioane prin adăugarea tag-ului dvs. de afiliere $ref_code la orice URL $appName.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Programul dvs. de afiliere este activat și puteți câștiga comisioane prin adăugarea tag-ului dvs. de afiliere $refCode la orice URL $appName.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nRo extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Afișat pe profilul dvs. public. Se acceptă numai URL-uri valide (de exemplu, https://$example_url).';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Afișat pe profilul dvs. public. Se acceptă numai URL-uri valide (de exemplu, https://$exampleUrl).';
   }
 
   @override

@@ -473,7 +473,7 @@ class _AppState extends State<App>
           router.push(
             WebviewRoute(
               cookie1: e.cookie1,
-              cookie2: e.cookie1,
+              cookie2: e.cookie2,
               token: token,
               url: 'https://agoradesk.com',
               isFromCaptchaEvent: true,

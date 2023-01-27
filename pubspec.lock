@@ -8,7 +8,18 @@ packages:
       sha256: "0c80aeab9bc807ab10022cd3b2f4cf2ecdf231949dc1ddd9442406a003f19201"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "52.0.0"
+=======
+    version: "47.0.0"
+  _flutterfire_internals:
+    dependency: transitive
+    description:
+      name: _flutterfire_internals
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.12"
+>>>>>>> main
   analyzer:
     dependency: transitive
     description:
@@ -104,7 +115,11 @@ packages:
       sha256: "7c35a3a7868626257d8aee47b51c26b9dba11eaddf3431117ed2744951416aab"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.0"
+=======
+    version: "2.0.10"
+>>>>>>> main
   build_runner:
     dependency: "direct dev"
     description:
@@ -112,7 +127,11 @@ packages:
       sha256: b0a8a7b8a76c493e85f1b84bffa0588859a06197863dba8c9036b15581fd9727
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.3.3"
+=======
+    version: "2.3.0"
+>>>>>>> main
   build_runner_core:
     dependency: transitive
     description:
@@ -489,6 +508,51 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
+<<<<<<< HEAD
+=======
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.4.1"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.5.2"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
+  firebase_messaging:
+    dependency: "direct main"
+    description:
+      name: firebase_messaging
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "14.2.1"
+  firebase_messaging_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_messaging_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.10"
+  firebase_messaging_web:
+    dependency: transitive
+    description:
+      name: firebase_messaging_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.11"
+>>>>>>> main
   fixnum:
     dependency: transitive
     description:
@@ -579,16 +643,24 @@ packages:
     dependency: transitive
     description:
       name: flutter_keyboard_visibility_linux
+<<<<<<< HEAD
       sha256: "6fba7cd9bb033b6ddd8c2beb4c99ad02d728f1e6e6d9b9446667398b2ac39f08"
       url: "https://pub.dev"
+=======
+      url: "https://pub.dartlang.org"
+>>>>>>> main
     source: hosted
     version: "1.0.0"
   flutter_keyboard_visibility_macos:
     dependency: transitive
     description:
       name: flutter_keyboard_visibility_macos
+<<<<<<< HEAD
       sha256: c5c49b16fff453dfdafdc16f26bdd8fb8d55812a1d50b0ce25fc8d9f2e53d086
       url: "https://pub.dev"
+=======
+      url: "https://pub.dartlang.org"
+>>>>>>> main
     source: hosted
     version: "1.0.0"
   flutter_keyboard_visibility_platform_interface:
@@ -611,8 +683,12 @@ packages:
     dependency: transitive
     description:
       name: flutter_keyboard_visibility_windows
+<<<<<<< HEAD
       sha256: fc4b0f0b6be9b93ae527f3d527fb56ee2d918cd88bbca438c478af7bcfd0ef73
       url: "https://pub.dev"
+=======
+      url: "https://pub.dartlang.org"
+>>>>>>> main
     source: hosted
     version: "1.0.0"
   flutter_lints:
@@ -765,7 +841,11 @@ packages:
       sha256: e819441678f1679b719008ff2ff0ef045d66eed9f9ec81166ca0d9b02a187454
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.3.2"
+=======
+    version: "2.2.0"
+>>>>>>> main
   freezed_annotation:
     dependency: "direct main"
     description:
@@ -798,6 +878,16 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+<<<<<<< HEAD
+=======
+  google_api_availability:
+    dependency: "direct main"
+    description:
+      name: google_api_availability
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.1"
+>>>>>>> main
   graphs:
     dependency: transitive
     description:
@@ -973,7 +1063,11 @@ packages:
       sha256: c33da08e136c3df0190bd5bbe51ae1df4a7d96e7954d1d7249fea2968a72d317
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "4.8.0"
+=======
+    version: "4.7.0"
+>>>>>>> main
   json_serializable:
     dependency: "direct dev"
     description:
@@ -981,7 +1075,11 @@ packages:
       sha256: "040088d9eb2337f3a51ddabe35261e2fea1c351e3dd29d755ed1290b6b700a75"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "6.6.0"
+=======
+    version: "6.5.4"
+>>>>>>> main
   just_the_tooltip:
     dependency: "direct main"
     description:
@@ -1045,7 +1143,11 @@ packages:
       sha256: c0bbfe94d46aedf9b8b3e695cf3bd48c8e14b35e3b2c639e0aa7755d589ba946
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "1.1.0"
+=======
+    version: "1.1.1"
+>>>>>>> main
   markdown:
     dependency: transitive
     description:
@@ -1242,8 +1344,12 @@ packages:
     dependency: transitive
     description:
       name: path_provider_foundation
+<<<<<<< HEAD
       sha256: "62a68e7e1c6c459f9289859e2fae58290c981ce21d1697faf54910fe1faa4c74"
       url: "https://pub.dev"
+=======
+      url: "https://pub.dartlang.org"
+>>>>>>> main
     source: hosted
     version: "2.1.1"
   path_provider_linux:
@@ -1462,6 +1568,23 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
+<<<<<<< HEAD
+=======
+  sentry:
+    dependency: transitive
+    description:
+      name: sentry
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.19.0"
+  sentry_flutter:
+    dependency: "direct main"
+    description:
+      name: sentry_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.19.0"
+>>>>>>> main
   share_plus:
     dependency: "direct main"
     description:
@@ -1530,8 +1653,12 @@ packages:
     dependency: transitive
     description:
       name: shared_preferences_foundation
+<<<<<<< HEAD
       sha256: "1ffa239043ab8baf881ec3094a3c767af9d10399b2839020b9e4d44c0bb23951"
       url: "https://pub.dev"
+=======
+      url: "https://pub.dartlang.org"
+>>>>>>> main
     source: hosted
     version: "2.1.2"
   shared_preferences_ios:
@@ -1666,7 +1793,11 @@ packages:
       sha256: "067ab48dbc66bae05e18073a604443baa35957101bd3905b94f65e764c6d0688"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.2.3"
+=======
+    version: "2.2.4+1"
+>>>>>>> main
   sqflite_common:
     dependency: transitive
     description:
@@ -1674,7 +1805,11 @@ packages:
       sha256: b2ed22d1d62c944ec0dac5cc687ae99cb3331c3ebe146d726ed24704634b5ccd
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "2.4.1"
+=======
+    version: "2.4.2+2"
+>>>>>>> main
   stack_trace:
     dependency: transitive
     description:
@@ -2020,5 +2155,9 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
+<<<<<<< HEAD
   dart: ">=2.18.4 <4.0.0"
+=======
+  dart: ">=2.18.4 <3.0.0"
+>>>>>>> main
   flutter: ">=3.3.0"
