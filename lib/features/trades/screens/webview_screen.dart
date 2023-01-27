@@ -72,22 +72,27 @@ class WebViewExampleState extends State<WebviewScreen> {
               isSecure: true,
             );
             final cookie1Name = widget.cookie1.split('=').first;
-            cookieManager.setCookie(
-              url: _uri,
-              name: cookie1Name,
-              value: widget.cookie1.substring(cookie1Name.length + 1),
-              domain: ".agoradesk.com",
-              isSecure: true,
-            );
+            if (cookie1Name.isNotEmpty) {
+              final cookie1Value = widget.cookie1.substring(cookie1Name.length + 1);
+              cookieManager.setCookie(
+                url: _uri,
+                name: cookie1Name,
+                value: cookie1Value,
+                domain: ".agoradesk.com",
+                isSecure: true,
+              );
+            }
             final cookie2Name = widget.cookie2.split('=').first;
-            cookieManager.setCookie(
-              url: _uri,
-              name: cookie2Name,
-              value: widget.cookie2.substring(cookie2Name.length + 1),
-              domain: ".agoradesk.com",
-              isSecure: true,
-            );
-
+            if (cookie2Name.isNotEmpty) {
+              final cookie2Value = widget.cookie2.substring(cookie2Name.length + 1);
+              cookieManager.setCookie(
+                url: _uri,
+                name: cookie2Name,
+                value: cookie2Value,
+                domain: ".agoradesk.com",
+                isSecure: true,
+              );
+            }
             // then load initial URL here
             await _webViewController!.loadUrl(urlRequest: URLRequest(url: _uri));
           } catch (e) {
