@@ -1,3 +1,2 @@
-1. New feature: address book for wallets.
-2. Ads group selection in one click.
-3. Fixed Chinese translation.
+1. HOTFIX: Login with Imperva captcha.
+2. Fix: translations minor bugs.
