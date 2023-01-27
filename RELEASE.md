@@ -1,7 +1,6 @@
 ### Updates
-1. New feature: address book for wallets.
-2. Ads group selection in one click.
-3. Fixed Chinese translation.
+1. HOTFIX: Login with Imperva captcha
+2. Fix: translations minor bugs
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
