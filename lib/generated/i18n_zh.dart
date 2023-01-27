@@ -77,8 +77,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return '所有在$countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return '所有在$countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nZh extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => '交易请求错误';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return '注： 您目前最多只能购买$firstTimelimitxmr。当您进行了更多交易获得了更多信誉后，您将可以购买更多的币。这个限制是由卖家指定的。';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return '注： 您目前最多只能购买$firstTimeLimitXmr。当您进行了更多交易获得了更多信誉后，您将可以购买更多的币。这个限制是由卖家指定的。';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nZh extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '买';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '你要$buyOrsell多少？';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return '你要$buyOrSell多少？';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return '本用户要求你的最低评价得分为$minimumFeedbackscore。';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return '本用户要求你的最低评价得分为$minimumFeedbackScore。';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nZh extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => '买方';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return '按“$buy_or_sell_button_name”按钮后，您将看到有关广告的更多信息，包括交易条款。在提交交易请求之前仔细阅读它们，如果您不同意，可以返回上一页并选择其他广告。';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return '按“$buyOrSellButtonName”按钮后，您将看到有关广告的更多信息，包括交易条款。在提交交易请求之前仔细阅读它们，如果您不同意，可以返回上一页并选择其他广告。';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return '要开始交易，输入你想要多少 $asset 到 $buy_or_sell ，然后点击\'发送交易请求\'按钮，开始交易。';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return '要开始交易，输入你想要多少 $asset 到 $buyOrSell ，然后点击\'发送交易请求\'按钮，开始交易。';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nZh extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => '购买';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return '在左列中，您应该选择“$buy_or_sell_tab_name”标签。如果您想更改国家/地区，货币，付款方式或指定所需金额，请单击“显示搜索菜单”按钮，选择所需参数，然后按搜索按钮。';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return '在左列中，您应该选择“$buyOrSellTabName”标签。如果您想更改国家/地区，货币，付款方式或指定所需金额，请单击“显示搜索菜单”按钮，选择所需参数，然后按搜索按钮。';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nZh extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => '无需JavaScript即可工作';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return '用户可通过$tor_link路由轻松访问我们的网页（通过使用$advanced_routing，可以最大程度地提高性能，让您倍感舒适）甚至也可以通过$i2p_link来轻松访问我们的网站。 这不仅确保您能够向我们保密您的真实IP（无论如何我们永远不会与您的帐户相关联），而且确保如果由于某种原因您无法访问我们的普通网站，您还有其他方法可以访问 我们的服务。 我们非常重视您的隐私，$dont_ask_email。';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return '用户可通过$torLink路由轻松访问我们的网页（通过使用$advancedRouting，可以最大程度地提高性能，让您倍感舒适）甚至也可以通过$i2pLink来轻松访问我们的网站。 这不仅确保您能够向我们保密您的真实IP（无论如何我们永远不会与您的帐户相关联），而且确保如果由于某种原因您无法访问我们的普通网站，您还有其他方法可以访问 我们的服务。 我们非常重视您的隐私，$dontAskEmail。';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nZh extends I18n {
   String get completed250Sbtitle => '你的完成交易';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return '对于执法部门的查询，请阅读 $lawEnforcementinquiries。';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return '对于执法部门的查询，请阅读 $lawEnforcementInquiries。';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => '我们的政策';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return '为了联系我们客服你可以$openAticket或发电子邮件给$email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return '为了联系我们客服你可以$openATicket或发电子邮件给$email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nZh extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => '兑换优惠券错误';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return '兑换优惠券时出了点问题。如果这似乎不正确，请与支持人员联系。错误代码： $error_code。';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return '兑换优惠券时出了点问题。如果这似乎不正确，请与支持人员联系。错误代码： $errorCode。';
   }
 
   @override
@@ -1566,7 +1566,7 @@ class I18nZh extends I18n {
 
   @override
   String document8722Sbtitle250Sbstart(Object appName) {
-    return '入门';
+    return '$appName 指南：如何买卖门罗币';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nZh extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => '保存';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return '这是$createdAt${timeOfcreation}创建的$adType广告。如果你想要更改本广告交易类型请$createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return '这是$createdAt${timeOfCreation}创建的$adType广告。如果你想要更改本广告交易类型请$createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nZh extends I18n {
   String get error8722Sbpage => '哎呀！ 出了错误。 请尽快再试一次。';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return '如果这样没有帮助，请尝试清除Cookie或使用其他浏览器。如果这也无济于事，$open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return '如果这样没有帮助，请尝试清除Cookie或使用其他浏览器。如果这也无济于事，$openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nZh extends I18n {
   String get error250Sbsignup250Sb48 => '具有该电邮的用户已存在';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return '交易金额不能少于$min_asset_amount的$assetSymbol。';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return '交易金额不能少于$minAssetAmount的$assetSymbol。';
   }
 
   @override
@@ -1849,7 +1849,7 @@ class I18nZh extends I18n {
 
   @override
   String error250Sbwithdraw250Sbgeneric(Object assetName) {
-    return '出错了，请检查收款地址。';
+    return '出错了，请检查收款$assetName地址。';
   }
 
   @override
@@ -1933,11 +1933,11 @@ class I18nZh extends I18n {
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => '别人给出的评价可以是已确认或未确认的。已确认的评价将显示在用户的公开资料上，会影响用户的评价得分。未确认的评价仅对接收用户和{appName}管理员可见。未确认的评价要想得到确认，必须给出评价和接收评价的用户之间的交易必须大于{minimumFeedbackAmount} XMR。';
+  String get faq250Sbanswer8722Sb18 => '别人给出的评价可以是已确认或未确认的。已确认的评价将显示在用户的公开资料上，会影响用户的评价得分。未确认的评价要想得到确认，必须给出评价和接收评价的用户之间的交易量必须超过 100 美元等值。';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return '您在 $appName 上获得新通知时，Web 通知允许您通过浏览器接收弹出通知。如果您正在进行门罗币交易并想在发生新事件时立即知道，$enableWebnotificationsfromyourprofile勾选显示启用Web通知的框，在您的浏览器询问是否允许显示 Web 通知时，按接受。您现在已经完成所有设置，可以开始接收 Web 通知。';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return '您在 $appName 上获得新通知时，Web 通知允许您通过浏览器接收弹出通知。如果您正在进行门罗币交易并想在发生新事件时立即知道，$enableWebNotificationsFromYourProfile勾选显示启用Web通知的框，在您的浏览器询问是否允许显示 Web 通知时，按接受。您现在已经完成所有设置，可以开始接收 Web 通知。';
   }
 
   @override
@@ -1952,7 +1952,7 @@ class I18nZh extends I18n {
   String get faq250Sbanswer8722Sb28722Sbguide => '双重身份验证指南';
 
   @override
-  String get faq250Sbanswer8722Sb20 => '有时，交易者会索要您的ID。如果您第一次与一位交易者进行交易，他/她可能会要求您进行身份验证，即使您已经在{appName}上验证了您的ID。这是因为在一些国家/地区，当地法律要求卖家了解他们的客户身份。大部分卖家会在交易条款中说明是否需要验证ID。如果您不想将ID发送给卖家，可以随时取消交易，然后搜索没有严格要求的交易者。请务必通过交易聊天将您的ID发送给卖家，我们的交易聊天记录消息会在服务器上加密，并在180天后删除。所有发送至交易聊天的照片均会使用水印进行标记，以防止图片盗用。';
+  String get faq250Sbanswer8722Sb20 => '有时，交易者会索要您的ID。如果您第一次与一位交易者进行交易，他/她可能会要求您进行身份验证。这是因为在一些国家/地区，当地法律要求卖家了解他们的客户身份。大部分卖家会在交易条款中说明是否需要验证ID。如果您不想将ID发送给卖家，可以随时取消交易，然后搜索没有严格要求的交易者。请务必通过交易聊天将您的ID发送给卖家，我们的交易聊天记录消息会在服务器上加密，并在180天后删除。所有发送至交易聊天的照片均会使用水印进行标记，以防止图片盗用。';
 
   @override
   String faq250Sbanswer8722Sb21(Object appName) {
@@ -1971,8 +1971,8 @@ class I18nZh extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => '我们从您的钱包余额中预留少量金额以支付网络交易费。无论从何处发送，每个加密货币交易都必须向网络支付少量费用以进行确认。';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return '此答案与您在线购买 Monero 时的情况有关。在您向 Monero 卖家发送交易请求后，您有一个时间窗口来完成付款，然后卖家才能取消交易（付款窗口因交易的付款方式而异）。在此期间，您需要完成付款并按我已付款按钮。卖家会收到您已付款的通知，并且门罗币将被保留在仲裁保证金中，直到卖家在他/她的账户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易联系卖家。您可以通过 $appName 用户资料中的 $dashboard 联系卖家和其他现有交易联系人。给卖家发消息，解释一下情况，以及为什么你不能在时间窗口内完成付款。如果卖家未响应此请求，请使用 $supportRequestform 联系 $appName 支持并提及您的交易 ID。';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return '此答案与您在线购买 Monero 时的情况有关。在您向 Monero 卖家发送交易请求后，您有一个时间窗口来完成付款，然后卖家才能取消交易（付款窗口因交易的付款方式而异）。在此期间，您需要完成付款并按我已付款按钮。卖家会收到您已付款的通知，并且门罗币将被保留在仲裁保证金中，直到卖家在他/她的账户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易联系卖家。您可以通过 $appName 用户资料中的 $dashboard 联系卖家和其他现有交易联系人。给卖家发消息，解释一下情况，以及为什么你不能在时间窗口内完成付款。如果卖家未响应此请求，请使用 $supportRequestForm 联系 $appName 支持并提及您的交易 ID。';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nZh extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => '客服请求表';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return '在您发送交易请求后，您有一个时间窗口来完成付款，然后另一方才能取消交易。在此期间，您需要完成付款并按“我已付款”按钮。另一方会收到您已付款的通知，并且硬币将保留在仲裁保证金中，直到另一方在其帐户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易聊天联系对方。您可以从 $dashboard联系对方和您现有的其他贸易联系人。给对方发消息，请说明情况，以及为什么您无法在时间窗口内完成付款。如果对方不响应此请求，请使用 $supportRequestform 联系 $appName 工作人员并提及您的交易 ID。';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return '在您发送交易请求后，您有一个时间窗口来完成付款，然后另一方才能取消交易。在此期间，您需要完成付款并按“我已付款”按钮。另一方会收到您已付款的通知，并且硬币将保留在仲裁保证金中，直到另一方在其帐户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易聊天联系对方。您可以从 $dashboard联系对方和您现有的其他贸易联系人。给对方发消息，请说明情况，以及为什么您无法在时间窗口内完成付款。如果对方不响应此请求，请使用 $supportRequestForm 联系 $appName 工作人员并提及您的交易 ID。';
   }
 
   @override
@@ -2055,12 +2055,12 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb5(Object onionUrl, Object tor) {
-    return '有的！链接：$onionUrl（你需要$tor来打开这个链接）。您现在需要启用JavaScript。{appName}免JavaScript版本即将推出！ {linebreak} 如果您在加载网站时遇到问题，并且您的Tor安全级别设置为“高”,请尝试将其设置为“中”。';
+    return '有的！链接：$onionUrl（你需要$tor来打开这个链接）。';
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return '有的！链接: $b32I2purl 或 $i2pUrl（你需要$i2p来打开这些链接）。';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return '有的！链接: $b32I2pUrl 或 $i2pUrl（你需要$i2p来打开这些链接）。';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nZh extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => '加密货币交易';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '与其他$appName用户的钱包进行交易$free. $linebreak  与其他门罗币钱包进行交易需要缴纳门罗币网络转账费。在$walletPage的标题为$outgoingMonerofees下能看到当前的费用。 您发送交易后，交易费将从您的 $appName 钱包中扣除。';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '与其他$appName用户的钱包进行交易$free. $linebreak  与其他门罗币钱包进行交易需要缴纳门罗币网络转账费。在$walletPage的标题为$outgoingMoneroFees下能看到当前的费用。 您发送交易后，交易费将从您的 $appName 钱包中扣除。';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nZh extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => '钱包页';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '其他$appName用户的钱包交易为 $free。 $linebreak  对外部加密货币钱包的交易受相关加密货币网络交易费的约束。当前费用在标题 $outgoingMonerofees下的 $walletPage 处可见。当您发送交易时，交易费用从您的$appName钱包中支付。';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '其他$appName用户的钱包交易为 $free。 $linebreak  对外部加密货币钱包的交易受相关加密货币网络交易费的约束。当前费用在标题 $outgoingMoneroFees下的 $walletPage 处可见。当您发送交易时，交易费用从您的$appName钱包中支付。';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nZh extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => '启动您的智能手机上的身份验证器应用，然后选择“扫描条形码”。完成之后，双重身份验证代码将出现在身份验证器应用中。';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return '在您的手机上安装身份验证应用。在手机上安装身份验证应用程序。 您可以$chooseAnyapp支持TOTP的应用程序。例如，$andotp是免费和开源的.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return '在您的手机上安装身份验证应用。在手机上安装身份验证应用程序。 您可以$chooseAnyApp支持TOTP的应用程序。例如，$andotp是免费和开源的.';
   }
 
   @override
@@ -2379,12 +2379,12 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb0(Object appName) {
-    return '双重身份验证可以通过安全设置页面启用。 激活双重身份验证时，需要<strong>将备份代码记录在安全的位置</strong>，最好是纸上。如果您找不到双重身份代码，将无法登录帐户，我们无法帮到你。 <strong>请自担风险使用。</strong>';
+    return '双重身份验证可以通过安全设置页面启用。 激活双重身份验证时，需要<strong>将备份代码记录在安全的位置</strong>，最好是纸上。如果您找不到双重身份代码，将无法登录帐户，$appName无法帮到你。这就是双重身份验证的意义所在。 <strong>请自担风险使用。</strong>';
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName 提供 $totp 2FA。启用 2FA 后， $authMobileapp 将与 $appName 同步并生成 6 位一次性密码。此密码每分钟更改一次。要登录或提取仲裁保证金，除了您的密码外，您还需要在密码到期前输入此一次性密码。';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName 提供 $totp 2FA。启用 2FA 后， $authMobileApp 将与 $appName 同步并生成 6 位一次性密码。此密码每分钟更改一次。要登录或提取仲裁保证金，除了您的密码外，您还需要在密码到期前输入此一次性密码。';
   }
 
   @override
@@ -2486,7 +2486,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbone8722Sb1(Object wikipedia) {
-    return '根据{维基百科}：';
+    return '根据$wikipedia：';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nZh extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>匿名购买比特币已成为一项越来越困难的任务。</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return '随着时间的推移，似乎大多数（如果不是所有）获取比特币的传统方法都开始需要进行身份验证，这使得大多数指南今天都可以在线获取，例如$ninetyNinebitcoins或$coincentral已过时。$linebreak  $gutter购买没有ID的比特币的传统方式主要是通过P2P比特币交换平台$localbitcoins，这个地方特别受欢迎，因为匿名购买比特币$paypal。';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return '随着时间的推移，似乎大多数（如果不是所有）获取比特币的传统方法都开始需要进行身份验证，这使得大多数指南今天都可以在线获取，例如$ninetyNineBitcoins或$coincentral已过时。$linebreak  $gutter购买没有ID的比特币的传统方式主要是通过P2P比特币交换平台$localbitcoins，这个地方特别受欢迎，因为匿名购买比特币$paypal。';
   }
 
   @override
@@ -2591,20 +2591,20 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfour8722Sbtext(Object assetName) {
-    return '按“购买”按钮后，您会看到更多有关广告的信息，包括交易条款。请在提交交易请求前仔细阅读这些信息，如果您不同意，可以返回至上一页面，选择另一个广告。要开始交易，请在相关框中键入想要购买的数量，给卖家输入一条消息，然后单击发送交易请求按钮开始交易。单击按钮时，确保已经准备付款，如果您未在付款窗口过期前付款，交易将会自动取消。';
+    return '按“购买”按钮后，您将看到有关广告的更多信息，包括交易条款。在提交交易请求之前仔细阅读它们，如果您不同意，您可以返回上一页并选择另一个广告。要开始交易，请输入您要购买的 $assetName 数量，然后单击“发送交易请求”按钮开始交易。单击按钮时请确保您已准备好付款，如果您未在付款窗口结束前付款，卖家将能够取消交易。';
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '在$appName上$registerAnaccount。您将获得一个免费的网上门罗币钱包。不需要安装任何应用即可使用。如果您已经拥有帐户，请跳到下一步。';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '在$appName上$registerAnAccount。您将获得一个免费的网上门罗币钱包。不需要安装任何应用即可使用。如果您已经拥有帐户，请跳到下一步。';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => '注册一个帐户';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return ' $appName为$registerAnaccount 。您将获得一个免费且安全的在线加密货币钱包。无需其他应用。如果您已有帐户，请跳至下一步。';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return ' $appName为$registerAnAccount 。您将获得一个免费且安全的在线加密货币钱包。无需其他应用。如果您已有帐户，请跳至下一步。';
   }
 
   @override
@@ -2714,7 +2714,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sb3(Object assetName) {
-    return '如果我没有币了/或者我买了太多的币，我该怎么办？';
+    return '如果我用完 $assetName 怎么办？';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nZh extends I18n {
   String get guide250Sbtelegram250Sbtitle => '如何启用Telegram移动通知';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return '$appName上的普通交易就是这样运作的，示例为您将$assetName出售给买家的网上出售交易。流程与网上购买$assetName的流程相似，但此示例重点在于出售$assetName，因为出售是最普遍的交易类型。$linebreak   首先，您需要$create${aSellmoneroad}（称为网上出售广告）。创建广告时，您应选择付款方式、设置价格和限制，并以自由格式消息形式写下交易条款。$linebreak  然后，您需要用$assetName为您的$localmoneroWallet{fund}。';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return '$appName 上的典型交易是这样进行的，示例是您将 $assetName 卖给买家的在线卖出交易。在线购买 $assetName 时的过程类似，但在本例中，我们专注于出售 $assetName，因为这是最常见的交易类型。 $linebreak  首先您需要将$assetName存入您的$localmoneroWallet。 $linebreak  然后，你需要$create $aSellMoneroAd（称为在线销售广告）。在制作广告时，您可以选择一种付款方式、设置您的价格、您的限额并将您的交易条款写成自由格式的消息。 ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nZh extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => '入门';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage是创建新广告的位置。 $linebreak  您也可以在菜单栏的发布交易链接中找到这个页面。这里有一些创建广告所需的选项，以及推荐您设置的许多可选的额外选项。使用这些额外选项，您可以调整广告以符合自己的交易策略。$linebreak  您可以通过$dashboard找到创建的所有广告，也可以通过菜单栏中的控制面板链接找到广告。在控制面板中，您也可以看到自己的所有交易，开放的交易和关闭的交易。 $linebreak  $requiredOptions $linebreak  $location 输入您想要广告显示的国家/地区。$linebreak  $paymentMethod  选择您想要在下拉菜单中提供的付款方式。$linebreak  $currency 选择您要以哪个币种出售门罗币。例如，如果想要在法国出售，您应该选择 EUR。您可以使用$thisList查找币种缩写。';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage是创建新广告的位置。 $linebreak  您也可以在菜单栏的发布交易链接中找到这个页面。这里有一些创建广告所需的选项，以及推荐您设置的许多可选的额外选项。使用这些额外选项，您可以调整广告以符合自己的交易策略。$linebreak  您可以通过$dashboard找到创建的所有广告，也可以通过菜单栏中的控制面板链接找到广告。在控制面板中，您也可以看到自己的所有交易，开放的交易和关闭的交易。 $linebreak  $requiredOptions $linebreak  $location 输入您想要广告显示的国家/地区。$linebreak  $paymentMethod  选择您想要在下拉菜单中提供的付款方式。$linebreak  $currency 选择您要以哪个币种出售门罗币。例如，如果想要在法国出售，您应该选择 EUR。您可以使用$thisList查找币种缩写。';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nZh extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => '创建一个交易广告';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return '另请阅读我们的$termsOfservice。';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return '另请阅读我们的$termsOfService。';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return '您可以成为第一个在以下类别中 $post_an_ad 的人：';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return '您可以成为第一个在以下类别中 $postAnAd 的人：';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nZh extends I18n {
   String get login250Sbreset8722Sblink => '这里重置';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return '您可以使用 $front_type_url 凭据登录。';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return '您可以使用 $frontTypeUrl 凭据登录。';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nZh extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => '此MorphToken交易的限制：';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return '余额不足。必需： $amount_required。';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return '余额不足。必需： $amountRequired。';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nZh extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => '太多广告';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return '请输入正确的新买家限额。 只允许在$min_asset_amount和$max_asset_amount之间的数字。';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return '请输入有效的第一次 $assetSymbol 限制值。只允许 $minAssetAmount 和 $maxAssetAmount 之间的数字。';
   }
 
   @override
@@ -4751,7 +4751,7 @@ class I18nZh extends I18n {
 
   @override
   String post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance(Object appName) {
-    return '最低交易金额不能低于您目前的余额。 尝试降低最低金额或存款。';
+    return '最低交易金额不能低于您的当前余额。尝试降低最低金额或将资金存入您的 $appName 钱包。';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nZh extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => '是';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return '在创建交易广告前，请阅读我们的$termsOfservice和交易$guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return '在创建交易广告前，请阅读我们的$termsOfService和交易$guides';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return '第$step_number步';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return '第$stepNumber步';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nZh extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => '尝试不同的搜索。';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return '或者$postAnad在这里！';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return '或者$postAnAd在这里！';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nZh extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '在QR代码下方的框中<strong>输入2FA应用程序给您的代码</strong>并<strong>按“验证2FA”按钮</strong>。';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp比如$andotp或$anyOther2faapp支持$totp的2FA应用程序。';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp比如$andotp或$anyOther2faApp支持$totp的2FA应用程序。';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nZh extends I18n {
   String get settings250Sbhomepage => '主页';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return '在您的公共资料上显示（例如https://$example_url）';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return '在您的公共资料上显示（例如https://$exampleUrl）';
   }
 
   @override
@@ -5871,7 +5871,7 @@ class I18nZh extends I18n {
 
   @override
   String start250Sbtitle(Object appName) {
-    return '入门';
+    return '$appName 指南：如何买卖门罗币';
   }
 
   @override
@@ -6160,7 +6160,7 @@ class I18nZh extends I18n {
 
   @override
   String trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip(Object username) {
-    return '可选。在此处写下你的评价，最多256字符。';
+    return '可选。留言关于 $username 的消息将与接收者个人资料页面上的评价一起显示。最多256字符。';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return '交易广告（$ad_type）';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return '交易广告（$adType）';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return '由于您的仲裁保证金钱包余额低于 $minRequiredbalance，您的所有销售 $asset 广告都已被公开搜索隐藏。为了让您的销售广告可见，请至少存入 $amountXmr 到您的仲裁保证金 $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return '由于您的仲裁保证金钱包余额低于 $minRequiredBalance，您的所有销售 $asset 广告都已被公开搜索隐藏。为了让您的销售广告可见，请至少存入 $amountXmr 到您的仲裁保证金 $localmoneroWallet.';
   }
 
   @override
@@ -7425,12 +7425,12 @@ class I18nZh extends I18n {
 
   @override
   String widget8722Sbinstructions250Sbinstructions(Object assetName) {
-    return '要为您自己的网站获取门罗街头价小部件，请在下面选择所需的货币，以下代码粘贴到您自己的网页中：';
+    return '要为您自己的网站获取 $assetName 街头价格小部件，请在下面选择所需的货币，然后只需将以下代码粘贴到您自己的网页中：';
   }
 
   @override
   String widget8722Sbinstructions250Sbtitle8722Sbaffiliate(Object assetName) {
-    return '门罗街头价小部件（包含您的联盟代码）';
+    return '$assetName 街头价格小部件（包含您的联盟代码）';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nZh extends I18n {
   String get xx => '全球的';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $time_remaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $timeRemaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nZh extends I18n {
   String get affiliate__enable_btn => '启用会员计划';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return '您的联盟计划已启用，您可以通过将联盟标签 $ref_code 添加到任何 $appName URL 来赚取佣金。';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return '您的联盟计划已启用，您可以通过将联盟标签 $refCode 添加到任何 $appName URL 来赚取佣金。';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nZh extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return '显示在您的公开个人资料上。只接受有效的 URL（例如 https://$example_url）';
+  String settings__homepage_tip(Object exampleUrl) {
+    return '显示在您的公开个人资料上。只接受有效的 URL（例如 https://$exampleUrl）';
   }
 
   @override
@@ -9534,8 +9534,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return '所有在$countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return '所有在$countryOrCurrency';
   }
 
   @override
@@ -9558,8 +9558,8 @@ class I18nZhCn extends I18nZh {
   String get ad8722Sbpage250Sberror250Sbtitle => '交易请求错误';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return '注： 您目前最多只能购买$firstTimelimitxmr。当您进行了更多交易获得了更多信誉后，您将可以购买更多的币。这个限制是由卖家指定的。';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return '注： 您目前最多只能购买$firstTimeLimitXmr。当您进行了更多交易获得了更多信誉后，您将可以购买更多的币。这个限制是由卖家指定的。';
   }
 
   @override
@@ -9607,8 +9607,8 @@ class I18nZhCn extends I18nZh {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '买';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '你要$buyOrsell多少？';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return '你要$buyOrSell多少？';
   }
 
   @override
@@ -9634,8 +9634,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return '本用户要求你的最低评价得分为$minimumFeedbackscore。';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return '本用户要求你的最低评价得分为$minimumFeedbackScore。';
   }
 
   @override
@@ -9916,13 +9916,13 @@ class I18nZhCn extends I18nZh {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => '买方';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return '按“$buy_or_sell_button_name”按钮后，您将看到有关广告的更多信息，包括交易条款。在提交交易请求之前仔细阅读它们，如果您不同意，可以返回上一页并选择其他广告。';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return '按“$buyOrSellButtonName”按钮后，您将看到有关广告的更多信息，包括交易条款。在提交交易请求之前仔细阅读它们，如果您不同意，可以返回上一页并选择其他广告。';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return '要开始交易，输入你想要多少 $asset 到 $buy_or_sell ，然后点击\'发送交易请求\'按钮，开始交易。';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return '要开始交易，输入你想要多少 $asset 到 $buyOrSell ，然后点击\'发送交易请求\'按钮，开始交易。';
   }
 
   @override
@@ -9944,8 +9944,8 @@ class I18nZhCn extends I18nZh {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => '购买';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return '在左列中，您应该选择“$buy_or_sell_tab_name”标签。如果您想更改国家/地区，货币，付款方式或指定所需金额，请单击“显示搜索菜单”按钮，选择所需参数，然后按搜索按钮。';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return '在左列中，您应该选择“$buyOrSellTabName”标签。如果您想更改国家/地区，货币，付款方式或指定所需金额，请单击“显示搜索菜单”按钮，选择所需参数，然后按搜索按钮。';
   }
 
   @override
@@ -10097,8 +10097,8 @@ class I18nZhCn extends I18nZh {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => '无需JavaScript即可工作';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return '用户可通过$tor_link路由轻松访问我们的网页（通过使用$advanced_routing，可以最大程度地提高性能，让您倍感舒适）甚至也可以通过$i2p_link来轻松访问我们的网站。 这不仅确保您能够向我们保密您的真实IP（无论如何我们永远不会与您的帐户相关联），而且确保如果由于某种原因您无法访问我们的普通网站，您还有其他方法可以访问 我们的服务。 我们非常重视您的隐私，$dont_ask_email。';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return '用户可通过$torLink路由轻松访问我们的网页（通过使用$advancedRouting，可以最大程度地提高性能，让您倍感舒适）甚至也可以通过$i2pLink来轻松访问我们的网站。 这不仅确保您能够向我们保密您的真实IP（无论如何我们永远不会与您的帐户相关联），而且确保如果由于某种原因您无法访问我们的普通网站，您还有其他方法可以访问 我们的服务。 我们非常重视您的隐私，$dontAskEmail。';
   }
 
   @override
@@ -10358,16 +10358,16 @@ class I18nZhCn extends I18nZh {
   String get completed250Sbtitle => '你的完成交易';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return '对于执法部门的查询，请阅读 $lawEnforcementinquiries。';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return '对于执法部门的查询，请阅读 $lawEnforcementInquiries。';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => '我们的政策';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return '为了联系我们客服你可以$openAticket或发电子邮件给$email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return '为了联系我们客服你可以$openATicket或发电子邮件给$email';
   }
 
   @override
@@ -10464,8 +10464,8 @@ class I18nZhCn extends I18nZh {
   String get coupons250Sberror250Sbdialog250Sbtitle => '兑换优惠券错误';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return '兑换优惠券时出了点问题。如果这似乎不正确，请与支持人员联系。错误代码： $error_code。';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return '兑换优惠券时出了点问题。如果这似乎不正确，请与支持人员联系。错误代码： $errorCode。';
   }
 
   @override
@@ -11023,7 +11023,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String document8722Sbtitle250Sbstart(Object appName) {
-    return '入门';
+    return '$appName 指南：如何买卖门罗币';
   }
 
   @override
@@ -11075,8 +11075,8 @@ class I18nZhCn extends I18nZh {
   String get edit8722Sbad250Sbsave8722Sbbtn => '保存';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return '这是$createdAt${timeOfcreation}创建的$adType广告。如果你想要更改本广告交易类型请$createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return '这是$createdAt${timeOfCreation}创建的$adType广告。如果你想要更改本广告交易类型请$createANewAd';
   }
 
   @override
@@ -11127,8 +11127,8 @@ class I18nZhCn extends I18nZh {
   String get error8722Sbpage => '哎呀！ 出了错误。 请尽快再试一次。';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return '如果这样没有帮助，请尝试清除Cookie或使用其他浏览器。如果这也无济于事，$open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return '如果这样没有帮助，请尝试清除Cookie或使用其他浏览器。如果这也无济于事，$openATicket';
   }
 
   @override
@@ -11210,8 +11210,8 @@ class I18nZhCn extends I18nZh {
   String get error250Sbsignup250Sb48 => '具有该电邮的用户已存在';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return '交易金额不能少于$min_asset_amount的$assetSymbol。';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return '交易金额不能少于$minAssetAmount的$assetSymbol。';
   }
 
   @override
@@ -11306,7 +11306,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String error250Sbwithdraw250Sbgeneric(Object assetName) {
-    return '出错了，请检查收款地址。';
+    return '出错了，请检查收款$assetName地址。';
   }
 
   @override
@@ -11390,11 +11390,11 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => '别人给出的评价可以是已确认或未确认的。已确认的评价将显示在用户的公开资料上，会影响用户的评价得分。未确认的评价仅对接收用户和{appName}管理员可见。未确认的评价要想得到确认，必须给出评价和接收评价的用户之间的交易必须大于{minimumFeedbackAmount} XMR。';
+  String get faq250Sbanswer8722Sb18 => '别人给出的评价可以是已确认或未确认的。已确认的评价将显示在用户的公开资料上，会影响用户的评价得分。未确认的评价要想得到确认，必须给出评价和接收评价的用户之间的交易量必须超过 100 美元等值。';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return '您在 $appName 上获得新通知时，Web 通知允许您通过浏览器接收弹出通知。如果您正在进行门罗币交易并想在发生新事件时立即知道，$enableWebnotificationsfromyourprofile勾选显示启用Web通知的框，在您的浏览器询问是否允许显示 Web 通知时，按接受。您现在已经完成所有设置，可以开始接收 Web 通知。';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return '您在 $appName 上获得新通知时，Web 通知允许您通过浏览器接收弹出通知。如果您正在进行门罗币交易并想在发生新事件时立即知道，$enableWebNotificationsFromYourProfile勾选显示启用Web通知的框，在您的浏览器询问是否允许显示 Web 通知时，按接受。您现在已经完成所有设置，可以开始接收 Web 通知。';
   }
 
   @override
@@ -11409,7 +11409,7 @@ class I18nZhCn extends I18nZh {
   String get faq250Sbanswer8722Sb28722Sbguide => '双重身份验证指南';
 
   @override
-  String get faq250Sbanswer8722Sb20 => '有时，交易者会索要您的ID。如果您第一次与一位交易者进行交易，他/她可能会要求您进行身份验证，即使您已经在{appName}上验证了您的ID。这是因为在一些国家/地区，当地法律要求卖家了解他们的客户身份。大部分卖家会在交易条款中说明是否需要验证ID。如果您不想将ID发送给卖家，可以随时取消交易，然后搜索没有严格要求的交易者。请务必通过交易聊天将您的ID发送给卖家，我们的交易聊天记录消息会在服务器上加密，并在180天后删除。所有发送至交易聊天的照片均会使用水印进行标记，以防止图片盗用。';
+  String get faq250Sbanswer8722Sb20 => '有时，交易者会索要您的ID。如果您第一次与一位交易者进行交易，他/她可能会要求您进行身份验证。这是因为在一些国家/地区，当地法律要求卖家了解他们的客户身份。大部分卖家会在交易条款中说明是否需要验证ID。如果您不想将ID发送给卖家，可以随时取消交易，然后搜索没有严格要求的交易者。请务必通过交易聊天将您的ID发送给卖家，我们的交易聊天记录消息会在服务器上加密，并在180天后删除。所有发送至交易聊天的照片均会使用水印进行标记，以防止图片盗用。';
 
   @override
   String faq250Sbanswer8722Sb21(Object appName) {
@@ -11428,8 +11428,8 @@ class I18nZhCn extends I18nZh {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => '我们从您的钱包余额中预留少量金额以支付网络交易费。无论从何处发送，每个加密货币交易都必须向网络支付少量费用以进行确认。';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return '此答案与您在线购买 Monero 时的情况有关。在您向 Monero 卖家发送交易请求后，您有一个时间窗口来完成付款，然后卖家才能取消交易（付款窗口因交易的付款方式而异）。在此期间，您需要完成付款并按我已付款按钮。卖家会收到您已付款的通知，并且门罗币将被保留在仲裁保证金中，直到卖家在他/她的账户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易联系卖家。您可以通过 $appName 用户资料中的 $dashboard 联系卖家和其他现有交易联系人。给卖家发消息，解释一下情况，以及为什么你不能在时间窗口内完成付款。如果卖家未响应此请求，请使用 $supportRequestform 联系 $appName 支持并提及您的交易 ID。';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return '此答案与您在线购买 Monero 时的情况有关。在您向 Monero 卖家发送交易请求后，您有一个时间窗口来完成付款，然后卖家才能取消交易（付款窗口因交易的付款方式而异）。在此期间，您需要完成付款并按我已付款按钮。卖家会收到您已付款的通知，并且门罗币将被保留在仲裁保证金中，直到卖家在他/她的账户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易联系卖家。您可以通过 $appName 用户资料中的 $dashboard 联系卖家和其他现有交易联系人。给卖家发消息，解释一下情况，以及为什么你不能在时间窗口内完成付款。如果卖家未响应此请求，请使用 $supportRequestForm 联系 $appName 支持并提及您的交易 ID。';
   }
 
   @override
@@ -11439,8 +11439,8 @@ class I18nZhCn extends I18nZh {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => '客服请求表';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return '在您发送交易请求后，您有一个时间窗口来完成付款，然后另一方才能取消交易。在此期间，您需要完成付款并按“我已付款”按钮。另一方会收到您已付款的通知，并且硬币将保留在仲裁保证金中，直到另一方在其帐户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易聊天联系对方。您可以从 $dashboard联系对方和您现有的其他贸易联系人。给对方发消息，请说明情况，以及为什么您无法在时间窗口内完成付款。如果对方不响应此请求，请使用 $supportRequestform 联系 $appName 工作人员并提及您的交易 ID。';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return '在您发送交易请求后，您有一个时间窗口来完成付款，然后另一方才能取消交易。在此期间，您需要完成付款并按“我已付款”按钮。另一方会收到您已付款的通知，并且硬币将保留在仲裁保证金中，直到另一方在其帐户中看到付款后为您完成交易。如果您已付款购买，但未在付款时间窗口到期前标记付款完成，请通过交易聊天联系对方。您可以从 $dashboard联系对方和您现有的其他贸易联系人。给对方发消息，请说明情况，以及为什么您无法在时间窗口内完成付款。如果对方不响应此请求，请使用 $supportRequestForm 联系 $appName 工作人员并提及您的交易 ID。';
   }
 
   @override
@@ -11512,12 +11512,12 @@ class I18nZhCn extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb5(Object onionUrl, Object tor) {
-    return '有的！链接：$onionUrl（你需要$tor来打开这个链接）。您现在需要启用JavaScript。{appName}免JavaScript版本即将推出！ {linebreak} 如果您在加载网站时遇到问题，并且您的Tor安全级别设置为“高”,请尝试将其设置为“中”。';
+    return '有的！链接：$onionUrl（你需要$tor来打开这个链接）。';
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return '有的！链接: $b32I2purl 或 $i2pUrl（你需要$i2p来打开这些链接）。';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return '有的！链接: $b32I2pUrl 或 $i2pUrl（你需要$i2p来打开这些链接）。';
   }
 
   @override
@@ -11721,8 +11721,8 @@ class I18nZhCn extends I18nZh {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => '加密货币交易';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '与其他$appName用户的钱包进行交易$free. $linebreak  与其他门罗币钱包进行交易需要缴纳门罗币网络转账费。在$walletPage的标题为$outgoingMonerofees下能看到当前的费用。 您发送交易后，交易费将从您的 $appName 钱包中扣除。';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '与其他$appName用户的钱包进行交易$free. $linebreak  与其他门罗币钱包进行交易需要缴纳门罗币网络转账费。在$walletPage的标题为$outgoingMoneroFees下能看到当前的费用。 您发送交易后，交易费将从您的 $appName 钱包中扣除。';
   }
 
   @override
@@ -11732,8 +11732,8 @@ class I18nZhCn extends I18nZh {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => '钱包页';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '其他$appName用户的钱包交易为 $free。 $linebreak  对外部加密货币钱包的交易受相关加密货币网络交易费的约束。当前费用在标题 $outgoingMonerofees下的 $walletPage 处可见。当您发送交易时，交易费用从您的$appName钱包中支付。';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '其他$appName用户的钱包交易为 $free。 $linebreak  对外部加密货币钱包的交易受相关加密货币网络交易费的约束。当前费用在标题 $outgoingMoneroFees下的 $walletPage 处可见。当您发送交易时，交易费用从您的$appName钱包中支付。';
   }
 
   @override
@@ -11827,8 +11827,8 @@ class I18nZhCn extends I18nZh {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => '启动您的智能手机上的身份验证器应用，然后选择“扫描条形码”。完成之后，双重身份验证代码将出现在身份验证器应用中。';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return '在您的手机上安装身份验证应用。在手机上安装身份验证应用程序。 您可以$chooseAnyapp支持TOTP的应用程序。例如，$andotp是免费和开源的.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return '在您的手机上安装身份验证应用。在手机上安装身份验证应用程序。 您可以$chooseAnyApp支持TOTP的应用程序。例如，$andotp是免费和开源的.';
   }
 
   @override
@@ -11836,12 +11836,12 @@ class I18nZhCn extends I18nZh {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb0(Object appName) {
-    return '双重身份验证可以通过安全设置页面启用。 激活双重身份验证时，需要<strong>将备份代码记录在安全的位置</strong>，最好是纸上。如果您找不到双重身份代码，将无法登录帐户，我们无法帮到你。 <strong>请自担风险使用。</strong>';
+    return '双重身份验证可以通过安全设置页面启用。 激活双重身份验证时，需要<strong>将备份代码记录在安全的位置</strong>，最好是纸上。如果您找不到双重身份代码，将无法登录帐户，$appName无法帮到你。这就是双重身份验证的意义所在。 <strong>请自担风险使用。</strong>';
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName 提供 $totp 2FA。启用 2FA 后， $authMobileapp 将与 $appName 同步并生成 6 位一次性密码。此密码每分钟更改一次。要登录或提取仲裁保证金，除了您的密码外，您还需要在密码到期前输入此一次性密码。';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName 提供 $totp 2FA。启用 2FA 后， $authMobileApp 将与 $appName 同步并生成 6 位一次性密码。此密码每分钟更改一次。要登录或提取仲裁保证金，除了您的密码外，您还需要在密码到期前输入此一次性密码。';
   }
 
   @override
@@ -11943,7 +11943,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbone8722Sb1(Object wikipedia) {
-    return '根据{维基百科}：';
+    return '根据$wikipedia：';
   }
 
   @override
@@ -12023,8 +12023,8 @@ class I18nZhCn extends I18nZh {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>匿名购买比特币已成为一项越来越困难的任务。</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return '随着时间的推移，似乎大多数（如果不是所有）获取比特币的传统方法都开始需要进行身份验证，这使得大多数指南今天都可以在线获取，例如$ninetyNinebitcoins或$coincentral已过时。$linebreak  $gutter购买没有ID的比特币的传统方式主要是通过P2P比特币交换平台$localbitcoins，这个地方特别受欢迎，因为匿名购买比特币$paypal。';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return '随着时间的推移，似乎大多数（如果不是所有）获取比特币的传统方法都开始需要进行身份验证，这使得大多数指南今天都可以在线获取，例如$ninetyNineBitcoins或$coincentral已过时。$linebreak  $gutter购买没有ID的比特币的传统方式主要是通过P2P比特币交换平台$localbitcoins，这个地方特别受欢迎，因为匿名购买比特币$paypal。';
   }
 
   @override
@@ -12048,20 +12048,20 @@ class I18nZhCn extends I18nZh {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfour8722Sbtext(Object assetName) {
-    return '按“购买”按钮后，您会看到更多有关广告的信息，包括交易条款。请在提交交易请求前仔细阅读这些信息，如果您不同意，可以返回至上一页面，选择另一个广告。要开始交易，请在相关框中键入想要购买的数量，给卖家输入一条消息，然后单击发送交易请求按钮开始交易。单击按钮时，确保已经准备付款，如果您未在付款窗口过期前付款，交易将会自动取消。';
+    return '按“购买”按钮后，您将看到有关广告的更多信息，包括交易条款。在提交交易请求之前仔细阅读它们，如果您不同意，您可以返回上一页并选择另一个广告。要开始交易，请输入您要购买的 $assetName 数量，然后单击“发送交易请求”按钮开始交易。单击按钮时请确保您已准备好付款，如果您未在付款窗口结束前付款，卖家将能够取消交易。';
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '在$appName上$registerAnaccount。您将获得一个免费的网上门罗币钱包。不需要安装任何应用即可使用。如果您已经拥有帐户，请跳到下一步。';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '在$appName上$registerAnAccount。您将获得一个免费的网上门罗币钱包。不需要安装任何应用即可使用。如果您已经拥有帐户，请跳到下一步。';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => '注册一个帐户';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return ' $appName为$registerAnaccount 。您将获得一个免费且安全的在线加密货币钱包。无需其他应用。如果您已有帐户，请跳至下一步。';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return ' $appName为$registerAnAccount 。您将获得一个免费且安全的在线加密货币钱包。无需其他应用。如果您已有帐户，请跳至下一步。';
   }
 
   @override
@@ -12171,7 +12171,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String guide250Sblocal250Sbtext8722Sb3(Object assetName) {
-    return '如果我没有币了/或者我买了太多的币，我该怎么办？';
+    return '如果我用完 $assetName 怎么办？';
   }
 
   @override
@@ -12511,8 +12511,8 @@ class I18nZhCn extends I18nZh {
   String get guide250Sbtelegram250Sbtitle => '如何启用Telegram移动通知';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return '$appName上的普通交易就是这样运作的，示例为您将$assetName出售给买家的网上出售交易。流程与网上购买$assetName的流程相似，但此示例重点在于出售$assetName，因为出售是最普遍的交易类型。$linebreak   首先，您需要$create${aSellmoneroad}（称为网上出售广告）。创建广告时，您应选择付款方式、设置价格和限制，并以自由格式消息形式写下交易条款。$linebreak  然后，您需要用$assetName为您的$localmoneroWallet{fund}。';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return '$appName 上的典型交易是这样进行的，示例是您将 $assetName 卖给买家的在线卖出交易。在线购买 $assetName 时的过程类似，但在本例中，我们专注于出售 $assetName，因为这是最常见的交易类型。 $linebreak  首先您需要将$assetName存入您的$localmoneroWallet。 $linebreak  然后，你需要$create $aSellMoneroAd（称为在线销售广告）。在制作广告时，您可以选择一种付款方式、设置您的价格、您的限额并将您的交易条款写成自由格式的消息。 ';
   }
 
   @override
@@ -12548,8 +12548,8 @@ class I18nZhCn extends I18nZh {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => '入门';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage是创建新广告的位置。 $linebreak  您也可以在菜单栏的发布交易链接中找到这个页面。这里有一些创建广告所需的选项，以及推荐您设置的许多可选的额外选项。使用这些额外选项，您可以调整广告以符合自己的交易策略。$linebreak  您可以通过$dashboard找到创建的所有广告，也可以通过菜单栏中的控制面板链接找到广告。在控制面板中，您也可以看到自己的所有交易，开放的交易和关闭的交易。 $linebreak  $requiredOptions $linebreak  $location 输入您想要广告显示的国家/地区。$linebreak  $paymentMethod  选择您想要在下拉菜单中提供的付款方式。$linebreak  $currency 选择您要以哪个币种出售门罗币。例如，如果想要在法国出售，您应该选择 EUR。您可以使用$thisList查找币种缩写。';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage是创建新广告的位置。 $linebreak  您也可以在菜单栏的发布交易链接中找到这个页面。这里有一些创建广告所需的选项，以及推荐您设置的许多可选的额外选项。使用这些额外选项，您可以调整广告以符合自己的交易策略。$linebreak  您可以通过$dashboard找到创建的所有广告，也可以通过菜单栏中的控制面板链接找到广告。在控制面板中，您也可以看到自己的所有交易，开放的交易和关闭的交易。 $linebreak  $requiredOptions $linebreak  $location 输入您想要广告显示的国家/地区。$linebreak  $paymentMethod  选择您想要在下拉菜单中提供的付款方式。$linebreak  $currency 选择您要以哪个币种出售门罗币。例如，如果想要在法国出售，您应该选择 EUR。您可以使用$thisList查找币种缩写。';
   }
 
   @override
@@ -12590,8 +12590,8 @@ class I18nZhCn extends I18nZh {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => '创建一个交易广告';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return '另请阅读我们的$termsOfservice。';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return '另请阅读我们的$termsOfService。';
   }
 
   @override
@@ -12673,8 +12673,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return '您可以成为第一个在以下类别中 $post_an_ad 的人：';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return '您可以成为第一个在以下类别中 $postAnAd 的人：';
   }
 
   @override
@@ -13763,8 +13763,8 @@ class I18nZhCn extends I18nZh {
   String get login250Sbreset8722Sblink => '这里重置';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return '您可以使用 $front_type_url 凭据登录。';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return '您可以使用 $frontTypeUrl 凭据登录。';
   }
 
   @override
@@ -13914,8 +13914,8 @@ class I18nZhCn extends I18nZh {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => '此MorphToken交易的限制：';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return '余额不足。必需： $amount_required。';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return '余额不足。必需： $amountRequired。';
   }
 
   @override
@@ -14187,8 +14187,8 @@ class I18nZhCn extends I18nZh {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => '太多广告';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return '请输入正确的新买家限额。 只允许在$min_asset_amount和$max_asset_amount之间的数字。';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return '请输入有效的第一次 $assetSymbol 限制值。只允许 $minAssetAmount 和 $maxAssetAmount 之间的数字。';
   }
 
   @override
@@ -14208,7 +14208,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance(Object appName) {
-    return '最低交易金额不能低于您目前的余额。 尝试降低最低金额或存款。';
+    return '最低交易金额不能低于您的当前余额。尝试降低最低金额或将资金存入您的 $appName 钱包。';
   }
 
   @override
@@ -14375,8 +14375,8 @@ class I18nZhCn extends I18nZh {
   String get post8722Sbad250Sbreview250Sbyes => '是';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return '在创建交易广告前，请阅读我们的$termsOfservice和交易$guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return '在创建交易广告前，请阅读我们的$termsOfService和交易$guides';
   }
 
   @override
@@ -14434,8 +14434,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return '第$step_number步';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return '第$stepNumber步';
   }
 
   @override
@@ -14769,8 +14769,8 @@ class I18nZhCn extends I18nZh {
   String get search250Sbno8722Sbresults8722Sb1 => '尝试不同的搜索。';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return '或者$postAnad在这里！';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return '或者$postAnAd在这里！';
   }
 
   @override
@@ -14857,8 +14857,8 @@ class I18nZhCn extends I18nZh {
   String get settings250Sb2fa250Sbstep8722Sbfour => '在QR代码下方的框中<strong>输入2FA应用程序给您的代码</strong>并<strong>按“验证2FA”按钮</strong>。';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp比如$andotp或$anyOther2faapp支持$totp的2FA应用程序。';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp比如$andotp或$anyOther2faApp支持$totp的2FA应用程序。';
   }
 
   @override
@@ -15018,8 +15018,8 @@ class I18nZhCn extends I18nZh {
   String get settings250Sbhomepage => '主页';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return '在您的公共资料上显示（例如https://$example_url）';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return '在您的公共资料上显示（例如https://$exampleUrl）';
   }
 
   @override
@@ -15328,7 +15328,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String start250Sbtitle(Object appName) {
-    return '入门';
+    return '$appName 指南：如何买卖门罗币';
   }
 
   @override
@@ -15617,7 +15617,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip(Object username) {
-    return '可选。在此处写下你的评价，最多256字符。';
+    return '可选。留言关于 $username 的消息将与接收者个人资料页面上的评价一起显示。最多256字符。';
   }
 
   @override
@@ -15643,8 +15643,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return '交易广告（$ad_type）';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return '交易广告（$adType）';
   }
 
   @override
@@ -16844,8 +16844,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return '由于您的仲裁保证金钱包余额低于 $minRequiredbalance，您的所有销售 $asset 广告都已被公开搜索隐藏。为了让您的销售广告可见，请至少存入 $amountXmr 到您的仲裁保证金 $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return '由于您的仲裁保证金钱包余额低于 $minRequiredBalance，您的所有销售 $asset 广告都已被公开搜索隐藏。为了让您的销售广告可见，请至少存入 $amountXmr 到您的仲裁保证金 $localmoneroWallet.';
   }
 
   @override
@@ -16882,12 +16882,12 @@ class I18nZhCn extends I18nZh {
 
   @override
   String widget8722Sbinstructions250Sbinstructions(Object assetName) {
-    return '要为您自己的网站获取门罗街头价小部件，请在下面选择所需的货币，以下代码粘贴到您自己的网页中：';
+    return '要为您自己的网站获取 $assetName 街头价格小部件，请在下面选择所需的货币，然后只需将以下代码粘贴到您自己的网页中：';
   }
 
   @override
   String widget8722Sbinstructions250Sbtitle8722Sbaffiliate(Object assetName) {
-    return '门罗街头价小部件（包含您的联盟代码）';
+    return '$assetName 街头价格小部件（包含您的联盟代码）';
   }
 
   @override
@@ -16995,8 +16995,8 @@ class I18nZhCn extends I18nZh {
   String get xx => '全球的';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $time_remaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $timeRemaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
   }
 
   @override
@@ -18424,8 +18424,8 @@ class I18nZhCn extends I18nZh {
   String get affiliate__enable_btn => '启用会员计划';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return '您的联盟计划已启用，您可以通过将联盟标签 $ref_code 添加到任何 $appName URL 来赚取佣金。';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return '您的联盟计划已启用，您可以通过将联盟标签 $refCode 添加到任何 $appName URL 来赚取佣金。';
   }
 
   @override
@@ -18439,8 +18439,8 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return '显示在您的公开个人资料上。只接受有效的 URL（例如 https://$example_url）';
+  String settings__homepage_tip(Object exampleUrl) {
+    return '显示在您的公开个人资料上。只接受有效的 URL（例如 https://$exampleUrl）';
   }
 
   @override
@@ -18991,8 +18991,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return '所有在$countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return '所有在$countryOrCurrency';
   }
 
   @override
@@ -19015,8 +19015,8 @@ class I18nZhTw extends I18nZh {
   String get ad8722Sbpage250Sberror250Sbtitle => '交易請求錯誤';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return '注： 您目前最多隻能購買$firstTimelimitxmr。當您進行了更多交易獲得了更多信譽后，您將可以購買更多的幣。這個限制是由賣家指定的。';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return '注： 您目前最多隻能購買$firstTimeLimitXmr。當您進行了更多交易獲得了更多信譽后，您將可以購買更多的幣。這個限制是由賣家指定的。';
   }
 
   @override
@@ -19064,8 +19064,8 @@ class I18nZhTw extends I18nZh {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '買';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '你要$buyOrsell多少？';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return '你要$buyOrSell多少？';
   }
 
   @override
@@ -19091,8 +19091,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return '本用戶要求你的最低評價得分為$minimumFeedbackscore。';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return '本用戶要求你的最低評價得分為$minimumFeedbackScore。';
   }
 
   @override
@@ -19373,13 +19373,13 @@ class I18nZhTw extends I18nZh {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => '買方';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return '按“$buy_or_sell_button_name”按鈕後，您將看到有關廣告的更多信息，包括交易條款。在提交交易請求之前仔細閱讀它們，如果您不同意，可以返回上一頁並選擇其他廣告。';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return '按“$buyOrSellButtonName”按鈕後，您將看到有關廣告的更多信息，包括交易條款。在提交交易請求之前仔細閱讀它們，如果您不同意，可以返回上一頁並選擇其他廣告。';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return '要開始交易，請輸入您要 $buy_or_sell  $asset ，然後按兩下「發送交易請求」按鈕開始交易。';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return '要開始交易，請輸入您要 $buyOrSell  $asset ，然後按兩下「發送交易請求」按鈕開始交易。';
   }
 
   @override
@@ -19401,8 +19401,8 @@ class I18nZhTw extends I18nZh {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => '購買';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return '在左列中，您應該選擇“$buy_or_sell_tab_name”標籤。如果您想更改國家/地區，貨幣，付款方式或指定所需金額，請單擊“顯示搜索菜單”按鈕，選擇所需參數，然後按搜索按鈕。';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return '在左列中，您應該選擇“$buyOrSellTabName”標籤。如果您想更改國家/地區，貨幣，付款方式或指定所需金額，請單擊“顯示搜索菜單”按鈕，選擇所需參數，然後按搜索按鈕。';
   }
 
   @override
@@ -19554,8 +19554,8 @@ class I18nZhTw extends I18nZh {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => '無需JavaScript即可工作';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return '用戶可通過$tor_link路由輕鬆訪問我們的網頁（通過使用$advanced_routing，可以最大程度地提高性能，讓您倍感舒適）甚至也可以通過$i2p_link來輕鬆訪問我們的網站。這不僅確保您能夠向我們保密您的真實IP（無論如何我們永遠不會與您的帳戶相關聯），而且確保如果由於某種原因您無法訪問我們的普通網站，您還有其他方法可以訪問我們的服務。我們非常重視您的隱私，$dont_ask_email。';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return '用戶可通過$torLink路由輕鬆訪問我們的網頁（通過使用$advancedRouting，可以最大程度地提高性能，讓您倍感舒適）甚至也可以通過$i2pLink來輕鬆訪問我們的網站。這不僅確保您能夠向我們保密您的真實IP（無論如何我們永遠不會與您的帳戶相關聯），而且確保如果由於某種原因您無法訪問我們的普通網站，您還有其他方法可以訪問我們的服務。我們非常重視您的隱私，$dontAskEmail。';
   }
 
   @override
@@ -19815,16 +19815,16 @@ class I18nZhTw extends I18nZh {
   String get completed250Sbtitle => '你的完成交易';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return '對於執法部門的查詢，請閱讀 $lawEnforcementinquiries。';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return '對於執法部門的查詢，請閱讀 $lawEnforcementInquiries。';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => '我們的政策';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return '為了聯系我們客服你可以$openAticket或發電子郵件給$email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return '為了聯系我們客服你可以$openATicket或發電子郵件給$email';
   }
 
   @override
@@ -19921,8 +19921,8 @@ class I18nZhTw extends I18nZh {
   String get coupons250Sberror250Sbdialog250Sbtitle => '兌換優惠券錯誤';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return '兌換優惠券時出了點問題。如果這似乎不正確，請與支持人員聯繫。錯誤代碼： $error_code。';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return '兌換優惠券時出了點問題。如果這似乎不正確，請與支持人員聯繫。錯誤代碼： $errorCode。';
   }
 
   @override
@@ -20480,7 +20480,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String document8722Sbtitle250Sbstart(Object appName) {
-    return '入門';
+    return '$appName 指南：如何買賣門羅幣';
   }
 
   @override
@@ -20532,8 +20532,8 @@ class I18nZhTw extends I18nZh {
   String get edit8722Sbad250Sbsave8722Sbbtn => '保存';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return '這是$createdAt${timeOfcreation}創建的$adType廣告。如果你想要更改本廣告交易類型請$createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return '這是$createdAt${timeOfCreation}創建的$adType廣告。如果你想要更改本廣告交易類型請$createANewAd';
   }
 
   @override
@@ -20584,8 +20584,8 @@ class I18nZhTw extends I18nZh {
   String get error8722Sbpage => '哎呀！ 出了錯誤。 請盡快再試一次。';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return '如果這樣沒有幫助，請嘗試清除Cookie或使用其他瀏覽器。如果這也無濟於事，$open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return '如果這樣沒有幫助，請嘗試清除Cookie或使用其他瀏覽器。如果這也無濟於事，$openATicket';
   }
 
   @override
@@ -20667,8 +20667,8 @@ class I18nZhTw extends I18nZh {
   String get error250Sbsignup250Sb48 => '具有該電郵的用戶已存在';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return '交易金額不能少於$min_asset_amount的$assetSymbol。';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return '交易金額不能少於$minAssetAmount的$assetSymbol。';
   }
 
   @override
@@ -20763,7 +20763,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String error250Sbwithdraw250Sbgeneric(Object assetName) {
-    return '出錯了，請檢查收款地址。';
+    return '出錯了，請檢查收款$assetName地址。';
   }
 
   @override
@@ -20847,11 +20847,11 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => '別人給出的評價可以是已確認或未確認的。已確認的評價將顯示在用戶的公開資料上，會影響用戶的評價得分。未確認的評價僅對接收用戶和{appName}管理員可見。未確認的評價要想得到確認，必須給出評價和接收評價的用戶之間的交易必須大於{minimumFeedbackAmount} XMR。';
+  String get faq250Sbanswer8722Sb18 => '別人給出的評價可以是已確認或未確認的。已確認的評價將顯示在用戶的公開資料上，會影響用戶的評價得分。未確認的評價要想得到確認，必須給出評價和接收評價的用戶之間的交易量必須超過 100 美元等值。';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return '您在 $appName 上獲得新通知時，Web 通知允許您通過瀏覽器接收彈出通知。如果您正在進行門羅幣交易並想在發生新事件時立即知道，$enableWebnotificationsfromyourprofile勾選顯示啟用Web通知的框，在您的瀏覽器詢問是否允許顯示 Web 通知時，按接受。您現在已經完成所有設置，可以開始接收 Web 通知。';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return '您在 $appName 上獲得新通知時，Web 通知允許您通過瀏覽器接收彈出通知。如果您正在進行門羅幣交易並想在發生新事件時立即知道，$enableWebNotificationsFromYourProfile勾選顯示啟用Web通知的框，在您的瀏覽器詢問是否允許顯示 Web 通知時，按接受。您現在已經完成所有設置，可以開始接收 Web 通知。';
   }
 
   @override
@@ -20866,7 +20866,7 @@ class I18nZhTw extends I18nZh {
   String get faq250Sbanswer8722Sb28722Sbguide => '雙重身份驗証指南';
 
   @override
-  String get faq250Sbanswer8722Sb20 => '有時，交易者會索要您的ID。如果您第一次與一位交易者進行交易，他/她可能會要求您進行身份驗証，即使您已經在{appName}上驗証了您的ID。這是因為在一些國家/地區，當地法律要求賣家了解他們的客戶身份。大部分賣家會在交易條款中說明是否需要驗証ID。如果您不想將ID發送給賣家，可以隨時取消交易，然后搜索沒有嚴格要求的交易者。請務必通過交易聊天將您的ID發送給賣家，我們的交易聊天記錄消息會在服務器上加密，並在180天后刪除。所有發送至交易聊天的照片均會使用水印進行標記，以防止圖片盜用。';
+  String get faq250Sbanswer8722Sb20 => '有時，交易者會索要您的ID。如果您第一次與一位交易者進行交易，他/她可能會要求您進行身份驗證。這是因為在一些國家/地區，當地法律要求賣家了解他們的客戶身份。大部分賣家會在交易條款中說明是否需要驗證ID。如果您不想將ID發送給賣家，可以隨時取消交易，然後搜索沒有嚴格要求的交易者。請務必通過交易聊天將您的ID發送給賣家，我們的交易聊天記錄消息會在服務器上加密，並在180天后刪除。所有發送至交易聊天的照片均會使用水印進行標記，以防止圖片盜用。';
 
   @override
   String faq250Sbanswer8722Sb21(Object appName) {
@@ -20885,8 +20885,8 @@ class I18nZhTw extends I18nZh {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => '我們從您的錢包餘額中預留少量金額以支付網絡交易費。無論從何處發送，每個加密貨幣交易都必須向網絡支付少量費用以進行確認。';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return '此答案與您在線購買 Monero 時的情況有關。在您向 Monero 賣家發送交易請求後，您有一個時間窗口來完成付款，然後賣家才能取消交易（付款窗口因交易的付款方式而異）。在此期間，您需要完成付款並按我已付款按鈕。賣家會收到您已付款的通知，並且門羅幣將被保留在仲裁保證金中，直到賣家在他/她的賬戶中看到付款後為您完成交易。如果您已付款購買，但未在付款時間窗口到期前標記付款完成，請通過交易聯繫賣家。您可以通過 $appName 用戶資料中的 $dashboard 聯繫賣家和其他現有交易聯繫人。給賣家發消息，解釋一下情況，以及為什麼你不能在時間窗口內完成付款。如果賣家未響應此請求，請使用 $supportRequestform 聯繫 $appName 支持並提及您的交易 ID。';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return '此答案與您在線購買 Monero 時的情況有關。在您向 Monero 賣家發送交易請求後，您有一個時間窗口來完成付款，然後賣家才能取消交易（付款窗口因交易的付款方式而異）。在此期間，您需要完成付款並按我已付款按鈕。賣家會收到您已付款的通知，並且門羅幣將被保留在仲裁保證金中，直到賣家在他/她的賬戶中看到付款後為您完成交易。如果您已付款購買，但未在付款時間窗口到期前標記付款完成，請通過交易聯繫賣家。您可以通過 $appName 用戶資料中的 $dashboard 聯繫賣家和其他現有交易聯繫人。給賣家發消息，解釋一下情況，以及為什麼你不能在時間窗口內完成付款。如果賣家未響應此請求，請使用 $supportRequestForm 聯繫 $appName 支持並提及您的交易 ID。';
   }
 
   @override
@@ -20896,8 +20896,8 @@ class I18nZhTw extends I18nZh {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => '客服請求表';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return '在您發送交易請求後，您有一個時間窗口來完成付款，然後另一方才能取消交易。在此期間，您需要完成付款並按“我已付款”按鈕。另一方會收到您已付款的通知，並且硬幣將保留在仲裁保證金中，直到另一方在其帳戶中看到付款後為您完成交易。如果您已付款購買，但未在付款時間窗口到期前標記付款完成，請通過交易聊天聯繫對方。您可以從 $dashboard聯繫對方和您現有的其他貿易聯繫人。給對方發消息，請說明情況，以及為什麼您無法在時間窗口內完成付款。如果對方不響應此請求，請使用 $supportRequestform 聯繫 $appName 工作人員並提及您的交易 ID。';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return '在您發送交易請求後，您有一個時間窗口來完成付款，然後另一方才能取消交易。在此期間，您需要完成付款並按“我已付款”按鈕。另一方會收到您已付款的通知，並且硬幣將保留在仲裁保證金中，直到另一方在其帳戶中看到付款後為您完成交易。如果您已付款購買，但未在付款時間窗口到期前標記付款完成，請通過交易聊天聯繫對方。您可以從 $dashboard聯繫對方和您現有的其他貿易聯繫人。給對方發消息，請說明情況，以及為什麼您無法在時間窗口內完成付款。如果對方不響應此請求，請使用 $supportRequestForm 聯繫 $appName 工作人員並提及您的交易 ID。';
   }
 
   @override
@@ -20969,12 +20969,12 @@ class I18nZhTw extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb5(Object onionUrl, Object tor) {
-    return '有的！鏈接：$onionUrl（你需要$tor來打開這個鏈接）。您現在需要啟用JavaScript。{appName}免JavaScript版本即將推出！ {linebreak} 如果您在加載網站時遇到問題，並且您的Tor安全級別設置為“高”,請嘗試將其設置為“中”。';
+    return '有的！鏈接：$onionUrl（你需要$tor來打開這個鏈接）。';
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return '有的！鏈接: $b32I2purl 或 $i2pUrl（你需要$i2p來打開這些鏈接）。';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return '有的！鏈接: $b32I2pUrl 或 $i2pUrl（你需要$i2p來打開這些鏈接）。';
   }
 
   @override
@@ -21178,8 +21178,8 @@ class I18nZhTw extends I18nZh {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => '加密貨幣交易';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '與其他$appName用戶的錢包進行交易$free. $linebreak  與其他門羅幣錢包進行交易需要繳納門羅幣網絡轉賬費。在$walletPage的標題為$outgoingMonerofees下能看到當前的費用。 您發送交易后，交易費將從您的 $appName 錢包中扣除。';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '與其他$appName用戶的錢包進行交易$free. $linebreak  與其他門羅幣錢包進行交易需要繳納門羅幣網絡轉賬費。在$walletPage的標題為$outgoingMoneroFees下能看到當前的費用。 您發送交易后，交易費將從您的 $appName 錢包中扣除。';
   }
 
   @override
@@ -21189,8 +21189,8 @@ class I18nZhTw extends I18nZh {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => '錢包頁';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return '其他$appName用戶的錢包交易為 $free。 $linebreak  對外部加密貨幣錢包的交易受相關加密貨幣網絡交易費的約束。當前費用在標題 $outgoingMonerofees下的 $walletPage 處可見。當您發送交易時，交易費用從您的$appName錢包中支付。';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return '其他$appName用戶的錢包交易為 $free。 $linebreak  對外部加密貨幣錢包的交易受相關加密貨幣網絡交易費的約束。當前費用在標題 $outgoingMoneroFees下的 $walletPage 處可見。當您發送交易時，交易費用從您的$appName錢包中支付。';
   }
 
   @override
@@ -21284,8 +21284,8 @@ class I18nZhTw extends I18nZh {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => '啟動您的智能手機上的身份驗証器應用，然后選擇“掃描條形碼”。完成之后，雙重身份驗証代碼將出現在身份驗証器應用中。';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return '在您的手機上安裝身份驗証應用。在手機上安裝身份驗証應用程序。 您可以$chooseAnyapp支持TOTP的應用程序。例如，$andotp是免費和開源的.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return '在您的手機上安裝身份驗証應用。在手機上安裝身份驗証應用程序。 您可以$chooseAnyApp支持TOTP的應用程序。例如，$andotp是免費和開源的.';
   }
 
   @override
@@ -21293,12 +21293,12 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb0(Object appName) {
-    return '雙重身份驗証可以通過安全設置頁面啟用。 激活雙重身份驗証時，需要<strong>將備份代碼記錄在安全的位置</strong>，最好是紙上。如果您找不到雙重身份代碼，將無法登錄帳戶，我們無法幫到你。 <strong>請自擔風險使用。</strong>';
+    return '雙重身份驗證可以通過安全設置頁面啟用。激活雙重身份驗證時，需要<strong>將備份代碼記錄在安全的位置</strong>，最好是紙上。如果您找不到雙重身份代碼，將無法登錄帳戶，$appName無法幫到你。這就是雙重身份驗證的意義所在。 <strong>請自擔風險使用。 </strong>';
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName 提供 $totp 2FA。啟用 2FA 後， $authMobileapp 將與 $appName 同步並生成 6 位一次性密碼。此密碼每分鐘更改一次。要登錄或提取仲裁保證金，除了您的密碼外，您還需要在密碼到期前輸入此一次性密碼。';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName 提供 $totp 2FA。啟用 2FA 後， $authMobileApp 將與 $appName 同步並生成 6 位一次性密碼。此密碼每分鐘更改一次。要登錄或提取仲裁保證金，除了您的密碼外，您還需要在密碼到期前輸入此一次性密碼。';
   }
 
   @override
@@ -21400,7 +21400,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbone8722Sb1(Object wikipedia) {
-    return '根據{維基百科}：';
+    return '根據$wikipedia：';
   }
 
   @override
@@ -21451,7 +21451,7 @@ class I18nZhTw extends I18nZh {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb3 => '門羅幣交易是保密且無法追踪的。';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb4 => '默認情況下，每次門羅幣交易都會混淆發送和接收地址以及交易金額。這種永遠在線的隱私意味著每個門羅幣用戶的活動都會增強所有其他用戶的隱私，與選擇性透明的加密貨幣（例如Z-Cash）不同.門羅幣是可替代的。由於混淆，門羅幣不會因參與之前的交易而受到污染。這意味著門羅幣將永遠被接受而不會受到審查的風險。{Dandelion ++允許傳播交易而無需確定來源。這將混淆交易者的IP地址，並提供進一步的網絡監控保護。';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb4 => '默認情況下，每次門羅幣交易都會混淆發送和接收地址以及交易金額。這種永遠在線的隱私意味著每個門羅幣用戶的活動都會增強所有其他用戶的隱私，與選擇性透明的加密貨幣（例如Z-Cash）不同.門羅幣是可替代的。由於混淆，門羅幣不會因參與之前的交易而受到污染。這意味著門羅幣將永遠被接受而不會受到審查的風險。Dandelion ++允許傳播交易而無需確定來源。這將混淆交易者的IP地址，並提供進一步的網絡監控保護。';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => '門羅幣是一個吸引世界上最好的加密貨幣研究人員和工程人才的基層社區。';
@@ -21480,8 +21480,8 @@ class I18nZhTw extends I18nZh {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>匿名購買比特幣已成為一項越來越困難的任務。</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return '隨著時間的推移，似乎大多數（如果不是所有）獲取比特幣的傳統方法都開始需要進行身份驗證，這使得大多數指南今天都可以在線獲取，例如$ninetyNinebitcoins或$coincentral已過時。$linebreak  $gutter購買沒有ID的比特幣的傳統方式主要是通過P2P比特幣交換平台$localbitcoins，這個地方特別受歡迎，因為匿名購買比特幣$paypal。';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return '隨著時間的推移，似乎大多數（如果不是所有）獲取比特幣的傳統方法都開始需要進行身份驗證，這使得大多數指南今天都可以在線獲取，例如$ninetyNineBitcoins或$coincentral已過時。$linebreak  $gutter購買沒有ID的比特幣的傳統方式主要是通過P2P比特幣交換平台$localbitcoins，這個地方特別受歡迎，因為匿名購買比特幣$paypal。';
   }
 
   @override
@@ -21505,20 +21505,20 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfour8722Sbtext(Object assetName) {
-    return '按“購買”按鈕后，您會看到更多有關廣告的信息，包括交易條款。請在提交交易請求前仔細閱讀這些信息，如果您不同意，可以返回至上一頁面，選擇另一個廣告。要開始交易，請在相關框中鍵入想要購買的數量，給賣家輸入一條消息，然后單擊發送交易請求按鈕開始交易。單擊按鈕時，確保已經准備付款，如果您未在付款窗口過期前付款，交易將會自動取消。';
+    return '按“購買”按鈕後，您將看到有關廣告的更多信息，包括交易條款。在提交交易請求之前仔細閱讀它們，如果您不同意，您可以返回上一頁並選擇另一個廣告。要開始交易，請輸入您要購買的 $assetName 數量，然後單擊“發送交易請求”按鈕開始交易。單擊按鈕時請確保您已準備好付款，如果您未在付款窗口結束前付款，賣家將能夠取消交易。';
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '在$appName上$registerAnaccount。您將獲得一個免費的網上門羅幣錢包。不需要安裝任何應用即可使用。如果您已經擁有帳戶，請跳到下一步。';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '在$appName上$registerAnAccount。您將獲得一個免費的網上門羅幣錢包。不需要安裝任何應用即可使用。如果您已經擁有帳戶，請跳到下一步。';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => '注冊一個帳戶';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return ' $appName為$registerAnaccount 。您將獲得一個免費且安全的在線加密貨幣錢包。無需其他應用。如果您已有帳戶，請跳至下一步。';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return ' $appName為$registerAnAccount 。您將獲得一個免費且安全的在線加密貨幣錢包。無需其他應用。如果您已有帳戶，請跳至下一步。';
   }
 
   @override
@@ -21628,7 +21628,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sblocal250Sbtext8722Sb3(Object assetName) {
-    return '如果我沒有幣了/或者我買了太多的幣，我該怎麼辦？';
+    return '如果我用完 $assetName 怎麼辦？';
   }
 
   @override
@@ -21968,8 +21968,8 @@ class I18nZhTw extends I18nZh {
   String get guide250Sbtelegram250Sbtitle => '如何啟用Telegram移動通知';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return '$appName上的普通交易就是這樣運作的，示例為您將$assetName出售給買家的網上出售交易。流程與網上購買$assetName的流程相似，但此示例重點在於出售$assetName，因為出售是最普遍的交易類型。$linebreak   首先，您需要$create${aSellmoneroad}（稱為網上出售廣告）。創建廣告時，您應選擇付款方式、設置價格和限制，並以自由格式消息形式寫下交易條款。$linebreak  然后，您需要用$assetName為您的$localmoneroWallet{fund}。';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return '$appName 上的典型交易是這樣進行的，示例是您將 $assetName 賣給買家的在線賣出交易。在線購買 $assetName 時的過程類似，但在本例中，我們專注於出售 $assetName，因為這是最常見的交易類型。 $linebreak  首先您需要將$assetName存入您的$localmoneroWallet。 $linebreak  然後，你需要$create $aSellMoneroAd（稱為在線銷售廣告）。在製作廣告時，您可以選擇一種付款方式、設置您的價格、您的限額並將您的交易條款寫成自由格式的消息。 ';
   }
 
   @override
@@ -22005,8 +22005,8 @@ class I18nZhTw extends I18nZh {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => '入門';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage是創建新廣告的位置。 $linebreak  您也可以在菜單欄的發布交易鏈接中找到這個頁面。這裡有一些創建廣告所需的選項，以及推薦您設置的許多可選的額外選項。使用這些額外選項，您可以調整廣告以符合自己的交易策略。$linebreak  您可以通過$dashboard找到創建的所有廣告，也可以通過菜單欄中的控制面板鏈接找到廣告。在控制面板中，您也可以看到自己的所有交易，開放的交易和關閉的交易。 $linebreak  $requiredOptions $linebreak  $location 輸入您想要廣告顯示的國家/地區。$linebreak  $paymentMethod  選擇您想要在下拉菜單中提供的付款方式。$linebreak  $currency 選擇您要以哪個幣種出售門羅幣。例如，如果想要在法國出售，您應該選擇 EUR。您可以使用$thisList查找幣種縮寫。';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage是創建新廣告的位置。 $linebreak  您也可以在菜單欄的發布交易鏈接中找到這個頁面。這裡有一些創建廣告所需的選項，以及推薦您設置的許多可選的額外選項。使用這些額外選項，您可以調整廣告以符合自己的交易策略。$linebreak  您可以通過$dashboard找到創建的所有廣告，也可以通過菜單欄中的控制面板鏈接找到廣告。在控制面板中，您也可以看到自己的所有交易，開放的交易和關閉的交易。 $linebreak  $requiredOptions $linebreak  $location 輸入您想要廣告顯示的國家/地區。$linebreak  $paymentMethod  選擇您想要在下拉菜單中提供的付款方式。$linebreak  $currency 選擇您要以哪個幣種出售門羅幣。例如，如果想要在法國出售，您應該選擇 EUR。您可以使用$thisList查找幣種縮寫。';
   }
 
   @override
@@ -22047,8 +22047,8 @@ class I18nZhTw extends I18nZh {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => '創建一個交易廣告';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return '另請閱讀我們的$termsOfservice。';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return '另請閱讀我們的$termsOfService。';
   }
 
   @override
@@ -22130,8 +22130,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return '您可以成為第一個在以下類別中 $post_an_ad 的人：';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return '您可以成為第一個在以下類別中 $postAnAd 的人：';
   }
 
   @override
@@ -23220,8 +23220,8 @@ class I18nZhTw extends I18nZh {
   String get login250Sbreset8722Sblink => '這裡重置';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return '您可以使用 $front_type_url 憑據登錄。';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return '您可以使用 $frontTypeUrl 憑據登錄。';
   }
 
   @override
@@ -23371,8 +23371,8 @@ class I18nZhTw extends I18nZh {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => '此MorphToken交易的限制：';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return '餘額不足。必需： $amount_required。';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return '餘額不足。必需： $amountRequired。';
   }
 
   @override
@@ -23644,8 +23644,8 @@ class I18nZhTw extends I18nZh {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => '太多廣告';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return '請輸入正確的新買家限額。 隻允許在$min_asset_amount和$max_asset_amount之間的數字。';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return '請輸入有效的第一次 $assetSymbol 限制值。只允許 $minAssetAmount 和 $maxAssetAmount 之間的數字。';
   }
 
   @override
@@ -23665,7 +23665,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String post8722Sbad250Sberror250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance(Object appName) {
-    return '最低交易金額不能低於您目前的余額。 嘗試降低最低金額或存款。';
+    return '最低交易金額不能低於您的當前餘額。嘗試降低最低金額或將資金存入您的 $appName 錢包。';
   }
 
   @override
@@ -23832,8 +23832,8 @@ class I18nZhTw extends I18nZh {
   String get post8722Sbad250Sbreview250Sbyes => '是';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return '在創建交易廣告前，請閱讀我們的$termsOfservice和交易$guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return '在創建交易廣告前，請閱讀我們的$termsOfService和交易$guides';
   }
 
   @override
@@ -23891,8 +23891,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return '第$step_number步';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return '第$stepNumber步';
   }
 
   @override
@@ -24226,8 +24226,8 @@ class I18nZhTw extends I18nZh {
   String get search250Sbno8722Sbresults8722Sb1 => '嘗試不同的搜索。';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return '或者$postAnad这里！';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return '或者$postAnAd这里！';
   }
 
   @override
@@ -24314,8 +24314,8 @@ class I18nZhTw extends I18nZh {
   String get settings250Sb2fa250Sbstep8722Sbfour => '在QR代碼下方的框中<strong>輸入2FA應用程序給您的代碼</strong>並<strong>按“驗証2FA”按鈕</strong>。';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp比如$andotp或$anyOther2faapp支持$totp的2FA應用程序。';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp比如$andotp或$anyOther2faApp支持$totp的2FA應用程序。';
   }
 
   @override
@@ -24475,8 +24475,8 @@ class I18nZhTw extends I18nZh {
   String get settings250Sbhomepage => '主頁';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return '在您的公共資料上顯示（例如https://$example_url）';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return '在您的公共資料上顯示（例如https://$exampleUrl）';
   }
 
   @override
@@ -24785,7 +24785,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String start250Sbtitle(Object appName) {
-    return '入門';
+    return '$appName 指南：如何買賣門羅幣';
   }
 
   @override
@@ -25074,7 +25074,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip(Object username) {
-    return '可選。在此處寫下你的評價，最多256字符。';
+    return '可選。留言關於 $username 的消息將與接收者個人資料頁面上的評價一起顯示。最多256字符。';
   }
 
   @override
@@ -25100,8 +25100,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return '交易廣告（$ad_type）';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return '交易廣告（$adType）';
   }
 
   @override
@@ -26289,7 +26289,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return '即使你做了盡職調查，隻與有信譽的買家進行交易，也不能保証你不會遇到$method申訴的情況。 您可以做以下事情來增加您的安全度：$linebreak  1.請求買方的2張照片ID掃描（即護照和駕駛執照），確保$method帳戶名稱與ID相符。 $linebreak  2.告訴買家從$method的電郵帳戶發送一封電子郵件（甚至可以告訴他們把交易ID和一些關於{appName}的消息放到電子郵件裡）$linebreak  3.收取$method交易的時設直很高的期權金。 例如，25％或更高。 這樣，如果您的$method交易中有五分之一是詐騙（設交易金額相等），那麼您將被覆蓋。 $linebreak  4.謹防高額交易。 嘗試先與交易者進行少量交易。 $linebreak ';
+    return '即使你做了盡職調查，隻與有信譽的買家進行交易，也不能保証你不會遇到$method申訴的情況。 您可以做以下事情來增加您的安全度：$linebreak  1.請求買方的2張照片ID掃描（即護照和駕駛執照），確保$method帳戶名稱與ID相符。 $linebreak  2.告訴買家從$method的電郵帳戶發送一封電子郵件（甚至可以告訴他們把交易ID和一些關於的消息放到電子郵件裡）$linebreak  3.收取$method交易的時設直很高的期權金。 例如，25％或更高。 這樣，如果您的$method交易中有五分之一是詐騙（設交易金額相等），那麼您將被覆蓋。 $linebreak  4.謹防高額交易。 嘗試先與交易者進行少量交易。 $linebreak ';
   }
 
   @override
@@ -26301,8 +26301,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return '由於您的仲裁保證金錢包餘額低於 $minRequiredbalance，您的所有銷售 $asset 廣告都已被公開搜索隱藏。為了讓您的銷售廣告可見，請至少存入 $amountXmr 到您的仲裁保證金 $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return '由於您的仲裁保證金錢包餘額低於 $minRequiredBalance，您的所有銷售 $asset 廣告都已被公開搜索隱藏。為了讓您的銷售廣告可見，請至少存入 $amountXmr 到您的仲裁保證金 $localmoneroWallet.';
   }
 
   @override
@@ -26339,12 +26339,12 @@ class I18nZhTw extends I18nZh {
 
   @override
   String widget8722Sbinstructions250Sbinstructions(Object assetName) {
-    return '要為您自己的網站獲取門羅街頭價小部件，請在下面選擇所需的貨幣，以下代碼粘貼到您自己的網頁中：';
+    return '要為您自己的網站獲取 $assetName 街頭價格小部件，請在下面選擇所需的貨幣，然後只需將以下代碼粘貼到您自己的網頁中：';
   }
 
   @override
   String widget8722Sbinstructions250Sbtitle8722Sbaffiliate(Object assetName) {
-    return '門羅街頭價小部件（包含您的聯盟代碼）';
+    return '$assetName 街頭價格小部件（包含您的聯盟代碼）';
   }
 
   @override
@@ -26452,8 +26452,8 @@ class I18nZhTw extends I18nZh {
   String get xx => '全球的';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return '所有加密貨幣廣告現在都被移至新的“全球（代碼 XX）”國家類別。所有僅因國家/地區不同而重複的加密貨幣廣告都將被刪除 $time_remaining。請確保每種貨幣只有一個加密貨幣廣告，否則除最近以該貨幣發布的廣告外，其他所有廣告都將被刪除，而其餘廣告將移至“全球”國家/地區類別。';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return '所有加密貨幣廣告現在都被移至新的“全球（代碼 XX）”國家類別。所有僅因國家/地區不同而重複的加密貨幣廣告都將被刪除 $timeRemaining。請確保每種貨幣只有一個加密貨幣廣告，否則除最近以該貨幣發布的廣告外，其他所有廣告都將被刪除，而其餘廣告將移至“全球”國家/地區類別。';
   }
 
   @override
@@ -27881,8 +27881,8 @@ class I18nZhTw extends I18nZh {
   String get affiliate__enable_btn => '啟用會員計劃';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return '您的聯盟計劃已啟用，您可以通過將聯盟標籤 $ref_code 添加到任何 $appName URL 來賺取佣金。';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return '您的聯盟計劃已啟用，您可以通過將聯盟標籤 $refCode 添加到任何 $appName URL 來賺取佣金。';
   }
 
   @override
@@ -27896,8 +27896,8 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return '顯示在您的公開個人資料上。只接受有效的 URL（例如 https://$example_url）';
+  String settings__homepage_tip(Object exampleUrl) {
+    return '顯示在您的公開個人資料上。只接受有效的 URL（例如 https://$exampleUrl）';
   }
 
   @override

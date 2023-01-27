@@ -77,8 +77,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'الكل في $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'الكل في $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nAr extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'خطأ في طلب الصفقه';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'يسمح هذا التاجر بحد أقصى $firstTimelimitxmr لأول صفقة معه.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'يسمح هذا التاجر بحد أقصى $firstTimeLimitXmr لأول صفقة معه.';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nAr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'يشترى';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'كم ترغب في $buyOrsell؟';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'كم ترغب في $buyOrSell؟';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'يطلب هذا التاجر درجة تقييم $minimumFeedbackscore على الأقل للتداول.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'يطلب هذا التاجر درجة تقييم $minimumFeedbackScore على الأقل للتداول.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nAr extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'مشتر';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'بعد الضغط على زر \"$buy_or_sell_button_name\" سترى المزيد من المعلومات حول الإعلان ، بما في ذلك شروط الصفقة. اقرأها قبل تقديم طلب الصفقة ، إذا كنت لا توافق عليها يمكنك العودة إلى الصفحة السابقة واختيار إعلان آخر.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'بعد الضغط على زر \"$buyOrSellButtonName\" سترى المزيد من المعلومات حول الإعلان ، بما في ذلك شروط الصفقة. اقرأها قبل تقديم طلب الصفقة ، إذا كنت لا توافق عليها يمكنك العودة إلى الصفحة السابقة واختيار إعلان آخر.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'لبدء التداول ، اكتب مقدار $asset الذي تريده $buy_or_sell وانقر فوق الزر \"إرسال طلب تداول\" لبدء التداول.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'لبدء التداول ، اكتب مقدار $asset الذي تريده $buyOrSell وانقر فوق الزر \"إرسال طلب تداول\" لبدء التداول.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nAr extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'شراء';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'في العمود الأيسر، ثم يجب عليك تحديد علامة التبويب \"$buy_or_sell_tab_name\". إذا كنت ترغب في تغيير الدولة أو العملة أو طريقة الدفع أو تحديد المبلغ المطلوب ، انقر فوق الزر \"إظهار قائمة البحث\" ، واختر المعلمات المطلوبة ، واضغط على زر البحث.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'في العمود الأيسر، ثم يجب عليك تحديد علامة التبويب \"$buyOrSellTabName\". إذا كنت ترغب في تغيير الدولة أو العملة أو طريقة الدفع أو تحديد المبلغ المطلوب ، انقر فوق الزر \"إظهار قائمة البحث\" ، واختر المعلمات المطلوبة ، واضغط على زر البحث.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nAr extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'يعمل بدون JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'يمكن الوصول إلى موقعنا بسهولة من خلال $tor_link (الذي تم ضبطه لتحقيق أقصى أداء لراحتك من خلال استخدامنا لـ $advanced_routing) وحتى من خلال $i2p_link. هذا لا يضمن فقط أنك ستكون قادرًا على إخفاء عنوان IP الحقيقي الخاص بك منا (والذي لا نربطه أبدًا بحسابك على أي حال) ، ولكن إذا أصبح مجالنا العادي لأي سبب من الأسباب غير متاح لك ، فستكون هناك طرق أخرى للوصول إليها خدمتنا. نحن نقدر خصوصيتك كثيرًا ، $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'يمكن الوصول إلى موقعنا بسهولة من خلال $torLink (الذي تم ضبطه لتحقيق أقصى أداء لراحتك من خلال استخدامنا لـ $advancedRouting) وحتى من خلال $i2pLink. هذا لا يضمن فقط أنك ستكون قادرًا على إخفاء عنوان IP الحقيقي الخاص بك منا (والذي لا نربطه أبدًا بحسابك على أي حال) ، ولكن إذا أصبح مجالنا العادي لأي سبب من الأسباب غير متاح لك ، فستكون هناك طرق أخرى للوصول إليها خدمتنا. نحن نقدر خصوصيتك كثيرًا ، $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nAr extends I18n {
   String get completed250Sbtitle => 'صفقاتك المكتملة';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'لاستفسارات تطبيق القانون ، يرجى قراءة $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'لاستفسارات تطبيق القانون ، يرجى قراءة $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'سياستنا';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'للاتصال بالدعم ، يمكنك $openAticket أو إرسال بريد إلكتروني إلى $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'للاتصال بالدعم ، يمكنك $openATicket أو إرسال بريد إلكتروني إلى $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nAr extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'خطأ في استرداد القسيمة';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'حدث خطأ ما أثناء استرداد القسيمة. إذا لم يكن ذلك صحيحًا ، فيرجى الاتصال بالدعم. رمز الخطأ: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'حدث خطأ ما أثناء استرداد القسيمة. إذا لم يكن ذلك صحيحًا ، فيرجى الاتصال بالدعم. رمز الخطأ: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nAr extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'احفظ التغييرات';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'هذا الإعلان إلى $adType $createdAt $timeOfcreation. لتغيير نوع الإعلان ، يرجى $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'هذا الإعلان إلى $adType $createdAt $timeOfCreation. لتغيير نوع الإعلان ، يرجى $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nAr extends I18n {
   String get error8722Sbpage => 'أُووبس! هناك خطأ ما. يرجى المحاولة مرة أخرى قريبا. انقر في أي مكان على الصفحة لإعادة التحميل.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'إذا لم يساعدك ذلك ، فحاول مسح ملفات تعريف الارتباط أو استخدام متصفح مختلف. إذا لم يساعد ذلك أيضًا ، من فضلك $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'إذا لم يساعدك ذلك ، فحاول مسح ملفات تعريف الارتباط أو استخدام متصفح مختلف. إذا لم يساعد ذلك أيضًا ، من فضلك $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nAr extends I18n {
   String get error250Sbsignup250Sb48 => 'المستخدم بهذا البريد الإلكتروني موجود بالفعل';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'لا يمكن طلب أقل من $min_asset_amount $assetSymbol لإنشاء الصفقة.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'لا يمكن طلب أقل من $minAssetAmount $assetSymbol لإنشاء الصفقة.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nAr extends I18n {
   String get faq250Sbanswer8722Sb18 => 'يمكن تأكيد الملاحظات التي تم تقديمها أو عدم تأكيدها. تظهر الملاحظات المؤكدة في الملف الشخصي العام للمستخدم وتؤثر على درجة ملاحظات المستخدم. لكي يتم تأكيد التعليقات غير المؤكدة ، يجب أن يكون إجمالي حجم التجارة بين المستخدم الذي يقوم بإعطاء الملاحظات وتلقيها أكثر من 100 دولار أمريكي.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'تتيح لك إشعارات الويب تلقي إشعارات منبثقة من خلال متصفحك متى تلقيت إشعارًا جديدًا على $appName. إذا كنت تتداول وتريد أن تعرف على الفور عندما يحدث شيء ما ، $enableWebnotificationsfromyourprofile. اقلب المفتاح الذي يشير إلى تمكين إشعارات الويب وعندما يطلب منك المستعرض الإذن لعرض إشعارات الويب ، اضغط على قبول. أنت الآن جاهز تمامًا وستبدأ في تلقي إشعارات الويب.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'تتيح لك إشعارات الويب تلقي إشعارات منبثقة من خلال متصفحك متى تلقيت إشعارًا جديدًا على $appName. إذا كنت تتداول وتريد أن تعرف على الفور عندما يحدث شيء ما ، $enableWebNotificationsFromYourProfile. اقلب المفتاح الذي يشير إلى تمكين إشعارات الويب وعندما يطلب منك المستعرض الإذن لعرض إشعارات الويب ، اضغط على قبول. أنت الآن جاهز تمامًا وستبدأ في تلقي إشعارات الويب.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nAr extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'نحتفظ بمبلغ صغير من رصيد محفظتك لدفع رسوم معاملات الشبكة. يجب أن تدفع كل معاملة عملة مشفرة رسومًا رمزية للشبكة ليتم تأكيدها بغض النظر عن مكان إرسالها.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'تتعلق هذه الإجابة بالحالة عند شراء Monero عبر الإنترنت. بعد إرسال طلب تداول إلى بائع Monero ، لديك نافذة زمنية لإكمال الدفع قبل أن يتمكن البائع من إلغاء الصفقة (تختلف نافذة الدفع وفقًا لطريقة الدفع الخاصة بالتداول). خلال هذا الوقت ، يتعين عليك إكمال عملية الدفع والضغط على زر لقد دفعت. يتم إخطار البائع بأنك قمت بالدفع وسيتم الاحتفاظ بالمونيرو في السند حتى ينتهي البائع من الصفقة نيابة عنك عند رؤية الدفعة في حسابه / حسابها. إذا كنت قد دفعت مقابل الشراء ، ولكنك لم تحدد السداد مكتملًا قبل انتهاء نافذة وقت الدفع ، فيرجى الاتصال بالبائع من خلال الصفقة. يمكنك الاتصال بالبائع وجهات الاتصال التجارية الأخرى الموجودة لديك من $dashboard في ملف تعريف المستخدم الخاص بك $appName. أرسل رسالة إلى البائع واشرح لها الموقف ولماذا لا يمكنك إتمام الدفع خلال النافذة الزمنية. إذا لم يستجب البائع لهذا الطلب ، فيرجى الاتصال بدعم $appName باستخدام $supportRequestform وذكر معرّفك التجاري.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'تتعلق هذه الإجابة بالحالة عند شراء Monero عبر الإنترنت. بعد إرسال طلب تداول إلى بائع Monero ، لديك نافذة زمنية لإكمال الدفع قبل أن يتمكن البائع من إلغاء الصفقة (تختلف نافذة الدفع وفقًا لطريقة الدفع الخاصة بالتداول). خلال هذا الوقت ، يتعين عليك إكمال عملية الدفع والضغط على زر لقد دفعت. يتم إخطار البائع بأنك قمت بالدفع وسيتم الاحتفاظ بالمونيرو في السند حتى ينتهي البائع من الصفقة نيابة عنك عند رؤية الدفعة في حسابه / حسابها. إذا كنت قد دفعت مقابل الشراء ، ولكنك لم تحدد السداد مكتملًا قبل انتهاء نافذة وقت الدفع ، فيرجى الاتصال بالبائع من خلال الصفقة. يمكنك الاتصال بالبائع وجهات الاتصال التجارية الأخرى الموجودة لديك من $dashboard في ملف تعريف المستخدم الخاص بك $appName. أرسل رسالة إلى البائع واشرح لها الموقف ولماذا لا يمكنك إتمام الدفع خلال النافذة الزمنية. إذا لم يستجب البائع لهذا الطلب ، فيرجى الاتصال بدعم $appName باستخدام $supportRequestForm وذكر معرّفك التجاري.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nAr extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'نموذج طلب الدعم';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'بعد إرسال طلب الصفقة، لديك نافذة زمنية لإكمال الدفع قبل أن يتمكن الطرف الآخر من إلغاء الصفقة. خلال هذا الوقت ، يتعين عليك إكمال عملية الدفع والضغط على الزر \"لقد دفعت\". يتم إخطار الطرف الآخر بأنك قمت بالدفع وسيتم الاحتفاظ بالعملات المعدنية في السند حتى ينتهي الطرف الآخر من التداول نيابة عنك بعد رؤية الدفع في حسابه. إذا كنت قد دفعت مقابل الشراء ، ولكنك لم تحدد السداد مكتملًا قبل انتهاء صلاحية نافذة وقت الدفع ، فيرجى الاتصال بالطرف الآخر من خلال الدردشة التجارية. يمكنك الاتصال بالطرف الآخر وجهات الاتصال التجارية الأخرى الموجودة لديك من $dashboard. ابعث برسالة للطرف الآخر واشرح له الموقف ولماذا لم تتمكن من إتمام الدفع خلال النافذة الزمنية. إذا لم يستجب الطرف الآخر لهذا الطلب ، يرجى الاتصال بفريق $appName باستخدام $supportRequestform وذكر معرّفك التجاري.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'بعد إرسال طلب الصفقة، لديك نافذة زمنية لإكمال الدفع قبل أن يتمكن الطرف الآخر من إلغاء الصفقة. خلال هذا الوقت ، يتعين عليك إكمال عملية الدفع والضغط على الزر \"لقد دفعت\". يتم إخطار الطرف الآخر بأنك قمت بالدفع وسيتم الاحتفاظ بالعملات المعدنية في السند حتى ينتهي الطرف الآخر من التداول نيابة عنك بعد رؤية الدفع في حسابه. إذا كنت قد دفعت مقابل الشراء ، ولكنك لم تحدد السداد مكتملًا قبل انتهاء صلاحية نافذة وقت الدفع ، فيرجى الاتصال بالطرف الآخر من خلال الدردشة التجارية. يمكنك الاتصال بالطرف الآخر وجهات الاتصال التجارية الأخرى الموجودة لديك من $dashboard. ابعث برسالة للطرف الآخر واشرح له الموقف ولماذا لم تتمكن من إتمام الدفع خلال النافذة الزمنية. إذا لم يستجب الطرف الآخر لهذا الطلب ، يرجى الاتصال بفريق $appName باستخدام $supportRequestForm وذكر معرّفك التجاري.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'نعم ، لدينا بالفعل اثنان! ها هما: $b32I2purl أو $i2pUrl (تحتاج إلى $i2p لفتح هذه الروابط).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'نعم ، لدينا بالفعل اثنان! ها هما: $b32I2pUrl أو $i2pUrl (تحتاج إلى $i2p لفتح هذه الروابط).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nAr extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'تداول العملات المشفرة';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'معاملات محافظ مستخدمي $appName الآخرين هي $free. $linebreak  تخضع المعاملات إلى محافظ Monero الأخرى لرسوم معاملات شبكة Monero. الرسوم الحالية مرئية على $walletPage تحت العنوان $outgoingMonerofees. يتم دفع رسوم المعاملة من محفظتك $appName عندما تقوم بإرسال معاملة.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'معاملات محافظ مستخدمي $appName الآخرين هي $free. $linebreak  تخضع المعاملات إلى محافظ Monero الأخرى لرسوم معاملات شبكة Monero. الرسوم الحالية مرئية على $walletPage تحت العنوان $outgoingMoneroFees. يتم دفع رسوم المعاملة من محفظتك $appName عندما تقوم بإرسال معاملة.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nAr extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'صفحة المحفظة';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'معاملات محافظ مستخدمي $appName الآخرين هي $free. $linebreak  تخضع المعاملات إلى محافظ العملات المشفرة الخارجية لرسوم معاملات شبكة العملة المشفرة ذات الصلة. الرسوم الحالية مرئية على $walletPage تحت العنوان $outgoingMonerofees. يتم دفع رسوم المعاملة من محفظتك $appName عندما ترسل معاملة.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'معاملات محافظ مستخدمي $appName الآخرين هي $free. $linebreak  تخضع المعاملات إلى محافظ العملات المشفرة الخارجية لرسوم معاملات شبكة العملة المشفرة ذات الصلة. الرسوم الحالية مرئية على $walletPage تحت العنوان $outgoingMoneroFees. يتم دفع رسوم المعاملة من محفظتك $appName عندما ترسل معاملة.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nAr extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'في تطبيق المصادقة الخاص بك ، امسح ضوئيًارمز الاستجابة السريعة المعروض على الصفحة . بعد القيام بذلك ، ستبدأ كلمات المرور المكونة من 6 أرقام لمرة واحدة في الظهور في التطبيق.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'قم بتثبيت تطبيق المصادقة على هاتفك. يمكنك $chooseAnyappالذي يدعم TOTP. على سبيل المثال ، $andotp مجاني ومفتوح المصدر.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'قم بتثبيت تطبيق المصادقة على هاتفك. يمكنك $chooseAnyAppالذي يدعم TOTP. على سبيل المثال ، $andotp مجاني ومفتوح المصدر.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName تقدم $totp 2FA. بمجرد تمكين 2FA ، ستتم مزامنة $authMobileapp مع $appName وستنتج كلمات مرور مكونة من 6 أرقام لمرة واحدة. يتم تغيير كلمة المرور هذه كل دقيقة. لتسجيل الدخول أو سحب سند التحكيم ، بالإضافة إلى كلمة المرور الخاصة بك ، تحتاج أيضًا إلى إدخال كلمة المرور لمرة واحدة قبل انتهاء صلاحيتها.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName تقدم $totp 2FA. بمجرد تمكين 2FA ، ستتم مزامنة $authMobileApp مع $appName وستنتج كلمات مرور مكونة من 6 أرقام لمرة واحدة. يتم تغيير كلمة المرور هذه كل دقيقة. لتسجيل الدخول أو سحب سند التحكيم ، بالإضافة إلى كلمة المرور الخاصة بك ، تحتاج أيضًا إلى إدخال كلمة المرور لمرة واحدة قبل انتهاء صلاحيتها.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nAr extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong> أصبح شراء عملات البيتكوين بشكل مجهول الهوية مهمة صعبة بشكل متزايد. </strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'مع مرور كل يوم ، يبدو أن معظم ، إن لم يكن كل ، الطرق التقليدية للحصول على البيتكوين قد بدأت تتطلب التحقق من الهوية ، مما يجعل معظم الأدلة متاحة على الإنترنت اليوم مثل تلك الموجودة في $ninetyNinebitcoins أو $coincentral قديمة. $linebreak  $gutter الطريقة التقليدية لشراء عملات البيتكوين بدون الهوية كانت بشكل أساسي من خلال منصة تبادل البيتكوين P2P $localbitcoins ، المكان الذي كان شائعًا بشكل خاص لشراء البيتكوين بشكل مجهول باستخدام $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'مع مرور كل يوم ، يبدو أن معظم ، إن لم يكن كل ، الطرق التقليدية للحصول على البيتكوين قد بدأت تتطلب التحقق من الهوية ، مما يجعل معظم الأدلة متاحة على الإنترنت اليوم مثل تلك الموجودة في $ninetyNineBitcoins أو $coincentral قديمة. $linebreak  $gutter الطريقة التقليدية لشراء عملات البيتكوين بدون الهوية كانت بشكل أساسي من خلال منصة تبادل البيتكوين P2P $localbitcoins ، المكان الذي كان شائعًا بشكل خاص لشراء البيتكوين بشكل مجهول باستخدام $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nAr extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount مع $appName. يمكنك الحصول على محفظة مونيرو مجانية وآمنة عبر الإنترنت. ليست هناك حاجة إلى تطبيقات إضافية. إذا كان لديك حساب بالفعل ، فانتقل إلى الخطوة التالية.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount مع $appName. يمكنك الحصول على محفظة مونيرو مجانية وآمنة عبر الإنترنت. ليست هناك حاجة إلى تطبيقات إضافية. إذا كان لديك حساب بالفعل ، فانتقل إلى الخطوة التالية.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'تسجيل حساب';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount مع $appName. يمكنك الحصول على محفظة عملات رقمية مجانية وآمنة عبر الإنترنت. ليست هناك حاجة إلى تطبيقات إضافية. إذا كان لديك حساب بالفعل ، فانتقل إلى الخطوة التالية.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount مع $appName. يمكنك الحصول على محفظة عملات رقمية مجانية وآمنة عبر الإنترنت. ليست هناك حاجة إلى تطبيقات إضافية. إذا كان لديك حساب بالفعل ، فانتقل إلى الخطوة التالية.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nAr extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'كيفية تشغيل إشعارات الهاتف المحمول Telegram';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'الصفقة النموذجية على $appName تعمل مثل هذا ، المثال هو تجارة البيع عبر الإنترنت حيث تبيع $assetName إلى مشتر. تتشابه العملية عندما تشتري $assetName عبر الإنترنت ، ولكن في هذا المثال نركز على بيع $assetName ، لأنه أكثر أنواع التجارة شيوعًا. $linebreak  تحتاج أولاً إلى إيداع $assetName في $localmoneroWallet. $linebreak  بعد ذلك ، تحتاج إلى $create $aSellmoneroad (يسمى إعلان بيع عبر الإنترنت). عند إجراء الإعلان ، اختر طريقة الدفع ، وحدد أسعارك وحدودك واكتب شروط التجارة كرسالة نموذجية مجانية. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'الصفقة النموذجية على $appName تعمل مثل هذا ، المثال هو تجارة البيع عبر الإنترنت حيث تبيع $assetName إلى مشتر. تتشابه العملية عندما تشتري $assetName عبر الإنترنت ، ولكن في هذا المثال نركز على بيع $assetName ، لأنه أكثر أنواع التجارة شيوعًا. $linebreak  تحتاج أولاً إلى إيداع $assetName في $localmoneroWallet. $linebreak  بعد ذلك ، تحتاج إلى $create $aSellMoneroAd (يسمى إعلان بيع عبر الإنترنت). عند إجراء الإعلان ، اختر طريقة الدفع ، وحدد أسعارك وحدودك واكتب شروط التجارة كرسالة نموذجية مجانية. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nAr extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'ابدء';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage هو المكان الذي تنشئ فيه إعلانات جديدة. $linebreak  هناك بعض الخيارات المطلوبة عند إنشاء إعلان ، والكثير من الخيارات الإضافية الاختيارية ولكن يوصى بضبطها. يتيح لك استخدام الخيارات الإضافية ضبط إعلانك ليناسب استراتيجية التداول الخاصة بك. $linebreak  يمكنك العثور على جميع الإعلانات التي قمت بإنشائها من $dashboard. في لوحة القيادة ، يمكنك أيضًا العثور على صفقاتك المفتوحة. $linebreak  $requiredOptions $linebreak  $location أدخل البلد الذي تريد ظهور إعلانك فيه. $linebreak  $paymentMethod حدد طريقة الدفع التي تريد تقديمها من القائمة المنسدلة. $linebreak  $currency اختر العملة التي تبيع بها. على سبيل المثال ، إذا كنت تبيع في فرنسا ، فيجب عليك تحديد EUR. يمكنك استخدام $thisList للعثور على اختصار عملتك.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage هو المكان الذي تنشئ فيه إعلانات جديدة. $linebreak  هناك بعض الخيارات المطلوبة عند إنشاء إعلان ، والكثير من الخيارات الإضافية الاختيارية ولكن يوصى بضبطها. يتيح لك استخدام الخيارات الإضافية ضبط إعلانك ليناسب استراتيجية التداول الخاصة بك. $linebreak  يمكنك العثور على جميع الإعلانات التي قمت بإنشائها من $dashboard. في لوحة القيادة ، يمكنك أيضًا العثور على صفقاتك المفتوحة. $linebreak  $requiredOptions $linebreak  $location أدخل البلد الذي تريد ظهور إعلانك فيه. $linebreak  $paymentMethod حدد طريقة الدفع التي تريد تقديمها من القائمة المنسدلة. $linebreak  $currency اختر العملة التي تبيع بها. على سبيل المثال ، إذا كنت تبيع في فرنسا ، فيجب عليك تحديد EUR. يمكنك استخدام $thisList للعثور على اختصار عملتك.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nAr extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'انشاء اعلان';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'يرجى قراءة $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'يرجى قراءة $termsOfService.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'يمكنك أن تكون أول شخص $post_an_ad في الفئات التالية:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'يمكنك أن تكون أول شخص $postAnAd في الفئات التالية:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nAr extends I18n {
   String get login250Sbreset8722Sblink => 'أعد تعيينه هنا.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'يمكنك استخدام بيانات اعتماد $front_type_url لتسجيل الدخول.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'يمكنك استخدام بيانات اعتماد $frontTypeUrl لتسجيل الدخول.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nAr extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'حدود تداول ChangeNow هذا:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'رصيد غير كاف. مطلوب: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'رصيد غير كاف. مطلوب: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nAr extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'عدد كبير جدًا من الإعلانات';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'الرجاء إدخال قيمة صالحة لأول مرة $assetSymbol. يُسمح فقط بالأرقام بين $min_asset_amount و $max_asset_amount.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'الرجاء إدخال قيمة صالحة لأول مرة $assetSymbol. يُسمح فقط بالأرقام بين $minAssetAmount و $maxAssetAmount.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nAr extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'نعم';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'قبل إنشاء إعلان ، يرجى قراءة $termsOfservice و $guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'قبل إنشاء إعلان ، يرجى قراءة $termsOfService و $guides';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'الخطوة $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'الخطوة $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nAr extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'جرب طريقة دفع مختلفة أو مبلغ مختلف أو بدون مبلغ على الإطلاق. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'بدلاً من ذلك ، كن أول شخص $postAnad هنا!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'بدلاً من ذلك ، كن أول شخص $postAnAd هنا!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nAr extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> أدخل الرمز </strong> الذي قدمه تطبيق 2FA للجوال في المربع الموجود أسفل رمز الاستجابة السريعة و <strong> اضغط على الزر \"تحقق من 2FA\" </strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp مثل $andotp أو $anyOther2faapp يدعم $totp لجهازك.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp مثل $andotp أو $anyOther2faApp يدعم $totp لجهازك.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nAr extends I18n {
   String get settings250Sbhomepage => 'الصفحة الرئيسية';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'تظهر في ملفك الشخصي العام. يتم قبول عنوان URL الصالح فقط (مثل https: // $example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'تظهر في ملفك الشخصي العام. يتم قبول عنوان URL الصالح فقط (مثل https: // $exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'إعلان تجاري ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'إعلان تجاري ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'تم إخفاء جميع إعلانات البيع الخاصة بك $asset من البحث العام لأن رصيد محفظة سندات التحكيم الخاص بك أقل من $minRequiredbalance. لكي تظهر إعلانات البيع الخاصة بك ، يرجى إيداع $amountXmr على الأقل في سند التحكيم الخاص بك $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'تم إخفاء جميع إعلانات البيع الخاصة بك $asset من البحث العام لأن رصيد محفظة سندات التحكيم الخاص بك أقل من $minRequiredBalance. لكي تظهر إعلانات البيع الخاصة بك ، يرجى إيداع $amountXmr على الأقل في سند التحكيم الخاص بك $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nAr extends I18n {
   String get xx => 'عالمي';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'يتم الآن نقل جميع إعلانات العملة المشفرة إلى فئة البلدان الجديدة \"العالمية (الرمز XX)\". سيتم حذف جميع إعلانات العملات المشفرة المكررة التي تختلف حسب البلد فقط $time_remaining. يرجى التأكد من أن لديك إعلان عملة معماة واحد فقط لكل عملة ، وإلا فسيتم حذف جميع الإعلانات باستثناء أحدث إعلان تم نشره بهذه العملة ، بينما سيتم نقل الإعلان المتبقي إلى فئة البلد \"العالمية\".';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'يتم الآن نقل جميع إعلانات العملة المشفرة إلى فئة البلدان الجديدة \"العالمية (الرمز XX)\". سيتم حذف جميع إعلانات العملات المشفرة المكررة التي تختلف حسب البلد فقط $timeRemaining. يرجى التأكد من أن لديك إعلان عملة معماة واحد فقط لكل عملة ، وإلا فسيتم حذف جميع الإعلانات باستثناء أحدث إعلان تم نشره بهذه العملة ، بينما سيتم نقل الإعلان المتبقي إلى فئة البلد \"العالمية\".';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nAr extends I18n {
   String get affiliate__enable_btn => 'تمكين البرنامج التابع';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'تم تمكين برنامج الإحالة الخاص بك ، ويمكنك كسب العمولات عن طريق إضافة علامة الإحالة الخاصة بك $ref_code إلى أي عنوان URL $appName.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'تم تمكين برنامج الإحالة الخاص بك ، ويمكنك كسب العمولات عن طريق إضافة علامة الإحالة الخاصة بك $refCode إلى أي عنوان URL $appName.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nAr extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'تظهر في ملفك الشخصي العام. يتم قبول عنوان URL الصالح فقط (مثل https: // $example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'تظهر في ملفك الشخصي العام. يتم قبول عنوان URL الصالح فقط (مثل https: // $exampleUrl)';
   }
 
   @override

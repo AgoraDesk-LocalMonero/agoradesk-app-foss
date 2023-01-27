@@ -77,8 +77,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Všetko v $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Všetko v $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nSk extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Chyba žiadosti o obchod';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Tento obchodník umožňuje maximálne $firstTimelimitxmr za prvý obchod s ním.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Tento obchodník umožňuje maximálne $firstTimeLimitXmr za prvý obchod s ním.';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nSk extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kúpiť';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Koľko si želáte $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Koľko si želáte $buyOrSell?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Tento obchodník vyžaduje na obchodovanie aspoň $minimumFeedbackscore skóre spätnej väzby.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Tento obchodník vyžaduje na obchodovanie aspoň $minimumFeedbackScore skóre spätnej väzby.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nSk extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'kupca';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Po stlačení tlačidla \'$buy_or_sell_button_name\' uvidíte viac informácií o inzeráte, vrátane obchodných podmienok. Pred odoslaním žiadosti o obchod si ich prečítajte, ak s nimi nesúhlasíte, môžete sa vrátiť na predchádzajúcu stránku a vybrať si iný inzerát.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Po stlačení tlačidla \'$buyOrSellButtonName\' uvidíte viac informácií o inzeráte, vrátane obchodných podmienok. Pred odoslaním žiadosti o obchod si ich prečítajte, ak s nimi nesúhlasíte, môžete sa vrátiť na predchádzajúcu stránku a vybrať si iný inzerát.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Ak chcete začať obchodovať, zadajte koľko $asset chcete $buy_or_sell a kliknutím na tlačidlo \'Odoslať požiadavku na obchod\' začnite obchod.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Ak chcete začať obchodovať, zadajte koľko $asset chcete $buyOrSell a kliknutím na tlačidlo \'Odoslať požiadavku na obchod\' začnite obchod.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nSk extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Kúpiť';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'V ľavom stĺpci by ste potom mali vybrať kartu \'$buy_or_sell_tab_name\'. Ak chcete zmeniť krajinu, menu, spôsob platby alebo špecifikovať požadovanú sumu, kliknite na tlačidlo „Zobraziť ponuku vyhľadávania“, vyberte požadované parametre a stlačte tlačidlo vyhľadávania.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'V ľavom stĺpci by ste potom mali vybrať kartu \'$buyOrSellTabName\'. Ak chcete zmeniť krajinu, menu, spôsob platby alebo špecifikovať požadovanú sumu, kliknite na tlačidlo „Zobraziť ponuku vyhľadávania“, vyberte požadované parametre a stlačte tlačidlo vyhľadávania.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nSk extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Funguje bez JavaScriptu';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Naša stránka je ľahko dostupná cez náš $tor_link (ktorý je vyladený pre maximálny výkon pre vaše pohodlie vďaka nášmu používaniu $advanced_routing) a dokonca aj cez $i2p_link. To zaisťuje nielen to, že pred nami budete môcť utajiť svoju skutočnú IP (ktorú aj tak nikdy nespájame s vaším účtom), ale aj to, že ak sa z akéhokoľvek dôvodu stane naša normálna doména pre vás nedostupná, budete mať k dispozícii iné spôsoby prístupu k našej službe. Veľmi si vážime vaše súkromie, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Naša stránka je ľahko dostupná cez náš $torLink (ktorý je vyladený pre maximálny výkon pre vaše pohodlie vďaka nášmu používaniu $advancedRouting) a dokonca aj cez $i2pLink. To zaisťuje nielen to, že pred nami budete môcť utajiť svoju skutočnú IP (ktorú aj tak nikdy nespájame s vaším účtom), ale aj to, že ak sa z akéhokoľvek dôvodu stane naša normálna doména pre vás nedostupná, budete mať k dispozícii iné spôsoby prístupu k našej službe. Veľmi si vážime vaše súkromie, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nSk extends I18n {
   String get completed250Sbtitle => 'Vaše dokončené obchody';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Ak máte otázky týkajúce sa orgánov činných v trestnom konaní, prečítajte si $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Ak máte otázky týkajúce sa orgánov činných v trestnom konaní, prečítajte si $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'naše pravidlá';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Ak chcete kontaktovať našu podporu, môžete $openAticket alebo poslať e-mail na adresu $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Ak chcete kontaktovať našu podporu, môžete $openATicket alebo poslať e-mail na adresu $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nSk extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Chyba pri uplatňovaní kupónu';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Pri uplatňovaní kupónu sa vyskytla chyba. Ak sa vám to nezdá, kontaktujte podporu. Kód chyby: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Pri uplatňovaní kupónu sa vyskytla chyba. Ak sa vám to nezdá, kontaktujte podporu. Kód chyby: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nSk extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Uložiť zmeny';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Táto reklama je určená pre $adType $createdAt $timeOfcreation. Ak chcete zmeniť typ reklamy, $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Táto reklama je určená pre $adType $createdAt $timeOfCreation. Ak chcete zmeniť typ reklamy, $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nSk extends I18n {
   String get error8722Sbpage => 'Ojoj! Niečo sa pokazilo. Skúste to znova čoskoro. Kliknutím kdekoľvek na stránku ju znova načítate.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Ak to nepomôže, skúste vymazať súbory cookie alebo použiť iný prehliadač. Ak ani to nepomôže, prosím $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Ak to nepomôže, skúste vymazať súbory cookie alebo použiť iný prehliadač. Ak ani to nepomôže, prosím $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nSk extends I18n {
   String get error250Sbsignup250Sb48 => 'Používateľ s týmto e-mailom už existuje';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Na vytvorenie obchodu nemožno požadovať menej ako $min_asset_amount $assetSymbol.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Na vytvorenie obchodu nemožno požadovať menej ako $minAssetAmount $assetSymbol.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nSk extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Spätná väzba, ktorá bola poskytnutá, môže byť potvrdená alebo nepotvrdená. Potvrdená spätná väzba sa zobrazuje vo verejnom profile používateľa a ovplyvňuje skóre spätnej väzby používateľa. Aby sa nepotvrdená spätná väzba stala potvrdenou, celkový objem obchodu medzi používateľom poskytujúcim a prijímajúcim spätnú väzbu musí byť vyšší ako ekvivalent 100 USD.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Webové upozornenia vám umožňujú prijímať kontextové upozornenia prostredníctvom vášho prehliadača vždy, keď dostanete nové upozornenie na $appName. Ak obchodujete a chcete okamžite vedieť, keď sa niečo stane, $enableWebnotificationsfromyourprofile. Prepnite prepínač s nápisom Povoliť webové upozornenia a keď vás prehliadač požiada o povolenie zobrazovať webové upozornenia, stlačte tlačidlo Prijať. Teraz je všetko pripravené a začnete dostávať webové upozornenia.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Webové upozornenia vám umožňujú prijímať kontextové upozornenia prostredníctvom vášho prehliadača vždy, keď dostanete nové upozornenie na $appName. Ak obchodujete a chcete okamžite vedieť, keď sa niečo stane, $enableWebNotificationsFromYourProfile. Prepnite prepínač s nápisom Povoliť webové upozornenia a keď vás prehliadač požiada o povolenie zobrazovať webové upozornenia, stlačte tlačidlo Prijať. Teraz je všetko pripravené a začnete dostávať webové upozornenia.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nSk extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Vyhradzujeme si malú čiastku zo zostatku v peňaženke na zaplatenie poplatku za sieťovú transakciu. Každá transakcia kryptomeny musí zaplatiť malý poplatok sieti, aby bola potvrdená bez ohľadu na to, odkiaľ bola odoslaná.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Táto odpoveď sa týka prípadu, keď nakupujete Monero online. Po odoslaní žiadosti o obchod predajcovi Monero máte časové okno na dokončenie platby, kým predajca bude môcť zrušiť obchod (okno platby sa líši v závislosti od spôsobu platby obchodu). Počas tejto doby musíte dokončiť platbu a stlačiť tlačidlo Zaplatil som. Predajca bude informovaný, že ste vykonali platbu a Monero bude zadržané, kým predajca nedokončí obchod za vás, keď uvidí platbu na svojom účte. Ak ste za nákup zaplatili, ale neoznačili ste platbu za dokončenú pred uplynutím časového okna platby, kontaktujte predajcu prostredníctvom obchodu. Predajcu a vaše ďalšie existujúce obchodné kontakty môžete kontaktovať z $dashboard vo svojom $appName užívateľskom profile. Pošlite správu predajcovi a láskavo vysvetlite situáciu a dôvod, prečo ste nemohli dokončiť platbu v časovom okne. Ak predajca na túto požiadavku neodpovie, kontaktujte podporu $appName pomocou $supportRequestform a uveďte svoje obchodné ID.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Táto odpoveď sa týka prípadu, keď nakupujete Monero online. Po odoslaní žiadosti o obchod predajcovi Monero máte časové okno na dokončenie platby, kým predajca bude môcť zrušiť obchod (okno platby sa líši v závislosti od spôsobu platby obchodu). Počas tejto doby musíte dokončiť platbu a stlačiť tlačidlo Zaplatil som. Predajca bude informovaný, že ste vykonali platbu a Monero bude zadržané, kým predajca nedokončí obchod za vás, keď uvidí platbu na svojom účte. Ak ste za nákup zaplatili, ale neoznačili ste platbu za dokončenú pred uplynutím časového okna platby, kontaktujte predajcu prostredníctvom obchodu. Predajcu a vaše ďalšie existujúce obchodné kontakty môžete kontaktovať z $dashboard vo svojom $appName užívateľskom profile. Pošlite správu predajcovi a láskavo vysvetlite situáciu a dôvod, prečo ste nemohli dokončiť platbu v časovom okne. Ak predajca na túto požiadavku neodpovie, kontaktujte podporu $appName pomocou $supportRequestForm a uveďte svoje obchodné ID.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nSk extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'formulár žiadosti o podporu';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Po odoslaní žiadosti o obchod máte časové okno na dokončenie platby, kým druhá strana bude môcť zrušiť obchod. Počas tejto doby musíte dokončiť platbu a stlačiť tlačidlo „Zaplatil som“. Druhá strana bude informovaná, že ste vykonali platbu a mince budú držané v dlhopise, kým druhá strana nedokončí obchod za vás po tom, čo uvidí platbu na svojom účte. Ak ste za nákup zaplatili, ale neoznačili ste platbu za dokončenú pred uplynutím časového obdobia platby, kontaktujte druhú stranu prostredníctvom obchodného chatu. Môžete kontaktovať druhú stranu a vaše ďalšie existujúce obchodné kontakty z $dashboard. Pošlite správu druhej strane a láskavo vysvetlite situáciu a dôvod, prečo ste nemohli dokončiť platbu v časovom okne. Ak druhá strana neodpovie na túto požiadavku, kontaktujte personál $appName pomocou $supportRequestform a uveďte svoje obchodné ID.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Po odoslaní žiadosti o obchod máte časové okno na dokončenie platby, kým druhá strana bude môcť zrušiť obchod. Počas tejto doby musíte dokončiť platbu a stlačiť tlačidlo „Zaplatil som“. Druhá strana bude informovaná, že ste vykonali platbu a mince budú držané v dlhopise, kým druhá strana nedokončí obchod za vás po tom, čo uvidí platbu na svojom účte. Ak ste za nákup zaplatili, ale neoznačili ste platbu za dokončenú pred uplynutím časového obdobia platby, kontaktujte druhú stranu prostredníctvom obchodného chatu. Môžete kontaktovať druhú stranu a vaše ďalšie existujúce obchodné kontakty z $dashboard. Pošlite správu druhej strane a láskavo vysvetlite situáciu a dôvod, prečo ste nemohli dokončiť platbu v časovom okne. Ak druhá strana neodpovie na túto požiadavku, kontaktujte personál $appName pomocou $supportRequestForm a uveďte svoje obchodné ID.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Áno, vlastne máme dve! Tu sú: $b32I2purl alebo $i2pUrl (na otvorenie týchto odkazov potrebujete $i2p).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Áno, vlastne máme dve! Tu sú: $b32I2pUrl alebo $i2pUrl (na otvorenie týchto odkazov potrebujete $i2p).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nSk extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Obchodovanie s kryptomenami';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transakcie do peňaženiek iných používateľov $appName sú $free. $linebreak  Transakcie do iných peňaženiek Monero podliehajú poplatku za transakciu siete Monero. Aktuálny poplatok je viditeľný na $walletPage pod nadpisom $outgoingMonerofees. Poplatok za transakciu sa platí z vašej peňaženky $appName pri odoslaní transakcie.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transakcie do peňaženiek iných používateľov $appName sú $free. $linebreak  Transakcie do iných peňaženiek Monero podliehajú poplatku za transakciu siete Monero. Aktuálny poplatok je viditeľný na $walletPage pod nadpisom $outgoingMoneroFees. Poplatok za transakciu sa platí z vašej peňaženky $appName pri odoslaní transakcie.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nSk extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'stránka peňaženky';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transakcie do peňaženiek iných používateľov $appName sú $free. $linebreak  Transakcie do externých kryptomenových peňaženiek podliehajú príslušnému poplatku za transakciu v kryptomenovej sieti. Aktuálny poplatok je viditeľný na $walletPage pod nadpisom $outgoingMonerofees. Poplatok za transakciu sa platí z vašej peňaženky $appName pri odoslaní transakcie.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transakcie do peňaženiek iných používateľov $appName sú $free. $linebreak  Transakcie do externých kryptomenových peňaženiek podliehajú príslušnému poplatku za transakciu v kryptomenovej sieti. Aktuálny poplatok je viditeľný na $walletPage pod nadpisom $outgoingMoneroFees. Poplatok za transakciu sa platí z vašej peňaženky $appName pri odoslaní transakcie.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nSk extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Vo svojej autentifikačnej aplikácii naskenujte QR kód zobrazený na stránke. Keď to urobíte, v aplikácii sa začnú zobrazovať 6-miestne jednorazové heslá.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Nainštalujte si do telefónu aplikáciu na overenie. Môžete $chooseAnyapp, ktorý podporuje TOTP. Napríklad $andotp je bezplatný a otvorený zdroj.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Nainštalujte si do telefónu aplikáciu na overenie. Môžete $chooseAnyApp, ktorý podporuje TOTP. Napríklad $andotp je bezplatný a otvorený zdroj.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName ponúka $totp 2FA. Po aktivácii 2FA sa $authMobileapp zosynchronizuje s $appName a vytvorí 6-miestne jednorazové heslá. Toto heslo sa mení každú minútu. Ak sa chcete prihlásiť alebo stiahnuť arbitrážny dlhopis, musíte okrem hesla zadať aj toto jednorazové heslo pred uplynutím jeho platnosti.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName ponúka $totp 2FA. Po aktivácii 2FA sa $authMobileApp zosynchronizuje s $appName a vytvorí 6-miestne jednorazové heslá. Toto heslo sa mení každú minútu. Ak sa chcete prihlásiť alebo stiahnuť arbitrážny dlhopis, musíte okrem hesla zadať aj toto jednorazové heslo pred uplynutím jeho platnosti.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nSk extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Anonymný nákup bitcoinov sa stáva čoraz ťažšou úlohou.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'S každým ďalším dňom sa zdá, že väčšina, ak nie všetky, tradičné metódy získavania bitcoinov si začali vyžadovať overenie ID, takže väčšina sprievodcov, ktoré sú dnes k dispozícii online, ako napríklad ten na $ninetyNinebitcoins alebo $coincentral, je zastaraná. $linebreak  $gutter Tradičným spôsobom nákupu bitcoinov bez ID je predovšetkým výmenná platforma P2P bitcoinov $localbitcoins, miesto, ktoré bolo obzvlášť obľúbené na anonymné nakupovanie bitcoinov prostredníctvom $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'S každým ďalším dňom sa zdá, že väčšina, ak nie všetky, tradičné metódy získavania bitcoinov si začali vyžadovať overenie ID, takže väčšina sprievodcov, ktoré sú dnes k dispozícii online, ako napríklad ten na $ninetyNineBitcoins alebo $coincentral, je zastaraná. $linebreak  $gutter Tradičným spôsobom nákupu bitcoinov bez ID je predovšetkým výmenná platforma P2P bitcoinov $localbitcoins, miesto, ktoré bolo obzvlášť obľúbené na anonymné nakupovanie bitcoinov prostredníctvom $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nSk extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount s $appName. Získate bezplatnú a bezpečnú online peňaženku Monero. Nie sú potrebné žiadne ďalšie aplikácie. Ak už máte účet, prejdite na ďalší krok.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount s $appName. Získate bezplatnú a bezpečnú online peňaženku Monero. Nie sú potrebné žiadne ďalšie aplikácie. Ak už máte účet, prejdite na ďalší krok.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Zaregistrujte si účet';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount s $appName. Získate bezplatnú a bezpečnú online peňaženku s kryptomenami. Nie sú potrebné žiadne ďalšie aplikácie. Ak už účet máte, prejdite na ďalší krok.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount s $appName. Získate bezplatnú a bezpečnú online peňaženku s kryptomenami. Nie sú potrebné žiadne ďalšie aplikácie. Ak už účet máte, prejdite na ďalší krok.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nSk extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Ako zapnúť mobilné upozornenia telegramu';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Typický obchod na $appName funguje takto, príkladom je online predajný obchod, kde predávate $assetName kupujúcemu. Proces je podobný, keď kupujete $assetName online, ale v tomto príklade sa zameriavame na predaj $assetName, keďže ide o najbežnejší typ obchodu. $linebreak  Najprv musíte vložiť $assetName do svojho $localmoneroWallet. $linebreak  Potom musíte $create $aSellmoneroad (nazýva sa to reklama na predaj online). Pri realizácii inzerátu si zvolíte spôsob platby, nastavíte si cenu, svoje limity a napíšete svoje obchodné podmienky ako bezplatnú správu. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'Typický obchod na $appName funguje takto, príkladom je online predajný obchod, kde predávate $assetName kupujúcemu. Proces je podobný, keď kupujete $assetName online, ale v tomto príklade sa zameriavame na predaj $assetName, keďže ide o najbežnejší typ obchodu. $linebreak  Najprv musíte vložiť $assetName do svojho $localmoneroWallet. $linebreak  Potom musíte $create $aSellMoneroAd (nazýva sa to reklama na predaj online). Pri realizácii inzerátu si zvolíte spôsob platby, nastavíte si cenu, svoje limity a napíšete svoje obchodné podmienky ako bezplatnú správu. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nSk extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Začíname';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage je miesto, kde vytvárate nové reklamy. $linebreak  Existuje niekoľko možností pri vytváraní reklamy, ktoré sú povinné, a mnoho ďalších možností, ktoré sú voliteľné, ale odporúčame ich nastaviť. Použitie ďalších možností vám umožní vyladiť vašu reklamu tak, aby vyhovovala vašej obchodnej stratégii. $linebreak  Môžete nájsť všetky reklamy, ktoré ste vytvorili zo svojho $dashboard. Na dashboarde nájdete aj svoje otvorené obchody. $linebreak  $requiredOptions $linebreak  $location Zadajte krajinu, v ktorej sa má zobrazovať vaša reklama. $linebreak  $paymentMethod Z rozbaľovacej ponuky vyberte spôsob platby, ktorý chcete ponúkať. $linebreak  $currency Vyberte menu, za ktorú predávate. Napríklad, ak predávate vo Francúzsku, mali by ste vybrať EUR. Ak chcete nájsť skratku vašej meny, môžete použiť $thisList.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage je miesto, kde vytvárate nové reklamy. $linebreak  Existuje niekoľko možností pri vytváraní reklamy, ktoré sú povinné, a mnoho ďalších možností, ktoré sú voliteľné, ale odporúčame ich nastaviť. Použitie ďalších možností vám umožní vyladiť vašu reklamu tak, aby vyhovovala vašej obchodnej stratégii. $linebreak  Môžete nájsť všetky reklamy, ktoré ste vytvorili zo svojho $dashboard. Na dashboarde nájdete aj svoje otvorené obchody. $linebreak  $requiredOptions $linebreak  $location Zadajte krajinu, v ktorej sa má zobrazovať vaša reklama. $linebreak  $paymentMethod Z rozbaľovacej ponuky vyberte spôsob platby, ktorý chcete ponúkať. $linebreak  $currency Vyberte menu, za ktorú predávate. Napríklad, ak predávate vo Francúzsku, mali by ste vybrať EUR. Ak chcete nájsť skratku vašej meny, môžete použiť $thisList.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nSk extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Nastavenie inzerátu';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Prečítajte si naše $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Prečítajte si naše $termsOfService.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Môžete byť prvým, kto $post_an_ad v nasledujúcich kategóriách:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Môžete byť prvým, kto $postAnAd v nasledujúcich kategóriách:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nSk extends I18n {
   String get login250Sbreset8722Sblink => 'Obnovte to tu.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Na prihlásenie môžete použiť svoje prihlasovacie údaje $front_type_url.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Na prihlásenie môžete použiť svoje prihlasovacie údaje $frontTypeUrl.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nSk extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Limity pre tento obchod ChangeNow:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Nedostatočný kredit. Požadované: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Nedostatočný kredit. Požadované: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nSk extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Príliš veľa reklám';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Zadajte platnú hodnotu prvého limitu $assetSymbol. Povolené sú iba čísla medzi $min_asset_amount a $max_asset_amount.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Zadajte platnú hodnotu prvého limitu $assetSymbol. Povolené sú iba čísla medzi $minAssetAmount a $maxAssetAmount.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nSk extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'Áno';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Pred vytvorením inzerátu si prečítajte naše $termsOfservice a $guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Pred vytvorením inzerátu si prečítajte naše $termsOfService a $guides';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Krok $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Krok $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nSk extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Skúste použiť iný spôsob platby, inú sumu alebo žiadnu sumu. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Prípadne buďte prvý, kto tu $postAnad!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Prípadne buďte prvý, kto tu $postAnAd!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nSk extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Zadajte kód</strong> pridelený vašou mobilnou aplikáciou 2FA do poľa pod kódom QR a <strong> stlačte tlačidlo „Overiť 2FA“</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp, napríklad $andotp alebo $anyOther2faapp, ktorý podporuje $totp pre vaše zariadenie.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp, napríklad $andotp alebo $anyOther2faApp, ktorý podporuje $totp pre vaše zariadenie.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nSk extends I18n {
   String get settings250Sbhomepage => 'Domovská stránka';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Zobrazuje sa vo vašom verejnom profile. Prijíma sa iba platná webová adresa (napr. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Zobrazuje sa vo vašom verejnom profile. Prijíma sa iba platná webová adresa (napr. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Obchodná reklama ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Obchodná reklama ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Všetky vaše predajné $asset inzeráty boli skryté pred verejným vyhľadávaním, pretože váš zostatok v peňaženke arbitrážnych dlhopisov je nižší ako $minRequiredbalance. Ak chcete, aby boli vaše predajné reklamy viditeľné, vložte aspoň $amountXmr na svoj arbitrážny dlhopis $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Všetky vaše predajné $asset inzeráty boli skryté pred verejným vyhľadávaním, pretože váš zostatok v peňaženke arbitrážnych dlhopisov je nižší ako $minRequiredBalance. Ak chcete, aby boli vaše predajné reklamy viditeľné, vložte aspoň $amountXmr na svoj arbitrážny dlhopis $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nSk extends I18n {
   String get xx => 'globálne';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Všetky reklamy na kryptomeny sa teraz presúvajú do novej kategórie krajín „globálna (kód XX)“. Všetky duplicitné reklamy na kryptomeny, ktoré sa líšia iba podľa krajiny, budú odstránené $time_remaining. Uistite sa, že máte iba JEDNU reklamu na kryptomeny na menu, inak budú všetky reklamy okrem naposledy uverejnenej v danej mene vymazané, zatiaľ čo zvyšná reklama bude presunutá do kategórie „globálna“ krajina.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Všetky reklamy na kryptomeny sa teraz presúvajú do novej kategórie krajín „globálna (kód XX)“. Všetky duplicitné reklamy na kryptomeny, ktoré sa líšia iba podľa krajiny, budú odstránené $timeRemaining. Uistite sa, že máte iba JEDNU reklamu na kryptomeny na menu, inak budú všetky reklamy okrem naposledy uverejnenej v danej mene vymazané, zatiaľ čo zvyšná reklama bude presunutá do kategórie „globálna“ krajina.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nSk extends I18n {
   String get affiliate__enable_btn => 'Povoliť pridružený program';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Váš partnerský program je povolený a môžete zarábať provízie pridaním značky pridruženého partnera${ref_code} na ľubovoľnú adresu URL $appName.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Váš partnerský program je povolený a môžete zarábať provízie pridaním značky pridruženého partnera${refCode} na ľubovoľnú adresu URL $appName.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nSk extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Zobrazuje sa vo vašom verejnom profile. Prijíma sa iba platná webová adresa (napr. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Zobrazuje sa vo vašom verejnom profile. Prijíma sa iba platná webová adresa (napr. https://$exampleUrl)';
   }
 
   @override

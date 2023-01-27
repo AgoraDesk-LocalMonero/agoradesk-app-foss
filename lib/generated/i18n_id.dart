@@ -77,8 +77,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Masukkan semua $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Masukkan semua $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nId extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Terjadi kesalahan saat mengajukan perdagangan';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Pedagang ini mengizinkan maksimal $firstTimelimitxmr untuk perdagangan pertama dengannya.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Pedagang ini mengizinkan maksimal $firstTimeLimitXmr untuk perdagangan pertama dengannya.';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nId extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'membeli';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Seberapa banyak anda ingin $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Seberapa banyak anda ingin $buyOrSell?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Pedagang ini membutuhkan setidaknya $minimumFeedbackscore skor umpan balik untuk melakukan perdagangan.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Pedagang ini membutuhkan setidaknya $minimumFeedbackScore skor umpan balik untuk melakukan perdagangan.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nId extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'pembeli';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Setelah Anda menekan tombol \'$buy_or_sell_button_name\', Anda akan melihat lebih banyak informasi tentang iklan tersebut, termasuk ketentuan perdagangan. Baca semuanya sebelum mengirimkan permintaan perdagangan, jika Anda tidak setuju dengan ketentuan tersebut, Anda dapat kembali ke halaman sebelumnya dan memilih iklan lain.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Setelah Anda menekan tombol \'$buyOrSellButtonName\', Anda akan melihat lebih banyak informasi tentang iklan tersebut, termasuk ketentuan perdagangan. Baca semuanya sebelum mengirimkan permintaan perdagangan, jika Anda tidak setuju dengan ketentuan tersebut, Anda dapat kembali ke halaman sebelumnya dan memilih iklan lain.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Untuk memulai perdagangan, ketikkan berapa banyak $asset yang Anda ingin $buy_or_sell dan klik tombol \'Kirim permintaan perdagangan\' untuk memulai perdagangan.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Untuk memulai perdagangan, ketikkan berapa banyak $asset yang Anda ingin $buyOrSell dan klik tombol \'Kirim permintaan perdagangan\' untuk memulai perdagangan.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nId extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Beli';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'Di kolom kiri Anda harus kemudian memilih tab \'$buy_or_sell_tab_name\'. Jika Anda ingin mengubah negara, mata uang, metode pembayaran atau menentukan jumlah yang diperlukan, klik tombol \'Tampilkan menu pencarian\', pilih parameter yang diinginkan, dan tekan tombol pencarian.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'Di kolom kiri Anda harus kemudian memilih tab \'$buyOrSellTabName\'. Jika Anda ingin mengubah negara, mata uang, metode pembayaran atau menentukan jumlah yang diperlukan, klik tombol \'Tampilkan menu pencarian\', pilih parameter yang diinginkan, dan tekan tombol pencarian.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nId extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Bekerja tanpa JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Situs kami mudah diakses melalui $tor_link kami (yang disetel untuk performa maksimal demi kenyamanan anda melalui penggunaan $advanced_routing kami) dan bahkan melalui sebuah $i2p_link. Hal ini memastikan bahwa anda tidak hanya dapat menyembunyikan IP anda yang sebenarnya dari kami (yang kami juga tidak pernah mengasosiasikan dengan akun anda sebenarnya), tetapi bahwa jika untuk alasan apa pun domain normal kami menjadi tidak dapat diakses oleh anda, akan ada cara lain bagi anda untuk mengakses layanan kami. Kami sangat menghargai privasi Anda, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Situs kami mudah diakses melalui $torLink kami (yang disetel untuk performa maksimal demi kenyamanan anda melalui penggunaan $advancedRouting kami) dan bahkan melalui sebuah $i2pLink. Hal ini memastikan bahwa anda tidak hanya dapat menyembunyikan IP anda yang sebenarnya dari kami (yang kami juga tidak pernah mengasosiasikan dengan akun anda sebenarnya), tetapi bahwa jika untuk alasan apa pun domain normal kami menjadi tidak dapat diakses oleh anda, akan ada cara lain bagi anda untuk mengakses layanan kami. Kami sangat menghargai privasi Anda, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nId extends I18n {
   String get completed250Sbtitle => 'Perdagangan Anda yang telah selesai';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Untuk pertanyaan penegakan hukum, harap baca $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Untuk pertanyaan penegakan hukum, harap baca $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'kebijakan kami';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Untuk menghubungi dukungan kami, Anda dapat $openAticket atau mengirimkan email ke $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Untuk menghubungi dukungan kami, Anda dapat $openATicket atau mengirimkan email ke $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nId extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Kesalahan saat penukaran kupon';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Terjadi kesalahan saat menukarkan kupon. Jika tampaknya tidak benar, harap hubungi dukungan. Kode kesalahan: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Terjadi kesalahan saat menukarkan kupon. Jika tampaknya tidak benar, harap hubungi dukungan. Kode kesalahan: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nId extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Simpan perubahan';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Iklan ini adalah untuk $adType $createdAt $timeOfcreation. Untuk mengganti jenis iklan, harap $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Iklan ini adalah untuk $adType $createdAt $timeOfCreation. Untuk mengganti jenis iklan, harap $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nId extends I18n {
   String get error8722Sbpage => 'Oops! Ada sesuatu yang salah. Harap coba sebentar lagi. Klik di manapun pada laman ini untuk memuat ulang.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Jika itu tidak membantu, coba bersihkan cookies atau gunakan peramban lain. Jika itu tidak membantu juga, harap $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Jika itu tidak membantu, coba bersihkan cookies atau gunakan peramban lain. Jika itu tidak membantu juga, harap $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nId extends I18n {
   String get error250Sbsignup250Sb48 => 'Pengguna dengan email tersebut sudah ada';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Tidak dapat meminta kurang dari $min_asset_amount $assetSymbol untuk pembuatan perdagangan.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Tidak dapat meminta kurang dari $minAssetAmount $assetSymbol untuk pembuatan perdagangan.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nId extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Umpan balik yang telah diberikan bisa jadi terkonfirmasi atau tidak terkonfirmasi. Umpan balik yang terkonfirmasi terlihat pada profil publik pengguna dan mempengaruhi skor umpan balik pengguna. Untuk umpan balik yang tidak terkonfimasi agar berubah menjadi terkonfirmasi total volume perdagangan antara pengguna yang memberi dan menerima umpan balik harus lebih dari yang 100 USD atau yang setara.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Notifikasi web memungkinkan Anda menerima notifikasi pop-up melalui peramban Anda setiap kali Anda mendapatkan notifikasi baru di $appName. Jika Anda berdagang dan ingin segera mengetahui kapan sesuatu terjadi, $enableWebnotificationsfromyourprofile. Balik tombol yang mengatakan Aktifkan notifikasi Web dan ketika browser Anda meminta izin untuk menampilkan notifikasi web, tekan terima. Anda sekarang sudah siap dan akan mulai menerima notifikasi web.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Notifikasi web memungkinkan Anda menerima notifikasi pop-up melalui peramban Anda setiap kali Anda mendapatkan notifikasi baru di $appName. Jika Anda berdagang dan ingin segera mengetahui kapan sesuatu terjadi, $enableWebNotificationsFromYourProfile. Balik tombol yang mengatakan Aktifkan notifikasi Web dan ketika browser Anda meminta izin untuk menampilkan notifikasi web, tekan terima. Anda sekarang sudah siap dan akan mulai menerima notifikasi web.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nId extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Kami mencadangkan sejumlah kecil dari saldo dompet Anda untuk membayar biaya transaksi. Setiap transaksi mata uang kripto harus membayar sejumlah kecil biaya ke jaringan agar dikonfirmasi, tidak peduli dari mana transaksi itu dikirim.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Jawaban ini berkaitan dengan kasus ketika Anda membeli Monero secara daring. Setelah Anda mengirimkan permintaan perdagangan kepada penjual Monero, Anda memiliki jendela waktu untuk menyelesaikan pembayaran sebelum penjual dapat membatalkan perdagangan (jendela pembayaran bervariasi tergantung pada metode pembayaran perdagangan). Selama masa ini, Anda harus menyelesaikan pembayaran Anda dan menekan tombol Saya sudah membayar. Penjual akan diberi tahukan bahwa Anda telah melakukan pembayaran dan Monero akan ditahan di dalam jaminan sampai penjual menyelesaikan perdagangan untuk anda ketika melihat pembayaran di akunnya. Jika anda sudah membayar pembelian, tetapi tidak menandai bahwa pembayaran telah selesai sebelum jendela waktu pembayaran berakhir, silakan hubungi penjual melalui perdagangan. Anda dapat menghubungi penjual dan kontak perdagangan anda yang lain dari $dashboard di Profil Pengguna $appName anda. Kirim sebuah pesan kepada penjual dan jelaskan situasinya dengan ramah dan mengapa anda tidak dapat menyelesaikan pembayaran dalam jangka waktu yang ditentukan. Jika penjual tidak menanggapi permintaan ini, harap hubungi dukungan $appName menggunakan $supportRequestform dan sebutkan ID perdagangan Anda.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Jawaban ini berkaitan dengan kasus ketika Anda membeli Monero secara daring. Setelah Anda mengirimkan permintaan perdagangan kepada penjual Monero, Anda memiliki jendela waktu untuk menyelesaikan pembayaran sebelum penjual dapat membatalkan perdagangan (jendela pembayaran bervariasi tergantung pada metode pembayaran perdagangan). Selama masa ini, Anda harus menyelesaikan pembayaran Anda dan menekan tombol Saya sudah membayar. Penjual akan diberi tahukan bahwa Anda telah melakukan pembayaran dan Monero akan ditahan di dalam jaminan sampai penjual menyelesaikan perdagangan untuk anda ketika melihat pembayaran di akunnya. Jika anda sudah membayar pembelian, tetapi tidak menandai bahwa pembayaran telah selesai sebelum jendela waktu pembayaran berakhir, silakan hubungi penjual melalui perdagangan. Anda dapat menghubungi penjual dan kontak perdagangan anda yang lain dari $dashboard di Profil Pengguna $appName anda. Kirim sebuah pesan kepada penjual dan jelaskan situasinya dengan ramah dan mengapa anda tidak dapat menyelesaikan pembayaran dalam jangka waktu yang ditentukan. Jika penjual tidak menanggapi permintaan ini, harap hubungi dukungan $appName menggunakan $supportRequestForm dan sebutkan ID perdagangan Anda.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nId extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'formulir permintaan dukungan';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Setelah Anda mengirimkan permintaan perdagangan, Anda memiliki jendela waktu untuk menyelesaikan pembayaran sebelum pihak lain dapat membatalkan perdagangan. Selama masa ini, Anda harus menyelesaikan pembayaran Anda dan menekan \'tombol saya sudah membayar\'. Pihak lain akan diberi tahukan bahwa Anda telah melakukan pembayaran dan koin akan ditahan di dalam jaminan sampai pihak lain menyelesaikan perdagangan untuk anda setelah melihat pembayaran di akun mereka. Jika anda sudah membayar pembelian, tetapi tidak menandai bahwa pembayaran telah selesai sebelum jendela waktu pembayaran kedaluwarsa, silakan hubungi pihak lain melalui percakapan perdagangan. Anda dapat menghubungi pihak lain dan kontak perdagangan anda yang lain dari $dashboard. Kirim sebuah pesan kepada pihak lain dan jelaskan situasinya dengan ramah dan mengapa anda tidak dapat menyelesaikan pembayaran dalam jangka waktu yang ditentukan. Jika pihak lain tidak menanggapi permintaan ini, harap hubungi staf $appName menggunakan $supportRequestform dan sebutkan ID perdagangan Anda.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Setelah Anda mengirimkan permintaan perdagangan, Anda memiliki jendela waktu untuk menyelesaikan pembayaran sebelum pihak lain dapat membatalkan perdagangan. Selama masa ini, Anda harus menyelesaikan pembayaran Anda dan menekan \'tombol saya sudah membayar\'. Pihak lain akan diberi tahukan bahwa Anda telah melakukan pembayaran dan koin akan ditahan di dalam jaminan sampai pihak lain menyelesaikan perdagangan untuk anda setelah melihat pembayaran di akun mereka. Jika anda sudah membayar pembelian, tetapi tidak menandai bahwa pembayaran telah selesai sebelum jendela waktu pembayaran kedaluwarsa, silakan hubungi pihak lain melalui percakapan perdagangan. Anda dapat menghubungi pihak lain dan kontak perdagangan anda yang lain dari $dashboard. Kirim sebuah pesan kepada pihak lain dan jelaskan situasinya dengan ramah dan mengapa anda tidak dapat menyelesaikan pembayaran dalam jangka waktu yang ditentukan. Jika pihak lain tidak menanggapi permintaan ini, harap hubungi staf $appName menggunakan $supportRequestForm dan sebutkan ID perdagangan Anda.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Ya, kami sebenarnya punya dua! Ini dia: $b32I2purl atau $i2pUrl (Anda perlu $i2p untuk membuka tautan ini).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Ya, kami sebenarnya punya dua! Ini dia: $b32I2pUrl atau $i2pUrl (Anda perlu $i2p untuk membuka tautan ini).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nId extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Perdagangan mata uang kripto';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transaksi ke dompet pengguna $appName lainnya itu $free. $linebreak  Transaksi ke dompet Monero lainnya dikenakan biaya transaksi jaringan Monero. Biaya saat ini dapat dilihat di $walletPage di bawah judul $outgoingMonerofees. Biaya transaksi dibayarkan dari dompet $appName Anda saat Anda mengirimkan transaksi.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transaksi ke dompet pengguna $appName lainnya itu $free. $linebreak  Transaksi ke dompet Monero lainnya dikenakan biaya transaksi jaringan Monero. Biaya saat ini dapat dilihat di $walletPage di bawah judul $outgoingMoneroFees. Biaya transaksi dibayarkan dari dompet $appName Anda saat Anda mengirimkan transaksi.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nId extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'laman dompet';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transaksi ke dompet pengguna $appName lainnya adalah $free. $linebreak  Transaksi ke luar dompet mata uang kripto dikenai biaya transaksi jaringan mata uang kripto yang relevan. Biaya saat ini dapat dilihat di $walletPage di bawah judul $outgoingMonerofees. Biaya transaksi dibayarkan dari dompet $appName Anda saat Anda mengirimkan transaksi.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transaksi ke dompet pengguna $appName lainnya adalah $free. $linebreak  Transaksi ke luar dompet mata uang kripto dikenai biaya transaksi jaringan mata uang kripto yang relevan. Biaya saat ini dapat dilihat di $walletPage di bawah judul $outgoingMoneroFees. Biaya transaksi dibayarkan dari dompet $appName Anda saat Anda mengirimkan transaksi.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nId extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Di aplikasi otentikator Anda, pindai kode QR yang ditampilkan di halaman. Setelah Anda melakukannya, 6 digit kata sandi sekali pakai akan mulai muncul di aplikasi.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'pasang aplikasi otentikasi di ponsel Anda. Anda dapat $chooseAnyapp yang mendukung TOTP. Misalnya, $andotp itu Gratis dan Open Source.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'pasang aplikasi otentikasi di ponsel Anda. Anda dapat $chooseAnyApp yang mendukung TOTP. Misalnya, $andotp itu Gratis dan Open Source.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName menawarkan $totp 2FA. Setelah 2FA diaktifkan, $authMobileapp akan disinkronisasikan dengan $appName dan akan menghasilkan 6 digit kata sandi sekali pakai. Kata sandi ini diubah setiap menit. Untuk masuk atau menarik jaminan arbitrase, selain kata sandi Anda, Anda juga harus memasukkan kata sandi sekali pakai ini sebelum kedaluwarsa.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName menawarkan $totp 2FA. Setelah 2FA diaktifkan, $authMobileApp akan disinkronisasikan dengan $appName dan akan menghasilkan 6 digit kata sandi sekali pakai. Kata sandi ini diubah setiap menit. Untuk masuk atau menarik jaminan arbitrase, selain kata sandi Anda, Anda juga harus memasukkan kata sandi sekali pakai ini sebelum kedaluwarsa.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nId extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Membeli bitcoin secara anonim telah menjadi pekarjaan yang semakin sulit.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Seiring berjalannya hari, sepertinya sebagian besar, jika tidak semua, metode tradisional untuk memperoleh bitcoin mulai memerlukan verifikasi ID, membuat sebagian besar panduan yang tersedia secara daring saat ini seperti yang ada di $ninetyNinebitcoins atau $coincentral menjadi usang. $linebreak  $gutter Cara tradisional untuk membeli bitcoin tanpa ID utamanya melalui platform pertukaran Bitcoin P2P $localbitcoins, tempat yang secara khusus populer untuk membeli bitcoin secara anonim dengan $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Seiring berjalannya hari, sepertinya sebagian besar, jika tidak semua, metode tradisional untuk memperoleh bitcoin mulai memerlukan verifikasi ID, membuat sebagian besar panduan yang tersedia secara daring saat ini seperti yang ada di $ninetyNineBitcoins atau $coincentral menjadi usang. $linebreak  $gutter Cara tradisional untuk membeli bitcoin tanpa ID utamanya melalui platform pertukaran Bitcoin P2P $localbitcoins, tempat yang secara khusus populer untuk membeli bitcoin secara anonim dengan $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nId extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount dengan $appName. Anda mendapatkan dompet Monero daring yang gratis dan aman. Tidak diperlukan aplikasi tambahan. Jika Anda sudah memiliki akun, lewati ke langkah berikutnya.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount dengan $appName. Anda mendapatkan dompet Monero daring yang gratis dan aman. Tidak diperlukan aplikasi tambahan. Jika Anda sudah memiliki akun, lewati ke langkah berikutnya.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Daftarkan akun';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount dengan $appName. Anda mendapatkan dompet mata uang kripto daring yang gratis dan aman. Tidak diperlukan aplikasi tambahan. Jika Anda sudah memiliki akun, lewati ke langkah berikutnya.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount dengan $appName. Anda mendapatkan dompet mata uang kripto daring yang gratis dan aman. Tidak diperlukan aplikasi tambahan. Jika Anda sudah memiliki akun, lewati ke langkah berikutnya.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nId extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Cara mengaktifkan notifikasi seluler Telegram';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Tipikal jual beli di $appName bekerja seperti ini, contohnya adalah penjualan secara daring di mana Anda menjual $assetName ke pembeli. Prosesnya mirip seperti ketika Anda membeli $assetName secara daring, tetapi untuk contoh ini kami berfokus pada penjualan $assetName, karena itulah jenis perdagangan yang paling umum. $linebreak  Pertama, Anda perlu menyetorkan $assetName ke $localmoneroWallet Anda. $linebreak  Kemudian, Anda perlu $create $aSellmoneroad (disebut iklan penjualan daring). Saat membuat iklan, Anda memilih metode pembayaran, menetapkan harga, batasan anda, dan menulis ketentuan perdagangan Anda sebagai pesan dalam bentuk bebas. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'Tipikal jual beli di $appName bekerja seperti ini, contohnya adalah penjualan secara daring di mana Anda menjual $assetName ke pembeli. Prosesnya mirip seperti ketika Anda membeli $assetName secara daring, tetapi untuk contoh ini kami berfokus pada penjualan $assetName, karena itulah jenis perdagangan yang paling umum. $linebreak  Pertama, Anda perlu menyetorkan $assetName ke $localmoneroWallet Anda. $linebreak  Kemudian, Anda perlu $create $aSellMoneroAd (disebut iklan penjualan daring). Saat membuat iklan, Anda memilih metode pembayaran, menetapkan harga, batasan anda, dan menulis ketentuan perdagangan Anda sebagai pesan dalam bentuk bebas. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nId extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Mulai';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage adalah tempat di mana Anda membuat iklan baru. $linebreak  Ada beberapa opsi saat membuat iklan yang diperlukan, dan banyak opsi tambahan yang bersifat opsional tetapi disarankan untuk diatur. Menggunakan opsi tambahan memungkinkan Anda menyesuaikan iklan agar sesuai dengan strategi perdagangan Anda. $linebreak  Anda dapat menemukan semua iklan yang telah Anda buat dari $dashboard Anda. Di dasbor Anda juga dapat menemukan perdagangan terbuka Anda. $linebreak  $requiredOptions $linebreak  $location Masukkan negara di mana Anda ingin iklan Anda ditampilkan. $linebreak  $paymentMethod Pilih metode pembayaran yang ingin Anda tawarkan dari menu yang terbuka. $linebreak  $currency Pilih mata uang yang Anda gunakan. Misalnya, jika Anda menjual di Prancis, Anda harus memilih EUR. Anda dapat menggunakan $thisList untuk menemukan akronim mata uang Anda.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage adalah tempat di mana Anda membuat iklan baru. $linebreak  Ada beberapa opsi saat membuat iklan yang diperlukan, dan banyak opsi tambahan yang bersifat opsional tetapi disarankan untuk diatur. Menggunakan opsi tambahan memungkinkan Anda menyesuaikan iklan agar sesuai dengan strategi perdagangan Anda. $linebreak  Anda dapat menemukan semua iklan yang telah Anda buat dari $dashboard Anda. Di dasbor Anda juga dapat menemukan perdagangan terbuka Anda. $linebreak  $requiredOptions $linebreak  $location Masukkan negara di mana Anda ingin iklan Anda ditampilkan. $linebreak  $paymentMethod Pilih metode pembayaran yang ingin Anda tawarkan dari menu yang terbuka. $linebreak  $currency Pilih mata uang yang Anda gunakan. Misalnya, jika Anda menjual di Prancis, Anda harus memilih EUR. Anda dapat menggunakan $thisList untuk menemukan akronim mata uang Anda.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nId extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Menyiapkan iklan';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Silakan baca $termsOfservice kami.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Silakan baca $termsOfService kami.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Anda bisa menjadi yang pertama $post_an_ad dalam kategori berikut ini:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Anda bisa menjadi yang pertama $postAnAd dalam kategori berikut ini:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nId extends I18n {
   String get login250Sbreset8722Sblink => 'Setel ulang di sini.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Anda dapat menggunakan kredensial $front_type_url untuk masuk.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Anda dapat menggunakan kredensial $frontTypeUrl untuk masuk.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nId extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Limit untuk perdagangan ChangeNow ini:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Saldo tidak mencukupi. Diperlukan: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Saldo tidak mencukupi. Diperlukan: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nId extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Terlalu banyak iklan';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Harap masukkan nilai limit pertama kali $assetSymbol yang valid. Hanya angka antara $min_asset_amount dan $max_asset_amount yang diperbolehkan.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Harap masukkan nilai limit pertama kali $assetSymbol yang valid. Hanya angka antara $minAssetAmount dan $maxAssetAmount yang diperbolehkan.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nId extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'iya';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Sebelum membuat sebuah iklan, harap baca $termsOfservice dan $guides kami';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Sebelum membuat sebuah iklan, harap baca $termsOfService dan $guides kami';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Langkah ke-$step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Langkah ke-$stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nId extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Coba dengan metode pembayaran yang berbeda, jumlah yang berbeda atau tanpa jumlah sama sekali. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Atau, jadilah yang pertama yang $postAnad di sini!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Atau, jadilah yang pertama yang $postAnAd di sini!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nId extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Masukkan kode</strong> yang diberikan oleh aplikasi seluler 2FA Anda di kotak di bawah kode QR dan <strong> tekan tombol \'Verifikasi 2FA\'</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp seperti $andotp atau $anyOther2faapp yang mendukung $totp untuk perangkat Anda.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp seperti $andotp atau $anyOther2faApp yang mendukung $totp untuk perangkat Anda.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nId extends I18n {
   String get settings250Sbhomepage => 'Beranda';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Ditampilkan di profil publik Anda. Hanya URL valid yang diterima (mis. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Ditampilkan di profil publik Anda. Hanya URL valid yang diterima (mis. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Iklan perdagangan ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Iklan perdagangan ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Semua iklan penjualan $asset Anda telah disembunyikan dari pencarian publik karena saldo dompet jaminan arbitrase Anda lebih rendah dari $minRequiredbalance. Agar iklan penjualan Anda terlihat, harap setor setidaknya $amountXmr ke $localmoneroWallet jaminan arbitrase Anda.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Semua iklan penjualan $asset Anda telah disembunyikan dari pencarian publik karena saldo dompet jaminan arbitrase Anda lebih rendah dari $minRequiredBalance. Agar iklan penjualan Anda terlihat, harap setor setidaknya $amountXmr ke $localmoneroWallet jaminan arbitrase Anda.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nId extends I18n {
   String get xx => 'Global';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Semua iklan mata uang kripto sekarang dipindahkan ke kategori negara \"global (kode XX)\" yang baru. Semua iklan mata uang kripto rangkap yang hanya berbeda menurut negara akan dihapus $time_remaining. Harap pastikan Anda hanya memiliki SATU iklan mata uang kripto per mata uang, jika tidak, semua kecuali iklan yang terakhir diposting dalam mata uang tersebut akan dihapus, sedangkan iklan lainnya akan dipindahkan ke kategori negara \"global\".';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Semua iklan mata uang kripto sekarang dipindahkan ke kategori negara \"global (kode XX)\" yang baru. Semua iklan mata uang kripto rangkap yang hanya berbeda menurut negara akan dihapus $timeRemaining. Harap pastikan Anda hanya memiliki SATU iklan mata uang kripto per mata uang, jika tidak, semua kecuali iklan yang terakhir diposting dalam mata uang tersebut akan dihapus, sedangkan iklan lainnya akan dipindahkan ke kategori negara \"global\".';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nId extends I18n {
   String get affiliate__enable_btn => 'Aktifkan program afiliasi';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Program afiliasi Anda diaktifkan, dan Anda dapat memperoleh komisi dengan menambahkan tag afiliasi Anda $ref_code ke URL $appName mana pun.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Program afiliasi Anda diaktifkan, dan Anda dapat memperoleh komisi dengan menambahkan tag afiliasi Anda $refCode ke URL $appName mana pun.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nId extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Ditampilkan di profil publik Anda. Hanya URL valid yang diterima (mis. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Ditampilkan di profil publik Anda. Hanya URL valid yang diterima (mis. https://$exampleUrl)';
   }
 
   @override

@@ -441,6 +441,7 @@ class _AppState extends State<App>
           case ConnectivityResult.mobile:
           case ConnectivityResult.ethernet:
           case ConnectivityResult.bluetooth:
+          case ConnectivityResult.vpn:
             appState.connection = true;
             // _initApp();
             break;
@@ -473,7 +474,7 @@ class _AppState extends State<App>
           router.push(
             WebviewRoute(
               cookie1: e.cookie1,
-              cookie2: e.cookie1,
+              cookie2: e.cookie2,
               token: token,
               url: 'https://agoradesk.com',
               isFromCaptchaEvent: true,
