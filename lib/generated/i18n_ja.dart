@@ -127,12 +127,12 @@ class I18nJa extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$paymentMethod$detail を利用して $currencyで $assetName を売却する';
+    return '$paymentMethod${detail} を利用して $currencyで $assetName を売却する';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$paymentMethod$detail を使用して $currency で$assetName を購入する';
+    return '$paymentMethod${detail} を使用して $currency で$assetName を購入する';
   }
 
   @override
@@ -6482,12 +6482,12 @@ class I18nJa extends I18n {
 
   @override
   String trade250Sbtitle8722Sbonline8722Sbbuy(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency, Object method) {
-    return '$methodを使用して$amountFiat$currencyで$amountXmr$assetSymbolを購入';
+    return '$methodを使用して$amountFiat${currency}で$amountXmr${assetSymbol}を購入';
   }
 
   @override
   String trade250Sbtitle8722Sbonline8722Sbsell(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency, Object method) {
-    return '$methodを使用した$amountFiat$currencyで$amountXmr$assetSymbolを販売';
+    return '$methodを使用した$amountFiat${currency}で$amountXmr${assetSymbol}を販売';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nJa extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'スタッフになりすます詐欺にご注意ください！\n$appName 管理者は取引を確定するように言うことは決してありません。\nスタッフ メッセージは背景が赤です。';
+    return 'スタッフになりすます詐欺にご注意ください！\n${appName} 管理者は取引を確定するように言うことは決してありません。\nスタッフ メッセージは背景が赤です。';
   }
 
   @override

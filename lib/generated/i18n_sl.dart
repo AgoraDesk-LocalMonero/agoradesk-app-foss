@@ -127,12 +127,12 @@ class I18nSl extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Prodaj $assetName z uporabo $paymentMethod$detail z $currency';
+    return 'Prodaj $assetName z uporabo $paymentMethod${detail} z $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Nakup $assetName z $paymentMethod$detail z $currency';
+    return 'Nakup $assetName z $paymentMethod${detail} z $currency';
   }
 
   @override

@@ -127,12 +127,12 @@ class I18nLv extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Pārdod $assetName, izmantojot $paymentMethod$detail ar $currency';
+    return 'Pārdod $assetName, izmantojot $paymentMethod${detail} ar $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Iegādājieties $assetName, izmantojot $paymentMethod$detail ar $currency';
+    return 'Iegādājieties $assetName, izmantojot $paymentMethod${detail} ar $currency';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nLv extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Uzmanieties no krāpniekiem, kas mēģina uzdoties par darbiniekiem!\n$appName administratori nekad neprasīs jums pabeigt darījumu.\nDarbinieku ziņojumiem ir sarkans fons.';
+    return 'Uzmanieties no krāpniekiem, kas mēģina uzdoties par darbiniekiem!\n${appName} administratori nekad neprasīs jums pabeigt darījumu.\nDarbinieku ziņojumiem ir sarkans fons.';
   }
 
   @override

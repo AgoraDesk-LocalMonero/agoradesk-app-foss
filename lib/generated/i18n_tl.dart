@@ -127,12 +127,12 @@ class I18nTl extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Ibenta ang $assetName gamit ang $paymentMethod$detail gamit ang $currency';
+    return 'Ibenta ang $assetName gamit ang $paymentMethod${detail} gamit ang $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Bumili ng $assetName gamit ang $paymentMethod$detail gamit ang $currency';
+    return 'Bumili ng $assetName gamit ang $paymentMethod${detail} gamit ang $currency';
   }
 
   @override

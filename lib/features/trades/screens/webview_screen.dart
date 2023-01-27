@@ -62,15 +62,17 @@ class WebViewExampleState extends State<WebviewScreen> {
         onWebViewCreated: (controller) async {
           _webViewController = controller;
           try {
-            // get the CookieManager instance
             CookieManager cookieManager = CookieManager.instance();
-            cookieManager.setCookie(
-              url: _uri,
-              name: "token",
-              value: widget.token ?? '',
-              domain: "agoradesk.com",
-              isSecure: true,
-            );
+            final token = widget.token ?? '';
+            if (token.isNotEmpty) {
+              cookieManager.setCookie(
+                url: _uri,
+                name: "token",
+                value: widget.token ?? '',
+                domain: "agoradesk.com",
+                isSecure: true,
+              );
+            }
             final cookie1Name = widget.cookie1.split('=').first;
             if (cookie1Name.isNotEmpty) {
               final cookie1Value = widget.cookie1.substring(cookie1Name.length + 1);
@@ -119,6 +121,7 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   Future _getCookies() async {
     List<Cookie> cookies = await cookieManager.getCookies(url: _uri);
+    print('+++++++++++++++++++++++++++++++++++++11 - ${cookies}');
     GetIt.I<AppParameters>().cookies = cookies;
   }
 }

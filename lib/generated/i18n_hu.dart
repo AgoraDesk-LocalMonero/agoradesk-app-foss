@@ -127,12 +127,12 @@ class I18nHu extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$assetName eladása $paymentMethod$detail használatával $currency-ért';
+    return '$assetName eladása $paymentMethod${detail} használatával $currency-ért';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Vásárolj $assetName terméket a $paymentMethod$detail használatával a következővel: $currency';
+    return 'Vásárolj $assetName terméket a $paymentMethod${detail} használatával a következővel: $currency';
   }
 
   @override

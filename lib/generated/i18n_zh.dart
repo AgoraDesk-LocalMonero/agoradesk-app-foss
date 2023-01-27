@@ -168,7 +168,7 @@ class I18nZh extends I18n {
 
   @override
   String ad8722Sbpage250Sblimit8722Sbto8722Sbamounts(Object amounts, Object currency) {
-    return '本用户限制数量到$amounts$currency';
+    return '本用户限制数量到$amounts${currency}';
   }
 
   @override
@@ -349,7 +349,7 @@ class I18nZh extends I18n {
 
   @override
   String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
-    return '您带来两个在 $appName 注册的用户（$assetName的买家和卖家），如果他们做一个价值 100 $assetSymbol 的交易，您可以分别从每个交易者在 $appName 的交易费中赚取 20%，总计 40% 的 $appName 佣金。您挣得的总数是 0.4 $assetSymbol。$linebreak  $appName$support非常乐意解决您的任何问题。';
+    return '您带来两个在 $appName 注册的用户（$assetName的买家和卖家），如果他们做一个价值 100 $assetSymbol 的交易，您可以分别从每个交易者在 $appName 的交易费中赚取 20%，总计 40% 的 $appName 佣金。您挣得的总数是 0.4 $assetSymbol。$linebreak  $appName${support}非常乐意解决您的任何问题。';
   }
 
   @override
@@ -940,7 +940,7 @@ class I18nZh extends I18n {
 
   @override
   String coupons250Sbcoupon250Sbdescription(Object percent, Object assets, Object types) {
-    return '$assets$types交易的$percent%费用回扣。';
+    return '$assets${types}交易的$percent%费用回扣。';
   }
 
   @override
@@ -1619,7 +1619,7 @@ class I18nZh extends I18n {
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
-    return '这是$createdAt$timeOfCreation创建的$adType广告。如果你想要更改本广告交易类型请$createANewAd';
+    return '这是$createdAt${timeOfCreation}创建的$adType广告。如果你想要更改本广告交易类型请$createANewAd';
   }
 
   @override
@@ -3013,7 +3013,7 @@ class I18nZh extends I18n {
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb2(Object installed) {
-    return '为了启用移动通知你需要把Telegram$installed。';
+    return '为了启用移动通知你需要把Telegram${installed}。';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nZh extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '谨防试图冒充工作人员的骗子！\n$appName 管理员永远不会告诉您完成交易。\n工作人员消息具有红色背景。';
+    return '谨防试图冒充工作人员的骗子！\n${appName} 管理员永远不会告诉您完成交易。\n工作人员消息具有红色背景。';
   }
 
   @override
@@ -9625,7 +9625,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String ad8722Sbpage250Sblimit8722Sbto8722Sbamounts(Object amounts, Object currency) {
-    return '本用户限制数量到$amounts$currency';
+    return '本用户限制数量到$amounts${currency}';
   }
 
   @override
@@ -9806,7 +9806,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
-    return '您带来两个在 $appName 注册的用户（$assetName的买家和卖家），如果他们做一个价值 100 $assetSymbol 的交易，您可以分别从每个交易者在 $appName 的交易费中赚取 20%，总计 40% 的 $appName 佣金。您挣得的总数是 0.4 $assetSymbol。$linebreak  $appName$support非常乐意解决您的任何问题。';
+    return '您带来两个在 $appName 注册的用户（$assetName的买家和卖家），如果他们做一个价值 100 $assetSymbol 的交易，您可以分别从每个交易者在 $appName 的交易费中赚取 20%，总计 40% 的 $appName 佣金。您挣得的总数是 0.4 $assetSymbol。$linebreak  $appName${support}非常乐意解决您的任何问题。';
   }
 
   @override
@@ -10397,7 +10397,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String coupons250Sbcoupon250Sbdescription(Object percent, Object assets, Object types) {
-    return '$assets$types交易的$percent%费用回扣。';
+    return '$assets${types}交易的$percent%费用回扣。';
   }
 
   @override
@@ -11076,7 +11076,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
-    return '这是$createdAt$timeOfCreation创建的$adType广告。如果你想要更改本广告交易类型请$createANewAd';
+    return '这是$createdAt${timeOfCreation}创建的$adType广告。如果你想要更改本广告交易类型请$createANewAd';
   }
 
   @override
@@ -12470,7 +12470,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb2(Object installed) {
-    return '为了启用移动通知你需要把Telegram$installed。';
+    return '为了启用移动通知你需要把Telegram${installed}。';
   }
 
   @override
@@ -18495,7 +18495,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '谨防试图冒充工作人员的骗子！\n$appName 管理员永远不会告诉您完成交易。\n工作人员消息具有红色背景。';
+    return '谨防试图冒充工作人员的骗子！\n${appName} 管理员永远不会告诉您完成交易。\n工作人员消息具有红色背景。';
   }
 
   @override
@@ -19082,7 +19082,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String ad8722Sbpage250Sblimit8722Sbto8722Sbamounts(Object amounts, Object currency) {
-    return '本用戶限制數量到$amounts$currency';
+    return '本用戶限制數量到$amounts${currency}';
   }
 
   @override
@@ -19263,7 +19263,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
-    return '您帶來兩個在 $appName 注冊的用戶（$assetName的買家和賣家），如果他們做一個價值 100 $assetSymbol 的交易，您可以分別從每個交易者在 $appName 的交易費中賺取 20%，總計 40% 的 $appName 佣金。您掙得的總數是 0.4 $assetSymbol。$linebreak  $appName$support非常樂意解決您的任何問題。';
+    return '您帶來兩個在 $appName 注冊的用戶（$assetName的買家和賣家），如果他們做一個價值 100 $assetSymbol 的交易，您可以分別從每個交易者在 $appName 的交易費中賺取 20%，總計 40% 的 $appName 佣金。您掙得的總數是 0.4 $assetSymbol。$linebreak  $appName${support}非常樂意解決您的任何問題。';
   }
 
   @override
@@ -19854,7 +19854,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String coupons250Sbcoupon250Sbdescription(Object percent, Object assets, Object types) {
-    return '$assets$types交易的$percent%費用回扣。';
+    return '$assets${types}交易的$percent%費用回扣。';
   }
 
   @override
@@ -20533,7 +20533,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
-    return '這是$createdAt$timeOfCreation創建的$adType廣告。如果你想要更改本廣告交易類型請$createANewAd';
+    return '這是$createdAt${timeOfCreation}創建的$adType廣告。如果你想要更改本廣告交易類型請$createANewAd';
   }
 
   @override
@@ -21927,7 +21927,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sbtelegram250Sbprologue8722Sb2(Object installed) {
-    return '為了啟用移動通知你需要把Telegram$installed。';
+    return '為了啟用移動通知你需要把Telegram${installed}。';
   }
 
   @override
@@ -27952,7 +27952,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '謹防試圖冒充工作人員的騙子！\n$appName 管理員永遠不會告訴您完成交易。\n工作人員消息具有紅色背景。';
+    return '謹防試圖冒充工作人員的騙子！\n${appName} 管理員永遠不會告訴您完成交易。\n工作人員消息具有紅色背景。';
   }
 
   @override

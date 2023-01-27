@@ -127,12 +127,12 @@ class I18nSk extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Predajte $assetName pomocou $paymentMethod$detail s $currency';
+    return 'Predajte $assetName pomocou $paymentMethod${detail} s $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Kúpte $assetName pomocou $paymentMethod$detail s $currency';
+    return 'Kúpte $assetName pomocou $paymentMethod${detail} s $currency';
   }
 
   @override
@@ -8968,7 +8968,7 @@ class I18nSk extends I18n {
 
   @override
   String affiliate__enabled(Object refCode, Object appName) {
-    return 'Váš partnerský program je povolený a môžete zarábať provízie pridaním značky pridruženého partnera$refCode na ľubovoľnú adresu URL $appName.';
+    return 'Váš partnerský program je povolený a môžete zarábať provízie pridaním značky pridruženého partnera${refCode} na ľubovoľnú adresu URL $appName.';
   }
 
   @override

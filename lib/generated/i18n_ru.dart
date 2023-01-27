@@ -127,12 +127,12 @@ class I18nRu extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Продать $assetName через $paymentMethod$detail за $currency';
+    return 'Продать $assetName через $paymentMethod${detail} за $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Купить $assetName через $paymentMethod$detail за $currency';
+    return 'Купить $assetName через $paymentMethod${detail} за $currency';
   }
 
   @override
@@ -349,7 +349,7 @@ class I18nRu extends I18n {
 
   @override
   String affiliate250Sbexample250Sbtext(Object assetName, Object appName, Object assetSymbol, Object linebreak, Object support) {
-    return 'У вас есть два пользователя, покупатель и продавец $assetName, зарегистрированные на $appName, и они осуществляют одну сделку на 100 $assetSymbol. Вы получаете 20% комиссионных от сборов $appName со сделки с обоих участников, что в сумме дает 40% от сбора $appName. Ваша итоговая сумма составляет 0,4 $assetSymbol. Только завершенные сделки берутся в расчет. Выплаты производятся ежедневно. $linebreak $appName$support в вашем распоряжении для любых вопросов.';
+    return 'У вас есть два пользователя, покупатель и продавец $assetName, зарегистрированные на $appName, и они осуществляют одну сделку на 100 $assetSymbol. Вы получаете 20% комиссионных от сборов $appName со сделки с обоих участников, что в сумме дает 40% от сбора $appName. Ваша итоговая сумма составляет 0,4 $assetSymbol. Только завершенные сделки берутся в расчет. Выплаты производятся ежедневно. $linebreak $appName${support} в вашем распоряжении для любых вопросов.';
   }
 
   @override
