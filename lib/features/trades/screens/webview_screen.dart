@@ -73,7 +73,7 @@ class WebViewExampleState extends State<WebviewScreen> {
                 final cookieRaw = c.split(';').first;
                 final cookieName = cookieRaw.split('=').first;
                 final cookieValue = cookieRaw.substring(cookieName.length + 1);
-                print('+++++++++++++++++++++++++++++++++++++3333 - ${cookieName}=$cookieValue');
+                debugPrint('[++++ cookies passed to the webview] ${cookieName}=$cookieValue');
                 cookieManager.setCookie(
                   url: _uri,
                   name: cookieName,
@@ -110,7 +110,7 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   Future _getCookies() async {
     List<Cookie> cookies = await cookieManager.getCookies(url: _uri);
-    debugPrint('[++++ webview cookies] $cookies');
+    debugPrint('[++++ cookies got in the webview] $cookies');
     GetIt.I<AppParameters>().cookies = cookies;
   }
 }
