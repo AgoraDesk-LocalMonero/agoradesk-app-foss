@@ -4,6 +4,8 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/router.gr.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get_it/get_it.dart';
@@ -94,7 +96,9 @@ class WebViewExampleState extends State<WebviewScreen> {
           if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
             await _getCookies();
             context.read<AppState>().sinkReloadMarket.add(true);
-            Navigator.of(context).pop();
+            if (AutoRouter.of(context).current.name == WebviewRoute.name) {
+              Navigator.of(context).pop();
+            }
             eventBus.fire(const WebViewFinishedEvent());
           }
         },
