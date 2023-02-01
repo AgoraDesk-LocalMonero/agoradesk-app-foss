@@ -93,10 +93,11 @@ class NotificationsService with ForegroundMessagesMixin {
     /// start listener for push token updates
     ///
     if (includeFcm) {
+      final String? token = await FirebaseMessaging.instance.getToken();
+      await _tokenUpdate(token);
+
       FirebaseMessaging.instance.onTokenRefresh.listen((token) {
-        if (api.accessToken != null) {
-          _tokenUpdate(token);
-        }
+        _tokenUpdate(token);
       });
     }
 
@@ -191,7 +192,7 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   /// token manager - update, add to api, remove old from api
   ///
-  void _tokenUpdate(String? newToken) async {
+  Future _tokenUpdate(String? newToken) async {
     final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
 
     late String deviceName;
@@ -206,7 +207,6 @@ class NotificationsService with ForegroundMessagesMixin {
     if (oldToken != newToken) {
       appState.pushFcmTokenSavedToApi = false;
     }
-
     if (appState.pushFcmTokenSavedToApi == false && appState.username.isNotEmpty) {
       final res = await _saveFcmTokenToApi(
         DeviceModel(
