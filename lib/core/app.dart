@@ -55,7 +55,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:plausible_analytics/plausible_analytics.dart';
-import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
@@ -467,6 +466,7 @@ class _AppState extends State<App>
           case ConnectivityResult.mobile:
           case ConnectivityResult.ethernet:
           case ConnectivityResult.bluetooth:
+          case ConnectivityResult.vpn:
             appState.connection = true;
             // _initApp();
             break;

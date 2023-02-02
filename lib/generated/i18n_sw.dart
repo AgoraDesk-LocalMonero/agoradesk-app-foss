@@ -77,13 +77,13 @@ class I18nSw extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Zote katika {$countryOrcurrency}';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Zote katika $countryOrCurrency';
   }
 
   @override
   String ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbhide(Object username) {
-    return 'Ficha matangazo ya {$username';
+    return 'Ficha matangazo ya $username';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nSw extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Hitilafu ya ombi la biashara';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Mfanyabiashara huyu huruhusu upeo wa $firstTimelimitxmr kwa biashara ya kwanza naye.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Mfanyabiashara huyu huruhusu upeo wa $firstTimeLimitXmr kwa biashara ya kwanza naye.';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nSw extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Uza $assetName ukitumia $paymentMethod${detail} na $currency';
+    return 'Uza $assetName ukitumia $paymentMethod$detail na $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Nunua $assetName ukitumia $paymentMethod${detail} kwa $currency';
+    return 'Nunua $assetName ukitumia $paymentMethod$detail kwa $currency';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nSw extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kununua';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return '${buyOrsell}Je! ungependa kiasi gani?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return '${buyOrSell}Je! ungependa kiasi gani?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Mfanyabiashara huyu anahitaji angalau alama ya maoni $minimumFeedbackscore ili kufanya biashara.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Mfanyabiashara huyu anahitaji angalau alama ya maoni $minimumFeedbackScore ili kufanya biashara.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nSw extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'mnunuzi';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Baada ya kubofya kitufe cha \'$buy_or_sell_button_name\' utaona maelezo zaidi kuhusu tangazo, ikiwa ni pamoja na sheria na masharti ya biashara. Zisome kabla ya kuwasilisha ombi la biashara, ikiwa hukubaliani nazo unaweza kurudi kwenye ukurasa uliopita na uchague tangazo lingine.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Baada ya kubofya kitufe cha \'$buyOrSellButtonName\' utaona maelezo zaidi kuhusu tangazo, ikiwa ni pamoja na sheria na masharti ya biashara. Zisome kabla ya kuwasilisha ombi la biashara, ikiwa hukubaliani nazo unaweza kurudi kwenye ukurasa uliopita na uchague tangazo lingine.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Ili kuanza biashara, andika ni kiasi gani cha $asset unachotaka $buy_or_sell na ubofye kitufe cha \'Tuma ombi la biashara\' ili kuanza biashara.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Ili kuanza biashara, andika ni kiasi gani cha $asset unachotaka $buyOrSell na ubofye kitufe cha \'Tuma ombi la biashara\' ili kuanza biashara.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nSw extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Nunua';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'Katika safu wima ya kushoto unapaswa kuchagua kichupo cha \'{$buy_or_sell_tab_name}\'. Ikiwa ungependa kubadilisha nchi, sarafu, njia ya kulipa au kubainisha kiasi kinachohitajika, bofya kitufe cha \'Onyesha menyu ya utafutaji\', chagua vigezo unavyotaka, na ubonyeze kitufe cha kutafuta.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'Katika safu wima ya kushoto unapaswa kuchagua kichupo cha \'$buyOrSellTabName\'. Ikiwa ungependa kubadilisha nchi, sarafu, njia ya kulipa au kubainisha kiasi kinachohitajika, bofya kitufe cha \'Onyesha menyu ya utafutaji\', chagua vigezo unavyotaka, na ubonyeze kitufe cha kutafuta.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nSw extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Inafanya kazi bila JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Tovuti yetu inapatikana kwa urahisi kupitia $tor_link (ambayo imeundwa kwa ajili na utendaji wa juu zaidi kwa faraja yako kupitia matumizi yetu ya $advanced_routing) na hata kupitia $i2p_link. Hii inahakikisha sio tu kwamba utaweza kuficha IP yako ya kweli kutoka kwetu (ambayo hatujawahi kuihusisha na akaunti yako), lakini kwamba ikiwa kwa sababu yoyote ile kikoa chetu cha kawaida hakiwezi kufikiwa na wewe, kutakuwa na njia zingine za wewe kufikia huduma zetu. Tunathamini sana faragha yako, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Tovuti yetu inapatikana kwa urahisi kupitia $torLink (ambayo imeundwa kwa ajili na utendaji wa juu zaidi kwa faraja yako kupitia matumizi yetu ya $advancedRouting) na hata kupitia $i2pLink. Hii inahakikisha sio tu kwamba utaweza kuficha IP yako ya kweli kutoka kwetu (ambayo hatujawahi kuihusisha na akaunti yako), lakini kwamba ikiwa kwa sababu yoyote ile kikoa chetu cha kawaida hakiwezi kufikiwa na wewe, kutakuwa na njia zingine za wewe kufikia huduma zetu. Tunathamini sana faragha yako, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nSw extends I18n {
   String get completed250Sbtitle => 'Biashara zako zilizokamilika';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Kwa maswali ya utekelezaji wa sheria, tafadhali soma $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Kwa maswali ya utekelezaji wa sheria, tafadhali soma $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'sera yetu';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Ili kuwasiliana na usaidizi wetu unaweza $openAticket au kutuma barua pepe kwa $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Ili kuwasiliana na usaidizi wetu unaweza $openATicket au kutuma barua pepe kwa $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nSw extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Kukomboa kosa la kuponi';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Hitilafu fulani imetokea wakati wa kukomboa kuponi. Ikiwa hiyo haionekani kuwa sawa, tafadhali wasiliana na usaidizi. Msimbo wa hitilafu: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Hitilafu fulani imetokea wakati wa kukomboa kuponi. Ikiwa hiyo haionekani kuwa sawa, tafadhali wasiliana na usaidizi. Msimbo wa hitilafu: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nSw extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Hifadhi mabadiliko';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Tangazo hili ni la $adType $createdAt $timeOfcreation. Ili kubadilisha aina ya tangazo, tafadhali $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Tangazo hili ni la $adType $createdAt $timeOfCreation. Ili kubadilisha aina ya tangazo, tafadhali $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nSw extends I18n {
   String get error8722Sbpage => 'Lo! Hitilafu fulani imetokea. Tafadhali jaribu tena hivi karibuni. Bofya popote kwenye ukurasa ili kupakia upya.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Ikiwa hiyo haisaidii, jaribu kufuta vidakuzi vyako au kutumia kivinjari tofauti. Ikiwa hiyo haisaidii pia, tafadhali $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Ikiwa hiyo haisaidii, jaribu kufuta vidakuzi vyako au kutumia kivinjari tofauti. Ikiwa hiyo haisaidii pia, tafadhali $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nSw extends I18n {
   String get error250Sbsignup250Sb48 => 'Mtumiaji aliye na barua pepe hiyo tayari yupo';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Haiwezi kuomba chini ya $min_asset_amount $assetSymbol kwa ajili ya kuunda biashara.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Haiwezi kuomba chini ya $minAssetAmount $assetSymbol kwa ajili ya kuunda biashara.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nSw extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Maoni ambayo yametolewa yanaweza kuthibitishwa au kutothibitishwa. Maoni yaliyothibitishwa yanaonyeshwa kwenye wasifu wa umma wa mtumiaji na huathiri alama ya maoni ya mtumiaji. Ili maoni ambayo hayajathibitishwa yathibitishwe jumla ya biashara kati ya mtumiaji anayetoa na kupokea maoni lazima iwe zaidi ya USD 100 sawa.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Arifa za wavuti hukuruhusu kupokea arifa ibukizi kupitia kivinjari chako wakati wowote unapopata arifa mpya kwenye $appName. Ikiwa unafanya biashara na unataka kujua mara moja jambo linapotokea, $enableWebnotificationsfromyourprofile. Geuza kubadili inayosema Wezesha arifa za Wavuti na kivinjari chako kinapokuomba ruhusa ya kuonyesha arifa za wavuti, bonyeza kukubali. Sasa uko tayari na utaanza kupokea arifa za wavuti.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Arifa za wavuti hukuruhusu kupokea arifa ibukizi kupitia kivinjari chako wakati wowote unapopata arifa mpya kwenye $appName. Ikiwa unafanya biashara na unataka kujua mara moja jambo linapotokea, $enableWebNotificationsFromYourProfile. Geuza kubadili inayosema Wezesha arifa za Wavuti na kivinjari chako kinapokuomba ruhusa ya kuonyesha arifa za wavuti, bonyeza kukubali. Sasa uko tayari na utaanza kupokea arifa za wavuti.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nSw extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Tunahifadhi kiasi kidogo kutoka kwenye salio lako la pochi ili kulipa ada ya muamala wa mtandao. Kila muamala wa cryptocurrency lazima ulipe ada kidogo kwa mtandao ili uthibitishwe bila kujali unatumwa wapi.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Jibu hili linahusu kesi wakati unanunua Monero mtandaoni. Baada ya kutuma ombi la biashara kwa muuzaji wa Monero, una muda wa kukamilisha malipo kabla ya muuzaji kuweza kughairi biashara (dirisha la malipo linatofautiana kulingana na njia ya malipo ya biashara). Wakati huu unahitaji kukamilisha malipo yako na ubonyeze kitufe cha Nimelipa. Muuzaji anaarifiwa kuwa umefanya malipo na Monero itahifadhiwa kwenye bondi hadi muuzaji atakapokamilisha biashara lako atakapoona malipo kwenye akaunti yake. Iwapo ulilipia ununuzi, lakini hukutia alama kuwa malipo yamekamilika kabla ya muda wa malipo kuisha, tafadhali wasiliana na muuzaji kupitia biashara. Unaweza kuwasiliana na muuzaji na anwani zako zingine zilizopo za biashara kutoka kwa $dashboard katika Wasifu wako wa Mtumiaji wa $appName. Tuma ujumbe kwa muuzaji na ueleze kwa huruma hali hiyo na kwa nini haukuweza kukamilisha malipo ndani ya dirisha la muda. Ikiwa muuzaji hatajibu ombi hili tafadhali wasiliana na usaidizi wa $appName kwa kutumia $supportRequestform na utaje kitambulisho chako cha biashara.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Jibu hili linahusu kesi wakati unanunua Monero mtandaoni. Baada ya kutuma ombi la biashara kwa muuzaji wa Monero, una muda wa kukamilisha malipo kabla ya muuzaji kuweza kughairi biashara (dirisha la malipo linatofautiana kulingana na njia ya malipo ya biashara). Wakati huu unahitaji kukamilisha malipo yako na ubonyeze kitufe cha Nimelipa. Muuzaji anaarifiwa kuwa umefanya malipo na Monero itahifadhiwa kwenye bondi hadi muuzaji atakapokamilisha biashara lako atakapoona malipo kwenye akaunti yake. Iwapo ulilipia ununuzi, lakini hukutia alama kuwa malipo yamekamilika kabla ya muda wa malipo kuisha, tafadhali wasiliana na muuzaji kupitia biashara. Unaweza kuwasiliana na muuzaji na anwani zako zingine zilizopo za biashara kutoka kwa $dashboard katika Wasifu wako wa Mtumiaji wa $appName. Tuma ujumbe kwa muuzaji na ueleze kwa huruma hali hiyo na kwa nini haukuweza kukamilisha malipo ndani ya dirisha la muda. Ikiwa muuzaji hatajibu ombi hili tafadhali wasiliana na usaidizi wa $appName kwa kutumia $supportRequestForm na utaje kitambulisho chako cha biashara.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nSw extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'fomu ya ombi la msaada';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Baada ya kutuma ombi la biashara, una muda wa kukamilisha malipo kabla ya mhusika mwingine kughairi biashara. Wakati huu unahitaji kukamilisha malipo yako na ubonyeze kitufe cha \'Nimelipa\'. Mhusika mwingine ataarifiwa kuwa umefanya malipo na sarafu zitawekwa kwenye bondi hadi mhusika mwingine atakapokamilisha biashara lako baada la kuona malipo kwenye akaunti lake. Iwapo ulilipia ununuzi, lakini hukutia alama kuwa malipo yamekamilika kabla ya muda wa malipo kuisha, tafadhali wasiliana na mhusika mwingine kupitia gumzo la biashara. Unaweza kuwasiliana na mhusika mwingine na watu unaowasiliana nao wengine wa kibiashara kutoka kwa $dashboard. Tuma ujumbe kwa mhusika mwingine na ueleze kwa upole hali hiyo na kwa nini hukuweza kukamilisha malipo ndani ya dirisha la muda. Ikiwa mhusika mwingine hatajibu ombi hili tafadhali wasiliana na wafanyakazi wa $appName kwa kutumia $supportRequestform na utaje kitambulisho chako cha biashara.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Baada ya kutuma ombi la biashara, una muda wa kukamilisha malipo kabla ya mhusika mwingine kughairi biashara. Wakati huu unahitaji kukamilisha malipo yako na ubonyeze kitufe cha \'Nimelipa\'. Mhusika mwingine ataarifiwa kuwa umefanya malipo na sarafu zitawekwa kwenye bondi hadi mhusika mwingine atakapokamilisha biashara lako baada la kuona malipo kwenye akaunti lake. Iwapo ulilipia ununuzi, lakini hukutia alama kuwa malipo yamekamilika kabla ya muda wa malipo kuisha, tafadhali wasiliana na mhusika mwingine kupitia gumzo la biashara. Unaweza kuwasiliana na mhusika mwingine na watu unaowasiliana nao wengine wa kibiashara kutoka kwa $dashboard. Tuma ujumbe kwa mhusika mwingine na ueleze kwa upole hali hiyo na kwa nini hukuweza kukamilisha malipo ndani ya dirisha la muda. Ikiwa mhusika mwingine hatajibu ombi hili tafadhali wasiliana na wafanyakazi wa $appName kwa kutumia $supportRequestForm na utaje kitambulisho chako cha biashara.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Ndio, tunayo mawili! Hizi hapa: $b32I2purl au $i2pUrl (unahitaji $i2p ili kufungua viungo hivi).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Ndio, tunayo mawili! Hizi hapa: $b32I2pUrl au $i2pUrl (unahitaji $i2p ili kufungua viungo hivi).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nSw extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Biashara ya sarafu za kidigitali';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Miamala kwa pochi za watumiaji wengine wa $appName ni $free. $linebreak  Miamala kwa pochi zingine za Monero inategemea ada ya muamala ya mtandao wa Monero. Ada ya sasa inaonekana kwenye $walletPage chini ya kichwa $outgoingMonerofees. Ada ya muamala hulipwa kutoka kwa mkoba wako wa $appName unapotuma muamala.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Miamala kwa pochi za watumiaji wengine wa $appName ni $free. $linebreak  Miamala kwa pochi zingine za Monero inategemea ada ya muamala ya mtandao wa Monero. Ada ya sasa inaonekana kwenye $walletPage chini ya kichwa $outgoingMoneroFees. Ada ya muamala hulipwa kutoka kwa mkoba wako wa $appName unapotuma muamala.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nSw extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'ukurasa wa pochi';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Miamala kwa pochi za watumiaji wengine wa $appName ni $free. $linebreak  Miamala kwa pochi za fedha za sarafu-fiche nje ya nchi inategemea ada husika ya muamala wa mtandao wa sarafu-fiche. Ada ya sasa inaonekana kwenye $walletPage chini ya kichwa $outgoingMonerofees. Ada ya muamala hulipwa kutoka kwa pochi lako la $appName unapotuma muamala.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Miamala kwa pochi za watumiaji wengine wa $appName ni $free. $linebreak  Miamala kwa pochi za fedha za sarafu-fiche nje ya nchi inategemea ada husika ya muamala wa mtandao wa sarafu-fiche. Ada ya sasa inaonekana kwenye $walletPage chini ya kichwa $outgoingMoneroFees. Ada ya muamala hulipwa kutoka kwa pochi lako la $appName unapotuma muamala.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nSw extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Katika programu yako ya uthibitishaji, changanua msimbo wa QR unaoonyeshwa kwenye ukurasa. Baada ya kufanya hivyo, manenosiri yenye tarakimu 6 ya mara moja yataanza kuonekana kwenye programu.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Sakinisha programu ya uthibitishaji kwenye simu yako. Unaweza $chooseAnyapp inayoauni TOTP. Kwa mfano, $andotp ni Chanzo Huria na Huria.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Sakinisha programu ya uthibitishaji kwenye simu yako. Unaweza $chooseAnyApp inayoauni TOTP. Kwa mfano, $andotp ni Chanzo Huria na Huria.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName inatoa $totp 2FA. Baada ya 2FA kushawashwa, $authMobileapp itasawazishwa na $appName na itatoa manenosiri yenye tarakimu 6 ya mara mmoja. Nenosiri hili hubadilishwa kila dakika. Ili kuingia au kuondoa dhamana la usuluhishi, pamoja na nenosiri lako unahitaji pia kuingiza nenosiri hili la mara mmoja kabla ya muda wake kuisha.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName inatoa $totp 2FA. Baada ya 2FA kushawashwa, $authMobileApp itasawazishwa na $appName na itatoa manenosiri yenye tarakimu 6 ya mara mmoja. Nenosiri hili hubadilishwa kila dakika. Ili kuingia au kuondoa dhamana la usuluhishi, pamoja na nenosiri lako unahitaji pia kuingiza nenosiri hili la mara mmoja kabla ya muda wake kuisha.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nSw extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Kununua bitcoins bila kukutambulisha imekuwa kazi ngumu zaidi.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Kila siku inayopita, inaonekana kama mbinu nyingi za kitamaduni za kupata bitcoin zimeanza kuhitaji uthibitishaji wa kitambulisho, hivyo kufanya miongozo mingi kupatikana mtandaoni leo kama ile iliyo kwenye $ninetyNinebitcoins au $coincentral kutotumika. $linebreak  $gutter Njia ya kitamaduni ya kununua bitcoins bila kitambulisho imekuwa hasa kupitia jukwaa la kubadilishana la P2P Bitcoin $localbitcoins, sehemu ambayo ilikuwa maarufu sana kwa kununua bitcoin bila kujulikana ni kwa kutumia $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Kila siku inayopita, inaonekana kama mbinu nyingi za kitamaduni za kupata bitcoin zimeanza kuhitaji uthibitishaji wa kitambulisho, hivyo kufanya miongozo mingi kupatikana mtandaoni leo kama ile iliyo kwenye $ninetyNineBitcoins au $coincentral kutotumika. $linebreak  $gutter Njia ya kitamaduni ya kununua bitcoins bila kitambulisho imekuwa hasa kupitia jukwaa la kubadilishana la P2P Bitcoin $localbitcoins, sehemu ambayo ilikuwa maarufu sana kwa kununua bitcoin bila kujulikana ni kwa kutumia $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nSw extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount pamoja na $appName. Unapata pochi ya Monero bila malipo na salama mtandaoni. Hakuna programu za ziada zinahitajika. Ikiwa tayari una akaunti, ruka hadi hatua inayofuata.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount pamoja na $appName. Unapata pochi ya Monero bila malipo na salama mtandaoni. Hakuna programu za ziada zinahitajika. Ikiwa tayari una akaunti, ruka hadi hatua inayofuata.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Sajili akaunti';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount pamoja na $appName. Unapata pochi ya bure na salama ya mtandaoni ya cryptocurrency. Hakuna programu za ziada zinahitajika. Ikiwa tayari una akaunti, ruka hadi hatua inayofuata.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount pamoja na $appName. Unapata pochi ya bure na salama ya mtandaoni ya cryptocurrency. Hakuna programu za ziada zinahitajika. Ikiwa tayari una akaunti, ruka hadi hatua inayofuata.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nSw extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Jinsi ya kuwasha arifa za rununu za Telegram';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Biashara ya kawaida kwenye $appName hufanya kazi kama hii, mfano ni biashara ya kuuza mtandaoni ambapo unauza $assetName kwa mnunuzi. Mchakato ni sawa unaponunua $assetName mtandaoni, lakini kwa mfano huu tunaangazia kuuza $assetName, kwa kuwa hiyo ndiyo aina ya kawaida ya biashara. $linebreak  Kwanza unahitaji kuweka $assetName kwenye $localmoneroWallet lako. $linebreak  Kisha, unahitaji $create $aSellmoneroad (inayoitwa tangazo la kuuza mtandaoni). Unapotengeneza tangazo unachagua njia ya malipo, weka bei zako, vikomo vyako na uandike masharti zako za biashara kama ujumbe usiolipishwa. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'Biashara ya kawaida kwenye $appName hufanya kazi kama hii, mfano ni biashara ya kuuza mtandaoni ambapo unauza $assetName kwa mnunuzi. Mchakato ni sawa unaponunua $assetName mtandaoni, lakini kwa mfano huu tunaangazia kuuza $assetName, kwa kuwa hiyo ndiyo aina ya kawaida ya biashara. $linebreak  Kwanza unahitaji kuweka $assetName kwenye $localmoneroWallet lako. $linebreak  Kisha, unahitaji $create $aSellMoneroAd (inayoitwa tangazo la kuuza mtandaoni). Unapotengeneza tangazo unachagua njia ya malipo, weka bei zako, vikomo vyako na uandike masharti zako za biashara kama ujumbe usiolipishwa. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nSw extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Kuanza';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return 'Kwenye${advertisementCreationpage} ndipo unapounda matangazo mapya. $linebreak  Kuna baadhi ya chaguo wakati wa kuunda tangazo ambazo zinahitajika, na chaguo nyingi za ziada ambazo ni za hiari lakini zinazopendekezwa kuwekwa. Kutumia chaguo za ziada hukuruhusu kurekebisha tangazo lako ili kuendana na mkakati wako wa biashara. $linebreak  Unaweza kupata matangazo yote ambayo umeunda kutoka kwa $dashboard lako. Katika dashibodi unaweza pia kupata biashara zako wazi. $linebreak  $requiredOptions $linebreak  $location Weka nchi ambayo ungependa tangazo lako lionekane. $linebreak  $paymentMethod Chagua njia ya kulipa unayotaka kutoa kwenye menyu kunjuzi. $linebreak  $currency Chagua ni sarafu gani unauza. Kwa mfano, ikiwa unauza nchini Ufaransa unapaswa kuchagua EUR. Unaweza kutumia $thisList kupata kifupi cha sarafu yako.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return 'Kwenye$advertisementCreationPage ndipo unapounda matangazo mapya. $linebreak  Kuna baadhi ya chaguo wakati wa kuunda tangazo ambazo zinahitajika, na chaguo nyingi za ziada ambazo ni za hiari lakini zinazopendekezwa kuwekwa. Kutumia chaguo za ziada hukuruhusu kurekebisha tangazo lako ili kuendana na mkakati wako wa biashara. $linebreak  Unaweza kupata matangazo yote ambayo umeunda kutoka kwa $dashboard lako. Katika dashibodi unaweza pia kupata biashara zako wazi. $linebreak  $requiredOptions $linebreak  $location Weka nchi ambayo ungependa tangazo lako lionekane. $linebreak  $paymentMethod Chagua njia ya kulipa unayotaka kutoa kwenye menyu kunjuzi. $linebreak  $currency Chagua ni sarafu gani unauza. Kwa mfano, ikiwa unauza nchini Ufaransa unapaswa kuchagua EUR. Unaweza kutumia $thisList kupata kifupi cha sarafu yako.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nSw extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Kuweka tangazo';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Tafadhali soma $termsOfservice yetu.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Tafadhali soma $termsOfService yetu.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Unaweza kuwa wa kwanza kwa $post_an_ad katika kategoria zifuatazo:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Unaweza kuwa wa kwanza kwa $postAnAd katika kategoria zifuatazo:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nSw extends I18n {
   String get login250Sbreset8722Sblink => 'Iweke upya hapa.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Unaweza kutumia kitambulisho chako cha $front_type_url kuingia.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Unaweza kutumia kitambulisho chako cha $frontTypeUrl kuingia.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nSw extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Mipaka ya biashara hii ya ChangeNow:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Usawa usiotosha. Inahitajika: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Usawa usiotosha. Inahitajika: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nSw extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Matangazo mengi sana';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Tafadhali weka thamani halali ya $assetSymbol mara ya kwanza. Nambari kati ya $min_asset_amount na $max_asset_amount pekee ndizo zinazoruhusiwa.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Tafadhali weka thamani halali ya $assetSymbol mara ya kwanza. Nambari kati ya $minAssetAmount na $maxAssetAmount pekee ndizo zinazoruhusiwa.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nSw extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'ndio';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Kabla ya kuunda tangazo tafadhali soma kupitia $termsOfservice yetu na $guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Kabla ya kuunda tangazo tafadhali soma kupitia $termsOfService yetu na $guides';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Hatua $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Hatua $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nSw extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Jaribu ukitumia njia tofauti za kulipa, kiasi tofauti au usitumie pesa kabisa. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Vinginevyo, kuwa wa kwanza kufika $postAnad hapa!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Vinginevyo, kuwa wa kwanza kufika $postAnAd hapa!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nSw extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Weka nambari ya kuthibitisha</strong> iliyotolewa na programu yako ya simu ya 2FA kwenye kisanduku kilicho chini ya msimbo wa QR na <strong> ubonyeze kitufe cha \'Thibitisha 2FA\'</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp kama vile $andotp au $anyOther2faapp inayoauni $totp kwa kifaa chako.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp kama vile $andotp au $anyOther2faApp inayoauni $totp kwa kifaa chako.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nSw extends I18n {
   String get settings250Sbhomepage => 'Ukurasa wa nyumbani';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Imeonyeshwa kwenye wasifu wako wa umma. URL halali pekee ndiyo iliyokubaliwa (k.m. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Imeonyeshwa kwenye wasifu wako wa umma. URL halali pekee ndiyo iliyokubaliwa (k.m. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Tangazo la biashara ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Tangazo la biashara ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Matangazo yako yote ya kuuza $asset yamefichwa yasitafute hadharani kwa sababu salio lako la pochi ya dhamana ya usuluhishi ni ndogo kuliko $minRequiredbalance. Ili matangazo yako ya mauzo yaonekane, tafadhali weka angalau $amountXmr kwenye dhamana yako ya usuluhishi $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Matangazo yako yote ya kuuza $asset yamefichwa yasitafute hadharani kwa sababu salio lako la pochi ya dhamana ya usuluhishi ni ndogo kuliko $minRequiredBalance. Ili matangazo yako ya mauzo yaonekane, tafadhali weka angalau $amountXmr kwenye dhamana yako ya usuluhishi $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nSw extends I18n {
   String get xx => 'Ulimwenguni';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Matangazo yote ya sarafu ya crypto sasa yanahamishiwa kwenye kitengo kipya cha nchi \"kimataifa (msimbo wa XX)\". Matangazo yote ya rudufu ya sarafu ya crypto ambayo yanatofautiana kulingana na nchi pekee yatafutwa $time_remaining. Tafadhali hakikisha kuwa una tangazo MOJA tu la sarafu ya crypto kwa kila sarafu, vinginevyo matangazo yote isipokuwa tangazo lililochapishwa hivi majuzi zaidi katika sarafu hiyo yatafutwa, huku tangazo lililosalia litahamishiwa katika aina ya nchi \"ya kimataifa\".';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Matangazo yote ya sarafu ya crypto sasa yanahamishiwa kwenye kitengo kipya cha nchi \"kimataifa (msimbo wa XX)\". Matangazo yote ya rudufu ya sarafu ya crypto ambayo yanatofautiana kulingana na nchi pekee yatafutwa $timeRemaining. Tafadhali hakikisha kuwa una tangazo MOJA tu la sarafu ya crypto kwa kila sarafu, vinginevyo matangazo yote isipokuwa tangazo lililochapishwa hivi majuzi zaidi katika sarafu hiyo yatafutwa, huku tangazo lililosalia litahamishiwa katika aina ya nchi \"ya kimataifa\".';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nSw extends I18n {
   String get affiliate__enable_btn => 'Washa programu ya washirika';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Mpango wako wa washirika umewezeshwa, na unaweza kupata kamisheni kwa kuongeza lebo yako ya mshirika $ref_code kwenye URL yoyote ya $appName.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Mpango wako wa washirika umewezeshwa, na unaweza kupata kamisheni kwa kuongeza lebo yako ya mshirika $refCode kwenye URL yoyote ya $appName.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nSw extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Imeonyeshwa kwenye wasifu wako wa umma. URL halali pekee ndiyo iliyokubaliwa (k.m. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Imeonyeshwa kwenye wasifu wako wa umma. URL halali pekee ndiyo iliyokubaliwa (k.m. https://$exampleUrl)';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nSw extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Jihadhari na matapeli wanaojaribu kuiga wafanyakazi!\n${appName} wasimamizi hawatakuambia kamwe ukamilishe biashara.\nUjumbe wa wafanyikazi una usuli nyekundu.';
+    return 'Jihadhari na matapeli wanaojaribu kuiga wafanyakazi!\n$appName wasimamizi hawatakuambia kamwe ukamilishe biashara.\nUjumbe wa wafanyikazi una usuli nyekundu.';
   }
 
   @override
