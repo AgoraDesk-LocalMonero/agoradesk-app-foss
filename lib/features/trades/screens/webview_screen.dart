@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
@@ -33,7 +31,11 @@ class WebViewExampleState extends State<WebviewScreen> {
   late final InAppWebViewController? _webViewController;
   CookieManager cookieManager = CookieManager.instance();
   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-    crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, mediaPlaybackRequiresUserGesture: false),
+    crossPlatform: InAppWebViewOptions(
+      userAgent: 'Mozilla/5.0',
+      useShouldOverrideUrlLoading: true,
+      mediaPlaybackRequiresUserGesture: false,
+    ),
     android: AndroidInAppWebViewOptions(
       useHybridComposition: true,
     ),
@@ -56,7 +58,7 @@ class WebViewExampleState extends State<WebviewScreen> {
       appBar: const AgoraAppBar(),
       body: InAppWebView(
         initialUrlRequest: URLRequest(url: _uri),
-        initialUserScripts: UnmodifiableListView<UserScript>([]),
+        // initialUserScripts: UnmodifiableListView<UserScript>([]),
         initialOptions: _options,
         onWebViewCreated: (controller) async {
           _webViewController = controller;
@@ -77,12 +79,13 @@ class WebViewExampleState extends State<WebviewScreen> {
                 final cookieValue = cookieRaw.substring(cookieName.length + 1);
                 debugPrint('[++++ cookies passed to the webview] ${cookieName}=$cookieValue');
                 cookieManager.setCookie(
-                  url: _uri,
-                  name: cookieName,
-                  value: cookieValue,
-                  domain: ".agoradesk.com",
-                  isSecure: true,
-                );
+                    url: _uri,
+                    name: cookieName,
+                    value: cookieValue,
+                    domain: ".agoradesk.com",
+                    path: 'https://agoradesk.com/login'
+                    // isSecure: true,
+                    );
               }
             }
             // then load initial URL here
