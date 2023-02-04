@@ -137,7 +137,7 @@ class MarketViewModel extends ViewModel
     ctrlLocation.addListener(_locationListener);
     selectedCountryCode = _appState.countryCode;
     final currencyCode = getCountryCurrencyCode(selectedCountryCode);
-    if (currencyCode == 'EUR' && currencyCode != kAnyCountry) {
+    if (currencyCode == 'EUR' && currencyCode != kAnyCountryCode) {
       selectedCountryCode = kAnyCountryCode;
     }
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);

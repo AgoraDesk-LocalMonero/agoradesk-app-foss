@@ -3,8 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'country_code_model.g.dart';
 
-const kAnyCountry = 'ANY';
-
 @JsonSerializable(explicitToJson: true)
 @HiveType(typeId: 0)
 class CountryCodeModel extends HiveObject {
