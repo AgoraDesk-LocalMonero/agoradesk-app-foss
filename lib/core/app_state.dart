@@ -187,7 +187,12 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   String get currencyCode => _currencyCode ?? 'USD';
 
-  String get countryCode => _countryCode ?? 'US';
+  String get countryCode {
+    if (_countryCode == 'RU') {
+      return 'US';
+    }
+    return _countryCode ?? 'US';
+  }
 
   set countryCode(String val) {
     AppSharedPrefs().setString(AppSharedPrefsKey.countryCode, val);
