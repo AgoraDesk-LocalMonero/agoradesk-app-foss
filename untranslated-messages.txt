@@ -1,6 +1,5 @@
 {
   "sv": [
-    "app_google_play_store_short_description_localmonero",
-    "app_google_play_store_short_description_agoradesk"
+    "app_google_play_store_short_description_localmonero"
   ]
 }

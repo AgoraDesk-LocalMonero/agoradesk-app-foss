@@ -77,8 +77,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Alt i $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Alt i $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nNb extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Handelsforespørselsfeil';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Denne handleren tillater maksimalt $firstTimelimitxmr for den første handelen med ham.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Denne handleren tillater maksimalt $firstTimeLimitXmr for den første handelen med ham.';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nNb extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Selg $assetName med $paymentMethod${detail} med $currency';
+    return 'Selg $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Kjøp $assetName med $paymentMethod${detail} med $currency';
+    return 'Kjøp $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nNb extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kjøp';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Hvor mye ønsker du å $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Hvor mye ønsker du å $buyOrSell?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Denne handleren krever minst $minimumFeedbackscore tilbakemeldingspoeng for å handle.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Denne handleren krever minst $minimumFeedbackScore tilbakemeldingspoeng for å handle.';
   }
 
   @override
@@ -344,7 +344,7 @@ class I18nNb extends I18n {
 
   @override
   String affiliate250Sbenabled(Object refCode, Object appName) {
-    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag {ref_code} til en hvilken som helst $appName URL.';
+    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $refCode til en hvilken som helst $appName URL.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nNb extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'kjøper';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Etter at du har trykket på \'$buy_or_sell_button_name\'-knappen vil du se mer informasjon om annonsen, inkludert vilkårene for handelen. Les gjennom dem før du sender inn handelsforespørselen, hvis du ikke er enig med dem kan du gå tilbake til forrige side og velge en annen annonse.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Etter at du har trykket på \'$buyOrSellButtonName\'-knappen vil du se mer informasjon om annonsen, inkludert vilkårene for handelen. Les gjennom dem før du sender inn handelsforespørselen, hvis du ikke er enig med dem kan du gå tilbake til forrige side og velge en annen annonse.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'For å starte handelen, skriv inn hvor mye $asset du vil ha til $buy_or_sell og klikk på \'Send handelsforespørsel\'-knappen for å starte handelen.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'For å starte handelen, skriv inn hvor mye $asset du vil ha til $buyOrSell og klikk på \'Send handelsforespørsel\'-knappen for å starte handelen.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nNb extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Kjøpe';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'I venstre kolonne bør du velge fanen \'$buy_or_sell_tab_name\'. Hvis du ønsker å endre land, valuta, betalingsmåte eller spesifisere det nødvendige beløpet, klikk på \'Vis søkemeny\'-knappen, velg ønskede parametere og trykk på søkeknappen.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'I venstre kolonne bør du velge fanen \'$buyOrSellTabName\'. Hvis du ønsker å endre land, valuta, betalingsmåte eller spesifisere det nødvendige beløpet, klikk på \'Vis søkemeny\'-knappen, velg ønskede parametere og trykk på søkeknappen.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nNb extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Fungerer uten JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Siden vår er lett tilgjengelig gjennom vår $tor_link (som er innstilt for maksimal ytelse for din komfort gjennom vår bruk av $advanced_routing) og til og med gjennom en $i2p_link. Dette sikrer ikke bare at du vil være i stand til å skjule din sanne IP for oss (som vi aldri forbinder med kontoen din uansett), men at hvis det vanlige domenet vårt av en eller annen grunn blir utilgjengelig for deg, vil det være andre måter for deg å få tilgang til vår service. Vi setter stor pris på personvernet ditt, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Siden vår er lett tilgjengelig gjennom vår $torLink (som er innstilt for maksimal ytelse for din komfort gjennom vår bruk av $advancedRouting) og til og med gjennom en $i2pLink. Dette sikrer ikke bare at du vil være i stand til å skjule din sanne IP for oss (som vi aldri forbinder med kontoen din uansett), men at hvis det vanlige domenet vårt av en eller annen grunn blir utilgjengelig for deg, vil det være andre måter for deg å få tilgang til vår service. Vi setter stor pris på personvernet ditt, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nNb extends I18n {
   String get completed250Sbtitle => 'Dine fullførte handler';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'For henvendelser fra rettshåndhevelse, vennligst les $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'For henvendelser fra rettshåndhevelse, vennligst les $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'vår politikk';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'For å kontakte vår kundestøtte kan du $openAticket eller sende en e-post til $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'For å kontakte vår kundestøtte kan du $openATicket eller sende en e-post til $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nNb extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Feil ved innløsing av kupong';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Noe gikk galt under innløsning av en kupong. Hvis det ikke virker riktig, vennligst kontakt kundestøtten. Feilkode: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Noe gikk galt under innløsning av en kupong. Hvis det ikke virker riktig, vennligst kontakt kundestøtten. Feilkode: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nNb extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Lagre endringer';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Denne annonsen er til $adType $createdAt $timeOfcreation. For å endre annonsetype, vennligst $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Denne annonsen er til $adType $createdAt $timeOfCreation. For å endre annonsetype, vennligst $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nNb extends I18n {
   String get error8722Sbpage => 'Oops! Noe gikk galt. Vennligst prøv igjen snart. Klikk hvor som helst på siden for å laste inn på nytt.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Hvis det ikke hjelper, kan du prøve å slette informasjonskapslene eller bruke en annen nettleser. Hvis det heller ikke hjelper, vennligst $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Hvis det ikke hjelper, kan du prøve å slette informasjonskapslene eller bruke en annen nettleser. Hvis det heller ikke hjelper, vennligst $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nNb extends I18n {
   String get error250Sbsignup250Sb48 => 'Bruker med den e-postadressen eksisterer allerede';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Kan ikke be om mindre enn $min_asset_amount $assetSymbol for opprettelse av handel.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Kan ikke be om mindre enn $minAssetAmount $assetSymbol for opprettelse av handel.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nNb extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Tilbakemeldinger som er gitt kan enten være bekreftet eller ubekreftet. Bekreftet tilbakemelding vises på en brukers offentlige profil og påvirker brukerens tilbakemeldingspoeng. For at en ubekreftet tilbakemelding skal bli bekreftet, må det totale handelsvolumet mellom brukeren som gir og mottar tilbakemelding være mer enn 100 USD tilsvarende.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Nettvarsler lar deg motta popup-varsler gjennom nettleseren din hver gang du får et nytt varsel på $appName. Hvis du handler og vil vite umiddelbart når noe skjer, $enableWebnotificationsfromyourprofile. Vri bryteren som sier Aktiver nettvarsler, og når nettleseren ber deg om tillatelse til å vise nettvarsler, trykk godta. Du er nå klar og vil begynne å motta nettvarsler.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Nettvarsler lar deg motta popup-varsler gjennom nettleseren din hver gang du får et nytt varsel på $appName. Hvis du handler og vil vite umiddelbart når noe skjer, $enableWebNotificationsFromYourProfile. Vri bryteren som sier Aktiver nettvarsler, og når nettleseren ber deg om tillatelse til å vise nettvarsler, trykk godta. Du er nå klar og vil begynne å motta nettvarsler.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nNb extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Vi reserverer et lite beløp fra lommeboksaldoen din for å betale nettverkstransaksjonsgebyret. Hver kryptovalutatransaksjon må betale en liten avgift til nettverket for å bli bekreftet uansett hvor den sendes fra.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Dette svaret gjelder tilfellet når du kjøper Monero på nett. Etter at du har sendt inn en handelsforespørsel til selgeren av Monero, har du et tidsvindu for å fullføre betalingen før selgeren kan kansellere handelen (betalingsvinduet varierer avhengig av betalingsmåten for handelen). I løpet av denne tiden må du fullføre betalingen og trykke på Jeg har betalt-knappen. Selgeren blir varslet om at du har foretatt betalingen, og Monero vil bli holdt i obligasjonen til selgeren fullfører handelen for deg når han ser betalingen på kontoen hans/hennes. Hvis du betalte for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt selgeren gjennom handelen. Du kan kontakte selgeren og dine andre eksisterende handelskontakter fra $dashboard i din $appName-brukerprofil. Send en melding til selgeren og forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis selgeren ikke svarer på denne forespørselen, vennligst kontakt $appName brukerstøtte ved å bruke $supportRequestform og oppgi din handels-ID.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Dette svaret gjelder tilfellet når du kjøper Monero på nett. Etter at du har sendt inn en handelsforespørsel til selgeren av Monero, har du et tidsvindu for å fullføre betalingen før selgeren kan kansellere handelen (betalingsvinduet varierer avhengig av betalingsmåten for handelen). I løpet av denne tiden må du fullføre betalingen og trykke på Jeg har betalt-knappen. Selgeren blir varslet om at du har foretatt betalingen, og Monero vil bli holdt i obligasjonen til selgeren fullfører handelen for deg når han ser betalingen på kontoen hans/hennes. Hvis du betalte for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt selgeren gjennom handelen. Du kan kontakte selgeren og dine andre eksisterende handelskontakter fra $dashboard i din $appName-brukerprofil. Send en melding til selgeren og forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis selgeren ikke svarer på denne forespørselen, vennligst kontakt $appName brukerstøtte ved å bruke $supportRequestForm og oppgi din handels-ID.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nNb extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'skjema for støtteforespørsel';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Etter at du har sendt en handelsforespørsel, har du et tidsvindu for å fullføre betalingen før den andre parten kan kansellere handelen. I løpet av denne tiden må du fullføre betalingen og trykke på \'Jeg har betalt\'-knappen. Den andre parten blir varslet om at du har foretatt betalingen, og myntene vil bli holdt i obligasjonen til den andre parten fullfører handelen for deg etter å ha sett betalingen på kontoen sin. Hvis du har betalt for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt den andre parten via handelschatten. Du kan kontakte den andre parten og dine andre eksisterende handelskontakter fra $dashboard. Send en melding til den andre parten og vennligst forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis den andre parten ikke svarer på denne forespørselen, vennligst kontakt $appName-ansatte ved å bruke $supportRequestform og oppgi din handels-ID.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Etter at du har sendt en handelsforespørsel, har du et tidsvindu for å fullføre betalingen før den andre parten kan kansellere handelen. I løpet av denne tiden må du fullføre betalingen og trykke på \'Jeg har betalt\'-knappen. Den andre parten blir varslet om at du har foretatt betalingen, og myntene vil bli holdt i obligasjonen til den andre parten fullfører handelen for deg etter å ha sett betalingen på kontoen sin. Hvis du har betalt for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt den andre parten via handelschatten. Du kan kontakte den andre parten og dine andre eksisterende handelskontakter fra $dashboard. Send en melding til den andre parten og vennligst forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis den andre parten ikke svarer på denne forespørselen, vennligst kontakt $appName-ansatte ved å bruke $supportRequestForm og oppgi din handels-ID.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Ja, vi har faktisk to! Her er de: $b32I2purl eller $i2pUrl (du trenger $i2p for å åpne disse linkene).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Ja, vi har faktisk to! Her er de: $b32I2pUrl eller $i2pUrl (du trenger $i2p for å åpne disse linkene).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nNb extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Handel med kryptovaluta';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til andre Monero-lommebøker er underlagt Monero-nettverkstransaksjonsgebyret. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMonerofees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til andre Monero-lommebøker er underlagt Monero-nettverkstransaksjonsgebyret. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMoneroFees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nNb extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'lommebokside';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til eksterne kryptovaluta-lommebøker er underlagt det relevante transaksjonsgebyret for kryptovalutanettverk. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMonerofees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til eksterne kryptovaluta-lommebøker er underlagt det relevante transaksjonsgebyret for kryptovalutanettverk. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMoneroFees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nNb extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Skann QR-koden som vises på siden i autentiseringsappen din. Etter at du har gjort det, vil 6-sifrede engangspassord begynne å vises i appen.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Installer autentiseringsappen på telefonen din. Du kan $chooseAnyapp som støtter TOTP. For eksempel er $andotp gratis og åpen kildekode.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Installer autentiseringsappen på telefonen din. Du kan $chooseAnyApp som støtter TOTP. For eksempel er $andotp gratis og åpen kildekode.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName tilbyr $totp 2FA. Når 2FA er aktivert, vil $authMobileapp bli synkronisert med $appName og vil produsere 6-sifrede engangspassord. Dette passordet endres hvert minutt. For å logge inn eller trekke voldgiftsbinding, må du i tillegg til passordet ditt også skrive inn dette engangspassordet før det utløper.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName tilbyr $totp 2FA. Når 2FA er aktivert, vil $authMobileApp bli synkronisert med $appName og vil produsere 6-sifrede engangspassord. Dette passordet endres hvert minutt. For å logge inn eller trekke voldgiftsbinding, må du i tillegg til passordet ditt også skrive inn dette engangspassordet før det utløper.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nNb extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Å kjøpe bitcoins anonymt har blitt en stadig vanskeligere oppgave.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'For hver dag som går ser det ut til at de fleste om ikke alle de tradisjonelle metodene for å skaffe seg bitcoin har begynt å kreve ID-verifisering, noe som gjør de fleste guider tilgjengelige på nettet i dag, for eksempel den på $ninetyNinebitcoins eller $coincentral foreldet. $linebreak  $gutter Den tradisjonelle måten å kjøpe bitcoins uten ID på har hovedsakelig vært gjennom P2P Bitcoin-utvekslingsplattformen $localbitcoins, et sted som var spesielt populært for å kjøpe bitcoin anonymt med $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'For hver dag som går ser det ut til at de fleste om ikke alle de tradisjonelle metodene for å skaffe seg bitcoin har begynt å kreve ID-verifisering, noe som gjør de fleste guider tilgjengelige på nettet i dag, for eksempel den på $ninetyNineBitcoins eller $coincentral foreldet. $linebreak  $gutter Den tradisjonelle måten å kjøpe bitcoins uten ID på har hovedsakelig vært gjennom P2P Bitcoin-utvekslingsplattformen $localbitcoins, et sted som var spesielt populært for å kjøpe bitcoin anonymt med $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nNb extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount med $appName. Du får en gratis og sikker online Monero-lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount med $appName. Du får en gratis og sikker online Monero-lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Registrer en konto';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount med $appName. Du får en gratis og sikker online kryptovaluta lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount med $appName. Du får en gratis og sikker online kryptovaluta lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nNb extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Slik slår du på Telegram-mobilvarsler';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'En typisk handel på $appName fungerer slik, eksemplet er en online salgshandel der du selger $assetName til en kjøper. Prosessen er lik når du kjøper $assetName på nettet, men for dette eksemplet fokuserer vi på å selge $assetName, da det er den vanligste typen handel. $linebreak  Først må du sette inn $assetName til $localmoneroWallet. $linebreak  Deretter må du $create $aSellmoneroad (kalt en online salgsannonse). Når du lager annonsen velger du en betalingsmetode, setter prisene dine, grensene dine og skriver handelsvilkårene som en melding i fri form. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'En typisk handel på $appName fungerer slik, eksemplet er en online salgshandel der du selger $assetName til en kjøper. Prosessen er lik når du kjøper $assetName på nettet, men for dette eksemplet fokuserer vi på å selge $assetName, da det er den vanligste typen handel. $linebreak  Først må du sette inn $assetName til $localmoneroWallet. $linebreak  Deretter må du $create $aSellMoneroAd (kalt en online salgsannonse). Når du lager annonsen velger du en betalingsmetode, setter prisene dine, grensene dine og skriver handelsvilkårene som en melding i fri form. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nNb extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Starter';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage er der du lager nye annonser. $linebreak  Det er noen alternativer når du oppretter en annonse som kreves, og mange ekstra alternativer som er valgfrie, men som anbefales å angi. Ved å bruke de ekstra alternativene kan du tilpasse annonsen din slik at den passer din handelsstrategi. $linebreak  Du kan finne alle annonsene du har laget fra din $dashboard. I dashbordet kan du også finne dine åpne handler. $linebreak  $requiredOptions $linebreak  $location Angi landet der du vil at annonsen din skal vises. $linebreak  $paymentMethod Velg betalingsmåten du vil tilby fra rullegardinmenyen. $linebreak  $currency Velg hvilken valuta du selger for. Hvis du for eksempel selger i Frankrike, bør du velge EUR. Du kan bruke $thisList for å finne valutaakronymet ditt.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage er der du lager nye annonser. $linebreak  Det er noen alternativer når du oppretter en annonse som kreves, og mange ekstra alternativer som er valgfrie, men som anbefales å angi. Ved å bruke de ekstra alternativene kan du tilpasse annonsen din slik at den passer din handelsstrategi. $linebreak  Du kan finne alle annonsene du har laget fra din $dashboard. I dashbordet kan du også finne dine åpne handler. $linebreak  $requiredOptions $linebreak  $location Angi landet der du vil at annonsen din skal vises. $linebreak  $paymentMethod Velg betalingsmåten du vil tilby fra rullegardinmenyen. $linebreak  $currency Velg hvilken valuta du selger for. Hvis du for eksempel selger i Frankrike, bør du velge EUR. Du kan bruke $thisList for å finne valutaakronymet ditt.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nNb extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Sette opp en annonse';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Vennligst les vår $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Vennligst les vår $termsOfService.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Du kan være den første til $post_an_ad i følgende kategorier:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Du kan være den første til $postAnAd i følgende kategorier:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nNb extends I18n {
   String get login250Sbreset8722Sblink => 'Tilbakestill den her.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Du kan bruke din $front_type_url-legitimasjon for å logge på.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Du kan bruke din $frontTypeUrl-legitimasjon for å logge på.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nNb extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Begrensninger for denne ChangeNow-handelen:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Utilstrekkelig balanse. Påkrevd: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Utilstrekkelig balanse. Påkrevd: $amountRequired.';
   }
 
   @override
@@ -4469,7 +4469,7 @@ class I18nNb extends I18n {
 
   @override
   String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
-    return 'Handel {id}';
+    return 'Handel $assetName';
   }
 
   @override
@@ -4586,7 +4586,7 @@ class I18nNb extends I18n {
 
   @override
   String note250Sbbutton(Object username) {
-    return 'Legg til et notat om {val}';
+    return 'Legg til et notat om $username';
   }
 
   @override
@@ -4599,7 +4599,7 @@ class I18nNb extends I18n {
 
   @override
   String note250Sbtitle(Object username) {
-    return 'Notatet ditt på {val} (bare sett av deg)';
+    return 'Notatet ditt på $username (bare sett av deg)';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nNb extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'For mange annonser';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Angi gyldig førstegangsgrenseverdi $assetSymbol. Bare tall mellom $min_asset_amount og $max_asset_amount er tillatt.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Angi gyldig førstegangsgrenseverdi $assetSymbol. Bare tall mellom $minAssetAmount og $maxAssetAmount er tillatt.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nNb extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'ja';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Før du oppretter en annonse, vennligst les gjennom våre $termsOfservice og $guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Før du oppretter en annonse, vennligst les gjennom våre $termsOfService og $guides';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Trinn $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Trinn $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nNb extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Prøv med annen betalingsmetode, forskjellig beløp eller ikke noe beløp i det hele tatt. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Alternativt kan du være den første til å $postAnad her!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Alternativt kan du være den første til å $postAnAd her!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nNb extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Skriv inn koden</strong> gitt av 2FA-mobilappen din i boksen under QR-koden og <strong> trykk på \'Bekreft 2FA\'-knappen</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp som $andotp eller $anyOther2faapp som støtter $totp for enheten din.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp som $andotp eller $anyOther2faApp som støtter $totp for enheten din.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nNb extends I18n {
   String get settings250Sbhomepage => 'Hjemmeside';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Handelsannonse ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Handelsannonse ($adType)';
   }
 
   @override
@@ -6870,7 +6870,7 @@ class I18nNb extends I18n {
 
   @override
   String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
-    return 'Mottar {cryptocurrencyName} adresse';
+    return 'Mottar $assetName adresse';
   }
 
   @override
@@ -7007,12 +7007,12 @@ class I18nNb extends I18n {
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
-    return 'Motta {assetName}';
+    return 'Motta $currencyCode';
   }
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
-    return 'Send {assetName}';
+    return 'Send $asset';
   }
 
   @override
@@ -7356,7 +7356,7 @@ class I18nNb extends I18n {
 
   @override
   String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
-    return 'Beløp ({assetSymbol})';
+    return 'Beløp ($asset)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Alle dine selgende $asset-annonser har blitt skjult fra offentlig søk fordi din voldgiftsobligasjonslommeboksaldo er lavere enn $minRequiredbalance. For at salgsannonsene dine skal bli synlige, må du sette inn minst $amountXmr til voldgiftsgarantien din $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Alle dine selgende $asset-annonser har blitt skjult fra offentlig søk fordi din voldgiftsobligasjonslommeboksaldo er lavere enn $minRequiredBalance. For at salgsannonsene dine skal bli synlige, må du sette inn minst $amountXmr til voldgiftsgarantien din $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nNb extends I18n {
   String get xx => 'Global';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $time_remaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $timeRemaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nNb extends I18n {
   String get affiliate__enable_btn => 'Aktiver tilknyttede program';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $ref_code til en hvilken som helst $appName URL.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $refCode til en hvilken som helst $appName URL.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nNb extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$exampleUrl)';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nNb extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n${appName}-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
+    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n$appName-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
   }
 
   @override
@@ -9534,8 +9534,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Alt i $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Alt i $countryOrCurrency';
   }
 
   @override
@@ -9558,8 +9558,8 @@ class I18nNbNo extends I18nNb {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Handelsforespørselsfeil';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Denne handleren tillater maksimalt $firstTimelimitxmr for den første handelen med ham.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Denne handleren tillater maksimalt $firstTimeLimitXmr for den første handelen med ham.';
   }
 
   @override
@@ -9584,12 +9584,12 @@ class I18nNbNo extends I18nNb {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Selg $assetName med $paymentMethod${detail} med $currency';
+    return 'Selg $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Kjøp $assetName med $paymentMethod${detail} med $currency';
+    return 'Kjøp $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
@@ -9607,8 +9607,8 @@ class I18nNbNo extends I18nNb {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kjøp';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Hvor mye ønsker du å $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Hvor mye ønsker du å $buyOrSell?';
   }
 
   @override
@@ -9634,8 +9634,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Denne handleren krever minst $minimumFeedbackscore tilbakemeldingspoeng for å handle.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Denne handleren krever minst $minimumFeedbackScore tilbakemeldingspoeng for å handle.';
   }
 
   @override
@@ -9801,7 +9801,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String affiliate250Sbenabled(Object refCode, Object appName) {
-    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag {ref_code} til en hvilken som helst $appName URL.';
+    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $refCode til en hvilken som helst $appName URL.';
   }
 
   @override
@@ -9916,13 +9916,13 @@ class I18nNbNo extends I18nNb {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'kjøper';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Etter at du har trykket på \'$buy_or_sell_button_name\'-knappen vil du se mer informasjon om annonsen, inkludert vilkårene for handelen. Les gjennom dem før du sender inn handelsforespørselen, hvis du ikke er enig med dem kan du gå tilbake til forrige side og velge en annen annonse.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Etter at du har trykket på \'$buyOrSellButtonName\'-knappen vil du se mer informasjon om annonsen, inkludert vilkårene for handelen. Les gjennom dem før du sender inn handelsforespørselen, hvis du ikke er enig med dem kan du gå tilbake til forrige side og velge en annen annonse.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'For å starte handelen, skriv inn hvor mye $asset du vil ha til $buy_or_sell og klikk på \'Send handelsforespørsel\'-knappen for å starte handelen.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'For å starte handelen, skriv inn hvor mye $asset du vil ha til $buyOrSell og klikk på \'Send handelsforespørsel\'-knappen for å starte handelen.';
   }
 
   @override
@@ -9944,8 +9944,8 @@ class I18nNbNo extends I18nNb {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Kjøpe';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'I venstre kolonne bør du velge fanen \'$buy_or_sell_tab_name\'. Hvis du ønsker å endre land, valuta, betalingsmåte eller spesifisere det nødvendige beløpet, klikk på \'Vis søkemeny\'-knappen, velg ønskede parametere og trykk på søkeknappen.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'I venstre kolonne bør du velge fanen \'$buyOrSellTabName\'. Hvis du ønsker å endre land, valuta, betalingsmåte eller spesifisere det nødvendige beløpet, klikk på \'Vis søkemeny\'-knappen, velg ønskede parametere og trykk på søkeknappen.';
   }
 
   @override
@@ -10097,8 +10097,8 @@ class I18nNbNo extends I18nNb {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Fungerer uten JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Siden vår er lett tilgjengelig gjennom vår $tor_link (som er innstilt for maksimal ytelse for din komfort gjennom vår bruk av $advanced_routing) og til og med gjennom en $i2p_link. Dette sikrer ikke bare at du vil være i stand til å skjule din sanne IP for oss (som vi aldri forbinder med kontoen din uansett), men at hvis det vanlige domenet vårt av en eller annen grunn blir utilgjengelig for deg, vil det være andre måter for deg å få tilgang til vår service. Vi setter stor pris på personvernet ditt, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Siden vår er lett tilgjengelig gjennom vår $torLink (som er innstilt for maksimal ytelse for din komfort gjennom vår bruk av $advancedRouting) og til og med gjennom en $i2pLink. Dette sikrer ikke bare at du vil være i stand til å skjule din sanne IP for oss (som vi aldri forbinder med kontoen din uansett), men at hvis det vanlige domenet vårt av en eller annen grunn blir utilgjengelig for deg, vil det være andre måter for deg å få tilgang til vår service. Vi setter stor pris på personvernet ditt, $dontAskEmail.';
   }
 
   @override
@@ -10358,16 +10358,16 @@ class I18nNbNo extends I18nNb {
   String get completed250Sbtitle => 'Dine fullførte handler';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'For henvendelser fra rettshåndhevelse, vennligst les $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'For henvendelser fra rettshåndhevelse, vennligst les $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'vår politikk';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'For å kontakte vår kundestøtte kan du $openAticket eller sende en e-post til $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'For å kontakte vår kundestøtte kan du $openATicket eller sende en e-post til $email';
   }
 
   @override
@@ -10464,8 +10464,8 @@ class I18nNbNo extends I18nNb {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Feil ved innløsing av kupong';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Noe gikk galt under innløsning av en kupong. Hvis det ikke virker riktig, vennligst kontakt kundestøtten. Feilkode: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Noe gikk galt under innløsning av en kupong. Hvis det ikke virker riktig, vennligst kontakt kundestøtten. Feilkode: $errorCode.';
   }
 
   @override
@@ -11075,8 +11075,8 @@ class I18nNbNo extends I18nNb {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Lagre endringer';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Denne annonsen er til $adType $createdAt $timeOfcreation. For å endre annonsetype, vennligst $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Denne annonsen er til $adType $createdAt $timeOfCreation. For å endre annonsetype, vennligst $createANewAd';
   }
 
   @override
@@ -11127,8 +11127,8 @@ class I18nNbNo extends I18nNb {
   String get error8722Sbpage => 'Oops! Noe gikk galt. Vennligst prøv igjen snart. Klikk hvor som helst på siden for å laste inn på nytt.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Hvis det ikke hjelper, kan du prøve å slette informasjonskapslene eller bruke en annen nettleser. Hvis det heller ikke hjelper, vennligst $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Hvis det ikke hjelper, kan du prøve å slette informasjonskapslene eller bruke en annen nettleser. Hvis det heller ikke hjelper, vennligst $openATicket';
   }
 
   @override
@@ -11210,8 +11210,8 @@ class I18nNbNo extends I18nNb {
   String get error250Sbsignup250Sb48 => 'Bruker med den e-postadressen eksisterer allerede';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Kan ikke be om mindre enn $min_asset_amount $assetSymbol for opprettelse av handel.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Kan ikke be om mindre enn $minAssetAmount $assetSymbol for opprettelse av handel.';
   }
 
   @override
@@ -11393,8 +11393,8 @@ class I18nNbNo extends I18nNb {
   String get faq250Sbanswer8722Sb18 => 'Tilbakemeldinger som er gitt kan enten være bekreftet eller ubekreftet. Bekreftet tilbakemelding vises på en brukers offentlige profil og påvirker brukerens tilbakemeldingspoeng. For at en ubekreftet tilbakemelding skal bli bekreftet, må det totale handelsvolumet mellom brukeren som gir og mottar tilbakemelding være mer enn 100 USD tilsvarende.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Nettvarsler lar deg motta popup-varsler gjennom nettleseren din hver gang du får et nytt varsel på $appName. Hvis du handler og vil vite umiddelbart når noe skjer, $enableWebnotificationsfromyourprofile. Vri bryteren som sier Aktiver nettvarsler, og når nettleseren ber deg om tillatelse til å vise nettvarsler, trykk godta. Du er nå klar og vil begynne å motta nettvarsler.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Nettvarsler lar deg motta popup-varsler gjennom nettleseren din hver gang du får et nytt varsel på $appName. Hvis du handler og vil vite umiddelbart når noe skjer, $enableWebNotificationsFromYourProfile. Vri bryteren som sier Aktiver nettvarsler, og når nettleseren ber deg om tillatelse til å vise nettvarsler, trykk godta. Du er nå klar og vil begynne å motta nettvarsler.';
   }
 
   @override
@@ -11428,8 +11428,8 @@ class I18nNbNo extends I18nNb {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Vi reserverer et lite beløp fra lommeboksaldoen din for å betale nettverkstransaksjonsgebyret. Hver kryptovalutatransaksjon må betale en liten avgift til nettverket for å bli bekreftet uansett hvor den sendes fra.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Dette svaret gjelder tilfellet når du kjøper Monero på nett. Etter at du har sendt inn en handelsforespørsel til selgeren av Monero, har du et tidsvindu for å fullføre betalingen før selgeren kan kansellere handelen (betalingsvinduet varierer avhengig av betalingsmåten for handelen). I løpet av denne tiden må du fullføre betalingen og trykke på Jeg har betalt-knappen. Selgeren blir varslet om at du har foretatt betalingen, og Monero vil bli holdt i obligasjonen til selgeren fullfører handelen for deg når han ser betalingen på kontoen hans/hennes. Hvis du betalte for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt selgeren gjennom handelen. Du kan kontakte selgeren og dine andre eksisterende handelskontakter fra $dashboard i din $appName-brukerprofil. Send en melding til selgeren og forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis selgeren ikke svarer på denne forespørselen, vennligst kontakt $appName brukerstøtte ved å bruke $supportRequestform og oppgi din handels-ID.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Dette svaret gjelder tilfellet når du kjøper Monero på nett. Etter at du har sendt inn en handelsforespørsel til selgeren av Monero, har du et tidsvindu for å fullføre betalingen før selgeren kan kansellere handelen (betalingsvinduet varierer avhengig av betalingsmåten for handelen). I løpet av denne tiden må du fullføre betalingen og trykke på Jeg har betalt-knappen. Selgeren blir varslet om at du har foretatt betalingen, og Monero vil bli holdt i obligasjonen til selgeren fullfører handelen for deg når han ser betalingen på kontoen hans/hennes. Hvis du betalte for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt selgeren gjennom handelen. Du kan kontakte selgeren og dine andre eksisterende handelskontakter fra $dashboard i din $appName-brukerprofil. Send en melding til selgeren og forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis selgeren ikke svarer på denne forespørselen, vennligst kontakt $appName brukerstøtte ved å bruke $supportRequestForm og oppgi din handels-ID.';
   }
 
   @override
@@ -11439,8 +11439,8 @@ class I18nNbNo extends I18nNb {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'skjema for støtteforespørsel';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Etter at du har sendt en handelsforespørsel, har du et tidsvindu for å fullføre betalingen før den andre parten kan kansellere handelen. I løpet av denne tiden må du fullføre betalingen og trykke på \'Jeg har betalt\'-knappen. Den andre parten blir varslet om at du har foretatt betalingen, og myntene vil bli holdt i obligasjonen til den andre parten fullfører handelen for deg etter å ha sett betalingen på kontoen sin. Hvis du har betalt for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt den andre parten via handelschatten. Du kan kontakte den andre parten og dine andre eksisterende handelskontakter fra $dashboard. Send en melding til den andre parten og vennligst forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis den andre parten ikke svarer på denne forespørselen, vennligst kontakt $appName-ansatte ved å bruke $supportRequestform og oppgi din handels-ID.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Etter at du har sendt en handelsforespørsel, har du et tidsvindu for å fullføre betalingen før den andre parten kan kansellere handelen. I løpet av denne tiden må du fullføre betalingen og trykke på \'Jeg har betalt\'-knappen. Den andre parten blir varslet om at du har foretatt betalingen, og myntene vil bli holdt i obligasjonen til den andre parten fullfører handelen for deg etter å ha sett betalingen på kontoen sin. Hvis du har betalt for kjøpet, men ikke merket betalingen som fullført før betalingstidsvinduet utløp, vennligst kontakt den andre parten via handelschatten. Du kan kontakte den andre parten og dine andre eksisterende handelskontakter fra $dashboard. Send en melding til den andre parten og vennligst forklar situasjonen og hvorfor du ikke kunne fullføre betalingen innen tidsvinduet. Hvis den andre parten ikke svarer på denne forespørselen, vennligst kontakt $appName-ansatte ved å bruke $supportRequestForm og oppgi din handels-ID.';
   }
 
   @override
@@ -11516,8 +11516,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Ja, vi har faktisk to! Her er de: $b32I2purl eller $i2pUrl (du trenger $i2p for å åpne disse linkene).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Ja, vi har faktisk to! Her er de: $b32I2pUrl eller $i2pUrl (du trenger $i2p for å åpne disse linkene).';
   }
 
   @override
@@ -11721,8 +11721,8 @@ class I18nNbNo extends I18nNb {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Handel med kryptovaluta';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til andre Monero-lommebøker er underlagt Monero-nettverkstransaksjonsgebyret. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMonerofees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til andre Monero-lommebøker er underlagt Monero-nettverkstransaksjonsgebyret. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMoneroFees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
   }
 
   @override
@@ -11732,8 +11732,8 @@ class I18nNbNo extends I18nNb {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'lommebokside';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til eksterne kryptovaluta-lommebøker er underlagt det relevante transaksjonsgebyret for kryptovalutanettverk. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMonerofees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Transaksjoner til lommebøker til andre $appName-brukere er $free. $linebreak  Transaksjoner til eksterne kryptovaluta-lommebøker er underlagt det relevante transaksjonsgebyret for kryptovalutanettverk. Gjeldende avgift er synlig på $walletPage under overskriften $outgoingMoneroFees. Transaksjonsgebyret betales fra $appName-lommeboken din når du sender en transaksjon.';
   }
 
   @override
@@ -11827,8 +11827,8 @@ class I18nNbNo extends I18nNb {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Skann QR-koden som vises på siden i autentiseringsappen din. Etter at du har gjort det, vil 6-sifrede engangspassord begynne å vises i appen.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Installer autentiseringsappen på telefonen din. Du kan $chooseAnyapp som støtter TOTP. For eksempel er $andotp gratis og åpen kildekode.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Installer autentiseringsappen på telefonen din. Du kan $chooseAnyApp som støtter TOTP. For eksempel er $andotp gratis og åpen kildekode.';
   }
 
   @override
@@ -11840,8 +11840,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName tilbyr $totp 2FA. Når 2FA er aktivert, vil $authMobileapp bli synkronisert med $appName og vil produsere 6-sifrede engangspassord. Dette passordet endres hvert minutt. For å logge inn eller trekke voldgiftsbinding, må du i tillegg til passordet ditt også skrive inn dette engangspassordet før det utløper.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName tilbyr $totp 2FA. Når 2FA er aktivert, vil $authMobileApp bli synkronisert med $appName og vil produsere 6-sifrede engangspassord. Dette passordet endres hvert minutt. For å logge inn eller trekke voldgiftsbinding, må du i tillegg til passordet ditt også skrive inn dette engangspassordet før det utløper.';
   }
 
   @override
@@ -12023,8 +12023,8 @@ class I18nNbNo extends I18nNb {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Å kjøpe bitcoins anonymt har blitt en stadig vanskeligere oppgave.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'For hver dag som går ser det ut til at de fleste om ikke alle de tradisjonelle metodene for å skaffe seg bitcoin har begynt å kreve ID-verifisering, noe som gjør de fleste guider tilgjengelige på nettet i dag, for eksempel den på $ninetyNinebitcoins eller $coincentral foreldet. $linebreak  $gutter Den tradisjonelle måten å kjøpe bitcoins uten ID på har hovedsakelig vært gjennom P2P Bitcoin-utvekslingsplattformen $localbitcoins, et sted som var spesielt populært for å kjøpe bitcoin anonymt med $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'For hver dag som går ser det ut til at de fleste om ikke alle de tradisjonelle metodene for å skaffe seg bitcoin har begynt å kreve ID-verifisering, noe som gjør de fleste guider tilgjengelige på nettet i dag, for eksempel den på $ninetyNineBitcoins eller $coincentral foreldet. $linebreak  $gutter Den tradisjonelle måten å kjøpe bitcoins uten ID på har hovedsakelig vært gjennom P2P Bitcoin-utvekslingsplattformen $localbitcoins, et sted som var spesielt populært for å kjøpe bitcoin anonymt med $paypal.';
   }
 
   @override
@@ -12052,16 +12052,16 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount med $appName. Du får en gratis og sikker online Monero-lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount med $appName. Du får en gratis og sikker online Monero-lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Registrer en konto';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount med $appName. Du får en gratis og sikker online kryptovaluta lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount med $appName. Du får en gratis og sikker online kryptovaluta lommebok. Ingen ekstra apper er nødvendig. Hvis du allerede har en konto, hopp til neste trinn.';
   }
 
   @override
@@ -12511,8 +12511,8 @@ class I18nNbNo extends I18nNb {
   String get guide250Sbtelegram250Sbtitle => 'Slik slår du på Telegram-mobilvarsler';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'En typisk handel på $appName fungerer slik, eksemplet er en online salgshandel der du selger $assetName til en kjøper. Prosessen er lik når du kjøper $assetName på nettet, men for dette eksemplet fokuserer vi på å selge $assetName, da det er den vanligste typen handel. $linebreak  Først må du sette inn $assetName til $localmoneroWallet. $linebreak  Deretter må du $create $aSellmoneroad (kalt en online salgsannonse). Når du lager annonsen velger du en betalingsmetode, setter prisene dine, grensene dine og skriver handelsvilkårene som en melding i fri form. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'En typisk handel på $appName fungerer slik, eksemplet er en online salgshandel der du selger $assetName til en kjøper. Prosessen er lik når du kjøper $assetName på nettet, men for dette eksemplet fokuserer vi på å selge $assetName, da det er den vanligste typen handel. $linebreak  Først må du sette inn $assetName til $localmoneroWallet. $linebreak  Deretter må du $create $aSellMoneroAd (kalt en online salgsannonse). Når du lager annonsen velger du en betalingsmetode, setter prisene dine, grensene dine og skriver handelsvilkårene som en melding i fri form. ';
   }
 
   @override
@@ -12548,8 +12548,8 @@ class I18nNbNo extends I18nNb {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Starter';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage er der du lager nye annonser. $linebreak  Det er noen alternativer når du oppretter en annonse som kreves, og mange ekstra alternativer som er valgfrie, men som anbefales å angi. Ved å bruke de ekstra alternativene kan du tilpasse annonsen din slik at den passer din handelsstrategi. $linebreak  Du kan finne alle annonsene du har laget fra din $dashboard. I dashbordet kan du også finne dine åpne handler. $linebreak  $requiredOptions $linebreak  $location Angi landet der du vil at annonsen din skal vises. $linebreak  $paymentMethod Velg betalingsmåten du vil tilby fra rullegardinmenyen. $linebreak  $currency Velg hvilken valuta du selger for. Hvis du for eksempel selger i Frankrike, bør du velge EUR. Du kan bruke $thisList for å finne valutaakronymet ditt.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage er der du lager nye annonser. $linebreak  Det er noen alternativer når du oppretter en annonse som kreves, og mange ekstra alternativer som er valgfrie, men som anbefales å angi. Ved å bruke de ekstra alternativene kan du tilpasse annonsen din slik at den passer din handelsstrategi. $linebreak  Du kan finne alle annonsene du har laget fra din $dashboard. I dashbordet kan du også finne dine åpne handler. $linebreak  $requiredOptions $linebreak  $location Angi landet der du vil at annonsen din skal vises. $linebreak  $paymentMethod Velg betalingsmåten du vil tilby fra rullegardinmenyen. $linebreak  $currency Velg hvilken valuta du selger for. Hvis du for eksempel selger i Frankrike, bør du velge EUR. Du kan bruke $thisList for å finne valutaakronymet ditt.';
   }
 
   @override
@@ -12590,8 +12590,8 @@ class I18nNbNo extends I18nNb {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Sette opp en annonse';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Vennligst les vår $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Vennligst les vår $termsOfService.';
   }
 
   @override
@@ -12673,8 +12673,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Du kan være den første til $post_an_ad i følgende kategorier:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Du kan være den første til $postAnAd i følgende kategorier:';
   }
 
   @override
@@ -13763,8 +13763,8 @@ class I18nNbNo extends I18nNb {
   String get login250Sbreset8722Sblink => 'Tilbakestill den her.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Du kan bruke din $front_type_url-legitimasjon for å logge på.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Du kan bruke din $frontTypeUrl-legitimasjon for å logge på.';
   }
 
   @override
@@ -13914,8 +13914,8 @@ class I18nNbNo extends I18nNb {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Begrensninger for denne ChangeNow-handelen:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Utilstrekkelig balanse. Påkrevd: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Utilstrekkelig balanse. Påkrevd: $amountRequired.';
   }
 
   @override
@@ -13926,7 +13926,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
-    return 'Handel {id}';
+    return 'Handel $assetName';
   }
 
   @override
@@ -14043,7 +14043,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String note250Sbbutton(Object username) {
-    return 'Legg til et notat om {val}';
+    return 'Legg til et notat om $username';
   }
 
   @override
@@ -14056,7 +14056,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String note250Sbtitle(Object username) {
-    return 'Notatet ditt på {val} (bare sett av deg)';
+    return 'Notatet ditt på $username (bare sett av deg)';
   }
 
   @override
@@ -14187,8 +14187,8 @@ class I18nNbNo extends I18nNb {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'For mange annonser';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Angi gyldig førstegangsgrenseverdi $assetSymbol. Bare tall mellom $min_asset_amount og $max_asset_amount er tillatt.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Angi gyldig førstegangsgrenseverdi $assetSymbol. Bare tall mellom $minAssetAmount og $maxAssetAmount er tillatt.';
   }
 
   @override
@@ -14375,8 +14375,8 @@ class I18nNbNo extends I18nNb {
   String get post8722Sbad250Sbreview250Sbyes => 'ja';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Før du oppretter en annonse, vennligst les gjennom våre $termsOfservice og $guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Før du oppretter en annonse, vennligst les gjennom våre $termsOfService og $guides';
   }
 
   @override
@@ -14434,8 +14434,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Trinn $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Trinn $stepNumber';
   }
 
   @override
@@ -14769,8 +14769,8 @@ class I18nNbNo extends I18nNb {
   String get search250Sbno8722Sbresults8722Sb1 => 'Prøv med annen betalingsmetode, forskjellig beløp eller ikke noe beløp i det hele tatt. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Alternativt kan du være den første til å $postAnad her!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Alternativt kan du være den første til å $postAnAd her!';
   }
 
   @override
@@ -14857,8 +14857,8 @@ class I18nNbNo extends I18nNb {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Skriv inn koden</strong> gitt av 2FA-mobilappen din i boksen under QR-koden og <strong> trykk på \'Bekreft 2FA\'-knappen</strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp som $andotp eller $anyOther2faapp som støtter $totp for enheten din.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp som $andotp eller $anyOther2faApp som støtter $totp for enheten din.';
   }
 
   @override
@@ -15018,8 +15018,8 @@ class I18nNbNo extends I18nNb {
   String get settings250Sbhomepage => 'Hjemmeside';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$exampleUrl)';
   }
 
   @override
@@ -15643,8 +15643,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Handelsannonse ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Handelsannonse ($adType)';
   }
 
   @override
@@ -16327,7 +16327,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
-    return 'Mottar {cryptocurrencyName} adresse';
+    return 'Mottar $assetName adresse';
   }
 
   @override
@@ -16464,12 +16464,12 @@ class I18nNbNo extends I18nNb {
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
-    return 'Motta {assetName}';
+    return 'Motta $currencyCode';
   }
 
   @override
   String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
-    return 'Send {assetName}';
+    return 'Send $asset';
   }
 
   @override
@@ -16813,7 +16813,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
-    return 'Beløp ({assetSymbol})';
+    return 'Beløp ($asset)';
   }
 
   @override
@@ -16844,8 +16844,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Alle dine selgende $asset-annonser har blitt skjult fra offentlig søk fordi din voldgiftsobligasjonslommeboksaldo er lavere enn $minRequiredbalance. For at salgsannonsene dine skal bli synlige, må du sette inn minst $amountXmr til voldgiftsgarantien din $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Alle dine selgende $asset-annonser har blitt skjult fra offentlig søk fordi din voldgiftsobligasjonslommeboksaldo er lavere enn $minRequiredBalance. For at salgsannonsene dine skal bli synlige, må du sette inn minst $amountXmr til voldgiftsgarantien din $localmoneroWallet.';
   }
 
   @override
@@ -16995,8 +16995,8 @@ class I18nNbNo extends I18nNb {
   String get xx => 'Global';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $time_remaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Alle kryptovaluta-annonser blir nå flyttet til den nye \"global (kode XX)\"-landkategorien. Alle dupliserte kryptovalutaannonser som bare varierer fra land til land, slettes $timeRemaining. Sørg for at du bare har EN kryptovalutaannonse per valuta, ellers vil alle unntatt den sist publiserte annonsen i den valutaen bli slettet, mens den gjenværende annonsen flyttes til \"global\" landkategori.';
   }
 
   @override
@@ -18424,8 +18424,8 @@ class I18nNbNo extends I18nNb {
   String get affiliate__enable_btn => 'Aktiver tilknyttede program';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $ref_code til en hvilken som helst $appName URL.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Ditt tilknyttede program er aktivert, og du kan tjene provisjoner ved å legge til din affiliate-tag $refCode til en hvilken som helst $appName URL.';
   }
 
   @override
@@ -18439,8 +18439,8 @@ class I18nNbNo extends I18nNb {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Vises på den offentlige profilen din. Bare gyldig URL akseptert (f.eks. https://$exampleUrl)';
   }
 
   @override
@@ -18495,7 +18495,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n${appName}-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
+    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n$appName-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
   }
 
   @override

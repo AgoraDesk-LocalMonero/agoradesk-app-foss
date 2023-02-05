@@ -70,9 +70,9 @@ class ApiClient with UrlMixin {
           List<String> cookiesLst = [];
           if (GetIt.I<AppParameters>().cookies != null) {
             for (final val in GetIt.I<AppParameters>().cookies!) {
-              if (val.name.contains('540')) {
-                cookiesLst.add('${val.name}=${val.value}');
-              }
+              // if (val.name.contains('540')) {
+              cookiesLst.add('${val.name}=${val.value}');
+              // }
             }
           }
           if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {
@@ -80,6 +80,7 @@ class ApiClient with UrlMixin {
           } else {
             options.headers["cookie"] = cookiesLst.join(';');
           }
+          debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
@@ -90,15 +91,13 @@ class ApiClient with UrlMixin {
           debugPrint(
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id')) {
-            final cookiesLst = response.headers.map['set-cookie'] ?? [];
-
+            final List<dynamic> cookiesLst = response.headers.map['set-cookie'] ?? [];
             eventBus.fire(DisplayCaptchaEvent(
-              cookie1: cookiesLst.isNotEmpty ? response.headers.map['set-cookie']![0].split(';').first : '',
-              cookie2: cookiesLst.length > 1 ? response.headers.map['set-cookie']![1].split(';').first : '',
+              cookies: cookiesLst,
               body: response.data,
             ));
-            // }
           }
+          // }
           return handler.next(response);
         },
         onError: (error, handler) {
@@ -141,6 +140,88 @@ class ApiClient with UrlMixin {
       ),
     );
   }
+
+  // Future<bool> _checkCaptchaInHeadlessWebView(List<dynamic> cookiesLst) async {
+  //   HeadlessInAppWebView? headlessWebView;
+  //   late final InAppWebViewController? _webViewController;
+  //   CookieManager cookieManager = CookieManager.instance();
+  //   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
+  //     crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, mediaPlaybackRequiresUserGesture: false),
+  //     android: AndroidInAppWebViewOptions(
+  //       useHybridComposition: true,
+  //     ),
+  //     ios: IOSInAppWebViewOptions(
+  //       allowsInlineMediaPlayback: true,
+  //     ),
+  //   );
+  //
+  //   final uri = Uri.parse(GetIt.I<AppParameters>().urlBase);
+  //
+  //   final cookie1 = cookiesLst.isNotEmpty ? cookiesLst[0].split(';').first : '';
+  //   final cookie2 = cookiesLst.length > 1 ? cookiesLst[1].split(';').first : '';
+  //
+  //   headlessWebView = HeadlessInAppWebView(
+  //     initialUrlRequest: URLRequest(url: uri),
+  //     initialUserScripts: UnmodifiableListView<UserScript>([]),
+  //     initialOptions: _options,
+  //     onWebViewCreated: (controller) async {
+  //       _webViewController = controller;
+  //       try {
+  //         // get the CookieManager instance
+  //         CookieManager cookieManager = CookieManager.instance();
+  //         cookieManager.setCookie(
+  //           url: uri,
+  //           name: "token",
+  //           value: GetIt.I<AppParameters>().accessToken ?? '',
+  //           domain: "agoradesk.com",
+  //           isSecure: true,
+  //         );
+  //         final cookie1Name = cookie1.split('=').first;
+  //         if (cookie1Name.isNotEmpty) {
+  //           final cookie1Value = cookie1.substring(cookie1Name.length + 1);
+  //           cookieManager.setCookie(
+  //             url: uri,
+  //             name: cookie1Name,
+  //             value: cookie1Value,
+  //             domain: ".agoradesk.com",
+  //             isSecure: true,
+  //           );
+  //         }
+  //         final cookie2Name = cookie2.split('=').first;
+  //         if (cookie2Name.isNotEmpty) {
+  //           final cookie2Value = cookie2.substring(cookie2Name.length + 1);
+  //           cookieManager.setCookie(
+  //             url: uri,
+  //             name: cookie2Name,
+  //             value: cookie2Value,
+  //             domain: ".agoradesk.com",
+  //             isSecure: true,
+  //           );
+  //         }
+  //         await _webViewController!.loadUrl(urlRequest: URLRequest(url: uri));
+  //       } catch (e) {
+  //         debugPrint('++++ [Webview cooikes error] $e');
+  //       }
+  //     },
+  //     onLoadStop: (controller, _) async {
+  //       await _getCookies(cookieManager);
+  //     },
+  //   );
+  //
+  //   headlessWebView.run();
+  //   await Future.delayed(const Duration(seconds: 2));
+  //   headlessWebView.dispose();
+  //   if ((GetIt.I<AppParameters>().cookies ?? []).join(' ').contains('visid_incap_2518540')) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  //
+  // Future _getCookies(CookieManager cookieManager) async {
+  //   List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
+  //   GetIt.I<AppParameters>().cookies = cookies;
+  // }
 
   void setBaseUrl(String url) {
     _dio.options.baseUrl = url;

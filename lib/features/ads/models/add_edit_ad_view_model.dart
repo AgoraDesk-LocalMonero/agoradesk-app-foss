@@ -527,9 +527,10 @@ class AddEditAdViewModel extends ViewModel
     selectedOnlineProvider = val;
     if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
       selectedCountryCode = 'XX';
-    } else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
-      selectedCountryCode = 'ANY';
     }
+    // else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
+    //   selectedCountryCode = 'ANY';
+    // }
     notifyListeners();
   }
 

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -187,7 +188,12 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
 
   String get currencyCode => _currencyCode ?? 'USD';
 
-  String get countryCode => _countryCode ?? 'US';
+  String get countryCode {
+    if (blockedCountries.contains(_countryCode)) {
+      return 'US';
+    }
+    return _countryCode ?? 'US';
+  }
 
   set countryCode(String val) {
     AppSharedPrefs().setString(AppSharedPrefsKey.countryCode, val);

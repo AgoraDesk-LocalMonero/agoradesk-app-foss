@@ -43,10 +43,13 @@ There are two apps under one code base in this repository.
    (for example in China or with GrapheneOS) can't receive pushes, the app detects it and start
    polling in the background mode. [More info](Notifications.md)
 
-4. For anonymization reasons all notifications are sent without translations and are translated on the client's side.
-   So, we use data messages to display them with the app code (not with the FCM).
+4. For privacy, all notifications are sent without translations and are translated on the 
+client-side using data messages in the app code, not through Firebase Cloud Messaging (FCM).
 
-5. Made with Dart & Flutter ❤️
+5. The feature to use a custom proxy (HTTP, SOCKS4, or SOCKS5) has been added in the settings 
+for more secure connections.
+
+6. Made with Dart & Flutter ❤️
 
 ## Build
 

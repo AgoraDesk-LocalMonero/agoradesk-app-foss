@@ -352,7 +352,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     if (res.isRight) {
       countryCodeModel = res.right;
       final List<String> codes = countryCodeModel.codes;
-      codes.insert(0, kAnyCountry);
       return codes;
     } else {
       handleApiError(res.left, context);
@@ -390,7 +389,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   void clearFilter() {
     selectedCurrency = kAnyCurrency;
-    selectedCountryCode = kAnyCountry;
+    selectedCountryCode = kAnyCountryCode;
     countryDropdownKey.currentState?.changeSelectedItem(null);
     currencyDropdownKey.currentState?.changeSelectedItem(null);
     visibilityDropdownKey.currentState?.changeSelectedItem(null);
@@ -501,7 +500,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
         tradeType: tradeType,
         paymentMethodCode: selectedOnlineProvider?.code == kAnyPaymentMethodKey ? null : selectedOnlineProvider?.code,
         currencyCode: selectedCurrency?.name == kAnyCurrency.name ? null : selectedCurrency?.code,
-        countryCode: selectedCountryCode == kAnyCountry ? null : selectedCountryCode,
+        countryCode: selectedCountryCode == kAnyCountryCode ? null : selectedCountryCode,
         asset: asset,
         sort: sort,
       );
@@ -839,7 +838,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       final AdModel changedAd = ad.copyWith(visible: newVisibility);
       final res = await _adsRepository.saveAd(changedAd);
       if (res.isRight) {
-        ads[index] = changedAd;
+        ads[index - 1] = changedAd;
         notifyListeners();
       } else {
         // handleApiError(res.left, context);
