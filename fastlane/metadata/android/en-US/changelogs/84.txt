@@ -1,0 +1,2 @@
+1. Improved login with Imperva captcha.
+2. Fixed creating ad issues.

@@ -1,3 +1,5 @@
+import com.android.build.OutputFile
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 
@@ -31,7 +33,7 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 33
@@ -76,11 +78,6 @@ android {
             storePassword keystoreProperties['lmStorePassword']
         }
     }
-//    buildTypes {
-//        release {
-//            signingConfig signingConfigs.agoradeskConfig
-//        }
-//    }
 
     flavorDimensions "app"
 
@@ -112,7 +109,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+//    implementation platform('com.google.firebase:firebase-bom:29.0.3')
     implementation "androidx.multidex:multidex:2.0.1"
 }
 
@@ -124,6 +121,17 @@ android.applicationVariants.all { variant ->
 //        def flavor = variant.flavorName
         def flavor = variant.applicationId
 //        outputFileName = "app-${flavor}-${builtType}-${versionName}-${versionCode}.apk"
-        outputFileName = "${flavor}_${versionCode}.apk"
+        outputFileName = "${flavor}_${output.getFilter(OutputFile.ABI)}.apk"
+    }
+}
+
+ext.abiCodes = ["x86_64": 1, "armeabi-v7a": 2, "arm64-v8a": 3]
+import com.android.build.OutputFile
+android.applicationVariants.all { variant ->
+    variant.outputs.each { output ->
+        def abiVersionCode = project.ext.abiCodes.get(output.getFilter(OutputFile.ABI))
+        if (abiVersionCode != null) {
+            output.versionCodeOverride = variant.versionCode * 10 + abiVersionCode
+        }
     }
 }

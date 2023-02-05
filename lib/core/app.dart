@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
@@ -12,7 +11,6 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/services/polling/polling_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -45,7 +43,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -54,9 +51,7 @@ import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:plausible_analytics/plausible_analytics.dart';
 import 'package:provider/single_child_widget.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
 
@@ -85,7 +80,6 @@ class _AppState extends State<App>
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
-  Plausible? _plausible;
   late final AppState appState;
   String? token;
 
@@ -95,11 +89,9 @@ class _AppState extends State<App>
   DateTime _lastUsedErrorMessage = DateTime.now().subtract(const Duration(hours: 1));
   bool _activatePin = false;
   bool _dialogOpened = false;
-  late RemoteMessage? _initialMessage;
 
   @override
   void initState() {
-    _getInitialFcmMessage();
     _secureStorage = SecureStorage();
     appState = AppState(
       secureStorage: _secureStorage,
@@ -138,7 +130,6 @@ class _AppState extends State<App>
     GetIt.I.registerSingleton<AppRouter>(_appRouter);
     router = GetIt.I<AppRouter>();
     _notificationsService = NotificationsService(
-      fcm: GetIt.I<AppParameters>().includeFcm ? FirebaseMessaging.instance : null,
       api: _api,
       secureStorage: _secureStorage,
       accountService: _accountService,
@@ -158,7 +149,6 @@ class _AppState extends State<App>
     _initGlobalEvents();
     _initHttpHandler();
     _initUserAgent();
-    _initPlausible();
     _initUploadingStatusListener();
 
     WidgetsBinding.instance.addObserver(this);
@@ -169,7 +159,6 @@ class _AppState extends State<App>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      _notificationsService.getToken();
       if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;
@@ -284,19 +273,6 @@ class _AppState extends State<App>
   Future<void> _afterConfigInit() async {}
 
   ///
-  /// Initialize Mixpanel Analytics
-  ///
-  Future<void> _initPlausible() async {
-    if (GetIt.I<AppParameters>().includeFcm && AppSharedPrefs().sentryIsOn == true) {
-      try {
-        _plausible = Plausible(GetIt.I<AppParameters>().urlPlausibleServer, GetIt.I<AppParameters>().plausibleDomain);
-      } catch (e, stackTrace) {
-        Sentry.captureException(e, stackTrace: stackTrace);
-      }
-    }
-  }
-
-  ///
   /// Images uploading in chats - spinner over all app
   ///
   void _initUploadingStatusListener() {
@@ -355,7 +331,6 @@ class _AppState extends State<App>
   /// Handle [AuthState]
   ///
   void _initAuthHandler() {
-    _notificationsService.getToken();
     _authService.onAuthStateChange.listen((authState) {
       debugPrint('++++[$runtimeType] AuthState: $authState');
       // handle login & logout
@@ -364,7 +339,6 @@ class _AppState extends State<App>
           _initStartRoute();
           break;
         case AuthState.loggedIn:
-          _notificationsService.getToken();
           _pollingService.getBalances();
           _initStartRoute();
           break;
@@ -489,15 +463,6 @@ class _AppState extends State<App>
 
   void _initGlobalEvents() {
     eventBus
-      ..on<AnalyticsEvent>().listen((e) {
-        debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
-        if (appState.initialized) {
-          if (_plausible != null) {
-            _plausible!.event(name: e.event, referrer: e.properties.toString());
-          }
-        }
-      })
-      ..on<LocaleChangedEvent>().listen((e) {})
       ..on<LogOutEvent>().listen((e) {
         if (_authService.isAuthenticated) {
           _authService.logOut();
@@ -679,7 +644,6 @@ class _AppState extends State<App>
           initialData: ConnectivityResult.none,
         ),
         Provider.value(value: _api),
-        Provider.value(value: _plausible),
         Provider.value(value: _adsRepository),
         Provider.value(value: _tradeRepository),
         Provider.value(value: _authService),
@@ -691,18 +655,6 @@ class _AppState extends State<App>
         Provider.value(value: _notificationsService),
         ChangeNotifierProvider.value(value: appState),
       ];
-
-  Future _getInitialFcmMessage() async {
-    _initialMessage = await FirebaseMessaging.instance.getInitialMessage();
-    if (_initialMessage != null) {
-      final Map<String, dynamic> payload = _initialMessage!.data;
-      final PushModel push = PushModel.fromJson(payload);
-      if (push.objectId != null && push.objectId!.isNotEmpty) {
-        final tradeId = push.objectId;
-        eventBus.fire(NoificationClickedEvent(tradeId));
-      }
-    }
-  }
 
   @override
   void dispose() {

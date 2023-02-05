@@ -1,0 +1,1 @@
+LocalMonero: troca XMR sem ID

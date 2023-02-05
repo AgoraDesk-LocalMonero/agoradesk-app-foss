@@ -77,9 +77,17 @@ build-apk-all:
 build-apk-ad:
 	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
 
+.PHONY: build-apk-ad-split
+build-apk-ad-split:
+	$(FLUTTER) build apk --flavor agoradesk --dart-define=app.flavor=agoradesk --split-per-abi
+
 .PHONY: build-apk-lm
 build-apk-lm:
 	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero
+
+.PHONY: build-apk-lm-split
+build-apk-lm-split:
+	$(FLUTTER) build apk --flavor localmonero --dart-define=app.flavor=localmonero --split-per-abi
 
 # APK FOSS
 .PHONY: build-foss-apk-all

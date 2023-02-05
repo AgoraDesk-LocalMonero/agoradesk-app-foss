@@ -29,7 +29,7 @@ dependencies:
   rxdart: ^0.27.3
   timeago: ^3.2.2
   provider: ^6.0.3
-  sentry_flutter: ^6.9.1
+#  sentry_flutter: ^6.9.1
   collection: ^1.15.0
   rating_dialog: ^2.0.3
   visibility_detector: ^0.3.3
@@ -40,7 +40,6 @@ dependencies:
   hive_flutter: ^1.1.0
   shared_preferences: ^2.0.15
   overlay_support: ^2.0.1
-  plausible_analytics: ^0.2.1
   figma_squircle: ^0.5.3
   freezed_annotation: any
   easy_debounce: ^2.0.2
@@ -62,13 +61,13 @@ dependencies:
   image_picker: ^0.8.5+3
   percent_indicator: ^4.2.1
   insta_image_viewer: ^1.0.2
-  firebase_core: ^2.1.1
-  firebase_messaging: ^14.0.3
+#  firebase_core: ^1.22.0
+#  firebase_messaging: ^13.0.1
   get_it: ^7.2.0
   injectable: ^2.1.0
   flutter_local_notifications: ^13.0.0
   flutter_foreground_task: ^3.8.2
-  google_api_availability: ^3.0.1
+#  google_api_availability: ^3.0.1
   duration: ^3.0.11
   decimal: ^2.2.0
   sticky_headers: ^0.3.0+2
