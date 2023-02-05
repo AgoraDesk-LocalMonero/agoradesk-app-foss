@@ -82,14 +82,11 @@
 	<true/>
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
-<<<<<<< HEAD
     <key>UIBackgroundModes</key>
     <array>
         <string>remote-notification</string>
     </array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
-=======
->>>>>>> iteration_23
 </dict>
 </plist>

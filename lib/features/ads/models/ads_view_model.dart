@@ -838,7 +838,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       final AdModel changedAd = ad.copyWith(visible: newVisibility);
       final res = await _adsRepository.saveAd(changedAd);
       if (res.isRight) {
-        ads[index] = changedAd;
+        ads[index - 1] = changedAd;
         notifyListeners();
       } else {
         // handleApiError(res.left, context);
