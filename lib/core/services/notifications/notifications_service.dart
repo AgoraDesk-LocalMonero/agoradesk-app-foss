@@ -54,15 +54,6 @@ class NotificationsService with ForegroundMessagesMixin {
     _timer?.cancel();
 
     _timer = Timer.periodic(const Duration(seconds: _kNotificationsPollingSeconds), (_) => getNotifications());
-
-    ///
-    /// Listen that notifications inside the app marked as read
-    ///
-    appState.notificationsMarkedRead$.listen((e) {
-      if (e) {
-        appState.hasUnread = false;
-      }
-    });
   }
 
   ///

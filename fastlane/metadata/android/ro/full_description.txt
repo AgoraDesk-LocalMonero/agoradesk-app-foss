@@ -1,17 +1,17 @@
-Cumpărați sau vindeți Bitcoin fără verificarea ID-ului. În numerar sau online.
+Cumpărați sau vindeți Monero fără verificarea ID-ului. Numerar sau online. Sigur, rapid și ușor.
 
-Vă întrebați cum să investiți în Bitcoin? Pe AgoraDesk, cumpărarea de Bitcoin nu a fost niciodată mai ușoară - cumpărați instantaneu BTC de la o persoană folosind metoda dvs. preferată de plată online: PayPal, card de credit/debit sau transfer bancar, carduri cadou, Venmo sau oricare alta. Dacă doriți să cumpărați bitcoini în apropierea dumneavoastră cu bani lichizi, puteți găsi o persoană dispusă să vândă bitcoini la nivel local - platforma de tranzacționare acceptă cumpărarea și vânzarea de BTC cu bani cash. Puteți chiar să cumpărați bitcoini folosind numerar prin poștă.
+LocalMonero este cea mai mare, cea mai de încredere și bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem verificări KYC - puteți pur și simplu să cumpărați Monero în mod anonim, fără verificare a identității, cu PayPal, card de credit, card cadou, numerar prin poștă sau să convertiți Bitcoin, Ether, USDT sau orice altă criptomonedă în Monero - platforma noastră acceptă orice metodă de plată.
 
 - Tranzacționare sigură și fără probleme
-La fel ca LocalBitcoins, susținem orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și, spre deosebire de LocalBitcoins, susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență ușoară și sigură pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți repetați pentru vânzători.
+Acceptăm orice metodă de plată, orice valută, oriunde. Nu eliminăm metodele de plată și susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență sigură și fără probleme pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți repetați pentru vânzători.
 
 - Fără KYC/AML sau verificare a identității
-AgoraDesk se angajează să mențină simplitatea și directețea care au făcut ca LocalBitcoins original să fie atât de popular. Nu folosim KYC/AML și nici nu plănuim să facem vreodată acest lucru.
+LocalMonero se angajează să mențină simplitatea și directețea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm să facem vreodată acest lucru.
 
 - Încredere din partea comunității
-Platforma noastră a funcționat timp de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea criptomonedelor extrem de sceptică.
+Platforma noastră funcționează de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea Monero, extrem de sceptică.
 
-- Securizată, cu sursă deschisă, axată pe confidențialitate, rezistentă la cenzură
+- Sigur, sursă deschisă, centrat pe confidențialitate, rezistent la cenzură
 Aplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. De asemenea, sursa deschisă permite oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au Google complet blocat. Ținem atât de mult la confidențialitatea dvs. încât nici măcar nu vă cerem să furnizați un e-mail la înregistrare.
 
 Cod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
@@ -20,7 +20,7 @@ Urmăritor de probleme: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-f
 - Suport Stellar
 Echipa noastră de asistență este rapidă, receptivă și întotdeauna dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență la care să nu ni se răspundă în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor de socializare, vă ascultăm cu atenție criticile și implementăm întotdeauna sugestiile bune ale utilizatorilor în timp record.
 
-Puteți ajunge la serviciul nostru de asistență la: https://agoradesk.com/support
+Puteți ajunge la serviciul nostru de asistență la: https://localmonero.co/support
 
 - Tarife corecte
-Nu percepem taxe exorbitante atunci când depuneți sau retrageți Bitcoins în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.
+Nu percepem taxe exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.
