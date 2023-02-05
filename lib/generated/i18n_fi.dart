@@ -127,12 +127,12 @@ class I18nFi extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Myy $assetName käyttämällä $paymentMethod${detail} ja $currency';
+    return 'Myy $assetName käyttämällä $paymentMethod$detail ja $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Osta $assetName käyttämällä $paymentMethod${detail} ja $currency';
+    return 'Osta $assetName käyttämällä $paymentMethod$detail ja $currency';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nFi extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Varo huijareita, jotka yrittävät esiintyä henkilökuntana!\n${appName}-järjestelmänvalvojat eivät koskaan käske sinua viimeistelemään kauppaa.\nHenkilökunnan viesteissä on punainen tausta.';
+    return 'Varo huijareita, jotka yrittävät esiintyä henkilökuntana!\n$appName-järjestelmänvalvojat eivät koskaan käske sinua viimeistelemään kauppaa.\nHenkilökunnan viesteissä on punainen tausta.';
   }
 
   @override

@@ -19,6 +19,7 @@ mixin UrlMixin {
           WebviewRoute(
             token: GetIt.I<AppParameters>().accessToken,
             url: url,
+            cookies: [],
           ),
         );
       } else {

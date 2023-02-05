@@ -127,12 +127,12 @@ class I18nCs extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Prodejte $assetName pomocí $paymentMethod${detail} s $currency';
+    return 'Prodejte $assetName pomocí $paymentMethod$detail s $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Kupte $assetName pomocí $paymentMethod${detail} s $currency';
+    return 'Kupte $assetName pomocí $paymentMethod$detail s $currency';
   }
 
   @override

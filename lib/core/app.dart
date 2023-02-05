@@ -51,7 +51,6 @@ import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
@@ -473,8 +472,7 @@ class _AppState extends State<App>
         if (router.current.name != WebviewRoute.name) {
           router.push(
             WebviewRoute(
-              cookie1: e.cookie1,
-              cookie2: e.cookie2,
+              cookies: e.cookies,
               token: token,
               url: 'https://agoradesk.com',
               isFromCaptchaEvent: true,

@@ -326,6 +326,7 @@ class TradeViewModel extends ViewModel
       WebviewRoute(
         token: _apiClient.accessToken ?? '',
         url: '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}',
+        cookies: [],
       ),
     );
   }

@@ -127,12 +127,12 @@ class I18nKo extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$assetName을 $paymentMethod${detail}을 통해 $currency로 판매';
+    return '$assetName을 $paymentMethod$detail을 통해 $currency로 판매';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$assetName을 $paymentMethod${detail}을 통해 $currency로 구매';
+    return '$assetName을 $paymentMethod$detail을 통해 $currency로 구매';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nKo extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return '직원을 사칭하려는 사기꾼을 조심하세요!\n${appName} 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지의 배경색은 빨간색입니다.';
+    return '직원을 사칭하려는 사기꾼을 조심하세요!\n$appName 관리자는 거래를 완료하라고 절대 말하지 않습니다.\n직원 메시지의 배경색은 빨간색입니다.';
   }
 
   @override

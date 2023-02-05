@@ -127,12 +127,12 @@ class I18nEl extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Πουλήστε το $assetName χρησιμοποιώντας το $paymentMethod${detail} με το $currency';
+    return 'Πουλήστε το $assetName χρησιμοποιώντας το $paymentMethod$detail με το $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Αγοράστε $assetName χρησιμοποιώντας $paymentMethod${detail} με $currency';
+    return 'Αγοράστε $assetName χρησιμοποιώντας $paymentMethod$detail με $currency';
   }
 
   @override

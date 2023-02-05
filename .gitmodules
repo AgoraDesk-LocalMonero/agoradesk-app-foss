@@ -1,4 +1,7 @@
 [submodule "submodules/flutter"]
 	path = submodules/flutter
 	url = https://github.com/flutter/flutter
+<<<<<<< HEAD
 	branch = stable
+=======
+>>>>>>> main

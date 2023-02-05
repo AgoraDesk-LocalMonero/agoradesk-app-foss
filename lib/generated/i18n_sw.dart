@@ -78,7 +78,7 @@ class I18nSw extends I18n {
 
   @override
   String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
-    return 'Zote katika $countryOrCurrency}';
+    return 'Zote katika $countryOrCurrency';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nSw extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Uza $assetName ukitumia $paymentMethod${detail} na $currency';
+    return 'Uza $assetName ukitumia $paymentMethod$detail na $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Nunua $assetName ukitumia $paymentMethod${detail} kwa $currency';
+    return 'Nunua $assetName ukitumia $paymentMethod$detail kwa $currency';
   }
 
   @override
@@ -3092,7 +3092,7 @@ class I18nSw extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return 'Kwenye${advertisementCreationPage} ndipo unapounda matangazo mapya. $linebreak  Kuna baadhi ya chaguo wakati wa kuunda tangazo ambazo zinahitajika, na chaguo nyingi za ziada ambazo ni za hiari lakini zinazopendekezwa kuwekwa. Kutumia chaguo za ziada hukuruhusu kurekebisha tangazo lako ili kuendana na mkakati wako wa biashara. $linebreak  Unaweza kupata matangazo yote ambayo umeunda kutoka kwa $dashboard lako. Katika dashibodi unaweza pia kupata biashara zako wazi. $linebreak  $requiredOptions $linebreak  $location Weka nchi ambayo ungependa tangazo lako lionekane. $linebreak  $paymentMethod Chagua njia ya kulipa unayotaka kutoa kwenye menyu kunjuzi. $linebreak  $currency Chagua ni sarafu gani unauza. Kwa mfano, ikiwa unauza nchini Ufaransa unapaswa kuchagua EUR. Unaweza kutumia $thisList kupata kifupi cha sarafu yako.';
+    return 'Kwenye$advertisementCreationPage ndipo unapounda matangazo mapya. $linebreak  Kuna baadhi ya chaguo wakati wa kuunda tangazo ambazo zinahitajika, na chaguo nyingi za ziada ambazo ni za hiari lakini zinazopendekezwa kuwekwa. Kutumia chaguo za ziada hukuruhusu kurekebisha tangazo lako ili kuendana na mkakati wako wa biashara. $linebreak  Unaweza kupata matangazo yote ambayo umeunda kutoka kwa $dashboard lako. Katika dashibodi unaweza pia kupata biashara zako wazi. $linebreak  $requiredOptions $linebreak  $location Weka nchi ambayo ungependa tangazo lako lionekane. $linebreak  $paymentMethod Chagua njia ya kulipa unayotaka kutoa kwenye menyu kunjuzi. $linebreak  $currency Chagua ni sarafu gani unauza. Kwa mfano, ikiwa unauza nchini Ufaransa unapaswa kuchagua EUR. Unaweza kutumia $thisList kupata kifupi cha sarafu yako.';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nSw extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Jihadhari na matapeli wanaojaribu kuiga wafanyakazi!\n${appName} wasimamizi hawatakuambia kamwe ukamilishe biashara.\nUjumbe wa wafanyikazi una usuli nyekundu.';
+    return 'Jihadhari na matapeli wanaojaribu kuiga wafanyakazi!\n$appName wasimamizi hawatakuambia kamwe ukamilishe biashara.\nUjumbe wa wafanyikazi una usuli nyekundu.';
   }
 
   @override
