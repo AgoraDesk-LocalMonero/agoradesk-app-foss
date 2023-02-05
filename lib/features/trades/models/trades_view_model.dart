@@ -146,7 +146,7 @@ class TradesViewModel extends ViewModel with ErrorParseMixin {
     if (res.isRight) {
       countryCodeModel = res.right;
       final List<String> codes = countryCodeModel.codes;
-      codes.insert(0, kAnyCountry);
+      codes.insert(0, kAnyCountryCode);
       return codes;
     } else {
       handleApiError(res.left, context);
@@ -177,7 +177,7 @@ class TradesViewModel extends ViewModel with ErrorParseMixin {
   void clearFilter() {
     selectedCurrency = kAnyCurrency;
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
-    selectedCountryCode = kAnyCountry;
+    selectedCountryCode = kAnyCountryCode;
     countryDropdownKey.currentState?.changeSelectedItem(selectedCountryCode);
     notifyListeners();
   }
@@ -234,7 +234,7 @@ class TradesViewModel extends ViewModel with ErrorParseMixin {
         page: loadMore ? (paginationMeta?.currentPage ?? 0) + 1 : 0,
         size: 10,
         assetCode: asset?.name,
-        countryCode: selectedCountryCode == kAnyCountry ? null : selectedCountryCode,
+        countryCode: selectedCountryCode == kAnyCountryCode ? null : selectedCountryCode,
         currencyCode: selectedCurrency?.name == kAnyCurrency.name ? null : selectedCurrency?.code,
         paymentMethodCode: selectedOnlineProvider?.code == kAnyPaymentMethodKey ? null : selectedOnlineProvider?.code,
       );

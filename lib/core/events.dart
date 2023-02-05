@@ -11,6 +11,10 @@ class LogOutEvent {
   const LogOutEvent();
 }
 
+class WebViewFinishedEvent {
+  const WebViewFinishedEvent();
+}
+
 class BeforeAppInitEvent {
   const BeforeAppInitEvent();
 }
@@ -41,13 +45,11 @@ class ThemeModeChangedEvent {
 
 class DisplayCaptchaEvent {
   const DisplayCaptchaEvent({
-    required this.cookie1,
-    required this.cookie2,
+    required this.cookies,
     required this.body,
   });
 
-  final String cookie1;
-  final String cookie2;
+  final List<dynamic> cookies;
   final String? body;
 }
 

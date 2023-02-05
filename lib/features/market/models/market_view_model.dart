@@ -54,6 +54,8 @@ class MarketViewModel extends ViewModel
 
   late bool isGuestMode;
 
+  int _reloadCounter = 0;
+
   Asset? _asset = Asset.XMR;
   bool connection = true;
   final List<AdModel> ads = [];
@@ -135,7 +137,7 @@ class MarketViewModel extends ViewModel
     ctrlLocation.addListener(_locationListener);
     selectedCountryCode = _appState.countryCode;
     final currencyCode = getCountryCurrencyCode(selectedCountryCode);
-    if (currencyCode == 'EUR' && currencyCode != kAnyCountry) {
+    if (currencyCode == 'EUR' && currencyCode != kAnyCountryCode) {
       selectedCountryCode = kAnyCountryCode;
     }
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
@@ -158,8 +160,10 @@ class MarketViewModel extends ViewModel
   }
 
   Future _reloadScreenWithDelay() async {
-    await Future.delayed(const Duration(seconds: 1));
-    indicatorKey.currentState?.show();
+    if (_reloadCounter < 3) {
+      await Future.delayed(const Duration(seconds: 1));
+      indicatorKey.currentState?.show();
+    }
   }
 
   void initMenus() {

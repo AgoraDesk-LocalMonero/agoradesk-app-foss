@@ -109,6 +109,7 @@ build-ios-ad:
 .PHONY: build-ios-lm
 build-ios-lm:
 	$(FLUTTER) build ipa --flavor localmonero --dart-define=app.flavor=localmonero
+	mv /Users/mavbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/mavbook/projects/agoradesk-app-foss/build/ios/ipa/Localmonero.ipa
 
 #
 #

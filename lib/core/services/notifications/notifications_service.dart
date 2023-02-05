@@ -94,9 +94,7 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
     if (includeFcm) {
       FirebaseMessaging.instance.onTokenRefresh.listen((token) {
-        if (api.accessToken != null) {
-          _tokenUpdate(token);
-        }
+        _tokenUpdate(token);
       });
     }
 
@@ -191,22 +189,25 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   /// token manager - update, add to api, remove old from api
   ///
-  void _tokenUpdate(String? newToken) async {
+  Future _tokenUpdate(String? newToken) async {
     final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
 
     late String deviceName;
     var deviceData = <String, dynamic>{};
-    if (Platform.isAndroid) {
-      deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
-      deviceName = deviceData['device'] ?? 'Android';
-    } else if (Platform.isIOS) {
-      deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
-      deviceName = deviceData['name'] ?? 'iPhone';
+    try {
+      if (Platform.isAndroid) {
+        deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
+        deviceName = deviceData['device'] ?? 'Android';
+      } else if (Platform.isIOS) {
+        deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
+        deviceName = deviceData['name'] ?? 'iPhone';
+      }
+    } catch (e) {
+      deviceName = 'unknown';
     }
     if (oldToken != newToken) {
       appState.pushFcmTokenSavedToApi = false;
     }
-
     if (appState.pushFcmTokenSavedToApi == false && appState.username.isNotEmpty) {
       final res = await _saveFcmTokenToApi(
         DeviceModel(

@@ -15,3 +15,15 @@ const kScreenPadding = EdgeInsets.fromLTRB(16, 0, 16, 0);
 ///
 
 const kNewMessageDuration = Duration(milliseconds: 300);
+
+///
+/// Blocked countries removed from the country selector.
+///
+
+const List<String> blockedCountries = [
+  'RU',
+  'IR',
+  'CU',
+  'KP',
+  'SY',
+];

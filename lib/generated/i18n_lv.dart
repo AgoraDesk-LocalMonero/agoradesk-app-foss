@@ -77,8 +77,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrcurrency) {
-    return 'Viss iekš $countryOrcurrency';
+  String ad8722Sblisting8722Sbtable250Sbshow8722Sbmore250Sball8722Sbin8722Sbcountry8722Sbor8722Sbcurrency(Object countryOrCurrency) {
+    return 'Viss iekš $countryOrCurrency';
   }
 
   @override
@@ -101,8 +101,8 @@ class I18nLv extends I18n {
   String get ad8722Sbpage250Sberror250Sbtitle => 'Tirdzniecības pieprasījuma kļūda';
 
   @override
-  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimelimitxmr) {
-    return 'Šis tirgotājs pieļauj maksimālo $firstTimelimitxmr pirmo darījumu ar viņu.';
+  String ad8722Sbpage250Sbfirst8722Sbtime8722Sblimit8722Sbtip(Object firstTimeLimitXmr) {
+    return 'Šis tirgotājs pieļauj maksimālo $firstTimeLimitXmr pirmo darījumu ar viņu.';
   }
 
   @override
@@ -127,12 +127,12 @@ class I18nLv extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Pārdod $assetName, izmantojot $paymentMethod${detail} ar $currency';
+    return 'Pārdod $assetName, izmantojot $paymentMethod$detail ar $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Iegādājieties $assetName, izmantojot $paymentMethod${detail} ar $currency';
+    return 'Iegādājieties $assetName, izmantojot $paymentMethod$detail ar $currency';
   }
 
   @override
@@ -150,8 +150,8 @@ class I18nLv extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'pirkt';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrsell) {
-    return 'Cik daudz vēlaties saņemt $buyOrsell?';
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+    return 'Cik daudz vēlaties saņemt $buyOrSell?';
   }
 
   @override
@@ -177,8 +177,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackscore) {
-    return 'Šim tirgotājam ir nepieciešams vismaz $minimumFeedbackscore atgriezeniskās saites rādītājs, lai veiktu tirdzniecību.';
+  String ad8722Sbpage250Sbmin8722Sbfeedback8722Sbtip(Object minimumFeedbackScore) {
+    return 'Šim tirgotājam ir nepieciešams vismaz $minimumFeedbackScore atgriezeniskās saites rādītājs, lai veiktu tirdzniecību.';
   }
 
   @override
@@ -459,13 +459,13 @@ class I18nLv extends I18n {
   String get agoradesk250Sbguide250Sbad8722Sbpage250Sbbuyer => 'pircējs';
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buy_or_sell_button_name) {
-    return 'Pēc pogas \'$buy_or_sell_button_name\' nospiešanas redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas. Ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral(Object buyOrSellButtonName) {
+    return 'Pēc pogas \'$buyOrSellButtonName\' nospiešanas redzēsiet vairāk informācijas par sludinājumu, tostarp tirdzniecības noteikumus. Izlasiet tos pirms darījuma pieprasījuma iesniegšanas. Ja nepiekrītat, varat atgriezties iepriekšējā lapā un izvēlēties citu sludinājumu.';
   }
 
   @override
-  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buy_or_sell) {
-    return 'Lai sāktu darījumu, ierakstiet, cik daudz $asset vēlaties $buy_or_sell, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\", lai sāktu darījumu.';
+  String agoradesk250Sbguide250Sbad8722Sbpage250Sbgeneral250Sbhow8722Sbto8722Sbstart(Object asset, Object buyOrSell) {
+    return 'Lai sāktu darījumu, ierakstiet, cik daudz $asset vēlaties $buyOrSell, un noklikšķiniet uz pogas \"Sūtīt darījuma pieprasījumu\", lai sāktu darījumu.';
   }
 
   @override
@@ -487,8 +487,8 @@ class I18nLv extends I18n {
   String get agoradesk250Sbguide250Sbsearch250Sbbuy8722Sbtab8722Sbname => 'Pirkt';
 
   @override
-  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buy_or_sell_tab_name) {
-    return 'Pēc tam kreisajā kolonnā atlasiet cilni $buy_or_sell_tab_name. Ja vēlaties mainīt valsti, valūtu, maksājuma veidu vai norādīt nepieciešamo summu, noklikšķiniet uz pogas \'Rādīt meklēšanas izvēlni\', izvēlieties vajadzīgos parametrus un nospiediet meklēšanas pogu.';
+  String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
+    return 'Pēc tam kreisajā kolonnā atlasiet cilni $buyOrSellTabName. Ja vēlaties mainīt valsti, valūtu, maksājuma veidu vai norādīt nepieciešamo summu, noklikšķiniet uz pogas \'Rādīt meklēšanas izvēlni\', izvēlieties vajadzīgos parametrus un nospiediet meklēšanas pogu.';
   }
 
   @override
@@ -640,8 +640,8 @@ class I18nLv extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbnojs250Sbtitle => 'Darbojas bez JavaScript';
 
   @override
-  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object tor_link, Object advanced_routing, Object i2p_link, Object dont_ask_email) {
-    return 'Mūsu vietne ir viegli pieejama, izmantojot $tor_link (kas ir pielāgota maksimālai veiktspējai jūsu komfortam, izmantojot $advanced_routing) un pat ar $i2p_link. Tas nodrošina ne tikai to, ka varēsiet no mums slēpt savu patieso IP (ko mēs tik un tā nekad nesaistām ar jūsu kontu), bet arī, ka, ja kāda iemesla dēļ mūsu parastais domēns jums kļūs nepieejams, jums būs citi veidi, kā piekļūt mūsu pakalpojumiem. Mēs ļoti novērtējam jūsu privātumu, $dont_ask_email.';
+  String agoradesk250Sblbc8722Sbalternative250Sbprivacy250Sbcontent(Object torLink, Object advancedRouting, Object i2pLink, Object dontAskEmail) {
+    return 'Mūsu vietne ir viegli pieejama, izmantojot $torLink (kas ir pielāgota maksimālai veiktspējai jūsu komfortam, izmantojot $advancedRouting) un pat ar $i2pLink. Tas nodrošina ne tikai to, ka varēsiet no mums slēpt savu patieso IP (ko mēs tik un tā nekad nesaistām ar jūsu kontu), bet arī, ka, ja kāda iemesla dēļ mūsu parastais domēns jums kļūs nepieejams, jums būs citi veidi, kā piekļūt mūsu pakalpojumiem. Mēs ļoti novērtējam jūsu privātumu, $dontAskEmail.';
   }
 
   @override
@@ -901,16 +901,16 @@ class I18nLv extends I18n {
   String get completed250Sbtitle => 'Jūsu pabeigtie darījumi';
 
   @override
-  String contact250Sble(Object lawEnforcementinquiries) {
-    return 'Varas iestāžu jautājumiem, lūdzu, izlasiet $lawEnforcementinquiries.';
+  String contact250Sble(Object lawEnforcementInquiries) {
+    return 'Varas iestāžu jautājumiem, lūdzu, izlasiet $lawEnforcementInquiries.';
   }
 
   @override
   String get contact250Sble250Sbpolicy8722Sblink => 'mūsu politika';
 
   @override
-  String contact250Sbtext8722Sb0(Object openAticket, Object email) {
-    return 'Lai sazinātos ar mūsu atbalsta dienestu, varat $openAticket vai nosūtīt e-pastu uz $email';
+  String contact250Sbtext8722Sb0(Object openATicket, Object email) {
+    return 'Lai sazinātos ar mūsu atbalsta dienestu, varat $openATicket vai nosūtīt e-pastu uz $email';
   }
 
   @override
@@ -1007,8 +1007,8 @@ class I18nLv extends I18n {
   String get coupons250Sberror250Sbdialog250Sbtitle => 'Kupona izlietošanas kļūda';
 
   @override
-  String coupons250Sberror250Sbgeneric(Object error_code) {
-    return 'Izlietojot kuponu, radās problēma. Ja tas nešķiet pareizi, lūdzu, sazinieties ar atbalsta dienestu. Kļūdas kods: $error_code.';
+  String coupons250Sberror250Sbgeneric(Object errorCode) {
+    return 'Izlietojot kuponu, radās problēma. Ja tas nešķiet pareizi, lūdzu, sazinieties ar atbalsta dienestu. Kļūdas kods: $errorCode.';
   }
 
   @override
@@ -1618,8 +1618,8 @@ class I18nLv extends I18n {
   String get edit8722Sbad250Sbsave8722Sbbtn => 'Saglabāt izmaiņas';
 
   @override
-  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfcreation, Object createAnewad) {
-    return 'Šis sludinājums ir $adType $createdAt $timeOfcreation. Lai mainītu sludinājuma veidu, lūdzu $createAnewad';
+  String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto(Object adType, Object createdAt, Object timeOfCreation, Object createANewAd) {
+    return 'Šis sludinājums ir $adType $createdAt $timeOfCreation. Lai mainītu sludinājuma veidu, lūdzu $createANewAd';
   }
 
   @override
@@ -1670,8 +1670,8 @@ class I18nLv extends I18n {
   String get error8722Sbpage => 'Opā! Kaut kas nogāja greizi. Lūdzu, drīzumā mēģiniet vēlreiz. Noklikšķiniet jebkurā lapas vietā, lai atkārtoti ielādētu.';
 
   @override
-  String error8722Sbpage250Sbsubtext(Object open_a_ticket) {
-    return 'Ja tas nepalīdz, mēģiniet notīrīt sīkfailus vai izmantot citu pārlūkprogrammu. Ja arī tas nepalīdz, lūdzu, $open_a_ticket';
+  String error8722Sbpage250Sbsubtext(Object openATicket) {
+    return 'Ja tas nepalīdz, mēģiniet notīrīt sīkfailus vai izmantot citu pārlūkprogrammu. Ja arī tas nepalīdz, lūdzu, $openATicket';
   }
 
   @override
@@ -1753,8 +1753,8 @@ class I18nLv extends I18n {
   String get error250Sbsignup250Sb48 => 'Lietotājs ar šo e-pasta adresi jau pastāv';
 
   @override
-  String error250Sbtrade8722Sbrequest250Sb100(Object min_asset_amount, Object assetSymbol) {
-    return 'Darījuma izveidei nevar pieprasīt mazāk par $min_asset_amount $assetSymbol.';
+  String error250Sbtrade8722Sbrequest250Sb100(Object minAssetAmount, Object assetSymbol) {
+    return 'Darījuma izveidei nevar pieprasīt mazāk par $minAssetAmount $assetSymbol.';
   }
 
   @override
@@ -1936,8 +1936,8 @@ class I18nLv extends I18n {
   String get faq250Sbanswer8722Sb18 => 'Sniegtās atsauksmes var būt apstiprinātas vai neapstiprinātas. Apstiprinātās atsauksmes tiek rādītas lietotāja publiskajā profilā un ietekmē lietotāja atsauksmju rangu. Lai neapstiprināta atsauksme tiktu apstiprināta, kopējam tirdzniecības apjomam starp lietotāju, kurš sniedz un kurš saņem atsauksmes, ir jābūt lielākam par 100 USD ekvivalentu.';
 
   @override
-  String faq250Sbanswer8722Sb19(Object appName, Object enableWebnotificationsfromyourprofile) {
-    return 'Tīmekļa paziņojumi ļauj pārlūkprogrammā saņemt uznirstošos paziņojumus ikreiz, kad saņemat jaunu paziņojumu $appName. Ja tirgojaties un vēlaties nekavējoties uzzināt, kad kaut kas notiek, $enableWebnotificationsfromyourprofile. Pārvelciet slēdzi, kas saka Iespējot tīmekļa paziņojumus, un, kad pārlūkprogramma pieprasa atļauju rādīt tīmekļa paziņojumus, nospiediet atļaut. Tagad esat gatavs un sāksiet saņemt tīmekļa paziņojumus.';
+  String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
+    return 'Tīmekļa paziņojumi ļauj pārlūkprogrammā saņemt uznirstošos paziņojumus ikreiz, kad saņemat jaunu paziņojumu $appName. Ja tirgojaties un vēlaties nekavējoties uzzināt, kad kaut kas notiek, $enableWebNotificationsFromYourProfile. Pārvelciet slēdzi, kas saka Iespējot tīmekļa paziņojumus, un, kad pārlūkprogramma pieprasa atļauju rādīt tīmekļa paziņojumus, nospiediet atļaut. Tagad esat gatavs un sāksiet saņemt tīmekļa paziņojumus.';
   }
 
   @override
@@ -1971,8 +1971,8 @@ class I18nLv extends I18n {
   String get faq250Sbanswer8722Sb2257Sbagoradesk => 'Mēs rezervējam nelielu summu no jūsu maka atlikuma, lai samaksātu tīkla pārskaitījuma maksu. Par katru kriptovalūtas pārskaitījumu ir jāmaksā neliela maksa tīklā, lai tas tiktu apstiprināts neatkarīgi no tā, no kurienes tas tiek nosūtīts.';
 
   @override
-  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Šis attiecas uz gadījumu, kad pērkat Monero tiešsaistē. Kad esat nosūtījis darījuma pieprasījumu Monero pārdevējam, jums ir laika periods maksājuma veikšanai, pēc kura pārdevējs var atcelt darījumu (periods mainās atkarībā no darījuma maksājuma veida). Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga Esmu samaksājis. Pārdevējam tiek paziņots, ka esat veicis maksājumu, un Monero tiek turēts obligācijā, līdz pārdevējs pabeidz darījumu, redzot maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika beigām, lūdzu, sazinieties ar pārdevēju darījuma sarakstē. Varat sazināties ar pārdevēju un citiem esošajiem darījumu kontaktiem no $dashboard savā $appName lietotāja profilā. Nosūtiet ziņu pārdevējam, izskaidrojiet radušos situāciju un kāpēc nevarējāt veikt maksājumu noteiktajā laika periodā. Ja pārdevējs neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName atbalsta dienestu, izmantojot $supportRequestform, un norādiet savu darījuma ID.';
+  String faq250Sbanswer8722Sb24(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Šis attiecas uz gadījumu, kad pērkat Monero tiešsaistē. Kad esat nosūtījis darījuma pieprasījumu Monero pārdevējam, jums ir laika periods maksājuma veikšanai, pēc kura pārdevējs var atcelt darījumu (periods mainās atkarībā no darījuma maksājuma veida). Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga Esmu samaksājis. Pārdevējam tiek paziņots, ka esat veicis maksājumu, un Monero tiek turēts obligācijā, līdz pārdevējs pabeidz darījumu, redzot maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika beigām, lūdzu, sazinieties ar pārdevēju darījuma sarakstē. Varat sazināties ar pārdevēju un citiem esošajiem darījumu kontaktiem no $dashboard savā $appName lietotāja profilā. Nosūtiet ziņu pārdevējam, izskaidrojiet radušos situāciju un kāpēc nevarējāt veikt maksājumu noteiktajā laika periodā. Ja pārdevējs neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName atbalsta dienestu, izmantojot $supportRequestForm, un norādiet savu darījuma ID.';
   }
 
   @override
@@ -1982,8 +1982,8 @@ class I18nLv extends I18n {
   String get faq250Sbanswer8722Sb248722Sbsupport8722Sbrequest8722Sbform => 'atbalsta pieteikuma veidlapa';
 
   @override
-  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestform) {
-    return 'Pēc darījuma pieprasījuma nosūtīšanas jums ir laiks, lai pabeigtu maksājumu, pirms otra puse var atcelt darījumu. Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga “Esmu samaksājis”. Otra puse tiek informēta, ka esat veicis maksājumu, un monētas tiks turētas obligācijā, līdz otra puse pabeigs darījumu pēc tam, kad būs redzējusi maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika perioda beigām, lūdzu, sazinieties ar otru pusi, izmantojot darījuma saraksti. Varat sazināties ar otru pusi un citiem esošajiem darījumu kontaktiem no $dashboard. Nosūtiet ziņu otrai pusei, izskaidrojiet radušos situāciju un kāpēc nevarējāt veikt maksājumu noteiktajā laikā. Ja otra puse neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName darbiniekiem, izmantojot $supportRequestform, un norādiet savu darījuma ID.';
+  String faq250Sbanswer8722Sb2457Sbagoradesk(Object dashboard, Object appName, Object supportRequestForm) {
+    return 'Pēc darījuma pieprasījuma nosūtīšanas jums ir laiks, lai pabeigtu maksājumu, pirms otra puse var atcelt darījumu. Šajā laikā jums ir jāpabeidz maksājums un jānospiež poga “Esmu samaksājis”. Otra puse tiek informēta, ka esat veicis maksājumu, un monētas tiks turētas obligācijā, līdz otra puse pabeigs darījumu pēc tam, kad būs redzējusi maksājumu savā kontā. Ja samaksājāt par pirkumu, bet neatzīmējāt maksājumu par pabeigtu pirms maksājuma laika perioda beigām, lūdzu, sazinieties ar otru pusi, izmantojot darījuma saraksti. Varat sazināties ar otru pusi un citiem esošajiem darījumu kontaktiem no $dashboard. Nosūtiet ziņu otrai pusei, izskaidrojiet radušos situāciju un kāpēc nevarējāt veikt maksājumu noteiktajā laikā. Ja otra puse neatbild uz šo pieprasījumu, lūdzu, sazinieties ar $appName darbiniekiem, izmantojot $supportRequestForm, un norādiet savu darījuma ID.';
   }
 
   @override
@@ -2059,8 +2059,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String faq250Sbanswer8722Sb6(Object b32I2purl, Object i2pUrl, Object i2p) {
-    return 'Jā, mums patiesībā ir divi! Šeit tie ir: $b32I2purl vai $i2pUrl (lai atvērtu šīs saites, ir nepieciešams $i2p).';
+  String faq250Sbanswer8722Sb6(Object b32I2pUrl, Object i2pUrl, Object i2p) {
+    return 'Jā, mums patiesībā ir divi! Šeit tie ir: $b32I2pUrl vai $i2pUrl (lai atvērtu šīs saites, ir nepieciešams $i2p).';
   }
 
   @override
@@ -2264,8 +2264,8 @@ class I18nLv extends I18n {
   String get fees250Sbtrading250Sbtitle57Sbagoradesk => 'Kriptovalūtu tirdzniecība';
 
   @override
-  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Pārskaitījumi uz citu $appName lietotāju makiem ir $free. $linebreak  Pārskaitījumiem uz citiem Monero makiem tiek piemērota Monero tīkla pārskaitījumu maksa. Pašreizējā maksa ir redzama $walletPage zem virsraksta $outgoingMonerofees. Pārskaitījuma maksa tiek segta no jūsu $appName maka, kad nosūtāt pārskaitījumu.';
+  String fees250Sbtx250Sbtext(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Pārskaitījumi uz citu $appName lietotāju makiem ir $free. $linebreak  Pārskaitījumiem uz citiem Monero makiem tiek piemērota Monero tīkla pārskaitījumu maksa. Pašreizējā maksa ir redzama $walletPage zem virsraksta $outgoingMoneroFees. Pārskaitījuma maksa tiek segta no jūsu $appName maka, kad nosūtāt pārskaitījumu.';
   }
 
   @override
@@ -2275,8 +2275,8 @@ class I18nLv extends I18n {
   String get fees250Sbtx250Sbtext8722Sbwallet8722Sbpage => 'maka lapa';
 
   @override
-  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMonerofees) {
-    return 'Pārskaitījumi uz citu $appName lietotāju makiem ir $free. $linebreak  Pārskaitījumiem uz ārējiem kriptovalūtu makiem tiek piemērota attiecīgā kriptovalūtu tīkla pārskaitījumu maksa. Pašreizējā maksa ir redzama $walletPage zem virsraksta $outgoingMonerofees. Pārskaitījuma maksa tiek segta no jūsu $appName maka, kad nosūtāt pārskaitījumu.';
+  String fees250Sbtx250Sbtext57Sbagoradesk(Object appName, Object free, Object linebreak, Object walletPage, Object outgoingMoneroFees) {
+    return 'Pārskaitījumi uz citu $appName lietotāju makiem ir $free. $linebreak  Pārskaitījumiem uz ārējiem kriptovalūtu makiem tiek piemērota attiecīgā kriptovalūtu tīkla pārskaitījumu maksa. Pašreizējā maksa ir redzama $walletPage zem virsraksta $outgoingMoneroFees. Pārskaitījuma maksa tiek segta no jūsu $appName maka, kad nosūtāt pārskaitījumu.';
   }
 
   @override
@@ -2370,8 +2370,8 @@ class I18nLv extends I18n {
   String get guide250Sb2fa250Sbstep8722Sbfive8722Sbtext => 'Savā autentifikācijas lietotnē skenējiet lapā redzamo QR kodu. Kad tas būs izdarīts, lietotnē sāks parādīties 6 ciparu vienreizējās paroles.';
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyapp, Object andotp) {
-    return 'Tālrunī instalējiet autentifikācijas lietotni. Varat $chooseAnyapp, kas atbalsta TOTP. Piemēram, $andotp ir bezmaksas un atvērtā koda.';
+  String guide250Sb2fa250Sbstep8722Sbfour8722Sbtext(Object chooseAnyApp, Object andotp) {
+    return 'Tālrunī instalējiet autentifikācijas lietotni. Varat $chooseAnyApp, kas atbalsta TOTP. Piemēram, $andotp ir bezmaksas un atvērtā koda.';
   }
 
   @override
@@ -2383,8 +2383,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileapp) {
-    return '$appName piedāvā $totp 2FA. Kad 2FA ir iespējots, $authMobileapp tiks sinhronizēts ar $appName un veidos 6 ciparu vienreizējas paroles. Šī parole tiek mainīta katru minūti. Lai pieteiktos vai izņemtu šķīrējtiesas obligāciju, papildus savai parolei ir jāievada arī šī vienreizējā parole, pirms tā nomainās.';
+  String guide250Sb2fa250Sbstep8722Sbone8722Sbtext8722Sb1(Object appName, Object totp, Object authMobileApp) {
+    return '$appName piedāvā $totp 2FA. Kad 2FA ir iespējots, $authMobileApp tiks sinhronizēts ar $appName un veidos 6 ciparu vienreizējas paroles. Šī parole tiek mainīta katru minūti. Lai pieteiktos vai izņemtu šķīrējtiesas obligāciju, papildus savai parolei ir jāievada arī šī vienreizējā parole, pirms tā nomainās.';
   }
 
   @override
@@ -2566,8 +2566,8 @@ class I18nLv extends I18n {
   String get guide250Sbbtc250Sbintro8722Sb1 => '<strong>Bitcoin iegāde anonīmi kļūst par arvien grūtāku uzdevumu.</strong>';
 
   @override
-  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNinebitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
-    return 'Ar katru dienu šķiet, ka lielākajai daļai, ja ne visām tradicionālajām Bitcoin iegūšanas metodēm, tiekpieprasīta ID verifikācija, tāpēc lielākā daļa ceļvežu, piemēram, $ninetyNinebitcoins vai $coincentral, ir novecojuši. $linebreak  $gutter Tradicionālais veids, kā iegādāties Bitcoin bez ID, galvenokārt ir bijis P2P Bitcoin apmaiņas platforma $localbitcoins, kas bija īpaši populāra, lai anonīmi iegādātos Bitcoin ar $paypal.';
+  String guide250Sbbtc250Sbintro8722Sb2(Object ninetyNineBitcoins, Object coincentral, Object linebreak, Object gutter, Object localbitcoins, Object paypal) {
+    return 'Ar katru dienu šķiet, ka lielākajai daļai, ja ne visām tradicionālajām Bitcoin iegūšanas metodēm, tiekpieprasīta ID verifikācija, tāpēc lielākā daļa ceļvežu, piemēram, $ninetyNineBitcoins vai $coincentral, ir novecojuši. $linebreak  $gutter Tradicionālais veids, kā iegādāties Bitcoin bez ID, galvenokārt ir bijis P2P Bitcoin apmaiņas platforma $localbitcoins, kas bija īpaši populāra, lai anonīmi iegādātos Bitcoin ar $paypal.';
   }
 
   @override
@@ -2595,16 +2595,16 @@ class I18nLv extends I18n {
   }
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount ar $appName. Jūs saņemat bezmaksas un drošu tiešsaistes Monero maku. Papildu lietotnes nav vajadzīgas. Ja jums jau ir konts, pārejiet uz nākamo darbību.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount ar $appName. Jūs saņemat bezmaksas un drošu tiešsaistes Monero maku. Papildu lietotnes nav vajadzīgas. Ja jums jau ir konts, pārejiet uz nākamo darbību.';
   }
 
   @override
   String get guide250Sbbuy250Sbstep8722Sbone8722Sbtext8722Sbregister8722Sban8722Sbaccount => 'Reģistrējiet kontu';
 
   @override
-  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnaccount, Object appName) {
-    return '$registerAnaccount ar $appName. Jūs saņemat bezmaksas un drošu tiešsaistes kriptovalūtas maku. Papildu lietotnes nav vajadzīgas. Ja jums jau ir konts, pārejiet uz nākamo darbību.';
+  String guide250Sbbuy250Sbstep8722Sbone8722Sbtext57Sbagoradesk(Object registerAnAccount, Object appName) {
+    return '$registerAnAccount ar $appName. Jūs saņemat bezmaksas un drošu tiešsaistes kriptovalūtas maku. Papildu lietotnes nav vajadzīgas. Ja jums jau ir konts, pārejiet uz nākamo darbību.';
   }
 
   @override
@@ -3054,8 +3054,8 @@ class I18nLv extends I18n {
   String get guide250Sbtelegram250Sbtitle => 'Kā ieslēgt Telegram mobilos paziņojumus';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellmoneroad) {
-    return 'Tipisks darījums ar $appName darbojas šādi. Piemērs ir tiešsaistes pārdošanas darījums, kurā jūs pārdodat $assetName pircējam. Process ir līdzīgs, pērkot $assetName tiešsaistē, taču šajā piemērā mēs koncentrējamies uz $assetName pārdošanu, jo tas ir visizplatītākais tirdzniecības veids. $linebreak  Vispirms jums ir jāiemaksā $assetName savā $localmoneroWallet. $linebreak  Pēc tam jums ir nepieciešams $create $aSellmoneroad (saukts par tiešsaistes pārdošanas sludinājumu). Veidojot sludinājumu, Jūs izvēlaties apmaksas veidu, iestatāt cenas, limitus un sastādat savus darījuma noteikumus brīvā tekstā. ';
+  String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
+    return 'Tipisks darījums ar $appName darbojas šādi. Piemērs ir tiešsaistes pārdošanas darījums, kurā jūs pārdodat $assetName pircējam. Process ir līdzīgs, pērkot $assetName tiešsaistē, taču šajā piemērā mēs koncentrējamies uz $assetName pārdošanu, jo tas ir visizplatītākais tirdzniecības veids. $linebreak  Vispirms jums ir jāiemaksā $assetName savā $localmoneroWallet. $linebreak  Pēc tam jums ir nepieciešams $create $aSellMoneroAd (saukts par tiešsaistes pārdošanas sludinājumu). Veidojot sludinājumu, Jūs izvēlaties apmaksas veidu, iestatāt cenas, limitus un sastādat savus darījuma noteikumus brīvā tekstā. ';
   }
 
   @override
@@ -3091,8 +3091,8 @@ class I18nLv extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb28722Sbtitle => 'Uzsākšana';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationpage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
-    return '$advertisementCreationpage ir vieta, kur varat izveidot jaunus sludinājumus. $linebreak  Ir dažas opcijas, kas ir obligātas, veidojot sludinājumu, un daudzas papildu opcijas, kuras nav obligātas, taču ieteicams iestatīt. Izmantojot papildu opcijas, varat pielāgot sludinājumu atbilstoši jūsu tirdzniecības stratēģijai. $linebreak  Jūs varat atrast visus sludinājumus, kurus esat izveidojis, no sava $dashboard. Panelī varat atrast arī savus atvērtos darījumus. $linebreak  $requiredOptions $linebreak  $location Ievadiet valsti, kurā vēlaties rādīt savu sludinājumu. $linebreak  $paymentMethod Nolaižamajā izvēlnē atlasiet maksājuma veidu, kuru vēlaties piedāvāt. $linebreak  $currency Izvēlieties valūtu, par kuru pārdodat. Piemēram, ja pārdodat Francijā, ieteicams izvēlēties EUR. Varat izmantot $thisList, lai uzzinātu, kāds ir jūsu valūtas akronīms.';
+  String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb0(Object advertisementCreationPage, Object linebreak, Object dashboard, Object requiredOptions, Object location, Object paymentMethod, Object currency, Object thisList) {
+    return '$advertisementCreationPage ir vieta, kur varat izveidot jaunus sludinājumus. $linebreak  Ir dažas opcijas, kas ir obligātas, veidojot sludinājumu, un daudzas papildu opcijas, kuras nav obligātas, taču ieteicams iestatīt. Izmantojot papildu opcijas, varat pielāgot sludinājumu atbilstoši jūsu tirdzniecības stratēģijai. $linebreak  Jūs varat atrast visus sludinājumus, kurus esat izveidojis, no sava $dashboard. Panelī varat atrast arī savus atvērtos darījumus. $linebreak  $requiredOptions $linebreak  $location Ievadiet valsti, kurā vēlaties rādīt savu sludinājumu. $linebreak  $paymentMethod Nolaižamajā izvēlnē atlasiet maksājuma veidu, kuru vēlaties piedāvāt. $linebreak  $currency Izvēlieties valūtu, par kuru pārdodat. Piemēram, ja pārdodat Francijā, ieteicams izvēlēties EUR. Varat izmantot $thisList, lai uzzinātu, kāds ir jūsu valūtas akronīms.';
   }
 
   @override
@@ -3133,8 +3133,8 @@ class I18nLv extends I18n {
   String get guide250Sbtrade250Sbblock8722Sb38722Sbtitle => 'Sludinājuma iestatīšana';
 
   @override
-  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfservice) {
-    return 'Lūdzu, izlasiet mūsu $termsOfservice.';
+  String guide250Sbtrade250Sbblock8722Sb48722Sbtext8722Sb0(Object termsOfService) {
+    return 'Lūdzu, izlasiet mūsu $termsOfService.';
   }
 
   @override
@@ -3216,8 +3216,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String homepage250Sbno8722Sbresults8722Sb1(Object post_an_ad) {
-    return 'Jūs varat būt pirmais, kas $post_an_ad šādās kategorijās:';
+  String homepage250Sbno8722Sbresults8722Sb1(Object postAnAd) {
+    return 'Jūs varat būt pirmais, kas $postAnAd šādās kategorijās:';
   }
 
   @override
@@ -4306,8 +4306,8 @@ class I18nLv extends I18n {
   String get login250Sbreset8722Sblink => 'Atiestatiet to šeit.';
 
   @override
-  String login250Sbsame8722Sbcredentials8722Sbtip(Object front_type_url) {
-    return 'Lai pieteiktos, varat izmantot savus $front_type_url datus.';
+  String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
+    return 'Lai pieteiktos, varat izmantot savus $frontTypeUrl datus.';
   }
 
   @override
@@ -4457,8 +4457,8 @@ class I18nLv extends I18n {
   String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Ierobežojumi šim ChangeNow darījumam:';
 
   @override
-  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amount_required) {
-    return 'Nepietiekams atlikums. Nepieciešams: $amount_required.';
+  String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
+    return 'Nepietiekams atlikums. Nepieciešams: $amountRequired.';
   }
 
   @override
@@ -4730,8 +4730,8 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sberror250Sbdialog8722Sbtitle8722Sbtoo8722Sbmany8722Sbads => 'Pārāk daudz sludinājumu';
 
   @override
-  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object min_asset_amount, Object max_asset_amount) {
-    return 'Lūdzu, ievadiet derīgu pirmās reizes $assetSymbol robežvērtību. Ir atļauti tikai skaitļi no $min_asset_amount līdz $max_asset_amount.';
+  String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
+    return 'Lūdzu, ievadiet derīgu pirmās reizes $assetSymbol robežvērtību. Ir atļauti tikai skaitļi no $minAssetAmount līdz $maxAssetAmount.';
   }
 
   @override
@@ -4918,8 +4918,8 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sbreview250Sbyes => 'jā';
 
   @override
-  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfservice, Object guides) {
-    return 'Pirms sludinājuma izveides, lūdzu, izlasiet mūsu $termsOfservice un $guides';
+  String post8722Sbad250Sbrules8722Sbtext8722Sb0(Object termsOfService, Object guides) {
+    return 'Pirms sludinājuma izveides, lūdzu, izlasiet mūsu $termsOfService un $guides';
   }
 
   @override
@@ -4977,8 +4977,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String post8722Sbad250Sbstep8722Sb1(Object step_number) {
-    return 'Solis $step_number';
+  String post8722Sbad250Sbstep8722Sb1(Object stepNumber) {
+    return 'Solis $stepNumber';
   }
 
   @override
@@ -5312,8 +5312,8 @@ class I18nLv extends I18n {
   String get search250Sbno8722Sbresults8722Sb1 => 'Mēģiniet izmantot citu maksājuma veidu, citu summu vai bez nekādas summas. ';
 
   @override
-  String search250Sbno8722Sbresults8722Sb2(Object postAnad) {
-    return 'Vai arī, esiet pirmais, kas $postAnad šeit!';
+  String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
+    return 'Vai arī, esiet pirmais, kas $postAnAd šeit!';
   }
 
   @override
@@ -5400,8 +5400,8 @@ class I18nLv extends I18n {
   String get settings250Sb2fa250Sbstep8722Sbfour => '<strong> Ievadiet kodu</strong>, ko rāda jūsu 2FA mobilā lietotne, lodziņā zem QR koda un <strong> nospiediet pogu \"Apstiprināt 2FA\" </strong>.';
 
   @override
-  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faapp, Object andotp, Object anyOther2faapp, Object totp) {
-    return '$downloadA2faapp, piemēram, $andotp vai $anyOther2faapp, kas atbalsta $totp jūsu ierīcei.';
+  String settings250Sb2fa250Sbstep8722Sbone(Object downloadA2faApp, Object andotp, Object anyOther2faApp, Object totp) {
+    return '$downloadA2faApp, piemēram, $andotp vai $anyOther2faApp, kas atbalsta $totp jūsu ierīcei.';
   }
 
   @override
@@ -5561,8 +5561,8 @@ class I18nLv extends I18n {
   String get settings250Sbhomepage => 'Mājas lapa';
 
   @override
-  String settings250Sbhomepage8722Sbtip(Object example_url) {
-    return 'Parādīts jūsu publiskajā profilā. Tiek pieņemts tikai derīgs URL (piem., https://$example_url)';
+  String settings250Sbhomepage8722Sbtip(Object exampleUrl) {
+    return 'Parādīts jūsu publiskajā profilā. Tiek pieņemts tikai derīgs URL (piem., https://$exampleUrl)';
   }
 
   @override
@@ -6186,8 +6186,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String trade250Sbinfo250Sbtrade8722Sbad(Object ad_type) {
-    return 'Darījuma sludinājums ($ad_type)';
+  String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
+    return 'Darījuma sludinājums ($adType)';
   }
 
   @override
@@ -7387,8 +7387,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredbalance, Object amountXmr, Object localmoneroWallet) {
-    return 'Visi jūsu $asset pārdošanas sludinājumi ir paslēpti no publiskās meklēšanas, jo jūsu šķīrējtiesas obligācijas maka atlikums ir mazāks par $minRequiredbalance. Lai jūsu pārdošanas sludinājumi būtu redzami, lūdzu, iemaksājiet vismaz $amountXmr savā šķīrējtiesas obligācijā $localmoneroWallet.';
+  String warning250Sbnot8722Sbenough8722Sbbalance(Object asset, Object minRequiredBalance, Object amountXmr, Object localmoneroWallet) {
+    return 'Visi jūsu $asset pārdošanas sludinājumi ir paslēpti no publiskās meklēšanas, jo jūsu šķīrējtiesas obligācijas maka atlikums ir mazāks par $minRequiredBalance. Lai jūsu pārdošanas sludinājumi būtu redzami, lūdzu, iemaksājiet vismaz $amountXmr savā šķīrējtiesas obligācijā $localmoneroWallet.';
   }
 
   @override
@@ -7538,8 +7538,8 @@ class I18nLv extends I18n {
   String get xx => 'Globāli';
 
   @override
-  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object time_remaining) {
-    return 'Visas kriptovalūtas reklāmas tagad tiek pārvietotas uz jauno valstu kategoriju \"globālā (kods XX)\". Visas dublētās kriptovalūtas reklāmas, kas atšķiras tikai atkarībā no valsts, tiks dzēstas $time_remaining. Lūdzu, pārliecinieties, ka katrai valūtai ir tikai VIENA kriptovalūtas reklāma, pretējā gadījumā tiks dzēsta visa reklāma, izņemot pēdējo šajā valūtā ievietoto reklāmu, bet pārējā reklāma tiks pārvietota uz \"globālo\" valstu kategoriju.';
+  String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
+    return 'Visas kriptovalūtas reklāmas tagad tiek pārvietotas uz jauno valstu kategoriju \"globālā (kods XX)\". Visas dublētās kriptovalūtas reklāmas, kas atšķiras tikai atkarībā no valsts, tiks dzēstas $timeRemaining. Lūdzu, pārliecinieties, ka katrai valūtai ir tikai VIENA kriptovalūtas reklāma, pretējā gadījumā tiks dzēsta visa reklāma, izņemot pēdējo šajā valūtā ievietoto reklāmu, bet pārējā reklāma tiks pārvietota uz \"globālo\" valstu kategoriju.';
   }
 
   @override
@@ -8967,8 +8967,8 @@ class I18nLv extends I18n {
   String get affiliate__enable_btn => 'Iespējot saistīto programmu';
 
   @override
-  String affiliate__enabled(Object ref_code, Object appName) {
-    return 'Jūsu saistītā programma ir iespējota un jūs varat pelnīt komisiju, pievienojot savu kodu $ref_code jebkuram $appName URL.';
+  String affiliate__enabled(Object refCode, Object appName) {
+    return 'Jūsu saistītā programma ir iespējota un jūs varat pelnīt komisiju, pievienojot savu kodu $refCode jebkuram $appName URL.';
   }
 
   @override
@@ -8982,8 +8982,8 @@ class I18nLv extends I18n {
   }
 
   @override
-  String settings__homepage_tip(Object example_url) {
-    return 'Parādīts jūsu publiskajā profilā. Tiek pieņemts tikai derīgs URL (piem., https://$example_url)';
+  String settings__homepage_tip(Object exampleUrl) {
+    return 'Parādīts jūsu publiskajā profilā. Tiek pieņemts tikai derīgs URL (piem., https://$exampleUrl)';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nLv extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Uzmanieties no krāpniekiem, kas mēģina uzdoties par darbiniekiem!\n${appName} administratori nekad neprasīs jums pabeigt darījumu.\nDarbinieku ziņojumiem ir sarkans fons.';
+    return 'Uzmanieties no krāpniekiem, kas mēģina uzdoties par darbiniekiem!\n$appName administratori nekad neprasīs jums pabeigt darījumu.\nDarbinieku ziņojumiem ir sarkans fons.';
   }
 
   @override

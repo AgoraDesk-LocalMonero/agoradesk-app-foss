@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -41,6 +42,8 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   String errorMessage = '';
   String? _coupon;
   bool displayError = false;
+  late StreamSubscription eventBusSubscription;
+  int _attemptsCounter = 0;
 
   String? get coupon => _coupon;
 
@@ -92,16 +95,14 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       coupon = ctrlCoupon.text;
     });
 
-    super.init();
-  }
+    eventBusSubscription = eventBus.on<WebViewFinishedEvent>().listen((event) {
+      if (_attemptsCounter < 3) {
+        signUp();
+        _attemptsCounter++;
+      }
+    });
 
-  @override
-  void dispose() {
-    ctrlPassword.dispose();
-    ctrlPassword2.dispose();
-    scrollController.dispose();
-    captchaFocus.dispose();
-    super.dispose();
+    super.init();
   }
 
   Future<bool> signUp() async {
@@ -193,5 +194,15 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     _loading = loading ?? _loading;
     _updateFormReadyState();
     notifyListeners();
+  }
+
+  @override
+  void dispose() {
+    ctrlPassword.dispose();
+    ctrlPassword2.dispose();
+    scrollController.dispose();
+    captchaFocus.dispose();
+    eventBusSubscription.cancel();
+    super.dispose();
   }
 }
