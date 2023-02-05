@@ -82,6 +82,9 @@ Android https://docs.fastlane.tools/actions/supply/
 
 `fastlane supply --skip_upload_changelogs=true --track=internal --skip_upload_screenshots=true` 
 
+#### Git submodules
+- How to remove https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
+
 ### Initial settings
 - https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b
 
