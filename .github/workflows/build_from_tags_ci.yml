@@ -88,7 +88,6 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.3.0'
           channel: 'stable'
 
       - run: flutter pub get
