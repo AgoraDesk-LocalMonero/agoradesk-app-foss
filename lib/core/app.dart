@@ -169,6 +169,7 @@ class _AppState extends State<App>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
+      _notificationsService.getToken();
       if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;
@@ -506,8 +507,7 @@ class _AppState extends State<App>
         if (router.current.name != WebviewRoute.name) {
           router.push(
             WebviewRoute(
-              cookie1: e.cookie1,
-              cookie2: e.cookie2,
+              cookies: e.cookies,
               token: token,
               url: 'https://agoradesk.com',
               isFromCaptchaEvent: true,

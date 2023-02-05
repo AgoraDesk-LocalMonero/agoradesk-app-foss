@@ -127,12 +127,12 @@ class I18nTr extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$currency ile $paymentMethod${detail} kullanarak $assetName sat';
+    return '$currency ile $paymentMethod$detail kullanarak $assetName sat';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$paymentMethod${detail} ile $currency kullanarak $assetName satın alın';
+    return '$paymentMethod$detail ile $currency kullanarak $assetName satın alın';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nTr extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Personeli taklit etmeye çalışan dolandırıcılara dikkat edin!\n${appName} yöneticileri size asla bir işlemi tamamlamanızı söylemez.\nPersonel mesajlarının arka planı kırmızıdır.';
+    return 'Personeli taklit etmeye çalışan dolandırıcılara dikkat edin!\n$appName yöneticileri size asla bir işlemi tamamlamanızı söylemez.\nPersonel mesajlarının arka planı kırmızıdır.';
   }
 
   @override

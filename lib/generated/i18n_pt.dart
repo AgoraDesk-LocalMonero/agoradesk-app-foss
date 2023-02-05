@@ -127,12 +127,12 @@ class I18nPt extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Vender $assetName usando $paymentMethod${detail} com $currency';
+    return 'Vender $assetName usando $paymentMethod$detail com $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Comprar $assetName usando $paymentMethod${detail} com $currency';
+    return 'Comprar $assetName usando $paymentMethod$detail com $currency';
   }
 
   @override
@@ -9584,12 +9584,12 @@ class I18nPtBr extends I18nPt {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Vender $assetName usando $paymentMethod${detail} com $currency';
+    return 'Vender $assetName usando $paymentMethod$detail com $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Comprar $assetName usando $paymentMethod${detail} com $currency';
+    return 'Comprar $assetName usando $paymentMethod$detail com $currency';
   }
 
   @override

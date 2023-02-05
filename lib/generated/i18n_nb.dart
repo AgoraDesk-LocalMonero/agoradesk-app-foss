@@ -127,12 +127,12 @@ class I18nNb extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Selg $assetName med $paymentMethod${detail} med $currency';
+    return 'Selg $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Kjøp $assetName med $paymentMethod${detail} med $currency';
+    return 'Kjøp $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nNb extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n${appName}-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
+    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n$appName-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
   }
 
   @override
@@ -9584,12 +9584,12 @@ class I18nNbNo extends I18nNb {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Selg $assetName med $paymentMethod${detail} med $currency';
+    return 'Selg $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Kjøp $assetName med $paymentMethod${detail} med $currency';
+    return 'Kjøp $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
@@ -18495,7 +18495,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n${appName}-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
+    return 'Vokt dere for svindlere som prøver å etterligne ansatte!\n$appName-administratorer vil aldri fortelle deg å fullføre en handel.\nPersonalmeldinger har rød bakgrunn.';
   }
 
   @override

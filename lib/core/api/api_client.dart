@@ -70,9 +70,9 @@ class ApiClient with UrlMixin {
           List<String> cookiesLst = [];
           if (GetIt.I<AppParameters>().cookies != null) {
             for (final val in GetIt.I<AppParameters>().cookies!) {
-              if (val.name.contains('540')) {
-                cookiesLst.add('${val.name}=${val.value}');
-              }
+              // if (val.name.contains('540')) {
+              cookiesLst.add('${val.name}=${val.value}');
+              // }
             }
           }
           if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {
@@ -92,11 +92,8 @@ class ApiClient with UrlMixin {
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id')) {
             final List<dynamic> cookiesLst = response.headers.map['set-cookie'] ?? [];
-            // bool checkRes = await _checkCaptchaInHeadlessWebView(cookiesLst);
-            // if (checkRes == false) {
             eventBus.fire(DisplayCaptchaEvent(
-              cookie1: cookiesLst.isNotEmpty ? cookiesLst[0].split(';').first : '',
-              cookie2: cookiesLst.length > 1 ? cookiesLst[1].split(';').first : '',
+              cookies: cookiesLst,
               body: response.data,
             ));
           }

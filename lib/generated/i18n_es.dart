@@ -127,12 +127,12 @@ class I18nEs extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Vender $assetName usando $paymentMethod${detail} con $currency';
+    return 'Vender $assetName usando $paymentMethod$detail con $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Comprar $assetName usando $paymentMethod${detail} con $currency';
+    return 'Comprar $assetName usando $paymentMethod$detail con $currency';
   }
 
   @override

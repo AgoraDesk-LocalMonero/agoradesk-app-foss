@@ -127,12 +127,12 @@ class I18nEn extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Sell $assetName using $paymentMethod${detail} with $currency';
+    return 'Sell $assetName using $paymentMethod$detail with $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Buy $assetName using $paymentMethod${detail} with $currency';
+    return 'Buy $assetName using $paymentMethod$detail with $currency';
   }
 
   @override
@@ -4731,7 +4731,7 @@ class I18nEn extends I18n {
 
   @override
   String post8722Sbad250Sberror250Sbfirst8722Sbtime8722Sblimit8722Sbnot8722Sbvalid(Object assetSymbol, Object minAssetAmount, Object maxAssetAmount) {
-    return 'Please enter valid first time $assetSymbol limit value. Only numbers between${minAssetAmount} and $maxAssetAmount are allowed.';
+    return 'Please enter valid first time $assetSymbol limit value. Only numbers between$minAssetAmount and $maxAssetAmount are allowed.';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nEn extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Beware of scammers trying to impersonate staff! \n${appName} administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
+    return 'Beware of scammers trying to impersonate staff! \n$appName administrators will never tell you to finalize a trade. \nStaff messages have a red background.';
   }
 
   @override

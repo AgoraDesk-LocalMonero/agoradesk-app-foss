@@ -127,12 +127,12 @@ class I18nFr extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Vendre du $assetName en utilisant $paymentMethod${detail} contre des $currency';
+    return 'Vendre du $assetName en utilisant $paymentMethod$detail contre des $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Acheter du $assetName en utilisant $paymentMethod${detail} contre des $currency';
+    return 'Acheter du $assetName en utilisant $paymentMethod$detail contre des $currency';
   }
 
   @override

@@ -127,12 +127,12 @@ class I18nUr extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$currency کے ساتھ $paymentMethod${detail} کا استعمال کرتے ہوئے $assetName فروخت کریں';
+    return '$currency کے ساتھ $paymentMethod$detail کا استعمال کرتے ہوئے $assetName فروخت کریں';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return '$currency کے ساتھ $paymentMethod${detail} کا استعمال کرتے ہوئے $assetName خریدیں';
+    return '$currency کے ساتھ $paymentMethod$detail کا استعمال کرتے ہوئے $assetName خریدیں';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nUr extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'عملے کی نقالی کرنے کی کوشش کرنے والوں سے ہوشیار رہیں!\n${appName} منتظمین آپ کو تجارت کو حتمی شکل دینے کے لیے کبھی نہیں کہیں گے۔\nعملے کے پیغامات کا پس منظر سرخ ہوتا ہے۔';
+    return 'عملے کی نقالی کرنے کی کوشش کرنے والوں سے ہوشیار رہیں!\n$appName منتظمین آپ کو تجارت کو حتمی شکل دینے کے لیے کبھی نہیں کہیں گے۔\nعملے کے پیغامات کا پس منظر سرخ ہوتا ہے۔';
   }
 
   @override

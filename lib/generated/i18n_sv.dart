@@ -127,12 +127,12 @@ class I18nSv extends I18n {
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Sälj $assetName med $paymentMethod${detail} med $currency';
+    return 'Sälj $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
   String ad8722Sbpage250Sbheading8722Sbonline8722Sbsell(Object assetName, Object paymentMethod, Object detail, Object currency) {
-    return 'Köp $assetName med $paymentMethod${detail} med $currency';
+    return 'Köp $assetName med $paymentMethod$detail med $currency';
   }
 
   @override
@@ -9038,7 +9038,7 @@ class I18nSv extends I18n {
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Akta dig för bedragare som försöker utge sig för personal!\n${appName}-administratörer kommer aldrig att säga åt dig att slutföra en affär.\nPersonalmeddelanden har röd bakgrund.';
+    return 'Akta dig för bedragare som försöker utge sig för personal!\n$appName-administratörer kommer aldrig att säga åt dig att slutföra en affär.\nPersonalmeddelanden har röd bakgrund.';
   }
 
   @override
