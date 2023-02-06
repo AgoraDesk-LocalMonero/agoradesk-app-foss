@@ -88,7 +88,7 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.3.0'
+#          flutter-version: '3.3.0'
           channel: 'stable'
 
       - run: flutter pub get
@@ -121,7 +121,7 @@ jobs:
           
           flutter build apk --flavor localmonero --dart-define=app.flavor=localmonero --dart-define=app.includeFcm=false --dart-define=app.checkUpdates=true
           mv build/app/outputs/flutter-apk/app-localmonero-release.apk build/app/outputs/flutter-apk/co.localmonero.app-foss_${{ steps.split.outputs._1 }}.apk
-          rm build/app/outputs/flutter-apk/app.apk
+#          rm build/app/outputs/flutter-apk/app.apk
 
       - name: Create Github Release
         uses: ncipollo/release-action@v1
