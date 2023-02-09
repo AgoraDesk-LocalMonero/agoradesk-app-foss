@@ -64,7 +64,7 @@ class _SpinnerWidgetState extends State<SpinnerWidget> with SingleTickerProvider
   @override
   void didUpdateWidget(SpinnerWidget oldWidget) {
     if (widget.child?.key != oldWidget.child?.key) {
-      //   debugPrint('{ new: ${widget.text}, old: ${oldWidget.text} }');
+      //   if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('{ new: ${widget.text}, old: ${oldWidget.text} }');
       // Need to spin new value.
       _topWidget = widget.builder(widget.child ?? const SizedBox());
       _animationController.forward(from: 0.0);

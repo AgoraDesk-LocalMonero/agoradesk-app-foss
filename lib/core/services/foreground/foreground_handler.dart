@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:isolate';
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/local_notifications_controller.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
@@ -66,7 +67,8 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
           }
         }
       } else {
-        debugPrint('++++error getting foreground notifications - ${resp.statusCode} - ${resp.body}');
+        if (GetIt.I<AppParameters>().debugPinyIsOn)
+          debugPrint('++++error getting foreground notifications - ${resp.statusCode} - ${resp.body}');
       }
     }
   }

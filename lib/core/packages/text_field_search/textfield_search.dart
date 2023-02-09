@@ -408,7 +408,7 @@ class SearchItem {
     try {
       countryCode = place.context?.last.toJson()['short_code'].toString().toUpperCase();
     } catch (e) {
-      debugPrint('++++fromPlace error - $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++fromPlace error - $e');
     }
     return SearchItem(
       label: place.placeName ?? '',

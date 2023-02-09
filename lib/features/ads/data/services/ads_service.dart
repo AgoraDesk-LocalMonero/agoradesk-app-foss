@@ -134,7 +134,7 @@ class AdsService {
         queryParameters: parameters,
       );
       if (resp.statusCode == 200) {
-        // debugPrint('${resp.data['data']['ad_list']}');
+        // if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('${resp.data['data']['ad_list']}');
         List<dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['ad_list']));
         PaginationMeta pagination = PaginationMeta.zero();
 

@@ -54,7 +54,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: context.intl.app_proxy_bugs_expected + ' ',
+                                          text: '${context.intl.app_proxy_bugs_expected} ',
                                           style: context.txtBodyXSmallN80,
                                         ),
                                         TextSpan(

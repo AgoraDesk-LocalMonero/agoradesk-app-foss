@@ -25,7 +25,7 @@ class PushMessage extends StatelessWidget {
           if (onPress != null) onPress!();
           // await context.navigateTo();
         } catch (e) {
-          debugPrint('[$runtimeType] Error: $e');
+          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[$runtimeType] Error: $e');
         }
       };
     }

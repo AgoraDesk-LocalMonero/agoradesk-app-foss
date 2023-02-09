@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:duration/duration.dart';
 import 'package:duration/locale.dart';
@@ -76,7 +77,7 @@ mixin DateMixin {
       final res = DateTime.parse(date ?? '');
       return DateFormat('yyyy-MM-dd').format(res);
     } catch (e) {
-      debugPrint('[niceDate parsing error] - $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[niceDate parsing error] - $e');
       return '';
     }
   }
@@ -88,7 +89,7 @@ mixin DateMixin {
     try {
       return DateFormat('yyyy-MM-dd HH:mm').format(date);
     } catch (e) {
-      debugPrint('[niceDate parsing error] - $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[niceDate parsing error] - $e');
       return '';
     }
   }

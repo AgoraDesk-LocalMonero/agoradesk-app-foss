@@ -152,9 +152,9 @@ class WalletViewModel extends ViewModel {
         } else {
           if (resBtc.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
-            debugPrint('[getBalance error message] $errorMessage');
+            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error message] $errorMessage');
           }
-          debugPrint('[getBalance error] ${resBtc.left.message}');
+          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error] ${resBtc.left.message}');
         }
       } else {
         final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
@@ -166,9 +166,9 @@ class WalletViewModel extends ViewModel {
         } else {
           if (resXmr.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
-            debugPrint('[getBalance error message] $errorMessage');
+            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error message] $errorMessage');
           }
-          debugPrint('[getBalance error] ${resXmr.left.message}');
+          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error] ${resXmr.left.message}');
         }
       }
     }
@@ -303,10 +303,10 @@ class WalletViewModel extends ViewModel {
       late final String errorMessage;
       if (res.left.message.containsKey('error_code')) {
         errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        debugPrint('[calcPrice error] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[calcPrice error] $errorMessage');
       } else {
         errorMessage = res.left.message.toString();
-        debugPrint('[calcPrice error] ${res.left.message}');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[calcPrice error] ${res.left.message}');
       }
       // eventBus.fire(FlashEvent.error(errorMessage));
       return null;

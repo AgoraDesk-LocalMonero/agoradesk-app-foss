@@ -20,7 +20,7 @@
 //           // fit: BoxFit.fitWidth,
 //           onDetect: (barcode, args) {
 //             if (barcode.rawValue == null) {
-//               debugPrint('Failed to scan Barcode');
+//               if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('Failed to scan Barcode');
 //             } else {
 //               final String code = barcode.rawValue!;
 //               HapticFeedback.heavyImpact();

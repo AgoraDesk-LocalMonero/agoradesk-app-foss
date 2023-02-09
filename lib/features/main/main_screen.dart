@@ -201,7 +201,7 @@ class _MainScreenState extends State<MainScreen> {
             // Navigator.of(context).pushNamed('/resume-route');
           }
         } else if (message is DateTime) {
-          debugPrint('++++timestamp: ${message.toString()}');
+          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++timestamp: ${message.toString()}');
         }
       });
       return true;

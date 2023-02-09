@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
@@ -26,7 +27,7 @@ mixin PaymentMethodsMixin {
         width: size,
       );
     } catch (e) {
-      debugPrint('[getPaymentMethodIcon error] $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getPaymentMethodIcon error] $e');
       return const SizedBox();
     }
   }
@@ -38,7 +39,7 @@ mixin PaymentMethodsMixin {
       }
       return '';
     } catch (e) {
-      debugPrint('[getSortingTypeName error] $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getSortingTypeName error] $e');
       return '';
     }
   }
@@ -50,7 +51,7 @@ mixin PaymentMethodsMixin {
       }
       return paymentMethodNames(context)[onlineProvider ?? ''];
     } catch (e) {
-      debugPrint('[getPaymentMethodName error - $onlineProvider] $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getPaymentMethodName error - $onlineProvider] $e');
       return onlineProvider ?? '';
     }
   }

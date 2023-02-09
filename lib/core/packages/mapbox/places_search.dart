@@ -70,7 +70,7 @@ class PlacesSearch {
     try {
       return Predictions.fromRawJson(response.body).features;
     } catch (e) {
-      debugPrint('[++++ places search error] - $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[++++ places search error] - $e');
       return [];
     }
   }

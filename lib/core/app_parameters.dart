@@ -1,6 +1,8 @@
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
+export 'package:get_it/get_it.dart';
+
 class AppParameters {
   AppParameters({
     required this.flavor,
@@ -233,4 +235,5 @@ class AppParameters {
   String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
+  bool debugPinyIsOn = false;
 }

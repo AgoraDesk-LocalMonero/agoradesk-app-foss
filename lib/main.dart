@@ -224,7 +224,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    debugPrint('++++error parsing push in actionStream [main]- $e');
+    if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
   }
 }
 
@@ -275,7 +275,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
 //       ),
 //     );
 //   } catch (e) {
-//     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
+//     if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
 //   }
 // }
 // }

@@ -117,7 +117,8 @@ class NotificationsService with ForegroundMessagesMixin {
         eventBus.fire(NoificationClickedEvent(tradeId));
       }
     } catch (e) {
-      debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn)
+        debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
     }
   }
 
@@ -176,10 +177,11 @@ class NotificationsService with ForegroundMessagesMixin {
           if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
             GetIt.I<AppParameters>().isGoogleAvailable = false;
           }
-          debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
+          if (GetIt.I<AppParameters>().debugPinyIsOn)
+            debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
         }
         if (token != null) {
-          debugPrint('++++ FirebaseMessaging pushtoken created: $token');
+          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
           _tokenUpdate(token);
         }
       }
@@ -228,7 +230,7 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
     try {
-      debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
       final resp = await api.client.post(
         '/push/registration',
         data: device.toJson(),
@@ -278,7 +280,7 @@ class NotificationsService with ForegroundMessagesMixin {
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
       }
     } catch (e) {
-      debugPrint('++++markTradeNotificationsAsRead exception - $e');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++markTradeNotificationsAsRead exception - $e');
     }
   }
 
@@ -319,7 +321,7 @@ class NotificationsService with ForegroundMessagesMixin {
           appState.hasUnread = hasUnreaded;
         } else {
           if (res.isLeft) {
-            debugPrint('++++getNotifications error ${res.left}');
+            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++getNotifications error ${res.left}');
           }
           // handleApiError(res.left, context);
         }

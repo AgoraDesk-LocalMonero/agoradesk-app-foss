@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:flutter/foundation.dart';
@@ -44,7 +45,7 @@ class AppUpdateService {
         }
         return null;
       } catch (e) {
-        debugPrint('[++++get version from api error] - $e');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[++++get version from api error] - $e');
         return null;
       }
     }

@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:agoradesk/core/api/api_errors.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -105,9 +106,9 @@ class TradesWithUserViewModel extends ViewModel with ErrorParseMixin {
       } else {
         if (res.left.message.containsKey('error_code')) {
           final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-          debugPrint('[getTrades error message] $errorMessage');
+          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getTrades error message] $errorMessage');
         }
-        debugPrint('[getTrades error] ${res.left.message}');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getTrades error] ${res.left.message}');
       }
       loading = false;
       disableTabBar = false;

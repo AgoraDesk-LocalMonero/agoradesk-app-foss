@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/api/api_errors.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
@@ -248,9 +249,9 @@ class MarketAdInfoViewModel extends ViewModel
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        debugPrint('[getBtcFees error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBtcFees error message] $errorMessage');
       }
-      debugPrint('[getBtcFees error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBtcFees error] ${res.left.message}');
       return null;
     }
   }

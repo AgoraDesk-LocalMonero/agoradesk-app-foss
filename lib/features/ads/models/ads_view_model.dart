@@ -323,9 +323,9 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        debugPrint('[loadVacationSettings error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error message] $errorMessage');
       }
-      debugPrint('[loadVacationSettings error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error] ${res.left.message}');
     }
   }
 
@@ -448,9 +448,9 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        debugPrint('[loadVacationSettings error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error message] $errorMessage');
       }
-      debugPrint('[loadVacationSettings error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error] ${res.left.message}');
     }
   }
 
