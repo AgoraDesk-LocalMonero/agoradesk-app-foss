@@ -7,7 +7,6 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:get_it/get_it.dart';
 
 import 'api_helper.dart';
 import 'mock_interceptor.dart';
@@ -54,12 +53,12 @@ class ApiClient with UrlMixin {
     (_dio.transformer as DefaultTransformer).jsonDecodeCallback = _parseJson;
 
     if (_debug) {
-      _dio.interceptors.add(
-        LogInterceptor(
-          responseBody: false,
-          requestBody: true,
-        ),
-      );
+      // _dio.interceptors.add(
+      //   LogInterceptor(
+      //     responseBody: false,
+      //     requestBody: true,
+      //   ),
+      // );
     }
 
     if (_useMocks && _debug) {

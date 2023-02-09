@@ -235,5 +235,5 @@ class AppParameters {
   String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
-  bool debugPinyIsOn = false;
+  bool debugPinyIsOn = true;
 }

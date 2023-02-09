@@ -204,6 +204,7 @@ class AddEditAdViewModel extends ViewModel
   double? get price => _price;
 
   set price(double? v) => updateWith(price: v);
+
   double? get calculatedPrice => _calculatedPrice;
 
   set calculatedPrice(double? v) => updateWith(calculatedPrice: v);
@@ -387,13 +388,18 @@ class AddEditAdViewModel extends ViewModel
     if (valid) {
       final percentNum = double.parse(input);
       final double percent = 1 + percentNum / 100;
-      String currencyFormula = 'usd';
-      if (selectedCurrency!.code.toLowerCase() != currencyFormula) {
-        currencyFormula += '*$currencyFormula${selectedCurrency!.code.toLowerCase()}';
+      late final String priceEquationString;
+      print('+++++++++++++++++++++++++++++++++++++222 - ${selectedCurrency!.altcoin} - ${selectedCurrency?.code}');
+      if (selectedCurrency!.altcoin == false) {
+        String currencyFormula = 'usd';
+        if (selectedCurrency!.code.toLowerCase() != currencyFormula) {
+          currencyFormula += '*$currencyFormula${selectedCurrency!.code.toLowerCase()}';
+        }
+        priceEquationString = 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent';
+      } else {
+        priceEquationString = 'coingecko${selectedCurrency!.code.toLowerCase()}${asset!.key().toLowerCase()}*$percent';
       }
-      final res = await _calcPrice(
-          priceEquation: 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent',
-          currency: selectedCurrency!.code);
+      final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
       calculatedPrice = res;
       if (res != null) {
         ctrl3FixedPrice.text = res.toString();
@@ -542,7 +548,11 @@ class AddEditAdViewModel extends ViewModel
   }
 
   Future<double?> _calcPrice({required String priceEquation, required String currency}) async {
-    final res = await _adsRepository.calcPrice(priceEquation, currency);
+    print('+++++++++++++++++++++++++++++++++++++11 - ${priceEquation} - $currency');
+    final res = await _adsRepository.calcPrice(
+      priceEquation,
+      currency,
+    );
     _priceEquation = priceEquation;
     if (res.isRight) {
       currentEditPrice = price = res.right;
