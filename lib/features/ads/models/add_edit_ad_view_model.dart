@@ -373,7 +373,7 @@ class AddEditAdViewModel extends ViewModel
       adEdits = adEdits!.copyWith(countryCode: selectedCountryCode);
     }
     final currencyCode = getCountryCurrencyCode(selectedCountryCode);
-    selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
+    selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: false);
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
     notifyListeners();
   }
@@ -510,9 +510,20 @@ class AddEditAdViewModel extends ViewModel
   Future<List<CurrencyModel?>> getCurrencies() async {
     reloadPaymentMethods = true;
     final res = await _adsRepository.getCurrencies();
+
     if (res.isRight) {
       selectedCurrency = res.right.firstWhere((e) => e.code == (ad?.currency ?? selectedCurrency!.code));
       notifyListeners();
+      if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
+        List<CurrencyModel?> cryptoList = [];
+        for (final c in res.right) {
+          if (c.altcoin) {
+            cryptoList.add(c);
+          }
+        }
+        return cryptoList;
+      }
+
       return res.right;
     } else {
       handleApiError(res.left, context);
@@ -533,6 +544,7 @@ class AddEditAdViewModel extends ViewModel
     selectedOnlineProvider = val;
     if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
       selectedCountryCode = 'XX';
+      selectedCurrency = CurrencyModel(code: 'XMR', name: 'Monero', altcoin: true);
     }
     // else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
     //   selectedCountryCode = 'ANY';
