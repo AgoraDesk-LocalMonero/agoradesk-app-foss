@@ -389,7 +389,6 @@ class AddEditAdViewModel extends ViewModel
       final percentNum = double.parse(input);
       final double percent = 1 + percentNum / 100;
       late final String priceEquationString;
-      print('+++++++++++++++++++++++++++++++++++++222 - ${selectedCurrency!.altcoin} - ${selectedCurrency?.code}');
       if (selectedCurrency!.altcoin == false) {
         String currencyFormula = 'usd';
         if (selectedCurrency!.code.toLowerCase() != currencyFormula) {
@@ -397,7 +396,8 @@ class AddEditAdViewModel extends ViewModel
         }
         priceEquationString = 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent';
       } else {
-        priceEquationString = 'coingecko${selectedCurrency!.code.toLowerCase()}${asset!.key().toLowerCase()}*$percent';
+        priceEquationString =
+            '(1/coingecko${selectedCurrency!.code.toLowerCase()}${asset!.key().toLowerCase()})*$percent';
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
       calculatedPrice = res;
@@ -548,7 +548,6 @@ class AddEditAdViewModel extends ViewModel
   }
 
   Future<double?> _calcPrice({required String priceEquation, required String currency}) async {
-    print('+++++++++++++++++++++++++++++++++++++11 - ${priceEquation} - $currency');
     final res = await _adsRepository.calcPrice(
       priceEquation,
       currency,
