@@ -270,7 +270,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: context.intl.app_ask_community_chats + ' ',
+                        text: '${context.intl.app_ask_community_chats} ',
                         style: context.txtBodyXSmallN80,
                       ),
                       TextSpan(
