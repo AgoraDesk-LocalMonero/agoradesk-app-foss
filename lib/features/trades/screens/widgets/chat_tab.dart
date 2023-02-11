@@ -15,7 +15,6 @@ import 'package:agoradesk/features/trades/screens/widgets/trade_step_one_for_cha
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
-import 'package:get_it/get_it.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 import 'package:vm/vm.dart';
 
@@ -279,7 +278,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
                         style: context.txtBodyXSmallP70P40,
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            openLink(GetIt.I<AppParameters>().telegramChannel);
+                            openLinkBrowser(GetIt.I<AppParameters>().telegramChannel);
                           },
                       ),
                       TextSpan(
@@ -291,7 +290,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
                         style: context.txtBodyXSmallP70P40,
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            openLink(GetIt.I<AppParameters>().matrixChannel);
+                            openLinkBrowser(GetIt.I<AppParameters>().matrixChannel);
                           },
                       ),
                     ],
