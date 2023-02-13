@@ -9,9 +9,7 @@ import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/dialog_captcha.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
 class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
@@ -121,7 +119,7 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       final res = await _authService.signUp(request);
       loading = false;
       if (res.isLeft) {
-        _captchaCookie = res.left.captchaCookie;
+        _captchaCookie = res.left.captchaCookie ?? _captchaCookie;
         final String? captchaPath = res.left.captchaLocalPath;
         if (captchaPath != null) {
           _captchaInput = await showDialog(
