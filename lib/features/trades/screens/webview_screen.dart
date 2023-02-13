@@ -6,7 +6,6 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 class WebviewScreen extends StatefulWidget {
@@ -67,7 +66,7 @@ class WebViewExampleState extends State<WebviewScreen> {
             cookieManager.setCookie(
               url: _uri,
               name: "token",
-              value: widget.token ?? '',
+              value: widget.token ?? ' ',
               domain: "agoradesk.com",
               isSecure: true,
             );
