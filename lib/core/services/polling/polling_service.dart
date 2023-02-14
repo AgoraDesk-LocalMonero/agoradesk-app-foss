@@ -66,11 +66,11 @@ class PollingService with ErrorParseMixin {
             ]);
           } else {
             if (resBtc.isLeft) {
-              if (GetIt.I<AppParameters>().debugPinyIsOn)
+              if (GetIt.I<AppParameters>().debugPrintIsOn)
                 debugPrint('++++[Polling service - getBalances error] - BTC ${resBtc.left.statusCode}');
             }
             if (resXmr.isLeft) {
-              if (GetIt.I<AppParameters>().debugPinyIsOn)
+              if (GetIt.I<AppParameters>().debugPrintIsOn)
                 debugPrint('++++[Polling service - getBalances error] - BTC ${resXmr.left.statusCode}');
             }
           }
@@ -81,7 +81,7 @@ class PollingService with ErrorParseMixin {
               resXmr.right,
             ]);
           } else {
-            if (GetIt.I<AppParameters>().debugPinyIsOn)
+            if (GetIt.I<AppParameters>().debugPrintIsOn)
               debugPrint('++++[Polling service - getBalances error] - XMR ${resXmr.left.statusCode}');
           }
         }
@@ -118,7 +118,7 @@ class PollingService with ErrorParseMixin {
     if (res.isRight) {
       return res.right;
     } else {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[calcPrice error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[calcPrice error] ${res.left.message}');
       return null;
     }
   }

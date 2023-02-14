@@ -106,9 +106,9 @@ class TradesWithUserViewModel extends ViewModel with ErrorParseMixin {
       } else {
         if (res.left.message.containsKey('error_code')) {
           final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getTrades error message] $errorMessage');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getTrades error message] $errorMessage');
         }
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getTrades error] ${res.left.message}');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getTrades error] ${res.left.message}');
       }
       loading = false;
       disableTabBar = false;

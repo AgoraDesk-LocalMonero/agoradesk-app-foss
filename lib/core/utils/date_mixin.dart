@@ -77,7 +77,7 @@ mixin DateMixin {
       final res = DateTime.parse(date ?? '');
       return DateFormat('yyyy-MM-dd').format(res);
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[niceDate parsing error] - $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[niceDate parsing error] - $e');
       return '';
     }
   }
@@ -89,7 +89,7 @@ mixin DateMixin {
     try {
       return DateFormat('yyyy-MM-dd HH:mm').format(date);
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[niceDate parsing error] - $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[niceDate parsing error] - $e');
       return '';
     }
   }

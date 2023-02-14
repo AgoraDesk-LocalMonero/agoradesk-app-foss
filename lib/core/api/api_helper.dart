@@ -40,7 +40,7 @@ mixin ApiHelper {
   }
 
   static ApiError parseErrorToApiError(dynamic err, String? objectStr) {
-    if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[++++parseErrorToApiError objectStr] $err');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++parseErrorToApiError objectStr] $err');
     try {
       final e = err as DioError;
       String message = '';
@@ -75,8 +75,8 @@ mixin ApiHelper {
           try {
             messageMap = json.decode(e.response.toString())['error'];
           } catch (e3) {
-            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[++++parseErrorToApiError2] - $e2');
-            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[++++parseErrorToApiError3] - $e3');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++parseErrorToApiError2] - $e2');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++parseErrorToApiError3] - $e3');
             messageMap = {'message': 'Unknow error'};
           }
         }

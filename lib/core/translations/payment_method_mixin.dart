@@ -27,7 +27,7 @@ mixin PaymentMethodsMixin {
         width: size,
       );
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getPaymentMethodIcon error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getPaymentMethodIcon error] $e');
       return const SizedBox();
     }
   }
@@ -39,7 +39,7 @@ mixin PaymentMethodsMixin {
       }
       return '';
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getSortingTypeName error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getSortingTypeName error] $e');
       return '';
     }
   }
@@ -51,7 +51,7 @@ mixin PaymentMethodsMixin {
       }
       return paymentMethodNames(context)[onlineProvider ?? ''];
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getPaymentMethodName error - $onlineProvider] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getPaymentMethodName error - $onlineProvider] $e');
       return onlineProvider ?? '';
     }
   }

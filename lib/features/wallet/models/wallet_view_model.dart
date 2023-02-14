@@ -15,7 +15,6 @@ import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
 class WalletViewModel extends ViewModel {
@@ -152,9 +151,9 @@ class WalletViewModel extends ViewModel {
         } else {
           if (resBtc.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
-            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error message] $errorMessage');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
           }
-          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error] ${resBtc.left.message}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resBtc.left.message}');
         }
       } else {
         final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
@@ -166,9 +165,9 @@ class WalletViewModel extends ViewModel {
         } else {
           if (resXmr.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
-            if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error message] $errorMessage');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
           }
-          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBalance error] ${resXmr.left.message}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resXmr.left.message}');
         }
       }
     }
@@ -303,10 +302,10 @@ class WalletViewModel extends ViewModel {
       late final String errorMessage;
       if (res.left.message.containsKey('error_code')) {
         errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[calcPrice error] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[calcPrice error] $errorMessage');
       } else {
         errorMessage = res.left.message.toString();
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[calcPrice error] ${res.left.message}');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[calcPrice error] ${res.left.message}');
       }
       // eventBus.fire(FlashEvent.error(errorMessage));
       return null;

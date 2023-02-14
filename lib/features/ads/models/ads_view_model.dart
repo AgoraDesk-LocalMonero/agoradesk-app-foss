@@ -28,7 +28,6 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get_it/get_it.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -323,9 +322,9 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[loadVacationSettings error message] $errorMessage');
       }
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[loadVacationSettings error] ${res.left.message}');
     }
   }
 
@@ -448,9 +447,9 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[loadVacationSettings error message] $errorMessage');
       }
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[loadVacationSettings error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[loadVacationSettings error] ${res.left.message}');
     }
   }
 

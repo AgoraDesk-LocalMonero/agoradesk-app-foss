@@ -8,7 +8,7 @@ class ForegroundMessagesMixin {
     try {
       return [channelDescriptionMap[langCode]['name'], channelDescriptionMap[langCode]['description']];
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getChannelNameDescription error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getChannelNameDescription error] $e');
       return [channelDescriptionMap['en']['name'], channelDescriptionMap['en']['description']];
     }
   }

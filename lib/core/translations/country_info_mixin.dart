@@ -25,7 +25,7 @@ mixin CountryInfoMixin {
       }
       return _countryName[langCode][code];
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getCountryName error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getCountryName error] $e');
       return '';
     }
   }
@@ -40,7 +40,7 @@ mixin CountryInfoMixin {
     try {
       return currencyName[langCode][code];
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getCurrencyName error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getCurrencyName error] $e');
       return '';
     }
   }
@@ -55,7 +55,7 @@ mixin CountryInfoMixin {
     try {
       return '$code (${currencyName[langCode][code]})';
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getCurrencyName error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getCurrencyName error] $e');
       return '';
     }
   }
@@ -64,7 +64,7 @@ mixin CountryInfoMixin {
     try {
       return _countryCurrency[countryCode]!;
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getCountryCurrencyCode error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getCountryCurrencyCode error] $e');
       return 'USD';
     }
   }

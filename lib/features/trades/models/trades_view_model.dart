@@ -21,7 +21,6 @@ import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:vm/vm.dart';
@@ -262,9 +261,9 @@ class TradesViewModel extends ViewModel with ErrorParseMixin {
       } else {
         if (res.left.message.containsKey('error_code')) {
           final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-          if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getTrades error message] $errorMessage');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getTrades error message] $errorMessage');
         }
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getTrades error] ${res.left.message}');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getTrades error] ${res.left.message}');
       }
       loading = false;
       disableTabBar = false;

@@ -25,7 +25,7 @@ mixin ErrorParseMixin {
         errorMessage = '';
       }
     }
-    if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[$runtimeType] $errorMessage');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[$runtimeType] $errorMessage');
     if (errorMessage.isNotEmpty) {
       eventBus.fire(FlashEvent.error(errorMessage));
     }

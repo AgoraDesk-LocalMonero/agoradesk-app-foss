@@ -84,7 +84,7 @@ class ApiClient with UrlMixin {
           } else {
             options.headers["cookie"] = cookiesLst.join(';');
           }
-          if (GetIt.I<AppParameters>().debugPinyIsOn)
+          if (GetIt.I<AppParameters>().debugPrintIsOn)
             debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
@@ -133,7 +133,7 @@ class ApiClient with UrlMixin {
             // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
-            if (GetIt.I<AppParameters>().debugPinyIsOn)
+            if (GetIt.I<AppParameters>().debugPrintIsOn)
               debugPrint('++++[api_client ERROR message] statusCode == null, $message');
             // if (kDebugMode) {
             //   eventBus.fire(FlashEvent.error(message));

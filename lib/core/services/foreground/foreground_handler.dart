@@ -67,7 +67,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
           }
         }
       } else {
-        if (GetIt.I<AppParameters>().debugPinyIsOn)
+        if (GetIt.I<AppParameters>().debugPrintIsOn)
           debugPrint('++++error getting foreground notifications - ${resp.statusCode} - ${resp.body}');
       }
     }

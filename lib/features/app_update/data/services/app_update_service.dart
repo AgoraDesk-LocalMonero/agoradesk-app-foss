@@ -45,7 +45,7 @@ class AppUpdateService {
         }
         return null;
       } catch (e) {
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[++++get version from api error] - $e');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++get version from api error] - $e');
         return null;
       }
     }

@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 class RoutesObserver extends AutoRouterObserver {
   @override
   void didPush(Route route, Route? previousRoute) {
-    if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++routeNew route pushed: ${route.settings.name}');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++routeNew route pushed: ${route.settings.name}');
   }
 
   @override
   void didInitTabRoute(TabPageRoute route, TabPageRoute? previousRoute) {
-    if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++routeTab route visited: ${route.name}');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++routeTab route visited: ${route.name}');
   }
 
   @override
   void didChangeTabRoute(TabPageRoute route, TabPageRoute previousRoute) {
-    if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++routeTab route re-visited: ${route.name}');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++routeTab route re-visited: ${route.name}');
     if (route.name == WalletRoute.name) {}
   }
 }

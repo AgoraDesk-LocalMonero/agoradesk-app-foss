@@ -249,9 +249,9 @@ class MarketAdInfoViewModel extends ViewModel
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBtcFees error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBtcFees error message] $errorMessage');
       }
-      if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('[getBtcFees error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBtcFees error] ${res.left.message}');
       return null;
     }
   }
