@@ -1,6 +1,7 @@
 ### Updates
-1. Improved login with Imperva captcha.
-2. Fixed creating ad issues.
+1. Fixed update for push notification token.
+2. Fixed initial screen for the affiliate program.
+3. Made numerous small fixes.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

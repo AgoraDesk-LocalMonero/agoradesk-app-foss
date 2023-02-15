@@ -7,7 +7,6 @@ import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:get_it/get_it.dart';
 
 import 'api_helper.dart';
 import 'mock_interceptor.dart';
@@ -53,9 +52,14 @@ class ApiClient with UrlMixin {
         _useMocks = useMocks {
     (_dio.transformer as DefaultTransformer).jsonDecodeCallback = _parseJson;
 
-    // if (_debug) {
-    //   _dio.interceptors.add(LogInterceptor(responseBody: true));
-    // }
+    if (_debug) {
+      // _dio.interceptors.add(
+      //   LogInterceptor(
+      //     responseBody: false,
+      //     requestBody: true,
+      //   ),
+      // );
+    }
 
     if (_useMocks && _debug) {
       _dio.interceptors.add(MockInterceptor());
@@ -80,7 +84,8 @@ class ApiClient with UrlMixin {
           } else {
             options.headers["cookie"] = cookiesLst.join(';');
           }
-          debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn)
+            debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
@@ -128,7 +133,8 @@ class ApiClient with UrlMixin {
             // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
-            debugPrint('++++[api_client ERROR message] statusCode == null, $message');
+            if (GetIt.I<AppParameters>().debugPrintIsOn)
+              debugPrint('++++[api_client ERROR message] statusCode == null, $message');
             // if (kDebugMode) {
             //   eventBus.fire(FlashEvent.error(message));
             // }
@@ -200,7 +206,7 @@ class ApiClient with UrlMixin {
   //         }
   //         await _webViewController!.loadUrl(urlRequest: URLRequest(url: uri));
   //       } catch (e) {
-  //         debugPrint('++++ [Webview cooikes error] $e');
+  //         if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++ [Webview cooikes error] $e');
   //       }
   //     },
   //     onLoadStop: (controller, _) async {

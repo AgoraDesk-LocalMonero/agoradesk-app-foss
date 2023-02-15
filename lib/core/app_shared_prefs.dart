@@ -11,7 +11,7 @@ enum AppSharedPrefsKey {
   biometricAuthIsOn,
   sentryIsOn,
   firstRun,
-  pushFcmTokenSavedToApi,
+  fcmTokenSavedToApi,
   username,
   ignoreAllUpdates,
   ignoredUpdate,
@@ -65,7 +65,7 @@ class AppSharedPrefs with DateMixin {
 
   bool? get firstRun => getBool(AppSharedPrefsKey.firstRun);
 
-  bool? get pushFcmTokenSavedToApi => getBool(AppSharedPrefsKey.pushFcmTokenSavedToApi);
+  bool? get fcmTokenSavedToApi => getBool(AppSharedPrefsKey.fcmTokenSavedToApi);
 
   String? get username => getString(AppSharedPrefsKey.username);
 

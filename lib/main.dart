@@ -9,11 +9,9 @@ import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/init_app_parameters.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:get_it/get_it.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -140,6 +138,6 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    debugPrint('++++error parsing push in actionStream [main]- $e');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
   }
 }
