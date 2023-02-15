@@ -15,7 +15,6 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
-import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
@@ -39,6 +38,7 @@ class NotificationsService with ForegroundMessagesMixin {
   final AuthService authService;
   final AppState appState;
   bool _loading = false;
+  bool _updating = false;
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
@@ -85,7 +85,7 @@ class NotificationsService with ForegroundMessagesMixin {
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
       }
     } catch (e) {
-      debugPrint('++++markTradeNotificationsAsRead exception - $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++markTradeNotificationsAsRead exception - $e');
     }
   }
 
@@ -126,7 +126,7 @@ class NotificationsService with ForegroundMessagesMixin {
           appState.hasUnread = hasUnreaded;
         } else {
           if (res.isLeft) {
-            debugPrint('++++getNotifications error ${res.left}');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++getNotifications error ${res.left}');
           }
           // handleApiError(res.left, context);
         }

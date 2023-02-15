@@ -204,6 +204,7 @@ class AddEditAdViewModel extends ViewModel
   double? get price => _price;
 
   set price(double? v) => updateWith(price: v);
+
   double? get calculatedPrice => _calculatedPrice;
 
   set calculatedPrice(double? v) => updateWith(calculatedPrice: v);
@@ -372,7 +373,7 @@ class AddEditAdViewModel extends ViewModel
       adEdits = adEdits!.copyWith(countryCode: selectedCountryCode);
     }
     final currencyCode = getCountryCurrencyCode(selectedCountryCode);
-    selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
+    selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: false);
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
     notifyListeners();
   }
@@ -387,13 +388,22 @@ class AddEditAdViewModel extends ViewModel
     if (valid) {
       final percentNum = double.parse(input);
       final double percent = 1 + percentNum / 100;
-      String currencyFormula = 'usd';
-      if (selectedCurrency!.code.toLowerCase() != currencyFormula) {
-        currencyFormula += '*$currencyFormula${selectedCurrency!.code.toLowerCase()}';
+      late final String priceEquationString;
+      if (selectedCurrency!.altcoin == false) {
+        String currencyFormula = 'usd';
+        if (selectedCurrency!.code.toLowerCase() != currencyFormula) {
+          currencyFormula += '*$currencyFormula${selectedCurrency!.code.toLowerCase()}';
+        }
+        priceEquationString = 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent';
+      } else {
+        if (selectedCurrency!.code == 'USDT') {
+          priceEquationString = '(coingecko${asset!.key().toLowerCase()}usd)*$percent';
+        } else {
+          priceEquationString =
+              '(coingecko${asset!.key().toLowerCase()}usd/coingecko${selectedCurrency!.code.toLowerCase()}usd)*$percent';
+        }
       }
-      final res = await _calcPrice(
-          priceEquation: 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent',
-          currency: selectedCurrency!.code);
+      final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
       calculatedPrice = res;
       if (res != null) {
         ctrl3FixedPrice.text = res.toString();
@@ -459,7 +469,7 @@ class AddEditAdViewModel extends ViewModel
         tradeType: _tradeType,
         asset: asset,
         countryCode: selectedCountryCode,
-        currency: selectedCurrency!.code,
+        currency: selectedCurrency!.code == 'USDT' ? 'USD' : selectedCurrency!.code,
         onlineProvider: isLocalAd ? 'CASH' : selectedOnlineProvider?.code,
         priceEquation: _priceEquation,
         buyerSettlementAddress: ctrl32WalletAddress.text,
@@ -504,9 +514,20 @@ class AddEditAdViewModel extends ViewModel
   Future<List<CurrencyModel?>> getCurrencies() async {
     reloadPaymentMethods = true;
     final res = await _adsRepository.getCurrencies();
+
     if (res.isRight) {
       selectedCurrency = res.right.firstWhere((e) => e.code == (ad?.currency ?? selectedCurrency!.code));
       notifyListeners();
+      if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
+        List<CurrencyModel?> cryptoList = [];
+        for (final c in res.right) {
+          if (c.altcoin) {
+            cryptoList.add(c);
+          }
+        }
+        return cryptoList;
+      }
+
       return res.right;
     } else {
       handleApiError(res.left, context);
@@ -527,6 +548,11 @@ class AddEditAdViewModel extends ViewModel
     selectedOnlineProvider = val;
     if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
       selectedCountryCode = 'XX';
+      if (asset == Asset.BTC) {
+        selectedCurrency = CurrencyModel(code: 'XMR', name: 'Monero', altcoin: true);
+      } else {
+        selectedCurrency = CurrencyModel(code: 'BTC', name: 'Bitcoin', altcoin: true);
+      }
     }
     // else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
     //   selectedCountryCode = 'ANY';
@@ -542,7 +568,10 @@ class AddEditAdViewModel extends ViewModel
   }
 
   Future<double?> _calcPrice({required String priceEquation, required String currency}) async {
-    final res = await _adsRepository.calcPrice(priceEquation, currency);
+    final res = await _adsRepository.calcPrice(
+      priceEquation,
+      currency,
+    );
     _priceEquation = priceEquation;
     if (res.isRight) {
       currentEditPrice = price = res.right;

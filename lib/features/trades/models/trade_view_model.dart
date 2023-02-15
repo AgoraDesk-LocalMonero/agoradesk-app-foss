@@ -35,7 +35,6 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
@@ -119,6 +118,7 @@ class TradeViewModel extends ViewModel
   late StreamSubscription _updateOpenedChatSubscription;
 
   late TradeModel tradeForScreen;
+  bool _tradeForScreenLoaded = false;
 
   bool _loadingMessagesInit = false;
   bool _gettingMessages = false;
@@ -228,7 +228,7 @@ class TradeViewModel extends ViewModel
   void init() {
     _initialLoading();
     _listenEventBus();
-
+    markNotificationsFromTradeAsRead();
     super.init();
   }
 
@@ -239,6 +239,7 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
+    _tradeForScreenLoaded = true;
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
       accountService: _accountService,
@@ -310,6 +311,21 @@ class TradeViewModel extends ViewModel
       }
     } else {
       accountInfoModel = const AccountInfoModel(username: kDeletedUserName);
+    }
+  }
+
+  Future markNotificationsFromTradeAsRead() async {
+    int index = 0;
+    final List<String> markedAsReadIds = [];
+    for (final n in _appState.notifications) {
+      if (n.contactId == tradeForScreen.tradeId && n.read == false) {
+        markedAsReadIds.add(n.id);
+        _appState.notifications[index] = _appState.notifications[index].copyWith(read: true);
+      }
+      index++;
+    }
+    for (final id in markedAsReadIds) {
+      await _accountService.markAsRead(id);
     }
   }
 
@@ -540,6 +556,7 @@ class TradeViewModel extends ViewModel
     if (initial) {
       _divideMessagesTwoParts(null, initial: initial);
     } else {
+      tradeStatusDate = tradeForScreen.createdAt!;
       _updateStickyBubblePosition(tradeStatusDate);
     }
   }
@@ -728,16 +745,18 @@ class TradeViewModel extends ViewModel
   }
 
   void _calcMinutesBeforeCancel() {
-    if (sellTypes.contains(tradeForScreen.advertisement.tradeType)) {
-      minutesBeforeCancel = 60 - (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
-    } else {
-      minutesBeforeCancel = (tradeForScreen.paymentWindowMinutes ?? 90) -
-          (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+    if (_tradeForScreenLoaded) {
+      if (sellTypes.contains(tradeForScreen.advertisement.tradeType)) {
+        minutesBeforeCancel = 60 - (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+      } else {
+        minutesBeforeCancel = (tradeForScreen.paymentWindowMinutes ?? 90) -
+            (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+      }
+      if (minutesBeforeCancel < 0) {
+        minutesBeforeCancel = 0;
+      }
+      notifyListeners();
     }
-    if (minutesBeforeCancel < 0) {
-      minutesBeforeCancel = 0;
-    }
-    notifyListeners();
   }
 
   String paymentDetailsText(BuildContext context) {
