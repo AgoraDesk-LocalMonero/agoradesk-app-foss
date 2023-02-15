@@ -1,1 +1,3 @@
-1. Fixed login with Imperva captcha.
+1. Fixed update for push notification token.
+2. Fixed initial screen for the affiliate program.
+3. Made numerous small fixes.
