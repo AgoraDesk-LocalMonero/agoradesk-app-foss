@@ -228,7 +228,7 @@ class TradeViewModel extends ViewModel
   void init() {
     _initialLoading();
     _listenEventBus();
-
+    markNotificationsFromTradeAsRead();
     super.init();
   }
 
@@ -311,6 +311,21 @@ class TradeViewModel extends ViewModel
       }
     } else {
       accountInfoModel = const AccountInfoModel(username: kDeletedUserName);
+    }
+  }
+
+  Future markNotificationsFromTradeAsRead() async {
+    int index = 0;
+    final List<String> markedAsReadIds = [];
+    for (final n in _appState.notifications) {
+      if (n.contactId == tradeForScreen.tradeId && n.read == false) {
+        markedAsReadIds.add(n.id);
+        _appState.notifications[index] = _appState.notifications[index].copyWith(read: true);
+      }
+      index++;
+    }
+    for (final id in markedAsReadIds) {
+      await _accountService.markAsRead(id);
     }
   }
 
