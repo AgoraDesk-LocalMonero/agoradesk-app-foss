@@ -118,6 +118,7 @@ class TradeViewModel extends ViewModel
   late StreamSubscription _updateOpenedChatSubscription;
 
   late TradeModel tradeForScreen;
+  bool _tradeForScreenLoaded = false;
 
   bool _loadingMessagesInit = false;
   bool _gettingMessages = false;
@@ -238,6 +239,7 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
+    _tradeForScreenLoaded = true;
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
       accountService: _accountService,
@@ -728,16 +730,18 @@ class TradeViewModel extends ViewModel
   }
 
   void _calcMinutesBeforeCancel() {
-    if (sellTypes.contains(tradeForScreen.advertisement.tradeType)) {
-      minutesBeforeCancel = 60 - (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
-    } else {
-      minutesBeforeCancel = (tradeForScreen.paymentWindowMinutes ?? 90) -
-          (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+    if (_tradeForScreenLoaded) {
+      if (sellTypes.contains(tradeForScreen.advertisement.tradeType)) {
+        minutesBeforeCancel = 60 - (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+      } else {
+        minutesBeforeCancel = (tradeForScreen.paymentWindowMinutes ?? 90) -
+            (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+      }
+      if (minutesBeforeCancel < 0) {
+        minutesBeforeCancel = 0;
+      }
+      notifyListeners();
     }
-    if (minutesBeforeCancel < 0) {
-      minutesBeforeCancel = 0;
-    }
-    notifyListeners();
   }
 
   String paymentDetailsText(BuildContext context) {
