@@ -397,7 +397,7 @@ class AddEditAdViewModel extends ViewModel
         priceEquationString = 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent';
       } else {
         priceEquationString =
-            '(1/coingecko${selectedCurrency!.code.toLowerCase()}${asset!.key().toLowerCase()})*$percent';
+            '(coingecko${asset!.key().toLowerCase()}usd/coingecko${selectedCurrency!.code.toLowerCase()}usd)*$percent';
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
       calculatedPrice = res;
@@ -544,7 +544,11 @@ class AddEditAdViewModel extends ViewModel
     selectedOnlineProvider = val;
     if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
       selectedCountryCode = 'XX';
-      selectedCurrency = CurrencyModel(code: 'XMR', name: 'Monero', altcoin: true);
+      if (asset == Asset.BTC) {
+        selectedCurrency = CurrencyModel(code: 'XMR', name: 'Monero', altcoin: true);
+      } else {
+        selectedCurrency = CurrencyModel(code: 'BTC', name: 'Bitcoin', altcoin: true);
+      }
     }
     // else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
     //   selectedCountryCode = 'ANY';
