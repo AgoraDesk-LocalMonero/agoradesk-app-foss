@@ -35,7 +35,6 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
@@ -540,6 +539,7 @@ class TradeViewModel extends ViewModel
     if (initial) {
       _divideMessagesTwoParts(null, initial: initial);
     } else {
+      tradeStatusDate = tradeForScreen.createdAt!;
       _updateStickyBubblePosition(tradeStatusDate);
     }
   }

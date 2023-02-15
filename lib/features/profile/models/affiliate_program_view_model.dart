@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -10,6 +9,7 @@ import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_types.dart';
 import 'package:agoradesk/features/wallet/data/models/transactions_request_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
+import 'package:vm/vm.dart';
 
 class AffiliateProgramViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   AffiliateProgramViewModel({
@@ -61,19 +61,21 @@ class AffiliateProgramViewModel extends ViewModel with ValidatorMixin, ErrorPars
   }
 
   Future _getTransactions() async {
-    loadingTransactions = true;
-    final res = await _walletService.getTransactions(
-      request: const TransactionsRequestModel(
-        type: TransactionTypes.AFFILIATE_COMMISSION,
-      ),
-    );
-    loadingTransactions = false;
-    if (res.isRight) {
-      transactions.clear();
-      transactions.addAll(res.right);
-      notifyListeners();
-    } else {
-      handleApiError(res.left, context);
+    if (affiliateModel.enabled == true) {
+      loadingTransactions = true;
+      final res = await _walletService.getTransactions(
+        request: const TransactionsRequestModel(
+          type: TransactionTypes.AFFILIATE_COMMISSION,
+        ),
+      );
+      loadingTransactions = false;
+      if (res.isRight) {
+        transactions.clear();
+        transactions.addAll(res.right);
+        notifyListeners();
+      } else {
+        handleApiError(res.left, context);
+      }
     }
   }
 
@@ -85,9 +87,10 @@ class AffiliateProgramViewModel extends ViewModel with ValidatorMixin, ErrorPars
       affiliateModel = res.right;
     } else {
       // 147: Attempting to get affiliate data for user that doesn’t have the affiliate program enabled
-      if (res.left.errorCode == 147) {
+      if (res.left.message.containsValue(147)) {
         affiliateModel = const AffiliateModel(code: '', usersCount: 0, enabled: false);
       } else {
+        affiliateModel = const AffiliateModel(code: '', usersCount: 0, enabled: false);
         handleApiError(res.left, context);
       }
     }
