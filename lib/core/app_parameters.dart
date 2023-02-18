@@ -58,6 +58,7 @@ class AppParameters {
   // String captchaCookie1 = '';
   // String captchaCookie2 = '';
   List<Cookie>? cookies;
+  List<Cookie>? appCaptchaCookies;
 
   /// plausible analytics
   final String urlPlausibleServer = 'https://a.agoradesk.com';
@@ -235,5 +236,5 @@ class AppParameters {
   String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
-  bool debugPrintIsOn = true;
+  bool debugPrintIsOn = false;
 }
