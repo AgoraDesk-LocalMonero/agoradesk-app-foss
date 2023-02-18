@@ -55,8 +55,12 @@ class ApiClient with UrlMixin {
     if (_debug) {
       // _dio.interceptors.add(
       //   LogInterceptor(
-      //     responseBody: false,
+      //     request: true,
+      //     requestHeader: true,
       //     requestBody: true,
+      //     responseHeader: true,
+      //     responseBody: true,
+      //     error: true,
       //   ),
       // );
     }
@@ -74,9 +78,9 @@ class ApiClient with UrlMixin {
           List<String> cookiesLst = [];
           if (GetIt.I<AppParameters>().cookies != null) {
             for (final val in GetIt.I<AppParameters>().cookies!) {
-              // if (val.name.contains('540')) {
-              cookiesLst.add('${val.name}=${val.value}');
-              // }
+              if (val.name.contains('540')) {
+                cookiesLst.add('${val.name}=${val.value}');
+              }
             }
           }
           if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {

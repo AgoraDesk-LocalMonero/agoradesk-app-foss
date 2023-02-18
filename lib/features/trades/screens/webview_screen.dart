@@ -31,7 +31,7 @@ class WebViewExampleState extends State<WebviewScreen> {
   CookieManager cookieManager = CookieManager.instance();
   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
     crossPlatform: InAppWebViewOptions(
-      userAgent: 'Mozilla/5.0',
+      // userAgent: 'AgoraDesk',
       useShouldOverrideUrlLoading: true,
       mediaPlaybackRequiresUserGesture: false,
     ),
@@ -75,8 +75,9 @@ class WebViewExampleState extends State<WebviewScreen> {
                 final cookieRaw = c.split(';').first;
                 final cookieName = cookieRaw.split('=').first;
                 final cookieValue = cookieRaw.substring(cookieName.length + 1);
-                if (GetIt.I<AppParameters>().debugPrintIsOn)
+                if (GetIt.I<AppParameters>().debugPrintIsOn) {
                   debugPrint('[++++ cookies passed to the webview] ${cookieName}=$cookieValue');
+                }
                 cookieManager.setCookie(
                     url: _uri,
                     name: cookieName,

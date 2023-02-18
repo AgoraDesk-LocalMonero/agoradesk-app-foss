@@ -183,7 +183,7 @@ class WalletViewModel extends ViewModel {
       }
       if (btc?.sentTransactions != null) {
         for (final val in btc!.sentTransactions!) {
-          val.copyWith(asset: Asset.BTC);
+          transactions.add(val.copyWith(asset: Asset.BTC));
         }
       }
     }

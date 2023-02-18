@@ -1,7 +1,6 @@
 ### Updates
-1. Fixed update for push notification token.
-2. Fixed initial screen for the affiliate program.
-3. Made numerous small fixes.
+1. Hotfix: captcha loop when the service is under attack.
+2. Fix: display BTC outgoing transactions.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
