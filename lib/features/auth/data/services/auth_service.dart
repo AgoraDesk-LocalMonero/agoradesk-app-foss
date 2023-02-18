@@ -77,8 +77,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, changeEmail] ${request.captchaCookie}');
+      }
       await _api.client.post<Map>(
         '/email',
         data: request.toJson(),
@@ -238,8 +239,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
+      }
       final resp = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
