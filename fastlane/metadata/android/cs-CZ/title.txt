@@ -1,1 +1,1 @@
-LocalMonero: kup XMR privátně
+AgoraDesk: anonymní nakup BTC

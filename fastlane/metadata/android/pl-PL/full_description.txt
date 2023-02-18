@@ -1,15 +1,15 @@
-Kupuj lub sprzedawaj Monero anonimowo, bez weryfikacji tożsamości. Gotówką lub online. Bezpiecznie, szybko, łatwo.
+Kupuj lub sprzedawaj Bitcoiny anonimowo, bez weryfikacji tożsamości. Gotówką lub online. Bezpiecznie, szybko, łatwo.
 
-LocalMonero to największa, najbardziej zaufana i ugruntowana platforma handlowa P2P w społeczności XMR. Nie wykonujemy weryfikacji KYC - możesz po prostu kupić Monero anonimowo za pomocą PayPal, karty kredytowej, karty podarunkowej, gotówki pocztą lub przekonwertować Bitcoina, Ether, USDT lub jakąkolwiek inną kryptowalutę na Monero - nasza platforma obsługuje dowolną metodę płatności.
+Zastanawiasz się, jak inwestować w Bitcoina? Dzięki AgoraDesk zakup Bitcoinów nigdy nie był prostszy - natychmiast kup BTC od drugiej osoby, korzystając z Twojej ulubionej metody płatności online np.: PayPal, karta kredytowa/debetowa lub przelew bankowy, karty podarunkowe, Venmo lub jakakolwiek inna metoda płatności. Jeśli chcesz kupić Bitcoiny lokalnie za gotówkę, możesz znaleźć kogoś chętnego sprzedaży Bitcoinów w okolicy - nasza platforma transakcyjna obsługuje kupowanie i sprzedawanie BTC za gotówkę. Możesz nawet kupić Bitcoiny za gotówkę drogą pocztową.
 
 - Bezpieczny i płynny handel
-Obsługujemy każdą metodę płatności, dowolną walutę, w dowolnym miejscu. Nie usuwamy metod płatności i w pełni obsługujemy bezpośrednie transakcje gotówkowe. Wszystkie nasze transakcje są chronione gwarancją arbitrażową. Dzięki temu, że przed rozpoczęciem transakcji wymagamy oddania środków pod zastaw, zapewniamy kupującemu płynny i bezpieczny handel, dzięki czemu jesteśmy tak popularną platformą.
+Podobnie jak LocalBitcoins, obsługujemy każdą metodę płatności, dowolną walutę, w dowolnym miejscu. Nie usuwamy metod płatności i, w przeciwieństwie do LocalBitcoins, w pełni obsługujemy bezpośrednie transakcje gotówkowe. Wszystkie nasze transakcje są chronione gwarancją arbitrażową. Dzięki temu, że przed rozpoczęciem transakcji wymagamy oddania środków pod zastaw, zapewniamy kupującemu płynny i bezpieczny handel, dzięki czemu jesteśmy tak popularną platformą.
 
 - Brak KYC/AML lub weryfikacji tożsamości
-LocalMonero dokłada wszelkich starań, aby zachować prostotę i bezpośredniość. Nie stosujemy KYC/AML ani nigdy nie planujemy tego robić.
+AgoraDesk dokłada wszelkich starań, aby zachować prostotę i bezpośredniość, dzięki którym oryginalne LocalBitcoins stały się tak popularne. Nie stosujemy KYC/AML i nigdy nie planujemy tego robić.
 
 - Zaufani przez społeczność
-Nasza platforma działa od ponad czterech lat, przetrwała Wielki Krach na Rynku Kryptowalut w 2018 roku, a dzięki zorientowanej na społeczność sumiennej służbie stała się jedną z najbardziej zaufanych marek w niezwykle sceptycznej społeczności Monero.
+Nasza platforma działa od ponad czterech lat, przetrwała Wielki Krach na Rynku Kryptowalut w 2018 roku, a dzięki zorientowanej na społeczność sumiennej służbie stała się jedną z najbardziej zaufanych marek w niezwykle sceptycznej społeczności kryptowalut.
 
 - Bezpieczni, open source, zorientowani na prywatność, odporni na cenzurę
 Nasza aplikacja jest bezpłatna i ma otwarte oprogramowanie, co sprawia, że wiele osób widziało kod źródłowy aplikacji i upewniło się, że nie ma on usterek w zabezpieczeniach ani wycieków prywatności. Open sourcing naszej aplikacji umożliwia też każdemu dostęp do naszej platformy, nawet jeśli jakieś repozytorium cenzuruje naszą aplikację. Nasza aplikacja działa nawet na telefonach, które mają całkowicie zablokowanego Google'a. Cenimy Twoją prywatność tak bardzo, że nie wymagamy nawet podania adresu e-mail podczas rejestracji.
@@ -20,7 +20,7 @@ Narzędzie do śledzenia usterek: https://github.com/AgoraDesk-LocalMonero/agora
 - Nieziemskie wsparcie
 Nasz zespół wsparcia jest szybki, elastyczny i zawsze chętny do pomocy. Nigdy nie otrzymaliśmy zgłoszenia do obsługi klienta, na które nie udzieliliśmy odpowiedzi w ciągu 24 godzin. Jesteśmy zawsze łatwo osiągalni za pośrednictwem mediów społecznościowych, uważnie słuchamy Twojej krytyki i zawsze wdrażamy dobre sugestie użytkowników w rekordowym czasie.
 
-Możesz skontaktować się z naszym wsparciem pod adresem: https://localmonero.co/support
+Możesz skontaktować się z naszym wsparciem pod adresem: https://agoradsk.com/support
 
 - Uczciwe opłaty
 Nie pobieramy wygórowanych opłat, gdy wpłacasz lub wypłacasz Bitcoiny do/z naszego portfela ochrony arbitrażowej. Nie mamy opłaty za wpłaty, a opłata za wypłatę jest bardzo zbliżona do opłaty, którą zapłaciłbyś za normalną transakcję.

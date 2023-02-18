@@ -1,1 +1,1 @@
-LocalMonero: compra XMR sin ID
+AgoraDesk: compra BTC anónima
