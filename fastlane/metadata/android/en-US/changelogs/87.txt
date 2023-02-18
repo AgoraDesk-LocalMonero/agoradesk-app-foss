@@ -1,0 +1,2 @@
+1. Hotfix: captcha loop when the service is under attack.
+2. Fix: display BTC outgoing transactions.
