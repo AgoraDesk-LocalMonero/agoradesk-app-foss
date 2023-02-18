@@ -1,3 +1,2 @@
-1. Fixed update for push notification token.
-2. Fixed initial screen for the affiliate program.
-3. Made numerous small fixes.
+1. Hotfix: captcha loop when the service is under attack.
+2. Fix: display BTC outgoing transactions.
