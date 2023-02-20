@@ -20,7 +20,8 @@ dependencies:
   device_info_plus: ^8.0.0
   package_info_plus: ^3.0.2
   dio: ^4.0.6
-  pretty_dio_logger: ^1.1.1
+  dio_logging_interceptor: ^1.0.1
+#  pretty_dio_logger: ^1.1.1
   event_bus: ^2.0.0
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2

@@ -6,6 +6,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
+import 'package:dio_logging_interceptor/dio_logging_interceptor.dart';
 import 'package:flutter/foundation.dart';
 
 import 'api_helper.dart';
@@ -52,19 +53,6 @@ class ApiClient with UrlMixin {
         _useMocks = useMocks {
     (_dio.transformer as DefaultTransformer).jsonDecodeCallback = _parseJson;
 
-    if (_debug) {
-      // _dio.interceptors.add(
-      //   LogInterceptor(
-      //     request: true,
-      //     requestHeader: true,
-      //     requestBody: true,
-      //     responseHeader: true,
-      //     responseBody: true,
-      //     error: true,
-      //   ),
-      // );
-    }
-
     if (_useMocks && _debug) {
       _dio.interceptors.add(MockInterceptor());
     }
@@ -93,6 +81,7 @@ class ApiClient with UrlMixin {
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
+
           return handler.next(options);
         },
         onResponse: (Response response, handler) async {
@@ -149,6 +138,25 @@ class ApiClient with UrlMixin {
         },
       ),
     );
+
+    if (_debug) {
+      // _dio.interceptors.add(
+      //   LogInterceptor(
+      //     request: true,
+      //     requestHeader: true,
+      //     requestBody: true,
+      //     responseHeader: true,
+      //     responseBody: true,
+      //     error: true,
+      //   ),
+      // );
+      _dio.interceptors.add(
+        DioLoggingInterceptor(
+          level: Level.body,
+          compact: false,
+        ),
+      );
+    }
   }
 
   // Future<bool> _checkCaptchaInHeadlessWebView(List<dynamic> cookiesLst) async {
