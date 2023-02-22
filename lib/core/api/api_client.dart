@@ -16,7 +16,7 @@ import 'mock_interceptor.dart';
 /// Default options for [ApiClient]
 ///
 
-const kTimeout = kDebugMode ? 10000 : 60000;
+const kTimeout = kDebugMode ? 30000 : 60000;
 
 BaseOptions _defaultOptions = BaseOptions(
   baseUrl: 'http://localhost/api',
@@ -65,9 +65,11 @@ class ApiClient with UrlMixin {
           }
           List<String> cookiesLst = [];
           if (GetIt.I<AppParameters>().cookies != null) {
-            for (final val in GetIt.I<AppParameters>().cookies!) {
-              if (val.name.contains('540')) {
-                cookiesLst.add('${val.name}=${val.value}');
+            for (final cookie in GetIt.I<AppParameters>().cookies!) {
+              try {
+                cookiesLst.add('${cookie.name}=${cookie.value}');
+              } catch (e) {
+                debugPrint('[++++parsing cookies error] - $e');
               }
             }
           }

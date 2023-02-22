@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
@@ -10,6 +11,7 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/models/login_view_model.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/src/provider.dart';
@@ -53,8 +55,16 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                 children: [
                                   widget.displaySkip
                                       ? Row(
-                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
+                                            TextButton(
+                                              child: Text(
+                                                context.intl.app_proxy_use,
+                                                style: context.txtLabelLargeP80P70,
+                                              ),
+                                              onPressed: () => context.pushRoute(const ProxyRoute()),
+                                            ),
+                                            _displayProxy(context),
                                             TextButton(
                                               child: Text(
                                                 context.intl.skip,
@@ -206,5 +216,27 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
         ),
       ],
     );
+  }
+
+  Widget _displayProxy(BuildContext context) {
+    return StreamBuilder<bool?>(
+        stream: context.read<AppState>().proxyStatus$,
+        builder: (context, snapshot) {
+          if (snapshot.data == true) {
+            return Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
+                child: Icon(
+                  CupertinoIcons.checkmark_shield,
+                  size: 20,
+                  color: context.colN80N30,
+                ),
+              ),
+            );
+          } else {
+            return const SizedBox();
+          }
+        });
   }
 }

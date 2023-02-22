@@ -119,11 +119,12 @@ class AccountService {
   ///
   Future<Either<bool, bool>> checkProxyAvailable() async {
     try {
-      final Map<String, int> queryParameters = {'after': DateTime.now().toUtc().millisecondsSinceEpoch};
-      final resp = await _api.client.get(
-        '/notifications',
-        queryParameters: queryParameters,
-      );
+      // final Map<String, int> queryParameters = {'after': DateTime.now().toUtc().millisecondsSinceEpoch};
+      // final resp = await _api.client.get(
+      //   '/notifications',
+      //   queryParameters: queryParameters,
+      // );
+      final resp = await _api.client.get('/buy-monero-online/USD/US');
       if (resp.statusCode == 200) {
         return const Either.right(true);
       } else {

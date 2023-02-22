@@ -117,6 +117,7 @@ flutter:
     - assets/json/
     - assets/branding/
     - assets/images/
+    - assets/misc/
 
   fonts:
     - family: agoraFont

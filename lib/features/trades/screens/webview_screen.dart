@@ -63,13 +63,15 @@ class WebViewExampleState extends State<WebviewScreen> {
           _webViewController = controller;
           try {
             CookieManager cookieManager = CookieManager.instance();
-            cookieManager.setCookie(
-              url: _uri,
-              name: "token",
-              value: widget.token ?? ' ',
-              domain: "agoradesk.com",
-              isSecure: true,
-            );
+            if (widget.token != null && widget.token!.isNotEmpty) {
+              cookieManager.setCookie(
+                url: _uri,
+                name: "token",
+                value: widget.token ?? ' ',
+                // domain: "agoradesk.com",
+                isSecure: true,
+              );
+            }
             if (widget.cookies.isNotEmpty) {
               for (final c in widget.cookies) {
                 final cookieRaw = c.split(';').first;
@@ -79,17 +81,18 @@ class WebViewExampleState extends State<WebviewScreen> {
                   debugPrint('[++++ cookies passed to the webview] ${cookieName}=$cookieValue');
                 }
                 cookieManager.setCookie(
-                    url: _uri,
-                    name: cookieName,
-                    value: cookieValue,
-                    domain: ".agoradesk.com",
-                    path: 'https://agoradesk.com/login'
-                    // isSecure: true,
-                    );
+                  url: _uri,
+                  name: cookieName,
+                  value: cookieValue,
+                  // domain: ".agoradesk.com",
+                  // path: 'https://agoradesk.com/login'
+                  isSecure: true,
+                );
               }
             }
             // then load initial URL here
             await _webViewController!.loadUrl(urlRequest: URLRequest(url: _uri));
+            await await _getCookies();
           } catch (e) {
             if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ [Webview cooikes error] $e');
           }
@@ -97,7 +100,6 @@ class WebViewExampleState extends State<WebviewScreen> {
         onLoadStop: (controller, _) async {
           final pageBody = await controller.getHtml() ?? '';
           if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
-            await _getCookies();
             context.read<AppState>().sinkReloadMarket.add(true);
             if (AutoRouter.of(context).current.name == WebviewRoute.name) {
               Navigator.of(context).pop();
