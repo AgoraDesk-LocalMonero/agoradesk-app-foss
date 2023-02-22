@@ -660,9 +660,13 @@ class AddEditAdViewModel extends ViewModel
   void changePriceInputType(PriceInputType? val) {
     priceInputType = val;
 
-    if (priceInputType != PriceInputType.fixed) {
+    if (priceInputType == PriceInputType.market) {
       checkAndCalcMargin(notify: false);
-    } else {
+    }
+    if (priceInputType == PriceInputType.formula) {
+      _checkAndCalcFormula();
+    }
+    if (priceInputType == PriceInputType.market) {
       _priceEquation = ctrl3FixedPrice.text;
     }
   }
@@ -704,6 +708,7 @@ class AddEditAdViewModel extends ViewModel
     });
     ctrl3FixedPrice.addListener(() {
       if (priceInputType == PriceInputType.fixed) {
+        currentEditPrice = double.tryParse(ctrl3FixedPrice.text) ?? 0;
         _priceEquation = ctrl3FixedPrice.text;
       }
     });
