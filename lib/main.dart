@@ -31,8 +31,9 @@ const kNotificationIcon = '@mipmap/ic_icon_black';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  ByteData data = await PlatformAssetBundle().load('assets/misc/lets-encrypt-r3.pem');
-  SecurityContext.defaultContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
+  // https://www.reddit.com/r/flutterhelp/comments/ydernb/certificate_verify_failed_certificate_has_expired/
+  // ByteData data = await PlatformAssetBundle().load('assets/misc/lets-encrypt-r3.pem');
+  // SecurityContext.defaultContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
