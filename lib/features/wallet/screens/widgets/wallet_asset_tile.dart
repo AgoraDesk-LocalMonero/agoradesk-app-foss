@@ -26,6 +26,22 @@ class WalletAssetTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width - 70;
 
+    // ExpansionTile(
+    //   title: const Text('ExpansionTile 2'),
+    //   subtitle: const Text('Custom expansion arrow icon'),
+    //   trailing: Icon(
+    //     expanded
+    //         ? Icons.arrow_drop_down_circle
+    //         : Icons.arrow_drop_down,
+    //   ),
+    //   children: const <Widget>[
+    //     ListTile(title: Text('This is tile number 2')),
+    //   ],
+    //   onExpansionChanged: (bool expanded) {
+    //     setState(() => _customTileExpanded = expanded);
+    //   },
+    // ),
+
     return ViewModelBuilder<WalletViewModel>(
         model: model,
         disposable: false,
@@ -34,64 +50,87 @@ class WalletAssetTile extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
             child: ContainerSurface5Radius12Border1(
               child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
-                          child: Image.asset(asset.pngPath()),
-                        ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                    child: Text(
-                                      '${asset.title()} ${context.intl.faq250Sbanswer8722Sb138722Sbwallet}',
+                padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
+                child: ExpansionTile(
+                  title: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
+                            child: Image.asset(asset.pngPath()),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                      child: Text(
+                                        '${asset.title()} ${context.intl.faq250Sbanswer8722Sb138722Sbwallet}',
+                                        style: context.txtLabelLargeP90P10,
+                                      ),
+                                    ),
+                                    Text(
+                                      model.walletBalance(asset),
                                       style: context.txtLabelLargeP90P10,
                                     ),
-                                  ),
-                                  Text(
-                                    model.walletBalance(asset),
-                                    style: context.txtLabelLargeP90P10,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                    child: model.assetPrice(asset) == null
-                                        ? const CupertinoActivityIndicator()
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                      child: model.assetPrice(asset) == null
+                                          ? const CupertinoActivityIndicator()
+                                          : Text(
+                                              '1 ${asset.name} ~ ${model.assetPrice(asset)} ${context.read<AppState>().currencyCode}',
+                                              style: context.txtBodyXSmallNeutral50,
+                                            ),
+                                    ),
+                                    model.assetPrice(asset) == null
+                                        ? const SizedBox()
                                         : Text(
-                                            '1 ${asset.name} ~ ${model.assetPrice(asset)} ${context.read<AppState>().currencyCode}',
+                                            model.balanceCost(asset),
                                             style: context.txtBodyXSmallNeutral50,
                                           ),
-                                  ),
-                                  model.assetPrice(asset) == null
-                                      ? const SizedBox()
-                                      : Text(
-                                          model.balanceCost(asset),
-                                          style: context.txtBodyXSmallNeutral50,
-                                        ),
-                                ],
-                              ),
-                            ],
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  initiallyExpanded: model.tileExpanded(asset),
+                  trailing: Column(
+                    children: [
+                      Icon(
+                        model.tileExpanded(asset) ? Icons.arrow_drop_up_outlined : Icons.arrow_drop_down_outlined,
+                        size: 22,
+                      ),
+                    ],
+                  ),
+                  collapsedIconColor: context.colN80N30,
+                  iconColor: context.colN80N30,
+                  onExpansionChanged: (bool expanded) {
+                    model.changeTileExpanded(asset);
+                  },
+                  backgroundColor: context.colS5darkSLight,
+                  collapsedBackgroundColor: context.colS5darkSLight,
+                  shape: const RoundedRectangleBorder(side: BorderSide.none),
+                  children: [
                     const SizedBox(height: 12),
                     SizedBox(
                       width: width - 10,
@@ -130,11 +169,6 @@ class WalletAssetTile extends StatelessWidget {
                               AddressBookRoute(asset: asset),
                             ),
                           ),
-                          // WalletBlueButton(
-                          //   title: context.intl.convert,
-                          //   iconData: AgoraFont.synchronize,
-                          //   onPressed: () {},
-                          // ),
                         ],
                       ),
                     ),

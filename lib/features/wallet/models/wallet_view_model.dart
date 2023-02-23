@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
@@ -120,6 +121,23 @@ class WalletViewModel extends ViewModel with StringMixin {
     await getBalances();
 
     getIncomingDeposits();
+  }
+
+  bool tileExpanded(Asset asset) {
+    if (asset == Asset.BTC) {
+      return AppSharedPrefs().btcWalletTileOpen;
+    } else {
+      return AppSharedPrefs().xmrWalletTileOpen;
+    }
+  }
+
+  Future changeTileExpanded(Asset asset) async {
+    if (asset == Asset.BTC) {
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.btcWalletTileOpen, val: !AppSharedPrefs().btcWalletTileOpen);
+    } else {
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.xmrWalletTileOpen, val: !AppSharedPrefs().xmrWalletTileOpen);
+    }
+    notifyListeners();
   }
 
   void _updateBalance() {

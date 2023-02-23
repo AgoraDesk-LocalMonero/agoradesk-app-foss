@@ -29,6 +29,7 @@ class WebviewScreen extends StatefulWidget {
 class WebViewExampleState extends State<WebviewScreen> {
   late final InAppWebViewController? _webViewController;
   CookieManager cookieManager = CookieManager.instance();
+
   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
     crossPlatform: InAppWebViewOptions(
       // userAgent: 'AgoraDesk',
@@ -48,6 +49,7 @@ class WebViewExampleState extends State<WebviewScreen> {
   @override
   void initState() {
     _uri = Uri.tryParse(widget.url) ?? Uri();
+    cookieManager.deleteAllCookies();
     super.initState();
   }
 
@@ -56,13 +58,19 @@ class WebViewExampleState extends State<WebviewScreen> {
     return Scaffold(
       appBar: const AgoraAppBar(),
       body: InAppWebView(
-        initialUrlRequest: URLRequest(url: _uri),
+        initialUrlRequest: URLRequest(
+          url: _uri,
+          headers: {
+            'Accept': 'application/json',
+            'User-Agent': 'AgoraDesk',
+          },
+        ),
         // initialUserScripts: UnmodifiableListView<UserScript>([]),
         initialOptions: _options,
         onWebViewCreated: (controller) async {
           _webViewController = controller;
           try {
-            CookieManager cookieManager = CookieManager.instance();
+            cookieManager = CookieManager.instance();
             if (widget.token != null && widget.token!.isNotEmpty) {
               cookieManager.setCookie(
                 url: _uri,

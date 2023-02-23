@@ -68,9 +68,15 @@ class WalletScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   GetIt.I<AppParameters>().isAgoraDesk
-                                      ? WalletAssetTile(asset: Asset.BTC, model: model)
+                                      ? WalletAssetTile(
+                                          asset: Asset.BTC,
+                                          model: model,
+                                        )
                                       : const SizedBox(),
-                                  WalletAssetTile(asset: Asset.XMR, model: model),
+                                  WalletAssetTile(
+                                    asset: Asset.XMR,
+                                    model: model,
+                                  ),
                                   _buildIncomingDeposits(context, model),
                                   Text(
                                     context.intl.recent_transactions,
