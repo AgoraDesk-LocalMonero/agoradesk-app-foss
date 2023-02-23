@@ -393,6 +393,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.1"
+  expansion_tile_card:
+    dependency: "direct main"
+    description:
+      name: expansion_tile_card
+      sha256: "0812d52e4a2effa4957286b9037c81394e1881ac49bcd8f006f631f2ea5ef6eb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   extended_image:
     dependency: "direct main"
     description:

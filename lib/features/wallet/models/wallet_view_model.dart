@@ -4,7 +4,9 @@ import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
+import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
@@ -14,10 +16,11 @@ import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart'
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
 
-class WalletViewModel extends ViewModel {
+class WalletViewModel extends ViewModel with StringMixin {
   WalletViewModel({
     required WalletService walletService,
     required AuthService authService,
@@ -35,6 +38,8 @@ class WalletViewModel extends ViewModel {
 
   late final TabsRouter _tabsRouter;
   final indicatorKey = GlobalKey<RefreshIndicatorState>();
+  final GlobalKey<ExpansionTileCardState> tileKeyBtc = GlobalKey();
+  final GlobalKey<ExpansionTileCardState> tileKeyXmr = GlobalKey();
 
   late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
 
@@ -120,11 +125,13 @@ class WalletViewModel extends ViewModel {
 
   void _updateBalance() {
     if (_appState.balance.isNotEmpty) {
-      _balanceXmr = _appState.balance[0].balance.toString();
+      final int digitsXmr = getBankersDigits(Asset.XMR.name);
+      _balanceXmr = _appState.balance[0].balance.bankerRound(digitsXmr).toString();
       _addressXmr = _appState.balance[0].receivingAddress;
     }
     if (_appState.balance.length > 1) {
-      _balanceBtc = _appState.balance[1].balance.toString();
+      final int digitsBtc = getBankersDigits(Asset.BTC.name);
+      _balanceBtc = _appState.balance[1].balance.bankerRound(digitsBtc).toString();
       _addressBtc = _appState.balance[1].receivingAddress;
     }
   }

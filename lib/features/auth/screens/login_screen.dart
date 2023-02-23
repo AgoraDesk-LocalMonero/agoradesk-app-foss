@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
 
   @override
   void initState() {
-    _checkCaptchaInHeadlessWebView([]);
+    _getWebsiteCookiesInHeadlessWebView([]);
     super.initState();
   }
 
@@ -251,7 +251,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
         });
   }
 
-  Future _checkCaptchaInHeadlessWebView(List<dynamic> cookiesLst) async {
+  Future _getWebsiteCookiesInHeadlessWebView(List<dynamic> cookiesLst) async {
     late final InAppWebViewController? webViewController;
     CookieManager cookieManager = CookieManager.instance();
     final InAppWebViewGroupOptions options = InAppWebViewGroupOptions(
