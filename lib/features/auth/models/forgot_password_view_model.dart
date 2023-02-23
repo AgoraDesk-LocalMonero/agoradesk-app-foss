@@ -74,9 +74,9 @@ class ForgotPasswordViewModel extends ViewModel with ValidatorMixin, ErrorParseM
               path: captchaPath,
             ),
           );
-          if (validateCaptcha(_captchaInput)) {
-            requestPasswordReset();
-          }
+          // if (validateCaptcha(_captchaInput)) {
+          //   requestPasswordReset();
+          // }
         } else {
           handleApiError(res.left, context);
         }

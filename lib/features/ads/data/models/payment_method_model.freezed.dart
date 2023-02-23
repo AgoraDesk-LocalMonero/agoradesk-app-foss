@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'payment_method_model.dart';
 
@@ -30,44 +30,47 @@ mixin _$OnlineProvider {
 abstract class $OnlineProviderCopyWith<$Res> {
   factory $OnlineProviderCopyWith(
           OnlineProvider value, $Res Function(OnlineProvider) then) =
-      _$OnlineProviderCopyWithImpl<$Res>;
+      _$OnlineProviderCopyWithImpl<$Res, OnlineProvider>;
+  @useResult
   $Res call({String url, String code, String name, List<String> currencies});
 }
 
 /// @nodoc
-class _$OnlineProviderCopyWithImpl<$Res>
+class _$OnlineProviderCopyWithImpl<$Res, $Val extends OnlineProvider>
     implements $OnlineProviderCopyWith<$Res> {
   _$OnlineProviderCopyWithImpl(this._value, this._then);
 
-  final OnlineProvider _value;
   // ignore: unused_field
-  final $Res Function(OnlineProvider) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = freezed,
-    Object? code = freezed,
-    Object? name = freezed,
-    Object? currencies = freezed,
+    Object? url = null,
+    Object? code = null,
+    Object? name = null,
+    Object? currencies = null,
   }) {
     return _then(_value.copyWith(
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      currencies: currencies == freezed
+      currencies: null == currencies
           ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -78,41 +81,40 @@ abstract class _$$_OnlineProviderCopyWith<$Res>
           _$_OnlineProvider value, $Res Function(_$_OnlineProvider) then) =
       __$$_OnlineProviderCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String url, String code, String name, List<String> currencies});
 }
 
 /// @nodoc
 class __$$_OnlineProviderCopyWithImpl<$Res>
-    extends _$OnlineProviderCopyWithImpl<$Res>
+    extends _$OnlineProviderCopyWithImpl<$Res, _$_OnlineProvider>
     implements _$$_OnlineProviderCopyWith<$Res> {
   __$$_OnlineProviderCopyWithImpl(
       _$_OnlineProvider _value, $Res Function(_$_OnlineProvider) _then)
-      : super(_value, (v) => _then(v as _$_OnlineProvider));
+      : super(_value, _then);
 
-  @override
-  _$_OnlineProvider get _value => super._value as _$_OnlineProvider;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = freezed,
-    Object? code = freezed,
-    Object? name = freezed,
-    Object? currencies = freezed,
+    Object? url = null,
+    Object? code = null,
+    Object? name = null,
+    Object? currencies = null,
   }) {
     return _then(_$_OnlineProvider(
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      currencies: currencies == freezed
+      currencies: null == currencies
           ? _value._currencies
           : currencies // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -139,6 +141,7 @@ class _$_OnlineProvider implements _OnlineProvider {
   final List<String> _currencies;
   @override
   List<String> get currencies {
+    if (_currencies is EqualUnmodifiableListView) return _currencies;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_currencies);
   }
@@ -153,23 +156,20 @@ class _$_OnlineProvider implements _OnlineProvider {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OnlineProvider &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality()
                 .equals(other._currencies, _currencies));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(name),
+  int get hashCode => Object.hash(runtimeType, url, code, name,
       const DeepCollectionEquality().hash(_currencies));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith =>
       __$$_OnlineProviderCopyWithImpl<_$_OnlineProvider>(this, _$identity);
 }

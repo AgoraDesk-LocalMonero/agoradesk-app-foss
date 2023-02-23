@@ -230,7 +230,7 @@ class AuthService with FileUtilsMixin {
   }
 
   ///
-  /// Register a new user
+  /// Login the user
   ///
   Future<Either<ApiError, bool>> login(SignUpRequestModel request) async {
     try {
@@ -252,6 +252,25 @@ class AuthService with FileUtilsMixin {
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);
+        return const Either.right(true);
+      } else {
+        return const Either.right(false);
+      }
+    } catch (e) {
+      final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      final ApiError? errorWithCaptcha = await _captchaParser(apiError);
+      return Either.left(errorWithCaptcha ?? apiError);
+    }
+  }
+
+  ///
+  /// Login with the Webview
+  ///
+  Future<Either<ApiError, bool>> loginWebview(String token) async {
+    try {
+      final resToken = await _handleTokenResponseWebview(token);
+      if (resToken) {
+        _saveUserName('zzq77');
         return const Either.right(true);
       } else {
         return const Either.right(false);
@@ -330,6 +349,21 @@ class AuthService with FileUtilsMixin {
 
   void _saveUserName(String username) async {
     await AppSharedPrefs().setString(AppSharedPrefsKey.username, username);
+  }
+
+  Future<bool> _handleTokenResponseWebview(String token) async {
+    try {
+      _setToken(token);
+
+      if (_api.accessToken != null) {
+        showPinSetUp = true;
+        _authStateController.add(AuthState.loggedIn);
+      }
+      return true;
+    } catch (e) {
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
+    }
+    return false;
   }
 
   Future<bool> _handleTokenResponse(Response<Map> resp) async {

@@ -329,6 +329,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.6"
+  dio_logging_interceptor:
+    dependency: "direct main"
+    description:
+      name: dio_logging_interceptor
+      sha256: a7dcd599c831259f72330fecc1ac3675ff7c1ac793dc59cf796379dafd869375
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   dots_indicator:
     dependency: "direct main"
     description:
@@ -377,6 +385,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.1"
+  expansion_tile_card:
+    dependency: "direct main"
+    description:
+      name: expansion_tile_card
+      sha256: "0812d52e4a2effa4957286b9037c81394e1881ac49bcd8f006f631f2ea5ef6eb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   extended_image:
     dependency: "direct main"
     description:
@@ -1262,14 +1278,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
-  pretty_dio_logger:
-    dependency: "direct main"
-    description:
-      name: pretty_dio_logger
-      sha256: "948f7eeb36e7aa0760b51c1a8e3331d4b21e36fabd39efca81f585ed93893544"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0-beta-1"
   process:
     dependency: transitive
     description:

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'sign_up_request_model.dart';
 
@@ -47,7 +47,8 @@ mixin _$SignUpRequestModel {
 abstract class $SignUpRequestModelCopyWith<$Res> {
   factory $SignUpRequestModelCopyWith(
           SignUpRequestModel value, $Res Function(SignUpRequestModel) then) =
-      _$SignUpRequestModelCopyWithImpl<$Res>;
+      _$SignUpRequestModelCopyWithImpl<$Res, SignUpRequestModel>;
+  @useResult
   $Res call(
       {String? username,
       @JsonKey(includeIfNull: false)
@@ -68,14 +69,16 @@ abstract class $SignUpRequestModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SignUpRequestModelCopyWithImpl<$Res>
+class _$SignUpRequestModelCopyWithImpl<$Res, $Val extends SignUpRequestModel>
     implements $SignUpRequestModelCopyWith<$Res> {
   _$SignUpRequestModelCopyWithImpl(this._value, this._then);
 
-  final SignUpRequestModel _value;
   // ignore: unused_field
-  final $Res Function(SignUpRequestModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? username = freezed,
@@ -89,43 +92,43 @@ class _$SignUpRequestModelCopyWithImpl<$Res>
     Object? couponCode = freezed,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      frontType: frontType == freezed
+      frontType: freezed == frontType
           ? _value.frontType
           : frontType // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      otp: otp == freezed
+      otp: freezed == otp
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
-      captcha: captcha == freezed
+      captcha: freezed == captcha
           ? _value.captcha
           : captcha // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaCookie: captchaCookie == freezed
+      captchaCookie: freezed == captchaCookie
           ? _value.captchaCookie
           : captchaCookie // ignore: cast_nullable_to_non_nullable
               as String?,
-      referralCode: referralCode == freezed
+      referralCode: freezed == referralCode
           ? _value.referralCode
           : referralCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      couponCode: couponCode == freezed
+      couponCode: freezed == couponCode
           ? _value.couponCode
           : couponCode // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -136,6 +139,7 @@ abstract class _$$_SignUpRequestModelCopyWith<$Res>
           $Res Function(_$_SignUpRequestModel) then) =
       __$$_SignUpRequestModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? username,
       @JsonKey(includeIfNull: false)
@@ -157,15 +161,13 @@ abstract class _$$_SignUpRequestModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_SignUpRequestModelCopyWithImpl<$Res>
-    extends _$SignUpRequestModelCopyWithImpl<$Res>
+    extends _$SignUpRequestModelCopyWithImpl<$Res, _$_SignUpRequestModel>
     implements _$$_SignUpRequestModelCopyWith<$Res> {
   __$$_SignUpRequestModelCopyWithImpl(
       _$_SignUpRequestModel _value, $Res Function(_$_SignUpRequestModel) _then)
-      : super(_value, (v) => _then(v as _$_SignUpRequestModel));
+      : super(_value, _then);
 
-  @override
-  _$_SignUpRequestModel get _value => super._value as _$_SignUpRequestModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? username = freezed,
@@ -179,39 +181,39 @@ class __$$_SignUpRequestModelCopyWithImpl<$Res>
     Object? couponCode = freezed,
   }) {
     return _then(_$_SignUpRequestModel(
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      frontType: frontType == freezed
+      frontType: freezed == frontType
           ? _value.frontType
           : frontType // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      otp: otp == freezed
+      otp: freezed == otp
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
-      captcha: captcha == freezed
+      captcha: freezed == captcha
           ? _value.captcha
           : captcha // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaCookie: captchaCookie == freezed
+      captchaCookie: freezed == captchaCookie
           ? _value.captchaCookie
           : captchaCookie // ignore: cast_nullable_to_non_nullable
               as String?,
-      referralCode: referralCode == freezed
+      referralCode: freezed == referralCode
           ? _value.referralCode
           : referralCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      couponCode: couponCode == freezed
+      couponCode: freezed == couponCode
           ? _value.couponCode
           : couponCode // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -273,36 +275,31 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SignUpRequestModel &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.frontType, frontType) &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality().equals(other.otp, otp) &&
-            const DeepCollectionEquality().equals(other.captcha, captcha) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaCookie, captchaCookie) &&
-            const DeepCollectionEquality()
-                .equals(other.referralCode, referralCode) &&
-            const DeepCollectionEquality()
-                .equals(other.couponCode, couponCode));
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.frontType, frontType) ||
+                other.frontType == frontType) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.otp, otp) || other.otp == otp) &&
+            (identical(other.captcha, captcha) || other.captcha == captcha) &&
+            (identical(other.captchaCookie, captchaCookie) ||
+                other.captchaCookie == captchaCookie) &&
+            (identical(other.referralCode, referralCode) ||
+                other.referralCode == referralCode) &&
+            (identical(other.couponCode, couponCode) ||
+                other.couponCode == couponCode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(frontType),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(otp),
-      const DeepCollectionEquality().hash(captcha),
-      const DeepCollectionEquality().hash(captchaCookie),
-      const DeepCollectionEquality().hash(referralCode),
-      const DeepCollectionEquality().hash(couponCode));
+  int get hashCode => Object.hash(runtimeType, username, email, frontType,
+      password, otp, captcha, captchaCookie, referralCode, couponCode);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SignUpRequestModelCopyWith<_$_SignUpRequestModel> get copyWith =>
       __$$_SignUpRequestModelCopyWithImpl<_$_SignUpRequestModel>(
           this, _$identity);

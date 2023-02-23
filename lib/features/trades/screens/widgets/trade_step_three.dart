@@ -1,10 +1,12 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/box_surface5_with_copy.dart';
 import 'package:agoradesk/core/widgets/branded/box_surface5_with_two_copy.dart';
+import 'package:agoradesk/core/widgets/branded/button_outlined_with_icon_p80.dart';
 import 'package:agoradesk/core/widgets/branded/circle_with_icon.dart';
 import 'package:agoradesk/core/widgets/branded/circle_with_num.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
@@ -264,6 +266,23 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
                 ),
                 const SizedBox(height: 12),
                 ReceiptFeedbackLine(model: model),
+                const SizedBox(height: 12),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ButtonOutlinedWithIconP80(
+                      icon: Icon(
+                        CupertinoIcons.checkmark_seal,
+                        color: Theme.of(context).colorScheme.p80P70,
+                      ),
+                      title: context.intl.trade250Sbstatus250Sbsettlement250Sbproof,
+                      insidePadding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
+                      delimiterWidth: 4,
+                      onPressed: () => openLinkBrowser(
+                          '${GetIt.I<AppParameters>().urlBase}/blocks/tx/${model.tradeForScreen.transferToBuyerTransactionId ?? ''}?txprvkey=${model.tradeForScreen.transferToBuyerKey ?? ''}&xmraddress=${model.tradeForScreen.buyerSettlementAddress ?? ''}'),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

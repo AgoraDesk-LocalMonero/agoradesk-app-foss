@@ -129,9 +129,9 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
               path: captchaPath,
             ),
           );
-          if (validateCaptcha(_captchaInput)) {
-            signUp();
-          }
+          // if (validateCaptcha(_captchaInput)) {
+          //   signUp();
+          // }
         } else {
           handleApiError(res.left, context);
         }

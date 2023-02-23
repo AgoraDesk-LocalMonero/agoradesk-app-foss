@@ -26,6 +26,8 @@ enum AppSharedPrefsKey {
   proxyUsername,
   proxyPassword,
   proxyType,
+  btcWalletTileOpen,
+  xmrWalletTileOpen,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -66,6 +68,10 @@ class AppSharedPrefs with DateMixin {
   bool? get firstRun => getBool(AppSharedPrefsKey.firstRun);
 
   bool? get fcmTokenSavedToApi => getBool(AppSharedPrefsKey.fcmTokenSavedToApi);
+
+  bool get btcWalletTileOpen => getBool(AppSharedPrefsKey.btcWalletTileOpen) ?? true;
+
+  bool get xmrWalletTileOpen => getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
 
   String? get username => getString(AppSharedPrefsKey.username);
 

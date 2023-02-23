@@ -35,7 +35,7 @@ Map<String, dynamic> _$$_ActivityNotificationModelToJson(
   writeNotNull('contact_id', instance.contactId);
   val['url'] = instance.url;
   val['msg'] = instance.msg;
-  val['type'] = _$NotificationMessageTypeEnumMap[instance.type];
+  val['type'] = _$NotificationMessageTypeEnumMap[instance.type]!;
   return val;
 }
 

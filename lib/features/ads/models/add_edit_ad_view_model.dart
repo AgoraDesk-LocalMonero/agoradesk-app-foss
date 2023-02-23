@@ -25,6 +25,7 @@ import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart'
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:decimal/decimal.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -130,8 +131,8 @@ class AddEditAdViewModel extends ViewModel
   double? maxAmount;
   double? firstTradeMaxLimit;
   double? _calculatedPrice;
-  double _balanceBtc = 0;
-  double _balanceXmr = 0;
+  Decimal _balanceBtc = Decimal.fromInt(0);
+  Decimal _balanceXmr = Decimal.fromInt(0);
   String? restrictLimit;
   bool minAmountValid = true;
   bool maxAmountValid = true;
@@ -660,9 +661,13 @@ class AddEditAdViewModel extends ViewModel
   void changePriceInputType(PriceInputType? val) {
     priceInputType = val;
 
-    if (priceInputType != PriceInputType.fixed) {
+    if (priceInputType == PriceInputType.market) {
       checkAndCalcMargin(notify: false);
-    } else {
+    }
+    if (priceInputType == PriceInputType.formula) {
+      _checkAndCalcFormula();
+    }
+    if (priceInputType == PriceInputType.market) {
       _priceEquation = ctrl3FixedPrice.text;
     }
   }
@@ -704,6 +709,7 @@ class AddEditAdViewModel extends ViewModel
     });
     ctrl3FixedPrice.addListener(() {
       if (priceInputType == PriceInputType.fixed) {
+        currentEditPrice = double.tryParse(ctrl3FixedPrice.text) ?? 0;
         _priceEquation = ctrl3FixedPrice.text;
       }
     });

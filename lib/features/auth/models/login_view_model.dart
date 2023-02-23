@@ -123,9 +123,9 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
               path: captchaPath,
             ),
           );
-          if (validateCaptcha(_captchaInput)) {
-            login();
-          }
+          // if (validateCaptcha(_captchaInput)) {
+          //   login();
+          // }
         } else {
           handleApiError(res.left, context);
         }

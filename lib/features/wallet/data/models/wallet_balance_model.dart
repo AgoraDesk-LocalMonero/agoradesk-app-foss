@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
+import 'package:decimal/decimal.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'wallet_balance_model.freezed.dart';
@@ -14,7 +15,7 @@ part 'wallet_balance_model.g.dart';
 class WalletBalanceModel with _$WalletBalanceModel {
   @JsonSerializable(explicitToJson: true)
   const factory WalletBalanceModel({
-    @_NestedBalanceConverter() @JsonKey(name: 'total') required double balance,
+    @_NestedBalanceConverter() @JsonKey(name: 'total') required Decimal balance,
     @JsonKey(name: 'receiving_address') required String receivingAddress,
     @JsonKey(name: 'received_transactions_30d') List<TransactionModel>? receivedTransactions,
     @JsonKey(name: 'sent_transactions_30d') List<TransactionModel>? sentTransactions,
@@ -23,14 +24,17 @@ class WalletBalanceModel with _$WalletBalanceModel {
   factory WalletBalanceModel.fromJson(Map<String, dynamic> json) => _$WalletBalanceModelFromJson(json);
 }
 
-class _NestedBalanceConverter extends JsonConverter<double, Map<String, dynamic>> {
+class _NestedBalanceConverter extends JsonConverter<Decimal, Map<String, dynamic>> {
   const _NestedBalanceConverter();
 
   @override
-  double fromJson(Map<String, dynamic> json) => double.tryParse(json['balance']) as double;
+  Decimal fromJson(Map<String, dynamic> json) {
+    final balance = Decimal.tryParse(json['balance']) as Decimal;
+    return balance;
+  }
 
   @override
-  Map<String, dynamic> toJson(double object) => {
+  Map<String, dynamic> toJson(Decimal object) => {
         'total': {'balance': object}
       };
 }

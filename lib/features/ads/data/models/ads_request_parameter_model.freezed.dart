@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ads_request_parameter_model.dart';
 
@@ -48,7 +48,8 @@ mixin _$AdsRequestParameterModel {
 abstract class $AdsRequestParameterModelCopyWith<$Res> {
   factory $AdsRequestParameterModelCopyWith(AdsRequestParameterModel value,
           $Res Function(AdsRequestParameterModel) then) =
-      _$AdsRequestParameterModelCopyWithImpl<$Res>;
+      _$AdsRequestParameterModelCopyWithImpl<$Res, AdsRequestParameterModel>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
           int? page,
@@ -69,14 +70,17 @@ abstract class $AdsRequestParameterModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AdsRequestParameterModelCopyWithImpl<$Res>
+class _$AdsRequestParameterModelCopyWithImpl<$Res,
+        $Val extends AdsRequestParameterModel>
     implements $AdsRequestParameterModelCopyWith<$Res> {
   _$AdsRequestParameterModelCopyWithImpl(this._value, this._then);
 
-  final AdsRequestParameterModel _value;
   // ignore: unused_field
-  final $Res Function(AdsRequestParameterModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? page = freezed,
@@ -89,39 +93,39 @@ class _$AdsRequestParameterModelCopyWithImpl<$Res>
     Object? paymentMethodCode = freezed,
   }) {
     return _then(_value.copyWith(
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      countryCode: countryCode == freezed
+      countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      currencyCode: currencyCode == freezed
+      currencyCode: freezed == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeType: tradeType == freezed
+      tradeType: freezed == tradeType
           ? _value.tradeType
           : tradeType // ignore: cast_nullable_to_non_nullable
               as TradeType?,
-      visible: visible == freezed
+      visible: freezed == visible
           ? _value.visible
           : visible // ignore: cast_nullable_to_non_nullable
               as bool?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentMethodCode: paymentMethodCode == freezed
+      paymentMethodCode: freezed == paymentMethodCode
           ? _value.paymentMethodCode
           : paymentMethodCode // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -133,6 +137,7 @@ abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
           $Res Function(_$_AdsRequestParameterModel) then) =
       __$$_AdsRequestParameterModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
           int? page,
@@ -154,16 +159,14 @@ abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
-    extends _$AdsRequestParameterModelCopyWithImpl<$Res>
+    extends _$AdsRequestParameterModelCopyWithImpl<$Res,
+        _$_AdsRequestParameterModel>
     implements _$$_AdsRequestParameterModelCopyWith<$Res> {
   __$$_AdsRequestParameterModelCopyWithImpl(_$_AdsRequestParameterModel _value,
       $Res Function(_$_AdsRequestParameterModel) _then)
-      : super(_value, (v) => _then(v as _$_AdsRequestParameterModel));
+      : super(_value, _then);
 
-  @override
-  _$_AdsRequestParameterModel get _value =>
-      super._value as _$_AdsRequestParameterModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? page = freezed,
@@ -176,35 +179,35 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
     Object? paymentMethodCode = freezed,
   }) {
     return _then(_$_AdsRequestParameterModel(
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      countryCode: countryCode == freezed
+      countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      currencyCode: currencyCode == freezed
+      currencyCode: freezed == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeType: tradeType == freezed
+      tradeType: freezed == tradeType
           ? _value.tradeType
           : tradeType // ignore: cast_nullable_to_non_nullable
               as TradeType?,
-      visible: visible == freezed
+      visible: freezed == visible
           ? _value.visible
           : visible // ignore: cast_nullable_to_non_nullable
               as bool?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentMethodCode: paymentMethodCode == freezed
+      paymentMethodCode: freezed == paymentMethodCode
           ? _value.paymentMethodCode
           : paymentMethodCode // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -272,34 +275,28 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AdsRequestParameterModel &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality()
-                .equals(other.countryCode, countryCode) &&
-            const DeepCollectionEquality()
-                .equals(other.currencyCode, currencyCode) &&
-            const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
-            const DeepCollectionEquality().equals(other.visible, visible) &&
-            const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentMethodCode, paymentMethodCode));
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.countryCode, countryCode) ||
+                other.countryCode == countryCode) &&
+            (identical(other.currencyCode, currencyCode) ||
+                other.currencyCode == currencyCode) &&
+            (identical(other.tradeType, tradeType) ||
+                other.tradeType == tradeType) &&
+            (identical(other.visible, visible) || other.visible == visible) &&
+            (identical(other.asset, asset) || other.asset == asset) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.paymentMethodCode, paymentMethodCode) ||
+                other.paymentMethodCode == paymentMethodCode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(countryCode),
-      const DeepCollectionEquality().hash(currencyCode),
-      const DeepCollectionEquality().hash(tradeType),
-      const DeepCollectionEquality().hash(visible),
-      const DeepCollectionEquality().hash(asset),
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(paymentMethodCode));
+  int get hashCode => Object.hash(runtimeType, page, countryCode, currencyCode,
+      tradeType, visible, asset, sort, paymentMethodCode);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
       get copyWith => __$$_AdsRequestParameterModelCopyWithImpl<
           _$_AdsRequestParameterModel>(this, _$identity);

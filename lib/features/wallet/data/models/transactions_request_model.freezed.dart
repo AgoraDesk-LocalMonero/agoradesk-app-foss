@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'transactions_request_model.dart';
 
@@ -38,7 +38,8 @@ mixin _$TransactionsRequestModel {
 abstract class $TransactionsRequestModelCopyWith<$Res> {
   factory $TransactionsRequestModelCopyWith(TransactionsRequestModel value,
           $Res Function(TransactionsRequestModel) then) =
-      _$TransactionsRequestModelCopyWithImpl<$Res>;
+      _$TransactionsRequestModelCopyWithImpl<$Res, TransactionsRequestModel>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
           Asset? asset,
@@ -49,14 +50,17 @@ abstract class $TransactionsRequestModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TransactionsRequestModelCopyWithImpl<$Res>
+class _$TransactionsRequestModelCopyWithImpl<$Res,
+        $Val extends TransactionsRequestModel>
     implements $TransactionsRequestModelCopyWith<$Res> {
   _$TransactionsRequestModelCopyWithImpl(this._value, this._then);
 
-  final TransactionsRequestModel _value;
   // ignore: unused_field
-  final $Res Function(TransactionsRequestModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? asset = freezed,
@@ -64,19 +68,19 @@ class _$TransactionsRequestModelCopyWithImpl<$Res>
     Object? after = freezed,
   }) {
     return _then(_value.copyWith(
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TransactionTypes?,
-      after: after == freezed
+      after: freezed == after
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -88,6 +92,7 @@ abstract class _$$_TransactionsRequestModelCopyWith<$Res>
           $Res Function(_$_TransactionsRequestModel) then) =
       __$$_TransactionsRequestModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
           Asset? asset,
@@ -99,16 +104,14 @@ abstract class _$$_TransactionsRequestModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_TransactionsRequestModelCopyWithImpl<$Res>
-    extends _$TransactionsRequestModelCopyWithImpl<$Res>
+    extends _$TransactionsRequestModelCopyWithImpl<$Res,
+        _$_TransactionsRequestModel>
     implements _$$_TransactionsRequestModelCopyWith<$Res> {
   __$$_TransactionsRequestModelCopyWithImpl(_$_TransactionsRequestModel _value,
       $Res Function(_$_TransactionsRequestModel) _then)
-      : super(_value, (v) => _then(v as _$_TransactionsRequestModel));
+      : super(_value, _then);
 
-  @override
-  _$_TransactionsRequestModel get _value =>
-      super._value as _$_TransactionsRequestModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? asset = freezed,
@@ -116,15 +119,15 @@ class __$$_TransactionsRequestModelCopyWithImpl<$Res>
     Object? after = freezed,
   }) {
     return _then(_$_TransactionsRequestModel(
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TransactionTypes?,
-      after: after == freezed
+      after: freezed == after
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -167,21 +170,18 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TransactionsRequestModel &&
-            const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.after, after));
+            (identical(other.asset, asset) || other.asset == asset) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.after, after) || other.after == after));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(asset),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(after));
+  int get hashCode => Object.hash(runtimeType, asset, type, after);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TransactionsRequestModelCopyWith<_$_TransactionsRequestModel>
       get copyWith => __$$_TransactionsRequestModelCopyWithImpl<
           _$_TransactionsRequestModel>(this, _$identity);

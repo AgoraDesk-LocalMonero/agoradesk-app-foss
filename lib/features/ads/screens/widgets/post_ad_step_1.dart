@@ -8,7 +8,6 @@ import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
 import 'package:agoradesk/features/ads/screens/widgets/dialog_info_s4_with_close_child_continue.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class PostAdStep1 extends StatefulWidget {
   const PostAdStep1({
@@ -52,7 +51,8 @@ class _PostAdStep1State extends State<PostAdStep1> {
               ),
         BackNextFooter(
           model: widget.model,
-          nextActive: widget.model.screen1IsReady,
+          // nextActive: widget.model.screen1IsReady,
+          nextActive: true,
           nextOnly: true,
           onPressNext: () => _showDialog(context),
         ),

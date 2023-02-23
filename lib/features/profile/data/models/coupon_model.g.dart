@@ -24,8 +24,8 @@ Map<String, dynamic> _$$_CouponModelToJson(_$_CouponModel instance) =>
     <String, dynamic>{
       'code': instance.code,
       'ad_types':
-          instance.tradeTypes.map((e) => _$TradeTypeEnumMap[e]).toList(),
-      'assets': instance.assets.map((e) => _$AssetEnumMap[e]).toList(),
+          instance.tradeTypes.map((e) => _$TradeTypeEnumMap[e]!).toList(),
+      'assets': instance.assets.map((e) => _$AssetEnumMap[e]!).toList(),
       'rebate_multiplier': instance.rebateMultiplier,
       'expires_at': toJsonDate(instance.expiresAt),
       'enabled': instance.enabled,
