@@ -9,29 +9,11 @@ import 'package:vm/vm.dart';
 const _kDefaultLocalCurrency = 'usdeur';
 
 class FormulaControlsViewModel extends ViewModel with ValidatorMixin {
-  // FormulaControlsViewModel({
-  //   required AdsRepository adsRepository,
-  // }) : _adsRepository = adsRepository;
-
-  // final AdsRepository _adsRepository;
-
   String _currency = _kDefaultLocalCurrency;
 
   String get currency => _currency;
 
   set currency(String v) => updateWith(currency: v);
-
-  @override
-  void init() {
-    super.init();
-  }
-
-  void updateWith({
-    String? currency,
-  }) {
-    _currency = currency ?? _currency;
-    notifyListeners();
-  }
 
   Widget localCurrenciesList(Color listColor, Color holderColor) {
     List<Widget> currencies = [];
@@ -156,8 +138,10 @@ class FormulaControlsViewModel extends ViewModel with ValidatorMixin {
     return children;
   }
 
-  @override
-  void dispose() {
-    super.dispose();
+  void updateWith({
+    String? currency,
+  }) {
+    _currency = currency ?? _currency;
+    notifyListeners();
   }
 }

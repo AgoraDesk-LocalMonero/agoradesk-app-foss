@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_settings_model.dart';
 
@@ -82,7 +82,8 @@ mixin _$UserSettingsModel {
 abstract class $UserSettingsModelCopyWith<$Res> {
   factory $UserSettingsModelCopyWith(
           UserSettingsModel value, $Res Function(UserSettingsModel) then) =
-      _$UserSettingsModelCopyWithImpl<$Res>;
+      _$UserSettingsModelCopyWithImpl<$Res, UserSettingsModel>;
+  @useResult
   $Res call(
       {@JsonKey(ignore: true)
           int? id,
@@ -125,14 +126,16 @@ abstract class $UserSettingsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserSettingsModelCopyWithImpl<$Res>
+class _$UserSettingsModelCopyWithImpl<$Res, $Val extends UserSettingsModel>
     implements $UserSettingsModelCopyWith<$Res> {
   _$UserSettingsModelCopyWithImpl(this._value, this._then);
 
-  final UserSettingsModel _value;
   // ignore: unused_field
-  final $Res Function(UserSettingsModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -156,90 +159,90 @@ class _$UserSettingsModelCopyWithImpl<$Res>
     Object? twoFaEnabled = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      emailVerified: emailVerified == freezed
+      emailVerified: freezed == emailVerified
           ? _value.emailVerified
           : emailVerified // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sellingVacation: sellingVacation == freezed
+      sellingVacation: freezed == sellingVacation
           ? _value.sellingVacation
           : sellingVacation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      buyingVacation: buyingVacation == freezed
+      buyingVacation: freezed == buyingVacation
           ? _value.buyingVacation
           : buyingVacation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      webNotifications: webNotifications == freezed
+      webNotifications: freezed == webNotifications
           ? _value.webNotifications
           : webNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sensitiveEmails: sensitiveEmails == freezed
+      sensitiveEmails: freezed == sensitiveEmails
           ? _value.sensitiveEmails
           : sensitiveEmails // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications ==
-              freezed
+      newTradeRequestEmailNotifications: freezed ==
+              newTradeRequestEmailNotifications
           ? _value.newTradeRequestEmailNotifications
           : newTradeRequestEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications ==
-              freezed
+      newOnlinePaymentEmailNotifications: freezed ==
+              newOnlinePaymentEmailNotifications
           ? _value.newOnlinePaymentEmailNotifications
           : newOnlinePaymentEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications ==
-              freezed
+      escrowReleaseEmailNotifications: freezed ==
+              escrowReleaseEmailNotifications
           ? _value.escrowReleaseEmailNotifications
           : escrowReleaseEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newMessageTelegramNotifications: newMessageTelegramNotifications ==
-              freezed
+      newMessageTelegramNotifications: freezed ==
+              newMessageTelegramNotifications
           ? _value.newMessageTelegramNotifications
           : newMessageTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newMessageEmailNotifications: newMessageEmailNotifications == freezed
+      newMessageEmailNotifications: freezed == newMessageEmailNotifications
           ? _value.newMessageEmailNotifications
           : newMessageEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestTelegramNotifications: newTradeRequestTelegramNotifications ==
-              freezed
+      newTradeRequestTelegramNotifications: freezed ==
+              newTradeRequestTelegramNotifications
           ? _value.newTradeRequestTelegramNotifications
           : newTradeRequestTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentTelegramNotifications:
-          newOnlinePaymentTelegramNotifications == freezed
-              ? _value.newOnlinePaymentTelegramNotifications
-              : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications ==
-              freezed
+      newOnlinePaymentTelegramNotifications: freezed ==
+              newOnlinePaymentTelegramNotifications
+          ? _value.newOnlinePaymentTelegramNotifications
+          : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      escrowReleaseTelegramNotifications: freezed ==
+              escrowReleaseTelegramNotifications
           ? _value.escrowReleaseTelegramNotifications
           : escrowReleaseTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      introduction: introduction == freezed
+      introduction: freezed == introduction
           ? _value.introduction
           : introduction // ignore: cast_nullable_to_non_nullable
               as String?,
-      homepage: homepage == freezed
+      homepage: freezed == homepage
           ? _value.homepage
           : homepage // ignore: cast_nullable_to_non_nullable
               as String?,
-      telegramId: telegramId == freezed
+      telegramId: freezed == telegramId
           ? _value.telegramId
           : telegramId // ignore: cast_nullable_to_non_nullable
               as int?,
-      twoFaEnabled: twoFaEnabled == freezed
+      twoFaEnabled: freezed == twoFaEnabled
           ? _value.twoFaEnabled
           : twoFaEnabled // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -250,6 +253,7 @@ abstract class _$$_UserSettingsModelCopyWith<$Res>
           $Res Function(_$_UserSettingsModel) then) =
       __$$_UserSettingsModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(ignore: true)
           int? id,
@@ -293,15 +297,13 @@ abstract class _$$_UserSettingsModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_UserSettingsModelCopyWithImpl<$Res>
-    extends _$UserSettingsModelCopyWithImpl<$Res>
+    extends _$UserSettingsModelCopyWithImpl<$Res, _$_UserSettingsModel>
     implements _$$_UserSettingsModelCopyWith<$Res> {
   __$$_UserSettingsModelCopyWithImpl(
       _$_UserSettingsModel _value, $Res Function(_$_UserSettingsModel) _then)
-      : super(_value, (v) => _then(v as _$_UserSettingsModel));
+      : super(_value, _then);
 
-  @override
-  _$_UserSettingsModel get _value => super._value as _$_UserSettingsModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -325,86 +327,86 @@ class __$$_UserSettingsModelCopyWithImpl<$Res>
     Object? twoFaEnabled = freezed,
   }) {
     return _then(_$_UserSettingsModel(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      emailVerified: emailVerified == freezed
+      emailVerified: freezed == emailVerified
           ? _value.emailVerified
           : emailVerified // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sellingVacation: sellingVacation == freezed
+      sellingVacation: freezed == sellingVacation
           ? _value.sellingVacation
           : sellingVacation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      buyingVacation: buyingVacation == freezed
+      buyingVacation: freezed == buyingVacation
           ? _value.buyingVacation
           : buyingVacation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      webNotifications: webNotifications == freezed
+      webNotifications: freezed == webNotifications
           ? _value.webNotifications
           : webNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sensitiveEmails: sensitiveEmails == freezed
+      sensitiveEmails: freezed == sensitiveEmails
           ? _value.sensitiveEmails
           : sensitiveEmails // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestEmailNotifications: newTradeRequestEmailNotifications ==
-              freezed
+      newTradeRequestEmailNotifications: freezed ==
+              newTradeRequestEmailNotifications
           ? _value.newTradeRequestEmailNotifications
           : newTradeRequestEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentEmailNotifications: newOnlinePaymentEmailNotifications ==
-              freezed
+      newOnlinePaymentEmailNotifications: freezed ==
+              newOnlinePaymentEmailNotifications
           ? _value.newOnlinePaymentEmailNotifications
           : newOnlinePaymentEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      escrowReleaseEmailNotifications: escrowReleaseEmailNotifications ==
-              freezed
+      escrowReleaseEmailNotifications: freezed ==
+              escrowReleaseEmailNotifications
           ? _value.escrowReleaseEmailNotifications
           : escrowReleaseEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newMessageTelegramNotifications: newMessageTelegramNotifications ==
-              freezed
+      newMessageTelegramNotifications: freezed ==
+              newMessageTelegramNotifications
           ? _value.newMessageTelegramNotifications
           : newMessageTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newMessageEmailNotifications: newMessageEmailNotifications == freezed
+      newMessageEmailNotifications: freezed == newMessageEmailNotifications
           ? _value.newMessageEmailNotifications
           : newMessageEmailNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newTradeRequestTelegramNotifications: newTradeRequestTelegramNotifications ==
-              freezed
+      newTradeRequestTelegramNotifications: freezed ==
+              newTradeRequestTelegramNotifications
           ? _value.newTradeRequestTelegramNotifications
           : newTradeRequestTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      newOnlinePaymentTelegramNotifications:
-          newOnlinePaymentTelegramNotifications == freezed
-              ? _value.newOnlinePaymentTelegramNotifications
-              : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-      escrowReleaseTelegramNotifications: escrowReleaseTelegramNotifications ==
-              freezed
+      newOnlinePaymentTelegramNotifications: freezed ==
+              newOnlinePaymentTelegramNotifications
+          ? _value.newOnlinePaymentTelegramNotifications
+          : newOnlinePaymentTelegramNotifications // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      escrowReleaseTelegramNotifications: freezed ==
+              escrowReleaseTelegramNotifications
           ? _value.escrowReleaseTelegramNotifications
           : escrowReleaseTelegramNotifications // ignore: cast_nullable_to_non_nullable
               as bool?,
-      introduction: introduction == freezed
+      introduction: freezed == introduction
           ? _value.introduction
           : introduction // ignore: cast_nullable_to_non_nullable
               as String?,
-      homepage: homepage == freezed
+      homepage: freezed == homepage
           ? _value.homepage
           : homepage // ignore: cast_nullable_to_non_nullable
               as String?,
-      telegramId: telegramId == freezed
+      telegramId: freezed == telegramId
           ? _value.telegramId
           : telegramId // ignore: cast_nullable_to_non_nullable
               as int?,
-      twoFaEnabled: twoFaEnabled == freezed
+      twoFaEnabled: freezed == twoFaEnabled
           ? _value.twoFaEnabled
           : twoFaEnabled // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -533,80 +535,79 @@ class _$_UserSettingsModel implements _UserSettingsModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserSettingsModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality()
-                .equals(other.emailVerified, emailVerified) &&
-            const DeepCollectionEquality()
-                .equals(other.sellingVacation, sellingVacation) &&
-            const DeepCollectionEquality()
-                .equals(other.buyingVacation, buyingVacation) &&
-            const DeepCollectionEquality()
-                .equals(other.webNotifications, webNotifications) &&
-            const DeepCollectionEquality()
-                .equals(other.sensitiveEmails, sensitiveEmails) &&
-            const DeepCollectionEquality().equals(
-                other.newTradeRequestEmailNotifications,
-                newTradeRequestEmailNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.newOnlinePaymentEmailNotifications,
-                newOnlinePaymentEmailNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.escrowReleaseEmailNotifications,
-                escrowReleaseEmailNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.newMessageTelegramNotifications,
-                newMessageTelegramNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.newMessageEmailNotifications,
-                newMessageEmailNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.newTradeRequestTelegramNotifications,
-                newTradeRequestTelegramNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.newOnlinePaymentTelegramNotifications,
-                newOnlinePaymentTelegramNotifications) &&
-            const DeepCollectionEquality().equals(
-                other.escrowReleaseTelegramNotifications,
-                escrowReleaseTelegramNotifications) &&
-            const DeepCollectionEquality()
-                .equals(other.introduction, introduction) &&
-            const DeepCollectionEquality().equals(other.homepage, homepage) &&
-            const DeepCollectionEquality()
-                .equals(other.telegramId, telegramId) &&
-            const DeepCollectionEquality()
-                .equals(other.twoFaEnabled, twoFaEnabled));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.emailVerified, emailVerified) ||
+                other.emailVerified == emailVerified) &&
+            (identical(other.sellingVacation, sellingVacation) ||
+                other.sellingVacation == sellingVacation) &&
+            (identical(other.buyingVacation, buyingVacation) ||
+                other.buyingVacation == buyingVacation) &&
+            (identical(other.webNotifications, webNotifications) ||
+                other.webNotifications == webNotifications) &&
+            (identical(other.sensitiveEmails, sensitiveEmails) ||
+                other.sensitiveEmails == sensitiveEmails) &&
+            (identical(other.newTradeRequestEmailNotifications, newTradeRequestEmailNotifications) ||
+                other.newTradeRequestEmailNotifications ==
+                    newTradeRequestEmailNotifications) &&
+            (identical(other.newOnlinePaymentEmailNotifications, newOnlinePaymentEmailNotifications) ||
+                other.newOnlinePaymentEmailNotifications ==
+                    newOnlinePaymentEmailNotifications) &&
+            (identical(other.escrowReleaseEmailNotifications, escrowReleaseEmailNotifications) ||
+                other.escrowReleaseEmailNotifications ==
+                    escrowReleaseEmailNotifications) &&
+            (identical(other.newMessageTelegramNotifications, newMessageTelegramNotifications) ||
+                other.newMessageTelegramNotifications ==
+                    newMessageTelegramNotifications) &&
+            (identical(other.newMessageEmailNotifications, newMessageEmailNotifications) ||
+                other.newMessageEmailNotifications ==
+                    newMessageEmailNotifications) &&
+            (identical(other.newTradeRequestTelegramNotifications,
+                    newTradeRequestTelegramNotifications) ||
+                other.newTradeRequestTelegramNotifications ==
+                    newTradeRequestTelegramNotifications) &&
+            (identical(other.newOnlinePaymentTelegramNotifications,
+                    newOnlinePaymentTelegramNotifications) ||
+                other.newOnlinePaymentTelegramNotifications ==
+                    newOnlinePaymentTelegramNotifications) &&
+            (identical(other.escrowReleaseTelegramNotifications, escrowReleaseTelegramNotifications) ||
+                other.escrowReleaseTelegramNotifications ==
+                    escrowReleaseTelegramNotifications) &&
+            (identical(other.introduction, introduction) ||
+                other.introduction == introduction) &&
+            (identical(other.homepage, homepage) || other.homepage == homepage) &&
+            (identical(other.telegramId, telegramId) || other.telegramId == telegramId) &&
+            (identical(other.twoFaEnabled, twoFaEnabled) || other.twoFaEnabled == twoFaEnabled));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(email),
-        const DeepCollectionEquality().hash(emailVerified),
-        const DeepCollectionEquality().hash(sellingVacation),
-        const DeepCollectionEquality().hash(buyingVacation),
-        const DeepCollectionEquality().hash(webNotifications),
-        const DeepCollectionEquality().hash(sensitiveEmails),
-        const DeepCollectionEquality().hash(newTradeRequestEmailNotifications),
-        const DeepCollectionEquality().hash(newOnlinePaymentEmailNotifications),
-        const DeepCollectionEquality().hash(escrowReleaseEmailNotifications),
-        const DeepCollectionEquality().hash(newMessageTelegramNotifications),
-        const DeepCollectionEquality().hash(newMessageEmailNotifications),
-        const DeepCollectionEquality()
-            .hash(newTradeRequestTelegramNotifications),
-        const DeepCollectionEquality()
-            .hash(newOnlinePaymentTelegramNotifications),
-        const DeepCollectionEquality().hash(escrowReleaseTelegramNotifications),
-        const DeepCollectionEquality().hash(introduction),
-        const DeepCollectionEquality().hash(homepage),
-        const DeepCollectionEquality().hash(telegramId),
-        const DeepCollectionEquality().hash(twoFaEnabled)
+        id,
+        email,
+        emailVerified,
+        sellingVacation,
+        buyingVacation,
+        webNotifications,
+        sensitiveEmails,
+        newTradeRequestEmailNotifications,
+        newOnlinePaymentEmailNotifications,
+        escrowReleaseEmailNotifications,
+        newMessageTelegramNotifications,
+        newMessageEmailNotifications,
+        newTradeRequestTelegramNotifications,
+        newOnlinePaymentTelegramNotifications,
+        escrowReleaseTelegramNotifications,
+        introduction,
+        homepage,
+        telegramId,
+        twoFaEnabled
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
       __$$_UserSettingsModelCopyWithImpl<_$_UserSettingsModel>(
           this, _$identity);

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'incoming_deposit_model.dart';
 
@@ -41,7 +41,8 @@ mixin _$IncomingDepositModel {
 abstract class $IncomingDepositModelCopyWith<$Res> {
   factory $IncomingDepositModelCopyWith(IncomingDepositModel value,
           $Res Function(IncomingDepositModel) then) =
-      _$IncomingDepositModelCopyWithImpl<$Res>;
+      _$IncomingDepositModelCopyWithImpl<$Res, IncomingDepositModel>;
+  @useResult
   $Res call(
       {String amount,
       int confirmations,
@@ -53,54 +54,57 @@ abstract class $IncomingDepositModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$IncomingDepositModelCopyWithImpl<$Res>
+class _$IncomingDepositModelCopyWithImpl<$Res,
+        $Val extends IncomingDepositModel>
     implements $IncomingDepositModelCopyWith<$Res> {
   _$IncomingDepositModelCopyWithImpl(this._value, this._then);
 
-  final IncomingDepositModel _value;
   // ignore: unused_field
-  final $Res Function(IncomingDepositModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
-    Object? confirmations = freezed,
-    Object? transactionId = freezed,
-    Object? timestamp = freezed,
+    Object? amount = null,
+    Object? confirmations = null,
+    Object? transactionId = null,
+    Object? timestamp = null,
     Object? note = freezed,
     Object? unlockTime = freezed,
     Object? asset = freezed,
   }) {
     return _then(_value.copyWith(
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as String,
-      confirmations: confirmations == freezed
+      confirmations: null == confirmations
           ? _value.confirmations
           : confirmations // ignore: cast_nullable_to_non_nullable
               as int,
-      transactionId: transactionId == freezed
+      transactionId: null == transactionId
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as String,
-      timestamp: timestamp == freezed
+      timestamp: null == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as String?,
-      unlockTime: unlockTime == freezed
+      unlockTime: freezed == unlockTime
           ? _value.unlockTime
           : unlockTime // ignore: cast_nullable_to_non_nullable
               as int?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -111,6 +115,7 @@ abstract class _$$_IncomingDepositModelCopyWith<$Res>
           $Res Function(_$_IncomingDepositModel) then) =
       __$$_IncomingDepositModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String amount,
       int confirmations,
@@ -123,51 +128,49 @@ abstract class _$$_IncomingDepositModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_IncomingDepositModelCopyWithImpl<$Res>
-    extends _$IncomingDepositModelCopyWithImpl<$Res>
+    extends _$IncomingDepositModelCopyWithImpl<$Res, _$_IncomingDepositModel>
     implements _$$_IncomingDepositModelCopyWith<$Res> {
   __$$_IncomingDepositModelCopyWithImpl(_$_IncomingDepositModel _value,
       $Res Function(_$_IncomingDepositModel) _then)
-      : super(_value, (v) => _then(v as _$_IncomingDepositModel));
+      : super(_value, _then);
 
-  @override
-  _$_IncomingDepositModel get _value => super._value as _$_IncomingDepositModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
-    Object? confirmations = freezed,
-    Object? transactionId = freezed,
-    Object? timestamp = freezed,
+    Object? amount = null,
+    Object? confirmations = null,
+    Object? transactionId = null,
+    Object? timestamp = null,
     Object? note = freezed,
     Object? unlockTime = freezed,
     Object? asset = freezed,
   }) {
     return _then(_$_IncomingDepositModel(
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as String,
-      confirmations: confirmations == freezed
+      confirmations: null == confirmations
           ? _value.confirmations
           : confirmations // ignore: cast_nullable_to_non_nullable
               as int,
-      transactionId: transactionId == freezed
+      transactionId: null == transactionId
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as String,
-      timestamp: timestamp == freezed
+      timestamp: null == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as String?,
-      unlockTime: unlockTime == freezed
+      unlockTime: freezed == unlockTime
           ? _value.unlockTime
           : unlockTime // ignore: cast_nullable_to_non_nullable
               as int?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
@@ -219,32 +222,27 @@ class _$_IncomingDepositModel implements _IncomingDepositModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_IncomingDepositModel &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality()
-                .equals(other.confirmations, confirmations) &&
-            const DeepCollectionEquality()
-                .equals(other.transactionId, transactionId) &&
-            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
-            const DeepCollectionEquality().equals(other.note, note) &&
-            const DeepCollectionEquality()
-                .equals(other.unlockTime, unlockTime) &&
-            const DeepCollectionEquality().equals(other.asset, asset));
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.confirmations, confirmations) ||
+                other.confirmations == confirmations) &&
+            (identical(other.transactionId, transactionId) ||
+                other.transactionId == transactionId) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            (identical(other.note, note) || other.note == note) &&
+            (identical(other.unlockTime, unlockTime) ||
+                other.unlockTime == unlockTime) &&
+            (identical(other.asset, asset) || other.asset == asset));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(amount),
-      const DeepCollectionEquality().hash(confirmations),
-      const DeepCollectionEquality().hash(transactionId),
-      const DeepCollectionEquality().hash(timestamp),
-      const DeepCollectionEquality().hash(note),
-      const DeepCollectionEquality().hash(unlockTime),
-      const DeepCollectionEquality().hash(asset));
+  int get hashCode => Object.hash(runtimeType, amount, confirmations,
+      transactionId, timestamp, note, unlockTime, asset);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_IncomingDepositModelCopyWith<_$_IncomingDepositModel> get copyWith =>
       __$$_IncomingDepositModelCopyWithImpl<_$_IncomingDepositModel>(
           this, _$identity);

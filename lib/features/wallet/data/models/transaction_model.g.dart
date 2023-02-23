@@ -23,7 +23,7 @@ Map<String, dynamic> _$$_TransactionModelToJson(_$_TransactionModel instance) =>
       'amount': instance.amount,
       'created_at': instance.createdAt.toIso8601String(),
       'tx_type': instance.txNum,
-      'tx_type_name': _$TransactionTypesEnumMap[instance.txType],
+      'tx_type_name': _$TransactionTypesEnumMap[instance.txType]!,
       'txid': instance.txId,
       'isSent': instance.isSent,
       'asset': _$AssetEnumMap[instance.asset],

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'btc_fee_model.dart';
 
@@ -43,7 +43,8 @@ mixin _$BtcFeesModel {
 abstract class $BtcFeesModelCopyWith<$Res> {
   factory $BtcFeesModelCopyWith(
           BtcFeesModel value, $Res Function(BtcFeesModel) then) =
-      _$BtcFeesModelCopyWithImpl<$Res>;
+      _$BtcFeesModelCopyWithImpl<$Res, BtcFeesModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'outgoing_fee_rate_high') String outgoingFeeRateHigh,
       @JsonKey(name: 'outgoing_fee_rate_medium') String outgoingFeeRateMedium,
@@ -54,48 +55,51 @@ abstract class $BtcFeesModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BtcFeesModelCopyWithImpl<$Res> implements $BtcFeesModelCopyWith<$Res> {
+class _$BtcFeesModelCopyWithImpl<$Res, $Val extends BtcFeesModel>
+    implements $BtcFeesModelCopyWith<$Res> {
   _$BtcFeesModelCopyWithImpl(this._value, this._then);
 
-  final BtcFeesModel _value;
   // ignore: unused_field
-  final $Res Function(BtcFeesModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? outgoingFeeRateHigh = freezed,
-    Object? outgoingFeeRateMedium = freezed,
-    Object? outgoingFeeRateLow = freezed,
+    Object? outgoingFeeRateHigh = null,
+    Object? outgoingFeeRateMedium = null,
+    Object? outgoingFeeRateLow = null,
     Object? outgoingFeeHigh = freezed,
     Object? outgoingFeeMedium = freezed,
     Object? outgoingFeeLow = freezed,
   }) {
     return _then(_value.copyWith(
-      outgoingFeeRateHigh: outgoingFeeRateHigh == freezed
+      outgoingFeeRateHigh: null == outgoingFeeRateHigh
           ? _value.outgoingFeeRateHigh
           : outgoingFeeRateHigh // ignore: cast_nullable_to_non_nullable
               as String,
-      outgoingFeeRateMedium: outgoingFeeRateMedium == freezed
+      outgoingFeeRateMedium: null == outgoingFeeRateMedium
           ? _value.outgoingFeeRateMedium
           : outgoingFeeRateMedium // ignore: cast_nullable_to_non_nullable
               as String,
-      outgoingFeeRateLow: outgoingFeeRateLow == freezed
+      outgoingFeeRateLow: null == outgoingFeeRateLow
           ? _value.outgoingFeeRateLow
           : outgoingFeeRateLow // ignore: cast_nullable_to_non_nullable
               as String,
-      outgoingFeeHigh: outgoingFeeHigh == freezed
+      outgoingFeeHigh: freezed == outgoingFeeHigh
           ? _value.outgoingFeeHigh
           : outgoingFeeHigh // ignore: cast_nullable_to_non_nullable
               as String?,
-      outgoingFeeMedium: outgoingFeeMedium == freezed
+      outgoingFeeMedium: freezed == outgoingFeeMedium
           ? _value.outgoingFeeMedium
           : outgoingFeeMedium // ignore: cast_nullable_to_non_nullable
               as String?,
-      outgoingFeeLow: outgoingFeeLow == freezed
+      outgoingFeeLow: freezed == outgoingFeeLow
           ? _value.outgoingFeeLow
           : outgoingFeeLow // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -106,6 +110,7 @@ abstract class _$$_BtcFeesModelCopyWith<$Res>
           _$_BtcFeesModel value, $Res Function(_$_BtcFeesModel) then) =
       __$$_BtcFeesModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'outgoing_fee_rate_high') String outgoingFeeRateHigh,
       @JsonKey(name: 'outgoing_fee_rate_medium') String outgoingFeeRateMedium,
@@ -117,46 +122,44 @@ abstract class _$$_BtcFeesModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_BtcFeesModelCopyWithImpl<$Res>
-    extends _$BtcFeesModelCopyWithImpl<$Res>
+    extends _$BtcFeesModelCopyWithImpl<$Res, _$_BtcFeesModel>
     implements _$$_BtcFeesModelCopyWith<$Res> {
   __$$_BtcFeesModelCopyWithImpl(
       _$_BtcFeesModel _value, $Res Function(_$_BtcFeesModel) _then)
-      : super(_value, (v) => _then(v as _$_BtcFeesModel));
+      : super(_value, _then);
 
-  @override
-  _$_BtcFeesModel get _value => super._value as _$_BtcFeesModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? outgoingFeeRateHigh = freezed,
-    Object? outgoingFeeRateMedium = freezed,
-    Object? outgoingFeeRateLow = freezed,
+    Object? outgoingFeeRateHigh = null,
+    Object? outgoingFeeRateMedium = null,
+    Object? outgoingFeeRateLow = null,
     Object? outgoingFeeHigh = freezed,
     Object? outgoingFeeMedium = freezed,
     Object? outgoingFeeLow = freezed,
   }) {
     return _then(_$_BtcFeesModel(
-      outgoingFeeRateHigh: outgoingFeeRateHigh == freezed
+      outgoingFeeRateHigh: null == outgoingFeeRateHigh
           ? _value.outgoingFeeRateHigh
           : outgoingFeeRateHigh // ignore: cast_nullable_to_non_nullable
               as String,
-      outgoingFeeRateMedium: outgoingFeeRateMedium == freezed
+      outgoingFeeRateMedium: null == outgoingFeeRateMedium
           ? _value.outgoingFeeRateMedium
           : outgoingFeeRateMedium // ignore: cast_nullable_to_non_nullable
               as String,
-      outgoingFeeRateLow: outgoingFeeRateLow == freezed
+      outgoingFeeRateLow: null == outgoingFeeRateLow
           ? _value.outgoingFeeRateLow
           : outgoingFeeRateLow // ignore: cast_nullable_to_non_nullable
               as String,
-      outgoingFeeHigh: outgoingFeeHigh == freezed
+      outgoingFeeHigh: freezed == outgoingFeeHigh
           ? _value.outgoingFeeHigh
           : outgoingFeeHigh // ignore: cast_nullable_to_non_nullable
               as String?,
-      outgoingFeeMedium: outgoingFeeMedium == freezed
+      outgoingFeeMedium: freezed == outgoingFeeMedium
           ? _value.outgoingFeeMedium
           : outgoingFeeMedium // ignore: cast_nullable_to_non_nullable
               as String?,
-      outgoingFeeLow: outgoingFeeLow == freezed
+      outgoingFeeLow: freezed == outgoingFeeLow
           ? _value.outgoingFeeLow
           : outgoingFeeLow // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -215,33 +218,34 @@ class _$_BtcFeesModel extends _BtcFeesModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BtcFeesModel &&
-            const DeepCollectionEquality()
-                .equals(other.outgoingFeeRateHigh, outgoingFeeRateHigh) &&
-            const DeepCollectionEquality()
-                .equals(other.outgoingFeeRateMedium, outgoingFeeRateMedium) &&
-            const DeepCollectionEquality()
-                .equals(other.outgoingFeeRateLow, outgoingFeeRateLow) &&
-            const DeepCollectionEquality()
-                .equals(other.outgoingFeeHigh, outgoingFeeHigh) &&
-            const DeepCollectionEquality()
-                .equals(other.outgoingFeeMedium, outgoingFeeMedium) &&
-            const DeepCollectionEquality()
-                .equals(other.outgoingFeeLow, outgoingFeeLow));
+            (identical(other.outgoingFeeRateHigh, outgoingFeeRateHigh) ||
+                other.outgoingFeeRateHigh == outgoingFeeRateHigh) &&
+            (identical(other.outgoingFeeRateMedium, outgoingFeeRateMedium) ||
+                other.outgoingFeeRateMedium == outgoingFeeRateMedium) &&
+            (identical(other.outgoingFeeRateLow, outgoingFeeRateLow) ||
+                other.outgoingFeeRateLow == outgoingFeeRateLow) &&
+            (identical(other.outgoingFeeHigh, outgoingFeeHigh) ||
+                other.outgoingFeeHigh == outgoingFeeHigh) &&
+            (identical(other.outgoingFeeMedium, outgoingFeeMedium) ||
+                other.outgoingFeeMedium == outgoingFeeMedium) &&
+            (identical(other.outgoingFeeLow, outgoingFeeLow) ||
+                other.outgoingFeeLow == outgoingFeeLow));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(outgoingFeeRateHigh),
-      const DeepCollectionEquality().hash(outgoingFeeRateMedium),
-      const DeepCollectionEquality().hash(outgoingFeeRateLow),
-      const DeepCollectionEquality().hash(outgoingFeeHigh),
-      const DeepCollectionEquality().hash(outgoingFeeMedium),
-      const DeepCollectionEquality().hash(outgoingFeeLow));
+      outgoingFeeRateHigh,
+      outgoingFeeRateMedium,
+      outgoingFeeRateLow,
+      outgoingFeeHigh,
+      outgoingFeeMedium,
+      outgoingFeeLow);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BtcFeesModelCopyWith<_$_BtcFeesModel> get copyWith =>
       __$$_BtcFeesModelCopyWithImpl<_$_BtcFeesModel>(this, _$identity);
 

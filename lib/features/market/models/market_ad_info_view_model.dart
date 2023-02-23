@@ -21,6 +21,7 @@ import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:decimal/decimal.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:vm/vm.dart';
@@ -56,11 +57,11 @@ class MarketAdInfoViewModel extends ViewModel
   late Asset _asset;
   final List<AdModel> ads = [];
   final List<AdModel> filteredAds = [];
-  double _receive = 0;
+  Decimal _receive = Decimal.fromInt(0);
   String? receiveError;
-  double _pay = 0;
-  double _balanceBtc = 0;
-  double _balanceXmr = 0;
+  Decimal _pay = Decimal.fromInt(0);
+  Decimal _balanceBtc = Decimal.fromInt(0);
+  Decimal _balanceXmr = Decimal.fromInt(0);
   String? payError;
   AdModel? ad;
   late bool isGuestMode;
@@ -264,9 +265,9 @@ class MarketAdInfoViewModel extends ViewModel
         ctrlPay.text = '';
       } else {
         try {
-          _receive = double.parse(ctrlReceive.text);
+          _receive = Decimal.parse(ctrlReceive.text);
           final int digitsToRound = getBankersDigits(asset!.name);
-          _pay = (_receive / (double.tryParse(ad!.tempPrice!) ?? 0)).bankerRound(digitsToRound).toDouble();
+          _pay = (_receive.toDouble() / (double.tryParse(ad!.tempPrice!) ?? 0)).bankerRound(digitsToRound);
           ctrlPay.text = _pay.toString();
           _checkReceiveQuantity();
         } catch (e) {
@@ -286,9 +287,9 @@ class MarketAdInfoViewModel extends ViewModel
         _calculating = true;
         payError = null;
         try {
-          _pay = double.parse(ctrlPay.text);
+          _pay = Decimal.parse(ctrlPay.text);
           final int digitsToRound = getBankersDigits(ad?.currency ?? '');
-          _receive = ((double.tryParse(ad!.tempPrice!) ?? 0) * _pay).bankerRound(digitsToRound).toDouble();
+          _receive = ((double.tryParse(ad!.tempPrice!) ?? 0) * _pay.toDouble()).bankerRound(digitsToRound);
           ctrlReceive.text = _receive.toString();
           _checkReceiveQuantity();
           _checkPayQuantity();
@@ -302,13 +303,13 @@ class MarketAdInfoViewModel extends ViewModel
   }
 
   void _checkReceiveQuantity() {
-    if (_receive < (ad!.minAmount ?? 0)) {
+    if (_receive.toDouble() < (ad!.minAmount ?? 0)) {
       receiveError = context.intl.must_be_at_least((ad!.minAmount ?? 0).toString(), ad!.currency);
       readyToDeal = false;
-    } else if (ad!.maxAmountAvailable != null && _receive > ad!.maxAmountAvailable!) {
+    } else if (ad!.maxAmountAvailable != null && _receive.toDouble() > ad!.maxAmountAvailable!) {
       receiveError = context.intl.must_be_less((ad!.maxAmountAvailable!).toString(), ad!.currency);
       readyToDeal = false;
-    } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && _receive > ad!.maxAmount!) {
+    } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && _receive.toDouble() > ad!.maxAmount!) {
       receiveError = context.intl.must_be_less((ad!.maxAmount!).toString(), ad!.currency);
       readyToDeal = false;
     } else {

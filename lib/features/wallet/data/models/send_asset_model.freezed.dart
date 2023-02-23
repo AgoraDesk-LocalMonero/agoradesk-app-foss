@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'send_asset_model.dart';
 
@@ -38,7 +38,8 @@ mixin _$SendAssetModel {
 abstract class $SendAssetModelCopyWith<$Res> {
   factory $SendAssetModelCopyWith(
           SendAssetModel value, $Res Function(SendAssetModel) then) =
-      _$SendAssetModelCopyWithImpl<$Res>;
+      _$SendAssetModelCopyWithImpl<$Res, SendAssetModel>;
+  @useResult
   $Res call(
       {String address,
       double amount,
@@ -48,44 +49,46 @@ abstract class $SendAssetModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SendAssetModelCopyWithImpl<$Res>
+class _$SendAssetModelCopyWithImpl<$Res, $Val extends SendAssetModel>
     implements $SendAssetModelCopyWith<$Res> {
   _$SendAssetModelCopyWithImpl(this._value, this._then);
 
-  final SendAssetModel _value;
   // ignore: unused_field
-  final $Res Function(SendAssetModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? address = freezed,
-    Object? amount = freezed,
-    Object? password = freezed,
+    Object? address = null,
+    Object? amount = null,
+    Object? password = null,
     Object? feeLevel = freezed,
     Object? otp = freezed,
   }) {
     return _then(_value.copyWith(
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as String,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      feeLevel: feeLevel == freezed
+      feeLevel: freezed == feeLevel
           ? _value.feeLevel
           : feeLevel // ignore: cast_nullable_to_non_nullable
               as BtcFeesEnum?,
-      otp: otp == freezed
+      otp: freezed == otp
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -96,6 +99,7 @@ abstract class _$$_SendAssetModelCopyWith<$Res>
           _$_SendAssetModel value, $Res Function(_$_SendAssetModel) then) =
       __$$_SendAssetModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String address,
       double amount,
@@ -106,41 +110,39 @@ abstract class _$$_SendAssetModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_SendAssetModelCopyWithImpl<$Res>
-    extends _$SendAssetModelCopyWithImpl<$Res>
+    extends _$SendAssetModelCopyWithImpl<$Res, _$_SendAssetModel>
     implements _$$_SendAssetModelCopyWith<$Res> {
   __$$_SendAssetModelCopyWithImpl(
       _$_SendAssetModel _value, $Res Function(_$_SendAssetModel) _then)
-      : super(_value, (v) => _then(v as _$_SendAssetModel));
+      : super(_value, _then);
 
-  @override
-  _$_SendAssetModel get _value => super._value as _$_SendAssetModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? address = freezed,
-    Object? amount = freezed,
-    Object? password = freezed,
+    Object? address = null,
+    Object? amount = null,
+    Object? password = null,
     Object? feeLevel = freezed,
     Object? otp = freezed,
   }) {
     return _then(_$_SendAssetModel(
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as String,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      feeLevel: feeLevel == freezed
+      feeLevel: freezed == feeLevel
           ? _value.feeLevel
           : feeLevel // ignore: cast_nullable_to_non_nullable
               as BtcFeesEnum?,
-      otp: otp == freezed
+      otp: freezed == otp
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -185,25 +187,23 @@ class _$_SendAssetModel implements _SendAssetModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SendAssetModel &&
-            const DeepCollectionEquality().equals(other.address, address) &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality().equals(other.feeLevel, feeLevel) &&
-            const DeepCollectionEquality().equals(other.otp, otp));
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.feeLevel, feeLevel) ||
+                other.feeLevel == feeLevel) &&
+            (identical(other.otp, otp) || other.otp == otp));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(address),
-      const DeepCollectionEquality().hash(amount),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(feeLevel),
-      const DeepCollectionEquality().hash(otp));
+  int get hashCode =>
+      Object.hash(runtimeType, address, amount, password, feeLevel, otp);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SendAssetModelCopyWith<_$_SendAssetModel> get copyWith =>
       __$$_SendAssetModelCopyWithImpl<_$_SendAssetModel>(this, _$identity);
 

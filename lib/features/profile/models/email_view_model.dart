@@ -12,7 +12,6 @@ import 'package:agoradesk/features/profile/data/models/confirmation_email_reques
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
 
@@ -104,9 +103,9 @@ class EmailViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, Cli
               path: captchaPath,
             ),
           );
-          if (validateCaptcha(_captchaInput)) {
-            sendConfirmationEmail();
-          }
+          // if (validateCaptcha(_captchaInput)) {
+          //   sendConfirmationEmail();
+          // }
         } else {
           handleApiError(res.left, context);
         }

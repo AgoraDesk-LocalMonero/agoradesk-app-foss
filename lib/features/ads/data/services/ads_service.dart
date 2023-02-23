@@ -110,7 +110,6 @@ class AdsService {
     if (countryCode != null && countryCode != kAnyCountryCode) {
       url += '/$countryCode';
     }
-
     String urlParameter = '?';
     final Map<String, dynamic> parameters = {};
     try {

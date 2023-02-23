@@ -6,6 +6,7 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/wallet_view_model.dart';
+import 'package:decimal/decimal.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -43,17 +44,17 @@ void main() {
   });
 
   group('[getTransactions method works properly]', () {
-    const kBalanceXmr = 2.0;
-    const kBalanceBtc = 1.0;
+    final Decimal kBalanceXmr = Decimal.parse('2.0');
+    final Decimal kBalanceBtc = Decimal.parse('1.0');
 
     void arrangeWalletServiceReturnsXmrAndBtcTransactions() {
       when(() => mockWalletService.getWalletTransactions(Asset.BTC)).thenAnswer(
-        (_) async => const Either.right(
+        (_) async => Either.right(
           WalletBalanceModel(balance: kBalanceBtc, receivingAddress: 'addressBTC'),
         ),
       );
       when(() => mockWalletService.getWalletTransactions(Asset.XMR)).thenAnswer(
-        (_) async => const Either.right(
+        (_) async => Either.right(
           WalletBalanceModel(balance: kBalanceXmr, receivingAddress: 'addressXMR'),
         ),
       );

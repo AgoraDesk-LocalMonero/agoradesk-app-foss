@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'affiliate_model.dart';
 
@@ -35,7 +35,8 @@ mixin _$AffiliateModel {
 abstract class $AffiliateModelCopyWith<$Res> {
   factory $AffiliateModelCopyWith(
           AffiliateModel value, $Res Function(AffiliateModel) then) =
-      _$AffiliateModelCopyWithImpl<$Res>;
+      _$AffiliateModelCopyWithImpl<$Res, AffiliateModel>;
+  @useResult
   $Res call(
       {String code,
       @JsonKey(name: 'referred_user_count') int usersCount,
@@ -43,34 +44,36 @@ abstract class $AffiliateModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AffiliateModelCopyWithImpl<$Res>
+class _$AffiliateModelCopyWithImpl<$Res, $Val extends AffiliateModel>
     implements $AffiliateModelCopyWith<$Res> {
   _$AffiliateModelCopyWithImpl(this._value, this._then);
 
-  final AffiliateModel _value;
   // ignore: unused_field
-  final $Res Function(AffiliateModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? usersCount = freezed,
+    Object? code = null,
+    Object? usersCount = null,
     Object? enabled = freezed,
   }) {
     return _then(_value.copyWith(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      usersCount: usersCount == freezed
+      usersCount: null == usersCount
           ? _value.usersCount
           : usersCount // ignore: cast_nullable_to_non_nullable
               as int,
-      enabled: enabled == freezed
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -81,6 +84,7 @@ abstract class _$$_AffiliateModelCopyWith<$Res>
           _$_AffiliateModel value, $Res Function(_$_AffiliateModel) then) =
       __$$_AffiliateModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String code,
       @JsonKey(name: 'referred_user_count') int usersCount,
@@ -89,31 +93,29 @@ abstract class _$$_AffiliateModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_AffiliateModelCopyWithImpl<$Res>
-    extends _$AffiliateModelCopyWithImpl<$Res>
+    extends _$AffiliateModelCopyWithImpl<$Res, _$_AffiliateModel>
     implements _$$_AffiliateModelCopyWith<$Res> {
   __$$_AffiliateModelCopyWithImpl(
       _$_AffiliateModel _value, $Res Function(_$_AffiliateModel) _then)
-      : super(_value, (v) => _then(v as _$_AffiliateModel));
+      : super(_value, _then);
 
-  @override
-  _$_AffiliateModel get _value => super._value as _$_AffiliateModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? usersCount = freezed,
+    Object? code = null,
+    Object? usersCount = null,
     Object? enabled = freezed,
   }) {
     return _then(_$_AffiliateModel(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      usersCount: usersCount == freezed
+      usersCount: null == usersCount
           ? _value.usersCount
           : usersCount // ignore: cast_nullable_to_non_nullable
               as int,
-      enabled: enabled == freezed
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -151,22 +153,19 @@ class _$_AffiliateModel implements _AffiliateModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AffiliateModel &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality()
-                .equals(other.usersCount, usersCount) &&
-            const DeepCollectionEquality().equals(other.enabled, enabled));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.usersCount, usersCount) ||
+                other.usersCount == usersCount) &&
+            (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(usersCount),
-      const DeepCollectionEquality().hash(enabled));
+  int get hashCode => Object.hash(runtimeType, code, usersCount, enabled);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AffiliateModelCopyWith<_$_AffiliateModel> get copyWith =>
       __$$_AffiliateModelCopyWithImpl<_$_AffiliateModel>(this, _$identity);
 

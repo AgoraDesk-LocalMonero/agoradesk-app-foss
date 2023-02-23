@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'confirmation_email_request_model.dart';
 
@@ -41,7 +41,9 @@ abstract class $ConfirmationEmailRequestModelCopyWith<$Res> {
   factory $ConfirmationEmailRequestModelCopyWith(
           ConfirmationEmailRequestModel value,
           $Res Function(ConfirmationEmailRequestModel) then) =
-      _$ConfirmationEmailRequestModelCopyWithImpl<$Res>;
+      _$ConfirmationEmailRequestModelCopyWithImpl<$Res,
+          ConfirmationEmailRequestModel>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: true) String? email,
       @JsonKey(includeIfNull: false) String? password,
@@ -50,14 +52,17 @@ abstract class $ConfirmationEmailRequestModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConfirmationEmailRequestModelCopyWithImpl<$Res>
+class _$ConfirmationEmailRequestModelCopyWithImpl<$Res,
+        $Val extends ConfirmationEmailRequestModel>
     implements $ConfirmationEmailRequestModelCopyWith<$Res> {
   _$ConfirmationEmailRequestModelCopyWithImpl(this._value, this._then);
 
-  final ConfirmationEmailRequestModel _value;
   // ignore: unused_field
-  final $Res Function(ConfirmationEmailRequestModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? email = freezed,
@@ -66,23 +71,23 @@ class _$ConfirmationEmailRequestModelCopyWithImpl<$Res>
     Object? captchaCookie = freezed,
   }) {
     return _then(_value.copyWith(
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      captcha: captcha == freezed
+      captcha: freezed == captcha
           ? _value.captcha
           : captcha // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaCookie: captchaCookie == freezed
+      captchaCookie: freezed == captchaCookie
           ? _value.captchaCookie
           : captchaCookie // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -94,6 +99,7 @@ abstract class _$$_ConfirmationEmailRequestModelCopyWith<$Res>
           $Res Function(_$_ConfirmationEmailRequestModel) then) =
       __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: true) String? email,
       @JsonKey(includeIfNull: false) String? password,
@@ -103,17 +109,15 @@ abstract class _$$_ConfirmationEmailRequestModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res>
-    extends _$ConfirmationEmailRequestModelCopyWithImpl<$Res>
+    extends _$ConfirmationEmailRequestModelCopyWithImpl<$Res,
+        _$_ConfirmationEmailRequestModel>
     implements _$$_ConfirmationEmailRequestModelCopyWith<$Res> {
   __$$_ConfirmationEmailRequestModelCopyWithImpl(
       _$_ConfirmationEmailRequestModel _value,
       $Res Function(_$_ConfirmationEmailRequestModel) _then)
-      : super(_value, (v) => _then(v as _$_ConfirmationEmailRequestModel));
+      : super(_value, _then);
 
-  @override
-  _$_ConfirmationEmailRequestModel get _value =>
-      super._value as _$_ConfirmationEmailRequestModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? email = freezed,
@@ -122,19 +126,19 @@ class __$$_ConfirmationEmailRequestModelCopyWithImpl<$Res>
     Object? captchaCookie = freezed,
   }) {
     return _then(_$_ConfirmationEmailRequestModel(
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      captcha: captcha == freezed
+      captcha: freezed == captcha
           ? _value.captcha
           : captcha // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaCookie: captchaCookie == freezed
+      captchaCookie: freezed == captchaCookie
           ? _value.captchaCookie
           : captchaCookie // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -180,24 +184,22 @@ class _$_ConfirmationEmailRequestModel
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConfirmationEmailRequestModel &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality().equals(other.captcha, captcha) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaCookie, captchaCookie));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.captcha, captcha) || other.captcha == captcha) &&
+            (identical(other.captchaCookie, captchaCookie) ||
+                other.captchaCookie == captchaCookie));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(captcha),
-      const DeepCollectionEquality().hash(captchaCookie));
+  int get hashCode =>
+      Object.hash(runtimeType, email, password, captcha, captchaCookie);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ConfirmationEmailRequestModelCopyWith<_$_ConfirmationEmailRequestModel>
       get copyWith => __$$_ConfirmationEmailRequestModelCopyWithImpl<
           _$_ConfirmationEmailRequestModel>(this, _$identity);

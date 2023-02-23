@@ -20,9 +20,7 @@ import 'package:agoradesk/features/wallet/screens/widgets/transaction_tile.dart'
 import 'package:agoradesk/features/wallet/screens/widgets/wallet_asset_tile.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -69,10 +67,16 @@ class WalletScreen extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  WalletAssetTile(asset: Asset.XMR, model: model),
                                   GetIt.I<AppParameters>().isAgoraDesk
-                                      ? WalletAssetTile(asset: Asset.BTC, model: model)
+                                      ? WalletAssetTile(
+                                          asset: Asset.BTC,
+                                          model: model,
+                                        )
                                       : const SizedBox(),
+                                  WalletAssetTile(
+                                    asset: Asset.XMR,
+                                    model: model,
+                                  ),
                                   _buildIncomingDeposits(context, model),
                                   Text(
                                     context.intl.recent_transactions,

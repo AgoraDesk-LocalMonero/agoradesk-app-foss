@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'account_info_model.dart';
 
@@ -96,7 +96,8 @@ mixin _$AccountInfoModel {
 abstract class $AccountInfoModelCopyWith<$Res> {
   factory $AccountInfoModelCopyWith(
           AccountInfoModel value, $Res Function(AccountInfoModel) then) =
-      _$AccountInfoModelCopyWithImpl<$Res>;
+      _$AccountInfoModelCopyWithImpl<$Res, AccountInfoModel>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
           String? username,
@@ -153,14 +154,16 @@ abstract class $AccountInfoModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AccountInfoModelCopyWithImpl<$Res>
+class _$AccountInfoModelCopyWithImpl<$Res, $Val extends AccountInfoModel>
     implements $AccountInfoModelCopyWith<$Res> {
   _$AccountInfoModelCopyWithImpl(this._value, this._then);
 
-  final AccountInfoModel _value;
   // ignore: unused_field
-  final $Res Function(AccountInfoModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? username = freezed,
@@ -191,111 +194,111 @@ class _$AccountInfoModelCopyWithImpl<$Res>
     Object? sanctionExpiresAt = freezed,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      feedbackScore: feedbackScore == freezed
+      feedbackScore: freezed == feedbackScore
           ? _value.feedbackScore
           : feedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      confirmedTradeCount: confirmedTradeCount == freezed
+      confirmedTradeCount: freezed == confirmedTradeCount
           ? _value.confirmedTradeCount
           : confirmedTradeCount // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeCount: tradeCount == freezed
+      tradeCount: freezed == tradeCount
           ? _value.tradeCount
           : tradeCount // ignore: cast_nullable_to_non_nullable
               as String?,
-      localbitcoinsTradeCount: localbitcoinsTradeCount == freezed
+      localbitcoinsTradeCount: freezed == localbitcoinsTradeCount
           ? _value.localbitcoinsTradeCount
           : localbitcoinsTradeCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      localbitcoinsFeedbackScore: localbitcoinsFeedbackScore == freezed
+      localbitcoinsFeedbackScore: freezed == localbitcoinsFeedbackScore
           ? _value.localbitcoinsFeedbackScore
           : localbitcoinsFeedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      localbitcoinsTradeVolume: localbitcoinsTradeVolume == freezed
+      localbitcoinsTradeVolume: freezed == localbitcoinsTradeVolume
           ? _value.localbitcoinsTradeVolume
           : localbitcoinsTradeVolume // ignore: cast_nullable_to_non_nullable
               as double?,
-      localbitcoinsAccountCreatedAt: localbitcoinsAccountCreatedAt == freezed
+      localbitcoinsAccountCreatedAt: freezed == localbitcoinsAccountCreatedAt
           ? _value.localbitcoinsAccountCreatedAt
           : localbitcoinsAccountCreatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      paxfulTradeCount: paxfulTradeCount == freezed
+      paxfulTradeCount: freezed == paxfulTradeCount
           ? _value.paxfulTradeCount
           : paxfulTradeCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      paxfulFeedbackScore: paxfulFeedbackScore == freezed
+      paxfulFeedbackScore: freezed == paxfulFeedbackScore
           ? _value.paxfulFeedbackScore
           : paxfulFeedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      paxfulTradeVolume: paxfulTradeVolume == freezed
+      paxfulTradeVolume: freezed == paxfulTradeVolume
           ? _value.paxfulTradeVolume
           : paxfulTradeVolume // ignore: cast_nullable_to_non_nullable
               as double?,
-      paxfulAccountCreatedAt: paxfulAccountCreatedAt == freezed
+      paxfulAccountCreatedAt: freezed == paxfulAccountCreatedAt
           ? _value.paxfulAccountCreatedAt
           : paxfulAccountCreatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      lastOnline: lastOnline == freezed
+      lastOnline: freezed == lastOnline
           ? _value.lastOnline
           : lastOnline // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      feedbackCount: feedbackCount == freezed
+      feedbackCount: freezed == feedbackCount
           ? _value.feedbackCount
           : feedbackCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      feedbacksUnconfirmedCount: feedbacksUnconfirmedCount == freezed
+      feedbacksUnconfirmedCount: freezed == feedbacksUnconfirmedCount
           ? _value.feedbacksUnconfirmedCount
           : feedbacksUnconfirmedCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      tradingPartnersCount: tradingPartnersCount == freezed
+      tradingPartnersCount: freezed == tradingPartnersCount
           ? _value.tradingPartnersCount
           : tradingPartnersCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      releaseTimeMedium: releaseTimeMedium == freezed
+      releaseTimeMedium: freezed == releaseTimeMedium
           ? _value.releaseTimeMedium
           : releaseTimeMedium // ignore: cast_nullable_to_non_nullable
               as int?,
-      hasCommonTrades: hasCommonTrades == freezed
+      hasCommonTrades: freezed == hasCommonTrades
           ? _value.hasCommonTrades
           : hasCommonTrades // ignore: cast_nullable_to_non_nullable
               as bool?,
-      myFeedback: myFeedback == freezed
+      myFeedback: freezed == myFeedback
           ? _value.myFeedback
           : myFeedback // ignore: cast_nullable_to_non_nullable
               as FeedbackType?,
-      introduction: introduction == freezed
+      introduction: freezed == introduction
           ? _value.introduction
           : introduction // ignore: cast_nullable_to_non_nullable
               as String?,
-      homepage: homepage == freezed
+      homepage: freezed == homepage
           ? _value.homepage
           : homepage // ignore: cast_nullable_to_non_nullable
               as String?,
-      sanctionReason: sanctionReason == freezed
+      sanctionReason: freezed == sanctionReason
           ? _value.sanctionReason
           : sanctionReason // ignore: cast_nullable_to_non_nullable
               as String?,
-      sanctionType: sanctionType == freezed
+      sanctionType: freezed == sanctionType
           ? _value.sanctionType
           : sanctionType // ignore: cast_nullable_to_non_nullable
               as SanctionType?,
-      sanctionedAt: sanctionedAt == freezed
+      sanctionedAt: freezed == sanctionedAt
           ? _value.sanctionedAt
           : sanctionedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      sanctionExpiresAt: sanctionExpiresAt == freezed
+      sanctionExpiresAt: freezed == sanctionExpiresAt
           ? _value.sanctionExpiresAt
           : sanctionExpiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -306,6 +309,7 @@ abstract class _$$_AccountInfoModelCopyWith<$Res>
           _$_AccountInfoModel value, $Res Function(_$_AccountInfoModel) then) =
       __$$_AccountInfoModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false)
           String? username,
@@ -363,15 +367,13 @@ abstract class _$$_AccountInfoModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_AccountInfoModelCopyWithImpl<$Res>
-    extends _$AccountInfoModelCopyWithImpl<$Res>
+    extends _$AccountInfoModelCopyWithImpl<$Res, _$_AccountInfoModel>
     implements _$$_AccountInfoModelCopyWith<$Res> {
   __$$_AccountInfoModelCopyWithImpl(
       _$_AccountInfoModel _value, $Res Function(_$_AccountInfoModel) _then)
-      : super(_value, (v) => _then(v as _$_AccountInfoModel));
+      : super(_value, _then);
 
-  @override
-  _$_AccountInfoModel get _value => super._value as _$_AccountInfoModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? username = freezed,
@@ -402,107 +404,107 @@ class __$$_AccountInfoModelCopyWithImpl<$Res>
     Object? sanctionExpiresAt = freezed,
   }) {
     return _then(_$_AccountInfoModel(
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      feedbackScore: feedbackScore == freezed
+      feedbackScore: freezed == feedbackScore
           ? _value.feedbackScore
           : feedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      confirmedTradeCount: confirmedTradeCount == freezed
+      confirmedTradeCount: freezed == confirmedTradeCount
           ? _value.confirmedTradeCount
           : confirmedTradeCount // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeCount: tradeCount == freezed
+      tradeCount: freezed == tradeCount
           ? _value.tradeCount
           : tradeCount // ignore: cast_nullable_to_non_nullable
               as String?,
-      localbitcoinsTradeCount: localbitcoinsTradeCount == freezed
+      localbitcoinsTradeCount: freezed == localbitcoinsTradeCount
           ? _value.localbitcoinsTradeCount
           : localbitcoinsTradeCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      localbitcoinsFeedbackScore: localbitcoinsFeedbackScore == freezed
+      localbitcoinsFeedbackScore: freezed == localbitcoinsFeedbackScore
           ? _value.localbitcoinsFeedbackScore
           : localbitcoinsFeedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      localbitcoinsTradeVolume: localbitcoinsTradeVolume == freezed
+      localbitcoinsTradeVolume: freezed == localbitcoinsTradeVolume
           ? _value.localbitcoinsTradeVolume
           : localbitcoinsTradeVolume // ignore: cast_nullable_to_non_nullable
               as double?,
-      localbitcoinsAccountCreatedAt: localbitcoinsAccountCreatedAt == freezed
+      localbitcoinsAccountCreatedAt: freezed == localbitcoinsAccountCreatedAt
           ? _value.localbitcoinsAccountCreatedAt
           : localbitcoinsAccountCreatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      paxfulTradeCount: paxfulTradeCount == freezed
+      paxfulTradeCount: freezed == paxfulTradeCount
           ? _value.paxfulTradeCount
           : paxfulTradeCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      paxfulFeedbackScore: paxfulFeedbackScore == freezed
+      paxfulFeedbackScore: freezed == paxfulFeedbackScore
           ? _value.paxfulFeedbackScore
           : paxfulFeedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      paxfulTradeVolume: paxfulTradeVolume == freezed
+      paxfulTradeVolume: freezed == paxfulTradeVolume
           ? _value.paxfulTradeVolume
           : paxfulTradeVolume // ignore: cast_nullable_to_non_nullable
               as double?,
-      paxfulAccountCreatedAt: paxfulAccountCreatedAt == freezed
+      paxfulAccountCreatedAt: freezed == paxfulAccountCreatedAt
           ? _value.paxfulAccountCreatedAt
           : paxfulAccountCreatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      lastOnline: lastOnline == freezed
+      lastOnline: freezed == lastOnline
           ? _value.lastOnline
           : lastOnline // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      feedbackCount: feedbackCount == freezed
+      feedbackCount: freezed == feedbackCount
           ? _value.feedbackCount
           : feedbackCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      feedbacksUnconfirmedCount: feedbacksUnconfirmedCount == freezed
+      feedbacksUnconfirmedCount: freezed == feedbacksUnconfirmedCount
           ? _value.feedbacksUnconfirmedCount
           : feedbacksUnconfirmedCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      tradingPartnersCount: tradingPartnersCount == freezed
+      tradingPartnersCount: freezed == tradingPartnersCount
           ? _value.tradingPartnersCount
           : tradingPartnersCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      releaseTimeMedium: releaseTimeMedium == freezed
+      releaseTimeMedium: freezed == releaseTimeMedium
           ? _value.releaseTimeMedium
           : releaseTimeMedium // ignore: cast_nullable_to_non_nullable
               as int?,
-      hasCommonTrades: hasCommonTrades == freezed
+      hasCommonTrades: freezed == hasCommonTrades
           ? _value.hasCommonTrades
           : hasCommonTrades // ignore: cast_nullable_to_non_nullable
               as bool?,
-      myFeedback: myFeedback == freezed
+      myFeedback: freezed == myFeedback
           ? _value.myFeedback
           : myFeedback // ignore: cast_nullable_to_non_nullable
               as FeedbackType?,
-      introduction: introduction == freezed
+      introduction: freezed == introduction
           ? _value.introduction
           : introduction // ignore: cast_nullable_to_non_nullable
               as String?,
-      homepage: homepage == freezed
+      homepage: freezed == homepage
           ? _value.homepage
           : homepage // ignore: cast_nullable_to_non_nullable
               as String?,
-      sanctionReason: sanctionReason == freezed
+      sanctionReason: freezed == sanctionReason
           ? _value.sanctionReason
           : sanctionReason // ignore: cast_nullable_to_non_nullable
               as String?,
-      sanctionType: sanctionType == freezed
+      sanctionType: freezed == sanctionType
           ? _value.sanctionType
           : sanctionType // ignore: cast_nullable_to_non_nullable
               as SanctionType?,
-      sanctionedAt: sanctionedAt == freezed
+      sanctionedAt: freezed == sanctionedAt
           ? _value.sanctionedAt
           : sanctionedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      sanctionExpiresAt: sanctionExpiresAt == freezed
+      sanctionExpiresAt: freezed == sanctionExpiresAt
           ? _value.sanctionExpiresAt
           : sanctionExpiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -673,92 +675,92 @@ class _$_AccountInfoModel extends _AccountInfoModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AccountInfoModel &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality()
-                .equals(other.feedbackScore, feedbackScore) &&
-            const DeepCollectionEquality()
-                .equals(other.confirmedTradeCount, confirmedTradeCount) &&
-            const DeepCollectionEquality()
-                .equals(other.tradeCount, tradeCount) &&
-            const DeepCollectionEquality().equals(
-                other.localbitcoinsTradeCount, localbitcoinsTradeCount) &&
-            const DeepCollectionEquality().equals(
-                other.localbitcoinsFeedbackScore, localbitcoinsFeedbackScore) &&
-            const DeepCollectionEquality().equals(
-                other.localbitcoinsTradeVolume, localbitcoinsTradeVolume) &&
-            const DeepCollectionEquality().equals(
-                other.localbitcoinsAccountCreatedAt,
-                localbitcoinsAccountCreatedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.paxfulTradeCount, paxfulTradeCount) &&
-            const DeepCollectionEquality()
-                .equals(other.paxfulFeedbackScore, paxfulFeedbackScore) &&
-            const DeepCollectionEquality()
-                .equals(other.paxfulTradeVolume, paxfulTradeVolume) &&
-            const DeepCollectionEquality()
-                .equals(other.paxfulAccountCreatedAt, paxfulAccountCreatedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.lastOnline, lastOnline) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality()
-                .equals(other.feedbackCount, feedbackCount) &&
-            const DeepCollectionEquality().equals(
-                other.feedbacksUnconfirmedCount, feedbacksUnconfirmedCount) &&
-            const DeepCollectionEquality()
-                .equals(other.tradingPartnersCount, tradingPartnersCount) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseTimeMedium, releaseTimeMedium) &&
-            const DeepCollectionEquality()
-                .equals(other.hasCommonTrades, hasCommonTrades) &&
-            const DeepCollectionEquality()
-                .equals(other.myFeedback, myFeedback) &&
-            const DeepCollectionEquality()
-                .equals(other.introduction, introduction) &&
-            const DeepCollectionEquality().equals(other.homepage, homepage) &&
-            const DeepCollectionEquality()
-                .equals(other.sanctionReason, sanctionReason) &&
-            const DeepCollectionEquality()
-                .equals(other.sanctionType, sanctionType) &&
-            const DeepCollectionEquality()
-                .equals(other.sanctionedAt, sanctionedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.sanctionExpiresAt, sanctionExpiresAt));
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.feedbackScore, feedbackScore) ||
+                other.feedbackScore == feedbackScore) &&
+            (identical(other.confirmedTradeCount, confirmedTradeCount) ||
+                other.confirmedTradeCount == confirmedTradeCount) &&
+            (identical(other.tradeCount, tradeCount) ||
+                other.tradeCount == tradeCount) &&
+            (identical(other.localbitcoinsTradeCount, localbitcoinsTradeCount) ||
+                other.localbitcoinsTradeCount == localbitcoinsTradeCount) &&
+            (identical(other.localbitcoinsFeedbackScore, localbitcoinsFeedbackScore) ||
+                other.localbitcoinsFeedbackScore ==
+                    localbitcoinsFeedbackScore) &&
+            (identical(other.localbitcoinsTradeVolume, localbitcoinsTradeVolume) ||
+                other.localbitcoinsTradeVolume == localbitcoinsTradeVolume) &&
+            (identical(other.localbitcoinsAccountCreatedAt, localbitcoinsAccountCreatedAt) ||
+                other.localbitcoinsAccountCreatedAt ==
+                    localbitcoinsAccountCreatedAt) &&
+            (identical(other.paxfulTradeCount, paxfulTradeCount) ||
+                other.paxfulTradeCount == paxfulTradeCount) &&
+            (identical(other.paxfulFeedbackScore, paxfulFeedbackScore) ||
+                other.paxfulFeedbackScore == paxfulFeedbackScore) &&
+            (identical(other.paxfulTradeVolume, paxfulTradeVolume) ||
+                other.paxfulTradeVolume == paxfulTradeVolume) &&
+            (identical(other.paxfulAccountCreatedAt, paxfulAccountCreatedAt) ||
+                other.paxfulAccountCreatedAt == paxfulAccountCreatedAt) &&
+            (identical(other.lastOnline, lastOnline) ||
+                other.lastOnline == lastOnline) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.feedbackCount, feedbackCount) ||
+                other.feedbackCount == feedbackCount) &&
+            (identical(other.feedbacksUnconfirmedCount, feedbacksUnconfirmedCount) ||
+                other.feedbacksUnconfirmedCount == feedbacksUnconfirmedCount) &&
+            (identical(other.tradingPartnersCount, tradingPartnersCount) ||
+                other.tradingPartnersCount == tradingPartnersCount) &&
+            (identical(other.releaseTimeMedium, releaseTimeMedium) ||
+                other.releaseTimeMedium == releaseTimeMedium) &&
+            (identical(other.hasCommonTrades, hasCommonTrades) ||
+                other.hasCommonTrades == hasCommonTrades) &&
+            (identical(other.myFeedback, myFeedback) ||
+                other.myFeedback == myFeedback) &&
+            (identical(other.introduction, introduction) ||
+                other.introduction == introduction) &&
+            (identical(other.homepage, homepage) || other.homepage == homepage) &&
+            (identical(other.sanctionReason, sanctionReason) || other.sanctionReason == sanctionReason) &&
+            (identical(other.sanctionType, sanctionType) || other.sanctionType == sanctionType) &&
+            (identical(other.sanctionedAt, sanctionedAt) || other.sanctionedAt == sanctionedAt) &&
+            (identical(other.sanctionExpiresAt, sanctionExpiresAt) || other.sanctionExpiresAt == sanctionExpiresAt));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(username),
-        const DeepCollectionEquality().hash(feedbackScore),
-        const DeepCollectionEquality().hash(confirmedTradeCount),
-        const DeepCollectionEquality().hash(tradeCount),
-        const DeepCollectionEquality().hash(localbitcoinsTradeCount),
-        const DeepCollectionEquality().hash(localbitcoinsFeedbackScore),
-        const DeepCollectionEquality().hash(localbitcoinsTradeVolume),
-        const DeepCollectionEquality().hash(localbitcoinsAccountCreatedAt),
-        const DeepCollectionEquality().hash(paxfulTradeCount),
-        const DeepCollectionEquality().hash(paxfulFeedbackScore),
-        const DeepCollectionEquality().hash(paxfulTradeVolume),
-        const DeepCollectionEquality().hash(paxfulAccountCreatedAt),
-        const DeepCollectionEquality().hash(lastOnline),
-        const DeepCollectionEquality().hash(createdAt),
-        const DeepCollectionEquality().hash(feedbackCount),
-        const DeepCollectionEquality().hash(feedbacksUnconfirmedCount),
-        const DeepCollectionEquality().hash(tradingPartnersCount),
-        const DeepCollectionEquality().hash(releaseTimeMedium),
-        const DeepCollectionEquality().hash(hasCommonTrades),
-        const DeepCollectionEquality().hash(myFeedback),
-        const DeepCollectionEquality().hash(introduction),
-        const DeepCollectionEquality().hash(homepage),
-        const DeepCollectionEquality().hash(sanctionReason),
-        const DeepCollectionEquality().hash(sanctionType),
-        const DeepCollectionEquality().hash(sanctionedAt),
-        const DeepCollectionEquality().hash(sanctionExpiresAt)
+        username,
+        feedbackScore,
+        confirmedTradeCount,
+        tradeCount,
+        localbitcoinsTradeCount,
+        localbitcoinsFeedbackScore,
+        localbitcoinsTradeVolume,
+        localbitcoinsAccountCreatedAt,
+        paxfulTradeCount,
+        paxfulFeedbackScore,
+        paxfulTradeVolume,
+        paxfulAccountCreatedAt,
+        lastOnline,
+        createdAt,
+        feedbackCount,
+        feedbacksUnconfirmedCount,
+        tradingPartnersCount,
+        releaseTimeMedium,
+        hasCommonTrades,
+        myFeedback,
+        introduction,
+        homepage,
+        sanctionReason,
+        sanctionType,
+        sanctionedAt,
+        sanctionExpiresAt
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith =>
       __$$_AccountInfoModelCopyWithImpl<_$_AccountInfoModel>(this, _$identity);
 
