@@ -229,7 +229,13 @@ class WalletViewModel extends ViewModel with StringMixin {
 
   String walletBalance(Asset asset) {
     if (asset == Asset.BTC) {
+      if (_balanceBtc == '0') {
+        return '0.00000000';
+      }
       return _balanceBtc;
+    }
+    if (_balanceXmr == '0') {
+      return '0.000000000000';
     }
     return _balanceXmr;
   }
