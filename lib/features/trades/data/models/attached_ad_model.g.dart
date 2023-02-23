@@ -29,7 +29,7 @@ Map<String, dynamic> _$$_AttachedAdModelToJson(_$_AttachedAdModel instance) {
 
   writeNotNull('id', instance.id);
   val['asset'] = _$AssetEnumMap[instance.asset];
-  val['trade_type'] = _$TradeTypeEnumMap[instance.tradeType];
+  val['trade_type'] = _$TradeTypeEnumMap[instance.tradeType]!;
   val['advertiser'] = instance.advertiser?.toJson();
   writeNotNull('payment_method', instance.paymentMethod);
   return val;

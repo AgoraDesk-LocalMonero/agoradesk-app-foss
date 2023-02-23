@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'transaction_model.dart';
 
@@ -44,7 +44,8 @@ mixin _$TransactionModel {
 abstract class $TransactionModelCopyWith<$Res> {
   factory $TransactionModelCopyWith(
           TransactionModel value, $Res Function(TransactionModel) then) =
-      _$TransactionModelCopyWithImpl<$Res>;
+      _$TransactionModelCopyWithImpl<$Res, TransactionModel>;
+  @useResult
   $Res call(
       {String amount,
       @JsonKey(name: 'created_at') DateTime createdAt,
@@ -57,59 +58,61 @@ abstract class $TransactionModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TransactionModelCopyWithImpl<$Res>
+class _$TransactionModelCopyWithImpl<$Res, $Val extends TransactionModel>
     implements $TransactionModelCopyWith<$Res> {
   _$TransactionModelCopyWithImpl(this._value, this._then);
 
-  final TransactionModel _value;
   // ignore: unused_field
-  final $Res Function(TransactionModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
-    Object? createdAt = freezed,
+    Object? amount = null,
+    Object? createdAt = null,
     Object? txNum = freezed,
-    Object? txType = freezed,
+    Object? txType = null,
     Object? txId = freezed,
     Object? isSent = freezed,
     Object? asset = freezed,
-    Object? description = freezed,
+    Object? description = null,
   }) {
     return _then(_value.copyWith(
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      txNum: txNum == freezed
+      txNum: freezed == txNum
           ? _value.txNum
           : txNum // ignore: cast_nullable_to_non_nullable
               as int?,
-      txType: txType == freezed
+      txType: null == txType
           ? _value.txType
           : txType // ignore: cast_nullable_to_non_nullable
               as TransactionTypes,
-      txId: txId == freezed
+      txId: freezed == txId
           ? _value.txId
           : txId // ignore: cast_nullable_to_non_nullable
               as String?,
-      isSent: isSent == freezed
+      isSent: freezed == isSent
           ? _value.isSent
           : isSent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -120,6 +123,7 @@ abstract class _$$_TransactionModelCopyWith<$Res>
           _$_TransactionModel value, $Res Function(_$_TransactionModel) then) =
       __$$_TransactionModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String amount,
       @JsonKey(name: 'created_at') DateTime createdAt,
@@ -133,56 +137,54 @@ abstract class _$$_TransactionModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_TransactionModelCopyWithImpl<$Res>
-    extends _$TransactionModelCopyWithImpl<$Res>
+    extends _$TransactionModelCopyWithImpl<$Res, _$_TransactionModel>
     implements _$$_TransactionModelCopyWith<$Res> {
   __$$_TransactionModelCopyWithImpl(
       _$_TransactionModel _value, $Res Function(_$_TransactionModel) _then)
-      : super(_value, (v) => _then(v as _$_TransactionModel));
+      : super(_value, _then);
 
-  @override
-  _$_TransactionModel get _value => super._value as _$_TransactionModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
-    Object? createdAt = freezed,
+    Object? amount = null,
+    Object? createdAt = null,
     Object? txNum = freezed,
-    Object? txType = freezed,
+    Object? txType = null,
     Object? txId = freezed,
     Object? isSent = freezed,
     Object? asset = freezed,
-    Object? description = freezed,
+    Object? description = null,
   }) {
     return _then(_$_TransactionModel(
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      txNum: txNum == freezed
+      txNum: freezed == txNum
           ? _value.txNum
           : txNum // ignore: cast_nullable_to_non_nullable
               as int?,
-      txType: txType == freezed
+      txType: null == txType
           ? _value.txType
           : txType // ignore: cast_nullable_to_non_nullable
               as TransactionTypes,
-      txId: txId == freezed
+      txId: freezed == txId
           ? _value.txId
           : txId // ignore: cast_nullable_to_non_nullable
               as String?,
-      isSent: isSent == freezed
+      isSent: freezed == isSent
           ? _value.isSent
           : isSent // ignore: cast_nullable_to_non_nullable
               as bool?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
@@ -239,32 +241,26 @@ class _$_TransactionModel extends _TransactionModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TransactionModel &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.txNum, txNum) &&
-            const DeepCollectionEquality().equals(other.txType, txType) &&
-            const DeepCollectionEquality().equals(other.txId, txId) &&
-            const DeepCollectionEquality().equals(other.isSent, isSent) &&
-            const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description));
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.txNum, txNum) || other.txNum == txNum) &&
+            (identical(other.txType, txType) || other.txType == txType) &&
+            (identical(other.txId, txId) || other.txId == txId) &&
+            (identical(other.isSent, isSent) || other.isSent == isSent) &&
+            (identical(other.asset, asset) || other.asset == asset) &&
+            (identical(other.description, description) ||
+                other.description == description));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(amount),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(txNum),
-      const DeepCollectionEquality().hash(txType),
-      const DeepCollectionEquality().hash(txId),
-      const DeepCollectionEquality().hash(isSent),
-      const DeepCollectionEquality().hash(asset),
-      const DeepCollectionEquality().hash(description));
+  int get hashCode => Object.hash(runtimeType, amount, createdAt, txNum, txType,
+      txId, isSent, asset, description);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
       __$$_TransactionModelCopyWithImpl<_$_TransactionModel>(this, _$identity);
 

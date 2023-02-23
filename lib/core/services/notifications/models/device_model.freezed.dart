@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'device_model.dart';
 
@@ -36,7 +36,8 @@ mixin _$DeviceModel {
 abstract class $DeviceModelCopyWith<$Res> {
   factory $DeviceModelCopyWith(
           DeviceModel value, $Res Function(DeviceModel) then) =
-      _$DeviceModelCopyWithImpl<$Res>;
+      _$DeviceModelCopyWithImpl<$Res, DeviceModel>;
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? type,
       @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName,
@@ -44,33 +45,36 @@ abstract class $DeviceModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceModelCopyWithImpl<$Res> implements $DeviceModelCopyWith<$Res> {
+class _$DeviceModelCopyWithImpl<$Res, $Val extends DeviceModel>
+    implements $DeviceModelCopyWith<$Res> {
   _$DeviceModelCopyWithImpl(this._value, this._then);
 
-  final DeviceModel _value;
   // ignore: unused_field
-  final $Res Function(DeviceModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
     Object? deviceName = freezed,
-    Object? token = freezed,
+    Object? token = null,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      deviceName: deviceName == freezed
+      deviceName: freezed == deviceName
           ? _value.deviceName
           : deviceName // ignore: cast_nullable_to_non_nullable
               as String?,
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -81,6 +85,7 @@ abstract class _$$_DeviceModelCopyWith<$Res>
           _$_DeviceModel value, $Res Function(_$_DeviceModel) then) =
       __$$_DeviceModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? type,
       @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName,
@@ -88,31 +93,30 @@ abstract class _$$_DeviceModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DeviceModelCopyWithImpl<$Res> extends _$DeviceModelCopyWithImpl<$Res>
+class __$$_DeviceModelCopyWithImpl<$Res>
+    extends _$DeviceModelCopyWithImpl<$Res, _$_DeviceModel>
     implements _$$_DeviceModelCopyWith<$Res> {
   __$$_DeviceModelCopyWithImpl(
       _$_DeviceModel _value, $Res Function(_$_DeviceModel) _then)
-      : super(_value, (v) => _then(v as _$_DeviceModel));
+      : super(_value, _then);
 
-  @override
-  _$_DeviceModel get _value => super._value as _$_DeviceModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
     Object? deviceName = freezed,
-    Object? token = freezed,
+    Object? token = null,
   }) {
     return _then(_$_DeviceModel(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      deviceName: deviceName == freezed
+      deviceName: freezed == deviceName
           ? _value.deviceName
           : deviceName // ignore: cast_nullable_to_non_nullable
               as String?,
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
@@ -152,22 +156,19 @@ class _$_DeviceModel extends _DeviceModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DeviceModel &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.deviceName, deviceName) &&
-            const DeepCollectionEquality().equals(other.token, token));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.deviceName, deviceName) ||
+                other.deviceName == deviceName) &&
+            (identical(other.token, token) || other.token == token));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(deviceName),
-      const DeepCollectionEquality().hash(token));
+  int get hashCode => Object.hash(runtimeType, type, deviceName, token);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DeviceModelCopyWith<_$_DeviceModel> get copyWith =>
       __$$_DeviceModelCopyWithImpl<_$_DeviceModel>(this, _$identity);
 

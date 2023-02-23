@@ -64,7 +64,7 @@ Map<String, dynamic> _$$_AdModelToJson(_$_AdModel instance) {
   writeNotNull('lon', instance.lon);
   val['countrycode'] = instance.countryCode;
   val['currency'] = instance.currency;
-  val['trade_type'] = _$TradeTypeEnumMap[instance.tradeType];
+  val['trade_type'] = _$TradeTypeEnumMap[instance.tradeType]!;
   writeNotNull('online_provider', instance.onlineProvider);
   writeNotNull('buyer_settlement_address', instance.buyerSettlementAddress);
   writeNotNull('price_equation', instance.priceEquation);

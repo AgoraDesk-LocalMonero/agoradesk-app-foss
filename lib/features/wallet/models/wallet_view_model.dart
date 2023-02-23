@@ -4,7 +4,6 @@ import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
@@ -125,13 +124,15 @@ class WalletViewModel extends ViewModel with StringMixin {
 
   void _updateBalance() {
     if (_appState.balance.isNotEmpty) {
-      final int digitsXmr = getBankersDigits(Asset.XMR.name);
-      _balanceXmr = _appState.balance[0].balance.bankerRound(digitsXmr).toString();
+      // final int digitsXmr = getBankersDigits(Asset.XMR.name);
+      // _balanceXmr = _appState.balance[0].balance.toDouble().bankerRound(digitsXmr).toString();
+      _balanceXmr = _appState.balance[0].balance.toString();
       _addressXmr = _appState.balance[0].receivingAddress;
     }
     if (_appState.balance.length > 1) {
-      final int digitsBtc = getBankersDigits(Asset.BTC.name);
-      _balanceBtc = _appState.balance[1].balance.bankerRound(digitsBtc).toString();
+      // final int digitsBtc = getBankersDigits(Asset.BTC.name);
+      // _balanceBtc = _appState.balance[1].balance.toDouble().bankerRound(digitsBtc).toString();
+      _balanceBtc = _appState.balance[1].balance.toString();
       _addressBtc = _appState.balance[1].receivingAddress;
     }
   }

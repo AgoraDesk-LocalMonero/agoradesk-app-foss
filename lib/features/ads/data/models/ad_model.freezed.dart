@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ad_model.dart';
 
@@ -108,7 +108,8 @@ mixin _$AdModel {
 /// @nodoc
 abstract class $AdModelCopyWith<$Res> {
   factory $AdModelCopyWith(AdModel value, $Res Function(AdModel) then) =
-      _$AdModelCopyWithImpl<$Res>;
+      _$AdModelCopyWithImpl<$Res, AdModel>;
+  @useResult
   $Res call(
       {Asset? asset,
       @JsonKey(name: 'ad_id', includeIfNull: false)
@@ -176,13 +177,16 @@ abstract class $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
+class _$AdModelCopyWithImpl<$Res, $Val extends AdModel>
+    implements $AdModelCopyWith<$Res> {
   _$AdModelCopyWithImpl(this._value, this._then);
 
-  final AdModel _value;
   // ignore: unused_field
-  final $Res Function(AdModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? asset = freezed,
@@ -192,9 +196,9 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
     Object? visible = freezed,
     Object? lat = freezed,
     Object? lon = freezed,
-    Object? countryCode = freezed,
-    Object? currency = freezed,
-    Object? tradeType = freezed,
+    Object? countryCode = null,
+    Object? currency = null,
+    Object? tradeType = null,
     Object? onlineProvider = freezed,
     Object? buyerSettlementAddress = freezed,
     Object? priceEquation = freezed,
@@ -219,145 +223,146 @@ class _$AdModelCopyWithImpl<$Res> implements $AdModelCopyWith<$Res> {
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String?,
-      tempPrice: tempPrice == freezed
+      tempPrice: freezed == tempPrice
           ? _value.tempPrice
           : tempPrice // ignore: cast_nullable_to_non_nullable
               as String?,
-      visible: visible == freezed
+      visible: freezed == visible
           ? _value.visible
           : visible // ignore: cast_nullable_to_non_nullable
               as bool?,
-      lat: lat == freezed
+      lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as double?,
-      lon: lon == freezed
+      lon: freezed == lon
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
               as double?,
-      countryCode: countryCode == freezed
+      countryCode: null == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String,
-      currency: currency == freezed
+      currency: null == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
               as String,
-      tradeType: tradeType == freezed
+      tradeType: null == tradeType
           ? _value.tradeType
           : tradeType // ignore: cast_nullable_to_non_nullable
               as TradeType,
-      onlineProvider: onlineProvider == freezed
+      onlineProvider: freezed == onlineProvider
           ? _value.onlineProvider
           : onlineProvider // ignore: cast_nullable_to_non_nullable
               as String?,
-      buyerSettlementAddress: buyerSettlementAddress == freezed
+      buyerSettlementAddress: freezed == buyerSettlementAddress
           ? _value.buyerSettlementAddress
           : buyerSettlementAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-      priceEquation: priceEquation == freezed
+      priceEquation: freezed == priceEquation
           ? _value.priceEquation
           : priceEquation // ignore: cast_nullable_to_non_nullable
               as String?,
-      trackMaxAmount: trackMaxAmount == freezed
+      trackMaxAmount: freezed == trackMaxAmount
           ? _value.trackMaxAmount
           : trackMaxAmount // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireTrustedByAdvertiser: requireTrustedByAdvertiser == freezed
+      requireTrustedByAdvertiser: freezed == requireTrustedByAdvertiser
           ? _value.requireTrustedByAdvertiser
           : requireTrustedByAdvertiser // ignore: cast_nullable_to_non_nullable
               as bool?,
-      floating: floating == freezed
+      floating: freezed == floating
           ? _value.floating
           : floating // ignore: cast_nullable_to_non_nullable
               as bool?,
-      verifiedEmailRequired: verifiedEmailRequired == freezed
+      verifiedEmailRequired: freezed == verifiedEmailRequired
           ? _value.verifiedEmailRequired
           : verifiedEmailRequired // ignore: cast_nullable_to_non_nullable
               as bool?,
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
-      minAmount: minAmount == freezed
+      minAmount: freezed == minAmount
           ? _value.minAmount
           : minAmount // ignore: cast_nullable_to_non_nullable
               as double?,
-      maxAmount: maxAmount == freezed
+      maxAmount: freezed == maxAmount
           ? _value.maxAmount
           : maxAmount // ignore: cast_nullable_to_non_nullable
               as double?,
-      maxAmountAvailable: maxAmountAvailable == freezed
+      maxAmountAvailable: freezed == maxAmountAvailable
           ? _value.maxAmountAvailable
           : maxAmountAvailable // ignore: cast_nullable_to_non_nullable
               as double?,
-      paymentWindowMinutes: paymentWindowMinutes == freezed
+      paymentWindowMinutes: freezed == paymentWindowMinutes
           ? _value.paymentWindowMinutes
           : paymentWindowMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      limitToFiatAmounts: limitToFiatAmounts == freezed
+      limitToFiatAmounts: freezed == limitToFiatAmounts
           ? _value.limitToFiatAmounts
           : limitToFiatAmounts // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentMethodDetail: paymentMethodDetail == freezed
+      paymentMethodDetail: freezed == paymentMethodDetail
           ? _value.paymentMethodDetail
           : paymentMethodDetail // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentMethodInfo: paymentMethodInfo == freezed
+      paymentMethodInfo: freezed == paymentMethodInfo
           ? _value.paymentMethodInfo
           : paymentMethodInfo // ignore: cast_nullable_to_non_nullable
               as String?,
-      firstTimeLimitAsset: firstTimeLimitAsset == freezed
+      firstTimeLimitAsset: freezed == firstTimeLimitAsset
           ? _value.firstTimeLimitAsset
           : firstTimeLimitAsset // ignore: cast_nullable_to_non_nullable
               as double?,
-      firstTimeLimitXmr: firstTimeLimitXmr == freezed
+      firstTimeLimitXmr: freezed == firstTimeLimitXmr
           ? _value.firstTimeLimitXmr
           : firstTimeLimitXmr // ignore: cast_nullable_to_non_nullable
               as double?,
-      firstTimeLimitBtc: firstTimeLimitBtc == freezed
+      firstTimeLimitBtc: freezed == firstTimeLimitBtc
           ? _value.firstTimeLimitBtc
           : firstTimeLimitBtc // ignore: cast_nullable_to_non_nullable
               as double?,
-      requireFeedbackScore: requireFeedbackScore == freezed
+      requireFeedbackScore: freezed == requireFeedbackScore
           ? _value.requireFeedbackScore
           : requireFeedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      buyerSettlementFeeLevel: buyerSettlementFeeLevel == freezed
+      buyerSettlementFeeLevel: freezed == buyerSettlementFeeLevel
           ? _value.buyerSettlementFeeLevel
           : buyerSettlementFeeLevel // ignore: cast_nullable_to_non_nullable
               as String?,
-      locationString: locationString == freezed
+      locationString: freezed == locationString
           ? _value.locationString
           : locationString // ignore: cast_nullable_to_non_nullable
               as String?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AccountInfoModelCopyWith<$Res>? get profile {
     if (_value.profile == null) {
       return null;
     }
 
     return $AccountInfoModelCopyWith<$Res>(_value.profile!, (value) {
-      return _then(_value.copyWith(profile: value));
+      return _then(_value.copyWith(profile: value) as $Val);
     });
   }
 }
@@ -368,6 +373,7 @@ abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
           _$_AdModel value, $Res Function(_$_AdModel) then) =
       __$$_AdModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Asset? asset,
       @JsonKey(name: 'ad_id', includeIfNull: false)
@@ -436,14 +442,13 @@ abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
+class __$$_AdModelCopyWithImpl<$Res>
+    extends _$AdModelCopyWithImpl<$Res, _$_AdModel>
     implements _$$_AdModelCopyWith<$Res> {
   __$$_AdModelCopyWithImpl(_$_AdModel _value, $Res Function(_$_AdModel) _then)
-      : super(_value, (v) => _then(v as _$_AdModel));
+      : super(_value, _then);
 
-  @override
-  _$_AdModel get _value => super._value as _$_AdModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? asset = freezed,
@@ -453,9 +458,9 @@ class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
     Object? visible = freezed,
     Object? lat = freezed,
     Object? lon = freezed,
-    Object? countryCode = freezed,
-    Object? currency = freezed,
-    Object? tradeType = freezed,
+    Object? countryCode = null,
+    Object? currency = null,
+    Object? tradeType = null,
     Object? onlineProvider = freezed,
     Object? buyerSettlementAddress = freezed,
     Object? priceEquation = freezed,
@@ -480,131 +485,131 @@ class __$$_AdModelCopyWithImpl<$Res> extends _$AdModelCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_$_AdModel(
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String?,
-      tempPrice: tempPrice == freezed
+      tempPrice: freezed == tempPrice
           ? _value.tempPrice
           : tempPrice // ignore: cast_nullable_to_non_nullable
               as String?,
-      visible: visible == freezed
+      visible: freezed == visible
           ? _value.visible
           : visible // ignore: cast_nullable_to_non_nullable
               as bool?,
-      lat: lat == freezed
+      lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as double?,
-      lon: lon == freezed
+      lon: freezed == lon
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
               as double?,
-      countryCode: countryCode == freezed
+      countryCode: null == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String,
-      currency: currency == freezed
+      currency: null == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
               as String,
-      tradeType: tradeType == freezed
+      tradeType: null == tradeType
           ? _value.tradeType
           : tradeType // ignore: cast_nullable_to_non_nullable
               as TradeType,
-      onlineProvider: onlineProvider == freezed
+      onlineProvider: freezed == onlineProvider
           ? _value.onlineProvider
           : onlineProvider // ignore: cast_nullable_to_non_nullable
               as String?,
-      buyerSettlementAddress: buyerSettlementAddress == freezed
+      buyerSettlementAddress: freezed == buyerSettlementAddress
           ? _value.buyerSettlementAddress
           : buyerSettlementAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-      priceEquation: priceEquation == freezed
+      priceEquation: freezed == priceEquation
           ? _value.priceEquation
           : priceEquation // ignore: cast_nullable_to_non_nullable
               as String?,
-      trackMaxAmount: trackMaxAmount == freezed
+      trackMaxAmount: freezed == trackMaxAmount
           ? _value.trackMaxAmount
           : trackMaxAmount // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireTrustedByAdvertiser: requireTrustedByAdvertiser == freezed
+      requireTrustedByAdvertiser: freezed == requireTrustedByAdvertiser
           ? _value.requireTrustedByAdvertiser
           : requireTrustedByAdvertiser // ignore: cast_nullable_to_non_nullable
               as bool?,
-      floating: floating == freezed
+      floating: freezed == floating
           ? _value.floating
           : floating // ignore: cast_nullable_to_non_nullable
               as bool?,
-      verifiedEmailRequired: verifiedEmailRequired == freezed
+      verifiedEmailRequired: freezed == verifiedEmailRequired
           ? _value.verifiedEmailRequired
           : verifiedEmailRequired // ignore: cast_nullable_to_non_nullable
               as bool?,
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
-      minAmount: minAmount == freezed
+      minAmount: freezed == minAmount
           ? _value.minAmount
           : minAmount // ignore: cast_nullable_to_non_nullable
               as double?,
-      maxAmount: maxAmount == freezed
+      maxAmount: freezed == maxAmount
           ? _value.maxAmount
           : maxAmount // ignore: cast_nullable_to_non_nullable
               as double?,
-      maxAmountAvailable: maxAmountAvailable == freezed
+      maxAmountAvailable: freezed == maxAmountAvailable
           ? _value.maxAmountAvailable
           : maxAmountAvailable // ignore: cast_nullable_to_non_nullable
               as double?,
-      paymentWindowMinutes: paymentWindowMinutes == freezed
+      paymentWindowMinutes: freezed == paymentWindowMinutes
           ? _value.paymentWindowMinutes
           : paymentWindowMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      limitToFiatAmounts: limitToFiatAmounts == freezed
+      limitToFiatAmounts: freezed == limitToFiatAmounts
           ? _value.limitToFiatAmounts
           : limitToFiatAmounts // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentMethodDetail: paymentMethodDetail == freezed
+      paymentMethodDetail: freezed == paymentMethodDetail
           ? _value.paymentMethodDetail
           : paymentMethodDetail // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentMethodInfo: paymentMethodInfo == freezed
+      paymentMethodInfo: freezed == paymentMethodInfo
           ? _value.paymentMethodInfo
           : paymentMethodInfo // ignore: cast_nullable_to_non_nullable
               as String?,
-      firstTimeLimitAsset: firstTimeLimitAsset == freezed
+      firstTimeLimitAsset: freezed == firstTimeLimitAsset
           ? _value.firstTimeLimitAsset
           : firstTimeLimitAsset // ignore: cast_nullable_to_non_nullable
               as double?,
-      firstTimeLimitXmr: firstTimeLimitXmr == freezed
+      firstTimeLimitXmr: freezed == firstTimeLimitXmr
           ? _value.firstTimeLimitXmr
           : firstTimeLimitXmr // ignore: cast_nullable_to_non_nullable
               as double?,
-      firstTimeLimitBtc: firstTimeLimitBtc == freezed
+      firstTimeLimitBtc: freezed == firstTimeLimitBtc
           ? _value.firstTimeLimitBtc
           : firstTimeLimitBtc // ignore: cast_nullable_to_non_nullable
               as double?,
-      requireFeedbackScore: requireFeedbackScore == freezed
+      requireFeedbackScore: freezed == requireFeedbackScore
           ? _value.requireFeedbackScore
           : requireFeedbackScore // ignore: cast_nullable_to_non_nullable
               as int?,
-      buyerSettlementFeeLevel: buyerSettlementFeeLevel == freezed
+      buyerSettlementFeeLevel: freezed == buyerSettlementFeeLevel
           ? _value.buyerSettlementFeeLevel
           : buyerSettlementFeeLevel // ignore: cast_nullable_to_non_nullable
               as String?,
-      locationString: locationString == freezed
+      locationString: freezed == locationString
           ? _value.locationString
           : locationString // ignore: cast_nullable_to_non_nullable
               as String?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel?,
@@ -805,98 +810,109 @@ class _$_AdModel extends _AdModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AdModel &&
-            const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.tempPrice, tempPrice) &&
-            const DeepCollectionEquality().equals(other.visible, visible) &&
-            const DeepCollectionEquality().equals(other.lat, lat) &&
-            const DeepCollectionEquality().equals(other.lon, lon) &&
-            const DeepCollectionEquality()
-                .equals(other.countryCode, countryCode) &&
-            const DeepCollectionEquality().equals(other.currency, currency) &&
-            const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
-            const DeepCollectionEquality()
-                .equals(other.onlineProvider, onlineProvider) &&
-            const DeepCollectionEquality()
-                .equals(other.buyerSettlementAddress, buyerSettlementAddress) &&
-            const DeepCollectionEquality()
-                .equals(other.priceEquation, priceEquation) &&
-            const DeepCollectionEquality()
-                .equals(other.trackMaxAmount, trackMaxAmount) &&
-            const DeepCollectionEquality().equals(
-                other.requireTrustedByAdvertiser, requireTrustedByAdvertiser) &&
-            const DeepCollectionEquality().equals(other.floating, floating) &&
-            const DeepCollectionEquality()
-                .equals(other.verifiedEmailRequired, verifiedEmailRequired) &&
-            const DeepCollectionEquality().equals(other.msg, msg) &&
-            const DeepCollectionEquality().equals(other.minAmount, minAmount) &&
-            const DeepCollectionEquality().equals(other.maxAmount, maxAmount) &&
-            const DeepCollectionEquality()
-                .equals(other.maxAmountAvailable, maxAmountAvailable) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentWindowMinutes, paymentWindowMinutes) &&
-            const DeepCollectionEquality()
-                .equals(other.limitToFiatAmounts, limitToFiatAmounts) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentMethodDetail, paymentMethodDetail) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentMethodInfo, paymentMethodInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.firstTimeLimitAsset, firstTimeLimitAsset) &&
-            const DeepCollectionEquality()
-                .equals(other.firstTimeLimitXmr, firstTimeLimitXmr) &&
-            const DeepCollectionEquality()
-                .equals(other.firstTimeLimitBtc, firstTimeLimitBtc) &&
-            const DeepCollectionEquality()
-                .equals(other.requireFeedbackScore, requireFeedbackScore) &&
-            const DeepCollectionEquality().equals(
-                other.buyerSettlementFeeLevel, buyerSettlementFeeLevel) &&
-            const DeepCollectionEquality()
-                .equals(other.locationString, locationString) &&
-            const DeepCollectionEquality().equals(other.profile, profile));
+            (identical(other.asset, asset) || other.asset == asset) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.tempPrice, tempPrice) ||
+                other.tempPrice == tempPrice) &&
+            (identical(other.visible, visible) || other.visible == visible) &&
+            (identical(other.lat, lat) || other.lat == lat) &&
+            (identical(other.lon, lon) || other.lon == lon) &&
+            (identical(other.countryCode, countryCode) ||
+                other.countryCode == countryCode) &&
+            (identical(other.currency, currency) ||
+                other.currency == currency) &&
+            (identical(other.tradeType, tradeType) ||
+                other.tradeType == tradeType) &&
+            (identical(other.onlineProvider, onlineProvider) ||
+                other.onlineProvider == onlineProvider) &&
+            (identical(other.buyerSettlementAddress, buyerSettlementAddress) ||
+                other.buyerSettlementAddress == buyerSettlementAddress) &&
+            (identical(other.priceEquation, priceEquation) ||
+                other.priceEquation == priceEquation) &&
+            (identical(other.trackMaxAmount, trackMaxAmount) ||
+                other.trackMaxAmount == trackMaxAmount) &&
+            (identical(other.requireTrustedByAdvertiser,
+                    requireTrustedByAdvertiser) ||
+                other.requireTrustedByAdvertiser ==
+                    requireTrustedByAdvertiser) &&
+            (identical(other.floating, floating) ||
+                other.floating == floating) &&
+            (identical(other.verifiedEmailRequired, verifiedEmailRequired) ||
+                other.verifiedEmailRequired == verifiedEmailRequired) &&
+            (identical(other.msg, msg) || other.msg == msg) &&
+            (identical(other.minAmount, minAmount) ||
+                other.minAmount == minAmount) &&
+            (identical(other.maxAmount, maxAmount) ||
+                other.maxAmount == maxAmount) &&
+            (identical(other.maxAmountAvailable, maxAmountAvailable) ||
+                other.maxAmountAvailable == maxAmountAvailable) &&
+            (identical(other.paymentWindowMinutes, paymentWindowMinutes) ||
+                other.paymentWindowMinutes == paymentWindowMinutes) &&
+            (identical(other.limitToFiatAmounts, limitToFiatAmounts) ||
+                other.limitToFiatAmounts == limitToFiatAmounts) &&
+            (identical(other.paymentMethodDetail, paymentMethodDetail) ||
+                other.paymentMethodDetail == paymentMethodDetail) &&
+            (identical(other.paymentMethodInfo, paymentMethodInfo) ||
+                other.paymentMethodInfo == paymentMethodInfo) &&
+            (identical(other.firstTimeLimitAsset, firstTimeLimitAsset) ||
+                other.firstTimeLimitAsset == firstTimeLimitAsset) &&
+            (identical(other.firstTimeLimitXmr, firstTimeLimitXmr) ||
+                other.firstTimeLimitXmr == firstTimeLimitXmr) &&
+            (identical(other.firstTimeLimitBtc, firstTimeLimitBtc) ||
+                other.firstTimeLimitBtc == firstTimeLimitBtc) &&
+            (identical(other.requireFeedbackScore, requireFeedbackScore) ||
+                other.requireFeedbackScore == requireFeedbackScore) &&
+            (identical(
+                    other.buyerSettlementFeeLevel, buyerSettlementFeeLevel) ||
+                other.buyerSettlementFeeLevel == buyerSettlementFeeLevel) &&
+            (identical(other.locationString, locationString) ||
+                other.locationString == locationString) &&
+            (identical(other.profile, profile) || other.profile == profile));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(asset),
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(createdAt),
-        const DeepCollectionEquality().hash(tempPrice),
-        const DeepCollectionEquality().hash(visible),
-        const DeepCollectionEquality().hash(lat),
-        const DeepCollectionEquality().hash(lon),
-        const DeepCollectionEquality().hash(countryCode),
-        const DeepCollectionEquality().hash(currency),
-        const DeepCollectionEquality().hash(tradeType),
-        const DeepCollectionEquality().hash(onlineProvider),
-        const DeepCollectionEquality().hash(buyerSettlementAddress),
-        const DeepCollectionEquality().hash(priceEquation),
-        const DeepCollectionEquality().hash(trackMaxAmount),
-        const DeepCollectionEquality().hash(requireTrustedByAdvertiser),
-        const DeepCollectionEquality().hash(floating),
-        const DeepCollectionEquality().hash(verifiedEmailRequired),
-        const DeepCollectionEquality().hash(msg),
-        const DeepCollectionEquality().hash(minAmount),
-        const DeepCollectionEquality().hash(maxAmount),
-        const DeepCollectionEquality().hash(maxAmountAvailable),
-        const DeepCollectionEquality().hash(paymentWindowMinutes),
-        const DeepCollectionEquality().hash(limitToFiatAmounts),
-        const DeepCollectionEquality().hash(paymentMethodDetail),
-        const DeepCollectionEquality().hash(paymentMethodInfo),
-        const DeepCollectionEquality().hash(firstTimeLimitAsset),
-        const DeepCollectionEquality().hash(firstTimeLimitXmr),
-        const DeepCollectionEquality().hash(firstTimeLimitBtc),
-        const DeepCollectionEquality().hash(requireFeedbackScore),
-        const DeepCollectionEquality().hash(buyerSettlementFeeLevel),
-        const DeepCollectionEquality().hash(locationString),
-        const DeepCollectionEquality().hash(profile)
+        asset,
+        id,
+        createdAt,
+        tempPrice,
+        visible,
+        lat,
+        lon,
+        countryCode,
+        currency,
+        tradeType,
+        onlineProvider,
+        buyerSettlementAddress,
+        priceEquation,
+        trackMaxAmount,
+        requireTrustedByAdvertiser,
+        floating,
+        verifiedEmailRequired,
+        msg,
+        minAmount,
+        maxAmount,
+        maxAmountAvailable,
+        paymentWindowMinutes,
+        limitToFiatAmounts,
+        paymentMethodDetail,
+        paymentMethodInfo,
+        firstTimeLimitAsset,
+        firstTimeLimitXmr,
+        firstTimeLimitBtc,
+        requireFeedbackScore,
+        buyerSettlementFeeLevel,
+        locationString,
+        profile
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
       __$$_AdModelCopyWithImpl<_$_AdModel>(this, _$identity);
 

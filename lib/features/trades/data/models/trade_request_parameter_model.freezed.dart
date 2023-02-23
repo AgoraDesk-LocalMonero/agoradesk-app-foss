@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'trade_request_parameter_model.dart';
 
@@ -44,7 +44,9 @@ mixin _$TradeRequestParameterModel {
 abstract class $TradeRequestParameterModelCopyWith<$Res> {
   factory $TradeRequestParameterModelCopyWith(TradeRequestParameterModel value,
           $Res Function(TradeRequestParameterModel) then) =
-      _$TradeRequestParameterModelCopyWithImpl<$Res>;
+      _$TradeRequestParameterModelCopyWithImpl<$Res,
+          TradeRequestParameterModel>;
+  @useResult
   $Res call(
       {int? page,
       int? size,
@@ -59,14 +61,17 @@ abstract class $TradeRequestParameterModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TradeRequestParameterModelCopyWithImpl<$Res>
+class _$TradeRequestParameterModelCopyWithImpl<$Res,
+        $Val extends TradeRequestParameterModel>
     implements $TradeRequestParameterModelCopyWith<$Res> {
   _$TradeRequestParameterModelCopyWithImpl(this._value, this._then);
 
-  final TradeRequestParameterModel _value;
   // ignore: unused_field
-  final $Res Function(TradeRequestParameterModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? page = freezed,
@@ -77,31 +82,31 @@ class _$TradeRequestParameterModelCopyWithImpl<$Res>
     Object? assetCode = freezed,
   }) {
     return _then(_value.copyWith(
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      size: size == freezed
+      size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
               as int?,
-      paymentMethodCode: paymentMethodCode == freezed
+      paymentMethodCode: freezed == paymentMethodCode
           ? _value.paymentMethodCode
           : paymentMethodCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      countryCode: countryCode == freezed
+      countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      currencyCode: currencyCode == freezed
+      currencyCode: freezed == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      assetCode: assetCode == freezed
+      assetCode: freezed == assetCode
           ? _value.assetCode
           : assetCode // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -113,6 +118,7 @@ abstract class _$$_TradeRequestParameterModelCopyWith<$Res>
           $Res Function(_$_TradeRequestParameterModel) then) =
       __$$_TradeRequestParameterModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? page,
       int? size,
@@ -128,17 +134,15 @@ abstract class _$$_TradeRequestParameterModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_TradeRequestParameterModelCopyWithImpl<$Res>
-    extends _$TradeRequestParameterModelCopyWithImpl<$Res>
+    extends _$TradeRequestParameterModelCopyWithImpl<$Res,
+        _$_TradeRequestParameterModel>
     implements _$$_TradeRequestParameterModelCopyWith<$Res> {
   __$$_TradeRequestParameterModelCopyWithImpl(
       _$_TradeRequestParameterModel _value,
       $Res Function(_$_TradeRequestParameterModel) _then)
-      : super(_value, (v) => _then(v as _$_TradeRequestParameterModel));
+      : super(_value, _then);
 
-  @override
-  _$_TradeRequestParameterModel get _value =>
-      super._value as _$_TradeRequestParameterModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? page = freezed,
@@ -149,27 +153,27 @@ class __$$_TradeRequestParameterModelCopyWithImpl<$Res>
     Object? assetCode = freezed,
   }) {
     return _then(_$_TradeRequestParameterModel(
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      size: size == freezed
+      size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
               as int?,
-      paymentMethodCode: paymentMethodCode == freezed
+      paymentMethodCode: freezed == paymentMethodCode
           ? _value.paymentMethodCode
           : paymentMethodCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      countryCode: countryCode == freezed
+      countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      currencyCode: currencyCode == freezed
+      currencyCode: freezed == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      assetCode: assetCode == freezed
+      assetCode: freezed == assetCode
           ? _value.assetCode
           : assetCode // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -225,30 +229,26 @@ class _$_TradeRequestParameterModel implements _TradeRequestParameterModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TradeRequestParameterModel &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.size, size) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentMethodCode, paymentMethodCode) &&
-            const DeepCollectionEquality()
-                .equals(other.countryCode, countryCode) &&
-            const DeepCollectionEquality()
-                .equals(other.currencyCode, currencyCode) &&
-            const DeepCollectionEquality().equals(other.assetCode, assetCode));
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.size, size) || other.size == size) &&
+            (identical(other.paymentMethodCode, paymentMethodCode) ||
+                other.paymentMethodCode == paymentMethodCode) &&
+            (identical(other.countryCode, countryCode) ||
+                other.countryCode == countryCode) &&
+            (identical(other.currencyCode, currencyCode) ||
+                other.currencyCode == currencyCode) &&
+            (identical(other.assetCode, assetCode) ||
+                other.assetCode == assetCode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(size),
-      const DeepCollectionEquality().hash(paymentMethodCode),
-      const DeepCollectionEquality().hash(countryCode),
-      const DeepCollectionEquality().hash(currencyCode),
-      const DeepCollectionEquality().hash(assetCode));
+  int get hashCode => Object.hash(runtimeType, page, size, paymentMethodCode,
+      countryCode, currencyCode, assetCode);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TradeRequestParameterModelCopyWith<_$_TradeRequestParameterModel>
       get copyWith => __$$_TradeRequestParameterModelCopyWithImpl<
           _$_TradeRequestParameterModel>(this, _$identity);

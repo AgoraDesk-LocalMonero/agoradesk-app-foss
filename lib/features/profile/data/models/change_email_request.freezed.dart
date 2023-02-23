@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'change_email_request.dart';
 
@@ -37,7 +37,8 @@ mixin _$ChangeEmailRequest {
 abstract class $ChangeEmailRequestCopyWith<$Res> {
   factory $ChangeEmailRequestCopyWith(
           ChangeEmailRequest value, $Res Function(ChangeEmailRequest) then) =
-      _$ChangeEmailRequestCopyWithImpl<$Res>;
+      _$ChangeEmailRequestCopyWithImpl<$Res, ChangeEmailRequest>;
+  @useResult
   $Res call(
       {String? email,
       String? password,
@@ -46,14 +47,16 @@ abstract class $ChangeEmailRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChangeEmailRequestCopyWithImpl<$Res>
+class _$ChangeEmailRequestCopyWithImpl<$Res, $Val extends ChangeEmailRequest>
     implements $ChangeEmailRequestCopyWith<$Res> {
   _$ChangeEmailRequestCopyWithImpl(this._value, this._then);
 
-  final ChangeEmailRequest _value;
   // ignore: unused_field
-  final $Res Function(ChangeEmailRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? email = freezed,
@@ -62,23 +65,23 @@ class _$ChangeEmailRequestCopyWithImpl<$Res>
     Object? captchaCookie = freezed,
   }) {
     return _then(_value.copyWith(
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      captcha: captcha == freezed
+      captcha: freezed == captcha
           ? _value.captcha
           : captcha // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaCookie: captchaCookie == freezed
+      captchaCookie: freezed == captchaCookie
           ? _value.captchaCookie
           : captchaCookie // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -89,6 +92,7 @@ abstract class _$$_ChangeEmailRequestCopyWith<$Res>
           $Res Function(_$_ChangeEmailRequest) then) =
       __$$_ChangeEmailRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? email,
       String? password,
@@ -98,15 +102,13 @@ abstract class _$$_ChangeEmailRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$_ChangeEmailRequestCopyWithImpl<$Res>
-    extends _$ChangeEmailRequestCopyWithImpl<$Res>
+    extends _$ChangeEmailRequestCopyWithImpl<$Res, _$_ChangeEmailRequest>
     implements _$$_ChangeEmailRequestCopyWith<$Res> {
   __$$_ChangeEmailRequestCopyWithImpl(
       _$_ChangeEmailRequest _value, $Res Function(_$_ChangeEmailRequest) _then)
-      : super(_value, (v) => _then(v as _$_ChangeEmailRequest));
+      : super(_value, _then);
 
-  @override
-  _$_ChangeEmailRequest get _value => super._value as _$_ChangeEmailRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? email = freezed,
@@ -115,19 +117,19 @@ class __$$_ChangeEmailRequestCopyWithImpl<$Res>
     Object? captchaCookie = freezed,
   }) {
     return _then(_$_ChangeEmailRequest(
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      captcha: captcha == freezed
+      captcha: freezed == captcha
           ? _value.captcha
           : captcha // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaCookie: captchaCookie == freezed
+      captchaCookie: freezed == captchaCookie
           ? _value.captchaCookie
           : captchaCookie // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -169,24 +171,22 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeEmailRequest &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality().equals(other.captcha, captcha) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaCookie, captchaCookie));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.captcha, captcha) || other.captcha == captcha) &&
+            (identical(other.captchaCookie, captchaCookie) ||
+                other.captchaCookie == captchaCookie));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(captcha),
-      const DeepCollectionEquality().hash(captchaCookie));
+  int get hashCode =>
+      Object.hash(runtimeType, email, password, captcha, captchaCookie);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
       __$$_ChangeEmailRequestCopyWithImpl<_$_ChangeEmailRequest>(
           this, _$identity);

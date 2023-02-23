@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notification_model.dart';
 
@@ -41,7 +41,8 @@ mixin _$ActivityNotificationModel {
 abstract class $ActivityNotificationModelCopyWith<$Res> {
   factory $ActivityNotificationModelCopyWith(ActivityNotificationModel value,
           $Res Function(ActivityNotificationModel) then) =
-      _$ActivityNotificationModelCopyWithImpl<$Res>;
+      _$ActivityNotificationModelCopyWithImpl<$Res, ActivityNotificationModel>;
+  @useResult
   $Res call(
       {String id,
       bool read,
@@ -55,54 +56,57 @@ abstract class $ActivityNotificationModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ActivityNotificationModelCopyWithImpl<$Res>
+class _$ActivityNotificationModelCopyWithImpl<$Res,
+        $Val extends ActivityNotificationModel>
     implements $ActivityNotificationModelCopyWith<$Res> {
   _$ActivityNotificationModelCopyWithImpl(this._value, this._then);
 
-  final ActivityNotificationModel _value;
   // ignore: unused_field
-  final $Res Function(ActivityNotificationModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? read = freezed,
-    Object? createdAt = freezed,
+    Object? id = null,
+    Object? read = null,
+    Object? createdAt = null,
     Object? contactId = freezed,
-    Object? url = freezed,
-    Object? msg = freezed,
-    Object? type = freezed,
+    Object? url = null,
+    Object? msg = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      contactId: contactId == freezed
+      contactId: freezed == contactId
           ? _value.contactId
           : contactId // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      msg: msg == freezed
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NotificationMessageType,
-    ));
+    ) as $Val);
   }
 }
 
@@ -114,6 +118,7 @@ abstract class _$$_ActivityNotificationModelCopyWith<$Res>
           $Res Function(_$_ActivityNotificationModel) then) =
       __$$_ActivityNotificationModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       bool read,
@@ -128,53 +133,51 @@ abstract class _$$_ActivityNotificationModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_ActivityNotificationModelCopyWithImpl<$Res>
-    extends _$ActivityNotificationModelCopyWithImpl<$Res>
+    extends _$ActivityNotificationModelCopyWithImpl<$Res,
+        _$_ActivityNotificationModel>
     implements _$$_ActivityNotificationModelCopyWith<$Res> {
   __$$_ActivityNotificationModelCopyWithImpl(
       _$_ActivityNotificationModel _value,
       $Res Function(_$_ActivityNotificationModel) _then)
-      : super(_value, (v) => _then(v as _$_ActivityNotificationModel));
+      : super(_value, _then);
 
-  @override
-  _$_ActivityNotificationModel get _value =>
-      super._value as _$_ActivityNotificationModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? read = freezed,
-    Object? createdAt = freezed,
+    Object? id = null,
+    Object? read = null,
+    Object? createdAt = null,
     Object? contactId = freezed,
-    Object? url = freezed,
-    Object? msg = freezed,
-    Object? type = freezed,
+    Object? url = null,
+    Object? msg = null,
+    Object? type = null,
   }) {
     return _then(_$_ActivityNotificationModel(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      contactId: contactId == freezed
+      contactId: freezed == contactId
           ? _value.contactId
           : contactId // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      msg: msg == freezed
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NotificationMessageType,
@@ -228,29 +231,25 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ActivityNotificationModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.contactId, contactId) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.msg, msg) &&
-            const DeepCollectionEquality().equals(other.type, type));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.contactId, contactId) ||
+                other.contactId == contactId) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.msg, msg) || other.msg == msg) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(contactId),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(msg),
-      const DeepCollectionEquality().hash(type));
+  int get hashCode =>
+      Object.hash(runtimeType, id, read, createdAt, contactId, url, msg, type);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ActivityNotificationModelCopyWith<_$_ActivityNotificationModel>
       get copyWith => __$$_ActivityNotificationModelCopyWithImpl<
           _$_ActivityNotificationModel>(this, _$identity);

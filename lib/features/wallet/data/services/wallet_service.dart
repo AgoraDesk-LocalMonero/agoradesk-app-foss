@@ -26,9 +26,11 @@ class WalletService {
     String requestOption = asset == Asset.BTC ? '' : '/${asset.key()}';
     try {
       final resp = await _api.client.get('/wallet-balance$requestOption');
+      print('+++++++++++++++++++++++++++++++++++++11 - ${resp.data}');
       if (resp.statusCode == 200) {
-        final wallet = WalletBalanceModel.fromJson(resp.data['data']);
-        return Either.right(wallet);
+        final balance = WalletBalanceModel.fromJson(resp.data['data']);
+        print('+++++++++++++++++++++++++++++++++++++222 - ${balance.balance}');
+        return Either.right(balance);
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
         return Either.left(apiError);

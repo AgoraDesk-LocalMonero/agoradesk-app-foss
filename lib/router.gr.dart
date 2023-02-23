@@ -10,6 +10,7 @@
 //
 // ignore_for_file: type=lint
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i54;
 import 'package:flutter/cupertino.dart' as _i57;
 import 'package:flutter/material.dart' as _i55;
@@ -84,10 +85,10 @@ import 'features/wallet/screens/transactions_screen.dart' as _i23;
 import 'features/wallet/screens/wallet_screen.dart' as _i49;
 
 class AppRouter extends _i54.RootStackRouter {
-  AppRouter(
-      {_i55.GlobalKey<_i55.NavigatorState>? navigatorKey,
-      required this.authGuard})
-      : super(navigatorKey);
+  AppRouter({
+    _i55.GlobalKey<_i55.NavigatorState>? navigatorKey,
+    required this.authGuard,
+  }) : super(navigatorKey);
 
   final _i56.AuthGuard authGuard;
 
@@ -95,638 +96,917 @@ class AppRouter extends _i54.RootStackRouter {
   final Map<String, _i54.PageFactory> pagesMap = {
     MainScreenRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i1.MainScreen(),
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i1.MainScreen(),
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     WelcomeRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i2.WelcomeScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i2.WelcomeScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     WelcomeSlidesRoute.name: (routeData) {
       final args = routeData.argsAs<WelcomeSlidesRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i3.WelcomeSlidesScreen(key: args.key, isBuy: args.isBuy),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i3.WelcomeSlidesScreen(
+          key: args.key,
+          isBuy: args.isBuy,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     SignUpRoute.name: (routeData) {
       final args = routeData.argsAs<SignUpRouteArgs>(
           orElse: () => const SignUpRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i4.SignUpScreen(key: args.key, displaySkip: args.displaySkip),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i4.SignUpScreen(
+          key: args.key,
+          displaySkip: args.displaySkip,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     LoginRoute.name: (routeData) {
       final args = routeData.argsAs<LoginRouteArgs>(
           orElse: () => const LoginRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i5.LoginScreen(key: args.key, displaySkip: args.displaySkip),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i5.LoginScreen(
+          key: args.key,
+          displaySkip: args.displaySkip,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     ForgotPasswordRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i6.ForgotPasswordScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i6.ForgotPasswordScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     ResetPasswordRoute.name: (routeData) {
       final args = routeData.argsAs<ResetPasswordRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i7.ResetPasswordScreen(key: args.key, token: args.token),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i7.ResetPasswordScreen(
+          key: args.key,
+          token: args.token,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     PinCodeSetRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i8.PinCodeSetScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i8.PinCodeSetScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     PinCodeCheckRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i9.PinCodeCheckScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i9.PinCodeCheckScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     PostAdRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i10.PostAdScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i10.PostAdScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AdsSettingsRoute.name: (routeData) {
       final args = routeData.argsAs<AdsSettingsRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i11.AdsSettingsScreen(key: args.key, model: args.model),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i11.AdsSettingsScreen(
+          key: args.key,
+          model: args.model,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AdInfoRoute.name: (routeData) {
       final args = routeData.argsAs<AdInfoRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i12.AdInfoScreen(
-              key: args.key,
-              ad: args.ad,
-              onGlobalVacation: args.onGlobalVacation,
-              adsViewModel: args.adsViewModel),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i12.AdInfoScreen(
+          key: args.key,
+          ad: args.ad,
+          onGlobalVacation: args.onGlobalVacation,
+          adsViewModel: args.adsViewModel,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AdEditRoute.name: (routeData) {
       final args = routeData.argsAs<AdEditRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i13.AdEditScreen(key: args.key, ad: args.ad),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i13.AdEditScreen(
+          key: args.key,
+          ad: args.ad,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     MarketHelpRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i14.MarketHelpScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i14.MarketHelpScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     MarketAdInfoRoute.name: (routeData) {
       final args = routeData.argsAs<MarketAdInfoRouteArgs>(
           orElse: () => const MarketAdInfoRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i15.MarketAdInfoScreen(
-              key: args.key, ad: args.ad, adId: args.adId),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i15.MarketAdInfoScreen(
+          key: args.key,
+          ad: args.ad,
+          adId: args.adId,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     InitiateTradeRoute.name: (routeData) {
       final args = routeData.argsAs<InitiateTradeRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i16.InitiateTradeScreen(key: args.key, model: args.model),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i16.InitiateTradeScreen(
+          key: args.key,
+          model: args.model,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TraderProfileRoute.name: (routeData) {
       final args = routeData.argsAs<TraderProfileRouteArgs>(
           orElse: () => const TraderProfileRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i17.TraderProfileScreen(
-              key: args.key,
-              profileModel: args.profileModel,
-              username: args.username),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i17.TraderProfileScreen(
+          key: args.key,
+          profileModel: args.profileModel,
+          username: args.username,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     FeedbacksRoute.name: (routeData) {
       final args = routeData.argsAs<FeedbacksRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i18.FeedbacksScreen(
-              key: args.key,
-              username: args.username,
-              feedbacks: args.feedbacks),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i18.FeedbacksScreen(
+          key: args.key,
+          username: args.username,
+          feedbacks: args.feedbacks,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     UserAdsRoute.name: (routeData) {
       final args = routeData.argsAs<UserAdsRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i19.UserAdsScreen(
-              key: args.key, username: args.username, ads: args.ads),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i19.UserAdsScreen(
+          key: args.key,
+          username: args.username,
+          ads: args.ads,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TradesWithUserRoute.name: (routeData) {
       final args = routeData.argsAs<TradesWithUserRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child:
-              _i20.TradesWithUserScreen(key: args.key, username: args.username),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i20.TradesWithUserScreen(
+          key: args.key,
+          username: args.username,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TradeRoute.name: (routeData) {
       final args = routeData.argsAs<TradeRouteArgs>(
           orElse: () => const TradeRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i21.TradeScreen(
-              key: args.key,
-              tradeModel: args.tradeModel,
-              tradeId: args.tradeId),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i21.TradeScreen(
+          key: args.key,
+          tradeModel: args.tradeModel,
+          tradeId: args.tradeId,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     WebviewRoute.name: (routeData) {
       final args = routeData.argsAs<WebviewRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i22.WebviewScreen(
-              key: args.key,
-              token: args.token,
-              cookies: args.cookies,
-              isFromCaptchaEvent: args.isFromCaptchaEvent,
-              url: args.url),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i22.WebviewScreen(
+          key: args.key,
+          token: args.token,
+          cookies: args.cookies,
+          isFromCaptchaEvent: args.isFromCaptchaEvent,
+          url: args.url,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TransactionsRoute.name: (routeData) {
       final args = routeData.argsAs<TransactionsRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i23.TransactionsScreen(
-              key: args.key, transactions: args.transactions),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i23.TransactionsScreen(
+          key: args.key,
+          transactions: args.transactions,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TransactionRoute.name: (routeData) {
       final args = routeData.argsAs<TransactionRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i24.TransactionScreen(
-              key: args.key, transaction: args.transaction),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i24.TransactionScreen(
+          key: args.key,
+          transaction: args.transaction,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     IncomingDepositRoute.name: (routeData) {
       final args = routeData.argsAs<IncomingDepositRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child:
-              _i25.IncomingDepositScreen(key: args.key, deposit: args.deposit),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i25.IncomingDepositScreen(
+          key: args.key,
+          deposit: args.deposit,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     SendAssetFirstRoute.name: (routeData) {
       final args = routeData.argsAs<SendAssetFirstRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i26.SendAssetFirstScreen(
-              key: args.key,
-              price: args.price,
-              balance: args.balance,
-              asset: args.asset),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i26.SendAssetFirstScreen(
+          key: args.key,
+          price: args.price,
+          balance: args.balance,
+          asset: args.asset,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     SendAssetSecondRoute.name: (routeData) {
       final args = routeData.argsAs<SendAssetSecondRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i27.SendAssetSecondScreen(key: args.key, model: args.model),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i27.SendAssetSecondScreen(
+          key: args.key,
+          model: args.model,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     SendAssetThirdRoute.name: (routeData) {
       final args = routeData.argsAs<SendAssetThirdRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i28.SendAssetThirdScreen(key: args.key, model: args.model),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i28.SendAssetThirdScreen(
+          key: args.key,
+          model: args.model,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     ReceiveAssetRoute.name: (routeData) {
       final args = routeData.argsAs<ReceiveAssetRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i29.ReceiveAssetScreen(
-              key: args.key, address: args.address, asset: args.asset),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i29.ReceiveAssetScreen(
+          key: args.key,
+          address: args.address,
+          asset: args.asset,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     NotificationsRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i30.NotificationsScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideBottom,
-          durationInMilliseconds: 250,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i30.NotificationsScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideBottom,
+        durationInMilliseconds: 250,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AddressBookRoute.name: (routeData) {
       final args = routeData.argsAs<AddressBookRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i31.AddressBookScreen(key: args.key, asset: args.asset),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 250,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i31.AddressBookScreen(
+          key: args.key,
+          asset: args.asset,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 250,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AddAddressRoute.name: (routeData) {
       final args = routeData.argsAs<AddAddressRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i32.AddAddressScreen(key: args.key, asset: args.asset),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 250,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i32.AddAddressScreen(
+          key: args.key,
+          asset: args.asset,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 250,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     SendAssetAddressBookRoute.name: (routeData) {
       final args = routeData.argsAs<SendAssetAddressBookRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child:
-              _i33.SendAssetAddressBookScreen(key: args.key, model: args.model),
-          transitionsBuilder: _i54.TransitionsBuilders.slideBottom,
-          durationInMilliseconds: 250,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i33.SendAssetAddressBookScreen(
+          key: args.key,
+          model: args.model,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideBottom,
+        durationInMilliseconds: 250,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     MyProfileRoute.name: (routeData) {
       final args = routeData.argsAs<MyProfileRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i34.MyProfileScreen(key: args.key, username: args.username),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i34.MyProfileScreen(
+          key: args.key,
+          username: args.username,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     LinkAccountRoute.name: (routeData) {
       final args = routeData.argsAs<LinkAccountRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i35.LinkAccountScreen(
-              key: args.key,
-              reputationImportViewModel: args.reputationImportViewModel,
-              reputationPlatform: args.reputationPlatform),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i35.LinkAccountScreen(
+          key: args.key,
+          reputationImportViewModel: args.reputationImportViewModel,
+          reputationPlatform: args.reputationPlatform,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TradingPartnersRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i36.TradingPartnersScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i36.TradingPartnersScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AffiliateProgramRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i37.AffiliateProgramScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i37.AffiliateProgramScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     CouponsRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i38.CouponsScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i38.CouponsScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     EmailRoute.name: (routeData) {
       final args = routeData.argsAs<EmailRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i39.EmailScreen(key: args.key, verified: args.verified),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i39.EmailScreen(
+          key: args.key,
+          verified: args.verified,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     ChangePasswordRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i40.ChangePasswordScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i40.ChangePasswordScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TwoFactorAuthRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i41.TwoFactorAuthScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i41.TwoFactorAuthScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     ManageTwoFactorAuthRoute.name: (routeData) {
       final args = routeData.argsAs<ManageTwoFactorAuthRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i42.ManageTwoFactorAuthScreen(
-              key: args.key, enabled: args.enabled, model: args.model),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i42.ManageTwoFactorAuthScreen(
+          key: args.key,
+          enabled: args.enabled,
+          model: args.model,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     Enable2faRoute.name: (routeData) {
       final args = routeData.argsAs<Enable2faRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i43.Enable2faScreen(key: args.key, secretUri: args.secretUri),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i43.Enable2faScreen(
+          key: args.key,
+          secretUri: args.secretUri,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     Disable2faRoute.name: (routeData) {
       final args = routeData.argsAs<Disable2faRouteArgs>();
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i44.Disable2faScreen(key: args.key, password: args.password),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i44.Disable2faScreen(
+          key: args.key,
+          password: args.password,
+        ),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     LanguageRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i45.LanguageScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i45.LanguageScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     CountryRoute.name: (routeData) {
       final args = routeData.argsAs<CountryRouteArgs>(
           orElse: () => const CountryRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i46.CountryScreen(key: args.key),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i46.CountryScreen(key: args.key),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     DefaultTabRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i47.DefaultTabScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i47.DefaultTabScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     ProxyRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i48.ProxyScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i48.ProxyScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     WalletRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i49.WalletScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 300,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i49.WalletScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     TradesRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i50.TradesScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 300,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i50.TradesScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     MarketRoute.name: (routeData) {
       final args = routeData.argsAs<MarketRouteArgs>(
           orElse: () => const MarketRouteArgs());
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: _i51.MarketScreen(key: args.key),
-          transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 300,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: _i51.MarketScreen(key: args.key),
+        transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AdsRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i52.AdsScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 300,
-          opaque: true,
-          barrierDismissible: false);
+        routeData: routeData,
+        child: const _i52.AdsScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
+        barrierDismissible: false,
+      );
     },
     AccountRoute.name: (routeData) {
       return _i54.CustomPage<dynamic>(
-          routeData: routeData,
-          child: const _i53.AccountScreen(),
-          transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 300,
-          opaque: true,
-          barrierDismissible: false);
-    }
+        routeData: routeData,
+        child: const _i53.AccountScreen(),
+        transitionsBuilder: _i54.TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 300,
+        opaque: true,
+        barrierDismissible: false,
+      );
+    },
   };
 
   @override
   List<_i54.RouteConfig> get routes => [
-        _i54.RouteConfig(MainScreenRoute.name, path: '/', guards: [
-          authGuard
-        ], children: [
-          _i54.RouteConfig('#redirect',
+        _i54.RouteConfig(
+          MainScreenRoute.name,
+          path: '/',
+          guards: [authGuard],
+          children: [
+            _i54.RouteConfig(
+              '#redirect',
               path: '',
               parent: MainScreenRoute.name,
               redirectTo: 'market',
-              fullMatch: true),
-          _i54.RouteConfig(WalletRoute.name,
-              path: 'wallet', parent: MainScreenRoute.name),
-          _i54.RouteConfig(TradesRoute.name,
-              path: 'trades', parent: MainScreenRoute.name),
-          _i54.RouteConfig(MarketRoute.name,
-              path: 'market', parent: MainScreenRoute.name),
-          _i54.RouteConfig(AdsRoute.name,
-              path: 'ads', parent: MainScreenRoute.name),
-          _i54.RouteConfig(AccountRoute.name,
-              path: 'profile', parent: MainScreenRoute.name)
-        ]),
-        _i54.RouteConfig('*#redirect',
-            path: '*', redirectTo: '/', fullMatch: true),
-        _i54.RouteConfig(WelcomeRoute.name, path: 'auth/welcomeScreen'),
-        _i54.RouteConfig(WelcomeSlidesRoute.name, path: 'auth/welcomeSlides'),
-        _i54.RouteConfig(SignUpRoute.name, path: 'auth/signUp'),
-        _i54.RouteConfig(LoginRoute.name, path: 'auth/login'),
-        _i54.RouteConfig(ForgotPasswordRoute.name, path: 'auth/forgotPassword'),
-        _i54.RouteConfig(ResetPasswordRoute.name, path: 'auth/resetPassword'),
-        _i54.RouteConfig(PinCodeSetRoute.name, path: 'auth/pinCodeSet'),
-        _i54.RouteConfig(PinCodeCheckRoute.name, path: 'auth/pinCodeCheck'),
-        _i54.RouteConfig(PostAdRoute.name, path: 'ads/postAd'),
-        _i54.RouteConfig(AdsSettingsRoute.name, path: 'ads/adsSettings'),
-        _i54.RouteConfig(AdInfoRoute.name, path: 'ads/adInfo'),
-        _i54.RouteConfig(AdEditRoute.name, path: 'ads/adEdit'),
-        _i54.RouteConfig(MarketHelpRoute.name, path: 'market/help'),
-        _i54.RouteConfig(MarketAdInfoRoute.name, path: 'market/adInfo'),
-        _i54.RouteConfig(InitiateTradeRoute.name, path: 'market/initiateTrade'),
-        _i54.RouteConfig(TraderProfileRoute.name, path: 'account/profile'),
-        _i54.RouteConfig(FeedbacksRoute.name, path: 'account/feedbacksToUser'),
-        _i54.RouteConfig(UserAdsRoute.name, path: 'account/userAds'),
-        _i54.RouteConfig(TradesWithUserRoute.name,
-            path: 'account/tradesWithUser'),
-        _i54.RouteConfig(TradeRoute.name, path: 'trades/trade'),
-        _i54.RouteConfig(WebviewRoute.name, path: 'webviewScreen'),
-        _i54.RouteConfig(TransactionsRoute.name, path: 'wallet/transactions'),
-        _i54.RouteConfig(TransactionRoute.name, path: 'wallet/transaction'),
-        _i54.RouteConfig(IncomingDepositRoute.name,
-            path: 'wallet/incomingDeposit'),
-        _i54.RouteConfig(SendAssetFirstRoute.name, path: 'wallet/sendAssetOne'),
-        _i54.RouteConfig(SendAssetSecondRoute.name,
-            path: 'wallet/sendAssetTwo'),
-        _i54.RouteConfig(SendAssetThirdRoute.name,
-            path: 'wallet/sendAssetThree'),
-        _i54.RouteConfig(ReceiveAssetRoute.name,
-            path: 'wallet/receiveAssetThree'),
-        _i54.RouteConfig(NotificationsRoute.name, path: 'notificationsScreen'),
-        _i54.RouteConfig(AddressBookRoute.name, path: 'addressBookScreen'),
-        _i54.RouteConfig(AddAddressRoute.name, path: 'addAddressScreen'),
-        _i54.RouteConfig(SendAssetAddressBookRoute.name,
-            path: 'sendAssetAddressBookScreen'),
-        _i54.RouteConfig(MyProfileRoute.name, path: 'profile/myProfile'),
-        _i54.RouteConfig(LinkAccountRoute.name, path: 'profile/linkAccount'),
-        _i54.RouteConfig(TradingPartnersRoute.name,
-            path: 'profile/tradingPartners'),
-        _i54.RouteConfig(AffiliateProgramRoute.name,
-            path: 'profile/affiliateProgram'),
-        _i54.RouteConfig(CouponsRoute.name, path: 'profile/coupons'),
-        _i54.RouteConfig(EmailRoute.name, path: 'profile/email'),
-        _i54.RouteConfig(ChangePasswordRoute.name,
-            path: 'profile/changePassword'),
-        _i54.RouteConfig(TwoFactorAuthRoute.name,
-            path: 'profile/twoFactorAuth'),
-        _i54.RouteConfig(ManageTwoFactorAuthRoute.name,
-            path: 'profile/manageTwoFactorAuth'),
-        _i54.RouteConfig(Enable2faRoute.name,
-            path: 'profile/enableTwoFactorAuth'),
-        _i54.RouteConfig(Disable2faRoute.name,
-            path: 'profile/disableTwoFactorAuth'),
-        _i54.RouteConfig(LanguageRoute.name, path: 'profile/language'),
-        _i54.RouteConfig(CountryRoute.name, path: 'profile/country'),
-        _i54.RouteConfig(DefaultTabRoute.name, path: 'profile/defaultTab'),
-        _i54.RouteConfig(ProxyRoute.name, path: 'profile/proxy')
+              fullMatch: true,
+            ),
+            _i54.RouteConfig(
+              WalletRoute.name,
+              path: 'wallet',
+              parent: MainScreenRoute.name,
+            ),
+            _i54.RouteConfig(
+              TradesRoute.name,
+              path: 'trades',
+              parent: MainScreenRoute.name,
+            ),
+            _i54.RouteConfig(
+              MarketRoute.name,
+              path: 'market',
+              parent: MainScreenRoute.name,
+            ),
+            _i54.RouteConfig(
+              AdsRoute.name,
+              path: 'ads',
+              parent: MainScreenRoute.name,
+            ),
+            _i54.RouteConfig(
+              AccountRoute.name,
+              path: 'profile',
+              parent: MainScreenRoute.name,
+            ),
+          ],
+        ),
+        _i54.RouteConfig(
+          '*#redirect',
+          path: '*',
+          redirectTo: '/',
+          fullMatch: true,
+        ),
+        _i54.RouteConfig(
+          WelcomeRoute.name,
+          path: 'auth/welcomeScreen',
+        ),
+        _i54.RouteConfig(
+          WelcomeSlidesRoute.name,
+          path: 'auth/welcomeSlides',
+        ),
+        _i54.RouteConfig(
+          SignUpRoute.name,
+          path: 'auth/signUp',
+        ),
+        _i54.RouteConfig(
+          LoginRoute.name,
+          path: 'auth/login',
+        ),
+        _i54.RouteConfig(
+          ForgotPasswordRoute.name,
+          path: 'auth/forgotPassword',
+        ),
+        _i54.RouteConfig(
+          ResetPasswordRoute.name,
+          path: 'auth/resetPassword',
+        ),
+        _i54.RouteConfig(
+          PinCodeSetRoute.name,
+          path: 'auth/pinCodeSet',
+        ),
+        _i54.RouteConfig(
+          PinCodeCheckRoute.name,
+          path: 'auth/pinCodeCheck',
+        ),
+        _i54.RouteConfig(
+          PostAdRoute.name,
+          path: 'ads/postAd',
+        ),
+        _i54.RouteConfig(
+          AdsSettingsRoute.name,
+          path: 'ads/adsSettings',
+        ),
+        _i54.RouteConfig(
+          AdInfoRoute.name,
+          path: 'ads/adInfo',
+        ),
+        _i54.RouteConfig(
+          AdEditRoute.name,
+          path: 'ads/adEdit',
+        ),
+        _i54.RouteConfig(
+          MarketHelpRoute.name,
+          path: 'market/help',
+        ),
+        _i54.RouteConfig(
+          MarketAdInfoRoute.name,
+          path: 'market/adInfo',
+        ),
+        _i54.RouteConfig(
+          InitiateTradeRoute.name,
+          path: 'market/initiateTrade',
+        ),
+        _i54.RouteConfig(
+          TraderProfileRoute.name,
+          path: 'account/profile',
+        ),
+        _i54.RouteConfig(
+          FeedbacksRoute.name,
+          path: 'account/feedbacksToUser',
+        ),
+        _i54.RouteConfig(
+          UserAdsRoute.name,
+          path: 'account/userAds',
+        ),
+        _i54.RouteConfig(
+          TradesWithUserRoute.name,
+          path: 'account/tradesWithUser',
+        ),
+        _i54.RouteConfig(
+          TradeRoute.name,
+          path: 'trades/trade',
+        ),
+        _i54.RouteConfig(
+          WebviewRoute.name,
+          path: 'webviewScreen',
+        ),
+        _i54.RouteConfig(
+          TransactionsRoute.name,
+          path: 'wallet/transactions',
+        ),
+        _i54.RouteConfig(
+          TransactionRoute.name,
+          path: 'wallet/transaction',
+        ),
+        _i54.RouteConfig(
+          IncomingDepositRoute.name,
+          path: 'wallet/incomingDeposit',
+        ),
+        _i54.RouteConfig(
+          SendAssetFirstRoute.name,
+          path: 'wallet/sendAssetOne',
+        ),
+        _i54.RouteConfig(
+          SendAssetSecondRoute.name,
+          path: 'wallet/sendAssetTwo',
+        ),
+        _i54.RouteConfig(
+          SendAssetThirdRoute.name,
+          path: 'wallet/sendAssetThree',
+        ),
+        _i54.RouteConfig(
+          ReceiveAssetRoute.name,
+          path: 'wallet/receiveAssetThree',
+        ),
+        _i54.RouteConfig(
+          NotificationsRoute.name,
+          path: 'notificationsScreen',
+        ),
+        _i54.RouteConfig(
+          AddressBookRoute.name,
+          path: 'addressBookScreen',
+        ),
+        _i54.RouteConfig(
+          AddAddressRoute.name,
+          path: 'addAddressScreen',
+        ),
+        _i54.RouteConfig(
+          SendAssetAddressBookRoute.name,
+          path: 'sendAssetAddressBookScreen',
+        ),
+        _i54.RouteConfig(
+          MyProfileRoute.name,
+          path: 'profile/myProfile',
+        ),
+        _i54.RouteConfig(
+          LinkAccountRoute.name,
+          path: 'profile/linkAccount',
+        ),
+        _i54.RouteConfig(
+          TradingPartnersRoute.name,
+          path: 'profile/tradingPartners',
+        ),
+        _i54.RouteConfig(
+          AffiliateProgramRoute.name,
+          path: 'profile/affiliateProgram',
+        ),
+        _i54.RouteConfig(
+          CouponsRoute.name,
+          path: 'profile/coupons',
+        ),
+        _i54.RouteConfig(
+          EmailRoute.name,
+          path: 'profile/email',
+        ),
+        _i54.RouteConfig(
+          ChangePasswordRoute.name,
+          path: 'profile/changePassword',
+        ),
+        _i54.RouteConfig(
+          TwoFactorAuthRoute.name,
+          path: 'profile/twoFactorAuth',
+        ),
+        _i54.RouteConfig(
+          ManageTwoFactorAuthRoute.name,
+          path: 'profile/manageTwoFactorAuth',
+        ),
+        _i54.RouteConfig(
+          Enable2faRoute.name,
+          path: 'profile/enableTwoFactorAuth',
+        ),
+        _i54.RouteConfig(
+          Disable2faRoute.name,
+          path: 'profile/disableTwoFactorAuth',
+        ),
+        _i54.RouteConfig(
+          LanguageRoute.name,
+          path: 'profile/language',
+        ),
+        _i54.RouteConfig(
+          CountryRoute.name,
+          path: 'profile/country',
+        ),
+        _i54.RouteConfig(
+          DefaultTabRoute.name,
+          path: 'profile/defaultTab',
+        ),
+        _i54.RouteConfig(
+          ProxyRoute.name,
+          path: 'profile/proxy',
+        ),
       ];
 }
 
@@ -734,7 +1014,11 @@ class AppRouter extends _i54.RootStackRouter {
 /// [_i1.MainScreen]
 class MainScreenRoute extends _i54.PageRouteInfo<void> {
   const MainScreenRoute({List<_i54.PageRouteInfo>? children})
-      : super(MainScreenRoute.name, path: '/', initialChildren: children);
+      : super(
+          MainScreenRoute.name,
+          path: '/',
+          initialChildren: children,
+        );
 
   static const String name = 'MainScreenRoute';
 }
@@ -742,7 +1026,11 @@ class MainScreenRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i2.WelcomeScreen]
 class WelcomeRoute extends _i54.PageRouteInfo<void> {
-  const WelcomeRoute() : super(WelcomeRoute.name, path: 'auth/welcomeScreen');
+  const WelcomeRoute()
+      : super(
+          WelcomeRoute.name,
+          path: 'auth/welcomeScreen',
+        );
 
   static const String name = 'WelcomeRoute';
 }
@@ -750,16 +1038,26 @@ class WelcomeRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i3.WelcomeSlidesScreen]
 class WelcomeSlidesRoute extends _i54.PageRouteInfo<WelcomeSlidesRouteArgs> {
-  WelcomeSlidesRoute({_i57.Key? key, required bool isBuy})
-      : super(WelcomeSlidesRoute.name,
-            path: 'auth/welcomeSlides',
-            args: WelcomeSlidesRouteArgs(key: key, isBuy: isBuy));
+  WelcomeSlidesRoute({
+    _i57.Key? key,
+    required bool isBuy,
+  }) : super(
+          WelcomeSlidesRoute.name,
+          path: 'auth/welcomeSlides',
+          args: WelcomeSlidesRouteArgs(
+            key: key,
+            isBuy: isBuy,
+          ),
+        );
 
   static const String name = 'WelcomeSlidesRoute';
 }
 
 class WelcomeSlidesRouteArgs {
-  const WelcomeSlidesRouteArgs({this.key, required this.isBuy});
+  const WelcomeSlidesRouteArgs({
+    this.key,
+    required this.isBuy,
+  });
 
   final _i57.Key? key;
 
@@ -774,16 +1072,26 @@ class WelcomeSlidesRouteArgs {
 /// generated route for
 /// [_i4.SignUpScreen]
 class SignUpRoute extends _i54.PageRouteInfo<SignUpRouteArgs> {
-  SignUpRoute({_i57.Key? key, bool displaySkip = false})
-      : super(SignUpRoute.name,
-            path: 'auth/signUp',
-            args: SignUpRouteArgs(key: key, displaySkip: displaySkip));
+  SignUpRoute({
+    _i57.Key? key,
+    bool displaySkip = false,
+  }) : super(
+          SignUpRoute.name,
+          path: 'auth/signUp',
+          args: SignUpRouteArgs(
+            key: key,
+            displaySkip: displaySkip,
+          ),
+        );
 
   static const String name = 'SignUpRoute';
 }
 
 class SignUpRouteArgs {
-  const SignUpRouteArgs({this.key, this.displaySkip = false});
+  const SignUpRouteArgs({
+    this.key,
+    this.displaySkip = false,
+  });
 
   final _i57.Key? key;
 
@@ -798,16 +1106,26 @@ class SignUpRouteArgs {
 /// generated route for
 /// [_i5.LoginScreen]
 class LoginRoute extends _i54.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({_i57.Key? key, bool displaySkip = true})
-      : super(LoginRoute.name,
-            path: 'auth/login',
-            args: LoginRouteArgs(key: key, displaySkip: displaySkip));
+  LoginRoute({
+    _i57.Key? key,
+    bool displaySkip = true,
+  }) : super(
+          LoginRoute.name,
+          path: 'auth/login',
+          args: LoginRouteArgs(
+            key: key,
+            displaySkip: displaySkip,
+          ),
+        );
 
   static const String name = 'LoginRoute';
 }
 
 class LoginRouteArgs {
-  const LoginRouteArgs({this.key, this.displaySkip = true});
+  const LoginRouteArgs({
+    this.key,
+    this.displaySkip = true,
+  });
 
   final _i57.Key? key;
 
@@ -823,7 +1141,10 @@ class LoginRouteArgs {
 /// [_i6.ForgotPasswordScreen]
 class ForgotPasswordRoute extends _i54.PageRouteInfo<void> {
   const ForgotPasswordRoute()
-      : super(ForgotPasswordRoute.name, path: 'auth/forgotPassword');
+      : super(
+          ForgotPasswordRoute.name,
+          path: 'auth/forgotPassword',
+        );
 
   static const String name = 'ForgotPasswordRoute';
 }
@@ -831,16 +1152,26 @@ class ForgotPasswordRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i7.ResetPasswordScreen]
 class ResetPasswordRoute extends _i54.PageRouteInfo<ResetPasswordRouteArgs> {
-  ResetPasswordRoute({_i57.Key? key, required String token})
-      : super(ResetPasswordRoute.name,
-            path: 'auth/resetPassword',
-            args: ResetPasswordRouteArgs(key: key, token: token));
+  ResetPasswordRoute({
+    _i57.Key? key,
+    required String token,
+  }) : super(
+          ResetPasswordRoute.name,
+          path: 'auth/resetPassword',
+          args: ResetPasswordRouteArgs(
+            key: key,
+            token: token,
+          ),
+        );
 
   static const String name = 'ResetPasswordRoute';
 }
 
 class ResetPasswordRouteArgs {
-  const ResetPasswordRouteArgs({this.key, required this.token});
+  const ResetPasswordRouteArgs({
+    this.key,
+    required this.token,
+  });
 
   final _i57.Key? key;
 
@@ -856,7 +1187,10 @@ class ResetPasswordRouteArgs {
 /// [_i8.PinCodeSetScreen]
 class PinCodeSetRoute extends _i54.PageRouteInfo<void> {
   const PinCodeSetRoute()
-      : super(PinCodeSetRoute.name, path: 'auth/pinCodeSet');
+      : super(
+          PinCodeSetRoute.name,
+          path: 'auth/pinCodeSet',
+        );
 
   static const String name = 'PinCodeSetRoute';
 }
@@ -865,7 +1199,10 @@ class PinCodeSetRoute extends _i54.PageRouteInfo<void> {
 /// [_i9.PinCodeCheckScreen]
 class PinCodeCheckRoute extends _i54.PageRouteInfo<void> {
   const PinCodeCheckRoute()
-      : super(PinCodeCheckRoute.name, path: 'auth/pinCodeCheck');
+      : super(
+          PinCodeCheckRoute.name,
+          path: 'auth/pinCodeCheck',
+        );
 
   static const String name = 'PinCodeCheckRoute';
 }
@@ -873,7 +1210,11 @@ class PinCodeCheckRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i10.PostAdScreen]
 class PostAdRoute extends _i54.PageRouteInfo<void> {
-  const PostAdRoute() : super(PostAdRoute.name, path: 'ads/postAd');
+  const PostAdRoute()
+      : super(
+          PostAdRoute.name,
+          path: 'ads/postAd',
+        );
 
   static const String name = 'PostAdRoute';
 }
@@ -881,16 +1222,26 @@ class PostAdRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i11.AdsSettingsScreen]
 class AdsSettingsRoute extends _i54.PageRouteInfo<AdsSettingsRouteArgs> {
-  AdsSettingsRoute({_i57.Key? key, required _i58.AdsViewModel model})
-      : super(AdsSettingsRoute.name,
-            path: 'ads/adsSettings',
-            args: AdsSettingsRouteArgs(key: key, model: model));
+  AdsSettingsRoute({
+    _i57.Key? key,
+    required _i58.AdsViewModel model,
+  }) : super(
+          AdsSettingsRoute.name,
+          path: 'ads/adsSettings',
+          args: AdsSettingsRouteArgs(
+            key: key,
+            model: model,
+          ),
+        );
 
   static const String name = 'AdsSettingsRoute';
 }
 
 class AdsSettingsRouteArgs {
-  const AdsSettingsRouteArgs({this.key, required this.model});
+  const AdsSettingsRouteArgs({
+    this.key,
+    required this.model,
+  });
 
   final _i57.Key? key;
 
@@ -905,25 +1256,32 @@ class AdsSettingsRouteArgs {
 /// generated route for
 /// [_i12.AdInfoScreen]
 class AdInfoRoute extends _i54.PageRouteInfo<AdInfoRouteArgs> {
-  AdInfoRoute(
-      {_i57.Key? key,
-      required _i59.AdModel ad,
-      bool? onGlobalVacation,
-      _i58.AdsViewModel? adsViewModel})
-      : super(AdInfoRoute.name,
-            path: 'ads/adInfo',
-            args: AdInfoRouteArgs(
-                key: key,
-                ad: ad,
-                onGlobalVacation: onGlobalVacation,
-                adsViewModel: adsViewModel));
+  AdInfoRoute({
+    _i57.Key? key,
+    required _i59.AdModel ad,
+    bool? onGlobalVacation,
+    _i58.AdsViewModel? adsViewModel,
+  }) : super(
+          AdInfoRoute.name,
+          path: 'ads/adInfo',
+          args: AdInfoRouteArgs(
+            key: key,
+            ad: ad,
+            onGlobalVacation: onGlobalVacation,
+            adsViewModel: adsViewModel,
+          ),
+        );
 
   static const String name = 'AdInfoRoute';
 }
 
 class AdInfoRouteArgs {
-  const AdInfoRouteArgs(
-      {this.key, required this.ad, this.onGlobalVacation, this.adsViewModel});
+  const AdInfoRouteArgs({
+    this.key,
+    required this.ad,
+    this.onGlobalVacation,
+    this.adsViewModel,
+  });
 
   final _i57.Key? key;
 
@@ -942,15 +1300,26 @@ class AdInfoRouteArgs {
 /// generated route for
 /// [_i13.AdEditScreen]
 class AdEditRoute extends _i54.PageRouteInfo<AdEditRouteArgs> {
-  AdEditRoute({_i57.Key? key, required _i59.AdModel ad})
-      : super(AdEditRoute.name,
-            path: 'ads/adEdit', args: AdEditRouteArgs(key: key, ad: ad));
+  AdEditRoute({
+    _i57.Key? key,
+    required _i59.AdModel ad,
+  }) : super(
+          AdEditRoute.name,
+          path: 'ads/adEdit',
+          args: AdEditRouteArgs(
+            key: key,
+            ad: ad,
+          ),
+        );
 
   static const String name = 'AdEditRoute';
 }
 
 class AdEditRouteArgs {
-  const AdEditRouteArgs({this.key, required this.ad});
+  const AdEditRouteArgs({
+    this.key,
+    required this.ad,
+  });
 
   final _i57.Key? key;
 
@@ -965,7 +1334,11 @@ class AdEditRouteArgs {
 /// generated route for
 /// [_i14.MarketHelpScreen]
 class MarketHelpRoute extends _i54.PageRouteInfo<void> {
-  const MarketHelpRoute() : super(MarketHelpRoute.name, path: 'market/help');
+  const MarketHelpRoute()
+      : super(
+          MarketHelpRoute.name,
+          path: 'market/help',
+        );
 
   static const String name = 'MarketHelpRoute';
 }
@@ -973,16 +1346,29 @@ class MarketHelpRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i15.MarketAdInfoScreen]
 class MarketAdInfoRoute extends _i54.PageRouteInfo<MarketAdInfoRouteArgs> {
-  MarketAdInfoRoute({_i57.Key? key, _i59.AdModel? ad, String? adId})
-      : super(MarketAdInfoRoute.name,
-            path: 'market/adInfo',
-            args: MarketAdInfoRouteArgs(key: key, ad: ad, adId: adId));
+  MarketAdInfoRoute({
+    _i57.Key? key,
+    _i59.AdModel? ad,
+    String? adId,
+  }) : super(
+          MarketAdInfoRoute.name,
+          path: 'market/adInfo',
+          args: MarketAdInfoRouteArgs(
+            key: key,
+            ad: ad,
+            adId: adId,
+          ),
+        );
 
   static const String name = 'MarketAdInfoRoute';
 }
 
 class MarketAdInfoRouteArgs {
-  const MarketAdInfoRouteArgs({this.key, this.ad, this.adId});
+  const MarketAdInfoRouteArgs({
+    this.key,
+    this.ad,
+    this.adId,
+  });
 
   final _i57.Key? key;
 
@@ -999,16 +1385,26 @@ class MarketAdInfoRouteArgs {
 /// generated route for
 /// [_i16.InitiateTradeScreen]
 class InitiateTradeRoute extends _i54.PageRouteInfo<InitiateTradeRouteArgs> {
-  InitiateTradeRoute({_i57.Key? key, required _i60.MarketAdInfoViewModel model})
-      : super(InitiateTradeRoute.name,
-            path: 'market/initiateTrade',
-            args: InitiateTradeRouteArgs(key: key, model: model));
+  InitiateTradeRoute({
+    _i57.Key? key,
+    required _i60.MarketAdInfoViewModel model,
+  }) : super(
+          InitiateTradeRoute.name,
+          path: 'market/initiateTrade',
+          args: InitiateTradeRouteArgs(
+            key: key,
+            model: model,
+          ),
+        );
 
   static const String name = 'InitiateTradeRoute';
 }
 
 class InitiateTradeRouteArgs {
-  const InitiateTradeRouteArgs({this.key, required this.model});
+  const InitiateTradeRouteArgs({
+    this.key,
+    required this.model,
+  });
 
   final _i57.Key? key;
 
@@ -1023,18 +1419,29 @@ class InitiateTradeRouteArgs {
 /// generated route for
 /// [_i17.TraderProfileScreen]
 class TraderProfileRoute extends _i54.PageRouteInfo<TraderProfileRouteArgs> {
-  TraderProfileRoute(
-      {_i57.Key? key, _i61.AccountInfoModel? profileModel, String? username})
-      : super(TraderProfileRoute.name,
-            path: 'account/profile',
-            args: TraderProfileRouteArgs(
-                key: key, profileModel: profileModel, username: username));
+  TraderProfileRoute({
+    _i57.Key? key,
+    _i61.AccountInfoModel? profileModel,
+    String? username,
+  }) : super(
+          TraderProfileRoute.name,
+          path: 'account/profile',
+          args: TraderProfileRouteArgs(
+            key: key,
+            profileModel: profileModel,
+            username: username,
+          ),
+        );
 
   static const String name = 'TraderProfileRoute';
 }
 
 class TraderProfileRouteArgs {
-  const TraderProfileRouteArgs({this.key, this.profileModel, this.username});
+  const TraderProfileRouteArgs({
+    this.key,
+    this.profileModel,
+    this.username,
+  });
 
   final _i57.Key? key;
 
@@ -1051,21 +1458,29 @@ class TraderProfileRouteArgs {
 /// generated route for
 /// [_i18.FeedbacksScreen]
 class FeedbacksRoute extends _i54.PageRouteInfo<FeedbacksRouteArgs> {
-  FeedbacksRoute(
-      {_i57.Key? key,
-      required String username,
-      required List<_i62.FeedbackModel> feedbacks})
-      : super(FeedbacksRoute.name,
-            path: 'account/feedbacksToUser',
-            args: FeedbacksRouteArgs(
-                key: key, username: username, feedbacks: feedbacks));
+  FeedbacksRoute({
+    _i57.Key? key,
+    required String username,
+    required List<_i62.FeedbackModel> feedbacks,
+  }) : super(
+          FeedbacksRoute.name,
+          path: 'account/feedbacksToUser',
+          args: FeedbacksRouteArgs(
+            key: key,
+            username: username,
+            feedbacks: feedbacks,
+          ),
+        );
 
   static const String name = 'FeedbacksRoute';
 }
 
 class FeedbacksRouteArgs {
-  const FeedbacksRouteArgs(
-      {this.key, required this.username, required this.feedbacks});
+  const FeedbacksRouteArgs({
+    this.key,
+    required this.username,
+    required this.feedbacks,
+  });
 
   final _i57.Key? key;
 
@@ -1082,19 +1497,29 @@ class FeedbacksRouteArgs {
 /// generated route for
 /// [_i19.UserAdsScreen]
 class UserAdsRoute extends _i54.PageRouteInfo<UserAdsRouteArgs> {
-  UserAdsRoute(
-      {_i57.Key? key,
-      required String username,
-      required List<_i59.AdModel> ads})
-      : super(UserAdsRoute.name,
-            path: 'account/userAds',
-            args: UserAdsRouteArgs(key: key, username: username, ads: ads));
+  UserAdsRoute({
+    _i57.Key? key,
+    required String username,
+    required List<_i59.AdModel> ads,
+  }) : super(
+          UserAdsRoute.name,
+          path: 'account/userAds',
+          args: UserAdsRouteArgs(
+            key: key,
+            username: username,
+            ads: ads,
+          ),
+        );
 
   static const String name = 'UserAdsRoute';
 }
 
 class UserAdsRouteArgs {
-  const UserAdsRouteArgs({this.key, required this.username, required this.ads});
+  const UserAdsRouteArgs({
+    this.key,
+    required this.username,
+    required this.ads,
+  });
 
   final _i57.Key? key;
 
@@ -1111,16 +1536,26 @@ class UserAdsRouteArgs {
 /// generated route for
 /// [_i20.TradesWithUserScreen]
 class TradesWithUserRoute extends _i54.PageRouteInfo<TradesWithUserRouteArgs> {
-  TradesWithUserRoute({_i57.Key? key, required String username})
-      : super(TradesWithUserRoute.name,
-            path: 'account/tradesWithUser',
-            args: TradesWithUserRouteArgs(key: key, username: username));
+  TradesWithUserRoute({
+    _i57.Key? key,
+    required String username,
+  }) : super(
+          TradesWithUserRoute.name,
+          path: 'account/tradesWithUser',
+          args: TradesWithUserRouteArgs(
+            key: key,
+            username: username,
+          ),
+        );
 
   static const String name = 'TradesWithUserRoute';
 }
 
 class TradesWithUserRouteArgs {
-  const TradesWithUserRouteArgs({this.key, required this.username});
+  const TradesWithUserRouteArgs({
+    this.key,
+    required this.username,
+  });
 
   final _i57.Key? key;
 
@@ -1135,17 +1570,29 @@ class TradesWithUserRouteArgs {
 /// generated route for
 /// [_i21.TradeScreen]
 class TradeRoute extends _i54.PageRouteInfo<TradeRouteArgs> {
-  TradeRoute({_i57.Key? key, _i63.TradeModel? tradeModel, String? tradeId})
-      : super(TradeRoute.name,
-            path: 'trades/trade',
-            args: TradeRouteArgs(
-                key: key, tradeModel: tradeModel, tradeId: tradeId));
+  TradeRoute({
+    _i57.Key? key,
+    _i63.TradeModel? tradeModel,
+    String? tradeId,
+  }) : super(
+          TradeRoute.name,
+          path: 'trades/trade',
+          args: TradeRouteArgs(
+            key: key,
+            tradeModel: tradeModel,
+            tradeId: tradeId,
+          ),
+        );
 
   static const String name = 'TradeRoute';
 }
 
 class TradeRouteArgs {
-  const TradeRouteArgs({this.key, this.tradeModel, this.tradeId});
+  const TradeRouteArgs({
+    this.key,
+    this.tradeModel,
+    this.tradeId,
+  });
 
   final _i57.Key? key;
 
@@ -1162,31 +1609,35 @@ class TradeRouteArgs {
 /// generated route for
 /// [_i22.WebviewScreen]
 class WebviewRoute extends _i54.PageRouteInfo<WebviewRouteArgs> {
-  WebviewRoute(
-      {_i57.Key? key,
-      String? token,
-      required List<dynamic> cookies,
-      bool isFromCaptchaEvent = false,
-      required String url})
-      : super(WebviewRoute.name,
-            path: 'webviewScreen',
-            args: WebviewRouteArgs(
-                key: key,
-                token: token,
-                cookies: cookies,
-                isFromCaptchaEvent: isFromCaptchaEvent,
-                url: url));
+  WebviewRoute({
+    _i57.Key? key,
+    String? token,
+    required List<dynamic> cookies,
+    bool isFromCaptchaEvent = false,
+    required String url,
+  }) : super(
+          WebviewRoute.name,
+          path: 'webviewScreen',
+          args: WebviewRouteArgs(
+            key: key,
+            token: token,
+            cookies: cookies,
+            isFromCaptchaEvent: isFromCaptchaEvent,
+            url: url,
+          ),
+        );
 
   static const String name = 'WebviewRoute';
 }
 
 class WebviewRouteArgs {
-  const WebviewRouteArgs(
-      {this.key,
-      this.token,
-      required this.cookies,
-      this.isFromCaptchaEvent = false,
-      required this.url});
+  const WebviewRouteArgs({
+    this.key,
+    this.token,
+    required this.cookies,
+    this.isFromCaptchaEvent = false,
+    required this.url,
+  });
 
   final _i57.Key? key;
 
@@ -1207,17 +1658,26 @@ class WebviewRouteArgs {
 /// generated route for
 /// [_i23.TransactionsScreen]
 class TransactionsRoute extends _i54.PageRouteInfo<TransactionsRouteArgs> {
-  TransactionsRoute(
-      {_i57.Key? key, required List<_i64.TransactionModel> transactions})
-      : super(TransactionsRoute.name,
-            path: 'wallet/transactions',
-            args: TransactionsRouteArgs(key: key, transactions: transactions));
+  TransactionsRoute({
+    _i57.Key? key,
+    required List<_i64.TransactionModel> transactions,
+  }) : super(
+          TransactionsRoute.name,
+          path: 'wallet/transactions',
+          args: TransactionsRouteArgs(
+            key: key,
+            transactions: transactions,
+          ),
+        );
 
   static const String name = 'TransactionsRoute';
 }
 
 class TransactionsRouteArgs {
-  const TransactionsRouteArgs({this.key, required this.transactions});
+  const TransactionsRouteArgs({
+    this.key,
+    required this.transactions,
+  });
 
   final _i57.Key? key;
 
@@ -1232,16 +1692,26 @@ class TransactionsRouteArgs {
 /// generated route for
 /// [_i24.TransactionScreen]
 class TransactionRoute extends _i54.PageRouteInfo<TransactionRouteArgs> {
-  TransactionRoute({_i57.Key? key, required _i64.TransactionModel transaction})
-      : super(TransactionRoute.name,
-            path: 'wallet/transaction',
-            args: TransactionRouteArgs(key: key, transaction: transaction));
+  TransactionRoute({
+    _i57.Key? key,
+    required _i64.TransactionModel transaction,
+  }) : super(
+          TransactionRoute.name,
+          path: 'wallet/transaction',
+          args: TransactionRouteArgs(
+            key: key,
+            transaction: transaction,
+          ),
+        );
 
   static const String name = 'TransactionRoute';
 }
 
 class TransactionRouteArgs {
-  const TransactionRouteArgs({this.key, required this.transaction});
+  const TransactionRouteArgs({
+    this.key,
+    required this.transaction,
+  });
 
   final _i57.Key? key;
 
@@ -1257,17 +1727,26 @@ class TransactionRouteArgs {
 /// [_i25.IncomingDepositScreen]
 class IncomingDepositRoute
     extends _i54.PageRouteInfo<IncomingDepositRouteArgs> {
-  IncomingDepositRoute(
-      {_i57.Key? key, required _i65.IncomingDepositModel deposit})
-      : super(IncomingDepositRoute.name,
-            path: 'wallet/incomingDeposit',
-            args: IncomingDepositRouteArgs(key: key, deposit: deposit));
+  IncomingDepositRoute({
+    _i57.Key? key,
+    required _i65.IncomingDepositModel deposit,
+  }) : super(
+          IncomingDepositRoute.name,
+          path: 'wallet/incomingDeposit',
+          args: IncomingDepositRouteArgs(
+            key: key,
+            deposit: deposit,
+          ),
+        );
 
   static const String name = 'IncomingDepositRoute';
 }
 
 class IncomingDepositRouteArgs {
-  const IncomingDepositRouteArgs({this.key, required this.deposit});
+  const IncomingDepositRouteArgs({
+    this.key,
+    required this.deposit,
+  });
 
   final _i57.Key? key;
 
@@ -1282,25 +1761,32 @@ class IncomingDepositRouteArgs {
 /// generated route for
 /// [_i26.SendAssetFirstScreen]
 class SendAssetFirstRoute extends _i54.PageRouteInfo<SendAssetFirstRouteArgs> {
-  SendAssetFirstRoute(
-      {_i57.Key? key,
-      required double price,
-      required double balance,
-      required _i66.Asset asset})
-      : super(SendAssetFirstRoute.name,
-            path: 'wallet/sendAssetOne',
-            args: SendAssetFirstRouteArgs(
-                key: key, price: price, balance: balance, asset: asset));
+  SendAssetFirstRoute({
+    _i57.Key? key,
+    required double price,
+    required double balance,
+    required _i66.Asset asset,
+  }) : super(
+          SendAssetFirstRoute.name,
+          path: 'wallet/sendAssetOne',
+          args: SendAssetFirstRouteArgs(
+            key: key,
+            price: price,
+            balance: balance,
+            asset: asset,
+          ),
+        );
 
   static const String name = 'SendAssetFirstRoute';
 }
 
 class SendAssetFirstRouteArgs {
-  const SendAssetFirstRouteArgs(
-      {this.key,
-      required this.price,
-      required this.balance,
-      required this.asset});
+  const SendAssetFirstRouteArgs({
+    this.key,
+    required this.price,
+    required this.balance,
+    required this.asset,
+  });
 
   final _i57.Key? key;
 
@@ -1320,16 +1806,26 @@ class SendAssetFirstRouteArgs {
 /// [_i27.SendAssetSecondScreen]
 class SendAssetSecondRoute
     extends _i54.PageRouteInfo<SendAssetSecondRouteArgs> {
-  SendAssetSecondRoute({_i57.Key? key, required _i67.SendAssetViewModel model})
-      : super(SendAssetSecondRoute.name,
-            path: 'wallet/sendAssetTwo',
-            args: SendAssetSecondRouteArgs(key: key, model: model));
+  SendAssetSecondRoute({
+    _i57.Key? key,
+    required _i67.SendAssetViewModel model,
+  }) : super(
+          SendAssetSecondRoute.name,
+          path: 'wallet/sendAssetTwo',
+          args: SendAssetSecondRouteArgs(
+            key: key,
+            model: model,
+          ),
+        );
 
   static const String name = 'SendAssetSecondRoute';
 }
 
 class SendAssetSecondRouteArgs {
-  const SendAssetSecondRouteArgs({this.key, required this.model});
+  const SendAssetSecondRouteArgs({
+    this.key,
+    required this.model,
+  });
 
   final _i57.Key? key;
 
@@ -1344,16 +1840,26 @@ class SendAssetSecondRouteArgs {
 /// generated route for
 /// [_i28.SendAssetThirdScreen]
 class SendAssetThirdRoute extends _i54.PageRouteInfo<SendAssetThirdRouteArgs> {
-  SendAssetThirdRoute({_i57.Key? key, required _i67.SendAssetViewModel model})
-      : super(SendAssetThirdRoute.name,
-            path: 'wallet/sendAssetThree',
-            args: SendAssetThirdRouteArgs(key: key, model: model));
+  SendAssetThirdRoute({
+    _i57.Key? key,
+    required _i67.SendAssetViewModel model,
+  }) : super(
+          SendAssetThirdRoute.name,
+          path: 'wallet/sendAssetThree',
+          args: SendAssetThirdRouteArgs(
+            key: key,
+            model: model,
+          ),
+        );
 
   static const String name = 'SendAssetThirdRoute';
 }
 
 class SendAssetThirdRouteArgs {
-  const SendAssetThirdRouteArgs({this.key, required this.model});
+  const SendAssetThirdRouteArgs({
+    this.key,
+    required this.model,
+  });
 
   final _i57.Key? key;
 
@@ -1368,19 +1874,29 @@ class SendAssetThirdRouteArgs {
 /// generated route for
 /// [_i29.ReceiveAssetScreen]
 class ReceiveAssetRoute extends _i54.PageRouteInfo<ReceiveAssetRouteArgs> {
-  ReceiveAssetRoute(
-      {_i57.Key? key, required String? address, required _i66.Asset asset})
-      : super(ReceiveAssetRoute.name,
-            path: 'wallet/receiveAssetThree',
-            args: ReceiveAssetRouteArgs(
-                key: key, address: address, asset: asset));
+  ReceiveAssetRoute({
+    _i57.Key? key,
+    required String? address,
+    required _i66.Asset asset,
+  }) : super(
+          ReceiveAssetRoute.name,
+          path: 'wallet/receiveAssetThree',
+          args: ReceiveAssetRouteArgs(
+            key: key,
+            address: address,
+            asset: asset,
+          ),
+        );
 
   static const String name = 'ReceiveAssetRoute';
 }
 
 class ReceiveAssetRouteArgs {
-  const ReceiveAssetRouteArgs(
-      {this.key, required this.address, required this.asset});
+  const ReceiveAssetRouteArgs({
+    this.key,
+    required this.address,
+    required this.asset,
+  });
 
   final _i57.Key? key;
 
@@ -1398,7 +1914,10 @@ class ReceiveAssetRouteArgs {
 /// [_i30.NotificationsScreen]
 class NotificationsRoute extends _i54.PageRouteInfo<void> {
   const NotificationsRoute()
-      : super(NotificationsRoute.name, path: 'notificationsScreen');
+      : super(
+          NotificationsRoute.name,
+          path: 'notificationsScreen',
+        );
 
   static const String name = 'NotificationsRoute';
 }
@@ -1406,16 +1925,26 @@ class NotificationsRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i31.AddressBookScreen]
 class AddressBookRoute extends _i54.PageRouteInfo<AddressBookRouteArgs> {
-  AddressBookRoute({_i57.Key? key, required _i66.Asset asset})
-      : super(AddressBookRoute.name,
-            path: 'addressBookScreen',
-            args: AddressBookRouteArgs(key: key, asset: asset));
+  AddressBookRoute({
+    _i57.Key? key,
+    required _i66.Asset asset,
+  }) : super(
+          AddressBookRoute.name,
+          path: 'addressBookScreen',
+          args: AddressBookRouteArgs(
+            key: key,
+            asset: asset,
+          ),
+        );
 
   static const String name = 'AddressBookRoute';
 }
 
 class AddressBookRouteArgs {
-  const AddressBookRouteArgs({this.key, required this.asset});
+  const AddressBookRouteArgs({
+    this.key,
+    required this.asset,
+  });
 
   final _i57.Key? key;
 
@@ -1430,16 +1959,26 @@ class AddressBookRouteArgs {
 /// generated route for
 /// [_i32.AddAddressScreen]
 class AddAddressRoute extends _i54.PageRouteInfo<AddAddressRouteArgs> {
-  AddAddressRoute({_i57.Key? key, required _i66.Asset asset})
-      : super(AddAddressRoute.name,
-            path: 'addAddressScreen',
-            args: AddAddressRouteArgs(key: key, asset: asset));
+  AddAddressRoute({
+    _i57.Key? key,
+    required _i66.Asset asset,
+  }) : super(
+          AddAddressRoute.name,
+          path: 'addAddressScreen',
+          args: AddAddressRouteArgs(
+            key: key,
+            asset: asset,
+          ),
+        );
 
   static const String name = 'AddAddressRoute';
 }
 
 class AddAddressRouteArgs {
-  const AddAddressRouteArgs({this.key, required this.asset});
+  const AddAddressRouteArgs({
+    this.key,
+    required this.asset,
+  });
 
   final _i57.Key? key;
 
@@ -1455,17 +1994,26 @@ class AddAddressRouteArgs {
 /// [_i33.SendAssetAddressBookScreen]
 class SendAssetAddressBookRoute
     extends _i54.PageRouteInfo<SendAssetAddressBookRouteArgs> {
-  SendAssetAddressBookRoute(
-      {_i57.Key? key, required _i68.SendAssetTextFieldViewModel model})
-      : super(SendAssetAddressBookRoute.name,
-            path: 'sendAssetAddressBookScreen',
-            args: SendAssetAddressBookRouteArgs(key: key, model: model));
+  SendAssetAddressBookRoute({
+    _i57.Key? key,
+    required _i68.SendAssetTextFieldViewModel model,
+  }) : super(
+          SendAssetAddressBookRoute.name,
+          path: 'sendAssetAddressBookScreen',
+          args: SendAssetAddressBookRouteArgs(
+            key: key,
+            model: model,
+          ),
+        );
 
   static const String name = 'SendAssetAddressBookRoute';
 }
 
 class SendAssetAddressBookRouteArgs {
-  const SendAssetAddressBookRouteArgs({this.key, required this.model});
+  const SendAssetAddressBookRouteArgs({
+    this.key,
+    required this.model,
+  });
 
   final _i57.Key? key;
 
@@ -1480,16 +2028,26 @@ class SendAssetAddressBookRouteArgs {
 /// generated route for
 /// [_i34.MyProfileScreen]
 class MyProfileRoute extends _i54.PageRouteInfo<MyProfileRouteArgs> {
-  MyProfileRoute({_i57.Key? key, required String username})
-      : super(MyProfileRoute.name,
-            path: 'profile/myProfile',
-            args: MyProfileRouteArgs(key: key, username: username));
+  MyProfileRoute({
+    _i57.Key? key,
+    required String username,
+  }) : super(
+          MyProfileRoute.name,
+          path: 'profile/myProfile',
+          args: MyProfileRouteArgs(
+            key: key,
+            username: username,
+          ),
+        );
 
   static const String name = 'MyProfileRoute';
 }
 
 class MyProfileRouteArgs {
-  const MyProfileRouteArgs({this.key, required this.username});
+  const MyProfileRouteArgs({
+    this.key,
+    required this.username,
+  });
 
   final _i57.Key? key;
 
@@ -1504,25 +2062,29 @@ class MyProfileRouteArgs {
 /// generated route for
 /// [_i35.LinkAccountScreen]
 class LinkAccountRoute extends _i54.PageRouteInfo<LinkAccountRouteArgs> {
-  LinkAccountRoute(
-      {_i57.Key? key,
-      required _i69.ReputationImportViewModel reputationImportViewModel,
-      required _i70.ReputationPlatform reputationPlatform})
-      : super(LinkAccountRoute.name,
-            path: 'profile/linkAccount',
-            args: LinkAccountRouteArgs(
-                key: key,
-                reputationImportViewModel: reputationImportViewModel,
-                reputationPlatform: reputationPlatform));
+  LinkAccountRoute({
+    _i57.Key? key,
+    required _i69.ReputationImportViewModel reputationImportViewModel,
+    required _i70.ReputationPlatform reputationPlatform,
+  }) : super(
+          LinkAccountRoute.name,
+          path: 'profile/linkAccount',
+          args: LinkAccountRouteArgs(
+            key: key,
+            reputationImportViewModel: reputationImportViewModel,
+            reputationPlatform: reputationPlatform,
+          ),
+        );
 
   static const String name = 'LinkAccountRoute';
 }
 
 class LinkAccountRouteArgs {
-  const LinkAccountRouteArgs(
-      {this.key,
-      required this.reputationImportViewModel,
-      required this.reputationPlatform});
+  const LinkAccountRouteArgs({
+    this.key,
+    required this.reputationImportViewModel,
+    required this.reputationPlatform,
+  });
 
   final _i57.Key? key;
 
@@ -1540,7 +2102,10 @@ class LinkAccountRouteArgs {
 /// [_i36.TradingPartnersScreen]
 class TradingPartnersRoute extends _i54.PageRouteInfo<void> {
   const TradingPartnersRoute()
-      : super(TradingPartnersRoute.name, path: 'profile/tradingPartners');
+      : super(
+          TradingPartnersRoute.name,
+          path: 'profile/tradingPartners',
+        );
 
   static const String name = 'TradingPartnersRoute';
 }
@@ -1549,7 +2114,10 @@ class TradingPartnersRoute extends _i54.PageRouteInfo<void> {
 /// [_i37.AffiliateProgramScreen]
 class AffiliateProgramRoute extends _i54.PageRouteInfo<void> {
   const AffiliateProgramRoute()
-      : super(AffiliateProgramRoute.name, path: 'profile/affiliateProgram');
+      : super(
+          AffiliateProgramRoute.name,
+          path: 'profile/affiliateProgram',
+        );
 
   static const String name = 'AffiliateProgramRoute';
 }
@@ -1557,7 +2125,11 @@ class AffiliateProgramRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i38.CouponsScreen]
 class CouponsRoute extends _i54.PageRouteInfo<void> {
-  const CouponsRoute() : super(CouponsRoute.name, path: 'profile/coupons');
+  const CouponsRoute()
+      : super(
+          CouponsRoute.name,
+          path: 'profile/coupons',
+        );
 
   static const String name = 'CouponsRoute';
 }
@@ -1565,16 +2137,26 @@ class CouponsRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i39.EmailScreen]
 class EmailRoute extends _i54.PageRouteInfo<EmailRouteArgs> {
-  EmailRoute({_i57.Key? key, required bool verified})
-      : super(EmailRoute.name,
-            path: 'profile/email',
-            args: EmailRouteArgs(key: key, verified: verified));
+  EmailRoute({
+    _i57.Key? key,
+    required bool verified,
+  }) : super(
+          EmailRoute.name,
+          path: 'profile/email',
+          args: EmailRouteArgs(
+            key: key,
+            verified: verified,
+          ),
+        );
 
   static const String name = 'EmailRoute';
 }
 
 class EmailRouteArgs {
-  const EmailRouteArgs({this.key, required this.verified});
+  const EmailRouteArgs({
+    this.key,
+    required this.verified,
+  });
 
   final _i57.Key? key;
 
@@ -1590,7 +2172,10 @@ class EmailRouteArgs {
 /// [_i40.ChangePasswordScreen]
 class ChangePasswordRoute extends _i54.PageRouteInfo<void> {
   const ChangePasswordRoute()
-      : super(ChangePasswordRoute.name, path: 'profile/changePassword');
+      : super(
+          ChangePasswordRoute.name,
+          path: 'profile/changePassword',
+        );
 
   static const String name = 'ChangePasswordRoute';
 }
@@ -1599,7 +2184,10 @@ class ChangePasswordRoute extends _i54.PageRouteInfo<void> {
 /// [_i41.TwoFactorAuthScreen]
 class TwoFactorAuthRoute extends _i54.PageRouteInfo<void> {
   const TwoFactorAuthRoute()
-      : super(TwoFactorAuthRoute.name, path: 'profile/twoFactorAuth');
+      : super(
+          TwoFactorAuthRoute.name,
+          path: 'profile/twoFactorAuth',
+        );
 
   static const String name = 'TwoFactorAuthRoute';
 }
@@ -1608,21 +2196,29 @@ class TwoFactorAuthRoute extends _i54.PageRouteInfo<void> {
 /// [_i42.ManageTwoFactorAuthScreen]
 class ManageTwoFactorAuthRoute
     extends _i54.PageRouteInfo<ManageTwoFactorAuthRouteArgs> {
-  ManageTwoFactorAuthRoute(
-      {_i57.Key? key,
-      required bool enabled,
-      required _i71.TwoFactorAuthViewModel model})
-      : super(ManageTwoFactorAuthRoute.name,
-            path: 'profile/manageTwoFactorAuth',
-            args: ManageTwoFactorAuthRouteArgs(
-                key: key, enabled: enabled, model: model));
+  ManageTwoFactorAuthRoute({
+    _i57.Key? key,
+    required bool enabled,
+    required _i71.TwoFactorAuthViewModel model,
+  }) : super(
+          ManageTwoFactorAuthRoute.name,
+          path: 'profile/manageTwoFactorAuth',
+          args: ManageTwoFactorAuthRouteArgs(
+            key: key,
+            enabled: enabled,
+            model: model,
+          ),
+        );
 
   static const String name = 'ManageTwoFactorAuthRoute';
 }
 
 class ManageTwoFactorAuthRouteArgs {
-  const ManageTwoFactorAuthRouteArgs(
-      {this.key, required this.enabled, required this.model});
+  const ManageTwoFactorAuthRouteArgs({
+    this.key,
+    required this.enabled,
+    required this.model,
+  });
 
   final _i57.Key? key;
 
@@ -1639,16 +2235,26 @@ class ManageTwoFactorAuthRouteArgs {
 /// generated route for
 /// [_i43.Enable2faScreen]
 class Enable2faRoute extends _i54.PageRouteInfo<Enable2faRouteArgs> {
-  Enable2faRoute({_i57.Key? key, required String secretUri})
-      : super(Enable2faRoute.name,
-            path: 'profile/enableTwoFactorAuth',
-            args: Enable2faRouteArgs(key: key, secretUri: secretUri));
+  Enable2faRoute({
+    _i57.Key? key,
+    required String secretUri,
+  }) : super(
+          Enable2faRoute.name,
+          path: 'profile/enableTwoFactorAuth',
+          args: Enable2faRouteArgs(
+            key: key,
+            secretUri: secretUri,
+          ),
+        );
 
   static const String name = 'Enable2faRoute';
 }
 
 class Enable2faRouteArgs {
-  const Enable2faRouteArgs({this.key, required this.secretUri});
+  const Enable2faRouteArgs({
+    this.key,
+    required this.secretUri,
+  });
 
   final _i57.Key? key;
 
@@ -1663,16 +2269,26 @@ class Enable2faRouteArgs {
 /// generated route for
 /// [_i44.Disable2faScreen]
 class Disable2faRoute extends _i54.PageRouteInfo<Disable2faRouteArgs> {
-  Disable2faRoute({_i57.Key? key, required String password})
-      : super(Disable2faRoute.name,
-            path: 'profile/disableTwoFactorAuth',
-            args: Disable2faRouteArgs(key: key, password: password));
+  Disable2faRoute({
+    _i57.Key? key,
+    required String password,
+  }) : super(
+          Disable2faRoute.name,
+          path: 'profile/disableTwoFactorAuth',
+          args: Disable2faRouteArgs(
+            key: key,
+            password: password,
+          ),
+        );
 
   static const String name = 'Disable2faRoute';
 }
 
 class Disable2faRouteArgs {
-  const Disable2faRouteArgs({this.key, required this.password});
+  const Disable2faRouteArgs({
+    this.key,
+    required this.password,
+  });
 
   final _i57.Key? key;
 
@@ -1687,7 +2303,11 @@ class Disable2faRouteArgs {
 /// generated route for
 /// [_i45.LanguageScreen]
 class LanguageRoute extends _i54.PageRouteInfo<void> {
-  const LanguageRoute() : super(LanguageRoute.name, path: 'profile/language');
+  const LanguageRoute()
+      : super(
+          LanguageRoute.name,
+          path: 'profile/language',
+        );
 
   static const String name = 'LanguageRoute';
 }
@@ -1696,8 +2316,11 @@ class LanguageRoute extends _i54.PageRouteInfo<void> {
 /// [_i46.CountryScreen]
 class CountryRoute extends _i54.PageRouteInfo<CountryRouteArgs> {
   CountryRoute({_i57.Key? key})
-      : super(CountryRoute.name,
-            path: 'profile/country', args: CountryRouteArgs(key: key));
+      : super(
+          CountryRoute.name,
+          path: 'profile/country',
+          args: CountryRouteArgs(key: key),
+        );
 
   static const String name = 'CountryRoute';
 }
@@ -1717,7 +2340,10 @@ class CountryRouteArgs {
 /// [_i47.DefaultTabScreen]
 class DefaultTabRoute extends _i54.PageRouteInfo<void> {
   const DefaultTabRoute()
-      : super(DefaultTabRoute.name, path: 'profile/defaultTab');
+      : super(
+          DefaultTabRoute.name,
+          path: 'profile/defaultTab',
+        );
 
   static const String name = 'DefaultTabRoute';
 }
@@ -1725,7 +2351,11 @@ class DefaultTabRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i48.ProxyScreen]
 class ProxyRoute extends _i54.PageRouteInfo<void> {
-  const ProxyRoute() : super(ProxyRoute.name, path: 'profile/proxy');
+  const ProxyRoute()
+      : super(
+          ProxyRoute.name,
+          path: 'profile/proxy',
+        );
 
   static const String name = 'ProxyRoute';
 }
@@ -1733,7 +2363,11 @@ class ProxyRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i49.WalletScreen]
 class WalletRoute extends _i54.PageRouteInfo<void> {
-  const WalletRoute() : super(WalletRoute.name, path: 'wallet');
+  const WalletRoute()
+      : super(
+          WalletRoute.name,
+          path: 'wallet',
+        );
 
   static const String name = 'WalletRoute';
 }
@@ -1741,7 +2375,11 @@ class WalletRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i50.TradesScreen]
 class TradesRoute extends _i54.PageRouteInfo<void> {
-  const TradesRoute() : super(TradesRoute.name, path: 'trades');
+  const TradesRoute()
+      : super(
+          TradesRoute.name,
+          path: 'trades',
+        );
 
   static const String name = 'TradesRoute';
 }
@@ -1750,8 +2388,11 @@ class TradesRoute extends _i54.PageRouteInfo<void> {
 /// [_i51.MarketScreen]
 class MarketRoute extends _i54.PageRouteInfo<MarketRouteArgs> {
   MarketRoute({_i57.Key? key})
-      : super(MarketRoute.name,
-            path: 'market', args: MarketRouteArgs(key: key));
+      : super(
+          MarketRoute.name,
+          path: 'market',
+          args: MarketRouteArgs(key: key),
+        );
 
   static const String name = 'MarketRoute';
 }
@@ -1770,7 +2411,11 @@ class MarketRouteArgs {
 /// generated route for
 /// [_i52.AdsScreen]
 class AdsRoute extends _i54.PageRouteInfo<void> {
-  const AdsRoute() : super(AdsRoute.name, path: 'ads');
+  const AdsRoute()
+      : super(
+          AdsRoute.name,
+          path: 'ads',
+        );
 
   static const String name = 'AdsRoute';
 }
@@ -1778,7 +2423,11 @@ class AdsRoute extends _i54.PageRouteInfo<void> {
 /// generated route for
 /// [_i53.AccountScreen]
 class AccountRoute extends _i54.PageRouteInfo<void> {
-  const AccountRoute() : super(AccountRoute.name, path: 'profile');
+  const AccountRoute()
+      : super(
+          AccountRoute.name,
+          path: 'profile',
+        );
 
   static const String name = 'AccountRoute';
 }
