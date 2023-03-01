@@ -8158,9 +8158,6 @@ class I18nDe extends I18n {
   String get api_error_98 => 'Der Versuch, einen Handel für eine Anzeige zu erstellen, deren Ersteller nicht existiert';
 
   @override
-  String get api_error_99 => 'Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als von first_time_limit_asset zugelassen wird';
-
-  @override
   String get api_error_100 => 'Für die Handelserstellung kann nicht weniger als 0,0000000001 XMR angefordert werden';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nDe extends I18n {
 
   @override
   String get api_error_273 => 'Versuch, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
+
+  @override
+  String get api_error_99 => 'Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als von first_time_limit_asset zugelassen wird';
 }

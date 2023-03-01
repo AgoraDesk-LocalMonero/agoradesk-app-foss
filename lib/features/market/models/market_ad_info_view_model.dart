@@ -10,6 +10,8 @@ import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
+import 'package:agoradesk/features/account/data/models/account_info_model.dart';
+import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/network_fees.dart';
@@ -35,17 +37,20 @@ class MarketAdInfoViewModel extends ViewModel
     required WalletService walletService,
     required AuthService authService,
     required AdsRepository adsRepository,
+    required AccountService accountService,
     this.adModel,
     this.adId,
   })  : _tradeRepository = tradeRepository,
         _authService = authService,
         _walletService = walletService,
+        _accountService = accountService,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
   final AuthService _authService;
   final WalletService _walletService;
   final AdsRepository _adsRepository;
+  final AccountService _accountService;
   final AdModel? adModel;
   final String? adId;
 
@@ -67,11 +72,14 @@ class MarketAdInfoViewModel extends ViewModel
   late bool isGuestMode;
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
+  AccountInfoModel? accountInfoModel;
 
   List<String> tradeTypeMenu = [];
   List<String> assetMenu = [];
 
   bool _loadingAds = true;
+  double _tempAssetPrice = 0;
+  double? _firstTimeLimitAsset;
 
   // bool _initialized = false;
   bool _calculating = false;
@@ -151,7 +159,6 @@ class MarketAdInfoViewModel extends ViewModel
           await Future.delayed(const Duration(seconds: 5));
           await _getWalletsBalance();
         }
-        initialLoadingAd = false;
       } else {
         handleApiError(res.left, context);
       }
@@ -163,9 +170,25 @@ class MarketAdInfoViewModel extends ViewModel
       if (!isGuestMode) {
         await _getWalletsBalance();
       }
-      initialLoadingAd = false;
     }
+    if (asset == Asset.BTC) {
+      _firstTimeLimitAsset = ad!.firstTimeLimitBtc;
+    } else {
+      _firstTimeLimitAsset = ad!.firstTimeLimitXmr;
+    }
+    await _getAccountInfo(ad!.profile!.username);
+    initialLoadingAd = false;
+    _tempAssetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     notifyListeners();
+  }
+
+  Future _getAccountInfo(String? username) async {
+    if (username != null) {
+      final res = await _accountService.getAccountInfo(username);
+      if (res.isRight) {
+        accountInfoModel = res.right;
+      }
+    }
   }
 
   void _initMenus() {
@@ -265,9 +288,9 @@ class MarketAdInfoViewModel extends ViewModel
         ctrlPay.text = '';
       } else {
         try {
-          _receive = Decimal.parse(ctrlReceive.text);
+          _receive = Decimal.parse(ctrlReceive.text.replaceAll(',', '.'));
           final int digitsToRound = getBankersDigits(asset!.name);
-          _pay = (_receive.toDouble() / (double.tryParse(ad!.tempPrice!) ?? 0)).bankerRound(digitsToRound);
+          _pay = (_receive.toDouble() / _tempAssetPrice).bankerRound(digitsToRound);
           ctrlPay.text = _pay.toString();
           _checkReceiveQuantity();
         } catch (e) {
@@ -287,9 +310,9 @@ class MarketAdInfoViewModel extends ViewModel
         _calculating = true;
         payError = null;
         try {
-          _pay = Decimal.parse(ctrlPay.text);
+          _pay = Decimal.parse(ctrlPay.text.replaceAll(',', '.'));
           final int digitsToRound = getBankersDigits(ad?.currency ?? '');
-          _receive = ((double.tryParse(ad!.tempPrice!) ?? 0) * _pay.toDouble()).bankerRound(digitsToRound);
+          _receive = (_tempAssetPrice * _pay.toDouble()).bankerRound(digitsToRound);
           ctrlReceive.text = _receive.toString();
           _checkReceiveQuantity();
           _checkPayQuantity();
@@ -303,13 +326,20 @@ class MarketAdInfoViewModel extends ViewModel
   }
 
   void _checkReceiveQuantity() {
-    if (_receive.toDouble() < (ad!.minAmount ?? 0)) {
+    final receive = _receive.toDouble();
+    final firstTimeLimitCurrency = _firstTimeLimitAsset! * _tempAssetPrice;
+    if (receive < (ad!.minAmount ?? 0)) {
       receiveError = context.intl.must_be_at_least((ad!.minAmount ?? 0).toString(), ad!.currency);
       readyToDeal = false;
-    } else if (ad!.maxAmountAvailable != null && _receive.toDouble() > ad!.maxAmountAvailable!) {
-      receiveError = context.intl.must_be_less((ad!.maxAmountAvailable!).toString(), ad!.currency);
+    } else if (_firstTimeLimitAsset != null &&
+        accountInfoModel?.hasCommonTrades != true &&
+        receive > firstTimeLimitCurrency) {
+      receiveError = context.intl.must_be_less(firstTimeLimitCurrency.toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
-    } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && _receive.toDouble() > ad!.maxAmount!) {
+    } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
+      receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
+      readyToDeal = false;
+    } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && receive > ad!.maxAmount!) {
       receiveError = context.intl.must_be_less((ad!.maxAmount!).toString(), ad!.currency);
       readyToDeal = false;
     } else {

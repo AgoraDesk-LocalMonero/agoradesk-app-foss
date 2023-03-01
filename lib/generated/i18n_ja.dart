@@ -8158,9 +8158,6 @@ class I18nJa extends I18n {
   String get api_error_98 => 'ポスターが存在しない広告の取引を作成しようとしています';
 
   @override
-  String get api_error_99 => '最初の取引を作成するときに、first_time_limit_asset で許可されているよりも高い金額をリクエストしようとしています';
-
-  @override
   String get api_error_100 => '取引作成のために 0.0000000001XMR未満をリクエストすることはできません';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nJa extends I18n {
 
   @override
   String get api_error_273 => 'ユーザーのアドレス帳に存在しないアドレスを削除しようとしています';
+
+  @override
+  String get api_error_99 => '最初の取引を作成するときに、first_time_limit_asset で許可されているよりも高い金額をリクエストしようとしています';
 }

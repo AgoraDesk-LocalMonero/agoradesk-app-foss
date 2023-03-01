@@ -8158,9 +8158,6 @@ class I18nRo extends I18n {
   String get api_error_98 => 'Încercare de a crea un schimb pentru un anunț al cărui publicist nu există';
 
   @override
-  String get api_error_99 => 'Încercare de a solicita o sumă mai mare decât cea permisă de first_time_limit_asset atunci când se creează o primă tranzacție';
-
-  @override
   String get api_error_100 => 'Nu se poate solicita mai puțin de 0.0000000001 XMR pentru crearea unei tranzacții';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nRo extends I18n {
 
   @override
   String get api_error_273 => 'Încercarea de a șterge o adresă care nu există în agenda unui utilizator';
+
+  @override
+  String get api_error_99 => 'Încercare de a solicita o sumă mai mare decât cea permisă de first_time_limit_asset atunci când se creează o primă tranzacție';
 }

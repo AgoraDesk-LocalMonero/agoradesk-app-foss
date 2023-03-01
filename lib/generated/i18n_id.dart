@@ -8158,9 +8158,6 @@ class I18nId extends I18n {
   String get api_error_98 => 'Mencoba membuat perdagangan untuk iklan yang posternya tidak ada';
 
   @override
-  String get api_error_99 => 'Mencoba meminta jumlah yang lebih tinggi dari yang diizinkan oleh first_time_limit_asset saat membuat perdagangan pertama';
-
-  @override
   String get api_error_100 => 'Tidak dapat meminta kurang dari 0,0000000001 XMR untuk pembuatan perdagangan';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nId extends I18n {
 
   @override
   String get api_error_273 => 'Mencoba menghapus alamat yang tidak ada di buku alamat pengguna';
+
+  @override
+  String get api_error_99 => 'Mencoba meminta jumlah yang lebih tinggi dari yang diizinkan oleh first_time_limit_asset saat membuat perdagangan pertama';
 }

@@ -8158,9 +8158,6 @@ class I18nTr extends I18n {
   String get api_error_98 => 'Posteri olmayan bir reklam için ticaret yaratmaya çalışmak';
 
   @override
-  String get api_error_99 => 'İlk ticaret oluşturulurken first_time_limit_asset tarafından izin verilenden daha yüksek bir miktar talep edilmeye çalışılıyor';
-
-  @override
   String get api_error_100 => 'Ticaret oluşturma için 0.0000000001 XMR\'den daha az talep edilemez';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nTr extends I18n {
 
   @override
   String get api_error_273 => 'Bir kullanıcının adres defterinde olmayan bir adresi silmeye çalışmak';
+
+  @override
+  String get api_error_99 => 'İlk ticaret oluşturulurken first_time_limit_asset tarafından izin verilenden daha yüksek bir miktar talep edilmeye çalışılıyor';
 }

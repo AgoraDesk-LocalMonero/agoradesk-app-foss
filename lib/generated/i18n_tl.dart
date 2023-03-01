@@ -8158,9 +8158,6 @@ class I18nTl extends I18n {
   String get api_error_98 => 'Sinusubukang gumawa ng trade para sa isang ad kung sino ang poster ay hindi umiiral';
 
   @override
-  String get api_error_99 => 'Sinusubukang humiling ng mas mataas na halaga kaysa sa pinapayagan ng first_time_limit_asset kapag gumagawa ng unang trade';
-
-  @override
   String get api_error_100 => 'Hindi maaaring humiling ng mas mababa sa 0.0000000001 XMR para sa paglikha ng kalakalan';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nTl extends I18n {
 
   @override
   String get api_error_273 => 'Sinusubukang tanggalin ang isang address na wala sa address book ng isang user';
+
+  @override
+  String get api_error_99 => 'Sinusubukang humiling ng mas mataas na halaga kaysa sa pinapayagan ng first_time_limit_asset kapag gumagawa ng unang trade';
 }

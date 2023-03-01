@@ -8158,9 +8158,6 @@ class I18nPl extends I18n {
   String get api_error_98 => 'Próba stworzenia handlu z oferty, której autor nie istnieje';
 
   @override
-  String get api_error_99 => 'Próbujesz zażądać wyższej kwoty niż dozwolona przez first_time_limit_asset podczas tworzenia pierwszego handlu';
-
-  @override
   String get api_error_100 => 'Nie można zażądać mniej niż 0,000000001 XMR podczas tworzenia handlu';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nPl extends I18n {
 
   @override
   String get api_error_273 => 'Próba usunięcia adresu, który nie istnieje w książce adresowej użytkownika';
+
+  @override
+  String get api_error_99 => 'Próbujesz zażądać wyższej kwoty niż dozwolona przez first_time_limit_asset podczas tworzenia pierwszego handlu';
 }

@@ -8158,9 +8158,6 @@ class I18nSw extends I18n {
   String get api_error_98 => 'Kujaribu kuunda biashara kwa tangazo ambalo bango lake halipo';
 
   @override
-  String get api_error_99 => 'Inajaribu kuomba kiasi cha juu kuliko kinachoruhusiwa na first_time_limit_asset wakati wa kuunda biashara ya kwanza';
-
-  @override
   String get api_error_100 => 'Haiwezi kuomba chini ya 0.0000000001 XMR kwa ajili ya kuunda biashara';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nSw extends I18n {
 
   @override
   String get api_error_273 => 'Kujaribu kufuta anwani ambayo haipo kwenye kitabu cha anwani cha mtumiaji';
+
+  @override
+  String get api_error_99 => 'Inajaribu kuomba kiasi cha juu kuliko kinachoruhusiwa na first_time_limit_asset wakati wa kuunda biashara ya kwanza';
 }

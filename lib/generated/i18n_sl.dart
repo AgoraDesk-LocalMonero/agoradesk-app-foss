@@ -8158,9 +8158,6 @@ class I18nSl extends I18n {
   String get api_error_98 => 'Poskus ustvarjanja trde-a za oglas, katerega plakat ne obstaja';
 
   @override
-  String get api_error_99 => 'Pri ustvarjanju prvega trade-a poskušate zahtevati višji znesek, kot dovoljuje first_time_limit_asset';
-
-  @override
   String get api_error_100 => 'Za ustvarjanje trgovanja ni mogoče zahtevati manj kot 0,0000000001 XMR';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nSl extends I18n {
 
   @override
   String get api_error_273 => 'Poskus brisanja naslova, ki ne obstaja v uporabnikovem imeniku';
+
+  @override
+  String get api_error_99 => 'Pri ustvarjanju prvega trade-a poskušate zahtevati višji znesek, kot dovoljuje first_time_limit_asset';
 }

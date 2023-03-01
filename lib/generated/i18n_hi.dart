@@ -8158,9 +8158,6 @@ class I18nHi extends I18n {
   String get api_error_98 => 'एक ऐसे विज्ञापन के लिए व्यापार बनाने की कोशिश की जा रही है जिसका रचनाकार मौजूद नहीं है';
 
   @override
-  String get api_error_99 => 'पहला व्यापार बनाते समय first_time_limit_asset द्वारा अनुमत राशि से अधिक राशि का अनुरोध करने का प्रयास किया जा रहा है';
-
-  @override
   String get api_error_100 => 'व्यापार निर्माण के लिए ०.०००००००००१ XMR से कम का अनुरोध नहीं कर सकते';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nHi extends I18n {
 
   @override
   String get api_error_273 => 'किसी ऐसे पते को हटाने का प्रयास करना जो उपयोगकर्ता की पता पुस्तिका में मौजूद नहीं है';
+
+  @override
+  String get api_error_99 => 'पहला व्यापार बनाते समय first_time_limit_asset द्वारा अनुमत राशि से अधिक राशि का अनुरोध करने का प्रयास किया जा रहा है';
 }

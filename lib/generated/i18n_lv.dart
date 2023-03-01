@@ -8158,9 +8158,6 @@ class I18nLv extends I18n {
   String get api_error_98 => 'Mēģinājums izveidot darījumu sludinājumam, kura plakāts neeksistē';
 
   @override
-  String get api_error_99 => 'Veidojot pirmo darījumu, tiek mēģināts pieprasīt lielāku summu, nekā pieļauj first_time_limit_asset';
-
-  @override
   String get api_error_100 => 'Darījuma izveidei nevar pieprasīt mazāk par 0,0000000001 XMR';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nLv extends I18n {
 
   @override
   String get api_error_273 => 'Mēģinājums dzēst adresi, kas neeksistē lietotāja adrešu grāmatā';
+
+  @override
+  String get api_error_99 => 'Veidojot pirmo darījumu, tiek mēģināts pieprasīt lielāku summu, nekā pieļauj first_time_limit_asset';
 }

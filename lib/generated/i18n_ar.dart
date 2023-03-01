@@ -8158,9 +8158,6 @@ class I18nAr extends I18n {
   String get api_error_98 => 'محاولة إنشاء صفقة لإعلان غير موجود';
 
   @override
-  String get api_error_99 => 'محاولة طلب مبلغ أكبر مما يسمح به first_time_limit_asset عند إنشاء أول صفقة تداول';
-
-  @override
   String get api_error_100 => 'لا يمكن طلب أقل من 0.0000000001 XMR لإنشاء التجارة';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nAr extends I18n {
 
   @override
   String get api_error_273 => 'محاولة حذف عنوان غير موجود في دفتر عناوين المستخدم';
+
+  @override
+  String get api_error_99 => 'محاولة طلب مبلغ أكبر مما يسمح به first_time_limit_asset عند إنشاء أول صفقة تداول';
 }

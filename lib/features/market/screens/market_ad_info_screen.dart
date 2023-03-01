@@ -12,6 +12,7 @@ import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
 import 'package:agoradesk/core/widgets/branded/box_surface5_copy_on_title_readmore.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_text_p70.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_info_s4_with_close_child.dart';
+import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
@@ -26,7 +27,6 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -49,6 +49,7 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
           tradeRepository: context.read<TradeRepository>(),
           walletService: context.read<WalletService>(),
           authService: context.read<AuthService>(),
+          accountService: context.read<AccountService>(),
           adsRepository: context.read<AdsRepository>(),
         ),
         // implicitView: true,
@@ -130,8 +131,8 @@ class MarketAdInfoScreen extends StatelessWidget with CountryInfoMixin, Clipboar
                     : const SizedBox(),
                 limitsOn
                     ? TextWithDot(
-                        text: context.intl.ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(
-                            model.ad!.minAmount!.toString() + ' ' + model.ad!.currency),
+                        text: context.intl
+                            .ad8722Sbpage250Sbmin8722Sbamount8722Sbtip('${model.ad!.minAmount!} ${model.ad!.currency}'),
                       )
                     : const SizedBox(),
               ],

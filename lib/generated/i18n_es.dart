@@ -8158,9 +8158,6 @@ class I18nEs extends I18n {
   String get api_error_98 => 'Tratando de crear un intercambio para un anuncio cuyo cartel no existe';
 
   @override
-  String get api_error_99 => 'Intentar solicitar una cantidad superior a la permitida por first_time_limit_asset al crear una primera operación';
-
-  @override
   String get api_error_100 => 'No se puede solicitar menos de 0.0000000001 XMR para la creación de comercio';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nEs extends I18n {
 
   @override
   String get api_error_273 => 'Intentar eliminar una dirección que no existe en la libreta de direcciones de un usuario';
+
+  @override
+  String get api_error_99 => 'Intentar solicitar una cantidad superior a la permitida por first_time_limit_asset al crear una primera operación';
 }

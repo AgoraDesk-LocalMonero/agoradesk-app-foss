@@ -14561,12 +14561,6 @@ abstract class I18n {
   /// **'Trying to create a trade for an ad who’s poster doesn’t exist'**
   String get api_error_98;
 
-  /// No description provided for @api_error_99.
-  ///
-  /// In en, this message translates to:
-  /// **'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade'**
-  String get api_error_99;
-
   /// No description provided for @api_error_100.
   ///
   /// In en, this message translates to:
@@ -17026,6 +17020,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Attempting to delete an address that doesn’t exist in a user’s address book'**
   String get api_error_273;
+
+  /// No description provided for @api_error_99.
+  ///
+  /// In en, this message translates to:
+  /// **'Trying to request higher amount than allowed by the ad owner when creating a first trade'**
+  String get api_error_99;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

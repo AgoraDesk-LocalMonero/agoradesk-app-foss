@@ -8158,9 +8158,6 @@ class I18nHu extends I18n {
   String get api_error_98 => 'Olyan hirdetéshez próbál kereskedést létrehozni, aminek a feladója nem létezik';
 
   @override
-  String get api_error_99 => 'A first_time_limit_asset által megengedettnél nagyobb összeget próbál kérni az első kereskedés létrehozásakor';
-
-  @override
   String get api_error_100 => 'Kereskedés létrehozásához nem kérhet kevesebbet, mint 0.0000000001 XMR';
 
   @override
@@ -9455,4 +9452,7 @@ class I18nHu extends I18n {
 
   @override
   String get api_error_273 => 'Olyan cím törlésének kísérlete, amely nem létezik a felhasználó címjegyzékében';
+
+  @override
+  String get api_error_99 => 'A first_time_limit_asset által megengedettnél nagyobb összeget próbál kérni az első kereskedés létrehozásakor';
 }
