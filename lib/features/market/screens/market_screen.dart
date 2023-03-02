@@ -34,8 +34,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
-import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
 
@@ -283,6 +281,10 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                         popupProps: PopupProps.dialog(
                                           dialogProps: context.dropdownDialogProps,
                                           showSearchBox: true,
+                                          searchFieldProps: const TextFieldProps(
+                                            autofocus: true,
+                                            decoration: InputDecoration(labelText: 'Search'),
+                                          ),
                                         ),
                                         itemAsString: (String? code) => getCountryName(code ?? ''),
                                         asyncItems: (String? filter) => model.getCountryCodes(),
