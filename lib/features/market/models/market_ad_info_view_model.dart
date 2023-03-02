@@ -327,14 +327,14 @@ class MarketAdInfoViewModel extends ViewModel
 
   void _checkReceiveQuantity() {
     final receive = _receive.toDouble();
-    final firstTimeLimitCurrency = _firstTimeLimitAsset! * _tempAssetPrice;
-    if (receive < (ad!.minAmount ?? 0)) {
+    if (receive < (ad?.minAmount ?? 0)) {
       receiveError = context.intl.must_be_at_least((ad!.minAmount ?? 0).toString(), ad!.currency);
       readyToDeal = false;
     } else if (_firstTimeLimitAsset != null &&
         accountInfoModel?.hasCommonTrades != true &&
-        receive > firstTimeLimitCurrency) {
-      receiveError = context.intl.must_be_less(firstTimeLimitCurrency.toStringAsFixed(2), ad!.currency);
+        receive > _firstTimeLimitAsset! * _tempAssetPrice) {
+      receiveError =
+          context.intl.must_be_less((_firstTimeLimitAsset! * _tempAssetPrice).toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
       receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
