@@ -281,9 +281,9 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                         popupProps: PopupProps.dialog(
                                           dialogProps: context.dropdownDialogProps,
                                           showSearchBox: true,
-                                          searchFieldProps: const TextFieldProps(
+                                          searchFieldProps: TextFieldProps(
                                             autofocus: true,
-                                            decoration: InputDecoration(labelText: 'Search'),
+                                            decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
                                           ),
                                         ),
                                         itemAsString: (String? code) => getCountryName(code ?? ''),
