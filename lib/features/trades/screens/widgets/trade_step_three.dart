@@ -111,7 +111,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
                     AgoraFont.check_circle_alt,
                     color: context.colYellow80,
                   ),
-                  text: context.intl.trade250Sbstatus250Sbsettlement250Sbprocessing + '...',
+                  text: '${context.intl.trade250Sbstatus250Sbsettlement250Sbprocessing}...',
                 ),
                 const SizedBox(height: 12),
                 Text(
