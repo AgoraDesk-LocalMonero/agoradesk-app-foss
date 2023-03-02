@@ -437,6 +437,7 @@ class AddEditAdViewModel extends ViewModel
         buyerSettlementAddress: ctrl32WalletAddress.text.isNotEmpty ? ctrl32WalletAddress.text : null,
         minAmount: minAmount,
         maxAmount: maxAmount,
+        requireFeedbackScore: minimumFeedbackScore,
         limitToFiatAmounts: restrictLimit,
         firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
         firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
