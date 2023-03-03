@@ -123,6 +123,13 @@ class TradeRepository with ErrorParseMixin {
   }
 
   ///
+  /// Fund local trade
+  ///
+  Future<Either<ApiError, bool>> fundTrade(String tradeId) async {
+    return _tradeService.fundTrade(tradeId);
+  }
+
+  ///
   /// Start dispute
   ///
   Future<Either<ApiError, bool>> startDispute(String tradeId) async {

@@ -95,7 +95,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               );
             }
 
-            if (model.tradeStatus.index > 5) {
+            if (model.tradeStatus.index > 6) {
               return Column(
                 children: [
                   Padding(
@@ -133,7 +133,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -200,7 +200,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),

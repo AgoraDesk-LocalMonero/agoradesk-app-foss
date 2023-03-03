@@ -8215,15 +8215,6 @@ class I18nHi extends I18n {
   String get api_error_121 => 'एक ऐसे व्यापार को escrow करने का प्रयास करना जो मौजूद नहीं है';
 
   @override
-  String get api_error_122 => 'Floating LOCAL_SELL व्यापार के लिए वित्त की कमी';
-
-  @override
-  String get api_error_123 => 'एक non-floating LOCAL_SELL व्यापार के लिए वित्त की कमी';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL की निधि करते समय त्रुटि';
-
-  @override
   String get api_error_125 => 'व्यापार रद्द करने का अनुरोध करने वाला उपयोगकर्ता मौजूद नहीं है';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nHi extends I18n {
 
   @override
   String get api_error_99 => 'पहला व्यापार बनाते समय first_time_limit_asset द्वारा अनुमत राशि से अधिक राशि का अनुरोध करने का प्रयास किया जा रहा है';
+
+  @override
+  String get api_error_122 => 'Floating LOCAL_SELL व्यापार के लिए वित्त की कमी';
+
+  @override
+  String get api_error_123 => 'एक non-floating LOCAL_SELL व्यापार के लिए वित्त की कमी';
+
+  @override
+  String get api_error_124 => 'LOCAL_SELL की निधि करते समय त्रुटि';
 }

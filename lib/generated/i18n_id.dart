@@ -8215,15 +8215,6 @@ class I18nId extends I18n {
   String get api_error_121 => 'Mencoba untuk eskro perdagangan yang tidak ada';
 
   @override
-  String get api_error_122 => 'Dana tidak cukup untuk mendanai perdagangan LOCAL_SELL mengambang';
-
-  @override
-  String get api_error_123 => 'Dana tidak cukup untuk mendanai perdagangan LOCAL_SELL non-floating';
-
-  @override
-  String get api_error_124 => 'Kesalahan saat mendanai LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Pengguna yang meminta pembatalan perdagangan tidak ada';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nId extends I18n {
 
   @override
   String get api_error_99 => 'Mencoba meminta jumlah yang lebih tinggi dari yang diizinkan oleh first_time_limit_asset saat membuat perdagangan pertama';
+
+  @override
+  String get api_error_122 => 'Dana tidak cukup untuk mendanai perdagangan LOCAL_SELL mengambang';
+
+  @override
+  String get api_error_123 => 'Dana tidak cukup untuk mendanai perdagangan LOCAL_SELL non-floating';
+
+  @override
+  String get api_error_124 => 'Kesalahan saat mendanai LOCAL_SELL';
 }

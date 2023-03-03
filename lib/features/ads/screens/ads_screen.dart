@@ -44,7 +44,6 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
@@ -562,6 +561,11 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                   dropdownDecoratorProps: context.dropdownDecoration,
                                   popupProps: PopupProps.dialog(
                                     dialogProps: context.dropdownDialogProps,
+                                    showSearchBox: true,
+                                    searchFieldProps: TextFieldProps(
+                                      autofocus: true,
+                                      decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                                    ),
                                   ),
                                   itemAsString: (SortingType? type) => getSortingTypeName(context, type),
                                   asyncItems: (String? filter) => model.getSortingChoices(),
@@ -620,6 +624,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (String? code) => getCountryName(code ?? ''),
                             asyncItems: (String? filter) => model.getCountryCodes(),
@@ -639,6 +647,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
                             asyncItems: (String? filter) => model.getCurrencies(),
@@ -657,6 +669,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                             asyncItems: (String? filter) =>

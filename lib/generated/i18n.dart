@@ -14675,24 +14675,6 @@ abstract class I18n {
   /// **'Attempting to escrow a trade that doesn’t exist'**
   String get api_error_121;
 
-  /// No description provided for @api_error_122.
-  ///
-  /// In en, this message translates to:
-  /// **'Insufficient funds to fund a floating LOCAL_SELL trade'**
-  String get api_error_122;
-
-  /// No description provided for @api_error_123.
-  ///
-  /// In en, this message translates to:
-  /// **'Insufficient funds to fund a non-floating LOCAL_SELL trade'**
-  String get api_error_123;
-
-  /// No description provided for @api_error_124.
-  ///
-  /// In en, this message translates to:
-  /// **'Error when funding a LOCAL_SELL'**
-  String get api_error_124;
-
   /// No description provided for @api_error_125.
   ///
   /// In en, this message translates to:
@@ -17026,6 +17008,24 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Trying to request higher amount than allowed by the ad owner when creating a first trade'**
   String get api_error_99;
+
+  /// No description provided for @api_error_122.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient funds to fund a trade'**
+  String get api_error_122;
+
+  /// No description provided for @api_error_123.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient funds to fund a trade'**
+  String get api_error_123;
+
+  /// No description provided for @api_error_124.
+  ///
+  /// In en, this message translates to:
+  /// **'Error when funding a trade'**
+  String get api_error_124;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

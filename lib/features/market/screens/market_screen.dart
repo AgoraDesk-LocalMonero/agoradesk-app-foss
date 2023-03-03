@@ -215,6 +215,10 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                     popupProps: PopupProps.dialog(
                                       dialogProps: context.dropdownDialogProps,
                                       showSearchBox: true,
+                                      searchFieldProps: TextFieldProps(
+                                        autofocus: true,
+                                        decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                                      ),
                                     ),
                                     itemAsString: (OnlineProvider? method) =>
                                         getPaymentMethodName(context, method?.code, null),
@@ -254,6 +258,10 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                         popupProps: PopupProps.dialog(
                                           dialogProps: context.dropdownDialogProps,
                                           showSearchBox: true,
+                                          searchFieldProps: TextFieldProps(
+                                            autofocus: true,
+                                            decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                                          ),
                                         ),
                                         // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                                         itemAsString: (CurrencyModel? currency) => currency?.code ?? '',

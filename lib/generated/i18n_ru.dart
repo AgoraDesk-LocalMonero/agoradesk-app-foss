@@ -8215,15 +8215,6 @@ class I18nRu extends I18n {
   String get api_error_121 => 'Попытка условного депонирования сделки, которой не существует';
 
   @override
-  String get api_error_122 => 'Недостаточно средств для финансирования плавающей сделки LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Недостаточно средств для финансирования неплавающей сделки LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Ошибка при финансировании LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Пользователь, запрашивающий отмену сделки, не существует';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nRu extends I18n {
 
   @override
   String get api_error_99 => 'Попытка запросить большую сумму, чем разрешено first_time_limit_asset при создании первой сделки';
+
+  @override
+  String get api_error_122 => 'Недостаточно средств для финансирования плавающей сделки LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Недостаточно средств для финансирования неплавающей сделки LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Ошибка при финансировании LOCAL_SELL';
 }

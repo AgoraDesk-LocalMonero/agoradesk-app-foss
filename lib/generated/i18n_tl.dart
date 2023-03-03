@@ -8215,15 +8215,6 @@ class I18nTl extends I18n {
   String get api_error_121 => 'Pagtatangkang i-escrow ang isang trade na wala';
 
   @override
-  String get api_error_122 => 'Hindi sapat na pondo upang pondohan ang isang lumulutang na LOCAL_SELL na kalakalan';
-
-  @override
-  String get api_error_123 => 'Hindi sapat na pondo upang pondohan ang isang hindi lumulutang na LOCAL_SELL na kalakalan';
-
-  @override
-  String get api_error_124 => 'Error sa pagpopondo ng LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Ang user na humihiling ng pagkansela ng kalakalan ay hindi umiiral';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nTl extends I18n {
 
   @override
   String get api_error_99 => 'Sinusubukang humiling ng mas mataas na halaga kaysa sa pinapayagan ng first_time_limit_asset kapag gumagawa ng unang trade';
+
+  @override
+  String get api_error_122 => 'Hindi sapat na pondo upang pondohan ang isang lumulutang na LOCAL_SELL na kalakalan';
+
+  @override
+  String get api_error_123 => 'Hindi sapat na pondo upang pondohan ang isang hindi lumulutang na LOCAL_SELL na kalakalan';
+
+  @override
+  String get api_error_124 => 'Error sa pagpopondo ng LOCAL_SELL';
 }

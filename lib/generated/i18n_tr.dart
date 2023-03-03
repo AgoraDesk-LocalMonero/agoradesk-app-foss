@@ -8215,15 +8215,6 @@ class I18nTr extends I18n {
   String get api_error_121 => 'Var olmayan bir ticareti emanet etmeye çalışmak';
 
   @override
-  String get api_error_122 => 'Değişken bir LOCAL_SELL ticaretini finanse etmek için yeterli fon yok';
-
-  @override
-  String get api_error_123 => 'Değişken olmayan bir LOCAL_SELL ticaretini finanse etmek için yeterli fon yok';
-
-  @override
-  String get api_error_124 => 'Bir LOCAL_SELL fonlanırken hata oluştu';
-
-  @override
   String get api_error_125 => 'İşlemin iptal edilmesini talep eden kullanıcı mevcut değil';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nTr extends I18n {
 
   @override
   String get api_error_99 => 'İlk ticaret oluşturulurken first_time_limit_asset tarafından izin verilenden daha yüksek bir miktar talep edilmeye çalışılıyor';
+
+  @override
+  String get api_error_122 => 'Değişken bir LOCAL_SELL ticaretini finanse etmek için yeterli fon yok';
+
+  @override
+  String get api_error_123 => 'Değişken olmayan bir LOCAL_SELL ticaretini finanse etmek için yeterli fon yok';
+
+  @override
+  String get api_error_124 => 'Bir LOCAL_SELL fonlanırken hata oluştu';
 }

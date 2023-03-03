@@ -8215,15 +8215,6 @@ class I18nUr extends I18n {
   String get api_error_121 => 'ایسی تجارت کو ایسکرو کرنے کی کوشش کرنا جو موجود نہیں ہے';
 
   @override
-  String get api_error_122 => 'فلوٹنگ LOCAL_SELL تجارت کے لیے فنڈز ناکافی ہیں';
-
-  @override
-  String get api_error_123 => 'غیر فلوٹنگ LOCAL_SELL تجارت کے لیے فنڈز ناکافی ہیں';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL کو فنڈ دیتے وقت خرابی';
-
-  @override
   String get api_error_125 => 'تجارت کی منسوخی کی درخواست کرنے والا صارف موجود نہیں ہے';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nUr extends I18n {
 
   @override
   String get api_error_99 => 'پہلی تجارت بناتے وقت first_time_limit_asset کی اجازت سے زیادہ رقم کی درخواست کرنے کی کوشش کرنا';
+
+  @override
+  String get api_error_122 => 'فلوٹنگ LOCAL_SELL تجارت کے لیے فنڈز ناکافی ہیں';
+
+  @override
+  String get api_error_123 => 'غیر فلوٹنگ LOCAL_SELL تجارت کے لیے فنڈز ناکافی ہیں';
+
+  @override
+  String get api_error_124 => 'LOCAL_SELL کو فنڈ دیتے وقت خرابی';
 }

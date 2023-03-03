@@ -8215,15 +8215,6 @@ class I18nKo extends I18n {
   String get api_error_121 => '존재하지 않는 거래를 에스크로 시도';
 
   @override
-  String get api_error_122 => '부동 LOCAL_SELL 거래 자금이 부족합니다.';
-
-  @override
-  String get api_error_123 => '비유동 LOCAL_SELL 거래 자금이 부족합니다.';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL 자금 조달 중 오류';
-
-  @override
   String get api_error_125 => '거래 취소를 요청하는 사용자가 존재하지 않습니다.';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nKo extends I18n {
 
   @override
   String get api_error_99 => '첫 거래를 생성할 때 first_time_limit_asset에서 허용한 것보다 더 많은 금액을 요청하려고 합니다.';
+
+  @override
+  String get api_error_122 => '부동 LOCAL_SELL 거래 자금이 부족합니다.';
+
+  @override
+  String get api_error_123 => '비유동 LOCAL_SELL 거래 자금이 부족합니다.';
+
+  @override
+  String get api_error_124 => 'LOCAL_SELL 자금 조달 중 오류';
 }

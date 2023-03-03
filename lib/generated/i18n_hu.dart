@@ -8215,15 +8215,6 @@ class I18nHu extends I18n {
   String get api_error_121 => 'Nem létező kereskedést próbál letétbe helyezni';
 
   @override
-  String get api_error_122 => 'Nincs elegendő pénz lebegő LOCAL_SELL ügylet finanszírozásához';
-
-  @override
-  String get api_error_123 => 'Nincs elegendő forrás egy nem lebegő LOCAL_SELL ügylet finanszírozásához';
-
-  @override
-  String get api_error_124 => 'Hiba történt a LOCAL_SELL finanszírozása során';
-
-  @override
   String get api_error_125 => 'A kereskedés törlését kérő felhasználó nem létezik';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nHu extends I18n {
 
   @override
   String get api_error_99 => 'A first_time_limit_asset által megengedettnél nagyobb összeget próbál kérni az első kereskedés létrehozásakor';
+
+  @override
+  String get api_error_122 => 'Nincs elegendő pénz lebegő LOCAL_SELL ügylet finanszírozásához';
+
+  @override
+  String get api_error_123 => 'Nincs elegendő forrás egy nem lebegő LOCAL_SELL ügylet finanszírozásához';
+
+  @override
+  String get api_error_124 => 'Hiba történt a LOCAL_SELL finanszírozása során';
 }

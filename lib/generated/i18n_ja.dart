@@ -8215,15 +8215,6 @@ class I18nJa extends I18n {
   String get api_error_121 => '存在しない取引をエスクローしようとする';
 
   @override
-  String get api_error_122 => 'フローティングLOCAL_SELL 取引に資金を供給するのに十分な資金がありません';
-
-  @override
-  String get api_error_123 => 'フローティングでないLOCAL_SELL取引に資金を供給するための資金が不十分';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL への資金提供時のエラー';
-
-  @override
   String get api_error_125 => '取引のキャンセルを要求するユーザーは存在しません';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nJa extends I18n {
 
   @override
   String get api_error_99 => '最初の取引を作成するときに、first_time_limit_asset で許可されているよりも高い金額をリクエストしようとしています';
+
+  @override
+  String get api_error_122 => 'フローティングLOCAL_SELL 取引に資金を供給するのに十分な資金がありません';
+
+  @override
+  String get api_error_123 => 'フローティングでないLOCAL_SELL取引に資金を供給するための資金が不十分';
+
+  @override
+  String get api_error_124 => 'LOCAL_SELL への資金提供時のエラー';
 }

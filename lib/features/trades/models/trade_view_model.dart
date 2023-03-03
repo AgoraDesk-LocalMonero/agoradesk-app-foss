@@ -511,7 +511,10 @@ class TradeViewModel extends ViewModel
   //todo - move to utils
   void _setTradeStatus({bool initial = false}) {
     late final DateTime tradeStatusDate;
-    if (tradeForScreen.releasedAt != null &&
+    if (isLocalTrade && tradeForScreen.fundedAt == null) {
+      tradeStatus = TradeStatus.notFunded;
+      tradeStatusDate = tradeForScreen.createdAt!;
+    } else if (tradeForScreen.releasedAt != null &&
         tradeForScreen.transferToSellerTransactionId == null &&
         tradeForScreen.transferToBuyerTransactionId == null) {
       tradeStatus = TradeStatus.awaitingToSellerWallet;
@@ -634,6 +637,23 @@ class TradeViewModel extends ViewModel
       }
       notifyListeners();
     }
+  }
+
+  ///
+  /// Fund local trade
+  ///
+  Future fundTrade() async {
+    enablingEscrow = true;
+    final res = await _tradeRepository.fundTrade(tradeForScreen.tradeId);
+    enablingEscrow = false;
+    if (res.isRight) {
+      getTrade(polling: true);
+      AutoRouter.of(context).pop();
+    } else {
+      handleApiError(res.left, context);
+      AutoRouter.of(context).pop();
+    }
+    notifyListeners();
   }
 
   void showDisputeDialog() {

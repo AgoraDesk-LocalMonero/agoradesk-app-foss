@@ -8215,15 +8215,6 @@ class I18nCs extends I18n {
   String get api_error_121 => 'Pokus o úschovu obchodu, který neexistuje';
 
   @override
-  String get api_error_122 => 'Nedostatek finančních prostředků k financování pohyblivého obchodu LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Nedostatek finančních prostředků k financování neplovoucího obchodu LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Chyba při financování LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Uživatel požadující zrušení obchodu neexistuje';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nCs extends I18n {
 
   @override
   String get api_error_99 => 'Při vytváření prvního obchodu se pokoušíte požádat o vyšší částku, než povoluje first_time_limit_asset';
+
+  @override
+  String get api_error_122 => 'Nedostatek finančních prostředků k financování pohyblivého obchodu LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Nedostatek finančních prostředků k financování neplovoucího obchodu LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Chyba při financování LOCAL_SELL';
 }

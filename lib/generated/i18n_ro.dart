@@ -8215,15 +8215,6 @@ class I18nRo extends I18n {
   String get api_error_121 => 'Încercare de garanție a unei tranzacții care nu există';
 
   @override
-  String get api_error_122 => 'Fonduri insuficiente pentru a finanța o tranzacție LOCAL_SELL variabilă';
-
-  @override
-  String get api_error_123 => 'Fonduri insuficiente pentru a finanța o tranzacție LOCAL_SELL care nu este variabilă.';
-
-  @override
-  String get api_error_124 => 'Eroare la finanțarea unui LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Utilizatorul care solicită anularea tranzacției nu există';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nRo extends I18n {
 
   @override
   String get api_error_99 => 'Încercare de a solicita o sumă mai mare decât cea permisă de first_time_limit_asset atunci când se creează o primă tranzacție';
+
+  @override
+  String get api_error_122 => 'Fonduri insuficiente pentru a finanța o tranzacție LOCAL_SELL variabilă';
+
+  @override
+  String get api_error_123 => 'Fonduri insuficiente pentru a finanța o tranzacție LOCAL_SELL care nu este variabilă.';
+
+  @override
+  String get api_error_124 => 'Eroare la finanțarea unui LOCAL_SELL';
 }

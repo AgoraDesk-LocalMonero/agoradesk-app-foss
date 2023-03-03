@@ -8215,15 +8215,6 @@ class I18nPl extends I18n {
   String get api_error_121 => 'Próba przekazania środków pod zastaw dla handlu, który nie istnieje';
 
   @override
-  String get api_error_122 => 'Niewystarczające środki, aby sfinansować płynny handel LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Niewystarczające środki na sfinansowanie zamrożonego handlu LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Błąd podczas finansowania LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Użytkownik żądający anulowania handlu nie istnieje';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nPl extends I18n {
 
   @override
   String get api_error_99 => 'Próbujesz zażądać wyższej kwoty niż dozwolona przez first_time_limit_asset podczas tworzenia pierwszego handlu';
+
+  @override
+  String get api_error_122 => 'Niewystarczające środki, aby sfinansować płynny handel LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Niewystarczające środki na sfinansowanie zamrożonego handlu LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Błąd podczas finansowania LOCAL_SELL';
 }

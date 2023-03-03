@@ -8215,15 +8215,6 @@ class I18nSl extends I18n {
   String get api_error_121 => 'Poskus escrowa trade-a, ki ne obstaja';
 
   @override
-  String get api_error_122 => 'Nezadostna sredstva za financiranje trade-a LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Nezadostna sredstva za financiranje non-floating trade-a LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Napaka pri financiranju LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Uporabnik, ki zahteva preklic trgovanja, ne obstaja';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nSl extends I18n {
 
   @override
   String get api_error_99 => 'Pri ustvarjanju prvega trade-a poskušate zahtevati višji znesek, kot dovoljuje first_time_limit_asset';
+
+  @override
+  String get api_error_122 => 'Nezadostna sredstva za financiranje trade-a LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Nezadostna sredstva za financiranje non-floating trade-a LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Napaka pri financiranju LOCAL_SELL';
 }

@@ -8215,15 +8215,6 @@ class I18nEn extends I18n {
   String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
 
   @override
-  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
-
-  @override
-  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
-
-  @override
-  String get api_error_124 => 'Error when funding a LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nEn extends I18n {
 
   @override
   String get api_error_99 => 'Trying to request higher amount than allowed by the ad owner when creating a first trade';
+
+  @override
+  String get api_error_122 => 'Insufficient funds to fund a trade';
+
+  @override
+  String get api_error_123 => 'Insufficient funds to fund a trade';
+
+  @override
+  String get api_error_124 => 'Error when funding a trade';
 }

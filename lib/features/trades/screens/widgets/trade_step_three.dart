@@ -41,7 +41,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
             return _buildProcessingBlock(model, context);
           }
 
-          if (model.tradeStatus.index < 5) {
+          if (model.tradeStatus.index < 6) {
             return Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
               child: ContainerSurface5Radius12(

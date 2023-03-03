@@ -1,10 +1,12 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_box_open_close_line_s5_s3.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_two_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_p80.dart';
+import 'package:agoradesk/core/widgets/branded/button_icon_text_p70.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_with_icon_p80.dart';
 import 'package:agoradesk/core/widgets/branded/circle_with_icon.dart';
 import 'package:agoradesk/core/widgets/branded/circle_with_num.dart';
@@ -16,6 +18,7 @@ import 'package:agoradesk/core/widgets/branded/line_icon_text_primary90.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/finalize_trade_dialog.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
@@ -33,9 +36,121 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
     return ViewModelBuilder<TradeViewModel>(
         model: model,
         disposable: false,
-        initOnce: true,
         builder: (context, model, child) {
           if (model.isLocalTrade) {
+            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isSelling == true) {
+              return ContainerSurface5Radius12(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                  child: Column(
+                    children: [
+                      LineIconTextPrimary90(
+                        icon: const CircleWithNum(num: 1),
+                        text: context.intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle,
+                      ),
+                      const SizedBox(height: 14),
+                      ContainerSurface3Radius12Border1(
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              LineDotText(
+                                text: context.intl
+                                    .trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbfund8722Sbthe8722Sbtrade(
+                                  model.finalAmount(),
+                                  GetIt.I<AppParameters>().appName,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              LineDotText(
+                                text: context
+                                    .intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          model.escrowed
+                              ? const SizedBox()
+                              : Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
+                                  child: ButtonOutlinedWithIconP80(
+                                    title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                                    insidePadding: const EdgeInsets.fromLTRB(10, 10, 16, 10),
+                                    icon: Icon(
+                                      AgoraFont.check_circle_alt,
+                                      color: Theme.of(context).colorScheme.p80P70,
+                                    ),
+                                    onPressed: () => _cancelTradeDialog(model, context),
+                                  ),
+                                ),
+                          ButtonFilledWithIconP80(
+                            title: context.intl.trade250Sbfund8722Sbtrade8722Sbbtn,
+                            insidePadding: const EdgeInsets.fromLTRB(10, 10, 16, 10),
+                            icon: Icon(
+                              AgoraFont.check_circle_alt,
+                              color: Theme.of(context).colorScheme.primary20,
+                            ),
+                            onPressed: () => _fundTradeDialog(model, context),
+                          ),
+                        ],
+                      ),
+                      model.escrowed
+                          ? const SizedBox()
+                          : Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: ButtonIconTextP70(
+                                iconData: AgoraFont.lock,
+                                text: context.intl.trade250Sbenable8722Sbescrow8722Sbbtn,
+                                onPressed: () => _enableEscrowDialog(model, context),
+                              ),
+                            ),
+                    ],
+                  ),
+                ),
+              );
+            }
+            if (model.tradeStatus == TradeStatus.notFunded) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerSurface5Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Column(
+                      children: [
+                        LineIconTextPrimary90(
+                          icon: const CircleWithNum(num: 1),
+                          text: context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                        ),
+                        const SizedBox(height: 14),
+                        ContainerSurface3Radius12Border1(
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Column(
+                              children: [
+                                LineDotText(
+                                  text: context.intl
+                                      .trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(
+                                          GetIt.I<AppParameters>().appName),
+                                ),
+                                const SizedBox(height: 12),
+                                LineDotText(
+                                  text: context.intl.trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
             return Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
               child: ContainerSurface5Radius12(
@@ -49,7 +164,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
               ),
             );
           }
-          if (model.tradeStatus.index > 4 && model.tradeStatus != TradeStatus.disputed) {
+          if (model.tradeStatus.index > 5 && model.tradeStatus != TradeStatus.disputed) {
             return const SizedBox();
           }
           return Padding(
@@ -62,7 +177,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerSurface5Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -146,7 +261,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerSurface5Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -312,6 +427,58 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
         onPressedFilled: () => model.markAsPaid(),
         onPressedOutline: () => Navigator.of(context).pop(),
         loadingFilled: model.markingAsPaid,
+      ),
+    );
+  }
+
+  void _cancelTradeDialog(TradeViewModel model, BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+      builder: (_) => DialogOutlineAndFilledButtons(
+        title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+        content: Text(context.intl.app_cancel_trade_message),
+        filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        onPressedOutline: () => AutoRouter.of(context).pop(),
+        onPressedFilled: () => model.cancelTrade(),
+        loadingFilled: model.cancelingTrade,
+      ),
+    );
+  }
+
+  void _enableEscrowDialog(TradeViewModel model, BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+      builder: (_) => DialogOutlineAndFilledButtons(
+        title: context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtitle,
+        content: Text(context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtext),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        onPressedOutline: () => AutoRouter.of(context).pop(),
+        onPressedFilled: () => model.enableEscrow(),
+        loadingFilled: model.enablingEscrow,
+      ),
+    );
+  }
+
+  void _fundTradeDialog(TradeViewModel model, BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+      builder: (_) => DialogOutlineAndFilledButtons(
+        title: context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle,
+        content:
+            Text(context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext(GetIt.I<AppParameters>().appName)),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        onPressedOutline: () => AutoRouter.of(context).pop(),
+        onPressedFilled: () => model.fundTrade(),
+        loadingFilled: model.enablingEscrow,
       ),
     );
   }

@@ -8215,15 +8215,6 @@ class I18nSv extends I18n {
   String get api_error_121 => 'Försöker deponera en handel som inte finns';
 
   @override
-  String get api_error_122 => 'Otillräckliga medel för att finansiera en flytande LOCAL_SELL-handel';
-
-  @override
-  String get api_error_123 => 'Otillräckliga medel för att finansiera en icke-flytande LOCAL_SELL-handel';
-
-  @override
-  String get api_error_124 => 'Fel vid finansiering av en LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'Användare som begär annullering av handel existerar inte';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nSv extends I18n {
 
   @override
   String get api_error_99 => 'Försöker begära ett högre belopp än vad first_time_limit_asset tillåter när du skapar en första handel';
+
+  @override
+  String get api_error_122 => 'Otillräckliga medel för att finansiera en flytande LOCAL_SELL-handel';
+
+  @override
+  String get api_error_123 => 'Otillräckliga medel för att finansiera en icke-flytande LOCAL_SELL-handel';
+
+  @override
+  String get api_error_124 => 'Fel vid finansiering av en LOCAL_SELL';
 }

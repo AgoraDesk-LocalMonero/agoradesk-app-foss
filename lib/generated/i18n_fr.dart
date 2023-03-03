@@ -8215,15 +8215,6 @@ class I18nFr extends I18n {
   String get api_error_121 => 'Tentative de mise en place d\'un dépôt fiduciaire pour une transaction qui n\'existe pas';
 
   @override
-  String get api_error_122 => 'Fonds insuffisants pour financer une transaction LOCAL_SELL flottante';
-
-  @override
-  String get api_error_123 => 'Fonds insuffisants pour financer une transaction LOCAL_SELL non flottante';
-
-  @override
-  String get api_error_124 => 'Erreur lors du financement d\'une transaction LOCAL_SELL';
-
-  @override
   String get api_error_125 => 'L\'utilisateur demandant l\'annulation de la transaction n\'existe pas';
 
   @override
@@ -9455,4 +9446,13 @@ class I18nFr extends I18n {
 
   @override
   String get api_error_99 => 'Tentative de demander un montant supérieur à celui autorisé par « first_time_limit_asset » lors de la création d\'un premier échange';
+
+  @override
+  String get api_error_122 => 'Fonds insuffisants pour financer une transaction LOCAL_SELL flottante';
+
+  @override
+  String get api_error_123 => 'Fonds insuffisants pour financer une transaction LOCAL_SELL non flottante';
+
+  @override
+  String get api_error_124 => 'Erreur lors du financement d\'une transaction LOCAL_SELL';
 }
