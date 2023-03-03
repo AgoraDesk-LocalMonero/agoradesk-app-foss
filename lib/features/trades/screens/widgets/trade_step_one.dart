@@ -145,6 +145,19 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                             ),
                           ),
                         ),
+                        const SizedBox(height: 12),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
+                          child: ButtonOutlinedWithIconP80(
+                            title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                            insidePadding: const EdgeInsets.fromLTRB(10, 10, 16, 10),
+                            icon: Icon(
+                              AgoraFont.check_circle_alt,
+                              color: Theme.of(context).colorScheme.p80P70,
+                            ),
+                            onPressed: () => _cancelTradeDialog(model, context),
+                          ),
+                        ),
                       ],
                     ),
                   ),

@@ -185,51 +185,54 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
       );
     }
     if (model.tradeStatus.index < 4) {
-      return ContainerSurface5Radius12(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
-          child: Column(
-            children: [
-              LineIconTextPrimary90(
-                icon: const CircleWithNum(num: 2),
-                text: context.intl.trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbtitle,
-              ),
-              const SizedBox(height: 14),
-              ContainerSurface3Radius12Border1(
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Column(
-                    children: [
-                      LineDotText(
-                        text: context.intl.trade250Sbamount8722Sbto8722Sbpay(
-                            '${model.tradeForScreen.amount} ${model.tradeForScreen.currency}'),
-                      ),
-                      const SizedBox(height: 12),
-                      LineDotText(
-                        highlightedText: model.tradeForScreen.verificationCode,
-                        text: context.intl.trade250Sblocal250Sbbuyer250Sbverification8722Sbcode(''),
-                      ),
-                      const SizedBox(height: 12),
-                      LineDotText(
-                        text: model.escrowed
-                            ? context.intl.trade250Sblocal250Sbbuyer250Sbescrowed
-                            : context.intl.trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
-                      ),
-                    ],
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+        child: ContainerSurface5Radius12(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+            child: Column(
+              children: [
+                LineIconTextPrimary90(
+                  icon: const CircleWithNum(num: 2),
+                  text: context.intl.trade250Sblocal250Sbstep8722Sb1250Sbbuyer250Sbtitle,
+                ),
+                const SizedBox(height: 14),
+                ContainerSurface3Radius12Border1(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      children: [
+                        LineDotText(
+                          text: context.intl.trade250Sbamount8722Sbto8722Sbpay(
+                              '${model.tradeForScreen.amount} ${model.tradeForScreen.currency}'),
+                        ),
+                        const SizedBox(height: 12),
+                        LineDotText(
+                          highlightedText: model.tradeForScreen.verificationCode,
+                          text: context.intl.trade250Sblocal250Sbbuyer250Sbverification8722Sbcode(''),
+                        ),
+                        const SizedBox(height: 12),
+                        LineDotText(
+                          text: model.escrowed
+                              ? context.intl.trade250Sblocal250Sbbuyer250Sbescrowed
+                              : context.intl.trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 12),
-              ButtonOutlinedWithIconP80(
-                title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-                icon: Icon(
-                  AgoraFont.check_circle_alt,
-                  color: Theme.of(context).colorScheme.p80P70,
+                const SizedBox(height: 12),
+                ButtonOutlinedWithIconP80(
+                  title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                  icon: Icon(
+                    AgoraFont.check_circle_alt,
+                    color: Theme.of(context).colorScheme.p80P70,
+                  ),
+                  loading: model.cancelingTrade,
+                  onPressed: () => _cancelTradeDialog(model, context),
                 ),
-                loading: model.cancelingTrade,
-                onPressed: () => _cancelTradeDialog(model, context),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       );

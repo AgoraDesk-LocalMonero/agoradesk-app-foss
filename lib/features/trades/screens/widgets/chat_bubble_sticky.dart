@@ -39,15 +39,100 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (!model.displayStickyBubble()) {
               return const SizedBox(height: 8);
             }
-            if (model.isLocalTrade && model.tradeStatus == TradeStatus.created) {
+
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying!) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                 child: ContainerC85c09Radius12(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
-                    child: Text(
-                      context.intl.trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbtitle,
-                      style: context.txtLabelMediumPrimary10,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Center(
+                          child: ButtonOutlinedWithIconP80(
+                            title: context.intl.cancel,
+                            borderColor: context.colN30,
+                            style: context.txtLabelLargeNeutral30,
+                            icon: Icon(
+                              AgoraFont.x_circle,
+                              color: context.colN30,
+                            ),
+                            onPressed: () => _cancelTradeSellerDialog(context, model),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.funded && model.tradeForScreen.isBuying!) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb1250Sbbuyer250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Center(
+                          child: ButtonOutlinedWithIconP80(
+                            title: context.intl.cancel,
+                            borderColor: context.colN30,
+                            style: context.txtLabelLargeNeutral30,
+                            icon: Icon(
+                              AgoraFont.x_circle,
+                              color: context.colN30,
+                            ),
+                            onPressed: () => _cancelTradeSellerDialog(context, model),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.funded && model.tradeForScreen.isSelling!) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Center(
+                          child: ButtonOutlinedWithIconP80(
+                            title: context.intl.cancel,
+                            borderColor: context.colN30,
+                            style: context.txtLabelLargeNeutral30,
+                            icon: Icon(
+                              AgoraFont.x_circle,
+                              color: context.colN30,
+                            ),
+                            onPressed: () => _cancelTradeSellerDialog(context, model),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -102,6 +187,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                     child: ChatBubbleYellow(
                       text: context.intl.settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort,
+                      date: model.tradeForScreen.releasedAt,
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
                         child: Center(
@@ -120,7 +206,6 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                         ),
                       ),
-                      date: model.tradeForScreen.releasedAt,
                     ),
                   ),
                 ],

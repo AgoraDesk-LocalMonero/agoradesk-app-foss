@@ -514,6 +514,9 @@ class TradeViewModel extends ViewModel
     if (isLocalTrade && tradeForScreen.fundedAt == null) {
       tradeStatus = TradeStatus.notFunded;
       tradeStatusDate = tradeForScreen.createdAt!;
+    } else if (isLocalTrade && tradeForScreen.fundedAt != null) {
+      tradeStatus = TradeStatus.funded;
+      tradeStatusDate = tradeForScreen.createdAt!;
     } else if (tradeForScreen.releasedAt != null &&
         tradeForScreen.transferToSellerTransactionId == null &&
         tradeForScreen.transferToBuyerTransactionId == null) {
