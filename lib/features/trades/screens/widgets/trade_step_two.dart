@@ -115,6 +115,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                                 padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
                                 child: ButtonOutlinedWithIconP80(
                                   title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                                  insidePadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                                   icon: Icon(
                                     AgoraFont.x_circle,
                                     color: Theme.of(context).colorScheme.p80P70,
@@ -224,6 +225,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                 const SizedBox(height: 12),
                 ButtonOutlinedWithIconP80(
                   title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                  insidePadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   icon: Icon(
                     AgoraFont.x_circle,
                     color: Theme.of(context).colorScheme.p80P70,
@@ -408,6 +410,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                             const SizedBox(height: 12),
                             ButtonOutlinedWithIconP80(
                               title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                              insidePadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                               icon: Icon(
                                 AgoraFont.x_circle,
                                 color: Theme.of(context).colorScheme.p80P70,
