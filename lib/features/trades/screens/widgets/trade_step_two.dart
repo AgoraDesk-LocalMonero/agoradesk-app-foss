@@ -116,7 +116,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                                 child: ButtonOutlinedWithIconP80(
                                   title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                                   icon: Icon(
-                                    AgoraFont.check_circle_alt,
+                                    AgoraFont.x_circle,
                                     color: Theme.of(context).colorScheme.p80P70,
                                   ),
                                   onPressed: () => _cancelTradeDialog(model, context),
@@ -225,7 +225,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                 ButtonOutlinedWithIconP80(
                   title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                   icon: Icon(
-                    AgoraFont.check_circle_alt,
+                    AgoraFont.x_circle,
                     color: Theme.of(context).colorScheme.p80P70,
                   ),
                   loading: model.cancelingTrade,
@@ -409,7 +409,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                             ButtonOutlinedWithIconP80(
                               title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
                               icon: Icon(
-                                AgoraFont.check_circle_alt,
+                                AgoraFont.x_circle,
                                 color: Theme.of(context).colorScheme.p80P70,
                               ),
                               onPressed: () => _cancelTradeDialog(model, context),
