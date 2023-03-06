@@ -1,10 +1,9 @@
 ### Updates
-1. Fixed: Local trdaes funded and other bugs.
-2. Fixed: Asseccibility search fields in dropdown lists. 
-3. Fixed: App doesn't show progression to step 2 of XMR settlement.
-4. Fixed: minimum feedback requirement in the app it is not saved with the rest of the ad.
-5. Added: Proxy setting before login
-6. Enhanced: Wallet tiles can be minimized for compact view
+1. Fixed: Local trades funded and other bugs.
+2. Fixed: Asseccibility search fields in dropdown lists.
+3. Fixed: The app doesn't show progression to step 2 of XMR settlement.
+4. Fixed: minimum feedback requirement in the app is not saved with the rest of the ad.
+
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
