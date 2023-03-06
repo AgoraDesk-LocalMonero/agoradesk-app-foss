@@ -8158,9 +8158,6 @@ class I18nLv extends I18n {
   String get api_error_98 => 'Mēģinājums izveidot darījumu sludinājumam, kura plakāts neeksistē';
 
   @override
-  String get api_error_99 => 'Veidojot pirmo darījumu, tiek mēģināts pieprasīt lielāku summu, nekā pieļauj first_time_limit_asset';
-
-  @override
   String get api_error_100 => 'Darījuma izveidei nevar pieprasīt mazāk par 0,0000000001 XMR';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nLv extends I18n {
 
   @override
   String get api_error_121 => 'Mēģinājums nodrošināt starpniecību darījumam, kas neeksistē';
-
-  @override
-  String get api_error_122 => 'Nepietiek līdzekļu, lai finansētu peldošu LOCAL_SELL darījumu';
-
-  @override
-  String get api_error_123 => 'Nepietiek līdzekļu, lai finansētu nepeldošu LOCAL_SELL darījumu';
-
-  @override
-  String get api_error_124 => 'Kļūda, finansējot LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Lietotājs, kurš pieprasa darījuma atcelšanu, neeksistē';
@@ -9455,4 +9443,16 @@ class I18nLv extends I18n {
 
   @override
   String get api_error_273 => 'Mēģinājums dzēst adresi, kas neeksistē lietotāja adrešu grāmatā';
+
+  @override
+  String get api_error_99 => 'Veidojot pirmo darījumu, tiek mēģināts pieprasīt lielāku summu, nekā pieļauj first_time_limit_asset';
+
+  @override
+  String get api_error_122 => 'Nepietiek līdzekļu, lai finansētu peldošu LOCAL_SELL darījumu';
+
+  @override
+  String get api_error_123 => 'Nepietiek līdzekļu, lai finansētu nepeldošu LOCAL_SELL darījumu';
+
+  @override
+  String get api_error_124 => 'Kļūda, finansējot LOCAL_SELL';
 }

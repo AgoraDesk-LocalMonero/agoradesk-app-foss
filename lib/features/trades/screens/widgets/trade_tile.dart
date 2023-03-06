@@ -18,7 +18,6 @@ import 'package:agoradesk/features/trades/screens/widgets/highlight_box.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMethodsMixin {
   TradeTile({
@@ -38,18 +37,18 @@ class TradeTile extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
 
     final isSell = trade.isSelling!;
     final buyerStr =
-        (trade.buyer.username ?? kDeletedUserName) + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbbuyer})';
+        '${trade.buyer.username ?? kDeletedUserName} (${context.intl.ad8722Sblisting8722Sbtable250Sbbuyer})';
     final sellerStr =
-        (trade.seller.username ?? kDeletedUserName) + ' (${context.intl.ad8722Sblisting8722Sbtable250Sbseller})';
+        '${trade.seller.username ?? kDeletedUserName} (${context.intl.ad8722Sblisting8722Sbtable250Sbseller})';
 
     final username = isSell ? buyerStr : sellerStr;
     final trader = isSell ? trade.buyer : trade.seller;
 
-    final fiatAmountStr = trade.amount + ' ' + trade.currency;
-    final fiatTitleStr = isSell ? context.intl.you_receive + ':' : context.intl.you_pay + ':';
+    final fiatAmountStr = '${trade.amount} ${trade.currency}';
+    final fiatTitleStr = isSell ? '${context.intl.you_receive}:' : '${context.intl.you_pay}:';
 
-    final assetTitleStr = isSell ? context.intl.you_sell + ':' : context.intl.you_buy + ':';
-    final assetAmountStr = trade.assetAmount + ' ' + trade.asset.title();
+    final assetTitleStr = isSell ? '${context.intl.you_sell}:' : '${context.intl.you_buy}:';
+    final assetAmountStr = '${trade.assetAmount} ${trade.asset.title()}';
 
     final adId = trade.advertisement.id != null ? trade.advertisement.id!.substring(0, 8) : context.intl.app_ad_deleted;
 

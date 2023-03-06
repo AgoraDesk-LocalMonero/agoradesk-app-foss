@@ -8158,9 +8158,6 @@ class I18nFi extends I18n {
   String get api_error_98 => 'Yritetään luoda kauppaa ilmoitukselle, jonka julkaisijaa ei ole olemassa';
 
   @override
-  String get api_error_99 => 'Yritetään pyytää suurempaa summaa kuin first_time_limit_asset sallii ensimmäistä kauppaa luotaessa';
-
-  @override
   String get api_error_100 => 'Kaupan luomiseen ei voi pyytää alle 0,0000000001 XMR';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nFi extends I18n {
 
   @override
   String get api_error_121 => 'Yritetään sulkea kauppa, jota ei ole olemassa';
-
-  @override
-  String get api_error_122 => 'Ei riittävästi varoja kelluvan LOCAL_SELL-kaupan rahoittamiseen';
-
-  @override
-  String get api_error_123 => 'Ei tarpeeksi varoja muuttumattoman LOCAL_SELL-kaupan rahoittamiseen';
-
-  @override
-  String get api_error_124 => 'Virhe rahoitettaessa LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Kaupan peruuttamista pyytävää käyttäjää ei ole olemassa';
@@ -9455,4 +9443,16 @@ class I18nFi extends I18n {
 
   @override
   String get api_error_273 => 'Yritetään poistaa osoite, jota ei ole käyttäjän osoitekirjassa';
+
+  @override
+  String get api_error_99 => 'Yritetään pyytää suurempaa summaa kuin first_time_limit_asset sallii ensimmäistä kauppaa luotaessa';
+
+  @override
+  String get api_error_122 => 'Ei riittävästi varoja kelluvan LOCAL_SELL-kaupan rahoittamiseen';
+
+  @override
+  String get api_error_123 => 'Ei tarpeeksi varoja muuttumattoman LOCAL_SELL-kaupan rahoittamiseen';
+
+  @override
+  String get api_error_124 => 'Virhe rahoitettaessa LOCAL_SELL';
 }

@@ -24,6 +24,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:vm/vm.dart';
 
+///
+/// Start a trade
+///
+
 class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin, QrScannerMixin {
   InitiateTradeScreen({
     Key? key,
@@ -49,6 +53,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                 rightAction: AppBarButton(
                   iconData: AgoraFont.info,
                   label: context.intl.user250Sbinformation,
+                  //todo: open user ad owner screen
                   onPressed: () {},
                 ),
               ),
@@ -100,7 +105,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                 padding: const EdgeInsets.all(10),
                 child: Row(
                   children: [
-                    Text(context.intl.rate + ': '),
+                    Text('${context.intl.rate}: '),
                     Text(ad.tempPrice ?? ''),
                     const SizedBox(width: 4),
                     Text(ad.currency),
@@ -188,8 +193,8 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                 : const SizedBox(),
             limitsOn
                 ? TextWithDot(
-                    text: I18n.of(context)!.ad8722Sbpage250Sbmin8722Sbamount8722Sbtip(
-                        model.ad!.minAmount!.toString() + ' ' + model.ad!.currency),
+                    text: I18n.of(context)!
+                        .ad8722Sbpage250Sbmin8722Sbamount8722Sbtip('${model.ad!.minAmount!} ${model.ad!.currency}'),
                   )
                 : const SizedBox(),
             TextWithDot(
@@ -225,7 +230,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        context.intl.ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile!.username!) + ':',
+                        '${context.intl.ad8722Sbpage250Sbterms8722Sbof8722Sbtrade(model.ad!.profile!.username!)}:',
                         style: context.txtBodySmallP90,
                       ),
                       const SizedBox(height: 12),

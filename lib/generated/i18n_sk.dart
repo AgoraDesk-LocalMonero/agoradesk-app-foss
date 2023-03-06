@@ -8158,9 +8158,6 @@ class I18nSk extends I18n {
   String get api_error_98 => 'Pokúšate sa vytvoriť obchod pre reklamu, ktorej plagát neexistuje';
 
   @override
-  String get api_error_99 => 'Pri vytváraní prvého obchodu sa pokúšate požiadať o vyššiu sumu, než povoľuje first_time_limit_asset';
-
-  @override
   String get api_error_100 => 'Na vytvorenie obchodu nemožno požadovať menej ako 0,0000000001 XMR';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nSk extends I18n {
 
   @override
   String get api_error_121 => 'Pokus o uhradenie obchodu, ktorý neexistuje';
-
-  @override
-  String get api_error_122 => 'Nedostatok prostriedkov na financovanie pohyblivého obchodu LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Nedostatok finančných prostriedkov na financovanie neplávajúceho obchodu LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Chyba pri financovaní LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Používateľ požadujúci zrušenie obchodu neexistuje';
@@ -9455,4 +9443,16 @@ class I18nSk extends I18n {
 
   @override
   String get api_error_273 => 'Pokus o odstránenie adresy, ktorá neexistuje v adresári používateľa';
+
+  @override
+  String get api_error_99 => 'Pri vytváraní prvého obchodu sa pokúšate požiadať o vyššiu sumu, než povoľuje first_time_limit_asset';
+
+  @override
+  String get api_error_122 => 'Nedostatok prostriedkov na financovanie pohyblivého obchodu LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Nedostatok finančných prostriedkov na financovanie neplávajúceho obchodu LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Chyba pri financovaní LOCAL_SELL';
 }

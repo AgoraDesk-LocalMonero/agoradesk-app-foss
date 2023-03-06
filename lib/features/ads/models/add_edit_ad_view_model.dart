@@ -397,11 +397,11 @@ class AddEditAdViewModel extends ViewModel
         }
         priceEquationString = 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent';
       } else {
-        if (selectedCurrency!.code == 'USDT') {
-          priceEquationString = '(coingecko${asset!.key().toLowerCase()}usd)*$percent';
+        if (selectedCurrency!.code == 'USDT' || selectedCurrency!.code == 'USD') {
+          priceEquationString = 'coingecko${asset!.key().toLowerCase()}usd*$percent';
         } else {
           priceEquationString =
-              '(coingecko${asset!.key().toLowerCase()}usd/coingecko${selectedCurrency!.code.toLowerCase()}usd)*$percent';
+              'coingecko${asset!.key().toLowerCase()}usd*usd${selectedCurrency!.code.toLowerCase()}*$percent';
         }
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
@@ -437,6 +437,7 @@ class AddEditAdViewModel extends ViewModel
         buyerSettlementAddress: ctrl32WalletAddress.text.isNotEmpty ? ctrl32WalletAddress.text : null,
         minAmount: minAmount,
         maxAmount: maxAmount,
+        requireFeedbackScore: minimumFeedbackScore,
         limitToFiatAmounts: restrictLimit,
         firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
         firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
