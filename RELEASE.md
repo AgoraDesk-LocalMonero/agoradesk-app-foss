@@ -1,8 +1,8 @@
 ### Updates
-1. Hotfix: Addressed captcha loop during service attack
-2. Fixed: Wallet displaying zero balance
-3. Fixed: Calculated price update in ad formula when switching
-4. Added: Settlement proof button to completed trades
+1. Fixed: Local trdaes funded and other bugs.
+2. Fixed: Asseccibility search fields in dropdown lists. 
+3. Fixed: App doesn't show progression to step 2 of XMR settlement.
+4. Fixed: minimum feedback requirement in the app it is not saved with the rest of the ad.
 5. Added: Proxy setting before login
 6. Enhanced: Wallet tiles can be minimized for compact view
 
