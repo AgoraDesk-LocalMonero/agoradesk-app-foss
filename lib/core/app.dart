@@ -50,7 +50,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
-import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -163,6 +162,13 @@ class _AppState extends State<App>
 
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
+
+    ///
+    /// Handle push token changes
+    ///
+    // appState.fcmTokenSavedToApi = false;
+    _notificationsService.getToken();
+
     super.initState();
   }
 
@@ -263,7 +269,7 @@ class _AppState extends State<App>
       _secureStorage.deleteAll();
     }
 
-    debugPrint('[init app, API token from secured storage] $token');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[init app, API token from secured storage] $token');
     _api.accessToken = token;
     GetIt.I<AppParameters>().accessToken = token;
 
@@ -357,7 +363,7 @@ class _AppState extends State<App>
   void _initAuthHandler() {
     _notificationsService.getToken();
     _authService.onAuthStateChange.listen((authState) {
-      debugPrint('++++[$runtimeType] AuthState: $authState');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++[$runtimeType] AuthState: $authState');
       // handle login & logout
       switch (authState) {
         case AuthState.loggedOut:
@@ -423,7 +429,7 @@ class _AppState extends State<App>
       }
     }
 
-    debugPrint('[$runtimeType] Init Start Route $uri');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[$runtimeType] Init Start Route $uri');
 
     if (_authService.isAuthenticated != true && _authService.authState == AuthState.guest) {
       newRoutes.add(const MainScreenRoute());
@@ -456,7 +462,7 @@ class _AppState extends State<App>
   }
 
   void _handleConnectivity(ConnectivityResult result) {
-    debugPrint('+++connectivity $result');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('+++connectivity $result');
     EasyDebounce.debounce(
       'connectivity',
       const Duration(milliseconds: 500),
@@ -490,7 +496,8 @@ class _AppState extends State<App>
   void _initGlobalEvents() {
     eventBus
       ..on<AnalyticsEvent>().listen((e) {
-        debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
+        if (GetIt.I<AppParameters>().debugPrintIsOn)
+          debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
         if (appState.initialized) {
           if (_plausible != null) {
             _plausible!.event(name: e.event, referrer: e.properties.toString());
@@ -622,7 +629,7 @@ class _AppState extends State<App>
   //todo - check how it works when app initially was closed
   Future<void> _initUniLinks() async {
     linkStream.listen((String? link) {
-      debugPrint('++++uni_links - link');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++uni_links - link');
       if (link != null && link.isNotEmpty) {
         _initialUri = Uri.parse(link);
         // check if the link for email confirm or not
@@ -635,7 +642,7 @@ class _AppState extends State<App>
         }
       }
     }, onError: (error) {
-      debugPrint('++++[uni_links error] $error');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++[uni_links error] $error');
     });
   }
 

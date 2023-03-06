@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -24,7 +25,7 @@ mixin ErrorParseMixin {
         errorMessage = '';
       }
     }
-    debugPrint('[$runtimeType] $errorMessage');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[$runtimeType] $errorMessage');
     if (errorMessage.isNotEmpty) {
       eventBus.fire(FlashEvent.error(errorMessage));
     }

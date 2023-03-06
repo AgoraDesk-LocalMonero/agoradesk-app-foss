@@ -38,7 +38,7 @@ class _SpinnerTextState extends State<SpinnerText> with SingleTickerProviderStat
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           setState(() {
-            // debugPrint('{ bottomText: $bottomText, topText: $topText }');
+            // if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('{ bottomText: $bottomText, topText: $topText }');
             bottomText = topText;
             topText = null;
             _animationController.value = 0.0;
@@ -61,7 +61,7 @@ class _SpinnerTextState extends State<SpinnerText> with SingleTickerProviderStat
   @override
   void didUpdateWidget(SpinnerText oldWidget) {
     if (widget.text != oldWidget.text) {
-      //   debugPrint('{ new: ${widget.text}, old: ${oldWidget.text} }');
+      //   if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('{ new: ${widget.text}, old: ${oldWidget.text} }');
       // Need to spin new value.
       topText = widget.builder(widget.text);
       _animationController.forward(from: 0.0);

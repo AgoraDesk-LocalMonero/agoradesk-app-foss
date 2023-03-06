@@ -29,7 +29,7 @@ Map<String, dynamic> _$$_MessageModelToJson(_$_MessageModel instance) {
 
   writeNotNull('message_id', instance.messageId);
   writeNotNull('contact_id', instance.tradeId);
-  writeNotNull('created_at', toJsonDate(instance.createdAt));
+  val['created_at'] = toJsonDate(instance.createdAt);
   val['is_admin'] = instance.isAdmin;
   val['sender'] = instance.sender.toJson();
   val['msg'] = instance.msg;

@@ -1,5 +1,8 @@
+import 'dart:collection';
 import 'dart:io';
 
+import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
@@ -10,7 +13,9 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/models/login_view_model.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
@@ -28,6 +33,14 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, ValidatorMixin {
+  HeadlessInAppWebView? headlessWebView;
+
+  @override
+  void initState() {
+    _getWebsiteCookiesInHeadlessWebView([]);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return KeyboardDismissOnTap(
@@ -53,14 +66,22 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                 children: [
                                   widget.displaySkip
                                       ? Row(
-                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             TextButton(
+                                              child: Text(
+                                                context.intl.app_proxy_use,
+                                                style: context.txtLabelLargeP80P70,
+                                              ),
+                                              onPressed: () => context.pushRoute(const ProxyRoute()),
+                                            ),
+                                            _displayProxy(context),
+                                            TextButton(
+                                              onPressed: model.guestModeOn,
                                               child: Text(
                                                 context.intl.skip,
                                                 style: context.txtLabelLargeP80P70,
                                               ),
-                                              onPressed: model.guestModeOn,
                                             ),
                                           ],
                                         )
@@ -206,5 +227,75 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
         ),
       ],
     );
+  }
+
+  Widget _displayProxy(BuildContext context) {
+    return StreamBuilder<bool?>(
+        stream: context.read<AppState>().proxyStatus$,
+        builder: (context, snapshot) {
+          if (snapshot.data == true) {
+            return Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
+                child: Icon(
+                  CupertinoIcons.checkmark_shield,
+                  size: 20,
+                  color: context.colN80N30,
+                ),
+              ),
+            );
+          } else {
+            return const SizedBox();
+          }
+        });
+  }
+
+  Future _getWebsiteCookiesInHeadlessWebView(List<dynamic> cookiesLst) async {
+    late final InAppWebViewController? webViewController;
+    CookieManager cookieManager = CookieManager.instance();
+    final InAppWebViewGroupOptions options = InAppWebViewGroupOptions(
+      crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, mediaPlaybackRequiresUserGesture: false),
+      android: AndroidInAppWebViewOptions(
+        useHybridComposition: true,
+      ),
+      ios: IOSInAppWebViewOptions(
+        allowsInlineMediaPlayback: true,
+      ),
+    );
+    final uri = Uri.parse(GetIt.I<AppParameters>().urlBase);
+    headlessWebView = HeadlessInAppWebView(
+      initialUrlRequest: URLRequest(url: uri),
+      initialUserScripts: UnmodifiableListView<UserScript>([]),
+      initialOptions: options,
+      onWebViewCreated: (controller) async {
+        webViewController = controller;
+        // then load initial URL here
+        await webViewController!.loadUrl(
+          urlRequest: URLRequest(
+            url: uri,
+            headers: {
+              'Accept': 'application/json',
+              'User-Agent': 'AgoraDesk',
+            },
+          ),
+        );
+        await _getCookies(cookieManager);
+      },
+      onConsoleMessage: (controller, message) {},
+      onLoadStop: (controller, _) async {},
+    );
+    headlessWebView?.run();
+  }
+
+  Future _getCookies(CookieManager cookieManager) async {
+    List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
+    GetIt.I<AppParameters>().cookies = cookies;
+  }
+
+  @override
+  void dispose() {
+    headlessWebView?.dispose();
+    super.dispose();
   }
 }

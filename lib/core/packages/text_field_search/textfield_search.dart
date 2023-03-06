@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -408,7 +409,7 @@ class SearchItem {
     try {
       countryCode = place.context?.last.toJson()['short_code'].toString().toUpperCase();
     } catch (e) {
-      debugPrint('++++fromPlace error - $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++fromPlace error - $e');
     }
     return SearchItem(
       label: place.placeName ?? '',

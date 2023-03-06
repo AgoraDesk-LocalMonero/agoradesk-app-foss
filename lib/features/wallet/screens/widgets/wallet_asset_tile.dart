@@ -25,7 +25,6 @@ class WalletAssetTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width - 70;
-
     return ViewModelBuilder<WalletViewModel>(
         model: model,
         disposable: false,
@@ -33,13 +32,15 @@ class WalletAssetTile extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
             child: ContainerSurface5Radius12Border1(
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
+              child: ExpansionTile(
+                title: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 14),
                     Row(
                       mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
@@ -92,54 +93,70 @@ class WalletAssetTile extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 12),
-                    SizedBox(
-                      width: width - 10,
-                      child: Wrap(
-                        spacing: 6,
-                        runSpacing: 10,
-                        children: [
-                          WalletBlueButton(
-                            title: context.intl.wallet250Sbtab250Sbsend8722Sbshort,
-                            iconData: AgoraFont.arrow_up_circle,
-                            shrinkWrap: true,
-                            onPressed: () => context.pushRoute(
-                              SendAssetFirstRoute(
-                                asset: asset,
-                                price: model.assetPrice(asset) ?? 0,
-                                balance: model.balance(asset) ?? 0,
-                              ),
-                            ),
-                          ),
-                          WalletBlueButton(
-                            title: context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
-                            iconData: AgoraFont.arrow_down_circle,
-                            shrinkWrap: true,
-                            onPressed: () => context.pushRoute(
-                              ReceiveAssetRoute(
-                                address: model.receivingAddress(asset),
-                                asset: asset,
-                              ),
-                            ),
-                          ),
-                          WalletBlueButton(
-                            title: 'Address book',
-                            iconData: CupertinoIcons.book,
-                            shrinkWrap: true,
-                            onPressed: () => context.pushRoute(
-                              AddressBookRoute(asset: asset),
-                            ),
-                          ),
-                          // WalletBlueButton(
-                          //   title: context.intl.convert,
-                          //   iconData: AgoraFont.synchronize,
-                          //   onPressed: () {},
-                          // ),
-                        ],
-                      ),
+                  ],
+                ),
+                initiallyExpanded: model.tileExpanded(asset),
+                trailing: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(
+                      model.tileExpanded(asset) ? Icons.arrow_drop_up_outlined : Icons.arrow_drop_down_outlined,
+                      size: 22,
                     ),
                   ],
                 ),
+                collapsedIconColor: context.colN80N30,
+                iconColor: context.colN80N30,
+                onExpansionChanged: (bool expanded) {
+                  model.changeTileExpanded(asset);
+                },
+                backgroundColor: context.colS5darkSLight,
+                collapsedBackgroundColor: context.colS5darkSLight,
+                shape: const RoundedRectangleBorder(side: BorderSide.none),
+                children: [
+                  const SizedBox(height: 12),
+                  SizedBox(
+                    width: width - 10,
+                    child: Wrap(
+                      spacing: 6,
+                      runSpacing: 10,
+                      children: [
+                        WalletBlueButton(
+                          title: context.intl.wallet250Sbtab250Sbsend8722Sbshort,
+                          iconData: AgoraFont.arrow_up_circle,
+                          shrinkWrap: true,
+                          onPressed: () => context.pushRoute(
+                            SendAssetFirstRoute(
+                              asset: asset,
+                              price: model.assetPrice(asset) ?? 0,
+                              balance: model.balance(asset) ?? 0,
+                            ),
+                          ),
+                        ),
+                        WalletBlueButton(
+                          title: context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
+                          iconData: AgoraFont.arrow_down_circle,
+                          shrinkWrap: true,
+                          onPressed: () => context.pushRoute(
+                            ReceiveAssetRoute(
+                              address: model.receivingAddress(asset),
+                              asset: asset,
+                            ),
+                          ),
+                        ),
+                        WalletBlueButton(
+                          title: 'Address book',
+                          iconData: CupertinoIcons.book,
+                          shrinkWrap: true,
+                          onPressed: () => context.pushRoute(
+                            AddressBookRoute(asset: asset),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                ],
               ),
             ),
           );

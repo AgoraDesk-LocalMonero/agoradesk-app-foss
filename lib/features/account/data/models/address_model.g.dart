@@ -18,6 +18,9 @@ _$_AddressModel _$$_AddressModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_AddressModelToJson(_$_AddressModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
+    'saved_at': toJsonDate(instance.savedAt),
+    'asset': toJsonAsset(instance.asset),
+    'address': instance.address,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -26,9 +29,6 @@ Map<String, dynamic> _$$_AddressModelToJson(_$_AddressModel instance) {
     }
   }
 
-  writeNotNull('saved_at', toJsonDate(instance.savedAt));
-  val['asset'] = toJsonAsset(instance.asset);
-  val['address'] = instance.address;
   writeNotNull('label', instance.label);
   return val;
 }

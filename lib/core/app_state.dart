@@ -56,10 +56,10 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
     AppSharedPrefs().setBool(AppSharedPrefsKey.sentryIsOn, val: val);
   }
 
-  bool get pushFcmTokenSavedToApi => AppSharedPrefs().pushFcmTokenSavedToApi ?? false;
+  bool get fcmTokenSavedToApi => AppSharedPrefs().fcmTokenSavedToApi ?? false;
 
-  set pushFcmTokenSavedToApi(bool val) {
-    AppSharedPrefs().setBool(AppSharedPrefsKey.pushFcmTokenSavedToApi, val: val);
+  set fcmTokenSavedToApi(bool val) {
+    AppSharedPrefs().setBool(AppSharedPrefsKey.fcmTokenSavedToApi, val: val);
   }
 
   String get langCode => locale.languageCode.substring(0, 2);

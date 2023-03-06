@@ -31,7 +31,6 @@ import 'package:agoradesk/features/trades/screens/widgets/trade_step_three.dart'
 import 'package:agoradesk/features/trades/screens/widgets/trade_step_two.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -158,7 +157,7 @@ class _TradeScreenState extends State<TradeScreen>
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
           TradeStepThree(model: model),
-          model.tradeStatus.index < 5 || model.tradeStatus == TradeStatus.disputed
+          model.tradeStatus.index < 6 || model.tradeStatus == TradeStatus.disputed
               ? Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                   child: BoxInfoWithLabel(
@@ -171,7 +170,7 @@ class _TradeScreenState extends State<TradeScreen>
                   ),
                 )
               : const SizedBox(),
-          (model.tradeStatus.index < 5 && !model.isLocalTrade)
+          (model.tradeStatus.index < 6 && !model.isLocalTrade)
               ? ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 200),
                   child: ButtonOutlinedWithIconP80(

@@ -18,7 +18,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:get_it/get_it.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -32,6 +31,9 @@ const kNotificationIcon = '@mipmap/ic_icon_black';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // https://www.reddit.com/r/flutterhelp/comments/ydernb/certificate_verify_failed_certificate_has_expired/
+  // ByteData data = await PlatformAssetBundle().load('assets/misc/lets-encrypt-r3.pem');
+  // SecurityContext.defaultContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
@@ -112,9 +114,19 @@ void main() async {
   GetIt.I<AppParameters>().proxy = proxyEnabled;
   if (proxyEnabled) {
     final proxyAddress = getProxyAddress();
-    SocksProxy.initProxy(proxy: proxyAddress);
+    SocksProxy.initProxy(
+      proxy: proxyAddress,
+      onCreate: (client) {
+        client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+      },
+    );
   } else {
-    SocksProxy.initProxy(proxy: 'DIRECT');
+    SocksProxy.initProxy(
+      proxy: 'DIRECT',
+      onCreate: (client) {
+        client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+      },
+    );
   }
 
   if (kDebugMode || includeFcm == false || sentryIsOn == false) {
@@ -224,7 +236,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    debugPrint('++++error parsing push in actionStream [main]- $e');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
   }
 }
 
@@ -275,7 +287,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
 //       ),
 //     );
 //   } catch (e) {
-//     debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
+//     if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
 //   }
 // }
 // }

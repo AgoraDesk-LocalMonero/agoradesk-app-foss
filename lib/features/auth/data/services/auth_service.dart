@@ -16,7 +16,6 @@ import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
-import 'package:get_it/get_it.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
@@ -61,7 +60,7 @@ class AuthService with FileUtilsMixin {
     if (_api.accessToken != null && _api.accessToken!.isNotEmpty) {
       authState = AuthState.loggedIn;
     }
-    debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
   }
 
   @mustCallSuper
@@ -78,7 +77,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('[cookie in authService, changeEmail] ${request.captchaCookie}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
+        debugPrint('[cookie in authService, changeEmail] ${request.captchaCookie}');
+      }
       await _api.client.post<Map>(
         '/email',
         data: request.toJson(),
@@ -103,7 +104,8 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('[cookie in authService, sendConfirmationEmail] ${request.captchaCookie}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn)
+        debugPrint('[cookie in authService, sendConfirmationEmail] ${request.captchaCookie}');
       await _api.client.post<Map>(
         '/confirmation_email',
         data: request.toJson(),
@@ -172,7 +174,8 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn)
+        debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
       await _api.client.post<Map>(
         '/password_reset_request',
         data: request.toJson(),
@@ -204,7 +207,8 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn)
+        debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
       final resp = await _api.client.post<Map>(
         '/signup',
         data: request.toJson(),
@@ -227,7 +231,7 @@ class AuthService with FileUtilsMixin {
   }
 
   ///
-  /// Register a new user
+  /// Login the user
   ///
   Future<Either<ApiError, bool>> login(SignUpRequestModel request) async {
     try {
@@ -235,7 +239,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
+        debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
+      }
       final resp = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
@@ -247,6 +253,25 @@ class AuthService with FileUtilsMixin {
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);
+        return const Either.right(true);
+      } else {
+        return const Either.right(false);
+      }
+    } catch (e) {
+      final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      final ApiError? errorWithCaptcha = await _captchaParser(apiError);
+      return Either.left(errorWithCaptcha ?? apiError);
+    }
+  }
+
+  ///
+  /// Login with the Webview
+  ///
+  Future<Either<ApiError, bool>> loginWebview(String token) async {
+    try {
+      final resToken = await _handleTokenResponseWebview(token);
+      if (resToken) {
+        _saveUserName('zzq77');
         return const Either.right(true);
       } else {
         return const Either.right(false);
@@ -284,7 +309,7 @@ class AuthService with FileUtilsMixin {
     try {
       String path = await cleanCreateFolder('captcha');
       String captchaLocalPath = '$path/captcha${Random().nextInt(1000000)}.png';
-      debugPrint('[captchaLocalPath] $captchaLocalPath');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[captchaLocalPath] $captchaLocalPath');
       Map<String, String> cookieMap = {};
       if (captchaCookie != null) {
         cookieMap = {'cookie': captchaCookie};
@@ -294,17 +319,18 @@ class AuthService with FileUtilsMixin {
         captchaLocalPath,
         options: Options(headers: cookieMap, method: 'GET'),
         onReceiveProgress: (rec, total) {
-          debugPrint('Rec: $rec , Total: $total');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('Rec: $rec , Total: $total');
         },
       );
       String headerWithCookie = response.headers['set-cookie']?[0] ?? '';
-      debugPrint('[cookie in authService, downloadCaptcha] $headerWithCookie');
+      if (GetIt.I<AppParameters>().debugPrintIsOn)
+        debugPrint('[cookie in authService, downloadCaptcha] $headerWithCookie');
       final endIndex = headerWithCookie.indexOf(';');
 
       String cookie = headerWithCookie.substring(0, endIndex);
       return [cookie, captchaLocalPath];
     } catch (e) {
-      debugPrint('[downloadCaptcha error]: $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[downloadCaptcha error]: $e');
       return null;
     }
   }
@@ -329,6 +355,21 @@ class AuthService with FileUtilsMixin {
     await AppSharedPrefs().setString(AppSharedPrefsKey.username, username);
   }
 
+  Future<bool> _handleTokenResponseWebview(String token) async {
+    try {
+      _setToken(token);
+
+      if (_api.accessToken != null) {
+        showPinSetUp = true;
+        _authStateController.add(AuthState.loggedIn);
+      }
+      return true;
+    } catch (e) {
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
+    }
+    return false;
+  }
+
   Future<bool> _handleTokenResponse(Response<Map> resp) async {
     try {
       if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
@@ -342,7 +383,7 @@ class AuthService with FileUtilsMixin {
         return true;
       }
     } catch (e) {
-      debugPrint('[Auth token parsing error]: $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
     }
     return false;
   }
@@ -359,7 +400,7 @@ class AuthService with FileUtilsMixin {
     if (token != null) {
       await _secureStorage.write(SecureStorageKey.token, token);
     }
-    debugPrint('[$runtimeType] Token saved.... $token');
+    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[$runtimeType] Token saved.... $token');
     // TODO: store expiresIn
   }
 }

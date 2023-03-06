@@ -81,13 +81,18 @@ class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin,
 
   Future markNotificationsFromTradeAsRead(ActivityNotificationModel notification) async {
     int index = 0;
+    final List<String> markedAsReadIds = [];
     for (final n in _appState.notifications) {
       if (n.contactId == notification.contactId && n.read == false) {
-        await _accountService.markAsRead(n.id);
+        markedAsReadIds.add(n.id);
         _appState.notifications[index] = _appState.notifications[index].copyWith(read: true);
       }
       index++;
     }
+    for (final id in markedAsReadIds) {
+      await _accountService.markAsRead(id);
+    }
+
     notifications.clear();
     notifications.addAll(_appState.notifications);
     notifyListeners();

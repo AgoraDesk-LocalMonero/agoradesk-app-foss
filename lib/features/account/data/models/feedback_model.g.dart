@@ -15,7 +15,8 @@ _$_FeedbackModel _$$_FeedbackModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_FeedbackModelToJson(_$_FeedbackModel instance) {
   final val = <String, dynamic>{
-    'feedback_type': _$FeedbackTypeEnumMap[instance.feedbackType],
+    'feedback_type': _$FeedbackTypeEnumMap[instance.feedbackType]!,
+    'given_at': toJsonDate(instance.date),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -24,7 +25,6 @@ Map<String, dynamic> _$$_FeedbackModelToJson(_$_FeedbackModel instance) {
     }
   }
 
-  writeNotNull('given_at', toJsonDate(instance.date));
   writeNotNull('msg', instance.text);
   return val;
 }

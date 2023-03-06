@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'feedback_model.dart';
 
@@ -41,7 +41,8 @@ mixin _$FeedbackModel {
 abstract class $FeedbackModelCopyWith<$Res> {
   factory $FeedbackModelCopyWith(
           FeedbackModel value, $Res Function(FeedbackModel) then) =
-      _$FeedbackModelCopyWithImpl<$Res>;
+      _$FeedbackModelCopyWithImpl<$Res, FeedbackModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
           FeedbackType feedbackType,
@@ -52,34 +53,36 @@ abstract class $FeedbackModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FeedbackModelCopyWithImpl<$Res>
+class _$FeedbackModelCopyWithImpl<$Res, $Val extends FeedbackModel>
     implements $FeedbackModelCopyWith<$Res> {
   _$FeedbackModelCopyWithImpl(this._value, this._then);
 
-  final FeedbackModel _value;
   // ignore: unused_field
-  final $Res Function(FeedbackModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? feedbackType = freezed,
-    Object? date = freezed,
+    Object? feedbackType = null,
+    Object? date = null,
     Object? text = freezed,
   }) {
     return _then(_value.copyWith(
-      feedbackType: feedbackType == freezed
+      feedbackType: null == feedbackType
           ? _value.feedbackType
           : feedbackType // ignore: cast_nullable_to_non_nullable
               as FeedbackType,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -90,6 +93,7 @@ abstract class _$$_FeedbackModelCopyWith<$Res>
           _$_FeedbackModel value, $Res Function(_$_FeedbackModel) then) =
       __$$_FeedbackModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
           FeedbackType feedbackType,
@@ -101,31 +105,29 @@ abstract class _$$_FeedbackModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_FeedbackModelCopyWithImpl<$Res>
-    extends _$FeedbackModelCopyWithImpl<$Res>
+    extends _$FeedbackModelCopyWithImpl<$Res, _$_FeedbackModel>
     implements _$$_FeedbackModelCopyWith<$Res> {
   __$$_FeedbackModelCopyWithImpl(
       _$_FeedbackModel _value, $Res Function(_$_FeedbackModel) _then)
-      : super(_value, (v) => _then(v as _$_FeedbackModel));
+      : super(_value, _then);
 
-  @override
-  _$_FeedbackModel get _value => super._value as _$_FeedbackModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? feedbackType = freezed,
-    Object? date = freezed,
+    Object? feedbackType = null,
+    Object? date = null,
     Object? text = freezed,
   }) {
     return _then(_$_FeedbackModel(
-      feedbackType: feedbackType == freezed
+      feedbackType: null == feedbackType
           ? _value.feedbackType
           : feedbackType // ignore: cast_nullable_to_non_nullable
               as FeedbackType,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -172,22 +174,19 @@ class _$_FeedbackModel implements _FeedbackModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FeedbackModel &&
-            const DeepCollectionEquality()
-                .equals(other.feedbackType, feedbackType) &&
-            const DeepCollectionEquality().equals(other.date, date) &&
-            const DeepCollectionEquality().equals(other.text, text));
+            (identical(other.feedbackType, feedbackType) ||
+                other.feedbackType == feedbackType) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.text, text) || other.text == text));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(feedbackType),
-      const DeepCollectionEquality().hash(date),
-      const DeepCollectionEquality().hash(text));
+  int get hashCode => Object.hash(runtimeType, feedbackType, date, text);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FeedbackModelCopyWith<_$_FeedbackModel> get copyWith =>
       __$$_FeedbackModelCopyWithImpl<_$_FeedbackModel>(this, _$identity);
 

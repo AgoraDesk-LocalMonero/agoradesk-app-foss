@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'message_model.dart';
 
@@ -49,7 +49,8 @@ mixin _$MessageModel {
 abstract class $MessageModelCopyWith<$Res> {
   factory $MessageModelCopyWith(
           MessageModel value, $Res Function(MessageModel) then) =
-      _$MessageModelCopyWithImpl<$Res>;
+      _$MessageModelCopyWithImpl<$Res, MessageModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'message_id', includeIfNull: false)
           String? messageId,
@@ -70,64 +71,68 @@ abstract class $MessageModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MessageModelCopyWithImpl<$Res> implements $MessageModelCopyWith<$Res> {
+class _$MessageModelCopyWithImpl<$Res, $Val extends MessageModel>
+    implements $MessageModelCopyWith<$Res> {
   _$MessageModelCopyWithImpl(this._value, this._then);
 
-  final MessageModel _value;
   // ignore: unused_field
-  final $Res Function(MessageModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? messageId = freezed,
     Object? tradeId = freezed,
-    Object? createdAt = freezed,
-    Object? isAdmin = freezed,
-    Object? sender = freezed,
+    Object? createdAt = null,
+    Object? isAdmin = null,
+    Object? sender = null,
     Object? msg = freezed,
     Object? attachmentName = freezed,
     Object? attachmentUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      messageId: messageId == freezed
+      messageId: freezed == messageId
           ? _value.messageId
           : messageId // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeId: tradeId == freezed
+      tradeId: freezed == tradeId
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isAdmin: isAdmin == freezed
+      isAdmin: null == isAdmin
           ? _value.isAdmin
           : isAdmin // ignore: cast_nullable_to_non_nullable
               as bool,
-      sender: sender == freezed
+      sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel,
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
-      attachmentName: attachmentName == freezed
+      attachmentName: freezed == attachmentName
           ? _value.attachmentName
           : attachmentName // ignore: cast_nullable_to_non_nullable
               as String?,
-      attachmentUrl: attachmentUrl == freezed
+      attachmentUrl: freezed == attachmentUrl
           ? _value.attachmentUrl
           : attachmentUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AccountInfoModelCopyWith<$Res> get sender {
     return $AccountInfoModelCopyWith<$Res>(_value.sender, (value) {
-      return _then(_value.copyWith(sender: value));
+      return _then(_value.copyWith(sender: value) as $Val);
     });
   }
 }
@@ -139,6 +144,7 @@ abstract class _$$_MessageModelCopyWith<$Res>
           _$_MessageModel value, $Res Function(_$_MessageModel) then) =
       __$$_MessageModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'message_id', includeIfNull: false)
           String? messageId,
@@ -161,56 +167,54 @@ abstract class _$$_MessageModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_MessageModelCopyWithImpl<$Res>
-    extends _$MessageModelCopyWithImpl<$Res>
+    extends _$MessageModelCopyWithImpl<$Res, _$_MessageModel>
     implements _$$_MessageModelCopyWith<$Res> {
   __$$_MessageModelCopyWithImpl(
       _$_MessageModel _value, $Res Function(_$_MessageModel) _then)
-      : super(_value, (v) => _then(v as _$_MessageModel));
+      : super(_value, _then);
 
-  @override
-  _$_MessageModel get _value => super._value as _$_MessageModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? messageId = freezed,
     Object? tradeId = freezed,
-    Object? createdAt = freezed,
-    Object? isAdmin = freezed,
-    Object? sender = freezed,
+    Object? createdAt = null,
+    Object? isAdmin = null,
+    Object? sender = null,
     Object? msg = freezed,
     Object? attachmentName = freezed,
     Object? attachmentUrl = freezed,
   }) {
     return _then(_$_MessageModel(
-      messageId: messageId == freezed
+      messageId: freezed == messageId
           ? _value.messageId
           : messageId // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeId: tradeId == freezed
+      tradeId: freezed == tradeId
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
               as String?,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isAdmin: isAdmin == freezed
+      isAdmin: null == isAdmin
           ? _value.isAdmin
           : isAdmin // ignore: cast_nullable_to_non_nullable
               as bool,
-      sender: sender == freezed
+      sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel,
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
-      attachmentName: attachmentName == freezed
+      attachmentName: freezed == attachmentName
           ? _value.attachmentName
           : attachmentName // ignore: cast_nullable_to_non_nullable
               as String?,
-      attachmentUrl: attachmentUrl == freezed
+      attachmentUrl: freezed == attachmentUrl
           ? _value.attachmentUrl
           : attachmentUrl // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -278,33 +282,28 @@ class _$_MessageModel implements _MessageModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MessageModel &&
-            const DeepCollectionEquality().equals(other.messageId, messageId) &&
-            const DeepCollectionEquality().equals(other.tradeId, tradeId) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.isAdmin, isAdmin) &&
-            const DeepCollectionEquality().equals(other.sender, sender) &&
-            const DeepCollectionEquality().equals(other.msg, msg) &&
-            const DeepCollectionEquality()
-                .equals(other.attachmentName, attachmentName) &&
-            const DeepCollectionEquality()
-                .equals(other.attachmentUrl, attachmentUrl));
+            (identical(other.messageId, messageId) ||
+                other.messageId == messageId) &&
+            (identical(other.tradeId, tradeId) || other.tradeId == tradeId) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin) &&
+            (identical(other.sender, sender) || other.sender == sender) &&
+            (identical(other.msg, msg) || other.msg == msg) &&
+            (identical(other.attachmentName, attachmentName) ||
+                other.attachmentName == attachmentName) &&
+            (identical(other.attachmentUrl, attachmentUrl) ||
+                other.attachmentUrl == attachmentUrl));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(messageId),
-      const DeepCollectionEquality().hash(tradeId),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(isAdmin),
-      const DeepCollectionEquality().hash(sender),
-      const DeepCollectionEquality().hash(msg),
-      const DeepCollectionEquality().hash(attachmentName),
-      const DeepCollectionEquality().hash(attachmentUrl));
+  int get hashCode => Object.hash(runtimeType, messageId, tradeId, createdAt,
+      isAdmin, sender, msg, attachmentName, attachmentUrl);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
       __$$_MessageModelCopyWithImpl<_$_MessageModel>(this, _$identity);
 

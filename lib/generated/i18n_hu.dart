@@ -8158,9 +8158,6 @@ class I18nHu extends I18n {
   String get api_error_98 => 'Olyan hirdetéshez próbál kereskedést létrehozni, aminek a feladója nem létezik';
 
   @override
-  String get api_error_99 => 'A first_time_limit_asset által megengedettnél nagyobb összeget próbál kérni az első kereskedés létrehozásakor';
-
-  @override
   String get api_error_100 => 'Kereskedés létrehozásához nem kérhet kevesebbet, mint 0.0000000001 XMR';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nHu extends I18n {
 
   @override
   String get api_error_121 => 'Nem létező kereskedést próbál letétbe helyezni';
-
-  @override
-  String get api_error_122 => 'Nincs elegendő pénz lebegő LOCAL_SELL ügylet finanszírozásához';
-
-  @override
-  String get api_error_123 => 'Nincs elegendő forrás egy nem lebegő LOCAL_SELL ügylet finanszírozásához';
-
-  @override
-  String get api_error_124 => 'Hiba történt a LOCAL_SELL finanszírozása során';
 
   @override
   String get api_error_125 => 'A kereskedés törlését kérő felhasználó nem létezik';
@@ -9455,4 +9443,16 @@ class I18nHu extends I18n {
 
   @override
   String get api_error_273 => 'Olyan cím törlésének kísérlete, amely nem létezik a felhasználó címjegyzékében';
+
+  @override
+  String get api_error_99 => 'A first_time_limit_asset által megengedettnél nagyobb összeget próbál kérni az első kereskedés létrehozásakor';
+
+  @override
+  String get api_error_122 => 'Nincs elegendő pénz lebegő LOCAL_SELL ügylet finanszírozásához';
+
+  @override
+  String get api_error_123 => 'Nincs elegendő forrás egy nem lebegő LOCAL_SELL ügylet finanszírozásához';
+
+  @override
+  String get api_error_124 => 'Hiba történt a LOCAL_SELL finanszírozása során';
 }

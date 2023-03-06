@@ -44,7 +44,6 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
@@ -562,6 +561,11 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                   dropdownDecoratorProps: context.dropdownDecoration,
                                   popupProps: PopupProps.dialog(
                                     dialogProps: context.dropdownDialogProps,
+                                    showSearchBox: true,
+                                    searchFieldProps: TextFieldProps(
+                                      autofocus: true,
+                                      decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                                    ),
                                   ),
                                   itemAsString: (SortingType? type) => getSortingTypeName(context, type),
                                   asyncItems: (String? filter) => model.getSortingChoices(),
@@ -571,6 +575,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                 ),
                               ),
                               ButtonSquareIconChild(
+                                size: const Size(40, 40),
+                                onPressed: model.changeSortingDirection,
                                 child: model.sortingDirectionType == SortingDirectionType.asc
                                     ? Icon(
                                         AgoraFont.sortUp,
@@ -582,8 +588,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                         color: context.colP90,
                                         size: 18,
                                       ),
-                                size: const Size(40, 40),
-                                onPressed: model.changeSortingDirection,
                               ),
                             ],
                           ),
@@ -620,6 +624,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (String? code) => getCountryName(code ?? ''),
                             asyncItems: (String? filter) => model.getCountryCodes(),
@@ -639,6 +647,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
                             asyncItems: (String? filter) => model.getCurrencies(),
@@ -657,6 +669,10 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                             asyncItems: (String? filter) =>
@@ -738,9 +754,9 @@ class _PopupMenu extends StatelessWidget {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.ad_settings),
           onTap: () => AutoRouter.of(context).push(AdsSettingsRoute(model: model)),
           value: 1,
+          child: Text(context.intl.ad_settings),
         ),
       ],
     );

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'attached_ad_model.dart';
 
@@ -41,7 +41,8 @@ mixin _$AttachedAdModel {
 abstract class $AttachedAdModelCopyWith<$Res> {
   factory $AttachedAdModelCopyWith(
           AttachedAdModel value, $Res Function(AttachedAdModel) then) =
-      _$AttachedAdModelCopyWithImpl<$Res>;
+      _$AttachedAdModelCopyWithImpl<$Res, AttachedAdModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id', includeIfNull: false)
           String? id,
@@ -56,54 +57,57 @@ abstract class $AttachedAdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AttachedAdModelCopyWithImpl<$Res>
+class _$AttachedAdModelCopyWithImpl<$Res, $Val extends AttachedAdModel>
     implements $AttachedAdModelCopyWith<$Res> {
   _$AttachedAdModelCopyWithImpl(this._value, this._then);
 
-  final AttachedAdModel _value;
   // ignore: unused_field
-  final $Res Function(AttachedAdModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? asset = freezed,
-    Object? tradeType = freezed,
+    Object? tradeType = null,
     Object? advertiser = freezed,
     Object? paymentMethod = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      tradeType: tradeType == freezed
+      tradeType: null == tradeType
           ? _value.tradeType
           : tradeType // ignore: cast_nullable_to_non_nullable
               as TradeType,
-      advertiser: advertiser == freezed
+      advertiser: freezed == advertiser
           ? _value.advertiser
           : advertiser // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel?,
-      paymentMethod: paymentMethod == freezed
+      paymentMethod: freezed == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AccountInfoModelCopyWith<$Res>? get advertiser {
     if (_value.advertiser == null) {
       return null;
     }
 
     return $AccountInfoModelCopyWith<$Res>(_value.advertiser!, (value) {
-      return _then(_value.copyWith(advertiser: value));
+      return _then(_value.copyWith(advertiser: value) as $Val);
     });
   }
 }
@@ -115,6 +119,7 @@ abstract class _$$_AttachedAdModelCopyWith<$Res>
           _$_AttachedAdModel value, $Res Function(_$_AttachedAdModel) then) =
       __$$_AttachedAdModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id', includeIfNull: false)
           String? id,
@@ -131,41 +136,39 @@ abstract class _$$_AttachedAdModelCopyWith<$Res>
 
 /// @nodoc
 class __$$_AttachedAdModelCopyWithImpl<$Res>
-    extends _$AttachedAdModelCopyWithImpl<$Res>
+    extends _$AttachedAdModelCopyWithImpl<$Res, _$_AttachedAdModel>
     implements _$$_AttachedAdModelCopyWith<$Res> {
   __$$_AttachedAdModelCopyWithImpl(
       _$_AttachedAdModel _value, $Res Function(_$_AttachedAdModel) _then)
-      : super(_value, (v) => _then(v as _$_AttachedAdModel));
+      : super(_value, _then);
 
-  @override
-  _$_AttachedAdModel get _value => super._value as _$_AttachedAdModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? asset = freezed,
-    Object? tradeType = freezed,
+    Object? tradeType = null,
     Object? advertiser = freezed,
     Object? paymentMethod = freezed,
   }) {
     return _then(_$_AttachedAdModel(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      asset: asset == freezed
+      asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset?,
-      tradeType: tradeType == freezed
+      tradeType: null == tradeType
           ? _value.tradeType
           : tradeType // ignore: cast_nullable_to_non_nullable
               as TradeType,
-      advertiser: advertiser == freezed
+      advertiser: freezed == advertiser
           ? _value.advertiser
           : advertiser // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel?,
-      paymentMethod: paymentMethod == freezed
+      paymentMethod: freezed == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -216,27 +219,24 @@ class _$_AttachedAdModel implements _AttachedAdModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AttachedAdModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality().equals(other.tradeType, tradeType) &&
-            const DeepCollectionEquality()
-                .equals(other.advertiser, advertiser) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentMethod, paymentMethod));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.asset, asset) || other.asset == asset) &&
+            (identical(other.tradeType, tradeType) ||
+                other.tradeType == tradeType) &&
+            (identical(other.advertiser, advertiser) ||
+                other.advertiser == advertiser) &&
+            (identical(other.paymentMethod, paymentMethod) ||
+                other.paymentMethod == paymentMethod));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(asset),
-      const DeepCollectionEquality().hash(tradeType),
-      const DeepCollectionEquality().hash(advertiser),
-      const DeepCollectionEquality().hash(paymentMethod));
+  int get hashCode =>
+      Object.hash(runtimeType, id, asset, tradeType, advertiser, paymentMethod);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
       __$$_AttachedAdModelCopyWithImpl<_$_AttachedAdModel>(this, _$identity);
 

@@ -29,7 +29,6 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -197,6 +196,10 @@ class _TradesScreenState extends State<TradesScreen>
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (String? code) => getCountryName(code ?? ''),
                             asyncItems: (String? filter) => model.getCountryCodes(),
@@ -217,6 +220,10 @@ class _TradesScreenState extends State<TradesScreen>
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                             itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
@@ -238,6 +245,10 @@ class _TradesScreenState extends State<TradesScreen>
                             popupProps: PopupProps.dialog(
                               dialogProps: context.dropdownDialogProps,
                               showSearchBox: true,
+                              searchFieldProps: TextFieldProps(
+                                autofocus: true,
+                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                              ),
                             ),
                             itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                             asyncItems: (String? filter) =>

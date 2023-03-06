@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/api/api_errors.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
@@ -9,6 +10,8 @@ import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
+import 'package:agoradesk/features/account/data/models/account_info_model.dart';
+import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/network_fees.dart';
@@ -20,6 +23,7 @@ import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:decimal/decimal.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:vm/vm.dart';
@@ -33,17 +37,20 @@ class MarketAdInfoViewModel extends ViewModel
     required WalletService walletService,
     required AuthService authService,
     required AdsRepository adsRepository,
+    required AccountService accountService,
     this.adModel,
     this.adId,
   })  : _tradeRepository = tradeRepository,
         _authService = authService,
         _walletService = walletService,
+        _accountService = accountService,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
   final AuthService _authService;
   final WalletService _walletService;
   final AdsRepository _adsRepository;
+  final AccountService _accountService;
   final AdModel? adModel;
   final String? adId;
 
@@ -55,21 +62,24 @@ class MarketAdInfoViewModel extends ViewModel
   late Asset _asset;
   final List<AdModel> ads = [];
   final List<AdModel> filteredAds = [];
-  double _receive = 0;
+  Decimal _receive = Decimal.fromInt(0);
   String? receiveError;
-  double _pay = 0;
-  double _balanceBtc = 0;
-  double _balanceXmr = 0;
+  Decimal _pay = Decimal.fromInt(0);
+  Decimal _balanceBtc = Decimal.fromInt(0);
+  Decimal _balanceXmr = Decimal.fromInt(0);
   String? payError;
   AdModel? ad;
   late bool isGuestMode;
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
+  AccountInfoModel? accountInfoModel;
 
   List<String> tradeTypeMenu = [];
   List<String> assetMenu = [];
 
   bool _loadingAds = true;
+  double _tempAssetPrice = 0;
+  double? _firstTimeLimitAsset;
 
   // bool _initialized = false;
   bool _calculating = false;
@@ -149,7 +159,6 @@ class MarketAdInfoViewModel extends ViewModel
           await Future.delayed(const Duration(seconds: 5));
           await _getWalletsBalance();
         }
-        initialLoadingAd = false;
       } else {
         handleApiError(res.left, context);
       }
@@ -161,9 +170,25 @@ class MarketAdInfoViewModel extends ViewModel
       if (!isGuestMode) {
         await _getWalletsBalance();
       }
-      initialLoadingAd = false;
     }
+    if (asset == Asset.BTC) {
+      _firstTimeLimitAsset = ad!.firstTimeLimitBtc;
+    } else {
+      _firstTimeLimitAsset = ad!.firstTimeLimitXmr;
+    }
+    await _getAccountInfo(ad!.profile!.username);
+    initialLoadingAd = false;
+    _tempAssetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     notifyListeners();
+  }
+
+  Future _getAccountInfo(String? username) async {
+    if (username != null) {
+      final res = await _accountService.getAccountInfo(username);
+      if (res.isRight) {
+        accountInfoModel = res.right;
+      }
+    }
   }
 
   void _initMenus() {
@@ -248,9 +273,9 @@ class MarketAdInfoViewModel extends ViewModel
     } else {
       if (res.left.message.containsKey('error_code')) {
         final errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        debugPrint('[getBtcFees error message] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBtcFees error message] $errorMessage');
       }
-      debugPrint('[getBtcFees error] ${res.left.message}');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBtcFees error] ${res.left.message}');
       return null;
     }
   }
@@ -263,9 +288,9 @@ class MarketAdInfoViewModel extends ViewModel
         ctrlPay.text = '';
       } else {
         try {
-          _receive = double.parse(ctrlReceive.text);
+          _receive = Decimal.parse(ctrlReceive.text.replaceAll(',', '.'));
           final int digitsToRound = getBankersDigits(asset!.name);
-          _pay = (_receive / (double.tryParse(ad!.tempPrice!) ?? 0)).bankerRound(digitsToRound).toDouble();
+          _pay = (_receive.toDouble() / _tempAssetPrice).bankerRound(digitsToRound);
           ctrlPay.text = _pay.toString();
           _checkReceiveQuantity();
         } catch (e) {
@@ -285,9 +310,9 @@ class MarketAdInfoViewModel extends ViewModel
         _calculating = true;
         payError = null;
         try {
-          _pay = double.parse(ctrlPay.text);
+          _pay = Decimal.parse(ctrlPay.text.replaceAll(',', '.'));
           final int digitsToRound = getBankersDigits(ad?.currency ?? '');
-          _receive = ((double.tryParse(ad!.tempPrice!) ?? 0) * _pay).bankerRound(digitsToRound).toDouble();
+          _receive = (_tempAssetPrice * _pay.toDouble()).bankerRound(digitsToRound);
           ctrlReceive.text = _receive.toString();
           _checkReceiveQuantity();
           _checkPayQuantity();
@@ -301,13 +326,20 @@ class MarketAdInfoViewModel extends ViewModel
   }
 
   void _checkReceiveQuantity() {
-    if (_receive < (ad!.minAmount ?? 0)) {
+    final receive = _receive.toDouble();
+    if (receive < (ad?.minAmount ?? 0)) {
       receiveError = context.intl.must_be_at_least((ad!.minAmount ?? 0).toString(), ad!.currency);
       readyToDeal = false;
-    } else if (ad!.maxAmountAvailable != null && _receive > ad!.maxAmountAvailable!) {
-      receiveError = context.intl.must_be_less((ad!.maxAmountAvailable!).toString(), ad!.currency);
+    } else if (_firstTimeLimitAsset != null &&
+        accountInfoModel?.hasCommonTrades != true &&
+        receive > _firstTimeLimitAsset! * _tempAssetPrice) {
+      receiveError =
+          context.intl.must_be_less((_firstTimeLimitAsset! * _tempAssetPrice).toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
-    } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && _receive > ad!.maxAmount!) {
+    } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
+      receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
+      readyToDeal = false;
+    } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && receive > ad!.maxAmount!) {
       receiveError = context.intl.must_be_less((ad!.maxAmount!).toString(), ad!.currency);
       readyToDeal = false;
     } else {

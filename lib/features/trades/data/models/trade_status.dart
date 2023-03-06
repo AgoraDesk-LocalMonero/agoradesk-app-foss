@@ -19,6 +19,7 @@ enum TradeStatus {
   created,
   escrowed,
   funded,
+  notFunded,
   paymentCompleted, // buyer have marked deal as paid
   closed,
   canceled, // 5
@@ -32,9 +33,12 @@ enum TradeStatus {
 extension TradeStatusExt on TradeStatus {
   String translated(BuildContext context) {
     switch (this) {
+      case TradeStatus.funded:
+        return context.intl.dashboard250Sbtrade250Sbstatus250Sbfunded;
+      case TradeStatus.notFunded:
+        return context.intl.dashboard250Sbtrade250Sbstatus250Sbunfunded;
       case TradeStatus.created:
       case TradeStatus.escrowed:
-      case TradeStatus.funded:
         return context.intl.trades8722Sbtable250Sbstatus250Sbnot8722Sbpaid;
       case TradeStatus.paymentCompleted:
         return context.intl.trades8722Sbtable250Sbstatus250Sbpaid;
@@ -86,6 +90,7 @@ extension TradeStatusExt on TradeStatus {
       case TradeStatus.created:
       case TradeStatus.escrowed:
       case TradeStatus.funded:
+      case TradeStatus.notFunded:
         return Theme.of(context).colorScheme.yellow85;
       case TradeStatus.paymentCompleted:
         return Theme.of(context).colorScheme.custom29;

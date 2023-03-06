@@ -3,8 +3,10 @@ import 'dart:async';
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
+import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
@@ -14,11 +16,11 @@ import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart'
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
-class WalletViewModel extends ViewModel {
+class WalletViewModel extends ViewModel with StringMixin {
   WalletViewModel({
     required WalletService walletService,
     required AuthService authService,
@@ -36,6 +38,8 @@ class WalletViewModel extends ViewModel {
 
   late final TabsRouter _tabsRouter;
   final indicatorKey = GlobalKey<RefreshIndicatorState>();
+  final GlobalKey<ExpansionTileCardState> tileKeyBtc = GlobalKey();
+  final GlobalKey<ExpansionTileCardState> tileKeyXmr = GlobalKey();
 
   late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
 
@@ -119,12 +123,33 @@ class WalletViewModel extends ViewModel {
     getIncomingDeposits();
   }
 
+  bool tileExpanded(Asset asset) {
+    if (asset == Asset.BTC) {
+      return AppSharedPrefs().btcWalletTileOpen;
+    } else {
+      return AppSharedPrefs().xmrWalletTileOpen;
+    }
+  }
+
+  Future changeTileExpanded(Asset asset) async {
+    if (asset == Asset.BTC) {
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.btcWalletTileOpen, val: !AppSharedPrefs().btcWalletTileOpen);
+    } else {
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.xmrWalletTileOpen, val: !AppSharedPrefs().xmrWalletTileOpen);
+    }
+    notifyListeners();
+  }
+
   void _updateBalance() {
     if (_appState.balance.isNotEmpty) {
+      // final int digitsXmr = getBankersDigits(Asset.XMR.name);
+      // _balanceXmr = _appState.balance[0].balance.toDouble().bankerRound(digitsXmr).toString();
       _balanceXmr = _appState.balance[0].balance.toString();
       _addressXmr = _appState.balance[0].receivingAddress;
     }
     if (_appState.balance.length > 1) {
+      // final int digitsBtc = getBankersDigits(Asset.BTC.name);
+      // _balanceBtc = _appState.balance[1].balance.toDouble().bankerRound(digitsBtc).toString();
       _balanceBtc = _appState.balance[1].balance.toString();
       _addressBtc = _appState.balance[1].receivingAddress;
     }
@@ -152,9 +177,9 @@ class WalletViewModel extends ViewModel {
         } else {
           if (resBtc.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
-            debugPrint('[getBalance error message] $errorMessage');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
           }
-          debugPrint('[getBalance error] ${resBtc.left.message}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resBtc.left.message}');
         }
       } else {
         final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
@@ -166,9 +191,9 @@ class WalletViewModel extends ViewModel {
         } else {
           if (resXmr.left.message.containsKey('error_code')) {
             final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
-            debugPrint('[getBalance error message] $errorMessage');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
           }
-          debugPrint('[getBalance error] ${resXmr.left.message}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resXmr.left.message}');
         }
       }
     }
@@ -184,7 +209,7 @@ class WalletViewModel extends ViewModel {
       }
       if (btc?.sentTransactions != null) {
         for (final val in btc!.sentTransactions!) {
-          val.copyWith(asset: Asset.BTC);
+          transactions.add(val.copyWith(asset: Asset.BTC));
         }
       }
     }
@@ -204,7 +229,13 @@ class WalletViewModel extends ViewModel {
 
   String walletBalance(Asset asset) {
     if (asset == Asset.BTC) {
+      if (_balanceBtc == '0') {
+        return '0.00000000';
+      }
       return _balanceBtc;
+    }
+    if (_balanceXmr == '0') {
+      return '0.000000000000';
     }
     return _balanceXmr;
   }
@@ -303,10 +334,10 @@ class WalletViewModel extends ViewModel {
       late final String errorMessage;
       if (res.left.message.containsKey('error_code')) {
         errorMessage = ApiErrors.translatedCodeError(res.left.message['error_code'], context);
-        debugPrint('[calcPrice error] $errorMessage');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[calcPrice error] $errorMessage');
       } else {
         errorMessage = res.left.message.toString();
-        debugPrint('[calcPrice error] ${res.left.message}');
+        if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[calcPrice error] ${res.left.message}');
       }
       // eventBus.fire(FlashEvent.error(errorMessage));
       return null;
