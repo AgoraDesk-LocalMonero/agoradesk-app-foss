@@ -286,7 +286,9 @@ class TradeViewModel extends ViewModel
   }
 
   Future _polling() async {
-    if (GetIt.I<AppParameters>().includeFcm == false || GetIt.I<AppParameters>().isGoogleAvailable == false) {
+    if (GetIt.I<AppParameters>().includeFcm == false ||
+        GetIt.I<AppParameters>().isGoogleAvailable == false ||
+        isProcessing()) {
       await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
@@ -449,12 +451,9 @@ class TradeViewModel extends ViewModel
     final minutesDefault = isXmr ? 5 : 10;
 
     if (tradeStatus == TradeStatus.awaitingToSellerWallet) {
-      return stageText +
-          '  ' +
-          tradeStatus.timeLeftToNextStage(context, tradeForScreen.asset, tradeForScreen.releasedAt ?? DateTime.now());
+      return '$stageText  ${tradeStatus.timeLeftToNextStage(context, tradeForScreen.asset, tradeForScreen.releasedAt ?? DateTime.now())}';
     }
-    return stageText +
-        '  ≈$minutesDefault ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
+    return '$stageText  ≈$minutesDefault ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
   }
 
   String confirmingToSellerText(BuildContext context) {
@@ -463,17 +462,14 @@ class TradeViewModel extends ViewModel
     final minutesDefault = isXmr ? 20 : 30;
 
     if (tradeStatus == TradeStatus.confirmingToSellerWallet) {
-      return stageText +
-          '  ' +
-          tradeStatus.timeLeftToNextStage(
-            context,
-            tradeForScreen.asset,
-            tradeForScreen.releasedAt ?? DateTime.now(),
-            confirmations: tradeForScreen.transferToSellerConfirmations,
-          );
+      return '$stageText  ${tradeStatus.timeLeftToNextStage(
+        context,
+        tradeForScreen.asset,
+        tradeForScreen.releasedAt ?? DateTime.now(),
+        confirmations: tradeForScreen.transferToSellerConfirmations,
+      )}';
     }
-    return stageText +
-        '  ≈$minutesDefault ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
+    return '$stageText  ≈$minutesDefault ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
   }
 
   String canCancelText(BuildContext context) {
@@ -487,12 +483,9 @@ class TradeViewModel extends ViewModel
     final stageText =
         context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbbuyer;
     if (tradeStatus == TradeStatus.awaitingToBuyerWallet) {
-      return stageText +
-          '  ' +
-          tradeStatus.timeLeftToNextStage(context, tradeForScreen.asset, tradeForScreen.releasedAt ?? DateTime.now());
+      return '$stageText  ${tradeStatus.timeLeftToNextStage(context, tradeForScreen.asset, tradeForScreen.releasedAt ?? DateTime.now())}';
     }
-    return stageText +
-        '  ≈2 ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
+    return '$stageText  ≈2 ${context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbeta8722Sbminutes}';
   }
 
   bool displayStickyBubble() {
@@ -518,7 +511,16 @@ class TradeViewModel extends ViewModel
   //todo - move to utils
   void _setTradeStatus({bool initial = false}) {
     late final DateTime tradeStatusDate;
-    if (tradeForScreen.releasedAt != null &&
+    if (isLocalTrade && tradeForScreen.fundedAt == null && tradeForScreen.canceledAt == null) {
+      tradeStatus = TradeStatus.notFunded;
+      tradeStatusDate = tradeForScreen.createdAt!;
+    } else if (isLocalTrade && tradeForScreen.canceledAt != null) {
+      tradeStatus = TradeStatus.canceled;
+      tradeStatusDate = tradeForScreen.canceledAt!;
+    } else if (isLocalTrade && tradeForScreen.fundedAt != null && tradeForScreen.releasedAt == null) {
+      tradeStatus = TradeStatus.funded;
+      tradeStatusDate = tradeForScreen.createdAt!;
+    } else if (tradeForScreen.releasedAt != null &&
         tradeForScreen.transferToSellerTransactionId == null &&
         tradeForScreen.transferToBuyerTransactionId == null) {
       tradeStatus = TradeStatus.awaitingToSellerWallet;
@@ -641,6 +643,23 @@ class TradeViewModel extends ViewModel
       }
       notifyListeners();
     }
+  }
+
+  ///
+  /// Fund local trade
+  ///
+  Future fundTrade() async {
+    enablingEscrow = true;
+    final res = await _tradeRepository.fundTrade(tradeForScreen.tradeId);
+    enablingEscrow = false;
+    if (res.isRight) {
+      getTrade(polling: true);
+      AutoRouter.of(context).pop();
+    } else {
+      handleApiError(res.left, context);
+      AutoRouter.of(context).pop();
+    }
+    notifyListeners();
   }
 
   void showDisputeDialog() {

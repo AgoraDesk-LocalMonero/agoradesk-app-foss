@@ -8158,9 +8158,6 @@ class I18nEs extends I18n {
   String get api_error_98 => 'Tratando de crear un intercambio para un anuncio cuyo cartel no existe';
 
   @override
-  String get api_error_99 => 'Intentar solicitar una cantidad superior a la permitida por first_time_limit_asset al crear una primera operación';
-
-  @override
   String get api_error_100 => 'No se puede solicitar menos de 0.0000000001 XMR para la creación de comercio';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nEs extends I18n {
 
   @override
   String get api_error_121 => 'Intentar depositar una operación que no existe';
-
-  @override
-  String get api_error_122 => 'Fondos insuficientes para financiar una operación LOCAL_SELL flotante';
-
-  @override
-  String get api_error_123 => 'Fondos insuficientes para financiar una operación LOCAL_SELL no flotante';
-
-  @override
-  String get api_error_124 => 'Error al financiar un LOCAL_SELL';
 
   @override
   String get api_error_125 => 'El usuario que solicita la cancelación de la transacción no existe';
@@ -9455,4 +9443,16 @@ class I18nEs extends I18n {
 
   @override
   String get api_error_273 => 'Intentar eliminar una dirección que no existe en la libreta de direcciones de un usuario';
+
+  @override
+  String get api_error_99 => 'Intentar solicitar una cantidad superior a la permitida por first_time_limit_asset al crear una primera operación';
+
+  @override
+  String get api_error_122 => 'Fondos insuficientes para financiar una operación LOCAL_SELL flotante';
+
+  @override
+  String get api_error_123 => 'Fondos insuficientes para financiar una operación LOCAL_SELL no flotante';
+
+  @override
+  String get api_error_124 => 'Error al financiar un LOCAL_SELL';
 }

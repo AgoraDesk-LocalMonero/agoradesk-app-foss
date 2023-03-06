@@ -309,7 +309,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
   }
 
   Widget _buildTradeStepOne(BuildContext context) {
-    if (model.tradeStatus == TradeStatus.created) {
+    if (model.tradeStatus == TradeStatus.created || model.tradeStatus == TradeStatus.notFunded) {
       return Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
         child: TradeStepOneForChat(model: model),

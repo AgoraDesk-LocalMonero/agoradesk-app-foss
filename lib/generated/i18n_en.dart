@@ -8158,9 +8158,6 @@ class I18nEn extends I18n {
   String get api_error_98 => 'Trying to create a trade for an ad who’s poster doesn’t exist';
 
   @override
-  String get api_error_99 => 'Trying to request higher amount than allowed by first_time_limit_asset when creating a first trade';
-
-  @override
   String get api_error_100 => 'Cannot request less than 0.0000000001 XMR for trade creation';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nEn extends I18n {
 
   @override
   String get api_error_121 => 'Attempting to escrow a trade that doesn’t exist';
-
-  @override
-  String get api_error_122 => 'Insufficient funds to fund a floating LOCAL_SELL trade';
-
-  @override
-  String get api_error_123 => 'Insufficient funds to fund a non-floating LOCAL_SELL trade';
-
-  @override
-  String get api_error_124 => 'Error when funding a LOCAL_SELL';
 
   @override
   String get api_error_125 => 'User requesting cancellation of trade doesn’t exist';
@@ -9455,4 +9443,16 @@ class I18nEn extends I18n {
 
   @override
   String get api_error_273 => 'Attempting to delete an address that doesn’t exist in a user’s address book';
+
+  @override
+  String get api_error_99 => 'Trying to request higher amount than allowed by the ad owner when creating a first trade';
+
+  @override
+  String get api_error_122 => 'Insufficient funds to fund a trade';
+
+  @override
+  String get api_error_123 => 'Insufficient funds to fund a trade';
+
+  @override
+  String get api_error_124 => 'Error when funding a trade';
 }

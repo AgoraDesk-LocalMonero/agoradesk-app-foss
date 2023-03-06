@@ -8158,9 +8158,6 @@ class I18nDa extends I18n {
   String get api_error_98 => 'Forsøger at lave en handel for en annonce, hvis plakat ikke eksisterer';
 
   @override
-  String get api_error_99 => 'Forsøger at anmode om et højere beløb end tilladt af first_time_limit_asset, når du opretter en første handel';
-
-  @override
   String get api_error_100 => 'Kan ikke anmode om mindre end 0,0000000001 XMR til oprettelse af handel';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nDa extends I18n {
 
   @override
   String get api_error_121 => 'Forsøg på at spærre en handel, der ikke eksisterer';
-
-  @override
-  String get api_error_122 => 'Utilstrækkelige midler til at finansiere en flydende LOCAL_SELL handel';
-
-  @override
-  String get api_error_123 => 'Utilstrækkelige midler til at finansiere en ikke-flydende LOCAL_SELL handel';
-
-  @override
-  String get api_error_124 => 'Fejl ved finansiering af en LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Bruger, der anmoder om annullering af handel, eksisterer ikke';
@@ -9455,4 +9443,16 @@ class I18nDa extends I18n {
 
   @override
   String get api_error_273 => 'Forsøg på at slette en adresse, der ikke findes i en brugers adressebog';
+
+  @override
+  String get api_error_99 => 'Forsøger at anmode om et højere beløb end tilladt af first_time_limit_asset, når du opretter en første handel';
+
+  @override
+  String get api_error_122 => 'Utilstrækkelige midler til at finansiere en flydende LOCAL_SELL handel';
+
+  @override
+  String get api_error_123 => 'Utilstrækkelige midler til at finansiere en ikke-flydende LOCAL_SELL handel';
+
+  @override
+  String get api_error_124 => 'Fejl ved finansiering af en LOCAL_SELL';
 }

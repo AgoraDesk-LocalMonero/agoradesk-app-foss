@@ -216,6 +216,10 @@ class _AdEditScreenState extends State<AdEditScreen>
                 popupProps: PopupProps.dialog(
                   dialogProps: context.dropdownDialogProps,
                   showSearchBox: true,
+                  searchFieldProps: TextFieldProps(
+                    autofocus: true,
+                    decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                  ),
                 ),
                 itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                 asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),

@@ -1,10 +1,9 @@
 ### Updates
-1. Hotfix: Addressed captcha loop during service attack
-2. Fixed: Wallet displaying zero balance
-3. Fixed: Calculated price update in ad formula when switching
-4. Added: Settlement proof button to completed trades
-5. Added: Proxy setting before login
-6. Enhanced: Wallet tiles can be minimized for compact view
+1. Fixed: Local trades funded and other bugs.
+2. Fixed: Asseccibility search fields in dropdown lists.
+3. Fixed: The app doesn't show progression to step 2 of XMR settlement.
+4. Fixed: minimum feedback requirement in the app is not saved with the rest of the ad.
+
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

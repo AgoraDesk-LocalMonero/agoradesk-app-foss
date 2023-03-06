@@ -8158,9 +8158,6 @@ class I18nIt extends I18n {
   String get api_error_98 => 'Cercando di creare uno scambio per un annuncio il cui poster non esiste';
 
   @override
-  String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito da first_time_limit_asset durante la creazione di una prima operazione';
-
-  @override
   String get api_error_100 => 'Non è possibile richiedere meno di 0,0000000001 XMR per la creazione dell\'operazione';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nIt extends I18n {
 
   @override
   String get api_error_121 => 'Tentativo di depositare in garanzia un commercio che non esiste';
-
-  @override
-  String get api_error_122 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL fluttuante';
-
-  @override
-  String get api_error_123 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL non fluttuante';
-
-  @override
-  String get api_error_124 => 'Errore durante il finanziamento di un LOCAL_SELL';
 
   @override
   String get api_error_125 => 'L\'utente che richiede l\'annullamento dell\'operazione non esiste';
@@ -9455,4 +9443,16 @@ class I18nIt extends I18n {
 
   @override
   String get api_error_273 => 'Tentativo di eliminare un indirizzo che non esiste nella rubrica di un utente';
+
+  @override
+  String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito da first_time_limit_asset durante la creazione di una prima operazione';
+
+  @override
+  String get api_error_122 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL fluttuante';
+
+  @override
+  String get api_error_123 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL non fluttuante';
+
+  @override
+  String get api_error_124 => 'Errore durante il finanziamento di un LOCAL_SELL';
 }

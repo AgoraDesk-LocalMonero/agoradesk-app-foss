@@ -1,6 +1,7 @@
 #private
 key.properties
 lib/keys/
+crypto_plugins/
 #assets/json
 google-services.json
 GoogleService-Info.plist

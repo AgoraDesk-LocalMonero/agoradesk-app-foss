@@ -8158,9 +8158,6 @@ class I18nNl extends I18n {
   String get api_error_98 => 'Poging om een transactie uit te voeren voor een advertentie waarvan de plaatser niet bestaat';
 
   @override
-  String get api_error_99 => 'Poging om een hoger bedrag aan te vragen dan toegestaan door first_time_limit_asset bij het maken van een eerste transactie';
-
-  @override
   String get api_error_100 => 'Kan niet minder dan 0,0000000001 XMR aanvragen voor het maken van transacties';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nNl extends I18n {
 
   @override
   String get api_error_121 => 'Poging om een transactie te escrowen die niet bestaat';
-
-  @override
-  String get api_error_122 => 'Onvoldoende saldo om een zwevende LOCAL_SELL-transactie te financieren';
-
-  @override
-  String get api_error_123 => 'Onvoldoende saldo om een niet-zwevende LOCAL_SELL-transactie te financieren';
-
-  @override
-  String get api_error_124 => 'Fout bij het financieren van een LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Gebruiker die annulering van transactie aanvraagt, bestaat niet';
@@ -9455,4 +9443,16 @@ class I18nNl extends I18n {
 
   @override
   String get api_error_273 => 'Poging om een adres te verwijderen dat niet bestaat in het adresboek van een gebruiker';
+
+  @override
+  String get api_error_99 => 'Poging om een hoger bedrag aan te vragen dan toegestaan door first_time_limit_asset bij het maken van een eerste transactie';
+
+  @override
+  String get api_error_122 => 'Onvoldoende saldo om een zwevende LOCAL_SELL-transactie te financieren';
+
+  @override
+  String get api_error_123 => 'Onvoldoende saldo om een niet-zwevende LOCAL_SELL-transactie te financieren';
+
+  @override
+  String get api_error_124 => 'Fout bij het financieren van een LOCAL_SELL';
 }

@@ -222,6 +222,10 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.n70N50,
       );
 
+  TextStyle get txtLabelLargeN30N80 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
+        color: Theme.of(this).colorScheme.n30N80,
+      );
+
   TextStyle get txtLabelLargeP80P40 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.p80P40,
       );

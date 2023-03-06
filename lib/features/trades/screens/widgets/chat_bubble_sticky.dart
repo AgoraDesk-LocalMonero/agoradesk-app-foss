@@ -1,9 +1,11 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_two_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_p80.dart';
+import 'package:agoradesk/core/widgets/branded/button_icon_text_n30n80.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_with_icon_p10.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_with_icon_p80.dart';
 import 'package:agoradesk/core/widgets/branded/circle_with_icon.dart';
@@ -15,6 +17,7 @@ import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_bubble_yellow.dart';
 import 'package:agoradesk/features/trades/screens/widgets/finalize_trade_dialog.dart';
 import 'package:agoradesk/features/trades/screens/widgets/post_feedback_dialog.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
@@ -39,15 +42,162 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (!model.displayStickyBubble()) {
               return const SizedBox(height: 8);
             }
-            if (model.isLocalTrade && model.tradeStatus == TradeStatus.created) {
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying!) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                 child: ContainerC85c09Radius12(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
-                    child: Text(
-                      context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
-                      style: context.txtLabelMediumPrimary10,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Center(
+                          child: ButtonOutlinedWithIconP80(
+                            title: context.intl.cancel,
+                            borderColor: context.colN30,
+                            style: context.txtLabelLargeNeutral30,
+                            icon: Icon(
+                              AgoraFont.x_circle,
+                              color: context.colN30,
+                            ),
+                            onPressed: () => _cancelTradeSellerDialog(context, model),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isSelling!) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Center(
+                          child: ButtonFilledWithIconP80(
+                            title: context.intl.trade250Sbfund8722Sbtrade8722Sbbtn,
+                            filledColor: context.colTonalP40,
+                            style: context.txtLabelLargeP90White,
+                            icon: Icon(
+                              AgoraFont.check_circle_alt,
+                              color: context.colP90White,
+                            ),
+                            onPressed: () => _fundTradeDialog(model, context),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.funded && model.tradeForScreen.isBuying!) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb1250Sbbuyer250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Center(
+                          child: ButtonOutlinedWithIconP80(
+                            title: context.intl.cancel,
+                            borderColor: context.colN30,
+                            style: context.txtLabelLargeNeutral30,
+                            icon: Icon(
+                              AgoraFont.x_circle,
+                              color: context.colN30,
+                            ),
+                            onPressed: () => _cancelTradeSellerDialog(context, model),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
+
+            if (model.isLocalTrade && model.tradeStatus == TradeStatus.funded && model.tradeForScreen.isSelling!) {
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          context.intl.trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbtitle,
+                          style: context.txtLabelMediumPrimary10,
+                        ),
+                        const SizedBox(height: 12),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            ButtonOutlinedWithIconP80(
+                              title: context.intl.cancel,
+                              borderColor: context.colN30,
+                              style: context.txtLabelLargeNeutral30,
+                              icon: Icon(
+                                AgoraFont.x_circle,
+                                color: context.colN30,
+                              ),
+                              onPressed: () => _cancelTradeSellerDialog(context, model),
+                            ),
+                            ButtonFilledWithIconP80(
+                              title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
+                              filledColor: context.colTonalP40,
+                              style: context.txtLabelLargeP90White,
+                              icon: Icon(
+                                AgoraFont.check_circle_alt,
+                                color: context.colP90White,
+                              ),
+                              onPressed: () {
+                                showDialog(
+                                  barrierDismissible: true,
+                                  context: context,
+                                  barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+                                  builder: (_) => FinalizeTradeDialog(tradeModel: model),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                        model.escrowed
+                            ? const SizedBox()
+                            : Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                child: ButtonIconTextN30N80(
+                                  iconData: AgoraFont.lock,
+                                  text: context.intl.trade250Sbenable8722Sbescrow8722Sbbtn,
+                                  onPressed: () => _enableEscrowDialog(model, context),
+                                ),
+                              ),
+                      ],
                     ),
                   ),
                 ),
@@ -95,13 +245,14 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               );
             }
 
-            if (model.tradeStatus.index > 5) {
+            if (model.tradeStatus.index > 6) {
               return Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                     child: ChatBubbleYellow(
                       text: context.intl.settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort,
+                      date: model.tradeForScreen.releasedAt,
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
                         child: Center(
@@ -120,7 +271,6 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                         ),
                       ),
-                      date: model.tradeForScreen.releasedAt,
                     ),
                   ),
                 ],
@@ -133,7 +283,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -200,7 +350,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -344,6 +494,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               mainActionText: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
               secondAction: () => Navigator.of(context).pop(),
               secondActionText: context.intl.cancel,
+              mainActionLoading: model.cancelingTrade,
             );
           }),
     );
@@ -393,6 +544,41 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               loadingFilled: model.markingAsPaid,
             );
           }),
+    );
+  }
+
+  void _fundTradeDialog(TradeViewModel model, BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+      builder: (_) => DialogOutlineAndFilledButtons(
+        title: context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle,
+        content:
+            Text(context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext(GetIt.I<AppParameters>().appName)),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        onPressedOutline: () => AutoRouter.of(context).pop(),
+        onPressedFilled: () => model.fundTrade(),
+        loadingFilled: model.enablingEscrow,
+      ),
+    );
+  }
+
+  void _enableEscrowDialog(TradeViewModel model, BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+      builder: (_) => DialogOutlineAndFilledButtons(
+        title: context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtitle,
+        content: Text(context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtext),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        onPressedOutline: () => AutoRouter.of(context).pop(),
+        onPressedFilled: () => model.enableEscrow(),
+        loadingFilled: model.enablingEscrow,
+      ),
     );
   }
 }

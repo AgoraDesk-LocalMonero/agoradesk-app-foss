@@ -8158,9 +8158,6 @@ class I18nPt extends I18n {
   String get api_error_98 => 'Tentando criar uma troca para um anúncio cujo pôster não existe';
 
   @override
-  String get api_error_99 => 'Tentando solicitar um valor maior do que o permitido por first_time_limit_asset ao criar uma primeira negociação';
-
-  @override
   String get api_error_100 => 'Não é possível solicitar menos de 0,0000000001 XMR para criação de comércio';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nPt extends I18n {
 
   @override
   String get api_error_121 => 'Tentativa de custódia de uma negociação que não existe';
-
-  @override
-  String get api_error_122 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL flutuante';
-
-  @override
-  String get api_error_123 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL não flutuante';
-
-  @override
-  String get api_error_124 => 'Erro ao financiar um LOCAL_SELL';
 
   @override
   String get api_error_125 => 'O usuário que está solicitando o cancelamento da negociação não existe';
@@ -9455,6 +9443,18 @@ class I18nPt extends I18n {
 
   @override
   String get api_error_273 => 'Tentativa de excluir um endereço que não existe no catálogo de endereços de um usuário';
+
+  @override
+  String get api_error_99 => 'Tentando solicitar um valor maior do que o permitido por first_time_limit_asset ao criar uma primeira negociação';
+
+  @override
+  String get api_error_122 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL flutuante';
+
+  @override
+  String get api_error_123 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL não flutuante';
+
+  @override
+  String get api_error_124 => 'Erro ao financiar um LOCAL_SELL';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -17615,9 +17615,6 @@ class I18nPtBr extends I18nPt {
   String get api_error_98 => 'Tentando criar uma troca para um anúncio cujo pôster não existe';
 
   @override
-  String get api_error_99 => 'Tentando solicitar um valor maior do que o permitido por first_time_limit_asset ao criar uma primeira negociação';
-
-  @override
   String get api_error_100 => 'Não é possível solicitar menos de 0,0000000001 XMR para criação de comércio';
 
   @override
@@ -17673,15 +17670,6 @@ class I18nPtBr extends I18nPt {
 
   @override
   String get api_error_121 => 'Tentativa de custódia de uma negociação que não existe';
-
-  @override
-  String get api_error_122 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL flutuante';
-
-  @override
-  String get api_error_123 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL não flutuante';
-
-  @override
-  String get api_error_124 => 'Erro ao financiar um LOCAL_SELL';
 
   @override
   String get api_error_125 => 'O usuário que está solicitando o cancelamento da negociação não existe';
@@ -18912,4 +18900,16 @@ class I18nPtBr extends I18nPt {
 
   @override
   String get api_error_273 => 'Tentativa de excluir um endereço que não existe no catálogo de endereços de um usuário';
+
+  @override
+  String get api_error_99 => 'Tentando solicitar um valor maior do que o permitido por first_time_limit_asset ao criar uma primeira negociação';
+
+  @override
+  String get api_error_122 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL flutuante';
+
+  @override
+  String get api_error_123 => 'Fundos insuficientes para financiar uma negociação LOCAL_SELL não flutuante';
+
+  @override
+  String get api_error_124 => 'Erro ao financiar um LOCAL_SELL';
 }

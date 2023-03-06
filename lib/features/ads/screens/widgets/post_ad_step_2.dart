@@ -52,6 +52,10 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
           popupProps: PopupProps.dialog(
             dialogProps: context.dropdownDialogProps,
             showSearchBox: true,
+            searchFieldProps: TextFieldProps(
+              autofocus: true,
+              decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+            ),
           ),
           itemAsString: (String? code) => getCountryName(code ?? ''),
           asyncItems: (String? filter) => model.getCountryCodes(),
@@ -81,6 +85,10 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
           popupProps: PopupProps.dialog(
             dialogProps: context.dropdownDialogProps,
             showSearchBox: true,
+            searchFieldProps: TextFieldProps(
+              autofocus: true,
+              decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+            ),
           ),
           itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
           asyncItems: (String? filter) => model.getCurrencies(),
@@ -110,6 +118,10 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
                 popupProps: PopupProps.dialog(
                   dialogProps: context.dropdownDialogProps,
                   showSearchBox: true,
+                  searchFieldProps: TextFieldProps(
+                    autofocus: true,
+                    decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                  ),
                 ),
                 itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                 asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),

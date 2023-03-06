@@ -8158,9 +8158,6 @@ class I18nEl extends I18n {
   String get api_error_98 => 'Προσπάθεια δημιουργίας συναλλαγής για μια διαφήμιση της οποίας η αφίσα δεν υπάρχει';
 
   @override
-  String get api_error_99 => 'Προσπάθεια αίτησης υψηλότερου ποσού από αυτό που επιτρέπεται από το first_time_limit_asset κατά τη δημιουργία μιας πρώτης συναλλαγής';
-
-  @override
   String get api_error_100 => 'Δεν μπορείτε να ζητήσετε λιγότερο από 0,0000000001 XMR για δημιουργία συναλλαγών';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nEl extends I18n {
 
   @override
   String get api_error_121 => 'Προσπάθεια δέσμευσης μιας συναλλαγής που δεν υπάρχει';
-
-  @override
-  String get api_error_122 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση μιας κυμαινόμενης συναλλαγής LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση μιας μη κυμαινόμενης συναλλαγής LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Σφάλμα κατά τη χρηματοδότηση ενός LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Ο χρήστης που ζητά ακύρωση συναλλαγής δεν υπάρχει';
@@ -9455,4 +9443,16 @@ class I18nEl extends I18n {
 
   @override
   String get api_error_273 => 'Προσπάθεια διαγραφής μιας διεύθυνσης που δεν υπάρχει στο βιβλίο διευθύνσεων ενός χρήστη';
+
+  @override
+  String get api_error_99 => 'Προσπάθεια αίτησης υψηλότερου ποσού από αυτό που επιτρέπεται από το first_time_limit_asset κατά τη δημιουργία μιας πρώτης συναλλαγής';
+
+  @override
+  String get api_error_122 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση μιας κυμαινόμενης συναλλαγής LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση μιας μη κυμαινόμενης συναλλαγής LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Σφάλμα κατά τη χρηματοδότηση ενός LOCAL_SELL';
 }
