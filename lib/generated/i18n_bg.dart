@@ -8158,9 +8158,6 @@ class I18nBg extends I18n {
   String get api_error_98 => 'Опитвате се да създадете сделка за реклама чийто плакат не съществува';
 
   @override
-  String get api_error_99 => 'Опитвате се да поискате по-висока сума от разрешената от first_time_limit_asset при създаване на първа сделка';
-
-  @override
   String get api_error_100 => 'Не може да поиска по-малко от 0,0000000001 XMR за създаване на търговия';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nBg extends I18n {
 
   @override
   String get api_error_121 => 'Опит за ескроуване на сделка която не съществува';
-
-  @override
-  String get api_error_122 => 'Недостатъчни средства за финансиране на плаваща търговия LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Недостатъчни средства за финансиране на неплаваща сделка LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Грешка при финансиране на LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Потребител който иска анулиране на търговия не съществува';
@@ -9455,4 +9443,16 @@ class I18nBg extends I18n {
 
   @override
   String get api_error_273 => 'Опит за изтриване на адрес, който не съществува в адресната книга на потребителя';
+
+  @override
+  String get api_error_99 => 'Опитвате се да поискате по-висока сума от разрешената от first_time_limit_asset при създаване на първа сделка';
+
+  @override
+  String get api_error_122 => 'Недостатъчни средства за финансиране на плаваща търговия LOCAL_SELL';
+
+  @override
+  String get api_error_123 => 'Недостатъчни средства за финансиране на неплаваща сделка LOCAL_SELL';
+
+  @override
+  String get api_error_124 => 'Грешка при финансиране на LOCAL_SELL';
 }

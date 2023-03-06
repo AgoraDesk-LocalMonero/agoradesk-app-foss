@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'address_model_to_save.dart';
 
@@ -36,7 +36,8 @@ mixin _$AddressModelToSave {
 abstract class $AddressModelToSaveCopyWith<$Res> {
   factory $AddressModelToSaveCopyWith(
           AddressModelToSave value, $Res Function(AddressModelToSave) then) =
-      _$AddressModelToSaveCopyWithImpl<$Res>;
+      _$AddressModelToSaveCopyWithImpl<$Res, AddressModelToSave>;
+  @useResult
   $Res call(
       {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset) Asset asset,
       String address,
@@ -44,34 +45,36 @@ abstract class $AddressModelToSaveCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AddressModelToSaveCopyWithImpl<$Res>
+class _$AddressModelToSaveCopyWithImpl<$Res, $Val extends AddressModelToSave>
     implements $AddressModelToSaveCopyWith<$Res> {
   _$AddressModelToSaveCopyWithImpl(this._value, this._then);
 
-  final AddressModelToSave _value;
   // ignore: unused_field
-  final $Res Function(AddressModelToSave) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? asset = freezed,
-    Object? address = freezed,
+    Object? asset = null,
+    Object? address = null,
     Object? label = freezed,
   }) {
     return _then(_value.copyWith(
-      asset: asset == freezed
+      asset: null == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset,
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as String,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -82,6 +85,7 @@ abstract class _$$_AddressModelToSaveCopyWith<$Res>
           $Res Function(_$_AddressModelToSave) then) =
       __$$_AddressModelToSaveCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset) Asset asset,
       String address,
@@ -90,31 +94,29 @@ abstract class _$$_AddressModelToSaveCopyWith<$Res>
 
 /// @nodoc
 class __$$_AddressModelToSaveCopyWithImpl<$Res>
-    extends _$AddressModelToSaveCopyWithImpl<$Res>
+    extends _$AddressModelToSaveCopyWithImpl<$Res, _$_AddressModelToSave>
     implements _$$_AddressModelToSaveCopyWith<$Res> {
   __$$_AddressModelToSaveCopyWithImpl(
       _$_AddressModelToSave _value, $Res Function(_$_AddressModelToSave) _then)
-      : super(_value, (v) => _then(v as _$_AddressModelToSave));
+      : super(_value, _then);
 
-  @override
-  _$_AddressModelToSave get _value => super._value as _$_AddressModelToSave;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? asset = freezed,
-    Object? address = freezed,
+    Object? asset = null,
+    Object? address = null,
     Object? label = freezed,
   }) {
     return _then(_$_AddressModelToSave(
-      asset: asset == freezed
+      asset: null == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
               as Asset,
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as String,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -155,21 +157,18 @@ class _$_AddressModelToSave implements _AddressModelToSave {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AddressModelToSave &&
-            const DeepCollectionEquality().equals(other.asset, asset) &&
-            const DeepCollectionEquality().equals(other.address, address) &&
-            const DeepCollectionEquality().equals(other.label, label));
+            (identical(other.asset, asset) || other.asset == asset) &&
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.label, label) || other.label == label));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(asset),
-      const DeepCollectionEquality().hash(address),
-      const DeepCollectionEquality().hash(label));
+  int get hashCode => Object.hash(runtimeType, asset, address, label);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AddressModelToSaveCopyWith<_$_AddressModelToSave> get copyWith =>
       __$$_AddressModelToSaveCopyWithImpl<_$_AddressModelToSave>(
           this, _$identity);

@@ -8158,9 +8158,6 @@ class I18nDe extends I18n {
   String get api_error_98 => 'Der Versuch, einen Handel für eine Anzeige zu erstellen, deren Ersteller nicht existiert';
 
   @override
-  String get api_error_99 => 'Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als von first_time_limit_asset zugelassen wird';
-
-  @override
   String get api_error_100 => 'Für die Handelserstellung kann nicht weniger als 0,0000000001 XMR angefordert werden';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nDe extends I18n {
 
   @override
   String get api_error_121 => 'Versuch, eine Treuhand für einen Handel zu hinterlegen, der nicht existiert';
-
-  @override
-  String get api_error_122 => 'Unzureichende Mittel, um einen schwebenden LOCAL_SELL-Trade zu finanzieren';
-
-  @override
-  String get api_error_123 => 'Unzureichende Mittel, um einen nicht schwebenden LOCAL_SELL-Trade zu finanzieren';
-
-  @override
-  String get api_error_124 => 'Fehler bei der Finanzierung eines LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Der Benutzer, der die Stornierung des Handels beantragt, existiert nicht';
@@ -9455,4 +9443,16 @@ class I18nDe extends I18n {
 
   @override
   String get api_error_273 => 'Versuch, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
+
+  @override
+  String get api_error_99 => 'Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als von first_time_limit_asset zugelassen wird';
+
+  @override
+  String get api_error_122 => 'Unzureichende Mittel, um einen schwebenden LOCAL_SELL-Trade zu finanzieren';
+
+  @override
+  String get api_error_123 => 'Unzureichende Mittel, um einen nicht schwebenden LOCAL_SELL-Trade zu finanzieren';
+
+  @override
+  String get api_error_124 => 'Fehler bei der Finanzierung eines LOCAL_SELL';
 }

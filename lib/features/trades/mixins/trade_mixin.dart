@@ -1,3 +1,4 @@
+import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 
@@ -6,6 +7,11 @@ mixin TradeMixin {
   /// get TradeStatus from TradeModel object
   ///
   TradeStatus getTradeStatus(TradeModel trade) {
+    if (trade.advertisement.tradeType.isLocal()) {
+      if (trade.fundedAt == null) {
+        return TradeStatus.notFunded;
+      }
+    }
     if (trade.releasedAt != null) {
       return TradeStatus.released;
     } else if (trade.canceledAt != null) {
@@ -15,6 +21,11 @@ mixin TradeMixin {
     } else if (trade.paymentCompletedAt != null) {
       return TradeStatus.paymentCompleted;
     } else {
+      if (trade.advertisement.tradeType.isLocal()) {
+        if (trade.fundedAt != null) {
+          return TradeStatus.funded;
+        }
+      }
       return TradeStatus.created;
     }
   }

@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -31,6 +32,77 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
         initOnce: true,
         builder: (context, model, child) {
           if (model.isLocalTrade) {
+            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isSelling == true) {
+              return ContainerSurface5Radius12(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                  child: Column(
+                    children: [
+                      LineIconTextPrimary90(
+                        icon: const CircleWithNum(num: 1),
+                        text: context.intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle,
+                      ),
+                      const SizedBox(height: 14),
+                      ContainerSurface3Radius12Border1(
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              LineDotText(
+                                text: context.intl
+                                    .trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbfund8722Sbthe8722Sbtrade(
+                                  model.finalAmount(),
+                                  GetIt.I<AppParameters>().appName,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              LineDotText(
+                                text: context
+                                    .intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }
+            if (model.tradeStatus == TradeStatus.notFunded) {
+              return ContainerSurface5Radius12(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                  child: Column(
+                    children: [
+                      LineIconTextPrimary90(
+                        icon: const CircleWithNum(num: 1),
+                        text: context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                      ),
+                      const SizedBox(height: 14),
+                      ContainerSurface3Radius12Border1(
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              LineDotText(
+                                text: context.intl
+                                    .trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(
+                                        GetIt.I<AppParameters>().appName),
+                              ),
+                              const SizedBox(height: 12),
+                              LineDotText(
+                                text: context.intl.trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }
             return ContainerSurface5Radius12(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -41,7 +113,7 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
               ),
             );
           }
-          if (model.tradeStatus.index > 4 && model.tradeStatus != TradeStatus.disputed) {
+          if (model.tradeStatus.index > 5 && model.tradeStatus != TradeStatus.disputed) {
             return const SizedBox();
           }
           return model.tradeForScreen.isSelling!
@@ -51,7 +123,7 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerSurface5Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -100,7 +172,7 @@ class TradeStepOneForChat extends StatelessWidget with DateMixin, ClipboardMixin
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 2 || model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerSurface5Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),

@@ -8158,9 +8158,6 @@ class I18nZh extends I18n {
   String get api_error_98 => '试图为海报不存在的广告创建交易';
 
   @override
-  String get api_error_99 => '创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
-
-  @override
   String get api_error_100 => '不能要求少于 0.0000000001 XMR 来创建交易';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nZh extends I18n {
 
   @override
   String get api_error_121 => '试图托管不存在的交易';
-
-  @override
-  String get api_error_122 => '资金不足以为浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_123 => '资金不足以为非浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
 
   @override
   String get api_error_125 => '请求取消交易的用户不存在';
@@ -9455,6 +9443,18 @@ class I18nZh extends I18n {
 
   @override
   String get api_error_273 => '试图删除用户地址簿中不存在的地址';
+
+  @override
+  String get api_error_99 => '创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
+
+  @override
+  String get api_error_122 => '资金不足以为浮动 LOCAL_SELL 交易提供资金';
+
+  @override
+  String get api_error_123 => '资金不足以为非浮动 LOCAL_SELL 交易提供资金';
+
+  @override
+  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -17615,9 +17615,6 @@ class I18nZhCn extends I18nZh {
   String get api_error_98 => '试图为海报不存在的广告创建交易';
 
   @override
-  String get api_error_99 => '创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
-
-  @override
   String get api_error_100 => '不能要求少于 0.0000000001 XMR 来创建交易';
 
   @override
@@ -17673,15 +17670,6 @@ class I18nZhCn extends I18nZh {
 
   @override
   String get api_error_121 => '试图托管不存在的交易';
-
-  @override
-  String get api_error_122 => '资金不足以为浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_123 => '资金不足以为非浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
 
   @override
   String get api_error_125 => '请求取消交易的用户不存在';
@@ -18912,6 +18900,18 @@ class I18nZhCn extends I18nZh {
 
   @override
   String get api_error_273 => '试图删除用户地址簿中不存在的地址';
+
+  @override
+  String get api_error_99 => '创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
+
+  @override
+  String get api_error_122 => '资金不足以为浮动 LOCAL_SELL 交易提供资金';
+
+  @override
+  String get api_error_123 => '资金不足以为非浮动 LOCAL_SELL 交易提供资金';
+
+  @override
+  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -27072,9 +27072,6 @@ class I18nZhTw extends I18nZh {
   String get api_error_98 => '試圖為海報不存在的廣告創建交易';
 
   @override
-  String get api_error_99 => '創建第一筆交易時嘗試請求高於 first_time_limit_asset 允許的金額';
-
-  @override
   String get api_error_100 => '不能要求少於 0.0000000001 XMR 來創建交易';
 
   @override
@@ -27130,15 +27127,6 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get api_error_121 => '試圖託管不存在的交易';
-
-  @override
-  String get api_error_122 => '資金不足以為浮動 LOCAL_SELL 交易提供資金';
-
-  @override
-  String get api_error_123 => '資金不足以為非浮動 LOCAL_SELL 交易提供資金';
-
-  @override
-  String get api_error_124 => '為 LOCAL_SELL 融資時出錯';
 
   @override
   String get api_error_125 => '請求取消交易的用戶不存在';
@@ -28369,4 +28357,16 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get api_error_273 => '試圖刪除用戶地址簿中不存在的地址';
+
+  @override
+  String get api_error_99 => '創建第一筆交易時嘗試請求高於 first_time_limit_asset 允許的金額';
+
+  @override
+  String get api_error_122 => '資金不足以為浮動 LOCAL_SELL 交易提供資金';
+
+  @override
+  String get api_error_123 => '資金不足以為非浮動 LOCAL_SELL 交易提供資金';
+
+  @override
+  String get api_error_124 => '為 LOCAL_SELL 融資時出錯';
 }

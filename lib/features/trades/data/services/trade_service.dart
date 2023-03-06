@@ -256,6 +256,27 @@ class TradeService {
   }
 
   ///
+  /// Fund local trade
+  ///
+  Future<Either<ApiError, bool>> fundTrade(String tradeId) async {
+    try {
+      final resp = await _api.client.post<Map>(
+        '/contact_fund/$tradeId',
+        data: {},
+      );
+      if (resp.statusCode == 200) {
+        return const Either.right(true);
+      } else {
+        ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
+        return Either.left(apiError);
+      }
+    } catch (e) {
+      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      return Either.left(apiError);
+    }
+  }
+
+  ///
   /// Start dispute
   ///
   Future<Either<ApiError, bool>> startDispute(String tradeId) async {

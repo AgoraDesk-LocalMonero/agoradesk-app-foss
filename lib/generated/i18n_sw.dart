@@ -8158,9 +8158,6 @@ class I18nSw extends I18n {
   String get api_error_98 => 'Kujaribu kuunda biashara kwa tangazo ambalo bango lake halipo';
 
   @override
-  String get api_error_99 => 'Inajaribu kuomba kiasi cha juu kuliko kinachoruhusiwa na first_time_limit_asset wakati wa kuunda biashara ya kwanza';
-
-  @override
   String get api_error_100 => 'Haiwezi kuomba chini ya 0.0000000001 XMR kwa ajili ya kuunda biashara';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nSw extends I18n {
 
   @override
   String get api_error_121 => 'Kujaribu kukwepa biashara kwa escrow ambayo haipo';
-
-  @override
-  String get api_error_122 => 'Pesa haitoshi kufadhili biashara inayoelea ya KUUZA_NDANI YA NCHI';
-
-  @override
-  String get api_error_123 => 'Pesa haitoshi kufadhili biashara isiyoelea ya KUUZA_NDANI YA NCHI';
-
-  @override
-  String get api_error_124 => 'Hitilafu wakati wa kufadhili KUUZA_NDANI YA NCHI';
 
   @override
   String get api_error_125 => 'Mtumiaji anayeomba kughairiwa kwa biashara haipo';
@@ -9455,4 +9443,16 @@ class I18nSw extends I18n {
 
   @override
   String get api_error_273 => 'Kujaribu kufuta anwani ambayo haipo kwenye kitabu cha anwani cha mtumiaji';
+
+  @override
+  String get api_error_99 => 'Inajaribu kuomba kiasi cha juu kuliko kinachoruhusiwa na first_time_limit_asset wakati wa kuunda biashara ya kwanza';
+
+  @override
+  String get api_error_122 => 'Pesa haitoshi kufadhili biashara inayoelea ya KUUZA_NDANI YA NCHI';
+
+  @override
+  String get api_error_123 => 'Pesa haitoshi kufadhili biashara isiyoelea ya KUUZA_NDANI YA NCHI';
+
+  @override
+  String get api_error_124 => 'Hitilafu wakati wa kufadhili KUUZA_NDANI YA NCHI';
 }

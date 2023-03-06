@@ -12,7 +12,6 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -54,7 +53,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: context.intl.app_proxy_bugs_expected + ' ',
+                                          text: '${context.intl.app_proxy_bugs_expected} ',
                                           style: context.txtBodyXSmallN80,
                                         ),
                                         TextSpan(
@@ -124,6 +123,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                             const SizedBox(height: 8),
                             TextField(
                               controller: model.ctrlPort,
+                              keyboardType: TextInputType.number,
                               decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
                                     hintText: 'Port',
                                   ),

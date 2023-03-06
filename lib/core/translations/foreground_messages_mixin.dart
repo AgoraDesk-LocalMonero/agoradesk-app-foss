@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,7 +8,7 @@ class ForegroundMessagesMixin {
     try {
       return [channelDescriptionMap[langCode]['name'], channelDescriptionMap[langCode]['description']];
     } catch (e) {
-      debugPrint('[getChannelNameDescription error] $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getChannelNameDescription error] $e');
       return [channelDescriptionMap['en']['name'], channelDescriptionMap['en']['description']];
     }
   }

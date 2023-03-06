@@ -1,8 +1,9 @@
 import 'package:agoradesk/core/agora_font.dart';
+import 'package:decimal/decimal.dart';
 import 'package:flutter/material.dart';
 
-const kBtcAmountToSell = 0.001;
-const kXmrAmountToSell = 0.35;
+final kBtcAmountToSell = Decimal.parse('0.001');
+final kXmrAmountToSell = Decimal.parse('0.35');
 
 enum Asset { BTC, XMR }
 

@@ -23,7 +23,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 
 import '../../events.dart';
@@ -51,6 +50,7 @@ class NotificationsService with ForegroundMessagesMixin {
   final AuthService authService;
   final AppState appState;
   bool _loading = false;
+  bool _updating = false;
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
@@ -117,7 +117,8 @@ class NotificationsService with ForegroundMessagesMixin {
         eventBus.fire(NoificationClickedEvent(tradeId));
       }
     } catch (e) {
-      debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn)
+        debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
     }
   }
 
@@ -176,10 +177,11 @@ class NotificationsService with ForegroundMessagesMixin {
           if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
             GetIt.I<AppParameters>().isGoogleAvailable = false;
           }
-          debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn)
+            debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
         }
         if (token != null) {
-          debugPrint('++++ FirebaseMessaging pushtoken created: $token');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
           _tokenUpdate(token);
         }
       }
@@ -190,37 +192,41 @@ class NotificationsService with ForegroundMessagesMixin {
   /// token manager - update, add to api, remove old from api
   ///
   Future _tokenUpdate(String? newToken) async {
-    final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
+    if (!_updating) {
+      _updating = true;
+      final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
 
-    late String deviceName;
-    var deviceData = <String, dynamic>{};
-    try {
-      if (Platform.isAndroid) {
-        deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
-        deviceName = deviceData['device'] ?? 'Android';
-      } else if (Platform.isIOS) {
-        deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
-        deviceName = deviceData['name'] ?? 'iPhone';
+      late String deviceName;
+      var deviceData = <String, dynamic>{};
+      try {
+        if (Platform.isAndroid) {
+          deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
+          deviceName = deviceData['device'] ?? 'Android';
+        } else if (Platform.isIOS) {
+          deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
+          deviceName = deviceData['name'] ?? 'iPhone';
+        }
+      } catch (e) {
+        deviceName = 'unknown';
       }
-    } catch (e) {
-      deviceName = 'unknown';
-    }
-    if (oldToken != newToken) {
-      appState.pushFcmTokenSavedToApi = false;
-    }
-    if (appState.pushFcmTokenSavedToApi == false && appState.username.isNotEmpty) {
-      final res = await _saveFcmTokenToApi(
-        DeviceModel(
-          token: newToken ?? oldToken!,
-          deviceName: deviceName,
-          type: 'FCM',
-        ),
-      );
-      if (res) {
-        await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
+      if (oldToken != newToken) {
+        appState.fcmTokenSavedToApi = false;
       }
+      if (appState.fcmTokenSavedToApi == false && appState.username.isNotEmpty) {
+        final res = await _saveFcmTokenToApi(
+          DeviceModel(
+            token: newToken ?? oldToken!,
+            deviceName: deviceName,
+            type: 'FCM',
+          ),
+        );
+        if (res) {
+          await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
+        }
+      }
+      eventBus.fire(FcmTokenChangedEvent(newToken));
+      _updating = false;
     }
-    eventBus.fire(FcmTokenChangedEvent(newToken));
   }
 
   ///
@@ -228,21 +234,17 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
     try {
-      debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
       final resp = await api.client.post(
         '/push/registration',
         data: device.toJson(),
       );
-      if (resp.statusCode == 200) {
-        appState.pushFcmTokenSavedToApi = true;
-      }
-
       return resp.statusCode == 200;
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       if (apiError.message.containsKey('error_code')) {
         if (apiError.message['error_code'] == 256) {
-          appState.pushFcmTokenSavedToApi = true;
+          appState.fcmTokenSavedToApi = true;
         }
       }
       return false;
@@ -278,7 +280,7 @@ class NotificationsService with ForegroundMessagesMixin {
             !_notifications.firstWhere((e) => e.read == false, orElse: () => _readedEmptyNotification).read;
       }
     } catch (e) {
-      debugPrint('++++markTradeNotificationsAsRead exception - $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++markTradeNotificationsAsRead exception - $e');
     }
   }
 
@@ -319,7 +321,7 @@ class NotificationsService with ForegroundMessagesMixin {
           appState.hasUnread = hasUnreaded;
         } else {
           if (res.isLeft) {
-            debugPrint('++++getNotifications error ${res.left}');
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++getNotifications error ${res.left}');
           }
           // handleApiError(res.left, context);
         }

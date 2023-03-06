@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'coupon_model.dart';
 
@@ -40,7 +40,8 @@ mixin _$CouponModel {
 abstract class $CouponModelCopyWith<$Res> {
   factory $CouponModelCopyWith(
           CouponModel value, $Res Function(CouponModel) then) =
-      _$CouponModelCopyWithImpl<$Res>;
+      _$CouponModelCopyWithImpl<$Res, CouponModel>;
+  @useResult
   $Res call(
       {String code,
       @JsonKey(name: 'ad_types')
@@ -54,48 +55,51 @@ abstract class $CouponModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CouponModelCopyWithImpl<$Res> implements $CouponModelCopyWith<$Res> {
+class _$CouponModelCopyWithImpl<$Res, $Val extends CouponModel>
+    implements $CouponModelCopyWith<$Res> {
   _$CouponModelCopyWithImpl(this._value, this._then);
 
-  final CouponModel _value;
   // ignore: unused_field
-  final $Res Function(CouponModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? tradeTypes = freezed,
-    Object? assets = freezed,
-    Object? rebateMultiplier = freezed,
-    Object? expiresAt = freezed,
+    Object? code = null,
+    Object? tradeTypes = null,
+    Object? assets = null,
+    Object? rebateMultiplier = null,
+    Object? expiresAt = null,
     Object? enabled = freezed,
   }) {
     return _then(_value.copyWith(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      tradeTypes: tradeTypes == freezed
+      tradeTypes: null == tradeTypes
           ? _value.tradeTypes
           : tradeTypes // ignore: cast_nullable_to_non_nullable
               as List<TradeType>,
-      assets: assets == freezed
+      assets: null == assets
           ? _value.assets
           : assets // ignore: cast_nullable_to_non_nullable
               as List<Asset>,
-      rebateMultiplier: rebateMultiplier == freezed
+      rebateMultiplier: null == rebateMultiplier
           ? _value.rebateMultiplier
           : rebateMultiplier // ignore: cast_nullable_to_non_nullable
               as int,
-      expiresAt: expiresAt == freezed
+      expiresAt: null == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      enabled: enabled == freezed
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -106,6 +110,7 @@ abstract class _$$_CouponModelCopyWith<$Res>
           _$_CouponModel value, $Res Function(_$_CouponModel) then) =
       __$$_CouponModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String code,
       @JsonKey(name: 'ad_types')
@@ -119,46 +124,45 @@ abstract class _$$_CouponModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CouponModelCopyWithImpl<$Res> extends _$CouponModelCopyWithImpl<$Res>
+class __$$_CouponModelCopyWithImpl<$Res>
+    extends _$CouponModelCopyWithImpl<$Res, _$_CouponModel>
     implements _$$_CouponModelCopyWith<$Res> {
   __$$_CouponModelCopyWithImpl(
       _$_CouponModel _value, $Res Function(_$_CouponModel) _then)
-      : super(_value, (v) => _then(v as _$_CouponModel));
+      : super(_value, _then);
 
-  @override
-  _$_CouponModel get _value => super._value as _$_CouponModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? tradeTypes = freezed,
-    Object? assets = freezed,
-    Object? rebateMultiplier = freezed,
-    Object? expiresAt = freezed,
+    Object? code = null,
+    Object? tradeTypes = null,
+    Object? assets = null,
+    Object? rebateMultiplier = null,
+    Object? expiresAt = null,
     Object? enabled = freezed,
   }) {
     return _then(_$_CouponModel(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      tradeTypes: tradeTypes == freezed
+      tradeTypes: null == tradeTypes
           ? _value._tradeTypes
           : tradeTypes // ignore: cast_nullable_to_non_nullable
               as List<TradeType>,
-      assets: assets == freezed
+      assets: null == assets
           ? _value._assets
           : assets // ignore: cast_nullable_to_non_nullable
               as List<Asset>,
-      rebateMultiplier: rebateMultiplier == freezed
+      rebateMultiplier: null == rebateMultiplier
           ? _value.rebateMultiplier
           : rebateMultiplier // ignore: cast_nullable_to_non_nullable
               as int,
-      expiresAt: expiresAt == freezed
+      expiresAt: null == expiresAt
           ? _value.expiresAt
           : expiresAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      enabled: enabled == freezed
+      enabled: freezed == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -192,6 +196,7 @@ class _$_CouponModel implements _CouponModel {
   @override
   @JsonKey(name: 'ad_types')
   List<TradeType> get tradeTypes {
+    if (_tradeTypes is EqualUnmodifiableListView) return _tradeTypes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tradeTypes);
   }
@@ -199,6 +204,7 @@ class _$_CouponModel implements _CouponModel {
   final List<Asset> _assets;
   @override
   List<Asset> get assets {
+    if (_assets is EqualUnmodifiableListView) return _assets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_assets);
   }
@@ -222,29 +228,31 @@ class _$_CouponModel implements _CouponModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CouponModel &&
-            const DeepCollectionEquality().equals(other.code, code) &&
+            (identical(other.code, code) || other.code == code) &&
             const DeepCollectionEquality()
                 .equals(other._tradeTypes, _tradeTypes) &&
             const DeepCollectionEquality().equals(other._assets, _assets) &&
-            const DeepCollectionEquality()
-                .equals(other.rebateMultiplier, rebateMultiplier) &&
-            const DeepCollectionEquality().equals(other.expiresAt, expiresAt) &&
-            const DeepCollectionEquality().equals(other.enabled, enabled));
+            (identical(other.rebateMultiplier, rebateMultiplier) ||
+                other.rebateMultiplier == rebateMultiplier) &&
+            (identical(other.expiresAt, expiresAt) ||
+                other.expiresAt == expiresAt) &&
+            (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(code),
+      code,
       const DeepCollectionEquality().hash(_tradeTypes),
       const DeepCollectionEquality().hash(_assets),
-      const DeepCollectionEquality().hash(rebateMultiplier),
-      const DeepCollectionEquality().hash(expiresAt),
-      const DeepCollectionEquality().hash(enabled));
+      rebateMultiplier,
+      expiresAt,
+      enabled);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CouponModelCopyWith<_$_CouponModel> get copyWith =>
       __$$_CouponModelCopyWithImpl<_$_CouponModel>(this, _$identity);
 

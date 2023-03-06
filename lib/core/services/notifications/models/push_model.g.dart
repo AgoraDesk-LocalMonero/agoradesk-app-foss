@@ -36,12 +36,12 @@ Map<String, dynamic> _$$_PushModelToJson(_$_PushModel instance) {
 
   writeNotNull('objectId', instance.objectId);
   writeNotNull('msg', instance.msg);
-  val['type'] = _$NotificationMessageTypeEnumMap[instance.type];
+  val['type'] = _$NotificationMessageTypeEnumMap[instance.type]!;
   writeNotNull('subject.username', instance.username);
-  writeNotNull('subject.tradeCount',
-      const IntJsonConverter().toJson(instance.tradeCount));
-  writeNotNull('subject.feedbackScore',
-      const IntJsonConverter().toJson(instance.feedbackScore));
+  val['subject.tradeCount'] =
+      const IntJsonConverter().toJson(instance.tradeCount);
+  val['subject.feedbackScore'] =
+      const IntJsonConverter().toJson(instance.feedbackScore);
   return val;
 }
 

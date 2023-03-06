@@ -6,8 +6,8 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
+import 'package:dio_logging_interceptor/dio_logging_interceptor.dart';
 import 'package:flutter/foundation.dart';
-import 'package:get_it/get_it.dart';
 
 import 'api_helper.dart';
 import 'mock_interceptor.dart';
@@ -16,7 +16,7 @@ import 'mock_interceptor.dart';
 /// Default options for [ApiClient]
 ///
 
-const kTimeout = kDebugMode ? 10000 : 60000;
+const kTimeout = kDebugMode ? 30000 : 60000;
 
 BaseOptions _defaultOptions = BaseOptions(
   baseUrl: 'http://localhost/api',
@@ -53,10 +53,6 @@ class ApiClient with UrlMixin {
         _useMocks = useMocks {
     (_dio.transformer as DefaultTransformer).jsonDecodeCallback = _parseJson;
 
-    // if (_debug) {
-    //   _dio.interceptors.add(LogInterceptor(responseBody: true));
-    // }
-
     if (_useMocks && _debug) {
       _dio.interceptors.add(MockInterceptor());
     }
@@ -69,10 +65,12 @@ class ApiClient with UrlMixin {
           }
           List<String> cookiesLst = [];
           if (GetIt.I<AppParameters>().cookies != null) {
-            for (final val in GetIt.I<AppParameters>().cookies!) {
-              // if (val.name.contains('540')) {
-              cookiesLst.add('${val.name}=${val.value}');
-              // }
+            for (final cookie in GetIt.I<AppParameters>().cookies!) {
+              try {
+                cookiesLst.add('${cookie.name}=${cookie.value}');
+              } catch (e) {
+                debugPrint('[++++parsing cookies error] - $e');
+              }
             }
           }
           if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {
@@ -80,10 +78,12 @@ class ApiClient with UrlMixin {
           } else {
             options.headers["cookie"] = cookiesLst.join(';');
           }
-          debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn)
+            debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
           if (userAgent != null) {
             options.headers['User-Agent'] = userAgent;
           }
+
           return handler.next(options);
         },
         onResponse: (Response response, handler) async {
@@ -128,7 +128,8 @@ class ApiClient with UrlMixin {
             // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
-            debugPrint('++++[api_client ERROR message] statusCode == null, $message');
+            if (GetIt.I<AppParameters>().debugPrintIsOn)
+              debugPrint('++++[api_client ERROR message] statusCode == null, $message');
             // if (kDebugMode) {
             //   eventBus.fire(FlashEvent.error(message));
             // }
@@ -139,89 +140,16 @@ class ApiClient with UrlMixin {
         },
       ),
     );
-  }
 
-  // Future<bool> _checkCaptchaInHeadlessWebView(List<dynamic> cookiesLst) async {
-  //   HeadlessInAppWebView? headlessWebView;
-  //   late final InAppWebViewController? _webViewController;
-  //   CookieManager cookieManager = CookieManager.instance();
-  //   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-  //     crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, mediaPlaybackRequiresUserGesture: false),
-  //     android: AndroidInAppWebViewOptions(
-  //       useHybridComposition: true,
-  //     ),
-  //     ios: IOSInAppWebViewOptions(
-  //       allowsInlineMediaPlayback: true,
-  //     ),
-  //   );
-  //
-  //   final uri = Uri.parse(GetIt.I<AppParameters>().urlBase);
-  //
-  //   final cookie1 = cookiesLst.isNotEmpty ? cookiesLst[0].split(';').first : '';
-  //   final cookie2 = cookiesLst.length > 1 ? cookiesLst[1].split(';').first : '';
-  //
-  //   headlessWebView = HeadlessInAppWebView(
-  //     initialUrlRequest: URLRequest(url: uri),
-  //     initialUserScripts: UnmodifiableListView<UserScript>([]),
-  //     initialOptions: _options,
-  //     onWebViewCreated: (controller) async {
-  //       _webViewController = controller;
-  //       try {
-  //         // get the CookieManager instance
-  //         CookieManager cookieManager = CookieManager.instance();
-  //         cookieManager.setCookie(
-  //           url: uri,
-  //           name: "token",
-  //           value: GetIt.I<AppParameters>().accessToken ?? '',
-  //           domain: "agoradesk.com",
-  //           isSecure: true,
-  //         );
-  //         final cookie1Name = cookie1.split('=').first;
-  //         if (cookie1Name.isNotEmpty) {
-  //           final cookie1Value = cookie1.substring(cookie1Name.length + 1);
-  //           cookieManager.setCookie(
-  //             url: uri,
-  //             name: cookie1Name,
-  //             value: cookie1Value,
-  //             domain: ".agoradesk.com",
-  //             isSecure: true,
-  //           );
-  //         }
-  //         final cookie2Name = cookie2.split('=').first;
-  //         if (cookie2Name.isNotEmpty) {
-  //           final cookie2Value = cookie2.substring(cookie2Name.length + 1);
-  //           cookieManager.setCookie(
-  //             url: uri,
-  //             name: cookie2Name,
-  //             value: cookie2Value,
-  //             domain: ".agoradesk.com",
-  //             isSecure: true,
-  //           );
-  //         }
-  //         await _webViewController!.loadUrl(urlRequest: URLRequest(url: uri));
-  //       } catch (e) {
-  //         debugPrint('++++ [Webview cooikes error] $e');
-  //       }
-  //     },
-  //     onLoadStop: (controller, _) async {
-  //       await _getCookies(cookieManager);
-  //     },
-  //   );
-  //
-  //   headlessWebView.run();
-  //   await Future.delayed(const Duration(seconds: 2));
-  //   headlessWebView.dispose();
-  //   if ((GetIt.I<AppParameters>().cookies ?? []).join(' ').contains('visid_incap_2518540')) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  //
-  // Future _getCookies(CookieManager cookieManager) async {
-  //   List<Cookie> cookies = await cookieManager.getCookies(url: Uri.parse(GetIt.I<AppParameters>().urlBase));
-  //   GetIt.I<AppParameters>().cookies = cookies;
-  // }
+    if (_debug) {
+      _dio.interceptors.add(
+        DioLoggingInterceptor(
+          level: Level.body,
+          compact: false,
+        ),
+      );
+    }
+  }
 
   void setBaseUrl(String url) {
     _dio.options.baseUrl = url;

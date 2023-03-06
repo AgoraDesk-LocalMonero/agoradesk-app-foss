@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.61+84
+version: 1.0.66+89
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -15,21 +15,21 @@ dependencies:
   auto_route: ^5.0.1
   vm: ^1.0.4
   auto_size_text: ^3.0.0
-  connectivity_plus: ^3.0.2
+  connectivity_plus: ^3.0.3
   flutter_verification_code: ^1.1.2+1
   device_info_plus: ^8.0.0
   package_info_plus: ^3.0.2
   dio: ^4.0.6
-  pretty_dio_logger: ^1.1.1
+  dio_logging_interceptor: ^1.0.1
   event_bus: ^2.0.0
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2
   url_launcher: ^6.0.17
   intl: ^0.17.0
-  rxdart: ^0.27.3
+  rxdart: ^0.27.7
   timeago: ^3.2.2
-  provider: ^6.0.3
-  sentry_flutter: ^6.9.1
+  provider: ^6.0.5
+  sentry_flutter: ^6.20.1
   collection: ^1.15.0
   rating_dialog: ^2.0.3
   visibility_detector: ^0.3.3
@@ -47,11 +47,11 @@ dependencies:
   extended_image: ^7.0.0
   path_provider: ^2.0.8
   flutter_pin_code_widget: 0.0.5+1
-  flutter_secure_storage: ^7.0.1
+  flutter_secure_storage: ^8.0.0
   dots_indicator: ^2.0.0
   currency_picker: ^2.0.7
   country_picker: ^2.0.11
-  dropdown_search: ^5.0.3
+  dropdown_search: ^5.0.6
   markdown_widget: ^1.2.9
   expandable: ^5.0.1
   flutter_svg: ^1.1.0
@@ -62,8 +62,8 @@ dependencies:
   image_picker: ^0.8.5+3
   percent_indicator: ^4.2.1
   insta_image_viewer: ^1.0.2
-  firebase_core: ^2.1.1
-  firebase_messaging: ^14.0.3
+  firebase_core: ^2.5.0
+  firebase_messaging: ^14.2.2
   get_it: ^7.2.0
   injectable: ^2.1.0
   flutter_local_notifications: ^13.0.0
@@ -81,6 +81,7 @@ dependencies:
   store_checker: ^1.1.0
   just_the_tooltip: ^0.0.12
   flutter_app_badger: ^1.5.0
+  expansion_tile_card: ^2.0.0
 
 dependency_overrides:
   #  flutter_foreground_task:
@@ -116,6 +117,7 @@ flutter:
     - assets/json/
     - assets/branding/
     - assets/images/
+    - assets/misc/
 
   fonts:
     - family: agoraFont

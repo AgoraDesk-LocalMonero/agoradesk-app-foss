@@ -1,9 +1,7 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
-import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_text_p80.dart';
@@ -18,8 +16,9 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
-class TransactionScreen extends StatelessWidget with StringMixin, DateMixin, ClipboardMixin, UrlMixin {
+class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, UrlMixin {
   const TransactionScreen({
     Key? key,
     required this.transaction,
@@ -58,7 +57,7 @@ class TransactionScreen extends StatelessWidget with StringMixin, DateMixin, Cli
                             const SizedBox(height: 16),
                             LineFontIconTextNeutral60(
                               icon: AgoraFont.calendar,
-                              text: I18n.of(context)!.affiliate250Sbpayouts250Sbtable250Sbdate + ':',
+                              text: '${I18n.of(context)!.affiliate250Sbpayouts250Sbtable250Sbdate}:',
                             ),
                             const SizedBox(height: 8),
                             ContainerSurface3Radius12Border1(
@@ -78,7 +77,7 @@ class TransactionScreen extends StatelessWidget with StringMixin, DateMixin, Cli
                             const SizedBox(height: 16),
                             LineFontIconTextNeutral60(
                               icon: AgoraFont.bill,
-                              text: I18n.of(context)!.post8722Sbad250Sbamount8722Sbtitle + ':',
+                              text: '${I18n.of(context)!.post8722Sbad250Sbamount8722Sbtitle}:',
                             ),
                             const SizedBox(height: 8),
                             ContainerSurface3Radius12Border1(
@@ -88,7 +87,7 @@ class TransactionScreen extends StatelessWidget with StringMixin, DateMixin, Cli
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      transaction.amount + ' ' + transaction.asset!.key(),
+                                      '${transaction.amount} ${transaction.asset!.key()}',
                                       style: context.txtBodyXSmallN80,
                                     ),
                                   ],

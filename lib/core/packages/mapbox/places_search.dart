@@ -3,7 +3,6 @@ import 'package:agoradesk/core/packages/mapbox/mapbox_location.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/mapbox/types.dart';
 import 'package:flutter/foundation.dart';
-import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 
 class PlacesSearch {
@@ -70,7 +69,7 @@ class PlacesSearch {
     try {
       return Predictions.fromRawJson(response.body).features;
     } catch (e) {
-      debugPrint('[++++ places search error] - $e');
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++ places search error] - $e');
       return [];
     }
   }

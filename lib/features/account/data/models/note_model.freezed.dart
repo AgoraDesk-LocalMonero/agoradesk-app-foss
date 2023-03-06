@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'note_model.dart';
 
@@ -35,7 +35,8 @@ mixin _$NoteModel {
 /// @nodoc
 abstract class $NoteModelCopyWith<$Res> {
   factory $NoteModelCopyWith(NoteModel value, $Res Function(NoteModel) then) =
-      _$NoteModelCopyWithImpl<$Res>;
+      _$NoteModelCopyWithImpl<$Res, NoteModel>;
+  @useResult
   $Res call(
       {String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
@@ -45,33 +46,36 @@ abstract class $NoteModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NoteModelCopyWithImpl<$Res> implements $NoteModelCopyWith<$Res> {
+class _$NoteModelCopyWithImpl<$Res, $Val extends NoteModel>
+    implements $NoteModelCopyWith<$Res> {
   _$NoteModelCopyWithImpl(this._value, this._then);
 
-  final NoteModel _value;
   // ignore: unused_field
-  final $Res Function(NoteModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
-    Object? createdAt = freezed,
-    Object? lastModifiedAt = freezed,
+    Object? content = null,
+    Object? createdAt = null,
+    Object? lastModifiedAt = null,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastModifiedAt: lastModifiedAt == freezed
+      lastModifiedAt: null == lastModifiedAt
           ? _value.lastModifiedAt
           : lastModifiedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-    ));
+    ) as $Val);
   }
 }
 
@@ -81,6 +85,7 @@ abstract class _$$_NoteModelCopyWith<$Res> implements $NoteModelCopyWith<$Res> {
           _$_NoteModel value, $Res Function(_$_NoteModel) then) =
       __$$_NoteModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
@@ -90,31 +95,30 @@ abstract class _$$_NoteModelCopyWith<$Res> implements $NoteModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_NoteModelCopyWithImpl<$Res> extends _$NoteModelCopyWithImpl<$Res>
+class __$$_NoteModelCopyWithImpl<$Res>
+    extends _$NoteModelCopyWithImpl<$Res, _$_NoteModel>
     implements _$$_NoteModelCopyWith<$Res> {
   __$$_NoteModelCopyWithImpl(
       _$_NoteModel _value, $Res Function(_$_NoteModel) _then)
-      : super(_value, (v) => _then(v as _$_NoteModel));
+      : super(_value, _then);
 
-  @override
-  _$_NoteModel get _value => super._value as _$_NoteModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
-    Object? createdAt = freezed,
-    Object? lastModifiedAt = freezed,
+    Object? content = null,
+    Object? createdAt = null,
+    Object? lastModifiedAt = null,
   }) {
     return _then(_$_NoteModel(
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastModifiedAt: lastModifiedAt == freezed
+      lastModifiedAt: null == lastModifiedAt
           ? _value.lastModifiedAt
           : lastModifiedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
@@ -156,22 +160,21 @@ class _$_NoteModel extends _NoteModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NoteModel &&
-            const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality()
-                .equals(other.lastModifiedAt, lastModifiedAt));
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.lastModifiedAt, lastModifiedAt) ||
+                other.lastModifiedAt == lastModifiedAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(content),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(lastModifiedAt));
+  int get hashCode =>
+      Object.hash(runtimeType, content, createdAt, lastModifiedAt);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_NoteModelCopyWith<_$_NoteModel> get copyWith =>
       __$$_NoteModelCopyWithImpl<_$_NoteModel>(this, _$identity);
 

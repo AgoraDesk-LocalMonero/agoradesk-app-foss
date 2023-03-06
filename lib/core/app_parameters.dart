@@ -1,6 +1,8 @@
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
+export 'package:get_it/get_it.dart';
+
 class AppParameters {
   AppParameters({
     required this.flavor,
@@ -56,6 +58,7 @@ class AppParameters {
   // String captchaCookie1 = '';
   // String captchaCookie2 = '';
   List<Cookie>? cookies;
+  List<Cookie>? appCaptchaCookies;
 
   /// plausible analytics
   final String urlPlausibleServer = 'https://a.agoradesk.com';
@@ -233,4 +236,5 @@ class AppParameters {
   String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
+  bool debugPrintIsOn = false;
 }

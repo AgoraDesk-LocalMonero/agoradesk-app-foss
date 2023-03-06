@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'push_model.dart';
 
@@ -48,7 +48,8 @@ mixin _$PushModel {
 /// @nodoc
 abstract class $PushModelCopyWith<$Res> {
   factory $PushModelCopyWith(PushModel value, $Res Function(PushModel) then) =
-      _$PushModelCopyWithImpl<$Res>;
+      _$PushModelCopyWithImpl<$Res, PushModel>;
+  @useResult
   $Res call(
       {String? id,
       @BoolJsonConverter()
@@ -71,63 +72,66 @@ abstract class $PushModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PushModelCopyWithImpl<$Res> implements $PushModelCopyWith<$Res> {
+class _$PushModelCopyWithImpl<$Res, $Val extends PushModel>
+    implements $PushModelCopyWith<$Res> {
   _$PushModelCopyWithImpl(this._value, this._then);
 
-  final PushModel _value;
   // ignore: unused_field
-  final $Res Function(PushModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? read = freezed,
-    Object? createdAt = freezed,
+    Object? read = null,
+    Object? createdAt = null,
     Object? objectId = freezed,
     Object? msg = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? username = freezed,
-    Object? tradeCount = freezed,
-    Object? feedbackScore = freezed,
+    Object? tradeCount = null,
+    Object? feedbackScore = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      objectId: objectId == freezed
+      objectId: freezed == objectId
           ? _value.objectId
           : objectId // ignore: cast_nullable_to_non_nullable
               as String?,
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NotificationMessageType,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeCount: tradeCount == freezed
+      tradeCount: null == tradeCount
           ? _value.tradeCount
           : tradeCount // ignore: cast_nullable_to_non_nullable
               as int,
-      feedbackScore: feedbackScore == freezed
+      feedbackScore: null == feedbackScore
           ? _value.feedbackScore
           : feedbackScore // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -137,6 +141,7 @@ abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
           _$_PushModel value, $Res Function(_$_PushModel) then) =
       __$$_PushModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @BoolJsonConverter()
@@ -159,61 +164,60 @@ abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PushModelCopyWithImpl<$Res> extends _$PushModelCopyWithImpl<$Res>
+class __$$_PushModelCopyWithImpl<$Res>
+    extends _$PushModelCopyWithImpl<$Res, _$_PushModel>
     implements _$$_PushModelCopyWith<$Res> {
   __$$_PushModelCopyWithImpl(
       _$_PushModel _value, $Res Function(_$_PushModel) _then)
-      : super(_value, (v) => _then(v as _$_PushModel));
+      : super(_value, _then);
 
-  @override
-  _$_PushModel get _value => super._value as _$_PushModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? read = freezed,
-    Object? createdAt = freezed,
+    Object? read = null,
+    Object? createdAt = null,
     Object? objectId = freezed,
     Object? msg = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? username = freezed,
-    Object? tradeCount = freezed,
-    Object? feedbackScore = freezed,
+    Object? tradeCount = null,
+    Object? feedbackScore = null,
   }) {
     return _then(_$_PushModel(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      objectId: objectId == freezed
+      objectId: freezed == objectId
           ? _value.objectId
           : objectId // ignore: cast_nullable_to_non_nullable
               as String?,
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as NotificationMessageType,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      tradeCount: tradeCount == freezed
+      tradeCount: null == tradeCount
           ? _value.tradeCount
           : tradeCount // ignore: cast_nullable_to_non_nullable
               as int,
-      feedbackScore: feedbackScore == freezed
+      feedbackScore: null == feedbackScore
           ? _value.feedbackScore
           : feedbackScore // ignore: cast_nullable_to_non_nullable
               as int,
@@ -287,35 +291,30 @@ class _$_PushModel extends _PushModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PushModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality().equals(other.objectId, objectId) &&
-            const DeepCollectionEquality().equals(other.msg, msg) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality()
-                .equals(other.tradeCount, tradeCount) &&
-            const DeepCollectionEquality()
-                .equals(other.feedbackScore, feedbackScore));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.objectId, objectId) ||
+                other.objectId == objectId) &&
+            (identical(other.msg, msg) || other.msg == msg) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.tradeCount, tradeCount) ||
+                other.tradeCount == tradeCount) &&
+            (identical(other.feedbackScore, feedbackScore) ||
+                other.feedbackScore == feedbackScore));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(createdAt),
-      const DeepCollectionEquality().hash(objectId),
-      const DeepCollectionEquality().hash(msg),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(tradeCount),
-      const DeepCollectionEquality().hash(feedbackScore));
+  int get hashCode => Object.hash(runtimeType, id, read, createdAt, objectId,
+      msg, type, username, tradeCount, feedbackScore);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PushModelCopyWith<_$_PushModel> get copyWith =>
       __$$_PushModelCopyWithImpl<_$_PushModel>(this, _$identity);
 

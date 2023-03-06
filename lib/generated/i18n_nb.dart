@@ -8158,9 +8158,6 @@ class I18nNb extends I18n {
   String get api_error_98 => 'Prøver å lage en handel for en annonse som ikke har en plakat';
 
   @override
-  String get api_error_99 => 'Prøver å be om høyere beløp enn tillatt av first_time_limit_asset når du oppretter en første handel';
-
-  @override
   String get api_error_100 => 'Kan ikke be om mindre enn 0,0000000001 XMR for opprettelse av handel';
 
   @override
@@ -8216,15 +8213,6 @@ class I18nNb extends I18n {
 
   @override
   String get api_error_121 => 'Forsøk på å deponere en handel som ikke eksisterer';
-
-  @override
-  String get api_error_122 => 'Ikke nok midler til å finansiere en flytende LOCAL_SELL-handel';
-
-  @override
-  String get api_error_123 => 'Ikke nok midler til å finansiere en ikke-flytende LOCAL_SELL-handel';
-
-  @override
-  String get api_error_124 => 'Feil ved finansiering av en LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Bruker som ber om kansellering av handel eksisterer ikke';
@@ -9455,6 +9443,18 @@ class I18nNb extends I18n {
 
   @override
   String get api_error_273 => 'Forsøk på å slette en adresse som ikke finnes i en brukers adressebok';
+
+  @override
+  String get api_error_99 => 'Prøver å be om høyere beløp enn tillatt av first_time_limit_asset når du oppretter en første handel';
+
+  @override
+  String get api_error_122 => 'Ikke nok midler til å finansiere en flytende LOCAL_SELL-handel';
+
+  @override
+  String get api_error_123 => 'Ikke nok midler til å finansiere en ikke-flytende LOCAL_SELL-handel';
+
+  @override
+  String get api_error_124 => 'Feil ved finansiering av en LOCAL_SELL';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).
@@ -17615,9 +17615,6 @@ class I18nNbNo extends I18nNb {
   String get api_error_98 => 'Prøver å lage en handel for en annonse som ikke har en plakat';
 
   @override
-  String get api_error_99 => 'Prøver å be om høyere beløp enn tillatt av first_time_limit_asset når du oppretter en første handel';
-
-  @override
   String get api_error_100 => 'Kan ikke be om mindre enn 0,0000000001 XMR for opprettelse av handel';
 
   @override
@@ -17673,15 +17670,6 @@ class I18nNbNo extends I18nNb {
 
   @override
   String get api_error_121 => 'Forsøk på å deponere en handel som ikke eksisterer';
-
-  @override
-  String get api_error_122 => 'Ikke nok midler til å finansiere en flytende LOCAL_SELL-handel';
-
-  @override
-  String get api_error_123 => 'Ikke nok midler til å finansiere en ikke-flytende LOCAL_SELL-handel';
-
-  @override
-  String get api_error_124 => 'Feil ved finansiering av en LOCAL_SELL';
 
   @override
   String get api_error_125 => 'Bruker som ber om kansellering av handel eksisterer ikke';
@@ -18912,4 +18900,16 @@ class I18nNbNo extends I18nNb {
 
   @override
   String get api_error_273 => 'Forsøk på å slette en adresse som ikke finnes i en brukers adressebok';
+
+  @override
+  String get api_error_99 => 'Prøver å be om høyere beløp enn tillatt av first_time_limit_asset når du oppretter en første handel';
+
+  @override
+  String get api_error_122 => 'Ikke nok midler til å finansiere en flytende LOCAL_SELL-handel';
+
+  @override
+  String get api_error_123 => 'Ikke nok midler til å finansiere en ikke-flytende LOCAL_SELL-handel';
+
+  @override
+  String get api_error_124 => 'Feil ved finansiering av en LOCAL_SELL';
 }

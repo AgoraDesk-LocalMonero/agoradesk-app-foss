@@ -16,7 +16,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
@@ -201,7 +200,7 @@ class _MainScreenState extends State<MainScreen> {
             // Navigator.of(context).pushNamed('/resume-route');
           }
         } else if (message is DateTime) {
-          debugPrint('++++timestamp: ${message.toString()}');
+          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++timestamp: ${message.toString()}');
         }
       });
       return true;

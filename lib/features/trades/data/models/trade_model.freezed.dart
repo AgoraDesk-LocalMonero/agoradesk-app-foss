@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'trade_model.dart';
 
@@ -134,7 +134,8 @@ mixin _$TradeModel {
 abstract class $TradeModelCopyWith<$Res> {
   factory $TradeModelCopyWith(
           TradeModel value, $Res Function(TradeModel) then) =
-      _$TradeModelCopyWithImpl<$Res>;
+      _$TradeModelCopyWithImpl<$Res, TradeModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'contact_id', includeIfNull: false)
           String tradeId,
@@ -203,27 +204,30 @@ abstract class $TradeModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TradeModelCopyWithImpl<$Res> implements $TradeModelCopyWith<$Res> {
+class _$TradeModelCopyWithImpl<$Res, $Val extends TradeModel>
+    implements $TradeModelCopyWith<$Res> {
   _$TradeModelCopyWithImpl(this._value, this._then);
 
-  final TradeModel _value;
   // ignore: unused_field
-  final $Res Function(TradeModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tradeId = freezed,
-    Object? buyer = freezed,
-    Object? seller = freezed,
-    Object? amount = freezed,
+    Object? tradeId = null,
+    Object? buyer = null,
+    Object? seller = null,
+    Object? amount = null,
     Object? amountXmr = freezed,
     Object? feeXmr = freezed,
     Object? amountBtc = freezed,
     Object? feeBtc = freezed,
-    Object? advertisement = freezed,
-    Object? currency = freezed,
-    Object? country = freezed,
-    Object? accountInfo = freezed,
+    Object? advertisement = null,
+    Object? currency = null,
+    Object? country = null,
+    Object? accountInfo = null,
     Object? isBuying = freezed,
     Object? isSelling = freezed,
     Object? createdAt = freezed,
@@ -247,160 +251,163 @@ class _$TradeModelCopyWithImpl<$Res> implements $TradeModelCopyWith<$Res> {
     Object? transferToBuyerTransactionId = freezed,
   }) {
     return _then(_value.copyWith(
-      tradeId: tradeId == freezed
+      tradeId: null == tradeId
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
               as String,
-      buyer: buyer == freezed
+      buyer: null == buyer
           ? _value.buyer
           : buyer // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel,
-      seller: seller == freezed
+      seller: null == seller
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as String,
-      amountXmr: amountXmr == freezed
+      amountXmr: freezed == amountXmr
           ? _value.amountXmr
           : amountXmr // ignore: cast_nullable_to_non_nullable
               as String?,
-      feeXmr: feeXmr == freezed
+      feeXmr: freezed == feeXmr
           ? _value.feeXmr
           : feeXmr // ignore: cast_nullable_to_non_nullable
               as String?,
-      amountBtc: amountBtc == freezed
+      amountBtc: freezed == amountBtc
           ? _value.amountBtc
           : amountBtc // ignore: cast_nullable_to_non_nullable
               as String?,
-      feeBtc: feeBtc == freezed
+      feeBtc: freezed == feeBtc
           ? _value.feeBtc
           : feeBtc // ignore: cast_nullable_to_non_nullable
               as String?,
-      advertisement: advertisement == freezed
+      advertisement: null == advertisement
           ? _value.advertisement
           : advertisement // ignore: cast_nullable_to_non_nullable
               as AttachedAdModel,
-      currency: currency == freezed
+      currency: null == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
               as String,
-      country: country == freezed
+      country: null == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
               as String,
-      accountInfo: accountInfo == freezed
+      accountInfo: null == accountInfo
           ? _value.accountInfo
           : accountInfo // ignore: cast_nullable_to_non_nullable
               as String,
-      isBuying: isBuying == freezed
+      isBuying: freezed == isBuying
           ? _value.isBuying
           : isBuying // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isSelling: isSelling == freezed
+      isSelling: freezed == isSelling
           ? _value.isSelling
           : isSelling // ignore: cast_nullable_to_non_nullable
               as bool?,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      escrowedAt: escrowedAt == freezed
+      escrowedAt: freezed == escrowedAt
           ? _value.escrowedAt
           : escrowedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      fundedAt: fundedAt == freezed
+      fundedAt: freezed == fundedAt
           ? _value.fundedAt
           : fundedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      canceledAt: canceledAt == freezed
+      canceledAt: freezed == canceledAt
           ? _value.canceledAt
           : canceledAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      closedAt: closedAt == freezed
+      closedAt: freezed == closedAt
           ? _value.closedAt
           : closedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      releasedAt: releasedAt == freezed
+      releasedAt: freezed == releasedAt
           ? _value.releasedAt
           : releasedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      paymentCompletedAt: paymentCompletedAt == freezed
+      paymentCompletedAt: freezed == paymentCompletedAt
           ? _value.paymentCompletedAt
           : paymentCompletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      disputedAt: disputedAt == freezed
+      disputedAt: freezed == disputedAt
           ? _value.disputedAt
           : disputedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      verificationCode: verificationCode == freezed
+      verificationCode: freezed == verificationCode
           ? _value.verificationCode
           : verificationCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      priceEquation: priceEquation == freezed
+      priceEquation: freezed == priceEquation
           ? _value.priceEquation
           : priceEquation // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentWindowMinutes: paymentWindowMinutes == freezed
+      paymentWindowMinutes: freezed == paymentWindowMinutes
           ? _value.paymentWindowMinutes
           : paymentWindowMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      transferToSellerTransactionId: transferToSellerTransactionId == freezed
+      transferToSellerTransactionId: freezed == transferToSellerTransactionId
           ? _value.transferToSellerTransactionId
           : transferToSellerTransactionId // ignore: cast_nullable_to_non_nullable
               as String?,
-      transferToSellerConfirmations: transferToSellerConfirmations == freezed
+      transferToSellerConfirmations: freezed == transferToSellerConfirmations
           ? _value.transferToSellerConfirmations
           : transferToSellerConfirmations // ignore: cast_nullable_to_non_nullable
               as int?,
-      sellerNonCustodialWalletMnemonic: sellerNonCustodialWalletMnemonic ==
-              freezed
+      sellerNonCustodialWalletMnemonic: freezed ==
+              sellerNonCustodialWalletMnemonic
           ? _value.sellerNonCustodialWalletMnemonic
           : sellerNonCustodialWalletMnemonic // ignore: cast_nullable_to_non_nullable
               as String?,
-      btcFeesEnum: btcFeesEnum == freezed
+      btcFeesEnum: freezed == btcFeesEnum
           ? _value.btcFeesEnum
           : btcFeesEnum // ignore: cast_nullable_to_non_nullable
               as BtcFeesEnum?,
-      buyerSettlementAddress: buyerSettlementAddress == freezed
+      buyerSettlementAddress: freezed == buyerSettlementAddress
           ? _value.buyerSettlementAddress
           : buyerSettlementAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-      transferToBuyerKey: transferToBuyerKey == freezed
+      transferToBuyerKey: freezed == transferToBuyerKey
           ? _value.transferToBuyerKey
           : transferToBuyerKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      transferToBuyerTransactionId: transferToBuyerTransactionId == freezed
+      transferToBuyerTransactionId: freezed == transferToBuyerTransactionId
           ? _value.transferToBuyerTransactionId
           : transferToBuyerTransactionId // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AccountInfoModelCopyWith<$Res> get buyer {
     return $AccountInfoModelCopyWith<$Res>(_value.buyer, (value) {
-      return _then(_value.copyWith(buyer: value));
+      return _then(_value.copyWith(buyer: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AccountInfoModelCopyWith<$Res> get seller {
     return $AccountInfoModelCopyWith<$Res>(_value.seller, (value) {
-      return _then(_value.copyWith(seller: value));
+      return _then(_value.copyWith(seller: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachedAdModelCopyWith<$Res> get advertisement {
     return $AttachedAdModelCopyWith<$Res>(_value.advertisement, (value) {
-      return _then(_value.copyWith(advertisement: value));
+      return _then(_value.copyWith(advertisement: value) as $Val);
     });
   }
 }
@@ -412,6 +419,7 @@ abstract class _$$_TradeModelCopyWith<$Res>
           _$_TradeModel value, $Res Function(_$_TradeModel) then) =
       __$$_TradeModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'contact_id', includeIfNull: false)
           String tradeId,
@@ -483,29 +491,28 @@ abstract class _$$_TradeModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TradeModelCopyWithImpl<$Res> extends _$TradeModelCopyWithImpl<$Res>
+class __$$_TradeModelCopyWithImpl<$Res>
+    extends _$TradeModelCopyWithImpl<$Res, _$_TradeModel>
     implements _$$_TradeModelCopyWith<$Res> {
   __$$_TradeModelCopyWithImpl(
       _$_TradeModel _value, $Res Function(_$_TradeModel) _then)
-      : super(_value, (v) => _then(v as _$_TradeModel));
+      : super(_value, _then);
 
-  @override
-  _$_TradeModel get _value => super._value as _$_TradeModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tradeId = freezed,
-    Object? buyer = freezed,
-    Object? seller = freezed,
-    Object? amount = freezed,
+    Object? tradeId = null,
+    Object? buyer = null,
+    Object? seller = null,
+    Object? amount = null,
     Object? amountXmr = freezed,
     Object? feeXmr = freezed,
     Object? amountBtc = freezed,
     Object? feeBtc = freezed,
-    Object? advertisement = freezed,
-    Object? currency = freezed,
-    Object? country = freezed,
-    Object? accountInfo = freezed,
+    Object? advertisement = null,
+    Object? currency = null,
+    Object? country = null,
+    Object? accountInfo = null,
     Object? isBuying = freezed,
     Object? isSelling = freezed,
     Object? createdAt = freezed,
@@ -529,136 +536,136 @@ class __$$_TradeModelCopyWithImpl<$Res> extends _$TradeModelCopyWithImpl<$Res>
     Object? transferToBuyerTransactionId = freezed,
   }) {
     return _then(_$_TradeModel(
-      tradeId: tradeId == freezed
+      tradeId: null == tradeId
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
               as String,
-      buyer: buyer == freezed
+      buyer: null == buyer
           ? _value.buyer
           : buyer // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel,
-      seller: seller == freezed
+      seller: null == seller
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
               as AccountInfoModel,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as String,
-      amountXmr: amountXmr == freezed
+      amountXmr: freezed == amountXmr
           ? _value.amountXmr
           : amountXmr // ignore: cast_nullable_to_non_nullable
               as String?,
-      feeXmr: feeXmr == freezed
+      feeXmr: freezed == feeXmr
           ? _value.feeXmr
           : feeXmr // ignore: cast_nullable_to_non_nullable
               as String?,
-      amountBtc: amountBtc == freezed
+      amountBtc: freezed == amountBtc
           ? _value.amountBtc
           : amountBtc // ignore: cast_nullable_to_non_nullable
               as String?,
-      feeBtc: feeBtc == freezed
+      feeBtc: freezed == feeBtc
           ? _value.feeBtc
           : feeBtc // ignore: cast_nullable_to_non_nullable
               as String?,
-      advertisement: advertisement == freezed
+      advertisement: null == advertisement
           ? _value.advertisement
           : advertisement // ignore: cast_nullable_to_non_nullable
               as AttachedAdModel,
-      currency: currency == freezed
+      currency: null == currency
           ? _value.currency
           : currency // ignore: cast_nullable_to_non_nullable
               as String,
-      country: country == freezed
+      country: null == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
               as String,
-      accountInfo: accountInfo == freezed
+      accountInfo: null == accountInfo
           ? _value.accountInfo
           : accountInfo // ignore: cast_nullable_to_non_nullable
               as String,
-      isBuying: isBuying == freezed
+      isBuying: freezed == isBuying
           ? _value.isBuying
           : isBuying // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isSelling: isSelling == freezed
+      isSelling: freezed == isSelling
           ? _value.isSelling
           : isSelling // ignore: cast_nullable_to_non_nullable
               as bool?,
-      createdAt: createdAt == freezed
+      createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      escrowedAt: escrowedAt == freezed
+      escrowedAt: freezed == escrowedAt
           ? _value.escrowedAt
           : escrowedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      fundedAt: fundedAt == freezed
+      fundedAt: freezed == fundedAt
           ? _value.fundedAt
           : fundedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      canceledAt: canceledAt == freezed
+      canceledAt: freezed == canceledAt
           ? _value.canceledAt
           : canceledAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      closedAt: closedAt == freezed
+      closedAt: freezed == closedAt
           ? _value.closedAt
           : closedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      releasedAt: releasedAt == freezed
+      releasedAt: freezed == releasedAt
           ? _value.releasedAt
           : releasedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      paymentCompletedAt: paymentCompletedAt == freezed
+      paymentCompletedAt: freezed == paymentCompletedAt
           ? _value.paymentCompletedAt
           : paymentCompletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      disputedAt: disputedAt == freezed
+      disputedAt: freezed == disputedAt
           ? _value.disputedAt
           : disputedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
-      verificationCode: verificationCode == freezed
+      verificationCode: freezed == verificationCode
           ? _value.verificationCode
           : verificationCode // ignore: cast_nullable_to_non_nullable
               as String?,
-      priceEquation: priceEquation == freezed
+      priceEquation: freezed == priceEquation
           ? _value.priceEquation
           : priceEquation // ignore: cast_nullable_to_non_nullable
               as String?,
-      paymentWindowMinutes: paymentWindowMinutes == freezed
+      paymentWindowMinutes: freezed == paymentWindowMinutes
           ? _value.paymentWindowMinutes
           : paymentWindowMinutes // ignore: cast_nullable_to_non_nullable
               as int?,
-      transferToSellerTransactionId: transferToSellerTransactionId == freezed
+      transferToSellerTransactionId: freezed == transferToSellerTransactionId
           ? _value.transferToSellerTransactionId
           : transferToSellerTransactionId // ignore: cast_nullable_to_non_nullable
               as String?,
-      transferToSellerConfirmations: transferToSellerConfirmations == freezed
+      transferToSellerConfirmations: freezed == transferToSellerConfirmations
           ? _value.transferToSellerConfirmations
           : transferToSellerConfirmations // ignore: cast_nullable_to_non_nullable
               as int?,
-      sellerNonCustodialWalletMnemonic: sellerNonCustodialWalletMnemonic ==
-              freezed
+      sellerNonCustodialWalletMnemonic: freezed ==
+              sellerNonCustodialWalletMnemonic
           ? _value.sellerNonCustodialWalletMnemonic
           : sellerNonCustodialWalletMnemonic // ignore: cast_nullable_to_non_nullable
               as String?,
-      btcFeesEnum: btcFeesEnum == freezed
+      btcFeesEnum: freezed == btcFeesEnum
           ? _value.btcFeesEnum
           : btcFeesEnum // ignore: cast_nullable_to_non_nullable
               as BtcFeesEnum?,
-      buyerSettlementAddress: buyerSettlementAddress == freezed
+      buyerSettlementAddress: freezed == buyerSettlementAddress
           ? _value.buyerSettlementAddress
           : buyerSettlementAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-      transferToBuyerKey: transferToBuyerKey == freezed
+      transferToBuyerKey: freezed == transferToBuyerKey
           ? _value.transferToBuyerKey
           : transferToBuyerKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      transferToBuyerTransactionId: transferToBuyerTransactionId == freezed
+      transferToBuyerTransactionId: freezed == transferToBuyerTransactionId
           ? _value.transferToBuyerTransactionId
           : transferToBuyerTransactionId // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -880,103 +887,116 @@ class _$_TradeModel extends _TradeModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TradeModel &&
-            const DeepCollectionEquality().equals(other.tradeId, tradeId) &&
-            const DeepCollectionEquality().equals(other.buyer, buyer) &&
-            const DeepCollectionEquality().equals(other.seller, seller) &&
-            const DeepCollectionEquality().equals(other.amount, amount) &&
-            const DeepCollectionEquality().equals(other.amountXmr, amountXmr) &&
-            const DeepCollectionEquality().equals(other.feeXmr, feeXmr) &&
-            const DeepCollectionEquality().equals(other.amountBtc, amountBtc) &&
-            const DeepCollectionEquality().equals(other.feeBtc, feeBtc) &&
-            const DeepCollectionEquality()
-                .equals(other.advertisement, advertisement) &&
-            const DeepCollectionEquality().equals(other.currency, currency) &&
-            const DeepCollectionEquality().equals(other.country, country) &&
-            const DeepCollectionEquality()
-                .equals(other.accountInfo, accountInfo) &&
-            const DeepCollectionEquality().equals(other.isBuying, isBuying) &&
-            const DeepCollectionEquality().equals(other.isSelling, isSelling) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
-            const DeepCollectionEquality()
-                .equals(other.escrowedAt, escrowedAt) &&
-            const DeepCollectionEquality().equals(other.fundedAt, fundedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.canceledAt, canceledAt) &&
-            const DeepCollectionEquality().equals(other.closedAt, closedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.releasedAt, releasedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentCompletedAt, paymentCompletedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.disputedAt, disputedAt) &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality()
-                .equals(other.verificationCode, verificationCode) &&
-            const DeepCollectionEquality()
-                .equals(other.priceEquation, priceEquation) &&
-            const DeepCollectionEquality()
-                .equals(other.paymentWindowMinutes, paymentWindowMinutes) &&
-            const DeepCollectionEquality().equals(
-                other.transferToSellerTransactionId,
-                transferToSellerTransactionId) &&
-            const DeepCollectionEquality().equals(
-                other.transferToSellerConfirmations,
-                transferToSellerConfirmations) &&
-            const DeepCollectionEquality().equals(
-                other.sellerNonCustodialWalletMnemonic,
-                sellerNonCustodialWalletMnemonic) &&
-            const DeepCollectionEquality()
-                .equals(other.btcFeesEnum, btcFeesEnum) &&
-            const DeepCollectionEquality()
-                .equals(other.buyerSettlementAddress, buyerSettlementAddress) &&
-            const DeepCollectionEquality()
-                .equals(other.transferToBuyerKey, transferToBuyerKey) &&
-            const DeepCollectionEquality().equals(
-                other.transferToBuyerTransactionId,
-                transferToBuyerTransactionId));
+            (identical(other.tradeId, tradeId) || other.tradeId == tradeId) &&
+            (identical(other.buyer, buyer) || other.buyer == buyer) &&
+            (identical(other.seller, seller) || other.seller == seller) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.amountXmr, amountXmr) ||
+                other.amountXmr == amountXmr) &&
+            (identical(other.feeXmr, feeXmr) || other.feeXmr == feeXmr) &&
+            (identical(other.amountBtc, amountBtc) ||
+                other.amountBtc == amountBtc) &&
+            (identical(other.feeBtc, feeBtc) || other.feeBtc == feeBtc) &&
+            (identical(other.advertisement, advertisement) ||
+                other.advertisement == advertisement) &&
+            (identical(other.currency, currency) ||
+                other.currency == currency) &&
+            (identical(other.country, country) || other.country == country) &&
+            (identical(other.accountInfo, accountInfo) ||
+                other.accountInfo == accountInfo) &&
+            (identical(other.isBuying, isBuying) ||
+                other.isBuying == isBuying) &&
+            (identical(other.isSelling, isSelling) ||
+                other.isSelling == isSelling) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.escrowedAt, escrowedAt) ||
+                other.escrowedAt == escrowedAt) &&
+            (identical(other.fundedAt, fundedAt) ||
+                other.fundedAt == fundedAt) &&
+            (identical(other.canceledAt, canceledAt) ||
+                other.canceledAt == canceledAt) &&
+            (identical(other.closedAt, closedAt) ||
+                other.closedAt == closedAt) &&
+            (identical(other.releasedAt, releasedAt) ||
+                other.releasedAt == releasedAt) &&
+            (identical(other.paymentCompletedAt, paymentCompletedAt) ||
+                other.paymentCompletedAt == paymentCompletedAt) &&
+            (identical(other.disputedAt, disputedAt) ||
+                other.disputedAt == disputedAt) &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.verificationCode, verificationCode) ||
+                other.verificationCode == verificationCode) &&
+            (identical(other.priceEquation, priceEquation) ||
+                other.priceEquation == priceEquation) &&
+            (identical(other.paymentWindowMinutes, paymentWindowMinutes) ||
+                other.paymentWindowMinutes == paymentWindowMinutes) &&
+            (identical(other.transferToSellerTransactionId,
+                    transferToSellerTransactionId) ||
+                other.transferToSellerTransactionId ==
+                    transferToSellerTransactionId) &&
+            (identical(other.transferToSellerConfirmations,
+                    transferToSellerConfirmations) ||
+                other.transferToSellerConfirmations ==
+                    transferToSellerConfirmations) &&
+            (identical(other.sellerNonCustodialWalletMnemonic,
+                    sellerNonCustodialWalletMnemonic) ||
+                other.sellerNonCustodialWalletMnemonic ==
+                    sellerNonCustodialWalletMnemonic) &&
+            (identical(other.btcFeesEnum, btcFeesEnum) ||
+                other.btcFeesEnum == btcFeesEnum) &&
+            (identical(other.buyerSettlementAddress, buyerSettlementAddress) ||
+                other.buyerSettlementAddress == buyerSettlementAddress) &&
+            (identical(other.transferToBuyerKey, transferToBuyerKey) ||
+                other.transferToBuyerKey == transferToBuyerKey) &&
+            (identical(other.transferToBuyerTransactionId,
+                    transferToBuyerTransactionId) ||
+                other.transferToBuyerTransactionId ==
+                    transferToBuyerTransactionId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(tradeId),
-        const DeepCollectionEquality().hash(buyer),
-        const DeepCollectionEquality().hash(seller),
-        const DeepCollectionEquality().hash(amount),
-        const DeepCollectionEquality().hash(amountXmr),
-        const DeepCollectionEquality().hash(feeXmr),
-        const DeepCollectionEquality().hash(amountBtc),
-        const DeepCollectionEquality().hash(feeBtc),
-        const DeepCollectionEquality().hash(advertisement),
-        const DeepCollectionEquality().hash(currency),
-        const DeepCollectionEquality().hash(country),
-        const DeepCollectionEquality().hash(accountInfo),
-        const DeepCollectionEquality().hash(isBuying),
-        const DeepCollectionEquality().hash(isSelling),
-        const DeepCollectionEquality().hash(createdAt),
-        const DeepCollectionEquality().hash(escrowedAt),
-        const DeepCollectionEquality().hash(fundedAt),
-        const DeepCollectionEquality().hash(canceledAt),
-        const DeepCollectionEquality().hash(closedAt),
-        const DeepCollectionEquality().hash(releasedAt),
-        const DeepCollectionEquality().hash(paymentCompletedAt),
-        const DeepCollectionEquality().hash(disputedAt),
-        const DeepCollectionEquality().hash(text),
-        const DeepCollectionEquality().hash(verificationCode),
-        const DeepCollectionEquality().hash(priceEquation),
-        const DeepCollectionEquality().hash(paymentWindowMinutes),
-        const DeepCollectionEquality().hash(transferToSellerTransactionId),
-        const DeepCollectionEquality().hash(transferToSellerConfirmations),
-        const DeepCollectionEquality().hash(sellerNonCustodialWalletMnemonic),
-        const DeepCollectionEquality().hash(btcFeesEnum),
-        const DeepCollectionEquality().hash(buyerSettlementAddress),
-        const DeepCollectionEquality().hash(transferToBuyerKey),
-        const DeepCollectionEquality().hash(transferToBuyerTransactionId)
+        tradeId,
+        buyer,
+        seller,
+        amount,
+        amountXmr,
+        feeXmr,
+        amountBtc,
+        feeBtc,
+        advertisement,
+        currency,
+        country,
+        accountInfo,
+        isBuying,
+        isSelling,
+        createdAt,
+        escrowedAt,
+        fundedAt,
+        canceledAt,
+        closedAt,
+        releasedAt,
+        paymentCompletedAt,
+        disputedAt,
+        text,
+        verificationCode,
+        priceEquation,
+        paymentWindowMinutes,
+        transferToSellerTransactionId,
+        transferToSellerConfirmations,
+        sellerNonCustodialWalletMnemonic,
+        btcFeesEnum,
+        buyerSettlementAddress,
+        transferToBuyerKey,
+        transferToBuyerTransactionId
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TradeModelCopyWith<_$_TradeModel> get copyWith =>
       __$$_TradeModelCopyWithImpl<_$_TradeModel>(this, _$identity);
 
