@@ -397,11 +397,11 @@ class AddEditAdViewModel extends ViewModel
         }
         priceEquationString = 'coingecko${asset!.key().toLowerCase()}$currencyFormula*$percent';
       } else {
-        if (selectedCurrency!.code == 'USDT') {
-          priceEquationString = '(coingecko${asset!.key().toLowerCase()}usd)*$percent';
+        if (selectedCurrency!.code == 'USDT' || selectedCurrency!.code == 'USD') {
+          priceEquationString = 'coingecko${asset!.key().toLowerCase()}usd*$percent';
         } else {
           priceEquationString =
-              '(coingecko${asset!.key().toLowerCase()}usd/coingecko${selectedCurrency!.code.toLowerCase()}usd)*$percent';
+              'coingecko${asset!.key().toLowerCase()}usd*usd${selectedCurrency!.code.toLowerCase()}*$percent';
         }
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);

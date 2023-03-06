@@ -405,6 +405,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
         mainActionText: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
         secondAction: () => Navigator.of(context).pop(),
         secondActionText: context.intl.cancel,
+        mainActionLoading: model.cancelingTrade,
       ),
     );
   }

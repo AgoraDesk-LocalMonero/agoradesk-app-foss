@@ -575,6 +575,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                 ),
                               ),
                               ButtonSquareIconChild(
+                                size: const Size(40, 40),
+                                onPressed: model.changeSortingDirection,
                                 child: model.sortingDirectionType == SortingDirectionType.asc
                                     ? Icon(
                                         AgoraFont.sortUp,
@@ -586,8 +588,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                         color: context.colP90,
                                         size: 18,
                                       ),
-                                size: const Size(40, 40),
-                                onPressed: model.changeSortingDirection,
                               ),
                             ],
                           ),
@@ -754,9 +754,9 @@ class _PopupMenu extends StatelessWidget {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.ad_settings),
           onTap: () => AutoRouter.of(context).push(AdsSettingsRoute(model: model)),
           value: 1,
+          child: Text(context.intl.ad_settings),
         ),
       ],
     );

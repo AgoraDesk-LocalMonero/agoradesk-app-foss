@@ -14,7 +14,6 @@ import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/trades/screens/widgets/highlight_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 
 //todo - merge with AdMarketTile
