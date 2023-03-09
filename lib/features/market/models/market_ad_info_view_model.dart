@@ -176,7 +176,9 @@ class MarketAdInfoViewModel extends ViewModel
     } else {
       _firstTimeLimitAsset = ad!.firstTimeLimitXmr;
     }
-    await _getAccountInfo(ad!.profile!.username);
+    if (ad!.profile?.username != null) {
+      await _getAccountInfo(ad!.profile!.username);
+    }
     initialLoadingAd = false;
     _tempAssetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     notifyListeners();
