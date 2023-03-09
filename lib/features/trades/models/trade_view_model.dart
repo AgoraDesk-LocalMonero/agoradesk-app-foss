@@ -559,7 +559,6 @@ class TradeViewModel extends ViewModel
     if (initial) {
       _divideMessagesTwoParts(null, initial: initial);
     } else {
-      tradeStatusDate = tradeForScreen.createdAt!;
       _updateStickyBubblePosition(tradeStatusDate);
     }
   }
