@@ -345,7 +345,7 @@ class TradeViewModel extends ViewModel
       WebviewRoute(
         token: _apiClient.accessToken ?? '',
         url: '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}',
-        cookies: [],
+        cookies: const [],
       ),
     );
   }
@@ -354,13 +354,14 @@ class TradeViewModel extends ViewModel
     return tradeForScreen.priceEquation?.priceParsedString(context, tradeForScreen.currency) ?? '';
   }
 
-  bool displayCancelStepOne() {
-    if (minutesBeforeCancel > 0 && tradeModel?.isSelling == true) {
+  bool displayCancelStepOneSeller() {
+    if (minutesBeforeCancel > 0 && tradeForScreen.isSelling == true ||
+        tradeForScreen.disputedAt != null && tradeForScreen.isSelling == true) {
       return false;
     } else if (minutesBeforeCancel > 0) {
       return true;
     }
-    if (tradeStatus == TradeStatus.disputed && tradeModel?.isSelling == true) {
+    if (tradeStatus == TradeStatus.disputed && tradeForScreen.isSelling == true) {
       return false;
     } else {
       return true;

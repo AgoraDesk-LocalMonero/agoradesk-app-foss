@@ -221,11 +221,11 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                           const SizedBox(height: 12),
                           Row(
-                            mainAxisAlignment: model.displayCancelStepOne()
+                            mainAxisAlignment: model.displayCancelStepOneSeller()
                                 ? MainAxisAlignment.spaceBetween
                                 : MainAxisAlignment.center,
                             children: [
-                              model.displayCancelStepOne()
+                              model.displayCancelStepOneSeller()
                                   ? ButtonOutlinedWithIconP80(
                                       title: context.intl.cancel,
                                       // insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
@@ -346,18 +346,21 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                           const SizedBox(height: 12),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: model.tradeForScreen.paymentCompletedAt != null
+                                ? MainAxisAlignment.center : MainAxisAlignment.spaceBetween,
                             children: [
-                              ButtonFilledWithIconP80(
-                                title: context.intl.trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn,
-                                insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                                loading: model.markingAsPaid,
-                                icon: Icon(
-                                  AgoraFont.check_circle_alt,
-                                  color: context.colP40,
-                                ),
-                                onPressed: () => _markAsPaidDialog(context, model),
-                              ),
+                              model.tradeForScreen.paymentCompletedAt != null
+                                  ? const SizedBox()
+                                  : ButtonFilledWithIconP80(
+                                      title: context.intl.trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn,
+                                      insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                                      loading: model.markingAsPaid,
+                                      icon: Icon(
+                                        AgoraFont.check_circle_alt,
+                                        color: context.colP40,
+                                      ),
+                                      onPressed: () => _markAsPaidDialog(context, model),
+                                    ),
                               const SizedBox(width: 10),
                               ButtonOutlinedWithIconP80(
                                 title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
