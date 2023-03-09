@@ -228,7 +228,7 @@ class TradeViewModel extends ViewModel
   void init() {
     _initialLoading();
     _listenEventBus();
-    markNotificationsFromTradeAsRead();
+
     super.init();
   }
 
@@ -239,6 +239,7 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
+    markNotificationsFromTradeAsRead();
     _tradeForScreenLoaded = true;
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
