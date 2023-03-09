@@ -718,11 +718,20 @@ class TradeViewModel extends ViewModel
         ));
   }
 
-  String buySellStr(BuildContext context) {
+  String buySellStrOne(BuildContext context) {
     if (tradeForScreen.isSelling!) {
-      return context.intl.app_selling_to(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
+      // return context.intl.app_selling_to(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
+      return '${context.intl.dashboard250Sbfilter250Sbrole250Sbselling} ${tradeForScreen.asset.name} ${tradeForScreen.assetAmount}';
     }
-    return context.intl.app_buying_from(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
+    // return context.intl.app_buying_from(tradeForScreen.asset.name, tradeForScreen.assetAmount, usernameStr());
+    return '${context.intl.dashboard250Sbfilter250Sbrole250Sbbuying} ${tradeForScreen.asset.name} ${tradeForScreen.assetAmount}';
+  }
+
+  String buySellStrTwo(BuildContext context) {
+    if (tradeForScreen.isSelling!) {
+      return '${context.intl.wallet250Sbtxs250Sbfilter250Sbto.toLowerCase()} ${usernameStr()}';
+    }
+    return '${context.intl.wallet250Sbtxs250Sbfilter250Sbfrom.toLowerCase()} ${usernameStr()}';
   }
 
   String fromToStr() {
