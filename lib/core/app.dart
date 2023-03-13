@@ -473,6 +473,7 @@ class _AppState extends State<App>
           case ConnectivityResult.ethernet:
           case ConnectivityResult.bluetooth:
           case ConnectivityResult.vpn:
+          case ConnectivityResult.other:
             appState.connection = true;
             // _initApp();
             break;

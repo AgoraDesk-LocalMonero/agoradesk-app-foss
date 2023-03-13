@@ -105,7 +105,6 @@ class PinCodeViewModel extends ViewModel {
 
   void handlePinInput(String pin, {bool onFull = false}) async {
     if (hasCurrentPin && !currentPinChecked && currentPin != null) {
-      print('+++++++++++++++++++++++++++++++++++++11');
       if (pin.length == currentPin!.length && pin != currentPin) {
         showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
       } else if (pin.length == currentPin!.length) {
