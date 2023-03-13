@@ -602,7 +602,7 @@ class _AppState extends State<App>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.app_503_body(GetIt.I<AppParameters>().appName),
+                    context.intl.app_503_body(GetIt.I<AppParameters>().appName).replaceAll('\\n', '\n'),
                     style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
                   ),
                   const SizedBox(height: 6),
