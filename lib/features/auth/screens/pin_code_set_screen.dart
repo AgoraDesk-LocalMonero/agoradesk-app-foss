@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
@@ -72,12 +73,19 @@ class PinCodeSetScreen extends StatelessWidget {
                         deleteButtonLabel: context.intl.delete,
                         deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                         deleteButtonColor: Theme.of(context).colorScheme.primary90,
+                        minPinLength: kMinPinLength,
+                        maxPinLength: kMaxPinLength,
+                        clearStream: model.clearPin,
                         onFullPin: (pin, __) {
-                          model.handlePinInput(pin);
+                          model.handlePinInput(
+                            pin,
+                            onFull: true,
+                          );
                         },
-                        initialPinLength: 4,
-                        onChangedPin: (_) {
-                          // model.isFirstPin = !model.isFirstPin;
+                        onChangedPin: (pin) {
+                          if (pin.length < kMaxPinLength) {
+                            model.handlePinInput(pin);
+                          }
                         },
                       ),
                     ),

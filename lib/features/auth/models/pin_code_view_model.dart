@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
@@ -31,6 +32,11 @@ class PinCodeViewModel extends ViewModel {
   String _firstPinCode = '';
   String _secondPinCode = '';
   bool _isFirstPin = true;
+  final StreamController<bool> _clearPinStream = StreamController<bool>.broadcast();
+
+  Stream<bool> get clearPin => _clearPinStream.stream;
+
+  Sink<bool> get clearPinSink => _clearPinStream;
 
   String get firstPinCode => _firstPinCode;
 
@@ -90,17 +96,28 @@ class PinCodeViewModel extends ViewModel {
     return true;
   }
 
-  void handlePinInput(String pin) async {
-    if (hasCurrentPin && !currentPinChecked) {
-      if (pin != currentPin) {
+  bool checkPinLessMax(String pin) {
+    if (pin == currentPin && pin.length < kMaxPinLength) {
+      return true;
+    }
+    return false;
+  }
+
+  void handlePinInput(String pin, {bool onFull = false}) async {
+    if (hasCurrentPin && !currentPinChecked && currentPin != null) {
+      print('+++++++++++++++++++++++++++++++++++++11');
+      if (pin.length == currentPin!.length && pin != currentPin) {
         showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
-      } else {
+      } else if (pin.length == currentPin!.length) {
         currentPinChecked = true;
+        if (pin.length < kMaxPinLength) {
+          clearPinSink.add(true);
+        }
       }
-    } else if (isFirstPin) {
+    } else if (isFirstPin && onFull) {
       isFirstPin = false;
       firstPinCode = pin;
-    } else {
+    } else if (onFull) {
       secondPinCode = pin;
       if (firstPinCode == secondPinCode) {
         await setPin();
@@ -146,6 +163,7 @@ class PinCodeViewModel extends ViewModel {
 
   @override
   void dispose() {
+    _clearPinStream.close();
     super.dispose();
   }
 }

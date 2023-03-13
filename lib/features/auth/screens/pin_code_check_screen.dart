@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
@@ -52,18 +53,22 @@ class PinCodeCheckScreen extends StatelessWidget {
                             color: Theme.of(context).colorScheme.neutral90,
                           ),
                           emptyIndicatorColor: context.colN30Pri80,
+                          minPinLength: kMinPinLength,
+                          maxPinLength: kMaxPinLength,
                           filledIndicatorColor: context.colP90,
                           buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteButtonColor: Theme.of(context).colorScheme.primary90,
                           onFullPin: (pin, _) {
                             if (model.checkPinCorrectness(pin)) {
-                              // onResult(true);
                               Navigator.of(context).pop();
                             }
                           },
-                          initialPinLength: 4,
-                          onChangedPin: (_) {},
+                          onChangedPin: (pin) {
+                            if (model.checkPinLessMax(pin)) {
+                              Navigator.of(context).pop();
+                            }
+                          },
                           leftBottomWidget: model.biometricAuthIsOn
                               ? IconButton(
                                   tooltip: context.intl.app_biometric_authentication,

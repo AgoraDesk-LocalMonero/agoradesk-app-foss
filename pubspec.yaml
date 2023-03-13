@@ -90,7 +90,8 @@ dependency_overrides:
     git:
       url: https://github.com/sergdeus/flutter_foreground_task
       ref: master
-
+  flutter_pin_code_widget:
+    path: ../flutter_pin_code_widget
 
 dev_dependencies:
   flutter_test:

@@ -663,10 +663,9 @@ packages:
   flutter_pin_code_widget:
     dependency: "direct main"
     description:
-      name: flutter_pin_code_widget
-      sha256: "9d3c6bae730c2fa565f8fd0b4a770ff7fbf7f3e62aeb7ca047349e9f5b1ba50c"
-      url: "https://pub.dev"
-    source: hosted
+      path: "../flutter_pin_code_widget"
+      relative: true
+    source: path
     version: "0.0.5+1"
   flutter_plugin_android_lifecycle:
     dependency: transitive
