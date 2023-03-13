@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/api/api_errors.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
@@ -437,12 +438,12 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     if (res.isRight) {
       showSimpleNotification(
         Text(context.intl.settings_saved),
-        autoDismiss: true,
-        key: const ValueKey('flash-message'),
-        duration: const Duration(seconds: 3),
         position: NotificationPosition.top,
-        slideDismissDirection: DismissDirection.down,
         background: Theme.of(context).colorScheme.secondaryContainer,
+        autoDismiss: true,
+        key: UniqueKey(),
+        slideDismissDirection: DismissDirection.up,
+        duration: kDisplayDuration,
       );
     } else {
       if (res.left.message.containsKey('error_code')) {
@@ -892,23 +893,23 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     if (!hasError) {
       showSimpleNotification(
         Text(context.intl.settings_saved),
-        autoDismiss: true,
-        key: const ValueKey('flash-message'),
-        duration: const Duration(seconds: 3),
         position: NotificationPosition.top,
-        slideDismissDirection: DismissDirection.down,
         background: Theme.of(context).colorScheme.secondaryContainer,
+        autoDismiss: true,
+        key: UniqueKey(),
+        slideDismissDirection: DismissDirection.up,
+        duration: kDisplayDuration,
       );
       indicatorKey.currentState?.show();
     } else {
       showSimpleNotification(
         Text(context.intl.app_error_saving),
-        autoDismiss: true,
-        key: const ValueKey('flash-message'),
-        duration: const Duration(seconds: 3),
         position: NotificationPosition.top,
-        slideDismissDirection: DismissDirection.down,
         background: context.colError60,
+        autoDismiss: true,
+        key: UniqueKey(),
+        slideDismissDirection: DismissDirection.up,
+        duration: kDisplayDuration,
       );
     }
   }

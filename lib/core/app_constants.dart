@@ -34,3 +34,9 @@ const List<String> kBlockedCountries = [
 
 const kMinPinLength = 4;
 const kMaxPinLength = 6;
+
+///
+/// Duration to display notifications
+///
+
+const kDisplayDuration = Duration(seconds: 3);
