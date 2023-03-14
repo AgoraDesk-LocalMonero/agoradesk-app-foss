@@ -67,7 +67,7 @@ class PinCodeSetScreen extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           color: Theme.of(context).colorScheme.neutral90,
                         ),
-                        emptyIndicatorColor: context.colN30Pri80,
+                        // emptyIndicatorColor: context.colN30Pri80,
                         filledIndicatorColor: context.colP90,
                         buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                         deleteButtonLabel: context.intl.delete,
@@ -76,17 +76,8 @@ class PinCodeSetScreen extends StatelessWidget {
                         minPinLength: kMinPinLength,
                         maxPinLength: kMaxPinLength,
                         clearStream: model.clearPin,
-                        onFullPin: (pin, __) {
-                          model.handlePinInput(
-                            pin,
-                            onFull: true,
-                          );
-                        },
-                        onChangedPin: (pin) {
-                          if (pin.length < kMaxPinLength) {
-                            model.handlePinInput(pin);
-                          }
-                        },
+                        onEnter: (pin, __) => model.handlePinInput(pin, onFull: true),
+                        onChangedPin: (_) {},
                       ),
                     ),
                   ),

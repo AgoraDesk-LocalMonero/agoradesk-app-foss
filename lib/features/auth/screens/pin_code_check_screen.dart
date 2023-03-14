@@ -52,24 +52,25 @@ class PinCodeCheckScreen extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                             color: Theme.of(context).colorScheme.neutral90,
                           ),
-                          emptyIndicatorColor: context.colN30Pri80,
+                          // emptyIndicatorColor: context.colN30Pri80,
                           minPinLength: kMinPinLength,
                           maxPinLength: kMaxPinLength,
                           filledIndicatorColor: context.colP90,
                           buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteButtonColor: Theme.of(context).colorScheme.primary90,
-                          onFullPin: (pin, _) {
+                          onEnter: (pin, _) {
                             if (model.checkPinCorrectness(pin)) {
                               Navigator.of(context).pop();
                             }
                           },
-                          onChangedPin: (pin) {
-                            if (model.checkPinLessMax(pin)) {
-                              Navigator.of(context).pop();
-                            }
-                          },
-                          leftBottomWidget: model.biometricAuthIsOn
+                          // onChangedPin: (pin) {
+                          //   if (model.checkPinLessMax(pin)) {
+                          //     Navigator.of(context).pop();
+                          //   }
+                          // },
+                          onChangedPin: (_) {},
+                          centerBottomWidget: model.biometricAuthIsOn
                               ? IconButton(
                                   tooltip: context.intl.app_biometric_authentication,
                                   icon: Icon(

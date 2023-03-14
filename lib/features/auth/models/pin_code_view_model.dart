@@ -96,12 +96,12 @@ class PinCodeViewModel extends ViewModel {
     return true;
   }
 
-  bool checkPinLessMax(String pin) {
-    if (pin == currentPin && pin.length < kMaxPinLength) {
-      return true;
-    }
-    return false;
-  }
+  // bool checkPinLessMax(String pin) {
+  //   if (pin == currentPin && pin.length < kMaxPinLength) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   void handlePinInput(String pin, {bool onFull = false}) async {
     if (hasCurrentPin && !currentPinChecked && currentPin != null) {
