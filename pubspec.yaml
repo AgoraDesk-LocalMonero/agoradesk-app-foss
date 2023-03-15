@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.66+89
+version: 1.0.67+90
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
