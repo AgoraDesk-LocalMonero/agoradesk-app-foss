@@ -176,7 +176,9 @@ class MarketAdInfoViewModel extends ViewModel
     } else {
       _firstTimeLimitAsset = ad!.firstTimeLimitXmr;
     }
-    await _getAccountInfo(ad!.profile!.username);
+    if (ad!.profile?.username != null) {
+      await _getAccountInfo(ad!.profile!.username);
+    }
     initialLoadingAd = false;
     _tempAssetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     notifyListeners();
@@ -292,7 +294,7 @@ class MarketAdInfoViewModel extends ViewModel
           final int digitsToRound = getBankersDigits(asset!.name);
           _pay = (_receive.toDouble() / _tempAssetPrice).bankerRound(digitsToRound);
           ctrlPay.text = _pay.toString();
-          _checkReceiveQuantity();
+          _checkReceiveQuantity(context);
         } catch (e) {
           receiveError = context.intl.error_only_numbers_are_possible;
         }
@@ -314,7 +316,7 @@ class MarketAdInfoViewModel extends ViewModel
           final int digitsToRound = getBankersDigits(ad?.currency ?? '');
           _receive = (_tempAssetPrice * _pay.toDouble()).bankerRound(digitsToRound);
           ctrlReceive.text = _receive.toString();
-          _checkReceiveQuantity();
+          _checkReceiveQuantity(context);
           _checkPayQuantity();
         } catch (e) {
           payError = context.intl.error_only_numbers_are_possible;
@@ -325,7 +327,7 @@ class MarketAdInfoViewModel extends ViewModel
     }
   }
 
-  void _checkReceiveQuantity() {
+  void _checkReceiveQuantity(BuildContext context) {
     final receive = _receive.toDouble();
     if (receive < (ad?.minAmount ?? 0)) {
       receiveError = context.intl.must_be_at_least((ad!.minAmount ?? 0).toString(), ad!.currency);

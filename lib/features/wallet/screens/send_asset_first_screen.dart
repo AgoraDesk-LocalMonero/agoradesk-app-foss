@@ -41,7 +41,7 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
           builder: (context, model, child) {
             return Scaffold(
               appBar: AgoraAppBar(
-                title: context.intl.wallet250Sbsend250Sbsend8722Sbbtn(asset.name),
+                title: context.intl.wallet250Sbsend250Sbsend8722Sbbtn(asset.name, ''),
               ),
               body: SafeArea(
                 child: Padding(

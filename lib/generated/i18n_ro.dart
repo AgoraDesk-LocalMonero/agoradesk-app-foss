@@ -270,18 +270,18 @@ class I18nRo extends I18n {
   String get ad250Sbdeleted => 'Acest anunț a fost șters';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
-    return 'Vinde $assetName pentru numerar în $country';
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
+    return 'Vindeți $assetName pentru numerar în $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Cumpărați $assetName cu numerar în $country';
   }
 
   @override
   String ad250Sbhomepage8722Sblisting250Sbonline8722Sbbuy8722Sbheading(Object assetName, Object country) {
-    return 'Vinde $assetName online în $country';
+    return 'Vindeți $assetName online în $country';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class I18nRo extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Sumă (valută)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Sumă ($assetSymbol)';
   }
 
@@ -1532,27 +1532,27 @@ class I18nRo extends I18n {
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell(Object assetName, Object country) {
-    return 'Vinde $assetName în $country';
+    return 'Vindeți $assetName în $country';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbcountry(Object assetName, Object country) {
-    return 'Vinde $assetName în $country';
+    return 'Vindeți $assetName în $country';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbcountry8722Sbmethod(Object assetName, Object country, Object method) {
-    return 'Vinde $assetName în $country cu $method';
+    return 'Vindeți $assetName în $country cu $method';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbcurrency(Object assetName, Object currency) {
-    return 'Vinde $assetName pentru $currency';
+    return 'Vindeți $assetName pentru $currency';
   }
 
   @override
   String document8722Sbtitle250Sbsearch250Sbsell250Sbmethod(Object assetName, Object method) {
-    return 'Vinde $assetName cu $method';
+    return 'Vindeți $assetName cu $method';
   }
 
   @override
@@ -1575,7 +1575,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Tranzacție $id';
   }
 
@@ -1629,7 +1629,7 @@ class I18nRo extends I18n {
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sblocal8722Sbsell(Object assetName) {
-    return 'vinde $assetName pentru numerar (local)';
+    return 'vindeți $assetName pentru numerar (local)';
   }
 
   @override
@@ -1639,7 +1639,7 @@ class I18nRo extends I18n {
 
   @override
   String edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbad8722Sbtype8722Sbonline8722Sbsell(Object assetName) {
-    return 'vinde $assetName online';
+    return 'vindeți $assetName online';
   }
 
   @override
@@ -1857,7 +1857,7 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName este o platformă de schimb peer-to-peer de Monero. Suntem o piață unde utilizatorii pot cumpăra și vinde Monero între ei. Utilizatorii, numiți comercianți, creează anunțuri cu prețul și metoda de plată pe care doresc să le ofere. Puteți să navigați pe site-ul nostru pentru anunțuri de schimb și să căutați metoda de plată pe care o preferați. Veți găsi comercianți care cumpără și vând Monero online pentru mai mult de 60 de metode de plată diferite. Dacă sunteți nou pe $appName și doriți să cumpărați Monero, vă rugăm să aruncați o privire la ghidul nostru despre cum să cumpărați Monero.';
+    return '$appName este o platformă de tranzacționare peer-to-peer Monero. Suntem o piață în care utilizatorii pot cumpăra și vinde Monero unul către și de la celălalt. Utilizatorii, numiți comercianți, creează reclame cu prețul și metoda de plată pe care doresc să o ofere. Puteți naviga pe site-ul nostru pentru anunțuri comerciale și puteți căuta o metodă de plată pe care o preferați. Veți găsi comercianți care cumpără și vând Monero online pentru mai mult de 60 de metode de plată diferite. Dacă sunteți nou la $appName și doriți să cumpărați Monero, vă rugăm să aruncați o privire la ghidul nostru cum să cumpărați pentru a afla cum să cumpărați Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nRo extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'pagina de comisioane';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'În acest moment, nu avem o aplicație mobilă de sine stătătoare. Dar puteți primi notificări mobile în $telegram! $thisGuide vă va ghida prin procesul de activare a notificărilor Telegram (este ușor). Robotul nostru vă va trimite apoi notificări cu privire la evenimentele $appName.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Da facem! Dacă aveți Android, îl puteți obține pe $playstoreLink, $fdroidLink sau puteți descărca direct $apkLink. Pentru dispozitivele iOS, este disponibil pe $appstoreLink. De asemenea, puteți primi notificări mobile în $telegram! $thisGuide vă va ghida prin procesul de activare a notificărilor Telegram (este ușor). Botul nostru vă va trimite apoi notificări cu privire la evenimentele $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Toate tranzacțiile online sunt protejate de garanții de arbitraj. Atunci când este inițiată o tranzacție, o sumă de Monero egală cu valoarea tranzacției este rezervată automat din portofelul $appName al vânzătorului ca o garanție. Acest lucru înseamnă că, dacă vânzătorul fuge cu banii dvs. și nu finalizează tranzacția, suportul $appName vă poate direcționa Monero-ul păstrat în garanția de arbitraj către dvs. Dacă vindeți Monero, nu finalizați niciodată tranzacția înainte de a ști că ați primit banii de la cumpărătorul de Monero. Vă rugăm să rețineți că tranzacțiile locale nu au activată în mod implicit protecția obligației de arbitraj.';
+    return 'Toate tranzacțiile online sunt protejate de obligațiuni de arbitraj. Când începe o tranzacție, o sumă de Monero egală cu valoarea tranzacției este rezervată automat din portofelul de obligațiuni $appName al vânzătorului. Aceasta înseamnă că, dacă vânzătorul fuge cu banii tăi și nu finalizează tranzacția, suportul $appName vă poate direcționa Monero-ul deținut în obligațiunea de arbitraj. Dacă vindeți Monero, nu finalizați niciodată tranzacția înainte de a ști că ați primit bani de la cumpărătorul Monero. Vă rugăm să rețineți că tranzacțiile locale nu au protecția obligațiunilor de arbitraj activată în mod implicit.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Toate tranzacțiile online sunt protejate de garanții de arbitraj. Atunci când este inițiată o tranzacție, o sumă de criptomonede egală cu valoarea tranzacției este rezervată automat din portofelul $appName al vânzătorului ca o garanție. Acest lucru înseamnă că, dacă vânzătorul fuge cu banii dvs. și nu finalizează tranzacția, suportul $appName vă poate direcționa criptomoneda păstrată în garanția de arbitraj. Dacă vindeți criptomonede, nu finalizați niciodată tranzacția înainte de a ști că ați primit banii de la cumpărător. Vă rugăm să rețineți că tranzacțiile locale nu au activată în mod implicit protecția obligației de arbitraj.';
+    return 'Toate tranzacțiile online sunt protejate de obligațiuni de arbitraj. Când începe o tranzacție, o cantitate de criptomonedă egală cu valoarea tranzacției este rezervată automat din portofelul de obligațiuni $appName al vânzătorului. Aceasta înseamnă că, dacă vânzătorul fuge cu banii tăi și nu finalizează tranzacția, suportul $appName vă poate direcționa criptomoneda deținută în obligațiunea de arbitraj. Dacă vindeți criptomonede, nu finalizați niciodată tranzacția înainte de a ști că ați primit bani de la cumpărător. Vă rugăm să rețineți că tranzacțiile locale nu au protecția obligațiunilor de arbitraj activată în mod implicit.';
   }
 
   @override
@@ -3184,7 +3184,7 @@ class I18nRo extends I18n {
 
   @override
   String home250Sbgreeting250Sbsell8722Sbmonero(Object assetName) {
-    return 'Vinde $assetName.';
+    return 'Vindeți $assetName.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nRo extends I18n {
   String get morph250Sbservice8722Sbdown => 'Serviciul XMR de la ChangeNow este temporar indisponibil. Încercați din nou mai târziu.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Adresă de primire $cryptocurrencyName adresă';
   }
 
@@ -4773,9 +4773,7 @@ class I18nRo extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Soldul portofelului este mai mic decât minimul necesar pentru acest tip de anunț';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Prima limită de timp ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Prima limită de timp  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Opțional. Limitați suma maximă a tranzacției pentru utilizatorii cu care nu ați mai avut tranzacții anterioare. Minim 0.';
@@ -5027,7 +5025,7 @@ class I18nRo extends I18n {
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbsell(Object assetName) {
-    return 'Vinde $assetName pentru numerar (local)';
+    return 'Vindeți $assetName pentru numerar (local)';
   }
 
   @override
@@ -5268,12 +5266,12 @@ class I18nRo extends I18n {
   String get search250Sbcoordinates250Sblon => 'Longitudine';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Vindeți $assetName pentru numerar în $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Cumpărați $assetName cu numerar în $location';
   }
 
@@ -5340,13 +5338,13 @@ class I18nRo extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'O adevărată alternativă LocalBitcoins și Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Dacă vă îngrijorează invadarea intimității - cea mai bună criptomonedă în care să investiți este XMR. Monero este o monedă nedetectabilă, dezvoltată cu gândul la confidențialitate prin design. \n<br/>\nDe unde puteți cumpăra Monero? LocalMonero este cel mai mare, cel mai de încredere și bine stabilit schimb P2P Monero din comunitatea XMR. Nu avem verificări KYC - puteți pur și simplu să cumpărați Monero în mod anonim, fără verificarea identității, cu PayPal, card de credit, card cadou, numerar prin poștă sau să convertiți bitcoin în Monero - platforma noastră acceptă orice metodă de plată.';
+  String get seo250Sbtext8722Sb1 => 'Dacă sunteți îngrijorat de invadarea confidențialității - cea mai bună criptomonedă în care să investiți este XMR. Monero este o monedă imposibil de urmărit, dezvoltată având în vedere confidențialitatea prin design.\n<br/>\nDe unde să cumpăr Monero? LocalMonero este cea mai mare, cea mai de încredere și mai bine stabilită platformă de tranzacționare P2P Monero din comunitatea XMR. Nu avem cecuri KYC - puteți pur și simplu cumpăra Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, numerar prin poștă sau puteți converti bitcoin în Monero - platforma noastră acceptă orice metodă de plată.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Vă întrebați cum să investiți în Bitcoin? Pe AgoraDesk, cumpărarea de bitcoini nu a fost niciodată mai ușoară - cumpărați instantaneu BTC de la o persoană folosind metoda dvs. preferată de plată online: PayPal, card de credit/debit sau transfer bancar, carduri cadou, Venmo sau orice altă.\n<br/>\nDacă doriți să cumpărați bitcoini în apropiere de dumneavoastră cu bani cash, puteți găsi pe cineva dispus să vândă bitcoini la nivel local - platforma de tranzacționare acceptă cumpărarea și vânzarea de BTC cu bani cash. Puteți chiar să cumpărați bitcoini folosind numerar prin poștă.';
 
   @override
-  String get seo250Sbtext8722Sb2 => 'LocalMonero este cel mai bun loc pentru a vinde XMR - fie că este vorba de recompensele tale miniere, \narbitrajul prețului Monero sau pur și simplu vedeți valoarea de a deservi comunitatea. Sistemul de protecție a obligațiunilor de arbitraj și portofelul nostru securizat de obligațiuni de arbitraj Monero vă oferă o experiență robustă de tranzacționare a XMR - astfel încât puteți converti XMR în USD, EUR, AUD, GBP sau orice altă monedă locală cu toată liniștea.';
+  String get seo250Sbtext8722Sb2 => 'LocalMonero este cel mai bun loc pentru a vinde XMR - fie că este vorba de recompensele tale miniere, \narbitrajul de preț Monero sau pur și simplu vedeți valoare în a servi comunitatea. Sistemul de protecție a obligațiunilor de arbitraj și portofelul nostru securizat de obligațiuni de arbitraj Monero vă oferă o experiență robustă de tranzacționare a XMR - astfel încât puteți converti XMR în USD, EUR, AUD, GBP sau orice altă monedă locală cu toată liniștea.';
 
   @override
   String get seo250Sbtext8722Sb257Sbagoradesk => 'Sunteți un comerciant Bitcoin care caută să facă bani cu crypto arbitraj? Un miner care dorește să încaseze BTC în USD sau în altă monedă locală? \n<br/>\nAgoraDesk este o <a href=\"/localbitcoins-alternative\" style=\"color: #0b4f6c\"> Alternativă LocalBitcoins </a> care îți respectă confidențialitatea și securitatea, oferindu-ți în același timp o experiență ușoară și rapidă de încasare a bitcoinilor tăi.';
@@ -6521,7 +6519,7 @@ class I18nRo extends I18n {
 
   @override
   String user250Sbads250Sblocal8722Sbbuy8722Sbtitle(Object assetName, Object user) {
-    return 'Vinde $assetName pentru numerar către $user';
+    return 'Vindeți $assetName pentru numerar către $user';
   }
 
   @override
@@ -6531,7 +6529,7 @@ class I18nRo extends I18n {
 
   @override
   String user250Sbads250Sbonline8722Sbbuy8722Sbtitle(Object assetName, Object user) {
-    return 'Vinde $assetName online către $user';
+    return 'Vindeți $assetName online lui $user';
   }
 
   @override
@@ -6811,7 +6809,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Primește $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nRo extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Selectați prioritatea tranzacției';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Adresa de primire $assetName';
   }
 
@@ -6879,7 +6877,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Trimite $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nRo extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Taxe de ieșire pentru criptomonede';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Trimite $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nRo extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Primește $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Trimite $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Primește $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nRo extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Primește';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Trimite $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nRo extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Schimbă adresa';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Sumă ($asset)';
   }
 
@@ -7469,7 +7467,7 @@ class I18nRo extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Pasul 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Deschideți fișierul și editați-l. Iată un exemplu: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>În exemplu puteți vedea:</p>\n<ol>\n<li>Flutter este folosit ca submodul - aceasta este o cerință din partea echipei F-Droid.</li>\n<li>Pentru fiecare aromă am folosit o ramură separată (comanda <code>AutoUpdateMode: Versiunea %v-fdroid-lm</code>). Asta pentru că Fastlane&#39;nu acceptă arome cu Flutter.</li>\n<li>Prima dată când adăugăm manual informații de construcție, în viitor acestea vor fi adăugate automat de un bot, după ce vom împinge o nouă etichetă.</li>\n</ol>\n<p>Verificați dacă fișierul are sintaxa corectă: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Deschideți fișierul și editați-l. Iată un exemplu: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>În exemplu puteți vedea:</p>\n<ol>\n<li>Flutter este folosit ca submodul - aceasta este o cerință din partea echipei F-Droid.</li>\n<li>Pentru fiecare aromă am folosit o ramură separată (comanda <code>AutoUpdateMode: Versiunea %v-fdroid-lm</code>). Asta pentru că Fastlane&#39;nu acceptă arome cu Flutter.</li>\n<li>Prima dată când adăugăm informații de construcție manual, în viitor acestea vor fi adăugate automat de un bot, după ce vom împinge o nouă etichetă.</li>\n</ol>\n<p>Verificați dacă fișierul are sintaxa corectă: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Pasul 4';
@@ -7487,7 +7485,7 @@ class I18nRo extends I18n {
   String get devblog250Sbfdroid250Sb7250Sbtitle => 'Pasul 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le adresați pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le puneți pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Concluzie';
@@ -7517,7 +7515,7 @@ class I18nRo extends I18n {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etichetă (opțional)';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => 'salva';
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Salvați';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salvați această adresă pentru utilizare ulterioară';
@@ -7544,6 +7542,17 @@ class I18nRo extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Când apăsați „Salvați”, țara anunțului va fi actualizată automat la „global”.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Numai anunțuri de vânzare pentru același bun';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Du-mă pe site';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset cumpără numai anunțuri';
+  }
 
   @override
   String get ads => 'Reclame';
@@ -8158,6 +8167,9 @@ class I18nRo extends I18n {
   String get api_error_98 => 'Încercare de a crea un schimb pentru un anunț al cărui publicist nu există';
 
   @override
+  String get api_error_99 => 'Încercarea de a solicita o sumă mai mare decât cea permisă de proprietarul anunțului la crearea unei prime tranzacții';
+
+  @override
   String get api_error_100 => 'Nu se poate solicita mai puțin de 0.0000000001 XMR pentru crearea unei tranzacții';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nRo extends I18n {
 
   @override
   String get api_error_121 => 'Încercare de garanție a unei tranzacții care nu există';
+
+  @override
+  String get api_error_122 => 'Fonduri insuficiente pentru a finanța o tranzacție';
+
+  @override
+  String get api_error_123 => 'Fonduri insuficiente pentru a finanța o tranzacție';
+
+  @override
+  String get api_error_124 => 'Eroare la finanțarea unei tranzacții';
 
   @override
   String get api_error_125 => 'Utilizatorul care solicită anularea tranzacției nu există';
@@ -8557,7 +8578,7 @@ class I18nRo extends I18n {
   String get pin_enter_to_confirm_transaction => 'Introduceți codul PIN pentru a confirma tranzacția';
 
   @override
-  String get pin_you_can_use => 'Puteți folosi acest PIN pentru a debloca aplicația.';
+  String get pin_you_can_use => 'PIN-ul trebuie să aibă cel puțin 4 cifre';
 
   @override
   String get pin_confirm => 'Confirmați codul PIN';
@@ -9445,14 +9466,5 @@ class I18nRo extends I18n {
   String get api_error_273 => 'Încercarea de a șterge o adresă care nu există în agenda unui utilizator';
 
   @override
-  String get api_error_99 => 'Încercare de a solicita o sumă mai mare decât cea permisă de first_time_limit_asset atunci când se creează o primă tranzacție';
-
-  @override
-  String get api_error_122 => 'Fonduri insuficiente pentru a finanța o tranzacție LOCAL_SELL variabilă';
-
-  @override
-  String get api_error_123 => 'Fonduri insuficiente pentru a finanța o tranzacție LOCAL_SELL care nu este variabilă.';
-
-  @override
-  String get api_error_124 => 'Eroare la finanțarea unui LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN-ul trebuie să aibă cel puțin 4 cifre';
 }

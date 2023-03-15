@@ -20,10 +20,23 @@ const kNewMessageDuration = Duration(milliseconds: 300);
 /// Blocked countries removed from the country selector.
 ///
 
-const List<String> blockedCountries = [
+const List<String> kBlockedCountries = [
   'RU',
   'IR',
   'CU',
   'KP',
   'SY',
 ];
+
+///
+/// Pin code pin ;ength
+///
+
+const kMinPinLength = 4;
+const kMaxPinLength = 25;
+
+///
+/// Duration to display notifications
+///
+
+const kDisplayDuration = Duration(seconds: 3);

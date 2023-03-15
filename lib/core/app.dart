@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:agoradesk/core/api/api_client.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
@@ -441,6 +442,7 @@ class _AppState extends State<App>
           case ConnectivityResult.ethernet:
           case ConnectivityResult.bluetooth:
           case ConnectivityResult.vpn:
+          case ConnectivityResult.other:
             appState.connection = true;
             // _initApp();
             break;
@@ -450,10 +452,11 @@ class _AppState extends State<App>
             // _initApp();
             showSimpleNotification(
               Text(context?.intl.api_error_4000 ?? ''),
-              autoDismiss: true,
-              key: const ValueKey('flash-message'),
-              duration: const Duration(seconds: 5),
               background: context?.colError60,
+              autoDismiss: true,
+              key: UniqueKey(),
+              slideDismissDirection: DismissDirection.up,
+              duration: kDisplayDuration,
             );
             break;
         }
@@ -530,7 +533,7 @@ class _AppState extends State<App>
             autoDismiss: true,
             key: UniqueKey(),
             slideDismissDirection: DismissDirection.up,
-            duration: const Duration(seconds: 4),
+            duration: kDisplayDuration,
           );
         }
       })
@@ -557,7 +560,7 @@ class _AppState extends State<App>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    context.intl.app_503_body(GetIt.I<AppParameters>().appName),
+                    context.intl.app_503_body(GetIt.I<AppParameters>().appName).replaceAll('\\n', '\n'),
                     style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
                   ),
                   const SizedBox(height: 6),

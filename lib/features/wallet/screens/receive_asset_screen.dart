@@ -13,7 +13,6 @@ import 'package:agoradesk/features/wallet/screens/widgets/incoming_deposit_tile.
 import 'package:agoradesk/features/wallet/screens/widgets/loading_deposits.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/no_deposits.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/qr_code_dialog.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +40,7 @@ class ReceiveAssetScreen extends StatelessWidget with ClipboardMixin {
           builder: (context, model, child) {
             return Scaffold(
               appBar: AgoraAppBar(
-                title: context.intl.wallet250Sbreceive250Sbtitle(asset.title()),
+                title: context.intl.wallet250Sbreceive250Sbtitle(asset.title(), ''),
               ),
               body: SafeArea(
                 child: Padding(

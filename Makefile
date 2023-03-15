@@ -150,6 +150,12 @@ clean:
 	$(FLUTTER) clean
 	$(FLUTTER) pub get
 
+.PHONY: cleanf
+cleanf:
+	$(FLUTTER) clean
+	$(FLUTTER) pub get
+	$(FLUTTER) packages pub run build_runner build --delete-conflicting-outputs
+
 .PHONY: i-clean
 i-clean:
 	$(FLUTTER) clean

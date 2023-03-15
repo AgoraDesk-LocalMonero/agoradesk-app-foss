@@ -270,12 +270,12 @@ class I18nId extends I18n {
   String get ad250Sbdeleted => 'Iklan ini telah dihapus';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Jual $assetName dengan uang tunai di $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Beli $assetName dengan uang tunai di $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nId extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Jumlah (mata uang)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Jumlah ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nId extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Perdagangan $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nId extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName adalah exchange Monero peer-to-peer. Kami adalah marketplace di mana pengguna dapat membeli dan menjual Monero ke dan dari satu sama lain. Pengguna, yang disebut pedagang, membuat iklan dengan harga dan metode pembayaran yang ingin mereka tawarkan. Anda dapat menelusuri situs web kami untuk iklan perdagangan dan mencari metode pembayaran yang lebih Anda sukai. Anda akan menemukan pedagang yang membeli dan menjual Monero secara daring dengan lebih dari 60 metode pembayaran yang berbeda. Jika Anda masih baru di $appName dan ingin membeli Monero, silakan lihat panduan cara membeli kami untuk mempelajari cara membeli Monero.';
+    return '$appName adalah platform perdagangan Monero peer-to-peer. Kami adalah pasar tempat pengguna dapat membeli dan menjual Monero ke dan dari satu sama lain. Pengguna, yang disebut pedagang, membuat iklan dengan harga dan metode pembayaran yang ingin mereka tawarkan. Anda dapat menjelajahi situs web kami untuk iklan perdagangan dan mencari metode pembayaran yang Anda sukai. Anda akan menemukan pedagang yang membeli dan menjual Monero secara online dengan lebih dari 60 metode pembayaran yang berbeda. Jika Anda baru menggunakan $appName dan ingin membeli Monero, silakan lihat panduan cara membeli kami untuk mempelajari cara membeli Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nId extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'laman biaya';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Saat ini, kami tidak memiliki aplikasi seluler mandiri. Tetapi Anda dapat menerima notifikasi seluler di $telegram! $thisGuide akan membawa Anda melalui proses aktivasi notifikasi Telegram (ini mudah). Bot kami kemudian akan mengirimi Anda notifikasi tentang acara di $appName Anda.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Ya kami lakukan! Jika Anda memiliki Android, Anda bisa mendapatkannya di $playstoreLink, $fdroidLink, atau Anda dapat mengunduh $apkLink secara langsung. Untuk perangkat iOS, ini tersedia di $appstoreLink. Anda juga dapat menerima notifikasi seluler di $telegram! $thisGuide akan membawa Anda melalui proses aktivasi notifikasi Telegram (mudah). Bot kami kemudian akan mengirimkan pemberitahuan tentang acara $appName Anda.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nId extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Semua perdagangan daring dilindungi oleh jaminan arbitrase. Ketika perdagangan dimulai, sejumlah Monero yang setara dengan jumlah perdagangan secara otomatis dicadangkan dari Dompet $appName penjual sebagai jaminan. Ini berarti bahwa jika penjual melarikan diri dengan uang Anda dan tidak menyelesaikan perdagangan, dukungan $appName dapat mengarahkan Monero yang disimpan dalam jaminan arbitrase kepada Anda. Jika Anda menjual Monero, jangan pernah menyelesaikan perdagangan sebelum Anda tahu bahwa Anda telah menerima uang dari pembeli Monero. Harap dicatat bahwa perdagangan lokal tidak memiliki perlindungan jaminan arbitrase yang diaktifkan secara default.';
+    return 'Semua perdagangan online dilindungi oleh obligasi arbitrase. Ketika perdagangan dimulai, jumlah Monero yang sama dengan jumlah perdagangan secara otomatis dicadangkan dari dompet obligasi $appName penjual. Ini berarti bahwa jika penjual melarikan diri dengan uang Anda dan tidak menyelesaikan perdagangan, dukungan $appName dapat mengarahkan Monero yang dipegang dalam obligasi arbitrase kepada Anda. Jika Anda menjual Monero, jangan pernah menyelesaikan jual beli sebelum Anda mengetahui bahwa Anda telah menerima uang dari pembeli Monero. Harap dicatat bahwa perdagangan lokal tidak mengaktifkan perlindungan obligasi arbitrase secara default.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Semua perdagangan daring dilindungi oleh jaminan arbitrase. Ketika perdagangan dimulai, sejumlah mata uang kripto yang setara dengan jumlah perdagangan secara otomatis dicadangkan dari Dompet $appName penjual sebagai jaminan. Ini berarti bahwa jika penjual melarikan diri dengan uang Anda dan tidak menyelesaikan perdagangan, dukungan $appName dapat mengarahkan mata uang kripto yang disimpan dalam jaminan arbitrase kepada Anda. Jika Anda menjual mata uang kripto, jangan pernah menyelesaikan perdagangan sebelum Anda tahu bahwa Anda telah menerima uang dari pembeli. Harap dicatat bahwa perdagangan lokal tidak memiliki perlindungan jaminan arbitrase yang diaktifkan secara default.';
+    return 'Semua perdagangan online dilindungi oleh obligasi arbitrase. Saat jual beli dimulai, jumlah mata uang kripto yang setara dengan jumlah jual beli secara otomatis dicadangkan dari dompet obligasi penjual $appName. Ini berarti bahwa jika penjual melarikan diri dengan uang Anda dan tidak menyelesaikan jual beli, dukungan $appName dapat mengarahkan mata uang kripto yang disimpan dalam obligasi arbitrase kepada Anda. Jika Anda menjual mata uang kripto, jangan pernah menyelesaikan jual beli sebelum Anda mengetahui bahwa Anda telah menerima uang dari pembeli. Harap dicatat bahwa perdagangan lokal tidak mengaktifkan perlindungan obligasi arbitrase secara default.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nId extends I18n {
   String get morph250Sbservice8722Sbdown => 'Layanan XMR ChangeNow tidak tersedia untuk sementara. Coba lagi nanti.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Alamat Penerima $cryptocurrencyName';
   }
 
@@ -4773,9 +4773,7 @@ class I18nId extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Saldo dompet kurang dari minimum yang disyaratkan untuk jenis iklan ini';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Limit pertama kali ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Batas waktu pertama  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Opsional. Batasi jumlah transaksi maksimum untuk pengguna yang tidak pernah Anda ajak berdagang sebelumnya. Minimal 0.';
@@ -5268,12 +5266,12 @@ class I18nId extends I18n {
   String get search250Sbcoordinates250Sblon => 'Garis bujur';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Jual $assetName untuk mendapatkan uang tunai di $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Beli $assetName dengan uang tunai di $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nId extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Alternatif LocalBitcoins dan Paxful sejati.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Jika Anda khawatir tentang pelanggaran privasi - mata uang kripto terbaik untuk berinvestasi adalah XMR. Monero adalah koin yang tidak dapat dilacak yang dengan sengaja dikembangkan untuk mempertimbangkan privasi.\n<br/>\nDi mana membeli Monero? LocalMonero adalah exchange Monero P2P terbesar, paling tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki cek KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui pos, atau mengonversi bitcoin ke Monero - platform kami mendukung metode pembayaran apa pun.';
+  String get seo250Sbtext8722Sb1 => 'Jika Anda khawatir tentang pelanggaran privasi - cryptocurrency terbaik untuk berinvestasi adalah XMR. Monero adalah koin yang tidak dapat dilacak yang dikembangkan dengan mempertimbangkan privasi berdasarkan desain.\n<br/>\nDi mana membeli Monero? LocalMonero adalah platform perdagangan Monero P2P terbesar, paling tepercaya, dan mapan di komunitas XMR. Kami tidak memiliki cek KYC - Anda cukup membeli Monero secara anonim tanpa verifikasi ID dengan PayPal, kartu kredit, kartu hadiah, uang tunai melalui pos, atau mengonversi bitcoin ke Monero - platform kami mendukung metode pembayaran apa pun.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Ingin tahu bagaimana cara berinvestasi di Bitcoin? Di AgoraDesk, membeli bitcoin tidak pernah semudah ini - beli BTC secara instan dari seseorang menggunakan metode pembayaran daring favorit Anda: PayPal, kartu kredit/debit atau transfer bank, kartu hadiah, Venmo, atau lainnya.\n<br/>\nJika Anda ingin membeli bitcoin di dekat Anda dengan uang tunai, Anda dapat menemukan seseorang yang bersedia menjual bitcoin secara lokal - platform perdagangan mendukung pembelian dan penjualan BTC dengan uang tunai. Anda bahkan dapat membeli bitcoin menggunakan uang tunai melalui pos.';
@@ -6811,7 +6809,7 @@ class I18nId extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Terima $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nId extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Pilih prioritas transaksi';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Alamat penerima $assetName';
   }
 
@@ -6879,7 +6877,7 @@ class I18nId extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Kirim $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nId extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Biaya Mata Uang Kripto Keluar';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Kirim $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nId extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Terima $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Kirim $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nId extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Terima $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nId extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Terima';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Kirim $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nId extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Ubah alamat';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Jumlah ($asset)';
   }
 
@@ -7544,6 +7542,17 @@ class I18nId extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Saat Anda menekan \"Simpan\", negara iklan akan diperbarui ke \"global\" secara otomatis.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Hanya iklan penjualan aset yang sama';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Bawa saya ke situs web';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset beli iklan saja';
+  }
 
   @override
   String get ads => 'Iklan';
@@ -8158,6 +8167,9 @@ class I18nId extends I18n {
   String get api_error_98 => 'Mencoba membuat perdagangan untuk iklan yang posternya tidak ada';
 
   @override
+  String get api_error_99 => 'Mencoba untuk meminta jumlah yang lebih tinggi dari yang diizinkan oleh pemilik iklan saat membuat perdagangan pertama';
+
+  @override
   String get api_error_100 => 'Tidak dapat meminta kurang dari 0,0000000001 XMR untuk pembuatan perdagangan';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nId extends I18n {
 
   @override
   String get api_error_121 => 'Mencoba untuk eskro perdagangan yang tidak ada';
+
+  @override
+  String get api_error_122 => 'Dana tidak cukup untuk mendanai perdagangan';
+
+  @override
+  String get api_error_123 => 'Dana tidak cukup untuk mendanai perdagangan';
+
+  @override
+  String get api_error_124 => 'Kesalahan saat mendanai perdagangan';
 
   @override
   String get api_error_125 => 'Pengguna yang meminta pembatalan perdagangan tidak ada';
@@ -8557,7 +8578,7 @@ class I18nId extends I18n {
   String get pin_enter_to_confirm_transaction => 'Masukkan PIN untuk konfirmasi transaksi';
 
   @override
-  String get pin_you_can_use => 'Anda dapat menggunakan PIN ini untuk membuka kunci aplikasi.';
+  String get pin_you_can_use => 'PIN minimal harus 4 digit';
 
   @override
   String get pin_confirm => 'Konfirmasi PIN';
@@ -9445,14 +9466,5 @@ class I18nId extends I18n {
   String get api_error_273 => 'Mencoba menghapus alamat yang tidak ada di buku alamat pengguna';
 
   @override
-  String get api_error_99 => 'Mencoba meminta jumlah yang lebih tinggi dari yang diizinkan oleh first_time_limit_asset saat membuat perdagangan pertama';
-
-  @override
-  String get api_error_122 => 'Dana tidak cukup untuk mendanai perdagangan LOCAL_SELL mengambang';
-
-  @override
-  String get api_error_123 => 'Dana tidak cukup untuk mendanai perdagangan LOCAL_SELL non-floating';
-
-  @override
-  String get api_error_124 => 'Kesalahan saat mendanai LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN minimal harus 4 digit';
 }
