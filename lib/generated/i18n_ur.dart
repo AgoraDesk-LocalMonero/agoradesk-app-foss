@@ -270,12 +270,12 @@ class I18nUr extends I18n {
   String get ad250Sbdeleted => 'یہ اشتہار حذف کر دیا گیا ہے';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '$country میں نقد کے لیے $assetName فروخت کریں';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '$country میں نقد رقم کے ساتھ $assetName خریدیں';
   }
 
@@ -1234,7 +1234,7 @@ class I18nUr extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'رقم (currency)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'رقم ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nUr extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'تجارت$id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nUr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ایک ہم مرتبہ سے ہم مرتبہ Monero تبادلہ ہے۔ ہم ایک ایسا بازار ہیں جہاں صارف ایک دوسرے کو خرید اور فروخت کر سکتے ہیں۔ صارفین، جنہیں تاجر کہا جاتا ہے، قیمت اور ادائیگی کے طریقے کے ساتھ اشتہارات بناتے ہیں جو وہ پیش کرنا چاہتے ہیں۔ آپ تجارتی اشتہارات کے لیے ہماری ویب سائٹ کوbrowse کر سکتے ہیں اور اپنی پسند کا ادائیگی کا طریقہ تلاش کر سکتے ہیں۔ آپ تاجروں کو 60 سے زیادہ مختلف ادائیگی کے طریقوں پر Monero آن لائن خریدتے اور بیچتے ہوئے پائیں گے۔ اگر آپ $appName میں نئے ہیں اور Monero خریدنا چاہتے ہیں، تو براہ کرم Monero خریدنے کا طریقہ سیکھنے کے لیے ہماری گائیڈ پر ایک نظر ڈالیں۔';
+    return '$appName ایک پیر ٹو پیئر Monero تجارتی پلیٹ فارم ہے۔ ہم ایک ایسا بازار ہیں جہاں صارف ایک دوسرے کو خرید اور فروخت کر سکتے ہیں۔ صارفین، جنہیں تاجر کہا جاتا ہے، قیمت اور ادائیگی کے طریقے کے ساتھ اشتہارات بناتے ہیں جو وہ پیش کرنا چاہتے ہیں۔ آپ تجارتی اشتہارات کے لیے ہماری ویب سائٹ کو براؤز کر سکتے ہیں اور اپنی پسند کا ادائیگی کا طریقہ تلاش کر سکتے ہیں۔ آپ تاجروں کو 60 سے زیادہ مختلف ادائیگی کے طریقوں پر Monero آن لائن خریدتے اور بیچتے ہوئے پائیں گے۔ اگر آپ $appName میں نئے ہیں اور Monero خریدنا چاہتے ہیں، تو براہ کرم Monero خریدنے کا طریقہ سیکھنے کے لیے ہماری گائیڈ پر ایک نظر ڈالیں۔';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nUr extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'فیس صفحہ';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'اس وقت، ہمارے پاس اسٹینڈ اکیلا موبائل ایپ نہیں ہے۔ لیکن آپ موبائل اطلاعات $telegram میں وصول کر سکتے ہیں! $thisGuide آپ کو ٹیلیگرام نوٹیفیکیشن ایکٹیویشن کے عمل میں لے جائے گا (it\'s easy)۔ ہمارا bot کو آپ کے $appName واقعات پر اطلاعات بھیجے گا۔';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'جی ہاں، ہم کرتے ہیں! اگر آپ کے پاس Android ہے تو آپ اسے $playstoreLink، $fdroidLink پر حاصل کر سکتے ہیں، یا آپ براہ راست $apkLink ڈاؤن لوڈ کر سکتے ہیں۔ iOS آلات کے لیے، یہ $appstoreLink پر دستیاب ہے۔ آپ موبائل اطلاعات $telegram میں بھی حاصل کر سکتے ہیں! $thisGuide آپ کو ٹیلیگرام نوٹیفیکیشن ایکٹیویشن کے عمل میں لے جائے گا (یہ آسان ہے)۔ اس کے بعد ہمارا بوٹ آپ کو آپ کے $appName ایونٹس پر اطلاعات بھیجے گا۔';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nUr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'تمام آن لائن تجارت ثالثی بانڈز کے ذریعے محفوظ ہیں۔ جب تجارت شروع کی جاتی ہے تو تجارت کی رقم کے برابر Monero کی رقم خود بخود بیچنے والے کے $appName والیٹ سے بطور بانڈ محفوظ ہوجاتی ہے۔ اس کا مطلب یہ ہے کہ اگر بیچنے والا آپ کے پیسے لے کر بھاگ جاتا ہے اور تجارت کو حتمی شکل نہیں دیتا ہے، تو $appName سپورٹ ثالثی بانڈ میں رکھے ہوئے Monero کو آپ کے پاس بھیج سکتا ہے۔ اگر آپ Monero فروخت کر رہے ہیں، تو کبھی بھی تجارت کو حتمی شکل نہ دیں اس سے پہلے کہ آپ کو معلوم ہو کہ آپ نے Monero خریدار سے رقم وصول کی ہے۔ براہ کرم نوٹ کریں کہ مقامی تجارت میں ثالثی بانڈ کا تحفظ ڈیفالٹ کے ذریعے فعال نہیں ہوتا ہے۔';
+    return 'تمام آن لائن تجارت ثالثی بانڈز کے ذریعے محفوظ ہیں۔ جب تجارت شروع کی جاتی ہے تو تجارت کی رقم کے برابر Monero کی رقم بیچنے والے کے $appName بانڈ والیٹ سے خود بخود محفوظ ہوجاتی ہے۔ اس کا مطلب یہ ہے کہ اگر بیچنے والا آپ کے پیسے لے کر بھاگ جاتا ہے اور تجارت کو حتمی شکل نہیں دیتا ہے، تو $appName سپورٹ ثالثی بانڈ میں رکھے ہوئے Monero کو آپ کے پاس بھیج سکتا ہے۔ اگر آپ Monero فروخت کر رہے ہیں، تو کبھی بھی تجارت کو حتمی شکل نہ دیں اس سے پہلے کہ آپ کو معلوم ہو کہ آپ نے Monero خریدار سے رقم وصول کی ہے۔ براہ کرم نوٹ کریں کہ مقامی تجارت میں ثالثی بانڈ کا تحفظ ڈیفالٹ کے ذریعے فعال نہیں ہوتا ہے۔';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'تمام آن لائن تجارت ثالثی بانڈز کے ذریعے محفوظ ہیں۔ جب تجارت شروع کی جاتی ہے تو تجارت کی رقم کے برابر کریپٹو کرنسی کی رقم خود بخود بیچنے والے کے $appName والیٹ سے بطور بانڈ محفوظ ہوجاتی ہے۔ اس کا مطلب یہ ہے کہ اگر بیچنے والا آپ کے پیسے لے کر بھاگ جاتا ہے اور تجارت کو حتمی شکل نہیں دیتا ہے، تو $appName سپورٹ ثالثی بانڈ میں رکھے ہوئے Monero کو آپ کے پاس بھیج سکتا ہے۔ اگر آپ cryptocurrency فروخت کر رہے ہیں، تو کبھی بھی تجارت کو حتمی شکل نہ دیں اس سے پہلے کہ آپ کو معلوم ہو کہ آپ نے خریدار سے رقم وصول کی ہے۔ براہ کرم نوٹ کریں کہ مقامی تجارت میں ثالثی بانڈ کا تحفظ ڈیفالٹ کے ذریعے فعال نہیں ہوتا ہے۔';
+    return 'تمام آن لائن تجارت ثالثی بانڈز کے ذریعے محفوظ ہیں۔ جب تجارت شروع کی جاتی ہے تو تجارت کی رقم کے برابر کریپٹو کرنسی کی رقم خود بخود بیچنے والے کے $appName بانڈ والیٹ سے محفوظ ہوجاتی ہے۔ اس کا مطلب ہے کہ اگر بیچنے والا آپ کے پیسے لے کر بھاگ جاتا ہے اور تجارت کو حتمی شکل نہیں دیتا ہے، تو $appName سپورٹ ثالثی بانڈ میں رکھی گئی کریپٹو کرنسی کو آپ کے پاس بھیج سکتا ہے۔ اگر آپ cryptocurrency فروخت کر رہے ہیں، تو کبھی بھی تجارت کو حتمی شکل نہ دیں اس سے پہلے کہ آپ کو معلوم ہو کہ آپ نے خریدار سے رقم وصول کی ہے۔ براہ کرم نوٹ کریں کہ مقامی تجارت میں ثالثی بانڈ کا تحفظ ڈیفالٹ کے ذریعے فعال نہیں ہوتا ہے۔';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nUr extends I18n {
   String get morph250Sbservice8722Sbdown => 'ChangeNow کی XMR سروس عارضی طور پر دستیاب نہیں ہے۔ بعد میں دوبارہ کوشش کریں۔';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '$cryptocurrencyName پتہ وصول کرنا';
   }
 
@@ -4773,9 +4773,7 @@ class I18nUr extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'اس اشتہار کی قسم کے لیے مطلوبہ کم از کم سے کم والیٹ بیلنس';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'پہلی بار کی حد ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'پہلی بار کی حد  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'اختیاری. ان صارفین کے لیے زیادہ سے زیادہ لین دین کی رقم کو محدود کریں جن کے ساتھ آپ کی سابقہ تجارت نہیں ہے۔ کم از کم 0۔';
@@ -5268,12 +5266,12 @@ class I18nUr extends I18n {
   String get search250Sbcoordinates250Sblon => 'طول البلد';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '$locationمیں نقد کے لیے $assetName فروخت کریں';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '$location میں نقد رقم کے ساتھ $assetName خریدیں';
   }
 
@@ -5340,7 +5338,7 @@ class I18nUr extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'ایک حقیقی LocalBitcoins اور Paxful متبادل۔';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'اگر آپ پرائیویسی پر حملے کے بارے میں فکر مند ہیں تو - سرمایہ کاری کے لیے بہترین کریپٹو کرنسی XMR ہے۔ Monero ایک ناقابل شناخت سکہ ہے جسے ذہن میں رکھتے ہوئے رازداری کے ساتھ تیار کیا گیا ہے۔\n<br/>\nMonero کہاں خریدنا ہے؟ LocalMonero XMR کمیونٹی میں سب سے بڑا، سب سے زیادہ بھروسہ مند اور اچھی طرح سے قائم P2P Monero ایکسچینج ہے۔ ہمارے پاس کوئی KYC چیک نہیں ہے - آپ PayPal، کریڈٹ کارڈ، گفٹ کارڈ، نقد بذریعہ ڈاک یا بٹ کوائن کو Monero میں ID کی تصدیق کے بغیر گمنام طور پر Monero خرید سکتے ہیں - ہمارا پلیٹ فارم ادائیگی کے کسی بھی طریقہ کو سپورٹ کرتا ہے۔';
+  String get seo250Sbtext8722Sb1 => 'اگر آپ پرائیویسی پر حملے کے بارے میں فکر مند ہیں تو - سرمایہ کاری کے لیے بہترین کریپٹو کرنسی XMR ہے۔ Monero ایک ناقابل شناخت سکہ ہے جسے ذہن میں رکھتے ہوئے رازداری کے ساتھ تیار کیا گیا ہے۔\n<br/>\nMonero کہاں خریدنا ہے؟ LocalMonero XMR کمیونٹی میں سب سے بڑا، سب سے زیادہ بھروسہ مند اور اچھی طرح سے قائم P2P Monero ٹریڈنگ پلیٹ فارم ہے۔ ہمارے پاس کوئی KYC چیک نہیں ہے - آپ PayPal، کریڈٹ کارڈ، گفٹ کارڈ، نقد بذریعہ ڈاک یا بٹ کوائن کو Monero میں ID کی تصدیق کے بغیر گمنام طور پر Monero خرید سکتے ہیں - ہمارا پلیٹ فارم ادائیگی کے کسی بھی طریقہ کو سپورٹ کرتا ہے۔';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'سوچ رہے ہیں کہ بٹ کوائن میں سرمایہ کاری کیسے کی جائے؟ AgoraDesk پر، بٹ کوائنز خریدنا کبھی بھی آسان نہیں تھا - فوری طور پر کسی شخص سے اپنا پسندیدہ آن لائن ادائیگی کا طریقہ استعمال کرتے ہوئے BTC خریدیں: پے پال، کریڈٹ/ڈیبٹ کارڈ یا بینک ٹرانسفر، گفٹ کارڈز، وینمو یا کوئی اور۔\n<br/>\nاگر آپ نقد رقم کے ساتھ اپنے قریب بٹ کوائنز خریدنا چاہتے ہیں، تو آپ مقامی طور پر بٹ کوائنز فروخت کرنے کے خواہشمند کسی کو تلاش کر سکتے ہیں - تجارتی پلیٹ فارم نقد رقم کے ساتھ BTC خریدنے اور فروخت کرنے کی حمایت کرتا ہے۔ آپ ڈاک کے ذریعے نقد رقم کا استعمال کرتے ہوئے بٹ کوائنز بھی خرید سکتے ہیں۔';
@@ -6811,7 +6809,7 @@ class I18nUr extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'وصول کریں $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nUr extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'لین دین کی ترجیح منتخب کریں';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '$assetNameپتہ وصول کرنا';
   }
 
@@ -6879,7 +6877,7 @@ class I18nUr extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'بھیجیں $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nUr extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'آؤٹ گوئنگ کریپٹو کرنسی فیس';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'بھیجیں $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nUr extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'وصول کریں $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'بھیجیں $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nUr extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'وصول کریں $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nUr extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'وصول کریں';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'بھیجیں $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nUr extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'پتہ تبدیل کریں';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'رقم ($asset)';
   }
 
@@ -7451,7 +7449,7 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid میں کون سی ایپس شامل کی جا سکتی ہیں؟';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\nGitlab پر <li>فورک <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a></li>\n<li>اپنے آلے کے ذخیرے کو کلون کریں۔</li>\n<li>ایپ کے بنڈل ID کے ساتھ ایک برانچ بنائیں، مثال کے طور پر <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\nGitlab پر <li>فورک <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a></li>\n<li>اپنے آلے کے ذخیرے کو کلون کریں۔</li>\n<li>ایپ کی بنڈل ID کے ساتھ ایک برانچ بنائیں، مثال کے طور پر <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'مرحلہ نمبر 1';
@@ -7469,13 +7467,13 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'مرحلہ 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>فائل کھولیں اور اس میں ترمیم کریں۔ یہاں ایک مثال ہے: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a></p>\n<p>مثال میں آپ دیکھ سکتے ہیں:</p>\n<ol>\n<li>فلٹر کو ذیلی ماڈل کے طور پر استعمال کیا جاتا ہے - یہ F-Droid ٹیم کی طرف سے ایک ضرورت ہے۔</li>\n<li>ہر ذائقے کے لیے ہم نے ایک الگ برانچ استعمال کی ہے (کمانڈ <code>AutoUpdateMode: Version %v-fdroid-lm</code>)۔ اس کی وجہ یہ ہے کہ فاسٹ لین فلٹر کے ساتھ ذائقوں کی حمایت نہیں کرتا ہے۔\n<li>پہلی بار ہم دستی طور پر تعمیراتی معلومات شامل کرتے ہیں، مستقبل میں یہ ایک بوٹ کے ذریعے خود بخود شامل ہو جائے گا، جب ہم ایک نیا ٹیگ دبائیں گے۔</li>\n</ol>\n<p>چیک کریں کہ فائل میں صحیح نحو ہے: <code>fdroid readmeta</code></p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>فائل کھولیں اور اس میں ترمیم کریں۔ یہاں ایک مثال ہے: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a></p>\n<p>مثال میں آپ دیکھ سکتے ہیں:</p>\n<ol>\n<li>فلٹر کو ذیلی ماڈل کے طور پر استعمال کیا جاتا ہے - یہ F-Droid ٹیم کی طرف سے ایک ضرورت ہے۔</li>\n<li>ہر ذائقے کے لیے ہم نے ایک الگ برانچ استعمال کی ہے (کمانڈ <code>AutoUpdateMode: Version %v-fdroid-lm</code>)۔ اس کی وجہ یہ ہے کہ فاسٹ لین فلٹر کے ساتھ ذائقوں کو سپورٹ نہیں کرتا ہے۔</li>\n<li>پہلی بار ہم دستی طور پر تعمیراتی معلومات شامل کرتے ہیں، مستقبل میں یہ ایک بوٹ کے ذریعے خود بخود شامل ہو جائے گا، جب ہم ایک نیا ٹیگ دبائیں گے۔</li>\n</ol>\n<p>چیک کریں کہ فائل میں صحیح نحو ہے: <code>fdroid readmeta</code></p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'مرحلہ 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>اب، آئیے F-Droid مارکیٹ کے لیے ڈیٹا شامل کرتے ہیں۔ اس کے لیے ہم ہر ذائقے کے لیے الگ برانچ بناتے ہیں:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>اس کے بعد، ہم فاسٹلین کے لیے ایک فولڈر بناتے ہیں:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a></p>\n<p>مطلوبہ ڈیٹا شامل کریں اور اسے دبائیں</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>اب، آئیے F-Droid مارکیٹ کے لیے ڈیٹا شامل کرتے ہیں۔ اس کے لیے ہم ہر ذائقے کے لیے الگ برانچ بناتے ہیں:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>اس کے بعد، ہم فاسٹ لین کے لیے ایک فولڈر بناتے ہیں:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a></p>\n<p>مطلوبہ ڈیٹا شامل کریں اور اسے دبائیں</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'مرحلہ 5';
@@ -7496,7 +7494,7 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sbdescription => 'F-Droid Android کے لیے FOSS ایپس کا ایک بہترین کیٹلاگ ہے، لیکن آپ کی ایپ کو شامل کرنا تھوڑا سا پیچیدہ ہو سکتا ہے...';
 
   @override
-  String get devblog250Sbfdroid250Sbtitle => 'F-Droid پر ذائقوں کے ساتھ اپنی فلٹر ایپ کیسے شائع کریں؟';
+  String get devblog250Sbfdroid250Sbtitle => 'F-Droid پر اپنی فلٹر ایپ کو ذائقوں کے ساتھ کیسے شائع کریں؟';
 
   @override
   String get devblog250Sbtitle => 'ترقیاتی بلاگ';
@@ -7526,7 +7524,7 @@ class I18nUr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb270 => 'یہ پتہ آپ کی ایڈریس بک میں پہلے سے موجود ہے۔';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb273 => 'یہ پتہ آپ کی ایڈریس بک سے پہلے ہی حذف کر دیا گیا ہے۔';
+  String get error250Sbaddress8722Sbbook250Sb273 => 'یہ پتہ پہلے ہی آپ کی ایڈریس بک سے حذف کر دیا گیا ہے۔';
 
   @override
   String get address8722Sbbook => 'ایڈریس بک';
@@ -7544,6 +7542,17 @@ class I18nUr extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'جب آپ \"محفوظ کریں\" کو دبائیں گے تو اشتہار کا ملک خود بخود \"عالمی\" میں اپ ڈیٹ ہو جائے گا۔';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'صرف ایک ہی اثاثہ فروخت اشتہارات';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'مجھے ویب سائٹ پر لے جائیں۔';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset صرف اشتہارات خریدیں۔';
+  }
 
   @override
   String get ads => 'اشتہارات';
@@ -8158,6 +8167,9 @@ class I18nUr extends I18n {
   String get api_error_98 => 'کسی ایسے اشتہار کے لیے تجارت بنانے کی کوشش کرنا جس کا پوسٹر موجود نہیں ہے';
 
   @override
+  String get api_error_99 => 'پہلی تجارت بناتے وقت اشتہار کے مالک کی طرف سے اجازت سے زیادہ رقم کی درخواست کرنے کی کوشش کرنا';
+
+  @override
   String get api_error_100 => 'تجارتی تخلیق کے لیے 0.0000000001 XMR سے کم کی درخواست نہیں کر سکتے';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nUr extends I18n {
 
   @override
   String get api_error_121 => 'ایسی تجارت کو ایسکرو کرنے کی کوشش کرنا جو موجود نہیں ہے';
+
+  @override
+  String get api_error_122 => 'تجارت کو فنڈ دینے کے لیے ناکافی فنڈز';
+
+  @override
+  String get api_error_123 => 'تجارت کو فنڈ دینے کے لیے ناکافی فنڈز';
+
+  @override
+  String get api_error_124 => 'تجارت کو فنڈ دیتے وقت غلطی';
 
   @override
   String get api_error_125 => 'تجارت کی منسوخی کی درخواست کرنے والا صارف موجود نہیں ہے';
@@ -8557,7 +8578,7 @@ class I18nUr extends I18n {
   String get pin_enter_to_confirm_transaction => 'لین دین کی تصدیق کے لیے PIN درج کریں';
 
   @override
-  String get pin_you_can_use => 'آپ ایپ کو غیر مقفل کرنے کے لیے اس PIN کا استعمال کر سکتے ہیں۔';
+  String get pin_you_can_use => 'PIN کم از کم 4 ہندسوں کا ہونا چاہیے۔';
 
   @override
   String get pin_confirm => 'پن کی تصدیق کریں';
@@ -9265,7 +9286,7 @@ class I18nUr extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR آسانی سے خریدیں';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'ID کی تصدیق کے بغیر Monero خریدیں یا فروخت کریں۔ نقد یا آن لائن۔ محفوظ، تیز، آسان۔\n\nLocalMonero XMR کمیونٹی میں سب سے بڑا، سب سے زیادہ بھروسہ مند اور اچھی طرح سے قائم P2P ٹریڈنگ پلیٹ فارم ہے۔ ہمارے پاس کوئی KYC چیک نہیں ہے - آپ PayPal، کریڈٹ کارڈ، گفٹ کارڈ، میل کے ذریعے نقد رقم کے ذریعے ID کی تصدیق کے بغیر Monero خرید سکتے ہیں یا Bitcoin، Ether، USDT، یا کسی دوسرے کرپٹو کوائن کو Monero میں تبدیل کر سکتے ہیں - ہمارا پلیٹ فارم ادائیگی کے کسی بھی طریقہ کو سپورٹ کرتا ہے۔\n\n- محفوظ اور ہموار تجارت\nہم کسی بھی ادائیگی کے طریقے، کسی بھی کرنسی، کہیں بھی سپورٹ کرتے ہیں۔ ہم ادائیگی کے طریقوں کو نہیں ہٹاتے ہیں، اور ہم آمنے سامنے نقد تجارت کی مکمل حمایت کرتے ہیں۔ ہماری تمام تجارتیں ثالثی بانڈ کے ذریعے محفوظ ہیں۔ اس حقیقت کی بدولت کہ ہمیں تجارت شروع ہونے سے پہلے ثالثی بانڈ میں فنڈز رکھنے کی ضرورت ہوتی ہے، ہم خریدار کے لیے ایک ہموار اور محفوظ تجربہ کو یقینی بناتے ہیں، جو پلیٹ فارم کی مقبولیت کے لیے ضروری ہے اور بیچنے والے کے لیے صارفین کو دہراتے ہیں۔\n\n- کوئی KYC/AML یا ID کی توثیق نہیں۔\nLocalMonero آپ کے تجارتی تجربے کی سادگی اور براہ راست آگے بڑھنے کے لیے پرعزم ہے۔ ہم KYC/AML کو ملازمت نہیں دیتے، اور نہ ہی ہم ایسا کرنے کا منصوبہ بناتے ہیں۔\n\n- کمیونٹی کے ذریعہ قابل اعتماد\nہمارے پلیٹ فارم نے چار سالوں سے کام کیا ہے، 2018 کے عظیم کرپٹو کرنسی مارکیٹ کریش سے بچ گیا ہے، اور اپنی کمیونٹی پر مبنی مستعد سروس کے ذریعے انتہائی مشکوک Monero کمیونٹی میں سب سے زیادہ قابل اعتماد نام بن گیا ہے۔\n\n- محفوظ، اوپن سورس، پرائیویسی سینٹرک، سنسر شپ مزاحم\nہماری ایپ مفت اور اوپن سورس ہے، جو اس بات کو یقینی بناتی ہے کہ بہت سی آنکھیں ایپ کے کوڈ کو دیکھ رہی ہیں تاکہ اس بات کو یقینی بنایا جا سکے کہ کوئی حفاظتی سوراخ یا رازداری کا رساو نہیں ہے۔ ہماری ایپ کو اوپن سورس کرنا کسی کو بھی ہماری ایپ تک رسائی کی اجازت دیتا ہے چاہے کوئی مخصوص ایپ ریپوزٹری ایپ کو سنسر کرے۔ ہماری ایپ ان فونز پر بھی کام کرتی ہے جن کو گوگل نے مکمل طور پر بلاک کر رکھا ہے۔ ہم آپ کی پرائیویسی کو بہت اہمیت دیتے ہیں، ہمیں رجسٹریشن کے وقت آپ سے ای میل فراہم کرنے کی بھی ضرورت نہیں ہے۔\n\nماخذ کوڈ: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nایشو ٹریکر: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- تارکیی سپورٹ\nہماری سپورٹ ٹیم تیز، جوابدہ اور خوش کرنے کے لیے ہمیشہ بے چین ہے۔ ہمارے پاس کبھی بھی سپورٹ ٹکٹ نہیں تھا جس کا 24 گھنٹے کے اندر جواب نہ دیا گیا ہو۔ سوشل میڈیا کے ذریعے ہم ہمیشہ آسانی سے قابل رسائی ہوتے ہیں، ہم آپ کی تنقیدوں کو غور سے سنتے ہیں اور ہم ہمیشہ صارف کی اچھی تجاویز کو ریکارڈ وقت میں نافذ کرتے ہیں۔\n\nآپ ہماری مدد تک یہاں پہنچ سکتے ہیں: https://localmonero.co/support\n\n- منصفانہ فیس\nجب آپ ہمارے ثالثی بانڈ والیٹ میں Monero جمع کرتے یا نکالتے ہیں تو ہم حد سے زیادہ فیس نہیں لیتے ہیں۔ کوئی ڈپازٹ فیس نہیں ہے، اور نکالنے کی فیس اس فیس کے بہت قریب ہے جو آپ ایک عام لین دین پر ادا کر رہے ہوں گے۔';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'ID کی تصدیق کے بغیر Monero خریدیں یا فروخت کریں۔ نقد یا آن لائن۔ محفوظ، تیز، آسان۔\n\nLocalMonero XMR کمیونٹی میں سب سے بڑا، سب سے زیادہ بھروسہ مند اور اچھی طرح سے قائم P2P ٹریڈنگ پلیٹ فارم ہے۔ ہمارے پاس کوئی KYC چیک نہیں ہے - آپ PayPal، کریڈٹ کارڈ، گفٹ کارڈ، میل کے ذریعے نقد رقم کے ذریعے ID کی تصدیق کے بغیر Monero خرید سکتے ہیں یا Bitcoin، Ether، USDT، یا کسی دوسرے کرپٹو کوائن کو Monero میں تبدیل کر سکتے ہیں - ہمارا پلیٹ فارم ادائیگی کے کسی بھی طریقہ کو سپورٹ کرتا ہے۔\n\n- محفوظ اور ہموار تجارت\nہم کسی بھی ادائیگی کے طریقے، کسی بھی کرنسی، کہیں بھی سپورٹ کرتے ہیں۔ ہم ادائیگی کے طریقوں کو نہیں ہٹاتے ہیں، اور ہم آمنے سامنے نقد تجارت کی مکمل حمایت کرتے ہیں۔ ہماری تمام تجارتیں ثالثی بانڈ کے ذریعے محفوظ ہیں۔ اس حقیقت کی بدولت کہ ہمیں تجارت شروع ہونے سے پہلے ثالثی بانڈ میں فنڈز رکھنے کی ضرورت ہوتی ہے، ہم خریدار کے لیے ایک ہموار اور محفوظ تجربہ کو یقینی بناتے ہیں، جو پلیٹ فارم کی مقبولیت کے لیے ضروری ہے اور بیچنے والے کے لیے گاہکوں کو دہرانا ہے۔\n\n- کوئی KYC/AML یا ID کی توثیق نہیں۔\nLocalMonero آپ کے تجارتی تجربے کی سادگی اور براہ راست آگے بڑھنے کے لیے پرعزم ہے۔ ہم KYC/AML کو ملازمت نہیں دیتے، اور نہ ہی ہم ایسا کرنے کا منصوبہ بناتے ہیں۔\n\n- کمیونٹی کے ذریعہ قابل اعتماد\nہمارے پلیٹ فارم نے چار سال سے زیادہ کام کیا، 2018 کے عظیم کرپٹو کرنسی مارکیٹ کریش سے بچ گیا، اور اپنی کمیونٹی پر مبنی مستعد سروس کے ذریعے انتہائی مشکوک Monero کمیونٹی میں سب سے زیادہ بھروسہ مند نام بن گیا۔\n\n- محفوظ، اوپن سورس، پرائیویسی سینٹرک، سنسر شپ مزاحم\nہماری ایپ مفت اور اوپن سورس ہے، جو اس بات کو یقینی بناتی ہے کہ بہت سی آنکھیں ایپ کے کوڈ کو دیکھ رہی ہیں تاکہ اس بات کو یقینی بنایا جا سکے کہ کوئی حفاظتی سوراخ یا رازداری کا رساو نہیں ہے۔ ہماری ایپ کو اوپن سورس کرنا کسی کو بھی ہماری ایپ تک رسائی کی اجازت دیتا ہے چاہے کوئی مخصوص ایپ ریپوزٹری ایپ کو سنسر کرے۔ ہماری ایپ ان فونز پر بھی کام کرتی ہے جن کو گوگل نے مکمل طور پر بلاک کر رکھا ہے۔ ہم آپ کی پرائیویسی کو بہت اہمیت دیتے ہیں، ہمیں رجسٹریشن کے وقت آپ سے ای میل فراہم کرنے کی بھی ضرورت نہیں ہے۔\n\nماخذ کوڈ: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nایشو ٹریکر: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- تارکیی سپورٹ\nہماری سپورٹ ٹیم تیز، جوابدہ اور خوش کرنے کے لیے ہمیشہ بے چین ہے۔ ہمارے پاس کبھی بھی سپورٹ ٹکٹ نہیں تھا جس کا 24 گھنٹے کے اندر جواب نہ دیا گیا ہو۔ سوشل میڈیا کے ذریعے ہم ہمیشہ آسانی سے پہنچ جاتے ہیں، ہم آپ کی تنقید کو غور سے سنتے ہیں اور ہم ہمیشہ ریکارڈ وقت میں صارف کی اچھی تجاویز پر عمل درآمد کرتے ہیں۔\n\nآپ ہماری مدد تک یہاں پہنچ سکتے ہیں: https://localmonero.co/support\n\n- منصفانہ فیس\nجب آپ ہمارے ثالثی بانڈ والیٹ میں Monero جمع کرتے یا نکالتے ہیں تو ہم حد سے زیادہ فیس نہیں لیتے ہیں۔ کوئی ڈپازٹ فیس نہیں ہے، اور نکالنے کی فیس اس فیس کے بہت قریب ہے جو آپ ایک عام لین دین پر ادا کرتے ہیں۔';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: نجی طور پر XMR خریدیں';
@@ -9337,7 +9358,7 @@ class I18nUr extends I18n {
 
   @override
   String app_503_body(Object val) {
-    return '$val جلد ہی واپس آجائے گا!\\nزحمت کے لیے معذرت لیکن ہم اس وقت کچھ طے شدہ دیکھ بھال انجام دے رہے ہیں۔\\nشاید ہم جلد ہی واپس آن لائن ہوں گے۔ ہمارے کمیونٹی گروپس میں اپ ڈیٹ رہیں:';
+    return '$val جلد ہی واپس آجائے گا!\\nزحمت کے لیے معذرت لیکن ہم اس وقت کچھ طے شدہ دیکھ بھال کر رہے ہیں۔\\nہم شاید جلد ہی واپس آن لائن ہوں گے۔ ہمارے کمیونٹی گروپس میں اپ ڈیٹ رہیں:';
   }
 
   @override
@@ -9347,7 +9368,7 @@ class I18nUr extends I18n {
   String get app_chat_leave_review => 'ایک جائزہ چھوڑنے کے لیے یہاں تھپتھپائیں!';
 
   @override
-  String get app_chat_update_review => 'آپ نے پہلے ہی اس صارف کا جائزہ چھوڑ دیا ہے۔ کیا آپ اپنے جائزے کو ابھی اپ ڈیٹ کرنا چاہیں گے؟';
+  String get app_chat_update_review => 'آپ نے پہلے ہی اس صارف کا جائزہ چھوڑ دیا ہے۔ کیا آپ ابھی اپنا جائزہ اپ ڈیٹ کرنا چاہیں گے؟';
 
   @override
   String get app_select_buyer_seller => 'خریدار یا بیچنے والے کو منتخب کریں۔';
@@ -9445,14 +9466,5 @@ class I18nUr extends I18n {
   String get api_error_273 => 'ایک ایسے ایڈریس کو حذف کرنے کی کوشش کرنا جو صارف کی ایڈریس بک میں موجود نہیں ہے۔';
 
   @override
-  String get api_error_99 => 'پہلی تجارت بناتے وقت first_time_limit_asset کی اجازت سے زیادہ رقم کی درخواست کرنے کی کوشش کرنا';
-
-  @override
-  String get api_error_122 => 'فلوٹنگ LOCAL_SELL تجارت کے لیے فنڈز ناکافی ہیں';
-
-  @override
-  String get api_error_123 => 'غیر فلوٹنگ LOCAL_SELL تجارت کے لیے فنڈز ناکافی ہیں';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL کو فنڈ دیتے وقت خرابی';
+  String get pin_you_can_use_new => 'PIN کم از کم 4 ہندسوں کا ہونا چاہیے۔';
 }

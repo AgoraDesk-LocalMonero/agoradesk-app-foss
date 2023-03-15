@@ -270,12 +270,12 @@ class I18nZh extends I18n {
   String get ad250Sbdeleted => '此交易广告已被删除';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '在$country附近用现金出售$assetName';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '在$country附近用现金购买$assetName';
   }
 
@@ -1234,7 +1234,7 @@ class I18nZh extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => '金额（货币）';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return '金额（$assetSymbol）';
   }
 
@@ -1575,7 +1575,7 @@ class I18nZh extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return '交易$id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName采用点对点门罗币交易方式。用户彼此之间可以在我们的市场中出售和购买门罗币。用户（称为“交易者”）可以创建交易广告并指定汇率和他们希望提供的付款方式。您可以浏览网站上的交易广告，搜索您喜欢的付款方式。您会找到使用 60 多种付款方式网上出售门罗币的交易者。如果您是$appName新用户，想要购买门罗币，请参阅我们如何购买的指南，了解如何购买门罗币。';
+    return '$appName 是一个点对点的门罗币交易平台。我们是一个用户可以相互买卖 Monero 的市场。称为交易员的用户使用他们想要提供的价格和支付方式制作广告。您可以浏览我们的网站以查找贸易广告并搜索您喜欢的付款方式。您会发现交易者使用 60 多种不同的支付方式在线买卖门罗币。如果您是 $appName 的新手并且想购买门罗币，请查看我们的购买指南以了解如何购买门罗币。';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nZh extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => '费用页';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return '我们目前没有自己的APP。不过，你可以通过$telegram接收移动通知！你可以参考$thisGuide来启用Telegram通知（好容易呀）。我们的机器人会发你的$appName事件的通知。';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return '是的，我们有！如果你有安卓系统，可以在$playstoreLink、$fdroidLink上获取，也可以直接下载$apkLink。对于 iOS 设备，它在 $appstoreLink 上可用。也可以在【X225X】接收手机通知！ $thisGuide 将带您完成 Telegram 通知激活过程（很简单）。然后我们的机器人会向您发送有关您的 $appName 事件的通知。';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '所有在线交易均受仲裁保证金保护。当交易开始时，交易的门罗币数量会自动从卖家的 $appName 钱包中保留。这意味着，如果卖家拿走您的钱并且没有完成交易，$appName 支持可以完成与仲裁保证金中持有的门罗币的交易。如果您要出售门罗币，请不要在知道您从门罗币买家那里收到钱之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
+    return '所有在线交易均受仲裁债券保护。交易开始时，会自动从卖家的 $appName 债券钱包中保留与交易金额相等的门罗币。这意味着，如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的门罗币转给你。如果您要出售门罗币，切勿在知道您已收到门罗币买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return '所有在线交易均受仲裁保证金保护。当交易开始时，交易的加密货币数量会自动从卖家的 $appName 钱包中保留。这意味着，如果卖家拿走您的钱而没有完成交易，$appName 支持可以使用仲裁保证金中持有的硬币完成交易。如果您要出售加密货币，请不要在知道您从买家那里收到钱之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
+    return '所有在线交易均受仲裁债券保护。开始交易时，会自动从卖方的 $appName 债券钱包中保留与交易金额相等的加密货币。这意味着如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的加密货币转给你。如果您要出售加密货币，切勿在知道已收到买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
   }
 
   @override
@@ -3251,7 +3251,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbatomic250Sbtitle => '原子互换技术将如何在门罗币上实现';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>强烈建议读者阅读我们的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《为什么门罗有尾部发射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《门罗挖矿：什么造就了RandomX》如此特别”</a>。本文基于其中介绍的概念。</i></p>\n\n<p>每当人们讨论区块链问题时，第一个跳出的词就是“扩展”。区块链不能很好地扩展已经不是什么秘密，但大多数人不知道为什么。</p>\n\n<p>事实是，扩展实际上是一个涵盖两个不同类别的总称：给定时间点的协议支持和技术支持。在本文中，我们将重点关注一个，协议支持基本上是衡量协议在给定时间可以处理多少事务的量度。</p>\n\n<p>比特币有区块大小限制，这意味着一旦足够多的交易被包含在一个区块中，任何额外的交易都必须排队等候下一个区块。一个有用的类比是考虑火车。一列火车停靠在车站，排队的人鱼贯而入。一旦火车满员，留在外面的任何人都必须等待下一班。</p>\n\n<p>比特币使用费用来确定谁进入区块。回到火车的类比，可以想象一位即将被落在后面的潜在乘客向火车工程师提供五美元让他坐下。其他乘客也纷纷效仿，最终发生了一场竞价战，看谁能坐到哪个座位。由司机决定他是否要遵守先到先得的政策，但通过接受出价最高的人来最大化他的收入符合他的最佳经济利益。</p>\n\n<p>在这个比喻中，矿工就是火车司机。他们可以在区块中包含他们想要的任何交易，但他们通常会选择支付费用最高的交易。</p>\n\n<p>或者，如果街区不是很满，人们就没有动力支付高额费用，因为有很多免费座位可供使用。</p>\n\n<p> 在 2017 年加密货币繁荣的鼎盛时期，比特币充斥着大量交易，那些想要包含在下一个区块或任何近期区块中的交易费用飙升。不愿支付高额手续费的交易延迟数小时、数天，甚至完全退出队列。</p>\n\n<p>如果人们经常谈论“大规模采用”，比特币将如何发展，这是一个令人痛心的见解。如果比特币被大众使用，情况会比 2017 年更糟，除了富人之外，任何人都无法访问比特币，仅仅是因为区块大小固定导致吞吐量很小，导致费用市场接管.</p>\n\n<p>Monero 预见到了这一点，并想做一些不同的事情。所以 Monero 开发人员实现了动态块大小。</p>\n\n<p>基本上，Monero 也有块大小上限，但它是软上限。当等待交易的队列太长时，矿工可以增加区块的大小。用我们的火车类比，你可以想象增加更多的火车车厢来容纳额外的乘客。队列为空后，块会收缩回原来的大小。</p>\n\n<p>如果这看起来是个不错的主意，那么问为什么门罗币是唯一实现了这个的加密货币似乎是合理的。为什么不将其添加到比特币上以解决吞吐量问题？</p>\n\n<p>不幸的是，这是不可能的。有几个原因，我们会尽力解释。</p>\n\n<p> 拥有大区块始终符合矿工的最大利益。有了大区块，他们可以进行更多交易，并从费用和区块奖励中赚取更多的钱。这有可能导致垃圾邮件攻击，即有人发送许多小额交易，收取少量费用，从而使链条膨胀。矿工只会增加区块大小，因为钱就是钱，不管多小。这将导致始终如一的大区块，而经济效益很小。比特币通过人为限制区块大小来解决这个问题，从而产生一个费用市场。垃圾邮件攻击者必须支付超过其他用户的费用，而且它不再便宜。但这意味着块已满，留下一些交易等待如上所述。</p>\n\n<p>那么门罗币如何在拥有动态块大小的同时避免垃圾邮件攻击呢？答案很简单，但很聪明。当区块大于正常值时，会引入对区块奖励的惩罚。如果矿工想要增加区块大小，他们从发现该区块中获得的奖励将少于他们在其他情况下获得的奖励。因此，只有当用户支付的交易费用超过区块奖励的损失部分时，他们才会增加区块大小。例如，如果矿工通过提高区块大小将损失 0.5 XMR，而支付的交易费用总和为 0.4 XMR，那么如果他们提高区块大小，将净损失 0.1 XMR，因此他们不会去做吧。相反，如果总交易费用加起来达到 0.7 XMR，那么将获得 0.2 XMR 的净收益，即使他们从区块奖励惩罚中损失了 0.5 XMR，因此矿工将增加规模。</p>\n\n<p>这些动态块允许网络有机增长，而无需人为地限制块大小来建立强制收费市场，同时仍然避免垃圾邮件攻击。我们可以从更多的角度来看待这个想法，以及为什么不可能添加到比特币的更多原因，但现在，我们希望读者了解门罗币如何回避比特币中的几个问题，它的衍生品，以及它计划如何将其吞吐量扩展到未来。</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>强烈建议读者阅读我们的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《为什么门罗有尾部发射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《门罗挖矿：什么造就了RandomX》如此特别”</a>。本文基于其中介绍的概念。</i></p>\n\n<p>每当人们讨论区块链问题时，第一个跳出的词就是“扩展”。区块链不能很好地扩展已经不是什么秘密，但大多数人不知道为什么。</p>\n\n<p>事实是，扩展实际上是一个涵盖两个不同类别的总称：给定时间点的协议支持和技术支持。在本文中，我们将重点关注一个，协议支持基本上是衡量协议在给定时间可以处理多少事务的量度。</p>\n\n<p>比特币有区块大小限制，这意味着一旦足够多的交易被包含在一个区块中，任何额外的交易都必须排队等候下一个区块。一个有用的类比是考虑火车。一列火车停靠在车站，排队的人鱼贯而入。一旦火车满员，留在外面的任何人都必须等待下一班。</p>\n\n<p>比特币使用费用来确定谁进入区块。回到火车的类比，可以想象一位即将被落在后面的潜在乘客向火车工程师提供五美元让他坐下。其他乘客也纷纷效仿，最终发生了一场竞价战，看谁能坐到哪个座位。由司机决定他是否要遵守先到先得的政策，但通过接受出价最高的人来最大化他的收入符合他的最佳经济利益。 </p>\n\n<p>在这个比喻中，矿工就是火车司机。他们可以在区块中包含他们想要的任何交易，但他们通常会选择支付费用最高的交易。</p>\n\n<p>或者，如果街区不是很满，人们就没有动力支付高额费用，因为有很多免费座位可供使用。</p>\n\n<p> 在 2017 年加密货币繁荣的鼎盛时期，比特币充斥着大量交易，那些想要包含在下一个区块或任何近期区块中的交易费用飙升。不愿支付高额手续费的交易延迟数小时、数天，甚至完全退出队列。</p>\n\n<p>如果人们经常谈论“大规模采用”，比特币将如何发展，这是一个令人痛心的见解。如果比特币被大众使用，情况会比 2017 年更糟，除了富人之外，任何人都无法访问比特币，仅仅是因为区块大小固定导致吞吐量很小，导致费用市场接管.</p>\n\n<p>Monero 预见到了这一点，并想做一些不同的事情。所以 Monero 开发人员实现了动态块大小。</p>\n\n<p>基本上，Monero 也有块大小上限，但它是软上限。当等待交易的队列太长时，矿工可以增加区块的大小。用我们的火车类比，你可以想象增加更多的火车车厢来容纳额外的乘客。队列为空后，块会收缩回原来的大小。</p>\n\n<p>如果这看起来是个不错的主意，那么问为什么门罗币是唯一实现了这个的加密货币似乎是合理的。为什么不将其添加到比特币上以解决吞吐量问题？</p>\n\n<p>不幸的是，这是不可能的。有几个原因，我们会尽力解释。</p>\n\n<p> 拥有大区块始终符合矿工的最大利益。有了大区块，他们可以进行更多交易，并从费用和区块奖励中赚取更多的钱。这有可能导致垃圾邮件攻击，即有人发送许多小额交易，收取少量费用，从而使链条膨胀。矿工只会增加区块大小，因为钱就是钱，不管多小。这将导致始终如一的大区块，而经济效益很小。比特币通过人为限制区块大小来解决这个问题，从而产生一个费用市场。垃圾邮件攻击者必须支付超过其他用户的费用，而且它不再便宜。但这意味着块已满，留下一些交易等待如上所述。</p>\n\n<p>那么门罗币如何在拥有动态块大小的同时避免垃圾邮件攻击呢？答案很简单，但很聪明。当区块大于正常值时，会引入对区块奖励的惩罚。如果矿工想要增加区块大小，他们从发现该区块中获得的奖励将少于他们在其他情况下获得的奖励。因此，只有当用户支付的交易费用超过区块奖励的损失部分时，他们才会增加区块大小。例如，如果矿工通过提高区块大小将损失 0.5 XMR，而支付的交易费用总和为 0.4 XMR，那么如果他们提高区块大小，将净损失 0.1 XMR，因此他们不会去做吧。相反，如果总交易费用加起来达到 0.7 XMR，那么将获得 0.2 XMR 的净收益，即使他们从区块奖励惩罚中损失了 0.5 XMR，因此矿工将增加规模。</p>\n\n<p>这些动态块允许网络有机增长，而无需人为地限制块大小来建立强制收费市场，同时仍然避免垃圾邮件攻击。我们可以从更多的角度来看待这个想法，以及为什么不可能添加到比特币的更多原因，但现在，我们希望读者了解门罗币如何回避比特币中的几个问题，它的衍生品，以及它计划如何将其吞吐量扩展到未来。</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => '每当人们讨论区块链的缺点不足时，能听到最高频的词汇就是可扩展性. 而门罗币在解决该问题上独树一帜，与其它加密货币截然不同.';
@@ -3878,7 +3878,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打钱';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要记下来，因为如果你丢了种子，你就丢了你的门罗币，没人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想对其进行检查。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你在哪里以及如何暴露你的种子。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要把它写下来，因为如果你丢了种子，你就丢了你的门罗币，没有人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想检查一下。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你暴露种子的位置和方式。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丢失了种子和助记词，就失去了全部';
@@ -4443,7 +4443,7 @@ class I18nZh extends I18n {
   String get morph250Sbservice8722Sbdown => 'MorphToken的XMR服务暂时不可用。稍后再试。';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '接收$cryptocurrencyName地址';
   }
 
@@ -4773,9 +4773,7 @@ class I18nZh extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => '钱包余额低于此广告类型的要求的最低限额';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return '新买家限额（$assetSymbol）';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '新买家限额  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => '可选。如果交易者之前没有做过交易，这个数值将限制他的第一笔交易量。设定一个较低的值来限制您被诈骗的风险。最低0';
@@ -5268,12 +5266,12 @@ class I18nZh extends I18n {
   String get search250Sbcoordinates250Sblon => '经度';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '在$location附近用现金出售$assetName';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '在$location附近用现金购买$assetName';
   }
 
@@ -5340,7 +5338,7 @@ class I18nZh extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => '真正的LocalBitcoins和Paxful替代方案。';
 
   @override
-  String get seo250Sbtext8722Sb1 => '如果您担心隐私的入侵-最好的加密货币是XMR。门罗币（Monero）是一种不可追溯的代币，其设计宗旨是保护隐私。\n<br/>在哪里购买门罗币？ LocalMonero是XMR社区中最大，最受信任和完善的P2P Monero交换。我们没有KYC支票-您可以简单地匿名购买Monero，而无需使用PayPal，信用卡，礼品卡，邮件现金或将比特币转换为Monero进行身份验证-我们的平台支持任何付款方式。';
+  String get seo250Sbtext8722Sb1 => '如果您担心侵犯隐私 - 最好的投资加密货币是 XMR。 Monero 是一种无法追踪的代币，在设计时考虑到了隐私。\n<br/>\n在哪里购买门罗币？ LocalMonero 是 XMR 社区中最大、最受信任和完善的 P2P Monero 交易平台。我们没有 KYC 检查——您可以简单地匿名购买 Monero，无需使用 PayPal、信用卡、礼品卡、邮寄现金或将比特币转换为 Monero 进行身份验证——我们的平台支持任何支付方式。';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => '想知道如何投资比特币？在AgoraDesk上，购买比特币从未如此简单-使用您最喜欢的在线支付方式从一个人那里立即购买BTC：使用微信支付，支付宝， 贝宝，信用卡/借记卡或银行转账，礼品卡，邮寄现金或任何其他方法。\n<br/>\n如果您想用现金购买附近的比特币，您会发现有人愿意在当地出售比特币-交易平台支持用现金购买和持有BTC。您甚至可以通过邮件使用现金购买比特币。';
@@ -6811,7 +6809,7 @@ class I18nZh extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return '接收$assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nZh extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => '请选择交易优先级';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '接收$assetName的地址';
   }
 
@@ -6879,7 +6877,7 @@ class I18nZh extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return '发送$assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nZh extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => '传出加密货币费用';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return '发送$assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nZh extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return '接收 $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return '发送 $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nZh extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return '接收$assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nZh extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => '接收';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return '发送$assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nZh extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => '更换地址';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return '金额（$asset）';
   }
 
@@ -7445,13 +7443,13 @@ class I18nZh extends I18n {
   String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是适用于 Android 平台的 FOSS（免费和开源软件）应用程序的可安装目录。客户端使您可以轻松浏览、安装和跟踪设备上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid网站</a></p>\n</blockquote>\n\n<p>本教程中的所有步骤也适用于没有风味的应用程序。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些应用程序？';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上分叉 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存储库</a>。</li>\n<li>将存储库克隆到您的设备。</li>\n<li>使用应用程序的 bundle ID 创建一个分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上 Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存储库</a>。</li>\n<li>将存储库克隆到您的设备。</li>\n<li>使用应用程序的 bundle ID 创建一个分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => '步骤1';
@@ -7469,10 +7467,10 @@ class I18nZh extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => '步骤 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打开文件并编辑它。这是一个示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模块 - 这是 F-Droid 团队的要求。</li>\n<li> 对于每种风格，我们都使用了一个单独的分支（命令 <code>AutoUpdateMode：版本 %v-fdroid-lm</code>）。那是因为 Fastlane 不&#39;不支持 Flutter 的风格。</li>\n<li>我们第一次手动添加构建信息，将来它会在我们推送新标签后由机器人自动添加。</li>\n</ol>\n<p>检查文件语法是否正确：<code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打开文件并编辑它。这是一个示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模块 - 这是 F-Droid 团队的要求。</li>\n<li> 对于每种风格，我们都使用了一个单独的分支（命令 <code>AutoUpdateMode：Version %v-fdroid-lm</code>）。那是因为 Fastlane 不&#39;不支持 Flutter 的风格。</li>\n<li>我们第一次手动添加构建信息，将来它会在我们推送新标签后由机器人自动添加。</li>\n</ol>\n<p>检查文件语法是否正确：<code>fdroid readmeta</code>.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtitle => '第4步';
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '步骤4';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtext => '<p>现在，让我们为 F-Droid 市场添加数据。为此，我们为每种口味创建一个单独的分支：</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>之后，我们为Fastlane创建一个文件夹：\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>添加需要的数据并推送。</p>';
@@ -7487,7 +7485,7 @@ class I18nZh extends I18n {
   String get devblog250Sbfdroid250Sb7250Sbtitle => '步骤 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p> 上提问';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>上提问。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => '结论';
@@ -7517,7 +7515,7 @@ class I18nZh extends I18n {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '标签（可选）';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => '救';
+  String get address8722Sbbook250Sbsave8722Sbbtn => '节省';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '保存此地址以备将来使用';
@@ -7544,6 +7542,17 @@ class I18nZh extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '当您按下“保存”时，广告的国家/地区将自动更新为“全球”。';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '仅出售相同资产的广告';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => '带我去网站';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset 只买广告';
+  }
 
   @override
   String get ads => '广告';
@@ -7900,7 +7909,7 @@ class I18nZh extends I18n {
   String get api_error_103 => '请求交易发帖人正在销售假期的广告';
 
   @override
-  String get api_error_105 => '请求交易的广告海报没有足够的余额来为托管提供资金';
+  String get api_error_105 => '请求交易的广告海报没有足够的余额来支付托管费用';
 
   @override
   String get api_error_107 => '尝试在不设置 maxAmount 的情况下跟踪流动性';
@@ -7984,7 +7993,7 @@ class I18nZh extends I18n {
   String get api_error_239 => '尝试发布交易时密码错误';
 
   @override
-  String get api_error_243 => '内部 AgoraDesk 地址不能用于交易结算。请输入外部非 AgoraDesk XMR 地址以继续。';
+  String get api_error_243 => '内部 AgoraDesk 地址不能用于交易结算。请输入一个外部的、非 AgoraDesk XMR 地址以继续。';
 
   @override
   String get api_error_254 => '在过去 10 分钟内尝试将提款发送到相同的地址和金额';
@@ -8158,6 +8167,9 @@ class I18nZh extends I18n {
   String get api_error_98 => '试图为海报不存在的广告创建交易';
 
   @override
+  String get api_error_99 => '在创建第一笔交易时尝试请求高于广告所有者允许的金额';
+
+  @override
   String get api_error_100 => '不能要求少于 0.0000000001 XMR 来创建交易';
 
   @override
@@ -8215,6 +8227,15 @@ class I18nZh extends I18n {
   String get api_error_121 => '试图托管不存在的交易';
 
   @override
+  String get api_error_122 => '资金不足以为交易提供资金';
+
+  @override
+  String get api_error_123 => '资金不足以为交易提供资金';
+
+  @override
+  String get api_error_124 => '为交易提供资金时出错';
+
+  @override
   String get api_error_125 => '请求取消交易的用户不存在';
 
   @override
@@ -8266,7 +8287,7 @@ class I18nZh extends I18n {
   String get api_error_145 => '尝试在更新广告时设置超过 maxAmount 的法定限额';
 
   @override
-  String get api_error_147 => '尝试获取未启用联属网络营销计划的用户的联属网络营销数据';
+  String get api_error_147 => '尝试为未启用联属网络营销计划的用户获取联属网络营销数据';
 
   @override
   String get api_error_148 => '尝试设置已设置的电报 ID';
@@ -8290,7 +8311,7 @@ class I18nZh extends I18n {
   String get api_error_154 => '尝试为不存在的账户请求交易';
 
   @override
-  String get api_error_155 => '试图获取不存在的用户的可信用户列表';
+  String get api_error_155 => '尝试获取不存在的用户的可信用户列表';
 
   @override
   String get api_error_156 => '试图获取不存在的用户的被阻止用户列表';
@@ -8353,7 +8374,7 @@ class I18nZh extends I18n {
   String get api_error_185 => '试图为不存在的用户获取优惠券';
 
   @override
-  String get api_error_186 => '按ID获取广告时尝试获取超过50个广告';
+  String get api_error_186 => '按ID获取广告时尝试获取超过50条广告';
 
   @override
   String get api_error_187 => '按 ID 获取广告时尝试提供空的 ID 列表';
@@ -8392,7 +8413,7 @@ class I18nZh extends I18n {
   String get api_error_198 => '尝试使用超出允许范围的“之后”时间戳获取帐户最近的聊天消息';
 
   @override
-  String get api_error_199 => '试图为不存在的用户获取公共 API 令牌';
+  String get api_error_199 => '尝试为不存在的用户获取公共 API 令牌';
 
   @override
   String get api_error_200 => '尝试为没有公共 API 令牌的用户过期并删除公共 API 令牌';
@@ -8437,7 +8458,7 @@ class I18nZh extends I18n {
   String get api_error_220 => '尝试将帐户电子邮件更改为来自一次性电子邮件提供商的电子邮件';
 
   @override
-  String get api_error_221 => '尝试为不存在的用户标记所有已读通知';
+  String get api_error_221 => '尝试将不存在的用户的所有通知标记为已读';
 
   @override
   String get api_error_222 => '尝试为已导入的外部平台帐户请求信誉代码';
@@ -8506,10 +8527,10 @@ class I18nZh extends I18n {
   String get api_error_248 => '当交易金额不足以支付结算相关费用时尝试释放交易';
 
   @override
-  String get api_error_249 => '在更新请求中未设置 buyerSettlementAddress 参数的情况下尝试更新未设置 buyerSettlementAddress 的 BUY 类型广告';
+  String get api_error_249 => '尝试更新未设置 buyerSettlementAddress 的 BUY 类型广告，但未在更新请求中设置 buyerSettlementAddress 参数';
 
   @override
-  String get api_error_250 => '请求 BTC 提款费时提供的地址无效';
+  String get api_error_250 => '请求 BTC 提款费用时提供的地址无效';
 
   @override
   String get api_error_251 => '通过响应 BTC SELL 类型的广告开始交易时未提供费用水平';
@@ -8557,7 +8578,7 @@ class I18nZh extends I18n {
   String get pin_enter_to_confirm_transaction => '输入 PIN 以确认交易';
 
   @override
-  String get pin_you_can_use => '您可以使用此 PIN 解锁应用程序。';
+  String get pin_you_can_use => 'PIN 必须至少为 4 位数字';
 
   @override
   String get pin_confirm => '确认PIN码';
@@ -8943,7 +8964,7 @@ class I18nZh extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• 您可以链接到任何单独的页面，例如国家/地区列表或付款方式列表，或 $appName 上的任何其他内容。\n• 您将从通过您的附属链接注册并进行交易的用户那里获得加密货币。\n• 每天将以相关加密货币向您的$appName 钱包支付款项。\n• 佣金将在用户注册后的一年内支付。佣金是根据新用户带来的收入$appName（交易手续费）计算的。\n• 禁止任何不正当行为，例如误导性广告。\n• 禁止发送垃圾邮件。垃圾邮件包括在论坛/reddit 上发送未订阅的私人或公共消息、未订阅的群发邮件等。\n• 禁止在网站上添加隐藏的 iframe 以获取附属机构。仅允许附属 iframe 或网页的直接链接。\n• $appName 有权在任何给定时间禁用任何附属用户。如果您违反条款，您的联盟计划将被终止。';
+    return '• 您可以链接到任何单独的页面，例如国家/地区列表或付款方式列表，或 $appName 上的任何其他内容。\n• 您将从通过您的附属链接注册并进行交易的用户那里获得加密货币。\n• 每天将以相关加密货币向您的$appName 钱包支付款项。\n• 佣金将在用户注册后的一年内支付。佣金是根据新用户带来的收入$appName（交易手续费）计算的。\n• 禁止任何不正当行为，例如误导性广告。\n• 禁止发送垃圾邮件。垃圾邮件包括在论坛/reddit 上发送未订阅的私人或公共消息、未订阅的群发邮件等。\n• 禁止在网站上添加隐藏的 iframe 以获取附属机构。仅允许附属 iframe 或网页的直接链接。\n• $appName 有权在任何给定时间禁用任何关联用户。如果您违反条款，您的联盟计划将被终止。';
   }
 
   @override
@@ -9018,7 +9039,7 @@ class I18nZh extends I18n {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return '在一张纸上写下您的备份代码（上面的绿色部分）并将其存放在安全的地方。如果您丢失手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失此代码，$appName 将无法帮助您。';
+    return '在一张纸上写下您的备份代码（上面的绿色部分）并将其存放在安全的地方。如果您丢失手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失了此代码，$appName 将无法帮助您。';
   }
 
   @override
@@ -9056,7 +9077,7 @@ class I18nZh extends I18n {
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '（$val1 将能够在 $val2 分钟内取消，除非您标记为已付款）';
+    return '（$val1 可以在 $val2 分钟内取消，除非您标记为已付款）';
   }
 
   @override
@@ -9080,7 +9101,7 @@ class I18nZh extends I18n {
   }
 
   @override
-  String get app_buy_crypto => '购买加密货币';
+  String get app_buy_crypto => '从购买加密货币';
 
   @override
   String get app_sell_crypto => '卖加密货币给';
@@ -9256,7 +9277,7 @@ class I18nZh extends I18n {
   String get app_scan_qr_code => '扫描二维码';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => '匿名买卖比特币，无需身份验证。现金或在线。安全、快速、简单。\n\n想知道如何投资比特币？在 AgoraDesk 上，购买比特币从未如此简单 - 使用您最喜欢的在线支付方式立即从某人那里购买比特币：PayPal、信用卡/借记卡或银行转账、礼品卡、Venmo 或任何其他方式。如果您想用现金在您附近购买比特币，您可以在当地找到愿意出售比特币的人——交易平台支持用现金买卖比特币。您甚至可以通过邮寄使用现金购买比特币。\n\n- 安全顺畅的交易\n就像 LocalBitcoins 一样，我们支持任何支付方式、任何货币、任何地方。我们不会删除支付方式，而且与 LocalBitcoins 不同，我们完全支持面对面的现金交易。我们所有的交易都受到仲裁债券的保护。由于我们要求在交易开始之前以仲裁保证金的形式持有资金，我们确保了买家的顺畅和安全体验，这对于平台的普及和卖家的回头客至关重要。\n\n- 无 KYC/AML 或身份验证\nAgoraDesk 致力于保持使原始 LocalBitcoins 如此受欢迎的简单性和直接性。我们不采用 KYC/AML，也从未打算这样做。\n\n- 受到社区的信任\n我们的平台已经运营了四年多，在 2018 年的加密货币市场大崩盘中幸存下来，并通过其面向社区的勤奋服务成为极度怀疑的加密货币社区中最值得信赖的品牌之一。\n\n- 安全、开源、以隐私为中心、抗审查\n我们的应用程序是免费和开源的，这确保了很多眼睛都在查看应用程序的代码，以确保没有安全漏洞或隐私泄露。开源我们的应用程序还允许任何人访问我们的应用程序，即使某个应用程序存储库审查了该应用程序。我们的应用程序甚至可以在 Google 完全屏蔽的手机上运行。我们非常重视您的隐私，我们甚至不要求您在注册时提供电子邮件。\n\n源代码：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n问题跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恒星支持\n我们的支持团队反应迅速、反应迅速并且总是乐于助人。我们从未收到过 24 小时内未得到答复的支持票。我们始终可以通过社交媒体轻松联系到您，我们会认真倾听您的批评意见，并且我们始终会在创纪录的时间内实施良好的用户建议。\n\n您可以通过以下方式获得我们的支持：https://agoradesk.com/support\n\n- 公平费用\n当您在我们的仲裁保证金钱包中存入或提取比特币时，我们不会收取过高的费用。没有存款费用，取款费用非常接近您在正常交易中支付的费用。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => '匿名买卖比特币，无需身份验证。现金或在线。安全、快速、简单。\n\n想知道如何投资比特币？在 AgoraDesk 上，购买比特币从未如此简单 - 使用您最喜欢的在线支付方式立即从某人那里购买比特币：PayPal、信用卡/借记卡或银行转账、礼品卡、Venmo 或任何其他方式。如果你想用现金在你附近购买比特币，你可以在当地找到愿意出售比特币的人——交易平台支持用现金买卖比特币。您甚至可以通过邮寄使用现金购买比特币。\n\n- 安全顺畅的交易\n就像 LocalBitcoins 一样，我们支持任何支付方式、任何货币、任何地方。我们不会删除支付方式，而且与 LocalBitcoins 不同，我们完全支持面对面的现金交易。我们所有的交易都受到仲裁债券的保护。由于我们要求在交易开始之前以仲裁保证金的形式持有资金，我们确保了买家的顺畅和安全体验，这对于平台的普及和卖家的回头客至关重要。\n\n- 无 KYC/AML 或身份验证\nAgoraDesk 致力于保持使原始 LocalBitcoins 如此受欢迎的简单性和直接性。我们不采用 KYC/AML，也从未打算这样做。\n\n- 受到社区的信任\n我们的平台已经运营了四年多，在 2018 年的加密货币市场大崩盘中幸存下来，并通过其面向社区的勤奋服务成为极度怀疑的加密货币社区中最值得信赖的品牌之一。\n\n- 安全、开源、以隐私为中心、抗审查\n我们的应用程序是免费和开源的，这确保了很多眼睛都在查看应用程序的代码，以确保没有安全漏洞或隐私泄露。开源我们的应用程序还允许任何人访问我们的应用程序，即使某个应用程序存储库审查了该应用程序。我们的应用程序甚至可以在 Google 完全屏蔽的手机上运行。我们非常重视您的隐私，我们甚至不要求您在注册时提供电子邮件。\n\n源代码：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n问题跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恒星支持\n我们的支持团队反应迅速、反应迅速并且总是乐于助人。我们从未收到过 24 小时内未得到答复的支持票。我们始终可以通过社交媒体轻松联系到您，我们会认真倾听您的批评意见，并且我们始终会在创纪录的时间内实施良好的用户建议。\n\n您可以通过以下方式获得我们的支持：https://agoradesk.com/support\n\n- 公平费用\n当您向我们的仲裁保证金钱包存入或提取比特币时，我们不会收取过高的费用。没有存款费用，取款费用非常接近您在正常交易中支付的费用。';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk：轻松购买比特币';
@@ -9445,16 +9466,7 @@ class I18nZh extends I18n {
   String get api_error_273 => '试图删除用户地址簿中不存在的地址';
 
   @override
-  String get api_error_99 => '创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
-
-  @override
-  String get api_error_122 => '资金不足以为浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_123 => '资金不足以为非浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
+  String get pin_you_can_use_new => 'PIN 必须至少为 4 位数字';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -9727,12 +9739,12 @@ class I18nZhCn extends I18nZh {
   String get ad250Sbdeleted => '此交易广告已被删除';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '在$country附近用现金出售$assetName';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '在$country附近用现金购买$assetName';
   }
 
@@ -10691,7 +10703,7 @@ class I18nZhCn extends I18nZh {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => '金额（货币）';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return '金额（$assetSymbol）';
   }
 
@@ -11032,7 +11044,7 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return '交易$id';
   }
 
@@ -11314,7 +11326,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName采用点对点门罗币交易方式。用户彼此之间可以在我们的市场中出售和购买门罗币。用户（称为“交易者”）可以创建交易广告并指定汇率和他们希望提供的付款方式。您可以浏览网站上的交易广告，搜索您喜欢的付款方式。您会找到使用 60 多种付款方式网上出售门罗币的交易者。如果您是$appName新用户，想要购买门罗币，请参阅我们如何购买的指南，了解如何购买门罗币。';
+    return '$appName 是一个点对点的门罗币交易平台。我们是一个用户可以相互买卖 Monero 的市场。称为交易员的用户使用他们想要提供的价格和支付方式制作广告。您可以浏览我们的网站以查找贸易广告并搜索您喜欢的付款方式。您会发现交易者使用 60 多种不同的支付方式在线买卖门罗币。如果您是 $appName 的新手并且想购买门罗币，请查看我们的购买指南以了解如何购买门罗币。';
   }
 
   @override
@@ -11481,8 +11493,8 @@ class I18nZhCn extends I18nZh {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => '费用页';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return '我们目前没有自己的APP。不过，你可以通过$telegram接收移动通知！你可以参考$thisGuide来启用Telegram通知（好容易呀）。我们的机器人会发你的$appName事件的通知。';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return '是的，我们有！如果你有安卓系统，可以在$playstoreLink、$fdroidLink上获取，也可以直接下载$apkLink。对于 iOS 设备，它在 $appstoreLink 上可用。也可以在【X225X】接收手机通知！ $thisGuide 将带您完成 Telegram 通知激活过程（很简单）。然后我们的机器人会向您发送有关您的 $appName 事件的通知。';
   }
 
   @override
@@ -11530,12 +11542,12 @@ class I18nZhCn extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '所有在线交易均受仲裁保证金保护。当交易开始时，交易的门罗币数量会自动从卖家的 $appName 钱包中保留。这意味着，如果卖家拿走您的钱并且没有完成交易，$appName 支持可以完成与仲裁保证金中持有的门罗币的交易。如果您要出售门罗币，请不要在知道您从门罗币买家那里收到钱之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
+    return '所有在线交易均受仲裁债券保护。交易开始时，会自动从卖家的 $appName 债券钱包中保留与交易金额相等的门罗币。这意味着，如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的门罗币转给你。如果您要出售门罗币，切勿在知道您已收到门罗币买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return '所有在线交易均受仲裁保证金保护。当交易开始时，交易的加密货币数量会自动从卖家的 $appName 钱包中保留。这意味着，如果卖家拿走您的钱而没有完成交易，$appName 支持可以使用仲裁保证金中持有的硬币完成交易。如果您要出售加密货币，请不要在知道您从买家那里收到钱之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
+    return '所有在线交易均受仲裁债券保护。开始交易时，会自动从卖方的 $appName 债券钱包中保留与交易金额相等的加密货币。这意味着如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的加密货币转给你。如果您要出售加密货币，切勿在知道已收到买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
   }
 
   @override
@@ -12708,7 +12720,7 @@ class I18nZhCn extends I18nZh {
   String get knowledge250Sbatomic250Sbtitle => '原子互换技术将如何在门罗币上实现';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>强烈建议读者阅读我们的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《为什么门罗有尾部发射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《门罗挖矿：什么造就了RandomX》如此特别”</a>。本文基于其中介绍的概念。</i></p>\n\n<p>每当人们讨论区块链问题时，第一个跳出的词就是“扩展”。区块链不能很好地扩展已经不是什么秘密，但大多数人不知道为什么。</p>\n\n<p>事实是，扩展实际上是一个涵盖两个不同类别的总称：给定时间点的协议支持和技术支持。在本文中，我们将重点关注一个，协议支持基本上是衡量协议在给定时间可以处理多少事务的量度。</p>\n\n<p>比特币有区块大小限制，这意味着一旦足够多的交易被包含在一个区块中，任何额外的交易都必须排队等候下一个区块。一个有用的类比是考虑火车。一列火车停靠在车站，排队的人鱼贯而入。一旦火车满员，留在外面的任何人都必须等待下一班。</p>\n\n<p>比特币使用费用来确定谁进入区块。回到火车的类比，可以想象一位即将被落在后面的潜在乘客向火车工程师提供五美元让他坐下。其他乘客也纷纷效仿，最终发生了一场竞价战，看谁能坐到哪个座位。由司机决定他是否要遵守先到先得的政策，但通过接受出价最高的人来最大化他的收入符合他的最佳经济利益。</p>\n\n<p>在这个比喻中，矿工就是火车司机。他们可以在区块中包含他们想要的任何交易，但他们通常会选择支付费用最高的交易。</p>\n\n<p>或者，如果街区不是很满，人们就没有动力支付高额费用，因为有很多免费座位可供使用。</p>\n\n<p> 在 2017 年加密货币繁荣的鼎盛时期，比特币充斥着大量交易，那些想要包含在下一个区块或任何近期区块中的交易费用飙升。不愿支付高额手续费的交易延迟数小时、数天，甚至完全退出队列。</p>\n\n<p>如果人们经常谈论“大规模采用”，比特币将如何发展，这是一个令人痛心的见解。如果比特币被大众使用，情况会比 2017 年更糟，除了富人之外，任何人都无法访问比特币，仅仅是因为区块大小固定导致吞吐量很小，导致费用市场接管.</p>\n\n<p>Monero 预见到了这一点，并想做一些不同的事情。所以 Monero 开发人员实现了动态块大小。</p>\n\n<p>基本上，Monero 也有块大小上限，但它是软上限。当等待交易的队列太长时，矿工可以增加区块的大小。用我们的火车类比，你可以想象增加更多的火车车厢来容纳额外的乘客。队列为空后，块会收缩回原来的大小。</p>\n\n<p>如果这看起来是个不错的主意，那么问为什么门罗币是唯一实现了这个的加密货币似乎是合理的。为什么不将其添加到比特币上以解决吞吐量问题？</p>\n\n<p>不幸的是，这是不可能的。有几个原因，我们会尽力解释。</p>\n\n<p> 拥有大区块始终符合矿工的最大利益。有了大区块，他们可以进行更多交易，并从费用和区块奖励中赚取更多的钱。这有可能导致垃圾邮件攻击，即有人发送许多小额交易，收取少量费用，从而使链条膨胀。矿工只会增加区块大小，因为钱就是钱，不管多小。这将导致始终如一的大区块，而经济效益很小。比特币通过人为限制区块大小来解决这个问题，从而产生一个费用市场。垃圾邮件攻击者必须支付超过其他用户的费用，而且它不再便宜。但这意味着块已满，留下一些交易等待如上所述。</p>\n\n<p>那么门罗币如何在拥有动态块大小的同时避免垃圾邮件攻击呢？答案很简单，但很聪明。当区块大于正常值时，会引入对区块奖励的惩罚。如果矿工想要增加区块大小，他们从发现该区块中获得的奖励将少于他们在其他情况下获得的奖励。因此，只有当用户支付的交易费用超过区块奖励的损失部分时，他们才会增加区块大小。例如，如果矿工通过提高区块大小将损失 0.5 XMR，而支付的交易费用总和为 0.4 XMR，那么如果他们提高区块大小，将净损失 0.1 XMR，因此他们不会去做吧。相反，如果总交易费用加起来达到 0.7 XMR，那么将获得 0.2 XMR 的净收益，即使他们从区块奖励惩罚中损失了 0.5 XMR，因此矿工将增加规模。</p>\n\n<p>这些动态块允许网络有机增长，而无需人为地限制块大小来建立强制收费市场，同时仍然避免垃圾邮件攻击。我们可以从更多的角度来看待这个想法，以及为什么不可能添加到比特币的更多原因，但现在，我们希望读者了解门罗币如何回避比特币中的几个问题，它的衍生品，以及它计划如何将其吞吐量扩展到未来。</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>注：</b>强烈建议读者阅读我们的文章<a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">《为什么门罗有尾部发射》</a>和<a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">《门罗挖矿：什么造就了RandomX》如此特别”</a>。本文基于其中介绍的概念。</i></p>\n\n<p>每当人们讨论区块链问题时，第一个跳出的词就是“扩展”。区块链不能很好地扩展已经不是什么秘密，但大多数人不知道为什么。</p>\n\n<p>事实是，扩展实际上是一个涵盖两个不同类别的总称：给定时间点的协议支持和技术支持。在本文中，我们将重点关注一个，协议支持基本上是衡量协议在给定时间可以处理多少事务的量度。</p>\n\n<p>比特币有区块大小限制，这意味着一旦足够多的交易被包含在一个区块中，任何额外的交易都必须排队等候下一个区块。一个有用的类比是考虑火车。一列火车停靠在车站，排队的人鱼贯而入。一旦火车满员，留在外面的任何人都必须等待下一班。</p>\n\n<p>比特币使用费用来确定谁进入区块。回到火车的类比，可以想象一位即将被落在后面的潜在乘客向火车工程师提供五美元让他坐下。其他乘客也纷纷效仿，最终发生了一场竞价战，看谁能坐到哪个座位。由司机决定他是否要遵守先到先得的政策，但通过接受出价最高的人来最大化他的收入符合他的最佳经济利益。 </p>\n\n<p>在这个比喻中，矿工就是火车司机。他们可以在区块中包含他们想要的任何交易，但他们通常会选择支付费用最高的交易。</p>\n\n<p>或者，如果街区不是很满，人们就没有动力支付高额费用，因为有很多免费座位可供使用。</p>\n\n<p> 在 2017 年加密货币繁荣的鼎盛时期，比特币充斥着大量交易，那些想要包含在下一个区块或任何近期区块中的交易费用飙升。不愿支付高额手续费的交易延迟数小时、数天，甚至完全退出队列。</p>\n\n<p>如果人们经常谈论“大规模采用”，比特币将如何发展，这是一个令人痛心的见解。如果比特币被大众使用，情况会比 2017 年更糟，除了富人之外，任何人都无法访问比特币，仅仅是因为区块大小固定导致吞吐量很小，导致费用市场接管.</p>\n\n<p>Monero 预见到了这一点，并想做一些不同的事情。所以 Monero 开发人员实现了动态块大小。</p>\n\n<p>基本上，Monero 也有块大小上限，但它是软上限。当等待交易的队列太长时，矿工可以增加区块的大小。用我们的火车类比，你可以想象增加更多的火车车厢来容纳额外的乘客。队列为空后，块会收缩回原来的大小。</p>\n\n<p>如果这看起来是个不错的主意，那么问为什么门罗币是唯一实现了这个的加密货币似乎是合理的。为什么不将其添加到比特币上以解决吞吐量问题？</p>\n\n<p>不幸的是，这是不可能的。有几个原因，我们会尽力解释。</p>\n\n<p> 拥有大区块始终符合矿工的最大利益。有了大区块，他们可以进行更多交易，并从费用和区块奖励中赚取更多的钱。这有可能导致垃圾邮件攻击，即有人发送许多小额交易，收取少量费用，从而使链条膨胀。矿工只会增加区块大小，因为钱就是钱，不管多小。这将导致始终如一的大区块，而经济效益很小。比特币通过人为限制区块大小来解决这个问题，从而产生一个费用市场。垃圾邮件攻击者必须支付超过其他用户的费用，而且它不再便宜。但这意味着块已满，留下一些交易等待如上所述。</p>\n\n<p>那么门罗币如何在拥有动态块大小的同时避免垃圾邮件攻击呢？答案很简单，但很聪明。当区块大于正常值时，会引入对区块奖励的惩罚。如果矿工想要增加区块大小，他们从发现该区块中获得的奖励将少于他们在其他情况下获得的奖励。因此，只有当用户支付的交易费用超过区块奖励的损失部分时，他们才会增加区块大小。例如，如果矿工通过提高区块大小将损失 0.5 XMR，而支付的交易费用总和为 0.4 XMR，那么如果他们提高区块大小，将净损失 0.1 XMR，因此他们不会去做吧。相反，如果总交易费用加起来达到 0.7 XMR，那么将获得 0.2 XMR 的净收益，即使他们从区块奖励惩罚中损失了 0.5 XMR，因此矿工将增加规模。</p>\n\n<p>这些动态块允许网络有机增长，而无需人为地限制块大小来建立强制收费市场，同时仍然避免垃圾邮件攻击。我们可以从更多的角度来看待这个想法，以及为什么不可能添加到比特币的更多原因，但现在，我们希望读者了解门罗币如何回避比特币中的几个问题，它的衍生品，以及它计划如何将其吞吐量扩展到未来。</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => '每当人们讨论区块链的缺点不足时，能听到最高频的词汇就是可扩展性. 而门罗币在解决该问题上独树一帜，与其它加密货币截然不同.';
@@ -13335,7 +13347,7 @@ class I18nZhCn extends I18nZh {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打钱';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要记下来，因为如果你丢了种子，你就丢了你的门罗币，没人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想对其进行检查。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你在哪里以及如何暴露你的种子。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要把它写下来，因为如果你丢了种子，你就丢了你的门罗币，没有人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想检查一下。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你暴露种子的位置和方式。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丢失了种子和助记词，就失去了全部';
@@ -13900,7 +13912,7 @@ class I18nZhCn extends I18nZh {
   String get morph250Sbservice8722Sbdown => 'MorphToken的XMR服务暂时不可用。稍后再试。';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '接收$cryptocurrencyName地址';
   }
 
@@ -14230,9 +14242,7 @@ class I18nZhCn extends I18nZh {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => '钱包余额低于此广告类型的要求的最低限额';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return '新买家限额（$assetSymbol）';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '新买家限额  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => '可选。如果交易者之前没有做过交易，这个数值将限制他的第一笔交易量。设定一个较低的值来限制您被诈骗的风险。最低0';
@@ -14725,12 +14735,12 @@ class I18nZhCn extends I18nZh {
   String get search250Sbcoordinates250Sblon => '经度';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '在$location附近用现金出售$assetName';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '在$location附近用现金购买$assetName';
   }
 
@@ -14797,7 +14807,7 @@ class I18nZhCn extends I18nZh {
   String get seo250Sbheadline8722Sb257Sbagoradesk => '真正的LocalBitcoins和Paxful替代方案。';
 
   @override
-  String get seo250Sbtext8722Sb1 => '如果您担心隐私的入侵-最好的加密货币是XMR。门罗币（Monero）是一种不可追溯的代币，其设计宗旨是保护隐私。\n<br/>在哪里购买门罗币？ LocalMonero是XMR社区中最大，最受信任和完善的P2P Monero交换。我们没有KYC支票-您可以简单地匿名购买Monero，而无需使用PayPal，信用卡，礼品卡，邮件现金或将比特币转换为Monero进行身份验证-我们的平台支持任何付款方式。';
+  String get seo250Sbtext8722Sb1 => '如果您担心侵犯隐私 - 最好的投资加密货币是 XMR。 Monero 是一种无法追踪的代币，在设计时考虑到了隐私。\n<br/>\n在哪里购买门罗币？ LocalMonero 是 XMR 社区中最大、最受信任和完善的 P2P Monero 交易平台。我们没有 KYC 检查——您可以简单地匿名购买 Monero，无需使用 PayPal、信用卡、礼品卡、邮寄现金或将比特币转换为 Monero 进行身份验证——我们的平台支持任何支付方式。';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => '想知道如何投资比特币？在AgoraDesk上，购买比特币从未如此简单-使用您最喜欢的在线支付方式从一个人那里立即购买BTC：使用微信支付，支付宝， 贝宝，信用卡/借记卡或银行转账，礼品卡，邮寄现金或任何其他方法。\n<br/>\n如果您想用现金购买附近的比特币，您会发现有人愿意在当地出售比特币-交易平台支持用现金购买和持有BTC。您甚至可以通过邮件使用现金购买比特币。';
@@ -16268,7 +16278,7 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return '接收$assetName';
   }
 
@@ -16326,7 +16336,7 @@ class I18nZhCn extends I18nZh {
   String get wallet250Sbsend250Sbpriority250Sbtitle => '请选择交易优先级';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '接收$assetName的地址';
   }
 
@@ -16336,7 +16346,7 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return '发送$assetName';
   }
 
@@ -16401,7 +16411,7 @@ class I18nZhCn extends I18nZh {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => '传出加密货币费用';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return '发送$assetName';
   }
 
@@ -16463,12 +16473,12 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return '接收 $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return '发送 $asset';
   }
 
@@ -16557,7 +16567,7 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return '接收$assetName';
   }
 
@@ -16565,7 +16575,7 @@ class I18nZhCn extends I18nZh {
   String get wallet250Sbtab250Sbreceive8722Sbshort => '接收';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return '发送$assetName';
   }
 
@@ -16812,7 +16822,7 @@ class I18nZhCn extends I18nZh {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => '更换地址';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return '金额（$asset）';
   }
 
@@ -16902,13 +16912,13 @@ class I18nZhCn extends I18nZh {
   String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是适用于 Android 平台的 FOSS（免费和开源软件）应用程序的可安装目录。客户端使您可以轻松浏览、安装和跟踪设备上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid网站</a></p>\n</blockquote>\n\n<p>本教程中的所有步骤也适用于没有风味的应用程序。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些应用程序？';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上分叉 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存储库</a>。</li>\n<li>将存储库克隆到您的设备。</li>\n<li>使用应用程序的 bundle ID 创建一个分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>在 Gitlab 上 Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata 存储库</a>。</li>\n<li>将存储库克隆到您的设备。</li>\n<li>使用应用程序的 bundle ID 创建一个分支，例如 <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => '步骤1';
@@ -16926,10 +16936,10 @@ class I18nZhCn extends I18nZh {
   String get devblog250Sbfdroid250Sb4250Sbtitle => '步骤 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打开文件并编辑它。这是一个示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模块 - 这是 F-Droid 团队的要求。</li>\n<li> 对于每种风格，我们都使用了一个单独的分支（命令 <code>AutoUpdateMode：版本 %v-fdroid-lm</code>）。那是因为 Fastlane 不&#39;不支持 Flutter 的风格。</li>\n<li>我们第一次手动添加构建信息，将来它会在我们推送新标签后由机器人自动添加。</li>\n</ol>\n<p>检查文件语法是否正确：<code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打开文件并编辑它。这是一个示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模块 - 这是 F-Droid 团队的要求。</li>\n<li> 对于每种风格，我们都使用了一个单独的分支（命令 <code>AutoUpdateMode：Version %v-fdroid-lm</code>）。那是因为 Fastlane 不&#39;不支持 Flutter 的风格。</li>\n<li>我们第一次手动添加构建信息，将来它会在我们推送新标签后由机器人自动添加。</li>\n</ol>\n<p>检查文件语法是否正确：<code>fdroid readmeta</code>.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtitle => '第4步';
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '步骤4';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtext => '<p>现在，让我们为 F-Droid 市场添加数据。为此，我们为每种口味创建一个单独的分支：</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>之后，我们为Fastlane创建一个文件夹：\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>添加需要的数据并推送。</p>';
@@ -16944,7 +16954,7 @@ class I18nZhCn extends I18nZh {
   String get devblog250Sbfdroid250Sb7250Sbtitle => '步骤 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p> 上提问';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>上提问。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => '结论';
@@ -16974,7 +16984,7 @@ class I18nZhCn extends I18nZh {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '标签（可选）';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => '救';
+  String get address8722Sbbook250Sbsave8722Sbbtn => '节省';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '保存此地址以备将来使用';
@@ -17001,6 +17011,17 @@ class I18nZhCn extends I18nZh {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '当您按下“保存”时，广告的国家/地区将自动更新为“全球”。';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '仅出售相同资产的广告';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => '带我去网站';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset 只买广告';
+  }
 
   @override
   String get ads => '广告';
@@ -17357,7 +17378,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_103 => '请求交易发帖人正在销售假期的广告';
 
   @override
-  String get api_error_105 => '请求交易的广告海报没有足够的余额来为托管提供资金';
+  String get api_error_105 => '请求交易的广告海报没有足够的余额来支付托管费用';
 
   @override
   String get api_error_107 => '尝试在不设置 maxAmount 的情况下跟踪流动性';
@@ -17441,7 +17462,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_239 => '尝试发布交易时密码错误';
 
   @override
-  String get api_error_243 => '内部 AgoraDesk 地址不能用于交易结算。请输入外部非 AgoraDesk XMR 地址以继续。';
+  String get api_error_243 => '内部 AgoraDesk 地址不能用于交易结算。请输入一个外部的、非 AgoraDesk XMR 地址以继续。';
 
   @override
   String get api_error_254 => '在过去 10 分钟内尝试将提款发送到相同的地址和金额';
@@ -17615,6 +17636,9 @@ class I18nZhCn extends I18nZh {
   String get api_error_98 => '试图为海报不存在的广告创建交易';
 
   @override
+  String get api_error_99 => '在创建第一笔交易时尝试请求高于广告所有者允许的金额';
+
+  @override
   String get api_error_100 => '不能要求少于 0.0000000001 XMR 来创建交易';
 
   @override
@@ -17672,6 +17696,15 @@ class I18nZhCn extends I18nZh {
   String get api_error_121 => '试图托管不存在的交易';
 
   @override
+  String get api_error_122 => '资金不足以为交易提供资金';
+
+  @override
+  String get api_error_123 => '资金不足以为交易提供资金';
+
+  @override
+  String get api_error_124 => '为交易提供资金时出错';
+
+  @override
   String get api_error_125 => '请求取消交易的用户不存在';
 
   @override
@@ -17723,7 +17756,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_145 => '尝试在更新广告时设置超过 maxAmount 的法定限额';
 
   @override
-  String get api_error_147 => '尝试获取未启用联属网络营销计划的用户的联属网络营销数据';
+  String get api_error_147 => '尝试为未启用联属网络营销计划的用户获取联属网络营销数据';
 
   @override
   String get api_error_148 => '尝试设置已设置的电报 ID';
@@ -17747,7 +17780,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_154 => '尝试为不存在的账户请求交易';
 
   @override
-  String get api_error_155 => '试图获取不存在的用户的可信用户列表';
+  String get api_error_155 => '尝试获取不存在的用户的可信用户列表';
 
   @override
   String get api_error_156 => '试图获取不存在的用户的被阻止用户列表';
@@ -17810,7 +17843,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_185 => '试图为不存在的用户获取优惠券';
 
   @override
-  String get api_error_186 => '按ID获取广告时尝试获取超过50个广告';
+  String get api_error_186 => '按ID获取广告时尝试获取超过50条广告';
 
   @override
   String get api_error_187 => '按 ID 获取广告时尝试提供空的 ID 列表';
@@ -17849,7 +17882,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_198 => '尝试使用超出允许范围的“之后”时间戳获取帐户最近的聊天消息';
 
   @override
-  String get api_error_199 => '试图为不存在的用户获取公共 API 令牌';
+  String get api_error_199 => '尝试为不存在的用户获取公共 API 令牌';
 
   @override
   String get api_error_200 => '尝试为没有公共 API 令牌的用户过期并删除公共 API 令牌';
@@ -17894,7 +17927,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_220 => '尝试将帐户电子邮件更改为来自一次性电子邮件提供商的电子邮件';
 
   @override
-  String get api_error_221 => '尝试为不存在的用户标记所有已读通知';
+  String get api_error_221 => '尝试将不存在的用户的所有通知标记为已读';
 
   @override
   String get api_error_222 => '尝试为已导入的外部平台帐户请求信誉代码';
@@ -17963,10 +17996,10 @@ class I18nZhCn extends I18nZh {
   String get api_error_248 => '当交易金额不足以支付结算相关费用时尝试释放交易';
 
   @override
-  String get api_error_249 => '在更新请求中未设置 buyerSettlementAddress 参数的情况下尝试更新未设置 buyerSettlementAddress 的 BUY 类型广告';
+  String get api_error_249 => '尝试更新未设置 buyerSettlementAddress 的 BUY 类型广告，但未在更新请求中设置 buyerSettlementAddress 参数';
 
   @override
-  String get api_error_250 => '请求 BTC 提款费时提供的地址无效';
+  String get api_error_250 => '请求 BTC 提款费用时提供的地址无效';
 
   @override
   String get api_error_251 => '通过响应 BTC SELL 类型的广告开始交易时未提供费用水平';
@@ -18014,7 +18047,7 @@ class I18nZhCn extends I18nZh {
   String get pin_enter_to_confirm_transaction => '输入 PIN 以确认交易';
 
   @override
-  String get pin_you_can_use => '您可以使用此 PIN 解锁应用程序。';
+  String get pin_you_can_use => 'PIN 必须至少为 4 位数字';
 
   @override
   String get pin_confirm => '确认PIN码';
@@ -18400,7 +18433,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• 您可以链接到任何单独的页面，例如国家/地区列表或付款方式列表，或 $appName 上的任何其他内容。\n• 您将从通过您的附属链接注册并进行交易的用户那里获得加密货币。\n• 每天将以相关加密货币向您的$appName 钱包支付款项。\n• 佣金将在用户注册后的一年内支付。佣金是根据新用户带来的收入$appName（交易手续费）计算的。\n• 禁止任何不正当行为，例如误导性广告。\n• 禁止发送垃圾邮件。垃圾邮件包括在论坛/reddit 上发送未订阅的私人或公共消息、未订阅的群发邮件等。\n• 禁止在网站上添加隐藏的 iframe 以获取附属机构。仅允许附属 iframe 或网页的直接链接。\n• $appName 有权在任何给定时间禁用任何附属用户。如果您违反条款，您的联盟计划将被终止。';
+    return '• 您可以链接到任何单独的页面，例如国家/地区列表或付款方式列表，或 $appName 上的任何其他内容。\n• 您将从通过您的附属链接注册并进行交易的用户那里获得加密货币。\n• 每天将以相关加密货币向您的$appName 钱包支付款项。\n• 佣金将在用户注册后的一年内支付。佣金是根据新用户带来的收入$appName（交易手续费）计算的。\n• 禁止任何不正当行为，例如误导性广告。\n• 禁止发送垃圾邮件。垃圾邮件包括在论坛/reddit 上发送未订阅的私人或公共消息、未订阅的群发邮件等。\n• 禁止在网站上添加隐藏的 iframe 以获取附属机构。仅允许附属 iframe 或网页的直接链接。\n• $appName 有权在任何给定时间禁用任何关联用户。如果您违反条款，您的联盟计划将被终止。';
   }
 
   @override
@@ -18475,7 +18508,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return '在一张纸上写下您的备份代码（上面的绿色部分）并将其存放在安全的地方。如果您丢失手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失此代码，$appName 将无法帮助您。';
+    return '在一张纸上写下您的备份代码（上面的绿色部分）并将其存放在安全的地方。如果您丢失手机，您将需要它，否则您将被锁定在您的帐户之外。如果您丢失了此代码，$appName 将无法帮助您。';
   }
 
   @override
@@ -18513,7 +18546,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '（$val1 将能够在 $val2 分钟内取消，除非您标记为已付款）';
+    return '（$val1 可以在 $val2 分钟内取消，除非您标记为已付款）';
   }
 
   @override
@@ -18537,7 +18570,7 @@ class I18nZhCn extends I18nZh {
   }
 
   @override
-  String get app_buy_crypto => '购买加密货币';
+  String get app_buy_crypto => '从购买加密货币';
 
   @override
   String get app_sell_crypto => '卖加密货币给';
@@ -18713,7 +18746,7 @@ class I18nZhCn extends I18nZh {
   String get app_scan_qr_code => '扫描二维码';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => '匿名买卖比特币，无需身份验证。现金或在线。安全、快速、简单。\n\n想知道如何投资比特币？在 AgoraDesk 上，购买比特币从未如此简单 - 使用您最喜欢的在线支付方式立即从某人那里购买比特币：PayPal、信用卡/借记卡或银行转账、礼品卡、Venmo 或任何其他方式。如果您想用现金在您附近购买比特币，您可以在当地找到愿意出售比特币的人——交易平台支持用现金买卖比特币。您甚至可以通过邮寄使用现金购买比特币。\n\n- 安全顺畅的交易\n就像 LocalBitcoins 一样，我们支持任何支付方式、任何货币、任何地方。我们不会删除支付方式，而且与 LocalBitcoins 不同，我们完全支持面对面的现金交易。我们所有的交易都受到仲裁债券的保护。由于我们要求在交易开始之前以仲裁保证金的形式持有资金，我们确保了买家的顺畅和安全体验，这对于平台的普及和卖家的回头客至关重要。\n\n- 无 KYC/AML 或身份验证\nAgoraDesk 致力于保持使原始 LocalBitcoins 如此受欢迎的简单性和直接性。我们不采用 KYC/AML，也从未打算这样做。\n\n- 受到社区的信任\n我们的平台已经运营了四年多，在 2018 年的加密货币市场大崩盘中幸存下来，并通过其面向社区的勤奋服务成为极度怀疑的加密货币社区中最值得信赖的品牌之一。\n\n- 安全、开源、以隐私为中心、抗审查\n我们的应用程序是免费和开源的，这确保了很多眼睛都在查看应用程序的代码，以确保没有安全漏洞或隐私泄露。开源我们的应用程序还允许任何人访问我们的应用程序，即使某个应用程序存储库审查了该应用程序。我们的应用程序甚至可以在 Google 完全屏蔽的手机上运行。我们非常重视您的隐私，我们甚至不要求您在注册时提供电子邮件。\n\n源代码：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n问题跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恒星支持\n我们的支持团队反应迅速、反应迅速并且总是乐于助人。我们从未收到过 24 小时内未得到答复的支持票。我们始终可以通过社交媒体轻松联系到您，我们会认真倾听您的批评意见，并且我们始终会在创纪录的时间内实施良好的用户建议。\n\n您可以通过以下方式获得我们的支持：https://agoradesk.com/support\n\n- 公平费用\n当您在我们的仲裁保证金钱包中存入或提取比特币时，我们不会收取过高的费用。没有存款费用，取款费用非常接近您在正常交易中支付的费用。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => '匿名买卖比特币，无需身份验证。现金或在线。安全、快速、简单。\n\n想知道如何投资比特币？在 AgoraDesk 上，购买比特币从未如此简单 - 使用您最喜欢的在线支付方式立即从某人那里购买比特币：PayPal、信用卡/借记卡或银行转账、礼品卡、Venmo 或任何其他方式。如果你想用现金在你附近购买比特币，你可以在当地找到愿意出售比特币的人——交易平台支持用现金买卖比特币。您甚至可以通过邮寄使用现金购买比特币。\n\n- 安全顺畅的交易\n就像 LocalBitcoins 一样，我们支持任何支付方式、任何货币、任何地方。我们不会删除支付方式，而且与 LocalBitcoins 不同，我们完全支持面对面的现金交易。我们所有的交易都受到仲裁债券的保护。由于我们要求在交易开始之前以仲裁保证金的形式持有资金，我们确保了买家的顺畅和安全体验，这对于平台的普及和卖家的回头客至关重要。\n\n- 无 KYC/AML 或身份验证\nAgoraDesk 致力于保持使原始 LocalBitcoins 如此受欢迎的简单性和直接性。我们不采用 KYC/AML，也从未打算这样做。\n\n- 受到社区的信任\n我们的平台已经运营了四年多，在 2018 年的加密货币市场大崩盘中幸存下来，并通过其面向社区的勤奋服务成为极度怀疑的加密货币社区中最值得信赖的品牌之一。\n\n- 安全、开源、以隐私为中心、抗审查\n我们的应用程序是免费和开源的，这确保了很多眼睛都在查看应用程序的代码，以确保没有安全漏洞或隐私泄露。开源我们的应用程序还允许任何人访问我们的应用程序，即使某个应用程序存储库审查了该应用程序。我们的应用程序甚至可以在 Google 完全屏蔽的手机上运行。我们非常重视您的隐私，我们甚至不要求您在注册时提供电子邮件。\n\n源代码：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n问题跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恒星支持\n我们的支持团队反应迅速、反应迅速并且总是乐于助人。我们从未收到过 24 小时内未得到答复的支持票。我们始终可以通过社交媒体轻松联系到您，我们会认真倾听您的批评意见，并且我们始终会在创纪录的时间内实施良好的用户建议。\n\n您可以通过以下方式获得我们的支持：https://agoradesk.com/support\n\n- 公平费用\n当您向我们的仲裁保证金钱包存入或提取比特币时，我们不会收取过高的费用。没有存款费用，取款费用非常接近您在正常交易中支付的费用。';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk：轻松购买比特币';
@@ -18902,16 +18935,7 @@ class I18nZhCn extends I18nZh {
   String get api_error_273 => '试图删除用户地址簿中不存在的地址';
 
   @override
-  String get api_error_99 => '创建第一笔交易时尝试请求高于 first_time_limit_asset 允许的金额';
-
-  @override
-  String get api_error_122 => '资金不足以为浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_123 => '资金不足以为非浮动 LOCAL_SELL 交易提供资金';
-
-  @override
-  String get api_error_124 => '为 LOCAL_SELL 提供资金时出错';
+  String get pin_you_can_use_new => 'PIN 必须至少为 4 位数字';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -19184,12 +19208,12 @@ class I18nZhTw extends I18nZh {
   String get ad250Sbdeleted => '此交易廣告已被刪除';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '在$country附近用現金出售$assetName';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '在$country附近用現金購買$assetName';
   }
 
@@ -20148,7 +20172,7 @@ class I18nZhTw extends I18nZh {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => '金額（貨幣）';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return '金額（$assetSymbol）';
   }
 
@@ -20489,7 +20513,7 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return '交易$id';
   }
 
@@ -20771,7 +20795,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName採用點對點門羅幣交易方式。用戶彼此之間可以在我們的市場中出售和購買門羅幣。用戶（稱為“交易者”）可以創建交易廣告並指定匯率和他們希望提供的付款方式。您可以瀏覽網站上的交易廣告，搜索您喜歡的付款方式。您會找到使用 60 多種付款方式網上出售門羅幣的交易者。如果您是$appName新用戶，想要購買門羅幣，請參閱我們如何購買的指南，了解如何購買門羅幣。';
+    return '$appName 是一個點對點的門羅幣交易平台。我們是一個用戶可以相互買賣 Monero 的市場。稱為交易員的用戶使用他們想要提供的價格和支付方式製作廣告。您可以瀏覽我們的網站以查找貿易廣告並蒐索您喜歡的付款方式。您會發現交易者使用 60 多種不同的支付方式在線買賣門羅幣。如果您是 $appName 的新手並且想購買門羅幣，請查看我們的購買指南以了解如何購買門羅幣。';
   }
 
   @override
@@ -20938,8 +20962,8 @@ class I18nZhTw extends I18nZh {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => '費用頁';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return '我們目前沒有自己的APP。不過，你可以通過$telegram接收移動通知！你可以參考$thisGuide來啟用Telegram通知（好容易呀）。我們的機器人會發你的$appName事件的通知。';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return '是的，我們有！如果你有安卓系統，可以在$playstoreLink、$fdroidLink上獲取，也可以直接下載$apkLink。對於 iOS 設備，它在 $appstoreLink 上可用。也可以在【X225X】接收手機通知！ $thisGuide 將帶您完成 Telegram 通知激活過程（很簡單）。然後我們的機器人會向您發送有關您的 $appName 事件的通知。';
   }
 
   @override
@@ -20987,12 +21011,12 @@ class I18nZhTw extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '所有在線交易均受仲裁保證金保護。當交易開始時，交易的門羅幣數量會自動從賣家的 $appName 錢包中保留。這意味著如果賣家拿走你的錢並且沒有完成交易，$appName 支持可以完成與仲裁保證金中持有的門羅幣的交易。如果您要出售門羅幣，請不要在知道您從門羅幣買家那裡收到錢之前完成交易。請注意，本地交易默認不啟用仲裁保證金保護。';
+    return '所有在線交易均受仲裁債券保護。開始交易時，會自動從賣家的 $appName 債券錢包中保留與交易金額相等的門羅幣。這意味著，如果賣家捲走了你的錢並且沒有完成交易，$appName 支持可以將仲裁保證金中持有的門羅幣轉給你。如果您要出售門羅幣，切勿在知道您已收到門羅幣買家的款項之前完成交易。請注意，本地交易默認不啟用仲裁保證金保護。';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return '所有在線交易均受仲裁保證金保護。當交易開始時，交易的加密貨幣數量會自動從賣家的 $appName 錢包中保留。這意味著，如果賣家拿走您的錢而沒有完成交易，$appName 支持可以使用仲裁保證金中持有的硬幣完成交易。如果您要出售加密貨幣，請不要在知道您從買家那裡收到錢之前完成交易。請注意，本地交易默認不啟用仲裁保證金保護。';
+    return '所有在線交易均受仲裁債券保護。開始交易時，會自動從賣方的 $appName 債券錢包中保留與交易金額相等的加密貨幣。這意味著如果賣家捲走了你的錢並且沒有完成交易，$appName 支持可以將仲裁保證金中持有的加密貨幣轉給你。如果您要出售加密貨幣，切勿在知道已收到買家的款項之前完成交易。請注意，本地交易默認不啟用仲裁保證金保護。';
   }
 
   @override
@@ -22032,7 +22056,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> 市場價或固定價格 </strong><br/> 要為您的廣告定價，您可以輸入高於 $assetName 市場價的保證金。為此，請在選擇“市場價格”選項後在保證金字段中輸入一個百分比。您可能還想指定一個固定價格，該價格在您手動更改之前不會更改。為此，您需要選擇“固定價格”選項並輸入價格值。 <br/><br/> <strong> 最小值/ 最大限度。交易限額 </strong><br/> 最低交易限額設置了某人可以購買的最小金額。如果您將其設置為 5，並且您的貨幣設置為 EUR，這意味著某人可以與您進行交易的最小交易金額為 5 歐元。最大交易限額設置您要接受的最大交易金額。 <br/><br/> <strong> 貿易條款 </strong><br/> 這是買家在與您開始交易之前看到的文本。最好為買家寫下您希望交易如何進行以及您是否有任何具體說明的說明。例如，如果您要求買家在您完成交易之前提交收據作為付款證明，或者如果您需要買家提供身份證件，則可以在此處提及。您可以查看其他交易商的廣告以了解您想要使用的付款方式，以了解良好的貿易條款包含哪些內容。 <br/><br/> <strong> 額外選項 </strong><br/><br/> <strong> 限額為 </strong><br/> 您可以將廣告限制為只能開立特定金額的交易。如果您在方框中輸入 20、30、60，則潛在貿易夥伴只能以 20、30 或 60 歐元開單。 <br/><br/> <strong> 付款詳情 </strong><br/> 在此輸入有關買家應如何付款的具體信息，這可以是您的銀行帳號或電子郵件地址（例如 PayPal）。 <br/><br/> <strong> 所需的最低反饋分數 </strong><br/> 反饋最低值允許您設置所需的最低反饋分數，以便使用您的廣告進行交易。 <br/><br/> <strong> 首次限額($assetSymbol) </strong><br/> 這是新用戶特定的最大交易限額。如果之前沒有與您的交易歷史的買家想要與您進行交易，這是他們可以進行交易的最大金額。 <br/><br/> <strong> 付款窗口 </strong><br/> 在賣方能夠取消交易之前買方必須完成付款的時間。 <br/><br/> <strong> 跟踪最大流動性 </strong><br/> 啟用跟踪流動性會將廣告的最大限制降低當前在未平倉交易中持有的金額。 <br/><br/> <strong> 識別騙子的快速提示 </strong> <br/> <br/> <strong>欺詐買家往往很匆忙。你應該是，真正的客戶總是有耐心的。 <br/><br/>欺詐買家經常<strong>建議在仲裁保證金保護系統</strong>之外進行全部或部分交易，然後不完成他們的部分交易。 <br/><br/>小心<strong>photoshopped付款證據</strong>，在確認收到錢之前不要完成交易。在您確認收到買家付款之前，您沒有義務完成交易。 <br/><br/><strong>不要打開您的貿易夥伴發送給您的任何鏈接</strong>。如果必須，請使用與您正在使用的瀏覽器不同的瀏覽器。 <br/><br/>請勿使用您用於交易的瀏覽器訪問 $appName 以外的網站。 <strong> 對其他網站使用不同的瀏覽器。</strong> <br/> <br/> 在您的瀏覽器中添加書籤 $appName，並在訪問該網站時始終使用該書籤。這有助於您避免意外訪問釣魚網站，它們存在並且非常有說服力。';
+    return '<strong> 市場價或固定價格 </strong><br/> 要為您的廣告定價，您可以輸入高於 $assetName 市場價的保證金。為此，請在選擇“市場價格”選項後在保證金字段中輸入一個百分比。您可能還想指定一個固定價格，該價格在您手動更改之前不會更改。為此，您需要選擇“固定價格”選項並輸入價格值。 <br/><br/> <strong> 最小值/ 最大限度。交易限額 </strong><br/> 最低交易限額設置了某人可以購買的最小金額。如果您將其設置為 5，並且您的貨幣設置為 EUR，這意味著某人可以與您進行交易的最小交易金額為 5 歐元。最大交易限額設置您要接受的最大交易金額。 <br/><br/> <strong> 貿易條款 </strong><br/> 這是買家在與您開始交易之前看到的文本。最好為買家寫下您希望交易如何進行以及您是否有任何具體說明的說明。例如，如果您要求買家在您完成交易之前提交收據作為付款證明，或者如果您需要買家提供身份證件，則可以在此處提及。您可以查看其他交易商的廣告以了解您想要使用的付款方式，以了解良好的貿易條款包含哪些內容。 <br/><br/> <strong> 額外選項 </strong><br/><br/> <strong> 限額為 </strong><br/> 您可以將廣告限制為只能開立特定金額的交易。如果您在方框中輸入 20、30、60，則潛在貿易夥伴只能以 20、30 或 60 歐元開單。 <br/><br/> <strong> 付款詳情 </strong><br/> 在此輸入有關買家應如何付款的具體信息，這可以是您的銀行帳號或電子郵件地址（例如 PayPal）。 <br/><br/> <strong> 所需的最低反饋分數 </strong><br/> 反饋最低值允許您設置所需的最低反饋分數，以便使用您的廣告進行交易。 <br/><br/> <strong> 首次限額($assetSymbol) </strong><br/> 這是新用戶特定的最大交易限額。如果之前沒有與您的交易歷史的買家想要與您進行交易，這是他們可以進行交易的最大金額。 <br/><br/> <strong> 付款窗口 </strong><br/> 在賣方能夠取消交易之前買方必須完成付款的時間。 <br/><br/> <strong> 跟踪最大流動性 </strong><br/> 啟用跟踪流動性會將廣告的最大限制降低當前在未平倉交易中持有的金額。 <br/><br/> <strong> 識別騙子的快速提示 </strong> <br/> <br/> <strong>欺詐買家往往很匆忙。你應該是，真正的客戶總是有耐心的。 <br/><br/>欺詐買家經常<strong>建議在仲裁保證金保護系統</strong>之外進行全部或部分交易，然後不完成他們的部分交易。 <br/><br/>小心<strong>photoshopped付款證據</strong>，在確認收到錢之前不要完成交易。在您確認已收到買家付款之前，您沒有義務完成交易。 <br/><br/><strong>不要打開您的貿易夥伴發送給您的任何鏈接</strong>。如果必須，請使用與您正在使用的瀏覽器不同的瀏覽器。 <br/><br/>請勿使用您用於交易的瀏覽器訪問 $appName 以外的網站。 <strong> 對其他網站使用不同的瀏覽器。</strong> <br/> <br/> 在您的瀏覽器中添加書籤 $appName，並在訪問該網站時始終使用該書籤。這有助於您避免意外訪問釣魚網站，它們存在並且非常有說服力。';
   }
 
   @override
@@ -22465,7 +22489,7 @@ class I18nZhTw extends I18nZh {
   String get knowledge250Sbmining250Sb1250Sbtitle => '目標';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => '對於上下文，讓我們談談挖礦硬件。礦工使用計算機來完成工作，但我們都知道並非每台計算機都是一樣的。有些計算機功能強大，足以運行 AI 網絡或激烈的遊戲，而另一些計算機甚至難以完成簡單的任務。這些計算能力的差異也會影響哈希率，或者他們尋找塊解決方案的速率。 <br/><br/>\n但是，與專用硬件（也稱為專用集成電路 (ASIC)）的哈希率相比，即使是計算機之間的這些差異也顯得微不足道，它比普通計算機高出幾個數量級。<br/><br/>\n讓我們花些時間來探索是什麼讓 ASIC 如此強大。想像一下，所有的計算機都處於一個範圍內的某個位置，範圍從能夠做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 處於這個範圍的兩端。<br/><br/>\n所有標準計算機中的 CPU 都位於第一端。他們可以做很多事情，例如瀏覽網頁、玩遊戲或渲染視頻，但沒有一項做得特別好。但這種靈活性是以效率為代價的。<br/><br/>\nASIC 在另一端，它們只能做一件事，但速度驚人。它們只能執行一個數學函數，但因為它們可以忽略其他所有內容，所以性能提升是天文數字。然而，這種效率確實是以靈活性為代價的，因此即使功能發生輕微變化——例如 x + y = z 變為 2x + y = z——那麼 ASIC 將完全停止運行。 <br/><br/>\n不是每個人都擁有 ASIC，但每個人都擁有計算機。這可能導致不公平的優勢。';
+  String get knowledge250Sbmining250Sb2250Sbtext => '對於上下文，讓我們談談挖礦硬件。礦工使用計算機來完成工作，但我們都知道並非每台計算機都是一樣的。有些計算機功能強大，足以運行 AI 網絡或激烈的遊戲，而另一些計算機甚至難以完成簡單的任務。這些計算能力的差異也會影響哈希率，或者他們尋找塊解決方案的速率。 <br/><br/>\n但是，與專用硬件（也稱為專用集成電路 (ASIC)）的哈希率相比，即使是計算機之間的這些差異也顯得微不足道，它比普通計算機高出幾個數量級。<br/><br/>\n讓我們花些時間來探索是什麼讓 ASIC 如此強大。想像一下，所有的計算機都處於一個範圍內的某個位置，範圍從能夠做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 處於這個範圍的兩端。<br/><br/>\n所有標準計算機中的 CPU 都位於第一端。他們可以做很多事情，例如瀏覽網頁、玩遊戲或渲染視頻，但沒有一項做得特別好。但這種靈活性是以效率為代價的。<br/><br/>\nASIC 在另一端，它們只能做一件事，但速度驚人。它們只能執行一個數學函數，但因為它們可以忽略其他所有內容，所以性能提升是天文數字。然而，這種效率確實是以靈活性為代價的，因此即使功能發生輕微變化——例如 x + y = z 變為 2x + y = z——那麼 ASIC 將完全停止運行。 <br/><br/>\n不是每個人都擁有 ASIC，但每個人都擁有計算機。這可能會導致不公平的優勢。';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => '背景';
@@ -23357,7 +23381,7 @@ class I18nZhTw extends I18nZh {
   String get morph250Sbservice8722Sbdown => 'MorphToken的XMR服務暫時不可用。稍後再試。';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '接收$cryptocurrencyName地址';
   }
 
@@ -23687,9 +23711,7 @@ class I18nZhTw extends I18nZh {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => '錢包余額低於此廣告類型的要求的最低限額';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return '新買家限額（$assetSymbol）';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '新買家限額  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => '可選。如果交易者之前沒有做過交易，這個數值將限制他的第一筆交易量。設定一個較低的值來限制您被詐騙的風險。最低0';
@@ -24182,12 +24204,12 @@ class I18nZhTw extends I18nZh {
   String get search250Sbcoordinates250Sblon => '經度';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '在$location附近用現金出售$assetName';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '在$location附近用現金購買$assetName';
   }
 
@@ -24254,7 +24276,7 @@ class I18nZhTw extends I18nZh {
   String get seo250Sbheadline8722Sb257Sbagoradesk => '真正的LocalBitcoins和Paxful替代方案。';
 
   @override
-  String get seo250Sbtext8722Sb1 => '如果您擔心隱私的入侵-最好的加密貨幣是XMR。門羅幣（Monero）是一種不可追溯的代幣，其設計宗旨是保護隱私。\n<br/>在哪裡購買門羅幣？ LocalMonero是XMR社區中最大，最受信任和完善的P2P Monero交換。我們沒有KYC支票-您可以簡單地匿名購買Monero，而無需使用微信支付，支付寶， 貝寶，信用卡/借記卡或銀行轉賬，禮品卡，郵寄現金或將比特幣轉換為Monero進行身份驗證-我們的平台支持任何付款方式。';
+  String get seo250Sbtext8722Sb1 => '如果您擔心侵犯隱私 - 最好的投資加密貨幣是 XMR。 Monero 是一種無法追踪的代幣，在設計時考慮到了隱私。\n<br/>\n在哪裡購買門羅幣？ LocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P Monero 交易平台。我們沒有 KYC 檢查——您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金或將比特幣轉換為 Monero 進行身份驗證——我們的平台支持任何支付方式。';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => '想知道如何投資比特幣？在AgoraDesk上，購買比特幣從未如此簡單-使用您最喜歡的在線支付方式從一個人那裡立即購買BTC：使用微信支付，支付寶， 貝寶，信用卡/借記卡或銀行轉賬，禮品卡，郵寄現金或任何其他方法。\n如果您想用現金購買附近的比特幣，您會發現有人願意在當地出售比特幣-交易平台支持用現金購買和持有BTC。您甚至可以通過郵件使用現金購買比特幣。';
@@ -25725,7 +25747,7 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return '接收$assetName';
   }
 
@@ -25783,7 +25805,7 @@ class I18nZhTw extends I18nZh {
   String get wallet250Sbsend250Sbpriority250Sbtitle => '請選擇交易優先級';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '接收$assetName的地址';
   }
 
@@ -25793,7 +25815,7 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return '發送$assetName';
   }
 
@@ -25858,7 +25880,7 @@ class I18nZhTw extends I18nZh {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => '傳出加密貨幣費用';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return '發送$assetName';
   }
 
@@ -25920,12 +25942,12 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return '接收 $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return '發送 $asset';
   }
 
@@ -26014,7 +26036,7 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return '接收$assetName';
   }
 
@@ -26022,7 +26044,7 @@ class I18nZhTw extends I18nZh {
   String get wallet250Sbtab250Sbreceive8722Sbshort => '接收';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return '發送$assetName';
   }
 
@@ -26269,7 +26291,7 @@ class I18nZhTw extends I18nZh {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => '更換地址';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return '金額 ($asset)';
   }
 
@@ -26359,7 +26381,7 @@ class I18nZhTw extends I18nZh {
   String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是適用於 Android 平台的 FOSS（免費和開源軟件）應用程序的可安裝目錄。客戶端使您可以輕鬆瀏覽、安裝和跟踪設備上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid網站</a></p>\n</blockquote>\n\n<p>本教程中的所有步驟也適用於沒有風味的應用程序。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全開源的應用程序才能包含在 F-Droid 中——包括使用的所有庫和依賴項。在這裡</a>.</p>了解更多關於包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在應用程序中使用 ObjectBox 數據庫，則它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">討論</a>）。</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全開源的應用程序才能包含在 F-Droid 中——包括所有使用的庫和依賴項。在這裡</a>.</p>了解更多關於包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在應用程序中使用 ObjectBox 數據庫，則它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">討論</a>）。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些應用程序？';
@@ -26383,10 +26405,10 @@ class I18nZhTw extends I18nZh {
   String get devblog250Sbfdroid250Sb4250Sbtitle => '步驟 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打開文件並編輯它。這是一個示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模塊 - 這是 F-Droid 團隊的要求。</li>\n<li> 對於每種風格，我們都使用了一個單獨的分支（命令 <code>AutoUpdateMode：Version %v-fdroid-lm</code>）。那是因為 Fastlane 不&#39;不支持 Flutter 的風格。</li>\n<li>我們第一次手動添加構建信息，將來它會在我們推送新標籤後由機器人自動添加。</li>\n</ol>\n<p>檢查文件語法是否正確：<code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打開文件並編輯它。這是一個示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模塊 - 這是 F-Droid 團隊的要求。</li>\n<li> 對於每種風格，我們都使用了一個單獨的分支（命令 <code>AutoUpdateMode：版本 %v-fdroid-lm</code>）。那是因為 Fastlane 不&#39;不支持 Flutter 的風格。</li>\n<li>我們第一次手動添加構建信息，將來它會在我們推送新標籤後由機器人自動添加。</li>\n</ol>\n<p>檢查文件語法是否正確：<code>fdroid readmeta</code>.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtitle => '第4步';
+  String get devblog250Sbfdroid250Sb5250Sbtitle => '步驟4';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtext => '<p>現在，讓我們為 F-Droid 市場添加數據。為此，我們為每種口味創建一個單獨的分支：</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>之後，我們為Fastlane創建一個文件夾：\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>添加需要的數據並推送。</p>';
@@ -26431,7 +26453,7 @@ class I18nZhTw extends I18nZh {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => '標籤（可選）';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => '救';
+  String get address8722Sbbook250Sbsave8722Sbbtn => '節省';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '保存此地址以備將來使用';
@@ -26453,11 +26475,22 @@ class I18nZhTw extends I18nZh {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return '所有加密貨幣廣告現在都被移至新的“全球（代碼 XX）”國家類別。所有僅因國家/地區不同而重複的加密貨幣廣告都將被刪除 $timeRemaining。請確保每種貨幣只有一個加密貨幣廣告，否則除最近以該貨幣發布的廣告外，其他所有廣告都將被刪除，而其餘廣告將移至“全球”國家/地區類別。';
+    return '所有加密貨幣廣告現在都被移至新的“全球（代碼 XX）”國家類別。所有僅因國家/地區不同而重複的加密貨幣廣告將被刪除 $timeRemaining。請確保每種貨幣只有一個加密貨幣廣告，否則除最近以該貨幣發布的廣告外，其他所有廣告都將被刪除，而其餘廣告將移至“全球”國家/地區類別。';
   }
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '當您按下“保存”時，廣告的國家/地區將自動更新為“全球”。';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '僅出售相同資產的廣告';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => '帶我去網站';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset 只買廣告';
+  }
 
   @override
   String get ads => '廣告';
@@ -26814,7 +26847,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_103 => '請求交易發帖人正在銷售假期的廣告';
 
   @override
-  String get api_error_105 => '請求交易的廣告海報沒有足夠的餘額來支付託管費用';
+  String get api_error_105 => '請求交易的廣告海報沒有足夠的餘額來為託管提供資金';
 
   @override
   String get api_error_107 => '嘗試在不設置 maxAmount 的情況下跟踪流動性';
@@ -26898,7 +26931,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_239 => '嘗試發布交易時密碼錯誤';
 
   @override
-  String get api_error_243 => '內部 AgoraDesk 地址不能用於交易結算。請輸入外部非 AgoraDesk XMR 地址以繼續。';
+  String get api_error_243 => '內部 AgoraDesk 地址不能用於交易結算。請輸入一個外部的、非 AgoraDesk XMR 地址以繼續。';
 
   @override
   String get api_error_254 => '在過去 10 分鐘內嘗試將提款發送到相同的地址和金額';
@@ -27072,6 +27105,9 @@ class I18nZhTw extends I18nZh {
   String get api_error_98 => '試圖為海報不存在的廣告創建交易';
 
   @override
+  String get api_error_99 => '在創建第一筆交易時嘗試請求高於廣告所有者允許的金額';
+
+  @override
   String get api_error_100 => '不能要求少於 0.0000000001 XMR 來創建交易';
 
   @override
@@ -27127,6 +27163,15 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get api_error_121 => '試圖託管不存在的交易';
+
+  @override
+  String get api_error_122 => '資金不足以為交易提供資金';
+
+  @override
+  String get api_error_123 => '資金不足以為交易提供資金';
+
+  @override
+  String get api_error_124 => '為交易提供資金時出錯';
 
   @override
   String get api_error_125 => '請求取消交易的用戶不存在';
@@ -27204,7 +27249,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_154 => '嘗試為不存在的賬戶請求交易';
 
   @override
-  String get api_error_155 => '嘗試獲取不存在的用戶的可信用戶列表';
+  String get api_error_155 => '試圖獲取不存在的用戶的可信用戶列表';
 
   @override
   String get api_error_156 => '試圖獲取不存在的用戶的被阻止用戶列表';
@@ -27240,7 +27285,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_166 => '嘗試使用不存在的交易進行淨結算';
 
   @override
-  String get api_error_167 => '當前市場價格小於或等於淨看漲交易時的行使價。按照市場標準，該交易是價外交易，因此不能進行淨額交易。如果需要，使用正常結算。';
+  String get api_error_167 => '當前市場價格小於或等於淨看漲交易時的行使價。按照市場標準，交易是價外交易，因此不能進行淨值交易。如果需要，使用正常結算。';
 
   @override
   String get api_error_168 => '用戶請求確認交易的掩護付款不存在';
@@ -27333,7 +27378,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_214 => '嘗試拒絕不在信譽導入流程第 2 步中的用戶的信譽導入';
 
   @override
-  String get api_error_215 => '在請求最流行的付款方式時嘗試指定國家代碼和貨幣代碼';
+  String get api_error_215 => '嘗試在請求最流行的付款方式時同時指定國家代碼和貨幣代碼';
 
   @override
   String get api_error_216 => '嘗試為不存在的國家/地區代碼請求最流行的付款方式';
@@ -27420,7 +27465,7 @@ class I18nZhTw extends I18nZh {
   String get api_error_248 => '當交易金額不足以支付結算相關費用時嘗試釋放交易';
 
   @override
-  String get api_error_249 => '嘗試更新未設置 buyerSettlementAddress 的 BUY 類型廣告，但未在更新請求中設置 buyerSettlementAddress 參數';
+  String get api_error_249 => '在更新請求中未設置 buyerSettlementAddress 參數的情況下嘗試更新未設置 buyerSettlementAddress 的 BUY 類型廣告';
 
   @override
   String get api_error_250 => '請求 BTC 提款費時提供的地址無效';
@@ -27471,7 +27516,7 @@ class I18nZhTw extends I18nZh {
   String get pin_enter_to_confirm_transaction => '輸入 PIN 以確認交易';
 
   @override
-  String get pin_you_can_use => '您可以使用此 PIN 解鎖應用程序。';
+  String get pin_you_can_use => 'PIN 必須至少為 4 位數字';
 
   @override
   String get pin_confirm => '確認密碼';
@@ -27970,7 +28015,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '（$val1 可以在 $val2 分鐘內取消，除非您標記為已付款）';
+    return '（$val1 將能夠在 $val2 分鐘內取消，除非您標記為已付款）';
   }
 
   @override
@@ -27994,10 +28039,10 @@ class I18nZhTw extends I18nZh {
   }
 
   @override
-  String get app_buy_crypto => '購買加密貨幣';
+  String get app_buy_crypto => '從購買加密貨幣';
 
   @override
-  String get app_sell_crypto => '將加密貨幣賣給';
+  String get app_sell_crypto => '賣加密貨幣給';
 
   @override
   String get app_intall_trade_title => '請安裝 AgoraDesk 查看此交易';
@@ -28179,13 +28224,13 @@ class I18nZhTw extends I18nZh {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero：輕鬆購買 XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。\n\nLocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P 交易平台。我們沒有 KYC 檢查——您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金進行身份驗證，或將比特幣、以太幣、USDT 或任何其他加密硬幣轉換為 Monero——我們的平台支持任何支付方式。\n\n- 安全順暢的交易\n我們支持任何支付方式、任何貨幣、任何地方。我們不取消支付方式，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nLocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的 Monero 社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://localmonero.co/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取門羅幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。\n\nLocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P 交易平台。我們沒有 KYC 檢查 - 您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金進行身份驗證，或將比特幣、以太幣、USDT 或任何其他加密硬幣轉換為 Monero - 我們的平台支持任何支付方式。\n\n- 安全順暢的交易\n我們支持任何支付方式、任何貨幣、任何地方。我們不取消支付方式，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nLocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的 Monero 社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://localmonero.co/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取門羅幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero：私下購買 XMR';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。\n\nLocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P 交易平台。我們沒有 KYC 檢查——您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金進行身份驗證，或將比特幣、以太幣、USDT 或任何其他加密硬幣轉換為 Monero——我們的平台支持任何支付方式。\n\n- 安全順暢的交易\n我們支持任何支付方式、任何貨幣、任何地方。我們不取消支付方式，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nLocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的 Monero 社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://localmonero.co/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取門羅幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => '無需身份驗證即可買賣門羅幣。現金或在線。安全、快速、簡單。\n\nLocalMonero 是 XMR 社區中最大、最受信任和完善的 P2P 交易平台。我們沒有 KYC 檢查 - 您可以簡單地匿名購買 Monero，無需使用 PayPal、信用卡、禮品卡、郵寄現金進行身份驗證，或將比特幣、以太幣、USDT 或任何其他加密硬幣轉換為 Monero - 我們的平台支持任何支付方式。\n\n- 安全順暢的交易\n我們支持任何支付方式、任何貨幣、任何地方。我們不取消支付方式，我們完全支持面對面的現金交易。我們所有的交易都受到仲裁債券的保護。由於我們要求在交易開始之前以仲裁保證金的形式持有資金，我們確保了買家的順暢和安全體驗，這對於平台的普及和賣家的回頭客至關重要。\n\n- 無 KYC/AML 或身份驗證\nLocalMonero 致力於保持您交易體驗的簡單性和直接性。我們不採用 KYC/AML，也從未打算這樣做。\n\n- 受到社區的信任\n我們的平台已經運營了四年多，在 2018 年的加密貨幣市場大崩盤中倖存下來，並通過其面向社區的勤奮服務成為極度懷疑的 Monero 社區中最值得信賴的品牌之一。\n\n- 安全、開源、以隱私為中心、抗審查\n我們的應用程序是免費和開源的，這確保了很多眼睛都在查看應用程序的代碼，以確保沒有安全漏洞或隱私洩露。開源我們的應用程序還允許任何人訪問我們的應用程序，即使某個應用程序存儲庫審查了該應用程序。我們的應用程序甚至可以在 Google 完全屏蔽的手機上運行。我們非常重視您的隱私，我們甚至不要求您在註冊時提供電子郵件。\n\n源代碼：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題跟踪器：https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 恆星支持\n我們的支持團隊反應迅速、反應迅速並且總是樂於助人。我們從未收到過 24 小時內未得到答复的支持票。我們始終可以通過社交媒體輕鬆聯繫到您，我們會認真傾聽您的批評意見，並且我們始終會在創紀錄的時間內實施良好的用戶建議。\n\n您可以通過以下方式獲得我們的支持：https://localmonero.co/support\n\n- 公平費用\n當您在我們的仲裁保證金錢包中存入或提取門羅幣時，我們不會收取過高的費用。沒有存款費用，取款費用非常接近您在正常交易中支付的費用。';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk：匿名購買比特幣';
@@ -28359,14 +28404,5 @@ class I18nZhTw extends I18nZh {
   String get api_error_273 => '試圖刪除用戶地址簿中不存在的地址';
 
   @override
-  String get api_error_99 => '創建第一筆交易時嘗試請求高於 first_time_limit_asset 允許的金額';
-
-  @override
-  String get api_error_122 => '資金不足以為浮動 LOCAL_SELL 交易提供資金';
-
-  @override
-  String get api_error_123 => '資金不足以為非浮動 LOCAL_SELL 交易提供資金';
-
-  @override
-  String get api_error_124 => '為 LOCAL_SELL 融資時出錯';
+  String get pin_you_can_use_new => 'PIN 必須至少為 4 位數字';
 }

@@ -270,12 +270,12 @@ class I18nFi extends I18n {
   String get ad250Sbdeleted => 'Tämä ilmoitus on poistettu';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Myy ${assetName}a käteisellä $country:ssa';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Osta ${assetName}a käteisellä $country:ssa';
   }
 
@@ -1234,7 +1234,7 @@ class I18nFi extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Summa (valuutta)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Määrä ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nFi extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Kauppa $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nFi extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName on peer-to-peer Monero-pörssi. Olemme markkinapaikka, jossa käyttäjät voivat ostaa ja myydä Moneroa toisilleen ja toisiltaan. Käyttäjät, joita kutsutaan kauppiaiksi, luovat ilmoituksia, joissa on hinta ja maksutapa, jonka he haluavat tarjota. Voit selata verkkosivuiltamme kauppailmoituksia ja etsiä suosimaasi maksutapaa. Löydät kauppiaita, jotka ostavat ja myyvät Moneroa verkossa yli 60 eri maksutavalla. Jos olet uusi $appName:n käyttäjä ja haluat ostaa Moneroa, tutustu ostooppaaseemme saadaksesi lisätietoja Moneron ostamisesta.';
+    return '$appName on vertaisverkko Monero-kaupankäyntialusta. Olemme markkinapaikka, jossa käyttäjät voivat ostaa ja myydä Moneroa toisilleen ja toisiltaan. Käyttäjät, joita kutsutaan kauppiaiksi, luovat mainoksia, joissa on hinta ja maksutapa, jonka he haluavat tarjota. Voit selata verkkosivuiltamme kauppailmoituksia ja etsiä haluamaasi maksutapaa. Löydät kauppiaita, jotka ostavat ja myyvät Moneroa verkossa yli 60 eri maksutavalla. Jos olet uusi $appName:n käyttäjä ja haluat ostaa Moneron, tutustu ostooppaaseemme saadaksesi lisätietoja Moneron ostamisesta.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nFi extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'maksut -sivu';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Tällä hetkellä meillä ei ole erillistä mobiilisovellusta. Mutta voit vastaanottaa mobiili-ilmoituksia $telegram:ssa! $thisGuide vie sinut Telegram-ilmoitusten aktivointiprosessin läpi (se on helppoa). Bottimme lähettää sinulle ilmoituksia $appName tapahtumistasi.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Kyllä, me teemme! Jos sinulla on Android, voit hankkia sen $playstoreLink:lle, $fdroidLink:lle tai voit ladata $apkLink suoraan. iOS-laitteille se on saatavilla $appstoreLink:ssä. Voit myös vastaanottaa mobiili-ilmoituksia $telegram:ssä! $thisGuide vie sinut Telegram-ilmoitusten aktivointiprosessin läpi (se on helppoa). Bottimme lähettää sinulle ilmoituksia $appName tapahtumistasi.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nFi extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Kaikki verkossa tapahtuvat kaupat on suojattu välimiesmaksuilla. Kun kauppa aloitetaan, myyjän $appName Lompakosta varataan automaattisesti kaupan määrää vastaava määrä Moneroa välimiesmaksuksi. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä saa kauppaa päätökseen, $appName-tuki voi ohjata välimiesmaksussa olevan Moneron sinulle. Jos myyt Moneroa, älä koskaan viimeistele kauppaa ennen kuin tiedät saavasi rahaa Moneron ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimiesmaksua.';
+    return 'Kaikki verkkokaupat on suojattu välimieslainoilla. Kun kauppa aloitetaan, myyjän $appName joukkovelkakirjalompakosta varataan automaattisesti kaupan määrää vastaava määrä Moneroa. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä saa kauppaa päätökseen, $appName-tuki voi ohjata välimieslainassa olevan Moneron sinulle. Jos myyt Moneroa, älä koskaan viimeistele kauppaa ennen kuin tiedät saavasi rahaa Moneron ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimieslainsuojausta.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Kaikki verkossa tapahtuvat kaupat on suojattu välimiesmaksuilla. Kun kauppa aloitetaan, myyjän $appName-lompakosta varataan automaattisesti kaupan määrää vastaava määrä kryptovaluuttaa välimiesmaksuksi. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä viimeistele kauppaa, $appName-tuki voi ohjata välimiesmaksun kryptovaluutan sinulle. Jos myyt kryptovaluuttaa, älä koskaan viimeistele kauppaa ennen kuin tiedät saavasi rahaa ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimiesmaksua.';
+    return 'Kaikki verkkokaupat on suojattu välimieslainoilla. Kun kauppa aloitetaan, myyjän $appName joukkovelkakirjalompakosta varataan automaattisesti kaupan määrää vastaava määrä kryptovaluuttaa. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä viimeistele kauppaa, $appName-tuki voi ohjata välimieslainan kryptovaluutan sinulle. Jos myyt kryptovaluuttaa, älä koskaan viimeistele kauppaa ennen kuin tiedät saavasi rahaa ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimieslainsuojausta.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nFi extends I18n {
   String get morph250Sbservice8722Sbdown => 'ChangeNow:n XMR-palvelu on väliaikaisesti poissa käytöstä. Yritä myöhemmin uudelleen.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Vastaanottava $cryptocurrencyName osoite';
   }
 
@@ -4773,9 +4773,7 @@ class I18nFi extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Lompakkosaldo on pienempi kuin tälle ilmoitustyypille vaadittu vähimmäismäärä';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Ensimmäinen aikaraja ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Ensimmäinen aikaraja  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Valinnainen. Rajoita tapahtuman enimmäismäärää käyttäjille, joiden kanssa sinulla ei ole aiempia kauppoja. Vähintään 0.';
@@ -5268,12 +5266,12 @@ class I18nFi extends I18n {
   String get search250Sbcoordinates250Sblon => 'Pituusaste';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Myy $assetName käteisellä sijainnissa $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Osta $assetName käteisellä sijainnissa $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nFi extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Todellinen LocalBitcoins ja Paxful vaihtoehto.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Jos olet huolissasi yksityisyyden loukkaamisesta - paras kryptovaluutta sijoittamiseen on XMR. Monero on jäljittämätön kolikko, joka on kehitetty yksityisyyttä ajatellen.\n<br/>\nMistä ostaa Moneroa? LocalMonero on XMR-yhteisön suurin, luotetuin ja vakiintunut P2P Monero -pörssi. Meillä ei ole KYC-tarkistuksia - voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa bitcoinit Moneroksi - alustamme tukee mitä tahansa maksutapaa.';
+  String get seo250Sbtext8722Sb1 => 'Jos olet huolissasi yksityisyyden loukkaamisesta - paras kryptovaluutta sijoittamiseen on XMR. Monero on jäljittämätön kolikko, joka on kehitetty yksityisyyttä ajatellen.\n<br/>\nMistä ostaa Moneroa? LocalMonero on XMR-yhteisön suurin, luotetuin ja vakiintunut P2P Monero -kaupankäyntialusta. Meillä ei ole KYC-sekkejä - voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa bitcoinit Moneroksi - alustamme tukee mitä tahansa maksutapaa.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Mietitkö kuinka sijoittaa Bitcoiniin? AgoraDeskissä bitcoinien ostaminen ei ole koskaan ollut helpompaa - osta BTC:tä välittömästi henkilöltä käyttämällä lempi verkkomaksutapaasi: PayPal, luotto-/pankkikortti tai pankkisiirto, lahjakortit, Venmo tai mikä tahansa muu.\n<br/>\nJos haluat ostaa bitcoineja lähelläsi käteisellä, voit löytää jonkun joka haluaa myydä bitcoineja paikallisesti - kaupankäyntialusta tukee BTC:n ostamista ja myyntiä käteisellä. Voit jopa ostaa bitcoineja käteisellä postitse.';
@@ -6811,7 +6809,7 @@ class I18nFi extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Vastaanota $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nFi extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Valitse transaktion prioriteetti';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Vastaanotetta $assetName osoite';
   }
 
@@ -6879,7 +6877,7 @@ class I18nFi extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Lähetä $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nFi extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Lähtevät kryptovaluuttakulut';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Lähetä $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nFi extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Vastaanota $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Lähetä $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nFi extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Vastaanota $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nFi extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Vastaanota';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Lähetä $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nFi extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Vaihda osoite';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Määrä ($asset)';
   }
 
@@ -7544,6 +7542,17 @@ class I18nFi extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Kun painat \"Tallenna\", mainoksen maaksi päivitetään automaattisesti \"maailmanlaajuinen\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Vain saman omaisuuden myyntimainokset';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Vie minut verkkosivustolle';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset ostaa vain mainoksia';
+  }
 
   @override
   String get ads => 'Ilmoitukset';
@@ -8158,6 +8167,9 @@ class I18nFi extends I18n {
   String get api_error_98 => 'Yritetään luoda kauppaa ilmoitukselle, jonka julkaisijaa ei ole olemassa';
 
   @override
+  String get api_error_99 => 'Yritetään pyytää suurempaa summaa kuin mainoksen omistaja on sallinut luodessaan ensimmäistä kauppaa';
+
+  @override
   String get api_error_100 => 'Kaupan luomiseen ei voi pyytää alle 0,0000000001 XMR';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nFi extends I18n {
 
   @override
   String get api_error_121 => 'Yritetään sulkea kauppa, jota ei ole olemassa';
+
+  @override
+  String get api_error_122 => 'Rahat eivät riitä kaupan rahoittamiseen';
+
+  @override
+  String get api_error_123 => 'Rahat eivät riitä kaupan rahoittamiseen';
+
+  @override
+  String get api_error_124 => 'Virhe kaupan rahoittamisessa';
 
   @override
   String get api_error_125 => 'Kaupan peruuttamista pyytävää käyttäjää ei ole olemassa';
@@ -8557,7 +8578,7 @@ class I18nFi extends I18n {
   String get pin_enter_to_confirm_transaction => 'Vahvista tapahtuma syöttämällä PIN-koodi';
 
   @override
-  String get pin_you_can_use => 'Voit käyttää tätä PIN-koodia sovelluksen lukituksen avaamiseen.';
+  String get pin_you_can_use => 'PIN-koodissa on oltava vähintään 4 numeroa';
 
   @override
   String get pin_confirm => 'Vahvista PIN';
@@ -9373,7 +9394,7 @@ class I18nFi extends I18n {
   String get app_push_trade_marked_completed => 'Kauppa merkitty suoritetuksi';
 
   @override
-  String get app_push_trade_cancelled => 'Kaupat peruttu';
+  String get app_push_trade_cancelled => 'Kauppa peruttu';
 
   @override
   String get app_push_trade_disputed => 'Kauppa kiistanalainen';
@@ -9445,14 +9466,5 @@ class I18nFi extends I18n {
   String get api_error_273 => 'Yritetään poistaa osoite, jota ei ole käyttäjän osoitekirjassa';
 
   @override
-  String get api_error_99 => 'Yritetään pyytää suurempaa summaa kuin first_time_limit_asset sallii ensimmäistä kauppaa luotaessa';
-
-  @override
-  String get api_error_122 => 'Ei riittävästi varoja kelluvan LOCAL_SELL-kaupan rahoittamiseen';
-
-  @override
-  String get api_error_123 => 'Ei tarpeeksi varoja muuttumattoman LOCAL_SELL-kaupan rahoittamiseen';
-
-  @override
-  String get api_error_124 => 'Virhe rahoitettaessa LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN-koodissa on oltava vähintään 4 numeroa';
 }

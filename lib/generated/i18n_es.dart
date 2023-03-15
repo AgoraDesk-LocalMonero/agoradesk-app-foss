@@ -270,12 +270,12 @@ class I18nEs extends I18n {
   String get ad250Sbdeleted => 'Este anuncio ha sido eliminado';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Vender $assetName por dinero efectivo en $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Comprar $assetName con dinero efectivo en $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nEs extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Cantidad (moneda)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Cantidad ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nEs extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Transacción $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nEs extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName es una casa de cambio de Monero peer-to-peer (persona a persona). Somos un mercado donde los usuarios pueden comprar y vender Monero entre ellos. Los usuarios, llamados comerciantes, crean anuncios con el precio y el método de pago que desean ofrecer. Puede navegar por nuestro sitio web para ver anuncios y buscar el método de pago que prefiera. Encontrará comerciantes comprando y vendiendo Monero en línea con más de 60 métodos de pago diferentes. Si es nuevo en $appName y quiere comprar Monero, por favor, consulte nuestra guía para aprender como hacerlo.';
+    return '$appName es una plataforma de comercio de Monero entre pares. Somos un mercado donde los usuarios pueden comprar y vender Monero entre ellos. Los usuarios, llamados comerciantes, crean anuncios con el precio y la forma de pago que quieren ofrecer. Puede navegar por nuestro sitio web en busca de anuncios comerciales y buscar el método de pago que prefiera. Encontrará comerciantes que compran y venden Monero en línea para más de 60 métodos de pago diferentes. Si eres nuevo en $appName y quieres comprar Monero, echa un vistazo a nuestra guía de cómo comprar para aprender cómo comprar Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nEs extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'página de comisiones';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'De momento, no tenemos aplicación móvil ¡Pero puede recibir notificaciones móviles en $telegram! $thisGuide le llevará a través del proceso de activación de notificaciones Telegram (es muy fácil). Nuestro bot, le enviará notificaciones sobre eventos en su cuenta $appName.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return '¡Sí! Si tiene Android, puede obtenerlo en $playstoreLink, $fdroidLink o puede descargar el $apkLink directamente. Para dispositivos iOS, está disponible en $appstoreLink. ¡También puedes recibir notificaciones móviles en $telegram! $thisGuide lo guiará a través del proceso de activación de notificaciones de Telegram (es fácil). Nuestro bot le enviará notificaciones sobre sus eventos $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nEs extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Todas las operaciones en línea están protegidas por un bono de arbitraje. Cuando se inicia una operación, la cantidad de Monero para la operación se reserva automáticamente de la cartera $appName del vendedor. Esto significa que si el vendedor se escapa con su dinero y no finaliza la operación, el soporte de $appName puede finalizar la operación con Monero guardado en el bono de arbitraje. Si estás vendiendo Monero, nunca finalices la operación antes de saber que has recibido el dinero del comprador de Monero. Por favor, tenga en cuenta que las operaciones locales no tienen la protección de la fianza de arbitraje activada por defecto.';
+    return 'Todas las transacciones en línea están protegidas por bonos de arbitraje. Cuando se inicia una operación, se reserva automáticamente una cantidad de Monero igual a la cantidad de la operación de la billetera de bonos $appName del vendedor. Esto significa que si el vendedor se escapa con su dinero y no finaliza la transacción, el soporte de $appName puede enviarle el Monero retenido en el bono de arbitraje. Si está vendiendo Monero, nunca finalice la operación antes de saber que ha recibido dinero del comprador de Monero. Tenga en cuenta que las transacciones locales no tienen habilitada la protección de bonos de arbitraje de forma predeterminada.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Todas las operaciones en línea están protegidas por una fianza de arbitraje. Cuando se inicia una operación, la cantidad de criptodivisas para la operación se reserva automáticamente desde el monedero $appName del vendedor. Esto significa que si el vendedor se escapa con tu dinero y no finaliza la operación, el soporte de $appName puede finalizar la operación con las monedas guardadas en el bono de arbitraje. Si estás vendiendo criptomonedas, nunca finalices la operación antes de saber que has recibido el dinero del comprador. Tenga en cuenta que las operaciones locales no tienen la protección de la fianza de arbitraje activada por defecto.';
+    return 'Todas las transacciones en línea están protegidas por bonos de arbitraje. Cuando se inicia una operación, se reserva automáticamente una cantidad de criptomonedas igual a la cantidad de la operación de la billetera de bonos $appName del vendedor. Esto significa que si el vendedor se escapa con su dinero y no finaliza la transacción, el soporte de $appName puede enviarle la criptomoneda contenida en el bono de arbitraje. Si está vendiendo criptomonedas, nunca finalice la operación antes de saber que ha recibido dinero del comprador. Tenga en cuenta que las transacciones locales no tienen habilitada la protección de bonos de arbitraje de forma predeterminada.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nEs extends I18n {
   String get morph250Sbservice8722Sbdown => 'El servicio XMR de ChangeNow no está disponible temporalmente. Intenta nuevamente más tarde.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Dirección de $cryptocurrencyName receptora';
   }
 
@@ -4773,9 +4773,7 @@ class I18nEs extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'El saldo de su billetera es menor que el mínimo requerido para este tipo de anuncio';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Límite de primera vez ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Primer límite de tiempo  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Opcional. Límite de max transacciones para usuarios con los que no ha tenido previamente tratos. Mínimo 0.';
@@ -5268,12 +5266,12 @@ class I18nEs extends I18n {
   String get search250Sbcoordinates250Sblon => 'Longitud';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Vender mis $assetName a cambio de dinero en $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Comprar $assetName con dinero en $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nEs extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Una verdadera alternativa LocalBitcoins y Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Si le preocupa la invasión de la privacidad, la mejor criptomoneda para invertir es XMR. Monero es una moneda imposible de rastrear desarrollada teniendo en cuenta la privacidad por diseño.\n<br/>¿Dónde comprar Monero? LocalMonero es el intercambio P2P Monero más grande, más confiable y bien establecido en la comunidad XMR. No tenemos cheques KYC: simplemente puede comprar Monero de forma anónima sin verificación de identidad con PayPal, tarjeta de crédito, tarjeta de regalo, efectivo por correo o convertir bitcoin a Monero; nuestra plataforma admite cualquier método de pago.';
+  String get seo250Sbtext8722Sb1 => 'Si le preocupa la invasión de la privacidad, la mejor criptomoneda para invertir es XMR. Monero es una moneda imposible de rastrear desarrollada teniendo en cuenta la privacidad por diseño.\n<br/>\n¿Dónde comprar Monero? LocalMonero es la plataforma de comercio P2P Monero más grande, confiable y bien establecida en la comunidad XMR. No tenemos cheques KYC: simplemente puede comprar Monero de forma anónima sin verificación de identificación con PayPal, tarjeta de crédito, tarjeta de regalo, efectivo por correo o convertir bitcoin a Monero: nuestra plataforma admite cualquier método de pago.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => '¿Te preguntas cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre BTC instantáneamente a una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito / débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro.\n<br/>\nSi desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma de negociación admite la compra y venta de BTC con efectivo. Incluso puedes comprar bitcoins usando efectivo por correo.';
@@ -6811,7 +6809,7 @@ class I18nEs extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Reciba $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nEs extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Seleccionar prioridad de transacción';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Dirección de recepción de $assetName';
   }
 
@@ -6879,7 +6877,7 @@ class I18nEs extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Envíe $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nEs extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Tarifas de criptomonedas salientes';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Enviar $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nEs extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Recibe $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Enviar $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nEs extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Recibir $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nEs extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Recibir';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Enviar $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nEs extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Cambiar la dirección';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Cantidad ($asset)';
   }
 
@@ -7472,7 +7470,7 @@ class I18nEs extends I18n {
   String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Abre el archivo y edítalo. Aquí hay un ejemplo: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>En el ejemplo se puede ver:</p>\n<ol>\n<li>Flutter se usa como submódulo; este es un requisito del equipo de F-Droid.</li>\n<li>Para cada sabor, hemos usado una rama separada (comando <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Eso se debe a que Fastlane no&#39;no admite sabores con Flutter.</li>\n<li>La primera vez que agregamos información de compilación manualmente, en el futuro un bot la agregará automáticamente, después de que insertemos una nueva etiqueta.</li>\n</ol>\n<p>Verifique que el archivo tenga la sintaxis correcta: <code>fdroid readmeta</code>.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Paso 4';
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'Etapa 4';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Ahora, agreguemos datos para el mercado de F-Droid. Para eso creamos una rama separada para cada sabor:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Después de eso, creamos una carpeta para Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Agregue los datos requeridos y empújelos.</p>';
@@ -7517,7 +7515,7 @@ class I18nEs extends I18n {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiqueta (opcional)';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => 'Salvar';
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Ahorrar';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Guarde esta dirección para uso futuro';
@@ -7544,6 +7542,17 @@ class I18nEs extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Cuando presione \"Guardar\", el país del anuncio se actualizará a \"global\" automáticamente.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Solo anuncios de venta del mismo activo';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Llévame al sitio web';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset solo comprar anuncios';
+  }
 
   @override
   String get ads => 'Anuncios';
@@ -8131,7 +8140,7 @@ class I18nEs extends I18n {
   String get api_error_89 => 'Intentando crear un anuncio LOCAL_* sin configurar lon/lat';
 
   @override
-  String get api_error_90 => 'Intentando acceder a operaciones de un usuario que no existe.';
+  String get api_error_90 => 'Intentar acceder a operaciones de un usuario que no existe.';
 
   @override
   String get api_error_91 => 'Intentar acceder a los datos públicos de la cuenta usando un token de un usuario que no existe';
@@ -8156,6 +8165,9 @@ class I18nEs extends I18n {
 
   @override
   String get api_error_98 => 'Tratando de crear un intercambio para un anuncio cuyo cartel no existe';
+
+  @override
+  String get api_error_99 => 'Intentar solicitar una cantidad superior a la permitida por el propietario del anuncio al crear una primera operación';
 
   @override
   String get api_error_100 => 'No se puede solicitar menos de 0.0000000001 XMR para la creación de comercio';
@@ -8215,7 +8227,16 @@ class I18nEs extends I18n {
   String get api_error_121 => 'Intentar depositar una operación que no existe';
 
   @override
-  String get api_error_125 => 'El usuario que solicita la cancelación de la transacción no existe';
+  String get api_error_122 => 'Fondos insuficientes para financiar una operación';
+
+  @override
+  String get api_error_123 => 'Fondos insuficientes para financiar una operación';
+
+  @override
+  String get api_error_124 => 'Error al financiar una operación';
+
+  @override
+  String get api_error_125 => 'El usuario que solicita la cancelación de la operación no existe';
 
   @override
   String get api_error_126 => 'Intentar cancelar una operación que no existe';
@@ -8494,7 +8515,7 @@ class I18nEs extends I18n {
   String get api_error_244 => 'Dirección no válida proporcionada por el comprador al actualizar un anuncio de tipo COMPRA';
 
   @override
-  String get api_error_245 => 'Comprador que intenta proporcionar una dirección interna al actualizar un anuncio de tipo COMPRA (no se permiten direcciones internas con fines de liquidación comercial)';
+  String get api_error_245 => 'Comprador que intenta proporcionar una dirección interna al actualizar un anuncio de tipo COMPRA (las direcciones internas no están permitidas con fines de liquidación comercial)';
 
   @override
   String get api_error_246 => 'Intentar iniciar una transacción desde un anuncio de tipo COMPRA que no especifica la dirección de liquidación del comprador';
@@ -8557,7 +8578,7 @@ class I18nEs extends I18n {
   String get pin_enter_to_confirm_transaction => 'Introduzca el PIN para confirmar la transacción';
 
   @override
-  String get pin_you_can_use => 'Puedes utilizar este PIN para desbloquear la aplicación.';
+  String get pin_you_can_use => 'El PIN debe tener al menos 4 dígitos';
 
   @override
   String get pin_confirm => 'Confirmar pasador';
@@ -9256,7 +9277,7 @@ class I18nEs extends I18n {
   String get app_scan_qr_code => 'Escanear código QR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre o venda Bitcoin de forma anónima, sin verificación de identidad. Efectivo o en línea. Seguro, rápido, fácil.\n\n¿Se pregunta cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre instantáneamente BTC de una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito/débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro. Si desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma comercial admite la compra y venta de BTC con efectivo. Incluso puede comprar bitcoins usando efectivo por correo.\n\n- Comercio seguro y fluido\nAl igual que LocalBitcoins, admitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y, a diferencia de LocalBitcoins, admitimos completamente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nAgoraDesk se compromete a mantener la simplicidad y la franqueza que hicieron que los LocalBitcoins originales fueran tan populares. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió a la gran caída del mercado de criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la comunidad de criptomonedas extremadamente escéptica.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://agoradesk.com/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Bitcoins a/desde nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre o venda Bitcoin de forma anónima, sin verificación de identidad. Efectivo o en línea. Seguro, rápido, fácil.\n\n¿Se pregunta cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre instantáneamente BTC de una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito/débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro. Si desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma comercial admite la compra y venta de BTC con efectivo. Incluso puede comprar bitcoins usando efectivo por correo.\n\n- Comercio seguro y fluido\nAl igual que LocalBitcoins, admitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y, a diferencia de LocalBitcoins, admitimos totalmente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nAgoraDesk se compromete a mantener la simplicidad y la franqueza que hicieron que los LocalBitcoins originales fueran tan populares. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió a la gran caída del mercado de criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la comunidad de criptomonedas extremadamente escéptica.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://agoradesk.com/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Bitcoins a/desde nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compra BTC anónima';
@@ -9277,7 +9298,7 @@ class I18nEs extends I18n {
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: compra BTC anónima';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre o venda Bitcoin sin verificación de identidad. Efectivo o en línea.\n\n¿Se pregunta cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre instantáneamente BTC de una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito/débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro. Si desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma comercial admite la compra y venta de BTC con efectivo. Incluso puede comprar bitcoins usando efectivo por correo.\n\n- Comercio seguro y fluido\nAl igual que LocalBitcoins, admitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y, a diferencia de LocalBitcoins, admitimos completamente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nAgoraDesk se compromete a mantener la simplicidad y la franqueza que hicieron que los LocalBitcoins originales fueran tan populares. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió a la gran caída del mercado de criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la comunidad de criptomonedas extremadamente escéptica.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://agoradesk.com/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Bitcoins a/desde nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Compre o venda Bitcoin sin verificación de identidad. Efectivo o en línea.\n\n¿Se pregunta cómo invertir en Bitcoin? En AgoraDesk, comprar bitcoins nunca ha sido tan fácil: compre instantáneamente BTC de una persona utilizando su método de pago en línea favorito: PayPal, tarjeta de crédito/débito o transferencia bancaria, tarjetas de regalo, Venmo o cualquier otro. Si desea comprar bitcoins cerca de usted con efectivo, puede encontrar a alguien dispuesto a vender bitcoins localmente: la plataforma comercial admite la compra y venta de BTC con efectivo. Incluso puede comprar bitcoins usando efectivo por correo.\n\n- Comercio seguro y fluido\nAl igual que LocalBitcoins, admitimos cualquier método de pago, cualquier moneda, en cualquier lugar. No eliminamos los métodos de pago y, a diferencia de LocalBitcoins, admitimos totalmente las transacciones en efectivo cara a cara. Todas nuestras operaciones están protegidas por un bono de arbitraje. Gracias al hecho de que requerimos que los fondos se mantengan en un bono de arbitraje antes de que pueda comenzar una operación, garantizamos una experiencia fluida y segura para el comprador, lo cual es esencial para la popularidad de la plataforma y los clientes habituales para los vendedores.\n\n- Sin KYC/AML o verificación de identidad\nAgoraDesk se compromete a mantener la simplicidad y la franqueza que hicieron que los LocalBitcoins originales fueran tan populares. No empleamos KYC/AML, ni planeamos hacerlo nunca.\n\n- Confiado por la comunidad\nNuestra plataforma ha operado durante más de cuatro años, sobrevivió a la gran caída del mercado de criptomonedas de 2018 y, a través de su servicio diligente orientado a la comunidad, se convirtió en uno de los nombres más confiables en la comunidad de criptomonedas extremadamente escéptica.\n\n- Seguro, de código abierto, centrado en la privacidad, resistente a la censura\nNuestra aplicación es gratuita y de código abierto, lo que garantiza que muchos ojos estén mirando el código de la aplicación para garantizar que no haya agujeros de seguridad o filtraciones de privacidad. El código abierto de nuestra aplicación también permite que cualquier persona tenga acceso a nuestra aplicación, incluso si un determinado repositorio de aplicaciones censura la aplicación. Nuestra aplicación incluso funciona en teléfonos que tienen Google completamente bloqueado. Valoramos tanto su privacidad que ni siquiera le pedimos que proporcione un correo electrónico al registrarse.\n\nCódigo fuente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nRastreador de problemas: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Soporte estelar\nNuestro equipo de soporte es rápido, receptivo y siempre dispuesto a complacer. Nunca hemos tenido un ticket de soporte que no haya sido respondido dentro de las 24 horas. Siempre somos fácilmente accesibles a través de las redes sociales, escuchamos atentamente sus críticas y siempre implementamos las buenas sugerencias de los usuarios en un tiempo récord.\n\nPuede comunicarse con nuestro soporte en: https://agoradesk.com/support\n\n- Tarifas justas\nNo cobramos tarifas exorbitantes cuando deposita o retira Bitcoins a/desde nuestra billetera de bonos de arbitraje. No hay tarifa de depósito y la tarifa de retiro es muy cercana a la tarifa que pagaría en una transacción normal.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'criptomoneda,anónimo,privado,monero,xmr,p2p';
@@ -9445,14 +9466,5 @@ class I18nEs extends I18n {
   String get api_error_273 => 'Intentar eliminar una dirección que no existe en la libreta de direcciones de un usuario';
 
   @override
-  String get api_error_99 => 'Intentar solicitar una cantidad superior a la permitida por first_time_limit_asset al crear una primera operación';
-
-  @override
-  String get api_error_122 => 'Fondos insuficientes para financiar una operación LOCAL_SELL flotante';
-
-  @override
-  String get api_error_123 => 'Fondos insuficientes para financiar una operación LOCAL_SELL no flotante';
-
-  @override
-  String get api_error_124 => 'Error al financiar un LOCAL_SELL';
+  String get pin_you_can_use_new => 'El PIN debe tener al menos 4 dígitos';
 }

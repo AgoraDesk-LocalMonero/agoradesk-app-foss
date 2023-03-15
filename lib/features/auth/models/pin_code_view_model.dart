@@ -152,7 +152,7 @@ class PinCodeViewModel extends ViewModel {
   Widget _dialogWrongLength(BuildContext context) {
     return DialogMarkDownWithClose(
       title: context.intl.error,
-      text: context.intl.pin_you_can_use,
+      text: context.intl.pin_you_can_use_new,
     );
   }
 

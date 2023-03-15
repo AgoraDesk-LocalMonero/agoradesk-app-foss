@@ -270,12 +270,12 @@ class I18nKo extends I18n {
   String get ad250Sbdeleted => '삭제된 계약입니다';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '$assetName을  $country에서 현금으로 판매';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '$assetName을 $country에서 현금으로 구매';
   }
 
@@ -1234,7 +1234,7 @@ class I18nKo extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => '금액 (currency)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return '금액 ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nKo extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return '$id 거래';
   }
 
@@ -1857,7 +1857,7 @@ class I18nKo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName은 P2P 모네로 거래소입니다. 유저끼리 서로서로 모네로를 매매할 수 있는 곳입니다. 거래자(유저)는 자기가 원하는 가격과 결제수단으로 계약을 등록합니다. 여러 거래를 둘러본 후 원하는 결제수단을 찾아볼 수 있습니다. 60개 이상의 결제수단으로 유저들이 모네로를 거래하고 있습니다. $appName를 통한 모네로 구입이 처음이시라면, 모네로 구매 가이드를 참고하시기 바랍니다.';
+    return '$appName는 피어 투 피어 Monero 거래 플랫폼입니다. 우리는 사용자가 서로 모네로를 사고팔 수 있는 마켓플레이스입니다. 거래자라고 하는 사용자는 제공하려는 가격과 지불 방법으로 광고를 만듭니다. 당사 웹사이트에서 무역 광고를 검색하고 선호하는 결제 방법을 검색할 수 있습니다. 60개 이상의 다양한 지불 방법으로 온라인에서 Monero를 사고 파는 거래자를 찾을 수 있습니다. $appName를 처음 사용하고 Monero를 구매하려는 경우 Monero 구매 방법에 대한 구매 가이드를 살펴보십시오.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nKo extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => '수수료 목록';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return '현재 지원하고 있는 모바일 어플은 없습니다. 하지만 $telegram을 통해 알림을 받을 수 있습니다! $thisGuide에 텔레그램 알림을 설정하는 (간단한) 방법이 나와 있습니다. 저희 텔레그램봇이 $appName의 알림을 보내줍니다.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return '응 우리는 그래! 안드로이드를 가지고 있다면 $playstoreLink, $fdroidLink에서 받거나 $apkLink를 직접 다운로드할 수 있습니다. iOS 기기의 경우 $appstoreLink에서 사용할 수 있습니다. $telegram에서도 모바일 알림을 받을 수 있습니다! $thisGuide가 Telegram 알림 활성화 프로세스를 안내합니다(쉽습니다). 그러면 봇이 $appName 이벤트에 대한 알림을 보냅니다.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nKo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '모든 온라인 거래는 중재 채권으로 보호됩니다. 거래가 시작되면 거래에 대한 모네로 금액이 판매자의 $appName 지갑에서 자동으로 예약됩니다. 즉, 판매자가 귀하의 돈을 가지고 도망치고 거래를 완료하지 않으면 $appName 지원이 중재 채권에 보관된 Monero와의 거래를 완료할 수 있습니다. Monero를 판매하는 경우 Monero 구매자로부터 돈을 받았다는 사실을 알기 전에 거래를 완료하지 마십시오. 현지 거래에는 기본적으로 중재 채권 보호가 활성화되어 있지 않습니다.';
+    return '모든 온라인 거래는 중재 채권으로 보호됩니다. 거래가 시작되면 거래 금액만큼 모네로가 판매자의 $appName 채권 지갑에서 자동으로 예약됩니다. 즉, 판매자가 귀하의 돈을 가지고 도망쳐 거래를 완료하지 않으면 $appName 지원팀이 중재 채권에 보관된 모네로를 귀하에게 인도할 수 있습니다. Monero를 판매하는 경우 Monero 구매자로부터 돈을 받았다는 것을 알기 전에 거래를 완료하지 마십시오. 현지 거래에는 기본적으로 활성화된 중재 채권 보호 기능이 없습니다.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return '모든 온라인 거래는 중재 채권으로 보호됩니다. 거래가 시작되면 거래를 위한 암호화폐 금액은 판매자의 $appName 지갑에서 자동으로 예약됩니다. 즉, 판매자가 귀하의 돈을 가지고 도망치고 거래를 완료하지 않으면 $appName 지원이 중재 채권에 보관된 코인으로 거래를 마무리할 수 있습니다. 암호화폐를 판매하는 경우 구매자로부터 돈을 받았다는 사실을 알기 전에 거래를 완료하지 마십시오. 현지 거래에는 기본적으로 중재 채권 보호가 활성화되어 있지 않습니다.';
+    return '모든 온라인 거래는 중재 채권으로 보호됩니다. 거래가 시작되면 거래 금액만큼의 암호화폐가 판매자의 $appName 채권 지갑에서 자동으로 예약됩니다. 즉, 판매자가 귀하의 돈을 가지고 도망치고 거래를 확정하지 않으면 $appName 지원팀이 중재 채권에 보관된 암호화폐를 귀하에게 보낼 수 있습니다. 암호화폐를 판매하는 경우 구매자로부터 돈을 받았다는 사실을 알기 전에 거래를 완료하지 마십시오. 현지 거래에는 기본적으로 활성화된 중재 채권 보호 기능이 없습니다.';
   }
 
   @override
@@ -3118,7 +3118,7 @@ class I18nKo extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> 시장 또는 고정 가격 </strong><br/> 광고 가격을 책정하려면 $assetName 시장 가격 위에 원하는 마진을 입력할 수 있습니다. 그렇게 하려면 \"시장 가격\" 옵션을 선택한 후 마진 필드에 백분율을 입력하십시오. 수동으로 변경할 때까지 변경되지 않는 고정 가격을 지정할 수도 있습니다. 이를 위해 \"고정 가격\" 옵션을 선택하고 가격 값을 입력해야 합니다. <br/><br/> <strong> 최소. / 최대 거래 한도 </strong><br/> 최소 거래 한도는 누군가가 살 수 있는 최소 금액을 설정합니다. 5로 설정하고 통화를 EUR로 설정했다면 누군가가 귀하와 거래를 개시할 수 있는 최소 거래 금액이 5 EUR가 될 것임을 의미합니다. 최대 거래 한도는 수락하려는 최대 거래 금액을 설정합니다. <br/><br/> <strong> 거래 조건 </strong><br/> 구매자가 귀하와 거래를 시작하기 전에 보게 되는 텍스트입니다. 거래 진행 방식과 특정 지침이 있는 경우 구매자를 위한 지침을 작성하는 것이 좋습니다. 예를 들어 거래를 완료하기 전에 구매자에게 지불 증명으로 영수증을 제출하도록 요구하거나 구매자에게 ID를 제공해야 하는 경우 여기에서 언급할 수 있습니다. 어떤 좋은 거래 조건이 포함되어 있는지 알아보기 위해 사용하려는 지불 방법에 대한 다른 거래자의 광고를 살펴볼 수 있습니다. <br/><br/> <strong> 추가 옵션 </strong><br/><br/> <strong> 제한 금액을 </strong><br/> 특정 금액에 대해서만 거래를 열 수 있도록 광고를 제한할 수 있습니다. 상자에 20,30,60을 입력하면 잠재적 거래 파트너는 20, 30 또는 60 EUR에 대해서만 거래를 개시할 수 있습니다. <br/><br/> <strong> 지불 세부 정보 </strong><br/> 구매자가 지불해야 하는 방법과 관련된 특정 정보를 여기에 입력하십시오. 이것은 귀하의 은행 계좌 번호 또는 이메일 주소(예: PayPal)일 수 있습니다. <br/><br/> <strong> 필수 최소 피드백 점수 </strong><br/> 최소 피드백 점수를 사용하면 광고를 사용하여 거래를 시작하기 위해 필요한 최소 피드백 점수를 설정할 수 있습니다. <br/><br/> <strong> 첫 번째 시간 제한($assetSymbol) </strong><br/> 신규 사용자에 대한 특정 최대 트랜잭션 제한입니다. 귀하와 이전 거래 내역이 없는 구매자가 귀하와 거래를 개시하고자 하는 경우, 이는 그들이 거래를 개시할 수 있는 최대 금액입니다. <br/><br/> <strong> 결제 창 </strong><br/> 판매자가 거래를 취소하기 전에 구매자가 결제를 완료해야 하는 시간입니다. <br/><br/> <strong> 유동성 최대량 추적 </strong><br/> 유동성 추적을 활성화하면 광고의 최대 한도가 현재 열린 거래에서 보류된 양만큼 낮아집니다. <br/><br/> <strong> 사기꾼 식별에 대한 빠른 팁 </strong> <br/><br/><strong>사기 구매자는 종종 서두르고 있습니다.</strong> 고객이 서둘러달라고 요청할수록 의심이 커집니다. 실제 고객은 항상 인내심을 가지고 있어야 합니다. <br/><br/>사기 구매자는 종종 <strong>중재 채권 보호 시스템 </strong>외부에서 거래의 전체 또는 일부를 수행할 것을 제안한 다음 거래의 일부를 완료하지 않습니다. <br/><br/> <strong>지불 증거 사진</strong>을 조심하세요. 돈을 받았다는 것을 확인할 때까지 거래를 확정하지 마세요. 구매자의 지불을 받았음을 확인할 수 있을 때까지 거래를 완료할 의무가 없습니다. <br/><br/><strong>거래 파트너가 보낸 링크를 열지 마십시오</strong>. 필요한 경우 사용 중인 브라우저와 다른 브라우저를 사용하십시오. <br/><br/>거래에 사용하는 브라우저로 $appName 이외의 웹사이트를 방문하지 마십시오. <strong>다른 웹사이트에는 다른 브라우저를 사용하세요.</strong> <br/><br/> 브라우저에서 $appName를 북마크하고 웹사이트를 방문할 때 항상 북마크를 사용하세요. 이는 실수로 피싱 웹사이트를 방문하는 것을 방지하는 데 도움이 됩니다. 피싱 웹사이트는 존재하며 매우 설득력이 있습니다.';
+    return '<strong> 시장 또는 고정 가격 </strong><br/> 광고 가격을 책정하려면 $assetName 시장 가격 위에 원하는 마진을 입력할 수 있습니다. 그렇게 하려면 \"시장 가격\" 옵션을 선택한 후 마진 필드에 백분율을 입력하십시오. 수동으로 변경할 때까지 변경되지 않는 고정 가격을 지정할 수도 있습니다. 이를 위해 \"고정 가격\" 옵션을 선택하고 가격 값을 입력해야 합니다. <br/><br/> <strong> 최소. / 최대 거래 한도 </strong><br/> 최소 거래 한도는 누군가가 살 수 있는 최소 금액을 설정합니다. 5로 설정하고 통화를 EUR로 설정했다면 누군가가 귀하와 거래를 개시할 수 있는 최소 거래 금액이 5 EUR가 될 것임을 의미합니다. 최대 거래 한도는 수락하려는 최대 거래 금액을 설정합니다. <br/><br/> <strong> 거래 조건 </strong><br/> 구매자가 귀하와 거래를 시작하기 전에 보게 되는 텍스트입니다. 거래 진행 방식과 특정 지침이 있는 경우 구매자를 위한 지침을 작성하는 것이 좋습니다. 예를 들어 거래를 완료하기 전에 구매자에게 지불 증명으로 영수증을 제출하도록 요구하거나 구매자에게 ID를 제공해야 하는 경우 여기에서 언급할 수 있습니다. 어떤 좋은 거래 조건이 포함되어 있는지 알아보기 위해 사용하려는 지불 방법에 대한 다른 거래자의 광고를 살펴볼 수 있습니다. <br/><br/> <strong> 추가 옵션 </strong><br/><br/> <strong> 제한 금액을 </strong><br/> 특정 금액에 대해서만 거래를 열 수 있도록 광고를 제한할 수 있습니다. 상자에 20,30,60을 입력하면 잠재적 거래 파트너는 20, 30 또는 60 EUR에 대해서만 거래를 개시할 수 있습니다. <br/><br/> <strong> 지불 세부 정보 </strong><br/> 구매자가 지불해야 하는 방법과 관련된 특정 정보를 여기에 입력하십시오. 이것은 귀하의 은행 계좌 번호 또는 이메일 주소(예: PayPal)일 수 있습니다. <br/><br/> <strong> 필수 최소 피드백 점수 </strong><br/> 최소 피드백 점수를 사용하면 광고를 사용하여 거래를 시작하기 위해 필요한 최소 피드백 점수를 설정할 수 있습니다. <br/><br/> <strong> 첫 번째 시간 제한($assetSymbol) </strong><br/> 신규 사용자에 대한 특정 최대 트랜잭션 제한입니다. 귀하와 이전 거래 내역이 없는 구매자가 귀하와 거래를 개시하고자 하는 경우, 이는 그들이 거래를 개시할 수 있는 최대 금액입니다. <br/><br/> <strong> 결제 창 </strong><br/> 판매자가 거래를 취소하기 전에 구매자가 결제를 완료해야 하는 시간입니다. <br/><br/> <strong> 유동성 최대량 추적 </strong><br/> 유동성 추적을 활성화하면 광고의 최대 한도가 현재 열린 거래에서 보류된 양만큼 낮아집니다. <br/><br/> <strong> 사기꾼 식별에 대한 빠른 팁 </strong> <br/><br/><strong>사기 구매자는 종종 서두르고 있습니다.</strong> 고객이 서둘러달라고 요청할수록 의심이 커집니다. 실제 고객은 항상 인내심을 가지고 있어야 합니다. <br/><br/>사기 구매자는 종종 <strong>중재 채권 보호 시스템 </strong>외부에서 거래의 전체 또는 일부를 수행할 것을 제안한 다음 거래의 일부를 완료하지 않습니다. <br/><br/> <strong>지불 증거 사진</strong>을 조심하세요. 돈을 받았다는 것을 확인할 때까지 거래를 확정하지 마세요. 구매자의 지불을 받았음을 확인할 수 있을 때까지 거래를 완료할 의무가 없습니다. <br/><br/><strong>거래 파트너가 보낸 링크를 열지 마십시오</strong>. 필요한 경우 사용 중인 브라우저와 다른 브라우저를 사용하십시오. <br/><br/>거래에 사용하는 브라우저로 $appName 이외의 웹사이트를 방문하지 마십시오. <strong>다른 웹사이트에는 다른 브라우저를 사용하세요.</strong> <br/><br/> 브라우저에서 $appName를 북마크하고 웹사이트를 방문할 때 항상 북마크를 사용하세요. 이는 실수로 피싱 웹사이트를 방문하는 것을 방지하는 데 도움이 되며, 존재하며 매우 설득력이 있습니다.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nKo extends I18n {
   String get morph250Sbservice8722Sbdown => 'MorphToken의 XMR 서비스가 현재 이용 불가능합니다. 나중에 다시 시도해 주세요.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '$cryptocurrencyName 받을 주소';
   }
 
@@ -4773,9 +4773,7 @@ class I18nKo extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => '지갑잔액이 이 계약에 필요한 최소량보다 적습니다';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return '첫 거래 ($assetSymbol) 한도';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '첫 거래한도  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => '선택 과목. 이전 거래가 없는 사용자의 최대 거래 금액을 제한합니다. 최소 0.';
@@ -5268,12 +5266,12 @@ class I18nKo extends I18n {
   String get search250Sbcoordinates250Sblon => '경도';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '$location에서  $assetName을 현금으로 판매';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '$location에서  $assetName을 현금으로 구매';
   }
 
@@ -5340,7 +5338,7 @@ class I18nKo extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'LocalBitcoins와 Paxful을 대체할 수 있는 거래소.';
 
   @override
-  String get seo250Sbtext8722Sb1 => '개인정보 유출이 두렵다면 - 투자하기 가장 좋은 가상화폐는 XMR입니다. 모네로는 개인정보보호를 염두에 두고 개발된 추적 불가능한 코인입니다. \n<br/>\n모네로를 어디서 살까? LocalMonero는 XMR 커뮤니티에서 확실히 자리잡고 가장 크고 신뢰받는 P2P 모네로 거래소입니다. 저희는 KYC를 이용하지 않습니다 - 본인인증 없이 페이팔, 신용카드, 상품권, 현금이나 비트코인으로 모네로를 익명으로 구매할 수 있습니다 - 저희 플랫폼은 이 중 어느 결제수단이든 이용 가능합니다.';
+  String get seo250Sbtext8722Sb1 => '프라이버시 침해가 걱정된다면 투자할 수 있는 최고의 암호화폐는 XMR입니다. Monero는 개인 정보 보호를 염두에 두고 개발된 추적 불가능한 코인입니다.\n<br/>\n모네로 어디서 사나요? LocalMonero는 XMR 커뮤니티에서 가장 크고 신뢰할 수 있으며 잘 구축된 P2P Monero 거래 플랫폼입니다. 우리는 KYC 수표가 없습니다. PayPal, 신용 카드, 기프트 카드, 우편으로 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매하거나 비트코인을 Monero로 전환할 수 있습니다. 우리 플랫폼은 모든 결제 방법을 지원합니다.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => '비트코인에 어떻게 투자할지 고민중이라고? AgoraDesk에서 비트코인을 구매한는건 지금보다 쉬웠던 적은 없습니다 - 원하는 결제수단(페이팔, 계좌이체, 신용카드, 체크카드, 상품권, 벤모(Venmo) 등)을 이용해 다른 유저로부터 비트코인을 구매하세요.\n<br/>\n 비트코인을 주변에서 현금으로 구매하고 싶다면, 주변에서 비트코인을 판매할 사람을 찾아드리겠습니다 - 저희 거래소는 현금을 이용한 비트코인 매매를 지원합니다. 심지어 현금우편으로도 비트코인을 구매할 수 있습니다.';
@@ -6811,7 +6809,7 @@ class I18nKo extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return '$assetName 받기';
   }
 
@@ -6869,7 +6867,7 @@ class I18nKo extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => '거래 중요도 선택';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '입금할 $assetName 주소';
   }
 
@@ -6879,7 +6877,7 @@ class I18nKo extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return '$assetName 보내기';
   }
 
@@ -6944,7 +6942,7 @@ class I18nKo extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => '가상화폐 네트워크 이용료';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return '$assetName 보내기';
   }
 
@@ -7006,12 +7004,12 @@ class I18nKo extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return '$currencyCode받기';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return '$asset보내기';
   }
 
@@ -7100,7 +7098,7 @@ class I18nKo extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return '$assetName 받기';
   }
 
@@ -7108,7 +7106,7 @@ class I18nKo extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => '받기';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return '$assetName 보내기';
   }
 
@@ -7355,7 +7353,7 @@ class I18nKo extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => '주소를 바꾸다';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return '금액 ($asset)';
   }
 
@@ -7457,7 +7455,7 @@ class I18nKo extends I18n {
   String get devblog250Sbfdroid250Sb2250Sbtitle => '1 단계';
 
   @override
-  String get devblog250Sbfdroid250Sb3250Sbtext => '<p><code>fdroid</code>가 올바르게 작동하는지 확인하십시오. <code>fdroid</code> 폴더에서 다음 명령을 실행합니다.</p>\n<pre><code class=\"lang-sh\">fdroid 초기화\nfdroid 읽기 메타\n</code></pre>';
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p><code>fdroid</code>가 올바르게 작동하는지 확인합니다. <code>fdroid</code> 폴더에서 다음 명령을 실행합니다.</p>\n<pre><code class=\"lang-sh\">fdroid 초기화\nfdroid 읽기 메타\n</code></pre>';
 
   @override
   String get devblog250Sbfdroid250Sb3250Sbtitle => '2 단계';
@@ -7469,7 +7467,7 @@ class I18nKo extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => '3단계';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>파일을 열고 편집합니다. 예는 다음과 같습니다. <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>예제에서 다음을 볼 수 있습니다.</p>\n<ol>\n<li>Flutter는 하위 모듈로 사용됩니다. 이것은 F-Droid 팀의 요구 사항입니다.</li>\n<li>모든 플레이버에 대해 별도의 분기를 사용했습니다(<code>AutoUpdateMode: 버전 %v-fdroid-lm</code> 명령). 이는 Fastlane이 Flutter에서 &#39; 플레이버를 지원하지 않기 때문입니다.</li>\n<li>빌드 정보를 수동으로 처음 추가하면 앞으로 새 태그를 푸시한 후 봇에 의해 자동으로 추가됩니다.</li>\n</ol>\n<p>파일의 구문이 올바른지 확인하십시오: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>파일을 열고 편집합니다. 예는 다음과 같습니다. <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>예제에서 다음을 볼 수 있습니다.</p>\n<ol>\n<li>Flutter는 하위 모듈로 사용됩니다. 이것은 F-Droid 팀의 요구 사항입니다.</li>\n<li>모든 플레이버에 대해 별도의 분기를 사용했습니다(명령 <code>AutoUpdateMode: Version %v-fdroid-lm</code>). 이는 Fastlane이 Flutter에서 &#39; 플레이버를 지원하지 않기 때문입니다.</li>\n<li>빌드 정보를 수동으로 처음 추가하면 앞으로 새 태그를 푸시한 후 봇에 의해 자동으로 추가됩니다.</li>\n</ol>\n<p>파일의 구문이 올바른지 확인: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => '4단계';
@@ -7544,6 +7542,17 @@ class I18nKo extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '\"저장\"을 누르면 광고의 국가가 자동으로 \"글로벌\"로 업데이트됩니다.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '동일 자산 판매 광고만';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => '웹사이트로 이동';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset 광고만 구매';
+  }
 
   @override
   String get ads => '광고';
@@ -8152,10 +8161,13 @@ class I18nKo extends I18n {
   String get api_error_96 => '거래를 생성하려는 존재하지 않는 사용자';
 
   @override
-  String get api_error_97 => '존재하지 않는 광고에 대한 거래를 시도 중';
+  String get api_error_97 => '존재하지 않는 광고에 대한 거래 생성 시도';
 
   @override
   String get api_error_98 => '포스터가 존재하지 않는 광고에 대한 거래 생성 시도';
+
+  @override
+  String get api_error_99 => '첫 거래를 생성할 때 광고 소유자가 허용한 것보다 더 높은 금액을 요청하려고 합니다.';
 
   @override
   String get api_error_100 => '거래 생성을 위해 0.0000000001 XMR 미만을 요청할 수 없습니다.';
@@ -8215,6 +8227,15 @@ class I18nKo extends I18n {
   String get api_error_121 => '존재하지 않는 거래를 에스크로 시도';
 
   @override
+  String get api_error_122 => '거래 자금이 부족합니다.';
+
+  @override
+  String get api_error_123 => '거래 자금이 부족합니다.';
+
+  @override
+  String get api_error_124 => '거래 자금 조달 중 오류';
+
+  @override
   String get api_error_125 => '거래 취소를 요청하는 사용자가 존재하지 않습니다.';
 
   @override
@@ -8272,7 +8293,7 @@ class I18nKo extends I18n {
   String get api_error_148 => '이미 설정된 텔레그램 아이디로 설정 시도';
 
   @override
-  String get api_error_149 => '외부 인출에 대한 우선 순위가 지정되지 않음';
+  String get api_error_149 => '외부 인출에 대해 우선 순위가 지정되지 않음';
 
   @override
   String get api_error_150 => '요청 사용자가 광고 포스터에 의해 차단된 광고에서 거래를 시작하려고 시도합니다.';
@@ -8497,7 +8518,7 @@ class I18nKo extends I18n {
   String get api_error_245 => '구매자가 BUY형 광고 업데이트 시 내부 주소를 제공하려는 경우(거래 정산을 위한 내부 주소는 허용되지 않음)';
 
   @override
-  String get api_error_246 => '구매자 결제 주소를 지정하지 않은 BUY형 광고에서 거래를 시도하는 행위';
+  String get api_error_246 => '구매자 결제 주소를 명시하지 않은 BUY형 광고에서 거래를 시도하는 행위';
 
   @override
   String get api_error_247 => '제재로 인해 출금이 금지된 계정에서 거래를 해제하려고 시도하는 행위';
@@ -8515,7 +8536,7 @@ class I18nKo extends I18n {
   String get api_error_251 => 'BTC SELL형 광고에 응답하여 거래를 개시할 때 수수료 수준이 제공되지 않음';
 
   @override
-  String get api_error_252 => 'BTC BUY형 광고 생성 시 수수료 등급 미제공';
+  String get api_error_252 => 'BTC BUY형 광고 제작 시 수수료 등급 미제공';
 
   @override
   String get api_error_253 => '수수료 수준이 설정되지 않은 BTC BUY 유형 광고 업데이트 시 수수료 수준이 제공되지 않음';
@@ -8557,7 +8578,7 @@ class I18nKo extends I18n {
   String get pin_enter_to_confirm_transaction => '거래 확인을 위해 PIN 입력';
 
   @override
-  String get pin_you_can_use => '이 PIN을 사용하여 앱을 잠금 해제할 수 있습니다.';
+  String get pin_you_can_use => 'PIN은 4자리 이상이어야 합니다.';
 
   @override
   String get pin_confirm => '핀 확인';
@@ -9101,7 +9122,7 @@ class I18nKo extends I18n {
   String get app_trade_option_payment_receiver_cancel_notice => '돈을 받았다고 100% 확신할 때까지 거래를 완료하지 마십시오. 사기꾼은 조기에 마무리하도록 속이려고 합니다.';
 
   @override
-  String get app_cancel_trade_message => '실수를 했거나 다른 트레이더를 시도하고 싶습니까? 이미 자금을 이체했고 지금 취소하려면 거래 파트너와 지불금 반환에 대해 직접 협상해야 합니다. 돈을 돌려받았다는 확신이 없으면 취소하지 마십시오.';
+  String get app_cancel_trade_message => '실수를 했거나 다른 트레이더를 시도하고 싶습니까? 이미 자금을 이체했고 지금 취소하려는 경우 거래 파트너와 지불금 반환에 대해 직접 협상해야 합니다. 돈을 돌려받았다는 확신이 없으면 취소하지 마십시오.';
 
   @override
   String get app_all_feedback => '모든 피드백';
@@ -9277,7 +9298,7 @@ class I18nKo extends I18n {
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: 익명으로 BTC 구매';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => '신원 확인 없이 비트코인을 사고 팔 수 있습니다. 현금 또는 온라인.\n\nBitcoin에 투자하는 방법이 궁금하십니까? AgoraDesk에서 비트코인 구매가 그 어느 때보다 쉬워졌습니다. 페이팔, 신용/직불 카드 또는 은행 송금, 기프트 카드, Venmo 등 좋아하는 온라인 결제 수단을 사용하여 사람에게서 BTC를 즉시 구매하세요. 가까운 곳에서 현금으로 비트코인을 사고 싶다면 현지에서 비트코인을 팔려는 사람을 찾을 수 있습니다. 거래 플랫폼은 현금으로 BTC를 사고 파는 것을 지원합니다. 우편으로 현금을 사용하여 비트코인을 구매할 수도 있습니다.\n\n- 안전하고 원활한 거래\nLocalBitcoins와 마찬가지로 우리는 어디서나 모든 지불 방법, 모든 통화를 지원합니다. 우리는 결제 수단을 제거하지 않으며, LocalBitcoins와 달리 대면 현금 거래를 전적으로 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 자금이 중재 채권에 보관되어야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기에 필수적이며 판매자에게는 반복 고객입니다.\n\n- KYC/AML 또는 ID 확인 없음\nAgoraDesk는 원래 LocalBitcoins를 인기 있게 만든 단순성과 직진성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 사용하지 않으며 그렇게 할 계획도 없습니다.\n\n- 지역 사회의 신뢰\n우리 플랫폼은 4년 이상 운영되어 2018년 대암호화폐 시장 붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 암호 화폐 커뮤니티에서 가장 신뢰할 수 있는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 프라이버시 중심, 검열 방지\n우리의 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인정보 유출이 없는지 확인하기 위해 많은 사람들이 앱의 코드를 주시하고 있습니다. 우리 앱을 오픈 소싱하면 특정 앱 저장소에서 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 저희 앱은 Google이 완전히 차단된 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 소중히 여기며 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 트래커: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 별의 지원\n우리의 지원팀은 빠르고 응답이 빠르며 항상 기쁘게 생각합니다. 24시간 이내에 답변을 받지 못한 지원 티켓은 한 번도 없었습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://agoradesk.com/support에서 지원을 받을 수 있습니다.\n\n- 공정 수수료\n중재 채권 지갑에 비트코인을 입금하거나 인출할 때 과도한 수수료를 부과하지 않습니다. 입금 수수료가 없으며 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 비슷합니다.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => '신분증 확인 없이 비트코인을 사고 팔 수 있습니다. 현금 또는 온라인.\n\nBitcoin에 투자하는 방법이 궁금하십니까? AgoraDesk에서 비트코인 구매가 그 어느 때보다 쉬워졌습니다. 페이팔, 신용/직불 카드 또는 은행 송금, 기프트 카드, Venmo 등 좋아하는 온라인 결제 수단을 사용하여 사람에게서 BTC를 즉시 구매하세요. 가까운 곳에서 현금으로 비트코인을 사고 싶다면 현지에서 비트코인을 팔려는 사람을 찾을 수 있습니다. 거래 플랫폼은 현금으로 BTC를 사고 파는 것을 지원합니다. 우편으로 현금을 사용하여 비트코인을 구매할 수도 있습니다.\n\n- 안전하고 원활한 거래\nLocalBitcoins와 마찬가지로 우리는 어디서나 모든 지불 방법, 모든 통화를 지원합니다. 우리는 결제 수단을 제거하지 않으며, LocalBitcoins와 달리 대면 현금 거래를 전적으로 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 자금이 중재 채권에 보관되어야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기에 필수적이며 판매자에게는 반복 고객입니다.\n\n- KYC/AML 또는 ID 확인 없음\nAgoraDesk는 원래 LocalBitcoins를 인기 있게 만든 단순성과 직진성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 사용하지 않으며 그렇게 할 계획도 없습니다.\n\n- 지역 사회의 신뢰\n우리 플랫폼은 4년 이상 운영되어 2018년 대암호화폐 시장 붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 암호 화폐 커뮤니티에서 가장 신뢰할 수 있는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 프라이버시 중심, 검열 방지\n우리의 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인정보 유출이 없는지 확인하기 위해 많은 사람들이 앱의 코드를 주시하고 있습니다. 우리 앱을 오픈 소싱하면 특정 앱 저장소에서 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 저희 앱은 Google이 완전히 차단된 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 소중히 여기며 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 트래커: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 별의 지원\n우리의 지원팀은 빠르고 응답이 빠르며 항상 기쁘게 생각합니다. 24시간 이내에 답변을 받지 못한 지원 티켓은 한 번도 없었습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://agoradesk.com/support에서 지원을 받을 수 있습니다.\n\n- 공정 수수료\n중재 채권 지갑에 비트코인을 입금하거나 인출할 때 과도한 수수료를 부과하지 않습니다. 입금 수수료가 없으며 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 비슷합니다.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => '암호화폐,익명,비공개,모네로,xmr,p2p';
@@ -9388,7 +9409,7 @@ class I18nKo extends I18n {
   String get app_google_play_store_short_description_localmonero => '신분증 인증 없이 모네로를 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => '신원 확인 없이 비트코인을 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.';
+  String get app_google_play_store_short_description_agoradesk => '신분증 확인 없이 비트코인을 사고 팔 수 있습니다. 현금 또는 온라인. 안전하고 빠르고 쉽습니다.';
 
   @override
   String get app_ask_community_chats => '질문이 있으신가요? 커뮤니티 채팅에서 물어보세요';
@@ -9445,14 +9466,5 @@ class I18nKo extends I18n {
   String get api_error_273 => '사용자 주소록에 존재하지 않는 주소 삭제 시도';
 
   @override
-  String get api_error_99 => '첫 거래를 생성할 때 first_time_limit_asset에서 허용한 것보다 더 많은 금액을 요청하려고 합니다.';
-
-  @override
-  String get api_error_122 => '부동 LOCAL_SELL 거래 자금이 부족합니다.';
-
-  @override
-  String get api_error_123 => '비유동 LOCAL_SELL 거래 자금이 부족합니다.';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL 자금 조달 중 오류';
+  String get pin_you_can_use_new => 'PIN은 4자리 이상이어야 합니다.';
 }

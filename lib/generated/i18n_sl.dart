@@ -83,7 +83,7 @@ class I18nSl extends I18n {
 
   @override
   String ad8722Sblisting8722Sbtable250Sbsimilar8722Sbads8722Sbtoggle8722Sblabel250Sbhide(Object username) {
-    return 'Skrij podobne oglase uporabnika $username.';
+    return 'Skrij podobne oglase uporabnika $username';
   }
 
   @override
@@ -255,7 +255,7 @@ class I18nSl extends I18n {
 
   @override
   String ad250Sbconfirmation250Sbprovide8722Sbaddress(Object asset) {
-    return 'Navedite naslov denarnice za poravnavo $asset.';
+    return 'Navedite naslov denarnice za poravnavo $asset';
   }
 
   @override
@@ -270,12 +270,12 @@ class I18nSl extends I18n {
   String get ad250Sbdeleted => 'Ta oglas je bil izbrisan';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Prodaja $assetName za gotovino v $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Nakup $assetName z gotovino v $country';
   }
 
@@ -325,7 +325,7 @@ class I18nSl extends I18n {
 
   @override
   String address8722Sbinput250Sbbuyer8722Sbsettlement8722Sbaddress250Sblabel(Object asset) {
-    return 'Naslov denarnice za poravnavo $asset.';
+    return 'Naslov denarnice za poravnavo $asset';
   }
 
   @override
@@ -1234,7 +1234,7 @@ class I18nSl extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Znesek (valuta)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Znesek ($assetSymbol)';
   }
 
@@ -1467,7 +1467,7 @@ class I18nSl extends I18n {
 
   @override
   String document8722Sbtitle250Sbfeedback(Object user) {
-    return 'Povratne informacije uporabnika $user.';
+    return 'Povratne informacije uporabnika $user';
   }
 
   @override
@@ -1575,13 +1575,13 @@ class I18nSl extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Trade $id';
   }
 
   @override
   String document8722Sbtitle250Sbuser8722Sbads(Object user) {
-    return 'Oglasi uporabnika $user.';
+    return 'Oglasi uporabnika $user';
   }
 
   @override
@@ -1838,7 +1838,7 @@ class I18nSl extends I18n {
 
   @override
   String error250Sbwithdraw250Sb75(Object appName) {
-    return 'Ta naslov ne obstaja v bazi podatkov $appName.';
+    return 'Ta naslov ne obstaja v bazi podatkov $appName';
   }
 
   @override
@@ -1857,7 +1857,7 @@ class I18nSl extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName je peer-to-peer menjalnica Monera. Smo tržišče, kjer lahko uporabniki drug drugemu prodajajo in kupujejo Monero. Uporabniki, imenovani trgovalci, ustvarijo oglase s ceno in načinom plačila, ki ga želijo ponuditi. Na našem spletnem mestu lahko brskate po trgovalnih oglasih in poiščete načine plačila, ki so vam najljubši. Najdite trgovce, ki kupujejo in prodajajo Monero za več kot 60 različnih načinov plačila. Če še niste uporabljali $appName in želite kupiti Monero, si oglejte naš vodnik, da izveste, kako kupiti Monero.';
+    return '$appName je platforma za enakovredno trgovanje Monero. Smo tržnica, kjer lahko uporabniki drug drugemu kupujejo in prodajajo Monero. Uporabniki, imenovani trgovci, ustvarijo oglase s ceno in načinom plačila, ki ga želijo ponuditi. Na našem spletnem mestu lahko brskate za trgovinske oglase in poiščete način plačila, ki vam je ljubši. Na spletu boste našli trgovce, ki kupujejo in prodajajo Monero za več kot 60 različnih načinov plačila. Če še niste uporabljali $appName in želite kupiti Monero, si oglejte naš vodnik za nakup, da izveste, kako kupiti Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nSl extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'stran s provizijami';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Trenutno nimamo samostojne mobilne aplikacije. Lahko pa prejemate mobilna obvestila v $telegram! $thisGuide vas bo popeljal skozi postopek aktivacije Telegram obvestil (enostavno je). Naš bot vam bo nato poslal obvestila o vaših $appName dogodkih.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Da, imamo! Če imate Android, ga lahko dobite na $playstoreLink, $fdroidLink ali pa neposredno prenesete $apkLink. Za naprave iOS je na voljo na $appstoreLink. V $telegram lahko prejemate tudi mobilna obvestila! $thisGuide vas bo popeljal skozi postopek aktivacije obvestil Telegram (je enostavno). Naš bot vam bo nato poslal obvestila o vaših $appName dogodkih.';
   }
 
   @override
@@ -2078,7 +2078,7 @@ class I18nSl extends I18n {
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Vse spletne trgovine so zaščitene z arbitražnimi obveznicami. Ko se trgovanje začne, se znesek kriptovalute, ki je enak znesku trgovanja, samodejno rezervira iz prodajalčeve denarnice $appName kot obveznica. To pomeni, da če prodajalec pobegne z vašim denarjem in ne zaključi posla, lahko podpora za $appName usmeri kriptovaluto v arbitražni obveznici vam. Če prodajate kriptovaluto, nikoli ne zaključite trgovanja, preden veste, da ste od kupca prejeli denar. Upoštevajte, da lokalna trgovanja nimajo privzeto omogočene zaščite arbitražnih obveznic.';
+    return 'Vsa online trgovanja so zaščitena z arbitražnimi obveznicami. Ko se trgovanje začne, se znesek kriptovalute, ki je enak znesku trgovanja, samodejno rezervira iz prodajalčeve denarnice $appName kot obveznica. To pomeni, da če prodajalec pobegne z vašim denarjem in ne zaključi posla, lahko podpora za $appName usmeri kriptovaluto v arbitražni obveznici vam. Če kriptovaluto prodajate, nikoli ne zaključite trgovanja, preden veste, da ste od kupca prejeli denar. Upoštevajte, da lokalna trgovanja nimajo privzeto omogočene zaščite arbitražnih obveznic.';
   }
 
   @override
@@ -2628,7 +2628,7 @@ class I18nSl extends I18n {
   String get guide250Sbcbm250Sbbuyer250Sb0250Sbtext => 'Gotovino lahko vstavite v pisemsko ovojnico doma ali v avtu, telefon z vklopljenim videom pa lahko vstavite v sprednji žep srajce in posnamite celoten postopek brez dodatnega dela, razen tega, da bo kamera pravilno usmerjena. Če imate nekaj podobnega GoPro-ju ali najnovejši iPhone, ki ima kamero s širšim vidnim kotom, bo to še lažje.\n\nPosnetek za primer spora hranite 180 dni.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtitle => 'Vaš video mora biti posnet v enem posnetku, brez rezov.';
+  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtitle => 'Vaš video mora biti posnet v enem posnetku, brez rezov';
 
   @override
   String get guide250Sbcbm250Sbbuyer250Sb1250Sbtext => 'Uporabite nekakšen žig, podpis ali le naključne črte s pisalom znotraj ovojnice tako, da prekrijete vse površine. Tako bo lažje ugotoviti, ali prodajalec dejansko odpira vašo ovojnico. Te oznake naj bodo vidne na videu.';
@@ -3060,7 +3060,7 @@ class I18nSl extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sba8722Sbsell8722Sbmonero8722Sbad(Object assetName) {
-    return 'oglas za spletno prodajo $assetName.';
+    return 'oglas za spletno prodajo $assetName';
   }
 
   @override
@@ -3260,7 +3260,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbblocks250Sbtitle => 'Kako je Monero Rešil Problem Velikosti Bloka, ki muči Bitcoin';
 
   @override
-  String get knowledge250Sbbtc250Sb0250Sbtext => '<p><p>Monero je kriptovaluta, ki ceni zasebnost nad vsem drugim, vendar večina ljudi ne razume, da zasebnost, ki jo zagotavlja uporaba, v določenih situacijah ni niti neprebojna niti absolutna. Da ne bo pomote, Monero je približno tako zaseben, kot je v nezaupljivem svetu, vendar morajo uporabniki upoštevati nekaj premislekov, da zagotovijo, da njihova zasebnost ostane močna.</p>\n\n<p> Enako velja za druga področja življenja. Na primer, lahko se izogibate vsem družabnim medijem, da ohranite zasebnost svojega življenja, toda če ste nenehno s prijatelji, ki snemajo selfije z vami v njih, povejte, da so z vami, v podnapisu in označite svoje lokaciji, bo večina vašega truda morda zaman. Konglomerat družbenih medijev lahko še vedno ustvari profil na vas, kljub dejstvu, da vi osebno niste na njihovi platformi.</p>\n\n<p>Ena od pogosto omenjanih situacij, ko ljudje ne upoštevajo vseh posledic in morebitnih uhajajočih metapodatkov, je vprašanje trgovanja z bitcoini za Monero. V skupnosti običajno velja, da bo nakup Monera z Bitcoinom popolno čiščenje in da uporabnik obdrži vse ugodnosti glede zasebnosti, ko vstopi v Monero, čeprav prihaja iz pregledne verige.</p>\n\n<p>Podobno nekateri menijo, da je prav tako zasebno pridobiti Monero iz virov, ki niso KYC in KYC. Razmišljanje pravi, da je to podobno pridobivanju gotovine na banki. V tem scenariju banka sama pozna vaš obraz in ime ter ve, koliko imate na računu na splošno in koliko gotovine ste dvignili, ne ve pa, kaj z gotovino naredite pozneje. Z jamstvi zasebnosti Monera bi moralo biti prav tako, če dobite Monero iz vira KYC/AML, kajne? </p>\n\n<p>No, ne čisto.</p>\n\n<p>Najprej naredimo hiter korak nazaj in opredelimo, kaj mislimo z KYC/AML. Ta akronim pomeni zakone Know Your Customer (KYC)/proti pranju denarja (AML), ki zahtevajo, da borze in podjetja zbirajo identifikacijske podatke o svojih strankah. Večji kot je znesek izmenjanega denarja, več informacij je potrebnih. Kot pove ime, je vse to storjeno v imenu zmanjšanja tveganja, da ljudje perejo denar. </p>\n\n<p>Nazaj na Monero. Seveda je prenos vašega denarja v Monero iz vira KYC astronomsko boljši za zasebnost kot uporaba vira KYC za nakup nečesa, kot je BTC ali katerega koli drugega kovanca za preglednost, vendar je še vedno treba razmisliti o tem, kaj je razkrito in kaj to razkrite informacije lahko pomenijo vašo zasebnost in varnost.</p>\n\n<p>Če v banki dvignete velik znesek, lahko bančni uslužbenec, ki pozna vaše podatke (vključno z vašim domačim naslovom), vidi, koliko denarja imate na računu, in lahko glede na vaše premoženje načrtuje nečedne načrte, tudi če ostane pri scenariju z gotovino in banko. To se zgodi redko in ker je denar v banki in ne na vašem domu, je to, kar lahko storijo v tem primeru, razmeroma majhno. Enako ne velja za Monero, ki ni zavarovan s strani tretje osebe, temveč s strani vas. Biti lastna banka ni vedno enostavno.</p>\n\n<p>Podobno tudi prehod z BTC na XMR, ne glede na to, kako je izveden, pusti sledi v verigi blokov Bitcoina. Čeprav je to res manj škodljivo kot prehod iz BTC v BTC, saj je na drugi strani izmenjave obvezna zasebnost Monero, je treba upoštevati posledice puščanja sledi za seboj. Te sledi se še bolj stopnjujejo, če je bil kjer koli v procesu vključen KYC.</p>\n\n<p>Predstavite si scenarij, v katerem bi za blago ali storitev prejeli umazane bitcoine, kar je mogoče le zaradi radikalne preglednosti Bitcoina. Ne veste, da so ti Bitcoini umazani, saj nimate tehnike, da bi preverili vsak Bitcoin, zato vam kot osebi, ki se spozna na kriptovalute, to dejstvo ne ustreza, in nimate denarja, da bi plačali podjetju za verižno analizo, ki bi to preverilo namesto vas. Zato se odločite, da boste zaradi večje varnosti opravili menjavo v Monero.</p>\n\n<p>Svoje bitcoine položite na borzo in jih zamenjate za Monero, ki ga nato potegnete v svojo lokalno denarnico. Ta scenarij je že nekoliko pretiran, saj lahko borza označi vaše umazane bitcoine in zaklene vaš račun, vi pa jih lahko dobite nazaj ali pa tudi ne, vendar bomo za potrebe tega primera predpostavili, da dovolijo zamenjavo.</p>\n\n<p>Če se bo vlada začela zanimati za sled teh bitcoinov, jim bo sledila do borze, zahtevala podatke KYC o vlagatelju, ugotovila, da so bili zamenjani v Monero (sumljivo), in potrkala na vaša vrata.</p>\n\n<p>Prosimo, razumite, to ne pomeni, da se morate izogibati zamenjavi bitcoinov v Monero, da ne bi bili videti sumljivi. Sumljivi ste bili že zato, ker ste sprejemali umazane Bitcoine, in če jih ne bi zamenjali, bi še vedno uporabili analizo veriženja blokov in še vedno prišli potrkati na vrata. Namesto tega ta primer zgolj poudarja, da je uporaba transparentnih kovancev sploh zelo tvegana in da zamenjava na zasebni, zamenljivi kovanec, kot je Monero, ne izbriše sledi, ki so ostale v transparentni verigi blokov.</p>\n\n<p> Za posameznika, ki ga zanima njegova zasebnost, je treba pregledne verige blokov blockchain uporabljati minimalno in zelo previdno. Kadar koli je mogoče, se je treba izogibati KYC, saj je te metapodatke še vedno mogoče uporabiti za oblikovanje primera in postavljanje vprašanj, in bog ne daj, da bi ti podatki KYC (poleg podatkov o trgovanju) zaradi nesposobnosti pricurljali z borz. Tudi če ste na borzi samo kupili in dvignili Monero, bi ti odtekli podatki še vedno razkrili, koliko Monera ste imeli in kje se nahajate. Vse to so informacije, za katere se vsi strinjamo, da si nihče ne želi, da bi lebdele v kibernetskem prostoru.</p>\n\n<p>Če povzamemo, čeprav uporaba Monera dejansko preprečuje številne napade in privzeto zmanjšuje uhajanje metapodatkov, lahko uporabnik sam stori veliko stvari, s katerimi na koncu uniči svojo zasebnost. Ena od najmanj upoštevanih je, kakšne so posledice uporabe bodisi verige transparentnosti kot poti do Monera bodisi vira KYC za njegovo pridobitev, da ne govorimo o uporabi obojega hkrati.</p>\n\n<p>Ta članek ni namenjen vzbujanju strahu, temveč spodbujanju uporabnikov h kritičnemu razmišljanju o svojih odločitvah in opominjanju, da je lahko tudi najboljša zasebnost v določenih okoliščinah krhka. Uporabniki morajo biti pozorni, da zaščitijo svojo zasebnost s pametnimi odločitvami o tem, kaj, kje in od koga bodo kupovali.</p>';
+  String get knowledge250Sbbtc250Sb0250Sbtext => '<p>Monero je kriptovaluta, ki ceni zasebnost nad vsem drugim, vendar večina ljudi ne razume, da zasebnost, ki jo zagotavlja uporaba, v določenih situacijah ni niti neprebojna niti absolutna. Da ne bo pomote, Monero je približno tako zaseben, kot je v nezaupljivem svetu, vendar morajo uporabniki upoštevati nekaj premislekov, da zagotovijo, da njihova zasebnost ostane močna.</p>\n\n<p> Enako velja za druga področja življenja. Na primer, lahko se izogibate vsem družabnim medijem, da ohranite zasebnost svojega življenja, toda če ste nenehno s prijatelji, ki snemajo selfije z vami v njih, povejte, da so z vami, v podnapisu in označite svoje lokaciji, bo večina vašega truda morda zaman. Konglomerat družbenih medijev lahko še vedno ustvari profil na vas, kljub dejstvu, da vi osebno niste na njihovi platformi.</p>\n\n<p>Ena od pogosto omenjanih situacij, ko ljudje ne upoštevajo vseh posledic in morebitnih uhajajočih metapodatkov, je vprašanje trgovanja z bitcoini za Monero. V skupnosti običajno velja, da bo nakup Monera z Bitcoinom popolno čiščenje in da uporabnik obdrži vse ugodnosti glede zasebnosti, ko vstopi v Monero, čeprav prihaja iz pregledne verige.</p>\n\n<p>Podobno nekateri menijo, da je prav tako zasebno pridobiti Monero iz virov, ki niso KYC in KYC. Razmišljanje pravi, da je to podobno pridobivanju gotovine na banki. V tem scenariju banka sama pozna vaš obraz in ime ter ve, koliko imate na računu na splošno in koliko gotovine ste dvignili, ne ve pa, kaj z gotovino naredite pozneje. Z jamstvi zasebnosti Monera bi moralo biti prav tako, če dobite Monero iz vira KYC/AML, kajne? </p>\n\n<p>No, ne čisto.</p>\n\n<p>Najprej naredimo hiter korak nazaj in opredelimo, kaj mislimo z KYC/AML. Ta akronim pomeni zakone Know Your Customer (KYC)/proti pranju denarja (AML), ki zahtevajo, da borze in podjetja zbirajo identifikacijske podatke o svojih strankah. Večji kot je znesek izmenjanega denarja, več informacij je potrebnih. Kot pove ime, je vse to storjeno v imenu zmanjšanja tveganja, da ljudje perejo denar. </p>\n\n<p>Nazaj na Monero. Seveda je prenos vašega denarja v Monero iz vira KYC astronomsko boljši za zasebnost kot uporaba vira KYC za nakup nečesa, kot je BTC ali katerega koli drugega kovanca za preglednost, vendar je še vedno treba razmisliti o tem, kaj je razkrito in kaj to razkrite informacije lahko pomenijo vašo zasebnost in varnost.</p>\n\n<p>Če v banki dvignete velik znesek, lahko bančni uslužbenec, ki pozna vaše podatke (vključno z vašim domačim naslovom), vidi, koliko denarja imate na računu, in lahko glede na vaše premoženje načrtuje nečedne načrte, tudi če ostane pri scenariju z gotovino in banko. To se zgodi redko in ker je denar v banki in ne na vašem domu, je to, kar lahko storijo v tem primeru, razmeroma majhno. Enako ne velja za Monero, ki ni zavarovan s strani tretje osebe, temveč s strani vas. Biti lastna banka ni vedno enostavno.</p>\n\n<p>Podobno tudi prehod z BTC na XMR, ne glede na to, kako je izveden, pusti sledi v verigi blokov Bitcoina. Čeprav je to res manj škodljivo kot prehod iz BTC v BTC, saj je na drugi strani izmenjave obvezna zasebnost Monero, je treba upoštevati posledice puščanja sledi za seboj. Te sledi se še bolj stopnjujejo, če je bil kjer koli v procesu vključen KYC.</p>\n\n<p>Predstavite si scenarij, v katerem bi za blago ali storitev prejeli umazane bitcoine, kar je mogoče le zaradi radikalne preglednosti Bitcoina. Ne veste, da so ti Bitcoini umazani, saj nimate tehnike, da bi preverili vsak Bitcoin, zato vam kot osebi, ki se spozna na kriptovalute, to dejstvo ne ustreza, in nimate denarja, da bi plačali podjetju za verižno analizo, ki bi to preverilo namesto vas. Zato se odločite, da boste zaradi večje varnosti opravili menjavo v Monero.</p>\n\n<p>Svoje bitcoine položite na borzo in jih zamenjate za Monero, ki ga nato potegnete v svojo lokalno denarnico. Ta scenarij je že nekoliko pretiran, saj lahko borza označi vaše umazane bitcoine in zaklene vaš račun, vi pa jih lahko dobite nazaj ali pa tudi ne, vendar bomo za potrebe tega primera predpostavili, da dovolijo zamenjavo.</p>\n\n<p>Če se bo vlada začela zanimati za sled teh bitcoinov, jim bo sledila do borze, zahtevala podatke KYC o vlagatelju, ugotovila, da so bili zamenjani v Monero (sumljivo), in potrkala na vaša vrata.</p>\n\n<p>Prosimo, razumite, to ne pomeni, da se morate izogibati zamenjavi bitcoinov v Monero, da ne bi bili videti sumljivi. Sumljivi ste bili že zato, ker ste sprejemali umazane Bitcoine, in če jih ne bi zamenjali, bi še vedno uporabili analizo veriženja blokov in še vedno prišli potrkati na vrata. Namesto tega ta primer zgolj poudarja, da je uporaba transparentnih kovancev sploh zelo tvegana in da zamenjava na zasebni, zamenljivi kovanec, kot je Monero, ne izbriše sledi, ki so ostale v transparentni verigi blokov.</p>\n\n<p> Za posameznika, ki ga zanima njegova zasebnost, je treba pregledne verige blokov blockchain uporabljati minimalno in zelo previdno. Kadar koli je mogoče, se je treba izogibati KYC, saj je te metapodatke še vedno mogoče uporabiti za oblikovanje primera in postavljanje vprašanj, in bog ne daj, da bi ti podatki KYC (poleg podatkov o trgovanju) zaradi nesposobnosti pricurljali z borz. Tudi če ste na borzi samo kupili in dvignili Monero, bi ti odtekli podatki še vedno razkrili, koliko Monera ste imeli in kje se nahajate. Vse to so informacije, za katere se vsi strinjamo, da si nihče ne želi, da bi lebdele v kibernetskem prostoru.</p>\n\n<p>Če povzamemo, čeprav uporaba Monera dejansko preprečuje številne napade in privzeto zmanjšuje uhajanje metapodatkov, lahko uporabnik sam stori veliko stvari, s katerimi na koncu uniči svojo zasebnost. Ena od najmanj upoštevanih je, kakšne so posledice uporabe bodisi verige transparentnosti kot poti do Monera bodisi vira KYC za njegovo pridobitev, da ne govorimo o uporabi obojega hkrati.</p>\n\n<p>Ta članek ni namenjen vzbujanju strahu, temveč spodbujanju uporabnikov h kritičnemu razmišljanju o svojih odločitvah in opominjanju, da je lahko tudi najboljša zasebnost v določenih okoliščinah krhka. Uporabniki morajo biti pozorni, da zaščitijo svojo zasebnost s pametnimi odločitvami o tem, kaj, kje in od koga bodo kupovali.</p>';
 
   @override
   String get knowledge250Sbbtc250Sbdescription => 'Mnogi menijo, da je nakup XMR z BTC popolno čiščenje in da uporabnik ohrani vso zasebnost, čeprav prihaja iz transparentne verige. Toda ali je tako?';
@@ -3269,7 +3269,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbbtc250Sbtitle => 'Ali je Pretvorba Bitcoina v Monero Enako Zasebna kot Neposredni Nakup Monera?';
 
   @override
-  String get knowledge250Sbclsag250Sb0250Sbtext => '<p>Monero kot protokol je trenutno v stalnem procesu inovacij. Skupnost Monero z raziskavami rešitev na verigi in zunaj nje išče področja, ki jih je mogoče izboljšati, da bi Monero postal zasebnejši, bolj razširljiv in dostopnejši vsem. Ena od novejših inovacij je zamenjava sheme povezljivega obročnega podpisa MLSAG z nadomestno shemo CLSAG (kratica za Concise Linkable Spontaneous Anonymous Group).</p>\n\n<p>Na prvi pogled bo izvajanje CLSAG za 25 % zmanjšalo najpogostejši dve vhodni in dve izhodni transakciji. Prav tako se bo za 10 % zmanjšal čas preverjanja.</p>\n\n</p>Kaj je pravzaprav CLSAG? Kaj počne in kako se razlikuje od stare različice MLSAG? Vzemimo si minuto časa in se spomnimo, zakaj in kako pri obročnih podpisih, da bomo bolje razumeli ta koncept. Obročni podpisi omogočajo neinteraktivne vhode, ki se ne razlikujejo med pričami, z uporabo anonimnih nizov prejšnjih izhodov, ki jih izbere podpisnik. Laično povedano, uporabniku omogoča, da skrije svoje izpise, uporabljene v transakciji, skupaj z nepovezanimi izpisi, in vse to lahko stori, ne da bi pri tem potreboval sodelovanje kogar koli drugega. Vse, kar potrebujete, je kopija verige blokov. Vsak od teh izpisov je večinoma videti enako verjeten kot dejanski izpis, ki je bil poslan, s čimer se skrijejo metapodatki o pošiljatelju.</p>\n\n<p>To pa povzroča manjšo težavo. Kaj če bi uporabnik sestavil obročni podpis z vsemi izpisi vab? Kako bi kdo vedel, da neznani pošiljatelj ni pooblaščen za pošiljanje katerega koli od njih? Ali bi ta uporabnik lahko porabil lažni denar? Odgovor je ne. Obročni podpis vključuje metodo za dokazovanje, da je vsaj eden od izhodov v lasti neznanega pošiljatelja, ne da bi razkril, kateri je to. Dejansko sta tako CLSAG kot MLSAG (v nadaljevanju imenovana SAG) del obročnega podpisa, ki to dokazuje. Zanimivo je, da hkrati dokazujeta, da je znesek transakcije, čeprav skrit za zaupnimi transakcijami (RingCT), uravnotežen je. To, da SAG dokazujejo dve stvari, in sicer da je en izpis v lasti nekoga v obroču in da je transakcija uravnotežena, je pomembno in pravzaprav pomeni prihranek pri velikosti in preverjanju. Če vas to zmede, ne skrbite, kmalu bomo prišli do zabavne in lahko razumljive analogije.</p>\n\n<p>Stara podpisna shema MLSAG (Multilayered Linkable Spontaneous Anonymous Group) dokazuje zgoraj omenjeni dve stvari v obročnem podpisu, vendar vsako posebej. Uporaba ločenih izračunov za ključe podpisovanja in ključe zavezanosti pomeni počasnejše operacije. Sodoben računalnik lahko te izračune opravi v nekaj milisekundah, kar se ne zdi veliko in dejansko za eno transakcijo ni. Toda če upoštevamo ogromno število transakcij v verigi blokov Monero in dejstvo, da bo moralo vozlišče, ki se sinhronizira od začetka, prenesti in preveriti vsako od njih, se bajti in milisekunde začnejo hitro kopičiti.</p>\n\n<p>CLSAG združi matematične postopke, potrebne za dokazovanje obojega v enega in izračuna oboje hkrati ter to stori na varen način. Kaj to pomeni na varen način? Da bi to razjasnili in upamo, da bo celotna stvar postala bolj smiselna, raziščimo obljubljeno zabavno analogijo.</p>\n\n<p>Nazadnje morate iti v trgovino z živili in v trgovino s strojno opremo po dve različni stvari: hrano in strupene kemikalije za čiščenje. Ne želite, da se mešata, saj se bodo v primeru nesreče kemikalije razlile po hrani, zaradi česar bo ta postala neužitna. Odločite se, da boste zelo varni in se od hiše do trgovine z živili odpeljete z avtomobilom, kupite hrano in se nato vrnete do hiše. Šele ko raztovorite hrano, se vrnete v avto, se odpeljete do trgovine s strojno opremo in se s kemikalijami vrnete v svojo hišo. Opravili ste dve ločeni vožnji, da bi zagotovili varnost vseh nakupov. Čeprav je to res varno, je neučinkovito. To predstavlja MLSAG, kjer sta shranjena dva različna niza matematičnih podatkov, za njihov izračun pa sta opravljena dva različna \"izleta\".</p>\n\n<p>Izvedeli ste, da želite hitrejši način izvedbe. To je preveč izgubljenega časa. Seveda vam to, da to storite enkrat ali dvakrat, ne bo ukradlo življenja, toda če morate to početi znova in znova, se ure začnejo seštevati. Začnete se spraševati, ali lahko namesto tega opravite eno samo potovanje. Od doma do trgovine z živili, do trgovine s strojno opremo in nazaj domov. Ne morete iti in vse naključno vreči v avto. To ni varno. Namesto tega določite različna mesta v avtomobilu za različne stvari in poskrbite, da vse lepo sede na svoje mesto. Tako lahko varno opravite en izlet v obe trgovini in ohranite stvari stran od drugih. To predstavlja CLSAG. V tej transakciji je zdaj shranjen samo en niz matematičnih podatkov, ki dokazujejo ti dve stvari, in to tako, da se ne motita druga druge. Še vedno je treba opraviti potovanje, vendar ste njihovo število precej drastično zmanjšali.</p>\n\n<p>Vse to se sliši zelo zanimivo. Ali je mogoče najti druge bližnjice ali druge načine za prihranek časa in prostora? Odgovor je Da in Ne. Po mnenju sedanjih raziskovalcev MRL verjetno ni mogoče dodatno spremeniti konstrukcij tipa SAG za boljšo velikost ali hitrost; vendar druge konstrukcije, kot so Arcturus, Omniring, RCT3 ali Triptych, z uporabo različnih matematičnih metod ustvarjajo veliko boljše prednosti pri skaliranju velikosti in preverjanju. Vendar ima vsak od teh pristopov \"naslednje generacije\" k protokolom z nedvoumnim podpisnikom svoje lastne kompromise pri podrobnostih izvajanja, zato se aktivno raziskujejo in proučujejo.</p>\n\n<p>Konec koncev, Monero bo vedno inovativen.</p>';
+  String get knowledge250Sbclsag250Sb0250Sbtext => '<p>Monero kot protokol je trenutno v stalnem procesu inovacij. Skupnost Monero z raziskavami rešitev na verigi in zunaj nje išče področja, ki jih je mogoče izboljšati, da bi Monero postal zasebnejši, bolj razširljiv in dostopnejši vsem. Ena od novejših inovacij je zamenjava sheme povezljivega obročnega podpisa MLSAG z nadomestno shemo CLSAG (kratica za Concise Linkable Spontaneous Anonymous Group).</p>\n\n<p>Na prvi pogled bo izvajanje CLSAG za 25 % zmanjšalo najpogostejši dve vhodni in dve izhodni transakciji. Prav tako se bo za 10 % zmanjšal čas preverjanja.</p>\n\n<p>Kaj je pravzaprav CLSAG? Kaj počne in kako se razlikuje od stare različice MLSAG? Vzemimo si minuto časa in se spomnimo, zakaj in kako pri obročnih podpisih, da bomo bolje razumeli ta koncept. Obročni podpisi omogočajo neinteraktivne vhode, ki se ne razlikujejo med pričami, z uporabo anonimnih nizov prejšnjih izhodov, ki jih izbere podpisnik. Laično povedano, uporabniku omogoča, da skrije svoje izpise, uporabljene v transakciji, skupaj z nepovezanimi izpisi, in vse to lahko stori, ne da bi pri tem potreboval sodelovanje kogar koli drugega. Vse, kar potrebujete, je kopija verige blokov. Vsak od teh izpisov je večinoma videti enako verjeten kot dejanski izpis, ki je bil poslan, s čimer se skrijejo metapodatki o pošiljatelju.</p>\n\n<p>To pa povzroča manjšo težavo. Kaj če bi uporabnik sestavil obročni podpis z vsemi izpisi vab? Kako bi kdo vedel, da neznani pošiljatelj ni pooblaščen za pošiljanje katerega koli od njih? Ali bi ta uporabnik lahko porabil lažni denar? Odgovor je ne. Obročni podpis vključuje metodo za dokazovanje, da je vsaj eden od izhodov v lasti neznanega pošiljatelja, ne da bi razkril, kateri je to. Dejansko sta tako CLSAG kot MLSAG (v nadaljevanju imenovana SAG) del obročnega podpisa, ki to dokazuje. Zanimivo je, da hkrati dokazujeta, da je znesek transakcije, čeprav skrit za zaupnimi transakcijami (RingCT), uravnotežen je. To, da SAG dokazujejo dve stvari, in sicer da je en izpis v lasti nekoga v obroču in da je transakcija uravnotežena, je pomembno in pravzaprav pomeni prihranek pri velikosti in preverjanju. Če vas to zmede, ne skrbite, kmalu bomo prišli do zabavne in lahko razumljive analogije.</p>\n\n<p>Stara podpisna shema MLSAG (Multilayered Linkable Spontaneous Anonymous Group) dokazuje zgoraj omenjeni dve stvari v obročnem podpisu, vendar vsako posebej. Uporaba ločenih izračunov za ključe podpisovanja in ključe zavezanosti pomeni počasnejše operacije. Sodoben računalnik lahko te izračune opravi v nekaj milisekundah, kar se ne zdi veliko in dejansko za eno transakcijo ni. Toda če upoštevamo ogromno število transakcij v verigi blokov Monero in dejstvo, da bo moralo vozlišče, ki se sinhronizira od začetka, prenesti in preveriti vsako od njih, se bajti in milisekunde začnejo hitro kopičiti.</p>\n\n<p>CLSAG združi matematične postopke, potrebne za dokazovanje obojega v enega in izračuna oboje hkrati ter to stori na varen način. Kaj to pomeni na varen način? Da bi to razjasnili in upamo, da bo celotna stvar postala bolj smiselna, raziščimo obljubljeno zabavno analogijo.</p>\n\n<p>Nazadnje morate iti v trgovino z živili in v trgovino s strojno opremo po dve različni stvari: hrano in strupene kemikalije za čiščenje. Ne želite, da se mešata, saj se bodo v primeru nesreče kemikalije razlile po hrani, zaradi česar bo ta postala neužitna. Odločite se, da boste zelo varni in se od hiše do trgovine z živili odpeljete z avtomobilom, kupite hrano in se nato vrnete do hiše. Šele ko raztovorite hrano, se vrnete v avto, se odpeljete do trgovine s strojno opremo in se s kemikalijami vrnete v svojo hišo. Opravili ste dve ločeni vožnji, da bi zagotovili varnost vseh nakupov. Čeprav je to res varno, je neučinkovito. To predstavlja MLSAG, kjer sta shranjena dva različna niza matematičnih podatkov, za njihov izračun pa sta opravljena dva različna \"izleta\".</p>\n\n<p>Izvedeli ste, da želite hitrejši način izvedbe. To je preveč izgubljenega časa. Seveda vam to, da to storite enkrat ali dvakrat, ne bo ukradlo življenja, toda če morate to početi znova in znova, se ure začnejo seštevati. Začnete se spraševati, ali lahko namesto tega opravite eno samo potovanje. Od doma do trgovine z živili, do trgovine s strojno opremo in nazaj domov. Ne morete iti in vse naključno vreči v avto. To ni varno. Namesto tega določite različna mesta v avtomobilu za različne stvari in poskrbite, da vse lepo sede na svoje mesto. Tako lahko varno opravite en izlet v obe trgovini in ohranite stvari stran od drugih. To predstavlja CLSAG. V tej transakciji je zdaj shranjen samo en niz matematičnih podatkov, ki dokazujejo ti dve stvari, in to tako, da se ne motita druga druge. Še vedno je treba opraviti potovanje, vendar ste njihovo število precej drastično zmanjšali.</p>\n\n<p>Vse to se sliši zelo zanimivo. Ali je mogoče najti druge bližnjice ali druge načine za prihranek časa in prostora? Odgovor je Da in Ne. Po mnenju sedanjih raziskovalcev MRL verjetno ni mogoče dodatno spremeniti konstrukcij tipa SAG za boljšo velikost ali hitrost; vendar druge konstrukcije, kot so Arcturus, Omniring, RCT3 ali Triptych, z uporabo različnih matematičnih metod ustvarjajo veliko boljše prednosti pri skaliranju velikosti in preverjanju. Vendar ima vsak od teh pristopov \"naslednje generacije\" k protokolom z nedvoumnim podpisnikom svoje lastne kompromise pri podrobnostih izvajanja, zato se aktivno raziskujejo in proučujejo.</p>\n\n<p>Konec koncev, Monero bo vedno inovativen.</p>';
 
   @override
   String get knowledge250Sbclsag250Sbdescription => 'Oglejmo si eno od novejših inovacij protokola Monero: zamenjavo sheme povezljivega obročnega podpisa, MLSAG, z nadomestnim CLSAG.';
@@ -3287,7 +3287,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbcoinjoin250Sb1250Sbtitle => 'Kaj je CoinJoin transakcija?';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb2250Sbtext => '<p>Ker <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\">v preteklosti smo se že poglobili v to, kaj so obročni podpisi</a>, zato v tem prispevku ne bom podrobno opisoval tehničnih vidikov njihovega delovanja. Namesto tega si bomo ogledali, kako pristopi, ki so jih uporabili v Moneru, rešujejo težave s CoinJoinom.</p>\n<blockquote>\n<p>CoinJoin je opt-in in zahteva sodelovanje </p>\n</blockquote>\n<p>Obročni ozr. Ring podpisi Monero so osrednja značilnost protokola zasebnosti in jih uporablja vsaka transakcija v omrežju. To pomeni, da transakcije nobenega uporabnika ne izstopajo zaradi iskanja večje zasebnosti od \"običajnih\" uporabnikov Monera, vsi uporabniki pa pridobijo verodostojno možnost zanikanja, da so pri posamezni transakciji porabili sredstva. Ker uporabnik, ki porabi sredstva, v transakciji ne usklajuje ali sodeluje z vložki za vabo, lahko tisti uporabniki, ki imajo v lasti vložke, ki so slučajno izbrani kot vabe, pošteno povedo, da niso sodelovali v tej transakciji, kar okrepi njihovo zasebnost.</p>\n<blockquote>\n<p>Uporaba centraliziranega koordinatorja</p>\n</blockquote>\n<p>Ker obročni podpisi Monero v celoti niso koordinirani in za ustvarjanje transakcije potrebujejo le pravega porabnika sredstev, v Moneru ni potrebe po centraliziranem koordinatorju. To zagotavlja, da <em>nihče </em> ne more preprečiti dostopa do zasebnosti v Moneru, prav tako ni centraliziranega subjekta, na katerega bi lahko pritiskali, ni enostavnih napadov Sybila na likvidnost itd. Dokler s svojo transakcijo plačujete ustrezne pristojbine, v Moneru pridobite necenzuriran dostop do zasebnosti, varnosti in anonimnosti.</p>\n<blockquote>\n<p>CoinJoin zahteva likvidnost </p>\n</blockquote>\n<p>\"Likvidnost\", ki je na voljo vsakomur, ki porabi Monero, da jo uporabi kot vabo, je vedno celoten nabor izhodov na verigi, zato nikoli ne zmanjka vabe, v katero se lahko skrijete z Monero. Nekdo, ki želi porabiti Monero, lahko to stori ~20min po prejemu sredstev in mu ni treba opraviti nobenih dodatnih korakov, da bi pridobil močno zasebnost v Moneru.</p>\n<blockquote>\n<p>Zasebnost CoinJoin se sčasoma poslabša</p>\n</blockquote>\n<p>Ker izhodi Monero niso znani, je zasebnost, ki jo zagotavljajo obročni oz. \"ring\" podpisi, veliko manj dovzetna za poslabšanje s časom. Uporabniku ni treba nenehno spreminjati izhodov in ne izgublja zasebnosti, razen v izjemno redkih okoliščinah.</p>\n<p>Če želi uporabnik \"osvežiti\" vabe, ki jih je uporabil z izhodom, lahko sredstva preprosto pošlje nazaj k sebi in jih kot običajno porabi cca 20 minut pozneje.</p>\n<blockquote>\n<p>CoinJoin običajno zahteva vnose fiksne velikosti </p>\n</blockquote>\n<p>Ker so zneski v vsaki transakciji skriti z uporabo <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/monero-ringct\">\"Zaupne transakcije\"</a> (del \"RingCT\"), so lahko vabe, uporabljene v posamezni transakciji, poljubno velike. V Moneru ni razloga, da bi bilo treba skrbeti za hevristiko, ki temelji na znesku, zato so transakcije veliko enostavnejše za izdelavo in lahko uporabljajo vabe iz katere koli točke v času in katere koli vrednosti v blokovni verigi Monero.</p>';
+  String get knowledge250Sbcoinjoin250Sb2250Sbtext => '<p>Ker<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\"> smo se v preteklosti že poglobili v to, kaj so obročni podpisi</a>, zato v tem prispevku ne bomo podrobno opisovali tehničnih vidikov njihovega delovanja. Namesto tega si bomo ogledali kako pristopi, ki so jih uporabili v Moneru, rešujejo težave s CoinJoinom.</p>\n<blockquote>\n<p>CoinJoin je opt-in in zahteva sodelovanje </p>\n</blockquote>\n<p>Obročni ozr. Ring podpisi Monero so osrednja značilnost protokola zasebnosti in jih uporablja vsaka transakcija v omrežju. To pomeni, da transakcije nobenega uporabnika ne izstopajo zaradi iskanja večje zasebnosti od \"običajnih\" uporabnikov Monera, vsi uporabniki pa pridobijo verodostojno možnost zanikanja, da so pri posamezni transakciji porabili sredstva. Ker uporabnik, ki porabi sredstva, v transakciji ne usklajuje ali sodeluje z vložki za vabo, lahko tisti uporabniki, ki imajo v lasti vložke, ki so slučajno izbrani kot vabe, pošteno povedo, da niso sodelovali v tej transakciji, kar okrepi njihovo zasebnost.</p>\n<blockquote>\n<p>Uporaba centraliziranega koordinatorja</p>\n</blockquote>\n<p>Ker obročni podpisi Monero v celoti niso koordinirani in za ustvarjanje transakcije potrebujejo le pravega porabnika sredstev, v Moneru ni potrebe po centraliziranem koordinatorju. To zagotavlja, da <em>nihče </em> ne more preprečiti dostopa do zasebnosti v Moneru, prav tako ni centraliziranega subjekta, na katerega bi lahko pritiskali, ni enostavnih napadov Sybila na likvidnost itd. Dokler s svojo transakcijo plačujete ustrezne pristojbine, v Moneru pridobite necenzuriran dostop do zasebnosti, varnosti in anonimnosti.</p>\n<blockquote>\n<p>CoinJoin zahteva likvidnost </p>\n</blockquote>\n<p>\"Likvidnost\", ki je na voljo vsakomur, ki porabi Monero, da jo uporabi kot vabo, je vedno celoten nabor izhodov na verigi, zato nikoli ne zmanjka vabe, v katero se lahko skrijete z Monero. Nekdo, ki želi porabiti Monero, lahko to stori ~20min po prejemu sredstev in mu ni treba opraviti nobenih dodatnih korakov, da bi pridobil močno zasebnost v Moneru.</p>\n<blockquote>\n<p>Zasebnost CoinJoin se sčasoma poslabša</p>\n</blockquote>\n<p>Ker izhodi Monero niso znani, je zasebnost, ki jo zagotavljajo obročni oz. \"ring\" podpisi, veliko manj dovzetna za poslabšanje s časom. Uporabniku ni treba nenehno spreminjati izhodov in ne izgublja zasebnosti, razen v izjemno redkih okoliščinah.</p>\n<p>Če želi uporabnik \"osvežiti\" vabe, ki jih je uporabil z izhodom, lahko sredstva preprosto pošlje nazaj k sebi in jih kot običajno porabi cca 20 minut pozneje.</p>\n<blockquote>\n<p>CoinJoin običajno zahteva vnose fiksne velikosti </p>\n</blockquote>\n<p>Ker so zneski v vsaki transakciji skriti z uporabo <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/monero-ringct\"> \"Zaupne transakcije \"</a> (del \"RingCT\"), so lahko vabe, uporabljene v posamezni transakciji, poljubno velike. V Moneru ni razloga, da bi bilo treba skrbeti za hevristiko, ki temelji na znesku, zato so transakcije veliko enostavnejše za izdelavo in lahko uporabljajo vabe iz katere koli točke v času in katere koli vrednosti v blokovni verigi Monero.</p>';
 
   @override
   String get knowledge250Sbcoinjoin250Sb2250Sbtitle => 'Kako obročni ali \"ring\" podpisi rešujejo te težave?';
@@ -3308,7 +3308,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbcontributing250Sb0250Sbtext => '<p>Projekt Monero (tako kot številni drugi odprtokodni projekti) nima osrednjega podjetja, subjekta ali financiranja, kar je vse potrebno za decentralizacijo in odpornost. Vendar to pomeni, da je uspeh projekta v celoti odvisen od prispevkov strastnih posameznikov v skupnosti za financiranje, razvoj in ozaveščanje, kot ste vi.</p>\n<p> Velika večina ljudi v skupnosti Monero ne bo nujno razvijalcev, zato se bomo osredotočili na številne načine, kako lahko mi, ki nismo razvijalci, prispevamo k tako neverjetnemu projektu.</p>';
 
   @override
-  String get knowledge250Sbcontributing250Sb1250Sbtext => '<p>Monero uporablja edinstven sistem za financiranje dela, imenovan <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/\">Community Crowdfunding System</a> (ali »CCS«), ki omogoča vsakomur v skupnosti, da predstavi idejo za financiranje. Če jih skupnost odobri, so ti predlogi nato odprti za financiranje skupnosti.</p>\n<p>Sistem ima dve stopnji, vsaka pa koristi večjo vključenost ljudi iz vseh okolij.</p>\n<h6 id=\"participating-in-ideas\">Sodelovanje v “Idejah”</h6>\n<p>Vsi predlogi CCS se začnejo kot \"Ideje\", ki so odprte za komentarje skupnosti in se o njih pogosto razpravlja tudi na sestankih skupnosti. To je priložnost za vse v skupnosti, da preberejo predlog in komentirajo, kaj mislijo, da bi bilo mogoče spremeniti ali izboljšati, ali ali bi bilo treba predlog sploh odobriti za financiranje ali ne. To vam omogoča ne samo, da ste na tekočem s stalnimi prizadevanji drugih v skupnosti, temveč tudi aktivno vplivate na to, koga in kaj financira skupnost, izboljšate predloge pred financiranjem in zagotovite nadzor po financiranju.</p>\n<p><em>Vse predloge, ki so v fazi \"Ideje\", si lahko ogledate na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/ideas/\">CCS Ideas</a>.</em></p>\n<h6 id=\"funding-proposals-in-funding-required\">Predlogi za financiranje v razdelku \"Potrebno financiranja\"</h6>\n<p>Druga stopnja odobrenega predloga je faza \"Potrebno financiranja\". Tukaj lahko vsakdo v skupnosti, ki mu je predlog všeč in v njem vidi vrednost, preprosto, hitro in zasebno donira svoj Monero.</p>\n<p>Če želite financirati katerega izmed predlogov, preprosto pojdite na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Potrebno financiranja CCS</a>, kliknite predlog, kateremu mu želite prispevati, optično preberite kodo QR ali kopirajte naslov ter nanj pošljite koliko bi radi prispevali. Vsak prispevek pomaga, ne glede na to, kako majhen je! </p>\n<p>Ko je predlog v celoti financiran, ga lahko spremljate, medtem, ko je ta <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/work-in-progress/\">v teku</a>, ali si ogledate rezultate <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/completed-proposals/\">zaključeni predlogi</a>.</p>\n<p><em>Vse predloge, ki so v fazi \"Potrebno financiranja\", si lahko ogledate na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Potrebno financiranja CCS</a>.</em></p>';
+  String get knowledge250Sbcontributing250Sb1250Sbtext => '<p>Monero uporablja edinstven sistem za financiranje dela, imenovan <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/\">Community Crowdfunding System</a> (ali \"CCS\"), ki omogoča vsakomur v skupnosti, da predstavi idejo za financiranje. Če jih skupnost odobri, so ti predlogi nato odprti za financiranje skupnosti.</p>\n<p>Sistem ima dve stopnji, vsaka pa koristi večjo vključenost ljudi iz vseh okolij.</p>\n<h6 id=\"participating-in-ideas\">Sodelovanje v “Idejah”</h6>\n<p>Vsi predlogi CCS se začnejo kot \"Ideje\", ki so odprte za komentarje skupnosti in se o njih pogosto razpravlja tudi na sestankih skupnosti. To je priložnost za vse v skupnosti, da preberejo predlog in komentirajo, kaj mislijo, da bi bilo mogoče spremeniti ali izboljšati, ali bi bilo treba predlog sploh odobriti za financiranje ali ne. To vam omogoča ne samo, da ste na tekočem s stalnimi prizadevanji drugih v skupnosti, temveč tudi aktivno vplivate na to, koga in kaj financira skupnost, izboljšate predloge pred financiranjem in zagotovite nadzor po financiranju.</p>\n<p><em>Vse predloge, ki so v fazi \"Ideje\", si lahko ogledate na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/ideas/\">CCS Ideas</a>.</em></p>\n<h6 id=\"funding-proposals-in-funding-required\">Predlogi za financiranje v razdelku \"Potrebno financiranja\"</h6>\n<p>Druga stopnja odobrenega predloga je faza \"Potrebno financiranja\". Tukaj lahko vsakdo v skupnosti, ki mu je predlog všeč in v njem vidi vrednost, preprosto, hitro in zasebno donira svoj Monero.</p>\n<p>Če želite financirati katerega izmed predlogov, preprosto pojdite na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Potrebno financiranja CCS</a>, kliknite predlog, kateremu mu želite prispevati, optično preberite kodo QR ali kopirajte naslov ter nanj pošljite koliko bi radi prispevali. Vsak prispevek pomaga, ne glede na to, kako majhen je! </p>\n<p>Ko je predlog v celoti financiran, ga lahko spremljate, medtem, ko je ta <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/work-in-progress/\">v teku</a>, ali si ogledate rezultate <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/completed-proposals/\">zaključeni predlogi</a>.</p>\n<p><em>Vse predloge, ki so v fazi \"Potrebno financiranja\", si lahko ogledate na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Potrebno financiranja CCS</a>.</em></p>';
 
   @override
   String get knowledge250Sbcontributing250Sb1250Sbtitle => 'Monerov Sistem Množičnega Financiranja Skupnosti';
@@ -3383,7 +3383,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbdandelion250Sb1250Sbtitle => 'Napad za razkritje IP naslova';
 
   @override
-  String get knowledge250Sbdandelion250Sb2250Sbtext => 'Ena od možnosti za ublažitev tega napada je uporaba prekrivnega omrežja, kot sta Tor ali I2P. Tako tudi če napadalec lahko ugotovi izvorni IP-naslov, to verjetno ni tisti, ki je opravil transakcijo, temveč izhodno (I2P) ali izhodno vozlišče (Tor) prekrivnega omrežja. Vendar to ni vseobsegajoča rešitev, saj so prekrivna omrežja, omrežja VPN in podobna programska oprema v številnih državah prepovedana, zato je nerealno pričakovati, da bodo vsi uporabljali, sinhronizirali in širili v teh omrežjih.  Potrebna je rešitev, ki ne zahteva uporabe zunanje programske opreme in omrežij; rešitev, ki bo na voljo običajnim ljudem.\n<br/><br/>\nTa rešitev je Dandelion++ (DPP), ki je nadgrajen protokol prvotnega predloga Dandelion za Bitcoin. V tem protokolu sta dve fazi, in sicer steblo in fluff; oboje skupaj naj bi predstavljalo obliko regrata.\n<br/><br/>\nV stebelni fazi vsakih nekaj minut vozlišče pošiljanja naključno izbere dva vrstnika izmed vseh vozlišč, s katerimi je povezano. Ko pošiljajoče vozlišče pošlje transakcijo, bodisi v svojem imenu bodisi samo posreduje transakcijo iz drugega vozlišča v fazi stem, naključno izbere enega od teh dveh izbranih vrstnikov in mu pošlje transakcijo.\n<br/><br/>\nFaza fluff je faza, ko vozlišče prejme transakcijo in jo razpošlje vsaki izhodni povezavi, ne le eni naključno izbrani, kar omogoča resnično širjenje transakcije. Vsakih nekaj minut se vozlišče naključno opredeli kot vozlišče, ki se bo razširilo bodisi prek \" stebla\" bodisi prek \"fluffa\", zato je lahko faza \" stebla\" precej dolga, če se je vsako povezovalno vozlišče opredelilo kot \" steblo\", ko pa transakcija preide v fazo \" fluffa\", tam tudi ostane.\n<br/><br/>\nTo pomeni, da napadalec ne bo mogel več preprosto poslušati smeri transakcije, saj je ta, preden se je razširila med vse, prešla fazo stebla, izvorno vozlišče faze fluff pa ni vozlišče, iz katerega je transakcija izšla, in ni znano, koliko skokov po steblu je transakcija podvržena.\n<br/><br/>\nSeveda bo kombinacija zgornjih rešitev (DPP in prekrivno omrežje) zagotovila še močnejša jamstva zasebnosti in zaščite pred sledenjem IP. Opozoriti je treba tudi, da DPP ne ščiti pred drugo obliko napada na sledenje omrežja, ki ga je mogoče izvesti pri ponudnikih internetnih storitev, vendar to presega obseg tega članka.\n<br/><br/>\nDandelion++ naj bi začel delovati v omrežju Monero in se privzeto uporabljal v referenčnem odjemalcu v izdaji 0.16. Ta majhna sprememba bo še dodatno ublažila možnost napadov na omrežje Monero in je primer, zakaj je Monero vodilni na področju praktičnih, uporabnih tehnologij za varovanje zasebnosti.';
+  String get knowledge250Sbdandelion250Sb2250Sbtext => 'Ena od možnosti za ublažitev tega napada je uporaba prekrivnega omrežja, kot sta Tor ali I2P. Tako tudi če napadalec lahko ugotovi izvorni IP-naslov, to verjetno ni tisti, ki je opravil transakcijo, temveč izhodno (I2P) ali izhodno vozlišče (Tor) prekrivnega omrežja. Vendar to ni vseobsegajoča rešitev, saj so prekrivna omrežja, VPN omrežja in podobna programska oprema v številnih državah prepovedana, zato je nerealno pričakovati, da bodo vsi uporabljali, sinhronizirali in širili v teh omrežjih.  Potrebna je rešitev, ki ne zahteva uporabe zunanje programske opreme in omrežij; rešitev, ki bo na voljo običajnim ljudem.\n<br/><br/>\nTa rešitev je Dandelion++ (DPP), ki je nadgrajen protokol prvotnega predloga Dandelion za Bitcoin. V tem protokolu sta dve fazi, in sicer steblo in fluff; oboje skupaj naj bi predstavljalo obliko regrata.\n<br/><br/>\nV stebelni fazi vsakih nekaj minut vozlišče pošiljanja naključno izbere dva vrstnika izmed vseh vozlišč, s katerimi je povezano. Ko pošiljajoče vozlišče pošlje transakcijo, bodisi v svojem imenu bodisi samo posreduje transakcijo iz drugega vozlišča v fazi stem, naključno izbere enega od teh dveh izbranih vrstnikov in mu pošlje transakcijo.\n<br/><br/>\nFaza fluff je faza, ko vozlišče prejme transakcijo in jo razpošlje vsaki izhodni povezavi, ne le eni naključno izbrani, kar omogoča resnično širjenje transakcije. Vsakih nekaj minut se vozlišče naključno opredeli kot vozlišče, ki se bo razširilo bodisi prek \" stebla\" bodisi prek \"fluffa\", zato je lahko faza \" stebla\" precej dolga, če se je vsako povezovalno vozlišče opredelilo kot \" steblo\", ko pa transakcija preide v fazo \" fluffa\", tam tudi ostane.\n<br/><br/>\nTo pomeni, da napadalec ne bo mogel več preprosto poslušati smeri transakcije, saj je ta, preden se je razširila med vse, prešla fazo stebla, izvorno vozlišče faze fluff pa ni vozlišče, iz katerega je transakcija izšla, in ni znano, koliko skokov po steblu je transakcija podvržena.\n<br/><br/>\nSeveda bo kombinacija zgornjih rešitev (DPP in prekrivno omrežje) zagotovila še močnejša jamstva zasebnosti in zaščite pred sledenjem IP. Opozoriti je treba tudi, da DPP ne ščiti pred drugo obliko napada na sledenje omrežja, ki ga je mogoče izvesti pri ponudnikih internetnih storitev, vendar to presega obseg tega članka.\n<br/><br/>\nDandelion++ naj bi začel delovati v omrežju Monero in se privzeto uporabljal v referenčnem odjemalcu v izdaji 0.16. Ta majhna sprememba bo še dodatno ublažila možnost napadov na omrežje Monero in je primer, zakaj je Monero vodilni na področju praktičnih, uporabnih tehnologij za varovanje zasebnosti.';
 
   @override
   String get knowledge250Sbdandelion250Sb2250Sbtitle => 'Ublažitev';
@@ -3713,7 +3713,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbnodes250Sb3250Sbtext => '<p>Pri uporabi oddaljenega vozlišča je nekaj ključnih informacij, ki so izpostavljene oddaljenemu vozlišču, in nekaj ključnih načinov, kako vas lahko vozlišče napade, prepreči transakcijo in drugo.</p>\n<p>Prva stvar, ki jo lahko oddaljeno vozlišče izve o vas, je vaš javni naslov IP. Čeprav bo to, upajmo, prikrito prek VPN ali Tor, bi lahko oddaljeno vozlišče vaš javni naslov IP povezalo s transakcijo, kar bi jim pomagalo zožiti, od koder opravljate transakcije. Oddaljeno vozlišče se lahko nauči tudi zadnjega bloka, ki je bil sinhroniziran z vašo denarnico, in to uporabi, da poskusi in utemeljeno ugiba o vas, na primer, kdaj običajno uporabljate Monero in kdaj ste nazadnje porabili Monero. To še posebej velja, če vedno prihajate z istega naslova IP (kot je vaš dom). Zadnja ključna stvar, ki jo lahko oddaljeno vozlišče izve o vas, so osnovne informacije o transakcijah, ki jih pošiljate prek njega. Čeprav so to morda najočitnejši podatki, ki jih operater oddaljenega vozlišča dobi o vas, je pomembno razumeti, da bi jih lahko uporabili za pomoč pri izsleditvi pošiljatelja transakcije pri združevanju teh informacij z drugimi podatki izven verige. To je lahko še posebej nevarno, če oddaljeno vozlišče upravlja zlonamerna entiteta, podjetje za analizo verige blokov ali represivna nacionalna država.</p>\n<p>Oddaljeno vozlišče vam lahko tudi poskuša povzročiti težave tako, da pred vami skrije bloke, zaradi česar vaša denarnica misli, da je sinhronizirana, čeprav ni bila. Zaradi tega lahko mislite, da so sredstva izgubljena, ali vam prepreči porabo sredstev, dokler se ne povežete z drugim vozliščem. Zadnja ključna stvar, ki jo lahko naredi oddaljeno vozlišče, je, da vašo denarnico napolni z manipuliranim seznamom vab. To lahko povzroči, da vaša denarnica popolnoma ne uspe zgraditi transakcij (zaradi česar ne morete porabiti sredstev) ali pa lahko oddaljenemu vozlišču omogoči, da poskusi zagotoviti vabe, za katere ve, da so porabljene, da zmanjša anonimnost, ki ste jo deležni pri vsaki transakciji.</p>';
 
   @override
-  String get knowledge250Sbnodes250Sb3250Sbtitle => 'Kaj lahko oddaljeno vozlišče izve o meni?';
+  String get knowledge250Sbnodes250Sb3250Sbtitle => 'Kaj lahko oddaljeno vozlišče (node) izve o meni?';
 
   @override
   String get knowledge250Sbnodes250Sb4250Sbtext => '<p>Čeprav vas je ta članek morda nekoliko prestrašil, se je pomembno zavedati, da je zasebnost, ki jo zagotavlja Monero, odlična tudi pri uporabi oddaljenega vozlišča in daleč presega katero koli drugo kriptovaluto, če se uporablja na ta način. Še vedno pridobite močno zasebnost v verigi, ki jo zagotavlja Monero, saj oddaljeno vozlišče nikoli ne ve pravega vnosa (katere kovance porabite), zneska Monera, porabljenega v transakciji, ali naslova prejemnika transakcije. Zunanji opazovalci prav tako ne morejo videti pravega vnosa, zneska ali vključenih naslovov (ne glede na vrsto vozlišča, ki ga izberete!), kar zagotavlja, da imajo zunaj oddaljenega vozlišča celo vaš naslov IP, informacije o sinhronizaciji denarnice in transakcije močno zagotovljeno zasebnost </p>\n<p>Oddaljeno vozlišče tudi nikoli nima dostopa do prejšnjih transakcij, ki ste jih poslali ali prejeli, ali količine Monera, ki je trenutno v vaši denarnici, in izgubi vso vidljivost v vaših transakcijah v trenutku, ko začnete uporabljati drugo vozlišče. Oddaljenemu vozlišču nikoli niso posredovani nobeni zasebni ključi (bodisi ključi za porabo ali ogled), tako da vaša denarnica ostane zasebna, varna in uporabna. Ne glede na oddaljeno vozlišče prav tako nikoli niste v nevarnosti, da bi Monero izgubili ali vam ga ukradli, saj vozlišče ne more urejati naslova prejemnika, nikoli nima dostopa do zasebnih ključev vaših denarnic in vam na noben način ne more zapleniti vašega Monera.</p>';
@@ -3725,16 +3725,16 @@ class I18nSl extends I18n {
   String get knowledge250Sbnodes250Sb5250Sbtext => '<p>Čeprav je tema nekoliko zunaj obsega tega članka, sem želel obravnavati edinstveno vrsto denarnice v Monero – lahke denarnice. Ime lahka denarnica izhaja iz dejstva, da vaši denarnici (v telefonu ali računalniku) ni treba izvajati nobene sinhronizacije verige blokov, zaradi česar je izkušnja hitrejša in bolj tekoča.</p>\n<p>Vendar imajo denarnice, kot je ta, zaenkrat velik kompromis glede zasebnosti – vaša denarnica pošlje ključ zasebnega pogleda na oddaljeni strežnik, ki ga uporabljate (kot je privzeto v MyMonero), kar daje oddaljenemu strežniku popoln vpogled v vsa prejeta sredstva od izdelave vaše denarnice (in dokler ne prenehate uporabljati te denarnice ali semena). To drastično zmanjša zasebnost, ki jo prejmete od operaterja vozlišča, in k temu pristopite previdno.</p>\n<p>K sreči si skupnost Monero prizadeva izboljšati programsko opremo, ki jo lahko uporabite za gostovanje lastnega strežnika lahke denarnice (LWS), kar vam bo omogočilo hitro sinhronizacijo, ne da bi tretji osebi zaupali svoje zasebne ključe za ogled – ko bo zagnal programsko opremo, kamor vaša denarnica pošlje zasebne ključe za ogled!</p>\n<p>Za več informacij o strežniku lahke denarnice po meri glejte spodnji repozitorij Github: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/vtnerd/monero-lws\">monero-lws</a></li>\n</ul>';
 
   @override
-  String get knowledge250Sbnodes250Sb5250Sbtitle => 'Kaj pa »lahke denarnice«, kot je MyMonero?';
+  String get knowledge250Sbnodes250Sb5250Sbtitle => 'Kaj pa \"lahke denarnice\", kot je MyMonero?';
 
   @override
   String get knowledge250Sbnodes250Sb6250Sbtext => '<p>Če ste radovedni in bi radi bolje razumeli vozlišča v Monero ter razmislili o uporabi oddaljenega vozlišča ali izvajanju lastnega, si oglejte spodnje povezave za odlična mesta za začetek:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://moneroworld.com/#nodes\">Monero World, seznam oddaljenih vozlišč, ki jih vodi skupnost, se lahko uporablja</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://sethforprivacy.com/about/#high-performance-monero-nodes\">Vozlišča Monero, ki jih vodi Seth For Privacy, avtor tega članka</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://monero.fail/\">monero.fail, seznam oddaljenih vozlišč s pogosto preverjanim stanjem< /a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/resources/user-guides/remote_node_gui.html\">Kako vzpostaviti povezavo na oddaljeno vozlišče v denarnici GUI</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/resources/moneropedia/remote-node.html\">Moneropedia – oddaljeno Vozlišče</a></li>';
 
   @override
-  String get knowledge250Sbnodes250Sb6250Sbtitle => 'Kako se lahko naučim več?';
+  String get knowledge250Sbnodes250Sb6250Sbtitle => 'Kako lahko izvem več?';
 
   @override
-  String get knowledge250Sbnodes250Sbdescription => 'Danes si ogledamo, kako Monero zagotavlja zasebnost v verigi tudi pri uporabi oddaljenega vozlišča, ter opozorila.';
+  String get knowledge250Sbnodes250Sbdescription => 'Danes si ogledamo, kako Monero zagotavlja on-chain zasebnost v tudi pri uporabi oddaljenega vozlišča, ter tudi opozorila.';
 
   @override
   String get knowledge250Sbnodes250Sbtitle => 'Kako oddaljena vozlišča vplivajo na zasebnost Monera';
@@ -3743,13 +3743,13 @@ class I18nSl extends I18n {
   String get knowledge250Sboutputs250Sb0250Sbtext => '<p>Monero, tako kot druge kriptovalute, uporablja rezultate kot sredstvo za obračunavanje sredstev. Mnogi uporabniki, ki poznajo kriptovalute, so verjetno že slišali za ta izraz, vendar vsi ne razumejo, kaj pomenijo in kako delujejo. Kot je raziskano v našem <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">članku o podpisih obročev </a>, so izhodi dejanske enote, izmenjane v verigi blokov med pogodbenimi strankami. Podobno dolarskemu bankovcu, vendar znesek ni v fiksnem apoenu.</p>\n\n<p>Če za delo prejmete plačilo 16 dolarjev, boste morda prejeli bankovec za en dolar, bankovec za pet dolarjev in bankovec za deset dolarjev. Imate 16 dolarjev, vendar imate v denarnici tudi tri različne bankovce. Če bi nekomu želeli plačati 6 dolarjev, bi lahko uporabili bankovca za 5 in 1, če pa bi nekomu želeli plačati 8 dolarjev, bi lahko uporabili samo 10 dolarjev in prejeli 2 dolarja nazaj v drobižu. Nazadnje, če bi nekomu želeli plačati 14 dolarjev, bi morali uporabiti vse tri bankovce in bi prejeli 2 dolarja nazaj v drobižu, a za trenutek, ko izročite vse tri bankovce, nimate denarja v denarnici, dokler ne dobite spremeni nazaj.</p>\n\n<p>Monero deluje podobno. Recimo, da imate trgovino in trikrat prodate tri različne artikle. Morda boste prejeli 1,5 XMR, 2,25 XMR in 5,25 XMR za skupno 9 XMR, vendar imate v svoji denarnici tudi tri različne izhode prej navedenih apoenov. Tako kot pri dolarjih boste morda želeli nekomu plačati 3 XMR. Uporabite lahko samo izhod 5,25 XMR in prejmete 2,25 XMR nazaj kot drobiž ali pa združite izhoda 1,5 in 2,25 XMR in dobite 0,75 XMR nazaj kot drobiž.</p>\n\n<p>Toda takoj, ko pošljete transakcijo, so izhodi, ki jih uporabljate, postavljeni v \"zaklenjeno\" stanje, kar pomeni, da so nedostopni, dokler ne prejmete nazaj spremembe. Protokol odklene sredstva (tj. vrne vam drobiž) po 10 potrditvah ali približno 20 minutah. Tako kot ko enkrat izročite dolarske bankovce iz denarnice, denarja ne morete več uporabiti, dokler ne prejmete drobiža od blagajne, je vaš Monero nedostopen, dokler ne prejmete nazaj drobiža.</p>\n\n<p>Vrnimo se k primeru pošiljanja 3 XMR nekomu, vi pa uporabite izhod 5,25 XMR. Zdaj, ko čakate na 1,75 XMR nazaj v menjavi, ga ne morete uporabiti. Ta 1.75 XMR vam je nedostopen. Še vedno pa lahko uporabljate izhode 1,5 XMR in 2,25 XMR, saj ti niso bili porabljeni. Če se vrnemo k primeru z dolarji, če bi nekomu plačali 8 dolarjev, kot v prejšnjem primeru, ne bi mogli uporabiti 2 dolarjev, ki jih pričakujete nazaj v drobižu, dokler vam jih ne dajo, toda v tem primeru imate še vedno Bankovec za 10 \$, ki je neuporabljen v vaši denarnici. To lahko še vedno uporabite za nakup, kar želite, medtem ko čakate na spremembo. Enako z Monero.</p>\n\n<p>To je pogosto zmeda za nove uporabnike Monera. Pogosto ima uporabnik v svoji denarnici samo en izhod, ki ga je prejel od borze ali prijatelja. Recimo, da je ta izhod 20 XMR. V svoji denarnici nimajo drugih izhodov. Zdaj želita donirati dvema svojima najljubšima dobrodelnima organizacijama. Pošljejo 5 XMR prvi dobrodelni organizaciji, nato pa so zmedeni, ker, čeprav bi jim moralo ostati 15 XMR, ne morejo takoj poslati naslednje donacije drugi dobrodelni organizaciji. Kot ste morda uganili, je to zato, ker je 15 XMR zaklenjen. Ni ga mogoče porabiti, dokler ni vrnjen kot drobiž (10 potrditev ali približno 20 minut). Ko bodo njihova sredstva odklenjena, bodo lahko poslali svojo drugo donacijo.</p>\n\n<p>Če samo ponovim, te težave ne bi imeli, če bi namesto tega imeli več izhodov, na primer dva izhoda 10 XMR ali podobno. Obe donaciji bi lahko poslali eno za drugo, ker bi prva donacija uporabila enega od 10 izhodov XMR (in počakala 10 potrditev, da bi prejela 5 XMR nazaj v spremembi), druga donacija pa bi uporabila ostalih 10 XMR. izhod.</p>\n\n<p>Nekatere denarnice za kriptovalute imajo funkcijo, imenovano \'upravljanje izhodov\', ki uporabniku preprosto prikaže, katere izhode trenutno ima (poleg njihove skupne vsote), in mu omogoča, da izbere, katere želi uporabiti, ko porabi njihova kriptovaluta.</p>\n\n<p>Od zdaj GUI Monero samodejno izbira izhode za uporabnike, saj uporabniki, ki izbirajo lastne izhode, pogosto povzročajo zmedo ali v nekaterih primerih škodijo zasebnosti. Vendar pa so v izdelavi denarnice, kot je nov projekt denarnice Feather, ki bo vseboval te funkcije za upravljanje izhoda.</p>\n\n<p>Veliko smo govorili o delu pošiljanja, vendar se na prejemnem koncu zgodi nekaj fascinantnega. Če se vrnemo k našemu primeru pošiljanja 3 XMR nekomu in uporabi vaših izhodov 1,5 XMR in 2,25 XMR v transakciji (medtem ko pričakujemo 0,75 XMR v spremembi), prejemnik NE prejme dveh izhodov 1,5 XMR in 2,25 XMR. Namesto tega prejmejo EN 3 izhod XMR.</p>\n\n<p>V ozadju protokol združuje vse izhode, ki se uporabljajo za porabo, in daje prejemniku en izhod plačanega zneska ter pošlje en izhod spremembe nazaj pošiljatelju. Tako bo tudi pošiljatelj prejel en izhod nazaj kot drobiž, ne glede na to, ali je za pošiljanje transakcije uporabil dva, tri ali deset izhodov.</p>\n\n<p>Upamo, da je to razjasnilo nekaj zmede glede rezultatov in delovanja notranjega računovodstva protokola, pa tudi običajnega uporabnika, ki se sooča s težavo zmede, ko naleti na zaklenjena sredstva. V drugem članku bomo raziskali upravljanje vaših rezultatov, da bi čim bolj zmanjšali možnost čakanja na odklenjena sredstva pred pošiljanjem prihodnjih transakcij.</p>';
 
   @override
-  String get knowledge250Sboutputs250Sbdescription => 'Številni uporabniki, ki poznajo kriptovalute, so verjetno že slišali za izraz \"izhodi\", vendar vsi ne razumejo, kaj pomenijo in kako delujejo.';
+  String get knowledge250Sboutputs250Sbdescription => 'Številni uporabniki, ki poznajo kriptovalute, so verjetno že slišali za izraz \"izhodi\" ozr \"outputs\", vendar vsi ne razumejo, kaj pomenijo in kako delujejo.';
 
   @override
-  String get knowledge250Sboutputs250Sbtitle => 'Pojasnjeni rezultati Monero';
+  String get knowledge250Sboutputs250Sbtitle => 'Pojasnjeni Monero Izhodi (Outputs)';
 
   @override
-  String get knowledge250Sbp2pool250Sb0250Sbtext => '<p>Eden od temeljnih ciljev projekta Monero je omogočiti pošteno, decentralizirano in varno omrežje z novimi in inovativnimi pristopi k rudarjenju z dokazi o delu (PoW), glavnemu načinu, s katerim so danes zaščitena omrežja kriptovalut.[ X230X]\n\n<p>Medtem ko je edinstven rudarski algoritem <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/monero-mining-randomx\">, kot je RandomX</a>, izredno pomemben za ta cilj, saj pomaga zagotoviti, da lahko vsakdo z računalnikom pošteno prispeva k varnosti omrežja, RandomX ne reši težav ki se lahko pojavijo zaradi bazenskega rudarjenja. Rudarjenje v bazenu je danes daleč najpogostejši način rudarjenja kriptovalut, vključno z Monero, a na srečo pojav rudarjenja p2pool to hitro spreminja.</p>';
+  String get knowledge250Sbp2pool250Sb0250Sbtext => '<p>Eden od temeljnih ciljev projekta Monero je omogočiti pošteno, decentralizirano in varno omrežje z novimi in inovativnimi pristopi k rudarjenju z dokazi o delu (PoW), glavnemu načinu, s katerim so danes zaščitena omrežja kriptovalut.</p>\n\n<p>Medtem ko je edinstven rudarski algoritem <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/monero-mining-randomx\">, kot je RandomX</a>, izredno pomemben za ta cilj, saj pomaga zagotoviti, da lahko vsakdo z računalnikom pošteno prispeva k varnosti omrežja, RandomX ne reši težav ki se lahko pojavijo zaradi bazenskega rudarjenja. Rudarjenje v bazenu je danes daleč najpogostejši način rudarjenja kriptovalut, vključno z Monero, a na srečo pojav rudarjenja p2pool to hitro spreminja.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb1250Sbtext => '<p>Rudarjenje v bazenu je način za rudarje, da si delijo nalogo poskusa reševanja bloka v omrežju in nato enakomerno delijo nagrade za vse bloke, ki jih bazen najde. Čeprav to izjemno pomaga izenačiti pogostost plačila rudarjev v primerjavi s samim rudarjenjem Monero, ni brez resnih težav s centralizacijo.</p>\n\n<p>Ko vsak rudar prispeva delo v skupino, se odreče nadzoru nad vsem delom, ki ga opravi, in blokom, ki jih najdejo v skupini samem, pri čemer verjamejo, da bo skupina pošteno in pravično razdelila nagrade med vse rudarje na podlagi količine delo, ki ga je opravil vsak. Če gre vse v redu, operater bazena zbere delo vseh rudarjev, ga predloži omrežju in enakomerno razdeli nagrade.</p>';
@@ -3758,13 +3758,13 @@ class I18nSl extends I18n {
   String get knowledge250Sbp2pool250Sb1250Sbtitle => 'Kaj je bazensko rudarjenje?';
 
   @override
-  String get knowledge250Sbp2pool250Sb2250Sbtext => '<p>Na žalost je to v celoti odvisno od zaupanja in operaterju bazena omogoča, da počne nečedne stvari z delom, ki ga opravljajo rudarji. Operater bazena bi lahko izkoristil opravljeno delo za napad na omrežje, poskušal podvojiti porabo sredstev (če je bazen dovolj velik) ali preprosto uporabil delo rudarjev za plačilo samim sebi in nikoli ne bi rudarjev ustrezno nagradil za njihovo delo </p>\n\n<p>Največje tveganje za omrežje je, da ima bazen (ali več bazenov, ki delujejo skupaj) pod svojim nadzorom več kot 51 % zgoščene vrednosti omrežja, saj bi to lahko uporabili za goljufanje in dvakratno porabo sredstev (dvojna poraba). napad) ali poskušati spremeniti pravila omrežja.</p>';
+  String get knowledge250Sbp2pool250Sb2250Sbtext => '<p>Na žalost je to v celoti odvisno od zaupanja in upravljavcu bazena omogoča, da z delom rudarjev počne nečedne stvari. Upravljavec sklada lahko opravljeno delo uporabi za napade na omrežje, poskuša podvojiti porabo sredstev (če je sklad dovolj velik) ali pa preprosto uporabi delo rudarjev za svoje plačilo in rudarjev nikoli ustrezno ne nagradi za njihovo delo. </p>\n\n<p>Največje tveganje za omrežje je, da ima bazen (ali več bazenov, ki delujejo skupaj) pod svojim nadzorom več kot 51 % zgoščene vrednosti omrežja, saj bi to lahko uporabili za goljufanje in dvakratno porabo sredstev (dvojna poraba). napad) ali poskušati spremeniti pravila omrežja.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb2250Sbtitle => 'Kakšna je težava pri rudarjenju v bazenu?';
 
   @override
-  String get knowledge250Sbp2pool250Sb3250Sbtext => '<p>p2pool je koncept, ki je bil prvotno ustvarjen za rudarjenje bitcoinov že leta 2011, vendar nikoli ni bil široko sprejet in ostaja praktično neuporabljen na bitcoinih. K sreči je SChernykh, eden ključnih razvijalcev za RandomX, svoj dopust preživel v iskanju rešitev za nekatere težave z implementacijo p2pool v bitcoinih in ponovnem pisanju vse programske opreme iz nič.</p>\n\n<p>p2pool v Monero omogoča popolnoma nezaupljiv način za rudarje, da sodelujejo pri reševanju blokov in zaščitijo omrežje Monero z uporabo posebne programske opreme za vozlišča za p2pool, da si delijo delo.</p>\n\n<p>To se izvede z uporabo nove verige blokov (\"stranska veriga\"), ki vodi evidenco dela, ki ga opravi vsak rudar, naslov njihove denarnice in koliko Monera so zaslužili, nato pa nagrado izplača v skrbništvu - manj in decentraliziran način. Ker ima ta stranska veriga veliko manj rudarjev, je veliko lažje najti in predložiti bloke v njej kot v glavnem omrežju Monero, zaradi česar rudarji lažje dobijo dosledna izplačila v primerjavi z rudarjenjem Monero samo.</p>';
+  String get knowledge250Sbp2pool250Sb3250Sbtext => '<p>p2pool je koncept, ki je bil prvotno ustvarjen za rudarjenje bitcoinov že leta 2011, vendar nikoli ni bil široko sprejet in ostaja praktično neuporabljen na bitcoinih. K sreči je SChernykh, eden ključnih razvijalcev za RandomX, svoj dopust preživel v iskanju rešitev za nekatere težave z implementacijo p2pool v bitcoinih in ponovnem pisanju vse programske opreme iz nič.</p>\n\n<p>p2pool v Monero omogoča popolnoma nezaupljiv način za rudarje, da sodelujejo pri reševanju blokov in zaščitijo omrežje Monero z uporabo posebne programske opreme za vozlišča za p2pool, da si delijo delo.</p>\n\n<p>To se izvede z uporabo novega blockchaina (\"stranska veriga\"), ki vodi evidenco dela, ki ga opravi vsak rudar, naslov njihove denarnice in koliko Monera so zaslužili, nato pa nagrado izplača v skrbništvu - manj in decentraliziran način. Ker ima ta stranska veriga veliko manj rudarjev, je veliko lažje najti in predložiti bloke v njej kot v glavnem omrežju Monero, zaradi česar rudarji lažje dobijo dosledna izplačila v primerjavi z rudarjenjem Monero samo.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb3250Sbtitle => 'Kaj je p2pool?';
@@ -3782,37 +3782,37 @@ class I18nSl extends I18n {
   String get knowledge250Sbp2pool250Sb5250Sbtitle => 'Kakšne so slabosti?';
 
   @override
-  String get knowledge250Sbp2pool250Sb6250Sbtext => '<p>K sreči, zaradi odlične zasnove implementacije p2pool podjetja Monero&#39; in številnih ljudi v skupnosti, ki so si vzeli čas za pomoč pri poenostavitvi postopka rudarjenja prek p2pool, je začetek sčasoma preprostejši. Obstaja več načinov za začetek rudarjenja s p2pool, a ker tehnične podrobnosti presegajo obseg tega članka, vas prosimo, da skočite na spodnjo povezavo, odvisno od vašega operacijskega sistema: </p>\n<ul>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://www.youtube.com/watch?v=yfbvTksF9ic\">Windows</a></li>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://sethforprivacy.com/guides/run-a-p2pool-node/\">Linux</a></li>\n</ul>';
+  String get knowledge250Sbp2pool250Sb6250Sbtext => '<p>K sreči, zaradi odlične zasnove implementacije p2pool Monera&#39; in številnih ljudi v skupnosti, ki so si vzeli čas za pomoč pri poenostavitvi postopka rudarjenja prek p2pool, je začetek sčasoma preprostejši. Obstaja več načinov za začetek rudarjenja s p2pool, a ker tehnične podrobnosti presegajo obseg tega članka, vas prosimo, da skočite na spodnjo povezavo, odvisno od vašega operacijskega sistema: </p>\n<ul>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://www.youtube.com/watch?v=yfbvTksF9ic\">Windows</a></li>\n<li><a rel=\"noopener nofollow\" class=\"next-link\" target=\"_blank\" href=\"https://sethforprivacy.com/guides/run-a-p2pool-node/\">Linux</a></li>\n</ul>';
 
   @override
-  String get knowledge250Sbp2pool250Sb6250Sbtitle => 'Kako naj začnem?';
+  String get knowledge250Sbp2pool250Sb6250Sbtitle => 'Kako lahko začnem?';
 
   @override
-  String get knowledge250Sbp2pool250Sb7250Sbtext => '<p>Če je to vzbudilo vašo radovednost glede rudarjenja p2pool, si spodaj oglejte nekaj dodatnih povezav in pojasnil o p2pool, kako deluje in kaj pomeni za Monero: </p>\n<ul>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool\">Uradni Github za p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool#how-to-mine-on-p2pool\">Uradni dokumenti o uporabi p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.getmonero.org/2021/10/05/p2pool-released.html\">Monero P2Pool je zdaj v živo</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://p2pool.observer/\">p2pool.observer, neke vrste &quot;raziskovalec blokov&quot; za p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/WeebDataHoarder/p2pool-compose\">Monero p2pool docker-compose</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.monerotalk.live/sergei-chernykh-on-his-development-of-p2pool-a-decentralized-xmr-mining-pool\">Sergei Chernykh: O njegovem razvoju P2Pool decentraliziranega XMR rudarskega bazena </a></li>\n</ul>';
+  String get knowledge250Sbp2pool250Sb7250Sbtext => '<p>Če je to vzbudilo vašo radovednost glede rudarjenja p2pool, si spodaj oglejte nekaj dodatnih povezav in pojasnil o p2pool, kako deluje in kaj pomeni za Monero: </p>\n<ul>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool\">Uradni Github za p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool#how-to-mine-on-p2pool\">Uradni dokumenti o uporabi p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.getmonero.org/2021/10/05/p2pool-released.html\">Monero P2Pool je zdaj live</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://p2pool.observer/\">p2pool.observer, neke vrste &quot;raziskovalec blokov&quot; za p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/WeebDataHoarder/p2pool-compose\">Monero p2pool docker-compose</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.monerotalk.live/sergei-chernykh-on-his-development-of-p2pool-a-decentralized-xmr-mining-pool\">Sergei Chernykh: O njegovem razvoju P2Pool decentraliziranega XMR rudarskega bazena </a></li>\n</ul>';
 
   @override
-  String get knowledge250Sbp2pool250Sb7250Sbtitle => 'Kako se lahko naučim več?';
+  String get knowledge250Sbp2pool250Sb7250Sbtitle => 'Kako lahko izvem več?';
 
   @override
   String get knowledge250Sbp2pool250Sbdescription => 'Pool rudarjenje je danes najpogostejši način za rudarjenje Monera, a na srečo pojav rudarjenja p2pool to hitro spreminja.';
 
   @override
-  String get knowledge250Sbp2pool250Sbtitle => 'P2Pool in njegova vloga pri decentralizaciji rudarjenja Monero';
+  String get knowledge250Sbp2pool250Sbtitle => 'P2Pool in Njegova Vloga pri Decentralizaciji Monero Rudarjenja';
 
   @override
-  String get knowledge250Sbpractices250Sb0250Sbtext => '<p>Mnogi uporabniki bodo morda šokirani, ko bodo izvedeli, da strokovnjaki menijo, da je mogoče kriptovaluto uporabljati nepravilno. Glede na to, pred čim se uporabnik brani, je treba sprejeti določene korake in previdnostne ukrepe, da ohranimo zasebnost, se izognemo prevaram in zagotovimo pravilno in pravočasno dostavo transakcij. Na srečo so razvijalci Monero storili vse, kar so lahko, da na teh področjih nastavijo razumne privzete vrednosti, tako da bodo uporabniki, ki uporabljajo programsko opremo denarnice, kot je, večino časa varni. Kljub temu si želimo vzeti nekaj časa in preučiti nekaj primerov, kjer bi bilo morda koristno, če bi bili pri porabi nekoliko bolj premišljeni.</p>';
+  String get knowledge250Sbpractices250Sb0250Sbtext => '<p>Mnogi uporabniki bodo morda šokirani, ko bodo izvedeli, da strokovnjaki menijo, da je kriptovaluto mogoče uporabljati nepravilno. Glede na to, pred čim se uporabnik brani, obstajajo določeni koraki in previdnostni ukrepi, ki jih je treba sprejeti, da bi ohranili zasebnost, se izognili prevaram ter zagotovili pravilno in pravočasno izvedbo transakcij. Na srečo so Monero razvijalci naredili vse, kar je v njihovi moči, da bi na teh področjih določili razumne privzete nastavitve, zato bodo uporabniki, ki uporabljajo programsko opremo denarnice v takšni obliki, kot je, večino časa varni. Kljub temu bi si radi vzeli nekaj časa in si ogledali nekaj primerov, v katerih bi bilo koristno, da bi bili pri porabi nekoliko bolj premišljeni.</p>';
 
   @override
-  String get knowledge250Sbpractices250Sb1250Sbtext => '<p>Prvi in največji način, da ohranite svojo kriptovaluto varno in zanesljivo, je, da zapišete svoje mnemonično seme Monero, ki je kratek seznam besed, prikazan, ko prvič ustvarite svojo denarnico. Če imate to seme, vendar vaš računalnik/telefon umre, potem lahko obnovite svoj Monero. Če nimate tega semena in izgubite denarnico, je vaš Monero izgubljen in nihče vam ga ne more pomagati povrniti. Na enak način tega semena ne delite z nikomer. Če imajo ta besedni seznam, imajo popoln dostop in pravice do porabe do vašega Monera. Mnogi so bili neprevidni pri zagotavljanju svojega semena in so prišli do grozljive resničnosti izgubljenih sredstev, ker jih je nekdo vzel. Priporočamo, da ga zapišete. Fizično. Ne shranjujte ga digitalno in zagotovite, da imate več kopij na različnih mestih. To je prva stvar, ki jo lahko storite, da zavarujete svoj Monero. ZAPIŠI SVOJE SEME!</p>';
+  String get knowledge250Sbpractices250Sb1250Sbtext => '<p>Prvi in največji način, da ohranite svojo kriptovaluto varno in zanesljivo, je, da zapišete svoje mnemonično seme Monero, ki je kratek seznam besed, prikazan, ko prvič ustvarite svojo denarnico. Če imate to seme, vendar vaš računalnik/telefon umre, potem lahko obnovite svoj Monero. Če nimate tega semena in izgubite denarnico, je vaš Monero izgubljen in nihče vam ga ne more pomagati povrniti. Na enak način tega semena ne delite z nikomer. Če imajo ta besedni seznam, imajo popoln dostop in pravice do porabe do vašega Monera. Mnogi so bili neprevidni pri zagotavljanju svojega semena in so prišli do grozljive resničnosti izgubljenih sredstev, ker jih je nekdo vzel. Priporočamo, da ga zapišete. Fizično. Ne shranjujte ga digitalno in zagotovite, da imate več kopij na različnih mestih. To je prva stvar, ki jo lahko storite, da zavarujete svoj Monero. ZAPIŠI VAŠE SEME!</p>';
 
   @override
-  String get knowledge250Sbpractices250Sb1250Sbtitle => 'ZAPIŠI SVOJE SEME!';
+  String get knowledge250Sbpractices250Sb1250Sbtitle => 'ZAPIŠITE SI VAŠE SEME!';
 
   @override
-  String get knowledge250Sbpractices250Sb2250Sbtext => '<p>Nekatere prevare uporabljajo zlonamerno programsko opremo v vašem računalniku, ki spremeni funkcijo kopiranja/prilepljenja, da namesto predvidenega prejemnika prikaže naslov ustvarjalca zlonamerne programske opreme. Ker so naslovi Monero dolgi in okorni, je lahko skušnjava, da samo preverite prvih nekaj številk in črk in ga označite za dobrega, ali pa naslova sploh ne preverite dvakrat. Čeprav verjetno ni potrebno preveriti celotnega naslova, bo preverjanje prvega ducata in zadnjega ducata znakov naslova v večini primerov več kot dovolj. Za naslove, na katere pogosto pošiljate, ima veliko denarnic funkcijo adresarja, ki samodejno vnese izbrani shranjeni naslov. Še vedno pa je najbolje, da opravite hiter pregled.</p>';
+  String get knowledge250Sbpractices250Sb2250Sbtext => '<p>Nekatere prevare uporabljajo zlonamerno programsko opremo v vašem računalniku, ki spremeni funkcijo kopiranja/prilepljenja, da namesto predvidenega prejemnika prikaže naslov ustvarjalca zlonamerne programske opreme. Ker so Monero naslovi dolgi in okorni, je lahko skušnjava, da samo preverite prvih nekaj številk in črk in ga označite za dobrega, ali pa naslova sploh ne preverite dvakrat. Čeprav verjetno ni potrebno preveriti celotnega naslova, bo preverjanje prvega ducata in zadnjega ducata znakov naslova v večini primerov več kot dovolj. Za naslove, na katere pogosto pošiljate, ima veliko denarnic funkcijo adresarja, ki samodejno vnese izbrani shranjeni naslov. Še vedno pa je najbolje, da opravite hiter pregled.</p>';
 
   @override
-  String get knowledge250Sbpractices250Sb2250Sbtitle => 'Še enkrat preverite svoje naslove';
+  String get knowledge250Sbpractices250Sb2250Sbtitle => 'Dvakrat preverite svoje naslove';
 
   @override
   String get knowledge250Sbpractices250Sb3250Sbtext => '<p>Vroče in hladne denarnice so običajna terminologija v prostoru kriptovalut, koncept pa je v resnici precej preprost. Vroča denarnica je tista, ki jo pogosto vzamete in uporabljate. V zadnjem žepu je \'vroče\'. Hladne denarnice so tiste, ki se jih ne dotikamo prav pogosto, podobno kot denar v banki. Tako kot ni priporočljivo nositi na stotine dolarjev v fizični denarnici, vendar je na splošno sprejemljivo, da to počnete na bančnem računu, bi morali uporabniki razmisliti, koliko Monera je pametno nositi v svojih vročih mobilnih denarnicah in koliko je najbolje pustiti doma v drugem, hladnem. Tako izguba telefona, kraja ali druge nezgode ne bodo povzročile popolne izgube sredstev.</p>';
@@ -3821,160 +3821,160 @@ class I18nSl extends I18n {
   String get knowledge250Sbpractices250Sb3250Sbtitle => 'Naučite se razlike med vročimi in hladnimi denarnicami';
 
   @override
-  String get knowledge250Sbpractices250Sb4250Sbtext => '<p>Če vas je zamisel, da bi vaše digitalno okolje ohranili popolnoma brez virusov in zlonamerne programske opreme za zaščito vašega Monera, strašljiva, potem lahko razmislite o denarnici za strojno opremo. V bistvu strojna denarnica hrani vaše zasebne ključe v napravi, stran od vašega računalnika. Tudi če je vaš računalnik ogrožen, hekerji ne bodo imeli dostopa do vašega semena. Sredstva boste lahko porabili samo, če je strojna denarnica povezana z računalnikom in podpiše transakcijo. To premakne varnost ključev iz vašega računalnika, ki se uporablja za veliko stvari in ima veliko napadalno površino, v strojno denarnico, ki se uporablja samo za eno stvar in ima veliko manjšo napadalno površino. Za običajno osebo, ki ne pozna podrobnosti računalniške varnosti, je to izvedljiva možnost, da varuje svoja sredstva.</p>';
+  String get knowledge250Sbpractices250Sb4250Sbtext => '<p>Če vas straši zamisel, da bi morali svoje digitalno okolje zaščititi pred virusi in zlonamerno programsko opremo, da bi zaščitili svoje Monero, potem lahko razmislite o strojni denarnici. V strojni denarnici so vaši zasebni ključi shranjeni v napravi, stran od računalnika. Torej tudi če bo vaš računalnik ogrožen, hekerji ne bodo imeli dostopa do vašega semena. Sredstva boste lahko porabili le, če bo strojna denarnica povezana z računalnikom in bo podpisala transakcijo. S tem se varnost ključev prenese z vašega računalnika, ki se uporablja za veliko stvari in ima veliko površino za napade, na strojno denarnico, ki se uporablja le za eno stvar in ima veliko manjšo površino za napade. Za običajne osebe, ki ne poznajo vseh podrobnosti računalniške varnosti, je to izvedljiva možnost za zagotavljanje varnosti vaših sredstev.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb4250Sbtitle => 'So strojne denarnice prave za vas?';
 
   @override
-  String get knowledge250Sbpractices250Sb5250Sbtext => '<p>Na področju zasebnosti je pogosto prelahko pomotoma odkriti ali razkriti podatke o sebi, na podlagi katerih vas je mogoče identificirati. Star primer, ki ne velja več za Monero, so velikosti prstanov po meri. Če je privzeta vrednost 11 in vsi uporabljajo 11, vi pa dosledno uporabljate 54, da, je številka višja, zato je vaš nabor anonimnosti višji, vendar ste zdaj ločeni od množice in vaše transakcije je lažje prepoznati. Monero je od takrat naredil posodobitev, da popravi velikost obroča na 11, tako da so zdaj vsi videti enako.</p>\n\n<p>V drugih kriptovalutah, kot je Bitcoin, lahko storite več stvari, da nenamerno škodujete svoji zasebnosti. Izbira uglednega mešalnika, pridobivanje kovancev brez KYC/AML, neponovna uporaba naslovov in pravilno upravljanje izpisa kovancev so vse stvari, ki jih mora posameznik upoštevati, ko poskuša zmanjšati uhajanje metapodatkov. Monero se mnogim od teh težav izogne tako, da funkcije zasebnosti naredi obvezne in nastavi dobre privzete vrednosti za povprečnega uporabnika. Zgornji primer uporabe fiksne velikosti prstana pomeni, da se končnim uporabnikom ni treba ugankati, kako v zvezi s tem doseči najboljšo možno zasebnost. Denarnica to stori namesto njih samodejno.</p>\n\n<p>Govoriti o tem se morda zdi nenavadno. Večini uporabnikov bi lahko oprostili, če mislijo, da vsa programska oprema samodejno deluje zanje in ne proti njim. Na žalost nič ne more biti dlje od resnice in ko gre za zasebnost, so skoraj vse kriptovalute resno pomanjkljive. Količina truda, ki jo je treba vložiti, da bi dosegli kakršno koli raven zasebnosti, je običajno prevelika in pretežka za povprečnega uporabnika. To pogosto velja tudi za druge kriptovalute, ki se osredotočajo na zasebnost! Monero poskrbi, da se zasebnost zgodi samodejno, brez razmišljanja uporabnikov, na ravni protokola, kadar je to mogoče, in z razumnimi privzetimi nastavitvami za denarnice, ko ni. Če ste v dvomih, preprosto uporabite privzete nastavitve denarnice in ne bojte se postavljati vprašanj.</p>';
+  String get knowledge250Sbpractices250Sb5250Sbtext => '<p>Na področju zasebnosti je pogosto prelahko pomotoma odkriti ali razkriti podatke o sebi, na podlagi katerih vas je mogoče identificirati. Star primer, ki ne velja več za Monero, so velikosti ringov po meri. Če je privzeta vrednost 11 in vsi uporabljajo 11, vi pa dosledno uporabljate 54, da, je številka višja, zato je vaš nabor anonimnosti višji, vendar ste zdaj ločeni od množice in vaše transakcije je lažje prepoznati. Monero je od takrat naredil posodobitev, da popravi velikost obroča na 11, tako da so zdaj vsi videti enako.</p>\n\n<p>V drugih kriptovalutah, kot je Bitcoin, lahko storite več stvari, da nenamerno škodujete svoji zasebnosti. Izbira uglednega mešalnika, pridobivanje kovancev brez KYC/AML, neponovna uporaba naslovov in pravilno upravljanje izpisa kovancev so vse stvari, ki jih mora posameznik upoštevati, ko poskuša zmanjšati uhajanje metapodatkov. Monero se mnogim od teh težav izogne tako, da funkcije zasebnosti naredi obvezne in nastavi dobre privzete vrednosti za povprečnega uporabnika. Zgornji primer uporabe fiksne velikosti prstana pomeni, da se končnim uporabnikom ni treba ugankati, kako v zvezi s tem doseči najboljšo možno zasebnost. Denarnica to stori namesto njih samodejno.</p>\n\n<p>Govoriti o tem se morda zdi nenavadno. Večini uporabnikov bi lahko oprostili, če mislijo, da vsa programska oprema samodejno deluje zanje in ne proti njim. Na žalost nič ne more biti dlje od resnice in ko gre za zasebnost, so skoraj vse kriptovalute resno pomanjkljive. Količina truda, ki jo je treba vložiti, da bi dosegli kakršno koli raven zasebnosti, je običajno prevelika in pretežka za povprečnega uporabnika. To pogosto velja tudi za druge kriptovalute, ki se osredotočajo na zasebnost! Monero poskrbi, da se zasebnost zgodi samodejno, brez razmišljanja uporabnikov, na ravni protokola, kadar je to mogoče, in z razumnimi privzetimi nastavitvami za denarnice, ko ni. Če ste v dvomih, preprosto uporabite privzete nastavitve denarnice in ne bojte se postavljati vprašanj.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb5250Sbtitle => 'Če ste v dvomih, uporabite privzete (z Monero)';
 
   @override
-  String get knowledge250Sbpractices250Sbdescription => 'Oglejmo si korake in previdnostne ukrepe, ki jih je treba upoštevati, da ohranimo zasebnost, se izognemo prevaram in zagotovimo pravilno dostavo transakcij med uporabo Monera.';
+  String get knowledge250Sbpractices250Sbdescription => 'Oglejmo si korake in ukrepe, ki jih je treba sprejeti za ohranjanje zasebnosti, izogibanje prevaram in zagotavljanje pravilne dostave transakcij pri uporabi Monera.';
 
   @override
-  String get knowledge250Sbpractices250Sbtitle => 'Najboljše prakse Monero za začetnike';
+  String get knowledge250Sbpractices250Sbtitle => 'Najboljše Monero Prakse za Začetnike';
 
   @override
   String get knowledge250Sbringct250Sb0250Sbtext => '<p>Zasebnost Monera ni odvisna od enega samega mehanizma, ki bi, če bi bil pokvarjen, razkril celotno transakcijo, ampak od treh različnih tehnologij, ki delujejo v tandemu in zagotavljajo celovito zasebnost, hkrati pa kompenzirajo slabosti drugih delov. Ta trikraki pristop je sestavljen iz <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">podpisov zvonjenja</a>, RingCT in <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">prikritih naslovov</a>. Te tri tehnologije skrijejo dejanski rezultat (pošiljatelja), količino oziroma prejemnika. Danes bomo govorili o RingCT.</p>\n\n<p>RingCT je nedvomno najbolj tehničen od treh in ga je lahko težko razumeti, zato ne bomo natančno opisali, kako deluje, temveč bomo pokazali, kako je mogoče ne poznati zneska in vseeno potrditi stvari o njem . In ne skrbite, kot vedno bomo uporabili veliko primerov.</p>\n\n<p>Najprej raziščimo, zakaj je pomembno preveriti kar koli o zneskih. Zakaj jih preprosto ne moremo ohraniti popolnoma skrivnostne? Odgovor je, da obstajajo pametni načini, s katerimi lahko ljudje ustvarijo denar iz zraka, če imajo priložnost. Kako lahko kaj takega deluje? Poglejmo primer.</p>\n\n<p>Če želite kupiti predmet od prijatelja in on zanj želi deset dolarjev, potem začnete vi z desetimi dolarji, on pa z nič. Ko mu daš deset dolarjev, ima on deset dolarjev, ti pa nič. Začeli ste z desetimi, zdaj jih ima on deset. V tej transakciji ni bil ustvarjen ali uničen noben denar.</p>\n\n<p>S kriptovalutami lahko pameten posameznik da deset dolarjev za predmet in namesto da bi prejel nič dolarjev drobiža, lahko prejme dva dolarja nazaj. Namesto 0 in 10, ki vodita do 10 in 0 (ali 10=10), je zdaj 0 in 10 vodi do 10 in 2 (ali 10=12). Dva Monera sta bila pravkar ustvarjena iz nič. Lahko si predstavljate, da če bi si posameznik večkrat to storil, bi lahko v kratkem času nagrabil velikansko bogastvo.</p>\n\n<p>Z Bitcoinom in drugimi bi bilo to enostavno videti. Ogledate si vhode, ki gredo v transakcije, in izhode, ki izhajajo, ter se prepričate, da je poslano enako prejetemu. Če so bili ti zneski šifrirani in niso vidni, potem uporabnik ne more preveriti, ali je poslano in prejeto isto.</p>\n\n<p>V poskusu povečanja zasebnosti Bitcoina je Gregory Maxwell ustvaril Confidential Transactions (CT), novo tehnologijo, ki bi omogočala šifrirane zneske, hkrati pa dokazala, da v procesu ni bilo nič ustvarjeno ali uničeno. Tako kot pri večini tehnologij za zasebnost tudi ta ni prešla v Bitcoin, vendar jo je Monero želel sprejeti. Bil je samo en problem. Že implementirana tehnologija obročnih podpisov je bila nezdružljiva s predlagano idejo. Tako je eden od takratnih raziskovalcev MRL, Shen Noether, spremenil CT v RingCT, različico CT, ki je bila združljiva s podpisi obročev </p>\n\n<p>Ponavljam, način delovanja je precej tehničen in bi ga bilo težko razložiti v uvodnem članku. Za ljubitelje kriptografije, ki preprosto morajo vedeti, je na internetu napisanih veliko poglobljenih člankov o notranjem delovanju CT. Za vse nas bo ta članek pokazal, kako bi bilo možno skriti zneske, a vseeno dokazati, da ni bilo nič ustvarjeno ali uničeno.</p>\n\n<p>Recimo, da je Alice želela Bobu poslati denar. Alice bo poslala 10 XMR Bobu, ki bo prejel 10 XMR. 10=10, torej tukaj ni nič narobe. Toda Alice ne želi, da bi kdo vedel, koliko pošilja. Tako z Bobom ustvarita skupno skrivnost. V bistvu številka, ki jo poznata samo onadva. Recimo, da je to število 22. Zdaj Alice pomnoži 10 (kar v resnici pošilja) z 22, da dobi 220. To je število, ki ga deli z omrežjem.</p>\n\n<p>Rudarji sami ne poznajo tajne številke. Če bi to storili, bi lahko število, ki jim je prikazano, delili s skrivno številko in dobili dejanski poslan znesek. Ker pa ne, ne morejo. Vendar vidijo, da bo Bob prejel 220. 220 poslano. 220 prejetih. 220 = 220. Na ta način lahko omrežje preveri, da ni bil ustvarjen ali uničen noben Monero, ne da bi vedeli pravi znesek, ki ga je Alice poslala Bobu.</p>\n\n<p>Ker Bob pozna skupno tajno številko, ko prejme denar, samo deli z 22, da dobi pravi znesek, ki ga je poslala Alice, 10. Alice in Bob ves čas vesta, koliko je bilo poslano in koliko prejeto vsi ostali dobijo lažno številko.</p>\n\n<p> Še enkrat, to ni dejanski način, na katerega CT deluje, vendar daje idejo o tem, kako bi bilo kaj takega mogoče. Pravi način vključuje stvari, kot so Pedersenove obveznosti, dva poslana zneska (en šifriran znesek prejemniku in en znesek obveznosti omrežju) in ... ja, že zlahka je videti, kako se lahko človek izgubi v vsem tem.</p>\n\n<p>Ena stvar, ki jo je treba upoštevati, je, da medtem ko RingCT res skrije znesek transakcije med dvema strankama v transakciji, ne skrije dveh drugih nizov številk.</p>\n\n<p>Prva so transakcije coinbase. Če vam ta izraz ni znan, v bistvu pomeni nagrado, ki jo rudarji prejmejo, ko najdejo naslednji blok. Ta številka ni skrita. Vsak lahko vidi, koliko je protokol nagradil rudarja za njihovo storitev. Na ta način je mogoče ugotoviti trenutno obstoječo količino Monera s seštevanjem vseh transakcij coinbase. Njihova vsota bo enaka trenutnemu Monero v obtoku.</p>\n\n<p>Druga številka, ki ni skrita, je nadomestilo, plačano rudarjem, ko uporabnik pošlje transakcijo. Provizije morajo biti jasne, da lahko rudarji vedo, komu dati prednost. To je način, na katerega lahko uporabniki škodijo svoji zasebnosti, saj če nekdo uporabi edinstveno provizijo za rudarje vsakič, ko pošlje transakcijo (na primer 0,12345), se njegove transakcije lahko povežejo.</p>\n\n<p>Razen teh primerov RingCT od leta 2017 skriva zneske Monero, zato je naša kolektivna zasebnost še toliko močnejša.</p>';
 
   @override
-  String get knowledge250Sbringct250Sbdescription => 'RingCT že od leta 2017 skriva zneske Monero, zato je naša kolektivna zasebnost še toliko močnejša. Toda kako se to doseže?';
+  String get knowledge250Sbringct250Sbdescription => 'RingCT skriva zneske Monero že od leta 2017, naša skupna zasebnost pa je zaradi tega še močnejša. Toda kako je to doseženo?';
 
   @override
-  String get knowledge250Sbringct250Sbtitle => 'Kako RingCT skrije zneske transakcij Monero';
+  String get knowledge250Sbringct250Sbtitle => 'Kako RingCT Prikrije Zneske Monero Transakcij';
 
   @override
-  String get knowledge250Sbrings250Sb0250Sbtext => '<p>Monero je znan daleč naokoli po vsem kripto prostoru kot kralj kovancev za zasebnost. Čeprav vsi vedo, da Monero ponuja dobro zasebnost, jih le malo razume, kako zasebnost deluje.</p>\n\n<p>Številni drugi kovanci za zasebnost objavljajo infografike primerjalnih grafikonov, ki navajajo imena tehnologije zasebnosti vsakega kovanca, v večini pa tehnologijo Monero označujejo kot RingCT, vendar je to le delno res. Monero ima dejansko tristranski pristop k zasebnosti. Ena tehnologija za skrivanje prejemnika transakcije, ena za skrivanje poslanega zneska in ena za skrivanje uporabljenega izhoda, to so prikriti naslovi, RingCT oziroma obročni podpisi.</p>\n\n<p>Ta tristranski pristop pomeni, da če ena od tehnologij pokvari, ostale nimajo nujno enake usode. Podpisi obročev so najšibkejši člen v shemi zasebnosti; beseda šibek tukaj pomeni najbolj dovzeten za hevristične napade. Vzemimo si nekaj časa, da jih raziščemo, kajne?</p>\n\n<p>Kot je omenjeno zgoraj, je cilj obročnih podpisov zakriti izhod, uporabljen v transakciji. Če vas terminologija „vhod/izhod“ kriptovalute zmede, ne skrbite. Pravzaprav ni tako zapleteno. Ko slišite \"izhod\", samo pomislite na ček. Ena tistih stvari, ki niso več tako pogoste, s katerimi ljudje plačujejo. Tako kot ček je lahko označen v poljubnem znesku - 10 \$, 32,50 \$ itd. - in se izmenjuje med pogodbenimi strankami. Za kriptovalute izhodi služijo tem funkcijam.</p>\n\n<p>Ko vam nekdo plača 10 Monero, prejmete izhod 10 XMR. Ta izhod ima vrednost (10) in je tisto, kar je vzeto iz denarnice pošiljatelja, na enak način, ko plačate storitev, račun zapusti vašo fizično denarnico in se izroči osebi, pri kateri kupujete.</p >\n\n<p>Izhod je skrit tako, da sestavi obroč (od tod tudi ime) izhodov za vabo. Vendar te vabe niso \'ponarejeni\' rezultati. Gre za resnične pretekle izhode iz verige blokov, ki nimajo nobene zveze s sedanjo transakcijo, toda zunanjemu opazovalcu se lahko vsak od teh izhodov zdi enako verjeten kot resnični. Velikost nabora vabnih izhodov, skupaj s pravim, se imenuje velikost obroča, trenutno pa je Monero enajst. Torej obstaja deset izhodov za vabo in en pravi.</p>\n\n<p>Zakaj tega števila preprosto ne povečamo na 100 ali celo 1000? Več kot je, bolje je, kajne? No, z vidika zasebnosti, da, vendar je treba upoštevati še druge stvari. Vrnimo se k fizičnemu primeru, da vidimo, kaj mislim. Če bi želeli enega od svojih dolarskih bankovcev skriti med deset vab, bi morali v denarnici nositi približno enajst dolarjev za vsak dolar, ki bi ga želeli porabiti. En pravi dolar in deset lažnih. Že to postane precej okorno, če želite porabiti celo nekaj dolarjev. Zdaj pa si predstavljajte, da smo znesek za vabo povečali na 1000. Za vsak en dolar, ki ste ga želeli porabiti, bi morali imeti pri sebi približno 1001 dolar. S seboj bi morali nositi aktovko, da bi kupili samo eno sladkarije! Pomembno je omeniti, da prstanski podpisi ne delujejo povsem na ta način, na primer, vabe same niso del podpisa, le sklicevanja nanje, vendar upamo, da bo ta analogija nekoliko v pomoč pri predstavitvi osnovnih konceptov.< /p>\n\n<p>Vabe na blockchainu delujejo podobno. Vsaka dodana vaba poveča čas in stroške preverjanja transakcije. Vsako vozlišče mora prenesti celoten obročni podpis za vsako transakcijo in vsak obročni podpis vsebuje dejanski izhod ter vabe. Ne samo to, ampak mora preveriti matematiko, ali je vsaj eden od teh izhodov resničen, čas preverjanja matematike pa se prav tako poveča z vsako vabo. To pomeni, da moramo najti srečno srednjo pot, kjer je velikost obroča dovolj velika, da ustrezno zakrije dejanski izhod, tudi pred številnimi hevrističnimi napadi, vendar dovolj majhna, da ne povzroči hitrega povečevanja verige blokov. Ni dovolj, da izberemo poljubno število ali samo povečamo velikost obroča, ko zmanjšamo podpis (kot na primer pri CLSAG). Skupnost Monero želi konkretne, matematične dokaze o tem, katera velikost obroča ponuja najboljše kompromise. Število premajhno in zasebnost ne bo dovolj močna proti hevrističnim napadom. Prevelik in morda bomo imeli le obrobno korist na strani zasebnosti in po nepotrebnem trpeli v zvezi s skaliranjem.</p>\n\n<p>Še zadnja stvar, ki jo je treba omeniti. Nekatera literatura Monero poenostavlja in pravi, da obročni podpisi skrivajo pošiljatelja, vendar to ni povsem res in razlika ni samo pedantna. Razlika med pošiljateljem (človekom) in izhodom (računom) je velika, ko gre za ohranjanje zasebnosti. Čeprav je izhod lahko povezan s pošiljateljem, izhod sam po sebi ni enak pošiljatelju. Torej, tudi če bi bil podpis obročka prelomljen, ni nujno, da je povezan z identiteto osebe, znesek in prejemnik pa sta še vedno skrita, kar zmanjšuje škodo, povzročeno zasebnosti vseh strani.</p>\n\n<p>To ne pomeni, da je pokvarjen prstanski podpis nepomemben. Vsi razkriti metapodatki so slabi in lahko razkrijejo več informacij, kot si mislimo, zlasti če se uporabljajo v povezavi z drugimi metapodatki. Zato se po najboljših močeh trudimo zagotoviti, da je za odločitvijo izbrane velikosti prstana akademska strogost, da je uhajanje drugih metapodatkov čim manjše in da uporabniška izkušnja privzeto uporablja najboljša možna dejanja.</p>\n\n<p>Če pa vas verjetnost pokvarjenega podpisa še vedno skrbi, je na obzorju nekaj neverjetnih novic. Naslednja generacija protokolov za zasebnost, na katerih se dela, kot so Triptych, Arcturus in Lelantus, ima res čudovite zmogljivosti. V teh protokolih se velikost spreminja logaritemsko in ne linearno, ko se velikost prstana povečuje. To pomeni, da lahko namestimo 100 vab, vendar je uporabljeni prostor bližje velikosti obroča 10 v stari tehnologiji. To je precejšnja razlika in bo znatno izboljšala zasebnost povsod.</p>\n\n<p>V igri mačke in miši, ki je zasebnost, Monero nenehno uvaja inovacije, da ostane pred krivuljo in zagotovi najboljšo praktično zasebnost za vse.<p>';
+  String get knowledge250Sbrings250Sb0250Sbtext => '<p>Monero je znan daleč naokoli po vsem kripto prostoru kot kralj kovancev za zasebnost. Čeprav vsi vedo, da Monero ponuja dobro zasebnost, jih le malo razume, kako zasebnost deluje.</p>\n\n<p>Številni drugi kovanci za zasebnost objavljajo infografike primerjalnih grafikonov, ki navajajo imena tehnologije zasebnosti vsakega kovanca, v večini pa tehnologijo Monero označujejo kot RingCT, vendar je to le delno res. Monero ima dejansko tristranski pristop k zasebnosti. Ena tehnologija za skrivanje prejemnika transakcije, ena za skrivanje poslanega zneska in ena za skrivanje uporabljenega izhoda, to so prikriti naslovi, RingCT oziroma obročni podpisi.</p>\n\n<p>Ta tristranski pristop pomeni, da če ena od tehnologij pokvari, ostale nimajo nujno enake usode. Podpisi obročev so najšibkejši člen v shemi zasebnosti; beseda šibek tukaj pomeni najbolj dovzeten za hevristične napade. Vzemimo si nekaj časa, da jih raziščemo, kajne?</p>\n\n<p>Kot je omenjeno zgoraj, je cilj obročnih podpisov zakriti izhod, uporabljen v transakciji. Če vas terminologija „vhod/izhod“ kriptovalute zmede, ne skrbite. Pravzaprav ni tako zapleteno. Ko slišite \"izhod\", samo pomislite na ček. Ena tistih stvari, ki niso več tako pogoste, s katerimi ljudje plačujejo. Tako kot ček je lahko označen v poljubnem znesku - 10 \$, 32,50 \$ itd. - in se izmenjuje med pogodbenimi strankami. Za kriptovalute izhodi služijo tem funkcijam.</p>\n\n<p>Ko vam nekdo plača 10 Monero, prejmete izhod 10 XMR. Ta izhod ima vrednost (10) in je tisto, kar je vzeto iz denarnice pošiljatelja, na enak način, ko plačate storitev, račun zapusti vašo fizično denarnico in se izroči osebi, pri kateri kupujete.</p >\n\n<p>Izhod je skrit tako, da sestavi obroč (od tod tudi ime \"ring\") izhodov za vabo. Vendar te vabe niso \'ponarejeni\' rezultati. Gre za resnične pretekle izhode iz verige blokov, ki nimajo nobene zveze s sedanjo transakcijo, toda zunanjemu opazovalcu se lahko vsak od teh izhodov zdi enako verjeten kot resnični. Velikost nabora vabnih izhodov, skupaj s pravim, se imenuje velikost obroča, trenutno pa je Monero enajst. Torej obstaja deset izhodov za vabo in en pravi.</p>\n\n<p>Zakaj tega števila preprosto ne povečamo na 100 ali celo 1000? Več kot je, bolje je, kajne? No, z vidika zasebnosti, da, vendar je treba upoštevati še druge stvari. Vrnimo se k fizičnemu primeru, da vidimo, kaj mislim. Če bi želeli enega od svojih dolarskih bankovcev skriti med deset vab, bi morali v denarnici nositi približno enajst dolarjev za vsak dolar, ki bi ga želeli porabiti. En pravi dolar in deset lažnih. Že to postane precej okorno, če želite porabiti celo nekaj dolarjev. Zdaj pa si predstavljajte, da smo znesek za vabo povečali na 1000. Za vsak en dolar, ki ste ga želeli porabiti, bi morali imeti pri sebi približno 1001 dolar. S seboj bi morali nositi aktovko, da bi kupili samo eno sladkarije! Pomembno je omeniti, da prstanski podpisi ne delujejo povsem na ta način, na primer, vabe same niso del podpisa, le sklicevanja nanje, vendar upamo, da bo ta analogija nekoliko v pomoč pri predstavitvi osnovnih konceptov.< /p>\n\n<p>Vabe na blockchainu delujejo podobno. Vsaka dodana vaba poveča čas in stroške preverjanja transakcije. Vsako vozlišče mora prenesti celoten obročni podpis za vsako transakcijo in vsak obročni podpis vsebuje dejanski izhod ter vabe. Ne samo to, ampak mora preveriti matematiko, ali je vsaj eden od teh izhodov resničen, čas preverjanja matematike pa se prav tako poveča z vsako vabo. To pomeni, da moramo najti srečno srednjo pot, kjer je velikost obroča dovolj velika, da ustrezno zakrije dejanski izhod, tudi pred številnimi hevrističnimi napadi, vendar dovolj majhna, da ne povzroči hitrega povečevanja verige blokov. Ni dovolj, da izberemo poljubno število ali samo povečamo velikost obroča, ko zmanjšamo podpis (kot na primer pri CLSAG). Skupnost Monero želi konkretne, matematične dokaze o tem, katera velikost obroča ponuja najboljše kompromise. Število premajhno in zasebnost ne bo dovolj močna proti hevrističnim napadom. Prevelik in morda bomo imeli le obrobno korist na strani zasebnosti in po nepotrebnem trpeli v zvezi s skaliranjem.</p>\n\n<p>Še zadnja stvar, ki jo je treba omeniti. Nekatera literatura Monero poenostavlja in pravi, da obročni podpisi skrivajo pošiljatelja, vendar to ni povsem res in razlika ni samo pedantna. Razlika med pošiljateljem (človekom) in izhodom (računom) je velika, ko gre za ohranjanje zasebnosti. Čeprav je izhod lahko povezan s pošiljateljem, izhod sam po sebi ni enak pošiljatelju. Torej, tudi če bi bil podpis obročka prelomljen, ni nujno, da je povezan z identiteto osebe, znesek in prejemnik pa sta še vedno skrita, kar zmanjšuje škodo, povzročeno zasebnosti vseh strani.</p>\n\n<p>To ne pomeni, da je pokvarjen prstanski podpis nepomemben. Vsi razkriti metapodatki so slabi in lahko razkrijejo več informacij, kot si mislimo, zlasti če se uporabljajo v povezavi z drugimi metapodatki. Zato se po najboljših močeh trudimo zagotoviti, da je za odločitvijo izbrane velikosti prstana akademska strogost, da je uhajanje drugih metapodatkov čim manjše in da uporabniška izkušnja privzeto uporablja najboljša možna dejanja.</p>\n\n<p>Če pa vas verjetnost pokvarjenega podpisa še vedno skrbi, je na obzorju nekaj neverjetnih novic. Naslednja generacija protokolov za zasebnost, na katerih se dela, kot so Triptych, Arcturus in Lelantus, ima res čudovite zmogljivosti. V teh protokolih se velikost spreminja logaritemsko in ne linearno, ko se velikost prstana povečuje. To pomeni, da lahko namestimo 100 vab, vendar je uporabljeni prostor bližje velikosti obroča 10 v stari tehnologiji. To je precejšnja razlika in bo znatno izboljšala zasebnost povsod.</p>\n\n<p>V igri mačke in miši, ki je zasebnost, Monero nenehno uvaja inovacije, da ostane pred krivuljo in zagotovi najboljšo praktično zasebnost za vse.<p>';
 
   @override
-  String get knowledge250Sbrings250Sbdescription => 'Podpisi obročev so najšibkejši člen v shemi zasebnosti; beseda šibek tukaj pomeni najbolj dovzeten za hevristične napade. Raziščimo jih, kajne?';
+  String get knowledge250Sbrings250Sbdescription => 'Obročni (ring) podpisi so najšibkejši člen v shemi zasebnosti; beseda šibek tu pomeni, da so najbolj dovzetni za hevristične napade. Preučimo jih, kajne?';
 
   @override
-  String get knowledge250Sbrings250Sbtitle => 'Kako obročni podpisi prikrijejo izhode Monera';
+  String get knowledge250Sbrings250Sbtitle => 'Kako Obročni Podpisi Prikrijejo Izhode Monera';
 
   @override
-  String get knowledge250Sbscams250Sb0250Sbtext => '<p>Odkar obstaja denar, obstajajo prevare, da bi se ljudje od njega ločili, in prostor kriptovalut ni nič drugačen. Pravzaprav je dokončnost transakcij v kriptovaluti skupaj z dejstvom, da ni osrednje organizacije, ki bi jim pomagala pri izterjavi, pripeljala do novih in inovativnih načinov, s katerimi lahko goljufi ukradejo nič hudega sluteče uporabnike in s svojimi sredstvi izginejo v digitalni praznini. V tem članku si bomo vzeli čas, da nove uporabnike obvestimo o nekaterih najbolj razširjenih prevarah v vesolju, vendar ta seznam nikakor ni izčrpen, uporabnike pa spodbujamo, naj ostanejo obveščeni o nedavnih trendih prevar in so nenehno na zavedajo svojega digitalnega okolja in so skeptični do njega.</p>';
+  String get knowledge250Sbscams250Sb0250Sbtext => '<p>Odkar obstaja denar, se pojavljajo tudi prevare, ki ljudi prepričajo, da se od njega poslovijo in nič drugače ni na področju kriptovalut. Pravzaprav je dokončnost transakcij v kriptovalutah skupaj z dejstvom, da ni osrednje organizacije, ki bi pomagala pri njihovi izterjavi, pripeljala do novih in inovativnih načinov, s katerimi lahko goljufi nič hudega sluteče uporabnike oropajo in z njihovimi sredstvi izginejo v digitalno praznino. V tem članku si bomo vzeli čas in nove uporabnike seznanili z nekaterimi najbolj razširjenimi prevarami na tem področju, vendar ta seznam nikakor ni izčrpen, zato uporabnike pozivamo, naj bodo tako obveščeni o najnovejših trendih prevar kot tudi stalno pozorni in skeptični do svoje digitalne okolice.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb1250Sbtext => '<p>Ena najstarejših prevar v knjigi in tista, ki se lahko zgodi na kateri koli obstoječi diskusijski platformi. V tej prevari se bo prevarant pretvarjal, da je zaupanja vreden posameznik v skupnosti ali visok uradnik povezanega podjetja. Ko si pridobi zaupanje žrtve s tem uveljavljenim ugledom, lahko prevarant pošlje uporabnika na zlonamerno spletno mesto, mu naloži, da prenese program, namenjen kraji njegovih sredstev, ali pa celo prepriča uporabnika, da mu neposredno pošlje sredstva. Vedno trikrat preverite, ali je oseba, s katero govorite, res prava oseba. Podjetja bodo imela e-poštna sporočila, na katera se lahko obrnejo, da preverijo identiteto (npr. »Ali me je generalni direktor vašega podjetja pravkar kontaktiral na Telegramu?«), drugi voditelji skupnosti pa bodo običajno lahko stopili v stik z drugimi sredstvi. Preverite, preden ukrepate. ŠE POSEBEJ, če so oni začeli pogovor z vami in ne vi z njimi.</p>';
+  String get knowledge250Sbscams250Sb1250Sbtext => '<p>Gre za eno najstarejših prevar, ki se lahko zgodi na vseh obstoječih platformah za razpravo. Pri tej goljufiji se goljuf pretvarja, da je zaupanja vredna oseba v skupnosti ali visok uradnik v sorodnem podjetju. Ko žrtev pridobi zaupanje zaradi ustvarjenega ugleda, lahko prevarant uporabnika pošlje na zlonamerno spletno mesto, prenese program, namenjen kraji sredstev, ali pa celo doseže, da mu uporabnik neposredno pošlje sredstva. Vedno trikrat preverite, ali je oseba, s katero se pogovarjate, res prava oseba. Podjetja bodo imela elektronska sporočila, na katera se lahko obrnete za preverjanje identitete (npr. \"Ali me je izvršni direktor vašega podjetja pravkar kontaktiral prek programa Telegram?\"), z drugimi voditelji skupnosti pa bo običajno mogoče vzpostaviti stik na druge načine. Pred kakršnim koli ukrepanjem preverite. Še posebej, če so oni začeli pogovor z vami in ne vi z njimi.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb1250Sbtitle => 'Prevara Impostor';
+  String get knowledge250Sbscams250Sb1250Sbtitle => 'Prevara \"Impostor\"';
 
   @override
-  String get knowledge250Sbscams250Sb2250Sbtext => '<p>Podobno kot pri prevari s prevarami bodo prevaranti poskušali imeti spletno mesto ali aplikacijo, ki je po videzu enaka obstoječim in zaupanja vrednim podjetjem, vendar s kodo in infrastrukturo, ki je zasnovana za krajo vašega Monera. Pogosto ima zlonamerno spletno mesto skoraj enako ime domene kot prvotno in je celo znano, da z nakupom oglaševalskega prostora zavzame najboljše rezultate internetnega iskanja za spletno mesto. Če je primer zaupanja vrednega spletnega mesta themonerowallet.com, je lahko prevarantsko spletno mesto the-monero-wallet.com ali, kar je še bolj zlovešče, themonerȯwallet.com. Ste zasledili težavo pri zadnjem? O ima piko nad njim. Oglejte si: ȯ. Toda na prvi pogled morda ni vidno in če je ime domene videti pravilno in je spletna stran enaka tistemu, kar bi lahko pričakovali, da bo, je vse preveč enostavno ujeti se v past in dati svoje seme Monero, samo ugotovite, da vaš Monero manjka, preden ugotovite, kaj vas doleti.</p>\n\n<p>A kot rečeno na začetku tega razdelka, to ne velja le za spletna mesta. Obstajajo primeri, ko lahko prevaranti zlonamerno aplikacijo, ki je videti identična obstoječim denarnicam, prikradejo prek trgovine Google Play ali App Store, kjer ostane neodkrita, dokler je ne prijavijo (kar lahko traja kar nekaj časa). V tem času uporabniki mislijo, da prenašajo pravilno aplikacijo, vendar v resnici izgubljajo svoja sredstva zaradi prevarantov.</p>\n\n<p>Rešitev za tovrstne prevare je pazljivost. Vedno dvakrat preverite, preden uporabite storitve katerega koli spletnega mesta ali aplikacije. Kadar je le mogoče, vnesite ime znanega spletnega mesta neposredno v vrstico URL namesto z uporabo iskalnikov in bodite še posebej natančni, ko se bo kaj preneslo ali bo vaše seme kakor koli uporabljeno.</p>';
+  String get knowledge250Sbscams250Sb2250Sbtext => '<p>Podobno kot pri prevarah z imitatorji bodo tudi tu prevaranti poskušali ustvariti spletno mesto ali aplikacijo, ki bo po videzu enaka obstoječim in zaupanja vrednim podjetjem, vendar bo vsebovala kodo in infrastrukturo, namenjeno kraji vaših valut Monero. Pogosto ima zlonamerna spletna stran skoraj identično ime domene kot izvirnik, znani pa so celo primeri, ko z nakupom oglasnega prostora zasedajo prva mesta v spletnih iskalnikih za to spletno stran. Če je primer zaupanja vrednega spletnega mesta themonerowallet.com, je lahko goljufivo spletno mesto the-monero-wallet.com ali, še bolj zlovešče, themonerȯwallet.com. Ali ste opazili težavo pri zadnjem primeru? Nad črko o je pika. Oglejte si to: ȯ. Toda na prvi pogled morda ni vidna, in če je ime domene videti pravilno, spletna stran pa identična tistemu, kar bi lahko pričakovali, se je vse preveč lahko ujeti v past in oddati svoje Monero seme, da bi ugotovili, da vaš Monero manjka, še preden se zaveste, kaj vas je zadelo.</p>\n\n<p>A kot rečeno na začetku tega razdelka, to ne velja le za spletna mesta. Obstajajo primeri, ko lahko prevaranti zlonamerno aplikacijo, ki je videti identična obstoječim denarnicam, prikradejo prek trgovine Google Play ali App Store, kjer ostane neodkrita, dokler je ne prijavijo (kar lahko traja kar nekaj časa). V tem času uporabniki mislijo, da prenašajo pravilno aplikacijo, vendar v resnici izgubljajo svoja sredstva zaradi prevarantov.</p>\n\n<p>Rešitev za tovrstne prevare je pazljivost. Vedno dvakrat preverite, preden uporabite storitve katerega koli spletnega mesta ali aplikacije. Kadar je le mogoče, vnesite ime znanega spletnega mesta neposredno v vrstico URL namesto z uporabo iskalnikov in bodite še posebej natančni, ko se bo kaj preneslo ali bo vaše seme kakor koli uporabljeno.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb2250Sbtitle => 'Prevara poslovnega videza';
+  String get knowledge250Sbscams250Sb2250Sbtitle => 'Prevara \"Business Look Alike\"';
 
   @override
-  String get knowledge250Sbscams250Sb3250Sbtext => '<p>Včasih prevaranti niti ne poskušajo biti subtilni. Podajajo ogromne, veličastne trditve in vedo, da se bodo vedno našli bedaki, ki jim bodo verjeli iz obupa, pohlepa ali nevednosti. Te prevare imajo različne oblike, od projektov s kovanci, ki obljubljajo smešne donose na naložbe, kjer jim najprej daste denar (kot je Bitconnect), do posebnih, tajnih skupin, ki obljubljajo, da vam bodo vnaprej povedale vsa gibanja na trgu, da boste lahko zaslužili. .za plačilo. Ne pozabite. Če se nekaj sliši predobro, da bi bilo res, verjetno tudi je. Ta nasvet še posebej velja za področje kriptovalut, saj je uvedba kovanca ali pametne pogodbe dandanes nepomembna, objava sumljivih zahtevkov na spletu pa je brezplačna. Ne pozabite, če bi nekdo res našel način, kako meriti trg ali odkriti način, kako zaslužiti na tone neskončnega denarja, zakaj bi vam potem povedal? Sami bi ga uporabili samo za obogatenje. Zakaj bi ga delili? Bodi pameten. Uporabi svojo pamet. Ne zaupaj nikomur.</p>';
+  String get knowledge250Sbscams250Sb3250Sbtext => '<p>Včasih se prevaranti niti ne trudijo biti prefinjeni. Navajajo velike, grandiozne trditve in vedo, da se bodo vedno našli bedaki, ki jim bodo zaradi obupa, pohlepa ali nevednosti verjeli. Te prevare imajo veliko oblik, od projektov za kovance, ki obljubljajo smešne donose na naložbe, pri katerih jim najprej daste denar (kot je Bitconnect), do posebnih, skrivnih skupin, ki obljubljajo, da vam bodo vnaprej povedali vsa gibanja na trgu, da boste lahko zaslužili ... za plačilo. Ne pozabite. Če se nekaj sliši predobro, da bi bilo res, verjetno je. Ta nasvet še posebej velja na področju kriptovalut, saj je v današnjem času uvajanje kovanca ali pametne pogodbe trivialno, objavljanje sumljivih trditev na spletu pa je brezplačno. Zapomnite si, da če je nekdo res našel način, kako časovno opredeliti trg, ali odkril način, kako zaslužiti na tone neskončnega denarja, zakaj bi to povedal vam? Preprosto bi to uporabili sami, da bi obogateli. Zakaj bi to delili z drugimi? Bodite pametni. Uporabite svoje možgane. Nikomur ne zaupajte.</p>';
 
   @override
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Popolna prevara';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Vaše seme Monero JE vaš Monero. To morate zapisati, ko prvič ustvarite denarnico, kajti če izgubite seme, ste izgubili svoj Monero in nihče vam ne more pomagati. A TUDI morate to seme obvarovati pred drugimi. Če nekdo ukrade vaše seme, lahko pošlje Monero iz denarnice, kot da bi bili vi, in spet nihče ne more povrniti tega denarja namesto vas. Ni ga več.</p>\n\n<p>Veliko prepogosto se je posamezniku zgodilo, da je imel denarnico Monero na hladnem, ga je zanimalo, kakšna so njegova sredstva, in ga je želel preveriti. Toda namesto da bi šli skozi težave s ponovno namestitvijo celotne aplikacije denarnice, se le odločijo za uporabo spletne denarnice, da hitro obnovijo svoje seme in pogledajo svoj denar. Če postanejo žrtev prevare Business Look Alike, potem že samo dejanje vnosa njihovega semena to preda prevarantom, ki lahko nato premaknejo denar v drugo denarnico, ki jo nadzorujejo, ko jim ustreza.</p>\n\n<p>KADAKO ima spletno mesto, aplikacija ali denarnica možnost »obnovi s semenom«, bodite zelo previdni, da je aplikacija, ki jo uporabljate, zakonita. Preverite zgoščene vrednosti programa (na spletnem mestu Monero so navodila, kako to storiti), da se prepričate, da v program niso posegle zunanje sile, in bodite nenehno pozorni na to, kje in kako izpostavljate svoje seme. Dvojno preverjanje je morda nadležno, vendar bi bila izguba sredstev zaradi malomarnosti še hujša.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Vaše seme Monero JE vaš Monero. To morate zapisati, ko prvič ustvarite denarnico, kajti če izgubite seme, ste izgubili svoj Monero in nihče vam ne more pomagati. A TUDI morate to seme obvarovati pred drugimi. Če nekdo ukrade vaše seme, lahko pošlje Monero iz denarnice, kot da bi bili vi, in spet nihče ne more povrniti tega denarja namesto vas. Ni ga več.</p>\n\n<p>Veliko prepogosto se je posamezniku zgodilo, da je imel denarnico Monero na hladnem, ga je zanimalo, kakšna so njegova sredstva, in ga je želel preveriti. Toda namesto da bi šli skozi težave s ponovno namestitvijo celotne aplikacije denarnice, se le odločijo za uporabo spletne denarnice, da hitro obnovijo svoje seme in pogledajo svoj denar. Če postanejo žrtev prevare Business Look Alike, potem že samo dejanje vnosa njihovega semena to preda prevarantom, ki lahko nato premaknejo denar v drugo denarnico, ki jo nadzorujejo, ko jim ustreza.</p>\n\n<p>KADARKOLI ima spletno mesto, aplikacija ali denarnica možnost »obnovi s semenom«, bodite zelo previdni, da je aplikacija, ki jo uporabljate, zakonita. Preverite zgoščene vrednosti programa (na spletnem mestu Monero so navodila, kako to storiti), da se prepričate, da v program niso posegle zunanje sile, in bodite nenehno pozorni na to, kje in kako izpostavljate svoje seme. Dvojno preverjanje je morda nadležno, vendar bi bila izguba sredstev zaradi malomarnosti še hujša.</p>';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtitle => 'Vloga vašega semena Monero pri prevarah';
+  String get knowledge250Sbscams250Sb4250Sbtitle => 'Vloga Vašega Monero Semena pri Prevarah';
 
   @override
-  String get knowledge250Sbscams250Sbdescription => 'Odkar obstaja denar, obstajajo tudi prevare, da bi se ljudje od njega ločili – vzemimo si čas in si oglejmo nekaj najbolj razširjenih prevar v vesolju.';
+  String get knowledge250Sbscams250Sbdescription => 'Odkar obstaja denar, se pojavljajo tudi prevare - oglejmo si nekaj najbolj razširjenih prevar na tem področju.';
 
   @override
-  String get knowledge250Sbscams250Sbtitle => 'Prevare, na katere morate biti pozorni pri uporabi Monera';
+  String get knowledge250Sbscams250Sbtitle => 'Prevare, na Katere Morate Biti Pozorni pri Uporabi Monera';
 
   @override
   String get knowledge250Sbseraphis250Sb0250Sbtext => '<p>Ta objava opisuje <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/Seraphis\">Seraphis</a>, niz struktur transakcijskega protokola in abstrakcij, ki jih je razvil psevdonimni raziskovalec <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB\"><code>koe</code></a> za ekosistem Monero, in s stalno varnostno analizo avtor psevdonimnega sodelavca <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/coinstudent2048\"><code>coinstudent2048</code></a>.<br/>\nNaredili smo nekaj poenostavitev in zaradi jasnosti izpustili nekatere tehnične podrobnosti; iz tega razloga in ker načrtovanje Seraphisa še vedno poteka, naj se zainteresirani bralci obrnejo na dokumentacijo Seraphis za najnovejše informacije.</p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb0250Sbtitle => 'Seraphis: nadgradnja modularne zasnove za transakcije Monero';
+  String get knowledge250Sbseraphis250Sb0250Sbtitle => 'Seraphis: nadgradnja modularne zasnove za Monero transakcije';
 
   @override
-  String get knowledge250Sbseraphis250Sb1250Sbtext => '<p>Protokoli, kot sta Bitcoin in Monero ter drugi, temeljijo na tako imenovanem \"izhodnem modelu\" delovanja, kjer je <em>izhod</em> predstavitev vrednosti, ki jo je mogoče prenesti.<br/>\nTransakcije porabijo enega ali več izhodov, ki jih nadzoruje pošiljatelj, in ustvarijo nove izhode, usmerjene proti prejemnikom (ali nazaj k pošiljatelju kot sprememba); transakcija mora biti uravnotežena tako, da morajo porabljeni izhodi vsebovati skupno vrednost, ki je natančno enaka vrednosti v novih izhodih (plus pristojbina, ki jo naloži omrežje).<br/>\nV mnogih protokolih, kot je Bitcoin, je vrednost, vsebovana v izhodu, zapisana v praznem jeziku, prav tako kot prejemnik.<br/>\nPoleg tega je s pogledom na verigo blokov nepomembno videti, ali in kdaj je bil izhod porabljen (to je, ali je bil porabljen v kasnejši transakciji in katera transakcija ga je porabila). </p>\n<p>Nasprotno pa protokoli, kot je Monero, uvajajo drugačno zasnovo: </p>\n\n<ul>\n<li>Izhodne vrednosti so skrite in niso vidne v verigi blokov </li>\n<li>Naslovi prejemnikov so skriti z uporabo protokola za enkratno naslavljanje </li>\n<li>Ne glede na to, ali je bil izhod porabljen ali ne, je zakrita z uporabo dvoumnih podpisov </li>\n</ul>\n\n<p> Posledica tega je, da je brez zunanjih informacij težko ugotoviti, ali je bil določen rezultat porabljen, kakšna je njegova vrednost in kdo je njegov prejemnik </p>\n\n<p>Trenutni transakcijski protokol Monero se imenuje <em>RingCT</em> in uporablja več kriptografskih gradnikov za doseganje teh načrtovnih ciljev.</p>\n\n<ul>\n<li><em>Obveznosti </em> skrijejo zneske na matematično uporaben način </li>\n<li><em>Dokazila obsega </em> preprečujejo prelivanje, ki bi lahko napihnilo zalogo </li>\n<li><em>Povezljivi obročni podpisi </em> zagotavljajo dvoumnost podpisnika in preprečujejo poskuse dvojne porabe </li>\n<li><em>Pobotanja obveznosti </em> potrjujejo, da je stanje transakcij </li>\n</ul>\n\n<p>Ti gradniki so skrbno prepleteni za izgradnjo protokola RingCT.</p>\n\n<p>Uporabna lastnost protokola RingCT je, da je mogoče nekatere gradnike spremeniti ali nadgraditi na način, ki ohrani celotno zasnovo in lastnosti nedotaknjene, vendar lahko zagotovi izboljšave učinkovitosti ali varnosti.\nPravzaprav so se tovrstne nadgradnje zgodile (ali so načrtovane) večkrat v zgodovini Monera.\nPreizkusi obsega v prvotnem protokolu RingCT so bili zajetni in počasni; pozneje so bili posodobljeni na konstrukcijo, imenovano <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2017/1066\">Bulletproofs</a>, zaradi katere so bile transakcije manjše in hitrejše z boljšo varnostno analizo, načrtovana pa je tudi posodobitev na novejšo konstrukcijo, imenovano <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/735\">Bulletproofs+</a>, za še večjo učinkovitost. </p>\n\n<p>Podoben postopek je bil izveden z gradnikom povezljivega obročnega podpisa.\nV prvotnem protokolu je bila uporabljena konstrukcija, imenovana <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ledger.pitt.edu/ojs/ledger/article/view/34\">MLSAG</a>.\nTo je bilo pozneje posodobljeno na novejšo konstrukcijo, imenovano <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/654\">CLSAG</a>, ki je hitrejša, povzroči manjše transakcije in ima boljšo varnostno analizo.\nPredlagana je bila še novejša konstrukcija povezljivega obročnega podpisa, ki temelji na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/018\">Triptihu</a>, vendar ta ni bila izbrana za uvedbo zaradi vpliva na operacije z več podpisi </p>.';
+  String get knowledge250Sbseraphis250Sb1250Sbtext => '<p>Protokoli, kot sta Bitcoin in Monero ter drugi, temeljijo na tako imenovanem \"izhodnem modelu\" delovanja, kjer je <em>izhod</em> predstavitev vrednosti, ki jo je mogoče prenesti.<br/>\nTransakcije porabijo enega ali več izhodov, ki jih nadzoruje pošiljatelj, in ustvarijo nove izhode, usmerjene proti prejemnikom (ali nazaj k pošiljatelju kot sprememba); transakcija mora biti uravnotežena tako, da morajo porabljeni izhodi vsebovati skupno vrednost, ki je natančno enaka vrednosti v novih izhodih (plus pristojbina, ki jo naloži omrežje).<br/>\nV mnogih protokolih, kot je Bitcoin, je vrednost, vsebovana v izhodu, zapisana v praznem jeziku, prav tako kot prejemnik.<br/>\nPoleg tega je s pogledom na verigo blokov nepomembno videti, ali in kdaj je bil izhod porabljen (to je, ali je bil porabljen v kasnejši transakciji in katera transakcija ga je porabila). </p>\n<p>Nasprotno pa protokoli, kot je Monero, uvajajo drugačno zasnovo: </p>\n\n<ul>\n<li>Izhodne vrednosti so skrite in niso vidne v verigi blokov </li>\n<li>Naslovi prejemnikov so skriti z uporabo protokola za enkratno naslavljanje </li>\n<li>Ne glede na to, ali je bil izhod porabljen ali ne, je zakrita z uporabo dvoumnih podpisov </li>\n</ul>\n\n<p> Posledica tega je, da je brez zunanjih informacij težko ugotoviti, ali je bil določen rezultat porabljen, kakšna je njegova vrednost in kdo je njegov prejemnik </p>\n\n<p>Trenutni transakcijski protokol Monero se imenuje <em>RingCT</em> in uporablja več kriptografskih gradnikov za doseganje teh načrtovnih ciljev.</p>\n\n<ul>\n<li><em>Obveznosti </em> skrijejo zneske na matematično uporaben način </li>\n<li><em>Dokazila obsega </em> preprečujejo prelivanje, ki bi lahko napihnilo zalogo </li>\n<li><em>Povezljivi obročni podpisi </em> zagotavljajo dvoumnost podpisnika in preprečujejo poskuse dvojne porabe </li>\n<li><em>Pobotanja obveznosti </em> potrjujejo, da je stanje transakcij </li>\n</ul>\n\n<p>Ti gradniki so skrbno prepleteni za izgradnjo protokola RingCT.</p>\n\n<p>Uporabna lastnost protokola RingCT je, da je mogoče nekatere gradnike spremeniti ali nadgraditi na način, ki ohrani celotno zasnovo in lastnosti nedotaknjene, vendar lahko zagotovi izboljšave učinkovitosti ali varnosti.\nPravzaprav so se tovrstne nadgradnje zgodile (ali so načrtovane) večkrat v zgodovini Monera.\nPreizkusi obsega v prvotnem protokolu RingCT so bili zajetni in počasni; pozneje so bili posodobljeni na konstrukcijo, imenovano <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2017/1066\">Bulletproofs</a>, zaradi katere so bile transakcije manjše in hitrejše z boljšo varnostno analizo, načrtovana pa je tudi posodobitev na novejšo konstrukcijo, imenovano <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/735\">Bulletproofs+</a>, za še večjo učinkovitost. </p>\n\n<p>Podoben postopek je bil izveden z gradnikom povezljivega obročnega podpisa.\nV prvotnem protokolu je bila uporabljena konstrukcija, imenovana <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ledger.pitt.edu/ojs/ledger/article/view/34\">MLSAG</a>.\nTo je bilo pozneje posodobljeno na novejšo konstrukcijo, imenovano <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/654\">CLSAG</a>, ki je hitrejša, povzroči manjše transakcije in ima boljšo varnostno analizo.\nPredlagana je bila še novejša konstrukcija povezljivega obročnega podpisa, ki temelji na <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2020/018\">Triptihu</a>, vendar ta ni bila izbrana za uvedbo zaradi vpliva na operacije z več podpisi </p>';
 
   @override
-  String get knowledge250Sbseraphis250Sb1250Sbtitle => 'Transakcije v Monero';
+  String get knowledge250Sbseraphis250Sb1250Sbtitle => 'Transakcije v Moneru';
 
   @override
-  String get knowledge250Sbseraphis250Sb2250Sbtext => '<p>Seraphis naredi to idejo še korak dlje.<br/>\nNamesto posodobitve posameznih gradnikov obstoječega transakcijskega protokola RingCT uvaja drugačen protokol, ki lahko izkoristi različne gradnike in ponudi izboljšano funkcionalnost.</p>';
+  String get knowledge250Sbseraphis250Sb2250Sbtext => '<p>Seraphis s to idejo gre še korak dlje.<br/>\nNamesto posodobitve posameznih gradnikov obstoječega transakcijskega protokola RingCT uvaja drugačen protokol, ki lahko izkoristi različne gradnike in ponudi izboljšano funkcionalnost.</p>';
 
   @override
   String get knowledge250Sbseraphis250Sb2250Sbtitle => 'Seraphis';
 
   @override
-  String get knowledge250Sbseraphis250Sb3250Sbtext => '<p>Seraphis uporablja drugačen nabor kriptografskih gradnikov za doseganje svojih načrtovalskih ciljev.</p>\n\n<ul>\n<li><em>Obveznosti</em> še vedno skrivajo zneske</li>\n<li><em>Dokazila obsega </em> še vedno preprečujejo prelivanje in napihovanje dovoda </li>\n<li><em>Dokazila o članstvu </em> zagotavljajo dvoumnost podpisnika </li>\n<li><em>Poravnave obveznosti </em> še vedno uveljavljajo stanje </li>\n<li><em>Odobritev dokazil </em> preprečuje poskuse dvojne porabe </li>\n</ul>\n\n<p>Opazite spremembo tukaj: povezljivi obročni podpisi so nadomeščeni s kombinacijo dokazil o članstvu in dokazil o avtorizaciji.\nGrobo rečeno, dokazila o članstvu kažejo, da je porabljeni izhod del večjega niza, podobno kot se zgodi v RingCT.\nToda za razliko od RingCT dokazila o članstvu sploh ne vključujejo povezovalne oznake!\nDokazila o avtorizaciji kažejo, da je povezovalna oznaka veljavna in se uporabljajo za podpis končne transakcije.</p>\n\n<p>Ker RingCT vpeče povezovalno oznako v dvoumen podpis, so operacije podpisovanja (in večpodpisov) računsko bolj intenzivne, izgradnja drugih funkcij, povezanih z oznakami, pa postane zahtevnejša.\nToda v Seraphisu je mogoče izdelavo dokazil o članstvu varno prenesti iz zelo zaupanja vrednih naprav (ki imajo lahko omejeno računalniško moč, kot je denarnica strojne opreme) na manj zaupanja vredno napravo, operacije podpisovanja (in večpodpisov) pa so veliko lažje z uporabo veliko enostavnejšega avtorizacijskega dokaza </p>\n\n<p> Na srečo nekateri gradniki, ki jih zahteva Seraphis, že obstajajo drugje in jih ni treba načrtovati iz nič.\nObe konstrukciji Bulletproofs in Bulletproofs+ se lahko uporabljata kot dokazila o dosegu.\nSpremembe dokaznih sistemov tipa Schnorr se lahko uporabljajo za avtorizacijo dokazov.\nIn učinkovit <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2015/643\">sistem dokazovanja</a>, ki je bil že uporabljen kot osnova za Triptych, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/373\">Lelantus</a> in <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2021/1173\">Spark</a><sup>*</sup>, je mogoče spremeniti za dokaze članstva.[ X2127X]\n\n<p><sup>*</sup> Cypher Stack prejme sredstva za razvoj Spark.</p>';
+  String get knowledge250Sbseraphis250Sb3250Sbtext => '<p>Seraphis uporablja drugačen nabor kriptografskih gradnikov za doseganje svojih načrtovalskih ciljev.</p>\n\n<ul>\n<li><em>Obveznosti</em> še vedno skrivajo zneske</li>\n<li><em>Dokazila obsega </em> še vedno preprečujejo prelivanje in napihovanje dovoda </li>\n<li><em>Dokazila o članstvu </em> zagotavljajo dvoumnost podpisnika </li>\n<li><em>Poravnave obveznosti </em> še vedno uveljavljajo stanje </li>\n<li><em>Odobritev dokazil </em> preprečuje poskuse dvojne porabe </li>\n</ul>\n\n<p>Opazite spremembo tukaj: povezljivi obročni podpisi so nadomeščeni s kombinacijo dokazil o članstvu in dokazil o avtorizaciji.\nGrobo rečeno, dokazila o članstvu kažejo, da je porabljeni izhod del večjega niza, podobno kot se zgodi v RingCT.\nToda za razliko od RingCT dokazila o članstvu sploh ne vključujejo povezovalne oznake!\nDokazila o avtorizaciji kažejo, da je povezovalna oznaka veljavna in se uporabljajo za podpis končne transakcije.</p>\n\n<p>Ker RingCT vpeče povezovalno oznako v dvoumen podpis, so operacije podpisovanja (in večpodpisov) računsko bolj intenzivne, izgradnja drugih funkcij, povezanih z oznakami, pa postane zahtevnejša.\nToda v Seraphisu je mogoče izdelavo dokazil o članstvu varno prenesti iz zelo zaupanja vrednih naprav (ki imajo lahko omejeno računalniško moč, kot je denarnica strojne opreme) na manj zaupanja vredno napravo, operacije podpisovanja (in večpodpisov) pa so veliko lažje z uporabo veliko enostavnejšega avtorizacijskega dokaza </p>\n\n<p> Na srečo nekateri gradniki, ki jih zahteva Seraphis, že obstajajo drugje in jih ni treba načrtovati iz nič.\nObe konstrukciji Bulletproofs in Bulletproofs+ se lahko uporabljata kot dokazila o dosegu.\nSpremembe dokaznih sistemov tipa Schnorr se lahko uporabljajo za avtorizacijo dokazov.\nIn učinkovit <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2015/643\">sistem dokazovanja</a>, ki je bil že uporabljen kot osnova za Triptych, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2019/373\">Lelantus</a> in <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://eprint.iacr.org/2021/1173\">Spark</a><sup>*</sup>, je mogoče spremeniti za dokaze članstva.</p>\n\n<p><sup>*</sup> Cypher Stack prejme sredstva za razvoj Spark.</p>';
 
   @override
   String get knowledge250Sbseraphis250Sb3250Sbtitle => 'Gradniki';
 
   @override
-  String get knowledge250Sbseraphis250Sb4250Sbtext => '<p>Na žalost naslovi Monero, ki so trenutno v uporabi, niso združljivi s Seraphis.\nUporabniki bi morali ustvariti nove naslove iz svojih ključev denarnice, da bi prejeli Monero, če bi bil Seraphis implementiran.\nVendar ima ta strošek ekosistema številne prednosti.</p>\n\n<p>Poleg zgoraj omenjenih strukturnih prednosti je zasnova Seraphis primerna za številne različne možnosti gradnje naslovov, od katerih ima vsaka svoje kompromise.\nMedtem ko se končna konstrukcija naslova, ki bo uporabljena v Seraphisu, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/92\">še vedno odloča </a> (ena shema, ki je deležna veliko pozornosti, se imenuje <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024\">JAMTIS</a>), lahko opišemo nekaj skupnih in uporabnih funkcij.[X908X ]\n\n<p>Morda veste, da naslovi Monero ponujajo funkcijo <em>oglednega ključa</em>, kjer lahko napravi ali tretji osebi zagotovite ogledni ključ in ji dovolite, da v vašem imenu opazuje dohodne izhode, vendar ne da bi se odrekli porabi. oblast.\nTo je uporabno za denarnice, ki se lahko posodabljajo, medtem ko je vaš ključ porabe varno zaklenjen.\nUporaben je tudi v primerih, ko želite dostop do zunanjega pogleda, kot je javna dobrodelna ustanova, ki ponuja preglednost, ali podjetje z računovodskim oddelkom.</p>\n\n<p>Slaba stran ključev za ogled Monero je, da ne zagotavljajo popolnega ali natančnega dostopa do pogleda.\nNi mogoče zanesljivo zaznati, kdaj denarnica porabi sredstva, zaradi česar je težko pravilno izračunati stanja denarnice, ko ključ porabe ni na voljo.\nPrav tako trenutno ni mogoče zaznati dohodnih izhodov, ne da bi se naučili tudi vrednosti, ki jo vsebujejo ti izhodi (kar pomeni, da bodo vse tretje osebe, odgovorne za iskanje dohodnih izhodov, natančno izvedele, koliko Monera pridobivate).</p>\n\n<p>Konstrukcije naslavljanja Seraphis lahko to rešijo.\nS Seraphisom je vaš naslov opremljen z različnimi tipkami, ki lahko počnejo različne stvari: </p>\n\n<ul>\n<li>Pazi na dohodne izhode, vendar skrij njihovo vrednost</li>\n<li>Pazi na dohodne izhode, vendar prikaži njihovo vrednost</li>\n<li>Pazi na odhodne izhode</li>\n<li>Pomaga vam ustvariti transakcije, ne pa jih podpisati</li>\n<li>Ustvarjanje novih naslovov (uporabno za trgovce na drobno ali izmenjave s številnimi strankami)</li>\n</ul>\n\n<p>Kot imetnik naslova se lahko odločite, koliko pooblastil boste prenesli na druge naprave ali tretje osebe.</p>';
+  String get knowledge250Sbseraphis250Sb4250Sbtext => '<p>Na žalost naslovi Monero, ki so trenutno v uporabi, niso združljivi s Seraphis.\nUporabniki bi morali ustvariti nove naslove iz svojih ključev denarnice, da bi prejeli Monero, če bi bil Seraphis implementiran.\nVendar ima ta strošek ekosistema številne prednosti.</p>\n\n<p>Poleg zgoraj omenjenih strukturnih prednosti je zasnova Seraphis primerna za številne različne možnosti gradnje naslovov, od katerih ima vsaka svoje kompromise.\nMedtem ko se končna konstrukcija naslova, ki bo uporabljena v Seraphisu, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/92\">še vedno odloča </a> (ena shema, ki je deležna veliko pozornosti, se imenuje <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024\">JAMTIS</a>), lahko opišemo nekaj skupnih in uporabnih funkcij.</p>\n\n<p>Morda veste, da naslovi Monero ponujajo funkcijo <em>oglednega ključa</em>, kjer lahko napravi ali tretji osebi zagotovite ogledni ključ in ji dovolite, da v vašem imenu opazuje dohodne izhode, vendar ne da bi se odrekli porabi. oblast.\nTo je uporabno za denarnice, ki se lahko posodabljajo, medtem ko je vaš ključ porabe varno zaklenjen.\nUporaben je tudi v primerih, ko želite dostop do zunanjega pogleda, kot je javna dobrodelna ustanova, ki ponuja preglednost, ali podjetje z računovodskim oddelkom.</p>\n\n<p>Slaba stran ključev za ogled Monero je, da ne zagotavljajo popolnega ali natančnega dostopa do pogleda.\nNi mogoče zanesljivo zaznati, kdaj denarnica porabi sredstva, zaradi česar je težko pravilno izračunati stanja denarnice, ko ključ porabe ni na voljo.\nPrav tako trenutno ni mogoče zaznati dohodnih izhodov, ne da bi se naučili tudi vrednosti, ki jo vsebujejo ti izhodi (kar pomeni, da bodo vse tretje osebe, odgovorne za iskanje dohodnih izhodov, natančno izvedele, koliko Monera pridobivate).</p>\n\n<p>Konstrukcije naslavljanja Seraphis lahko to rešijo.\nS Seraphisom je vaš naslov opremljen z različnimi tipkami, ki lahko počnejo različne stvari: </p>\n\n<ul>\n<li>Pazi na dohodne izhode, vendar skrij njihovo vrednost</li>\n<li>Pazi na dohodne izhode, vendar prikaži njihovo vrednost</li>\n<li>Pazi na odhodne izhode</li>\n<li>Pomaga vam ustvariti transakcije, ne pa jih podpisati</li>\n<li>Ustvarjanje novih naslovov (uporabno za trgovce na drobno ali izmenjave s številnimi strankami)</li>\n</ul>\n\n<p>Kot imetnik naslova se lahko odločite, koliko pooblastil boste prenesli na druge naprave ali tretje osebe.</p>';
 
   @override
   String get knowledge250Sbseraphis250Sb4250Sbtitle => 'Naslavljanje';
 
   @override
-  String get knowledge250Sbseraphis250Sb5250Sbtext => '<p>Seraphis je velika sprememba v ekosistemu Monero.\nČeprav vključuje spremembe naslovov in gradnikov transakcij, njegova zasnova ponuja prilagodljivost in uporabno funkcionalnost, ki ni mogoča z današnjim protokolom RingCT.\nMedtem ko je velik del zasnove dokončan in se razvija v <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/monero/tree/seraphis_lib\">izvedbo</a>, načrtovanje naslovov in analiza varnosti še potekata.\nSeraphis ponuja odlično priložnost za pospešitev ekosistema Monero! </p>';
+  String get knowledge250Sbseraphis250Sb5250Sbtext => '<p>Seraphis je velika sprememba v Monero ekosistemu.\nČeprav vključuje spremembe naslovov in gradnikov transakcij, njegova zasnova ponuja prilagodljivost in uporabno funkcionalnost, ki ni mogoča z današnjim protokolom RingCT.\nMedtem ko je velik del zasnove dokončan in se razvija v <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/UkoeHB/monero/tree/seraphis_lib\">izvedbo</a>, načrtovanje naslovov in analiza varnosti še potekata.\nSeraphis ponuja odlično priložnost za pospešitev ekosistema Monero! </p>';
 
   @override
   String get knowledge250Sbseraphis250Sb5250Sbtitle => 'Velika slika';
 
   @override
-  String get knowledge250Sbseraphis250Sbdescription => 'Danes govorimo o Seraphisu, prihajajočem naboru struktur transakcijskega protokola in abstrakcij za ekosistem Monero.';
+  String get knowledge250Sbseraphis250Sbdescription => 'Danes govorimo o Seraphisu, prihajajočem naboru struktur transakcijskega protokola in abstrakcij Monero ekosistema.';
 
   @override
-  String get knowledge250Sbseraphis250Sbtitle => 'Seraphis: Kaj bo naredil za Monero';
+  String get knowledge250Sbseraphis250Sbtitle => 'Seraphis: Kaj bo Naredil za Monero';
 
   @override
-  String get knowledge250Sbsov250Sb0250Sbtext => '<p>Pogosto se govori (in popolnoma verjamemo), da je Monero boljše menjalno sredstvo kot transparentni kovanci, vključno z bitcoini. Razlog za to je, da Monero inherentna zasebnost onemogoča sledenje in se izogne številnim nevarnostim, ki izhajajo iz tega, da je vaš denarni tok na voljo vsem zainteresiranim stranem. Prav tako zasebnost odklene zamenljivost, tako da so lahko uporabniki prepričani, da je vsak Monero, zamenjan za blago ali storitev, enakovreden kateremu koli drugemu, saj ni povezane preteklosti.</p>\n\n<p>Kot pogosta je ta točka pogovora, obstaja še ena, ki se običajno pojavi poleg nje; Čeprav je Monero morda boljše menjalno sredstvo, je Bitcoin boljši hranilec vrednosti. To ni nenavadno slišati, niti v skupnosti Monero. Uporabite Monero kot račun za porabo, Bitcoin pa kot varčevalni račun. Ko so ti uporabniki prisiljeni sklepati, sploh ne pomislijo, da je to nujno zato, ker cena bitcoina raste hitreje kot cena Monera, temveč zato, ker ima bitcoin \'lastnosti\', zaradi katerih je kot digitalno zlato.</p>\n\n<p> Popolnoma se ne strinjamo s to idejo in bi radi v tem članku pojasnili, zakaj. Radikalna transparentnost Bitcoina bolj zmanjšuje njegove lastnosti kot hranilnika vrednosti, kot se ljudje zavedajo. Prvi in najbolj očiten primer tega je predstavljanje drugega splošno sprejetega hranilnika vrednosti, zlata, s preglednostjo, ki jo ima Bitcoin.</p>\n\n<p>Kaj bi se zgodilo z zaupanjem v zlato, če bi bilo mogoče (večkrat nepomembno) povezati količino zlata s posameznikom ali skupino? Ali bi se še vedno uporabljalo tako, kot je, če je ob vsakem prenosu zlata znano, da je prišlo do prenosa, kdo sta bila pošiljatelj in prejemnik ter kakšna količina zlata je bila prenesena? Mislimo, da ne.</p>\n\n<p>Ena od lastnosti zlata, ki je neločljivo povezana s tem, da je predmet resničnega sveta, je, da je naravno zasebno. Lahko mu umetno dodamo zgodovino tako, da prejšnje lastnike označimo za zlato palico, vendar jih je mogoče zlahka odstraniti tako, da palico stopimo in predelamo, kar je možnost, ki ni prisotna v Bitcoinu.</p>\n\n<p>Ta prosojnost v gibanju, čeprav je sama po sebi dovolj uničujoča, ni edina napaka, ki bi jo imelo zlato, če bi bile vse informacije o njegovem gibanju na voljo vsem. Glede na to, da poznamo tok zlata, lahko ugotovimo, kateri subjekti iz resničnega sveta imajo velike zaloge zlata. Nekateri od teh morda niso institucije, ampak posamezniki brez obsežnih varnostnih ustanov. Ni nenavadno, da običajna oseba kupi zlato kot varovanje pred katastrofo, in zdaj vemo, da ima Joe Schmoe na ulici nekje v svoji hiši 10.000 dolarjev vrednih. Ni informacija, za katero bi Joe verjetno želel, da bi svet izvedel.</p>\n\n<p>Dober hranilec vrednosti ne pomeni le, da je cena stabilna ali da bo morda narasla, pomeni, da se imetnik počuti udobno in je prepričan v varnost mesta, kjer se je odločil vložiti svoj denar. Tako z radikalno prosojnostjo postane zlato v gibanju neprijetno, v mirovanju pa potencialno nevarno. Potem je dobro vedeti, da je bil to le miselni poskus in zlato nima teh lastnosti. Vlagatelji v zlato si lahko oddahnejo.</p>\n\n<p>Toda tega ne moremo reči za Bitcoin.</p>\n\n<p>Zasebnost Monera res zagotavlja veliko boljšo varnost tako med gibanjem kot med počitkom za vsakogar, ki ga želi uporabljati kot tekoči ali varčevalni račun.</p>\n\n<p>Zagovorniki bitcoina bodo kljub temu trdili, da je bitcoin bolj varen kot hranilec vrednosti, ker ima za seboj večji hashrate, zato je veliko manj verjetno, da bo veriga prepisana (tj. vaši kovanci v skladišču bodo morda vzeti). , in čeprav je to trenutno res, gre za socialni problem, ki ga je mogoče sčasoma spremeniti, ne pa za temeljni tehnološki problem, za katerega je malo verjetno, da bo kdaj odpravljen.</p>\n\n<p>Drugi argument za Bitcoin je, da ima fiksno ponudbo, medtem ko ima Monero emisijo repa. To ekstrapoliramo tako, da pomeni, da ima Monero neskončno zalogo, zato je enako neprimeren za shranjevanje vrednosti kot fiat. Na prvi pogled je to vsekakor bolj prepričljiv argument od obeh, zato bi se radi tega podrobneje posvetili.</p>\n\n<p>Čeprav ima Monero rep emisij, je to namenjeno zagotavljanju dolgoročne varnosti Monera. Ko bo skovan zadnji bitcoin, ne bo več nagrajevanja blokov, tako da bo trg provizij ostal sam, da bo rudarje spodbudil k zavarovanju verige. Obstajajo že predhodne raziskave, ki kažejo, da to ne bo dovolj in da bo varnost verige dramatično padla, tako da bo veriga ranljiva za 51 % napadov.</p>\n\n<p>Navsezadnje to pomeni, da ste si nabrali zalogo vrednosti, ki je ne morete premakniti zaradi strahu pred napadom. Če se vrnemo k zlatu, ali bi bilo zlato sploh uporabno kot hranilec vrednosti, če bi ga bilo nemogoče ali pretirano nevarno premikati, prodajati ali menjavati? Kaj je dobra nedostopna vrednost? Kaj koristijo nakopičeni milijoni dolarjev shranjene vrednosti, če lahko za vedno ostane samo v brezni brez dna? </p>\n\n<p>Raje se posvetimo drugemu delu te kritike, kot da bi z rokami odvrnili del težave z Monero. Emisija repa. Čeprav je res, da ima svoj namen, nekateri morda vidijo zgolj obstoj repnih emisij kot dokaz, da Monero ne more biti redek in deluje tako kot fiat. Tudi to ne drži. Fiat ima model inflacije, ki temelji na odstotkih, in tudi ta ni vklesan v kamen, temveč podvržen nepreglednemu telesu podkupljivih ljudi. To je v nasprotju z Monero, ki napihuje linearno, kar pomeni, da se sčasoma inflacija giblje proti ničli. Prav tako to pomeni, da je za razliko od fiata inflacijo mogoče enostavno izračunati in z gotovostjo načrtovati.</p>';
+  String get knowledge250Sbsov250Sb0250Sbtext => '<p>Pogosto se govori o tem (in v to popolnoma verjamemo), da je Monero boljše sredstvo za izmenjavo kot kovanci za preglednost, vključno z Bitcoinom. To je zato, ker je Monero zaradi svoje zasebnosti nemogoče izslediti, s čimer se izognemo številnim nevarnostim, ki nastanejo, če je vaš denarni tok na voljo vsem zainteresiranim stranem. Poleg tega zasebnost omogoča zamenljivost, zato so uporabniki lahko prepričani, da je vsak Monero, zamenjan za blago ali storitev, enakovreden kateremu koli drugemu, saj z njim ni povezana preteklost.</p>\n\n<p>Kot pogosta je ta točka pogovora, obstaja še ena, ki se običajno pojavi poleg nje; Čeprav je Monero morda boljše menjalno sredstvo, je Bitcoin boljši hranilec vrednosti. To ni nenavadno slišati, niti v skupnosti Monero. Uporabite Monero kot račun za porabo, Bitcoin pa kot varčevalni račun. Ko so ti uporabniki prisiljeni sklepati, sploh ne pomislijo, da je to nujno zato, ker cena bitcoina raste hitreje kot cena Monera, temveč zato, ker ima bitcoin \'lastnosti\', zaradi katerih je kot digitalno zlato.</p>\n\n<p> Popolnoma se ne strinjamo s to idejo in bi radi v tem članku pojasnili, zakaj. Radikalna transparentnost Bitcoina bolj zmanjšuje njegove lastnosti kot hranilnika vrednosti, kot se ljudje zavedajo. Prvi in najbolj očiten primer tega je predstavljanje drugega splošno sprejetega hranilnika vrednosti, zlata, s preglednostjo, ki jo ima Bitcoin.</p>\n\n<p>Kaj bi se zgodilo z zaupanjem v zlato, če bi bilo mogoče (večkrat nepomembno) povezati količino zlata s posameznikom ali skupino? Ali bi se še vedno uporabljalo tako, kot je, če je ob vsakem prenosu zlata znano, da je prišlo do prenosa, kdo sta bila pošiljatelj in prejemnik ter kakšna količina zlata je bila prenesena? Mislimo, da ne.</p>\n\n<p>Ena od lastnosti zlata, ki je neločljivo povezana s tem, da je predmet resničnega sveta, je, da je naravno zasebno. Lahko mu umetno dodamo zgodovino tako, da prejšnje lastnike označimo za zlato palico, vendar jih je mogoče zlahka odstraniti tako, da palico stopimo in predelamo, kar je možnost, ki ni prisotna v Bitcoinu.</p>\n\n<p>Ta prosojnost v gibanju, čeprav je sama po sebi dovolj uničujoča, ni edina napaka, ki bi jo imelo zlato, če bi bile vse informacije o njegovem gibanju na voljo vsem. Glede na to, da poznamo tok zlata, lahko ugotovimo, kateri subjekti iz resničnega sveta imajo velike zaloge zlata. Nekateri od teh morda niso institucije, ampak posamezniki brez obsežnih varnostnih ustanov. Ni nenavadno, da običajna oseba kupi zlato kot varovanje pred katastrofo, in zdaj vemo, da ima Joe Schmoe na ulici nekje v svoji hiši 10.000 dolarjev vrednih. Ni informacija, za katero bi Joe verjetno želel, da bi svet izvedel.</p>\n\n<p>Dober hranilec vrednosti ne pomeni le, da je cena stabilna ali da bo morda narasla, pomeni, da se imetnik počuti udobno in je prepričan v varnost mesta, kjer se je odločil vložiti svoj denar. Tako z radikalno prosojnostjo postane zlato v gibanju neprijetno, v mirovanju pa potencialno nevarno. Potem je dobro vedeti, da je bil to le miselni poskus in zlato nima teh lastnosti. Vlagatelji v zlato si lahko oddahnejo.</p>\n\n<p>Toda tega ne moremo reči za Bitcoin.</p>\n\n<p>Zasebnost Monera res zagotavlja veliko boljšo varnost tako med gibanjem kot med počitkom za vsakogar, ki ga želi uporabljati kot tekoči ali varčevalni račun.</p>\n\n<p>Zagovorniki bitcoina bodo kljub temu trdili, da je bitcoin bolj varen kot hranilec vrednosti, ker ima za seboj večji hashrate, zato je veliko manj verjetno, da bo veriga prepisana (tj. vaši kovanci v skladišču bodo morda vzeti). , in čeprav je to trenutno res, gre za socialni problem, ki ga je mogoče sčasoma spremeniti, ne pa za temeljni tehnološki problem, za katerega je malo verjetno, da bo kdaj odpravljen.</p>\n\n<p>Drugi argument za Bitcoin je, da ima fiksno ponudbo, medtem ko ima Monero emisijo repa. To ekstrapoliramo tako, da pomeni, da ima Monero neskončno zalogo, zato je enako neprimeren za shranjevanje vrednosti kot fiat. Na prvi pogled je to vsekakor bolj prepričljiv argument od obeh, zato bi se radi tega podrobneje posvetili.</p>\n\n<p>Čeprav ima Monero rep emisij, je to namenjeno zagotavljanju dolgoročne varnosti Monera. Ko bo skovan zadnji bitcoin, ne bo več nagrajevanja blokov, tako da bo trg provizij ostal sam, da bo rudarje spodbudil k zavarovanju verige. Obstajajo že predhodne raziskave, ki kažejo, da to ne bo dovolj in da bo varnost verige dramatično padla, tako da bo veriga ranljiva za 51 % napadov.</p>\n\n<p>Navsezadnje to pomeni, da ste si nabrali zalogo vrednosti, ki je ne morete premakniti zaradi strahu pred napadom. Če se vrnemo k zlatu, ali bi bilo zlato sploh uporabno kot hranilec vrednosti, če bi ga bilo nemogoče ali pretirano nevarno premikati, prodajati ali menjavati? Kaj je dobra nedostopna vrednost? Kaj koristijo nakopičeni milijoni dolarjev shranjene vrednosti, če lahko za vedno ostane samo v brezni brez dna? </p>\n\n<p>Raje se posvetimo drugemu delu te kritike, kot da bi z rokami odvrnili del težave z Monero. Emisija repa. Čeprav je res, da ima svoj namen, nekateri morda vidijo zgolj obstoj repnih emisij kot dokaz, da Monero ne more biti redek in deluje tako kot fiat. Tudi to ne drži. Fiat ima model inflacije, ki temelji na odstotkih, in tudi ta ni vklesan v kamen, temveč podvržen nepreglednemu telesu podkupljivih ljudi. To je v nasprotju z Monero, ki napihuje linearno, kar pomeni, da se sčasoma inflacija giblje proti ničli. Prav tako to pomeni, da je za razliko od fiata inflacijo mogoče enostavno izračunati in z gotovostjo načrtovati.</p>';
 
   @override
-  String get knowledge250Sbsov250Sbdescription => 'XMR je boljše menjalno sredstvo, vendar je BTC boljši hranilec vrednosti? Ne strinjamo se. Transparentnost BTC bolj zmanjšuje njegove lastnosti kot hranilnika vrednosti, kot se ljudje zavedajo.';
+  String get knowledge250Sbsov250Sbdescription => 'XMR je boljše menjalno sredstvo, toda BTC je boljši hranilec vrednosti? Ne strinjamo se. Transparentnost BTC bolj zmanjšuje njegove lastnosti kot hranilnika vrednosti, kot se ljudje zavedajo.';
 
   @override
-  String get knowledge250Sbsov250Sbtitle => 'Zakaj je Monero boljši hranilnik vrednosti kot Bitcoin';
+  String get knowledge250Sbsov250Sbtitle => 'Zakaj je Monero Boljši Hranilnik Vrednosti kot Bitcoin';
 
   @override
-  String get knowledge250Sbstealth250Sb0250Sbtext => '<p>Monero je implementiral tristranski pristop k zasebnosti. Te tehnologije so <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">podpisi zvonjenja </a>, ki skrijejo pravi izhod (pošiljatelja), RingCT, ki skrije zneske, in prikriti naslovi, ki skrijejo prejemnika. Danes bomo razpravljali o zadnji od teh omenjenih tehnologij: prikritih naslovih.</p>\n\n<p>Obstaja veliko razlogov, zakaj posameznik morda želi skriti, komu pošilja. Nikoli ne smemo dovoliti, da nas kdorkoli prepriča, da so vsi primeri tega neprijetna vedenja. Stvari, kot je pošiljanje nepriljubljeni politični stranki, darovanje dobrodelnim organizacijam ali podpora tistim, za katere kultura meni, da so \"preklicane\", so vse primeri, ko bi nekdo morda želel skriti svoje vedenje zapravljanja zaradi strahu pred posledicami, vendar so po naravi popolnoma legitimne.[X840X ]\n\n<p>Na pregledni verigi blokov so naslovi, kamor nekdo pošilja svoje transakcije, vidni vsem. Pomembno je upoštevati, da če se rudarji sami ne strinjajo s tem, kam gre denar, se lahko odločijo, da ga ne bodo rudarili v blok, s čimer učinkovito cenzurirajo to transakcijo na platformi, ki je na videz odporna na cenzuro. Edini način, da ta, resda malo verjetna, cenzura postane nemogoča je, če rudarji ne morejo razlikovati med transakcijami, ker so vsi metapodatki v verigi zakriti na različne načine. Nekaj, po čemer je Monero znan.</p>\n\n<p>Monero rešuje to težavo preglednih naslovov z implementacijo prikritih naslovov, tehnologije, ki jo je za Bitcoin leta 2011 dejansko izdelal uporabnik foruma Bitcoin Talk ByteCoin (povezava z Bytecoinom, ki bi kasneje integriral prikrite naslove, ni znana). Trenutna oblika prikritih naslovov pa ima več izboljšav glede na prvotno idejo. Toda najprej, da bi videli, kako delujejo, se pogovorimo o ključih.</p>\n\n<p>Težko je biti v prostoru kriptovalut in ne slišati o ključih. Besedne zveze, kot je \"varnostno kopirajte svoj zasebni ključ\", so običajne, a ko povprečen Joe sliši besedi \"javni ključ\" in \"zasebni ključ\", se prestraši in misli, da bo preveč tehnično in zmedeno za razumevanje. Ampak ne skrbi. Šli bomo počasi in uporabili veliko primerov.</p>\n\n<p>Dve vrsti ključev, ki se uporabljata v kriptovalutah, sta, kot je bilo pravkar omenjeno, javni in zasebni. Ta dva ključa sta običajno v paru, kar pomeni, da sta določen javni in zasebni ključ povezana drug z drugim. Pravzaprav je javni ključ običajno izpeljan iz zasebnega, kar pomeni, da če poznate zasebni ključ, lahko vaša denarnica naredi nekaj izvrstne matematike in vsakič prikaže pravilen javni ključ.</p>\n\n<p>Zdaj, kot pove že ime, je javni ključ lahko javen brez posledic. Običajno je to del naslova, ki ga delite za prejemanje denarja v svojo denarnico za kriptovalute. Po njegovem soimenjaku je zasebni ključ tisti, ki ga ne bi smeli deliti. To je stvar, ki vam omogoča, da podpišete in porabite transakcijo, tako da, če je ukradena ali deljena, lahko podla tretja oseba porabi vaš denar, običajno zase.</p>\n\n<p>Enostavna analogija s tem bi bila ključavnica in ključ, potreben za odklepanje. Odprto ključavnico lahko svobodno delite in s to ključavnico je res mogoče zakleniti karkoli, toda samo oseba s ključem lahko odpre vse, na kar je ključavnica zaprta. Ključavnico je mogoče kopirati in deliti, ključa pa ne.</p>\n\n<p>Ti ključi so običajno abstrahirani stran od uporabnika, tako da jih nikoli zares ne vidite. V Moneru se sploh ne pojavljajo kot strašljiv alfanumerični niz. V Monero običajen uporabnik pozna zasebni ključ kot svoje seme. Seed (ki bi ga morali zapisati, če ga niste) je pravzaprav le človeku berljiv zasebni ključ. </p>\n\n<p>Vidite? Konec koncev ni tako strašno. Nazaj na prikrite naslove.</p>\n\n<p>Kot že omenjeno, prikriti naslovi prvotno niso bili narejeni za Monero, ampak za Bitcoin. Kot pri večini novonastalih zamisli je imela tudi ta prva ponovitev težave. Naslednji poskus je bil, ko je Nicholas van Saberhagan ustvaril CryptoNote za Bytecoin, predhodnika Monera (<a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">tukaj si oglejte našo zgodovino Monera in Bytecoina</a>), in čeprav je bil nedvomno izboljšan v primerjavi z izvirnikom, je imel celo nekaj subtilnih napak.</p>\n\n<p>Razvijalec je sčasoma ustvaril še zadnjo ponovitev za drugo zdaj nedelujočo kriptovaluto za zasebnost, ki je odpravila izjemne težave z zasebnostjo in varnostjo z idejo. To se je sčasoma prebilo v Monero in se uporablja danes.</p>\n\n<p>Čeprav so bila ta vprašanja glede zasebnosti in varnosti rešena, so prikriti naslovi tehnologiji veriženja blokov dodali drugačno posebnost, ki prej ni obstajala. Potreba po skeniranju. Ker prejemni naslovi niso javno prikazani v verigi blokov, prejemnik nikoli ne ve, ali je katera koli transakcija njegova, zato mora pregledati vse dohodne transakcije s svojim zasebnim ključem, da vidi, ali je njihov.</p>\n\n<p>Pri prosojnih kovancih morajo le preveriti, ali se transakcija pošilja na vaš naslov. Enostavno vprašanje z da ali ne. Toda s prikritimi naslovi je lahko vsaka transakcija tista, ki je poslana vam, zato morate poskusiti vsako odkleniti s svojim zasebnim ključem, da vidite, ali se odpre.</p>\n\n<p>To je dodaten korak, ki ga Bitcoin in njegovi derivati nimajo, in omogoča začetno nastavitev denarnice, skupaj s sinhronizacijo denarnice, ko je niste odprli nekaj časa, veliko dlje kot Bitcoin. Kompromis pa je potreben, da sprostite jamstva za zasebnost, ki jih ima. Opozoriti je treba, da za razliko od najšibkejše točke trifekta zasebnosti, podpisov zvonjenja, prikriti naslovi niso dovzetni za hevristiko. Zanaša se na preizkušeno in pravo kriptografijo eliptične krivulje, na katero se zanaša celoten internet, zato bi njeno zlom pomenil konec računalniške varnosti na splošno, ne le Monera.</p> ';
+  String get knowledge250Sbstealth250Sb0250Sbtext => '<p>Monero je implementiral tristranski pristop k zasebnosti. Te tehnologije so <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">podpisi zvonjenja </a>, ki skrijejo pravi izhod (pošiljatelja), RingCT, ki skrije zneske, in prikriti naslovi, ki skrijejo prejemnika. Danes bomo razpravljali o zadnji od teh omenjenih tehnologij: prikritih naslovih.</p>\n\n<p>Obstaja veliko razlogov, zakaj posameznik morda želi skriti, komu pošilja. Nikoli ne smemo dovoliti, da nas kdorkoli prepriča, da so vsi primeri tega neprijetna vedenja. Stvari, kot je pošiljanje nepriljubljeni politični stranki, darovanje dobrodelnim organizacijam ali podpora tistim, za katere kultura meni, da so \"preklicane\", so vse primeri, ko bi nekdo morda želel skriti svoje vedenje zapravljanja zaradi strahu pred posledicami, vendar so po naravi popolnoma legitimne.</p>\n\n<p>Na pregledni verigi blokov so naslovi, kamor nekdo pošilja svoje transakcije, vidni vsem. Pomembno je upoštevati, da če se rudarji sami ne strinjajo s tem, kam gre denar, se lahko odločijo, da ga ne bodo rudarili v blok, s čimer učinkovito cenzurirajo to transakcijo na platformi, ki je na videz odporna na cenzuro. Edini način, da ta, resda malo verjetna, cenzura postane nemogoča je, če rudarji ne morejo razlikovati med transakcijami, ker so vsi metapodatki v verigi zakriti na različne načine. Nekaj, po čemer je Monero znan.</p>\n\n<p>Monero rešuje to težavo preglednih naslovov z implementacijo prikritih naslovov, tehnologije, ki jo je za Bitcoin leta 2011 dejansko izdelal uporabnik foruma Bitcoin Talk ByteCoin (povezava z Bytecoinom, ki bi kasneje integriral prikrite naslove, ni znana). Trenutna oblika prikritih naslovov pa ima več izboljšav glede na prvotno idejo. Toda najprej, da bi videli, kako delujejo, se pogovorimo o ključih.</p>\n\n<p>Težko je biti v prostoru kriptovalut in ne slišati o ključih. Besedne zveze, kot je \"varnostno kopirajte svoj zasebni ključ\", so običajne, a ko povprečen Joe sliši besedi \"javni ključ\" in \"zasebni ključ\", se prestraši in misli, da bo preveč tehnično in zmedeno za razumevanje. Ampak ne skrbi. Šli bomo počasi in uporabili veliko primerov.</p>\n\n<p>Dve vrsti ključev, ki se uporabljata v kriptovalutah, sta, kot je bilo pravkar omenjeno, javni in zasebni. Ta dva ključa sta običajno v paru, kar pomeni, da sta določen javni in zasebni ključ povezana drug z drugim. Pravzaprav je javni ključ običajno izpeljan iz zasebnega, kar pomeni, da če poznate zasebni ključ, lahko vaša denarnica naredi nekaj izvrstne matematike in vsakič prikaže pravilen javni ključ.</p>\n\n<p>Zdaj, kot pove že ime, je javni ključ lahko javen brez posledic. Običajno je to del naslova, ki ga delite za prejemanje denarja v svojo denarnico za kriptovalute. Po njegovem soimenjaku je zasebni ključ tisti, ki ga ne bi smeli deliti. To je stvar, ki vam omogoča, da podpišete in porabite transakcijo, tako da, če je ukradena ali deljena, lahko podla tretja oseba porabi vaš denar, običajno zase.</p>\n\n<p>Enostavna analogija s tem bi bila ključavnica in ključ, potreben za odklepanje. Odprto ključavnico lahko svobodno delite in s to ključavnico je res mogoče zakleniti karkoli, toda samo oseba s ključem lahko odpre vse, na kar je ključavnica zaprta. Ključavnico je mogoče kopirati in deliti, ključa pa ne.</p>\n\n<p>Ti ključi so običajno abstrahirani stran od uporabnika, tako da jih nikoli zares ne vidite. V Moneru se sploh ne pojavljajo kot strašljiv alfanumerični niz. V Monero običajen uporabnik pozna zasebni ključ kot svoje seme. Seed (ki bi ga morali zapisati, če ga niste) je pravzaprav le človeku berljiv zasebni ključ. </p>\n\n<p>Vidite? Konec koncev ni tako strašno. Nazaj na prikrite naslove.</p>\n\n<p>Kot že omenjeno, prikriti naslovi prvotno niso bili narejeni za Monero, ampak za Bitcoin. Kot pri večini novonastalih zamisli je imela tudi ta prva ponovitev težave. Naslednji poskus je bil, ko je Nicholas van Saberhagan ustvaril CryptoNote za Bytecoin, predhodnika Monera (<a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">tukaj si oglejte našo zgodovino Monera in Bytecoina</a>), in čeprav je bil nedvomno izboljšan v primerjavi z izvirnikom, je imel celo nekaj subtilnih napak.</p>\n\n<p>Razvijalec je sčasoma ustvaril še zadnjo ponovitev za drugo zdaj nedelujočo kriptovaluto za zasebnost, ki je odpravila izjemne težave z zasebnostjo in varnostjo z idejo. To se je sčasoma prebilo v Monero in se uporablja danes.</p>\n\n<p>Čeprav so bila ta vprašanja glede zasebnosti in varnosti rešena, so prikriti naslovi tehnologiji veriženja blokov dodali drugačno posebnost, ki prej ni obstajala. Potreba po skeniranju. Ker prejemni naslovi niso javno prikazani v verigi blokov, prejemnik nikoli ne ve, ali je katera koli transakcija njegova, zato mora pregledati vse dohodne transakcije s svojim zasebnim ključem, da vidi, ali je njihov.</p>\n\n<p>Pri prosojnih kovancih morajo le preveriti, ali se transakcija pošilja na vaš naslov. Enostavno vprašanje z da ali ne. Toda s prikritimi naslovi je lahko vsaka transakcija tista, ki je poslana vam, zato morate poskusiti vsako odkleniti s svojim zasebnim ključem, da vidite, ali se odpre.</p>\n\n<p>To je dodaten korak, ki ga Bitcoin in njegovi derivati nimajo, in omogoča začetno nastavitev denarnice, skupaj s sinhronizacijo denarnice, ko je niste odprli nekaj časa, veliko dlje kot Bitcoin. Kompromis pa je potreben, da sprostite jamstva za zasebnost, ki jih ima. Opozoriti je treba, da za razliko od najšibkejše točke trifekta zasebnosti, podpisov zvonjenja, prikriti naslovi niso dovzetni za hevristiko. Zanaša se na preizkušeno in pravo kriptografijo eliptične krivulje, na katero se zanaša celoten internet, zato bi njeno zlom pomenil konec računalniške varnosti na splošno, ne le Monera.</p> ';
 
   @override
-  String get knowledge250Sbstealth250Sbdescription => 'Na pregledni verigi blokov so naslovi, kamor nekdo pošilja svoje transakcije, vidni vsem. Monero to težavo rešuje z implementacijo prikritih naslovov.';
+  String get knowledge250Sbstealth250Sbdescription => 'Na transparentnem blockchainu so naslovi, kamor nekdo pošilja svoje transakcije, vidni vsem. Monero to težavo rešuje z implementacijo prikritih naslovov.';
 
   @override
-  String get knowledge250Sbstealth250Sbtitle => 'Kako naslovi Monero Stealth ščitijo vašo identiteto';
+  String get knowledge250Sbstealth250Sbtitle => 'Kako Naslovi Monero Stealth Ščitijo Vašo Identiteto';
 
   @override
-  String get knowledge250Sbsubaddresses250Sb0250Sbtext => '<p>Monero je vedno našel inovativne načine za reševanje težkih težav z zasebnostjo. Pogosto te inovacije vodijo do drugih inovacij, včasih pa se lahko te nastale tehnologije celo uporabijo za primere uporabe, ki prej niso bili upoštevani. Nikjer to ni bolj ponazorjeno kot v primeru tehnologije podnaslova Monero.</p>\n\n<p>Razmislite o hipotetičnem problemu zasebnosti, pri katerem lahko uporaba enega naslova na več platformah od navidezno nepovezanih ljudstev vodi do povezovanja in deanonimizacije omenjenih ljudstev. Preprosto povedano, če bi bili oseba z imenom Billy Joe Bob in bi prodajali jabolka za Bitcoin, bi morda objavili svoj naslov Bitcoin na javnem mestu, da bi vam stranke plačale. Recimo, da se naslov začne z alfanumeričnim nizom 7XybV3 ... Toda če odmislimo očitno tveganje glede zasebnosti, da bi kdorkoli lahko preveril vaše stanje v bitcoinih in videl, koliko ste prodali, je tu še drugo tveganje glede zasebnosti, o katerem se pogosto ne govori. Recimo, da ste bili tudi podzemni heker z imenom l33tz0r. Opravljate žvižgaško delo in nič hudega slutečemu prebivalstvu pripovedujete o korupciji vlade, zato je nujno, da ohranite svojo identiteto skrivnost. Za svoje delo sprejemate donacije v bitcoinih in objavite naslov na javnem forumu. To je isti naslov, na katerem sprejemate denar od svojih strank Apple. 7XybV3... eden </p>\n\n<p>Preprost, a uničujoč deanonimizacijski napad bi bil uporaba internetnega iskalnika za iskanje vašega naslova Bitcoin. Vnos naslova 7XybV3... v motor prinese dva različna rezultata. Posel z jabolki in l33tz0r. To je dovolj za povezavo obeh identitet in deanonimizacijo l33tz0r, s potencialno grozljivimi posledicami s strani oblasti </p>\n\n<p>Pomembno je omeniti, da je ta napad možen TUDI z Monero. Čeprav Monero skriva večino podatkov v verigi, ta napad ne uporablja nobenih. Uporablja samo naslov, ki ga je treba deliti, če želite prejeti plačilo. Javno v primeru anonimnih donacij. To je eden od možnih načinov, na katerega lahko uporabniki Monera nehote prizadenejo svojo zasebnost, in je tudi primer, kako, čeprav je Monero na vrhunskem nivoju glede ohranjanja zasebnosti, ni neprebojen.</p>\n\n<p>Običajen način za reševanje te težave je bilo posedovanje več denarnic. Z različnimi naslovi, objavljenimi za vsako identiteto (ali primer uporabe), jih ni mogoče povezati. Toda ta zasebnost velja samo, če jih uporabnik nikoli ne pomeša. Nenamerna objava napačnega naslova bi imela enake učinke povezave. Prav tako mora biti seme vsakega naslova varno, s čimer se poveča potrebno delo z informacijami z vsako novo narejeno denarnico.</p>\n\n<p>Monerova rešitev so bili podnaslovi. Možnost ustvarjanja absolutno velikega števila naslovov pod glavnim naslovom, ki ga uporabljajo kot nekakšno seme. Vsak ustvarjen podnaslov lahko sprejme Monero in vse gre v isto denarnico. Z uporabo te metode je število identitet, ki jih je mogoče upravljati pod enim naslovom, ogromno, medtem ko je delo infosec minimalno. Ti naslovi prav tako niso matematično povezani, tako da jih bo zunanji opazovalec težko povezal, razen če uporabnik vzklikne njihovo povezavo s svetom.</p>\n\n<p>Toda iz podnaslovov se je pojavil še en zanimiv primer uporabe; kot nadomestna možnost splošno osovraženih ID-jev plačil.</p>\n\n<p> ID-ji plačil so bili način, s katerim so trgovci prepoznali, katera stranka je poslala katero plačilo. Ker so podatki o Monero v verigi zakriti, prejemnik transakcije ne more videti, kateri naslov ga je poslal. To pomeni, da če obstajajo predmeti s podobnimi cenami in več naročil, postane nemogoče ugotoviti, kdo je kaj poslal. ID-ji plačila so edinstven, naključen niz, ki ga ustvari trgovec in da stranki. Stranka to doda kot ločeno polje ob pošiljanju transakcije. Ta naključni niz je nameščen v verigi blokov kot del transakcije in na ta način lahko trgovec prepozna in razvrsti dohodne transakcije.</p>\n\n<p>Ta metoda je imela več napak. Prvič, zmanjšuje enotnost podatkov v verigi. Dodatni, edinstveni metapodatki lahko nekatere transakcije ločijo od množice in s tem omogočijo hevristično analizo. To še posebej velja, če ti metapodatki niso uveljavljeni kot obvezni za vse. Če bi to postalo obvezno za vse, bi verigi blokov dodali nepotreben prostor, kar se ni nadaljevalo. Tudi, če bi bil ID plačila kdaj ponovno uporabljen iz kakršnega koli razloga, bi bilo trivialno povezati dve transakciji kot povezani. To se je običajno zgodilo pri depozitih na borzi in vsakdo bi zlahka povezal transakcije kot depozit na borzi in od enega določenega posameznika.</p>\n\n<p>Drugič, z vidika uporabniške izkušnje ID-ji plačila ustvarijo drugi korak, ki ga uporabniki kriptovalut, ki prihajajo iz drugih kovancev, niso vajeni, in če so pozabljeni, povzroči ogromen glavobol trgovcu, ki mora identificirati te transakcije z drugimi sredstvi . To je bilo običajno storjeno z neposrednim pogovorom z vsako stranko, ki je pozabila vnesti ID plačila, in potrditvijo drugih identifikacijskih informacij, ki so jih lahko vedele le te, kot je kombinacija zneska, datuma pošiljanja in ID-ja transakcije.</p>\n\n<p>Ta dodatni korak so številni zamudili in prišlo je do točke, ko so nekatere borze strankam začele zaračunavati denar, če je bilo treba njihov denar ročno pridobiti, ker so pozabili ID plačila. Drugi so stisnili zobe in pojedli dodatne stroške podpore, a nihče ni bil vesel tega.</p>\n\n<p>Za to je obstajala ena rešitev, integrirani naslovi, ki so združili naslov in ID plačila v en niz, tako da tega ni bilo mogoče pozabiti, vendar je bilo sprejetje dokaj šibko, kljub koristim, ki bi jih trgovci prejeli od njegove vključitve. </p>\n\n<p>Po zanimivem razvoju dogodkov so podnaslovi rešili dan. Zmožnost ustvarjanja velikih količin podnaslovov na glavni naslov in ugotavljanja, katere transakcije so prišle na katere podnaslove, je trgovcem omogočila, da so se znebili plačilnih ID-jev na eleganten način, hkrati pa sprejeli naslednjo generacijo tehnologije Monero. Od takrat je večina borz in trgovskih orodij prešla na podnaslove kot primarni način identifikacije transakcij.</p>\n\n<p>Kar se je začelo kot rešitev za problem zasebnosti, se je spremenilo v nekaj veliko več, kar je rešilo veliko težavo UX za trgovce in stranke. Inovacija rodi več inovacij, ki se pogosto lahko spremenijo v nepričakovane zmage za vse. Monero je to videl vedno znova in se zelo trudi inovirati, kar je mogoče na blockchainu. Kdo ve, katere stvari lahko še odklenemo skupaj? </p>';
+  String get knowledge250Sbsubaddresses250Sb0250Sbtext => '<p>Monero je vedno našel inovativne načine za reševanje težavnih težav z zasebnostjo. Te inovacije pogosto vodijo do drugih inovacij, včasih pa se te tehnologije lahko uporabijo tudi za primere uporabe, ki jih prej nismo upoštevali. Nikjer to ni tako nazorno prikazano kot v primeru tehnologije podnaslova Monero.</p>\n\n<p>Pomislite na hipotetični problem zasebnosti, pri katerem lahko uporaba enega naslova na več platformah s strani navidezno nepovezanih ljudi privede do povezovanja in deanonimizacije omenjenih ljudi. Preprosto povedano, če ste oseba z imenom Billy Joe Bob in prodajate jabolka za bitcoine, lahko svoj naslov Bitcoin objavite na javnem mestu, da vam stranke lahko plačajo. Recimo, da se naslov začne z alfanumeričnim nizom 7XybV3... Če pustimo ob strani očitno tveganje za zasebnost, da lahko kdor koli preveri vaše stanje v Bitcoinu in vidi, koliko ste prodali, obstaja še drugo tveganje za zasebnost, o katerem se ne govori pogosto. Recimo, da ste tudi podzemni heker z imenom l33tz0r. Opravljate delo žvižgača, ki nič hudega slutečemu prebivalstvu pripoveduje o vladni korupciji, zato je nujno, da ohranite svojo identiteto v tajnosti. Za svoje delo sprejemate donacije v bitcoinih, naslov pa objavite na javnem forumu. To je isti naslov, na katerem sprejemate denar od svojih kupcev jabolk. 7XybV3... eden. </p>\n\n<p>Preprost, a uničujoč napad za deanonimizacijo bi bil, če bi z internetnim iskalnikom poiskali vaš naslov Bitcoin. Če v iskalnik vpišete naslov 7XybV3..., dobite dva različna rezultata. Podjetje Apple in l33tz0r. To je dovolj za povezavo obeh identitet in deanonimizacijo l33tz0r, kar bi lahko imelo strašljive posledice s strani pristojnih. </p>\n\n<p>Važno je omeniti, da je ta napad mogoč tudi z valuto Monero. Čeprav Monero skriva večino podatkov na verigi, ta napad ne uporablja nobenih. Uporablja le naslov, ki ga je treba deliti, da bi prejeli plačilo. V primeru anonimnih donacij javno. To je eden od možnih načinov, kako lahko uporabniki Monera nevede škodujejo svoji zasebnosti, in je tudi primer, kako Monero kljub temu, da je vrhunski glede ohranjanja zasebnosti, ni neprebojen.</p>\n\n<p>Običajni način za izogibanje tej težavi je bil lastništvo več denarnic. Ker so za vsako identiteto (ali primer uporabe) objavljeni različni naslovi, jih ni mogoče povezati. Vendar ta zasebnost velja le, če jih uporabnik nikoli ne pomeša. Naključna objava napačnega naslova bi imela enake učinke povezovanja. Prav tako je treba ohraniti varno seme vsakega naslova, s čimer se poveča delo na področju informacijske varnosti, potrebno za vsako novo izdelano denarnico.</p>\n\n<p>Monerova rešitev so bili podnaslovi. Možnost ustvarjanja ogromnega števila naslovov pod glavnim naslovom, ki se uporablja kot nekakšno seme. Vsak ustvarjen podnaslov lahko sprejema Monero, vsi pa gredo v isto denarnico. S to metodo je število identitet, ki jih je mogoče upravljati pod enim naslovom, ogromno, hkrati pa je delo z informacijsko varnostjo minimalno. Teh naslovov tudi ni mogoče matematično povezati, zato jih bo zunanji opazovalec zelo težko povezal, če uporabnik ne bo zakričal svoje povezave v svet.</p>\n\n<p>Toda iz podnaslovov se je pojavil še en zanimiv primer uporabe; kot nadomestna možnost splošno osovraženih ID-jev plačil.</p>\n\n<p> ID plačil so bili način, s katerim so trgovci ugotavljali, katera stranka je poslala katero plačilo. Ker so informacije Monero v verigi zakrite, prejemnik transakcije ne more videti, kateri naslov jo je poslal. To pomeni, da je pri podobnih cenah izdelkov in več naročilih nemogoče ugotoviti, kdo je kaj poslal. ID-ji plačil so edinstven, naključen niz, ki ga ustvari trgovec in ga posreduje stranki. Stranka ga doda kot ločeno polje pri pošiljanju transakcije. Ta naključni niz se kot del transakcije vnese v verigo blokov in na ta način lahko trgovec prepozna in razvrsti prejete transakcije.</p>\n\n<p>Ta metoda je bila pomanjkljiva na več načinov. Prvič, zmanjšuje enotnost podatkov v verigi. Zaradi dodatnih, edinstvenih metapodatkov lahko nekatere transakcije izstopajo iz množice, kar omogoča hevristično analizo. To še posebej velja, kadar ti metapodatki niso obvezni za vse. Če bi bila ta obveznost obvezna za vse, bi to v verigi blokov po nepotrebnem povečalo prostor, zato tega nismo storili. Prav tako bi bilo v primeru, da bi se plačilni ID iz kakršnega koli razloga ponovno uporabil, trivialno povezati dve transakciji kot povezani. To se je običajno dogajalo pri depozitih na borzi in vsakdo bi lahko transakcije preprosto povezal kot depozit na borzi in kot depozit enega posameznika.</p>\n\n<p>Drugo, z vidika uporabniškega vmesnika ID plačila ustvarjajo drugi korak, ki ga uporabniki kriptovalut, ki prihajajo iz drugih kovancev, niso vajeni, in če se pozabijo, to povzroči ogromen glavobol za trgovca, ki mora te transakcije identificirati z drugimi sredstvi. To je bilo običajno izvedeno tako, da se je neposredno pogovoril z vsako stranko, ki je pozabila vnesti ID plačila, in potrdil druge identifikacijske podatke, ki jih je lahko poznal samo on, kot je kombinacija zneska, datuma pošiljanja in ID transakcije.</p>\n\n<p>Ta dodatni korak so številni zamudili in prišlo je do točke, ko so nekatere borze strankam začele zaračunavati denar, če je bilo treba njihov denar ročno pridobiti, ker so pozabili ID plačila. Drugi so stisnili zobe in pojedli dodatne stroške podpore, a nihče ni bil vesel tega.</p>\n\n<p>Za to je obstajala ena rešitev, integrirani naslovi, ki so združili naslov in ID plačila v en niz, tako da tega ni bilo mogoče pozabiti, vendar je bilo sprejetje dokaj šibko, kljub koristim, ki bi jih trgovci prejeli od njegove vključitve. </p>\n\n<p>Po zanimivem razvoju dogodkov so podnaslovi rešili dan. Zmožnost ustvarjanja velikih količin podnaslovov na glavni naslov in ugotavljanja, katere transakcije so prišle na katere podnaslove, je trgovcem omogočila, da so se znebili plačilnih ID-jev na eleganten način, hkrati pa sprejeli naslednjo generacijo tehnologije Monero. Od takrat je večina borz in trgovskih orodij prešla na podnaslove kot primarni način identifikacije transakcij.</p>\n\n<p>Kar se je začelo kot rešitev za problem zasebnosti, se je spremenilo v nekaj veliko več, kar je rešilo veliko težavo UX za trgovce in stranke. Inovacija rodi več inovacij, ki se pogosto lahko spremenijo v nepričakovane zmage za vse. Monero je to videl vedno znova in se zelo trudi inovirati, kar je mogoče na blockchainu. Kdo ve, katere stvari lahko še odklenemo skupaj? </p>';
 
   @override
-  String get knowledge250Sbsubaddresses250Sbdescription => 'Monero je vedno našel inovativne načine za reševanje težkih težav z zasebnostjo. Nikjer to ni bolj ponazorjeno kot v primeru tehnologije podnaslova Monero.';
+  String get knowledge250Sbsubaddresses250Sbdescription => 'Monero je vedno našel inovativne načine za reševanje težkih težav z zasebnostjo. Nikjer to ni bolj ponazorjeno kot v primeru tehnologije Monero podnaslovov.';
 
   @override
-  String get knowledge250Sbsubaddresses250Sbtitle => 'Kako podnaslovi Monero preprečujejo povezovanje identitet';
+  String get knowledge250Sbsubaddresses250Sbtitle => 'Kako Monero Podnaslovi Preprečujejo Povezovanje Identitet';
 
   @override
-  String get knowledge250Sbtitle => 'znanje';
+  String get knowledge250Sbtitle => 'Znanje';
 
   @override
-  String get knowledge250Sbtrust250Sb0250Sbtext => '<p>Le malo idej v prostoru kriptovalut je deležnih toliko pozornosti in razprav kot koncept zaupanja in ne brez razloga. Navsezadnje je celoten namen verige blokov odpraviti zaupanje v tretje osebe.</p>\n\n<p>Za tiste, ki ne razumejo popolnoma ideje, je tu lahek primer. V tradicionalnem finančnem sistemu se tretje osebe običajno uporabljajo za različne naloge. Banke se uporabljajo za zavarovanje denarja v vašem imenu pred krajo, arbitri. Depozitni depoziti se uporabljajo, da lahko poslovni posli potekajo med dvema stranema, ki si ne zaupata. Podjetja, ki izdajajo kreditne kartice, izplačujejo denar za blago in storitve v vašem imenu, ob prevzemu tveganja, da jim morda ne boste vrnili.</p>\n\n<p>Vsak od teh primerkov zahteva zaupanje. Za banke in agente za depozite zaupate, da sami ne bodo pobegnili z vašim denarjem, za podjetja s kreditnimi karticami pa verjamete, da ne bodo izplačala denarja v vašem imenu brez vašega soglasja, kar je zelo možno. Delamo vse, kar lahko, da zagotovimo, da do teh stvari ne pride. Sodelujemo samo z zaupanja vrednimi podjetji in posamezniki ter z zakonodajo naredimo zgornje scenarije nezakonite in poskušamo zagotoviti posledice za storilce, vendar to vedno ne prepreči, da bi se vseeno zgodili.</p>\n\n<p>Poleg tega te storitve niso zastonj. Deponirani agenti in banke lahko zaračunavajo svoje storitve, kreditne kartice pa zaračunavajo obresti na posojen denar.</p>\n\n<p>Blockchain je bil ustvarjen za odpravo teh posrednikov ter zaupanja in provizij, ki prihajajo z njimi. Z močjo soglasja lahko uporabniki sami uveljavijo stanje glavne knjige, ne da bi komu zaupali, da jim bo povedal, koliko denarja imajo, in brez zaupanja vrednih tretjih oseb, ki bi lahko pobegnile z vašimi sredstvi.</p>\n\n<p> Toliko poudarka je na tej nezaupljivosti, da je vsaka sprememba ali tehnološki dodatek, ki dodaja element zaupanja nazaj v verigo blokov, sprejeta z velikim skepticizmom in kritiko, nekateri projekti pa vse takšne ideje popolnoma zavračajo. Zanimivo je torej, da enaka pozornost ni namenjena zasebnosti.</p>\n\n<p>Ponovno gledamo na preostali svet in vidimo, da je naša zasebnost prepogosto prepuščena na milost in nemilost tretjim osebam, ki jim zaupajo. Ko navedemo svoje fizične naslove za artikel, za katerega želimo, da nam ga pošljejo, verjamemo, da zadevna trgovina teh podatkov ne bo uporabila za zlobne namene ali jih prodala drugim. Enako velja za naše osebne misli ali fotografije, ki jih objavljamo na družbenih medijih. Velja celo za naše finance, kot več vdorov v računovodski panogi ali finančnih aplikacij, ki na interni javni tabli objavijo, za kaj ljudje trošijo denar (tj. Venmo). </p>\n\n<p>Monero vidi to zavezanost nezaupljivosti v verigi blokov in uporablja podoben standard za naš pristop k zasebnosti. Naša zasebnost ne bi smela biti odvisna od tretje osebe, ki obljubi, da jo bo varovala, tako kot naše finance ne bi smele biti odvisne od drugih, ki nam obljubijo, da ne bodo pobegnili z njimi. V ta namen Monero zagotavlja, da so vse implementirane tehnologije zasebnosti nezaupljive.</p>\n\n<p>Naokoli krožijo še druge tehnologije za zasebnost. Zaupanja vredni in resda niso brez svojih močnih točk. Zcash uporablja določene vrste sistemov za dokazovanje kot gradnike v svojem zaupnem protokolu transakcij, ki imajo zelo močna jamstva glede zasebnosti, z velikimi nizi anonimnosti in so lahko, če se pravilno uporabljajo, močan način za zagotavljanje vaše zasebnosti. Pomanjkljivost tega pristopa pa je, da je kot del začetne nastavitve te tehnologije potreben nabor parametrov, ki ga je treba izbrati in nato pozabiti. Če kdo obdrži ta parameter, bi lahko ustvaril lažne dokaze SNARK, s čimer bi dejansko natisnil denar, ne da bi kdo pomislil, ker je skrit. Toda ali to vpliva na zasebnost? Nekateri teoretizirajo da, medtem ko drugi ne, in na koncu je treba narediti več raziskav, da bi prišli do dokončnega odgovora.</p>\n\n<p>Ne glede na to se ta postopek zmanjševanja zaupanja sliši podobno kot scenariji, o katerih smo razpravljali na začetku tega članka. Tradicionalni svet. Tisti, od katerega se poskušamo oddaljiti. Blockchain sam po sebi ne zmanjšuje zaupanja v tretje osebe, temveč ga odpravlja. Skupnost Monero meni, da bi moral isti standard izločanja namesto zmanjševanja veljati tudi za naše tehnologije zasebnosti. Samo zato, ker ni dokončno dokazano, da zaupanja vredne nastavitve lahko ali ne morejo ogroziti zasebnosti, ne pomeni, da bi morali biti ohlapni glede dovolitve zaupanja nazaj v sistem v zvezi s tem.</p>\n\n<p> Seveda je vsak napredek v prostoru zasebnosti izboljšava in pogosto zaupanja vredna zasebnost je le odskočna deska do nezaupljive zasebnosti in v teh primerih smo veseli, da se prostor premika naprej. In vendar hkrati skupnost Monero preprosto ne more, mirne vesti, uvesti tehnologije zasebnosti v našo verigo blokov, ki bi oslabila sam namen naše revolucije.</p>\n\n<p>Pogosto dobimo vprašanje, kdaj bo Monero uvedel to ali ono novo tehnologijo zasebnosti. Ta vprašanja pogosto prihajajo od neobveščenih, ki ne razumejo kompromisov in zgolj ponavljajo nove modne besede dneva o zasebnosti. Odgovor na ta vprašanja je preprost. Monero nenehno išče, pregleduje in raziskuje nove protokole zasebnosti, ki bi okrepili jamstva zasebnosti v verigi Monero, vendar se nismo pripravljeni poglobiti v svet zaupanja vredne zasebnosti, da bi dosegli ta cilj, tudi če so jamstva teoretično močnejša.[ X5461X]\n\n<p>Nekateri pravijo, da se bo ta pristop izkazal za zastarelega, vendar menimo, da so takšni ljudje izgubili zgodbo o tem, zakaj smo tukaj. </p>';
+  String get knowledge250Sbtrust250Sb0250Sbtext => '<p>Le malo idej na področju kriptovalut je deležnih tolikšne pozornosti in razprav kot koncept zaupanja, in to ne brez razloga. Navsezadnje je bistvo verige blokov odpraviti zaupanje v tretje osebe.</p>\n\n<p>Tistim, ki te ideje ne razumejo v celoti, ponujamo lahkoten uvodnik. V tradicionalnem finančnem sistemu se tretje osebe običajno uporabljajo za različne naloge. Banke se uporabljajo za zavarovanje denarja v vašem imenu pred krajo, arbitri. Escrows se uporabljajo, da lahko poslovanje poteka med dvema strankama, ki si ne zaupata. Družbe, ki izdajajo kreditne kartice, v vašem imenu izplačujejo denar za blago in storitve ter prevzemajo tveganje, da jih morda ne boste vrnili.</p>\n\n<p>Vsak od teh primerov zahteva zaupanje. Pri bankah in skrbniških agencijah zaupate, da same ne bodo pobegnile z vašim denarjem, pri podjetjih za izdajo kreditnih kartic pa zaupate, da v vašem imenu ne bodo izplačala denarja brez vaše privolitve, kar je vse zelo mogoče. Storimo vse, kar je v naši moči, da se to ne zgodi. Sodelujemo samo z zaupanja vrednimi podjetji in posamezniki, z zakonodajo pa poskrbimo, da so zgornji scenariji nezakoniti, in skušamo zagotoviti posledice za kršitelje, vendar to vedno ne prepreči, da bi se vseeno zgodili.</p>\n\n<p>Tudi te storitve niso brezplačne. Skrbniki in banke lahko svoje storitve zaračunajo, kreditne kartice pa za posojeni denar zaračunajo obresti.</p>\n\n<p>Blockchain je bil ustvarjen za odpravo teh posrednikov ter zaupanja in pristojbin, ki so povezane z njimi. Z močjo konsenza lahko uporabniki sami uveljavljajo stanje glavne knjige, ne da bi komu zaupali, da jim pove, koliko denarja imajo, in brez zaupanja tretjih oseb, ki bi potencialno pobegnile z vašimi sredstvi.</p>\n\n<p>Tako velik poudarek je na tej nezaupljivosti, da je vsaka sprememba ali tehnološki dodatek, ki v verigo blokov ponovno doda element zaupanja, sprejeta z veliko skepso in kritiko, nekateri projekti pa vse takšne zamisli naravnost zavračajo. Zato je zanimivo, da se enako pozornost ne posveča zasebnosti.</p>\n\n<p>Znova pogledamo preostali svet in vidimo, da je naša zasebnost prepogosto prepuščena na milost in nemilost \"zaupanja vrednim\" tretjim osebam. Ko navedemo svoj fizični naslov za izdelek, ki ga želimo poslati, zaupamo, da zadevna trgovina te informacije ne bo uporabila v nečedne namene ali jo prodala drugim. Enako velja za naše osebne misli ali fotografije, ki jih objavimo v družabnih medijih. To velja celo za naše finance, saj je več vdorov znotraj računovodske industrije ali finančnih aplikacij, ki na internem javnem oglasnem mestu objavljajo, za kaj ljudje porabljajo denar (npr. Venmo).</p>\n\n<p>Monero vidi to zavezanost k brezhibnosti veriženja blokov in uporablja podobne standarde za pristop k zasebnosti. Naša zasebnost ne bi smela biti odvisna od obljube tretje osebe, da bo poskrbela za njeno varnost, tako kot ne bi smele biti naše finance odvisne od obljube drugih, da nam ne bodo pobegnili z njimi. Zato Monero zagotavlja, da so vse uporabljene tehnologije za varovanje zasebnosti brez zaupanja.</p>\n\n<p>Vsenaokoli obstajajo tudi druge tehnologije za zaščito zasebnosti. Zaupanja vredne in, priznajmo, niso brez svojih prednosti. Zcash v svojem protokolu zaupnih transakcij kot gradnike uporablja določene vrste sistemov dokazovanja, ki imajo zelo močna jamstva zasebnosti z velikimi nabori anonimnosti in bi bili ob pravilni uporabi lahko močan način za zagotavljanje zasebnosti. Vendar pa je pomanjkljivost tega pristopa ta, da je kot del začetne nastavitve te tehnologije potreben nabor parametrov, ki ga je treba izbrati in pozneje pozabiti. Če bi kdo ta parameter obdržal, bi lahko ustvaril lažne dokaze SNARK in tako dejansko tiskal denar, ne da bi bil kdo pametnejši, ker je skrit. Toda ali to vpliva na zasebnost? Po nekaterih teorijah da, po drugih ne, na koncu pa je treba opraviti še več raziskav, da bi prišli do dokončnega odgovora.</p>\n\n<p>Ne glede na to se ta proces zmanjševanja zaupanja sliši prav tako kot scenariji, ki smo jih obravnavali na začetku tega članka. Tradicionalni svet. Tistega, od katerega se poskušamo oddaljiti. Sam sistem veriženja blokov ne zmanjšuje zaupanja v tretje osebe, temveč ga odpravlja. Skupnost Monero meni, da je treba enak standard odpravljanja in ne zmanjševanja uporabiti tudi za naše tehnologije za varovanje zasebnosti. Samo zato, ker ni dokončno dokazano, da lahko zaupanja vredne nastavitve ogrozijo zasebnost ali ne, še ne pomeni, da moramo biti popustljivi pri dovoljevanju zaupanja nazaj v sistem v tem pogledu.</p>\n\n<p>Samoumevno je vsak napredek na področju zasebnosti izboljšanje in pogosto je zaupanja vredna zasebnost le odskočna deska za nezaupanja vredno zasebnost, v teh primerih pa smo veseli, da se to področje premika naprej. Hkrati pa skupnost Monero preprosto ne more z mirno vestjo na našem verižniku blokov uvesti tehnologije zasebnosti, ki bi oslabila sam namen naše revolucije.</p>\n\n<p>Pogosto dobimo vprašanje, kdaj bo Monero uvedel to ali ono novo tehnologijo zasebnosti. Ta vprašanja pogosto prihajajo od nepoučenih ljudi, ki ne razumejo kompromisov in zgolj papagajsko ponavljajo nove modne besede o zasebnosti. Odgovor na ta vprašanja je preprost. Monero nenehno preučuje, pregleduje in raziskuje nove protokole zasebnosti, ki bi okrepili jamstva zasebnosti v verigi Monero, vendar se za dosego tega cilja ne želimo spustiti v svet zaupanja vredne zasebnosti, čeprav so jamstva teoretično močnejša.</p>\n\n<p>Nekateri pravijo, da se bo ta pristop izkazal za zastarelega, vendar menimo, da so takšni ljudje izgubili zgodbo o tem, zakaj smo sploh tukaj. </p>';
 
   @override
   String get knowledge250Sbtrust250Sbdescription => 'Koncept zaupanja je eden najbolj obravnavanih v prostoru kriptovalut. Konec koncev je bistvo blockchaina odpraviti zaupanje v tretje osebe.';
 
   @override
-  String get knowledge250Sbtrust250Sbtitle => 'Zakaj Monero uporablja nezaupljivo nastavitev za razliko od Zcash';
+  String get knowledge250Sbtrust250Sbtitle => 'Zakaj Monero Uporablja Nezaupljivo nNastavitev za Razliko od Zcasha';
 
   @override
   String get knowledge250Sbupgrades250Sb0250Sbtext => '<p>Eden najpogosteje napačno razumljenih delov Monerovega pristopa k izgradnji decentralizirane, varne in varne kriptovalute, ki ohranja zasebnost, je vloga, ki jo imajo hard-forki (ali nadgradnje omrežja).</p>\n<p>V tej objavi se bomo sprehodili skozi to, kaj so hard-forki, zakaj so pomembni za Monero in kakšno vlogo lahko igrate pri njih v prihodnosti.</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb1250Sbtext => '<p>Skupnost Monero se je zavezala, da bo sčasoma ponovila in izboljšala projekt, in zdi se, da se ta zaveza zmanjša na dva ključna vidika etosa skupnosti: </p>\n<ol type=\"1\">\n<li><p>Projekt Monero je v končni fazi programska oprema – koda – ki so jo napisali ljudje. To lahko povzroči potrebo po odpravljanju napak, dodajanju izboljšav, ki so odkrite ali izumljene sčasoma, izvajanju posodobitev protokola ali preprosto vzdrževanju projekta. To je v mnogih pogledih podobno drugim delom programske opreme, ki jo uporabljate (na primer brskalniku, v katerem to berete!), ki se mora nenehno posodabljati, da lahko doda nove funkcije in odpravi napake.</p></li>\n<li><p>Projekt Monero je orodje za zasebnost, zasebnost pa je nenehno napredujoča oboroževalna tekma. Ljudje in skupine, ki bi radi nič drugega kot osvobodili svet zasebnosti (tako finančne kot osebne), se nenehno izboljšujejo, razvijajo in izumljajo nove načine za napad na sodobne pristope k ohranjanju zasebnosti, kot so tisti, ki jih uporablja Monero. Ker sovražniki zasebnosti najdejo te nove pristope, mora biti omrežje Monero sposobno prilagoditi in izboljšati, da se upre in brani našo pravico do finančne zasebnosti.</p></li>\n</ol>';
+  String get knowledge250Sbupgrades250Sb1250Sbtext => '<p>Skupnost Monero se je zavezala, da bo sčasoma ponovila in izboljšala projekt, in zdi se, da se ta zaveza zmanjša na dva ključna vidika etosa skupnosti: </p>\n<ol type=\"1\">\n<li><p>Projekt Monero je v končni fazi programska oprema – koda – ki so jo napisali ljudje. To lahko povzroči potrebo po odpravljanju napak, dodajanju izboljšav, ki so odkrite ali izumljene sčasoma, izvajanju posodobitev protokola ali preprosto vzdrževanju projekta. To je v mnogih pogledih podobno drugim delom programske opreme, ki jo uporabljate (na primer brskalniku, v katerem to berete!), ki se mora nenehno posodabljati, da lahko doda nove funkcije in odpravi napake.</p></li>\n<li><p>Projekt Monero je orodje za zasebnost, boj za zasebnost pa je nenehno napredujoča oboroževalna tekma. Ljudje in skupine, ki bi radi nič drugega kot osvobodili svet zasebnosti (tako finančne kot osebne), se nenehno izboljšujejo, razvijajo in izumljajo nove načine za napad na sodobne pristope k ohranjanju zasebnosti, kot so tisti, ki jih uporablja Monero. Ker sovražniki zasebnosti najdejo te nove pristope, mora biti omrežje Monero sposobno prilagoditi in izboljšati, da se upre in brani našo pravico do finančne zasebnosti.</p></li>\n</ol>';
 
   @override
   String get knowledge250Sbupgrades250Sb1250Sbtitle => 'Zakaj mora Monero še naprej nadgrajevati omrežje?';
@@ -3995,43 +3995,43 @@ class I18nSl extends I18n {
   String get knowledge250Sbupgrades250Sb4250Sbtext => '<p>Ker nadgradnje omrežja Monero zahtevajo koordinacijo in odobritev skupnosti skupaj s posodobitvami programske opreme, je izredno pomembno, da se čim več ljudi vključi v proces načrtovanja, testiranja in komuniciranja nadgradenj omrežja.</p>\n<p>Tukaj je nekaj preprostih načinov, s katerimi lahko pomagate zgladiti stvari pri nadgradnji omrežja: </p>\n<ol type=\"1\">\n<li>Pridružite se načrtovalnim sestankom <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues\">, objavljenim na Githubu </a>, prisluhnite in prispevajte, če želite izpostaviti kaj pomembnega.</li>\n<li>Sporočite podrobnosti glede časa nadgradnje omrežja (ko se odločite!) svoji najljubši borzi, denarnici ali rudarskemu bazenu. Lahko je težavno pravilno obvestiti vse uporabnike Monera o nadgradnji, zato je pomembno, da vsi pomagamo, kjer lahko, da se o tem izvede beseda.</li>\n<li>Preskusite programsko opremo pred omrežno nadgradnjo. Pred nadgradnjo omrežja bodo preizkuševalci razpisani tako na testnetu kot na stagenetu, da se zagotovi, da je bil vsak vidik nadgradnje pravilno načrtovan in implementiran v programsko opremo. Več ljudi ko se vključi in temeljito preizkusi nove različice, večja je verjetnost, da bo omrežna nadgradnja potekala gladko! </li>\n<li>Ko so objavljene izdaje, ki so združljive z omrežno nadgradnjo, takoj nadgradite! Več ljudi kot je nadgrajenih in pripravljenih na nadgradnjo omrežja, bolj gladko jo bo omrežje obravnavalo in manj glavobolov bodo imeli uporabniki.</li>\n</ol>';
 
   @override
-  String get knowledge250Sbupgrades250Sb4250Sbtitle => 'Kako lahko pomagam pri nadgradnjah omrežja?';
+  String get knowledge250Sbupgrades250Sb4250Sbtitle => 'Kako lahko pomagam pri nadgrajevanju omrežja?';
 
   @override
-  String get knowledge250Sbupgrades250Sb5250Sbtext => '<p>Čeprav datum še ni določen, bo kmalu prišlo do nadgradnje omrežja za izvajanje nekaj ključnih nadgradenj in funkcij v Monero: </p>\n<ol type=\"1\">\n<li>Povečanje velikosti obroča z 11 na 16, s čimer se poveča osnovni nabor anonimnosti (beri: verjetno zanikanje ali osnovna zasebnost) vsake transakcije v omrežju </li>\n<li><a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/view-tags-reduce-monero-sync-time\">Ogled oznak, odličen način za skrajšanje časa sinhronizacije denarnice za 30–40 %</a></li>\n<li>Spremembe provizij, izboljšanje varnosti in odpornosti omrežja na hitre spremembe na trgu provizij ali napade zlonamernih subjektov</li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/2020/12/24/Bulletproofs+-in-Monero.html\">Bulletproofs+, nadaljnje izboljšanje učinkovitosti transakcij Monero</a></li>\n</ol>\n<p>Te spremembe bodo močno pripomogle k povečanju zasebnosti, učinkovitosti in varnosti omrežja, hkrati pa bodo tlakovale pot za <a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/seraphis-for-monero\">Seraphis</a>, transakcijski protokol naslednje generacije za Monero.</p>';
+  String get knowledge250Sbupgrades250Sb5250Sbtext => '<p>Čeprav datum še ni določen, bo kmalu prišlo do nadgradnje omrežja za izvajanje nekaj ključnih nadgradenj in funkcij pri Monero: </p>\n<ol type=\"1\">\n<li>Povečanje velikosti obroča z 11 na 16, s čimer se poveča osnovni nabor anonimnosti (beri: verjetno zanikanje ali osnovna zasebnost) vsake transakcije v omrežju </li>\n<li><a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/view-tags-reduce-monero-sync-time\">Ogled oznak, odličen način za skrajšanje časa sinhronizacije denarnice za 30–40 %</a></li>\n<li>Spremembe provizij, izboljšanje varnosti in odpornosti omrežja na hitre spremembe na trgu provizij ali napade zlonamernih subjektov</li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/2020/12/24/Bulletproofs+-in-Monero.html\">Bulletproofs+, nadaljnje izboljšanje učinkovitosti transakcij Monero</a></li>\n</ol>\n<p>Te spremembe bodo močno pripomogle k povečanju zasebnosti, učinkovitosti in varnosti omrežja, hkrati pa bodo tlakovale pot za <a class=\"next-link\" target=\"_blank\" href=\"https://localmonero.co/knowledge/seraphis-for-monero\">Seraphis</a>, transakcijski protokol naslednje generacije za Monero.</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb5250Sbtitle => 'Kaj lahko pričakujem pri naslednji nadgradnji omrežja Monero?';
+  String get knowledge250Sbupgrades250Sb5250Sbtitle => 'Kaj lahko pričakujem pri naslednji nadgradnji Monero omrežja?';
 
   @override
-  String get knowledge250Sbupgrades250Sb6250Sbtext => '<p>Tema hard-forkov in omrežnih nadgradenj je obsežna in Monero ima dolgo in slavno zgodovino, zato se prepričajte, da se poglobite v nekaj naslednjih povezav, če želite izvedeti več o zgodovino, postopek ali načrtovanje, ki je v teku za prihajajočo nadgradnjo omrežja! </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">Monero v15 hard-fork načrtovanje</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero#scheduled-software-upgrades\">Načrtovane nadgradnje programske opreme (v Monero)</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://web.getmonero.org/2020/09/01/note-scheduled-upgrades.html\">Opomba o načrtovanih nadgradnjah protokola </a></li>\n</ul>';
+  String get knowledge250Sbupgrades250Sb6250Sbtext => '<p>Tema hard-forkov in omrežnih nadgradenj je obsežna in Monero ima glede tega dolgo in slavno zgodovino, zato se poglobite v nekaj naslednjih povezav, če želite izvedeti več o zgodovino, postopek ali načrtovanje, ki je v teku za prihajajočo nadgradnjo omrežja! </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">Načrtovanje Monero v15 hard-fork</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero#scheduled-software-upgrades\">Načrtovane nadgradnje programske opreme (v Monero)</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://web.getmonero.org/2020/09/01/note-scheduled-upgrades.html\">Opomba o načrtovanih nadgradnjah protokola </a></li>\n</ul>';
 
   @override
-  String get knowledge250Sbupgrades250Sb6250Sbtitle => 'Kako se lahko naučim več?';
+  String get knowledge250Sbupgrades250Sb6250Sbtitle => 'Kako lahko izvem več?';
 
   @override
-  String get knowledge250Sbupgrades250Sbdescription => 'Vloga trdih vilic XMR je pogosto napačno razumljena - danes se bomo sprehodili skozi to, kaj so in zakaj so pomembni.';
+  String get knowledge250Sbupgrades250Sbdescription => 'Vloga XMR hard-forkov je pogosto napačno razumljena - danes se bomo sprehodili skozi to, kaj so in zakaj so pomembni.';
 
   @override
   String get knowledge250Sbupgrades250Sbtitle => 'Kako Monero uporablja hard-forke za nadgradnjo omrežja';
 
   @override
-  String get knowledge250SbviewTags250Sb0250Sbtext => '<p>Ena najpogostejših pritožb pri vsakodnevni uporabi Monera je čas, ki ga lahko traja, da sinhronizirate denarnico, preden lahko pošljete Monero. K sreči so razvijalci in raziskovalci v skupnosti Monero našli sijajen način za zmanjšanje časa, ki ga potrebujete za sinhronizacijo denarnice, za 40 %+ brez dodatnih stroškov verige blokov, provizij itd. </p>\n\n<p>Vnesite »ogled oznak«, enobajtni dodatek k podatkom vsake transakcije – prihaja v Monero pri naslednji nadgradnji omrežja!</p>';
+  String get knowledge250SbviewTags250Sb0250Sbtext => '<p>Ena najpogostejših pritožb pri vsakodnevni uporabi Monera je čas, ki ga lahko traja, da sinhronizirate denarnico, preden lahko pošljete Monero. K sreči so razvijalci in raziskovalci v skupnosti Monero našli sijajen način za zmanjšanje časa, ki ga potrebujete za sinhronizacijo denarnice, za 40 %+ brez dodatnih stroškov verige blokov, provizij itd. </p>\n\n<p>Vnesite \"ogled oznak\", enobajtni dodatek k podatkom vsake transakcije – prihaja v Monero pri naslednji nadgradnji omrežja!</p>';
 
   @override
-  String get knowledge250SbviewTags250Sb1250Sbtext => '<p>Eno od prvih vprašanj, na katero moramo odgovoriti, da bi bolje razumeli potrebo po rešitvi, kot so oznake za ogled, je, zakaj je sinhronizacija denarnice Monero počasnejša od kriptovalut, kot je Bitcoin.</p>\n<p> Ker v Bitcoinu vse transakcije niso zasebne in razkrivajo porabljene kovance, zneske in vključene naslove v verigi, lahko denarnice Bitcoin preprosto poiščejo morebitne neporabljene izhode transakcij (UTXO) ali uporabljene naslove za dano denarnico. , hitro skeniranje verige blokov samo za UTXO, ki so v lasti teh naslovov, da ugotovi, kateri kovanci pripadajo vaši denarnici in jih je mogoče porabiti.</p>\n<p>V Monero pa vse transakcije ohranjajo zasebnost uporabnika tako, da skrijejo pošiljatelja, prejemnika in zneske, vključene v posamezno transakcijo. Ta zasebnost, ki je ključna za zaščito uporabnikov omrežja, uvaja tudi počasnejšo sinhronizacijo denarnice. V Monero mora vaša denarnica primerjati vsak izhod transakcije (TXO), ki obstaja v omrežju, z zasebnimi ključi vaše denarnice.</p>\n<p>Ta primerjava vključuje veliko zapletene matematike in kriptografije za potrditev, da je rezultat resnično vaš, saj so vsi zneski, naslovi in znano porabljeni rezultati (ali kovanci) skriti v verigi v Monero.</p>';
+  String get knowledge250SbviewTags250Sb1250Sbtext => '<p>Eno od prvih vprašanj na katero moramo odgovoriti, da bi bolje razumeli potrebo po rešitvi, kot so oznake za ogled, je, zakaj je sinhronizacija denarnice Monero počasnejša od kriptovalut, kot je Bitcoin.</p>\n<p> Ker v Bitcoinu vse transakcije niso zasebne in razkrivajo porabljene kovance, zneske in vključene naslove v verigi, lahko denarnice Bitcoin preprosto poiščejo morebitne neporabljene izhode transakcij (UTXO) ali uporabljene naslove za dano denarnico. , hitro skeniranje verige blokov samo za UTXO, ki so v lasti teh naslovov, da ugotovi, kateri kovanci pripadajo vaši denarnici in jih je mogoče porabiti.</p>\n<p>V Monero pa vse transakcije ohranjajo zasebnost uporabnika tako, da skrijejo pošiljatelja, prejemnika in zneske, vključene v posamezno transakcijo. Ta zasebnost, ki je ključna za zaščito uporabnikov omrežja, uvaja tudi počasnejšo sinhronizacijo denarnice. V Monero mora vaša denarnica primerjati vsak izhod transakcije (TXO), ki obstaja v omrežju, z zasebnimi ključi vaše denarnice.</p>\n<p>Ta primerjava vključuje veliko zapletene matematike in kriptografije za potrditev, da je rezultat resnično vaš, saj so vsi zneski, naslovi in znano porabljeni rezultati (ali kovanci) skriti v verigi v Monero.</p>';
 
   @override
-  String get knowledge250SbviewTags250Sb1250Sbtitle => 'Zakaj je sinhronizacija denarnice Monero počasnejša od sinhronizacije denarnice Bitcoin?';
+  String get knowledge250SbviewTags250Sb1250Sbtitle => 'Zakaj je sinhronizacija Monero denarnice počasnejša od sinhronizacije denarnice Bitcoin?';
 
   @override
-  String get knowledge250SbviewTags250Sb2250Sbtext => '<p>Da bi zmanjšal čas sinhronizacije za denarnice Monero, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">raziskovalec UkoeHB iznašel nov pristop</a> – dodajte 1-bajtno »oznako« vsaki transakciji z uporabo skupne skrivnosti, ki je znana samo pošiljatelju in prejemniku te transakcije.</p>\n<p>To skupno skrivnost ustvari pošiljatelj z uporabo naslova, ki mu ga je posredoval prejemnik, in ne zahteva nobenega aktivnega sodelovanja pošiljatelja in prejemnika. Prvi bajt (ali znak) te skupne skrivnosti se nato doda k podatkom transakcije, ko jo objavite v omrežju Monero.</p>\n<p> Ko želi eden od udeležencev te transakcije pozneje sinhronizirati svojo denarnico z verigo blokov Monero, namesto da bi moral izvesti vso zapleteno matematiko in kriptografijo za vsak TXO v omrežju, lahko denarnica zdaj samo preveri, ali to 1-bajtno polje v vsaki transakciji in šele nato opravite zamudno preverjanje transakcij, ki imajo to oznako – 1/256 TXO v omrežju, če smo natančni! </p>\n<p>Ta oznaka ne razkrije nobenih informacij o transakciji zunanjim gledalcem, doda le 1 bajt (zanemarljivo količino) velikosti transakcije, vendar nam omogoča, da skrajšamo čase sinhronizacije za 40 %+ z zmanjšanjem zapletenih preverjanj potrebno!</p>';
+  String get knowledge250SbviewTags250Sb2250Sbtext => '<p>Da bi zmanjšal čas sinhronizacije za Monero denarnice, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">je raziskovalec UkoeHB iznašel nov pristop</a> – dodajte 1-bajtno \"oznako\" vsaki transakciji z uporabo skupne skrivnosti, ki je znana samo pošiljatelju in prejemniku te transakcije.</p>\n<p>To skupno skrivnost ustvari pošiljatelj z uporabo naslova, ki mu ga je posredoval prejemnik, in ne zahteva nobenega aktivnega sodelovanja pošiljatelja in prejemnika. Prvi bajt (ali znak) te skupne skrivnosti se nato doda k podatkom transakcije, ko jo objavite v omrežju Monero.</p>\n<p> Ko želi eden od udeležencev te transakcije pozneje sinhronizirati svojo denarnico z Monero blockchainom, namesto da bi moral izvesti vso zapleteno matematiko in kriptografijo za vsak TXO v omrežju, lahko denarnica zdaj samo preveri, ali to 1-bajtno polje v vsaki transakciji in šele nato opravite zamudno preverjanje transakcij, ki imajo to oznako – 1/256 TXO v omrežju, če smo natančni! </p>\n<p>Ta oznaka ne razkrije nobenih informacij o transakciji zunanjim gledalcem, doda le 1 bajt (zanemarljivo količino) velikosti transakcije, vendar nam omogoča, da skrajšamo čase sinhronizacije za 40 %+ z zmanjšanjem zapletenih preverjanj potrebno!</p>';
 
   @override
   String get knowledge250SbviewTags250Sb2250Sbtitle => 'Kaj so oznake pogleda?';
 
   @override
-  String get knowledge250SbviewTags250Sb3250Sbtext => '<p>Predstavljajte si, da imate v sobi 4096 škatel, od katerih vam pripada samo 5 škatel. Vse škatle so od zunaj popolnoma nerazločljive in edini način, da ugotovite, ali je škatla za vas, je, da jo odprete in rešite zamudno matematično nalogo, zapisano v njej, da zagotovite, da je vaša.</p>\n<p> Zdaj pa si predstavljajte, da se odločite, da oseba, ki vam pošlje teh 5 škatel, ustvari posebno kodo z uporabo vašega naslova in nato na zunanjo stran vsake škatle, ki vam je poslana, vnese samo prvi znak te generirane kode. Vsi ostali naredijo isto za svoje škatle (da zagotovijo, da so vse škatle še vedno nerazločljive), zdaj pa lahko preprosto pogledate kodo z enim znakom na zunanji strani škatle in odprete samo tiste škatle, ki imajo ta znak.[ X753X]\n<p>Medtem ko se bodo druge škatle ujemale z vašo kodo, tudi tiste, ki niso v vaši lasti, je število škatel, ki jih morate odpreti in rešiti matematično nalogo, zdaj le 16 (1/256 škatel!) namesto vseh 4096. </p>\n<p>Zdaj odprite teh 16 škatel, rešite matematične probleme in obdržite 5 škatel, ki vam dejansko pripadajo iz te skupine!</p>';
+  String get knowledge250SbviewTags250Sb3250Sbtext => '<p>Predstavljajte si, da imate v sobi 4096 škatel, od katerih vam pripada samo 5 škatel. Vse škatle so od zunaj popolnoma nerazločljive in edini način, da ugotovite, ali je škatla za vas, je, da jo odprete in rešite zamudno matematično nalogo, zapisano v njej, da zagotovite, da je vaša. </p>\n<p> Zdaj pa si predstavljajte, da se odločite, da oseba, ki vam pošlje teh 5 škatel, ustvari posebno kodo z uporabo vašega naslova in nato na zunanjo stran vsake škatle, ki vam je poslana, vnese samo prvi znak te generirane kode. Vsi ostali naredijo isto za svoje škatle (da zagotovijo, da so vse škatle še vedno nerazločljive), zdaj pa lahko preprosto pogledate kodo z enim znakom na zunanji strani škatle in odprete samo tiste škatle, ki imajo ta znak. </p>\n<p>Medtem ko se bodo druge škatle ujemale z vašo kodo, tudi tiste, ki niso v vaši lasti, je število škatel, ki jih morate odpreti in rešiti matematično nalogo, zdaj le 16 (1/256 škatel!) namesto vseh 4096. </p>\n<p>Zdaj odprite teh 16 škatel, rešite matematične probleme in obdržite 5 škatel, ki vam dejansko pripadajo iz te skupine!</p>';
 
   @override
   String get knowledge250SbviewTags250Sb3250Sbtitle => 'Ogled oznak: poenostavljen primer';
@@ -4040,31 +4040,31 @@ class I18nSl extends I18n {
   String get knowledge250SbviewTags250Sb4250Sbtext => '<p>Oznake za ogled so ena od funkcij, ki so trenutno načrtovane za vključitev v <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/meta/issues/630\">prihajajočo nadgradnjo omrežja</a> in bi morale biti izdane to pomlad. Skupnost <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://bounties.monero.social/posts/28/implement-view-tags-to-decrease-wallet-sync-times-in-monero\">je zbrala 23.3XMR</a> (v času pisanja), da bi spodbudila razvoj in implementacijo oznak za oglede, zato je bila velika večina dela za vključitev oznak za oglede v osnovo kode Monero že opravljena. dokončal j-berman v sodelovanju z recenzenti in raziskovalci.</p>\n<p>Ko bo omrežje uveljavilo oznake za ogled, bodo vse transakcije, poslane po nadgradnji omrežja, imele koristi od drastično izboljšanega časa sinhronizacije denarnice. Ne bo vam treba narediti nič posebnega, da začnete uporabljati oznake za ogled, vaša najljubša denarnica za Monero jih bo preprosto začela uporabljati po samodejni nadgradnji omrežja! </p>';
 
   @override
-  String get knowledge250SbviewTags250Sb4250Sbtitle => 'Kdaj bodo oznake za ogled na voljo v Monero?';
+  String get knowledge250SbviewTags250Sb4250Sbtitle => 'Kdaj bodo oznake za ogled na voljo v Moneru?';
 
   @override
-  String get knowledge250SbviewTags250Sb5250Sbtext => '<p>Če je to vzbudilo vašo radovednost glede oznak pogleda, si spodaj oglejte nekaj dodatnih povezav, ki se poglobijo v temo: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">Zmanjšajte čas skeniranja z \'oznako pogleda\' 1-bajt na izhod </a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/pull/8061\">Dodajte oznake pogleda izhodom, da skrajšate čas skeniranja denarnice</a></li>\n</ul>';
+  String get knowledge250SbviewTags250Sb5250Sbtext => '<p>Če je to vzbudilo vašo radovednost glede oznak pogleda, si spodaj oglejte nekaj dodatnih povezav, ki se poglobijo v temo: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/research-lab/issues/73\">Zmanjšajte čas skeniranja z \'oznako pogleda\' 1-bajt </a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-project/monero/pull/8061\">Dodajte oznake pogleda izhodom, da skrajšate čas skeniranja denarnice</a></li>\n</ul>';
 
   @override
-  String get knowledge250SbviewTags250Sb5250Sbtitle => 'Kako se lahko naučim več?';
+  String get knowledge250SbviewTags250Sb5250Sbtitle => 'Kako lahko izvem več?';
 
   @override
-  String get knowledge250SbviewTags250Sbdescription => 'Ena najpogostejših pritožb glede Monera je čas sinhronizacije denarnice – danes govorimo o briljantnem načinu, ki so ga odkrili razvijalci za njegovo zmanjšanje.';
+  String get knowledge250SbviewTags250Sbdescription => 'Ena najpogostejših pritožb glede Monera je čas sinhronizacije denarnice – danes govorimo o briljantnem načinu za njegovo zmanjšanje, ki so ga odkrili razvijalci.';
 
   @override
-  String get knowledge250SbviewTags250Sbtitle => 'Ogled oznak: Kako bo en bajt skrajšal čas sinhronizacije denarnice Monero za 40%+';
+  String get knowledge250SbviewTags250Sbtitle => 'Ogled oznak: Kako bo en bajt skrajšal čas sinhronizacije Monero denarnice za 40%+';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbdecentralized250Sbtext => 'Bitcoin sam je decentraliziran, vendar je večina storitev mešanja centraliziranih. To pomeni, da jim morate zaupati. Nekateri novejši, kot je denarnica Wasabi, pa niso.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbfungibility250Sbtext => '<p>\n                          Vsi bitcoini niso enaki in nimajo enake vrednosti. Nekatere bitcoine je več subjektov uvrstilo na črno listo in jih blokiralo, zaradi česar so ti kovanci manj vredni od ostalih. Če prejmete bitcoine, ki so bili v preteklosti uporabljeni v nezakonite namene, so lahko vaši bitcoini uvrščeni na črni seznam, čeprav niste imeli nič opraviti z nezakonito dejavnostjo. Ali pa se recimo vlada, delodajalec ali kakšen drug subjekt odloči, da bo vaše bitcoine v prihodnosti uvrstil na črni seznam, podobno kot storijo z zamrznitvijo ali zaplembo sredstev. Ničesar ne bi mogli narediti. Ker mešalnik le oteži sledenje vašim bitcoinom, je bila ta kategorija označena kot &quot;ni zamenljiva.&quot;\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            Andreas Antonopoulos, nekdanji razvijalec Bitcoin Core, ki je zelo cenjen v skupnosti bitcoinov in drugih kriptovalut, priznava problem zamenljivosti bitcoinov v <a href=\"https://www.youtube.com/watch?v=ak1iojpiHpM&feature=youtu .be&t=33m9s\"> videoposnetek YouTube</a>.\n                          </li>\n                          <li>\n                            Razprava o problemu zamenljivosti bitcoinov na <a href=\"https://bitcointalk.org/index.php?topic=1190707.0\"> Bitcointalk.org\n                            </a>\n                          </li>\n                        </ul>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbfungibility250Sbtext => '<p>\n                          Vsi Bitcoini niso enaki in nimajo enake vrednosti. Nekatere Bitcoine je več subjektov uvrstilo na črno listo in jih blokiralo, zaradi česar so ti kovanci manj vredni od ostalih. Če prejmete Bitcoine, ki so bili v preteklosti uporabljeni v nezakonite namene, so lahko vaši bitcoini uvrščeni na črni seznam, čeprav niste imeli nič opraviti z nezakonito dejavnostjo. Ali pa se recimo vlada, delodajalec ali kakšen drug subjekt odloči, da bo vaše bitcoine v prihodnosti uvrstil na črni seznam, podobno kot storijo z zamrznitvijo ali zaplembo sredstev. Ničesar ne bi mogli narediti. Ker mešalnik le oteži sledenje vašim Bitcoinom, je bila ta kategorija označena kot &quot;ni zamenljiva.&quot;\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            Andreas Antonopoulos, nekdanji razvijalec Bitcoin Core, ki je zelo cenjen v skupnosti bitcoinov in drugih kriptovalut, priznava problem zamenljivosti bitcoinov v <a href=\"https://www.youtube.com/watch?v=ak1iojpiHpM&feature=youtu .be&t=33m9s\"> videoposnetek YouTube</a>.\n                          </li>\n                          <li>\n                            Razprava o problemu zamenljivosti bitcoinov na <a href=\"https://bitcointalk.org/index.php?topic=1190707.0\"> Bitcointalk.org\n                            </a>\n                          </li>\n                        </ul>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbprivate250Sbtext => '<p>\n                          Vse transakcije z bitcoini so vidne v verigi blokov in obstaja <a href=\"http://www.bitcoinrichlist.com/top100\"> bogat seznam z bitcoini </a>, tako da bitcoin ni zaseben. Bitcoin je <a href=\"https://bitcoin.org/en/you-need-to-know\"> psevdononim </a>, ne anonimen.\n                        </p>\n\n                        <p>\n                          Za <b>Mešalnike bitcoinov</b> morate zaupati, da lahko varujejo svoje podatke in niso v lasti vlade, hekerjev ali drugih subjektov ali sodelujejo z njimi.\n                        </p>\n\n                        <p>\n                          Julija 2017 je ustanovitelj največje storitve za mešanje bitcoinov, BITMIXER.IO, objavil, da se zapirajo, in to navedel kot razlog:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              &hellip; Zdaj sem ugotovil, da je Bitcoin transparenten neanonimni sistem <b> po zasnovi </b>. Blockchain je odlična odprta knjiga &hellip;\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, v obvestilu o zaprtju na <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg20357093#msg20357093\"> Bitcointalk.org </a> (poudarek v izvirniku).\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Nekaj tednov pozneje je po preučitvi različnih kovancev, osredotočenih na zasebnost, rekel tole:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Po temeljiti preiskavi potrjujem, da je MONERO najboljša valuta za zasebnost. Zato toplo priporočam MONERO vsem ljudem, ki potrebujejo dodatno zasebnost.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, v <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg21113378#msg21113378\"> nadaljnji objavi </a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbprivate250Sbtext => '<p>\n                          Vse transakcije z bitcoini so vidne v blockchainu in obstaja <a href=\"http://www.bitcoinrichlist.com/top100\"> Bitcoin rich list </a>, tako da Bitcoin ni zaseben. Bitcoin je <a href=\"https://bitcoin.org/en/you-need-to-know\"> psevdononimen </a>, ne pa anonimen.\n                        </p>\n\n                        <p>\n                          Za <b>Mešalnikom Bitcoinov</b> morate zaupati, da lahko varujejo svoje podatke in niso v lasti vlade, hekerjev ali drugih subjektov ali sodelujejo z njimi.\n                        </p>\n\n                        <p>\n                          Julija 2017 je ustanovitelj največje storitve za mešanje Bitcoinov, BITMIXER.IO, objavil, da se zapirajo, in to navedel kot razlog:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              &hellip; Zdaj sem ugotovil, da je Bitcoin transparenten neanonimni sistem <b> po zasnovi </b>. Blockchain je odlična odprta knjiga &hellip;\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, v obvestilu o zaprtju na <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg20357093#msg20357093\"> Bitcointalk.org </a> (poudarek v izvirniku).\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Nekaj tednov pozneje je po preučitvi različnih kovancev, osredotočenih na zasebnost, rekel tole:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Po temeljiti preiskavi potrjujem, da je MONERO najboljša valuta za zasebnost. Zato toplo priporočam MONERO vsem ljudem, ki potrebujejo dodatno zasebnost.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, v <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg21113378#msg21113378\"> nadaljnji objavi </a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbuntraceable250Sbtext => ' <p>\n                          Ker so vse Bitcoin transakcije vidne v blockchainu, je VSEM Bitcoin transakcijam mogoče slediti. Mešalnik bitcoinov lahko zelo zamegli transakcije, zaradi česar je nekdo veliko težje izslediti bitcoine, vendar ni nemogoče. Ko tehnologija napreduje in podjetja, specializirana za sledenje transakcij bitcoinov, postajajo vse bolj razširjena, bodo nekoč zelo prikrite transakcije postale razmeroma lahko sledljive:\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            <a href=\"https://news.bitcoin.com/law-enforcement-continues-invest-bitcoin-tracking-services/\"> Organi pregona še naprej vlagajo v storitve sledenja bitcoinom\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"http://time.com/3689359/bitcoins-track-anonymous/\"> Time.com: Bitcoinom je lažje slediti, kot si mislite\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"https://www.elliptic.co/\">\n                              Elliptic: podjetje, specializirano za sledenje bitcoinom za organe pregona\n                            </a>\n                          </li>\n                        </ul>\n\n                        <p>\n                          Iskanje v Googlu bo razkrilo na desetine člankov, podobnih zgornjim. In ne pozabite, da je vsaka transakcija, ki se je zgodila kadar koli v preteklosti, v verigi blokov in jo je mogoče izslediti, tudi če je bila uporabljena storitev mešanja. Pravzaprav bo uporaba storitve mešanja verjetno pritegnila pozornost na te transakcije.\n                        </p>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbuntraceable250Sbtext => ' <p>\n                          Ker so vse Bitcoin transakcije vidne v blockchainu, je VSEM Bitcoin transakcijam mogoče slediti. Mešalnik Bitcoinov lahko zelo zamegli transakcije, zaradi česar je nekdo veliko težje izslediti Bitcoine, vendar ni nemogoče. Ko tehnologija napreduje in podjetja, specializirana za sledenje transakcij Bitcoinov, postajajo vse bolj razširjena, bodo nekoč zelo prikrite transakcije postale razmeroma lahko sledljive:\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            <a href=\"https://news.bitcoin.com/law-enforcement-continues-invest-bitcoin-tracking-services/\"> Organi pregona še naprej vlagajo v storitve sledenja Bitcoinom\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"http://time.com/3689359/bitcoins-track-anonymous/\"> Time.com: Bitcoinom je lažje slediti, kot si mislite\n                            </a>\n                          </li>\n                          <li>\n                            <a href=\"https://www.elliptic.co/\">\n                              Elliptic: podjetje, specializirano za sledenje Bitcoinom za organe pregona\n                            </a>\n                          </li>\n                        </ul>\n\n                        <p>\n                          Iskanje v Googlu bo razkrilo na desetine člankov, podobnih zgornjim. In ne pozabite, da je vsaka transakcija, ki se je zgodila kadar koli v preteklosti zapisana v verigi blokov in jo je mogoče izslediti, tudi če je bila uporabljena storitev mešanja. Pravzaprav bo uporaba storitve mešanja verjetno pritegnila pozornost na te transakcije.\n                        </p>';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbdecentralized250Sbtext => 'Vsa vozlišča DASH niso enaka. Obstaja nadrazred vozlišč, imenovan <i>Masternodes</i>, katerih lastniki imajo večji vpliv na sistem kot običajni operaterji vozlišč. Zaradi tega je DASH polcentraliziran namesto idealnega 100-odstotno decentraliziranega sistema.';
@@ -4073,73 +4073,73 @@ class I18nSl extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbfungible250Sbtext => 'Ker transakcije niso zasebne, obstaja možnost, da subjekt blokira ali uvrsti določene kovance na črno listo, zaradi česar postanejo manj vredni od drugih. Glejte spodnjo opombo o pomanjkanju zamenljivosti Bitcoinov, saj isto načelo velja za DASH.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate => 'DASH ima <a href=\"https://bitinfocharts.com/top-100-richest-darkcoin-addresses.html\"> bogat seznam </a>, zato to ni zasebni kovanec. Finančne podrobnosti naslovov kovancev so vidne vsem, ki pregledujejo verigo blokov.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate => 'DASH ima <a href=\"https://bitinfocharts.com/top-100-richest-darkcoin-addresses.html\"> \"rich list\" </a>, zato to ni zasebni kovanec. Finančne podrobnosti naslovov kovancev so vidne vsem, ki pregledujejo verigo blokov.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbanother8722Sbquote => ' <b>Peter Todd</b>, še en razvijalec in kriptograf Bitcoin Core, je podal <a href=\"https://twitter.com/petertoddbtc/status/622022840330682368\"> podobno izjavo</a>.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              DASH sploh ni kriptografsko zaseben. Pravzaprav sem imel diapozitiv v špilu, ki je bil kot \"DASH, LOL,\" in kot nič drugega ... to je kačje olje in osebno sem glede tega nekako iz sebe.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Gregory Maxwell</b>, razvijalec in kriptograf Bitcoin Core, v <a href=\"https://archive.21mil.com/blockstream-cto-greg-maxwell-discusses-monero-zcash-privacy-focused-altcoins/\"> predstavitvi za Coinbase\n                             </a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              DASH sploh ni kriptografsko zaseben. Pravzaprav sem imel diapozitiv, ki je dejal \"DASH, LOL,\" in nič drugega ... to je kačje olje in osebno sem glede tega nekako iz sebe.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Gregory Maxwell</b>, razvijalec in kriptograf Bitcoin Core, v <a href=\"https://archive.21mil.com/blockstream-cto-greg-maxwell-discusses-monero-zcash-privacy-focused-altcoins/\"> predstavitvi za Coinbase\n                             </a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdash250Sbuntraceable250Sbtext => 'Transakcije so usmerjene skozi niz <a href=\"https://www.dash.org/masternodes/\"> Masternodes </a>, da jim ni mogoče slediti. Ta praksa bi lahko delovala, če bi imeli vsi operaterji masternode le čiste motive. Če pa je vlada, skupina hekerjev, drug subjekt ali celo posameznik kupil veliko glavnih vozlišč (ni mogoče vedeti, ali se je to zgodilo) in če je transakcija potekala po poti, kjer so bila vsa glavna vozlišča v lasti tega subjekta , potem bi ta subjekt lahko izsledil transakcijo. Glede na razmeroma nizke stroške masternodov in ogromen proračun vlad in nekaterih organizacij je možnost, da je mogoče izslediti kovance, resnična.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdisclaimer => 'To stran so izdelali uporabniki Monera. Bili so časi, ko nismo bili uporabniki Monera, vendar nas je skrbela finančna zasebnost. Raziskali smo kovance, ki so trdili, da so zasebni, in ta stran je rezultat naše raziskave. Zato smo izbrali Monero pred ostalimi. Torej, če se zdi, da smo pristranski, smo, vendar menimo, da pristranskost temelji na dejstvih, ki jih lahko preberete spodaj in se prepričate sami.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbdisclaimer => 'To spletno mesto so ustvarili uporabniki Monera. Včasih nismo bili uporabniki Monera, a nas je skrbelo za finančno zasebnost. Raziskovali smo kovance, ki so trdili, da so zasebni, in ta stran je rezultat naše raziskave. To je razlog, zakaj smo se odločili za Monero v primerjavi z ostalimi. Če se torej zdi, da smo pristranski, smo, vendar menimo, da ta pristranskost temelji na dejstvih, ki jih lahko preberete spodaj in se tako prepričate sami.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbdecentralized250Sbtext => 'Grin nima premine, ustanoviteljske nagrade, masternodov ali zakladnice. Niso imeli ICO in se vodijo na način, ki se spodobi za decentralizirano skupnost. Grin je decentraliziran.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbfungiblity250Sbtext => 'Ker so vse transakcije dvomljivo zasebne in potencialno sledljive, obstaja možnost izdelave transakcijskega grafa, iz katerega je mogoče pridobiti dragocene informacije, ki jih je mogoče uporabiti proti posamezniku glede njegovih potrošniških navad. Izhode je nato mogoče povezati z identitetami in, čeprav zneski niso vidni, dejstvo, da je izhod mogoče povezati z identiteto, pomeni, da je izhod lahko omadeževan, ne glede na to, kdo ga ima. Menimo, da to pomeni, da Grin ni zamenljiv, saj so lahko nekateri rezultati omadeženi, drugi pa ne.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbfungiblity250Sbtext => 'Ker so vse transakcije vprašljivo zasebne in jih je mogoče izslediti, obstaja možnost, da se sestavi graf transakcij, iz katerega je mogoče pridobiti dragocene informacije, ki se lahko uporabijo proti posamezniku glede njegovih potratnih navad. Izhode je nato mogoče povezati z identitetami, in čeprav zneski niso vidni, dejstvo, da je mogoče izhod povezati z identiteto, pomeni, da je mogoče izhod očrniti samo na podlagi tega, kdo ga je imel. Menimo, da to pomeni, da Grin ni zamenljiv, saj so lahko nekateri izpisi omadeženi, drugi pa ne.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbprivate250Sbtext => 'Grin nima bogatega seznama, ki bi kazal na neko obliko zasebnosti. Pasivni napadalci, ki skenirajo verigo, dejansko ne morejo videti, na katerem naslovu je koliko denarja v njem, delno zato, ker so zneski prikriti z zaupnimi transakcijami, delno zato, ker podatki o naslovu niso shranjeni v verigi, in delno zaradi Mimblewimble-ove prelomne tehnologije, kjer vmesne transakcije mogoče odstraniti iz verige, pri čemer ostane malo metapodatkov iz preteklih transakcij.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbprivate250Sbtext => 'Grin nima seznama bogatašev (rich list-a), kar bi kazalo na določeno obliko zasebnosti. Pasivni napadalci, ki pregledujejo verigo, dejansko ne morejo videti, na katerem naslovu je koliko denarja, deloma zato, ker so zneski zakriti z zaupnimi transakcijami, deloma zato, ker podatki o naslovih niso shranjeni v verigi, deloma pa zaradi tehnologije Mimblewimble cut-through, pri kateri je mogoče vmesne transakcije odstraniti iz verige, tako da ostane le malo metapodatkov o preteklih transakcijah.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbuntraceablity250Sbtext => 'Grin se ne brani pred aktivnim napadalcem, ki gradi transakcijski graf. Tako rudarji kot nekoliko spremenjeno vozlišče lahko opazujejo vsako transakcijo, jo shranijo, preden se začne tehnologija prereza, in od tu zgradijo celoten graf transakcij, skupaj z ohranitvijo vseh podatkov prereza. Preden začnejo, ne bi mogli razbrati nobenih informacij, toda vse po začetku bodo dragoceni metapodatki, s katerimi bi lahko potencialno povezali transakcije.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbgrin250Sbuntraceablity250Sbtext => 'Grin se ne brani pred aktivnim napadalcem, ki gradi graf transakcij. Tako rudarji kot nekoliko spremenjeno vozlišče lahko opazujejo vsako transakcijo, jo shranijo, preden se sproži tehnologija \"cut-through\", in od tu zgradijo celoten graf transakcij ter ohranijo vse podatke \"cut-through\". Pred začetkom ne bi mogla razbrati nobenih informacij, vendar bodo vsi podatki po začetku dragoceni metapodatki, s katerimi bi lahko potencialno povezala transakcije.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbintro => 'Tukaj je analiza dobro znanih kriptovalut, ki trdijo, da so anonimnost in/ali nesledljivost njihova ključna razlika. Bitcoin sam ni v okviru te analize, saj nikoli ni trdil, da je anonimen.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbintro => 'Tukaj je analiza znanih kriptovalut, ki kot svojo ključno razlikovalno lastnost navajajo anonimnost in/ali neizsledljivost. Bitcoin sam ne spada v okvir te analize, saj nikoli ni trdil, da je anonimen.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb0 => 'Monero je že od samega začetka 100-odstotno odprtokoden, kar pomeni, da si lahko kdorkoli ogleda <a href=\"https://github.com/monero-project/bitmonero\"> izvorno kodo </a> programske opreme, da preveri, ali ne obstajajo stranska vrata in ali je programska oprema varna.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb0 => 'Monero je že od samega začetka 100% odprtokoden - kar pomeni, da si lahko kdorkoli ogleda <a href=\"https://github.com/monero-project/bitmonero\"> izvorno kodo </a> programske opreme, da preveri, da ne obstajajo stranska vrata in ali je programska oprema varna.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb1 => 'Monero ima tudi <a href=\"https://lab.getmonero.org/\"> strokovno pregledane raziskovalne dokumente </a>, ki matematično in sistematično preverjajo vse njegove zgoraj navedene lastnosti.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbafterword8722Sb1 => 'Monero ima tudi <a href=\"https://lab.getmonero.org/\"> strokovno pregledane raziskovalne dokumente </a>, ki matematično in sistematično preverjajo vse zgoraj navedene lastnosti.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbdecentralized => 'Vsa vozlišča Monero so enaka. Ni nadrazreda vozlišč, ki bi imela večji vpliv ali nadzor nad transakcijami kot druga vozlišča. Nobena oseba ali subjekt ne more slediti transakcijam, če ima v lasti več vozlišč. Poleg tega ni zaupanja vredne nastavitve. To pomeni, da potreba po zaupanju osebi ali subjektu ni dejavnik. Edino, čemur je treba zaupati, sta izvorna koda (ki jo lahko preveri vsak) in matematika.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbdecentralized => 'Vsa vozlišča Monero so enaka. Ni nadrazreda vozlišč, ki bi imela večji vpliv ali nadzor nad transakcijami kot druga vozlišča. Nobena oseba ali subjekt ne more slediti transakcijam, če ima v lasti več vozlišč. Poleg tega ni zaupanja vredne nastavitve. To pomeni, da ni potrebe po zaupanju osebi ali subjektu. Zaupati je treba le izvorni kodi (ki jo lahko preveri vsakdo) in matematiki.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbfungible => 'Vsi kovanci so enaki in imajo enako vrednost. Uporabnik, prodajalec ali kateri koli drug subjekt ne more blokirati ali dodati na črno listo določenih kovancev Monero, ker je zgodovina transakcij kovancev Monero dvoumna.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbfungible => 'Vsi kovanci so enaki in imajo enako vrednost. Uporabnik, prodajalec ali kateri koli drug subjekt ne more blokirati ali uvrstiti določenih kovancev Monero na črno listo, saj je zgodovina transakcij kovancev Monero dvoumna.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbprivate => 'Monero uporablja kriptografsko zanesljiv sistem, ki vam omogoča pošiljanje in prejemanje sredstev, ne da bi bile vaše transakcije javno vidne v verigi blokov (razdeljena knjiga transakcij). To zagotavlja, da vaši nakupi, potrdila in drugi prenosi ostanejo <b>privzeto zasebni</b>. Pošiljatelj, prejemnik in znesek transakcije so zasebni. Nekateri kovanci imajo \"bogat seznam\", ki omogoča vsakomur, da vidi, kateri račun ima največ kovancev. Ker je Monero zaseben, <a href=\"http://moneroblocks.info/richlist\"> bogat seznam Monero </a> ne more obstajati.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbprivate => 'Monero uporablja kriptografsko zanesljiv sistem, ki vam omogoča pošiljanje in prejemanje sredstev, ne da bi bile vaše transakcije javno vidne v blockchainu (razdeljena knjiga transakcij). To zagotavlja, da vaši nakupi, potrdila in drugi prenosi ostanejo <b>privzeto zasebni</b>. Pošiljatelj, prejemnik in znesek transakcije so zasebni. Nekateri kovanci imajo \"seznam bogatih\", ki omogoča vsakomur, da vidi, kateri račun ima največ kovancev. Ker je Monero zaseben, <a href=\"http://moneroblocks.info/richlist\"> bogat seznam Monero </a> ne more obstajati.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbsecure => 'Z uporabo porazdeljenega soglasnega omrežja enakovrednih je vsaka transakcija kriptografsko zavarovana. Posamezni računi imajo ob ustvarjanju prikazano 25-besedno mnemonično seme, ki ga je mogoče zapisati, da varnostno kopirate račun. Geslo je obvezno pri ustvarjanju denarnice, datoteke računa pa so šifrirane z geslom, da se zagotovi, da so brez vrednosti v primeru kraje.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbsecure => 'Vsaka transakcija je kriptografsko zaščitena z uporabo porazdeljenega omrežja soglasja med vrstniki. Posamezni računi imajo ob ustvarjanju prikazano mnemotehnično seme (seed) s 25 besedami, ki ga je mogoče zapisati za varnostno kopijo računa. Pri ustvarjanju denarnice je geslo obvezno, datoteke računov pa so šifrirane z geslom, kar zagotavlja, da so v primeru kraje brez vrednosti.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbuntraceable => 'Z izkoriščanjem obročnih podpisov (posebne lastnosti nekaterih vrst kriptografije) Monero omogoča neizsledljive transakcije. To pomeni, da je dvoumno, katera sredstva so bila porabljena, zato je zelo malo verjetno, da bi bila transakcija povezana z določenim uporabnikom.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbmonero250Sbuntraceable => 'Monero z uporabo obročnih podpisov (posebna lastnost nekaterih vrst kriptografije) omogoča transakcije, ki jih ni mogoče izslediti. To pomeni, da ni jasno, katera sredstva so bila porabljena, zato je zelo malo verjetno, da bi bila transakcija lahko povezana z določenim uporabnikom.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbsubtitle => 'Izberite logotip, da skočite na analizo tega kovanca.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbno => 'št';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbno => 'No';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbnot8722Sbcompletely => 'Ne povsem';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbsometimes => 'včasih';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbsometimes => 'Občasno';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbunsure => 'Negotovo';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbyes => 'ja';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtable250Sbyes => 'Ja';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sboverview250Sbtitle => 'Pregled';
@@ -4148,49 +4148,49 @@ class I18nSl extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbtitle => 'Analiza kovancev';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbtxs8722Sbare8722Sbsecure => 'Transakcije so kriptografsko varne.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbtxs8722Sbare8722Sbsecure => 'Transakcije so kriptografsko zavarovane.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbdecentralized250Sbtext => '<p>\n                          Zcash je podjetje in trenutno <a href=\"https://z.cash/blog/funding.html\"> prejme 20 % vseh izrudiranih ZEC kot nagrado ustanovitelju </a>.\n                        </p>\n\n                        <p>\n                          Zcash je zahteval <b>Trusted Setup</b>. To pomeni, da morate zaupati, da je bil sistem postavljen pošteno. Če ne bi bilo pošteno nastavljeno, bi <a href=\"https://blog.okturtles.com/2016/03/the-zcash-catch/\"> lahko ustvarili neomejene količine ZEC, ne da bi kdo vedel </a>. S tem bi heker obogatel in razvrednotil ZEC. Ni mogoče vedeti, ali je bila Trusted Setup izvedena pošteno. Moramo jim verjeti na besedo. To v sistem vnese človeško točko napake, ki je v nasprotju s skoraj vsako drugo kriptovaluto. Zaupati bi morali samo matematiki in preverljivi izvorni kodi kriptovalut, ne pa ljudem. Kot smo videli pri skoraj vseh velikih programskih podjetjih, kot so <a href=\"https://www.gnu.org/proprietary/proprietary-back-doors.en.html\"> Microsoft</a>, <a href=\"http://www.digitaltrends.com/computing/apple-vs-fbi-backdoor-to-data-already-exists/\"> Apple</a>, in celo vladah, jim ne bi smeli zaupati.\n                        </p>\n\n                        <p>\n                          Peter Todd, razvijalec Bitcoin Core, ki je <a href=\"https://github.com/zcash/mpc/blob/master/README.md\"> sodeloval </a> pri Zcash Trusted Setup, je to poimenoval &quot; <a href=\"https://twitter.com/petertoddbtc/status/793584540891643906\"> stranska vrata </a> &quot;.\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Zcash ni brezpogojno zdrav, ne more biti s trenutno tehnologijo ... zahteva zaupanja vredno nastavitev &hellip; bo moral ponoviti postopek [Trusted Setup] za nadgradnjo kriptovalute čez čas, tako da je ranljivost.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              Gregory Maxwell, razvijalec in kriptograf Bitcoin Core, v <a href=\"https://youtu.be/LHPYNZ8i1cU#t=29m30s\"> predstavitvi za Coinbase</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbdecentralized250Sbtext => '<p>\n                          Zcash je podjetje in trenutno <a href=\"https://z.cash/blog/funding.html\"> prejme 20 % vseh izrudiranih ZEC kot nagrado ustanovitelju </a>.\n                        </p>\n\n                        <p>\n                          Zcash je zahteval <b>Trusted Setup</b>. To pomeni, da morate zaupati, da je bil sistem postavljen pošteno. Če ne bi bilo pošteno nastavljeno, bi <a href=\"https://blog.okturtles.com/2016/03/the-zcash-catch/\"> lahko ustvarili neomejene količine ZEC, ne da bi kdo vedel </a>. S tem bi heker obogatel in razvrednotil ZEC. Ni mogoče vedeti, ali je bila Trusted Setup izvedena pošteno. Moramo jim verjeti na besedo. To v sistem vnese človeško točko napake, ki je v nasprotju s skoraj vsako drugo kriptovaluto. Zaupati bi morali samo matematiki in preverljivi izvorni kodi kriptovalut, ne pa ljudem. Kot smo videli pri skoraj vseh velikih programskih podjetjih, kot so <a href=\"https://www.gnu.org/proprietary/proprietary-back-doors.en.html\"> Microsoft</a>, <a href=\"http://www.digitaltrends.com/computing/apple-vs-fbi-backdoor-to-data-already-exists/\">Apple</a>, in celo vladah, jim ne bi smeli zaupati.\n                        </p>\n\n                        <p>\n                          Peter Todd, razvijalec Bitcoin Core, ki je <a href=\"https://github.com/zcash/mpc/blob/master/README.md\"> sodeloval </a> pri Zcash Trusted Setup, je to poimenoval &quot; <a href=\"https://twitter.com/petertoddbtc/status/793584540891643906\"> stranska vrata</a> &quot;.\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Zcash ni brezpogojno zdrav, ne more biti s trenutno tehnologijo... zahteva zaupanja vredno nastavitev &hellip; bo moral ponoviti postopek [Trusted Setup] za nadgradnjo kriptovalute čez čas, tako da je ranljivost.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              Gregory Maxwell, razvijalec in kriptograf Bitcoin Core, v <a href=\"https://youtu.be/LHPYNZ8i1cU#t=29m30s\"> predstavitvi za Coinbase</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbfungible => 'Ker vse transakcije niso zasebne, obstaja možnost, da subjekt blokira ali uvrsti določene kovance na črno listo, zaradi česar postanejo manj vredni od drugih. Glejte spodnjo opombo o pomanjkanju zamenljivosti Bitcoinov, saj isto načelo velja za Zcash.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbfungible => 'Ker vse transakcije niso zasebne, obstaja možnost, da subjekt blokira ali uvrsti na črno listo določene kovance, zaradi česar so ti manj vredni od drugih. Glej opombo o pomanjkanju zamenljivosti Bitcoina spodaj, saj enako načelo velja tudi za Zcash.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              In mimogrede, mislim, da lahko Zcash uspešno naredimo preveč sledljivega za kriminalce, kot je WannaCry, a še vedno popolnoma zasebnega &amp; zamenljivega.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Zooko Wilcox</b>, izvršna direktorica Zcash, v tvitu <a href=\"https://twitter.com/zooko/status/863202798883577856\">\n                              </a>\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Če je lahko Zcash \"preveč sledljiv\", potem ne more biti povsem zaseben ali zamenljiv.\n                        </p>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbtext => 'Transakcije Zcash so vidne v njihovi verigi blokov. Resda omogočajo skrite transakcije, vendar je <a href=\"http://stat.bloxy.info/superset/dashboard/zcash/\"> manj kot 1 % transakcij popolnoma zaščitenih </a>. Ker skrite transakcije niso obvezne in niso privzete (da ne omenjamo, da se redko uporabljajo), skrite transakcije <a href=\"http://weuse.cash/2016/06/09/btc-xmr-zcash/\"> izstopajo v njihovi verigi blokov </a> in pritegnejo pozornost nase.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbtext => 'Transakcije Zcash so vidne v blockchainu. Resda omogočajo skrite transakcije, vendar je <a href=\"http://stat.bloxy.info/superset/dashboard/zcash/\"> manj kot 1 % transakcij popolnoma zaščitenih </a>. Ker skrite transakcije niso obvezne in niso privzete (da ne omenjamo, da se redko uporabljajo), skrite transakcije <a href=\"http://weuse.cash/2016/06/09/btc-xmr-zcash/\"> izstopajo v njihovi verigi blokov </a> in pritegnejo pozornost nase.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbuntraceable250Sbtext => 'Redne transakcije so transparentne. Skrite transakcije uporabljajo zk-SNARKS, ki imajo pod določenimi pogoji zanesljiva jamstva za zasebnost. Vprašanje je, ali so ti pogoji izpolnjeni, in glede na majhno število ljudi, ki uporabljajo zaščitene zmogljivosti, to ostaja vprašljivo.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbdecentralized250Sbtext => 'Zcoin je implementiral Znodes, ki delujejo podobno kot masternodes Dash in imajo večjo moč kot druga vozlišča v omrežju. Ker vsa vozlišča niso ustvarjena enaka in je dejavnik razlikovanja med njimi količina denarja, ki ga ima posameznik (Znode stanejo 1000 XZC), je omrežje polcentralizirano.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbdecentralized250Sbtext => 'Zcoin je implementiral Znodes, ki delujejo podobno kot Dash masternodes in imajo večjo moč kot druga vozlišča v omrežju. Ker vsa vozlišča niso ustvarjena enaka in je dejavnik razlikovanja med njimi količina denarja, ki ga ima posameznik (Znode stanejo 1000 XZC), je omrežje polcentralizirano.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbfungiblity250Sbtext => 'Ko bo leta 2021 začela delovati zadnja stopnja Lelantusa, se domneva, da bo Zcoin zamenljiv zaradi obveznega uveljavljanja zasebnosti. V tem pogledu bo pravi tekmec Monera. Vendar ...';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbnote => '<p><strong>Opomba: </strong> Zcoin prehaja s svoje trenutne sheme Sigma na nov protokol, ki temelji na njegovem novem delu, Lelantus. Lelantus bo implementiran po stopnjah in ta članek bo predvideval, da so vse faze dokončane in implementirane za ustrezne primerjave skupaj s predvidenimi časi implementacije.</p>\n<p>Razlog, da je Zcoin dobil to razkošje, da ga ocenjujejo na podlagi njegovega prihodnjega protokola in ne Zcasha, je ta, da ima Zcoin načrt s splošnimi časovnimi razporedi za aktivacijo, medtem ko so Zcashovi načrti \'privzete zasebnosti\' nejasni in ostajajo nejasni.[ X563X]';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbnote => '<p><strong>Opomba: </strong> Zcoin prehaja s svoje trenutne sheme Sigma na nov protokol, ki temelji na njegovem novem delu, Lelantus. Lelantus bo implementiran po stopnjah, ta članek bo predvideval, da so vse faze dokončane in implementirane za ustrezne primerjave skupaj s predvidenimi časi implementacije.</p>\n<p>Razlog, da je Zcoin dobil to razkošje, da ga ocenjujejo na podlagi njegovega prihodnjega protokola in ne Zcasha, je ta, da ima Zcoin načrt s splošnimi časovnimi razporedi za aktivacijo, medtem ko so Zcashovi načrti \'privzete zasebnosti\' nejasni in ostajajo nejasni.</p>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbprivate250Sbtext => '<p>Zcoin (XZC) ne bo imel bogatega seznama, zato bo zaseben. Privzeto bo obvezna zasebnost predvidoma zaživela leta 2021. Ko bo uvedena, obogatenega seznama ne bo mogoče ustvariti (čeprav ga trenutno <a href=\"https://www.coinexplorer.net/XZC/richlist\">imajo </a>).</p> ';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbprivate250Sbtext => '<p>Zcoin (XZC) ne bo imel seznama bogatih, zato bo zaseben. Privzeto obvezna zasebnost naj bi zaživela leta 2021. Ko bo uvedena, obogatenega seznama ne bo mogoče ustvariti (čeprav ga trenutno <a href=\"https://www.coinexplorer.net/XZC/richlist\">imajo </a>).</p> ';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbuntraceablity250Sbtext => 'Z zadnjo stopnjo Lelantusa, ki je bila izvedena leta 2021, Zcoin ne bi smel biti sledljiv, čeprav teoretični napadi še niso bili raziskani, ker še ni bil izdan ali še ni bil izdan v naravi. Trenutno je Zcoin sledljiv, če vstavite <a href=\"https://explorer.zcoin.io/\">naslov Zcoin</a> v raziskovalec verige blokov in vidite njegovo stanje in povezane transakcije.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbuntraceablity250Sbtext => 'Z zadnjo stopnjo Lelantusa, ki je bila izvedena leta 2021, Zcoin ne bi smel biti sledljiv, čeprav teoretični napadi še niso bili raziskani, ker še ni bil izdan ali še ni bil izdan v naravi. Trenutno je Zcoin sledljiv, če vstavite <a href=\"https://explorer.zcoin.io/\">naslov Zcoin</a> v blockchain raziskovalec in vidite njegovo stanje in povezane transakcije.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbdecentraized250Sbtext => 'Vsa vozlišča (vozlišče je tekoči primerek verige blokov kovanca) v omrežju so enaka. Ni nadrazreda vozlišč, ki bi imela večji vpliv ali nadzor nad transakcijami ali sistemom kot druga vozlišča.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbdecentraized250Sbtext => 'Vsa vozlišča (vozlišče je tekoči primerek blockchaina kovanca) v omrežju so enaka. Ni nadrazreda vozlišč, ki bi imela večji vpliv ali nadzor nad transakcijami ali sistemom kot druga vozlišča.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbdecentralized250Sbtitle => 'Decentralizirano';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbdescription => 'Zakaj je Monero najboljši kovanec za zasebnost? Vsi kovanci, osredotočeni na zasebnost, ne morejo zagotoviti 100-odstotne zasebnosti, nesledljivosti, varnosti in zamenljivosti. Ugotovite, kako Monero rešuje vse te težave v primerjavi z drugimi \"zasebnimi\" kovanci.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbdescription => 'Zakaj je Monero najboljši kovanec za zasebnost? Vsi kovanci, osredotočeni na zasebnost, ne morejo zagotoviti 100% zasebnosti, nesledljivosti, varnosti in zamenljivosti. Ugotovite, kako Monero rešuje vse te težave v primerjavi z drugimi \"zasebnimi\" kovanci.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro8722Sb0 => 'Vsi kovanci, osredotočeni na zasebnost, ne morejo zagotoviti 100-odstotne zasebnosti, nesledljivosti, varnosti in zamenljivosti v 100-odstotno decentraliziranem kovancu z nastavitvijo brez zaupanja. Kaj so ti atributi in zakaj so pomembni:';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro8722Sb0 => 'Vsi kovanci, osredotočeni na zasebnost, ne morejo zagotoviti 100% zasebnosti, nesledljivosti, varnosti in zamenljivosti v 100-odstotno decentraliziranem kovancu z nastavitvijo brez zaupanja. Kaj so ti atributi in zakaj so pomembni:';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbfungible250Sbtext => 'Vsi kovanci so enaki in imajo enako vrednost.';
@@ -4199,7 +4199,7 @@ class I18nSl extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbfungible250Sbtitle => 'Zamenljiv';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbprivate250Sbtext => 'Vaše finance niso vidne javnosti. Oseba, ki gleda verigo blokov kovanca, ne bo mogla videti, koliko denarja imate.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbprivate250Sbtext => 'Vaše finance niso vidne javnosti. Oseba, ki gleda verigo blokov (blockchain) kovanca, ne bo mogla videti, koliko denarja imate.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbprivate250Sbtitle => 'Zasebno';
@@ -4211,37 +4211,37 @@ class I18nSl extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbsecure250Sbtitle => 'Varno';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceability250Sbtext => 'Kovancev ni mogoče izslediti z analizo verige blokov ali spremljanjem verige blokov.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceability250Sbtext => 'Kovancev ni mogoče izslediti z analizo ali spremljanjem blockchaina.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceable250Sbtitle => 'Neizsledljivo';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Povzetek</h2>\n <p> Po našem mnenju je Monero jasna izbira, če iščete zasebno, varno, neizsledljivo, zamenljivo, decentralizirano kriptovaluto, ki ne zahteva zaupanja vredne nastavitve. Vse drugo ogroža vašo zasebnost in varnost. Vendar ne upoštevajte le našega mnenja. Naredite lastno raziskavo in se prepričajte sami. Upoštevajte, da Monero podpirajo in uporabljajo subjekti, ki so odvisni od zasebnosti in nesledljivosti, kot so:\n                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purizem </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      AlphaBay Market (AB) je bil zaprt julija 2017. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Zvezna pritožba glede zaplembe </a> proti AB kaže, da:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero je edina zasebna in neizsledljiva kriptovaluta:\n                          </b>\n                          <br />\n                          &quot;Iz denarnic in računalniških agentov CAZES so skupaj prevzeli nadzor nad približno 8.800.000 \$ v Bitcoinih, Ethereumu, Morenu [sic] in Zcashu, razdeljenih na naslednji način: 1.605,0503851 Bitcoin, 8.309,271639 Ethereum, 3.691,98 Zcash, <em>in neznana količina Monera.</em>&quot; (dno str. 20 in vrh str. 21, poudarek dodan) </li>\n                        <li>\n                          <b>\n                            Bitcoin transakcije niso zasebne in jih je mogoče izslediti:\n                          </b>\n                          <br />\n                          &quot;Zvezni agenti so pridobili naloge, potem ko so sledili številnim transakcijam z bitcoini, ki izvirajo iz AlphaBaya, do računov v digitalni valuti in nazadnje do bančnih računov in drugih opredmetenih sredstev, ki jih imata CAZES in njegova žena.&quot; (str. 17, vrstice 24- 26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                      LocalMonero ne zagovarja ali spodbuja nobene nezakonite dejavnosti.\n                    </p>\n                  </div>  ';
+  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Povzetek</h2>\n <p> Po našem mnenju je Monero jasna izbira, če iščete zasebno, varno, neizsledljivo, zamenljivo, decentralizirano kriptovaluto, ki ne zahteva zaupanja vredne nastavitve. Vse drugo ogroža vašo zasebnost in varnost. Vendar ne upoštevajte le našega mnenja. Naredite lastno raziskavo in se prepričajte sami. Upoštevajte, da Monero podpirajo in uporabljajo subjekti, ki so odvisni od zasebnosti in nesledljivosti, kot so:\n                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purism </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      AlphaBay Market (AB) je bil zaprt julija 2017. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Zvezna pritožba glede zaplembe </a> proti AB kaže, da:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero je edina zasebna in neizsledljiva kriptovaluta:\n                          </b>\n                          <br />\n                          &quot;Iz denarnic in računalniških agentov CAZES so skupaj prevzeli nadzor nad približno 8.800.000 \$ v Bitcoinih, Ethereumu, Morenu [sic] in Zcashu, razdeljenih na naslednji način: 1.605,0503851 Bitcoin, 8.309,271639 Ethereum, 3.691,98 Zcash, <em>in neznana količina Monera.</em>&quot; (dno str. 20 in vrh str. 21, poudarek dodan) </li>\n                        <li>\n                          <b>\n                            Bitcoin transakcije niso zasebne in jih je mogoče izslediti:\n                          </b>\n                          <br />\n                          &quot;Zvezni agenti so pridobili naloge, potem ko so sledili številnim transakcijam z bitcoini, ki izvirajo iz AlphaBaya, do računov v digitalni valuti in nazadnje do bančnih računov in drugih opredmetenih sredstev, ki jih imata CAZES in njegova žena.&quot; (str. 17, vrstice 24- 26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                     LocalMonero ne zagovarja ali spodbuja nezakonite dejavnosti.\n                    </p>\n                  </div>  ';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbtitle => 'Zakaj je Monero boljši od Dash, Zcash, Zcoin (tudi z Lelantusom), Grin in Bitcoin Mixers, kot je Wasabi (posodobljeno maja 2020)';
+  String get knowledge250Sbwhy8722Sbmonero250Sbtitle => 'Zakaj je Monero Boljši od Dash, Zcash, Zcoin (tudi z Lelantusom), Grin in Bitcoin Mikserji, kot je Wasabi (posodobljeno maja 2020)';
 
   @override
-  String get knowledge250Sbwired250Sb0250Sbtext => '<p> Tako na področju zasebnosti kot na področju kriptovalut so dezinformacije pogosto razširjene. Imamo <a target=\"_blank\" href=\"/knowledge/monero-myths-debunked\" class=\"next-link\">članek, ki opisuje petnajst pogostih nepravilnih ali zastarelih predpostavk o Moneru </a>, vendar si želimo vzeti čas za obravnavanje enega posebnega članka, ki ga skeptiki glede Monera pogosto navajajo in razširjajo.</p>\n\n<p>Publikacija Wired je 27. marca 2018 objavila <a target=\"_blank\" href=\"https://www.wired.com/story/monero-privacy/\" class=\"next-link\">članek</a>, ki je bil sam napisan kot odgovor na še en, sveže objavljen članek, ki so ga objavili različni akademiki z naslovom: »Empirična analiza sledljivosti v verigi blokov Monero«.</p>\n\n<p>Čeprav so soavtorji prispevka bili posamezniki z jasnim navzkrižjem interesov (beri: so svetovalci Zcasha in imajo delež v njem), je skupnost Monero prispevek zmerno dobro sprejela, saj potrjuje stvari, ki jih skupnost že ve. in o njih so pisali v lastnih dokumentih Monero Research Lab (<a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0001.pdf\" class=\"next-link\">MRL-0001</a> in <a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0004.pdf\" class=\"next-link\">MRL-0004</a>), od katerih je bil prvi objavljen štiri leta prej. Vendar pa je bilo z njim tudi več frustracij, predvsem navzkrižje interesov, dejstvo, da so bila vprašanja že znana, razpravljana in – v nekaterih primerih – odpravljena, ter huda napačna opredelitev Monerovih jamstev za zasebnost v tistem času. Skupnost je komentirala prednatis dela in veliko njihovih priporočil je prišlo do končnega dokumenta </p>\n\n<p>Kaj točno je bilo napačno opredeljeno? Dejstvo, da Monero že več kot eno leto ni imel pomanjkljivosti, ki so bile obravnavane v dokumentu. Transakcije pred letom 2017 so bile res ranljive za obliko uhajanja zasebnosti, toda v času objave je Monero obravnaval večino pomislekov. Če smo pošteni do avtorjev, le malo razpravljajo o zdravilih Monera, vendar ne dovolj, da bi vplivali na učinek, ki ga je imel na takratni medijski cikel kriptovalut. Zato članek Wired.</p>\n\n<p>Čeprav lahko zadevni članek Wired preučimo kot obdobje in kako resničen ali neresničen je bil v tistem času, dejstvo, da se ga še danes deli kot utemeljitev, zakaj so Monero jamstva za zasebnost šibka, dejansko poziva k analizi o tem, kako se komad drži v sedanjosti. Z veseljem se odzovemo na to povabilo.</p>\n\n<p>Hitro branje članka pokaže več senzacionaliziranih vrstic, kot je »[Ugotovitve] ne bi smele skrbeti nikogar, ki poskuša prikrito porabiti Monero danes« in celoten ton članka, ki raziskavo trdi kot \'novo\', v veliki meri temelji na publikaciji. Sam akademski članek vsebuje priporočila, kot je opozarjanje uporabnikov Monera na morebitno ogrožanje njihove anonimnosti, kljub dejstvu, da te razprave ne potekajo le od leta 2014, ampak je skupnost spodbujala, naj ljudje ne kupujejo Monera in da je bilo zelo eksperimentalno.</p>\n\n<p>Kaj pa same kritike? Resničnost je taka, da številne težave z Monero kot kovancem za zasebnost ne veljajo več za Monero ali pa so skupne pomisleke v zvezi s kovanci za zasebnost kot kategorijo kriptovalut, ki temeljijo na verigi blokov. Začnimo jih obravnavati.</p>\n\n<p>Ena najpogosteje citiranih kritik Monera je, da bi bile zaradi trajnosti in nespremenljivosti verige blokov, če bi prihodnja tehnologija kršila zasebnost, vse Monerove pretekle transakcije razgaljene. Z drugimi besedami, za vašo zasebnost tiktaka ura.</p>\n\n<p>Tega ne moremo dovolj poudariti. Dobesedno vsak kovanec za zasebnost, ki uporablja metode v verigi za zamegljevanje in zasebnost, ima to napako, kljub temu pa se pogosto uporablja proti Moneru (ironično, velikokrat s konkurenčnimi kovanci za zasebnost z isto težavo) in je uporabljen tudi v tem članku. Odziv na to kritiko bo morda za nekatere presenetljiv, vendar je Monero dejansko lahko manj ranljiv kot drugi kovanci za zasebnost zaradi dejstva, da ima večstranski pristop k zasebnosti.</p>\n\n<p>Monero skrije izhode (pošiljatelje), zneske in prejemnike prek treh različnih tehnologij, podpisov obročev, RingCT in prikritih naslovov. Med temi so obročni podpisi najšibkejši in najbolj dovzetni tako za sodobno hevristiko kot za teoretične, prihodnje tehnologije, ki kršijo zasebnost. To je skupnosti Monero znano že leta in potekajo aktivne raziskave za izboljšanje ali popolno zamenjavo sheme obročnega podpisa.</p>\n\n<p>Vendar, tudi če bi bil podpis obroča v celoti pokvarjen, bi bil razkrit le pravi rezultat. NE pošiljatelj (kot pri posamezniku), ampak izhod. Združiti izhod z identiteto ni nemogoče, vendar bi zahtevalo več metapodatkov in virov. Skupaj z dejstvom, da RingCT in prikriti naslov NE bi bil razkrit, učinek še dodatno zmanjša.</p>\n\n<p>Treba je opozoriti, da članek Wired rahlo razpravlja o zgornjih informacijah v delu, kjer so se za komentar obrnili na Riccarda \'fluffypony\' Spagnija, vendar je čas, namenjen temu, kratek in skoraj se zdi, da odmahuje z roko te ključne informacije. Pomanjkanje razumevanja je še posebej očitno, ko poskušamo o teh stvareh razpravljati z ljudmi, ki hočeš nočeš delijo članek v sodobnem času.</p>\n\n<p>Druga kritika, ki jo je veliko težje obravnavati, je v tem, kako zunanji svet gleda na Monero in kako je to povezano s tem, kako skupnost okoli Monera gleda na kovanec. Za primer tega bralcem ni treba iskati dlje od naslova samega članka: »Priljubljena valuta temnega spleta je manj neizsledljiva, kot se zdi«. </p>\n\n<p>Vsakdo, ki preživi veliko časa v skupnosti Monero, lahko potrdi dejstvo, da se skupnost Monero zelo trudi pokazati, kako težko je doseči resnično zasebnost, tudi na škodo prizadevanj za trženje ali posvojitev. Če skupnost zagotovi dovolj virov, ki natančno razpravljajo o kovancu in njegovih pomanjkljivostih, na neki točki za nevednost postane kriv uporabnik, ki verjame, da je kovanec vse, kar potrebuje za 100-odstotno zasebnost.</p>\n\n<p>Do te točke bi moralo biti očitno, da skupnost Monero resno jemlje svojo zasebnost in svojo poštenost glede slabosti v njej in poznejših izboljšav. Članki, kot je ta, popolnoma pogrešajo ta duh inovativnosti v Moneru. Monero primerja z množico drugih kriptovalut, ki dajejo veličastne trditve, z mislijo le na dobiček in plen na neizobražene vlagatelje, ki si želijo </p>\n\n<p>Realnost ne bi mogla biti bolj drugačna. Monero se močno zaveda svojih slabosti, skuša nadaljevati gradnjo, da bi jih izboljšal, zategnil ohlapne sklepe in dosegel zelo resničen, a zelo težek cilj, dati svetu zasebno, zamenljivo kriptovaluto, ki jo lahko uporabljajo vsi, in storiti vse na pravičen, decentraliziran način, ki ga vodi skupnost. Morda je čas, da opustimo senzacionalizacijo in deljenje člankov kot sredstvo za odlaganje vrečk in promocijo konkurentov. Morda je čas, da povemo še eno zgodbo.</p>';
+  String get knowledge250Sbwired250Sb0250Sbtext => '<p> Tako na področju zasebnosti kot na področju kriptovalut so dezinformacije pogosto razširjene. Imamo <a target=\"_blank\" href=\"/knowledge/monero-myths-debunked\" class=\"next-link\">članek, v katerem je opisanih petnajst pogostih napačnih ali zastarelih domnev o Moneru</a>, vendar si želimo vzeti čas in obravnavati en poseben članek, ki ga skeptiki Monera pogosto navajajo in širijo.</p>\n\n<p>Publikacija Wired je 27. marca 2018 objavila <a target=\"_blank\" href=\"https://www.wired.com/story/monero-privacy/\" class=\"next-link\">članek</a>, ki je bil sam napisan kot odgovor na še en, sveže objavljen članek, ki so ga objavili različni akademiki z naslovom: \"Empirična analiza sledljivosti v Monero blockchainu\".</p>\n\n<p>Čeprav so soavtorji prispevka bili posamezniki z jasnim navzkrižjem interesov (beri: so svetovalci Zcasha in imajo delež v njem), je skupnost Monero prispevek zmerno dobro sprejela, saj potrjuje stvari, ki jih skupnost že ve. O njih so pisali v lastnih dokumentih Monero Research Lab (<a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0001.pdf\" class=\"next-link\">MRL-0001</a> in <a target=\"_blank\" href=\"https://web.getmonero.org/resources/research-lab/pubs/MRL-0004.pdf\" class=\"next-link\">MRL-0004</a>), od katerih je bil prvi objavljen štiri leta prej. Vendar pa je bilo z njim tudi več frustracij, predvsem navzkrižje interesov, dejstvo, da so bila vprašanja že znana, razpravljana in – v nekaterih primerih – odpravljena, ter huda napačna opredelitev Monerovih jamstev za zasebnost v tistem času. Skupnost je komentirala prednatis dela in veliko njihovih priporočil je prišlo do končnega dokumenta </p>\n\n<p>Toda kaj točno je bilo napačno opisano? Dejstvo, da Monero že več kot leto dni ni imel pomanjkljivosti, ki so bile obravnavane v članku. Transakcije pred letom 2017 so bile res ranljive za obliko uhajanja zasebnosti, vendar je Monero v času objave obravnaval večino pomislekov. Da bi bili do avtorjev pošteni, o Monerovih popravkih razpravljajo v manjši meri, vendar ne dovolj, da bi vplivali na učinek, ki ga je imel članek na takratni medijski cikel o kriptovalutah. Zato je bil članek objavljen v reviji Wired.</p>\n\n<p>Čeprav lahko obravnavani članek Wired preučujemo kot članek iz tistega obdobja in kako resničen ali neresničen je bil v tistem času, pa dejstvo, da se še danes deli kot utemeljitev, zakaj so Monerova jamstva za zasebnost šibka, dejansko spodbuja analizo, kako se članek obnese v sedanjosti. To vabilo z veseljem sprejemamo.</p>\n\n<p>Hitro branje članka pokaže več senzacionalističnih vrstic, kot je \"[Ugotovitve] ne bi smele skrbeti le tistih, ki danes poskušajo skrivaj porabiti Monero\", in celoten ton članka, ki postulira raziskavo kot \"novo\", v veliki meri na podlagi objave. V samem akademskem članku so priporočila, kot je opozarjanje uporabnikov Monera na morebitno ogrožanje njihove anonimnosti, kljub dejstvu, da te razprave ne potekajo le od leta 2014, temveč je bil poziv skupnosti, naj ljudje ne kupujejo Monera in da je zelo eksperimentalen.</p>\n\n<p>A kaj pa same kritike? Dejstvo je, da številna vprašanja v zvezi s kovancem Monero kot kovancem za zaščito zasebnosti bodisi ne veljajo več za Monero bodisi so skupna vprašanja kovancev za zaščito zasebnosti kot kategorije kriptovalut, ki temeljijo na veriženju blokov. Začnimo jih obravnavati.</p>\n\n<p>Eden od najpogosteje navajanih očitkov Moneru je, da bi bile zaradi trajnosti in nespremenljivosti verige blokov, če bi tehnologija v prihodnosti kršila zasebnost, razkrite vse pretekle transakcije Monera. Z drugimi besedami, vaša zasebnost ima tiktakajočo uro.</p>\n\n<p>Tega ne moremo dovolj poudariti. To pomanjkljivost ima dobesedno vsak kovanec za zasebnost, ki za zakrivanje in zasebnost uporablja metode na verigi, kljub temu pa se pogosto uporablja proti Moneru (ironično, večkrat jo uporabljajo konkurenčni kovanci za zasebnost z isto težavo) in je uporabljena tudi v tem članku. Odgovor na to kritiko bo morda za nekatere presenetljiv, vendar je Monero dejansko morda manj ranljiv kot drugi kovanci za zasebnost zaradi dejstva, da ima večstranski pristop k zasebnosti.</p>\n\n<p>Monero skriva izhode (pošiljatelje), zneske in prejemnike s tremi različnimi tehnologijami, in sicer z obročnimi podpisi, RingCT in prikritimi naslovi. Od teh je obročni podpis najšibkejši in najbolj dovzeten za sodobne hevristike in teoretične tehnologije, ki bodo v prihodnosti razbijale zasebnost. To je skupnosti Monero znano že več let, zato potekajo aktivne raziskave za izboljšanje ali popolno zamenjavo sheme obročnih podpisov.</p>\n\n<p>Vendar, tudi če bi bil podpis obroča v celoti pokvarjen, bi bil razkrit le pravi rezultat. NE pošiljatelj (kot pri posamezniku), ampak izhod. Združiti izhod z identiteto ni nemogoče, vendar bi zahtevalo več metapodatkov in virov. Skupaj z dejstvom, da RingCT in prikriti naslov NE bi bil razkrit, učinek še dodatno zmanjša.</p>\n\n<p>Treba je opozoriti, da članek Wired rahlo razpravlja o zgornjih informacijah v delu, kjer so se za komentar obrnili na Riccarda \'fluffypony\' Spagnija, vendar je čas, namenjen temu, kratek in skoraj se zdi, da odmahuje z roko te ključne informacije. Pomanjkanje razumevanja je še posebej očitno, ko poskušamo o teh stvareh razpravljati z ljudmi, ki hočeš nočeš delijo članek v sodobnem času.</p>\n\n<p>Druga kritika, ki jo je veliko težje obravnavati, je v tem, kako zunanji svet gleda na Monero in kako je to povezano s tem, kako skupnost okoli Monera gleda na kovanec. Za primer tega bralcem ni treba iskati dlje od naslova samega članka: »Priljubljena valuta temnega spleta je manj neizsledljiva, kot se zdi«. </p>\n\n<p>Vsakdo, ki preživi veliko časa v skupnosti Monero, lahko potrdi dejstvo, da se skupnost Monero zelo trudi pokazati, kako težko je doseči resnično zasebnost, tudi na škodo prizadevanj za trženje ali posvojitev. Če skupnost zagotovi dovolj virov, ki natančno razpravljajo o kovancu in njegovih pomanjkljivostih, na neki točki za nevednost postane kriv uporabnik, ki verjame, da je kovanec vse, kar potrebuje za 100-odstotno zasebnost.</p>\n\n<p>Do te točke bi moralo biti očitno, da skupnost Monero resno jemlje svojo zasebnost in svojo poštenost glede slabosti v njej in poznejših izboljšav. Članki, kot je ta, popolnoma pogrešajo ta duh inovativnosti v Moneru. Monero primerja z množico drugih kriptovalut, ki dajejo veličastne trditve, z mislijo le na dobiček in plen na neizobražene vlagatelje, ki si želijo </p>\n\n<p>Realnost ne bi mogla biti bolj drugačna. Monero se močno zaveda svojih slabosti, skuša nadaljevati gradnjo, da bi jih izboljšal, zategnil ohlapne sklepe in dosegel zelo resničen, a zelo težek cilj, dati svetu zasebno, zamenljivo kriptovaluto, ki jo lahko uporabljajo vsi, in storiti vse na pravičen, decentraliziran način, ki ga vodi skupnost. Morda je čas, da opustimo senzacionalizacijo in deljenje člankov kot sredstvo za odlaganje vrečk in promocijo konkurentov. Morda je čas, da povemo še eno zgodbo.</p>';
 
   @override
-  String get knowledge250Sbwired250Sbdescription => 'Tako na področju zasebnosti kot na področju kriptovalut so dezinformacije pogosto razširjene. Tukaj obravnavamo članek Wired, ki ga skeptiki Monero pogosto citirajo in razširjajo.';
+  String get knowledge250Sbwired250Sbdescription => 'Tako na področju zasebnosti kot na področju kriptovalut so dezinformacije pogosto razširjene. Tukaj obravnavamo članek medija \'Wired\', ki ga skeptiki Monero pogosto razširjajo in citirajo.';
 
   @override
-  String get knowledge250Sbwired250Sbtitle => 'Wired Magazine se moti glede Monera, evo zakaj';
+  String get knowledge250Sbwired250Sbtitle => 'Wired Magazine se Moti Glede Monera. Evo, Zakaj';
 
   @override
   String get left8722Sbdrawer250Sbabout => 'O tem';
 
   @override
-  String get left8722Sbdrawer250Sbbuy8722Sbmonero => 'Kupite Monero';
+  String get left8722Sbdrawer250Sbbuy8722Sbmonero => 'Kupi Monero';
 
   @override
   String get left8722Sbdrawer250Sbdashboard => 'Nadzorna plošča';
 
   @override
-  String get left8722Sbdrawer250Sbfaq => 'pogosta vprašanja';
+  String get left8722Sbdrawer250Sbfaq => 'Pogosto zastavljena vprašanja';
 
   @override
   String get left8722Sbdrawer250Sbforums => 'Forumi';
@@ -4253,7 +4253,7 @@ class I18nSl extends I18n {
   String get left8722Sbdrawer250Sbpost8722Sbnew8722Sbad => 'Objavite oglas';
 
   @override
-  String get left8722Sbdrawer250Sbrevuo250Sblabel => 'Standard Monero: novice o Monero';
+  String get left8722Sbdrawer250Sbrevuo250Sblabel => 'Monero Standard: Monero Novice';
 
   @override
   String get left8722Sbdrawer250Sbsell8722Sbmonero => 'Prodaj Monero';
@@ -4289,13 +4289,13 @@ class I18nSl extends I18n {
   String get login250Sberror8722Sb98722Sbtext => 'Preveč poskusov prijave! Počakajte nekaj časa.';
 
   @override
-  String get login250Sberror8722Sb98722Sbtitle => 'Preseženo število poskusov prijave';
+  String get login250Sberror8722Sb98722Sbtitle => 'Število poskusov prijave je prekoračeno';
 
   @override
   String get login250Sberror8722Sbgeneric => 'Napaka!';
 
   @override
-  String get login250Sbremember8722Sbme => 'Zapomni si me';
+  String get login250Sbremember8722Sbme => 'Zapomni si';
 
   @override
   String login250Sbreset(Object link) {
@@ -4307,7 +4307,7 @@ class I18nSl extends I18n {
 
   @override
   String login250Sbsame8722Sbcredentials8722Sbtip(Object frontTypeUrl) {
-    return 'Za prijavo lahko uporabite svoje $frontTypeUrl poverilnice.';
+    return 'Za prijavo lahko uporabite svoje $frontTypeUrl podatke.';
   }
 
   @override
@@ -4319,19 +4319,19 @@ class I18nSl extends I18n {
   String get login250Sbsignup8722Sblink => 'Prijavite se';
 
   @override
-  String get login250Sbtitle => 'Vpiši se';
+  String get login250Sbtitle => 'Vpis';
 
   @override
   String get login250Sbusername => 'Uporabniško ime';
 
   @override
-  String get login250Sbusername8722Sbtip => '3-16 znakov. Dovoljeni znaki: a-z, A-Z, 0-9, -, _';
+  String get login250Sbusername8722Sbtip => '3-16 znakov. Dovoljeni znaki so: a-z, A-Z, 0-9, -, _';
 
   @override
   String get method250Sbalipay => 'Alipay';
 
   @override
-  String get method250Sball8722Sbonline8722Sboffers => 'Vse spletne ponudbe';
+  String get method250Sball8722Sbonline8722Sboffers => 'Vse online ponudbe';
 
   @override
   String get method250Sbcash => 'Gotovina (lokalno)';
@@ -4340,13 +4340,13 @@ class I18nSl extends I18n {
   String get method250Sbcash8722Sbat8722Sbatm => 'Gotovina na bankomatu';
 
   @override
-  String get method250Sbcash8722Sbby8722Sbmail => 'Gotovina po pošti';
+  String get method250Sbcash8722Sbby8722Sbmail => 'Gotovina (dernar) po pošti';
 
   @override
   String get method250Sbcash8722Sbdeposit => 'Polog gotovine';
 
   @override
-  String get method250Sbcash8722Sbon8722Sbdelivery => 'Gotovino po povzetju';
+  String get method250Sbcash8722Sbon8722Sbdelivery => 'Gotovina po povzetju';
 
   @override
   String get method250Sbcashiers8722Sbcheck => 'Blagajniški ček';
@@ -4358,37 +4358,37 @@ class I18nSl extends I18n {
   String get method250Sbcryptocurrency => 'Kriptovaluta';
 
   @override
-  String get method250Sbgift8722Sbcard => 'Koda darilne kartice';
+  String get method250Sbgift8722Sbcard => 'Koda Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbamazon => 'Koda darilne kartice Amazon';
+  String get method250Sbgift8722Sbcard8722Sbamazon => 'Koda Amazon Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbapple => 'Koda darilne kartice Apple Store';
+  String get method250Sbgift8722Sbcard8722Sbapple => 'Koda Apple Store Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbebay => 'Koda darilne kartice Ebay';
+  String get method250Sbgift8722Sbcard8722Sbebay => 'Koda Ebay Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbglobal => 'Koda darilne kartice (globalno)';
+  String get method250Sbgift8722Sbcard8722Sbglobal => 'Koda Darilne Kartice (Globalno)';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbitunes => 'Koda darilne kartice iTunes';
+  String get method250Sbgift8722Sbcard8722Sbitunes => 'Koda iTunes Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbstarbucks => 'Koda darilne kartice Starbucks';
+  String get method250Sbgift8722Sbcard8722Sbstarbucks => 'Koda Starbucks Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbsteam => 'Koda darilne kartice Steam';
+  String get method250Sbgift8722Sbcard8722Sbsteam => 'Koda Steam Darilne Kartice';
 
   @override
-  String get method250Sbgift8722Sbcard8722Sbwalmart => 'Koda darilne kartice Walmart';
+  String get method250Sbgift8722Sbcard8722Sbwalmart => 'Koda Walmart Darilne Kartice';
 
   @override
-  String get method250Sbinternational8722Sbwire8722Sbswift => 'Mednarodno nakazilo (SWIFT)';
+  String get method250Sbinternational8722Sbwire8722Sbswift => 'Mednarodno Nakazilo (SWIFT)';
 
   @override
-  String get method250Sbmobile8722Sbtop8722Sbup => 'Polnjenje mobilnega telefona';
+  String get method250Sbmobile8722Sbtop8722Sbup => 'Polnjenje preko mobilnega telefona';
 
   @override
   String get method250Sbnational8722Sbbank => 'Nacionalno bančno nakazilo';
@@ -4397,16 +4397,16 @@ class I18nSl extends I18n {
   String get method250Sbother => 'Druga spletna plačila';
 
   @override
-  String get method250Sbother8722Sbonline8722Sbwallet => 'Druga spletna denarnica';
+  String get method250Sbother8722Sbonline8722Sbwallet => 'Druge Spletne Denarnice';
 
   @override
-  String get method250Sbother8722Sbonline8722Sbwallet8722Sbglobal => 'Druga spletna denarnica (globalno)';
+  String get method250Sbother8722Sbonline8722Sbwallet8722Sbglobal => 'Druge Spletne Denarnice (Globalno)';
 
   @override
-  String get method250Sbother8722Sbpre8722Sbpaid8722Sbdebit => 'Druga predplačniška debetna kartica';
+  String get method250Sbother8722Sbpre8722Sbpaid8722Sbdebit => 'Druge Predplačniške Debetne Kartice';
 
   @override
-  String get method250Sbsepa => 'Bančno nakazilo SEPA (EU).';
+  String get method250Sbsepa => 'Bančno nakazilo SEPA (EU)';
 
   @override
   String get method250Sbspecific8722Sbbank => 'Nakazila pri določeni banki';
@@ -4415,7 +4415,7 @@ class I18nSl extends I18n {
   String get method250Sbwechat => 'Wechat';
 
   @override
-  String get method250Sbyandex => 'Yandex denar';
+  String get method250Sbyandex => 'Yandex Money';
 
   @override
   String get method250Sbyoomoney => 'YooMoney';
@@ -4428,7 +4428,7 @@ class I18nSl extends I18n {
 
   @override
   String morph250Sbdeposit250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return 'Naslov za vračilo $cryptocurrencyName.';
+    return 'Naslov za vračilo $cryptocurrencyName';
   }
 
   @override
@@ -4437,24 +4437,24 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get morph250Sberror250Sbtitle => 'Napaka pri ustvarjanju posla ChangeNow!';
+  String get morph250Sberror250Sbtitle => 'Napaka pri ustvarjanju ChangeNow trade-a!';
 
   @override
   String get morph250Sbservice8722Sbdown => 'Storitev XMR podjetja ChangeNow začasno ni na voljo. Poskusi znova kasneje.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return 'Prejemanje naslova $cryptocurrencyName.';
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
+    return 'Prejemani naslov $cryptocurrencyName';
   }
 
   @override
-  String get morph250Sbwithdrawal250Sblimits8722Sbmax => 'Največ';
+  String get morph250Sbwithdrawal250Sblimits8722Sbmax => 'Maksimum';
 
   @override
-  String get morph250Sbwithdrawal250Sblimits8722Sbmin => 'Najmanjša';
+  String get morph250Sbwithdrawal250Sblimits8722Sbmin => 'Minimalno';
 
   @override
-  String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Omejitve za to trgovanje ChangeNow:';
+  String get morph250Sbwithdrawal250Sblimits8722Sbtitle => 'Omejitve za to ChangeNow trgovanje:';
 
   @override
   String new8722Sbad250Sbdisabled8722Sbtype8722Sbselector250Sbnotice(Object amountRequired) {
@@ -4469,14 +4469,14 @@ class I18nSl extends I18n {
 
   @override
   String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
-    return 'Trgovina $assetName';
+    return 'Trgovanje $assetName';
   }
 
   @override
   String get new8722Sbad250Sbreview250Sbemail8722Sbverified => 'Samo za uporabnike s potrjeno e-pošto';
 
   @override
-  String get nojs250Sbdashboard250Sbsave8722Sbvacations8722Sbbtn => 'Prihranite počitnice';
+  String get nojs250Sbdashboard250Sbsave8722Sbvacations8722Sbbtn => 'Shranite počitnice';
 
   @override
   String get nojs250Sberror250Sblogin250Sbunauthorized => 'Napačno uporabniško ime/geslo/enkratno geslo!';
@@ -4486,32 +4486,32 @@ class I18nSl extends I18n {
 
   @override
   String nojs250Sberror250Sbvalidation250Sbaddress(Object assetName) {
-    return 'Navedite veljaven naslov $assetName.';
+    return 'Navedite veljaven $assetName naslov.';
   }
 
   @override
   String get nojs250Sberror250Sbvalidation250Sbamount => 'Vnesite veljaven znesek.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbcaptcha => 'Captcha ni uspela. Prosim poskusite ponovno';
+  String get nojs250Sberror250Sbvalidation250Sbcaptcha => 'Captcha ni uspel. Prosimo, da poskusite ponovno';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbconfirm8722Sbpassword => 'Vneseni gesli se ne ujemata.';
+  String get nojs250Sberror250Sbvalidation250Sbconfirm8722Sbpassword => 'Vnesena gesla se ne ujemata.';
 
   @override
   String get nojs250Sberror250Sbvalidation250Sbemail => 'Vnesite veljaven e-poštni naslov.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250SbfeedbackMsg => 'Povratno sporočilo mora imeti največ 256 znakov.';
+  String get nojs250Sberror250Sbvalidation250SbfeedbackMsg => 'Povratno sporočilo naj ima največ 256 znakov.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250SbfeedbackType => 'Prosimo izberite eno od dovoljenih vrst povratnih informacij: \'zaupanje\', \'pozitivno\', \'nevtralno\', \'negativno\' ali \'blokiranje\'.';
+  String get nojs250Sberror250Sbvalidation250SbfeedbackType => 'Prosimo izberite eno od dovoljenih vrst povratnih informacij: \'zaupanja-vredno\', \'pozitivno\', \'nevtralno\', \'negativno\' ali \'block\'.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbgeneric8722Sbstring => 'Prosimo, spremenite besedilo, tako da bo v določenih mejah.';
+  String get nojs250Sberror250Sbvalidation250Sbgeneric8722Sbstring => 'Prosim spremenite besedilo, tako, da bo v določenih mejah.';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbhomepage => 'Biti mora poln veljaven URL (tj. vključno z \'https://\' itd.)';
+  String get nojs250Sberror250Sbvalidation250Sbhomepage => 'Biti mora polno veljaven URL (tj. vključno z \'https://\' itd.)';
 
   @override
   String get nojs250Sberror250Sbvalidation250Sbintroduction => 'Niz mora biti dolg največ 65536 znakov.';
@@ -4523,15 +4523,15 @@ class I18nSl extends I18n {
   String get nojs250Sberror250Sbvalidation250Sbpassword => 'Geslo mora vsebovati 8-72 znakov';
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbreputation8722Sbimport8722Sbplatform8722Sbusername => 'Uporabniško ime mora biti niz, dolg od 1 do 30 znakov.';
+  String get nojs250Sberror250Sbvalidation250Sbreputation8722Sbimport8722Sbplatform8722Sbusername => 'Uporabniško ime mora vsebovati 1 do 30 znakov.';
 
   @override
   String nojs250Sberror250Sbvalidation250Sbtos(Object appName) {
-    return 'Če želite uporabljati naše spletno mesto, preberite in se strinjate s pogoji storitve $appName.';
+    return 'Če želite uporabljati naše spletno mesto, preberite in se strinjate s $appName Pogoji Storitve.';
   }
 
   @override
-  String get nojs250Sberror250Sbvalidation250Sbusername => 'Uporabniško ime mora biti dolgo 3-16 znakov. Dovoljeni znaki: a-z, A-Z, 0-9, -, _';
+  String get nojs250Sberror250Sbvalidation250Sbusername => 'Uporabniško ime mora biti dolgo 3-16 znakov. Dovoljeni znaki so: a-z, A-Z, 0-9, -, _';
 
   @override
   String get nojs250Sbfilter250Sblocal8722Sblabel => 'LOKALNO';
@@ -4540,7 +4540,7 @@ class I18nSl extends I18n {
   String get nojs250Sbfilter250Sbonline8722Sblabel => 'ONLINE';
 
   @override
-  String get nojs250Sbformula250Sbinstructions250Sbfunctions => 'Uporabite lahko naslednje funkcije (lahko jih ugnezdite): <strong>min(), max(), floor(), strop(), avg()</strong>';
+  String get nojs250Sbformula250Sbinstructions250Sbfunctions => 'Uporabite lahko naslednje funkcije (lahko jih ugnezdite): <strong>min(), max(), floor(), ceiling(), avg()</strong>';
 
   @override
   String get nojs250Sbformula250Sbinstructions250Sboperators => 'Uporabite lahko naslednje operatorje: <strong>+ - * /</strong>';
@@ -4549,7 +4549,7 @@ class I18nSl extends I18n {
   String get nojs250Sbformula250Sbinstructions250Sbpunctuation => 'Uporabite lahko naslednja ločila: <strong>( ) . ,</strong>';
 
   @override
-  String get nojs250Sbformula250Sbtickers250Sblabel => 'Vsi razpoložljivi tržni tickerji';
+  String get nojs250Sbformula250Sbtickers250Sblabel => 'Vsi razpoložljivi market tickerji';
 
   @override
   String get nojs250Sbformula250Sbvalidator250Sbbtn => 'Preverite formulo';
@@ -4562,24 +4562,24 @@ class I18nSl extends I18n {
 
   @override
   String nojs250Sbmorph8722Sbwithdrawal(Object cryptocurrencyName) {
-    return 'Želim umakniti arbitražno obveznico v denarnico $cryptocurrencyName.';
+    return 'Želim umakniti arbitražno obveznico v $cryptocurrencyName denarnico';
   }
 
   @override
-  String get nojs250Sbmorph8722Sbwithdrawal250Sbbutton8722Sblabel => 'Začeti';
+  String get nojs250Sbmorph8722Sbwithdrawal250Sbbutton8722Sblabel => 'Začetek';
 
   @override
   String nojs250Sbmorph8722Sbwithdrawal250Sbnotice(Object assetSymbol, Object cryptocurrencyName) {
-    return 'Umik $assetSymbol arbitražne obveznice v denarnico $cryptocurrencyName.';
+    return 'Prenakazilo $assetSymbol arbitražne obveznice v $cryptocurrencyName denarnico';
   }
 
   @override
   String nojs250Sbno8722Sbgoogle8722Sbtext(Object value) {
-    return 'Za pridobitev koordinat vaše lokacije lahko uporabite storitev $value.';
+    return 'Za pridobitev koordinat vaše lokacije lahko uporabite storitev $value';
   }
 
   @override
-  String get nojs250Sbsettings250Sbsave8722Sbtelegram8722Sbid250Sbbutton8722Sblabel => 'Shranite Telegram ID';
+  String get nojs250Sbsettings250Sbsave8722Sbtelegram8722Sbid250Sbbutton8722Sblabel => 'Shrani Telegram ID';
 
   @override
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Osveži';
@@ -4609,7 +4609,7 @@ class I18nSl extends I18n {
 
   @override
   String notice250Sbnon8722Sbcustodial(Object appName) {
-    return 'Popolnoma neskrbniške trgovinske poravnave so zdaj aktivne! <a href=\"https://t.me/$appName\" target=\"_blank\" class=\"next-link\">Sporočite nam </a>, če imate kakršna koli vprašanja ali naletite na težave. Če ste zamudili, si lahko <a href=\"/blog/announcements/fully-non-custodial-trade-settlements\" target=\"_blank\" class=\"next-link\">o posodobitvi podrobno preberete tukaj.</a>';
+    return 'Popolnoma neskrbniške trgovalne poravnave so zdaj aktivne! <a href=\"https://t.me/$appName\" target=\"_blank\" class=\"next-link\">Sporočite nam </a>, če imate kakršna koli vprašanja ali naletite na težave. Če ste zamudili, si lahko <a href=\"/blog/announcements/fully-non-custodial-trade-settlements\" target=\"_blank\" class=\"next-link\">o posodobitvi podrobno preberete tukaj.</a>';
   }
 
   @override
@@ -4617,7 +4617,7 @@ class I18nSl extends I18n {
 
   @override
   String notification250Sbmessage(Object tradeId, Object username) {
-    return 'Imate novo sporočilo v trgovini $tradeId od $username';
+    return 'Imate novo sporočilo v trgovanju $tradeId od $username';
   }
 
   @override
@@ -4628,22 +4628,22 @@ class I18nSl extends I18n {
 
   @override
   String notification250Sbtrade8722Sbcancelled(Object tradeId, Object username) {
-    return 'Trgovanje $tradeId je preklical $username';
+    return 'Trgovanje $tradeId je preklical uporabnik $username';
   }
 
   @override
   String notification250Sbtrade8722Sbcomplete(Object tradeId, Object username) {
-    return 'Vaša trgovina $tradeId z $username je bila zaključena';
+    return 'Vaše trgovanje $tradeId z $username je zaključeno';
   }
 
   @override
   String notification250Sbtrade8722Sbdisputed(Object tradeId, Object username) {
-    return 'Trgovino $tradeId je izpodbijal $username';
+    return 'Trgovanje $tradeId je izpodbijal $username';
   }
 
   @override
   String notification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete(Object username, Object tradeId) {
-    return '$username je zaključil plačilo v trgovini $tradeId';
+    return '$username je zaključil plačilo v trgovanju $tradeId';
   }
 
   @override
@@ -4691,10 +4691,10 @@ class I18nSl extends I18n {
   String get password8722Sbreset250Sbsubtitle => 'Po spremembi gesla se boste morali znova prijaviti z novim geslom';
 
   @override
-  String get password8722Sbreset250Sbsuccess => 'uspeh!';
+  String get password8722Sbreset250Sbsuccess => 'Uspeh!';
 
   @override
-  String get password8722Sbreset250Sbsuccess8722Sbtip => 'Zdaj boste preusmerjeni na stran za prijavo.';
+  String get password8722Sbreset250Sbsuccess8722Sbtip => 'Zdaj boste preusmerjeni na prijavno stran.';
 
   @override
   String get password8722Sbreset250Sbtitle => 'Spremeni geslo';
@@ -4767,18 +4767,16 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sberror250Sbprice8722Sbnot8722Sbvalid => 'Vnesite veljavno ceno. Dovoljene so samo številke med 0,000000000001 in 10000000000000.';
 
   @override
-  String get post8722Sbad250Sberror250Sbrequire8722Sbfeedback8722Sbnot8722Sbvalid => 'Vnesite veljavno omejitev, če želite zahtevati povratno vrednost ocene. Dovoljena so samo cela števila med 0 in 100.';
+  String get post8722Sbad250Sberror250Sbrequire8722Sbfeedback8722Sbnot8722Sbvalid => 'Vnesite veljavno mejo za zahtevano vrednost ocene povratnih informacij. Dovoljena so samo cela števila med 0 in 100.';
 
   @override
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Stanje v denarnici nižje od zahtevanega minimuma za to vrsto oglasa';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Prva časovna omejitev ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Prva časovna omejitev  ';
 
   @override
-  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Neobvezno. Omejite največji znesek transakcije za uporabnike, s katerimi še niste trgovali. Najmanj 0.';
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Neobvezno. Omejite največji znesek transakcije za uporabnike, s katerimi še niste trgovali. Minimalno 0.';
 
   @override
   String get post8722Sbad250Sbfor8722Sbtrusted8722Sbswitch8722Sbdescription => 'Naredi ta oglas dostopen samo uporabnikom, ki ste jih označili kot zaupanja vredne';
@@ -4787,10 +4785,10 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbfor8722Sbtrusted8722Sbswitch8722Sblabel => 'Samo za zaupanja vredne uporabnike';
 
   @override
-  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts => 'Omejitev znaša';
+  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts => 'Omejite zneske na';
 
   @override
-  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts8722Sbtip => 'Neobvezno. Zneske trgovanja omejite na določena cela števila, ločena z vejico, na primer 20,50,100. V fiat valuti (USD/EUR/itd.). Priročen za kupone, darilne kartice itd.';
+  String get post8722Sbad250Sblimit8722Sbfiat8722Sbamounts8722Sbtip => 'Neobvezno. Zneske trgovanja omejite na določena cela števila, ločena z vejico, na primer 20,50,100. V fiat valuti (USD/EUR/itd.). Priročeno za kupone, darilne kartice itd.';
 
   @override
   String get post8722Sbad250Sblocation250Sbtitle => 'Lokacija';
@@ -4801,28 +4799,28 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sblog8722Sbin => 'Vpiši se';
+  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sblog8722Sbin => 'Vpis';
 
   @override
-  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sbsign8722Sbup => 'prijavite se';
+  String get post8722Sbad250Sblogged8722Sbout8722Sbnotice8722Sbsign8722Sbup => 'prijava';
 
   @override
   String get post8722Sbad250Sbmax8722Sbamount => 'Najvišji znesek';
 
   @override
-  String get post8722Sbad250Sbmax8722Sbamount8722Sbtip => 'Neobvezno. Največja omejitev transakcije v eni trgovini.';
+  String get post8722Sbad250Sbmax8722Sbamount8722Sbtip => 'Neobvezno. Največja omejitev transakcije v enem trgovanju.';
 
   @override
   String get post8722Sbad250Sbmin8722Sbamount => 'Minimalni znesek';
 
   @override
-  String get post8722Sbad250Sbmin8722Sbamount8722Sbtip => 'Neobvezno. Najmanjša omejitev transakcije v eni trgovini';
+  String get post8722Sbad250Sbmin8722Sbamount8722Sbtip => 'Neobvezno. Najmanjša omejitev transakcije v enem trgovanju';
 
   @override
   String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore => 'Najmanjša povratna ocena';
 
   @override
-  String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore8722Sbtip => 'Neobvezno. Najmanjša ocena povratnih informacij uporabnikov, potrebna za zahtevo po menjavi, je od 0 do 100.';
+  String get post8722Sbad250Sbmin8722Sbfeedback8722Sbscore8722Sbtip => 'Neobvezno. Najmanjša ocena povratnih informacij uporabnikov potrebna za zahtevo po trgovanju od 0 do 100.';
 
   @override
   String get post8722Sbad250Sbpayment8722Sbmethod8722Sbdetail => 'Podrobnosti o načinu plačila';
@@ -4855,18 +4853,18 @@ class I18nSl extends I18n {
 
   @override
   String post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbtip(Object assetSymbol, Object currency) {
-    return 'Cena za 1 $assetSymbol v $currency. Ta cena se ne bo spremenila, razen če je ročno spremenite.';
+    return 'Cena za 1 $assetSymbol v $currency. Ta cena se ne bo spremenila, razen če jo ročno spremenite.';
   }
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbtip250Sbnojs => 'Cena za 1 kovanec v izbrani valuti oglasa. Ta cena se ne bo spremenila, razen če je ročno spremenite.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbfixed8722Sbprice8722Sbtip250Sbnojs => 'Cena za 1 kovanec v izbrani valuti oglasa. Ta cena se ne bo spremenila, razen če jo ročno spremenite.';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbfloating => 'Plavajoča cena';
 
   @override
   String post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip(Object assetName) {
-    return 'Poskrbite, da menjalni tečaj plava s trgom, medtem ko je trgovanje odprto. Cena trgovanja se določi ob zaključku. Upoštevajte, da je dodatnih 15 % rezerve dodanih znesku $assetName, rezerviranemu za arbitražno obveznico. Presežni znesek bo vrnjen po zaključku posla.';
+    return 'Poskrbite, da menjalni tečaj plava s trgom, medtem ko je trgovanje odprto. Cena trgovanja se določi ob zaključku. Upoštevajte, da je dodatnih 15 % rezerve dodanih znesku $assetName, rezerviranemu za arbitražno obveznico. Presežni znesek bo vrnjen po zaključku.';
   }
 
   @override
@@ -4876,7 +4874,7 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbprice8722Sbtype250Sbmargin => 'Marža v %';
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin250Sbtip => 'Marža je razlika med vašo ceno in tržno ceno. 0% je tržna cena. Uporabite pozitivno vrednost, da greste nad tržno ceno, in negativno vrednost, da greste pod tržno ceno.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbmargin250Sbtip => 'Marža je razlika med vašo ceno in tržno ceno. 0% je tržna cena. Uporabite pozitivno vrednost, da greste nad tržno ceno in negativno vrednost, da greste pod tržno ceno.';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbmarket => 'Tržna cena';
@@ -4912,7 +4910,7 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbreview250Sbminutes => 'minut';
 
   @override
-  String get post8722Sbad250Sbreview250Sbno => 'št';
+  String get post8722Sbad250Sbreview250Sbno => 'no';
 
   @override
   String get post8722Sbad250Sbreview250Sbyes => 'ja';
@@ -4926,10 +4924,10 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides => 'vodniki';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice => 'Pogoji storitve';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice => 'Pogoji Storitve';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb0 => 'Vsako opravljeno trgovanje stane oglaševalce 1 % skupnega zneska posla (pristojbina za zaščito arbitraže).';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb0 => 'Vsako opravljeno trgovanje stane oglaševalce 1 % skupnega zneska (pristojbina za zaščito arbitraže).';
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1(Object minimumXmrAmount, Object assetSymbol, Object appName) {
@@ -4938,7 +4936,7 @@ class I18nSl extends I18n {
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1250Sbagoradesk8722Sbnojs(Object minimumXmrAmount, Object assetSymbol, Object appName) {
-    return 'Morate imeti vsaj $minimumXmrAmount $assetSymbol v svoji $appName denarnici, da bo objavljen $assetSymbol oglas za prodajo ali $assetSymbol klicna prodaja ali $assetSymbol oglas za nakup viden.';
+    return 'Morate imeti vsaj $minimumXmrAmount $assetSymbol v svoji $appName denarnici, da bo objavljen $assetSymbol oglas za prodajo ali $assetSymbol klicna prodaja ali $assetSymbol oglas za nakup da bo viden.';
   }
 
   @override
@@ -4961,7 +4959,7 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb5 => 'Uporabljate lahko samo plačilne račune, ki so registrirani na vaše ime (brez plačil tretjih oseb!).';
 
   @override
-  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb6 => 'Podatke o plačilu morate navesti v oglasu ali v trgovskem klepetu.';
+  String get post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb6 => 'Podatke o plačilu morate navesti v oglasu ali v trgovalnem klepetu.';
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb7(Object appName) {
@@ -4973,7 +4971,7 @@ class I18nSl extends I18n {
 
   @override
   String post8722Sbad250Sbsettlement8722Sbaddress250Sbtip(Object appName) {
-    return 'Obvezno. Vaš naslov, na katerega bodo poslani kovanci. Ne more biti notranji naslov $appName.';
+    return 'Obvezno. Vaš naslov, na katerega bodo poslani kovanci. Ne more biti notranji $appName naslov.';
   }
 
   @override
@@ -4997,10 +4995,10 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbstep8722Sb6 => '6. korak';
 
   @override
-  String get post8722Sbad250Sbswitch8722Sbform8722Sbtoggle250Sbshow8722Sbfull => 'Prikaži celoten obrazec';
+  String get post8722Sbad250Sbswitch8722Sbform8722Sbtoggle250Sbshow8722Sbfull => 'Prikaži cel obrazec';
 
   @override
-  String get post8722Sbad250Sbswitch8722Sbform8722Sbtoggle250Sbshow8722Sbstep => 'Prikaži korak koraka';
+  String get post8722Sbad250Sbswitch8722Sbform8722Sbtoggle250Sbshow8722Sbstep => 'Prikaži pogled korakov';
 
   @override
   String get post8722Sbad250Sbterms => 'Pogoji trgovanja';
@@ -5009,7 +5007,7 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbterms8722Sbtip8722Sb0 => 'Pogoji poslovanja oglasa, največ 4096 znakov. Za oblikovanje pogojev oglasa lahko uporabite markdown (slike niso dovoljene).';
 
   @override
-  String get post8722Sbad250Sbterms8722Sbtip8722Sb1 => 'Kako uporabljati markdown?';
+  String get post8722Sbad250Sbterms8722Sbtip8722Sb1 => 'Kako uporabiti markdown?';
 
   @override
   String get post8722Sbad250Sbtitle => 'Ustvarite oglas';
@@ -5018,7 +5016,7 @@ class I18nSl extends I18n {
   String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity => 'Spremljajte največji znesek likvidnosti';
 
   @override
-  String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity8722Sbtip => 'Ta možnost omeji likvidnost tega oglasa na maks. omejitev transakcije. Kupci ne morejo odpreti in dokončati poslov za več kot ta znesek. Primer: z vključeno likvidnostjo sledi in maks. omejitev transakcije, nastavljena na 100 USD, ko kupec odpre trgovanje za 20 USD, najvišji. omejitev transakcije se samodejno zniža na 80 USD. Vrne se na 100 USD, če kupec prekliče trgovanje, in ostane pri 80 USD, če je trgovanje zaključeno.';
+  String get post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity8722Sbtip => 'Ta možnost omejuje likvidnost tega oglasa na največjo omejitev transakcij. Kupci ne morejo odpreti in zaključiti poslov za več kot ta znesek. Primer: Ko kupec odpre posel za 20 USD, se zgornja meja transakcije samodejno zmanjša na 80 USD. Če kupec prekliče posel, se vrne na 100 USD, če pa posel zaključi, ostane na 80 USD.';
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbbuy(Object assetName) {
@@ -5027,47 +5025,47 @@ class I18nSl extends I18n {
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sblocal8722Sbsell(Object assetName) {
-    return 'Prodam $assetName za gotovino (lokalno)';
+    return 'Prodaja $assetName za gotovino (lokalno)';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbbuy(Object assetName) {
-    return 'Kupite $assetName na spletu';
+    return 'Kupite $assetName online';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbonline8722Sbsell(Object assetName) {
-    return 'Prodajte $assetName na spletu';
+    return 'Prodajte $assetName online';
   }
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbsubtitle => 'Hočem...';
+  String get post8722Sbad250Sbtrade8722Sbtype250Sbsubtitle => 'Želim...';
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbtip(Object assetName, Object appName) {
-    return 'Kakšen trgovski oglas želite ustvariti? Če želite prodati $assetName, se prepričajte, da imate $assetName v denarnici za arbitražne obveznice $appName.';
+    return 'Kakšen trgovalni oglas želite ustvariti? Če želite prodati $assetName, se prepričajte, da imate $assetName v denarnici za arbitražne obveznice $appName.';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs(Object appName) {
-    return 'Kakšen trgovski oglas želite ustvariti? Če želite prodati Monero, se prepričajte, da imate Monero v denarnici za arbitražne obveznice $appName.';
+    return 'Kakšen trgovalni oglas želite ustvariti? Če želite prodati Monero, se prepričajte, da imate Monero v denarnici za arbitražne obveznice $appName.';
   }
 
   @override
   String post8722Sbad250Sbtrade8722Sbtype250Sbtip250Sbnojs57Sbagoradesk(Object appName) {
-    return 'Kakšen trgovski oglas želite ustvariti? Če želite prodati kriptovaluto, se prepričajte, da imate ustrezno kriptovaluto v denarnici za arbitražne obveznice $appName.';
+    return 'Kakšen trgovalski oglas želite ustvariti? Če želite prodati kriptovaluto, se prepričajte, da imate ustrezno kriptovaluto v denarnici za arbitražne obveznice $appName.';
   }
 
   @override
-  String get post8722Sbad250Sbtrade8722Sbtype250Sbtitle => 'Vrsta trgovine';
+  String get post8722Sbad250Sbtrade8722Sbtype250Sbtitle => 'Vrsta trgovanja';
 
   @override
   String price8722Sbformula8722Sbinterface250Sbtickers250Sbasset8722Sbpairs(Object asset) {
-    return '$asset parov';
+    return '$asset pari';
   }
 
   @override
-  String get price8722Sbformula8722Sbinterface250Sbtickers250Sbasset8722Sbpairs250Sbother8722Sbasset => 'drugo';
+  String get price8722Sbformula8722Sbinterface250Sbtickers250Sbasset8722Sbpairs250Sbother8722Sbasset => 'Ostalo';
 
   @override
   String get read8722Sbmore => 'Preberi več';
@@ -5116,18 +5114,18 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get reputation8722Sbimport250Sbstats250Sbtrades => 'obrti';
+  String get reputation8722Sbimport250Sbstats250Sbtrades => 'trgovanja';
 
   @override
-  String get reputation8722Sbimport250Sbstats250Sbvolume => 'glasnost';
+  String get reputation8722Sbimport250Sbstats250Sbvolume => 'obseg';
 
   @override
   String reputation8722Sbimport250Sbstep250Sbcode250Sbmessage(Object platform) {
-    return 'Dodajte to kodo nekam v svoj javni profil $platform. Ko preverimo kodo, jo lahko odstranite.';
+    return 'Dodajte to kodo nekje v svoj javni profil $platform. Ko preverimo kodo, jo lahko odstranite.';
   }
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Dodajte to kodo v svoj profil LocalBitcoins kot svojo osebno spletno stran in na koncu dodajte ».com«. Ko preverimo kodo, jo lahko odstranite.';
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Dodajte to kodo v svoj profil LocalBitcoins kot svojo osebno spletno stran in na koncu dodajte \".com\". Ko preverimo kodo, jo lahko odstranite.';
 
   @override
   String get reputation8722Sbimport250Sbstep250Sbcode250Sbtitle => 'Dodajte kodo';
@@ -5149,7 +5147,7 @@ class I18nSl extends I18n {
   String get reputation8722Sbimport250Sbstep250Sbusername250Sbtitle => 'Izberite uporabniško ime';
 
   @override
-  String get reputation8722Sbimport250Sbstepper250Sbfinal250Sbmessage => 'Počakajte malo, da preverimo vaš profil.';
+  String get reputation8722Sbimport250Sbstepper250Sbfinal250Sbmessage => 'Počakajte, da preverimo vaš profil.';
 
   @override
   String get reputation8722Sbimport250Sbstepper250Sbfinal250Sbtitle => 'Skoraj tam!';
@@ -5161,7 +5159,7 @@ class I18nSl extends I18n {
   String get reputation8722Sbimport250Sbverified250Sbtitle => 'Preverjeno';
 
   @override
-  String get reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbedit => 'Uredi informacije o uvozu';
+  String get reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbedit => 'Uredi uvozne informacije';
 
   @override
   String get reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbinitial => 'Poveži račun';
@@ -5176,7 +5174,7 @@ class I18nSl extends I18n {
   String get request8722Sbpassword8722Sbreset250Sbemail8722Sbtip => 'Vnesite preverjen e-poštni naslov, ki je povezan z vašim računom. Poslali vam bomo pismo z navodili za ponastavitev gesla';
 
   @override
-  String get request8722Sbpassword8722Sbreset250Sberror8722Sb1 => 'Nimamo računa, povezanega s tem e-poštnim naslovom.';
+  String get request8722Sbpassword8722Sbreset250Sberror8722Sb1 => 'Nimamo računa povezanega s tem e-poštnim naslovom.';
 
   @override
   String get request8722Sbpassword8722Sbreset250Sberror8722Sb2 => 'Ta e-pošta ni preverjena';
@@ -5200,13 +5198,13 @@ class I18nSl extends I18n {
   String get request8722Sbpassword8722Sbreset250Sbtitle => 'Ponastavitev gesla';
 
   @override
-  String get right8722Sbdrawer250Sbaffiliate => 'Partnerski program';
+  String get right8722Sbdrawer250Sbaffiliate => 'Affiliate / Partnerski program';
 
   @override
-  String get right8722Sbdrawer250Sbcancelled => 'Preklicani posli';
+  String get right8722Sbdrawer250Sbcancelled => 'Preklicana trgovanja';
 
   @override
-  String get right8722Sbdrawer250Sbcompleted => 'Zaključeni posli';
+  String get right8722Sbdrawer250Sbcompleted => 'Zaključena trgovanja';
 
   @override
   String get right8722Sbdrawer250Sbdashboard => 'Odprta trgovanja in oglasi';
@@ -5218,19 +5216,19 @@ class I18nSl extends I18n {
   String get right8722Sbdrawer250Sbprofile => 'Profil';
 
   @override
-  String get right8722Sbdrawer250Sbsettings => 'nastavitve';
+  String get right8722Sbdrawer250Sbsettings => 'Nastavitve';
 
   @override
   String get right8722Sbdrawer250Sbwallet => 'Denarnica';
 
   @override
-  String get sanction250Sbaction8722Sbnotice => 'Izvedba tega dejanja vam je prepovedana zaradi naslednje omejitve v vašem računu:';
+  String get sanction250Sbaction8722Sbnotice => 'Izvedba tega dejanja vam jeonemogočena zaradi naslednje omejitve v vašem računu:';
 
   @override
-  String get sanction250Sbban250Sblabel => 'Prepovedano';
+  String get sanction250Sbban250Sblabel => 'Ukinjeno';
 
   @override
-  String get sanction250Sbexpires => 'poteče';
+  String get sanction250Sbexpires => 'Poteče';
 
   @override
   String get sanction250Sblabel250Sbtrading8722Sbsuspension => 'Trgovanje prekinjeno';
@@ -5249,7 +5247,7 @@ class I18nSl extends I18n {
 
   @override
   String search250Sball8722Sbmethods(Object code) {
-    return 'Vse metode $code.';
+    return 'Vse $code metode';
   }
 
   @override
@@ -5265,26 +5263,26 @@ class I18nSl extends I18n {
   String get search250Sbcoordinates250Sblat => 'Zemljepisna širina';
 
   @override
-  String get search250Sbcoordinates250Sblon => 'Dolžina';
+  String get search250Sbcoordinates250Sblon => 'Zemljepisna dolžina';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
-    return 'Prodam $assetName za gotovino v $location';
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
+    return 'Prodajam $assetName za gotovino v $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
-    return 'Kupi $assetName z gotovino v $location';
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
+    return 'Kupujem $assetName z gotovino v $location';
   }
 
   @override
   String search250Sbheading8722Sbonline8722Sbbuy(Object assetName, Object country, Object usingMethod) {
-    return 'Prodajte $assetName na spletu v $country $usingMethod';
+    return 'Prodajte $assetName online v $country $usingMethod';
   }
 
   @override
   String search250Sbheading8722Sbonline8722Sbsell(Object assetName, Object country, Object usingMethod) {
-    return 'Kupite $assetName na spletu v $country $usingMethod';
+    return 'Kupite $assetName online v $country $usingMethod';
   }
 
   @override
@@ -5293,7 +5291,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get search250Sblocation8722Sbplaceholder => 'Vnesite svojo lokacijo ...';
+  String get search250Sblocation8722Sbplaceholder => 'Vnesite svojo lokacijo...';
 
   @override
   String search250Sbno8722Sbgoogle8722Sbtext(Object value) {
@@ -5309,7 +5307,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get search250Sbno8722Sbresults8722Sb1 => 'Poskusite z drugim načinom plačila, z drugim zneskom ali brez zneska. ';
+  String get search250Sbno8722Sbresults8722Sb1 => 'Poskusite z drugimi načini plačila, z drugim zneskom ali brez zneska. ';
 
   @override
   String search250Sbno8722Sbresults8722Sb2(Object postAnAd) {
@@ -5321,7 +5319,7 @@ class I18nSl extends I18n {
 
   @override
   String search250Sbpopular8722Sbmethods(Object code) {
-    return '🔥 Priljubljene metode $code.';
+    return '🔥 Priljubljene $code metode';
   }
 
   @override
@@ -5331,22 +5329,22 @@ class I18nSl extends I18n {
   String get seo250Sbheadline8722Sb1 => 'Zaščitite svojo pravico do zasebnosti - kupite Monero.';
 
   @override
-  String get seo250Sbheadline8722Sb157Sbagoradesk => 'Najboljša menjalnica kriptovalut za spletni nakup in prodajo bitcoinov brez preverjanja ID-ja.';
+  String get seo250Sbheadline8722Sb157Sbagoradesk => 'Najboljša menjalnica kriptovalut za spletni nakup in prodajo Bitcoinov brez preverjanja dokumentov.';
 
   @override
-  String get seo250Sbheadline8722Sb2 => 'Prodajte Monero ljudem po vsem svetu ali lokalno – podprite skupnost in zaslužite s kriptovaluto.';
+  String get seo250Sbheadline8722Sb2 => 'Prodajte Monero ljudem po vsem svetu ali lokalno – podprite skupnost in zaslužite s kripto.';
 
   @override
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Prava alternativa LocalBitcoins in Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Če vas skrbi vdor v zasebnost - najboljša kriptovaluta za vlaganje je XMR. Monero je neizsledljiv kovanec, razvit z mislijo na zasebnost.\n<br/>\nKje kupiti Monero? LocalMonero je največja, najbolj zaupanja vredna in dobro uveljavljena menjalnica P2P Monero v skupnosti XMR. Nimamo preverjanj KYC – Monero lahko preprosto kupite anonimno brez preverjanja osebne izkaznice s PayPalom, kreditno kartico, darilno kartico, gotovino po pošti ali pretvorite bitcoin v Monero – naša platforma podpira kateri koli način plačila.';
+  String get seo250Sbtext8722Sb1 => 'Če vas skrbi vdor v zasebnost - najboljša kriptovaluta za vlaganje je XMR. Monero je neizsledljiv kovanec, razvit z mislijo na zasebnost.\n<br/>\nKje kupiti Monero? LocalMonero je največja, najbolj zaupanja vredna in dobro uveljavljena trgovalna platforma P2P Monero v skupnosti XMR. Nimamo preverjanj KYC – Monero lahko preprosto kupite anonimno brez preverjanja osebne izkaznice s PayPalom, kreditno kartico, darilno kartico, gotovino po pošti ali pretvorite bitcoin v Monero – naša platforma podpira kateri koli način plačila.';
 
   @override
-  String get seo250Sbtext8722Sb157Sbagoradesk => 'Se sprašujete, kako vlagati v Bitcoin? Na AgoraDesk nakup bitcoinov še nikoli ni bil lažji - takoj kupite BTC od osebe z uporabo vašega najljubšega spletnega načina plačila: PayPal, kreditna/debetna kartica ali bančno nakazilo, darilne kartice, Venmo ali katero koli drugo.\n<br/>\nČe želite bitcoine kupiti v vaši bližini z gotovino, lahko najdete nekoga, ki je pripravljen lokalno prodati bitcoine - trgovalna platforma podpira nakup in prodajo BTC z gotovino. Bitcoine lahko celo kupite z gotovino po pošti.';
+  String get seo250Sbtext8722Sb157Sbagoradesk => 'Se sprašujete kako vlagati v Bitcoin? Na AgoraDesk nakup Bitcoinov še nikoli ni bil lažji - takoj kupite BTC od osebe z uporabo vašega najljubšega spletnega načina plačila: PayPal, kreditna/debetna kartica ali bančno nakazilo, darilne kartice, Venmo ali drugo.\n<br/>\nČe želite Bitcoine kupiti v vaši bližini z gotovino, lahko najdete nekoga, ki je pripravljen lokalno prodati bitcoine - trgovalna platforma podpira nakup in prodajo BTC z gotovino. Bitcoine lahko celo kupite z gotovino po pošti.';
 
   @override
-  String get seo250Sbtext8722Sb2 => 'LocalMonero je najboljše mesto za prodajo XMR – ne glede na to, ali gre za vaše nagrade za rudarjenje,\nCenovna arbitraža Monero ali preprosto vidite vrednost v servisiranju skupnosti. Sistem za zaščito arbitražnih obveznic in naša varna denarnica za arbitražne obveznice Monero vam zagotavljata zanesljivo izkušnjo trgovanja z XMR – tako da lahko brez skrbi pretvorite XMR v USD, EUR, AUD, GBP ali katero koli drugo lokalno valuto.';
+  String get seo250Sbtext8722Sb2 => 'LocalMonero je najboljše mesto za prodajo XMR – ne glede na to, ali gre za vaše nagrade za rudarjenje,\nMonero cenovna arbitraža ali preprosto vidite vrednost v servisiranju skupnosti. Sistem za zaščito arbitražnih obveznic in naša varna denarnica za arbitražne obveznice Monero vam zagotavljata zanesljivo izkušnjo trgovanja z XMR – tako da lahko brez skrbi pretvorite XMR v USD, EUR, AUD, GBP ali katerokoli drugo lokalno valuto.';
 
   @override
   String get seo250Sbtext8722Sb257Sbagoradesk => 'Ste trgovec z bitcoini, ki želite zaslužiti s kripto arbitražo? Rudar, ki želi izplačati BTC v USD ali drugo lokalno valuto?\n<br/>\nAgoraDesk je <a href=\"/localbitcoins-alternative\" style=\"color: #0b4f6c\"> alternativa LocalBitcoins </a>, ki spoštuje vašo zasebnost in varnost, hkrati pa vam zagotavlja gladko in hitro izkušnjo unovčevanja vaših bitcoinov.';
@@ -5364,7 +5362,7 @@ class I18nSl extends I18n {
   String get settings250Sb2fa250Sbdisable8722Sbsubtitle => 'Če želite onemogočiti 2FA, vnesite svoje geslo in enkratno geslo.';
 
   @override
-  String get settings250Sb2fa250Sbdisable8722Sbsuccess => 'uspeh! 2FA onemogočen.';
+  String get settings250Sb2fa250Sbdisable8722Sbsuccess => 'Uspeh! 2FA onemogočen.';
 
   @override
   String get settings250Sb2fa250Sbdisable8722Sbtitle => 'Onemogoči dvostopenjsko avtentikacijo';
@@ -5388,7 +5386,7 @@ class I18nSl extends I18n {
   String get settings250Sb2fa250Sbrtfm => 'Preberite vodnik za aktiviranje dvostopenjske avtentikacije';
 
   @override
-  String get settings250Sb2fa250Sbstatus => 'Vaš status 2FA:';
+  String get settings250Sb2fa250Sbstatus => 'Vaš 2FA status:';
 
   @override
   String get settings250Sb2fa250Sbstatus8722Sbdisabled => 'ONEMOGOČENO';
@@ -5405,13 +5403,13 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbone8722Sbany8722Sbother8722Sb2fa8722Sbapp => 'katera koli druga aplikacija 2FA';
+  String get settings250Sb2fa250Sbstep8722Sbone8722Sbany8722Sbother8722Sb2fa8722Sbapp => 'katerakoli druga 2FA aplikacija';
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbone8722Sbdownload8722Sba8722Sb2fa8722Sbapp => 'Prenesite aplikacijo 2FA';
+  String get settings250Sb2fa250Sbstep8722Sbone8722Sbdownload8722Sba8722Sb2fa8722Sbapp => 'Prenesite 2FA aplikacijo';
 
   @override
-  String get settings250Sb2fa250Sbstep8722Sbthree => 'Zaženite aplikacijo 2FA na svoji mobilni napravi. V aplikaciji poiščite funkcijo skeniranja črtne kode in <strong> skenirajte kodo QR </strong>, prikazano na tej strani.';
+  String get settings250Sb2fa250Sbstep8722Sbthree => 'Zaženite 2FA aplikacijo na svoji mobilni napravi. V aplikaciji poiščite funkcijo skeniranja črtne kode in <strong> skenirajte kodo QR </strong>, prikazano na tej strani.';
 
   @override
   String settings250Sb2fa250Sbstep8722Sbtwo(Object appName) {
@@ -5419,16 +5417,16 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get settings250Sb2fa250Sbsubtitle => 'Ko je aktivna dvostopenjska avtentikacija, morate vnesti enkratno kodo vsakič, ko se prijavite ali dvignete sredstva.';
+  String get settings250Sb2fa250Sbsubtitle => 'Ko je aktivna dvostopenjska avtentikacija 2FA, morate vnesti enkratno kodo vsakič, ko se prijavite ali dvignete sredstva.';
 
   @override
-  String get settings250Sb2fa250Sbsuccess => 'uspeh!';
+  String get settings250Sb2fa250Sbsuccess => 'Uspeh!';
 
   @override
   String get settings250Sb2fa250Sbsuccess8722Sbtext => 'Na vašem računu je nastavljena dvostopenjska avtentikacija.';
 
   @override
-  String get settings250Sb2fa250Sbsuccess8722Sbwarn => 'To je zadnja priložnost, da zapišete svojo rezervno kodo!';
+  String get settings250Sb2fa250Sbsuccess8722Sbwarn => 'To je zadnja priložnost, da si zapišete vašo rezervno kodo!';
 
   @override
   String get settings250Sb2fa250Sbtitle => 'Dvostopenjska avtentikacija (2FA)';
@@ -5437,7 +5435,7 @@ class I18nSl extends I18n {
   String get settings250Sb2fa250Sbverify8722Sbbtn => 'Preverite 2FA';
 
   @override
-  String get settings250Sb2fa250Sbwarning => 'Zelo priporočamo, da v svojem računu omogočite 2FA za večjo varnost.';
+  String get settings250Sb2fa250Sbwarning => 'Zelo priporočamo, da za večjo varnost v svojem računu omogočite 2FA.';
 
   @override
   String get settings250Sb2fa250Sbwarning250Sbenable => 'Omogoči';
@@ -5446,26 +5444,26 @@ class I18nSl extends I18n {
   String get settings250Sb2fa250Sbwrong8722Sbotp => 'Napačno enkratno geslo.';
 
   @override
-  String get settings250Sbapi8722Sbkey250Sbcopy8722Sbtooltip => 'Kopirati v odložišče';
+  String get settings250Sbapi8722Sbkey250Sbcopy8722Sbtooltip => 'Kopiraj v odložišče';
 
   @override
   String get settings250Sbapi8722Sbkey250Sbdelete8722Sbtooltip => 'Izbriši in preteči aktivni ključ';
 
   @override
-  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbbutton => 'Ustvari';
+  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbbutton => 'Generiraj';
 
   @override
   String get settings250Sbapi8722Sbkey250Sbgenerate250Sbcaption => 'Generiranje ključa bo tudi razveljavilo predhodno ustvarjen ključ API';
 
   @override
-  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbtitle => 'Ustvari nov ključ API';
+  String get settings250Sbapi8722Sbkey250Sbgenerate250Sbtitle => 'Generiraj nov API ključ';
 
   @override
   String get settings250Sbapi8722Sbkey250Sblabel => 'API ključ';
 
   @override
   String settings250Sbapi8722Sbkey250Sblabel250Sbcaption(Object apiDocs) {
-    return 'Če želite uporabljati zasebne končne točke API-ja, morate nastaviti ključ API-ja kot glavo »Authorization«. Ključ poteče čez 5 let. Več podrobnosti najdete v $apiDocs.';
+    return 'Če želite uporabljati zasebne končne točke API-ja, morate nastaviti ključ API-ja kot glavo \"Authorization\". Ključ poteče čez 5 let. Več podrobnosti najdete v $apiDocs.';
   }
 
   @override
@@ -5475,10 +5473,10 @@ class I18nSl extends I18n {
   String get settings250Sbbasic8722Sbinfo8722Sbtitle => 'Osnovni podatki o uporabniku';
 
   @override
-  String get settings250Sbbuying8722Sbvacation8722Sbtip => 'Nihče, ki vam želi prodati kovancev, ne bo videl vaših oglasov ali odprl trgovanja z njimi';
+  String get settings250Sbbuying8722Sbvacation8722Sbtip => 'Nihče, ki vam želi prodati kovance, ne bo videl vaših oglasov ali odprl trgovanja na njih';
 
   @override
-  String get settings250Sbbuying8722Sbvacation8722Sbtitle => 'Nakup dopusta';
+  String get settings250Sbbuying8722Sbvacation8722Sbtitle => 'Nakupni dopust';
 
   @override
   String get settings250Sbchange8722Sbemail250Sbbtn => 'Spremenite e-pošto';
@@ -5522,7 +5520,7 @@ class I18nSl extends I18n {
   String get settings250Sbchange8722Sbpassword250Sbnew => 'Novo geslo';
 
   @override
-  String get settings250Sbchange8722Sbpassword250Sbold => 'staro geslo';
+  String get settings250Sbchange8722Sbpassword250Sbold => 'Staro Geslo';
 
   @override
   String get settings250Sbchange8722Sbpassword250Sbold8722Sbtip => 'Za nadaljevanje vnesite trenutno geslo';
@@ -5571,10 +5569,10 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sblong => 'Pošljite e-poštna obvestila, ko prejmete novo trgovinsko sporočilo (enkrat na uro)';
+  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sblong => 'Pošljite e-poštna obvestila, ko prejmete novo trgovalno sporočilo (enkrat na uro)';
 
   @override
-  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sbshort => 'Novo trgovinsko sporočilo (enkrat na uro)';
+  String get settings250Sbnotifications250Sbemail8722Sbmessage8722Sbshort => 'Novo trgovalno sporočilo (enkrat na uro)';
 
   @override
   String get settings250Sbnotifications250Sbemail250Sbtitle => 'E-poštna obvestila';
@@ -5583,19 +5581,19 @@ class I18nSl extends I18n {
   String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sblong => 'Pošiljanje e-poštnih obvestil, ko je trgovanje zaključeno';
 
   @override
-  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort => 'Trgovina zaključena';
+  String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbshort => 'Trgovanje zaključeno';
 
   @override
   String get settings250Sbnotifications250Sbescrow8722Sbrelease8722Sbtip => 'Pošiljanje e-poštnih obvestil, ko je trgovanje zaključeno';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sblong => 'Pošljite e-poštna obvestila za nove trgovinske stike';
+  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sblong => 'Pošljite e-poštnih obvestil za nove trgovalske stike';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbshort => 'Novi trgovinski stiki';
+  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbshort => 'Novi trgovalski kontakti';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbtip => 'Pošljite e-poštna obvestila za nove zahteve za stik';
+  String get settings250Sbnotifications250Sbnew8722Sboffers8722Sbtip => 'Pošljite e-poštna obvestila za nove kontaktne zahteve';
 
   @override
   String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sblong => 'Pošljite e-poštna obvestila za nova spletna plačila';
@@ -5604,7 +5602,7 @@ class I18nSl extends I18n {
   String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sbshort => 'Nova spletna plačila';
 
   @override
-  String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sbtip => 'Pošljite e-poštna obvestila o novih spletnih plačilih v vaših poslih';
+  String get settings250Sbnotifications250Sbnew8722Sbpayments8722Sbtip => 'Pošljite e-poštna obvestila o novih spletnih plačilih v vaših trade-ih';
 
   @override
   String get settings250Sbnotifications250Sbsensitive8722Sblong => 'Onemogočite občutljive podatke iz e-poštnih obvestil';
@@ -5616,13 +5614,13 @@ class I18nSl extends I18n {
   String get settings250Sbnotifications250Sbsensitive8722Sbtip => 'E-poštna sporočila vas bodo samo pozvala, da se prijavite na spletno mesto, kjer bodo dejanska obvestila';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbdialog8722Sbtitle => 'Obvestila mobilnega telegrama';
+  String get settings250Sbnotifications250Sbtelegram250Sbdialog8722Sbtitle => 'Mobilna Telegram Obvestila';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbbtn => 'Onemogoči obvestila Telegram';
+  String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbbtn => 'Onemogoči Telegram obvestila';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbtext => 'S tem boste onemogočili obvestila v Telegramu. Obvestila Telegrama lahko znova omogočite tako, da vnesete svoj ID obvestila Telegram.';
+  String get settings250Sbnotifications250Sbtelegram250Sbdisable8722Sbconfirm8722Sbtext => 'S tem boste onemogočili Telegram obvestila. Obvestila Telegrama lahko znova omogočite tako, da vnesete svoj ID obvestila Telegram.';
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sberror250Sbgeneric => 'Nekaj je šlo narobe. Poskusite osvežiti stran in ponoviti zahtevo.';
@@ -5631,47 +5629,47 @@ class I18nSl extends I18n {
   String get settings250Sbnotifications250Sbtelegram250Sberror250Sbid8722Sbalready8722Sblinked => 'Ta Telegram ID je povezan z drugim uporabnikom';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sblong => 'Pošljite obvestila Telegramu, ko je trgovanje zaključeno';
+  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sblong => 'Pošljite Telegram obvestila, ko je trgovanje zaključeno';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sbshort => 'Trgovina zaključena';
+  String get settings250Sbnotifications250Sbtelegram250Sbescrow8722Sbshort => 'Trgovanje zaključeno';
 
   @override
   String settings250Sbnotifications250Sbtelegram250Sbhow8722Sbto(Object appName) {
-    return 'Kako vklopim mobilna obvestila $appName Telegram?';
+    return 'Kako vklopim Telegram $appName obilna obvestila?';
   }
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbid => 'ID za obvestila Telegram';
+  String get settings250Sbnotifications250Sbtelegram250Sbid => 'ID za Telegram obvestila';
 
   @override
   String settings250Sbnotifications250Sbtelegram250Sbid8722Sbtip(Object appName) {
-    return 'ID za obvestila Telegram, ki vam ga je dal $appName Notification Bot';
+    return 'ID za Telegram obvestila, ki vam ga je dal $appName Notification Bot';
   }
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong => 'Pošljite obvestila Telegramu za nova sporočila v klepetu v poslih';
+  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong => 'Pošljite obvestila Telegramu za nova sporočila v klepetu v trade-ih';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sbshort => 'Klepetalna sporočila v trgovini';
+  String get settings250Sbnotifications250Sbtelegram250Sbmessages8722Sbshort => 'Klepetalna sporočila v trgovanju';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sblong => 'Pošlji obvestila Telegramu za nova spletna plačila';
+  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sblong => 'Pošlji Telegram obvestila za nova spletna plačila';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbshort => 'Nova spletna plačila';
+  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbshort => 'Nova online plačila';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbtip => 'Pošljite obvestila Telegramu o novih spletnih plačilih v vaših poslih';
+  String get settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbtip => 'Pošljite Telegram obvestila o novih online plačilih v vaših trade-ih';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbtitle => 'Telegram obvestila';
+  String get settings250Sbnotifications250Sbtelegram250Sbtitle => 'Telegram Obvestila';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sblong => 'Pošljite obvestila Telegramu za nove zahteve za trgovanje';
+  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sblong => 'Pošljite Telegram obvestila za nove zahteve za trgovanje';
 
   @override
-  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sbshort => 'Nove trgovinske zahteve';
+  String get settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sbshort => 'Nove zahteve za trgovanje';
 
   @override
   String get settings250Sbnotifications250Sbtitle => 'Obvestila';
@@ -5686,7 +5684,7 @@ class I18nSl extends I18n {
   String get settings250Sbpersonal8722Sbinfo => 'Osebna predstavitev';
 
   @override
-  String get settings250Sbpersonal8722Sbinfo8722Sbtip => 'Prikazano v vašem javnem profilu. Največ 65536 znakov. Lahko uporabite markdown za oblikovanje.';
+  String get settings250Sbpersonal8722Sbinfo8722Sbtip => 'Prikazano v vašem javnem profilu. Največ 65536 znakov. Za oblikovanje lahko uporabite markdown.';
 
   @override
   String get settings250Sbpersonal8722Sbinfo8722Sbtitle => 'Osebne informacije';
@@ -5696,7 +5694,7 @@ class I18nSl extends I18n {
 
   @override
   String settings250Sbreputation8722Sbimport250Sberror250Sblbc8722Sbinvalid8722Sbusername(Object link) {
-    return 'Vaš profil LocalBitcoins ni javno dostopen, lahko ga preizkusite sami tako, da poskusite odpreti svoj profil LocalBitcoins, ko ste odjavljeni: $link. Ne moremo uvoziti profilov, ki niso javno dostopni. Poskusite se obrniti na podporo za LocalBitcoins, da rešite to težavo, vendar pred tem odstranite kodo iz uvoda v LocalBitcoins.';
+    return 'Vaš LocalBitcoins profil ni javno dostopen, lahko ga preizkusite sami tako, da poskusite odpreti svoj profil LocalBitcoins, ko ste odjavljeni: $link. Ne moremo uvoziti profilov, ki niso javno dostopni. Poskusite se obrniti na podporo za LocalBitcoins, da rešite to težavo, vendar pred tem odstranite kodo iz uvoda v LocalBitcoins.';
   }
 
   @override
@@ -5715,7 +5713,7 @@ class I18nSl extends I18n {
   String get settings250Sbselling8722Sbvacation8722Sbtip => 'Nihče, ki želi kupiti vaše kovance, ne bo videl vaših oglasov ali odprl trgovanja z njimi';
 
   @override
-  String get settings250Sbselling8722Sbvacation8722Sbtitle => 'Prodaja dopusta';
+  String get settings250Sbselling8722Sbvacation8722Sbtitle => 'Prodajni dopust';
 
   @override
   String get settings250Sbtab250Sb2fa8722Sblong => '2FA';
@@ -5730,11 +5728,11 @@ class I18nSl extends I18n {
   String get settings250Sbtab250Sbchange8722Sbpassword8722Sblong => 'Geslo';
 
   @override
-  String get settings250Sbtab250Sbimport8722Sbreputation => 'Uvozni ugled';
+  String get settings250Sbtab250Sbimport8722Sbreputation => 'Uvozi ugled';
 
   @override
   String settings250Sbtab250Sbimport8722Sbreputation250Sbdescription(Object appName) {
-    return 'Svoj ugled lahko uvozite iz druge platforme P2P v $appName. Kodo boste morali vnesti nekam v svoj profil na drugi platformi, ki jo bomo nato preverili. Na platformo lahko povežete en račun.';
+    return 'Svoj ugled lahko uvozite iz druge P2P platforme v $appName. Kodo boste morali vnesti nekam v svoj profil na drugi platformi, ki jo bomo nato preverili. Na platformo lahko povežete en račun.';
   }
 
   @override
@@ -5759,7 +5757,7 @@ class I18nSl extends I18n {
   String get signup8722Sbsuccess250Sbletter8722Sbsent => 'Potrditveno pismo je bilo poslano na vaš e-poštni naslov.';
 
   @override
-  String get signup8722Sbsuccess250Sblogin => 'Zdaj boste preusmerjeni na domačo stran.';
+  String get signup8722Sbsuccess250Sblogin => 'Sedaj boste preusmerjeni na domačo stran.';
 
   @override
   String get signup8722Sbsuccess250Sbtitle => 'Uspešna registracija!';
@@ -5811,11 +5809,11 @@ class I18nSl extends I18n {
 
   @override
   String signup250Sbtos8722Sbdialog8722Sbtext(Object terms) {
-    return 'Za registracijo preberite in se strinjate z $terms';
+    return 'Za registracijo preberite in se strinjajte z $terms';
   }
 
   @override
-  String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbagree => 'Se strinjam';
+  String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbagree => 'Strinjam se';
 
   @override
   String get signup250Sbtos8722Sbdialog8722Sbtext8722Sbdisagree => 'Ne strinjam se';
@@ -5829,7 +5827,7 @@ class I18nSl extends I18n {
   String get signup250Sbtos8722Sbdialog8722Sbtitle => 'Pogoji storitve';
 
   @override
-  String get sso250Sblogout8722Sbportal => 'Odjavljeni ste ...';
+  String get sso250Sblogout8722Sbportal => 'Odjavljamo vas...';
 
   @override
   String sso250Sbunverified8722Sbemail8722Sbtext(Object settingsPage) {
@@ -5847,14 +5845,14 @@ class I18nSl extends I18n {
 
   @override
   String start250Sbbuy8722Sbonline(Object assetName) {
-    return 'Kako kupiti $assetName na spletu';
+    return 'Kako kupiti $assetName preko spleta';
   }
 
   @override
   String get start250Sbbuy8722Sbonline57Sbagoradesk => 'Kako kupiti kriptovalute na spletu';
 
   @override
-  String get start250Sblearn8722Sbmore => 'Nauči se več';
+  String get start250Sblearn8722Sbmore => 'Izvedite več';
 
   @override
   String start250Sblocal(Object assetName) {
@@ -5889,7 +5887,7 @@ class I18nSl extends I18n {
   String get statistics250Sbticker8722Sb12hr => '12 ur:';
 
   @override
-  String get statistics250Sbticker8722Sb1hr => '1 uro:';
+  String get statistics250Sbticker8722Sb1hr => '1 ura:';
 
   @override
   String get statistics250Sbticker8722Sb24hr => '24 ur:';
@@ -5899,7 +5897,7 @@ class I18nSl extends I18n {
 
   @override
   String statistics250Sbticker8722Sbapi8722Sbtitle(Object appName) {
-    return '$appName API za oznako povprečne cene';
+    return '$appName API za Oznako Povprečne Cene';
   }
 
   @override
@@ -5907,7 +5905,7 @@ class I18nSl extends I18n {
 
   @override
   String statistics250Sbticker8722Sbtitle(Object assetSymbol) {
-    return 'Povprečna cena/$assetSymbol na podlagi opravljenih poslov';
+    return 'Povprečna cena/$assetSymbol na podlagi opravljenih trgovanj';
   }
 
   @override
@@ -5919,7 +5917,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbnone => 'Prikaži sporočilo »Ni podatkov«.';
+  String get statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbnone => 'Prikaži sporočilo \"Ni podatkov\"';
 
   @override
   String statistics250Sbwidget250Sbinstructions250Sbno8722Sbdata250Sbtitle(Object currencyCode) {
@@ -5933,13 +5931,13 @@ class I18nSl extends I18n {
   String get stepper250Sbback8722Sbbtn => 'Nazaj';
 
   @override
-  String get stepper250Sbnext8722Sbbtn => 'Naslednji';
+  String get stepper250Sbnext8722Sbbtn => 'Naslednje';
 
   @override
-  String get support250Sbdescription => 'Podporo lahko dobite tako, da odprete vstopnico, pošljete e-pošto ali se obrnete na Telegram.';
+  String get support250Sbdescription => 'Podporo lahko dobite tako, da odprete vstopnico, pošljete e-pošto ali kontaktirate na Telegramu.';
 
   @override
-  String get support250Sbemail250Sbbutton => 'Pošlji E-pošto';
+  String get support250Sbemail250Sbbutton => 'Pošlji e-pošto';
 
   @override
   String support250Sbemail250Sbdescription(Object email) {
@@ -5962,13 +5960,13 @@ class I18nSl extends I18n {
   String get support250Sbtelegram250Sbbutton => 'Sporočilo na Telegramu';
 
   @override
-  String get support250Sbtelegram250Sbdescription => 'Lahko nam pošljete sporočilo na Telegram';
+  String get support250Sbtelegram250Sbdescription => 'Lahko nam pošljete sporočilo na Telegramu';
 
   @override
   String get support250Sbticket250Sbbutton => 'Odpri vstopnico';
 
   @override
-  String get support250Sbticket250Sbdescription => 'Vstopnico lahko dvignete na našem portalu za podporo';
+  String get support250Sbticket250Sbdescription => 'Vstopnico lahko oddate na našem portalu za podporo';
 
   @override
   String get support250Sbticket250Sbtitle => 'Vstopnica';
@@ -5977,13 +5975,13 @@ class I18nSl extends I18n {
   String get support250Sbtitle => 'Pridobite podporo';
 
   @override
-  String get trade8722Sbnoun => 'Trgovina';
+  String get trade8722Sbnoun => 'Trade';
 
   @override
   String get trade250Sbamount8722Sbminus8722Sbfee250Sblabel => 'Znesek minus provizija:';
 
   @override
-  String get trade250Sbamount8722Sbplus8722Sbfee250Sblabel => 'Znesek plus pristojbina:';
+  String get trade250Sbamount8722Sbplus8722Sbfee250Sblabel => 'Znesek plus provizija:';
 
   @override
   String trade250Sbamount8722Sbto8722Sbpay(Object amount) {
@@ -5992,7 +5990,7 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbamount8722Sbto8722Sbreceive(Object amount) {
-    return 'Znesek, ki ga mora kupec plačati: $amount.';
+    return 'Znesek, ki ga kupec mora plačati: $amount.';
   }
 
   @override
@@ -6009,10 +6007,10 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb2 => 'Po plačilu morate <strong> označiti plačilo kot zaključeno </strong> s pritiskom na gumb \'Plačal sem\' ali pa bo prodajalec lahko preklical trgovanje, ko se izteče čas za plačilo.';
+  String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb2 => 'Po plačilu morate <strong> označiti plačilo kot zaključeno </strong> s pritiskom na gumb \'Plačal sem\', sicer bo prodajalec lahko preklical trgovanje, ko se izteče čas za plačilo.';
 
   @override
-  String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb3 => 'Čakam, da prodajalec potrdi vaše plačilo';
+  String get trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb3 => 'Čakamo, da prodajalec potrdi vaše plačilo';
 
   @override
   String trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb4(Object time) {
@@ -6025,7 +6023,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning => 'Če je naslov, naveden ob odprtju posla, napačen, boste morali znova odpreti posel s pravilnim naslovom, sicer so lahko kovanci nepovratno izgubljeni.';
+  String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning => 'Če je naslov, naveden ob odprtju trgovanja napačen, boste morali znova odpreti trade s pravilnim naslovom, sicer so lahko kovanci nepovratno izgubljeni.';
 
   @override
   String get trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle => 'Pokaži naslov';
@@ -6044,7 +6042,7 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtext(Object username) {
-    return 'Vi, $username, izjavljate, da ste zaključili plačilo';
+    return 'Vi, $username, izjavljate, da ste opravili plačilo';
   }
 
   @override
@@ -6066,17 +6064,17 @@ class I18nSl extends I18n {
   String get trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtitle => 'Potrdite omogočanje zaščite arbitražne obveznice';
 
   @override
-  String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbnot8722Sbpaid8722Sbtext => 'Kupec plačila še ni označil kot zaključeno! Ali ste prepričani, da želite zdaj dokončati menjavo?';
+  String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbnot8722Sbpaid8722Sbtext => 'Kupec plačila še ni označil kot zaključeno! Ali ste prepričani, da želite zdaj dokončati trgovanje?';
 
   @override
   String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext => 'Potrdite, da ste prejeli plačilo in želite zaključiti trgovanje';
 
   @override
-  String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext8722Sbwarning => 'Bodi previden! Trgovanje zaključite šele, ko ste prepričani, da ste prejeli plačilo. Obstajajo prevaranti, ki poskušajo pretentati prodajalce, da bi prezgodaj sklenili posel.';
+  String get trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbmonero8722Sbtext8722Sbwarning => 'Bodi previdni! Trgovanje zaključite šele, ko ste prepričani, da ste prejeli plačilo. Obstajajo prevaranti, ki poskušajo pretentati prodajalce, da bi prezgodaj zaključili posel.';
 
   @override
   String trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbtitle(Object amount, Object username) {
-    return 'Zaključek menjave za $amount z $username';
+    return 'Zaključek trgovanja za $amount z $username';
   }
 
   @override
@@ -6086,24 +6084,24 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext(Object appName) {
-    return 'Potrdite, da želite trgovanje financirati iz svoje denarnice $appName.';
+    return 'Potrdite, da želite trgovanje financirati iz svoje denarnice $appName';
   }
 
   @override
   String get trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle => 'Potrdite financiranje';
 
   @override
-  String get trade250Sbdialog250Sbfunding8722Sberror8722Sbtext => 'Nezadostno stanje za financiranje trgovine';
+  String get trade250Sbdialog250Sbfunding8722Sberror8722Sbtext => 'Nezadostno stanje za financiranje trgovanja';
 
   @override
   String get trade250Sbdialog250Sbfunding8722Sberror8722Sbtitle => 'Napaka pri financiranju!';
 
   @override
-  String get trade250Sbdispute8722Sbbtn => 'Začeti spor';
+  String get trade250Sbdispute8722Sbbtn => 'Začni spor';
 
   @override
   String trade250Sbdispute8722Sbtext(Object appName) {
-    return 'Če pride do nesoglasja glede trgovine, lahko začnete spor. Po tem vas bo podpora za $appName kontaktirala prek klepeta te trgovine.';
+    return 'Če pride do nesoglasja glede trgovanja, lahko začnete spor. Po tem vas bo podpora za $appName kontaktirala prek klepeta tega trgovanja.';
   }
 
   @override
@@ -6113,7 +6111,7 @@ class I18nSl extends I18n {
   String get trade250Sberror250Sb247 => 'Dvig z vašega računa je prepovedan zaradi sankcij';
 
   @override
-  String get trade250Sberror250Sb248 => 'Znesek posla ne zadošča za kritje stroškov, povezanih s poravnavo. Poskusite znova pozneje, ko bodo provizije nižje, ali znova odprite trgovanje za večji znesek in prekličite tega.';
+  String get trade250Sberror250Sb248 => 'Znesek trgovanja ne zadošča za kritje stroškov, povezanih s poravnavo. Poskusite znova pozneje, ko bodo provizije nižje, ali znova odprite trgovanje za večji znesek in prekličite tega.';
 
   @override
   String trade250Sbescrow8722Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb0(Object appName) {
@@ -6160,7 +6158,7 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbfeedback250Sbyour8722Sbmessage8722Sbtip(Object username) {
-    return 'Neobvezno. Pustite sporočilo o $username, ki bo prikazano poleg povratnih informacij na strani s profilom prejemnika. Največ 256 znakov.';
+    return 'Neobvezno. Pustite sporočilo o $username, ki bo prikazano poleg povratnih informacij na strani s profilom prejemnika. Maksimalno 256 znakov.';
   }
 
   @override
@@ -6172,13 +6170,13 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get trade250Sbfloating8722Sbprice8722Sbtext8722Sbfloating => 'lebdeči';
+  String get trade250Sbfloating8722Sbprice8722Sbtext8722Sbfloating => 'floating';
 
   @override
   String get trade250Sbfund8722Sbtrade8722Sbbtn => 'Financirajte to trgovanje';
 
   @override
-  String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => 'plačal sem';
+  String get trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn => 'Plačal sem';
 
   @override
   String trade250Sbinfo250Sbfee250Sblabel(Object appName) {
@@ -6187,7 +6185,7 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbinfo250Sbtrade8722Sbad(Object adType) {
-    return 'Trgovski oglas ($adType)';
+    return 'Trgovalni oglas ($adType)';
   }
 
   @override
@@ -6201,33 +6199,33 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sblocal250Sbbuyer250Sbverification8722Sbcode(Object verificationCode) {
-    return '$verificationCode je vaša potrditvena koda. Prodajalec bo to izvedel šele, ko bo sklenil posel. Lahko ga zapišete in uporabite za preverjanje, ali je prodajalec dejansko poslal kovance po prejemu vašega plačila, ko se srečate, ne da bi sploh morali uporabiti napravo.';
+    return '$verificationCode je vaša verifikacijska koda. Prodajalec jo bo izvedel šele po zaključku trgovanja. Lahko si jo zapišete in jo uporabite za preverjanje, ali je prodajalec po prejemu vašega plačila dejansko poslal kovance, ko se srečata, ne da bi vam bilo treba sploh uporabiti napravo.';
   }
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle => 'Čakanje na prodajalca, da financira trgovino';
+  String get trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle => 'Čakanje na prodajalca, da financira trgovanje';
 
   @override
   String trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(Object appName) {
-    return 'Počakajte, da prodajalec položi več kovancev v svojo $appName denarnico, da pokrije znesek te trgovine.';
+    return 'Počakajte, da prodajalec položi več kovancev v svojo $appName denarnico, da pokrije znesek tega trgovanja.';
   }
 
   @override
   String trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbfund8722Sbthe8722Sbtrade(Object amount, Object appName) {
-    return 'Za financiranje te trgovine morate imeti v denarnici vsaj $amount $appName.';
+    return 'Za financiranje tega trgovanja morate imeti v denarnici vsaj $amount $appName.';
   }
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn => 'Ko položite zahtevani znesek, pritisnite gumb za financiranje posla.';
+  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn => 'Ko položite zahtevani znesek, pritisnite gumb za financiranje trgovanja.';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle => 'Financirajte trgovino';
+  String get trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle => 'Financirajte trgovanje';
 
   @override
   String get trade250Sblocal250Sbstep8722Sb1250Sbbuyer250Sbtitle => 'Dogovorite se za sestanek in izvedite plačilo';
 
   @override
-  String get trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbrelease8722Sbafter8722Sbpayment => 'Po prejemu plačila zaključite trgovanje. Prepričajte se, da preverite pristnost gotovine, preden jo sprejmete in dokončate trgovanje. Zaključite šele, ko se prepričate, da je plačilo trdno v vaših rokah.';
+  String get trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbrelease8722Sbafter8722Sbpayment => 'Po prejemu plačila, zaključite trgovanje. Prepričajte se, da preverite pristnost gotovine, preden jo sprejmete in dokončate trgovanje. Zaključite šele, ko se prepričate, da je plačilo trdno v vaših rokah.';
 
   @override
   String get trade250Sblocal250Sbstep8722Sb1250Sbseller250Sbtitle => 'Dogovorite se za sestanek in prejmite plačilo';
@@ -6247,13 +6245,13 @@ class I18nSl extends I18n {
   String get trade250Sbno8722Sbpayment8722Sbdetails => 'Podatki o plačilu niso navedeni. Pogovorite se o njih v klepetu.';
 
   @override
-  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbpaying8722Sbparty => 'V klepetu povprašajte svojega trgovinskega partnerja o podrobnostih plačila in izvedite plačilo. <strong>Če ste že trgovali, ne pošljite plačila na račun, ki vam ga je dal prodajalec v prejšnjem trgovanju, ne da bi to prej potrdili s prodajalcem v tem trgovskem klepetu.</strong>';
+  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbpaying8722Sbparty => 'V klepetu povprašajte svojega trgovalskega partnerja o podrobnostih plačila in izvedite plačilo. <strong>Če ste že trgovali, ne pošljite plačila na račun, ki vam ga je dal prodajalec v prejšnjem trgovanju, ne da bi to prej potrdili s prodajalcem v tem trgovskem klepetu.</strong>';
 
   @override
-  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbreceiving8722Sbparty => 'V klepetu povejte svojemu trgovskemu partnerju podrobnosti o plačilu.';
+  String get trade250Sbno8722Sbpayment8722Sbinfo250Sbreceiving8722Sbparty => 'V klepetu povejte svojemu trgovalnemu partnerju podrobnosti o plačilu.';
 
   @override
-  String get trade250Sbpay => 'Plačajte v skladu s spodnjimi podatki o plačilu. Če imate kakršna koli vprašanja, jih vprašajte prodajalca v klepetu.';
+  String get trade250Sbpay => 'Plačajte v skladu s spodnjimi podatki o plačilu. Če imate kakršna koli vprašanja, vprašajte prodajalca v klepetu.';
 
   @override
   String get trade250Sbpayment8722Sbdetails => 'Podatki o plačilu';
@@ -6286,11 +6284,11 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbstatus250Sbcancelled8722Sbtext(Object linebreak, Object time) {
-    return 'Ta trgovina je bila preklicana $linebreak  pri $time.';
+    return 'To trgovanje je bilo preklicano $linebreak  pri $time.';
   }
 
   @override
-  String get trade250Sbstatus250Sbcancelled8722Sbtitle => 'Prekinjeno';
+  String get trade250Sbstatus250Sbcancelled8722Sbtitle => 'Preklicano';
 
   @override
   String trade250Sbstatus250Sbclosed8722Sbtext8722Sb0(Object linebreak, Object time) {
@@ -6313,7 +6311,7 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbstatus250Sbdisputed8722Sbtext8722Sb0(Object linebreak, Object time) {
-    return 'Ta trgovina je bila izpodbijana $linebreak  pri $time.';
+    return 'Ta trade je bil izpodbijan $linebreak  pri $time.';
   }
 
   @override
@@ -6339,10 +6337,10 @@ class I18nSl extends I18n {
   String get trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb2 => 'Prodajalec lahko prekliče trgovanje, ko se izteče čas za plačilo';
 
   @override
-  String get trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtitle => 'Finančno, zaščiteno z arbitražno obveznico';
+  String get trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtitle => 'Financirano, zaščiteno z arbitražno obveznico';
 
   @override
-  String get trade250Sbstatus250Sbfunded8722Sbnot8722Sbescrowed8722Sbtitle => 'Finančno, ni zaščiteno z arbitražno obveznico';
+  String get trade250Sbstatus250Sbfunded8722Sbnot8722Sbescrowed8722Sbtitle => 'Financirano, ni zaščiteno z arbitražno obveznico';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbaccordion8722Sbsummary => 'Podrobnosti transakcije';
@@ -6351,7 +6349,7 @@ class I18nSl extends I18n {
   String get trade250Sbstatus250Sbsettlement250Sbaddress => 'Naslov';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbarbitrated => 'Razsodil skrbnik';
+  String get trade250Sbstatus250Sbsettlement250Sbarbitrated => 'Razsodil skrbnik / administrator';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbbuyer8722Sbtx250Sbtitle => 'Prenos v poravnalno denarnico kupca';
@@ -6366,7 +6364,7 @@ class I18nSl extends I18n {
   String get trade250Sbstatus250Sbsettlement250Sbmnemonic8722Sbseed => 'Vaše neskrbniško mnemonično seme denarnice';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprocessing => 'Obravnavati';
+  String get trade250Sbstatus250Sbsettlement250Sbprocessing => 'Obdelava';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbprocessing250Sbdescription => 'Poravnava je v obdelavi. <br /> Počakajte, storiti vam ni treba ničesar.';
@@ -6375,13 +6373,13 @@ class I18nSl extends I18n {
   String get trade250Sbstatus250Sbsettlement250Sbprocessing250Sbtime8722Sbestimation => 'To lahko traja 10–60 minut.';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbbuyer => 'Čaka na nakazilo v kupčevo poravnalno denarnico ...';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbbuyer => 'Čakanje na nakazilo v kupčevo poravnalno denarnico ...';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbseller => 'Čakanje na prenos v prodajalčevo neskrbniško denarnico ...';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbseller => 'Čakanje na prenos v prodajalčevo neskrbniško denarnico...';
 
   @override
-  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbconfirming8722Sbto8722Sbseller => 'Potrjujem prenos v prodajalčevo neskrbniško denarnico ...';
+  String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbconfirming8722Sbto8722Sbseller => 'Potrjujem prenos v prodajalčevo neskrbniško denarnico...';
 
   @override
   String get trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbdone250Sbbuyer => 'Končano! Preverite svojo prejemno denarnico in videli boste transakcijo!';
@@ -6413,7 +6411,7 @@ class I18nSl extends I18n {
   String get trade250Sbstatus250Sbsettlement250Sbtx8722Sbkey => 'Transakcijski ključ';
 
   @override
-  String get trade250Sbstatus250Sbunfunded8722Sbescrowed => 'Brez sredstev, zaščiten z arbitražno obveznico';
+  String get trade250Sbstatus250Sbunfunded8722Sbescrowed => 'Nefinancirano, zaščiteno z arbitražno obveznico';
 
   @override
   String get trade250Sbstatus250Sbunfunded8722Sbnot8722Sbescrowed => 'Nefinancirano, nezaščiteno z arbitražno obveznico';
@@ -6453,7 +6451,7 @@ class I18nSl extends I18n {
   String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb2 => 'Dokončana transakcija je nepovratna';
 
   @override
-  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb5 => 'Prosimo, ne uporabljajte spletnih načinov plačila! Za to uporabite spletno trgovanje';
+  String get trade250Sbterms8722Sband8722Sbinfo8722Sbtext8722Sb5 => 'Prosimo, ne uporabljajte spletnih načinov plačila! Za to uporabite trgovanje preko spleta';
 
   @override
   String trade250Sbterms8722Sband8722Sbinfo8722Sbtitle(Object appName) {
@@ -6477,7 +6475,7 @@ class I18nSl extends I18n {
 
   @override
   String trade250Sbtitle8722Sblocal8722Sbsell(Object amountXmr, Object assetSymbol, Object amountFiat, Object currency) {
-    return 'Prodam $amountXmr $assetSymbol za $amountFiat $currency za gotovino';
+    return 'Prodaja $amountXmr $assetSymbol za $amountFiat $currency za gotovino';
   }
 
   @override
@@ -6491,7 +6489,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get trade250Sbtitle250Sbbuying => 'Nakupovanje';
+  String get trade250Sbtitle250Sbbuying => 'Kupovanje';
 
   @override
   String get trade250Sbtitle250Sbexpiry => 'Trajanje pogodbe:';
@@ -6531,17 +6529,17 @@ class I18nSl extends I18n {
 
   @override
   String user250Sbads250Sbonline8722Sbbuy8722Sbtitle(Object assetName, Object user) {
-    return 'Prodaj $assetName na spletu $user';
+    return 'Prodaj $assetName preko spleta uporabniku $user';
   }
 
   @override
   String user250Sbads250Sbonline8722Sbsell8722Sbtitle(Object assetName, Object user) {
-    return 'Kupite $assetName na spletu pri $user';
+    return 'Kupite $assetName preko spleta pri $user';
   }
 
   @override
   String user250Sbblock8722Sbbtn(Object username) {
-    return 'Blok $username';
+    return 'Blokiraj $username';
   }
 
   @override
@@ -6585,7 +6583,7 @@ class I18nSl extends I18n {
   String get user250Sblast8722Sbseen250Sbjust8722Sbnow => 'ravnokar';
 
   @override
-  String get user250Sbmedian8722Sbdays => 'dnevi';
+  String get user250Sbmedian8722Sbdays => 'dni';
 
   @override
   String get user250Sbmedian8722Sbhours => 'ure';
@@ -6594,7 +6592,7 @@ class I18nSl extends I18n {
   String get user250Sbmedian8722Sbminutes => 'minut';
 
   @override
-  String get user250Sbmedian8722Sbnot8722Sbknown => 'Ne poznano';
+  String get user250Sbmedian8722Sbnot8722Sbknown => 'Ni znano';
 
   @override
   String get user250Sbmedian8722Sbseconds => 'sekund';
@@ -6612,17 +6610,17 @@ class I18nSl extends I18n {
   String get user250Sbno8722Sbfeedback250Sbwhy250Sbtitle => 'Kje so moje povratne informacije?';
 
   @override
-  String get user250Sbnumber8722Sbof8722Sbpartners => 'Trgovski partnerji:';
+  String get user250Sbnumber8722Sbof8722Sbpartners => 'Trgovalni partnerji:';
 
   @override
   String get user250Sbnumber8722Sbof8722Sbtrades => 'Trgovanja:';
 
   @override
-  String get user250Sbthis8722Sbis8722Sbyou => 'To si ti';
+  String get user250Sbthis8722Sbis8722Sbyou => 'To ste vi';
 
   @override
   String user250Sbtrust8722Sbbtn(Object username) {
-    return 'Zaupanje $username';
+    return 'Zaupaj $username';
   }
 
   @override
@@ -6652,7 +6650,7 @@ class I18nSl extends I18n {
   String get validation250Sberror250Sbad8722Sbid => 'Neveljaven ID!';
 
   @override
-  String get validation250Sberror250Sbattachment8722Sbid => 'Neveljaven ID priloge';
+  String get validation250Sberror250Sbattachment8722Sbid => 'Neveljavna priloga ID';
 
   @override
   String get validation250Sberror250Sbcountry8722Sbcode => 'Neveljavna koda države!';
@@ -6667,7 +6665,7 @@ class I18nSl extends I18n {
   String get validation250Sberror250Sbpage => 'Stran mora biti številka';
 
   @override
-  String get validation250Sberror250Sbtrade8722Sbid => 'Neveljavna ID trgovanja';
+  String get validation250Sberror250Sbtrade8722Sbid => 'Neveljaven ID trgovanja';
 
   @override
   String get verify8722Sbemail250Sberror => 'Pri preverjanju elektronske pošte je prišlo do napake';
@@ -6682,7 +6680,7 @@ class I18nSl extends I18n {
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Prenesite CSV';
 
   @override
-  String get wallet250Sbfee250Sbbtc250Sbhigh => 'visoko';
+  String get wallet250Sbfee250Sbbtc250Sbhigh => 'Visoko';
 
   @override
   String get wallet250Sbfee250Sbbtc250Sbhigh250Sblabel => 'Visoka provizija, ki bo predvidoma potrjena v nekaj blokih';
@@ -6697,7 +6695,7 @@ class I18nSl extends I18n {
   String get wallet250Sbfee250Sbbtc250Sbmedium => 'Srednje';
 
   @override
-  String get wallet250Sbfee250Sbbtc250Sbmedium250Sblabel => 'Srednja pristojbina, ki bo predvidoma potrjena v enem dnevu';
+  String get wallet250Sbfee250Sbbtc250Sbmedium250Sblabel => 'Srednja provizija, ki bo predvidoma potrjena v roku enega dneva';
 
   @override
   String get wallet250Sbfee250Sbbtc250Sbradio8722Sbtitle => 'Izberite raven provizije';
@@ -6732,7 +6730,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbpriority250Sbfee(Object amount, Object asset) {
-    return 'pristojbina: $amount $asset';
+    return 'provizija: $amount $asset';
   }
 
   @override
@@ -6759,10 +6757,10 @@ class I18nSl extends I18n {
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbdate => 'Datum:';
 
   @override
-  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid => 'Številka transakcije:';
+  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid => 'ID transakcije:';
 
   @override
-  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sblocked8722Sbstatus => 'Zaklenjeno stanje:';
+  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sblocked8722Sbstatus => 'Zaklenjen status:';
 
   @override
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sblocked8722Sbstatus8722Sbunlocked => 'Odklenjeno';
@@ -6771,7 +6769,7 @@ class I18nSl extends I18n {
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbnote => 'Opomba:';
 
   @override
-  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbstatus => 'Stanje:';
+  String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbstatus => 'Status:';
 
   @override
   String get wallet250Sbreceive250Sbdetails8722Sbdialog250Sbstatus8722Sbpending => 'V teku';
@@ -6788,7 +6786,7 @@ class I18nSl extends I18n {
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sblong => 'Potrditve';
 
   @override
-  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sbshort => 'konf.';
+  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbconfirmations8722Sbshort => 'Konf.';
 
   @override
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbdate => 'Datum';
@@ -6797,26 +6795,26 @@ class I18nSl extends I18n {
   String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbdetails8722Sbbtn => 'Podrobnosti';
 
   @override
-  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbstatus => 'Stanje';
+  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtable250Sbstatus => 'Status';
 
   @override
-  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle => 'Vhodni depoziti';
+  String get wallet250Sbreceive250Sbincoming8722Sbdeposits8722Sbtitle => 'Dohodni depoziti';
 
   @override
   String get wallet250Sbreceive250Sbno8722Sbincoming => 'Vaši čakajoči depoziti bodo prikazani tukaj';
 
   @override
   String wallet250Sbreceive250Sbqr(Object appName, Object assetSymbol) {
-    return 'QR predstavitev vašega naslova $appName $assetSymbol.';
+    return 'QR predstavitev vašega naslova $appName $assetSymbol';
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Prejmi $assetName';
   }
 
   @override
-  String get wallet250Sbselect8722Sball8722Sbbalance => 'Vse razpoložljivo stanje';
+  String get wallet250Sbselect8722Sball8722Sbbalance => 'Vso razpoložljivo stanje';
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived(Object assetName) {
@@ -6825,7 +6823,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbsend250Sbamount8722Sbto8722Sbbe8722Sbreceived8722Sbtip(Object assetName) {
-    return 'To je znesek $assetName, ki ga je treba prejeti na prejemni naslov $assetName.';
+    return 'To je znesek $assetName, za prejetje na prejemni naslov $assetName.';
   }
 
   @override
@@ -6855,7 +6853,7 @@ class I18nSl extends I18n {
   String get wallet250Sbsend250Sbcontinue8722Sbbtn => 'Nadaljuj';
 
   @override
-  String get wallet250Sbsend250Sbdialog250Sbconfirm8722Sbtitle => 'Potrdite umik arbitražne garancije';
+  String get wallet250Sbsend250Sbdialog250Sbconfirm8722Sbtitle => 'Potrdite odmik arbitražne garancije';
 
   @override
   String wallet250Sbsend250Sblocal8722Sbwallet(Object appName) {
@@ -6869,37 +6867,37 @@ class I18nSl extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Izberite prioriteto transakcije';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
-    return 'Prejemanje naslova $assetName.';
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
+    return 'Prejemni naslov $assetName';
   }
 
   @override
   String wallet250Sbsend250Sbreceiving8722Sbaddress8722Sbtip(Object assetName) {
-    return 'Sprejeti so samo veljavni naslovi $assetName.';
+    return 'Sprejeti so samo veljavni naslovi $assetName';
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Pošlji $assetName';
   }
 
   @override
-  String get wallet250Sbsend250Sbsuccess => 'uspeh!';
+  String get wallet250Sbsend250Sbsuccess => 'Uspeh!';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb0 => 'Transakcije Monero običajno trajajo približno 30 do 60 minut, da se pošljejo, občasno lahko traja nekaj ur, če je omrežje počasno.';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb0 => 'Transakcije Monero običajno trajajo približno 30 do 60 minut, da se pošljejo. Občasno lahko traja nekaj ur, če je omrežje počasno.';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb057Sbagoradesk => 'Pošiljanje transakcij s kriptovalutami običajno traja približno 30 do 60 minut, občasno lahko traja nekaj ur, če je omrežje počasno.';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb057Sbagoradesk => 'Pošiljanje transakcij s kriptovalutami običajno traja približno 30 do 60 minut. Občasno lahko traja nekaj ur, če je omrežje počasno.';
 
   @override
   String get wallet250Sbsend250Sbtip8722Sb08722Sbtext8722Sb1 => 'Poglejte, zakaj včasih traja dlje';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle => 'Kako dolgo traja transakcija Monero?';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle => 'Kako Dolgo Traja Monero Transakcija?';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle57Sbagoradesk => 'Kako dolgo traja transakcija s kriptovaluto?';
+  String get wallet250Sbsend250Sbtip8722Sb08722Sbtitle57Sbagoradesk => 'Kako Dolgo Traja Kripto Transakcija?';
 
   @override
   String wallet250Sbsend250Sbtip8722Sb18722Sbtext(Object appName) {
@@ -6912,10 +6910,10 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle => 'Povračila in izplačila za Monero';
+  String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle => 'Povračila in Izplačila v Monero';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle57Sbagoradesk => 'Povračila in izplačila v kriptovalutah';
+  String get wallet250Sbsend250Sbtip8722Sb18722Sbtitle57Sbagoradesk => 'Povračila in Izplačila v Kriptovalutah';
 
   @override
   String wallet250Sbsend250Sbtip8722Sb28722Sbtext(Object appName) {
@@ -6924,12 +6922,12 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee(Object assetName) {
-    return 'Trenutne odhodne $assetName omrežnine';
+    return 'Trenutne odhodne $assetName omrežne provizije';
   }
 
   @override
   String wallet250Sbsend250Sbtip8722Sb28722Sbtext8722Sbfee8722Sbrates(Object assetName) {
-    return 'Trenutne odhodne $assetName cene omrežnine';
+    return 'Trenutne odhodne $assetName omrežne provizije';
   }
 
   @override
@@ -6938,13 +6936,13 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle => 'Odhodne provizije Monero';
+  String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle => 'Odhodne Monero Provizije';
 
   @override
-  String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Provizije za odhodne kriptovalute';
+  String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Odhodne Provizije za Kriptovalute';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Pošlji $assetName';
   }
 
@@ -6956,7 +6954,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbswap250Sbconfirmation250Sbtitle(Object partner) {
-    return 'Vaša trgovina $partner.';
+    return 'Vaše $partner trgovanje';
   }
 
   @override
@@ -6970,10 +6968,10 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbswap250Sbcurrencies250Sbdeposit => 'Želim poslati ...';
+  String get wallet250Sbswap250Sbcurrencies250Sbdeposit => 'Želim poslati...';
 
   @override
-  String get wallet250Sbswap250Sbcurrencies250Sbwithdrawal => 'Želim prejeti ...';
+  String get wallet250Sbswap250Sbcurrencies250Sbwithdrawal => 'Želim prejeti...';
 
   @override
   String get wallet250Sbswap250Sbdeposit250Sbconfirmation250Sbaddress => 'na ta naslov:';
@@ -6995,7 +6993,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbswap250Sblimits250Sbdeposit250SbmaxAmount => 'Najvišji znesek depozita';
+  String get wallet250Sbswap250Sblimits250Sbdeposit250SbmaxAmount => 'Maksimalen znesek depozita';
 
   @override
   String get wallet250Sbswap250Sblimits250Sbdeposit250SbminAmount => 'Minimalni znesek depozita';
@@ -7006,12 +7004,12 @@ class I18nSl extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Prejmi $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Pošlji $asset';
   }
 
@@ -7029,7 +7027,7 @@ class I18nSl extends I18n {
   String get wallet250Sbswap250Sbnative250Sberror250Sbinvalid8722Sbamount => 'Neveljaven znesek';
 
   @override
-  String get wallet250Sbswap250Sbnative250Sberror250Sbno8722Sboffers => 'Nismo mogli najti nobene ustrezne ponudbe ... poskusite prilagoditi znesek.';
+  String get wallet250Sbswap250Sbnative250Sberror250Sbno8722Sboffers => 'Nismo mogli najti nobene ustrezne ponudbe... poskusite prilagoditi znesek.';
 
   @override
   String get wallet250Sbswap250Sbnative250Sboffers250Sbtitle => 'Izberite ponudbo';
@@ -7038,7 +7036,7 @@ class I18nSl extends I18n {
   String get wallet250Sbswap250Sbnative250Sboffers250Sbview8722Sbad8722Sbbutton => 'Poglej oglas';
 
   @override
-  String get wallet250Sbswap250Sbnative250Sbtrade8722Sbbutton => 'Trgovina';
+  String get wallet250Sbswap250Sbnative250Sbtrade8722Sbbutton => 'Trgovanje';
 
   @override
   String wallet250Sbswap250Sbpowered8722Sbby(Object partner) {
@@ -7047,11 +7045,11 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbswap250Sbprovide8722Sbemail(Object partner) {
-    return 'Daj $partner moj kontaktni e-poštni naslov';
+    return 'Posreduj $partner moj kontaktni e-poštni naslov';
   }
 
   @override
-  String get wallet250Sbswap250Sbsave8722Sblink => 'Ne pozabite shraniti te povezave, saj je to vaš edini način za sledenje trgovini!';
+  String get wallet250Sbswap250Sbsave8722Sblink => 'Ne pozabite shraniti te povezave, saj je to vaš edini način za sledenje trgovanju!';
 
   @override
   String get wallet250Sbswap250Sbsend8722Sbbtn => 'Pošljite kovance!';
@@ -7096,11 +7094,11 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbswap250Sbwithdrawal250Sbsuccess250Sbtitle250Sball8722Sbset(Object partner) {
-    return 'Vse pripravljeno za trgovino $partner!';
+    return 'Vse pripravljeno za $partner trgovanje!';
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Prejmi $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nSl extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Prejeti';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Pošlji $assetName';
   }
 
@@ -7134,7 +7132,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbtx250Sbinternal8722Sbreceive8722Sbtrade(Object id) {
-    return 'Prejeto iz trgovine $id';
+    return 'Prejeto iz trgovanja $id';
   }
 
   @override
@@ -7144,7 +7142,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbtx250Sbinternal8722Sbsend8722Sbtrade(Object id) {
-    return 'Poslano v trgovino $id';
+    return 'Poslano v trgovanje $id';
   }
 
   @override
@@ -7157,7 +7155,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbtx250Sbrebate(Object code) {
-    return 'Poraba honorarja. Koda kupona: $code.';
+    return 'Povračilo provizije. Koda kupona: $code.';
   }
 
   @override
@@ -7172,7 +7170,7 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbtx250Sbreserve8722Sbreturn(Object assetName, Object id) {
-    return '$assetName rezervni donos iz trgovine $id';
+    return '$assetName rezervni donos iz trgovanja $id';
   }
 
   @override
@@ -7190,7 +7188,7 @@ class I18nSl extends I18n {
   String get wallet250Sbtxs250Sbfilter250Sbdetails => 'Podrobnosti';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'Tx ID, naslov, trgovski ID, uporabniško ime itd.';
+  String get wallet250Sbtxs250Sbfilter250Sbdetails250Sbplaceholder => 'Tx ID, naslov, trgovalni ID, uporabniško ime, itd.';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbfrom => 'Od';
@@ -7205,19 +7203,19 @@ class I18nSl extends I18n {
   String get wallet250Sbtxs250Sbfilter250Sbtype => 'Vrsta';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => 'Pridružena provizija';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbaffiliate => 'Provizija partnerskega programa';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sball => 'Vse vrste';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbcoupon => 'Popust na kupon';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbcoupon => 'Rabat kupona';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbfee => 'Omrežnina';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbreceive => 'Notranji sprejem';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbreceive => 'Interni prejem';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbinternal8722Sbsend => 'Interno pošiljanje';
@@ -7229,10 +7227,10 @@ class I18nSl extends I18n {
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreceive => 'Prejeti';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => 'Trgovinska rezerva';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve => 'Trgovalna rezerva';
 
   @override
-  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => 'Donos trgovinske rezerve';
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbreserve8722Sbreturn => 'Donos trgovalne rezerve';
 
   @override
   String get wallet250Sbtxs250Sbfilter250Sbtype250Sbsend => 'Pošlji';
@@ -7260,11 +7258,11 @@ class I18nSl extends I18n {
 
   @override
   String wallet250Sbtxs250Sbtip8722Sbtext(Object latestVersion, Object assetName) {
-    return 'Če v opisu vidite ID transakcije s povezavo do raziskovalca verige blokov, to pomeni, da je bila vaša transakcija uspešno oddana. Prepričajte se, da je vaša denarnica popolnoma sinhronizirana in da uporabljate $latestVersion denarnice $assetName';
+    return 'Če v opisu vidite ID transakcije s povezavo do blockchain raziskovalca , to pomeni, da je bila vaša transakcija uspešno oddana. Prepričajte se, da je vaša denarnica popolnoma sinhronizirana in da uporabljate $latestVersion denarnice $assetName';
   }
 
   @override
-  String get wallet250Sbtxs250Sbtip8722Sbtext8722Sblatest8722Sbversion => 'Najnovejša različica';
+  String get wallet250Sbtxs250Sbtip8722Sbtext8722Sblatest8722Sbversion => 'najnovejša različica';
 
   @override
   String wallet250Sbtxs250Sbtip8722Sbtitle(Object appName) {
@@ -7272,7 +7270,7 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbtxs250Sbtitle => 'Transakcije z denarnico';
+  String get wallet250Sbtxs250Sbtitle => 'Transakcije denarnice';
 
   @override
   String wallet250Sbupdate8722Sbsoft8722Sbwarn(Object update) {
@@ -7280,10 +7278,10 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbupdate8722Sbsoft8722Sbwarn8722Sbupdate => 'nadgradnja';
+  String get wallet250Sbupdate8722Sbsoft8722Sbwarn8722Sbupdate => 'update';
 
   @override
-  String get wallet250Sbwithdraw250Sbamount8722Sband8722Sbfee8722Sbnext => 'V naslednjem koraku boste izbrali znesek in višino nadomestila';
+  String get wallet250Sbwithdraw250Sbamount8722Sband8722Sbfee8722Sbnext => 'V naslednjem koraku boste izbrali znesek in višino provizije';
 
   @override
   String get wallet250Sbwithdraw250Sbamount8722Sbnext => 'Znesek boste izbrali v naslednjem koraku';
@@ -7304,22 +7302,22 @@ class I18nSl extends I18n {
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sblabel => 'Brezplačna nadgradnja';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sbtooltip => 'Zaradi načina, na katerega izvajamo skupinske dvige, je dejansko ceneje poslati svoj dvig z višjo stopnjo provizije. Uživajte!';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbfree8722Sbupgrade8722Sbtooltip => 'Zaradi načina, na katerega izvajamo skupne dvige, je dejansko ceneje poslati dvig z višjo stopnjo provizije. Uživajte!';
 
   @override
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees => 'Omrežnine';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sbhigh => 'hitro';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sbhigh => 'Hitro';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sblow => 'počasi';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sblow => 'Počasi';
 
   @override
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees250Sbmedium => 'Srednje';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbsend8722Sbmax => 'Pošlji maks';
+  String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbsend8722Sbmax => 'Pošlji Maks';
 
   @override
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbstepper250Sbamount => 'Znesek';
@@ -7331,7 +7329,7 @@ class I18nSl extends I18n {
   String get wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbstepper250Sbsummary => 'Povzetek';
 
   @override
-  String get wallet250Sbwithdraw250Sbconfirmation250Sbwallet8722Sbowner => 'S potrditvijo dviga potrjujete tudi, da denarnica, v katero dvigujete, pripada vam.';
+  String get wallet250Sbwithdraw250Sbconfirmation250Sbwallet8722Sbowner => 'S potrditvijo dviga potrjujete tudi, da denarnica v katero dvigujete, pripada vam.';
 
   @override
   String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbnew8722Sbfee => 'Nova provizija za dvig';
@@ -7343,7 +7341,7 @@ class I18nSl extends I18n {
   String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbreceive8722Sbamount => 'Prejmi znesek';
 
   @override
-  String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbsend8722Sbamount => 'Znesek, ki ga je treba odšteti';
+  String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbsend8722Sbamount => 'Znesek za odšteti';
 
   @override
   String get wallet250Sbwithdraw250Sbfee8722Sbchange8722Sbdialog250Sbtitle8722Sbdecreased => 'Provizija za dvig se je znižala';
@@ -7355,7 +7353,7 @@ class I18nSl extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Spremeni naslov';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Znesek ($asset)';
   }
 
@@ -7365,25 +7363,25 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get wallet250Sbwithdrawal250Sberror250Sbtoo8722Sbsmall => 'Znesek, ki je bil zahtevan za dvig, je manjši od najnižjega možnega zneska';
+  String get wallet250Sbwithdrawal250Sberror250Sbtoo8722Sbsmall => 'Znesek zahtevan za dvig je manjši od najnižjega možnega zneska';
 
   @override
-  String get wallet250Sbwithdrawal250Sbnetwork8722Sbfee => 'Omrežnina';
+  String get wallet250Sbwithdrawal250Sbnetwork8722Sbfee => 'Omrežnina / provizija';
 
   @override
-  String get warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb0 => '<strong>OPOMBA:</strong> To plačilno sredstvo je <strong>visoko tvegano</strong>, saj je <strong>reverzibilno</strong> in ga zaradi tega pogosto uporabljajo prevaranti.';
+  String get warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb0 => '<strong>OPOMBA:</strong> To plačilno sredstvo je <strong>visoko tvegano</strong>, saj je <strong>povratno</strong> in ga zaradi tega pogosto uporabljajo prevaranti.';
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return 'Tudi če opravite skrbni pregled in trgujete le z uglednimi uporabniki, ni nobenega zagotovila, da ne boste prišli v $method spor. Tukaj je nekaj, kar lahko storite, da povečate svoje možnosti: $linebreak  1. Zahtevajte 2 skeniranja osebnih dokumentov s fotografijo uporabnika (tj. potnega lista in vozniškega dovoljenja), poskrbite, da se ime računa $method ujema z osebnim dokumentom. $linebreak  2. Povejte uporabniku, naj vam pošlje e-pošto z e-poštnega računa $method (morda mu celo recite, naj v e-pošto vnese ID trgovine in nekaj o trgovini). $linebreak  3. Zaračunajte zelo visoke premije za $method trgovanja. Na primer 25% in več. Na ta način ste pokriti, če je 1 od 5 vaših poslov $method goljufija (pri enakih zneskih poslov). $linebreak  4. Bodite previdni pri visokih trgovalnih zneskih. Poskusite najprej skleniti nekaj poslov z nižjimi zneski pri trgovcu. $linebreak ';
+    return 'Tudi če opravite skrbni pregled situacije in trgujete le z uglednimi uporabniki, ni nobenega zagotovila, da ne boste prišli v $method spor. Kar lahko storite, da povečate svoje možnosti je: $linebreak  1. Da zahtevate dva skenirana osebna dokumenta uporabnika (npr. potni list in vozniško dovoljenje) in se prepričajte, da se ime računa $method ujema z osebnim dokumentom. $linebreak . 2. Uporabniku poveste, naj vam pošlje e-poštno sporočilo z e-poštnega računa $method (morda mu celo povejte, naj v e-poštno sporočilo vpiše ID trgovanja in nekaj o trgovanju). $linebreak  3. Obračunate zelo visoke premije za $method trgovanja. Na primer 25 % in več. Na ta način boste imeli kritje, če bo 1 od 5 vaših $method trgovanj prevara (ob enakih zneskih trgovanj). $linebreak  4. Bodite previdni pri visokih zneskih trgovanja. Najprej poskusite s trgovcem skleniti nekaj poslov z nižjimi zneski.$linebreak ';
   }
 
   @override
-  String get warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0 => 'Ta oglas je bil skrit, ker je najnižji znesek, ki ste ga določili, nižji od vašega najvišjega razpoložljivega zneska';
+  String get warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0 => 'Ta oglas je bil skrit, ker je najnižji znesek, ki ste ga določili, nižji od vašega maks. razpoložljivega zneska';
 
   @override
   String warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb1(Object assetName) {
-    return 'Ta trgovec je na dopustu ali pa ni na voljo $assetName. Preverite znova pozneje ali poiščite druge ponudbe.';
+    return 'Ta trgovalec je na dopustu ali pa nima na voljo $assetName. Preverite znova pozneje ali poiščite druge ponudbe.';
   }
 
   @override
@@ -7406,22 +7404,22 @@ class I18nSl extends I18n {
   String get web8722Sbnotification250Sbtrade8722Sbcomplete => 'Trgovanje je bilo zaključeno.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbdisputed => 'Ena od vaših transakcij je bila sporna.';
+  String get web8722Sbnotification250Sbtrade8722Sbdisputed => 'Eno od vaših trgovanj je bilo sporno.';
 
   @override
   String get web8722Sbnotification250Sbtrade8722Sbpayment8722Sbmarked8722Sbcomplete => 'Plačilo je označeno kot dokončano.';
 
   @override
-  String get web8722Sbnotification250Sbtrade8722Sbrequest => 'Imate novo trgovsko ponudbo.';
+  String get web8722Sbnotification250Sbtrade8722Sbrequest => 'Imate novo ponudbo za trgovanje.';
 
   @override
-  String get widget8722Sbinstructions250Sbaffiliate8722Sbattach8722Sbcode8722Sbcheckbox => 'V pripomoček dodajte mojo referenčno kodo partnerja';
+  String get widget8722Sbinstructions250Sbaffiliate8722Sbattach8722Sbcode8722Sbcheckbox => 'V pripomoček dodajte mojo referenčno partnersko kodo';
 
   @override
-  String get widget8722Sbinstructions250Sbaffiliate8722Sblogged8722Sbout => 'Prijavite se, če želite pripomočku priložiti napotitveno kodo partnerja';
+  String get widget8722Sbinstructions250Sbaffiliate8722Sblogged8722Sbout => 'Prijavite se, če želite pripomočku priložiti partnersko kodo';
 
   @override
-  String get widget8722Sbinstructions250Sbaffiliate8722Sbnot8722Sbenabled => 'Omogočite pridruženi program, da gradniku pripnete referenčno kodo';
+  String get widget8722Sbinstructions250Sbaffiliate8722Sbnot8722Sbenabled => 'Omogočite pridružitveniprogram, da pripnete referenčno kodo';
 
   @override
   String widget8722Sbinstructions250Sbinstructions(Object assetName) {
@@ -7435,23 +7433,23 @@ class I18nSl extends I18n {
 
   @override
   String widget8722Sbinstructions250Sbtitle8722Sbno8722Sbaffiliate(Object assetName) {
-    return '$assetName Pripomoček za ulične cene';
+    return '$assetName Pripomoček za Ulične Cene';
   }
 
   @override
-  String get devblog250Sbdescription => 'V tem spletnem dnevniku naša ekipa deli nekaj naših vpogledov v razvoj s tistimi, ki jih zanima tehnična stran stvari.';
+  String get devblog250Sbdescription => 'V tem blogu naša ekipa deli nekaj vpogledov v razvoj za tiste, ki jih zanima tehnična stran.';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid je namestitveni katalog aplikacij FOSS (brezplačna in odprtokodna programska oprema) za platformo Android. Odjemalec olajša brskanje, namestitev in spremljanje posodobitev v vaši napravi.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Spletno mesto F-Droid</a></p>\n</blockquote>\n\n<p>Vsi koraki iz te vadnice bodo delovali tudi za aplikacijo brez okusov.</p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid je namestitveni katalog aplikacij FOSS (Free and Open Source Software) za platformo Android. Klient olajša brskanje, namestitev in spremljanje posodobitev v vaši napravi.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Spletno mesto F-Droid</a></p>\n</blockquote>\n\n<p>Vsi koraki iz te vadnice bodo delovali tudi za aplikacijo brez okusov.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplikacijo je mogoče vključiti v F-Droid le, če je popolnoma odprtokodna - vključno z vsemi uporabljenimi knjižnicami in odvisnostmi. Več o pravilniku o vključitvi <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">tukaj </a>.</p>\n<p>Na primer, če v svoji aplikaciji uporabljate bazo podatkov ObjectBox, je &#39; ni mogoče vključiti v F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">razprava</a>).</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplikacijo je mogoče vključiti v F-Droid le, če je popolnoma odprtokodna - vključno z vsemi uporabljenimi knjižnicami in odvisnostmi. Več o pravilniku glede vključitve <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">tukaj </a>.</p>\n<p>Na primer, če v svoji aplikaciji uporabljate bazo podatkov ObjectBox, je &#39; ni mogoče vključiti v F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">razprava</a>).</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Katere aplikacije je mogoče vključiti v F-Droid?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repozitorij</a> na Gitlabu.</li>\n<li>Klonirajte repozitorij v svojo napravo.</li>\n<li>Ustvarite vejo z ID-jem svežnja aplikacije, na primer <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repozitorij</a> na Gitlab-u.</li>\n<li>Klonirajte repozitorij v vašo napravo.</li>\n<li>Ustvarite vejo z ID-jem svežnja aplikacij, na primer <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Korak 1';
@@ -7463,25 +7461,25 @@ class I18nSl extends I18n {
   String get devblog250Sbfdroid250Sb3250Sbtitle => '2. korak';
 
   @override
-  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Dodajte svoj projekt:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Ustvaril bo datoteko v imeniku metapodatkov, na primer <code>metadata/co.localmonero.app.yml</code>.\nTo datoteko lahko ustvarite tudi ročno.</p>';
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Dodajte svoj projekt:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Ustvaril bo datoteko v katalogu metapodatkov, na primer <code>metadata/co.localmonero.app.yml</code>.\nTo datoteko lahko ustvarite tudi ročno.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb4250Sbtitle => '3. korak';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Odprite datoteko in jo uredite. Tukaj je primer: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>V primeru lahko vidite: </p>\n<ol>\n<li>Flutter se uporablja kot podmodul - to je zahteva ekipe F-Droid.</li>\n<li>Za vsako različico smo uporabili ločeno vejo (ukaz <code>AutoUpdateMode: različica %v-fdroid-lm</code>). To je zato, ker Fastlane &#39; ne podpira okusov s Flutterjem </li>\n<li>Prvič dodajamo informacije o gradnji ročno, v prihodnosti jih bo samodejno dodal bot, potem ko bomo potisnili novo oznako.</li>\n</ol>\n<p>Preverite, ali ima datoteka pravilno sintakso: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Odprite datoteko in jo uredite. Tukaj je primer: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>V primeru lahko vidite: </p>\n<ol>\n<li>Flutter se uporablja kot podmodul - to je zahteva ekipe F-Droid.</li>\n<li>Za vsako različico smo uporabili ločeno vejo (ukaz <code>AutoUpdateMode: Različica %v-fdroid-lm</code>). To je zato, ker Fastlane ne podpira okusov s Flutterjem </li>\n<li>Prvič dodajamo informacije o gradnji ročno, v prihodnosti jih bo samodejno dodal bot, potem ko bomo potisnili novo oznako.</li>\n</ol>\n<p>Preverite, ali ima datoteka pravilen syntax: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => '4. korak';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Zdaj pa dodajmo podatke za trg F-Droid. Za to ustvarimo ločeno vejo za vsak okus: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Po tem ustvarimo mapo za Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Dodajte zahtevane podatke in jih potisnite.</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Zdaj pa dodajmo podatke za F-Droid market. Za to ustvarimo ločeno vejo za vsak okus ozr. flavor: </p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Po tem ustvarimo mapo za Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Dodajte zahtevane podatke in jih potisnite.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => '5. korak';
 
   @override
-  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Čas je, da dodate aplikacijo v F-Droid.</p>\n<ol>\n<li>Ustvarite oznako v svojem skladišču aplikacij.</li>\n<li>Potisnite spremembe v repozitorij F-Droid na Gitlabu.</li>\n<li>Vložite zahtevo za združitev v repo Gitlab. V naslovu uporabite ID svoje aplikacije.</li>\n<li>Počakajte na pregled ekipe F-Droid.</li>\n</ol>';
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Čas je, da dodate aplikacijo v F-Droid.</p>\n<ol>\n<li>Ustvarite oznako v svojem skladišču aplikacij.</li>\n<li>Potisnite spremembe v repozitorij F-Droid na Gitlab-u.</li>\n<li>Vložite zahtevo za združitev v repo Gitlab. V naslovu uporabite ID svoje aplikacije.</li>\n<li>Počakajte na pregled ekipe F-Droid.</li>\n</ol>';
 
   @override
   String get devblog250Sbfdroid250Sb7250Sbtitle => '6. korak';
@@ -7493,19 +7491,19 @@ class I18nSl extends I18n {
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Zaključek';
 
   @override
-  String get devblog250Sbfdroid250Sbdescription => 'F-Droid je odličen katalog aplikacij FOSS za Android, vendar je dodajanje vaše aplikacije morda nekoliko zapleteno ...';
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid je odličen katalog aplikacij FOSS za Android, vendar bo dodajanje vaše aplikacije morda nekoliko zapleteno...';
 
   @override
   String get devblog250Sbfdroid250Sbtitle => 'Kako objaviti svojo aplikacijo Flutter z okusi na F-Droid?';
 
   @override
-  String get devblog250Sbtitle => 'Razvojni blog';
+  String get devblog250Sbtitle => 'Razvojni Blog';
 
   @override
   String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Dodajte naslov';
 
   @override
-  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Prekliči';
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Preklic';
 
   @override
   String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Ali želite izbrisati ta naslov?';
@@ -7520,13 +7518,13 @@ class I18nSl extends I18n {
   String get address8722Sbbook250Sbsave8722Sbbtn => 'Shrani';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Shranite ta naslov za prihodnjo uporabo';
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Shranite ta naslov za uporabo v prihodnosti';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb270 => 'Ta naslov že obstaja v vašem imeniku.';
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Tale naslov že obstaja v vašem imeniku.';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb273 => 'Ta naslov je že izbrisan iz vašega imenika.';
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Tale naslov je že izbrisan iz vašega imenika.';
 
   @override
   String get address8722Sbbook => 'Imenik';
@@ -7539,11 +7537,22 @@ class I18nSl extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'Vsi oglasi za kriptovalute se zdaj premaknejo v novo kategorijo držav »globalno (koda XX)«. Vsi podvojeni oglasi za kriptovalute, ki se razlikujejo le glede na državo, bodo izbrisani $timeRemaining. Prepričajte se, da imate samo EN oglas za kriptovalute na valuto, sicer bodo izbrisani vsi oglasi v tej valuti, razen zadnjega, medtem ko bo preostali oglas premaknjen v kategorijo »globalne« države.';
+    return 'Vsi oglasi za kriptovalute se zdaj premaknejo v novo kategorijo držav \"globalno (koda XX)\". Vsi podvojeni oglasi za kriptovalute, ki se razlikujejo le glede na državo, bodo izbrisani $timeRemaining. Prepričajte se, da imate samo EN oglas za kriptovalute na valuto, sicer bodo izbrisani vsi oglasi v tej valuti, razen zadnjega, medtem ko bo preostali oglas premaknjen v kategorijo \"globalne\" države.';
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Ko pritisnete »Shrani«, bo država oglasa samodejno posodobljena na »globalno«.';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Ko pritisnete \"Shrani\", bo država oglasa samodejno posodobljena na \"globalno\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Samo oglasi za prodajo istega sredstva';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Pelji me na spletno stran';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset kupujte samo oglase';
+  }
 
   @override
   String get ads => 'Oglasi';
@@ -7897,7 +7906,7 @@ class I18nSl extends I18n {
   String get api_error_77 => 'Ni dovolj sredstev za izvedbo internega prenosa zahtevanega zneseka';
 
   @override
-  String get api_error_103 => 'Zahtevam trade za oglas, katerega plakat je na prodajnem dopustu';
+  String get api_error_103 => 'Trgovalna zahteva za oglas, katerega avtor je na prodajnem dopustu';
 
   @override
   String get api_error_105 => 'Plakat oglasa, za katerega se zahteva trgovanje, nima dovolj sredstev za financiranje hrambe';
@@ -8158,6 +8167,9 @@ class I18nSl extends I18n {
   String get api_error_98 => 'Poskus ustvarjanja trde-a za oglas, katerega plakat ne obstaja';
 
   @override
+  String get api_error_99 => 'Poskus zahtevati višji znesek, kot ga dovoljuje lastnik oglasa pri ustvarjanju prvega posla';
+
+  @override
   String get api_error_100 => 'Za ustvarjanje trgovanja ni mogoče zahtevati manj kot 0,0000000001 XMR';
 
   @override
@@ -8167,7 +8179,7 @@ class I18nSl extends I18n {
   String get api_error_102 => 'Zahtevani znesek je večji od max_amount_ailable oglasa pri ustvarjanju trade-a';
 
   @override
-  String get api_error_104 => 'Zahtevam zamenjavo za oglas, katerega plakat je na nakupovalnem dopustu';
+  String get api_error_104 => 'Zahteva trgovanja za oglas, katerega avtor je na nakupovalnem dopustu';
 
   @override
   String get api_error_106 => 'Vlagatelj zahteve za trgovanje nima dovolj sredstev za financiranje zahteve za trgovanje';
@@ -8213,6 +8225,15 @@ class I18nSl extends I18n {
 
   @override
   String get api_error_121 => 'Poskus escrowa trade-a, ki ne obstaja';
+
+  @override
+  String get api_error_122 => 'Nezadostna sredstva za financiranje trgovine';
+
+  @override
+  String get api_error_123 => 'Nezadostna sredstva za financiranje trgovine';
+
+  @override
+  String get api_error_124 => 'Napaka pri financiranju posla';
 
   @override
   String get api_error_125 => 'Uporabnik, ki zahteva preklic trgovanja, ne obstaja';
@@ -8557,7 +8578,7 @@ class I18nSl extends I18n {
   String get pin_enter_to_confirm_transaction => 'Vnesite PIN za potrjevanje transakcije';
 
   @override
-  String get pin_you_can_use => 'S to kodo PIN lahko odklenete aplikacijo.';
+  String get pin_you_can_use => 'PIN mora imeti vsaj 4 števke';
 
   @override
   String get pin_confirm => 'Potrdite PIN';
@@ -9409,10 +9430,10 @@ class I18nSl extends I18n {
   String get app_disable_ad => 'Onemogočite oglas';
 
   @override
-  String get app_proxy => 'Zastopnik';
+  String get app_proxy => 'Proxy';
 
   @override
-  String get app_proxy_details => 'Podrobnosti posrednika';
+  String get app_proxy_details => 'Proxy podrobnosti';
 
   @override
   String get app_proxy_use => 'Uporabi proxy';
@@ -9421,7 +9442,7 @@ class I18nSl extends I18n {
   String get app_proxy_bugs_expected => 'Opozorilo! Funkcionalnost proxyja je v različici beta, pričakovane so napake. Za hitre popravke prijavite napake našim razvojnim kanalom';
 
   @override
-  String get app_proxy_select_type => 'Izberite vrsto posrednika';
+  String get app_proxy_select_type => 'Izberite vrsto proxya';
 
   @override
   String get app_proxy_on => 'Proxy omogočen';
@@ -9433,10 +9454,10 @@ class I18nSl extends I18n {
   String get app_proxy_unavailable => 'Proxy ni na voljo';
 
   @override
-  String get app_proxy_unavailable_decr => 'Preverite, ali so nastavitve povezave pravilne, ali uporabite drug proxy.';
+  String get app_proxy_unavailable_decr => 'Preverite, ali so nastavitve povezave pravilne, sicer uporabite drug proxy.';
 
   @override
-  String get api_error_269 => 'Poskus dodajanja neveljavnega naslova v adresar';
+  String get api_error_269 => 'Poskus dodajanja neveljavnega naslova v imenik';
 
   @override
   String get api_error_270 => 'Poskus dodajanja podvojenega naslova v imenik uporabnika';
@@ -9445,14 +9466,5 @@ class I18nSl extends I18n {
   String get api_error_273 => 'Poskus brisanja naslova, ki ne obstaja v uporabnikovem imeniku';
 
   @override
-  String get api_error_99 => 'Pri ustvarjanju prvega trade-a poskušate zahtevati višji znesek, kot dovoljuje first_time_limit_asset';
-
-  @override
-  String get api_error_122 => 'Nezadostna sredstva za financiranje trade-a LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Nezadostna sredstva za financiranje non-floating trade-a LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Napaka pri financiranju LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN mora imeti vsaj 4 števke';
 }

@@ -270,12 +270,12 @@ class I18nEl extends I18n {
   String get ad250Sbdeleted => 'Αυτή η διαφήμιση έχει διαγραφεί';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Πώληση $assetName με μετρητά σε $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Αγοράστε $assetName με μετρητά σε $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nEl extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Ποσό (νόμισμα)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Ποσό ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nEl extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Συναλλαγή $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nEl extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return 'Το $appName είναι ένα ανταλλακτήριο Monero peer-to-peer. Είμαστε μια αγορά όπου οι χρήστες μπορούν να αγοράζουν και να πωλούν Monero μεταξύ τους. Οι χρήστες, που ονομάζονται έμποροι, δημιουργούν διαφημίσεις με την τιμή και τον τρόπο πληρωμής που θέλουν να προσφέρουν. Μπορείτε να περιηγηθείτε στον ιστότοπό μας για διαφημίσεις συναλλαγών και να αναζητήσετε τη μέθοδο πληρωμής που προτιμάτε. Θα βρείτε εμπόρους που αγοράζουν και πωλούν Monero online για περισσότερες από 60 διαφορετικές μεθόδους πληρωμής. Εάν είστε νέοι στο $appName και θέλετε να αγοράσετε Monero, ρίξτε μια ματιά στον οδηγό αγοράς για να μάθετε πώς να αγοράσετε Monero.';
+    return 'Το $appName είναι μια πλατφόρμα συναλλαγών Monero peer-to-peer. Είμαστε μια αγορά όπου οι χρήστες μπορούν να αγοράζουν και να πουλούν Monero μεταξύ τους. Οι χρήστες, που ονομάζονται έμποροι, δημιουργούν διαφημίσεις με την τιμή και τον τρόπο πληρωμής που θέλουν να προσφέρουν. Μπορείτε να περιηγηθείτε στον ιστότοπό μας για εμπορικές διαφημίσεις και να αναζητήσετε τον τρόπο πληρωμής που προτιμάτε. Θα βρείτε εμπόρους να αγοράζουν και να πωλούν Monero στο διαδίκτυο για περισσότερες από 60 διαφορετικές μεθόδους πληρωμής. Εάν είστε νέος στο $appName και θέλετε να αγοράσετε το Monero, ρίξτε μια ματιά στον οδηγό αγοράς για να μάθετε πώς να αγοράσετε το Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nEl extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'σελίδα προμηθειών';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Αυτή τη στιγμή, δεν διαθέτουμε αυτόνομη εφαρμογή για κινητά. Αλλά μπορείτε να λαμβάνετε ειδοποιήσεις για κινητά στο $telegram! Ο $thisGuide θα σας καθοδηγήσει στη διαδικασία ενεργοποίησης των ειδοποιήσεων Telegram (είναι εύκολη). Στη συνέχεια, το bot μας θα σας στέλνει ειδοποιήσεις για τα συμβάντα $appName σας.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Ναι το κάνουμε! Εάν διαθέτετε Android, μπορείτε να το αποκτήσετε σε $playstoreLink, $fdroidLink ή μπορείτε να κάνετε λήψη του $apkLink απευθείας. Για συσκευές iOS, είναι διαθέσιμο στο $appstoreLink. Μπορείτε επίσης να λαμβάνετε ειδοποιήσεις για κινητά στο $telegram! Το $thisGuide θα σας οδηγήσει στη διαδικασία ενεργοποίησης ειδοποιήσεων Telegram (είναι εύκολο). Στη συνέχεια, το bot μας θα σας στείλει ειδοποιήσεις για τις εκδηλώσεις σας $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nEl extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Όλες οι online συναλλαγές προστατεύονται από ομόλογα διαιτησίας. Όταν ξεκινά μια συναλλαγή, ένα ποσό Monero ίσο με το ποσό της συναλλαγής δεσμεύεται αυτόματα από το πορτοφόλι $appName του πωλητή ως εγγύηση. Αυτό σημαίνει ότι εάν ο πωλητής διαφύγει με τα χρήματά σας και δεν οριστικοποιήσει το εμπόριο, η υποστήριξη της $appName μπορεί να σας κατευθύνει το Monero που βρίσκεται στο ομόλογο διαιτησίας. Εάν πουλάτε Monero, μην οριστικοποιείτε ποτέ τη συναλλαγή προτού να βεβαιωθείτε ότι έχετε λάβει χρήματα από τον αγοραστή Monero. Παρακαλούμε σημειώστε ότι οι τοπικές συναλλαγές δεν έχουν από προεπιλογή ενεργοποιημένη την προστασία του ομόλογου διαιτησίας.';
+    return 'Όλες οι διαδικτυακές συναλλαγές προστατεύονται από ομόλογα διαιτησίας. Όταν ξεκινά μια συναλλαγή, ένα ποσό Monero ίσο με το ποσό της συναλλαγής δεσμεύεται αυτόματα από το πορτοφόλι ομολόγων $appName του πωλητή. Αυτό σημαίνει ότι εάν ο πωλητής ξεφύγει με τα χρήματά σας και δεν ολοκληρώσει τη συναλλαγή, η υποστήριξη $appName μπορεί να κατευθύνει το Monero που κατέχεται στο ομόλογο διαιτησίας σε εσάς. Εάν πουλάτε Monero, μην ολοκληρώσετε ποτέ τη συναλλαγή προτού μάθετε ότι έχετε λάβει χρήματα από τον αγοραστή Monero. Λάβετε υπόψη ότι οι τοπικές συναλλαγές δεν έχουν ενεργοποιημένη από προεπιλογή προστασία ομολόγων διαιτησίας.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Όλες οι online συναλλαγές προστατεύονται από ομόλογα διαιτησίας. Όταν ξεκινά μια συναλλαγή, ένα ποσό κρυπτονομίσματος ίσο με το ποσό της συναλλαγής δεσμεύεται αυτόματα από το πορτοφόλι $appName του πωλητή ως εγγύηση. Αυτό σημαίνει ότι αν ο πωλητής διαφύγει με τα χρήματά σας και δεν οριστικοποιήσει το εμπόριο, η υποστήριξη της $appName μπορεί να σας κατευθύνει το κρυπτονόμισμα που βρίσκεται στο ομόλογο διαιτησίας. Εάν πουλάτε κρυπτονόμισμα, μην οριστικοποιείτε ποτέ τη συναλλαγή πριν να βεβαιωθείτε ότι έχετε λάβει χρήματα από τον αγοραστή. Παρακαλούμε σημειώστε ότι οι τοπικές συναλλαγές δεν έχουν από προεπιλογή ενεργοποιημένη την προστασία του ομόλογου διαιτησίας.';
+    return 'Όλες οι διαδικτυακές συναλλαγές προστατεύονται από ομόλογα διαιτησίας. Όταν ξεκινά μια συναλλαγή, ένα ποσό κρυπτονομίσματος ίσο με το ποσό της συναλλαγής δεσμεύεται αυτόματα από το πορτοφόλι ομολόγων $appName του πωλητή. Αυτό σημαίνει ότι εάν ο πωλητής ξεφύγει με τα χρήματά σας και δεν ολοκληρώσει τη συναλλαγή, η υποστήριξη $appName μπορεί να κατευθύνει το κρυπτονόμισμα που διατηρείται στο ομόλογο διαιτησίας σε εσάς. Εάν πουλάτε κρυπτονομίσματα, μην ολοκληρώσετε ποτέ τη συναλλαγή προτού μάθετε ότι έχετε λάβει χρήματα από τον αγοραστή. Λάβετε υπόψη ότι οι τοπικές συναλλαγές δεν έχουν ενεργοποιημένη από προεπιλογή προστασία ομολόγων διαιτησίας.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nEl extends I18n {
   String get morph250Sbservice8722Sbdown => 'Η υπηρεσία XMR του ChangeNow είναι προσωρινά μη διαθέσιμη. Προσπαθήστε ξανά αργότερα.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Λήψη $cryptocurrencyNameδιεύθυνσης';
   }
 
@@ -4773,9 +4773,7 @@ class I18nEl extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Το υπόλοιπο πορτοφολιού είναι μικρότερο από το ελάχιστο απαιτούμενο για αυτόν τον τύπο διαφήμισης';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Πρώτο χρονικό όριο ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Πρώτο χρονικό όριο  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Προαιρετικό. Περιορίστε το μέγιστο ποσό συναλλαγής για χρήστες με τους οποίους δεν έχετε προηγούμενες συναλλαγές. Ελάχιστο 0.';
@@ -5268,12 +5266,12 @@ class I18nEl extends I18n {
   String get search250Sbcoordinates250Sblon => 'Γεωγραφικό μήκος';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Πώληση $assetName με μετρητά σε $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Αγορά $assetName με μετρητά σε $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nEl extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Μια πραγματικά εναλλακτική λύση LocalBitcoin και Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Εάν τυχόν ανησυχείτε για την παραβίαση της ιδιωτικότητας - το καλύτερο κρυπτονόμισμα που μπορειτε επενδύσετε είναι το XMR. Το Monero είναι ένα μη ανιχνεύσιμο νόμισμα που αναπτύχθηκε με γνώμονα την προστασία της ιδιωτικότητας.\n<br/>\nΠού να αγοράσω το Monero; Το LocalMonero είναι το μεγαλύτερο, πιο αξιόπιστο και καθιερωμένο ανταλλακτήριο P2P Monero στην κοινότητα XMR. Δεν έχουμε KYC (εταιρείες που ζητούν τις προσωπικές σας πληροφορίες, όπως ταυτότητες, διεύθυνση λογαριασμού νερού κ.λπ.) μπορείτε απλά να αγοράσετε Monero ανώνυμα χωρίς επαλήθευση ταυτότητας με PayPal, πιστωτική κάρτα, δωροκάρτα, μετρητά μέσω ταχυδρομείου ή να μετατρέψετε bitcoin σε Monero - η πλατφόρμα μας υποστηρίζει οποιαδήποτε μέθοδο πληρωμής.';
+  String get seo250Sbtext8722Sb1 => 'Εάν ανησυχείτε για την παραβίαση της ιδιωτικής ζωής - το καλύτερο κρυπτονόμισμα για να επενδύσετε είναι το XMR. Το Monero είναι ένα μη ανιχνεύσιμο νόμισμα που αναπτύχθηκε με γνώμονα την προστασία της ιδιωτικής ζωής.\n<br/>\nΠού να αγοράσω το Monero; Το LocalMonero είναι η μεγαλύτερη, πιο αξιόπιστη και καθιερωμένη πλατφόρμα συναλλαγών P2P Monero στην κοινότητα XMR. Δεν έχουμε επιταγές KYC - μπορείτε απλά να αγοράσετε Monero ανώνυμα χωρίς επαλήθευση ταυτότητας με PayPal, πιστωτική κάρτα, δωροκάρτα, μετρητά μέσω ταχυδρομείου ή να μετατρέψετε bitcoin σε Monero - η πλατφόρμα μας υποστηρίζει οποιαδήποτε μέθοδο πληρωμής.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Αναρωτιέστε πώς να επενδύσετε σε Bitcoin; Στο AgoraDesk, η αγορά bitcoin δεν ήταν ποτέ πιο εύκολη - αγοράστε άμεσα BTC από ένα άτομο που χρησιμοποιεί την αγαπημένη σας μέθοδο ηλεκτρονικής πληρωμής: PayPal, πιστωτική/χρεωστική κάρτα ή τραπεζικό έμβασμα, δωροκάρτες, Venmo ή οποιαδήποτε άλλη.\n<br/>\nΕάν θέλετε να αγοράσετε bitcoins στην περιοχή σας με μετρητά, μπορείτε να βρείτε κάποιον διαθέσιμο να πουλήσει bitcoin τοπικά - η πλατφόρμα συναλλαγών υποστηρίζει την αγορά και την πώληση BTC με μετρητά. Μπορείτε ακόμη και να αγοράσετε bitcoin χρησιμοποιώντας μετρητά μέσω ταχυδρομείου.';
@@ -6811,7 +6809,7 @@ class I18nEl extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Λήψη $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nEl extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Επιλέξτε προτεραιότητα συναλλαγής';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Λήψη $assetNameδιεύθυνσης';
   }
 
@@ -6879,7 +6877,7 @@ class I18nEl extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Αποστολή $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nEl extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Εξερχόμενες Χρεώσεις Κρυπτονομισμάτων';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Αποστολή $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nEl extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Λήψη $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Αποστολή $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nEl extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Λήψη $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nEl extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Λήψη';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Αποστολή $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nEl extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Αλλαγή διεύθυνσης';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Ποσό $asset';
   }
 
@@ -7442,7 +7440,7 @@ class I18nEl extends I18n {
   String get devblog250Sbdescription => 'Σε αυτό το ιστολόγιο η ομάδα μας μοιράζεται ορισμένες από τις αναπτυξιακές μας γνώσεις με όσους ενδιαφέρονται για την τεχνική πλευρά των πραγμάτων.';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\nΤο <p>F-Droid είναι ένας εγκατεστημένος κατάλογος εφαρμογών FOSS (Δωρεάν και ανοιχτού κώδικα λογισμικού) για την πλατφόρμα Android. Ο πελάτης διευκολύνει την περιήγηση, την εγκατάσταση και την παρακολούθηση των ενημερώσεων στη συσκευή σας.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Ιστότοπος F-Droid</a></p>\n</blockquote>\n\n<p>Όλα τα βήματα από αυτόν τον οδηγό θα λειτουργήσουν και για μια εφαρμογή χωρίς γεύσεις.</p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\nΤο <p>F-Droid είναι ένας εγκατεστημένος κατάλογος εφαρμογών FOSS (Δωρεάν και Ανοιχτού Κώδικα Λογισμικό) για την πλατφόρμα Android. Ο πελάτης διευκολύνει την περιήγηση, την εγκατάσταση και την παρακολούθηση των ενημερώσεων στη συσκευή σας.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Ιστότοπος F-Droid</a></p>\n</blockquote>\n\n<p>Όλα τα βήματα από αυτόν τον οδηγό θα λειτουργήσουν και για μια εφαρμογή χωρίς γεύσεις.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Η εφαρμογή μπορεί να συμπεριληφθεί στο F-Droid μόνο εάν είναι εντελώς ανοιχτού κώδικα - συμπεριλαμβανομένων όλων των βιβλιοθηκών και των εξαρτήσεων που χρησιμοποιούνται. Μάθετε περισσότερα σχετικά με την πολιτική συμπερίληψης <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">εδώ</a>.</p>\n<p>Για παράδειγμα, εάν χρησιμοποιείτε τη βάση δεδομένων ObjectBox στην εφαρμογή σας, δεν μπορεί&#39; να συμπεριληφθεί στο F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">συζήτηση</a>).</p>';
@@ -7517,7 +7515,7 @@ class I18nEl extends I18n {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Ετικέτα (προαιρετικό)';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => 'Σώσει';
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Αποθηκεύσετε';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Αποθηκεύστε αυτήν τη διεύθυνση για μελλοντική χρήση';
@@ -7544,6 +7542,17 @@ class I18nEl extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Όταν πατήσετε \"Αποθήκευση\", η χώρα της διαφήμισης θα ενημερωθεί αυτόματα σε \"καθολική\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Μόνο διαφημίσεις πώλησης ίδιου περιουσιακού στοιχείου';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Πηγαίνετε με στον ιστότοπο';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset αγορά μόνο διαφημίσεων';
+  }
 
   @override
   String get ads => 'Διαφημίσεις';
@@ -8158,6 +8167,9 @@ class I18nEl extends I18n {
   String get api_error_98 => 'Προσπάθεια δημιουργίας συναλλαγής για μια διαφήμιση της οποίας η αφίσα δεν υπάρχει';
 
   @override
+  String get api_error_99 => 'Προσπάθεια να ζητήσετε υψηλότερο ποσό από αυτό που επιτρέπεται από τον κάτοχο της διαφήμισης κατά τη δημιουργία μιας πρώτης συναλλαγής';
+
+  @override
   String get api_error_100 => 'Δεν μπορείτε να ζητήσετε λιγότερο από 0,0000000001 XMR για δημιουργία συναλλαγών';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nEl extends I18n {
 
   @override
   String get api_error_121 => 'Προσπάθεια δέσμευσης μιας συναλλαγής που δεν υπάρχει';
+
+  @override
+  String get api_error_122 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση ενός εμπορίου';
+
+  @override
+  String get api_error_123 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση ενός εμπορίου';
+
+  @override
+  String get api_error_124 => 'Σφάλμα κατά τη χρηματοδότηση μιας συναλλαγής';
 
   @override
   String get api_error_125 => 'Ο χρήστης που ζητά ακύρωση συναλλαγής δεν υπάρχει';
@@ -8557,7 +8578,7 @@ class I18nEl extends I18n {
   String get pin_enter_to_confirm_transaction => 'Εισάγετε PIN για επιβεβαίωση της συναλλαγής';
 
   @override
-  String get pin_you_can_use => 'Μπορείτε να χρησιμοποιήσετε αυτό το PIN για να ξεκλειδώσετε την εφαρμογή.';
+  String get pin_you_can_use => 'Το PIN πρέπει να είναι τουλάχιστον 4 ψηφία';
 
   @override
   String get pin_confirm => 'Επιβεβαίωση του PIN';
@@ -9265,7 +9286,7 @@ class I18nEl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: αγοράστε XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Αγοράστε ή πουλήστε Monero χωρίς επαλήθευση ταυτότητας. Μετρητά ή διαδικτυακά. Ασφαλές, γρήγορο, εύκολο.\n\nΤο LocalMonero είναι η μεγαλύτερη, πιο αξιόπιστη και καθιερωμένη πλατφόρμα συναλλαγών P2P στην κοινότητα XMR. Δεν έχουμε επιταγές KYC - μπορείτε απλά να αγοράσετε Monero ανώνυμα χωρίς επαλήθευση ταυτότητας με PayPal, πιστωτική κάρτα, δωροκάρτα, μετρητά μέσω ταχυδρομείου ή να μετατρέψετε Bitcoin, Ether, USDT ή οποιοδήποτε άλλο κρυπτονόμισμα σε Monero - η πλατφόρμα μας υποστηρίζει οποιαδήποτε μέθοδο πληρωμής.\n\n- Ασφαλής και ομαλή διαπραγμάτευση\nΥποστηρίζουμε οποιαδήποτε μέθοδο πληρωμής, οποιοδήποτε νόμισμα, οπουδήποτε. Δεν καταργούμε τρόπους πληρωμής και υποστηρίζουμε πλήρως τις συναλλαγές με μετρητά πρόσωπο με πρόσωπο. Όλες οι συναλλαγές μας προστατεύονται από ομόλογο διαιτησίας. Χάρη στο γεγονός ότι απαιτούμε να διατηρούνται τα κεφάλαια σε ομόλογα διαιτησίας πριν ξεκινήσει μια συναλλαγή, διασφαλίζουμε μια ομαλή και ασφαλή εμπειρία για τον αγοραστή, η οποία είναι απαραίτητη για τη δημοτικότητα της πλατφόρμας και τους επαναλαμβανόμενους πελάτες για τους πωλητές.\n\n- Χωρίς επαλήθευση KYC/AML ή ταυτότητας\nΗ LocalMonero δεσμεύεται να διατηρήσει την απλότητα και την ευθύτητα της εμπειρίας συναλλαγών σας. Δεν χρησιμοποιούμε KYC/AML, ούτε σκοπεύουμε ποτέ να το κάνουμε.\n\n- Αξιόπιστο από την Κοινότητα\nΗ πλατφόρμα μας λειτουργεί για περισσότερα από τέσσερα χρόνια, επέζησε του μεγάλου κραχ της αγοράς κρυπτονομισμάτων του 2018 και μέσω της επιμελούς υπηρεσίας που προσανατολίζεται στην κοινότητα έγινε ένα από τα πιο αξιόπιστα ονόματα στην εξαιρετικά δύσπιστη κοινότητα του Monero.\n\n- Ασφαλές, Ανοιχτού Κώδικα, Με επίκεντρο το απόρρητο, Ανθεκτικό στη Λογοκρισία\nΗ εφαρμογή μας είναι δωρεάν και ανοιχτού κώδικα, γεγονός που διασφαλίζει ότι πολλά μάτια κοιτάζουν τον κώδικα της εφαρμογής για να διασφαλίσουν ότι δεν υπάρχουν κενά ασφαλείας ή διαρροές απορρήτου. Η ανοιχτή προμήθεια της εφαρμογής μας επιτρέπει επίσης σε οποιονδήποτε να έχει πρόσβαση στην εφαρμογή μας ακόμα κι αν ένα συγκεκριμένο αποθετήριο εφαρμογών λογοκρίνει την εφαρμογή. Η εφαρμογή μας λειτουργεί ακόμη και σε τηλέφωνα που έχουν αποκλειστεί πλήρως η Google. Εκτιμούμε τόσο πολύ το απόρρητό σας, δεν απαιτούμε καν να παρέχετε ένα email κατά την εγγραφή σας.\n\nΠηγαίος κώδικας: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nΠαρακολούθηση προβλημάτων: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nΗ ομάδα υποστήριξής μας είναι γρήγορη, ανταποκρίνεται και πάντα πρόθυμη να ευχαριστήσει. Δεν είχαμε ποτέ δελτίο υποστήριξης που δεν απαντήθηκε εντός 24 ωρών. Είμαστε πάντα εύκολα προσβάσιμοι μέσω των μέσων κοινωνικής δικτύωσης, ακούμε με προσήλωση τις κριτικές σας και υλοποιούμε πάντα καλές προτάσεις χρηστών σε χρόνο ρεκόρ.\n\nΜπορείτε να επικοινωνήσετε με την υποστήριξή μας στη διεύθυνση: https://localmonero.co/support\n\n- Δίκαια τέλη\nΔεν χρεώνουμε υπέρογκες προμήθειες όταν καταθέτετε ή αποσύρετε το Monero στο/από το πορτοφόλι μας με ομόλογα διαιτησίας. Δεν υπάρχει χρέωση κατάθεσης και η χρέωση ανάληψης είναι πολύ κοντά στην προμήθεια που θα πληρώνατε σε μια κανονική συναλλαγή.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Αγοράστε ή πουλήστε Monero χωρίς επαλήθευση ταυτότητας. Μετρητά ή διαδικτυακά. Ασφαλές, γρήγορο, εύκολο.\n\nΤο LocalMonero είναι η μεγαλύτερη, πιο αξιόπιστη και καθιερωμένη πλατφόρμα συναλλαγών P2P στην κοινότητα XMR. Δεν έχουμε επιταγές KYC - μπορείτε απλά να αγοράσετε Monero ανώνυμα χωρίς επαλήθευση ταυτότητας με PayPal, πιστωτική κάρτα, δωροκάρτα, μετρητά μέσω ταχυδρομείου ή να μετατρέψετε Bitcoin, Ether, USDT ή οποιοδήποτε άλλο κρυπτονόμισμα σε Monero - η πλατφόρμα μας υποστηρίζει οποιαδήποτε μέθοδο πληρωμής.\n\n- Ασφαλής και ομαλή διαπραγμάτευση\nΥποστηρίζουμε οποιαδήποτε μέθοδο πληρωμής, οποιοδήποτε νόμισμα, οπουδήποτε. Δεν καταργούμε τρόπους πληρωμής και υποστηρίζουμε πλήρως τις συναλλαγές με μετρητά πρόσωπο με πρόσωπο. Όλες οι συναλλαγές μας προστατεύονται από ομόλογο διαιτησίας. Χάρη στο γεγονός ότι απαιτούμε να διατηρούνται τα κεφάλαια σε ομόλογα διαιτησίας πριν ξεκινήσει μια συναλλαγή, διασφαλίζουμε μια ομαλή και ασφαλή εμπειρία για τον αγοραστή, η οποία είναι απαραίτητη για τη δημοτικότητα της πλατφόρμας και τους επαναλαμβανόμενους πελάτες για τους πωλητές.\n\n- Χωρίς επαλήθευση KYC/AML ή ταυτότητας\nΗ LocalMonero δεσμεύεται να διατηρήσει την απλότητα και την ευθύτητα της εμπειρίας συναλλαγών σας. Δεν χρησιμοποιούμε KYC/AML, ούτε σκοπεύουμε ποτέ να το κάνουμε.\n\n- Αξιόπιστο από την Κοινότητα\nΗ πλατφόρμα μας λειτουργεί για περισσότερα από τέσσερα χρόνια, επέζησε του μεγάλου κραχ της αγοράς κρυπτονομισμάτων του 2018 και μέσω της επιμελούς υπηρεσίας που προσανατολίζεται στην κοινότητα έγινε ένα από τα πιο αξιόπιστα ονόματα στην εξαιρετικά δύσπιστη κοινότητα του Monero.\n\n- Ασφαλές, Ανοιχτού Κώδικα, Με επίκεντρο το απόρρητο, Ανθεκτικό στη Λογοκρισία\nΗ εφαρμογή μας είναι δωρεάν και ανοιχτού κώδικα, γεγονός που διασφαλίζει ότι πολλά μάτια κοιτάζουν τον κώδικα της εφαρμογής για να διασφαλίσουν ότι δεν υπάρχουν κενά ασφαλείας ή διαρροές απορρήτου. Η ανοιχτή προμήθεια της εφαρμογής μας επιτρέπει επίσης σε οποιονδήποτε να έχει πρόσβαση στην εφαρμογή μας ακόμα κι αν ένα συγκεκριμένο αποθετήριο εφαρμογών λογοκρίνει την εφαρμογή. Η εφαρμογή μας λειτουργεί ακόμη και σε τηλέφωνα που έχουν αποκλειστεί πλήρως η Google. Εκτιμούμε τόσο πολύ το απόρρητό σας, δεν απαιτούμε καν να παρέχετε ένα email κατά την εγγραφή σας.\n\nΠηγαίος κώδικας: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nΠαρακολούθηση προβλημάτων: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nΗ ομάδα υποστήριξής μας είναι γρήγορη, ανταποκρίνεται και πάντα πρόθυμη να ευχαριστήσει. Δεν είχαμε ποτέ δελτίο υποστήριξης που δεν απαντήθηκε εντός 24 ωρών. Είμαστε πάντα εύκολα προσβάσιμοι μέσω των μέσων κοινωνικής δικτύωσης, ακούμε με προσήλωση τις κριτικές σας και υλοποιούμε πάντα καλές προτάσεις χρηστών σε χρόνο ρεκόρ.\n\nΜπορείτε να επικοινωνήσετε με την υποστήριξή μας στη διεύθυνση: https://localmonero.co/support\n\n- Δίκαια τέλη\nΔεν χρεώνουμε υπέρογκες προμήθειες όταν καταθέτετε ή αποσύρετε το Monero στο/από το πορτοφόλι μας για ομόλογα διαιτησίας. Δεν υπάρχει χρέωση κατάθεσης και η χρέωση ανάληψης είναι πολύ κοντά στην προμήθεια που θα πληρώνατε σε μια κανονική συναλλαγή.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: αγορά XMR ανώνυμα';
@@ -9337,7 +9358,7 @@ class I18nEl extends I18n {
 
   @override
   String app_503_body(Object val) {
-    return 'Το $val θα επιστρέψει σύντομα!\\nΣυγγνώμη για την ταλαιπωρία, αλλά εκτελούμε κάποιες προγραμματισμένες εργασίες συντήρησης αυτήν τη στιγμή.\\nΜάλλον θα είμαστε ξανά συνδεδεμένοι σύντομα. Μείνετε ενημερωμένοι στις ομάδες της κοινότητάς μας:';
+    return 'Το $val θα επιστρέψει σύντομα!\\nΣυγγνώμη για την ταλαιπωρία, αλλά εκτελούμε κάποιες προγραμματισμένες εργασίες συντήρησης αυτή τη στιγμή.\\nΠιθανότατα θα είμαστε ξανά συνδεδεμένοι σύντομα. Μείνετε ενημερωμένοι στις ομάδες της κοινότητάς μας:';
   }
 
   @override
@@ -9445,14 +9466,5 @@ class I18nEl extends I18n {
   String get api_error_273 => 'Προσπάθεια διαγραφής μιας διεύθυνσης που δεν υπάρχει στο βιβλίο διευθύνσεων ενός χρήστη';
 
   @override
-  String get api_error_99 => 'Προσπάθεια αίτησης υψηλότερου ποσού από αυτό που επιτρέπεται από το first_time_limit_asset κατά τη δημιουργία μιας πρώτης συναλλαγής';
-
-  @override
-  String get api_error_122 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση μιας κυμαινόμενης συναλλαγής LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Ανεπαρκή κεφάλαια για τη χρηματοδότηση μιας μη κυμαινόμενης συναλλαγής LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Σφάλμα κατά τη χρηματοδότηση ενός LOCAL_SELL';
+  String get pin_you_can_use_new => 'Το PIN πρέπει να είναι τουλάχιστον 4 ψηφία';
 }

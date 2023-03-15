@@ -270,12 +270,12 @@ class I18nJa extends I18n {
   String get ad250Sbdeleted => 'この広告は削除されました';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '$country で$assetName を売却し現金化する';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '$country で $assetName を現金で購入する';
   }
 
@@ -1234,7 +1234,7 @@ class I18nJa extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => '金額（通貨）';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return '金額 ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nJa extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'トレード $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nJa extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName はピアツーピアのモネロ取引所です。私たちは、ユーザーが相互にモネロを売買できる市場です。トレーダーと呼ばれるユーザーは、提供したい価格と支払い方法で広告を作成します。当社のウェブサイトで取引広告を閲覧し、ご希望の支払い方法を検索できます。 60 種類以上の支払い方法でモネロをオンラインで売買しているトレーダーを見つけることができます。 $appName を初めて使用し、Monero を購入したい場合は、購入方法ガイドを参照して、Monero の購入方法を確認してください。';
+    return '$appName は、ピアツーピアのモネロ取引プラットフォームです。私たちは、ユーザーが相互にモネロを売買できる市場です。トレーダーと呼ばれるユーザーは、提供したい価格と支払い方法で広告を作成します。当社のウェブサイトで取引広告を閲覧し、ご希望の支払い方法を検索できます。 60 種類以上の支払い方法でモネロをオンラインで売買しているトレーダーを見つけることができます。 $appName を初めて使用し、Monero を購入したい場合は、購入方法ガイドを参照して、Monero の購入方法を確認してください。';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nJa extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => '料金ページ';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return '現時点では、スタンドアロンのモバイル アプリはありません。$telegramならモバイル通知も受け取れます！ $thisGuide は、Telegram 通知の有効化プロセスを案内します (簡単です)。その後、ボットが $appName イベントに関する通知を送信します。';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'はい、そうです！ Android をお持ちの場合は、$playstoreLink、$fdroidLink で入手するか、$apkLink を直接ダウンロードしてください。 iOS デバイスの場合、$appstoreLink で利用できます。 $telegramでモバイル通知も受け取れます！ $thisGuide は、Telegram 通知の有効化プロセスを案内します (簡単です)。その後、ボットが $appName イベントに関する通知を送信します。';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nJa extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'すべてのオンライン取引は、仲裁保証によって保護されています。取引が開始されると、取引額に相当する金額の Monero が自動的に売り手の $appName ウォレットから保証金として確保されます。これは、売り手があなたのお金を持ち逃げし、取引を確定しない場合、$appName サポートが仲裁保証金で保持されているモネロをあなたに向けることができることを意味します。モネロを販売している場合は、モネロの購入者からお金を受け取ったことを知る前に取引を確定しないでください。ローカル取引では、デフォルトで仲裁保証金保護が有効になっていないことに注意してください。';
+    return 'すべてのオンライン取引は、仲裁保証によって保護されています。取引が開始されると、取引額に等しい金額の Monero が自動的に売り手の $appName ボンド ウォレットから予約されます。これは、売り手があなたのお金を持ち逃げし、取引を確定しない場合、$appName サポートが仲裁保証金で保持されているモネロをあなたに向けることができることを意味します。モネロを販売している場合は、モネロの購入者からお金を受け取ったことを知る前に取引を確定しないでください。ローカル取引では、デフォルトで仲裁保証金保護が有効になっていないことに注意してください.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'すべてのオンライン取引は、仲裁保証によって保護されています。取引が開始されると、取引額に相当する金額の暗号通貨が、売り手の $appName ウォレットから保証金として自動的に予約されます。これは、売り手があなたのお金を持ち逃げし、取引を確定しない場合、$appName サポートが仲裁保証金で保持されているモネロをあなたに向けることができることを意味します。暗号通貨を販売している場合は、買い手からお金を受け取ったことを知る前に取引を確定しないでください。ローカル取引では、デフォルトで仲裁保証金保護が有効になっていないことに注意してください.';
+    return 'すべてのオンライン取引は、仲裁保証によって保護されています。取引が開始されると、取引額に等しい量の暗号通貨が売り手の $appName 債券ウォレットから自動的に予約されます。これは、売り手があなたのお金を持ち逃げし、取引を確定しない場合、$appName サポートが仲裁保証金に保持されている暗号通貨をあなたに向けることができることを意味します。暗号通貨を販売している場合は、買い手からお金を受け取ったことを知る前に取引を確定しないでください。ローカル取引では、デフォルトで仲裁保証金保護が有効になっていないことに注意してください.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nJa extends I18n {
   String get morph250Sbservice8722Sbdown => 'ChangeNow の XMR サービスは一時的に利用できません。あとでもう一度試してみてください。';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '$cryptocurrencyName アドレスの受信';
   }
 
@@ -4773,9 +4773,7 @@ class I18nJa extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'ウォレットの残高がこの広告タイプに必要な最低額を下回っています';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return '初回制限時間($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '最初の制限時間  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'オプション。以前に取引したことがないユーザーの最大取引額を制限します。最小 0。';
@@ -5268,12 +5266,12 @@ class I18nJa extends I18n {
   String get search250Sbcoordinates250Sblon => '経度';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '$assetName を売却して$location で現金化';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '$locationで $assetName を現金で購入';
   }
 
@@ -5340,7 +5338,7 @@ class I18nJa extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => '真の LocalBitcoins と Paxful の代替品です。';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'プライバシーの侵害を懸念している場合、投資するのに最適な暗号通貨は XMR です。 Monero は、プライバシー バイ デザインを念頭に置いて開発された追跡不可能なコインです。\n<br/>\nモネロはどこで買える？ LocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P モネロ取引所です。 KYC チェックはありません。PayPal、クレジット カード、ギフト カード、郵送による現金、またはビットコインを Monero に変換することで、ID 確認なしで匿名で Monero を購入することができます。当社のプラットフォームはあらゆる支払い方法をサポートしています。';
+  String get seo250Sbtext8722Sb1 => 'プライバシーの侵害を懸念している場合、投資するのに最適な暗号通貨は XMR です。 Monero は、プライバシー バイ デザインを念頭に置いて開発された追跡不可能なコインです。\n【X171X】\nモネロはどこで買える？ LocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P モネロ取引プラットフォームです。 KYC チェックはありません。PayPal、クレジット カード、ギフト カード、郵送による現金、またはビットコインを Monero に変換することで、ID 確認なしで匿名で Monero を購入することができます。当社のプラットフォームはあらゆる支払い方法をサポートしています。';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'ビットコインへの投資方法を知りたいですか？ AgoraDesk では、ビットコインの購入がこれまでになく簡単になりました。PayPal、クレジット/デビット カード、銀行振込、ギフト カード、Venmo など、お気に入りのオンライン支払い方法を使用して、BTC を即座に購入できます。\n<br/>\n近くでビットコインを現金で購入したい場合は、現地でビットコインを売ってくれる人を見つけることができます。取引プラットフォームは、現金での BTC の売買をサポートしています。郵送で現金を使ってビットコインを購入することもできます。';
@@ -6811,7 +6809,7 @@ class I18nJa extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return '$assetNameを受け取る';
   }
 
@@ -6869,7 +6867,7 @@ class I18nJa extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => '取引の優先度を選択';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '$assetName のアドレスの受けとる';
   }
 
@@ -6879,7 +6877,7 @@ class I18nJa extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return '$assetNameを送信';
   }
 
@@ -6944,7 +6942,7 @@ class I18nJa extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => '仮想通貨の送金手数料';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return '$assetNameを送信';
   }
 
@@ -7006,12 +7004,12 @@ class I18nJa extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return '$currencyCodeを受け取る';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return '$asset を送信';
   }
 
@@ -7100,7 +7098,7 @@ class I18nJa extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return '$assetNameを受け取る';
   }
 
@@ -7108,7 +7106,7 @@ class I18nJa extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => '受け取る';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return '$assetNameを送信';
   }
 
@@ -7355,7 +7353,7 @@ class I18nJa extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => '住所を変更する';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return '金額 ($asset)';
   }
 
@@ -7469,7 +7467,7 @@ class I18nJa extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'ステップ 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>ファイルを開いて編集します。以下に例を示します: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>あなたが見ることができる例では：</p>\n<ol>\n<li>Flutter はサブモジュールとして使用されます - これは F-Droid チームからの要件です。</li>\n<li>フレーバーごとに別のブランチを使用しました (コマンド <code>AutoUpdateMode: Version %v-fdroid-lm</code>)。これは、Fastlane が &#39;Flutter のフレーバーをサポートしていないためです。</li>\n<li> 初めてビルド情報を手動で追加しますが、今後は新しいタグをプッシュした後、ボットによって自動的に追加されます。</li>\n</ol>\n<p>ファイルの構文が正しいことを確認します: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>ファイルを開いて編集します。例を次に示します: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>あなたが見ることができる例では：</p>\n<ol>\n<li>Flutter はサブモジュールとして使用されます - これは F-Droid チームからの要件です。</li>\n<li>フレーバーごとに別のブランチを使用しました (コマンド <code>AutoUpdateMode: Version %v-fdroid-lm</code>)。これは、Fastlane が &#39;Flutter のフレーバーをサポートしていないためです。</li>\n<li> 初めてビルド情報を手動で追加しますが、将来的には、新しいタグをプッシュした後、ボットによって自動的に追加されます。</li>\n</ol>\n<p>ファイルの構文が正しいことを確認します: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'ステップ 4';
@@ -7517,7 +7515,7 @@ class I18nJa extends I18n {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'ラベル (オプション)';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => 'セーブ';
+  String get address8722Sbbook250Sbsave8722Sbbtn => '保存';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '将来の使用のためにこのアドレスを保存します';
@@ -7544,6 +7542,17 @@ class I18nJa extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '「保存」を押すと、広告の国は自動的に「グローバル」に更新されます。';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '同一資産販売広告のみ';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'ウェブサイトに移動';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset 広告のみを購入';
+  }
 
   @override
   String get ads => '広告';
@@ -8158,6 +8167,9 @@ class I18nJa extends I18n {
   String get api_error_98 => 'ポスターが存在しない広告の取引を作成しようとしています';
 
   @override
+  String get api_error_99 => '最初の取引を作成するときに、広告所有者が許可したよりも高い金額をリクエストしようとしています';
+
+  @override
   String get api_error_100 => '取引作成のために 0.0000000001XMR未満をリクエストすることはできません';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nJa extends I18n {
 
   @override
   String get api_error_121 => '存在しない取引をエスクローしようとする';
+
+  @override
+  String get api_error_122 => '取引資金が不足している';
+
+  @override
+  String get api_error_123 => '取引資金が不足している';
+
+  @override
+  String get api_error_124 => '取引資金調達時のエラー';
 
   @override
   String get api_error_125 => '取引のキャンセルを要求するユーザーは存在しません';
@@ -8557,7 +8578,7 @@ class I18nJa extends I18n {
   String get pin_enter_to_confirm_transaction => '暗証番号を入力して取引を確認する';
 
   @override
-  String get pin_you_can_use => 'この暗証番号を使用して、アプリのロックを解除できます。';
+  String get pin_you_can_use => 'PIN は 4 桁以上である必要があります';
 
   @override
   String get pin_confirm => '暗証番号の確認';
@@ -9265,7 +9286,7 @@ class I18nJa extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を簡単に購入';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '本人確認なしでモネロを売買する。現金またはオンライン。安全、迅速、簡単。\n\nLocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P 取引プラットフォームです。 KYCチェックはありません - PayPal、クレジットカード、ギフトカード、郵送による現金での身元確認なしで匿名でモネロを購入するか、ビットコイン、イーサ、USDT、またはその他の暗号コインをモネロに変換することができます - 私たちのプラットフォームはあらゆる支払い方法をサポートしています.\n\n- 安全でスムーズな取引\nあらゆる支払い方法、通貨、場所をサポートしています。支払い方法を排除せず、対面での現金取引を完全にサポートします。私たちの取引はすべて仲裁保証によって保護されています。取引を開始する前に資金を仲裁保証金に保持する必要があるという事実のおかげで、購入者にとってスムーズで安全な体験が保証されます。これは、プラットフォームの人気と売り手のリピート顧客にとって不可欠です.\n\n- KYC/AML または ID 検証なし\nLocalMonero は、取引体験のシンプルさと率直さを維持することをお約束します。私たちはKYC / AMLを採用しておらず、そうする予定もありません.\n\n- コミュニティからの信頼\n当社のプラットフォームは 4 年以上運営されており、2018 年の暗号通貨市場の大暴落を乗り切り、そのコミュニティ指向の勤勉なサービスを通じて、非常に懐疑的な Monero コミュニティで最も信頼される名前の 1 つになりました。\n\n- 安全、オープンソース、プライバシー中心、検閲耐性\n私たちのアプリは無料でオープンソースであるため、多くの人がアプリのコードを見て、セキュリティ ホールやプライバシー リークがないことを確認しています。アプリをオープンソース化することで、特定のアプリ リポジトリがアプリを検閲している場合でも、誰でもアプリにアクセスできるようになります。私たちのアプリは、Google が完全にブロックされている電話でも動作します。私たちはあなたのプライバシーをとても大切にしています。登録時に電子メールを提供する必要さえありません.\n\nソースコード: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題トラッカー: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- ステラサポート\n私たちのサポートチームは、迅速で反応がよく、常に喜んでいます. 24 時間以内に回答されなかったサポート チケットはありません。私たちはソーシャルメディアを通じていつでも簡単にアクセスでき、あなたの批判に熱心に耳を傾け、常に記録的な速さでユーザーからの優れた提案を実装しています.\n\nサポートは https://localmonero.co/support からご利用いただけます。\n\n- フェア料金\n当社の仲裁債券ウォレットにモネロを入金または出金する際に法外な手数料を請求することはありません。入金手数料はなく、出金手数料は通常の取引で支払う手数料に非常に近いものです。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '本人確認なしでモネロを売買する。現金またはオンライン。安全、迅速、簡単。\n\nLocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P 取引プラットフォームです。 KYCチェックはありません - PayPal、クレジットカード、ギフトカード、郵送による現金での身元確認なしで匿名でモネロを購入するか、ビットコイン、イーサ、USDT、またはその他の暗号コインをモネロに変換することができます - 私たちのプラットフォームはあらゆる支払い方法をサポートしています.\n\n- 安全でスムーズな取引\nあらゆる支払い方法、通貨、場所をサポートしています。支払い方法を排除せず、対面での現金取引を完全にサポートします。私たちの取引はすべて仲裁保証によって保護されています。取引を開始する前に資金を仲裁保証金に保持する必要があるという事実のおかげで、購入者にとってスムーズで安全な体験が保証されます。これは、プラットフォームの人気と売り手のリピート顧客にとって不可欠です.\n\n- KYC/AML または ID 検証なし\nLocalMonero は、取引体験のシンプルさと率直さを維持することをお約束します。私たちはKYC / AMLを採用しておらず、そうする予定もありません.\n\n- コミュニティからの信頼\n当社のプラットフォームは 4 年以上運営されており、2018 年の暗号通貨市場の大暴落を乗り切り、そのコミュニティ指向の勤勉なサービスを通じて、非常に懐疑的な Monero コミュニティで最も信頼される名前の 1 つになりました。\n\n- 安全、オープンソース、プライバシー中心、検閲耐性\n私たちのアプリは無料でオープンソースであるため、多くの人がアプリのコードを見て、セキュリティ ホールやプライバシー リークがないことを確認しています。アプリをオープンソース化することで、特定のアプリ リポジトリがアプリを検閲している場合でも、誰でもアプリにアクセスできるようになります。私たちのアプリは、Google が完全にブロックされている電話でも動作します。私たちはあなたのプライバシーをとても大切にしています。登録時に電子メールを提供する必要さえありません.\n\nソースコード: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題トラッカー: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- ステラサポート\n私たちのサポートチームは、迅速で反応がよく、常に喜んでいます. 24 時間以内に回答されなかったサポート チケットはありません。私たちはソーシャルメディアを通じていつでも簡単にアクセスでき、あなたの批判に熱心に耳を傾け、常に記録的な速さでユーザーからの優れた提案を実装しています.\n\nサポートは https://localmonero.co/support からご利用いただけます。\n\n- フェア料金\n当社の仲裁債券ウォレットにモネロを入金または出金する際に法外な手数料を請求することはありません。入金手数料は無料で、出金手数料は通常の取引で支払う手数料に非常に近いものです。';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を非公開で購入する';
@@ -9370,7 +9391,7 @@ class I18nJa extends I18n {
   String get app_push_new_offer => '新しいオファーがあります';
 
   @override
-  String get app_push_trade_marked_completed => '完了済みとしてマークされたトレード';
+  String get app_push_trade_marked_completed => '取引が完了としてマークされました';
 
   @override
   String get app_push_trade_cancelled => 'トレードキャンセル';
@@ -9445,14 +9466,5 @@ class I18nJa extends I18n {
   String get api_error_273 => 'ユーザーのアドレス帳に存在しないアドレスを削除しようとしています';
 
   @override
-  String get api_error_99 => '最初の取引を作成するときに、first_time_limit_asset で許可されているよりも高い金額をリクエストしようとしています';
-
-  @override
-  String get api_error_122 => 'フローティングLOCAL_SELL 取引に資金を供給するのに十分な資金がありません';
-
-  @override
-  String get api_error_123 => 'フローティングでないLOCAL_SELL取引に資金を供給するための資金が不十分';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL への資金提供時のエラー';
+  String get pin_you_can_use_new => 'PIN は 4 桁以上である必要があります';
 }
