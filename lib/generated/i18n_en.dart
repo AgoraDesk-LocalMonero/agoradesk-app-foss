@@ -8557,7 +8557,7 @@ class I18nEn extends I18n {
   String get pin_enter_to_confirm_transaction => 'Enter PIN to confirm transaction';
 
   @override
-  String get pin_you_can_use => 'You can use this PIN to unlock the app.';
+  String get pin_you_can_use => 'PIN must be at least 4 digits';
 
   @override
   String get pin_confirm => 'Confirm PIN';

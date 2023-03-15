@@ -64,11 +64,6 @@ class PinCodeCheckScreen extends StatelessWidget {
                               Navigator.of(context).pop();
                             }
                           },
-                          // onChangedPin: (pin) {
-                          //   if (model.checkPinLessMax(pin)) {
-                          //     Navigator.of(context).pop();
-                          //   }
-                          // },
                           onChangedPin: (_) {},
                           centerBottomWidget: model.biometricAuthIsOn
                               ? IconButton(

@@ -46,7 +46,7 @@ dependencies:
   easy_debounce: ^2.0.2
   extended_image: ^7.0.0
   path_provider: ^2.0.8
-  flutter_pin_code_widget: 0.0.5+1
+  flutter_pin_code_widget: ^0.1.0
   flutter_secure_storage: ^8.0.0
   dots_indicator: ^2.0.0
   currency_picker: ^2.0.7
@@ -90,8 +90,8 @@ dependency_overrides:
     git:
       url: https://github.com/sergdeus/flutter_foreground_task
       ref: master
-  flutter_pin_code_widget:
-    path: ../flutter_pin_code_widget
+#  flutter_pin_code_widget:
+#    path: ../flutter_pin_code_widget
 
 dev_dependencies:
   flutter_test:

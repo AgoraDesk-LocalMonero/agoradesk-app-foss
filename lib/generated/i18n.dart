@@ -15362,7 +15362,7 @@ abstract class I18n {
   /// No description provided for @pin_you_can_use.
   ///
   /// In en, this message translates to:
-  /// **'You can use this PIN to unlock the app.'**
+  /// **'PIN must be at least 4 digits'**
   String get pin_you_can_use;
 
   /// No description provided for @pin_confirm.

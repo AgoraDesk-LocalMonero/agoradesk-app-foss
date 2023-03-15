@@ -56,7 +56,7 @@ class PinCodeSetScreen extends StatelessWidget {
                   model.hasCurrentPin && !model.currentPinChecked
                       ? Text(context.intl.pin_enter_continue)
                       : Text(context.intl.pin_you_can_use),
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 20),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),

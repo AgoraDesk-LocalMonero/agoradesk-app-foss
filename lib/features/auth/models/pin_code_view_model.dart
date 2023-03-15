@@ -105,7 +105,7 @@ class PinCodeViewModel extends ViewModel {
 
   void handlePinInput(String pin, {bool onFull = false}) async {
     if (hasCurrentPin && !currentPinChecked && currentPin != null) {
-      if (pin.length == currentPin!.length && pin != currentPin) {
+      if (pin != currentPin) {
         showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
       } else if (pin.length == currentPin!.length) {
         currentPinChecked = true;
@@ -114,8 +114,14 @@ class PinCodeViewModel extends ViewModel {
         }
       }
     } else if (isFirstPin && onFull) {
-      isFirstPin = false;
-      firstPinCode = pin;
+      if (pin.length >= 4) {
+        isFirstPin = false;
+        firstPinCode = pin;
+      } else {
+        showDialog(context: context, builder: (_) => _dialogWrongLength(context));
+        isFirstPin = true;
+        clearPins();
+      }
     } else if (onFull) {
       secondPinCode = pin;
       if (firstPinCode == secondPinCode) {
@@ -140,6 +146,13 @@ class PinCodeViewModel extends ViewModel {
     return DialogMarkDownWithClose(
       title: context.intl.pin_do_not_match,
       text: context.intl.pin_second_as_first,
+    );
+  }
+
+  Widget _dialogWrongLength(BuildContext context) {
+    return DialogMarkDownWithClose(
+      title: context.intl.error,
+      text: context.intl.pin_you_can_use,
     );
   }
 
