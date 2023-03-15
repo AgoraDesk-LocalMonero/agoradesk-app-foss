@@ -60,7 +60,7 @@ class SendAssetTextField extends StatelessWidget {
             focusNode: focusNode,
             controller: textEditingController,
             decoration: Theme.of(context).colorScheme.txtFieldMainDecoration.copyWith(
-                  labelText: context.intl.wallet250Sbsend250Sbreceiving8722Sbaddress(asset.name),
+                  labelText: context.intl.wallet250Sbsend250Sbreceiving8722Sbaddress(asset.name, ''),
                   errorText: errorText,
                   suffixIcon: SizedBox(
                     width: width,

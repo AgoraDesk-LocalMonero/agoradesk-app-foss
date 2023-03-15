@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
@@ -16,7 +15,7 @@ import 'package:agoradesk/features/wallet/screens/widgets/password_otp_dialog.da
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
+import 'package:vm/vm.dart';
 
 class SendAssetThirdScreen extends StatelessWidget {
   const SendAssetThirdScreen({
@@ -56,14 +55,14 @@ class SendAssetThirdScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      I18n.of(context)!.wallet250Sbsend250Sbsend8722Sbbtn(model.asset.title()),
+                                      I18n.of(context)!.wallet250Sbsend250Sbsend8722Sbbtn(model.asset.title(), ''),
                                       style: context.txtBodyMediumP90,
                                     ),
                                     const SizedBox(height: 16),
                                     LineFontIconTextNeutral60(
                                       icon: AgoraFont.wallet_2,
                                       text: I18n.of(context)!
-                                          .morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(model.asset.name),
+                                          .morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(model.asset.name, ''),
                                     ),
                                     const SizedBox(height: 8),
                                     _RoundedTile(

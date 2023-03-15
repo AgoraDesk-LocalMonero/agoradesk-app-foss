@@ -189,7 +189,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String get currencyCode => _currencyCode ?? 'USD';
 
   String get countryCode {
-    if (blockedCountries.contains(_countryCode)) {
+    if (kBlockedCountries.contains(_countryCode)) {
       return 'US';
     }
     return _countryCode ?? 'US';

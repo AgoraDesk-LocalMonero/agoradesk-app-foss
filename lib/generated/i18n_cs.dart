@@ -270,12 +270,12 @@ class I18nCs extends I18n {
   String get ad250Sbdeleted => 'Tato reklama byla smazána';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Prodejte $assetName za hotovost v $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Kupte $assetName za hotovost v $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nCs extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Částka (měna)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Částka ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nCs extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Obchod $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nCs extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName je peer-to-peer Monero směnárna. Jsme tržiště, kde si uživatelé mohou navzájem kupovat a prodávat Monero. Uživatelé, kterým se říká obchodníci, vytvářejí reklamy s cenou a způsobem platby, který chtějí nabízet. Na našich webových stránkách můžete procházet obchodní inzeráty a hledat způsob platby, který preferujete. Najdete zde obchodníky nakupující a prodávající Monero online pro více než 60 různých platebních metod. Pokud jste s $appName noví a chcete si koupit Monero, podívejte se prosím na našeho průvodce nákupem, kde se dozvíte, jak Monero koupit.';
+    return '$appName je peer-to-peer obchodní platforma Monero. Jsme tržiště, kde si uživatelé mohou navzájem kupovat a prodávat Monero. Uživatelé, kterým se říká obchodníci, vytvářejí reklamy s cenou a způsobem platby, který chtějí nabízet. Na našich webových stránkách můžete procházet obchodní inzeráty a hledat způsob platby, který preferujete. Najdete zde obchodníky nakupující a prodávající Monero online pro více než 60 různých platebních metod. Pokud jste s $appName noví a chcete si koupit Monero, podívejte se prosím na našeho průvodce nákupem, kde se dozvíte, jak Monero koupit.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nCs extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'stránka poplatků';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'V současné době nemáme samostatnou mobilní aplikaci. Ale můžete přijímat mobilní oznámení v $telegram! $thisGuide vás provede procesem aktivace oznámení telegramu (je to snadné). Náš robot vám poté zašle oznámení o vašich událostech $appName.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Ano, máme! Pokud máte Android, můžete jej získat na $playstoreLink, $fdroidLink, nebo si můžete stáhnout přímo $apkLink. Pro zařízení iOS je k dispozici na $appstoreLink. Můžete také přijímat mobilní oznámení v $telegram! $thisGuide vás provede procesem aktivace oznámení telegramu (je to snadné). Náš robot vám poté zašle oznámení o vašich událostech $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nCs extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Všechny online obchody jsou chráněny arbitrážními dluhopisy. Když je obchod zahájen, částka Monera rovnající se částce obchodu je automaticky rezervována z $appName peněženky prodejce jako dluhopis. To znamená, že pokud prodejce uteče s Vašimi penězi a nedokončí obchod, podpora $appName může nasměrovat Monero držené v arbitrážním dluhopisu na vás. Pokud prodáváte Monero, nikdy nedokončujte obchod, dokud nebudete vědět, že jste obdrželi peníze od kupujícího Monero. Vezměte prosím na vědomí, že místní obchody nemají ve výchozím nastavení povolenou ochranu arbitrážními dluhopisy.';
+    return 'Všechny online obchody jsou chráněny arbitrážními dluhopisy. Když je obchod zahájen, částka Monero rovnající se částce obchodu je automaticky rezervována z $appName peněženky s dluhopisy prodejce. To znamená, že pokud prodejce uteče s vašimi penězi a nedokončí obchod, podpora $appName může nasměrovat Monero držené v arbitrážním dluhopisu na vás. Pokud prodáváte Monero, nikdy nedokončujte obchod, dokud nebudete vědět, že jste obdrželi peníze od kupujícího Monero. Vezměte prosím na vědomí, že místní obchody nemají ve výchozím nastavení povolenou ochranu arbitrážními dluhopisy.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Všechny online obchody jsou chráněny arbitrážními dluhopisy. Když je obchod zahájen, množství kryptoměny rovné množství obchodu je automaticky rezervováno z $appName peněženky prodejce jako dluhopis. To znamená, že pokud prodejce uteče s Vašimi penězi a nedokončí obchod, podpora $appName může nasměrovat Monero držené v arbitrážním dluhopisu na Vás. Pokud prodáváte kryptoměnu, nikdy nedokončujte obchod, dokud nevíte, že jste od kupujícího obdrželi peníze. Vezměte prosím na vědomí, že místní obchody nemají ve výchozím nastavení povolenou ochranu arbitrážními dluhopisy.';
+    return 'Všechny online obchody jsou chráněny arbitrážními dluhopisy. Když je obchod zahájen, z peněženky s dluhopisy prodávajícího $appName je automaticky rezervováno množství kryptoměny rovnající se objemu obchodu. To znamená, že pokud prodejce uteče s vašimi penězi a nedokončí obchod, podpora $appName může nasměrovat kryptoměnu drženou v arbitrážním dluhopisu k vám. Pokud prodáváte kryptoměnu, nikdy nedokončujte obchod, dokud nebudete vědět, že jste od kupujícího obdrželi peníze. Vezměte prosím na vědomí, že místní obchody nemají ve výchozím nastavení povolenou ochranu arbitrážními dluhopisy.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nCs extends I18n {
   String get morph250Sbservice8722Sbdown => 'Služba XMR společnosti ChangeNow je dočasně nedostupná. Zkuste to později.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Příjem adresy $cryptocurrencyName';
   }
 
@@ -4773,9 +4773,7 @@ class I18nCs extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Zůstatek v peněžence je nižší než požadované minimum pro tento typ reklamy';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'První časový limit ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'První časový limit  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Volitelný. Omezte maximální částku transakce pro uživatele, se kterými jste dříve neobchodovali. Minimálně 0.';
@@ -5268,12 +5266,12 @@ class I18nCs extends I18n {
   String get search250Sbcoordinates250Sblon => 'Zeměpisná délka';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Prodejte $assetName za hotovost v $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Kupte $assetName za hotovost v $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nCs extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Skutečná alternativa LocalBitcoins a Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Pokud máte obavy z narušení soukromí – nejlepší kryptoměnou pro investování je XMR. Monero je nevysledovatelná mince vyvinutá s ohledem na soukromí již od svého návrhu.\n<br/>\nKde koupit Monero? LocalMonero je největší, nejdůvěryhodnější a dobře zavedená P2P Monero burza v komunitě XMR. Nemáme žádné kontroly KYC – Monero si můžete jednoduše anonymně koupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést Bitcoiny na Monero – naše platforma podporuje jakoukoli platební metodu.';
+  String get seo250Sbtext8722Sb1 => 'Pokud máte obavy z narušení soukromí – nejlepší kryptoměnou pro investování je XMR. Monero je nevysledovatelná mince vyvinutá s ohledem na soukromí již od návrhu.\n<br/>\nKde koupit Monero? LocalMonero je největší, nejdůvěryhodnější a dobře zavedená obchodní platforma P2P Monero v komunitě XMR. Nemáme žádné šeky KYC – Monero si můžete jednoduše anonymně koupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést bitcoiny na Monero – naše platforma podporuje jakoukoli platební metodu.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Zajímá vás, jak investovat do Bitcoinů? Na AgoraDesk nebyl nákup Bitcoinů nikdy snazší – okamžitě nakupujte BTC od osob pomocí vaší oblíbené online platební metody: PayPal, kreditní/debetní karta nebo bankovní převod, dárkové karty, Venmo nebo jakákoli jiná.\n<br/>\nPokud chcete koupit Bitcoiny ve vašem okolí za hotovost, můžete najít někoho, kdo je ochotný prodávat Bitcoiny lokálně – obchodní platforma podporuje nákup a prodej BTC za hotovost. Můžete dokonce nakupovat Bitcoiny za hotovost poštou.';
@@ -6811,7 +6809,7 @@ class I18nCs extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Přijmout $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nCs extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Vyberte prioritu transakce';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Příjem adresy $assetName';
   }
 
@@ -6879,7 +6877,7 @@ class I18nCs extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Odeslat $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nCs extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Odchozí poplatky za kryptoměny';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Odeslat $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nCs extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Přijmout $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Odeslat $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nCs extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Přijmout $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nCs extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Obdržet';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Odeslat $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nCs extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Změnit adresu';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Částka ($asset)';
   }
 
@@ -7469,7 +7467,7 @@ class I18nCs extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Krok 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Otevřete soubor a upravte jej. Zde je příklad: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>V příkladu můžete vidět:</p>\n<ol>\n<li>Flutter se používá jako submodul – to je požadavek týmu F-Droid.</li>\n<li>Pro každou variantu jsme použili samostatnou větev (příkaz <code>AutoUpdateMode: Verze %v-fdroid-lm</code>). To proto, že Fastlane&#39;nepodporuje příchutě s Flutter.</li>\n<li>Poprvé přidáváme informace o sestavení ručně, v budoucnu je automaticky přidá robot, jakmile vložíme nový tag.</li>\n</ol>\n<p>Zkontrolujte, zda má soubor správnou syntaxi: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Otevřete soubor a upravte jej. Zde je příklad: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>V příkladu můžete vidět:</p>\n<ol>\n<li>Flutter se používá jako submodul – to je požadavek týmu F-Droid.</li>\n<li>Pro každou variantu jsme použili samostatnou větev (příkaz <code>AutoUpdateMode: Verze %v-fdroid-lm</code>). Je to proto, že Fastlane&#39;nepodporuje příchutě s Flutter.</li>\n<li>Poprvé přidáváme informace o sestavení ručně, v budoucnu je automaticky přidá robot, jakmile vložíme nový tag.</li>\n</ol>\n<p>Zkontrolujte, zda má soubor správnou syntaxi: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Krok 4';
@@ -7487,7 +7485,7 @@ class I18nCs extends I18n {
   String get devblog250Sbfdroid250Sb7250Sbtitle => 'Krok 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Tento proces je trochu komplikovaný a během něj mohou nastat různé problémy. Jakmile však CI nastavíte, budou následující aktualizace zpracovány automaticky.</p>\n<p>V případě dotazů se je neváhejte zeptat na našem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHubu</a>.</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Tento proces je trochu komplikovaný a mohou se během něj objevit různé problémy. Jakmile však CI nastavíte, následující aktualizace budou zpracovány automaticky.</p>\n<p>V případě dotazů se je neváhejte zeptat na našem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHubu</a>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Závěr';
@@ -7544,6 +7542,17 @@ class I18nCs extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Když stisknete \"Uložit\", země reklamy se automaticky aktualizuje na \"globální\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Pouze reklamy na prodej stejného aktiva';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Přejít na webovou stránku';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset nakupovat pouze reklamy';
+  }
 
   @override
   String get ads => 'Reklamy';
@@ -8158,6 +8167,9 @@ class I18nCs extends I18n {
   String get api_error_98 => 'Pokus o vytvoření obchodu pro reklamu, jejíž plakát neexistuje';
 
   @override
+  String get api_error_99 => 'Pokuste se požádat o vyšší částku, než povoluje vlastník reklamy při vytváření prvního obchodu';
+
+  @override
   String get api_error_100 => 'Pro vytvoření obchodu nelze požadovat méně než 0,0000000001 XMR';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nCs extends I18n {
 
   @override
   String get api_error_121 => 'Pokus o úschovu obchodu, který neexistuje';
+
+  @override
+  String get api_error_122 => 'Nedostatek finančních prostředků na financování obchodu';
+
+  @override
+  String get api_error_123 => 'Nedostatek finančních prostředků na financování obchodu';
+
+  @override
+  String get api_error_124 => 'Chyba při financování obchodu';
 
   @override
   String get api_error_125 => 'Uživatel požadující zrušení obchodu neexistuje';
@@ -8557,7 +8578,7 @@ class I18nCs extends I18n {
   String get pin_enter_to_confirm_transaction => 'Pro potvrzení transakce zadejte PIN';
 
   @override
-  String get pin_you_can_use => 'Tento PIN můžete použít k odemknutí aplikace.';
+  String get pin_you_can_use => 'PIN musí mít alespoň 4 číslice';
 
   @override
   String get pin_confirm => 'Potvrďte PIN';
@@ -9265,7 +9286,7 @@ class I18nCs extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: snadná koupě XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koupit nebo prodat Monero bez ověření ID. Hotově nebo online. Bezpečné, rychlé, snadné.\n\nLocalMonero je největší, nejdůvěryhodnější a dobře zavedená obchodní platforma P2P v komunitě XMR. Nemáme žádné šeky KYC – Monero si můžete jednoduše anonymně koupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést bitcoiny, ethery, USDT nebo jakékoli jiné krypto mince na Monero – naše platforma podporuje jakoukoli platební metodu.\n\n- Bezpečné a hladké obchodování\nPodporujeme jakoukoli platební metodu, jakoukoli měnu a kdekoli. Neodstraňujeme platební metody a plně podporujeme hotovostní obchody tváří v tvář. Všechny naše obchody jsou chráněny arbitrážním dluhopisem. Díky tomu, že požadujeme, aby byly prostředky před zahájením obchodu drženy v rozhodčím dluhopisu, zajišťujeme bezproblémový a bezpečný zážitek pro kupujícího, který je nezbytný pro popularitu platformy a opakované zákazníky pro prodejce.\n\n- Žádné ověření KYC/AML nebo ID\nLocalMonero se zavazuje udržovat jednoduchost a přímočarost vašich obchodních zkušeností. Nezaměstnáváme KYC/AML a ani to nikdy neplánujeme.\n\n- Důvěryhodný komunitou\nNaše platforma funguje více než čtyři roky, přežila velký krach kryptoměnového trhu v roce 2018 a díky své komunitně orientované pečlivé službě se stala jedním z nejdůvěryhodnějších jmen v extrémně skeptické komunitě Monero.\n\n- Bezpečné, Open Source, Ochrana soukromí, Odolné vůči cenzuře\nNaše aplikace je zdarma a s otevřeným zdrojovým kódem, což zajišťuje, že mnoho očí se dívá na kód aplikace, aby se zajistilo, že neexistují žádné bezpečnostní díry nebo úniky soukromí. Otevřený zdroj naší aplikace také umožňuje komukoli mít přístup k naší aplikaci, i když určité úložiště aplikací aplikaci cenzuruje. Naše aplikace funguje i na telefonech, které mají Google zcela zablokovaný. Velmi si vážíme vašeho soukromí, takže ani nepožadujeme, abyste při registraci uváděli e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSledování problémů: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hvězdná podpora\nNáš tým podpory je rychlý, pohotový a vždy se snaží vyhovět. Nikdy jsme neměli lístek podpory, který by nebyl zodpovězen do 24 hodin. Jsme vždy snadno dosažitelní prostřednictvím sociálních médií, pozorně nasloucháme vaší kritice a vždy implementujeme dobré uživatelské návrhy v rekordním čase.\n\nNaši podporu můžete kontaktovat na: https://localmonero.co/support\n\n- Spravedlivé poplatky\nNeúčtujeme přemrštěné poplatky, když vkládáte nebo vybíráte Monero do/z naší peněženky arbitrážních dluhopisů. Neexistuje žádný poplatek za vklad a poplatek za výběr se velmi blíží poplatku, který byste platili za normální transakci.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koupit nebo prodat Monero bez ověření ID. Hotově nebo online. Bezpečné, rychlé, snadné.\n\nLocalMonero je největší, nejdůvěryhodnější a dobře zavedená obchodní platforma P2P v komunitě XMR. Nemáme žádné šeky KYC – Monero si můžete jednoduše anonymně koupit bez ověření ID pomocí PayPal, kreditní karty, dárkové karty, hotovosti poštou nebo převést bitcoiny, ethery, USDT nebo jakékoli jiné krypto mince na Monero – naše platforma podporuje jakoukoli platební metodu.\n\n- Bezpečné a hladké obchodování\nPodporujeme jakoukoli platební metodu, jakoukoli měnu a kdekoli. Neodstraňujeme platební metody a plně podporujeme hotovostní obchody tváří v tvář. Všechny naše obchody jsou chráněny arbitrážním dluhopisem. Díky tomu, že požadujeme, aby byly prostředky před zahájením obchodu drženy v rozhodčím dluhopisu, zajišťujeme bezproblémový a bezpečný zážitek pro kupujícího, který je nezbytný pro popularitu platformy a opakované zákazníky pro prodejce.\n\n- Žádné ověření KYC/AML nebo ID\nLocalMonero se zavazuje udržovat jednoduchost a přímočarost vašich obchodních zkušeností. Nezaměstnáváme KYC/AML a ani to nikdy neplánujeme.\n\n- Důvěryhodný komunitou\nNaše platforma funguje více než čtyři roky, přežila velký krach kryptoměnového trhu v roce 2018 a díky své komunitně orientované pečlivé službě se stala jedním z nejdůvěryhodnějších jmen v extrémně skeptické komunitě Monero.\n\n- Bezpečné, Open Source, Ochrana soukromí, Odolné vůči cenzuře\nNaše aplikace je zdarma a s otevřeným zdrojovým kódem, což zajišťuje, že mnoho očí se dívá na kód aplikace, aby se zajistilo, že neexistují žádné bezpečnostní díry nebo úniky soukromí. Otevřený zdroj naší aplikace také umožňuje komukoli mít přístup k naší aplikaci, i když určité úložiště aplikací aplikaci cenzuruje. Naše aplikace funguje i na telefonech, které mají Google zcela zablokovaný. Velmi si vážíme vašeho soukromí, takže ani nepožadujeme, abyste při registraci uváděli e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSledování problémů: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hvězdná podpora\nNáš tým podpory je rychlý, pohotový a vždy se snaží vyhovět. Nikdy jsme neměli lístek podpory, který by nebyl zodpovězen do 24 hodin. Jsme vždy snadno dosažitelní prostřednictvím sociálních médií, pozorně nasloucháme vaší kritice a vždy implementujeme dobré uživatelské návrhy v rekordním čase.\n\nNaši podporu můžete kontaktovat na: https://localmonero.co/support\n\n- Spravedlivé poplatky\nNeúčtujeme přemrštěné poplatky, když vložíte nebo vyberete Monero do/z naší peněženky arbitrážních dluhopisů. Neexistuje žádný poplatek za vklad a poplatek za výběr se velmi blíží poplatku, který byste platili za normální transakci.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kup XMR privátně';
@@ -9445,14 +9466,5 @@ class I18nCs extends I18n {
   String get api_error_273 => 'Pokus o odstranění adresy, která neexistuje v adresáři uživatele';
 
   @override
-  String get api_error_99 => 'Při vytváření prvního obchodu se pokoušíte požádat o vyšší částku, než povoluje first_time_limit_asset';
-
-  @override
-  String get api_error_122 => 'Nedostatek finančních prostředků k financování pohyblivého obchodu LOCAL_SELL';
-
-  @override
-  String get api_error_123 => 'Nedostatek finančních prostředků k financování neplovoucího obchodu LOCAL_SELL';
-
-  @override
-  String get api_error_124 => 'Chyba při financování LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN musí mít alespoň 4 číslice';
 }

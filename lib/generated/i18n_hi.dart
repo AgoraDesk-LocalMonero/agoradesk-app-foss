@@ -270,12 +270,12 @@ class I18nHi extends I18n {
   String get ad250Sbdeleted => 'यह विज्ञापन हटा दिया गया है';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return '$assetName को $country में नकद के लिए बेचें';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return '$country में नकद के साथ $assetName खरीदें';
   }
 
@@ -1234,7 +1234,7 @@ class I18nHi extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'राशि (मुद्रा)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'राशि ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nHi extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'व्यापार $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nHi extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName एक peer-to-peer Monero exchange है। हम एक बाज़ार हैं जहाँ उपयोगकर्ता एक-दूसरे से Monero खरीद और बेच सकते हैं। उपयोगकर्ता, जिन्हें व्यापारी कहा जाता है, वे मूल्य और भुगतान विधि के साथ विज्ञापन बनाते हैं जो वे पेश करना चाहते हैं। आप व्यापार विज्ञापनों के लिए हमारी website को देख सकते हैं और अपनी पसंद की भुगतान विधि खोज सकते हैं। आपको 60 से अधिक विभिन्न भुगतान विधियों के लिए ऑनलाइन Monero खरीदने और बेचने वाले व्यापारी मिल जाएँगे। यदि आप $appName के लिए नए हैं और Monero खरीदना चाहते हैं, तो कृपया Monero को खरीदने का तरीका जानने के लिए हमारी \"खरीदारी कैसे करें\" पुस्तिका पर एक नज़र डालें।';
+    return '$appName एक पीयर-टू-पीयर मोनरो ट्रेडिंग प्लेटफॉर्म है। हम एक बाज़ार हैं जहाँ उपयोगकर्ता एक-दूसरे को मोनेरो खरीद और बेच सकते हैं। उपयोगकर्ता, जिन्हें ट्रेडर कहा जाता है, मूल्य और भुगतान विधि के साथ विज्ञापन बनाते हैं जो वे पेश करना चाहते हैं। आप व्यापार विज्ञापनों के लिए हमारी वेबसाइट ब्राउज़ कर सकते हैं और अपनी पसंद की भुगतान विधि खोज सकते हैं। आपको 60 से अधिक विभिन्न भुगतान विधियों के लिए ऑनलाइन मोनेरो खरीदने और बेचने वाले व्यापारी मिल जाएंगे। यदि आप $appName के लिए नए हैं और मोनेरो खरीदना चाहते हैं, तो कृपया मोनेरो को खरीदने का तरीका जानने के लिए हमारी खरीदारी कैसे करें गाइड पर एक नज़र डालें।';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nHi extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'शुल्क पृष्ठ';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'फिलहाल, हमारे पास एक standalone मोबाइल ऐप नहीं है। लेकिन आप $telegram में मोबाइल सूचनाएँ प्राप्त कर सकते हैं! $thisGuide आपको Telegram अधिसूचना सक्रियण प्रक्रिया के बारे में बताएगा (यह आसान है)। हमारा bot तब आपको आपकी $appName घटनाओं पर सूचनाएँ भेजेगा।';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'हाँ हम करते हैं! यदि आपके पास Android है, तो आप इसे $playstoreLink, $fdroidLink पर प्राप्त कर सकते हैं, या आप $apkLink को सीधे डाउनलोड कर सकते हैं। iOS उपकरणों के लिए, यह $appstoreLink पर उपलब्ध है। आप $telegram में मोबाइल सूचनाएं भी प्राप्त कर सकते हैं! $thisGuide आपको टेलीग्राम अधिसूचना सक्रियण प्रक्रिया के माध्यम से ले जाएगा (यह आसान है)। हमारा बॉट तब आपको आपकी $appName घटनाओं पर सूचनाएं भेजेगा।';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nHi extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'सभी ऑनलाइन व्यापारों को मध्यस्थता बांड द्वारा संरक्षित किया जाता है। जब एक व्यापार शुरू किया जाता है तो व्यापार की राशि के बराबर Monero की राशि स्वचालित रूप से विक्रेता के $appName बटुए से बांड के रूप में आरक्षित हो जाती है। इसका मतलब यह है कि यदि विक्रेता आपके पैसे लेकर भाग जाता है और व्यापार को अंतिम रूप नहीं देता है, $appName समर्थन मध्यस्थता बांड में रखे गए Monero को आपके पास निर्देशित कर सकता है। यदि आप Monero बेच रहे हैं, तो कभी भी व्यापार को अंतिम रूप न दें जब तक आपको पता न हो कि आपको Monero खरीदार से पैसा मिल गया है। कृपया ध्यान दें कि स्थानीय व्यापारों में मध्यस्थता बांड सुरक्षा स्वत: से सक्षम नहीं है।';
+    return 'सभी ऑनलाइन ट्रेडों को मध्यस्थता बांड द्वारा संरक्षित किया जाता है। जब एक व्यापार शुरू किया जाता है तो व्यापार की राशि के बराबर मोनेरो की राशि स्वचालित रूप से विक्रेता के $appName बांड वॉलेट से आरक्षित हो जाती है। इसका मतलब यह है कि यदि विक्रेता आपके पैसे लेकर भाग जाता है और व्यापार को अंतिम रूप नहीं देता है, तो $appName समर्थन मध्यस्थता बांड में रखे गए मोनेरो को आपके पास निर्देशित कर सकता है। यदि आप मोनेरो बेच रहे हैं, तो कभी भी व्यापार को अंतिम रूप न दें जब तक आपको पता न हो कि आपको मोनेरो खरीदार से पैसा मिल गया है। कृपया ध्यान दें कि स्थानीय ट्रेडों में मध्यस्थता बांड सुरक्षा डिफ़ॉल्ट रूप से सक्षम नहीं है।';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'सभी ऑनलाइन व्यापारों को मध्यस्थता बांड द्वारा संरक्षित किया जाता है। जब कोई व्यापार शुरू किया जाता है तो व्यापार की राशि के बराबर Cryptocurrency की राशि स्वचालित रूप से विक्रेता के $appName बटुएसे बांड के रूप में आरक्षित हो जाती है। इसका मतलब यह है कि यदि विक्रेता आपके पैसे लेकर भाग जाता है और व्यापार को अंतिम रूप नहीं देता है, तो $appName सहयोग विभाग आपको मध्यस्थता बांड में रखी गई Cryptocurrency को निर्देशित कर सकता है। यदि आप Cryptocurrency बेच रहे हैं, तो कभी भी व्यापार को अंतिम रूप न दें जब तक कि आपको पता न हो कि आपने खरीदार से पैसा प्राप्त कर लिया है। कृपया ध्यान दें कि स्थानीय व्यापारों में मध्यस्थता बांड सुरक्षा स्वत: से सक्षम नहीं है।';
+    return 'सभी ऑनलाइन ट्रेडों को मध्यस्थता बांड द्वारा संरक्षित किया जाता है। जब कोई व्यापार शुरू होता है तो व्यापार की राशि के बराबर क्रिप्टोक्यूरेंसी की राशि स्वचालित रूप से विक्रेता के $appName बांड वॉलेट से आरक्षित हो जाती है। इसका मतलब यह है कि यदि विक्रेता आपके पैसे लेकर भाग जाता है और व्यापार को अंतिम रूप नहीं देता है, तो $appName समर्थन आपको मध्यस्थता बांड में रखी गई क्रिप्टोकरेंसी को निर्देशित कर सकता है। यदि आप क्रिप्टोक्यूरेंसी बेच रहे हैं, तो कभी भी व्यापार को अंतिम रूप न दें जब तक कि आपको पता न हो कि आपने खरीदार से पैसा प्राप्त कर लिया है। कृपया ध्यान दें कि स्थानीय ट्रेडों में मध्यस्थता बांड सुरक्षा डिफ़ॉल्ट रूप से सक्षम नहीं है।';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nHi extends I18n {
   String get morph250Sbservice8722Sbdown => 'ChangeNow की XMR सेवा अस्थायी रूप से अनुपलब्ध है। बाद में पुन: प्रयास करें।';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '$cryptocurrencyName की प्राप्ति का पता';
   }
 
@@ -4773,9 +4773,7 @@ class I18nHi extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'इस विज्ञापन प्रकार के लिए बटुए में शेष राशि आवश्यक न्यूनतम से कम है';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'पहली बार की सीमा ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'पहली बार सीमा  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'वैकल्पिक। उन उपयोगकर्ताओं के लिए अधिकतम लेन-देन राशि सीमित करें जिनके साथ आपने पहले व्यापार नहीं किया है। न्यूनतम 0.';
@@ -5268,12 +5266,12 @@ class I18nHi extends I18n {
   String get search250Sbcoordinates250Sblon => 'देशान्तर';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return '$assetName को $location में नकद में बेचें';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return '$location में नकद के साथ $assetName खरीदें';
   }
 
@@ -5340,7 +5338,7 @@ class I18nHi extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'एक सच्चा स्थानीय Bitcoin और Paxful विकल्प।';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'यदि आप गोपनीयता के आक्रमण के बारे में चिंतित हैं - XMR में निवेश करने के लिए सबसे अच्छा cryptocurrency है। Monero एक अप्राप्य सिक्का है जिसे प्रारुप को ध्यान में रखकर गोपनीयता के साथ विकसित किया गया है।\n<br/>\nMonero कप्रारुप से खरीदें? LocalMonero, XMR समुदाय में सबसे बड़ा, सबसे भरोसेमंद और अच्छी तरह से स्थापित P2P Monero बाज़ार है। हमारे पास कोई KYC नहीं है - आप केवल PayPal, credit card, gift card, डाक द्वारा नकद के साथ ID सत्यापन के बिना गुमनाम रूप से Monero खरीद सकते हैं या Bitcoin को Monero में परिवर्तित कर सकते हैं - हमारा प्लेटफॉर्म सभी भुगतान विधियों का समर्थन करता है।';
+  String get seo250Sbtext8722Sb1 => 'यदि आप गोपनीयता के आक्रमण के बारे में चिंतित हैं - एक्सएमआर में निवेश करने के लिए सबसे अच्छा क्रिप्टोकुरेंसी है। मोनेरो एक अप्राप्य सिक्का है जिसे डिजाइन को ध्यान में रखकर गोपनीयता के साथ विकसित किया गया है।\n<br/>\nमोनेरो कहां से खरीदें? LocalMonero XMR समुदाय में सबसे बड़ा, सबसे भरोसेमंद और अच्छी तरह से स्थापित P2P Monero ट्रेडिंग प्लेटफॉर्म है। हमारे पास कोई केवाईसी चेक नहीं है - आप केवल पेपाल, क्रेडिट कार्ड, गिफ्ट कार्ड, कैश द्वारा मेल के साथ आईडी सत्यापन के बिना गुमनाम रूप से मोनरो खरीद सकते हैं या बिटकॉइन को मोनरो में परिवर्तित कर सकते हैं - हमारा प्लेटफॉर्म किसी भी भुगतान विधि का समर्थन करता है।';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'आश्चर्य है कि Bitcoin में निवेश कैसे करें? AgoraDesk पर, Bitcoin खरीदना कभी भी इससे आसान नहीं रहा है - अपनी पसंदीदा ऑनलाइन भुगतान विधि का उपयोग करके किसी व्यक्ति से तुरंत BTC खरीदें: PayPal, credit/debit card या बैंक हस्तांतरण, उपहार कार्ड, Venmo या कोई अन्य।\n<br/>\nयदि आप नकद के साथ अपने पास bitcoin खरीदना चाहते हैं, तो आप स्थानीय स्तर पर bitcoin बेचने के इच्छुक किसी व्यक्ति को ढूंढ सकते हैं - यह व्यापार मंच नकद के साथ BTC खरीदने और बेचने का समर्थन करता है। आप मेल द्वारा नकद का उपयोग करके भी bitcoin खरीद सकते हैं।';
@@ -6811,7 +6809,7 @@ class I18nHi extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return '$assetName प्राप्त करें';
   }
 
@@ -6869,7 +6867,7 @@ class I18nHi extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'सौदे की चुनें';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '$assetName पता प्राप्त हो रहा है';
   }
 
@@ -6879,7 +6877,7 @@ class I18nHi extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return '$assetName भेजें';
   }
 
@@ -6944,7 +6942,7 @@ class I18nHi extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'जावक Cryptocurrency शुल्क';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return '$assetName भेजें';
   }
 
@@ -7006,12 +7004,12 @@ class I18nHi extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return '$currencyCode प्राप्त करें';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return '$asset भेजें';
   }
 
@@ -7100,7 +7098,7 @@ class I18nHi extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return '$assetName प्राप्त करें';
   }
 
@@ -7108,7 +7106,7 @@ class I18nHi extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'प्राप्त करें';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return '$assetName भेजें';
   }
 
@@ -7355,7 +7353,7 @@ class I18nHi extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'पता बदलें';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'राशि ($asset)';
   }
 
@@ -7539,11 +7537,22 @@ class I18nHi extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'सभी क्रिप्टोक्यूरेंसी विज्ञापनों को अब नई \"वैश्विक (कोड XX)\" देश श्रेणी में ले जाया जा रहा है। सभी डुप्लीकेट क्रिप्टोक्यूरेंसी विज्ञापन जो केवल देश के अनुसार भिन्न हैं, हटा दिए जाएंगे $timeRemaining। कृपया सुनिश्चित करें कि आपके पास प्रति मुद्रा केवल एक क्रिप्टोक्यूरेंसी विज्ञापन है, अन्यथा उस मुद्रा में सबसे हाल ही में पोस्ट किए गए विज्ञापन को छोड़कर सभी को हटा दिया जाएगा, जबकि शेष विज्ञापन को \"वैश्विक\" देश श्रेणी में ले जाया जाएगा।';
+    return 'सभी क्रिप्टोक्यूरेंसी विज्ञापनों को अब नए \"वैश्विक (कोड XX)\" देश श्रेणी में ले जाया जा रहा है। सभी डुप्लिकेट क्रिप्टोक्यूरेंसी विज्ञापन जो केवल देश से भिन्न होते हैं, हटा दिए जाएंगे $timeRemaining। कृपया सुनिश्चित करें कि आपके पास प्रति मुद्रा केवल एक क्रिप्टोक्यूरेंसी विज्ञापन है, अन्यथा उस मुद्रा में सबसे हाल ही में पोस्ट किए गए विज्ञापन को छोड़कर सभी को हटा दिया जाएगा, जबकि शेष विज्ञापन को \"वैश्विक\" देश श्रेणी में ले जाया जाएगा।';
   }
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'जब आप \"सहेजें\" दबाते हैं, तो विज्ञापन का देश स्वचालित रूप से \"वैश्विक\" में अपडेट हो जाएगा।';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'सेम-एसेट केवल विज्ञापन बेचते हैं';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'मुझे वेबसाइट पर ले चलो';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset केवल विज्ञापन खरीदें';
+  }
 
   @override
   String get ads => 'विज्ञापन';
@@ -8158,6 +8167,9 @@ class I18nHi extends I18n {
   String get api_error_98 => 'एक ऐसे विज्ञापन के लिए व्यापार बनाने की कोशिश की जा रही है जिसका रचनाकार मौजूद नहीं है';
 
   @override
+  String get api_error_99 => 'पहला व्यापार बनाते समय विज्ञापन स्वामी द्वारा अनुमत राशि से अधिक राशि का अनुरोध करने का प्रयास करना';
+
+  @override
   String get api_error_100 => 'व्यापार निर्माण के लिए ०.०००००००००१ XMR से कम का अनुरोध नहीं कर सकते';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nHi extends I18n {
 
   @override
   String get api_error_121 => 'एक ऐसे व्यापार को escrow करने का प्रयास करना जो मौजूद नहीं है';
+
+  @override
+  String get api_error_122 => 'एक व्यापार को निधि देने के लिए अपर्याप्त धन';
+
+  @override
+  String get api_error_123 => 'एक व्यापार को निधि देने के लिए अपर्याप्त धन';
+
+  @override
+  String get api_error_124 => 'किसी व्यापार को वित्तपोषित करते समय त्रुटि';
 
   @override
   String get api_error_125 => 'व्यापार रद्द करने का अनुरोध करने वाला उपयोगकर्ता मौजूद नहीं है';
@@ -8557,7 +8578,7 @@ class I18nHi extends I18n {
   String get pin_enter_to_confirm_transaction => 'लेन-देन की पुष्टि करने के लिए PIN दर्ज करें';
 
   @override
-  String get pin_you_can_use => 'App को खोलने के लिए आप इस PIN का उपयोग कर सकते हैं।';
+  String get pin_you_can_use => 'पिन कम से कम 4 अंकों का होना चाहिए';
 
   @override
   String get pin_confirm => 'PIN की पुष्टि करें';
@@ -9445,14 +9466,5 @@ class I18nHi extends I18n {
   String get api_error_273 => 'किसी ऐसे पते को हटाने का प्रयास करना जो उपयोगकर्ता की पता पुस्तिका में मौजूद नहीं है';
 
   @override
-  String get api_error_99 => 'पहला व्यापार बनाते समय first_time_limit_asset द्वारा अनुमत राशि से अधिक राशि का अनुरोध करने का प्रयास किया जा रहा है';
-
-  @override
-  String get api_error_122 => 'Floating LOCAL_SELL व्यापार के लिए वित्त की कमी';
-
-  @override
-  String get api_error_123 => 'एक non-floating LOCAL_SELL व्यापार के लिए वित्त की कमी';
-
-  @override
-  String get api_error_124 => 'LOCAL_SELL की निधि करते समय त्रुटि';
+  String get pin_you_can_use_new => 'पिन कम से कम 4 अंकों का होना चाहिए';
 }

@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -6,145 +7,38 @@ class ApiErrors {
     switch (code) {
       case 13:
         return context.intl.api_error_13;
+      case 45:
+        return context.intl.api_error_45;
+      case 46:
+        return context.intl.api_error_46;
       case 47:
         return context.intl.error250Sbsignup250Sb47;
       case 49:
         return context.intl.api_error_49;
       case 48:
         return context.intl.error250Sbsignup250Sb48;
+      case 50:
+        return context.intl.api_error_50;
       case 51:
         return context.intl.email_token_error;
+      case 52:
+        return context.intl.api_error_52;
+      case 53:
+        return context.intl.api_error_53;
       case 54:
       case 55:
       case 57:
         return context.intl.error_password_reset_token_invalid;
+      case 56:
+        return context.intl.api_error_56;
+      case 58:
+        return context.intl.api_error_58;
       case 59:
         return context.intl.error_password_reset_unverified_email;
       case 60:
         return context.intl.api_error_60;
       case 61:
         return context.intl.api_error_61;
-      case 73:
-        return context.intl.api_error_73;
-      case 74:
-        return context.intl.api_error_74;
-      case 75:
-        return context.intl.api_error_75;
-      case 76:
-        return context.intl.api_error_76;
-      case 77:
-        return context.intl.api_error_77;
-      case 103:
-        return context.intl.api_error_103;
-      case 105:
-        return context.intl.api_error_105;
-      case 107:
-        return context.intl.api_error_107;
-      case 137:
-        return context.intl.api_error_137;
-      case 138:
-        return context.intl.api_error_138;
-      case 139:
-        return context.intl.api_error_139;
-      case 140:
-        return context.intl.api_error_140;
-      case 146:
-        return context.intl.api_error_146;
-      case 170:
-        return context.intl.api_error_170;
-      case 171:
-        return context.intl.api_error_171;
-      case 173:
-        return context.intl.api_error_173;
-      case 175:
-        return context.intl.error250Sbsignup250Sb175;
-      case 176:
-        return context.intl.error250Sbsignup250Sb176;
-      case 177:
-        return context.intl.error250Sbsignup250Sb177;
-      case 178:
-        return context.intl.api_error_178;
-      case 179:
-        return context.intl.api_error_179;
-      case 180:
-        return context.intl.api_error_180;
-      case 181:
-        return context.intl.api_error_181;
-      case 182:
-        return context.intl.api_error_182;
-      case 183:
-        return context.intl.api_error_183;
-      case 184:
-        return context.intl.api_error_184;
-      case 204:
-        return context.intl.api_error_204;
-      case 205:
-        return context.intl.api_error_205;
-      case 206:
-        return context.intl.api_error_206;
-      case 207:
-        return context.intl.api_error_207;
-      case 208:
-        return context.intl.api_error_208;
-      case 209:
-        return context.intl.api_error_209;
-      case 210:
-        return context.intl.api_error_210;
-      case 225:
-        return context.intl.api_error_225;
-      case 226:
-        return context.intl.api_error_226;
-      case 238:
-        return context.intl.api_error_238;
-      case 239:
-        return context.intl.api_error_239;
-      case 243:
-        return context.intl.api_error_243;
-      case 254:
-        return context.intl.api_error_254;
-      case 260:
-        return context.intl.api_error_260;
-      case 261:
-        return context.intl.api_error_261;
-      case 262:
-        return context.intl.api_error_262;
-      case 263:
-        return context.intl.api_error_263;
-      case 264:
-        return context.intl.api_error_264;
-      case 265:
-        return context.intl.api_error_265;
-      case 267:
-        return context.intl.api_error_267;
-      case 269:
-        return context.intl.api_error_269;
-      case 270:
-        return context.intl.api_error_270;
-      case 273:
-        return context.intl.api_error_273;
-      case 401:
-        return context.intl.login250Sberror8722Sb0;
-      case 403:
-        return context.intl.api_error_403;
-      case 4000:
-        return context.intl.api_error_4000;
-      case 4001:
-        return context.intl.api_error_4000;
-
-      case 45:
-        return context.intl.api_error_45;
-      case 46:
-        return context.intl.api_error_46;
-      case 50:
-        return context.intl.api_error_50;
-      case 52:
-        return context.intl.api_error_52;
-      case 53:
-        return context.intl.api_error_53;
-      case 56:
-        return context.intl.api_error_56;
-      case 58:
-        return context.intl.api_error_58;
       case 62:
         return context.intl.api_error_62;
       case 63:
@@ -167,6 +61,16 @@ class ApiErrors {
         return context.intl.api_error_71;
       case 72:
         return context.intl.api_error_72;
+      case 73:
+        return context.intl.api_error_73;
+      case 74:
+        return context.intl.api_error_74;
+      case 75:
+        return context.intl.api_error_75;
+      case 76:
+        return context.intl.api_error_76;
+      case 77:
+        return context.intl.api_error_77;
       case 78:
         return context.intl.api_error_78;
       case 79:
@@ -210,27 +114,33 @@ class ApiErrors {
       case 98:
         return context.intl.api_error_98;
       case 99:
-        return context.intl.api_error_99;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb99;
       case 100:
         return context.intl.api_error_100;
       case 101:
-        return context.intl.api_error_101;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb101;
       case 102:
-        return context.intl.api_error_102;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb102;
+      case 103:
+        return context.intl.error250Sbtrade8722Sbrequest250Sb103;
       case 104:
         return context.intl.api_error_104;
+      case 105:
+        return context.intl.error250Sbtrade8722Sbrequest250Sb105;
       case 106:
-        return context.intl.api_error_106;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb106(GetIt.I<AppParameters>().appName);
+      case 107:
+        return context.intl.api_error_107;
       case 108:
         return context.intl.api_error_108;
       case 109:
-        return context.intl.api_error_109;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb109;
       case 110:
-        return context.intl.api_error_110;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb110;
       case 111:
-        return context.intl.api_error_111;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb111;
       case 112:
-        return context.intl.api_error_112;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb112;
       case 113:
         return context.intl.api_error_113;
       case 114:
@@ -277,8 +187,17 @@ class ApiErrors {
         return context.intl.api_error_135;
       case 136:
         return context.intl.api_error_136;
+      case 137:
+        return context.intl.api_error_137;
+      case 138:
+        return context.intl.api_error_138;
+      case 139:
+        return context.intl.api_error_139;
+      case 140:
+        return context.intl.api_error_140;
+
       case 141:
-        return context.intl.api_error_141;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb141;
       case 142:
         return context.intl.api_error_142;
       case 143:
@@ -287,6 +206,9 @@ class ApiErrors {
         return context.intl.api_error_144;
       case 145:
         return context.intl.api_error_145;
+      case 146:
+        return context.intl.api_error_146;
+
       case 147:
         return context.intl.api_error_147;
       case 148:
@@ -294,9 +216,9 @@ class ApiErrors {
       case 149:
         return context.intl.api_error_149;
       case 150:
-        return context.intl.api_error_150;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb150;
       case 151:
-        return context.intl.api_error_151;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb151;
       case 152:
         return context.intl.api_error_152;
       case 153:
@@ -333,10 +255,36 @@ class ApiErrors {
         return context.intl.api_error_168;
       case 169:
         return context.intl.api_error_169;
+      case 170:
+        return context.intl.api_error_170;
+      case 171:
+        return context.intl.api_error_171;
       case 172:
         return context.intl.api_error_172;
+      case 173:
+        return context.intl.error250Sbtrade8722Sbrequest250Sb173;
       case 174:
         return context.intl.api_error_174;
+      case 175:
+        return context.intl.coupons250Sberror250Sb175;
+      case 176:
+        return context.intl.coupons250Sberror250Sb176;
+      case 177:
+        return context.intl.coupons250Sberror250Sb177;
+      case 178:
+        return context.intl.api_error_178;
+      case 179:
+        return context.intl.coupons250Sberror250Sb179;
+      case 180:
+        return context.intl.coupons250Sberror250Sb180;
+      case 181:
+        return context.intl.api_error_181;
+      case 182:
+        return context.intl.api_error_182;
+      case 183:
+        return context.intl.coupons250Sberror250Sb183;
+      case 184:
+        return context.intl.coupons250Sberror250Sb184;
       case 185:
         return context.intl.api_error_185;
       case 186:
@@ -375,6 +323,20 @@ class ApiErrors {
         return context.intl.api_error_202;
       case 203:
         return context.intl.api_error_203;
+      case 204:
+        return context.intl.api_error_204;
+      case 205:
+        return context.intl.api_error_205;
+      case 206:
+        return context.intl.api_error_206;
+      case 207:
+        return context.intl.api_error_207;
+      case 208:
+        return context.intl.api_error_208;
+      case 209:
+        return context.intl.api_error_209;
+      case 210:
+        return context.intl.api_error_210;
       case 211:
         return context.intl.api_error_211;
       case 212:
@@ -390,7 +352,7 @@ class ApiErrors {
       case 217:
         return context.intl.api_error_217;
       case 218:
-        return context.intl.api_error_218;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb218;
       case 219:
         return context.intl.api_error_219;
       case 220:
@@ -403,6 +365,10 @@ class ApiErrors {
         return context.intl.api_error_223;
       case 224:
         return context.intl.api_error_224;
+      case 225:
+        return context.intl.api_error_225;
+      case 226:
+        return context.intl.api_error_226;
       case 227:
         return context.intl.api_error_227;
       case 228:
@@ -414,7 +380,7 @@ class ApiErrors {
       case 231:
         return context.intl.api_error_231;
       case 232:
-        return context.intl.api_error_232;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb232;
       case 233:
         return context.intl.api_error_233;
       case 234:
@@ -424,23 +390,29 @@ class ApiErrors {
       case 236:
         return context.intl.api_error_236;
       case 237:
-        return context.intl.api_error_237;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb237;
+      case 238:
+        return context.intl.api_error_238;
+      case 239:
+        return context.intl.api_error_239;
       case 240:
         return context.intl.api_error_240;
       case 241:
         return context.intl.api_error_241;
       case 242:
         return context.intl.api_error_242;
+      case 243:
+        return context.intl.api_error_243;
       case 244:
         return context.intl.api_error_244;
       case 245:
         return context.intl.api_error_245;
       case 246:
-        return context.intl.api_error_246;
+        return context.intl.error250Sbtrade8722Sbrequest250Sb246;
       case 247:
-        return context.intl.api_error_247;
+        return context.intl.trade250Sberror250Sb247;
       case 248:
-        return context.intl.api_error_248;
+        return context.intl.trade250Sberror250Sb248;
       case 249:
         return context.intl.api_error_249;
       case 250:
@@ -451,6 +423,8 @@ class ApiErrors {
         return context.intl.api_error_252;
       case 253:
         return context.intl.api_error_253;
+      case 254:
+        return context.intl.api_error_254;
       case 255:
         return context.intl.api_error_255;
       case 256:
@@ -461,6 +435,35 @@ class ApiErrors {
         return context.intl.api_error_258;
       case 259:
         return context.intl.api_error_259;
+      case 260:
+        return context.intl.api_error_260;
+      case 261:
+        return context.intl.api_error_261;
+      case 262:
+        return context.intl.api_error_262;
+      case 263:
+        return context.intl.api_error_263;
+      case 264:
+        return context.intl.api_error_264;
+      case 265:
+        return context.intl.api_error_265;
+      case 267:
+        return context.intl.api_error_267;
+      case 269:
+        return context.intl.api_error_269;
+      case 270:
+        return context.intl.api_error_270;
+      case 273:
+        return context.intl.api_error_273;
+      case 401:
+        return context.intl.login250Sberror8722Sb0;
+      case 403:
+        return context.intl.api_error_403;
+      case 4000:
+        return context.intl.api_error_4000;
+      case 4001:
+        return context.intl.api_error_4000;
+
       default:
         return context.intl.unknown_error;
     }

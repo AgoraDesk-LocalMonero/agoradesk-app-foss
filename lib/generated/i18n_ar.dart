@@ -270,12 +270,12 @@ class I18nAr extends I18n {
   String get ad250Sbdeleted => 'تم حذف هذا الإعلان';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'بيع $assetName نقدًا في $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'اشترِ $assetName نقدًا في $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nAr extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'المبلغ(العملة)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'المبلغ ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nAr extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'تداول $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nAr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName هو تبادل مونيرو من نظير إلى نظير. نحن سوق حيث يمكن للمستخدمين شراء وبيع مونيرو من وإلى بعضهم البعض. ينشئ المستخدمون ، الذين يطلق عليهم المتداولون ، إعلانات بالسعر وطريقة الدفع التي يريدون تقديمها. يمكنك تصفح موقعنا على الإنترنت للإعلانات التجارية والبحث عن طريقة الدفع التي تفضلها. ستجد متداولين يشترون ويبيعون مونيرو عبر الإنترنت لأكثر من 60 طريقة دفع مختلفة. إذا كنت جديدًا على $appName وترغب في شراء مونيرو ، فالرجاء إلقاء نظرة على دليل كيفية الشراء لمعرفة كيفية شراء مونيرو.';
+    return '$appName عبارة عن منصة تداول Monero من نظير إلى نظير. نحن سوق حيث يمكن للمستخدمين شراء وبيع Monero من وإلى بعضهم البعض. ينشئ المستخدمون ، الذين يطلق عليهم المتداولون ، إعلانات بالسعر وطريقة الدفع التي يريدون تقديمها. يمكنك تصفح موقعنا على الإنترنت للإعلانات التجارية والبحث عن طريقة الدفع التي تفضلها. ستجد متداولين يشترون ويبيعون Monero عبر الإنترنت لأكثر من 60 طريقة دفع مختلفة. إذا كنت جديدًا على $appName وترغب في شراء Monero ، فالرجاء إلقاء نظرة على دليل كيفية الشراء لمعرفة كيفية شراء Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nAr extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'صفحة الرسوم';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'في الوقت الحالي ، ليس لدينا تطبيق جوال مستقل. لكن يمكنك تلقي إشعارات الجوال في $telegram! سينقلك $thisGuide خلال عملية تنشيط إشعارات Telegram (إنها سهلة). سيرسل لك الروبوت الخاص بنا إشعارات بشأن أحداث $appName الخاصة بك.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'نعم فعلنا! إذا كان لديك Android ، فيمكنك الحصول عليه على $playstoreLink ، $fdroidLink ، أو يمكنك تنزيل $apkLink مباشرة. بالنسبة لأجهزة iOS ، فهو متاح على $appstoreLink. يمكنك أيضًا تلقي إشعارات الجوال في $telegram! سينقلك $thisGuide خلال عملية تنشيط إشعارات Telegram (إنها سهلة). سيرسل لك الروبوت الخاص بنا إشعارات بشأن أحداث $appName الخاصة بك.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nAr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'جميع الصفقات عبر الإنترنت محمية بسندات التحكيم. عند بدء عملية تداول ، يتم حجز مبلغ مونيرو مساوٍ لمبلغ الصفقة تلقائيًا من محفظة البائع $appName كسند. هذا يعني أنه إذا هرب البائع بأموالك ولم ينهي الصفقة ، يمكن للدعم $appName أن يوجه إليك مونيرو المحتفظ به في سند التحكيم. إذا كنت تبيع مونيرو ، فلا تنهي الصفقة أبدًا قبل أن تعرف أنك تلقيت أموالًا من مشتري مونيرو. يرجى ملاحظة أن الصفقات المحلية ليس لديها حماية السندات التحكيمية ممكّنة بشكل افتراضي.';
+    return 'جميع الصفقات عبر الإنترنت محمية بسندات التحكيم. عند بدء عملية تداول ، يتم حجز مبلغ Monero مساوٍ لمبلغ الصفقة تلقائيًا من محفظة السندات $appName للبائع. هذا يعني أنه إذا هرب البائع بأموالك ولم ينهي الصفقة ، يمكن للدعم $appName توجيه Monero المحتفظ به في سند التحكيم إليك. إذا كنت تبيع Monero ، فلا تنهي الصفقة أبدًا قبل أن تعرف أنك تلقيت أموالًا من مشتري Monero. يرجى ملاحظة أن الصفقات المحلية ليس لديها حماية السندات التحكيمية ممكّنة بشكل افتراضي.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'جميع الصفقات عبر الإنترنت محمية بسندات التحكيم. عند بدء عملية تداول ، يتم حجز مبلغ من العملة المشفرة يساوي مبلغ التداول تلقائيًا من محفظة البائع $appName كسند. هذا يعني أنه إذا هرب البائع بأموالك ولم ينهي الصفقة ، يمكن لدعم $appName توجيه العملة المشفرة المحتفظ بها في سند التحكيم إليك. إذا كنت تبيع عملة معماة ، فلا تنهي الصفقة أبدًا قبل أن تعرف أنك تلقيت أموالًا من المشتري. يرجى ملاحظة أن الصفقات المحلية ليس لديها حماية السندات التحكيمية ممكّنة بشكل افتراضي.';
+    return 'جميع الصفقات عبر الإنترنت محمية بسندات التحكيم. عند بدء عملية تداول ، يتم حجز مبلغ من العملة المشفرة مساوٍ لمبلغ الصفقة تلقائيًا من محفظة السندات للبائع $appName. هذا يعني أنه إذا هرب البائع بأموالك ولم ينهي الصفقة ، يمكن أن يوجه دعم $appName العملة المشفرة الموجودة في سند التحكيم إليك. إذا كنت تبيع عملة معماة ، فلا تنهي الصفقة أبدًا قبل أن تعرف أنك تلقيت أموالًا من المشتري. يرجى ملاحظة أن الصفقات المحلية ليس لديها حماية السندات التحكيمية ممكّنة بشكل افتراضي.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nAr extends I18n {
   String get morph250Sbservice8722Sbdown => 'خدمة XMR التابعة لـ ChangeNow غير متاحة مؤقتًا. حاول مرة أخرى في وقت لاحق.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'تلقي عنوان $cryptocurrencyName';
   }
 
@@ -4773,9 +4773,7 @@ class I18nAr extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'رصيد المحفظة أقل من الحد الأدنى المطلوب لهذا النوع من الإعلانات';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'الحد الزمني الأول ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'المهلة الأولى  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'اختياري. حدد الحد الأقصى لمبلغ المعاملات للمستخدمين الذين ليس لديك تداولات سابقة معهم. الحد الأدنى 0.';
@@ -5268,12 +5266,12 @@ class I18nAr extends I18n {
   String get search250Sbcoordinates250Sblon => 'خط الطول';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'بيع $assetName نقدًا في $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'اشترِ $assetName نقدًا في $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nAr extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'بديل حقيقي لـ LocalBitcoins و Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'إذا كنت قلقًا بشأن انتهاك الخصوصية - فإن أفضل عملة مشفرة يمكنك الاستثمار فيها هي XMR. مونيرو هي عملة لا يمكن تعقبها تم تطويرها مع مراعاة الخصوصية حسب التصميم.\n<br/>\nمن أين تشتري مونيرو؟ LocalMonero هي أكبر بورصة مونيرو وأكثرها ثقة وثقة في مجتمع XMR. ليس لدينا شيكات KYC - يمكنك ببساطة شراء مونيرو بشكل مجهول دون التحقق من الهوية باستخدام PayPal أو بطاقة الائتمان أو بطاقة الهدايا أو النقد عن طريق البريد أو تحويل البيتكوين إلى مونيرو - تدعم منصتنا أي طريقة دفع.';
+  String get seo250Sbtext8722Sb1 => 'إذا كنت قلقًا بشأن انتهاك الخصوصية - فإن أفضل عملة مشفرة يمكنك الاستثمار فيها هي XMR. Monero هي عملة لا يمكن تعقبها تم تطويرها مع مراعاة الخصوصية حسب التصميم.\n<br/>\nمن أين تشتري Monero؟ LocalMonero هي أكبر منصة تداول P2P Monero وأكثرها ثقة وراسخة في مجتمع XMR. ليس لدينا شيكات KYC - يمكنك ببساطة شراء Monero بشكل مجهول دون التحقق من الهوية باستخدام PayPal أو بطاقة الائتمان أو بطاقة الهدايا أو النقد عن طريق البريد أو تحويل البيتكوين إلى Monero - تدعم منصتنا أي طريقة دفع.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'أتساءل كيف تستثمر في البيتكوين؟ على AgoraDesk ، لم يكن شراء عملات البيتكوين أسهل من أي وقت مضى - اشترِ BTC على الفور من شخص باستخدام طريقة الدفع المفضلة لديك عبر الإنترنت: PayPal أو بطاقة الائتمان / الخصم أو التحويل المصرفي أو بطاقات الهدايا أو Venmo أو أي وسيلة أخرى.\n<br/>\nإذا كنت ترغب في شراء عملات البيتكوين بالقرب منك نقدًا ، فيمكنك العثور على شخص يرغب في بيع عملات البيتكوين محليًا - تدعم منصة التداول شراء BTC واختيارها نقدًا. يمكنك حتى شراء عملات البيتكوين نقدًا عن طريق البريد.';
@@ -6811,7 +6809,7 @@ class I18nAr extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'تلقي $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nAr extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'حدد أولوية المعاملة';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'تلقي عنوان $assetName';
   }
 
@@ -6879,7 +6877,7 @@ class I18nAr extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'إرسال $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nAr extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'رسوم العملات المشفرة الصادرة';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'إرسال $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nAr extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'تلقي $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'إرسال $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nAr extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'تلقي $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nAr extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'تسلم';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'إرسال $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nAr extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'تغيير العنوان';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'المبلغ $asset';
   }
 
@@ -7475,7 +7473,7 @@ class I18nAr extends I18n {
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'الخطوة 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p> الآن ، دعنا نضيف بيانات لسوق F-Droid. لذلك قمنا بإنشاء فرع منفصل لكل نكهة: </p>\n<ul>\n<li> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad </a> </li>\n<li> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm </a> </li>\n</ul>\n<p> بعد ذلك ، نقوم بإنشاء مجلد لـ Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US </a>. </p>\n<p> أضف البيانات المطلوبة وادفعها. </p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p> الآن ، دعنا نضيف بيانات لسوق F-Droid. لذلك قمنا بإنشاء فرع منفصل لكل نكهة: </p>\n<ul>\n<li> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad </a> </li>\n<li> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm </a> </li>\n</ul>\n<p> بعد ذلك ، قمنا بإنشاء مجلد لـ Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\"> https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US </a>. </p>\n<p> أضف البيانات المطلوبة وادفعها. </p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'الخطوة الخامسة';
@@ -7490,7 +7488,7 @@ class I18nAr extends I18n {
   String get devblog250Sbfdroid250Sb8250Sbtext => '<p> العملية معقدة بعض الشيء وقد تظهر مشكلات مختلفة على طول الطريق. ولكن بمجرد إعداد CI ، سيتم التعامل مع التحديثات التالية تلقائيًا. </p>\n<p> إذا كانت لديك أسئلة ، فلا تتردد في طرحها على <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\"> GitHub </a>. </p>';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtitle => 'استنتاج';
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'خاتمة';
 
   @override
   String get devblog250Sbfdroid250Sbdescription => 'يعد F-Droid كتالوجًا رائعًا لتطبيقات FOSS لنظام Android ، ولكن إضافة تطبيقك قد يكون أمرًا معقدًا بعض الشيء ...';
@@ -7539,11 +7537,22 @@ class I18nAr extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'يتم الآن نقل جميع إعلانات العملة المشفرة إلى فئة البلدان الجديدة \"العالمية (الرمز XX)\". سيتم حذف جميع إعلانات العملات المشفرة المكررة التي تختلف حسب البلد فقط $timeRemaining. يرجى التأكد من أن لديك إعلان عملة معماة واحد فقط لكل عملة ، وإلا فسيتم حذف جميع الإعلانات باستثناء أحدث إعلان تم نشره بهذه العملة ، بينما سيتم نقل الإعلان المتبقي إلى فئة البلد \"العالمية\".';
+    return 'يتم الآن نقل جميع إعلانات العملات المشفرة إلى فئة البلدان الجديدة \"العالمية (الرمز XX)\". سيتم حذف جميع إعلانات العملة المشفرة المكررة التي تختلف حسب البلد فقط $timeRemaining. يرجى التأكد من أن لديك إعلان عملة معماة واحد فقط لكل عملة ، وإلا فسيتم حذف جميع الإعلانات باستثناء أحدث إعلان تم نشره بهذه العملة ، بينما سيتم نقل الإعلان المتبقي إلى فئة البلد \"العالمية\".';
   }
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'عند الضغط على \"حفظ\" ، سيتم تحديث بلد الإعلان إلى \"عالمي\" تلقائيًا.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'نفس الأصول بيع الإعلانات فقط';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'خذني إلى الموقع';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset شراء الإعلانات فقط';
+  }
 
   @override
   String get ads => 'إعلانات';
@@ -8158,6 +8167,9 @@ class I18nAr extends I18n {
   String get api_error_98 => 'محاولة إنشاء صفقة لإعلان غير موجود';
 
   @override
+  String get api_error_99 => 'محاولة طلب مبلغ أكبر مما يسمح به صاحب الإعلان عند إنشاء صفقة أولى';
+
+  @override
   String get api_error_100 => 'لا يمكن طلب أقل من 0.0000000001 XMR لإنشاء التجارة';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nAr extends I18n {
 
   @override
   String get api_error_121 => 'محاولة ضمان صفقة غير موجودة';
+
+  @override
+  String get api_error_122 => 'أموال غير كافية لتمويل التجارة';
+
+  @override
+  String get api_error_123 => 'أموال غير كافية لتمويل التجارة';
+
+  @override
+  String get api_error_124 => 'خطأ عند تمويل التجارة';
 
   @override
   String get api_error_125 => 'طلب المستخدم لإلغاء التجارة غير موجود';
@@ -8557,7 +8578,7 @@ class I18nAr extends I18n {
   String get pin_enter_to_confirm_transaction => 'أدخل رقم التعريف الشخصي لتأكيد المعاملة';
 
   @override
-  String get pin_you_can_use => 'يمكنك استخدام رقم التعريف الشخصي هذا لفتح التطبيق.';
+  String get pin_you_can_use => 'يجب أن يتكون رقم التعريف الشخصي من 4 أرقام على الأقل';
 
   @override
   String get pin_confirm => 'تأكيد PIN';
@@ -9445,14 +9466,5 @@ class I18nAr extends I18n {
   String get api_error_273 => 'محاولة حذف عنوان غير موجود في دفتر عناوين المستخدم';
 
   @override
-  String get api_error_99 => 'محاولة طلب مبلغ أكبر مما يسمح به first_time_limit_asset عند إنشاء أول صفقة تداول';
-
-  @override
-  String get api_error_122 => 'أموال غير كافية لتمويل صفقة LOCAL_SELL عائمة';
-
-  @override
-  String get api_error_123 => 'أموال غير كافية لتمويل صفقة LOCAL_SELL غير عائمة';
-
-  @override
-  String get api_error_124 => 'خطأ عند تمويل LOCAL_SELL';
+  String get pin_you_can_use_new => 'يجب أن يتكون رقم التعريف الشخصي من 4 أرقام على الأقل';
 }
