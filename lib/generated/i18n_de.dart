@@ -270,12 +270,12 @@ class I18nDe extends I18n {
   String get ad250Sbdeleted => 'Diese Anzeige wurde gelöscht';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Verkaufe $assetName für Bargeld in $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Kaufen Sie $assetName mit Bargeld in $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nDe extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Betrag (Währung)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Betrag ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nDe extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Trade $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nDe extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ist eine Peer-to-Peer Monero-Börse. Wir sind ein Marktplatz, auf dem Nutzer Monero von- und untereinander kaufen und verkaufen können. Benutzer, genannt Händler, erstellen Anzeigen mit dem Preis und der Zahlungsmethode, die sie anbieten möchten. Sie können unsere Website nach Handelsanzeigen durchsuchen und nach einer von Ihnen bevorzugten Zahlungsmethode suchen. Sie werden Händler finden, die Monero online für mehr als 60 verschiedene Zahlungsarten kaufen und verkaufen. Wenn Sie neu bei $appName sind und Monero kaufen möchten, werfen Sie bitte einen Blick auf unsere Kaufanleitung, um zu erfahren, wie Sie Monero kaufen können.';
+    return '$appName ist eine Peer-to-Peer-Monero-Handelsplattform. Wir sind ein Marktplatz, auf dem Benutzer Monero untereinander kaufen und verkaufen können. Benutzer, Händler genannt, erstellen Anzeigen mit dem Preis und der Zahlungsmethode, die sie anbieten möchten. Sie können unsere Website nach Handelsanzeigen durchsuchen und nach einer von Ihnen bevorzugten Zahlungsmethode suchen. Sie finden Händler, die Monero online für mehr als 60 verschiedene Zahlungsmethoden kaufen und verkaufen. Wenn Sie neu bei $appName sind und Monero kaufen möchten, lesen Sie bitte unsere Kaufanleitung, um zu erfahren, wie Sie Monero kaufen können.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nDe extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'Gebühren-Seite';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Im Moment haben wir keine eigenständige mobile App. Aber Sie können mobile Benachrichtigungen in $telegram erhalten! $thisGuide führt Sie durch den Aktivierungsprozess für Telegram-Benachrichtigungen (es ist ganz einfach). Unser Bot sendet Ihnen dann Benachrichtigungen zu Ihren $appName-Ereignissen.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Ja das tun wir! Wenn Sie Android haben, können Sie es auf $playstoreLink, $fdroidLink herunterladen oder direkt auf $apkLink herunterladen. Für iOS-Geräte ist es auf $appstoreLink verfügbar. Sie können auch mobile Benachrichtigungen in $telegram erhalten! $thisGuide führt Sie durch den Aktivierungsprozess für Telegrammbenachrichtigungen (es ist ganz einfach). Unser Bot sendet Ihnen dann Benachrichtigungen zu Ihren $appName-Ereignissen.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nDe extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Alle Online Trades sind durch Schlichtungsbürgschaften geschützt. Wenn ein Trade gestartet wird, wird automatisch ein Monero-Betrag, der dem Betrag des Trades entspricht, aus der $appName Wallet des Verkäufers als Bürgschaft reserviert. Das bedeutet, dass der $appName Support die in der Schlichtungsbürgschaft gehaltenen Monero an Sie weiterleiten kann, wenn der Verkäufer mit Ihrem Geld abhaut und den Trade nicht abschließt. Wenn Sie Monero verkaufen, schließen Sie den Trade niemals ab, bevor Sie nicht wissen, dass Sie das Geld vom Monero-Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Trades der Schutz der Schlichtungsbürgschaft standardmäßig nicht aktiviert ist.';
+    return 'Alle Online-Trades sind durch Schiedsgerichtsbarkeiten geschützt. Wenn ein Handel gestartet wird, wird automatisch ein Monero-Betrag in Höhe des Handelsbetrags aus der $appName-Anleihe-Wallet des Verkäufers reserviert. Das bedeutet, dass, wenn der Verkäufer mit Ihrem Geld davonläuft und den Handel nicht abschließt, der Support von $appName den in der Schlichtungsbürgschaft gehaltenen Monero an Sie weiterleiten kann. Wenn Sie Monero verkaufen, schließen Sie den Handel niemals ab, bevor Sie wissen, dass Sie Geld vom Monero-Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Trades der Schiedsbündnisschutz nicht standardmäßig aktiviert ist.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Alle Online Trades sind durch Schlichtungsbürgschaften geschützt. Wenn ein Trade gestartet wird, wird automatisch ein Betrag an Kryptowährung, der dem Betrag des Trades entspricht, aus der $appName Wallet des Verkäufers als Bürgschaft reserviert. Das bedeutet, dass der $appName Support die in der Schlichtungsbürgschaft gehaltene Kryptowährung an Sie weiterleiten kann, wenn der Verkäufer mit Ihrem Geld abhaut und den Trade nicht abschließt. Wenn Sie Kryptowährungen verkaufen, schließen Sie den Trade nie ab, bevor Sie wissen, dass Sie Geld vom Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Trades der Schutz der Schlichtungsbürgschaft standardmäßig nicht aktiviert ist.';
+    return 'Alle Online-Trades sind durch Schiedsgerichtsbarkeiten geschützt. Wenn ein Handel gestartet wird, wird automatisch eine Menge an Kryptowährung in Höhe des Handelsbetrags aus dem $appName Bond Wallet des Verkäufers reserviert. Das bedeutet, dass, wenn der Verkäufer mit Ihrem Geld davonläuft und den Handel nicht abschließt, der $appName-Support die in der Schiedsbürgschaft gehaltene Kryptowährung an Sie weiterleiten kann. Wenn Sie Kryptowährung verkaufen, schließen Sie den Handel niemals ab, bevor Sie wissen, dass Sie Geld vom Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Trades der Schiedsbündnisschutz nicht standardmäßig aktiviert ist.';
   }
 
   @override
@@ -3878,7 +3878,7 @@ class I18nDe extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Der glatte Betrug';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Brieftasche erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Samen vor anderen sicher aufbewahren. Wenn jemand Ihren Seed stiehlt, kann er den Monero aus der Brieftasche schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft hat eine Person eine Cold Wallet von Monero aufbewahrt, war neugierig auf ihr Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Brieftasche verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Brieftasche eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Brieftasche erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Samen vor anderen schützen. Wenn jemand Ihren Seed stiehlt, kann er den Monero aus der Brieftasche schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft hat eine Person eine Cold Wallet von Monero aufbewahrt, war neugierig auf ihr Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Brieftasche verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Brieftasche eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Die Rolle Ihres Monero-Seeds bei Betrug';
@@ -4443,7 +4443,7 @@ class I18nDe extends I18n {
   String get morph250Sbservice8722Sbdown => 'Der XMR-Dienst von ChangeNow ist vorübergehend nicht verfügbar. Versuchen Sie es später noch einmal.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Empfangende $cryptocurrencyName-Adresse';
   }
 
@@ -4773,9 +4773,7 @@ class I18nDe extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Das Wallet-Guthaben liegt unter dem erforderlichen Minimum für diesen Anzeigentyp';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Erstes Limit ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Erstes Zeitlimit  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Optional. Begrenzen Sie den maximalen Transaktionsbetrag für Benutzer, mit denen Sie noch keine Geschäfte getätigt haben. Minimum 0.';
@@ -5268,12 +5266,12 @@ class I18nDe extends I18n {
   String get search250Sbcoordinates250Sblon => 'Längengrad';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Verkaufe $assetName für Bargeld in $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Kaufen Sie $assetName mit Bargeld in $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nDe extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Eine echte LocalBitcoins- und Paxful-Alternative.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Wenn Sie über die Verletzung der Privatsphäre besorgt sind - die beste Kryptowährung, in die Sie investieren können, ist XMR. Monero ist ein nicht zurückverfolgbarer Coin, bei dessen Entwicklung die Privatsphäre im Vordergrund stand.\n<br/>\nWo kann man Monero kaufen? LocalMonero ist der größte, vertrauenswürdigste und etablierteste P2P-Monero-Austausch in der XMR-Community. Wir haben keine KYC-Prüfungen - Sie können Monero einfach anonym ohne ID-Verifizierung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin in Monero umwandeln - unsere Plattform unterstützt jede Zahlungsmethode.';
+  String get seo250Sbtext8722Sb1 => 'Wenn Sie sich Sorgen über die Verletzung der Privatsphäre machen, ist XMR die beste Kryptowährung, in die Sie investieren können. Monero ist eine nicht rückverfolgbare Münze, die mit Blick auf den Datenschutz entwickelt wurde.\n<br/>\nWo kann man Monero kaufen? LocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Monero-Handelsplattform in der XMR-Community. Bei uns gibt es keine KYC-Prüfungen – Sie können Monero einfach anonym ohne Ausweisprüfung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Sie fragen sich, wie Sie in Bitcoin investieren können? Auf AgoraDesk war der Kauf von Bitcoins noch nie so einfach - kaufen Sie BTC sofort von einer Person mit Ihrer bevorzugten Online-Zahlungsmethode: PayPal, Kredit-/Debitkarte oder Banküberweisung, Geschenkkarten, Venmo oder jede andere Zahlungsmethode.\n<br/>\nWenn Sie Bitcoins in Ihrer Nähe mit Bargeld kaufen möchten, können Sie jemanden finden, der bereit ist, Bitcoins vor Ort zu verkaufen – die Handelsplattform unterstützt den Kauf und Verkauf von BTC mit Bargeld. Sie können Bitcoins sogar mit Bargeld per Post kaufen.';
@@ -6811,7 +6809,7 @@ class I18nDe extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Empfange $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nDe extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Transaktionspriorität auswählen';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Empfangende $assetName-Adresse';
   }
 
@@ -6879,7 +6877,7 @@ class I18nDe extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Sende $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nDe extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Ausgehende Kryptowährungsgebühren';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Sende $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nDe extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Empfange $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Sende $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nDe extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Empfange $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nDe extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Empfange';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Sende $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nDe extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Adresse ändern';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Betrag ($asset)';
   }
 
@@ -7451,7 +7449,7 @@ class I18nDe extends I18n {
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Welche Apps können zu F-Droid hinzugefügt werden?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a> auf Gitlab.</li>\n<li>Klonen Sie das Repository auf Ihr Gerät.</li>\n<li>Erstelle einen Branch mit der Bundle-ID der App, zum Beispiel <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a> auf Gitlab.</li>\n<li>Klonen Sie das Repository auf Ihr Gerät.</li>\n<li>Erstellen Sie einen Branch mit der Bundle-ID der App, zum Beispiel <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Schritt 1';
@@ -7490,7 +7488,7 @@ class I18nDe extends I18n {
   String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Der Prozess ist etwas kompliziert und verschiedene Probleme können dabei auftreten. Aber sobald Sie das CI eingerichtet haben, werden die folgenden Updates automatisch gehandhabt.</p>\n<p>Falls Sie Fragen haben, können Sie diese gerne auf unserem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> stellen.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Fazit';
+  String get devblog250Sbfdroid250Sb8250Sbtitle => 'Abschluss';
 
   @override
   String get devblog250Sbfdroid250Sbdescription => 'F-Droid ist ein großartiger Katalog von FOSS-Apps für Android, aber das Hinzufügen Ihrer App kann etwas kompliziert sein ...';
@@ -7505,7 +7503,7 @@ class I18nDe extends I18n {
   String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adresse hinzufügen';
 
   @override
-  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Absagen';
+  String get address8722Sbbook250Sbcancel8722Sbbtn => 'Stornieren';
 
   @override
   String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Möchten Sie diese Adresse löschen?';
@@ -7544,6 +7542,17 @@ class I18nDe extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Wenn Sie auf „Speichern“ klicken, wird das Land der Anzeige automatisch auf „global“ aktualisiert.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Nur Verkaufsanzeigen für denselben Vermögenswert';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Bringen Sie mich auf die Website';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset Nur Anzeigen kaufen';
+  }
 
   @override
   String get ads => 'Anzeigen';
@@ -8158,6 +8167,9 @@ class I18nDe extends I18n {
   String get api_error_98 => 'Der Versuch, einen Handel für eine Anzeige zu erstellen, deren Ersteller nicht existiert';
 
   @override
+  String get api_error_99 => 'Der Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als vom Anzeigeneigentümer zugelassen wurde';
+
+  @override
   String get api_error_100 => 'Für die Handelserstellung kann nicht weniger als 0,0000000001 XMR angefordert werden';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nDe extends I18n {
 
   @override
   String get api_error_121 => 'Versuch, eine Treuhand für einen Handel zu hinterlegen, der nicht existiert';
+
+  @override
+  String get api_error_122 => 'Unzureichende Mittel, um einen Handel zu finanzieren';
+
+  @override
+  String get api_error_123 => 'Unzureichende Mittel, um einen Handel zu finanzieren';
+
+  @override
+  String get api_error_124 => 'Fehler bei der Finanzierung eines Trades';
 
   @override
   String get api_error_125 => 'Der Benutzer, der die Stornierung des Handels beantragt, existiert nicht';
@@ -8557,7 +8578,7 @@ class I18nDe extends I18n {
   String get pin_enter_to_confirm_transaction => 'Geben Sie die PIN ein, um die Transaktion zu bestätigen';
 
   @override
-  String get pin_you_can_use => 'Mit dieser PIN können Sie die App entsperren.';
+  String get pin_you_can_use => 'Die PIN muss mindestens 4-stellig sein';
 
   @override
   String get pin_confirm => 'PIN bestätigen';
@@ -9445,14 +9466,5 @@ class I18nDe extends I18n {
   String get api_error_273 => 'Versuch, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
 
   @override
-  String get api_error_99 => 'Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als von first_time_limit_asset zugelassen wird';
-
-  @override
-  String get api_error_122 => 'Unzureichende Mittel, um einen schwebenden LOCAL_SELL-Trade zu finanzieren';
-
-  @override
-  String get api_error_123 => 'Unzureichende Mittel, um einen nicht schwebenden LOCAL_SELL-Trade zu finanzieren';
-
-  @override
-  String get api_error_124 => 'Fehler bei der Finanzierung eines LOCAL_SELL';
+  String get pin_you_can_use_new => 'Die PIN muss mindestens 4-stellig sein';
 }

@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
@@ -54,8 +55,8 @@ class PinCodeSetScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   model.hasCurrentPin && !model.currentPinChecked
                       ? Text(context.intl.pin_enter_continue)
-                      : Text(context.intl.pin_you_can_use),
-                  const SizedBox(height: 60),
+                      : Text(context.intl.pin_you_can_use_new),
+                  const SizedBox(height: 20),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -66,19 +67,17 @@ class PinCodeSetScreen extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           color: Theme.of(context).colorScheme.neutral90,
                         ),
-                        emptyIndicatorColor: context.colN30Pri80,
+                        // emptyIndicatorColor: context.colN30Pri80,
                         filledIndicatorColor: context.colP90,
                         buttonColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                         deleteButtonLabel: context.intl.delete,
                         deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                         deleteButtonColor: Theme.of(context).colorScheme.primary90,
-                        onFullPin: (pin, __) {
-                          model.handlePinInput(pin);
-                        },
-                        initialPinLength: 4,
-                        onChangedPin: (_) {
-                          // model.isFirstPin = !model.isFirstPin;
-                        },
+                        minPinLength: kMinPinLength,
+                        maxPinLength: kMaxPinLength,
+                        clearStream: model.clearPin,
+                        onEnter: (pin, __) => model.handlePinInput(pin, onFull: true),
+                        onChangedPin: (_) {},
                       ),
                     ),
                   ),

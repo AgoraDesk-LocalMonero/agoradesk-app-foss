@@ -67,6 +67,9 @@ class ApiClient with UrlMixin {
           if (GetIt.I<AppParameters>().cookies != null) {
             for (final cookie in GetIt.I<AppParameters>().cookies!) {
               try {
+                if (cookie.name == 'token' && GetIt.I<AppParameters>().accessToken?.isEmpty != false) {
+                  continue;
+                }
                 cookiesLst.add('${cookie.name}=${cookie.value}');
               } catch (e) {
                 debugPrint('[++++parsing cookies error] - $e');

@@ -2,6 +2,7 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
+import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_loading_indicator.dart';
 import 'package:agoradesk/core/widgets/branded/box_info_with_label.dart';
@@ -18,7 +19,7 @@ import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 import 'package:vm/vm.dart';
 
-class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
+class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, ClipboardMixin {
   ChatTab({
     Key? key,
     required this.model,
@@ -45,7 +46,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
                       ? const AgoraLoadingIndicator()
                       : RepaintBoundary(
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(16, 38, 16, 0),
+                            padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
                             child: ListView(
                               controller: model.chatController,
                               reverse: true,
@@ -216,18 +217,51 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              '${model.buySellStr(context)} (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
-              textAlign: TextAlign.center,
-              style: context.txtBodySmallN60N50,
-              maxLines: 1,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  model.buySellStrOne(context),
+                  textAlign: TextAlign.center,
+                  style: context.txtBodySmallN60N50,
+                  maxLines: 1,
+                ),
+                IconButton(
+                  onPressed: () {
+                    copyToClipboard(model.tradeForScreen.assetAmount, context);
+                  },
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(maxHeight: 12),
+                  icon: Icon(AgoraFont.copy_alt, color: context.colP70, size: 12),
+                ),
+                Text(
+                  model.buySellStrTwo(context),
+                  textAlign: TextAlign.center,
+                  style: context.txtBodySmallN60N50,
+                  maxLines: 1,
+                ),
+                Text(
+                  ' (${model.userForTrade().allCounts}; ${model.userForTrade().feedbackScore}%)',
+                  textAlign: TextAlign.center,
+                  style: context.txtBodySmallN60N50,
+                  maxLines: 1,
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  context.intl.app_for_sum(model.tradeForScreen.amount) + ' ' + model.tradeForScreen.currency,
+                  '${context.intl.app_for_sum(model.tradeForScreen.amount)} ${model.tradeForScreen.currency}',
                   style: context.txtBodySmallN60N50,
+                ),
+                IconButton(
+                  onPressed: () {
+                    copyToClipboard(model.tradeForScreen.amount, context);
+                  },
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(maxHeight: 12),
+                  icon: Icon(AgoraFont.copy_alt, color: context.colP70, size: 12),
                 ),
                 const SizedBox(width: 4),
                 Text(

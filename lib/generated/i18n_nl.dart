@@ -270,12 +270,12 @@ class I18nNl extends I18n {
   String get ad250Sbdeleted => 'Deze advertentie is verwijderd';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Verkoop $assetName voor contant geld in $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Koop $assetName met contant geld in $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nNl extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Aantal (valuta)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Aantal ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nNl extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Handels $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nNl extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName is een peer-to-peer Monero-uitwisseling. We zijn een marktplaats waar gebruikers Monero van elkaar kunnen kopen en verkopen. Gebruikers, oftewel handelaren, maken advertenties met de prijs en de betaalmethode die ze willen aanbieden. U kunt op onze website zoeken naar handelsadvertenties en naar de betaalmethode van uw voorkeur. U zult handelaren kunnen vinden die Monero online kopen en verkopen voor meer dan 60 verschillende betaalmethoden. Als $appName nieuw voor u is en u Monero wilt kopen, bekijk dan onze koop-handleiding voor meer informatie over het kopen van Monero.';
+    return '$appName is een peer-to-peer Monero-handelsplatform. We zijn een marktplaats waar gebruikers Monero van en naar elkaar kunnen kopen en verkopen. Gebruikers, handelaren genaamd, maken advertenties met de prijs en de betaalmethode die ze willen aanbieden. U kunt op onze website zoeken naar handelsadvertenties en zoeken naar een betaalmethode van uw voorkeur. U zult handelaren vinden die Monero online kopen en verkopen voor meer dan 60 verschillende betaalmethoden. Als $appName nieuw voor je is en je Monero wilt kopen, bekijk dan onze koopgids voor meer informatie over het kopen van Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nNl extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'kosten pagina';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Op dit moment hebben we geen zelfstandige mobiele app. Maar u kunt mobiele meldingen ontvangen in $telegram! $thisGuide leidt u door het activeringsproces voor Telegram-meldingen (het is eenvoudig). Onze bot stuurt u dan meldingen over uw $appName-gebeurtenissen.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Ja dat doen we! Als je Android hebt, kun je het downloaden op $playstoreLink, $fdroidLink, of je kunt de $apkLink rechtstreeks downloaden. Voor iOS-apparaten is het beschikbaar op $appstoreLink. U kunt ook mobiele meldingen ontvangen in $telegram! $thisGuide leidt u door het activeringsproces voor Telegram-meldingen (het is eenvoudig). Onze bot stuurt je dan meldingen over je $appName-gebeurtenissen.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nNl extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Alle online transacties worden beschermd door arbitrage-obligaties. Wanneer een transactie wordt gestart, wordt automatisch een bedrag aan Monero dat gelijk is aan het bedrag van de transactie als obligatie gereserveerd uit de portefeuille van de verkoper $appName. Dit betekent dat als de verkoper er met uw geld vandoor gaat en de transactie niet voltooit, $appName-ondersteuning de Monero in de arbitrageband naar u kunt sturen. Als u Monero verkoopt, voltooi dan nooit de transactie voordat u weet dat u uw geld heeft ontvangen van de Monero-koper. Houd er rekening mee dat voor lokale transacties standaard geen arbitrage-obligatiebescherming is ingeschakeld.';
+    return 'Alle online transacties worden beschermd door arbitrage-obligaties. Wanneer een transactie wordt gestart, wordt er automatisch een bedrag aan Monero gereserveerd dat gelijk is aan het bedrag van de transactie uit de $appName obligatieportefeuille van de verkoper. Dit betekent dat als de verkoper er met je geld vandoor gaat en de transactie niet voltooit, $appName-ondersteuning de Monero in de arbitragegarantie naar jou kan sturen. Als je Monero verkoopt, voltooi dan nooit de transactie voordat je weet dat je geld hebt ontvangen van de Monero-koper. Houd er rekening mee dat voor lokale transacties standaard geen arbitrage-obligatiebescherming is ingeschakeld.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Alle online transacties worden beschermd door arbitrage-obligaties. Wanneer een transactie wordt gestart, wordt automatisch een bedrag aan cryptovaluta dat gelijk is aan het bedrag van de transactie gereserveerd in de portemonnee van de verkoper $appName als obligatie. Dit betekent dat als de verkoper er met uw geld vandoor gaat en de transactie niet voltooit, $appName-ondersteuning de Monero die in de arbitragegarantie wordt vastgehouden, naar u kunt doorsturen. Als u cryptocurrency verkoopt, voltooi dan nooit de transactie voordat u weet dat u uw geld van de koper heeft ontvangen. Houd er rekening mee dat voor lokale transacties standaard geen arbitrage-obligatiebescherming is ingeschakeld.';
+    return 'Alle online transacties worden beschermd door arbitrage-obligaties. Wanneer een transactie wordt gestart, wordt automatisch een bedrag aan cryptocurrency gelijk aan het bedrag van de transactie gereserveerd uit de $appName obligatieportefeuille van de verkoper. Dit betekent dat als de verkoper er met uw geld vandoor gaat en de transactie niet voltooit, $appName-ondersteuning de cryptocurrency in de arbitrage-obligatie naar u kan sturen. Als u cryptocurrency verkoopt, voltooi dan nooit de transactie voordat u weet dat u geld van de koper heeft ontvangen. Houd er rekening mee dat voor lokale transacties standaard geen arbitrage-obligatiebescherming is ingeschakeld.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nNl extends I18n {
   String get morph250Sbservice8722Sbdown => 'De XMR-service van ChangeNow is tijdelijk niet beschikbaar. Probeer het later opnieuw.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Ontvangende $cryptocurrencyName adres';
   }
 
@@ -4773,9 +4773,7 @@ class I18nNl extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Portefeuille-saldo lager dan vereist minimum voor dit advertentietype';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Eerste keer limiet ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Eerste tijdslimiet  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Optioneel. Beperk het maximale transactiebedrag voor gebruikers met wie u geen eerdere transacties heeft gedaan. Minimaal 0.';
@@ -5268,12 +5266,12 @@ class I18nNl extends I18n {
   String get search250Sbcoordinates250Sblon => 'Lengtegraad';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Verkoop $assetName voor contant geld in $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Koop $assetName met contant geld in $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nNl extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Een echt alternatief voor LocalBitcoins en Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Als u zich zorgen maakt over de inbreuk op de privacy, is XMR de beste cryptocurrency om in te investeren. Monero is een niet-traceerbare munt die is ontwikkeld met het oog op privacy door ontwerp.\n<br/>\nWaar kunt u Monero kopen? LocalMonero is de grootste, meest vertrouwde en gevestigde P2P Monero-uitwisseling in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaukaart, contant per post of bitcoin omzetten in Monero - ons platform ondersteunt elke betaalmethode.';
+  String get seo250Sbtext8722Sb1 => 'Als u zich zorgen maakt over de inbreuk op de privacy, is XMR de beste cryptocurrency om in te investeren. Monero is een niet-traceerbare munt die is ontwikkeld met het oog op privacy door ontwerp.\n<br/>\nWaar Monero kopen? LocalMonero is het grootste, meest vertrouwde en gevestigde P2P Monero-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaukaart, contant per post of bitcoin omzetten in Monero - ons platform ondersteunt elke betaalmethode.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Vraagt u zich af hoe u kunt investeren in Bitcoin? Op AgoraDesk is het kopen van bitcoins nog nooit zo eenvoudig geweest - koop direct BTC van een persoon met behulp van uw favoriete online betaalmethode: PayPal, creditcard/bankpas of bankoverschrijving, cadeaubonnen, Venmo of een andere.\n<br/>\nAls u bitcoins bij u in de buurt met contant geld wilt kopen, kunt u iemand vinden die lokaal bitcoins wil verkopen - het handelsplatform ondersteunt het kopen en verkopen van BTC met contant geld. U kunt zelfs bitcoins kopen met contant geld per post.';
@@ -6811,7 +6809,7 @@ class I18nNl extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Ontvang $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nNl extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Selecteer transactieprioriteit';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '$assetName adres ontvangen';
   }
 
@@ -6879,7 +6877,7 @@ class I18nNl extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Stuur $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nNl extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Uitgaande Cryptocurrency Kosten';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Stuur $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nNl extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Ontvang $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Stuur $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nNl extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Ontvang $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nNl extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Ontvang';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Stuur $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nNl extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Adres wijzigen';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Hoeveelheid ($asset)';
   }
 
@@ -7517,7 +7515,7 @@ class I18nNl extends I18n {
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etiket (optioneel)';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbbtn => 'Sparen';
+  String get address8722Sbbook250Sbsave8722Sbbtn => 'Redden';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Bewaar dit adres voor toekomstig gebruik';
@@ -7544,6 +7542,17 @@ class I18nNl extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Wanneer u op \"Opslaan\" drukt, wordt het land van de advertentie automatisch bijgewerkt naar \"wereldwijd\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Alleen advertenties voor verkoop van hetzelfde item';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Breng me naar de website';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset koop alleen advertenties';
+  }
 
   @override
   String get ads => 'Advertenties';
@@ -8158,6 +8167,9 @@ class I18nNl extends I18n {
   String get api_error_98 => 'Poging om een transactie uit te voeren voor een advertentie waarvan de plaatser niet bestaat';
 
   @override
+  String get api_error_99 => 'Proberen een hoger bedrag te vragen dan toegestaan door de advertentie-eigenaar bij het maken van een eerste transactie';
+
+  @override
   String get api_error_100 => 'Kan niet minder dan 0,0000000001 XMR aanvragen voor het maken van transacties';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nNl extends I18n {
 
   @override
   String get api_error_121 => 'Poging om een transactie te escrowen die niet bestaat';
+
+  @override
+  String get api_error_122 => 'Onvoldoende geld om een transactie te financieren';
+
+  @override
+  String get api_error_123 => 'Onvoldoende geld om een transactie te financieren';
+
+  @override
+  String get api_error_124 => 'Fout bij het financieren van een transactie';
 
   @override
   String get api_error_125 => 'Gebruiker die annulering van transactie aanvraagt, bestaat niet';
@@ -8557,7 +8578,7 @@ class I18nNl extends I18n {
   String get pin_enter_to_confirm_transaction => 'Voer de pincode in om de transactie te bevestigen';
 
   @override
-  String get pin_you_can_use => 'Met deze pincode kunt u de app ontgrendelen.';
+  String get pin_you_can_use => 'De pincode moet uit minimaal 4 cijfers bestaan';
 
   @override
   String get pin_confirm => 'Bevestig pincode';
@@ -9265,7 +9286,7 @@ class I18nNl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: anoniem XMR kopen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaukaart, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt converteren naar Monero - ons platform ondersteunt elke betaalmethode.\n\n- Veilige en vlotte handel\nWe ondersteunen elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en we ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in arbitrage-obligatie worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML of ID-verificatie\nLocalMonero doet er alles aan om de eenvoud en rechtlijnigheid van uw handelservaring te behouden. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we u niet eens vragen om een e-mailadres op te geven bij het registreren.\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via sociale media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWe brengen geen exorbitante kosten in rekening wanneer u Monero stort of opneemt in/uit onze arbitrage-obligatieportemonnee. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig anoniem Monero kopen zonder ID-verificatie met PayPal, creditcard, cadeaukaart, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt converteren naar Monero - ons platform ondersteunt elke betaalmethode.\n\n- Veilige en vlotte handel\nWe ondersteunen elke betaalmethode, elke valuta, overal. We verwijderen geen betalingsmethoden en we ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitragegarantie. Dankzij het feit dat we eisen dat fondsen in arbitrage-obligatie worden gehouden voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML of ID-verificatie\nLocalMonero doet er alles aan om de eenvoud en rechtlijnigheid van uw handelservaring te behouden. We maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, overleefde de Grote Cryptocurrency Market Crash van 2018 en werd door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Open sourcing van onze app geeft ook iedereen toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. We stellen uw privacy zo op prijs dat we niet eens van u verlangen dat u een e-mailadres opgeeft wanneer u zich registreert.\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd enthousiast om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via sociale media, luisteren aandachtig naar uw kritiek en voeren goede gebruikerssuggesties altijd in een recordtijd uit.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWe brengen geen exorbitante kosten in rekening wanneer je Monero stort of opneemt in/uit onze arbitrage-obligatieportemonnee. Er zijn geen aanbetalingskosten en de opnamekosten liggen zeer dicht bij de kosten die u zou betalen voor een normale transactie.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: anoniem XMR kopen';
@@ -9445,14 +9466,5 @@ class I18nNl extends I18n {
   String get api_error_273 => 'Poging om een adres te verwijderen dat niet bestaat in het adresboek van een gebruiker';
 
   @override
-  String get api_error_99 => 'Poging om een hoger bedrag aan te vragen dan toegestaan door first_time_limit_asset bij het maken van een eerste transactie';
-
-  @override
-  String get api_error_122 => 'Onvoldoende saldo om een zwevende LOCAL_SELL-transactie te financieren';
-
-  @override
-  String get api_error_123 => 'Onvoldoende saldo om een niet-zwevende LOCAL_SELL-transactie te financieren';
-
-  @override
-  String get api_error_124 => 'Fout bij het financieren van een LOCAL_SELL';
+  String get pin_you_can_use_new => 'De pincode moet uit minimaal 4 cijfers bestaan';
 }

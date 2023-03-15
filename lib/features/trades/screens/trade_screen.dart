@@ -84,7 +84,7 @@ class _TradeScreenState extends State<TradeScreen>
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: context.intl.document8722Sbtitle250Sbtrade(model.barTitle()),
+              title: context.intl.document8722Sbtitle250Sbtrade(model.barTitle(), ''),
               rightAction: TradePopupMenu(model: model),
             ),
             body: GestureDetector(

@@ -1,6 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_state.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
@@ -18,6 +17,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class SendAssetSecondScreen extends StatefulWidget {
   const SendAssetSecondScreen({
@@ -48,7 +48,7 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
           builder: (context, model, child) {
             return Scaffold(
               appBar: AgoraAppBar(
-                title: context.intl.wallet250Sbsend250Sbsend8722Sbbtn(model.asset.name),
+                title: context.intl.wallet250Sbsend250Sbsend8722Sbbtn(model.asset.name, ''),
               ),
               body: SafeArea(
                 child: SingleChildScrollView(

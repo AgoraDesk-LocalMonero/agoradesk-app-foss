@@ -129,6 +129,14 @@ class WebViewExampleState extends State<WebviewScreen> {
     List<Cookie> cookies = await cookieManager.getCookies(url: _uri);
     debugPrint('[++++ cookies got in the webview] $cookies');
     debugPrint('[++++ cookies got in the webview END] $cookies');
-    GetIt.I<AppParameters>().cookies = cookies;
+    final List<Cookie> resCookies = [];
+    for (final c in cookies) {
+      if (c.name == 'token' && GetIt.I<AppParameters>().accessToken?.isEmpty != false) {
+        continue;
+      }
+      resCookies.add(c);
+    }
+
+    GetIt.I<AppParameters>().cookies = resCookies;
   }
 }

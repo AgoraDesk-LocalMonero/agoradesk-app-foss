@@ -270,12 +270,12 @@ class I18nIt extends I18n {
   String get ad250Sbdeleted => 'Questo annuncio è stato cancellato';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Vendi $assetName con denaro in $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Compra $assetName con contanti in $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nIt extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Quantità (currency)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Quantità ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Scambio $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nIt extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName è uno scambio di Monero peer-to-peer. Siamo un mercato in cui gli utenti possono acquistare e vendere Monero l\'uno dall\'altro. Gli utenti, chiamati commercianti, creano annunci con il prezzo e il metodo di pagamento che vogliono offrire. Puoi consultare il nostro sito Web per gli annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai commercianti che comprano e vendono Monero online per oltre 60 diversi metodi di pagamento. Se sei un nuovo utente e vuoi acquistare Monero, dai un\'occhiata sulla nostra guida.';
+    return '$appName è una piattaforma di trading Monero peer-to-peer. Siamo un mercato in cui gli utenti possono acquistare e vendere Monero da e verso l\'altro. Gli utenti, chiamati commercianti, creano annunci con il prezzo e il metodo di pagamento che vogliono offrire. Puoi navigare nel nostro sito Web per annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai trader che acquistano e vendono Monero online per più di 60 diversi metodi di pagamento. Se sei nuovo su $appName e desideri acquistare Monero, dai un\'occhiata alla nostra guida all\'acquisto per sapere come acquistare Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nIt extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'pagina delle tasse';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Al momento, non c\'è una nostra app mobile. Ma puoi ricevere le notifiche mobili con $telegram! $thisGuide ti aiuta all\'attivazione delle notifiche di Telegram (è semplice non ti preoccupare). Il nostro bot ti invierà notifiche sugli eventi di $appName.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Sì, lo facciamo! Se hai Android, puoi scaricarlo su $playstoreLink, $fdroidLink oppure puoi scaricare direttamente $apkLink. Per i dispositivi iOS, è disponibile su $appstoreLink. Puoi anche ricevere notifiche mobili in $telegram! $thisGuide ti guiderà attraverso il processo di attivazione delle notifiche di Telegram (è facile). Il nostro bot ti invierà quindi notifiche sui tuoi eventi $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nIt extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Tutte le transazioni online sono protette da un vincolo arbitrale. Quando viene avviata una transazione, la quantità di Monero per la transazione viene automaticamente riservata dal portafoglio $appName del venditore. Questo significa che se il venditore scappa con i tuoi soldi e non finalizza la compravendita, il supporto di $appName può finalizzare la compravendita con i Monero tenuti nel vincolo di arbitraggio. Se stai vendendo Monero, non finalizzare mai lo scambio prima di sapere che hai ricevuto i soldi dal compratore di Monero. Si prega di notare che le transazioni locali non hanno la protezione dell\'arbitrato abilitata per impostazione predefinita.';
+    return 'Tutte le negoziazioni online sono protette da vincoli arbitrali. Quando viene avviato uno scambio, un importo di Monero pari all\'importo dello scambio viene automaticamente riservato dal portafoglio obbligazionario $appName del venditore. Ciò significa che se il venditore scappa con i tuoi soldi e non finalizza lo scambio, il supporto $appName può indirizzare a te il Monero detenuto nell\'obbligazione arbitrale. Se stai vendendo Monero, non finalizzare mai lo scambio prima di sapere che hai ricevuto denaro dall\'acquirente Monero. Tieni presente che le negoziazioni locali non hanno la protezione dell\'obbligazione arbitrale abilitata per impostazione predefinita.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Tutte le compravendite online sono protette da un vincolo arbitrale. Quando viene avviata una transazione, la quantità di criptovaluta per la transazione viene automaticamente riservata dal portafoglio $appName del venditore. Questo significa che se il venditore scappa con i tuoi soldi e non finalizza la compravendita, il supporto di $appName può finalizzare la compravendita con le monete contenute nel vincolo arbitrale. Se stai vendendo criptovalute, non finalizzare mai lo scambio prima di sapere che hai ricevuto i soldi dall\'acquirente. Si prega di notare che le transazioni locali non hanno la protezione del vincolo di arbitraggio abilitata per impostazione predefinita.';
+    return 'Tutte le negoziazioni online sono protette da vincoli arbitrali. Quando viene avviato uno scambio, una quantità di criptovaluta pari all\'importo dello scambio viene automaticamente riservata dal portafoglio obbligazionario $appName del venditore. Ciò significa che se il venditore scappa con i tuoi soldi e non finalizza lo scambio, il supporto $appName può indirizzarti la criptovaluta detenuta nell\'obbligazione arbitrale. Se vendi criptovaluta, non finalizzare mai lo scambio prima di sapere di aver ricevuto denaro dall\'acquirente. Tieni presente che le negoziazioni locali non hanno la protezione dell\'obbligazione arbitrale abilitata per impostazione predefinita.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nIt extends I18n {
   String get morph250Sbservice8722Sbdown => 'Il servizio XMR di ChangeNow è temporaneamente non disponibile. Riprovare più tardi.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return 'Indirizzo di ricezione di $cryptocurrencyName';
   }
 
@@ -4773,9 +4773,7 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Saldo inferiore al minimo richiesto per questo tipo di annuncio';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Primo limite di tempo ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Primo termine  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Opzionale. Limita l\'importo max della transazione per gli utenti con cui non hai precedenti negoziazioni. Minimo 0.';
@@ -5268,12 +5266,12 @@ class I18nIt extends I18n {
   String get search250Sbcoordinates250Sblon => 'Longitudine';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Vendi $assetName per contanti in $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Compra $assetName con contanti in $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nIt extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Una vera alternativa a LocalBitcoins e Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Se sei preoccupato per l\'invasione della privacy, la migliore criptovaluta su cui investire è XMR. Monero è una moneta non rintracciabile sviluppata pensando alla privacy in base al design.\n<br/>Dove acquistare Monero? LocalMonero è il più grande, affidabile e consolidato scambio P2P Monero nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica ID con PayPal, carta di credito, carta regalo, contanti per posta o convertire bitcoin in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.';
+  String get seo250Sbtext8722Sb1 => 'Se sei preoccupato per l\'invasione della privacy, la migliore criptovaluta su cui investire è XMR. Monero è una moneta non rintracciabile sviluppata pensando alla privacy fin dal design.\n<br/>\nDove comprare Monero? LocalMonero è la piattaforma di trading Monero P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire bitcoin in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Ti chiedi come investire in Bitcoin? Su AgoraDesk, l\'acquisto di bitcoin non è mai stato così facile: acquista immediatamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito / debito o bonifico bancario, carte regalo, Venmo o qualsiasi altro.\n<br/>\nSe vuoi acquistare bitcoin vicino a te con denaro contante, puoi trovare qualcuno disposto a vendere bitcoin localmente: la piattaforma di trading supporta l\'acquisto e la selezione di BTC con denaro contante. Puoi persino acquistare bitcoin usando contanti tramite posta.';
@@ -6811,7 +6809,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Ricevi $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nIt extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Seleziona la priorità della transazione';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Indirizzo per ricevere $assetName';
   }
 
@@ -6879,7 +6877,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Invia $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nIt extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Commissioni di criptovaluta in uscita';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Invia $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nIt extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Ricevere $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Invia $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Ricevi $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nIt extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Ricevi';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Invia $assetName';
   }
 
@@ -7129,7 +7127,7 @@ class I18nIt extends I18n {
 
   @override
   String wallet250Sbtx250Sbfee(Object assetName) {
-    return '$assetName tassa sulla transazione.';
+    return '$assetName commissione sulle transazioni di rete.';
   }
 
   @override
@@ -7355,7 +7353,7 @@ class I18nIt extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Cambia indirizzo';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Importo ($asset)';
   }
 
@@ -7375,7 +7373,7 @@ class I18nIt extends I18n {
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return 'Anche se fai la dovuta diligenza e commerci solo con utenti affidabili, non c\'è alcuna garanzia che non finirai in una situazione di controversia $method. Ecco qualcosa che puoi fare per aumentare le tue possibilità: $linebreak  1. Richiedi 2 scansioni foto ID dell\'utente (ad esempio passaporto e patente di guida), assicurati che il nome dell\'account $method corrisponda all\'ID. $linebreak  2. Chiedi all\'utente di inviarti un\'e-mail dall\'account e-mail $method (forse anche digli di inserire l\'ID operazione e qualcosa sull\'operazione nell\'e-mail).$linebreak  3. Addebita premi molto alti per $method commercia. Ad esempio, 25% e oltre. In questo modo sei coperto se 1 su 5 delle tue operazioni $method sono truffe (a parità di importo). $linebreak  4. Fai attenzione agli importi elevati degli scambi. Cerca prima di ottenere alcune negoziazioni di importo inferiore con un trader. $linebreak ';
+    return 'Anche se fai la dovuta diligenza e commerci solo con utenti affidabili, non c\'è alcuna garanzia che non finirai in una situazione di controversia $method. Ecco qualcosa che puoi fare per aumentare le tue possibilità: $linebreak  1. Richiedi 2 scansioni foto ID dell\'utente (ad esempio passaporto e patente di guida), assicurati che il nome dell\'account $method corrisponda all\'ID. $linebreak  2. Chiedi all\'utente di inviarti un\'e-mail dall\'account e-mail $method (forse anche digli di inserire l\'ID operazione e qualcosa sull\'operazione nell\'e-mail).$linebreak  3. Addebita premi molto alti per $method commercia. Ad esempio, 25% e oltre. In questo modo sarai coperto se 1 su 5 delle tue operazioni $method sono truffe (a parità di importo). $linebreak  4. Fai attenzione agli importi elevati degli scambi. Cerca prima di ottenere alcune negoziazioni di importo inferiore con un trader. $linebreak ';
   }
 
   @override
@@ -7451,7 +7449,7 @@ class I18nIt extends I18n {
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Quali app possono essere incluse in F-Droid?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repository fdroiddata</a> su Gitlab.</li>\n<li>Clona il repository sul tuo dispositivo.</li>\n<li>Crea un ramo con l\'ID bundle dell\'app, ad esempio <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repository fdroiddata</a> su Gitlab.</li>\n<li>Clona il repository sul tuo dispositivo.</li>\n<li>Crea un ramo con l\'ID pacchetto dell\'app, ad esempio <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Passo 1';
@@ -7544,6 +7542,17 @@ class I18nIt extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Quando premi \"Salva\", il paese dell\'annuncio verrà automaticamente aggiornato a \"globale\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Solo annunci di vendita dello stesso asset';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Portami al sito web';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset acquista solo annunci';
+  }
 
   @override
   String get ads => 'Annunci';
@@ -7773,7 +7782,7 @@ class I18nIt extends I18n {
   String get you_sell => 'Vendete';
 
   @override
-  String get you_buy => 'Voi comprate';
+  String get you_buy => 'Tu compri';
 
   @override
   String get you_receive => 'Si riceve';
@@ -7873,7 +7882,7 @@ class I18nIt extends I18n {
   String get api_error_13 => 'Qualcosa è andato storto nella richiesta. Molto probabilmente si tratta di un problema di convalida. Controllare i parametri della richiesta e, se ancora non è corretto, contattare il nostro supporto.';
 
   @override
-  String get api_error_49 => 'La vecchia password fornita nella richiesta di modifica della password non corrisponde alla password corrente';
+  String get api_error_49 => 'La vecchia password fornita nella richiesta di modifica della password non corrisponde alla password attuale';
 
   @override
   String get api_error_60 => 'La password fornita per la modifica dell\'e-mail non è corretta';
@@ -7984,7 +7993,7 @@ class I18nIt extends I18n {
   String get api_error_239 => 'Password errata durante il tentativo di rilasciare uno scambio';
 
   @override
-  String get api_error_243 => 'L\'indirizzo interno dell\'AgoraDesk non può essere utilizzato per il regolamento degli scambi. Inserisci un indirizzo XMR esterno, non AgoraDesk per continuare.';
+  String get api_error_243 => 'L\'indirizzo interno di AgoraDesk non può essere utilizzato per il regolamento degli scambi. Inserisci un indirizzo XMR esterno, non AgoraDesk per continuare.';
 
   @override
   String get api_error_254 => 'Tentativo di inviare un prelievo a un indirizzo e importo identici negli ultimi 10 minuti';
@@ -8158,10 +8167,13 @@ class I18nIt extends I18n {
   String get api_error_98 => 'Cercando di creare uno scambio per un annuncio il cui poster non esiste';
 
   @override
+  String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito dal proprietario dell\'annuncio durante la creazione di un primo scambio';
+
+  @override
   String get api_error_100 => 'Non è possibile richiedere meno di 0,0000000001 XMR per la creazione dell\'operazione';
 
   @override
-  String get api_error_101 => 'L\'importo richiesto è inferiore all\'importo minimo dell\'annuncio durante la creazione dell\'operazione';
+  String get api_error_101 => 'L\'importo richiesto è inferiore al min_amount dell\'annuncio durante la creazione dell\'operazione';
 
   @override
   String get api_error_102 => 'L\'importo richiesto è superiore al max_amount_available dell\'annuncio durante la creazione dello scambio';
@@ -8213,6 +8225,15 @@ class I18nIt extends I18n {
 
   @override
   String get api_error_121 => 'Tentativo di depositare in garanzia un commercio che non esiste';
+
+  @override
+  String get api_error_122 => 'Fondi insufficienti per finanziare un\'operazione';
+
+  @override
+  String get api_error_123 => 'Fondi insufficienti per finanziare un\'operazione';
+
+  @override
+  String get api_error_124 => 'Errore durante il finanziamento di uno scambio';
 
   @override
   String get api_error_125 => 'L\'utente che richiede l\'annullamento dell\'operazione non esiste';
@@ -8326,7 +8347,7 @@ class I18nIt extends I18n {
   String get api_error_166 => 'Tentare di esercitare con regolamento netto un commercio che non esiste';
 
   @override
-  String get api_error_167 => 'Il prezzo di mercato corrente è inferiore o uguale al prezzo di esercizio durante la compensazione di una transazione CALL. L\'operazione è out-of-the-money per gli standard di mercato, pertanto non può essere compensata. Utilizzare la liquidazione normale se necessario.';
+  String get api_error_167 => 'Il prezzo di mercato corrente è inferiore o uguale al prezzo di esercizio durante la compensazione di una negoziazione CALL. L\'operazione è out-of-the-money per gli standard di mercato, pertanto non può essere compensata. Utilizzare la liquidazione normale se necessario.';
 
   @override
   String get api_error_168 => 'L\'utente che richiede di confermare il pagamento della copertura dell\'operazione non esiste';
@@ -8494,13 +8515,13 @@ class I18nIt extends I18n {
   String get api_error_244 => 'Indirizzo non valido fornito dall\'acquirente durante l\'aggiornamento di un annuncio di tipo ACQUISTA';
 
   @override
-  String get api_error_245 => 'L\'acquirente tenta di fornire un indirizzo interno durante l\'aggiornamento di un annuncio di tipo ACQUISTA (gli indirizzi interni non sono consentiti ai fini della liquidazione dell\'operazione)';
+  String get api_error_245 => 'L\'acquirente tenta di fornire un indirizzo interno durante l\'aggiornamento di un annuncio di tipo ACQUISTA (gli indirizzi interni non sono consentiti ai fini della liquidazione della transazione)';
 
   @override
   String get api_error_246 => 'Tentativo di avviare un\'operazione da un annuncio di tipo ACQUISTA che non specifica l\'indirizzo di transazione dell\'acquirente';
 
   @override
-  String get api_error_247 => 'Tentativo di sbloccare un\'operazione da un conto il cui prelievo è proibito a causa di sanzioni';
+  String get api_error_247 => 'Tentativo di sbloccare un\'operazione da un conto a cui è vietato prelevare a causa di sanzioni';
 
   @override
   String get api_error_248 => 'Tentare di rilasciare un\'operazione quando l\'importo dell\'operazione non è sufficiente a coprire le commissioni relative alla liquidazione';
@@ -8557,7 +8578,7 @@ class I18nIt extends I18n {
   String get pin_enter_to_confirm_transaction => 'Inserire il PIN per confermare la transazione';
 
   @override
-  String get pin_you_can_use => 'Il PIN può essere utilizzato per sbloccare l\'applicazione.';
+  String get pin_you_can_use => 'Il PIN deve essere di almeno 4 cifre';
 
   @override
   String get pin_confirm => 'Confermare il PIN';
@@ -9022,7 +9043,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => 'Prima di creare un annuncio, leggere attentamente il nostro ';
+  String get ad_post_ad_rules_text_0 => 'Prima di creare un annuncio, leggi attentamente il nostro ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
@@ -9256,7 +9277,7 @@ class I18nIt extends I18n {
   String get app_scan_qr_code => 'Scansiona il codice QR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin in modo anonimo, senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin in modo anonimo, senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in cauzione arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: BTC compra facile';
@@ -9265,13 +9286,13 @@ class I18nIt extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR compra facile';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o prelevi Monero sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR compra facile';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o prelevi Monero sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: BTC compra facile';
@@ -9445,14 +9466,5 @@ class I18nIt extends I18n {
   String get api_error_273 => 'Tentativo di eliminare un indirizzo che non esiste nella rubrica di un utente';
 
   @override
-  String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito da first_time_limit_asset durante la creazione di una prima operazione';
-
-  @override
-  String get api_error_122 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL fluttuante';
-
-  @override
-  String get api_error_123 => 'Fondi insufficienti per finanziare un\'operazione LOCAL_SELL non fluttuante';
-
-  @override
-  String get api_error_124 => 'Errore durante il finanziamento di un LOCAL_SELL';
+  String get pin_you_can_use_new => 'Il PIN deve essere di almeno 4 cifre';
 }
