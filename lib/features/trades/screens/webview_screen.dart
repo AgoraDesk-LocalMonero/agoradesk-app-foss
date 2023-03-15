@@ -131,7 +131,7 @@ class WebViewExampleState extends State<WebviewScreen> {
     debugPrint('[++++ cookies got in the webview END] $cookies');
     final List<Cookie> resCookies = [];
     for (final c in cookies) {
-      if (c.name == 'token' && GetIt.I<AppState>().username.isEmpty) {
+      if (c.name == 'token' && GetIt.I<AppParameters>().accessToken?.isEmpty != false) {
         continue;
       }
       resCookies.add(c);
