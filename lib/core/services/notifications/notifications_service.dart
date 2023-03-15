@@ -292,6 +292,7 @@ class NotificationsService with ForegroundMessagesMixin {
       late bool hasUnreaded;
       if (!_loading) {
         appState.notificationsLoading = true;
+        GetIt.I<AppParameters>().polling = true;
         _loading = true;
         DateTime? after;
         if (_notifications.isNotEmpty && !appState.notificationsMarkedRead) {
@@ -300,6 +301,7 @@ class NotificationsService with ForegroundMessagesMixin {
         final res = await accountService.getNotifications(after: after);
         appState.notificationsLoading = false;
         _loading = false;
+        GetIt.I<AppParameters>().polling = false;
 
         if (res.isRight && res.right.isNotEmpty) {
           if (_notifications.isEmpty || appState.notificationsMarkedRead) {
