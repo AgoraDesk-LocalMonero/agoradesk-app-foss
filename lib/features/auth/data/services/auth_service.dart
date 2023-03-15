@@ -347,6 +347,7 @@ class AuthService with FileUtilsMixin {
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
     GetIt.I<AppParameters>().accessToken = null;
+    GetIt.I<AppParameters>().cookies = null;
     _appState.hasPinCode = false;
     return true;
   }
