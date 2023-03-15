@@ -1,4 +1,6 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -6,7 +8,6 @@ import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/ads_view_model.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -95,13 +96,13 @@ class AdInfoViewModel extends ViewModel with ErrorParseMixin {
     savingSwitchers = false;
     if (res.isRight) {
       showSimpleNotification(
-        Text(I18n.of(context)!.settings_saved),
-        autoDismiss: true,
-        key: const ValueKey('flash-message'),
-        duration: const Duration(seconds: 3),
+        Text(context.intl.settings_saved),
         position: NotificationPosition.top,
-        slideDismissDirection: DismissDirection.down,
         background: Theme.of(context).colorScheme.secondaryContainer,
+        autoDismiss: true,
+        key: UniqueKey(),
+        slideDismissDirection: DismissDirection.up,
+        duration: kDisplayDuration,
       );
     } else {
       handleApiError(res.left, context);

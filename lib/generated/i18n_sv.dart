@@ -240,14 +240,14 @@ class I18nSv extends I18n {
   String get ad8722Sbpage250Sbtips8722Sbtext8722Sb0 => 'Läs annonsen och kontrollera villkoren.';
 
   @override
-  String get ad8722Sbpage250Sbtips8722Sbtext8722Sb1 => 'Föreslå mötesplats och kontakttid, om fysiska kontanter handlas.';
+  String get ad8722Sbpage250Sbtips8722Sbtext8722Sb1 => 'Föreslå en mötesplats och kontakttid, om fysiska kontanter handlas.';
 
   @override
   String get ad8722Sbpage250Sbtips8722Sbtext8722Sb2 => 'Se upp för bedragare! Kontrollera profilfeedbacken och var extra försiktig med nyligen skapade konton.';
 
   @override
   String ad8722Sbpage250Sbtips8722Sbtext8722Sb3(Object assetName) {
-    return 'Observera att avrundning och prisfluktuationer kan ändra det slutliga $assetName beloppet. $assetName-beloppet beräknas baserat på handelsvalutan du har angett.';
+    return 'Observera att avrundning och prisfluktuationer kan ändra det slutliga $assetName beloppet. $assetName-beloppet beräknas baserat på handelsvalutan som du har angett.';
   }
 
   @override
@@ -270,13 +270,13 @@ class I18nSv extends I18n {
   String get ad250Sbdeleted => 'Denna annons har tagits bort';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
-    return 'Sälj $assetName för kontanter i $country';
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
+    return 'Sälj $assetName för kontanter i $location';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
-    return 'Köp $assetName kontant i $country';
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
+    return 'Köp $assetName kontant i $location';
   }
 
   @override
@@ -359,7 +359,7 @@ class I18nSv extends I18n {
   String get affiliate250Sbexample250Sbtitle => 'Exempel på kommissionen';
 
   @override
-  String get affiliate250Sbinstructions8722Sb0 => 'Anslutning registreras när någon användare registrerar sig efter att ha landat på sajten från en länk med din referenskod.';
+  String get affiliate250Sbinstructions8722Sb0 => 'Anslutning registreras när någon användare registrerar sig efter att ha landat på sidan från en länk med din hänvisningskod.';
 
   @override
   String get affiliate250Sbinstructions8722Sblink8722Sbtype8722Sbregular8722Sbsubtitle => 'Regelbunden:';
@@ -424,7 +424,7 @@ class I18nSv extends I18n {
 
   @override
   String affiliate250Sbusers250Sbtext(Object number) {
-    return 'Du är för närvarande registrerad som affiliate för $number-användare och kommer att tjäna provision från alla affärer som dessa gör.';
+    return 'Du är för närvarande registrerad som affiliate för $number användare och kommer att tjäna provision från alla affärer som dessa gör.';
   }
 
   @override
@@ -583,7 +583,7 @@ class I18nSv extends I18n {
 
   @override
   String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb20(Object api) {
-    return 'Fullt fungerande $api modellerad efter LocalBitcoins API för enkel övergång';
+    return 'Fullt funktionell $api modellerad efter LocalBitcoins API för enkel övergång';
   }
 
   @override
@@ -1222,7 +1222,7 @@ class I18nSv extends I18n {
   String get dashboard250Sbtrade250Sbstatus250Sbfunded => 'Finansieras';
 
   @override
-  String get dashboard250Sbtrade250Sbstatus250Sbnot8722Sbpaid => 'Väntar på utbetalning';
+  String get dashboard250Sbtrade250Sbstatus250Sbnot8722Sbpaid => 'Väntar på betalning';
 
   @override
   String get dashboard250Sbtrade250Sbstatus250Sbpaid => 'Betald, väntar på att slutföras';
@@ -1234,8 +1234,8 @@ class I18nSv extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Belopp (valuta)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
-    return 'Belopp ($assetSymbol)';
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
+    return 'Belopp ($asset)';
   }
 
   @override
@@ -1575,8 +1575,8 @@ class I18nSv extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
-    return 'Byt $id';
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
+    return 'Byt $assetName';
   }
 
   @override
@@ -1784,7 +1784,7 @@ class I18nSv extends I18n {
   String get error250Sbtrade8722Sbrequest250Sb111 => 'Det begärda beloppet är inte ett belopp som accepteras av denna handlare';
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb112 => 'Det går inte att begära en byte för en annons som du själv har lagt upp';
+  String get error250Sbtrade8722Sbrequest250Sb112 => 'Det går inte att begära en byte av en annons som du själv har lagt upp';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb141 => 'Det går inte att skapa en handel för ett belopp som är mindre än det lägsta tillåtna beloppet';
@@ -1816,7 +1816,7 @@ class I18nSv extends I18n {
   }
 
   @override
-  String get error250Sbtrade8722Sbrequest250Sb246 => 'Det går inte att öppna en affär: den här handlaren har ännu inte angett någon avräkningsadress för denna annons. Kontakta säljaren om du kan, eller försök igen senare, eller leta efter ett annat erbjudande.';
+  String get error250Sbtrade8722Sbrequest250Sb246 => 'Det går inte att öppna en affär: den här handlaren har ännu inte angett en avvecklingsadress för denna annons. Kontakta säljaren om du kan, eller försök igen senare, eller leta efter ett annat erbjudande.';
 
   @override
   String get error250Sbtrade8722Sbrequest250Sb99 => 'Denna handlare kräver lägre transaktionsbelopp för den första handeln med honom. Kontrollera handelsinformationen nedan.';
@@ -1857,12 +1857,12 @@ class I18nSv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName är en peer-to-peer Monero-börs. Vi är en marknadsplats där användare kan köpa och sälja Monero till och från varandra. Användare, kallade handlare, skapar annonser med det pris och den betalningsmetod de vill erbjuda. Du kan bläddra på vår webbplats för handelsannonser och söka efter en betalningsmetod du föredrar. Du hittar handlare som köper och säljer Monero online för mer än 60 olika betalningsmetoder. Om du är ny på $appName och vill köpa Monero, vänligen ta en titt på vår köpguide för att lära dig hur du köper Monero.';
+    return '$appName är en peer-to-peer Monero handelsplattform. Vi är en marknadsplats där användare kan köpa och sälja Monero till och från varandra. Användare, kallade handlare, skapar annonser med det pris och den betalningsmetod de vill erbjuda. Du kan bläddra på vår webbplats för handelsannonser och söka efter en betalningsmetod du föredrar. Du hittar handlare som köper och säljer Monero online för mer än 60 olika betalningsmetoder. Om du är ny på $appName och vill köpa Monero, vänligen ta en titt på vår köpguide för att lära dig hur du köper Monero.';
   }
 
   @override
   String faq250Sbanswer8722Sb057Sbagoradesk(Object appName) {
-    return '$appName är en peer-to-peer cryptocurrency OTC-desk. Vi är en marknadsplats där användare kan köpa och sälja kryptovalutor till och från varandra. Användare, kallade handlare, skapar annonser med det pris och den betalningsmetod de vill erbjuda. Du kan bläddra på vår webbplats för handelsannonser och söka efter en betalningsmetod du föredrar. Du hittar handlare som köper och säljer kryptovalutor online för mer än 60 olika betalningsmetoder. Om du är ny på $appName och vill köpa kryptovalutor, vänligen ta en titt på våra guider.';
+    return '$appName är en peer-to-peer cryptocurrency OTC-desk. Vi är en marknadsplats där användare kan köpa och sälja kryptovalutor till och från varandra. Användare, så kallade handlare, skapar annonser med det pris och den betalningsmetod de vill erbjuda. Du kan bläddra på vår webbplats för handelsannonser och söka efter en betalningsmetod du föredrar. Du hittar handlare som köper och säljer kryptovalutor online för mer än 60 olika betalningsmetoder. Om du är ny på $appName och vill köpa kryptovalutor, vänligen ta en titt på våra guider.';
   }
 
   @override
@@ -1961,7 +1961,7 @@ class I18nSv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb2157Sbagoradesk(Object appName) {
-    return 'Säljarna slutför vanligtvis en affär så fort de ser din betalning, vilket ibland kan ta en timme eller två. Om du har betalat men fortfarande väntar finns det inget att oroa sig för, för alla onlineaffärer är skyddade av skiljedomstolen och säljaren kan inte fly utan att förlora obligationen. Om det finns några problem med en affär och säljaren inte kommer att slutföra den, kan du bestrida affären för att få $appName support att lösa det. Om du köper eller säljer kryptovaluta online kan du bestrida handeln efter att du har markerat betalningen som genomförd. En tvist kan inte längre startas om affären har slutförts eller om det är en lokal affär utan att skyddet för skiljedomsobligationer är aktiverat. När en affär du är inblandad i blir omtvistad får du ett e-postmeddelande. En omtvistad affär löses vanligtvis inom 24-48 timmar.';
+    return 'Säljarna slutför vanligtvis en affär så fort de ser din betalning, vilket ibland kan ta en timme eller två. Om du har betalat men fortfarande väntar finns det inget att oroa sig för, för alla onlineaffärer är skyddade av skiljedomstolen och säljaren kan inte fly utan att förlora obligationen. Om det finns några problem med en affär och säljaren inte kommer att slutföra den, kan du bestrida affären för att få $appName support att lösa det. Om du köper eller säljer kryptovaluta online kan du bestrida handeln efter att du har markerat betalningen som genomförd. En tvist kan inte längre startas om handeln har slutförts eller om det är en lokal handel utan att skyddet för skiljedomsobligationer är aktiverat. När en affär du är inblandad i blir omtvistad får du ett e-postmeddelande. En omtvistad affär löses vanligtvis inom 24-48 timmar.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nSv extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'avgiftssidan';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'För närvarande har vi ingen fristående mobilapp. Men du kan ta emot mobilaviseringar i $telegram! $thisGuide tar dig genom aktiveringsprocessen för Telegram-meddelanden (det är enkelt). Vår bot kommer sedan att skicka dig aviseringar om dina $appName-händelser.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Ja det gör vi! Om du har Android kan du få den på $playstoreLink, $fdroidLink, eller så kan du ladda ner $apkLink direkt. För iOS-enheter är den tillgänglig på $appstoreLink. Du kan också ta emot mobilaviseringar i $telegram! $thisGuide tar dig genom aktiveringsprocessen för Telegram-meddelanden (det är enkelt). Vår bot kommer sedan att skicka dig aviseringar om dina $appName-händelser.';
   }
 
   @override
@@ -2073,17 +2073,17 @@ class I18nSv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Alla onlineaffärer är skyddade av skiljedomsobligationer. När en affär startas reserveras ett belopp på Monero som är lika med affärens belopp automatiskt från säljarens $appName plånbok som en obligation. Detta innebär att om säljaren springer iväg med dina pengar och inte slutför affären, kan $appName-supporten rikta Monero som hålls i skiljedomstolen till dig. Om du säljer Monero, slutför aldrig handeln innan du vet att du har fått pengar från Monero-köparen. Observera att lokala affärer inte har arbitration bond-skydd aktiverat som standard.';
+    return 'Alla onlineaffärer är skyddade av skiljedomsobligationer. När en affär startas reserveras ett belopp på Monero som är lika med affärens belopp automatiskt från säljarens $appName obligationsplånbok. Detta innebär att om säljaren springer iväg med dina pengar och inte slutför affären, kan $appName-supporten rikta Monero som hålls i skiljedomsförbindelsen till dig. Om du säljer Monero, slutför aldrig handeln innan du vet att du har fått pengar från Monero-köparen. Observera att lokala affärer inte har arbitration bond-skydd aktiverat som standard.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Alla onlineaffärer är skyddade av skiljedomsobligationer. När en handel startas reserveras ett belopp av kryptovaluta som är lika med handelsbeloppet automatiskt från säljarens $appName plånbok som en obligation. Det betyder att om säljaren springer iväg med dina pengar och inte slutför affären, kan $appName-supporten rikta kryptovalutan som hålls i skiljedomsförbindelsen till dig. Om du säljer kryptovaluta, slutför aldrig handeln innan du vet att du har fått pengar från köparen. Observera att lokala affärer inte har arbitration bond-skydd aktiverat som standard.';
+    return 'Alla onlineaffärer är skyddade av skiljedomsobligationer. När en handel startas reserveras ett belopp av kryptovaluta lika med handelns belopp automatiskt från säljarens $appName obligationsplånbok. Detta innebär att om säljaren springer iväg med dina pengar och inte slutför affären, kan $appName support rikta kryptovalutan som hålls i skiljedomsförbindelsen till dig. Om du säljer kryptovaluta, slutför aldrig handeln innan du vet att du har fått pengar från köparen. Observera att lokala affärer inte har arbitration bond-skydd aktiverat som standard.';
   }
 
   @override
   String faq250Sbanswer8722Sb9(Object appName) {
-    return 'Vi har två olika typer av affärer på $appName, lokala affärer och nätaffärer. Onlineaffärer sker online helt och hållet via vår handelsplattform utan att du någonsin träffar din handelspartner. Skydd för skiljedomsobligationer är automatiskt aktiverat och finansierat för onlineaffärer, vilket innebär att du som köpare automatiskt skyddas av vårt skyddssystem för skiljedomsobligationer. De flesta avslut på $appName är onlineaffärer. Lokala affärer är avsedda att utföras ansikte mot ansikte, och skydd för skiljedomsobligationer är inte automatiskt aktiverat. På grund av detta är det inte säkert att betala säljaren med en onlinebetalningsmetod i en lokal handel. Betalningsmetoder online är till exempel banköverföringar; PayPal; Presentkortskoder mm.';
+    return 'Vi har två olika typer av affärer på $appName, lokala affärer och onlineaffärer. Onlineaffärer sker online helt och hållet via vår handelsplattform utan att du någonsin träffar din handelspartner. Skydd för skiljedomsobligationer är automatiskt aktiverat och finansierat för onlineaffärer, vilket innebär att du som köpare automatiskt skyddas av vårt skyddssystem för skiljedomsobligationer. De flesta avslut på $appName är onlineaffärer. Lokala affärer är avsedda att utföras ansikte mot ansikte, och skiljedomsskydd är inte automatiskt aktiverat. På grund av detta är det inte säkert att betala säljaren med en onlinebetalningsmetod i en lokal handel. Betalningsmetoder online är till exempel banköverföringar; PayPal; Presentkortskoder mm.';
   }
 
   @override
@@ -2328,7 +2328,7 @@ class I18nSv extends I18n {
   String get formula250Sbexamples250Sbbtc => '5 % över det genomsnittliga BTC/EUR-marknadspriset: <strong>coingeckobtcusd*usdeur*1,05</strong>\n<br/> BTC/XMR marknadspris: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5 % över Kraken BTC/EUR senaste pris omräknat till GBP: <strong> krakenbtceurlast/usdeur*usdgbp*1,05 </strong>\n<br/> 5 % under det högsta bland BTC/USD Bitfinex lågpris och BTC/USD Kraken senaste pris: <strong>max(bitfinexbtcusdlow,krakenbtcusdlast)*0,95</strong>\n<br/> 0,1 LTC över marknaden BTC/LTC-pris: <strong>coingeckobtcltc+0,1</strong>';
 
   @override
-  String get formula250Sbexamples250Sbxmr => '5 % över det genomsnittliga marknadspriset för XMR/EUR: <strong>coingeckoxmrusd*usdeur*1,05</strong>\n<br/> ETH/XMR marknadspris: <strong>coingeckoethbtc/coingeckoxmrbtc</strong>\n<br/> BTC/XMR marknadspris: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5 % över Kraken XMR/EUR senaste pris omräknat till GBP: <strong> krakenxmreurlast/usdeur*usdgbp*1,05 </strong>\n<br/> 5 % under det högsta bland XMR/USD Bitfinex lågpris och XMR/USD Kraken sista pris: <strong>max(bitfinexxmrusdlow,krakenxmrusdlast)*0,95</strong>\n<br/> 0,001 BTC över marknaden XMR/BTC-pris: <strong>coingeckoxmrbtc+0,001</strong>';
+  String get formula250Sbexamples250Sbxmr => '5 % över det genomsnittliga marknadspriset för XMR/EUR: <strong>coingeckoxmrusd*usdeur*1,05</strong>\n<br/> ETH/XMR marknadspris: <strong>coingeckoethbtc/coingeckoxmrbtc</strong>\n<br/> BTC/XMR marknadspris: <strong>1/coingeckoxmrbtc</strong>\n<br/> 5 % över Kraken XMR/EUR senaste pris omräknat till GBP: <strong> krakenxmreurlast/usdeur*usdgbp*1,05 </strong>\n<br/> 5 % under det högsta bland XMR/USD Bitfinex låga pris och XMR/USD Kraken sista pris: <strong>max(bitfinexxmrusdlow,krakenxmrusdlast)*0,95</strong>\n<br/> 0,001 BTC över marknaden XMR/BTC-pris: <strong>coingeckoxmrbtc+0,001</strong>';
 
   @override
   String get formula250Sbfiat8722Sbrates => 'Fiats växelkurser';
@@ -2451,7 +2451,7 @@ class I18nSv extends I18n {
 
   @override
   String guide250Sbbtc250Sbcard8722Sbfive8722Sb8(Object fungibility) {
-    return 'Du kan lita på att det inte är möjligt att äga \"besmutsade\" Monero. Detta är ett begrepp inom ekonomi som kallas $fungibility och anses historiskt sett vara en viktig egenskap för vilken valuta som helst.';
+    return 'Du kan lita på att det inte är möjligt att äga \"besmutsade\" Monero. Detta är ett koncept inom ekonomi som kallas $fungibility och anses historiskt sett vara en viktig egenskap för vilken valuta som helst.';
   }
 
   @override
@@ -2738,7 +2738,7 @@ class I18nSv extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sb7(Object assetName) {
-    return 'Det kan finnas fall där falska pengar skickas till $assetName säljaren. Vänligen överväg att använda en förfalskningsdetektor när du gör byten.';
+    return 'Det kan finnas fall där falska pengar skickas till $assetName säljaren. Överväg att använda en förfalskningsdetektor när du gör byten.';
   }
 
   @override
@@ -2899,7 +2899,7 @@ class I18nSv extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb5 => 'Genomför betalningen enligt säljarens instruktioner och tryck omedelbart på \"Jag har betalat\" - detta kommer att meddela säljaren att betalningen är genomförd och hindra säljaren från att avbryta handeln.';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb7 => 'När säljaren har bekräftat att han tagit emot din betalning, kommer de att initiera affären. Du kommer att se att handelsstatusen har ändrats till \"Bearbetar\". Vid det här laget finns det inget annat du behöver göra - mynten kommer att överföras till din angivna avräkningsplånboksadress automatiskt. Detta tar lite tid (vanligtvis cirka 10-60 minuter), så bara slappna av och vänta på att den inkommande transaktionen dyker upp i din personliga plånbok. Observera att nätverkstransaktionsavgifterna i samband med handelsavveckling kommer att dras från handelsbeloppet, vilket innebär att du får något mindre än vad som visas på handelssidan.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb7 => 'När säljaren har bekräftat att han tagit emot din betalning, initierar de handelsavvecklingen. Du kommer att se att handelsstatusen har ändrats till \"Bearbetar\". Vid det här laget finns det inget annat du behöver göra - mynten kommer att överföras till din angivna avräkningsplånboksadress automatiskt. Detta kommer att ta lite tid (vanligtvis cirka 10-60 minuter), så bara slappna av och vänta på att den inkommande transaktionen dyker upp i din personliga plånbok. Observera att nätverkstransaktionsavgifterna i samband med handelsavveckling kommer att dras från handelsbeloppet, vilket innebär att du får något mindre än vad som visas på handelssidan.';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb8 => 'Det är allt! När handelsavvecklingen är klar och du har fått dina mynt, kommer du att kunna se avvecklingsdetaljerna genom att expandera avsnittet \"Transaktionsdetaljer\" på handelssidan. Glöm inte att lämna feedback om din upplevelse med denna säljare!';
@@ -2918,7 +2918,7 @@ class I18nSv extends I18n {
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2 => 'Gå till <a target=\"_blank\" href=\"/\" class=\"next-link\">huvudsidan</a> och välj \"Sälj\" i sökrutan. Du kan förfina dina resultat ytterligare genom att ange önskat belopp och ändra valuta, land eller betalningsmetod (välj \"Alla onlineerbjudanden\" om du är osäker på vilken betalningsmetod du vill använda) i sökrutan. Tryck på \"Sök\".';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb1 => 'Vissa betalningsmetoder anses vara <a target=\"_blank\" href=\"/faq#high-risk-methods\" class=\"next-link\">högrisk</a>. Kryptovalutatransaktioner är helt oåterkalleliga. Om betalningen från köparen återförs, kommer det inte att vara möjligt för dig att återställa den när du väl sålt din kryptovaluta. Det är därför vi rekommenderar att du säljer med en betalningsmetod med låg risk till erfarna användare med ett stort antal tidigare affärer och ett högt rykte.';
+  String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb1 => 'Vissa betalningsmetoder anses vara <a target=\"_blank\" href=\"/faq#high-risk-methods\" class=\"next-link\">högrisk</a>. Transaktioner i kryptovaluta är helt oåterkalleliga. Om köparens betalning återställs, när du väl sålt din kryptovaluta kommer det inte att vara möjligt för dig att återställa den. Det är därför vi rekommenderar att du säljer med en betalningsmetod med låg risk till erfarna användare med ett stort antal tidigare affärer och ett högt rykte.';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbsell250Sb2250Sb2 => 'Från listan över annonser, välj en från en handlare med ett högt antal byten och ett gott rykte (visas respektive inom parentes bredvid användarnamnet). En grön cirkel betyder att handlaren har varit online idag; en gul cirkel betyder att de har besökt webbplatsen den här veckan; och en grå cirkel betyder att handlaren inte har varit här på över en vecka. Du kan klicka på knappen \"Sälj\" för att se mer information om en annons.';
@@ -3224,7 +3224,7 @@ class I18nSv extends I18n {
   String get homepage250Sbno8722Sbresults8722Sb18722Sbpost8722Sban8722Sbad => 'lägga upp en annons';
 
   @override
-  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb0 => 'Om du kan se transaktionen på block explorer betyder det att transaktionen har skickats ut framgångsrikt. Om du inte ser det på den mottagande sidan är problemet på din sida. Förmodligen ett problem med synkronisering eller så använder du föråldrad plånboksmjukvara.';
+  String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb0 => 'Om du kan se transaktionen i blockutforskaren betyder det att transaktionen har skickats ut framgångsrikt. Om du inte ser det på den mottagande sidan är problemet på din sida. Förmodligen ett problem med synkronisering eller så använder du föråldrad plånboksmjukvara.';
 
   @override
   String get info250Sbwhere8722Sbare8722Sbmy8722Sbxmr8722Sbaccordion250Sbtext250Sb1 => 'Prova dessa förslag för att ta bort synkroniseringen:';
@@ -3242,7 +3242,7 @@ class I18nSv extends I18n {
   String get keywords57Sbagoradesk => 'köp bitcoin btc monero xmr kontant kreditkort usd euro pund lokal banköverföring sälj anonymt kryptovaluta';
 
   @override
-  String get knowledge250Sbatomic250Sb0250Sbtext => '<p>I jakten på decentralisering och ett verkligt tillståndslöst system är få saker så eftertraktade i kryptovalutaområdet som decentraliserade utbyten och atomswappar. Sedan starten har Monero kämpat för att implementera atomswappar, eftersom integritetsfunktionerna skapar unika problem när man försöker designa ett protokoll.</p>\n\n<p>Men först, låt oss säkerhetskopiera. Vad är atombyten? En atomswap är ett protokoll genom vilket två olika kryptovalutor, på olika blockkedjor, kan bytas ut på ett tillitslöst sätt utan någon mellanhand. Det betyder att om någon ville byta kryptovaluta A mot kryptovaluta B, skulle de kunna göra det utan ett utbyte, centraliserat eller decentraliserat. Som man kan föreställa sig kräver detta avsevärd forskning, och de fullständiga tekniska detaljerna som gör det möjligt blir ganska komplicerat. Återigen, LocalMonero är här för att hjälpa och ge en enkel förklaring för den vanliga personen.</p>\n\n<p>Till att börja, låt oss överväga den enklaste formen av atombyte, som implementeras av Bitcoin. Om någon vill byta Bitcoin mot ett annat mynt som använder samma hash time lock kontraktsteknik kan de göra det på följande sätt. Alice har Bitcoin (BTC), men vill ha Litecoin (LTC), och Bob har LTC, men vill ha BTC. De bestämmer sig för att göra ett atombyte så att var och en får det mynt de vill ha. Alice skickar sin BTC till en speciell adress och använder skript som låser pengarna så att inte ens hon kan komma åt det. Du kan tänka på det som att Alice lägger sin BTC i en låslåda. När låslådan är gjord får hon en nyckel och skickar en hash av denna nyckel till Bob. Nu har Bob inte själva nyckeln, bara hashen, så han kan ännu inte komma åt pengarna.</p>\n\n<p>Bob använder denna hash som ett frö från vilket han genererar sin egen lockbox, och skickar sin LTC dit, där den också är låst. Eftersom hashen av Alices nyckel användes som fröet som Bobs låslåda gjordes av, kan hon använda sin nyckel för att göra anspråk på LTC i Bobs låslåda. Hennes nyckel passar! Men med hjälp av matematisk voodoo-magi, när hon använder sin nyckel för att öppna LTC-låset, avslöjar hon nyckeln för Bob, som sedan kan använda den för att göra anspråk på BTC som hon lade i sin låslåda. På detta sätt, utan någon mellanhand, har Alice och Bob framgångsrikt bytt ut sina tillgångar.</p>\n\n<p>Men det finns ett litet problem. Tänk om Alice skickar till sin låsbox och Bob bestämmer sig för att han inte vill handla längre. Nu, eftersom Alice inte kan komma åt sin BTC som hon låste, och Bob inte kommer att slutföra sin del av transaktionen, förlorar Alice bara sina pengar för alltid. Tja, lyckligtvis har Bitcoin en liten teknik som kallas återbetalningstransaktioner, och så efter en tid, om BTC inte görs anspråk på av Bob, har skripten en inbyggd felsäker, där BTC automatiskt går tillbaka till Alice. Detta var den primära fartbulten för Moneros implementering av atomswappar. På grund av Moneros <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">ringsignaturers sekretessteknologi</a> är avsändaren av en transaktion alltid osäker. Hur kan protokollet göra en återbetalningstransaktion om den inte ens vet var transaktionen kom ifrån?</p>\n\n<p>Under 2017 beskrev en liten grupp forskare en annan metod med vilken atombyten skulle fungera i Monero. Efter flera års förfining slutförde forskarna en process genom vilken Monero skulle kunna göra atomswappar med Bitcoin, även utan återbetalningstransaktioner.</p>\n\n<p>Som med många saker av denna nivå av teknisk komplexitet, kommer vår förklaring att förenkla vissa saker alltför för att förmedla idén, men den kommer fortfarande att ge en solid uppfattning om de mekanismer genom vilka denna process skulle fungera.</p>\n\n<p>Både Alice (som har XMR och vill ha BTC) och Bob (som har BTC och vill ha XMR) måste ladda ner och köra ett program som stöder atombytet. Detta kan implementeras i plånböcker, decentraliserade börser eller speciella, specifika program, men programvaran måste köra atomic swap-protokollet. I det första steget ansluter Alice och Bobs klienter till varandra och skapar flera delade hemligheter och nycklar. I det här steget skapas en ny Monero-adress, där Alice har ena halvan av nyckeln och Bob har den andra. Ingen Monero finns där ännu, så det finns inget att spendera. En sista sak att notera om den här adressen är att de båda har vynyckeln till den här plånboken, så att de båda kan kika in för att se om eller när Monero kommer.</p>\n\n<p>I det andra steget skickar Bob sin BTC till en speciell adress, liknande Bitcoin atomic swap-protokollet som vi redan har diskuterat. Efter att Alice ser att BTC anländer till denna adress på blockchain, skickar hon sin Monero till Monero-adressen som hon och Bob båda har en halv nyckel till. Bob kan verifiera att Moneron anlände eftersom han också har vynyckeln, och när han ser att Moneron ligger säkert i plånboken, skickar han Alice en bit av en nyckel som gör att hon kan ta ut Bitcoin. I likhet med det andra protokollet avslöjar processen att göra anspråk på Bitcoin hennes hälften av Monero-nyckeln för Bob. Nu har Bob båda halvorna, så han kan göra anspråk på Moneron, medan Alice bara har sin halva, så hon kan inte försöka ta den innan han gör det.</p>\n\n<p>Så om du tittade på allt detta och fortfarande är lite förvirrad över hur Monero kunde komma runt problemet med återbetalningstransaktioner, är svaret ganska enkelt. Eftersom Monero själv inte har återbetalningstransaktioner bör läsaren lägga märke till att Bitcoin (som har återbetalningstransaktioner) skickas först, och först efter att det har verifierats att det finns på blockkedjan skickas Monero. Detta gör att Monero kan använda Bitcoins förmåga att skripta i återbetalningstransaktioner och dra fördel av dem, utan att behöva ha dessa funktioner själv.</p>\n\n<p>Atombytet är nu slutfört, men härifrån har Bob ett par alternativ för sin nyligen hävdade XMR. Han kan använda denna Monero-plånbok som den är, eller flytta XMR till en annan plånbok som han redan äger. Bob kommer med största sannolikhet att flytta Moneron till en annan plånbok, eftersom Alice fortfarande har vynyckeln och kan se inuti.</p>\n\n<p>Det fina med detta protokoll är att det fortfarande är ganska nytt och det finns gott om utrymme för optimeringar. Den är också ganska flexibel i sin arkitektur, så implementering i andra plånböcker eller decentraliserade börser bör vara enkel och passa perfekt med deras befintliga arkitektur.</p>';
+  String get knowledge250Sbatomic250Sb0250Sbtext => '<p>I jakten på decentralisering och ett verkligt tillståndslöst system är få saker så eftertraktade i kryptovalutaområdet som decentraliserade utbyten och atomswappar. Sedan starten har Monero kämpat för att implementera atomswappar, eftersom integritetsfunktionerna skapar unika problem när man försöker designa ett protokoll.</p>\n\n<p>Men först, låt oss säkerhetskopiera. Vad är atombyten? En atomswap är ett protokoll genom vilket två olika kryptovalutor, på olika blockkedjor, kan bytas ut på ett tillitslöst sätt utan någon mellanhand. Det betyder att om någon ville byta kryptovaluta A mot kryptovaluta B, skulle de kunna göra det utan ett utbyte, centraliserat eller decentraliserat. Som man kan föreställa sig kräver detta avsevärd forskning, och de fullständiga tekniska detaljerna som gör det möjligt blir ganska komplicerat. Återigen, LocalMonero är här för att hjälpa och ge en enkel förklaring för den vanliga personen.</p>\n\n<p>Till att börja, låt oss överväga den enklaste formen av atombyte, som implementeras av Bitcoin. Om någon vill byta Bitcoin mot ett annat mynt som använder samma hash time lock kontraktsteknik kan de göra det på följande sätt. Alice har Bitcoin (BTC), men vill ha Litecoin (LTC), och Bob har LTC, men vill ha BTC. De bestämmer sig för att göra ett atombyte så att var och en får det mynt de vill ha. Alice skickar sin BTC till en speciell adress och använder skript som låser pengarna så att inte ens hon kan komma åt det. Du kan tänka på det som att Alice lägger sin BTC i en låslåda. När låslådan är gjord får hon en nyckel och skickar en hash av denna nyckel till Bob. Nu har Bob inte själva nyckeln, bara hashen, så han kan ännu inte komma åt pengarna.</p>\n\n<p>Bob använder denna hash som ett frö från vilket han genererar sin egen lockbox, och skickar sin LTC dit, där den också är låst. Eftersom hashen av Alices nyckel användes som fröet som Bobs låslåda gjordes av, kan hon använda sin nyckel för att göra anspråk på LTC i Bobs låslåda. Hennes nyckel passar! Men med hjälp av matematisk voodoo-magi, när hon använder sin nyckel för att öppna LTC-låset, avslöjar hon nyckeln för Bob, som sedan kan använda den för att göra anspråk på BTC som hon lade i sin låslåda. På detta sätt, utan någon mellanhand, har Alice och Bob framgångsrikt bytt ut sina tillgångar.</p>\n\n<p>Men det finns ett litet problem. Tänk om Alice skickar till sin låsbox och Bob bestämmer sig för att han inte vill handla längre. Nu, eftersom Alice inte kan komma åt sin BTC som hon låste, och Bob inte kommer att slutföra sin del av transaktionen, förlorar Alice bara sina pengar för alltid. Tja, lyckligtvis har Bitcoin en liten teknik som kallas återbetalningstransaktioner, och så efter en tid, om BTC inte gör anspråk på av Bob, har skripten en inbyggd felsäker, där BTC automatiskt går tillbaka till Alice. Detta var den primära fartbulten för Moneros implementering av atomswappar. På grund av Moneros <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">ringsignaturers sekretessteknologi</a> är avsändaren av en transaktion alltid osäker. Hur kan protokollet göra en återbetalningstransaktion om den inte ens vet var transaktionen kom ifrån?</p>\n\n<p>Under 2017 beskrev en liten grupp forskare en annan metod med vilken atombyten skulle fungera i Monero. Efter flera års förfining slutförde forskarna en process genom vilken Monero skulle kunna göra atomswappar med Bitcoin, även utan återbetalningstransaktioner.</p>\n\n<p>Som med många saker av denna nivå av teknisk komplexitet, kommer vår förklaring att förenkla vissa saker alltför för att förmedla idén, men den kommer fortfarande att ge en solid uppfattning om de mekanismer genom vilka denna process skulle fungera.</p>\n\n<p>Både Alice (som har XMR och vill ha BTC) och Bob (som har BTC och vill ha XMR) måste ladda ner och köra ett program som stöder atombytet. Detta kan implementeras i plånböcker, decentraliserade börser eller speciella, specifika program, men programvaran måste köra atomic swap-protokollet. I det första steget ansluter Alice och Bobs klienter till varandra och skapar flera delade hemligheter och nycklar. I det här steget skapas en ny Monero-adress, där Alice har ena halvan av nyckeln och Bob har den andra. Ingen Monero finns där ännu, så det finns inget att spendera. En sista sak att notera om den här adressen är att de båda har vynyckeln till den här plånboken, så att de båda kan kika in för att se om eller när Monero kommer.</p>\n\n<p>I det andra steget skickar Bob sin BTC till en speciell adress, liknande Bitcoin atomic swap-protokollet som vi redan har diskuterat. Efter att Alice ser att BTC anländer till denna adress på blockchain, skickar hon sin Monero till Monero-adressen som hon och Bob båda har en halv nyckel till. Bob kan verifiera att Moneron anlände eftersom han också har vynyckeln, och när han ser att Moneron ligger säkert i plånboken, skickar han Alice en bit av en nyckel som gör att hon kan ta ut Bitcoin. I likhet med det andra protokollet avslöjar processen att göra anspråk på Bitcoin hennes hälften av Monero-nyckeln för Bob. Nu har Bob båda halvorna, så han kan göra anspråk på Moneron, medan Alice bara har sin halva, så hon kan inte försöka ta den innan han gör det.</p>\n\n<p>Så om du tittade på allt detta och fortfarande är lite förvirrad över hur Monero kunde komma runt problemet med återbetalningstransaktioner, är svaret ganska enkelt. Eftersom Monero själv inte har återbetalningstransaktioner bör läsaren lägga märke till att Bitcoin (som har återbetalningstransaktioner) skickas först, och först efter att det har verifierats att det finns på blockkedjan skickas Monero. Detta gör att Monero kan använda Bitcoins förmåga att skripta i återbetalningstransaktioner och dra fördel av dem, utan att behöva ha dessa funktioner själv.</p>\n\n<p>Atombytet är nu slutfört, men härifrån har Bob ett par alternativ för sin nyligen hävdade XMR. Han kan använda denna Monero-plånbok som den är, eller flytta XMR till en annan plånbok som han redan äger. Bob kommer med största sannolikhet att flytta Moneron till en annan plånbok, eftersom Alice fortfarande har vynyckeln och kan se inuti.</p>\n\n<p>Det fina med detta protokoll är att det fortfarande är ganska nytt och det finns gott om utrymme för optimeringar. Den är också ganska flexibel i sin arkitektur, så implementering i andra plånböcker eller decentraliserade börser bör vara enkel och passa perfekt med deras befintliga arkitektur.</p>';
 
   @override
   String get knowledge250Sbatomic250Sbdescription => 'Få saker är så eftertraktade i kryptorymden som atombyten. Nyligen har forskarna slutfört ett sätt på vilket XMR skulle kunna göra atombyten med BTC.';
@@ -3278,7 +3278,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbclsag250Sbtitle => 'Hur CLSAG kommer att förbättra Moneros effektivitet';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb0250Sbtext => '<p> Eftersom Bitcoins integritetsverktyg har fått mer uppmärksamhet och användning har de kommit under mer regulatorisk granskning. Denna granskning har lett till ett <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://twitter.com/wasabiwallet/status/1503091503207432193\">nyligen tillkännagivande</a> av ett Bitcoin-integritetsverktyg, Wasabi Wallet, att de kommer att börja censurera och avvisa inkommande indata till blandningar som de anser vara olagliga eller mot deras användarvillkor, och kommer att betala en kedjeanalys företag för att \"veta\" inkommande mixdeltagare.</p>\n<p>Användningen av CoinJoin-transaktioner för att fördunkla källan till pengar i Bitcoin har varit kärnan i Bitcoins integritet i många år nu, och de problem och risker som är inneboende i användningen är några av de kärnproblem som Moneros ringsignaturer korrigerar och förhindrar. .</p>\n<p>I det här blogginlägget ska vi kort dyka ner i en jämförelse av CoinJoin och ringsignaturer, samt varför tillvägagångssättet i Monero leder till större censurmotstånd, större integritet och mindre krångel för användarna.</p>';
+  String get knowledge250Sbcoinjoin250Sb0250Sbtext => '<p> Eftersom Bitcoins integritetsverktyg har fått mer uppmärksamhet och användning har de kommit under mer regulatorisk granskning. Denna granskning har lett till ett <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://twitter.com/wasabiwallet/status/1503091503207432193\">nyligen tillkännagivande</a> av ett Bitcoin-integritetsverktyg, Wasabi Wallet, att de kommer att börja censurera och avvisa inkommande indata till blandningar som de anser vara olagliga eller mot deras användarvillkor, och kommer att betala en kedjeanalys företag för att \"veta\" inkommande mixdeltagare.</p>\n<p>Användningen av CoinJoin-transaktioner för att fördunkla källan till pengar i Bitcoin har varit kärnan i Bitcoins integritet i många år nu, och de problem och risker som är inneboende i dess användning är några av de kärnfrågor som Moneros ringsignaturer korrigerar och förhindrar .</p>\n<p>I det här blogginlägget ska vi kort dyka ner i en jämförelse av CoinJoin och ringsignaturer, samt varför tillvägagångssättet i Monero leder till större censurmotstånd, större integritet och mindre krångel för användarna.</p>';
 
   @override
   String get knowledge250Sbcoinjoin250Sb1250Sbtext => '<p>Eftersom alla transaktioner är helt transparenta i Bitcoin – avslöjar avsändaren, mottagaren och beloppen – måste användare vidta extra åtgärder för att bevara sin integritet från tidigare avsändare och framtida mottagare av deras medel eller riskera censur, övervakning eller stöld av medel via fysiskt våld.</p>\n<p>Den bästa lösningen idag för integritet på Bitcoin är ett verktyg som heter <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://bitcoiner.guide/qna/coinjoin/\">“CoinJoin”</a>, där 2 eller fler användare arbetar tillsammans (vanligtvis via en centraliserad koordinator) för att skapa en speciell transaktion som gör det svårt för utomstående observatörer för att koppla ingångarna till utgångarna. Varje deltagare kommunicerar för att gemensamt bygga transaktionen utan att ge upp vårdnaden om sina medel, och får en utdata i slutet vars tidigare historia nu är oklar (eller fördunklad) för utomstående observatörer.</p>\n<p>Detta bryter historiken för specifika UTXO:er, vilket gör att Bitcoin-användare kan få lite av framåtsekretess när de gör transaktioner. Men CoinJoin (som implementerat i Wasabi Wallet och Samourai Wallet, de två mest använda CoinJoin-verktygen för Bitcoin) har några stora nackdelar:</p>\n<ul>\n<li>Eftersom CoinJoin-transaktioner är helt opt-in och kräver aktivt deltagande, visar alla deltagare nödvändigtvis att de söker större integritet än \"normala\" Bitcoin-användare, vilket potentiellt pekar ut dem och orsakar problem med att spendera pengar på många reglerade börser eller enheter. Varje användare kan inte förneka att de deltog i en CoinJoin-transaktion.</li>\n<li>För att hitta andra att CoinJoin med använder de flesta metoder för CoinJoin (inklusive Wasabi Wallet) en centraliserad koordinator som kopplar samman deltagare och hjälper dem att kommunicera och bygga en riktig CoinJoin-transaktion. Denna centraliserade samordnare har aldrig förvaring av användarnas medel, men får omfattande insikt i de transaktioner de koordinerar, kan censurera inkommande indata (som i fallet med Wasabi Wallet) och kan pressas att samla in eller dela information om CoinJoin-deltagare.[X2068X ]\n<li>Användare med stora mängder pengar till CoinJoin kan ofta behöva vänta timmar (eller till och med dagar!) för att hitta tillräckligt många deltagare att CoinJoin med, vilket leder till stora förseningar från det att en användare får pengar tills de kan spendera dem privat. </li>\n<li>Sekretessen som tillhandahålls av en CoinJoin-transaktion försämras med tiden när andra deltagare spenderar pengar eller länkar sina resultat till sin identitet genom KYC-utbyten, ID-krävande handlare, etc. Detta innebär att användare helst håller sina pengar ständigt samlade i CoinJoin-transaktioner för att behålla deras anonymitetsuppsättning (\"publik att gömma sig i\") så fräsch som möjligt.</li>\n<li>I de flesta tillvägagångssätt för CoinJoin måste deltagarna använda en fast storlek UTXO (dvs. 0,1 BTC) för att göra det svårare att ansluta in- och utgångar för CoinJoin-transaktioner. Detta leder till högre avgifter (fler separata transaktioner krävs per stor insats), mer \"giftig förändring\" (medel som inte går att använda utan allvarliga risker för integriteten), och kan hindra mindre användare från att överhuvudtaget kunna blanda om de inte har det minsta saldo som krävs.</li>\n</ul>';
@@ -3287,7 +3287,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbcoinjoin250Sb1250Sbtitle => 'Vad är en CoinJoin-transaktion?';
 
   @override
-  String get knowledge250Sbcoinjoin250Sb2250Sbtext => '<p>Som <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\">vi har tittat djupt på vad ringsignaturer är tidigare</a>, kommer jag inte att gå in i detalj på de tekniska aspekterna av hur de fungerar i det här blogginlägget. Istället ska vi titta på hur tillvägagångssätten i Monero löser problemen med CoinJoin diskuterar ovan.</p>\n<blockquote>\n<p>CoinJoin är opt-in och kräver deltagande</p>\n</blockquote>\n<p>Moneros ringsignaturer är en kärnfunktion i sekretessprotokollet, och <em>varje</em> transaktion på nätverket använder dem. Detta innebär att ingen användares transaktioner sticker ut för att söka större integritet än \"normala\" Monero-användare, och alla användare får rimligt förnekande att de har spenderat pengar i en given transaktion. Eftersom en användare som spenderar pengar inte samordnar eller deltar med lockbetsingångarna i en transaktion, kan de användare som äger indata som råkar vara utvalda som lockbete ärligt säga att de inte deltog i den transaktionen, vilket stärker deras integritet.</p>\n<blockquote>\n<p>Användning av en centraliserad koordinator</p>\n</blockquote>\n<p>Eftersom Moneros ringsignaturer är helt okoordinerade och endast kräver den verkliga spenderaren av pengar för att skapa transaktionen, finns det inget behov av en centraliserad koordinator i Monero. Detta säkerställer att <em>ingen</em> kan neka dig tillgång till integritet i Monero, och det finns ingen centraliserad enhet som kan utsättas för press, inga lätta Sybil-attacker på likviditet, etc. Så länge din transaktion betalar de rätta avgifterna, du får ocensurerbar tillgång till integritet, säkerhet och anonymitet i Monero.</p>\n<blockquote>\n<p>CoinJoin kräver likviditet</p>\n</blockquote>\n<p>Den \"likviditet\" som är tillgänglig för alla som spenderar Monero att använda som lockbete är alltid den totala uppsättningen av utgångar på kedjan så det finns aldrig brist på lockbeten att gömma sig i med Monero. Någon som vill spendera Monero kan göra det ~20 minuter efter att ha mottagit pengar och behöver inte utföra några ytterligare steg för att få stark sekretess i Monero.</p>\n<blockquote>\n<p>CoinJoin integritet försämras med tiden</p>\n</blockquote>\n<p>Eftersom Moneros utgångar aldrig är kända förbrukade av nätverket, är integriteten som tillhandahålls av ringsignaturer mycket mindre mottaglig för försämring över tid. En användare behöver inte ständigt churna utdata i Monero, och utanför extremt sällsynta omständigheter förlorar han ingen integritet allt eftersom tiden går.</p>\n<p>Om en användare vill \"uppdatera\" de lockbeten som används med en utdata, kan de bara skicka tillbaka pengarna till sig själva och kunna spendera dem ~20 minuter senare som vanligt.</p>\n<blockquote>\n<p>CoinJoin kräver vanligtvis ingångar med fast storlek</p>\n</blockquote>\n<p>Eftersom belopp är dolda i varje transaktion med <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/monero-ringct\">\"Konfidentiella transaktioner\"</a> (en del av \"RingCT\"), kan lockbetena som används i en given transaktion vara av vilken storlek som helst. Det finns ingen anledning att behöva vara orolig för beloppsbaserad heuristik i Monero, så transaktioner är mycket enklare att bygga och kan utnyttja lockbeten från vilken tidpunkt som helst och oavsett belopp på Monero blockchain.</p>';
+  String get knowledge250Sbcoinjoin250Sb2250Sbtext => '<p>Som <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/ring-signatures\">vi har tittat djupt på vad ringsignaturer är tidigare</a>, kommer jag inte att gå in i detalj på de tekniska aspekterna av hur de fungerar i det här blogginlägget. Istället ska vi titta på hur tillvägagångssätten i Monero löser problemen med CoinJoin diskuterar ovan.</p>\n<blockquote>\n<p>CoinJoin är opt-in och kräver deltagande</p>\n</blockquote>\n<p>Moneros ringsignaturer är en kärnfunktion i sekretessprotokollet, och <em>varje</em> transaktion i nätverket använder dem. Detta innebär att ingen användares transaktioner sticker ut för att söka större integritet än \"normala\" Monero-användare, och alla användare får rimligt förnekande att de har spenderat pengar i en given transaktion. Eftersom en användare som spenderar pengar inte samordnar eller deltar med lockbetsingångarna i en transaktion, kan de användare som äger indata som råkar vara utvalda som lockbete ärligt säga att de inte deltog i den transaktionen, vilket stärker deras integritet.</p>\n<blockquote>\n<p>Användning av en centraliserad koordinator</p>\n</blockquote>\n<p>Eftersom Moneros ringsignaturer är helt okoordinerade och endast kräver den verkliga spenderaren av pengar för att skapa transaktionen, finns det inget behov av en centraliserad koordinator i Monero. Detta säkerställer att <em>ingen</em> kan neka dig tillgång till integritet i Monero, och det finns ingen centraliserad enhet som kan utsättas för press, inga lätta Sybil-attacker på likviditet, etc. Så länge din transaktion betalar de rätta avgifterna, du får ocensurerbar tillgång till integritet, säkerhet och anonymitet i Monero.</p>\n<blockquote>\n<p>CoinJoin kräver likviditet</p>\n</blockquote>\n<p>Den \"likviditet\" som är tillgänglig för alla som spenderar Monero att använda som lockbete är alltid den totala uppsättningen av utgångar på kedjan så det finns aldrig brist på lockbeten att gömma sig i med Monero. Någon som vill spendera Monero kan göra det ~20 minuter efter att ha mottagit pengar och behöver inte utföra några ytterligare steg för att få stark sekretess i Monero.</p>\n<blockquote>\n<p>CoinJoin integritet försämras med tiden</p>\n</blockquote>\n<p>Eftersom Moneros utgångar aldrig är kända förbrukade av nätverket, är integriteten som tillhandahålls av ringsignaturer mycket mindre mottaglig för försämring över tid. En användare behöver inte ständigt churna utdata i Monero, och utanför extremt sällsynta omständigheter förlorar han ingen integritet allt eftersom tiden går.</p>\n<p>Om en användare vill \"uppdatera\" de lockbeten som används med en utdata, kan de bara skicka tillbaka pengarna till sig själva och kunna spendera dem ~20 minuter senare som vanligt.</p>\n<blockquote>\n<p>CoinJoin kräver vanligtvis ingångar med fast storlek</p>\n</blockquote>\n<p>Eftersom belopp är dolda i varje transaktion med <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"/knowledge/monero-ringct\">\"Konfidentiella transaktioner\"</a> (en del av \"RingCT\"), kan lockbetena som används i en given transaktion vara av vilken storlek som helst. Det finns ingen anledning att behöva vara orolig för beloppsbaserad heuristik i Monero, så transaktioner är mycket enklare att bygga och kan utnyttja lockbeten från vilken tidpunkt som helst och oavsett belopp på Monero blockchain.</p>';
 
   @override
   String get knowledge250Sbcoinjoin250Sb2250Sbtitle => 'Hur löser ringsignaturer dessa problem?';
@@ -3320,7 +3320,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbcontributing250Sb2250Sbtitle => 'Utbildning';
 
   @override
-  String get knowledge250Sbcontributing250Sb3250Sbtext => '<p>Ett enkelt sätt du kan hjälpa till är att bara vara aktiv på vanliga sociala medier och prata om, utbilda och dela fantastiskt Monero-innehåll.</p>\n<p>Ju fler av oss som är där ute och delar hur Monero har hjälpt oss, vad vi älskar med det, vad som behöver förbättras och varför vi väljer att bidra, desto fler kommer människor att kunna se värdet i en kraftfull verktyg som Monero.</p>\n<h6 id=\"twitter\">Twitter</h6>\n<p>Twitter är en vanlig plats för kryptovalutanvändare (bland andra), och är en plats som jag har funnit värdefull för både lärande och engagerande med Monero-communityt. Även om det kan vara en giftig och hård plats ibland, finns det några fantastiska människor som regelbundet lägger ut bra innehåll.</p>\n<p>Kan gärna hoppa in och börja dela om Monero och engagera dig med andra där!</p>\n<p><em>Du kan hitta LocalMonero på Twitter <span class=\"citation\" data-cites=\"LocalMoneroCo\"> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://twitter.com/LocalMoneroCo\">@LocalMoneroCo</a></span>.</em></p>\n<h6 id=\"reddit\">Redit</h6>\n<p>Reddit är en populär väg för att interagera med Monero (och bredare kryptovaluta/integritet) publiken, och är ett bra ställe att dela innehåll i längre format, media, nyheter, etc.</p>\n<p>Det finns en extremt aktiv Monero-community där, med några av de mest populära sub-redditerna:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/Monero/\">r/Monero</a>\n<ul>\n<li>Hemmet för de flesta Monero-diskussioner, nyheter och media</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a>\n<ul>\n<li>Ett bra ställe att få support och hjälpa dem som behöver support med Monero-problem</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroCommunity/\">r/MoneroCommunity</a>\n<ul>\n<li>En allmän plats för gemenskapsfokuserade diskussioner</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroMining/\">r/MoneroMining</a>\n<ul>\n<li>Alla dina gruvbehov och diskussioner</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/xmrtrader/\">r/xmrtrader</a>\n<ul>\n<li>Hemmet för alla pris-/marknads-/spekulationsrelaterade diskussioner om Monero. Pris-/marknadsrelaterade ämnen är i allmänhet förbjudna på alla andra Monero-subreddits för att hålla communityn fokuserad.</li>\n</ul></li>\n</ul>\n<p>Se till att hoppa in och delta i diskussioner, dela intressanta nyheter och inlägg och bidra där det passar dig!</p>\n<p><em>Du kan hitta LocalMonero-communityt på Reddit på <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/LocalMonero/\">r/LocalMonero</a>.</em></p>\n<h6 id=\"matrixirc\">Matrix/IRC</h6>\n<p>De allra flesta av Moneros \"inre funktioner\" sker på Matrix och IRC, två chattnätverk som är kopplade till varandra. Om du vill fortsätta vara involverad i de \"snygga\" dagliga diskussionerna, delta i möten eller bara chatta med andra Monero-användare, vill du hoppa in i antingen Matrix eller IRC.</p>\n<p>En lista över de vanligaste Matrix/IRC-kanalerna finns på <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/community/hangouts/\">getmonero.org</a>.</p>\n<p><em>Du kan hitta LocalMonero-communityt på Matrix i rummet <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://matrix.to/#/#localmonero:agoradesk.com\">#localmonero:agoradesk.com</a>.</em></p>\n<h6 id=\"offline\">Offline</h6>\n<p>Glöm inte att introducera dina vänner, familj och andra för Monero offline också! Ett bra sätt är att låta personen ladda ner en mobilplånbok som <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cakewallet.com/\">Cake Wallet (iOS/Android)</a>, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.monerujo.io/\">Monerujo (Android)</a>, eller <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://mymonero.com/\">MyMonero (iOS)</a>, skicka lite Monero till dem och be dem skicka tillbaka några.</p>\n<p>Det kan också vara användbart att jämföra en transaktion mellan något som Bitcoin och Monero i en utforskare som <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.exploremonero.com/\">ExploreMonero</a> för att låta dem se hur lite information som exponeras offentligt när de gör transaktioner med Monero jämfört med andra transparenta blockkedjor.[ X4596X]';
+  String get knowledge250Sbcontributing250Sb3250Sbtext => '<p>Ett enkelt sätt du kan hjälpa till är att bara vara aktiv på vanliga sociala medier och prata om, utbilda och dela fantastiskt Monero-innehåll.</p>\n<p>Ju fler av oss som är där ute och delar hur Monero har hjälpt oss, vad vi älskar med det, vad som behöver förbättras och varför vi väljer att bidra, desto fler kommer människor att kunna se värdet i en kraftfull verktyg som Monero.</p>\n<h6 id=\"twitter\">Twitter</h6>\n<p>Twitter är en vanlig plats för kryptovalutanvändare (bland andra), och är en plats som jag har funnit värdefull för både att lära mig och engagera sig i Monero-communityt. Även om det kan vara en giftig och hård plats ibland, finns det några fantastiska människor som regelbundet lägger ut bra innehåll.</p>\n<p>Kan gärna hoppa in och börja dela om Monero och engagera dig med andra där!</p>\n<p><em>Du kan hitta LocalMonero på Twitter <span class=\"citation\" data-cites=\"LocalMoneroCo\"> <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://twitter.com/LocalMoneroCo\">@LocalMoneroCo</a></span>.</em></p>\n<h6 id=\"reddit\">Redit</h6>\n<p>Reddit är en populär väg för att interagera med Monero (och bredare kryptovaluta/integritet) publiken, och är ett bra ställe att dela innehåll i längre format, media, nyheter, etc.</p>\n<p>Det finns en extremt aktiv Monero-community där, med några av de mest populära sub-redditerna:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/Monero/\">r/Monero</a>\n<ul>\n<li>Hemmet för de flesta Monero-diskussioner, nyheter och media</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/monerosupport/\">r/monerosupport</a>\n<ul>\n<li>Ett bra ställe att få support och hjälpa dem som behöver support med Monero-problem</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroCommunity/\">r/MoneroCommunity</a>\n<ul>\n<li>En allmän plats för gemenskapsfokuserade diskussioner</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/MoneroMining/\">r/MoneroMining</a>\n<ul>\n<li>Alla dina gruvbehov och diskussioner</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/xmrtrader/\">r/xmrtrader</a>\n<ul>\n<li>Hemmet för alla pris-/marknads-/spekulationsrelaterade diskussioner om Monero. Pris-/marknadsrelaterade ämnen är i allmänhet förbjudna på alla andra Monero-subreddits för att hålla communityn fokuserad.</li>\n</ul></li>\n</ul>\n<p>Se till att hoppa in och delta i diskussioner, dela intressanta nyheter och inlägg och bidra där det passar dig!</p>\n<p><em>Du kan hitta LocalMonero-communityt på Reddit på <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.reddit.com/r/LocalMonero/\">r/LocalMonero</a>.</em></p>\n<h6 id=\"matrixirc\">Matrix/IRC</h6>\n<p>De allra flesta av Moneros \"inre funktioner\" sker på Matrix och IRC, två chattnätverk som är kopplade till varandra. Om du vill fortsätta vara involverad i de \"snygga\" dagliga diskussionerna, delta i möten eller bara chatta med andra Monero-användare, vill du hoppa in i antingen Matrix eller IRC.</p>\n<p>En lista över de vanligaste Matrix/IRC-kanalerna finns på <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.getmonero.org/community/hangouts/\">getmonero.org</a>.</p>\n<p><em>Du kan hitta LocalMonero-communityt på Matrix i rummet <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://matrix.to/#/#localmonero:agoradesk.com\">#localmonero:agoradesk.com</a>.</em></p>\n<h6 id=\"offline\">Offline</h6>\n<p>Glöm inte att introducera dina vänner, familj och andra för Monero offline också! Ett bra sätt är att låta personen ladda ner en mobilplånbok som <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://cakewallet.com/\">Cake Wallet (iOS/Android)</a>, <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.monerujo.io/\">Monerujo (Android)</a>, eller <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://mymonero.com/\">MyMonero (iOS)</a>, skicka dem lite Monero och låt dem skicka tillbaka några.</p>\n<p>Det kan också vara användbart att jämföra en transaktion mellan något som Bitcoin och Monero i en utforskare som <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://www.exploremonero.com/\">ExploreMonero</a> för att låta dem se hur lite information som exponeras offentligt när de gör transaktioner med Monero jämfört med andra transparenta blockkedjor.[ X4596X]';
 
   @override
   String get knowledge250Sbcontributing250Sb3250Sbtitle => 'Medvetenhet och engagemang';
@@ -3338,7 +3338,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbcontributing250Sb5250Sbtitle => 'Samhällsmöten';
 
   @override
-  String get knowledge250Sbcontributing250Sb6250Sbtext => '<p>För dem som är tvåspråkiga eller fler är ett mycket viktigt sätt att bidra med att hjälpa till med översättningar från engelska till andra språk. Det finns alltid ett behov av att nya språk översätts och att befintliga språk uppdateras i hela ekosystemet, och ju fler språk vi aktivt stödjer, desto mer inkluderande och lättillgänglig kommer Monero att bli.</p>\n<p>Du kan hitta översättningsbehov och information på <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://translate.getmonero.org/\">translate.getmonero.org</a> eller <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-ecosystem/monero-translations\">på Github</a>.</p>';
+  String get knowledge250Sbcontributing250Sb6250Sbtext => '<p>För dem som är tvåspråkiga eller fler är ett mycket viktigt sätt att bidra med att hjälpa till med översättningar från engelska till andra språk. Det finns alltid ett behov av nya språk som ska översättas och befintliga språk som uppdateras i hela ekosystemet, och ju fler språk vi aktivt stödjer, desto mer inkluderande och tillgängligt kommer Monero att bli.</p>\n<p>Du kan hitta översättningsbehov och information på <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://translate.getmonero.org/\">translate.getmonero.org</a> eller <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/monero-ecosystem/monero-translations\">på Github</a>.</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb6250Sbtitle => 'Översättningar';
@@ -3356,7 +3356,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbcontributing250Sb8250Sbtitle => 'Slutsats';
 
   @override
-  String get knowledge250Sbcontributing250Sbdescription => 'Framgången för Monero beror på bidrag från communityn – idag ska vi utforska några sätt som vi icke-utvecklare kan ge tillbaka.';
+  String get knowledge250Sbcontributing250Sbdescription => 'Framgången för Monero beror på communityns bidrag – idag ska vi utforska några sätt som vi icke-utvecklare kan ge tillbaka.';
 
   @override
   String get knowledge250Sbcontributing250Sbtitle => 'Bidrar tillbaka till Monero';
@@ -3518,7 +3518,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbkeys250Sb0250Sbtext => '<p>Har du hört frasen \"inte dina nycklar, inte dina mynt\" förut?\nDetta har blivit en allestädes närvarande fras i kryptovalutagemenskapen, men\ntrots att de flesta har hört det de allra flesta av kryptovaluta\nanvändare har inte sina egna nycklar.</p>\n<p>Fördelarna med kryptovaluta som verkligen skiljer den från\ntraditionella finansiella system realiseras först när du är klar\nförvaring av dina pengar – hålla de privata nycklarna till dina mynt.</p>\n<p>I det här korta inlägget kommer vi att dyka in i varför du bör hålla dina egna nycklar\noch ge några enkla sätt att ta hand om din Monero <em>idag</em>.</p>';
 
   @override
-  String get knowledge250Sbkeys250Sb1250Sbtext => '<h6 id=\"it-preserves-the-privacy-that-monero-affords-users\">Det bevarar\nintegriteten som Monero ger användarna</h6>\n<p>En av de mest missförstådda aspekterna av självvård i\nMonero är att om du inte har dina egna nycklar, vinner du lite eller ingen\ndra nytta av den sekretess som Monero erbjuder. Som avsändare av en transaktion\nhar full insyn i den verkliga utgiften, beloppet och mottagaradressen,\nom du inte är den som skickar transaktionen och i stället lämna det till\nen börs eller vårdnadshavare har de <em>full</em> insyn i\nhur du spenderar din Monero.</p>\n<p> Tack och lov, efter att de har skickat pengarna garanterar Moneros integritet\nsparka in och ge starkt \"framåt-sekretess\", men det kommer att vara tydligt\nbörsen eller förvaringsinstitutet dit du skickade medlen och hur mycket du skickade\ninitialt.</p>\n<h6 id=\"it-enables-the-incredible-censorship-resistance-of-monero\">Det\nmöjliggör det otroliga censurmotståndet hos Monero</h6>\n<p>En av de grundläggande aspekterna av Monero är att möjliggöra\ncensurbeständiga transaktioner – så att du kan göra transaktioner\nsom kanske eller kanske inte godkänns av \"dem\", oavsett vad de försöker\ngöra för att stoppa dig. Medan behovet av censur-motstånd kan vara lite\nförlorade på de av oss i \"fria\" länder, den snabba glidningen mot\nauktoritarism och politiskt förfall i många delar av världen är\ngör det mer uppenbart för varje dag att vi behöver ett sätt att handla med\neller utan statligt godkännande.</p>\n<p>Om du inte har dina egna nycklar, men en regering eller tillsynsmyndighet\nkan enkelt tvinga en börs eller förvaringsinstitut att svartlista dina pengar, beslagta\ndem, eller censurera transaktioner till specifika adresser. Det här är redan\nsker i stort sett på grund av sanktioner på statlig nivå idag, och kommer att bli en\nökande tema som regeringar och tillsynsmyndigheter inser att utbyten\noch vårdnadshavare är den enklaste vägen mot kontroll över Monero\'s\nanvändning.</p>\n<p>Den dag kan också komma då en regering kommer att förbjuda självvård\nav Monero, och om du ännu inte har dragit tillbaka din Monero från ett utbyte\neller vårdnadshavare som du kanske aldrig kan.</p>\n<h6 id=\"it-prevents-simple-theft-or-confiscation-of-your-monero\">Det\nförhindrar enkel stöld eller konfiskering av din Monero</h6>\n<p>Ett hypotetiskt men möjligt scenario kan vara det värsta fallet\nde som väljer att inte hålla sina egna nycklar – deras Monero-fång\nstulen av en hacker eller konfiskerad av en regering med en <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://en.wikipedia.org/wiki/Executive_Order_6102\">6102-liknande\nbeställ</a>.</p>\n<p><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://blog.chainalysis.com/reports/2022-crypto-crime-report-introduction/\">Nästan\n500 miljoner USD</a> i kryptovaluta stals från centraliserade börser\n2021, och totalt 3,2 miljarder dollar stulits från användare som gav upp vårdnaden om\nmedel av en eller annan anledning. Detta är en av de största riskerna för\ncryptocurrency-användare, och fortsätter att växa i både antal fall och\nvolym när kryptovaluta vinner popularitet. Om en börs innehar nycklarna\ntill dina pengar kan dessa pengar stjälas av en hacker (eller börsen\nsig själva!) när som helst.</p>\n<p>Om du håller dina egna nycklar är de enda verkliga riskerna för stöld eller\nkonfiskering är bedrägerier och fysiska attacker, något som är mycket mindre\nsannolikt och händer vanligtvis bara högprofilerade individer eller de\nskadas av stöld eller förlust av vet-din-kund-data (KYC) från\ncentraliserade börser som länkar deras ID och adress med\nägande av kryptovaluta.</p>\n<h6\nid=\"it-prevents-exchanges-leveraging-fractional-reserve-lending-and-trading\">Det\nförhindrar börser som utnyttjar fraktionerad reservutlåning och\nhandel</h6>\n<p>En annan viktig aspekt av att hålla dina egna nycklar är en som är mindre\npersonligt och mer gemensamt. När de allra flesta användare i Monero\nhålla sina egna nycklar, utbyten är mindre kunna ljuga om mängden\nMonero de förvarar och handlar med \"papper Monero\", eftersom användare inte håller\nderas Monero i utbyten.</p>\n<p> Även om denna typ av aktivitet inte ofta bekräftas offentligt, där\när många i samhället som är oroade över att börser som Binance\nutnyttjar Monero som användarna har på börsen för att handla\nmot Monero, vilket ökar mängden Monero-shorts och orsakar priset\nundertryckning över tid.</p>\n<p>Detta beteende kan också leda till likviditetskriser där användare som\n<em>vill</em> behålla sina egna nycklar kan inte dra sig ur\nutbyte eftersom börsen har lovat mer Monero till sina användare än den\nfaktiskt har tillgänglig. Ju fler Monero-användare har sina egna nycklar och\nhålla sina Monero utanför utbyten, desto hälsosammare och mer naturligt\nmarknaden kommer teoretiskt att vara, och desto mindre risk skadlig eller girig\nbörser kan bidra till stabiliteten i Moneros pris.</p>';
+  String get knowledge250Sbkeys250Sb1250Sbtext => '<h6 id=\"it-preserves-the-privacy-that-monero-affords-users\">Det bevarar\nintegriteten som Monero ger användarna</h6>\n<p>En av de mest missförstådda aspekterna av självvård i\nMonero är att om du inte har dina egna nycklar, vinner du lite eller ingen\ndra nytta av den sekretess som Monero erbjuder. Som avsändare av en transaktion\nhar full insyn i den verkliga utgiften, beloppet och mottagaradressen,\nom du inte är den som skickar transaktionen och i stället lämna det till\nen börs eller vårdnadshavare har de <em>full</em> insyn i\nhur du spenderar din Monero.</p>\n<p> Tack och lov, efter att de har skickat pengarna garanterar Moneros integritet\nsparka in och ge starkt \"framåt-sekretess\", men det kommer att vara tydligt\nbörsen eller förvaringsinstitutet dit du skickade medlen och hur mycket du skickade\ninitialt.</p>\n<h6 id=\"it-enables-the-incredible-censorship-resistance-of-monero\">Det\nmöjliggör det otroliga censurmotståndet hos Monero</h6>\n<p>En av de grundläggande aspekterna av Monero är att möjliggöra\ncensurbeständiga transaktioner – så att du kan göra transaktioner\nsom kanske eller kanske inte godkänns av \"dem\", oavsett vad de försöker\ngöra för att stoppa dig. Medan behovet av censur-motstånd kan vara lite\nförlorade på de av oss i \"fria\" länder, den snabba glidningen mot\nauktoritarism och politiskt förfall i många delar av världen är\ngör det mer uppenbart för varje dag att vi behöver ett sätt att handla med\neller utan statligt godkännande.</p>\n<p>Om du inte har dina egna nycklar, men en regering eller tillsynsmyndighet\nkan enkelt tvinga en börs eller förvaringsinstitut att svartlista dina pengar, beslagta\ndem, eller censurera transaktioner till specifika adresser. Det här är redan\nsker i stort sett på grund av sanktioner på statlig nivå idag, och kommer att bli en\nökande tema som regeringar och tillsynsmyndigheter inser att utbyten\noch vårdnadshavare är den enklaste vägen mot kontroll över Monero\'s\nanvändning.</p>\n<p>Den dag kan också komma då en regering kommer att förbjuda självvård\nav Monero, och om du ännu inte har dragit tillbaka din Monero från ett utbyte\neller vårdnadshavare som du kanske aldrig kan.</p>\n<h6 id=\"it-prevents-simple-theft-or-confiscation-of-your-monero\">Det\nförhindrar enkel stöld eller konfiskering av din Monero</h6>\n<p>Ett hypotetiskt men möjligt scenario kan vara det värsta fallet\nde som väljer att inte hålla sina egna nycklar – deras Monero-fång\nstulen av en hacker eller konfiskerad av en regering med en <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://en.wikipedia.org/wiki/Executive_Order_6102\">6102-liknande\nbeställ</a>.</p>\n<p><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://blog.chainalysis.com/reports/2022-crypto-crime-report-introduction/\">Nästan\n500 miljoner USD</a> i kryptovaluta stals från centraliserade börser\n2021, och totalt 3,2 miljarder dollar stulits från användare som gav upp vårdnaden om\nmedel av en eller annan anledning. Detta är en av de största riskerna för\ncryptocurrency-användare, och fortsätter att växa i både antal fall och\nvolym när kryptovaluta vinner popularitet. Om en börs innehar nycklarna\ntill dina pengar kan dessa pengar stjälas av en hacker (eller börsen\nsig själva!) när som helst.</p>\n<p>Om du håller dina egna nycklar är de enda verkliga riskerna för stöld eller\nkonfiskering är bedrägerier och fysiska attacker, något som är mycket mindre\nsannolikt och händer vanligtvis bara högprofilerade individer eller de\nskadas av stöld eller förlust av vet-din-kund-data (KYC) från\ncentraliserade börser som länkar deras ID och adress till\nägande av kryptovaluta.</p>\n<h6\nid=\"it-prevents-exchanges-leveraging-fractional-reserve-lending-and-trading\">Det\nförhindrar börser som utnyttjar fraktionerad reservutlåning och\nhandel</h6>\n<p>En annan viktig aspekt av att hålla dina egna nycklar är en som är mindre\npersonligt och mer gemensamt. När de allra flesta användare i Monero\nhålla sina egna nycklar, utbyten är mindre kunna ljuga om mängden\nMonero de förvarar och handlar med \"papper Monero\", eftersom användare inte håller\nderas Monero i utbyten.</p>\n<p> Även om denna typ av aktivitet inte ofta bekräftas offentligt, där\när många i samhället som är oroade över att börser som Binance\nutnyttjar Monero som användarna har på börsen för att handla\nmot Monero, vilket ökar mängden Monero-shorts och orsakar priset\nundertryckning över tid.</p>\n<p>Detta beteende kan också leda till likviditetskriser där användare som\n<em>vill</em> behålla sina egna nycklar kan inte dra sig ur\nutbyte eftersom börsen har lovat mer Monero till sina användare än den\nfaktiskt har tillgänglig. Ju fler Monero-användare har sina egna nycklar och\nhålla sina Monero utanför utbyten, desto hälsosammare och mer naturligt\nmarknaden kommer teoretiskt att vara, och desto mindre risk skadlig eller girig\nbörser kan bidra till stabiliteten i Moneros pris.</p>';
 
   @override
   String get knowledge250Sbkeys250Sb1250Sbtitle => 'Varför är det viktigt att ha dina egna nycklar?';
@@ -3563,7 +3563,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbmining250Sb3250Sbtitle => 'En rolig liknelse';
 
   @override
-  String get knowledge250Sbmining250Sb4250Sbtext => 'Var passar RandomX in i allt detta? Den försöker jämna ut fördelarna med ASIC:er genom att göra ASIC:er mycket svåra att göra. Den gör detta genom att kräva att gruvarbetare skapar och kör slumpmässig kod istället för hash baserad på en algoritm.<br/><br/>\nDet kan vara förvirrande hur detta faktiskt hjälper någonting, så låt oss gå tillbaka till vår skrivaranalogi. Kommer du ihåg vad som hände när designen ändrades? De gamla monsterskrivarna blir föråldrade varje kväll, och nya måste utvecklas med den nya designen i åtanke. Vad skulle hända om varje ny lott var tvungen att följa en ny designstandard för varje ny jackpott? <br/><br/>\nAtt skapa en ny monsterskrivare skulle bli otroligt svårt. Du kan inte bara planera på en biljettdesign längre. Eftersom designen är slumpmässig måste tillverkarna av monsterskrivare lägga till färgfunktioner, sätt att skriva ut olika bokstäver och kanter och former med mera. Kort sagt, maskinen de slutade uppfinna skulle vara en vanlig, vanlig skrivare. Precis som alla andra har.<br/><br/>\nGenom att helt enkelt implementera denna slumpmässighet i biljettdesignen minskade vi avsevärt den stora fördelen från specialiserad hårdvara. RandomX gör samma sak, men med mining.<br/><br/>\nPå detta sätt minimeras fördelarna som ett fåtal utvalda välbärgade människor får, som om de investerar i att skapa \"ASIC\" för att bryta RandomX, kommer de faktiskt bara att uppfinna starkare, bättre processorer, vilket gynnar världen i stort.<br/>[] X1455X]\nDet betyder att den lilla killen med sina 20 biljettskrivare är tillbaka i spelet. Han kan fortfarande ha en svårare tid eftersom dessa rika individer fortfarande kan köpa fler skrivare än han, men åtminstone nu är han inte utklassad av storleksordningar bara från en maskin. Han är konkurrenskraftig på sitt lilla sätt.<br/><br/>\nEftersom vi vet att även den lilla killen kan vara konkurrenskraftig i mining Monero, uppmuntrar vi alla att ge det en snurr, antingen i Monero GUI-plånboken, som har stöd för solo-mining, eller genom att ladda ner programvara som underhålls av communityn. Det är enkelt, konkurrenskraftigt och öppet för alla.';
+  String get knowledge250Sbmining250Sb4250Sbtext => 'Var passar RandomX in i allt detta? Den försöker jämna ut fördelarna med ASIC:er genom att göra ASIC:er mycket svåra att göra. Den gör detta genom att kräva att gruvarbetare skapar och kör slumpmässig kod istället för hash baserad på en algoritm.<br/><br/>\nDet kan vara förvirrande hur detta faktiskt hjälper någonting, så låt oss gå tillbaka till vår skrivaranalogi. Kommer du ihåg vad som hände när designen ändrades? De gamla monsterskrivarna blir föråldrade varje kväll, och nya måste utvecklas med den nya designen i åtanke. Vad skulle hända om varje ny lott var tvungen att följa en ny designstandard för varje ny jackpott? <br/><br/>\nAtt skapa en ny monsterskrivare skulle bli otroligt svårt. Du kan inte bara planera på en biljettdesign längre. Eftersom designen är slumpmässig måste tillverkarna av monsterskrivare lägga till färgfunktioner, sätt att skriva ut olika bokstäver och kanter och former med mera. Kort sagt, maskinen de slutade uppfinna skulle vara en vanlig, vanlig skrivare. Precis som alla andra har.<br/><br/>\nGenom att helt enkelt implementera denna slumpmässighet i biljettdesignen minskade vi avsevärt den stora fördelen från specialiserad hårdvara. RandomX gör samma sak, men med mining.<br/><br/>\nPå så sätt minimeras fördelarna som ett fåtal utvalda välbärgade människor får, som om de investerar i att skapa \"ASICs\" för att bryta RandomX, kommer de faktiskt bara att uppfinna starkare, bättre processorer, vilket gynnar världen i stort.<br/>[] X1455X]\nDet betyder att den lilla killen med sina 20 biljettskrivare är tillbaka i spelet. Han kan fortfarande ha det svårare eftersom dessa rika individer fortfarande kan köpa fler skrivare än han, men nu är han åtminstone inte utklassad av storleksordningar bara från en maskin. Han är konkurrenskraftig på sitt lilla sätt.<br/><br/>\nEftersom vi vet att även den lilla killen kan vara konkurrenskraftig i mining Monero, uppmuntrar vi alla att ge det en snurr, antingen i Monero GUI-plånboken, som har stöd för solo-mining, eller genom att ladda ner programvara som underhålls av communityn. Det är enkelt, konkurrenskraftigt och öppet för alla.';
 
   @override
   String get knowledge250Sbmining250Sb4250Sbtitle => 'RandomX';
@@ -3587,7 +3587,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbmyths250Sb1250Sbtitle => 'Monero kommer att möta regulatorisk granskning långt bortom andra kryptovalutor på grund av sitt engagemang för integritet och anonymitet i sina transaktioner.';
 
   @override
-  String get knowledge250Sbmyths250Sb10250Sbtext => '<p>Ett vanligt klagomål om de flesta mynt som är mindre än Bitcoin är hur lätt det är att teoretiskt sett 51 % attackera dem. Faktum är att flera små mynt, såsom Vertcoin, blev framgångsrikt attackerade med 51 % flera gånger.</p>\n\n<p>De flesta av dessa problem uppstår från webbplatsen https://www.crypto51.app/ som visar hur mycket det skulle kosta att hyra hashratet från NiceHash, en plattform som hyr ut gruvhårdvara för molnbrytning. Vid ett tillfälle listade den här webbplatsen en attack mot Monero som kostade cirka \$6 300 för en timme. Även om det här priset kan få många av oss att stirra, är det inte utanför möjligheterna för ett rikt företag eller individ att kunna genomföra en ihållande attack på nätverket.</p>\n\n<p>Det här är tack och lov inte längre fallet. En skarpögd läsare kommer att se att webbplatsen faktiskt har tagit bort Monero från sin ansökan, på grund av införandet av RandomX. Än en gång uppmanas läsaren att läsa <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">vår artikel om RandomX för detaljer</a>, men på grund av algoritmens CPU-vänliga karaktär kan inte längre företag som NiceHash bara köpa ASIC för Monero att hyra ut till vem som helst är villig att hyra dem. Nu måste de konkurrera med processorer, som är mycket vanligare och lättare att få tag på.</p>\n\n<p>Den exakta kostnaden för hårdvara till 51 % attack mot Monero-nätverket har inte beräknats, och är faktiskt inte lika lätt att beräkna som andra mynt med ASICs period.</p>';
+  String get knowledge250Sbmyths250Sb10250Sbtext => '<p>Ett vanligt klagomål om de flesta mynt som är mindre än Bitcoin är hur lätt det är att teoretiskt sett 51 % attackera dem. Faktum är att flera små mynt, såsom Vertcoin, blev framgångsrikt attackerade med 51 % flera gånger.</p>\n\n<p>De flesta av dessa problem uppstår från webbplatsen https://www.crypto51.app/ som visar hur mycket det skulle kosta att hyra hashratet från NiceHash, en plattform som hyr ut gruvhårdvara för molnbrytning. Vid ett tillfälle listade den här webbplatsen en attack på Monero som kostade cirka \$6 300 för en timme. Även om det här priset kan få många av oss att stirra, är det inte utanför möjligheterna för ett rikt företag eller individ att kunna genomföra en ihållande attack på nätverket.</p>\n\n<p>Det här är tack och lov inte längre fallet. En skarpögd läsare kommer att se att webbplatsen faktiskt har tagit bort Monero från sin ansökan, på grund av införandet av RandomX. Än en gång uppmanas läsaren att läsa <a class=\"next-link\" href=\"/knowledge/monero-mining-randomx\" target=\"_blank\">vår artikel om RandomX för detaljer</a>, men på grund av algoritmens CPU-vänliga karaktär kan inte längre företag som NiceHash bara köpa ASIC för Monero att hyra ut till vem som helst är villig att hyra dem. Nu måste de konkurrera med processorer, som är mycket vanligare och lättare att få tag på.</p>\n\n<p>Den exakta kostnaden för hårdvara till 51 % attack mot Monero-nätverket har inte beräknats, och är faktiskt inte lika lätt att beräkna som andra mynt med ASICs period.</p>';
 
   @override
   String get knowledge250Sbmyths250Sb10250Sbtitle => 'Är inte Monero lätt 51% attackerad?';
@@ -3647,7 +3647,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbmyths250Sb5250Sbtitle => 'Har inte Monero mycket höga transaktionsavgifter?';
 
   @override
-  String get knowledge250Sbmyths250Sb6250Sbtext => 'Om igen. Bulletproofs drog ner detta drastiskt. Monero-transaktioner är fortfarande större än Bitcoin-transaktioner, men nu bara cirka åtta gånger, snarare än de ungefär femtio gångerna som det var tidigare. Men det finns ett annat sätt att se på detta också. Bitcoin har vissa sätt att uppnå integritet, vanligtvis genom mixers och specialiserade plånböcker som Wasabi, Samourai och andra CoinJoin-relaterade system. När du jämför kostnaderna för att blanda med andra Bitcoin-utgångar, adresshoppning och upprätthålla korrekt utdatadistribution, är den totala kostnaden, både i storlek och avgifter, större än om en användare bara skulle använda Monero. Så ja, transaktioner med nakna Bitcoin är mindre, men att uppnå någon form av integritet (som är mycket svagare än Moneros oavsett) skulle ta mer plats på Bitcoin än på Monero.';
+  String get knowledge250Sbmyths250Sb6250Sbtext => 'Igen. Bulletproofs drog ner detta drastiskt. Monero-transaktioner är fortfarande större än Bitcoin-transaktioner, men nu bara cirka åtta gånger, snarare än de ungefär femtio gångerna som det var tidigare. Men det finns ett annat sätt att se på detta också. Bitcoin har vissa sätt att uppnå integritet, vanligtvis genom mixers och specialiserade plånböcker som Wasabi, Samourai och andra CoinJoin-relaterade system. När du jämför kostnaderna för att blanda med andra Bitcoin-utgångar, adresshoppning och upprätthålla korrekt utdatadistribution, är den totala kostnaden, både i storlek och avgifter, större än om en användare bara skulle använda Monero. Så ja, transaktioner med nakna Bitcoin är mindre, men att uppnå någon form av integritet (som är mycket svagare än Moneros oavsett) skulle ta mer plats på Bitcoin än på Monero.';
 
   @override
   String get knowledge250Sbmyths250Sb6250Sbtitle => 'En Monero-transaktion är många gånger större än en Bitcoin-transaktion.';
@@ -3659,7 +3659,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbmyths250Sb7250Sbtitle => 'Monero har hårda gafflar ganska ofta. Betyder inte detta att det är centraliserat?';
 
   @override
-  String get knowledge250Sbmyths250Sb8250Sbtext => '<p>Detta är inte, och var aldrig, myntet av Riccardo \"fluffypony\" Spagni. Han klarade det inte ens. Det startades av en pseudonym person känd som thankful_for_today, och det finns en mycket intressant historia om det för en annan gång. Fluffypony blev känd som både en kärngruppsmedlem/lead underhållare, eftersom han gav mycket tid och resurser för att hjälpa myntet att växa, såväl som genom att resa och tala vid konferenser. Med dessa två saker kombinerade blev han ett slags inofficiellt ansikte för Monero, och var vanligtvis porten genom vilken folk hittade oss. På grund av den hemska VD-kulturen som var genomgående i kryptovalutascenen, antog de att han var grundaren och ledaren för Monero, vilket båda inte är sant.</p>\n\n<p>I dag är fluffypony fortfarande en del av kärnteamet, men är inte längre den ledande underhållaren av kodbasen och har tagit ett steg tillbaka för att arbeta med sina egna personliga projekt. Monero fortsätter fint.</p>';
+  String get knowledge250Sbmyths250Sb8250Sbtext => '<p>Detta är inte, och var aldrig, myntet av Riccardo \"fluffypony\" Spagni. Han klarade det inte ens. Det startades av en pseudonym person känd som thankful_for_today, och det finns en mycket intressant historia om det för en annan gång. Fluffypony blev känd som både en kärngruppsmedlem/lead underhållare, eftersom han gav mycket tid och resurser för att hjälpa myntet att växa, såväl som genom att resa och tala vid konferenser. Med dessa två saker kombinerade blev han ett slags inofficiellt ansikte för Monero, och var vanligtvis porten genom vilken folk hittade oss. På grund av den hemska VD-kulturen som var genomgående i kryptovalutascenen, antog de att han var grundaren och ledaren för Monero, vilket båda inte är sant.</p>\n\n<p>I dag är fluffypony fortfarande en del av kärnteamet, men är inte längre den ledande underhållaren av kodbasen och har tagit ett steg tillbaka för att arbeta med sina egna personliga projekt. Monero fortsätter bra.</p>';
 
   @override
   String get knowledge250Sbmyths250Sb8250Sbtitle => 'Det här är fluffyponys personliga mynt!';
@@ -3671,7 +3671,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbmyths250Sb9250Sbtitle => 'Majoriteten av åtagandena sedan 2017 har kommit från en individ som kallas moneromooo-monero';
 
   @override
-  String get knowledge250Sbmyths250Sbdescription => 'En hel del vanlig kritik mot Monero som antingen är föråldrad eller felaktig, medan andra presenterar en mycket snäv syn på problemet i fråga. I den här artikeln hoppas vi kunna sätta rekordet för denna kritik.';
+  String get knowledge250Sbmyths250Sbdescription => 'En hel del vanlig kritik mot Monero som antingen är föråldrad eller felaktig, medan andra presenterar en mycket snäv syn på problemet i fråga. I den här artikeln hoppas vi kunna sätta rekord för denna kritik.';
 
   @override
   String get knowledge250Sbmyths250Sbtitle => 'Topp 15 Monero-myter och bekymmer avslöjas';
@@ -3722,7 +3722,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbnodes250Sb4250Sbtitle => 'Vilka integritetsgarantier finns fortfarande när du använder en fjärrnod?';
 
   @override
-  String get knowledge250Sbnodes250Sb5250Sbtext => '<p>Även om ämnet ligger lite utanför ramen för den här artikeln, ville jag ta upp en unik typ av plånbok i Monero – lätta plånböcker. Namnet light wallet kommer från det faktum att din plånbok (på din telefon eller dator) inte behöver utföra någon blockchain-synkronisering, vilket gör upplevelsen snabbare och mer flytande.</p>\n<p>Men plånböcker som denna kommer med en allvarlig kompromiss med sekretess för tillfället – din plånbok skickar den privata vynyckeln till fjärrservern du använder (som standarden i MyMonero), vilket ger fjärrservern full insyn i alla mottagna pengar sedan du skapade din plånbok (och tills du slutar använda den plånboken eller fröet). Detta minskar integriteten du får från nodoperatören drastiskt och bör behandlas med försiktighet.</p>\n<p>Tack och lov arbetar Monero-communityt på att förbättra programvaran du kan använda för att vara värd för din egen lätta plånboksserver (LWS), som gör att du kan ha snabb synkronisering utan att lita på en tredje part med dina privata vynycklar – när du kommer att köra programvaran dit din plånbok skickar de privata vynycklarna!</p>\n<p>För mer om den anpassade lätta plånboksservern, se Github-förrådet nedan:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/vtnerd/monero-lws\">monero-lws</a></li>\n</ul>';
+  String get knowledge250Sbnodes250Sb5250Sbtext => '<p>Även om ämnet ligger lite utanför ramen för den här artikeln, ville jag ta upp en unik typ av plånbok i Monero – lätta plånböcker. Namnet light wallet kommer från det faktum att din plånbok (på din telefon eller dator) inte behöver utföra någon blockchain-synkronisering, vilket gör upplevelsen snabbare och mer flytande.</p>\n<p>Men plånböcker som denna kommer med en allvarlig sekretessavvägning för nu – din plånbok skickar den privata vynyckeln till fjärrservern du använder (som standarden i MyMonero), vilket ger fjärrservern full insyn i alla mottagna pengar sedan du skapade din plånbok (och tills du slutar använda den plånboken eller fröet). Detta minskar integriteten du får från nodoperatören drastiskt och bör behandlas med försiktighet.</p>\n<p>Tack och lov arbetar Monero-communityt på att förbättra programvaran du kan använda för att vara värd för din egen lätta plånboksserver (LWS), som gör att du kan ha snabb synkronisering utan att lita på en tredje part med dina privata vynycklar – när du kommer att köra programvaran dit din plånbok skickar de privata vynycklarna!</p>\n<p>För mer om den anpassade lätta plånboksservern, se Github-förrådet nedan:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/vtnerd/monero-lws\">monero-lws</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbnodes250Sb5250Sbtitle => 'Vad sägs om \"lätta plånböcker\" som MyMonero?';
@@ -3752,13 +3752,13 @@ class I18nSv extends I18n {
   String get knowledge250Sbp2pool250Sb0250Sbtext => '<p>Ett av kärnmålen i Monero-projektet är att möjliggöra ett rättvist, decentraliserat och säkert nätverk genom nya och innovativa metoder för proof-of-work (PoW) mining, det huvudsakliga sättet att säkra kryptovalutanätverk idag.[ X230X]\n\n<p>Medan en unik gruvalgoritm <a class=\"next-link\" target=\"_blank\" href=\"/knowledge/monero-mining-randomx\">som RandomX</a> är extremt viktig för detta mål eftersom den hjälper till att säkerställa att alla som har en dator kan bidra med en hel del till säkerheten i nätverket, men RandomX löser inte problemen som kan uppstå på grund av poolbrytning. Poolutvinning är det i särklass vanligaste sättet att bryta kryptovalutor idag, inklusive Monero, men tack och lov förändrar uppkomsten av p2pool-mining det snabbt.</p>';
 
   @override
-  String get knowledge250Sbp2pool250Sb1250Sbtext => '<p>Pool mining är ett sätt för gruvarbetare att dela på uppgiften att försöka lösa ett block på nätverket och sedan dela belöningarna jämnt för alla block som poolen hittar. Även om detta hjälper enormt att jämna ut frekvensen med vilken gruvarbetare får betalt jämfört med att bryta Monero enbart, är det inte utan allvarliga centraliseringsproblem.</p>\n\n<p>När varje gruvarbetare bidrar med arbete till poolen, ger de upp kontrollen över allt arbete de gör och blockeringar som de hittar till själva poolen, och litar på att poolen ärligt och rättvist kommer att dela belöningarna mellan alla gruvarbetare baserat på mängden arbete var och en har gjort. Om allt går bra samlar pooloperatören in arbetet från alla gruvarbetare, skickar det till nätverket och delar lika på belöningarna.</p>';
+  String get knowledge250Sbp2pool250Sb1250Sbtext => '<p>Pool mining är ett sätt för gruvarbetare att dela på uppgiften att försöka lösa ett block på nätverket och sedan dela belöningarna jämnt för alla block som poolen hittar. Även om detta hjälper enormt att jämna ut frekvensen med vilken gruvarbetare får betalt jämfört med att bryta Monero enbart, är det inte utan allvarliga centraliseringsproblem.</p>\n\n<p>När varje gruvarbetare bidrar med arbete till poolen, ger de upp kontrollen över allt arbete de gör och blockeringar som de hittar till själva poolen, och litar på att poolen ärligt och rättvist kommer att dela belöningarna mellan alla gruvarbetare baserat på mängden arbete var och en har gjort. Om allt går bra samlar pooloperatören in arbetet från alla gruvarbetare, skickar in det till nätverket och delar lika på belöningarna.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb1250Sbtitle => 'Vad är pool mining?';
 
   @override
-  String get knowledge250Sbp2pool250Sb2250Sbtext => '<p>Tyvärr är detta helt beroende av förtroende och gör det möjligt för pooloperatören att göra otrevliga saker med det arbete som utförs av gruvarbetare. Pooloperatören kan använda det arbete som görs för att attackera nätverket, försöka dubbla pengar (om poolen är tillräckligt stor), eller helt enkelt använda det arbete som utförs av gruvarbetarna för att betala sig själva och aldrig belöna gruvarbetare ordentligt för deras arbete .</p>\n\n<p>Den största risken för nätverket är att en pool (eller flera pooler arbetar tillsammans) som har mer än 51 % av nätverkens hashrate under sin kontroll, eftersom de skulle kunna använda detta för att fuska och spendera pengar två gånger (en dubbelutgift) attack) eller försök att ändra reglerna för nätverket.</p>';
+  String get knowledge250Sbp2pool250Sb2250Sbtext => '<p>Tyvärr är detta helt beroende av förtroende och gör det möjligt för pooloperatören att göra otrevliga saker med det arbete som utförs av gruvarbetare. Pooloperatören kan använda det arbete som görs för att attackera nätverket, försöka dubbla pengar (om poolen är tillräckligt stor), eller helt enkelt använda det arbete som utförs av gruvarbetarna för att betala sig själva och aldrig belöna gruvarbetare ordentligt för deras arbete .</p>\n\n<p>Den största risken för nätverket är att en pool (eller flera pooler arbetar tillsammans) som har mer än 51 % av nätverkens hashrate under sin kontroll, eftersom de skulle kunna använda detta för att fuska och spendera pengar två gånger (en dubbelutgift attack) eller försök att ändra reglerna för nätverket.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb2250Sbtitle => 'Vad är problemet med poolbrytning?';
@@ -3770,13 +3770,13 @@ class I18nSv extends I18n {
   String get knowledge250Sbp2pool250Sb3250Sbtitle => 'Vad är p2pool?';
 
   @override
-  String get knowledge250Sbp2pool250Sb4250Sbtext => '<p>I p2pool finns det ingen centraliserad pool, centraliserad pooloperatör eller enskild person som håller i pengar och delar ut utbetalningar. Allt arbete som gemensamt utförs av de som gruvdrift via p2pool kontrolleras av p2pool blockchain och andra nodoperatörer för att säkerställa att det är legitimt, och alla gruvarbetare betalas ut enligt det arbete de har gjort omedelbart när ett block hittas direkt från belöningarna i det hittade blocket.</p>\n\n<p>När gruvarbetare väljer att använda p2pool istället för en centraliserad pool tar de bort all makt och förtroende från pooloperatörer och ser till att deras arbete bidrar till nätverkets bästa och till deras egna belöningar, minskar risken för nätverksattacker, missbruk av deras arbete, eller stöld av belöningar som de är skyldiga.</p>\n\n<p>Det här hjälper dem inte bara att skydda sina egna intressen, det minskar risken att centraliserade pooler kan utgöra för Monero-nätverket som helhet. Användning av p2pool hjälper också oerhört mycket till att minska risken som nationalstater eller tillsynsmyndigheter kan utgöra för nätverkets hälsa, eftersom det inte finns några centraliserade pooloperatörer att trycka på, ingen geografisk koncentration av pooler att luta sig mot eller någon annan lätt tryckpunkt för dem att använda mot Monero.</p>';
+  String get knowledge250Sbp2pool250Sb4250Sbtext => '<p>I p2pool finns det ingen centraliserad pool, centraliserad pooloperatör eller enskild person som håller i pengar och delar ut utbetalningar. Allt arbete som gemensamt utförs av de som gruvdrift via p2pool kontrolleras av p2pool blockchain och andra nodoperatörer för att säkerställa att det är legitimt, och alla gruvarbetare betalas ut enligt det arbete de har gjort omedelbart när ett block hittas direkt från belöningarna i det hittade blocket.</p>\n\n<p>När gruvarbetare väljer att använda p2pool istället för en centraliserad pool tar de bort all makt och förtroende från pooloperatörer och ser till att deras arbete bidrar till nätverkets bästa och till deras egna belöningar, minskar risken för nätverksattacker, missbruk av deras arbete, eller stöld av belöningar som de är skyldiga.</p>\n\n<p>Det här hjälper dem inte bara att skydda sina egna intressen, det minskar risken att centraliserade pooler kan utgöra för Monero-nätverket som helhet. p2pool-användning hjälper också oerhört mycket till att minska risken som nationalstater eller tillsynsmyndigheter kan utgöra för nätverkets hälsa, eftersom det inte finns några centraliserade pooloperatörer att trycka på, ingen geografisk koncentration av pooler att luta sig mot eller någon annan lätt tryckpunkt för dem att använda mot Monero.</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb4250Sbtitle => 'Hur löser p2pool problemen med poolbrytning?';
 
   @override
-  String get knowledge250Sbp2pool250Sb5250Sbtext => '<p>Tack och lov har p2pool i Monero varit väldesignad och välbyggd och fungerar extremt bra! Den största nackdelen med p2pool-mining är dock att varje gruvarbetare som vill använda p2pool måste köra sin egen Monero-nod, vilket gör att processen att komma igång blir lite mer involverad. Men denna nod används sedan för att beräkna all information som behövs för att bygga och kontrollera block, och säkerställer att gruvarbetaren har fullständig kontroll över sitt arbete som utförs. Noden kan också fungera som en fjärrnod för gruvarbetarnas egen plånbok, bidrar till nätverket och mycket mer.</p>\n\n<p>Den andra viktiga skillnaden från centraliserad gruvdrift är att små gruvarbetare som använder p2pool kommer att ha lite mer &quot;varians&quot;, eller tid mellan utbetalningar, än en stor centraliserad pool – men det&#39;s <em> extremt</em> viktigt att notera att detta inte kommer att leda till att man tjänar mindre Monero över tid! p2pool kommer att vara lika lönsamt för även små gruvarbetare över tid som centraliserade pooler. En del av denna avvikelse kompenseras också av att p2pool har 0 % avgifter, eftersom det inte finns någon centraliserad pooloperatör som kan betala för deras tjänster!</p>';
+  String get knowledge250Sbp2pool250Sb5250Sbtext => '<p>Tack och lov har p2pool i Monero varit väldesignad och välbyggd, och fungerar extremt bra! Den största nackdelen med p2pool-mining är dock att varje gruvarbetare som vill använda p2pool måste köra sin egen Monero-nod, vilket gör att processen att komma igång blir lite mer involverad. Men denna nod används sedan för att beräkna all information som behövs för att bygga och kontrollera block, och säkerställer att gruvarbetaren har fullständig kontroll över sitt arbete som utförs. Noden kan också fungera som en fjärrnod för gruvarbetarnas egen plånbok, bidrar till nätverket och mycket mer.</p>\n\n<p>Den andra viktiga skillnaden från centraliserad gruvdrift är att små gruvarbetare som använder p2pool kommer att ha lite mer &quot;varians&quot;, eller tid mellan utbetalningar, än en stor centraliserad pool – men det&#39;s <em> extremt</em> viktigt att notera att detta inte kommer att leda till att man tjänar mindre Monero över tid! p2pool kommer att vara lika lönsamt för även små gruvarbetare över tid som centraliserade pooler. En del av denna avvikelse kompenseras också av att p2pool har 0 % avgifter, eftersom det inte finns någon centraliserad pooloperatör som kan betala för deras tjänster!</p>';
 
   @override
   String get knowledge250Sbp2pool250Sb5250Sbtitle => 'Vilka är nackdelarna?';
@@ -3788,7 +3788,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbp2pool250Sb6250Sbtitle => 'Hur kommer jag igång?';
 
   @override
-  String get knowledge250Sbp2pool250Sb7250Sbtext => '<p>Om detta har väckt din nyfikenhet kring p2pool-brytning, ta en titt nedan för ytterligare länkar och förklarare om p2pool, hur det fungerar och vad det betyder för Monero:</p>\n<ul>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool\">Den officiella Github för p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool#how-to-mine-on-p2pool\">De officiella dokumenten om att använda p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.getmonero.org/2021/10/05/p2pool-released.html\">Monero P2Pool är nu live</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://p2pool.observer/\">p2pool.observer, en sorts &quot;blockutforskare&quot; för p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/WeebDataHoarder/p2pool-compose\">Monero p2pool docker-compose</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.monerotalk.live/sergei-chernykh-on-his-development-of-p2pool-a-decentralized-xmr-mining-pool\">Sergei Chernykh: Om hans utveckling av P2Pool en decentraliserad XMR-gruvpool</a></li>\n</ul>';
+  String get knowledge250Sbp2pool250Sb7250Sbtext => '<p>Om detta har väckt din nyfikenhet kring p2pool-brytning, ta en titt nedan för några ytterligare länkar och förklarare om p2pool, hur det fungerar och vad det betyder för Monero:</p>\n<ul>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool\">Den officiella Github för p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/SChernykh/p2pool#how-to-mine-on-p2pool\">De officiella dokumenten om att använda p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.getmonero.org/2021/10/05/p2pool-released.html\">Monero P2Pool är nu live</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://p2pool.observer/\">p2pool.observer, en sorts &quot;blockutforskare&quot; för p2pool</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://github.com/WeebDataHoarder/p2pool-compose\">Monero p2pool docker-compose</a></li>\n<li><a class=\"next-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.monerotalk.live/sergei-chernykh-on-his-development-of-p2pool-a-decentralized-xmr-mining-pool\">Sergei Chernykh: Om hans utveckling av P2Pool en decentraliserad XMR-gruvpool</a></li>\n</ul>';
 
   @override
   String get knowledge250Sbp2pool250Sb7250Sbtitle => 'Hur kan jag lära mig mer?';
@@ -3803,7 +3803,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbpractices250Sb0250Sbtext => '<p>Många användare kan bli chockade när de får veta att experter tror att det är möjligt att använda en kryptovaluta felaktigt. Beroende på vad en användare försvarar sig mot, finns det vissa steg och försiktighetsåtgärder som måste vidtas för att bevara integriteten, undvika bedrägerier och säkerställa korrekt och snabb leverans av transaktioner. Lyckligtvis har Monero-utvecklarna gjort allt de kan för att ställa in sunda standardinställningar i dessa områden, så användare som använder plånboksmjukvaran som den är kommer att vara säkra större delen av tiden. Som sagt, vi skulle vilja ta lite tid att titta på några fall där det kan vara bra att vara lite mer eftertänksam i dina utgifter.</p>';
 
   @override
-  String get knowledge250Sbpractices250Sb1250Sbtext => '<p>Det första och största sättet att hålla din kryptovaluta säker och säker är att skriva ner ditt Monero-mnemonikfrö, vilket är en kort ordlista som visas när du först skapar din plånbok. Om du har detta frö, men din dator/telefon dör, kan du återställa din Monero. Om du inte har detta frö, och du tappar din plånbok, är din Monero förlorad och ingen kan hjälpa dig att återställa den. På samma sätt, dela inte detta frö med någon. Om de har den här ordlistan har de full åtkomst och utgiftsrätt till din Monero. Många har slarvat med att säkra sitt frö, och kommit till den skrämmande verkligheten med förlorade pengar eftersom någon har tagit dem. Vi rekommenderar att du skriver ner det. Fysiskt. Att inte lagra det digitalt, och se till att du har flera kopior på olika ställen. Det här är det viktigaste du kan göra för att säkra din Monero. SKRIV NED DITT FRÖ!</p>';
+  String get knowledge250Sbpractices250Sb1250Sbtext => '<p>Det första och största sättet att hålla din kryptovaluta säker och säker är att skriva ner ditt Monero-mnemonikfrö, vilket är en kort ordlista som visas när du först skapar din plånbok. Om du har detta frö, men din dator/telefon dör, kan du återställa din Monero. Om du inte har detta frö, och du tappar din plånbok, är din Monero förlorad och ingen kan hjälpa dig att återställa den. På samma sätt, dela inte detta frö med någon. Om de har den här ordlistan har de full åtkomst och utgiftsrätt till din Monero. Många har slarvat med att säkra sitt frö och kommit till den skrämmande verkligheten med förlorade pengar eftersom någon har tagit dem. Vi rekommenderar att du skriver ner det. Fysiskt. Att inte lagra det digitalt, och se till att du har flera kopior på olika ställen. Det här är det viktigaste du kan göra för att säkra din Monero. SKRIV NED DITT FRÖ!</p>';
 
   @override
   String get knowledge250Sbpractices250Sb1250Sbtitle => 'SKRIV NED DITT FRÖ!';
@@ -3815,7 +3815,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbpractices250Sb2250Sbtitle => 'Dubbelkolla dina adresser';
 
   @override
-  String get knowledge250Sbpractices250Sb3250Sbtext => '<p>Varma och kalla plånböcker är vanlig terminologi inom kryptovalutaområdet, och konceptet är egentligen ganska enkelt. En varm plånbok är en som du tar fram och använder ofta. Det är \"hett\" av att vara i bakfickan. Kalla plånböcker är sådana som inte vidrörs särskilt ofta, liknar pengar på en bank. Precis som det inte är tillrådligt att ha hundratals dollar i din fysiska plånbok, men det är allmänt acceptabelt att göra det på ett bankkonto, bör användarna överväga hur mycket Monero är klokt att ha i sina heta, mobila plånböcker och hur mycket som är bäst att ha kvar. hemma på en andra, kall en. På det här sättet kommer det inte att leda till total förlust av pengar om du förlorar en telefon, stöld eller andra missöden.</p>';
+  String get knowledge250Sbpractices250Sb3250Sbtext => '<p>Varma och kalla plånböcker är vanlig terminologi inom kryptovaluta, och konceptet är egentligen ganska enkelt. En het plånbok är en som du tar fram och använder ofta. Det är \"hett\" av att vara i bakfickan. Kalla plånböcker är sådana som inte rörs särskilt ofta, liknar pengar på en bank. Precis som det inte är tillrådligt att ha hundratals dollar i din fysiska plånbok, men det är allmänt acceptabelt att göra det på ett bankkonto, bör användarna överväga hur mycket Monero är klokt att ha i sina heta, mobila plånböcker och hur mycket som är bäst att ha kvar. hemma på en andra, kall en. På det här sättet kommer det inte att leda till total förlust av pengar om du förlorar en telefon, stöld eller andra missöden.</p>';
 
   @override
   String get knowledge250Sbpractices250Sb3250Sbtitle => 'Lär dig skillnaden mellan varma och kalla plånböcker';
@@ -3932,7 +3932,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbseraphis250Sbtitle => 'Seraphis: Vad det kommer att göra för Monero';
 
   @override
-  String get knowledge250Sbsov250Sb0250Sbtext => '<p>Det är en vanlig diskussionspunkt (och en som vi tror helt och hållet) att Monero är ett bättre bytesmedel än transparensmynt, inklusive Bitcoin. Detta beror på att Moneros inneboende integritet gör det omöjligt att spåra, vilket kringgår många faror som uppstår från att ha dina pengar tillgängliga för alla intresserade parter. Dessutom låser integriteten upp fungibilitet, så att användare kan känna sig säkra på att varje Monero som byts ut mot en vara eller tjänst är likvärdig med vilken annan som helst eftersom det inte finns något associerat förflutet.</p>\n\n<p>Men hur vanlig den här diskussionspunkten är, finns det en annan som vanligtvis dyker upp bredvid den; att även om Monero kan vara det bättre växlingsmedlet, så är Bitcoin det bättre värdeförrådet. Det är inte ovanligt att höra detta, även inom Monero-communityt. Använd Monero som ett utgiftskonto och använd Bitcoin som ett sparkonto. När de pressas för resonemang tror dessa användare inte ens att det nödvändigtvis beror på att Bitcoins pris stiger i en högre takt än Moneros, utan för att Bitcoin har \"egenskaper\" som gör det som digitalt guld.</p>\n\n<p>Vi håller helt och hållet med om denna idé och skulle vilja utveckla varför i den här artikeln. Bitcoins radikala transparens gör mer för att förringa dess egenskaper som värdeförråd än vad folk inser. Det första och mest uppenbara exemplet på detta är att föreställa sig en annan allmänt accepterad värdebutik, guld, med den transparens som Bitcoin har.</p>\n\n<p>Vad skulle hända med förtroendet för guld om det var möjligt (trivialt många gånger) att koppla en mängd guld till en individ eller grupp? Skulle det fortfarande användas som det är om varje gång guld överförs är det känt att en överföring har skett, vem avsändaren och mottagaren var och vilken mängd guld som överfördes? Det tror vi inte.</p>\n\n<p>En av guldets egenskaper, som är inneboende för att det är ett verkligt objekt, är att det är naturligt privat. Man kan på konstgjord väg ge det en historia genom att brännmärka tidigare ägare till en guldtacka, men dessa kan enkelt tas bort genom att smälta ner stången och göra om den, ett alternativ som inte finns i Bitcoin.</p>\n\n<p>Denna transparens i rörelse, även om den är tillräckligt destruktiv i sig, är inte den enda bristen som guld skulle ha om all information om dess rörelse var tillgänglig för alla. Genom att känna till flödet av guld kunde vi identifiera vilka verkliga enheter som har stora lager av det. Vissa av dessa kanske inte är institutioner, utan individer utan storskaliga säkerhetsinrättningar. Det är inte ovanligt för en vanlig person att köpa guld som en skydd mot katastrof, och vi vet nu att Joe Schmoe längre ner på gatan har 10 000 dollar värda att sitta någonstans i sitt hus. Inte information som Joe förmodligen vill att världen ska veta.</p>\n\n<p>En bra butik med värde betyder inte bara att priset är stabilt eller eventuellt kommer att gå upp, det betyder att innehavaren känner sig bekväm och säker på säkerheten där de har valt att lägga sina pengar. Så, med radikal transparens, blir guld obekvämt i rörelse och potentiellt farligt i vila. Då är det bra att veta att detta bara var ett tankeexperiment och att guld inte har dessa egenskaper. Guldinvesterare kan andas ut.</p>\n\n<p>Men detsamma kan inte sägas om Bitcoin.</p>\n\n<p>Moneros integritet ger verkligen mycket bättre säkerhet både i rörelse och vila för alla som vill använda det som antingen ett checkkonto eller ett sparkonto.</p>\n\n<p>Förespråkare av Bitcoin kommer dock att hävda att Bitcoin är säkrare som värdeförråd eftersom det har ett större hashrate bakom sig, så det är mycket mindre sannolikt att kedjan kommer att skrivas om (dvs. dina mynt i lager kan tas) , och även om detta för närvarande är sant, är det ett socialt problem som kan förändras med tiden snarare än ett grundläggande tekniskt problem som sannolikt inte kommer att åtgärdas.</p>\n\n<p>Ett andra argument för Bitcoin är att det har ett fast utbud, medan Monero har en svansemission. Detta extrapoleras till att betyda att Monero har ett oändligt utbud, så det är lika olämpligt att vara ett värdelager som fiat. På ytan är detta definitivt det mer övertygande argumentet av de två, så vi skulle vilja ta upp det här i detalj.</p>\n\n<p> Även om Monero har en svansemission, är detta för att säkerställa Moneros långsiktiga säkerhet. När den sista Bitcoin har präglats kommer det inte att finnas fler blockbelöningar, vilket lämnar avgiftsmarknaden ensam för att uppmuntra gruvarbetare att säkra kedjan. Det finns redan preliminär forskning som tyder på att detta inte kommer att räcka, och kedjans säkerhet kommer att minska dramatiskt, vilket gör kedjan sårbar för 51 % attacker.</p>\n\n<p>I slutändan betyder det att du har samlat på dig ett värdelager som du aldrig kan flytta av rädsla för en attack. Om man går tillbaka till guld, skulle guld överhuvudtaget vara användbart som värdeförråd om det var omöjligt eller oöverkomligt farligt att flytta runt, sälja eller byta? Vilken nytta är otillgängligt värde? Vad hjälper ett ackumulerat lagervärde av miljontals dollar om det bara någonsin kan sitta i vad som lika gärna kan vara en bottenlös avgrund för alltid?</p>\n\n<p>Låt oss ta upp den andra delen av denna kritik snarare än att för hand vifta bort Monero-delen av problemet. Svansemissionen. Även om det är sant att det har ett syfte, kanske vissa ser blotta existensen av svansemissionen som ett bevis på att Monero inte kan vara ont om och fungerar precis som fiat. Detta är inte heller sant. Fiat har en procentuell inflationsmodell, och även denna är inte huggen i sten, utan snarare föremål för en ogenomskinlig kropp av fördärvliga människor. Detta står i kontrast till Monero, som blåser upp linjärt, vilket innebär att inflationen trender mot noll över tiden. Det betyder också att inflationen, till skillnad från fiat, enkelt kan beräknas och planeras för med säkerhet.</p>';
+  String get knowledge250Sbsov250Sb0250Sbtext => '<p>Det är en vanlig diskussionspunkt (och en som vi tror helt och hållet) att Monero är ett bättre bytesmedel än transparensmynt, inklusive Bitcoin. Detta beror på att Moneros inneboende integritet gör det omöjligt att spåra, vilket kringgår många faror som uppstår från att ha dina pengar tillgängliga för alla intresserade parter. Dessutom låser integriteten upp fungibilitet, så att användare kan känna sig säkra på att varje Monero som byts ut mot en vara eller tjänst är likvärdig med vilken annan som helst eftersom det inte finns något associerat förflutet.</p>\n\n<p>Men hur vanlig den här diskussionspunkten är, finns det en annan som vanligtvis dyker upp bredvid den; att även om Monero kan vara det bättre växlingsmedlet, så är Bitcoin det bättre värdeförrådet. Det är inte ovanligt att höra detta, även inom Monero-communityt. Använd Monero som ett utgiftskonto och använd Bitcoin som ett sparkonto. När de pressas för resonemang tror dessa användare inte ens att det nödvändigtvis beror på att Bitcoins pris stiger i en högre takt än Moneros, utan för att Bitcoin har \"egenskaper\" som gör det som digitalt guld.</p>\n\n<p>Vi håller helt och hållet med om denna idé och skulle vilja utveckla varför i den här artikeln. Bitcoins radikala transparens gör mer för att förringa dess egenskaper som värdeförråd än vad folk inser. Det första och mest uppenbara exemplet på detta är att föreställa sig en annan allmänt accepterad värdebutik, guld, med den transparens som Bitcoin har.</p>\n\n<p>Vad skulle hända med förtroendet för guld om det var möjligt (trivialt många gånger) att koppla en mängd guld till en individ eller grupp? Skulle det fortfarande användas som det är om varje gång guld överförs är det känt att en överföring har skett, vem avsändaren och mottagaren var och vilken mängd guld som överfördes? Det tror vi inte.</p>\n\n<p>En av guldets egenskaper, som är inneboende för att det är ett verkligt objekt, är att det är naturligt privat. Man kan på konstgjord väg ge det en historia genom att brännmärka tidigare ägare till en guldtacka, men dessa kan enkelt tas bort genom att smälta ner stången och göra om den, ett alternativ som inte finns i Bitcoin.</p>\n\n<p>Denna transparens i rörelse, även om den är tillräckligt destruktiv i sig, är inte den enda bristen som guld skulle ha om all information om dess rörelse var tillgänglig för alla. Genom att känna till flödet av guld kunde vi identifiera vilka verkliga enheter som har stora lager av det. Vissa av dessa kanske inte är institutioner, utan individer utan storskaliga säkerhetsinrättningar. Det är inte ovanligt för en vanlig person att köpa guld som en skydd mot katastrof, och vi vet nu att Joe Schmoe längre ner på gatan har 10 000 dollar värda att sitta någonstans i sitt hus. Inte information som Joe förmodligen vill att världen ska veta.</p>\n\n<p>En bra butik med värde betyder inte bara att priset är stabilt eller eventuellt kommer att gå upp, det betyder att innehavaren känner sig bekväm och säker på säkerheten där de har valt att lägga sina pengar. Så, med radikal transparens, blir guld obekvämt i rörelse och potentiellt farligt i vila. Då är det bra att veta att detta bara var ett tankeexperiment och att guld inte har dessa egenskaper. Guldinvesterare kan andas ut.</p>\n\n<p>Men detsamma kan inte sägas om Bitcoin.</p>\n\n<p>Moneros integritet ger verkligen mycket bättre säkerhet både i rörelse och vila för alla som vill använda det som antingen ett checkkonto eller ett sparkonto.</p>\n\n<p>Förespråkare av Bitcoin kommer dock att hävda att Bitcoin är säkrare som värdeförråd eftersom det har ett större hashrate bakom sig, så kedjan är mycket mindre sannolikt att skrivas om (dvs. dina mynt i lager kan tas) , och även om detta för närvarande är sant, är det ett socialt problem som kan förändras med tiden snarare än ett grundläggande tekniskt problem som sannolikt inte kommer att åtgärdas.</p>\n\n<p>Ett andra argument för Bitcoin är att det har ett fast utbud, medan Monero har en svansutsläpp. Detta extrapoleras till att betyda att Monero har ett oändligt utbud, så det är lika olämpligt att vara ett värdelager som fiat. På ytan är detta definitivt det mer övertygande argumentet av de två, så vi skulle vilja ta upp det här i detalj.</p>\n\n<p> Även om Monero har en svansemission, är detta för att säkerställa Moneros långsiktiga säkerhet. När den sista Bitcoin har präglats kommer det inte att finnas fler blockbelöningar, vilket lämnar avgiftsmarknaden ensam för att uppmuntra gruvarbetare att säkra kedjan. Det finns redan preliminär forskning som tyder på att detta inte kommer att räcka, och kedjans säkerhet kommer att minska dramatiskt, vilket gör kedjan sårbar för 51 % attacker.</p>\n\n<p>I slutändan betyder detta att du har samlat på dig ett värdelager som du aldrig kan flytta av rädsla för en attack. Om man går tillbaka till guld, skulle guld överhuvudtaget vara användbart som värdeförråd om det var omöjligt eller oöverkomligt farligt att flytta runt, sälja eller byta? Vilken nytta är otillgängligt värde? Vad hjälper ett ackumulerat lagervärde av miljoner dollar om det bara någonsin kan sitta i vad som lika gärna kan vara en bottenlös avgrund för alltid?</p>\n\n<p>Låt oss ta itu med den andra delen av denna kritik istället för att för hand vifta bort Monero-delen av problemet. Svansemissionen. Även om det är sant att det har ett syfte, kanske vissa ser blotta existensen av svansemissionen som ett bevis på att Monero inte kan vara ont om och fungerar precis som fiat. Detta är inte heller sant. Fiat har en procentbaserad inflationsmodell, och även denna är inte huggen i sten, utan snarare föremål för en ogenomskinlig kropp av korrupta människor. Detta står i kontrast till Monero, som blåser upp linjärt, vilket innebär att inflationen trender mot noll över tiden. Det betyder också att inflationen, till skillnad från fiat, enkelt kan beräknas och planeras för med säkerhet.</p>';
 
   @override
   String get knowledge250Sbsov250Sbdescription => 'XMR är det bättre utbytesmedlet, men BTC är det bättre värdeförrådet? Vi håller inte med. BTC:s transparens gör mer för att förringa dess egenskaper som värdeförråd än vad folk inser.';
@@ -3950,7 +3950,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbstealth250Sbtitle => 'Hur Monero Stealth-adresser skyddar din identitet';
 
   @override
-  String get knowledge250Sbsubaddresses250Sb0250Sbtext => '<p>Monero har alltid hittat innovativa sätt att lösa svåra integritetsproblem. Ofta leder dessa innovationer till andra innovationer, och ibland kan dessa resulterande teknologier till och med användas för användningsfall som inte tidigare övervägts. Ingenstans exemplifieras detta mer än i fallet med Moneros subadressteknologi.</p>\n\n<p>Tänk på ett hypotetiskt integritetsproblem, där användning av en adress över flera plattformar från till synes orelaterade personer kan leda till länkning och deanonymisering av nämnda folk. Enkelt uttryckt, om du var en person som hette Billy Joe Bob och du sålde äpplen för Bitcoin, kan du lägga upp din Bitcoin-adress på en offentlig plats så att kunderna kan betala dig. Låt oss säga att adressen börjar med den alfanumeriska strängen 7XybV3... Men om man slänger bort den uppenbara integritetsrisken att någon kan kontrollera ditt Bitcoin-saldo och se hur mycket du har sålt, finns det en andra, inte ofta omtalad integritetsrisk. Låt oss säga att du också var en underjordisk hacker som hette l33tz0r. Du gör visselblåsning, berättar för en intet ont anande befolkning om regeringskorruption, och det är absolut nödvändigt att du håller din identitet hemlig. Du accepterar Bitcoin-donationer för ditt arbete och lägger upp adressen på ett offentligt forum. Det är samma adress som du tar emot pengar från dina Apple-kunder. 7XybV3... one.</p>\n\n<p>En enkel, men förödande deanonymiseringsattack skulle vara att använda en sökmotor på internet för att söka efter din Bitcoin-adress. Att sätta adressen till 7XybV3... i motorn ger två olika resultat. Äppelaffären och l33tz0r. Detta är tillräckligt för att länka samman de två identiteterna och deanonymisera l33tz0r, med potentiellt skrämmande konsekvenser från makthavarna.</p>\n\n<p>Det är viktigt att notera att denna attack ÄVEN är möjlig med Monero. Även om Monero döljer de flesta on-chain data, använder denna attack ingen. Den använder endast adressen, som måste delas för att ta emot betalning. Offentligt vid anonyma donationer. Detta är ett potentiellt sätt på vilket Monero-användare omedvetet kan skada sin integritet, och är också ett exempel på hur, även om Monero är toppskiktet när det gäller bevarande av integritet, är det inte skottsäkert.</p>\n\n<p>Det vanliga sättet att komma runt det här problemet var att äga flera plånböcker. Med olika adresser upplagda för varje identitet (eller användningsfall), kan de inte länkas. Men denna integritet gäller bara om användaren aldrig blandar ihop dem. Att av misstag lägga upp den felaktiga adressen skulle ha samma kopplingseffekter. Dessutom måste fröet för varje adress förvaras säkert, vilket ökar det infosec-arbete som krävs med varje ny plånbok som görs.</p>\n\n<p>Moneros lösning var subadresser. Möjligheten att skapa ett absolut enormt antal adresser under huvudadressen och använda den som ett slags frö. Varje genererad subadress kan acceptera Monero, och allt går till samma plånbok. Med denna metod är antalet identiteter som kan användas under en adress enormt samtidigt som infosec-arbetet hålls till ett minimum. Dessa adresser är inte heller matematiskt länkbara, så om inte användaren ropar sin koppling till världen, kommer en utomstående observatör att ha stora svårigheter att länka dem.</p>\n\n<p>Men ett annat intressant användningsfall uppstod från underadresser; som ett ersättningsalternativ för de allmänt hatade betalnings-ID:n.</p>\n\n<p>Betalnings-ID:n var ett sätt för säljare att identifiera vilken kund som skickade vilken betalning. Eftersom Monero-information är skymd i kedjan kan mottagaren av en transaktion inte se vilken adress som skickade den. Det betyder att om det finns varor med liknande priser och flera beställningar kan det bli omöjligt att identifiera vem som skickade vad. Betalnings-ID:n är en unik, slumpmässig sträng som genereras av handlaren och ges till kunden. Kunden lägger till detta som ett separat fält när transaktionen skickas. Denna slumpmässiga sträng placeras på blockkedjan som en del av transaktionen, och på så sätt kan handlaren identifiera och sortera igenom inkommande transaktioner.</p>\n\n<p>Denna metod var felaktig på flera sätt. För det första förringar det enhetligheten hos data i kedjan. Ytterligare, unik metadata kan få vissa transaktioner att skilja sig från mängden, vilket möjliggör heuristisk analys. Detta gäller särskilt när denna metadata inte är obligatorisk för alla. Att göra detta obligatoriskt för alla skulle dock lägga till onödigt utrymme till blockkedjan och eftersträvades inte. Dessutom, om ett betalnings-ID någonsin återanvänds av någon anledning, skulle det vara trivialt att länka två transaktioner som anslutna. Detta inträffade vanligtvis med växlingsinsättningar, och vem som helst kunde enkelt länka transaktioner som både en insättning på en börs och från en viss individ.</p>\n\n<p>För det andra, ur ett UX-perspektiv, skapar betalnings-ID:n ett andra steg som användare av kryptovaluta som kommer från andra mynt inte är vana vid, och om de glöms bort orsakar det en enorm huvudvärk för handlaren som måste identifiera dessa transaktioner på andra sätt . Detta gjordes vanligtvis genom att prata direkt med varje kund som glömde att ange betalnings-ID och bekräfta annan identifieringsinformation som bara de kunde känna till, till exempel en kombination av belopp, datum för sändning och transaktions-ID.</p>\n\n<p>Det här extra steget missades av många och det kom till en punkt där vissa börser började ta ut pengar från kunder om deras pengar måste hämtas manuellt på grund av att de glömt ett betalnings-ID. Andra biter ihop tänderna och åt de extra supportkostnaderna, men ingen var glad över det.</p>\n\n<p>Det fanns en lösning på detta, integrerade adresser, som slog ihop adressen och betalnings-ID:t till en sträng, så det gick inte att glömma, men adoptionen var ganska svag, trots fördelarna som handlare skulle ha fått av att inkludera det. </p>\n\n<p>I en intressant händelseutveckling kom subadresser in för att rädda dagen. Möjligheten att generera stora mängder subadresser per huvudadress, och identifiera vilka transaktioner som kom in i vilka subadresser, gjorde att handlare kunde göra sig av med betalnings-ID på ett elegant sätt, samtidigt som de anammade nästa generations Monero-teknik. Sedan dess har de flesta börser och handelsverktyg gått över till underadresser som det primära sättet för transaktionsidentifiering.</p>\n\n<p>Det som började som en lösning för ett integritetsproblem förvandlades till något mycket mer, vilket löste ett stort UX-problem för både handlare och kunder. Innovation föder mer innovation, som ofta kan snöa in i oväntade vinster för alla. Monero har sett detta gång på gång och lägger stor kraft på att förnya vad som är möjligt på blockkedjan. Vem vet vilka andra saker vi kan låsa upp tillsammans?</p>';
+  String get knowledge250Sbsubaddresses250Sb0250Sbtext => '<p>Monero har alltid hittat innovativa sätt att lösa svåra integritetsproblem. Ofta leder dessa innovationer till andra innovationer, och ibland kan dessa resulterande teknologier till och med användas för användningsfall som inte tidigare övervägts. Ingenstans exemplifieras detta mer än i fallet med Moneros subadressteknologi.</p>\n\n<p>Tänk på ett hypotetiskt integritetsproblem, där användning av en adress över flera plattformar från till synes orelaterade personer kan leda till länkning och deanonymisering av nämnda folk. Enkelt uttryckt, om du var en person som hette Billy Joe Bob och du sålde äpplen för Bitcoin, kan du lägga upp din Bitcoin-adress på en offentlig plats så att kunderna kan betala dig. Låt oss säga att adressen börjar med den alfanumeriska strängen 7XybV3... Men om man slänger bort den uppenbara integritetsrisken att någon kan kontrollera ditt Bitcoin-saldo och se hur mycket du har sålt, finns det en andra, inte ofta omtalad integritetsrisk. Låt oss säga att du också var en underjordisk hacker som hette l33tz0r. Du gör visselblåsning, berättar för en intet ont anande befolkning om regeringskorruption, och det är absolut nödvändigt att du håller din identitet hemlig. Du accepterar Bitcoin-donationer för ditt arbete och lägger upp adressen på ett offentligt forum. Det är samma adress som du tar emot pengar från dina Apple-kunder. 7XybV3... one.</p>\n\n<p>En enkel, men förödande deanonymiseringsattack skulle vara att använda en sökmotor på internet för att söka efter din Bitcoin-adress. Att sätta adressen till 7XybV3... i motorn ger två olika resultat. Äppelaffären och l33tz0r. Detta är tillräckligt för att länka samman de två identiteterna och deanonymisera l33tz0r, med potentiellt skrämmande konsekvenser från makthavarna.</p>\n\n<p>Det är viktigt att notera att denna attack ÄVEN är möjlig med Monero. Även om Monero döljer de flesta on-chain data, använder denna attack ingen. Den använder endast adressen, som måste delas för att ta emot betalning. Offentligt vid anonyma donationer. Detta är ett potentiellt sätt på vilket Monero-användare omedvetet kan skada sin integritet, och är också ett exempel på hur, även om Monero är toppskiktet när det gäller bevarande av integritet, är det inte skottsäkert.</p>\n\n<p>Det vanliga sättet att komma runt det här problemet var att äga flera plånböcker. Med olika adresser upplagda för varje identitet (eller användningsfall), kan de inte länkas. Men denna integritet gäller bara om användaren aldrig blandar ihop dem. Att av misstag lägga upp den felaktiga adressen skulle ha samma kopplingseffekter. Dessutom måste fröet för varje adress förvaras säkert, vilket ökar det infosec-arbete som krävs med varje ny plånbok som görs.</p>\n\n<p>Moneros lösning var subadresser. Möjligheten att skapa ett absolut enormt antal adresser under huvudadressen och använda den som ett slags frö. Varje genererad subadress kan acceptera Monero, och allt går till samma plånbok. Med denna metod är antalet identiteter som kan användas under en adress enormt samtidigt som infosec-arbetet hålls till ett minimum. Dessa adresser är inte heller matematiskt länkbara, så om inte användaren ropar sin koppling till världen, kommer en utomstående observatör att ha stora svårigheter att länka dem.</p>\n\n<p>Men ett annat intressant användningsfall uppstod från underadresser; som ett ersättningsalternativ för de allmänt hatade betalnings-ID:n.</p>\n\n<p>Betalnings-ID:n var ett sätt för säljare att identifiera vilken kund som skickade vilken betalning. Eftersom Monero-information är skymd i kedjan kan mottagaren av en transaktion inte se vilken adress som skickade den. Det betyder att om det finns varor med liknande priser och flera beställningar kan det bli omöjligt att identifiera vem som skickade vad. Betalnings-ID:n är en unik, slumpmässig sträng som genereras av handlaren och ges till kunden. Kunden lägger till detta som ett separat fält när transaktionen skickas. Denna slumpmässiga sträng placeras på blockkedjan som en del av transaktionen, och på så sätt kan handlaren identifiera och sortera igenom inkommande transaktioner.</p>\n\n<p>Denna metod var felaktig på flera sätt. För det första förringar det enhetligheten hos data i kedjan. Ytterligare, unik metadata kan få vissa transaktioner att skilja sig från mängden, vilket möjliggör heuristisk analys. Detta gäller särskilt när denna metadata inte är obligatorisk för alla. Att göra detta obligatoriskt för alla skulle dock lägga till onödigt utrymme till blockkedjan och eftersträvades inte. Dessutom, om ett betalnings-ID någonsin återanvänds av någon anledning, skulle det vara trivialt att länka två transaktioner som anslutna. Detta inträffade vanligtvis med växlingsinsättningar, och vem som helst kunde enkelt länka transaktioner som både en insättning på en börs och från en viss individ.</p>\n\n<p>För det andra, ur ett UX-perspektiv, skapar betalnings-ID:n ett andra steg som användare av kryptovaluta som kommer från andra mynt inte är vana vid, och om de glöms bort orsakar det en enorm huvudvärk för handlaren som måste identifiera dessa transaktioner på andra sätt . Detta gjordes vanligtvis genom att prata direkt med varje kund som glömde att ange betalnings-ID och bekräfta annan identifieringsinformation som bara de kunde känna till, till exempel en kombination av belopp, datum för sändning och transaktions-ID.</p>\n\n<p>Det här extra steget missades av många och det kom till en punkt där vissa börser började ta ut pengar från kunder om deras pengar måste hämtas manuellt på grund av att de glömt ett betalnings-ID. Andra biter ihop tänderna och åt de extra supportkostnaderna, men ingen var glad över det.</p>\n\n<p>Det fanns en lösning på detta, integrerade adresser, som slog ihop adressen och betalnings-ID:t till en sträng, så det gick inte att glömma, men adoptionen var ganska svag, trots fördelarna som handlare skulle ha fått av att inkludera det. </p>\n\n<p>I en intressant händelseutveckling kom subadresser in för att rädda dagen. Möjligheten att generera stora mängder subadresser per huvudadress, och identifiera vilka transaktioner som kom in i vilka subadresser, gjorde att handlare kunde göra sig av med betalnings-ID på ett elegant sätt, samtidigt som de anammade nästa generations Monero-teknik. Sedan dess har de flesta börser och handelsverktyg gått över till underadresser som det primära sättet för transaktionsidentifiering.</p>\n\n<p>Det som började som en lösning för ett integritetsproblem förvandlades till något mycket mer, vilket löste ett stort UX-problem för både handlare och kunder. Innovation föder mer innovation, som ofta kan snöa in i oväntade vinster för alla. Monero har sett detta gång på gång, och lägger stor kraft på att förnya vad som är möjligt på blockkedjan. Vem vet vilka andra saker vi kan låsa upp tillsammans?</p>';
 
   @override
   String get knowledge250Sbsubaddresses250Sbdescription => 'Monero har alltid hittat innovativa sätt att lösa svåra integritetsproblem. Ingenstans exemplifieras detta mer än i fallet med Moneros subadressteknologi.';
@@ -3974,7 +3974,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbupgrades250Sb0250Sbtext => '<p>En av de mest missförstådda delarna av Moneros strategi för att bygga en decentraliserad, integritetsbevarande och säker kryptovaluta är den roll som hårdgaffel (eller nätverksuppgraderingar) spelar.</p>\n<p>I det här inlägget går vi igenom vad hårdgafflar är, varför de är viktiga för Monero och vilken roll du kan spela i dem i framtiden.</p>';
 
   @override
-  String get knowledge250Sbupgrades250Sb1250Sbtext => '<p> Monero-communityt har förbundit sig att upprepa och förbättra projektet över tid, och det verkar som att engagemanget kokar ner till två nyckelaspekter av communityns etos:</p>\n<ol type=\"1\">\n<li><p>Monero-projektet är i slutändan mjukvara – kod – skriven av människor. Detta kan leda till ett behov av att fixa buggar, lägga till förbättringar som upptäcks eller uppfinns över tid, implementera moderniseringar av protokollet eller att helt enkelt underhålla projektet. Detta liknar på många sätt de andra programvarorna du använder (som webbläsaren du läser detta i!), som hela tiden måste uppdateras för att kunna lägga till nya funktioner och åtgärda buggar.</p></li>\n<li><p>Monero-projektet är ett sekretessverktyg och integritet är en ständigt framskridande kapprustning. De människor och grupper som inget hellre vill än att beröva världen av integritet (både ekonomiskt och personligt) förbättrar, utvecklar och uppfinner ständigt nya sätt att attackera moderna metoder för att bevara integriteten, som de som används i Monero. Eftersom privatlivets fiender hittar dessa nya tillvägagångssätt måste Monero-nätverket kunna anpassa sig och förbättras för att slå tillbaka och försvara vår rätt till ekonomisk integritet.</p></li>\n</ol>';
+  String get knowledge250Sbupgrades250Sb1250Sbtext => '<p>Monero-communityt har förbundit sig att upprepa och förbättra projektet över tid, och det verkar som att engagemanget kokar ner till två nyckelaspekter av communityns etos:</p>\n<ol type=\"1\">\n<li><p>Monero-projektet är i slutändan mjukvara – kod – skriven av människor. Detta kan leda till ett behov av att fixa buggar, lägga till förbättringar som upptäcks eller uppfinns över tid, implementera moderniseringar av protokollet eller att helt enkelt underhålla projektet. Detta liknar på många sätt de andra programvarorna du använder (som webbläsaren du läser detta i!), som hela tiden måste uppdateras för att kunna lägga till nya funktioner och fixa buggar.</p></li>\n<li><p>Monero-projektet är ett sekretessverktyg och integritet är en ständigt framskridande kapprustning. De människor och grupper som inget hellre vill än att beröva världen av integritet (både ekonomiskt och personligt) förbättrar, utvecklar och uppfinner ständigt nya sätt att attackera moderna metoder för att bevara integriteten, som de som används i Monero. Eftersom privatlivets fiender hittar dessa nya tillvägagångssätt måste Monero-nätverket kunna anpassa sig och förbättras för att slå tillbaka och försvara vår rätt till ekonomisk integritet.</p></li>\n</ol>';
 
   @override
   String get knowledge250Sbupgrades250Sb1250Sbtitle => 'Varför behöver Monero fortsätta att uppgradera nätverket?';
@@ -4058,7 +4058,7 @@ class I18nSv extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbdecentralized250Sbtext => 'Bitcoin i sig är decentraliserat, men de flesta blandningstjänster är centraliserade. Det betyder att du måste lita på dem. Vissa nyare, som Wasabi-plånboken är det dock inte.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbfungibility250Sbtext => '<p>\n                          Alla Bitcoins är inte lika och har samma värde. Vissa Bitcoins har svartlistats och blockerats av flera enheter, vilket gör dessa mynt mindre värda än resten. Om du tar emot Bitcoins som användes tidigare i olagliga syften, kan dina Bitcoins svartlistas även om du inte hade något med den illegala aktiviteten att göra. Eller, säg att en regering, arbetsgivare eller någon annan enhet bestämmer sig för att svartlista dina Bitcoins i framtiden, ungefär som de gör med frysning eller konfiskering av tillgångar. Det skulle inte finnas något du kunde göra. Eftersom en mixer bara gör det svårare att spåra dina Bitcoins, har den här kategorin markerats som &quot;inte fungibel.&quot;\n                        </p>\n\n                        <ul class=\"disc\">\n                          <li>\n                            Andreas Antonopoulos, en före detta Bitcoin Core-utvecklare som är välrespekterad i Bitcoin och andra kryptovalutagemenskaper, erkänner Bitcoin-fungibilitetsproblemet i en <a href=\"https://www.youtube.com/watch?v=ak1iojpiHpM&feature=youtu .be&t=33m9s\"> YouTube-video</a>.\n                          </li>\n                          <li>\n                            Diskussion om Bitcoin-fungibilitetsproblemet på <a href=\"https://bitcointalk.org/index.php?topic=1190707.0\"> Bitcointalk.org\n                            </a>\n                          </li>\n                        </ul>';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbfungibility250Sbtext => '<p>\n                          Alla Bitcoins är inte lika och har samma värde. Vissa Bitcoins har svartlistats och blockerats av flera enheter, vilket gör dessa mynt mindre värda än resten. Om du tar emot Bitcoins som användes tidigare i olagliga syften, kan dina Bitcoins svartlistas även om du inte hade något med den illegala aktiviteten att göra. Eller, säg att en regering, arbetsgivare eller någon annan enhet bestämmer sig för att svartlista dina Bitcoins i framtiden, ungefär som de gör med frysning eller konfiskering av tillgångar. Det skulle inte finnas något du kunde göra. Eftersom en mixer bara gör det svårare att spåra dina Bitcoins, har den här kategorin markerats som &quot;inte fungibel.&quot;\n                        </p>\n\n                        <ul class=\"skiva\">\n                          <li>\n                            Andreas Antonopoulos, en före detta Bitcoin Core-utvecklare som är välrespekterad i Bitcoin och andra kryptovalutagemenskaper, erkänner Bitcoin-fungibilitetsproblemet i en <a href=\"https://www.youtube.com/watch?v=ak1iojpiHpM&feature=youtu .be&t=33m9s\"> YouTube-video</a>.\n                          </li>\n                          <li>\n                            Diskussion om Bitcoin-fungibilitetsproblemet på <a href=\"https://bitcointalk.org/index.php?topic=1190707.0\"> Bitcointalk.org\n                            </a>\n                          </li>\n                        </ul>';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbbtc250Sbprivate250Sbtext => '<p>\n                          Alla Bitcoin-transaktioner är synliga på blockkedjan och det finns en <a href=\"http://www.bitcoinrichlist.com/top100\"> Bitcoin-rik lista</a>, så Bitcoin är inte privat. Bitcoin är <a href=\"https://bitcoin.org/en/you-need-to-know\"> pseudononym</a>, inte anonym.\n                        </p>\n\n                        <p>\n                          För <b>Bitcoin-mixers</b> måste du lita på att de kan hålla sin data säker och inte ägs av eller samarbetar med en regering, hackare eller andra enheter.\n                        </p>\n\n                        <p>\n                          I juli 2017 meddelade grundaren av den största Bitcoin-blandningstjänsten, BITMIXER.IO, att de stänger och angav detta som sin anledning:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              &hellip; Nu förstod jag att Bitcoin är ett transparent icke-anonymt system <b>av design</b>. Blockchain är en fantastisk öppen bok&hellip;\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, i ett tillkännagivande om stängning på <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg20357093#msg20357093\"> Bitcointalk.org </a> (betoning i originalet).\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Några veckor senare, efter att ha övervägt de olika integritetscentrerade mynten, sa han detta:\n                        </p>\n\n                        <blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Efter den djupa undersökningen bekräftar jag att MONERO är den bästa sekretessvalutan. Så jag rekommenderar starkt MONERO för alla människor som behöver extra integritet.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              BITMIXER.IO, i ett <a href=\"https://bitcointalk.org/index.php?topic=2042470.msg21113378#msg21113378\"> uppföljningsinlägg</a>.\n                            </p>\n                          </footer>\n                        </blockquote>';
@@ -4160,10 +4160,10 @@ class I18nSv extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbquote => '<blockquote>\n                          <div class=\"quote\">\n                            <p>\n                              Och förresten, jag tror att vi framgångsrikt kan göra Zcash för spårbart för brottslingar som WannaCry, men fortfarande helt privat &amp; fungibel.\n                            </p>\n                          </div>\n\n                          <footer>\n                            <p>\n                              <b>Zooko Wilcox</b>, Zcash VD, i en <a href=\"https://twitter.com/zooko/status/863202798883577856\"> tweet\n                              </a>\n                            </p>\n                          </footer>\n                        </blockquote>\n\n                        <p>\n                          Om Zcash kan vara \"för spårbart\", så kan det inte vara helt privat eller fungibelt.\n                        </p>';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbtext => 'Zcash-transaktioner är synliga på deras blockchain. De möjliggör dolda transaktioner, men <a href=\"http://stat.bloxy.info/superset/dashboard/zcash/\"> mindre än 1 % av transaktionerna är helt skärmade </a> . Eftersom dolda transaktioner är valfria och inte standard (för att inte tala sällan används), sticker de <a href=\"http://weuse.cash/2016/06/09/btc-xmr-zcash/\"> dolda transaktionerna ut på sin blockchain</a> och drar uppmärksamheten till sig själva.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbprivate250Sbtext => 'Zcash-transaktioner är synliga på deras blockchain. De möjliggör dolda transaktioner, men <a href=\"http://stat.bloxy.info/superset/dashboard/zcash/\"> mindre än 1 % av transaktionerna är helt skärmade </a> . Eftersom dolda transaktioner är valfria och inte standard (för att inte nämna sällan används), sticker de <a href=\"http://weuse.cash/2016/06/09/btc-xmr-zcash/\"> dolda transaktionerna ut i sin blockchain</a> och drar uppmärksamheten till sig själva.';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbuntraceable250Sbtext => 'Regelbundna transaktioner är transparenta. Dolda transaktioner använder zk-SNARKS, som visserligen har robusta integritetsgarantier under vissa villkor. Frågan är om dessa villkor är uppfyllda, och med tanke på den minimala mängden människor som använder de avskärmade funktionerna är detta fortfarande ifrågasatt.';
+  String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcash250Sbuntraceable250Sbtext => 'Regelbundna transaktioner är transparenta. Dolda transaktioner använder zk-SNARKS, som visserligen har robusta integritetsgarantier under vissa förhållanden. Frågan är om dessa villkor är uppfyllda, och med tanke på den minimala mängden människor som använder de avskärmade funktionerna är detta fortfarande ifrågasatt.';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbanalysis250Sbzcoin250Sbdecentralized250Sbtext => 'Zcoin har implementerat Znodes, som fungerar på samma sätt som Dash-masternoder och har större kraft än andra noder i nätverket. Eftersom alla noder inte skapas lika, och skillnaden mellan dem är hur mycket pengar en individ har (Znoder kostar 1000 XZC), är nätverket semi-centraliserat.';
@@ -4312,7 +4312,7 @@ class I18nSv extends I18n {
 
   @override
   String login250Sbsignup(Object link) {
-    return 'Har du inte ett konto än? $link';
+    return 'Har du inget konto än? $link';
   }
 
   @override
@@ -4443,8 +4443,8 @@ class I18nSv extends I18n {
   String get morph250Sbservice8722Sbdown => 'ChangeNows XMR-tjänst är tillfälligt otillgänglig. Försök igen senare.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return 'Tar emot $cryptocurrencyName adress';
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
+    return 'Tar emot $assetName adress';
   }
 
   @override
@@ -4767,15 +4767,13 @@ class I18nSv extends I18n {
   String get post8722Sbad250Sberror250Sbprice8722Sbnot8722Sbvalid => 'Ange ett giltigt prisvärde. Endast siffror mellan 0,000000000001 och 10000000000000 är tillåtna.';
 
   @override
-  String get post8722Sbad250Sberror250Sbrequire8722Sbfeedback8722Sbnot8722Sbvalid => 'Vänligen ange giltig gräns för att kräva feedbackpoängvärde. Endast heltal mellan 0 och 100 är tillåtna.';
+  String get post8722Sbad250Sberror250Sbrequire8722Sbfeedback8722Sbnot8722Sbvalid => 'Ange en giltig gräns för att kräva feedbackpoängvärde. Endast heltal mellan 0 och 100 är tillåtna.';
 
   @override
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Saldot i plånboken är mindre än vad som krävs för den här annonstypen';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Första tidsgräns ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Första tidsgräns  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Frivillig. Begränsa det maximala transaktionsbeloppet för användare som du inte har gjort tidigare affärer med. Minst 0.';
@@ -4870,7 +4868,7 @@ class I18nSv extends I18n {
   }
 
   @override
-  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip250Sbnojs => 'Få växelkursen att flyta med marknaden medan handeln är öppen. Handelspriset bestäms vid tidpunkten för slutförandet av handeln. Observera att en extra 15% reserv läggs till det valda beloppet för kryptovalutatillgången som reserverats till skiljedomstol. Det överskjutande beloppet kommer att returneras efter att affären är avslutad.';
+  String get post8722Sbad250Sbprice8722Sbtype250Sbfloating8722Sbtip250Sbnojs => 'Få växelkursen att flyta med marknaden medan handeln är öppen. Handelspriset bestäms vid tidpunkten för slutförandet av handeln. Observera att en extra 15% reserv läggs till det valda beloppet för kryptovalutatillgång som reserverats till skiljedomstol. Det överskjutande beloppet kommer att returneras efter att affären är avslutad.';
 
   @override
   String get post8722Sbad250Sbprice8722Sbtype250Sbmargin => 'Marginal i %';
@@ -4938,7 +4936,7 @@ class I18nSv extends I18n {
 
   @override
   String post8722Sbad250Sbrules8722Sbtext8722Sb18722Sb1250Sbagoradesk8722Sbnojs(Object minimumXmrAmount, Object assetSymbol, Object appName) {
-    return 'Du måste ha minst $minimumXmrAmount $assetSymbol i din $appName plånbok för att en upplagd $assetSymbol sälj- eller $assetSymbol call sell eller $assetSymbol put buy-annons ska vara synlig.';
+    return 'Du måste ha minst $minimumXmrAmount $assetSymbol i din $appName plånbok för att en publicerad $assetSymbol sälj- eller $assetSymbol call sell eller $assetSymbol put buy-annons ska vara synlig.';
   }
 
   @override
@@ -5127,7 +5125,7 @@ class I18nSv extends I18n {
   }
 
   @override
-  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Lägg till den här koden till din LocalBitcoins-profil som din personliga webbsida och lägg till \".com\" i slutet. När vi har verifierat koden kan du ta bort den.';
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sblbc => 'Lägg till den här koden i din LocalBitcoins-profil som din personliga webbsida och lägg till \".com\" i slutet. När vi har verifierat koden kan du ta bort den.';
 
   @override
   String get reputation8722Sbimport250Sbstep250Sbcode250Sbtitle => 'Lägg till koden';
@@ -5268,12 +5266,12 @@ class I18nSv extends I18n {
   String get search250Sbcoordinates250Sblon => 'Longitud';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Sälj $assetName för kontanter i $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Köp $assetName kontant i $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nSv extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Ett äkta LocalBitcoins och Paxful-alternativ.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Om du är orolig för intrånget i integriteten - den bästa kryptovalutan att investera i är XMR. Monero är ett ospårbart mynt utvecklat med integritet genom design i åtanke.\n<br/>\nVar kan man köpa Monero? LocalMonero är den största, mest pålitliga och väletablerade P2P Monero-börsen i XMR-communityt. Vi har inga KYC-checkar - du kan helt enkelt köpa Monero anonymt utan ID-verifiering med PayPal, kreditkort, presentkort, kontanter via post eller konvertera bitcoin till Monero - vår plattform stöder alla betalningsmetoder.';
+  String get seo250Sbtext8722Sb1 => 'Om du är orolig för intrånget i integriteten - den bästa kryptovalutan att investera i är XMR. Monero är ett ospårbart mynt utvecklat med integritet genom design i åtanke.\n<br/>\nVar kan man köpa Monero? LocalMonero är den största, mest pålitliga och väletablerade P2P Monero-handelsplattformen i XMR-communityt. Vi har inga KYC-checkar - du kan helt enkelt köpa Monero anonymt utan ID-verifiering med PayPal, kreditkort, presentkort, kontanter via post eller konvertera bitcoin till Monero - vår plattform stöder alla betalningsmetoder.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Undrar du hur man investerar i Bitcoin? På AgoraDesk har det aldrig varit enklare att köpa bitcoins - köp omedelbart BTC från en person som använder din favorit onlinebetalningsmetod: PayPal, kredit-/betalkort eller banköverföring, presentkort, Venmo eller något annat.\n<br/>\nOm du vill köpa bitcoins nära dig med kontanter kan du hitta någon som är villig att sälja bitcoins lokalt - handelsplattformen stödjer köp och försäljning av BTC med kontanter. Du kan till och med köpa bitcoins med kontanter via post.';
@@ -5613,7 +5611,7 @@ class I18nSv extends I18n {
   String get settings250Sbnotifications250Sbsensitive8722Sbshort => 'Inaktivera känslig information';
 
   @override
-  String get settings250Sbnotifications250Sbsensitive8722Sbtip => 'E-postmeddelandena kommer bara att be dig logga in på webbplatsen, där de faktiska aviseringarna kommer att finnas';
+  String get settings250Sbnotifications250Sbsensitive8722Sbtip => 'E-postmeddelandena kommer bara att be dig att logga in på webbplatsen, där de faktiska aviseringarna kommer att finnas';
 
   @override
   String get settings250Sbnotifications250Sbtelegram250Sbdialog8722Sbtitle => 'Mobiltelegrammeddelanden';
@@ -6600,7 +6598,7 @@ class I18nSv extends I18n {
   String get user250Sbmedian8722Sbseconds => 'sekunder';
 
   @override
-  String get user250Sbmedian8722Sbtitle => 'Typisk tid för slutförande av handel:';
+  String get user250Sbmedian8722Sbtitle => 'Typisk slutförandetid för handel:';
 
   @override
   String get user250Sbno8722Sbfeedback250Sbwhy250Sb1 => 'Feedback tar upp till en timme att reflektera.';
@@ -6722,7 +6720,7 @@ class I18nSv extends I18n {
   String get wallet250Sbfunds8722Sbunlocked => 'Olåst';
 
   @override
-  String get wallet250Sbinternal8722Sbtransfer => 'Intern överföring';
+  String get wallet250Sbinternal8722Sbtransfer => 'Intern transaktion';
 
   @override
   String get wallet250Sbnojs250Sbsend250Sbsend8722Sbbalance8722Sbbtn => 'Skicka hela saldot';
@@ -6811,8 +6809,8 @@ class I18nSv extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
-    return 'Ta emot $assetName';
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
+    return 'Ta emot $currencyCode';
   }
 
   @override
@@ -6869,7 +6867,7 @@ class I18nSv extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Välj transaktionsprioritet';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return 'Tar emot $assetName adress';
   }
 
@@ -6879,7 +6877,7 @@ class I18nSv extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Skicka $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nSv extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Avgifter för utgående kryptovaluta';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Skicka $assetName';
   }
 
@@ -7006,13 +7004,13 @@ class I18nSv extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Ta emot $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
-    return 'Skicka $asset';
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
+    return 'Skicka $assetName';
   }
 
   @override
@@ -7051,7 +7049,7 @@ class I18nSv extends I18n {
   }
 
   @override
-  String get wallet250Sbswap250Sbsave8722Sblink => 'Se till att spara denna länk, det är ditt enda sätt att spåra handeln!';
+  String get wallet250Sbswap250Sbsave8722Sblink => 'Se till att spara den här länken, det är ditt enda sätt att spåra handeln!';
 
   @override
   String get wallet250Sbswap250Sbsend8722Sbbtn => 'Skicka mynten!';
@@ -7100,15 +7098,15 @@ class I18nSv extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
-    return 'Ta emot $assetName';
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
+    return 'Ta emot $currencyCode';
   }
 
   @override
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Motta';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Skicka $assetName';
   }
 
@@ -7292,7 +7290,7 @@ class I18nSv extends I18n {
   String get wallet250Sbwithdraw250Sbamount8722Sbtype250Sbreceive250Sblabel => 'Motta';
 
   @override
-  String get wallet250Sbwithdraw250Sbamount8722Sbtype250Sbreceive250Sbsecondary8722Sblabel => 'Ange beloppet som ska tas emot (utan avgift)';
+  String get wallet250Sbwithdraw250Sbamount8722Sbtype250Sbreceive250Sbsecondary8722Sblabel => 'Ange det belopp som ska tas emot (utan avgift)';
 
   @override
   String get wallet250Sbwithdraw250Sbamount8722Sbtype250Sbsend250Sblabel => 'Skicka';
@@ -7355,7 +7353,7 @@ class I18nSv extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Ändra adress';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Belopp ($asset)';
   }
 
@@ -7375,7 +7373,7 @@ class I18nSv extends I18n {
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return 'Även om du gör din due diligence och bara handlar med välrenommerade användare finns det ingen garanti för att du inte kommer att hamna i en $method tvistsituation. Här är något du kan göra för att öka dina chanser: $linebreak  1. Begär 2 foto-ID-skanningar av användaren (d.v.s. pass och körkort), se till att $method kontonamnet matchar ID:t. $linebreak  2. Be användaren att skicka ett e-postmeddelande till dig från $method e-postkontot (kanske till och med säg åt dem att lägga in handels-ID och något om handeln i e-postmeddelandet).$linebreak  3. Ta ut mycket höga premier för $method handlar. Till exempel 25 % och högre. På så sätt får du täckning om 1 av 5 av dina $method-affärer är bedrägerier (med samma handelsbelopp). $linebreak  4. Var försiktig med höga handelsbelopp. Försök att få några affärer med lägre belopp med en handlare först. $linebreak ';
+    return 'Även om du gör din due diligence och bara handlar med välrenommerade användare finns det ingen garanti för att du inte kommer att hamna i en $method tvistsituation. Här är något du kan göra för att öka dina chanser: $linebreak  1. Begär 2 foto-ID-skanningar av användaren (dvs. pass och körkort), se till att $method-kontots namn matchar ID:t. $linebreak  2. Be användaren att skicka ett e-postmeddelande till dig från $method e-postkontot (kanske till och med säg åt dem att lägga in handels-ID och något om handeln i e-postmeddelandet).$linebreak  3. Ta ut mycket höga premier för $method handlar. Till exempel 25 % och högre. På så sätt får du täckning om 1 av 5 av dina $method-affärer är bedrägerier (med samma handelsbelopp). $linebreak  4. Var försiktig med höga handelsbelopp. Försök att få några affärer med lägre belopp med en handlare först. $linebreak ';
   }
 
   @override
@@ -7508,7 +7506,7 @@ class I18nSv extends I18n {
   String get address8722Sbbook250Sbcancel8722Sbbtn => 'Annullera';
 
   @override
-  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Vill du radera den här adressen?';
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Vill du ta bort den här adressen?';
 
   @override
   String get address8722Sbbook250Sbdescription => 'Närhelst du behöver ange en adress kan du snabbt välja en som sparats här';
@@ -7544,6 +7542,17 @@ class I18nSv extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'När du trycker på \"Spara\" kommer annonsens land att uppdateras automatiskt till \"globalt\".';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Endast annonser för försäljning av samma tillgångar';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Ta mig till hemsidan';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset köp endast annonser';
+  }
 
   @override
   String get ads => 'Annonser';
@@ -7738,7 +7747,7 @@ class I18nSv extends I18n {
   String get trader_profile => 'Traders profil';
 
   @override
-  String get trader_info => 'Handlarens info';
+  String get trader_info => 'Handlarens information';
 
   @override
   String get trading_tips => 'Handelstips';
@@ -7900,7 +7909,7 @@ class I18nSv extends I18n {
   String get api_error_103 => 'Begär handel för annons vems affisch som säljer semester';
 
   @override
-  String get api_error_105 => 'Affischen för annonsen som handeln begärs för har inte tillräckligt med saldo för att finansiera depositionen';
+  String get api_error_105 => 'Affischen för annonsen för vilken handeln begärs har inte tillräckligt med saldo för att finansiera depositionen';
 
   @override
   String get api_error_107 => 'Försöker spåra likviditet utan att ställa in maxAmount';
@@ -7957,7 +7966,7 @@ class I18nSv extends I18n {
   String get api_error_205 => 'Försöker att generera verifieringskod för rykteimport för en plattform som redan har en verifieringskod genererad för sig';
 
   @override
-  String get api_error_206 => 'Försöker generera verifieringskod för rykteimport för en plattform från vilken rykte redan importerats';
+  String get api_error_206 => 'Försöker skapa verifieringskod för rykteimport för en plattform från vilken rykte redan importerats';
 
   @override
   String get api_error_207 => 'Försöker bekräfta placering av verifieringskod för rykteimport för användare som inte existerar';
@@ -8158,13 +8167,16 @@ class I18nSv extends I18n {
   String get api_error_98 => 'Att försöka skapa en byte för en annons vars affisch inte existerar';
 
   @override
+  String get api_error_99 => 'Försöker begära ett högre belopp än vad annonsägaren tillåter när du skapar en första handel';
+
+  @override
   String get api_error_100 => 'Kan inte begära mindre än 0,0000000001 XMR för att skapa handel';
 
   @override
   String get api_error_101 => 'Det begärda beloppet är mindre än annonsens min_amount när handel skapas';
 
   @override
-  String get api_error_102 => 'Det begärda beloppet är mer än annonsens max_amount_available när du skapar handel';
+  String get api_error_102 => 'Det begärda beloppet är mer än annonsens max_amount_available när handel skapas';
 
   @override
   String get api_error_104 => 'Begär handel för annons vems affisch är på att köpa semester';
@@ -8185,7 +8197,7 @@ class I18nSv extends I18n {
   String get api_error_111 => 'Det begärda beloppet är inte ett av de accepterade beloppen, se limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => 'Det går inte att begära en byte för en annons som du själv har lagt upp';
+  String get api_error_112 => 'Det går inte att begära en byte av en annons som du själv har lagt upp';
 
   @override
   String get api_error_113 => 'Det går inte att ställa in paymentWindowMinutes till <15 eller >90 när annonsen uppdateras';
@@ -8215,6 +8227,15 @@ class I18nSv extends I18n {
   String get api_error_121 => 'Försöker deponera en handel som inte finns';
 
   @override
+  String get api_error_122 => 'Otillräckliga medel för att finansiera en handel';
+
+  @override
+  String get api_error_123 => 'Otillräckliga medel för att finansiera en handel';
+
+  @override
+  String get api_error_124 => 'Fel vid finansiering av en handel';
+
+  @override
   String get api_error_125 => 'Användare som begär annullering av handel existerar inte';
 
   @override
@@ -8224,7 +8245,7 @@ class I18nSv extends I18n {
   String get api_error_127 => 'Användare som begär betalning av handel existerar inte';
 
   @override
-  String get api_error_128 => 'Försök att markera en handel som inte finns betalas';
+  String get api_error_128 => 'Att försöka markera en handel som inte finns betalas';
 
   @override
   String get api_error_129 => 'Användare som begär frigivning av handel existerar inte';
@@ -8356,7 +8377,7 @@ class I18nSv extends I18n {
   String get api_error_186 => 'Försöker få fler än 50 annonser när du får annonser med ID';
 
   @override
-  String get api_error_187 => 'Försöker ge en tom lista med ID:n när man får annonser med ID';
+  String get api_error_187 => 'Försöker ge en tom lista med ID:n när du får annonser med ID';
 
   @override
   String get api_error_188 => 'Inte ett enda av de begärda annons-ID:na är ett giltigt ID när du hämtar annonser med ID';
@@ -8404,7 +8425,7 @@ class I18nSv extends I18n {
   String get api_error_202 => 'Försöker få kontotransaktioner med \"efter\" tidsstämpel som ligger utanför det tillåtna intervallet';
 
   @override
-  String get api_error_203 => 'Försöker hämta rykteimportdata för ett konto som inte finns';
+  String get api_error_203 => 'Försöker hämta ryktesimportdata för ett konto som inte finns';
 
   @override
   String get api_error_211 => 'Försöker godkänna rykteimport för användare som inte finns';
@@ -8497,7 +8518,7 @@ class I18nSv extends I18n {
   String get api_error_245 => 'Köpare som försöker ange en intern adress när en annons av KÖP-typ uppdateras (interna adresser är inte tillåtna i syfte att avveckla handeln)';
 
   @override
-  String get api_error_246 => 'Försöker starta en handel från en KÖP-annons som inte anger köparens avräkningsadress';
+  String get api_error_246 => 'Försöker starta en affär från en KÖP-annons som inte anger köparens avvecklingsadress';
 
   @override
   String get api_error_247 => 'Försök att frigöra en handel från ett konto som är förbjudet att dra ut på grund av sanktioner';
@@ -8557,7 +8578,7 @@ class I18nSv extends I18n {
   String get pin_enter_to_confirm_transaction => 'Ange PIN för att bekräfta transaktionen';
 
   @override
-  String get pin_you_can_use => 'Du kan använda denna PIN-kod för att låsa upp appen.';
+  String get pin_you_can_use => 'PIN-koden måste vara minst fyra siffror';
 
   @override
   String get pin_confirm => 'Bekräfta PIN-koden';
@@ -8931,14 +8952,14 @@ class I18nSv extends I18n {
   }
 
   @override
-  String get affiliate__explain_is_reg => 'Anslutning registreras när någon användare registrerar sig efter att ha landat på sajten från en länk med din referenskod.';
+  String get affiliate__explain_is_reg => 'Anslutning registreras när någon användare registrerar sig efter att ha landat på sidan från en länk med din hänvisningskod.';
 
   @override
   String get affiliate__ref_code_title => 'Din remisskod';
 
   @override
   String affiliate__users__text(Object number) {
-    return 'Du är för närvarande registrerad som affiliate för $number-användare och kommer att tjäna provision från alla affärer som dessa gör.';
+    return 'Du är för närvarande registrerad som affiliate för $number användare och kommer att tjäna provision från alla affärer som dessa gör.';
   }
 
   @override
@@ -8987,7 +9008,7 @@ class I18nSv extends I18n {
   String get trade__mark_pay_according => ' Betala enligt betalningsuppgifterna nedan. Om du har några frågor, fråga säljaren i chatten.';
 
   @override
-  String get dashboard__trade__status__open => 'Öppet';
+  String get dashboard__trade__status__open => 'Öppen';
 
   @override
   String get wallet__available_balance => 'Tillgängligt Saldo';
@@ -9101,7 +9122,7 @@ class I18nSv extends I18n {
   String get app_trade_option_payment_receiver_cancel_notice => 'Slutför aldrig en affär förrän du är 100% säker på att du har fått pengarna. Bedragare kommer att försöka lura dig att slutföra tidigt.';
 
   @override
-  String get app_cancel_trade_message => 'Har du gjort ett misstag eller vill prova en annan handlare? Om du redan har överfört pengarna och vill avbryta nu, måste du själv förhandla om återbetalningen av din betalning med din handelspartner. Avboka aldrig om du inte är säker på att du har fått pengarna tillbaka.';
+  String get app_cancel_trade_message => 'Gjorde ett misstag eller vill prova en annan handlare? Om du redan har överfört pengarna och vill avbryta nu, måste du själv förhandla om återbetalningen av din betalning med din handelspartner. Avboka aldrig om du inte är säker på att du har fått pengarna tillbaka.';
 
   @override
   String get app_all_feedback => 'All feedback';
@@ -9173,7 +9194,7 @@ class I18nSv extends I18n {
   String get app_trade_status_settlement_processing_description => 'Förlikningen är under handläggning. Vänta, det finns inget du behöver göra.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => 'Välj en avgiftsnivå som ska användas under handelsavvecklingen. Värdena som visas här är aktuella ränteuppskattningar och kan skilja sig från de som tillämpades under handelsavvecklingen. Skulle affären vara för låg för att avveckla affären med den valda avgiftsnivån, kommer en lägre avgiftsnivå automatiskt att väljas under avvecklingen.';
+  String get app_buyer_settlement_fee_level_description => 'Välj en avgiftsnivå som ska användas under handelsavvecklingen. Värdena som visas här är de aktuella ränteuppskattningarna och kan skilja sig från de som tillämpades under handelsavvecklingen. Skulle affären vara för låg för att avveckla affären med den valda avgiftsnivån, kommer en lägre avgiftsnivå automatiskt att väljas under avvecklingen.';
 
   @override
   String get app_change_vacation_settings => 'Ändra semesterinställningar.';
@@ -9283,7 +9304,7 @@ class I18nSv extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'kryptovaluta,anonym,privat,monero,xmr,p2p';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'kryptovaluta,bitcoin,monero,BTC,XMR,anonym,privat';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sbagoradesk => 'kryptovaluta, bitcoin, monero, BTC, XMR, anonym, privat';
 
   @override
   String get app_report_this_user => 'Rapportera denna användare';
@@ -9445,14 +9466,5 @@ class I18nSv extends I18n {
   String get api_error_273 => 'Försöker ta bort en adress som inte finns i en användares adressbok';
 
   @override
-  String get api_error_99 => 'Försöker begära ett högre belopp än vad first_time_limit_asset tillåter när du skapar en första handel';
-
-  @override
-  String get api_error_122 => 'Otillräckliga medel för att finansiera en flytande LOCAL_SELL-handel';
-
-  @override
-  String get api_error_123 => 'Otillräckliga medel för att finansiera en icke-flytande LOCAL_SELL-handel';
-
-  @override
-  String get api_error_124 => 'Fel vid finansiering av en LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN-koden måste vara minst fyra siffror';
 }

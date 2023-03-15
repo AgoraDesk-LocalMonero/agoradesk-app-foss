@@ -175,11 +175,19 @@ class WalletViewModel extends ViewModel with StringMixin {
           _addressXmr = resXmr.right.receivingAddress;
           joinAllTransactions(resXmr.right, resBtc.right);
         } else {
-          if (resBtc.left.message.containsKey('error_code')) {
-            final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
-            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
+          if (resBtc.isLeft) {
+            if (resBtc.left.message.containsKey('error_code')) {
+              final errorMessage = ApiErrors.translatedCodeError(resBtc.left.message['error_code'], context);
+              if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
+            }
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resBtc.left.message}');
+          } else {
+            if (resXmr.left.message.containsKey('error_code')) {
+              final errorMessage = ApiErrors.translatedCodeError(resXmr.left.message['error_code'], context);
+              if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error message] $errorMessage');
+            }
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resXmr.left.message}');
           }
-          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getBalance error] ${resBtc.left.message}');
         }
       } else {
         final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);

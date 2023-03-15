@@ -36,7 +36,7 @@ class TradeLineWithCopy extends StatelessWidget with ClipboardMixin {
               const SizedBox(width: 6),
               Expanded(
                 child: Text(
-                  title + ':',
+                  '$title:',
                   style: context.txtBodyXSmallNeutral60.copyWith(height: 1),
                 ),
               ),
@@ -52,14 +52,15 @@ class TradeLineWithCopy extends StatelessWidget with ClipboardMixin {
               ),
             ),
         IconButton(
-            onPressed: () {
-              copyToClipboard(textToCopyToClipboard ?? text, context);
-            },
-            icon: Icon(
-              AgoraFont.copy_alt,
-              color: context.colP70,
-              size: 12,
-            )),
+          onPressed: () {
+            copyToClipboard(textToCopyToClipboard ?? text, context);
+          },
+          icon: Icon(
+            AgoraFont.copy_alt,
+            color: context.colP70,
+            size: 12,
+          ),
+        ),
       ],
     );
   }

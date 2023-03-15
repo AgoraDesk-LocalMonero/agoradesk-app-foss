@@ -270,12 +270,12 @@ class I18nLv extends I18n {
   String get ad250Sbdeleted => 'Šis sludinājums ir izdzēsts';
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbbuy8722Sbheading(Object assetName, Object country, Object location) {
     return 'Pārdod $assetName par skaidru naudu $country';
   }
 
   @override
-  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country) {
+  String ad250Sbhomepage8722Sblisting250Sblocal8722Sbsell8722Sbheading(Object assetName, Object country, Object location) {
     return 'Pirkt $assetName ar skaidru naudu $country';
   }
 
@@ -1234,7 +1234,7 @@ class I18nLv extends I18n {
   String get dashboard250Sbtrade250Sbtable8722Sbamount8722Sbfiat58Sb => 'Summa (valūta)';
 
   @override
-  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol) {
+  String dashboard250Sbtrade250Sbtable8722Sbamount8722Sbxmr58Sb(Object assetSymbol, Object asset) {
     return 'Summa ($assetSymbol)';
   }
 
@@ -1575,7 +1575,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String document8722Sbtitle250Sbtrade(Object id) {
+  String document8722Sbtitle250Sbtrade(Object id, Object assetName) {
     return 'Darījums $id';
   }
 
@@ -1857,7 +1857,7 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ir no lietotāja uz lietotāju Monero apmaiņa. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē ar vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
+    return '$appName ir vienādranga Monero tirdzniecības platforma. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
   }
 
   @override
@@ -2024,8 +2024,8 @@ class I18nLv extends I18n {
   String get faq250Sbanswer8722Sb298722Sbfees8722Sbpage => 'izmaksu lapa';
 
   @override
-  String faq250Sbanswer8722Sb30(Object telegram, Object thisGuide, Object appName) {
-    return 'Pašlaik mums nav atsevišķas mobilās lietotnes. Taču mobilos paziņojumus varat saņemt $telegram! $thisGuide ļaus jums veikt Telegram paziņojumu aktivizēšanas procesu (tas ir vienkārši). Pēc tam mūsu bots sūtīs jums paziņojumus par jūsu $appName notikumiem.';
+  String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
+    return 'Jā mēs daram! Ja jums ir Android, varat to iegūt ierīcēs $playstoreLink, $fdroidLink vai arī lejupielādēt $apkLink tieši. iOS ierīcēm tas ir pieejams $appstoreLink. Varat arī saņemt mobilos paziņojumus $telegram! $thisGuide ļaus jums veikt Telegram paziņojumu aktivizēšanas procesu (tas ir vienkārši). Pēc tam mūsu robots nosūtīs jums paziņojumus par jūsu $appName notikumiem.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Visi tiešsaistes darījumi ir aizsargāti ar šķīrējtiesas obligācijām. Uzsākot darījumu, Monero summa, kas vienāda ar darījuma summu, tiek automātiski rezervēta no pārdevēja $appName maka kā obligācija. Tas nozīmē, ka, ja pārdevējs aizbēg ar jūsu naudu un nepabeidz darījumu, $appName atbalsts var novirzīt jums šķīrējtiesas obligācijā esošo Monero. Ja pārdodat Monero, nekad nepabeidziet darījumu, pirms nezināt, ka esat saņēmis naudu no Monero pircēja. Lūdzu, ņemiet vērā, ka vietējiem darījumiem pēc noklusējuma nav iespējota šķīrējtiesas obligāciju aizsardzība.';
+    return 'Visi tiešsaistes darījumi ir aizsargāti ar šķīrējtiesas obligācijām. Uzsākot darījumu, Monero summa, kas vienāda ar darījuma summu, tiek automātiski rezervēta no pārdevēja $appName obligāciju maka. Tas nozīmē, ka, ja pārdevējs aizbēg ar jūsu naudu un nepabeidz darījumu, $appName atbalsts var novirzīt jums šķīrējtiesas obligācijā esošo Monero. Ja pārdodat Monero, nekad nepabeidziet darījumu, pirms nezināt, ka esat saņēmis naudu no Monero pircēja. Lūdzu, ņemiet vērā, ka vietējiem darījumiem pēc noklusējuma nav iespējota šķīrējtiesas obligāciju aizsardzība.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Visi tiešsaistes darījumi ir aizsargāti ar šķīrējtiesas obligācijām. Uzsākot darījumu, kriptovalūtas summa, kas vienāda ar darījuma summu, tiek automātiski rezervēta no pārdevēja $appName maka kā obligācija. Tas nozīmē, ka, ja pārdevējs aizbēg ar jūsu naudu un nepabeidz darījumu, $appName atbalsts var novirzīt šķīrējtiesas obligācijā esošo kriptovalūtu pie jums. Ja pārdodat kriptovalūtu, nekad nepabeidziet darījumu, pirms nezināt, ka esat saņēmis naudu no pircēja. Lūdzu, ņemiet vērā, ka vietējiem darījumiem pēc noklusējuma nav iespējota šķīrējtiesas obligāciju aizsardzība.';
+    return 'Visi tiešsaistes darījumi ir aizsargāti ar šķīrējtiesas obligācijām. Uzsākot darījumu, no pārdevēja $appName obligāciju maka tiek automātiski rezervēta kriptovalūtas summa, kas ir vienāda ar darījuma summu. Tas nozīmē, ka, ja pārdevējs aizbēg ar jūsu naudu un nepabeidz darījumu, $appName atbalsts var novirzīt šķīrējtiesas obligācijā esošo kriptovalūtu pie jums. Ja pārdodat kriptovalūtu, nekad nepabeidziet darījumu, pirms nezināt, ka esat saņēmis naudu no pircēja. Lūdzu, ņemiet vērā, ka vietējiem darījumiem pēc noklusējuma nav iespējota šķīrējtiesas obligāciju aizsardzība.';
   }
 
   @override
@@ -4443,7 +4443,7 @@ class I18nLv extends I18n {
   String get morph250Sbservice8722Sbdown => 'ChangeNow XMR pakalpojums īslaicīgi nav pieejams. Pamēģiniet vēlreiz vēlāk.';
 
   @override
-  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
+  String morph250Sbwithdrawal250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName, Object assetName) {
     return '$cryptocurrencyName saņemšanas adrese';
   }
 
@@ -4773,9 +4773,7 @@ class I18nLv extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Maka atlikums ir mazāks par šim sludinājuma veidam nepieciešamo minimumu';
 
   @override
-  String post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit(Object assetSymbol) {
-    return 'Pirmās reizes ierobežojums ($assetSymbol)';
-  }
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Pirmais laika ierobežojums  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Neobligāti. Ierobežojiet maksimālo darījuma summu lietotājiem, ar kuriem jums nav iepriekšēju darījumu. Minimums 0.';
@@ -5268,12 +5266,12 @@ class I18nLv extends I18n {
   String get search250Sbcoordinates250Sblon => 'Garums';
 
   @override
-  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbbuy(Object assetName, Object location, Object country) {
     return 'Pārdot $assetName par skaidru naudu $location';
   }
 
   @override
-  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location) {
+  String search250Sbheading8722Sblocal8722Sbsell(Object assetName, Object location, Object country) {
     return 'Pirkt $assetName ar skaidru naudu $location';
   }
 
@@ -5340,7 +5338,7 @@ class I18nLv extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Reāla LocalBitcoins un Paxful alternatīva.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Ja esat noraizējies par privātuma aizskaršanu - labākā kriptovalūta, kurā ieguldīt, ir XMR. Monero ir neizsekojama monēta, kas izstrādāta, domājot par privātumu.\n<br/>\nKur nopirkt Monero? LocalMonero ir lielākā, uzticamākā un spēcīgākā P2P Monero birža XMR kopienā. Mums nav KYC pārbaužu — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt bitcoin uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.';
+  String get seo250Sbtext8722Sb1 => 'Ja esat noraizējies par privātuma aizskaršanu - labākā kriptovalūta, kurā ieguldīt, ir XMR. Monero ir neizsekojama monēta, kas izstrādāta, domājot par privātumu.\n<br/>\nKur nopirkt Monero? LocalMonero ir lielākā, uzticamākā un labi izveidotā P2P Monero tirdzniecības platforma XMR kopienā. Mums nav KYC čeku — jūs varat vienkārši anonīmi iegādāties Monero bez ID verifikācijas, izmantojot PayPal, kredītkarti, dāvanu karti, skaidru naudu pa pastu vai konvertēt bitcoin uz Monero — mūsu platforma atbalsta jebkuru maksājuma veidu.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Vai domājat, kā ieguldīt Bitcoin? Vietnē AgoraDesk Bitcoin iegāde nekad nav bijusi tik vienkārša – uzreiz iegādājieties BTC no personas, izmantojot savu iecienītāko tiešsaistes maksājuma veidu: PayPal, kredītkarti/debetkarti vai bankas pārskaitījumu, dāvanu kartes, Venmo vai jebkuru citu.\n<br/>\nJa vēlaties iegādāties Bitcoin netālu no jums ar skaidru naudu, varat atrast kādu, kas vēlas pārdot Bitcoin uz vietas - tirdzniecības platforma atbalsta BTC pirkšanu un pārdošanu ar skaidru naudu. Jūs pat varat iegādāties Bitcoin, izmantojot skaidru naudu pa pastu.';
@@ -6811,7 +6809,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String wallet250Sbreceive250Sbtitle(Object assetName) {
+  String wallet250Sbreceive250Sbtitle(Object assetName, Object currencyCode) {
     return 'Saņemt $assetName';
   }
 
@@ -6869,7 +6867,7 @@ class I18nLv extends I18n {
   String get wallet250Sbsend250Sbpriority250Sbtitle => 'Izvēlieties pārskaitījuma prioritāti';
 
   @override
-  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName) {
+  String wallet250Sbsend250Sbreceiving8722Sbaddress(Object assetName, Object cryptocurrencyName) {
     return '$assetName saņemšanas adrese';
   }
 
@@ -6879,7 +6877,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName) {
+  String wallet250Sbsend250Sbsend8722Sbbtn(Object assetName, Object asset) {
     return 'Sūtīt $assetName';
   }
 
@@ -6944,7 +6942,7 @@ class I18nLv extends I18n {
   String get wallet250Sbsend250Sbtip8722Sb28722Sbtitle57Sbagoradesk => 'Izejošās kriptovalūtas maksas';
 
   @override
-  String wallet250Sbsend250Sbtitle(Object assetName) {
+  String wallet250Sbsend250Sbtitle(Object assetName, Object asset) {
     return 'Sūtīt $assetName';
   }
 
@@ -7006,12 +7004,12 @@ class I18nLv extends I18n {
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbreceive(Object currencyCode, Object assetName) {
     return 'Saņemt $currencyCode';
   }
 
   @override
-  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset) {
+  String wallet250Sbswap250Sbnative250Sbamount8722Sbtype8722Sbselector250Sbsend(Object asset, Object assetName) {
     return 'Sūtīt $asset';
   }
 
@@ -7100,7 +7098,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbreceive8722Sblong(Object assetName, Object currencyCode) {
     return 'Saņemt $assetName';
   }
 
@@ -7108,7 +7106,7 @@ class I18nLv extends I18n {
   String get wallet250Sbtab250Sbreceive8722Sbshort => 'Saņemt';
 
   @override
-  String wallet250Sbtab250Sbsend8722Sblong(Object assetName) {
+  String wallet250Sbtab250Sbsend8722Sblong(Object assetName, Object asset) {
     return 'Sūtīt $assetName';
   }
 
@@ -7355,7 +7353,7 @@ class I18nLv extends I18n {
   String get wallet250Sbwithdraw250Sbnojs250Sbchange8722Sbaddress8722Sbbtn => 'Mainīt adresi';
 
   @override
-  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset) {
+  String wallet250Sbwithdrawal250Sbamount8722Sbinput250Sblabel(Object asset, Object assetSymbol) {
     return 'Summa ($asset)';
   }
 
@@ -7544,6 +7542,17 @@ class I18nLv extends I18n {
 
   @override
   String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Nospiežot “Saglabāt”, reklāmas valsts tiks automātiski atjaunināta uz “globālā”.';
+
+  @override
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Tikai to pašu līdzekļu pārdošanas reklāmas';
+
+  @override
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Aizved mani uz vietni';
+
+  @override
+  String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
+    return '$asset pirkt tikai reklāmas';
+  }
 
   @override
   String get ads => 'Sludinājumi';
@@ -8158,6 +8167,9 @@ class I18nLv extends I18n {
   String get api_error_98 => 'Mēģinājums izveidot darījumu sludinājumam, kura plakāts neeksistē';
 
   @override
+  String get api_error_99 => 'Veidojot pirmo darījumu, mēģināt pieprasīt lielāku summu, nekā atļāvis sludinājuma īpašnieks';
+
+  @override
   String get api_error_100 => 'Darījuma izveidei nevar pieprasīt mazāk par 0,0000000001 XMR';
 
   @override
@@ -8213,6 +8225,15 @@ class I18nLv extends I18n {
 
   @override
   String get api_error_121 => 'Mēģinājums nodrošināt starpniecību darījumam, kas neeksistē';
+
+  @override
+  String get api_error_122 => 'Nepietiek līdzekļu tirdzniecības finansēšanai';
+
+  @override
+  String get api_error_123 => 'Nepietiek līdzekļu tirdzniecības finansēšanai';
+
+  @override
+  String get api_error_124 => 'Kļūda, finansējot darījumu';
 
   @override
   String get api_error_125 => 'Lietotājs, kurš pieprasa darījuma atcelšanu, neeksistē';
@@ -8557,7 +8578,7 @@ class I18nLv extends I18n {
   String get pin_enter_to_confirm_transaction => 'Ievadiet PIN, lai apstiprinātu darījumu';
 
   @override
-  String get pin_you_can_use => 'Varat izmantot šo PIN, lai atbloķētu lietotni.';
+  String get pin_you_can_use => 'PIN ir jābūt vismaz 4 cipariem';
 
   @override
   String get pin_confirm => 'Apstipriniet PIN';
@@ -9370,7 +9391,7 @@ class I18nLv extends I18n {
   String get app_push_new_offer => 'Jums ir jauns piedāvājums';
 
   @override
-  String get app_push_trade_marked_completed => 'Darījums atzīmēts kā pabeigts';
+  String get app_push_trade_marked_completed => 'Tirdzniecība atzīmēta kā pabeigta';
 
   @override
   String get app_push_trade_cancelled => 'Tirdzniecība atcelta';
@@ -9445,14 +9466,5 @@ class I18nLv extends I18n {
   String get api_error_273 => 'Mēģinājums dzēst adresi, kas neeksistē lietotāja adrešu grāmatā';
 
   @override
-  String get api_error_99 => 'Veidojot pirmo darījumu, tiek mēģināts pieprasīt lielāku summu, nekā pieļauj first_time_limit_asset';
-
-  @override
-  String get api_error_122 => 'Nepietiek līdzekļu, lai finansētu peldošu LOCAL_SELL darījumu';
-
-  @override
-  String get api_error_123 => 'Nepietiek līdzekļu, lai finansētu nepeldošu LOCAL_SELL darījumu';
-
-  @override
-  String get api_error_124 => 'Kļūda, finansējot LOCAL_SELL';
+  String get pin_you_can_use_new => 'PIN ir jābūt vismaz 4 cipariem';
 }
