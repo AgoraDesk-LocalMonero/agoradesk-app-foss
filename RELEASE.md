@@ -1,9 +1,5 @@
 ### Updates
-1. Enhanced: The PIN code can now be between 4 and 25 digits long, instead of being limited to only 4 digits.
-2. Improved: Imperva DDoS protection now performs checks in the background.
-3. UI: All notifications are now presented in a consistent style and can be dismissed by the user.
-4. Fix: API error messages have been translated for better understanding.
-5. Fix: A cancel button has been added when opening a disputed trade from a push notification.
+1. Hotfix: Disable confusing popup about 503 errors during polling.
 
 
 ### About the attached app's

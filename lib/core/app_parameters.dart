@@ -237,4 +237,5 @@ class AppParameters {
   bool appRanFromPush = false;
   bool? proxy;
   bool debugPrintIsOn = false;
+  bool polling = false;
 }
