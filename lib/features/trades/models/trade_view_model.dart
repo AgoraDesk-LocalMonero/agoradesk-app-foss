@@ -294,7 +294,7 @@ class TradeViewModel extends ViewModel
       await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
-      GetIt.I<AppParameters>().polling = false;
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     }
   }
 
@@ -304,7 +304,7 @@ class TradeViewModel extends ViewModel
       await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
-      GetIt.I<AppParameters>().polling = false;
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     });
     eventBus.on<UpdateOpenedChatEvent>().listen((e) {});
   }

@@ -87,7 +87,8 @@ class PollingService with ErrorParseMixin {
               debugPrint('++++[Polling service - getBalances error] - XMR ${resXmr.left.statusCode}');
           }
         }
-        GetIt.I<AppParameters>().polling = false;
+        Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
+
         _loadingBalance = false;
       }
     }
@@ -114,7 +115,7 @@ class PollingService with ErrorParseMixin {
         res.add(price ?? 0);
       }
       appState.assetPriceController.add(res);
-      GetIt.I<AppParameters>().polling = false;
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
       _calculatingBalance = false;
     }
   }

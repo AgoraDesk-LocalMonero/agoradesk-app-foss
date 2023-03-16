@@ -301,7 +301,7 @@ class NotificationsService with ForegroundMessagesMixin {
         final res = await accountService.getNotifications(after: after);
         appState.notificationsLoading = false;
         _loading = false;
-        GetIt.I<AppParameters>().polling = false;
+        Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
 
         if (res.isRight && res.right.isNotEmpty) {
           if (_notifications.isEmpty || appState.notificationsMarkedRead) {

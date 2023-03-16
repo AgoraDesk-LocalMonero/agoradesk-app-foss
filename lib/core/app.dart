@@ -592,7 +592,7 @@ class _AppState extends State<App>
         );
       })
       ..on<Display503Event>().listen((e) {
-        if (!_dialogOpened && !GetIt.I<AppParameters>().polling) {
+        if (!_dialogOpened && GetIt.I<AppParameters>().polling == false) {
           _dialogOpened = true;
           showDialog(
             context: router.navigatorKey.currentContext!,
