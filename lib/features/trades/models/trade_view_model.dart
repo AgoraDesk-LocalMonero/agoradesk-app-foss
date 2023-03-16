@@ -290,17 +290,21 @@ class TradeViewModel extends ViewModel
     if (GetIt.I<AppParameters>().includeFcm == false ||
         GetIt.I<AppParameters>().isGoogleAvailable == false ||
         isProcessing()) {
+      GetIt.I<AppParameters>().polling = true;
       await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     }
   }
 
   _listenEventBus() {
-    _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) {
-      indicatorKey.currentState?.show();
+    _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) async {
+      GetIt.I<AppParameters>().polling = true;
+      await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
-      _getMessages(polling: true);
+      await _getMessages(polling: true);
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     });
     eventBus.on<UpdateOpenedChatEvent>().listen((e) {});
   }
