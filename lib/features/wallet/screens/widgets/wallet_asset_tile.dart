@@ -33,6 +33,7 @@ class WalletAssetTile extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
             child: ContainerSurface5Radius12Border1(
               child: ExpansionTile(
+                clipBehavior: Clip.antiAlias,
                 title: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -110,8 +111,6 @@ class WalletAssetTile extends StatelessWidget {
                 onExpansionChanged: (bool expanded) {
                   model.changeTileExpanded(asset);
                 },
-                backgroundColor: context.colS5darkSLight,
-                collapsedBackgroundColor: context.colS5darkSLight,
                 shape: const RoundedRectangleBorder(side: BorderSide.none),
                 children: [
                   const SizedBox(height: 12),
