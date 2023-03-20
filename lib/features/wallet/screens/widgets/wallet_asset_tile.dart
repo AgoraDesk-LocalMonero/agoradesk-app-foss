@@ -44,7 +44,7 @@ class WalletAssetTile extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
-                          child: Image.asset(asset.pngPath()),
+                          child: asset.svgWidget(size: 26),
                         ),
                         Expanded(
                           child: Column(

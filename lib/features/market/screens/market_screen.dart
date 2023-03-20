@@ -121,7 +121,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                             itemBuilder: (context, asset, isSelected) {
                               return DropdownLineWithIcon(
                                 name: asset.name,
-                                assetPath: asset.pngPath(),
+                                asset: asset,
                               );
                             }),
                         items: Asset.values,
@@ -131,7 +131,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                         dropdownBuilder: (context, asset) {
                           return DropdownLineWithIcon(
                             name: asset!.name,
-                            assetPath: asset.pngPath(),
+                            asset: asset,
                             padding: const EdgeInsets.all(0),
                           );
                         },
@@ -434,12 +434,12 @@ class DropdownLineWithIcon extends StatelessWidget {
   const DropdownLineWithIcon({
     super.key,
     required this.name,
-    required this.assetPath,
+    required this.asset,
     this.padding = const EdgeInsets.fromLTRB(18, 14, 2, 14),
   });
 
   final String name;
-  final String assetPath;
+  final Asset asset;
   final EdgeInsets padding;
 
   @override
@@ -450,17 +450,7 @@ class DropdownLineWithIcon extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            height: 14,
-            width: 14,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(assetPath),
-                fit: BoxFit.fill,
-              ),
-              shape: BoxShape.circle,
-            ),
-          ),
+          asset.svgWidget(),
           const SizedBox(width: 10),
           Text(name),
         ],
