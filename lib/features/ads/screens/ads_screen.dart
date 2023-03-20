@@ -37,6 +37,7 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
 import 'package:agoradesk/features/market/screens/widgets/filter_button.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
+import 'package:agoradesk/features/trades/screens/widgets/drop_down_asset_string_line_with_icons.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_button.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
@@ -493,10 +494,21 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                       popupProps: PopupProps.menu(
                         menuProps: context.dropdownMenuProps,
                         fit: FlexFit.loose,
+                        itemBuilder: (context, assetStr, isSelected) {
+                          return DropdownAssetStringLineWithIcon(
+                            name: assetStr,
+                          );
+                        },
                       ),
                       items: model.assetMenu,
                       onChanged: model.setAsset,
                       selectedItem: model.assetMenu[0],
+                      dropdownBuilder: (context, assetStr) {
+                        return DropdownAssetStringLineWithIcon(
+                          name: assetStr ?? '',
+                          padding: const EdgeInsets.all(0),
+                        );
+                      },
                     ),
                   )
                 : const SizedBox(),

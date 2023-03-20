@@ -24,6 +24,7 @@ import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/market/models/market_view_model.dart';
 import 'package:agoradesk/features/market/screens/widgets/ad_market_tile.dart';
+import 'package:agoradesk/features/market/screens/widgets/drop_down_asset_line_with_icons.dart';
 import 'package:agoradesk/features/market/screens/widgets/filter_button.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_button.dart';
 import 'package:agoradesk/generated/i18n.dart';
@@ -117,20 +118,21 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                         dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_asset),
                         dropdownDecoratorProps: context.dropdownDecoration,
                         popupProps: PopupProps.menu(
-                            menuProps: context.dropdownMenuProps,
-                            fit: FlexFit.loose,
-                            itemBuilder: (context, asset, isSelected) {
-                              return DropdownLineWithIcon(
-                                name: asset.name,
-                                asset: asset,
-                              );
-                            }),
+                          menuProps: context.dropdownMenuProps,
+                          fit: FlexFit.loose,
+                          itemBuilder: (context, asset, isSelected) {
+                            return DropdownAssetLineWithIcon(
+                              name: asset.name,
+                              asset: asset,
+                            );
+                          },
+                        ),
                         items: Asset.values,
                         // itemAsString: (Asset? a) => a?.title() ?? '',
                         onChanged: (Asset? data) => model.asset = data,
                         selectedItem: model.asset,
                         dropdownBuilder: (context, asset) {
-                          return DropdownLineWithIcon(
+                          return DropdownAssetLineWithIcon(
                             name: asset!.name,
                             asset: asset,
                             padding: const EdgeInsets.all(0),
@@ -428,34 +430,5 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
     return model.displayFilterMessage
         ? context.intl.dashboard250Sbads250Sbfilter250Sbapply8722Sbbtn
         : context.intl.search__no_results(getCountryName(model.selectedCountryCode));
-  }
-}
-
-class DropdownLineWithIcon extends StatelessWidget {
-  const DropdownLineWithIcon({
-    super.key,
-    required this.name,
-    required this.asset,
-    this.padding = const EdgeInsets.fromLTRB(18, 14, 2, 14),
-  });
-
-  final String name;
-  final Asset asset;
-  final EdgeInsets padding;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: padding,
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          asset.svgWidget(),
-          const SizedBox(width: 10),
-          Text(name),
-        ],
-      ),
-    );
   }
 }
