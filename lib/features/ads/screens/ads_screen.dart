@@ -483,7 +483,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 selectedItem: model.tradeTypeMenu[0],
               ),
             ),
-            GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 16) : const SizedBox(),
+            GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 6) : const SizedBox(),
             GetIt.I<AppParameters>().isAgoraDesk
                 ? Expanded(
                     flex: 1,

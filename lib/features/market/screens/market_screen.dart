@@ -86,6 +86,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
     return HeaderShadow(
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
@@ -106,7 +107,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                 ),
               ),
             ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 6),
             GetIt.I<AppParameters>().isAgoraDesk
                 ? Expanded(
                     flex: 1,
