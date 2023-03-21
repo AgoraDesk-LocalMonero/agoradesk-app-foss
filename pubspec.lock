@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-      sha256: "6215ac7d00ed98300b72f45ed2b38c2ca841f9f4e6965fab33cbd591e45e4473"
+      sha256: "330d7fcbb72624f5b6d374af8b059b0ef4ba96ba5b8987f874964a1287eb617d"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.13"
+    version: "1.0.18"
   analyzer:
     dependency: transitive
     description:
@@ -453,10 +453,10 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_core
-      sha256: be13e431c0c950f0fc66bdb67b41b8059121d7e7d8bbbc21fb59164892d561f8
+      sha256: "75f747cafd7cbd6c00b908e3a7aa59fc31593d46ba8165d9ee8a79e69464a394"
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.0"
+    version: "2.8.0"
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -469,34 +469,34 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-      sha256: "4b3a41410f3313bb95fd560aa5eb761b6ad65c185de772c72231e8b4aeed6d18"
+      sha256: "0c1cf1f1022d2245ac117443bb95207952ca770281524d2908e323bc063fb8ff"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.1"
+    version: "2.2.2"
   firebase_messaging:
     dependency: "direct main"
     description:
       name: firebase_messaging
-      sha256: dbccddc62fef6f3745ba83062bfd1fbf2eb6a931db4c73d03f85c5772dfdec7f
+      sha256: e82c99bcccf707db4d82ac3fb07be629a392c4cc2a6756aaf1a74c009114846f
       url: "https://pub.dev"
     source: hosted
-    version: "14.2.2"
+    version: "14.3.0"
   firebase_messaging_platform_interface:
     dependency: transitive
     description:
       name: firebase_messaging_platform_interface
-      sha256: "564a47ea76db9cd2d17e7d95790428ad3de9d0075795d14c4c901ba0bf518e1a"
+      sha256: "710bb139ff6e27fe47a0684ba88df4b7517a44d814dc6b7f54a2537568a82fcf"
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.11"
+    version: "4.2.16"
   firebase_messaging_web:
     dependency: transitive
     description:
       name: firebase_messaging_web
-      sha256: "76291494583a003d4ce0d613c41cb87c58fab25773317daa66a245f537e1c3f7"
+      sha256: "66ece031cb17fb771cda4b3328858395fa48aa4c3b3e6a5d1bcaff928086cacd"
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.12"
+    version: "3.2.17"
   fixnum:
     dependency: transitive
     description:

@@ -284,10 +284,24 @@ class SendAssetViewModel extends ViewModel
   }
 
   void sendAllFill() {
-    assetAmount = (balance ?? 0);
-    fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
-    _updateControllersValues();
-    readyToStep3 = true;
+    if (tabController?.index == 0) {
+      if (asset == Asset.BTC) {
+        assetAmount = (balance ?? 0) - (double.tryParse(btcFees?.selectedFeeStr(btcFeesEnum!)[0] ?? '') ?? 0);
+        fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
+        _updateControllersValues();
+        readyToStep3 = true;
+      } else {
+        assetAmount = (balance ?? 0) - xmrFees;
+        fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
+        _updateControllersValues();
+        readyToStep3 = true;
+      }
+    } else {
+      assetAmount = (balance ?? 0);
+      fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
+      _updateControllersValues();
+      readyToStep3 = true;
+    }
   }
 
   Future sendAsset() async {
@@ -368,17 +382,13 @@ class SendAssetViewModel extends ViewModel
     } else {
       fee = double.tryParse(btcFees?.selectedFeeStr(btcFeesEnum!)[0] ?? '') ?? 0.0;
     }
-
+    final int digitsToRound = getBankersDigits(asset.name);
     if (isToReceive) {
-      assetAmountToSend = assetAmount + fee;
-      assetAmountToReceive = assetAmount;
-      // if (assetAmountToSend > (balance ?? 0)) {
-      //   assetAmountToSend = (balance ?? 0);
-      //   assetAmountToReceive = max(assetAmountToSend - fee, 0);
-      // }
+      assetAmountToSend = (assetAmount + fee).bankerRound(digitsToRound).toDouble();
+      assetAmountToReceive = assetAmount.bankerRound(digitsToRound).toDouble();
     } else {
-      assetAmountToSend = assetAmount;
-      assetAmountToReceive = max(assetAmount - fee, 0);
+      assetAmountToSend = assetAmount.bankerRound(digitsToRound).toDouble();
+      assetAmountToReceive = max(assetAmount - fee, 0).toDouble().bankerRound(digitsToRound).toDouble();
     }
   }
 

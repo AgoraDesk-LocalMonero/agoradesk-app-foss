@@ -49,8 +49,12 @@ class WebViewExampleState extends State<WebviewScreen> {
   @override
   void initState() {
     _uri = Uri.tryParse(widget.url) ?? Uri();
-    cookieManager.deleteAllCookies();
+    _deleteCookies();
     super.initState();
+  }
+
+  Future _deleteCookies() async {
+    await cookieManager.deleteAllCookies();
   }
 
   @override
