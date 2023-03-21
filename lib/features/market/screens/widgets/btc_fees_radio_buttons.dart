@@ -1,6 +1,6 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
-import 'package:agoradesk/features/ads/data/models/network_fees.dart';
+import 'package:agoradesk/features/ads/data/models/btc_fees_enum.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:flutter/material.dart';
 
