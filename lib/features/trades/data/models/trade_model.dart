@@ -55,7 +55,7 @@ class TradeModel with _$TradeModel {
         int? transferToSellerConfirmations,
     @JsonKey(name: 'seller_non_custodial_wallet_mnemonic', includeIfNull: false)
         String? sellerNonCustodialWalletMnemonic,
-    @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false) BtcFeesEnum? btcFeesEnum,
+    @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false) BtcFeBtcFeesEnumesEnum? btcFeesEnum,
     @JsonKey(name: 'buyer_settlement_address', includeIfNull: false) String? buyerSettlementAddress,
     @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_key', includeIfNull: false)
         String? transferToBuyerKey,
