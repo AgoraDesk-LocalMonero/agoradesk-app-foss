@@ -10,11 +10,13 @@ mixin ErrorParseMixin {
   void handleApiError(ApiError error, BuildContext context) {
     log('++++[handleApiError] ${error.statusCode} - ${error.errorCode} - ${error.message}');
     late final String errorMessage;
-    if (error.message.containsKey('error') && error.message.containsKey('error_code')) {
+    if (error.message.isEmpty) {
+      errorMessage = '';
+    } else if (error.message.containsKey('error') && error.message.containsKey('error_code')) {
       errorMessage = ApiErrors.translatedCodeError(error.message['error']['error_code'], context);
     } else if (error.message.containsKey('error_code')) {
       errorMessage = ApiErrors.translatedCodeError(error.message['error_code'], context);
-    } else if (error.message['message'] == 'Connection timeout') {
+    } else if (error.message.containsKey('message') && error.message['message'] == 'Connection timeout') {
       errorMessage = ApiErrors.translatedCodeError(4001, context);
     } else if (error.message.containsKey('validation')) {
       errorMessage = ApiErrors.translateValidationError(error.message['validation'], context);

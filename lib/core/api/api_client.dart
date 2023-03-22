@@ -109,6 +109,7 @@ class ApiClient with UrlMixin {
           final statusCode = error.response?.statusCode;
           log('++++[api_client ERROR] $statusCode - ${error.requestOptions.uri}');
           log('++++[api_client ERROR RESPONSE] ${error.response}');
+          log('++++[api_client ERROR RESPONSE DATA] ${error.response?.data}');
 
           DioError? finalError;
           if (statusCode == 401) {
@@ -133,11 +134,21 @@ class ApiClient with UrlMixin {
             // }
           } else if (statusCode == null) {
             final message = ApiHelper.parseErrorToString(error);
-            if (GetIt.I<AppParameters>().debugPrintIsOn)
+            if (GetIt.I<AppParameters>().debugPrintIsOn) {
               debugPrint('++++[api_client ERROR message] statusCode == null, $message');
+            }
             // if (kDebugMode) {
             //   eventBus.fire(FlashEvent.error(message));
             // }
+          } else if (statusCode == 403) {
+            if (error.response?.data != null && error.response!.data.toString().contains('Incapsula')) {
+              final String resp = error.response!.data.toString();
+              int firstIndex = resp.indexOf('incident_id=') + 'incident_id='.length;
+              int secondIndex = resp.indexOf('&edet');
+              final String incidentId = resp.substring(firstIndex, secondIndex);
+
+              eventBus.fire(Display403IncapsulaEvent(incidentId: incidentId));
+            }
           } else if (statusCode == 503) {
             eventBus.fire(const Display503Event());
           }
