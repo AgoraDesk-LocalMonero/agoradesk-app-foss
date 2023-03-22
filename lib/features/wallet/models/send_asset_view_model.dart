@@ -182,7 +182,8 @@ class SendAssetViewModel extends ViewModel
   }
 
   String receiveAmountStr() {
-    return '${assetAmount.toString()} ${asset.key()} $fiatAmount ${_appState.currencyCode}';
+    final fiatAmountToReceive = (assetAmountToReceive * price).bankerRound(2).toDouble();
+    return '${assetAmountToReceive.toString()} ${asset.key()} $fiatAmountToReceive ${_appState.currencyCode}';
   }
 
   String xmrNetworkFeesStr() {
