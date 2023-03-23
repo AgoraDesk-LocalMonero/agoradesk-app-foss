@@ -237,6 +237,7 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
+    isLocalTrade = tradeForScreen.advertisement.tradeType.isLocal();
     markNotificationsFromTradeAsRead();
     _tradeForScreenLoaded = true;
     noteModel = NoteOnUserViewModel(
@@ -251,7 +252,7 @@ class TradeViewModel extends ViewModel
     await _getAccountInfo(tradeForScreen.isSelling! ? tradeForScreen.buyer.username : tradeForScreen.seller.username);
 
     isTradeLoading = false;
-    isLocalTrade = tradeForScreen.advertisement.tradeType.isLocal();
+
     // for FCM
     GetIt.I<AppParameters>().openedTradeId = tradeForScreen.tradeId;
     // when FCM is not available
