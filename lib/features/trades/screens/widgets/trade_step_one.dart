@@ -74,7 +74,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          model.escrowed
+                          model.escrowed()
                               ? const SizedBox()
                               : Padding(
                                   padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
@@ -99,7 +99,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                         ],
                       ),
-                      model.escrowed
+                      model.escrowed()
                           ? const SizedBox()
                           : Padding(
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -347,7 +347,8 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           const SizedBox(height: 12),
                           Row(
                             mainAxisAlignment: model.tradeForScreen.paymentCompletedAt != null
-                                ? MainAxisAlignment.center : MainAxisAlignment.spaceBetween,
+                                ? MainAxisAlignment.center
+                                : MainAxisAlignment.spaceBetween,
                             children: [
                               model.tradeForScreen.paymentCompletedAt != null
                                   ? const SizedBox()
