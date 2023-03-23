@@ -3,7 +3,7 @@
 import 'package:agoradesk/core/utils/datetime_json_converter.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
-import 'package:agoradesk/features/ads/data/models/network_fees.dart';
+import 'package:agoradesk/features/ads/data/models/btc_fees_enum.dart';
 import 'package:agoradesk/features/trades/data/models/attached_ad_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

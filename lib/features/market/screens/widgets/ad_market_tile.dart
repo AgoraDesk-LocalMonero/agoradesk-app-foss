@@ -12,7 +12,6 @@ import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/market/screens/widgets/line_online_dot_last_seen.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:get_it/get_it.dart';
 
 class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMethodsMixin {
   AdMarketTile({
@@ -172,7 +171,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Image.asset(ad.asset!.pngPath(), height: 14),
+                      ad.asset!.svgWidget(),
                       const SizedBox(width: 5),
                       Text(
                         ad.asset!.title(),

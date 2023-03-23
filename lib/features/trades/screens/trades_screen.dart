@@ -21,6 +21,7 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/mixins/trade_mixin.dart';
 import 'package:agoradesk/features/trades/models/trades_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/agora_three_tabs_bar.dart';
+import 'package:agoradesk/features/trades/screens/widgets/drop_down_asset_string_line_with_icons.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_tile.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trades_popup_menu.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/notifications_app_bar_button.dart';
@@ -132,10 +133,21 @@ class _TradesScreenState extends State<TradesScreen>
                         popupProps: PopupProps.menu(
                           menuProps: context.dropdownMenuProps,
                           fit: FlexFit.loose,
+                          itemBuilder: (context, assetStr, isSelected) {
+                            return DropdownAssetStringLineWithIcon(
+                              name: assetStr,
+                            );
+                          },
                         ),
                         items: model.assetMenu,
                         onChanged: model.setAsset,
                         selectedItem: model.assetMenu[0],
+                        dropdownBuilder: (context, assetStr) {
+                          return DropdownAssetStringLineWithIcon(
+                            name: assetStr ?? '',
+                            padding: const EdgeInsets.all(0),
+                          );
+                        },
                       ),
                     ),
                   )

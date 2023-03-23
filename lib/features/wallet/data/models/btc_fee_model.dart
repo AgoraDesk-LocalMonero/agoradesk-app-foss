@@ -1,6 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'package:agoradesk/features/ads/data/models/network_fees.dart';
+import 'package:agoradesk/features/ads/data/models/btc_fees_enum.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'btc_fee_model.freezed.dart';

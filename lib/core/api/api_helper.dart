@@ -43,6 +43,9 @@ mixin ApiHelper {
     if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++parseErrorToApiError objectStr] $err');
     try {
       final e = err as DioError;
+      if (e.response?.statusCode == 403) {
+        return ApiError(statusCode: 403, message: {});
+      }
       String message = '';
       if (e.type == DioErrorType.other) {
         final str1 = e.message.replaceAll('\\', '');
