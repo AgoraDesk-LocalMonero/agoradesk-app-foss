@@ -1,10 +1,7 @@
 ### Updates
-1. Hotfix: Disable confusing popup about 503 errors during polling.
-2. Enhanced: The PIN code can now be between 4 and 25 digits long, instead of being limited to only 4 digits.
-3. Improved: Imperva DDoS protection now performs checks in the background.
-4. UI: All notifications are now presented in a consistent style and can be dismissed by the user.
-5. Fix: API error messages have been translated for better understanding.
-6. Fix: A cancel button has been added when opening a disputed trade from a push notification.
+1. Hotfix: An info box has been added in case of being blocked by a firewall.
+2. The wallet user interface has been improved.
+3. The notification style has been enhanced.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
