@@ -1,6 +1,7 @@
 ### Updates
-1. Hotfix: Disable confusing popup about 503 errors during polling.
-
+1. Hotfix: An info box has been added in case of being blocked by a firewall.
+2. The wallet user interface has been improved.
+3. The notification style has been enhanced.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

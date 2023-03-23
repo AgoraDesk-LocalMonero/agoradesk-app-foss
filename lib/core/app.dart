@@ -549,42 +549,77 @@ class _AppState extends State<App>
           duration: const Duration(seconds: 4),
         );
       })
-      ..on<Display503Event>().listen((e) {
-        if (!_dialogOpened && GetIt.I<AppParameters>().polling == false) {
-          _dialogOpened = true;
-          showDialog(
-            context: router.navigatorKey.currentContext!,
-            builder: (context) => AgoraDialogInfoWidget(
-              title: context.intl.app_503_title(GetIt.I<AppParameters>().appName),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    context.intl.app_503_body(GetIt.I<AppParameters>().appName).replaceAll('\\n', '\n'),
-                    style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
-                  ),
-                  const SizedBox(height: 6),
-                  ButtonLink(
-                    title: GetIt.I<AppParameters>().matrixChannel,
-                    onPressed: () => openLink(GetIt.I<AppParameters>().matrixChannel),
-                  ),
-                  ButtonLink(
-                    title: GetIt.I<AppParameters>().telegramChannel,
-                    onPressed: () => openLink(GetIt.I<AppParameters>().telegramChannel),
-                  ),
-                ],
+      ..on<Display503Event>().listen(
+        (e) {
+          if (!_dialogOpened && GetIt.I<AppParameters>().polling == false) {
+            _dialogOpened = true;
+            showDialog(
+              context: router.navigatorKey.currentContext!,
+              builder: (context) => AgoraDialogInfoWidget(
+                title: context.intl.app_503_title(GetIt.I<AppParameters>().appName),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      context.intl.app_503_body(GetIt.I<AppParameters>().appName).replaceAll('\\n', '\n'),
+                      style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
+                    ),
+                    const SizedBox(height: 6),
+                    ButtonLink(
+                      title: GetIt.I<AppParameters>().matrixChannel,
+                      onPressed: () => openLinkBrowser(GetIt.I<AppParameters>().matrixChannel),
+                    ),
+                    ButtonLink(
+                      title: GetIt.I<AppParameters>().telegramChannel,
+                      onPressed: () => openLinkBrowser(GetIt.I<AppParameters>().telegramChannel),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ).then((value) => _dialogOpened = false);
-        }
-      })
-      ..on<NoificationClickedEvent>().listen((e) async {
-        if (e.tradeId != null && e.tradeId!.isNotEmpty) {
-          await Future.delayed(const Duration(seconds: 1));
-          await _notificationsService.notificationHandleRoutes(e.tradeId!);
-          await _notificationsService.markTradeNotificationsAsRead(e.tradeId);
-        }
-      });
+            ).then((value) => _dialogOpened = false);
+          }
+        },
+      )
+      ..on<Display403IncapsulaEvent>().listen(
+        (e) {
+          if (!_dialogOpened) {
+            _dialogOpened = true;
+            showDialog(
+              context: router.navigatorKey.currentContext!,
+              builder: (context) => AgoraDialogInfoWidget(
+                title: '${GetIt.I<AppParameters>().appName}\'s Firewall Has Blocked Your Request',
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SelectableText(
+                      'The possible reason - you are trying to access service from the blocked countries (Cuba, Iran, North Korea, Russia, Syria) or doing anything malicious.\nIf you believe this to be an error, please contact our support with your incident ID: ${e.incidentId}',
+                      style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
+                    ),
+                    const SizedBox(height: 6),
+                    ButtonLink(
+                      title: 'Send us email',
+                      onPressed: () => openLinkBrowser('mailto:support@agoradesk.freshdesk.com'),
+                    ),
+                    ButtonLink(
+                      title: 'Message us on Telegram',
+                      onPressed: () => openLinkBrowser(GetIt.I<AppParameters>().telegramChannel),
+                    ),
+                  ],
+                ),
+              ),
+            ).then((value) => _dialogOpened = false);
+          }
+        },
+      )
+      ..on<NoificationClickedEvent>().listen(
+        (e) async {
+          if (e.tradeId != null && e.tradeId!.isNotEmpty) {
+            await Future.delayed(const Duration(seconds: 1));
+            await _notificationsService.notificationHandleRoutes(e.tradeId!);
+            await _notificationsService.markTradeNotificationsAsRead(e.tradeId);
+          }
+        },
+      );
   }
 
   //todo - check how it works when app initially was closed

@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.68+91
+version: 1.0.69+92
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -52,7 +52,7 @@ dependencies:
   dropdown_search: ^5.0.6
   markdown_widget: ^1.2.9
   expandable: ^5.0.1
-  flutter_svg: ^1.1.0
+  flutter_svg: ^2.0.4
   uni_links: ^0.5.1
   barcode_scan2: ^4.2.3
   qr_flutter: ^4.0.0

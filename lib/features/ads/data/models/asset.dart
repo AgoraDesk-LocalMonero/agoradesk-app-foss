@@ -1,6 +1,7 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:decimal/decimal.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 final kBtcAmountToSell = Decimal.parse('0.001');
 final kXmrAmountToSell = Decimal.parse('0.35');
@@ -41,12 +42,20 @@ extension AssetExt on Asset {
     }
   }
 
-  String pngPath() {
+  Widget svgWidget({double size = 14}) {
     switch (this) {
       case Asset.BTC:
-        return 'assets/images/bitcoin-logo.png';
+        return SvgPicture.asset(
+          'assets/images/btc-logo.svg',
+          height: size,
+          width: size,
+        );
       case Asset.XMR:
-        return 'assets/images/monero-logo.png';
+        return SvgPicture.asset(
+          'assets/images/xmr-logo.svg',
+          height: size,
+          width: size,
+        );
     }
   }
 

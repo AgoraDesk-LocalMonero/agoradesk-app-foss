@@ -14,7 +14,7 @@ import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
-import 'package:agoradesk/features/ads/data/models/network_fees.dart';
+import 'package:agoradesk/features/ads/data/models/btc_fees_enum.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
