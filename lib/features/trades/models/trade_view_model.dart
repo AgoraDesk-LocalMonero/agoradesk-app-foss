@@ -146,8 +146,6 @@ class TradeViewModel extends ViewModel
   String _repliedText = '';
   AccountInfoModel? accountInfoModel;
 
-  bool get escrowed => tradeForScreen.escrowedAt != null;
-
   String get repliedText => _repliedText;
 
   set repliedText(String v) => updateWith(repliedText: v);
@@ -239,6 +237,7 @@ class TradeViewModel extends ViewModel
     } else {
       tradeForScreen = tradeModel!;
     }
+    isLocalTrade = tradeForScreen.advertisement.tradeType.isLocal();
     markNotificationsFromTradeAsRead();
     _tradeForScreenLoaded = true;
     noteModel = NoteOnUserViewModel(
@@ -253,7 +252,7 @@ class TradeViewModel extends ViewModel
     await _getAccountInfo(tradeForScreen.isSelling! ? tradeForScreen.buyer.username : tradeForScreen.seller.username);
 
     isTradeLoading = false;
-    isLocalTrade = tradeForScreen.advertisement.tradeType.isLocal();
+
     // for FCM
     GetIt.I<AppParameters>().openedTradeId = tradeForScreen.tradeId;
     // when FCM is not available
@@ -290,17 +289,21 @@ class TradeViewModel extends ViewModel
     if (GetIt.I<AppParameters>().includeFcm == false ||
         GetIt.I<AppParameters>().isGoogleAvailable == false ||
         isProcessing()) {
+      GetIt.I<AppParameters>().polling = true;
       await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
       await _getMessages(polling: true);
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     }
   }
 
   _listenEventBus() {
-    _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) {
-      indicatorKey.currentState?.show();
+    _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) async {
+      GetIt.I<AppParameters>().polling = true;
+      await indicatorKey.currentState?.show();
       _calcMinutesBeforeCancel();
-      _getMessages(polling: true);
+      await _getMessages(polling: true);
+      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     });
     eventBus.on<UpdateOpenedChatEvent>().listen((e) {});
   }
@@ -481,6 +484,13 @@ class TradeViewModel extends ViewModel
     return context.intl.app_able_to_cancel_now(tradeForScreen.seller.username ?? '');
   }
 
+  bool escrowed() {
+    if (_tradeForScreenLoaded) {
+      return tradeForScreen.escrowedAt != null;
+    }
+    return false;
+  }
+
   String awaitingToByerText(BuildContext context) {
     final stageText =
         context.intl.trade250Sbstatus250Sbsettlement250Sbprogress250Sbstepper250Sbawaiting8722Sbto8722Sbbuyer;
@@ -512,7 +522,7 @@ class TradeViewModel extends ViewModel
 
   //todo - move to utils
   void _setTradeStatus({bool initial = false}) {
-    late final DateTime tradeStatusDate;
+    DateTime tradeStatusDate;
     if (isLocalTrade && tradeForScreen.fundedAt == null && tradeForScreen.canceledAt == null) {
       tradeStatus = TradeStatus.notFunded;
       tradeStatusDate = tradeForScreen.createdAt!;
@@ -539,17 +549,12 @@ class TradeViewModel extends ViewModel
             tradeForScreen.closedAt != null)) {
       tradeStatus = TradeStatus.released;
       tradeStatusDate = tradeForScreen.fundedAt ?? tradeForScreen.closedAt!;
-    }
-    // else if (tradeForScreen.releasedAt != null &&
-    //     tradeForScreen.transferToSellerTransactionId != null &&
-    //     tradeForScreen.transferToBuyerTransactionId == null) {
-    //   tradeStatus = TradeStatus.awaitingToBuyerWallet;
-    // }
-    else if (tradeForScreen.canceledAt != null) {
+    } else if (tradeForScreen.canceledAt != null) {
       tradeStatus = TradeStatus.canceled;
       tradeStatusDate = tradeForScreen.canceledAt!;
     } else if (tradeForScreen.disputedAt != null) {
       tradeStatus = TradeStatus.disputed;
+      tradeStatusDate = tradeForScreen.disputedAt!;
     } else if (tradeForScreen.paymentCompletedAt != null || paymentCompletedAt != null) {
       tradeStatus = TradeStatus.paymentCompleted;
       tradeStatusDate = tradeForScreen.paymentCompletedAt ?? paymentCompletedAt!;

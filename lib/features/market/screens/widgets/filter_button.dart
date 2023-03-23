@@ -20,8 +20,8 @@ class FilterButton extends StatelessWidget {
         behavior: HitTestBehavior.opaque,
         onTap: onPressed,
         child: Container(
-          width: 55,
-          height: 55,
+          width: 48,
+          height: 48,
           decoration: BoxDecoration(
             color: selected ? context.colHighlight : context.colS3,
             border: Border.all(

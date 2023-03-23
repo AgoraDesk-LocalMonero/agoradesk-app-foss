@@ -79,6 +79,12 @@ class Display503Event {
   const Display503Event();
 }
 
+class Display403IncapsulaEvent {
+  const Display403IncapsulaEvent({required this.incidentId});
+
+  final String? incidentId;
+}
+
 ///
 /// Flash events
 ///
