@@ -109,7 +109,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        model.escrowed
+                        model.escrowed()
                             ? const SizedBox()
                             : Padding(
                                 padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
@@ -140,7 +140,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                         ),
                       ],
                     ),
-                    model.escrowed
+                    model.escrowed()
                         ? const SizedBox()
                         : Padding(
                             padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -214,7 +214,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                         ),
                         const SizedBox(height: 12),
                         LineDotText(
-                          text: model.escrowed
+                          text: model.escrowed()
                               ? context.intl.trade250Sblocal250Sbbuyer250Sbescrowed
                               : context.intl.trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
                         ),

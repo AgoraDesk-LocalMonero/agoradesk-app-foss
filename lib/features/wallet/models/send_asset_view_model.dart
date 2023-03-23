@@ -9,7 +9,7 @@ import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
-import 'package:agoradesk/features/ads/data/models/network_fees.dart';
+import 'package:agoradesk/features/ads/data/models/btc_fees_enum.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/models/send_asset_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
@@ -182,7 +182,8 @@ class SendAssetViewModel extends ViewModel
   }
 
   String receiveAmountStr() {
-    return '${assetAmount.toString()} ${asset.key()} $fiatAmount ${_appState.currencyCode}';
+    final fiatAmountToReceive = (assetAmountToReceive * price).bankerRound(2).toDouble();
+    return '${assetAmountToReceive.toString()} ${asset.key()} $fiatAmountToReceive ${_appState.currencyCode}';
   }
 
   String xmrNetworkFeesStr() {
@@ -284,10 +285,24 @@ class SendAssetViewModel extends ViewModel
   }
 
   void sendAllFill() {
-    assetAmount = (balance ?? 0);
-    fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
-    _updateControllersValues();
-    readyToStep3 = true;
+    if (tabController?.index == 0) {
+      if (asset == Asset.BTC) {
+        assetAmount = (balance ?? 0) - (double.tryParse(btcFees?.selectedFeeStr(btcFeesEnum!)[0] ?? '') ?? 0);
+        fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
+        _updateControllersValues();
+        readyToStep3 = true;
+      } else {
+        assetAmount = (balance ?? 0) - xmrFees;
+        fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
+        _updateControllersValues();
+        readyToStep3 = true;
+      }
+    } else {
+      assetAmount = (balance ?? 0);
+      fiatAmount = (assetAmount * price).bankerRound(2).toDouble();
+      _updateControllersValues();
+      readyToStep3 = true;
+    }
   }
 
   Future sendAsset() async {
@@ -368,17 +383,13 @@ class SendAssetViewModel extends ViewModel
     } else {
       fee = double.tryParse(btcFees?.selectedFeeStr(btcFeesEnum!)[0] ?? '') ?? 0.0;
     }
-
+    final int digitsToRound = getBankersDigits(asset.name);
     if (isToReceive) {
-      assetAmountToSend = assetAmount + fee;
-      assetAmountToReceive = assetAmount;
-      // if (assetAmountToSend > (balance ?? 0)) {
-      //   assetAmountToSend = (balance ?? 0);
-      //   assetAmountToReceive = max(assetAmountToSend - fee, 0);
-      // }
+      assetAmountToSend = (assetAmount + fee).bankerRound(digitsToRound).toDouble();
+      assetAmountToReceive = assetAmount.bankerRound(digitsToRound).toDouble();
     } else {
-      assetAmountToSend = assetAmount;
-      assetAmountToReceive = max(assetAmount - fee, 0);
+      assetAmountToSend = assetAmount.bankerRound(digitsToRound).toDouble();
+      assetAmountToReceive = max(assetAmount - fee, 0).toDouble().bankerRound(digitsToRound).toDouble();
     }
   }
 

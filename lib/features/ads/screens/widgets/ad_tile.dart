@@ -236,7 +236,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Image.asset(ad.asset!.pngPath(), height: 14),
+                      ad.asset!.svgWidget(),
                       const SizedBox(width: 5),
                       Text(
                         ad.asset!.title(),
