@@ -90,7 +90,7 @@ class WebViewExampleState extends State<WebviewScreen> {
                 final cookieName = cookieRaw.split('=').first;
                 final cookieValue = cookieRaw.substring(cookieName.length + 1);
                 if (GetIt.I<AppParameters>().debugPrintIsOn) {
-                  debugPrint('[++++ cookies passed to the webview] ${cookieName}=$cookieValue');
+                  debugPrint('[++++ cookies passed to the webview] $cookieName=$cookieValue');
                 }
                 cookieManager.setCookie(
                   url: _uri,
@@ -103,7 +103,8 @@ class WebViewExampleState extends State<WebviewScreen> {
               }
             }
             // then load initial URL here
-            await _webViewController!.loadUrl(urlRequest: URLRequest(url: _uri));
+            await Future.delayed(const Duration(milliseconds: 100));
+            await _webViewController?.loadUrl(urlRequest: URLRequest(url: _uri));
             await await _getCookies();
           } catch (e) {
             if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ [Webview cooikes error] $e');
