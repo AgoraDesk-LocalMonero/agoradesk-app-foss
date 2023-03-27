@@ -20,18 +20,17 @@ mixin CountryInfoMixin {
     if (langCode.isEmpty) {
       langCode = 'en';
     }
+    if (!_countryName.keys.contains(langCode)) {
+      langCode = 'en';
+    }
     if (code == 'XX') {
       return 'Global';
     }
     try {
-      String codeTwoLetters = code;
-      if (code.length > 2) {
-        codeTwoLetters = code.substring(0, 2);
-      }
       if (lowerCase) {
-        return _countryName[langCode][codeTwoLetters].toLowerCase();
+        return _countryName[langCode][code].toLowerCase();
       }
-      return _countryName[langCode][codeTwoLetters];
+      return _countryName[langCode][code];
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getCountryName error] $e');
       return '';
@@ -45,13 +44,12 @@ mixin CountryInfoMixin {
     if (langCode.isEmpty) {
       langCode = 'en';
     }
-    try {
-      String codeTwoLetters = code;
-      if (code.length > 2) {
-        codeTwoLetters = code.substring(0, 2);
-      }
+    if (!currencyName.keys.contains(langCode)) {
+      langCode = 'en';
+    }
 
-      return currencyName[langCode][codeTwoLetters];
+    try {
+      return currencyName[langCode][code];
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getCurrencyName error] $e');
       return '';
@@ -63,6 +61,9 @@ mixin CountryInfoMixin {
 
     langCode ??= 'en';
     if (langCode.isEmpty) {
+      langCode = 'en';
+    }
+    if (!currencyName.keys.contains(langCode)) {
       langCode = 'en';
     }
     try {
