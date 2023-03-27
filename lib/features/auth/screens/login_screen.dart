@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, 
                                   Center(
                                     child: Text(
                                       context.intl.login,
-                                      style: context.txtHead4N90,
+                                      style: context.txtHeadMediumN90,
                                     ),
                                   ),
                                   const SizedBox(height: 16),

@@ -36,7 +36,7 @@ class UserSeenTile extends StatelessWidget with DateMixin {
                       const SizedBox(width: 4),
                       Text(
                         userName,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ],
                   ),

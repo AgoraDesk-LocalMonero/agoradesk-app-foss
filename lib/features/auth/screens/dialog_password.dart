@@ -39,7 +39,7 @@ class DialogPassword extends StatelessWidget {
                     children: [
                       Text(
                         title,
-                        style: context.txtHead4N90,
+                        style: context.txtHeadMediumN90,
                       ),
                       ButtonSquareIcon(
                         label: context.intl.close,

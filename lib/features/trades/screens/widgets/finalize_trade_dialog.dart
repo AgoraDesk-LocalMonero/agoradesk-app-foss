@@ -1,4 +1,3 @@
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -9,6 +8,7 @@ import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:vm/vm.dart';
 
 class FinalizeTradeDialog extends StatelessWidget {
   const FinalizeTradeDialog({
@@ -54,7 +54,7 @@ class FinalizeTradeDialog extends StatelessWidget {
                               child: Text(
                                 context.intl.trade250Sbdialog250Sbconfirm8722Sbrelease8722Sbtitle(
                                     moneyStr, model.tradeForScreen.buyer.username!),
-                                style: context.txtHead4N90N10,
+                                style: context.txtHeadMediumN90N10,
                               ),
                             ),
                           ),

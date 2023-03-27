@@ -49,7 +49,7 @@ class AgoraDialogTwoButtons extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                       child: Text(
                         title!,
-                        style: context.txtHead4N90,
+                        style: context.txtHeadMediumN90,
                       ),
                     )
                   : const SizedBox(),

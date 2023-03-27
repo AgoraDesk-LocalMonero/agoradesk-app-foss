@@ -47,7 +47,7 @@ class ResetPasswordScreen extends StatelessWidget {
                                   Center(
                                     child: Text(
                                       context.intl.password8722Sbreset250Sbtitle,
-                                      style: context.txtHead1N90,
+                                      style: context.txtDispLargeN90,
                                     ),
                                   ),
                                   const SizedBox(height: 16),

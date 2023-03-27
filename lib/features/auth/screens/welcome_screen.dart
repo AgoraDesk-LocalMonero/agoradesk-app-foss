@@ -12,7 +12,6 @@ import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -62,7 +61,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                 flex: 2,
                 child: Column(
                   children: [
-                    Text(GetIt.I<AppParameters>().appName, style: context.txtHead1N90),
+                    Text(GetIt.I<AppParameters>().appName, style: context.txtDispLargeN90),
                     const SizedBox(height: 8),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
@@ -122,7 +121,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                 children: [
                   Text(
                     'Disclaimer',
-                    style: context.txtHead4N90,
+                    style: context.txtHeadMediumN90,
                   ),
                   const SizedBox(height: 16),
                   Text(
