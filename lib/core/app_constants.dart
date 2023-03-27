@@ -20,12 +20,19 @@ const kNewMessageDuration = Duration(milliseconds: 300);
 /// Blocked countries removed from the country selector.
 ///
 
-const List<String> kBlockedCountries = [
+const List<String> kBlockedCountriesCodes = [
   'RU',
   'IR',
   'CU',
   'KP',
   'SY',
+];
+const List<String> kBlockedCountriesNames = [
+  'Cuba',
+  'Iran',
+  'North Korea',
+  'Russia',
+  'Syria',
 ];
 
 ///
