@@ -9467,6 +9467,9 @@ class I18nPt extends I18n {
 
   @override
   String get pin_you_can_use_new => 'O PIN deve ter pelo menos 4 dígitos';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

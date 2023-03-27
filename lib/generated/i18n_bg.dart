@@ -9467,4 +9467,7 @@ class I18nBg extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN трябва да е поне 4 цифри';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

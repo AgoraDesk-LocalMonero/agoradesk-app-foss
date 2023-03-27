@@ -1,5 +1,138 @@
 {
+  "ar": [
+    "app_default_theme"
+  ],
+
+  "bg": [
+    "app_default_theme"
+  ],
+
+  "cs": [
+    "app_default_theme"
+  ],
+
+  "da": [
+    "app_default_theme"
+  ],
+
+  "de": [
+    "app_default_theme"
+  ],
+
+  "el": [
+    "app_default_theme"
+  ],
+
+  "es": [
+    "app_default_theme"
+  ],
+
+  "fi": [
+    "app_default_theme"
+  ],
+
+  "fr": [
+    "app_default_theme"
+  ],
+
+  "hi": [
+    "app_default_theme"
+  ],
+
+  "hu": [
+    "app_default_theme"
+  ],
+
+  "id": [
+    "app_default_theme"
+  ],
+
+  "it": [
+    "app_default_theme"
+  ],
+
+  "ja": [
+    "app_default_theme"
+  ],
+
+  "ko": [
+    "app_default_theme"
+  ],
+
+  "lv": [
+    "app_default_theme"
+  ],
+
+  "nb": [
+    "app_default_theme"
+  ],
+
+  "nb_NO": [
+    "app_default_theme"
+  ],
+
+  "nl": [
+    "app_default_theme"
+  ],
+
+  "pl": [
+    "app_default_theme"
+  ],
+
+  "pt": [
+    "app_default_theme"
+  ],
+
+  "pt_BR": [
+    "app_default_theme"
+  ],
+
+  "ro": [
+    "app_default_theme"
+  ],
+
+  "ru": [
+    "app_default_theme"
+  ],
+
+  "sk": [
+    "app_default_theme"
+  ],
+
+  "sl": [
+    "app_default_theme"
+  ],
+
   "sv": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_default_theme"
+  ],
+
+  "sw": [
+    "app_default_theme"
+  ],
+
+  "tl": [
+    "app_default_theme"
+  ],
+
+  "tr": [
+    "app_default_theme"
+  ],
+
+  "ur": [
+    "app_default_theme"
+  ],
+
+  "zh": [
+    "app_default_theme"
+  ],
+
+  "zh_CN": [
+    "app_default_theme"
+  ],
+
+  "zh_TW": [
+    "app_default_theme"
   ]
 }

@@ -9467,4 +9467,7 @@ class I18nFr extends I18n {
 
   @override
   String get pin_you_can_use_new => 'Le code PIN doit comporter au moins 4 chiffres';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

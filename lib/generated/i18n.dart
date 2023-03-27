@@ -17050,6 +17050,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'PIN must be at least 4 digits'**
   String get pin_you_can_use_new;
+
+  /// No description provided for @app_default_theme.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a default theme'**
+  String get app_default_theme;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

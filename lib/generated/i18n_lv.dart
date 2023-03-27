@@ -9467,4 +9467,7 @@ class I18nLv extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN ir jābūt vismaz 4 cipariem';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

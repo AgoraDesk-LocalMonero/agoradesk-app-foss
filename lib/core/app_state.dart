@@ -21,7 +21,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
     Locale? locale,
     TabType? defaultTab,
-    ThemeMode themeMode = ThemeMode.dark,
+    required ThemeMode themeMode,
     required SecureStorage secureStorage,
   })  : _locale = locale,
         _defaultTab = defaultTab,

@@ -9467,4 +9467,7 @@ class I18nRo extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN-ul trebuie să aibă cel puțin 4 cifre';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

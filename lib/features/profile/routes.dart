@@ -3,6 +3,7 @@ import 'package:agoradesk/features/profile/screens/change_password_screen.dart';
 import 'package:agoradesk/features/profile/screens/country_screen.dart';
 import 'package:agoradesk/features/profile/screens/coupons_screen.dart';
 import 'package:agoradesk/features/profile/screens/default_tab_screen.dart';
+import 'package:agoradesk/features/profile/screens/default_theme_screen.dart';
 import 'package:agoradesk/features/profile/screens/disable_2fa_screen.dart';
 import 'package:agoradesk/features/profile/screens/email_screen.dart';
 import 'package:agoradesk/features/profile/screens/enable_2fa_screen.dart';
@@ -103,6 +104,12 @@ const profileRoutes = <AutoRoute>[
   CustomRoute(
     path: 'profile/proxy',
     page: ProxyScreen,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+    durationInMilliseconds: 200,
+  ),
+  CustomRoute(
+    path: 'profile/defaultThemeScreen',
+    page: DefaultThemeScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),

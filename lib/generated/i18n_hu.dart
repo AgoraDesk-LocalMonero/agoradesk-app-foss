@@ -9467,4 +9467,7 @@ class I18nHu extends I18n {
 
   @override
   String get pin_you_can_use_new => 'A PIN-kódnak legalább 4 számjegyből kell állnia';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

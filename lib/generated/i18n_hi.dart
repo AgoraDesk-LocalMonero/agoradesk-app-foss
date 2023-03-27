@@ -9467,4 +9467,7 @@ class I18nHi extends I18n {
 
   @override
   String get pin_you_can_use_new => 'पिन कम से कम 4 अंकों का होना चाहिए';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

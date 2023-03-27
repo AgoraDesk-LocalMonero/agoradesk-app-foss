@@ -9467,4 +9467,7 @@ class I18nKo extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN은 4자리 이상이어야 합니다.';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

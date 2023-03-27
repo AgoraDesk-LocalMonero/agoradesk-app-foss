@@ -9467,4 +9467,7 @@ class I18nTl extends I18n {
 
   @override
   String get pin_you_can_use_new => 'Ang PIN ay dapat na hindi bababa sa 4 na numero';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

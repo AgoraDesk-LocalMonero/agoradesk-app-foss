@@ -9467,4 +9467,7 @@ class I18nNl extends I18n {
 
   @override
   String get pin_you_can_use_new => 'De pincode moet uit minimaal 4 cijfers bestaan';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }

@@ -9467,4 +9467,7 @@ class I18nId extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN minimal harus 4 digit';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
 }
