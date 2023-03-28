@@ -20,7 +20,7 @@ class TransactionsViewModel extends ViewModel {
   void init() {
     filteredTransactions.addAll(transactions);
     assetMenu.add('All transactions');
-    assetMenu.addAll(Asset.values.map((e) => e.key() + ' transactions'));
+    assetMenu.addAll(Asset.values.map((e) => '${e.key()} transactions'));
     super.init();
   }
 

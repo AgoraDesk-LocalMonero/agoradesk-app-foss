@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
@@ -10,7 +9,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+import 'package:vm/vm.dart';
 
 class TransactionsScreen extends StatelessWidget {
   const TransactionsScreen({

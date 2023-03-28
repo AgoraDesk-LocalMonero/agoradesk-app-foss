@@ -34,8 +34,8 @@ class PlacesSearch {
   });
 
   String _createUrl(String queryText, [MapboxLocation? location]) {
-    final String _url = GetIt.I<AppParameters>().urlApiBase + '/mapbox/geocoding/places/';
-    String finalUrl = '$_url${Uri.encodeFull(queryText)}.json?';
+    final String url = '${GetIt.I<AppParameters>().urlApiBase}/mapbox/geocoding/places/';
+    String finalUrl = '$url${Uri.encodeFull(queryText)}.json?';
 
     if (location != null) {
       finalUrl += '&proximity=${location.lng}%2C${location.lat}';
@@ -67,6 +67,7 @@ class PlacesSearch {
     String url = _createUrl(queryText, location);
     final response = await http.get(Uri.parse(url));
     try {
+      print('+++++++++++++++++++++++++++++++++++++888811 - ${response.body}');
       return Predictions.fromRawJson(response.body).features;
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++ places search error] - $e');

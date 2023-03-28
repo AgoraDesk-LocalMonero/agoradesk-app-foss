@@ -24,7 +24,6 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
-import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
 class MarketViewModel extends ViewModel
@@ -54,7 +53,7 @@ class MarketViewModel extends ViewModel
 
   late bool isGuestMode;
 
-  int _reloadCounter = 0;
+  final int _reloadCounter = 0;
 
   Asset? _asset = Asset.XMR;
   bool connection = true;
@@ -296,11 +295,19 @@ class MarketViewModel extends ViewModel
       loadingAds = true;
       initialLoading = false;
 
+      String countryCodeForSearch = selectedCountryCode;
+      if (tradeType!.isLocal()) {
+        if (ctrlLocation.text.isEmpty) {
+          countryCodeForSearch = _appState.countryCode;
+          _lat = 10.0;
+          _lon = 10.0;
+        } else {}
+      }
       final res = await _adsRepository.publicAdSearch(
         asset: asset!,
         tradeType: tradeType!,
         currencyCode: selectedCurrency.code,
-        countryCode: selectedCountryCode,
+        countryCode: countryCodeForSearch,
         paymentMethod: selectedOnlineProvider?.url,
         amount: ctrlAmount.text,
         page: loadMore ? (paginationMeta?.currentPage ?? 0) + 1 : 0,
@@ -441,8 +448,8 @@ class MarketViewModel extends ViewModel
     }
     _displayFilter = displayFilter ?? _displayFilter;
     if (tradeType != null && tradeType.isLocal()) {
-      reloadAds = false;
-      displayFilterMessage = true;
+      // reloadAds = false;
+      // displayFilterMessage = true;
       ads.clear();
     }
     _asset = asset ?? _asset;
