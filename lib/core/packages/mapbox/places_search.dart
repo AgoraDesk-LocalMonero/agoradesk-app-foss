@@ -67,7 +67,6 @@ class PlacesSearch {
     String url = _createUrl(queryText, location);
     final response = await http.get(Uri.parse(url));
     try {
-      print('+++++++++++++++++++++++++++++++++++++888811 - ${response.body}');
       return Predictions.fromRawJson(response.body).features;
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++ places search error] - $e');
