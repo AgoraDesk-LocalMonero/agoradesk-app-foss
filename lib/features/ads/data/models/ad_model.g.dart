@@ -40,6 +40,7 @@ _$_AdModel _$$_AdModelFromJson(Map<String, dynamic> json) => _$_AdModel(
       requireFeedbackScore: json['require_feedback_score'] as int?,
       buyerSettlementFeeLevel: json['buyer_settlement_fee_level'] as String?,
       locationString: json['location_string'] as String?,
+      distance: (json['distance'] as num?)?.toDouble(),
       profile: json['profile'] == null
           ? null
           : AccountInfoModel.fromJson(json['profile'] as Map<String, dynamic>),
@@ -88,6 +89,7 @@ Map<String, dynamic> _$$_AdModelToJson(_$_AdModel instance) {
   writeNotNull('require_feedback_score', instance.requireFeedbackScore);
   writeNotNull('buyer_settlement_fee_level', instance.buyerSettlementFeeLevel);
   writeNotNull('location_string', instance.locationString);
+  writeNotNull('distance', instance.distance);
   val['profile'] = instance.profile?.toJson();
   return val;
 }
