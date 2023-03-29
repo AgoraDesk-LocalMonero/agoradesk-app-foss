@@ -7,6 +7,7 @@ import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
+import 'package:agoradesk/core/translations/countries_coordinates_consts.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -299,8 +300,17 @@ class MarketViewModel extends ViewModel
       if (tradeType!.isLocal()) {
         if (ctrlLocation.text.isEmpty) {
           countryCodeForSearch = _appState.countryCode;
-          _lat = 10.0;
-          _lon = 10.0;
+          late double lat;
+          late double lon;
+          try {
+            lat = kCountriesCoordinates[countryCodeForSearch]!['latitude'] as double;
+            lon = kCountriesCoordinates[countryCodeForSearch]!['longitude'] as double;
+          } catch (e) {
+            lat = 10.0;
+            lon = 10.0;
+          }
+          _lat = lat;
+          _lon = lon;
         } else {}
       }
       final res = await _adsRepository.publicAdSearch(
