@@ -26,7 +26,7 @@ class RecentTransactionsScreen extends StatelessWidget {
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: I18n.of(context)!.wallet250Sbtab250Sbtx8722Sblong,
+              title: I18n.of(context)!.recent_transactions,
             ),
             body: SafeArea(
               child: Padding(
