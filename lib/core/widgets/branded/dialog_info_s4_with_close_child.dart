@@ -17,7 +17,6 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dialogHeight = MediaQuery.of(context).size.height * 0.4;
     return SimpleDialog(
       insetPadding: const EdgeInsets.all(24),
       backgroundColor: Theme.of(context).colorScheme.surface4,
@@ -27,11 +26,12 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
         ),
       ),
       children: [
-        SizedBox(
-          height: dialogHeight,
+        ConstrainedBox(
+          constraints: const BoxConstraints(minHeight: 100),
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +39,7 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
                     Expanded(
                       child: Text(
                         title,
-                        style: context.txtHead4N90,
+                        style: context.txtHeadMediumN90,
                       ),
                     ),
                     ButtonSquareIcon(
@@ -53,11 +53,8 @@ class DialogInfoS4WithCloseChild extends StatelessWidget {
                 ContainerSurface2Radius12Border1(
                   child: Padding(
                     padding: const EdgeInsets.all(10),
-                    child: SizedBox(
-                      height: dialogHeight - 130,
-                      child: SingleChildScrollView(
-                        child: child,
-                      ),
+                    child: SingleChildScrollView(
+                      child: child,
                     ),
                   ),
                 )

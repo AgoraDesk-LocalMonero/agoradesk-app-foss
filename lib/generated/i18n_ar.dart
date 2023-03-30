@@ -9467,4 +9467,10 @@ class I18nAr extends I18n {
 
   @override
   String get pin_you_can_use_new => 'يجب أن يتكون رقم التعريف الشخصي من 4 أرقام على الأقل';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
+
+  @override
+  String get app_no_info_to_export => 'No info to export';
 }

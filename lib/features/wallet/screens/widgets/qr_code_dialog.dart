@@ -6,7 +6,6 @@ import 'package:agoradesk/core/widgets/branded/button_icon_text_p70.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -40,7 +39,7 @@ class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
           children: [
             Text(
               context.intl.your_deposit_address(asset.title()),
-              style: context.txtHead4N90,
+              style: context.txtHeadMediumN90,
             ),
             const SizedBox(height: 12),
             Text(

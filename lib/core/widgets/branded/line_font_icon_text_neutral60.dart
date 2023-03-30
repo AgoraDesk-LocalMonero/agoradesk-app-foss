@@ -30,7 +30,7 @@ class LineFontIconTextNeutral60 extends StatelessWidget {
         const SizedBox(width: 6),
         Text(
           text,
-          style: Theme.of(context).textTheme.bodyText2!.copyWith(
+          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: Theme.of(context).colorScheme.neutral60.withOpacity(active ? 1 : 0.5),
               ),
         ),

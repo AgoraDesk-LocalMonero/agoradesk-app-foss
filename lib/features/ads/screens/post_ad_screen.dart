@@ -19,7 +19,6 @@ import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -86,7 +85,7 @@ class _PostAdScreenState extends State<PostAdScreen> with TickerProviderStateMix
                                 child: Text(
                                   context.intl.post8722Sbad250Sbstep8722Sb1((model.page + 1).toInt().toString()),
                                   // 'Page ${(model.page + 1).toInt()}',
-                                  style: context.txtHead1N90,
+                                  style: context.txtDispLargeN90,
                                 ),
                               )
                             : const SizedBox(),

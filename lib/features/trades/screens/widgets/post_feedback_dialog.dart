@@ -41,7 +41,7 @@ class PostFeedbackDialog extends StatelessWidget {
                     children: [
                       Text(
                         context.intl.trade250Sbleave8722Sbfeedback8722Sbbtn,
-                        style: context.txtHead4N90N10,
+                        style: context.txtHeadMediumN90N10,
                       ),
                       const SizedBox(height: 16),
                       Text(

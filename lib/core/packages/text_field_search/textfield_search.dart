@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
+import 'package:agoradesk/core/packages/mapbox/types.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -407,7 +408,11 @@ class SearchItem {
   factory SearchItem.fromPlace(MapBoxPlace place) {
     String? countryCode;
     try {
-      countryCode = place.context?.last.toJson()['short_code'].toString().toUpperCase();
+      if (place.placeType?[0] == PlaceType.country) {
+        countryCode = place.properties!.shortCode!.toUpperCase();
+      } else {
+        countryCode = place.context?.last.toJson()['short_code'].toString().toUpperCase();
+      }
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++fromPlace error - $e');
     }

@@ -592,7 +592,7 @@ class _AppState extends State<App>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SelectableText(
-                      'The possible reason - you are trying to access service from the blocked countries (Cuba, Iran, North Korea, Russia, Syria) or doing anything malicious.\nIf you believe this to be an error, please contact our support with your incident ID: ${e.incidentId}',
+                      'The possible reason - you are trying to access service from the blocked countries (${kBlockedCountriesNames.join(',')}) or doing anything malicious.\nIf you believe this to be an error, please contact our support with your incident ID: ${e.incidentId}',
                       style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
                     ),
                     const SizedBox(height: 6),
@@ -658,17 +658,9 @@ class _AppState extends State<App>
       }
     }
 
-    // final brightness = SchedulerBinding.instance.window.platformBrightness;
-    // final bool isDarkMode = brightness == Brightness.dark;
-    // ThemeMode mode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
-    ThemeMode mode = ThemeMode.dark;
-    final int cacheThemeModeIndex = AppSharedPrefs().themeMode.index;
-    if (cacheThemeModeIndex != 0) {
-      mode = AppSharedPrefs().themeMode;
-    }
     appState.updateWith(
       countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
-      themeMode: mode,
+      themeMode: AppSharedPrefs().themeMode,
       notify: false,
     );
   }

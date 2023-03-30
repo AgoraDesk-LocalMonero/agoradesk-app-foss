@@ -9467,6 +9467,12 @@ class I18nNb extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN-koden må bestå av minst 4 sifre';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
+
+  @override
+  String get app_no_info_to_export => 'No info to export';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).

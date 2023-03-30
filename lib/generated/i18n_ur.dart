@@ -9467,4 +9467,10 @@ class I18nUr extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN کم از کم 4 ہندسوں کا ہونا چاہیے۔';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
+
+  @override
+  String get app_no_info_to_export => 'No info to export';
 }

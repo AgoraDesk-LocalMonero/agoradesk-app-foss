@@ -165,8 +165,8 @@ class WalletViewModel extends ViewModel with StringMixin {
     if (!loadingBalance) {
       loadingBalance = true;
       if (GetIt.I<AppParameters>().isAgora) {
-        final Either<ApiError, WalletBalanceModel> resBtc = await _walletService.getWalletTransactions(Asset.BTC);
-        final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
+        final Either<ApiError, WalletBalanceModel> resBtc = await _walletService.getRecentWalletTransactions(Asset.BTC);
+        final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getRecentWalletTransactions(Asset.XMR);
         loadingBalance = false;
         if (resBtc.isRight && resXmr.isRight) {
           _balanceBtc = resBtc.right.balance.toString();
@@ -190,7 +190,7 @@ class WalletViewModel extends ViewModel with StringMixin {
           }
         }
       } else {
-        final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getWalletTransactions(Asset.XMR);
+        final Either<ApiError, WalletBalanceModel> resXmr = await _walletService.getRecentWalletTransactions(Asset.XMR);
         loadingBalance = false;
         if (resXmr.isRight) {
           _balanceXmr = resXmr.right.balance.toString();

@@ -2,16 +2,15 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
-import 'package:agoradesk/features/trades/models/trades_view_model.dart';
 import 'package:flutter/material.dart';
 
-class TradesPopupMenu extends StatelessWidget with UrlMixin {
-  const TradesPopupMenu({
+class ExportCsvPopupMenu extends StatelessWidget with UrlMixin {
+  const ExportCsvPopupMenu({
     Key? key,
-    required this.model,
+    required this.onPressed,
   }) : super(key: key);
 
-  final TradesViewModel model;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class TradesPopupMenu extends StatelessWidget with UrlMixin {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          onTap: () => model.exportCsv(),
+          onTap: onPressed,
           value: 1,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

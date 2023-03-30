@@ -14,6 +14,7 @@ part 'ad_model.g.dart';
 @Freezed()
 class AdModel with _$AdModel {
   const AdModel._();
+
   @JsonSerializable(explicitToJson: true)
   const factory AdModel({
     Asset? asset,
@@ -56,6 +57,7 @@ class AdModel with _$AdModel {
     @JsonKey(name: 'require_feedback_score', includeIfNull: false) int? requireFeedbackScore,
     @JsonKey(name: 'buyer_settlement_fee_level', includeIfNull: false) String? buyerSettlementFeeLevel,
     @JsonKey(name: 'location_string', includeIfNull: false) String? locationString,
+    @JsonKey(includeIfNull: false) double? distance,
     AccountInfoModel? profile,
   }) = _AdModel;
 
