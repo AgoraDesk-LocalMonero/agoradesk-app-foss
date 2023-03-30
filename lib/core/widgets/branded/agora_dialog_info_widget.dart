@@ -40,10 +40,9 @@ class AgoraDialogInfoWidget extends StatelessWidget with StringMixin {
                   child: AutoSizeText(
                     title,
                     maxLines: 1,
-                    style: context.txtHead4N90N10,
+                    style: context.txtHeadMediumN90N10,
                   ),
                 ),
-
                 ButtonSquareIcon(
                   label: context.intl.close,
                   iconData: AgoraFont.x,

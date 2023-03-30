@@ -12,3 +12,5 @@ String? doubleToString(double? val) {
 DateTime? dateFromInt(int int) => DateTime.fromMillisecondsSinceEpoch(int);
 
 int? dateToInt(DateTime? time) => time?.millisecondsSinceEpoch;
+
+String? dateToUtcFormatString(DateTime? date) => date?.toIso8601String();

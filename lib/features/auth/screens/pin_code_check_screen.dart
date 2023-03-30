@@ -39,7 +39,7 @@ class PinCodeCheckScreen extends StatelessWidget {
                     const SizedBox(height: 40),
                     Text(
                       context.intl.pin_enter,
-                      style: context.txtHead1N90,
+                      style: context.txtDispLargeN90,
                     ),
                     const SizedBox(height: 60),
                     Expanded(

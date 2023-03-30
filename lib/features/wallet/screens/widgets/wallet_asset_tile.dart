@@ -144,7 +144,13 @@ class WalletAssetTile extends StatelessWidget {
                           ),
                         ),
                         WalletBlueButton(
-                          title: 'Address book',
+                          title: context.intl.wallet250Sbtab250Sbtx8722Sblong,
+                          iconData: CupertinoIcons.book,
+                          shrinkWrap: true,
+                          onPressed: () => context.pushRoute(AppWalletTransactionsRoute(asset: asset)),
+                        ),
+                        WalletBlueButton(
+                          title: context.intl.address8722Sbbook,
                           iconData: CupertinoIcons.book,
                           shrinkWrap: true,
                           onPressed: () => context.pushRoute(

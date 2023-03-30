@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -11,6 +10,7 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:vm/vm.dart';
 
 class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
   const LinkAccountScreen({
@@ -93,7 +93,7 @@ class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
             children: [
               Text(
                 I18n.of(context)!.enter_username,
-                style: context.txtHead1N90,
+                style: context.txtDispLargeN90,
               ),
               const SizedBox(height: 12),
               Text(
@@ -140,7 +140,7 @@ class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
             children: [
               Text(
                 I18n.of(context)!.reputation8722Sbimport250Sbstep250Sbcode250Sbtitle,
-                style: context.txtHead1N90,
+                style: context.txtDispLargeN90,
               ),
               const SizedBox(height: 12),
               Text(
@@ -200,7 +200,7 @@ class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
             children: [
               Text(
                 I18n.of(context)!.reputation8722Sbimport250Sbstep250Sbfinal250Sbtitle,
-                style: context.txtHead1N90,
+                style: context.txtDispLargeN90,
               ),
               const SizedBox(height: 12),
               Text(

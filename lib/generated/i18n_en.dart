@@ -9467,4 +9467,10 @@ class I18nEn extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN must be at least 4 digits';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
+
+  @override
+  String get app_no_info_to_export => 'No info to export';
 }

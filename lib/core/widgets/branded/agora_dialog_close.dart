@@ -34,7 +34,7 @@ class AgoraDialogClose extends StatelessWidget {
             AutoSizeText(
               title,
               maxLines: 1,
-              style: context.txtHead4N90,
+              style: context.txtHeadMediumN90,
             ),
             const SizedBox(height: 16),
             Text(

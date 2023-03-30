@@ -1,15 +1,9 @@
-### Updates
-<<<<<<< HEAD
-1. Enhanced: The PIN code can now be between 4 and 25 digits long, instead of being limited to only 4 digits.
-2. Improved: Imperva DDoS protection now performs checks in the background.
-3. UI: All notifications are now presented in a consistent style and can be dismissed by the user.
-4. Fix: API error messages have been translated for better understanding.
-5. Fix: A cancel button has been added when opening a disputed trade from a push notification.
-=======
-1. Hotfix: An info box has been added in case of being blocked by a firewall.
-2. The wallet user interface has been improved.
-3. The notification style has been enhanced.
->>>>>>> main
+1. Display all transactions of the wallet. Export them to CSV.
+2. Fix: minimum feedback gets reset.
+3. Display the distance to the local ad.
+4. Display local ads in the user's country when local ads are selected.
+5. All countries' names have been localized.
+6. Added system theme switcher.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

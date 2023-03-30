@@ -48,12 +48,12 @@ void main() {
     final Decimal kBalanceBtc = Decimal.parse('1.0');
 
     void arrangeWalletServiceReturnsXmrAndBtcTransactions() {
-      when(() => mockWalletService.getWalletTransactions(Asset.BTC)).thenAnswer(
+      when(() => mockWalletService.getRecentWalletTransactions(Asset.BTC)).thenAnswer(
         (_) async => Either.right(
           WalletBalanceModel(balance: kBalanceBtc, receivingAddress: 'addressBTC'),
         ),
       );
-      when(() => mockWalletService.getWalletTransactions(Asset.XMR)).thenAnswer(
+      when(() => mockWalletService.getRecentWalletTransactions(Asset.XMR)).thenAnswer(
         (_) async => Either.right(
           WalletBalanceModel(balance: kBalanceXmr, receivingAddress: 'addressXMR'),
         ),
@@ -63,8 +63,8 @@ void main() {
     test('getTransactions called with service for BTC & XMR - 2 times inside one method', () async {
       arrangeWalletServiceReturnsXmrAndBtcTransactions();
       await sut.getBalances();
-      verify(() => mockWalletService.getWalletTransactions(Asset.BTC)).called(1);
-      verify(() => mockWalletService.getWalletTransactions(Asset.XMR)).called(1);
+      verify(() => mockWalletService.getRecentWalletTransactions(Asset.BTC)).called(1);
+      verify(() => mockWalletService.getRecentWalletTransactions(Asset.XMR)).called(1);
     });
 
     test('indicates loading, got data, indicates stop loading', () async {

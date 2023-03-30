@@ -28,6 +28,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   @override
   Widget build(BuildContext context) {
     final halfWidth = (MediaQuery.of(context).size.width - (16 * 2 + 12 * 2 + 12 * 2 + 26)) / 2;
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 6, 0, 6),
       child: ContainerSurface5Radius12Shadow(
@@ -189,6 +190,18 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
   }
 
   Widget _buildBottom(BuildContext context, double halfWidth) {
+    late final String distanceStr;
+    final distance = ad.distance;
+    if (distance == null) {
+      distanceStr = '';
+    } else {
+      if (distance < 1000.0) {
+        distanceStr = ' (${distance.toInt()} ${context.intl.distance250Sbmeters})';
+      } else {
+        distanceStr = ' (${distance ~/ 1000} ${context.intl.distance250Sbkilometers})';
+      }
+    }
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -204,7 +217,7 @@ class AdMarketTile extends StatelessWidget with DateMixin, CountryInfoMixin, Pay
               const SizedBox(width: 4),
               Expanded(
                 child: Text(
-                  getCountryName(ad.countryCode),
+                  getCountryName(ad.countryCode) + distanceStr,
                   style: context.txtBodyXSmallN90,
                 ),
               ),

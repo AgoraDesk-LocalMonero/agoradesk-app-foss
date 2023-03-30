@@ -30,7 +30,7 @@ class LineIconTextPrimary90 extends StatelessWidget {
                   child: AutoSizeText(
                     text,
                     maxLines: 1,
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
                         ),
                   ),

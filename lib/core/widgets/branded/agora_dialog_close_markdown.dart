@@ -4,12 +4,7 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:markdown_widget/config/style_config.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-import 'package:markdown_widget/tags/ol.dart';
-import 'package:markdown_widget/tags/p.dart';
-import 'package:markdown_widget/tags/title.dart';
-import 'package:markdown_widget/tags/ul.dart';
 
 class AgoraDialogCloseMarkDown extends StatelessWidget with UrlMixin {
   const AgoraDialogCloseMarkDown({
@@ -41,7 +36,7 @@ class AgoraDialogCloseMarkDown extends StatelessWidget with UrlMixin {
             AutoSizeText(
               title,
               maxLines: 1,
-              style: context.txtHead4N90,
+              style: context.txtHeadMediumN90,
             ),
             const SizedBox(height: 16),
             MarkdownWidget(
