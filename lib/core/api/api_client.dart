@@ -64,8 +64,7 @@ class ApiClient with UrlMixin {
             options.headers['Authorization'] = '$accessToken';
           }
           List<String> cookiesLst = [];
-          final bool isLoggedIn =
-              GetIt.I<AppParameters>().accessToken != null && GetIt.I<AppParameters>().accessToken!.isNotEmpty;
+          final bool isLoggedIn = GetIt.I<AppParameters>().accessToken?.isNotEmpty == true;
           if (GetIt.I<AppParameters>().cookies != null) {
             for (final cookie in GetIt.I<AppParameters>().cookies!) {
               try {
