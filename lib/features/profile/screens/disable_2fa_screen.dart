@@ -1,4 +1,3 @@
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
@@ -8,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class Disable2faScreen extends StatelessWidget {
   const Disable2faScreen({
@@ -38,7 +38,7 @@ class Disable2faScreen extends StatelessWidget {
                     children: [
                       Text(
                         context.intl.settings250Sb2fa250Sbverify8722Sbbtn,
-                        style: context.txtHead1N90,
+                        style: context.txtDispLargeN90,
                       ),
                       const SizedBox(height: 12),
                       Text(

@@ -136,9 +136,9 @@ extension ColorExtension on ColorScheme {
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
       );
 
-  TextStyle get tipStyle => ThemeData().textTheme.bodyText2!.copyWith(color: tipColor);
+  TextStyle get tipStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: tipColor);
 
-  TextStyle get errorStyle => ThemeData().textTheme.bodyText2!.copyWith(color: errorColor);
+  TextStyle get errorStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: errorColor);
 
   InputDecoration get txtFieldMainDecoration => brightness == Brightness.dark
       ? InputDecoration(

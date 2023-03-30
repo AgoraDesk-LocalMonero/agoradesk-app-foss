@@ -98,6 +98,8 @@ mixin _$AdModel {
   String? get buyerSettlementFeeLevel => throw _privateConstructorUsedError;
   @JsonKey(name: 'location_string', includeIfNull: false)
   String? get locationString => throw _privateConstructorUsedError;
+  @JsonKey(includeIfNull: false)
+  double? get distance => throw _privateConstructorUsedError;
   AccountInfoModel? get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -171,6 +173,8 @@ abstract class $AdModelCopyWith<$Res> {
           String? buyerSettlementFeeLevel,
       @JsonKey(name: 'location_string', includeIfNull: false)
           String? locationString,
+      @JsonKey(includeIfNull: false)
+          double? distance,
       AccountInfoModel? profile});
 
   $AccountInfoModelCopyWith<$Res>? get profile;
@@ -220,6 +224,7 @@ class _$AdModelCopyWithImpl<$Res, $Val extends AdModel>
     Object? requireFeedbackScore = freezed,
     Object? buyerSettlementFeeLevel = freezed,
     Object? locationString = freezed,
+    Object? distance = freezed,
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
@@ -347,6 +352,10 @@ class _$AdModelCopyWithImpl<$Res, $Val extends AdModel>
           ? _value.locationString
           : locationString // ignore: cast_nullable_to_non_nullable
               as String?,
+      distance: freezed == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double?,
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
@@ -435,6 +444,8 @@ abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
           String? buyerSettlementFeeLevel,
       @JsonKey(name: 'location_string', includeIfNull: false)
           String? locationString,
+      @JsonKey(includeIfNull: false)
+          double? distance,
       AccountInfoModel? profile});
 
   @override
@@ -482,6 +493,7 @@ class __$$_AdModelCopyWithImpl<$Res>
     Object? requireFeedbackScore = freezed,
     Object? buyerSettlementFeeLevel = freezed,
     Object? locationString = freezed,
+    Object? distance = freezed,
     Object? profile = freezed,
   }) {
     return _then(_$_AdModel(
@@ -609,6 +621,10 @@ class __$$_AdModelCopyWithImpl<$Res>
           ? _value.locationString
           : locationString // ignore: cast_nullable_to_non_nullable
               as String?,
+      distance: freezed == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double?,
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
@@ -682,6 +698,8 @@ class _$_AdModel extends _AdModel {
           this.buyerSettlementFeeLevel,
       @JsonKey(name: 'location_string', includeIfNull: false)
           this.locationString,
+      @JsonKey(includeIfNull: false)
+          this.distance,
       this.profile})
       : super._();
 
@@ -798,11 +816,14 @@ class _$_AdModel extends _AdModel {
   @JsonKey(name: 'location_string', includeIfNull: false)
   final String? locationString;
   @override
+  @JsonKey(includeIfNull: false)
+  final double? distance;
+  @override
   final AccountInfoModel? profile;
 
   @override
   String toString() {
-    return 'AdModel(asset: $asset, id: $id, createdAt: $createdAt, tempPrice: $tempPrice, visible: $visible, lat: $lat, lon: $lon, countryCode: $countryCode, currency: $currency, tradeType: $tradeType, onlineProvider: $onlineProvider, buyerSettlementAddress: $buyerSettlementAddress, priceEquation: $priceEquation, trackMaxAmount: $trackMaxAmount, requireTrustedByAdvertiser: $requireTrustedByAdvertiser, floating: $floating, verifiedEmailRequired: $verifiedEmailRequired, msg: $msg, minAmount: $minAmount, maxAmount: $maxAmount, maxAmountAvailable: $maxAmountAvailable, paymentWindowMinutes: $paymentWindowMinutes, limitToFiatAmounts: $limitToFiatAmounts, paymentMethodDetail: $paymentMethodDetail, paymentMethodInfo: $paymentMethodInfo, firstTimeLimitAsset: $firstTimeLimitAsset, firstTimeLimitXmr: $firstTimeLimitXmr, firstTimeLimitBtc: $firstTimeLimitBtc, requireFeedbackScore: $requireFeedbackScore, buyerSettlementFeeLevel: $buyerSettlementFeeLevel, locationString: $locationString, profile: $profile)';
+    return 'AdModel(asset: $asset, id: $id, createdAt: $createdAt, tempPrice: $tempPrice, visible: $visible, lat: $lat, lon: $lon, countryCode: $countryCode, currency: $currency, tradeType: $tradeType, onlineProvider: $onlineProvider, buyerSettlementAddress: $buyerSettlementAddress, priceEquation: $priceEquation, trackMaxAmount: $trackMaxAmount, requireTrustedByAdvertiser: $requireTrustedByAdvertiser, floating: $floating, verifiedEmailRequired: $verifiedEmailRequired, msg: $msg, minAmount: $minAmount, maxAmount: $maxAmount, maxAmountAvailable: $maxAmountAvailable, paymentWindowMinutes: $paymentWindowMinutes, limitToFiatAmounts: $limitToFiatAmounts, paymentMethodDetail: $paymentMethodDetail, paymentMethodInfo: $paymentMethodInfo, firstTimeLimitAsset: $firstTimeLimitAsset, firstTimeLimitXmr: $firstTimeLimitXmr, firstTimeLimitBtc: $firstTimeLimitBtc, requireFeedbackScore: $requireFeedbackScore, buyerSettlementFeeLevel: $buyerSettlementFeeLevel, locationString: $locationString, distance: $distance, profile: $profile)';
   }
 
   @override
@@ -869,6 +890,8 @@ class _$_AdModel extends _AdModel {
                 other.buyerSettlementFeeLevel == buyerSettlementFeeLevel) &&
             (identical(other.locationString, locationString) ||
                 other.locationString == locationString) &&
+            (identical(other.distance, distance) ||
+                other.distance == distance) &&
             (identical(other.profile, profile) || other.profile == profile));
   }
 
@@ -907,6 +930,7 @@ class _$_AdModel extends _AdModel {
         requireFeedbackScore,
         buyerSettlementFeeLevel,
         locationString,
+        distance,
         profile
       ]);
 
@@ -986,6 +1010,8 @@ abstract class _AdModel extends AdModel {
           final String? buyerSettlementFeeLevel,
       @JsonKey(name: 'location_string', includeIfNull: false)
           final String? locationString,
+      @JsonKey(includeIfNull: false)
+          final double? distance,
       final AccountInfoModel? profile}) = _$_AdModel;
   const _AdModel._() : super._();
 
@@ -1100,6 +1126,9 @@ abstract class _AdModel extends AdModel {
   @override
   @JsonKey(name: 'location_string', includeIfNull: false)
   String? get locationString;
+  @override
+  @JsonKey(includeIfNull: false)
+  double? get distance;
   @override
   AccountInfoModel? get profile;
   @override

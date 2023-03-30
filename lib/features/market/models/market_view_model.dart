@@ -7,6 +7,7 @@ import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
+import 'package:agoradesk/core/translations/countries_coordinates_consts.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -24,7 +25,6 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
-import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
 class MarketViewModel extends ViewModel
@@ -54,7 +54,7 @@ class MarketViewModel extends ViewModel
 
   late bool isGuestMode;
 
-  int _reloadCounter = 0;
+  final int _reloadCounter = 0;
 
   Asset? _asset = Asset.XMR;
   bool connection = true;
@@ -296,11 +296,28 @@ class MarketViewModel extends ViewModel
       loadingAds = true;
       initialLoading = false;
 
+      String countryCodeForSearch = selectedCountryCode;
+      if (tradeType!.isLocal()) {
+        if (ctrlLocation.text.isEmpty) {
+          countryCodeForSearch = _appState.countryCode;
+          late double lat;
+          late double lon;
+          try {
+            lat = kCountriesCoordinates[countryCodeForSearch]!['latitude'] as double;
+            lon = kCountriesCoordinates[countryCodeForSearch]!['longitude'] as double;
+          } catch (e) {
+            lat = 10.0;
+            lon = 10.0;
+          }
+          _lat = lat;
+          _lon = lon;
+        } else {}
+      }
       final res = await _adsRepository.publicAdSearch(
         asset: asset!,
         tradeType: tradeType!,
         currencyCode: selectedCurrency.code,
-        countryCode: selectedCountryCode,
+        countryCode: countryCodeForSearch,
         paymentMethod: selectedOnlineProvider?.url,
         amount: ctrlAmount.text,
         page: loadMore ? (paginationMeta?.currentPage ?? 0) + 1 : 0,
@@ -441,8 +458,8 @@ class MarketViewModel extends ViewModel
     }
     _displayFilter = displayFilter ?? _displayFilter;
     if (tradeType != null && tradeType.isLocal()) {
-      reloadAds = false;
-      displayFilterMessage = true;
+      // reloadAds = false;
+      // displayFilterMessage = true;
       ads.clear();
     }
     _asset = asset ?? _asset;

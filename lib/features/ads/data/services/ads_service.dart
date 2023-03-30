@@ -106,7 +106,7 @@ class AdsService {
     // final aa = await _api.client.get(url1);
     // print('++++++++++ip adrress - ${aa}');
 
-    String url = '/' + tradeType.apiUrl().replaceFirst('-', '-' + asset.apiUrl() + '-') + '/$currencyCode';
+    String url = '/${tradeType.apiUrl().replaceFirst('-', '-${asset.apiUrl()}-')}/$currencyCode';
     if (countryCode != null && countryCode != kAnyCountryCode) {
       url += '/$countryCode';
     }

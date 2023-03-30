@@ -94,7 +94,7 @@ class PinCodeSetScreen extends StatelessWidget {
         key: UniqueKey(),
         child: Text(
           ' ',
-          style: Theme.of(context).textTheme.headline4,
+          style: Theme.of(context).textTheme.headlineMedium,
         ),
       );
     }
@@ -106,7 +106,7 @@ class PinCodeSetScreen extends StatelessWidget {
         child: Center(
           child: Text(
             context.intl.pin_current,
-            style: context.txtHead1N90,
+            style: context.txtDispLargeN90,
           ),
         ),
       );
@@ -119,7 +119,7 @@ class PinCodeSetScreen extends StatelessWidget {
         child: Center(
           child: Text(
             context.intl.pin_setup,
-            style: context.txtHead1N90,
+            style: context.txtDispLargeN90,
           ),
         ),
       );
@@ -130,7 +130,7 @@ class PinCodeSetScreen extends StatelessWidget {
         child: Center(
           child: Text(
             context.intl.pin_confirm,
-            style: context.txtHead1N90,
+            style: context.txtDispLargeN90,
           ),
         ),
       );

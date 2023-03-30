@@ -327,6 +327,7 @@ class AddEditAdViewModel extends ViewModel
         trustedUsersOnly = ad!.requireTrustedByAdvertiser ?? false;
         verifiedEmailOnly = ad!.verifiedEmailRequired ?? false;
         ctrl6MinimumScore.text = ad!.requireFeedbackScore != null ? ad!.requireFeedbackScore.toString() : '';
+        minimumFeedbackScore = ad!.requireFeedbackScore;
         if (ad!.asset == Asset.BTC) {
           ctrl6FirstTradeMaxLimit.text = ad!.firstTimeLimitBtc != null ? ad!.firstTimeLimitBtc.toString() : '';
         } else {

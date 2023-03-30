@@ -162,6 +162,8 @@ class AppSharedPrefs with DateMixin {
         return ThemeMode.dark;
       case 'light':
         return ThemeMode.light;
+      case 'system':
+        return ThemeMode.system;
     }
     return ThemeMode.dark;
   }

@@ -21,7 +21,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   AppState({
     Locale? locale,
     TabType? defaultTab,
-    ThemeMode themeMode = ThemeMode.dark,
+    required ThemeMode themeMode,
     required SecureStorage secureStorage,
   })  : _locale = locale,
         _defaultTab = defaultTab,
@@ -189,7 +189,7 @@ class AppState extends ChangeNotifier with CountryInfoMixin {
   String get currencyCode => _currencyCode ?? 'USD';
 
   String get countryCode {
-    if (kBlockedCountries.contains(_countryCode)) {
+    if (kBlockedCountriesCodes.contains(_countryCode)) {
       return 'US';
     }
     return _countryCode ?? 'US';

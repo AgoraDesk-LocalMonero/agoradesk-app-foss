@@ -23,7 +23,7 @@ class AppUpdateWidget extends StatelessWidget with UrlMixin {
               padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Text(
                 context.intl.app_update_new_version_available(newVesrionNumber),
-                style: context.txtHead4N90,
+                style: context.txtHeadMediumN90,
               ),
             ),
             mainActionText: context.intl.app_update_now,

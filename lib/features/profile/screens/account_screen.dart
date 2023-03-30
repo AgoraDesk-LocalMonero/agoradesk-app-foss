@@ -156,10 +156,15 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => AutoRouter.of(context).push(const LanguageRoute()),
                           ),
                           const SizedBox(height: 8),
-                          LineWithSwitcher(
-                            value: model.isDarkTheme(),
-                            title: context.intl.dark_theme,
-                            onPressed: () => model.switchTheme(),
+                          // LineWithSwitcher(
+                          //   value: model.isDarkTheme(),
+                          //   title: context.intl.dark_theme,
+                          //   onPressed: () => model.switchTheme(),
+                          // ),
+                          // const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.app_default_theme,
+                            onPressed: () => AutoRouter.of(context).push(const DefaultThemeRoute()),
                           ),
                           const SizedBox(height: 8),
                           LineWithArrow(

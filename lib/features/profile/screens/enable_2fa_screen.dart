@@ -16,7 +16,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:share_plus/share_plus.dart';
@@ -127,7 +126,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
             children: [
               Text(
                 context.intl.save_your_backup_code,
-                style: context.txtHead1N90,
+                style: context.txtDispLargeN90,
               ),
               const SizedBox(height: 12),
               Text(
@@ -160,7 +159,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
             children: [
               Text(
                 context.intl.set_up_2fa,
-                style: context.txtHead1N90,
+                style: context.txtDispLargeN90,
               ),
               const SizedBox(height: 12),
               Text(
@@ -232,7 +231,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
       children: [
         Text(
           context.intl.settings250Sb2fa250Sbverify8722Sbbtn,
-          style: context.txtHead1N90,
+          style: context.txtDispLargeN90,
         ),
         const SizedBox(height: 12),
         Text(

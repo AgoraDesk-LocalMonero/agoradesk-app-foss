@@ -11,6 +11,7 @@ part 'transaction_model.g.dart';
 class TransactionModel with _$TransactionModel {
   @JsonSerializable(explicitToJson: true)
   const TransactionModel._();
+
   const factory TransactionModel({
     required String amount,
     @JsonKey(name: 'created_at') required DateTime createdAt,
@@ -47,5 +48,9 @@ class TransactionModel with _$TransactionModel {
       }
     }
     return newWords.join(' ');
+  }
+
+  String toCsvString() {
+    return '$createdAt,${txType.name},${isSent == true ? '' : amount}, ${isSent == true ? amount : ''}, $description\n';
   }
 }

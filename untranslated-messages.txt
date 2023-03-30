@@ -1,5 +1,172 @@
 {
+  "ar": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "bg": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "cs": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "da": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "de": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "el": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "es": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "fi": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "fr": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "hi": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "hu": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "id": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "it": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "ja": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "ko": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "lv": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "nb": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "nb_NO": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "nl": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "pl": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "pt": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "pt_BR": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "ro": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "ru": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "sk": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "sl": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
   "sv": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "sw": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "tl": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "tr": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "ur": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "zh": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "zh_CN": [
+    "app_default_theme",
+    "app_no_info_to_export"
+  ],
+
+  "zh_TW": [
+    "app_default_theme",
+    "app_no_info_to_export"
   ]
 }
