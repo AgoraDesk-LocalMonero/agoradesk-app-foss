@@ -60,7 +60,6 @@ class WalletService {
           final data = TransactionModel.fromJson(e);
           res.add(data);
         }
-        print('+++++++++++++++++++++++++++++++++++++11 - ${res.length}');
         return Either.right(res);
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);

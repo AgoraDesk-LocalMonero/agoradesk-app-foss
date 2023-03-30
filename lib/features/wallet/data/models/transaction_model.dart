@@ -51,6 +51,6 @@ class TransactionModel with _$TransactionModel {
   }
 
   String toCsvString() {
-    return '$createdAt,$txType,${isSent == true ? '' : amount}, ${isSent == true ? amount : ''}, $description\n';
+    return '$createdAt,${txType.name},${isSent == true ? '' : amount}, ${isSent == true ? amount : ''}, $description\n';
   }
 }
