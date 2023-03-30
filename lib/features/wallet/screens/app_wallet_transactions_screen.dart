@@ -1,32 +1,36 @@
-import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
-import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
+import 'package:agoradesk/features/ads/data/models/asset.dart';
+import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/app_wallet_transactions_view_model.dart';
+import 'package:agoradesk/features/wallet/screens/widgets/export_csv_popup_menu.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/transaction_tile.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:vm/vm.dart';
 
 class AppWalletTransactionsScreen extends StatelessWidget {
   const AppWalletTransactionsScreen({
     Key? key,
-    required this.transactions,
+    required this.asset,
   }) : super(key: key);
 
-  final List<TransactionModel> transactions;
+  final Asset asset;
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<AppWalletTransactionsViewModel>(
-        model: AppWalletTransactionsViewModel(transactions: transactions),
+        model: AppWalletTransactionsViewModel(
+          walletService: context.read<WalletService>(),
+          asset: asset,
+        ),
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
               title: I18n.of(context)!.wallet250Sbtab250Sbtx8722Sblong,
+              rightAction: ExportCsvPopupMenu(onPressed: () => model.exportCsv()),
             ),
             body: SafeArea(
               child: Padding(
@@ -34,15 +38,12 @@ class AppWalletTransactionsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 6),
-                    _buildDropDownList(context, model),
-                    Text(
-                      I18n.of(context)!.transactions_30_days,
-                      style: context.txtBodySmallN50,
-                    ),
-                    const SizedBox(height: 8),
                     Expanded(
-                      child: _buildTransactions(context, model.filteredTransactions),
+                      child: RefreshIndicator(
+                        key: model.indicatorKey,
+                        onRefresh: model.getTransactions,
+                        child: _buildTransactions(context, model),
+                      ),
                     ),
                   ],
                 ),
@@ -52,37 +53,15 @@ class AppWalletTransactionsScreen extends StatelessWidget {
         });
   }
 
-  Widget _buildDropDownList(BuildContext context, AppWalletTransactionsViewModel model) {
-    if (!GetIt.I<AppParameters>().isAgora) {
-      return const SizedBox();
-    }
-
-    return Column(
-      children: [
-        DropdownSearch<String>(
-          items: model.assetMenu,
-          onChanged: model.setAsset,
-          selectedItem: model.assetMenu[0],
-          dropdownDecoratorProps: context.dropdownDecoration,
-          popupProps: PopupProps.menu(
-            menuProps: context.dropdownMenuProps,
-            fit: FlexFit.loose,
-          ),
-        ),
-        const SizedBox(height: 20),
-      ],
-    );
-  }
-
-  Widget _buildTransactions(BuildContext context, List<TransactionModel> transactions) {
+  Widget _buildTransactions(BuildContext context, AppWalletTransactionsViewModel model) {
     return ListView.separated(
       padding: EdgeInsets.zero,
       shrinkWrap: true,
-      itemCount: transactions.length,
+      itemCount: model.transactions.length,
       itemBuilder: (context, index) {
         return TransactionTile(
-          transaction: transactions[index],
-          onPressed: () => context.pushRoute(TransactionRoute(transaction: transactions[index])),
+          transaction: model.transactions[index],
+          onPressed: () => context.pushRoute(TransactionRoute(transaction: model.transactions[index])),
         );
       },
       separatorBuilder: (context, index) {

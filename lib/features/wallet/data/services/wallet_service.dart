@@ -41,10 +41,10 @@ class WalletService {
   }
 
   ///
-  /// Get wallet transactions
+  /// Get all wallet transactions
   /// The results can be filtered by asset, type and after.
   ///
-  Future<Either<ApiError, List<TransactionModel>>> getTransactions({
+  Future<Either<ApiError, List<TransactionModel>>> getAppWalletTransactions({
     required TransactionsRequestModel request,
   }) async {
     try {
@@ -60,6 +60,7 @@ class WalletService {
           final data = TransactionModel.fromJson(e);
           res.add(data);
         }
+        print('+++++++++++++++++++++++++++++++++++++11 - ${res.length}');
         return Either.right(res);
       } else {
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
@@ -75,7 +76,7 @@ class WalletService {
   ///
   /// Get wallet address, balance and transactions
   ///
-  Future<Either<ApiError, WalletBalanceModel>> getWalletTransactions(Asset asset) async {
+  Future<Either<ApiError, WalletBalanceModel>> getRecentWalletTransactions(Asset asset) async {
     String requestOption = asset == Asset.BTC ? '' : '/${asset.key()}';
     try {
       final resp = await _api.client.get('/wallet$requestOption');

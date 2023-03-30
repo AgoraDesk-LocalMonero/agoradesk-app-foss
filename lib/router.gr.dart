@@ -22,7 +22,7 @@ import 'features/account/screens/trader_profile_screen.dart' as _i17;
 import 'features/account/screens/trades_with_user_screen.dart' as _i20;
 import 'features/account/screens/user_ads_screen.dart' as _i19;
 import 'features/ads/data/models/ad_model.dart' as _i61;
-import 'features/ads/data/models/asset.dart' as _i68;
+import 'features/ads/data/models/asset.dart' as _i67;
 import 'features/ads/models/ads_view_model.dart' as _i60;
 import 'features/ads/screens/ad_edit_screen.dart' as _i13;
 import 'features/ads/screens/ad_info_screen.dart' as _i12;
@@ -68,7 +68,7 @@ import 'features/trades/data/models/trade_model.dart' as _i65;
 import 'features/trades/screens/trade_screen.dart' as _i21;
 import 'features/trades/screens/trades_screen.dart' as _i52;
 import 'features/trades/screens/webview_screen.dart' as _i22;
-import 'features/wallet/data/models/incoming_deposit_model.dart' as _i67;
+import 'features/wallet/data/models/incoming_deposit_model.dart' as _i68;
 import 'features/wallet/data/models/transaction_model.dart' as _i66;
 import 'features/wallet/models/send_asset_text_field_view_model.dart' as _i70;
 import 'features/wallet/models/send_asset_view_model.dart' as _i69;
@@ -409,7 +409,7 @@ class AppRouter extends _i56.RootStackRouter {
         routeData: routeData,
         child: _i24.AppWalletTransactionsScreen(
           key: args.key,
-          transactions: args.transactions,
+          asset: args.asset,
         ),
         transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
         durationInMilliseconds: 200,
@@ -1730,13 +1730,13 @@ class AppWalletTransactionsRoute
     extends _i56.PageRouteInfo<AppWalletTransactionsRouteArgs> {
   AppWalletTransactionsRoute({
     _i59.Key? key,
-    required List<_i66.TransactionModel> transactions,
+    required _i67.Asset asset,
   }) : super(
           AppWalletTransactionsRoute.name,
           path: 'wallet/appWalletTransactionsScreen',
           args: AppWalletTransactionsRouteArgs(
             key: key,
-            transactions: transactions,
+            asset: asset,
           ),
         );
 
@@ -1746,16 +1746,16 @@ class AppWalletTransactionsRoute
 class AppWalletTransactionsRouteArgs {
   const AppWalletTransactionsRouteArgs({
     this.key,
-    required this.transactions,
+    required this.asset,
   });
 
   final _i59.Key? key;
 
-  final List<_i66.TransactionModel> transactions;
+  final _i67.Asset asset;
 
   @override
   String toString() {
-    return 'AppWalletTransactionsRouteArgs{key: $key, transactions: $transactions}';
+    return 'AppWalletTransactionsRouteArgs{key: $key, asset: $asset}';
   }
 }
 
@@ -1799,7 +1799,7 @@ class IncomingDepositRoute
     extends _i56.PageRouteInfo<IncomingDepositRouteArgs> {
   IncomingDepositRoute({
     _i59.Key? key,
-    required _i67.IncomingDepositModel deposit,
+    required _i68.IncomingDepositModel deposit,
   }) : super(
           IncomingDepositRoute.name,
           path: 'wallet/incomingDeposit',
@@ -1820,7 +1820,7 @@ class IncomingDepositRouteArgs {
 
   final _i59.Key? key;
 
-  final _i67.IncomingDepositModel deposit;
+  final _i68.IncomingDepositModel deposit;
 
   @override
   String toString() {
@@ -1835,7 +1835,7 @@ class SendAssetFirstRoute extends _i56.PageRouteInfo<SendAssetFirstRouteArgs> {
     _i59.Key? key,
     required double price,
     required double balance,
-    required _i68.Asset asset,
+    required _i67.Asset asset,
   }) : super(
           SendAssetFirstRoute.name,
           path: 'wallet/sendAssetOne',
@@ -1864,7 +1864,7 @@ class SendAssetFirstRouteArgs {
 
   final double balance;
 
-  final _i68.Asset asset;
+  final _i67.Asset asset;
 
   @override
   String toString() {
@@ -1947,7 +1947,7 @@ class ReceiveAssetRoute extends _i56.PageRouteInfo<ReceiveAssetRouteArgs> {
   ReceiveAssetRoute({
     _i59.Key? key,
     required String? address,
-    required _i68.Asset asset,
+    required _i67.Asset asset,
   }) : super(
           ReceiveAssetRoute.name,
           path: 'wallet/receiveAssetThree',
@@ -1972,7 +1972,7 @@ class ReceiveAssetRouteArgs {
 
   final String? address;
 
-  final _i68.Asset asset;
+  final _i67.Asset asset;
 
   @override
   String toString() {
@@ -1997,7 +1997,7 @@ class NotificationsRoute extends _i56.PageRouteInfo<void> {
 class AddressBookRoute extends _i56.PageRouteInfo<AddressBookRouteArgs> {
   AddressBookRoute({
     _i59.Key? key,
-    required _i68.Asset asset,
+    required _i67.Asset asset,
   }) : super(
           AddressBookRoute.name,
           path: 'addressBookScreen',
@@ -2018,7 +2018,7 @@ class AddressBookRouteArgs {
 
   final _i59.Key? key;
 
-  final _i68.Asset asset;
+  final _i67.Asset asset;
 
   @override
   String toString() {
@@ -2031,7 +2031,7 @@ class AddressBookRouteArgs {
 class AddAddressRoute extends _i56.PageRouteInfo<AddAddressRouteArgs> {
   AddAddressRoute({
     _i59.Key? key,
-    required _i68.Asset asset,
+    required _i67.Asset asset,
   }) : super(
           AddAddressRoute.name,
           path: 'addAddressScreen',
@@ -2052,7 +2052,7 @@ class AddAddressRouteArgs {
 
   final _i59.Key? key;
 
-  final _i68.Asset asset;
+  final _i67.Asset asset;
 
   @override
   String toString() {

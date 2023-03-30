@@ -9470,6 +9470,9 @@ class I18nZh extends I18n {
 
   @override
   String get app_default_theme => 'Set a default theme';
+
+  @override
+  String get app_no_info_to_export => 'No info to export';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

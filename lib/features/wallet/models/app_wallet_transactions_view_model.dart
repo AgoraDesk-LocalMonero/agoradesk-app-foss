@@ -1,57 +1,88 @@
+import 'dart:io';
+
+import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/events.dart';
+import 'package:agoradesk/core/functional_models/either.dart';
+import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
+import 'package:agoradesk/features/wallet/data/models/transactions_request_model.dart';
+import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
+import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:vm/vm.dart';
 
-class AppWalletTransactionsViewModel extends ViewModel {
+class AppWalletTransactionsViewModel extends ViewModel with ErrorParseMixin {
   AppWalletTransactionsViewModel({
-    required this.transactions,
-  });
+    required WalletService walletService,
+    required this.asset,
+  }) : _walletService = walletService;
 
-  final List<TransactionModel> transactions;
-  final List<TransactionModel> filteredTransactions = [];
+  final WalletService _walletService;
+  final Asset asset;
 
-  final List<String> assetMenu = [];
-  Asset? _asset;
+  final indicatorKey = GlobalKey<RefreshIndicatorState>();
 
-  Asset? get asset => _asset;
-  set asset(Asset? v) => updateWith(asset: v);
+  final List<TransactionModel> transactions = [];
+
+  bool _loading = false;
+
+  bool get loadingBalance => _loading;
+
+  set loading(bool v) => updateWith(loading: v);
 
   @override
   void init() {
-    filteredTransactions.addAll(transactions);
-    assetMenu.add('All transactions');
-    assetMenu.addAll(Asset.values.map((e) => '${e.key()} transactions'));
     super.init();
   }
 
-  void setAsset(String? selected) {
-    final index = assetMenu.indexWhere((e) => e == selected);
-    if (index == 0 || index == -1) {
-      asset = null;
-    } else {
-      asset = Asset.values[index - 1];
-    }
-    filterTransactions();
-    notifyListeners();
+  @override
+  void onAfterBuild() async {
+    indicatorKey.currentState?.show();
   }
 
-  void filterTransactions() {
-    filteredTransactions.clear();
-    if (asset == null) {
-      filteredTransactions.addAll(transactions);
+  Future getTransactions() async {
+    final transactionsRequestModel = TransactionsRequestModel(
+      asset: asset,
+    );
+    loading = true;
+    final Either<ApiError, List<TransactionModel>> res =
+        await _walletService.getAppWalletTransactions(request: transactionsRequestModel);
+    loading = false;
+    if (res.isRight) {
+      transactions.clear();
+      transactions.addAll(res.right);
     } else {
-      for (final transaction in transactions) {
-        if (transaction.asset!.isBitcoin() == asset!.isBitcoin()) {
-          filteredTransactions.add(transaction);
-        }
+      handleApiError(res.left, context);
+    }
+  }
+
+  Future exportCsv() async {
+    if (transactions.isEmpty) {
+      eventBus.fire(FlashEvent.error(context.intl.app_no_info_to_export));
+    } else {
+      String csvString = '';
+      csvString += 'Date,Type,Received (${asset.name}),Sent (${asset.name}),Description\n';
+      for (final t in transactions) {
+        csvString += t.toCsvString();
       }
+      final String directory = (await getApplicationSupportDirectory()).path;
+      final path = "$directory/csv-${DateTime.now()}.csv";
+      final File file = File(path);
+      await file.writeAsString(csvString);
+      await Share.shareXFiles(
+        [XFile(path)],
+        text: 'CSV trades export file',
+      );
     }
   }
 
   void updateWith({
-    Asset? asset,
+    bool? loading,
   }) {
-    _asset = asset;
+    _loading = loading ?? _loading;
     notifyListeners();
   }
 
