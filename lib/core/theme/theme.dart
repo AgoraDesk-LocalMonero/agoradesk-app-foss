@@ -8,16 +8,27 @@ import 'package:flutter/material.dart';
 export 'theme_color_extension.dart';
 export 'theme_colors.dart';
 
+// const textTheme = TextTheme(
+//   headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
+//   headline2: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+//   headline3: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+//   // title medium
+//   headline4: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+//   headline5: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+//   headline6: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+//   bodyText1: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+//   bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+// );
 const textTheme = TextTheme(
-  headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
-  headline2: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-  headline3: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+  displayLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
+  displayMedium: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+  displaySmall: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
   // title medium
-  headline4: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-  headline5: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
-  headline6: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-  bodyText1: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-  bodyText2: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+  headlineMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+  headlineSmall: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+  titleLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+  bodyLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+  bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
 );
 
 final _darkColorScheme = const ColorScheme.dark().copyWith(
@@ -96,13 +107,13 @@ final darkTheme = ThemeData(
 
 extension TextExtension on TextTheme {
   TextStyle get bodyTextSmall =>
-      bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.w400, height: 16 / 11, letterSpacing: 0.25);
+      bodyMedium!.copyWith(fontSize: 12, fontWeight: FontWeight.w400, height: 16 / 11, letterSpacing: 0.25);
 
   TextStyle get bodyTextXSmall =>
-      bodyText2!.copyWith(fontSize: 11, fontWeight: FontWeight.w400, height: 16 / 11, letterSpacing: 0.25);
+      bodyMedium!.copyWith(fontSize: 11, fontWeight: FontWeight.w400, height: 16 / 11, letterSpacing: 0.25);
 
   TextStyle get bodyTextXXSmall =>
-      bodyText2!.copyWith(fontSize: 10, fontWeight: FontWeight.w400, height: 16 / 11, letterSpacing: 0.25);
+      bodyMedium!.copyWith(fontSize: 10, fontWeight: FontWeight.w400, height: 16 / 11, letterSpacing: 0.25);
 
   TextStyle get agoraLabelLarge => const TextStyle(fontWeight: FontWeight.w500, fontSize: 14);
 
@@ -299,48 +310,48 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.primary90,
       );
 
-  // bodyMedium == bodyText2
-  TextStyle get txtBodyMediumN30N80 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  // bodyMedium == bodyMedium
+  TextStyle get txtBodyMediumN30N80 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.n30N80,
       );
 
-  TextStyle get txtBodyMediumN80N30 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumN80N30 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.n80N30,
       );
 
-  TextStyle get txtBodyMediumN90N10 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumN90N10 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.n90N10,
       );
 
-  TextStyle get txtBodyMediumNeutral70 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumNeutral70 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.neutral70,
       );
 
-  TextStyle get txtBodyMediumNeutral80 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumNeutral80 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.n80N30,
       );
 
-  TextStyle get txtBodyMediumN90 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumN90 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.neutral90,
       );
 
-  TextStyle get txtBodyMediumP70 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumP70 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.primary70,
       );
 
-  TextStyle get txtBodyMediumP90 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumP90 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.primary90,
       );
 
-  TextStyle get txtBodyMediumErr30 => Theme.of(this).textTheme.bodyText2!.copyWith(
+  TextStyle get txtBodyMediumErr30 => Theme.of(this).textTheme.bodyMedium!.copyWith(
         color: Theme.of(this).colorScheme.error30,
       );
 
-  TextStyle get txtHead1N90 => Theme.of(this).textTheme.headline1!.copyWith(
+  TextStyle get txtDispLargeN90 => Theme.of(this).textTheme.displayLarge!.copyWith(
         color: Theme.of(this).colorScheme.neutral90,
       );
 
-  TextStyle get txtHead4N90 => Theme.of(this).textTheme.headline4!.copyWith(
+  TextStyle get txtHeadMediumN90 => Theme.of(this).textTheme.headlineMedium!.copyWith(
         color: Theme.of(this).colorScheme.neutral90,
       );
 
@@ -415,7 +426,7 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.p70P40,
       );
 
-  TextStyle get txtHead4N90N10 => Theme.of(this).textTheme.headline4!.copyWith(
+  TextStyle get txtHeadMediumN90N10 => Theme.of(this).textTheme.headlineMedium!.copyWith(
         color: Theme.of(this).colorScheme.n90N10,
       );
 

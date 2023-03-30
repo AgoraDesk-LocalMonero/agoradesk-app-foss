@@ -38,7 +38,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                                   Center(
                                     child: Text(
                                       context.intl.document8722Sbtitle250Sbreset8722Sbpassword,
-                                      style: context.txtHead1N90,
+                                      style: context.txtDispLargeN90,
                                     ),
                                   ),
                                   const SizedBox(height: 16),

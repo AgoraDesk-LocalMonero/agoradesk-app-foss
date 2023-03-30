@@ -37,7 +37,7 @@ class DialogInfoS4WithClose extends StatelessWidget {
                     Expanded(
                       child: Text(
                         title,
-                        style: context.txtHead4N90,
+                        style: context.txtHeadMediumN90,
                       ),
                     ),
                     ButtonSquareIcon(

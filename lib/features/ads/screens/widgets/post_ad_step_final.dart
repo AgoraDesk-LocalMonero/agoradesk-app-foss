@@ -28,7 +28,7 @@ class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMeth
           Center(
             child: Text(
               I18n.of(context)!.post8722Sbad250Sbreview,
-              style: context.txtHead1N90,
+              style: context.txtDispLargeN90,
             ),
           ),
           const SizedBox(height: 16),

@@ -40,7 +40,7 @@ class DialogInfoS4WithCloseChildContinue extends StatelessWidget {
                       child: AutoSizeText(
                         title,
                         maxLines: 1,
-                        style: context.txtHead4N90,
+                        style: context.txtHeadMediumN90,
                       ),
                     ),
                     ButtonSquareIcon(

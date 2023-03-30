@@ -1,14 +1,10 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/utils/clipboard_mixin.dart';
-import 'package:agoradesk/core/utils/error_parse_mixin.dart';
-import 'package:agoradesk/core/utils/string_mixin.dart';
-import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:vm/vm.dart';
 
-class DefaultTabViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, ClipboardMixin, StringMixin {
+class DefaultTabViewModel extends ViewModel {
   DefaultTabViewModel({
     required AppState appState,
   }) : _appState = appState;

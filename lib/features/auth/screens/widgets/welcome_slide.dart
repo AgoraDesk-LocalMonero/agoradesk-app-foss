@@ -27,7 +27,7 @@ class WelcomeSlide extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           context.intl.post8722Sbad250Sbstep8722Sb1(step),
-          style: Theme.of(context).textTheme.headline1!.copyWith(
+          style: Theme.of(context).textTheme.displayLarge!.copyWith(
                 color: Theme.of(context).colorScheme.neutral90,
               ),
         ),

@@ -106,7 +106,7 @@ class _AdEditScreenState extends State<AdEditScreen>
                       children: [
                         Text(
                           widget.ad.tradeType.translatedSignWithAsset(context, widget.ad.asset!.title()),
-                          style: context.txtHead1N90,
+                          style: context.txtDispLargeN90,
                         ),
                         const SizedBox(height: 4),
                         Row(

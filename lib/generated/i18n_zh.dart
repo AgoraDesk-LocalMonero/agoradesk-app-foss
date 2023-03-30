@@ -9467,6 +9467,12 @@ class I18nZh extends I18n {
 
   @override
   String get pin_you_can_use_new => 'PIN 必须至少为 4 位数字';
+
+  @override
+  String get app_default_theme => 'Set a default theme';
+
+  @override
+  String get app_no_info_to_export => 'No info to export';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

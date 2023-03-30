@@ -63,7 +63,7 @@ class AffiliateProgramViewModel extends ViewModel with ValidatorMixin, ErrorPars
   Future _getTransactions() async {
     if (affiliateModel.enabled == true) {
       loadingTransactions = true;
-      final res = await _walletService.getTransactions(
+      final res = await _walletService.getAppWalletTransactions(
         request: const TransactionsRequestModel(
           type: TransactionTypes.AFFILIATE_COMMISSION,
         ),

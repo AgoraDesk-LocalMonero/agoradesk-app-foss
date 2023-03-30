@@ -34,8 +34,8 @@ class PlacesSearch {
   });
 
   String _createUrl(String queryText, [MapboxLocation? location]) {
-    final String _url = GetIt.I<AppParameters>().urlApiBase + '/mapbox/geocoding/places/';
-    String finalUrl = '$_url${Uri.encodeFull(queryText)}.json?';
+    final String url = '${GetIt.I<AppParameters>().urlApiBase}/mapbox/geocoding/places/';
+    String finalUrl = '$url${Uri.encodeFull(queryText)}.json?';
 
     if (location != null) {
       finalUrl += '&proximity=${location.lng}%2C${location.lat}';

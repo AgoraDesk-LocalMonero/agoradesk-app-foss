@@ -1,19 +1,18 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
-import 'package:agoradesk/features/wallet/models/transactions_view_model.dart';
+import 'package:agoradesk/features/wallet/models/recent_transactions_view_model.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/transaction_tile.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+import 'package:vm/vm.dart';
 
-class TransactionsScreen extends StatelessWidget {
-  const TransactionsScreen({
+class RecentTransactionsScreen extends StatelessWidget {
+  const RecentTransactionsScreen({
     Key? key,
     required this.transactions,
   }) : super(key: key);
@@ -22,12 +21,12 @@ class TransactionsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<TransactionsViewModel>(
-        model: TransactionsViewModel(transactions: transactions),
+    return ViewModelBuilder<RecentTransactionsViewModel>(
+        model: RecentTransactionsViewModel(transactions: transactions),
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: I18n.of(context)!.wallet250Sbtab250Sbtx8722Sblong,
+              title: I18n.of(context)!.recent_transactions,
             ),
             body: SafeArea(
               child: Padding(
@@ -53,7 +52,7 @@ class TransactionsScreen extends StatelessWidget {
         });
   }
 
-  Widget _buildDropDownList(BuildContext context, TransactionsViewModel model) {
+  Widget _buildDropDownList(BuildContext context, RecentTransactionsViewModel model) {
     if (!GetIt.I<AppParameters>().isAgora) {
       return const SizedBox();
     }

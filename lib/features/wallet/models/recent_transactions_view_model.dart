@@ -2,8 +2,8 @@ import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/wallet/data/models/transaction_model.dart';
 import 'package:vm/vm.dart';
 
-class TransactionsViewModel extends ViewModel {
-  TransactionsViewModel({
+class RecentTransactionsViewModel extends ViewModel {
+  RecentTransactionsViewModel({
     required this.transactions,
   });
 
@@ -20,7 +20,7 @@ class TransactionsViewModel extends ViewModel {
   void init() {
     filteredTransactions.addAll(transactions);
     assetMenu.add('All transactions');
-    assetMenu.addAll(Asset.values.map((e) => e.key() + ' transactions'));
+    assetMenu.addAll(Asset.values.map((e) => '${e.key()} transactions'));
     super.init();
   }
 

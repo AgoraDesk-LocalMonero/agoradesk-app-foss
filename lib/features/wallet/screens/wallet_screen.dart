@@ -93,7 +93,7 @@ class WalletScreen extends StatelessWidget {
                                               context.intl.view_all_transactions,
                                               style: context.txtLabelLargeP80P40,
                                             ),
-                                            onPressed: () => context.pushRoute(TransactionsRoute(
+                                            onPressed: () => context.pushRoute(RecentTransactionsRoute(
                                               transactions: model.transactions,
                                             )),
                                           ),
