@@ -76,7 +76,10 @@ class ApiClient with UrlMixin {
               }
             }
           }
-          if (options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty) {
+          final bool isLoggedIn =
+              GetIt.I<AppParameters>().accessToken != null && GetIt.I<AppParameters>().accessToken!.isNotEmpty;
+          final bool hasCookies = options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty;
+          if (isLoggedIn && hasCookies) {
             options.headers["cookie"] = options.headers["cookie"] + ';' + cookiesLst.join(';');
           } else {
             options.headers["cookie"] = cookiesLst.join(';');

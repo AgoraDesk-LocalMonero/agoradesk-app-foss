@@ -29,10 +29,10 @@ class LoginScreen extends StatefulWidget {
   final bool displaySkip;
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  LoginScreenState createState() => LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, ValidatorMixin {
+class LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, ValidatorMixin {
   HeadlessInAppWebView? headlessWebView;
 
   @override
