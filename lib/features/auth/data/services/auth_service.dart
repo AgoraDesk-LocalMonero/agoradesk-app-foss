@@ -300,11 +300,14 @@ class AuthService with FileUtilsMixin {
         captchaLocalPath: res?[1],
       );
       if (res?[0] != null) {
+        try {
         if (GetIt.I<AppParameters>().cookies != null) {
           final String captchaCookieStr = res![0]!;
           GetIt.I<AppParameters>()
               .cookies
               ?.add(Cookie(name: captchaCookieStr.split('=')[0], value: captchaCookieStr.split('=')[1]));
+        }} catch (e) {
+          debugPrint('[++++ _captchaParser] - $e');
         }
       }
       debugPrint('[++++ _captchaParser] - ${res?[0]}');
