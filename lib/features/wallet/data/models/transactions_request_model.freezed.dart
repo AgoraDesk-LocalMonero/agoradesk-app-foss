@@ -25,7 +25,7 @@ mixin _$TransactionsRequestModel {
   Asset? get asset => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   TransactionTypes? get type => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
+  @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
   DateTime? get after => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -41,9 +41,12 @@ abstract class $TransactionsRequestModelCopyWith<$Res> {
       _$TransactionsRequestModelCopyWithImpl<$Res, TransactionsRequestModel>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) Asset? asset,
-      @JsonKey(includeIfNull: false) TransactionTypes? type,
-      @JsonKey(includeIfNull: false) DateTime? after});
+      {@JsonKey(includeIfNull: false)
+          Asset? asset,
+      @JsonKey(includeIfNull: false)
+          TransactionTypes? type,
+      @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
+          DateTime? after});
 }
 
 /// @nodoc
@@ -91,9 +94,12 @@ abstract class _$$_TransactionsRequestModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) Asset? asset,
-      @JsonKey(includeIfNull: false) TransactionTypes? type,
-      @JsonKey(includeIfNull: false) DateTime? after});
+      {@JsonKey(includeIfNull: false)
+          Asset? asset,
+      @JsonKey(includeIfNull: false)
+          TransactionTypes? type,
+      @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
+          DateTime? after});
 }
 
 /// @nodoc
@@ -134,9 +140,12 @@ class __$$_TransactionsRequestModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_TransactionsRequestModel implements _TransactionsRequestModel {
   const _$_TransactionsRequestModel(
-      {@JsonKey(includeIfNull: false) this.asset,
-      @JsonKey(includeIfNull: false) this.type,
-      @JsonKey(includeIfNull: false) this.after});
+      {@JsonKey(includeIfNull: false)
+          this.asset,
+      @JsonKey(includeIfNull: false)
+          this.type,
+      @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
+          this.after});
 
   factory _$_TransactionsRequestModel.fromJson(Map<String, dynamic> json) =>
       _$$_TransactionsRequestModelFromJson(json);
@@ -148,7 +157,7 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
   @JsonKey(includeIfNull: false)
   final TransactionTypes? type;
   @override
-  @JsonKey(includeIfNull: false)
+  @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
   final DateTime? after;
 
   @override
@@ -187,10 +196,12 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
 
 abstract class _TransactionsRequestModel implements TransactionsRequestModel {
   const factory _TransactionsRequestModel(
-          {@JsonKey(includeIfNull: false) final Asset? asset,
-          @JsonKey(includeIfNull: false) final TransactionTypes? type,
-          @JsonKey(includeIfNull: false) final DateTime? after}) =
-      _$_TransactionsRequestModel;
+      {@JsonKey(includeIfNull: false)
+          final Asset? asset,
+      @JsonKey(includeIfNull: false)
+          final TransactionTypes? type,
+      @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
+          final DateTime? after}) = _$_TransactionsRequestModel;
 
   factory _TransactionsRequestModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionsRequestModel.fromJson;
@@ -202,7 +213,7 @@ abstract class _TransactionsRequestModel implements TransactionsRequestModel {
   @JsonKey(includeIfNull: false)
   TransactionTypes? get type;
   @override
-  @JsonKey(includeIfNull: false)
+  @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
   DateTime? get after;
   @override
   @JsonKey(ignore: true)
