@@ -109,11 +109,12 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     if (isFormReady) {
       loading = true;
       errorMessage = '';
+      final emailRes = _email?.isNotEmpty == true ? _email : null;
       final request = SignUpRequestModel(
         username: _username!,
         password: _password,
         frontType: GetIt.I<AppParameters>().flavor.title(),
-        email: _email,
+        email: emailRes,
         captcha: _captchaInput,
         captchaCookie: _captchaCookie,
         couponCode: _coupon,
