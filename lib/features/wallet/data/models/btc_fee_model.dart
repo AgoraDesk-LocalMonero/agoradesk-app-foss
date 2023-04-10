@@ -24,11 +24,14 @@ class BtcFeesModel with _$BtcFeesModel {
   List<String?> selectedFeeStr(BtcFeesEnum feesType) {
     switch (feesType) {
       case BtcFeesEnum.HIGH:
-        return [outgoingFeeHigh, outgoingFeeRateHigh];
+        final satVbStr = outgoingFeeRateHigh.split('.')[0];
+        return [outgoingFeeHigh, satVbStr];
       case BtcFeesEnum.MEDIUM:
-        return [outgoingFeeMedium, outgoingFeeRateMedium];
+        final satVbStr = outgoingFeeRateMedium.split('.')[0];
+        return [outgoingFeeMedium, satVbStr];
       case BtcFeesEnum.LOW:
-        return [outgoingFeeLow, outgoingFeeRateLow];
+        final satVbStr = outgoingFeeRateLow.split('.')[0];
+        return [outgoingFeeLow, satVbStr];
     }
   }
 

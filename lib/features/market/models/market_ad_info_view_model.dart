@@ -78,7 +78,8 @@ class MarketAdInfoViewModel extends ViewModel
   List<String> assetMenu = [];
 
   bool _loadingAds = true;
-  double _tempAssetPrice = 0;
+  double assetPrice = 0;
+  String fiatName = '';
   double? _firstTimeLimitAsset;
 
   // bool _initialized = false;
@@ -180,7 +181,8 @@ class MarketAdInfoViewModel extends ViewModel
       await _getAccountInfo(ad!.profile!.username);
     }
     initialLoadingAd = false;
-    _tempAssetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
+    assetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
+    fiatName = ad!.currency;
     notifyListeners();
   }
 
@@ -292,7 +294,7 @@ class MarketAdInfoViewModel extends ViewModel
         try {
           _receive = Decimal.parse(ctrlReceive.text.replaceAll(',', '.'));
           final int digitsToRound = getBankersDigits(asset!.name);
-          _pay = (_receive.toDouble() / _tempAssetPrice).bankerRound(digitsToRound);
+          _pay = (_receive.toDouble() / assetPrice).bankerRound(digitsToRound);
           ctrlPay.text = _pay.toString();
           _checkReceiveQuantity(context);
         } catch (e) {
@@ -314,7 +316,7 @@ class MarketAdInfoViewModel extends ViewModel
         try {
           _pay = Decimal.parse(ctrlPay.text.replaceAll(',', '.'));
           final int digitsToRound = getBankersDigits(ad?.currency ?? '');
-          _receive = (_tempAssetPrice * _pay.toDouble()).bankerRound(digitsToRound);
+          _receive = (assetPrice * _pay.toDouble()).bankerRound(digitsToRound);
           ctrlReceive.text = _receive.toString();
           _checkReceiveQuantity(context);
           _checkPayQuantity();
@@ -334,9 +336,9 @@ class MarketAdInfoViewModel extends ViewModel
       readyToDeal = false;
     } else if (_firstTimeLimitAsset != null &&
         accountInfoModel?.hasCommonTrades != true &&
-        receive > _firstTimeLimitAsset! * _tempAssetPrice) {
+        receive > _firstTimeLimitAsset! * assetPrice) {
       receiveError =
-          context.intl.must_be_less((_firstTimeLimitAsset! * _tempAssetPrice).toStringAsFixed(2), ad!.currency);
+          context.intl.must_be_less((_firstTimeLimitAsset! * assetPrice).toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
       receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
