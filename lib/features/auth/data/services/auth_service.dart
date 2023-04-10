@@ -15,6 +15,7 @@ import 'package:agoradesk/features/profile/data/models/confirmation_email_reques
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
@@ -206,8 +207,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
+      }
       final resp = await _api.client.post<Map>(
         '/signup',
         data: request.toJson(),
@@ -223,7 +225,7 @@ class AuthService with FileUtilsMixin {
         return const Either.right(false);
       }
     } catch (e) {
-      ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
       return Either.left(errorWithCaptcha ?? apiError);
     }
@@ -296,6 +298,18 @@ class AuthService with FileUtilsMixin {
         captchaCookie: res?[0],
         captchaLocalPath: res?[1],
       );
+      if (res?[0] != null) {
+        try {
+        if (GetIt.I<AppParameters>().cookies != null) {
+          final String captchaCookieStr = res![0]!;
+          GetIt.I<AppParameters>()
+              .cookies
+              ?.add(Cookie(name: captchaCookieStr.split('=')[0], value: captchaCookieStr.split('=')[1]));
+        }} catch (e) {
+          debugPrint('[++++ _captchaParser] - $e');
+        }
+      }
+      debugPrint('[++++ _captchaParser] - ${res?[0]}');
       return apiError2;
     }
     return null;
