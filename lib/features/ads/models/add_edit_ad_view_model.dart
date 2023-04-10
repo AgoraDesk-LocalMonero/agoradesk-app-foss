@@ -543,10 +543,6 @@ class AddEditAdViewModel extends ViewModel
     notifyListeners();
   }
 
-  bool displayWarning() {
-    return adEdits?.countryCode != 'XX' && adEdits?.onlineProvider == 'CRYPTOCURRENCY';
-  }
-
   void updateOnlineProvider(OnlineProvider? val) {
     selectedOnlineProvider = val;
     if (selectedOnlineProvider?.code == 'CRYPTOCURRENCY') {
@@ -557,9 +553,6 @@ class AddEditAdViewModel extends ViewModel
         selectedCurrency = CurrencyModel(code: 'BTC', name: 'Bitcoin', altcoin: true);
       }
     }
-    // else if (selectedCountryCode == 'XX' && selectedOnlineProvider?.code != 'CRYPTOCURRENCY') {
-    //   selectedCountryCode = 'ANY';
-    // }
     notifyListeners();
   }
 

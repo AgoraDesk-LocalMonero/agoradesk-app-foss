@@ -123,13 +123,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                           ],
                         ),
                         const SizedBox(height: 16),
-                        model.displayWarning()
-                            ? GlobalWarningAds(
-                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-                                text: context.intl
-                                    .edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad,
-                              )
-                            : const SizedBox(),
                         _buildFirstTile(context, model),
                         const SizedBox(height: 16),
                         _buildSecondTile(context, model),

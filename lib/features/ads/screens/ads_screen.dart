@@ -197,7 +197,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                 return Padding(
                   padding: kScreenPadding,
                   child: ListView.builder(
-                    itemCount: model.ads.isEmpty ? 1 : model.ads.length + 2,
+                    itemCount: model.ads.isEmpty ? 1 : model.ads.length + 1,
                     itemBuilder: (context, index) {
                       if (model.ads.isEmpty) {
                         if (model.loadingAds) {
@@ -212,17 +212,8 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                         );
                       }
 
-                      if (index < model.ads.length + 1) {
-                        if (index == 0) {
-                          return model.displayWarning
-                              ? GlobalWarningAds(
-                                  padding: EdgeInsets.zero,
-                                  text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
-                                      'February 1, 2023 4PM UTC Timezone'),
-                                )
-                              : const SizedBox();
-                        }
-                        final ad = model.ads[index - 1];
+                      if (index < model.ads.length) {
+                        final ad = model.ads[index];
 
                         return VisibilityDetector(
                           key: UniqueKey(),
