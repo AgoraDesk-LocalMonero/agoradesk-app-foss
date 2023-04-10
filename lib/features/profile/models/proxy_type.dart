@@ -6,7 +6,7 @@ extension ProxyTypeExt on ProxyType {
       case ProxyType.socks5:
         return 'SOCKS5';
       case ProxyType.socks4:
-        return 'SOCKS4';
+        return 'SOCKS4 (Orbot)';
       case ProxyType.http:
         return 'HTTP';
       case ProxyType.https:
