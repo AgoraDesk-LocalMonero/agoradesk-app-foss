@@ -52,11 +52,6 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // GlobalWarningAds(
-                          //   padding: const EdgeInsets.all(0),
-                          //   text: context.intl.dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(
-                          //       'February 1, 2023 4PM UTC Timezone'),
-                          // ),
                           LineIconLink(
                             title: context.intl.left8722Sbdrawer250Sbsupport,
                             iconData: AgoraFont.support,
@@ -156,12 +151,6 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => AutoRouter.of(context).push(const LanguageRoute()),
                           ),
                           const SizedBox(height: 8),
-                          // LineWithSwitcher(
-                          //   value: model.isDarkTheme(),
-                          //   title: context.intl.dark_theme,
-                          //   onPressed: () => model.switchTheme(),
-                          // ),
-                          // const SizedBox(height: 8),
                           LineWithArrow(
                             title: context.intl.app_default_theme,
                             onPressed: () => AutoRouter.of(context).push(const DefaultThemeRoute()),

@@ -355,6 +355,10 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.neutral90,
       );
 
+  TextStyle get txtDisplMediumN90 => Theme.of(this).textTheme.displayMedium!.copyWith(
+        color: Theme.of(this).colorScheme.neutral90,
+      );
+
   TextStyle get txtTermsN60 => Theme.of(this).textTheme.terms.copyWith(
         color: Theme.of(this).colorScheme.neutral60,
       );
