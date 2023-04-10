@@ -1,10 +1,7 @@
 ### Updates
-1. Display all transactions of the wallet. Export them to CSV.
-2. Fix: minimum feedback gets reset.
-3. Display the distance to the local ad.
-4. Display local ads in the user's country when local ads are selected.
-5. All countries' names have been localized.
-6. Added system theme switcher.
+1. Hotfix: Fix the captcha on the login screen.
+2. Hotfix: Register error with edited email.
+3. Improved add edit screen.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
