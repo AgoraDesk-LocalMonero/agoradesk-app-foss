@@ -11,9 +11,7 @@ _$_TransactionsRequestModel _$$_TransactionsRequestModelFromJson(
     _$_TransactionsRequestModel(
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
       type: $enumDecodeNullable(_$TransactionTypesEnumMap, json['type']),
-      after: json['after'] == null
-          ? null
-          : DateTime.parse(json['after'] as String),
+      after: dateFromInt(json['after'] as int),
     );
 
 Map<String, dynamic> _$$_TransactionsRequestModelToJson(
@@ -28,7 +26,7 @@ Map<String, dynamic> _$$_TransactionsRequestModelToJson(
 
   writeNotNull('asset', _$AssetEnumMap[instance.asset]);
   writeNotNull('type', _$TransactionTypesEnumMap[instance.type]);
-  writeNotNull('after', instance.after?.toIso8601String());
+  writeNotNull('after', dateToInt(instance.after));
   return val;
 }
 
