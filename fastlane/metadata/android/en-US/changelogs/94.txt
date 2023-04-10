@@ -1,0 +1,3 @@
+1. Hotfix: Fix the captcha on the login screen.
+2. Hotfix: Register error with edited email.
+3. Improved add edit screen.
