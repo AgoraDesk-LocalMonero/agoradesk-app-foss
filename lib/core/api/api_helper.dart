@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
@@ -51,12 +52,19 @@ mixin ApiHelper {
         final str1 = e.message.replaceAll('\\', '');
         final str2 = str1.substring(1, str1.length - 1);
         final Map<String, dynamic> messageMap = jsonDecode(str2);
+
+        final List<String>? cookiesLst = e.response?.headers['set-cookie']?[0].split(';');
+        String? captchaCookie;
+        if (cookiesLst?.isNotEmpty == true && cookiesLst!.length > 1) {
+          captchaCookie = cookiesLst.firstWhereOrNull((e) => e.contains('sess_id'));
+        }
+
         return ApiError(
           statusCode: 400,
           errorCode: 4001,
           message: messageMap,
           response: e.response,
-          captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
+          captchaCookie: captchaCookie,
         );
       }
       if (e.type == DioErrorType.connectTimeout) {

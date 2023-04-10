@@ -113,7 +113,7 @@ class _AdEditScreenState extends State<AdEditScreen>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              context.intl.edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbcreated8722Sbat + ' ',
+                              '${context.intl.edit8722Sbad250Sbthis8722Sbad8722Sbis8722Sbto8722Sbcreated8722Sbat} ',
                               style: context.txtBodySmallN60,
                             ),
                             Text(
@@ -557,9 +557,9 @@ class _PopupMenu extends StatelessWidget {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.dashboard250Sbad250Sbdelete8722Sbbtn),
           onTap: () => _showDeleteDialog(context),
           value: 1,
+          child: Text(context.intl.dashboard250Sbad250Sbdelete8722Sbbtn),
         ),
       ],
     );
