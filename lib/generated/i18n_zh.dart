@@ -9473,6 +9473,11 @@ class I18nZh extends I18n {
 
   @override
   String get app_no_info_to_export => 'No info to export';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+  }
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

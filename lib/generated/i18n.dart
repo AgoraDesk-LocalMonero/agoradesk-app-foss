@@ -17062,6 +17062,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'No info to export'**
   String get app_no_info_to_export;
+
+  /// No description provided for @pin_wrong_current_info.
+  ///
+  /// In en, this message translates to:
+  /// **'You have {val} attempts left. After that, you will be logged out and you will have to log in again.'**
+  String pin_wrong_current_info(Object val);
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

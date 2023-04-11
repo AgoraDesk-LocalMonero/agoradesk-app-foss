@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
@@ -28,6 +29,7 @@ enum AppSharedPrefsKey {
   proxyType,
   btcWalletTileOpen,
   xmrWalletTileOpen,
+  pinAttemptsLeft,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -88,6 +90,8 @@ class AppSharedPrefs with DateMixin {
   String? get ignoredUpdate => getString(AppSharedPrefsKey.ignoredUpdate);
 
   String? get countryCode => getString(AppSharedPrefsKey.countryCode);
+
+  int get pinAttemptsLeft => getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
 
   DateTime? get cachedCountrySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
 
