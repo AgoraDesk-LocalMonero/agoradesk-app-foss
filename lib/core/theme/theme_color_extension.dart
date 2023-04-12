@@ -175,14 +175,6 @@ extension ColorExtension on ColorScheme {
 
   Color get tipColor => brightness == Brightness.dark ? Colors.grey : Colors.grey;
 
-  OutlineInputBorder get errorBorder => const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.red,
-          width: 2.0,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
-      );
-
   TextStyle get tipStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: tipColor);
 
   TextStyle get errorStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: errorColor);
