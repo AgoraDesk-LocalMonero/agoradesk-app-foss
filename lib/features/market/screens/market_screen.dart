@@ -100,11 +100,21 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                   popupProps: PopupProps.menu(
                     menuProps: context.dropdownMenuProps,
                     fit: FlexFit.loose,
+                    itemBuilder: (context, val, isSelected) {
+                      return DropdownAssetLineWithIcon(
+                        name: val.translatedTitle(context).capitalize(),
+                      );
+                    },
                   ),
                   items: TradeType.values,
-                  itemAsString: (TradeType? t) => t?.translatedTitle(context).capitalize() ?? '',
                   onChanged: (TradeType? data) => model.tradeType = data,
                   selectedItem: model.tradeType,
+                  dropdownBuilder: (context, val) {
+                    return DropdownAssetLineWithIcon(
+                      name: val!.translatedTitle(context).capitalize(),
+                      padding: const EdgeInsets.all(0),
+                    );
+                  },
                 ),
               ),
             ),

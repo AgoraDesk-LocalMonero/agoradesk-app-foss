@@ -602,6 +602,7 @@ extension ThemeShorcuts on BuildContext {
 
   DialogProps get dropdownDialogProps => DialogProps(
         backgroundColor: colS3,
+
         shape: OutlineInputBorder(
           borderSide: BorderSide(color: colS3, width: 0),
           borderRadius: const BorderRadius.all(Radius.circular(4)),

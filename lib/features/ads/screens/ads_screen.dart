@@ -35,6 +35,7 @@ import 'package:agoradesk/features/ads/screens/widgets/payment_terms.dart';
 import 'package:agoradesk/features/ads/screens/widgets/price_body_formula.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/market/screens/widgets/drop_down_asset_line_with_icons.dart';
 import 'package:agoradesk/features/market/screens/widgets/filter_button.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/features/trades/screens/widgets/drop_down_asset_string_line_with_icons.dart';
@@ -463,16 +464,30 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
           children: [
             Expanded(
               flex: 1,
-              child: DropdownSearch<String>(
-                dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_ad_type),
-                dropdownDecoratorProps: context.dropdownDecoration,
-                popupProps: PopupProps.menu(
-                  menuProps: context.dropdownMenuProps,
-                  fit: FlexFit.loose,
+              child: Semantics(
+                label: context.intl.app_select_trade_type,
+                child: DropdownSearch<String>(
+                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_trade_type),
+                  dropdownDecoratorProps: context.dropdownDecoration,
+                  popupProps: PopupProps.menu(
+                    menuProps: context.dropdownMenuProps,
+                    fit: FlexFit.loose,
+                    itemBuilder: (context, val, isSelected) {
+                      return DropdownAssetLineWithIcon(
+                        name: val,
+                      );
+                    },
+                  ),
+                  items: model.tradeTypeMenu,
+                  onChanged: model.setTradeType,
+                  selectedItem: model.tradeTypeMenu[0],
+                  dropdownBuilder: (context, val) {
+                    return DropdownAssetLineWithIcon(
+                      name: val!,
+                      padding: const EdgeInsets.all(0),
+                    );
+                  },
                 ),
-                items: model.tradeTypeMenu,
-                onChanged: model.setTradeType,
-                selectedItem: model.tradeTypeMenu[0],
               ),
             ),
             GetIt.I<AppParameters>().isAgoraDesk ? const SizedBox(width: 6) : const SizedBox(),
@@ -512,7 +527,6 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
             ),
           ],
         ),
-        // model.displayFilter ? _buildExpandedFilter(context, model) : const SizedBox(),
       ],
     );
   }
