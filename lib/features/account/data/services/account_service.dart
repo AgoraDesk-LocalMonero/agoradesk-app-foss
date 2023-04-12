@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -117,13 +118,22 @@ class AccountService {
   ///
   /// Get recent 20 notifications
   ///
-  Future<Either<bool, bool>> checkProxyAvailable() async {
+  Future<Either<bool, bool>> checkProxyAvailable({
+    required bool i2pAddressOn,
+    required torAddressOn,
+  }) async {
     try {
-      // final Map<String, int> queryParameters = {'after': DateTime.now().toUtc().millisecondsSinceEpoch};
-      // final resp = await _api.client.get(
-      //   '/notifications',
-      //   queryParameters: queryParameters,
-      // );
+      if (i2pAddressOn || torAddressOn) {
+        if (i2pAddressOn) {
+          print('+++++++++++++++++++++++++++++++++++++66661');
+          _api.setBaseUrl(GetIt.I<AppParameters>().i2pBaseUrlTwo);
+        } else {
+          print('+++++++++++++++++++++++++++++++++++++66662');
+          _api.setBaseUrl(GetIt.I<AppParameters>().torBaseUrl);
+        }
+      }
+      print('+++++++++++++++++++++++++++++++++++++66663');
+      await Future.delayed(Duration(seconds: 1));
       final resp = await _api.client.get('/buy-monero-online/USD/US');
       if (resp.statusCode == 200) {
         return const Either.right(true);

@@ -10,6 +10,7 @@ String getProxyAddress() {
   final String password = AppSharedPrefs().proxyUsername;
   final String username = AppSharedPrefs().proxyPassword;
   final ProxyType proxyType = AppSharedPrefs().proxyType;
+  print('+++++++++++++++++++++++++++++++++++++9999911 - ${proxyType}');
   if (username.isEmpty) {
     return '${proxyType.value()} $server:$port';
   } else {

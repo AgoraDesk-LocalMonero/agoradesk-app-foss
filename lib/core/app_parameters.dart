@@ -55,8 +55,6 @@ class AppParameters {
   final bool isAgora;
   final bool includeFcm;
   final bool isCheckUpdates;
-  // String captchaCookie1 = '';
-  // String captchaCookie2 = '';
   List<Cookie>? cookies;
   List<Cookie>? appCaptchaCookies;
 

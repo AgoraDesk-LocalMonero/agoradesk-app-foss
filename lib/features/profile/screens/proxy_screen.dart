@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -43,41 +44,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            BoxInfoWithLabel(
-                              label: context.intl.important,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  RichText(
-                                    textAlign: TextAlign.start,
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: '${context.intl.app_proxy_bugs_expected} ',
-                                          style: context.txtBodyXSmallN80,
-                                        ),
-                                        TextSpan(
-                                          text: 'Telegram',
-                                          style: context.txtBodyXSmallP70P40,
-                                          recognizer: TapGestureRecognizer()
-                                            ..onTap = () => openLinkExt(GetIt.I<AppParameters>().telegramDev),
-                                        ),
-                                        TextSpan(
-                                          text: ', ',
-                                          style: context.txtBodyXSmallN80,
-                                        ),
-                                        TextSpan(
-                                          text: 'Matrix',
-                                          style: context.txtBodyXSmallP70P40,
-                                          recognizer: TapGestureRecognizer()
-                                            ..onTap = () => openLinkExt(GetIt.I<AppParameters>().matrixDev),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                            _buildInfoBox(context),
                             const SizedBox(height: 22),
                             Row(
                               children: [
@@ -109,7 +76,7 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                                 ),
                                 items: ProxyType.values,
                                 itemAsString: (ProxyType? a) => a?.title() ?? '',
-                                onChanged: (ProxyType? data) => model.proxyType = data,
+                                onChanged: (ProxyType? data) => model.changeProxyType(data),
                                 selectedItem: model.proxyType,
                               ),
                             ),
@@ -145,6 +112,63 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                             const SizedBox(height: 8),
                           ],
                         ),
+                        const SizedBox(height: 22),
+                        // Row(
+                        //   children: [
+                        //     Expanded(
+                        //       child: Column(
+                        //         crossAxisAlignment: CrossAxisAlignment.start,
+                        //         children: [
+                        //           Text(
+                        //             'Use I2P domain to connect',
+                        //             style: context.txtBodyMediumN90N10,
+                        //           ),
+                        //           SelectableText(
+                        //             GetIt.I<AppParameters>().i2pBaseUrlTwo,
+                        //             style: context.txtBodySmallN60N50,
+                        //           ),
+                        //         ],
+                        //       ),
+                        //     ),
+                        //     SizedBox(
+                        //       height: 20,
+                        //       child: Switch(
+                        //         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        //         value: model.isI2pOn,
+                        //         onChanged: (val) => model.switchI2p(context, val),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
+                        // const SizedBox(height: 22),
+                        // Row(
+                        //   children: [
+                        //     Expanded(
+                        //       child: Column(
+                        //         crossAxisAlignment: CrossAxisAlignment.start,
+                        //         children: [
+                        //           Text(
+                        //             'Use Tor domain to connect',
+                        //             style: context.txtBodyMediumN90N10,
+                        //           ),
+                        //           SelectableText(
+                        //             GetIt.I<AppParameters>().torBaseUrl,
+                        //             style: context.txtBodySmallN60N50,
+                        //           ),
+                        //         ],
+                        //       ),
+                        //     ),
+                        //     SizedBox(
+                        //       height: 20,
+                        //       child: Switch(
+                        //         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        //         value: model.isTorOn,
+                        //         onChanged: (val) => model.switchTor(context, val),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
+                        // const SizedBox(height: 22),
                         model.loading
                             ? Padding(
                                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
@@ -168,5 +192,41 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
             ),
           );
         });
+  }
+
+  Widget _buildInfoBox(BuildContext context) {
+    return BoxInfoWithLabel(
+      label: context.intl.important,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          RichText(
+            textAlign: TextAlign.start,
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: '${context.intl.app_proxy_bugs_expected} ',
+                  style: context.txtBodyXSmallN80,
+                ),
+                TextSpan(
+                  text: 'Telegram',
+                  style: context.txtBodyXSmallP70P40,
+                  recognizer: TapGestureRecognizer()..onTap = () => openLinkExt(GetIt.I<AppParameters>().telegramDev),
+                ),
+                TextSpan(
+                  text: ', ',
+                  style: context.txtBodyXSmallN80,
+                ),
+                TextSpan(
+                  text: 'Matrix',
+                  style: context.txtBodyXSmallP70P40,
+                  recognizer: TapGestureRecognizer()..onTap = () => openLinkExt(GetIt.I<AppParameters>().matrixDev),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

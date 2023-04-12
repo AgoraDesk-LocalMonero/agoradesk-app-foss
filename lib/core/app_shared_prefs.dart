@@ -27,6 +27,8 @@ enum AppSharedPrefsKey {
   proxyUsername,
   proxyPassword,
   proxyType,
+  i2pAddressOn,
+  torAddressOn,
   btcWalletTileOpen,
   xmrWalletTileOpen,
   pinAttemptsLeft,
@@ -60,6 +62,10 @@ class AppSharedPrefs with DateMixin {
   TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
+
+  bool? get i2pAddressOn => getBool(AppSharedPrefsKey.i2pAddressOn);
+
+  bool? get torAddressOn => getBool(AppSharedPrefsKey.torAddressOn);
 
   bool? get proxyEnabled => getBool(AppSharedPrefsKey.proxyEnabled);
 
@@ -192,9 +198,10 @@ class AppSharedPrefs with DateMixin {
   /// Parse proxy tupe
   ///
   ProxyType _parseProxyType(String? proxyStr) {
+    print('+++++++++++++++++++++++++++++++++++++999992 - ${proxyStr}');
     if (proxyStr != null) {
       try {
-        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name == proxyStr.toLowerCase());
+        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());
         return proxy;
       } catch (e) {
         return ProxyType.socks5;
