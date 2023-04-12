@@ -443,7 +443,6 @@ class MarketViewModel extends ViewModel
         return _countryPaymentMethods;
       } else {
         handleApiError(res.left, context);
-
         return [null];
       }
     }
