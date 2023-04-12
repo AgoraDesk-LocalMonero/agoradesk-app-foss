@@ -198,7 +198,6 @@ class AppSharedPrefs with DateMixin {
   /// Parse proxy tupe
   ///
   ProxyType _parseProxyType(String? proxyStr) {
-    print('+++++++++++++++++++++++++++++++++++++999992 - ${proxyStr}');
     if (proxyStr != null) {
       try {
         final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());

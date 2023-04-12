@@ -157,7 +157,6 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   Future _setProxyData({bool? fromSave}) async {
     final proxyAddress = getProxyAddress();
     if (isProxyOn || fromSave == true) {
-      print('+++++++++++++++++++++++++++++++++++++66660 - $proxyAddress');
       SocksProxy.setProxy(proxyAddress);
       await Future.delayed(const Duration(seconds: 1));
       final res = await _accountService.checkProxyAvailable(

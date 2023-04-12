@@ -125,15 +125,11 @@ class AccountService {
     try {
       if (i2pAddressOn || torAddressOn) {
         if (i2pAddressOn) {
-          print('+++++++++++++++++++++++++++++++++++++66661');
           _api.setBaseUrl(GetIt.I<AppParameters>().i2pBaseUrlTwo);
         } else {
-          print('+++++++++++++++++++++++++++++++++++++66662');
           _api.setBaseUrl(GetIt.I<AppParameters>().torBaseUrl);
         }
       }
-      print('+++++++++++++++++++++++++++++++++++++66663');
-      await Future.delayed(Duration(seconds: 1));
       final resp = await _api.client.get('/buy-monero-online/USD/US');
       if (resp.statusCode == 200) {
         return const Either.right(true);
