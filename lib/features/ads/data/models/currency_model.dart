@@ -29,6 +29,20 @@ class CurrencyModel extends HiveObject {
       altcoin: json.values.first['altcoin'],
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (other is! CurrencyModel) return false;
+    if (code != other.code) return false;
+    if (name != other.name) return false;
+    if (altcoin != other.altcoin) return false;
+    return true;
+  }
+
+  @override
+  // TODO: implement hashCode
+  int get hashCode => super.hashCode;
+
 }
 
 // @JsonSerializable(explicitToJson: true)
