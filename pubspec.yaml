@@ -115,6 +115,7 @@ flutter:
 
   assets:
     - assets/banks/
+    - assets/flags/
     - assets/json/
     - assets/branding/
     - assets/images/

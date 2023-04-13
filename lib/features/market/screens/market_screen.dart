@@ -301,7 +301,6 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                             decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
                                           ),
                                         ),
-                                        // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                                         itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
                                         asyncItems: (String? filter) => model.getCurrenciesFromPaymentMethod(),
                                         selectedItem: model.selectedCurrency,
@@ -316,10 +315,10 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                 ? const SizedBox()
                                 : Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-                                    child: Semantics(
+                                    child:
+                                        Semantics(
                                       label: context.intl.app_select_country,
                                       child: DropdownSearch<String>(
-                                        key: model.countryDropdownKey,
                                         dropdownButtonProps:
                                             context.dropdownButtonProps(label: context.intl.app_select_country),
                                         dropdownDecoratorProps: context.dropdownDecoration,
@@ -330,11 +329,23 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                             autofocus: true,
                                             decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
                                           ),
+                                          itemBuilder: (context, val, isSelected) {
+                                            return DropdownAssetLineWithIcon(
+                                              name: getCountryName(val),
+                                              svgPath: 'assets/flags/${val.toLowerCase()}.svg',
+                                            );
+                                          },
                                         ),
-                                        itemAsString: (String? code) => getCountryName(code ?? ''),
                                         asyncItems: (String? filter) => model.getCountryCodes(),
                                         selectedItem: model.selectedCountryCode,
                                         onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val),
+                                        dropdownBuilder: (context, val) {
+                                          return DropdownAssetLineWithIcon(
+                                            name: getCountryName(val!),
+                                            svgPath: 'assets/flags/${val.toLowerCase()}.svg',
+                                            padding: const EdgeInsets.all(0),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ),
