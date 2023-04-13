@@ -137,6 +137,7 @@ class AccountService {
         return const Either.left(false);
       }
     } catch (e) {
+      _api.setBaseUrl(GetIt.I<AppParameters>().urlApiBase);
       return const Either.left(false);
     }
   }
