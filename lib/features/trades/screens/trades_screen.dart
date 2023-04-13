@@ -230,7 +230,6 @@ class _TradesScreenState extends State<TradesScreen>
                             ),
                             itemAsString: (String? code) => getCountryName(code ?? ''),
                             asyncItems: (String? filter) => model.getCountryCodes(),
-                            // showSearchBox: true,
                             selectedItem: model.selectedCountryCode,
                             onChanged: (val) => model.selectedCountryCode = val ?? 'US',
                           ),
@@ -252,10 +251,8 @@ class _TradesScreenState extends State<TradesScreen>
                                 decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
                               ),
                             ),
-                            // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                             itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
                             asyncItems: (String? filter) => model.getCurrencies(),
-                            // showSearchBox: true,
                             selectedItem: model.selectedCurrency,
                             onChanged: (val) =>
                                 model.selectedCurrency = val ?? CurrencyModel(code: 'USD', name: 'USD', altcoin: true),
@@ -280,7 +277,6 @@ class _TradesScreenState extends State<TradesScreen>
                             itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                             asyncItems: (String? filter) =>
                                 model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
-                            // showSearchBox: true,
                             selectedItem: model.selectedOnlineProvider,
                             onChanged: (val) => model.selectedOnlineProvider = val,
                           ),

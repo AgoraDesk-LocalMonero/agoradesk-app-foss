@@ -423,7 +423,7 @@ class MarketViewModel extends ViewModel
     notifyListeners();
   }
 
-  Future<List<OnlineProvider?>> getCountryPaymentMethods(String country) async {
+  Future<List<OnlineProvider>> getCountryPaymentMethods(String country) async {
     if (_reloadPaymentMethods) {
       final res = await _adsRepository.getCountryPaymentMethods(country);
       if (res.isRight) {
@@ -443,7 +443,7 @@ class MarketViewModel extends ViewModel
         return _countryPaymentMethods;
       } else {
         handleApiError(res.left, context);
-        return [null];
+        return [];
       }
     }
     return _countryPaymentMethods;

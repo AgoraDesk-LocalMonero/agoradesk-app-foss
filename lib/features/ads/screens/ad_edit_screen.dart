@@ -179,7 +179,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                     popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
                     itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                     asyncItems: (String? filter) => model.getCurrencies(),
-                    // showSearchBox: true,
                     selectedItem: model.selectedCurrency,
                     onChanged: (val) => model.setSelectedCurrency(val),
                   ),
@@ -216,7 +215,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                 ),
                 itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                 asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
-                // showSearchBox: true,
                 selectedItem: model.selectedOnlineProvider,
                 onChanged: (val) => model.updateOnlineProvider(val),
               ),
@@ -243,7 +241,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                 popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
                 itemAsString: (String? code) => getCountryName(code ?? ''),
                 asyncItems: (String? filter) => model.getCountryCodes(),
-                // showSearchBox: true,
                 selectedItem: model.selectedCountryCode,
                 onChanged: (val) => model.setSelectedCountryCode(val),
               )
