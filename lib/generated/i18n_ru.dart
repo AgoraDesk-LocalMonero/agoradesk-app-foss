@@ -150,7 +150,7 @@ class I18nRu extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'купить';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Сколько вы хотите $buyOrSell?';
   }
 
@@ -2073,7 +2073,7 @@ class I18nRu extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Все онлайн-торги защищены арбитражными облигациями. Когда сделка начинается, количество Monero, равное сумме сделки, автоматически резервируется из кошелька $appName облигаций продавца. Это означает, что если продавец сбежит с вашими деньгами и не завершит сделку, служба поддержки $appName может направить вам Monero, хранящиеся в арбитражной облигации. Если вы продаете Monero, никогда не завершайте сделку, пока не узнаете, что получили деньги от покупателя Monero. Обратите внимание, что для локальных сделок по умолчанию не включена защита арбитражных облигаций.';
+    return 'Все онлайн-торги защищены арбитражными облигациями. Когда сделка начинается, количество Monero, равное сумме сделки, автоматически резервируется из кошелька $appName облигаций продавца. Это означает, что если продавец сбежит с вашими деньгами и не завершит сделку, служба поддержки $appName может направить вам Monero, хранящиеся в арбитражной облигации. Если вы продаете Monero, никогда не завершайте сделку, пока не узнаете, что получили деньги от покупателя Monero. Обратите внимание, что по умолчанию для локальных сделок не включена защита арбитражных облигаций.';
   }
 
   @override
@@ -3076,7 +3076,7 @@ class I18nRu extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb1(Object assetName, Object appName) {
-    return 'Вам необходимо иметь $assetName в вашем кошельке арбитражных облигаций $appName, чтобы клиенты могли открывать торговые запросы из ваших рекламных объявлений. <br/><br/>Когда <strong>покупатель открывает с вами сделку</strong>, $assetName на полную сумму сделки автоматически резервируется из вашего кошелька. Дайте покупателю платежные инструкции и помогите покупателю оплатить сделку. Вы будете получать уведомления по электронной почте, когда кто-то ответит на ваше объявление. <br/><br/> После того, как покупатель оплатил и нажал кнопку <strong> Я оплатил</strong>, вы получите уведомление по электронной почте и на веб-сайте о том, что сделка была оплачена. <br/><br/> Когда вы подтвердите, что получили платеж, пришло время завершить обмен. После того, как сделка будет завершена и урегулирована, покупатель получит $assetName в своем расчетном кошельке. <br/><br/> Последний шаг – <strong>оставить отзыв</strong> для покупателя и предложить ему сделать то же самое для вас. Обратная связь важна для того, чтобы завоевать репутацию и совершать больше сделок.';
+    return 'Вам необходимо иметь $assetName в вашем кошельке арбитражных облигаций $appName, чтобы клиенты могли открывать торговые запросы из ваших рекламных объявлений. <br/><br/>Когда <strong>покупатель открывает с вами сделку</strong>, $assetName на полную сумму сделки автоматически резервируется из вашего кошелька. Дайте покупателю платежные инструкции и помогите покупателю оплатить сделку. Вы будете получать уведомления по электронной почте, когда кто-то ответит на ваше объявление. <br/><br/> После того, как покупатель оплатил и нажал кнопку <strong> Я оплатил</strong>, вы получите уведомление по электронной почте и на веб-сайте о том, что сделка была оплачена. <br/><br/> Когда вы подтвердите, что получили платеж, пришло время завершить сделку. После того, как сделка будет завершена и урегулирована, покупатель получит $assetName в своем расчетном кошельке. <br/><br/> Последний шаг – <strong>оставить отзыв</strong> для покупателя и предложить ему сделать то же самое для вас. Обратная связь важна для того, чтобы завоевать репутацию и совершать больше сделок.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nRu extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Полезно, если вы испытываете проблемы с коинлокерами';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Торговать $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nRu extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Обновить';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Добавить заметку о $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nRu extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Это частная заметка для вашего личного пользования, она не будет видна этому пользователю или любому другому пользователю.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Ваша заметка о $username (видна только вам)';
   }
 
@@ -7443,7 +7443,7 @@ class I18nRu extends I18n {
   String get devblog250Sbfdroid250Sb0250Sbtext => '[Х0Х]\n<p>F-Droid — это устанавливаемый каталог приложений FOSS (бесплатное программное обеспечение с открытым исходным кодом) для платформы Android. Клиент упрощает просмотр, установку и отслеживание обновлений на вашем устройстве.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Веб-сайт F-Droid</a></p>\n</blockquote>\n\n<p>Все шаги из этого руководства будут работать и для приложения без ароматизаторов.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Приложение может быть включено в F-Droid, только если оно имеет полностью открытый исходный код, включая все используемые библиотеки и зависимости. Узнайте больше о политике включения <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">здесь</a>.</p>\n<p>Например, если вы используете базу данных ObjectBox в своем приложении, ее нельзя&#39;включить в F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">обсуждение</a>).</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Приложение может быть включено в F-Droid, только если оно полностью с открытым исходным кодом, включая все используемые библиотеки и зависимости. Узнайте больше о политике включения <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">здесь</a>.</p>\n<p>Например, если вы используете базу данных ObjectBox в своем приложении, ее нельзя&#39;включить в F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">обсуждение</a>).</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Какие приложения можно включить в F-Droid?';
@@ -7467,7 +7467,7 @@ class I18nRu extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Шаг 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Откройте файл и отредактируйте его. Вот пример: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>В примере вы можете увидеть:</p>\n<ol>\n<li>В качестве подмодуля используется Flutter — это требование команды F-Droid.</li>\n<li>Для каждого варианта мы использовали отдельную ветку (команда <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Это потому, что Fastlane&#39; не поддерживает варианты с Flutter.</li>\n<li>Первый раз мы добавляем информацию о сборке вручную, в будущем она будет добавляться автоматически ботом после того, как мы нажмем новый тег.</li>\n</ol>\n<p>Проверьте правильность синтаксиса файла: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Откройте файл и отредактируйте его. Вот пример: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>В примере вы можете увидеть:</p>\n<ol>\n<li>В качестве подмодуля используется Flutter — это требование команды F-Droid.</li>\n<li>Для каждого варианта мы использовали отдельную ветку (команда <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Это связано с тем, что Fastlane&#39; не поддерживает варианты с Flutter.</li>\n<li>В первый раз мы добавляем информацию о сборке вручную, в будущем она будет добавляться автоматически ботом после того, как мы нажмем новый тег.</li>\n</ol>\n<p>Проверьте правильность синтаксиса файла: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Шаг 4';
@@ -9469,13 +9469,13 @@ class I18nRu extends I18n {
   String get pin_you_can_use_new => 'PIN-код должен состоять не менее чем из 4 цифр.';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Установить тему по умолчанию';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Нет данных для экспорта';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'У вас осталось $val попыток. После этого вы выйдете из системы и вам придется снова войти в систему.';
   }
 }

@@ -150,7 +150,7 @@ class I18nAr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'يشترى';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'كم ترغب في $buyOrSell؟';
   }
 
@@ -3878,7 +3878,7 @@ class I18nAr extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'الغش الواضح';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p> بذرة Monero الخاصة بك هي Monero الخاص بك. يجب عليك كتابتها عند إنشاء محفظتك لأول مرة ، لأنك إذا فقدت بذرتك ، فقد فقدت Monero ولا يمكن لأحد مساعدتك. ولكن يجب أيضًا أن تحافظ على هذه البذرة في مأمن من الآخرين. إذا قام شخص ما بسرقة بذرك ، فيمكنه إرسال Monero من المحفظة كما لو كنت أنت ، ومرة أخرى ، لا يمكن لأي شخص استرداد هذه الأموال نيابة عنك. ذهب. </p>\n\n<p> في كثير من الأحيان كان الفرد يحتفظ بمحفظة باردة من Monero ، وكان لديه فضول بشأن أمواله ، ويريد التحقق من ذلك. ولكن بدلاً من الخوض في متاعب إعادة تثبيت تطبيق المحفظة بالكامل ، قرروا فقط استخدام محفظة الويب لاستعادة البذور بسرعة وإلقاء نظرة على أموالهم. إذا وقعوا ضحية عملية احتيال Business Look Alike ، فإن عملية إدخال بذرتهم تعطيها للمحتالين ، الذين يمكنهم بعد ذلك نقل الأموال إلى محفظة مختلفة يتحكمون فيها في الوقت الذي يناسبهم. </p>\n\n<p> في أي وقت يحتوي أي موقع أو تطبيق أو محفظة على خيار \"استعادة مع البذور\" ، كن حذرًا جدًا من أن التطبيق الذي تستخدمه هو تطبيق شرعي. تحقق من تجزئات البرنامج (يحتوي موقع Monero على إرشادات حول كيفية القيام بذلك) للتأكد من أن البرنامج لم يتم العبث به من قبل قوى خارجية ، وكن دائمًا على دراية بمكان وكيفية كشف بذرتك. قد يكون الفحص المزدوج مزعجًا ، لكن فقدان الأموال بسبب الإهمال سيكون أسوأ. </p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p> بذرة Monero الخاصة بك هي Monero الخاص بك. يجب عليك كتابتها عند إنشاء محفظتك لأول مرة ، لأنك إذا فقدت بذرتك ، فقد فقدت Monero ولا يمكن لأحد مساعدتك. ولكن يجب أيضًا أن تحافظ على هذه البذرة في مأمن من الآخرين. إذا قام شخص ما بسرقة بذرك ، فيمكنه إرسال Monero من المحفظة كما لو كنت أنت ، ومرة أخرى ، لا يمكن لأحد استرداد هذه الأموال نيابة عنك. ذهب. </p>\n\n<p> في كثير من الأحيان كان الفرد يحتفظ بمحفظة باردة من Monero ، وكان لديه فضول بشأن أمواله ، ويريد التحقق من ذلك. ولكن بدلاً من الخوض في متاعب إعادة تثبيت تطبيق المحفظة بالكامل ، قرروا فقط استخدام محفظة الويب لاستعادة البذور بسرعة وإلقاء نظرة على أموالهم. إذا وقعوا ضحية عملية احتيال Business Look Alike ، فإن عملية إدخال بذرتهم تعطيها للمحتالين ، الذين يمكنهم بعد ذلك نقل الأموال إلى محفظة مختلفة يتحكمون فيها في الوقت الذي يناسبهم. </p>\n\n<p> في أي وقت يحتوي أي موقع أو تطبيق أو محفظة على خيار \"استعادة مع البذور\" ، كن حذرًا جدًا من أن التطبيق الذي تستخدمه هو تطبيق شرعي. تحقق من تجزئات البرنامج (يحتوي موقع Monero على إرشادات حول كيفية القيام بذلك) للتأكد من أن البرنامج لم يتم العبث به من قبل قوى خارجية ، وكن دائمًا على دراية بمكان وكيفية كشف بذرتك. قد يكون الفحص المزدوج مزعجًا ، لكن خسارة الأموال بسبب الإهمال ستكون أسوأ. </p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'دور بذرة مونيرو في عمليات الاحتيال';
@@ -4468,7 +4468,7 @@ class I18nAr extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'مفيد إذا كنت تواجه مشكلات مع \"أدوات حظر العملات\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'تداول $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nAr extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'ينعش';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'أضف ملاحظة على $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nAr extends I18n {
   String get note250Sbinput250Sbplaceholder => 'هذه ملاحظة خاصة للرجوع إليها ، ولن تكون مرئية لهذا المستخدم أو أي مستخدم آخر.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'ملاحظتك على $username (يمكنك رؤيتها أنت فقط)';
   }
 
@@ -7440,7 +7440,7 @@ class I18nAr extends I18n {
   String get devblog250Sbdescription => 'في هذه المدونة ، يشارك فريقنا بعض رؤى التطوير الخاصة بنا مع أولئك المهتمين بالجانب التقني للأشياء.';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p> F-Droid عبارة عن كتالوج قابل للتثبيت لتطبيقات FOSS (البرامج المجانية والمفتوحة المصدر) لمنصة Android. يسهل العميل تصفح التحديثات وتثبيتها وتتبعها على جهازك.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\"> موقع ويب F-Droid </a> </p>\n</blockquote>\n\n<p> ستعمل جميع خطوات هذا البرنامج التعليمي مع تطبيق بدون نكهات أيضًا. </p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p> F-Droid عبارة عن كتالوج قابل للتثبيت لتطبيقات FOSS (البرامج المجانية ومفتوحة المصدر) لمنصة Android. يسهل العميل تصفح التحديثات وتثبيتها وتتبعها على جهازك.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\"> موقع ويب F-Droid </a> </p>\n</blockquote>\n\n<p> ستعمل جميع خطوات هذا البرنامج التعليمي مع تطبيق بدون نكهات أيضًا. </p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtext => '<p> يمكن تضمين التطبيق في F-Droid فقط إذا كان مفتوح المصدر تمامًا - بما في ذلك جميع المكتبات والاعتمادات المستخدمة. تعرف على المزيد حول سياسة التضمين <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\"> هنا </a>. </p>\n<p> على سبيل المثال ، إذا كنت تستخدم قاعدة بيانات ObjectBox في تطبيقك ، فيمكن تضمينها &#39; في مناقشة F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\"> </a>). </p>';
@@ -9469,13 +9469,13 @@ class I18nAr extends I18n {
   String get pin_you_can_use_new => 'يجب أن يتكون رقم التعريف الشخصي من 4 أرقام على الأقل';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'قم بتعيين سمة افتراضية';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'لا توجد معلومات للتصدير';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'لديك $val محاولات متبقية. بعد ذلك ، سيتم تسجيل خروجك وسيتعين عليك تسجيل الدخول مرة أخرى.';
   }
 }

@@ -150,7 +150,7 @@ class I18nEn extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'buy';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'How much do you wish to $buyOrSell?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nEn extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Useful if you\'re experiencing problems with \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Trade $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nEn extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Refresh';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Add a note on $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nEn extends I18n {
   String get note250Sbinput250Sbplaceholder => 'This is a private note for your own reference, it will not be visible to this user or any other user.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Your note on $username (only seen by you)';
   }
 

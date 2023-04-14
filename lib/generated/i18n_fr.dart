@@ -150,7 +150,7 @@ class I18nFr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'acheter';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Combien souhaitez-vous $buyOrSell ?';
   }
 
@@ -2073,7 +2073,7 @@ class I18nFr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Toutes les transactions en ligne sont protégées par des obligations d\'arbitrage. Lorsqu\'une transaction est lancée, un montant de Monero égal au montant de la transaction est automatiquement réservé à partir du portefeuille obligataire $appName du vendeur. Cela signifie que si le vendeur s\'enfuit avec votre argent et ne finalise pas la transaction, le support $appName peut vous adresser le Monero détenu dans la caution d\'arbitrage. Si vous vendez Monero, ne finalisez jamais la transaction avant de savoir que vous avez reçu de l\'argent de l\'acheteur Monero. Veuillez noter que les métiers locaux n\'ont pas la protection de la caution d\'arbitrage activée par défaut.';
+    return 'Tous les échanges en ligne sont protégés par des cautions d\'arbitrage. Lorsqu\'une transaction est lancée, un montant de Monero égal au montant de la transaction est automatiquement réservé à partir du portefeuille obligataire $appName du vendeur. Cela signifie que si le vendeur s\'enfuit avec votre argent et ne finalise pas la transaction, le support $appName peut vous adresser le Monero détenu dans la caution d\'arbitrage. Si vous vendez du Monero, ne finalisez jamais la transaction avant de savoir que vous avez reçu de l\'argent de l\'acheteur du Monero. Veuillez noter que les métiers locaux n\'ont pas de protection de caution d\'arbitrage activée par défaut.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nFr extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Utile si vous rencontrez des problèmes avec les « coinlockers »';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Échanger du $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nFr extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Rafraîchir';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Ajouter une note sur $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nFr extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Ceci est une note privée pour votre propre usage, elle ne sera pas visible pour cet utilisateur ou tout autre utilisateur.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Votre note sur $username (uniquement visible par vous)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nFr extends I18n {
   String get pin_you_can_use_new => 'Le code PIN doit comporter au moins 4 chiffres';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Définir un thème par défaut';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Aucune information à exporter';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'Il vous reste $val tentatives. Après cela, vous serez déconnecté et vous devrez vous reconnecter.';
   }
 }

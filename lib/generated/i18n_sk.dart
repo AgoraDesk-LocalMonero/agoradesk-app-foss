@@ -150,7 +150,7 @@ class I18nSk extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kúpiť';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Koľko si želáte $buyOrSell?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nSk extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Užitočné, ak máte problémy s „uzamykacími skrinkami na mince“';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Obchod $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nSk extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Obnoviť';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Pridať poznámku k $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nSk extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Toto je súkromná poznámka pre vašu vlastnú potrebu, nebude viditeľná pre tohto používateľa ani pre žiadneho iného používateľa.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Vaša poznámka na $username (vidíte ju iba vy)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nSk extends I18n {
   String get pin_you_can_use_new => 'PIN musí mať aspoň 4 číslice';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Nastavte predvolenú tému';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Žiadne informácie na export';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'Zostáva vám $val pokusov. Potom budete odhlásení a budete sa musieť znova prihlásiť.';
   }
 }

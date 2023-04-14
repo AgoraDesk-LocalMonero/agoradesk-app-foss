@@ -150,7 +150,7 @@ class I18nBg extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Купи';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Колко искате да $buyOrSell?';
   }
 
@@ -1857,7 +1857,7 @@ class I18nBg extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName е peer-to-peer платформа за търговия Monero. Ние сме пазар, където потребителите могат да купуват и продават Monero един на друг. Потребителите, наречени търговци, създават реклами с цената и начина на плащане, който искат да предложат. Можете да разгледате нашия уебсайт за търговски реклами и да потърсите начин на плащане, който предпочитате. Ще намерите търговци, които купуват и продават Monero онлайн за повече от 60 различни метода на плащане. Ако не сте запознати с $appName и искате да купите Monero, моля, разгледайте нашето ръководство за закупуване, за да научите как да купите Monero.';
+    return '$appName е peer-to-peer платформа за търговия Monero. Ние сме пазар, където потребителите могат да купуват и продават Monero един на друг. Потребителите, наречени търговци, създават реклами с цената и начина на плащане, който искат да предложат. Можете да разглеждате нашия уебсайт за търговски реклами и да търсите начин на плащане, който предпочитате. Ще намерите търговци, които купуват и продават Monero онлайн за повече от 60 различни метода на плащане. Ако не сте запознати с $appName и искате да купите Monero, моля, разгледайте нашето ръководство за закупуване, за да научите как да купите Monero.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nBg extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Полезно ако имате проблеми с \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Търговия $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nBg extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Презаредете';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Добавете бележка към $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nBg extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Това е лична бележка за ваша справка, тя няма да бъде видима за този потребител или който и да е друг потребител.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Вашата бележка за $username (вижда се само от вас)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nBg extends I18n {
   String get pin_you_can_use_new => 'PIN трябва да е поне 4 цифри';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Задайте тема по подразбиране';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Няма информация за експортиране';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'Остават ви $val опита. След това ще излезете и ще трябва да влезете отново.';
   }
 }

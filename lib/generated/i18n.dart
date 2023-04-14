@@ -21,6 +21,7 @@ import 'i18n_id.dart';
 import 'i18n_it.dart';
 import 'i18n_ja.dart';
 import 'i18n_ko.dart';
+import 'i18n_lt.dart';
 import 'i18n_lv.dart';
 import 'i18n_nb.dart';
 import 'i18n_nl.dart';
@@ -134,6 +135,7 @@ abstract class I18n {
     Locale('it'),
     Locale('ja'),
     Locale('ko'),
+    Locale('lt'),
     Locale('lv'),
     Locale('nb', 'NO'),
     Locale('nb'),
@@ -381,7 +383,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'How much do you wish to {buyOrSell}?'**
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell);
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val);
 
   /// No description provided for @ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell.
   ///
@@ -8073,7 +8075,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'Trade {assetName}'**
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName);
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id);
 
   /// No description provided for @new8722Sbad250Sbreview250Sbemail8722Sbverified.
   ///
@@ -8283,7 +8285,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'Add a note on {username}'**
-  String note250Sbbutton(Object username);
+  String note250Sbbutton(Object username, Object val);
 
   /// No description provided for @note250Sbcreated.
   ///
@@ -8301,7 +8303,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'Your note on {username} (only seen by you)'**
-  String note250Sbtitle(Object username);
+  String note250Sbtitle(Object username, Object val);
 
   /// No description provided for @note250Sbupdated.
   ///
@@ -17079,7 +17081,7 @@ class _I18nDelegate extends LocalizationsDelegate<I18n> {
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_I18nDelegate old) => false;
@@ -17128,6 +17130,7 @@ case 'TW': return I18nZhTw();
     case 'it': return I18nIt();
     case 'ja': return I18nJa();
     case 'ko': return I18nKo();
+    case 'lt': return I18nLt();
     case 'lv': return I18nLv();
     case 'nb': return I18nNb();
     case 'nl': return I18nNl();

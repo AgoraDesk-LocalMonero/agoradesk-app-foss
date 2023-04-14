@@ -150,7 +150,7 @@ class I18nSl extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'nakup';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Koliko želite $buyOrSell?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nSl extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Uporabno, če imate težave z \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Trgovanje $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nSl extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Osveži';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Dodajte opombo k $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nSl extends I18n {
   String get note250Sbinput250Sbplaceholder => 'To je zasebna opomba za vašo lastno referenco, ne bo vidna temu ali kateremu koli drugemu uporabniku.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Vaša opomba o $username (vidite samo vi)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nSl extends I18n {
   String get pin_you_can_use_new => 'PIN mora imeti vsaj 4 števke';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Nastavite privzeto temo';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Ni podatkov za izvoz';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'Imate še $val poskusov. Po tem boste odjavljeni in se boste morali znova prijaviti.';
   }
 }

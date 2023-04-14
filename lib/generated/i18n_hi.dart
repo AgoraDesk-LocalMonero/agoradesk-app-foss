@@ -150,7 +150,7 @@ class I18nHi extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'खरीदें';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'आप कितना $buyOrSell चाहते हैं?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nHi extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'यदि आप \"coinlockers\" के साथ समस्याओं का सामना कर रहे हैं तो यह उपयोगी है';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return '$assetName का व्यापार करें';
   }
 
@@ -4585,7 +4585,7 @@ class I18nHi extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'तरोताज़ा(Refresh) करें';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return '$username पर एक टिप्पणी जोड़ें';
   }
 
@@ -4598,7 +4598,7 @@ class I18nHi extends I18n {
   String get note250Sbinput250Sbplaceholder => 'यह आपके संदर्भ के लिए एक निजी टिप्पणी है, यह इस उपयोगकर्ता या किसी अन्य उपयोगकर्ता को दिखाई नहीं देगा।';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return '$username पर आपका नोट (केवल आपके द्वारा देखा जा सकता है)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nHi extends I18n {
   String get pin_you_can_use_new => 'पिन कम से कम 4 अंकों का होना चाहिए';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'एक डिफ़ॉल्ट थीम सेट करें';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'निर्यात करने के लिए कोई सूचना नहीं';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'आपके $val प्रयास शेष हैं। उसके बाद, आप लॉग आउट हो जाएंगे और आपको फिर से लॉग इन करना होगा।';
   }
 }

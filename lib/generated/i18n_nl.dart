@@ -150,7 +150,7 @@ class I18nNl extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kopen';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Hoeveel wilt u $buyOrSell?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nNl extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Handig als u problemen ervaart met \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Wissel $assetName uit';
   }
 
@@ -4585,7 +4585,7 @@ class I18nNl extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Ververs';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Voeg een notitie toe over $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nNl extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Dit is een privénotitie voor uw eigen referentie, het zal niet zichtbaar zijn voor deze of andere gebruikers.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Uw notitie op $username (wordt alleen door u gezien)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nNl extends I18n {
   String get pin_you_can_use_new => 'De pincode moet uit minimaal 4 cijfers bestaan';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Stel een standaardthema in';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Geen info om te exporteren';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'Je hebt nog $val pogingen over. Daarna wordt u uitgelogd en moet u opnieuw inloggen.';
   }
 }

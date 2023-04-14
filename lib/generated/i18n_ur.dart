@@ -150,7 +150,7 @@ class I18nUr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'خریديں';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'آپ $buyOrSell کتنا چاہتے ہیں؟';
   }
 
@@ -4468,7 +4468,7 @@ class I18nUr extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'مفید ہے اگر آپ کو \"coinlockers\" کے ساتھ مسائل کا سامنا ہے';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'تجارت $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nUr extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'ریفریش کریں';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return '$username پر ایک نوٹ شامل کریں';
   }
 
@@ -4598,7 +4598,7 @@ class I18nUr extends I18n {
   String get note250Sbinput250Sbplaceholder => 'یہ آپ کے اپنے حوالہ کے لیے ایک نجی نوٹ ہے، یہ اس صارف یا کسی دوسرے صارف کو نظر نہیں آئے گا۔';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return '$username پر آپ کا نوٹ (صرف آپ نے دیکھا)';
   }
 
@@ -7473,7 +7473,7 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'مرحلہ 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>اب، آئیے F-Droid مارکیٹ کے لیے ڈیٹا شامل کرتے ہیں۔ اس کے لیے ہم ہر ذائقے کے لیے الگ برانچ بناتے ہیں:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>اس کے بعد، ہم فاسٹ لین کے لیے ایک فولڈر بناتے ہیں:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a></p>\n<p>مطلوبہ ڈیٹا شامل کریں اور اسے دبائیں</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>اب، آئیے F-Droid مارکیٹ کے لیے ڈیٹا شامل کرتے ہیں۔ اس کے لیے ہم ہر ذائقے کے لیے الگ برانچ بناتے ہیں:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>اس کے بعد، ہم فاسٹلین کے لیے ایک فولڈر بناتے ہیں:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a></p>\n<p>مطلوبہ ڈیٹا شامل کریں اور اسے دبائیں</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'مرحلہ 5';
@@ -7541,7 +7541,7 @@ class I18nUr extends I18n {
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'جب آپ \"محفوظ کریں\" کو دبائیں گے تو اشتہار کا ملک خود بخود \"عالمی\" میں اپ ڈیٹ ہو جائے گا۔';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'جب آپ \"محفوظ کریں\" کو دبائیں گے، تو اشتہار کا ملک خود بخود \"عالمی\" میں اپ ڈیٹ ہو جائے گا۔';
 
   @override
   String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'صرف ایک ہی اثاثہ فروخت اشتہارات';
@@ -9286,7 +9286,7 @@ class I18nUr extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR آسانی سے خریدیں';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'ID کی تصدیق کے بغیر Monero خریدیں یا فروخت کریں۔ نقد یا آن لائن۔ محفوظ، تیز، آسان۔\n\nLocalMonero XMR کمیونٹی میں سب سے بڑا، سب سے زیادہ بھروسہ مند اور اچھی طرح سے قائم P2P ٹریڈنگ پلیٹ فارم ہے۔ ہمارے پاس کوئی KYC چیک نہیں ہے - آپ PayPal، کریڈٹ کارڈ، گفٹ کارڈ، میل کے ذریعے نقد رقم کے ذریعے ID کی تصدیق کے بغیر Monero خرید سکتے ہیں یا Bitcoin، Ether، USDT، یا کسی دوسرے کرپٹو کوائن کو Monero میں تبدیل کر سکتے ہیں - ہمارا پلیٹ فارم ادائیگی کے کسی بھی طریقہ کو سپورٹ کرتا ہے۔\n\n- محفوظ اور ہموار تجارت\nہم کسی بھی ادائیگی کے طریقے، کسی بھی کرنسی، کہیں بھی سپورٹ کرتے ہیں۔ ہم ادائیگی کے طریقوں کو نہیں ہٹاتے ہیں، اور ہم آمنے سامنے نقد تجارت کی مکمل حمایت کرتے ہیں۔ ہماری تمام تجارتیں ثالثی بانڈ کے ذریعے محفوظ ہیں۔ اس حقیقت کی بدولت کہ ہمیں تجارت شروع ہونے سے پہلے ثالثی بانڈ میں فنڈز رکھنے کی ضرورت ہوتی ہے، ہم خریدار کے لیے ایک ہموار اور محفوظ تجربہ کو یقینی بناتے ہیں، جو پلیٹ فارم کی مقبولیت کے لیے ضروری ہے اور بیچنے والے کے لیے گاہکوں کو دہرانا ہے۔\n\n- کوئی KYC/AML یا ID کی توثیق نہیں۔\nLocalMonero آپ کے تجارتی تجربے کی سادگی اور براہ راست آگے بڑھنے کے لیے پرعزم ہے۔ ہم KYC/AML کو ملازمت نہیں دیتے، اور نہ ہی ہم ایسا کرنے کا منصوبہ بناتے ہیں۔\n\n- کمیونٹی کے ذریعہ قابل اعتماد\nہمارے پلیٹ فارم نے چار سال سے زیادہ کام کیا، 2018 کے عظیم کرپٹو کرنسی مارکیٹ کریش سے بچ گیا، اور اپنی کمیونٹی پر مبنی مستعد سروس کے ذریعے انتہائی مشکوک Monero کمیونٹی میں سب سے زیادہ بھروسہ مند نام بن گیا۔\n\n- محفوظ، اوپن سورس، پرائیویسی سینٹرک، سنسر شپ مزاحم\nہماری ایپ مفت اور اوپن سورس ہے، جو اس بات کو یقینی بناتی ہے کہ بہت سی آنکھیں ایپ کے کوڈ کو دیکھ رہی ہیں تاکہ اس بات کو یقینی بنایا جا سکے کہ کوئی حفاظتی سوراخ یا رازداری کا رساو نہیں ہے۔ ہماری ایپ کو اوپن سورس کرنا کسی کو بھی ہماری ایپ تک رسائی کی اجازت دیتا ہے چاہے کوئی مخصوص ایپ ریپوزٹری ایپ کو سنسر کرے۔ ہماری ایپ ان فونز پر بھی کام کرتی ہے جن کو گوگل نے مکمل طور پر بلاک کر رکھا ہے۔ ہم آپ کی پرائیویسی کو بہت اہمیت دیتے ہیں، ہمیں رجسٹریشن کے وقت آپ سے ای میل فراہم کرنے کی بھی ضرورت نہیں ہے۔\n\nماخذ کوڈ: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nایشو ٹریکر: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- تارکیی سپورٹ\nہماری سپورٹ ٹیم تیز، جوابدہ اور خوش کرنے کے لیے ہمیشہ بے چین ہے۔ ہمارے پاس کبھی بھی سپورٹ ٹکٹ نہیں تھا جس کا 24 گھنٹے کے اندر جواب نہ دیا گیا ہو۔ سوشل میڈیا کے ذریعے ہم ہمیشہ آسانی سے پہنچ جاتے ہیں، ہم آپ کی تنقید کو غور سے سنتے ہیں اور ہم ہمیشہ ریکارڈ وقت میں صارف کی اچھی تجاویز پر عمل درآمد کرتے ہیں۔\n\nآپ ہماری مدد تک یہاں پہنچ سکتے ہیں: https://localmonero.co/support\n\n- منصفانہ فیس\nجب آپ ہمارے ثالثی بانڈ والیٹ میں Monero جمع کرتے یا نکالتے ہیں تو ہم حد سے زیادہ فیس نہیں لیتے ہیں۔ کوئی ڈپازٹ فیس نہیں ہے، اور نکالنے کی فیس اس فیس کے بہت قریب ہے جو آپ ایک عام لین دین پر ادا کرتے ہیں۔';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'ID کی تصدیق کے بغیر Monero خریدیں یا فروخت کریں۔ نقد یا آن لائن۔ محفوظ، تیز، آسان۔\n\nLocalMonero XMR کمیونٹی میں سب سے بڑا، سب سے زیادہ بھروسہ مند اور اچھی طرح سے قائم P2P ٹریڈنگ پلیٹ فارم ہے۔ ہمارے پاس کوئی KYC چیک نہیں ہے - آپ PayPal، کریڈٹ کارڈ، گفٹ کارڈ، میل کے ذریعے نقد رقم کے ذریعے ID کی تصدیق کے بغیر Monero خرید سکتے ہیں یا Bitcoin، Ether، USDT، یا کسی دوسرے کرپٹو کوائن کو Monero میں تبدیل کر سکتے ہیں - ہمارا پلیٹ فارم ادائیگی کے کسی بھی طریقہ کو سپورٹ کرتا ہے۔\n\n- محفوظ اور ہموار تجارت\nہم کسی بھی ادائیگی کے طریقے، کسی بھی کرنسی، کہیں بھی سپورٹ کرتے ہیں۔ ہم ادائیگی کے طریقوں کو نہیں ہٹاتے ہیں، اور ہم آمنے سامنے نقد تجارت کی مکمل حمایت کرتے ہیں۔ ہماری تمام تجارتیں ثالثی بانڈ کے ذریعے محفوظ ہیں۔ اس حقیقت کی بدولت کہ ہمیں تجارت شروع ہونے سے پہلے ثالثی بانڈ میں فنڈز رکھنے کی ضرورت ہوتی ہے، ہم خریدار کے لیے ایک ہموار اور محفوظ تجربہ کو یقینی بناتے ہیں، جو پلیٹ فارم کی مقبولیت کے لیے ضروری ہے اور بیچنے والے کے لیے صارفین کو دہراتے ہیں۔\n\n- کوئی KYC/AML یا ID کی توثیق نہیں۔\nLocalMonero آپ کے تجارتی تجربے کی سادگی اور براہ راست آگے بڑھنے کے لیے پرعزم ہے۔ ہم KYC/AML کو ملازمت نہیں دیتے، اور نہ ہی ہم ایسا کرنے کا منصوبہ بناتے ہیں۔\n\n- کمیونٹی کے ذریعہ قابل اعتماد\nہمارے پلیٹ فارم نے چار سالوں سے کام کیا ہے، 2018 کے عظیم کرپٹو کرنسی مارکیٹ کریش سے بچ گیا ہے، اور اپنی کمیونٹی پر مبنی مستعد سروس کے ذریعے انتہائی مشکوک Monero کمیونٹی میں سب سے زیادہ قابل اعتماد نام بن گیا ہے۔\n\n- محفوظ، اوپن سورس، پرائیویسی سینٹرک، سنسر شپ مزاحم\nہماری ایپ مفت اور اوپن سورس ہے، جو اس بات کو یقینی بناتی ہے کہ بہت سی آنکھیں ایپ کے کوڈ کو دیکھ رہی ہیں تاکہ اس بات کو یقینی بنایا جا سکے کہ کوئی حفاظتی سوراخ یا رازداری کا رساو نہیں ہے۔ ہماری ایپ کو اوپن سورس کرنا کسی کو بھی ہماری ایپ تک رسائی کی اجازت دیتا ہے چاہے کوئی مخصوص ایپ ریپوزٹری ایپ کو سنسر کرے۔ ہماری ایپ ان فونز پر بھی کام کرتی ہے جن کو گوگل نے مکمل طور پر بلاک کر رکھا ہے۔ ہم آپ کی پرائیویسی کو بہت اہمیت دیتے ہیں، ہمیں رجسٹریشن کے وقت آپ سے ای میل فراہم کرنے کی بھی ضرورت نہیں ہے۔\n\nماخذ کوڈ: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nایشو ٹریکر: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- تارکیی سپورٹ\nہماری سپورٹ ٹیم تیز، جوابدہ اور خوش کرنے کے لیے ہمیشہ بے چین ہے۔ ہمارے پاس کبھی بھی سپورٹ ٹکٹ نہیں تھا جس کا 24 گھنٹے کے اندر جواب نہ دیا گیا ہو۔ سوشل میڈیا کے ذریعے ہم ہمیشہ آسانی سے قابل رسائی ہوتے ہیں، ہم آپ کی تنقیدوں کو غور سے سنتے ہیں اور ہم ہمیشہ صارف کی اچھی تجاویز کو ریکارڈ وقت میں نافذ کرتے ہیں۔\n\nآپ ہماری مدد تک یہاں پہنچ سکتے ہیں: https://localmonero.co/support\n\n- منصفانہ فیس\nجب آپ ہمارے ثالثی بانڈ والیٹ میں Monero جمع کرتے یا نکالتے ہیں تو ہم حد سے زیادہ فیس نہیں لیتے ہیں۔ کوئی ڈپازٹ فیس نہیں ہے، اور نکالنے کی فیس اس فیس کے بہت قریب ہے جو آپ ایک عام لین دین پر ادا کر رہے ہوں گے۔';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: نجی طور پر XMR خریدیں';
@@ -9469,13 +9469,13 @@ class I18nUr extends I18n {
   String get pin_you_can_use_new => 'PIN کم از کم 4 ہندسوں کا ہونا چاہیے۔';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'ایک ڈیفالٹ تھیم سیٹ کریں۔';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'برآمد کرنے کے لیے کوئی معلومات نہیں۔';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'آپ کے پاس $val کوششیں باقی ہیں۔ اس کے بعد، آپ لاگ آؤٹ ہو جائیں گے اور آپ کو دوبارہ لاگ ان کرنا پڑے گا۔';
   }
 }

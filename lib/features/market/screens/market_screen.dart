@@ -258,7 +258,6 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                       onChanged: (val) => model.changeOnlineProvider(val),
                                       selectedItem: model.selectedOnlineProvider,
                                       dropdownBuilder: (context, val) {
-                                        print('+++++++++++++++++++++++++++++++++++++11 - ${val?.code}');
                                         return DropdownAssetLineWithIcon(
                                           name: val!.name,
                                           svgPath: 'assets/banks/${val.code}.svg',

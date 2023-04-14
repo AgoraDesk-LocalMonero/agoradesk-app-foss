@@ -150,7 +150,7 @@ class I18nDe extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Kaufen';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Wie viel möchten Sie $buyOrSell?';
   }
 
@@ -3878,7 +3878,7 @@ class I18nDe extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Der glatte Betrug';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Brieftasche erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Samen vor anderen schützen. Wenn jemand Ihren Seed stiehlt, kann er den Monero aus der Brieftasche schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft hat eine Person eine Cold Wallet von Monero aufbewahrt, war neugierig auf ihr Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Brieftasche verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Brieftasche eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Brieftasche erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Samen vor anderen sicher aufbewahren. Wenn jemand Ihren Seed stiehlt, kann er den Monero aus der Brieftasche schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft hat eine Person eine Cold Wallet von Monero aufbewahrt, war neugierig auf ihr Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Brieftasche verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Brieftasche eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Die Rolle Ihres Monero-Seeds bei Betrug';
@@ -4468,7 +4468,7 @@ class I18nDe extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Nützlich bei Problemen mit \"Coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Trade $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nDe extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Aktualisieren';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Notiz hinzufügen zu $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nDe extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Dies ist eine private Notiz für Ihre eigene Referenz, sie ist weder für diesen Benutzer noch für andere Benutzer sichtbar.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Ihre Notiz zu $username (nur für Sie sichtbar)';
   }
 
@@ -9469,13 +9469,13 @@ class I18nDe extends I18n {
   String get pin_you_can_use_new => 'Die PIN muss mindestens 4-stellig sein';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Legen Sie ein Standardthema fest';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Keine Informationen zum Exportieren';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'You have $val attempts left. After that, you will be logged out and you will have to log in again.';
+    return 'Sie haben noch $val Versuche übrig. Danach werden Sie abgemeldet und müssen sich erneut anmelden.';
   }
 }
