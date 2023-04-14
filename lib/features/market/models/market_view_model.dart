@@ -1,4 +1,7 @@
+//ignore: use_build_context_synchronously
+
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
@@ -22,6 +25,7 @@ import 'package:agoradesk/features/app_update/data/services/app_update_service.d
 import 'package:agoradesk/features/app_update/screens/app_update_widget.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:collection/collection.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
@@ -218,7 +222,13 @@ class MarketViewModel extends ViewModel
         notifyListeners();
         currencies.clear();
         currencies.addAll(res.right.where((e) => e.altcoin != true).toList());
-        return currencies;
+        final List<CurrencyModel> resLst = [];
+        for (final c in currencies) {
+          if (resLst.firstWhereOrNull((val) => val.code == c.code) == null) {
+            resLst.add(c);
+          }
+        }
+        return resLst;
       } else {
         handleApiError(res.left, context);
         return [null];
@@ -413,7 +423,7 @@ class MarketViewModel extends ViewModel
     notifyListeners();
   }
 
-  Future<List<OnlineProvider?>> getCountryPaymentMethods(String country) async {
+  Future<List<OnlineProvider>> getCountryPaymentMethods(String country) async {
     if (_reloadPaymentMethods) {
       final res = await _adsRepository.getCountryPaymentMethods(country);
       if (res.isRight) {
@@ -433,8 +443,7 @@ class MarketViewModel extends ViewModel
         return _countryPaymentMethods;
       } else {
         handleApiError(res.left, context);
-
-        return [null];
+        return [];
       }
     }
     return _countryPaymentMethods;

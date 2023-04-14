@@ -150,7 +150,7 @@ class I18nZh extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '买';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return '你要$buyOrSell多少？';
   }
 
@@ -2073,7 +2073,7 @@ class I18nZh extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '所有在线交易均受仲裁债券保护。交易开始时，会自动从卖家的 $appName 债券钱包中保留与交易金额相等的门罗币。这意味着，如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的门罗币转给你。如果您要出售门罗币，切勿在知道您已收到门罗币买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
+    return '所有在线交易均受仲裁债券保护。开始交易时，会自动从卖家的 $appName 债券钱包中保留与交易金额相等的门罗币。这意味着，如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的门罗币转给你。如果您要出售门罗币，切勿在知道您已收到门罗币买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
   }
 
   @override
@@ -3878,7 +3878,7 @@ class I18nZh extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打钱';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要把它写下来，因为如果你丢了种子，你就丢了你的门罗币，没有人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想检查一下。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你暴露种子的位置和方式。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要记下来，因为如果你丢了种子，你就丢了你的门罗币，没人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想对其进行检查。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你在哪里以及如何暴露你的种子。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丢失了种子和助记词，就失去了全部';
@@ -4468,7 +4468,7 @@ class I18nZh extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => '如果您遇到“ coinlockers”问题，该功能很有用';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return '交易 $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nZh extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => '刷新';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return '在 $username上添加注释';
   }
 
@@ -4598,7 +4598,7 @@ class I18nZh extends I18n {
   String get note250Sbinput250Sbplaceholder => '这是供您自己参考的私人笔记，此用户或任何其他用户都看不到它。';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return '您在 $username 上的注释（只有您自己可以看到）';
   }
 
@@ -7443,7 +7443,7 @@ class I18nZh extends I18n {
   String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是适用于 Android 平台的 FOSS（免费和开源软件）应用程序的可安装目录。客户端使您可以轻松浏览、安装和跟踪设备上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid网站</a></p>\n</blockquote>\n\n<p>本教程中的所有步骤也适用于没有风味的应用程序。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括所有使用的库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些应用程序？';
@@ -7485,7 +7485,7 @@ class I18nZh extends I18n {
   String get devblog250Sbfdroid250Sb7250Sbtitle => '步骤 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>上提问。</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p> 上提问';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => '结论';
@@ -7537,7 +7537,7 @@ class I18nZh extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $timeRemaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
+    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告都将被删除 $timeRemaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
   }
 
   @override
@@ -9469,10 +9469,15 @@ class I18nZh extends I18n {
   String get pin_you_can_use_new => 'PIN 必须至少为 4 位数字';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => '设置默认主题';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => '没有要导出的信息';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return '您还有 $val 次尝试。之后，您将被注销并且必须重新登录。';
+  }
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
@@ -9625,7 +9630,7 @@ class I18nZhCn extends I18nZh {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '买';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return '你要$buyOrSell多少？';
   }
 
@@ -11548,7 +11553,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '所有在线交易均受仲裁债券保护。交易开始时，会自动从卖家的 $appName 债券钱包中保留与交易金额相等的门罗币。这意味着，如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的门罗币转给你。如果您要出售门罗币，切勿在知道您已收到门罗币买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
+    return '所有在线交易均受仲裁债券保护。开始交易时，会自动从卖家的 $appName 债券钱包中保留与交易金额相等的门罗币。这意味着，如果卖家卷走了你的钱并且没有完成交易，$appName 支持可以将仲裁保证金中持有的门罗币转给你。如果您要出售门罗币，切勿在知道您已收到门罗币买家的款项之前完成交易。请注意，本地交易默认不启用仲裁保证金保护。';
   }
 
   @override
@@ -13353,7 +13358,7 @@ class I18nZhCn extends I18nZh {
   String get knowledge250Sbscams250Sb3250Sbtitle => '我，秦始皇，打钱';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要把它写下来，因为如果你丢了种子，你就丢了你的门罗币，没有人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想检查一下。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你暴露种子的位置和方式。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>你的门罗币种子就是你的门罗币。第一次做钱包的时候一定要记下来，因为如果你丢了种子，你就丢了你的门罗币，没人能帮你。但你也必须保护这颗种子免受他人伤害。如果有人偷了你的种子，他们可以把门罗币从钱包里拿出来，就好像他们是你一样，同样，没有人能为你找回这笔钱。没了</p>\n\n<p> 很多时候，个人会保留一个 Monero 的冷钱包，对他们的资金感到好奇，并想对其进行检查。但与其经历重新安装整个钱包应用程序的麻烦，他们只是决定使用网络钱包来快速恢复他们的种子并查看他们的钱。如果他们成为 Business Look Alike 骗局的受害者，那么输入他们的种子的行为就会把种子交给骗子，然后他们可以将钱转移到他们方便时控制的另一个钱包。</p>\n\n<p> 任何时候网站、应用程序或钱包都有“使用种子恢复”选项，请务必小心确保您使用的应用程序是合法的。检查程序的哈希值（Monero 网站上有关于如何执行此操作的说明）以确保程序没有被外部力量篡改，并时刻注意你在哪里以及如何暴露你的种子。双重检查可能很烦人，但粗心造成的资金损失会更糟</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '丢失了种子和助记词，就失去了全部';
@@ -13943,7 +13948,7 @@ class I18nZhCn extends I18nZh {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => '如果您遇到“ coinlockers”问题，该功能很有用';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return '交易 $assetName';
   }
 
@@ -14060,7 +14065,7 @@ class I18nZhCn extends I18nZh {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => '刷新';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return '在 $username上添加注释';
   }
 
@@ -14073,7 +14078,7 @@ class I18nZhCn extends I18nZh {
   String get note250Sbinput250Sbplaceholder => '这是供您自己参考的私人笔记，此用户或任何其他用户都看不到它。';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return '您在 $username 上的注释（只有您自己可以看到）';
   }
 
@@ -16918,7 +16923,7 @@ class I18nZhCn extends I18nZh {
   String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid 是适用于 Android 平台的 FOSS（免费和开源软件）应用程序的可安装目录。客户端使您可以轻松浏览、安装和跟踪设备上的更新。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid网站</a></p>\n</blockquote>\n\n<p>本教程中的所有步骤也适用于没有风味的应用程序。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括使用的所有库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>只有完全开源的应用程序才能包含在 F-Droid 中——包括所有使用的库和依赖项。在这里</a>.</p>了解更多关于包含政策<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">\n<p>例如，如果您在应用程序中使用 ObjectBox 数据库，则它不能&#39;被包含在 F-Droid 中（<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">讨论</a>）。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid 可以包含哪些应用程序？';
@@ -16960,7 +16965,7 @@ class I18nZhCn extends I18nZh {
   String get devblog250Sbfdroid250Sb7250Sbtitle => '步骤 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>上提问。</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>这个过程有点复杂，过程中可能会出现不同的问题。但是一旦你设置了 CI，下面的更新就会自动处理。</p>\n<p>如果您有任何疑问，请随时在我们的 <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p> 上提问';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => '结论';
@@ -17012,7 +17017,7 @@ class I18nZhCn extends I18nZh {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告将被删除 $timeRemaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
+    return '所有加密货币广告现在都被移至新的“全球（代码 XX）”国家类别。所有仅因国家/地区不同而重复的加密货币广告都将被删除 $timeRemaining。请确保每种货币只有一个加密货币广告，否则除最近以该货币发布的广告外，其他所有广告都将被删除，而其余广告将移至“全球”国家/地区类别。';
   }
 
   @override
@@ -18942,6 +18947,17 @@ class I18nZhCn extends I18nZh {
 
   @override
   String get pin_you_can_use_new => 'PIN 必须至少为 4 位数字';
+
+  @override
+  String get app_default_theme => '设置默认主题';
+
+  @override
+  String get app_no_info_to_export => '没有要导出的信息';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return '您还有 $val 次尝试。之后，您将被注销并且必须重新登录。';
+  }
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -19094,7 +19110,7 @@ class I18nZhTw extends I18nZh {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '買';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return '你要$buyOrSell多少？';
   }
 
@@ -21017,7 +21033,7 @@ class I18nZhTw extends I18nZh {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return '所有在線交易均受仲裁債券保護。開始交易時，會自動從賣家的 $appName 債券錢包中保留與交易金額相等的門羅幣。這意味著，如果賣家捲走了你的錢並且沒有完成交易，$appName 支持可以將仲裁保證金中持有的門羅幣轉給你。如果您要出售門羅幣，切勿在知道您已收到門羅幣買家的款項之前完成交易。請注意，本地交易默認不啟用仲裁保證金保護。';
+    return '所有在線交易均受仲裁債券保護。交易開始時，會自動從賣家的 $appName 債券錢包中保留與交易金額相等的門羅幣。這意味著，如果賣家捲走了你的錢並且沒有完成交易，$appName 支持可以將仲裁保證金中持有的門羅幣轉給你。如果您要出售門羅幣，切勿在知道您已收到門羅幣買家的款項之前完成交易。請注意，本地交易默認不啟用仲裁保證金保護。';
   }
 
   @override
@@ -22495,7 +22511,7 @@ class I18nZhTw extends I18nZh {
   String get knowledge250Sbmining250Sb1250Sbtitle => '目標';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => '對於上下文，讓我們談談挖礦硬件。礦工使用計算機來完成工作，但我們都知道並非每台計算機都是一樣的。有些計算機功能強大，足以運行 AI 網絡或激烈的遊戲，而另一些計算機甚至難以完成簡單的任務。這些計算能力的差異也會影響哈希率，或者他們尋找塊解決方案的速率。 <br/><br/>\n但是，與專用硬件（也稱為專用集成電路 (ASIC)）的哈希率相比，即使是計算機之間的這些差異也顯得微不足道，它比普通計算機高出幾個數量級。<br/><br/>\n讓我們花些時間來探索是什麼讓 ASIC 如此強大。想像一下，所有的計算機都處於一個範圍內的某個位置，範圍從能夠做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 處於這個範圍的兩端。<br/><br/>\n所有標準計算機中的 CPU 都位於第一端。他們可以做很多事情，例如瀏覽網頁、玩遊戲或渲染視頻，但沒有一項做得特別好。但這種靈活性是以效率為代價的。<br/><br/>\nASIC 在另一端，它們只能做一件事，但速度驚人。它們只能執行一個數學函數，但因為它們可以忽略其他所有內容，所以性能提升是天文數字。然而，這種效率確實是以靈活性為代價的，因此即使功能發生輕微變化——例如 x + y = z 變為 2x + y = z——那麼 ASIC 將完全停止運行。 <br/><br/>\n不是每個人都擁有 ASIC，但每個人都擁有計算機。這可能會導致不公平的優勢。';
+  String get knowledge250Sbmining250Sb2250Sbtext => '對於上下文，讓我們談談挖礦硬件。礦工使用計算機來完成工作，但我們都知道並非每台計算機都是一樣的。有些計算機功能強大，足以運行 AI 網絡或激烈的遊戲，而另一些計算機甚至難以完成簡單的任務。這些計算能力的差異也會影響哈希率，或者他們尋找塊解決方案的速率。 <br/><br/>\n但是，與專用硬件（也稱為專用集成電路 (ASIC)）的哈希率相比，即使是計算機之間的這些差異也顯得微不足道，它比普通計算機高出幾個數量級。<br/><br/>\n讓我們花些時間來探索是什麼讓 ASIC 如此強大。想像一下，所有的計算機都處於一個範圍內的某個位置，範圍從能夠做很多事情，但做不好，到只做一件事，但做得很好。 CPU 和 ASIC 處於這個範圍的兩端。<br/><br/>\n所有標準計算機中的 CPU 都位於第一端。他們可以做很多事情，例如瀏覽網頁、玩遊戲或渲染視頻，但沒有一項做得特別好。但這種靈活性是以效率為代價的。<br/><br/>\nASIC 在另一端，它們只能做一件事，但速度驚人。它們只能執行一個數學函數，但因為它們可以忽略其他所有內容，所以性能提升是天文數字。然而，這種效率確實是以靈活性為代價的，因此即使功能發生輕微變化——例如 x + y = z 變為 2x + y = z——那麼 ASIC 將完全停止運行。 <br/><br/>\n不是每個人都擁有 ASIC，但每個人都擁有計算機。這可能導致不公平的優勢。';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => '背景';
@@ -23412,7 +23428,7 @@ class I18nZhTw extends I18nZh {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => '如果您遇到“ coinlockers”問題，該功能很有用';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return '交易 $assetName';
   }
 
@@ -23529,7 +23545,7 @@ class I18nZhTw extends I18nZh {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => '刷新';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return '在 $username上添加註釋';
   }
 
@@ -23542,7 +23558,7 @@ class I18nZhTw extends I18nZh {
   String get note250Sbinput250Sbplaceholder => '這是供您自己參考的私人筆記，此用戶或任何其他用戶都看不到它。';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return '您在 $username 上的註釋（只有您自己可以看到）';
   }
 
@@ -26411,7 +26427,7 @@ class I18nZhTw extends I18nZh {
   String get devblog250Sbfdroid250Sb4250Sbtitle => '步驟 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打開文件並編輯它。這是一個示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模塊 - 這是 F-Droid 團隊的要求。</li>\n<li> 對於每種風格，我們都使用了一個單獨的分支（命令 <code>AutoUpdateMode：版本 %v-fdroid-lm</code>）。那是因為 Fastlane 不&#39;不支持 Flutter 的風格。</li>\n<li>我們第一次手動添加構建信息，將來它會在我們推送新標籤後由機器人自動添加。</li>\n</ol>\n<p>檢查文件語法是否正確：<code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>打開文件並編輯它。這是一個示例：<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>例子中可以看到：</p>\n<ol>\n<li>Flutter 用作子模塊 - 這是 F-Droid 團隊的要求。</li>\n<li> 對於每種風格，我們都使用了一個單獨的分支（命令 <code>AutoUpdateMode：Version %v-fdroid-lm</code>）。那是因為 Fastlane 不&#39;不支持 Flutter 的風格。</li>\n<li>我們第一次手動添加構建信息，將來它會在我們推送新標籤後由機器人自動添加。</li>\n</ol>\n<p>檢查文件語法是否正確：<code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => '步驟4';
@@ -28411,4 +28427,15 @@ class I18nZhTw extends I18nZh {
 
   @override
   String get pin_you_can_use_new => 'PIN 必須至少為 4 位數字';
+
+  @override
+  String get app_default_theme => '設置默認主題';
+
+  @override
+  String get app_no_info_to_export => '沒有要導出的信息';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return '您還有 $val 次嘗試。之後，您將被註銷並且必須重新登錄。';
+  }
 }

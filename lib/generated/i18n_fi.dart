@@ -150,7 +150,7 @@ class I18nFi extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'ostaa';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Kuinka paljon haluat $buyOrSell?';
   }
 
@@ -2073,7 +2073,7 @@ class I18nFi extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Kaikki verkkokaupat on suojattu välimieslainoilla. Kun kauppa aloitetaan, myyjän $appName joukkovelkakirjalompakosta varataan automaattisesti kaupan määrää vastaava määrä Moneroa. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä saa kauppaa päätökseen, $appName-tuki voi ohjata välimieslainassa olevan Moneron sinulle. Jos myyt Moneroa, älä koskaan viimeistele kauppaa ennen kuin tiedät saavasi rahaa Moneron ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimieslainsuojausta.';
+    return 'Kaikki verkkokaupat on suojattu välimieslainoilla. Kun kauppa aloitetaan, myyjän $appName joukkovelkakirjalompakosta varataan automaattisesti kaupan määrää vastaava määrä Moneroa. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä saa kauppaa päätökseen, $appName-tuki voi ohjata välimieslainassa olevan Moneron sinulle. Jos myyt Moneroa, älä koskaan viimeistele kauppaa ennen kuin tiedät, että olet saanut rahaa Moneron ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimieslainsuojausta.';
   }
 
   @override
@@ -3878,7 +3878,7 @@ class I18nFi extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Suoranainen huijaus';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Monero-siemenesi ON sinun Monerosi. Sinun on kirjoitettava se muistiin, kun teet ensimmäisen lompakon, koska jos menetät siemenesi, olet menettänyt Monerosi, eikä kukaan voi auttaa sinua. MUTTA MYÖS sinun on pidettävä tämä siemen turvassa muilta. Jos joku varastaa siemenesi, hän voi lähettää Moneron lompakosta kuin olisit sinä, eikä kukaan voi periä näitä rahoja puolestasi. Se on poissa.</p>\n\n<p>Liian usein henkilö on pitänyt Monero-lompakkoa kylmänä, ollut utelias varoistaan ja halunnut tarkistaa sen. Mutta koko lompakkosovelluksen uudelleenasentamisen sijaan he päättävät käyttää verkkolompakkoa palauttaakseen nopeasti siemenensä ja tarkastellakseen rahojaan. Jos he joutuvat Business Look Alike -huijauksen uhriksi, jo siemenensä syöttäminen antaa sen huijareille, jotka voivat siirtää rahat toiseen lompakkoon, jota he hallitsevat haluamallaan tavalla.</p>\n\n<p> AINA sivustossa, sovelluksessa tai lompakossa on \"palautus siemenellä\" -vaihtoehto, ole erittäin varovainen, että käyttämäsi sovellus on aito. Tarkista ohjelman tiivisteet (Moneron verkkosivuilla on ohjeet tämän tekemiseen) varmistaaksesi, etteivät ulkopuoliset voimat ole peukaloitu ohjelmaa, ja ole jatkuvasti tietoinen siitä, missä ja miten paljastat siemenesi. Kaksoistarkastus voi olla ärsyttävää, mutta huolimattomuudesta johtuva varojen menetys olisi vielä pahempaa.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Monero-siemenesi ON sinun Monerosi. Sinun on kirjoitettava se muistiin, kun teet ensimmäisen lompakon, koska jos menetät siemenesi, olet menettänyt Monerosi, eikä kukaan voi auttaa sinua. MUTTA MYÖS sinun on pidettävä tämä siemen turvassa muilta. Jos joku varastaa siemenesi, hän voi lähettää Moneron lompakosta kuin olisit sinä, eikä kukaan voi periä näitä rahoja puolestasi. Se on poissa.</p>\n\n<p>Liian usein henkilö on pitänyt Moneron lompakkoa kylmänä, ollut utelias varoistaan ja halunnut tarkistaa sen. Mutta koko lompakkosovelluksen uudelleenasentamisen sijaan he päättävät käyttää verkkolompakkoa palauttaakseen nopeasti siemenensä ja tarkastellakseen rahojaan. Jos he joutuvat Business Look Alike -huijauksen uhriksi, jo siemenensä syöttäminen antaa sen huijareille, jotka voivat siirtää rahat toiseen lompakkoon, jota he hallitsevat haluamallaan tavalla.</p>\n\n<p> AINA sivustossa, sovelluksessa tai lompakossa on \"palautus siemenellä\" -vaihtoehto, ole erittäin varovainen, että käyttämäsi sovellus on aito. Tarkista ohjelman tiivisteet (Moneron verkkosivuilla on ohjeet tämän tekemiseen) varmistaaksesi, etteivät ulkopuoliset voimat ole peukaloitu ohjelmaa, ja ole jatkuvasti tietoinen siitä, missä ja miten paljastat siemenesi. Kaksoistarkistus voi olla ärsyttävää, mutta huolimattomuudesta johtuva varojen menetys olisi vielä pahempaa.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Monero-seedisi rooli huijauksissa';
@@ -4468,7 +4468,7 @@ class I18nFi extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Hyödyllinen, jos sinulla on ongelmia \"coinlockereiden\" kanssa';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Kauppa $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nFi extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Päivittää';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Lisää muistiinpano käyttäjälle $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nFi extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Tämä on yksityinen huomautus omaa viitettä varten, se ei näy tälle tai muille käyttäjille.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Muistiinpanosi käyttäjästä $username (näet vain sinä)';
   }
 
@@ -9469,8 +9469,13 @@ class I18nFi extends I18n {
   String get pin_you_can_use_new => 'PIN-koodissa on oltava vähintään 4 numeroa';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Aseta oletusteema';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Ei tietoja vietäväksi';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Sinulla on $val yritystä jäljellä. Sen jälkeen sinut kirjataan ulos ja sinun on kirjauduttava uudelleen sisään.';
+  }
 }

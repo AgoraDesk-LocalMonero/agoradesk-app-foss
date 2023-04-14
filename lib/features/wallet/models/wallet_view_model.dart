@@ -45,6 +45,7 @@ class WalletViewModel extends ViewModel with StringMixin {
 
   String _balanceBtc = '';
   String _addressBtc = '';
+  String fiatName = '';
   double? _btcPrice;
   double? _xmrPrice;
   String _balanceXmr = '';
@@ -117,6 +118,7 @@ class WalletViewModel extends ViewModel with StringMixin {
   }
 
   Future getInitalData() async {
+    fiatName = _appState.currencyCode;
     await calcAssetsPrices();
     await getBalances();
 

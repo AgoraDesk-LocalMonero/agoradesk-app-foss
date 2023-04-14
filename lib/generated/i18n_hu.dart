@@ -150,7 +150,7 @@ class I18nHu extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'vétel';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Mennyit szeretnél $buyOrSell?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nHu extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Hasznos, ha problémákat tapasztal \"coinlockerekkel\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return '$assetName kereskedés';
   }
 
@@ -4585,7 +4585,7 @@ class I18nHu extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Frissítés';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Megjegyzés hozzáadása $username felhasználóhoz';
   }
 
@@ -4598,7 +4598,7 @@ class I18nHu extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Ez egy privát megjegyzés, amely csak az Ön számára készült, nem fogja látni sem az alanya, sem más felhasználó.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Jegyzet róla: $username (csak Ön látja)';
   }
 
@@ -5338,7 +5338,7 @@ class I18nHu extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Valódi LocalBitcoins és Paxful alternatíva.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Ha aggódik a magánélet megsértése miatt, a legjobb kriptovaluta az XMR. A Monero egy nyomon követhetetlen érme, amelyet a beépített adatvédelem szem előtt tartásával fejlesztettek ki.\n<br/>\nHol lehet Monero-t vásárolni? A LocalMonero a legnagyobb, legmegbízhatóbb és legmegbízhatóbb P2P Monero kereskedési platform az XMR közösségben. Nincsenek KYC csekkjeink – egyszerűen vásárolhat Monerót névtelenül, PayPal-lal történő igazoltatás nélkül, hitelkártyával, ajándékkártyával, készpénzzel postai úton, vagy konvertálhatja a bitcoint Monerová – platformunk bármilyen fizetési módot támogat.';
+  String get seo250Sbtext8722Sb1 => 'Ha aggódik a magánélet megsértése miatt, a legjobb kriptovaluta az XMR. A Monero egy nyomon követhetetlen érme, amelyet a beépített adatvédelem szem előtt tartásával fejlesztettek ki.\n<br/>\nHol lehet Monero-t vásárolni? A LocalMonero a legnagyobb, legmegbízhatóbb és legmegbízhatóbb P2P Monero kereskedési platform az XMR közösségben. Nincsenek KYC csekkjeink – egyszerűen vásárolhat Monero névtelenül, személyazonosító igazolvány nélkül PayPal segítségével, hitelkártyával, ajándékkártyával, készpénzzel postai úton, vagy konvertálhatja a bitcoint Monerová – platformunk bármilyen fizetési módot támogat.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Kíváncsi, hogyan lehet Bitcoinba fektetni? Az AgoraDesken a bitcoin vásárlása még soha nem volt ilyen egyszerű – vásároljon azonnal BTC-t kedvenc online fizetési módjával: PayPal, hitelkártya/bankkártya vagy banki átutalás, ajándékkártyák, Venmo vagy bármi más.\n<br/>\nHa készpénzzel szeretne bitcoinokat vásárolni az Ön közelében, találhat valakit, aki hajlandó helyben Bitcoint eladni – a platform támogatja a BTC készpénzes vásárlását és eladását. Akár levélben küldött készpénzzel is vásárolhat Bitcoint.';
@@ -9469,8 +9469,13 @@ class I18nHu extends I18n {
   String get pin_you_can_use_new => 'A PIN-kódnak legalább 4 számjegyből kell állnia';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Állítson be egy alapértelmezett témát';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Nincs exportálandó információ';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Még $val próbálkozása van hátra. Ezt követően Ön kijelentkezett, és újra be kell jelentkeznie.';
+  }
 }

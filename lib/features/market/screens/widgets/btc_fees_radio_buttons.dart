@@ -10,6 +10,8 @@ class BtcFeesRadioButtons extends StatelessWidget {
   const BtcFeesRadioButtons({
     Key? key,
     required this.btcFeesEnumCallback,
+    required this.price,
+    required this.fiatName,
     this.btcFeesEnum,
     this.btcFees,
   }) : super(key: key);
@@ -17,6 +19,8 @@ class BtcFeesRadioButtons extends StatelessWidget {
   final BtcFeesEnumCallback btcFeesEnumCallback;
   final BtcFeesEnum? btcFeesEnum;
   final BtcFeesModel? btcFees;
+  final double price;
+  final String fiatName;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +30,18 @@ class BtcFeesRadioButtons extends StatelessWidget {
         shrinkWrap: true,
         itemCount: BtcFeesEnum.values.length,
         itemBuilder: (context, index) {
+          double? transferPriceFiat;
+          String transferPriceFiatStr = '';
+          final String feesInBtcStr = btcFees?.selectedFeeStr(BtcFeesEnum.values[index])[0] ?? '??';
+          final String feesInSatVbStr = btcFees?.selectedFeeStr(BtcFeesEnum.values[index])[1] ?? '??';
+
+          final double? feesInBtc = double.tryParse(feesInBtcStr);
+          if (feesInBtc != null) {
+            transferPriceFiat = feesInBtc * price;
+            transferPriceFiatStr = transferPriceFiat.toStringAsFixed(2);
+          }
+
+          final feeStr = '($feesInSatVbStr sat/vB, $feesInBtcStr BTC, $transferPriceFiatStr $fiatName)';
           return Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
             child: GestureDetector(
@@ -54,8 +70,14 @@ class BtcFeesRadioButtons extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(BtcFeesEnum.values[index].translated(context)),
-                                  Text('(${btcFees?.selectedFeeStr(BtcFeesEnum.values[index])[1] ?? '??'} sat/vB)'),
+                                  Text(
+                                    BtcFeesEnum.values[index].translated(context),
+                                    style: context.txtBodyMediumN90N10,
+                                  ),
+                                  Text(
+                                    feeStr,
+                                    style: context.txtBodySmallN60N50,
+                                  ),
                                 ],
                               ),
                               const SizedBox(height: 4),

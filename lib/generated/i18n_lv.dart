@@ -150,7 +150,7 @@ class I18nLv extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'pirkt';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Cik daudz vēlaties saņemt $buyOrSell?';
   }
 
@@ -1857,7 +1857,7 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ir vienādranga Monero tirdzniecības platforma. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
+    return '$appName ir vienādranga Monero tirdzniecības platforma. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē par vairāk nekā 60 dažādiem maksājuma veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nLv extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Noderīgi, ja rodas problēmas ar \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Tirgot $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nLv extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Atjaunot';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Pievienot piezīmi par $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nLv extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Šī ir privāta piezīme jūsu atsaucei, tā nebūs redzama šim lietotājam vai citiem lietotājiem.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Jūsu piezīme par $username (redzat tikai jūs)';
   }
 
@@ -9469,8 +9469,13 @@ class I18nLv extends I18n {
   String get pin_you_can_use_new => 'PIN ir jābūt vismaz 4 cipariem';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Iestatiet noklusējuma motīvu';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Nav informācijas, ko eksportēt';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Jums ir atlikuši $val mēģinājumi. Pēc tam jūs tiksiet izrakstīts un jums būs jāpiesakās vēlreiz.';
+  }
 }

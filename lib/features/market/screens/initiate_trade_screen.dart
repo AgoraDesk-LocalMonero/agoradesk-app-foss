@@ -411,6 +411,8 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
       },
       btcFeesEnum: model.btcFeesEnum,
       btcFees: model.btcFees,
+      price: model.assetPrice,
+      fiatName: model.fiatName,
     );
   }
 }

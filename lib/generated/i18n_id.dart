@@ -150,7 +150,7 @@ class I18nId extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'membeli';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Seberapa banyak anda ingin $buyOrSell?';
   }
 
@@ -2025,7 +2025,7 @@ class I18nId extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Ya kami lakukan! Jika Anda memiliki Android, Anda bisa mendapatkannya di $playstoreLink, $fdroidLink, atau Anda dapat mengunduh $apkLink secara langsung. Untuk perangkat iOS, ini tersedia di $appstoreLink. Anda juga dapat menerima notifikasi seluler di $telegram! $thisGuide akan membawa Anda melalui proses aktivasi notifikasi Telegram (mudah). Bot kami kemudian akan mengirimkan pemberitahuan tentang acara $appName Anda.';
+    return 'Ya kami lakukan! Jika Anda memiliki Android, Anda bisa mendapatkannya di $playstoreLink, $fdroidLink, atau Anda dapat mengunduh $apkLink secara langsung. Untuk perangkat iOS, tersedia di $appstoreLink. Anda juga dapat menerima notifikasi seluler di $telegram! $thisGuide akan membawa Anda melalui proses aktivasi notifikasi Telegram (mudah). Bot kami kemudian akan mengirimkan pemberitahuan tentang acara $appName Anda.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nId extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Berguna jika Anda mengalami masalah dengan \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Perdagangkan $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nId extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Segarkan';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Tambahkan catatan di $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nId extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Ini adalah catatan pribadi untuk referensi Anda sendiri, tidak akan terlihat oleh pengguna ini atau pengguna lain.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Catatan Anda di $username (hanya dilihat oleh Anda)';
   }
 
@@ -9469,8 +9469,13 @@ class I18nId extends I18n {
   String get pin_you_can_use_new => 'PIN minimal harus 4 digit';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Tetapkan tema default';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Tidak ada info untuk diekspor';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Anda memiliki $val upaya tersisa. Setelah itu, Anda akan keluar dan Anda harus masuk lagi.';
+  }
 }

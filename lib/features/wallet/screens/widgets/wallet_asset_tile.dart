@@ -128,6 +128,7 @@ class WalletAssetTile extends StatelessWidget {
                             SendAssetFirstRoute(
                               asset: asset,
                               price: model.assetPrice(asset) ?? 0,
+                              fiatName: model.fiatName,
                               balance: model.balance(asset) ?? 0,
                             ),
                           ),

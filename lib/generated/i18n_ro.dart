@@ -150,7 +150,7 @@ class I18nRo extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Cumpără';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Cât de mult doriți să $buyOrSell?';
   }
 
@@ -2025,7 +2025,7 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Da facem! Dacă aveți Android, îl puteți obține pe $playstoreLink, $fdroidLink sau puteți descărca direct $apkLink. Pentru dispozitivele iOS, este disponibil pe $appstoreLink. De asemenea, puteți primi notificări mobile în $telegram! $thisGuide vă va ghida prin procesul de activare a notificărilor Telegram (este ușor). Botul nostru vă va trimite apoi notificări cu privire la evenimentele $appName.';
+    return 'Da facem! Dacă aveți Android, îl puteți obține pe $playstoreLink, $fdroidLink sau puteți descărca direct $apkLink. Pentru dispozitivele iOS, este disponibil pe $appstoreLink. De asemenea, puteți primi notificări pe mobil în $telegram! $thisGuide vă va ghida prin procesul de activare a notificărilor Telegram (este ușor). Botul nostru vă va trimite apoi notificări cu privire la evenimentele $appName.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nRo extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Utile dacă întâmpinați probleme cu \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Comerț $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nRo extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Reîmprospăta';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Adăugați o notă la $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nRo extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Aceasta este o notă privată pentru referință proprie, nu va fi vizibilă pentru acest utilizator sau pentru oricare alt utilizator.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Nota dvs. pe $username (văzută doar de dvs.)';
   }
 
@@ -7485,7 +7485,7 @@ class I18nRo extends I18n {
   String get devblog250Sbfdroid250Sb7250Sbtitle => 'Pasul 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le puneți pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le adresați pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Concluzie';
@@ -7537,7 +7537,7 @@ class I18nRo extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'Toate anunțurile pentru criptomonede sunt acum mutate în noua categorie de țară „global (cod XX)”. Toate anunțurile duplicate în criptomonede care diferă numai în funcție de țară vor fi șterse $timeRemaining. Vă rugăm să asigurați-vă că aveți doar UN anunț de criptomonedă pentru fiecare monedă, altfel toate, cu excepția celui mai recent postat anunț în moneda respectivă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară „globală”.';
+    return 'Toate anunțurile pentru criptomonede sunt acum mutate în noua categorie de țară „global (cod XX)”. Toate anunțurile duplicat criptomonede care diferă numai în funcție de țară vor fi șterse $timeRemaining. Vă rugăm să asigurați-vă că aveți doar UN anunț de criptomonedă pentru fiecare monedă, altfel toate, cu excepția celui mai recent postat anunț în moneda respectivă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară „globală”.';
   }
 
   @override
@@ -9469,8 +9469,13 @@ class I18nRo extends I18n {
   String get pin_you_can_use_new => 'PIN-ul trebuie să aibă cel puțin 4 cifre';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Setați o temă implicită';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Nu există informații de exportat';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Mai aveți $val încercări. După aceea, veți fi deconectat și va trebui să vă conectați din nou.';
+  }
 }

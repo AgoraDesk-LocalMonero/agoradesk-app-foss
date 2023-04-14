@@ -452,6 +452,7 @@ class AppRouter extends _i56.RootStackRouter {
         child: _i27.SendAssetFirstScreen(
           key: args.key,
           price: args.price,
+          fiatName: args.fiatName,
           balance: args.balance,
           asset: args.asset,
         ),
@@ -1834,6 +1835,7 @@ class SendAssetFirstRoute extends _i56.PageRouteInfo<SendAssetFirstRouteArgs> {
   SendAssetFirstRoute({
     _i59.Key? key,
     required double price,
+    required String fiatName,
     required double balance,
     required _i67.Asset asset,
   }) : super(
@@ -1842,6 +1844,7 @@ class SendAssetFirstRoute extends _i56.PageRouteInfo<SendAssetFirstRouteArgs> {
           args: SendAssetFirstRouteArgs(
             key: key,
             price: price,
+            fiatName: fiatName,
             balance: balance,
             asset: asset,
           ),
@@ -1854,6 +1857,7 @@ class SendAssetFirstRouteArgs {
   const SendAssetFirstRouteArgs({
     this.key,
     required this.price,
+    required this.fiatName,
     required this.balance,
     required this.asset,
   });
@@ -1862,13 +1866,15 @@ class SendAssetFirstRouteArgs {
 
   final double price;
 
+  final String fiatName;
+
   final double balance;
 
   final _i67.Asset asset;
 
   @override
   String toString() {
-    return 'SendAssetFirstRouteArgs{key: $key, price: $price, balance: $balance, asset: $asset}';
+    return 'SendAssetFirstRouteArgs{key: $key, price: $price, fiatName: $fiatName, balance: $balance, asset: $asset}';
   }
 }
 
