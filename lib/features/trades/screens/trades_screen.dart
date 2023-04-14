@@ -16,6 +16,7 @@ import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/market/screens/widgets/drop_down_asset_line_with_icons.dart';
 import 'package:agoradesk/features/market/screens/widgets/filter_button.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/trades/mixins/trade_mixin.dart';
@@ -108,16 +109,30 @@ class _TradesScreenState extends State<TradesScreen>
               flex: 1,
               child: Semantics(
                 label: context.intl.dashboard250Sbfilter250Sbrole250Sbboth,
-                child: DropdownSearch<String>(
-                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_buyer_seller),
-                  dropdownDecoratorProps: context.dropdownDecoration,
-                  popupProps: PopupProps.menu(
-                    menuProps: context.dropdownMenuProps,
-                    fit: FlexFit.loose,
+                child: Semantics(
+                  label: context.intl.app_select_trade_type,
+                  child: DropdownSearch<String>(
+                    dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_trade_type),
+                    dropdownDecoratorProps: context.dropdownDecoration,
+                    popupProps: PopupProps.menu(
+                      menuProps: context.dropdownMenuProps,
+                      fit: FlexFit.loose,
+                      itemBuilder: (context, val, isSelected) {
+                        return DropdownAssetLineWithIcon(
+                          name: val,
+                        );
+                      },
+                    ),
+                    items: model.tradeTypeMenu,
+                    onChanged: model.setTradeType,
+                    selectedItem: model.tradeTypeMenu[0],
+                    dropdownBuilder: (context, val) {
+                      return DropdownAssetLineWithIcon(
+                        name: val!,
+                        padding: const EdgeInsets.all(0),
+                      );
+                    },
                   ),
-                  items: model.tradeTypeMenu,
-                  onChanged: model.setTradeType,
-                  selectedItem: model.tradeTypeMenu[0],
                 ),
               ),
             ),
@@ -215,7 +230,6 @@ class _TradesScreenState extends State<TradesScreen>
                             ),
                             itemAsString: (String? code) => getCountryName(code ?? ''),
                             asyncItems: (String? filter) => model.getCountryCodes(),
-                            // showSearchBox: true,
                             selectedItem: model.selectedCountryCode,
                             onChanged: (val) => model.selectedCountryCode = val ?? 'US',
                           ),
@@ -237,10 +251,8 @@ class _TradesScreenState extends State<TradesScreen>
                                 decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
                               ),
                             ),
-                            // itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                             itemAsString: (CurrencyModel? currency) => currency?.code ?? '',
                             asyncItems: (String? filter) => model.getCurrencies(),
-                            // showSearchBox: true,
                             selectedItem: model.selectedCurrency,
                             onChanged: (val) =>
                                 model.selectedCurrency = val ?? CurrencyModel(code: 'USD', name: 'USD', altcoin: true),
@@ -265,7 +277,6 @@ class _TradesScreenState extends State<TradesScreen>
                             itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                             asyncItems: (String? filter) =>
                                 model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
-                            // showSearchBox: true,
                             selectedItem: model.selectedOnlineProvider,
                             onChanged: (val) => model.selectedOnlineProvider = val,
                           ),

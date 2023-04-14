@@ -1,7 +1,8 @@
 ### Updates
-1. Hotfix: Fix the captcha on the login screen.
-2. Hotfix: Register error with edited email.
-3. Improved add edit screen.
+1. The pin code is limited to 25 attempts; after that, the app will log out. 
+2. Pressing the proxy icon opens the settings screen. 
+3. The transaction cost for BTC has been added in fiat currency. 
+4. Fixed: error that occurred when the captcha dialog was closed.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

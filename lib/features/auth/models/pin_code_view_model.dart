@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_constants.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -26,6 +28,7 @@ class PinCodeViewModel extends ViewModel {
   final bool isSetFlow;
 
   String? currentPin;
+  int attemptsLeft = 25;
   bool initializing = true;
   bool hasCurrentPin = false;
   bool _currentPinChecked = false;
@@ -59,6 +62,7 @@ class PinCodeViewModel extends ViewModel {
   @override
   Future<void> init() async {
     currentPin = await _secureStorage.read(SecureStorageKey.pin);
+    attemptsLeft = AppSharedPrefs().pinAttemptsLeft;
     if (currentPin != null && currentPin!.isNotEmpty) {
       hasCurrentPin = true;
     }
@@ -90,23 +94,23 @@ class PinCodeViewModel extends ViewModel {
   bool checkPinCorrectness(String pin) {
     if (pin != currentPin) {
       clearPins();
-      showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
+      attemptsLeft -= 1;
+      if (attemptsLeft < 1) {
+        attemptsLeft = 0;
+        eventBus.fire(const LogOutEvent());
+      }
+      AppSharedPrefs().setInt(AppSharedPrefsKey.pinAttemptsLeft, attemptsLeft);
+      showDialog(context: context, builder: (_) => _dialogInputPinWrong(context, attemptsLeft));
       return false;
     }
+    AppSharedPrefs().setInt(AppSharedPrefsKey.pinAttemptsLeft, kPinAttempts);
     return true;
   }
-
-  // bool checkPinLessMax(String pin) {
-  //   if (pin == currentPin && pin.length < kMaxPinLength) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
 
   void handlePinInput(String pin, {bool onFull = false}) async {
     if (hasCurrentPin && !currentPinChecked && currentPin != null) {
       if (pin != currentPin) {
-        showDialog(context: context, builder: (_) => _dialogCurrentPin(context));
+        showDialog(context: context, builder: (_) => _dialogSetPinWrong(context));
       } else if (pin.length == currentPin!.length) {
         currentPinChecked = true;
         if (pin.length < kMaxPinLength) {
@@ -135,7 +139,14 @@ class PinCodeViewModel extends ViewModel {
     }
   }
 
-  Widget _dialogCurrentPin(BuildContext context) {
+  Widget _dialogInputPinWrong(BuildContext context, int attemptsLeft) {
+    return DialogMarkDownWithClose(
+      title: context.intl.pin_wrong_current,
+      text: context.intl.pin_wrong_current_info(attemptsLeft.toString()),
+    );
+  }
+
+  Widget _dialogSetPinWrong(BuildContext context) {
     return DialogMarkDownWithClose(
       title: context.intl.pin_wrong_current,
       text: context.intl.pin_please_input_correct,

@@ -29,7 +29,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
   void initState() {
     _appState = context.read<AppState>();
     _isDark = _appState.themeMode == ThemeMode.dark;
-    WidgetsBinding.instance.addPostFrameCallback((_) => _afterLayout());
+    // WidgetsBinding.instance.addPostFrameCallback((_) => _afterLayout());
     super.initState();
   }
 
@@ -97,101 +97,101 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
     );
   }
 
-  void _afterLayout() async {
-    if (Platform.isAndroid) {
-      showGeneralDialog(
-        barrierDismissible: true,
-        context: context,
-        pageBuilder: (BuildContext buildContext, Animation<double> animation, Animation<double> secondaryAnimation) =>
-            SimpleDialog(
-          insetPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(20.0),
-            ),
-          ),
-          backgroundColor: context.colS4,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    'Disclaimer',
-                    style: context.txtHeadMediumN90,
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room:',
-                    style: context.txtBodySmallN80,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 40),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Semantics(
-                        label: context.intl.app_join_matrix,
-                        child: GestureDetector(
-                          behavior: HitTestBehavior.opaque,
-                          onTap: () => openLinkExt(GetIt.I<AppParameters>().matrixDev),
-                          child: SvgPicture.asset(
-                            'assets/images/matrix-logo.svg',
-                            color: Colors.white,
-                            width: 100,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 40),
-                      Semantics(
-                        label: context.intl.app_join_telegram,
-                        child: GestureDetector(
-                          behavior: HitTestBehavior.opaque,
-                          onTap: () => openLinkExt(GetIt.I<AppParameters>().telegramDev),
-                          child: Image.asset(
-                            'assets/images/telegram-logo.png',
-                            height: 70,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 22),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        onPressed: () => AutoRouter.of(context).pop(),
-                        style: TextButton.styleFrom(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 20, 10),
-                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          // minimumSize: const Size(50, 40),
-                          alignment: Alignment.centerRight,
-                        ),
-                        child: Text(
-                          I18n.of(context)!.close,
-                          style: context.txtLabelLargePrimary70,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
-        barrierColor: Colors.black54,
-        transitionDuration: const Duration(milliseconds: 200),
-        // builder: (_) => const AgoraDialogCloseMarkDown(
-        //   title: 'Disclaimer',
-        //   text:
-        //       'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room: \n- Matrix icon links to https://matrix.to/#/#app-beta-testers:agoradesk.com \n\n- Telegram Icon links to https://t.me/+Hvf6nSq9ImBkMDhl',
-        // ),
-      );
-    }
-  }
+  // void _afterLayout() async {
+  //   if (Platform.isAndroid) {
+  //     showGeneralDialog(
+  //       barrierDismissible: true,
+  //       context: context,
+  //       pageBuilder: (BuildContext buildContext, Animation<double> animation, Animation<double> secondaryAnimation) =>
+  //           SimpleDialog(
+  //         insetPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+  //         shape: const RoundedRectangleBorder(
+  //           borderRadius: BorderRadius.all(
+  //             Radius.circular(20.0),
+  //           ),
+  //         ),
+  //         backgroundColor: context.colS4,
+  //         children: [
+  //           Padding(
+  //             padding: const EdgeInsets.all(24),
+  //             child: Column(
+  //               mainAxisAlignment: MainAxisAlignment.start,
+  //               crossAxisAlignment: CrossAxisAlignment.center,
+  //               mainAxisSize: MainAxisSize.min,
+  //               children: [
+  //                 Text(
+  //                   'Disclaimer',
+  //                   style: context.txtHeadMediumN90,
+  //                 ),
+  //                 const SizedBox(height: 16),
+  //                 Text(
+  //                   'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room:',
+  //                   style: context.txtBodySmallN80,
+  //                   textAlign: TextAlign.center,
+  //                 ),
+  //                 const SizedBox(height: 40),
+  //                 Row(
+  //                   mainAxisAlignment: MainAxisAlignment.center,
+  //                   children: [
+  //                     Semantics(
+  //                       label: context.intl.app_join_matrix,
+  //                       child: GestureDetector(
+  //                         behavior: HitTestBehavior.opaque,
+  //                         onTap: () => openLinkExt(GetIt.I<AppParameters>().matrixDev),
+  //                         child: SvgPicture.asset(
+  //                           'assets/images/matrix-logo.svg',
+  //                           color: Colors.white,
+  //                           width: 100,
+  //                         ),
+  //                       ),
+  //                     ),
+  //                     const SizedBox(width: 40),
+  //                     Semantics(
+  //                       label: context.intl.app_join_telegram,
+  //                       child: GestureDetector(
+  //                         behavior: HitTestBehavior.opaque,
+  //                         onTap: () => openLinkExt(GetIt.I<AppParameters>().telegramDev),
+  //                         child: Image.asset(
+  //                           'assets/images/telegram-logo.png',
+  //                           height: 70,
+  //                         ),
+  //                       ),
+  //                     ),
+  //                   ],
+  //                 ),
+  //                 const SizedBox(height: 22),
+  //                 Row(
+  //                   mainAxisAlignment: MainAxisAlignment.end,
+  //                   children: [
+  //                     TextButton(
+  //                       onPressed: () => AutoRouter.of(context).pop(),
+  //                       style: TextButton.styleFrom(
+  //                         padding: const EdgeInsets.fromLTRB(0, 0, 20, 10),
+  //                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  //                         // minimumSize: const Size(50, 40),
+  //                         alignment: Alignment.centerRight,
+  //                       ),
+  //                       child: Text(
+  //                         I18n.of(context)!.close,
+  //                         style: context.txtLabelLargePrimary70,
+  //                       ),
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //         ],
+  //       ),
+  //       barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+  //       barrierColor: Colors.black54,
+  //       transitionDuration: const Duration(milliseconds: 200),
+  //       // builder: (_) => const AgoraDialogCloseMarkDown(
+  //       //   title: 'Disclaimer',
+  //       //   text:
+  //       //       'Warning: this app is currently in BETA. Expect bugs. \nPlease join our beta testers discussion room: \n- Matrix icon links to https://matrix.to/#/#app-beta-testers:agoradesk.com \n\n- Telegram Icon links to https://t.me/+Hvf6nSq9ImBkMDhl',
+  //       // ),
+  //     );
+  //   }
+  // }
 }
