@@ -150,7 +150,7 @@ class I18nEs extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'comprar';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return '¿Cuánto desea $buyOrSell?';
   }
 
@@ -2078,7 +2078,7 @@ class I18nEs extends I18n {
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Todas las transacciones en línea están protegidas por bonos de arbitraje. Cuando se inicia una operación, se reserva automáticamente una cantidad de criptomonedas igual a la cantidad de la operación de la billetera de bonos $appName del vendedor. Esto significa que si el vendedor se escapa con su dinero y no finaliza la transacción, el soporte de $appName puede enviarle la criptomoneda contenida en el bono de arbitraje. Si está vendiendo criptomonedas, nunca finalice la operación antes de saber que ha recibido dinero del comprador. Tenga en cuenta que las transacciones locales no tienen habilitada la protección de bonos de arbitraje de forma predeterminada.';
+    return 'Todas las transacciones en línea están protegidas por bonos de arbitraje. Cuando se inicia una operación, se reserva automáticamente una cantidad de criptomonedas igual a la cantidad de la operación de la billetera de bonos $appName del vendedor. Esto significa que si el vendedor se escapa con su dinero y no finaliza la transacción, el soporte de $appName puede enviarle la criptomoneda contenida en el bono de arbitraje. Si está vendiendo criptomonedas, nunca finalice la operación antes de saber que ha recibido dinero del comprador. Tenga en cuenta que las transacciones locales no tienen habilitada la protección de bonos de arbitraje de manera predeterminada.';
   }
 
   @override
@@ -3118,7 +3118,7 @@ class I18nEs extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> Precio fijo o de mercado </strong><br/> Para fijar el precio de su anuncio, puede ingresar el margen que desee por encima del precio de mercado $assetName. Para hacer eso, ingrese un porcentaje en el campo de margen después de elegir la opción \"Precio de mercado\". También es posible que desee especificar un precio fijo que no cambiará hasta que lo cambie manualmente. Para esto, debe elegir la opción \"Precio fijo\" e ingresar el valor del precio. <br/><br/> <strong> Mín. / Máx. límite de transacción </strong><br/> El límite mínimo de transacción establece la cantidad más pequeña que alguien puede comprar. Si lo establece en cinco, y tiene su moneda configurada en EUR, significa que la cantidad mínima de operación por la que alguien puede abrir una operación con usted será de 5 EUR. El límite máximo de transacción establece cuál es el monto comercial más grande que desea aceptar. <br/><br/> <strong> Términos de intercambio </strong><br/> Este es el texto que ve el comprador antes de abrir un intercambio con usted. Es una buena idea escribir instrucciones para el comprador sobre cómo desea que se lleve a cabo la transacción y si tiene instrucciones específicas. Si requiere, por ejemplo, que el comprador presente un recibo como prueba de pago antes de finalizar una transacción o si necesita que el comprador proporcione una identificación, este es el lugar para mencionarlo. Puede echar un vistazo a los anuncios de otros comerciantes sobre el método de pago que desea utilizar para tener una idea de los buenos términos comerciales que contienen. <br/><br/> <strong> Opciones adicionales </strong><br/><br/> <strong> Limitar montos a </strong><br/> Puede restringir el anuncio para que solo pueda abrir operaciones por montos específicos. Si ingresa 20,30,60 en el cuadro, un socio comercial potencial solo podría abrir una operación por 20, 30 o 60 EUR. <br/><br/> <strong> Detalles de pago </strong><br/> Ingrese aquí información específica relacionada con cómo debe pagar el comprador, puede ser su número de cuenta bancaria o dirección de correo electrónico (por ejemplo, para PayPal). <br/><br/> <strong> Puntaje de retroalimentación mínimo requerido </strong><br/> El mínimo de retroalimentación le permite establecer un puntaje de retroalimentación mínimo requerido para abrir una operación usando su anuncio. <br/><br/> <strong> Primer límite de tiempo ($assetSymbol) </strong><br/> Este es un límite de transacción máximo específico para nuevos usuarios. Si un comprador sin historial comercial previo con usted quiere abrir una operación con usted, esta es la cantidad más grande por la que puede abrir una operación. <br/><br/> <strong> Ventana de pago </strong><br/> La cantidad de tiempo que el comprador tiene para completar el pago antes de que el vendedor pueda cancelar la operación. <br/><br/> <strong> Seguimiento de la cantidad máxima de liquidez </strong><br/> Habilitar el seguimiento de la liquidez reduce el límite máximo del anuncio en la cantidad que se retiene actualmente en las operaciones abiertas. <br/><br/> <strong> Consejos rápidos para identificar a los estafadores </strong> <br/><br/><strong>Los compradores fraudulentos suelen tener prisa.</strong> Cuanto más te pide un cliente que te apresures, más sospechoso deberías serlo, los clientes reales siempre tienen paciencia. <br/><br/>Los compradores fraudulentos a menudo <strong>sugieren realizar toda o parte de la transacción fuera del sistema de protección de fianzas de arbitraje </strong>y luego no completan su parte de la transacción. <br/><br/> Tenga cuidado con las <strong>evidencias de pago modificadas con Photoshop</strong>, no finalice una transacción hasta que haya confirmado que ha recibido el dinero. No está obligado a finalizar una transacción hasta que pueda verificar que ha recibido el pago del comprador. <br/><br/><strong>No abra ningún enlace que su socio comercial le esté enviando</strong>. Si es necesario, utilice un navegador diferente al que está utilizando. <br/><br/>No visite sitios web que no sean $appName con el navegador que está utilizando para operar. <strong>Use un navegador diferente para otros sitios web.</strong> <br/><br/> Marque $appName en su navegador y use siempre el marcador cuando visite el sitio web. Esto le ayuda a evitar visitar accidentalmente sitios web de phishing, existen y pueden ser muy convincentes.';
+    return '<strong> Precio fijo o de mercado </strong><br/> Para fijar el precio de su anuncio, puede ingresar el margen que desee por encima del precio de mercado $assetName. Para hacer eso, ingrese un porcentaje en el campo de margen después de elegir la opción \"Precio de mercado\". También es posible que desee especificar un precio fijo que no cambiará hasta que lo cambie manualmente. Para esto, debe elegir la opción \"Precio fijo\" e ingresar el valor del precio. <br/><br/> <strong> Mín. / Máx. límite de transacción </strong><br/> El límite mínimo de transacción establece la cantidad más pequeña que alguien puede comprar. Si lo establece en cinco, y tiene su moneda configurada en EUR, significa que la cantidad mínima de operación por la que alguien puede abrir una operación con usted será de 5 EUR. El límite máximo de transacción establece cuál es el monto comercial más grande que desea aceptar. <br/><br/> <strong> Términos de intercambio </strong><br/> Este es el texto que ve el comprador antes de abrir un intercambio con usted. Es una buena idea escribir instrucciones para el comprador sobre cómo desea que se lleve a cabo la transacción y si tiene instrucciones específicas. Si requiere, por ejemplo, que el comprador presente un recibo como prueba de pago antes de finalizar una transacción o si necesita que el comprador proporcione una identificación, este es el lugar para mencionarlo. Puede echar un vistazo a los anuncios de otros comerciantes sobre el método de pago que desea utilizar para tener una idea de los buenos términos comerciales que contienen. <br/><br/> <strong> Opciones adicionales </strong><br/><br/> <strong> Limitar montos a </strong><br/> Puede restringir el anuncio para que solo pueda abrir operaciones por montos específicos. Si ingresa 20,30,60 en el cuadro, un socio comercial potencial solo podría abrir una operación por 20, 30 o 60 EUR. <br/><br/> <strong> Detalles de pago </strong><br/> Ingrese aquí información específica relacionada con cómo debe pagar el comprador, puede ser su número de cuenta bancaria o dirección de correo electrónico (por ejemplo, para PayPal). <br/><br/> <strong> Puntaje de retroalimentación mínimo requerido </strong><br/> El mínimo de retroalimentación le permite establecer un puntaje de retroalimentación mínimo requerido para abrir una operación usando su anuncio. <br/><br/> <strong> Primer límite de tiempo ($assetSymbol) </strong><br/> Este es un límite de transacción máximo específico para nuevos usuarios. Si un comprador sin historial comercial previo con usted quiere abrir una operación con usted, esta es la cantidad más grande por la que puede abrir una operación. <br/><br/> <strong> Ventana de pago </strong><br/> La cantidad de tiempo que el comprador tiene para completar el pago antes de que el vendedor pueda cancelar la transacción. <br/><br/> <strong> Seguimiento de la cantidad máxima de liquidez </strong><br/> Habilitar el seguimiento de la liquidez reduce el límite máximo del anuncio en la cantidad que se retiene actualmente en las operaciones abiertas. <br/><br/> <strong> Consejos rápidos para identificar a los estafadores </strong> <br/><br/><strong>Los compradores fraudulentos suelen tener prisa.</strong> Cuanto más te pide un cliente que te apresures, más sospechoso deberías serlo, los clientes reales siempre tienen paciencia. <br/><br/>Los compradores fraudulentos a menudo <strong>sugieren realizar toda o parte de la transacción fuera del sistema de protección de fianzas de arbitraje </strong>y luego no completan su parte de la transacción. <br/><br/> Tenga cuidado con las <strong>evidencias de pago modificadas con Photoshop</strong>, no finalice una transacción hasta que haya confirmado que ha recibido el dinero. No está obligado a finalizar una transacción hasta que pueda verificar que ha recibido el pago del comprador. <br/><br/><strong>No abra ningún enlace que su socio comercial le esté enviando</strong>. Si es necesario, utilice un navegador diferente al que está utilizando. <br/><br/>No visite sitios web que no sean $appName con el navegador que está utilizando para operar. <strong>Use un navegador diferente para otros sitios web.</strong> <br/><br/> Marque $appName en su navegador y use siempre el marcador cuando visite el sitio web. Esto le ayuda a evitar visitar accidentalmente sitios web de phishing, existen y pueden ser muy convincentes.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nEs extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Útil si tiene problemas con \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Comercio $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nEs extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Actualizar';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Añade una nota en $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nEs extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Esta es una nota privada para su propia referencia, no será visible para este usuario ni para ningún otro.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Su nota sobre $username (sólo vista por usted)';
   }
 
@@ -9469,8 +9469,13 @@ class I18nEs extends I18n {
   String get pin_you_can_use_new => 'El PIN debe tener al menos 4 dígitos';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Establecer un tema predeterminado';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'No hay información para exportar';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Te quedan $val intentos. Después de eso, se cerrará la sesión y deberá iniciar sesión nuevamente.';
+  }
 }

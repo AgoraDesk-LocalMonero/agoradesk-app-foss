@@ -150,7 +150,7 @@ class I18nJa extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '購入';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'いくらで$buyOrSellをご希望ですか？';
   }
 
@@ -4468,7 +4468,7 @@ class I18nJa extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => '「コインロッカー」で問題が発生した場合に役立ちます';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'トレード $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nJa extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'リフレッシュ';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return '$username にメモを追加';
   }
 
@@ -4598,7 +4598,7 @@ class I18nJa extends I18n {
   String get note250Sbinput250Sbplaceholder => 'これはあなた自身の参照用の非公開メモであり、このユーザーや他のユーザーには表示されません。';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return '$username に関するあなたのメモ (あなただけが見ることができます)';
   }
 
@@ -9469,8 +9469,13 @@ class I18nJa extends I18n {
   String get pin_you_can_use_new => 'PIN は 4 桁以上である必要があります';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'デフォルトのテーマを設定する';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'エクスポートする情報がありません';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return '$val 回の試行が残っています。その後、ログアウトされ、再度ログインする必要があります。';
+  }
 }

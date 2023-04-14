@@ -21,6 +21,7 @@ class SendAssetViewModel extends ViewModel
     with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin, QrScannerMixin {
   SendAssetViewModel({
     required this.price,
+    required this.fiatName,
     required this.balance,
     required this.asset,
     required WalletService walletService,
@@ -31,6 +32,7 @@ class SendAssetViewModel extends ViewModel
   final WalletService _walletService;
   final AppState _appState;
   final double price;
+  final String fiatName;
   final double? balance;
 
   final ctrlAddress = TextEditingController();

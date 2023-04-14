@@ -59,6 +59,15 @@ extension AssetExt on Asset {
     }
   }
 
+  String svgPath() {
+    switch (this) {
+      case Asset.BTC:
+        return 'assets/images/btc-logo.svg';
+      case Asset.XMR:
+        return 'assets/images/xmr-logo.svg';
+    }
+  }
+
   String minimumBalance() {
     switch (this) {
       case Asset.BTC:

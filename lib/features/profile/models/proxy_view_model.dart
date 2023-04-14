@@ -37,6 +37,8 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   final ctrlPassword = TextEditingController();
 
   late bool _isProxyOn;
+  bool _isI2pOn = false;
+  bool _isTorOn = false;
   bool _loading = false;
   bool _readyToSwitchOnProxy = false;
   bool _proxyAvailable = false;
@@ -45,7 +47,7 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
 
   ProxyType get proxyType => _proxyType;
 
-  set proxyType(ProxyType? v) => updateWith(proxyType: v);
+  set proxyType(ProxyType v) => updateWith(proxyType: v);
 
   bool get proxyAvailable => _proxyAvailable;
 
@@ -54,6 +56,14 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   bool get isProxyOn => _isProxyOn;
 
   set isProxyOn(bool val) => updateWith(isProxyOn: val);
+
+  bool get isI2pOn => _isI2pOn;
+
+  set isI2pOn(bool val) => updateWith(isI2pOn: val);
+
+  bool get isTorOn => _isTorOn;
+
+  set isTorOn(bool val) => updateWith(isTorOn: val);
 
   bool get loading => _loading;
 
@@ -104,13 +114,40 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     }
   }
 
+  Future  changeProxyType(ProxyType? type) async {
+    proxyType = type ?? ProxyType.socks5;
+    _checkIsReadyToSetProxy();
+  }
+
+  Future switchI2p(BuildContext context, bool val) async {
+    isI2pOn = !isI2pOn;
+    if (isTorOn && isI2pOn) {
+      isTorOn = false;
+    }
+    // await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: isProxyOn);
+    // GetIt.I<AppParameters>().proxy = isProxyOn;
+    // await _setProxyData();
+  }
+
+  Future switchTor(BuildContext context, bool val) async {
+    isTorOn = !isTorOn;
+    if (isTorOn && isI2pOn) {
+      isI2pOn = false;
+    }
+    // await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: isProxyOn);
+    // GetIt.I<AppParameters>().proxy = isProxyOn;
+    // await _setProxyData();
+  }
+
   Future saveProxy(BuildContext context) async {
     loading = true;
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyServer, ctrlServer.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyPort, ctrlPort.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyUsername, ctrlUsername.text);
     await AppSharedPrefs().setString(AppSharedPrefsKey.proxyPassword, ctrlPassword.text);
-    await AppSharedPrefs().setString(AppSharedPrefsKey.proxyType, proxyType.title());
+    await AppSharedPrefs().setString(AppSharedPrefsKey.proxyType, proxyType.name);
+    await AppSharedPrefs().setBool(AppSharedPrefsKey.i2pAddressOn, val: _isI2pOn);
+    await AppSharedPrefs().setBool(AppSharedPrefsKey.torAddressOn, val: _isTorOn);
 
     await _setProxyData(fromSave: true);
     loading = false;
@@ -122,7 +159,10 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     if (isProxyOn || fromSave == true) {
       SocksProxy.setProxy(proxyAddress);
       await Future.delayed(const Duration(seconds: 1));
-      final res = await _accountService.checkProxyAvailable();
+      final res = await _accountService.checkProxyAvailable(
+        i2pAddressOn: _isI2pOn,
+        torAddressOn: _isTorOn,
+      );
       if (res.isRight) {
         proxyAvailable = true;
         await AppSharedPrefs().setBool(AppSharedPrefsKey.proxyEnabled, val: true);
@@ -146,14 +186,6 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   void _displayMessage(BuildContext context) {
     if (proxyAvailable) {
       isProxyOn = true;
-      // showDialog(
-      //   barrierDismissible: true,
-      //   context: context,
-      //   builder: (_) => AgoraDialogClose(
-      //     title: context.intl.app_proxy_on,
-      //     text: context.intl.app_proxy_on_descr,
-      //   ),
-      // );
     } else {
       isProxyOn = false;
       showDialog(
@@ -170,12 +202,16 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   void updateWith({
     bool? loading,
     bool? isProxyOn,
+    bool? isI2pOn,
+    bool? isTorOn,
     bool? proxyAvailable,
     bool? readyToSwitchOnProxy,
     ProxyType? proxyType,
   }) {
     _loading = loading ?? _loading;
     _isProxyOn = isProxyOn ?? _isProxyOn;
+    _isI2pOn = isI2pOn ?? _isI2pOn;
+    _isTorOn = isTorOn ?? _isTorOn;
     _proxyAvailable = proxyAvailable ?? _proxyAvailable;
     _readyToSwitchOnProxy = readyToSwitchOnProxy ?? _readyToSwitchOnProxy;
     _proxyType = proxyType ?? _proxyType;

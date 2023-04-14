@@ -123,13 +123,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                           ],
                         ),
                         const SizedBox(height: 16),
-                        model.displayWarning()
-                            ? GlobalWarningAds(
-                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-                                text: context.intl
-                                    .edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad,
-                              )
-                            : const SizedBox(),
                         _buildFirstTile(context, model),
                         const SizedBox(height: 16),
                         _buildSecondTile(context, model),
@@ -186,7 +179,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                     popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
                     itemAsString: (CurrencyModel? currency) => getCurrencyNameWithCode(currency?.code ?? ''),
                     asyncItems: (String? filter) => model.getCurrencies(),
-                    // showSearchBox: true,
                     selectedItem: model.selectedCurrency,
                     onChanged: (val) => model.setSelectedCurrency(val),
                   ),
@@ -223,7 +215,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                 ),
                 itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
                 asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
-                // showSearchBox: true,
                 selectedItem: model.selectedOnlineProvider,
                 onChanged: (val) => model.updateOnlineProvider(val),
               ),
@@ -250,7 +241,6 @@ class _AdEditScreenState extends State<AdEditScreen>
                 popupProps: PopupProps.menu(menuProps: context.dropdownMenuProps),
                 itemAsString: (String? code) => getCountryName(code ?? ''),
                 asyncItems: (String? filter) => model.getCountryCodes(),
-                // showSearchBox: true,
                 selectedItem: model.selectedCountryCode,
                 onChanged: (val) => model.setSelectedCountryCode(val),
               )

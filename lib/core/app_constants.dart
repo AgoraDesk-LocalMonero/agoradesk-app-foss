@@ -47,3 +47,11 @@ const kMaxPinLength = 25;
 ///
 
 const kDisplayDuration = Duration(seconds: 3);
+
+///
+/// Attempts to input PIN
+///
+
+const int kPinAttempts = 25;
+
+

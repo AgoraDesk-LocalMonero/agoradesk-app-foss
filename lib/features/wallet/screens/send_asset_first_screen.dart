@@ -19,11 +19,13 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
   const SendAssetFirstScreen({
     Key? key,
     required this.price,
+    required this.fiatName,
     required this.balance,
     required this.asset,
   }) : super(key: key);
 
   final double price;
+  final String fiatName;
   final double balance;
   final Asset asset;
 
@@ -35,6 +37,7 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
             balance: balance,
             asset: asset,
             price: price,
+            fiatName: fiatName,
             walletService: context.read<WalletService>(),
             appState: context.read<AppState>(),
           ),

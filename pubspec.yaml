@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.0.71+94
+version: 1.1.0+95
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -110,6 +110,7 @@ flutter:
 
   assets:
     - assets/banks/
+    - assets/flags/
     - assets/json/
     - assets/branding/
     - assets/images/

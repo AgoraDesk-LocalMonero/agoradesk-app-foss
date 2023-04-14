@@ -69,13 +69,15 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
                             _buildBody(context, model),
                             const SizedBox(height: 12),
                             model.asset == Asset.XMR
-                                ? _buildNetworkFees(context, model)
+                                ? _buildXmrNetworkFees(context, model)
                                 : BtcFeesRadioButtons(
                                     btcFeesEnumCallback: (btcFeesEnum) {
                                       model.btcFeesEnum = btcFeesEnum;
                                     },
                                     btcFeesEnum: model.btcFeesEnum,
                                     btcFees: model.btcFees,
+                                    price: model.price,
+                                fiatName: model.fiatName
                                   ),
                           ],
                         ),
@@ -180,7 +182,7 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
     );
   }
 
-  Widget _buildNetworkFees(BuildContext context, SendAssetViewModel model) {
+  Widget _buildXmrNetworkFees(BuildContext context, SendAssetViewModel model) {
     return ContainerSurface3Radius12Border1(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),

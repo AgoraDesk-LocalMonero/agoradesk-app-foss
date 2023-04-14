@@ -150,7 +150,7 @@ class I18nPl extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kupić';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Ile chcesz $buyOrSell?';
   }
 
@@ -4468,7 +4468,7 @@ class I18nPl extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Przydatne, gdy masz problemy z \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Handel $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nPl extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Odśwież';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Dodaj notatkę na temat $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nPl extends I18n {
   String get note250Sbinput250Sbplaceholder => 'To jest prywatna notatka dla własnego odniesienia, nie będzie ona widoczna dla tego użytkownika ani żadnego innego.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Twoja notatka na temat $username (widoczna tylko dla Ciebie)';
   }
 
@@ -9469,8 +9469,13 @@ class I18nPl extends I18n {
   String get pin_you_can_use_new => 'PIN musi mieć co najmniej 4 cyfry';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Ustaw domyślny motyw';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Brak informacji do wyeksportowania';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Masz jeszcze $val prób. Następnie zostaniesz wylogowany i będziesz musiał zalogować się ponownie.';
+  }
 }
