@@ -157,6 +157,10 @@ class AppParameters {
       'name': 'Latvian',
       'origName': 'latviešu valoda',
     },
+    'lt': {
+      'name': 'Lithuanian',
+      'origName': 'lietuvių kalba',
+    },
     'nb': {
       'name': 'Norwegian',
       'origName': 'Norwegian Bokmål',
