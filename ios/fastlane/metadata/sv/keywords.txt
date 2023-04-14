@@ -1,1 +1,1 @@
-kryptovaluta,bitcoin,monero,BTC,XMR,anonym,privat
+kryptovaluta, bitcoin, monero, BTC, XMR, anonym, privat
