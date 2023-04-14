@@ -150,7 +150,7 @@ class I18nSw extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kununua';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return '${buyOrSell}Je! ungependa kiasi gani?';
   }
 
@@ -488,7 +488,7 @@ class I18nSw extends I18n {
 
   @override
   String agoradesk250Sbguide250Sbsearch250Sbchoose8722Sbad8722Sbtype(Object buyOrSellTabName) {
-    return 'Katika safu wima ya kushoto unapaswa kuchagua kichupo cha $buyOrSellTabName\'. Ikiwa ungependa kubadilisha nchi, sarafu, njia ya kulipa au kubainisha kiasi kinachohitajika, bofya kitufe cha \'Onyesha menyu ya utafutaji\', chagua vigezo unavyotaka, na ubonyeze kitufe cha kutafuta.';
+    return 'Katika safu wima ya kushoto unapaswa kuchagua kichupo cha \'$buyOrSellTabName\'. Ikiwa ungependa kubadilisha nchi, sarafu, njia ya kulipa au kubainisha kiasi kinachohitajika, bofya kitufe cha \'Onyesha menyu ya utafutaji\', chagua vigezo unavyotaka, na ubonyeze kitufe cha kutafuta.';
   }
 
   @override
@@ -2025,7 +2025,7 @@ class I18nSw extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Ndio tunafanya! Ikiwa una Android, unaweza kuipata kwenye $playstoreLink, $fdroidLink, au unaweza kupakua $apkLink moja kwa moja. Kwa vifaa vya iOS, inapatikana kwenye $appstoreLink. Unaweza pia kupokea arifa za simu katika $telegram! $thisGuide itakupeleka kwenye mchakato wa kuwezesha arifa za Telegramu (ni rahisi). Bot yetu itakutumia arifa kuhusu matukio yako ya $appName.';
+    return 'Ndio tunafanya! Ikiwa una Android, unaweza kuipata kwenye $playstoreLink, $fdroidLink, au unaweza kupakua $apkLink moja kwa moja. Kwa vifaa vya iOS, inapatikana kwenye $appstoreLink. Unaweza pia kupokea arifa za simu katika $telegram! $thisGuide itakupeleka kwenye mchakato wa kuwezesha arifa za Telegramu (ni rahisi). Kijibu chetu kitakutumia arifa kuhusu matukio yako ya $appName.';
   }
 
   @override
@@ -4468,7 +4468,7 @@ class I18nSw extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Inafaa ikiwa unakabiliwa na shida na \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Biashara $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nSw extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Onyesha upya';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Ongeza dokezo kwenye $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nSw extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Hili ni dokezo la faragha kwa marejeleo yako mwenyewe, halitaonekana kwa mtumiaji huyu au mtumiaji mwingine yeyote.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Dokezo lako kwenye $username (inaonekana na wewe pekee)';
   }
 
@@ -7449,7 +7449,7 @@ class I18nSw extends I18n {
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Ni programu gani zinaweza kujumuishwa kwa F-Droid?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata hazina</a> kwenye Gitlab.</li>\n<li>Linganisha hazina kwenye kifaa chako.</li>\n<li>Unda tawi ukitumia kitambulisho cha bundle cha programu, kwa mfano <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\"> hazina ya fdroiddata</a> kwenye Gitlab.</li>\n<li>Linganisha hazina kwenye kifaa chako.</li>\n<li>Unda tawi ukitumia kitambulisho cha bundle cha programu, kwa mfano <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Hatua ya 1';
@@ -7467,7 +7467,7 @@ class I18nSw extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Hatua ya 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Fungua faili na uihariri. Huu hapa ni mfano: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Katika mfano unaweza kuona:</p>\n<ol>\n<li>Flutter inatumika kama moduli ndogo - hili ni sharti kutoka kwa timu ya F-Droid.</li>\n<li>Kwa kila ladha tumetumia tawi tofauti (command <code>AutoUpdateMode: Toleo %v-fdroid-lm</code>). Hiyo ni kwa sababu Fastlane haitumii&#39; vionjo vya Flutter.</li>\n<li>Mara ya kwanza tunapoongeza maelezo ya muundo mwenyewe, katika siku zijazo yataongezwa kiotomatiki na roboti, baada ya kusukuma lebo mpya.</li>\n</ol>\n<p>Hakikisha kwamba faili ina syntax sahihi: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Fungua faili na uihariri. Huu hapa ni mfano: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Katika mfano unaweza kuona:</p>\n<ol>\n<li>Flutter inatumika kama moduli ndogo - hili ni sharti kutoka kwa timu ya F-Droid.</li>\n<li>Kwa kila ladha tumetumia tawi tofauti (command <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Hiyo ni kwa sababu Fastlane haitumii&#39; vionjo vya Flutter.</li>\n<li>Mara ya kwanza tunapoongeza maelezo ya muundo mwenyewe, katika siku zijazo yataongezwa kiotomatiki na roboti, baada ya kusukuma lebo mpya.</li>\n</ol>\n<p>Hakikisha kwamba faili ina syntax sahihi: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Hatua ya 4';
@@ -9286,7 +9286,7 @@ class I18nSw extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: nunua au uza XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni. Salama, haraka, rahisi.\n\nLocalMonero ndio jukwaa kubwa zaidi, linaloaminika zaidi na lililoimarishwa vyema la P2P katika jumuiya ya XMR. Hatuna hundi za KYC - unaweza kununua Monero bila kukutambulisha bila uthibitisho wa kitambulisho kwa PayPal, kadi ya mkopo, kadi ya zawadi, pesa taslimu kwa barua au kubadilisha Bitcoin, Etha, USDT, au sarafu nyingine yoyote ya crypto hadi Monero - jukwaa letu linatumia njia yoyote ya malipo.\n\n- Biashara Salama na Laini\nTunatumia njia yoyote ya malipo, sarafu yoyote, popote. Hatuondoi njia za kulipa, na tunaunga mkono kikamilifu biashara ya ana kwa ana. Biashara zetu zote zinalindwa na dhamana ya usuluhishi. Shukrani kwa ukweli kwamba tunahitaji fedha ziwekwe katika dhamana ya usuluhishi kabla ya biashara kuanza, tunahakikisha hali ya utumiaji laini na salama kwa mnunuzi, ambayo ni muhimu kwa umaarufu wa jukwaa na kurudia wateja kwa wauzaji.\n\n- Hakuna KYC/AML au Uthibitishaji wa Kitambulisho\nLocalMonero imejitolea kudumisha usahili na usawazishaji wa uzoefu wako wa biashara. Hatuajiri KYC/AML, wala hatuna mpango wa kufanya hivyo.\n\n- Inaaminiwa na Jumuiya\nJukwaa letu limefanya kazi kwa zaidi ya miaka minne, lilinusurika kwenye Ajali Kubwa ya Soko la Cryptocurrency la 2018, na kupitia huduma yake ya bidii inayolenga jamii ikawa mojawapo ya majina yanayoaminika zaidi katika jumuiya ya Monero yenye shaka sana.\n\n- Salama, Chanzo Huria, Kitivo cha Faragha, Kipingamizi cha Udhibiti\nProgramu yetu ni chanzo huria na huria, ambayo huhakikisha kwamba macho mengi yanatazama msimbo wa programu ili kuhakikisha kuwa hakuna mashimo ya usalama au uvujaji wa faragha. Uwekaji vyanzo wazi programu yetu pia huruhusu mtu yeyote kufikia programu yetu hata kama hazina fulani ya programu inakagua programu. Programu yetu inafanya kazi hata kwenye simu ambazo Google imezuiwa kabisa. Tunathamini sana faragha yako, hatuhitaji hata utupe barua pepe wakati wa kusajili.\n\nNambari ya chanzo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nKifuatiliaji cha suala: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Msaada wa Stellar\nTimu yetu ya usaidizi ni ya haraka, sikivu na ina shauku ya kupendeza kila wakati. Hatujawahi kupata tikiti ya usaidizi ambayo haikujibiwa ndani ya masaa 24. Tunaweza kufikiwa kwa urahisi kila wakati kupitia mitandao ya kijamii, tunasikiliza kwa makini ukosoaji wako na kila mara tunatekeleza mapendekezo mazuri ya watumiaji katika muda uliorekodiwa.\n\nUnaweza kufikia usaidizi wetu kwa: https://localmonero.co/support\n\n- Ada ya Haki\nHatutozwi ada ghali zaidi unapoweka au kutoa Monero kwa/kutoka kwa mkoba wetu wa dhamana ya usuluhishi. Hakuna ada ya amana, na ada ya uondoaji iko karibu sana na ada ambayo ungelipa kwa shughuli ya kawaida.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni. Salama, haraka, rahisi.\n\nLocalMonero ndio jukwaa kubwa zaidi, linaloaminika zaidi na lililoimarishwa vyema la P2P katika jumuiya ya XMR. Hatuna hundi za KYC - unaweza kununua Monero bila kukutambulisha bila uthibitisho wa kitambulisho kwa PayPal, kadi ya mkopo, kadi ya zawadi, pesa taslimu kwa barua au kubadilisha Bitcoin, Etha, USDT, au sarafu nyingine yoyote ya crypto hadi Monero - jukwaa letu linatumia njia yoyote ya malipo.\n\n- Biashara Salama na Laini\nTunatumia njia yoyote ya malipo, sarafu yoyote, popote. Hatuondoi njia za kulipa, na tunaunga mkono kikamilifu biashara ya ana kwa ana. Biashara zetu zote zinalindwa na dhamana ya usuluhishi. Shukrani kwa ukweli kwamba tunahitaji fedha ziwekwe katika dhamana ya usuluhishi kabla ya biashara kuanza, tunahakikisha hali ya utumiaji laini na salama kwa mnunuzi, ambayo ni muhimu kwa umaarufu wa jukwaa na kurudia wateja kwa wauzaji.\n\n- Hakuna KYC/AML au Uthibitishaji wa Kitambulisho\nLocalMonero imejitolea kudumisha usahili na usawazishaji wa uzoefu wako wa biashara. Hatuajiri KYC/AML, wala hatuna mpango wa kufanya hivyo.\n\n- Inaaminiwa na Jumuiya\nJukwaa letu limefanya kazi kwa zaidi ya miaka minne, lilinusurika kwenye Ajali Kubwa ya Soko la Cryptocurrency la 2018, na kupitia huduma yake ya bidii inayolenga jamii ikawa mojawapo ya majina yanayoaminika zaidi katika jumuiya ya Monero yenye shaka sana.\n\n- Salama, Chanzo Huria, Kitivo cha Faragha, Kipingamizi cha Udhibiti\nProgramu yetu ni chanzo huria na huria, ambayo huhakikisha kwamba macho mengi yanatazama msimbo wa programu ili kuhakikisha kuwa hakuna mashimo ya usalama au uvujaji wa faragha. Uwekaji vyanzo wazi programu yetu pia huruhusu mtu yeyote kufikia programu yetu hata kama hazina fulani ya programu inakagua programu. Programu yetu inafanya kazi hata kwenye simu ambazo Google imezuiwa kabisa. Tunathamini sana faragha yako, hatuhitaji hata utupe barua pepe wakati wa kusajili.\n\nNambari ya chanzo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nKifuatiliaji cha suala: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Msaada wa Stellar\nTimu yetu ya usaidizi ni ya haraka, sikivu na ina shauku ya kupendeza kila wakati. Hatujawahi kupata tikiti ya usaidizi ambayo haikujibiwa ndani ya masaa 24. Tunaweza kufikiwa kwa urahisi kila wakati kupitia mitandao ya kijamii, tunasikiliza kwa makini ukosoaji wako na kila mara tunatekeleza mapendekezo mazuri ya watumiaji katika muda uliorekodiwa.\n\nUnaweza kufikia usaidizi wetu kwa: https://localmonero.co/support\n\n- Ada ya Haki\nHatutozi ada kubwa zaidi unapoweka au kutoa Monero kwa/kutoka kwa mkoba wetu wa dhamana ya usuluhishi. Hakuna ada ya amana, na ada ya uondoaji iko karibu sana na ada ambayo ungelipa kwa shughuli ya kawaida.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: nunua au uza XMR';
@@ -9439,7 +9439,7 @@ class I18nSw extends I18n {
   String get app_proxy_use => 'Tumia proksi';
 
   @override
-  String get app_proxy_bugs_expected => 'Onyo! Utendaji wa seva mbadala uko kwenye beta, hitilafu zinatarajiwa. Tafadhali ripoti hitilafu kwenye vituo vyetu vya ukuzaji ili kurekebishwa haraka';
+  String get app_proxy_bugs_expected => 'Onyo! Utendaji wa seva mbadala uko kwenye beta, hitilafu zinatarajiwa. Tafadhali ripoti hitilafu kwenye vituo vyetu vya ukuzaji ili upate marekebisho ya haraka';
 
   @override
   String get app_proxy_select_type => 'Chagua aina ya proksi';
@@ -9469,8 +9469,13 @@ class I18nSw extends I18n {
   String get pin_you_can_use_new => 'PIN lazima iwe na angalau tarakimu 4';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Weka mandhari chaguo-msingi';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Hakuna maelezo ya kusafirisha';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Umesalia na majaribio $val. Baada ya hapo, utaondolewa na itabidi uingie tena.';
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
@@ -26,8 +27,11 @@ enum AppSharedPrefsKey {
   proxyUsername,
   proxyPassword,
   proxyType,
+  i2pAddressOn,
+  torAddressOn,
   btcWalletTileOpen,
   xmrWalletTileOpen,
+  pinAttemptsLeft,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -59,6 +63,10 @@ class AppSharedPrefs with DateMixin {
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
+  bool? get i2pAddressOn => getBool(AppSharedPrefsKey.i2pAddressOn);
+
+  bool? get torAddressOn => getBool(AppSharedPrefsKey.torAddressOn);
+
   bool? get proxyEnabled => getBool(AppSharedPrefsKey.proxyEnabled);
 
   bool? get biometricAuthIsOn => getBool(AppSharedPrefsKey.biometricAuthIsOn);
@@ -88,6 +96,8 @@ class AppSharedPrefs with DateMixin {
   String? get ignoredUpdate => getString(AppSharedPrefsKey.ignoredUpdate);
 
   String? get countryCode => getString(AppSharedPrefsKey.countryCode);
+
+  int get pinAttemptsLeft => getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
 
   DateTime? get cachedCountrySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
 
@@ -190,7 +200,7 @@ class AppSharedPrefs with DateMixin {
   ProxyType _parseProxyType(String? proxyStr) {
     if (proxyStr != null) {
       try {
-        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name == proxyStr.toLowerCase());
+        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());
         return proxy;
       } catch (e) {
         return ProxyType.socks5;

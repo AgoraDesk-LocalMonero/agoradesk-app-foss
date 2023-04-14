@@ -30,28 +30,3 @@ class CurrencyModel extends HiveObject {
     );
   }
 }
-
-// @JsonSerializable(explicitToJson: true)
-// class CurrenciesModel {
-//   CurrenciesModel({this.currencies});
-//
-//   @JsonKey(ignore: true)
-//   int id = 0;
-//
-//   Map<String, dynamic>? currencies;
-//
-//   factory CurrenciesModel.fromJson(Map<String, dynamic> json) => _$CurrenciesModelFromJson(json);
-//
-//   Map<String, dynamic> toJson() => _$CurrenciesModelToJson(this);
-//
-//   // converter - required by object box
-//   String? get objCurrencies => jsonEncode(currencies);
-//
-//   set objCurrencies(String? val) {
-//     if (val == null) {
-//       val = null;
-//     } else {
-//       currencies = Map.from(json.decode(val).map((k, v) => MapEntry(k as String, v as String)));
-//     }
-//   }
-// }

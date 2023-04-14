@@ -150,7 +150,7 @@ class I18nPt extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'comprar';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Quanto você gostaria de $buyOrSell?';
   }
 
@@ -1933,7 +1933,7 @@ class I18nPt extends I18n {
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => 'O feedback que foi dado pode ser confirmado ou não confirmado. O feedback confirmado é mostrado no perfil público de um usuário e afeta a pontuação do feedback do usuário. Para que um feedback não confirmado se torne confirmado, o volume total de negociação entre o usuário dando e recebendo feedback deve ser superior a 100 USD equivalentes.';
+  String get faq250Sbanswer8722Sb18 => 'O feedback que foi dado pode ser confirmado ou não confirmado. O feedback confirmado é mostrado no perfil público de um usuário e afeta a pontuação do feedback do usuário. Para que um feedback não confirmado seja confirmado, o volume total de negociação entre o usuário dando e recebendo feedback deve ser superior a 100 USD equivalentes.';
 
   @override
   String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
@@ -2047,7 +2047,7 @@ class I18nPt extends I18n {
 
   @override
   String faq250Sbanswer8722Sb4(Object value) {
-    return 'Se você tiver seu código de backup, use um serviço de geração de QR, como $value para gerar o QR de seu código de backup. Em seguida, escaneie o QR gerado com seu aplicativo móvel 2FA. Se você não tiver seu código de backup, isso significa que você perdeu o acesso à sua conta. Infelizmente, é impossível para nós diferenciar entre um hacker fingindo ser você e você realmente sendo você.';
+    return 'Se você tiver seu código de backup, use um serviço de geração de QR, como $value para gerar o QR de seu código de backup. Em seguida, digitalize o QR gerado com seu aplicativo móvel 2FA. Se você não tiver seu código de backup, significa que perdeu o acesso à sua conta. Infelizmente, é impossível para nós diferenciar entre um hacker fingindo ser você e você realmente sendo você.';
   }
 
   @override
@@ -3878,7 +3878,7 @@ class I18nPt extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'The Outright Scam';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente do Monero É o seu Monero. Você deve anotá-lo quando fizer uma carteira pela primeira vez, porque se perder sua semente, perdeu seu Monero e ninguém pode ajudá-lo. MAS TAMBÉM você deve manter esta semente segura de outras pessoas. Se alguém roubar sua semente, pode enviar o Monero para fora da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Acabou.</p>\n\n<p> Com muita frequência, um indivíduo mantém uma carteira fria de Monero, fica curioso sobre seus fundos e deseja verificá-los. Mas, em vez de passar pelo incômodo de reinstalar todo o aplicativo de carteira, eles simplesmente decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do golpe Business Look Alike, então o próprio ato de inserir sua semente dá para os golpistas, que podem então mover o dinheiro para uma carteira diferente que eles controlam conforme sua conveniência.</p>\n\n<p> SEMPRE que um site, aplicativo ou carteira tiver uma opção de \'restaurar com seed\', tenha muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site do Monero tem instruções sobre como fazer isso) para garantir que o programa não tenha sido adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. O cheque duplo pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente do Monero É o seu Monero. Você deve anotá-lo quando fizer uma carteira pela primeira vez, porque se você perder sua semente, perderá seu Monero e ninguém poderá ajudá-lo. MAS TAMBÉM você deve manter esta semente segura de outras pessoas. Se alguém roubar sua semente, pode enviar o Monero para fora da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Acabou.</p>\n\n<p> Com muita frequência, um indivíduo mantém uma carteira fria de Monero, fica curioso sobre seus fundos e deseja verificá-los. Mas, em vez de passar pelo incômodo de reinstalar todo o aplicativo de carteira, eles simplesmente decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do golpe Business Look Alike, então o próprio ato de inserir sua semente dá para os golpistas, que podem então mover o dinheiro para uma carteira diferente que eles controlam conforme sua conveniência.</p>\n\n<p> SEMPRE que um site, aplicativo ou carteira tiver uma opção de \'restaurar com seed\', tenha muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site do Monero tem instruções sobre como fazer isso) para garantir que o programa não tenha sido adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. O cheque duplo pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'O papel da sua semente Monero em golpes';
@@ -4468,7 +4468,7 @@ class I18nPt extends I18n {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Útil se você estiver tendo problemas com \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Trocar $assetName';
   }
 
@@ -4585,7 +4585,7 @@ class I18nPt extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Atualizar';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Adicione uma nota sobre $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nPt extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Esta é uma nota privada para sua própria referência, não será visível para este usuário ou qualquer outro usuário.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Sua nota em $username (somente visto por você)';
   }
 
@@ -9469,10 +9469,15 @@ class I18nPt extends I18n {
   String get pin_you_can_use_new => 'O PIN deve ter pelo menos 4 dígitos';
 
   @override
-  String get app_default_theme => 'Set a default theme';
+  String get app_default_theme => 'Definir um tema padrão';
 
   @override
-  String get app_no_info_to_export => 'No info to export';
+  String get app_no_info_to_export => 'Nenhuma informação para exportar';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Você tem $val tentativas restantes. Depois disso, você será desconectado e terá que fazer login novamente.';
+  }
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -9625,7 +9630,7 @@ class I18nPtBr extends I18nPt {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'comprar';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
     return 'Quanto você gostaria de $buyOrSell?';
   }
 
@@ -11408,7 +11413,7 @@ class I18nPtBr extends I18nPt {
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => 'O feedback que foi dado pode ser confirmado ou não confirmado. O feedback confirmado é mostrado no perfil público de um usuário e afeta a pontuação do feedback do usuário. Para que um feedback não confirmado se torne confirmado, o volume total de negociação entre o usuário dando e recebendo feedback deve ser superior a 100 USD equivalentes.';
+  String get faq250Sbanswer8722Sb18 => 'O feedback que foi dado pode ser confirmado ou não confirmado. O feedback confirmado é mostrado no perfil público de um usuário e afeta a pontuação do feedback do usuário. Para que um feedback não confirmado seja confirmado, o volume total de negociação entre o usuário dando e recebendo feedback deve ser superior a 100 USD equivalentes.';
 
   @override
   String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
@@ -11522,7 +11527,7 @@ class I18nPtBr extends I18nPt {
 
   @override
   String faq250Sbanswer8722Sb4(Object value) {
-    return 'Se você tiver seu código de backup, use um serviço de geração de QR, como $value para gerar o QR de seu código de backup. Em seguida, escaneie o QR gerado com seu aplicativo móvel 2FA. Se você não tiver seu código de backup, isso significa que você perdeu o acesso à sua conta. Infelizmente, é impossível para nós diferenciar entre um hacker fingindo ser você e você realmente sendo você.';
+    return 'Se você tiver seu código de backup, use um serviço de geração de QR, como $value para gerar o QR de seu código de backup. Em seguida, digitalize o QR gerado com seu aplicativo móvel 2FA. Se você não tiver seu código de backup, significa que perdeu o acesso à sua conta. Infelizmente, é impossível para nós diferenciar entre um hacker fingindo ser você e você realmente sendo você.';
   }
 
   @override
@@ -13353,7 +13358,7 @@ class I18nPtBr extends I18nPt {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'The Outright Scam';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente do Monero É o seu Monero. Você deve anotá-lo quando fizer uma carteira pela primeira vez, porque se perder sua semente, perdeu seu Monero e ninguém pode ajudá-lo. MAS TAMBÉM você deve manter esta semente segura de outras pessoas. Se alguém roubar sua semente, pode enviar o Monero para fora da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Acabou.</p>\n\n<p> Com muita frequência, um indivíduo mantém uma carteira fria de Monero, fica curioso sobre seus fundos e deseja verificá-los. Mas, em vez de passar pelo incômodo de reinstalar todo o aplicativo de carteira, eles simplesmente decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do golpe Business Look Alike, então o próprio ato de inserir sua semente dá para os golpistas, que podem então mover o dinheiro para uma carteira diferente que eles controlam conforme sua conveniência.</p>\n\n<p> SEMPRE que um site, aplicativo ou carteira tiver uma opção de \'restaurar com seed\', tenha muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site do Monero tem instruções sobre como fazer isso) para garantir que o programa não tenha sido adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. O cheque duplo pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sua semente do Monero É o seu Monero. Você deve anotá-lo quando fizer uma carteira pela primeira vez, porque se você perder sua semente, perderá seu Monero e ninguém poderá ajudá-lo. MAS TAMBÉM você deve manter esta semente segura de outras pessoas. Se alguém roubar sua semente, pode enviar o Monero para fora da carteira como se fosse você e, novamente, ninguém pode recuperar esse dinheiro para você. Acabou.</p>\n\n<p> Com muita frequência, um indivíduo mantém uma carteira fria de Monero, fica curioso sobre seus fundos e deseja verificá-los. Mas, em vez de passar pelo incômodo de reinstalar todo o aplicativo de carteira, eles simplesmente decidem usar uma carteira da web para restaurar rapidamente sua semente e ver seu dinheiro. Se eles forem vítimas do golpe Business Look Alike, então o próprio ato de inserir sua semente dá para os golpistas, que podem então mover o dinheiro para uma carteira diferente que eles controlam conforme sua conveniência.</p>\n\n<p> SEMPRE que um site, aplicativo ou carteira tiver uma opção de \'restaurar com seed\', tenha muito cuidado para que o aplicativo que você está usando seja legítimo. Verifique os hashes do programa (o site do Monero tem instruções sobre como fazer isso) para garantir que o programa não tenha sido adulterado por forças externas e esteja constantemente ciente de onde e como você expõe sua semente. O cheque duplo pode ser irritante, mas a perda de fundos por descuido seria ainda pior.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'O papel da sua semente Monero em golpes';
@@ -13943,7 +13948,7 @@ class I18nPtBr extends I18nPt {
   String get new8722Sbad250Sbemail8722Sbverified250Sbtip => 'Útil se você estiver tendo problemas com \"coinlockers\"';
 
   @override
-  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName) {
+  String new8722Sbad250Sboptions250Sbad8722Sbcreation8722Sbmode250Sbcoins(Object assetName, Object id) {
     return 'Trocar $assetName';
   }
 
@@ -14060,7 +14065,7 @@ class I18nPtBr extends I18nPt {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Atualizar';
 
   @override
-  String note250Sbbutton(Object username) {
+  String note250Sbbutton(Object username, Object val) {
     return 'Adicione uma nota sobre $username';
   }
 
@@ -14073,7 +14078,7 @@ class I18nPtBr extends I18nPt {
   String get note250Sbinput250Sbplaceholder => 'Esta é uma nota privada para sua própria referência, não será visível para este usuário ou qualquer outro usuário.';
 
   @override
-  String note250Sbtitle(Object username) {
+  String note250Sbtitle(Object username, Object val) {
     return 'Sua nota em $username (somente visto por você)';
   }
 
@@ -18942,4 +18947,15 @@ class I18nPtBr extends I18nPt {
 
   @override
   String get pin_you_can_use_new => 'O PIN deve ter pelo menos 4 dígitos';
+
+  @override
+  String get app_default_theme => 'Definir um tema padrão';
+
+  @override
+  String get app_no_info_to_export => 'Nenhuma informação para exportar';
+
+  @override
+  String pin_wrong_current_info(Object val) {
+    return 'Você tem $val tentativas restantes. Depois disso, você será desconectado e terá que fazer login novamente.';
+  }
 }

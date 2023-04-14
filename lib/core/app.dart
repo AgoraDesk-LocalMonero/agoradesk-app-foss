@@ -624,7 +624,7 @@ class _AppState extends State<App>
       )
       ..on<Display403IncapsulaEvent>().listen(
         (e) {
-          if (!_dialogOpened) {
+          if (!_dialogOpened && GetIt.I<AppParameters>().polling == false) {
             _dialogOpened = true;
             showDialog(
               context: router.navigatorKey.currentContext!,
@@ -634,7 +634,7 @@ class _AppState extends State<App>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SelectableText(
-                      'The possible reason - you are trying to access service from the blocked countries (${kBlockedCountriesNames.join(',')}) or doing anything malicious.\nIf you believe this to be an error, please contact our support with your incident ID: ${e.incidentId}',
+                      'The possible reason - you are trying to access service from the blocked countries (${kBlockedCountriesNames.join(', ')}) or doing anything malicious.\nIf you believe this to be an error, please contact our support with your incident ID: ${e.incidentId}',
                       style: context.txtBodyMediumN80N30.copyWith(height: 1.4),
                     ),
                     const SizedBox(height: 6),

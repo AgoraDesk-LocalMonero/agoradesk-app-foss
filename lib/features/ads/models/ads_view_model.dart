@@ -106,7 +106,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   UserSettingsModel userSettingsModel = UserSettingsModel();
   late bool isGuestMode;
   bool _displayFilter = false;
-  bool _displayWarning = false;
   bool? _selVisibility;
 
   AgoraMenuItem? dropdownValue;
@@ -130,10 +129,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   String _priceEquation = '';
   String _bulkCurrencyCode = '';
   double _price = 0;
-
-  bool get displayWarning => _displayWarning;
-
-  set displayWarning(bool v) => updateWith(displayWarning: v);
 
   bool get bulkVisible => _bulkVisible;
 
@@ -477,23 +472,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       if (selectedSorting != null) {
         sort = '${selectedSorting!.name},${sortingDirectionType.name}';
       }
-      //todo - remove after 4february
-      ///
-      ///
-      const requestParameterTmp = AdsRequestParameterModel(
-        page: 0,
-        paymentMethodCode: 'CRYPTOCURRENCY',
-      );
-      final resTmp = await _adsRepository.getAds(requestParameter: requestParameterTmp);
-      if (resTmp.isRight && resTmp.right.data.isNotEmpty) {
-        displayWarning = true;
-      } else {
-        displayWarning = false;
-      }
-
-      ///
-      ///
-
       final requestParameter = AdsRequestParameterModel(
         page: loadMore ? (paginationMeta?.currentPage ?? 0) + 1 : 0,
         visible: _selVisibility,
@@ -918,7 +896,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     Asset? asset,
     SortingDirectionType? sortingDirectionType,
     bool? loadingAds,
-    bool? displayWarning,
     bool? changingVisibility,
     bool? formulaInputValid,
     int? bodyTabIndex,
@@ -937,7 +914,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     bool? loadingSettings,
   }) {
     _asset = asset ?? _asset;
-    _displayWarning = displayWarning ?? _displayWarning;
     _sortingDirectionType = sortingDirectionType ?? _sortingDirectionType;
     _changingVisibility = changingVisibility ?? _changingVisibility;
     _price = price ?? _price;
