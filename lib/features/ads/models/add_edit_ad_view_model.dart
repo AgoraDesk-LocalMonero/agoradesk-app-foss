@@ -552,6 +552,8 @@ class AddEditAdViewModel extends ViewModel
       } else {
         selectedCurrency = CurrencyModel(code: 'BTC', name: 'Bitcoin', altcoin: true);
       }
+    } else {
+      selectedCountryCode = _appState.countryCode;
     }
     notifyListeners();
   }
