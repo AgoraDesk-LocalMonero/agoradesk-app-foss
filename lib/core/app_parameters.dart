@@ -68,8 +68,8 @@ class AppParameters {
   final String btcChainUrl = 'https://www.blockchain.com/btc/tx/';
 
   /// Channels for bugs
-  final String telegramDev = 'https://t.me/+Hvf6nSq9ImBkMDhl';
-  final String matrixDev = 'https://matrix.to/#/#app-beta-testers:agoradesk.com';
+  final String telegramDev = 'https://t.me/LocalMonero';
+  final String githubIssuesUrl = 'https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues';
 
   /// passwords
   final int minPasswordLength = 8;
