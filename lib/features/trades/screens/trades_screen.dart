@@ -263,22 +263,38 @@ class _TradesScreenState extends State<TradesScreen>
                             style: context.txtBodySmallN60,
                           ),
                           const SizedBox(height: 8),
-                          DropdownSearch<OnlineProvider?>(
-                            dropdownButtonProps: context.dropdownButtonProps(),
-                            dropdownDecoratorProps: context.dropdownDecoration,
-                            popupProps: PopupProps.dialog(
-                              dialogProps: context.dropdownDialogProps,
-                              showSearchBox: true,
-                              searchFieldProps: TextFieldProps(
-                                autofocus: true,
-                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                          Semantics(
+                            label: context.intl.app_select_payment_method,
+                            child: DropdownSearch<OnlineProvider?>(
+                              dropdownButtonProps:
+                                  context.dropdownButtonProps(label: context.intl.app_select_payment_method),
+                              dropdownDecoratorProps: context.dropdownDecoration,
+                              popupProps: PopupProps.dialog(
+                                dialogProps: context.dropdownDialogProps,
+                                showSearchBox: true,
+                                searchFieldProps: TextFieldProps(
+                                  autofocus: true,
+                                  decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                                ),
+                                itemBuilder: (context, val, isSelected) {
+                                  return DropdownAssetLineWithIcon(
+                                    name: val?.name ?? '',
+                                    svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                  );
+                                },
                               ),
+                              asyncItems: (String? filter) =>
+                                  model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                              onChanged: (val) => model.selectedOnlineProvider = val,
+                              selectedItem: model.selectedOnlineProvider,
+                              dropdownBuilder: (context, val) {
+                                return DropdownAssetLineWithIcon(
+                                  name: val?.name ?? '',
+                                  svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                  padding: const EdgeInsets.all(0),
+                                );
+                              },
                             ),
-                            itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-                            asyncItems: (String? filter) =>
-                                model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
-                            selectedItem: model.selectedOnlineProvider,
-                            onChanged: (val) => model.selectedOnlineProvider = val,
                           ),
                           const SizedBox(height: 8),
                           Row(

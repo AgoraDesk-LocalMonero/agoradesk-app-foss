@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.1.0+95
+version: 1.1.1+96
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -28,7 +28,6 @@ dependencies:
   intl: ^0.17.0
   rxdart: ^0.27.7
   timeago: ^3.2.2
-#  sentry_flutter: ^6.9.1
   provider: ^6.0.5
   collection: ^1.15.0
   rating_dialog: ^2.0.3
@@ -72,7 +71,7 @@ dependencies:
   flutter_displaymode: ^0.5.0
   flutter_inappwebview: ^5.7.2+3
   permission_handler: ^10.0.0
-  restart_app: ^1.1.0
+  restart_app: ^1.1.2
   local_auth: ^2.1.2
   flutter_keyboard_size: ^1.0.1
   store_checker: ^1.1.0
