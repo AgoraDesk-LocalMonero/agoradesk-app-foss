@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:agoradesk/core/app.dart';
+import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
@@ -136,7 +137,7 @@ void main() async {
   SentryFlutter.init(
     (options) {
       options
-        ..dsn = GetIt.I<AppParameters>().sentryDsn
+        ..dsn = kSentryDsn
         ..reportSilentFlutterErrors = true
         ..attachStacktrace = false
         ..enableAutoSessionTracking = false

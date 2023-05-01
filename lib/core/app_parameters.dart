@@ -17,7 +17,6 @@ class AppParameters {
     required this.i2pBaseUrlOne,
     required this.i2pBaseUrlTwo,
     required this.appLogo,
-    required this.sentryDsn,
     required this.urlAbout,
     required this.urlPrivacy,
     required this.urlGuides,
@@ -43,7 +42,6 @@ class AppParameters {
   final String i2pBaseUrlOne;
   final String i2pBaseUrlTwo;
   final String appLogo;
-  final String sentryDsn;
   final String urlAbout;
   final String urlPrivacy;
   final String urlGuides;
