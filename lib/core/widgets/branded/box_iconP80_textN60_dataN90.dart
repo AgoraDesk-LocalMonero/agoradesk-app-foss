@@ -38,7 +38,7 @@ class BoxIconP80TextN60DataN90 extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: context.txtBodyXXSmallNeutral50.copyWith(height: 1),
+                style: context.txtBodyXXSmallN60N50.copyWith(height: 1),
               ),
               const SizedBox(height: 4),
               dataText != null

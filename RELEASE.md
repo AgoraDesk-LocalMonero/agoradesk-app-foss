@@ -1,8 +1,7 @@
 ### Updates
-1. The pin code is limited to 25 attempts; after that, the app will log out. 
-2. Pressing the proxy icon opens the settings screen. 
-3. The transaction cost for BTC has been added in fiat currency. 
-4. Fixed: error that occurred when the captcha dialog was closed.
+1. Enhancement: Improved the display of the maintenance mode dialog.
+2. Refined dropdown list styles and icons.
+3. Enhanced profile screen styles.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
