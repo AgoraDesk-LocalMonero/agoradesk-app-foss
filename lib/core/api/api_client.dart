@@ -110,6 +110,8 @@ class ApiClient with UrlMixin {
         },
         onError: (error, handler) {
           final statusCode = error.response?.statusCode;
+          final responseData = error.response?.data;
+          final responseMessage = error.message;
           log('++++[api_client ERROR] $statusCode - ${error.requestOptions.uri}');
           log('++++[api_client ERROR RESPONSE] ${error.response}');
           log('++++[api_client ERROR RESPONSE DATA] ${error.response?.data}');
@@ -153,7 +155,12 @@ class ApiClient with UrlMixin {
               eventBus.fire(Display403IncapsulaEvent(incidentId: incidentId));
             }
           } else if (statusCode == 503) {
-            eventBus.fire(const Display503Event());
+            //check that response contains word maintenance
+            bool c1 = responseData.toString().contains('maintenance');
+            bool c2 = responseMessage.contains('maintenance');
+            if (c1 || c2) {
+              eventBus.fire(const Display503Event());
+            }
           }
           return handler.next(finalError ?? error);
         },

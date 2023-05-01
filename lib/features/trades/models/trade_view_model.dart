@@ -46,6 +46,8 @@ const _kPollingSeconds = 30;
 
 const kDeletedUserName = '[DELETED]';
 
+const kAddedSecondsBeforeCancel = 15;
+
 class TradeViewModel extends ViewModel
     with ErrorParseMixin, FileUtilsMixin, ValidatorMixin, UrlMixin, PaymentMethodsMixin, StringMixin
     implements WidgetsBindingObserver {
@@ -113,6 +115,7 @@ class TradeViewModel extends ViewModel
   final ImagePicker picker = ImagePicker();
 
   late int minutesBeforeCancel;
+  late int secondsBeforeCancel;
   DateTime? paymentCompletedAt;
 
   late StreamSubscription _updateOpenedChatSubscription;
@@ -261,7 +264,7 @@ class TradeViewModel extends ViewModel
     isXmr = tradeForScreen.asset == Asset.XMR;
 
     _setTradeStatus(initial: true);
-    _calcMinutesBeforeCancel();
+    _calcTimeBeforeCancel();
     focusMessage.addListener(() {
       if (focusMessage.hasFocus != messageHasFocus) {
         messageHasFocus = focusMessage.hasFocus;
@@ -291,7 +294,7 @@ class TradeViewModel extends ViewModel
         isProcessing()) {
       GetIt.I<AppParameters>().polling = true;
       await indicatorKey.currentState?.show();
-      _calcMinutesBeforeCancel();
+      _calcTimeBeforeCancel();
       await _getMessages(polling: true);
       Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     }
@@ -301,7 +304,7 @@ class TradeViewModel extends ViewModel
     _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) async {
       GetIt.I<AppParameters>().polling = true;
       await indicatorKey.currentState?.show();
-      _calcMinutesBeforeCancel();
+      _calcTimeBeforeCancel();
       await _getMessages(polling: true);
       Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
     });
@@ -358,7 +361,7 @@ class TradeViewModel extends ViewModel
   }
 
   bool displayCancelStepOneSeller() {
-    if (minutesBeforeCancel > 0 && tradeForScreen.isSelling == true ||
+    if (secondsBeforeCancel > 0 && tradeForScreen.isSelling == true ||
         tradeForScreen.disputedAt != null && tradeForScreen.isSelling == true) {
       return false;
     } else if (minutesBeforeCancel > 0) {
@@ -417,7 +420,7 @@ class TradeViewModel extends ViewModel
         tradeForScreen = res.right;
         if (polling) {
           _setTradeStatus();
-          _calcMinutesBeforeCancel();
+          _calcTimeBeforeCancel();
           notifyListeners();
         }
       } else {
@@ -478,7 +481,7 @@ class TradeViewModel extends ViewModel
   }
 
   String canCancelText(BuildContext context) {
-    if (minutesBeforeCancel > 0) {
+    if (secondsBeforeCancel > 0) {
       return context.intl.app_able_to_cancel(tradeForScreen.seller.username ?? '', minutesBeforeCancel);
     }
     return context.intl.app_able_to_cancel_now(tradeForScreen.seller.username ?? '');
@@ -486,7 +489,7 @@ class TradeViewModel extends ViewModel
 
   bool escrowed() {
     if (_tradeForScreenLoaded) {
-      return tradeForScreen.escrowedAt != null;
+      return tradeForScreen.escrowedAt != null && DateTime.now().difference(tradeForScreen.escrowedAt!).inSeconds > 15;
     }
     return false;
   }
@@ -778,13 +781,18 @@ class TradeViewModel extends ViewModel
     notifyListeners();
   }
 
-  void _calcMinutesBeforeCancel() {
+  void _calcTimeBeforeCancel() {
     if (_tradeForScreenLoaded) {
       if (sellTypes.contains(tradeForScreen.advertisement.tradeType)) {
         minutesBeforeCancel = 60 - (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+        secondsBeforeCancel =
+            60 * 60 + kAddedSecondsBeforeCancel - (DateTime.now().difference(tradeForScreen.createdAt!).inSeconds);
       } else {
         minutesBeforeCancel = (tradeForScreen.paymentWindowMinutes ?? 90) -
             (DateTime.now().difference(tradeForScreen.createdAt!).inMinutes);
+        secondsBeforeCancel = (tradeForScreen.paymentWindowMinutes ?? 90) * 60 +
+            kAddedSecondsBeforeCancel -
+            (DateTime.now().difference(tradeForScreen.createdAt!).inSeconds);
       }
       if (minutesBeforeCancel < 0) {
         minutesBeforeCancel = 0;
@@ -1195,7 +1203,7 @@ class TradeViewModel extends ViewModel
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
-      _calcMinutesBeforeCancel();
+      _calcTimeBeforeCancel();
       await indicatorKey.currentState?.show();
       await _getMessages(polling: true);
     }

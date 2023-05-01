@@ -67,7 +67,8 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                             Semantics(
                               label: context.intl.app_select_trade_type,
                               child: DropdownSearch<ProxyType>(
-                                dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_trade_type),
+                                dropdownButtonProps:
+                                    context.dropdownButtonProps(label: context.intl.app_select_trade_type),
                                 dropdownDecoratorProps: context.dropdownDecoration,
                                 popupProps: PopupProps.menu(
                                   menuProps: context.dropdownMenuProps,
@@ -227,9 +228,10 @@ class ProxyScreen extends StatelessWidget with UrlMixin {
                   style: context.txtBodyXSmallN80,
                 ),
                 TextSpan(
-                  text: 'Matrix',
+                  text: 'Github',
                   style: context.txtBodyXSmallP70P40,
-                  recognizer: TapGestureRecognizer()..onTap = () => openLinkExt(GetIt.I<AppParameters>().matrixDev),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => openLinkExt(GetIt.I<AppParameters>().githubIssuesUrl),
                 ),
               ],
             ),
