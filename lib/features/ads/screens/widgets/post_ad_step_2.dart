@@ -7,6 +7,7 @@ import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
 import 'package:agoradesk/features/ads/screens/widgets/search_location.dart';
+import 'package:agoradesk/features/market/screens/widgets/drop_down_asset_line_with_icons.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 
@@ -110,21 +111,54 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
         const SizedBox(height: 8),
         model.isLocalAd
             ? const CashTextField()
-            : DropdownSearch<OnlineProvider?>(
-                dropdownButtonProps: context.dropdownButtonProps(),
-                dropdownDecoratorProps: context.dropdownDecoration,
-                popupProps: PopupProps.dialog(
-                  dialogProps: context.dropdownDialogProps,
-                  showSearchBox: true,
-                  searchFieldProps: TextFieldProps(
-                    autofocus: true,
-                    decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+            :
+            // DropdownSearch<OnlineProvider?>(
+            //         dropdownButtonProps: context.dropdownButtonProps(),
+            //         dropdownDecoratorProps: context.dropdownDecoration,
+            //         popupProps: PopupProps.dialog(
+            //           dialogProps: context.dropdownDialogProps,
+            //           showSearchBox: true,
+            //           searchFieldProps: TextFieldProps(
+            //             autofocus: true,
+            //             decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+            //           ),
+            //         ),
+            //         itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
+            //         asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
+            //         selectedItem: model.selectedOnlineProvider,
+            //         onChanged: (val) => model.updateOnlineProvider(val),
+            //       ),
+
+            Semantics(
+                label: context.intl.app_select_payment_method,
+                child: DropdownSearch<OnlineProvider?>(
+                  dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_payment_method),
+                  dropdownDecoratorProps: context.dropdownDecoration,
+                  popupProps: PopupProps.dialog(
+                    dialogProps: context.dropdownDialogProps,
+                    showSearchBox: true,
+                    searchFieldProps: TextFieldProps(
+                      autofocus: true,
+                      decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                    ),
+                    itemBuilder: (context, val, isSelected) {
+                      return DropdownAssetLineWithIcon(
+                        name: val?.name ?? '',
+                        svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                      );
+                    },
                   ),
+                  asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                  onChanged: (val) => model.updateOnlineProvider(val),
+                  selectedItem: model.selectedOnlineProvider,
+                  dropdownBuilder: (context, val) {
+                    return DropdownAssetLineWithIcon(
+                      name: val?.name ?? '',
+                      svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                      padding: const EdgeInsets.all(0),
+                    );
+                  },
                 ),
-                itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-                asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
-                selectedItem: model.selectedOnlineProvider,
-                onChanged: (val) => model.updateOnlineProvider(val),
               ),
       ],
     );
