@@ -14,8 +14,6 @@ import 'package:agoradesk/features/account/models/trader_profile_view_model.dart
 import 'package:agoradesk/features/trades/screens/widgets/traded_with_user.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -69,7 +67,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
                   flex: 1,
                   child: BoxIconP80TextN60DataN90(
                     iconData: AgoraFont.users_alt,
-                    text: I18n.of(context)!.user250Sbnumber8722Sbof8722Sbpartners,
+                    text: I18n.of(context)!.app_trading_partners,
                     dataText:
                         accountInfo.tradingPartnersCount != null ? accountInfo.tradingPartnersCount.toString() : '',
                   ),
@@ -84,7 +82,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
                   flex: 1,
                   child: BoxIconP80TextN60DataN90(
                     iconData: AgoraFont.calendar,
-                    text: I18n.of(context)!.user250Sbaccount8722Sbcreated,
+                    text: I18n.of(context)!.user250Sbaccount8722Sbcreated.replaceAll(':', ''),
                     dataText: accountInfo.createdAt != null ? timeAgoFromNow(accountInfo.createdAt!) : '',
                   ),
                 ),

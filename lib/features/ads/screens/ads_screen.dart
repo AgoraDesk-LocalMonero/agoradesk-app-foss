@@ -17,7 +17,6 @@ import 'package:agoradesk/core/widgets/branded/button_text_primary70.dart';
 import 'package:agoradesk/core/widgets/branded/container_info_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/dropdown_button_sized.dart';
-import 'package:agoradesk/core/widgets/branded/global_warning_ads.dart';
 import 'package:agoradesk/core/widgets/branded/header_shadow.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
@@ -677,22 +676,38 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             style: context.txtBodySmallN60,
                           ),
                           const SizedBox(height: marginTextList),
-                          DropdownSearch<OnlineProvider?>(
-                            dropdownButtonProps: context.dropdownButtonProps(),
-                            dropdownDecoratorProps: context.dropdownDecoration,
-                            popupProps: PopupProps.dialog(
-                              dialogProps: context.dropdownDialogProps,
-                              showSearchBox: true,
-                              searchFieldProps: TextFieldProps(
-                                autofocus: true,
-                                decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                          Semantics(
+                            label: context.intl.app_select_payment_method,
+                            child: DropdownSearch<OnlineProvider?>(
+                              dropdownButtonProps:
+                                  context.dropdownButtonProps(label: context.intl.app_select_payment_method),
+                              dropdownDecoratorProps: context.dropdownDecoration,
+                              popupProps: PopupProps.dialog(
+                                dialogProps: context.dropdownDialogProps,
+                                showSearchBox: true,
+                                searchFieldProps: TextFieldProps(
+                                  autofocus: true,
+                                  decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                                ),
+                                itemBuilder: (context, val, isSelected) {
+                                  return DropdownAssetLineWithIcon(
+                                    name: val?.name ?? '',
+                                    svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                  );
+                                },
                               ),
+                              asyncItems: (String? filter) =>
+                                  model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                              onChanged: (val) => model.selectedOnlineProvider = val,
+                              selectedItem: model.selectedOnlineProvider,
+                              dropdownBuilder: (context, val) {
+                                return DropdownAssetLineWithIcon(
+                                  name: val?.name ?? '',
+                                  svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                  padding: const EdgeInsets.all(0),
+                                );
+                              },
                             ),
-                            itemAsString: (OnlineProvider? method) => getPaymentMethodName(context, method?.code, null),
-                            asyncItems: (String? filter) =>
-                                model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
-                            selectedItem: model.selectedOnlineProvider,
-                            onChanged: (val) => model.selectedOnlineProvider = val,
                           ),
                           const SizedBox(height: 20),
                           Row(
