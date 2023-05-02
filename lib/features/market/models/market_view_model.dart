@@ -1,7 +1,6 @@
 //ignore: use_build_context_synchronously
 
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
@@ -301,6 +300,7 @@ class MarketViewModel extends ViewModel
     bool loadMore = false,
     bool reccursion = false,
   }) async {
+    print('+++++++++++++++++++++++++++++++++++++11');
     if (!loadingAds) {
       displayFilterMessage = false;
       loadingAds = true;
@@ -323,6 +323,7 @@ class MarketViewModel extends ViewModel
           _lon = lon;
         } else {}
       }
+      print('+++++++++++++++++++++++++++++++++++++112 - ${selectedOnlineProvider?.url}');
       final res = await _adsRepository.publicAdSearch(
         asset: asset!,
         tradeType: tradeType!,

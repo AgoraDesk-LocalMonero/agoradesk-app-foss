@@ -102,14 +102,11 @@ class AdsService {
     double? lon,
     double? lat,
   }) async {
-    // const url1 = 'https://api.ipify.org';
-    // final aa = await _api.client.get(url1);
-    // print('++++++++++ip adrress - ${aa}');
-
     String url = '/${tradeType.apiUrl().replaceFirst('-', '-${asset.apiUrl()}-')}/$currencyCode';
     if (countryCode != null && countryCode != kAnyCountryCode) {
       url += '/$countryCode';
     }
+
     String urlParameter = '?';
     final Map<String, dynamic> parameters = {};
     try {
@@ -119,6 +116,7 @@ class AdsService {
       if (page != null) {
         parameters['page'] = page;
       }
+
       if (tradeType.isLocal()) {
         if (lat != null && lon != null) {
           url += '/$lat/$lon';
@@ -128,10 +126,13 @@ class AdsService {
           url += '/$paymentMethod';
         }
       }
+      print('+++++++++++++++++++++++++++++++++++++113 - ${url}');
+      print('+++++++++++++++++++++++++++++++++++++114 - ${parameters}');
       final resp = await _api.client.get(
         '$url$urlParameter',
         queryParameters: parameters,
       );
+      print('+++++++++++++++++++++++++++++++++++++115 - ${resp.statusCode}');
       if (resp.statusCode == 200) {
         // if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('${resp.data['data']['ad_list']}');
         List<dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['ad_list']));
