@@ -300,7 +300,6 @@ class MarketViewModel extends ViewModel
     bool loadMore = false,
     bool reccursion = false,
   }) async {
-    print('+++++++++++++++++++++++++++++++++++++11');
     if (!loadingAds) {
       displayFilterMessage = false;
       loadingAds = true;
@@ -323,7 +322,6 @@ class MarketViewModel extends ViewModel
           _lon = lon;
         } else {}
       }
-      print('+++++++++++++++++++++++++++++++++++++112 - ${selectedOnlineProvider?.url}');
       final res = await _adsRepository.publicAdSearch(
         asset: asset!,
         tradeType: tradeType!,

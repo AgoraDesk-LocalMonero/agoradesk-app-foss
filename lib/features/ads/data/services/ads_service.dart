@@ -126,13 +126,10 @@ class AdsService {
           url += '/$paymentMethod';
         }
       }
-      print('+++++++++++++++++++++++++++++++++++++113 - ${url}');
-      print('+++++++++++++++++++++++++++++++++++++114 - ${parameters}');
       final resp = await _api.client.get(
         '$url$urlParameter',
         queryParameters: parameters,
       );
-      print('+++++++++++++++++++++++++++++++++++++115 - ${resp.statusCode}');
       if (resp.statusCode == 200) {
         // if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('${resp.data['data']['ad_list']}');
         List<dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['ad_list']));
