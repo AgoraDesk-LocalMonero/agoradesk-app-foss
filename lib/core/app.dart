@@ -164,12 +164,6 @@ class _AppState extends State<App>
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
 
-    ///
-    /// Handle push token changes
-    ///
-    // appState.fcmTokenSavedToApi = false;
-    _notificationsService.getToken();
-
     super.initState();
   }
 
@@ -362,7 +356,6 @@ class _AppState extends State<App>
   /// Handle [AuthState]
   ///
   void _initAuthHandler() {
-    _notificationsService.getToken();
     _authService.onAuthStateChange.listen((authState) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++[$runtimeType] AuthState: $authState');
       // handle login & logout

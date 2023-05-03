@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/models/device_model.dart';
@@ -29,6 +30,7 @@ import '../../events.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
+const _kPeriodCheckTokenUpdatesDays = 15;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
@@ -156,7 +158,17 @@ class NotificationsService with ForegroundMessagesMixin {
   }
 
   Future getToken() async {
-    if (fcm != null) {
+    // check that this is the time to update token
+    bool update = true;
+    final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
+    if (dateTokenSaved != null) {
+      final days = DateTime.now().difference(dateTokenSaved).inDays;
+      if (days < _kPeriodCheckTokenUpdatesDays) {
+        update = false;
+      }
+    }
+
+    if (fcm != null && appState.username.isNotEmpty && update) {
       bool userPermission = true;
       final settings = await fcm!.requestPermission(
         alert: true,
@@ -171,6 +183,7 @@ class NotificationsService with ForegroundMessagesMixin {
       if (userPermission) {
         String? token;
         try {
+          await fcm!.deleteToken();
           token = await fcm!.getToken();
         } catch (e) {
           //todo - cover this logic with tests
@@ -195,24 +208,20 @@ class NotificationsService with ForegroundMessagesMixin {
     if (!_updating) {
       _updating = true;
       final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
-
-      late String deviceName;
-      var deviceData = <String, dynamic>{};
-      try {
-        if (Platform.isAndroid) {
-          deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
-          deviceName = deviceData['device'] ?? 'Android';
-        } else if (Platform.isIOS) {
-          deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
-          deviceName = deviceData['name'] ?? 'iPhone';
+      if (oldToken != newToken && appState.username.isNotEmpty) {
+        late String deviceName;
+        var deviceData = <String, dynamic>{};
+        try {
+          if (Platform.isAndroid) {
+            deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
+            deviceName = deviceData['device'] ?? 'Android';
+          } else if (Platform.isIOS) {
+            deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
+            deviceName = deviceData['name'] ?? 'iPhone';
+          }
+        } catch (e) {
+          deviceName = 'unknown';
         }
-      } catch (e) {
-        deviceName = 'unknown';
-      }
-      if (oldToken != newToken) {
-        appState.fcmTokenSavedToApi = false;
-      }
-      if (appState.fcmTokenSavedToApi == false && appState.username.isNotEmpty) {
         final res = await _saveFcmTokenToApi(
           DeviceModel(
             token: newToken ?? oldToken!,
@@ -222,6 +231,7 @@ class NotificationsService with ForegroundMessagesMixin {
         );
         if (res) {
           await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
+          await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
         }
       }
       eventBus.fire(FcmTokenChangedEvent(newToken));
@@ -239,14 +249,21 @@ class NotificationsService with ForegroundMessagesMixin {
         '/push/registration',
         data: device.toJson(),
       );
+      if (resp.statusCode == 200) {
+        appState.fcmTokenSavedToApi = true;
+      }
       return resp.statusCode == 200;
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       if (apiError.message.containsKey('error_code')) {
+        // token already saved
         if (apiError.message['error_code'] == 256) {
           appState.fcmTokenSavedToApi = true;
+
+          return false;
         }
       }
+      appState.fcmTokenSavedToApi = false;
       return false;
     }
   }

@@ -12,7 +12,7 @@ enum AppSharedPrefsKey {
   biometricAuthIsOn,
   sentryIsOn,
   firstRun,
-  fcmTokenSavedToApi,
+  fcmTokenSavedToApiDate,
   username,
   ignoreAllUpdates,
   ignoredUpdate,
@@ -75,7 +75,7 @@ class AppSharedPrefs with DateMixin {
 
   bool? get firstRun => getBool(AppSharedPrefsKey.firstRun);
 
-  bool? get fcmTokenSavedToApi => getBool(AppSharedPrefsKey.fcmTokenSavedToApi);
+  DateTime? get fcmTokenSavedToApiDate => _parseDate(getString(AppSharedPrefsKey.fcmTokenSavedToApiDate));
 
   bool get btcWalletTileOpen => getBool(AppSharedPrefsKey.btcWalletTileOpen) ?? true;
 
@@ -176,6 +176,13 @@ class AppSharedPrefs with DateMixin {
         return ThemeMode.system;
     }
     return ThemeMode.dark;
+  }
+
+  ///
+  /// Parse date from the String.
+  ///
+  DateTime? _parseDate(dateStr) {
+    return DateTime.tryParse(dateStr);
   }
 
   ///
