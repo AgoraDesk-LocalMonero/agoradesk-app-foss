@@ -79,7 +79,6 @@ dependencies:
   local_auth: ^2.1.2
   flutter_keyboard_size: ^1.0.1
   store_checker: ^1.1.0
-  just_the_tooltip: ^0.0.12
   flutter_app_badger: ^1.5.0
   expansion_tile_card: ^2.0.0
 
