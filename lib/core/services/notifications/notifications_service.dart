@@ -159,6 +159,7 @@ class NotificationsService with ForegroundMessagesMixin {
 
   Future getToken() async {
     // check that this is the time to update token
+
     bool update = true;
     final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
     if (dateTokenSaved != null) {
@@ -167,7 +168,6 @@ class NotificationsService with ForegroundMessagesMixin {
         update = false;
       }
     }
-
     if (fcm != null && appState.username.isNotEmpty && update) {
       bool userPermission = true;
       final settings = await fcm!.requestPermission(
@@ -180,11 +180,15 @@ class NotificationsService with ForegroundMessagesMixin {
         sound: true,
       );
       userPermission = settings.authorizationStatus == AuthorizationStatus.authorized;
+
       if (userPermission) {
-        String? token;
         try {
           await fcm!.deleteToken();
-          token = await fcm!.getToken();
+          final token = await fcm!.getToken();
+          if (token != null) {
+            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
+            _tokenUpdate(token);
+          }
         } catch (e) {
           //todo - cover this logic with tests
           if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
@@ -192,10 +196,6 @@ class NotificationsService with ForegroundMessagesMixin {
           }
           if (GetIt.I<AppParameters>().debugPrintIsOn)
             debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
-        }
-        if (token != null) {
-          if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
-          _tokenUpdate(token);
         }
       }
     }
@@ -234,7 +234,6 @@ class NotificationsService with ForegroundMessagesMixin {
           await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
         }
       }
-      eventBus.fire(FcmTokenChangedEvent(newToken));
       _updating = false;
     }
   }
@@ -249,21 +248,15 @@ class NotificationsService with ForegroundMessagesMixin {
         '/push/registration',
         data: device.toJson(),
       );
-      if (resp.statusCode == 200) {
-        appState.fcmTokenSavedToApi = true;
-      }
       return resp.statusCode == 200;
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       if (apiError.message.containsKey('error_code')) {
         // token already saved
         if (apiError.message['error_code'] == 256) {
-          appState.fcmTokenSavedToApi = true;
-
           return false;
         }
       }
-      appState.fcmTokenSavedToApi = false;
       return false;
     }
   }

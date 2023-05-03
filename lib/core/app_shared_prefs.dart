@@ -181,7 +181,10 @@ class AppSharedPrefs with DateMixin {
   ///
   /// Parse date from the String.
   ///
-  DateTime? _parseDate(dateStr) {
+  DateTime? _parseDate(String? dateStr) {
+    if (dateStr == null) {
+      return null;
+    }
     return DateTime.tryParse(dateStr);
   }
 
