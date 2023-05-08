@@ -163,7 +163,7 @@ class NotificationsService with ForegroundMessagesMixin {
     bool update = true;
     final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
     if (dateTokenSaved != null) {
-      final days = DateTime.now().difference(dateTokenSaved).inDays;
+      final days = DateTime.now().difference(dateTokenSaved).inSeconds;
       if (days < _kPeriodCheckTokenUpdatesDays) {
         update = false;
       }
