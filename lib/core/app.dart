@@ -685,6 +685,7 @@ class _AppState extends State<App>
         final res = await _accountService.getMyself();
         if (res.isRight && res.right.username != null) {
           await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
+          _notificationsService.getToken();
         } else {
           _secureStorage.deleteAll();
         }

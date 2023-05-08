@@ -159,11 +159,10 @@ class NotificationsService with ForegroundMessagesMixin {
 
   Future getToken() async {
     // check that this is the time to update token
-
     bool update = true;
     final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
     if (dateTokenSaved != null) {
-      final days = DateTime.now().difference(dateTokenSaved).inSeconds;
+      final days = DateTime.now().difference(dateTokenSaved).inDays;
       if (days < _kPeriodCheckTokenUpdatesDays) {
         update = false;
       }
