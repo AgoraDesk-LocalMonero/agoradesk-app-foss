@@ -215,25 +215,17 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                       if (index < model.ads.length) {
                         final ad = model.ads[index];
 
-                        return VisibilityDetector(
-                          key: UniqueKey(),
-                          onVisibilityChanged: (VisibilityInfo info) {
-                            model.manageTooltipReady(info);
-                          },
-                          child: AdTile(
-                            ad: ad,
-                            index: index,
-                            changingIndex: model.changingAdIndex,
-                            changingVisibility: model.changingVisibility,
-                            isSelected: model.isAdSelected(ad),
-                            onPressed: () => model.isBulkActionsMode
-                                ? model.handleLongPressToAd(ad)
-                                : model.managePressToAd(ad, context),
-                            onLongPress: () => model.handleLongPressToAd(ad),
-                            onVisiblePressed: () => model.changeAdVisibility(ad, index),
-                            tooltipController: index == 1 ? model.tooltipEyeController : null,
-                            tooltipPressController: index == 2 ? model.tooltipPressController : null,
-                          ),
+                        return AdTile(
+                          ad: ad,
+                          index: index,
+                          changingIndex: model.changingAdIndex,
+                          changingVisibility: model.changingVisibility,
+                          isSelected: model.isAdSelected(ad),
+                          onPressed: () => model.isBulkActionsMode
+                              ? model.handleLongPressToAd(ad)
+                              : model.managePressToAd(ad, context),
+                          onLongPress: () => model.handleLongPressToAd(ad),
+                          onVisiblePressed: () => model.changeAdVisibility(ad, index),
                         );
                       } else {
                         return model.hasMorePages

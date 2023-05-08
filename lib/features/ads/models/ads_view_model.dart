@@ -1,7 +1,7 @@
+// ignore_for_file: use_build_context_synchronously
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -19,7 +19,6 @@ import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/ads/models/agora_menu_item.dart';
-import 'package:agoradesk/features/ads/models/tooltip_types.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
@@ -29,9 +28,7 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:overlay_support/overlay_support.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
 
 const _kDebounceFormulaTag = '_kDebounceFormulaTag';
@@ -55,8 +52,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   final countryDropdownKey = GlobalKey<DropdownSearchState>();
   final visibilityDropdownKey = GlobalKey<DropdownSearchState>();
   final sortDropdownKey = GlobalKey<DropdownSearchState>();
-  final tooltipEyeController = JustTheController();
-  final tooltipPressController = JustTheController();
 
   late final TabController tabController;
 
@@ -87,7 +82,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool connection = true;
 
   bool _changingVisibility = false;
-  bool visibleForTooltip = false;
 
   Asset? _asset;
   SortingDirectionType _sortingDirectionType = SortingDirectionType.asc;
@@ -97,7 +91,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   bool _init = false;
 
   bool _loadingAds = false;
-  bool _displayingTooltip = false;
   bool _reloadPaymentMethods = true;
   bool _loadingSettings = true;
   List<String> tradeTypeMenu = [];
@@ -242,57 +235,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   Future _loadCaches() async {
     await getCountryCodes();
     await getCurrencies();
-  }
-
-  Future displayTooltips(int length) async {
-    if (!_displayingTooltip && visibleForTooltip) {
-      _displayingTooltip = true;
-      if (length > 1) {
-        await Future.delayed(const Duration(seconds: 3));
-        if (!_checkTooltipWasDisplayed(TooltipType.adEye)) {
-          _displayEyeTooltip();
-          await HapticFeedback.heavyImpact();
-          await HapticFeedback.heavyImpact();
-          _markTooltipAsShown(TooltipType.adEye);
-        } else if (!_checkTooltipWasDisplayed(TooltipType.adLongPress)) {
-          _displayPressTooltip();
-          await HapticFeedback.heavyImpact();
-          await HapticFeedback.heavyImpact();
-          _markTooltipAsShown(TooltipType.adLongPress);
-        }
-      }
-      _displayingTooltip = false;
-    }
-  }
-
-  void manageTooltipReady(VisibilityInfo info) {
-    if (info.visibleFraction > 0.99) {
-      visibleForTooltip = true;
-      displayTooltips(ads.length);
-    } else {
-      visibleForTooltip = false;
-    }
-  }
-
-  void _markTooltipAsShown(TooltipType tooltipType) {
-    final val = AppSharedPrefs().tooltipShownNames;
-    if (!val.contains(tooltipType.name)) {
-      val.add(tooltipType.name);
-      AppSharedPrefs().setListStrings(AppSharedPrefsKey.tooltipShownNames, val);
-    }
-  }
-
-  bool _checkTooltipWasDisplayed(TooltipType tooltipType) {
-    final val = AppSharedPrefs().tooltipShownNames;
-    return val.contains(tooltipType.name);
-  }
-
-  Future _displayEyeTooltip() async {
-    tooltipEyeController.showTooltip();
-  }
-
-  Future _displayPressTooltip() async {
-    tooltipPressController.showTooltip();
   }
 
   @override
@@ -496,11 +438,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
         if (!loadMore) {
           ads.clear();
-          // filteredAds.clear();
         }
         ads.addAll(res.right.data);
-
-        // filteredAds.addAll(res.right);
       } else {
         handleApiError(res.left, context);
       }
@@ -801,13 +740,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     return resStr;
   }
 
-  // bool checkAdVacation(AdModel ad) {
-  //   if (ad.tradeType.isSell()) {
-  //     return settingsModel.sellingVacation ?? false;
-  //   }
-  //   return settingsModel.buyingVacation ?? false;
-  // }
-
   Future changeAdVisibility(AdModel ad, int index) async {
     if (!changingVisibility) {
       changingAdIndex = index;
@@ -816,7 +748,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       final AdModel changedAd = ad.copyWith(visible: newVisibility);
       final res = await _adsRepository.saveAd(changedAd);
       if (res.isRight) {
-        ads[index - 1] = changedAd;
+        ads[index] = changedAd;
         notifyListeners();
       } else {
         // handleApiError(res.left, context);
@@ -945,7 +877,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     ctrlBulkMaxAmount.dispose();
     ctrlBulkSettlementWalletAddress.dispose();
     ctrl3FormulaInput.dispose();
-    tooltipEyeController.dispose();
     super.dispose();
   }
 }

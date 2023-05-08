@@ -57,7 +57,8 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
             child: AutoSizeText(
               title,
-              maxLines: 1,
+              maxLines: 2,
+              minFontSize: 6,
               style: style ?? context.txtLabelLargeP80P70.copyWith(height: 1),
             ),
           ),

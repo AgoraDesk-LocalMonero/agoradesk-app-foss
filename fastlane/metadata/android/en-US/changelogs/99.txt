@@ -1,0 +1,4 @@
+1. Fix: Removed redundant maintenance mode dialog popup.
+2. Feature: Introduced new icons for various payment providers.
+3. Fix: Push notification tokens now refresh every 15 days.
+4. Fix: Addressed null error issue when an SVG file is absent.

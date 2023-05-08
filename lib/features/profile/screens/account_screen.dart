@@ -198,4 +198,10 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
           );
         });
   }
+
+// _checkIp() {
+// const url1 = 'https://api.ipify.org';
+// final aa = await _api.client.get(url1);
+// print('++++++++++ip adrress - ${aa}');
+// }
 }

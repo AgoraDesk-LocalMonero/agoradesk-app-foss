@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_close_link.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
@@ -12,8 +11,8 @@ import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class ReputationImportWidget extends StatelessWidget {
   const ReputationImportWidget({Key? key}) : super(key: key);

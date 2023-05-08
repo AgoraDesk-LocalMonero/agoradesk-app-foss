@@ -34,7 +34,7 @@ mixin ApiHelper {
         }
         return resError;
       }
-    } else if (e.toString().contains('connectTimeout')) {
+    } else if (e.toString().contains('connectTimeout') || e.toString().contains('timeout')) {
       return 'Internet connection timeout!';
     }
     return null;
