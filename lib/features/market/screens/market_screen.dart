@@ -254,7 +254,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                         },
                                       ),
                                       asyncItems: (String? filter) =>
-                                          model.getCountryPaymentMethods(model.selectedCountryCode),
+                                          model.getCountryPaymentMethods(model.selectedCountryCode, context),
                                       onChanged: (val) => model.changeOnlineProvider(val),
                                       selectedItem: model.selectedOnlineProvider,
                                       dropdownBuilder: (context, val) {
@@ -315,8 +315,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                 ? const SizedBox()
                                 : Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
-                                    child:
-                                        Semantics(
+                                    child: Semantics(
                                       label: context.intl.app_select_country,
                                       child: DropdownSearch<String>(
                                         dropdownButtonProps:

@@ -14,7 +14,6 @@ import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/trades/screens/widgets/highlight_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:just_the_tooltip/just_the_tooltip.dart';
 
 //todo - merge with AdMarketTile
 class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMethodsMixin {
@@ -28,9 +27,6 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
     this.isSelected = false,
     this.changingVisibility = false,
     this.changingIndex = 0,
-    this.tooltipController,
-    this.tooltipPressController,
-    this.onTooltipDismiss,
   }) : super(key: key);
 
   final AdModel ad;
@@ -43,9 +39,6 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
   final bool changingVisibility;
   final int changingIndex;
   final int index;
-  final JustTheController? tooltipController;
-  final JustTheController? tooltipPressController;
-  final VoidCallback? onTooltipDismiss;
 
   @override
   Widget build(BuildContext context) {
@@ -95,38 +88,22 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
               color: ad.tradeType.colorForTrade(context),
               textColor: ad.tradeType.textColorForTrade(context),
             ),
-            JustTheTooltip(
-              key: UniqueKey(),
-              controller: tooltipController,
-              child: Semantics(
-                tooltip: ad.visible == false ? context.intl.app_enable_ad : context.intl.app_disable_ad,
-                child: GestureDetector(
-                  behavior: HitTestBehavior.opaque,
-                  onTap: onVisiblePressed,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
-                    child: changingVisibility && changingIndex == index
-                        ? const CupertinoActivityIndicator(
-                            radius: 8,
-                          )
-                        : Icon(
-                            ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
-                            color: context.colN80N30,
-                            size: 16,
-                          ),
-                  ),
-                ),
-              ),
-              backgroundColor: context.colInfoOutlineSec90,
-              borderRadius: const BorderRadius.all(
-                Radius.circular(12),
-              ),
-              margin: const EdgeInsets.fromLTRB(30, 10, 30, 10),
-              content: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(
-                  context.intl.app_tooltip_visibility,
-                  style: context.txtLabelMediumP90P10,
+            Semantics(
+              tooltip: ad.visible == false ? context.intl.app_enable_ad : context.intl.app_disable_ad,
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: onVisiblePressed,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
+                  child: changingVisibility && changingIndex == index
+                      ? const CupertinoActivityIndicator(
+                          radius: 8,
+                        )
+                      : Icon(
+                          ad.visible == false ? AgoraFont.eye_off : AgoraFont.eye,
+                          color: context.colN80N30,
+                          size: 16,
+                        ),
                 ),
               ),
             ),
@@ -186,25 +163,9 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                           ],
                         ),
                         const SizedBox(height: verticalPadding),
-                        JustTheTooltip(
-                          key: UniqueKey(),
-                          controller: tooltipPressController,
-                          child: Text(
-                            ad.paymentMethodDetail ?? '',
-                            style: context.txtTermsN90,
-                          ),
-                          backgroundColor: context.colInfoOutlineSec90,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(12),
-                          ),
-                          margin: const EdgeInsets.fromLTRB(30, 10, 30, 10),
-                          content: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Text(
-                              context.intl.app_tooltip_long_press_ad,
-                              style: context.txtLabelMediumP90P10,
-                            ),
-                          ),
+                        Text(
+                          ad.paymentMethodDetail ?? '',
+                          style: context.txtTermsN90,
                         ),
                       ],
                     )

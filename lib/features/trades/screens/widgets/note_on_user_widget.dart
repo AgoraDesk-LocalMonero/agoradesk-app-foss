@@ -159,15 +159,10 @@ class NoteOnUserWidget extends StatelessWidget with StringMixin, DateMixin {
   }
 
   Widget _buildAddNoteLine(BuildContext context, NoteOnUserViewModel model) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        ButtonIconTextP80(
-          text: context.intl.app_note_add(model.username),
-          iconData: AgoraFont.pen,
-          onPressed: () => _noteEditDialog(context, model),
-        ),
-      ],
+    return ButtonIconTextP80(
+      text: context.intl.app_note_add(model.username),
+      iconData: AgoraFont.pen,
+      onPressed: () => _noteEditDialog(context, model),
     );
   }
 

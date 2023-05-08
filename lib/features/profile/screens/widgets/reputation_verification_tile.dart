@@ -38,7 +38,14 @@ class ReputationVerificationTile extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 10),
-        loading ? const CupertinoActivityIndicator() : _buildAction(context)
+        loading
+            ? const CupertinoActivityIndicator()
+            : Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _buildAction(context),
+                ],
+              )
       ],
     );
   }
@@ -48,7 +55,6 @@ class ReputationVerificationTile extends StatelessWidget {
       return ButtonFilledWithIconTonal(
         title: I18n.of(context)!.reputation8722Sbimport250Sbwizard8722Sbtoggle250Sbinitial,
         iconData: AgoraFont.plus,
-        size: const Size(144, 40),
         insidePadding: EdgeInsets.zero,
         onPressed: onPressed,
       );
