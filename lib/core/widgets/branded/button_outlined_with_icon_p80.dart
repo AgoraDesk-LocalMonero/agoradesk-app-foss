@@ -47,22 +47,19 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(width: delimiterWidth + 4),
           loading
               ? Center(
                   child: CupertinoActivityIndicator(color: borderColor ?? context.colP80),
                 )
               : icon,
           SizedBox(width: delimiterWidth),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
-              child: AutoSizeText(
-                title,
-                maxLines: 1,
-                minFontSize: 6,
-                style: style ?? context.txtLabelLargeP80P70.copyWith(height: 1),
-              ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+            child: AutoSizeText(
+              title,
+              maxLines: 2,
+              minFontSize: 6,
+              style: style ?? context.txtLabelLargeP80P70.copyWith(height: 1),
             ),
           ),
         ],

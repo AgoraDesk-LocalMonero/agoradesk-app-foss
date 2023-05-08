@@ -1,7 +1,8 @@
 ### Updates
-1. Enhancement: Improved the display of the maintenance mode dialog.
-2. Refined dropdown list styles and icons.
-3. Enhanced profile screen styles.
+1. Fix: Disable unneccery maintatnce mode dialog popup.
+2. Feat: Added icons for payment providers.
+3. Feat: Added  
+4. Enhanced profile screen styles.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
