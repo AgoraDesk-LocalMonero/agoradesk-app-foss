@@ -364,9 +364,9 @@ class _AppState extends State<App>
           _initStartRoute();
           break;
         case AuthState.loggedIn:
-          _notificationsService.getToken();
           _pollingService.getBalances();
           _initStartRoute();
+          _initLocalSettings();
           break;
         case AuthState.guest:
           _initStartRoute();
@@ -681,10 +681,12 @@ class _AppState extends State<App>
     if (AppSharedPrefs().username == null || AppSharedPrefs().username!.isEmpty) {
       // app runs first time, we should clean FlutterSecureStorage items
       // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
+      token ??= await _secureStorage.read(SecureStorageKey.token);
       if (token != null) {
         final res = await _accountService.getMyself();
         if (res.isRight && res.right.username != null) {
           await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
+          appState.updateWith(notify: true);
           _notificationsService.getToken();
         } else {
           _secureStorage.deleteAll();
@@ -692,6 +694,8 @@ class _AppState extends State<App>
       } else {
         _secureStorage.deleteAll();
       }
+    } else {
+      _notificationsService.getToken();
     }
 
     appState.updateWith(
