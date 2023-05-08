@@ -1,3 +1,4 @@
-1. Enhancement: Improved the display of the maintenance mode dialog.
-2. Refined dropdown list styles and icons.
-3. Enhanced profile screen styles.
+1. Fix: Removed redundant maintenance mode dialog popup.
+2. Feature: Introduced new icons for various payment providers.
+3. Fix: Push notification tokens now refresh every 15 days.
+4. Fix: Addressed null error issue when an SVG file is absent.
