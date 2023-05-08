@@ -148,7 +148,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
                       );
                     },
                   ),
-                  asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                  asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountryCode),
                   onChanged: (val) => model.updateOnlineProvider(val),
                   selectedItem: model.selectedOnlineProvider,
                   dropdownBuilder: (context, val) {

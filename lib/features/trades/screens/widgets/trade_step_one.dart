@@ -228,7 +228,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                               model.displayCancelStepOneSeller()
                                   ? ButtonOutlinedWithIconP80(
                                       title: context.intl.cancel,
-                                      // insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                                      insidePadding: const EdgeInsets.fromLTRB(16, 10, 22, 10),
                                       icon: Icon(
                                         AgoraFont.x_circle,
                                         color: Theme.of(context).colorScheme.p80P70,
@@ -238,7 +238,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                                   : const SizedBox(),
                               ButtonFilledWithIconP80(
                                 title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
-                                // insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                                insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                                 icon: Icon(
                                   AgoraFont.check_circle_alt,
                                   color: Theme.of(context).colorScheme.primary20,

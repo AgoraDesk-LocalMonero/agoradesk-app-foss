@@ -102,14 +102,11 @@ class AdsService {
     double? lon,
     double? lat,
   }) async {
-    // const url1 = 'https://api.ipify.org';
-    // final aa = await _api.client.get(url1);
-    // print('++++++++++ip adrress - ${aa}');
-
     String url = '/${tradeType.apiUrl().replaceFirst('-', '-${asset.apiUrl()}-')}/$currencyCode';
     if (countryCode != null && countryCode != kAnyCountryCode) {
       url += '/$countryCode';
     }
+
     String urlParameter = '?';
     final Map<String, dynamic> parameters = {};
     try {
@@ -119,6 +116,7 @@ class AdsService {
       if (page != null) {
         parameters['page'] = page;
       }
+
       if (tradeType.isLocal()) {
         if (lat != null && lon != null) {
           url += '/$lat/$lon';

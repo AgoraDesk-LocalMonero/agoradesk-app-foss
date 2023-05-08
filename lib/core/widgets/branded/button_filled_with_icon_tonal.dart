@@ -10,7 +10,6 @@ class ButtonFilledWithIconTonal extends StatelessWidget {
     this.insidePadding = const EdgeInsets.fromLTRB(30, 10, 30, 10),
     required this.iconData,
     this.loading = false,
-    this.size,
   }) : super(key: key);
 
   final IconData iconData;
@@ -18,15 +17,14 @@ class ButtonFilledWithIconTonal extends StatelessWidget {
   final VoidCallback onPressed;
   final EdgeInsets insidePadding;
   final bool loading;
-  final Size? size;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return FilledButton(
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        primary: context.colTonal,
-        fixedSize: size ?? Size.infinite,
+      style: FilledButton.styleFrom(
+        backgroundColor: context.colTonal,
+        minimumSize: const Size(140, 40),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),
           // side: const BorderSide(width: 2, color: Colors.blueAccent),

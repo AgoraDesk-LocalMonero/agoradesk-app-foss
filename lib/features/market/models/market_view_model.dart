@@ -1,7 +1,6 @@
 //ignore: use_build_context_synchronously
 
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
@@ -10,6 +9,7 @@ import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/countries_coordinates_consts.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -24,7 +24,6 @@ import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/app_update/data/services/app_update_service.dart';
 import 'package:agoradesk/features/app_update/screens/app_update_widget.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:collection/collection.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
@@ -147,7 +146,7 @@ class MarketViewModel extends ViewModel
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
 
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
-    await getCountryPaymentMethods(selectedCountryCode);
+    await getCountryPaymentMethods(selectedCountryCode, context);
     await _loadCaches();
     if (_appState.hasPinCode) {
       await getAds();
@@ -423,7 +422,7 @@ class MarketViewModel extends ViewModel
     notifyListeners();
   }
 
-  Future<List<OnlineProvider>> getCountryPaymentMethods(String country) async {
+  Future<List<OnlineProvider>> getCountryPaymentMethods(String country, BuildContext context) async {
     if (_reloadPaymentMethods) {
       final res = await _adsRepository.getCountryPaymentMethods(country);
       if (res.isRight) {
@@ -432,7 +431,7 @@ class MarketViewModel extends ViewModel
           OnlineProvider(
             url: '',
             code: kAnyPaymentMethodKey,
-            name: I18n.of(context)!.any_payment_method,
+            name: context.intl.any_payment_method,
             currencies: [],
           ),
         );

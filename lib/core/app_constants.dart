@@ -55,6 +55,7 @@ const kDisplayDuration = Duration(seconds: 3);
 const int kPinAttempts = 25;
 
 ///
+/// Sentry Dsn
 ///
-///
+
 const kSentryDsn = 'https://2fcde8b5fdcc41a093f3efa6056096e9@sentry.agoradesk.com/1';

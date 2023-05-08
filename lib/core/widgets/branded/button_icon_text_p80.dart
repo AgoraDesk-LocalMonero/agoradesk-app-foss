@@ -1,4 +1,5 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class ButtonIconTextP80 extends StatelessWidget {
@@ -31,9 +32,14 @@ class ButtonIconTextP80 extends StatelessWidget {
             size: 18,
           ),
           const SizedBox(width: 4),
-          Text(
-            text,
-            style: context.txtLabelSmallP80,
+          Expanded(
+            child: AutoSizeText(
+              text,
+              maxLines: 1,
+              minFontSize: 6,
+              overflow: TextOverflow.ellipsis,
+              style: context.txtLabelSmallP80,
+            ),
           ),
         ],
       ),
