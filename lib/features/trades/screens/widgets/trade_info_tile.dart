@@ -19,7 +19,6 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:vm/vm.dart';
 
 class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
@@ -54,31 +53,41 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(
-                              children: [
-                                model.tradeForScreen.asset.icon(Theme.of(context).colorScheme.p80P70),
-                                const SizedBox(width: 10),
-                                AutoSizeText(
-                                  model.tradeInfoTitle(context),
-                                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                        color: Theme.of(context).colorScheme.primary90,
-                                      ),
-                                ),
-                                const SizedBox(width: 10),
-                              ],
+                            Expanded(
+                              flex: 4,
+                              child: Row(
+                                children: [
+                                  model.tradeForScreen.asset.icon(Theme.of(context).colorScheme.p80P70),
+                                  const SizedBox(width: 10),
+                                  Expanded(
+                                    child: AutoSizeText(
+                                      model.tradeInfoTitle(context),
+                                      maxLines: 2,
+                                      minFontSize: 6,
+                                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                            color: Theme.of(context).colorScheme.primary90,
+                                          ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                ButtonShareSquare(
-                                  link: '${GetIt.I<AppParameters>().urlBase}/trade/${model.tradeForScreen.tradeId}',
-                                  iconSize: 16,
-                                  size: const Size(22, 22),
-                                ),
-                                const SizedBox(width: 10),
-                                PlusMinusBox(
-                                  isPlus: !model.infoTileOpened,
-                                ),
-                              ],
+                            Expanded(
+                              flex: 1,
+                              child: Row(
+                                children: [
+                                  ButtonShareSquare(
+                                    link: '${GetIt.I<AppParameters>().urlBase}/trade/${model.tradeForScreen.tradeId}',
+                                    iconSize: 16,
+                                    size: const Size(22, 22),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  PlusMinusBox(
+                                    isPlus: !model.infoTileOpened,
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),

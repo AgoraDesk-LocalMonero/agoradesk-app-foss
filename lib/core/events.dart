@@ -57,12 +57,6 @@ class DisplayCaptchaEvent {
 /// Push events
 ///
 
-class FcmTokenChangedEvent {
-  final String? token;
-
-  const FcmTokenChangedEvent(this.token);
-}
-
 class PushReceivedEvent {
   final String title;
   final String body;
