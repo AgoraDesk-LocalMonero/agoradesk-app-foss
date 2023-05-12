@@ -1,6 +1,7 @@
 //ignore: use_build_context_synchronously
 
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
@@ -554,6 +555,12 @@ class MarketViewModel extends ViewModel
   @override
   Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
     // TODO: implement didPushRouteInformation
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<AppExitResponse> didRequestAppExit() {
+    // TODO: implement didRequestAppExit
     throw UnimplementedError();
   }
 }

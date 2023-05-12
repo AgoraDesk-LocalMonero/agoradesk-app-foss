@@ -18,18 +18,18 @@ dependencies:
   connectivity_plus: ^3.0.3
   flutter_verification_code: ^1.1.2+1
   device_info_plus: ^8.0.0
-  package_info_plus: ^3.0.2
+  package_info_plus: ^4.0.0
   dio: ^4.0.6
   dio_logging_interceptor: ^1.0.1
   event_bus: ^2.0.0
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2
   url_launcher: ^6.0.17
-  intl: ^0.17.0
+  intl: any
   rxdart: ^0.27.7
   timeago: ^3.2.2
   provider: ^6.0.5
-  sentry_flutter: ^7.5.0
+  sentry_flutter: ^7.5.2
   collection: ^1.15.0
   rating_dialog: ^2.0.3
   visibility_detector: ^0.3.3
@@ -44,7 +44,7 @@ dependencies:
   figma_squircle: ^0.5.3
   freezed_annotation: any
   easy_debounce: ^2.0.2
-  extended_image: ^7.0.0
+  extended_image: ^8.0.1
   path_provider: ^2.0.8
   flutter_pin_code_widget: ^0.1.0
   flutter_secure_storage: ^8.0.0
@@ -80,7 +80,9 @@ dependencies:
   flutter_keyboard_size: ^1.0.1
   store_checker: ^1.1.0
   flutter_app_badger: ^1.5.0
+  convert: ^3.1.1
   expansion_tile_card: ^2.0.0
+  lottie: ^2.3.2
 
 dependency_overrides:
   #  flutter_foreground_task:
@@ -89,6 +91,14 @@ dependency_overrides:
     git:
       url: https://github.com/sergdeus/flutter_foreground_task
       ref: master
+  bdk_flutter:
+    git:
+      url: https://github.com/sergdeus/bdk-flutter/
+      ref: get_internal_address
+  expansion_tile_card:
+    git:
+      url: https://github.com/awaik/expansion_tile_card/
+      ref: fix_theme_issue
 #  flutter_pin_code_widget:
 #    path: ../flutter_pin_code_widget
 
