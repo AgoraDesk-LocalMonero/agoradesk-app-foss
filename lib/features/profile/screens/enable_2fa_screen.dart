@@ -169,7 +169,7 @@ class Enable2faScreen extends StatelessWidget with ClipboardMixin, FileUtilsMixi
               const SizedBox(height: 22),
               RepaintBoundary(
                 key: globalKey,
-                child: QrImage(
+                child: QrImageView(
                   backgroundColor: context.colS4,
                   foregroundColor: Colors.white,
                   data: secretUri,
