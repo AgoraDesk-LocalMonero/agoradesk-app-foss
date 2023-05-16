@@ -288,7 +288,7 @@ class _HttpProfileData {
 int _nextServiceId = 1;
 
 // TODO(ajohnsen): Use other way of getting a unique id.
-abstract class _ServiceObject {
+abstract mixin class _ServiceObject {
   int __serviceId = 0;
   int get _serviceId {
     if (__serviceId == 0) __serviceId = _nextServiceId++;
@@ -2869,7 +2869,7 @@ class _HttpClient implements HttpClient {
   static final Map<String, String> _platformEnvironmentCache = Platform.environment;
 }
 
-class _HttpConnection extends LinkedListEntry<_HttpConnection> with _ServiceObject {
+final class _HttpConnection extends LinkedListEntry<_HttpConnection> with _ServiceObject {
   static const _ACTIVE = 0;
   static const _IDLE = 1;
   static const _CLOSING = 2;
@@ -3614,7 +3614,7 @@ abstract class _HttpClientCredentials implements HttpClientCredentials {
   void authorizeProxy(_ProxyCredentials credentials, HttpClientRequest request);
 }
 
-class _HttpClientBasicCredentials extends _HttpClientCredentials implements HttpClientBasicCredentials {
+class _HttpClientBasicCredentials extends _HttpClientCredentials {
   String username;
   String password;
 
@@ -3642,7 +3642,7 @@ class _HttpClientBasicCredentials extends _HttpClientCredentials implements Http
   }
 }
 
-class _HttpClientDigestCredentials extends _HttpClientCredentials implements HttpClientDigestCredentials {
+class _HttpClientDigestCredentials extends _HttpClientCredentials {
   String username;
   String password;
 
