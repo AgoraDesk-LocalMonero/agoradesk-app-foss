@@ -2266,7 +2266,7 @@ class _HttpClientConnection {
         0x05, // SOCKS version
         0x02,
         _SocksAuthMethod.NoAuth.value,
-        _SocksAuthMethod.UsernamePassword.value
+        username.isEmpty ? _SocksAuthMethod.NoAuth.value : _SocksAuthMethod.UsernamePassword.value
       ]);
       await _httpParser._socksStateController.stream.firstWhere((a) {
         if (a == _SocksState.AuthStarted) {
