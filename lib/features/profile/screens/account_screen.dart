@@ -16,7 +16,9 @@ import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart'
 import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -166,6 +168,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
                           const SizedBox(height: 16),
+                          kDebugMode
+                              ? LineWithArrow(
+                                  title: 'CheckIp',
+                                  onPressed: _checkIp,
+                                )
+                              : const SizedBox(),
                           Center(
                             child: ButtonFilledWithIconTonal(
                               iconData: AgoraFont.log_out,
@@ -199,9 +207,9 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
         });
   }
 
-// _checkIp() {
-// const url1 = 'https://api.ipify.org';
-// final aa = await _api.client.get(url1);
-// print('++++++++++ip adrress - ${aa}');
-// }
+  _checkIp() async {
+    debugPrint('++++++++++ip adrress - 13');
+    final res = await http.get(Uri.parse('https://api.bigdatacloud.net/data/client-ip'));
+    debugPrint('++++++++++ip adrress - ${res.body}');
+  }
 }

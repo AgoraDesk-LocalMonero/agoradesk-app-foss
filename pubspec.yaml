@@ -91,10 +91,6 @@ dependency_overrides:
     git:
       url: https://github.com/sergdeus/flutter_foreground_task
       ref: master
-  bdk_flutter:
-    git:
-      url: https://github.com/sergdeus/bdk-flutter/
-      ref: get_internal_address
   expansion_tile_card:
     git:
       url: https://github.com/awaik/expansion_tile_card/
