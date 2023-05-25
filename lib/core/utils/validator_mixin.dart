@@ -14,6 +14,7 @@ mixin class ValidatorMixin {
   final RegExp _alphanumericUnderscoreHyphen = RegExp(r'^[a-zA-Z0-9-_]+$');
   final RegExp _numericUppercaseAlpha = RegExp(r'^[A-Z0-9]+$');
   final RegExp _numeric = RegExp(r'^-?[0-9]+$');
+  final RegExp _numericComma = RegExp(r'^-?[0-9,]+$');
   final RegExp _multibyte = RegExp(r'[^\x00-\x7F]');
   final RegExp _ascii = RegExp(r'^[\x00-\x7F]+$');
   final RegExp _xmr = RegExp('[0-9a-zA-Z]');
@@ -43,6 +44,15 @@ mixin class ValidatorMixin {
       return true;
     }
     return _numericUppercaseAlpha.hasMatch(str) && str.length <= 64;
+  }
+
+  /// check coupon with null
+  bool validateNumericCommaWithNull(String? str) {
+    if (str == null || str.isEmpty) {
+      return true;
+    }
+
+    return _numericComma.hasMatch(str);
   }
 
   /// check username with null
