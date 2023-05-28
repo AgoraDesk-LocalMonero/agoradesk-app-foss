@@ -1,7 +1,7 @@
 ### Updates
-Added action buttons for disputed trades within the trade chat feature.
-Fixed: Ensured compatibility of SOCKS5 with Orbot.
-Fixed: Implemented a check for fields with commas during the ad creation process.
+1. Added action buttons for disputed trades within the trade chat feature.
+2. Fixed: Ensured compatibility of SOCKS5 with Orbot.
+3. Fixed: Implemented a check for fields with commas during the ad creation process.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
