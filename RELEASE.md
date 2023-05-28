@@ -1,8 +1,7 @@
 ### Updates
-1. Fix: Removed redundant maintenance mode dialog popup.
-2. Feature: Introduced new icons for various payment providers.
-3. Fix: Push notification tokens now refresh every 15 days.
-4. Fix: Addressed null error issue when an SVG file is absent. 
+Added action buttons for disputed trades within the trade chat feature.
+Fixed: Ensured compatibility of SOCKS5 with Orbot.
+Fixed: Implemented a check for fields with commas during the ad creation process.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
