@@ -1,0 +1,3 @@
+1. Added action buttons for disputed trades within the trade chat feature.
+2. Fixed: Ensured compatibility of SOCKS5 with Orbot.
+3. Fixed: Implemented a check for fields with commas during the ad creation process.
