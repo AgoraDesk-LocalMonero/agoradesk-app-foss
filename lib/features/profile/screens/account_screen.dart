@@ -166,6 +166,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
                           const SizedBox(height: 16),
+                          // kDebugMode
+                          //     ? LineWithArrow(
+                          //         title: 'CheckIp',
+                          //         onPressed: _checkIp,
+                          //       )
+                          //     : const SizedBox(),
                           Center(
                             child: ButtonFilledWithIconTonal(
                               iconData: AgoraFont.log_out,
@@ -199,9 +205,8 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
         });
   }
 
-// _checkIp() {
-// const url1 = 'https://api.ipify.org';
-// final aa = await _api.client.get(url1);
-// print('++++++++++ip adrress - ${aa}');
-// }
+  // _checkIp() async {
+  //   final res = await http.get(Uri.parse('https://api.bigdatacloud.net/data/client-ip'));
+  //   debugPrint('++++++++++ip adrress - ${res.body}');
+  // }
 }

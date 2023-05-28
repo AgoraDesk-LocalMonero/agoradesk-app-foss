@@ -1,7 +1,6 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-class AuthAppBar extends StatelessWidget with PreferredSizeWidget {
+class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
   AuthAppBar({
     Key? key,
     this.title,
