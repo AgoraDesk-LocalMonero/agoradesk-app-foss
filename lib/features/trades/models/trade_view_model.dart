@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_constants.dart';
@@ -1249,6 +1250,12 @@ class TradeViewModel extends ViewModel
   @override
   Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
     // TODO: implement didPushRouteInformation
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<AppExitResponse> didRequestAppExit() {
+    // TODO: implement didRequestAppExit
     throw UnimplementedError();
   }
 }
