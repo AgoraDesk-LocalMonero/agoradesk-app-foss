@@ -49,7 +49,7 @@ class QrCodeDialog extends StatelessWidget with FileUtilsMixin {
             const SizedBox(height: 12),
             RepaintBoundary(
               key: _globalKey,
-              child: QrImage(
+              child: QrImageView(
                 backgroundColor: context.colSurf4SurfLight,
                 foregroundColor: context.colWhiteBlack,
                 data: address,

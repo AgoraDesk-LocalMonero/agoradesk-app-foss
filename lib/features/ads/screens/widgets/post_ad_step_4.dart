@@ -1,12 +1,13 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_info_link.dart';
 import 'package:agoradesk/core/widgets/branded/agora_switcher.dart';
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
 import 'package:flutter/material.dart';
 
-class PostAdStep4 extends StatelessWidget {
-  const PostAdStep4({
+class PostAdStep4 extends StatelessWidget with ValidatorMixin {
+  PostAdStep4({
     Key? key,
     required this.model,
   }) : super(key: key);
@@ -72,6 +73,7 @@ class PostAdStep4 extends StatelessWidget {
             controller: model.ctrl4RestrictLimit,
             decoration: context.decorationTxtFieldMain.copyWith(
               hintText: context.intl.ads_enter_comma_sep_amounts(model.selectedCurrency!.code),
+              errorText: validateNumericCommaWithNull(model.restrictLimit) ? null : '',
             ),
             // keyboardType: const TextInputType.,
           ),
@@ -91,7 +93,7 @@ class PostAdStep4 extends StatelessWidget {
           ),
           BackNextFooter(
             model: model,
-            nextActive: true,
+            nextActive: validateNumericCommaWithNull(model.restrictLimit),
           ),
         ],
       ),

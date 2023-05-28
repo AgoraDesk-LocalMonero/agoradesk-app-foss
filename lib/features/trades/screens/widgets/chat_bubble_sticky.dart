@@ -57,16 +57,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                         ),
                         const SizedBox(height: 12),
                         Center(
-                          child: ButtonOutlinedWithIconP80(
-                            title: context.intl.cancel,
-                            borderColor: context.colN30,
-                            style: context.txtLabelLargeNeutral30,
-                            icon: Icon(
-                              AgoraFont.x_circle,
-                              color: context.colN30,
-                            ),
-                            onPressed: () => _cancelTradeSellerDialog(context, model),
-                          ),
+                          child: _cancelTradeSellerButton(model, context),
                         ),
                       ],
                     ),
@@ -123,16 +114,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                         ),
                         const SizedBox(height: 12),
                         Center(
-                          child: ButtonOutlinedWithIconP80(
-                            title: context.intl.cancel,
-                            borderColor: context.colN30,
-                            style: context.txtLabelLargeNeutral30,
-                            icon: Icon(
-                              AgoraFont.x_circle,
-                              color: context.colN30,
-                            ),
-                            onPressed: () => _cancelTradeSellerDialog(context, model),
-                          ),
+                          child: _cancelTradeSellerButton(model, context),
                         ),
                       ],
                     ),
@@ -158,16 +140,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ButtonOutlinedWithIconP80(
-                              title: context.intl.cancel,
-                              borderColor: context.colN30,
-                              style: context.txtLabelLargeNeutral30,
-                              icon: Icon(
-                                AgoraFont.x_circle,
-                                color: context.colN30,
-                              ),
-                              onPressed: () => _cancelTradeSellerDialog(context, model),
-                            ),
+                            _cancelTradeSellerButton(model, context),
                             ButtonFilledWithIconP80(
                               title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
                               filledColor: context.colTonalP40,
@@ -238,9 +211,32 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (model.tradeStatus == TradeStatus.disputed) {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: ChatBubbleYellow(
-                  text: context.intl.dispute_started,
-                  date: model.tradeForScreen.disputedAt,
+                child: ContainerC85c09Radius12(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              context.intl.dispute_started,
+                              style: context.txtLabelMediumPrimary10,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              niceDateSecs(model.tradeForScreen.disputedAt),
+                              style: context.txtTermsN30N50,
+                            ),
+                          ],
+                        ),
+                        model.tradeForScreen.isSelling!
+                            ? _finaliseTradeButton(model, context)
+                            : _cancelTradeByerButton(model, context),
+                      ],
+                    ),
+                  ),
                 ),
               );
             }
@@ -301,35 +297,8 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                         mainAxisAlignment:
                             model.minutesBeforeCancel > 0 ? MainAxisAlignment.center : MainAxisAlignment.spaceBetween,
                         children: [
-                          model.minutesBeforeCancel <= 0
-                              ? ButtonOutlinedWithIconP80(
-                                  title: context.intl.cancel,
-                                  borderColor: context.colN30,
-                                  style: context.txtLabelLargeNeutral30,
-                                  icon: Icon(
-                                    AgoraFont.x_circle,
-                                    color: context.colN30,
-                                  ),
-                                  onPressed: () => _cancelTradeSellerDialog(context, model),
-                                )
-                              : const SizedBox(),
-                          ButtonFilledWithIconP80(
-                            title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
-                            filledColor: context.colTonalP40,
-                            style: context.txtLabelLargeP90White,
-                            icon: Icon(
-                              AgoraFont.check_circle_alt,
-                              color: context.colP90White,
-                            ),
-                            onPressed: () {
-                              showDialog(
-                                barrierDismissible: true,
-                                context: context,
-                                barrierColor: Theme.of(context).colorScheme.dialogOverlay,
-                                builder: (_) => FinalizeTradeDialog(tradeModel: model),
-                              );
-                            },
-                          ),
+                          model.minutesBeforeCancel <= 0 ? _cancelTradeSellerButton(model, context) : const SizedBox(),
+                          _finaliseTradeButton(model, context),
                         ],
                       ),
                     ],
@@ -579,6 +548,54 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
         onPressedFilled: () => model.enableEscrow(),
         loadingFilled: model.enablingEscrow,
       ),
+    );
+  }
+
+  Widget _finaliseTradeButton(TradeViewModel model, BuildContext context) {
+    return ButtonFilledWithIconP80(
+      title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
+      filledColor: context.colTonalP40,
+      style: context.txtLabelLargeP90White,
+      icon: Icon(
+        AgoraFont.check_circle_alt,
+        color: context.colP90White,
+      ),
+      onPressed: () {
+        showDialog(
+          barrierDismissible: true,
+          context: context,
+          barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+          builder: (_) => FinalizeTradeDialog(tradeModel: model),
+        );
+      },
+    );
+  }
+
+  Widget _cancelTradeByerButton(TradeViewModel model, BuildContext context) {
+    return Center(
+      child: ButtonOutlinedWithIconP80(
+        title: context.intl.cancel,
+        borderColor: context.colN30,
+        style: context.txtLabelLargeNeutral30,
+        icon: Icon(
+          AgoraFont.x_circle,
+          color: context.colN30,
+        ),
+        onPressed: () => _cancelTradeBuyerDialog(context, model),
+      ),
+    );
+  }
+
+  Widget _cancelTradeSellerButton(TradeViewModel model, BuildContext context) {
+    return ButtonOutlinedWithIconP80(
+      title: context.intl.cancel,
+      borderColor: context.colN30,
+      style: context.txtLabelLargeNeutral30,
+      icon: Icon(
+        AgoraFont.x_circle,
+        color: context.colN30,
+      ),
+      onPressed: () => _cancelTradeSellerDialog(context, model),
     );
   }
 }

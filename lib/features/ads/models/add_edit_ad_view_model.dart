@@ -468,6 +468,15 @@ class AddEditAdViewModel extends ViewModel
     if (!_creatingAd) {
       creatingAd = true;
 
+      // if restrict limit has comma in the end - remove it
+      bool hasLastComma = false;
+      if (restrictLimit != null) {
+        hasLastComma = restrictLimit!.isNotEmpty && restrictLimit![restrictLimit!.length - 1] == ',';
+        if (hasLastComma) {
+          restrictLimit = restrictLimit!.substring(0, restrictLimit!.length - 1);
+        }
+      }
+
       final ad = AdModel(
         tradeType: _tradeType,
         asset: asset,
@@ -762,6 +771,7 @@ class AddEditAdViewModel extends ViewModel
     });
     ctrl4RestrictLimit.addListener(() {
       restrictLimit = ctrl4RestrictLimit.text;
+      notifyListeners();
     });
   }
 
