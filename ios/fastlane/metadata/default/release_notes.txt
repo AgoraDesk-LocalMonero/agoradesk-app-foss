@@ -1,4 +1,3 @@
-1. Fix: Removed redundant maintenance mode dialog popup.
-2. Feature: Introduced new icons for various payment providers.
-3. Fix: Push notification tokens now refresh every 15 days.
-4. Fix: Addressed null error issue when an SVG file is absent.
+1. Added action buttons for disputed trades within the trade chat feature.
+2. Fixed: Ensured compatibility of SOCKS5 with Orbot.
+3. Fixed: Implemented a check for fields with commas during the ad creation process.
