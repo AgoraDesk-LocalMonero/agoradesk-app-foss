@@ -9478,6 +9478,12 @@ class I18nZh extends I18n {
   String pin_wrong_current_info(Object val) {
     return '您还有 $val 次尝试。之后，您将被注销并且必须重新登录。';
   }
+
+  @override
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+
+  @override
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).
