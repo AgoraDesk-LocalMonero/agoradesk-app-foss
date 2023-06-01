@@ -9478,4 +9478,10 @@ class I18nKo extends I18n {
   String pin_wrong_current_info(Object val) {
     return '$val번의 시도가 남았습니다. 그 후에는 로그아웃되며 다시 로그인해야 합니다.';
   }
+
+  @override
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+
+  @override
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 }
