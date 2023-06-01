@@ -9478,6 +9478,12 @@ class I18nPt extends I18n {
   String pin_wrong_current_info(Object val) {
     return 'Você tem $val tentativas restantes. Depois disso, você será desconectado e terá que fazer login novamente.';
   }
+
+  @override
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+
+  @override
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
