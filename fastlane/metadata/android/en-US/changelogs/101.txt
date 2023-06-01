@@ -1,0 +1,1 @@
+1. Hotfix: Enhanced error parsing for accurate API error display.
