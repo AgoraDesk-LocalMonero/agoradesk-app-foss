@@ -9478,6 +9478,12 @@ class I18nNb extends I18n {
   String pin_wrong_current_info(Object val) {
     return 'Du har $val forsøk igjen. Etter det blir du logget ut og du må logge på igjen.';
   }
+
+  @override
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+
+  @override
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).

@@ -457,6 +457,10 @@ class ApiErrors {
         return context.intl.api_error_273;
       case 283:
         return context.intl.login250Sberror8722Sb0;
+      case 363:
+        return context.intl.api_error_363;
+      case 364:
+        return context.intl.api_error_364;
       case 401:
         return context.intl.login250Sberror8722Sb0;
       case 403:

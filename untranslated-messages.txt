@@ -1,4 +1,79 @@
 {
+  "ar": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "bg": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "cs": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "da": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "de": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "el": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "es": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "fi": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "fr": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "hi": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "hu": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "id": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "it": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "ja": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "ko": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
   "lt": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
@@ -7,10 +82,104 @@
     "app_apple_app_store_subtitle_localmonero",
     "app_apple_app_store_subtitle_agoradesk",
     "app_google_play_store_short_description_localmonero",
-    "app_google_play_store_short_description_agoradesk"
+    "app_google_play_store_short_description_agoradesk",
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "lv": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "nb": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "nb_NO": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "nl": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "pl": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "pt": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "pt_BR": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "ro": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "ru": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "sk": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "sl": [
+    "api_error_363",
+    "api_error_364"
   ],
 
   "sv": [
-    "app_google_play_store_short_description_localmonero"
+    "app_google_play_store_short_description_localmonero",
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "sw": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "tl": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "tr": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "ur": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "zh": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "zh_CN": [
+    "api_error_363",
+    "api_error_364"
+  ],
+
+  "zh_TW": [
+    "api_error_363",
+    "api_error_364"
   ]
 }
