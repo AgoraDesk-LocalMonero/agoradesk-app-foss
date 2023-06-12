@@ -1,0 +1,1 @@
+1. Hotfix: Fixed the issue of an endless app update state when Google services are unavailable.

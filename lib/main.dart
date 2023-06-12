@@ -32,7 +32,7 @@ void main() async {
   Permission.notification.request();
   const isCheckUpdates = false;
 
-  await setupLocalNotifications();
+  await setupLocalNotifications(false);
 
   ///
   /// general initializations
@@ -46,13 +46,8 @@ void main() async {
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
-  ///
-  /// Initializations that are depend on flavor
-  ///
-
   const bool isGoogleAvailable = false;
 
-  ///
   /// if isGoogleAvailable == false
   /// if the app is terminated and user presses to a notification
   /// here we got payload info
@@ -114,7 +109,7 @@ late AndroidNotificationChannel channel;
 
 bool isFlutterLocalNotificationsInitialized = false;
 
-Future<void> setupLocalNotifications() async {
+Future<void> setupLocalNotifications(bool isGoogleAvailable) async {
   if (isFlutterLocalNotificationsInitialized) {
     return;
   }
@@ -128,10 +123,6 @@ Future<void> setupLocalNotifications() async {
 
   localNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  /// Create an Android Notification Channel.
-  ///
-  /// We use this channel in the `AndroidManifest.xml` file to override the
-  /// default FCM channel to enable heads up notifications.
   await localNotificationsPlugin
       .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);
