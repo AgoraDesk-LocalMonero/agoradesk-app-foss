@@ -1,5 +1,5 @@
 ### Updates
-1. Hotfix: Enhanced error parsing for accurate API error display.
+1. Hotfix: Fixed the issue of an endless app update state when Google services are unavailable.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
