@@ -169,6 +169,7 @@ class _AppState extends State<App>
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
+    print('+++++++++++++++++++++++++++++++++++++did');
     if (state == AppLifecycleState.resumed) {
       _notificationsService.getToken();
       if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
