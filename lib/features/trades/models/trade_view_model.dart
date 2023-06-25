@@ -526,8 +526,9 @@ class TradeViewModel extends ViewModel
 
   //todo - move to utils
   void _setTradeStatus({bool initial = false}) {
+    print('+++++++++++++++++++++++++++++++++++++11 - ${tradeForScreen.toJson()}');
     DateTime tradeStatusDate;
-    if (isLocalTrade && tradeForScreen.fundedAt == null && tradeForScreen.canceledAt == null) {
+    if (tradeForScreen.fundedAt == null && tradeForScreen.canceledAt == null) {
       tradeStatus = TradeStatus.notFunded;
       tradeStatusDate = tradeForScreen.createdAt!;
     } else if (isLocalTrade && tradeForScreen.canceledAt != null) {
