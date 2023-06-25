@@ -41,10 +41,10 @@ class BoxInfoWithLabel extends StatelessWidget {
                         color: context.colSec80,
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(4, 2, 4, 4),
+                        padding: const EdgeInsets.fromLTRB(10, 4, 10, 6),
                         child: Text(
                           label!,
-                          style: context.txtTermsSec10,
+                          style: context.txtBodyMediumN30N80,
                         ),
                       ),
                     ),

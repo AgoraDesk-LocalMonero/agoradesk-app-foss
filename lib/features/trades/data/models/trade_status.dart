@@ -90,8 +90,9 @@ extension TradeStatusExt on TradeStatus {
       case TradeStatus.created:
       case TradeStatus.escrowed:
       case TradeStatus.funded:
-      case TradeStatus.notFunded:
         return Theme.of(context).colorScheme.yellow85;
+      case TradeStatus.notFunded:
+        return context.colN40inactive;
       case TradeStatus.paymentCompleted:
         return Theme.of(context).colorScheme.custom29;
       case TradeStatus.closed:
@@ -109,7 +110,7 @@ extension TradeStatusExt on TradeStatus {
   }
 
   Color textColorForTradeStatus(BuildContext context) {
-    if (this == TradeStatus.canceled) {
+    if (this == TradeStatus.canceled || this == TradeStatus.notFunded) {
       return context.colN90;
     } else if (this == TradeStatus.released) {
       return Theme.of(context).colorScheme.green30;

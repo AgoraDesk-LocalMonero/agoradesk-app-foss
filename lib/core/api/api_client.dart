@@ -6,7 +6,6 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
-import 'package:dio_logging_interceptor/dio_logging_interceptor.dart';
 import 'package:flutter/foundation.dart';
 
 import 'api_helper.dart';
@@ -168,12 +167,12 @@ class ApiClient with UrlMixin {
     );
 
     if (_debug) {
-      _dio.interceptors.add(
-        DioLoggingInterceptor(
-          level: Level.body,
-          compact: false,
-        ),
-      );
+      // _dio.interceptors.add(
+      //   DioLoggingInterceptor(
+      //     level: Level.body,
+      //     compact: false,
+      //   ),
+      // );
     }
   }
 

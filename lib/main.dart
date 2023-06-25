@@ -38,10 +38,14 @@ void main() async {
   const String flavorString = String.fromEnvironment('app.flavor');
   const flavor = flavorString == 'localmonero' ? FlavorType.localmonero : FlavorType.agoradesk;
   const String includeFcmString = String.fromEnvironment('app.includeFcm');
-  final includeFcm = includeFcmString != 'false' || Platform.isIOS;
   const String checkUpdates = String.fromEnvironment('app.checkUpdates');
   const isCheckUpdates = checkUpdates == 'true';
-  if (includeFcm) {
+  bool includeFcm = includeFcmString != 'false' || Platform.isIOS;
+  final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
+  if (!isGoogleAvailable) {
+    includeFcm = false;
+  }
+  if (includeFcm && isGoogleAvailable) {
     if (flavor == FlavorType.localmonero) {
       await Firebase.initializeApp(
         options: localmonero_options.DefaultFirebaseOptions.currentPlatform,
@@ -56,7 +60,7 @@ void main() async {
     Permission.notification.request();
   }
 
-  await setupLocalNotifications();
+  await setupLocalNotifications(isGoogleAvailable);
 
   ///
   /// general initializations
@@ -69,12 +73,6 @@ void main() async {
 
   // Enables full screen mode by switching to [SystemUiMode.immersive] as system ui mode.
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-
-  ///
-  /// Initializations that are depend on flavor
-  ///
-
-  final bool isGoogleAvailable = includeFcm ? await checkGoogleAvailable() : false;
 
   ///
   /// if isGoogleAvailable == false
@@ -178,7 +176,7 @@ late AndroidNotificationChannel channel;
 
 bool isFlutterLocalNotificationsInitialized = false;
 
-Future<void> setupLocalNotifications() async {
+Future<void> setupLocalNotifications(bool isGoogleAvailable) async {
   if (isFlutterLocalNotificationsInitialized) {
     return;
   }
@@ -192,10 +190,6 @@ Future<void> setupLocalNotifications() async {
 
   localNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  /// Create an Android Notification Channel.
-  ///
-  /// We use this channel in the `AndroidManifest.xml` file to override the
-  /// default FCM channel to enable heads up notifications.
   await localNotificationsPlugin
       .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);
@@ -214,11 +208,13 @@ Future<void> setupLocalNotifications() async {
 
   /// Update the iOS foreground notification presentation options to allow
   /// heads up notifications.
-  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
-    alert: false,
-    badge: false,
-    sound: false,
-  );
+  if (isGoogleAvailable) {
+    await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+      alert: false,
+      badge: false,
+      sound: false,
+    );
+  }
   isFlutterLocalNotificationsInitialized = true;
 }
 
