@@ -125,7 +125,7 @@ jobs:
       - name: Create Github Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/flutter-apk/*.apk, hashes.txt"
+          artifacts: "build/app/outputs/flutter-apk/*.apk"
           bodyFile: "RELEASE.md"
           token: ${{ secrets.RELEASE_TOKEN }}
 
