@@ -43,26 +43,58 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               return const SizedBox(height: 8);
             }
             if (model.isLocalTrade && model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying!) {
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                child: ContainerC85c09Radius12(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
-                          style: context.txtLabelMediumPrimary10,
+              return Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                    child: ContainerC85c09Radius12(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                              style: context.txtLabelMediumPrimary10,
+                            ),
+                            const SizedBox(height: 12),
+                            Center(
+                              child: _cancelTradeSellerButton(model, context),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 12),
-                        Center(
-                          child: _cancelTradeSellerButton(model, context),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+                    child: ContainerC85c09Radius12(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  AgoraFont.alert_triangle,
+                                  color: context.colRed20Red50,
+                                ),
+                                const SizedBox(width: 10),
+                                Expanded(
+                                  child: Text(
+                                    'Do not pay now! The trade can be canceled anytime until the seller accepts.',
+                                    style: context.txtLabelLargeR20r50,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               );
             }
 
