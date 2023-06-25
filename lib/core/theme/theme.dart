@@ -232,6 +232,9 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtLabelLargeN70N50 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.n70N50,
       );
+  TextStyle get txtLabelLargeR20r50 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
+        color: Theme.of(this).colorScheme.red20Red50,
+      );
 
   TextStyle get txtLabelLargeN30N80 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
         color: Theme.of(this).colorScheme.n30N80,
@@ -602,7 +605,6 @@ extension ThemeShorcuts on BuildContext {
 
   DialogProps get dropdownDialogProps => DialogProps(
         backgroundColor: colS3,
-
         shape: OutlineInputBorder(
           borderSide: BorderSide(color: colS3, width: 0),
           borderRadius: const BorderRadius.all(Radius.circular(4)),

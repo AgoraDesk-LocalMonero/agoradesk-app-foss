@@ -1,8 +1,7 @@
 ### Updates
-1. Added action buttons for disputed trades within the trade chat feature.
-2. Fixed: Ensured compatibility of SOCKS5 with Orbot.
-3. Fixed: Implemented a check for fields with commas during the ad creation process.
+1. Enhanced the warning notification when a trade is not funded.
+2. Rectified error messages.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
-4. Files without the `-foss` extension are app builds that use a flexible approach for delivering notifications and include FCM libraries. By default the app uses FCM. If FCM is unavailable (e.g. on GrapheneOS or on Chinese phones) - the app switches to polling and starts a foreground service.
+2. Files without the `-foss` extension are app builds that use a flexible approach for delivering notifications and include FCM libraries. By default the app uses FCM. If FCM is unavailable (e.g. on GrapheneOS or on Chinese phones) - the app switches to polling and starts a foreground service.
