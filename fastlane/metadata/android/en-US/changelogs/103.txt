@@ -1,0 +1,2 @@
+1. Enhanced the warning notification when a trade is not funded.
+2. Rectified error messages.

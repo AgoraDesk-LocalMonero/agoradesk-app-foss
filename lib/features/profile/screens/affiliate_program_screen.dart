@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
@@ -22,8 +21,8 @@ import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class AffiliateProgramScreen extends StatelessWidget {
   const AffiliateProgramScreen({Key? key}) : super(key: key);
@@ -46,9 +45,9 @@ class AffiliateProgramScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                   child: model.loading
-                      ? Row(
+                      ? const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [CupertinoActivityIndicator()],
+                          children: [CupertinoActivityIndicator()],
                         )
                       : model.affiliateModel.enabled!
                           ? _buildAffiliateData(context, model)
@@ -167,8 +166,8 @@ class AffiliateProgramScreen extends StatelessWidget {
           title: I18n.of(context)!.affiliate250Sbexample250Sbtitle,
           text: I18n.of(context)!.affiliate__example__text(
             Asset.BTC.title(),
-            Asset.BTC.name,
             GetIt.I<AppParameters>().appName,
+            Asset.BTC.name,
           ),
         ),
         const SizedBox(height: 12),
