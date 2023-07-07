@@ -15,7 +15,7 @@ import 'mock_interceptor.dart';
 /// Default options for [ApiClient]
 ///
 
-const kTimeout = kDebugMode ? 30000 : 60000;
+const kTimeout = kDebugMode ? Duration(seconds: 30) : Duration(seconds: 60);
 
 BaseOptions _defaultOptions = BaseOptions(
   baseUrl: 'http://localhost/api',
@@ -156,7 +156,7 @@ class ApiClient with UrlMixin {
           } else if (statusCode == 503) {
             //check that response contains word maintenance
             bool c1 = responseData.toString().contains('maintenance');
-            bool c2 = responseMessage.contains('maintenance');
+            bool c2 = responseMessage?.contains('maintenance') ?? false;
             if (c1 || c2) {
               eventBus.fire(const Display503Event());
             }
