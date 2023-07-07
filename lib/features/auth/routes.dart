@@ -1,5 +1,6 @@
 import 'package:agoradesk/features/auth/screens/forgot_password_screen.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/auth/screens/login_webview_screen.dart';
 import 'package:agoradesk/features/auth/screens/pin_code_check_screen.dart';
 import 'package:agoradesk/features/auth/screens/pin_code_set_screen.dart';
 import 'package:agoradesk/features/auth/screens/reset_password_screen.dart';
@@ -59,6 +60,12 @@ const authRoutes = <AutoRoute>[
   CustomRoute(
     path: 'auth/pinCodeCheck',
     page: PinCodeCheckScreen,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+    durationInMilliseconds: 200,
+  ),
+  CustomRoute(
+    path: 'auth/loginWebviewScreen',
+    page: LoginWebviewScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),
