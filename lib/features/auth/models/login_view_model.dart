@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -10,15 +11,20 @@ import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/dialog_captcha.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:vm/vm.dart';
 
 class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   LoginViewModel({
     required AuthService authService,
-  }) : _authService = authService;
+    required AppState appState,
+  })  : _authService = authService,
+        _appState = appState;
 
   final AuthService _authService;
+  final AppState _appState;
 
   String? _username;
   String? _password;
@@ -95,6 +101,18 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
 
   void guestModeOn() {
     _authService.guestModeOn();
+  }
+
+  String getWebviewUrl() {
+    final themeParameter = _appState.themeMode == ThemeMode.dark ? 'dark' : 'light';
+    return 'https://agoradesk.com/mobile-login?themeType=$themeParameter';
+  }
+
+  void parseAndLoginWebview(String username) {
+    final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
+    if (cookies != null && cookies.firstWhereOrNull((e) => e.name == 'token') != null) {
+      _authService.loginWebview(username);
+    }
   }
 
   void changePasswordVisibility() {

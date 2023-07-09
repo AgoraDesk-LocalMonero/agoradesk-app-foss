@@ -29,7 +29,7 @@ class AuthGuard implements AutoRouteGuard {
     }
 
     if (appState.initialized) {
-      router.root.popAndPush(SignUpRoute());
+      router.root.popAndPush(SignUpWebviewRoute());
     }
     // }
   }
