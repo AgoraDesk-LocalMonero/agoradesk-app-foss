@@ -413,6 +413,7 @@ class AddEditAdViewModel extends ViewModel
         }
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
+
       calculatedPrice = res;
       if (res != null) {
         ctrl3FixedPrice.text = res.toString();
