@@ -28,6 +28,7 @@ class WebViewExampleState extends State<WebviewSignupWidget> {
   final CookieManager _cookieManager = CookieManager.instance();
 
   Timer? _timer;
+  Timer? _timer2;
 
   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
     crossPlatform: InAppWebViewOptions(
@@ -56,6 +57,12 @@ class WebViewExampleState extends State<WebviewSignupWidget> {
       _getCookies();
       widget.model.parseAndSignupWebview(username);
     });
+    _timer2 = Timer.periodic(const Duration(milliseconds: 500), (Timer t) async {
+      final heightLoaded = await _webController?.getContentHeight();
+      if (heightLoaded != null && heightLoaded > 200) {
+        widget.onHeightChanged(heightLoaded.toDouble());
+      }
+    });
 
     super.initState();
   }
@@ -77,6 +84,7 @@ class WebViewExampleState extends State<WebviewSignupWidget> {
   @override
   Widget build(BuildContext context) {
     return InAppWebView(
+      // gestureRecognizers: Set()..add(Factory<VerticalDragGestureRecognizer>(() => VerticalDragGestureRecognizer())),
       initialUrlRequest: URLRequest(
         url: _uri,
         headers: {
@@ -101,6 +109,9 @@ class WebViewExampleState extends State<WebviewSignupWidget> {
       },
       shouldOverrideUrlLoading: (controller, navigationAction) async {
         return NavigationActionPolicy.ALLOW;
+      },
+      onConsoleMessage: (c, m) {
+        print('+++++console message - ${m.toJson()}');
       },
     );
   }
