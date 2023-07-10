@@ -30,7 +30,7 @@ class LoginWebviewScreen extends StatefulWidget {
 }
 
 class LoginWebviewScreenState extends State<LoginWebviewScreen> with WidgetsBindingObserver, ValidatorMixin {
-  double _height = 400;
+  double _height = 300;
 
   @override
   Widget build(BuildContext context) {

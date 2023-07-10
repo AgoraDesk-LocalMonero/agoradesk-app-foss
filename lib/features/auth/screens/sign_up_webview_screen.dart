@@ -28,7 +28,7 @@ class SignUpWebviewScreen extends StatefulWidget {
 }
 
 class SignUpWebviewScreenState extends State<SignUpWebviewScreen> with UrlMixin, ValidatorMixin {
-  double _height = 380;
+  double _height = 400;
 
   @override
   Widget build(BuildContext context) {

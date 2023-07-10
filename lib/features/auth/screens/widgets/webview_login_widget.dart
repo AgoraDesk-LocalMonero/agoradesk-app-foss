@@ -20,14 +20,15 @@ class WebviewLoginWidget extends StatefulWidget {
   final OnHeightChanged onHeightChanged;
 
   @override
-  WebViewExampleState createState() => WebViewExampleState();
+  WebviewLoginWidgetState createState() => WebviewLoginWidgetState();
 }
 
-class WebViewExampleState extends State<WebviewLoginWidget> {
+class WebviewLoginWidgetState extends State<WebviewLoginWidget> {
   late final InAppWebViewController? _webController;
-  CookieManager _cookieManager = CookieManager.instance();
+  final CookieManager _cookieManager = CookieManager.instance();
 
   Timer? _timer;
+  Timer? _timer2;
 
   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
     crossPlatform: InAppWebViewOptions(
@@ -55,6 +56,13 @@ class WebViewExampleState extends State<WebviewLoginWidget> {
       String username = await _webController?.evaluateJavascript(source: "document.getElementById('username').value;");
       _getCookies();
       widget.model.parseAndLoginWebview(username);
+    });
+
+    _timer2 = Timer.periodic(const Duration(milliseconds: 500), (Timer t) async {
+      final heightLoaded = await _webController?.getContentHeight();
+      if (heightLoaded != null && heightLoaded > 200) {
+        widget.onHeightChanged(heightLoaded.toDouble());
+      }
     });
 
     super.initState();
@@ -108,6 +116,7 @@ class WebViewExampleState extends State<WebviewLoginWidget> {
   @override
   void dispose() {
     _timer?.cancel();
+    _timer2?.cancel();
     super.dispose();
   }
 }

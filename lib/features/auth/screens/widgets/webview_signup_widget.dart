@@ -20,10 +20,10 @@ class WebviewSignupWidget extends StatefulWidget {
   final OnHeightChanged onHeightChanged;
 
   @override
-  WebViewExampleState createState() => WebViewExampleState();
+  WebviewSignupWidgetState createState() => WebviewSignupWidgetState();
 }
 
-class WebViewExampleState extends State<WebviewSignupWidget> {
+class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
   late final InAppWebViewController? _webController;
   final CookieManager _cookieManager = CookieManager.instance();
 
@@ -119,6 +119,8 @@ class WebViewExampleState extends State<WebviewSignupWidget> {
   @override
   void dispose() {
     _timer?.cancel();
+    _timer2?.cancel();
+
     super.dispose();
   }
 }
