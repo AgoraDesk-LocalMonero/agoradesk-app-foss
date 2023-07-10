@@ -7,7 +7,6 @@ import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_borde
 import 'package:agoradesk/features/ads/models/add_edit_ad_view_model.dart';
 import 'package:agoradesk/features/ads/screens/widgets/ad_info_line_two_cells.dart';
 import 'package:agoradesk/features/ads/screens/widgets/back_next_footer.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/material.dart';
 
 class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMethodsMixin {
@@ -27,7 +26,7 @@ class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMeth
         children: [
           Center(
             child: Text(
-              I18n.of(context)!.post8722Sbad250Sbreview,
+              context.intl.post8722Sbad250Sbreview,
               style: context.txtDispLargeN90,
             ),
           ),
@@ -38,87 +37,87 @@ class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMeth
               child: Column(
                 children: [
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.ads_ad_type,
+                    leftText: context.intl.ads_ad_type,
                     rightText: model.tradeType!.translatedSignWithAsset(
                       context,
                       model.asset!.key(),
                     ),
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.post8722Sbad250Sbcountry250Sbtitle,
+                    leftText: context.intl.post8722Sbad250Sbcountry250Sbtitle,
                     rightText: getCountryName(model.selectedCountryCode),
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.currency,
+                    leftText: context.intl.currency,
                     rightText: model.selectedCurrency!.name,
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.payment_method,
+                    leftText: context.intl.payment_method,
                     rightText: getPaymentMethodName(context, model.selectedOnlineProvider?.code, model.tradeType),
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.post8722Sbad250Sbprice8722Sbtype250Sbtitle,
+                    leftText: context.intl.post8722Sbad250Sbprice8722Sbtype250Sbtitle,
                     rightText: model.priceInputType!.translated(context),
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.dashboard250Sbad250Sbtable8722Sbprice,
-                    rightText: model.price.toString() + ' ' + model.selectedCurrency!.code,
+                    leftText: context.intl.dashboard250Sbad250Sbtable8722Sbprice,
+                    rightText: '${model.price} ${model.selectedCurrency!.code}',
                   ),
                   // todo - validate minimum amount
                   AdsInfoLineTwoCells(
-                      leftText: I18n.of(context)!.post8722Sbad250Sbmin8722Sbamount,
-                      rightText: (model.minAmount ?? 0).toString() + ' ' + model.selectedCurrency!.code),
+                      leftText: context.intl.post8722Sbad250Sbmin8722Sbamount,
+                      rightText: '${model.minAmount ?? 0} ${model.selectedCurrency!.code}'),
                   AdsInfoLineTwoCells(
-                      leftText: I18n.of(context)!.post8722Sbad250Sbmax8722Sbamount,
-                      rightText: (model.maxAmount ?? 0).toString() + ' ' + model.selectedCurrency!.code),
+                      leftText: context.intl.post8722Sbad250Sbmax8722Sbamount,
+                      rightText: '${model.maxAmount ?? 0} ${model.selectedCurrency!.code}'),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.restrict_amounts_to,
+                    leftText: context.intl.restrict_amounts_to,
                     rightText: model.restrictLimit ?? '',
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity,
+                    leftText: context.intl.post8722Sbad250Sbtrack8722Sbmax8722Sbamount8722Sbliquidity,
                     rightText: model.trackMaxAmount.yesNo(context),
                   ),
                   AdsInfoLineTwoCells(
-                    leftText: I18n.of(context)!.dashboard250Sbad250Sbfor8722Sbtrusted,
+                    leftText: context.intl.dashboard250Sbad250Sbfor8722Sbtrusted,
                     rightText: model.trustedUsersOnly.yesNo(context),
                   ),
                   model.tradeType == TradeType.ONLINE_SELL
                       ? AdsInfoLineTwoCells(
-                          leftText: I18n.of(context)!.new8722Sbad250Sbreview250Sbemail8722Sbverified,
+                          leftText: context.intl.new8722Sbad250Sbreview250Sbemail8722Sbverified,
                           rightText: model.verifiedEmailOnly.yesNo(context),
                         )
                       : const SizedBox(),
                   model.tradeType == TradeType.ONLINE_SELL
                       ? AdsInfoLineTwoCells(
-                          leftText: I18n.of(context)!.post8722Sbad250Sbmin8722Sbfeedback8722Sbscore,
+                          leftText: context.intl.post8722Sbad250Sbmin8722Sbfeedback8722Sbscore,
                           rightText: (model.minimumFeedbackScore ?? 0).toString(),
                         )
                       : const SizedBox(),
                   model.tradeType == TradeType.ONLINE_SELL
                       ? AdsInfoLineTwoCells(
-                          leftText: I18n.of(context)!.ads_first_trade_max_limit(model.selectedCurrency!.code),
-                          rightText: (model.firstTradeMaxLimit ?? 0).toString() + ' ' + model.selectedCurrency!.code,
+                          leftText: context.intl.ads_first_trade_max_limit(model.selectedCurrency!.code),
+                          rightText: '${model.firstTradeMaxLimit ?? 0} ${model.selectedCurrency!.code}',
                         )
                       : const SizedBox(),
                   model.tradeType == TradeType.ONLINE_BUY
                       ? AdsInfoLineTwoCells(
-                          leftText: I18n.of(context)!.ads_payment_window_short,
+                          leftText: context.intl.ads_payment_window_short,
                           rightText: (model.paymentWindow ?? 0).toString(),
                         )
                       : const SizedBox(),
                   AgoraTwoLinesMarkdown(
-                    title: I18n.of(context)!.payment_method_details,
+                    title: context.intl.payment_method_details,
                     markdownText: model.ctrl5MethodDetails.text,
                   ),
                   model.tradeType == TradeType.ONLINE_SELL
                       ? AgoraTwoLinesMarkdown(
-                          title: I18n.of(context)!.post8722Sbad250Sbpayment8722Sbmethod8722Sbinfo,
+                          title: context.intl.post8722Sbad250Sbpayment8722Sbmethod8722Sbinfo,
                           markdownText: model.ctrl5MethodInfo.text,
                         )
                       : const SizedBox(),
                   AgoraTwoLinesMarkdown(
-                    title: I18n.of(context)!.post8722Sbad250Sbterms,
+                    title: context.intl.post8722Sbad250Sbterms,
                     markdownText: model.ctrl5Terms.text,
                   ),
                 ],
@@ -129,7 +128,7 @@ class PostAdStepFinal extends StatelessWidget with CountryInfoMixin, PaymentMeth
             model: model,
             nextActive: true,
             loading: model.creatingAd,
-            nextText: I18n.of(context)!.publish,
+            nextText: context.intl.publish,
             onPressNext: () async {
               await model.createAd(context);
             },
