@@ -268,15 +268,40 @@ class AuthService with FileUtilsMixin {
   ///
   /// Login with the Webview
   ///
-  Future<Either<ApiError, bool>> loginWebview(String token) async {
+  Future<Either<ApiError, bool>> loginWebview(String username) async {
     try {
-      final resToken = await _handleTokenResponseWebview(token);
-      if (resToken) {
-        _saveUserName('zzq77');
-        return const Either.right(true);
-      } else {
-        return const Either.right(false);
+      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhere((e) => e.name == 'token');
+      if (tokenCookie != null) {
+        final resToken = await _handleTokenWebview(tokenCookie.value);
+        if (resToken) {
+          _saveUserName(username);
+          return const Either.right(true);
+        }
       }
+
+      return const Either.right(false);
+    } catch (e) {
+      final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+      final ApiError? errorWithCaptcha = await _captchaParser(apiError);
+      return Either.left(errorWithCaptcha ?? apiError);
+    }
+  }
+
+  ///
+  /// Sign Up with the Webview
+  ///
+  Future<Either<ApiError, bool>> signupWebview(String username) async {
+    try {
+      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhere((e) => e.name == 'token');
+      if (tokenCookie != null) {
+        final resToken = await _handleTokenWebview(tokenCookie.value);
+        if (resToken) {
+          _saveUserName(username);
+          return const Either.right(true);
+        }
+      }
+
+      return const Either.right(false);
     } catch (e) {
       final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
@@ -300,12 +325,13 @@ class AuthService with FileUtilsMixin {
       );
       if (res?[0] != null) {
         try {
-        if (GetIt.I<AppParameters>().cookies != null) {
-          final String captchaCookieStr = res![0]!;
-          GetIt.I<AppParameters>()
-              .cookies
-              ?.add(Cookie(name: captchaCookieStr.split('=')[0], value: captchaCookieStr.split('=')[1]));
-        }} catch (e) {
+          if (GetIt.I<AppParameters>().cookies != null) {
+            final String captchaCookieStr = res![0]!;
+            GetIt.I<AppParameters>()
+                .cookies
+                ?.add(Cookie(name: captchaCookieStr.split('=')[0], value: captchaCookieStr.split('=')[1]));
+          }
+        } catch (e) {
           debugPrint('[++++ _captchaParser] - $e');
         }
       }
@@ -366,21 +392,6 @@ class AuthService with FileUtilsMixin {
     await AppSharedPrefs().setString(AppSharedPrefsKey.username, username);
   }
 
-  Future<bool> _handleTokenResponseWebview(String token) async {
-    try {
-      _setToken(token);
-
-      if (_api.accessToken != null) {
-        showPinSetUp = true;
-        _authStateController.add(AuthState.loggedIn);
-      }
-      return true;
-    } catch (e) {
-      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
-    }
-    return false;
-  }
-
   Future<bool> _handleTokenResponse(Response<Map> resp) async {
     try {
       if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
@@ -393,6 +404,20 @@ class AuthService with FileUtilsMixin {
         }
         return true;
       }
+    } catch (e) {
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
+    }
+    return false;
+  }
+
+  Future<bool> _handleTokenWebview(String token) async {
+    try {
+      _setToken(token);
+      if (_api.accessToken != null) {
+        showPinSetUp = true;
+        _authStateController.add(AuthState.loggedIn);
+      }
+      return true;
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
     }

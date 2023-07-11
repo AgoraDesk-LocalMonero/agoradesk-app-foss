@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -7,11 +5,9 @@ import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/features/auth/theme/welcome_images.dart';
-import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -49,7 +45,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                       context.intl.skip,
                       style: context.txtLabelLargeP80P70,
                     ),
-                    onPressed: () => AutoRouter.of(context).push(LoginRoute()),
+                    onPressed: () => AutoRouter.of(context).push(LoginWebviewRoute()),
                   ),
                 ],
               ),
