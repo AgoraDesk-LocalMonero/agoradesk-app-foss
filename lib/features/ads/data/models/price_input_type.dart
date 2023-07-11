@@ -44,6 +44,11 @@ extension PriceInputTypeFromStringExt on String {
     if (_coinGecko.contains(formulaParts[0]) && formulaParts.length == 3 && currencyCode != 'USD') {
       return PriceInputType.market;
     }
+    if (formulaParts.length < 3 &&
+        formulaParts[0].contains('1/coingecko') &&
+        (formulaParts[0].contains('xmr') || formulaParts[0].contains('btc'))) {
+      return PriceInputType.market;
+    }
 
     // formula
     if (formulaParts.isNotEmpty) {
@@ -60,7 +65,7 @@ extension PriceInputTypeFromStringExt on String {
     }
     if (priceInputType == PriceInputType.market) {
       final percent = (((double.tryParse(split('*').last) ?? 0) - 1) * 100);
-      return context.intl.market + ' ${percent > 0 ? "+" : ""}' + percent.toStringAsFixed(2) + '%';
+      return '${context.intl.market} ${percent > 0 ? "+" : ""}${percent.toStringAsFixed(2)}%';
     }
     if (priceInputType == PriceInputType.formula) {
       return this;

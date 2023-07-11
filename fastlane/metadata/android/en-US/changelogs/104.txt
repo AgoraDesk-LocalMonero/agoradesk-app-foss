@@ -1,0 +1,2 @@
+1. Enhanced login and signup with Imperva captcha protection.
+2. Rectified ad creation bug.

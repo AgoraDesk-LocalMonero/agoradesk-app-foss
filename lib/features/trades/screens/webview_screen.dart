@@ -32,7 +32,7 @@ class WebViewExampleState extends State<WebviewScreen> {
 
   final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
     crossPlatform: InAppWebViewOptions(
-      // userAgent: 'AgoraDesk',
+      supportZoom: false,
       useShouldOverrideUrlLoading: true,
       mediaPlaybackRequiresUserGesture: false,
     ),

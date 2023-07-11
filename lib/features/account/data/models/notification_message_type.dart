@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 enum NotificationMessageType {
   MESSAGE,
   TRADE_REQUEST,
+  TRADE_FUNDED,
   TRADE_COMPLETE,
   TRADE_PAYMENT_MARKED_COMPLETE,
   TRADE_CANCELLED,
@@ -24,6 +25,8 @@ extension NotificationMessageTypeExt on NotificationMessageType {
         return AgoraFont.message_circle_alt;
       case NotificationMessageType.TRADE_REQUEST:
         return AgoraFont.trade;
+      case NotificationMessageType.TRADE_FUNDED:
+        return AgoraFont.credit_card;
       case NotificationMessageType.TRADE_COMPLETE:
         return AgoraFont.check_circle_alt;
       case NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
@@ -61,6 +64,8 @@ extension NotificationMessageTypeExt on NotificationMessageType {
         return context.intl.notification250Sbmessage(tradeIdShort, username);
       case NotificationMessageType.TRADE_REQUEST:
         return context.intl.notification250Sbtrade8722Sbrequest(tradeIdShort, username);
+      case NotificationMessageType.TRADE_FUNDED:
+        return context.intl.trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtitle;
       case NotificationMessageType.TRADE_COMPLETE:
         return context.intl.notification250Sbtrade8722Sbcomplete(tradeIdShort, username);
       case NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:

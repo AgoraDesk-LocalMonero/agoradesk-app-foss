@@ -49,6 +49,7 @@ class LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, V
           child: ViewModelBuilder<LoginViewModel>(
               model: LoginViewModel(
                 authService: context.read<AuthService>(),
+                appState: context.read<AppState>(),
               ),
               builder: (context, model, _) {
                 return Padding(
@@ -188,7 +189,7 @@ class LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, V
                             ButtonFilledInactiveSurface2(
                               title: context.intl.signup250Sbbtn,
                               onPressed: () =>
-                                  AutoRouter.of(context).push(SignUpRoute(displaySkip: widget.displaySkip)),
+                                  AutoRouter.of(context).push(SignUpWebviewRoute(displaySkip: widget.displaySkip)),
                               buttonColor: Theme.of(context).colorScheme.tonalP90,
                               textColor: Theme.of(context).colorScheme.primary90,
                             ),
@@ -255,7 +256,11 @@ class LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver, V
     late final InAppWebViewController? webViewController;
     CookieManager cookieManager = CookieManager.instance();
     final InAppWebViewGroupOptions options = InAppWebViewGroupOptions(
-      crossPlatform: InAppWebViewOptions(useShouldOverrideUrlLoading: true, mediaPlaybackRequiresUserGesture: false),
+      crossPlatform: InAppWebViewOptions(
+        supportZoom: false,
+        useShouldOverrideUrlLoading: true,
+        mediaPlaybackRequiresUserGesture: false,
+      ),
       android: AndroidInAppWebViewOptions(
         useHybridComposition: true,
       ),

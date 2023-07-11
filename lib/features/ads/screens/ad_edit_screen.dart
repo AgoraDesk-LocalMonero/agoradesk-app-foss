@@ -16,7 +16,6 @@ import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
 import 'package:agoradesk/core/widgets/branded/cash_textfield.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
-import 'package:agoradesk/core/widgets/branded/global_warning_ads.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
