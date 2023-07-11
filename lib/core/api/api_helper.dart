@@ -48,8 +48,8 @@ mixin ApiHelper {
         return ApiError(statusCode: 403, message: {});
       }
       String message = '';
-      if (e.type == DioErrorType.other) {
-        final str1 = e.message.replaceAll('\\', '');
+      if (e.type == DioExceptionType.unknown) {
+        final str1 = e.message?.replaceAll('\\', '') ?? '';
         final str2 = str1.substring(1, str1.length - 1);
         final Map<String, dynamic> messageMap = jsonDecode(str2);
 
@@ -67,7 +67,7 @@ mixin ApiHelper {
           captchaCookie: captchaCookie,
         );
       }
-      if (e.type == DioErrorType.connectTimeout) {
+      if (e.type == DioExceptionType.connectionTimeout) {
         Map<String, dynamic> messageMap = {'message': 'Connection timeout'};
 
         return ApiError(
@@ -81,7 +81,7 @@ mixin ApiHelper {
       if (e.error != null && e.error is String) {
         late Map<String, dynamic> messageMap;
         try {
-          messageMap = json.decode(json.decode(e.error));
+          messageMap = json.decode(json.decode(e.message ?? ''));
         } catch (e2) {
           try {
             messageMap = json.decode(e.response.toString())['error'];

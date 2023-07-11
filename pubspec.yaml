@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.1.7+103
+version: 1.1.8+104
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -19,8 +19,8 @@ dependencies:
   flutter_verification_code: ^1.1.2+1
   device_info_plus: ^8.0.0
   package_info_plus: ^3.0.2
-  dio: ^4.0.6
-  dio_logging_interceptor: ^1.0.1
+  dio: ^5.2.1
+#  dio_logging_interceptor: ^1.0.1
   event_bus: ^2.0.0
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2
@@ -35,7 +35,7 @@ dependencies:
   visibility_detector: ^0.3.3
   cached_network_image: ^3.2.0
   json_annotation: ^4.4.0
-  share_plus: ^6.3.0
+  share_plus: ^7.0.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   shared_preferences: ^2.0.15
@@ -62,8 +62,8 @@ dependencies:
   image_picker: ^0.8.5+3
   percent_indicator: ^4.2.1
   insta_image_viewer: ^1.0.2
-  firebase_core: ^2.10.0
-  firebase_messaging: ^14.4.1
+  firebase_core: ^2.14.0
+  firebase_messaging: ^14.6.4
   get_it: ^7.2.0
   injectable: ^2.1.0
   flutter_local_notifications: ^13.0.0

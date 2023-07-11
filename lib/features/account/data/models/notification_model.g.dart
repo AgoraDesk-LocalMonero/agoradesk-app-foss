@@ -42,6 +42,7 @@ Map<String, dynamic> _$$_ActivityNotificationModelToJson(
 const _$NotificationMessageTypeEnumMap = {
   NotificationMessageType.MESSAGE: 'MESSAGE',
   NotificationMessageType.TRADE_REQUEST: 'TRADE_REQUEST',
+  NotificationMessageType.TRADE_FUNDED: 'TRADE_FUNDED',
   NotificationMessageType.TRADE_COMPLETE: 'TRADE_COMPLETE',
   NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
       'TRADE_PAYMENT_MARKED_COMPLETE',

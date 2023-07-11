@@ -30,12 +30,12 @@ import 'features/ads/screens/ads_screen.dart' as _i54;
 import 'features/ads/screens/ads_settings_screen.dart' as _i11;
 import 'features/ads/screens/post_ad_screen.dart' as _i10;
 import 'features/auth/auth_guard.dart' as _i58;
-import 'features/auth/screens/forgot_password_screen.dart' as _i6;
-import 'features/auth/screens/login_screen.dart' as _i5;
-import 'features/auth/screens/pin_code_check_screen.dart' as _i9;
-import 'features/auth/screens/pin_code_set_screen.dart' as _i8;
-import 'features/auth/screens/reset_password_screen.dart' as _i7;
-import 'features/auth/screens/sign_up_screen.dart' as _i4;
+import 'features/auth/screens/forgot_password_screen.dart' as _i4;
+import 'features/auth/screens/login_webview_screen.dart' as _i8;
+import 'features/auth/screens/pin_code_check_screen.dart' as _i7;
+import 'features/auth/screens/pin_code_set_screen.dart' as _i6;
+import 'features/auth/screens/reset_password_screen.dart' as _i5;
+import 'features/auth/screens/sign_up_webview_screen.dart' as _i9;
 import 'features/auth/screens/welcome_screen.dart' as _i2;
 import 'features/auth/screens/welcome_slides_screen.dart' as _i3;
 import 'features/main/main_screen.dart' as _i1;
@@ -128,40 +128,10 @@ class AppRouter extends _i56.RootStackRouter {
         barrierDismissible: false,
       );
     },
-    SignUpRoute.name: (routeData) {
-      final args = routeData.argsAs<SignUpRouteArgs>(
-          orElse: () => const SignUpRouteArgs());
-      return _i56.CustomPage<dynamic>(
-        routeData: routeData,
-        child: _i4.SignUpScreen(
-          key: args.key,
-          displaySkip: args.displaySkip,
-        ),
-        transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
-        durationInMilliseconds: 200,
-        opaque: true,
-        barrierDismissible: false,
-      );
-    },
-    LoginRoute.name: (routeData) {
-      final args = routeData.argsAs<LoginRouteArgs>(
-          orElse: () => const LoginRouteArgs());
-      return _i56.CustomPage<dynamic>(
-        routeData: routeData,
-        child: _i5.LoginScreen(
-          key: args.key,
-          displaySkip: args.displaySkip,
-        ),
-        transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
-        durationInMilliseconds: 200,
-        opaque: true,
-        barrierDismissible: false,
-      );
-    },
     ForgotPasswordRoute.name: (routeData) {
       return _i56.CustomPage<dynamic>(
         routeData: routeData,
-        child: const _i6.ForgotPasswordScreen(),
+        child: const _i4.ForgotPasswordScreen(),
         transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
         durationInMilliseconds: 200,
         opaque: true,
@@ -172,7 +142,7 @@ class AppRouter extends _i56.RootStackRouter {
       final args = routeData.argsAs<ResetPasswordRouteArgs>();
       return _i56.CustomPage<dynamic>(
         routeData: routeData,
-        child: _i7.ResetPasswordScreen(
+        child: _i5.ResetPasswordScreen(
           key: args.key,
           token: args.token,
         ),
@@ -185,7 +155,7 @@ class AppRouter extends _i56.RootStackRouter {
     PinCodeSetRoute.name: (routeData) {
       return _i56.CustomPage<dynamic>(
         routeData: routeData,
-        child: const _i8.PinCodeSetScreen(),
+        child: const _i6.PinCodeSetScreen(),
         transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
         durationInMilliseconds: 200,
         opaque: true,
@@ -195,7 +165,37 @@ class AppRouter extends _i56.RootStackRouter {
     PinCodeCheckRoute.name: (routeData) {
       return _i56.CustomPage<dynamic>(
         routeData: routeData,
-        child: const _i9.PinCodeCheckScreen(),
+        child: const _i7.PinCodeCheckScreen(),
+        transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
+    },
+    LoginWebviewRoute.name: (routeData) {
+      final args = routeData.argsAs<LoginWebviewRouteArgs>(
+          orElse: () => const LoginWebviewRouteArgs());
+      return _i56.CustomPage<dynamic>(
+        routeData: routeData,
+        child: _i8.LoginWebviewScreen(
+          key: args.key,
+          displaySkip: args.displaySkip,
+        ),
+        transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
+        durationInMilliseconds: 200,
+        opaque: true,
+        barrierDismissible: false,
+      );
+    },
+    SignUpWebviewRoute.name: (routeData) {
+      final args = routeData.argsAs<SignUpWebviewRouteArgs>(
+          orElse: () => const SignUpWebviewRouteArgs());
+      return _i56.CustomPage<dynamic>(
+        routeData: routeData,
+        child: _i9.SignUpWebviewScreen(
+          key: args.key,
+          displaySkip: args.displaySkip,
+        ),
         transitionsBuilder: _i56.TransitionsBuilders.slideLeft,
         durationInMilliseconds: 200,
         opaque: true,
@@ -855,14 +855,6 @@ class AppRouter extends _i56.RootStackRouter {
           path: 'auth/welcomeSlides',
         ),
         _i56.RouteConfig(
-          SignUpRoute.name,
-          path: 'auth/signUp',
-        ),
-        _i56.RouteConfig(
-          LoginRoute.name,
-          path: 'auth/login',
-        ),
-        _i56.RouteConfig(
           ForgotPasswordRoute.name,
           path: 'auth/forgotPassword',
         ),
@@ -877,6 +869,14 @@ class AppRouter extends _i56.RootStackRouter {
         _i56.RouteConfig(
           PinCodeCheckRoute.name,
           path: 'auth/pinCodeCheck',
+        ),
+        _i56.RouteConfig(
+          LoginWebviewRoute.name,
+          path: 'auth/loginWebviewScreen',
+        ),
+        _i56.RouteConfig(
+          SignUpWebviewRoute.name,
+          path: 'auth/signupWebviewScreen',
         ),
         _i56.RouteConfig(
           PostAdRoute.name,
@@ -1105,75 +1105,7 @@ class WelcomeSlidesRouteArgs {
 }
 
 /// generated route for
-/// [_i4.SignUpScreen]
-class SignUpRoute extends _i56.PageRouteInfo<SignUpRouteArgs> {
-  SignUpRoute({
-    _i59.Key? key,
-    bool displaySkip = false,
-  }) : super(
-          SignUpRoute.name,
-          path: 'auth/signUp',
-          args: SignUpRouteArgs(
-            key: key,
-            displaySkip: displaySkip,
-          ),
-        );
-
-  static const String name = 'SignUpRoute';
-}
-
-class SignUpRouteArgs {
-  const SignUpRouteArgs({
-    this.key,
-    this.displaySkip = false,
-  });
-
-  final _i59.Key? key;
-
-  final bool displaySkip;
-
-  @override
-  String toString() {
-    return 'SignUpRouteArgs{key: $key, displaySkip: $displaySkip}';
-  }
-}
-
-/// generated route for
-/// [_i5.LoginScreen]
-class LoginRoute extends _i56.PageRouteInfo<LoginRouteArgs> {
-  LoginRoute({
-    _i59.Key? key,
-    bool displaySkip = true,
-  }) : super(
-          LoginRoute.name,
-          path: 'auth/login',
-          args: LoginRouteArgs(
-            key: key,
-            displaySkip: displaySkip,
-          ),
-        );
-
-  static const String name = 'LoginRoute';
-}
-
-class LoginRouteArgs {
-  const LoginRouteArgs({
-    this.key,
-    this.displaySkip = true,
-  });
-
-  final _i59.Key? key;
-
-  final bool displaySkip;
-
-  @override
-  String toString() {
-    return 'LoginRouteArgs{key: $key, displaySkip: $displaySkip}';
-  }
-}
-
-/// generated route for
-/// [_i6.ForgotPasswordScreen]
+/// [_i4.ForgotPasswordScreen]
 class ForgotPasswordRoute extends _i56.PageRouteInfo<void> {
   const ForgotPasswordRoute()
       : super(
@@ -1185,7 +1117,7 @@ class ForgotPasswordRoute extends _i56.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i7.ResetPasswordScreen]
+/// [_i5.ResetPasswordScreen]
 class ResetPasswordRoute extends _i56.PageRouteInfo<ResetPasswordRouteArgs> {
   ResetPasswordRoute({
     _i59.Key? key,
@@ -1219,7 +1151,7 @@ class ResetPasswordRouteArgs {
 }
 
 /// generated route for
-/// [_i8.PinCodeSetScreen]
+/// [_i6.PinCodeSetScreen]
 class PinCodeSetRoute extends _i56.PageRouteInfo<void> {
   const PinCodeSetRoute()
       : super(
@@ -1231,7 +1163,7 @@ class PinCodeSetRoute extends _i56.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.PinCodeCheckScreen]
+/// [_i7.PinCodeCheckScreen]
 class PinCodeCheckRoute extends _i56.PageRouteInfo<void> {
   const PinCodeCheckRoute()
       : super(
@@ -1240,6 +1172,74 @@ class PinCodeCheckRoute extends _i56.PageRouteInfo<void> {
         );
 
   static const String name = 'PinCodeCheckRoute';
+}
+
+/// generated route for
+/// [_i8.LoginWebviewScreen]
+class LoginWebviewRoute extends _i56.PageRouteInfo<LoginWebviewRouteArgs> {
+  LoginWebviewRoute({
+    _i59.Key? key,
+    bool displaySkip = true,
+  }) : super(
+          LoginWebviewRoute.name,
+          path: 'auth/loginWebviewScreen',
+          args: LoginWebviewRouteArgs(
+            key: key,
+            displaySkip: displaySkip,
+          ),
+        );
+
+  static const String name = 'LoginWebviewRoute';
+}
+
+class LoginWebviewRouteArgs {
+  const LoginWebviewRouteArgs({
+    this.key,
+    this.displaySkip = true,
+  });
+
+  final _i59.Key? key;
+
+  final bool displaySkip;
+
+  @override
+  String toString() {
+    return 'LoginWebviewRouteArgs{key: $key, displaySkip: $displaySkip}';
+  }
+}
+
+/// generated route for
+/// [_i9.SignUpWebviewScreen]
+class SignUpWebviewRoute extends _i56.PageRouteInfo<SignUpWebviewRouteArgs> {
+  SignUpWebviewRoute({
+    _i59.Key? key,
+    bool displaySkip = false,
+  }) : super(
+          SignUpWebviewRoute.name,
+          path: 'auth/signupWebviewScreen',
+          args: SignUpWebviewRouteArgs(
+            key: key,
+            displaySkip: displaySkip,
+          ),
+        );
+
+  static const String name = 'SignUpWebviewRoute';
+}
+
+class SignUpWebviewRouteArgs {
+  const SignUpWebviewRouteArgs({
+    this.key,
+    this.displaySkip = false,
+  });
+
+  final _i59.Key? key;
+
+  final bool displaySkip;
+
+  @override
+  String toString() {
+    return 'SignUpWebviewRouteArgs{key: $key, displaySkip: $displaySkip}';
+  }
 }
 
 /// generated route for

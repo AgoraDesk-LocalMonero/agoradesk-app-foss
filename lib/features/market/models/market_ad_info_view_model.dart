@@ -234,7 +234,7 @@ class MarketAdInfoViewModel extends ViewModel
   Widget actionButton(BuildContext context) {
     if (isGuestMode) {
       return ButtonFilledP80(
-        onPressed: () => AutoRouter.of(context).push(LoginRoute(displaySkip: false)),
+        onPressed: () => AutoRouter.of(context).push(LoginWebviewRoute(displaySkip: false)),
         title: context.intl.log_in_to_start_trading,
       );
     }
@@ -337,8 +337,7 @@ class MarketAdInfoViewModel extends ViewModel
     } else if (_firstTimeLimitAsset != null &&
         accountInfoModel?.hasCommonTrades != true &&
         receive > _firstTimeLimitAsset! * assetPrice) {
-      receiveError =
-          context.intl.must_be_less((_firstTimeLimitAsset! * assetPrice).toStringAsFixed(2), ad!.currency);
+      receiveError = context.intl.must_be_less((_firstTimeLimitAsset! * assetPrice).toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
       receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);

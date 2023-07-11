@@ -315,8 +315,12 @@ class AddEditAdViewModel extends ViewModel
           ctrl3FixedPrice.text = ad!.priceEquation!;
         }
         if (priceInputType == PriceInputType.market) {
-          ctrl3MarginInput.text =
-              (((double.tryParse(ad!.priceEquation!.split('*').last) ?? 0) - 1) * 100).toStringAsFixed(2);
+          if (ad!.priceEquation!.split('*').length < 2) {
+            ctrl3MarginInput.text = '0.00';
+          } else {
+            ctrl3MarginInput.text =
+                (((double.tryParse(ad!.priceEquation!.split('*').last) ?? 0) - 1) * 100).toStringAsFixed(2);
+          }
           checkAndCalcMargin();
         }
         if (priceInputType == PriceInputType.formula) {
@@ -400,12 +404,16 @@ class AddEditAdViewModel extends ViewModel
       } else {
         if (selectedCurrency!.code == 'USDT' || selectedCurrency!.code == 'USD') {
           priceEquationString = 'coingecko${asset!.key().toLowerCase()}usd*$percent';
+        } else if (asset == Asset.BTC) {
+          priceEquationString =
+              '(1/coingecko${selectedCurrency!.code.toLowerCase()}${asset!.key().toLowerCase()})*$percent';
         } else {
           priceEquationString =
-              'coingecko${asset!.key().toLowerCase()}usd*usd${selectedCurrency!.code.toLowerCase()}*$percent';
+              '(coingecko${asset!.key().toLowerCase()}${selectedCurrency!.code.toLowerCase()})*$percent';
         }
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);
+
       calculatedPrice = res;
       if (res != null) {
         ctrl3FixedPrice.text = res.toString();

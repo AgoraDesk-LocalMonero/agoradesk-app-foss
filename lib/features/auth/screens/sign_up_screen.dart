@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -16,7 +17,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -44,6 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
           child: ViewModelBuilder<SignUpViewModel>(
               model: SignUpViewModel(
                 authService: context.read<AuthService>(),
+                appState: context.read<AppState>(),
               ),
               builder: (context, model, _) {
                 return SingleChildScrollView(
@@ -216,7 +217,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                             recognizer: TapGestureRecognizer()
                                               ..onTap = () {
                                                 AutoRouter.of(context)
-                                                    .push(LoginRoute(displaySkip: widget.displaySkip));
+                                                    .push(LoginWebviewRoute(displaySkip: widget.displaySkip));
                                               },
                                           ),
                                         ],

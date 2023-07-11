@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -11,15 +12,20 @@ import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/dialog_captcha.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:vm/vm.dart';
 
 class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   SignUpViewModel({
     required AuthService authService,
-  }) : _authService = authService;
+    required AppState appState,
+  })  : _authService = authService,
+        _appState = appState;
 
   final AuthService _authService;
+  final AppState _appState;
 
   TextEditingController ctrlPassword = TextEditingController(text: '');
   TextEditingController ctrlPassword2 = TextEditingController(text: '');
@@ -146,6 +152,19 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       return true;
     }
     return false;
+  }
+
+  void parseAndSignupWebview(String? username) {
+    final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
+
+    if (cookies != null && cookies.firstWhereOrNull((e) => e.name == 'token') != null) {
+      _authService.signupWebview(username!);
+    }
+  }
+
+  String getWebviewUrl() {
+    final themeParameter = _appState.themeMode == ThemeMode.dark ? 'dark' : 'light';
+    return 'https://agoradesk.com/mobile-signup?themeType=$themeParameter';
   }
 
   void guestModeOn() {
