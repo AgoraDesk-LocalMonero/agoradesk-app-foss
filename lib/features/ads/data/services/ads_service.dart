@@ -344,7 +344,7 @@ class AdsService {
         '/equation',
         data: {
           "price_equation": priceEquation,
-          "currency": currency,
+          "currency": currency == 'USDT' ? 'USD' : currency,
         },
       );
       if (resp.statusCode == 200) {

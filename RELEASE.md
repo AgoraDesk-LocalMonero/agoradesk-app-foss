@@ -1,6 +1,6 @@
 ### Updates
-1. Enhanced the warning notification when a trade is not funded.
-2. Rectified error messages.
+1. Enhanced login and signup with Imperva captcha protection.
+2. Rectified ad creation bug.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
