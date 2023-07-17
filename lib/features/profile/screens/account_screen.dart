@@ -9,7 +9,7 @@ import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_tonal.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/auth/screens/login_webview_screen.dart';
 import 'package:agoradesk/features/market/screens/widgets/line_icon_link.dart';
 import 'package:agoradesk/features/profile/models/account_view_model.dart';
 import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart';
@@ -43,7 +43,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
               ),
             ),
             body: model.isGuestMode
-                ? const LoginScreen(
+                ? const LoginWebviewScreen(
                     displaySkip: false,
                   )
                 : Padding(
