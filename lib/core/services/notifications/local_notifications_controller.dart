@@ -11,8 +11,8 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 class LocalNotificationController with ForegroundMessagesMixin {
   Future displayLocalNotificationAppTerminated(PushModel push) async {
     await SecureStorage.ensureInitialized();
-    final SecureStorage _secureStorage = SecureStorage();
-    final locale = await _secureStorage.read(SecureStorageKey.locale);
+    final SecureStorage secureStorage = SecureStorage();
+    final locale = await secureStorage.read(SecureStorageKey.locale);
     final String langCode = locale ?? Platform.localeName.substring(0, 2);
 
     const channel = AndroidNotificationChannel(

@@ -27,6 +27,8 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
 
   @override
   Widget build(BuildContext context) {
+    final sectionsSeparator = const SizedBox(height: 12);
+
     return ViewModelBuilder<AccountViewModel>(
         model: AccountViewModel(
           authService: context.read<AuthService>(),
@@ -57,12 +59,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             iconData: AgoraFont.support,
                             link: GetIt.I<AppParameters>().urlSupport,
                           ),
-                          const SizedBox(height: 8),
+                          sectionsSeparator,
                           Text(
                             context.intl.user_profile,
-                            style: context.txtBodySmallN60,
+                            style: context.txtBodyMediumN80N30,
                           ),
-                          const SizedBox(height: 8),
+                          sectionsSeparator,
                           LineWithArrow(
                             title: context.intl.my_profile,
                             onPressed: () => AutoRouter.of(context).push(
@@ -86,12 +88,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.coupons250Sbtitle,
                             onPressed: () => AutoRouter.of(context).push(const CouponsRoute()),
                           ),
-                          const SizedBox(height: 8),
+                          sectionsSeparator,
                           Text(
                             context.intl.security,
-                            style: context.txtBodySmallN60,
+                            style: context.txtBodyMediumN80N30,
                           ),
-                          const SizedBox(height: 8),
+                          sectionsSeparator,
                           LineWithArrow(
                             title: context.intl.settings250Sbtab250Sbchange8722Sbemail8722Sbshort,
                             onPressed: () => AutoRouter.of(context).push(EmailRoute(verified: false)),
@@ -141,11 +143,12 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.app_proxy,
                             onPressed: () => AutoRouter.of(context).push(const ProxyRoute()),
                           ),
+                          sectionsSeparator,
                           Text(
                             context.intl.document8722Sbtitle250Sbsettings,
-                            style: context.txtBodySmallN60,
+                            style: context.txtBodyMediumN80N30,
                           ),
-                          const SizedBox(height: 8),
+                          sectionsSeparator,
                           LineWithArrow(
                             title: context.intl.language,
                             onPressed: () => AutoRouter.of(context).push(const LanguageRoute()),
@@ -156,6 +159,11 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             onPressed: () => AutoRouter.of(context).push(const DefaultThemeRoute()),
                           ),
                           const SizedBox(height: 8),
+                          LineWithArrow(
+                            title: context.intl.settings250Sbnotifications250Sbtitle,
+                            onPressed: () => AutoRouter.of(context).push(const NotificationSettingsRoute()),
+                          ),
+                          const SizedBox(height: 8), const SizedBox(height: 8),
                           LineWithArrow(
                             title: context.intl.app_default_tab,
                             onPressed: () => AutoRouter.of(context).push(const DefaultTabRoute()),
