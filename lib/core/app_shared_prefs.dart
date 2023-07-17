@@ -64,8 +64,8 @@ class AppSharedPrefs with DateMixin {
 
   TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
-  List<NotificationsSettingsType>? get notificationSettingDisabled =>
-      _parseNotificationsSettingsType(getListStrings(AppSharedPrefsKey.notificationsSettingDisabled));
+  List<NotificationsSettingsType> get notificationSettingDisabled =>
+      _parseNotificationsSettingsType(getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ?? [];
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 

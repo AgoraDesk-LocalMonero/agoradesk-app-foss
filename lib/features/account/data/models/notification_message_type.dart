@@ -2,6 +2,7 @@
 
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/features/profile/models/notifications_settings_type.dart';
 import 'package:flutter/cupertino.dart';
 
 enum NotificationMessageType {
@@ -17,6 +18,25 @@ enum NotificationMessageType {
 extension NotificationMessageTypeExt on NotificationMessageType {
   String key() {
     return toString().split('.').last;
+  }
+
+  NotificationsSettingsType asNotificationsSettingsType() {
+    switch (this) {
+      case NotificationMessageType.MESSAGE:
+        return NotificationsSettingsType.chatMessage;
+      case NotificationMessageType.TRADE_REQUEST:
+        return NotificationsSettingsType.newTrade;
+      case NotificationMessageType.TRADE_FUNDED:
+        return NotificationsSettingsType.newPayment;
+      case NotificationMessageType.TRADE_COMPLETE:
+        return NotificationsSettingsType.tradeFinalized;
+      case NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
+        return NotificationsSettingsType.tradeFinalized;
+      case NotificationMessageType.TRADE_CANCELLED:
+        return NotificationsSettingsType.tradeFinalized;
+      case NotificationMessageType.TRADE_DISPUTED:
+        return NotificationsSettingsType.chatMessage;
+    }
   }
 
   IconData icon() {
