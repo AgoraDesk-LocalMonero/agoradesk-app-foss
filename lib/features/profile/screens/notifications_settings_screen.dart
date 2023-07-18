@@ -14,7 +14,6 @@ class NotificationSettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<NotificationSettingsViewModel>(
-        disposable: false,
         model: NotificationSettingsViewModel(
           appState: context.read<AppState>(),
         ),
@@ -30,7 +29,8 @@ class NotificationSettingsScreen extends StatelessWidget {
         });
   }
 
-  Widget _buildTabsList(BuildContext context, NotificationSettingsViewModel model) {
+  Widget _buildTabsList(
+      BuildContext context, NotificationSettingsViewModel model) {
     const settings = NotificationsSettingsType.values;
 
     return Padding(
@@ -43,6 +43,7 @@ class NotificationSettingsScreen extends StatelessWidget {
             text: settings[i].title(context),
             value: model.isSettingOn(settings[i]),
             onChanged: (_) {
+              print('switching ${settings[i]}');
               model.switchSetting(settings[i]);
             },
           );

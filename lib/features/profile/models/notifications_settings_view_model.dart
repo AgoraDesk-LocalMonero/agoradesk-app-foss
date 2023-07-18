@@ -34,6 +34,7 @@ class NotificationSettingsViewModel extends ViewModel {
   void switchSetting(NotificationsSettingsType type) async {
     await AppSharedPrefs().setnotificationsSetting(type);
     disabledSettings = AppSharedPrefs().notificationSettingDisabled;
+
     notifyListeners();
   }
 

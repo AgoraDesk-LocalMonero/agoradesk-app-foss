@@ -56,16 +56,22 @@ class AppSharedPrefs with DateMixin {
     _instance ??= const AppSharedPrefs._();
   }
 
-  ThemeMode get themeMode => _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
+  ThemeMode get themeMode =>
+      _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
 
-  Locale? get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
+  Locale? get locale =>
+      _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
 
-  ProxyType get proxyType => _parseProxyType(getString(AppSharedPrefsKey.proxyType));
+  ProxyType get proxyType =>
+      _parseProxyType(getString(AppSharedPrefsKey.proxyType));
 
-  TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
+  TabType? get defaultTab =>
+      _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
   List<NotificationsSettingsType> get notificationSettingDisabled =>
-      _parseNotificationsSettingsType(getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ?? [];
+      _parseNotificationsSettingsType(
+          getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ??
+      [];
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
@@ -81,11 +87,14 @@ class AppSharedPrefs with DateMixin {
 
   bool? get firstRun => getBool(AppSharedPrefsKey.firstRun);
 
-  DateTime? get fcmTokenSavedToApiDate => _parseDate(getString(AppSharedPrefsKey.fcmTokenSavedToApiDate));
+  DateTime? get fcmTokenSavedToApiDate =>
+      _parseDate(getString(AppSharedPrefsKey.fcmTokenSavedToApiDate));
 
-  bool get btcWalletTileOpen => getBool(AppSharedPrefsKey.btcWalletTileOpen) ?? true;
+  bool get btcWalletTileOpen =>
+      getBool(AppSharedPrefsKey.btcWalletTileOpen) ?? true;
 
-  bool get xmrWalletTileOpen => getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
+  bool get xmrWalletTileOpen =>
+      getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
 
   String? get username => getString(AppSharedPrefsKey.username);
 
@@ -103,13 +112,17 @@ class AppSharedPrefs with DateMixin {
 
   String? get countryCode => getString(AppSharedPrefsKey.countryCode);
 
-  int get pinAttemptsLeft => getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
+  int get pinAttemptsLeft =>
+      getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
 
-  DateTime? get cachedCountrySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
+  DateTime? get cachedCountrySavedDate =>
+      dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
 
-  DateTime? get cachedCurrencySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
+  DateTime? get cachedCurrencySavedDate =>
+      dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
 
-  List<String> get tooltipShownNames => getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
+  List<String> get tooltipShownNames =>
+      getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
 
   ///
   /// if [val] is null then data will be removed.
@@ -148,16 +161,21 @@ class AppSharedPrefs with DateMixin {
 
   Future<bool> setnotificationsSetting(NotificationsSettingsType type) async {
     final String val = type.name;
-    final List<String>? currentSettings = getListStrings(AppSharedPrefsKey.notificationsSettingDisabled);
+    final List<String>? currentSettings =
+        getListStrings(AppSharedPrefsKey.notificationsSettingDisabled);
     if (currentSettings != null) {
       if (currentSettings.contains(val)) {
         currentSettings.remove(val);
       } else {
         currentSettings.add(val);
       }
-      return _prefs!.setStringList(_key(AppSharedPrefsKey.notificationsSettingDisabled), currentSettings);
+      return _prefs!.setStringList(
+          _key(AppSharedPrefsKey.notificationsSettingDisabled),
+          currentSettings);
+    } else {
+      return _prefs!.setStringList(
+          _key(AppSharedPrefsKey.notificationsSettingDisabled), [val]);
     }
-    return false;
   }
 
   String? getString(AppSharedPrefsKey key) {
@@ -230,7 +248,8 @@ class AppSharedPrefs with DateMixin {
   ProxyType _parseProxyType(String? proxyStr) {
     if (proxyStr != null) {
       try {
-        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());
+        final ProxyType proxy = ProxyType.values
+            .firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());
         return proxy;
       } catch (e) {
         return ProxyType.socks5;
@@ -257,13 +276,17 @@ class AppSharedPrefs with DateMixin {
   ///
   /// Generate [List<NotificationsSettingsType>] from the [defaultTab] string.
   ///
-  List<NotificationsSettingsType>? _parseNotificationsSettingsType(List<String>? val) {
+  List<NotificationsSettingsType>? _parseNotificationsSettingsType(
+      List<String>? val) {
     if (val != null) {
       try {
         final List<NotificationsSettingsType> resLst = [];
         for (final v in val) {
-          if (NotificationsSettingsType.values.firstWhereOrNull((e) => e.name == v) != null) {
-            resLst.add(NotificationsSettingsType.values.firstWhere((e) => e.name == v));
+          if (NotificationsSettingsType.values
+                  .firstWhereOrNull((e) => e.name == v) !=
+              null) {
+            resLst.add(NotificationsSettingsType.values
+                .firstWhere((e) => e.name == v));
           }
         }
         return resLst;
