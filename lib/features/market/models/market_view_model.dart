@@ -18,6 +18,7 @@ import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/country_code_model.dart';
+import 'package:agoradesk/features/ads/data/models/country_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
@@ -30,6 +31,9 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:vm/vm.dart';
+
+const kDefaultCountry = CountryModel(name: 'United States of America', code: 'US');
+final kDefaultCurrency = CurrencyModel(code: 'USD', name: 'USD', altcoin: true);
 
 class MarketViewModel extends ViewModel
     with ErrorParseMixin, CountryInfoMixin, PaymentMethodsMixin
@@ -64,7 +68,7 @@ class MarketViewModel extends ViewModel
   bool connection = true;
   final List<AdModel> ads = [];
   late CountryCodeModel countryCodeModel;
-  late String selectedCountryCode;
+  late CountryModel selectedCountry;
 
   // String selectedLocation = '';
   OnlineProvider? selectedOnlineProvider = const OnlineProvider(url: '', code: '', name: '', currencies: []);
@@ -139,15 +143,15 @@ class MarketViewModel extends ViewModel
     });
     initMenus();
     ctrlLocation.addListener(_locationListener);
-    selectedCountryCode = _appState.countryCode;
-    final currencyCode = getCountryCurrencyCode(selectedCountryCode);
+    selectedCountry = CountryModel(name: getCountryName(_appState.countryCode), code: _appState.countryCode);
+    final currencyCode = getCountryCurrencyCode(selectedCountry.code);
     if (currencyCode == 'EUR' && currencyCode != kAnyCountryCode) {
-      selectedCountryCode = kAnyCountryCode;
+      selectedCountry = CountryModel(name: getCountryName(kAnyCountryCode), code: kAnyCountryCode);
     }
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
 
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
-    await getCountryPaymentMethods(selectedCountryCode, context);
+    await getCountryPaymentMethods(selectedCountry.code, context);
     await _loadCaches();
     if (_appState.hasPinCode) {
       await getAds();
@@ -176,24 +180,38 @@ class MarketViewModel extends ViewModel
   }
 
   Future _loadCaches() async {
-    await getCountryCodes();
+    await getCountries();
     await getCurrencies();
   }
 
-  Future<List<String>> getCountryCodes() async {
+  // Future<List<String>> getCountryCodes() async {
+  //   _reloadPaymentMethods = true;
+  //   final res = await _adsRepository.getCountryCodes();
+  //   if (res.isRight) {
+  //     countryCodeModel = res.right;
+  //     return [kAnyCountryCode, ...countryCodeModel.codes];
+  //   } else {
+  //     handleApiError(res.left, context);
+  //     return ['US'];
+  //   }
+  // }
+
+  Future<List<CountryModel>> getCountries() async {
     _reloadPaymentMethods = true;
-    final res = await _adsRepository.getCountryCodes();
+    final res = await _adsRepository.getCountries();
     if (res.isRight) {
-      countryCodeModel = res.right;
-      return [kAnyCountryCode, ...countryCodeModel.codes];
+      return {
+        CountryModel(name: getCountryName(kAnyCountryCode), code: kAnyCountryCode),
+        ...res.right,
+      }.toList();
     } else {
       handleApiError(res.left, context);
-      return ['US'];
+      return [kDefaultCountry];
     }
   }
 
   void changeSelectedCurrency(CurrencyModel? val) {
-    selectedCurrency = val ?? CurrencyModel(code: 'USD', name: 'USD', altcoin: true);
+    selectedCurrency = val ?? kDefaultCurrency;
     // if (selectedCurrency.code == 'EUR' &&
     //     selectedCountryCode != kAnyCountry &&
     //     !(tradeType != null && tradeType!.isLocal())) {
@@ -202,14 +220,14 @@ class MarketViewModel extends ViewModel
   }
 
   void changeSelectedCountryCodeAndCurrency(String? code) {
-    selectedCountryCode = code ?? 'US';
-    String currencyCodeString = getCountryCurrencyCode(selectedCountryCode);
+    selectedCountry = code != null ? CountryModel(name: getCountryName(code), code: code) : kDefaultCountry;
+    String currencyCodeString = getCountryCurrencyCode(selectedCountry.code);
     defaultCurrency = selectedCurrency = currencies.firstWhere((e) => e.code == currencyCodeString);
     notifyListeners();
   }
 
   void changeSelectedCountryCode(String? code) {
-    selectedCountryCode = code ?? 'US';
+    selectedCountry = code != null ? CountryModel(name: getCountryName(code), code: code) : kDefaultCountry;
     notifyListeners();
   }
 
@@ -288,7 +306,9 @@ class MarketViewModel extends ViewModel
   void addLocation(SearchItem searchItem) {
     _lon = searchItem.lon;
     _lat = searchItem.lat;
-    selectedCountryCode = searchItem.countryCode ?? selectedCountryCode;
+    selectedCountry = searchItem.countryCode != null
+        ? CountryModel(name: getCountryName(searchItem.countryCode!), code: searchItem.countryCode!)
+        : selectedCountry;
     ctrlLocation.text = searchItem.label;
     // getAds();
   }
@@ -306,7 +326,7 @@ class MarketViewModel extends ViewModel
       loadingAds = true;
       initialLoading = false;
 
-      String countryCodeForSearch = selectedCountryCode;
+      String countryCodeForSearch = selectedCountry.code;
       if (tradeType!.isLocal()) {
         if (ctrlLocation.text.isEmpty) {
           countryCodeForSearch = _appState.countryCode;
@@ -417,8 +437,9 @@ class MarketViewModel extends ViewModel
     ctrlAmount.clear();
     selectedCurrency = defaultCurrency;
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
-    selectedCountryCode = _appState.countryCode;
-    countryDropdownKey.currentState?.changeSelectedItem(selectedCountryCode);
+    selectedCountry = CountryModel(name: getCountryName(_appState.countryCode), code: _appState.countryCode);
+    ;
+    countryDropdownKey.currentState?.changeSelectedItem(selectedCountry.code);
     locationFieldClear();
     notifyListeners();
   }
