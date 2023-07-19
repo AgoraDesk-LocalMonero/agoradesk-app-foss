@@ -26,7 +26,7 @@ BaseOptions _defaultOptions = BaseOptions(
   headers: {
     'Accept': 'application/json',
     'User-Agent': 'AgoraDesk',
-    'Content-Type': 'application/json; charset=UTF-8',
+    'Content-Type': 'application/json',
   },
 );
 
