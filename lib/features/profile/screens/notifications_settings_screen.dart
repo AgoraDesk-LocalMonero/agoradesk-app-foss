@@ -22,16 +22,29 @@ class NotificationSettingsScreen extends StatelessWidget {
             appBar: AgoraAppBar(
               title: context.intl.settings250Sbnotifications250Sbtitle,
             ),
-            body: SizedBox.expand(
-              child: _buildTabsList(context, model),
+            body: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
+                  child: Text(
+                    'If you are using Graphene OS, you need to restart the app to make the settings active.',
+                    style: context.txtBodySmallN60,
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox.expand(
+                    child: _buildTabsList(context, model),
+                  ),
+                ),
+              ],
             ),
           );
         });
   }
 
-  Widget _buildTabsList(
-      BuildContext context, NotificationSettingsViewModel model) {
-    const settings = NotificationsSettingsType.values;
+  Widget _buildTabsList(BuildContext context, NotificationSettingsViewModel model) {
+    final settings =
+        NotificationsSettingsType.values.where((e) => e != NotificationsSettingsType.tradeDisputed).toList();
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 0),
@@ -43,7 +56,6 @@ class NotificationSettingsScreen extends StatelessWidget {
             text: settings[i].title(context),
             value: model.isSettingOn(settings[i]),
             onChanged: (_) {
-              print('switching ${settings[i]}');
               model.switchSetting(settings[i]);
             },
           );

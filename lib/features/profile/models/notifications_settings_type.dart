@@ -1,7 +1,7 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 
-enum NotificationsSettingsType { newTrade, newPayment, tradeFinalized, chatMessage }
+enum NotificationsSettingsType { newTrade, newPayment, tradeFinalized, chatMessage, tradeCancelled, tradeDisputed }
 
 extension NotificationsSettingsTypeExt on NotificationsSettingsType {
   String title(BuildContext context) {
@@ -15,6 +15,10 @@ extension NotificationsSettingsTypeExt on NotificationsSettingsType {
         return context.intl.settings250Sbnotifications250Sbtelegram250Sbescrow8722Sblong.replaceAll(' Telegram', '');
       case NotificationsSettingsType.chatMessage:
         return context.intl.settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong.replaceAll(' Telegram', '');
+      case NotificationsSettingsType.tradeCancelled:
+        return context.intl.app_push_trade_cancelled;
+      case NotificationsSettingsType.tradeDisputed:
+        return context.intl.app_push_trade_disputed;
     }
   }
 
