@@ -13,6 +13,7 @@ import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
+import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -271,7 +272,7 @@ class AuthService with FileUtilsMixin {
   ///
   Future<Either<ApiError, bool>> loginWebview(String username) async {
     try {
-      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhere((e) => e.name == 'token');
+      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
       if (tokenCookie != null) {
         final resToken = await _handleTokenWebview(tokenCookie.value);
         if (resToken) {
@@ -293,7 +294,7 @@ class AuthService with FileUtilsMixin {
   ///
   Future<Either<ApiError, bool>> signupWebview(String username) async {
     try {
-      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhere((e) => e.name == 'token');
+      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
       if (tokenCookie != null) {
         final resToken = await _handleTokenWebview(tokenCookie.value);
         if (resToken) {
@@ -379,9 +380,6 @@ class AuthService with FileUtilsMixin {
   /// Sign out from the app.
   ///
   Future<bool> logOut({bool sendRequest = false}) async {
-    try {
-      await FirebaseMessaging.instance.deleteToken();
-    } catch (e) {}
     await _secureStorage.deleteAll();
     await AppSharedPrefs().clear();
     _authStateController.add(AuthState.loggedOut);
@@ -389,6 +387,9 @@ class AuthService with FileUtilsMixin {
     GetIt.I<AppParameters>().accessToken = null;
     GetIt.I<AppParameters>().cookies = null;
     _appState.hasPinCode = false;
+    try {
+      FirebaseMessaging.instance.deleteToken();
+    } catch (e) {}
     return true;
   }
 

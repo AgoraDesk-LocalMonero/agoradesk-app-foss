@@ -1,0 +1,31 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "name": "Agoradesk",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--flavor",
+                "agoradesk",
+                "--dart-define",
+                "app.flavor=agoradesk",
+            ],
+            "flutterMode": "debug"
+        },
+        {
+            "name": "LocalMonero",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--flavor",
+                "localmonero",
+                "--dart-define",
+                "app.flavor=localmonero",
+            ],
+            "flutterMode": "debug"
+        },
+    ]
+}

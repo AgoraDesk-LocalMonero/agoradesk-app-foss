@@ -68,15 +68,15 @@ class TradingPartnersViewModel extends ViewModel with ValidatorMixin, ErrorParse
     if (!loadMore) {
       loadingTrusted = true;
     }
-    final res = await _userService.getTrusted(page: loadMore ? (paginationMetaBlocked?.currentPage ?? 0) + 1 : 0);
+    final res = await _userService.getTrusted(page: loadMore ? (paginationMetaTrusted?.currentPage ?? 0) + 1 : 0);
     loadingTrusted = false;
     if (res.isRight) {
-      paginationMetaBlocked = res.right.pagination;
-      if (paginationMetaBlocked != null) {
-        if (paginationMetaBlocked!.currentPage < paginationMetaBlocked!.totalPages) {
-          hasMorePagesBlocked = true;
+      paginationMetaTrusted = res.right.pagination;
+      if (paginationMetaTrusted != null) {
+        if (paginationMetaTrusted!.currentPage < paginationMetaTrusted!.totalPages) {
+          hasMorePagesTrusted = true;
         } else {
-          hasMorePagesBlocked = false;
+          hasMorePagesTrusted = false;
         }
       }
 
