@@ -108,9 +108,9 @@ ios/Runner/Runner-localmonero.entitlements
 
 ### Push notifications
 
-For the privacy reason, the backend sends push and data messages without translations. 
-We get them in the app, translate and display.
-So, our backend doesn't have info about user's locale.
+For privacy reasons, the backend sends push and data messages without translations.
+We receive them in the app, translate, and then display them.
+Therefore, our backend doesn't have information about the user's locale.
 
 ## Contribution
 

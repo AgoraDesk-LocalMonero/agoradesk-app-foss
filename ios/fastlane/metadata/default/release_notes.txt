@@ -1,2 +1,3 @@
-1. Enhanced login and signup with Imperva captcha protection.
-2. Rectified ad creation bug.
+1. Improved country search - now ordered by name with search functionality by name or code.
+2. Fix: Resolved pagination issue on the trusted users screen.
+3. Fix: Addressed the 'read all notifications' bug.

@@ -15,6 +15,7 @@ import 'package:agoradesk/features/account/data/models/notification_message_type
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
+import 'package:agoradesk/features/profile/models/notifications_settings_type.dart';
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
@@ -136,20 +137,27 @@ class NotificationsService with ForegroundMessagesMixin {
       final String langCode = l ?? Platform.localeName.substring(0, 2);
 
       if (notification != null) {
-        localNotificationsPlugin.show(
-          notification.hashCode,
-          ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-          translatedNotificationText(push, langCode),
-          payload: jsonEncode(message.data), //payload
-          NotificationDetails(
-            android: AndroidNotificationDetails(
-              channel.id,
-              channel.name,
-              channelDescription: channel.description,
-              icon: kNotificationIcon,
+        final List<NotificationsSettingsType> disabledNotifications = AppSharedPrefs().notificationSettingDisabled;
+        bool display = true;
+        if (disabledNotifications.contains(push.type.asNotificationsSettingsType())) {
+          display = false;
+        }
+        if (display) {
+          localNotificationsPlugin.show(
+            notification.hashCode,
+            ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+            translatedNotificationText(push, langCode),
+            payload: jsonEncode(message.data), //payload
+            NotificationDetails(
+              android: AndroidNotificationDetails(
+                channel.id,
+                channel.name,
+                channelDescription: channel.description,
+                icon: kNotificationIcon,
+              ),
             ),
-          ),
-        );
+          );
+        }
       }
     } else {
       // send signal to update the chat state
