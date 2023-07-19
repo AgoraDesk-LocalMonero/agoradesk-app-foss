@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/load_more_widget.dart';
@@ -13,6 +12,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:vm/vm.dart';
 
 class TradingPartnersScreen extends StatefulWidget {
   const TradingPartnersScreen({Key? key}) : super(key: key);
@@ -75,10 +75,10 @@ class _TradingPartnersScreenState extends State<TradingPartnersScreen> with Tick
 
   Widget _buildTrusted(BuildContext context, TradingPartnersViewModel model) {
     if (model.loadingTrusted) {
-      return Column(
+      return const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
+        children: [
           CupertinoActivityIndicator(),
         ],
       );

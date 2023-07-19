@@ -2,17 +2,19 @@ import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/models/pagination.dart';
+import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
 import 'package:agoradesk/features/ads/data/models/ads_request_parameter_model.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/models/country_code_model.dart';
+import 'package:agoradesk/features/ads/data/models/country_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/services/ads_service.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-class AdsRepository {
+class AdsRepository with CountryInfoMixin {
   AdsRepository(
     this._adsService,
     this._codesBox,
@@ -62,6 +64,32 @@ class AdsRepository {
       await AppSharedPrefs().setDate(AppSharedPrefsKey.cachedCountrySavedDate, DateTime.now());
     }
     return res;
+  }
+
+  ///
+  /// Get list of country models
+  ///
+  Future<Either<ApiError, List<CountryModel>>> getCountries() async {
+    final cachedCountrySavedDate = AppSharedPrefs().cachedCountrySavedDate;
+    if (_codesBox.values.isNotEmpty &&
+        cachedCountrySavedDate != null &&
+        cachedCountrySavedDate.isAfter(
+          DateTime.now().subtract(const Duration(days: 1)),
+        )) {
+      return Either.right(
+          _codesBox.values.first.codes.map((e) => CountryModel(code: e, name: getCountryName(e))).toList());
+    }
+    final res = await _adsService.getCountryCodes();
+    if (res.isRight) {
+      await _codesBox.clear();
+      await _codesBox.add(res.right);
+      await AppSharedPrefs().setDate(AppSharedPrefsKey.cachedCountrySavedDate, DateTime.now());
+    }
+    if (res.isRight) {
+      return Either.right(res.right.codes.map((e) => CountryModel(code: e, name: getCountryName(e))).toList());
+    } else {
+      return Either.left(res.left);
+    }
   }
 
   ///

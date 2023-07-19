@@ -13,6 +13,7 @@ import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
+import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -270,7 +271,7 @@ class AuthService with FileUtilsMixin {
   ///
   Future<Either<ApiError, bool>> loginWebview(String username) async {
     try {
-      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhere((e) => e.name == 'token');
+      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
       if (tokenCookie != null) {
         final resToken = await _handleTokenWebview(tokenCookie.value);
         if (resToken) {
@@ -292,7 +293,7 @@ class AuthService with FileUtilsMixin {
   ///
   Future<Either<ApiError, bool>> signupWebview(String username) async {
     try {
-      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhere((e) => e.name == 'token');
+      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
       if (tokenCookie != null) {
         final resToken = await _handleTokenWebview(tokenCookie.value);
         if (resToken) {

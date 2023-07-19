@@ -9,7 +9,7 @@ import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
-import 'package:agoradesk/features/auth/screens/login_screen.dart';
+import 'package:agoradesk/features/auth/screens/login_webview_screen.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/features/wallet/models/wallet_view_model.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/incoming_deposit_tile.dart';
@@ -53,7 +53,7 @@ class WalletScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                 child: model.isGuestMode
-                    ? const LoginScreen(
+                    ? const LoginWebviewScreen(
                         displaySkip: false,
                       )
                     : LayoutBuilder(builder: (context, constraints) {
