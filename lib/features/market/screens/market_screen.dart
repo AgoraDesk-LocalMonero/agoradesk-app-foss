@@ -17,6 +17,7 @@ import 'package:agoradesk/core/widgets/branded/cash_textfield.dart';
 import 'package:agoradesk/core/widgets/branded/header_shadow.dart';
 import 'package:agoradesk/core/widgets/branded/no_search_results.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
+import 'package:agoradesk/features/ads/data/models/country_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
@@ -254,7 +255,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                         },
                                       ),
                                       asyncItems: (String? filter) =>
-                                          model.getCountryPaymentMethods(model.selectedCountryCode, context),
+                                          model.getCountryPaymentMethods(model.selectedCountry.code, context),
                                       onChanged: (val) => model.changeOnlineProvider(val),
                                       selectedItem: model.selectedOnlineProvider,
                                       dropdownBuilder: (context, val) {
@@ -317,7 +318,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                                     child: Semantics(
                                       label: context.intl.app_select_country,
-                                      child: DropdownSearch<String>(
+                                      child: DropdownSearch<CountryModel>(
                                         dropdownButtonProps:
                                             context.dropdownButtonProps(label: context.intl.app_select_country),
                                         dropdownDecoratorProps: context.dropdownDecoration,
@@ -330,17 +331,17 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                           ),
                                           itemBuilder: (context, val, isSelected) {
                                             return DropdownAssetLineWithIcon(
-                                              name: getCountryName(val),
+                                              name: getCountryName(val.code),
                                               // svgPath: 'assets/flags/${val.toLowerCase()}.svg',
                                             );
                                           },
                                         ),
-                                        asyncItems: (String? filter) => model.getCountryCodes(),
-                                        selectedItem: model.selectedCountryCode,
-                                        onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val),
+                                        asyncItems: (String? filter) => model.getCountries(),
+                                        selectedItem: model.selectedCountry,
+                                        onChanged: (val) => model.changeSelectedCountryCodeAndCurrency(val?.code),
                                         dropdownBuilder: (context, val) {
                                           return DropdownAssetLineWithIcon(
-                                            name: getCountryName(val!),
+                                            name: getCountryName(val!.code),
                                             // svgPath: 'assets/flags/${val.toLowerCase()}.svg',
                                             padding: const EdgeInsets.all(0),
                                           );
@@ -460,6 +461,6 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
   String _haventFindAds(BuildContext context, MarketViewModel model) {
     return model.displayFilterMessage
         ? context.intl.dashboard250Sbads250Sbfilter250Sbapply8722Sbbtn
-        : context.intl.search__no_results(getCountryName(model.selectedCountryCode));
+        : context.intl.search__no_results(model.selectedCountry.name);
   }
 }

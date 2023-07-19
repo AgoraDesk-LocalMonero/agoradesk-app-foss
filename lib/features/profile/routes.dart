@@ -11,6 +11,7 @@ import 'package:agoradesk/features/profile/screens/language_screen.dart';
 import 'package:agoradesk/features/profile/screens/link_account_screen.dart';
 import 'package:agoradesk/features/profile/screens/manage_two_factor_auth_screen.dart';
 import 'package:agoradesk/features/profile/screens/my_profile_screen.dart';
+import 'package:agoradesk/features/profile/screens/notifications_settings_screen.dart';
 import 'package:agoradesk/features/profile/screens/proxy_screen.dart';
 import 'package:agoradesk/features/profile/screens/trading_partners_screen.dart';
 import 'package:agoradesk/features/profile/screens/two_factor_auth_screen.dart';
@@ -110,6 +111,12 @@ const profileRoutes = <AutoRoute>[
   CustomRoute(
     path: 'profile/defaultThemeScreen',
     page: DefaultThemeScreen,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+    durationInMilliseconds: 200,
+  ),
+  CustomRoute(
+    path: 'profile/notificationSettingsScreen',
+    page: NotificationSettingsScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),
