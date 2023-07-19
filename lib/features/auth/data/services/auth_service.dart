@@ -380,9 +380,6 @@ class AuthService with FileUtilsMixin {
   /// Sign out from the app.
   ///
   Future<bool> logOut({bool sendRequest = false}) async {
-    try {
-      await FirebaseMessaging.instance.deleteToken();
-    } catch (e) {}
     await _secureStorage.deleteAll();
     await AppSharedPrefs().clear();
     _authStateController.add(AuthState.loggedOut);
@@ -390,6 +387,9 @@ class AuthService with FileUtilsMixin {
     GetIt.I<AppParameters>().accessToken = null;
     GetIt.I<AppParameters>().cookies = null;
     _appState.hasPinCode = false;
+    try {
+      FirebaseMessaging.instance.deleteToken();
+    } catch (e) {}
     return true;
   }
 
