@@ -147,10 +147,13 @@ class AccountService {
   ///
   Future<Either<ApiError, bool>> markAllRead() async {
     try {
+      print('+++++++++++++++++++++++++++++++++++++11 - 1');
       final resp = await _api.client.post('/notifications/mark_all_read');
+      print('+++++++++++++++++++++++++++++++++++++11 - 2');
       if (resp.statusCode == 200) {
         return const Either.right(true);
       } else {
+        print('+++++++++++++++++++++++++++++++++++++11 - 3');
         ApiError apiError = ApiError(statusCode: resp.statusCode!, message: resp.data! as Map<String, dynamic>);
         return Either.left(apiError);
       }
