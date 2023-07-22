@@ -1,0 +1,1 @@
+1. Hotfix: Fixed an ad editing bug where some changes could not be saved.
