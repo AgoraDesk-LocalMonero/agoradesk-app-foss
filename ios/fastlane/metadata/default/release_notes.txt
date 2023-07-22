@@ -1,3 +1,1 @@
-1. Improved country search - now ordered by name with search functionality by name or code.
-2. Fix: Resolved pagination issue on the trusted users screen.
-3. Fix: Addressed the 'read all notifications' bug.
+1. Hotfix: Fixed an ad editing bug where some changes could not be saved.
