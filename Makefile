@@ -110,6 +110,16 @@ build-ios-all:
 	mv /Users/mavbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/mavbook/projects/agoradesk-app-foss/build/ios/ipa/Localmonero.ipa
 	$(FLUTTER) build ipa --flavor agoradesk --dart-define=app.flavor=agoradesk
 
+
+# ALL
+.PHONY: build-all
+build-all:
+	$(FLUTTER) build ipa --flavor localmonero --dart-define=app.flavor=localmonero
+	mv /Users/mavbook/projects/agoradesk-app-foss/build/ios/ipa/Agoradesk.ipa /Users/mavbook/projects/agoradesk-app-foss/build/ios/ipa/Localmonero.ipa
+	$(FLUTTER) build ipa --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build appbundle --flavor agoradesk --dart-define=app.flavor=agoradesk
+	$(FLUTTER) build appbundle --flavor localmonero --dart-define=app.flavor=localmonero
+
 .PHONY: build-ios-ad
 build-ios-ad:
 	$(FLUTTER) build ipa --flavor agoradesk --dart-define=app.flavor=agoradesk
