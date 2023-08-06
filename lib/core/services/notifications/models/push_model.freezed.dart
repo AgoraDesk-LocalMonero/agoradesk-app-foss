@@ -52,23 +52,18 @@ abstract class $PushModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @BoolJsonConverter()
-          bool read,
-      @DatetimeIntJsonConverter()
-          DateTime createdAt,
-      @JsonKey(includeIfNull: false)
-          String? objectId,
-      @JsonKey(includeIfNull: false)
-          String? msg,
+      @BoolJsonConverter() bool read,
+      @DatetimeIntJsonConverter() DateTime createdAt,
+      @JsonKey(includeIfNull: false) String? objectId,
+      @JsonKey(includeIfNull: false) String? msg,
       NotificationMessageType type,
-      @JsonKey(name: 'subject.username', includeIfNull: false)
-          String? username,
+      @JsonKey(name: 'subject.username', includeIfNull: false) String? username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          int tradeCount,
+      int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          int feedbackScore});
+      int feedbackScore});
 }
 
 /// @nodoc
@@ -144,23 +139,18 @@ abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @BoolJsonConverter()
-          bool read,
-      @DatetimeIntJsonConverter()
-          DateTime createdAt,
-      @JsonKey(includeIfNull: false)
-          String? objectId,
-      @JsonKey(includeIfNull: false)
-          String? msg,
+      @BoolJsonConverter() bool read,
+      @DatetimeIntJsonConverter() DateTime createdAt,
+      @JsonKey(includeIfNull: false) String? objectId,
+      @JsonKey(includeIfNull: false) String? msg,
       NotificationMessageType type,
-      @JsonKey(name: 'subject.username', includeIfNull: false)
-          String? username,
+      @JsonKey(name: 'subject.username', includeIfNull: false) String? username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          int tradeCount,
+      int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          int feedbackScore});
+      int feedbackScore});
 }
 
 /// @nodoc
@@ -231,23 +221,18 @@ class __$$_PushModelCopyWithImpl<$Res>
 class _$_PushModel extends _PushModel {
   const _$_PushModel(
       {this.id,
-      @BoolJsonConverter()
-          required this.read,
-      @DatetimeIntJsonConverter()
-          required this.createdAt,
-      @JsonKey(includeIfNull: false)
-          this.objectId,
-      @JsonKey(includeIfNull: false)
-          this.msg,
+      @BoolJsonConverter() required this.read,
+      @DatetimeIntJsonConverter() required this.createdAt,
+      @JsonKey(includeIfNull: false) this.objectId,
+      @JsonKey(includeIfNull: false) this.msg,
       required this.type,
-      @JsonKey(name: 'subject.username', includeIfNull: false)
-          this.username,
+      @JsonKey(name: 'subject.username', includeIfNull: false) this.username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          required this.tradeCount,
+      required this.tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          required this.feedbackScore})
+      required this.feedbackScore})
       : super._();
 
   factory _$_PushModel.fromJson(Map<String, dynamic> json) =>
@@ -329,23 +314,19 @@ class _$_PushModel extends _PushModel {
 abstract class _PushModel extends PushModel {
   const factory _PushModel(
       {final String? id,
-      @BoolJsonConverter()
-          required final bool read,
-      @DatetimeIntJsonConverter()
-          required final DateTime createdAt,
-      @JsonKey(includeIfNull: false)
-          final String? objectId,
-      @JsonKey(includeIfNull: false)
-          final String? msg,
+      @BoolJsonConverter() required final bool read,
+      @DatetimeIntJsonConverter() required final DateTime createdAt,
+      @JsonKey(includeIfNull: false) final String? objectId,
+      @JsonKey(includeIfNull: false) final String? msg,
       required final NotificationMessageType type,
       @JsonKey(name: 'subject.username', includeIfNull: false)
-          final String? username,
+      final String? username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          required final int tradeCount,
+      required final int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          required final int feedbackScore}) = _$_PushModel;
+      required final int feedbackScore}) = _$_PushModel;
   const _PushModel._() : super._();
 
   factory _PushModel.fromJson(Map<String, dynamic> json) =

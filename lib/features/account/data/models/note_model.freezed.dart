@@ -40,9 +40,10 @@ abstract class $NoteModelCopyWith<$Res> {
   $Res call(
       {String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime lastModifiedAt});
+      DateTime createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      DateTime lastModifiedAt});
 }
 
 /// @nodoc
@@ -89,9 +90,10 @@ abstract class _$$_NoteModelCopyWith<$Res> implements $NoteModelCopyWith<$Res> {
   $Res call(
       {String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime lastModifiedAt});
+      DateTime createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      DateTime lastModifiedAt});
 }
 
 /// @nodoc
@@ -133,9 +135,10 @@ class _$_NoteModel extends _NoteModel {
   const _$_NoteModel(
       {required this.content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.lastModifiedAt})
+      required this.createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      required this.lastModifiedAt})
       : super._();
 
   factory _$_NoteModel.fromJson(Map<String, dynamic> json) =>
@@ -190,9 +193,10 @@ abstract class _NoteModel extends NoteModel {
   const factory _NoteModel(
       {required final String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime lastModifiedAt}) = _$_NoteModel;
+      required final DateTime createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      required final DateTime lastModifiedAt}) = _$_NoteModel;
   const _NoteModel._() : super._();
 
   factory _NoteModel.fromJson(Map<String, dynamic> json) =

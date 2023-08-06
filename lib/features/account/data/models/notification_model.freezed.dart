@@ -47,9 +47,8 @@ abstract class $ActivityNotificationModelCopyWith<$Res> {
       {String id,
       bool read,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? contactId,
+      DateTime createdAt,
+      @JsonKey(name: 'contact_id', includeIfNull: false) String? contactId,
       String url,
       String msg,
       NotificationMessageType type});
@@ -123,9 +122,8 @@ abstract class _$$_ActivityNotificationModelCopyWith<$Res>
       {String id,
       bool read,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? contactId,
+      DateTime createdAt,
+      @JsonKey(name: 'contact_id', includeIfNull: false) String? contactId,
       String url,
       String msg,
       NotificationMessageType type});
@@ -193,9 +191,8 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
       {required this.id,
       required this.read,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.createdAt,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          this.contactId,
+      required this.createdAt,
+      @JsonKey(name: 'contact_id', includeIfNull: false) this.contactId,
       required this.url,
       required this.msg,
       required this.type})
@@ -264,16 +261,17 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
 
 abstract class _ActivityNotificationModel extends ActivityNotificationModel {
   const factory _ActivityNotificationModel(
-      {required final String id,
-      required final bool read,
-      @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
+          {required final String id,
+          required final bool read,
+          @JsonKey(
+              name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
           required final DateTime createdAt,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
+          @JsonKey(name: 'contact_id', includeIfNull: false)
           final String? contactId,
-      required final String url,
-      required final String msg,
-      required final NotificationMessageType
-          type}) = _$_ActivityNotificationModel;
+          required final String url,
+          required final String msg,
+          required final NotificationMessageType type}) =
+      _$_ActivityNotificationModel;
   const _ActivityNotificationModel._() : super._();
 
   factory _ActivityNotificationModel.fromJson(Map<String, dynamic> json) =

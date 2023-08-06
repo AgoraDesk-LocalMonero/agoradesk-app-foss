@@ -221,9 +221,8 @@ abstract class _SendAssetModel implements SendAssetModel {
       required final double amount,
       required final String password,
       @JsonKey(name: 'fee_level', includeIfNull: false)
-          required final BtcFeesEnum? feeLevel,
-      @JsonKey(includeIfNull: false)
-          final String? otp}) = _$_SendAssetModel;
+      required final BtcFeesEnum? feeLevel,
+      @JsonKey(includeIfNull: false) final String? otp}) = _$_SendAssetModel;
 
   factory _SendAssetModel.fromJson(Map<String, dynamic> json) =
       _$_SendAssetModel.fromJson;

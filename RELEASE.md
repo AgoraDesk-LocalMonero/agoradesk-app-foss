@@ -1,5 +1,6 @@
 ### Updates
-1. Hotfix: Fixed an ad editing bug where some changes could not be saved. 
+1. Fixed: Issue affecting the visibility of the transaction details screen.
+2. Fixed: Incorrect initial time limit setting in an advertisement.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

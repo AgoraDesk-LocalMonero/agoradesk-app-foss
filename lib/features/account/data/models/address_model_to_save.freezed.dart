@@ -130,10 +130,9 @@ class __$$_AddressModelToSaveCopyWithImpl<$Res>
 class _$_AddressModelToSave implements _AddressModelToSave {
   const _$_AddressModelToSave(
       {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
-          required this.asset,
+      required this.asset,
       required this.address,
-      @JsonKey(includeIfNull: false)
-          this.label});
+      @JsonKey(includeIfNull: false) this.label});
 
   factory _$_AddressModelToSave.fromJson(Map<String, dynamic> json) =>
       _$$_AddressModelToSaveFromJson(json);
@@ -183,11 +182,11 @@ class _$_AddressModelToSave implements _AddressModelToSave {
 
 abstract class _AddressModelToSave implements AddressModelToSave {
   const factory _AddressModelToSave(
-      {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
+          {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
           required final Asset asset,
-      required final String address,
-      @JsonKey(includeIfNull: false)
-          final String? label}) = _$_AddressModelToSave;
+          required final String address,
+          @JsonKey(includeIfNull: false) final String? label}) =
+      _$_AddressModelToSave;
 
   factory _AddressModelToSave.fromJson(Map<String, dynamic> json) =
       _$_AddressModelToSave.fromJson;

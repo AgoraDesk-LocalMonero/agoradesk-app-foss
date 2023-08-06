@@ -44,14 +44,12 @@ abstract class $AttachedAdModelCopyWith<$Res> {
       _$AttachedAdModelCopyWithImpl<$Res, AttachedAdModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) String? id,
       Asset? asset,
-      @JsonKey(name: 'trade_type')
-          TradeType tradeType,
+      @JsonKey(name: 'trade_type') TradeType tradeType,
       AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod});
+      String? paymentMethod});
 
   $AccountInfoModelCopyWith<$Res>? get advertiser;
 }
@@ -121,14 +119,12 @@ abstract class _$$_AttachedAdModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) String? id,
       Asset? asset,
-      @JsonKey(name: 'trade_type')
-          TradeType tradeType,
+      @JsonKey(name: 'trade_type') TradeType tradeType,
       AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod});
+      String? paymentMethod});
 
   @override
   $AccountInfoModelCopyWith<$Res>? get advertiser;
@@ -181,14 +177,12 @@ class __$$_AttachedAdModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_AttachedAdModel implements _AttachedAdModel {
   const _$_AttachedAdModel(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          this.id,
+      {@JsonKey(name: 'id', includeIfNull: false) this.id,
       this.asset,
-      @JsonKey(name: 'trade_type')
-          required this.tradeType,
+      @JsonKey(name: 'trade_type') required this.tradeType,
       this.advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          this.paymentMethod});
+      this.paymentMethod});
 
   factory _$_AttachedAdModel.fromJson(Map<String, dynamic> json) =>
       _$$_AttachedAdModelFromJson(json);
@@ -250,14 +244,12 @@ class _$_AttachedAdModel implements _AttachedAdModel {
 
 abstract class _AttachedAdModel implements AttachedAdModel {
   const factory _AttachedAdModel(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          final String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) final String? id,
       final Asset? asset,
-      @JsonKey(name: 'trade_type')
-          required final TradeType tradeType,
+      @JsonKey(name: 'trade_type') required final TradeType tradeType,
       final AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          final String? paymentMethod}) = _$_AttachedAdModel;
+      final String? paymentMethod}) = _$_AttachedAdModel;
 
   factory _AttachedAdModel.fromJson(Map<String, dynamic> json) =
       _$_AttachedAdModel.fromJson;

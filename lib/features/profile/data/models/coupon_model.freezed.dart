@@ -44,13 +44,11 @@ abstract class $CouponModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String code,
-      @JsonKey(name: 'ad_types')
-          List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types') List<TradeType> tradeTypes,
       List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier')
-          int rebateMultiplier,
+      @JsonKey(name: 'rebate_multiplier') int rebateMultiplier,
       @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime expiresAt,
+      DateTime expiresAt,
       bool? enabled});
 }
 
@@ -113,13 +111,11 @@ abstract class _$$_CouponModelCopyWith<$Res>
   @useResult
   $Res call(
       {String code,
-      @JsonKey(name: 'ad_types')
-          List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types') List<TradeType> tradeTypes,
       List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier')
-          int rebateMultiplier,
+      @JsonKey(name: 'rebate_multiplier') int rebateMultiplier,
       @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime expiresAt,
+      DateTime expiresAt,
       bool? enabled});
 }
 
@@ -176,13 +172,11 @@ class __$$_CouponModelCopyWithImpl<$Res>
 class _$_CouponModel implements _CouponModel {
   const _$_CouponModel(
       {required this.code,
-      @JsonKey(name: 'ad_types')
-          required final List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types') required final List<TradeType> tradeTypes,
       required final List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier')
-          required this.rebateMultiplier,
+      @JsonKey(name: 'rebate_multiplier') required this.rebateMultiplier,
       @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.expiresAt,
+      required this.expiresAt,
       this.enabled})
       : _tradeTypes = tradeTypes,
         _assets = assets;
@@ -267,13 +261,11 @@ class _$_CouponModel implements _CouponModel {
 abstract class _CouponModel implements CouponModel {
   const factory _CouponModel(
       {required final String code,
-      @JsonKey(name: 'ad_types')
-          required final List<TradeType> tradeTypes,
+      @JsonKey(name: 'ad_types') required final List<TradeType> tradeTypes,
       required final List<Asset> assets,
-      @JsonKey(name: 'rebate_multiplier')
-          required final int rebateMultiplier,
+      @JsonKey(name: 'rebate_multiplier') required final int rebateMultiplier,
       @JsonKey(name: 'expires_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime expiresAt,
+      required final DateTime expiresAt,
       final bool? enabled}) = _$_CouponModel;
 
   factory _CouponModel.fromJson(Map<String, dynamic> json) =
