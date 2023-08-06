@@ -53,6 +53,7 @@ class NotificationsService with ForegroundMessagesMixin {
   final AuthService authService;
   final AppState appState;
   bool _loading = false;
+  bool _tokenLoading = false;
   bool _updating = false;
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];
@@ -120,8 +121,9 @@ class NotificationsService with ForegroundMessagesMixin {
         eventBus.fire(NoificationClickedEvent(tradeId));
       }
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
+      }
     }
   }
 
@@ -167,6 +169,10 @@ class NotificationsService with ForegroundMessagesMixin {
 
   Future getToken() async {
     // check that this is the time to update token
+    if (_tokenLoading) {
+      return;
+    }
+    _tokenLoading = true;
     bool update = true;
     final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
     if (dateTokenSaved != null) {
@@ -201,11 +207,13 @@ class NotificationsService with ForegroundMessagesMixin {
           if (e.toString().contains('MISSING_INSTANCEID_SERVICE')) {
             GetIt.I<AppParameters>().isGoogleAvailable = false;
           }
-          if (GetIt.I<AppParameters>().debugPrintIsOn)
+          if (GetIt.I<AppParameters>().debugPrintIsOn) {
             debugPrint('++++ ${e.toString().contains('MISSING_INSTANCEID_SERVICE')}');
+          }
         }
       }
     }
+    _tokenLoading = false;
   }
 
   ///
