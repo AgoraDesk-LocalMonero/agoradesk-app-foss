@@ -159,6 +159,7 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
         ),
         const SizedBox(height: 8),
         ContainerSurface3Radius12Border1(
+          stretchWidth: false,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: Column(
@@ -170,20 +171,26 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
                 ),
                 Row(
                   children: [
-                    ButtonIconTextP80(
-                      iconData: AgoraFont.eye,
-                      text: I18n.of(context)!.view_trade,
-                      onPressed: () => context.pushRoute(
-                        TradeRoute(
-                          tradeId: transaction.getIdFromDescription,
+                    SizedBox(
+                      width: 100,
+                      child: ButtonIconTextP80(
+                        iconData: AgoraFont.eye,
+                        text: I18n.of(context)!.view_trade,
+                        onPressed: () => context.pushRoute(
+                          TradeRoute(
+                            tradeId: transaction.getIdFromDescription,
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(width: 4),
-                    ButtonIconTextP80(
-                      iconData: AgoraFont.copy_alt,
-                      text: I18n.of(context)!.copy,
-                      onPressed: () => copyToClipboard(transaction.txId, context),
+                    SizedBox(
+                      width: 100,
+                      child: ButtonIconTextP80(
+                        iconData: AgoraFont.copy_alt,
+                        text: I18n.of(context)!.copy,
+                        onPressed: () => copyToClipboard(transaction.txId, context),
+                      ),
                     ),
                   ],
                 ),
@@ -204,6 +211,7 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
         ),
         const SizedBox(height: 8),
         ContainerSurface3Radius12Border1(
+          stretchWidth: false,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
             child: Column(
