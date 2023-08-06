@@ -12,7 +12,6 @@ class ContainerSurface5Radius12 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
