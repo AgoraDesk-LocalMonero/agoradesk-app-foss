@@ -56,7 +56,7 @@
             android:exported="true"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:theme="@style/Theme.AppCompat.Light"
+            android:theme="@style/Theme.AppCompat.DayNight"
             android:windowSoftInputMode="adjustResize">
 
             <intent-filter>

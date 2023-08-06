@@ -7,6 +7,7 @@ import 'package:agoradesk/core/packages/mapbox/predictions.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
+import 'package:agoradesk/core/translations/money_codes.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
@@ -287,7 +288,8 @@ class AddEditAdViewModel extends ViewModel
         selectedOnlineProvider =
             OnlineProvider(url: '', code: ad!.onlineProvider!, name: ad!.onlineProvider!, currencies: []);
       }
-      selectedCurrency = CurrencyModel(code: ad!.currency, name: '', altcoin: true);
+      selectedCurrency =
+          CurrencyModel(code: ad!.currency, name: '', altcoin: !kFiatCodesMap.keys.contains(ad!.currency));
       if (ad?.minAmount != null) {
         ctrl4MinAmount.text = '${ad!.minAmount}';
         minAmount = ad!.minAmount;
@@ -379,7 +381,8 @@ class AddEditAdViewModel extends ViewModel
       adEdits = adEdits!.copyWith(countryCode: selectedCountryCode);
     }
     final currencyCode = getCountryCurrencyCode(selectedCountryCode);
-    selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: false);
+    selectedCurrency =
+        CurrencyModel(code: currencyCode, name: currencyCode, altcoin: !kFiatCodesMap.keys.contains(currencyCode));
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
     notifyListeners();
   }
@@ -495,8 +498,11 @@ class AddEditAdViewModel extends ViewModel
         buyerSettlementAddress: ctrl32WalletAddress.text,
         minAmount: minAmount,
         maxAmount: maxAmount,
+        requireFeedbackScore: minimumFeedbackScore,
         limitToFiatAmounts: restrictLimit,
         trackMaxAmount: trackMaxAmount,
+        firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
+        firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
         paymentMethodDetail: ctrl5MethodDetails.text.isEmpty ? null : ctrl5MethodDetails.text,
         paymentMethodInfo: ctrl5MethodInfo.text.isEmpty ? null : ctrl5MethodInfo.text,
         msg: ctrl5Terms.text.isEmpty ? null : ctrl5Terms.text,
@@ -506,6 +512,7 @@ class AddEditAdViewModel extends ViewModel
         lat: _lat,
         buyerSettlementFeeLevel: btcFeesEnum?.key(),
       );
+
       final res = await _adsRepository.adCreate(ad);
       creatingAd = false;
       if (res.isRight) {
