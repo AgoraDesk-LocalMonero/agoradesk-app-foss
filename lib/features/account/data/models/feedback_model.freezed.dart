@@ -45,11 +45,14 @@ abstract class $FeedbackModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          FeedbackType feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          String? text});
+      FeedbackType feedbackType,
+      @JsonKey(
+          name: 'given_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime date,
+      @JsonKey(name: 'msg', includeIfNull: false) String? text});
 }
 
 /// @nodoc
@@ -96,11 +99,14 @@ abstract class _$$_FeedbackModelCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          FeedbackType feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          String? text});
+      FeedbackType feedbackType,
+      @JsonKey(
+          name: 'given_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime date,
+      @JsonKey(name: 'msg', includeIfNull: false) String? text});
 }
 
 /// @nodoc
@@ -141,11 +147,14 @@ class __$$_FeedbackModelCopyWithImpl<$Res>
 class _$_FeedbackModel implements _FeedbackModel {
   const _$_FeedbackModel(
       {@JsonKey(name: 'feedback_type', includeIfNull: false)
-          required this.feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          this.text});
+      required this.feedbackType,
+      @JsonKey(
+          name: 'given_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required this.date,
+      @JsonKey(name: 'msg', includeIfNull: false) this.text});
 
   factory _$_FeedbackModel.fromJson(Map<String, dynamic> json) =>
       _$$_FeedbackModelFromJson(json);
@@ -200,12 +209,16 @@ class _$_FeedbackModel implements _FeedbackModel {
 
 abstract class _FeedbackModel implements FeedbackModel {
   const factory _FeedbackModel(
-      {@JsonKey(name: 'feedback_type', includeIfNull: false)
+          {@JsonKey(name: 'feedback_type', includeIfNull: false)
           required final FeedbackType feedbackType,
-      @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
+          @JsonKey(
+              name: 'given_at',
+              includeIfNull: false,
+              fromJson: fromJsonDate,
+              toJson: toJsonDate)
           required final DateTime date,
-      @JsonKey(name: 'msg', includeIfNull: false)
-          final String? text}) = _$_FeedbackModel;
+          @JsonKey(name: 'msg', includeIfNull: false) final String? text}) =
+      _$_FeedbackModel;
 
   factory _FeedbackModel.fromJson(Map<String, dynamic> json) =
       _$_FeedbackModel.fromJson;

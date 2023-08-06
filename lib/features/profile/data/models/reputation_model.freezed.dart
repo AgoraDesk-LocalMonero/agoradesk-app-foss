@@ -46,18 +46,14 @@ abstract class $ReputationModelCopyWith<$Res> {
       _$ReputationModelCopyWithImpl<$Res, ReputationModel>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
+      {@JsonKey(includeIfNull: false) String? username,
       @JsonKey(name: 'verification_code', includeIfNull: false)
-          String? verificationCode,
+      String? verificationCode,
       @JsonKey(name: 'registered_at', includeIfNull: false)
-          DateTime? registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          int? trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          int? tradeVolume});
+      DateTime? registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) int? feedbackScore,
+      @JsonKey(includeIfNull: false) int? trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) int? tradeVolume});
 }
 
 /// @nodoc
@@ -118,18 +114,14 @@ abstract class _$$_ReputationModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
+      {@JsonKey(includeIfNull: false) String? username,
       @JsonKey(name: 'verification_code', includeIfNull: false)
-          String? verificationCode,
+      String? verificationCode,
       @JsonKey(name: 'registered_at', includeIfNull: false)
-          DateTime? registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          int? trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          int? tradeVolume});
+      DateTime? registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) int? feedbackScore,
+      @JsonKey(includeIfNull: false) int? trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) int? tradeVolume});
 }
 
 /// @nodoc
@@ -184,18 +176,13 @@ class __$$_ReputationModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_ReputationModel extends _ReputationModel {
   const _$_ReputationModel(
-      {@JsonKey(includeIfNull: false)
-          this.username,
+      {@JsonKey(includeIfNull: false) this.username,
       @JsonKey(name: 'verification_code', includeIfNull: false)
-          this.verificationCode,
-      @JsonKey(name: 'registered_at', includeIfNull: false)
-          this.registeredAt,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          this.feedbackScore,
-      @JsonKey(includeIfNull: false)
-          this.trades,
-      @JsonKey(name: 'trade_volume', includeIfNull: false)
-          this.tradeVolume})
+      this.verificationCode,
+      @JsonKey(name: 'registered_at', includeIfNull: false) this.registeredAt,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) this.feedbackScore,
+      @JsonKey(includeIfNull: false) this.trades,
+      @JsonKey(name: 'trade_volume', includeIfNull: false) this.tradeVolume})
       : super._();
 
   factory _$_ReputationModel.fromJson(Map<String, dynamic> json) =>
@@ -264,18 +251,16 @@ class _$_ReputationModel extends _ReputationModel {
 
 abstract class _ReputationModel extends ReputationModel {
   const factory _ReputationModel(
-      {@JsonKey(includeIfNull: false)
-          final String? username,
+      {@JsonKey(includeIfNull: false) final String? username,
       @JsonKey(name: 'verification_code', includeIfNull: false)
-          final String? verificationCode,
+      final String? verificationCode,
       @JsonKey(name: 'registered_at', includeIfNull: false)
-          final DateTime? registeredAt,
+      final DateTime? registeredAt,
       @JsonKey(name: 'feedback_score', includeIfNull: false)
-          final int? feedbackScore,
-      @JsonKey(includeIfNull: false)
-          final int? trades,
+      final int? feedbackScore,
+      @JsonKey(includeIfNull: false) final int? trades,
       @JsonKey(name: 'trade_volume', includeIfNull: false)
-          final int? tradeVolume}) = _$_ReputationModel;
+      final int? tradeVolume}) = _$_ReputationModel;
   const _ReputationModel._() : super._();
 
   factory _ReputationModel.fromJson(Map<String, dynamic> json) =

@@ -85,44 +85,50 @@ abstract class $UserSettingsModelCopyWith<$Res> {
       _$UserSettingsModelCopyWithImpl<$Res, UserSettingsModel>;
   @useResult
   $Res call(
-      {@JsonKey(ignore: true)
-          int? id,
-      @JsonKey(includeIfNull: false)
-          String? email,
+      {@JsonKey(ignore: true) int? id,
+      @JsonKey(includeIfNull: false) String? email,
       @JsonKey(name: 'email_verified', includeIfNull: false)
-          bool? emailVerified,
+      bool? emailVerified,
       @JsonKey(name: 'selling_vacation', includeIfNull: false)
-          bool? sellingVacation,
+      bool? sellingVacation,
       @JsonKey(name: 'buying_vacation', includeIfNull: false)
-          bool? buyingVacation,
+      bool? buyingVacation,
       @JsonKey(name: 'web_notifications', includeIfNull: false)
-          bool? webNotifications,
+      bool? webNotifications,
       @JsonKey(name: 'sensitive_emails', includeIfNull: false)
-          bool? sensitiveEmails,
-      @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-          bool? newTradeRequestEmailNotifications,
-      @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-          bool? newOnlinePaymentEmailNotifications,
+      bool? sensitiveEmails,
+      @JsonKey(
+          name: 'new_trade_request_email_notifications', includeIfNull: false)
+      bool? newTradeRequestEmailNotifications,
+      @JsonKey(
+          name: 'new_online_payment_email_notifications', includeIfNull: false)
+      bool? newOnlinePaymentEmailNotifications,
       @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-          bool? escrowReleaseEmailNotifications,
+      bool? escrowReleaseEmailNotifications,
       @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-          bool? newMessageTelegramNotifications,
+      bool? newMessageTelegramNotifications,
       @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
-          bool? newMessageEmailNotifications,
-      @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-          bool? newTradeRequestTelegramNotifications,
-      @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-          bool? newOnlinePaymentTelegramNotifications,
-      @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-          bool? escrowReleaseTelegramNotifications,
-      @JsonKey(includeIfNull: false)
-          String? introduction,
-      @JsonKey(includeIfNull: false)
-          String? homepage,
-      @JsonKey(name: 'telegram_id', includeIfNull: false)
-          int? telegramId,
-      @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
-          bool? twoFaEnabled});
+      bool? newMessageEmailNotifications,
+      @JsonKey(
+          name: 'new_trade_request_telegram_notifications',
+          includeIfNull: false)
+      bool? newTradeRequestTelegramNotifications,
+      @JsonKey(
+          name: 'new_online_payment_telegram_notifications',
+          includeIfNull: false)
+      bool? newOnlinePaymentTelegramNotifications,
+      @JsonKey(
+          name: 'escrow_release_telegram_notifications', includeIfNull: false)
+      bool? escrowReleaseTelegramNotifications,
+      @JsonKey(includeIfNull: false) String? introduction,
+      @JsonKey(includeIfNull: false) String? homepage,
+      @JsonKey(name: 'telegram_id', includeIfNull: false) int? telegramId,
+      @JsonKey(
+          name: 'two_factor_authentication_type',
+          fromJson: _twoFaFromJson,
+          toJson: _twoFaToJson,
+          includeIfNull: false)
+      bool? twoFaEnabled});
 }
 
 /// @nodoc
@@ -255,44 +261,50 @@ abstract class _$$_UserSettingsModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(ignore: true)
-          int? id,
-      @JsonKey(includeIfNull: false)
-          String? email,
+      {@JsonKey(ignore: true) int? id,
+      @JsonKey(includeIfNull: false) String? email,
       @JsonKey(name: 'email_verified', includeIfNull: false)
-          bool? emailVerified,
+      bool? emailVerified,
       @JsonKey(name: 'selling_vacation', includeIfNull: false)
-          bool? sellingVacation,
+      bool? sellingVacation,
       @JsonKey(name: 'buying_vacation', includeIfNull: false)
-          bool? buyingVacation,
+      bool? buyingVacation,
       @JsonKey(name: 'web_notifications', includeIfNull: false)
-          bool? webNotifications,
+      bool? webNotifications,
       @JsonKey(name: 'sensitive_emails', includeIfNull: false)
-          bool? sensitiveEmails,
-      @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-          bool? newTradeRequestEmailNotifications,
-      @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-          bool? newOnlinePaymentEmailNotifications,
+      bool? sensitiveEmails,
+      @JsonKey(
+          name: 'new_trade_request_email_notifications', includeIfNull: false)
+      bool? newTradeRequestEmailNotifications,
+      @JsonKey(
+          name: 'new_online_payment_email_notifications', includeIfNull: false)
+      bool? newOnlinePaymentEmailNotifications,
       @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-          bool? escrowReleaseEmailNotifications,
+      bool? escrowReleaseEmailNotifications,
       @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-          bool? newMessageTelegramNotifications,
+      bool? newMessageTelegramNotifications,
       @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
-          bool? newMessageEmailNotifications,
-      @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-          bool? newTradeRequestTelegramNotifications,
-      @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-          bool? newOnlinePaymentTelegramNotifications,
-      @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-          bool? escrowReleaseTelegramNotifications,
-      @JsonKey(includeIfNull: false)
-          String? introduction,
-      @JsonKey(includeIfNull: false)
-          String? homepage,
-      @JsonKey(name: 'telegram_id', includeIfNull: false)
-          int? telegramId,
-      @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
-          bool? twoFaEnabled});
+      bool? newMessageEmailNotifications,
+      @JsonKey(
+          name: 'new_trade_request_telegram_notifications',
+          includeIfNull: false)
+      bool? newTradeRequestTelegramNotifications,
+      @JsonKey(
+          name: 'new_online_payment_telegram_notifications',
+          includeIfNull: false)
+      bool? newOnlinePaymentTelegramNotifications,
+      @JsonKey(
+          name: 'escrow_release_telegram_notifications', includeIfNull: false)
+      bool? escrowReleaseTelegramNotifications,
+      @JsonKey(includeIfNull: false) String? introduction,
+      @JsonKey(includeIfNull: false) String? homepage,
+      @JsonKey(name: 'telegram_id', includeIfNull: false) int? telegramId,
+      @JsonKey(
+          name: 'two_factor_authentication_type',
+          fromJson: _twoFaFromJson,
+          toJson: _twoFaToJson,
+          includeIfNull: false)
+      bool? twoFaEnabled});
 }
 
 /// @nodoc
@@ -419,44 +431,49 @@ class __$$_UserSettingsModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_UserSettingsModel implements _UserSettingsModel {
   _$_UserSettingsModel(
-      {@JsonKey(ignore: true)
-          this.id,
-      @JsonKey(includeIfNull: false)
-          this.email,
-      @JsonKey(name: 'email_verified', includeIfNull: false)
-          this.emailVerified,
+      {@JsonKey(ignore: true) this.id,
+      @JsonKey(includeIfNull: false) this.email,
+      @JsonKey(name: 'email_verified', includeIfNull: false) this.emailVerified,
       @JsonKey(name: 'selling_vacation', includeIfNull: false)
-          this.sellingVacation,
+      this.sellingVacation,
       @JsonKey(name: 'buying_vacation', includeIfNull: false)
-          this.buyingVacation,
+      this.buyingVacation,
       @JsonKey(name: 'web_notifications', includeIfNull: false)
-          this.webNotifications,
+      this.webNotifications,
       @JsonKey(name: 'sensitive_emails', includeIfNull: false)
-          this.sensitiveEmails,
-      @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-          this.newTradeRequestEmailNotifications,
-      @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-          this.newOnlinePaymentEmailNotifications,
+      this.sensitiveEmails,
+      @JsonKey(
+          name: 'new_trade_request_email_notifications', includeIfNull: false)
+      this.newTradeRequestEmailNotifications,
+      @JsonKey(
+          name: 'new_online_payment_email_notifications', includeIfNull: false)
+      this.newOnlinePaymentEmailNotifications,
       @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-          this.escrowReleaseEmailNotifications,
+      this.escrowReleaseEmailNotifications,
       @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-          this.newMessageTelegramNotifications,
+      this.newMessageTelegramNotifications,
       @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
-          this.newMessageEmailNotifications,
-      @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-          this.newTradeRequestTelegramNotifications,
-      @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-          this.newOnlinePaymentTelegramNotifications,
-      @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-          this.escrowReleaseTelegramNotifications,
-      @JsonKey(includeIfNull: false)
-          this.introduction,
-      @JsonKey(includeIfNull: false)
-          this.homepage,
-      @JsonKey(name: 'telegram_id', includeIfNull: false)
-          this.telegramId,
-      @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
-          this.twoFaEnabled});
+      this.newMessageEmailNotifications,
+      @JsonKey(
+          name: 'new_trade_request_telegram_notifications',
+          includeIfNull: false)
+      this.newTradeRequestTelegramNotifications,
+      @JsonKey(
+          name: 'new_online_payment_telegram_notifications',
+          includeIfNull: false)
+      this.newOnlinePaymentTelegramNotifications,
+      @JsonKey(
+          name: 'escrow_release_telegram_notifications', includeIfNull: false)
+      this.escrowReleaseTelegramNotifications,
+      @JsonKey(includeIfNull: false) this.introduction,
+      @JsonKey(includeIfNull: false) this.homepage,
+      @JsonKey(name: 'telegram_id', includeIfNull: false) this.telegramId,
+      @JsonKey(
+          name: 'two_factor_authentication_type',
+          fromJson: _twoFaFromJson,
+          toJson: _twoFaToJson,
+          includeIfNull: false)
+      this.twoFaEnabled});
 
   factory _$_UserSettingsModel.fromJson(Map<String, dynamic> json) =>
       _$$_UserSettingsModelFromJson(json);
@@ -622,44 +639,50 @@ class _$_UserSettingsModel implements _UserSettingsModel {
 
 abstract class _UserSettingsModel implements UserSettingsModel {
   factory _UserSettingsModel(
-      {@JsonKey(ignore: true)
-          final int? id,
-      @JsonKey(includeIfNull: false)
-          final String? email,
+      {@JsonKey(ignore: true) final int? id,
+      @JsonKey(includeIfNull: false) final String? email,
       @JsonKey(name: 'email_verified', includeIfNull: false)
-          final bool? emailVerified,
+      final bool? emailVerified,
       @JsonKey(name: 'selling_vacation', includeIfNull: false)
-          final bool? sellingVacation,
+      final bool? sellingVacation,
       @JsonKey(name: 'buying_vacation', includeIfNull: false)
-          final bool? buyingVacation,
+      final bool? buyingVacation,
       @JsonKey(name: 'web_notifications', includeIfNull: false)
-          final bool? webNotifications,
+      final bool? webNotifications,
       @JsonKey(name: 'sensitive_emails', includeIfNull: false)
-          final bool? sensitiveEmails,
-      @JsonKey(name: 'new_trade_request_email_notifications', includeIfNull: false)
-          final bool? newTradeRequestEmailNotifications,
-      @JsonKey(name: 'new_online_payment_email_notifications', includeIfNull: false)
-          final bool? newOnlinePaymentEmailNotifications,
+      final bool? sensitiveEmails,
+      @JsonKey(
+          name: 'new_trade_request_email_notifications', includeIfNull: false)
+      final bool? newTradeRequestEmailNotifications,
+      @JsonKey(
+          name: 'new_online_payment_email_notifications', includeIfNull: false)
+      final bool? newOnlinePaymentEmailNotifications,
       @JsonKey(name: 'escrow_release_email_notifications', includeIfNull: false)
-          final bool? escrowReleaseEmailNotifications,
+      final bool? escrowReleaseEmailNotifications,
       @JsonKey(name: 'new_message_telegram_notifications', includeIfNull: false)
-          final bool? newMessageTelegramNotifications,
+      final bool? newMessageTelegramNotifications,
       @JsonKey(name: 'new_message_email_notifications', includeIfNull: false)
-          final bool? newMessageEmailNotifications,
-      @JsonKey(name: 'new_trade_request_telegram_notifications', includeIfNull: false)
-          final bool? newTradeRequestTelegramNotifications,
-      @JsonKey(name: 'new_online_payment_telegram_notifications', includeIfNull: false)
-          final bool? newOnlinePaymentTelegramNotifications,
-      @JsonKey(name: 'escrow_release_telegram_notifications', includeIfNull: false)
-          final bool? escrowReleaseTelegramNotifications,
-      @JsonKey(includeIfNull: false)
-          final String? introduction,
-      @JsonKey(includeIfNull: false)
-          final String? homepage,
-      @JsonKey(name: 'telegram_id', includeIfNull: false)
-          final int? telegramId,
-      @JsonKey(name: 'two_factor_authentication_type', fromJson: _twoFaFromJson, toJson: _twoFaToJson, includeIfNull: false)
-          final bool? twoFaEnabled}) = _$_UserSettingsModel;
+      final bool? newMessageEmailNotifications,
+      @JsonKey(
+          name: 'new_trade_request_telegram_notifications',
+          includeIfNull: false)
+      final bool? newTradeRequestTelegramNotifications,
+      @JsonKey(
+          name: 'new_online_payment_telegram_notifications',
+          includeIfNull: false)
+      final bool? newOnlinePaymentTelegramNotifications,
+      @JsonKey(
+          name: 'escrow_release_telegram_notifications', includeIfNull: false)
+      final bool? escrowReleaseTelegramNotifications,
+      @JsonKey(includeIfNull: false) final String? introduction,
+      @JsonKey(includeIfNull: false) final String? homepage,
+      @JsonKey(name: 'telegram_id', includeIfNull: false) final int? telegramId,
+      @JsonKey(
+          name: 'two_factor_authentication_type',
+          fromJson: _twoFaFromJson,
+          toJson: _twoFaToJson,
+          includeIfNull: false)
+      final bool? twoFaEnabled}) = _$_UserSettingsModel;
 
   factory _UserSettingsModel.fromJson(Map<String, dynamic> json) =
       _$_UserSettingsModel.fromJson;

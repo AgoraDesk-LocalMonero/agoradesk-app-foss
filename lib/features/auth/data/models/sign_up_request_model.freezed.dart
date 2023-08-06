@@ -51,21 +51,15 @@ abstract class $SignUpRequestModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? username,
-      @JsonKey(includeIfNull: false)
-          String? email,
-      @JsonKey(name: 'front_type', includeIfNull: false)
-          String? frontType,
+      @JsonKey(includeIfNull: false) String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
       String? password,
-      @JsonKey(includeIfNull: false)
-          String? otp,
-      @JsonKey(includeIfNull: false)
-          String? captcha,
-      @JsonKey(ignore: true)
-          String? captchaCookie,
+      @JsonKey(includeIfNull: false) String? otp,
+      @JsonKey(includeIfNull: false) String? captcha,
+      @JsonKey(ignore: true) String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
-          String? referralCode,
-      @JsonKey(name: 'coupon_code', includeIfNull: false)
-          String? couponCode});
+      String? referralCode,
+      @JsonKey(name: 'coupon_code', includeIfNull: false) String? couponCode});
 }
 
 /// @nodoc
@@ -142,21 +136,15 @@ abstract class _$$_SignUpRequestModelCopyWith<$Res>
   @useResult
   $Res call(
       {String? username,
-      @JsonKey(includeIfNull: false)
-          String? email,
-      @JsonKey(name: 'front_type', includeIfNull: false)
-          String? frontType,
+      @JsonKey(includeIfNull: false) String? email,
+      @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
       String? password,
-      @JsonKey(includeIfNull: false)
-          String? otp,
-      @JsonKey(includeIfNull: false)
-          String? captcha,
-      @JsonKey(ignore: true)
-          String? captchaCookie,
+      @JsonKey(includeIfNull: false) String? otp,
+      @JsonKey(includeIfNull: false) String? captcha,
+      @JsonKey(ignore: true) String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
-          String? referralCode,
-      @JsonKey(name: 'coupon_code', includeIfNull: false)
-          String? couponCode});
+      String? referralCode,
+      @JsonKey(name: 'coupon_code', includeIfNull: false) String? couponCode});
 }
 
 /// @nodoc
@@ -315,21 +303,17 @@ class _$_SignUpRequestModel implements _SignUpRequestModel {
 abstract class _SignUpRequestModel implements SignUpRequestModel {
   const factory _SignUpRequestModel(
       {final String? username,
-      @JsonKey(includeIfNull: false)
-          final String? email,
+      @JsonKey(includeIfNull: false) final String? email,
       @JsonKey(name: 'front_type', includeIfNull: false)
-          final String? frontType,
+      final String? frontType,
       final String? password,
-      @JsonKey(includeIfNull: false)
-          final String? otp,
-      @JsonKey(includeIfNull: false)
-          final String? captcha,
-      @JsonKey(ignore: true)
-          final String? captchaCookie,
+      @JsonKey(includeIfNull: false) final String? otp,
+      @JsonKey(includeIfNull: false) final String? captcha,
+      @JsonKey(ignore: true) final String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
-          final String? referralCode,
+      final String? referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false)
-          final String? couponCode}) = _$_SignUpRequestModel;
+      final String? couponCode}) = _$_SignUpRequestModel;
 
   factory _SignUpRequestModel.fromJson(Map<String, dynamic> json) =
       _$_SignUpRequestModel.fromJson;

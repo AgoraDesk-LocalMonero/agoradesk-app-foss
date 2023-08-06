@@ -52,20 +52,21 @@ abstract class $MessageModelCopyWith<$Res> {
       _$MessageModelCopyWithImpl<$Res, MessageModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          bool isAdmin,
+      {@JsonKey(name: 'message_id', includeIfNull: false) String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) String? tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime createdAt,
+      @JsonKey(name: 'is_admin', includeIfNull: false) bool isAdmin,
       AccountInfoModel sender,
       String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          String? attachmentName,
+      String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          String? attachmentUrl});
+      String? attachmentUrl});
 
   $AccountInfoModelCopyWith<$Res> get sender;
 }
@@ -146,20 +147,21 @@ abstract class _$$_MessageModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          bool isAdmin,
+      {@JsonKey(name: 'message_id', includeIfNull: false) String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) String? tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime createdAt,
+      @JsonKey(name: 'is_admin', includeIfNull: false) bool isAdmin,
       AccountInfoModel sender,
       String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          String? attachmentName,
+      String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          String? attachmentUrl});
+      String? attachmentUrl});
 
   @override
   $AccountInfoModelCopyWith<$Res> get sender;
@@ -227,20 +229,21 @@ class __$$_MessageModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_MessageModel implements _MessageModel {
   const _$_MessageModel(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          this.messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          this.tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          required this.isAdmin,
+      {@JsonKey(name: 'message_id', includeIfNull: false) this.messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) this.tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required this.createdAt,
+      @JsonKey(name: 'is_admin', includeIfNull: false) required this.isAdmin,
       required this.sender,
       this.msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          this.attachmentName,
+      this.attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          this.attachmentUrl});
+      this.attachmentUrl});
 
   factory _$_MessageModel.fromJson(Map<String, dynamic> json) =>
       _$$_MessageModelFromJson(json);
@@ -318,19 +321,22 @@ class _$_MessageModel implements _MessageModel {
 abstract class _MessageModel implements MessageModel {
   const factory _MessageModel(
       {@JsonKey(name: 'message_id', includeIfNull: false)
-          final String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          final String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime createdAt,
+      final String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) final String? tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required final DateTime createdAt,
       @JsonKey(name: 'is_admin', includeIfNull: false)
-          required final bool isAdmin,
+      required final bool isAdmin,
       required final AccountInfoModel sender,
       final String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          final String? attachmentName,
+      final String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          final String? attachmentUrl}) = _$_MessageModel;
+      final String? attachmentUrl}) = _$_MessageModel;
 
   factory _MessageModel.fromJson(Map<String, dynamic> json) =
       _$_MessageModel.fromJson;

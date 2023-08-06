@@ -47,13 +47,15 @@ abstract class $AddressModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      @JsonKey(name: 'saved_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime savedAt,
-      @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
-          Asset asset,
+      @JsonKey(
+          name: 'saved_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime savedAt,
+      @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset) Asset asset,
       String address,
-      @JsonKey(includeIfNull: false)
-          String? label});
+      @JsonKey(includeIfNull: false) String? label});
 }
 
 /// @nodoc
@@ -110,13 +112,15 @@ abstract class _$$_AddressModelCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      @JsonKey(name: 'saved_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime savedAt,
-      @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
-          Asset asset,
+      @JsonKey(
+          name: 'saved_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime savedAt,
+      @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset) Asset asset,
       String address,
-      @JsonKey(includeIfNull: false)
-          String? label});
+      @JsonKey(includeIfNull: false) String? label});
 }
 
 /// @nodoc
@@ -167,13 +171,16 @@ class __$$_AddressModelCopyWithImpl<$Res>
 class _$_AddressModel implements _AddressModel {
   const _$_AddressModel(
       {required this.id,
-      @JsonKey(name: 'saved_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.savedAt,
+      @JsonKey(
+          name: 'saved_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required this.savedAt,
       @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
-          required this.asset,
+      required this.asset,
       required this.address,
-      @JsonKey(includeIfNull: false)
-          this.label});
+      @JsonKey(includeIfNull: false) this.label});
 
   factory _$_AddressModel.fromJson(Map<String, dynamic> json) =>
       _$$_AddressModelFromJson(json);
@@ -235,13 +242,16 @@ class _$_AddressModel implements _AddressModel {
 abstract class _AddressModel implements AddressModel {
   const factory _AddressModel(
       {required final String id,
-      @JsonKey(name: 'saved_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime savedAt,
+      @JsonKey(
+          name: 'saved_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required final DateTime savedAt,
       @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
-          required final Asset asset,
+      required final Asset asset,
       required final String address,
-      @JsonKey(includeIfNull: false)
-          final String? label}) = _$_AddressModel;
+      @JsonKey(includeIfNull: false) final String? label}) = _$_AddressModel;
 
   factory _AddressModel.fromJson(Map<String, dynamic> json) =
       _$_AddressModel.fromJson;

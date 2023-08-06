@@ -45,15 +45,12 @@ abstract class $WalletBalanceModelCopyWith<$Res> {
       _$WalletBalanceModelCopyWithImpl<$Res, WalletBalanceModel>;
   @useResult
   $Res call(
-      {@_NestedBalanceConverter()
-      @JsonKey(name: 'total')
-          Decimal balance,
-      @JsonKey(name: 'receiving_address')
-          String receivingAddress,
+      {@_NestedBalanceConverter() @JsonKey(name: 'total') Decimal balance,
+      @JsonKey(name: 'receiving_address') String receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
-          List<TransactionModel>? receivedTransactions,
+      List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
-          List<TransactionModel>? sentTransactions});
+      List<TransactionModel>? sentTransactions});
 }
 
 /// @nodoc
@@ -104,15 +101,12 @@ abstract class _$$_WalletBalanceModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@_NestedBalanceConverter()
-      @JsonKey(name: 'total')
-          Decimal balance,
-      @JsonKey(name: 'receiving_address')
-          String receivingAddress,
+      {@_NestedBalanceConverter() @JsonKey(name: 'total') Decimal balance,
+      @JsonKey(name: 'receiving_address') String receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
-          List<TransactionModel>? receivedTransactions,
+      List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
-          List<TransactionModel>? sentTransactions});
+      List<TransactionModel>? sentTransactions});
 }
 
 /// @nodoc
@@ -157,15 +151,12 @@ class __$$_WalletBalanceModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_WalletBalanceModel implements _WalletBalanceModel {
   const _$_WalletBalanceModel(
-      {@_NestedBalanceConverter()
-      @JsonKey(name: 'total')
-          required this.balance,
-      @JsonKey(name: 'receiving_address')
-          required this.receivingAddress,
+      {@_NestedBalanceConverter() @JsonKey(name: 'total') required this.balance,
+      @JsonKey(name: 'receiving_address') required this.receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
-          final List<TransactionModel>? receivedTransactions,
+      final List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
-          final List<TransactionModel>? sentTransactions})
+      final List<TransactionModel>? sentTransactions})
       : _receivedTransactions = receivedTransactions,
         _sentTransactions = sentTransactions;
 
@@ -248,16 +239,15 @@ class _$_WalletBalanceModel implements _WalletBalanceModel {
 
 abstract class _WalletBalanceModel implements WalletBalanceModel {
   const factory _WalletBalanceModel(
-          {@_NestedBalanceConverter()
-          @JsonKey(name: 'total')
-              required final Decimal balance,
-          @JsonKey(name: 'receiving_address')
-              required final String receivingAddress,
-          @JsonKey(name: 'received_transactions_30d')
-              final List<TransactionModel>? receivedTransactions,
-          @JsonKey(name: 'sent_transactions_30d')
-              final List<TransactionModel>? sentTransactions}) =
-      _$_WalletBalanceModel;
+      {@_NestedBalanceConverter()
+      @JsonKey(name: 'total')
+      required final Decimal balance,
+      @JsonKey(name: 'receiving_address')
+      required final String receivingAddress,
+      @JsonKey(name: 'received_transactions_30d')
+      final List<TransactionModel>? receivedTransactions,
+      @JsonKey(name: 'sent_transactions_30d')
+      final List<TransactionModel>? sentTransactions}) = _$_WalletBalanceModel;
 
   factory _WalletBalanceModel.fromJson(Map<String, dynamic> json) =
       _$_WalletBalanceModel.fromJson;

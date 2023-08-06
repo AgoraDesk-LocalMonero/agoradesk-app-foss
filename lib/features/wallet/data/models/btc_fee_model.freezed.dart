@@ -173,17 +173,13 @@ class __$$_BtcFeesModelCopyWithImpl<$Res>
 class _$_BtcFeesModel extends _BtcFeesModel {
   const _$_BtcFeesModel(
       {@JsonKey(name: 'outgoing_fee_rate_high')
-          required this.outgoingFeeRateHigh,
+      required this.outgoingFeeRateHigh,
       @JsonKey(name: 'outgoing_fee_rate_medium')
-          required this.outgoingFeeRateMedium,
-      @JsonKey(name: 'outgoing_fee_rate_low')
-          required this.outgoingFeeRateLow,
-      @JsonKey(name: 'outgoing_fee_high')
-          this.outgoingFeeHigh,
-      @JsonKey(name: 'outgoing_fee_medium')
-          this.outgoingFeeMedium,
-      @JsonKey(name: 'outgoing_fee_low')
-          this.outgoingFeeLow})
+      required this.outgoingFeeRateMedium,
+      @JsonKey(name: 'outgoing_fee_rate_low') required this.outgoingFeeRateLow,
+      @JsonKey(name: 'outgoing_fee_high') this.outgoingFeeHigh,
+      @JsonKey(name: 'outgoing_fee_medium') this.outgoingFeeMedium,
+      @JsonKey(name: 'outgoing_fee_low') this.outgoingFeeLow})
       : super._();
 
   factory _$_BtcFeesModel.fromJson(Map<String, dynamic> json) =>
@@ -259,18 +255,16 @@ class _$_BtcFeesModel extends _BtcFeesModel {
 
 abstract class _BtcFeesModel extends BtcFeesModel {
   const factory _BtcFeesModel(
-      {@JsonKey(name: 'outgoing_fee_rate_high')
+          {@JsonKey(name: 'outgoing_fee_rate_high')
           required final String outgoingFeeRateHigh,
-      @JsonKey(name: 'outgoing_fee_rate_medium')
+          @JsonKey(name: 'outgoing_fee_rate_medium')
           required final String outgoingFeeRateMedium,
-      @JsonKey(name: 'outgoing_fee_rate_low')
+          @JsonKey(name: 'outgoing_fee_rate_low')
           required final String outgoingFeeRateLow,
-      @JsonKey(name: 'outgoing_fee_high')
-          final String? outgoingFeeHigh,
-      @JsonKey(name: 'outgoing_fee_medium')
-          final String? outgoingFeeMedium,
-      @JsonKey(name: 'outgoing_fee_low')
-          final String? outgoingFeeLow}) = _$_BtcFeesModel;
+          @JsonKey(name: 'outgoing_fee_high') final String? outgoingFeeHigh,
+          @JsonKey(name: 'outgoing_fee_medium') final String? outgoingFeeMedium,
+          @JsonKey(name: 'outgoing_fee_low') final String? outgoingFeeLow}) =
+      _$_BtcFeesModel;
   const _BtcFeesModel._() : super._();
 
   factory _BtcFeesModel.fromJson(Map<String, dynamic> json) =

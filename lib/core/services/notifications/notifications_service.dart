@@ -39,6 +39,7 @@ class NotificationsService with ForegroundMessagesMixin {
   final AuthService authService;
   final AppState appState;
   bool _loading = false;
+  bool _tokenLoading = false;
   bool _updating = false;
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];

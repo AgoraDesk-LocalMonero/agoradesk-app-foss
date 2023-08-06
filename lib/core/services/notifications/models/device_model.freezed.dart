@@ -182,10 +182,9 @@ class _$_DeviceModel extends _DeviceModel {
 
 abstract class _DeviceModel extends DeviceModel {
   const factory _DeviceModel(
-      {@JsonKey(includeIfNull: false)
-          final String? type,
+      {@JsonKey(includeIfNull: false) final String? type,
       @JsonKey(name: 'device_name', includeIfNull: false)
-          final String? deviceName,
+      final String? deviceName,
       required final String token}) = _$_DeviceModel;
   const _DeviceModel._() : super._();
 

@@ -1,0 +1,2 @@
+1. Fixed: Issue affecting the visibility of the transaction details screen.
+2. Fixed: Incorrect initial time limit setting in an advertisement.

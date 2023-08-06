@@ -498,8 +498,11 @@ class AddEditAdViewModel extends ViewModel
         buyerSettlementAddress: ctrl32WalletAddress.text,
         minAmount: minAmount,
         maxAmount: maxAmount,
+        requireFeedbackScore: minimumFeedbackScore,
         limitToFiatAmounts: restrictLimit,
         trackMaxAmount: trackMaxAmount,
+        firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
+        firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
         paymentMethodDetail: ctrl5MethodDetails.text.isEmpty ? null : ctrl5MethodDetails.text,
         paymentMethodInfo: ctrl5MethodInfo.text.isEmpty ? null : ctrl5MethodInfo.text,
         msg: ctrl5Terms.text.isEmpty ? null : ctrl5Terms.text,
@@ -509,6 +512,7 @@ class AddEditAdViewModel extends ViewModel
         lat: _lat,
         buyerSettlementFeeLevel: btcFeesEnum?.key(),
       );
+
       final res = await _adsRepository.adCreate(ad);
       creatingAd = false;
       if (res.isRight) {

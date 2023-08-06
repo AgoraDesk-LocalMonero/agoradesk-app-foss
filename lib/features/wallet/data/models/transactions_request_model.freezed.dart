@@ -41,12 +41,10 @@ abstract class $TransactionsRequestModelCopyWith<$Res> {
       _$TransactionsRequestModelCopyWithImpl<$Res, TransactionsRequestModel>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          Asset? asset,
-      @JsonKey(includeIfNull: false)
-          TransactionTypes? type,
+      {@JsonKey(includeIfNull: false) Asset? asset,
+      @JsonKey(includeIfNull: false) TransactionTypes? type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-          DateTime? after});
+      DateTime? after});
 }
 
 /// @nodoc
@@ -94,12 +92,10 @@ abstract class _$$_TransactionsRequestModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          Asset? asset,
-      @JsonKey(includeIfNull: false)
-          TransactionTypes? type,
+      {@JsonKey(includeIfNull: false) Asset? asset,
+      @JsonKey(includeIfNull: false) TransactionTypes? type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-          DateTime? after});
+      DateTime? after});
 }
 
 /// @nodoc
@@ -140,12 +136,10 @@ class __$$_TransactionsRequestModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_TransactionsRequestModel implements _TransactionsRequestModel {
   const _$_TransactionsRequestModel(
-      {@JsonKey(includeIfNull: false)
-          this.asset,
-      @JsonKey(includeIfNull: false)
-          this.type,
+      {@JsonKey(includeIfNull: false) this.asset,
+      @JsonKey(includeIfNull: false) this.type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-          this.after});
+      this.after});
 
   factory _$_TransactionsRequestModel.fromJson(Map<String, dynamic> json) =>
       _$$_TransactionsRequestModelFromJson(json);
@@ -196,12 +190,10 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
 
 abstract class _TransactionsRequestModel implements TransactionsRequestModel {
   const factory _TransactionsRequestModel(
-      {@JsonKey(includeIfNull: false)
-          final Asset? asset,
-      @JsonKey(includeIfNull: false)
-          final TransactionTypes? type,
+      {@JsonKey(includeIfNull: false) final Asset? asset,
+      @JsonKey(includeIfNull: false) final TransactionTypes? type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-          final DateTime? after}) = _$_TransactionsRequestModel;
+      final DateTime? after}) = _$_TransactionsRequestModel;
 
   factory _TransactionsRequestModel.fromJson(Map<String, dynamic> json) =
       _$_TransactionsRequestModel.fromJson;

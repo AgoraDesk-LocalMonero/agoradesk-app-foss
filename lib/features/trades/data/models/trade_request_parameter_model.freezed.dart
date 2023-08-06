@@ -51,13 +51,11 @@ abstract class $TradeRequestParameterModelCopyWith<$Res> {
       {int? page,
       int? size,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode,
-      @JsonKey(name: 'country_code', includeIfNull: false)
-          String? countryCode,
+      String? paymentMethodCode,
+      @JsonKey(name: 'country_code', includeIfNull: false) String? countryCode,
       @JsonKey(name: 'currency_code', includeIfNull: false)
-          String? currencyCode,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          String? assetCode});
+      String? currencyCode,
+      @JsonKey(name: 'asset', includeIfNull: false) String? assetCode});
 }
 
 /// @nodoc
@@ -123,13 +121,11 @@ abstract class _$$_TradeRequestParameterModelCopyWith<$Res>
       {int? page,
       int? size,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode,
-      @JsonKey(name: 'country_code', includeIfNull: false)
-          String? countryCode,
+      String? paymentMethodCode,
+      @JsonKey(name: 'country_code', includeIfNull: false) String? countryCode,
       @JsonKey(name: 'currency_code', includeIfNull: false)
-          String? currencyCode,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          String? assetCode});
+      String? currencyCode,
+      @JsonKey(name: 'asset', includeIfNull: false) String? assetCode});
 }
 
 /// @nodoc
@@ -189,13 +185,10 @@ class _$_TradeRequestParameterModel implements _TradeRequestParameterModel {
       {this.page,
       this.size,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          this.paymentMethodCode,
-      @JsonKey(name: 'country_code', includeIfNull: false)
-          this.countryCode,
-      @JsonKey(name: 'currency_code', includeIfNull: false)
-          this.currencyCode,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          this.assetCode});
+      this.paymentMethodCode,
+      @JsonKey(name: 'country_code', includeIfNull: false) this.countryCode,
+      @JsonKey(name: 'currency_code', includeIfNull: false) this.currencyCode,
+      @JsonKey(name: 'asset', includeIfNull: false) this.assetCode});
 
   factory _$_TradeRequestParameterModel.fromJson(Map<String, dynamic> json) =>
       _$$_TradeRequestParameterModelFromJson(json);
@@ -267,13 +260,13 @@ abstract class _TradeRequestParameterModel
       {final int? page,
       final int? size,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          final String? paymentMethodCode,
+      final String? paymentMethodCode,
       @JsonKey(name: 'country_code', includeIfNull: false)
-          final String? countryCode,
+      final String? countryCode,
       @JsonKey(name: 'currency_code', includeIfNull: false)
-          final String? currencyCode,
+      final String? currencyCode,
       @JsonKey(name: 'asset', includeIfNull: false)
-          final String? assetCode}) = _$_TradeRequestParameterModel;
+      final String? assetCode}) = _$_TradeRequestParameterModel;
 
   factory _TradeRequestParameterModel.fromJson(Map<String, dynamic> json) =
       _$_TradeRequestParameterModel.fromJson;
