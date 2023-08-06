@@ -1,1 +1,2 @@
-1. Hotfix: Fixed an ad editing bug where some changes could not be saved.
+1. Fixed: Issue affecting the visibility of the transaction details screen.
+2. Fixed: Incorrect initial time limit setting in an advertisement.
