@@ -26,12 +26,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 import '../../events.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
-const _kPeriodCheckTokenUpdatesDays = 15;
+const _kPeriodCheckTokenUpdatesDays = 3;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
@@ -220,9 +221,18 @@ class NotificationsService with ForegroundMessagesMixin {
   /// token manager - update, add to api, remove old from api
   ///
   Future _tokenUpdate(String? newToken) async {
+    if (newToken == null) {
+      await Sentry.captureMessage(
+        {'NewTokenIsNull': 'return'}.toString(),
+      );
+      return;
+    }
     if (!_updating) {
       _updating = true;
       final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
+      await Sentry.captureMessage(
+        {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
+      );
       if (oldToken != newToken && appState.username.isNotEmpty) {
         late String deviceName;
         var deviceData = <String, dynamic>{};
@@ -239,13 +249,16 @@ class NotificationsService with ForegroundMessagesMixin {
         }
         final res = await _saveFcmTokenToApi(
           DeviceModel(
-            token: newToken ?? oldToken!,
+            token: newToken,
             deviceName: deviceName,
             type: 'FCM',
           ),
         );
+        await Sentry.captureMessage(
+          {'SaveTokenEventResult': res}.toString(),
+        );
         if (res) {
-          await secureStorage.write(SecureStorageKey.pushToken, newToken ?? oldToken!);
+          await secureStorage.write(SecureStorageKey.pushToken, newToken);
           await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
         }
       }
