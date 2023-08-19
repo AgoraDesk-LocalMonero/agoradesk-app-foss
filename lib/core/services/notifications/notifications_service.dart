@@ -19,7 +19,7 @@ import 'package:local_auth/local_auth.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
-const _kPeriodCheckTokenUpdatesDays = 15;
+const _kPeriodCheckTokenUpdatesDays = 3;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
