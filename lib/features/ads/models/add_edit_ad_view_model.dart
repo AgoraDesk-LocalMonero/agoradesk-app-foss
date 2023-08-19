@@ -412,7 +412,7 @@ class AddEditAdViewModel extends ViewModel
               '(1/coingecko${selectedCurrency!.code.toLowerCase()}${asset!.key().toLowerCase()})*$percent';
         } else {
           priceEquationString =
-              '(coingecko${asset!.key().toLowerCase()}${selectedCurrency!.code.toLowerCase()})*$percent';
+              'coingecko${asset!.key().toLowerCase()}${selectedCurrency!.code.toLowerCase()}*$percent';
         }
       }
       final res = await _calcPrice(priceEquation: priceEquationString, currency: selectedCurrency!.code);

@@ -203,6 +203,7 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
   }
 
   Widget _buildDescriptionNoTrade(BuildContext context) {
+    return SizedBox();
     return Column(
       children: [
         LineFontIconTextNeutral60(

@@ -48,25 +48,7 @@ mixin ApiHelper {
         return ApiError(statusCode: 403, message: {});
       }
       String message = '';
-      if (e.type == DioExceptionType.unknown) {
-        final str1 = e.message?.replaceAll('\\', '') ?? '';
-        final str2 = str1.substring(1, str1.length - 1);
-        final Map<String, dynamic> messageMap = jsonDecode(str2);
 
-        final List<String>? cookiesLst = e.response?.headers['set-cookie']?[0].split(';');
-        String? captchaCookie;
-        if (cookiesLst?.isNotEmpty == true && cookiesLst!.length > 1) {
-          captchaCookie = cookiesLst.firstWhereOrNull((e) => e.contains('sess_id'));
-        }
-
-        return ApiError(
-          statusCode: 400,
-          errorCode: 4001,
-          message: messageMap,
-          response: e.response,
-          captchaCookie: captchaCookie,
-        );
-      }
       if (e.type == DioExceptionType.connectionTimeout) {
         Map<String, dynamic> messageMap = {'message': 'Connection timeout'};
 
@@ -143,6 +125,25 @@ mixin ApiHelper {
           message: {'error_code': 4000},
           response: e.response,
           captchaCookie: e.response?.headers['set-cookie']?[0].split(';')[0],
+        );
+      }
+      if (e.type == DioExceptionType.unknown) {
+        final str1 = e.message?.replaceAll('\\', '') ?? '';
+        final str2 = str1.substring(1, str1.length - 1);
+        final Map<String, dynamic> messageMap = jsonDecode(str2);
+
+        final List<String>? cookiesLst = e.response?.headers['set-cookie']?[0].split(';');
+        String? captchaCookie;
+        if (cookiesLst?.isNotEmpty == true && cookiesLst!.length > 1) {
+          captchaCookie = cookiesLst.firstWhereOrNull((e) => e.contains('sess_id'));
+        }
+
+        return ApiError(
+          statusCode: 400,
+          errorCode: 4001,
+          message: messageMap,
+          response: e.response,
+          captchaCookie: captchaCookie,
         );
       }
       return ApiError(statusCode: 520, message: {'message': 'Unknown error'});
