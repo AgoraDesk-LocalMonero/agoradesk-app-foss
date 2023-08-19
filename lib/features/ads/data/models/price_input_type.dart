@@ -27,6 +27,9 @@ extension PriceInputTypeExt on PriceInputType {
   }
 }
 
+///
+/// Detects the price input type from the string
+///
 extension PriceInputTypeFromStringExt on String {
   PriceInputType? priceFormulaType(String currencyCode) {
     // ignore: unnecessary_this
@@ -44,6 +47,12 @@ extension PriceInputTypeFromStringExt on String {
     if (_coinGecko.contains(formulaParts[0]) && formulaParts.length == 3 && currencyCode != 'USD') {
       return PriceInputType.market;
     }
+
+    // formula's with coingeckoxmrbtc*1.02
+    if (_coinGecko.contains(formulaParts[0]) && formulaParts.length == 2 && double.tryParse(formulaParts[1]) != null) {
+      return PriceInputType.market;
+    }
+
     if (formulaParts.length < 3 &&
         formulaParts[0].contains('1/coingecko') &&
         (formulaParts[0].contains('xmr') || formulaParts[0].contains('btc'))) {
@@ -77,4 +86,5 @@ extension PriceInputTypeFromStringExt on String {
 final List<String> _coinGecko = [
   'coingeckoxmrusd',
   'coingeckobtcusd',
+  'coingeckoxmrbtc',
 ];

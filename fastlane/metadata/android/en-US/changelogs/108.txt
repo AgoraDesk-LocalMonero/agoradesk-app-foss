@@ -1,0 +1,3 @@
+1. Fix: Some trades have no option to cancel the trade.
+2. Fix: Display error messages at the start of the trade.
+3. Fix: Ad edit screen displays a formula instead of market price.
