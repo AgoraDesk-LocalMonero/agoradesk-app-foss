@@ -53,7 +53,7 @@ class TransactionTile extends StatelessWidget with DateMixin, StringMixin {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            transaction.amount + ' ' + assetString,
+                            '${transaction.amount} $assetString',
                             style: context.txtLabelLargeP90P10,
                           ),
                           const SizedBox(height: 4),

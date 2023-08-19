@@ -32,14 +32,12 @@ class ButtonIconTextP80 extends StatelessWidget {
             size: 18,
           ),
           const SizedBox(width: 4),
-          Expanded(
-            child: AutoSizeText(
-              text,
-              maxLines: 1,
-              minFontSize: 6,
-              overflow: TextOverflow.ellipsis,
-              style: context.txtLabelSmallP80,
-            ),
+          AutoSizeText(
+            text,
+            maxLines: 1,
+            minFontSize: 6,
+            overflow: TextOverflow.ellipsis,
+            style: context.txtLabelSmallP80,
           ),
         ],
       ),
