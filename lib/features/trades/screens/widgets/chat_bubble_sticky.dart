@@ -42,7 +42,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (!model.displayStickyBubble()) {
               return const SizedBox(height: 8);
             }
-            if (model.isLocalTrade && model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying!) {
+            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying!) {
               return Column(
                 children: [
                   Padding(
@@ -311,6 +311,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
+    print('+++++++++++++++++++++++++++++++++++++112 - ${model.tradeStatus}');
     return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
@@ -351,6 +352,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
+    print('+++++++++++++++++++++++++++++++++++++11 - ${model.tradeStatus}');
     return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
