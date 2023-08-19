@@ -311,7 +311,6 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
-    print('+++++++++++++++++++++++++++++++++++++112 - ${model.tradeStatus}');
     return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
@@ -352,7 +351,6 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
-    print('+++++++++++++++++++++++++++++++++++++11 - ${model.tradeStatus}');
     return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerC85c09Radius12(
             child: Padding(
