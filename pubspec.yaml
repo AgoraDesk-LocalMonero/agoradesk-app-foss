@@ -83,6 +83,8 @@ dependencies:
   convert: ^3.1.1
   expansion_tile_card: ^2.0.0
   lottie: ^2.3.2
+  riverpod_annotation: ^2.1.1
+  flutter_riverpod: ^2.3.6
 
 dependency_overrides:
   #  flutter_foreground_task:
@@ -112,7 +114,9 @@ dev_dependencies:
   freezed: ^2.1.0
   mocktail: any
   injectable_generator: any
-
+  riverpod_lint: any
+  riverpod_generator: ^2.2.0
+  custom_lint:
 
 flutter:
 
