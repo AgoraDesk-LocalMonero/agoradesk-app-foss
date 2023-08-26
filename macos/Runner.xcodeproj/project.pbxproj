@@ -28,6 +28,7 @@
 		33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F42044A3C60003C045 /* MainMenu.xib */; };
 		33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC11122044BFA00003C045 /* MainFlutterWindow.swift */; };
 		532C19C8B0322E139E76EC71 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731F083464A0C9BD16B541D1 /* Pods_Runner.framework */; };
+		A620FE452A9A4C2F0071BD85 /* config in Resources */ = {isa = PBXBuildFile; fileRef = A620FE442A9A4C2F0071BD85 /* config */; };
 		ECA973BF82C709F146E709E9 /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2BE503E40B5EA887B8138E /* Pods_RunnerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		080B05EB4E210056458DF308 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		0A820F4651C8330DC52A77C5 /* Pods-RunnerTests.profile-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile-agoradesk.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile-agoradesk.xcconfig"; sourceTree = "<group>"; };
 		2271970B3AA944F52CEF658A /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		2574507663B8397C449B8696 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		265987C7D046F9CFD4F3BCE1 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		331C80D7294CF71000263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
 		333000ED22D3DE5D00554162 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPluginRegistrant.swift; sourceTree = "<group>"; };
-		33CC10ED2044A3C60003C045 /* test777.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test777.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CC10ED2044A3C60003C045 /* Agoradesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agoradesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CC10F02044A3C60003C045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33CC10F22044A3C60003C045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Runner/Assets.xcassets; sourceTree = "<group>"; };
 		33CC10F52044A3C60003C045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -85,11 +87,19 @@
 		4769F096C9DB19C922630F00 /* Pods-Runner.debug-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-localmonero.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-localmonero.xcconfig"; sourceTree = "<group>"; };
 		5C2BE503E40B5EA887B8138E /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D29C8E1E75E43F93CA0717 /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
+		647881EE56CBFB0718E12BF3 /* Pods-Runner.release-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-localmonero.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-localmonero.xcconfig"; sourceTree = "<group>"; };
 		65A1BD3738FA8FC990AAC53C /* Pods-Runner.debug-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-agoradesk.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-agoradesk.xcconfig"; sourceTree = "<group>"; };
+		6725B6F5BD6E0F88F4E9575D /* Pods-RunnerTests.release-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-agoradesk.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-agoradesk.xcconfig"; sourceTree = "<group>"; };
+		72FB2EED1B3526C66DA39F76 /* Pods-RunnerTests.profile-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile-localmonero.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile-localmonero.xcconfig"; sourceTree = "<group>"; };
 		731F083464A0C9BD16B541D1 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		83ADE6199D5FD88CD763FB74 /* Pods-Runner.release-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-agoradesk.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-agoradesk.xcconfig"; sourceTree = "<group>"; };
+		90A590683AF974C6A903B41F /* Pods-Runner.profile-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-localmonero.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-localmonero.xcconfig"; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		A620FE442A9A4C2F0071BD85 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; name = config; path = ../../../Downloads/config; sourceTree = "<group>"; };
+		AFDB6B4760D809D9062B8BB0 /* Pods-Runner.profile-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-agoradesk.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-agoradesk.xcconfig"; sourceTree = "<group>"; };
 		B400542A2A86B35AB475F141 /* Pods-RunnerTests.debug-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-localmonero.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-localmonero.xcconfig"; sourceTree = "<group>"; };
+		CB97FDA7CCC49ED98EBE840B /* Pods-RunnerTests.release-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-localmonero.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-localmonero.xcconfig"; sourceTree = "<group>"; };
 		E6500E5A417A25D05F601B6C /* Pods-RunnerTests.debug-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-agoradesk.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-agoradesk.xcconfig"; sourceTree = "<group>"; };
 		E8B633B3A09C6E767AE6A99C /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +146,7 @@
 		33CC10E42044A3C60003C045 = {
 			isa = PBXGroup;
 			children = (
+				A620FE442A9A4C2F0071BD85 /* config */,
 				33FAB671232836740065AC1E /* Runner */,
 				33CEB47122A05771004F2AC0 /* Flutter */,
 				331C80D6294CF71000263BE5 /* RunnerTests */,
@@ -148,7 +159,7 @@
 		33CC10EE2044A3C60003C045 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33CC10ED2044A3C60003C045 /* test777.app */,
+				33CC10ED2044A3C60003C045 /* Agoradesk.app */,
 				331C80D5294CF71000263BE5 /* RunnerTests.xctest */,
 			);
 			name = Products;
@@ -202,6 +213,14 @@
 				4769F096C9DB19C922630F00 /* Pods-Runner.debug-localmonero.xcconfig */,
 				E6500E5A417A25D05F601B6C /* Pods-RunnerTests.debug-agoradesk.xcconfig */,
 				B400542A2A86B35AB475F141 /* Pods-RunnerTests.debug-localmonero.xcconfig */,
+				83ADE6199D5FD88CD763FB74 /* Pods-Runner.release-agoradesk.xcconfig */,
+				647881EE56CBFB0718E12BF3 /* Pods-Runner.release-localmonero.xcconfig */,
+				AFDB6B4760D809D9062B8BB0 /* Pods-Runner.profile-agoradesk.xcconfig */,
+				90A590683AF974C6A903B41F /* Pods-Runner.profile-localmonero.xcconfig */,
+				6725B6F5BD6E0F88F4E9575D /* Pods-RunnerTests.release-agoradesk.xcconfig */,
+				CB97FDA7CCC49ED98EBE840B /* Pods-RunnerTests.release-localmonero.xcconfig */,
+				0A820F4651C8330DC52A77C5 /* Pods-RunnerTests.profile-agoradesk.xcconfig */,
+				72FB2EED1B3526C66DA39F76 /* Pods-RunnerTests.profile-localmonero.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -256,7 +275,7 @@
 			);
 			name = Runner;
 			productName = Runner;
-			productReference = 33CC10ED2044A3C60003C045 /* test777.app */;
+			productReference = 33CC10ED2044A3C60003C045 /* Agoradesk.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -322,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */,
+				A620FE452A9A4C2F0071BD85 /* config in Resources */,
 				33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -620,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -713,7 +733,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -745,7 +765,7 @@
 		};
 		A620FE2E2A9A39030071BD85 /* Release-localmonero */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B633B3A09C6E767AE6A99C /* Pods-RunnerTests.release.xcconfig */;
+			baseConfigurationReference = CB97FDA7CCC49ED98EBE840B /* Pods-RunnerTests.release-localmonero.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -804,7 +824,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -836,7 +856,7 @@
 		};
 		A620FE322A9A39100071BD85 /* Release-agoradesk */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B633B3A09C6E767AE6A99C /* Pods-RunnerTests.release.xcconfig */;
+			baseConfigurationReference = 6725B6F5BD6E0F88F4E9575D /* Pods-RunnerTests.release-agoradesk.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -895,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -927,7 +947,7 @@
 		};
 		A620FE362A9A39210071BD85 /* Profile-localmonero */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D29C8E1E75E43F93CA0717 /* Pods-RunnerTests.profile.xcconfig */;
+			baseConfigurationReference = 72FB2EED1B3526C66DA39F76 /* Pods-RunnerTests.profile-localmonero.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -986,7 +1006,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1018,7 +1038,7 @@
 		};
 		A620FE3A2A9A392B0071BD85 /* Profile-agoradesk */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D29C8E1E75E43F93CA0717 /* Pods-RunnerTests.profile.xcconfig */;
+			baseConfigurationReference = 0A820F4651C8330DC52A77C5 /* Pods-RunnerTests.profile-agoradesk.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;

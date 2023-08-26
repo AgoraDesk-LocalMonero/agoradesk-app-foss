@@ -15,9 +15,9 @@ dependencies:
   auto_route: ^5.0.1
   vm: ^1.0.4
   auto_size_text: ^3.0.0
-  connectivity_plus: ^3.0.3
+  connectivity_plus: ^4.0.2
   flutter_verification_code: ^1.1.2+1
-  device_info_plus: ^8.0.0
+  device_info_plus: ^9.0.3
   package_info_plus: ^4.1.0
   dio: ^5.2.1
 #  dio_logging_interceptor: ^1.0.1
@@ -85,6 +85,7 @@ dependencies:
   lottie: ^2.3.2
   riverpod_annotation: ^2.1.1
   flutter_riverpod: ^2.3.6
+  uni_links_desktop: ^0.1.6
 
 dependency_overrides:
   #  flutter_foreground_task:
