@@ -236,6 +236,6 @@ class AppParameters {
   String? accessToken;
   bool appRanFromPush = false;
   bool? proxy;
-  bool debugPrintIsOn = true;
+  bool debugPrintIsOn = false;
   bool polling = false;
 }
