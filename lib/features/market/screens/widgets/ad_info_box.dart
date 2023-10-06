@@ -17,7 +17,6 @@ import 'package:agoradesk/features/market/screens/widgets/line_online_dot.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class AdInfoBox extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMethodsMixin {
@@ -101,7 +100,7 @@ class AdInfoBox extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                   flex: 1,
                   child: BoxIconP80TextN60DataN90(
                     iconData: ad.asset!.iconData(),
-                    text: ad.asset!.name + ' ' + context.intl.post8722Sbad250Sbprice250Sbtitle,
+                    text: '${ad.asset!.name} ${context.intl.post8722Sbad250Sbprice250Sbtitle}',
                     dataText: '${ad.tempPrice ?? ''} ${ad.currency}',
                   ),
                 ),
@@ -162,6 +161,15 @@ class AdInfoBox extends StatelessWidget with DateMixin, CountryInfoMixin, Paymen
                 ),
               ],
             ),
+            if (ad.paymentWindowMinutes != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: BoxIconP80TextN60DataN90(
+                  iconData: AgoraFont.clock,
+                  text: context.intl.ad8722Sbpage250Sbinfo250Sbpayment8722Sbwindow,
+                  dataText: '${ad.paymentWindowMinutes} ${context.intl.post8722Sbad250Sbreview250Sbminutes}',
+                ),
+              ),
           ],
         ),
       ),
