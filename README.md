@@ -70,7 +70,8 @@ Push notifications will be received with polling with foreground service (if the
 ## Flavors
 
 ### How to build iOS with run parameters
-- https://docs.flutter.dev/deployment/cd
+- https://stackoverflow.com/a/65315937/7198006
+- Firebase settings with flavors https://medium.com/@matt.goodson.business/separating-build-environment-configurations-in-flutter-with-firebase-doing-it-the-right-way-c72c3ad3621f
 
 ### Fastlane
 

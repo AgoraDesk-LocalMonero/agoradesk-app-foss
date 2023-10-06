@@ -23,6 +23,7 @@ import 'package:google_api_availability/google_api_availability.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
+import 'package:uni_links_desktop/uni_links_desktop.dart';
 
 import 'firebase_options_agoradesk.dart' as agoradesk_options;
 import 'firebase_options_localmonero.dart' as localmonero_options;
@@ -61,6 +62,13 @@ void main() async {
   }
 
   await setupLocalNotifications(isGoogleAvailable);
+
+  ///
+  /// Desktop specific initializations
+  ///
+  if (Platform.isWindows) {
+    registerProtocol('unilinks');
+  }
 
   ///
   /// general initializations
@@ -198,6 +206,11 @@ Future<void> setupLocalNotifications(bool isGoogleAvailable) async {
     const InitializationSettings(
       android: AndroidInitializationSettings(kNotificationIcon),
       iOS: DarwinInitializationSettings(
+        requestAlertPermission: true,
+        requestSoundPermission: true,
+        requestBadgePermission: true,
+      ),
+      macOS: DarwinInitializationSettings(
         requestAlertPermission: true,
         requestSoundPermission: true,
         requestBadgePermission: true,

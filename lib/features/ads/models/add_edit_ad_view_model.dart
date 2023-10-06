@@ -343,6 +343,10 @@ class AddEditAdViewModel extends ViewModel
         ctrl2InputLocation.text = ad!.locationString ?? '';
         displayClear = ctrl2InputLocation.text.isNotEmpty;
         // currentEditPrice = await _calcPrice(priceEquation: ad!.priceEquation!, currency: ad!.currency);
+        if (ad?.paymentWindowMinutes != null) {
+          ctrl6PaymentWindow.text = ad!.paymentWindowMinutes.toString();
+          paymentWindow = ad!.paymentWindowMinutes;
+        }
       }
     }
   }

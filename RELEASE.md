@@ -1,7 +1,7 @@
 ### Updates
-1. Fix: Some trades have no option to cancel the trade.
-2. Fix: Display error messages at the start of the trade.
-3. Fix: Ad edit screen displays a formula instead of market price.
+1. Fix: an issue where the payment window wasn't being displayed on the ad edit screen.
+2. Fix: the omission of payment window information from the ad.
+3. Fix: disputes related to local trades.
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.
