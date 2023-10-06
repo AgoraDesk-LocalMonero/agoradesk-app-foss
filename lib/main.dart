@@ -135,6 +135,11 @@ Future<void> setupLocalNotifications(bool isGoogleAvailable) async {
         requestSoundPermission: true,
         requestBadgePermission: true,
       ),
+      macOS: DarwinInitializationSettings(
+        requestAlertPermission: true,
+        requestSoundPermission: true,
+        requestBadgePermission: true,
+      ),
     ),
     onDidReceiveNotificationResponse: _notificationResponse,
   );

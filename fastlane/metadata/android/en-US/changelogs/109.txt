@@ -1,0 +1,3 @@
+1. Fix: an issue where the payment window wasn't being displayed on the ad edit screen.
+2. Fix: the omission of payment window information from the ad.
+3. Fix: disputes related to local trades.
