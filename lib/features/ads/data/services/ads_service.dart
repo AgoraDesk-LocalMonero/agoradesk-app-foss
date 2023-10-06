@@ -172,6 +172,7 @@ class AdsService {
         }
         List<AdModel> result = [];
         for (var e in respMap) {
+          print('+++++++++++++++++++++++++++++++++++++11 - ${e['data']}');
           result.add(AdModel.fromJson(e['data']));
         }
         return Either.right(Pagination(result, pagination: pagination));

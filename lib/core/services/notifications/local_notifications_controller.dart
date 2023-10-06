@@ -35,6 +35,11 @@ class LocalNotificationController with ForegroundMessagesMixin {
           requestSoundPermission: true,
           requestBadgePermission: true,
         ),
+        macOS: DarwinInitializationSettings(
+          requestAlertPermission: true,
+          requestSoundPermission: true,
+          requestBadgePermission: true,
+        ),
       ),
     );
 

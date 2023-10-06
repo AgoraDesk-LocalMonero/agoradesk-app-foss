@@ -1288,4 +1288,7 @@ class _Cookie implements Cookie {
 
     return new DateTime.utc(year, month, dayOfMonth, hour, minute, second, 0);
   }
+
+  @override
+  SameSite? sameSite;
 }
