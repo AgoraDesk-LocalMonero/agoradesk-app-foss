@@ -73,7 +73,7 @@ dependencies:
   decimal: ^2.2.0
   sticky_headers: ^0.3.0+2
   flutter_displaymode: ^0.5.0
-  flutter_inappwebview: ^5.7.2+3
+  flutter_inappwebview: ^5.8.0
   permission_handler: ^10.0.0
   restart_app: ^1.1.2
   local_auth: ^2.1.2
