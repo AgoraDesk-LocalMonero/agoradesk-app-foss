@@ -6,6 +6,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -63,6 +64,7 @@ class _TradeScreenState extends State<TradeScreen>
       apiClient: context.read<ApiClient>(),
       adsRepository: context.read<AdsRepository>(),
       appState: context.read<AppState>(),
+      notificationsService: context.read<NotificationsService>(),
     );
     _model.tabController = TabController(length: 2, vsync: this);
 

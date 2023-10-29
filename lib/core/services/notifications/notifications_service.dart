@@ -59,7 +59,6 @@ class NotificationsService with ForegroundMessagesMixin {
   }
 
   ///
-  /// Get notifications from the server
   ///
   Future markTradeNotificationsAsRead(String? tradeId) async {
     try {

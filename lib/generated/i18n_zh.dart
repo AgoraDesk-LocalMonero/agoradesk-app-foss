@@ -9484,6 +9484,9 @@ class I18nZh extends I18n {
 
   @override
   String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+
+  @override
+  String get find_user => 'Find user';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

@@ -17082,6 +17082,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.'**
   String get api_error_364;
+
+  /// No description provided for @find_user.
+  ///
+  /// In en, this message translates to:
+  /// **'Find user'**
+  String get find_user;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {
