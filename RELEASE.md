@@ -1,7 +1,9 @@
 ### Updates
-1. Fix: an issue where the payment window wasn't being displayed on the ad edit screen.
-2. Fix: the omission of payment window information from the ad.
-3. Fix: disputes related to local trades.
+1. Fix: Bug with a minimal ad edit.
+2. Fix: Markdown doesn't function in the app when viewing Terms of…
+3. Fix: Mark notifications as read - if a trade is opened and the app receives a notification about it, it should mark it as read.
+
+
 
 ### About the attached app's
 1. The `_-foss_*.apk` files are the app with Firebase/Google Cloud Messaging (FCM) services removed. Instead, the app uses a foreground service for polling notifications. This consumes more battery.

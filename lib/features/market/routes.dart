@@ -1,3 +1,4 @@
+import 'package:agoradesk/features/market/screens/find_user_screen.dart';
 import 'package:agoradesk/features/market/screens/initiate_trade_screen.dart';
 import 'package:agoradesk/features/market/screens/market_ad_info_screen.dart';
 import 'package:agoradesk/features/market/screens/market_help_screen.dart';
@@ -19,6 +20,12 @@ const marketRoutes = <AutoRoute>[
   CustomRoute(
     path: 'market/initiateTrade',
     page: InitiateTradeScreen,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+    durationInMilliseconds: 200,
+  ),
+  CustomRoute(
+    path: 'market/findUser',
+    page: FindUserScreen,
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),

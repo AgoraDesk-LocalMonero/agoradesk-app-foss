@@ -163,8 +163,12 @@ class AccountService {
   ///
   /// Mark notification as read
   ///
-  Future<Either<ApiError, bool>> markAsRead(String id) async {
+  Future<Either<ApiError, bool>> markAsRead(String? id) async {
     try {
+      if (id == null) {
+        return const Either.right(true);
+      }
+
       final resp = await _api.client.post(
         '/notifications/mark_as_read/$id',
       );

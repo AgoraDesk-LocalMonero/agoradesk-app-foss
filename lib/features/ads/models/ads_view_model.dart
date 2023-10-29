@@ -512,7 +512,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 500), () {
         if (ctrlBulkMinAmount.text.isEmpty || validateDouble(ctrlBulkMinAmount.text)) {
           minAmountValid = true;
-          minAmount = double.tryParse(ctrlBulkMinAmount.text);
+          minAmount = double.tryParse(ctrlBulkMinAmount.text.replaceAll(',', ''));
         } else {
           minAmountValid = false;
         }
@@ -523,7 +523,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 500), () {
         if (ctrlBulkMaxAmount.text.isEmpty || validateDouble(ctrlBulkMaxAmount.text)) {
           maxAmountValid = true;
-          maxAmount = double.tryParse(ctrlBulkMaxAmount.text);
+          maxAmount = double.tryParse(ctrlBulkMaxAmount.text.replaceAll(',', ''));
         } else {
           maxAmountValid = false;
         }
