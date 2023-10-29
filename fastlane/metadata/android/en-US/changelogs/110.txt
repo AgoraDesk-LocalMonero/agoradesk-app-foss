@@ -1,3 +1,3 @@
 1. Fix: Bug with a minimal ad edit.
 2. Fix: Markdown doesn't function in the app when viewing Terms of…
-3. Fix: Mark notifications as read - if a trade is opened and the app receives a notification about it, it should mark it as read.
+3. Fix: Mark notifications as read - if a trade is opened and the app receives a notification about it, it should mark it as read.14
