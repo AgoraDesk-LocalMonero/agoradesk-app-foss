@@ -99,7 +99,8 @@ mixin class ValidatorMixin {
 
   /// check if the string is Double
   bool validateDouble(String str) {
-    return double.tryParse(str) != null;
+    final newStr = str.replaceAll(',', '.');
+    return double.tryParse(newStr) != null;
   }
 
   /// check if the string is Double & < 1000

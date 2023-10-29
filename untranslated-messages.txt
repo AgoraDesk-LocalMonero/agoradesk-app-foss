@@ -1,77 +1,92 @@
 {
   "ar": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "bg": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "cs": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "da": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "de": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "el": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "es": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "fi": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "fr": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "hi": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "hu": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "id": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "it": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "ja": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "ko": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "lt": [
@@ -84,102 +99,122 @@
     "app_google_play_store_short_description_localmonero",
     "app_google_play_store_short_description_agoradesk",
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "lv": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "nb": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "nb_NO": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "nl": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "pl": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "pt": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "pt_BR": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "ro": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "ru": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "sk": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "sl": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "sv": [
     "app_google_play_store_short_description_localmonero",
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "sw": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "tl": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "tr": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "ur": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "zh": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "zh_CN": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ],
 
   "zh_TW": [
     "api_error_363",
-    "api_error_364"
+    "api_error_364",
+    "find_user"
   ]
 }
