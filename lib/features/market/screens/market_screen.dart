@@ -9,7 +9,7 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
-import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
+import 'package:agoradesk/core/widgets/branded/agora_popup_menu_button.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_outlined_p80.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
@@ -57,11 +57,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
             appBar: AgoraAppBar(
               title: context.intl.market,
               leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
-              rightAction: AppBarButton(
-                iconData: AgoraFont.help_circle,
-                label: context.intl.help,
-                onPressed: () => AutoRouter.of(context).push(const MarketHelpRoute()),
-              ),
+              rightAction: _PopupMenu(),
             ),
             // SingleChildScrollView for flexible keyboard insets
             body: KeyboardDismissOnTap(child: LayoutBuilder(builder: (context, constraints) {
@@ -462,5 +458,31 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
     return model.displayFilterMessage
         ? context.intl.dashboard250Sbads250Sbfilter250Sbapply8722Sbbtn
         : context.intl.search__no_results(model.selectedCountry.name);
+  }
+}
+
+class _PopupMenu extends StatelessWidget {
+  const _PopupMenu({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AgoraPopupMenuButton(
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+          onTap: () => () => AutoRouter.of(context).push(const MarketHelpRoute()),
+          value: 1,
+          child: Text(context.intl.help),
+        ),
+        PopupMenuItem(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+          onTap: () => AutoRouter.of(context).push(const FindUserRoute()),
+          value: 1,
+          child: Text(context.intl.find_user),
+        ),
+      ],
+    );
   }
 }

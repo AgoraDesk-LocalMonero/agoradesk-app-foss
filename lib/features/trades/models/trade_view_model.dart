@@ -10,6 +10,7 @@ import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -36,6 +37,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
@@ -61,14 +63,17 @@ class TradeViewModel extends ViewModel
     required AdsRepository adsRepository,
     required ApiClient apiClient,
     required AppState appState,
+    required NotificationsService notificationsService,
   })  : _tradeRepository = tradeRepository,
         _apiClient = apiClient,
         _accountService = accountService,
         _appState = appState,
+        _notificationsService = notificationsService,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
   final AccountService _accountService;
+  final NotificationsService _notificationsService;
   final SecureStorage secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
@@ -307,9 +312,12 @@ class TradeViewModel extends ViewModel
       await indicatorKey.currentState?.show();
       _calcTimeBeforeCancel();
       await _getMessages(polling: true);
-      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
+      await Future.delayed(const Duration(milliseconds: 500));
+      GetIt.I<AppParameters>().polling = false;
+      await _notificationsService.getNotifications();
+      await Future.delayed(const Duration(seconds: 2));
+      markNotificationsFromTradeAsRead();
     });
-    eventBus.on<UpdateOpenedChatEvent>().listen((e) {});
   }
 
   Future _getAccountInfo(String? username) async {
@@ -326,16 +334,20 @@ class TradeViewModel extends ViewModel
 
   Future markNotificationsFromTradeAsRead() async {
     int index = 0;
-    final List<String> markedAsReadIds = [];
+    final List<String> markAsReadIds = [];
     for (final n in _appState.notifications) {
       if (n.contactId == tradeForScreen.tradeId && n.read == false) {
-        markedAsReadIds.add(n.id);
+        markAsReadIds.add(n.id);
         _appState.notifications[index] = _appState.notifications[index].copyWith(read: true);
       }
       index++;
     }
-    for (final id in markedAsReadIds) {
+    for (final id in markAsReadIds) {
       await _accountService.markAsRead(id);
+    }
+    if (_appState.notifications.firstWhereOrNull((e) => e.read == false) == null) {
+      _appState.notificationsMarkedRead = true;
+      FlutterAppBadger.removeBadge();
     }
   }
 

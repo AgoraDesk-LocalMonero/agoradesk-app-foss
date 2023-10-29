@@ -339,7 +339,7 @@ class AddEditAdViewModel extends ViewModel
         } else {
           ctrl6FirstTradeMaxLimit.text = ad!.firstTimeLimitXmr != null ? ad!.firstTimeLimitXmr.toString() : '';
         }
-        firstTradeMaxLimit = double.tryParse(ctrl6FirstTradeMaxLimit.text);
+        firstTradeMaxLimit = double.tryParse(ctrl6FirstTradeMaxLimit.text.replaceAll(',', ''));
         ctrl2InputLocation.text = ad!.locationString ?? '';
         displayClear = ctrl2InputLocation.text.isNotEmpty;
         // currentEditPrice = await _calcPrice(priceEquation: ad!.priceEquation!, currency: ad!.currency);
@@ -734,7 +734,7 @@ class AddEditAdViewModel extends ViewModel
     });
     ctrl3FixedPrice.addListener(() {
       if (priceInputType == PriceInputType.fixed) {
-        currentEditPrice = double.tryParse(ctrl3FixedPrice.text) ?? 0;
+        currentEditPrice = double.tryParse(ctrl3FixedPrice.text.replaceAll(',', '')) ?? 0;
         _priceEquation = ctrl3FixedPrice.text;
       }
     });
@@ -770,7 +770,7 @@ class AddEditAdViewModel extends ViewModel
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 500), () {
         if (ctrl4MinAmount.text.isEmpty || validateDouble(ctrl4MinAmount.text)) {
           minAmountValid = true;
-          minAmount = double.tryParse(ctrl4MinAmount.text);
+          minAmount = double.tryParse(ctrl4MinAmount.text.replaceAll(',', ''));
         } else {
           minAmountValid = false;
         }
@@ -781,7 +781,7 @@ class AddEditAdViewModel extends ViewModel
       EasyDebounce.debounce(_kDebounceFormulaTag, const Duration(milliseconds: 500), () {
         if (ctrl4MaxAmount.text.isEmpty || validateDouble(ctrl4MaxAmount.text)) {
           maxAmountValid = true;
-          maxAmount = double.tryParse(ctrl4MaxAmount.text);
+          maxAmount = double.tryParse(ctrl4MaxAmount.text.replaceAll(',', '.'));
         } else {
           maxAmountValid = false;
         }
