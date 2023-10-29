@@ -1,6 +1,6 @@
 FLUTTER := $(shell which flutter)
 FLUTTER_DIR := $(FLUTTER_BIN_DIR:/bin=)
-DART := $(FLUTTER_BIN_DIR)/cache/dart-sdk/bin/dart
+DART := $(shell which dart)
 
 # # Obtain your API_KEY at https://localise.biz
 # LOCALISE_KEY := ''
@@ -145,7 +145,7 @@ beta-ios: build-ios deploy-ios
 
 .PHONY: b-r
 b-r:
-	$(FLUTTER) packages pub run build_runner build --delete-conflicting-outputs
+	$(DART) run build_runner build --delete-conflicting-outputs
 
 .PHONY: clean
 clean:
@@ -156,7 +156,7 @@ clean:
 cleanf:
 	$(FLUTTER) clean
 	$(FLUTTER) pub get
-	$(FLUTTER) packages pub run build_runner build --delete-conflicting-outputs
+	$(DART) run build_runner build --delete-conflicting-outputs
 
 .PHONY: i-clean
 i-clean:
@@ -174,7 +174,7 @@ coco:
 
 .PHONY: watch
 watch:
-	$(FLUTTER) packages pub run build_runner watch --delete-conflicting-outputs
+	$(DART) run build_runner watch --delete-conflicting-outputs
 
 .PHONY: l10n
 l10n:

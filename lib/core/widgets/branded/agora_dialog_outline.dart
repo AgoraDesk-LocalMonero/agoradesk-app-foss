@@ -1,10 +1,12 @@
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/close_icon_box.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface2_radius12_border1.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:markdown_widget/markdown_widget.dart';
 
-class AgoraDialogOutline extends StatelessWidget {
+class AgoraDialogOutline extends StatelessWidget with UrlMixin {
   const AgoraDialogOutline({
     Key? key,
     required this.title,
@@ -54,9 +56,20 @@ class AgoraDialogOutline extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: Padding(
                       padding: const EdgeInsets.all(12),
-                      child: Text(
-                        text,
-                        style: context.txtBodyXSmallN80N30,
+                      child: MarkdownWidget(
+                        data: text,
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        padding: EdgeInsets.zero,
+                        loadingWidget: const Center(child: SizedBox(height: 16)),
+                        styleConfig: StyleConfig(
+                            markdownTheme: MarkdownTheme.darkTheme,
+                            pConfig: PConfig(
+                                textStyle: context.txtBodySmallN60,
+                                linkStyle: context.txtBodySmallP70P40,
+                                onLinkTap: (url) {
+                                  openLink(url);
+                                })),
                       ),
                     )),
               ),
