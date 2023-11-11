@@ -413,10 +413,12 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
             children: [
               LineIconTextPrimary90(
                 icon: const CircleWithNum(num: 1),
-                text: context.intl
-                    .trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(
-                  GetIt.I<AppParameters>().appName,
-                ),
+                text: model.isLocalTrade
+                    ? context.intl
+                        .trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(
+                        GetIt.I<AppParameters>().appName,
+                      )
+                    : 'Waiting for the seller to fund the trade.',
               ),
               const SizedBox(height: 14),
               ContainerSurface3Radius12Border1(
@@ -425,13 +427,10 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                   child: Column(
                     children: [
                       LineDotText(
-                        text: context.intl
-                            .trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
-                      ),
-                      const SizedBox(height: 12),
-                      LineDotText(
-                        text: context.intl
-                            .trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed,
+                        text: model.isLocalTrade
+                            ? context.intl
+                                .trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed
+                            : 'Do not pay now! The trade can be canceled anytime until the seller accepts.',
                       ),
                     ],
                   ),
