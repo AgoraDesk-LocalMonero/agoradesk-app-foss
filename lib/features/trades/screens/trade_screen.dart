@@ -50,7 +50,11 @@ class TradeScreen extends StatefulWidget {
 }
 
 class _TradeScreenState extends State<TradeScreen>
-    with TickerProviderStateMixin, DateMixin, CountryInfoMixin, WidgetsBindingObserver {
+    with
+        TickerProviderStateMixin,
+        DateMixin,
+        CountryInfoMixin,
+        WidgetsBindingObserver {
   late final TradeViewModel _model;
 
   @override
@@ -74,7 +78,8 @@ class _TradeScreenState extends State<TradeScreen>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      _model.secureStorage.write(SecureStorageKey.openedTradeId, widget.tradeId ?? widget.tradeModel?.tradeId ?? '');
+      _model.secureStorage.write(SecureStorageKey.openedTradeId,
+          widget.tradeId ?? widget.tradeModel?.tradeId ?? '');
     }
     super.didChangeAppLifecycleState(state);
   }
@@ -86,7 +91,8 @@ class _TradeScreenState extends State<TradeScreen>
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: context.intl.document8722Sbtitle250Sbtrade(model.barTitle(), ''),
+              title: context.intl
+                  .document8722Sbtitle250Sbtrade(model.barTitle(), ''),
               rightAction: TradePopupMenu(model: model),
             ),
             body: GestureDetector(
@@ -150,6 +156,7 @@ class _TradeScreenState extends State<TradeScreen>
   }
 
   Widget _buildTradeTab(BuildContext context, TradeViewModel model) {
+    print('++++++++++++++++++++01 - ${model.tradeStatus.index}');
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -159,14 +166,16 @@ class _TradeScreenState extends State<TradeScreen>
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
           TradeStepThree(model: model),
-          model.tradeStatus.index < 6 || model.tradeStatus == TradeStatus.disputed
+          model.tradeStatus.index < 6 ||
+                  model.tradeStatus == TradeStatus.disputed
               ? Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                   child: BoxInfoWithLabel(
                     label: context.intl.trade250Sbstatus250Sbescrowed,
                     child: Text(
                       context.intl
-                          .trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb1(GetIt.I<AppParameters>().appName),
+                          .trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb1(
+                              GetIt.I<AppParameters>().appName),
                       style: context.txtBodyXSmallN80,
                     ),
                   ),
