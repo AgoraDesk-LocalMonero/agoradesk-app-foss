@@ -215,7 +215,7 @@ class _PopupMenu extends StatelessWidget {
       showDialog(
         barrierDismissible: true,
         context: context,
-        builder: (_) => AgoraDialogTwoButtons(
+        builder: (context) => AgoraDialogTwoButtons(
           body: Text(
             context.intl.ask_delete_ad,
             style: context.txtBodySmallN80,

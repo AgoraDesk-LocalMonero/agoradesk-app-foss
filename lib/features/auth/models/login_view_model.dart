@@ -137,7 +137,7 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
           _captchaInput = await showDialog(
             context: context,
             barrierDismissible: true,
-            builder: (_) => DialogCaptcha(
+            builder: (context) => DialogCaptcha(
               path: captchaPath,
             ),
           );
