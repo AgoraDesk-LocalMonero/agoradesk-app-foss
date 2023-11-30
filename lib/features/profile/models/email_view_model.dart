@@ -99,7 +99,7 @@ class EmailViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, Cli
           _captchaInput = await showDialog(
             context: context,
             barrierDismissible: true,
-            builder: (_) => DialogCaptcha(
+            builder: (context) => DialogCaptcha(
               path: captchaPath,
             ),
           );
@@ -130,7 +130,7 @@ class EmailViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, Cli
           deletePassword = await showDialog(
             context: context,
             barrierDismissible: true,
-            builder: (_) => DialogPassword(
+            builder: (context) => DialogPassword(
               title: context.intl.email_confirm_delete,
             ),
           );
@@ -163,7 +163,7 @@ class EmailViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin, Cli
             _captchaInput = await showDialog(
               context: context,
               barrierDismissible: true,
-              builder: (_) => DialogCaptcha(
+              builder: (context) => DialogCaptcha(
                 path: captchaPath,
               ),
             );

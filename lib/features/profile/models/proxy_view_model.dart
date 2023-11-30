@@ -191,7 +191,7 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       showDialog(
         barrierDismissible: true,
         context: context,
-        builder: (_) => AgoraDialogClose(
+        builder: (context) => AgoraDialogClose(
           title: context.intl.app_proxy_unavailable,
           text: context.intl.app_proxy_unavailable_decr,
         ),

@@ -12,13 +12,16 @@ import 'package:agoradesk/core/widgets/branded/button_icon_text_p70.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface2_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
+import 'package:agoradesk/core/widgets/branded/dialog_outline_and_filled_buttons.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/market/models/market_ad_info_view_model.dart';
 import 'package:agoradesk/features/market/screens/widgets/btc_fees_radio_buttons.dart';
+import 'package:agoradesk/features/market/screens/widgets/line_with_dot.dart';
 import 'package:agoradesk/features/market/screens/widgets/suffix_icon.dart';
 import 'package:agoradesk/features/market/screens/widgets/text_with_dot.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
@@ -258,12 +261,27 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
               filledButtonTitle: model.isSell
                   ? context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbbtn
                   : context.intl.ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue,
-              onPressedFilled: () {
-                if (model.isSell) {
-                  model.startTrade(context);
-                } else {
-                  Navigator.of(context).pop();
-                  _displayAddressDialog(context, model);
+              onPressedFilled: () async {
+                // check that the Ad price is still the same
+                // Urgent fix required: right before opening a trade the app must send a request to the ad
+                // info to make sure that the price is still the same as shown to the user currently.
+                // If not, it should notify the user with a dialogue and ask whether the user wishes to proceed
+                // the reason this is urgent is that there's a user exploiting the pause while the user is
+                // looking at the offer to change the ad's price to be 3x the market rate and scam buyers that way
+
+                final res = await model.checkTheAdPrice();
+
+                if (res == false) {
+                  await _showPriceChangeDialog(context, model);
+                }
+
+                if (res == true || model.userAgreeToChangedPrice) {
+                  if (model.isSell) {
+                    model.startTrade(context);
+                  } else {
+                    Navigator.of(context).pop();
+                    _displayAddressDialog(context, model);
+                  }
                 }
               },
               loadingFilled: model.startingTrade,
@@ -275,7 +293,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
   void _displayAddressDialog(BuildContext context, MarketAdInfoViewModel model) async {
     showDialog(
       context: context,
-      builder: (_) => KeyboardDismissOnTap(
+      builder: (context) => KeyboardDismissOnTap(
         child: ViewModelBuilder<MarketAdInfoViewModel>(
             model: model,
             disposable: false,
@@ -323,7 +341,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                       // ),
                       const SizedBox(height: 12),
                       Text(
-                        context.intl.ad250Sbconfirmation250Sbprovide8722Sbaddress250Sbyou8722Sbown + '.',
+                        '${context.intl.ad250Sbconfirmation250Sbprovide8722Sbaddress250Sbyou8722Sbown}.',
                         style: context.txtBodySmallN80,
                       ),
                       const SizedBox(height: 6),
@@ -351,7 +369,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
   void _displayBtcFeesDialog(BuildContext context, MarketAdInfoViewModel model) async {
     showDialog(
       context: context,
-      builder: (_) => KeyboardDismissOnTap(
+      builder: (context) => KeyboardDismissOnTap(
         child: ViewModelBuilder<MarketAdInfoViewModel>(
             model: model,
             disposable: false,
@@ -375,8 +393,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                context.intl.wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees +
-                                    ':',
+                                '${context.intl.wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees}:',
                                 style: context.txtLabelMediumN80,
                               ),
                               model.btcFees == null
@@ -414,5 +431,33 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
       price: model.assetPrice,
       fiatName: model.fiatName,
     );
+  }
+
+  Future<void> _showPriceChangeDialog(BuildContext context, MarketAdInfoViewModel model) async {
+     await Future.delayed(Duration.zero);
+      await showDialog(
+        barrierDismissible: true,
+        context: context,
+        builder: (context) => DialogOutlineAndFilledButtons(
+          title: 'The ad price was changed!!!',
+          content: Column(
+            children: [
+              const SizedBox(height: 6),
+              LineWithDot(text: 'Old price was ${model.ad!.tempPrice} ${model.ad!.currency}'),
+              const SizedBox(height: 6),
+              LineWithDot(text: 'New price is ${model.ad!.tempPrice} ${model.ad!.currency}'),
+              const SizedBox(height: 6),
+            ],
+          ),
+          outlineButtonTitle: 'Cancel trade',
+          onPressedOutline: () => Navigator.of(context).pop(),
+          filledButtonTitle: 'I agree',
+          onPressedFilled: () {
+            model.userAgreeToChangedPrice = true;
+            Navigator.of(context).pop();
+          },
+        ),
+      );
+    
   }
 }

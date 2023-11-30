@@ -100,7 +100,7 @@ class PinCodeViewModel extends ViewModel {
         eventBus.fire(const LogOutEvent());
       }
       AppSharedPrefs().setInt(AppSharedPrefsKey.pinAttemptsLeft, attemptsLeft);
-      showDialog(context: context, builder: (_) => _dialogInputPinWrong(context, attemptsLeft));
+      showDialog(context: context, builder: (context) => _dialogInputPinWrong(context, attemptsLeft));
       return false;
     }
     AppSharedPrefs().setInt(AppSharedPrefsKey.pinAttemptsLeft, kPinAttempts);
@@ -110,7 +110,7 @@ class PinCodeViewModel extends ViewModel {
   void handlePinInput(String pin, {bool onFull = false}) async {
     if (hasCurrentPin && !currentPinChecked && currentPin != null) {
       if (pin != currentPin) {
-        showDialog(context: context, builder: (_) => _dialogSetPinWrong(context));
+        showDialog(context: context, builder: (context) => _dialogSetPinWrong(context));
       } else if (pin.length == currentPin!.length) {
         currentPinChecked = true;
         if (pin.length < kMaxPinLength) {
@@ -122,7 +122,7 @@ class PinCodeViewModel extends ViewModel {
         isFirstPin = false;
         firstPinCode = pin;
       } else {
-        showDialog(context: context, builder: (_) => _dialogWrongLength(context));
+        showDialog(context: context, builder: (context) => _dialogWrongLength(context));
         isFirstPin = true;
         clearPins();
       }
@@ -132,7 +132,7 @@ class PinCodeViewModel extends ViewModel {
         await setPin();
         AutoRouter.of(context).pop();
       } else {
-        showDialog(context: context, builder: (_) => _dialogNotMatch(context));
+        showDialog(context: context, builder: (context) => _dialogNotMatch(context));
         isFirstPin = true;
         clearPins();
       }

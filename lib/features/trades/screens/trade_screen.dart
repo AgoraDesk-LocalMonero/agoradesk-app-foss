@@ -156,7 +156,6 @@ class _TradeScreenState extends State<TradeScreen>
   }
 
   Widget _buildTradeTab(BuildContext context, TradeViewModel model) {
-    print('++++++++++++++++++++01 - ${model.tradeStatus.index}');
     return SingleChildScrollView(
       child: Column(
         children: [

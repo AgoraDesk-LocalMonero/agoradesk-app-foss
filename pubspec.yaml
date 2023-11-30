@@ -33,7 +33,7 @@ dependencies:
   collection: ^1.15.0
   rating_dialog: ^2.0.3
   visibility_detector: ^0.3.3
-  cached_network_image: ^3.2.0
+  cached_network_image: ^3.3.0
   json_annotation: ^4.4.0
   share_plus: ^7.0.0
   hive: ^2.2.3

@@ -70,7 +70,7 @@ class ForgotPasswordViewModel extends ViewModel with ValidatorMixin, ErrorParseM
           _captchaInput = await showDialog(
             context: context,
             barrierDismissible: true,
-            builder: (_) => DialogCaptcha(
+            builder: (context) => DialogCaptcha(
               path: captchaPath,
             ),
           );
