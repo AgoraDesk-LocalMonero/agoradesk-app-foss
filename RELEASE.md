@@ -1,7 +1,7 @@
 ### Updates
-1. Fix: Bug with a minimal ad edit.
-2. Fix: Markdown doesn't function in the app when viewing Terms of…
-3. Fix: Mark notifications as read - if a trade is opened and the app receives a notification about it, it should mark it as read.
+1. Added an additional price check before initiating a trade. If the ad price has changed, prompt the user for confirmation.
+2. Now displaying the usernames of those who leave feedback in a user's profile. This allows users to see who has provided feedback and to improve their service accordingly.
+3. Changed instructions for importing reputation from the Paxful platform.
 
 
 
