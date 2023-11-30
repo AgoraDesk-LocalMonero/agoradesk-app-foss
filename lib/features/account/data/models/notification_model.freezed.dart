@@ -110,12 +110,12 @@ class _$ActivityNotificationModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ActivityNotificationModelCopyWith<$Res>
+abstract class _$$ActivityNotificationModelImplCopyWith<$Res>
     implements $ActivityNotificationModelCopyWith<$Res> {
-  factory _$$_ActivityNotificationModelCopyWith(
-          _$_ActivityNotificationModel value,
-          $Res Function(_$_ActivityNotificationModel) then) =
-      __$$_ActivityNotificationModelCopyWithImpl<$Res>;
+  factory _$$ActivityNotificationModelImplCopyWith(
+          _$ActivityNotificationModelImpl value,
+          $Res Function(_$ActivityNotificationModelImpl) then) =
+      __$$ActivityNotificationModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -130,13 +130,13 @@ abstract class _$$_ActivityNotificationModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ActivityNotificationModelCopyWithImpl<$Res>
+class __$$ActivityNotificationModelImplCopyWithImpl<$Res>
     extends _$ActivityNotificationModelCopyWithImpl<$Res,
-        _$_ActivityNotificationModel>
-    implements _$$_ActivityNotificationModelCopyWith<$Res> {
-  __$$_ActivityNotificationModelCopyWithImpl(
-      _$_ActivityNotificationModel _value,
-      $Res Function(_$_ActivityNotificationModel) _then)
+        _$ActivityNotificationModelImpl>
+    implements _$$ActivityNotificationModelImplCopyWith<$Res> {
+  __$$ActivityNotificationModelImplCopyWithImpl(
+      _$ActivityNotificationModelImpl _value,
+      $Res Function(_$ActivityNotificationModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_ActivityNotificationModelCopyWithImpl<$Res>
     Object? msg = null,
     Object? type = null,
   }) {
-    return _then(_$_ActivityNotificationModel(
+    return _then(_$ActivityNotificationModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -186,8 +186,8 @@ class __$$_ActivityNotificationModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_ActivityNotificationModel extends _ActivityNotificationModel {
-  const _$_ActivityNotificationModel(
+class _$ActivityNotificationModelImpl extends _ActivityNotificationModel {
+  const _$ActivityNotificationModelImpl(
       {required this.id,
       required this.read,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
@@ -198,8 +198,8 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
       required this.type})
       : super._();
 
-  factory _$_ActivityNotificationModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ActivityNotificationModelFromJson(json);
+  factory _$ActivityNotificationModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ActivityNotificationModelImplFromJson(json);
 
   @override
   final String id;
@@ -227,7 +227,7 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ActivityNotificationModel &&
+            other is _$ActivityNotificationModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.read, read) || other.read == read) &&
             (identical(other.createdAt, createdAt) ||
@@ -247,13 +247,13 @@ class _$_ActivityNotificationModel extends _ActivityNotificationModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ActivityNotificationModelCopyWith<_$_ActivityNotificationModel>
-      get copyWith => __$$_ActivityNotificationModelCopyWithImpl<
-          _$_ActivityNotificationModel>(this, _$identity);
+  _$$ActivityNotificationModelImplCopyWith<_$ActivityNotificationModelImpl>
+      get copyWith => __$$ActivityNotificationModelImplCopyWithImpl<
+          _$ActivityNotificationModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityNotificationModelToJson(
+    return _$$ActivityNotificationModelImplToJson(
       this,
     );
   }
@@ -271,11 +271,11 @@ abstract class _ActivityNotificationModel extends ActivityNotificationModel {
           required final String url,
           required final String msg,
           required final NotificationMessageType type}) =
-      _$_ActivityNotificationModel;
+      _$ActivityNotificationModelImpl;
   const _ActivityNotificationModel._() : super._();
 
   factory _ActivityNotificationModel.fromJson(Map<String, dynamic> json) =
-      _$_ActivityNotificationModel.fromJson;
+      _$ActivityNotificationModelImpl.fromJson;
 
   @override
   String get id;
@@ -295,6 +295,6 @@ abstract class _ActivityNotificationModel extends ActivityNotificationModel {
   NotificationMessageType get type;
   @override
   @JsonKey(ignore: true)
-  _$$_ActivityNotificationModelCopyWith<_$_ActivityNotificationModel>
+  _$$ActivityNotificationModelImplCopyWith<_$ActivityNotificationModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

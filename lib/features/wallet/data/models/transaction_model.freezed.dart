@@ -117,11 +117,11 @@ class _$TransactionModelCopyWithImpl<$Res, $Val extends TransactionModel>
 }
 
 /// @nodoc
-abstract class _$$_TransactionModelCopyWith<$Res>
+abstract class _$$TransactionModelImplCopyWith<$Res>
     implements $TransactionModelCopyWith<$Res> {
-  factory _$$_TransactionModelCopyWith(
-          _$_TransactionModel value, $Res Function(_$_TransactionModel) then) =
-      __$$_TransactionModelCopyWithImpl<$Res>;
+  factory _$$TransactionModelImplCopyWith(_$TransactionModelImpl value,
+          $Res Function(_$TransactionModelImpl) then) =
+      __$$TransactionModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -136,11 +136,11 @@ abstract class _$$_TransactionModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TransactionModelCopyWithImpl<$Res>
-    extends _$TransactionModelCopyWithImpl<$Res, _$_TransactionModel>
-    implements _$$_TransactionModelCopyWith<$Res> {
-  __$$_TransactionModelCopyWithImpl(
-      _$_TransactionModel _value, $Res Function(_$_TransactionModel) _then)
+class __$$TransactionModelImplCopyWithImpl<$Res>
+    extends _$TransactionModelCopyWithImpl<$Res, _$TransactionModelImpl>
+    implements _$$TransactionModelImplCopyWith<$Res> {
+  __$$TransactionModelImplCopyWithImpl(_$TransactionModelImpl _value,
+      $Res Function(_$TransactionModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -155,7 +155,7 @@ class __$$_TransactionModelCopyWithImpl<$Res>
     Object? asset = freezed,
     Object? description = null,
   }) {
-    return _then(_$_TransactionModel(
+    return _then(_$TransactionModelImpl(
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -194,8 +194,8 @@ class __$$_TransactionModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TransactionModel extends _TransactionModel {
-  const _$_TransactionModel(
+class _$TransactionModelImpl extends _TransactionModel {
+  const _$TransactionModelImpl(
       {required this.amount,
       @JsonKey(name: 'created_at') required this.createdAt,
       @JsonKey(name: 'tx_type') this.txNum,
@@ -206,8 +206,8 @@ class _$_TransactionModel extends _TransactionModel {
       required this.description})
       : super._();
 
-  factory _$_TransactionModel.fromJson(Map<String, dynamic> json) =>
-      _$$_TransactionModelFromJson(json);
+  factory _$TransactionModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransactionModelImplFromJson(json);
 
   @override
   final String amount;
@@ -240,7 +240,7 @@ class _$_TransactionModel extends _TransactionModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TransactionModel &&
+            other is _$TransactionModelImpl &&
             (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
@@ -261,12 +261,13 @@ class _$_TransactionModel extends _TransactionModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
-      __$$_TransactionModelCopyWithImpl<_$_TransactionModel>(this, _$identity);
+  _$$TransactionModelImplCopyWith<_$TransactionModelImpl> get copyWith =>
+      __$$TransactionModelImplCopyWithImpl<_$TransactionModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransactionModelToJson(
+    return _$$TransactionModelImplToJson(
       this,
     );
   }
@@ -281,11 +282,11 @@ abstract class _TransactionModel extends TransactionModel {
       @JsonKey(name: 'txid') final String? txId,
       @JsonKey(defaultValue: true) final bool? isSent,
       final Asset? asset,
-      required final String description}) = _$_TransactionModel;
+      required final String description}) = _$TransactionModelImpl;
   const _TransactionModel._() : super._();
 
   factory _TransactionModel.fromJson(Map<String, dynamic> json) =
-      _$_TransactionModel.fromJson;
+      _$TransactionModelImpl.fromJson;
 
   @override
   String get amount;
@@ -310,6 +311,6 @@ abstract class _TransactionModel extends TransactionModel {
   String get description;
   @override
   @JsonKey(ignore: true)
-  _$$_TransactionModelCopyWith<_$_TransactionModel> get copyWith =>
+  _$$TransactionModelImplCopyWith<_$TransactionModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

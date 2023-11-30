@@ -83,12 +83,12 @@ class _$TransactionsRequestModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_TransactionsRequestModelCopyWith<$Res>
+abstract class _$$TransactionsRequestModelImplCopyWith<$Res>
     implements $TransactionsRequestModelCopyWith<$Res> {
-  factory _$$_TransactionsRequestModelCopyWith(
-          _$_TransactionsRequestModel value,
-          $Res Function(_$_TransactionsRequestModel) then) =
-      __$$_TransactionsRequestModelCopyWithImpl<$Res>;
+  factory _$$TransactionsRequestModelImplCopyWith(
+          _$TransactionsRequestModelImpl value,
+          $Res Function(_$TransactionsRequestModelImpl) then) =
+      __$$TransactionsRequestModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,12 +99,13 @@ abstract class _$$_TransactionsRequestModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TransactionsRequestModelCopyWithImpl<$Res>
+class __$$TransactionsRequestModelImplCopyWithImpl<$Res>
     extends _$TransactionsRequestModelCopyWithImpl<$Res,
-        _$_TransactionsRequestModel>
-    implements _$$_TransactionsRequestModelCopyWith<$Res> {
-  __$$_TransactionsRequestModelCopyWithImpl(_$_TransactionsRequestModel _value,
-      $Res Function(_$_TransactionsRequestModel) _then)
+        _$TransactionsRequestModelImpl>
+    implements _$$TransactionsRequestModelImplCopyWith<$Res> {
+  __$$TransactionsRequestModelImplCopyWithImpl(
+      _$TransactionsRequestModelImpl _value,
+      $Res Function(_$TransactionsRequestModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +115,7 @@ class __$$_TransactionsRequestModelCopyWithImpl<$Res>
     Object? type = freezed,
     Object? after = freezed,
   }) {
-    return _then(_$_TransactionsRequestModel(
+    return _then(_$TransactionsRequestModelImpl(
       asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -134,15 +135,15 @@ class __$$_TransactionsRequestModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_TransactionsRequestModel implements _TransactionsRequestModel {
-  const _$_TransactionsRequestModel(
+class _$TransactionsRequestModelImpl implements _TransactionsRequestModel {
+  const _$TransactionsRequestModelImpl(
       {@JsonKey(includeIfNull: false) this.asset,
       @JsonKey(includeIfNull: false) this.type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
       this.after});
 
-  factory _$_TransactionsRequestModel.fromJson(Map<String, dynamic> json) =>
-      _$$_TransactionsRequestModelFromJson(json);
+  factory _$TransactionsRequestModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransactionsRequestModelImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -163,7 +164,7 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TransactionsRequestModel &&
+            other is _$TransactionsRequestModelImpl &&
             (identical(other.asset, asset) || other.asset == asset) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.after, after) || other.after == after));
@@ -176,13 +177,13 @@ class _$_TransactionsRequestModel implements _TransactionsRequestModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TransactionsRequestModelCopyWith<_$_TransactionsRequestModel>
-      get copyWith => __$$_TransactionsRequestModelCopyWithImpl<
-          _$_TransactionsRequestModel>(this, _$identity);
+  _$$TransactionsRequestModelImplCopyWith<_$TransactionsRequestModelImpl>
+      get copyWith => __$$TransactionsRequestModelImplCopyWithImpl<
+          _$TransactionsRequestModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransactionsRequestModelToJson(
+    return _$$TransactionsRequestModelImplToJson(
       this,
     );
   }
@@ -193,10 +194,10 @@ abstract class _TransactionsRequestModel implements TransactionsRequestModel {
       {@JsonKey(includeIfNull: false) final Asset? asset,
       @JsonKey(includeIfNull: false) final TransactionTypes? type,
       @JsonKey(includeIfNull: false, fromJson: dateFromInt, toJson: dateToInt)
-      final DateTime? after}) = _$_TransactionsRequestModel;
+      final DateTime? after}) = _$TransactionsRequestModelImpl;
 
   factory _TransactionsRequestModel.fromJson(Map<String, dynamic> json) =
-      _$_TransactionsRequestModel.fromJson;
+      _$TransactionsRequestModelImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -209,6 +210,6 @@ abstract class _TransactionsRequestModel implements TransactionsRequestModel {
   DateTime? get after;
   @override
   @JsonKey(ignore: true)
-  _$$_TransactionsRequestModelCopyWith<_$_TransactionsRequestModel>
+  _$$TransactionsRequestModelImplCopyWith<_$TransactionsRequestModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

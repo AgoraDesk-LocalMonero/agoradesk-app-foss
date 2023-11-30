@@ -6,7 +6,8 @@ part of 'push_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PushModel _$$_PushModelFromJson(Map<String, dynamic> json) => _$_PushModel(
+_$PushModelImpl _$$PushModelImplFromJson(Map<String, dynamic> json) =>
+    _$PushModelImpl(
       id: json['id'] as String?,
       read: const BoolJsonConverter().fromJson(json['read'] as String),
       createdAt: const DatetimeIntJsonConverter()
@@ -21,7 +22,7 @@ _$_PushModel _$$_PushModelFromJson(Map<String, dynamic> json) => _$_PushModel(
           .fromJson(json['subject.feedbackScore'] as String),
     );
 
-Map<String, dynamic> _$$_PushModelToJson(_$_PushModel instance) {
+Map<String, dynamic> _$$PushModelImplToJson(_$PushModelImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'read': const BoolJsonConverter().toJson(instance.read),

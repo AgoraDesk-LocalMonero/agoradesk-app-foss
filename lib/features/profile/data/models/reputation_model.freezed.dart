@@ -106,11 +106,11 @@ class _$ReputationModelCopyWithImpl<$Res, $Val extends ReputationModel>
 }
 
 /// @nodoc
-abstract class _$$_ReputationModelCopyWith<$Res>
+abstract class _$$ReputationModelImplCopyWith<$Res>
     implements $ReputationModelCopyWith<$Res> {
-  factory _$$_ReputationModelCopyWith(
-          _$_ReputationModel value, $Res Function(_$_ReputationModel) then) =
-      __$$_ReputationModelCopyWithImpl<$Res>;
+  factory _$$ReputationModelImplCopyWith(_$ReputationModelImpl value,
+          $Res Function(_$ReputationModelImpl) then) =
+      __$$ReputationModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -125,11 +125,11 @@ abstract class _$$_ReputationModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ReputationModelCopyWithImpl<$Res>
-    extends _$ReputationModelCopyWithImpl<$Res, _$_ReputationModel>
-    implements _$$_ReputationModelCopyWith<$Res> {
-  __$$_ReputationModelCopyWithImpl(
-      _$_ReputationModel _value, $Res Function(_$_ReputationModel) _then)
+class __$$ReputationModelImplCopyWithImpl<$Res>
+    extends _$ReputationModelCopyWithImpl<$Res, _$ReputationModelImpl>
+    implements _$$ReputationModelImplCopyWith<$Res> {
+  __$$ReputationModelImplCopyWithImpl(
+      _$ReputationModelImpl _value, $Res Function(_$ReputationModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -142,7 +142,7 @@ class __$$_ReputationModelCopyWithImpl<$Res>
     Object? trades = freezed,
     Object? tradeVolume = freezed,
   }) {
-    return _then(_$_ReputationModel(
+    return _then(_$ReputationModelImpl(
       username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -174,8 +174,8 @@ class __$$_ReputationModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_ReputationModel extends _ReputationModel {
-  const _$_ReputationModel(
+class _$ReputationModelImpl extends _ReputationModel {
+  const _$ReputationModelImpl(
       {@JsonKey(includeIfNull: false) this.username,
       @JsonKey(name: 'verification_code', includeIfNull: false)
       this.verificationCode,
@@ -185,8 +185,8 @@ class _$_ReputationModel extends _ReputationModel {
       @JsonKey(name: 'trade_volume', includeIfNull: false) this.tradeVolume})
       : super._();
 
-  factory _$_ReputationModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ReputationModelFromJson(json);
+  factory _$ReputationModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ReputationModelImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -216,7 +216,7 @@ class _$_ReputationModel extends _ReputationModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ReputationModel &&
+            other is _$ReputationModelImpl &&
             (identical(other.username, username) ||
                 other.username == username) &&
             (identical(other.verificationCode, verificationCode) ||
@@ -238,12 +238,13 @@ class _$_ReputationModel extends _ReputationModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ReputationModelCopyWith<_$_ReputationModel> get copyWith =>
-      __$$_ReputationModelCopyWithImpl<_$_ReputationModel>(this, _$identity);
+  _$$ReputationModelImplCopyWith<_$ReputationModelImpl> get copyWith =>
+      __$$ReputationModelImplCopyWithImpl<_$ReputationModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReputationModelToJson(
+    return _$$ReputationModelImplToJson(
       this,
     );
   }
@@ -260,11 +261,11 @@ abstract class _ReputationModel extends ReputationModel {
       final int? feedbackScore,
       @JsonKey(includeIfNull: false) final int? trades,
       @JsonKey(name: 'trade_volume', includeIfNull: false)
-      final int? tradeVolume}) = _$_ReputationModel;
+      final int? tradeVolume}) = _$ReputationModelImpl;
   const _ReputationModel._() : super._();
 
   factory _ReputationModel.fromJson(Map<String, dynamic> json) =
-      _$_ReputationModel.fromJson;
+      _$ReputationModelImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -286,6 +287,6 @@ abstract class _ReputationModel extends ReputationModel {
   int? get tradeVolume;
   @override
   @JsonKey(ignore: true)
-  _$$_ReputationModelCopyWith<_$_ReputationModel> get copyWith =>
+  _$$ReputationModelImplCopyWith<_$ReputationModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

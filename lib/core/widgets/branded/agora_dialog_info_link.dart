@@ -22,7 +22,7 @@ class AgoraDialogInfoWithMarkdown extends StatelessWidget {
         showDialog(
           barrierDismissible: true,
           context: context,
-          builder: (_) => AgoraDialogInfo(
+          builder: (context) => AgoraDialogInfo(
             title: title ?? linkTitle,
             text: text,
           ),

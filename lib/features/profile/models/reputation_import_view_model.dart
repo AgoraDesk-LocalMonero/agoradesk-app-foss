@@ -145,6 +145,7 @@ class ReputationImportViewModel extends ViewModel with ValidatorMixin, ErrorPars
       username: username,
       platform: platform.name,
     );
+  
     requesting = false;
     if (res.isRight) {
       reputations[platform.index] = reputations[platform.index].copyWith(verificationCode: res.right);

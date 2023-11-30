@@ -75,22 +75,22 @@ class _$OnlineProviderCopyWithImpl<$Res, $Val extends OnlineProvider>
 }
 
 /// @nodoc
-abstract class _$$_OnlineProviderCopyWith<$Res>
+abstract class _$$OnlineProviderImplCopyWith<$Res>
     implements $OnlineProviderCopyWith<$Res> {
-  factory _$$_OnlineProviderCopyWith(
-          _$_OnlineProvider value, $Res Function(_$_OnlineProvider) then) =
-      __$$_OnlineProviderCopyWithImpl<$Res>;
+  factory _$$OnlineProviderImplCopyWith(_$OnlineProviderImpl value,
+          $Res Function(_$OnlineProviderImpl) then) =
+      __$$OnlineProviderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String url, String code, String name, List<String> currencies});
 }
 
 /// @nodoc
-class __$$_OnlineProviderCopyWithImpl<$Res>
-    extends _$OnlineProviderCopyWithImpl<$Res, _$_OnlineProvider>
-    implements _$$_OnlineProviderCopyWith<$Res> {
-  __$$_OnlineProviderCopyWithImpl(
-      _$_OnlineProvider _value, $Res Function(_$_OnlineProvider) _then)
+class __$$OnlineProviderImplCopyWithImpl<$Res>
+    extends _$OnlineProviderCopyWithImpl<$Res, _$OnlineProviderImpl>
+    implements _$$OnlineProviderImplCopyWith<$Res> {
+  __$$OnlineProviderImplCopyWithImpl(
+      _$OnlineProviderImpl _value, $Res Function(_$OnlineProviderImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_OnlineProviderCopyWithImpl<$Res>
     Object? name = null,
     Object? currencies = null,
   }) {
-    return _then(_$_OnlineProvider(
+    return _then(_$OnlineProviderImpl(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -124,8 +124,8 @@ class __$$_OnlineProviderCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_OnlineProvider implements _OnlineProvider {
-  const _$_OnlineProvider(
+class _$OnlineProviderImpl implements _OnlineProvider {
+  const _$OnlineProviderImpl(
       {required this.url,
       required this.code,
       required this.name,
@@ -155,7 +155,7 @@ class _$_OnlineProvider implements _OnlineProvider {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OnlineProvider &&
+            other is _$OnlineProviderImpl &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.name, name) || other.name == name) &&
@@ -170,8 +170,9 @@ class _$_OnlineProvider implements _OnlineProvider {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith =>
-      __$$_OnlineProviderCopyWithImpl<_$_OnlineProvider>(this, _$identity);
+  _$$OnlineProviderImplCopyWith<_$OnlineProviderImpl> get copyWith =>
+      __$$OnlineProviderImplCopyWithImpl<_$OnlineProviderImpl>(
+          this, _$identity);
 }
 
 abstract class _OnlineProvider implements OnlineProvider {
@@ -179,7 +180,7 @@ abstract class _OnlineProvider implements OnlineProvider {
       {required final String url,
       required final String code,
       required final String name,
-      required final List<String> currencies}) = _$_OnlineProvider;
+      required final List<String> currencies}) = _$OnlineProviderImpl;
 
   @override
   String get url;
@@ -191,6 +192,6 @@ abstract class _OnlineProvider implements OnlineProvider {
   List<String> get currencies;
   @override
   @JsonKey(ignore: true)
-  _$$_OnlineProviderCopyWith<_$_OnlineProvider> get copyWith =>
+  _$$OnlineProviderImplCopyWith<_$OnlineProviderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

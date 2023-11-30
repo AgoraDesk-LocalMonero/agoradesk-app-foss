@@ -378,10 +378,10 @@ class _$AdModelCopyWithImpl<$Res, $Val extends AdModel>
 }
 
 /// @nodoc
-abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
-  factory _$$_AdModelCopyWith(
-          _$_AdModel value, $Res Function(_$_AdModel) then) =
-      __$$_AdModelCopyWithImpl<$Res>;
+abstract class _$$AdModelImplCopyWith<$Res> implements $AdModelCopyWith<$Res> {
+  factory _$$AdModelImplCopyWith(
+          _$AdModelImpl value, $Res Function(_$AdModelImpl) then) =
+      __$$AdModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -455,10 +455,11 @@ abstract class _$$_AdModelCopyWith<$Res> implements $AdModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AdModelCopyWithImpl<$Res>
-    extends _$AdModelCopyWithImpl<$Res, _$_AdModel>
-    implements _$$_AdModelCopyWith<$Res> {
-  __$$_AdModelCopyWithImpl(_$_AdModel _value, $Res Function(_$_AdModel) _then)
+class __$$AdModelImplCopyWithImpl<$Res>
+    extends _$AdModelCopyWithImpl<$Res, _$AdModelImpl>
+    implements _$$AdModelImplCopyWith<$Res> {
+  __$$AdModelImplCopyWithImpl(
+      _$AdModelImpl _value, $Res Function(_$AdModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -498,7 +499,7 @@ class __$$_AdModelCopyWithImpl<$Res>
     Object? distance = freezed,
     Object? profile = freezed,
   }) {
-    return _then(_$_AdModel(
+    return _then(_$AdModelImpl(
       asset: freezed == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -638,8 +639,8 @@ class __$$_AdModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AdModel extends _AdModel {
-  const _$_AdModel(
+class _$AdModelImpl extends _AdModel {
+  const _$AdModelImpl(
       {this.asset,
       @JsonKey(name: 'ad_id', includeIfNull: false) this.id,
       @JsonKey(name: 'created_at', includeIfNull: false) this.createdAt,
@@ -706,8 +707,8 @@ class _$_AdModel extends _AdModel {
       this.profile})
       : super._();
 
-  factory _$_AdModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AdModelFromJson(json);
+  factory _$AdModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdModelImplFromJson(json);
 
   @override
   final Asset? asset;
@@ -833,7 +834,7 @@ class _$_AdModel extends _AdModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdModel &&
+            other is _$AdModelImpl &&
             (identical(other.asset, asset) || other.asset == asset) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
@@ -940,12 +941,12 @@ class _$_AdModel extends _AdModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
-      __$$_AdModelCopyWithImpl<_$_AdModel>(this, _$identity);
+  _$$AdModelImplCopyWith<_$AdModelImpl> get copyWith =>
+      __$$AdModelImplCopyWithImpl<_$AdModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdModelToJson(
+    return _$$AdModelImplToJson(
       this,
     );
   }
@@ -1019,10 +1020,10 @@ abstract class _AdModel extends AdModel {
       @JsonKey(name: 'location_string', includeIfNull: false)
       final String? locationString,
       @JsonKey(includeIfNull: false) final double? distance,
-      final AccountInfoModel? profile}) = _$_AdModel;
+      final AccountInfoModel? profile}) = _$AdModelImpl;
   const _AdModel._() : super._();
 
-  factory _AdModel.fromJson(Map<String, dynamic> json) = _$_AdModel.fromJson;
+  factory _AdModel.fromJson(Map<String, dynamic> json) = _$AdModelImpl.fromJson;
 
   @override
   Asset? get asset;
@@ -1140,6 +1141,6 @@ abstract class _AdModel extends AdModel {
   AccountInfoModel? get profile;
   @override
   @JsonKey(ignore: true)
-  _$$_AdModelCopyWith<_$_AdModel> get copyWith =>
+  _$$AdModelImplCopyWith<_$AdModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

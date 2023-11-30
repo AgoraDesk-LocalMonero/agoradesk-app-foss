@@ -139,11 +139,11 @@ class _$MessageModelCopyWithImpl<$Res, $Val extends MessageModel>
 }
 
 /// @nodoc
-abstract class _$$_MessageModelCopyWith<$Res>
+abstract class _$$MessageModelImplCopyWith<$Res>
     implements $MessageModelCopyWith<$Res> {
-  factory _$$_MessageModelCopyWith(
-          _$_MessageModel value, $Res Function(_$_MessageModel) then) =
-      __$$_MessageModelCopyWithImpl<$Res>;
+  factory _$$MessageModelImplCopyWith(
+          _$MessageModelImpl value, $Res Function(_$MessageModelImpl) then) =
+      __$$MessageModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -168,11 +168,11 @@ abstract class _$$_MessageModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MessageModelCopyWithImpl<$Res>
-    extends _$MessageModelCopyWithImpl<$Res, _$_MessageModel>
-    implements _$$_MessageModelCopyWith<$Res> {
-  __$$_MessageModelCopyWithImpl(
-      _$_MessageModel _value, $Res Function(_$_MessageModel) _then)
+class __$$MessageModelImplCopyWithImpl<$Res>
+    extends _$MessageModelCopyWithImpl<$Res, _$MessageModelImpl>
+    implements _$$MessageModelImplCopyWith<$Res> {
+  __$$MessageModelImplCopyWithImpl(
+      _$MessageModelImpl _value, $Res Function(_$MessageModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -187,7 +187,7 @@ class __$$_MessageModelCopyWithImpl<$Res>
     Object? attachmentName = freezed,
     Object? attachmentUrl = freezed,
   }) {
-    return _then(_$_MessageModel(
+    return _then(_$MessageModelImpl(
       messageId: freezed == messageId
           ? _value.messageId
           : messageId // ignore: cast_nullable_to_non_nullable
@@ -227,8 +227,8 @@ class __$$_MessageModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_MessageModel implements _MessageModel {
-  const _$_MessageModel(
+class _$MessageModelImpl implements _MessageModel {
+  const _$MessageModelImpl(
       {@JsonKey(name: 'message_id', includeIfNull: false) this.messageId,
       @JsonKey(name: 'contact_id', includeIfNull: false) this.tradeId,
       @JsonKey(
@@ -245,8 +245,8 @@ class _$_MessageModel implements _MessageModel {
       @JsonKey(name: 'attachment_url', includeIfNull: false)
       this.attachmentUrl});
 
-  factory _$_MessageModel.fromJson(Map<String, dynamic> json) =>
-      _$$_MessageModelFromJson(json);
+  factory _$MessageModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MessageModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'message_id', includeIfNull: false)
@@ -284,7 +284,7 @@ class _$_MessageModel implements _MessageModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MessageModel &&
+            other is _$MessageModelImpl &&
             (identical(other.messageId, messageId) ||
                 other.messageId == messageId) &&
             (identical(other.tradeId, tradeId) || other.tradeId == tradeId) &&
@@ -307,12 +307,12 @@ class _$_MessageModel implements _MessageModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
-      __$$_MessageModelCopyWithImpl<_$_MessageModel>(this, _$identity);
+  _$$MessageModelImplCopyWith<_$MessageModelImpl> get copyWith =>
+      __$$MessageModelImplCopyWithImpl<_$MessageModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageModelToJson(
+    return _$$MessageModelImplToJson(
       this,
     );
   }
@@ -336,10 +336,10 @@ abstract class _MessageModel implements MessageModel {
       @JsonKey(name: 'attachment_name', includeIfNull: false)
       final String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-      final String? attachmentUrl}) = _$_MessageModel;
+      final String? attachmentUrl}) = _$MessageModelImpl;
 
   factory _MessageModel.fromJson(Map<String, dynamic> json) =
-      _$_MessageModel.fromJson;
+      _$MessageModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'message_id', includeIfNull: false)
@@ -369,6 +369,6 @@ abstract class _MessageModel implements MessageModel {
   String? get attachmentUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
+  _$$MessageModelImplCopyWith<_$MessageModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

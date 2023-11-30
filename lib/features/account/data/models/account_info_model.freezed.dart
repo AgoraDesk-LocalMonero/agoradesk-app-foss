@@ -308,11 +308,11 @@ class _$AccountInfoModelCopyWithImpl<$Res, $Val extends AccountInfoModel>
 }
 
 /// @nodoc
-abstract class _$$_AccountInfoModelCopyWith<$Res>
+abstract class _$$AccountInfoModelImplCopyWith<$Res>
     implements $AccountInfoModelCopyWith<$Res> {
-  factory _$$_AccountInfoModelCopyWith(
-          _$_AccountInfoModel value, $Res Function(_$_AccountInfoModel) then) =
-      __$$_AccountInfoModelCopyWithImpl<$Res>;
+  factory _$$AccountInfoModelImplCopyWith(_$AccountInfoModelImpl value,
+          $Res Function(_$AccountInfoModelImpl) then) =
+      __$$AccountInfoModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -376,11 +376,11 @@ abstract class _$$_AccountInfoModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AccountInfoModelCopyWithImpl<$Res>
-    extends _$AccountInfoModelCopyWithImpl<$Res, _$_AccountInfoModel>
-    implements _$$_AccountInfoModelCopyWith<$Res> {
-  __$$_AccountInfoModelCopyWithImpl(
-      _$_AccountInfoModel _value, $Res Function(_$_AccountInfoModel) _then)
+class __$$AccountInfoModelImplCopyWithImpl<$Res>
+    extends _$AccountInfoModelCopyWithImpl<$Res, _$AccountInfoModelImpl>
+    implements _$$AccountInfoModelImplCopyWith<$Res> {
+  __$$AccountInfoModelImplCopyWithImpl(_$AccountInfoModelImpl _value,
+      $Res Function(_$AccountInfoModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -413,7 +413,7 @@ class __$$_AccountInfoModelCopyWithImpl<$Res>
     Object? sanctionedAt = freezed,
     Object? sanctionExpiresAt = freezed,
   }) {
-    return _then(_$_AccountInfoModel(
+    return _then(_$AccountInfoModelImpl(
       username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -525,8 +525,8 @@ class __$$_AccountInfoModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AccountInfoModel extends _AccountInfoModel {
-  const _$_AccountInfoModel(
+class _$AccountInfoModelImpl extends _AccountInfoModel {
+  const _$AccountInfoModelImpl(
       {@JsonKey(includeIfNull: false) this.username,
       @JsonKey(name: 'feedback_score', includeIfNull: false) this.feedbackScore,
       @JsonKey(name: 'confirmed_trade_count_text', includeIfNull: false)
@@ -584,8 +584,8 @@ class _$_AccountInfoModel extends _AccountInfoModel {
       this.sanctionExpiresAt})
       : super._();
 
-  factory _$_AccountInfoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AccountInfoModelFromJson(json);
+  factory _$AccountInfoModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AccountInfoModelImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -687,7 +687,7 @@ class _$_AccountInfoModel extends _AccountInfoModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AccountInfoModel &&
+            other is _$AccountInfoModelImpl &&
             (identical(other.username, username) ||
                 other.username == username) &&
             (identical(other.feedbackScore, feedbackScore) ||
@@ -774,12 +774,13 @@ class _$_AccountInfoModel extends _AccountInfoModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith =>
-      __$$_AccountInfoModelCopyWithImpl<_$_AccountInfoModel>(this, _$identity);
+  _$$AccountInfoModelImplCopyWith<_$AccountInfoModelImpl> get copyWith =>
+      __$$AccountInfoModelImplCopyWithImpl<_$AccountInfoModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountInfoModelToJson(
+    return _$$AccountInfoModelImplToJson(
       this,
     );
   }
@@ -847,11 +848,11 @@ abstract class _AccountInfoModel extends AccountInfoModel {
           includeIfNull: false,
           fromJson: fromJsonDateOrNull,
           toJson: toJsonDateOrNull)
-      final DateTime? sanctionExpiresAt}) = _$_AccountInfoModel;
+      final DateTime? sanctionExpiresAt}) = _$AccountInfoModelImpl;
   const _AccountInfoModel._() : super._();
 
   factory _AccountInfoModel.fromJson(Map<String, dynamic> json) =
-      _$_AccountInfoModel.fromJson;
+      _$AccountInfoModelImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -945,6 +946,6 @@ abstract class _AccountInfoModel extends AccountInfoModel {
   DateTime? get sanctionExpiresAt;
   @override
   @JsonKey(ignore: true)
-  _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith =>
+  _$$AccountInfoModelImplCopyWith<_$AccountInfoModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
