@@ -14,6 +14,7 @@ class FeedbackModel with _$FeedbackModel {
     @JsonKey(name: 'feedback_type', includeIfNull: false) required FeedbackType feedbackType,
     @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate) required DateTime date,
     @JsonKey(name: 'msg', includeIfNull: false) String? text,
+    String? giver,
   }) = _FeedbackModel;
 
   factory FeedbackModel.fromJson(Map<String, dynamic> json) => _$FeedbackModelFromJson(json);

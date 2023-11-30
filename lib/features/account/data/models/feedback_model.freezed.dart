@@ -30,6 +30,7 @@ mixin _$FeedbackModel {
   DateTime get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'msg', includeIfNull: false)
   String? get text => throw _privateConstructorUsedError;
+  String? get giver => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +50,8 @@ abstract class $FeedbackModelCopyWith<$Res> {
       @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           DateTime date,
       @JsonKey(name: 'msg', includeIfNull: false)
-          String? text});
+          String? text,
+      String? giver});
 }
 
 /// @nodoc
@@ -68,6 +70,7 @@ class _$FeedbackModelCopyWithImpl<$Res, $Val extends FeedbackModel>
     Object? feedbackType = null,
     Object? date = null,
     Object? text = freezed,
+    Object? giver = freezed,
   }) {
     return _then(_value.copyWith(
       feedbackType: null == feedbackType
@@ -81,6 +84,10 @@ class _$FeedbackModelCopyWithImpl<$Res, $Val extends FeedbackModel>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      giver: freezed == giver
+          ? _value.giver
+          : giver // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -100,7 +107,8 @@ abstract class _$$_FeedbackModelCopyWith<$Res>
       @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           DateTime date,
       @JsonKey(name: 'msg', includeIfNull: false)
-          String? text});
+          String? text,
+      String? giver});
 }
 
 /// @nodoc
@@ -117,6 +125,7 @@ class __$$_FeedbackModelCopyWithImpl<$Res>
     Object? feedbackType = null,
     Object? date = null,
     Object? text = freezed,
+    Object? giver = freezed,
   }) {
     return _then(_$_FeedbackModel(
       feedbackType: null == feedbackType
@@ -130,6 +139,10 @@ class __$$_FeedbackModelCopyWithImpl<$Res>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      giver: freezed == giver
+          ? _value.giver
+          : giver // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -145,7 +158,8 @@ class _$_FeedbackModel implements _FeedbackModel {
       @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           required this.date,
       @JsonKey(name: 'msg', includeIfNull: false)
-          this.text});
+          this.text,
+      this.giver});
 
   factory _$_FeedbackModel.fromJson(Map<String, dynamic> json) =>
       _$$_FeedbackModelFromJson(json);
@@ -163,10 +177,12 @@ class _$_FeedbackModel implements _FeedbackModel {
   @override
   @JsonKey(name: 'msg', includeIfNull: false)
   final String? text;
+  @override
+  final String? giver;
 
   @override
   String toString() {
-    return 'FeedbackModel(feedbackType: $feedbackType, date: $date, text: $text)';
+    return 'FeedbackModel(feedbackType: $feedbackType, date: $date, text: $text, giver: $giver)';
   }
 
   @override
@@ -177,12 +193,13 @@ class _$_FeedbackModel implements _FeedbackModel {
             (identical(other.feedbackType, feedbackType) ||
                 other.feedbackType == feedbackType) &&
             (identical(other.date, date) || other.date == date) &&
-            (identical(other.text, text) || other.text == text));
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.giver, giver) || other.giver == giver));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, feedbackType, date, text);
+  int get hashCode => Object.hash(runtimeType, feedbackType, date, text, giver);
 
   @JsonKey(ignore: true)
   @override
@@ -205,7 +222,8 @@ abstract class _FeedbackModel implements FeedbackModel {
       @JsonKey(name: 'given_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
           required final DateTime date,
       @JsonKey(name: 'msg', includeIfNull: false)
-          final String? text}) = _$_FeedbackModel;
+          final String? text,
+      final String? giver}) = _$_FeedbackModel;
 
   factory _FeedbackModel.fromJson(Map<String, dynamic> json) =
       _$_FeedbackModel.fromJson;
@@ -223,6 +241,8 @@ abstract class _FeedbackModel implements FeedbackModel {
   @override
   @JsonKey(name: 'msg', includeIfNull: false)
   String? get text;
+  @override
+  String? get giver;
   @override
   @JsonKey(ignore: true)
   _$$_FeedbackModelCopyWith<_$_FeedbackModel> get copyWith =>

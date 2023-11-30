@@ -11,6 +11,7 @@ _$_FeedbackModel _$$_FeedbackModelFromJson(Map<String, dynamic> json) =>
       feedbackType: $enumDecode(_$FeedbackTypeEnumMap, json['feedback_type']),
       date: fromJsonDate(json['given_at'] as String),
       text: json['msg'] as String?,
+      giver: json['giver'] as String?,
     );
 
 Map<String, dynamic> _$$_FeedbackModelToJson(_$_FeedbackModel instance) {
@@ -26,6 +27,7 @@ Map<String, dynamic> _$$_FeedbackModelToJson(_$_FeedbackModel instance) {
   }
 
   writeNotNull('msg', instance.text);
+  val['giver'] = instance.giver;
   return val;
 }
 
