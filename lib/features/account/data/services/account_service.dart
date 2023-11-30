@@ -244,7 +244,6 @@ class AccountService {
         '/feedback/$username',
         queryParameters: queryParameters,
       );
-      print('++++++++++++++++++++01 - ${resp.data}');
       if (resp.statusCode == 200) {
         List<dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']));
         final res = List.from(respMap).map((i) => FeedbackModel.fromJson(i)).toList();
