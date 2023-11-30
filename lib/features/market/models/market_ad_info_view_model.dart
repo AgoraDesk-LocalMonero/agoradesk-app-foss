@@ -94,9 +94,18 @@ class MarketAdInfoViewModel extends ViewModel
   BtcFeesModel? btcFees;
   String address = '';
   bool _fieldHasValue = false;
+  bool _checkingPrice = false;
+  String? _changedAdPrice = '';
+  bool _userAgreeToChangedPrice = false;
 
   late final bool isSell;
   late final bool isAdOwner;
+
+  bool get userAgreeToChangedPrice => _userAgreeToChangedPrice;
+  set userAgreeToChangedPrice(bool v) => updateWith(userAgreeToChangedPrice: v);
+
+  String? get changedAdPrice => _changedAdPrice;
+  set changedAdPrice(String? v) => updateWith(changedAdPrice: v);
 
   bool get fieldHasValue => _fieldHasValue;
 
@@ -423,6 +432,30 @@ class MarketAdInfoViewModel extends ViewModel
     }
   }
 
+  /// returns true if prices are the same
+  Future<bool?> checkTheAdPrice() async {
+    if (!_checkingPrice) {
+      // if (!isSell || (isSell && checkWalletAddressCorrect))
+      _checkingPrice = true;
+      final adRes = await _adsRepository.getAd(adId!);
+      _checkingPrice = false;
+      if (adRes.isRight) {
+        final latestAd = adRes.right;
+        if (latestAd.tempPrice != ad?.tempPrice) {
+          changedAdPrice = latestAd.tempPrice;
+          return false;
+        } else {
+          return true;
+        }
+      } else {
+        _checkingPrice = false;
+        handleApiError(adRes.left, context);
+        return null;
+      }
+    }
+    return null;
+  }
+
   String howMuchSign(BuildContext context) {
     return context.intl.app_buy_sell(ad!.tradeType.isSell()
         ? context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy
@@ -462,6 +495,8 @@ class MarketAdInfoViewModel extends ViewModel
     bool? loadingSettings,
     bool? loadingFees,
     bool? startingTrade,
+    String? changedAdPrice,
+    bool? userAgreeToChangedPrice,
   }) async {
     bool reloadAds = false;
     _loadingAds = loadingAds ?? _loadingAds;
@@ -470,6 +505,8 @@ class MarketAdInfoViewModel extends ViewModel
     _loadingFees = loadingFees ?? _loadingFees;
     _startingTrade = startingTrade ?? _startingTrade;
     _btcFeesEnum = btcFeesEnum ?? _btcFeesEnum;
+    _changedAdPrice = changedAdPrice ?? _changedAdPrice;
+    _userAgreeToChangedPrice = userAgreeToChangedPrice ?? _userAgreeToChangedPrice;
     if ((_asset != asset && asset != null || _tradeType != tradeType && tradeType != null) && !_loadingAds) {
       reloadAds = true;
     }

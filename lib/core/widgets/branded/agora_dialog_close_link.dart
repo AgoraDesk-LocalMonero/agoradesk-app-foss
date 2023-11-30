@@ -22,7 +22,7 @@ class AgoraDialogCloseLink extends StatelessWidget {
         showDialog(
           barrierDismissible: true,
           context: context,
-          builder: (_) => AgoraDialogClose(
+          builder: (context) => AgoraDialogClose(
             title: title ?? linkTitle,
             text: text,
           ),

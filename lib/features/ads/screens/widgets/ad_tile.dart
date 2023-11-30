@@ -252,7 +252,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                               onTap: () {
                                 showDialog(
                                   context: context,
-                                  builder: (_) => AgoraDialogInfoNoTitle(
+                                  builder: (context) => AgoraDialogInfoNoTitle(
                                       child: Text(
                                     context.intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,
                                     style: context.txtBodySmallN80N30,
@@ -264,7 +264,7 @@ class AdTile extends StatelessWidget with DateMixin, CountryInfoMixin, PaymentMe
                                 onTap: () {
                                   showDialog(
                                     context: context,
-                                    builder: (_) => AgoraDialogInfoNoTitle(
+                                    builder: (context) => AgoraDialogInfoNoTitle(
                                       child: Text(
                                         context
                                             .intl.warning250Sbmin8722Sbamount8722Sbless8722Sbthan8722Sbbalance8722Sb0,

@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Theme.of(context).colorScheme.surface1,
       animationCurve: Curves.easeInOut,
       animationDuration: const Duration(milliseconds: 500),
-      bottomNavigationBuilder: (_, t) {
+      bottomNavigationBuilder: (context, t) {
         tabsRouter = t;
         return Theme(
           data: ThemeData(
