@@ -6,8 +6,8 @@ part of 'trade_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TradeModel _$$_TradeModelFromJson(Map<String, dynamic> json) =>
-    _$_TradeModel(
+_$TradeModelImpl _$$TradeModelImplFromJson(Map<String, dynamic> json) =>
+    _$TradeModelImpl(
       tradeId: json['contact_id'] as String,
       buyer: AccountInfoModel.fromJson(json['buyer'] as Map<String, dynamic>),
       seller: AccountInfoModel.fromJson(json['seller'] as Map<String, dynamic>),
@@ -54,7 +54,7 @@ _$_TradeModel _$$_TradeModelFromJson(Map<String, dynamic> json) =>
           json['transfer_to_buyer_settlement_wallet_transaction_id'] as String?,
     );
 
-Map<String, dynamic> _$$_TradeModelToJson(_$_TradeModel instance) {
+Map<String, dynamic> _$$TradeModelImplToJson(_$TradeModelImpl instance) {
   final val = <String, dynamic>{
     'contact_id': instance.tradeId,
     'buyer': instance.buyer.toJson(),

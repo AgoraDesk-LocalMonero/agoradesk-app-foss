@@ -131,10 +131,11 @@ class _$PushModelCopyWithImpl<$Res, $Val extends PushModel>
 }
 
 /// @nodoc
-abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
-  factory _$$_PushModelCopyWith(
-          _$_PushModel value, $Res Function(_$_PushModel) then) =
-      __$$_PushModelCopyWithImpl<$Res>;
+abstract class _$$PushModelImplCopyWith<$Res>
+    implements $PushModelCopyWith<$Res> {
+  factory _$$PushModelImplCopyWith(
+          _$PushModelImpl value, $Res Function(_$PushModelImpl) then) =
+      __$$PushModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -154,11 +155,11 @@ abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PushModelCopyWithImpl<$Res>
-    extends _$PushModelCopyWithImpl<$Res, _$_PushModel>
-    implements _$$_PushModelCopyWith<$Res> {
-  __$$_PushModelCopyWithImpl(
-      _$_PushModel _value, $Res Function(_$_PushModel) _then)
+class __$$PushModelImplCopyWithImpl<$Res>
+    extends _$PushModelCopyWithImpl<$Res, _$PushModelImpl>
+    implements _$$PushModelImplCopyWith<$Res> {
+  __$$PushModelImplCopyWithImpl(
+      _$PushModelImpl _value, $Res Function(_$PushModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -174,7 +175,7 @@ class __$$_PushModelCopyWithImpl<$Res>
     Object? tradeCount = null,
     Object? feedbackScore = null,
   }) {
-    return _then(_$_PushModel(
+    return _then(_$PushModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -218,8 +219,8 @@ class __$$_PushModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PushModel extends _PushModel {
-  const _$_PushModel(
+class _$PushModelImpl extends _PushModel {
+  const _$PushModelImpl(
       {this.id,
       @BoolJsonConverter() required this.read,
       @DatetimeIntJsonConverter() required this.createdAt,
@@ -235,8 +236,8 @@ class _$_PushModel extends _PushModel {
       required this.feedbackScore})
       : super._();
 
-  factory _$_PushModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PushModelFromJson(json);
+  factory _$PushModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PushModelImplFromJson(json);
 
   @override
   final String? id;
@@ -275,7 +276,7 @@ class _$_PushModel extends _PushModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PushModel &&
+            other is _$PushModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.read, read) || other.read == read) &&
             (identical(other.createdAt, createdAt) ||
@@ -300,12 +301,12 @@ class _$_PushModel extends _PushModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PushModelCopyWith<_$_PushModel> get copyWith =>
-      __$$_PushModelCopyWithImpl<_$_PushModel>(this, _$identity);
+  _$$PushModelImplCopyWith<_$PushModelImpl> get copyWith =>
+      __$$PushModelImplCopyWithImpl<_$PushModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PushModelToJson(
+    return _$$PushModelImplToJson(
       this,
     );
   }
@@ -326,11 +327,11 @@ abstract class _PushModel extends PushModel {
       required final int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-      required final int feedbackScore}) = _$_PushModel;
+      required final int feedbackScore}) = _$PushModelImpl;
   const _PushModel._() : super._();
 
   factory _PushModel.fromJson(Map<String, dynamic> json) =
-      _$_PushModel.fromJson;
+      _$PushModelImpl.fromJson;
 
   @override
   String? get id;
@@ -361,6 +362,6 @@ abstract class _PushModel extends PushModel {
   int get feedbackScore;
   @override
   @JsonKey(ignore: true)
-  _$$_PushModelCopyWith<_$_PushModel> get copyWith =>
+  _$$PushModelImplCopyWith<_$PushModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

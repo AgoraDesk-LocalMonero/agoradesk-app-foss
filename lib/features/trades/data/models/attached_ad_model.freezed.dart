@@ -111,11 +111,11 @@ class _$AttachedAdModelCopyWithImpl<$Res, $Val extends AttachedAdModel>
 }
 
 /// @nodoc
-abstract class _$$_AttachedAdModelCopyWith<$Res>
+abstract class _$$AttachedAdModelImplCopyWith<$Res>
     implements $AttachedAdModelCopyWith<$Res> {
-  factory _$$_AttachedAdModelCopyWith(
-          _$_AttachedAdModel value, $Res Function(_$_AttachedAdModel) then) =
-      __$$_AttachedAdModelCopyWithImpl<$Res>;
+  factory _$$AttachedAdModelImplCopyWith(_$AttachedAdModelImpl value,
+          $Res Function(_$AttachedAdModelImpl) then) =
+      __$$AttachedAdModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_AttachedAdModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AttachedAdModelCopyWithImpl<$Res>
-    extends _$AttachedAdModelCopyWithImpl<$Res, _$_AttachedAdModel>
-    implements _$$_AttachedAdModelCopyWith<$Res> {
-  __$$_AttachedAdModelCopyWithImpl(
-      _$_AttachedAdModel _value, $Res Function(_$_AttachedAdModel) _then)
+class __$$AttachedAdModelImplCopyWithImpl<$Res>
+    extends _$AttachedAdModelCopyWithImpl<$Res, _$AttachedAdModelImpl>
+    implements _$$AttachedAdModelImplCopyWith<$Res> {
+  __$$AttachedAdModelImplCopyWithImpl(
+      _$AttachedAdModelImpl _value, $Res Function(_$AttachedAdModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -147,7 +147,7 @@ class __$$_AttachedAdModelCopyWithImpl<$Res>
     Object? advertiser = freezed,
     Object? paymentMethod = freezed,
   }) {
-    return _then(_$_AttachedAdModel(
+    return _then(_$AttachedAdModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -175,8 +175,8 @@ class __$$_AttachedAdModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AttachedAdModel implements _AttachedAdModel {
-  const _$_AttachedAdModel(
+class _$AttachedAdModelImpl implements _AttachedAdModel {
+  const _$AttachedAdModelImpl(
       {@JsonKey(name: 'id', includeIfNull: false) this.id,
       this.asset,
       @JsonKey(name: 'trade_type') required this.tradeType,
@@ -184,8 +184,8 @@ class _$_AttachedAdModel implements _AttachedAdModel {
       @JsonKey(name: 'payment_method', includeIfNull: false)
       this.paymentMethod});
 
-  factory _$_AttachedAdModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AttachedAdModelFromJson(json);
+  factory _$AttachedAdModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AttachedAdModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'id', includeIfNull: false)
@@ -212,7 +212,7 @@ class _$_AttachedAdModel implements _AttachedAdModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AttachedAdModel &&
+            other is _$AttachedAdModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.asset, asset) || other.asset == asset) &&
             (identical(other.tradeType, tradeType) ||
@@ -231,12 +231,13 @@ class _$_AttachedAdModel implements _AttachedAdModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
-      __$$_AttachedAdModelCopyWithImpl<_$_AttachedAdModel>(this, _$identity);
+  _$$AttachedAdModelImplCopyWith<_$AttachedAdModelImpl> get copyWith =>
+      __$$AttachedAdModelImplCopyWithImpl<_$AttachedAdModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AttachedAdModelToJson(
+    return _$$AttachedAdModelImplToJson(
       this,
     );
   }
@@ -249,10 +250,10 @@ abstract class _AttachedAdModel implements AttachedAdModel {
       @JsonKey(name: 'trade_type') required final TradeType tradeType,
       final AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-      final String? paymentMethod}) = _$_AttachedAdModel;
+      final String? paymentMethod}) = _$AttachedAdModelImpl;
 
   factory _AttachedAdModel.fromJson(Map<String, dynamic> json) =
-      _$_AttachedAdModel.fromJson;
+      _$AttachedAdModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'id', includeIfNull: false)
@@ -271,6 +272,6 @@ abstract class _AttachedAdModel implements AttachedAdModel {
   String? get paymentMethod;
   @override
   @JsonKey(ignore: true)
-  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
+  _$$AttachedAdModelImplCopyWith<_$AttachedAdModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

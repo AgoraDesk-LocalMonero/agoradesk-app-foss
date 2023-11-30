@@ -104,11 +104,11 @@ class _$BtcFeesModelCopyWithImpl<$Res, $Val extends BtcFeesModel>
 }
 
 /// @nodoc
-abstract class _$$_BtcFeesModelCopyWith<$Res>
+abstract class _$$BtcFeesModelImplCopyWith<$Res>
     implements $BtcFeesModelCopyWith<$Res> {
-  factory _$$_BtcFeesModelCopyWith(
-          _$_BtcFeesModel value, $Res Function(_$_BtcFeesModel) then) =
-      __$$_BtcFeesModelCopyWithImpl<$Res>;
+  factory _$$BtcFeesModelImplCopyWith(
+          _$BtcFeesModelImpl value, $Res Function(_$BtcFeesModelImpl) then) =
+      __$$BtcFeesModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,11 +121,11 @@ abstract class _$$_BtcFeesModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BtcFeesModelCopyWithImpl<$Res>
-    extends _$BtcFeesModelCopyWithImpl<$Res, _$_BtcFeesModel>
-    implements _$$_BtcFeesModelCopyWith<$Res> {
-  __$$_BtcFeesModelCopyWithImpl(
-      _$_BtcFeesModel _value, $Res Function(_$_BtcFeesModel) _then)
+class __$$BtcFeesModelImplCopyWithImpl<$Res>
+    extends _$BtcFeesModelCopyWithImpl<$Res, _$BtcFeesModelImpl>
+    implements _$$BtcFeesModelImplCopyWith<$Res> {
+  __$$BtcFeesModelImplCopyWithImpl(
+      _$BtcFeesModelImpl _value, $Res Function(_$BtcFeesModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$_BtcFeesModelCopyWithImpl<$Res>
     Object? outgoingFeeMedium = freezed,
     Object? outgoingFeeLow = freezed,
   }) {
-    return _then(_$_BtcFeesModel(
+    return _then(_$BtcFeesModelImpl(
       outgoingFeeRateHigh: null == outgoingFeeRateHigh
           ? _value.outgoingFeeRateHigh
           : outgoingFeeRateHigh // ignore: cast_nullable_to_non_nullable
@@ -170,8 +170,8 @@ class __$$_BtcFeesModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_BtcFeesModel extends _BtcFeesModel {
-  const _$_BtcFeesModel(
+class _$BtcFeesModelImpl extends _BtcFeesModel {
+  const _$BtcFeesModelImpl(
       {@JsonKey(name: 'outgoing_fee_rate_high')
       required this.outgoingFeeRateHigh,
       @JsonKey(name: 'outgoing_fee_rate_medium')
@@ -182,8 +182,8 @@ class _$_BtcFeesModel extends _BtcFeesModel {
       @JsonKey(name: 'outgoing_fee_low') this.outgoingFeeLow})
       : super._();
 
-  factory _$_BtcFeesModel.fromJson(Map<String, dynamic> json) =>
-      _$$_BtcFeesModelFromJson(json);
+  factory _$BtcFeesModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BtcFeesModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'outgoing_fee_rate_high')
@@ -213,7 +213,7 @@ class _$_BtcFeesModel extends _BtcFeesModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BtcFeesModel &&
+            other is _$BtcFeesModelImpl &&
             (identical(other.outgoingFeeRateHigh, outgoingFeeRateHigh) ||
                 other.outgoingFeeRateHigh == outgoingFeeRateHigh) &&
             (identical(other.outgoingFeeRateMedium, outgoingFeeRateMedium) ||
@@ -242,12 +242,12 @@ class _$_BtcFeesModel extends _BtcFeesModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BtcFeesModelCopyWith<_$_BtcFeesModel> get copyWith =>
-      __$$_BtcFeesModelCopyWithImpl<_$_BtcFeesModel>(this, _$identity);
+  _$$BtcFeesModelImplCopyWith<_$BtcFeesModelImpl> get copyWith =>
+      __$$BtcFeesModelImplCopyWithImpl<_$BtcFeesModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BtcFeesModelToJson(
+    return _$$BtcFeesModelImplToJson(
       this,
     );
   }
@@ -264,11 +264,11 @@ abstract class _BtcFeesModel extends BtcFeesModel {
           @JsonKey(name: 'outgoing_fee_high') final String? outgoingFeeHigh,
           @JsonKey(name: 'outgoing_fee_medium') final String? outgoingFeeMedium,
           @JsonKey(name: 'outgoing_fee_low') final String? outgoingFeeLow}) =
-      _$_BtcFeesModel;
+      _$BtcFeesModelImpl;
   const _BtcFeesModel._() : super._();
 
   factory _BtcFeesModel.fromJson(Map<String, dynamic> json) =
-      _$_BtcFeesModel.fromJson;
+      _$BtcFeesModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'outgoing_fee_rate_high')
@@ -290,6 +290,6 @@ abstract class _BtcFeesModel extends BtcFeesModel {
   String? get outgoingFeeLow;
   @override
   @JsonKey(ignore: true)
-  _$$_BtcFeesModelCopyWith<_$_BtcFeesModel> get copyWith =>
+  _$$BtcFeesModelImplCopyWith<_$BtcFeesModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

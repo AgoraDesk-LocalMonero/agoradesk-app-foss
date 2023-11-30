@@ -144,7 +144,9 @@ class LinkAccountScreen extends StatelessWidget with ClipboardMixin {
               ),
               const SizedBox(height: 12),
               Text(
-                I18n.of(context)!.reputation_import__step__code__message(reputationPlatform.title()),
+                model.reputationPlatform == ReputationPlatform.paxful
+                    ? 'Put the code as a label on one of your offers, such that it\'s visible on your public profile. Once we\'ve verified the code, you can remove it.'
+                    : I18n.of(context)!.reputation_import__step__code__message(reputationPlatform.title()),
                 style: context.txtBodyMediumNeutral80,
               ),
               const SizedBox(height: 12),

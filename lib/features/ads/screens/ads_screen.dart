@@ -98,7 +98,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                             onPressed: () {
                               showDialog(
                                 context: context,
-                                builder: (_) => _dialogBulkDeleteAds(context, model),
+                                builder: (context) => _dialogBulkDeleteAds(context, model),
                               );
                             },
                           )

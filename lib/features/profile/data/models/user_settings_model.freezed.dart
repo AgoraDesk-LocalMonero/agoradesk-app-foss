@@ -253,11 +253,11 @@ class _$UserSettingsModelCopyWithImpl<$Res, $Val extends UserSettingsModel>
 }
 
 /// @nodoc
-abstract class _$$_UserSettingsModelCopyWith<$Res>
+abstract class _$$UserSettingsModelImplCopyWith<$Res>
     implements $UserSettingsModelCopyWith<$Res> {
-  factory _$$_UserSettingsModelCopyWith(_$_UserSettingsModel value,
-          $Res Function(_$_UserSettingsModel) then) =
-      __$$_UserSettingsModelCopyWithImpl<$Res>;
+  factory _$$UserSettingsModelImplCopyWith(_$UserSettingsModelImpl value,
+          $Res Function(_$UserSettingsModelImpl) then) =
+      __$$UserSettingsModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -308,11 +308,11 @@ abstract class _$$_UserSettingsModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserSettingsModelCopyWithImpl<$Res>
-    extends _$UserSettingsModelCopyWithImpl<$Res, _$_UserSettingsModel>
-    implements _$$_UserSettingsModelCopyWith<$Res> {
-  __$$_UserSettingsModelCopyWithImpl(
-      _$_UserSettingsModel _value, $Res Function(_$_UserSettingsModel) _then)
+class __$$UserSettingsModelImplCopyWithImpl<$Res>
+    extends _$UserSettingsModelCopyWithImpl<$Res, _$UserSettingsModelImpl>
+    implements _$$UserSettingsModelImplCopyWith<$Res> {
+  __$$UserSettingsModelImplCopyWithImpl(_$UserSettingsModelImpl _value,
+      $Res Function(_$UserSettingsModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -338,7 +338,7 @@ class __$$_UserSettingsModelCopyWithImpl<$Res>
     Object? telegramId = freezed,
     Object? twoFaEnabled = freezed,
   }) {
-    return _then(_$_UserSettingsModel(
+    return _then(_$UserSettingsModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -429,8 +429,8 @@ class __$$_UserSettingsModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_UserSettingsModel implements _UserSettingsModel {
-  _$_UserSettingsModel(
+class _$UserSettingsModelImpl implements _UserSettingsModel {
+  _$UserSettingsModelImpl(
       {@JsonKey(ignore: true) this.id,
       @JsonKey(includeIfNull: false) this.email,
       @JsonKey(name: 'email_verified', includeIfNull: false) this.emailVerified,
@@ -475,8 +475,8 @@ class _$_UserSettingsModel implements _UserSettingsModel {
           includeIfNull: false)
       this.twoFaEnabled});
 
-  factory _$_UserSettingsModel.fromJson(Map<String, dynamic> json) =>
-      _$$_UserSettingsModelFromJson(json);
+  factory _$UserSettingsModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserSettingsModelImplFromJson(json);
 
   @override
   @JsonKey(ignore: true)
@@ -551,7 +551,7 @@ class _$_UserSettingsModel implements _UserSettingsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserSettingsModel &&
+            other is _$UserSettingsModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.emailVerified, emailVerified) ||
@@ -625,13 +625,13 @@ class _$_UserSettingsModel implements _UserSettingsModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
-      __$$_UserSettingsModelCopyWithImpl<_$_UserSettingsModel>(
+  _$$UserSettingsModelImplCopyWith<_$UserSettingsModelImpl> get copyWith =>
+      __$$UserSettingsModelImplCopyWithImpl<_$UserSettingsModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserSettingsModelToJson(
+    return _$$UserSettingsModelImplToJson(
       this,
     );
   }
@@ -682,10 +682,10 @@ abstract class _UserSettingsModel implements UserSettingsModel {
           fromJson: _twoFaFromJson,
           toJson: _twoFaToJson,
           includeIfNull: false)
-      final bool? twoFaEnabled}) = _$_UserSettingsModel;
+      final bool? twoFaEnabled}) = _$UserSettingsModelImpl;
 
   factory _UserSettingsModel.fromJson(Map<String, dynamic> json) =
-      _$_UserSettingsModel.fromJson;
+      _$UserSettingsModelImpl.fromJson;
 
   @override
   @JsonKey(ignore: true)
@@ -752,6 +752,6 @@ abstract class _UserSettingsModel implements UserSettingsModel {
   bool? get twoFaEnabled;
   @override
   @JsonKey(ignore: true)
-  _$$_UserSettingsModelCopyWith<_$_UserSettingsModel> get copyWith =>
+  _$$UserSettingsModelImplCopyWith<_$UserSettingsModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -416,11 +416,11 @@ class _$TradeModelCopyWithImpl<$Res, $Val extends TradeModel>
 }
 
 /// @nodoc
-abstract class _$$_TradeModelCopyWith<$Res>
+abstract class _$$TradeModelImplCopyWith<$Res>
     implements $TradeModelCopyWith<$Res> {
-  factory _$$_TradeModelCopyWith(
-          _$_TradeModel value, $Res Function(_$_TradeModel) then) =
-      __$$_TradeModelCopyWithImpl<$Res>;
+  factory _$$TradeModelImplCopyWith(
+          _$TradeModelImpl value, $Res Function(_$TradeModelImpl) then) =
+      __$$TradeModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -497,11 +497,11 @@ abstract class _$$_TradeModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TradeModelCopyWithImpl<$Res>
-    extends _$TradeModelCopyWithImpl<$Res, _$_TradeModel>
-    implements _$$_TradeModelCopyWith<$Res> {
-  __$$_TradeModelCopyWithImpl(
-      _$_TradeModel _value, $Res Function(_$_TradeModel) _then)
+class __$$TradeModelImplCopyWithImpl<$Res>
+    extends _$TradeModelCopyWithImpl<$Res, _$TradeModelImpl>
+    implements _$$TradeModelImplCopyWith<$Res> {
+  __$$TradeModelImplCopyWithImpl(
+      _$TradeModelImpl _value, $Res Function(_$TradeModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -541,7 +541,7 @@ class __$$_TradeModelCopyWithImpl<$Res>
     Object? transferToBuyerKey = freezed,
     Object? transferToBuyerTransactionId = freezed,
   }) {
-    return _then(_$_TradeModel(
+    return _then(_$TradeModelImpl(
       tradeId: null == tradeId
           ? _value.tradeId
           : tradeId // ignore: cast_nullable_to_non_nullable
@@ -682,8 +682,8 @@ class __$$_TradeModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_TradeModel extends _TradeModel {
-  const _$_TradeModel(
+class _$TradeModelImpl extends _TradeModel {
+  const _$TradeModelImpl(
       {@JsonKey(name: 'contact_id', includeIfNull: false) required this.tradeId,
       required this.buyer,
       required this.seller,
@@ -769,8 +769,8 @@ class _$_TradeModel extends _TradeModel {
       this.transferToBuyerTransactionId})
       : super._();
 
-  factory _$_TradeModel.fromJson(Map<String, dynamic> json) =>
-      _$$_TradeModelFromJson(json);
+  factory _$TradeModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TradeModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'contact_id', includeIfNull: false)
@@ -915,7 +915,7 @@ class _$_TradeModel extends _TradeModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TradeModel &&
+            other is _$TradeModelImpl &&
             (identical(other.tradeId, tradeId) || other.tradeId == tradeId) &&
             (identical(other.buyer, buyer) || other.buyer == buyer) &&
             (identical(other.seller, seller) || other.seller == seller) &&
@@ -1026,12 +1026,12 @@ class _$_TradeModel extends _TradeModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TradeModelCopyWith<_$_TradeModel> get copyWith =>
-      __$$_TradeModelCopyWithImpl<_$_TradeModel>(this, _$identity);
+  _$$TradeModelImplCopyWith<_$TradeModelImpl> get copyWith =>
+      __$$TradeModelImplCopyWithImpl<_$TradeModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TradeModelToJson(
+    return _$$TradeModelImplToJson(
       this,
     );
   }
@@ -1105,11 +1105,11 @@ abstract class _TradeModel extends TradeModel {
       @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_key', includeIfNull: false)
       final String? transferToBuyerKey,
       @JsonKey(name: 'transfer_to_buyer_settlement_wallet_transaction_id', includeIfNull: false)
-      final String? transferToBuyerTransactionId}) = _$_TradeModel;
+      final String? transferToBuyerTransactionId}) = _$TradeModelImpl;
   const _TradeModel._() : super._();
 
   factory _TradeModel.fromJson(Map<String, dynamic> json) =
-      _$_TradeModel.fromJson;
+      _$TradeModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'contact_id', includeIfNull: false)
@@ -1246,6 +1246,6 @@ abstract class _TradeModel extends TradeModel {
   String? get transferToBuyerTransactionId;
   @override
   @JsonKey(ignore: true)
-  _$$_TradeModelCopyWith<_$_TradeModel> get copyWith =>
+  _$$TradeModelImplCopyWith<_$TradeModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

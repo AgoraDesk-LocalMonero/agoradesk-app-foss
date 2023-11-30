@@ -6,8 +6,8 @@ part of 'address_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AddressModel _$$_AddressModelFromJson(Map<String, dynamic> json) =>
-    _$_AddressModel(
+_$AddressModelImpl _$$AddressModelImplFromJson(Map<String, dynamic> json) =>
+    _$AddressModelImpl(
       id: json['id'] as String,
       savedAt: fromJsonDate(json['saved_at'] as String),
       asset: fromJsonAsset(json['asset'] as String),
@@ -15,7 +15,7 @@ _$_AddressModel _$$_AddressModelFromJson(Map<String, dynamic> json) =>
       label: json['label'] as String?,
     );
 
-Map<String, dynamic> _$$_AddressModelToJson(_$_AddressModel instance) {
+Map<String, dynamic> _$$AddressModelImplToJson(_$AddressModelImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'saved_at': toJsonDate(instance.savedAt),

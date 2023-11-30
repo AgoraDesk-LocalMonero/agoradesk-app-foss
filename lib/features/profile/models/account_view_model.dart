@@ -77,7 +77,7 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
     showDialog(
       barrierDismissible: true,
       context: context,
-      builder: (_) => AgoraDialogTwoButtons(
+      builder: (context) => AgoraDialogTwoButtons(
         body: Text(context.intl.app_anonymous_crash_diagnostics_restart),
         mainAction: Restart.restartApp,
         mainActionText: context.intl.app_restart_now,
@@ -102,7 +102,7 @@ class AccountViewModel extends ViewModel with ValidatorMixin {
         await showDialog(
           barrierDismissible: true,
           context: context,
-          builder: (_) => AgoraDialogTwoButtons(
+          builder: (context) => AgoraDialogTwoButtons(
             title: context.intl.app_biometric_authentication,
             body: Text(context.intl.app_biometric_authentication_message),
             mainActionText: context.intl.pin_set,

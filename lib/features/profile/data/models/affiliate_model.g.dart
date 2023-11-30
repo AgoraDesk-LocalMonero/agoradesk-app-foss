@@ -6,14 +6,15 @@ part of 'affiliate_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AffiliateModel _$$_AffiliateModelFromJson(Map<String, dynamic> json) =>
-    _$_AffiliateModel(
+_$AffiliateModelImpl _$$AffiliateModelImplFromJson(Map<String, dynamic> json) =>
+    _$AffiliateModelImpl(
       code: json['code'] as String,
       usersCount: json['referred_user_count'] as int,
       enabled: json['enabled'] as bool?,
     );
 
-Map<String, dynamic> _$$_AffiliateModelToJson(_$_AffiliateModel instance) =>
+Map<String, dynamic> _$$AffiliateModelImplToJson(
+        _$AffiliateModelImpl instance) =>
     <String, dynamic>{
       'code': instance.code,
       'referred_user_count': instance.usersCount,

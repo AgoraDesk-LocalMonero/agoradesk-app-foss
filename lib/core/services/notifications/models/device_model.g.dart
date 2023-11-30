@@ -6,14 +6,14 @@ part of 'device_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeviceModel _$$_DeviceModelFromJson(Map<String, dynamic> json) =>
-    _$_DeviceModel(
+_$DeviceModelImpl _$$DeviceModelImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceModelImpl(
       type: json['type'] as String?,
       deviceName: json['device_name'] as String?,
       token: json['token'] as String,
     );
 
-Map<String, dynamic> _$$_DeviceModelToJson(_$_DeviceModel instance) {
+Map<String, dynamic> _$$DeviceModelImplToJson(_$DeviceModelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

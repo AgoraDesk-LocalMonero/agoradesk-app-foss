@@ -125,12 +125,12 @@ class _$AdsRequestParameterModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
+abstract class _$$AdsRequestParameterModelImplCopyWith<$Res>
     implements $AdsRequestParameterModelCopyWith<$Res> {
-  factory _$$_AdsRequestParameterModelCopyWith(
-          _$_AdsRequestParameterModel value,
-          $Res Function(_$_AdsRequestParameterModel) then) =
-      __$$_AdsRequestParameterModelCopyWithImpl<$Res>;
+  factory _$$AdsRequestParameterModelImplCopyWith(
+          _$AdsRequestParameterModelImpl value,
+          $Res Function(_$AdsRequestParameterModelImpl) then) =
+      __$$AdsRequestParameterModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -148,12 +148,13 @@ abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
+class __$$AdsRequestParameterModelImplCopyWithImpl<$Res>
     extends _$AdsRequestParameterModelCopyWithImpl<$Res,
-        _$_AdsRequestParameterModel>
-    implements _$$_AdsRequestParameterModelCopyWith<$Res> {
-  __$$_AdsRequestParameterModelCopyWithImpl(_$_AdsRequestParameterModel _value,
-      $Res Function(_$_AdsRequestParameterModel) _then)
+        _$AdsRequestParameterModelImpl>
+    implements _$$AdsRequestParameterModelImplCopyWith<$Res> {
+  __$$AdsRequestParameterModelImplCopyWithImpl(
+      _$AdsRequestParameterModelImpl _value,
+      $Res Function(_$AdsRequestParameterModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -168,7 +169,7 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
     Object? sort = freezed,
     Object? paymentMethodCode = freezed,
   }) {
-    return _then(_$_AdsRequestParameterModel(
+    return _then(_$AdsRequestParameterModelImpl(
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -208,8 +209,8 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
-  const _$_AdsRequestParameterModel(
+class _$AdsRequestParameterModelImpl implements _AdsRequestParameterModel {
+  const _$AdsRequestParameterModelImpl(
       {@JsonKey(includeIfNull: false) this.page,
       @JsonKey(name: 'countrycode', includeIfNull: false) this.countryCode,
       @JsonKey(name: 'currency', includeIfNull: false) this.currencyCode,
@@ -222,8 +223,8 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
       this.paymentMethodCode});
 
-  factory _$_AdsRequestParameterModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AdsRequestParameterModelFromJson(json);
+  factory _$AdsRequestParameterModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdsRequestParameterModelImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -259,7 +260,7 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdsRequestParameterModel &&
+            other is _$AdsRequestParameterModelImpl &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.countryCode, countryCode) ||
                 other.countryCode == countryCode) &&
@@ -282,13 +283,13 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
-      get copyWith => __$$_AdsRequestParameterModelCopyWithImpl<
-          _$_AdsRequestParameterModel>(this, _$identity);
+  _$$AdsRequestParameterModelImplCopyWith<_$AdsRequestParameterModelImpl>
+      get copyWith => __$$AdsRequestParameterModelImplCopyWithImpl<
+          _$AdsRequestParameterModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdsRequestParameterModelToJson(
+    return _$$AdsRequestParameterModelImplToJson(
       this,
     );
   }
@@ -309,10 +310,10 @@ abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
       @JsonKey(name: 'asset', includeIfNull: false) final Asset? asset,
       @JsonKey(includeIfNull: false) final String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-      final String? paymentMethodCode}) = _$_AdsRequestParameterModel;
+      final String? paymentMethodCode}) = _$AdsRequestParameterModelImpl;
 
   factory _AdsRequestParameterModel.fromJson(Map<String, dynamic> json) =
-      _$_AdsRequestParameterModel.fromJson;
+      _$AdsRequestParameterModelImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -340,6 +341,6 @@ abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
   String? get paymentMethodCode;
   @override
   @JsonKey(ignore: true)
-  _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
+  _$$AdsRequestParameterModelImplCopyWith<_$AdsRequestParameterModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

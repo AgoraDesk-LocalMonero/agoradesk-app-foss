@@ -6,9 +6,9 @@ part of 'wallet_balance_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_WalletBalanceModel _$$_WalletBalanceModelFromJson(
+_$WalletBalanceModelImpl _$$WalletBalanceModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_WalletBalanceModel(
+    _$WalletBalanceModelImpl(
       balance: const _NestedBalanceConverter()
           .fromJson(json['total'] as Map<String, dynamic>),
       receivingAddress: json['receiving_address'] as String,
@@ -21,8 +21,8 @@ _$_WalletBalanceModel _$$_WalletBalanceModelFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_WalletBalanceModelToJson(
-        _$_WalletBalanceModel instance) =>
+Map<String, dynamic> _$$WalletBalanceModelImplToJson(
+        _$WalletBalanceModelImpl instance) =>
     <String, dynamic>{
       'total': const _NestedBalanceConverter().toJson(instance.balance),
       'receiving_address': instance.receivingAddress,
