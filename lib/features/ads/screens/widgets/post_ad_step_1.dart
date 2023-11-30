@@ -64,7 +64,7 @@ class _PostAdStep1State extends State<PostAdStep1> {
     showDialog(
       barrierDismissible: true,
       context: context,
-      builder: (_) => DialogInfoS4WithCloseChildContinue(
+      builder: (context) => DialogInfoS4WithCloseChildContinue(
         title: context.intl.post8722Sbad250Sbrules8722Sbtitle,
         child: const AdsTerms(),
       ),

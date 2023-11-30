@@ -35,6 +35,15 @@ class FeedbackTile extends StatelessWidget with DateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  feedback.giver != null && feedback.giver!.isNotEmpty
+                      ? Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
+                          child: Text(
+                            feedback.giver!,
+                            style: context.txtBodyXSmallN80,
+                          ),
+                        )
+                      : const SizedBox(),
                   feedback.text != null && feedback.text!.isNotEmpty
                       ? Padding(
                           padding: const EdgeInsets.fromLTRB(0, 0, 0, 4),
