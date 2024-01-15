@@ -35,6 +35,7 @@ class WebviewLoginWidgetState extends State<WebviewLoginWidget> {
       supportZoom: false,
       useShouldOverrideUrlLoading: true,
       mediaPlaybackRequiresUserGesture: false,
+      
     ),
     android: AndroidInAppWebViewOptions(
       useHybridComposition: true,
