@@ -35,10 +35,20 @@ class AgoraTwoTabsBar extends StatelessWidget {
             highlightColor: Colors.transparent,
             splashColor: Colors.transparent,
             brightness: Theme.of(context).brightness,
+            colorScheme: Theme.of(context).colorScheme.copyWith(
+                  primary: Colors.transparent,
+                  secondary: Colors.transparent,
+                  surface: Colors.transparent,
+                  background: Colors.transparent,
+                  onBackground: Colors.transparent,
+                  onPrimary: Colors.transparent,
+                ),
           ),
           child: TabBar(
             controller: controller,
             overlayColor: MaterialStateProperty.all(Colors.transparent),
+            labelColor: Colors.transparent,
+            dividerColor: Colors.transparent,
             indicator: BoxDecoration(
               color: Theme.of(context).colorScheme.highlight,
               borderRadius: BorderRadius.only(
