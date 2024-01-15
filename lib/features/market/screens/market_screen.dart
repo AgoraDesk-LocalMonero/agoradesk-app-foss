@@ -57,7 +57,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
             appBar: AgoraAppBar(
               title: context.intl.market,
               leftAction: model.isGuestMode ? const SizedBox() : const NotificationsAppBarButton(),
-              rightAction: _PopupMenu(),
+              rightAction: const _PopupMenu(),
             ),
             // SingleChildScrollView for flexible keyboard insets
             body: KeyboardDismissOnTap(child: LayoutBuilder(builder: (context, constraints) {
@@ -81,6 +81,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
   }
 
   Widget _buildSelectAdType(BuildContext context, MarketViewModel model) {
+    final bool isLocalTrade = model.tradeType!.isLocal();
     return HeaderShadow(
       children: [
         Row(
@@ -158,6 +159,44 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
             ),
           ],
         ),
+        const SizedBox(height: 12),
+        SizedBox(
+          height: 48,
+          width: MediaQuery.of(context).size.width - 16,
+          child: isLocalTrade
+              ? const CashTextField()
+              : Semantics(
+                  label: context.intl.app_select_payment_method,
+                  child: DropdownSearch<OnlineProvider>(
+                    dropdownButtonProps: context.dropdownButtonProps(label: context.intl.app_select_payment_method),
+                    dropdownDecoratorProps: context.dropdownDecoration,
+                    popupProps: PopupProps.dialog(
+                      dialogProps: context.dropdownDialogProps,
+                      showSearchBox: true,
+                      searchFieldProps: TextFieldProps(
+                        autofocus: true,
+                        decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
+                      ),
+                      itemBuilder: (context, val, isSelected) {
+                        return DropdownAssetLineWithIcon(
+                          name: val.name,
+                          svgPath: 'assets/banks/${val.code}.svg',
+                        );
+                      },
+                    ),
+                    asyncItems: (String? filter) => model.getCountryPaymentMethods(model.selectedCountry.code, context),
+                    onChanged: (val) => model.changeOnlineProvider(val),
+                    selectedItem: model.selectedOnlineProvider,
+                    dropdownBuilder: (context, val) {
+                      return DropdownAssetLineWithIcon(
+                        name: val!.name,
+                        svgPath: 'assets/banks/${val.code}.svg',
+                        padding: const EdgeInsets.all(0),
+                      );
+                    },
+                  ),
+                ),
+        ),
       ],
     );
   }
@@ -228,42 +267,6 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                                     ),
                                   )
                                 : const SizedBox(),
-                            isLocalTrade
-                                ? const CashTextField()
-                                : Semantics(
-                                    label: context.intl.app_select_payment_method,
-                                    child: DropdownSearch<OnlineProvider>(
-                                      dropdownButtonProps:
-                                          context.dropdownButtonProps(label: context.intl.app_select_payment_method),
-                                      dropdownDecoratorProps: context.dropdownDecoration,
-                                      popupProps: PopupProps.dialog(
-                                        dialogProps: context.dropdownDialogProps,
-                                        showSearchBox: true,
-                                        searchFieldProps: TextFieldProps(
-                                          autofocus: true,
-                                          decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
-                                        ),
-                                        itemBuilder: (context, val, isSelected) {
-                                          return DropdownAssetLineWithIcon(
-                                            name: val.name,
-                                            svgPath: 'assets/banks/${val.code}.svg',
-                                          );
-                                        },
-                                      ),
-                                      asyncItems: (String? filter) =>
-                                          model.getCountryPaymentMethods(model.selectedCountry.code, context),
-                                      onChanged: (val) => model.changeOnlineProvider(val),
-                                      selectedItem: model.selectedOnlineProvider,
-                                      dropdownBuilder: (context, val) {
-                                        return DropdownAssetLineWithIcon(
-                                          name: val!.name,
-                                          svgPath: 'assets/banks/${val.code}.svg',
-                                          padding: const EdgeInsets.all(0),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                            const SizedBox(height: 12),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                               child: Row(
