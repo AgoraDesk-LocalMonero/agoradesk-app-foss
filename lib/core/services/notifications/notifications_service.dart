@@ -32,7 +32,7 @@ import '../../events.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
-const _kPeriodCheckTokenUpdatesDays = 3;
+const _kPeriodCheckTokenUpdatesDays = 2;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
