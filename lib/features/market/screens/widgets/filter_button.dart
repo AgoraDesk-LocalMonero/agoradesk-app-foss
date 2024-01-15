@@ -26,7 +26,8 @@ class FilterButton extends StatelessWidget {
             color: selected ? context.colHighlight : context.colS3,
             border: Border.all(
               width: 1,
-              color: selected ? context.colHighlight : context.colS3,
+              // color: selected ? context.colHighlight : context.colS3,
+              color: selected ? context.colP90.withOpacity(0.5) : context.colP90.withOpacity(0.3),
             ),
             borderRadius: const BorderRadius.all(
               Radius.circular(5),

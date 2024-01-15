@@ -216,6 +216,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -230,7 +231,10 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
                   onPressed: () {
                     copyToClipboard(model.tradeForScreen.assetAmount, context);
                   },
-                  padding: EdgeInsets.zero,
+                  padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                  style: const ButtonStyle(
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap, // the '2023' part
+                  ),
                   constraints: const BoxConstraints(maxHeight: 12),
                   icon: Icon(AgoraFont.copy_alt, color: context.colP70, size: 12),
                 ),
@@ -248,6 +252,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
                 ),
               ],
             ),
+            const SizedBox(height: 2),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -259,7 +264,10 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
                   onPressed: () {
                     copyToClipboard(model.tradeForScreen.amount, context);
                   },
-                  padding: EdgeInsets.zero,
+                  style: const ButtonStyle(
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap, // the '2023' part
+                  ),
+                  padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
                   constraints: const BoxConstraints(maxHeight: 12),
                   icon: Icon(AgoraFont.copy_alt, color: context.colP70, size: 12),
                 ),

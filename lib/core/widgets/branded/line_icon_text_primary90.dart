@@ -26,14 +26,12 @@ class LineIconTextPrimary90 extends StatelessWidget {
           icon != null ? Center(child: icon) : const SizedBox(),
           icon != null ? const SizedBox(width: 6) : const SizedBox(),
           icon != null
-              ? Expanded(
-                  child: AutoSizeText(
-                    text,
-                    maxLines: 1,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
-                        ),
-                  ),
+              ? AutoSizeText(
+                  text,
+                  maxLines: 1,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
+                      ),
                 )
               : Center(
                   child: AutoSizeText(
