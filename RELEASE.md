@@ -1,7 +1,7 @@
 ### Updates
-1. Moved payment method selection button to the main screen.
-2. Fixed iOS push notifications bug.
-3. Fixed UI issiue when the amount and payment method are overlapping the other text.
+1. Moved the payment method selection button to the main screen.
+2. Fixed the iOS push notifications bug.
+3. Fixed the UI issue where the amount and payment method were overlapping with other text.
 
 
 ### About the attached app's
