@@ -429,6 +429,7 @@ class MarketViewModel extends ViewModel
     if (worldwideMethods.contains(val?.code)) {
       changeSelectedCountryCode(kAnyCountryCode);
     }
+    indicatorKey.currentState?.show();
   }
 
   void clearFilter() {
