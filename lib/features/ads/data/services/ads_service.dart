@@ -11,6 +11,7 @@ import 'package:agoradesk/features/ads/data/models/country_code_model.dart';
 import 'package:agoradesk/features/ads/data/models/currency_model.dart';
 import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
+import 'package:flutter/material.dart';
 
 class AdsService {
   AdsService({
@@ -71,11 +72,16 @@ class AdsService {
         request += '/$country';
       }
       final resp = await _api.client.get(request);
+
       if (resp.statusCode == 200) {
         Map<String, dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['methods']));
         List<OnlineProvider> result = [];
         for (var e in respMap.entries) {
-          result.add(OnlineProvider.fromJson(e));
+          try {
+            result.add(OnlineProvider.fromJson(e));
+          } catch (e) {
+            debugPrint('++++getCountryCodes parsing mpayment method error - $e');
+          }
         }
         return Either.right(result);
       } else {
@@ -83,6 +89,7 @@ class AdsService {
         return Either.left(apiError);
       }
     } catch (e) {
+      debugPrint('++++getCountryCodes error - $e');
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       return Either.left(apiError);
     }
