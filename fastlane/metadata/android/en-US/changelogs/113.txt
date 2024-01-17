@@ -1,0 +1,1 @@
+1. Hotfix: Select the payment methods bug.
