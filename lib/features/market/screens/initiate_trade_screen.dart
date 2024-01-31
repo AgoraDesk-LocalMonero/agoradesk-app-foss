@@ -3,6 +3,7 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
+import 'package:agoradesk/core/widgets/app_markdown_widget.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_on_filled_button.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
@@ -240,9 +241,8 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                       ContainerSurface2Radius12Border1(
                         child: Padding(
                           padding: const EdgeInsets.all(10),
-                          child: Text(
-                            model.ad!.msg?.trim() ?? '',
-                            style: context.txtBodyXSmallN80,
+                          child: AppMarkdownWidget(
+                            text: model.ad!.msg?.trim() ?? '',
                           ),
                         ),
                       ),

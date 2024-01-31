@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
+import 'package:agoradesk/core/widgets/app_markdown_widget.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -39,29 +40,7 @@ class AgoraDialogCloseMarkDown extends StatelessWidget with UrlMixin {
               style: context.txtHeadMediumN90,
             ),
             const SizedBox(height: 16),
-            MarkdownWidget(
-              data: text,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.zero,
-              styleConfig: StyleConfig(
-                markdownTheme: MarkdownTheme.darkTheme,
-                titleConfig: TitleConfig(
-                  commonStyle: context.txtBodySmallN80,
-                ),
-                pConfig: PConfig(
-                    textStyle: context.txtBodySmallN80,
-                    onLinkTap: (url) {
-                      openLinkExt(url);
-                    }),
-                ulConfig: UlConfig(
-                  textStyle: context.txtBodySmallN80,
-                ),
-                olConfig: OlConfig(
-                  textStyle: context.txtBodySmallN80,
-                ),
-              ),
-            ),
+            AppMarkdownWidget(text: text),
             // Text(
             //   text,
             //   style: context.txtBodySmallN80,

@@ -1,0 +1,2 @@
+1. Fixed issue with Markdown.
+2. Updated price formulas.
