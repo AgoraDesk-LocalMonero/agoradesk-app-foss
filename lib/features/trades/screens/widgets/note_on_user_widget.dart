@@ -2,6 +2,7 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
+import 'package:agoradesk/core/widgets/app_markdown_widget.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_two_buttons.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_n80n30.dart';
 import 'package:agoradesk/core/widgets/branded/button_icon_text_p80.dart';
@@ -97,16 +98,8 @@ class NoteOnUserWidget extends StatelessWidget with StringMixin, DateMixin {
 
   Widget _buildNoteBody(BuildContext context, NoteOnUserViewModel model) {
     Widget markDown = model.noteIsNotEmpty()
-        ? MarkdownWidget(
-            data: replaceForMarkdown(model.note!.content),
-            shrinkWrap: true,
-            styleConfig: StyleConfig(
-              markdownTheme: MarkdownTheme.darkTheme,
-              pConfig: PConfig(
-                textStyle: context.txtBodySmallN80N30,
-                strongStyle: context.txtLabelLargeP80P40,
-              ),
-            ),
+        ? AppMarkdownWidget(
+            text: replaceForMarkdown(model.note!.content),
           )
         : const SizedBox();
 

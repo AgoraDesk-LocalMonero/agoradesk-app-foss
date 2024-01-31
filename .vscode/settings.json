@@ -1,3 +1,15 @@
 {
+  "dart.lineLength": 120,
+  "[dart]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.rulers": [120],
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true
+  },
+  "chat.editor.fontSize": 10,
   "java.configuration.updateBuildConfiguration": "disabled"
 }

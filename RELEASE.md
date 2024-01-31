@@ -1,5 +1,6 @@
 ### Updates
-1. Hotfix: Select the payment methods bug.
+1. Fixed issue with Markdown.
+2. Updated price formulas.
 
 
 ### About the attached app's
