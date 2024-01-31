@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/features/auth/models/sign_up_view_model.dart';
+import 'package:agoradesk/features/auth/screens/widgets/webview_login_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -92,7 +93,7 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
           'User-Agent': 'AgoraDesk',
         },
       ),
-      initialOptions: _options,
+      initialSettings: kWebviewSettings,
       onWebViewCreated: (controller) async {
         _webController = controller;
         await _webController?.loadUrl(urlRequest: URLRequest(url: _uri));

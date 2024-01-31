@@ -2,6 +2,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
+import 'package:agoradesk/features/auth/screens/widgets/webview_login_widget.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -30,34 +31,6 @@ class WebViewExampleState extends State<WebviewScreen> {
   late final InAppWebViewController? _webViewController;
   CookieManager cookieManager = CookieManager.instance();
 
-  final InAppWebViewSettings _settings = InAppWebViewSettings(
-    javaScriptEnabled: true,
-    javaScriptCanOpenWindowsAutomatically: true,
-    mediaPlaybackRequiresUserGesture: false,
-    useWideViewPort: true,
-    loadWithOverviewMode: true,
-    supportZoom: false,
-    cacheEnabled: false,
-    transparentBackground: true,
-    disableContextMenu: true,
-    userAgent: 'AgoraDesk',
-    disableLongPressContextMenuOnLinks: false,
-  );
-
-  // final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-  //   crossPlatform: InAppWebViewOptions(
-  //     supportZoom: false,
-  //     useShouldOverrideUrlLoading: true,
-  //     mediaPlaybackRequiresUserGesture: false,
-  //   ),
-  //   android: AndroidInAppWebViewOptions(
-  //     useHybridComposition: true,
-  //   ),
-  //   ios: IOSInAppWebViewOptions(
-  //     allowsInlineMediaPlayback: true,
-  //   ),
-  // );
-
   late final WebUri _uri;
 
   @override
@@ -83,8 +56,7 @@ class WebViewExampleState extends State<WebviewScreen> {
             'User-Agent': 'AgoraDesk',
           },
         ),
-        // initialUserScripts: UnmodifiableListView<UserScript>([]),
-        initialSettings: _settings,
+        initialSettings: kWebviewSettings,
         onWebViewCreated: (controller) async {
           _webViewController = controller;
           try {

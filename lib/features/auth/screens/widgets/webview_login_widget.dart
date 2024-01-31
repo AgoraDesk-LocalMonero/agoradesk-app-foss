@@ -7,6 +7,19 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 typedef OnHeightChanged = void Function(double height);
 
+final kWebviewSettings = InAppWebViewSettings(
+  javaScriptEnabled: true,
+  javaScriptCanOpenWindowsAutomatically: true,
+  mediaPlaybackRequiresUserGesture: false,
+  useWideViewPort: true,
+  loadWithOverviewMode: true,
+  supportZoom: false,
+  cacheEnabled: false,
+  transparentBackground: true,
+  disableContextMenu: false,
+  userAgent: 'AgoraDesk',
+);
+
 class WebviewLoginWidget extends StatefulWidget {
   const WebviewLoginWidget({
     Key? key,
@@ -29,21 +42,6 @@ class WebviewLoginWidgetState extends State<WebviewLoginWidget> {
 
   Timer? _timer;
   Timer? _timer2;
-
-  final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-    crossPlatform: InAppWebViewOptions(
-      supportZoom: false,
-      useShouldOverrideUrlLoading: true,
-      mediaPlaybackRequiresUserGesture: false,
-      
-    ),
-    android: AndroidInAppWebViewOptions(
-      useHybridComposition: true,
-    ),
-    ios: IOSInAppWebViewOptions(
-      allowsInlineMediaPlayback: true,
-    ),
-  );
 
   late final WebUri _uri;
 
@@ -93,7 +91,7 @@ class WebviewLoginWidgetState extends State<WebviewLoginWidget> {
           'User-Agent': 'AgoraDesk',
         },
       ),
-      initialOptions: _options,
+      initialSettings: kWebviewSettings,
       onWebViewCreated: (controller) async {
         _webController = controller;
         await _webController?.loadUrl(urlRequest: URLRequest(url: _uri));
@@ -103,14 +101,11 @@ class WebviewLoginWidgetState extends State<WebviewLoginWidget> {
         if (heightLoaded != null && heightLoaded > 200) {
           widget.onHeightChanged(heightLoaded.toDouble());
         }
-        // final htmlContent = await controller.evaluateJavascript(source: 'document.documentElement.outerHTML');
-      },
-      androidOnPermissionRequest: (controller, origin, resources) async {
-        return PermissionRequestResponse(resources: resources, action: PermissionRequestResponseAction.GRANT);
       },
       shouldOverrideUrlLoading: (controller, navigationAction) async {
         return NavigationActionPolicy.ALLOW;
       },
+      
     );
   }
 
