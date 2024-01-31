@@ -44,11 +44,11 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
     ),
   );
 
-  late final Uri _uri;
+  late final WebUri _uri;
 
   @override
   void initState() {
-    _uri = Uri.tryParse(widget.url) ?? Uri();
+    _uri = WebUri(widget.url);
 
     _deleteCookies();
 

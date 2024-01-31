@@ -30,25 +30,39 @@ class WebViewExampleState extends State<WebviewScreen> {
   late final InAppWebViewController? _webViewController;
   CookieManager cookieManager = CookieManager.instance();
 
-  final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-    crossPlatform: InAppWebViewOptions(
-      supportZoom: false,
-      useShouldOverrideUrlLoading: true,
-      mediaPlaybackRequiresUserGesture: false,
-    ),
-    android: AndroidInAppWebViewOptions(
-      useHybridComposition: true,
-    ),
-    ios: IOSInAppWebViewOptions(
-      allowsInlineMediaPlayback: true,
-    ),
+  final InAppWebViewSettings _settings = InAppWebViewSettings(
+    javaScriptEnabled: true,
+    javaScriptCanOpenWindowsAutomatically: true,
+    mediaPlaybackRequiresUserGesture: false,
+    useWideViewPort: true,
+    loadWithOverviewMode: true,
+    supportZoom: false,
+    cacheEnabled: false,
+    transparentBackground: true,
+    disableContextMenu: true,
+    userAgent: 'AgoraDesk',
+    disableLongPressContextMenuOnLinks: false,
   );
 
-  late final Uri _uri;
+  // final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
+  //   crossPlatform: InAppWebViewOptions(
+  //     supportZoom: false,
+  //     useShouldOverrideUrlLoading: true,
+  //     mediaPlaybackRequiresUserGesture: false,
+  //   ),
+  //   android: AndroidInAppWebViewOptions(
+  //     useHybridComposition: true,
+  //   ),
+  //   ios: IOSInAppWebViewOptions(
+  //     allowsInlineMediaPlayback: true,
+  //   ),
+  // );
+
+  late final WebUri _uri;
 
   @override
   void initState() {
-    _uri = Uri.tryParse(widget.url) ?? Uri();
+    _uri = WebUri(widget.url);
     _deleteCookies();
     super.initState();
   }
@@ -70,7 +84,7 @@ class WebViewExampleState extends State<WebviewScreen> {
           },
         ),
         // initialUserScripts: UnmodifiableListView<UserScript>([]),
-        initialOptions: _options,
+        initialSettings: _settings,
         onWebViewCreated: (controller) async {
           _webViewController = controller;
           try {

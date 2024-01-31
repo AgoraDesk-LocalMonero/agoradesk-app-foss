@@ -43,7 +43,7 @@ dependencies:
   plausible_analytics: ^0.2.1
   flutter_app_badger: ^1.5.0
   flutter_displaymode: ^0.5.0
-  flutter_inappwebview: ^5.8.0
+  flutter_inappwebview: ^6.0.0
   flutter_keyboard_size: ^1.0.1
   flutter_riverpod: ^2.3.6
   figma_squircle: ^0.5.3
