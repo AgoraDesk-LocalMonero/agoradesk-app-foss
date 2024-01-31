@@ -1,6 +1,7 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
+import 'package:agoradesk/core/widgets/app_markdown_widget.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -51,17 +52,7 @@ class AgoraDialogInfo extends StatelessWidget with StringMixin {
               ],
             ),
             const SizedBox(height: 6),
-            MarkdownWidget(
-              data: replaceForMarkdown(text),
-              shrinkWrap: true,
-              styleConfig: StyleConfig(
-                markdownTheme: MarkdownTheme.darkTheme,
-                pConfig: PConfig(
-                  textStyle: context.txtBodySmallN80N30,
-                  strongStyle: context.txtLabelLargeP80P40,
-                ),
-              ),
-            ),
+            AppMarkdownWidget(text: replaceForMarkdown(text))
           ],
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
+import 'package:agoradesk/core/widgets/app_markdown_widget.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius12_border1.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
 import 'package:agoradesk/generated/i18n.dart';
@@ -47,20 +48,8 @@ class TraderPersonalIntroBox extends StatelessWidget with DateMixin, UrlMixin {
                 padding: const EdgeInsets.all(10),
                 child: loading
                     ? const CupertinoActivityIndicator()
-                    : MarkdownWidget(
-                        data: intro ?? '',
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        padding: EdgeInsets.zero,
-                        loadingWidget: const Center(child: SizedBox(height: 16)),
-                        styleConfig: StyleConfig(
-                            markdownTheme: MarkdownTheme.darkTheme,
-                            pConfig: PConfig(
-                                textStyle: context.txtBodySmallN60,
-                                linkStyle: context.txtBodySmallP70P40,
-                                onLinkTap: (url) {
-                                  openLink(url);
-                                })),
+                    : AppMarkdownWidget(
+                        text: intro ?? '',
                       ),
               ),
             ),
