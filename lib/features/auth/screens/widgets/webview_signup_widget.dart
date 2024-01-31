@@ -31,20 +31,6 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
   Timer? _timer;
   Timer? _timer2;
 
-  final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-    crossPlatform: InAppWebViewOptions(
-      supportZoom: false,
-      useShouldOverrideUrlLoading: true,
-      mediaPlaybackRequiresUserGesture: false,
-    ),
-    android: AndroidInAppWebViewOptions(
-      useHybridComposition: true,
-    ),
-    ios: IOSInAppWebViewOptions(
-      allowsInlineMediaPlayback: true,
-    ),
-  );
-
   late final WebUri _uri;
 
   @override
@@ -104,9 +90,6 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
           widget.onHeightChanged(heightLoaded.toDouble());
         }
         // final htmlContent = await controller.evaluateJavascript(source: 'document.documentElement.outerHTML');
-      },
-      androidOnPermissionRequest: (controller, origin, resources) async {
-        return PermissionRequestResponse(resources: resources, action: PermissionRequestResponseAction.GRANT);
       },
       shouldOverrideUrlLoading: (controller, navigationAction) async {
         return NavigationActionPolicy.ALLOW;

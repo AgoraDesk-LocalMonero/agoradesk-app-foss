@@ -32,7 +32,7 @@ dependencies:
   sentry_flutter: ^7.5.2
   collection: ^1.15.0
   rating_dialog: ^2.0.3
-  visibility_detector: ^0.3.3
+  visibility_detector: ^0.4.0
   cached_network_image: ^3.3.0
   json_annotation: ^4.4.0
   share_plus: ^7.0.0
@@ -57,7 +57,7 @@ dependencies:
   currency_picker: ^2.0.7
   country_picker: ^2.0.11
   dropdown_search: ^5.0.6
-  markdown_widget: ^1.2.9
+  markdown_widget: ^2.3.2+3
   expandable: ^5.0.1
   flutter_svg: ^2.0.4
   barcode_scan2: ^4.2.4
