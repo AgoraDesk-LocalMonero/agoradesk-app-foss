@@ -19,7 +19,7 @@ class AppMarkdownWidget extends StatelessWidget with UrlMixin {
       selectable: true,
       config: config.copy(
         configs: [
-          PConfig(textStyle: context.txtBodySmallN80N30),
+          PConfig(textStyle: context.txtBodyMediumN80N30),
           LinkConfig(
             style: TextStyle(
               color: Theme.of(context).colorScheme.primary,
