@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/features/auth/models/sign_up_view_model.dart';
+import 'package:agoradesk/features/auth/screens/widgets/webview_login_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -30,25 +31,11 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
   Timer? _timer;
   Timer? _timer2;
 
-  final InAppWebViewGroupOptions _options = InAppWebViewGroupOptions(
-    crossPlatform: InAppWebViewOptions(
-      supportZoom: false,
-      useShouldOverrideUrlLoading: true,
-      mediaPlaybackRequiresUserGesture: false,
-    ),
-    android: AndroidInAppWebViewOptions(
-      useHybridComposition: true,
-    ),
-    ios: IOSInAppWebViewOptions(
-      allowsInlineMediaPlayback: true,
-    ),
-  );
-
-  late final Uri _uri;
+  late final WebUri _uri;
 
   @override
   void initState() {
-    _uri = Uri.tryParse(widget.url) ?? Uri();
+    _uri = WebUri(widget.url);
 
     _deleteCookies();
 
@@ -92,7 +79,7 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
           'User-Agent': 'AgoraDesk',
         },
       ),
-      initialOptions: _options,
+      initialSettings: kWebviewSettings,
       onWebViewCreated: (controller) async {
         _webController = controller;
         await _webController?.loadUrl(urlRequest: URLRequest(url: _uri));
@@ -103,9 +90,6 @@ class WebviewSignupWidgetState extends State<WebviewSignupWidget> {
           widget.onHeightChanged(heightLoaded.toDouble());
         }
         // final htmlContent = await controller.evaluateJavascript(source: 'document.documentElement.outerHTML');
-      },
-      androidOnPermissionRequest: (controller, origin, resources) async {
-        return PermissionRequestResponse(resources: resources, action: PermissionRequestResponseAction.GRANT);
       },
       shouldOverrideUrlLoading: (controller, navigationAction) async {
         return NavigationActionPolicy.ALLOW;

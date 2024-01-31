@@ -3,7 +3,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 
 publish_to: 'none'
 
-version: 1.1.17+113
+version: 1.1.18+114
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -32,7 +32,7 @@ dependencies:
   sentry_flutter: ^7.5.2
   collection: ^1.15.0
   rating_dialog: ^2.0.3
-  visibility_detector: ^0.3.3
+  visibility_detector: ^0.4.0
   cached_network_image: ^3.3.0
   json_annotation: ^4.4.0
   share_plus: ^7.0.0
@@ -41,6 +41,11 @@ dependencies:
   shared_preferences: ^2.0.15
   overlay_support: ^2.0.1
   plausible_analytics: ^0.2.1
+  flutter_app_badger: ^1.5.0
+  flutter_displaymode: ^0.5.0
+  flutter_inappwebview: ^6.0.0
+  flutter_keyboard_size: ^1.0.1
+  flutter_riverpod: ^2.3.6
   figma_squircle: ^0.5.3
   freezed_annotation: any
   easy_debounce: ^2.0.2
@@ -52,10 +57,9 @@ dependencies:
   currency_picker: ^2.0.7
   country_picker: ^2.0.11
   dropdown_search: ^5.0.6
-  markdown_widget: ^1.2.9
+  markdown_widget: ^2.3.2+3
   expandable: ^5.0.1
   flutter_svg: ^2.0.4
-  uni_links: ^0.5.1
   barcode_scan2: ^4.2.4
   qr_flutter: ^4.1.0
   shimmer: ^2.0.0
@@ -71,20 +75,16 @@ dependencies:
   google_api_availability: ^3.0.1
   duration: ^3.0.11
   decimal: ^2.2.0
-  sticky_headers: ^0.3.0+2
-  flutter_displaymode: ^0.5.0
-  flutter_inappwebview: ^5.8.0
   permission_handler: ^10.0.0
   restart_app: ^1.1.2
   local_auth: ^2.1.2
-  flutter_keyboard_size: ^1.0.1
-  store_checker: ^1.1.0
-  flutter_app_badger: ^1.5.0
   convert: ^3.1.1
   expansion_tile_card: ^2.0.0
   lottie: ^2.3.2
   riverpod_annotation: ^2.1.1
-  flutter_riverpod: ^2.3.6
+  sticky_headers: ^0.3.0+2
+  store_checker: ^1.1.0
+  uni_links: ^0.5.1
   uni_links_desktop: ^0.1.6
 
 dependency_overrides:
