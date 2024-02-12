@@ -684,7 +684,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                 itemBuilder: (context, val, isSelected) {
                                   return DropdownAssetLineWithIcon(
                                     name: val?.name ?? '',
-                                    svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                    svgPath: val?.code.isNotEmpty == true ? 'assets/banks/${val!.code}.svg' : null,
                                   );
                                 },
                               ),
@@ -695,7 +695,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                               dropdownBuilder: (context, val) {
                                 return DropdownAssetLineWithIcon(
                                   name: val?.name ?? '',
-                                  svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                  svgPath: val?.code.isNotEmpty == true ? 'assets/banks/${val!.code}.svg' : null,
                                   padding: const EdgeInsets.all(0),
                                 );
                               },

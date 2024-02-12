@@ -21,6 +21,8 @@ mixin PaymentMethodsMixin {
 
   Widget getPaymentMethodIcon(BuildContext context, String code, {double size = 14}) {
     try {
+      if (code.isEmpty) return const SizedBox();
+
       return SvgPicture.asset(
         'assets/banks/$code.svg',
         height: size,

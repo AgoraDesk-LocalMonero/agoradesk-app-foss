@@ -1,143 +1,130 @@
 name: agoradesk
+version: 1.1.19+115
+publish_to: none
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
-
-publish_to: 'none'
-
-version: 1.1.18+114
-
-environment:
-  sdk: ">=3.0.0 <4.0.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
-  cupertino_icons: ^1.0.2
+environment: 
+  sdk: '>=3.0.0 <4.0.0'
+dependencies: 
   auto_route: ^5.0.1
-  vm: ^1.0.4
   auto_size_text: ^3.0.0
-  connectivity_plus: ^4.0.2
-  flutter_verification_code: ^1.1.2+1
+  barcode_scan2: ^4.3.0
+  cached_network_image: ^3.3.1
+  connectivity_plus: ^5.0.2
+  convert: ^3.1.1
+  country_picker: ^2.0.11
+  cupertino_icons: ^1.0.2
+  currency_picker: ^2.0.7
+  decimal: ^2.2.0
   device_info_plus: ^9.0.3
-  package_info_plus: ^4.1.0
   dio: ^5.2.1
-#  dio_logging_interceptor: ^1.0.1
+  dots_indicator: ^2.0.0
+  dropdown_search: ^5.0.6
+  duration: ^3.0.11
+  easy_debounce: ^2.0.2
   event_bus: ^2.0.0
-  flutter_keyboard_visibility: ^5.2.0
-  flutter_screenutil: ^5.0.2
-  url_launcher: ^6.0.17
-  intl: any
-  rxdart: ^0.27.7
-  timeago: ^3.2.2
-  provider: ^6.0.5
-  collection: ^1.15.0
-  rating_dialog: ^2.0.3
-  visibility_detector: ^0.4.0
-  cached_network_image: ^3.3.0
-  json_annotation: ^4.4.0
-  share_plus: ^7.0.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  shared_preferences: ^2.0.15
-  overlay_support: ^2.0.1
-  # plausible_analytics: ^0.2.1
+  expandable: ^5.0.1
+  expansion_tile_card: ^2.0.0
+  extended_image: ^8.1.0
+  figma_squircle: ^0.5.3
+  # firebase_core: ^2.25.4
+  # firebase_messaging: ^14.7.15
   flutter_app_badger: ^1.5.0
   flutter_displaymode: ^0.5.0
+  flutter_foreground_task: ^6.1.2
   flutter_inappwebview: ^6.0.0
   flutter_keyboard_size: ^1.0.1
-  flutter_riverpod: ^2.3.6
-  figma_squircle: ^0.5.3
-  freezed_annotation: any
-  easy_debounce: ^2.0.2
-  extended_image: ^8.1.0
-  path_provider: ^2.0.8
+  flutter_keyboard_visibility: ^5.2.0
+  flutter_local_notifications: ^16.3.2
   flutter_pin_code_widget: ^0.1.0
-  flutter_secure_storage: ^8.0.0
-  dots_indicator: ^2.0.0
-  currency_picker: ^2.0.7
-  country_picker: ^2.0.11
-  dropdown_search: ^5.0.6
-  markdown_widget: ^2.3.2+3
-  expandable: ^5.0.1
+  flutter_riverpod: ^2.4.10
+  flutter_screenutil: ^5.0.2
+  flutter_secure_storage: ^9.0.0
   flutter_svg: ^2.0.4
-  barcode_scan2: ^4.2.4
-  qr_flutter: ^4.1.0
-  shimmer: ^2.0.0
-  image_picker: ^0.8.5+3
-  percent_indicator: ^4.2.1
-  insta_image_viewer: ^1.0.2
+  flutter_verification_code: ^1.1.2+1
+  freezed_annotation: any
   get_it: ^7.2.0
+  google_api_availability: ^5.0.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  image_picker: ^1.0.7
   injectable: ^2.1.0
-  flutter_local_notifications: ^13.0.0
-  flutter_foreground_task: ^3.8.2
-  duration: ^3.0.11
-  decimal: ^2.2.0
-  permission_handler: ^10.0.0
-  restart_app: ^1.1.2
-  local_auth: ^2.1.2
-  convert: ^3.1.1
-  expansion_tile_card: ^2.0.0
+  insta_image_viewer: ^1.0.2
+  intl: any
+  json_annotation: ^4.4.0
+  local_auth: ^2.1.8
   lottie: ^2.3.2
+  markdown_widget: ^2.3.2+3
+  overlay_support: ^2.0.1
+  package_info_plus: ^4.1.0
+  path_provider: ^2.0.8
+  percent_indicator: ^4.2.1
+  permission_handler: ^10.0.0
+  plausible_analytics: ^0.2.1
+  provider: ^6.1.1
+  qr_flutter: ^4.1.0
+  rating_dialog: ^2.0.3
+  restart_app: ^1.1.2
   riverpod_annotation: ^2.1.1
+  rxdart: ^0.27.7
+  # sentry_flutter: ^7.5.2
+  share_plus: ^7.0.0
+  shared_preferences: ^2.0.15
+  shimmer: ^2.0.0
   sticky_headers: ^0.3.0+2
   store_checker: ^1.1.0
+  timeago: ^3.2.2
   uni_links: ^0.5.1
-  uni_links_desktop: ^0.1.6
-
-dependency_overrides:
-  #  flutter_foreground_task:
-  #    path: ../flutter_foreground_task
-  flutter_foreground_task:
-    git:
-      url: https://github.com/sergdeus/flutter_foreground_task
-      ref: master
-  expansion_tile_card:
-    git:
+  uni_links_desktop: ^0.1.7
+  url_launcher: ^6.0.17
+  visibility_detector: ^0.4.0
+  vm: ^1.0.4
+  flutter: 
+    sdk: flutter
+dev_dependencies: 
+  auto_route_generator: any
+  build_runner: ^2.4.8
+  custom_lint: any
+  flutter_lints: ^2.0.1
+  freezed: ^2.1.0
+  hive_generator: any
+  injectable_generator: any
+  json_serializable: ^6.1.3
+  mocktail: any
+  pubspec_dependency_sorter: ^1.0.4
+  riverpod_generator: ^2.2.0
+  riverpod_lint: any
+  flutter_localizations: 
+    sdk: flutter
+  flutter_test: 
+    sdk: flutter
+dependency_overrides: 
+  expansion_tile_card: 
+    git: 
       url: https://github.com/awaik/expansion_tile_card/
       ref: fix_theme_issue
-#  flutter_pin_code_widget:
-#    path: ../flutter_pin_code_widget
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-
-  flutter_lints: ^2.0.1
-  auto_route_generator: any
-  build_runner: ^2.1.7
-  json_serializable: ^6.1.3
-  hive_generator: any
-  freezed: ^2.1.0
-  mocktail: any
-  injectable_generator: any
-  riverpod_lint: any
-  riverpod_generator: ^2.2.0
-  custom_lint:
-
-flutter:
-
-  uses-material-design: true
-
-  assets:
+flutter: 
+  assets: 
     - assets/banks/
     - assets/flags/
     - assets/json/
     - assets/branding/
     - assets/images/
     - assets/misc/
-
-  fonts:
-    - family: agoraFont
-      fonts:
-        - asset: assets/fonts/agoraFont.ttf
-
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Medium.ttf
+  fonts: 
+    - 
+      family: agoraFont
+      fonts: 
+        - 
+          asset: assets/fonts/agoraFont.ttf
+    - 
+      family: Roboto
+      fonts: 
+        - 
+          asset: assets/fonts/Roboto-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Roboto-Regular.ttf
+        - 
+          asset: assets/fonts/Roboto-Regular.ttf
           weight: 400
-
-flutter_intl:
+  uses-material-design: true
+flutter_intl: 
   enabled: true
