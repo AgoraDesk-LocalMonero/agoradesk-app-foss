@@ -22,23 +22,12 @@ dependencies:
   duration: ^3.0.11
   easy_debounce: ^2.0.2
   event_bus: ^2.0.0
-  flutter_keyboard_visibility: ^5.2.0
-  flutter_screenutil: ^5.0.2
-  url_launcher: ^6.0.17
-  intl: any
-  rxdart: ^0.27.7
-  timeago: ^3.2.2
-  provider: ^6.0.5
-  collection: ^1.15.0
-  rating_dialog: ^2.0.3
-  visibility_detector: ^0.4.0
-  json_annotation: ^4.4.0
-  share_plus: ^7.0.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  shared_preferences: ^2.0.15
-  overlay_support: ^2.0.1
-  # plausible_analytics: ^0.2.1
+  expandable: ^5.0.1
+  expansion_tile_card: ^2.0.0
+  extended_image: ^8.1.0
+  figma_squircle: ^0.5.3
+  # firebase_core: ^2.25.4
+  # firebase_messaging: ^14.7.15
   flutter_app_badger: ^1.5.0
   flutter_displaymode: ^0.5.0
   flutter_foreground_task: ^6.1.2
@@ -51,28 +40,18 @@ dependencies:
   flutter_screenutil: ^5.0.2
   flutter_secure_storage: ^9.0.0
   flutter_svg: ^2.0.4
-  barcode_scan2: ^4.2.4
-  qr_flutter: ^4.1.0
-  shimmer: ^2.0.0
-  image_picker: ^0.8.5+3
-  percent_indicator: ^4.2.1
-  insta_image_viewer: ^1.0.2
+  flutter_verification_code: ^1.1.2+1
+  freezed_annotation: any
   get_it: ^7.2.0
   google_api_availability: ^5.0.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   image_picker: ^1.0.7
   injectable: ^2.1.0
-  flutter_local_notifications: ^13.0.0
-  flutter_foreground_task: ^3.8.2
-#  google_api_availability: ^3.0.1
-  duration: ^3.0.11
-  decimal: ^2.2.0
-  permission_handler: ^10.0.0
-  restart_app: ^1.1.2
-  local_auth: ^2.1.2
-  convert: ^3.1.1
-  expansion_tile_card: ^2.0.0
+  insta_image_viewer: ^1.0.2
+  intl: any
+  json_annotation: ^4.4.0
+  local_auth: ^2.1.8
   lottie: ^2.3.2
   markdown_widget: ^2.3.2+3
   overlay_support: ^2.0.1
