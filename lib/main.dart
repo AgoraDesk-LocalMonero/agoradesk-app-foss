@@ -160,9 +160,7 @@ void main() async {
 Future<bool> checkGoogleAvailable() async {
   // We use this check to run foreground isolate task on Android.
   // So, in case it is not Android we returns true, because with true isolate won't start.
-  if (Platform.isAndroid == false) {
-    return true;
-  }
+  if (!Platform.isAndroid) return true;
 
   final GooglePlayServicesAvailability gPlayState =
       await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
