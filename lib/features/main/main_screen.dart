@@ -164,10 +164,8 @@ class _MainScreenState extends State<MainScreen> {
   Future<bool> _startForegroundTask() async {
     ReceivePort? receivePort;
     if (await FlutterForegroundTask.isRunningService) {
-      print('++++++++++++++++++++01 - 1');
       await FlutterForegroundTask.restartService();
     } else {
-      print('++++++++++++++++++++01 - 2');
       await SecureStorage.ensureInitialized();
       final SecureStorage secureStorage = SecureStorage();
       final String? l = await secureStorage.read(SecureStorageKey.locale);
