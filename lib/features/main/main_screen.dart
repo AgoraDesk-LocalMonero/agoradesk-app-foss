@@ -125,7 +125,7 @@ class _MainScreenState extends State<MainScreen> {
       _ambiguate(WidgetsBinding.instance)?.addPostFrameCallback((_) async {
         // You can get the previous ReceivePort without restarting the service.
         if (await FlutterForegroundTask.isRunningService) {
-          final newReceivePort = await FlutterForegroundTask.receivePort;
+          final newReceivePort = FlutterForegroundTask.receivePort;
           _registerReceivePort(newReceivePort);
         }
       });
@@ -134,13 +134,9 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   Future<void> _initForegroundTask() async {
-    int pollingInterval = kForegroungPollingInterval;
+    const int pollingInterval = kDebugMode ? 15000 : kForegroungPollingInterval;
 
-    if (kDebugMode) {
-      pollingInterval = 15000;
-    }
-
-    await FlutterForegroundTask.init(
+    FlutterForegroundTask.init(
       androidNotificationOptions: AndroidNotificationOptions(
         channelId: 'foreground_notifications',
         channelName: 'Foreground notifications',
@@ -156,12 +152,12 @@ class _MainScreenState extends State<MainScreen> {
         visibility: NotificationVisibility.VISIBILITY_PRIVATE,
         enableVibration: false,
       ),
-      foregroundTaskOptions: ForegroundTaskOptions(
+      foregroundTaskOptions: const ForegroundTaskOptions(
         interval: pollingInterval,
         autoRunOnBoot: true,
         allowWifiLock: true,
       ),
-      printDevLog: false,
+      iosNotificationOptions: const IOSNotificationOptions(),
     );
   }
 
@@ -171,17 +167,17 @@ class _MainScreenState extends State<MainScreen> {
       await FlutterForegroundTask.restartService();
     } else {
       await SecureStorage.ensureInitialized();
-      final SecureStorage _secureStorage = SecureStorage();
-      final String? l = await _secureStorage.read(SecureStorageKey.locale);
+      final SecureStorage secureStorage = SecureStorage();
+      final String? l = await secureStorage.read(SecureStorageKey.locale);
       final langCode = l ?? Platform.localeName.substring(0, 2);
       await FlutterForegroundTask.startService(
         notificationTitle:
-            GetIt.I<AppParameters>().appName + ' ' + ForegroundMessagesMixin.getChannelNameDescription(langCode)[0],
+            '${GetIt.I<AppParameters>().appName} ${ForegroundMessagesMixin.getChannelNameDescription(langCode)[0]}',
         notificationText: ForegroundMessagesMixin.getChannelNameDescription(langCode)[1],
         callback: startCallback,
       );
     }
-    receivePort = await FlutterForegroundTask.receivePort;
+    receivePort = FlutterForegroundTask.receivePort;
     return _registerReceivePort(receivePort);
   }
 

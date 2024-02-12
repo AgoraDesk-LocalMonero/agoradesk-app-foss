@@ -180,7 +180,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                       itemBuilder: (context, val, isSelected) {
                         return DropdownAssetLineWithIcon(
                           name: val.name,
-                          svgPath: 'assets/banks/${val.code}.svg',
+                          svgPath: val.code.isNotEmpty == true ? 'assets/banks/${val.code}.svg' : null,
                         );
                       },
                     ),
@@ -189,8 +189,8 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                     selectedItem: model.selectedOnlineProvider,
                     dropdownBuilder: (context, val) {
                       return DropdownAssetLineWithIcon(
-                        name: val!.name,
-                        svgPath: 'assets/banks/${val.code}.svg',
+                        name: val?.name ?? '',
+                        svgPath: val?.code.isNotEmpty == true ? 'assets/banks/${val!.code}.svg' : null,
                         padding: const EdgeInsets.all(0),
                       );
                     },
