@@ -1,7 +1,7 @@
 name: agoradesk
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.1.18+114
 
@@ -13,17 +13,21 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   auto_route: ^5.0.1
-  vm: ^1.0.4
   auto_size_text: ^3.0.0
-  connectivity_plus: ^4.0.2
-  flutter_verification_code: ^1.1.2+1
+  barcode_scan2: ^4.2.4
+  connectivity_plus: ^5.0.2
   device_info_plus: ^9.0.3
+  expandable: ^5.0.1
   package_info_plus: ^4.1.0
   dio: ^5.2.1
-#  dio_logging_interceptor: ^1.0.1
+  #  dio_logging_interceptor: ^1.0.1
   event_bus: ^2.0.0
+  firebase_core: ^2.25.4
+  firebase_messaging: ^14.7.15
   flutter_keyboard_visibility: ^5.2.0
   flutter_screenutil: ^5.0.2
+  flutter_svg: ^2.0.4
+  flutter_verification_code: ^1.1.2+1
   url_launcher: ^6.0.17
   intl: any
   rxdart: ^0.27.7
@@ -58,20 +62,16 @@ dependencies:
   country_picker: ^2.0.11
   dropdown_search: ^5.0.6
   markdown_widget: ^2.3.2+3
-  expandable: ^5.0.1
-  flutter_svg: ^2.0.4
-  barcode_scan2: ^4.2.4
+  vm: ^1.0.4
   qr_flutter: ^4.1.0
   shimmer: ^2.0.0
   image_picker: ^0.8.5+3
   percent_indicator: ^4.2.1
   insta_image_viewer: ^1.0.2
-  firebase_core: ^2.14.0
-  firebase_messaging: ^14.6.4
   get_it: ^7.2.0
   injectable: ^2.1.0
   flutter_local_notifications: ^13.0.0
-  flutter_foreground_task: ^3.8.2
+  flutter_foreground_task: ^6.1.2
   google_api_availability: ^3.0.1
   duration: ^3.0.11
   decimal: ^2.2.0
@@ -90,10 +90,10 @@ dependencies:
 dependency_overrides:
   #  flutter_foreground_task:
   #    path: ../flutter_foreground_task
-  flutter_foreground_task:
-    git:
-      url: https://github.com/sergdeus/flutter_foreground_task
-      ref: master
+  # flutter_foreground_task:
+  #   git:
+  #     url: https://github.com/sergdeus/flutter_foreground_task
+  #     ref: master
   expansion_tile_card:
     git:
       url: https://github.com/awaik/expansion_tile_card/
@@ -120,7 +120,6 @@ dev_dependencies:
   custom_lint:
 
 flutter:
-
   uses-material-design: true
 
   assets:
