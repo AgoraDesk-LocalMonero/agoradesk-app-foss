@@ -1,6 +1,6 @@
 ### Updates
-1. Fixed issue with Markdown.
-2. Updated price formulas.
+1. Fixed notifications bug when Google services are not available.
+2. Added icons for payment methods.
 
 
 ### About the attached app's
