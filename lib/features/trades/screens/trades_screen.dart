@@ -279,7 +279,7 @@ class _TradesScreenState extends State<TradesScreen>
                                 itemBuilder: (context, val, isSelected) {
                                   return DropdownAssetLineWithIcon(
                                     name: val?.name ?? '',
-                                    svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                    svgPath: val?.code.isNotEmpty == true ? 'assets/banks/${val!.code}.svg' : null,
                                   );
                                 },
                               ),
@@ -290,7 +290,7 @@ class _TradesScreenState extends State<TradesScreen>
                               dropdownBuilder: (context, val) {
                                 return DropdownAssetLineWithIcon(
                                   name: val?.name ?? '',
-                                  svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                                  svgPath: val?.code.isNotEmpty == true ? 'assets/banks/${val!.code}.svg' : null,
                                   padding: const EdgeInsets.all(0),
                                 );
                               },

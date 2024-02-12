@@ -11,5 +11,5 @@
     "editor.formatOnSave": true
   },
   "chat.editor.fontSize": 10,
-  "java.configuration.updateBuildConfiguration": "disabled"
+  "java.configuration.updateBuildConfiguration": "automatic"
 }

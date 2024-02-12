@@ -101,7 +101,49 @@ void main() async {
     );
   }
 
+<<<<<<< HEAD
   runApp(const App());
+=======
+  if (kDebugMode || includeFcm == false || sentryIsOn == false) {
+    runApp(const App());
+    return;
+  }
+  SentryFlutter.init(
+    (options) {
+      options
+        ..dsn = kSentryDsn
+        ..reportSilentFlutterErrors = true
+        ..attachStacktrace = false
+        ..enableAutoSessionTracking = false
+        ..tracesSampleRate = 1.0;
+    },
+    appRunner: () => runApp(const App()),
+  );
+}
+
+///
+/// detect does Google Play available or not
+///
+@pragma('vm:entry-point')
+Future<bool> checkGoogleAvailable() async {
+  // We use this check to run foreground isolate task on Android.
+  // So, in case it is not Android we returns true, because with true isolate won't start.
+  if (!Platform.isAndroid) return true;
+
+  final GooglePlayServicesAvailability gPlayState =
+      await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
+  List<GooglePlayServicesAvailability> googleUnavalableStates = [
+    GooglePlayServicesAvailability.serviceInvalid,
+    GooglePlayServicesAvailability.notAvailableOnPlatform,
+    GooglePlayServicesAvailability.serviceDisabled,
+    GooglePlayServicesAvailability.serviceMissing,
+    GooglePlayServicesAvailability.unknown,
+  ];
+  if (googleUnavalableStates.contains(gPlayState)) {
+    return false;
+  }
+  return true;
+>>>>>>> main
 }
 
 /// Create a [AndroidNotificationChannel] for heads up notifications
