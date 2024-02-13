@@ -1,6 +1,5 @@
 ### Updates
-1. Fixed notifications bug when Google services are not available.
-2. Added icons for payment methods.
+1. HOTFIX: notifications bug when Google services are not available.
 
 
 ### About the attached app's
