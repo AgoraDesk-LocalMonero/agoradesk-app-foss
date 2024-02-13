@@ -1,8 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.agoradesk.app"
-    android:allowBackup="false"
-    android:fullBackupContent="@xml/backup_rules">
+    xmlns:tools="http://schemas.android.com/tools" package="com.agoradesk.app" android:allowBackup="false" android:fullBackupContent="@xml/backup_rules">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
@@ -15,13 +12,9 @@
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-    <uses-permission
-        android:name="com.google.android.gms.permission.AD_ID"
-        tools:node="remove" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
 
-    <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="33" />
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="33" />
 
     <queries>
         <intent>
@@ -30,34 +23,18 @@
         </intent>
     </queries>
 
-    <application
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round">
+    <application android:name="${applicationName}" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round">
 
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/launch_push" />
-        <meta-data android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/brand_color" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/launch_push" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/brand_color" />
 
-        <receiver
-            android:name="androidx.media.session.MediaButtonReceiver"
-            android:exported="true">
+        <receiver android:name="androidx.media.session.MediaButtonReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name="io.flutter.embedding.android.FlutterFragmentActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-            android:exported="true"
-            android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.AppCompat.DayNight"
-            android:windowSoftInputMode="adjustResize">
+        <activity android:name="io.flutter.embedding.android.FlutterFragmentActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:exported="true" android:hardwareAccelerated="true" android:launchMode="singleTask" android:theme="@style/Theme.AppCompat.DayNight" android:windowSoftInputMode="adjustResize">
 
             <intent-filter>
                 <action android:name=".MainActivity" />
@@ -70,36 +47,25 @@
             </intent-filter>
 
             <!-- App Links Main -->
-            <intent-filter
-                android:autoVerify="true"
-                android:priority="@string/links_priority">
+            <intent-filter android:autoVerify="true" android:priority="@string/links_priority">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:host="@string/app_host"
-                    android:scheme="https" />
+                <data android:host="@string/app_host" android:scheme="https" />
             </intent-filter>
             <!-- Second App Links (AD <> LM) -->
-            <intent-filter
-                android:autoVerify="true"
-                android:priority="@string/links_priority">
+            <intent-filter android:autoVerify="true" android:priority="@string/links_priority">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:host="@string/app_host_2"
-                    android:scheme="https" />
+                <data android:host="@string/app_host_2" android:scheme="https" />
             </intent-filter>
         </activity>
 
-        <service
-            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
-            android:exported="true" />
+        <service android:name="com.pravera.flutter_foreground_task.service.ForegroundService"/>
 
-        <meta-data
-            android:name="flutterEmbedding"
-            android:value="2" />
+
+        <meta-data android:name="flutterEmbedding" android:value="2" />
     </application>
 
 </manifest>
