@@ -66,7 +66,7 @@ dependencies:
   restart_app: ^1.1.2
   riverpod_annotation: ^2.1.1
   rxdart: ^0.27.7
-  sentry_flutter: ^7.5.2
+  # sentry_flutter: ^7.5.2
   share_plus: ^7.0.0
   shared_preferences: ^2.0.15
   shimmer: ^2.0.0
