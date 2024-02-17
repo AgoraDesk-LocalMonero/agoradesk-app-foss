@@ -24,7 +24,7 @@ class ButtonFilledP80 extends StatelessWidget {
       onPressed: active && !loading ? onPressed : () {},
       style: ElevatedButton.styleFrom(
         minimumSize: minimumSize ?? const Size.fromHeight(40),
-        primary: active ? context.colP80P40 : context.colN80,
+        backgroundColor: active ? context.colP80P40 : context.colN80,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100),

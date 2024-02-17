@@ -26,7 +26,7 @@ class ButtonFilledInactiveSurface2 extends StatelessWidget {
       onPressed: (active && !loading) ? onPressed : null,
       style: ElevatedButton.styleFrom(
         minimumSize: const Size.fromHeight(40),
-        primary: active ? buttonColor : Theme.of(context).colorScheme.surface2,
+        backgroundColor: active ? buttonColor : Theme.of(context).colorScheme.surface2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100),
         ),
