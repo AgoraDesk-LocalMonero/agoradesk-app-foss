@@ -6,8 +6,8 @@ part of 'coupon_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CouponModel _$$_CouponModelFromJson(Map<String, dynamic> json) =>
-    _$_CouponModel(
+_$CouponModelImpl _$$CouponModelImplFromJson(Map<String, dynamic> json) =>
+    _$CouponModelImpl(
       code: json['code'] as String,
       tradeTypes: (json['ad_types'] as List<dynamic>)
           .map((e) => $enumDecode(_$TradeTypeEnumMap, e))
@@ -20,7 +20,7 @@ _$_CouponModel _$$_CouponModelFromJson(Map<String, dynamic> json) =>
       enabled: json['enabled'] as bool?,
     );
 
-Map<String, dynamic> _$$_CouponModelToJson(_$_CouponModel instance) =>
+Map<String, dynamic> _$$CouponModelImplToJson(_$CouponModelImpl instance) =>
     <String, dynamic>{
       'code': instance.code,
       'ad_types':

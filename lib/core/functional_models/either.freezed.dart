@@ -12,7 +12,7 @@ part of 'either.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Either<L, R> {
@@ -75,20 +75,20 @@ class _$EitherCopyWithImpl<L, R, $Res, $Val extends Either<L, R>>
 }
 
 /// @nodoc
-abstract class _$$_EitherLeftCopyWith<L, R, $Res> {
-  factory _$$_EitherLeftCopyWith(
-          _$_EitherLeft<L, R> value, $Res Function(_$_EitherLeft<L, R>) then) =
-      __$$_EitherLeftCopyWithImpl<L, R, $Res>;
+abstract class _$$EitherLeftImplCopyWith<L, R, $Res> {
+  factory _$$EitherLeftImplCopyWith(_$EitherLeftImpl<L, R> value,
+          $Res Function(_$EitherLeftImpl<L, R>) then) =
+      __$$EitherLeftImplCopyWithImpl<L, R, $Res>;
   @useResult
   $Res call({L left});
 }
 
 /// @nodoc
-class __$$_EitherLeftCopyWithImpl<L, R, $Res>
-    extends _$EitherCopyWithImpl<L, R, $Res, _$_EitherLeft<L, R>>
-    implements _$$_EitherLeftCopyWith<L, R, $Res> {
-  __$$_EitherLeftCopyWithImpl(
-      _$_EitherLeft<L, R> _value, $Res Function(_$_EitherLeft<L, R>) _then)
+class __$$EitherLeftImplCopyWithImpl<L, R, $Res>
+    extends _$EitherCopyWithImpl<L, R, $Res, _$EitherLeftImpl<L, R>>
+    implements _$$EitherLeftImplCopyWith<L, R, $Res> {
+  __$$EitherLeftImplCopyWithImpl(_$EitherLeftImpl<L, R> _value,
+      $Res Function(_$EitherLeftImpl<L, R>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,7 +96,7 @@ class __$$_EitherLeftCopyWithImpl<L, R, $Res>
   $Res call({
     Object? left = freezed,
   }) {
-    return _then(_$_EitherLeft<L, R>(
+    return _then(_$EitherLeftImpl<L, R>(
       freezed == left
           ? _value.left
           : left // ignore: cast_nullable_to_non_nullable
@@ -107,8 +107,8 @@ class __$$_EitherLeftCopyWithImpl<L, R, $Res>
 
 /// @nodoc
 
-class _$_EitherLeft<L, R> extends _EitherLeft<L, R> {
-  const _$_EitherLeft(this.left) : super._();
+class _$EitherLeftImpl<L, R> extends _EitherLeft<L, R> {
+  const _$EitherLeftImpl(this.left) : super._();
 
   @override
   final L left;
@@ -119,10 +119,10 @@ class _$_EitherLeft<L, R> extends _EitherLeft<L, R> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EitherLeft<L, R> &&
+            other is _$EitherLeftImpl<L, R> &&
             const DeepCollectionEquality().equals(other.left, left));
   }
 
@@ -133,8 +133,9 @@ class _$_EitherLeft<L, R> extends _EitherLeft<L, R> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EitherLeftCopyWith<L, R, _$_EitherLeft<L, R>> get copyWith =>
-      __$$_EitherLeftCopyWithImpl<L, R, _$_EitherLeft<L, R>>(this, _$identity);
+  _$$EitherLeftImplCopyWith<L, R, _$EitherLeftImpl<L, R>> get copyWith =>
+      __$$EitherLeftImplCopyWithImpl<L, R, _$EitherLeftImpl<L, R>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -200,30 +201,30 @@ class _$_EitherLeft<L, R> extends _EitherLeft<L, R> {
 }
 
 abstract class _EitherLeft<L, R> extends Either<L, R> {
-  const factory _EitherLeft(final L left) = _$_EitherLeft<L, R>;
+  const factory _EitherLeft(final L left) = _$EitherLeftImpl<L, R>;
   const _EitherLeft._() : super._();
 
   L get left;
   @JsonKey(ignore: true)
-  _$$_EitherLeftCopyWith<L, R, _$_EitherLeft<L, R>> get copyWith =>
+  _$$EitherLeftImplCopyWith<L, R, _$EitherLeftImpl<L, R>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_EitherRightCopyWith<L, R, $Res> {
-  factory _$$_EitherRightCopyWith(_$_EitherRight<L, R> value,
-          $Res Function(_$_EitherRight<L, R>) then) =
-      __$$_EitherRightCopyWithImpl<L, R, $Res>;
+abstract class _$$EitherRightImplCopyWith<L, R, $Res> {
+  factory _$$EitherRightImplCopyWith(_$EitherRightImpl<L, R> value,
+          $Res Function(_$EitherRightImpl<L, R>) then) =
+      __$$EitherRightImplCopyWithImpl<L, R, $Res>;
   @useResult
   $Res call({R right});
 }
 
 /// @nodoc
-class __$$_EitherRightCopyWithImpl<L, R, $Res>
-    extends _$EitherCopyWithImpl<L, R, $Res, _$_EitherRight<L, R>>
-    implements _$$_EitherRightCopyWith<L, R, $Res> {
-  __$$_EitherRightCopyWithImpl(
-      _$_EitherRight<L, R> _value, $Res Function(_$_EitherRight<L, R>) _then)
+class __$$EitherRightImplCopyWithImpl<L, R, $Res>
+    extends _$EitherCopyWithImpl<L, R, $Res, _$EitherRightImpl<L, R>>
+    implements _$$EitherRightImplCopyWith<L, R, $Res> {
+  __$$EitherRightImplCopyWithImpl(_$EitherRightImpl<L, R> _value,
+      $Res Function(_$EitherRightImpl<L, R>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -231,7 +232,7 @@ class __$$_EitherRightCopyWithImpl<L, R, $Res>
   $Res call({
     Object? right = freezed,
   }) {
-    return _then(_$_EitherRight<L, R>(
+    return _then(_$EitherRightImpl<L, R>(
       freezed == right
           ? _value.right
           : right // ignore: cast_nullable_to_non_nullable
@@ -242,8 +243,8 @@ class __$$_EitherRightCopyWithImpl<L, R, $Res>
 
 /// @nodoc
 
-class _$_EitherRight<L, R> extends _EitherRight<L, R> {
-  const _$_EitherRight(this.right) : super._();
+class _$EitherRightImpl<L, R> extends _EitherRight<L, R> {
+  const _$EitherRightImpl(this.right) : super._();
 
   @override
   final R right;
@@ -254,10 +255,10 @@ class _$_EitherRight<L, R> extends _EitherRight<L, R> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EitherRight<L, R> &&
+            other is _$EitherRightImpl<L, R> &&
             const DeepCollectionEquality().equals(other.right, right));
   }
 
@@ -268,8 +269,8 @@ class _$_EitherRight<L, R> extends _EitherRight<L, R> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith =>
-      __$$_EitherRightCopyWithImpl<L, R, _$_EitherRight<L, R>>(
+  _$$EitherRightImplCopyWith<L, R, _$EitherRightImpl<L, R>> get copyWith =>
+      __$$EitherRightImplCopyWithImpl<L, R, _$EitherRightImpl<L, R>>(
           this, _$identity);
 
   @override
@@ -336,11 +337,11 @@ class _$_EitherRight<L, R> extends _EitherRight<L, R> {
 }
 
 abstract class _EitherRight<L, R> extends Either<L, R> {
-  const factory _EitherRight(final R right) = _$_EitherRight<L, R>;
+  const factory _EitherRight(final R right) = _$EitherRightImpl<L, R>;
   const _EitherRight._() : super._();
 
   R get right;
   @JsonKey(ignore: true)
-  _$$_EitherRightCopyWith<L, R, _$_EitherRight<L, R>> get copyWith =>
+  _$$EitherRightImplCopyWith<L, R, _$EitherRightImpl<L, R>> get copyWith =>
       throw _privateConstructorUsedError;
 }

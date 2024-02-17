@@ -12,7 +12,7 @@ part of 'send_asset_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SendAssetModel _$SendAssetModelFromJson(Map<String, dynamic> json) {
   return _SendAssetModel.fromJson(json);
@@ -93,11 +93,11 @@ class _$SendAssetModelCopyWithImpl<$Res, $Val extends SendAssetModel>
 }
 
 /// @nodoc
-abstract class _$$_SendAssetModelCopyWith<$Res>
+abstract class _$$SendAssetModelImplCopyWith<$Res>
     implements $SendAssetModelCopyWith<$Res> {
-  factory _$$_SendAssetModelCopyWith(
-          _$_SendAssetModel value, $Res Function(_$_SendAssetModel) then) =
-      __$$_SendAssetModelCopyWithImpl<$Res>;
+  factory _$$SendAssetModelImplCopyWith(_$SendAssetModelImpl value,
+          $Res Function(_$SendAssetModelImpl) then) =
+      __$$SendAssetModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -109,11 +109,11 @@ abstract class _$$_SendAssetModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SendAssetModelCopyWithImpl<$Res>
-    extends _$SendAssetModelCopyWithImpl<$Res, _$_SendAssetModel>
-    implements _$$_SendAssetModelCopyWith<$Res> {
-  __$$_SendAssetModelCopyWithImpl(
-      _$_SendAssetModel _value, $Res Function(_$_SendAssetModel) _then)
+class __$$SendAssetModelImplCopyWithImpl<$Res>
+    extends _$SendAssetModelCopyWithImpl<$Res, _$SendAssetModelImpl>
+    implements _$$SendAssetModelImplCopyWith<$Res> {
+  __$$SendAssetModelImplCopyWithImpl(
+      _$SendAssetModelImpl _value, $Res Function(_$SendAssetModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -125,7 +125,7 @@ class __$$_SendAssetModelCopyWithImpl<$Res>
     Object? feeLevel = freezed,
     Object? otp = freezed,
   }) {
-    return _then(_$_SendAssetModel(
+    return _then(_$SendAssetModelImpl(
       address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -153,16 +153,16 @@ class __$$_SendAssetModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_SendAssetModel implements _SendAssetModel {
-  const _$_SendAssetModel(
+class _$SendAssetModelImpl implements _SendAssetModel {
+  const _$SendAssetModelImpl(
       {required this.address,
       required this.amount,
       required this.password,
       @JsonKey(name: 'fee_level', includeIfNull: false) required this.feeLevel,
       @JsonKey(includeIfNull: false) this.otp});
 
-  factory _$_SendAssetModel.fromJson(Map<String, dynamic> json) =>
-      _$$_SendAssetModelFromJson(json);
+  factory _$SendAssetModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendAssetModelImplFromJson(json);
 
   @override
   final String address;
@@ -183,10 +183,10 @@ class _$_SendAssetModel implements _SendAssetModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendAssetModel &&
+            other is _$SendAssetModelImpl &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.password, password) ||
@@ -204,12 +204,13 @@ class _$_SendAssetModel implements _SendAssetModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendAssetModelCopyWith<_$_SendAssetModel> get copyWith =>
-      __$$_SendAssetModelCopyWithImpl<_$_SendAssetModel>(this, _$identity);
+  _$$SendAssetModelImplCopyWith<_$SendAssetModelImpl> get copyWith =>
+      __$$SendAssetModelImplCopyWithImpl<_$SendAssetModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendAssetModelToJson(
+    return _$$SendAssetModelImplToJson(
       this,
     );
   }
@@ -221,12 +222,11 @@ abstract class _SendAssetModel implements SendAssetModel {
       required final double amount,
       required final String password,
       @JsonKey(name: 'fee_level', includeIfNull: false)
-          required final BtcFeesEnum? feeLevel,
-      @JsonKey(includeIfNull: false)
-          final String? otp}) = _$_SendAssetModel;
+      required final BtcFeesEnum? feeLevel,
+      @JsonKey(includeIfNull: false) final String? otp}) = _$SendAssetModelImpl;
 
   factory _SendAssetModel.fromJson(Map<String, dynamic> json) =
-      _$_SendAssetModel.fromJson;
+      _$SendAssetModelImpl.fromJson;
 
   @override
   String get address;
@@ -242,6 +242,6 @@ abstract class _SendAssetModel implements SendAssetModel {
   String? get otp;
   @override
   @JsonKey(ignore: true)
-  _$$_SendAssetModelCopyWith<_$_SendAssetModel> get copyWith =>
+  _$$SendAssetModelImplCopyWith<_$SendAssetModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

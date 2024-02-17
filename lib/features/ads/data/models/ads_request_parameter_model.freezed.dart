@@ -12,7 +12,7 @@ part of 'ads_request_parameter_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AdsRequestParameterModel _$AdsRequestParameterModelFromJson(
     Map<String, dynamic> json) {
@@ -51,22 +51,17 @@ abstract class $AdsRequestParameterModelCopyWith<$Res> {
       _$AdsRequestParameterModelCopyWithImpl<$Res, AdsRequestParameterModel>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          int? page,
-      @JsonKey(name: 'countrycode', includeIfNull: false)
-          String? countryCode,
-      @JsonKey(name: 'currency', includeIfNull: false)
-          String? currencyCode,
-      @JsonKey(name: 'trade_type', includeIfNull: false)
-          TradeType? tradeType,
-      @JsonKey(includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
-          bool? visible,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          Asset? asset,
-      @JsonKey(includeIfNull: false)
-          String? sort,
+      {@JsonKey(includeIfNull: false) int? page,
+      @JsonKey(name: 'countrycode', includeIfNull: false) String? countryCode,
+      @JsonKey(name: 'currency', includeIfNull: false) String? currencyCode,
+      @JsonKey(name: 'trade_type', includeIfNull: false) TradeType? tradeType,
+      @JsonKey(
+          includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
+      bool? visible,
+      @JsonKey(name: 'asset', includeIfNull: false) Asset? asset,
+      @JsonKey(includeIfNull: false) String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode});
+      String? paymentMethodCode});
 }
 
 /// @nodoc
@@ -130,40 +125,36 @@ class _$AdsRequestParameterModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AdsRequestParameterModelCopyWith<$Res>
+abstract class _$$AdsRequestParameterModelImplCopyWith<$Res>
     implements $AdsRequestParameterModelCopyWith<$Res> {
-  factory _$$_AdsRequestParameterModelCopyWith(
-          _$_AdsRequestParameterModel value,
-          $Res Function(_$_AdsRequestParameterModel) then) =
-      __$$_AdsRequestParameterModelCopyWithImpl<$Res>;
+  factory _$$AdsRequestParameterModelImplCopyWith(
+          _$AdsRequestParameterModelImpl value,
+          $Res Function(_$AdsRequestParameterModelImpl) then) =
+      __$$AdsRequestParameterModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          int? page,
-      @JsonKey(name: 'countrycode', includeIfNull: false)
-          String? countryCode,
-      @JsonKey(name: 'currency', includeIfNull: false)
-          String? currencyCode,
-      @JsonKey(name: 'trade_type', includeIfNull: false)
-          TradeType? tradeType,
-      @JsonKey(includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
-          bool? visible,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          Asset? asset,
-      @JsonKey(includeIfNull: false)
-          String? sort,
+      {@JsonKey(includeIfNull: false) int? page,
+      @JsonKey(name: 'countrycode', includeIfNull: false) String? countryCode,
+      @JsonKey(name: 'currency', includeIfNull: false) String? currencyCode,
+      @JsonKey(name: 'trade_type', includeIfNull: false) TradeType? tradeType,
+      @JsonKey(
+          includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
+      bool? visible,
+      @JsonKey(name: 'asset', includeIfNull: false) Asset? asset,
+      @JsonKey(includeIfNull: false) String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          String? paymentMethodCode});
+      String? paymentMethodCode});
 }
 
 /// @nodoc
-class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
+class __$$AdsRequestParameterModelImplCopyWithImpl<$Res>
     extends _$AdsRequestParameterModelCopyWithImpl<$Res,
-        _$_AdsRequestParameterModel>
-    implements _$$_AdsRequestParameterModelCopyWith<$Res> {
-  __$$_AdsRequestParameterModelCopyWithImpl(_$_AdsRequestParameterModel _value,
-      $Res Function(_$_AdsRequestParameterModel) _then)
+        _$AdsRequestParameterModelImpl>
+    implements _$$AdsRequestParameterModelImplCopyWith<$Res> {
+  __$$AdsRequestParameterModelImplCopyWithImpl(
+      _$AdsRequestParameterModelImpl _value,
+      $Res Function(_$AdsRequestParameterModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -178,7 +169,7 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
     Object? sort = freezed,
     Object? paymentMethodCode = freezed,
   }) {
-    return _then(_$_AdsRequestParameterModel(
+    return _then(_$AdsRequestParameterModelImpl(
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -218,27 +209,22 @@ class __$$_AdsRequestParameterModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
-  const _$_AdsRequestParameterModel(
-      {@JsonKey(includeIfNull: false)
-          this.page,
-      @JsonKey(name: 'countrycode', includeIfNull: false)
-          this.countryCode,
-      @JsonKey(name: 'currency', includeIfNull: false)
-          this.currencyCode,
-      @JsonKey(name: 'trade_type', includeIfNull: false)
-          this.tradeType,
-      @JsonKey(includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
-          this.visible,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          this.asset,
-      @JsonKey(includeIfNull: false)
-          this.sort,
+class _$AdsRequestParameterModelImpl implements _AdsRequestParameterModel {
+  const _$AdsRequestParameterModelImpl(
+      {@JsonKey(includeIfNull: false) this.page,
+      @JsonKey(name: 'countrycode', includeIfNull: false) this.countryCode,
+      @JsonKey(name: 'currency', includeIfNull: false) this.currencyCode,
+      @JsonKey(name: 'trade_type', includeIfNull: false) this.tradeType,
+      @JsonKey(
+          includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
+      this.visible,
+      @JsonKey(name: 'asset', includeIfNull: false) this.asset,
+      @JsonKey(includeIfNull: false) this.sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          this.paymentMethodCode});
+      this.paymentMethodCode});
 
-  factory _$_AdsRequestParameterModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AdsRequestParameterModelFromJson(json);
+  factory _$AdsRequestParameterModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdsRequestParameterModelImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -271,10 +257,10 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdsRequestParameterModel &&
+            other is _$AdsRequestParameterModelImpl &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.countryCode, countryCode) ||
                 other.countryCode == countryCode) &&
@@ -297,13 +283,13 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
-      get copyWith => __$$_AdsRequestParameterModelCopyWithImpl<
-          _$_AdsRequestParameterModel>(this, _$identity);
+  _$$AdsRequestParameterModelImplCopyWith<_$AdsRequestParameterModelImpl>
+      get copyWith => __$$AdsRequestParameterModelImplCopyWithImpl<
+          _$AdsRequestParameterModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdsRequestParameterModelToJson(
+    return _$$AdsRequestParameterModelImplToJson(
       this,
     );
   }
@@ -311,25 +297,23 @@ class _$_AdsRequestParameterModel implements _AdsRequestParameterModel {
 
 abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
   const factory _AdsRequestParameterModel(
-      {@JsonKey(includeIfNull: false)
-          final int? page,
+      {@JsonKey(includeIfNull: false) final int? page,
       @JsonKey(name: 'countrycode', includeIfNull: false)
-          final String? countryCode,
+      final String? countryCode,
       @JsonKey(name: 'currency', includeIfNull: false)
-          final String? currencyCode,
+      final String? currencyCode,
       @JsonKey(name: 'trade_type', includeIfNull: false)
-          final TradeType? tradeType,
-      @JsonKey(includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
-          final bool? visible,
-      @JsonKey(name: 'asset', includeIfNull: false)
-          final Asset? asset,
-      @JsonKey(includeIfNull: false)
-          final String? sort,
+      final TradeType? tradeType,
+      @JsonKey(
+          includeIfNull: false, fromJson: _boolFromJson, toJson: _boolToJson)
+      final bool? visible,
+      @JsonKey(name: 'asset', includeIfNull: false) final Asset? asset,
+      @JsonKey(includeIfNull: false) final String? sort,
       @JsonKey(name: 'payment_method_code', includeIfNull: false)
-          final String? paymentMethodCode}) = _$_AdsRequestParameterModel;
+      final String? paymentMethodCode}) = _$AdsRequestParameterModelImpl;
 
   factory _AdsRequestParameterModel.fromJson(Map<String, dynamic> json) =
-      _$_AdsRequestParameterModel.fromJson;
+      _$AdsRequestParameterModelImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -357,6 +341,6 @@ abstract class _AdsRequestParameterModel implements AdsRequestParameterModel {
   String? get paymentMethodCode;
   @override
   @JsonKey(ignore: true)
-  _$$_AdsRequestParameterModelCopyWith<_$_AdsRequestParameterModel>
+  _$$AdsRequestParameterModelImplCopyWith<_$AdsRequestParameterModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
