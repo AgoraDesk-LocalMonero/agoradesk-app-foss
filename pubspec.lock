@@ -9,14 +9,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "61.0.0"
-  _flutterfire_internals:
-    dependency: transitive
-    description:
-      name: _flutterfire_internals
-      sha256: "1a52f1afae8ab7ac4741425114713bdbba802f1ce1e0648e167ffcc6e05e96cf"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.3.21"
   analyzer:
     dependency: transitive
     description:
@@ -1606,22 +1598,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
-  sentry:
-    dependency: transitive
-    description:
-      name: sentry
-      sha256: d2ee9c850d876d285f22e2e662f400ec2438df9939fe4acd5d780df9841794ce
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.16.1"
-  sentry_flutter:
-    dependency: "direct main"
-    description:
-      name: sentry_flutter
-      sha256: "5b428c189c825f16fb14e9166529043f06b965d5b59bfc3a1415e39c082398c0"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.16.1"
   share_plus:
     dependency: "direct main"
     description:
