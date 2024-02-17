@@ -31,9 +31,9 @@ class ButtonOutlinedWithIconP80 extends StatelessWidget {
       onPressed: loading ? () {} : onPressed,
       style: ElevatedButton.styleFrom(
         padding: insidePadding,
-        primary: Colors.transparent,
-        onPrimary: Colors.transparent,
-        onSurface: Colors.transparent,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.transparent,
+        disabledForegroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),
