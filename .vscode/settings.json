@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{}
-=======
 {
   "dart.lineLength": 120,
   "[dart]": {
@@ -16,4 +13,3 @@
   "chat.editor.fontSize": 10,
   "java.configuration.updateBuildConfiguration": "automatic"
 }
->>>>>>> main
