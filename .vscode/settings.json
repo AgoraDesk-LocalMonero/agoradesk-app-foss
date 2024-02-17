@@ -11,5 +11,13 @@
     "editor.formatOnSave": true
   },
   "chat.editor.fontSize": 10,
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "files.exclude": {
+    "**/.DS_Store": false,
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/CVS": false,
+    "**/Thumbs.db": false
+  }
 }
