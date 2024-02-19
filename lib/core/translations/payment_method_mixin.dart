@@ -1,9 +1,11 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
+import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
 import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 mixin PaymentMethodsMixin {
   final worldwideMethods = [
@@ -46,19 +48,40 @@ mixin PaymentMethodsMixin {
     }
   }
 
-  String getPaymentMethodName(BuildContext context, String? onlineProvider, TradeType? tradeType) {
+  String getPaymentMethodName(BuildContext context, String? code, TradeType? tradeType) {
+    if (code == null) return '';
     try {
       if (tradeType != null && tradeType.isLocal()) {
-        return paymentMethodNames(context)['CASH'];
+        return paymentMethodNames(context)['CASH']!;
       }
-      return paymentMethodNames(context)[onlineProvider ?? ''];
+
+      if (paymentMethodNames(context).containsKey([code])) {
+        return paymentMethodNames(context)[code]!;
+      }
+      return code;
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getPaymentMethodName error - $onlineProvider] $e');
-      return onlineProvider ?? '';
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getPaymentMethodName error - $code] $e');
+      Sentry.captureMessage('[getPaymentMethodName error - $code] $e');
+      return code;
     }
   }
 
-  Map<String, dynamic> paymentMethodNames(BuildContext context) {
+  OnlineProvider localiseOnlineProvider(BuildContext context, OnlineProvider onlineProvider) {
+    final methods = paymentMethodNames(context);
+    try {
+      if (methods.containsKey(onlineProvider.code)) {
+        final String name = methods[onlineProvider.code]!;
+        return onlineProvider.copyWith(name: name);
+      }
+      return onlineProvider;
+    } catch (e) {
+      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[localiseOnlineProvider error - $onlineProvider] $e');
+      Sentry.captureMessage('[getPaymentMethodName error - $onlineProvider] $e');
+      return onlineProvider;
+    }
+  }
+
+  Map<String, String> paymentMethodNames(BuildContext context) {
     return {
       'any_payment_method': context.intl.any_payment_method,
       'NATIONAL_BANK': context.intl.method250Sbnational8722Sbbank,

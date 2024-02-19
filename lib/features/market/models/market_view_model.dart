@@ -152,7 +152,6 @@ class MarketViewModel extends ViewModel
       selectedCountry = CountryModel(name: getCountryName(kAnyCountryCode), code: kAnyCountryCode);
     }
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
-
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
     await _loadCaches();
 
@@ -187,18 +186,6 @@ class MarketViewModel extends ViewModel
     await getCurrencies();
     await getCountryPaymentMethods(selectedCountry.code, context);
   }
-
-  // Future<List<String>> getCountryCodes() async {
-  //   _reloadPaymentMethods = true;
-  //   final res = await _adsRepository.getCountryCodes();
-  //   if (res.isRight) {
-  //     countryCodeModel = res.right;
-  //     return [kAnyCountryCode, ...countryCodeModel.codes];
-  //   } else {
-  //     handleApiError(res.left, context);
-  //     return ['US'];
-  //   }
-  // }
 
   Future<List<CountryModel>> getCountries() async {
     _reloadPaymentMethods = true;
@@ -461,7 +448,13 @@ class MarketViewModel extends ViewModel
             currencies: [],
           ),
         );
-        _countryPaymentMethods.addAll(res.right);
+        final List<OnlineProvider> resss22 = res.right;
+
+        final paymentMethods = resss22.map((OnlineProvider e) {
+          return localiseOnlineProvider(context, e);
+        }).toList();
+        paymentMethods.sort((a, b) => a.name.compareTo(b.name));
+        _countryPaymentMethods.addAll(paymentMethods);
         selectedOnlineProvider = _countryPaymentMethods.first;
         _reloadPaymentMethods = false;
         notifyListeners();
@@ -513,9 +506,6 @@ class MarketViewModel extends ViewModel
     ctrlAmount.dispose();
     ctrlLocation.dispose();
     subscriptionReload.cancel();
-    onlineProviderDropdownKey.currentState?.dispose();
-    currencyDropdownKey.currentState?.dispose();
-    countryDropdownKey.currentState?.dispose();
     super.dispose();
   }
 
