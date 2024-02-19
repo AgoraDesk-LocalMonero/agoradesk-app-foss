@@ -154,8 +154,8 @@ class MarketViewModel extends ViewModel
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
 
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
-    await getCountryPaymentMethods(selectedCountry.code, context);
     await _loadCaches();
+
     if (_appState.hasPinCode) {
       await getAds();
     }
@@ -185,6 +185,7 @@ class MarketViewModel extends ViewModel
   Future _loadCaches() async {
     await getCountries();
     await getCurrencies();
+    await getCountryPaymentMethods(selectedCountry.code, context);
   }
 
   // Future<List<String>> getCountryCodes() async {
@@ -235,7 +236,7 @@ class MarketViewModel extends ViewModel
   }
 
   Future<List<CurrencyModel?>> getCurrenciesFromPaymentMethod() async {
-    _reloadPaymentMethods = true;
+    // _reloadPaymentMethods = true;
     if (selectedOnlineProvider?.code == null || selectedOnlineProvider?.code == kAnyPaymentMethodKey) {
       final res = await _adsRepository.getCurrencies();
       if (res.isRight) {
