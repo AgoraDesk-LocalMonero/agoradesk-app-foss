@@ -17,7 +17,6 @@ class DropdownAssetLineWithIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('++++++++++++++++++++01 - $svgPath');
     return Padding(
       key: UniqueKey(),
       padding: padding,

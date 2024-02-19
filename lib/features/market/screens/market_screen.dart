@@ -178,7 +178,6 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                         decoration: InputDecoration(labelText: context.intl.search250Sbbtn),
                       ),
                       itemBuilder: (context, val, isSelected) {
-                        print('++++++++++++++++++++3333 - ${val.code}');
                         return DropdownAssetLineWithIcon(
                           name: val.name,
                           svgPath: getPaymentMethodIconPath(val.code),
@@ -189,7 +188,6 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                     onChanged: (val) => model.changeOnlineProvider(val),
                     selectedItem: model.selectedOnlineProvider,
                     dropdownBuilder: (context, val) {
-                      print('++++++++++++++++++++444 - ${val?.code}');
                       return DropdownAssetLineWithIcon(
                         name: val?.name ?? '',
                         svgPath: getPaymentMethodIconPath(val?.code),
