@@ -172,4 +172,8 @@ mixin PaymentMethodsMixin {
       'YOOMONEY': context.intl.method250Sbyoomoney,
     };
   }
+
+  String? getPaymentMethodIconPath(String? code) {
+    return code?.isNotEmpty == true ? 'assets/banks/$code.svg' : null;
+  }
 }
