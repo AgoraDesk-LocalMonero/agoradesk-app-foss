@@ -77,9 +77,9 @@ class MarketViewModel extends ViewModel
   late CurrencyModel defaultCurrency;
   bool hasMorePages = false;
   PaginationMeta? paginationMeta;
-  final onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
-  final currencyDropdownKey = GlobalKey<DropdownSearchState>();
-  final countryDropdownKey = GlobalKey<DropdownSearchState>();
+  late final onlineProviderDropdownKey;
+  late final currencyDropdownKey;
+  late final countryDropdownKey;
   late final StreamSubscription<bool> subscriptionReload;
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
@@ -129,6 +129,9 @@ class MarketViewModel extends ViewModel
 
   @override
   void init() async {
+    onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
+    currencyDropdownKey = GlobalKey<DropdownSearchState>();
+    countryDropdownKey = GlobalKey<DropdownSearchState>();
     //todo - refactor me (maybe with AutoRoute)
     isGuestMode = _authService.authState == AuthState.guest;
     _authService.onAuthStateChange.listen((e) {
@@ -439,7 +442,6 @@ class MarketViewModel extends ViewModel
     selectedCurrency = defaultCurrency;
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
     selectedCountry = CountryModel(name: getCountryName(_appState.countryCode), code: _appState.countryCode);
-    ;
     countryDropdownKey.currentState?.changeSelectedItem(selectedCountry.code);
     locationFieldClear();
     notifyListeners();
@@ -510,6 +512,9 @@ class MarketViewModel extends ViewModel
     ctrlAmount.dispose();
     ctrlLocation.dispose();
     subscriptionReload.cancel();
+    onlineProviderDropdownKey.currentState?.dispose();
+    currencyDropdownKey.currentState?.dispose();
+    countryDropdownKey.currentState?.dispose();
     super.dispose();
   }
 
