@@ -77,9 +77,9 @@ class MarketViewModel extends ViewModel
   late CurrencyModel defaultCurrency;
   bool hasMorePages = false;
   PaginationMeta? paginationMeta;
-  late final onlineProviderDropdownKey;
-  late final currencyDropdownKey;
-  late final countryDropdownKey;
+  late final GlobalKey<DropdownSearchState<dynamic>> onlineProviderDropdownKey;
+  late final GlobalKey<DropdownSearchState<dynamic>> currencyDropdownKey;
+  late final GlobalKey<DropdownSearchState<dynamic>> countryDropdownKey;
   late final StreamSubscription<bool> subscriptionReload;
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
