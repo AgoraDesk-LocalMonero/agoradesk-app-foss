@@ -45,7 +45,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                       context.intl.skip,
                       style: context.txtLabelLargeP80P70,
                     ),
-                    onPressed: () => AutoRouter.of(context).push(LoginWebviewRoute()),
+                    onPressed: () => AutoRouter.of(context).push(LoginRoute()),
                   ),
                 ],
               ),

@@ -33,6 +33,7 @@ import 'package:agoradesk/features/ads/screens/widgets/payment_method_info.dart'
 import 'package:agoradesk/features/ads/screens/widgets/payment_terms.dart';
 import 'package:agoradesk/features/ads/screens/widgets/price_body_formula.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
+import 'package:agoradesk/features/auth/screens/login_screen.dart';
 import 'package:agoradesk/features/auth/screens/login_webview_screen.dart';
 import 'package:agoradesk/features/market/screens/widgets/drop_down_asset_line_with_icons.dart';
 import 'package:agoradesk/features/market/screens/widgets/filter_button.dart';
@@ -105,7 +106,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                         : _PopupMenu(model: model),
               ),
               body: model.isGuestMode
-                  ? const LoginWebviewScreen(
+                  ? const LoginScreen(
                       displaySkip: false,
                     )
                   : SafeArea(

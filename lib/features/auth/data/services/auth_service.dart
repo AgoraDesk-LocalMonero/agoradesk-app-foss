@@ -7,12 +7,14 @@ import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
+import 'package:agoradesk/main.dart';
 import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -106,8 +108,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, sendConfirmationEmail] ${request.captchaCookie}');
+      }
       await _api.client.post<Map>(
         '/confirmation_email',
         data: request.toJson(),
@@ -176,8 +179,9 @@ class AuthService with FileUtilsMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
+      }
       await _api.client.post<Map>(
         '/password_reset_request',
         data: request.toJson(),
@@ -245,7 +249,7 @@ class AuthService with FileUtilsMixin {
       if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
       }
-      final resp = await _api.client.post<Map>(
+      Response<Map<dynamic, dynamic>> resp = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
         options: Options(
@@ -253,6 +257,46 @@ class AuthService with FileUtilsMixin {
         ),
       );
       dev.log('++++[login respone] ${resp.statusCode} - ${resp.data} - ${resp.headers}');
+
+// check is response was sent by imperva or not
+      //     {
+      //     "incidentId" : "$INCIDENT_ID$",
+      //     "hostName" : "$HOST_NAME$",
+      //     "errorCode" : "$RR_CODE$",
+      //     "description" : "$RR_DESCRIPTION$",
+      //     "timeUtc" : "$TIME_UTC$",
+      //     "clientIp" : "$CLIENT_IP$",
+      //     "proxyId" : "$PROXY_ID$",
+      //     "proxyIp" : "$PROXY_IP$",
+      //     "position" : "$WAITING_ROOM_POSITION$",
+      //     "wrId" : "$WAITING_ROOM_ID$",
+      //     "queueInactivityTimeout" : "$WAITING_ROOM_QUEUE_INACTIVITY_TIMEOUT$",
+      //     "estimatedTimeToWait" : "$WAITING_ROOM_ESTIMATED_TIME_TO_WAIT$"
+      // }
+      // https://docs.imperva.com/bundle/cloud-application-security/page/waiting-room-mobile.htm
+      if (resp.statusCode == 200 && resp.data != null && resp.data!.containsKey('incidentId')) {
+        bool passedThroughImperva = false;
+
+        while (!passedThroughImperva) {
+          container.read(appStateV2Provider.notifier).startCountdown();
+          await container.read(appStateV2Provider.notifier).waitForFinish();
+
+          final resp2 = await _api.client.post<Map>(
+            '/login',
+            data: request.toJson(),
+            options: Options(
+              headers: cookie,
+            ),
+          );
+
+          if ((resp.statusCode == 200 && resp.data != null && resp.data!.containsKey('incidentId') == false) ||
+              resp2.statusCode != 200) {
+            passedThroughImperva = true;
+            resp = resp2;
+          }
+        }
+      }
+
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);
@@ -364,8 +408,9 @@ class AuthService with FileUtilsMixin {
         },
       );
       String headerWithCookie = response.headers['set-cookie']?[0] ?? '';
-      if (GetIt.I<AppParameters>().debugPrintIsOn)
+      if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, downloadCaptcha] $headerWithCookie');
+      }
       final endIndex = headerWithCookie.indexOf(';');
 
       String cookie = headerWithCookie.substring(0, endIndex);

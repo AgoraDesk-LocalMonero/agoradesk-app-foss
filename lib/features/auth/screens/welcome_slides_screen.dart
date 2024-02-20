@@ -52,7 +52,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
                             context.intl.skip,
                             style: context.txtLabelLargeP80P70,
                           ),
-                          onPressed: () => AutoRouter.of(context).push(LoginWebviewRoute()),
+                          onPressed: () => AutoRouter.of(context).push(LoginRoute()),
                         ),
                       ],
                     ),

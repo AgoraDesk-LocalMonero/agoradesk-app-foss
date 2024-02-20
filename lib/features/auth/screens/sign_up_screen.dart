@@ -65,11 +65,11 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                           mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
                                             TextButton(
+                                              onPressed: model.guestModeOn,
                                               child: Text(
                                                 context.intl.skip,
                                                 style: context.txtLabelLargeP80P70,
                                               ),
-                                              onPressed: model.guestModeOn,
                                             ),
                                           ],
                                         )
@@ -217,7 +217,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                             recognizer: TapGestureRecognizer()
                                               ..onTap = () {
                                                 AutoRouter.of(context)
-                                                    .push(LoginWebviewRoute(displaySkip: widget.displaySkip));
+                                                    .push(LoginRoute(displaySkip: widget.displaySkip));
                                               },
                                           ),
                                         ],
