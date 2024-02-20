@@ -142,17 +142,17 @@ void main() async {
 
   if (kDebugMode || includeFcm == false || sentryIsOn == false) {
     runApp(const ProviderScope(child: App()));
-    return;
+  } else {
+    SentryFlutter.init(
+      (options) {
+        options
+          ..dsn = kSentryDsn
+          ..reportSilentFlutterErrors = true
+          ..attachStacktrace = false
+          ..enableAutoSessionTracking = false
+          ..tracesSampleRate = 1.0;
+      },
+      appRunner: () => runApp(const ProviderScope(child: App())),
+    );
   }
-  SentryFlutter.init(
-    (options) {
-      options
-        ..dsn = kSentryDsn
-        ..reportSilentFlutterErrors = true
-        ..attachStacktrace = false
-        ..enableAutoSessionTracking = false
-        ..tracesSampleRate = 1.0;
-    },
-    appRunner: () => runApp(const ProviderScope(child: App())),
-  );
 }
