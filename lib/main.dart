@@ -9,7 +9,7 @@ import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/notifications/local_notifications_urils.dart';
+import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/init_app_parameters.dart';
