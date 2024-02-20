@@ -55,7 +55,8 @@ mixin PaymentMethodsMixin {
         return paymentMethodNames(context)['CASH']!;
       }
 
-      if (paymentMethodNames(context).containsKey([code])) {
+
+      if (paymentMethodNames(context).containsKey(code)) {
         return paymentMethodNames(context)[code]!;
       }
       return code;
@@ -66,7 +67,9 @@ mixin PaymentMethodsMixin {
     }
   }
 
-  OnlineProvider localiseOnlineProvider(BuildContext context, OnlineProvider onlineProvider) {
+  OnlineProvider localiseOnlineProvider(BuildContext context, OnlineProvider? onlineProvider) {
+    if (onlineProvider == null) return const OnlineProvider(code: '', name: '', url: '', currencies: []);
+
     final methods = paymentMethodNames(context);
     try {
       if (methods.containsKey(onlineProvider.code)) {
