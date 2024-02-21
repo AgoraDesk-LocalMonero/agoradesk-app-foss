@@ -10,7 +10,6 @@ import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_with_icon_tonal.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
-import 'package:agoradesk/features/auth/screens/login_webview_screen.dart';
 import 'package:agoradesk/features/market/screens/widgets/line_icon_link.dart';
 import 'package:agoradesk/features/profile/models/account_view_model.dart';
 import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart';
@@ -28,7 +27,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
 
   @override
   Widget build(BuildContext context) {
-    final sectionsSeparator = const SizedBox(height: 12);
+    const sectionsSeparator = SizedBox(height: 12);
 
     return ViewModelBuilder<AccountViewModel>(
         model: AccountViewModel(
@@ -220,7 +219,9 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
   }
 
   // _checkIp() async {
-  //   final res = await http.get(Uri.parse('https://api.bigdatacloud.net/data/client-ip'));
-  //   debugPrint('++++++++++ip adrress - ${res.body}');
+  // if (kDebugMode) {
+  // final res = await http.get(Uri.parse('https://api.bigdatacloud.net/data/client-ip'));
+  // debugPrint('ip adrress - ${res.body}');
+  // }
   // }
 }

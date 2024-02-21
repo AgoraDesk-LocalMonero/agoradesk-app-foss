@@ -35,10 +35,10 @@ const authRoutes = <AutoRoute>[
     transitionsBuilder: TransitionsBuilders.slideLeft,
     durationInMilliseconds: 200,
   ),
-  CustomRoute(
-    path: 'auth/captcha',
-    page: CaptchaScreen,
-  ),
+  // CustomRoute(
+  //   path: 'auth/captcha',
+  //   page: CaptchaScreen,
+  // ),
   CustomRoute(
     path: 'auth/forgotPassword',
     page: ForgotPasswordScreen,

@@ -30,9 +30,8 @@ import 'firebase_options_localmonero.dart' as localmonero_options;
 const kNotificationsChannel = 'trades_channel';
 const kNotificationIcon = '@mipmap/ic_icon_black';
 
-///
 /// Access to a provider without context
-///
+/// https://github.com/rrousselGit/riverpod/issues/295
 final container = ProviderContainer();
 
 void main() async {
@@ -141,7 +140,7 @@ void main() async {
   }
 
   if (kDebugMode || includeFcm == false || sentryIsOn == false) {
-    runApp(const ProviderScope(child: App()));
+    runApp(UncontrolledProviderScope(container: container, child: const App()));
   } else {
     SentryFlutter.init(
       (options) {
@@ -152,7 +151,7 @@ void main() async {
           ..enableAutoSessionTracking = false
           ..tracesSampleRate = 1.0;
       },
-      appRunner: () => runApp(const ProviderScope(child: App())),
+      appRunner: () => runApp(UncontrolledProviderScope(container: container, child: const App())),
     );
   }
 }

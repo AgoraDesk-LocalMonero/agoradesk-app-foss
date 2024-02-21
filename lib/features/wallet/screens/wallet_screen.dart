@@ -53,7 +53,7 @@ class WalletScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                 child: model.isGuestMode
-                    ? const LoginScreen(
+                    ? LoginScreen(
                         displaySkip: false,
                       )
                     : LayoutBuilder(builder: (context, constraints) {

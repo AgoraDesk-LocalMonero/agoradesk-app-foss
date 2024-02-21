@@ -75,7 +75,7 @@ class _TradesScreenState extends State<TradesScreen>
                     ),
             ),
             body: model.isGuestMode
-                ? const LoginScreen(
+                ?  LoginScreen(
                     displaySkip: false,
                   )
                 : Column(

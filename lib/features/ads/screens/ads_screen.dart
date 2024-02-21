@@ -106,7 +106,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                         : _PopupMenu(model: model),
               ),
               body: model.isGuestMode
-                  ? const LoginScreen(
+                  ?  LoginScreen(
                       displaySkip: false,
                     )
                   : SafeArea(

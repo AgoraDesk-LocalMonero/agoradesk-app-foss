@@ -43,15 +43,15 @@ class ThemeModeChangedEvent {
   const ThemeModeChangedEvent(this.mode);
 }
 
-class DisplayCaptchaEvent {
-  const DisplayCaptchaEvent({
-    required this.cookies,
-    required this.body,
-  });
+// class DisplayCaptchaEvent {
+//   const DisplayCaptchaEvent({
+//     required this.cookies,
+//     required this.body,
+//   });
 
-  final List<dynamic> cookies;
-  final String? body;
-}
+//   final List<dynamic> cookies;
+//   final String? body;
+// }
 
 ///
 /// Push events

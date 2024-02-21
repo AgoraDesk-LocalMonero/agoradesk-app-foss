@@ -106,12 +106,12 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     return 'https://agoradesk.com/mobile-login?themeType=$themeParameter';
   }
 
-  void parseAndLoginWebview(String username) {
-    final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
-    if (cookies != null && cookies.firstWhereOrNull((e) => e.name == 'token') != null) {
-      _authService.loginWebview(username);
-    }
-  }
+  // void parseAndLoginWebview(String username) {
+  //   final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
+  //   if (cookies != null && cookies.firstWhereOrNull((e) => e.name == 'token') != null) {
+  //     _authService.loginWebview(username);
+  //   }
+  // }
 
   void changePasswordVisibility() {
     passwordVisible = !passwordVisible;

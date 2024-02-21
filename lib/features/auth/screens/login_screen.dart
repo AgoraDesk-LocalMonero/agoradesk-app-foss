@@ -32,14 +32,27 @@ class LoginScreen extends ConsumerStatefulWidget {
 }
 
 class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObserver, ValidatorMixin {
+  int? _counter = 0;
+
   @override
   void initState() {
+    ref.listenManual(appStateV2Provider, (previous, next) {
+      setState(() {
+        _counter = next.countdownSeconds;
+      });
+      Future.delayed(const Duration(milliseconds: 300)).then((value) {
+        setState(() {
+          _counter = previous?.countdownSeconds;
+        });
+      });
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     final counter = ref.watch(appStateV2Provider.select((value) => value.countdownSeconds));
+
     return KeyboardDismissOnTap(
       child: Scaffold(
         body: SafeArea(
@@ -152,17 +165,37 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
                                             color: Theme.of(context).colorScheme.onError,
                                           ),
                                     ),
-                                    if (counter > 0)
+                                  if (counter > 0)
                                     Center(
                                       child: Padding(
                                         padding: const EdgeInsets.all(12),
                                         child: Text(
-                                          'Additional check with Imperva firewall  $counter - seconds left.',
+                                          'Logging you in, please wait...',
                                           style: context.txtLabelLargeCustom08,
                                         ),
                                       ),
                                     ),
+                                  if (counter > 0)
+                                    AnimatedScale(
+                                      duration: const Duration(milliseconds: 200),
+                                      scale: counter != _counter ? 1 : 0,
+                                      child: Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.fromLTRB(12, 6, 12, 0),
+                                          child: Text(
+                                            '$counter',
+                                            style: context.txtLabelLargeCustom08,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   const SizedBox(height: 18),
+                                  GestureDetector(
+                                    onTap: () {
+                                      ref.read(appStateV2Provider.notifier).startCountdown();
+                                    },
+                                    child: const Text('Start countdown'),
+                                  ),
                                   ButtonFilledP80(
                                     title: context.intl.login250Sbtitle,
                                     active: model.isFormReady,

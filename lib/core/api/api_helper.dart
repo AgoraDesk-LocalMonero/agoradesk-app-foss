@@ -7,7 +7,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
 mixin ApiHelper {
-  static String? parseErrorToString(DioError e) {
+  static String? parseErrorToString(DioException e) {
     log('++++ApiHelper parseErrorToString -- $e');
     if (e.response != null && e.response!.data is Map) {
       // Parse validation error messages
@@ -43,7 +43,7 @@ mixin ApiHelper {
   static ApiError parseErrorToApiError(dynamic err, String? objectStr) {
     if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[++++parseErrorToApiError objectStr] $err');
     try {
-      final e = err as DioError;
+      final e = err as DioException;
       if (e.response?.statusCode == 403) {
         return ApiError(statusCode: 403, message: {});
       }

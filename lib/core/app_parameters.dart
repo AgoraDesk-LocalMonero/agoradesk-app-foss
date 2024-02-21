@@ -53,8 +53,9 @@ class AppParameters {
   final bool isAgora;
   final bool includeFcm;
   final bool isCheckUpdates;
-  List<Cookie>? cookies;
-  List<Cookie>? appCaptchaCookies;
+
+  /// Cookies for captcha & Imperva
+  List<Cookie> cookies = [];
 
   /// plausible analytics
   final String urlPlausibleServer = 'https://a.agoradesk.com';

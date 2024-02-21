@@ -10,12 +10,12 @@ import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/utils/auth_mixin.dart';
 import 'package:agoradesk/core/utils/file_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/profile/data/models/confirmation_email_request_model.dart';
 import 'package:agoradesk/features/profile/data/services/user_service.dart';
 import 'package:agoradesk/main.dart';
-import 'package:collection/collection.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -24,7 +24,7 @@ import 'package:rxdart/rxdart.dart';
 
 enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
 
-class AuthService with FileUtilsMixin {
+class AuthService with FileUtilsMixin, AuthMixin {
   AuthService({
     required ApiClient api,
     required SecureStorage secureStorage,
@@ -249,6 +249,7 @@ class AuthService with FileUtilsMixin {
       if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
       }
+
       Response<Map<dynamic, dynamic>> resp = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
@@ -258,25 +259,11 @@ class AuthService with FileUtilsMixin {
       );
       dev.log('++++[login respone] ${resp.statusCode} - ${resp.data} - ${resp.headers}');
 
-// check is response was sent by imperva or not
-      //     {
-      //     "incidentId" : "$INCIDENT_ID$",
-      //     "hostName" : "$HOST_NAME$",
-      //     "errorCode" : "$RR_CODE$",
-      //     "description" : "$RR_DESCRIPTION$",
-      //     "timeUtc" : "$TIME_UTC$",
-      //     "clientIp" : "$CLIENT_IP$",
-      //     "proxyId" : "$PROXY_ID$",
-      //     "proxyIp" : "$PROXY_IP$",
-      //     "position" : "$WAITING_ROOM_POSITION$",
-      //     "wrId" : "$WAITING_ROOM_ID$",
-      //     "queueInactivityTimeout" : "$WAITING_ROOM_QUEUE_INACTIVITY_TIMEOUT$",
-      //     "estimatedTimeToWait" : "$WAITING_ROOM_ESTIMATED_TIME_TO_WAIT$"
-      // }
-      // https://docs.imperva.com/bundle/cloud-application-security/page/waiting-room-mobile.htm
-      if (resp.statusCode == 200 && resp.data != null && resp.data!.containsKey('incidentId')) {
-        bool passedThroughImperva = false;
+      if (checkIsFromImperva(resp)) {
+        final impervaCookies = parseImpervaCookies(resp.data!);
+        GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
 
+        bool passedThroughImperva = false;
         while (!passedThroughImperva) {
           container.read(appStateV2Provider.notifier).startCountdown();
           await container.read(appStateV2Provider.notifier).waitForFinish();
@@ -288,9 +275,7 @@ class AuthService with FileUtilsMixin {
               headers: cookie,
             ),
           );
-
-          if ((resp.statusCode == 200 && resp.data != null && resp.data!.containsKey('incidentId') == false) ||
-              resp2.statusCode != 200) {
+          if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
             passedThroughImperva = true;
             resp = resp2;
           }
@@ -311,49 +296,49 @@ class AuthService with FileUtilsMixin {
     }
   }
 
-  ///
-  /// Login with the Webview
-  ///
-  Future<Either<ApiError, bool>> loginWebview(String username) async {
-    try {
-      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
-      if (tokenCookie != null) {
-        final resToken = await _handleTokenWebview(tokenCookie.value);
-        if (resToken) {
-          _saveUserName(username);
-          return const Either.right(true);
-        }
-      }
+  // ///
+  // /// Login with the Webview
+  // ///
+  // Future<Either<ApiError, bool>> loginWebview(String username) async {
+  //   try {
+  //     final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
+  //     if (tokenCookie != null) {
+  //       final resToken = await _handleTokenWebview(tokenCookie.value);
+  //       if (resToken) {
+  //         _saveUserName(username);
+  //         return const Either.right(true);
+  //       }
+  //     }
 
-      return const Either.right(false);
-    } catch (e) {
-      final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
-      final ApiError? errorWithCaptcha = await _captchaParser(apiError);
-      return Either.left(errorWithCaptcha ?? apiError);
-    }
-  }
+  //     return const Either.right(false);
+  //   } catch (e) {
+  //     final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+  //     final ApiError? errorWithCaptcha = await _captchaParser(apiError);
+  //     return Either.left(errorWithCaptcha ?? apiError);
+  //   }
+  // }
 
-  ///
-  /// Sign Up with the Webview
-  ///
-  Future<Either<ApiError, bool>> signupWebview(String username) async {
-    try {
-      final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
-      if (tokenCookie != null) {
-        final resToken = await _handleTokenWebview(tokenCookie.value);
-        if (resToken) {
-          _saveUserName(username);
-          return const Either.right(true);
-        }
-      }
+  // ///
+  // /// Sign Up with the Webview
+  // ///
+  // Future<Either<ApiError, bool>> signupWebview(String username) async {
+  //   try {
+  //     final Cookie? tokenCookie = GetIt.I<AppParameters>().cookies?.firstWhereOrNull((e) => e.name == 'token');
+  //     if (tokenCookie != null) {
+  //       final resToken = await _handleTokenWebview(tokenCookie.value);
+  //       if (resToken) {
+  //         _saveUserName(username);
+  //         return const Either.right(true);
+  //       }
+  //     }
 
-      return const Either.right(false);
-    } catch (e) {
-      final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
-      final ApiError? errorWithCaptcha = await _captchaParser(apiError);
-      return Either.left(errorWithCaptcha ?? apiError);
-    }
-  }
+  //     return const Either.right(false);
+  //   } catch (e) {
+  //     final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+  //     final ApiError? errorWithCaptcha = await _captchaParser(apiError);
+  //     return Either.left(errorWithCaptcha ?? apiError);
+  //   }
+  // }
 
   ///
   /// Captcha parser
@@ -371,12 +356,10 @@ class AuthService with FileUtilsMixin {
       );
       if (res?[0] != null) {
         try {
-          if (GetIt.I<AppParameters>().cookies != null) {
-            final String captchaCookieStr = res![0]!;
-            GetIt.I<AppParameters>()
-                .cookies
-                ?.add(Cookie(name: captchaCookieStr.split('=')[0], value: captchaCookieStr.split('=')[1]));
-          }
+          final String captchaCookieStr = res![0]!;
+          GetIt.I<AppParameters>()
+              .cookies
+              .add(Cookie(name: captchaCookieStr.split('=')[0], value: captchaCookieStr.split('=')[1]));
         } catch (e) {
           debugPrint('[++++ _captchaParser] - $e');
         }
@@ -430,7 +413,7 @@ class AuthService with FileUtilsMixin {
     _authStateController.add(AuthState.loggedOut);
     _api.accessToken = null;
     GetIt.I<AppParameters>().accessToken = null;
-    GetIt.I<AppParameters>().cookies = null;
+    GetIt.I<AppParameters>().cookies.clear();
     _appState.hasPinCode = false;
     try {
       FirebaseMessaging.instance.deleteToken();
@@ -460,19 +443,19 @@ class AuthService with FileUtilsMixin {
     return false;
   }
 
-  Future<bool> _handleTokenWebview(String token) async {
-    try {
-      _setToken(token);
-      if (_api.accessToken != null) {
-        showPinSetUp = true;
-        _authStateController.add(AuthState.loggedIn);
-      }
-      return true;
-    } catch (e) {
-      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
-    }
-    return false;
-  }
+  // Future<bool> _handleTokenWebview(String token) async {
+  //   try {
+  //     _setToken(token);
+  //     if (_api.accessToken != null) {
+  //       showPinSetUp = true;
+  //       _authStateController.add(AuthState.loggedIn);
+  //     }
+  //     return true;
+  //   } catch (e) {
+  //     if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
+  //   }
+  //   return false;
+  // }
 
   ///
   /// Set the access token
