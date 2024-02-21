@@ -10,6 +10,7 @@ import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/models/login_view_model.dart';
+import 'package:agoradesk/features/auth/screens/widgets/imperva_counter.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,8 +20,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
-class LoginScreen extends ConsumerStatefulWidget {
-  const LoginScreen({
+class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorMixin {
+  LoginScreen({
     Key? key,
     this.displaySkip = true,
   }) : super(key: key);
@@ -28,31 +29,7 @@ class LoginScreen extends ConsumerStatefulWidget {
   final bool displaySkip;
 
   @override
-  LoginScreenState createState() => LoginScreenState();
-}
-
-class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObserver, ValidatorMixin {
-  int? _counter = 0;
-
-  @override
-  void initState() {
-    ref.listenManual(appStateV2Provider, (previous, next) {
-      setState(() {
-        _counter = next.countdownSeconds;
-      });
-      Future.delayed(const Duration(milliseconds: 300)).then((value) {
-        setState(() {
-          _counter = previous?.countdownSeconds;
-        });
-      });
-    });
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final counter = ref.watch(appStateV2Provider.select((value) => value.countdownSeconds));
-
+  Widget build(BuildContext context, WidgetRef ref) {
     return KeyboardDismissOnTap(
       child: Scaffold(
         body: SafeArea(
@@ -75,7 +52,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  widget.displaySkip
+                                  displaySkip
                                       ? Row(
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
@@ -156,7 +133,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
                                       style: context.txtBodySmallN70,
                                     ),
                                   ),
-                                  if (model.displayCaptcha) _buildCaptcha(model),
+                                  if (model.displayCaptcha) _buildCaptcha(model, context),
                                   if (model.displayError) const SizedBox(height: 26),
                                   if (model.displayError)
                                     Text(
@@ -165,30 +142,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
                                             color: Theme.of(context).colorScheme.onError,
                                           ),
                                     ),
-                                  if (counter > 0)
-                                    Center(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(12),
-                                        child: Text(
-                                          'Logging you in, please wait...',
-                                          style: context.txtLabelLargeCustom08,
-                                        ),
-                                      ),
-                                    ),
-                                  if (counter > 0)
-                                    AnimatedScale(
-                                      duration: const Duration(milliseconds: 200),
-                                      scale: counter != _counter ? 1 : 0,
-                                      child: Center(
-                                        child: Padding(
-                                          padding: const EdgeInsets.fromLTRB(12, 6, 12, 0),
-                                          child: Text(
-                                            '$counter',
-                                            style: context.txtLabelLargeCustom08,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
+                                  const ImpervaCounter(),
                                   const SizedBox(height: 18),
                                   GestureDetector(
                                     onTap: () {
@@ -228,8 +182,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
                             const SizedBox(height: 12),
                             ButtonFilledInactiveSurface2(
                               title: context.intl.signup250Sbbtn,
-                              onPressed: () =>
-                                  AutoRouter.of(context).push(SignUpRoute(displaySkip: widget.displaySkip)),
+                              onPressed: () => AutoRouter.of(context).push(SignUpRoute(displaySkip: displaySkip)),
                               buttonColor: Theme.of(context).colorScheme.tonalP90,
                               textColor: Theme.of(context).colorScheme.primary90,
                             ),
@@ -245,7 +198,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
     );
   }
 
-  Widget _buildCaptcha(LoginViewModel model) {
+  Widget _buildCaptcha(LoginViewModel model, BuildContext context) {
     return Column(
       children: [
         const SizedBox(height: 16),
@@ -290,10 +243,5 @@ class LoginScreenState extends ConsumerState<LoginScreen> with WidgetsBindingObs
             return const SizedBox();
           }
         });
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }

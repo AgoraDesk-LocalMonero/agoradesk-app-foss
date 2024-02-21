@@ -216,13 +216,41 @@ class AuthService with FileUtilsMixin, AuthMixin {
       if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, signUp] ${request.captchaCookie}');
       }
-      final resp = await _api.client.post<Map>(
+      Response<Map<dynamic, dynamic>> resp = await _api.client.post<Map>(
         '/signup',
         data: request.toJson(),
         options: Options(
           headers: cookie,
         ),
       );
+
+      ///
+
+      if (checkIsFromImperva(resp)) {
+        final impervaCookies = parseImpervaCookies(resp.data!);
+        GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
+
+        bool passedThroughImperva = false;
+        while (!passedThroughImperva) {
+          container.read(appStateV2Provider.notifier).startCountdown();
+          await container.read(appStateV2Provider.notifier).waitForFinish();
+
+          final resp2 = await _api.client.post<Map>(
+            '/signup',
+            data: request.toJson(),
+            options: Options(
+              headers: cookie,
+            ),
+          );
+          if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
+            passedThroughImperva = true;
+            resp = resp2;
+          }
+        }
+      }
+
+      ///
+
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);

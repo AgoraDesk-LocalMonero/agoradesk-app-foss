@@ -45,7 +45,7 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
               ),
             ),
             body: model.isGuestMode
-                ? const LoginScreen(
+                ? LoginScreen(
                     displaySkip: false,
                   )
                 : Padding(
