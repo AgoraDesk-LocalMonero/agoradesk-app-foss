@@ -128,3 +128,10 @@ jobs:
           artifacts: "build/app/outputs/flutter-apk/*.apk"
           bodyFile: "RELEASE.md"
           token: ${{ secrets.RELEASE_TOKEN }}
+
+      - name: Add tags for F-Droid releases
+        run: |
+          git checkout fdroid_ad
+          git tag -a "v${{ steps.split.outputs._1 }}-fdroid"
+          git checkout fdroid_lm
+          git tag -a "v${{ steps.split.outputs._1 }}-fdroid-lm"
