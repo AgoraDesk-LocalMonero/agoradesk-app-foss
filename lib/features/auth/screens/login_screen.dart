@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:agoradesk/core/app_state.dart';
-import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
@@ -144,12 +143,6 @@ class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorM
                                     ),
                                   const ImpervaCounter(),
                                   const SizedBox(height: 18),
-                                  GestureDetector(
-                                    onTap: () {
-                                      ref.read(appStateV2Provider.notifier).startCountdown();
-                                    },
-                                    child: const Text('Start countdown'),
-                                  ),
                                   ButtonFilledP80(
                                     title: context.intl.login250Sbtitle,
                                     active: model.isFormReady,
