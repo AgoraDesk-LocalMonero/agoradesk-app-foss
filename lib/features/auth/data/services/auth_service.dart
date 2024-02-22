@@ -227,14 +227,15 @@ class AuthService with FileUtilsMixin, AuthMixin {
       ///
 
       if (checkIsFromImperva(resp)) {
+        print('++++++++++++++++++++01 - 1');
         final impervaCookies = parseImpervaCookies(resp.data!);
         GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
-
+ print('++++++++++++++++++++01 - 2');
         bool passedThroughImperva = false;
         while (!passedThroughImperva) {
           container.read(appStateV2Provider.notifier).startCountdown();
           await container.read(appStateV2Provider.notifier).waitForFinish();
-
+print('++++++++++++++++++++01 - 3');
           final resp2 = await _api.client.post<Map>(
             '/signup',
             data: request.toJson(),
@@ -242,16 +243,19 @@ class AuthService with FileUtilsMixin, AuthMixin {
               headers: cookie,
             ),
           );
+          print('++++++++++++++++++++01 - 4');
           if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
             passedThroughImperva = true;
             resp = resp2;
           }
+           print('++++++++++++++++++++01 - 5');
         }
       }
 
       ///
 
       final resToken = await _handleTokenResponse(resp);
+      print('++++++++++++++++++++01 - 6');
       if (resToken) {
         _saveUserName(request.username!);
         return const Either.right(true);
@@ -259,6 +263,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
         return const Either.right(false);
       }
     } catch (e) {
+      print('++++++++++++++++++++01 - 7 - $e');
       final ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
       final ApiError? errorWithCaptcha = await _captchaParser(apiError);
       return Either.left(errorWithCaptcha ?? apiError);

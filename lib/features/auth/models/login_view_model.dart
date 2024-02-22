@@ -99,10 +99,10 @@ class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     _authService.guestModeOn();
   }
 
-  String getWebviewUrl() {
-    final themeParameter = _appState.themeMode == ThemeMode.dark ? 'dark' : 'light';
-    return 'https://agoradesk.com/mobile-login?themeType=$themeParameter';
-  }
+  // String getWebviewUrl() {
+  //   final themeParameter = _appState.themeMode == ThemeMode.dark ? 'dark' : 'light';
+  //   return 'https://agoradesk.com/mobile-login?themeType=$themeParameter';
+  // }
 
   // void parseAndLoginWebview(String username) {
   //   final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
