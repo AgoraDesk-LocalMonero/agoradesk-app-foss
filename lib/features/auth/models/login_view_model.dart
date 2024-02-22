@@ -9,9 +9,7 @@ import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/dialog_captcha.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:vm/vm.dart';
 
 class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
