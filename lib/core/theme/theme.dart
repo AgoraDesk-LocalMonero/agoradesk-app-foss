@@ -933,6 +933,20 @@ extension ColorExtension on ColorScheme {
 
   TextStyle get errorStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: errorColor);
 
+  ThemeData get themeForTabs => ThemeData(
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        brightness: brightness,
+        colorScheme: copyWith(
+          primary: Colors.transparent,
+          secondary: Colors.transparent,
+          surface: Colors.transparent,
+          background: Colors.transparent,
+          onBackground: Colors.transparent,
+          onPrimary: Colors.transparent,
+        ),
+      );
+
   InputDecoration get txtFieldMainDecoration => InputDecoration(
         hintText: '',
         hintStyle: textTheme.bodyMedium!.copyWith(color: n70N50),

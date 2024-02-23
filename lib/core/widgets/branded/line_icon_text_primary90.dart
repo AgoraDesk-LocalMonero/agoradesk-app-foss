@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/theme/theme.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class LineIconTextPrimary90 extends StatelessWidget {
@@ -18,32 +17,34 @@ class LineIconTextPrimary90 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        mainAxisAlignment: toCenter ? MainAxisAlignment.center : MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          icon != null ? Center(child: icon) : const SizedBox(),
-          icon != null ? const SizedBox(width: 6) : const SizedBox(),
-          icon != null
-              ? AutoSizeText(
+    return Row(
+      mainAxisAlignment: toCenter ? MainAxisAlignment.center : MainAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        icon ?? const SizedBox(),
+        icon != null ? const SizedBox(width: 6) : const SizedBox(),
+        icon != null
+            ? Expanded(
+                child: Text(
                   text,
                   maxLines: 1,
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
                       ),
-                )
-              : Center(
-                  child: AutoSizeText(
-                    text,
-                    maxLines: 1,
-                    style: Theme.of(context).textTheme.agoraLabelSmall.copyWith(
-                          color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
-                        ),
-                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-        ],
-      ),
+              )
+            : Expanded(
+                child: Text(
+                  text,
+                  maxLines: 1,
+                  style: Theme.of(context).textTheme.agoraLabelSmall.copyWith(
+                        color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
+                      ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+      ],
     );
   }
 }
