@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 ///
 /// When FCM is not available appp polling messages in the Foreground service with this interval
+/// milliseconds
 ///
 const kForegroungPollingInterval = 60000;
 

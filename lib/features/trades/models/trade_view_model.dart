@@ -727,7 +727,7 @@ class TradeViewModel extends ViewModel
           tradeForScreen.asset.title(),
           getPaymentMethodName(
             context,
-            tradeForScreen.advertisement.paymentMethod ?? '',
+            tradeForScreen.advertisement.paymentMethod,
             tradeForScreen.advertisement.tradeType,
           ));
     }

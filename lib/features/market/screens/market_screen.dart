@@ -35,7 +35,6 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
-import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:vm/vm.dart';
 
@@ -60,22 +59,17 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
               rightAction: const _PopupMenu(),
             ),
             // SingleChildScrollView for flexible keyboard insets
-            body: KeyboardDismissOnTap(child: LayoutBuilder(builder: (context, constraints) {
-              return SizedBox(
-                height: constraints.maxHeight,
-                child: Column(
-                  children: [
-                    _buildSelectAdType(context, model),
-                    Expanded(
-                      child: Padding(
-                        padding: kScreenPadding,
-                        child: _buildAdsList(context, model),
-                      ),
-                    ),
-                  ],
+            body: Column(
+              children: [
+                _buildSelectAdType(context, model),
+                Expanded(
+                  child: Padding(
+                    padding: kScreenPadding,
+                    child: _buildAdsList(context, model),
+                  ),
                 ),
-              );
-            })),
+              ],
+            ),
           );
         });
   }
@@ -180,7 +174,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                       itemBuilder: (context, val, isSelected) {
                         return DropdownAssetLineWithIcon(
                           name: val.name,
-                          svgPath: val.code.isNotEmpty == true ? 'assets/banks/${val.code}.svg' : null,
+                          svgPath: getPaymentMethodIconPath(val.code),
                         );
                       },
                     ),
@@ -190,7 +184,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                     dropdownBuilder: (context, val) {
                       return DropdownAssetLineWithIcon(
                         name: val?.name ?? '',
-                        svgPath: val?.code.isNotEmpty == true ? 'assets/banks/${val!.code}.svg' : null,
+                        svgPath: getPaymentMethodIconPath(val?.code),
                         padding: const EdgeInsets.all(0),
                       );
                     },

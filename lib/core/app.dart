@@ -9,6 +9,7 @@ import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
@@ -41,6 +42,7 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/data/services/trade_service.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
+import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -163,6 +165,8 @@ class _AppState extends State<App>
 
     WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback(_afterLayout);
+
+    container.read(appStateV2Provider.notifier);
 
     super.initState();
   }
@@ -506,18 +510,18 @@ class _AppState extends State<App>
           _authService.logOut();
         }
       })
-      ..on<DisplayCaptchaEvent>().listen((e) {
-        if (router.current.name != WebviewRoute.name) {
-          router.push(
-            WebviewRoute(
-              cookies: e.cookies,
-              token: token,
-              url: 'https://agoradesk.com',
-              isFromCaptchaEvent: true,
-            ),
-          );
-        }
-      })
+      // ..on<DisplayCaptchaEvent>().listen((e) {
+      //   if (router.current.name != WebviewRoute.name) {
+      //     router.push(
+      //       WebviewRoute(
+      //         cookies: e.cookies,
+      //         token: token,
+      //         url: 'https://agoradesk.com',
+      //         isFromCaptchaEvent: true,
+      //       ),
+      //     );
+      //   }
+      // })
       ..on<ReloadMarketScreenEvent>().listen((e) {
         appState.sinkReloadMarket.add(true);
       })

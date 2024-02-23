@@ -8,6 +8,7 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/device_model.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
@@ -390,7 +391,7 @@ class NotificationsService with ForegroundMessagesMixin {
           biometricOnly: true,
         ),
       );
-    } on PlatformException catch (e) {
+    } on PlatformException catch (_) {
       return false;
     }
     return authenticated;

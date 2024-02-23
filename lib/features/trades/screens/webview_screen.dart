@@ -2,12 +2,24 @@ import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
-import 'package:agoradesk/features/auth/screens/widgets/webview_login_widget.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:provider/provider.dart';
+
+final kWebviewSettings = InAppWebViewSettings(
+  javaScriptEnabled: true,
+  javaScriptCanOpenWindowsAutomatically: true,
+  mediaPlaybackRequiresUserGesture: false,
+  useWideViewPort: true,
+  loadWithOverviewMode: true,
+  supportZoom: false,
+  cacheEnabled: false,
+  transparentBackground: true,
+  disableContextMenu: false,
+  userAgent: 'AgoraDesk',
+);
 
 class WebviewScreen extends StatefulWidget {
   const WebviewScreen({
@@ -128,6 +140,6 @@ class WebViewExampleState extends State<WebviewScreen> {
       resCookies.add(c);
     }
 
-    GetIt.I<AppParameters>().cookies = resCookies;
+    GetIt.I<AppParameters>().cookies.addAll(resCookies);
   }
 }

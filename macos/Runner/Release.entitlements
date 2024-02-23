@@ -9,5 +9,8 @@
 		<string>applinks:agoradesk.com</string>
 		<string>applinks:localmonero.co</string>
 	</array>
+	<key>com.apple.security.network.client</key>
+	<true/>
+
 </dict>
 </plist>

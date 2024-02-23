@@ -1,5 +1,5 @@
 name: agoradesk
-version: 1.1.20+116
+version: 1.1.21+117
 publish_to: none
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 environment: 
@@ -27,7 +27,7 @@ dependencies:
   extended_image: ^8.1.0
   figma_squircle: ^0.5.3
   firebase_core: ^2.25.4
-  firebase_messaging: ^14.7.15
+  firebase_messaging: ^14.7.16
   flutter_app_badger: ^1.5.0
   flutter_displaymode: ^0.5.0
   flutter_foreground_task: ^6.1.2

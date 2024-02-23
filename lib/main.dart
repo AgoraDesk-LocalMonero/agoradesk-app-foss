@@ -6,20 +6,19 @@ import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/init_app_parameters.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:google_api_availability/google_api_availability.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
@@ -30,6 +29,10 @@ import 'firebase_options_localmonero.dart' as localmonero_options;
 
 const kNotificationsChannel = 'trades_channel';
 const kNotificationIcon = '@mipmap/ic_icon_black';
+
+/// Access to a provider without context
+/// https://github.com/rrousselGit/riverpod/issues/295
+final container = ProviderContainer();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -137,165 +140,18 @@ void main() async {
   }
 
   if (kDebugMode || includeFcm == false || sentryIsOn == false) {
-    runApp(const App());
-    return;
-  }
-  SentryFlutter.init(
-    (options) {
-      options
-        ..dsn = kSentryDsn
-        ..reportSilentFlutterErrors = true
-        ..attachStacktrace = false
-        ..enableAutoSessionTracking = false
-        ..tracesSampleRate = 1.0;
-    },
-    appRunner: () => runApp(const App()),
-  );
-}
-
-///
-/// detect does Google Play available or not
-///
-@pragma('vm:entry-point')
-Future<bool> checkGoogleAvailable() async {
-  // We use this check to run foreground isolate task on Android.
-  // So, in case it is not Android we returns true, because with true isolate won't start.
-  if (!Platform.isAndroid) return true;
-
-  final GooglePlayServicesAvailability gPlayState =
-      await GoogleApiAvailability.instance.checkGooglePlayServicesAvailability();
-  List<GooglePlayServicesAvailability> googleUnavalableStates = [
-    GooglePlayServicesAvailability.serviceInvalid,
-    GooglePlayServicesAvailability.notAvailableOnPlatform,
-    GooglePlayServicesAvailability.serviceDisabled,
-    GooglePlayServicesAvailability.serviceMissing,
-    GooglePlayServicesAvailability.unknown,
-  ];
-  if (googleUnavalableStates.contains(gPlayState)) {
-    return false;
-  }
-  return true;
-}
-
-/// Create a [AndroidNotificationChannel] for heads up notifications
-late AndroidNotificationChannel channel;
-
-bool isFlutterLocalNotificationsInitialized = false;
-
-Future<void> setupLocalNotifications(bool isGoogleAvailable) async {
-  if (isFlutterLocalNotificationsInitialized) {
-    return;
-  }
-
-  channel = const AndroidNotificationChannel(
-    kNotificationsChannel, // id
-    'Trades channel', // title
-    description: 'Notifications about trades', // description
-    importance: Importance.high,
-  );
-
-  localNotificationsPlugin = FlutterLocalNotificationsPlugin();
-
-  await localNotificationsPlugin
-      .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
-      ?.createNotificationChannel(channel);
-
-  await localNotificationsPlugin.initialize(
-    const InitializationSettings(
-      android: AndroidInitializationSettings(kNotificationIcon),
-      iOS: DarwinInitializationSettings(
-        requestAlertPermission: true,
-        requestSoundPermission: true,
-        requestBadgePermission: true,
-      ),
-      macOS: DarwinInitializationSettings(
-        requestAlertPermission: true,
-        requestSoundPermission: true,
-        requestBadgePermission: true,
-      ),
-    ),
-    onDidReceiveNotificationResponse: _notificationResponse,
-  );
-
-  /// Update the iOS foreground notification presentation options to allow
-  /// heads up notifications.
-  if (isGoogleAvailable) {
-    await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
-      alert: false,
-      badge: false,
-      sound: false,
+    runApp(UncontrolledProviderScope(container: container, child: const App()));
+  } else {
+    SentryFlutter.init(
+      (options) {
+        options
+          ..dsn = kSentryDsn
+          ..reportSilentFlutterErrors = true
+          ..attachStacktrace = false
+          ..enableAutoSessionTracking = false
+          ..tracesSampleRate = 1.0;
+      },
+      appRunner: () => runApp(UncontrolledProviderScope(container: container, child: const App())),
     );
   }
-  isFlutterLocalNotificationsInitialized = true;
 }
-
-/// Initialize the [FlutterLocalNotificationsPlugin] package.
-late FlutterLocalNotificationsPlugin localNotificationsPlugin;
-
-Future _notificationResponse(NotificationResponse notificationResponse) async {
-  try {
-    String? tradeId;
-    final String? payload = notificationResponse.payload;
-    if (payload != null) {
-      final PushModel push = PushModel.fromJson(jsonDecode(payload));
-      if (push.objectId != null && push.objectId!.isNotEmpty) {
-        tradeId = push.objectId;
-      }
-    }
-    eventBus.fire(NoificationClickedEvent(tradeId));
-  } catch (e) {
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
-  }
-}
-
-// @pragma('vm:entry-point')
-// Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-// if (DateTime.now().toUtc().isBefore(DateTime(2022, 12, 28, 15, 0))) {
-//   try {
-//     await SecureStorage.ensureInitialized();
-//     final SecureStorage _secureStorage = SecureStorage();
-//     final locale = await _secureStorage.read(SecureStorageKey.locale);
-//     final String langCode = locale ?? Platform.localeName.substring(0, 2);
-//     final PushModel push = PushModel.fromJson(message.data);
-//     // final Map<String, String> payload = push.toJson().map((key, value) => MapEntry(key, value?.toString() ?? ''));
-//
-//     channel = const AndroidNotificationChannel(
-//       kNotificationsChannel, // id
-//       'Trades channel', // title
-//       description: 'Notifications about trades', // description
-//       importance: Importance.high,
-//     );
-//
-//     final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-//     await flutterLocalNotificationsPlugin.initialize(
-//       const InitializationSettings(
-//         android: AndroidInitializationSettings(kNotificationIcon),
-//         iOS: DarwinInitializationSettings(
-//           requestAlertPermission: true,
-//           requestSoundPermission: true,
-//           requestBadgePermission: true,
-//         ),
-//       ),
-//     );
-//
-//     await flutterLocalNotificationsPlugin.show(
-//       int.tryParse(push.id ?? '0') ?? 0,
-//       ForegroundMessagesMixin.translatedNotificationTitle(push, langCode), // title
-//       ForegroundMessagesMixin().translatedNotificationText(push, langCode), // body
-//       payload: jsonEncode(push.toJson()), //payload
-//       NotificationDetails(
-//         android: AndroidNotificationDetails(
-//           channel.id,
-//           channel.name,
-//           channelDescription: channel.description,
-//           icon: kNotificationIcon,
-//           color: const Color.fromRGBO(0, 0, 0, 1),
-//           // colorized: true,
-//         ),
-//       ),
-//     );
-//   } catch (e) {
-//     if (GetIt.I<AppParameters>().debugPinyIsOn) debugPrint('++++_firebaseMessagingBackgroundHandler error $e');
-//   }
-// }
-// }
