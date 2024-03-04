@@ -12,16 +12,18 @@ import 'package:agoradesk/core/widgets/branded/container_surface5_radius12.dart'
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/models/sign_up_view_model.dart';
 import 'package:agoradesk/features/auth/screens/widgets/auth_app_bar.dart';
+import 'package:agoradesk/features/auth/screens/widgets/imperva_counter.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider/src/provider.dart';
 import 'package:vm/vm.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({
+class SignUpScreen extends ConsumerWidget with UrlMixin, ValidatorMixin {
+  SignUpScreen({
     Key? key,
     this.displaySkip = false,
   }) : super(key: key);
@@ -29,12 +31,7 @@ class SignUpScreen extends StatefulWidget {
   final bool displaySkip;
 
   @override
-  _SignUpScreenState createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMixin {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return KeyboardDismissOnTap(
       child: Scaffold(
         appBar: AuthAppBar(
@@ -60,16 +57,16 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  widget.displaySkip
+                                  displaySkip
                                       ? Row(
                                           mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
                                             TextButton(
+                                              onPressed: model.guestModeOn,
                                               child: Text(
                                                 context.intl.skip,
                                                 style: context.txtLabelLargeP80P70,
                                               ),
-                                              onPressed: model.guestModeOn,
                                             ),
                                           ],
                                         )
@@ -187,7 +184,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                   if (model.displayError)
                                     Text(
                                       model.errorMessage,
-                                      style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
                                             color: Theme.of(context).colorScheme.onError,
                                           ),
                                     ),
@@ -202,6 +199,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                       }
                                     },
                                   ),
+                                  const ImpervaCounter(),
                                   const SizedBox(height: 18),
                                   Center(
                                     child: RichText(
@@ -216,8 +214,7 @@ class _SignUpScreenState extends State<SignUpScreen> with UrlMixin, ValidatorMix
                                             style: context.txtBodySmallP70P40,
                                             recognizer: TapGestureRecognizer()
                                               ..onTap = () {
-                                                AutoRouter.of(context)
-                                                    .push(LoginWebviewRoute(displaySkip: widget.displaySkip));
+                                                AutoRouter.of(context).push(LoginRoute(displaySkip: displaySkip));
                                               },
                                           ),
                                         ],

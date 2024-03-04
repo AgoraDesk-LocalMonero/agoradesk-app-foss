@@ -1,31 +1,29 @@
 // import 'dart:io';
-//
+
 // import 'package:agoradesk/core/theme/theme.dart';
 // import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 // import 'package:auto_route/auto_route.dart';
 // import 'package:extended_image/extended_image.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-//
+
 // class CaptchaScreen extends StatefulWidget {
 //   const CaptchaScreen({
 //     Key? key,
 //     required this.path,
 //   }) : super(key: key);
-//
+
 //   final String path;
-//
+
 //   @override
 //   State<CaptchaScreen> createState() => _CaptchaScreenState();
 // }
-//
+
 // class _CaptchaScreenState extends State<CaptchaScreen> {
 //   String _captcha = '';
-//
+
 //   @override
 //   Widget build(BuildContext context) {
-//     InputDecoration decoration = Theme.of(context).colorScheme.inputDecoration1;
-//
 //     return KeyboardDismissOnTap(
 //       child: Scaffold(
 //         appBar: const AgoraAppBar(),
@@ -64,7 +62,10 @@
 //                     onChanged: (input) {
 //                       setState(() => _captcha = input);
 //                     },
-//                     decoration: decoration.copyWith(hintText: context.intl.captcha__helper_text),
+//                     decoration: Theme.of(context)
+//                         .colorScheme
+//                         .txtFieldMainDecoration
+//                         .copyWith(hintText: context.intl.captcha250Sbhelper8722Sbtext),
 //                     // validator: model.formValidatePassword,
 //                   ),
 //                 ),
@@ -83,11 +84,11 @@
 //                   },
 //                   style: ElevatedButton.styleFrom(
 //                     fixedSize: const Size(200, 50),
-//                     primary: _captcha.length > 4 ? Colors.blueAccent : Colors.grey,
+//                     foregroundColor: _captcha.length > 4 ? Colors.blueAccent : Colors.grey,
 //                   ),
 //                   child: const Text('Submit'),
 //                 ),
-//
+
 //                 /// Button to pop() - and pass data
 //               ],
 //             ),

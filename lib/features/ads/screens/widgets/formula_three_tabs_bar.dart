@@ -24,14 +24,15 @@ class FormulaThreeTabsBar extends StatelessWidget {
         borderRadius: const BorderRadius.all(tabRadius),
       ),
       child: Theme(
-        data: ThemeData(
-          highlightColor: Colors.transparent,
-          splashColor: Colors.transparent,
-          brightness: Theme.of(context).brightness,
-        ),
+        data: Theme.of(context).colorScheme.themeForTabs,
         child: TabBar(
           controller: controller,
           overlayColor: MaterialStateProperty.all(Colors.transparent),
+          indicatorPadding: EdgeInsets.zero,
+          padding: EdgeInsets.zero,
+          labelColor: Colors.transparent,
+          dividerColor: Colors.transparent,
+          indicatorSize: TabBarIndicatorSize.tab,
           indicator: BoxDecoration(
             color: Theme.of(context).colorScheme.highlight,
             borderRadius: BorderRadius.only(

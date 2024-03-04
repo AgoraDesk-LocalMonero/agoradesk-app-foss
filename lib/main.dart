@@ -5,21 +5,34 @@ import 'package:agoradesk/core/app.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
+import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/init_app_parameters.dart';
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+=======
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+>>>>>>> main
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 const kNotificationsChannel = 'trades_channel';
 const kNotificationIcon = '@mipmap/ic_icon_black';
+
+/// Access to a provider without context
+/// https://github.com/rrousselGit/riverpod/issues/295
+final container = ProviderContainer();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -101,6 +114,7 @@ void main() async {
     );
   }
 
+<<<<<<< HEAD
   runApp(const App());
 }
 
@@ -165,3 +179,21 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
   }
 }
+=======
+  if (kDebugMode || includeFcm == false || sentryIsOn == false) {
+    runApp(UncontrolledProviderScope(container: container, child: const App()));
+  } else {
+    SentryFlutter.init(
+      (options) {
+        options
+          ..dsn = kSentryDsn
+          ..reportSilentFlutterErrors = true
+          ..attachStacktrace = false
+          ..enableAutoSessionTracking = false
+          ..tracesSampleRate = 1.0;
+      },
+      appRunner: () => runApp(UncontrolledProviderScope(container: container, child: const App())),
+    );
+  }
+}
+>>>>>>> main

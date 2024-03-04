@@ -96,7 +96,7 @@
 		83ADE6199D5FD88CD763FB74 /* Pods-Runner.release-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-agoradesk.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-agoradesk.xcconfig"; sourceTree = "<group>"; };
 		90A590683AF974C6A903B41F /* Pods-Runner.profile-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-localmonero.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-localmonero.xcconfig"; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		A620FE442A9A4C2F0071BD85 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; name = config; path = ../../../Downloads/config; sourceTree = "<group>"; };
+		A620FE442A9A4C2F0071BD85 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
 		AFDB6B4760D809D9062B8BB0 /* Pods-Runner.profile-agoradesk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-agoradesk.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-agoradesk.xcconfig"; sourceTree = "<group>"; };
 		B400542A2A86B35AB475F141 /* Pods-RunnerTests.debug-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-localmonero.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-localmonero.xcconfig"; sourceTree = "<group>"; };
 		CB97FDA7CCC49ED98EBE840B /* Pods-RunnerTests.release-localmonero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-localmonero.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-localmonero.xcconfig"; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					331C80D4294CF70F00263BE5 = {

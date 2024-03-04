@@ -77,8 +77,7 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
                                     btcFeesEnum: model.btcFeesEnum,
                                     btcFees: model.btcFees,
                                     price: model.price,
-                                fiatName: model.fiatName
-                                  ),
+                                    fiatName: model.fiatName),
                           ],
                         ),
                         Column(
@@ -115,39 +114,42 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
             color: Theme.of(context).colorScheme.surface2,
             borderRadius: const BorderRadius.all(tabRadius),
           ),
-          child: TabBar(
-            padding: EdgeInsets.zero,
-            indicatorPadding: EdgeInsets.zero,
-            labelPadding: const EdgeInsets.fromLTRB(14, 0, 0, 0),
-            indicatorSize: TabBarIndicatorSize.tab,
-            indicatorWeight: 0,
-            controller: model.tabController,
-            overlayColor: MaterialStateProperty.all(Colors.transparent),
-            indicator: BoxDecoration(
-              color: Theme.of(context).colorScheme.highlight,
-              borderRadius: BorderRadius.only(
-                topLeft: model.bodyTabIndex == 0 ? tabRadius : Radius.zero,
-                topRight: model.bodyTabIndex == 1 ? tabRadius : Radius.zero,
-                bottomLeft: model.bodyTabIndex == 0 ? tabRadius : Radius.zero,
-                bottomRight: model.bodyTabIndex == 1 ? tabRadius : Radius.zero,
+          child: Theme(
+            data: Theme.of(context).colorScheme.themeForTabs,
+            child: TabBar(
+              padding: EdgeInsets.zero,
+              indicatorPadding: EdgeInsets.zero,
+              labelPadding: const EdgeInsets.fromLTRB(14, 0, 0, 0),
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorWeight: 0,
+              controller: model.tabController,
+              overlayColor: MaterialStateProperty.all(Colors.transparent),
+              indicator: BoxDecoration(
+                color: Theme.of(context).colorScheme.highlight,
+                borderRadius: BorderRadius.only(
+                  topLeft: model.bodyTabIndex == 0 ? tabRadius : Radius.zero,
+                  topRight: model.bodyTabIndex == 1 ? tabRadius : Radius.zero,
+                  bottomLeft: model.bodyTabIndex == 0 ? tabRadius : Radius.zero,
+                  bottomRight: model.bodyTabIndex == 1 ? tabRadius : Radius.zero,
+                ),
               ),
+              tabs: <Widget>[
+                Tab(
+                  icon: LineIconTextPrimary95(
+                    text: context.intl.amount_to_receive,
+                    active: model.bodyTabIndex == 0,
+                    toCenter: true,
+                  ),
+                ),
+                Tab(
+                  icon: LineIconTextPrimary95(
+                    text: context.intl.amount_to_send,
+                    active: model.bodyTabIndex == 1,
+                    toCenter: true,
+                  ),
+                ),
+              ],
             ),
-            tabs: <Widget>[
-              Tab(
-                icon: LineIconTextPrimary95(
-                  text: context.intl.amount_to_receive,
-                  active: model.bodyTabIndex == 0,
-                  toCenter: true,
-                ),
-              ),
-              Tab(
-                icon: LineIconTextPrimary95(
-                  text: context.intl.amount_to_send,
-                  active: model.bodyTabIndex == 1,
-                  toCenter: true,
-                ),
-              ),
-            ],
           ),
         ),
       ],
@@ -166,7 +168,7 @@ class _SendAssetSecondScreenState extends State<SendAssetSecondScreen> with Tick
               style: context.txtLabelMediumN80,
             ),
             Text(
-              (model.balance?.toString() ?? '') + ' ${model.asset.name}',
+              '${model.balance?.toString() ?? ''} ${model.asset.name}',
               style: context.txtLabelMediumN80,
             ),
           ],

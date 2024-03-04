@@ -31,24 +31,15 @@ class AgoraTwoTabsBar extends StatelessWidget {
           borderRadius: const BorderRadius.all(tabRadius),
         ),
         child: Theme(
-          data: ThemeData(
-            highlightColor: Colors.transparent,
-            splashColor: Colors.transparent,
-            brightness: Theme.of(context).brightness,
-            colorScheme: Theme.of(context).colorScheme.copyWith(
-                  primary: Colors.transparent,
-                  secondary: Colors.transparent,
-                  surface: Colors.transparent,
-                  background: Colors.transparent,
-                  onBackground: Colors.transparent,
-                  onPrimary: Colors.transparent,
-                ),
-          ),
+          data: Theme.of(context).colorScheme.themeForTabs,
           child: TabBar(
             controller: controller,
             overlayColor: MaterialStateProperty.all(Colors.transparent),
+            indicatorPadding: EdgeInsets.zero,
+            padding: EdgeInsets.zero,
             labelColor: Colors.transparent,
             dividerColor: Colors.transparent,
+            indicatorSize: TabBarIndicatorSize.tab,
             indicator: BoxDecoration(
               color: Theme.of(context).colorScheme.highlight,
               borderRadius: BorderRadius.only(
@@ -60,7 +51,7 @@ class AgoraTwoTabsBar extends StatelessWidget {
             ),
             tabs: <Widget>[
               Tab(
-                icon: LineIconTextPrimary90(
+                child: LineIconTextPrimary90(
                   text: textLeft,
                   icon: iconLeft != null
                       ? Icon(
@@ -73,7 +64,7 @@ class AgoraTwoTabsBar extends StatelessWidget {
                 ),
               ),
               Tab(
-                icon: LineIconTextPrimary90(
+                child: LineIconTextPrimary90(
                   text: textRight,
                   icon: iconRight != null
                       ? Icon(

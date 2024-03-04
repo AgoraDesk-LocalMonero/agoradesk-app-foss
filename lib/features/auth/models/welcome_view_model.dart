@@ -29,7 +29,7 @@ class WelcomeViewModel extends ViewModel {
         curve: Curves.easeInOut,
       );
     } else {
-      AutoRouter.of(context).push(LoginWebviewRoute());
+      AutoRouter.of(context).push(LoginRoute());
     }
   }
 
