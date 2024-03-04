@@ -39,8 +39,8 @@ class NotificationsService with ForegroundMessagesMixin {
   final AuthService authService;
   final AppState appState;
   bool _loading = false;
-  bool _tokenLoading = false;
-  bool _updating = false;
+  final bool _tokenLoading = false;
+  final bool _updating = false;
   Timer? _timer;
   final List<ActivityNotificationModel> _notifications = [];
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
@@ -147,8 +147,7 @@ class NotificationsService with ForegroundMessagesMixin {
           biometricOnly: true,
         ),
       );
-    } on PlatformException catch (e) {
-      debugPrint('[++++ authenticateWithBiometrics error] - $e');
+    } on PlatformException catch (_) {
       return false;
     }
     return authenticated;

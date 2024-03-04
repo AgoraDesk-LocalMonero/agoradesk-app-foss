@@ -243,7 +243,7 @@ class MarketAdInfoViewModel extends ViewModel
   Widget actionButton(BuildContext context) {
     if (isGuestMode) {
       return ButtonFilledP80(
-        onPressed: () => AutoRouter.of(context).push(LoginWebviewRoute(displaySkip: false)),
+        onPressed: () => AutoRouter.of(context).push(LoginRoute(displaySkip: false)),
         title: context.intl.log_in_to_start_trading,
       );
     }

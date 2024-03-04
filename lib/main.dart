@@ -14,6 +14,7 @@ import 'package:agoradesk/init_app_parameters.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -21,6 +22,10 @@ import 'core/packages/socks_proxy/socks_proxy.dart';
 
 const kNotificationsChannel = 'trades_channel';
 const kNotificationIcon = '@mipmap/ic_icon_black';
+
+/// Access to a provider without context
+/// https://github.com/rrousselGit/riverpod/issues/295
+final container = ProviderContainer();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
