@@ -12,7 +12,7 @@ part of 'push_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PushModel _$PushModelFromJson(Map<String, dynamic> json) {
   return _PushModel.fromJson(json);
@@ -52,23 +52,18 @@ abstract class $PushModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @BoolJsonConverter()
-          bool read,
-      @DatetimeIntJsonConverter()
-          DateTime createdAt,
-      @JsonKey(includeIfNull: false)
-          String? objectId,
-      @JsonKey(includeIfNull: false)
-          String? msg,
+      @BoolJsonConverter() bool read,
+      @DatetimeIntJsonConverter() DateTime createdAt,
+      @JsonKey(includeIfNull: false) String? objectId,
+      @JsonKey(includeIfNull: false) String? msg,
       NotificationMessageType type,
-      @JsonKey(name: 'subject.username', includeIfNull: false)
-          String? username,
+      @JsonKey(name: 'subject.username', includeIfNull: false) String? username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          int tradeCount,
+      int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          int feedbackScore});
+      int feedbackScore});
 }
 
 /// @nodoc
@@ -136,39 +131,35 @@ class _$PushModelCopyWithImpl<$Res, $Val extends PushModel>
 }
 
 /// @nodoc
-abstract class _$$_PushModelCopyWith<$Res> implements $PushModelCopyWith<$Res> {
-  factory _$$_PushModelCopyWith(
-          _$_PushModel value, $Res Function(_$_PushModel) then) =
-      __$$_PushModelCopyWithImpl<$Res>;
+abstract class _$$PushModelImplCopyWith<$Res>
+    implements $PushModelCopyWith<$Res> {
+  factory _$$PushModelImplCopyWith(
+          _$PushModelImpl value, $Res Function(_$PushModelImpl) then) =
+      __$$PushModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
-      @BoolJsonConverter()
-          bool read,
-      @DatetimeIntJsonConverter()
-          DateTime createdAt,
-      @JsonKey(includeIfNull: false)
-          String? objectId,
-      @JsonKey(includeIfNull: false)
-          String? msg,
+      @BoolJsonConverter() bool read,
+      @DatetimeIntJsonConverter() DateTime createdAt,
+      @JsonKey(includeIfNull: false) String? objectId,
+      @JsonKey(includeIfNull: false) String? msg,
       NotificationMessageType type,
-      @JsonKey(name: 'subject.username', includeIfNull: false)
-          String? username,
+      @JsonKey(name: 'subject.username', includeIfNull: false) String? username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          int tradeCount,
+      int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          int feedbackScore});
+      int feedbackScore});
 }
 
 /// @nodoc
-class __$$_PushModelCopyWithImpl<$Res>
-    extends _$PushModelCopyWithImpl<$Res, _$_PushModel>
-    implements _$$_PushModelCopyWith<$Res> {
-  __$$_PushModelCopyWithImpl(
-      _$_PushModel _value, $Res Function(_$_PushModel) _then)
+class __$$PushModelImplCopyWithImpl<$Res>
+    extends _$PushModelCopyWithImpl<$Res, _$PushModelImpl>
+    implements _$$PushModelImplCopyWith<$Res> {
+  __$$PushModelImplCopyWithImpl(
+      _$PushModelImpl _value, $Res Function(_$PushModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -184,7 +175,7 @@ class __$$_PushModelCopyWithImpl<$Res>
     Object? tradeCount = null,
     Object? feedbackScore = null,
   }) {
-    return _then(_$_PushModel(
+    return _then(_$PushModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -228,30 +219,25 @@ class __$$_PushModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PushModel extends _PushModel {
-  const _$_PushModel(
+class _$PushModelImpl extends _PushModel {
+  const _$PushModelImpl(
       {this.id,
-      @BoolJsonConverter()
-          required this.read,
-      @DatetimeIntJsonConverter()
-          required this.createdAt,
-      @JsonKey(includeIfNull: false)
-          this.objectId,
-      @JsonKey(includeIfNull: false)
-          this.msg,
+      @BoolJsonConverter() required this.read,
+      @DatetimeIntJsonConverter() required this.createdAt,
+      @JsonKey(includeIfNull: false) this.objectId,
+      @JsonKey(includeIfNull: false) this.msg,
       required this.type,
-      @JsonKey(name: 'subject.username', includeIfNull: false)
-          this.username,
+      @JsonKey(name: 'subject.username', includeIfNull: false) this.username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          required this.tradeCount,
+      required this.tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          required this.feedbackScore})
+      required this.feedbackScore})
       : super._();
 
-  factory _$_PushModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PushModelFromJson(json);
+  factory _$PushModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PushModelImplFromJson(json);
 
   @override
   final String? id;
@@ -287,10 +273,10 @@ class _$_PushModel extends _PushModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PushModel &&
+            other is _$PushModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.read, read) || other.read == read) &&
             (identical(other.createdAt, createdAt) ||
@@ -315,12 +301,12 @@ class _$_PushModel extends _PushModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PushModelCopyWith<_$_PushModel> get copyWith =>
-      __$$_PushModelCopyWithImpl<_$_PushModel>(this, _$identity);
+  _$$PushModelImplCopyWith<_$PushModelImpl> get copyWith =>
+      __$$PushModelImplCopyWithImpl<_$PushModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PushModelToJson(
+    return _$$PushModelImplToJson(
       this,
     );
   }
@@ -329,27 +315,23 @@ class _$_PushModel extends _PushModel {
 abstract class _PushModel extends PushModel {
   const factory _PushModel(
       {final String? id,
-      @BoolJsonConverter()
-          required final bool read,
-      @DatetimeIntJsonConverter()
-          required final DateTime createdAt,
-      @JsonKey(includeIfNull: false)
-          final String? objectId,
-      @JsonKey(includeIfNull: false)
-          final String? msg,
+      @BoolJsonConverter() required final bool read,
+      @DatetimeIntJsonConverter() required final DateTime createdAt,
+      @JsonKey(includeIfNull: false) final String? objectId,
+      @JsonKey(includeIfNull: false) final String? msg,
       required final NotificationMessageType type,
       @JsonKey(name: 'subject.username', includeIfNull: false)
-          final String? username,
+      final String? username,
       @IntJsonConverter()
       @JsonKey(name: 'subject.tradeCount', includeIfNull: false)
-          required final int tradeCount,
+      required final int tradeCount,
       @IntJsonConverter()
       @JsonKey(name: 'subject.feedbackScore', includeIfNull: false)
-          required final int feedbackScore}) = _$_PushModel;
+      required final int feedbackScore}) = _$PushModelImpl;
   const _PushModel._() : super._();
 
   factory _PushModel.fromJson(Map<String, dynamic> json) =
-      _$_PushModel.fromJson;
+      _$PushModelImpl.fromJson;
 
   @override
   String? get id;
@@ -380,6 +362,6 @@ abstract class _PushModel extends PushModel {
   int get feedbackScore;
   @override
   @JsonKey(ignore: true)
-  _$$_PushModelCopyWith<_$_PushModel> get copyWith =>
+  _$$PushModelImplCopyWith<_$PushModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

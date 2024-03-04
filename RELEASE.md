@@ -1,6 +1,6 @@
 ### Updates
-1. Fixed issue with Markdown.
-2. Updated price formulas.
+1. Added a waiting timer to the SignUp Screen
+2. Fixed a tab bar UI issue
 
 
 ### About the attached app's

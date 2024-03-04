@@ -12,7 +12,7 @@ part of 'note_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 NoteModel _$NoteModelFromJson(Map<String, dynamic> json) {
   return _NoteModel.fromJson(json);
@@ -40,9 +40,10 @@ abstract class $NoteModelCopyWith<$Res> {
   $Res call(
       {String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime lastModifiedAt});
+      DateTime createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      DateTime lastModifiedAt});
 }
 
 /// @nodoc
@@ -80,26 +81,28 @@ class _$NoteModelCopyWithImpl<$Res, $Val extends NoteModel>
 }
 
 /// @nodoc
-abstract class _$$_NoteModelCopyWith<$Res> implements $NoteModelCopyWith<$Res> {
-  factory _$$_NoteModelCopyWith(
-          _$_NoteModel value, $Res Function(_$_NoteModel) then) =
-      __$$_NoteModelCopyWithImpl<$Res>;
+abstract class _$$NoteModelImplCopyWith<$Res>
+    implements $NoteModelCopyWith<$Res> {
+  factory _$$NoteModelImplCopyWith(
+          _$NoteModelImpl value, $Res Function(_$NoteModelImpl) then) =
+      __$$NoteModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime lastModifiedAt});
+      DateTime createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      DateTime lastModifiedAt});
 }
 
 /// @nodoc
-class __$$_NoteModelCopyWithImpl<$Res>
-    extends _$NoteModelCopyWithImpl<$Res, _$_NoteModel>
-    implements _$$_NoteModelCopyWith<$Res> {
-  __$$_NoteModelCopyWithImpl(
-      _$_NoteModel _value, $Res Function(_$_NoteModel) _then)
+class __$$NoteModelImplCopyWithImpl<$Res>
+    extends _$NoteModelCopyWithImpl<$Res, _$NoteModelImpl>
+    implements _$$NoteModelImplCopyWith<$Res> {
+  __$$NoteModelImplCopyWithImpl(
+      _$NoteModelImpl _value, $Res Function(_$NoteModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +112,7 @@ class __$$_NoteModelCopyWithImpl<$Res>
     Object? createdAt = null,
     Object? lastModifiedAt = null,
   }) {
-    return _then(_$_NoteModel(
+    return _then(_$NoteModelImpl(
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -129,17 +132,18 @@ class __$$_NoteModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_NoteModel extends _NoteModel {
-  const _$_NoteModel(
+class _$NoteModelImpl extends _NoteModel {
+  const _$NoteModelImpl(
       {required this.content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.lastModifiedAt})
+      required this.createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      required this.lastModifiedAt})
       : super._();
 
-  factory _$_NoteModel.fromJson(Map<String, dynamic> json) =>
-      _$$_NoteModelFromJson(json);
+  factory _$NoteModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NoteModelImplFromJson(json);
 
   @override
   final String content;
@@ -156,10 +160,10 @@ class _$_NoteModel extends _NoteModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NoteModel &&
+            other is _$NoteModelImpl &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
@@ -175,12 +179,12 @@ class _$_NoteModel extends _NoteModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NoteModelCopyWith<_$_NoteModel> get copyWith =>
-      __$$_NoteModelCopyWithImpl<_$_NoteModel>(this, _$identity);
+  _$$NoteModelImplCopyWith<_$NoteModelImpl> get copyWith =>
+      __$$NoteModelImplCopyWithImpl<_$NoteModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NoteModelToJson(
+    return _$$NoteModelImplToJson(
       this,
     );
   }
@@ -190,13 +194,14 @@ abstract class _NoteModel extends NoteModel {
   const factory _NoteModel(
       {required final String content,
       @JsonKey(name: 'created_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime createdAt,
-      @JsonKey(name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime lastModifiedAt}) = _$_NoteModel;
+      required final DateTime createdAt,
+      @JsonKey(
+          name: 'last_modified_at', fromJson: fromJsonDate, toJson: toJsonDate)
+      required final DateTime lastModifiedAt}) = _$NoteModelImpl;
   const _NoteModel._() : super._();
 
   factory _NoteModel.fromJson(Map<String, dynamic> json) =
-      _$_NoteModel.fromJson;
+      _$NoteModelImpl.fromJson;
 
   @override
   String get content;
@@ -208,6 +213,6 @@ abstract class _NoteModel extends NoteModel {
   DateTime get lastModifiedAt;
   @override
   @JsonKey(ignore: true)
-  _$$_NoteModelCopyWith<_$_NoteModel> get copyWith =>
+  _$$NoteModelImplCopyWith<_$NoteModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

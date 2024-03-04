@@ -2,11 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:agoradesk/core/api/dio_logging_interceptor.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import 'api_helper.dart';
 import 'mock_interceptor.dart';
@@ -51,7 +53,7 @@ class ApiClient with UrlMixin {
   })  : _dio = Dio(options ?? _defaultOptions),
         _debug = debug,
         _useMocks = useMocks {
-    (_dio.transformer as DefaultTransformer).jsonDecodeCallback = _parseJson;
+    (_dio.transformer as BackgroundTransformer).jsonDecodeCallback = _parseJson;
 
     if (_useMocks && _debug) {
       _dio.interceptors.add(MockInterceptor());
@@ -65,24 +67,21 @@ class ApiClient with UrlMixin {
           }
           List<String> cookiesLst = [];
           final bool isLoggedIn = GetIt.I<AppParameters>().accessToken?.isNotEmpty == true;
-          if (GetIt.I<AppParameters>().cookies != null) {
-            for (final cookie in GetIt.I<AppParameters>().cookies!) {
-              try {
-                if (cookie.name == 'token' && isLoggedIn) {
-                  continue;
-                }
-                cookiesLst.add('${cookie.name}=${cookie.value}');
-              } catch (e) {
-                debugPrint('[++++parsing cookies error] - $e');
+
+          for (final cookie in GetIt.I<AppParameters>().cookies) {
+            try {
+              if (cookie.name == 'token' && isLoggedIn) {
+                continue;
               }
+              cookiesLst.add('${cookie.name}=${cookie.value}');
+            } catch (e) {
+              debugPrint('[++++parsing cookies error] - $e');
             }
           }
 
           final bool hasCookies = options.headers["cookie"] != null && options.headers["cookie"].toString().isNotEmpty;
           if (isLoggedIn && hasCookies) {
             options.headers["cookie"] = options.headers["cookie"] + ';' + cookiesLst.join(';');
-          } else {
-            options.headers["cookie"] = cookiesLst.join(';');
           }
           if (GetIt.I<AppParameters>().debugPrintIsOn) {
             debugPrint('[++++ api_client cookies] ${options.headers["cookie"]}');
@@ -100,10 +99,17 @@ class ApiClient with UrlMixin {
               '[++++response.statusCode] ${response.statusCode} [++++response.headers] ${response.headers} --END');
           if (res.contains('<iframe id')) {
             final List<dynamic> cookiesLst = response.headers.map['set-cookie'] ?? [];
-            eventBus.fire(DisplayCaptchaEvent(
-              cookies: cookiesLst,
-              body: response.data,
-            ));
+            for (final c in cookiesLst) {
+              final cookieRaw = c.split(';').first;
+              final name = cookieRaw.split('=').first;
+              final value = cookieRaw.substring(name.length + 1);
+              GetIt.I<AppParameters>().cookies.add(Cookie(name: name, value: value));
+            }
+
+            // eventBus.fire(DisplayCaptchaEvent(
+            //   cookies: cookiesLst,
+            //   body: response.data,
+            // ));
           }
           // }
           return handler.next(response);
@@ -116,7 +122,7 @@ class ApiClient with UrlMixin {
           log('++++[api_client ERROR RESPONSE] ${error.response}');
           log('++++[api_client ERROR RESPONSE DATA] ${error.response?.data}');
 
-          DioError? finalError;
+          DioException? finalError;
           if (statusCode == 401) {
             log('++++[401 headers] ${error.response?.headers}');
             log('++++[401 data] ${error.response?.data}');
@@ -127,7 +133,7 @@ class ApiClient with UrlMixin {
             final message = ApiHelper.parseErrorToString(error);
             if (message != null) {
               log('++++[api_client ERROR message] statusCode [400, 422, 401] - $message');
-              finalError = DioError(
+              finalError = DioException(
                 error: jsonEncode(message),
                 requestOptions: error.requestOptions,
                 response: error.response,
@@ -168,12 +174,12 @@ class ApiClient with UrlMixin {
     );
 
     if (_debug) {
-      // _dio.interceptors.add(
-      // DioLoggingInterceptor(
-      //   level: Level.body,
-      //   compact: false,
-      // ),
-      // );
+      _dio.interceptors.add(
+        DioLoggingInterceptor(
+          level: Level.body,
+          compact: false,
+        ),
+      );
     }
   }
 

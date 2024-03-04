@@ -6,8 +6,9 @@ part of 'user_settings_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserSettingsModel _$$_UserSettingsModelFromJson(Map<String, dynamic> json) =>
-    _$_UserSettingsModel(
+_$UserSettingsModelImpl _$$UserSettingsModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UserSettingsModelImpl(
       email: json['email'] as String?,
       emailVerified: json['email_verified'] as bool?,
       sellingVacation: json['selling_vacation'] as bool?,
@@ -37,8 +38,8 @@ _$_UserSettingsModel _$$_UserSettingsModelFromJson(Map<String, dynamic> json) =>
           _twoFaFromJson(json['two_factor_authentication_type'] as String),
     );
 
-Map<String, dynamic> _$$_UserSettingsModelToJson(
-    _$_UserSettingsModel instance) {
+Map<String, dynamic> _$$UserSettingsModelImplToJson(
+    _$UserSettingsModelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

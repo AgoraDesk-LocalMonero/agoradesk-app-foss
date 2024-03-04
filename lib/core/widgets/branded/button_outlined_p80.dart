@@ -25,7 +25,7 @@ class ButtonOutlinedP80 extends StatelessWidget with UiHelpersMixin {
       onPressed: isActive && !loading ? onPressed : () {},
       style: ElevatedButton.styleFrom(
         minimumSize: minimumSize ?? const Size.fromHeight(40),
-        primary: context.colS1,
+        backgroundColor: context.colS1,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),

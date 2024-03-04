@@ -6,9 +6,9 @@ part of 'notification_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActivityNotificationModel _$$_ActivityNotificationModelFromJson(
+_$ActivityNotificationModelImpl _$$ActivityNotificationModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ActivityNotificationModel(
+    _$ActivityNotificationModelImpl(
       id: json['id'] as String,
       read: json['read'] as bool,
       createdAt: fromJsonDate(json['created_at'] as String),
@@ -18,8 +18,8 @@ _$_ActivityNotificationModel _$$_ActivityNotificationModelFromJson(
       type: $enumDecode(_$NotificationMessageTypeEnumMap, json['type']),
     );
 
-Map<String, dynamic> _$$_ActivityNotificationModelToJson(
-    _$_ActivityNotificationModel instance) {
+Map<String, dynamic> _$$ActivityNotificationModelImplToJson(
+    _$ActivityNotificationModelImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'read': instance.read,

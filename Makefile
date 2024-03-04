@@ -183,3 +183,7 @@ l10n:
 .PHONY: l10n-sync
 l10n-sync:
 	./scripts/update-l10n.sh $(LOCALISE_KEY)
+
+.PHONY: yaml-sort
+yaml-sort:
+	flutter pub run pubspec_dependency_sorter

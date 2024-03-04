@@ -6,8 +6,8 @@ part of 'message_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MessageModel _$$_MessageModelFromJson(Map<String, dynamic> json) =>
-    _$_MessageModel(
+_$MessageModelImpl _$$MessageModelImplFromJson(Map<String, dynamic> json) =>
+    _$MessageModelImpl(
       messageId: json['message_id'] as String?,
       tradeId: json['contact_id'] as String?,
       createdAt: fromJsonDate(json['created_at'] as String),
@@ -18,7 +18,7 @@ _$_MessageModel _$$_MessageModelFromJson(Map<String, dynamic> json) =>
       attachmentUrl: json['attachment_url'] as String?,
     );
 
-Map<String, dynamic> _$$_MessageModelToJson(_$_MessageModel instance) {
+Map<String, dynamic> _$$MessageModelImplToJson(_$MessageModelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

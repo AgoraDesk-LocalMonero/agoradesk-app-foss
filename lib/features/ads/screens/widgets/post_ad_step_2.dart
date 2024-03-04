@@ -144,7 +144,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
                     itemBuilder: (context, val, isSelected) {
                       return DropdownAssetLineWithIcon(
                         name: val?.name ?? '',
-                        svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                        svgPath: getPaymentMethodIconPath(val?.code),
                       );
                     },
                   ),
@@ -154,7 +154,7 @@ class PostAdStep2 extends StatelessWidget with CountryInfoMixin, PaymentMethodsM
                   dropdownBuilder: (context, val) {
                     return DropdownAssetLineWithIcon(
                       name: val?.name ?? '',
-                      svgPath: val?.code == null ? null : 'assets/banks/${val!.code}.svg',
+                      svgPath: getPaymentMethodIconPath(val?.code),
                       padding: const EdgeInsets.all(0),
                     );
                   },

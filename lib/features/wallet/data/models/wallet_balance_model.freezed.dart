@@ -12,7 +12,7 @@ part of 'wallet_balance_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WalletBalanceModel _$WalletBalanceModelFromJson(Map<String, dynamic> json) {
   return _WalletBalanceModel.fromJson(json);
@@ -45,15 +45,12 @@ abstract class $WalletBalanceModelCopyWith<$Res> {
       _$WalletBalanceModelCopyWithImpl<$Res, WalletBalanceModel>;
   @useResult
   $Res call(
-      {@_NestedBalanceConverter()
-      @JsonKey(name: 'total')
-          Decimal balance,
-      @JsonKey(name: 'receiving_address')
-          String receivingAddress,
+      {@_NestedBalanceConverter() @JsonKey(name: 'total') Decimal balance,
+      @JsonKey(name: 'receiving_address') String receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
-          List<TransactionModel>? receivedTransactions,
+      List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
-          List<TransactionModel>? sentTransactions});
+      List<TransactionModel>? sentTransactions});
 }
 
 /// @nodoc
@@ -96,31 +93,28 @@ class _$WalletBalanceModelCopyWithImpl<$Res, $Val extends WalletBalanceModel>
 }
 
 /// @nodoc
-abstract class _$$_WalletBalanceModelCopyWith<$Res>
+abstract class _$$WalletBalanceModelImplCopyWith<$Res>
     implements $WalletBalanceModelCopyWith<$Res> {
-  factory _$$_WalletBalanceModelCopyWith(_$_WalletBalanceModel value,
-          $Res Function(_$_WalletBalanceModel) then) =
-      __$$_WalletBalanceModelCopyWithImpl<$Res>;
+  factory _$$WalletBalanceModelImplCopyWith(_$WalletBalanceModelImpl value,
+          $Res Function(_$WalletBalanceModelImpl) then) =
+      __$$WalletBalanceModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@_NestedBalanceConverter()
-      @JsonKey(name: 'total')
-          Decimal balance,
-      @JsonKey(name: 'receiving_address')
-          String receivingAddress,
+      {@_NestedBalanceConverter() @JsonKey(name: 'total') Decimal balance,
+      @JsonKey(name: 'receiving_address') String receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
-          List<TransactionModel>? receivedTransactions,
+      List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
-          List<TransactionModel>? sentTransactions});
+      List<TransactionModel>? sentTransactions});
 }
 
 /// @nodoc
-class __$$_WalletBalanceModelCopyWithImpl<$Res>
-    extends _$WalletBalanceModelCopyWithImpl<$Res, _$_WalletBalanceModel>
-    implements _$$_WalletBalanceModelCopyWith<$Res> {
-  __$$_WalletBalanceModelCopyWithImpl(
-      _$_WalletBalanceModel _value, $Res Function(_$_WalletBalanceModel) _then)
+class __$$WalletBalanceModelImplCopyWithImpl<$Res>
+    extends _$WalletBalanceModelCopyWithImpl<$Res, _$WalletBalanceModelImpl>
+    implements _$$WalletBalanceModelImplCopyWith<$Res> {
+  __$$WalletBalanceModelImplCopyWithImpl(_$WalletBalanceModelImpl _value,
+      $Res Function(_$WalletBalanceModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -131,7 +125,7 @@ class __$$_WalletBalanceModelCopyWithImpl<$Res>
     Object? receivedTransactions = freezed,
     Object? sentTransactions = freezed,
   }) {
-    return _then(_$_WalletBalanceModel(
+    return _then(_$WalletBalanceModelImpl(
       balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
@@ -155,22 +149,19 @@ class __$$_WalletBalanceModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_WalletBalanceModel implements _WalletBalanceModel {
-  const _$_WalletBalanceModel(
-      {@_NestedBalanceConverter()
-      @JsonKey(name: 'total')
-          required this.balance,
-      @JsonKey(name: 'receiving_address')
-          required this.receivingAddress,
+class _$WalletBalanceModelImpl implements _WalletBalanceModel {
+  const _$WalletBalanceModelImpl(
+      {@_NestedBalanceConverter() @JsonKey(name: 'total') required this.balance,
+      @JsonKey(name: 'receiving_address') required this.receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
-          final List<TransactionModel>? receivedTransactions,
+      final List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
-          final List<TransactionModel>? sentTransactions})
+      final List<TransactionModel>? sentTransactions})
       : _receivedTransactions = receivedTransactions,
         _sentTransactions = sentTransactions;
 
-  factory _$_WalletBalanceModel.fromJson(Map<String, dynamic> json) =>
-      _$$_WalletBalanceModelFromJson(json);
+  factory _$WalletBalanceModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WalletBalanceModelImplFromJson(json);
 
   @override
   @_NestedBalanceConverter()
@@ -209,10 +200,10 @@ class _$_WalletBalanceModel implements _WalletBalanceModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WalletBalanceModel &&
+            other is _$WalletBalanceModelImpl &&
             (identical(other.balance, balance) || other.balance == balance) &&
             (identical(other.receivingAddress, receivingAddress) ||
                 other.receivingAddress == receivingAddress) &&
@@ -234,13 +225,13 @@ class _$_WalletBalanceModel implements _WalletBalanceModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WalletBalanceModelCopyWith<_$_WalletBalanceModel> get copyWith =>
-      __$$_WalletBalanceModelCopyWithImpl<_$_WalletBalanceModel>(
+  _$$WalletBalanceModelImplCopyWith<_$WalletBalanceModelImpl> get copyWith =>
+      __$$WalletBalanceModelImplCopyWithImpl<_$WalletBalanceModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WalletBalanceModelToJson(
+    return _$$WalletBalanceModelImplToJson(
       this,
     );
   }
@@ -250,17 +241,17 @@ abstract class _WalletBalanceModel implements WalletBalanceModel {
   const factory _WalletBalanceModel(
           {@_NestedBalanceConverter()
           @JsonKey(name: 'total')
-              required final Decimal balance,
+          required final Decimal balance,
           @JsonKey(name: 'receiving_address')
-              required final String receivingAddress,
+          required final String receivingAddress,
           @JsonKey(name: 'received_transactions_30d')
-              final List<TransactionModel>? receivedTransactions,
+          final List<TransactionModel>? receivedTransactions,
           @JsonKey(name: 'sent_transactions_30d')
-              final List<TransactionModel>? sentTransactions}) =
-      _$_WalletBalanceModel;
+          final List<TransactionModel>? sentTransactions}) =
+      _$WalletBalanceModelImpl;
 
   factory _WalletBalanceModel.fromJson(Map<String, dynamic> json) =
-      _$_WalletBalanceModel.fromJson;
+      _$WalletBalanceModelImpl.fromJson;
 
   @override
   @_NestedBalanceConverter()
@@ -277,6 +268,6 @@ abstract class _WalletBalanceModel implements WalletBalanceModel {
   List<TransactionModel>? get sentTransactions;
   @override
   @JsonKey(ignore: true)
-  _$$_WalletBalanceModelCopyWith<_$_WalletBalanceModel> get copyWith =>
+  _$$WalletBalanceModelImplCopyWith<_$WalletBalanceModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

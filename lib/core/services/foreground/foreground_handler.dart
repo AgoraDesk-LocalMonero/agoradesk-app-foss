@@ -21,12 +21,12 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
   }
 
   @override
-  Future<void> onEvent(DateTime timestamp, SendPort? sendPort) async {
+  Future<void> onRepeatEvent(DateTime timestamp, SendPort? sendPort) async {
     await SecureStorage.ensureInitialized();
-    final SecureStorage _secureStorage = SecureStorage();
-    final token = await _secureStorage.read(SecureStorageKey.token);
-    final openedTradeId = await _secureStorage.read(SecureStorageKey.openedTradeId);
-    final String? lastNotificationTimeInt = await _secureStorage.read(SecureStorageKey.lastNotificationTimeInt);
+    final SecureStorage secureStorage = SecureStorage();
+    final token = await secureStorage.read(SecureStorageKey.token);
+    final openedTradeId = await secureStorage.read(SecureStorageKey.openedTradeId);
+    final String? lastNotificationTimeInt = await secureStorage.read(SecureStorageKey.lastNotificationTimeInt);
     if (token != null && token.isNotEmpty) {
       Map<String, String> headers = {
         'Authorization': token,
@@ -40,7 +40,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
           debugPrint(e.toString());
         }
       } else {
-        await _secureStorage.write(
+        await secureStorage.write(
             SecureStorageKey.lastNotificationTimeInt, DateTime.now().toUtc().millisecondsSinceEpoch.toString());
       }
       final resp = await http.get(
@@ -56,7 +56,7 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
               notifications.add(ActivityNotificationModel.fromJson(r));
             }
             if (notifications.isNotEmpty) {
-              await _secureStorage.write(SecureStorageKey.lastNotificationTimeInt,
+              await secureStorage.write(SecureStorageKey.lastNotificationTimeInt,
                   notifications.first.createdAt.millisecondsSinceEpoch.toString());
               final ActivityNotificationModel notification = notifications.first;
               final PushModel push = PushModel.fromActivityNotificationModel(notification);
@@ -67,8 +67,9 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
           }
         }
       } else {
-        if (GetIt.I<AppParameters>().debugPrintIsOn)
+        if (GetIt.I<AppParameters>().debugPrintIsOn) {
           debugPrint('++++error getting foreground notifications - ${resp.statusCode} - ${resp.body}');
+        }
       }
     }
   }
@@ -77,8 +78,6 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
   Future<void> onDestroy(DateTime timestamp, SendPort? sendPort) async {}
 
   @override
-  void onButtonPressed(String id) {}
-
-  @override
   void onNotificationPressed() {}
+
 }

@@ -12,7 +12,7 @@ part of 'attached_ad_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AttachedAdModel _$AttachedAdModelFromJson(Map<String, dynamic> json) {
   return _AttachedAdModel.fromJson(json);
@@ -44,14 +44,12 @@ abstract class $AttachedAdModelCopyWith<$Res> {
       _$AttachedAdModelCopyWithImpl<$Res, AttachedAdModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) String? id,
       Asset? asset,
-      @JsonKey(name: 'trade_type')
-          TradeType tradeType,
+      @JsonKey(name: 'trade_type') TradeType tradeType,
       AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod});
+      String? paymentMethod});
 
   $AccountInfoModelCopyWith<$Res>? get advertiser;
 }
@@ -113,33 +111,31 @@ class _$AttachedAdModelCopyWithImpl<$Res, $Val extends AttachedAdModel>
 }
 
 /// @nodoc
-abstract class _$$_AttachedAdModelCopyWith<$Res>
+abstract class _$$AttachedAdModelImplCopyWith<$Res>
     implements $AttachedAdModelCopyWith<$Res> {
-  factory _$$_AttachedAdModelCopyWith(
-          _$_AttachedAdModel value, $Res Function(_$_AttachedAdModel) then) =
-      __$$_AttachedAdModelCopyWithImpl<$Res>;
+  factory _$$AttachedAdModelImplCopyWith(_$AttachedAdModelImpl value,
+          $Res Function(_$AttachedAdModelImpl) then) =
+      __$$AttachedAdModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) String? id,
       Asset? asset,
-      @JsonKey(name: 'trade_type')
-          TradeType tradeType,
+      @JsonKey(name: 'trade_type') TradeType tradeType,
       AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          String? paymentMethod});
+      String? paymentMethod});
 
   @override
   $AccountInfoModelCopyWith<$Res>? get advertiser;
 }
 
 /// @nodoc
-class __$$_AttachedAdModelCopyWithImpl<$Res>
-    extends _$AttachedAdModelCopyWithImpl<$Res, _$_AttachedAdModel>
-    implements _$$_AttachedAdModelCopyWith<$Res> {
-  __$$_AttachedAdModelCopyWithImpl(
-      _$_AttachedAdModel _value, $Res Function(_$_AttachedAdModel) _then)
+class __$$AttachedAdModelImplCopyWithImpl<$Res>
+    extends _$AttachedAdModelCopyWithImpl<$Res, _$AttachedAdModelImpl>
+    implements _$$AttachedAdModelImplCopyWith<$Res> {
+  __$$AttachedAdModelImplCopyWithImpl(
+      _$AttachedAdModelImpl _value, $Res Function(_$AttachedAdModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -151,7 +147,7 @@ class __$$_AttachedAdModelCopyWithImpl<$Res>
     Object? advertiser = freezed,
     Object? paymentMethod = freezed,
   }) {
-    return _then(_$_AttachedAdModel(
+    return _then(_$AttachedAdModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -179,19 +175,17 @@ class __$$_AttachedAdModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AttachedAdModel implements _AttachedAdModel {
-  const _$_AttachedAdModel(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          this.id,
+class _$AttachedAdModelImpl implements _AttachedAdModel {
+  const _$AttachedAdModelImpl(
+      {@JsonKey(name: 'id', includeIfNull: false) this.id,
       this.asset,
-      @JsonKey(name: 'trade_type')
-          required this.tradeType,
+      @JsonKey(name: 'trade_type') required this.tradeType,
       this.advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          this.paymentMethod});
+      this.paymentMethod});
 
-  factory _$_AttachedAdModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AttachedAdModelFromJson(json);
+  factory _$AttachedAdModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AttachedAdModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'id', includeIfNull: false)
@@ -215,10 +209,10 @@ class _$_AttachedAdModel implements _AttachedAdModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AttachedAdModel &&
+            other is _$AttachedAdModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.asset, asset) || other.asset == asset) &&
             (identical(other.tradeType, tradeType) ||
@@ -237,12 +231,13 @@ class _$_AttachedAdModel implements _AttachedAdModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
-      __$$_AttachedAdModelCopyWithImpl<_$_AttachedAdModel>(this, _$identity);
+  _$$AttachedAdModelImplCopyWith<_$AttachedAdModelImpl> get copyWith =>
+      __$$AttachedAdModelImplCopyWithImpl<_$AttachedAdModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AttachedAdModelToJson(
+    return _$$AttachedAdModelImplToJson(
       this,
     );
   }
@@ -250,17 +245,15 @@ class _$_AttachedAdModel implements _AttachedAdModel {
 
 abstract class _AttachedAdModel implements AttachedAdModel {
   const factory _AttachedAdModel(
-      {@JsonKey(name: 'id', includeIfNull: false)
-          final String? id,
+      {@JsonKey(name: 'id', includeIfNull: false) final String? id,
       final Asset? asset,
-      @JsonKey(name: 'trade_type')
-          required final TradeType tradeType,
+      @JsonKey(name: 'trade_type') required final TradeType tradeType,
       final AccountInfoModel? advertiser,
       @JsonKey(name: 'payment_method', includeIfNull: false)
-          final String? paymentMethod}) = _$_AttachedAdModel;
+      final String? paymentMethod}) = _$AttachedAdModelImpl;
 
   factory _AttachedAdModel.fromJson(Map<String, dynamic> json) =
-      _$_AttachedAdModel.fromJson;
+      _$AttachedAdModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'id', includeIfNull: false)
@@ -279,6 +272,6 @@ abstract class _AttachedAdModel implements AttachedAdModel {
   String? get paymentMethod;
   @override
   @JsonKey(ignore: true)
-  _$$_AttachedAdModelCopyWith<_$_AttachedAdModel> get copyWith =>
+  _$$AttachedAdModelImplCopyWith<_$AttachedAdModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,12 +1,8 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/theme/theme_color_extension.dart';
-import 'package:agoradesk/core/theme/theme_colors.dart';
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-
-export 'theme_color_extension.dart';
-export 'theme_colors.dart';
 
 // const textTheme = TextTheme(
 //   headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
@@ -52,10 +48,10 @@ final lightTheme = ThemeData(
   colorScheme: _lightColorScheme,
   scaffoldBackgroundColor: ThemeColors.surface1Light,
   textTheme: textTheme,
-  radioTheme: RadioThemeData(
-    fillColor: MaterialStateProperty.all(ThemeColors.neutral80),
-    overlayColor: MaterialStateProperty.all(ThemeColors.primary40),
-  ),
+  // radioTheme: RadioThemeData(
+  //   fillColor: MaterialStateProperty.all(ThemeColors.neutral80),
+  //   overlayColor: MaterialStateProperty.all(ThemeColors.primary40),
+  // ),
   inputDecorationTheme: const InputDecorationTheme(
     labelStyle: TextStyle(color: Colors.blue),
     border: OutlineInputBorder(),
@@ -63,16 +59,68 @@ final lightTheme = ThemeData(
       borderSide: BorderSide(style: BorderStyle.solid, color: Colors.blue),
     ),
   ),
-  checkboxTheme: const CheckboxThemeData().copyWith(
+  // checkboxTheme: const CheckboxThemeData().copyWith(
+  //   shape: const RoundedRectangleBorder(
+  //     borderRadius: BorderRadius.all(
+  //       Radius.circular(4),
+  //     ),
+  //   ),
+  // ),
+  fontFamily: 'Roboto',
+  unselectedWidgetColor: ThemeColors.neutral60,
+  checkboxTheme: const CheckboxThemeData()
+      .copyWith(
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(
         Radius.circular(4),
       ),
     ),
+  )
+      .copyWith(
+    fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
   ),
-  fontFamily: 'Roboto',
-  unselectedWidgetColor: ThemeColors.neutral60,
-  toggleableActiveColor: ThemeColors.primary80,
+  radioTheme: RadioThemeData(
+    fillColor: MaterialStateProperty.all(ThemeColors.neutral80),
+    overlayColor: MaterialStateProperty.all(ThemeColors.primary40),
+  ).copyWith(
+    fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
+  ),
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
+    trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
+  ),
 );
 
 final darkTheme = ThemeData(
@@ -81,10 +129,10 @@ final darkTheme = ThemeData(
   scaffoldBackgroundColor: ThemeColors.surface1Dark,
   textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
   textTheme: textTheme,
-  radioTheme: RadioThemeData(
-    fillColor: MaterialStateProperty.all(ThemeColors.neutral50),
-    overlayColor: MaterialStateProperty.all(ThemeColors.primary70),
-  ),
+  // radioTheme: RadioThemeData(
+  //   fillColor: MaterialStateProperty.all(ThemeColors.neutral50),
+  //   overlayColor: MaterialStateProperty.all(ThemeColors.primary70),
+  // ),
   inputDecorationTheme: const InputDecorationTheme(
     labelStyle: TextStyle(color: Colors.blue),
     border: OutlineInputBorder(),
@@ -92,17 +140,69 @@ final darkTheme = ThemeData(
       borderSide: BorderSide(style: BorderStyle.solid, color: Colors.blue),
     ),
   ),
-  checkboxTheme: const CheckboxThemeData().copyWith(
+  // checkboxTheme: const CheckboxThemeData().copyWith(
+  //   shape: const RoundedRectangleBorder(
+  //     borderRadius: BorderRadius.all(
+  //       Radius.circular(4),
+  //     ),
+  //   ),
+  // ),
+  iconTheme: const IconThemeData(color: Colors.white),
+  fontFamily: 'Roboto',
+  unselectedWidgetColor: ThemeColors.neutral60,
+  checkboxTheme: const CheckboxThemeData()
+      .copyWith(
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(
         Radius.circular(4),
       ),
     ),
+  )
+      .copyWith(
+    fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
   ),
-  iconTheme: const IconThemeData(color: Colors.white),
-  fontFamily: 'Roboto',
-  unselectedWidgetColor: ThemeColors.neutral60,
-  toggleableActiveColor: ThemeColors.primary80,
+  radioTheme: RadioThemeData(
+    fillColor: MaterialStateProperty.all(ThemeColors.neutral50),
+    overlayColor: MaterialStateProperty.all(ThemeColors.primary70),
+  ).copyWith(
+    fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
+  ),
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
+    trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return null;
+      }
+      if (states.contains(MaterialState.selected)) {
+        return ThemeColors.primary80;
+      }
+      return null;
+    }),
+  ),
 );
 
 extension TextExtension on TextTheme {
@@ -653,4 +753,315 @@ extension ThemeShorcuts on BuildContext {
           ),
         ),
       );
+}
+
+extension ColorExtension on ColorScheme {
+  /// new scheme
+  Color get chatRedError80 => brightness == Brightness.dark ? ThemeColors.chatRed : ThemeColors.red80;
+
+  Color get chatQuote => brightness == Brightness.dark ? ThemeColors.chatQuote : ThemeColors.surface1Light;
+
+  Color get c08c07 => brightness == Brightness.dark ? ThemeColors.custom08 : ThemeColors.custom07;
+
+  Color get c85c09 => brightness == Brightness.dark ? ThemeColors.custom85 : ThemeColors.custom09;
+
+  Color get c07c08 => brightness == Brightness.dark ? ThemeColors.custom07 : ThemeColors.custom08;
+
+  Color get ds2Ls1 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface1Light;
+
+  Color get ds2Ls3 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface3Light;
+
+  Color get ds4Ls1 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface1Light;
+
+  Color get red20Red50 => brightness == Brightness.dark ? ThemeColors.red20 : ThemeColors.red50;
+
+  Color get red60Red40 => brightness == Brightness.dark ? ThemeColors.red60 : ThemeColors.red40;
+
+  Color get infoOutlineSec90 => brightness == Brightness.dark ? ThemeColors.infoOutline : ThemeColors.secondary90;
+
+  Color get infoSec95 => brightness == Brightness.dark ? ThemeColors.info : ThemeColors.secondary95;
+
+  Color get n30N80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.neutral80;
+
+  Color get n30N50 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.neutral50;
+
+  Color get n30Ls1 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.surface1Light;
+
+  Color get n30Ls3 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.surface3Light;
+
+  Color get n80N30 => brightness == Brightness.dark ? ThemeColors.neutral80 : ThemeColors.neutral30;
+
+  Color get n50N60 => brightness == Brightness.dark ? ThemeColors.neutral50 : ThemeColors.neutral60;
+
+  Color get n60N50 => brightness == Brightness.dark ? ThemeColors.neutral60 : ThemeColors.neutral50;
+
+  Color get n70N50 => brightness == Brightness.dark ? ThemeColors.neutral70 : ThemeColors.neutral50;
+
+  Color get n90N60 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral60;
+
+  Color get n90N10 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral10;
+
+  Color get n90N50 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral50;
+
+  Color get n95N10 => brightness == Brightness.dark ? ThemeColors.neutral95 : ThemeColors.neutral10;
+
+  Color get n40inactive => brightness == Brightness.dark ? ThemeColors.neutral40 : ThemeColors.inactive;
+
+  Color get n20SurfLight => brightness == Brightness.dark ? ThemeColors.neutral20 : ThemeColors.surface4Light;
+
+  Color get n30P80 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary80;
+
+  Color get n30P90 => brightness == Brightness.dark ? ThemeColors.neutral30 : ThemeColors.primary90;
+
+  Color get p20White => brightness == Brightness.dark ? ThemeColors.primary20 : Colors.white;
+
+  Color get p70P40 => brightness == Brightness.dark ? ThemeColors.primary70 : ThemeColors.primary40;
+
+  Color get p80P40 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary40;
+
+  Color get p90P10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
+
+  Color get p90White => brightness == Brightness.dark ? ThemeColors.primary90 : Colors.white;
+
+  Color get sec40SurfLight => brightness == Brightness.dark ? ThemeColors.secondary40 : ThemeColors.surfaceLight;
+
+  Color get secContainerWhite => brightness == Brightness.dark ? ThemeColors.secondaryContainer : Colors.white;
+
+  Color get sec40Highlight => brightness == Brightness.dark ? ThemeColors.secondary40 : ThemeColors.highlight;
+
+  Color get sec80Highlight => brightness == Brightness.dark ? ThemeColors.secondary80 : ThemeColors.highlight;
+
+  Color get sec80P10 => brightness == Brightness.dark ? ThemeColors.secondary80 : ThemeColors.primary10;
+
+  Color get surf4SurfLight => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface4Light;
+
+  Color get surf4Surf1 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface1Light;
+
+  Color get surf5Surf4 => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surface4Light;
+
+  Color get surf2Surf5 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface5Light;
+
+  Color get surf3Surf1Light => brightness == Brightness.dark ? ThemeColors.surface3Dark : ThemeColors.surface1Light;
+
+  Color get tertiaryP60 => brightness == Brightness.dark ? ThemeColors.tertiary : ThemeColors.primary40;
+
+  Color get tonalP40 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary40;
+
+  Color get whiteBlack => brightness == Brightness.dark ? Colors.white : Colors.black;
+
+  /// old scheme
+  Color get surface1 => brightness == Brightness.dark ? ThemeColors.surface1Dark : ThemeColors.surface1Light;
+
+  Color get surface2 => brightness == Brightness.dark ? ThemeColors.surface2Dark : ThemeColors.surface2Light;
+
+  Color get surface3 => brightness == Brightness.dark ? ThemeColors.surface3Dark : ThemeColors.surface3Light;
+
+  Color get surface4 => brightness == Brightness.dark ? ThemeColors.surface4Dark : ThemeColors.surface4Light;
+
+  Color get surf5darkSurfLight => brightness == Brightness.dark ? ThemeColors.surface5Dark : ThemeColors.surfaceLight;
+
+  Color get primary10 => ThemeColors.primary10;
+
+  Color get primary20 => ThemeColors.primary20;
+
+  Color get primary40 => brightness == Brightness.dark ? ThemeColors.primary40 : ThemeColors.primary40;
+
+  Color get n50P70 => brightness == Brightness.dark ? ThemeColors.neutral50 : ThemeColors.primary70;
+
+  Color get primary70 => ThemeColors.primary70;
+
+  Color get p80P70 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70;
+
+  Color get primary90 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
+
+  Color get primary95 => brightness == Brightness.dark ? ThemeColors.primary95Dark : ThemeColors.primary95Light;
+
+  Color get tonalP90 => brightness == Brightness.dark ? ThemeColors.tonal : ThemeColors.primary90;
+
+  Color get yellow85 => const Color(0xffFFC970);
+
+  Color get custom03 => const Color(0xff624000);
+
+  Color get yellow80 => const Color(0xffFDBA4B);
+
+  Color get green70 => const Color(0xff14C380);
+
+  Color get green30 => const Color(0xff005231);
+
+  Color get green40 => const Color(0xff006d43);
+
+  Color get custom28 => const Color(0xff46E09A);
+
+  Color get custom29 => const Color(0xff68FDB4);
+
+  Color get error30 => const Color(0xff930006);
+
+  Color get error60 => const Color(0xffFF5449);
+
+  Color get error70 => const Color(0xffFF897A);
+
+  Color get error80 => const Color(0xffFFB4A9);
+
+  Color get errorColor => brightness == Brightness.dark ? error60 : error30;
+
+  Color get secondary80 => brightness == Brightness.dark ? ThemeColors.secondary80 : ThemeColors.secondary80Light;
+
+  Color get secondary10 => brightness == Brightness.dark ? ThemeColors.secondary10 : ThemeColors.secondary10;
+
+  Color get dialogOverlay =>
+      brightness == Brightness.dark ? ThemeColors.dialogOverlayDark : ThemeColors.dialogOverlayLight;
+
+  Color get neutral20 => ThemeColors.neutral20;
+
+  Color get neutral30 => ThemeColors.neutral30;
+
+  Color get neutral40 => ThemeColors.neutral40;
+
+  Color get neutral50 => brightness == Brightness.dark ? ThemeColors.neutral50 : ThemeColors.neutral60;
+
+  Color get neutral60 => brightness == Brightness.dark ? ThemeColors.neutral60 : ThemeColors.neutral50;
+
+  Color get neutral70 => ThemeColors.neutral70;
+
+  Color get neutral90 => brightness == Brightness.dark ? ThemeColors.neutral90 : ThemeColors.neutral10;
+
+  Color get highlight => brightness == Brightness.dark ? ThemeColors.highlightDark : ThemeColors.highlight;
+
+  Color get tipColor => brightness == Brightness.dark ? Colors.grey : Colors.grey;
+
+  TextStyle get tipStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: tipColor);
+
+  TextStyle get errorStyle => ThemeData().textTheme.bodyMedium!.copyWith(color: errorColor);
+
+  ThemeData get themeForTabs => ThemeData(
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        brightness: brightness,
+        colorScheme: copyWith(
+          primary: Colors.transparent,
+          secondary: Colors.transparent,
+          surface: Colors.transparent,
+          background: Colors.transparent,
+          onBackground: Colors.transparent,
+          onPrimary: Colors.transparent,
+        ),
+      );
+
+  InputDecoration get txtFieldMainDecoration => InputDecoration(
+        hintText: '',
+        hintStyle: textTheme.bodyMedium!.copyWith(color: n70N50),
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+        labelText: '',
+        labelStyle: textTheme.agoraLabelMedium.copyWith(color: neutral50),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(color: n50P70, width: 1),
+          borderRadius: const BorderRadius.all(Radius.circular(4)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: n50P70, width: 1),
+          borderRadius: const BorderRadius.all(Radius.circular(4)),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: error60, width: 1),
+          borderRadius: const BorderRadius.all(Radius.circular(4)),
+        ),
+        // errorStyle: textTheme.bodyTextSmall.copyWith(color: error60, height: 1),
+        errorStyle: const TextStyle(height: 0),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: n50P70, width: 1),
+          borderRadius: const BorderRadius.all(Radius.circular(4)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: p70P40,
+            width: 1.5,
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(4)),
+        ),
+        floatingLabelStyle: textTheme.agoraLabelMedium.copyWith(color: primary70),
+      );
+}
+
+class ThemeColors {
+  ThemeColors._();
+
+  static final bool isAgora = GetIt.I<AppParameters>().isAgora;
+
+  static const chatRed = Color(0xFFBE3F3A);
+
+  static const custom07 = Color(0xFFDF9F32);
+  static const custom08 = Color(0xFFFDBA4B);
+  static const custom09 = Color(0xFFFFDDAB);
+  static const custom85 = Color(0xFFFFC970);
+
+  static const red20 = Color(0xff680003);
+  static const red40 = Color(0xffba1b1b);
+  static const red50 = Color(0xffDD3730);
+  static const red60 = Color(0xffFF5449);
+  static const red80 = Color(0xffFFB4A9);
+
+  static final surfaceLight = isAgora ? const Color(0xFFFBFCFF) : const Color(0xFFfbfcff);
+  static final surface1Light = isAgora ? const Color(0xFFeef3fd) : const Color(0xFFf2f3fa);
+  static final surface1Dark = isAgora ? const Color(0xFF262931) : const Color(0xFF212529);
+  static final surface2Light = isAgora ? const Color(0xFFe7effd) : const Color(0xFFeceff9);
+  static final surface2Dark = isAgora ? const Color(0xFF252a30) : const Color(0xFF262931);
+  static final surface3Light = isAgora ? const Color(0xFFdfe9fc) : const Color(0xFFe5e9f6);
+  static final surface3Dark = isAgora ? const Color(0xFF2a2f37) : const Color(0xFF2a2e38);
+  static final surface4Light = isAgora ? const Color(0xFFdce7fb) : const Color(0xFFe3e7f4);
+  static final surface4Dark = isAgora ? const Color(0xFF2b3139) : const Color(0xFF2c303a);
+  static final surface5Light = isAgora ? const Color(0xFFd8e3fa) : const Color(0xFFdee5f3);
+  static final surface5Dark = isAgora ? const Color(0xFF2e343e) : const Color(0xFF2e333f);
+
+  static final primary10 = isAgora ? const Color(0xFF00174D) : const Color(0xFF001b3c);
+  static final primary20 = isAgora ? const Color(0xFF00297b) : const Color(0xFF003062);
+  static final primary40 = isAgora ? const Color(0xFF0052DF) : const Color(0xFF1f5fa9);
+
+  static final primary70 = isAgora ? const Color(0xFF89A8FF) : const Color(0xFF77ADFC);
+  static final primary80 = isAgora ? const Color(0xFFB2C5FF) : const Color(0xFFA5C8FF);
+
+  // static final primary80Light = Color(0xFFB2C5FF);
+  // static final primary80Dark = Color(0xFFB2C5FF);
+  static final primary90 = isAgora ? const Color(0xFFDAE2FF) : const Color(0xFFDAE2FF);
+  static const primary95Dark = Color(0xFFEEF0FF);
+  static const primary95Light = Color(0xFFEEF0FF);
+
+  static final tonal = isAgora ? const Color(0xFF1E4792) : const Color(0xFF24518E);
+
+  static const secondary10 = Color(0xFF000C61);
+  static const secondary40 = Color(0xFF3D52C9);
+  static const secondary80Light = Color(0xFFffffff);
+  static final secondary80 = isAgora ? const Color(0xFFB9C3FF) : const Color(0xFFA5C8FF);
+  static const secondary90 = Color(0xFFd8e2ff);
+  static const secondary95 = Color(0xFFDDE0FF);
+
+  static const neutral10 = Color(0xFF191b23);
+  static const neutral20 = Color(0xFF2E3038);
+  static const neutral30 = Color(0xFF44464E);
+  static const neutral40 = Color(0xFF5C5E67);
+  static const neutral50 = Color(0xFF75767F);
+  static const neutral60 = Color(0xFF8F909A);
+  static const neutral70 = Color(0xFFA9AAB4);
+  static const neutral80 = Color(0xFFc6c6d0);
+  static const neutral90 = Color(0xFFe1e1ec);
+  static const neutral95 = Color(0xFFF0F0FB);
+
+  // transparency percents https://stackoverflow.com/a/61157406/7198006
+  static const inactive = Color(0x1A1F1F1F);
+
+  /// chat
+  static const chatQuote = Color(0xFF2D3F98);
+  static const secondaryContainer = Color(0xFFDDE0FF);
+
+  static final dialogOverlayLight = const Color(0xFF191B23).withOpacity(0.5);
+  static final dialogOverlayDark = const Color(0xFF191C1E).withOpacity(0.9);
+
+  static final highlight = isAgora ? const Color(0xFFC0D0FE) : const Color(0xFFC0D0FE);
+  static final highlightDark = isAgora ? const Color(0xFF4C6EC0) : const Color(0xFF365D93);
+
+  static const info = Color(0xFF2E334A);
+  static const infoOutline = Color(0xFF40496B);
+
+  static const tertiary = Color(0xFF8FCDFF);
+  static const yellow80 = Color(0xffFDBA4B);
 }

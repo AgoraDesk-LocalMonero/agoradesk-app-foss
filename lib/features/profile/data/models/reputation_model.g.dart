@@ -6,8 +6,9 @@ part of 'reputation_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ReputationModel _$$_ReputationModelFromJson(Map<String, dynamic> json) =>
-    _$_ReputationModel(
+_$ReputationModelImpl _$$ReputationModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ReputationModelImpl(
       username: json['username'] as String?,
       verificationCode: json['verification_code'] as String?,
       registeredAt: json['registered_at'] == null
@@ -18,7 +19,8 @@ _$_ReputationModel _$$_ReputationModelFromJson(Map<String, dynamic> json) =>
       tradeVolume: json['trade_volume'] as int?,
     );
 
-Map<String, dynamic> _$$_ReputationModelToJson(_$_ReputationModel instance) {
+Map<String, dynamic> _$$ReputationModelImplToJson(
+    _$ReputationModelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
