@@ -12,7 +12,7 @@ part of 'account_info_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AccountInfoModel _$AccountInfoModelFromJson(Map<String, dynamic> json) {
   return _AccountInfoModel.fromJson(json);
@@ -99,58 +99,63 @@ abstract class $AccountInfoModelCopyWith<$Res> {
       _$AccountInfoModelCopyWithImpl<$Res, AccountInfoModel>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
+      {@JsonKey(includeIfNull: false) String? username,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) int? feedbackScore,
       @JsonKey(name: 'confirmed_trade_count_text', includeIfNull: false)
-          String? confirmedTradeCount,
-      @JsonKey(name: 'trade_count', includeIfNull: false)
-          String? tradeCount,
+      String? confirmedTradeCount,
+      @JsonKey(name: 'trade_count', includeIfNull: false) String? tradeCount,
       @JsonKey(name: 'localbitcoins_trade_count', includeIfNull: false)
-          int? localbitcoinsTradeCount,
+      int? localbitcoinsTradeCount,
       @JsonKey(name: 'localbitcoins_feedback_score', includeIfNull: false)
-          int? localbitcoinsFeedbackScore,
+      int? localbitcoinsFeedbackScore,
       @JsonKey(name: 'localbitcoins_trade_volume', includeIfNull: false)
-          double? localbitcoinsTradeVolume,
+      double? localbitcoinsTradeVolume,
       @JsonKey(name: 'localbitcoins_account_created_at', includeIfNull: false)
-          DateTime? localbitcoinsAccountCreatedAt,
+      DateTime? localbitcoinsAccountCreatedAt,
       @JsonKey(name: 'paxful_trade_count', includeIfNull: false)
-          int? paxfulTradeCount,
+      int? paxfulTradeCount,
       @JsonKey(name: 'paxful_feedback_score', includeIfNull: false)
-          int? paxfulFeedbackScore,
+      int? paxfulFeedbackScore,
       @JsonKey(name: 'paxful_trade_volume', includeIfNull: false)
-          double? paxfulTradeVolume,
+      double? paxfulTradeVolume,
       @JsonKey(name: 'paxful_account_created_at', includeIfNull: false)
-          DateTime? paxfulAccountCreatedAt,
-      @JsonKey(name: 'last_online', includeIfNull: false)
-          DateTime? lastOnline,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          DateTime? createdAt,
-      @JsonKey(name: 'feedback_count', includeIfNull: false)
-          int? feedbackCount,
+      DateTime? paxfulAccountCreatedAt,
+      @JsonKey(name: 'last_online', includeIfNull: false) DateTime? lastOnline,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      DateTime? createdAt,
+      @JsonKey(name: 'feedback_count', includeIfNull: false) int? feedbackCount,
       @JsonKey(name: 'feedbacks_unconfirmed_count', includeIfNull: false)
-          int? feedbacksUnconfirmedCount,
+      int? feedbacksUnconfirmedCount,
       @JsonKey(name: 'trading_partners_count', includeIfNull: false)
-          int? tradingPartnersCount,
+      int? tradingPartnersCount,
       @JsonKey(name: 'seller_escrow_release_time_median', includeIfNull: false)
-          int? releaseTimeMedium,
+      int? releaseTimeMedium,
       @JsonKey(name: 'has_common_trades', includeIfNull: false)
-          bool? hasCommonTrades,
+      bool? hasCommonTrades,
       @JsonKey(name: 'my_feedback', includeIfNull: false)
-          FeedbackType? myFeedback,
-      @JsonKey(includeIfNull: false)
-          String? introduction,
-      @JsonKey(includeIfNull: false)
-          String? homepage,
+      FeedbackType? myFeedback,
+      @JsonKey(includeIfNull: false) String? introduction,
+      @JsonKey(includeIfNull: false) String? homepage,
       @JsonKey(name: 'sanction_reason', includeIfNull: false)
-          String? sanctionReason,
+      String? sanctionReason,
       @JsonKey(name: 'sanction_type', includeIfNull: false)
-          SanctionType? sanctionType,
-      @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          DateTime? sanctionedAt,
-      @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          DateTime? sanctionExpiresAt});
+      SanctionType? sanctionType,
+      @JsonKey(
+          name: 'sanctioned_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      DateTime? sanctionedAt,
+      @JsonKey(
+          name: 'sanction_expires_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      DateTime? sanctionExpiresAt});
 }
 
 /// @nodoc
@@ -303,74 +308,79 @@ class _$AccountInfoModelCopyWithImpl<$Res, $Val extends AccountInfoModel>
 }
 
 /// @nodoc
-abstract class _$$_AccountInfoModelCopyWith<$Res>
+abstract class _$$AccountInfoModelImplCopyWith<$Res>
     implements $AccountInfoModelCopyWith<$Res> {
-  factory _$$_AccountInfoModelCopyWith(
-          _$_AccountInfoModel value, $Res Function(_$_AccountInfoModel) then) =
-      __$$_AccountInfoModelCopyWithImpl<$Res>;
+  factory _$$AccountInfoModelImplCopyWith(_$AccountInfoModelImpl value,
+          $Res Function(_$AccountInfoModelImpl) then) =
+      __$$AccountInfoModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false)
-          String? username,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          int? feedbackScore,
+      {@JsonKey(includeIfNull: false) String? username,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) int? feedbackScore,
       @JsonKey(name: 'confirmed_trade_count_text', includeIfNull: false)
-          String? confirmedTradeCount,
-      @JsonKey(name: 'trade_count', includeIfNull: false)
-          String? tradeCount,
+      String? confirmedTradeCount,
+      @JsonKey(name: 'trade_count', includeIfNull: false) String? tradeCount,
       @JsonKey(name: 'localbitcoins_trade_count', includeIfNull: false)
-          int? localbitcoinsTradeCount,
+      int? localbitcoinsTradeCount,
       @JsonKey(name: 'localbitcoins_feedback_score', includeIfNull: false)
-          int? localbitcoinsFeedbackScore,
+      int? localbitcoinsFeedbackScore,
       @JsonKey(name: 'localbitcoins_trade_volume', includeIfNull: false)
-          double? localbitcoinsTradeVolume,
+      double? localbitcoinsTradeVolume,
       @JsonKey(name: 'localbitcoins_account_created_at', includeIfNull: false)
-          DateTime? localbitcoinsAccountCreatedAt,
+      DateTime? localbitcoinsAccountCreatedAt,
       @JsonKey(name: 'paxful_trade_count', includeIfNull: false)
-          int? paxfulTradeCount,
+      int? paxfulTradeCount,
       @JsonKey(name: 'paxful_feedback_score', includeIfNull: false)
-          int? paxfulFeedbackScore,
+      int? paxfulFeedbackScore,
       @JsonKey(name: 'paxful_trade_volume', includeIfNull: false)
-          double? paxfulTradeVolume,
+      double? paxfulTradeVolume,
       @JsonKey(name: 'paxful_account_created_at', includeIfNull: false)
-          DateTime? paxfulAccountCreatedAt,
-      @JsonKey(name: 'last_online', includeIfNull: false)
-          DateTime? lastOnline,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          DateTime? createdAt,
-      @JsonKey(name: 'feedback_count', includeIfNull: false)
-          int? feedbackCount,
+      DateTime? paxfulAccountCreatedAt,
+      @JsonKey(name: 'last_online', includeIfNull: false) DateTime? lastOnline,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      DateTime? createdAt,
+      @JsonKey(name: 'feedback_count', includeIfNull: false) int? feedbackCount,
       @JsonKey(name: 'feedbacks_unconfirmed_count', includeIfNull: false)
-          int? feedbacksUnconfirmedCount,
+      int? feedbacksUnconfirmedCount,
       @JsonKey(name: 'trading_partners_count', includeIfNull: false)
-          int? tradingPartnersCount,
+      int? tradingPartnersCount,
       @JsonKey(name: 'seller_escrow_release_time_median', includeIfNull: false)
-          int? releaseTimeMedium,
+      int? releaseTimeMedium,
       @JsonKey(name: 'has_common_trades', includeIfNull: false)
-          bool? hasCommonTrades,
+      bool? hasCommonTrades,
       @JsonKey(name: 'my_feedback', includeIfNull: false)
-          FeedbackType? myFeedback,
-      @JsonKey(includeIfNull: false)
-          String? introduction,
-      @JsonKey(includeIfNull: false)
-          String? homepage,
+      FeedbackType? myFeedback,
+      @JsonKey(includeIfNull: false) String? introduction,
+      @JsonKey(includeIfNull: false) String? homepage,
       @JsonKey(name: 'sanction_reason', includeIfNull: false)
-          String? sanctionReason,
+      String? sanctionReason,
       @JsonKey(name: 'sanction_type', includeIfNull: false)
-          SanctionType? sanctionType,
-      @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          DateTime? sanctionedAt,
-      @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          DateTime? sanctionExpiresAt});
+      SanctionType? sanctionType,
+      @JsonKey(
+          name: 'sanctioned_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      DateTime? sanctionedAt,
+      @JsonKey(
+          name: 'sanction_expires_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      DateTime? sanctionExpiresAt});
 }
 
 /// @nodoc
-class __$$_AccountInfoModelCopyWithImpl<$Res>
-    extends _$AccountInfoModelCopyWithImpl<$Res, _$_AccountInfoModel>
-    implements _$$_AccountInfoModelCopyWith<$Res> {
-  __$$_AccountInfoModelCopyWithImpl(
-      _$_AccountInfoModel _value, $Res Function(_$_AccountInfoModel) _then)
+class __$$AccountInfoModelImplCopyWithImpl<$Res>
+    extends _$AccountInfoModelCopyWithImpl<$Res, _$AccountInfoModelImpl>
+    implements _$$AccountInfoModelImplCopyWith<$Res> {
+  __$$AccountInfoModelImplCopyWithImpl(_$AccountInfoModelImpl _value,
+      $Res Function(_$AccountInfoModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -403,7 +413,7 @@ class __$$_AccountInfoModelCopyWithImpl<$Res>
     Object? sanctionedAt = freezed,
     Object? sanctionExpiresAt = freezed,
   }) {
-    return _then(_$_AccountInfoModel(
+    return _then(_$AccountInfoModelImpl(
       username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -515,64 +525,67 @@ class __$$_AccountInfoModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AccountInfoModel extends _AccountInfoModel {
-  const _$_AccountInfoModel(
-      {@JsonKey(includeIfNull: false)
-          this.username,
-      @JsonKey(name: 'feedback_score', includeIfNull: false)
-          this.feedbackScore,
+class _$AccountInfoModelImpl extends _AccountInfoModel {
+  const _$AccountInfoModelImpl(
+      {@JsonKey(includeIfNull: false) this.username,
+      @JsonKey(name: 'feedback_score', includeIfNull: false) this.feedbackScore,
       @JsonKey(name: 'confirmed_trade_count_text', includeIfNull: false)
-          this.confirmedTradeCount,
-      @JsonKey(name: 'trade_count', includeIfNull: false)
-          this.tradeCount,
+      this.confirmedTradeCount,
+      @JsonKey(name: 'trade_count', includeIfNull: false) this.tradeCount,
       @JsonKey(name: 'localbitcoins_trade_count', includeIfNull: false)
-          this.localbitcoinsTradeCount,
+      this.localbitcoinsTradeCount,
       @JsonKey(name: 'localbitcoins_feedback_score', includeIfNull: false)
-          this.localbitcoinsFeedbackScore,
+      this.localbitcoinsFeedbackScore,
       @JsonKey(name: 'localbitcoins_trade_volume', includeIfNull: false)
-          this.localbitcoinsTradeVolume,
+      this.localbitcoinsTradeVolume,
       @JsonKey(name: 'localbitcoins_account_created_at', includeIfNull: false)
-          this.localbitcoinsAccountCreatedAt,
+      this.localbitcoinsAccountCreatedAt,
       @JsonKey(name: 'paxful_trade_count', includeIfNull: false)
-          this.paxfulTradeCount,
+      this.paxfulTradeCount,
       @JsonKey(name: 'paxful_feedback_score', includeIfNull: false)
-          this.paxfulFeedbackScore,
+      this.paxfulFeedbackScore,
       @JsonKey(name: 'paxful_trade_volume', includeIfNull: false)
-          this.paxfulTradeVolume,
+      this.paxfulTradeVolume,
       @JsonKey(name: 'paxful_account_created_at', includeIfNull: false)
-          this.paxfulAccountCreatedAt,
-      @JsonKey(name: 'last_online', includeIfNull: false)
-          this.lastOnline,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          this.createdAt,
-      @JsonKey(name: 'feedback_count', includeIfNull: false)
-          this.feedbackCount,
+      this.paxfulAccountCreatedAt,
+      @JsonKey(name: 'last_online', includeIfNull: false) this.lastOnline,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      this.createdAt,
+      @JsonKey(name: 'feedback_count', includeIfNull: false) this.feedbackCount,
       @JsonKey(name: 'feedbacks_unconfirmed_count', includeIfNull: false)
-          this.feedbacksUnconfirmedCount,
+      this.feedbacksUnconfirmedCount,
       @JsonKey(name: 'trading_partners_count', includeIfNull: false)
-          this.tradingPartnersCount,
+      this.tradingPartnersCount,
       @JsonKey(name: 'seller_escrow_release_time_median', includeIfNull: false)
-          this.releaseTimeMedium,
+      this.releaseTimeMedium,
       @JsonKey(name: 'has_common_trades', includeIfNull: false)
-          this.hasCommonTrades,
-      @JsonKey(name: 'my_feedback', includeIfNull: false)
-          this.myFeedback,
-      @JsonKey(includeIfNull: false)
-          this.introduction,
-      @JsonKey(includeIfNull: false)
-          this.homepage,
+      this.hasCommonTrades,
+      @JsonKey(name: 'my_feedback', includeIfNull: false) this.myFeedback,
+      @JsonKey(includeIfNull: false) this.introduction,
+      @JsonKey(includeIfNull: false) this.homepage,
       @JsonKey(name: 'sanction_reason', includeIfNull: false)
-          this.sanctionReason,
-      @JsonKey(name: 'sanction_type', includeIfNull: false)
-          this.sanctionType,
-      @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          this.sanctionedAt,
-      @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          this.sanctionExpiresAt})
+      this.sanctionReason,
+      @JsonKey(name: 'sanction_type', includeIfNull: false) this.sanctionType,
+      @JsonKey(
+          name: 'sanctioned_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      this.sanctionedAt,
+      @JsonKey(
+          name: 'sanction_expires_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      this.sanctionExpiresAt})
       : super._();
 
-  factory _$_AccountInfoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AccountInfoModelFromJson(json);
+  factory _$AccountInfoModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AccountInfoModelImplFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -671,10 +684,10 @@ class _$_AccountInfoModel extends _AccountInfoModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AccountInfoModel &&
+            other is _$AccountInfoModelImpl &&
             (identical(other.username, username) ||
                 other.username == username) &&
             (identical(other.feedbackScore, feedbackScore) ||
@@ -761,12 +774,13 @@ class _$_AccountInfoModel extends _AccountInfoModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith =>
-      __$$_AccountInfoModelCopyWithImpl<_$_AccountInfoModel>(this, _$identity);
+  _$$AccountInfoModelImplCopyWith<_$AccountInfoModelImpl> get copyWith =>
+      __$$AccountInfoModelImplCopyWithImpl<_$AccountInfoModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AccountInfoModelToJson(
+    return _$$AccountInfoModelImplToJson(
       this,
     );
   }
@@ -774,62 +788,71 @@ class _$_AccountInfoModel extends _AccountInfoModel {
 
 abstract class _AccountInfoModel extends AccountInfoModel {
   const factory _AccountInfoModel(
-      {@JsonKey(includeIfNull: false)
-          final String? username,
+      {@JsonKey(includeIfNull: false) final String? username,
       @JsonKey(name: 'feedback_score', includeIfNull: false)
-          final int? feedbackScore,
+      final int? feedbackScore,
       @JsonKey(name: 'confirmed_trade_count_text', includeIfNull: false)
-          final String? confirmedTradeCount,
+      final String? confirmedTradeCount,
       @JsonKey(name: 'trade_count', includeIfNull: false)
-          final String? tradeCount,
+      final String? tradeCount,
       @JsonKey(name: 'localbitcoins_trade_count', includeIfNull: false)
-          final int? localbitcoinsTradeCount,
+      final int? localbitcoinsTradeCount,
       @JsonKey(name: 'localbitcoins_feedback_score', includeIfNull: false)
-          final int? localbitcoinsFeedbackScore,
+      final int? localbitcoinsFeedbackScore,
       @JsonKey(name: 'localbitcoins_trade_volume', includeIfNull: false)
-          final double? localbitcoinsTradeVolume,
+      final double? localbitcoinsTradeVolume,
       @JsonKey(name: 'localbitcoins_account_created_at', includeIfNull: false)
-          final DateTime? localbitcoinsAccountCreatedAt,
+      final DateTime? localbitcoinsAccountCreatedAt,
       @JsonKey(name: 'paxful_trade_count', includeIfNull: false)
-          final int? paxfulTradeCount,
+      final int? paxfulTradeCount,
       @JsonKey(name: 'paxful_feedback_score', includeIfNull: false)
-          final int? paxfulFeedbackScore,
+      final int? paxfulFeedbackScore,
       @JsonKey(name: 'paxful_trade_volume', includeIfNull: false)
-          final double? paxfulTradeVolume,
+      final double? paxfulTradeVolume,
       @JsonKey(name: 'paxful_account_created_at', includeIfNull: false)
-          final DateTime? paxfulAccountCreatedAt,
+      final DateTime? paxfulAccountCreatedAt,
       @JsonKey(name: 'last_online', includeIfNull: false)
-          final DateTime? lastOnline,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          final DateTime? createdAt,
+      final DateTime? lastOnline,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      final DateTime? createdAt,
       @JsonKey(name: 'feedback_count', includeIfNull: false)
-          final int? feedbackCount,
+      final int? feedbackCount,
       @JsonKey(name: 'feedbacks_unconfirmed_count', includeIfNull: false)
-          final int? feedbacksUnconfirmedCount,
+      final int? feedbacksUnconfirmedCount,
       @JsonKey(name: 'trading_partners_count', includeIfNull: false)
-          final int? tradingPartnersCount,
+      final int? tradingPartnersCount,
       @JsonKey(name: 'seller_escrow_release_time_median', includeIfNull: false)
-          final int? releaseTimeMedium,
+      final int? releaseTimeMedium,
       @JsonKey(name: 'has_common_trades', includeIfNull: false)
-          final bool? hasCommonTrades,
+      final bool? hasCommonTrades,
       @JsonKey(name: 'my_feedback', includeIfNull: false)
-          final FeedbackType? myFeedback,
-      @JsonKey(includeIfNull: false)
-          final String? introduction,
-      @JsonKey(includeIfNull: false)
-          final String? homepage,
+      final FeedbackType? myFeedback,
+      @JsonKey(includeIfNull: false) final String? introduction,
+      @JsonKey(includeIfNull: false) final String? homepage,
       @JsonKey(name: 'sanction_reason', includeIfNull: false)
-          final String? sanctionReason,
+      final String? sanctionReason,
       @JsonKey(name: 'sanction_type', includeIfNull: false)
-          final SanctionType? sanctionType,
-      @JsonKey(name: 'sanctioned_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          final DateTime? sanctionedAt,
-      @JsonKey(name: 'sanction_expires_at', includeIfNull: false, fromJson: fromJsonDateOrNull, toJson: toJsonDateOrNull)
-          final DateTime? sanctionExpiresAt}) = _$_AccountInfoModel;
+      final SanctionType? sanctionType,
+      @JsonKey(
+          name: 'sanctioned_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      final DateTime? sanctionedAt,
+      @JsonKey(
+          name: 'sanction_expires_at',
+          includeIfNull: false,
+          fromJson: fromJsonDateOrNull,
+          toJson: toJsonDateOrNull)
+      final DateTime? sanctionExpiresAt}) = _$AccountInfoModelImpl;
   const _AccountInfoModel._() : super._();
 
   factory _AccountInfoModel.fromJson(Map<String, dynamic> json) =
-      _$_AccountInfoModel.fromJson;
+      _$AccountInfoModelImpl.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
@@ -923,6 +946,6 @@ abstract class _AccountInfoModel extends AccountInfoModel {
   DateTime? get sanctionExpiresAt;
   @override
   @JsonKey(ignore: true)
-  _$$_AccountInfoModelCopyWith<_$_AccountInfoModel> get copyWith =>
+  _$$AccountInfoModelImplCopyWith<_$AccountInfoModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

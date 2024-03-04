@@ -6,8 +6,9 @@ part of 'transaction_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
-    _$_TransactionModel(
+_$TransactionModelImpl _$$TransactionModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TransactionModelImpl(
       amount: json['amount'] as String,
       createdAt: DateTime.parse(json['created_at'] as String),
       txNum: json['tx_type'] as int?,
@@ -18,7 +19,8 @@ _$_TransactionModel _$$_TransactionModelFromJson(Map<String, dynamic> json) =>
       description: json['description'] as String,
     );
 
-Map<String, dynamic> _$$_TransactionModelToJson(_$_TransactionModel instance) =>
+Map<String, dynamic> _$$TransactionModelImplToJson(
+        _$TransactionModelImpl instance) =>
     <String, dynamic>{
       'amount': instance.amount,
       'created_at': instance.createdAt.toIso8601String(),

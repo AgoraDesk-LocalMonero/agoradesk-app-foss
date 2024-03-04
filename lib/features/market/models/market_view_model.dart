@@ -77,9 +77,9 @@ class MarketViewModel extends ViewModel
   late CurrencyModel defaultCurrency;
   bool hasMorePages = false;
   PaginationMeta? paginationMeta;
-  final onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
-  final currencyDropdownKey = GlobalKey<DropdownSearchState>();
-  final countryDropdownKey = GlobalKey<DropdownSearchState>();
+  late final GlobalKey<DropdownSearchState<dynamic>> onlineProviderDropdownKey;
+  late final GlobalKey<DropdownSearchState<dynamic>> currencyDropdownKey;
+  late final GlobalKey<DropdownSearchState<dynamic>> countryDropdownKey;
   late final StreamSubscription<bool> subscriptionReload;
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
@@ -129,6 +129,9 @@ class MarketViewModel extends ViewModel
 
   @override
   void init() async {
+    onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
+    currencyDropdownKey = GlobalKey<DropdownSearchState>();
+    countryDropdownKey = GlobalKey<DropdownSearchState>();
     //todo - refactor me (maybe with AutoRoute)
     isGuestMode = _authService.authState == AuthState.guest;
     _authService.onAuthStateChange.listen((e) {
@@ -149,10 +152,9 @@ class MarketViewModel extends ViewModel
       selectedCountry = CountryModel(name: getCountryName(kAnyCountryCode), code: kAnyCountryCode);
     }
     selectedCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
-
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
-    await getCountryPaymentMethods(selectedCountry.code, context);
     await _loadCaches();
+
     if (_appState.hasPinCode) {
       await getAds();
     }
@@ -182,19 +184,8 @@ class MarketViewModel extends ViewModel
   Future _loadCaches() async {
     await getCountries();
     await getCurrencies();
+    await getCountryPaymentMethods(selectedCountry.code, context);
   }
-
-  // Future<List<String>> getCountryCodes() async {
-  //   _reloadPaymentMethods = true;
-  //   final res = await _adsRepository.getCountryCodes();
-  //   if (res.isRight) {
-  //     countryCodeModel = res.right;
-  //     return [kAnyCountryCode, ...countryCodeModel.codes];
-  //   } else {
-  //     handleApiError(res.left, context);
-  //     return ['US'];
-  //   }
-  // }
 
   Future<List<CountryModel>> getCountries() async {
     _reloadPaymentMethods = true;
@@ -232,7 +223,7 @@ class MarketViewModel extends ViewModel
   }
 
   Future<List<CurrencyModel?>> getCurrenciesFromPaymentMethod() async {
-    _reloadPaymentMethods = true;
+    // _reloadPaymentMethods = true;
     if (selectedOnlineProvider?.code == null || selectedOnlineProvider?.code == kAnyPaymentMethodKey) {
       final res = await _adsRepository.getCurrencies();
       if (res.isRight) {
@@ -439,7 +430,6 @@ class MarketViewModel extends ViewModel
     selectedCurrency = defaultCurrency;
     currencyDropdownKey.currentState?.changeSelectedItem(selectedCurrency);
     selectedCountry = CountryModel(name: getCountryName(_appState.countryCode), code: _appState.countryCode);
-    ;
     countryDropdownKey.currentState?.changeSelectedItem(selectedCountry.code);
     locationFieldClear();
     notifyListeners();
@@ -458,7 +448,13 @@ class MarketViewModel extends ViewModel
             currencies: [],
           ),
         );
-        _countryPaymentMethods.addAll(res.right);
+        final List<OnlineProvider> resss22 = res.right;
+
+        final paymentMethods = resss22.map((OnlineProvider e) {
+          return localiseOnlineProvider(context, e);
+        }).toList();
+        paymentMethods.sort((a, b) => a.name.compareTo(b.name));
+        _countryPaymentMethods.addAll(paymentMethods);
         selectedOnlineProvider = _countryPaymentMethods.first;
         _reloadPaymentMethods = false;
         notifyListeners();

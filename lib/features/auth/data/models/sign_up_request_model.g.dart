@@ -6,9 +6,9 @@ part of 'sign_up_request_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SignUpRequestModel _$$_SignUpRequestModelFromJson(
+_$SignUpRequestModelImpl _$$SignUpRequestModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SignUpRequestModel(
+    _$SignUpRequestModelImpl(
       username: json['username'] as String?,
       email: json['email'] as String?,
       frontType: json['front_type'] as String?,
@@ -19,8 +19,8 @@ _$_SignUpRequestModel _$$_SignUpRequestModelFromJson(
       couponCode: json['coupon_code'] as String?,
     );
 
-Map<String, dynamic> _$$_SignUpRequestModelToJson(
-    _$_SignUpRequestModel instance) {
+Map<String, dynamic> _$$SignUpRequestModelImplToJson(
+    _$SignUpRequestModelImpl instance) {
   final val = <String, dynamic>{
     'username': instance.username,
   };

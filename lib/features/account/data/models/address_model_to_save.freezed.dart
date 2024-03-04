@@ -12,7 +12,7 @@ part of 'address_model_to_save.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AddressModelToSave _$AddressModelToSaveFromJson(Map<String, dynamic> json) {
   return _AddressModelToSave.fromJson(json);
@@ -79,11 +79,11 @@ class _$AddressModelToSaveCopyWithImpl<$Res, $Val extends AddressModelToSave>
 }
 
 /// @nodoc
-abstract class _$$_AddressModelToSaveCopyWith<$Res>
+abstract class _$$AddressModelToSaveImplCopyWith<$Res>
     implements $AddressModelToSaveCopyWith<$Res> {
-  factory _$$_AddressModelToSaveCopyWith(_$_AddressModelToSave value,
-          $Res Function(_$_AddressModelToSave) then) =
-      __$$_AddressModelToSaveCopyWithImpl<$Res>;
+  factory _$$AddressModelToSaveImplCopyWith(_$AddressModelToSaveImpl value,
+          $Res Function(_$AddressModelToSaveImpl) then) =
+      __$$AddressModelToSaveImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +93,11 @@ abstract class _$$_AddressModelToSaveCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AddressModelToSaveCopyWithImpl<$Res>
-    extends _$AddressModelToSaveCopyWithImpl<$Res, _$_AddressModelToSave>
-    implements _$$_AddressModelToSaveCopyWith<$Res> {
-  __$$_AddressModelToSaveCopyWithImpl(
-      _$_AddressModelToSave _value, $Res Function(_$_AddressModelToSave) _then)
+class __$$AddressModelToSaveImplCopyWithImpl<$Res>
+    extends _$AddressModelToSaveCopyWithImpl<$Res, _$AddressModelToSaveImpl>
+    implements _$$AddressModelToSaveImplCopyWith<$Res> {
+  __$$AddressModelToSaveImplCopyWithImpl(_$AddressModelToSaveImpl _value,
+      $Res Function(_$AddressModelToSaveImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$_AddressModelToSaveCopyWithImpl<$Res>
     Object? address = null,
     Object? label = freezed,
   }) {
-    return _then(_$_AddressModelToSave(
+    return _then(_$AddressModelToSaveImpl(
       asset: null == asset
           ? _value.asset
           : asset // ignore: cast_nullable_to_non_nullable
@@ -127,16 +127,15 @@ class __$$_AddressModelToSaveCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_AddressModelToSave implements _AddressModelToSave {
-  const _$_AddressModelToSave(
+class _$AddressModelToSaveImpl implements _AddressModelToSave {
+  const _$AddressModelToSaveImpl(
       {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
-          required this.asset,
+      required this.asset,
       required this.address,
-      @JsonKey(includeIfNull: false)
-          this.label});
+      @JsonKey(includeIfNull: false) this.label});
 
-  factory _$_AddressModelToSave.fromJson(Map<String, dynamic> json) =>
-      _$$_AddressModelToSaveFromJson(json);
+  factory _$AddressModelToSaveImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddressModelToSaveImplFromJson(json);
 
   @override
   @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
@@ -153,10 +152,10 @@ class _$_AddressModelToSave implements _AddressModelToSave {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddressModelToSave &&
+            other is _$AddressModelToSaveImpl &&
             (identical(other.asset, asset) || other.asset == asset) &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.label, label) || other.label == label));
@@ -169,13 +168,13 @@ class _$_AddressModelToSave implements _AddressModelToSave {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddressModelToSaveCopyWith<_$_AddressModelToSave> get copyWith =>
-      __$$_AddressModelToSaveCopyWithImpl<_$_AddressModelToSave>(
+  _$$AddressModelToSaveImplCopyWith<_$AddressModelToSaveImpl> get copyWith =>
+      __$$AddressModelToSaveImplCopyWithImpl<_$AddressModelToSaveImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddressModelToSaveToJson(
+    return _$$AddressModelToSaveImplToJson(
       this,
     );
   }
@@ -183,14 +182,14 @@ class _$_AddressModelToSave implements _AddressModelToSave {
 
 abstract class _AddressModelToSave implements AddressModelToSave {
   const factory _AddressModelToSave(
-      {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
+          {@JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
           required final Asset asset,
-      required final String address,
-      @JsonKey(includeIfNull: false)
-          final String? label}) = _$_AddressModelToSave;
+          required final String address,
+          @JsonKey(includeIfNull: false) final String? label}) =
+      _$AddressModelToSaveImpl;
 
   factory _AddressModelToSave.fromJson(Map<String, dynamic> json) =
-      _$_AddressModelToSave.fromJson;
+      _$AddressModelToSaveImpl.fromJson;
 
   @override
   @JsonKey(fromJson: fromJsonAsset, toJson: toJsonAsset)
@@ -202,6 +201,6 @@ abstract class _AddressModelToSave implements AddressModelToSave {
   String? get label;
   @override
   @JsonKey(ignore: true)
-  _$$_AddressModelToSaveCopyWith<_$_AddressModelToSave> get copyWith =>
+  _$$AddressModelToSaveImplCopyWith<_$AddressModelToSaveImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

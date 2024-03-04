@@ -6,8 +6,9 @@ part of 'attached_ad_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AttachedAdModel _$$_AttachedAdModelFromJson(Map<String, dynamic> json) =>
-    _$_AttachedAdModel(
+_$AttachedAdModelImpl _$$AttachedAdModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AttachedAdModelImpl(
       id: json['id'] as String?,
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
       tradeType: $enumDecode(_$TradeTypeEnumMap, json['trade_type']),
@@ -18,7 +19,8 @@ _$_AttachedAdModel _$$_AttachedAdModelFromJson(Map<String, dynamic> json) =>
       paymentMethod: json['payment_method'] as String?,
     );
 
-Map<String, dynamic> _$$_AttachedAdModelToJson(_$_AttachedAdModel instance) {
+Map<String, dynamic> _$$AttachedAdModelImplToJson(
+    _$AttachedAdModelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

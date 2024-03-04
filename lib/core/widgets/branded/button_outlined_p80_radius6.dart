@@ -20,7 +20,7 @@ class ButtonOutlinedP80Radius4 extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         minimumSize: const Size.fromHeight(24),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        primary: color,
+        backgroundColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6),
           side: BorderSide(

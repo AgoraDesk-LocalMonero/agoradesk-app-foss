@@ -6,8 +6,9 @@ part of 'account_info_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AccountInfoModel _$$_AccountInfoModelFromJson(Map<String, dynamic> json) =>
-    _$_AccountInfoModel(
+_$AccountInfoModelImpl _$$AccountInfoModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AccountInfoModelImpl(
       username: json['username'] as String?,
       feedbackScore: json['feedback_score'] as int?,
       confirmedTradeCount: json['confirmed_trade_count_text'] as String?,
@@ -47,7 +48,8 @@ _$_AccountInfoModel _$$_AccountInfoModelFromJson(Map<String, dynamic> json) =>
           fromJsonDateOrNull(json['sanction_expires_at'] as String?),
     );
 
-Map<String, dynamic> _$$_AccountInfoModelToJson(_$_AccountInfoModel instance) {
+Map<String, dynamic> _$$AccountInfoModelImplToJson(
+    _$AccountInfoModelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

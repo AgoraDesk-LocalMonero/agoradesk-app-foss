@@ -12,7 +12,7 @@ part of 'change_email_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ChangeEmailRequest _$ChangeEmailRequestFromJson(Map<String, dynamic> json) {
   return _ChangeEmailRequest.fromJson(json);
@@ -86,11 +86,11 @@ class _$ChangeEmailRequestCopyWithImpl<$Res, $Val extends ChangeEmailRequest>
 }
 
 /// @nodoc
-abstract class _$$_ChangeEmailRequestCopyWith<$Res>
+abstract class _$$ChangeEmailRequestImplCopyWith<$Res>
     implements $ChangeEmailRequestCopyWith<$Res> {
-  factory _$$_ChangeEmailRequestCopyWith(_$_ChangeEmailRequest value,
-          $Res Function(_$_ChangeEmailRequest) then) =
-      __$$_ChangeEmailRequestCopyWithImpl<$Res>;
+  factory _$$ChangeEmailRequestImplCopyWith(_$ChangeEmailRequestImpl value,
+          $Res Function(_$ChangeEmailRequestImpl) then) =
+      __$$ChangeEmailRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,11 +101,11 @@ abstract class _$$_ChangeEmailRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ChangeEmailRequestCopyWithImpl<$Res>
-    extends _$ChangeEmailRequestCopyWithImpl<$Res, _$_ChangeEmailRequest>
-    implements _$$_ChangeEmailRequestCopyWith<$Res> {
-  __$$_ChangeEmailRequestCopyWithImpl(
-      _$_ChangeEmailRequest _value, $Res Function(_$_ChangeEmailRequest) _then)
+class __$$ChangeEmailRequestImplCopyWithImpl<$Res>
+    extends _$ChangeEmailRequestCopyWithImpl<$Res, _$ChangeEmailRequestImpl>
+    implements _$$ChangeEmailRequestImplCopyWith<$Res> {
+  __$$ChangeEmailRequestImplCopyWithImpl(_$ChangeEmailRequestImpl _value,
+      $Res Function(_$ChangeEmailRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +116,7 @@ class __$$_ChangeEmailRequestCopyWithImpl<$Res>
     Object? captcha = freezed,
     Object? captchaCookie = freezed,
   }) {
-    return _then(_$_ChangeEmailRequest(
+    return _then(_$ChangeEmailRequestImpl(
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -140,15 +140,15 @@ class __$$_ChangeEmailRequestCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_ChangeEmailRequest implements _ChangeEmailRequest {
-  const _$_ChangeEmailRequest(
+class _$ChangeEmailRequestImpl implements _ChangeEmailRequest {
+  const _$ChangeEmailRequestImpl(
       {this.email,
       this.password,
       @JsonKey(includeIfNull: false) this.captcha,
       @JsonKey(ignore: true) this.captchaCookie});
 
-  factory _$_ChangeEmailRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ChangeEmailRequestFromJson(json);
+  factory _$ChangeEmailRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ChangeEmailRequestImplFromJson(json);
 
   @override
   final String? email;
@@ -167,10 +167,10 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ChangeEmailRequest &&
+            other is _$ChangeEmailRequestImpl &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
@@ -187,13 +187,13 @@ class _$_ChangeEmailRequest implements _ChangeEmailRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
-      __$$_ChangeEmailRequestCopyWithImpl<_$_ChangeEmailRequest>(
+  _$$ChangeEmailRequestImplCopyWith<_$ChangeEmailRequestImpl> get copyWith =>
+      __$$ChangeEmailRequestImplCopyWithImpl<_$ChangeEmailRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChangeEmailRequestToJson(
+    return _$$ChangeEmailRequestImplToJson(
       this,
     );
   }
@@ -205,10 +205,10 @@ abstract class _ChangeEmailRequest implements ChangeEmailRequest {
           final String? password,
           @JsonKey(includeIfNull: false) final String? captcha,
           @JsonKey(ignore: true) final String? captchaCookie}) =
-      _$_ChangeEmailRequest;
+      _$ChangeEmailRequestImpl;
 
   factory _ChangeEmailRequest.fromJson(Map<String, dynamic> json) =
-      _$_ChangeEmailRequest.fromJson;
+      _$ChangeEmailRequestImpl.fromJson;
 
   @override
   String? get email;
@@ -222,6 +222,6 @@ abstract class _ChangeEmailRequest implements ChangeEmailRequest {
   String? get captchaCookie;
   @override
   @JsonKey(ignore: true)
-  _$$_ChangeEmailRequestCopyWith<_$_ChangeEmailRequest> get copyWith =>
+  _$$ChangeEmailRequestImplCopyWith<_$ChangeEmailRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

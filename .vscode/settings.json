@@ -1,6 +1,8 @@
 {
   "dart.lineLength": 120,
+  "editor.fontSize": 15,
   "[dart]": {
+    "editor.fontSize": 15,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.rulers": [120],
@@ -11,5 +13,17 @@
     "editor.formatOnSave": true
   },
   "chat.editor.fontSize": 10,
-  "java.configuration.updateBuildConfiguration": "disabled"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "files.exclude": {
+    "**/.DS_Store": false,
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/CVS": false,
+    "**/Thumbs.db": false
+  },
+  "terminal.integrated.fontSize": 13,
+  "[Log]": {
+    "editor.fontSize": 13
+  }
 }

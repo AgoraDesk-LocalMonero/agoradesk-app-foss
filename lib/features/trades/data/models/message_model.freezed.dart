@@ -12,7 +12,7 @@ part of 'message_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MessageModel _$MessageModelFromJson(Map<String, dynamic> json) {
   return _MessageModel.fromJson(json);
@@ -52,20 +52,21 @@ abstract class $MessageModelCopyWith<$Res> {
       _$MessageModelCopyWithImpl<$Res, MessageModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          bool isAdmin,
+      {@JsonKey(name: 'message_id', includeIfNull: false) String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) String? tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime createdAt,
+      @JsonKey(name: 'is_admin', includeIfNull: false) bool isAdmin,
       AccountInfoModel sender,
       String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          String? attachmentName,
+      String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          String? attachmentUrl});
+      String? attachmentUrl});
 
   $AccountInfoModelCopyWith<$Res> get sender;
 }
@@ -138,39 +139,40 @@ class _$MessageModelCopyWithImpl<$Res, $Val extends MessageModel>
 }
 
 /// @nodoc
-abstract class _$$_MessageModelCopyWith<$Res>
+abstract class _$$MessageModelImplCopyWith<$Res>
     implements $MessageModelCopyWith<$Res> {
-  factory _$$_MessageModelCopyWith(
-          _$_MessageModel value, $Res Function(_$_MessageModel) then) =
-      __$$_MessageModelCopyWithImpl<$Res>;
+  factory _$$MessageModelImplCopyWith(
+          _$MessageModelImpl value, $Res Function(_$MessageModelImpl) then) =
+      __$$MessageModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          DateTime createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          bool isAdmin,
+      {@JsonKey(name: 'message_id', includeIfNull: false) String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) String? tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      DateTime createdAt,
+      @JsonKey(name: 'is_admin', includeIfNull: false) bool isAdmin,
       AccountInfoModel sender,
       String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          String? attachmentName,
+      String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          String? attachmentUrl});
+      String? attachmentUrl});
 
   @override
   $AccountInfoModelCopyWith<$Res> get sender;
 }
 
 /// @nodoc
-class __$$_MessageModelCopyWithImpl<$Res>
-    extends _$MessageModelCopyWithImpl<$Res, _$_MessageModel>
-    implements _$$_MessageModelCopyWith<$Res> {
-  __$$_MessageModelCopyWithImpl(
-      _$_MessageModel _value, $Res Function(_$_MessageModel) _then)
+class __$$MessageModelImplCopyWithImpl<$Res>
+    extends _$MessageModelCopyWithImpl<$Res, _$MessageModelImpl>
+    implements _$$MessageModelImplCopyWith<$Res> {
+  __$$MessageModelImplCopyWithImpl(
+      _$MessageModelImpl _value, $Res Function(_$MessageModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -185,7 +187,7 @@ class __$$_MessageModelCopyWithImpl<$Res>
     Object? attachmentName = freezed,
     Object? attachmentUrl = freezed,
   }) {
-    return _then(_$_MessageModel(
+    return _then(_$MessageModelImpl(
       messageId: freezed == messageId
           ? _value.messageId
           : messageId // ignore: cast_nullable_to_non_nullable
@@ -225,25 +227,26 @@ class __$$_MessageModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_MessageModel implements _MessageModel {
-  const _$_MessageModel(
-      {@JsonKey(name: 'message_id', includeIfNull: false)
-          this.messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          this.tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required this.createdAt,
-      @JsonKey(name: 'is_admin', includeIfNull: false)
-          required this.isAdmin,
+class _$MessageModelImpl implements _MessageModel {
+  const _$MessageModelImpl(
+      {@JsonKey(name: 'message_id', includeIfNull: false) this.messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) this.tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required this.createdAt,
+      @JsonKey(name: 'is_admin', includeIfNull: false) required this.isAdmin,
       required this.sender,
       this.msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          this.attachmentName,
+      this.attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          this.attachmentUrl});
+      this.attachmentUrl});
 
-  factory _$_MessageModel.fromJson(Map<String, dynamic> json) =>
-      _$$_MessageModelFromJson(json);
+  factory _$MessageModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MessageModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'message_id', includeIfNull: false)
@@ -278,10 +281,10 @@ class _$_MessageModel implements _MessageModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MessageModel &&
+            other is _$MessageModelImpl &&
             (identical(other.messageId, messageId) ||
                 other.messageId == messageId) &&
             (identical(other.tradeId, tradeId) || other.tradeId == tradeId) &&
@@ -304,12 +307,12 @@ class _$_MessageModel implements _MessageModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
-      __$$_MessageModelCopyWithImpl<_$_MessageModel>(this, _$identity);
+  _$$MessageModelImplCopyWith<_$MessageModelImpl> get copyWith =>
+      __$$MessageModelImplCopyWithImpl<_$MessageModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MessageModelToJson(
+    return _$$MessageModelImplToJson(
       this,
     );
   }
@@ -318,22 +321,25 @@ class _$_MessageModel implements _MessageModel {
 abstract class _MessageModel implements MessageModel {
   const factory _MessageModel(
       {@JsonKey(name: 'message_id', includeIfNull: false)
-          final String? messageId,
-      @JsonKey(name: 'contact_id', includeIfNull: false)
-          final String? tradeId,
-      @JsonKey(name: 'created_at', includeIfNull: false, fromJson: fromJsonDate, toJson: toJsonDate)
-          required final DateTime createdAt,
+      final String? messageId,
+      @JsonKey(name: 'contact_id', includeIfNull: false) final String? tradeId,
+      @JsonKey(
+          name: 'created_at',
+          includeIfNull: false,
+          fromJson: fromJsonDate,
+          toJson: toJsonDate)
+      required final DateTime createdAt,
       @JsonKey(name: 'is_admin', includeIfNull: false)
-          required final bool isAdmin,
+      required final bool isAdmin,
       required final AccountInfoModel sender,
       final String? msg,
       @JsonKey(name: 'attachment_name', includeIfNull: false)
-          final String? attachmentName,
+      final String? attachmentName,
       @JsonKey(name: 'attachment_url', includeIfNull: false)
-          final String? attachmentUrl}) = _$_MessageModel;
+      final String? attachmentUrl}) = _$MessageModelImpl;
 
   factory _MessageModel.fromJson(Map<String, dynamic> json) =
-      _$_MessageModel.fromJson;
+      _$MessageModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'message_id', includeIfNull: false)
@@ -363,6 +369,6 @@ abstract class _MessageModel implements MessageModel {
   String? get attachmentUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_MessageModelCopyWith<_$_MessageModel> get copyWith =>
+  _$$MessageModelImplCopyWith<_$MessageModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

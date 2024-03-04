@@ -12,9 +12,7 @@ import 'package:agoradesk/features/auth/data/models/sign_up_request_model.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/auth/screens/dialog_captcha.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:vm/vm.dart';
 
 class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
@@ -117,7 +115,7 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
       errorMessage = '';
       final emailRes = _email?.isNotEmpty == true ? _email : null;
       if (_captchaCookie?.isNotEmpty == true && _captchaInput?.isNotEmpty == false) {
-        _captchaInput = 'AAAAAA';
+        _captchaInput = '';
       }
       final request = SignUpRequestModel(
         username: _username!,
@@ -141,9 +139,6 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
               path: captchaPath,
             ),
           );
-          // if (validateCaptcha(_captchaInput)) {
-          //   signUp();
-          // }
         } else {
           handleApiError(res.left, context);
         }
@@ -154,18 +149,18 @@ class SignUpViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     return false;
   }
 
-  void parseAndSignupWebview(String? username) {
-    final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
+  // void parseAndSignupWebview(String? username) {
+  //   final List<Cookie>? cookies = GetIt.I<AppParameters>().cookies;
 
-    if (cookies != null && cookies.firstWhereOrNull((e) => e.name == 'token') != null) {
-      _authService.signupWebview(username!);
-    }
-  }
+  //   if (cookies != null && cookies.firstWhereOrNull((e) => e.name == 'token') != null) {
+  //     _authService.signupWebview(username!);
+  //   }
+  // }
 
-  String getWebviewUrl() {
-    final themeParameter = _appState.themeMode == ThemeMode.dark ? 'dark' : 'light';
-    return 'https://agoradesk.com/mobile-signup?themeType=$themeParameter';
-  }
+  // String getWebviewUrl() {
+  //   final themeParameter = _appState.themeMode == ThemeMode.dark ? 'dark' : 'light';
+  //   return 'https://agoradesk.com/mobile-signup?themeType=$themeParameter';
+  // }
 
   void guestModeOn() {
     _authService.guestModeOn();

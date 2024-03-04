@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/theme/theme_colors.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class ActiveIcon extends StatelessWidget {

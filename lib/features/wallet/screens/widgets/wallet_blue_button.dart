@@ -27,7 +27,7 @@ class WalletBlueButton extends StatelessWidget {
         minimumSize: const Size(100, 30),
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
         tapTargetSize: shrinkWrap ? MaterialTapTargetSize.shrinkWrap : null,
-        primary: Theme.of(context).colorScheme.tonalP90,
+        backgroundColor: Theme.of(context).colorScheme.tonalP90,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),

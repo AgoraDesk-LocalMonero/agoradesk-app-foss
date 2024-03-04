@@ -6,7 +6,8 @@ part of 'ad_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AdModel _$$_AdModelFromJson(Map<String, dynamic> json) => _$_AdModel(
+_$AdModelImpl _$$AdModelImplFromJson(Map<String, dynamic> json) =>
+    _$AdModelImpl(
       asset: $enumDecodeNullable(_$AssetEnumMap, json['asset']),
       id: json['ad_id'] as String?,
       createdAt: json['created_at'] as String?,
@@ -46,7 +47,7 @@ _$_AdModel _$$_AdModelFromJson(Map<String, dynamic> json) => _$_AdModel(
           : AccountInfoModel.fromJson(json['profile'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdModelToJson(_$_AdModel instance) {
+Map<String, dynamic> _$$AdModelImplToJson(_$AdModelImpl instance) {
   final val = <String, dynamic>{
     'asset': _$AssetEnumMap[instance.asset],
   };

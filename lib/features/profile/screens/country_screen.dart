@@ -94,7 +94,7 @@ class _CountryListItem extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         minimumSize: const Size.fromHeight(44),
-        primary: context.colSurf5Surf4,
+        backgroundColor: context.colSurf5Surf4,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100),

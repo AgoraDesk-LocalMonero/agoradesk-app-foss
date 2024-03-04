@@ -30,7 +30,7 @@ class ButtonFilledWithIconP80 extends StatelessWidget {
       onPressed: loading ? () {} : onPressed,
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.zero,
-        primary: filledColor ?? Theme.of(context).colorScheme.p80P70,
+        backgroundColor: filledColor ?? Theme.of(context).colorScheme.p80P70,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(40),
           // side: const BorderSide(width: 2, color: Colors.blueAccent),
