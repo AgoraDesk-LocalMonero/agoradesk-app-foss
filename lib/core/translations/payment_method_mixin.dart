@@ -5,7 +5,6 @@ import 'package:agoradesk/features/ads/data/models/sorting_type.dart';
 import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 
 mixin PaymentMethodsMixin {
   final worldwideMethods = [
@@ -62,7 +61,6 @@ mixin PaymentMethodsMixin {
       return code;
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[getPaymentMethodName error - $code] $e');
-      Sentry.captureMessage('[getPaymentMethodName error - $code] $e');
       return code;
     }
   }
@@ -79,7 +77,6 @@ mixin PaymentMethodsMixin {
       return onlineProvider;
     } catch (e) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[localiseOnlineProvider error - $onlineProvider] $e');
-      Sentry.captureMessage('[getPaymentMethodName error - $onlineProvider] $e');
       return onlineProvider;
     }
   }

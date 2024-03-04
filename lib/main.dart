@@ -12,18 +12,10 @@ import 'package:agoradesk/core/services/notifications/local_notifications_utils.
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
 import 'package:agoradesk/init_app_parameters.dart';
-<<<<<<< HEAD
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-=======
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
->>>>>>> main
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -114,86 +106,5 @@ void main() async {
     );
   }
 
-<<<<<<< HEAD
-  runApp(const App());
+  runApp(UncontrolledProviderScope(container: container, child: const App()));
 }
-
-/// Create a [AndroidNotificationChannel] for heads up notifications
-late AndroidNotificationChannel channel;
-
-bool isFlutterLocalNotificationsInitialized = false;
-
-Future<void> setupLocalNotifications(bool isGoogleAvailable) async {
-  if (isFlutterLocalNotificationsInitialized) {
-    return;
-  }
-
-  channel = const AndroidNotificationChannel(
-    kNotificationsChannel, // id
-    'Trades channel', // title
-    description: 'Notifications about trades', // description
-    importance: Importance.high,
-  );
-
-  localNotificationsPlugin = FlutterLocalNotificationsPlugin();
-
-  await localNotificationsPlugin
-      .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
-      ?.createNotificationChannel(channel);
-
-  await localNotificationsPlugin.initialize(
-    const InitializationSettings(
-      android: AndroidInitializationSettings(kNotificationIcon),
-      iOS: DarwinInitializationSettings(
-        requestAlertPermission: true,
-        requestSoundPermission: true,
-        requestBadgePermission: true,
-      ),
-      macOS: DarwinInitializationSettings(
-        requestAlertPermission: true,
-        requestSoundPermission: true,
-        requestBadgePermission: true,
-      ),
-    ),
-    onDidReceiveNotificationResponse: _notificationResponse,
-  );
-
-  isFlutterLocalNotificationsInitialized = true;
-}
-
-/// Initialize the [FlutterLocalNotificationsPlugin] package.
-late FlutterLocalNotificationsPlugin localNotificationsPlugin;
-
-Future _notificationResponse(NotificationResponse notificationResponse) async {
-  try {
-    String? tradeId;
-    final String? payload = notificationResponse.payload;
-    if (payload != null) {
-      final PushModel push = PushModel.fromJson(jsonDecode(payload));
-      if (push.objectId != null && push.objectId!.isNotEmpty) {
-        tradeId = push.objectId;
-      }
-    }
-    eventBus.fire(NoificationClickedEvent(tradeId));
-  } catch (e) {
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
-  }
-}
-=======
-  if (kDebugMode || includeFcm == false || sentryIsOn == false) {
-    runApp(UncontrolledProviderScope(container: container, child: const App()));
-  } else {
-    SentryFlutter.init(
-      (options) {
-        options
-          ..dsn = kSentryDsn
-          ..reportSilentFlutterErrors = true
-          ..attachStacktrace = false
-          ..enableAutoSessionTracking = false
-          ..tracesSampleRate = 1.0;
-      },
-      appRunner: () => runApp(UncontrolledProviderScope(container: container, child: const App())),
-    );
-  }
-}
->>>>>>> main
