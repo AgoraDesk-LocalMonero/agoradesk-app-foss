@@ -1,5 +1,6 @@
 ### Updates
-1. HOTFIX: notifications bug when Google services are not available.
+1. Added a waiting timer to the SignUp Screen
+2. Fixed a tab bar UI issue
 
 
 ### About the attached app's
