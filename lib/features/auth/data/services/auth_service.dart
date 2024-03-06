@@ -21,7 +21,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:share_plus/share_plus.dart';
 
 enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
 
@@ -303,11 +302,6 @@ class AuthService with FileUtilsMixin, AuthMixin {
             ),
           );
           if (!checkIsFromImperva(resp)) {
-            passedThroughImperva = true;
-            resp = resp2;
-          }
-
-          if ((resp2.statusCode != 200 && resp2.data?.containsKey('incidentId') == false)) {
             passedThroughImperva = true;
             resp = resp2;
           }
