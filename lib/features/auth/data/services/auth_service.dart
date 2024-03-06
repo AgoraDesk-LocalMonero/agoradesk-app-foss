@@ -21,6 +21,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:share_plus/share_plus.dart';
 
 enum AuthState { initial, loggedOut, loggedIn, guest, displayPinCode }
 
@@ -240,7 +241,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
               headers: cookie,
             ),
           );
-          if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
+          if (!checkIsFromImperva(resp)) {
             passedThroughImperva = true;
             resp = resp2;
           }
@@ -301,13 +302,17 @@ class AuthService with FileUtilsMixin, AuthMixin {
               headers: cookie,
             ),
           );
-          if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
+          if (!checkIsFromImperva(resp)) {
+            passedThroughImperva = true;
+            resp = resp2;
+          }
+
+          if ((resp2.statusCode != 200 && resp2.data?.containsKey('incidentId') == false)) {
             passedThroughImperva = true;
             resp = resp2;
           }
         }
       }
-
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);
@@ -416,12 +421,12 @@ class AuthService with FileUtilsMixin, AuthMixin {
           if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('Rec: $rec , Total: $total');
         },
       );
+
       String headerWithCookie = response.headers['set-cookie']?[0] ?? '';
       if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, downloadCaptcha] $headerWithCookie');
       }
       final endIndex = headerWithCookie.indexOf(';');
-
       String cookie = headerWithCookie.substring(0, endIndex);
       return [cookie, captchaLocalPath];
     } catch (e) {
@@ -453,7 +458,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
 
   Future<bool> _handleTokenResponse(Response<Map> resp) async {
     try {
-      if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
+      if (resp.statusCode == 200 && resp.data?.containsKey('data') == true && resp.data!['data'].containsKey('token')) {
         _setToken(resp.data!['data']['token']);
         // await _getUser();
 
@@ -468,20 +473,6 @@ class AuthService with FileUtilsMixin, AuthMixin {
     }
     return false;
   }
-
-  // Future<bool> _handleTokenWebview(String token) async {
-  //   try {
-  //     _setToken(token);
-  //     if (_api.accessToken != null) {
-  //       showPinSetUp = true;
-  //       _authStateController.add(AuthState.loggedIn);
-  //     }
-  //     return true;
-  //   } catch (e) {
-  //     if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
-  //   }
-  //   return false;
-  // }
 
   ///
   /// Set the access token
