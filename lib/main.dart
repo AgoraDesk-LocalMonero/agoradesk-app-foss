@@ -110,7 +110,12 @@ void main() async {
     );
   }
 
-  runApp(const App());
+  runApp(
+    UncontrolledProviderScope(
+      container: container,
+      child: const App(),
+    ),
+  );
 }
 
 /// Create a [AndroidNotificationChannel] for heads up notifications
