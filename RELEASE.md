@@ -1,6 +1,6 @@
 ### Updates
-1. Added a waiting timer to the SignUp Screen
-2. Fixed a tab bar UI issue
+1. Added new trade pairs.
+2. Improved login anti-DDoS protection.
 
 
 ### About the attached app's
