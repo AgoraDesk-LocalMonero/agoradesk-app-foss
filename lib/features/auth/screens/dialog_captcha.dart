@@ -18,7 +18,6 @@ class DialogCaptcha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('++++++++++++++++++++01 - ${path}');
 
     return Dialog(
         insetPadding: const EdgeInsets.all(24),

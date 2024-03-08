@@ -361,21 +361,23 @@ class AuthService with FileUtilsMixin, AuthMixin {
 
     Response<Map<dynamic, dynamic>> responseImperva = response;
 
-    final impervaCookies = parseImpervaCookies(response.data!);
-    // GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
+    final impervaCookies = parseImpervaCookies(response.data);
 
     bool passedThroughImperva = false;
     while (passedThroughImperva == false) {
       container.read(appStateV2Provider.notifier).startCountdown();
       await container.read(appStateV2Provider.notifier).waitForFinish();
-
       responseImperva = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
-        options: Options(
-          headers: {for (var v in impervaCookies) v.name: v.value},
-        ),
+        /// TODO: check if we need to pass imperva cookies - tests shown that we don't need to
+        // options: Options(
+        //   headers: {for (var v in impervaCookies) v.name: v.value},
+        // ),
       );
+
+      impervaCookies.clear();
+      impervaCookies.addAll(parseImpervaCookies(responseImperva.headers.map));
 
       if (checkIsFromImperva(responseImperva) == false) {
         passedThroughImperva = true;
