@@ -223,30 +223,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
         ),
       );
 
-      ///
-
-      if (checkIsFromImperva(resp)) {
-        final impervaCookies = parseImpervaCookies(resp.data!);
-        GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
-        bool passedThroughImperva = false;
-        while (!passedThroughImperva) {
-          container.read(appStateV2Provider.notifier).startCountdown();
-          await container.read(appStateV2Provider.notifier).waitForFinish();
-          final resp2 = await _api.client.post<Map>(
-            '/signup',
-            data: request.toJson(),
-            options: Options(
-              headers: cookie,
-            ),
-          );
-          if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
-            passedThroughImperva = true;
-            resp = resp2;
-          }
-        }
-      }
-
-      ///
+      resp = await _checkAndPassImperva(resp, request);
 
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
@@ -284,28 +261,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
       );
       dev.log('++++[login respone] ${resp.statusCode} - ${resp.data} - ${resp.headers}');
 
-      if (checkIsFromImperva(resp)) {
-        final impervaCookies = parseImpervaCookies(resp.data!);
-        GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
-
-        bool passedThroughImperva = false;
-        while (!passedThroughImperva) {
-          container.read(appStateV2Provider.notifier).startCountdown();
-          await container.read(appStateV2Provider.notifier).waitForFinish();
-
-          final resp2 = await _api.client.post<Map>(
-            '/login',
-            data: request.toJson(),
-            options: Options(
-              headers: cookie,
-            ),
-          );
-          if (checkIsFromImperva(resp) || resp2.statusCode != 200) {
-            passedThroughImperva = true;
-            resp = resp2;
-          }
-        }
-      }
+      resp = await _checkAndPassImperva(resp, request);
 
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
@@ -371,7 +327,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
   Future<ApiError?> _captchaParser(ApiError apiError) async {
     if (apiError.message.containsKey('captcha_url') && apiError.message['captcha_url'].isNotEmpty) {
       String captchaUrl = apiError.message['captcha_url'];
-      List<String?>? res = await downloadCaptcha(captchaUrl, apiError.captchaCookie);
+      List<String?>? res = await _downloadCaptcha(captchaUrl, apiError.captchaCookie);
       ApiError apiError2 = ApiError(
         statusCode: apiError.statusCode,
         message: apiError.message,
@@ -395,10 +351,44 @@ class AuthService with FileUtilsMixin, AuthMixin {
     return null;
   }
 
+  /// cycle for Imperva waiting room
+  Future<Response<Map<dynamic, dynamic>>> _checkAndPassImperva(
+      Response<Map<dynamic, dynamic>> response, SignUpRequestModel request) async {
+    if (checkIsFromImperva(response) == false) {
+      return response;
+    }
+
+    Response<Map<dynamic, dynamic>> responseImperva = response;
+
+    final impervaCookies = parseImpervaCookies(response.data);
+
+    bool passedThroughImperva = false;
+    while (passedThroughImperva == false) {
+      container.read(appStateV2Provider.notifier).startCountdown();
+      await container.read(appStateV2Provider.notifier).waitForFinish();
+      responseImperva = await _api.client.post<Map>(
+        '/login',
+        data: request.toJson(),
+        /// TODO: check if we need to pass imperva cookies - tests shown that we don't need to
+        // options: Options(
+        //   headers: {for (var v in impervaCookies) v.name: v.value},
+        // ),
+      );
+
+      impervaCookies.clear();
+      impervaCookies.addAll(parseImpervaCookies(responseImperva.headers.map));
+
+      if (checkIsFromImperva(responseImperva) == false) {
+        passedThroughImperva = true;
+      }
+    }
+    return responseImperva;
+  }
+
   ///
   /// Download captcha & returns cookie String
   ///
-  Future<List<String?>?> downloadCaptcha(String url, String? captchaCookie) async {
+  Future<List<String?>?> _downloadCaptcha(String url, String? captchaCookie) async {
     try {
       String path = await cleanCreateFolder('captcha');
       String captchaLocalPath = '$path/captcha${Random().nextInt(1000000)}.png';
@@ -415,12 +405,12 @@ class AuthService with FileUtilsMixin, AuthMixin {
           if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('Rec: $rec , Total: $total');
         },
       );
+
       String headerWithCookie = response.headers['set-cookie']?[0] ?? '';
       if (GetIt.I<AppParameters>().debugPrintIsOn) {
         debugPrint('[cookie in authService, downloadCaptcha] $headerWithCookie');
       }
       final endIndex = headerWithCookie.indexOf(';');
-
       String cookie = headerWithCookie.substring(0, endIndex);
       return [cookie, captchaLocalPath];
     } catch (e) {
@@ -449,7 +439,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
 
   Future<bool> _handleTokenResponse(Response<Map> resp) async {
     try {
-      if (resp.statusCode == 200 && resp.data!['data'].containsKey('token')) {
+      if (resp.statusCode == 200 && resp.data?.containsKey('data') == true && resp.data!['data'].containsKey('token')) {
         _setToken(resp.data!['data']['token']);
         // await _getUser();
 
@@ -464,20 +454,6 @@ class AuthService with FileUtilsMixin, AuthMixin {
     }
     return false;
   }
-
-  // Future<bool> _handleTokenWebview(String token) async {
-  //   try {
-  //     _setToken(token);
-  //     if (_api.accessToken != null) {
-  //       showPinSetUp = true;
-  //       _authStateController.add(AuthState.loggedIn);
-  //     }
-  //     return true;
-  //   } catch (e) {
-  //     if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[Auth token parsing error]: $e');
-  //   }
-  //   return false;
-  // }
 
   ///
   /// Set the access token
