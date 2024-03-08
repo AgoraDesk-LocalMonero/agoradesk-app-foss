@@ -198,6 +198,23 @@ class MarketData {
       'zeceth',
       'btcusdt',
     ],
+    'mexc': [
+      'btcusdt',
+      'xmrusdt',
+    ],
+    'kucoin': [
+      'xmrusdt',
+      'xmrbtc',
+      'xmreth',
+      'btcusdt',
+      'btceur',
+      'btcgbp',
+    ],
+    'gate.io': [
+      'xmrusdt',
+      'xmrbtc',
+      'btcusdt',
+    ],
     'bitstamp': [
       'btceur',
       'btcusd',
@@ -250,7 +267,7 @@ class MarketData {
     'last',
   ];
 
-// Binance quotes.
+// Last quotes.
   static const lastQuotes = [
     'last',
   ];
