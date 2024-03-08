@@ -19,6 +19,13 @@ mixin AuthMixin {
   // }
   // https://docs.imperva.com/bundle/cloud-application-security/page/waiting-room-mobile.htm
   bool checkIsFromImperva(Response<Map<dynamic, dynamic>> resp) {
+    if (resp.data != null && resp.data!.containsKey('data') && resp.data!['data'].containsKey('token')) {
+      return false;
+    }
+    if (resp.data != null && resp.data!.containsKey('token')) {
+      return false;
+    }
+
     return resp.statusCode == 200 && resp.data != null && resp.data!.containsKey('incidentId');
   }
 
@@ -26,29 +33,28 @@ mixin AuthMixin {
   /// Parse Imperva Cookies
   ///
 
-  List<Cookie> parseImpervaCookies(Map<dynamic, dynamic> impervaMap) {
+  List<Cookie> parseImpervaCookies(Map<dynamic, dynamic>? impervaMap) {
+    if (impervaMap == null) {
+      return [];
+    }
     try {
       //set-cookie: incap-resubmit-token=bfKZTNgpKTM=:lDf0uWQf7vRNersQ3MD1OYTMg0KEe6C9a9ObqNuj+Qg=; SameSite=None; Secure; HttpOnly; Max-Age=1800; Path=/
       //set-cookie: visid_incap_2518540=mnw/tSDzSbCZgIlRha8AJZOn1WUAAAAAQUIPAAAAAACUqeHH3R9WG7MpoPgpYs83; expires=Wed, 19 Feb 2025 23:20:37 GMT; HttpOnly; path=/; Domain=.agoradesk.com
       final List<Cookie> cookies = [];
-      impervaMap.forEach((key, element) {
-        if (key == 'set-cookie') {
-          final List<String> cookieList = element.split(';');
-          final String cookie = cookieList[0];
-          final String name = cookie.split('=')[0];
-          final String value = cookie.split('=')[1];
-          cookies.add(Cookie(
-            name: name,
-            value: value,
-          ));
-        }
-      });
+      for (final e in impervaMap['set-cookie']) {
+        final List<String> cookieList = e.split(';');
+        final String cookie = cookieList[0];
+        final String name = cookie.split('=')[0];
+        final String value = cookie.split('=')[1];
+        cookies.add(Cookie(
+          name: name,
+          value: value,
+        ));
+      }
+
       return cookies;
     } catch (e) {
       return [];
     }
   }
-
-
-  
 }
