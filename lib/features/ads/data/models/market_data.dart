@@ -17,11 +17,14 @@ class MarketData {
     'Kraken',
     'Poloniex',
     'UPbit',
+    'MEXC',
+    'KuCoin',
+    'Gate.io',
   ];
 
   static const marketsHasQoutes = {
     'CoinGecko': null,
-    'Binance': binanceQuotes,
+    'Binance': lastQuotes,
     'Bitfinex': quotes,
     'Bitstamp': quotes,
     'Coinbase': coinbaseQuotes,
@@ -30,6 +33,9 @@ class MarketData {
     'Kraken': quotes,
     'Poloniex': quotes,
     'UPbit': quotes,
+    'MEXC': lastQuotes,
+    'KuCoin': exceptOpenQuotes,
+    'Gate.io': exceptOpenQuotes,
   };
 
 // For most of the markets, currency pairs can be easily split,
@@ -179,8 +185,6 @@ class MarketData {
       'ethkrw',
     ],
     'binance': [
-      'xmrbtc',
-      'xmreth',
       'bchbtc',
       'ethbtc',
       'dashbtc',
@@ -192,7 +196,23 @@ class MarketData {
       'xrpeth',
       'zecbtc',
       'zeceth',
+      'btcusdt',
+    ],
+    'mexc': [
+      'btcusdt',
       'xmrusdt',
+    ],
+    'kucoin': [
+      'xmrusdt',
+      'xmrbtc',
+      'xmreth',
+      'btcusdt',
+      'btceur',
+      'btcgbp',
+    ],
+    'gate.io': [
+      'xmrusdt',
+      'xmrbtc',
       'btcusdt',
     ],
     'bitstamp': [
@@ -247,8 +267,8 @@ class MarketData {
     'last',
   ];
 
-// Binance quotes.
-  static const binanceQuotes = [
+// Last quotes.
+  static const lastQuotes = [
     'last',
   ];
 
@@ -256,6 +276,14 @@ class MarketData {
   static const coinbaseQuotes = [
     'buy',
     'sell',
+  ];
+
+  static const exceptOpenQuotes = [
+    'ask',
+    'bid',
+    'high',
+    'low',
+    'last',
   ];
 
 // Some currency pairs on some markets don't have certain quotes, so those
