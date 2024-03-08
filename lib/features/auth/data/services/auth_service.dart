@@ -224,30 +224,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
         ),
       );
 
-      ///
-
-      if (checkIsFromImperva(resp)) {
-        final impervaCookies = parseImpervaCookies(resp.data!);
-        GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
-        bool passedThroughImperva = false;
-        while (!passedThroughImperva) {
-          container.read(appStateV2Provider.notifier).startCountdown();
-          await container.read(appStateV2Provider.notifier).waitForFinish();
-          final resp2 = await _api.client.post<Map>(
-            '/signup',
-            data: request.toJson(),
-            options: Options(
-              headers: cookie,
-            ),
-          );
-          if (!checkIsFromImperva(resp)) {
-            passedThroughImperva = true;
-            resp = resp2;
-          }
-        }
-      }
-
-      ///
+      resp = await _checkAndPassImperva(resp, request);
 
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
@@ -285,28 +262,8 @@ class AuthService with FileUtilsMixin, AuthMixin {
       );
       dev.log('++++[login respone] ${resp.statusCode} - ${resp.data} - ${resp.headers}');
 
-      if (checkIsFromImperva(resp)) {
-        final impervaCookies = parseImpervaCookies(resp.data!);
-        GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
+      resp = await _checkAndPassImperva(resp, request);
 
-        bool passedThroughImperva = false;
-        while (!passedThroughImperva) {
-          container.read(appStateV2Provider.notifier).startCountdown();
-          await container.read(appStateV2Provider.notifier).waitForFinish();
-
-          final resp2 = await _api.client.post<Map>(
-            '/login',
-            data: request.toJson(),
-            options: Options(
-              headers: cookie,
-            ),
-          );
-          if (!checkIsFromImperva(resp)) {
-            passedThroughImperva = true;
-            resp = resp2;
-          }
-        }
-      }
       final resToken = await _handleTokenResponse(resp);
       if (resToken) {
         _saveUserName(request.username!);
@@ -371,7 +328,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
   Future<ApiError?> _captchaParser(ApiError apiError) async {
     if (apiError.message.containsKey('captcha_url') && apiError.message['captcha_url'].isNotEmpty) {
       String captchaUrl = apiError.message['captcha_url'];
-      List<String?>? res = await downloadCaptcha(captchaUrl, apiError.captchaCookie);
+      List<String?>? res = await _downloadCaptcha(captchaUrl, apiError.captchaCookie);
       ApiError apiError2 = ApiError(
         statusCode: apiError.statusCode,
         message: apiError.message,
@@ -395,10 +352,42 @@ class AuthService with FileUtilsMixin, AuthMixin {
     return null;
   }
 
+  /// cycle for Imperva waiting room
+  Future<Response<Map<dynamic, dynamic>>> _checkAndPassImperva(
+      Response<Map<dynamic, dynamic>> response, SignUpRequestModel request) async {
+    if (checkIsFromImperva(response) == false) {
+      return response;
+    }
+
+    Response<Map<dynamic, dynamic>> responseImperva = response;
+
+    final impervaCookies = parseImpervaCookies(response.data!);
+    // GetIt.I<AppParameters>().cookies.addAll(impervaCookies);
+
+    bool passedThroughImperva = false;
+    while (passedThroughImperva == false) {
+      container.read(appStateV2Provider.notifier).startCountdown();
+      await container.read(appStateV2Provider.notifier).waitForFinish();
+
+      responseImperva = await _api.client.post<Map>(
+        '/login',
+        data: request.toJson(),
+        options: Options(
+          headers: {for (var v in impervaCookies) v.name: v.value},
+        ),
+      );
+
+      if (checkIsFromImperva(responseImperva) == false) {
+        passedThroughImperva = true;
+      }
+    }
+    return responseImperva;
+  }
+
   ///
   /// Download captcha & returns cookie String
   ///
-  Future<List<String?>?> downloadCaptcha(String url, String? captchaCookie) async {
+  Future<List<String?>?> _downloadCaptcha(String url, String? captchaCookie) async {
     try {
       String path = await cleanCreateFolder('captcha');
       String captchaLocalPath = '$path/captcha${Random().nextInt(1000000)}.png';

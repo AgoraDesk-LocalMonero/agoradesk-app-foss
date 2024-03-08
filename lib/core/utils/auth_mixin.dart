@@ -19,6 +19,13 @@ mixin AuthMixin {
   // }
   // https://docs.imperva.com/bundle/cloud-application-security/page/waiting-room-mobile.htm
   bool checkIsFromImperva(Response<Map<dynamic, dynamic>> resp) {
+    if (resp.data != null && resp.data!.containsKey('data') && resp.data!['data'].containsKey('token')) {
+      return false;
+    }
+    if (resp.data != null &&  resp.data!.containsKey('token')) {
+      return false;
+    }
+
     return resp.statusCode == 200 && resp.data != null && resp.data!.containsKey('incidentId');
   }
 
@@ -48,7 +55,4 @@ mixin AuthMixin {
       return [];
     }
   }
-
-
-  
 }
