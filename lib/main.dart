@@ -106,5 +106,10 @@ void main() async {
     );
   }
 
-  runApp(UncontrolledProviderScope(container: container, child: const App()));
+  runApp(
+    UncontrolledProviderScope(
+      container: container,
+      child: const App(),
+    ),
+  );
 }
