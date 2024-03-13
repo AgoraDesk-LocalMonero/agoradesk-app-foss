@@ -281,14 +281,23 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
     try {
-      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
       final resp = await api.client.post(
         '/push/registration',
         data: device.toJson(),
       );
+      if (resp.statusCode != 200) {
+        await Sentry.captureMessage(
+          {'SaveTokenEventError1': '${resp.statusCode} - ${resp.data}'}.toString(),
+        );
+      }
       return resp.statusCode == 200;
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+
+      await Sentry.captureMessage(
+        {'SaveTokenEventError2': e.toString()}.toString(),
+      );
+
       if (apiError.message.containsKey('error_code')) {
         // token already saved
         if (apiError.message['error_code'] == 256) {
