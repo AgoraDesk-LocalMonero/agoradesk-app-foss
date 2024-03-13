@@ -183,7 +183,7 @@ class NotificationsService with ForegroundMessagesMixin {
         update = false;
       }
     }
-    if (fcm != null && appState.username.isNotEmpty && update) {
+    if (fcm != null && AppSharedPrefs().username?.isNotEmpty == true && update) {
       bool userPermission = true;
       final settings = await fcm!.requestPermission(
         alert: true,
@@ -198,7 +198,6 @@ class NotificationsService with ForegroundMessagesMixin {
 
       if (userPermission) {
         try {
-          await fcm!.deleteToken();
           final token = await fcm!.getToken();
           if (token != null) {
             if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
@@ -228,43 +227,53 @@ class NotificationsService with ForegroundMessagesMixin {
       );
       return;
     }
-    if (!_updating) {
-      _updating = true;
-      final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
+
+    if (_updating) return;
+
+    _updating = true;
+    final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
+    await Sentry.captureMessage(
+      {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
+    );
+    if (oldToken != newToken) {
       await Sentry.captureMessage(
-        {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
+        {
+          'pushTokenUpdateEvent:':
+              '${appState.username.isNotEmpty} - ${GetIt.I<AppParameters>().accessToken?.isNotEmpty == true} - ${AppSharedPrefs().username?.isNotEmpty == true}'
+        }.toString(),
       );
-      if (oldToken != newToken && appState.username.isNotEmpty) {
-        late String deviceName;
-        var deviceData = <String, dynamic>{};
-        try {
-          if (Platform.isAndroid) {
-            deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
-            deviceName = deviceData['device'] ?? 'Android';
-          } else if (Platform.isIOS) {
-            deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
-            deviceName = deviceData['name'] ?? 'iPhone';
-          }
-        } catch (e) {
-          deviceName = 'unknown';
-        }
-        final res = await _saveFcmTokenToApi(
-          DeviceModel(
-            token: newToken,
-            deviceName: deviceName,
-            type: 'FCM',
-          ),
-        );
-        await Sentry.captureMessage(
-          {'SaveTokenEventResult': res}.toString(),
-        );
-        if (res) {
-          await secureStorage.write(SecureStorageKey.pushToken, newToken);
-          await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
-        }
-      }
-      _updating = false;
     }
+
+    if (oldToken != newToken && GetIt.I<AppParameters>().accessToken?.isNotEmpty == true) {
+      late String deviceName;
+      var deviceData = <String, dynamic>{};
+      try {
+        if (Platform.isAndroid) {
+          deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
+          deviceName = deviceData['device'] ?? 'Android';
+        } else if (Platform.isIOS) {
+          deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
+          deviceName = deviceData['name'] ?? 'iPhone';
+        }
+      } catch (e) {
+        deviceName = 'unknown';
+      }
+      final res = await _saveFcmTokenToApi(
+        DeviceModel(
+          token: newToken,
+          deviceName: deviceName,
+          type: 'FCM',
+        ),
+      );
+      await Sentry.captureMessage(
+        {'SaveTokenEventResult': res}.toString(),
+      );
+      if (res) {
+        await secureStorage.write(SecureStorageKey.pushToken, newToken);
+        await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
+      }
+    }
+    _updating = false;
   }
 
   ///
