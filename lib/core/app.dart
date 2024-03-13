@@ -241,7 +241,7 @@ class _AppState extends State<App>
     );
     return MediaQuery(
       data: mq.copyWith(
-        textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,
+        textScaler: TextScaler.linear(mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor),
       ),
       child: KeyboardSizeProvider(
         child: child!,
@@ -280,7 +280,7 @@ class _AppState extends State<App>
     appState.proxyStatus = GetIt.I<AppParameters>().proxy;
     await _afterConfigInit();
     await _authService.init();
-    await _initLocalSettings();
+    await _initLocalSettings(false);
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
@@ -370,7 +370,7 @@ class _AppState extends State<App>
         case AuthState.loggedIn:
           _pollingService.getBalances();
           _initStartRoute();
-          _initLocalSettings();
+          _initLocalSettings(true);
           break;
         case AuthState.guest:
           _initStartRoute();
@@ -405,7 +405,7 @@ class _AppState extends State<App>
       router.removeLast();
     }
 
-    void _addUniLinksRouts() {
+    void addUniLinksRouts() {
       final PageRouteInfo<dynamic>? pageRoute = AppLinksHandler().parseUniLink(uri);
       if (pageRoute != null) {
         if (pageRoute.path == 'trades/trade') {
@@ -431,12 +431,12 @@ class _AppState extends State<App>
 
     if (_authService.isAuthenticated != true && _authService.authState == AuthState.guest) {
       newRoutes.add(const MainScreenRoute());
-      _addUniLinksRouts();
+      addUniLinksRouts();
     } else if (_authService.isAuthenticated != true) {
       newRoutes.add(
         const WelcomeRoute(),
       );
-      _addUniLinksRouts();
+      addUniLinksRouts();
     } else if (_authService.showPinSetUp) {
       newRoutes.add(const MainScreenRoute());
       newRoutes.add(const PinCodeSetRoute());
@@ -446,7 +446,7 @@ class _AppState extends State<App>
       if (GetIt.I<AppParameters>().appRanFromPush) {
         newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
       }
-      _addUniLinksRouts();
+      addUniLinksRouts();
       if (appState.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());
       }
@@ -496,8 +496,9 @@ class _AppState extends State<App>
   void _initGlobalEvents() {
     eventBus
       ..on<AnalyticsEvent>().listen((e) {
-        if (GetIt.I<AppParameters>().debugPrintIsOn)
+        if (GetIt.I<AppParameters>().debugPrintIsOn) {
           debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
+        }
         if (appState.initialized) {
           if (_plausible != null) {
             _plausible!.event(name: e.event, referrer: e.properties.toString());
@@ -681,25 +682,28 @@ class _AppState extends State<App>
     });
   }
 
-  Future _initLocalSettings() async {
-    if (AppSharedPrefs().username == null || AppSharedPrefs().username!.isEmpty) {
-      // app runs first time, we should clean FlutterSecureStorage items
-      // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
-      token ??= await _secureStorage.read(SecureStorageKey.token);
-      if (token != null) {
-        final res = await _accountService.getMyself();
-        if (res.isRight && res.right.username != null) {
-          await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
-          appState.updateWith(notify: true);
-          _notificationsService.getToken();
-        } else {
-          _secureStorage.deleteAll();
-        }
+  Future _initLocalSettings(bool fromLoginState) async {
+    if (fromLoginState) await Future.delayed(const Duration(seconds: 2));
+
+    if (AppSharedPrefs().username?.isNotEmpty == true) {
+      await _notificationsService.getToken();
+      return;
+    }
+
+    // app runs first time, we should clean FlutterSecureStorage items
+    // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
+    token ??= await _secureStorage.read(SecureStorageKey.token);
+    if (token != null) {
+      final res = await _accountService.getMyself();
+      if (res.isRight && res.right.username != null) {
+        await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
+        appState.updateWith(notify: true);
+        _notificationsService.getToken();
       } else {
         _secureStorage.deleteAll();
       }
     } else {
-      _notificationsService.getToken();
+      _secureStorage.deleteAll();
     }
 
     appState.updateWith(

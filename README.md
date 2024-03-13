@@ -85,7 +85,7 @@ Android https://docs.fastlane.tools/actions/supply/
 
 Android https://docs.fastlane.tools/actions/supply/
 
-`fastlane supply --skip_upload_changelogs=true --track=internal --skip_upload_screenshots=true` 
+`fastlane supply --skip_upload_changelogs=true --track=internal --skip_upload_screenshots=true`
 
 ### Initial settings
 - https://medium.com/@animeshjain/build-flavors-in-flutter-android-and-ios-with-different-firebase-projects-per-flavor-27c5c5dac10b
@@ -133,6 +133,12 @@ Also we can use following:
 - chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 The source: https://ec.europa.eu/component-library/v1.15.0/eu/docs/conventions/git/#:~:text=feat%3A%20A%20new%20feature,bug%20nor%20adds%20a%20feature
+
+## F-Droid
+
+1. How to publish Flutter app on F-Droid - https://localmonero.co/devblog/publish-flutter-app-fdroid
+2. As we use Flutter as submodule, we should update it with F-Droid releases
+`git submodule update --rebase --remote`
 
 ## Credits
 

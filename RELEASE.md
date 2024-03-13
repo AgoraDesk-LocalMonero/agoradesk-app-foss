@@ -1,7 +1,6 @@
 ### Updates
 
-1. Added new pairs for the price formula.
-2. Improved login anti-DDoS protection.
+1. Hotfix: push notifications token updates.
 
 ### About the attached app's
 
