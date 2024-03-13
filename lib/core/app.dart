@@ -230,7 +230,7 @@ class _AppState extends State<App>
     );
     return MediaQuery(
       data: mq.copyWith(
-        textScaleFactor: mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor,
+        textScaler: TextScaler.linear(mq.textScaleFactor > 1.4 ? 1.4 : mq.textScaleFactor),
       ),
       child: KeyboardSizeProvider(
         child: child!,
@@ -381,7 +381,7 @@ class _AppState extends State<App>
       router.removeLast();
     }
 
-    void _addUniLinksRouts() {
+    void addUniLinksRouts() {
       final PageRouteInfo<dynamic>? pageRoute = AppLinksHandler().parseUniLink(uri);
       if (pageRoute != null) {
         if (pageRoute.path == 'trades/trade') {
@@ -407,12 +407,12 @@ class _AppState extends State<App>
 
     if (_authService.isAuthenticated != true && _authService.authState == AuthState.guest) {
       newRoutes.add(const MainScreenRoute());
-      _addUniLinksRouts();
+      addUniLinksRouts();
     } else if (_authService.isAuthenticated != true) {
       newRoutes.add(
         const WelcomeRoute(),
       );
-      _addUniLinksRouts();
+      addUniLinksRouts();
     } else if (_authService.showPinSetUp) {
       newRoutes.add(const MainScreenRoute());
       newRoutes.add(const PinCodeSetRoute());
@@ -422,7 +422,7 @@ class _AppState extends State<App>
       if (GetIt.I<AppParameters>().appRanFromPush) {
         newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
       }
-      _addUniLinksRouts();
+      addUniLinksRouts();
       if (appState.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());
       }
