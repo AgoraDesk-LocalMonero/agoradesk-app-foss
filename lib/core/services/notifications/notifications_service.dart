@@ -239,7 +239,7 @@ class NotificationsService with ForegroundMessagesMixin {
         {'pushTokenUpdateEvent:': '${GetIt.I<AppParameters>().loggedIn} '}.toString(),
       );
     }
-    if (oldToken != newToken && GetIt.I<AppParameters>().accessToken?.isNotEmpty == true) {
+    if (oldToken != newToken && GetIt.I<AppParameters>().loggedIn) {
       late String deviceName;
       var deviceData = <String, dynamic>{};
       try {
