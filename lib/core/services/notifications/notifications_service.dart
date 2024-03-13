@@ -171,19 +171,18 @@ class NotificationsService with ForegroundMessagesMixin {
 
   Future getToken() async {
     // check that this is the time to update token
-    if (_tokenLoading) {
-      return;
-    }
+
+    if (!GetIt.I<AppParameters>().loggedIn) return;
+
+    if (_tokenLoading) return;
+
     _tokenLoading = true;
     bool update = true;
     final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
-    if (dateTokenSaved != null) {
-      final days = DateTime.now().difference(dateTokenSaved).inDays;
-      if (days < _kPeriodCheckTokenUpdatesDays) {
-        update = false;
-      }
+    if (dateTokenSaved != null && DateTime.now().difference(dateTokenSaved).inDays < _kPeriodCheckTokenUpdatesDays) {
+      update = false;
     }
-    if (fcm != null && AppSharedPrefs().username?.isNotEmpty == true && update) {
+    if (fcm != null && GetIt.I<AppParameters>().loggedIn && update) {
       bool userPermission = true;
       final settings = await fcm!.requestPermission(
         alert: true,
@@ -237,13 +236,9 @@ class NotificationsService with ForegroundMessagesMixin {
     );
     if (oldToken != newToken) {
       await Sentry.captureMessage(
-        {
-          'pushTokenUpdateEvent:':
-              '${appState.username.isNotEmpty} - ${GetIt.I<AppParameters>().accessToken?.isNotEmpty == true} - ${AppSharedPrefs().username?.isNotEmpty == true}'
-        }.toString(),
+        {'pushTokenUpdateEvent:': '${GetIt.I<AppParameters>().loggedIn} '}.toString(),
       );
     }
-
     if (oldToken != newToken && GetIt.I<AppParameters>().accessToken?.isNotEmpty == true) {
       late String deviceName;
       var deviceData = <String, dynamic>{};
