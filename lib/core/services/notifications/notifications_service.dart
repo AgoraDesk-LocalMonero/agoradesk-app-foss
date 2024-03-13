@@ -171,19 +171,18 @@ class NotificationsService with ForegroundMessagesMixin {
 
   Future getToken() async {
     // check that this is the time to update token
-    if (_tokenLoading) {
-      return;
-    }
+
+    if (!GetIt.I<AppParameters>().loggedIn) return;
+
+    if (_tokenLoading) return;
+
     _tokenLoading = true;
     bool update = true;
     final DateTime? dateTokenSaved = AppSharedPrefs().fcmTokenSavedToApiDate;
-    if (dateTokenSaved != null) {
-      final days = DateTime.now().difference(dateTokenSaved).inDays;
-      if (days < _kPeriodCheckTokenUpdatesDays) {
-        update = false;
-      }
+    if (dateTokenSaved != null && DateTime.now().difference(dateTokenSaved).inDays < _kPeriodCheckTokenUpdatesDays) {
+      update = false;
     }
-    if (fcm != null && appState.username.isNotEmpty && update) {
+    if (fcm != null && GetIt.I<AppParameters>().loggedIn && update) {
       bool userPermission = true;
       final settings = await fcm!.requestPermission(
         alert: true,
@@ -198,7 +197,6 @@ class NotificationsService with ForegroundMessagesMixin {
 
       if (userPermission) {
         try {
-          await fcm!.deleteToken();
           final token = await fcm!.getToken();
           if (token != null) {
             if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
@@ -228,43 +226,49 @@ class NotificationsService with ForegroundMessagesMixin {
       );
       return;
     }
-    if (!_updating) {
-      _updating = true;
-      final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
+
+    if (_updating) return;
+
+    _updating = true;
+    final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
+    await Sentry.captureMessage(
+      {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
+    );
+    if (oldToken != newToken) {
       await Sentry.captureMessage(
-        {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
+        {'pushTokenUpdateEvent:': '${GetIt.I<AppParameters>().loggedIn} '}.toString(),
       );
-      if (oldToken != newToken && appState.username.isNotEmpty) {
-        late String deviceName;
-        var deviceData = <String, dynamic>{};
-        try {
-          if (Platform.isAndroid) {
-            deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
-            deviceName = deviceData['device'] ?? 'Android';
-          } else if (Platform.isIOS) {
-            deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
-            deviceName = deviceData['name'] ?? 'iPhone';
-          }
-        } catch (e) {
-          deviceName = 'unknown';
-        }
-        final res = await _saveFcmTokenToApi(
-          DeviceModel(
-            token: newToken,
-            deviceName: deviceName,
-            type: 'FCM',
-          ),
-        );
-        await Sentry.captureMessage(
-          {'SaveTokenEventResult': res}.toString(),
-        );
-        if (res) {
-          await secureStorage.write(SecureStorageKey.pushToken, newToken);
-          await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
-        }
-      }
-      _updating = false;
     }
+    if (oldToken != newToken && GetIt.I<AppParameters>().loggedIn) {
+      late String deviceName;
+      var deviceData = <String, dynamic>{};
+      try {
+        if (Platform.isAndroid) {
+          deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
+          deviceName = deviceData['device'] ?? 'Android';
+        } else if (Platform.isIOS) {
+          deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
+          deviceName = deviceData['name'] ?? 'iPhone';
+        }
+      } catch (e) {
+        deviceName = 'unknown';
+      }
+      final res = await _saveFcmTokenToApi(
+        DeviceModel(
+          token: newToken,
+          deviceName: deviceName,
+          type: 'FCM',
+        ),
+      );
+      await Sentry.captureMessage(
+        {'SaveTokenEventResult': res}.toString(),
+      );
+      if (res) {
+        await secureStorage.write(SecureStorageKey.pushToken, newToken);
+        await AppSharedPrefs().setDate(AppSharedPrefsKey.fcmTokenSavedToApiDate, DateTime.now());
+      }
+    }
+    _updating = false;
   }
 
   ///
@@ -272,14 +276,23 @@ class NotificationsService with ForegroundMessagesMixin {
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
     try {
-      if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++[_saveFcmTokenToApi] Save token to API $device');
       final resp = await api.client.post(
         '/push/registration',
         data: device.toJson(),
       );
+      if (resp.statusCode != 200) {
+        await Sentry.captureMessage(
+          {'SaveTokenEventError1': '${resp.statusCode} - ${resp.data}'}.toString(),
+        );
+      }
       return resp.statusCode == 200;
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
+
+      await Sentry.captureMessage(
+        {'SaveTokenEventError2': e.toString()}.toString(),
+      );
+
       if (apiError.message.containsKey('error_code')) {
         // token already saved
         if (apiError.message['error_code'] == 256) {
