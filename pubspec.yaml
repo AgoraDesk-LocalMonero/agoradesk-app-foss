@@ -1,5 +1,5 @@
 name: agoradesk
-version: 1.1.23+120
+version: 1.1.24+121
 publish_to: none
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 environment: 
