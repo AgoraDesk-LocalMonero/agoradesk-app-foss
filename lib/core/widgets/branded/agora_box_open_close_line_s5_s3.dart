@@ -56,7 +56,7 @@ class _AgoraBoxOpenCloseLineS5S3State extends State<AgoraBoxOpenCloseLineS5S3> {
                         AutoSizeText(
                           widget.title,
                           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                color: Theme.of(context).colorScheme.primary90,
+                                color: Theme.of(context).colorScheme.p90p10,
                               ),
                         ),
                         const SizedBox(width: 10),

@@ -60,7 +60,7 @@ class AgoraThreeTabsBar extends StatelessWidget {
                   icon: Icon(
                     iconLeft,
                     size: 20,
-                    color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 0 ? 1 : 0.5),
+                    color: Theme.of(context).colorScheme.p90p10.withOpacity(controller.index == 0 ? 1 : 0.5),
                   ),
                   active: controller.index == 0,
                   toCenter: true,
@@ -72,7 +72,7 @@ class AgoraThreeTabsBar extends StatelessWidget {
                   icon: Icon(
                     iconCenter,
                     size: 20,
-                    color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 1 ? 1 : 0.5),
+                    color: Theme.of(context).colorScheme.p90p10.withOpacity(controller.index == 1 ? 1 : 0.5),
                   ),
                   active: controller.index == 1,
                   toCenter: true,
@@ -84,7 +84,7 @@ class AgoraThreeTabsBar extends StatelessWidget {
                   icon: Icon(
                     iconRight,
                     size: 20,
-                    color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 2 ? 1 : 0.5),
+                    color: Theme.of(context).colorScheme.p90p10.withOpacity(controller.index == 2 ? 1 : 0.5),
                   ),
                   active: controller.index == 2,
                   toCenter: true,

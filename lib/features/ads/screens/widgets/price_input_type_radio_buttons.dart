@@ -1,3 +1,4 @@
+import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface3_radius4.dart';
 import 'package:agoradesk/features/ads/data/models/price_input_type.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class PriceInputTypeRadioButtons extends StatelessWidget {
                 SizedBox(
                   height: 40,
                   child: Radio<PriceInputType>(
+                    activeColor: context.colP70P40,
                     value: PriceInputType.values[index],
                     groupValue: groupValue,
                     onChanged: (PriceInputType? value) => onPressed!(value),

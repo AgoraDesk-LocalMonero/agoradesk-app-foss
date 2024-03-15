@@ -20,7 +20,7 @@ class CircleWithIcon extends StatelessWidget {
       child: Center(
         child: Icon(
           icon,
-          color: Theme.of(context).colorScheme.primary90,
+          color: Theme.of(context).colorScheme.p90p10,
           size: 14,
         ),
       ),

@@ -150,7 +150,7 @@ class I18nFr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'acheter';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Combien souhaitez-vous $buyOrSell ?';
   }
 
@@ -1857,7 +1857,7 @@ class I18nFr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName est une plateforme de trading Monero peer-to-peer. Nous sommes un marché où les utilisateurs peuvent acheter et vendre du Monero entre eux. Les utilisateurs, appelés commerçants, créent des publicités avec le prix et le moyen de paiement qu\'ils souhaitent proposer. Vous pouvez parcourir notre site Web pour les annonces commerciales et rechercher un mode de paiement que vous préférez. Vous trouverez des commerçants qui achètent et vendent du Monero en ligne pour plus de 60 méthodes de paiement différentes. Si vous êtes nouveau sur $appName et que vous souhaitez acheter Monero, veuillez consulter notre guide d\'achat pour savoir comment acheter Monero.';
+    return '$appName est une plateforme de trading Monero peer-to-peer. Nous sommes un marché où les utilisateurs peuvent acheter et vendre du Monero entre eux. Les utilisateurs, appelés traders, créent des publicités avec le prix et le mode de paiement qu\'ils souhaitent proposer. Vous pouvez parcourir notre site Web pour trouver des annonces commerciales et rechercher un mode de paiement que vous préférez. Vous trouverez des traders achetant et vendant du Monero en ligne pour plus de 60 méthodes de paiement différentes. Si vous êtes nouveau sur $appName et que vous souhaitez acheter Monero, veuillez consulter notre guide d\'achat pour savoir comment acheter Monero.';
   }
 
   @override
@@ -2025,7 +2025,7 @@ class I18nFr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Oui! Si vous avez Android, vous pouvez l\'obtenir sur $playstoreLink, $fdroidLink, ou vous pouvez télécharger le $apkLink directement. Pour les appareils iOS, il est disponible sur $appstoreLink. Vous pouvez également recevoir des notifications mobiles dans $telegram ! $thisGuide vous guidera tout au long du processus d\'activation des notifications Telegram (c\'est facile). Notre bot vous enverra alors des notifications sur vos événements $appName.';
+    return 'Oui! Si vous avez Android, vous pouvez l\'obtenir sur $playstoreLink, $fdroidLink, ou vous pouvez télécharger directement le $apkLink. Pour les appareils iOS, il est disponible sur $appstoreLink. Vous pouvez également recevoir des notifications mobiles dans $telegram ! $thisGuide vous guidera à travers le processus d\'activation des notifications Telegram (c\'est simple). Notre bot vous enverra ensuite des notifications sur vos événements $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nFr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Tous les échanges en ligne sont protégés par des cautions d\'arbitrage. Lorsqu\'une transaction est lancée, un montant de Monero égal au montant de la transaction est automatiquement réservé à partir du portefeuille obligataire $appName du vendeur. Cela signifie que si le vendeur s\'enfuit avec votre argent et ne finalise pas la transaction, le support $appName peut vous adresser le Monero détenu dans la caution d\'arbitrage. Si vous vendez du Monero, ne finalisez jamais la transaction avant de savoir que vous avez reçu de l\'argent de l\'acheteur du Monero. Veuillez noter que les métiers locaux n\'ont pas de protection de caution d\'arbitrage activée par défaut.';
+    return 'Toutes les transactions en ligne sont protégées par des cautions d\'arbitrage. Lorsqu\'une transaction est démarrée, un montant de Monero égal au montant de la transaction est automatiquement réservé à partir du portefeuille d\'obligations $appName du vendeur. Cela signifie que si le vendeur s\'enfuit avec votre argent et ne finalise pas la transaction, le support $appName peut vous diriger vers vous le Monero détenu dans la caution d\'arbitrage. Si vous vendez du Monero, ne finalisez jamais la transaction avant de savoir que vous avez reçu de l\'argent de l\'acheteur de Monero. Veuillez noter que les transactions locales n\'ont pas de protection de caution d\'arbitrage activée par défaut.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Tous les échanges en ligne sont protégés par des cautions d\'arbitrage. Lorsqu\'une transaction est lancée, un montant de crypto-monnaie égal au montant de la transaction est automatiquement réservé à partir du portefeuille obligataire $appName du vendeur. Cela signifie que si le vendeur s\'enfuit avec votre argent et ne finalise pas la transaction, le support $appName peut vous rediriger vers vous la crypto-monnaie détenue dans la caution d\'arbitrage. Si vous vendez de la crypto-monnaie, ne finalisez jamais la transaction avant de savoir que vous avez reçu de l\'argent de l\'acheteur. Veuillez noter que les métiers locaux n\'ont pas de protection de caution d\'arbitrage activée par défaut.';
+    return 'Toutes les transactions en ligne sont protégées par des cautions d\'arbitrage. Lorsqu\'une transaction est démarrée, un montant de crypto-monnaie égal au montant de la transaction est automatiquement réservé à partir du portefeuille d\'obligations $appName du vendeur. Cela signifie que si le vendeur s\'enfuit avec votre argent et ne finalise pas la transaction, le support $appName peut vous rediriger la crypto-monnaie détenue dans la caution d\'arbitrage. Si vous vendez de la cryptomonnaie, ne finalisez jamais la transaction avant de savoir que vous avez reçu de l\'argent de l\'acheteur. Veuillez noter que les transactions locales n\'ont pas de protection de caution d\'arbitrage activée par défaut.';
   }
 
   @override
@@ -2873,7 +2873,7 @@ class I18nFr extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Comment restaurer mon portefeuille de paiement non hébergé à partir de la phrase mnémonique ?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Allez sur la <a target=\"_blank\" href=\"/\" class=\"next-link\">page d\'accueil</a> - vous verrez les meilleures offres pour votre région par défaut. Vous pouvez affiner vos résultats en saisissant le montant souhaité et modifier la devise, le pays ou le mode de paiement (sélectionnez \"Toutes les offres en ligne\" si vous n\'êtes pas sûr du mode de paiement que vous souhaitez utiliser) dans le champ de recherche et ensuite appuyer sur \"Rechercher\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Accédez à la page principale de <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> : vous verrez les meilleures offres pour votre région par défaut. Vous pouvez affiner vos résultats en saisissant le montant souhaité que vous souhaitez effectuer dans la zone de recherche, puis sélectionner la devise avec laquelle vous souhaitez effectuer la transaction, le pays et le mode de paiement souhaité (sélectionnez « Toutes les offres en ligne » si vous ne savez pas quel mode de paiement. vous souhaitez utiliser).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Dans la liste des annonces, choisissez-en une d\'un trader avec un grand nombre de transactions et une bonne évaluation (indiquée entre parenthèses à côté du nom d\'utilisateur). Un cercle vert signifie que le trader a été en ligne aujourd\'hui ; un cercle jaune signifie qu\'il a visité le site cette semaine ; et un cercle gris signifie que le trader n\'est pas venu depuis plus d\'une semaine. Vous pouvez cliquer sur le bouton \"Acheter\" pour afficher plus d\'informations sur une annonce.';
@@ -4585,7 +4585,7 @@ class I18nFr extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Rafraîchir';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Ajouter une note sur $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nFr extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Ceci est une note privée pour votre propre usage, elle ne sera pas visible pour cet utilisateur ou tout autre utilisateur.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Votre note sur $username (uniquement visible par vous)';
   }
 
@@ -4773,7 +4773,7 @@ class I18nFr extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Solde du portefeuille inférieur au minimum requis pour ce type d\'annonce';
 
   @override
-  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Première limite de temps  ';
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Premier délai  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Optionnelle. Limitez le montant maximal des transactions pour les utilisateurs avec lesquels vous n\'avez pas effectué d\'échanges antérieurs. Au moins 0.';
@@ -5338,7 +5338,7 @@ class I18nFr extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Une véritable alternative à LocalBitcoins et Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Si vous êtes préoccupé par l\'invasion de la vie privée, la meilleure crypto-monnaie dans laquelle investir est XMR. Monero est une pièce introuvable développée dans un souci de confidentialité dès la conception.\n<br/>\nOù acheter Monero ? LocalMonero est la plateforme de trading P2P Monero la plus grande, la plus fiable et la mieux établie de la communauté XMR. Nous n\'avons pas de vérifications KYC - vous pouvez simplement acheter Monero de manière anonyme sans vérification d\'identité avec PayPal, carte de crédit, carte-cadeau, espèces par courrier ou convertir bitcoin en Monero - notre plateforme prend en charge tous les modes de paiement.';
+  String get seo250Sbtext8722Sb1 => 'Si vous êtes préoccupé par l’invasion de la vie privée, la meilleure crypto-monnaie dans laquelle investir est XMR. Monero est une pièce intraçable développée dans un souci de confidentialité dès la conception.\n<br/>\nOù acheter du Monero ? LocalMonero est la plateforme de trading P2P Monero la plus grande, la plus fiable et la mieux établie de la communauté XMR. Nous n\'avons pas de contrôle KYC - vous pouvez simplement acheter Monero de manière anonyme sans vérification d\'identité avec PayPal, carte de crédit, carte cadeau, espèces par courrier ou convertir Bitcoin en Monero - notre plateforme prend en charge n\'importe quel mode de paiement.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Vous vous demandez comment investir dans Bitcoin ? Sur AgoraDesk, acheter des Bitcoins n\'a jamais été aussi simple - achetez instantanément des BTC à une personne en utilisant votre méthode de paiement en ligne préférée : PayPal, carte de crédit/débit ou virement bancaire, cartes-cadeaux, Venmo ou tout autre moyen disponible.\n<br />\nSi vous souhaitez acheter des Bitcoins près de chez vous avec de l\'espèce, vous pouvez trouver quelqu\'un prêt à vendre des Bitcoins localement - la plateforme de d\'échange prend en charge l\'achat et la vente de BTC avec de l\'espèce. Vous pouvez même acheter des Bitcoins en espèces par courrier.';
@@ -6674,7 +6674,7 @@ class I18nFr extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'E-mail vérifié avec succès !';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong>Assurez-vous que l\'adresse que vous avez collée est la même que celle que vous avez copiée !</strong> Certains utilisateurs se sont fait voler leurs fonds par <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">un malware remplaçant l\'adresse copiée dans le presse-papiers par l\'adresse des attaquants</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Assurez-vous que l\'adresse que vous avez collée est la même que l\'adresse que vous avez copiée ! </strong> Certains utilisateurs se sont fait voler leurs fonds par un logiciel malveillant <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> remplaçant l\'adresse copiée dans le presse-papiers par l\'adresse de l\'attaquant </a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Télécharger au format CSV';
@@ -7506,10 +7506,10 @@ class I18nFr extends I18n {
   String get address8722Sbbook250Sbcancel8722Sbbtn => 'Annuler';
 
   @override
-  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Voulez-vous supprimer cette adresse ?';
+  String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Voulez-vous supprimer cette adresse ?';
 
   @override
-  String get address8722Sbbook250Sbdescription => 'Chaque fois que vous aurez besoin de fournir une adresse, vous pourrez en sélectionner rapidement une enregistrée ici';
+  String get address8722Sbbook250Sbdescription => 'Chaque fois que vous devrez fournir une adresse, vous pourrez en sélectionner rapidement une enregistrée ici';
 
   @override
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Étiquette (facultatif)';
@@ -7537,7 +7537,7 @@ class I18nFr extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'Toutes les annonces de crypto-monnaie sont désormais déplacées vers la nouvelle catégorie de pays \"global (code XX)\". Toutes les annonces de crypto-monnaie en double qui ne diffèrent que par pays seront supprimées $timeRemaining. Veuillez vous assurer que vous n\'avez qu\'UNE seule annonce de crypto-monnaie par devise, sinon toutes les annonces publiées dans cette devise sauf la plus récente seront supprimées, tandis que l\'annonce restante sera déplacée dans la catégorie de pays \"globale\".';
+    return 'Toutes les annonces de crypto-monnaie sont désormais déplacées vers la nouvelle catégorie de pays « mondial (code XX) ». Toutes les annonces de crypto-monnaie en double qui diffèrent uniquement selon les pays seront supprimées $timeRemaining. Veuillez vous assurer que vous n\'avez qu\'UNE seule annonce de crypto-monnaie par devise, sinon toutes les annonces publiées dans cette devise, sauf la plus récente, seront supprimées, tandis que l\'annonce restante sera déplacée dans la catégorie de pays « mondial ».';
   }
 
   @override
@@ -7547,12 +7547,46 @@ class I18nFr extends I18n {
   String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Annonces de vente du même actif uniquement';
 
   @override
-  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Emmenez-moi sur le site';
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Emmène-moi sur le site Web';
 
   @override
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset acheter des annonces uniquement';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Vous avez fourni une adresse que vous avez obtenue auprès d\'un commerçant qui n\'a pas mis à jour son format d\'adresse (adresse intégrée). Veuillez configurer votre propre portefeuille sur une application telle que $cakeLink, $monerujoLink ou $featherLink et fournir cette adresse à la place.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Le propriétaire de cette annonce n\'a pas précisé d\'adresse de règlement. Veuillez les contacter et leur dire de mettre à jour leur annonce ou de trouver un autre acheteur.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'L\'échange $tradeId a été accepté par $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Un échange a été accepté';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Envoi commercial';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Envoi non commercial';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Adresse invalide';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Les adresses de Taproot ne sont pas autorisées';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Mettez le code sous forme d\'étiquette sur l\'une de vos offres, de manière à ce qu\'il soit visible sur votre profil public. Une fois que nous avons vérifié le code, vous pouvez le supprimer.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Ne finalisez pas tant que la transmission de l\'acheteur n\'a pas de confirmation ! Il y a eu une vague d\'escroqueries dans lesquelles une transaction non confirmée est annulée une fois finalisée par le vendeur.';
 
   @override
   String get ads => 'Annonces';
@@ -8233,7 +8267,7 @@ class I18nFr extends I18n {
   String get api_error_123 => 'Fonds insuffisants pour financer une transaction';
 
   @override
-  String get api_error_124 => 'Erreur lors du financement d\'un échange';
+  String get api_error_124 => 'Erreur lors du financement d\'une transaction';
 
   @override
   String get api_error_125 => 'L\'utilisateur demandant l\'annulation de la transaction n\'existe pas';
@@ -9051,7 +9085,7 @@ class I18nFr extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Combien souhaitez-vous $val ?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nFr extends I18n {
   String get app_final_amount => 'Montant final';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Votre note sur $val (uniquement visible par vous)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Ajouter une note sur $val';
   }
 
@@ -9439,7 +9473,7 @@ class I18nFr extends I18n {
   String get app_proxy_use => 'Utiliser un proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Avertissement! La fonctionnalité proxy est en version bêta, des bogues sont attendus. Veuillez signaler les bogues à nos canaux de développement pour des solutions rapides';
+  String get app_proxy_bugs_expected => 'Avertissement! La fonctionnalité proxy est en version bêta, des bugs sont attendus. Veuillez signaler les bugs à nos canaux de développement pour des solutions rapides';
 
   @override
   String get app_proxy_select_type => 'Sélectionnez le type de proxy';
@@ -9454,7 +9488,7 @@ class I18nFr extends I18n {
   String get app_proxy_unavailable => 'Proxy indisponible';
 
   @override
-  String get app_proxy_unavailable_decr => 'Veuillez vérifier si les paramètres de connexion sont corrects ou utilisez un autre proxy.';
+  String get app_proxy_unavailable_decr => 'Veuillez vérifier si les paramètres de connexion sont corrects ou utiliser un autre proxy.';
 
   @override
   String get api_error_269 => 'Tentative d\'ajout d\'une adresse invalide à un carnet d\'adresses';

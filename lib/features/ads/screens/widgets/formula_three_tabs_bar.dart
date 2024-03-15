@@ -46,21 +46,21 @@ class FormulaThreeTabsBar extends StatelessWidget {
             Tab(
               icon: Text(
                 textLeft,
-                style: context.txtLabelSmallPrimary95,
+                style: context.txtLabelSmallP95P10,
                 textAlign: TextAlign.center,
               ),
             ),
             Tab(
               icon: Text(
                 textCenter,
-                style: context.txtLabelSmallPrimary95,
+                style: context.txtLabelSmallP95P10,
                 textAlign: TextAlign.center,
               ),
             ),
             Tab(
               icon: Text(
                 textRight,
-                style: context.txtLabelSmallPrimary95,
+                style: context.txtLabelSmallP95P10,
                 textAlign: TextAlign.center,
               ),
             ),

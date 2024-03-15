@@ -21,7 +21,7 @@ class CircleWithSvg extends StatelessWidget {
       child: Center(
         child: SvgPicture.asset(
           iconPath,
-          color: Theme.of(context).colorScheme.primary90,
+          color: Theme.of(context).colorScheme.p90p10,
         ),
       ),
     );

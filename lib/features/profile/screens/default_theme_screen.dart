@@ -21,7 +21,7 @@ class DefaultThemeScreen extends StatelessWidget {
         builder: (context, model, _) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: context.intl.app_default_tab,
+              title: context.intl.app_default_theme,
             ),
             body: SizedBox.expand(
               child: _buildTabsList(context, model),

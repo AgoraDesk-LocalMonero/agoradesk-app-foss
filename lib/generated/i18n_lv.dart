@@ -150,7 +150,7 @@ class I18nLv extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'pirkt';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Cik daudz vēlaties saņemt $buyOrSell?';
   }
 
@@ -1857,7 +1857,7 @@ class I18nLv extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ir vienādranga Monero tirdzniecības platforma. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē par vairāk nekā 60 dažādiem maksājuma veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
+    return '$appName ir vienādranga Monero tirdzniecības platforma. Mēs esam tirgus, kurā lietotāji var pirkt un pārdot Monero viens otram un viens no otra. Lietotāji, kurus sauc par tirgotājiem, veido sludinājumus ar cenu un maksājuma veidu, ko viņi vēlas piedāvāt. Jūs varat pārlūkot mūsu tīmekļa vietni, lai atrastu tirdzniecības sludinājumus un meklētu sev vēlamo maksājuma veidu. Jūs atradīsiet tirgotājus, kas pērk un pārdod Monero tiešsaistē vairāk nekā 60 dažādiem maksājumu veidiem. Ja esat iesācējs $appName un vēlaties iegādāties Monero, lūdzu, skatiet mūsu iegādes ceļvedi, lai uzzinātu, kā iegādāties Monero.';
   }
 
   @override
@@ -2543,7 +2543,7 @@ class I18nLv extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero ir spēcīga kopiena, kas piesaista pasaules labākos kriptovalūtas pētniekus un inženieru talantus.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Vairāk nekā 420 izstrādātāju ir piedalījušies Monero projektā, ieskaitot 30 galvenos izstrādātājus. Forumi un sarakstes kanāli ir pretimnākoši un aktīvi.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Vairāk nekā 420 izstrādātāju ir piedalījušies Monero projektā, tostarp 30 galvenie izstrādātāji. Forumi un tērzēšanas kanāli ir pretimnākoši un aktīvi.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero pētniecības laboratorija, galvenā izstrādes komanda un kopienas izstrādātāji pastāvīgi tiecas uz labāko, kas iespējams kriptovalūtu privātuma un drošības jomās.';
@@ -2873,7 +2873,7 @@ class I18nLv extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Kā atjaunot neatkarīgo norēķinu maku no mnemoniskas sēklas?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> — jūs redzēsiet populārākos piedāvājumus savam noklusējuma reģionam. Rezultātus varat precizēt, meklēšanas lodziņā ievadot vajadzīgo summu un mainot valūtu, valsti vai maksājuma veidu (ja neesat pārliecināts, kuru maksājuma veidu vēlaties izmantot, izvēlieties \"Visi tiešsaistes piedāvājumi\"), un nospiežot \"Meklēt\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Dodieties uz <a target=\"_blank\" href=\"/\" class=\"next-link\">galveno lapu</a> — jūs redzēsit populārākos piedāvājumus savam noklusējuma reģionam. Rezultātus varat precizēt, meklēšanas lodziņā ievadot vajadzīgo summu, ar kuru vēlaties veikt darījumu, pēc tam atlasiet valūtu, ar kuru vēlaties veikt darījumu, valsti un vēlamo maksājuma veidu (ja neesat pārliecināts, kurš maksājuma veids, izvēlieties \"Visi tiešsaistes piedāvājumi\" vēlaties izmantot).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'No sludinājumu saraksta izvēlieties kādu no tirgotāja ar lielu darījumu skaitu un labu reputācijas rādītāju (parādīts iekavās blakus lietotājvārdam). Zaļš aplis nozīmē, ka tirgotājs šodien ir bijis tiešsaistē; dzeltens aplis nozīmē, ka viņš šonedēļ ir apmeklējis vietni; pelēks aplis nozīmē, ka tirgotājs šeit nav bijis vairāk nekā nedēļu. Varat noklikšķināt uz pogas \"Pirkt\", lai skatītu vairāk informācijas par sludinājumu.';
@@ -4585,7 +4585,7 @@ class I18nLv extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Atjaunot';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Pievienot piezīmi par $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nLv extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Šī ir privāta piezīme jūsu atsaucei, tā nebūs redzama šim lietotājam vai citiem lietotājiem.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Jūsu piezīme par $username (redzat tikai jūs)';
   }
 
@@ -6674,7 +6674,7 @@ class I18nLv extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'E-pasts veiksmīgi apstiprināts!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Pārliecinieties, vai ielīmētā adrese ir tāda pati kā nokopētā adrese! </strong> Dažiem lietotājiem ir nozagti līdzekļi <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">, ļaunprātīgai programmatūrai starpliktuvē iekopēto adresi aizstājot ar uzbrucēja adresi</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Pārliecinieties, vai ielīmētā adrese ir tāda pati kā nokopētā adrese! </strong> Dažiem lietotājiem ir nozagta ļaunprogrammatūra <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">, starpliktuvē iekopēto adresi aizstājot ar uzbrucēja adresi</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Lejupielādēt CSV';
@@ -7553,6 +7553,40 @@ class I18nLv extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset pirkt tikai reklāmas';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Jūs esat norādījis adresi, ko saņēmāt no tirgotāja, kurš nav atjauninājis adreses formātu (integrētā adrese). Lūdzu, iestatiet savu maku tādā lietotnē kā $cakeLink, $monerujoLink vai $featherLink un tā vietā norādiet šo adresi.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Šīs sludinājuma īpašnieks nenorādīja norēķinu adresi. Lūdzu, sazinieties ar viņiem un sakiet viņiem atjaunināt savu sludinājumu vai atrast citu pircēju.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Tirdzniecību $tradeId pieņēma $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Darījums ir pieņemts';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Tirdzniecības sūtījums';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Netirdzniecības sūtīšana';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Nederīga adrese';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot adreses nav atļautas';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Ievietojiet kodu kā iezīmi vienam no saviem piedāvājumiem, lai tas būtu redzams jūsu publiskajā profilā. Kad esam verificējuši kodu, varēsiet to noņemt.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Nepabeigt, kamēr pircēja tx nav apstiprinājumu! Ir pieaudzis krāpniecības gadījumu skaits, kad neapstiprināts darījums tiek atcelts pēc tam, kad pārdevējs to ir pabeidzis.';
 
   @override
   String get ads => 'Sludinājumi';
@@ -9051,7 +9085,7 @@ class I18nLv extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Cik daudz vēlaties $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nLv extends I18n {
   String get app_final_amount => 'Galējā summa';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Jūsu piezīme par $val (redzams tikai jums)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Pievienot piezīmi par $val';
   }
 
@@ -9358,7 +9392,7 @@ class I18nLv extends I18n {
 
   @override
   String app_503_body(Object val) {
-    return '$val drīzumā atgriezīsies!\\nAtvainojiet par sagādātajām neērtībām, taču mēs pašlaik veicam plānotos apkopes darbus.\\nDrīzumā mēs droši vien atkal būsim tiešsaistē. Esiet informēts par mūsu kopienas grupām:';
+    return '$val drīzumā atgriezīsies!\\nAtvainojiet par sagādātajām neērtībām, taču pašlaik mēs veicam plānotos apkopes darbus.\\nDrīzumā mēs droši vien atkal būsim tiešsaistē. Esiet informēts par mūsu kopienas grupām:';
   }
 
   @override

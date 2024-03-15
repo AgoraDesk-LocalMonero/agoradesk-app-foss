@@ -28,7 +28,7 @@ class CircleWithNum extends StatelessWidget {
         style: Theme.of(context)
             .textTheme
             .agoraLabelLarge
-            .copyWith(color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5)),
+            .copyWith(color: Theme.of(context).colorScheme.p90p10.withOpacity(active ? 1 : 0.5)),
       )),
     );
   }
